@@ -97,7 +97,7 @@ const DeveloperDocumentation = () => (
         <h3 className="mt-3">Autocomplete</h3>
         <p>Add <CodeTags type="primary" code="autocomplete"/> attributes to input fields when it is possible to make a form easier for users to fill. </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <InputGroup type="text" label="Name" autocomplete="on" id="developer-documentation-example" />
+            <InputGroup type="text" label="Name" autoComplete="name" id="developer-documentation-example" />
         </ComponentPreview>
 
         <h3>Error message</h3>

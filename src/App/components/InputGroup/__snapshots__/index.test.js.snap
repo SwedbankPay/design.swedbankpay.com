@@ -7,7 +7,7 @@ exports[`Component: InputGroup - renders 1`] = `
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -38,7 +38,7 @@ exports[`Component: InputGroup - renders a form-group with a feedback icon if pr
       
 
       <input
-        autocomplete="on"
+        autoComplete={null}
         className="form-control"
         data-validate={null}
         defaultValue=""
@@ -89,7 +89,7 @@ exports[`Component: InputGroup - renders a form-group with a help block if prop 
     
 
     <input
-      autocomplete="on"
+      autoComplete={null}
       className="form-control"
       data-validate={null}
       defaultValue=""
@@ -130,7 +130,7 @@ exports[`Component: InputGroup - renders a form-group with a help block with dat
       
 
       <input
-        autocomplete="on"
+        autoComplete={null}
         className="form-control"
         data-validate={null}
         defaultValue=""
@@ -174,7 +174,7 @@ exports[`Component: InputGroup - renders a form-group with a label if prop label
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -205,7 +205,7 @@ exports[`Component: InputGroup - renders a form-group with a postfix if prop pos
       
 
       <input
-        autocomplete="on"
+        autoComplete={null}
         className="form-control"
         data-validate={null}
         defaultValue=""
@@ -268,7 +268,7 @@ exports[`Component: InputGroup - renders a form-group with a prefix button if pr
       
 
       <input
-        autocomplete="on"
+        autoComplete={null}
         className="form-control"
         data-validate={null}
         defaultValue=""
@@ -322,7 +322,7 @@ exports[`Component: InputGroup - renders a form-group with a prefix icon if prop
       
 
       <input
-        autocomplete="on"
+        autoComplete={null}
         className="form-control"
         data-validate={null}
         defaultValue=""
@@ -369,7 +369,7 @@ exports[`Component: InputGroup - renders a form-group with a prefix label if pro
       
 
       <input
-        autocomplete="on"
+        autoComplete={null}
         className="form-control"
         data-validate={null}
         defaultValue=""
@@ -447,7 +447,7 @@ exports[`Component: InputGroup - renders a form-group with a text-area if type e
     
 
     <textarea
-      autocomplete="on"
+      autoComplete={null}
       className="form-control"
       data-validate={null}
       defaultValue=""
@@ -470,7 +470,7 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -492,7 +492,7 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -514,7 +514,7 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -536,7 +536,7 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -558,7 +558,7 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -580,7 +580,7 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -602,7 +602,7 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -624,7 +624,7 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -646,7 +646,7 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -668,7 +668,7 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -690,7 +690,7 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -712,7 +712,7 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -734,7 +734,7 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -756,7 +756,7 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -778,7 +778,7 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -800,7 +800,7 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -822,7 +822,7 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -844,7 +844,7 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -866,7 +866,7 @@ exports[`Component: InputGroup - throws an error if type prop is not provided 1`
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -888,7 +888,7 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -910,7 +910,7 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -932,7 +932,7 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -954,7 +954,7 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -976,7 +976,7 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
   
 
   <input
-    autocomplete="on"
+    autoComplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""

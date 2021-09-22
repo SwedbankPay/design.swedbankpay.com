@@ -197,7 +197,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
     showCasePanel={true}
   >
     <InputGroup
-      autocomplete="on"
+      autoComplete="name"
       id="developer-documentation-example"
       label="Name"
       type="text"
