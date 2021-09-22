@@ -2,18 +2,28 @@ import React from "react";
 import Link from "@components/Link";
 import ActionLink from "~/src/App/components/ActionLink";
 
-const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroundDark, bright, standalone, disabled }) => (
-    <div className={`loader-preview-container${backgroundDark ? " dark" : ""} d-flex justify-content-center align-items-center`}>
-        {standalone
-            ? <>
-                <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright} disabled={disabled}/>{"\n"}
-            </>
-            : <>
-                <p className={`mt-3${backgroundDark ? " text-white" : ""}${smallFont ? " small-text" : ""}`}>{"\n"}Paragraph text with a <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright} disabled={disabled}/>{"\n"}
+const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroundDark, bright, standalone, disabled }) => {
+    const attrs = {
+        rightIcon,
+        leftIcon,
+        linkText,
+        smallFont,
+        bright,
+        standalone,
+        disabled
+    };
+
+    return (
+        <div className={`loader-preview-container${backgroundDark ? " dark" : ""} d-flex justify-content-center align-items-center`}>
+            {standalone
+                ? <Link {...attrs} />
+                : <p className={`mt-3${backgroundDark ? " text-white" : ""}${smallFont ? " small-text" : ""}`}>{"\n"}
+                    Paragraph text with a <Link {...attrs}/>{"\n"}
                 </p>
-            </>}
-    </div>
-);
+            }
+        </div>
+    );
+};
 
 const ShowcaseActionComponent = ({ badge, smallText, multiline, newTab, disabled }) => (
     <div className="d-flex flex-column w-100">
@@ -33,7 +43,7 @@ export const guidelinesContent = [
             {
                 type: "error",
                 content: <p className=" mb-0 justify-content-center"><Link linkText="Click here" /> to read our term and conditions.</p>
-            },
+            }
         ],
         text: "Avoid using \"click here\", links should not need supporting copy to make sense."
     },
