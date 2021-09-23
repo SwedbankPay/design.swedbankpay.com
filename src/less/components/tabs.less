@@ -20,7 +20,6 @@
     }
 
     &.tabs-scroll {
-        border-bottom: none;
         min-height: 40px;
         height: auto;
 
@@ -31,13 +30,12 @@
 
             &::-webkit-scrollbar {
                 width: 0;
-                background: transparent;
+                display: none;
             }
 
             li {
                 a {
                     height: 40px;
-                    border-bottom: 1px solid @brand-secondary-light-3;
                 }
             }
         }
@@ -46,12 +44,12 @@
         &:before {
             content: "";
             position: absolute;
-            height: 68%;
+            height: 100%;
             width: @tabs-fade-width;
             display: none;
-            background-image: url(../../icons/shapes/arrow-forward.svg), linear-gradient(to right, transparent, 35%, @white 68%, transparent 80%);
+            background-image: url(../../icons/shapes/arrow-forward.svg), linear-gradient(to right, rgba(255, 255, 255, 0.35), @white 68%, rgba(255, 255, 255, 0.8));
             background-repeat: no-repeat;
-            background-position: right;
+            background-position: 100%;
             background-size: auto 1rem;
             pointer-events: none;
             z-index: @zindex-tabs;
@@ -72,6 +70,7 @@
             }
         }
     }
+
 
     ul {
         position: initial;

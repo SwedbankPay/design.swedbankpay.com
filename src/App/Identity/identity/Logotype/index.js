@@ -267,8 +267,8 @@ const Favicon = () => (
             <link rel="shortcut icon" href={`${basename}/icons/favicon.ico`} />
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-            <meta name="apple-mobile-web-app-title" content="Swedbank Pay App" />
-            <meta name="application-name" content="Swedbank Pay App" />
+            <meta name="apple-mobile-web-app-title" content={`${process.env.brandTitle} App`} />
+            <meta name="application-name" content={`${process.env.brandTitle} App`} />
             <meta name="mobile-web-app-capable" content="yes" />
             <meta name="msapplication-TileColor" content="#000" />
             <meta name="msapplication-TileImage" content={`${basename}/icons/mstile-144x144.png`} />

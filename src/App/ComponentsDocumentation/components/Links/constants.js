@@ -2,13 +2,28 @@ import React from "react";
 import Link from "@components/Link";
 import ActionLink from "~/src/App/components/ActionLink";
 
-const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroundDark, bright, standalone, disabled }) => (
-    <div className={`loader-preview-container${backgroundDark ? " dark" : ""} d-flex justify-content-center align-items-center`}>
-        {standalone ? <>
-            <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright} disabled={disabled}/>{"\n"}</> :
-            <><p className={`mt-3 ${backgroundDark ? "text-white" : ""} ${smallFont ? "small-text" : ""}`}>Paragraph text with a <Link rightIcon={rightIcon} leftIcon={leftIcon} linkText={linkText} smallFont={smallFont} bright={bright} disabled={disabled}/> </p> {"\n"}</>}
-    </div>
-);
+const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroundDark, bright, standalone, disabled }) => {
+    const attrs = {
+        rightIcon,
+        leftIcon,
+        linkText,
+        smallFont,
+        bright,
+        standalone,
+        disabled
+    };
+
+    return (
+        <div className={`loader-preview-container${backgroundDark ? " dark" : ""} d-flex justify-content-center align-items-center`}>
+            {standalone
+                ? <Link {...attrs} />
+                : <p className={`mt-3${backgroundDark ? " text-white" : ""}${smallFont ? " small-text" : ""}`}>{"\n"}
+                    Paragraph text with a <Link {...attrs}/>{"\n"}
+                </p>
+            }
+        </div>
+    );
+};
 
 const ShowcaseActionComponent = ({ badge, smallText, multiline, newTab, disabled }) => (
     <div className="d-flex flex-column w-100">
@@ -28,7 +43,7 @@ export const guidelinesContent = [
             {
                 type: "error",
                 content: <p className=" mb-0 justify-content-center"><Link linkText="Click here" /> to read our term and conditions.</p>
-            },
+            }
         ],
         text: "Avoid using \"click here\", links should not need supporting copy to make sense."
     },
@@ -80,8 +95,8 @@ export const overviewLinks = {
                                 }
                             },
                             {
-                                id: "dark_theme_color",
-                                name: "Dark theme",
+                                id: "bright_color",
+                                name: "Bright color",
                                 value: {
                                     backgroundDark: true,
                                     bright: true
@@ -136,7 +151,7 @@ export const overviewLinks = {
                         inputs: [
                             {
                                 id: "dark_theme_color",
-                                name: "Dark theme",
+                                name: "Bright color",
                                 value: {
                                     backgroundDark: true,
                                     bright: true
@@ -145,7 +160,7 @@ export const overviewLinks = {
                         ]
                     },
                     {
-                        title: "State modifier",
+                        title: "State modifiers",
                         inputs: [
                             {
                                 id: "state_modifier",
@@ -157,7 +172,38 @@ export const overviewLinks = {
                         ]
                     }
                 ],
+
                 radio: [
+                    {
+                        id: "with_icon_choice",
+                        title: "With icon",
+                        values: [
+                            {
+                                name: "None",
+                                value: {
+                                    leftIcon: null
+                                }
+                            },
+                            {
+                                name: "External link",
+                                value: {
+                                    leftIcon: "launch"
+                                }
+                            },
+                            {
+                                name: "Back",
+                                value: {
+                                    leftIcon: "arrow_back_ios"
+                                }
+                            },
+                            {
+                                name: "Other type",
+                                value: {
+                                    leftIcon: "edit"
+                                }
+                            }
+                        ]
+                    },
                     {
                         id: "font_size_radio",
                         title: "Font size",
@@ -174,31 +220,6 @@ export const overviewLinks = {
                                     smallFont: true
                                 }
                             }
-                        ]
-                    },
-                    {
-                        id: "radio_badge_choice",
-                        title: "With icon",
-                        values: [
-                            {
-                                name: "None",
-                                value: {
-                                    leftIcon: null
-                                }
-                            },
-                            {
-                                name: "New tab",
-                                value: {
-                                    leftIcon: "launch"
-                                }
-                            },
-                            {
-                                name: "Back",
-                                value: {
-                                    leftIcon: "arrow_back_ios"
-                                }
-                            }
-
                         ]
                     }
                 ]

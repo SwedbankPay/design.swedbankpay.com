@@ -698,6 +698,7 @@
                     position: absolute;
                     top: 0;
                     width: 100%;
+                    border-bottom: none;
 
                     &.tabs-fade-right {
                         &:after {
@@ -741,14 +742,15 @@
             }
 
             .component-preview {
-                padding-top: 2.5rem;
+                margin-top: 2.5rem;
                 border-bottom: 1px solid @brand-secondary-light-3;
+                z-index: 100;
 
                 .component-preview-content {
                     position: relative;
                     min-height: 9.5rem;
                     height: 100%;
-                    max-width: 30.75rem;
+                    //max-width: 30.75rem;
                     padding: 2rem;
                     display: flex;
                     align-items: center;
@@ -772,7 +774,7 @@
 
             .component-description {
                 padding: 2rem;
-                max-width: 40.5rem;
+                height: 100%;
 
                 h3 {
                     margin-top: 0;
@@ -796,6 +798,7 @@
                 &.active {
                     display: block;
                     min-width: 12.5rem;
+                    overflow-y: auto;
                 }
 
                 .options-header {
@@ -1206,6 +1209,14 @@
                 .action-link {
                     margin-bottom: 0;
                 }
+            }
+        }
+    }
+
+    #tabs-overview {
+        .showcase-panel {
+            .component-preview-content {
+                max-width: 30.75rem;
             }
         }
     }

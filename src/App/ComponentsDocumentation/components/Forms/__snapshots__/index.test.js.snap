@@ -438,7 +438,7 @@ exports[`Documentation: Forms Overview form prevents default 1`] = `
     />
      should take the available width on smaller screen sizes. 
     <Link
-      to="/core/grid"
+      to="/identity/grid"
     >
       Grid
     </Link>
@@ -574,7 +574,7 @@ exports[`Documentation: Forms Overview renders 1`] = `
     />
      should take the available width on smaller screen sizes. 
     <Link
-      to="/core/grid"
+      to="/identity/grid"
     >
       Grid
     </Link>

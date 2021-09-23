@@ -400,6 +400,10 @@
                             }
 
                             &.active {
+                                .tertiary-nav-ul {
+                                    display: block;
+                                }
+
                                 &.leaf {
                                     > a {
                                         &:after {
@@ -452,6 +456,7 @@
                                 overflow: hidden;
                                 padding-left: 0;
                                 transition: max-height 0.5s ease-in-out;
+                                display: none;
 
                                 .nav-leaf {
                                     position: relative;

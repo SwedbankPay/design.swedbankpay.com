@@ -231,7 +231,7 @@ const ItemListBordered = () => (
                     <div>
                         <span className="h3 text-highlight">2120 kr</span>
                     </div>
-                    <footer><a href="#">Se faktura</a></footer>
+                    <footer><a href="#" onClick={ e => e.preventDefault()}>Se faktura</a></footer>
                 </li>
                 <li>
                     <div>
@@ -242,7 +242,7 @@ const ItemListBordered = () => (
                         <span className="h3 text-highlight">1100 kr</span>
                     </div>
                     <footer className="item-list-footer">
-                        <a href="#">Se faktura</a>
+                        <a href="#" onClick={ e => e.preventDefault()}>Se faktura</a>
                     </footer>
                 </li>
                 <li>
@@ -254,7 +254,7 @@ const ItemListBordered = () => (
                         <span className="h3 text-highlight">200 kr</span>
                     </div>
                     <footer className="item-list-footer">
-                        <a href="#">Se faktura</a>
+                        <a href="#" onClick={ e => e.preventDefault()}>Se faktura</a>
                     </footer>
                 </li>
             </ul>

@@ -146,7 +146,9 @@ exports[`Components: Tabs DeveloperDocumentation renders 1`] = `
 `;
 
 exports[`Components: Tabs Overview renders 1`] = `
-<section>
+<section
+  id="tabs-overview"
+>
   <h2
     id="overview"
   >

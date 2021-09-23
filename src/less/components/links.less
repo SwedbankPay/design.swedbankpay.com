@@ -1,18 +1,10 @@
 a {
-    padding: 0.125rem;
-
     &.bright {
         color: @blue-syntax-highlight;
 
         &.disabled {
             color: @medium-brown;
         }
-    }
-
-    &:focus {
-        border-color: @brand-secondary;
-        outline: none;
-        border-radius: 0.25rem;
     }
 
     &.disabled {
@@ -50,7 +42,7 @@ a {
         position: relative;
         display: flex;
         align-items: center;
-        min-height: @action-link-height; //husk
+        min-height: @action-link-height;
         padding-left: 1rem;
         border: 0;
         text-decoration: none;
@@ -60,7 +52,6 @@ a {
         border-radius: 4px;
         padding-top: 0.75rem;
         padding-bottom: 0.75rem;
-        margin-right: 1rem;
 
         .action-link-content {
             margin-right: 2rem;

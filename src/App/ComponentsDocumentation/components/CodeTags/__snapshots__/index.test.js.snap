@@ -10,7 +10,7 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
   <p>
     Code tags use Akkurat Mono as the font. Akkurat Mono can be found in 
     <Link
-      to="/core/typography"
+      to="/identity/typography"
     >
       Typography
     </Link>
