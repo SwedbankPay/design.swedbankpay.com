@@ -6,7 +6,6 @@
 - Content on Links page
 
 ## Fixed
-- Tab issues on leaf nodes in sidebar
 - Screen reader reading the bubble images on the home page
 - Border radius bug on a:focus
 - Topbar missing focus state
