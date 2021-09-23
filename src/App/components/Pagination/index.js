@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Pagination = ({ type, items, text, arrows, farArrows }) => {
+const Pagination = ({ type, items, text, arrows, mobileView }) => {
     let activeItem = -1;
-    const itemLength = items ? items.length - 1 : -2;
+    const itemLength = items ? items.length - 0 : -0;
 
     const paginationClasses = classnames(
         "pagination",
@@ -36,23 +36,41 @@ const Pagination = ({ type, items, text, arrows, farArrows }) => {
     }; // probably shit, but it is a beginning. Maybe.. */
 
     return (
-        <ul className={paginationClasses}>
-            {/* <span className="d-sm"><Arrow type="start"/></span>  Use this maybe? Help with breakpoints and hide/show */}
-            {/* {farArrows ? <Arrow type="start" /> : null}*/}
-            {arrows ? <Arrow type="back" /> : null}
-            {items ? items.map(({ name, href, active }, i) => {
-                if (active) { activeItem = i; }
+        <>
+            {mobileView ?
+                <>
+                    <ul className={paginationClasses}>
+                        <Arrow type="start"/>
+                        <Arrow type="back"/>
+                        {console.log("halla", items.indexOf(items.active = true))} {/* HERE */}
+                        <li>
+                            <span className="text">Page {items.active && items.name} of {items.length}</span>{"\n"}
+                        </li>
 
-                return (
-                    <li key={i} className={`${active ? "active" : ""}`}>{"\n"}
-                        <a href={href}>{name}</a>{"\n"}
-                    </li>
-                );
-            }) : null}
-            {text ? <li>{"\n"}<span className="text">{text}</span>{"\n"}</li> : null}
-            {arrows ? <Arrow type="forward" /> : null}
-            {/* {farArrows ? <Arrow type="end" /> : null}*/}
-        </ul>
+                        <Arrow type="forward"/>
+                        <Arrow type="end"/>
+                    </ul>
+                </>
+
+                :
+
+                <>
+                    <ul className={paginationClasses}>
+                        {arrows ? <Arrow type="back" /> : null}
+                        {items ? items.map(({ name, href, active }, i) => {
+                            if (active) { activeItem = i; }
+
+                            return (
+                                <li key={i} className={`${active ? "active" : ""}`}>{"\n"}
+                                    <a href={href}>{name}</a>{"\n"}
+                                </li>
+                            );
+                        }) : null}
+                        {arrows ? <Arrow type="forward" /> : null}
+                    </ul>
+                </>
+            }
+        </>
     );
 };
 
@@ -61,7 +79,7 @@ Pagination.propTypes = {
     items: PropTypes.array,
     text: PropTypes.string,
     arrows: PropTypes.bool,
-    farArrows: PropTypes.bool
+    mobileView: PropTypes.bool
 };
 
 export default Pagination;

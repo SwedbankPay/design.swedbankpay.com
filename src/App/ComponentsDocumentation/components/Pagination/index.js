@@ -6,8 +6,8 @@ import CodeTags from "@components/CodeTags";
 
 const paginationItems = [
     /* eslint-disable object-property-newline */
-    { name: "1", href: "#", active: true },
-    { name: "2", href: "#", active: false },
+    { name: "1", href: "#", active: false },
+    { name: "2", href: "#", active: true },
     { name: "3", href: "#", active: false },
     { name: "4", href: "#", active: false },
     { name: "5", href: "#", active: false }
@@ -22,7 +22,7 @@ const DefaultPagination = () => (
             <CodeTags type="primary" code={"<li>"} />. If you wish to present the user with navigational arrows you need to add those as <CodeTags type="primary" code={"<li>"} /> elements.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <PaginationComponent items={paginationItems} arrows farArrows />
+            <PaginationComponent items={paginationItems} arrows mobileView text="1" />
         </ComponentPreview>
     </>
 );
