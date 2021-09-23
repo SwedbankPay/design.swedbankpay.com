@@ -14,15 +14,13 @@
             align-items: center;
             padding: 0 @base-margin-sm;
             font-weight: bold;
-            color: @pagination-default-color;
+            color: @brand-secondary;
             cursor: pointer;
             user-select: none;
             text-decoration: none;
+            border: 1px solid transparent;
 
-            &:hover {
-                text-decoration: none;
-                color: @pagination-active-color;
-            }
+
 
             &.text {
                 cursor: default;
@@ -35,14 +33,29 @@
             a,
             span {
                 padding: 0.25rem 0.75rem;
+
+                &:hover {
+                    text-decoration: none;
+                    border-radius: 0.125rem;
+                    border: solid @brand-secondary 1px;
+                }
+
+                &:focus {
+                    border: 1px solid @brand-secondary;
+                    border-radius: 0.125rem;
+                    outline: none;
+                }
             }
         }
 
         &.active {
+            background-color: @brand-secondary;
+            border-radius: 0.125rem;
+
             a,
             span {
                 cursor: default;
-                color: @pagination-active-color;
+                color: @white;
             }
         }
 
@@ -59,7 +72,7 @@
                 cursor: default;
 
                 &:after {
-                    color: @pagination-default-color;
+                    color: @light-brown;
                 }
             }
         }
@@ -88,7 +101,7 @@
             span {
                 &:after {
                     content: "chevron_right";
-                    .material-icons-styling(@color: @brand-accent-links, @margin: 0, @font-size: 1.75rem);
+                    .material-icons-styling(@color: @brand-secondary, @margin: 0, @font-size: 1.75rem);
                 }
             }
 

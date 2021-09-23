@@ -27,9 +27,18 @@ const Pagination = ({ type, items, text, arrows, farArrows }) => {
         );
     };
 
+    /*
+    const changePageOnClick = ({ items, item }) => {
+        items.map(i => {
+            items[i].active = false;
+        });
+        items[item].active = true;
+    }; // probably shit, but it is a beginning. Maybe.. */
+
     return (
         <ul className={paginationClasses}>
-            {farArrows ? <Arrow type="start" /> : null}
+            {/* <span className="d-sm"><Arrow type="start"/></span>  Use this maybe? Help with breakpoints and hide/show */}
+            {/* {farArrows ? <Arrow type="start" /> : null}*/}
             {arrows ? <Arrow type="back" /> : null}
             {items ? items.map(({ name, href, active }, i) => {
                 if (active) { activeItem = i; }
@@ -42,7 +51,7 @@ const Pagination = ({ type, items, text, arrows, farArrows }) => {
             }) : null}
             {text ? <li>{"\n"}<span className="text">{text}</span>{"\n"}</li> : null}
             {arrows ? <Arrow type="forward" /> : null}
-            {farArrows ? <Arrow type="end" /> : null}
+            {/* {farArrows ? <Arrow type="end" /> : null}*/}
         </ul>
     );
 };
