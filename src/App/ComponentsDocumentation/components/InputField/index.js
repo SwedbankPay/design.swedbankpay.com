@@ -43,7 +43,7 @@ const ContentGuidelines = forwardRef((props, ref) => <section ref={ref}>
     </div>
 
     <h3>Input label</h3>
-    <p>A input field must have a label that clearly describes the type of input a field requires. </p>
+    <p>An input field must have a label that clearly describes the type of input a field requires. </p>
     <ul className="list list-bullet">
         <li>Use a label that is meaningful, clear, and concise.</li>
         <li>When a text field is not required to be filled by the user, label it as “optional”.</li>

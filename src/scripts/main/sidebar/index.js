@@ -338,7 +338,7 @@ const populateSidebarTertiary = (id, leafList) => {
         const newLeafContent = document.createElement("a");
 
         newLeafContent.textContent = leaf.textContent;
-        newLeafContent.href = "javascript:;";
+        // newLeafContent.href = "javascript:;";
         newLeaf.appendChild(newLeafContent);
         newLeaf.classList.add("nav-leaf");
 

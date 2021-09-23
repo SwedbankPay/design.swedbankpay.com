@@ -39,7 +39,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
     Input label
   </h3>
   <p>
-    A input field must have a label that clearly describes the type of input a field requires. 
+    An input field must have a label that clearly describes the type of input a field requires. 
   </p>
   <ul
     className="list list-bullet"
@@ -488,7 +488,7 @@ exports[`Component: InputField Textarea renders 1`] = `
               placeholder="Placeholder text"
               type="textarea"
             />,
-            "description": "Text areas have a few different sates which includes the default state, focus state, disabled state and error state. ",
+            "description": "Textareas have a few different sates which includes the default state, focus state, disabled state and error state. ",
             "options": Object {
               "checkbox": Array [
                 Object {

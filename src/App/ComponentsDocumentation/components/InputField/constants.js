@@ -174,7 +174,7 @@ export const textareaShowCase = {
                 ]
             },
             title: "Textarea",
-            description: "Text areas have a few different sates which includes the default state, focus state, disabled state and error state. "
+            description: "Textareas have a few different sates which includes the default state, focus state, disabled state and error state. "
         }
     ]
 };
