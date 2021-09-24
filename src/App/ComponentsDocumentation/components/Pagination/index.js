@@ -6,8 +6,8 @@ import CodeTags from "@components/CodeTags";
 
 const paginationItems = [
     /* eslint-disable object-property-newline */
-    { name: "1", href: "#", active: false },
-    { name: "2", href: "#", active: true },
+    { name: "1", href: "#", active: true },
+    { name: "2", href: "#", active: false },
     { name: "3", href: "#", active: false },
     { name: "4", href: "#", active: false },
     { name: "5", href: "#", active: false }
@@ -22,7 +22,7 @@ const DefaultPagination = () => (
             <CodeTags type="primary" code={"<li>"} />. If you wish to present the user with navigational arrows you need to add those as <CodeTags type="primary" code={"<li>"} /> elements.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <PaginationComponent items={paginationItems} arrows mobileView text="1" />
+            <PaginationComponent type="simple"  items={paginationItems} arrows text="1" />
         </ComponentPreview>
     </>
 );
@@ -34,7 +34,7 @@ const PaginationBullets = () => (
                 If you want to show bullets instead of numbers you can add <CodeTags type="secondary" code=".pagination-bullets" /> to your <CodeTags type="primary" code={"<ul>"} />.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <PaginationComponent type="bullets" items={paginationItems} arrows farArrows />
+            { /*<PaginationComponent type="bullets" items={paginationItems} arrows farArrows />*/}
         </ComponentPreview>
     </>
 );
@@ -46,7 +46,7 @@ const SimplePagination = () => (
             If the number of pages get high enough then it is better to use numbers.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <PaginationComponent text="16 of 256" arrows farArrows />
+            {/*<PaginationComponent text="16 of 256" arrows farArrows />*/}
         </ComponentPreview>
     </>
 );

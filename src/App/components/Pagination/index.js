@@ -4,7 +4,12 @@ import classnames from "classnames";
 
 const Pagination = ({ type, items, text, arrows, mobileView }) => {
     let activeItem = -1;
-    const itemLength = items ? items.length - 0 : -0;
+
+    console.log("ITEMS:",items);
+
+    const itemLength = items ? items.length - 1 : -2;
+
+    console.log("LENGTH", itemLength);
 
     const paginationClasses = classnames(
         "pagination",
@@ -42,11 +47,9 @@ const Pagination = ({ type, items, text, arrows, mobileView }) => {
                     <ul className={paginationClasses}>
                         <Arrow type="start"/>
                         <Arrow type="back"/>
-                        {console.log("halla", items.indexOf(items.active = true))} {/* HERE */}
                         <li>
-                            <span className="text">Page {items.active && items.name} of {items.length}</span>{"\n"}
+                            <span className="text">Page {text} of {items.length}</span>{"\n"}
                         </li>
-
                         <Arrow type="forward"/>
                         <Arrow type="end"/>
                     </ul>
