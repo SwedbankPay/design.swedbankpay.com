@@ -7,7 +7,12 @@ export const paginationItems = [
     { name: "2", href: "#", active: false },
     { name: "3", href: "#", active: false },
     { name: "4", href: "#", active: false },
-    { name: "5", href: "#", active: false }
+    { name: "5", href: "#", active: false },
+    { name: "6", href: "#", active: false },
+    { name: "7", href: "#", active: false },
+    { name: "8", href: "#", active: false },
+    { name: "9", href: "#", active: false },
+    { name: "10", href: "#", active: false }
     /* eslint-enable object-property-newline */
 ];
 
