@@ -7,6 +7,7 @@ import datepicker from "./datepicker";
 import dialog from "./dialog";
 import expandable from "./expandable";
 import nav from "./nav";
+import pagination from "./pagination";
 import rangeslider from "./rangeslider";
 import sheet from "./sheet";
 import sidebar from "./sidebar";
@@ -33,6 +34,7 @@ const dg = {
     dialog,
     expandable,
     nav,
+    pagination,
     rangeslider,
     sheet,
     sidebar,
@@ -70,6 +72,7 @@ export {
     dialog,
     expandable,
     nav,
+    pagination,
     rangeslider,
     sheet,
     sidebar,

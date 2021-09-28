@@ -3,13 +3,10 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 
 const Pagination = ({ type, items, text, arrows, mobileView }) => {
+
     let activeItem = -1;
 
-    console.log("ITEMS:",items);
-
     const itemLength = items ? items.length - 1 : -2;
-
-    console.log("LENGTH", itemLength);
 
     const paginationClasses = classnames(
         "pagination",
@@ -31,14 +28,6 @@ const Pagination = ({ type, items, text, arrows, mobileView }) => {
             </li>
         );
     };
-
-    /*
-    const changePageOnClick = ({ items, item }) => {
-        items.map(i => {
-            items[i].active = false;
-        });
-        items[item].active = true;
-    }; // probably shit, but it is a beginning. Maybe.. */
 
     return (
         <>

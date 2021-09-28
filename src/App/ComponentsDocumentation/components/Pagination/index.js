@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import { PaginationShowCasePanel, paginationItems } from "./constants";
 import PaginationComponent from "~/src/App/components/Pagination";
+
+import { pagination } from "@src/scripts/main";
 
 const Overview = () => (
     <section id="pagination-overview">
@@ -49,14 +51,20 @@ const Overview = () => (
     </section>
 );
 
-const Pagination = () => (
-    <DocContainer docToc>
-        <p className="lead">
-            Use the pagination component to indicate that a series of related content exist across multiple pages.
-        </p>
-        <Overview/>
-    </DocContainer>
-);
+const Pagination = () => {
+    useEffect(() => {
+        pagination.init();
+    });
+
+    return (
+        <DocContainer docToc>
+            <p className="lead">
+                Use the pagination component to indicate that a series of related content exist across multiple pages.
+            </p>
+            <Overview/>
+        </DocContainer>
+    );
+};
 
 export default Pagination;
 
