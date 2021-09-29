@@ -47,7 +47,7 @@ const Home = () => {
                     <Link to={routes.find(route => route.title === "Get started").path} className="cards cards-primary cards-wide m-3">
                         <div className="cards-content flex-row align-items-center m-0 w-100">
                             <i className="material-icons material-icons-outlined mr-3 v-flip">wb_incandescent</i>
-                            <p className="m-0"><b>Get started by setting up the Design Guide!</b></p>
+                            <span className="h4 mb-0">Get started by setting up the Design Guide!</span>
                             <i className="material-icons material-icons-outlined ml-auto">arrow_forward</i>
                         </div>
                     </Link>
