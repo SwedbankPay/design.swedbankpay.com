@@ -14,22 +14,28 @@ const _createPagination = paginationContainer => {
 
     const arrows = [arrowForward, arrowBack];
 
+    _initialActive(pages, arrowBack);
+
     _addListener(pages, arrows);
 };
 
 const _addListener = (pages, arrows) => {
-    [...pages].map(page => {
+    /* [...pages].map(page => {
         page.addEventListener("click", e => _setActive(e, pages));
 
+    }); */
+
+    [...pages].map(page => {
+        page.addEventListener("click", e => _logicalName(e, pages, arrows));
     });
 
     arrows.map(arrow => {
         if (arrow.classList.contains("arrow-forward")) {
-            arrow.addEventListener("click", e => _arrowNavigation(pages, e, 1, arrow));
+            arrow.addEventListener("click", e => _arrowNavigation(pages, e, 1, arrow, arrows));
         }
 
         if (arrow.classList.contains("arrow-back")) {
-            arrow.addEventListener("click", e => _arrowNavigation(pages, e, -1, arrow));
+            arrow.addEventListener("click", e => _arrowNavigation(pages, e, -1, arrow, arrows));
         }
 
         /* if (arrow.classList.contains("arrow-end")) {
@@ -43,34 +49,67 @@ const _addListener = (pages, arrows) => {
 
 };
 
+const _initialActive = (pages, arrowBack) => {
+    [...pages][0].classList.add("active");
+    arrowBack.classList.add("disabled");
+};
+
+const _logicalName = (e, pages, arrows) => { // RENAME
+    e.preventDefault(); // remove?
+
+    _removeDisabledArrows(arrows);
+    _setActive(e, pages);
+
+    const currentActive = [...pages].find(page => page.classList.contains("active"));
+    const currentActiveIndex = [].indexOf.call(pages, currentActive);
+
+    if (currentActiveIndex === 0) {
+        arrows[1].classList.add("disabled");
+    } else if (currentActiveIndex === pages.length - 1) {
+        arrows[0].classList.add("disabled");
+    }
+};
+
 const _setActive = (e, pages) => {
-    e.preventDefault(); // remove??
+    // e.preventDefault(); // remove??
     _removeActive(pages);
     e.currentTarget.classList.add("active");
 };
 
+// Remove all disabled state for arrows.
+const _removeDisabledArrows = arrowPages => {
+    arrowPages.map(arrow => {
+        arrow.classList.contains("disabled") ? arrow.classList.remove("disabled") : null;
+    });
+};
+
+// Remove active state on all pages
 const _removeActive = pages => {
     [...pages].filter(page => page.classList.contains("active") === page.classList.remove("active"));
 };
 
-const _arrowNavigation = (pages, e, steps, arrow) => {
+/*
+Changes state on active page when clicking arrows
+Changes state on arrows to disabled if not index is first or last in pages list
+*/
+const _arrowNavigation = (pages, e, steps, arrow, arrows) => {
     e.preventDefault(); // remove??
 
     const currentActive = [...pages].find(page => page.classList.contains("active"));
 
     const currentActiveIndex = [].indexOf.call(pages, currentActive);
 
+    /*
     if ((e.currentTarget.classList.contains("arrow-back") && (currentActiveIndex === 1))) {
         arrow.classList.add("disabled");
     }
 
     if ((e.currentTarget.classList.contains("arrow-forward") && (currentActiveIndex === pages.length - 2))) {
         arrow.classList.add("disabled");
+    } else {
+        arrows.filter(arrow => arrow.classList.contains("disabled") === arrow.classList.remove("disabled"));
     }
-
-    if (currentActiveIndex !== 1) {
-        arrow.classList.remove("disabled");
-    }
+    */
 
     pages[currentActiveIndex].classList.remove("active");
     pages[currentActiveIndex + steps].classList.add("active");
