@@ -23,7 +23,6 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <RenderRoutes
         appFolder="GettingStarted"
-        entryCardText="Learn more about how to setup and use our system"
         icon={
           Object {
             "name": "wb_incandescent",
@@ -496,7 +495,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <RenderRoutes
         appFolder="Templates"
-        entryCardText="Yoyoyoyo Templates"
+        entryCardText="Learn about how to we set up different structures"
         icon={
           Object {
             "name": "dashboard",

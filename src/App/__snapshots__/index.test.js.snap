@@ -42,7 +42,6 @@ exports[`Main: App renders 1`] = `
               Array [
                 Object {
                   "appFolder": "GettingStarted",
-                  "entryCardText": "Learn more about how to setup and use our system",
                   "icon": Object {
                     "name": "wb_incandescent",
                     "rotate": true,
@@ -499,6 +498,30 @@ exports[`Main: App renders 1`] = `
                   "title": "Components",
                 },
                 Object {
+                  "appFolder": "Templates",
+                  "entryCardText": "Learn about how to we set up different structures",
+                  "icon": Object {
+                    "name": "dashboard",
+                  },
+                  "path": "/templates",
+                  "redirect": "/templates/templates",
+                  "routes": Array [
+                    Object {
+                      "componentPath": "content/Templates",
+                      "path": "/templates/templates",
+                      "title": "Overview",
+                    },
+                    Object {
+                      "componentPath": "content/Forms",
+                      "icon": "format_align_justify",
+                      "outlined": true,
+                      "path": "/templates/forms",
+                      "title": "Forms",
+                    },
+                  ],
+                  "title": "Templates",
+                },
+                Object {
                   "appFolder": "Utilities",
                   "entryCardText": "See all available CSS classes",
                   "icon": Object {
@@ -645,6 +668,19 @@ exports[`Main: App renders 1`] = `
                   }
                 }
                 path="/examples"
+              />
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_init": [Function],
+                    "_payload": Object {
+                      "_result": [Function],
+                      "_status": -1,
+                    },
+                  }
+                }
+                path="/templates"
               />
               <Route
                 component={
