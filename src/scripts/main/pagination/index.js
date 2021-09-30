@@ -26,15 +26,15 @@ const _addListener = (pages, arrows) => {
     }); */
 
     [...pages].map(page => {
-        page.addEventListener("click", e => _logicalName(e, pages, arrows));
+        page.addEventListener("click", e => _arrowStateHandler(e, pages, arrows));
     });
 
     arrows.map(arrow => {
         if (arrow.classList.contains("arrow-back")) {
-            arrow.addEventListener("click", e => _arrowNavigation(pages, e, "back", arrow, arrows));
+            arrow.addEventListener("click", e => _arrowNavigation(pages, e, "back", arrows));
         }
         if (arrow.classList.contains("arrow-forward")) {
-            arrow.addEventListener("click", e => _arrowNavigation(pages, e, "forward", arrow, arrows));
+            arrow.addEventListener("click", e => _arrowNavigation(pages, e, "forward", arrows));
         }
 
 
@@ -63,12 +63,10 @@ const getActive = pages => {
 
 };
 
-const _logicalName = (e, pages, arrows) => { // RENAME
+const _arrowStateHandler = (e, pages, arrows) => { // RENAME
     e.preventDefault(); // remove?
-
     _removeDisabledArrows(arrows);
     _setActiveOnClick(e, pages);
-
     _disableArrow(pages, arrows);
 };
 
@@ -104,21 +102,17 @@ const _removeActive = pages => {
 Changes state on active page when clicking arrows
 Changes state on arrows to disabled if not index is first or last in pages list
 */
-const _arrowNavigation = (pages, e, direction, arrow, arrows) => {
+const _arrowNavigation = (pages, e, direction, arrows) => {
     e.preventDefault(); // remove??
-
     _removeDisabledArrows(arrows);
-
     _disableArrow(pages, arrows);
 
-    
     const currentActiveIndex = getActive(pages);
     if (direction === "back") {
         pages[currentActiveIndex - 1].classList.add("active");
     } else {
         pages[currentActiveIndex + 1].classList.add("active");
     }
-    
     pages[currentActiveIndex].classList.remove("active");
     
 };
