@@ -31,11 +31,11 @@ const _addListener = (pages, arrows) => {
 
     arrows.map(arrow => {
         if (arrow.classList.contains("arrow-forward")) {
-            arrow.addEventListener("click", e => _arrowNavigation(pages, e, 1, arrow, arrows));
+            arrow.addEventListener("click", e => _arrowNavigation(pages, e, "forward", arrow, arrows));
         }
 
         if (arrow.classList.contains("arrow-back")) {
-            arrow.addEventListener("click", e => _arrowNavigation(pages, e, -1, arrow, arrows));
+            arrow.addEventListener("click", e => _arrowNavigation(pages, e, "back", arrow, arrows));
         }
 
         /* if (arrow.classList.contains("arrow-end")) {
@@ -54,14 +54,27 @@ const _initialActive = (pages, arrowBack) => {
     arrowBack.classList.add("disabled");
 };
 
+const getActive = pages => {
+
+    const currentActive = [...pages].find(page => page.classList.contains("active"));
+
+    return [].indexOf.call(pages, currentActive);
+
+};
+
 const _logicalName = (e, pages, arrows) => { // RENAME
     e.preventDefault(); // remove?
 
     _removeDisabledArrows(arrows);
     _setActive(e, pages);
 
-    const currentActive = [...pages].find(page => page.classList.contains("active"));
-    const currentActiveIndex = [].indexOf.call(pages, currentActive);
+    _disableArrow(pages, arrows);
+};
+
+const _disableArrow = (pages, arrows) => {
+    console.log("disableArrow kjører");
+
+    const currentActiveIndex = getActive(pages);
 
     if (currentActiveIndex === 0) {
         arrows[1].classList.add("disabled");
@@ -77,8 +90,9 @@ const _setActive = (e, pages) => {
 };
 
 // Remove all disabled state for arrows.
-const _removeDisabledArrows = arrowPages => {
-    arrowPages.map(arrow => {
+const _removeDisabledArrows = arrows => {
+    console.log("removeDisabledArrows kjører");
+    arrows.map(arrow => {
         arrow.classList.contains("disabled") ? arrow.classList.remove("disabled") : null;
     });
 };
@@ -92,27 +106,23 @@ const _removeActive = pages => {
 Changes state on active page when clicking arrows
 Changes state on arrows to disabled if not index is first or last in pages list
 */
-const _arrowNavigation = (pages, e, steps, arrow, arrows) => {
+const _arrowNavigation = (pages, e, direction, arrow, arrows) => {
     e.preventDefault(); // remove??
 
-    const currentActive = [...pages].find(page => page.classList.contains("active"));
+    _removeDisabledArrows(arrows);
 
-    const currentActiveIndex = [].indexOf.call(pages, currentActive);
+    _disableArrow(pages, arrows);
 
-    /*
-    if ((e.currentTarget.classList.contains("arrow-back") && (currentActiveIndex === 1))) {
-        arrow.classList.add("disabled");
-    }
-
-    if ((e.currentTarget.classList.contains("arrow-forward") && (currentActiveIndex === pages.length - 2))) {
-        arrow.classList.add("disabled");
+    if (direction === "back") {
+        console.log(typeof getActive(pages));
+        console.log(pages[(getActive(pages) - 1)].classList);
+        pages[Number(getActive(pages) - 1)].classList.add("active");
+        console.log(pages[(getActive(pages) - 1)].classList);
     } else {
-        arrows.filter(arrow => arrow.classList.contains("disabled") === arrow.classList.remove("disabled"));
+        pages[(getActive(pages) + 1)].classList.add("active");
     }
-    */
 
-    pages[currentActiveIndex].classList.remove("active");
-    pages[currentActiveIndex + steps].classList.add("active");
+    pages[getActive(pages)].classList.remove("active");
 };
 
 const init = id => {
