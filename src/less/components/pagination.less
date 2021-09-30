@@ -59,6 +59,17 @@
         }
 
         &.arrow-back {
+            &.disabled {
+                pointer-events: none;
+
+                a,
+                span {
+                    &:after {
+                        .material-icons-styling(@color: @light-brown, @margin: 0, @font-size: 1.75rem);
+                    }
+                }
+            }
+
             a,
             span {
                 &:after {
@@ -96,6 +107,17 @@
         }
 
         &.arrow-forward {
+            &.disabled {
+                pointer-events: none;
+
+                a,
+                span {
+                    &:after {
+                        .material-icons-styling(@color: @light-brown, @margin: 0, @font-size: 1.75rem);
+                    }
+                }
+            }
+
             a,
             span {
                 &:after {

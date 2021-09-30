@@ -30,13 +30,14 @@ const _addListener = (pages, arrows) => {
     });
 
     arrows.map(arrow => {
+        if (arrow.classList.contains("arrow-back")) {
+            arrow.addEventListener("click", e => _arrowNavigation(pages, e, "back", arrow, arrows));
+        }
         if (arrow.classList.contains("arrow-forward")) {
             arrow.addEventListener("click", e => _arrowNavigation(pages, e, "forward", arrow, arrows));
         }
 
-        if (arrow.classList.contains("arrow-back")) {
-            arrow.addEventListener("click", e => _arrowNavigation(pages, e, "back", arrow, arrows));
-        }
+
 
         /* if (arrow.classList.contains("arrow-end")) {
             arrow.addEventListener("click", e => _arrowNavigation(pages, e, 0));
@@ -66,14 +67,12 @@ const _logicalName = (e, pages, arrows) => { // RENAME
     e.preventDefault(); // remove?
 
     _removeDisabledArrows(arrows);
-    _setActive(e, pages);
+    _setActiveOnClick(e, pages);
 
     _disableArrow(pages, arrows);
 };
 
 const _disableArrow = (pages, arrows) => {
-    console.log("disableArrow kjører");
-
     const currentActiveIndex = getActive(pages);
 
     if (currentActiveIndex === 0) {
@@ -83,7 +82,7 @@ const _disableArrow = (pages, arrows) => {
     }
 };
 
-const _setActive = (e, pages) => {
+const _setActiveOnClick = (e, pages) => {
     // e.preventDefault(); // remove??
     _removeActive(pages);
     e.currentTarget.classList.add("active");
@@ -91,7 +90,6 @@ const _setActive = (e, pages) => {
 
 // Remove all disabled state for arrows.
 const _removeDisabledArrows = arrows => {
-    console.log("removeDisabledArrows kjører");
     arrows.map(arrow => {
         arrow.classList.contains("disabled") ? arrow.classList.remove("disabled") : null;
     });
@@ -113,16 +111,16 @@ const _arrowNavigation = (pages, e, direction, arrow, arrows) => {
 
     _disableArrow(pages, arrows);
 
+    
+    const currentActiveIndex = getActive(pages);
     if (direction === "back") {
-        console.log(typeof getActive(pages));
-        console.log(pages[(getActive(pages) - 1)].classList);
-        pages[Number(getActive(pages) - 1)].classList.add("active");
-        console.log(pages[(getActive(pages) - 1)].classList);
+        pages[currentActiveIndex - 1].classList.add("active");
     } else {
-        pages[(getActive(pages) + 1)].classList.add("active");
+        pages[currentActiveIndex + 1].classList.add("active");
     }
-
-    pages[getActive(pages)].classList.remove("active");
+    
+    pages[currentActiveIndex].classList.remove("active");
+    
 };
 
 const init = id => {
