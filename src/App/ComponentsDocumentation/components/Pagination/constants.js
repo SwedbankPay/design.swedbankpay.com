@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Pagination from "~/src/App/components/Pagination";
 
 export const paginationItems = [
@@ -20,7 +20,7 @@ export const PaginationShowCasePanel = {
     id: "no-tabs",
     elements: [
         {
-            component: <Pagination type="simple" mobileView={false} items={paginationItems} arrows text="1" />,
+            component: <Pagination type="simple" items={paginationItems} arrows text="1" />,
             options: {
                 radio: [
                     {

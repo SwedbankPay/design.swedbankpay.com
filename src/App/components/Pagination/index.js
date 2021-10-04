@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Pagination = ({ type, items, text, arrows, mobileView }) => {
+const Pagination = ({ type, items, arrows, mobileView }) => {
 
     let activeItem = -1;
 
@@ -34,13 +34,17 @@ const Pagination = ({ type, items, text, arrows, mobileView }) => {
             {mobileView ?
                 <>
                     <ul className={paginationClasses}>
-                        <Arrow type="start"/>
-                        <Arrow type="back"/>
+                        {arrows ? <>
+                            <Arrow type="start"/>
+                            <Arrow type="back"/>
+                        </> : null }
                         <li>
-                            <span className="text">Page {text} of {items.length}</span>{"\n"}
+                            <span className="text">Page of {items.length}</span>{"\n"}
                         </li>
-                        <Arrow type="forward"/>
-                        <Arrow type="end"/>
+                        {arrows ? <>
+                            <Arrow type="forward"/>
+                            <Arrow type="end"/>
+                        </> : null }
                     </ul>
                 </>
 

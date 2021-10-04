@@ -12,6 +12,10 @@
             display: none;
         }
 
+        &.dotts {
+            pointer-events: none;
+        }
+
         a,
         span {
             display: flex;
@@ -154,48 +158,6 @@
                 &:before,
                 &:after {
                     color: @pagination-default-color;
-                }
-            }
-        }
-    }
-
-    &.pagination-bullets {
-        li:not(.arrow-start):not(.arrow-back):not(.arrow-forward):not(.arrow-end) {
-            a,
-            span {
-                //Hide the text, we just want to see bullets
-                color: rgba(0, 0, 0, 0);
-                position: relative;
-                padding: 0.25rem 0.75rem;
-
-
-                &:after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    top: 0;
-                    bottom: 0;
-                    width: 1rem;
-                    height: 1rem;
-                    border-radius: 50%;
-                    background-color: @pagination-default-color;
-                    margin: auto;
-                }
-
-                &:hover {
-                    &:after {
-                        background-color: @pagination-arrow-color;
-                    }
-                }
-            }
-
-            &.active {
-                a,
-                span {
-                    &:after {
-                        background-color: @pagination-arrow-color;
-                    }
                 }
             }
         }
