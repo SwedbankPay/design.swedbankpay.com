@@ -24,6 +24,11 @@ const _createPagination = paginationContainer => {
             page.addEventListener("click", e => {
                 _setActiveOnClick(e);
             })
+        });
+
+        arrowForward.addEventListener("click", e => {
+            e.preventDefault();
+            // create arrow navigation
         })
     };
 
@@ -54,20 +59,32 @@ const _createPagination = paginationContainer => {
         const paginatedPages = [];
         const activeIndex = _getActiveIndex();
         if (pages.length > 7) {
+            const anchor = document.createElement("a");
+            const anchor2 = document.createElement("a");
             const dotts = document.createElement("LI");
-            dotts.innerText = "...";
-            if (activeIndex < 3) {
+            const dotts2 = document.createElement("LI");
+            dotts.appendChild(anchor);
+            dotts2.appendChild(anchor2);
+            anchor.innerText = "..";
+            anchor2.innerText = "..";
+            if (activeIndex < 4) {
                 paginatedPages.push(pages[0]);
                 [...pages].slice(1,5).map(page => paginatedPages.push(page));
                 paginatedPages.push(dotts);
+                paginatedPages.push(pages[pages.length - 1]);
             }
-            if (activeIndex > 2 && activeIndex > 6) {
-                console.log("click");
-                paginatedPages.push(dotts);
-                [...pages].slice(3,5).map(page => paginatedPages.push(page));
-                paginatedPages.push(dotts);
+            if (activeIndex > 3 && activeIndex < pages.length - 4) {
+                paginatedPages.push(pages[0]);
+                activeIndex >= 4 ? paginatedPages.push(dotts) : null; 
+                [...pages].slice(activeIndex - 1, activeIndex + 2).map(page => paginatedPages.push(page));
+                activeIndex >= pages.length - 3 ? null : paginatedPages.push(dotts2);
+                paginatedPages.push(pages[pages.length - 1]);
             }
-            paginatedPages.push(pages[pages.length - 1])
+            if (activeIndex >= pages.length - 4){
+                paginatedPages.push(pages[0]);
+                paginatedPages.push(dotts);
+                [...pages].slice(-5).map(page => paginatedPages.push(page));
+            }
         }
         _paginateContainer(paginatedPages);
     }
