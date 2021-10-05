@@ -4,7 +4,7 @@ import classnames from "classnames";
 
 const Pagination = ({ type, items, arrows, mobileView }) => {
 
-    let activeItem = -1;
+    const activeItem = -1;
 
     const itemLength = items ? items.length - 1 : -2;
 
@@ -23,7 +23,7 @@ const Pagination = ({ type, items, arrows, mobileView }) => {
         }
 
         return (
-            <li className={`arrow-${type}`} aria-label={type} >{"\n"}
+            <li className={`arrow-${type} ${type === "start" || type === "back" ? "disabled" : ""}`} aria-label={type} >{"\n"}
                 {disabled ? <span></span> : <a href="#"></a>}{"\n"}
             </li>
         );
@@ -32,32 +32,27 @@ const Pagination = ({ type, items, arrows, mobileView }) => {
     return (
         <>
             {mobileView ?
-                <>
-                    <ul className={paginationClasses}>
-                        {arrows ? <>
-                            <Arrow type="start"/>
-                            <Arrow type="back"/>
-                        </> : null }
-                        <h1>HALLA</h1>
-                        {arrows ? <>
-                            <Arrow type="forward"/>
-                            <Arrow type="end"/>
-                        </> : null }
-                    </ul>
-                </>
+                <ul className={paginationClasses}>
+                    {arrows ? <>
+                        <Arrow type="start"/>
+                        <Arrow type="back"/>
+                    </> : null }
+                    <li><span>Page 1 of {items.length}</span></li>
+                    {arrows ? <>
+                        <Arrow type="forward"/>
+                        <Arrow type="end"/>
+                    </> : null }
+                </ul>
                 :
                 <>
                     <ul className={paginationClasses}>
                         {arrows ? <Arrow type="back" /> : null}
-                        {items ? items.map(({ name, href, active }, i) => {
-                            if (active) { activeItem = i; }
-
-                            return (
-                                <li key={i} className={`${active ? "active" : ""}`}>{"\n"}
-                                    <a href={href}>{name}</a>{"\n"}
-                                </li>
-                            );
-                        }) : null}
+                        {items ? items.map(({ name, href, active }, i) => (
+                            <li key={i} className={`${active ? "active" : ""}`}>{"\n"}
+                                <a href={href}>{name}</a>{"\n"}
+                            </li>
+                        )
+                        ) : null}
                         {arrows ? <Arrow type="forward" /> : null}
                     </ul>
                 </>

@@ -9,6 +9,7 @@ const _createPagination = paginationContainer => {
     const arrowBack = paginationContainer.querySelector("li.arrow-back");
 
     const _initialActive = () => {
+        console.log("init active");
         [...pages][0].classList.add("active");
         arrowBack.classList.add("disabled");
     }
@@ -72,6 +73,7 @@ const _createPagination = paginationContainer => {
     }
 
     const _paginate = () => {
+        console.log("paginate");
         const paginatedPages = [];
         const activeIndex = _getActiveIndex();
         if (pages.length > 7) {

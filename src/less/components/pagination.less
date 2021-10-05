@@ -96,6 +96,16 @@
         }
 
         &.arrow-start {
+            &.disabled {
+                a,
+                span {
+                    &:before {
+                        content: "first_page";
+                        .material-icons-styling(@color: @light-brown, @margin: 0, @font-size: 1.75rem);
+                    }
+                }
+            }
+
             a,
             span {
                 &:before {
