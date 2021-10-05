@@ -38,18 +38,14 @@ const Pagination = ({ type, items, arrows, mobileView }) => {
                             <Arrow type="start"/>
                             <Arrow type="back"/>
                         </> : null }
-                        <li>
-                            <span className="text">Page of {items.length}</span>{"\n"}
-                        </li>
+                        <h1>HALLA</h1>
                         {arrows ? <>
                             <Arrow type="forward"/>
                             <Arrow type="end"/>
                         </> : null }
                     </ul>
                 </>
-
                 :
-
                 <>
                     <ul className={paginationClasses}>
                         {arrows ? <Arrow type="back" /> : null}
@@ -79,3 +75,16 @@ Pagination.propTypes = {
 };
 
 export default Pagination;
+
+/*
+{items ? items.map(({ name, href, active }, i) => {
+    if (active) { activeItem = i; }
+
+    return (
+        <li key={i}>
+            <span>Page {i+1} of {items.length}</span>
+        </li>
+    );
+}) : null
+}
+*/

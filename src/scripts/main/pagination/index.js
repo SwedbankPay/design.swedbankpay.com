@@ -4,7 +4,7 @@ const SELECTORS = {
 
 const _createPagination = paginationContainer => {
 
-    const pages = paginationContainer.querySelectorAll("li:not(.arrow-back, .arrow-forward, .arrow-end, .arrow-start, .wraaat)");
+    const pages = paginationContainer.querySelectorAll("li:not(.arrow-back, .arrow-forward, .arrow-end, .arrow-start)");
     const arrowForward = paginationContainer.querySelector("li.arrow-forward");
     const arrowBack = paginationContainer.querySelector("li.arrow-back");
 
