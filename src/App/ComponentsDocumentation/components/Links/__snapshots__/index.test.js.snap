@@ -61,18 +61,6 @@ exports[`Components: Links ActionLink renders 1`] = `
                   ],
                   "title": "Modifiers",
                 },
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "state_modifiers",
-                      "name": "Disabled",
-                      "value": Object {
-                        "disabled": true,
-                      },
-                    },
-                  ],
-                  "title": "State modifier",
-                },
               ],
             },
             "title": "Action links",
@@ -406,18 +394,6 @@ exports[`Components: Links Overview renders 1`] = `
                   ],
                   "title": "Alternatives",
                 },
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "state_modifier",
-                      "name": "Disabled",
-                      "value": Object {
-                        "disabled": true,
-                      },
-                    },
-                  ],
-                  "title": "State modifier",
-                },
               ],
               "radio": Array [
                 Object {
@@ -463,18 +439,6 @@ exports[`Components: Links Overview renders 1`] = `
                     },
                   ],
                   "title": "Alternatives",
-                },
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "state_modifier",
-                      "name": "Disabled",
-                      "value": Object {
-                        "disabled": true,
-                      },
-                    },
-                  ],
-                  "title": "State modifiers",
                 },
               ],
               "radio": Array [

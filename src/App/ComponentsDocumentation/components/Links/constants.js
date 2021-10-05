@@ -2,15 +2,14 @@ import React from "react";
 import Link from "@components/Link";
 import ActionLink from "~/src/App/components/ActionLink";
 
-const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroundDark, bright, standalone, disabled }) => {
+const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroundDark, bright, standalone }) => {
     const attrs = {
         rightIcon,
         leftIcon,
         linkText,
         smallFont,
         bright,
-        standalone,
-        disabled
+        standalone
     };
 
     return (
@@ -25,11 +24,11 @@ const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroun
     );
 };
 
-const ShowcaseActionComponent = ({ badge, smallText, multiline, newTab, disabled }) => (
+const ShowcaseActionComponent = ({ badge, smallText, multiline, newTab }) => (
     <div className="d-flex flex-column w-100">
-        <ActionLink linkText="Pay now" className={` ${badge ? "badge badge-default badge-number" : null}`} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab} disabled={disabled}/>{"\n"}
-        <ActionLink linkText="Pay on the settlement date" className={`${badge ? "badge badge-default badge-number" : null}`} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab} disabled={disabled}/>{"\n"}
-        <ActionLink linkText="Add to my credit" className={`${badge ? "badge badge-default badge-number" : null}`} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab} disabled={disabled}/>{"\n"}
+        <ActionLink linkText="Pay now" className={` ${badge ? "badge badge-default badge-number" : null}`} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab}/>{"\n"}
+        <ActionLink linkText="Pay on the settlement date" className={`${badge ? "badge badge-default badge-number" : null}`} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab}/>{"\n"}
+        <ActionLink linkText="Add to my credit" className={`${badge ? "badge badge-default badge-number" : null}`} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab}/>{"\n"}
     </div>
 );
 
@@ -103,18 +102,6 @@ export const overviewLinks = {
                                 }
                             }
                         ]
-                    },
-                    {
-                        title: "State modifier",
-                        inputs: [
-                            {
-                                id: "state_modifier",
-                                name: "Disabled",
-                                value: {
-                                    disabled: true
-                                }
-                            }
-                        ]
                     }
                 ],
                 radio: [
@@ -155,18 +142,6 @@ export const overviewLinks = {
                                 value: {
                                     backgroundDark: true,
                                     bright: true
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        title: "State modifiers",
-                        inputs: [
-                            {
-                                id: "state_modifier",
-                                name: "Disabled",
-                                value: {
-                                    disabled: true
                                 }
                             }
                         ]
@@ -264,18 +239,6 @@ export const overviewActionLinks = {
                                 name: "External link",
                                 value: {
                                     newTab: true
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        title: "State modifier",
-                        inputs: [
-                            {
-                                id: "state_modifiers",
-                                name: "Disabled",
-                                value: {
-                                    disabled: true
                                 }
                             }
                         ]
