@@ -1,0 +1,1136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Forms: index ContentGuidelines renders 1`] = `
+<section>
+  <h2
+    id="content-guidelines"
+  >
+    Content guidelines
+  </h2>
+  <div
+    className="slab slab-plain py-5"
+  >
+    <div
+      className="col-12 col-lg-6 m-auto"
+    >
+      <h3
+        className="mb-0"
+      >
+        Title
+      </h3>
+      <div
+        className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small"
+      >
+        32px
+      </div>
+      <InputGroup
+        className="mb-0"
+        label="Input label"
+        placeholder="Placeholer text"
+        tooltip={true}
+        type="text"
+      />
+      <div
+        className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small"
+      >
+        24px
+      </div>
+      <InputGroup
+        className="mb-0"
+        label="Input label"
+        optional={true}
+        placeholder="Select an option"
+        selectOptions={
+          Array [
+            "Option 1",
+            "Option 2",
+          ]
+        }
+        type="select"
+      />
+      <div
+        className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small"
+      >
+        24px
+      </div>
+      <Radio
+        className="mb-0"
+        group={true}
+        groupTitle="Input label"
+        name="guidelines-radio-example"
+        options={
+          Array [
+            Object {
+              "checked": true,
+              "id": "guidelines-options-1",
+              "label": "Option 1",
+            },
+            Object {
+              "id": "guidelines-options-2",
+              "label": "Option 2",
+            },
+            Object {
+              "id": "guidelines-options-3",
+              "label": "Option 3",
+            },
+          ]
+        }
+      />
+      <div
+        className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small"
+      >
+        32px
+      </div>
+      <div
+        className="d-xs-flex d-block justify-content-between"
+      >
+        <Button
+          label="Submit button"
+          type="primary"
+        />
+        <Button
+          label="Cancel button"
+          type="link"
+        />
+      </div>
+    </div>
+  </div>
+  <p>
+    Form are comprised of some or all of the following elements:
+  </p>
+  <ul
+    className="list list-bullet"
+  >
+    <li
+      key="Headings"
+    >
+      <b>
+        Headings
+      </b>
+       
+      A title should be used to describe the form and section headings to describe sections within the form.
+    </li>
+    <li
+      key="Labels"
+    >
+      <b>
+        Labels
+      </b>
+       
+      Input labels help users understand what information to provide in the corresponding input.
+    </li>
+    <li
+      key="Input fields"
+    >
+      <b>
+        Input fields
+      </b>
+       
+      <Link
+        to="/components/input-field"
+      >
+        Input fields
+      </Link>
+       enable users to input free-form text.
+    </li>
+    <li
+      key="Data inputs"
+    >
+      <b>
+        Data inputs
+      </b>
+       
+      Information can be entered a variety of non-free form input field, 
+      <Link
+        to="/components/checkbox"
+      >
+        checkboxes
+      </Link>
+      , 
+      <Link
+        to="/components/radio-button"
+      >
+        radio button
+      </Link>
+      , 
+      <Link
+        to="/components/select"
+      >
+        select lists
+      </Link>
+      , 
+      <Link
+        to="/components/datepickers"
+      >
+        date pickers
+      </Link>
+      , 
+      <Link
+        to="/components/togglebox"
+      >
+        toggle-switches
+      </Link>
+       and 
+      <Link
+        to="/components/rangeslider"
+      >
+        rangesliders
+      </Link>
+      .
+    </li>
+    <li
+      key="Help"
+    >
+      <b>
+        Help
+      </b>
+       
+      Provides in-context guidance for the user through a placeholder text or a clickable help icon
+    </li>
+    <li
+      key="Buttons"
+    >
+      <b>
+        Buttons
+      </b>
+       
+      <Link
+        to="/components/buttons"
+      >
+        Buttons
+      </Link>
+       allows users to submit or exit a form, use a primary button for the main action, secondary button for secondary actions and a link button to cancel.
+    </li>
+  </ul>
+  <h3>
+    Spacing
+  </h3>
+  <p>
+    As a general rule, we recommend a vertical spacing between individual inputs of 24px and a 32px spacer before the first input, between sections and between the last input and the buttons. This may vary depending on your context, but spacing between groups should always be adjusted in relationship to spacing between individual items. 
+  </p>
+</section>
+`;
+
+exports[`Forms: index DeveloperDocumentation renders 1`] = `
+<section>
+  <h2
+    id="developer-documentation"
+  >
+    Developer documentation
+  </h2>
+  <section>
+    <h3>
+      Errors and validation
+    </h3>
+    <p>
+      To use our validation, start by adding the attribute 
+      <CodeTags
+        code="novalidate"
+        type="secondary"
+      />
+       to your 
+      <CodeTags
+        code="<form>"
+        type="primary"
+      />
+       element. If you wish to validate your entire form, add the 
+      <CodeTags
+        code="validate"
+        type="secondary"
+      />
+       attribute to the 
+      <CodeTags
+        code="<form>"
+        type="primary"
+      />
+       tag, if not add it to the desired 
+      <CodeTags
+        code="<input>"
+        type="primary"
+      />
+       tags. This will validate against 
+      <CodeTags
+        code="required"
+        type="secondary"
+      />
+       and 
+      <CodeTags
+        code="pattern"
+        type="secondary"
+      />
+      , where pattern will override default patterns.
+    </p>
+    <b
+      className="brand-headline"
+    >
+      Client-side validation
+    </b>
+    <p>
+      Use client-side validation to validate as much data as possible before the user submits the form. Common errors include empty required fields, invalid characters or incorrect input format. To give users inline validation feedback insert a error message within the 
+      <CodeTags
+        code="form-group"
+        type="primary"
+      />
+       in the 
+      <CodeTags
+        code="help-block"
+        type="primary"
+      />
+       element in the attribute 
+      <CodeTags
+        code="data-error"
+        type="primary"
+      />
+      .
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      removeOuterTag={true}
+      showCasePanel={true}
+    >
+      <div
+        className="col-12 col-sm-6 m-auto pt-3"
+      >
+        <InputGroup
+          defaultValue="Name.com"
+          errorMessage="The email address must include \\"@\\""
+          helpBlock={true}
+          id="input-error-client-example"
+          label="Email"
+          type="text"
+          validationState="error"
+        />
+      </div>
+    </ComponentPreview>
+    <b
+      className="brand-headline"
+    >
+      Server-side validation
+    </b>
+    <p>
+      Server side validation can be used to control the inputs after the user submits the form. If an error has occurred, display an error alert at the top of the form after the page has reloaded as well as inline errors on the affected input components.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      showCasePanel={true}
+    >
+      <div
+        className="col-12 col-sm-7 m-auto"
+      >
+        
+
+        <span
+          className="h2 d-block mb-3"
+        >
+          Log in
+        </span>
+        <Alert
+          icon="cancel"
+          text={
+            <p>
+              <b>
+                Error.
+              </b>
+               Incorrect password
+            </p>
+          }
+          type="danger"
+        />
+        <InputGroup
+          defaultValue="name@gmail.com"
+          label="Email"
+          type="email"
+        />
+        <InputGroup
+          defaultValue="123456789"
+          errorMessage="incorrect password"
+          helpBlock={true}
+          id="input-error-server-example"
+          label="Password"
+          type="password"
+          validationState="error"
+        />
+        <div
+          className="d-sm-flex d-block justify-content-between mb-4"
+        >
+          <Checkbox
+            id="server-side-validation-checkbox"
+            label="Remember me"
+          />
+          <Link
+            linkText="Forgot your password?"
+          />
+        </div>
+        
+
+        <Button
+          fullWidth={true}
+          label="Log in"
+          type="primary"
+        />
+      </div>
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Fieldset
+    </h3>
+    <p>
+      You can use the 
+      <CodeTags
+        code="<fieldset>"
+        type="primary"
+      />
+       to group related elements in a 
+      <CodeTags
+        code="form"
+        type="primary"
+      />
+       and create more structure.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      showCasePanel={true}
+    >
+      <div
+        className="col-12 col-sm-6 m-auto"
+      >
+        <form>
+          <fieldset>
+            <legend>
+              <span
+                className="h3"
+              >
+                Name
+              </span>
+            </legend>
+            <InputGroup
+              label="First name"
+              type="name"
+            />
+            <InputGroup
+              label="Last name"
+              type="name"
+            />
+          </fieldset>
+          <fieldset>
+            <legend>
+              <span
+                className="h3"
+              >
+                Contact information
+              </span>
+            </legend>
+            <InputGroup
+              label="Email"
+              type="email"
+            />
+            <InputGroup
+              label="Phone number"
+              type="tel"
+            />
+          </fieldset>
+        </form>
+      </div>
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Disabled state
+    </h3>
+    <p>
+      You can disable an entire fieldset by adding 
+      <CodeTags
+        code="disabled"
+        type="primary"
+      />
+       to the fieldset element. 
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      removeOuterTag={true}
+      showCasePanel={true}
+    >
+      <div
+        className="col-12 col-sm-6 m-auto"
+      >
+        <fieldset
+          disabled={true}
+        >
+          <InputGroup
+            label="Name"
+            type="name"
+          />
+          <InputGroup
+            label="Email"
+            type="email"
+          />
+          <Checkbox
+            id="disabled-fieldset-checkbox"
+            label="I agree to terms of use"
+          />
+          
+
+          <Button
+            label="Submit"
+            type="primary"
+          />
+        </fieldset>
+      </div>
+    </ComponentPreview>
+    <p>
+      If you only wish to disable a specific form component, add the 
+      <CodeTags
+        code="disabled"
+        type="primary"
+      />
+       attribute to the desired component.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      removeOuterTag={true}
+      showCasePanel={true}
+    >
+      <div
+        className="col-12 col-sm-6 m-auto"
+      >
+        <fieldset>
+          <InputGroup
+            disabled={true}
+            label="Name"
+            type="name"
+          />
+          <InputGroup
+            label="Email"
+            type="email"
+          />
+          <Checkbox
+            id="disabled-input-checkbox"
+            label="I agree to terms of user"
+          />
+          
+
+          <Button
+            label="Submit"
+            type="primary"
+          />
+        </fieldset>
+      </div>
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Form grid
+    </h3>
+    <p>
+      If you need more than one column in your form, you can use the grid system to customize how forms are displayed. Wrap your form elements in a row container and remember to add 
+      <CodeTags
+        code=".col-{your_size}"
+        type="secondary"
+      />
+       to the 
+      <CodeTags
+        code=".form-group"
+        type="secondary"
+      />
+      .
+    </p>
+  </section>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="col-12 col-sm-10 m-auto pt-2"
+    >
+      <form>
+        <div
+          className="row align-items-center justify-content-between"
+        >
+          <InputGroup
+            className="col-12 col-sm-3 px-0"
+            label="Name"
+            type="name"
+          />
+          <InputGroup
+            className="col-12 col-sm-6 px-0"
+            label="Email"
+            type="email"
+          />
+          
+
+          <Button
+            className="mt-1"
+            label="Submit"
+            type="primary"
+          />
+        </div>
+      </form>
+    </div>
+  </ComponentPreview>
+  <section>
+    <h3>
+      Static text
+    </h3>
+    <p>
+      To display static text in a form use 
+      <CodeTags
+        code="<span>"
+        type="secondary"
+      />
+    </p>
+  </section>
+  <section>
+    <h3>
+      JavaScript methods
+    </h3>
+    <p>
+      <CodeTags
+        code="dg.validation.init()"
+        type="primary"
+      />
+       can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.
+    </p>
+  </section>
+</section>
+`;
+
+exports[`Forms: index HowToDesignForms renders 1`] = `
+<section>
+  <h2
+    id="layout"
+  >
+    How to design forms
+  </h2>
+  <section>
+    <h3>
+      Layout
+    </h3>
+    <p>
+      Forms should be designed vertically as this improves their readability. When possible, a form should be one column, but information can be presented in multiple columns if they are grouped together (e.g. address fields).
+    </p>
+    <p>
+      Do not make an input full width of a desktop viewport, use the grid to restrict the width of the inputs to no more than half of the viewport. The field widths should reflect the intended length of the content while still aligning to the grid. On mobile devices, expand the input elements and buttons to make use of the whole viewport width.
+    </p>
+    <div
+      className="slab slab-plain slab-border-success"
+    >
+      <span
+        className="h4 d-block mb-4"
+      >
+        Do
+      </span>
+      <div
+        className="col-12 col-sm-8"
+      >
+        <InputGroup
+          label="Adress"
+          type="text"
+        />
+        <div
+          className="d-flex"
+        >
+          <InputGroup
+            label="Postal code"
+            type="text"
+          />
+          <InputGroup
+            className="w-100 ml-3"
+            label="City"
+            type="text"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="slab slab-plain slab-border-error"
+    >
+      <span
+        className="h4 d-block mb-4"
+      >
+        Don't
+      </span>
+      <InputGroup
+        key="Address"
+        label="Address"
+        type="text"
+      />
+      <InputGroup
+        key="Postal code"
+        label="Postal code"
+        type="text"
+      />
+      <InputGroup
+        key="City"
+        label="City"
+        type="text"
+      />
+    </div>
+  </section>
+  <section>
+    <h3>
+      Required VS. optional
+    </h3>
+    <p>
+      All fields in a form can be assumed required and should not be labeled with an “*” . If you must ask an optional question, make it clear that it’s optional by adding “(optional)” to the label instead. 
+    </p>
+    <div
+      className="row"
+    >
+      <div
+        className="col-lg-6 col-12"
+      >
+        <div
+          className="slab slab-plain slab-border-success"
+        >
+          <span
+            className="h4 d-block mb-4"
+          >
+            Do
+          </span>
+          <InputGroup
+            label="E-mail"
+            type="text"
+          />
+          <InputGroup
+            label="Telephone number"
+            optional={true}
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        className="col-lg-6 col-12"
+      >
+        <div
+          className="slab slab-plain slab-border-error"
+        >
+          <span
+            className="h4 d-block mb-4"
+          >
+            Don't
+          </span>
+          <InputGroup
+            label="E-mail*"
+            type="text"
+          />
+          <InputGroup
+            label="Telephone number"
+            type="tel"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h3>
+      Logical flow
+    </h3>
+    <p>
+      To create a better user flow, ask questions in a logical order and group related inputs into sections or steps. Also consider using progressive disclosure to reveal additional content based on how a user answered the previous question. The flow will then better resemble a conversation and guide the user through the task.
+    </p>
+    <div
+      className="row"
+    >
+      <div
+        className="col-lg-6 col-12"
+      >
+        <div
+          className="slab slab-plain slab-border-success h-100"
+        >
+          <span
+            className="h4 d-block mb-4"
+          >
+            Do
+          </span>
+          <div
+            className="radio mb-2"
+          >
+            <input
+              defaultChecked={true}
+              id="logical-flow-example-email"
+              name="logical-flow-example"
+              type="radio"
+            />
+            <label
+              htmlFor="logical-flow-example-email"
+              onClick={[Function]}
+            >
+              E-mail
+            </label>
+          </div>
+          <div
+            className="ml-2"
+          >
+            <InputGroup
+              className="ml-4"
+              label="E-mail address"
+              type="text"
+            />
+          </div>
+          <div
+            className="radio mb-2"
+          >
+            <input
+              id="logical-flow-example-call"
+              name="logical-flow-example"
+              type="radio"
+            />
+            <label
+              htmlFor="logical-flow-example-call"
+              onClick={[Function]}
+            >
+              Call
+            </label>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-lg-6 col-12"
+      >
+        <div
+          className="slab slab-plain slab-border-error"
+        >
+          <span
+            className="h4 d-block mb-4"
+          >
+            Don't
+          </span>
+          <Radio
+            checked={true}
+            id="logical-flow-example-email-2"
+            label="E-mail"
+            name="logical-flow-example-2"
+          />
+          <div
+            className="ml-2"
+          >
+            <InputGroup
+              className="ml-4"
+              label="E-mail address"
+              type="text"
+            />
+          </div>
+          <Radio
+            id="logical-flow-example-call-2"
+            label="Call"
+            name="logical-flow-example-2"
+          />
+          <div
+            className="ml-2"
+          >
+            <InputGroup
+              className="ml-4"
+              label="Phone number"
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h3>
+      Button placement
+    </h3>
+    <p>
+      The primary button should be left-aligned along with the left side of the form field. If additional actions are required, put the primary button first, then secondary buttons, then the link button. One exception is a multiple-step form where the “Back” secondary button sits at the very left, while the rest of the buttons are aligned to the right. In some cases, like on a 
+      <a
+        href=""
+      >
+        Login page
+      </a>
+      , buttons can be centered and set to the same width as the input fields. On mobile, the buttons are always centered, full width and stacked vertically with the primary action on top. 
+    </p>
+     
+    <img
+      className="w-100"
+      src="/TEST/img/documentation/templates/img-button-placement.png"
+    />
+  </section>
+  <section>
+    <h3>
+      Error messages
+    </h3>
+    <p>
+      When an input isn’t accepted, error messages should be used to help the user understand what went wrong and how to solve the problem without using technical jargong. 
+    </p>
+    <div
+      className="row"
+    >
+      <div
+        className="col-lg-6 col-12"
+      >
+        <div
+          className="slab slab-plain slab-border-success"
+        >
+          <span
+            className="h4 d-block mb-4"
+          >
+            Do
+          </span>
+          <InputGroup
+            defaultValue="Name.com"
+            errorMessage="The email address must include \\"@\\""
+            helpBlock={true}
+            id="input-error-do-example"
+            label="Email address"
+            type="text"
+            validationState="error"
+          />
+        </div>
+      </div>
+      <div
+        className="col-lg-6 col-12"
+      >
+        <div
+          className="slab slab-plain slab-border-error"
+        >
+          <span
+            className="h4 d-block mb-4"
+          >
+            Don't
+          </span>
+          <InputGroup
+            defaultValue="Name.com"
+            errorMessage="Invalid input"
+            helpBlock={true}
+            id="input-error-dont-example"
+            label="Email address"
+            type="text"
+            validationState="error"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+`;
+
+exports[`Forms: index Overview renders 1`] = `
+<section>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    A form can include different type of user input components that can be arranged in different ways depending on your specific context and needs. You might for example design a form for a user to sign up for or log into an account, register for a service, reconfigure settings, take a survey, purchase a product or provide feedback.
+  </p>
+  <ComponentPreview
+    language="html"
+    noOptions={true}
+    removeOuterTag={true}
+    showCasePanel={true}
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <div
+              className="col-md-10 col-12 px-0"
+            >
+              <form>
+                <fieldset>
+                  <legend>
+                    <span
+                      className="h2"
+                    >
+                      Contact us
+                    </span>
+                  </legend>
+                  <div
+                    className="col-12 col-sm-9 px-0"
+                  >
+                    <InputGroup
+                      label="E-mail"
+                      type="email"
+                    />
+                    <InputGroup
+                      label="Subject"
+                      optional={true}
+                      placeholder="Select a subject"
+                      selectOptions={
+                        Array [
+                          "Subject 1",
+                          "Subject 2",
+                          "Subject 3",
+                        ]
+                      }
+                      type="select"
+                    />
+                  </div>
+                  <InputGroup
+                    label="Message"
+                    type="textarea"
+                  />
+                  <Checkbox
+                    id="forms-template-checkbox-example"
+                    label={
+                      <React.Fragment>
+                        I have read and accept Swedbank Pays's 
+                        <Link
+                          linkText="privacy policy"
+                          rightIcon="launch"
+                        />
+                      </React.Fragment>
+                    }
+                  />
+                  
+
+                  <Button
+                    label="Send message"
+                    type="primary"
+                  />
+                </fieldset>
+              </form>
+            </div>,
+            "description": "This in an example of a single page contact form using a collection of components including input fields, select list, checkbox and button.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {},
+                  ],
+                },
+              ],
+            },
+            "tab": "Form",
+            "title": "Form",
+          },
+          Object {
+            "component": <div
+              className="col-md-10 col-12 px-0"
+            >
+              <form>
+                <Steps
+                  steps={
+                    Array [
+                      Object {
+                        "completed": true,
+                        "subtitle": "Authentication",
+                        "title": "Step one",
+                      },
+                      Object {
+                        "ongoing": true,
+                        "selected": true,
+                        "title": "Step two",
+                      },
+                      Object {
+                        "title": "Step three",
+                      },
+                      Object {
+                        "title": "Step four",
+                      },
+                    ]
+                  }
+                />
+                <fieldset
+                  className=""
+                >
+                  <legend>
+                    <span
+                      className="h2"
+                    >
+                      Step two
+                    </span>
+                  </legend>
+                  <div
+                    className="d-flex justify-content-between"
+                  >
+                    <InputGroup
+                      className="w-50 mr-1"
+                      label="Label"
+                      type="text"
+                    />
+                    <InputGroup
+                      className="w-50 ml-1"
+                      label="Label"
+                      type="text"
+                    />
+                  </div>
+                  <InputGroup
+                    className="mb-3"
+                    label="Label"
+                    type="text"
+                  />
+                  <Radio
+                    group={true}
+                    groupTitle="Input label"
+                    name="multi-step-radio-example"
+                    options={
+                      Array [
+                        Object {
+                          "checked": true,
+                          "id": "options-1",
+                          "label": "Option 1",
+                        },
+                        Object {
+                          "id": "options-2",
+                          "label": "Option 2",
+                        },
+                        Object {
+                          "id": "options-3",
+                          "label": "Option 3",
+                        },
+                      ]
+                    }
+                  />
+                  <div
+                    className="d-flex justify-content-between"
+                  >
+                    <Button
+                      icon="arrow_back"
+                      label="Back"
+                      type="secondary"
+                    />
+                    <Button
+                      label="Next step"
+                      type="primary"
+                    />
+                  </div>
+                </fieldset>
+              </form>
+            </div>,
+            "description": "This in an example of a multi-page form using a collection of components including a stepper, input fields, radio buttons and buttons.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {},
+                  ],
+                },
+              ],
+            },
+            "tab": "Multi-step form",
+            "title": "Multi-step form",
+          },
+        ],
+        "hideOptions": true,
+        "id": "overview-forms",
+        "tabsId": "overview-forms-tabs",
+      }
+    }
+  />
+</section>
+`;
+
+exports[`Forms: index renders 1`] = `
+<DocContainer>
+  <p
+    className="lead"
+  >
+    A form is a collection of input components that allows users to provide and submit data.
+  </p>
+  <Overview />
+  <ContentGuidelines />
+  <HowToDesignForms />
+  <DeveloperDocumentation />
+</DocContainer>
+`;
