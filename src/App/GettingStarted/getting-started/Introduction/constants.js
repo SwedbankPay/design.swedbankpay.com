@@ -20,6 +20,11 @@ export const designGuideUsers = [
         text: "Yes"
     },
     {
+        name: "Merchant Portal",
+        icon: "check",
+        text: "Yes"
+    },
+    {
         name: "Card terminals",
         icon: "close",
         text: "No, but are following the Design Guide"
@@ -37,6 +42,21 @@ export const designGuideUsers = [
     {
         name: "Onboarding Signup",
         icon: "check",
-        text: "Yes, is currently implemented the Design Guide"
+        text: "Yes"
+    },
+    {
+        name: "Onboarding Sales",
+        icon: "check",
+        text: "yes"
+    },
+    {
+        name: "Onboarding Magma",
+        icon: "check",
+        text: "Yes"
+    },
+    {
+        name: "Terminal Management System",
+        icon: "check",
+        text: "Yes"
     }
 ];
