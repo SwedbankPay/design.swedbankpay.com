@@ -22,6 +22,7 @@ const InputGroup = ({
     placeholder,
     pattern,
     validate,
+    className,
     required,
     defaultValue,
     autoComplete,
@@ -64,7 +65,7 @@ const InputGroup = ({
     );
 
     return (
-        <div className={`form-group${disabled ? " disabled" : ""}${type === "select" ? errorMessage ? " has-error" : "" : ""}`}>{"\n"}
+        <div className={`form-group${disabled ? " disabled" : ""}${type === "select" ? errorMessage ? " has-error" : "" : ""} ${className ? className : ""}`}>{"\n"}
             {label ? <label htmlFor={id}>{"\n"}{label} {optional && "(optional)"}{tooltip && "\n"}
                 {tooltip &&
                     <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
@@ -137,7 +138,8 @@ InputGroup.propTypes = {
         PropTypes.bool
     ]),
     errorMessage: PropTypes.string,
-    successMessage: PropTypes.string
+    successMessage: PropTypes.string,
+    className: PropTypes.string
 };
 
 export default InputGroup;
