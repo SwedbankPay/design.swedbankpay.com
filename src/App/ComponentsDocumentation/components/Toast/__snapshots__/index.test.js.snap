@@ -540,5 +540,8 @@ exports[`Components: Toast renders 1`] = `
   <Options />
   <PremadeToasts />
   <CustomHtml />
+  <NpmInformation
+    componentName="toast"
+  />
 </DocContainer>
 `;

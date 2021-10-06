@@ -201,5 +201,8 @@ exports[`Components: ActionList renders 1`] = `
   <Overview />
   <Anchorpoints />
   <JavascriptMethods />
+  <NpmInformation
+    componentName="actionList"
+  />
 </DocContainer>
 `;

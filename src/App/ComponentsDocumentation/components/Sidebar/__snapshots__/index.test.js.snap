@@ -591,5 +591,8 @@ exports[`Components: Sidebar renders 1`] = `
   <Overview />
   <ExtendedSidebar />
   <JavascriptMethods />
+  <NpmInformation
+    componentName="sidebar"
+  />
 </DocContainer>
 `;

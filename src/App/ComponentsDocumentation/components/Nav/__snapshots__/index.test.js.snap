@@ -159,5 +159,8 @@ exports[`Component: Nav renders 1`] = `
   <StandardNav />
   <WithIconsOnly />
   <JavascriptMethods />
+  <NpmInformation
+    componentName="nav"
+  />
 </DocContainer>
 `;

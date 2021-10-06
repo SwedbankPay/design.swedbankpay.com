@@ -112,5 +112,8 @@ exports[`Documentation: Dialog renders 1`] = `
   <HowItWorks />
   <Example />
   <JavascriptMethods />
+  <NpmInformation
+    componentName="dialog"
+  />
 </DocContainer>
 `;
