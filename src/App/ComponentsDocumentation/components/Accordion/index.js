@@ -5,6 +5,7 @@ import AccordionComponent from "@components/Accordion";
 import CodeTags from "@components/CodeTags";
 
 import { accordion } from "@src/scripts/main";
+import NpmInformation from "~/src/App/docutils/NpmInformation";
 
 const items = [
     {
@@ -69,6 +70,7 @@ const Accordion = () => {
             <Overview />
             <AccordionGroup />
             <JavascriptMethods />
+            <NpmInformation componentName={"accordion"}/>
         </DocContainer>
     );
 };

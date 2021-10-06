@@ -7,6 +7,7 @@ import CodeTags from "@components/CodeTags";
 import { sidebar } from "@src/scripts/main";
 
 import { SidebarNavList, SidebarNavListExtended } from "./constants";
+import NpmInformation from "~/src/App/docutils/NpmInformation";
 
 const Overview = () => (
     <>
@@ -157,6 +158,7 @@ const Sidebar = () => {
             <Overview />
             <ExtendedSidebar />
             <JavascriptMethods />
+            <NpmInformation componentName={"sidebar"}/>
         </DocContainer>
     );
 };

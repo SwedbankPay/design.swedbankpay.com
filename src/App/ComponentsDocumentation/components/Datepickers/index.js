@@ -7,6 +7,7 @@ import Alert from "@components/Alert";
 import CodeTags from "@components/CodeTags";
 
 import { datepicker } from "@src/scripts/main";
+import NpmInformation from "~/src/App/docutils/NpmInformation";
 
 const AboutDatepickers = () => (
     <>
@@ -418,6 +419,7 @@ class Datepickers extends Component {
                 <MultipleDates />
                 <Options />
                 <JavascriptMethods />
+                <NpmInformation componentName={"datepicker"}/>
             </DocContainer>
         );
     }
