@@ -181,7 +181,7 @@ exports[`Core: Typography Code renders 1`] = `
     Headings
   </h3>
   <p>
-    Swedbank Pay DesignGuide provides basic styling on all headings (h1-h6).
+    Swedbank Pay Design Guide provides basic styling on all headings (h1-h6).
   </p>
   <ComponentPreview
     codeFigure={true}
