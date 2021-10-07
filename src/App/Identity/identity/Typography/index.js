@@ -213,7 +213,7 @@ const Code = () => (
         <h2 id="how-it-works-in-code">How it works in code</h2>
 
         <h3>Headings</h3>
-        <p>Swedbank Pay DesignGuide provides basic styling on all headings (h1-h6).</p>
+        <p>Swedbank Pay Design Guide provides basic styling on all headings (h1-h6).</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <h1>Heading h1</h1>
             <h2>Heading h2</h2>

@@ -5,8 +5,10 @@ import RenderPage from "./RenderPage/index";
 import RemoveVscroll from "./RemoveVscroll/index";
 import ToggleLightbox from "./ToggleLightbox/index";
 
+const brandTitle = process.env.brandTitle;
+
 const setTitle = title => {
-    document.title = `${title} | Swedbank Pay DesignGuide`;
+    document.title = `${title} | ${brandTitle} Design Guide`;
 };
 
 export {

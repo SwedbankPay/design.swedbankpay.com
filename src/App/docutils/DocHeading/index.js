@@ -1,6 +1,8 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 
+const brandTitle = process.env.brandTitle;
+
 const DocHeading = ({ location }) => {
     const title = location.pathname.split("/").filter(str => str.length)
         .pop()
@@ -8,7 +10,7 @@ const DocHeading = ({ location }) => {
         .map((word, i) => i > 0 ? word : word.charAt(0).toUpperCase() + word.substr(1))
         .join(" ");
 
-    document.title = `${title} | Swedbank Pay DesignGuide`;
+    document.title = `${title} | ${brandTitle} Design Guide`;
 
     return <h1>{title}</h1>;
 };
