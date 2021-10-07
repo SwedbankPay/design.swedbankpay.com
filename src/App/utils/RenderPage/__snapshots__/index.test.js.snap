@@ -284,16 +284,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Expandable",
             },
             Object {
-              "componentPath": "components/Forms",
-              "icon": "text_snippet",
-              "outlined": true,
-              "path": "/components/forms",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Forms",
-            },
-            Object {
               "componentPath": "components/InputField",
               "icon": "text_fields",
               "path": "/components/input-field",

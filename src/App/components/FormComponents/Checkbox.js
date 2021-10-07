@@ -51,7 +51,10 @@ Checkbox.propTypes = {
     id: PropTypes.string,
     checked: PropTypes.bool,
     disabled: PropTypes.bool,
-    label: PropTypes.string,
+    label: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.object
+    ]),
     name: PropTypes.string,
     errorMessage: PropTypes.string,
     require: PropTypes.bool,

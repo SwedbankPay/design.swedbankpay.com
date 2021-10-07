@@ -300,6 +300,10 @@ module.exports = (env, argv) => {
                                     destination: `./dist${basename}img/logotype`
                                 },
                                 {
+                                    source: `./src/img/${brand}/documentation/templates/*.png`,
+                                    destination: `./dist${basename}img/documentation/templates`
+                                },
+                                {
                                     source: `./src/img/${brand}/documentation/buttons/*.png`,
                                     destination: `./dist${basename}img/documentation/buttons`
                                 },

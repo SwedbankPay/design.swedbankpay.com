@@ -11,13 +11,14 @@
         position: relative;
         align-items: center;
         margin: 0;
+        margin-left: 1.75rem;
         padding-left: @checkbox-label-padding;
         min-height: 1.5rem;
     }
 
     input[type="radio"] {
-        margin-right: @base-margin;
         opacity: 0;
+        display: none;
 
         + label:before {
             content: "";

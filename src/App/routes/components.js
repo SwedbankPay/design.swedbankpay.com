@@ -114,14 +114,6 @@ module.exports = [
                 componentPath: "components/Expandable",
                 statusBadges: ["javascript"]
             },
-            {
-                title: "Forms",
-                path: "/components/forms",
-                componentPath: "components/Forms",
-                icon: "text_snippet",
-                outlined: true,
-                statusBadges: ["javascript"]
-            },
             /* {
                 title: "Footer",
                 path: "/components/footer",

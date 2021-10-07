@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Button = ({ label, id, name, value, href, icon, loading, type, disabled, btnType, fullWidth, pullRight, input, active, size, bankId }) => {
+const Button = ({ label, id, name, className, value, href, icon, loading, type, disabled, btnType, fullWidth, pullRight, input, active, size, bankId }) => {
     const btnClasses = classnames(
         "btn",
+        className ? className : null,
         type ? `btn-${type}` : null,
         size ? `btn-${size}` : null,
         loading ? "loading" : null,
@@ -68,7 +69,8 @@ Button.propTypes = {
     input: PropTypes.bool,
     active: PropTypes.bool,
     size: PropTypes.oneOf(["lg", "sm", "xs"]),
-    bankId: PropTypes.string
+    bankId: PropTypes.string,
+    className: PropTypes.string
 };
 
 export default Button;
