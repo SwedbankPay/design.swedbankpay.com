@@ -8,7 +8,7 @@ const _createPagination = paginationContainer => {
     const arrowForward = paginationContainer.querySelector("li.arrow-forward");
     const arrowBack = paginationContainer.querySelector("li.arrow-back");
 
-    const _initialActive = () => {
+    const _setInitialActivePage = () => {
         [...pages][0].classList.add("active");
         arrowBack.classList.add("disabled");
     };
@@ -22,22 +22,22 @@ const _createPagination = paginationContainer => {
     const _addListener = () => {
         [...pages].map(page => {
             page.addEventListener("click", e => {
-                _setActiveOnClick(e);
+                _setActivePageOnClick(e);
             });
         });
 
         arrowForward.addEventListener("click", e => {
             e.preventDefault();
-            _arrowClick("forward");
+            _arrowNavigation("forward");
         });
 
         arrowBack.addEventListener("click", e => {
             e.preventDefault();
-            _arrowClick("backward");
+            _arrowNavigation("backward");
         });
     };
 
-    const _arrowClick = arrowDirection => {
+    const _arrowNavigation = arrowDirection => {
         const activeIndex = _getActiveIndex();
 
         if (arrowDirection === "forward") {
@@ -47,22 +47,22 @@ const _createPagination = paginationContainer => {
         }
 
         pages[activeIndex].classList.remove("active");
-        _setDisabledArrow();
+        _addDisabledArrowState();
         _paginate();
     };
 
-    const _setActiveOnClick = e => {
+    const _setActivePageOnClick = e => {
         e.preventDefault();
         [...pages].map(page => page.classList.remove("active"));
         e.currentTarget.classList.add("active");
-        _setDisabledArrow();
+        _addDisabledArrowState();
         _paginate();
     };
 
-    const _setDisabledArrow = () => {
+    const _addDisabledArrowState = () => {
         const activeIndex = _getActiveIndex();
 
-        _removeDisabledArrow();
+        _removeDisabledArrowState();
 
         if (activeIndex === 0) {
             arrowBack.classList.add("disabled");
@@ -71,7 +71,7 @@ const _createPagination = paginationContainer => {
         }
     };
 
-    const _removeDisabledArrow = () => {
+    const _removeDisabledArrowState = () => {
         arrowBack.classList.contains("disabled") ? arrowBack.classList.remove("disabled") : null;
         arrowForward.classList.contains("disabled") ? arrowForward.classList.remove("disabled") : null;
     };
@@ -111,10 +111,10 @@ const _createPagination = paginationContainer => {
             [...pages].map(page => paginatedPages.push(page));
         }
 
-        _paginateContainer(paginatedPages);
+        _paginateBuilder(paginatedPages);
     };
 
-    const _paginateContainer = paginatedPages => {
+    const _paginateBuilder = paginatedPages => {
         paginationContainer.innerHTML = "";
         paginationContainer.appendChild(arrowBack);
         [...paginatedPages].map(page => paginationContainer.appendChild(page));
@@ -122,7 +122,7 @@ const _createPagination = paginationContainer => {
     };
 
     _paginate();
-    _initialActive();
+    _setInitialActivePage();
     _addListener();
 };
 
