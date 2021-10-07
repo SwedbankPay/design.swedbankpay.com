@@ -30,6 +30,7 @@ const radioOptions = [
 const Overview = () => (
     <section>
         <h2 id="overview">Overview</h2>
+        <label htmlFor="select-ex">Label</label>
         <p>A form can include different type of user input components that can be arranged in different ways depending on your specific context and needs. You might for example design a form for a user to sign up for or log into an account, register for a service, reconfigure settings, take a survey, purchase a product or provide feedback.</p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={formsShowCase} noOptions removeOuterTag/>
     </section>
@@ -42,7 +43,7 @@ const ContentGuidelines = () => (
             <div className="col-12 col-lg-6 m-auto">
                 <h3 className="mb-0">Title</h3>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
-                <InputGroup type="text" label="Input label" placeholder="Placeholer text" tooltip className="mb-0"/>
+                <InputGroup id="guideline-input-example" type="text" label="Input label" placeholder="Placeholer text" tooltip className="mb-0"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small">24px</div>
                 <InputGroup type="select" label="Input label" placeholder="Select an option" selectOptions={["Option 1", "Option 2"]} optional className="mb-0"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small">24px</div>
@@ -82,18 +83,18 @@ const HowToDesignForms = () => {
 
                 <div className="slab slab-plain slab-border-success">
                     <span className="h4 d-block mb-4">Do</span>
-                    <div className="col-12 col-sm-8">
-                        <InputGroup type="text" label="Adress"/>
-                        <div className="d-flex">
-                            <InputGroup type="text" label="Postal code"/>
-                            <InputGroup type="text" label="City" className="w-100 ml-3"/>
+                    <div className="col-12 col-sm-8 px-0">
+                        <InputGroup id="layout-address-example" type="text" label="Address"/>
+                        <div className="row">
+                            <InputGroup id="layout-postal-example" type="text" label="Postal code" className="col-12 col-sm-5"/>
+                            <InputGroup id="layout-city-example" type="text" label="City" className="col-12 col-sm-7"/>
                         </div>
                     </div>
                 </div>
                 <div className="slab slab-plain slab-border-error">
                     <span className="h4 d-block mb-4">Don&apos;t</span>
                     {["Address", "Postal code", "City"].map(label => (
-                        <InputGroup type="text" label={label} key={label}/>
+                        <InputGroup id={`layout-${label.toLowerCase()}-dont-example`} type="text" label={label} key={label}/>
                     ))}
                 </div>
             </section>
@@ -213,7 +214,7 @@ const DeveloperDocumentation = () => (
                 <div className="col-12 col-sm-7 m-auto">{"\n"}
                     <span className="h2 d-block mb-3">Log in</span>
                     <Alert type="danger" icon="cancel" text={<p><b>Error.</b> Incorrect password</p>}/>
-                    <InputGroup type="email" defaultValue="name@gmail.com" label="Email" />
+                    <InputGroup id="server-email-example" type="email" defaultValue="name@gmail.com" label="Email" />
                     <InputGroup type="password" validationState="error" helpBlock errorMessage="incorrect password" label="Password" defaultValue="123456789" id="input-error-server-example"/>
                     <div className="d-sm-flex d-block justify-content-between mb-4">
                         <Checkbox id="server-side-validation-checkbox" label="Remember me"/>
@@ -234,15 +235,15 @@ const DeveloperDocumentation = () => (
                             <legend>
                                 <span className="h3">Name</span>
                             </legend>
-                            <InputGroup type="name" label="First name" />
-                            <InputGroup type="name" label="Last name" />
+                            <InputGroup id="fieldset-first-name-example" type="name" label="First name" />
+                            <InputGroup id="fieldset-last-name-example" type="name" label="Last name" />
                         </fieldset>
                         <fieldset>
                             <legend>
                                 <span className="h3">Contact information</span>
                             </legend>
-                            <InputGroup type="email" label="Email" />
-                            <InputGroup type="tel" label="Phone number" />
+                            <InputGroup id="fieldset-email-example" type="email" label="Email" />
+                            <InputGroup id="fieldset-phone-example" type="tel" label="Phone number" />
                         </fieldset>
                     </form>
                 </div>
@@ -255,8 +256,8 @@ const DeveloperDocumentation = () => (
             <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag>
                 <div className="col-12 col-sm-6 m-auto">
                     <fieldset disabled>
-                        <InputGroup type="name" label="Name" />
-                        <InputGroup type="email" label="Email" />
+                        <InputGroup id="disabled-name-example" type="name" label="Name" />
+                        <InputGroup id="disabled-email-example" type="email" label="Email" />
                         <Checkbox id="disabled-fieldset-checkbox" label="I agree to terms of use"/>{"\n"}
                         <Button type="primary" label="Submit" />
                     </fieldset>
@@ -267,8 +268,8 @@ const DeveloperDocumentation = () => (
             <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag>
                 <div className="col-12 col-sm-6 m-auto">
                     <fieldset>
-                        <InputGroup type="name" label="Name" disabled />
-                        <InputGroup type="email" label="Email" />
+                        <InputGroup id="disable-specific-name-example" type="name" label="Name" disabled />
+                        <InputGroup id="disable-specific-email-example" type="email" label="Email" />
                         <Checkbox id="disabled-input-checkbox" label="I agree to terms of user"/>{"\n"}
                         <Button type="primary" label="Submit" />
                     </fieldset>
@@ -283,8 +284,8 @@ const DeveloperDocumentation = () => (
             <div className="col-12 col-sm-10 m-auto pt-2">
                 <form>
                     <div className="row align-items-center justify-content-between">
-                        <InputGroup type="name" label="Name" className="col-12 col-sm-3 px-0"/>
-                        <InputGroup type="email" label="Email" className="col-12 col-sm-6 px-0"/>{"\n"}
+                        <InputGroup id="form-grid-name-example" type="name" label="Name" className="col-12 col-sm-3 px-0"/>
+                        <InputGroup id="form-grid-email-example" type="email" label="Email" className="col-12 col-sm-6 px-0"/>{"\n"}
                         <Button type="primary" label="Submit" className="mt-1"/>
                     </div>
                 </form>

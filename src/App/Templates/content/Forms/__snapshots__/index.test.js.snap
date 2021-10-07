@@ -25,6 +25,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
       </div>
       <InputGroup
         className="mb-0"
+        id="guideline-input-example"
         label="Input label"
         placeholder="Placeholer text"
         tooltip={true}
@@ -340,6 +341,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
         />
         <InputGroup
           defaultValue="name@gmail.com"
+          id="server-email-example"
           label="Email"
           type="email"
         />
@@ -408,10 +410,12 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
               </span>
             </legend>
             <InputGroup
+              id="fieldset-first-name-example"
               label="First name"
               type="name"
             />
             <InputGroup
+              id="fieldset-last-name-example"
               label="Last name"
               type="name"
             />
@@ -425,10 +429,12 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
               </span>
             </legend>
             <InputGroup
+              id="fieldset-email-example"
               label="Email"
               type="email"
             />
             <InputGroup
+              id="fieldset-phone-example"
               label="Phone number"
               type="tel"
             />
@@ -462,10 +468,12 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
           disabled={true}
         >
           <InputGroup
+            id="disabled-name-example"
             label="Name"
             type="name"
           />
           <InputGroup
+            id="disabled-email-example"
             label="Email"
             type="email"
           />
@@ -502,10 +510,12 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
         <fieldset>
           <InputGroup
             disabled={true}
+            id="disable-specific-name-example"
             label="Name"
             type="name"
           />
           <InputGroup
+            id="disable-specific-email-example"
             label="Email"
             type="email"
           />
@@ -556,11 +566,13 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
         >
           <InputGroup
             className="col-12 col-sm-3 px-0"
+            id="form-grid-name-example"
             label="Name"
             type="name"
           />
           <InputGroup
             className="col-12 col-sm-6 px-0"
+            id="form-grid-email-example"
             label="Email"
             type="email"
           />
@@ -628,21 +640,25 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
         Do
       </span>
       <div
-        className="col-12 col-sm-8"
+        className="col-12 col-sm-8 px-0"
       >
         <InputGroup
-          label="Adress"
+          id="layout-address-example"
+          label="Address"
           type="text"
         />
         <div
-          className="d-flex"
+          className="row"
         >
           <InputGroup
+            className="col-12 col-sm-5"
+            id="layout-postal-example"
             label="Postal code"
             type="text"
           />
           <InputGroup
-            className="w-100 ml-3"
+            className="col-12 col-sm-7"
+            id="layout-city-example"
             label="City"
             type="text"
           />
@@ -658,16 +674,19 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
         Don't
       </span>
       <InputGroup
+        id="layout-address-dont-example"
         key="Address"
         label="Address"
         type="text"
       />
       <InputGroup
+        id="layout-postal code-dont-example"
         key="Postal code"
         label="Postal code"
         type="text"
       />
       <InputGroup
+        id="layout-city-dont-example"
         key="City"
         label="City"
         type="text"
@@ -921,6 +940,11 @@ exports[`Forms: index Overview renders 1`] = `
   >
     Overview
   </h2>
+  <label
+    htmlFor="select-ex"
+  >
+    Label
+  </label>
   <p>
     A form can include different type of user input components that can be arranged in different ways depending on your specific context and needs. You might for example design a form for a user to sign up for or log into an account, register for a service, reconfigure settings, take a survey, purchase a product or provide feedback.
   </p>
@@ -949,6 +973,7 @@ exports[`Forms: index Overview renders 1`] = `
                     className="col-12 col-sm-9 px-0"
                   >
                     <InputGroup
+                      id="form-email-example"
                       label="E-mail"
                       type="email"
                     />
@@ -967,6 +992,7 @@ exports[`Forms: index Overview renders 1`] = `
                     />
                   </div>
                   <InputGroup
+                    id="form-textarea-example"
                     label="Message"
                     type="textarea"
                   />
@@ -1042,21 +1068,24 @@ exports[`Forms: index Overview renders 1`] = `
                     </span>
                   </legend>
                   <div
-                    className="d-flex justify-content-between"
+                    className="row"
                   >
                     <InputGroup
-                      className="w-50 mr-1"
+                      className="col-12 col-sm-6"
+                      id="multi-form-example-1"
                       label="Label"
                       type="text"
                     />
                     <InputGroup
-                      className="w-50 ml-1"
+                      className="col-12 col-sm-6"
+                      id="multi-form-example-2"
                       label="Label"
                       type="text"
                     />
                   </div>
                   <InputGroup
                     className="mb-3"
+                    id="multi-form-example-3"
                     label="Label"
                     type="text"
                   />

@@ -58,10 +58,10 @@ export const formsShowCase = {
                             <span className="h2">Contact us</span>
                         </legend>
                         <div className="col-12 col-sm-9 px-0">
-                            <InputGroup type="email" label="E-mail"/>
+                            <InputGroup id="form-email-example" type="email" label="E-mail"/>
                             <InputGroup type="select" label="Subject" placeholder="Select a subject" optional selectOptions={["Subject 1", "Subject 2", "Subject 3"]}/>
                         </div>
-                        <InputGroup type="textarea" label="Message" />
+                        <InputGroup id="form-textarea-example" type="textarea" label="Message" />
                         <Checkbox
                             id="forms-template-checkbox-example"
                             label={<>I have read and accept Swedbank Pays&#39;s&nbsp;<Links linkText="privacy policy" rightIcon="launch" /></>} />{"\n"}
@@ -85,11 +85,11 @@ export const formsShowCase = {
                         <legend>
                             <span className="h2">Step two</span>
                         </legend>
-                        <div className="d-flex justify-content-between">
-                            <InputGroup type="text" label="Label" className="w-50 mr-1"/>
-                            <InputGroup type="text" label="Label" className="w-50 ml-1"/>
+                        <div className="row">
+                            <InputGroup id="multi-form-example-1" type="text" label="Label" className="col-12 col-sm-6"/>
+                            <InputGroup id="multi-form-example-2" type="text" label="Label" className="col-12 col-sm-6"/>
                         </div>
-                        <InputGroup type="text" label="Label" className="mb-3" />
+                        <InputGroup id="multi-form-example-3" type="text" label="Label" className="mb-3" />
                         <RadioButton group groupTitle="Input label" options={radioOptions} name="multi-step-radio-example"/>
                         <div className="d-flex justify-content-between">
                             <Button type="secondary" icon="arrow_back" label="Back"/>
