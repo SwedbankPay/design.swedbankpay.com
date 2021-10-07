@@ -45,16 +45,28 @@ const Pagination = ({ type, items, arrows, mobileView }) => {
                 </ul>
                 :
                 <>
-                    <ul className={paginationClasses}>
-                        {arrows ? <Arrow type="back" /> : null}
-                        {items ? items.map(({ name, href, active }, i) => (
-                            <li key={i} className={`${active ? "active" : ""}`}>{"\n"}
-                                <a href={href}>{name}</a>{"\n"}
-                            </li>
-                        )
-                        ) : null}
-                        {arrows ? <Arrow type="forward" /> : null}
-                    </ul>
+                    {type === "example" ?
+                        <>
+                            <ul className={paginationClasses}>
+                                <Arrow type="back"/>
+                                <li><div className="example-box"></div></li>
+                                <Arrow type="forward"/>
+                            </ul>
+                        </>
+                        :
+                        <>
+                            <ul className={paginationClasses}>
+                                {arrows ? <Arrow type="back" /> : null}
+                                {items ? items.map(({ name, href, active }, i) => (
+                                    <li key={i} className={`${active ? "active" : ""}`}>{"\n"}
+                                        <a href={href}>{name}</a>{"\n"}
+                                    </li>
+                                )
+                                ) : null}
+                                {arrows ? <Arrow type="forward" /> : null}
+                            </ul>
+                        </>
+                    }
                 </>
             }
         </>
@@ -62,7 +74,7 @@ const Pagination = ({ type, items, arrows, mobileView }) => {
 };
 
 Pagination.propTypes = {
-    type: PropTypes.oneOf(["bullets", "simple"]),
+    type: PropTypes.oneOf(["simple", "example"]),
     items: PropTypes.array,
     text: PropTypes.string,
     arrows: PropTypes.bool,

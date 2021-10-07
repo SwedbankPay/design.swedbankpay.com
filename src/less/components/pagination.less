@@ -4,6 +4,20 @@
     padding-left: 0;
     margin: @base-margin 0;
 
+    &.pagination-example {
+        .active {
+            height: 0;
+
+            .example-box {
+                width: 6rem;
+                height: 0.625rem;
+                background-color: @brand-secondary;
+                margin-top: 10%;
+                border-radius: 0.125rem;
+            }
+        }
+    }
+
     li {
         display: flex;
         position: relative;
