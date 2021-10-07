@@ -71,15 +71,3 @@ Pagination.propTypes = {
 
 export default Pagination;
 
-/*
-{items ? items.map(({ name, href, active }, i) => {
-    if (active) { activeItem = i; }
-
-    return (
-        <li key={i}>
-            <span>Page {i+1} of {items.length}</span>
-        </li>
-    );
-}) : null
-}
-*/
