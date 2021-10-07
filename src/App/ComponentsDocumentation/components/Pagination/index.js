@@ -28,8 +28,8 @@ const Overview = () => (
                 <div className="slab slab-plain slab-border-success pb-5 h100" >
                     <h4>Do</h4>
                     <div className="d-flex flex-column align-items-center justify-content-center mt-4 mb-4">
-                        {[...Array(4)].map(i => <div key={i} className="pagination-content-box-example"></div>)}
-                        <PaginationComponent type="example" items={paginationItems} arrows text="1"/>
+                        {[...Array(4)].map((e, i) => <div key={i} className="pagination-content-box-example"></div>)}
+                        <PaginationComponent type="example"/>
                     </div>
                 </div>
             </div>
@@ -37,8 +37,8 @@ const Overview = () => (
                 <div className="slab slab-plain slab-border-error pb-5 h100">
                     <h4>{"Don't"}</h4>
                     <div className="d-flex flex-column align-items-center justify-content-center mt-4 mb-4">
-                        <PaginationComponent type="example" items={paginationItems} arrows text="1"/>
-                        {[...Array(4)].map(i => <div key={i} className="pagination-content-box-example"></div>)}
+                        <PaginationComponent type="example"/>
+                        {[...Array(4)].map((e, i) => <div key={i} className="pagination-content-box-example"></div>)}
                     </div>
                 </div>
             </div>
