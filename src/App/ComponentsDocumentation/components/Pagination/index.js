@@ -5,6 +5,7 @@ import { PaginationShowCasePanel, paginationItems } from "./constants";
 import PaginationComponent from "~/src/App/components/Pagination";
 
 import { pagination } from "@src/scripts/main";
+import CodeTags from "~/src/App/components/CodeTags";
 
 const Overview = () => (
     <section id="pagination-overview">
@@ -27,10 +28,7 @@ const Overview = () => (
                 <div className="slab slab-plain slab-border-success pb-5 h100" >
                     <h4>Do</h4>
                     <div className="d-flex flex-column align-items-center justify-content-center mt-4 mb-4">
-                        <div className="pagination-content-box-example"></div> {/* map function*/}
-                        <div className="pagination-content-box-example"></div>
-                        <div className="pagination-content-box-example"></div>
-                        <div className="pagination-content-box-example"></div>
+                        {[...Array(4)].map(i => <div key={i} className="pagination-content-box-example"></div>)}
                         <PaginationComponent type="example" items={paginationItems} arrows text="1"/>
                     </div>
                 </div>
@@ -40,14 +38,20 @@ const Overview = () => (
                     <h4>{"Don't"}</h4>
                     <div className="d-flex flex-column align-items-center justify-content-center mt-4 mb-4">
                         <PaginationComponent type="example" items={paginationItems} arrows text="1"/>
-                        <div className="pagination-content-box-example"></div> {/* map function*/}
-                        <div className="pagination-content-box-example"></div>
-                        <div className="pagination-content-box-example"></div>
-                        <div className="pagination-content-box-example"></div>
+                        {[...Array(4)].map(i => <div key={i} className="pagination-content-box-example"></div>)}
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+);
+
+const DeveloperDocumentation = () => (
+    <section>
+        <h2 id="developer-documentation">Developer documentation</h2>
+        <span className="h3">Javascript methods</span>
+        <p className="mt-2">Use <CodeTags type="secondary" code="dg.pagination.init()"/> to initialize all paginations.</p>
+        <p>Use <CodeTags type="secondary" code='dg.pagination.init("component-id")'/> to initialize one specific component.</p>
     </section>
 );
 
@@ -62,6 +66,7 @@ const Pagination = () => {
                 Use the pagination component to indicate that a series of related content exist across multiple pages.
             </p>
             <Overview/>
+            <DeveloperDocumentation/>
         </DocContainer>
     );
 };
