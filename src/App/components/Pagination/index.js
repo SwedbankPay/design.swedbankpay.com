@@ -60,7 +60,7 @@ const Pagination = ({ type, items, arrows, mobileView }) => {
                                     {arrows ? <Arrow type="back" /> : null}
                                     {items ? items.map(({ name, href, active }, i) => (
                                         <li key={i} className={`${active ? "active" : ""}`}>{"\n"}
-                                            <a href={href} aria-label={`Go to page ${href}`} >{name}</a>{"\n"}
+                                            <a href={href} aria-label={`Go to page ${name}`} >{name}</a>{"\n"}
                                         </li>
                                     )
                                     ) : null}

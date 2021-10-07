@@ -42,11 +42,13 @@ const _createPagination = paginationContainer => {
 
         if (arrowDirection === "forward") {
             pages[activeIndex + 1].classList.add("active");
+
         } else {
             pages[activeIndex - 1].classList.add("active");
         }
 
         pages[activeIndex].classList.remove("active");
+
         _addDisabledArrowState();
         _paginate();
     };
