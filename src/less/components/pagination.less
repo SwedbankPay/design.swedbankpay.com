@@ -22,10 +22,6 @@
         display: flex;
         position: relative;
 
-        &.hidden {
-            display: none;
-        }
-
         &.dotts {
             pointer-events: none;
         }
@@ -50,7 +46,7 @@
             }
         }
 
-        &:not(.arrow-start):not(.arrow-back):not(.arrow-forward):not(.arrow-end) {
+        &:not(.arrow-start):not(.arrow-back):not(.arrow-forward):not(.arrow-end):not(.mobileView) {
             a,
             span {
                 padding: 0.25rem 0.75rem;

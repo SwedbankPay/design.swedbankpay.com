@@ -37,7 +37,7 @@ const Pagination = ({ type, items, arrows, mobileView }) => {
                         <Arrow type="start"/>
                         <Arrow type="back"/>
                     </> : null }
-                    <li><span>Page 1 of {items.length}</span></li>
+                    <li className="mobileView"><span>Page 1 of {items.length}</span></li>
                     {arrows ? <>
                         <Arrow type="forward"/>
                         <Arrow type="end"/>
