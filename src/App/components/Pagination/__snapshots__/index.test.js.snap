@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Pagination - prop type is enum and requires 'bullets' or 'simple' and does not produce an error when either is provided 1`] = `
+exports[`Component: Pagination - prop type is enum and requires 'example' or 'simple' and does not produce an error when either is provided 1`] = `
 <div>
   <Pagination
-    type="bullets"
+    type="example"
   />
   <Pagination
     type="simple"
@@ -11,157 +11,120 @@ exports[`Component: Pagination - prop type is enum and requires 'bullets' or 'si
 </div>
 `;
 
-exports[`Component: Pagination - prop type is enum and requires 'bullets' or 'simple' and produces an error when neither is provided 1`] = `
-<ul
-  className="pagination pagination-test"
-/>
+exports[`Component: Pagination - prop type is enum and requires 'example' or 'simple' and produces an error when neither is provided 1`] = `
+<Fragment>
+  <nav
+    aria-label="Pagination Navigation"
+    role="navigation"
+  >
+    <ul
+      className="pagination pagination-test"
+    />
+  </nav>
+</Fragment>
 `;
 
 exports[`Component: Pagination - renders 1`] = `
-<ul
-  className="pagination"
-/>
+<Fragment>
+  <nav
+    aria-label="Pagination Navigation"
+    role="navigation"
+  >
+    <ul
+      className="pagination"
+    />
+  </nav>
+</Fragment>
 `;
 
 exports[`Component: Pagination - renders arrows when prop arrows is provided 1`] = `
 <Pagination
   arrows={true}
 >
-  <ul
-    className="pagination"
+  <nav
+    aria-label="Pagination Navigation"
+    role="navigation"
   >
-    <Arrow
-      type="back"
+    <ul
+      className="pagination"
     >
-      <li
-        aria-label="back"
-        className="arrow-back"
+      <Arrow
+        type="back"
       >
-        
+        <li
+          aria-label="back"
+          className="arrow-back disabled"
+        >
+          
 
-        <a
-          href="#"
-        />
-        
+          <a
+            href="#"
+          />
+          
 
-      </li>
-    </Arrow>
-    <Arrow
-      type="forward"
-    >
-      <li
-        aria-label="forward"
-        className="arrow-forward"
+        </li>
+      </Arrow>
+      <Arrow
+        type="forward"
       >
-        
+        <li
+          aria-label="forward"
+          className="arrow-forward "
+        >
+          
 
-        <a
-          href="#"
-        />
-        
+          <a
+            href="#"
+          />
+          
 
-      </li>
-    </Arrow>
-  </ul>
+        </li>
+      </Arrow>
+    </ul>
+  </nav>
 </Pagination>
 `;
 
 exports[`Component: Pagination - renders list items when prop items is provided 1`] = `
-<ul
-  className="pagination"
->
-  <li
-    className=""
-    key="0"
+<Fragment>
+  <nav
+    aria-label="Pagination Navigation"
+    role="navigation"
   >
-    
-
-    <a
-      href="#"
-    >
-      test#1
-    </a>
-    
-
-  </li>
-  <li
-    className="active"
-    key="1"
-  >
-    
-
-    <a
-      href="#"
-    >
-      test#2
-    </a>
-    
-
-  </li>
-</ul>
-`;
-
-exports[`Component: Pagination - renders outermost arrows when prop farArrows is provided 1`] = `
-<Pagination
-  farArrows={true}
->
-  <ul
-    className="pagination"
-  >
-    <Arrow
-      type="start"
+    <ul
+      className="pagination"
     >
       <li
-        aria-label="start"
-        className="arrow-start"
+        className=""
+        key="0"
       >
         
 
         <a
+          aria-label="Go to page test#1"
           href="#"
-        />
+        >
+          test#1
+        </a>
         
 
       </li>
-    </Arrow>
-    <Arrow
-      type="end"
-    >
       <li
-        aria-label="end"
-        className="arrow-end"
+        className=""
+        key="1"
       >
         
 
         <a
+          aria-label="Go to page test#2"
           href="#"
-        />
+        >
+          test#2
+        </a>
         
 
       </li>
-    </Arrow>
-  </ul>
-</Pagination>
-`;
-
-exports[`Component: Pagination - renders text element when prop text is provided 1`] = `
-<Pagination
-  text="test"
->
-  <ul
-    className="pagination"
-  >
-    <li>
-      
-
-      <span
-        className="text"
-      >
-        test
-      </span>
-      
-
-    </li>
-  </ul>
-</Pagination>
+    </ul>
+  </nav>
+</Fragment>
 `;

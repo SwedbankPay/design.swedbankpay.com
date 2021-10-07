@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
-import { PaginationShowCasePanel, paginationItems } from "./constants";
+import { PaginationShowCasePanel } from "./constants";
 import PaginationComponent from "~/src/App/components/Pagination";
 
 import { pagination } from "@src/scripts/main";
@@ -74,4 +74,4 @@ const Pagination = () => {
 export default Pagination;
 
 /* For testing */
-export { Overview };
+export { Overview, DeveloperDocumentation };

@@ -14,7 +14,7 @@ describe("Component: Pagination -", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    it("prop type is enum and requires 'bullets' or 'simple' and produces an error when neither is provided", () => {
+    it("prop type is enum and requires 'example' or 'simple' and produces an error when neither is provided", () => {
         console.error = jest.fn();
 
         const wrapper = shallow(<Pagination type="test" />);
@@ -23,12 +23,12 @@ describe("Component: Pagination -", () => {
         expect(console.error).toHaveBeenCalled();
     });
 
-    it("prop type is enum and requires 'bullets' or 'simple' and does not produce an error when either is provided", () => {
+    it("prop type is enum and requires 'example' or 'simple' and does not produce an error when either is provided", () => {
         console.error = jest.fn();
 
         const wrapper = shallow(
             <div>
-                <Pagination type="bullets" />
+                <Pagination type="example" />
                 <Pagination type="simple" />
             </div>
         );
@@ -41,21 +41,14 @@ describe("Component: Pagination -", () => {
         const items = [
             /* eslint-disable object-property-newline */
             { name: "test#1", href: "#", active: false },
-            { name: "test#2", href: "#", active: true }
+            { name: "test#2", href: "#", active: false }
             /* eslint-enable object-property-newline */
         ];
 
         const wrapper = shallow(<Pagination items={items} />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<a href="#">test#1</a>)).toEqual(true);
-    });
-
-    it("renders text element when prop text is provided", () => {
-        const wrapper = mount(<Pagination text="test" />);
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<span className="text">test</span>)).toEqual(true);
+        expect(wrapper.contains(<a href="#" aria-label="Go to page test#1">test#1</a>)).toEqual(true);
     });
 
     it("renders arrows when prop arrows is provided", () => {
@@ -64,13 +57,5 @@ describe("Component: Pagination -", () => {
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("arrow-back");
         expect(wrapper.html()).toContain("arrow-forward");
-    });
-
-    it("renders outermost arrows when prop farArrows is provided", () => {
-        const wrapper = mount(<Pagination farArrows />);
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("arrow-end");
-        expect(wrapper.html()).toContain("arrow-start");
     });
 });

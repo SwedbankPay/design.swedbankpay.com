@@ -1,162 +1,252 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Pagination DefaultPagination renders 1`] = `
-<Fragment>
+exports[`Documentation: Pagination DeveloperDocumentation renders 1`] = `
+<section>
   <h2
-    id="default-pagination"
+    id="developer-documentation"
   >
-    Default pagination
+    Developer documentation
   </h2>
-  <p>
-    Default pagination shows the pages as numbers. Add 
+  <span
+    className="h3"
+  >
+    Javascript methods
+  </span>
+  <p
+    className="mt-2"
+  >
+    Use 
     <CodeTags
-      code=".pagination"
+      code="dg.pagination.init()"
       type="secondary"
     />
-     to an 
-    <CodeTags
-      code="<ul>"
-      type="primary"
-    />
-     containing
-    <CodeTags
-      code="<li>"
-      type="primary"
-    />
-    . If you wish to present the user with navigational arrows you need to add those as 
-    <CodeTags
-      code="<li>"
-      type="primary"
-    />
-     elements.
+     to initialize all paginations.
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Pagination
-      arrows={true}
-      farArrows={true}
-      items={
-        Array [
-          Object {
-            "active": false,
-            "href": "#",
-            "name": "1",
-          },
-          Object {
-            "active": false,
-            "href": "#",
-            "name": "2",
-          },
-          Object {
-            "active": false,
-            "href": "#",
-            "name": "3",
-          },
-          Object {
-            "active": false,
-            "href": "#",
-            "name": "4",
-          },
-          Object {
-            "active": true,
-            "href": "#",
-            "name": "5",
-          },
-        ]
-      }
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Pagination PaginationBullets renders 1`] = `
-<Fragment>
-  <h2
-    id="pagination-bullets"
-  >
-    Pagination bullets
-  </h2>
   <p>
-    If you want to show bullets instead of numbers you can add 
+    Use 
     <CodeTags
-      code=".pagination-bullets"
+      code="dg.pagination.init(\\"component-id\\")"
       type="secondary"
     />
-     to your 
-    <CodeTags
-      code="<ul>"
-      type="primary"
-    />
-    .
+     to initialize one specific component.
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Pagination
-      arrows={true}
-      farArrows={true}
-      items={
-        Array [
-          Object {
-            "active": false,
-            "href": "#",
-            "name": "1",
-          },
-          Object {
-            "active": false,
-            "href": "#",
-            "name": "2",
-          },
-          Object {
-            "active": false,
-            "href": "#",
-            "name": "3",
-          },
-          Object {
-            "active": false,
-            "href": "#",
-            "name": "4",
-          },
-          Object {
-            "active": true,
-            "href": "#",
-            "name": "5",
-          },
-        ]
-      }
-      type="bullets"
-    />
-  </ComponentPreview>
-</Fragment>
+</section>
 `;
 
-exports[`Documentation: Pagination SimplePagination renders 1`] = `
-<Fragment>
+exports[`Documentation: Pagination Overview renders 1`] = `
+<section
+  id="pagination-overview"
+>
   <h2
-    id="simple-pagination"
+    id="pagination"
   >
-    Simple pagination
+    Pagination
   </h2>
   <p>
-    If the number of pages get high enough then it is better to use numbers.
+    Pagination is commonly used for things like table listings, search results or directories.The need for pagination is influenced by the amount of data to be displayed and the aim is to not overwhelm users with information and to improve the loading performance of the system. 
   </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <Pagination
+              arrows={true}
+              items={
+                Array [
+                  Object {
+                    "active": false,
+                    "href": "#",
+                    "name": "1",
+                  },
+                  Object {
+                    "active": false,
+                    "href": "#",
+                    "name": "2",
+                  },
+                  Object {
+                    "active": false,
+                    "href": "#",
+                    "name": "3",
+                  },
+                  Object {
+                    "active": false,
+                    "href": "#",
+                    "name": "4",
+                  },
+                  Object {
+                    "active": false,
+                    "href": "#",
+                    "name": "5",
+                  },
+                  Object {
+                    "active": false,
+                    "href": "#",
+                    "name": "6",
+                  },
+                  Object {
+                    "active": false,
+                    "href": "#",
+                    "name": "7",
+                  },
+                  Object {
+                    "active": false,
+                    "href": "#",
+                    "name": "8",
+                  },
+                  Object {
+                    "active": false,
+                    "href": "#",
+                    "name": "9",
+                  },
+                  Object {
+                    "active": false,
+                    "href": "#",
+                    "name": "10",
+                  },
+                ]
+              }
+              text="1"
+              type="simple"
+            />,
+            "description": <React.Fragment>
+              <p>
+                The pagination component consist of page number links as well as arrows to go to next or previous page. The arrow to previous page is disabled when the first page is active and the next arrow when the last page is active. If there are 7 pages or fewer, all page number links will be shown, but if there are more pages an ellipsis is used to truncate the pages as follows: [first] ... [current-1] [current] [current+1] ... [last].
+              </p>
+              <p>
+                 On smaller screens the page links are replaced with text showing the page information, still using arrows to go to next or previous page but with the option to go to the first or last page as well.
+              </p>
+            </React.Fragment>,
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "device_radio",
+                  "title": "Device",
+                  "values": Array [
+                    Object {
+                      "name": "Desktop",
+                      "value": Object {
+                        "mobileView": false,
+                      },
+                    },
+                    Object {
+                      "name": "Mobile",
+                      "value": Object {
+                        "mobileView": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "title": "Pagination",
+          },
+        ],
+        "id": "no-tabs",
+      }
+    }
+  />
+  <h3>
+    When to consider something else
+  </h3>
+  <ul
+    className="pl-3 list list-bullet"
   >
-    <Pagination
-      arrows={true}
-      farArrows={true}
-      text="16 of 256"
-    />
-  </ComponentPreview>
-</Fragment>
+    <li>
+      For exploration of content, where users are browsing aimlessly for something interesting, infinite scroll is better suited then using pagination. Pagination is best when the user is trying to accomplish a goal, for instance trying to find a particular article from a list. 
+    </li>
+  </ul>
+  <h3>
+    How to use Pagination
+  </h3>
+  <h4>
+    Items per page
+  </h4>
+  <p>
+    10 items per page can be used as a general rule, but in reality it depends on your specific context. Consider the display size of each item, showing 10 items and leaving half the screen unused is not good practice.
+  </p>
+  <h4>
+    Placement
+  </h4>
+  <p>
+    Place pagination below the set of items it paginates through.
+  </p>
+  <div
+    className="row"
+  >
+    <div
+      className="col-lg-6"
+    >
+      <div
+        className="slab slab-plain slab-border-success pb-5 h100"
+      >
+        <h4>
+          Do
+        </h4>
+        <div
+          className="d-flex flex-column align-items-center justify-content-center mt-4 mb-4"
+        >
+          <div
+            className="pagination-content-box-example"
+            key="0"
+          />
+          <div
+            className="pagination-content-box-example"
+            key="1"
+          />
+          <div
+            className="pagination-content-box-example"
+            key="2"
+          />
+          <div
+            className="pagination-content-box-example"
+            key="3"
+          />
+          <Pagination
+            type="example"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="col-lg-6"
+    >
+      <div
+        className="slab slab-plain slab-border-error pb-5 h100"
+      >
+        <h4>
+          Don't
+        </h4>
+        <div
+          className="d-flex flex-column align-items-center justify-content-center mt-4 mb-4"
+        >
+          <Pagination
+            type="example"
+          />
+          <div
+            className="pagination-content-box-example"
+            key="0"
+          />
+          <div
+            className="pagination-content-box-example"
+            key="1"
+          />
+          <div
+            className="pagination-content-box-example"
+            key="2"
+          />
+          <div
+            className="pagination-content-box-example"
+            key="3"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 `;
 
 exports[`Documentation: Pagination renders 1`] = `
@@ -168,8 +258,7 @@ exports[`Documentation: Pagination renders 1`] = `
   >
     Use the pagination component to indicate that a series of related content exist across multiple pages.
   </p>
-  <DefaultPagination />
-  <PaginationBullets />
-  <SimplePagination />
+  <Overview />
+  <DeveloperDocumentation />
 </DocContainer>
 `;
