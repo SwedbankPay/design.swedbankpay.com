@@ -45,16 +45,19 @@ const dg = {
     validation
 };
 
-const currentScript = document.querySelector("script[src$='dg.js']");
+if(document) {
+    document.addEventListener("DOMContentLoaded", () => {
+        const currentScript = document.querySelector("script[src$='dg.js']");
+        console.log("currentScript", currentScript)
 
-if (currentScript) {
-    if (currentScript.getAttribute("global")) { window.dg = window.dg ? Object.assign(dg, window.dg) : dg; }
-
-    if (currentScript.getAttribute("autoload")) {
-        document.addEventListener("DOMContentLoaded", () => {
-            dg.script.initAll();
-        });
-    }
+        if (currentScript) {
+            if (currentScript.getAttribute("global")) { window.dg = window.dg ? Object.assign(dg, window.dg) : dg; }
+        
+            if (currentScript.getAttribute("autoload")) {
+                    window.dg.script.initAll();
+            }
+        }
+    })
 }
 
 export default dg;
