@@ -55,16 +55,18 @@ const Pagination = ({ type, items, arrows, mobileView }) => {
                         </>
                         :
                         <>
-                            <ul className={paginationClasses}>
-                                {arrows ? <Arrow type="back" /> : null}
-                                {items ? items.map(({ name, href, active }, i) => (
-                                    <li key={i} className={`${active ? "active" : ""}`}>{"\n"}
-                                        <a href={href}>{name}</a>{"\n"}
-                                    </li>
-                                )
-                                ) : null}
-                                {arrows ? <Arrow type="forward" /> : null}
-                            </ul>
+                            <nav role="navigation" aria-label="Pagination Navigation">
+                                <ul className={paginationClasses}>
+                                    {arrows ? <Arrow type="back" /> : null}
+                                    {items ? items.map(({ name, href, active }, i) => (
+                                        <li key={i} className={`${active ? "active" : ""}`}>{"\n"}
+                                            <a href={href} aria-label={`Go to page ${href}`} >{name}</a>{"\n"}
+                                        </li>
+                                    )
+                                    ) : null}
+                                    {arrows ? <Arrow type="forward" /> : null}
+                                </ul>
+                            </nav>
                         </>
                     }
                 </>

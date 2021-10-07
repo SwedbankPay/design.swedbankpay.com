@@ -55,6 +55,7 @@ const _createPagination = paginationContainer => {
         e.preventDefault();
         [...pages].map(page => page.classList.remove("active"));
         e.currentTarget.classList.add("active");
+        e.currentTarget.setAttribute("aria-current", "true");
         _addDisabledArrowState();
         _paginate();
     };
