@@ -53,7 +53,7 @@ const CDNSetup = () => {
         if (currentScript.getAttribute("global")) { window.dg = window.dg ? Object.assign(dg, window.dg) : dg; }
 
         if (currentScript.getAttribute("autoload")) {
-            window.dg.script.initAll();
+            dg.script.initAll();
         }
     }
 };
