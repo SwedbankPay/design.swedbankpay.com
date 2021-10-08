@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Pagination = ({ type, items, arrows, mobileView }) => {
+const Pagination = ({ type, items, arrows, mobileView, id }) => {
 
     const activeItem = -1;
 
@@ -32,22 +32,24 @@ const Pagination = ({ type, items, arrows, mobileView }) => {
     return (
         <>
             {mobileView ?
-                <ul className={paginationClasses}>
-                    {arrows ? <>
-                        <Arrow type="start"/>
-                        <Arrow type="back"/>
-                    </> : null }
-                    <li className="mobileView"><span>Page 1 of {items.length}</span></li>
-                    {arrows ? <>
-                        <Arrow type="forward"/>
-                        <Arrow type="end"/>
-                    </> : null }
-                </ul>
+                <nav>
+                    <ul id={id} className={paginationClasses}>
+                        {arrows ? <>
+                            <Arrow type="start"/>
+                            <Arrow type="back"/>
+                        </> : null }
+                        <li className="mobileView"><span>Page 1 of {items.length}</span></li>
+                        {arrows ? <>
+                            <Arrow type="forward"/>
+                            <Arrow type="end"/>
+                        </> : null }
+                    </ul>
+                </nav>
                 :
                 <>
                     {type === "example" ?
                         <>
-                            <ul className={paginationClasses}>
+                            <ul id={id} className={paginationClasses}>
                                 <Arrow type="back"/>
                                 <li><div className="example-box"></div></li>
                                 <Arrow type="forward"/>
@@ -56,7 +58,7 @@ const Pagination = ({ type, items, arrows, mobileView }) => {
                         :
                         <>
                             <nav role="navigation" aria-label="Pagination Navigation">
-                                <ul className={paginationClasses}>
+                                <ul id={id} className={paginationClasses}>
                                     {arrows ? <Arrow type="back" /> : null}
                                     {items ? items.map(({ name, href, active }, i) => (
                                         <li key={i} className={`${active ? "active" : ""}`}>{"\n"}

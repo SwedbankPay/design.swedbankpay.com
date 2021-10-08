@@ -127,6 +127,8 @@ const _createPagination = paginationContainer => {
     _paginate();
     _setInitialActivePage();
     _addListener();
+
+    return paginationContainer;
 };
 
 const init = id => {

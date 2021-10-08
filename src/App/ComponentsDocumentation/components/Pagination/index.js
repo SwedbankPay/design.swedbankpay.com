@@ -29,7 +29,7 @@ const Overview = () => (
                     <h4>Do</h4>
                     <div className="d-flex flex-column align-items-center justify-content-center mt-4 mb-4">
                         {[...Array(4)].map((e, i) => <div key={i} className="pagination-content-box-example"></div>)}
-                        <PaginationComponent type="example"/>
+                        <PaginationComponent type="example" id="example-test"/>
                     </div>
                 </div>
             </div>
