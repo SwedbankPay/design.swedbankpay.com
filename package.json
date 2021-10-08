@@ -2,7 +2,7 @@
   "name": "@swedbankpay/design-guide",
   "version": "7.0.1",
   "description": "Swedbank Pay Design Guide",
-  "main": "dist/designguide/scripts/dg.js",
+  "main": "src/scripts/main/index.js",
   "scripts": {
     "start": "webpack serve --mode development",
     "start:payex": "webpack serve --mode development --env brand=payex",
