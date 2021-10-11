@@ -13,4 +13,10 @@ describe("Utilities: NpmInformation", () => {
 
         expect(wrapper).toMatchSnapshot();
     });
+
+    it("renders with componentName-prop", () => {
+        const wrapper = shallow(<NpmInformation componentName="test"/>);
+
+        expect(wrapper).toMatchSnapshot();
+    });
 });
