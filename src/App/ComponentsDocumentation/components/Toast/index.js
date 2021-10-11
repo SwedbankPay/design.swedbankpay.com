@@ -177,7 +177,6 @@ class Toast extends Component {
                 <Options />
                 <PremadeToasts />
                 <CustomHtml />
-                <NpmInformation componentName={"toast"}/>
             </DocContainer>
         );
     }
