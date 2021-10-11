@@ -22,11 +22,7 @@ const HowItWorks = () => (
             The dialog body should contain the main content, usually just text confirming an action.
             In the footer you will find buttons to confirm or cancel the requested action.
         </p>
-        <AlertComponent type="warning">
-            <h4>Initializing dialog buttons</h4>
-            To make a button open the dialog box you need to
-            include <CodeTags type="secondary" code={"data-dialog-open=\"{#your-dialog-id}\""} /> as an attribute to that button.
-        </AlertComponent>
+        <AlertComponent type="warning" icon="warning" text={<p><b>Initializing dialog buttons:</b> To make a button open the dialog box you need to include <CodeTags type="secondary" code={"data-dialog-open=\"{#your-dialog-id}\""} /> as an attribute to that button.</p>} />
     </>
 );
 
