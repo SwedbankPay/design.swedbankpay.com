@@ -171,8 +171,5 @@ exports[`Documentation: Pagination renders 1`] = `
   <DefaultPagination />
   <PaginationBullets />
   <SimplePagination />
-  <NpmInformation
-    componentName="pagination"
-  />
 </DocContainer>
 `;
