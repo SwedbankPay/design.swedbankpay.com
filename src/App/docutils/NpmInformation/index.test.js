@@ -19,4 +19,16 @@ describe("Utilities: NpmInformation", () => {
 
         expect(wrapper).toMatchSnapshot();
     });
+
+    it("renders with noInit-prop", () => {
+        const wrapper = shallow(<NpmInformation noInit/>);
+
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it("renders with noInit- and componentName-prop", () => {
+        const wrapper = shallow(<NpmInformation noInit componentName="test"/>);
+
+        expect(wrapper).toMatchSnapshot();
+    });
 });
