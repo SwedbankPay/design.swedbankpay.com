@@ -61,6 +61,18 @@ exports[`Components: Links ActionLink renders 1`] = `
                   ],
                   "title": "Modifiers",
                 },
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "state_modifiers",
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                  "title": "State modifier",
+                },
               ],
             },
             "title": "Action links",
