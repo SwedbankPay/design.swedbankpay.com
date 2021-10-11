@@ -60,7 +60,6 @@ const Pagination = () => (
         <DefaultPagination />
         <PaginationBullets />
         <SimplePagination />
-        <NpmInformation componentName={"pagination"}/>
     </DocContainer>
 );
 
