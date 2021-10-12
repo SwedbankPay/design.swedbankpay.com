@@ -41,6 +41,7 @@
   ],
   "dependencies": {
     "@sentry/browser": "^6.9.0",
+    "@wdio/cli": "^7.14.1",
     "chalk": "^4.1.1",
     "chart.js": "^2.9.4",
     "classnames": "^2.3.1",
