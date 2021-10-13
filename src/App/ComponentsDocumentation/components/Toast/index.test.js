@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Toast, { Overview, PremadeToasts, Options, CustomHtml } from "./index";
+import Toast, { Overview, ContentGuidelines, DeveloperDocumentation } from "./index";
 
 import { toast } from "@src/scripts/main";
 
@@ -33,71 +33,29 @@ describe("Components: Toast", () => {
 
             expect(wrapper).toMatchSnapshot();
         });
-
-        it("calls toast on click", () => {
-            const wrapper = shallow(<Overview />);
-            const btn = wrapper.find("button");
-
-            btn.simulate("click");
-
-            expect(wrapper).toMatchSnapshot();
-            expect(toast).toHaveBeenCalled();
-        });
     });
 
-    describe("Options", () => {
+    describe("Content guidelines", () => {
         it("is defined", () => {
-            expect(Options).toBeDefined();
+            expect(ContentGuidelines).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Options />);
+            const wrapper = shallow(<ContentGuidelines />);
 
             expect(wrapper).toMatchSnapshot();
         });
     });
 
-    describe("PremadeToasts", () => {
+    describe("Developer documentation", () => {
         it("is defined", () => {
-            expect(PremadeToasts).toBeDefined();
+            expect(DeveloperDocumentation).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<PremadeToasts />);
+            const wrapper = shallow(<DeveloperDocumentation />);
 
             expect(wrapper).toMatchSnapshot();
-        });
-
-        it("calls toast on click", () => {
-            const wrapper = shallow(<PremadeToasts />);
-            const btns = wrapper.find("button");
-
-            btns.forEach(btn => btn.simulate("click"));
-
-            expect(wrapper).toMatchSnapshot();
-            expect(toast).toHaveBeenCalledTimes(btns.length);
-        });
-    });
-
-    describe("CustomHtml", () => {
-        it("is defined", () => {
-            expect(CustomHtml).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<CustomHtml />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-
-        it("calls toast on click", () => {
-            const wrapper = shallow(<CustomHtml />);
-            const btn = wrapper.find("button");
-
-            btn.simulate("click");
-
-            expect(wrapper).toMatchSnapshot();
-            expect(toast).toHaveBeenCalled();
         });
     });
 });

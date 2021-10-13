@@ -2,15 +2,16 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer } from "@docutils";
-import Alert from "@components/Alert";
 import CodeTags from "@components/CodeTags";
-import { toastShowCase } from "./constants";
+import { toastShowCase, optionsTable } from "./constants";
 
 const Overview = () => (
     <section>
         <h2 id="overview">Overview</h2>
-        <ComponentPreview language="html" codeFigure showCasePanel showCasePanelAdvanced={toastShowCase}/>
-
+        <ComponentPreview language="html" showCasePanel hideCodeFigure showCasePanelAdvanced={toastShowCase} />
+        <ComponentPreview language="html" codeFigure dangerousHTML>
+            {"<button type=\"button\" class=\"btn btn-primary\" onclick=\"dg.toast({\n\ttype: 'neutral' \n\thtml: '<p><b>Info header</b> Input informative alert information here, provide <a href=\"#\">link</a> to solution or more info when possible.</p>'})\">\nNeutral toast\n</button>"}
+        </ComponentPreview>
         <section>
             <h3>When to consider something else</h3>
             <ul className="list list-bullet">
@@ -52,84 +53,11 @@ const Overview = () => (
     </section>
 );
 
-const PremadeToasts = () => (
-    <>
-        <h2 id="premade-toasts">Premade toasts</h2>
-        <p>There are four premade toast styles other than the default one; <CodeTags type="secondary" code="neutral" />, <CodeTags type="secondary" code="success" />, <CodeTags type="secondary" code="warning" /> and <CodeTags type="secondary" code="danger" />. Apply the desired one to the options object and be amazed!</p>
-        <ComponentPreview language="html" codeFigure dangerousHTML>
-            {"<button type=\"button\" onclick=\"toast({ html: 'I am a neutral toast!', type: 'neutral' })\" class=\"btn btn-primary\">Neutral toast</button>"}
-            {"<button type=\"button\" onclick=\"toast({ html: 'I am a success toast!', type: 'success' })\" class=\"btn btn-primary\">Success toast</button>"}
-            {"<button type=\"button\" onclick=\"toast({ html: 'I am a warning toast!', type: 'warning' })\" class=\"btn btn-primary\">Warning toast</button>"}
-            {"<button type=\"button\" onclick=\"toast({ html: 'I am a danger toast!', type: 'danger' })\" class=\"btn btn-primary\">Danger toast</button>"}
-        </ComponentPreview>
-        <ComponentPreview language="html" showCasePanel>
-            <button
-                className="btn btn-primary"
-                type="button"
-                onClick={() => toast({
-                    html: "I am a toast!",
-                    type: "neutral"
-                })}
-            >
-                Neutral toast
-            </button>{"\n"}
-            <button
-                className="btn btn-primary"
-                type="button"
-                onClick={() => toast({
-                    html: "I am a toast!",
-                    type: "success"
-                })}
-            >
-                Success toast
-            </button>{"\n"}
-            <button
-                className="btn btn-primary"
-                type="button"
-                onClick={() => toast({
-                    html: "I am a toast!",
-                    type: "warning"
-                })}
-            >
-                Warning toast
-            </button>{"\n"}
-            <button
-                className="btn btn-primary"
-                type="button"
-                onClick={() => toast({
-                    html: "I am a toast!",
-                    type: "danger"
-                })}
-            >
-                Danger toast
-            </button>
-        </ComponentPreview>
-    </>
-);
-
-const CustomHtml = () => {
-    const toastHtml = "<span><p>I am toast content.</p><p>You can put me on several lines.</p></span><button class=\"btn toast-action\">Undo</button>";
-
-    return (
-        <>
-            <h2 id="custom-html">Custom HTML</h2>
-            <p>You can pass in an HTML String as the first argument as well. Take a look at the example below, where we pass in text as well as a flat button. If you call an external function instead of in-line JavaScript, you will not need to escape quotation marks.</p>
-            <ComponentPreview language="javascript" codeFigure>
-                {"const toastHtml = \"<span><p>I am toast content.</p><p>You can put me on several lines.</p></span><button class='btn toast-action'>Undo</button>\";"}{"\n"}
-                {"toast({ html: toastHtml });"}
-            </ComponentPreview>
-            <ComponentPreview language="html" showCasePanel>
-                <button className="btn btn-primary" type="button" onClick={() => toast({ html: toastHtml })}>Toast with action</button>
-            </ComponentPreview>
-        </>
-    );
-};
-
 const ContentGuidelines = () => (
     <section>
         <h3>Content guidelines</h3>
-        <div className="slab slab-plain">
-            <div className="toast-example-container">
+        <div className="slab slab-plain mt-3">
+            <div className="toast-example-container py-5">
                 <div id="toast-container" className="m-auto">
                     <div className="toast toast-neutral">
                         <i className="material-icons">info</i>
@@ -148,44 +76,40 @@ const ContentGuidelines = () => (
 const DeveloperDocumentation = () => (
     <section id="developer-documentation">
         <h2>Developer documentation</h2>
-        <p>To use the Toast, call the toast function on an element.</p>
-        <h3>Options</h3>
-        <table className="table table-striped">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Default</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>html</td>
-                    <td>String</td>
-                    <td><CodeTags type="secondary" code='""'/></td>
-                    <td>The HTML content of the Toast.</td>
-                </tr>
-                <tr>
-                    <td>type</td>
-                    <td>String</td>
-                    <td><CodeTags type="secondary" code='""'/></td>
-                    <td>Alert types: <CodeTags type="secondary" code="success"/>, <CodeTags type="secondary" code="neutral"/>, <CodeTags type="secondary" code="warning"/>, <CodeTags type="secondary" code="danger"/></td>
-                </tr>
-                <tr>
-                    <td>classes</td>
-                    <td>Array of strings</td>
-                    <td><CodeTags type="secondary" code="[]"/></td>
-                    <td>Classes to be added to the toast element.</td>
-                </tr>
-                <tr>
-                    <td>completeCallback</td>
-                    <td>Function</td>
-                    <td><CodeTags type="secondary" code="null"/></td>
-                    <td>Callback function called when toast is dismissed.</td>
-                </tr>
-            </tbody>
-        </table>
+        <p>To use the Toast, call <CodeTags type="secondary" code="dg.toast()" /> on an element with the desired options.</p>
+        <ComponentPreview language="html" codeFigure dangerousHTML>
+            {"<button type=\"button\" class=\"btn btn-primary\" onclick=\"dg.toast({\n\ttype: 'neutral' \n\thtml: '<p><b>Info header</b>\n\t\t Input informative alert information here, provide <a href=\"#\">link</a> to solution or more info when possible.\n\t</p>'})\">Neutral toast\n</button>"}
+        </ComponentPreview>
+
+        <h4>Options</h4>
+        {optionsTable.map(({ tableHead, tableBody }, i) => (
+            <table key={tableHead} className="table table-striped">
+                <thead>
+                    <tr>
+                        {tableHead.map(th => <th key={th + i}>{th}</th>)}
+                    </tr>
+                </thead>
+                <tbody>
+                    {tableBody.map(({ tableData }, i) => (
+                        <tr key={i}>
+                            {tableData.map((td, i) => <td key={td + i}>{td}</td>)}
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        ))}
+
+        <section>
+            <h3>Usage with NPM</h3>
+            <p><Link to="/get-started/for-developers/">Usage with NPM</Link> will require you to import it from <CodeTags type="primary" code="@swedbankpay/design-guide" /> before calling it on an element.</p>
+            <ComponentPreview language="javascript" codeFigure dangerousHTML>
+                import &#123; toast &#125; from &quot;@swedbankpay/design-guide&quot;; {"\n"}
+                {"<button onclick=\"toast()\">Neutral toast</button>"}
+            </ComponentPreview>
+            <ComponentPreview language="html" codeFigure dangerousHTML>
+                {"<button type=\"button\" class=\"btn btn-primary\" onclick=\"toast({\n\ttype: 'neutral' \n\thtml: '<p><b>Info header</b>\n\t\t Input informative alert information here, provide <a href=\"#\">link</a> to solution or more info when possible.\n\t\t</p>'})\">Neutral toast\n</button>"}
+            </ComponentPreview>
+        </section>
     </section>
 );
 
@@ -209,4 +133,4 @@ class Toast extends Component {
 export default Toast;
 
 /* For testing */
-export { Overview, PremadeToasts, CustomHtml };
+export { Overview, ContentGuidelines, DeveloperDocumentation };
