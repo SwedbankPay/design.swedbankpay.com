@@ -7,7 +7,7 @@ import { tabs } from "@src/scripts/main";
 
 // NOTE: dangerousHTML prop is used when wanting to show html in the codefigure without encoding.
 
-const ComponentPreview = ({ children, language, removeOuterTag, hideValue, removeList, showCasePanel, showCasePanelAdvanced, showCasePanelSm, codeFigure, dangerousHTML, negative }) => {
+const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideCodeFigure, removeList, showCasePanel, showCasePanelAdvanced, showCasePanelSm, codeFigure, dangerousHTML, negative }) => {
     const _removeOuterTag = element => {
         const div = document.createElement("div");
 
@@ -355,14 +355,16 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                             </div>}
                         </div>
                     </div>
-                    <CodeFigure >
-                        {cloneElement(this.state.activeTab.component,
-                            this.state.activeOptions.reduce((acc, currentOption) => ({
-                                ...acc,
-                                ...currentOption.value
-                            }), {})
-                        )}
-                    </CodeFigure>
+                    {!hideCodeFigure &&
+                        <CodeFigure >
+                            {cloneElement(this.state.activeTab.component,
+                                this.state.activeOptions.reduce((acc, currentOption) => ({
+                                    ...acc,
+                                    ...currentOption.value
+                                }), {})
+                            )}
+                        </CodeFigure>
+                    }
                 </>
             );
 
@@ -380,6 +382,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
 ComponentPreview.propTypes = {
     language: PropTypes.oneOf(["html", "javascript", "css", "terminal"]).isRequired,
     removeOuterTag: PropTypes.bool,
+    hideCodeFigure: PropTypes.bool,
     hideValue: PropTypes.bool,
     removeList: PropTypes.bool,
     showCasePanel: PropTypes.bool,
