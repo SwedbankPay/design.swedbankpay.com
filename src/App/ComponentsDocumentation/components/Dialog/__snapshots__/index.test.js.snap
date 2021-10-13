@@ -64,18 +64,22 @@ exports[`Documentation: Dialog HowItWorks renders 1`] = `
      if you wish to give your user a way to close the dialog box without choosing an option. The dialog body should contain the main content, usually just text confirming an action. In the footer you will find buttons to confirm or cancel the requested action.
   </p>
   <Alert
+    icon="warning"
+    text={
+      <p>
+        <b>
+          Initializing dialog buttons:
+        </b>
+         To make a button open the dialog box you need to include 
+        <CodeTags
+          code="data-dialog-open=\\"{#your-dialog-id}\\""
+          type="secondary"
+        />
+         as an attribute to that button.
+      </p>
+    }
     type="warning"
-  >
-    <h4>
-      Initializing dialog buttons
-    </h4>
-    To make a button open the dialog box you need to include 
-    <CodeTags
-      code="data-dialog-open=\\"{#your-dialog-id}\\""
-      type="secondary"
-    />
-     as an attribute to that button.
-  </Alert>
+  />
 </Fragment>
 `;
 
