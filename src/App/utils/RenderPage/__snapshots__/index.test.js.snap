@@ -484,33 +484,40 @@ exports[`Utilities: RenderPage renders 1`] = `
         title="Components"
       />
       <RenderRoutes
-        appFolder="Templates"
+        appFolder="Patterns"
         entryCardText="Learn about how to we set up different structures"
         icon={
           Object {
             "name": "dashboard",
           }
         }
-        key="renderRoutes_Templates"
-        path="/templates"
-        redirect="/templates/templates"
+        key="renderRoutes_Patterns"
+        path="/patterns"
+        redirect="/patterns/patterns"
         routes={
           Array [
             Object {
-              "componentPath": "content/Templates",
-              "path": "/templates/templates",
+              "componentPath": "content/Patterns",
+              "path": "/patterns/patterns",
               "title": "Overview",
             },
             Object {
               "componentPath": "content/Forms",
               "icon": "format_align_justify",
               "outlined": true,
-              "path": "/templates/forms",
+              "path": "/patterns/forms",
               "title": "Forms",
+            },
+            Object {
+              "componentPath": "content/Login",
+              "icon": "account_circle",
+              "outlined": true,
+              "path": "/patterns/login",
+              "title": "Login",
             },
           ]
         }
-        title="Templates"
+        title="Patterns"
       />
       <RenderRoutes
         appFolder="Utilities"
