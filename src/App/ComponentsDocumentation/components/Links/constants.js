@@ -25,13 +25,23 @@ const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroun
     );
 };
 
-const ShowcaseActionComponent = ({ badge, smallText, multiline, newTab, disabled }) => (
-    <div className="d-flex flex-column w-100">
-        <ActionLink linkText="Pay now" className={` ${badge ? "badge badge-default badge-number" : null}`} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab} disabled={disabled}/>{"\n"}
-        <ActionLink linkText="Pay on the settlement date" className={`${badge ? "badge badge-default badge-number" : null}`} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab} disabled={disabled}/>{"\n"}
-        <ActionLink linkText="Add to my credit" className={`${badge ? "badge badge-default badge-number" : null}`} badge={badge} smallText={smallText} multiline={multiline} newTab={newTab} disabled={disabled}/>{"\n"}
-    </div>
-);
+const ShowcaseActionComponent = ({ badge, smallText, multiline, newTab, disabled }) => {
+    const attrs = {
+        badge,
+        smallText,
+        multiline,
+        newTab,
+        disabled
+    };
+
+    return (
+        <div className="d-flex flex-column w-100">
+            <ActionLink linkText="Pay now" className={`${badge ? "badge badge-default badge-number" : null}`} {...attrs}/>{"\n"}
+            <ActionLink linkText="Pay on the settlement date" className={`${badge ? "badge badge-default badge-number" : null}`} {...attrs}/>{"\n"}
+            <ActionLink linkText="Add to my credit" className={`${badge ? "badge badge-default badge-number" : null}`} {...attrs}/>{"\n"}
+        </div>
+    );
+};
 
 export const guidelinesContent = [
     {
@@ -210,7 +220,7 @@ export const overviewActionLinks = {
     id: "no-tabs",
     elements: [
         {
-            component: <ShowcaseActionComponent linkText="Pay now"/>,
+            component: <ShowcaseActionComponent/>,
             options: {
                 checkbox: [
                     {
