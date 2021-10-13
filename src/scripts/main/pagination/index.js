@@ -74,8 +74,6 @@ const _createPagination = paginationContainer => {
     return paginationContainer;
 };
 
-// INN HER MED DET NEW!!!!!! LET'S GO MotherFUCKER!!!
-
 const _addDisabledArrowState = (arrows, pages) => {
     const activeIndex = _getActiveIndex(pages);
 
@@ -86,6 +84,14 @@ const _addDisabledArrowState = (arrows, pages) => {
     } else if (activeIndex === pages.length - 1) {
         arrows[1].classList.add("disabled");
     }
+};
+
+const _removeDisabledArrowState = arrows => {
+    [...arrows].map(arrow => {
+        if (arrow.classList.contains("disabled")) {
+            arrow.classList.remove("disabled");
+        }
+    });
 };
 
 const _paginate = pages => {
@@ -120,14 +126,6 @@ const _paginate = pages => {
     }
 
     return paginatedPages;
-};
-
-const _removeDisabledArrowState = arrows => {
-    [...arrows].map(arrow => {
-        if (arrow.classList.contains("disabled")) {
-            arrow.classList.remove("disabled");
-        }
-    });
 };
 
 const _getActiveIndex = pages => {
