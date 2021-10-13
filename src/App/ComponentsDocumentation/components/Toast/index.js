@@ -5,7 +5,6 @@ import { ComponentPreview, DocContainer } from "@docutils";
 import Alert from "@components/Alert";
 import CodeTags from "@components/CodeTags";
 import { toast } from "@src/scripts/main";
-import NpmInformation from "~/src/App/docutils/NpmInformation";
 
 const Overview = () => (
     <>

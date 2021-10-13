@@ -7,7 +7,6 @@ import CodeTags from "@components/CodeTags";
 
 import { overviewButtons, destructiveButtons } from "./constants";
 import { Link } from "react-router-dom";
-import NpmInformation from "~/src/App/docutils/NpmInformation";
 
 const basename = process.env.basename;
 
