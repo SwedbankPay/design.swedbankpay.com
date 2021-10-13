@@ -206,6 +206,7 @@ exports[`Documentation: Pagination Overview renders 1`] = `
             key="3"
           />
           <Pagination
+            id="example-test"
             type="example"
           />
         </div>
