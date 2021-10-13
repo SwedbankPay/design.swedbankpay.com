@@ -76,15 +76,15 @@ const _createPagination = paginationContainer => {
 
 // INN HER MED DET NEW!!!!!! LET'S GO MotherFUCKER!!!
 
-const _addDisabledArrowState = (arrows, pages, arrowBack, arrowForward) => {
+const _addDisabledArrowState = (arrows, pages) => {
     const activeIndex = _getActiveIndex(pages);
 
     _removeDisabledArrowState(arrows);
 
     if (activeIndex === 0) {
-        arrowBack.classList.add("disabled");
+        arrows[0].classList.add("disabled");
     } else if (activeIndex === pages.length - 1) {
-        arrowForward.classList.add("disabled");
+        arrows[1].classList.add("disabled");
     }
 };
 
@@ -106,15 +106,12 @@ const _paginate = pages => {
             [...pages].slice(1, 5).map(page => paginatedPages.push(page));
             paginatedPages.push(dotts);
             paginatedPages.push(pages[pages.length - 1]);
-        }
-        else if (activeIndex > 3 && activeIndex < pages.length - 4) {
+        } else if (activeIndex > 3 && activeIndex < pages.length - 4) {
             activeIndex >= 4 ? paginatedPages.push(dotts) : null;
             [...pages].slice(activeIndex - 1, activeIndex + 2).map(page => paginatedPages.push(page));
             activeIndex >= pages.length - 3 ? null : paginatedPages.push(dotts.cloneNode(true));
             paginatedPages.push(pages[pages.length - 1]);
-        }
-
-        else if (activeIndex >= pages.length - 4) {
+        } else if (activeIndex >= pages.length - 4) {
             paginatedPages.push(dotts);
             [...pages].slice(-5).map(page => paginatedPages.push(page));
         }
@@ -167,5 +164,7 @@ export default {
     init,
     _createPagination,
     _getActiveIndex,
-    _removeDisabledArrowState
+    _removeDisabledArrowState,
+    _addDisabledArrowState,
+    _paginate
 };
