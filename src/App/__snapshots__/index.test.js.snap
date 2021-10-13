@@ -488,28 +488,35 @@ exports[`Main: App renders 1`] = `
                   "title": "Components",
                 },
                 Object {
-                  "appFolder": "Templates",
+                  "appFolder": "Patterns",
                   "entryCardText": "Learn about how to we set up different structures",
                   "icon": Object {
                     "name": "dashboard",
                   },
-                  "path": "/templates",
-                  "redirect": "/templates/templates",
+                  "path": "/patterns",
+                  "redirect": "/patterns/patterns",
                   "routes": Array [
                     Object {
-                      "componentPath": "content/Templates",
-                      "path": "/templates/templates",
+                      "componentPath": "content/Patterns",
+                      "path": "/patterns/patterns",
                       "title": "Overview",
                     },
                     Object {
                       "componentPath": "content/Forms",
                       "icon": "format_align_justify",
                       "outlined": true,
-                      "path": "/templates/forms",
+                      "path": "/patterns/forms",
                       "title": "Forms",
                     },
+                    Object {
+                      "componentPath": "content/Login",
+                      "icon": "account_circle",
+                      "outlined": true,
+                      "path": "/patterns/login",
+                      "title": "Login",
+                    },
                   ],
-                  "title": "Templates",
+                  "title": "Patterns",
                 },
                 Object {
                   "appFolder": "Utilities",
@@ -670,7 +677,7 @@ exports[`Main: App renders 1`] = `
                     },
                   }
                 }
-                path="/templates"
+                path="/patterns"
               />
               <Route
                 component={
