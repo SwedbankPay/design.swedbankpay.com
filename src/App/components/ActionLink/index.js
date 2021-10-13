@@ -8,7 +8,8 @@ const ActionLink = props => {
         "action-link",
         otherProps.newTab ? "action-link-new-tab" : null,
         otherProps.multiline ? "multiline" : null,
-        otherProps.disabled ? "disabled" : null
+        otherProps.disabled ? "disabled" : null,
+        otherProps.className ? otherProps.className : null
     );
 
     const attrs = {
@@ -38,8 +39,11 @@ const ActionLinkContent = ({ linkText, badge, smallText, multiline }) => (
                 </div>
             </>
             :
-            <div className="d-flex flex-column">
-                <span className="action-link-content"><span className={`action-link-label ${badge ? "" : "no-badge"}`}>{linkText}</span> {badge ? <span className={`badge ${badge.type}`}>{badge.text}</span> : <></>}</span>
+            <div className="d-flex flex-column">{"\n"}
+                <span className="action-link-content">{"\n"}
+                    <span className={`action-link-label ${badge ? "" : "no-badge"}`}>{linkText}</span>{"\n"}
+                    {badge ? <span className={`badge ${badge.type}`}>{badge.text}</span> : null}
+                </span>{"\n"}
             </div>
         }
     </>
