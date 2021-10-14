@@ -7,6 +7,7 @@ import DialogComponent from "@components/Dialog";
 import CodeTags from "@components/CodeTags";
 
 import { dialog } from "@src/scripts/main";
+import NpmInformation from "~/src/App/docutils/NpmInformation";
 
 const HowItWorks = () => (
     <>
@@ -57,6 +58,7 @@ const Dialog = () => {
             <HowItWorks />
             <Example />
             <JavascriptMethods />
+            <NpmInformation componentName={"dialog"}/>
         </DocContainer>
     );
 };

@@ -739,5 +739,8 @@ exports[`Documentation: Datepickers renders 1`] = `
   <MultipleDates />
   <Options />
   <JavascriptMethods />
+  <NpmInformation
+    componentName="datepicker"
+  />
 </DocContainer>
 `;

@@ -7,6 +7,7 @@ import CodeTags from "@components/CodeTags";
 import RangesliderComponent from "~/src/App/components/Rangeslider";
 
 import { rangeslider } from "@src/scripts/main";
+import NpmInformation from "~/src/App/docutils/NpmInformation";
 
 const Overview = () => (
     <section>
@@ -33,6 +34,7 @@ const Overview = () => (
                 {text}
             </React.Fragment>
         ))}
+        <DisableState/>
     </section>
 );
 
@@ -75,7 +77,6 @@ const DeveloperDocumentation = () => (
         <h3>Javascript methods</h3>
         <p className="my-3">Use <CodeTags type="secondary" code="dg.rangeslider.init()"/> to <a href="/get-started/for-developers" >initialize</a> all rangesliders.</p>
         <p>Or <CodeTags type="secondary" code='dg.rangeslider.init("component-id")'/> to initialize one specific component.</p>
-        <DisableState />
     </section>
 );
 
@@ -104,6 +105,7 @@ const Rangeslider = () => {
             <Overview />
             <ContentGuidelines />
             <DeveloperDocumentation />
+            <NpmInformation componentName={"rangeslider"}/>
         </DocContainer>
     );
 };

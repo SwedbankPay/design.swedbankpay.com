@@ -117,5 +117,8 @@ exports[`Components: Expandable renders 1`] = `
   <Overview />
   <ExpandableGroup />
   <JavascriptMethods />
+  <NpmInformation
+    componentName="expandable"
+  />
 </DocContainer>
 `;
