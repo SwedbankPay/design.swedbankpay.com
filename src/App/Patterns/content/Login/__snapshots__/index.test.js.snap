@@ -218,15 +218,6 @@ exports[`Forms: index Overview renders 1`] = `
   >
     Overview
   </h2>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <LoginForm
-      title="h1"
-    />
-  </ComponentPreview>
   <img
     alt="Image for login screen"
     className="d-none d-md-block w-100 border-left border-right border-bottom"

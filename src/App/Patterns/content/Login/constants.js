@@ -1,12 +1,5 @@
 import React from "react";
 
-import ActionLink from "@components/ActionLink";
-import Button from "@components/Button";
-import Checkbox from "@components/FormComponents/Checkbox";
-import InputGroup from "@components/InputGroup";
-import LinkComponent from "@components/Link";
-import Logotype from "@components/Logotype";
-
 export const guidelineList = [
     <>The <b>language selector action list</b> is used to change the language on the login page, default language should be based on the users IP address. </>,
     <>The <b>Product label</b> should display the name of the product the user is about to log in to.</>,
