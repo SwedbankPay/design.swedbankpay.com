@@ -4,7 +4,6 @@ import { ComponentPreview, DocContainer } from "@docutils";
 import InputGroup from "@components/InputGroup";
 import { selectOverview, whenToUse } from "./constants";
 import CodeTags from "@components/CodeTags";
-import { Link } from "react-router-dom";
 
 const WhenToUse = () => (
     <>

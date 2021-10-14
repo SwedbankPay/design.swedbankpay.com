@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { DocContainer } from "@docutils";
 
-import Alert from "@components/Alert";
 import Button from "@components/Button";
 import Checkbox from "@components/FormComponents/Checkbox";
 import CodeTags from "@components/CodeTags";
 import InputGroup from "@components/InputGroup";
-import Link from "@components/Link";
 import RadioButton from "@components/FormComponents/Radio";
 
 import LoginForm from "../../components/LoginForm/index";

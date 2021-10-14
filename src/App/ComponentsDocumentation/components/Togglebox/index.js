@@ -35,7 +35,7 @@ const Overview = () => (
                 </div>
                 <div className="col-sm-6 col-12">
                     <div className="slab slab-plain slab-border-error mb-2">
-                        <h3>Don't</h3>
+                        <h3>Don&apos;t</h3>
                         <div className="slab-content p-3">
                             {error}
                         </div>

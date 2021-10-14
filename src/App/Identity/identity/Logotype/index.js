@@ -1,7 +1,6 @@
 import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
-import Button from "@components/Button";
 import CodeTags from "@components/CodeTags";
 import { logoBlack, logoWhite } from "./constants";
 
