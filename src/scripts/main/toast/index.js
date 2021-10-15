@@ -77,6 +77,10 @@ class Toast {
         const _createIcon = (iconType, dismiss) => {
             const icon = document.createElement("i");
 
+            iconType === "close"
+                ? icon.setAttribute("aria-label", "Close button")
+                : icon.setAttribute("aria-hidden", "true");
+
             icon.classList.add("material-icons");
             icon.innerHTML = iconType;
 
@@ -118,6 +122,8 @@ class Toast {
         // Set content
         toastContent.classList.add("toast-content");
         toastContent.innerHTML = this.message;
+        toastContent.setAttribute("role", "alert");
+
         toast.appendChild(toastContent);
 
         if (this.options.icon && !this.options.type) {
