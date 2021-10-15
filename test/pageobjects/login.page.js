@@ -7,9 +7,11 @@ class LoginPage extends Page {
     /**
      * define selectors using getter methods
      */
-    get inputUsername () { return $('#username') }
-    get inputPassword () { return $('#password') }
-    get btnSubmit () { return $('button[type="submit"]') }
+    get inputUsername () { return $("#username") }
+
+    get inputPassword () { return $("#password") }
+
+    get btnSubmit () { return $("button[type='submit']") }
 
     /**
      * a method to encapsule automation code to interact with the page
@@ -25,7 +27,7 @@ class LoginPage extends Page {
      * overwrite specifc options to adapt it to page object
      */
     open () {
-        return super.open('login');
+        return super.open("login");
     }
 }
 
