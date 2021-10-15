@@ -266,7 +266,7 @@ exports[`Components: Toast Developer documentation renders 1`] = `
       import { toast } from "@swedbankpay/design-guide"; 
       
 
-      &lt;button onclick="toast()"&gt;Neutral toast&lt;/button&gt;
+      toast();
     </ComponentPreview>
     <ComponentPreview
       codeFigure={true}
@@ -446,10 +446,10 @@ Neutral toast
         Don't
       </span>
       <div
-        className="toast-example-container m-5"
+        className="toast-example-container m-4"
       >
         <div
-          className="m-auto"
+          className="toast-dont-example m-auto"
           id="toast-container"
         >
           <div
