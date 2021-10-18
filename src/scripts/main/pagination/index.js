@@ -174,7 +174,7 @@ const init = id => {
         // return _createPagination(pagination);
         return createV2(pagination);
     } else {
-        const paginations = document.querySelectorAll(SELECTORS.PAGINATION);
+        const paginations = document.querySelectorAll(`${SELECTORS.PAGINATION}:not(.example)`);
 
         if (!paginations.length) {
             console.warn("No paginations found");

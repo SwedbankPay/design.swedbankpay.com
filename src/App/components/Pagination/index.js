@@ -20,11 +20,12 @@ const Pagination = ({ type, items, arrows, mobileView, id }) => {
         <>
             {type === "example" ?
                 <>
-                    <ul id={id} className="pagination pagination-example"> {/* HHEEERRRR*/}
+                    <nav className="pagination example">
                         <Arrow type="back"/>
-                        <div className="example-box"></div>
+                            <div className="example-box"></div>
                         <Arrow type="forward"/>
-                    </ul>
+                        
+                    </nav>
                 </>
                 :
                 <>
