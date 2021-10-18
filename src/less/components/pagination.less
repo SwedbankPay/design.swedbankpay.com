@@ -5,105 +5,46 @@
     margin: @base-margin 0;
 
     &.pagination-example {
-        .active {
-            height: 0;
-
-            .example-box {
-                width: 6rem;
-                height: 0.625rem;
-                background-color: @brand-secondary;
-                margin-top: 10%;
-                border-radius: 0.125rem;
-            }
+        .example-box {
+            width: 6rem;
+            height: 0.625rem;
+            background-color: @brand-secondary;
+            margin-top: 10%;
+            border-radius: 0.125rem;
         }
     }
 
-    li {
-        display: flex;
-        position: relative;
-
-        &.dotts {
+    .arrow-back {
+        &.disabled {
             pointer-events: none;
+
+            a,
+            span {
+                &:after {
+                    .material-icons-styling(@color: @light-brown, @margin: 0, @font-size: 1.75rem);
+                }
+            }
         }
 
         a,
         span {
-            display: flex;
-            align-items: center;
-            padding: 0 @base-margin-sm;
-            font-weight: bold;
-            color: @brand-secondary;
-            cursor: pointer;
-            user-select: none;
-            text-decoration: none;
-            border: 1px solid transparent;
-
-            &.text {
-                cursor: default;
-                color: @text-color;
-                font-weight: 300;
-                font-family: "Swedbank Headline";
+            &:after {
+                content: "chevron_left";
+                .material-icons-styling(@color: @brand-secondary, @margin: 0, @font-size: 1.75rem);
             }
         }
 
-        &:not(.arrow-start):not(.arrow-back):not(.arrow-forward):not(.arrow-end):not(.mobileView) {
-            a,
-            span {
-                padding: 0.25rem 0.75rem;
+        span {
+            cursor: default;
 
-                &:hover {
-                    text-decoration: none;
-                    border-radius: 0.125rem;
-                    border: solid @brand-secondary 1px;
-                }
-
-                &:focus {
-                    border: 1px solid @brand-secondary;
-                    border-radius: 0.125rem;
-                    outline: none;
-                }
+            &:after {
+                color: @light-brown;
             }
         }
+    }
 
-        &.active {
-            background-color: @brand-secondary;
-            border-radius: 0.125rem;
-
-            a,
-            span {
-                cursor: default;
-                color: @white;
-            }
-        }
-
-        &.arrow-back {
-            &.disabled {
-                pointer-events: none;
-
-                a,
-                span {
-                    &:after {
-                        .material-icons-styling(@color: @light-brown, @margin: 0, @font-size: 1.75rem);
-                    }
-                }
-            }
-
-            a,
-            span {
-                &:after {
-                    content: "chevron_left";
-                    .material-icons-styling(@color: @brand-secondary, @margin: 0, @font-size: 1.75rem);
-                }
-            }
-
-            span {
-                cursor: default;
-
-                &:after {
-                    color: @light-brown;
-                }
-            }
-        }
+    button {
+        all: unset;
 
         &.arrow-start {
             &.disabled {
@@ -134,6 +75,7 @@
             }
         }
 
+
         &.arrow-forward {
             &.disabled {
                 pointer-events: none;
@@ -163,6 +105,7 @@
             }
         }
 
+
         &.arrow-end {
             a,
             span {
@@ -178,6 +121,70 @@
                 &:before,
                 &:after {
                     color: @pagination-default-color;
+                }
+            }
+        }
+    }
+
+    ul {
+        display: flex;
+        padding-left: 0;
+
+        li {
+            display: flex;
+            position: relative;
+
+            &.dotts {
+                pointer-events: none;
+            }
+
+            a,
+            span {
+                display: flex;
+                align-items: center;
+                padding: 0 @base-margin-sm;
+                font-weight: bold;
+                color: @brand-secondary;
+                cursor: pointer;
+                user-select: none;
+                text-decoration: none;
+                border: 1px solid transparent;
+
+                &.text {
+                    cursor: default;
+                    color: @text-color;
+                    font-weight: 300;
+                    font-family: "Swedbank Headline";
+                }
+            }
+
+            &:not(.arrow-start):not(.arrow-back):not(.arrow-forward):not(.arrow-end):not(.mobileView) {
+                a,
+                span {
+                    padding: 0.25rem 0.75rem;
+
+                    &:hover {
+                        text-decoration: none;
+                        border-radius: 0.125rem;
+                        border: solid @brand-secondary 1px;
+                    }
+
+                    &:focus {
+                        border: 1px solid @brand-secondary;
+                        border-radius: 0.125rem;
+                        outline: none;
+                    }
+                }
+            }
+
+            &.active {
+                background-color: @brand-secondary;
+                border-radius: 0.125rem;
+
+                a,
+                span {
+                    cursor: default;
+                    color: @white;
                 }
             }
         }

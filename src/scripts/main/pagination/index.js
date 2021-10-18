@@ -59,12 +59,12 @@ const _createPagination = paginationContainer => {
     };
 
     const _paginateBuilder = pages => {
-        const paginatedPages = _paginate(pages);
+        /* const paginatedPages = _paginate(pages);
 
         paginationContainer.innerHTML = "";
         paginationContainer.appendChild(arrowBack);
         [...paginatedPages].map(page => paginationContainer.appendChild(page));
-        paginationContainer.appendChild(arrowForward);
+        paginationContainer.appendChild(arrowForward); */
     };
 
     _paginateBuilder(pages);
@@ -134,6 +134,33 @@ const _getActiveIndex = pages => {
     return [].indexOf.call(pages, currentActive);
 };
 
+// New beginnings :-) <3
+
+// get list - slice
+// get active state
+// set active state
+// navigation for arrows
+// disabled states for arrows
+// set current-page (mobile) || set list (desktop)
+
+const createV2 = pagination => {
+
+    const paginationItems = pagination.querySelectorAll("li");
+    const arrows = pagination.querySelectorAll("button");
+
+    console.log(paginationItems[2]);
+
+    paginationItems[2].classList.add("active");
+
+    // _getActivePaginationItem(paginationItems);
+};
+
+const _getActivePaginationItem = paginationItems => {
+    const currentActive = [...paginationItems].find(item => item.classList.contains("active"));
+
+    return [].indexOf.call(paginationItems, currentActive);
+};
+
 const init = id => {
     if (id) {
         const pagination = document.getElementById(id);
@@ -144,7 +171,8 @@ const init = id => {
             return null;
         }
 
-        return _createPagination(pagination);
+        // return _createPagination(pagination);
+        return createV2(pagination);
     } else {
         const paginations = document.querySelectorAll(SELECTORS.PAGINATION);
 
@@ -154,7 +182,8 @@ const init = id => {
             return null;
         }
 
-        return [...paginations].map(pagination => _createPagination(pagination));
+        // return [...paginations].map(pagination => _createPagination(pagination));
+        return [...paginations].map(pagination => createV2(pagination));
     }
 };
 

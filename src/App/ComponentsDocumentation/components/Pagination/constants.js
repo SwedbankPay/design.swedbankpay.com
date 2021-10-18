@@ -20,7 +20,7 @@ export const PaginationShowCasePanel = {
     id: "no-tabs",
     elements: [
         {
-            component: <Pagination type="simple" items={paginationItems} arrows text="1" />,
+            component: <Pagination items={paginationItems} arrows text="1" />,
             options: {
                 radio: [
                     {

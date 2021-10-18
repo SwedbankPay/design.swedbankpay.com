@@ -8,69 +8,40 @@ const Pagination = ({ type, items, arrows, mobileView, id }) => {
 
     const itemLength = items ? items.length - 1 : -2;
 
-    const paginationClasses = classnames(
-        "pagination",
-        type ? `pagination-${type}` : ""
+    const Arrow = ({ type, mobile }) => (
+        <button className={`arrow-${type} ${mobile ? " d-block d-sm-none" : ""}`}>
+            <i className="material-icons" aria-label={type} >{"\n"}
+                <a href="#"></a>
+            </i>
+        </button>
     );
-
-    const Arrow = ({ type }) => {
-        let disabled = false;
-
-        if (type === "start" || type === "back") {
-            disabled = activeItem === 0;
-        } else if (type === "forward" || type === "end") {
-            disabled = activeItem === itemLength;
-        }
-
-        return (
-            <li className={`arrow-${type} ${type === "start" || type === "back" ? "disabled" : ""}`} aria-label={type} >{"\n"}
-                {disabled ? <span></span> : <a href="#"></a>}{"\n"}
-            </li>
-        );
-    };
 
     return (
         <>
-            {mobileView ?
-                <nav>
-                    <ul id={id} className={paginationClasses}>
-                        {arrows ? <>
-                            <Arrow type="start"/>
-                            <Arrow type="back"/>
-                        </> : null }
-                        <li className="mobileView"><span>Page 1 of {items.length}</span></li>
-                        {arrows ? <>
-                            <Arrow type="forward"/>
-                            <Arrow type="end"/>
-                        </> : null }
+            {type === "example" ?
+                <>
+                    <ul id={id} className="pagination pagination-example"> {/* HHEEERRRR*/}
+                        <Arrow type="back"/>
+                        <div className="example-box"></div>
+                        <Arrow type="forward"/>
                     </ul>
-                </nav>
+                </>
                 :
                 <>
-                    {type === "example" ?
-                        <>
-                            <ul id={id} className={paginationClasses}>
-                                <Arrow type="back"/>
-                                <li><div className="example-box"></div></li>
-                                <Arrow type="forward"/>
-                            </ul>
-                        </>
-                        :
-                        <>
-                            <nav role="navigation" aria-label="Pagination Navigation">
-                                <ul id={id} className={paginationClasses}>
-                                    {arrows ? <Arrow type="back" /> : null}
-                                    {items ? items.map(({ name, href, active }, i) => (
-                                        <li key={i} className={`${active ? "active" : ""}`}>{"\n"}
-                                            <a href={href} aria-label={`Go to page ${name}`} >{name}</a>{"\n"}
-                                        </li>
-                                    )
-                                    ) : null}
-                                    {arrows ? <Arrow type="forward" /> : null}
-                                </ul>
-                            </nav>
-                        </>
-                    }
+                    <nav className="pagination" role="navigation" aria-label="Pagination Navigation">
+                        <Arrow type="start" mobile/>
+                        <Arrow type="back" />
+                        <ul id={id} >
+                            { items.map(({ name, href, active }, i) => (
+                                <li key={i} className={`d-none d-sm-block ${active ? "active" : ""}`}>{"\n"}
+                                    <a href={href} aria-label={`Go to page ${name}`} >{name}</a>{"\n"}
+                                </li>
+                            ))}
+                            <p className="d-block d-sm-none font-weight-bold">Page <span className="current-page"></span> of {items.length}</p>
+                        </ul>
+                        <Arrow type="forward" />
+                        <Arrow type="end" mobile/>
+                    </nav>
                 </>
             }
         </>
@@ -78,7 +49,7 @@ const Pagination = ({ type, items, arrows, mobileView, id }) => {
 };
 
 Pagination.propTypes = {
-    type: PropTypes.oneOf(["simple", "example"]),
+    type: PropTypes.oneOf(["example"]),
     items: PropTypes.array,
     text: PropTypes.string,
     arrows: PropTypes.bool,
