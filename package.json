@@ -102,11 +102,14 @@
     "webpack-dev-server": "^3.11.2"
   },
   "files": [
-    "dist/designguide/",
+    "src/fonts/",
+    "src/icons/",
+    "src/img",
+    "src/less",
     "src/polyfills/",
-    "src/scripts/dashboard/",
     "src/scripts/main/",
-    "post-install.js",
-    "src/less"
+    "src/scripts/dashboard/",
+    "dist/designguide/",
+    "post-install.js"
   ]
 }
