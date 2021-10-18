@@ -24,9 +24,9 @@ const Overview = () => (
             <h3>How to use toast</h3>
             <div className="slab slab-plain slab-border-success">
                 <span className="h3">Do</span>
-                <div className="toast-example-container">
-                    <div id="toast-container" className="ml-auto mr-3 mt-3">
-                        <div className="toast toast-neutral">
+                <div className="toast-example-container col-sm-10 col-12 p-0">
+                    <div id="toast-container" className="col-12 ml-auto mt-3 p-0">
+                        <div className="toast toast-neutral col-sm-11 col-12">
                             <i className="material-icons">info</i>
                             <div className="toast-content"><b>Short information message</b></div>
                             <i className="material-icons">close</i>
@@ -34,12 +34,12 @@ const Overview = () => (
                     </div>
                 </div>
             </div>
-            <p>The positioning of the toast component should always be at the top left corner of the page on web and top center on mobile devices.</p>
+            <p>The positioning of the toast component should always be at the top right corner of the page on web and top center on mobile devices.</p>
 
             <div className="slab slab-plain slab-border-error">
                 <span className="h3">Don&apos;t</span>
-                <div className="toast-example-container m-4">
-                    <div id="toast-container" className="toast-dont-example m-auto">
+                <div className="toast-example-container col-sm-11 col-12 my-5 mx-auto">
+                    <div id="toast-container" className="toast-dont-example col-12 m-auto px-0">
                         <div className="toast toast-neutral">
                             <i className="material-icons">info</i>
                             <div className="toast-content"><b>Short information message</b></div>
@@ -56,10 +56,10 @@ const Overview = () => (
 const ContentGuidelines = () => (
     <section>
         <h3>Content guidelines</h3>
-        <div className="slab slab-plain mt-3">
+        <div className="slab slab-plain mt-3 px-0">
             <div className="toast-example-container py-5">
-                <div id="toast-container" className="m-auto">
-                    <div className="toast toast-neutral">
+                <div id="toast-container" className="m-auto col-12">
+                    <div className="toast toast-neutral col-12">
                         <i className="material-icons">info</i>
                         <div className="toast-content"><b>Message</b></div>
                         <i className="material-icons">close</i>
@@ -82,23 +82,25 @@ const DeveloperDocumentation = () => (
         </ComponentPreview>
 
         <h4>Options</h4>
-        {optionsTable.map(({ tableHead, tableBody }, i) => (
-            <table key={tableHead} className="table table-striped">
-                <thead>
-                    <tr>
-                        {tableHead.map(th => <th key={th + i}>{th}</th>)}
-                    </tr>
-                </thead>
-                <tbody>
-                    {tableBody.map(({ tableData }, i) => (
-                        <tr key={i}>
-                            {tableData.map((td, i) => <td key={td + i}>{td}</td>)}
+        <div className="overflow-auto">
+            {optionsTable.map(({ tableHead, tableBody }, i) => (
+                <table key={tableHead} className="table table-striped">
+                    <thead>
+                        <tr>
+                            {tableHead.map(th => <th key={th + i}>{th}</th>)}
                         </tr>
-                    ))}
-                </tbody>
-            </table>
-        ))}
+                    </thead>
+                    <tbody>
+                        {tableBody.map(({ tableData }, i) => (
+                            <tr key={i}>
+                                {tableData.map((td, i) => <td key={td + i}>{td}</td>)}
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            ))}
 
+        </div>
         <section>
             <h3>Usage with NPM</h3>
             <p><Link to="/get-started/for-developers/">Usage with NPM</Link> will require you to import it from <CodeTags type="primary" code="@swedbankpay/design-guide" /> before calling it on an element.</p>

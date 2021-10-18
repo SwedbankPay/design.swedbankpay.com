@@ -6,17 +6,17 @@ exports[`Components: Toast Content guidelines renders 1`] = `
     Content guidelines
   </h3>
   <div
-    className="slab slab-plain mt-3"
+    className="slab slab-plain mt-3 px-0"
   >
     <div
       className="toast-example-container py-5"
     >
       <div
-        className="m-auto"
+        className="m-auto col-12"
         id="toast-container"
       >
         <div
-          className="toast toast-neutral"
+          className="toast toast-neutral col-12"
         >
           <i
             className="material-icons"
@@ -83,164 +83,168 @@ exports[`Components: Toast Developer documentation renders 1`] = `
   <h4>
     Options
   </h4>
-  <table
-    className="table table-striped"
-    key="Name,Type,Default,Description"
+  <div
+    className="overflow-auto"
   >
-    <thead>
-      <tr>
-        <th
-          key="Name0"
+    <table
+      className="table table-striped"
+      key="Name,Type,Default,Description"
+    >
+      <thead>
+        <tr>
+          <th
+            key="Name0"
+          >
+            Name
+          </th>
+          <th
+            key="Type0"
+          >
+            Type
+          </th>
+          <th
+            key="Default0"
+          >
+            Default
+          </th>
+          <th
+            key="Description0"
+          >
+            Description
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          key="0"
         >
-          Name
-        </th>
-        <th
-          key="Type0"
+          <td
+            key="html0"
+          >
+            html
+          </td>
+          <td
+            key="String1"
+          >
+            String
+          </td>
+          <td
+            key="[object Object]2"
+          >
+            <CodeTags
+              code="\\"\\""
+              type="secondary"
+            />
+          </td>
+          <td
+            key="The HTML content of the Toast.3"
+          >
+            The HTML content of the Toast.
+          </td>
+        </tr>
+        <tr
+          key="1"
         >
-          Type
-        </th>
-        <th
-          key="Default0"
+          <td
+            key="type0"
+          >
+            type
+          </td>
+          <td
+            key="String1"
+          >
+            String
+          </td>
+          <td
+            key="[object Object]2"
+          >
+            <CodeTags
+              code="\\"\\""
+              type="secondary"
+            />
+          </td>
+          <td
+            key="[object Object]3"
+          >
+            Alert types: 
+            <CodeTags
+              code="success"
+              type="secondary"
+            />
+            , 
+            <CodeTags
+              code="neutral"
+              type="secondary"
+            />
+            , 
+            <CodeTags
+              code="warning"
+              type="secondary"
+            />
+            , 
+            <CodeTags
+              code="danger"
+              type="secondary"
+            />
+          </td>
+        </tr>
+        <tr
+          key="2"
         >
-          Default
-        </th>
-        <th
-          key="Description0"
+          <td
+            key="classes0"
+          >
+            classes
+          </td>
+          <td
+            key="Array of strings1"
+          >
+            Array of strings
+          </td>
+          <td
+            key="[object Object]2"
+          >
+            <CodeTags
+              code="[]"
+              type="secondary"
+            />
+          </td>
+          <td
+            key="Classes to be added to the toast element.3"
+          >
+            Classes to be added to the toast element.
+          </td>
+        </tr>
+        <tr
+          key="3"
         >
-          Description
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        key="0"
-      >
-        <td
-          key="html0"
-        >
-          html
-        </td>
-        <td
-          key="String1"
-        >
-          String
-        </td>
-        <td
-          key="[object Object]2"
-        >
-          <CodeTags
-            code="\\"\\""
-            type="secondary"
-          />
-        </td>
-        <td
-          key="The HTML content of the Toast.3"
-        >
-          The HTML content of the Toast.
-        </td>
-      </tr>
-      <tr
-        key="1"
-      >
-        <td
-          key="type0"
-        >
-          type
-        </td>
-        <td
-          key="String1"
-        >
-          String
-        </td>
-        <td
-          key="[object Object]2"
-        >
-          <CodeTags
-            code="\\"\\""
-            type="secondary"
-          />
-        </td>
-        <td
-          key="[object Object]3"
-        >
-          Alert types: 
-          <CodeTags
-            code="success"
-            type="secondary"
-          />
-          , 
-          <CodeTags
-            code="neutral"
-            type="secondary"
-          />
-          , 
-          <CodeTags
-            code="warning"
-            type="secondary"
-          />
-          , 
-          <CodeTags
-            code="danger"
-            type="secondary"
-          />
-        </td>
-      </tr>
-      <tr
-        key="2"
-      >
-        <td
-          key="classes0"
-        >
-          classes
-        </td>
-        <td
-          key="Array of strings1"
-        >
-          Array of strings
-        </td>
-        <td
-          key="[object Object]2"
-        >
-          <CodeTags
-            code="[]"
-            type="secondary"
-          />
-        </td>
-        <td
-          key="Classes to be added to the toast element.3"
-        >
-          Classes to be added to the toast element.
-        </td>
-      </tr>
-      <tr
-        key="3"
-      >
-        <td
-          key="completeCallback0"
-        >
-          completeCallback
-        </td>
-        <td
-          key="Function1"
-        >
-          Function
-        </td>
-        <td
-          key="[object Object]2"
-        >
-          <CodeTags
-            code="null"
-            type="secondary"
-          />
-        </td>
-        <td
-          key="Callback function called when toast is dismissed.3"
-        >
-          Callback function called when toast is dismissed.
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          <td
+            key="completeCallback0"
+          >
+            completeCallback
+          </td>
+          <td
+            key="Function1"
+          >
+            Function
+          </td>
+          <td
+            key="[object Object]2"
+          >
+            <CodeTags
+              code="null"
+              type="secondary"
+            />
+          </td>
+          <td
+            key="Callback function called when toast is dismissed.3"
+          >
+            Callback function called when toast is dismissed.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   <section>
     <h3>
       Usage with NPM
@@ -404,14 +408,14 @@ Neutral toast
         Do
       </span>
       <div
-        className="toast-example-container"
+        className="toast-example-container col-sm-10 col-12 p-0"
       >
         <div
-          className="ml-auto mr-3 mt-3"
+          className="col-12 ml-auto mt-3 p-0"
           id="toast-container"
         >
           <div
-            className="toast toast-neutral"
+            className="toast toast-neutral col-sm-11 col-12"
           >
             <i
               className="material-icons"
@@ -435,7 +439,7 @@ Neutral toast
       </div>
     </div>
     <p>
-      The positioning of the toast component should always be at the top left corner of the page on web and top center on mobile devices.
+      The positioning of the toast component should always be at the top right corner of the page on web and top center on mobile devices.
     </p>
     <div
       className="slab slab-plain slab-border-error"
@@ -446,10 +450,10 @@ Neutral toast
         Don't
       </span>
       <div
-        className="toast-example-container m-4"
+        className="toast-example-container col-sm-11 col-12 my-5 mx-auto"
       >
         <div
-          className="toast-dont-example m-auto"
+          className="toast-dont-example col-12 m-auto px-0"
           id="toast-container"
         >
           <div
