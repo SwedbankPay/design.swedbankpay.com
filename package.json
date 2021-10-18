@@ -106,6 +106,7 @@
     "src/polyfills/",
     "src/scripts/dashboard/",
     "src/scripts/main/",
-    "post-install.js"
+    "post-install.js",
+    "src/less"
   ]
 }
