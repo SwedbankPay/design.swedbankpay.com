@@ -1,3 +1,5 @@
+import { paginationItems } from "~/src/App/ComponentsDocumentation/components/Pagination/constants";
+
 const SELECTORS = {
     PAGINATION: ".pagination"
 };
@@ -148,18 +150,39 @@ const createV2 = pagination => {
     const paginationItems = pagination.querySelectorAll("li");
     const arrows = pagination.querySelectorAll("button");
 
-    console.log(paginationItems[2]);
+    _setInitialActiveItem(paginationItems, arrows);
 
-    paginationItems[2].classList.add("active");
+    _getActiveItem(paginationItems);
 
-    // _getActivePaginationItem(paginationItems);
+    _addListener(paginationItems);
 };
 
-const _getActivePaginationItem = paginationItems => {
+const _setInitialActiveItem = (paginationItems, arrows) => {
+    paginationItems[0].classList.add("active");
+    arrows[0].classList.add("disabled");
+    arrows[1].classList.add("disabled");
+}
+
+const _getActiveItem = paginationItems => {
     const currentActive = [...paginationItems].find(item => item.classList.contains("active"));
 
     return [].indexOf.call(paginationItems, currentActive);
 };
+
+const setActiveOnClick = (item) => {
+    item.classList.add("active");
+    // remove active function ??
+}
+
+const _addListener = itemList => {
+    _removeActiveState(itemList);
+    [...itemList].map(item => item.addEventListener("click", e => setActiveOnClick(e.currentTarget)))
+    // does this work?? 
+}
+
+const _removeActiveState = itemList => {
+    [...itemList].map(item => item.classList.remove("active")); // Overkill?
+}
 
 const init = id => {
     if (id) {
