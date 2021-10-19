@@ -70,8 +70,12 @@ describe("scripts: toast", () => {
         expect(renderedToast).toBeDefined();
         expect(closeIcon).toBeDefined();
 
+        expect(renderedToast.classList.length).toBe(1);
+
         closeIcon.click();
-        expect(document.querySelector(".toast")).toBeNull();
+
+        expect(renderedToast.classList).toContain("fade");
+        expect(renderedToast.classList.length).toBe(2);
     });
 
     it("does not add a close icon when dismissable is set to false", () => {
@@ -140,7 +144,7 @@ describe("scripts: toast", () => {
 
         expect(renderedToast).toBeDefined();
         expect(icon).toBeDefined();
-        expect(icon.innerHTML).toEqual("error");
+        expect(icon.innerHTML).toEqual("cancel");
     });
 
     it("adds a custom icon when type is not set", () => {

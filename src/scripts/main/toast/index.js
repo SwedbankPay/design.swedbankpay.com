@@ -35,7 +35,7 @@ class Toast {
             type: "",
             icon: "",
             dismissable: true,
-            displayLength: 4000,
+            displayLength: 5000,
             inDuration: 300,
             outDuration: 375,
             classes: [],
@@ -77,6 +77,10 @@ class Toast {
         const _createIcon = (iconType, dismiss) => {
             const icon = document.createElement("i");
 
+            iconType === "close"
+                ? icon.setAttribute("aria-label", "Close button")
+                : icon.setAttribute("aria-hidden", "true");
+
             icon.classList.add("material-icons");
             icon.innerHTML = iconType;
 
@@ -108,7 +112,7 @@ class Toast {
                 break;
             case "danger":
                 toast.classList.add("toast-danger");
-                toast.appendChild(_createIcon("error"));
+                toast.appendChild(_createIcon("cancel"));
 
                 break;
             default:
@@ -118,6 +122,8 @@ class Toast {
         // Set content
         toastContent.classList.add("toast-content");
         toastContent.innerHTML = this.message;
+        toastContent.setAttribute("role", "alert");
+
         toast.appendChild(toastContent);
 
         if (this.options.icon && !this.options.type) {
@@ -164,18 +170,21 @@ class Toast {
     }
 
     dismiss () {
+        this.el.classList.add("fade");
         window.clearInterval(this.counterInterval);
 
-        if (typeof this.options.completeCallback === "function") {
-            this.options.completeCallback();
-        }
+        setTimeout(() => {
+            if (typeof this.options.completeCallback === "function") {
+                this.options.completeCallback();
+            }
 
-        this.el.parentNode.removeChild(this.el);
-        Toast._toasts.splice(Toast._toasts.indexOf(this), 1);
+            this.el.parentNode.removeChild(this.el);
+            Toast._toasts.splice(Toast._toasts.indexOf(this), 1);
 
-        if (Toast._toasts.length === 0) {
-            Toast._removeContainer();
-        }
+            if (Toast._toasts.length === 0) {
+                Toast._removeContainer();
+            }
+        }, 300);
     }
 }
 

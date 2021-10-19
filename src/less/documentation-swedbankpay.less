@@ -735,7 +735,7 @@
                         padding: 0 1rem;
 
                         &.hidden {
-                            visibility: hidden;
+                            display: none;
                         }
                     }
                 }
@@ -750,7 +750,6 @@
                     position: relative;
                     min-height: 9.5rem;
                     height: 100%;
-                    //max-width: 30.75rem;
                     padding: 2rem;
                     display: flex;
                     align-items: center;
@@ -816,6 +815,12 @@
 
                 .options-body {
                     padding: 1rem;
+                }
+            }
+
+            &.hide-options {
+                .options {
+                    display: none;
                 }
             }
         }
@@ -1219,6 +1224,46 @@
                 max-width: 30.75rem;
             }
         }
+    }
+
+    #toast-doc {
+        .toast-example-container {
+            #toast-container {
+                position: relative;
+                top: auto;
+                right: 0;
+                z-index: 0;
+
+                .toast {
+                    animation: 0s;
+                }
+            }
+        }
+
+        .slab-border-success {
+            .toast-example-container {
+                position: relative;
+                height: 20rem;
+                margin-top: 1rem;
+                margin-right: 1.75rem;
+                top: 1rem;
+                left: -1rem;
+                border: 1px dashed;
+                border-left: 0;
+                border-bottom: 0;
+            }
+        }
+
+        .slab-border-error {
+            .toast-example-container {
+                border: 1px dashed;
+                padding: 6rem 0;
+            }
+        }
+    }
+
+    .overflow-auto {
+        overflow: auto;
     }
 }
 
