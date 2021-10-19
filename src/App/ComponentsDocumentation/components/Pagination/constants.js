@@ -3,7 +3,7 @@ import Pagination from "~/src/App/components/Pagination";
 
 export const paginationItems = [
     /* eslint-disable object-property-newline */
-    { name: "1", href: "#", active: false },
+    { name: "1", href: "#", active: true },
     { name: "2", href: "#", active: false },
     { name: "3", href: "#", active: false },
     { name: "4", href: "#", active: false },

@@ -14,44 +14,18 @@
         }
     }
 
-    .arrow-back {
-        &.disabled {
-            pointer-events: none;
-
-            a,
-            span {
-                &:after {
-                    .material-icons-styling(@color: @light-brown, @margin: 0, @font-size: 1.75rem);
-                }
-            }
-        }
-
-        a,
-        span {
-            &:after {
-                content: "chevron_left";
-                .material-icons-styling(@color: @brand-secondary, @margin: 0, @font-size: 1.75rem);
-            }
-        }
-
-        span {
-            cursor: default;
-
-            &:after {
-                color: @light-brown;
-            }
-        }
-    }
-
     button {
         all: unset;
+        display: flex;
+        align-items: center;
 
         &.arrow-start {
             &.disabled {
+                pointer-events: none;
+
                 a,
                 span {
                     &:before {
-                        content: "first_page";
                         .material-icons-styling(@color: @light-brown, @margin: 0, @font-size: 1.75rem);
                     }
                 }
@@ -75,6 +49,34 @@
             }
         }
 
+        &.arrow-back {
+            &.disabled {
+                pointer-events: none;
+
+                a,
+                span {
+                    &:after {
+                        .material-icons-styling(@color: @light-brown, @margin: 0, @font-size: 1.75rem);
+                    }
+                }
+            }
+
+            a,
+            span {
+                &:after {
+                    content: "chevron_left";
+                    .material-icons-styling(@color: @brand-secondary, @margin: 0, @font-size: 1.75rem);
+                }
+            }
+
+            span {
+                cursor: default;
+
+                &:after {
+                    color: @light-brown;
+                }
+            }
+        }
 
         &.arrow-forward {
             &.disabled {
@@ -107,6 +109,17 @@
 
 
         &.arrow-end {
+            &.disabled {
+                pointer-events: none;
+
+                a,
+                span {
+                    &:after {
+                        .material-icons-styling(@color: @light-brown, @margin: 0, @font-size: 1.75rem);
+                    }
+                }
+            }
+
             a,
             span {
                 &:before {
@@ -129,6 +142,7 @@
     ul {
         display: flex;
         padding-left: 0;
+        margin-bottom: 0;
 
         li {
             display: flex;
