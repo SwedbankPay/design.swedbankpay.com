@@ -150,11 +150,15 @@ const createV2 = pagination => {
     const paginationItems = pagination.querySelectorAll("li");
     const arrows = pagination.querySelectorAll("button");
 
+    
+
+    const _addListener = () => {
+        [...paginationItems].map(item => item.addEventListener("click", e => setActiveOnClick(e, paginationItems)));
+        [...arrows].map(arrow => arrow.addEventListener("click", e => _arrowNavigation(e , paginationItems)));
+    }
     _setInitialActiveItem(paginationItems, arrows);
-
-    _getActiveItem(paginationItems);
-
-    _addListener(paginationItems);
+    _addListener();
+    
 };
 
 const _setInitialActiveItem = (paginationItems, arrows) => {
@@ -169,19 +173,49 @@ const _getActiveItem = paginationItems => {
     return [].indexOf.call(paginationItems, currentActive);
 };
 
-const setActiveOnClick = (item) => {
-    item.classList.add("active");
-    // remove active function ??
-}
-
-const _addListener = itemList => {
+const setActiveOnClick = (e, itemList) => {
+    e.preventDefault();
     _removeActiveState(itemList);
-    [...itemList].map(item => item.addEventListener("click", e => setActiveOnClick(e.currentTarget)))
-    // does this work?? 
+    e.currentTarget.classList.add("active");
+    e.currentTarget.setAttribute("aria-current", "true");
 }
 
 const _removeActiveState = itemList => {
-    [...itemList].map(item => item.classList.remove("active")); // Overkill?
+    [...itemList].map(item => item.classList.remove("active"));
+    [...itemList].map(item => item.removeAttribute("aria-current"));
+}
+
+const _arrowNavigation = (e, itemList) => {
+    e.preventDefault();
+    const direction = e.currentTarget.className;
+    const activeItem = _getActiveItem(itemList);
+
+    console.log(activeItem);
+    console.log(direction);
+    console.log(direction === "arrow-forward"); // Hvorfor er dette false..... 
+
+    console.log(itemList[activeItem + 1]);
+
+    switch (direction) {
+        case "arrow-forward":
+            itemList[activeItem + 1].classList.add("active");
+            console.log("forover!")
+            break;
+        case "arrow-back":
+            itemList[activeItem - 1].className.add("active");
+            console.log("back pack")
+            break;
+        case "arrow-start":
+            itemList[0].className.add("active");
+            console.log("starting")
+            break;
+        case "arrow-end":
+            itemList[itemList.length - 1 ].className.add("active");
+            console.log("ending")
+            break;
+    }
+
+    itemList[activeItem].classList.remove("active");
 }
 
 const init = id => {
