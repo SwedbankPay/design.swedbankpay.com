@@ -52,8 +52,6 @@ const Home = () => {
                         </div>
                     </Link>
                 </div>
-                {console.log(routes.find(route => route.title === "Templates"))}
-
             </div>
             <div className="mt-auto d-none d-md-inline-flex mb-3">
                 <a className="dg-next-page-content mx-auto"

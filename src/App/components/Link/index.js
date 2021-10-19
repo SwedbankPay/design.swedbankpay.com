@@ -2,11 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Link = ({ linkText, leftIcon, rightIcon, smallFont, bright }) => {
+const Link = ({ linkText, leftIcon, rightIcon, smallFont, bright, className }) => {
     const linkClasses = classnames(
         leftIcon || rightIcon ? "icon-link" : null,
         smallFont ? "small" : null,
-        bright ? "bright" : null
+        bright ? "bright" : null,
+        className ? className : null
     );
 
     return (

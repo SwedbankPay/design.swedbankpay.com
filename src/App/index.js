@@ -40,7 +40,7 @@ const Examples = React.lazy(() => import(/* webpackChunkName: "examples.chunk" *
 
 const Utilities = React.lazy(() => import(/* webpackChunkName: "utilities.chunk" */ "./Utilities/index.js"));
 
-const Templates = React.lazy(() => import(/* webpackChunkName: "utilities.chunk" */ "./Templates/index.js"));
+const Patterns = React.lazy(() => import(/* webpackChunkName: "utilities.chunk" */ "./Patterns/index.js"));
 
 const ErrorPage404 = React.lazy(() => import(/* webpackChunkName: "404.chunk" */ "./ErrorPage404/index.js"));
 
@@ -82,7 +82,7 @@ class App extends Component {
                                         <Route path="/components" component={Components} />
                                         <Route path="/identity" component={Identity} />
                                         <Route path="/examples" component={Examples} />
-                                        <Route path="/templates" component={Templates} />
+                                        <Route path="/patterns" component={Patterns} />
                                         <Route path="/utilities" component={Utilities} />
                                         <Route path="/404" component={ErrorPage404} />
                                         <Route component={ErrorPage404} />

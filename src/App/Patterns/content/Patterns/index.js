@@ -1,11 +1,11 @@
 import React from "react";
 import { DocContainer } from "@docutils";
 import { Link } from "react-router-dom";
-import templateList from "@src/App/routes/templates";
+import patternList from "@src/App/routes/patterns";
 
 const Overview = () => (
     <section className="component-overview hide-arrow-icon">
-        {templateList[0].routes.map(card => (
+        {patternList[0].routes.map(card => (
             card.icon &&
                 <Link key={card.title} to={card.path} className="cards cards-primary cards-wide">
                     <div className="cards-content flex-row align-items-center m-0 ">
@@ -18,13 +18,13 @@ const Overview = () => (
     </section>
 );
 
-const Templates = () => (
+const Patterns = () => (
     <DocContainer>
-        <p className="lead">Templates are best practice solutions for common product features built up by combinations of various components. </p>
+        <p className="lead">Patterns are best practice solutions for common product features built up by combinations of various components. </p>
         <Overview />
     </DocContainer>
 );
 
-export default Templates;
+export default Patterns;
 
 export { Overview };

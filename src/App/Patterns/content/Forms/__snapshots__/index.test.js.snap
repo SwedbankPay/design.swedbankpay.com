@@ -318,59 +318,16 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       showCasePanel={true}
     >
       <div
-        className="col-12 col-sm-7 m-auto"
+        className="col-sm-6 col-12 m-auto px-0 py-3"
       >
-        
-
-        <span
-          className="h2 d-block mb-3"
-        >
-          Log in
-        </span>
-        <Alert
-          icon="cancel"
-          text={
-            <p>
-              <b>
-                Error.
-              </b>
-               Incorrect password
-            </p>
-          }
-          type="danger"
-        />
-        <InputGroup
-          defaultValue="name@gmail.com"
-          id="server-email-example"
-          label="Email"
-          type="email"
-        />
-        <InputGroup
-          defaultValue="123456789"
-          errorMessage="incorrect password"
-          helpBlock={true}
-          id="input-error-server-example"
-          label="Password"
-          type="password"
-          validationState="error"
-        />
-        <div
-          className="d-sm-flex d-block justify-content-between mb-4"
-        >
-          <Checkbox
-            id="server-side-validation-checkbox"
-            label="Remember me"
-          />
-          <Link
-            linkText="Forgot your password?"
-          />
-        </div>
-        
-
-        <Button
-          fullWidth={true}
-          label="Log in"
-          type="primary"
+        <LoginForm
+          checkboxId="validation-checkbox-example"
+          defaultEmail={true}
+          defaultPassword={true}
+          emailId="validation-email-example"
+          error={true}
+          passwordId="validation-password-example"
+          title="h2"
         />
       </div>
     </ComponentPreview>

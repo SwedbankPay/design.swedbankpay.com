@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { DocContainer } from "@docutils";
-import Alert from "@components/Alert";
+
 import Button from "@components/Button";
 import Checkbox from "@components/FormComponents/Checkbox";
 import CodeTags from "@components/CodeTags";
 import InputGroup from "@components/InputGroup";
-import Link from "@components/Link";
 import RadioButton from "@components/FormComponents/Radio";
+
+import LoginForm from "../../components/LoginForm/index";
 
 import { ComponentPreview } from "~/src/App/docutils";
 import { guidelinesElementsList, formsShowCase } from "./constants";
@@ -211,16 +212,12 @@ const DeveloperDocumentation = () => (
             <p>Server side validation can be used to control the inputs after the user submits the form. If an error has occurred, display an error alert at the top of the form after the page has reloaded as well as inline errors on the affected input components.</p>
 
             <ComponentPreview language="html" codeFigure showCasePanel>
-                <div className="col-12 col-sm-7 m-auto">{"\n"}
-                    <span className="h2 d-block mb-3">Log in</span>
-                    <Alert type="danger" icon="cancel" text={<p><b>Error.</b> Incorrect password</p>}/>
-                    <InputGroup id="server-email-example" type="email" defaultValue="name@gmail.com" label="Email" />
-                    <InputGroup type="password" validationState="error" helpBlock errorMessage="incorrect password" label="Password" defaultValue="123456789" id="input-error-server-example"/>
-                    <div className="d-sm-flex d-block justify-content-between mb-4">
-                        <Checkbox id="server-side-validation-checkbox" label="Remember me"/>
-                        <Link linkText="Forgot your password?"/>
-                    </div>{"\n"}
-                    <Button type="primary" label="Log in" fullWidth />
+                <div className="col-sm-6 col-12 m-auto px-0 py-3">
+                    <LoginForm error defaultPassword defaultEmail
+                        passwordId="validation-password-example"
+                        emailId="validation-email-example"
+                        checkboxId="validation-checkbox-example"
+                        title="h2"/>
                 </div>
             </ComponentPreview>
         </section>

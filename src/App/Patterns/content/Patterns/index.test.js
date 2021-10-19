@@ -1,15 +1,15 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Templates, { Overview } from "./index";
+import Patterns, { Overview } from "./index";
 
-describe("Templates", () => {
+describe("Patterns", () => {
     it("is defined", () => {
-        expect(Templates).toBeDefined();
+        expect(Patterns).toBeDefined();
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Templates />);
+        const wrapper = shallow(<Patterns />);
 
         expect(wrapper).toMatchSnapshot();
     });

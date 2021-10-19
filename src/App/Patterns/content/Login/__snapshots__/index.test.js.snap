@@ -1,0 +1,306 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Forms: index ContentGuidelines renders 1`] = `
+<section>
+  <h2
+    id="content-guidelines"
+  >
+    Content guidelines
+  </h2>
+  <div
+    className="showcase-panel p-0 mb-4"
+  >
+    <div
+      className="border-top-brand py-5"
+    >
+      <div
+        className="col-sm-8 col-12 m-auto"
+      >
+        <LoginForm
+          additionalText="Additional help text"
+          alternativeLogins={true}
+          checkboxId="guideline-checkbox-example"
+          emailId="guideline-email-example"
+          emailLabel="Required input field"
+          logo={true}
+          passwordId="guideline-password-example"
+          passwordLabel="Required input field"
+          placeholder="Placeholder text"
+          productLabel="Product Label"
+          title="h1"
+        />
+      </div>
+    </div>
+  </div>
+  <ul
+    className="list list-bullet"
+  >
+    <li
+      key="0"
+    >
+      The 
+      <b>
+        language selector action list
+      </b>
+       is used to change the language on the login page, default language should be based on the users IP address. 
+    </li>
+    <li
+      key="1"
+    >
+      The 
+      <b>
+        Product label
+      </b>
+       should display the name of the product the user is about to log in to.
+    </li>
+    <li
+      key="2"
+    >
+      <b>
+        Log in
+      </b>
+       should always be the title of the login form.
+    </li>
+    <li
+      key="3"
+    >
+      A section of links to 
+      <b>
+        third party logins
+      </b>
+       can be added. Use a divider to separate it from the standard login section. It can be placed either before or after depending on the most common or desired way to login to the specific portal. 
+    </li>
+    <li
+      key="4"
+    >
+      The 
+      <b>
+        required input fields
+      </b>
+       varies depending on the type of login. The amount of required fields  differs depending on the authentication method. 
+    </li>
+    <li
+      key="5"
+    >
+      <b>
+        Remember me
+      </b>
+       is an optional field. When it is enabled it saves the data and present prefilled fields the next time the user is about to log in. 
+    </li>
+    <li
+      key="6"
+    >
+      <b>
+        Forgot your password
+      </b>
+       is only used for email login. It redirects the user to a page where he/she can recover their password.
+    </li>
+    <li
+      key="7"
+    >
+      <b>
+        Button
+      </b>
+       is used to allow the user to perform the login request.
+    </li>
+    <li
+      key="8"
+    >
+      <b>
+        Additional help text
+      </b>
+       is optional and can be added underneath the button in order to provide the user with additional help or guidelines.
+    </li>
+    <li
+      key="9"
+    >
+      Login forms should always have the 
+      <b>
+        Swedbank pay logotype
+      </b>
+      .
+    </li>
+  </ul>
+  <section>
+    <h3>
+      Image
+    </h3>
+    <img
+      alt="Fitting images for login screen"
+      className="w-100 mb-3"
+      src="/TEST/img/swedbankpay/documentation/patterns/login-img-collection-example.png"
+    />
+    <p>
+      The login form is always accompanied by a image on the right side on desktop devices, the image is hidden on smaller devices. Above are an example of some images that would be fitting to be used as login images, the most important thing to look out for is telling a story, especially when it comes to the product. “Who is this product for?” If it is an product for consumers outside of our organization, try to relate the image to that segment of the user. For more guidance on how to design with images and find our image library, refer to the 
+      <Link
+        to="/identity/imagery"
+      >
+        Imagery section
+      </Link>
+      .
+    </p>
+  </section>
+</section>
+`;
+
+exports[`Forms: index DeveloperDocumentation renders 1`] = `
+<section>
+  <h2
+    id="developer-documentation"
+  >
+    Developer documentation
+  </h2>
+  <h3>
+    Errors and validation
+  </h3>
+  <p>
+    Not being able to log in to an application is very frustrating for the user, therefore error messages should be used to help the user understand what went wrong and how to solve the problem.
+  </p>
+  <section>
+    <h4>
+      Client-side validation
+    </h4>
+    <p>
+      Use client-side validation to validate as much data as possible inline before the user submits the form. Common inline errors include empty required fields, invalid characters or incorrect input format. 
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      showCasePanel={true}
+    >
+      <div
+        className="col-sm-6 col-12 m-auto px-0 pt-3"
+      >
+        <InputGroup
+          errorMessage="Email is required"
+          helpBlock={true}
+          label="Email"
+          type="email"
+          validationState="error"
+        />
+      </div>
+    </ComponentPreview>
+  </section>
+  <section>
+    <h4>
+      Server-side validation
+    </h4>
+    <p>
+      Use server side validation when the user submits the form. Display a local error alert after the page has reloaded if an error has occurred. Incorrect email or password are the most common servers errors. 
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      showCasePanel={true}
+    >
+      <div
+        className="col-sm-6 col-12 m-auto px-0 py-3"
+      >
+        <LoginForm
+          checkboxId="checkbox-example"
+          defaultEmail={true}
+          defaultPassword={true}
+          emailId="validation-email-example"
+          error={true}
+          passwordId="validation-password-example"
+          title="h2"
+        />
+      </div>
+    </ComponentPreview>
+  </section>
+</section>
+`;
+
+exports[`Forms: index Overview renders 1`] = `
+<section>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <img
+    alt="Image for login screen"
+    className="d-none d-md-block w-100 border-left border-right border-bottom"
+    src="/TEST/img/swedbankpay/documentation/patterns/login-pattern-example.png"
+  />
+  <div
+    className="container-fluid d-block d-md-none border-left border-right border-bottom border-top-brand py-3"
+  >
+    <LoginForm
+      additionalText={true}
+      alternativeLogins={true}
+      checkboxId="login-checkbox-example"
+      emailId="login-email-example"
+      helpDesk={true}
+      logo={true}
+      passwordId="login-password-example"
+      productLabel="Merchant Admin"
+      title="h1"
+    />
+  </div>
+  <div
+    className="border-left border-right p-3"
+  >
+    <div
+      className="m-3"
+    >
+      <h3>
+        Login
+      </h3>
+      The login page is customizable and components can be removed or added to fit a specific products needs.
+    </div>
+  </div>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <div
+      className="container-fluid border-top-brand"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-lg-5 col-12 d-flex p-0"
+        >
+          <div
+            className="col-sm-9 col-12 m-auto"
+          >
+            <LoginForm
+              additionalText={true}
+              alternativeLogins={true}
+              checkboxId="checkbox-example"
+              emailId="email-input-example"
+              helpDesk={true}
+              logo={true}
+              passwordId="password-input-example"
+              productLabel="Merchant Admin"
+              title="h1"
+            />
+          </div>
+        </div>
+        
+
+        <img
+          alt="Image for login screen"
+          className="d-none d-lg-block col-7 px-0"
+          src="/TEST/img/swedbankpay/documentation/patterns/login-img-example.png"
+        />
+      </div>
+    </div>
+  </ComponentPreview>
+</section>
+`;
+
+exports[`Forms: index renders 1`] = `
+<DocContainer>
+  <p
+    className="lead"
+  >
+    The login page allow users to gain access to an application by entering login credentials to a form.
+  </p>
+  <Overview />
+  <ContentGuidelines />
+  <DeveloperDocumentation />
+</DocContainer>
+`;
