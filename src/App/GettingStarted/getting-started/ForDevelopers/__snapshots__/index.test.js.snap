@@ -380,7 +380,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     sheet.init();
   </ComponentPreview>
   <p>
-    For CSS you can choose to import it from a 
+    For our CSS you can choose to import it from a 
     <CodeTags
       code="css/less/scss"
       type="secondary"
@@ -404,66 +404,54 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     codeFigure={true}
     language="css"
   >
-    @import url("@swedbankpay/design-guide/dist/designguide/styles/
+    @import url("@swedbankpay/design-guide/src/less/
     TESTBRAND
-    .css");
+    .less");
   </ComponentPreview>
-  <h3>
-    Assets
-  </h3>
   <p>
-    When using the node package you also need to host certain assets such as fonts and icons. Copy the 
+    Example from 
     <CodeTags
-      code="designguide"
+      code="angular.json"
       type="secondary"
     />
-     folder from the Design Guide package located in 
-    <CodeTags
-      code="node_modules/@swedbankpay/dist"
-      type="secondary"
-    />
-     over to your static file folder. 
   </p>
-  <p>
-    It might be a good idea to do this programmatically either through NPM
+  <ComponentPreview
+    codeFigure={true}
+    language="json"
+  >
+    "styles": [ 
     
 
-    s postinstall or webpack/angular/vue/react configurations.
-  </p>
+      "src/app.less", 
+    
+
+      "./node_modules/@swedbankpay/design-guide/src/less/
+    TESTBRAND
+    .less" 
+    
+
+    ],
+  </ComponentPreview>
   <p>
-    Example with 
+    Example from 
     <CodeTags
-      code="package.json"
+      code="nuxt.config.js"
       type="secondary"
     />
-     postinstall
   </p>
   <ComponentPreview
     codeFigure={true}
     language="javascript"
   >
-    "scripts": { 
+    "css": [ 
     
 
-    "postinstall": "node ./post-install.js" 
+      "./node_modules/@swedbankpay/design-guide/src/less/
+    TESTBRAND
+    .less" 
     
 
-    }
-  </ComponentPreview>
-  <p>
-    Example with webpack.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="javascript"
-  >
-    new CopyWebpackPlugin([ 
-    
-
-      { from: "./node_modules/@swedbankpay/dist/designguide", to: "./static/designguide" } 
-    
-
-    ]),
+    ],
   </ComponentPreview>
   <h3>
     How to initialize our JavaScript components

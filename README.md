@@ -38,7 +38,7 @@ Make sure your bundler can handle `.less` files
 ```less
 @import url("@swedbankpay/design-guide/src/less/swedbankpay.less");
 ```
-Our `.less` files use certain assets such as icons. These assets will automagically be handled by your bundler and be part of your own output. Usually this is your `/dist` folder. Your compiled `.css` file will then have proper references and urls to assets within your own `/dist` folder.
+Our `.less` files use certain assets such as icons and fonts. These assets will automagically be handled by your bundler and be part of your own output. Usually this is your `/dist` folder. Your compiled `.css` file will then have proper references and urls to assets within your own `/dist` folder.
 
 By importing the `.less` file, you will also get access to variables such as `@brand-primary`
 
