@@ -27,11 +27,13 @@ const Pagination = ({ type, items, id }) => {
                         <Arrow type="start" mobile disabled/>
                         <Arrow type="back" disabled/>
                         <ul id={id} >
-                            { items.map(({ name, href, active }, i) => (
-                                <li key={i} className={`d-none d-sm-block${active ? " active" : ""}`}>{"\n"}
-                                    <a href={href} aria-label={`Go to page ${name}`} >{name}</a>{"\n"}
-                                </li>
-                            ))}
+                            <div className="d-none d-sm-block">
+                                { items.map(({ name, href, active }, i) => (
+                                    <li key={i} className={`${active ? " active" : ""}`}>{"\n"}
+                                        <a href={href} aria-label={`Go to page ${name}`} >{name}</a>{"\n"}
+                                    </li>
+                                ))}
+                            </div>
                             <span className="text align-self-end d-block d-sm-none font-weight-bold">Page <span className="current-page">{items[0].name}</span> of {items.length}</span>
                         </ul>
                         <Arrow type="forward" />

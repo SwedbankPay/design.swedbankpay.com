@@ -8,11 +8,60 @@ const _createPagination = paginationContainer => {
     const pages = paginationContainer.querySelectorAll("li");
     const ul = paginationContainer.querySelector("ul");
 
-    [...pages].map(page => page.remove());
+    // [...pages].map(page => page.classList.add("hidden"));
 
-    const paginatedPages = _paginate(pages);
+    // const paginatedPages = _paginate(pages);
 
-    paginatedPages.map(page => ul.appendChild(page));
+    // [...pages].map(page => ul.appendChild(page));
+    // paginationContainer.appendChild(ul);
+
+    const _paginaterinho = () => {
+
+        const activeIndex = _getActiveIndex(pages);
+
+        if (pages.length > 7) {
+            const anchor = document.createElement("a");
+            const dotts = document.createElement("LI");
+
+            dotts.className = "d-none d-sm-block";
+
+            dotts.appendChild(anchor);
+            dotts.classList.add("dotts");
+            anchor.innerText = "..."; // TODO: Include the dotts in the correct places........
+
+            [...pages].map(page => page.classList.add("hidden"));
+
+            if (activeIndex < 4) {
+                [...pages].map((page, index) => {
+                    if (index < 6) {
+                        page.classList.remove("hidden");
+                    } else if (index === pages.length - 1) {
+                        page.classList.remove("hidden");
+                    }
+                });
+            } else if (activeIndex > 3 && activeIndex < pages.length - 4) {
+                [...pages].map((page, index) => {
+                    if (index === 1) {
+                        page.classList.remove("hidden");
+                    } else if (index === activeIndex - 1 || index === activeIndex || index === activeIndex + 1) {
+                        page.classList.remove("hidden");
+                    } else if (index === pages.length - 1) {
+                        page.classList.remove("hidden");
+                    }
+                });
+            } else if (activeIndex >= pages.length - 4) {
+                [...pages].map((page, index) => {
+                    if (index === 1) {
+                        page.classList.remove("hidden");
+                    } else if (index < pages.length - 1) {
+                        page.classList.remove("hidden");
+                    }
+                });
+            }
+        }
+    };
+
+    _paginaterinho();
 
 };
 
@@ -21,24 +70,13 @@ const _getActiveIndex = pages => {
 
     return [].indexOf.call(pages, index);
 };
-
+/*
 const _paginate = pages => {
     const paginatedPages = [];
 
     const activeIndex = _getActiveIndex(pages);
 
     if (pages.length > 7) {
-        const anchor = document.createElement("a");
-        const dotts = document.createElement("LI");
-
-        dotts.className = "d-none d-sm-block";
-
-        dotts.appendChild(anchor);
-        dotts.classList.add("dotts");
-        anchor.innerText = "...";
-
-        paginatedPages.push(pages[0]);
-
         if (activeIndex < 4) {
             [...pages].slice(1, 5).map(page => paginatedPages.push(page));
             paginatedPages.push(dotts);
@@ -58,7 +96,7 @@ const _paginate = pages => {
 
     return paginatedPages;
 };
-
+*/
 const init = id => {
     if (id) {
         const pagination = document.getElementById(id);
@@ -85,6 +123,5 @@ const init = id => {
 
 export default {
     init,
-    _createPagination,
-    _paginate
+    _createPagination
 };
