@@ -1,10 +1,9 @@
-import { paginationItems } from "~/src/App/ComponentsDocumentation/components/Pagination/constants";
 
 const SELECTORS = {
     PAGINATION: ".pagination"
 };
 
-const _createPagination = (paginationContainer, activeIndex) => {
+const _createPagination = paginationContainer => {
 
     const pages = paginationContainer.querySelectorAll("li");
     const ul = paginationContainer.querySelector("ul");

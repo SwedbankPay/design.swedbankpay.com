@@ -1,101 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Pagination - prop type is enum and requires 'example' or 'simple' and does not produce an error when either is provided 1`] = `
+exports[`Component: Pagination - prop type is enum and requires 'example' or none and does not produce an error when either is provided 1`] = `
 <div>
   <Pagination
+    items={
+      Array [
+        Object {
+          "active": false,
+          "href": "#",
+          "name": "test#1",
+        },
+        Object {
+          "active": false,
+          "href": "#",
+          "name": "test#2",
+        },
+      ]
+    }
     type="example"
   />
   <Pagination
-    type="simple"
+    items={
+      Array [
+        Object {
+          "active": false,
+          "href": "#",
+          "name": "test#1",
+        },
+        Object {
+          "active": false,
+          "href": "#",
+          "name": "test#2",
+        },
+      ]
+    }
   />
 </div>
 `;
 
-exports[`Component: Pagination - prop type is enum and requires 'example' or 'simple' and produces an error when neither is provided 1`] = `
+exports[`Component: Pagination - prop type is enum and requires 'example' or none and produces an error when neither is provided 1`] = `
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
+    className="pagination"
     role="navigation"
   >
-    <ul
-      className="pagination pagination-test"
+    <Arrow
+      disabled={true}
+      mobile={true}
+      type="start"
     />
-  </nav>
-</Fragment>
-`;
-
-exports[`Component: Pagination - renders 1`] = `
-<Fragment>
-  <nav
-    aria-label="Pagination Navigation"
-    role="navigation"
-  >
-    <ul
-      className="pagination"
+    <Arrow
+      disabled={true}
+      type="back"
     />
-  </nav>
-</Fragment>
-`;
-
-exports[`Component: Pagination - renders arrows when prop arrows is provided 1`] = `
-<Pagination
-  arrows={true}
->
-  <nav
-    aria-label="Pagination Navigation"
-    role="navigation"
-  >
-    <ul
-      className="pagination"
-    >
-      <Arrow
-        type="back"
-      >
-        <li
-          aria-label="back"
-          className="arrow-back disabled"
-        >
-          
-
-          <a
-            href="#"
-          />
-          
-
-        </li>
-      </Arrow>
-      <Arrow
-        type="forward"
-      >
-        <li
-          aria-label="forward"
-          className="arrow-forward "
-        >
-          
-
-          <a
-            href="#"
-          />
-          
-
-        </li>
-      </Arrow>
-    </ul>
-  </nav>
-</Pagination>
-`;
-
-exports[`Component: Pagination - renders list items when prop items is provided 1`] = `
-<Fragment>
-  <nav
-    aria-label="Pagination Navigation"
-    role="navigation"
-  >
-    <ul
-      className="pagination"
-    >
+    <ul>
       <li
-        className=""
+        className="d-none d-sm-block"
         key="0"
       >
         
@@ -110,7 +71,7 @@ exports[`Component: Pagination - renders list items when prop items is provided 
 
       </li>
       <li
-        className=""
+        className="d-none d-sm-block"
         key="1"
       >
         
@@ -124,7 +85,168 @@ exports[`Component: Pagination - renders list items when prop items is provided 
         
 
       </li>
+      <span
+        className="text align-self-end d-block d-sm-none font-weight-bold"
+      >
+        Page 
+        <span
+          className="current-page"
+        >
+          test#1
+        </span>
+         of 
+        2
+      </span>
     </ul>
+    <Arrow
+      type="forward"
+    />
+    <Arrow
+      mobile={true}
+      type="end"
+    />
+  </nav>
+</Fragment>
+`;
+
+exports[`Component: Pagination - renders 1`] = `
+<Fragment>
+  <nav
+    aria-label="Pagination Navigation"
+    className="pagination"
+    role="navigation"
+  >
+    <Arrow
+      disabled={true}
+      mobile={true}
+      type="start"
+    />
+    <Arrow
+      disabled={true}
+      type="back"
+    />
+    <ul>
+      <li
+        className="d-none d-sm-block"
+        key="0"
+      >
+        
+
+        <a
+          aria-label="Go to page test#1"
+          href="#"
+        >
+          test#1
+        </a>
+        
+
+      </li>
+      <li
+        className="d-none d-sm-block"
+        key="1"
+      >
+        
+
+        <a
+          aria-label="Go to page test#2"
+          href="#"
+        >
+          test#2
+        </a>
+        
+
+      </li>
+      <span
+        className="text align-self-end d-block d-sm-none font-weight-bold"
+      >
+        Page 
+        <span
+          className="current-page"
+        >
+          test#1
+        </span>
+         of 
+        2
+      </span>
+    </ul>
+    <Arrow
+      type="forward"
+    />
+    <Arrow
+      mobile={true}
+      type="end"
+    />
+  </nav>
+</Fragment>
+`;
+
+exports[`Component: Pagination - renders list items when prop items is provided 1`] = `
+<Fragment>
+  <nav
+    aria-label="Pagination Navigation"
+    className="pagination"
+    role="navigation"
+  >
+    <Arrow
+      disabled={true}
+      mobile={true}
+      type="start"
+    />
+    <Arrow
+      disabled={true}
+      type="back"
+    />
+    <ul>
+      <li
+        className="d-none d-sm-block"
+        key="0"
+      >
+        
+
+        <a
+          aria-label="Go to page test#1"
+          href="#"
+        >
+          test#1
+        </a>
+        
+
+      </li>
+      <li
+        className="d-none d-sm-block"
+        key="1"
+      >
+        
+
+        <a
+          aria-label="Go to page test#2"
+          href="#"
+        >
+          test#2
+        </a>
+        
+
+      </li>
+      <span
+        className="text align-self-end d-block d-sm-none font-weight-bold"
+      >
+        Page 
+        <span
+          className="current-page"
+        >
+          test#1
+        </span>
+         of 
+        2
+      </span>
+    </ul>
+    <Arrow
+      type="forward"
+    />
+    <Arrow
+      mobile={true}
+      type="end"
+    />
   </nav>
 </Fragment>
 `;

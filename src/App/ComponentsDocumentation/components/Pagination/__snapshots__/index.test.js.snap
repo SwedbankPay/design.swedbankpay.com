@@ -58,7 +58,7 @@ exports[`Documentation: Pagination Overview renders 1`] = `
               items={
                 Array [
                   Object {
-                    "active": false,
+                    "active": true,
                     "href": "#",
                     "name": "1",
                   },
@@ -110,7 +110,6 @@ exports[`Documentation: Pagination Overview renders 1`] = `
                 ]
               }
               text="1"
-              type="simple"
             />,
             "description": <React.Fragment>
               <p>
