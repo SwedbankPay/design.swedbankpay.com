@@ -27,7 +27,9 @@ const _createPagination = paginationContainer => {
 
             dotts.appendChild(anchor);
             dotts.classList.add("dotts");
-            anchor.innerText = "..."; // TODO: Include the dotts in the correct places........
+            anchor.innerText = "..."; 
+
+            const div = paginationContainer.querySelector("div");
 
             [...pages].map(page => page.classList.add("hidden"));
 

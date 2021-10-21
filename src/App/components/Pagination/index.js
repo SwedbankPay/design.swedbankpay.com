@@ -27,7 +27,7 @@ const Pagination = ({ type, items, id }) => {
                         <Arrow type="start" mobile disabled/>
                         <Arrow type="back" disabled/>
                         <ul id={id} >
-                            <div className="d-none d-sm-block">
+                            <div className="d-none d-sm-flex">
                                 { items.map(({ name, href, active }, i) => (
                                     <li key={i} className={`${active ? " active" : ""}`}>{"\n"}
                                         <a href={href} aria-label={`Go to page ${name}`} >{name}</a>{"\n"}
