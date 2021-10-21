@@ -663,40 +663,42 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
     </div>
   </ComponentPreview>
   <Alert
+    icon="warning"
+    text={
+      <p>
+        <b>
+          Link functionality:
+        </b>
+         The 
+        <CodeTags
+          code=".disabled"
+          type="secondary"
+        />
+         class uses 
+        <CodeTags
+          code="pointer-events: none"
+          type="secondary"
+        />
+         to try to disable the link functionality of 
+        <CodeTags
+          code="<a>"
+          type="primary"
+        />
+        s, but that CSS property is not yet standardized. In addition, even in browsers that do support 
+        <CodeTags
+          code="pointer-events: none"
+          type="secondary"
+        />
+        , keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a 
+        <CodeTags
+          code="tabindex=\\"-1\\""
+          type="secondary"
+        />
+         attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
+      </p>
+    }
     type="warning"
-  >
-    <h5>
-      Link functionality caveat
-    </h5>
-    <p>
-      The 
-      <CodeTags
-        code=".disabled"
-        type="secondary"
-      />
-       class uses 
-      <CodeTags
-        code="pointer-events: none"
-        type="secondary"
-      />
-       to try to disable the link functionality of 
-      <CodeTags
-        code="<a>"
-        type="primary"
-      />
-      s, but that CSS property is not yet standardized. In addition, even in browsers that do support 
-      <CodeTags
-        code="pointer-events: none"
-        type="secondary"
-      />
-      , keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a 
-      <CodeTags
-        code="tabindex=\\"-1\\""
-        type="secondary"
-      />
-       attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
-    </p>
-  </Alert>
+  />
   <h3>
     Usage with other tags
   </h3>

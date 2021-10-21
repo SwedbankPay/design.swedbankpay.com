@@ -309,26 +309,28 @@ exports[`Documentation: Datepickers MultipleDates renders 1`] = `
     />
   </ComponentPreview>
   <Alert
+    icon="warning"
+    text={
+      <p>
+        <b>
+          Max number of dates:
+        </b>
+         The 
+        <CodeTags
+          code="multiple"
+          type="secondary"
+        />
+         variation of datepicker does not have an upper limit of dates. Use 
+        <NavHashLink
+          to="#date-range"
+        >
+          range
+        </NavHashLink>
+         if you want to select a continuous range of dates.
+      </p>
+    }
     type="warning"
-  >
-    <h5>
-      Max number of dates
-    </h5>
-    <p>
-      The 
-      <CodeTags
-        code="multiple"
-        type="secondary"
-      />
-       variation of datepicker does not have an upper limit of dates. Use 
-      <NavHashLink
-        to="#date-range"
-      >
-        range
-      </NavHashLink>
-       if you want to select a continuous range of dates.
-    </p>
-  </Alert>
+  />
 </Fragment>
 `;
 
