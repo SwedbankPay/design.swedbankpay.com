@@ -82,13 +82,13 @@ const HowToDesignForms = () => {
                 <p>Do not make an input full width of a desktop viewport, use the grid to restrict the width of the inputs to no more than half of the viewport. The field widths should reflect the intended length of the content while still aligning to the grid. On mobile devices, expand the input elements and buttons to make use of the whole viewport width.
                 </p>
 
-                <div className="slab slab-plain slab-border-success">
+                <div className="slab slab-plain slab-border-success pb-4">
                     <span className="h4 d-block mb-4">Do</span>
                     <div className="col-12 col-sm-8 px-0">
                         <InputGroup id="layout-address-example" type="text" label="Address"/>
                         <div className="row">
                             <InputGroup id="layout-postal-example" type="text" label="Postal code" className="col-12 col-sm-5"/>
-                            <InputGroup id="layout-city-example" type="text" label="City" className="col-12 col-sm-7"/>
+                            <InputGroup id="layout-city-example" type="text" label="City" className="col-12 col-sm-7 mb-2"/>
                         </div>
                     </div>
                 </div>
