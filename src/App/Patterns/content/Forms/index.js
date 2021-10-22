@@ -31,6 +31,7 @@ const radioOptions = [
 const Overview = () => (
     <section>
         <h2 id="overview">Overview</h2>
+
         <p>A form can include different type of user input components that can be arranged in different ways depending on your specific context and needs. You might for example design a form for a user to sign up for or log into an account, register for a service, reconfigure settings, take a survey, purchase a product or provide feedback.</p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={formsShowCase} noOptions removeOuterTag/>
     </section>
