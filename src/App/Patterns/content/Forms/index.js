@@ -128,22 +128,22 @@ const HowToDesignForms = () => {
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-success h-100">
                             <span className="h4 d-block mb-4">Do</span>
-                            <div className="radio mb-2">
+                            <div className="radio mb-3">
                                 <input type="radio" id="logical-flow-example-email" name="logical-flow-example" defaultChecked/>
                                 <label htmlFor="logical-flow-example-email" onClick={() => setShowInput(!showInput)}>E-mail</label>
                             </div>
                             {showInput &&
                                 <div className="ml-2">
-                                    <InputGroup type="text" label="E-mail address" className="ml-4"/>
+                                    <InputGroup type="text" label="E-mail address" className="ml-4 mb-4"/>
                                 </div>
                             }
-                            <div className="radio mb-2">
+                            <div className="radio mb-3">
                                 <input type="radio" id="logical-flow-example-call" name="logical-flow-example"/>
                                 <label htmlFor="logical-flow-example-call" onClick={() => setShowInput(!showInput)}>Call</label>
                             </div>
                             {!showInput &&
                                 <div className="ml-2">
-                                    <InputGroup type="text" label="Call" className="ml-4"/>
+                                    <InputGroup type="text" label="Telephone number" className="ml-4"/>
                                 </div>
                             }
                         </div>
@@ -151,11 +151,11 @@ const HowToDesignForms = () => {
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-error">
                             <span className="h4 d-block mb-4">Don&apos;t</span>
-                            <RadioButton label="E-mail" name="logical-flow-example-2" id="logical-flow-example-email-2" checked/>
+                            <RadioButton label="E-mail" name="logical-flow-example-2" id="logical-flow-example-email-2" checked className="mb-3"/>
                             <div className="ml-2">
-                                <InputGroup type="text" label="E-mail address" className="ml-4"/>
+                                <InputGroup type="text" label="E-mail address" className="ml-4 mb-4"/>
                             </div>
-                            <RadioButton label="Call" name="logical-flow-example-2" id="logical-flow-example-call-2" />
+                            <RadioButton label="Call" name="logical-flow-example-2" id="logical-flow-example-call-2" className="mb-3"/>
                             <div className="ml-2">
                                 <InputGroup type="text" label="Phone number" className="ml-4"/>
                             </div>
