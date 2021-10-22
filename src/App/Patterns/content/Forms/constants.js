@@ -65,7 +65,7 @@ export const formsShowCase = {
                         <Checkbox
                             id="forms-template-checkbox-example"
                             label={<>I have read and accept Swedbank Pays&#39;s&nbsp;<Links linkText="privacy policy" rightIcon="launch" /></>} />{"\n"}
-                        <Button type="primary" label="Send message"/>
+                        <Button type="primary" label="Send message" className="mt-3"/>
                     </fieldset>
                 </form>
             </div>,
@@ -85,13 +85,13 @@ export const formsShowCase = {
                         <legend>
                             <span className="h2">Step two</span>
                         </legend>
-                        <div className="row">
+                        <div className="row mb-4">
                             <InputGroup id="multi-form-example-1" type="text" label="Label" className="col-12 col-sm-6"/>
                             <InputGroup id="multi-form-example-2" type="text" label="Label" className="col-12 col-sm-6"/>
                         </div>
-                        <InputGroup id="multi-form-example-3" type="text" label="Label" className="mb-3" />
-                        <RadioButton group groupTitle="Input label" options={radioOptions} name="multi-step-radio-example"/>
-                        <div className="d-flex justify-content-between">
+                        <InputGroup id="multi-form-example-3" type="text" label="Label" className="mb-4"/>
+                        <RadioButton group groupTitle="Input label" options={radioOptions} name="multi-step-radio-example" className="mb-4"/>
+                        <div className="d-flex justify-content-between mt-2">
                             <Button type="secondary" icon="arrow_back" label="Back"/>
                             <Button type="primary" label="Next step"/>
                         </div>
