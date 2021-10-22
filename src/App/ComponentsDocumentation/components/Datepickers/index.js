@@ -246,13 +246,9 @@ const MultipleDates = () => (
                 format="nb"
             />
         </ComponentPreview>
-        <Alert type="warning">
-            <h5>Max number of dates</h5>
-            <p>
-                The <CodeTags type="secondary" code="multiple" /> variation of datepicker does not have an upper limit of dates. Use <NavLink to="#date-range">range</NavLink> if
-                you want to select a continuous range of dates.
-            </p>
-        </Alert>
+        <Alert type="warning" icon="warning" text={<p><b>Max number of dates:</b> The <CodeTags type="secondary" code="multiple" /> variation of datepicker does not have an upper limit of dates. Use <NavLink to="#date-range">range</NavLink> if
+                you want to select a continuous range of dates.</p>} />
+
     </>
 );
 
