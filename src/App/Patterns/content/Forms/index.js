@@ -281,8 +281,8 @@ const DeveloperDocumentation = () => (
             <div className="col-12 col-sm-10 m-auto pt-2">
                 <form>
                     <div className="row align-items-center justify-content-between">
-                        <InputGroup id="form-grid-name-example" type="name" label="Name" className="col-12 col-sm-3 px-0"/>
-                        <InputGroup id="form-grid-email-example" type="email" label="Email" className="col-12 col-sm-6 px-0"/>{"\n"}
+                        <InputGroup id="form-grid-name-example" type="name" label="Name" className="col-12 col-sm-3 px-0 mb-4"/>
+                        <InputGroup id="form-grid-email-example" type="email" label="Email" className="col-12 col-sm-6 px-0 mb-4"/>{"\n"}
                         <Button type="primary" label="Submit" className="mt-1"/>
                     </div>
                 </form>
