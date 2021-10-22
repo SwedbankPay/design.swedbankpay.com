@@ -228,15 +228,15 @@ const DeveloperDocumentation = () => (
             <ComponentPreview language="html" codeFigure showCasePanel>
                 <div className="col-12 col-sm-6 m-auto">
                     <form>
-                        <fieldset>
-                            <legend>
+                        <fieldset className="mb-2">
+                            <legend> {"\n"}
                                 <span className="h3">Name</span>
                             </legend>
                             <InputGroup id="fieldset-first-name-example" type="name" label="First name" />
                             <InputGroup id="fieldset-last-name-example" type="name" label="Last name" />
                         </fieldset>
                         <fieldset>
-                            <legend>
+                            <legend> {"\n"}
                                 <span className="h3">Contact information</span>
                             </legend>
                             <InputGroup id="fieldset-email-example" type="email" label="Email" />
