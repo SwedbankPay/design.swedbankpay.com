@@ -122,7 +122,7 @@ export const guidelinesElementsList = [
     },
     {
         element: "Data inputs",
-        text: <>Information can be entered a variety of non-free form input field, <Link to="/components/checkbox">checkboxes</Link>, <Link to="/components/radio-button">radio button</Link>, <Link to="/components/select">select lists</Link>, <Link to="/components/datepickers">date pickers</Link>, <Link to="/components/togglebox">toggle-switches</Link> and <Link to="/components/rangeslider">rangesliders</Link>.</>
+        text: <>Information can be entered a variety of non-free form input field, <Link to="/components/checkbox">checkboxes</Link>, <Link to="/components/radio-button">radio button</Link>, <Link to="/components/select">select</Link>, <Link to="/components/datepickers">date pickers</Link>, <Link to="/components/togglebox">toggle-box</Link> and <Link to="/components/rangeslider">rangesliders</Link>.</>
     },
     {
         element: "Help",
