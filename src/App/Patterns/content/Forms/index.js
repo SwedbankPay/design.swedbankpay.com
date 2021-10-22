@@ -255,8 +255,8 @@ const DeveloperDocumentation = () => (
                     <fieldset disabled>
                         <InputGroup id="disabled-name-example" type="name" label="Name" />
                         <InputGroup id="disabled-email-example" type="email" label="Email" />
-                        <Checkbox id="disabled-fieldset-checkbox" label="I agree to terms of use"/>{"\n"}
-                        <Button type="primary" label="Submit" />
+                        <Checkbox id="disabled-fieldset-checkbox" label="I agree to terms of use" className="mb-4"/>{"\n"}
+                        <Button type="primary" label="Submit" className="mt-2" />
                     </fieldset>
                 </div>
             </ComponentPreview>
@@ -267,8 +267,8 @@ const DeveloperDocumentation = () => (
                     <fieldset>
                         <InputGroup id="disable-specific-name-example" type="name" label="Name" disabled />
                         <InputGroup id="disable-specific-email-example" type="email" label="Email" />
-                        <Checkbox id="disabled-input-checkbox" label="I agree to terms of user"/>{"\n"}
-                        <Button type="primary" label="Submit" />
+                        <Checkbox id="disabled-input-checkbox" label="I agree to terms of user" className="mb-4"/>{"\n"}
+                        <Button type="primary" label="Submit" className="mt-2" />
                     </fieldset>
                 </div>
             </ComponentPreview>
