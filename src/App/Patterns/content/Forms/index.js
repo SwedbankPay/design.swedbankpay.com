@@ -40,8 +40,8 @@ const Overview = () => (
 const ContentGuidelines = () => (
     <section>
         <h2 id="content-guidelines">Content guidelines</h2>
-        <div className="slab slab-plain py-5">
-            <div className="col-12 col-lg-6 m-auto">
+        <div className="slab slab-plain py-5 px-0">
+            <div className="col-12 col-sm-6 m-auto">
                 <h3 className="mb-0">Title</h3>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
                 <InputGroup id="guideline-input-example" type="text" label="Input label" placeholder="Placeholer text" tooltip className="mb-0"/>
@@ -50,9 +50,9 @@ const ContentGuidelines = () => (
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small">24px</div>
                 <RadioButton groupTitle="Input label" name="guidelines-radio-example" group options={radioOptions} className="mb-0"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
-                <div className="d-xs-flex d-block justify-content-between">
-                    <Button type="primary" label="Submit button"/>
-                    <Button type="link" label="Cancel button"/>
+                <div className="d-flex justify-content-between">
+                    <Button type="primary" label="Submit"/>
+                    <Button type="link" label="Cancel"/>
                 </div>
             </div>
         </div>
