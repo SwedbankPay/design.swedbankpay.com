@@ -9,17 +9,21 @@ const _renderItems = items => items.map((item, i) => (
 
 const DefaultItems = () => (
     <div>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Gadgets</a></li>
-        <li><a href="#">Gadget #1</a></li>
+        <nav>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Gadgets</a></li>
+            <li><a href="#">Gadget #1</a></li>
+        </nav>
     </div>
 );
 
 const Breadcrumb = ({ items }) => (
-    <ol className="breadcrumb">
-        {items ? _renderItems(items) : <DefaultItems />}
-    </ol>
+    <nav>
+        <ol className="breadcrumb">
+            {items ? _renderItems(items) : <DefaultItems />}
+        </ol>
+    </nav>
 );
 
 Breadcrumb.propTypes = {
