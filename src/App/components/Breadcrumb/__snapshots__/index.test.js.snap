@@ -1,74 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Breadcrumb renders breadcrumb with the provided items in the items prop 1`] = `
-<ol
-  className="breadcrumb"
->
-  <li
-    key="0"
+<nav>
+  <ol
+    className="breadcrumb"
   >
-    <span>
-      test
-    </span>
-  </li>
-</ol>
+    <li
+      key="0"
+    >
+      <span>
+        test
+      </span>
+    </li>
+  </ol>
+</nav>
 `;
 
 exports[`Component: Breadcrumb renders breadcrumb with the provided items wrapped in anchor tags when href is provided in the items prop 1`] = `
-<ol
-  className="breadcrumb"
->
-  <li
-    key="0"
+<nav>
+  <ol
+    className="breadcrumb"
   >
-    <a
-      href="www.example.com"
+    <li
+      key="0"
     >
-      test
-    </a>
-  </li>
-</ol>
+      <a
+        href="www.example.com"
+      >
+        test
+      </a>
+    </li>
+  </ol>
+</nav>
 `;
 
 exports[`Component: Breadcrumb renders multiple breadcrumbs when provided in the items prop 1`] = `
-<ol
-  className="breadcrumb"
->
-  <li
-    key="0"
+<nav>
+  <ol
+    className="breadcrumb"
   >
-    <span>
-      test #1
-    </span>
-  </li>
-  <li
-    key="1"
-  >
-    <span>
-      test #2
-    </span>
-  </li>
-  <li
-    key="2"
-  >
-    <span>
-      test #3
-    </span>
-  </li>
-  <li
-    key="3"
-  >
-    <span>
-      test #4
-    </span>
-  </li>
-</ol>
+    <li
+      key="0"
+    >
+      <span>
+        test #1
+      </span>
+    </li>
+    <li
+      key="1"
+    >
+      <span>
+        test #2
+      </span>
+    </li>
+    <li
+      key="2"
+    >
+      <span>
+        test #3
+      </span>
+    </li>
+    <li
+      key="3"
+    >
+      <span>
+        test #4
+      </span>
+    </li>
+  </ol>
+</nav>
 `;
 
 exports[`Component: Breadcrumb renders with default items when no items is provided through items prop 1`] = `
-<ol
-  className="breadcrumb"
->
-  <DefaultItems />
-</ol>
+<nav>
+  <ol
+    className="breadcrumb"
+  >
+    <DefaultItems />
+  </ol>
+</nav>
 `;
