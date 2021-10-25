@@ -82,6 +82,12 @@ class Dialog {
                 this.close();
             });
         }
+
+        window.addEventListener("popstate", () => {
+            if (document.body.className.includes("dialog-open")) {
+                document.body.classList.remove("dialog-open");
+            }
+        });
     }
 
     open () {
