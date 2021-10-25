@@ -197,7 +197,7 @@ const DeveloperDocumentation = () => (
             <h3>Errors and validation</h3>
             <p>To use our validation, start by adding the attribute <CodeTags type="secondary" code="novalidate" /> to your <CodeTags type="primary" code={"<form>"} /> element.
             If you wish to validate your entire form, add the <CodeTags type="secondary" code="validate" /> attribute to the <CodeTags type="primary" code={"<form>"}/> tag,
-            if not add it to the desired <CodeTags type="primary" code={"<input>"} /> tags. This will validate against <CodeTags type="secondary" code="required" /> and <CodeTags type="secondary" code="pattern" />, where pattern will override default patterns.</p>
+            if not add it to the desired <CodeTags type="primary" code={"<input>"}/> tags. This will validate against <CodeTags type="secondary" code="required" /> and <CodeTags type="secondary" code="pattern" />, where pattern will override default patterns.</p>
 
             <b className="brand-headline">Client-side validation</b>
             <p>Use client-side validation to validate as much data as possible before the user submits the form. Common errors include empty required fields, invalid characters or incorrect input format. To give users inline validation feedback insert a error message within the <CodeTags type="primary" code="form-group"/> in the <CodeTags type="primary" code="help-block"/> element in the attribute <CodeTags type="primary" code="data-error"/>.</p>
