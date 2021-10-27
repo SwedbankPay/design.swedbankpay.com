@@ -42,7 +42,8 @@ const InputGroup = ({
     errorMessage,
     successMessage,
     tooltip,
-    optional
+    optional,
+    iconShower
 }) => {
     const attrs = {
         type: type || null,
@@ -81,7 +82,7 @@ const InputGroup = ({
             </label> : null}{label ? "\n" : null}
             {prefixValue || postfixValue || feedbackIcon || errorMessage ?
                 <div className={inputGrpClasses}>{"\n"}
-                    {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
+                    {prefixValue && iconShower? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
                     {type === "textarea" ?
                         <textarea {...attrs}></textarea>
                         : type === "select" ?

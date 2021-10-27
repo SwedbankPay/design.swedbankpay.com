@@ -17,7 +17,8 @@ export const inputShowCase = {
                                 name: "With icon",
                                 value: {
                                     prefixType: "icon",
-                                    prefixValue: "email"
+                                    prefixValue: "email",
+                                    iconShower: true
                                 }
                             }
                         ]
@@ -58,7 +59,8 @@ export const inputShowCase = {
                                 value: {
                                     type: "email",
                                     prefixType: "icon",
-                                    placeholder: "name@mail.com"
+                                    placeholder: "name@mail.com",
+                                    prefixValue: "email"
                                 }
                             },
                             {
@@ -66,7 +68,8 @@ export const inputShowCase = {
                                 value: {
                                     type: "tel",
                                     prefixType: "icon",
-                                    placeholder: "+46 701234567"
+                                    placeholder: "+46 701234567",
+                                    prefixValue: "phone"
                                 }
                             },
                             {
@@ -74,7 +77,8 @@ export const inputShowCase = {
                                 value: {
                                     type: "password",
                                     prefixType: "icon",
-                                    placeholder: ""
+                                    placeholder: "",
+                                    prefixValue: "lock"
                                 }
                             }
                         ]
