@@ -43,7 +43,7 @@ const InputGroup = ({
     successMessage,
     tooltip,
     optional,
-    iconShower
+    suffixText
 }) => {
     const attrs = {
         type: type || null,
@@ -80,9 +80,9 @@ const InputGroup = ({
                     <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
                         help_outline{"\n"}</i>}{"\n"}
             </label> : null}{label ? "\n" : null}
-            {prefixValue || postfixValue || feedbackIcon || errorMessage ?
+            {prefixValue || postfixValue || feedbackIcon || errorMessage || suffixText ?
                 <div className={inputGrpClasses}>{"\n"}
-                    {prefixValue && iconShower? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
+                    {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
                     {type === "textarea" ?
                         <textarea {...attrs}></textarea>
                         : type === "select" ?

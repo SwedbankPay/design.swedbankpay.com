@@ -11,19 +11,6 @@ export const inputShowCase = {
             options: {
                 checkbox: [
                     {
-                        inputs: [
-                            {
-                                id: "input_icon",
-                                name: "With icon",
-                                value: {
-                                    prefixType: "icon",
-                                    prefixValue: "email",
-                                    iconShower: true
-                                }
-                            }
-                        ]
-                    },
-                    {
                         title: "Label add on",
                         inputs: [
                             {
@@ -44,6 +31,40 @@ export const inputShowCase = {
                     }
                 ],
                 radio: [
+                    {
+                        id: "fix_radio",
+                        title: "Prefix/suffix add ons",
+                        values: [
+                            {
+                                name: "None",
+                                value: {
+                                    type: "text"
+                                }
+                            },
+                            {
+                                name: "Prefix icon",
+                                value: {
+                                    type: "email",
+                                    prefixType: "icon",
+                                    prefixValue: "email"
+                                }
+                            },
+                            {
+                                name: "Prefix text",
+                                value: {
+                                    prefixType: "text",
+                                    prefixValue: "€"
+                                }
+                            },
+                            {
+                                name: "Suffix text",
+                                value: {
+                                    type: "suffixText",
+                                    postfixValue: "kr"
+                                }
+                            }
+                        ]
+                    },
                     {
                         id: "unit_radio",
                         title: "Input type examples",
@@ -68,7 +89,7 @@ export const inputShowCase = {
                                 value: {
                                     type: "tel",
                                     prefixType: "icon",
-                                    placeholder: "+46 701234567",
+                                    placeholder: "+46 701 234 567",
                                     prefixValue: "phone"
                                 }
                             },
