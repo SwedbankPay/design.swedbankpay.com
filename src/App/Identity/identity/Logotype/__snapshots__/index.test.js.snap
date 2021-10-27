@@ -207,15 +207,15 @@ exports[`Core: Logotype Favicon renders 1`] = `
       type="image/png"
     />
     <link
-      href="/TEST//icons/coast-228x228.png"
-      rel="icon"
-      sizes="228x228"
-      type="image/png"
-    />
-    <link
       href="/TEST//icons/favicon-32x32.png"
       rel="icon"
       sizes="32x32"
+      type="image/png"
+    />
+    <link
+      href="/TEST//icons/favicon-48x48.png"
+      rel="icon"
+      sizes="48x48"
       type="image/png"
     />
     <link
@@ -281,7 +281,7 @@ exports[`Core: Logotype HorizontalLogo renders 1`] = `
   >
     <img
       alt="PayEx horizontal logo"
-      src="/TEST/img/payex-logo.svg"
+      src="/TEST/designguide/assets/payex-logo.svg"
     />
   </ComponentPreview>
   <ComponentPreview
@@ -291,7 +291,7 @@ exports[`Core: Logotype HorizontalLogo renders 1`] = `
   >
     <img
       alt="PayEx horizontal logo"
-      src="/TEST/img/payex-logo.png"
+      src="/TEST/designguide/assets/payex-logo.png"
     />
   </ComponentPreview>
 </Fragment>
