@@ -9,12 +9,10 @@ const _renderItems = items => items.map((item, i) => (
 
 const DefaultItems = () => (
     <div>
-        <nav>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Gadgets</a></li>
-            <li><a href="#">Gadget #1</a></li>
-        </nav>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Gadgets</a></li>
+        <li><a href="#">Gadget #1</a></li>
     </div>
 );
 
