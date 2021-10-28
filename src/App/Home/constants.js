@@ -1,5 +1,10 @@
 export const changeLogs = [
     {
+        version: "7.1.0",
+        title: "Design Guide Light and new Pattern section",
+        text: "Introducing Design Guide Light, a NPM upgrade which makes it possible to import specific component styling and script needed for your project - enjoy the flexibility y’all! Documentation wise, we added a new Pattern section to showcase best practice solutions for common product features, starting off with Login and Forms page. We also solved a bunch of forgotten GitHub issues and updated the Toast component."
+    },
+    {
         version: "7.0.1",
         title: "A patch of love",
         text: "Some things didn’t end up looking the way we wanted them (Safari, we're mostly looking at you). This patch will remove some styling bugs from previous release."
