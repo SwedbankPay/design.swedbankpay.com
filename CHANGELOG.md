@@ -1,6 +1,6 @@
 # Changelog
 
-## [7.1.0] - 27.10.2021
+## [7.1.0] - 28.10.2021
 
 ## Added
 - Patterns section
