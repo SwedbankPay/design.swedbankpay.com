@@ -17,9 +17,11 @@ const DefaultItems = () => (
 );
 
 const Breadcrumb = ({ items }) => (
-    <ol className="breadcrumb">
-        {items ? _renderItems(items) : <DefaultItems />}
-    </ol>
+    <nav>
+        <ol className="breadcrumb">
+            {items ? _renderItems(items) : <DefaultItems />}
+        </ol>
+    </nav>
 );
 
 Breadcrumb.propTypes = {
