@@ -36,7 +36,7 @@ const ContentGuidelines = forwardRef((props, ref) => <section ref={ref}>
     <div className="slab slab-plain h-100 mb-2">
         <div className="d-flex flex-column align-items-center">
             <div className="py-3">
-                <InputGroup type="text" label="Input label" defaultValue="Input text" validationState="error" errorMessage="Error message" helpBlock tooltip id="input-guidelines-example"/>
+                <InputGroup type="text" prefixType="icon" prefixValue="email" label="Input label" defaultValue="Input text" validationState="error" errorMessage="Error message" helpBlock tooltip id="input-guidelines-example"/>
                 <InputGroup type="textarea" label="Input label" optional placeholder="Placeholder text"/>
             </div>
         </div>
@@ -49,6 +49,40 @@ const ContentGuidelines = forwardRef((props, ref) => <section ref={ref}>
         <li>When a text field is not required to be filled by the user, label it as “optional”.</li>
         <li>If there is a need for a more detailed description, a help icon can be added after the label. </li>
     </ul>
+
+    <h3>Prefix and suffix</h3>
+    <p>Prefixes and suffixes are useful when there&apost;s a commonly understood icon, symbol or abbreviation for the type of information the user needs to enter since it can reduce mental load.</p>
+    <div className="row prefixsuffix-guideline">
+        <div className="col-lg-6 col-sm-12 ">
+            <div className="slab slab-plain slab-border-success pb-4">
+                <h3 className="mb-3 mt-0">Do</h3>
+                <InputGroup type="text" label="Username" placeholder="" prefixType="icon" prefixValue="account_circle"/>
+            </div>
+            <p>Use a prefix icon to help convey the meaning of the label.</p>
+        </div>
+        <div className="col-lg-6 col-sm-12">
+            <div className="slab slab-plain slab-border-error pb-4">
+                <h3 className="mb-3 mt-0">Don&#x27;t</h3>
+                <InputGroup type="text" label="Username" prefixType="icon" prefixValue="email"/>
+            </div>
+            <p>Don’t use a prefix icon that dosen&apost;t help to convey the meaning of the label. There shouldn&apost;t be any confusion between what type of information an icon represents.</p>
+        </div>
+
+        <div className="col-lg-6 col-sm-12 ">
+            <div className="slab slab-plain slab-border-success pb-4">
+                <h3 className="mb-3 mt-0">Do</h3>
+                <InputGroup type="suffixText" label="Fixed transaction fee, in SEK" postfixValue="kr"/>
+            </div>
+            <p>The label in itself should clearly indicate what type of data to enter, since prefixes and suffixes are hidden from screen readers.</p>
+        </div>
+        <div className="col-lg-6 col-sm-12">
+            <div className="slab slab-plain slab-border-error pb-4">
+                <h3 className="mb-3 mt-0">Don&#x27;t</h3>
+                <InputGroup type="suffixText" label="Fixed transaction fee, in SEK" postfixValue="kronor"/>
+            </div>
+            <p>Use commonly understood abbreviations for text prefix or suffix, don&#x27;t use full words.</p>
+        </div>
+    </div>
 
     <h3>Placeholder text</h3>
     <p>A placeholder text may be used inside of the input field to serve as an example of what the user can enter, consider to start with “e.g.” or similar abbreviation in corresponding language. </p>
@@ -86,7 +120,7 @@ const ContentGuidelines = forwardRef((props, ref) => <section ref={ref}>
                 <h3 className="mb-3 mt-0">Don&#x27;t</h3>
                 <InputGroup type="text" validationState="error" helpBlock errorMessage="Invalid input" label="Email address" defaultValue="Name.com" id="another-input-error-example"/>
             </div>
-            <p>Don&#x27;t use technical jargong </p>
+            <p>Don&#x27;t use technical jargon. </p>
         </div>
     </div>
 </section>);
