@@ -304,14 +304,14 @@ exports[`Components: Toast Overview renders 1`] = `
         "elements": Array [
           Object {
             "component": <Toast
-              title="Information"
+              title="Neutral"
               type="neutral"
             />,
             "description": "Use this toast when you want to inform the user. The message should clearly state and explain what the information is about and in some cases a link can also be used to direct the user towards continued reading.",
             "options": Object {
               "checkbox": Array [],
             },
-            "tab": "Information",
+            "tab": "Neutral",
             "title": "Information toast",
           },
           Object {
@@ -319,7 +319,24 @@ exports[`Components: Toast Overview renders 1`] = `
               title="Success"
               type="success"
             />,
-            "description": "Use success toast when the action performed by the user has returned a success.",
+            "description": <React.Fragment>
+              <p>
+                Use success toast when the action performed by the user has returned a success.
+              </p>
+              <Alert
+                icon="info"
+                id="toast-overview-alert"
+                text={
+                  <p>
+                    <b>
+                      Static code example
+                    </b>
+                     The code viewer shows an example on how to trigger a neutral toast. Change the type for warning/error/success.
+                  </p>
+                }
+                type="informative"
+              />
+            </React.Fragment>,
             "options": Object {
               "checkbox": Array [],
             },
@@ -331,7 +348,24 @@ exports[`Components: Toast Overview renders 1`] = `
               title="Warning"
               type="warning"
             />,
-            "description": "The warning toast warns the user about situations that might be unfavorable. Don’t use this to present critical information.",
+            "description": <React.Fragment>
+              <p>
+                The warning toast warns the user about situations that might be unfavorable. Don’t use this to present critical information.
+              </p>
+              <Alert
+                icon="info"
+                id="toast-overview-alert"
+                text={
+                  <p>
+                    <b>
+                      Static code example
+                    </b>
+                     The code viewer shows an example on how to trigger a neutral toast. Change the type for warning/error/success.
+                  </p>
+                }
+                type="informative"
+              />
+            </React.Fragment>,
             "options": Object {
               "checkbox": Array [],
             },
@@ -343,7 +377,24 @@ exports[`Components: Toast Overview renders 1`] = `
               title="Error"
               type="danger"
             />,
-            "description": "Error toast informs the user of error and issues that may have occurred, they should let the user know what has happened and how the user can solve the issue.",
+            "description": <React.Fragment>
+              <p>
+                Error toast informs the user of error and issues that may have occurred, they should let the user know what has happened and how the user can solve the issue.
+              </p>
+              <Alert
+                icon="info"
+                id="toast-overview-alert"
+                text={
+                  <p>
+                    <b>
+                      Static code example
+                    </b>
+                     The code viewer shows an example on how to trigger a neutral toast. Change the type for warning/error/success.
+                  </p>
+                }
+                type="informative"
+              />
+            </React.Fragment>,
             "options": Object {
               "checkbox": Array [],
             },
