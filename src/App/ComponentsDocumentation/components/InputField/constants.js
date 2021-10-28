@@ -1,7 +1,5 @@
 import React from "react";
 import InputGroup from "@components/InputGroup";
-import CodeTags from "@components/CodeTags";
-import Alert from "@components/Alert";
 
 export const inputShowCase = {
     id: "no-tabs",

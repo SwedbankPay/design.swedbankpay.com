@@ -73,6 +73,17 @@ const InputGroup = ({
         required: required || null
     };
 
+    const inputAttrs = {
+        type: type || null,
+        id: id || null,
+        placeholder: placeholder || null,
+        defaultValue: defaultValue || "",
+        disabled: disabled || null,
+        autoComplete: autoComplete || null,
+        required: required || null,
+        pattern: pattern ? "" : null
+    };
+
     return (
         <div className={`form-group${disabled ? " disabled" : ""}${type === "select" ? errorMessage ? " has-error" : "" : ""}${className ? className : ""}`}>{"\n"}
             {label ? <label htmlFor={id}>{"\n"}{label} {optional && "(optional)"}{tooltip && "\n"}
@@ -80,13 +91,14 @@ const InputGroup = ({
                     <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
                         help_outline{"\n"}</i>}{"\n"}
             </label> : null}{label ? "\n" : null}
+
             {prefixValue || postfixValue || feedbackIcon || errorMessage || suffixText ?
                 <div className={inputGrpClasses}>{"\n"}
                     {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
                     {type === "textarea" ?
                         <textarea {...attrs}></textarea>
                         : type === "select" ?
-                            <select className="form-control" disabled={disabled} readOnly={readOnly}>{"\n\t\t"}
+                            <select {...selectAttrs}>{"\n\t\t"}
                                 {selectOptions.map((opt, i) => (
                                     <Fragment key={opt + i}>
                                         <option>{opt}</option>{(i !== selectOptions.length - 1) ? "\n\t\t" : ""}
@@ -94,7 +106,7 @@ const InputGroup = ({
                                 ))}{"\n\t"}
                             </select>
                             :
-                            <input {...attrs} />}
+                            <input {...inputAttrs}/>}
                     {"\n"}
                     {feedbackIcon ? <Feedback icon={feedbackIcon} /> : null} {feedbackIcon ? "\n" : null}
                     {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} /> : null }{postfixValue ? "\n" : null}
