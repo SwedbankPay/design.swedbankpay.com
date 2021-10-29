@@ -2,12 +2,12 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-export const Addon = ({ type, value, color, disabled }) => (
+export const Addon = ({ type, value, color, disabled, className }) => (
     (type === "button") ?
         <button type="button" className={`btn btn-${color}`} disabled={disabled}>
             {value}
         </button>
-        : <span className="input-group-addon">{(type === "icon") ? <i className="material-icons material-icons-outlined" aria-hidden="true">{value}</i> : value}</span>
+        : <span className={`input-group-addon ${className}`}>{(type === "icon") ? <i className="material-icons material-icons-outlined" aria-hidden="true">{value}</i> : value}</span>
 );
 
 const Feedback = ({ icon }) => (
@@ -109,7 +109,7 @@ const InputGroup = ({
                             <input {...inputAttrs}/>}
                     {"\n"}
                     {feedbackIcon ? <Feedback icon={feedbackIcon} /> : null} {feedbackIcon ? "\n" : null}
-                    {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} /> : null }{postfixValue ? "\n" : null}
+                    {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} className="suffix" /> : null }{postfixValue ? "\n" : null}
                 </div>
                 :
                 <>
