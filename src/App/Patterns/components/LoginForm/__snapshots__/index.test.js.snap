@@ -237,7 +237,7 @@ exports[`Pattern: LoginForm renders with a logo 1`] = `
 exports[`Pattern: LoginForm renders with a product label 1`] = `
 <Fragment>
   <span
-    className="extra-small text-black-50"
+    className="extra-small text-brown"
   >
     Product Label
   </span>
