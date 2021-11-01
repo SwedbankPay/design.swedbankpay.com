@@ -31,7 +31,7 @@ const radioOptions = [
 const Overview = () => (
     <section>
         <h2 id="overview">Overview</h2>
-        <label htmlFor="select-ex">Label</label>
+
         <p>A form can include different type of user input components that can be arranged in different ways depending on your specific context and needs. You might for example design a form for a user to sign up for or log into an account, register for a service, reconfigure settings, take a survey, purchase a product or provide feedback.</p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={formsShowCase} noOptions removeOuterTag/>
     </section>
@@ -40,8 +40,8 @@ const Overview = () => (
 const ContentGuidelines = () => (
     <section>
         <h2 id="content-guidelines">Content guidelines</h2>
-        <div className="slab slab-plain py-5">
-            <div className="col-12 col-lg-6 m-auto">
+        <div className="slab slab-plain py-5 px-0">
+            <div className="col-12 col-sm-6 m-auto">
                 <h3 className="mb-0">Title</h3>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
                 <InputGroup id="guideline-input-example" type="text" label="Input label" placeholder="Placeholer text" tooltip className="mb-0"/>
@@ -50,9 +50,9 @@ const ContentGuidelines = () => (
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small">24px</div>
                 <RadioButton groupTitle="Input label" name="guidelines-radio-example" group options={radioOptions} className="mb-0"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
-                <div className="d-xs-flex d-block justify-content-between">
-                    <Button type="primary" label="Submit button"/>
-                    <Button type="link" label="Cancel button"/>
+                <div className="d-flex justify-content-between">
+                    <Button type="primary" label="Submit"/>
+                    <Button type="link" label="Cancel"/>
                 </div>
             </div>
         </div>
@@ -82,13 +82,13 @@ const HowToDesignForms = () => {
                 <p>Do not make an input full width of a desktop viewport, use the grid to restrict the width of the inputs to no more than half of the viewport. The field widths should reflect the intended length of the content while still aligning to the grid. On mobile devices, expand the input elements and buttons to make use of the whole viewport width.
                 </p>
 
-                <div className="slab slab-plain slab-border-success">
+                <div className="slab slab-plain slab-border-success pb-4">
                     <span className="h4 d-block mb-4">Do</span>
                     <div className="col-12 col-sm-8 px-0">
                         <InputGroup id="layout-address-example" type="text" label="Address"/>
                         <div className="row">
                             <InputGroup id="layout-postal-example" type="text" label="Postal code" className="col-12 col-sm-5"/>
-                            <InputGroup id="layout-city-example" type="text" label="City" className="col-12 col-sm-7"/>
+                            <InputGroup id="layout-city-example" type="text" label="City" className="col-12 col-sm-7 mb-2"/>
                         </div>
                     </div>
                 </div>
@@ -128,22 +128,22 @@ const HowToDesignForms = () => {
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-success h-100">
                             <span className="h4 d-block mb-4">Do</span>
-                            <div className="radio mb-2">
+                            <div className="radio mb-3">
                                 <input type="radio" id="logical-flow-example-email" name="logical-flow-example" defaultChecked/>
                                 <label htmlFor="logical-flow-example-email" onClick={() => setShowInput(!showInput)}>E-mail</label>
                             </div>
                             {showInput &&
                                 <div className="ml-2">
-                                    <InputGroup type="text" label="E-mail address" className="ml-4"/>
+                                    <InputGroup type="text" label="E-mail address" className="ml-4 mb-4"/>
                                 </div>
                             }
-                            <div className="radio mb-2">
+                            <div className="radio mb-3">
                                 <input type="radio" id="logical-flow-example-call" name="logical-flow-example"/>
                                 <label htmlFor="logical-flow-example-call" onClick={() => setShowInput(!showInput)}>Call</label>
                             </div>
                             {!showInput &&
                                 <div className="ml-2">
-                                    <InputGroup type="text" label="Call" className="ml-4"/>
+                                    <InputGroup type="text" label="Telephone number" className="ml-4"/>
                                 </div>
                             }
                         </div>
@@ -151,11 +151,11 @@ const HowToDesignForms = () => {
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-error">
                             <span className="h4 d-block mb-4">Don&apos;t</span>
-                            <RadioButton label="E-mail" name="logical-flow-example-2" id="logical-flow-example-email-2" checked/>
+                            <RadioButton label="E-mail" name="logical-flow-example-2" id="logical-flow-example-email-2" checked className="mb-3"/>
                             <div className="ml-2">
-                                <InputGroup type="text" label="E-mail address" className="ml-4"/>
+                                <InputGroup type="text" label="E-mail address" className="ml-4 mb-4"/>
                             </div>
-                            <RadioButton label="Call" name="logical-flow-example-2" id="logical-flow-example-call-2" />
+                            <RadioButton label="Call" name="logical-flow-example-2" id="logical-flow-example-call-2" className="mb-3"/>
                             <div className="ml-2">
                                 <InputGroup type="text" label="Phone number" className="ml-4"/>
                             </div>
@@ -197,7 +197,7 @@ const DeveloperDocumentation = () => (
             <h3>Errors and validation</h3>
             <p>To use our validation, start by adding the attribute <CodeTags type="secondary" code="novalidate" /> to your <CodeTags type="primary" code={"<form>"} /> element.
             If you wish to validate your entire form, add the <CodeTags type="secondary" code="validate" /> attribute to the <CodeTags type="primary" code={"<form>"}/> tag,
-            if not add it to the desired <CodeTags type="primary" code={"<input>"} /> tags. This will validate against <CodeTags type="secondary" code="required" /> and <CodeTags type="secondary" code="pattern" />, where pattern will override default patterns.</p>
+            if not add it to the desired <CodeTags type="primary" code={"<input>"}/> tags. This will validate against <CodeTags type="secondary" code="required" /> and <CodeTags type="secondary" code="pattern" />, where pattern will override default patterns.</p>
 
             <b className="brand-headline">Client-side validation</b>
             <p>Use client-side validation to validate as much data as possible before the user submits the form. Common errors include empty required fields, invalid characters or incorrect input format. To give users inline validation feedback insert a error message within the <CodeTags type="primary" code="form-group"/> in the <CodeTags type="primary" code="help-block"/> element in the attribute <CodeTags type="primary" code="data-error"/>.</p>
@@ -228,15 +228,15 @@ const DeveloperDocumentation = () => (
             <ComponentPreview language="html" codeFigure showCasePanel>
                 <div className="col-12 col-sm-6 m-auto">
                     <form>
-                        <fieldset>
-                            <legend>
+                        <fieldset className="mb-2">
+                            <legend> {"\n"}
                                 <span className="h3">Name</span>
                             </legend>
                             <InputGroup id="fieldset-first-name-example" type="name" label="First name" />
                             <InputGroup id="fieldset-last-name-example" type="name" label="Last name" />
                         </fieldset>
                         <fieldset>
-                            <legend>
+                            <legend> {"\n"}
                                 <span className="h3">Contact information</span>
                             </legend>
                             <InputGroup id="fieldset-email-example" type="email" label="Email" />
@@ -255,8 +255,8 @@ const DeveloperDocumentation = () => (
                     <fieldset disabled>
                         <InputGroup id="disabled-name-example" type="name" label="Name" />
                         <InputGroup id="disabled-email-example" type="email" label="Email" />
-                        <Checkbox id="disabled-fieldset-checkbox" label="I agree to terms of use"/>{"\n"}
-                        <Button type="primary" label="Submit" />
+                        <Checkbox id="disabled-fieldset-checkbox" label="I agree to terms of use" className="mb-4"/>{"\n"}
+                        <Button type="primary" label="Submit" className="mt-2" />
                     </fieldset>
                 </div>
             </ComponentPreview>
@@ -267,8 +267,8 @@ const DeveloperDocumentation = () => (
                     <fieldset>
                         <InputGroup id="disable-specific-name-example" type="name" label="Name" disabled />
                         <InputGroup id="disable-specific-email-example" type="email" label="Email" />
-                        <Checkbox id="disabled-input-checkbox" label="I agree to terms of user"/>{"\n"}
-                        <Button type="primary" label="Submit" />
+                        <Checkbox id="disabled-input-checkbox" label="I agree to terms of user" className="mb-4"/>{"\n"}
+                        <Button type="primary" label="Submit" className="mt-2" />
                     </fieldset>
                 </div>
             </ComponentPreview>
@@ -281,8 +281,8 @@ const DeveloperDocumentation = () => (
             <div className="col-12 col-sm-10 m-auto pt-2">
                 <form>
                     <div className="row align-items-center justify-content-between">
-                        <InputGroup id="form-grid-name-example" type="name" label="Name" className="col-12 col-sm-3 px-0"/>
-                        <InputGroup id="form-grid-email-example" type="email" label="Email" className="col-12 col-sm-6 px-0"/>{"\n"}
+                        <InputGroup id="form-grid-name-example" type="name" label="Name" className="col-12 col-sm-3 px-0 mb-4"/>
+                        <InputGroup id="form-grid-email-example" type="email" label="Email" className="col-12 col-sm-6 px-0 mb-4"/>{"\n"}
                         <Button type="primary" label="Submit" className="mt-1"/>
                     </div>
                 </form>
