@@ -12,7 +12,8 @@ module.exports = [
             {
                 title: "Introduction",
                 path: "/get-started/introduction",
-                componentPath: "getting-started/Introduction"
+                componentPath: "getting-started/Introduction",
+                statusBadges: ["updated"]
             },
             {
                 title: "For developers",
