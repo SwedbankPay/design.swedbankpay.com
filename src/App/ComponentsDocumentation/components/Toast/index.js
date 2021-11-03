@@ -10,7 +10,7 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
         <ComponentPreview language="html" showCasePanel hideCodeFigure showCasePanelAdvanced={toastShowCase} />
         <ComponentPreview language="html" codeFigure dangerousHTML>
-            {"<button type=\"button\" class=\"btn btn-primary\" onclick=\"dg.toast({\n\ttype: 'neutral' \n\thtml: '<p><b>Info header</b> Input informative alert information here, provide <a href=\"#\">link</a> to solution or more info when possible.</p>'})\">\nNeutral toast\n</button>"}
+            {"<button type=\"button\" class=\"btn btn-primary\" onclick=\"dg.toast({\n\ttype: 'neutral' \n\thtml: '<p><b>Info header</b> Input informative alert information here, provide <a href=\"#\">link</a> to solution or more info when possible.</p>'})\">\nShow neutral toast\n</button>"}
         </ComponentPreview>
         <section>
             <h3>When to consider something else</h3>
