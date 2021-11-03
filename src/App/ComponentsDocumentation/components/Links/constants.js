@@ -27,7 +27,10 @@ const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroun
 
 const ShowcaseActionComponent = ({ badge, smallText, multiline, newTab, disabled }) => {
     const attrs = {
-        badge,
+        badge: badge ? {
+            type: "badge-default",
+            text: "40"
+        } : null,
         smallText,
         multiline,
         newTab,
@@ -36,9 +39,9 @@ const ShowcaseActionComponent = ({ badge, smallText, multiline, newTab, disabled
 
     return (
         <div className="d-flex flex-column w-100">
-            <ActionLink linkText="Pay now" className={`${badge ? "badge badge-default badge-number" : null}`} {...attrs}/>{"\n"}
-            <ActionLink linkText="Pay on the settlement date" className={`${badge ? "badge badge-default badge-number" : null}`} {...attrs}/>{"\n"}
-            <ActionLink linkText="Add to my credit" className={`${badge ? "badge badge-default badge-number" : null}`} {...attrs}/>{"\n"}
+            <ActionLink linkText="Pay now" {...attrs}/>{"\n"}
+            <ActionLink linkText="Pay on the settlement date" {...attrs}/>{"\n"}
+            <ActionLink linkText="Add to my credit" {...attrs}/>{"\n"}
         </div>
     );
 };
