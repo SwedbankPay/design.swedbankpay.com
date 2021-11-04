@@ -16,6 +16,14 @@
             border-color: transparent;
             transition: none;
         }
+
+        .suffix {
+            border-right: 2px solid @black;
+            border-bottom: 1px solid @black;
+            border-left: transparent;
+            border-top-left-radius: 0;
+            border-top: 1px solid @black;
+        }
     }
 
     > .btn {
@@ -91,6 +99,14 @@
         input[type="checkbox"] {
             margin-top: 0;
         }
+
+        &.suffix {
+            border-left: transparent;
+            border-right: 1px solid @input-border-color;
+            border-radius: 0 2px 2px 0;
+            z-index: 2;
+            pointer-events: none;
+        }
     }
 
     .form-control-feedback {
@@ -105,7 +121,6 @@
         pointer-events: none;
     }
 }
-
 
 // Focus for file, radio, and checkbox
 input[type="file"]:focus,

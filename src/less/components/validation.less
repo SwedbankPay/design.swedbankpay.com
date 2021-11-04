@@ -25,6 +25,10 @@
     &.has-error {
         .form-control-validation(@brand-error, "error");
 
+        .suffix {
+            display: none;
+        }
+
         input {
             &:not(:focus) {
                 padding-right: 2.5rem;
