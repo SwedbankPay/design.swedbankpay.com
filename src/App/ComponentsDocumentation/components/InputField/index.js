@@ -50,6 +50,40 @@ const ContentGuidelines = forwardRef((props, ref) => <section ref={ref}>
         <li>If there is a need for a more detailed description, a help icon can be added after the label. </li>
     </ul>
 
+    <h3>Prefix and Postfix</h3>
+    <p>Prefixes and suffixes are useful when there’s a commonly understood icon, symbol or abbreviation for the type of information the user needs to enter since it can reduce mental load. </p>
+
+    <div className="row placeholder-guideline">
+        <div className="col-lg-6 col-sm-12 ">
+            <div className="slab slab-plain slab-border-success pb-4">
+                <h3 className="mb-3 mt-0">Do</h3>
+                <InputGroup type="text" label="Username" prefixType="icon" prefixValue="account_circle"/>
+            </div>
+            <p>Use a prefix icon to help convey the meaning of the label.</p>
+        </div>
+        <div className="col-lg-6 col-sm-12">
+            <div className="slab slab-plain slab-border-error pb-4">
+                <h3 className="mb-3 mt-0">Don&#x27;t</h3>
+                <InputGroup type="email" label="username" prefixType="icon" prefixValue="email"/>
+            </div>
+            <p>Don’t use a prefix icon that dosen’t help to convey the meaning of the label. There shouldn’t be any confusion between what type of information an icon represents.</p>
+        </div>
+        <div className="col-lg-6 col-sm-12 ">
+            <div className="slab slab-plain slab-border-success pb-4">
+                <h3 className="mb-3 mt-0">Do</h3>
+                <InputGroup type="text" label="Fixed transaction fee, in SEK" suffix postfixValue="kr"/>
+            </div>
+            <p>The label in itself should clearly indicate what type of data to enter, since prefixes and suffixes are hidden from screen readers.</p>
+        </div>
+        <div className="col-lg-6 col-sm-12">
+            <div className="slab slab-plain slab-border-error pb-4">
+                <h3 className="mb-3 mt-0">Don&#x27;t</h3>
+                <InputGroup type="text" label="Fixed transaction fee, in SEK" suffix postfixValue="kronor"/>
+            </div>
+            <p>Use commonly understood abbreviations for text prefix or suffix, don’t use full words.</p>
+        </div>
+    </div>
+
     <h3>Placeholder text</h3>
     <p>A placeholder text may be used inside of the input field to serve as an example of what the user can enter, consider to start with “e.g.” or similar abbreviation in corresponding language. </p>
 
