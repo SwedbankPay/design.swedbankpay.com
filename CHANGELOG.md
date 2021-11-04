@@ -8,7 +8,7 @@
 - Forms Pattern
 - Usage with NPM - section to applicable components
 - ```<nav>``` tags around Breadcrumbs
-- NPM upgrade - Split code into various bundles which makes it possible to import specific components and color variables
+- Node package upgrade - Split code into various bundles which makes it possible to import specific components and color variables
 
 
 ## Changed
