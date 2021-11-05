@@ -224,7 +224,7 @@ exports[`Component: InputGroup - renders a form-group with a postfix if prop pos
         value="testvalue"
       >
         <span
-          className="input-group-addon"
+          className="input-group-addon "
         >
           testvalue
         </span>
@@ -309,7 +309,7 @@ exports[`Component: InputGroup - renders a form-group with a prefix icon if prop
         value="home"
       >
         <span
-          className="input-group-addon"
+          className="input-group-addon "
         >
           <i
             aria-hidden="true"
@@ -361,7 +361,7 @@ exports[`Component: InputGroup - renders a form-group with a prefix label if pro
         value="label text"
       >
         <span
-          className="input-group-addon"
+          className="input-group-addon "
         >
           label text
         </span>
