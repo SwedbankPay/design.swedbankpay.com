@@ -31,7 +31,7 @@ export const inputShowCase = {
                 radio: [
                     {
                         id: "fix_radio",
-                        title: "Prefix/suffix add ons",
+                        title: "Prefix/Postfix",
                         values: [
                             {
                                 name: "None",
@@ -40,7 +40,7 @@ export const inputShowCase = {
                                 }
                             },
                             {
-                                name: "Prefix icon",
+                                name: "Prefix - Icon",
                                 value: {
                                     type: "email",
                                     prefixType: "icon",
@@ -48,7 +48,7 @@ export const inputShowCase = {
                                 }
                             },
                             {
-                                name: "Prefix text",
+                                name: "Prefix - Text",
                                 value: {
                                     prefixType: "text",
                                     prefixValue: "€",
@@ -56,11 +56,11 @@ export const inputShowCase = {
                                 }
                             },
                             {
-                                name: "Suffix text",
+                                name: "Postfix - Text",
                                 value: {
                                     type: "text",
                                     postfixValue: "kr",
-                                    suffix: true
+                                    postfix: true
                                 }
                             }
                         ]
@@ -97,7 +97,7 @@ export const inputShowCase = {
             description: <>
                 <p>Inputs fields have a few different states which includes the default state, focus state, disabled state and error state.</p>
                 <p>The default input type is text but it can also be specified as for example Email which will make it automatically validated when submitted or Password which will mask the characters submitted.</p>
-                <p>Input fields can have prefixes or suffixes which can help the user more quickly understand what kind of information that ius requested. These can be icons as well as text symbols or currency abbreviations like %, $ or kr.</p>
+                <p>Input fields can have prefixes or postfixes which can help the user more quickly understand what kind of information that ius requested. These can be icons as well as text symbols or currency abbreviations like %, $ or kr.</p>
             </>
         }
     ]

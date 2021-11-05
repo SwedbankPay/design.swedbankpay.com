@@ -2,12 +2,12 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-export const Addon = ({ type, value, color, disabled, suffix }) => (
+export const Addon = ({ type, value, color, disabled, postfix }) => (
     (type === "button") ?
         <button type="button" className={`btn btn-${color}`} disabled={disabled}>
             {value}
         </button>
-        : <span className={`input-group-addon ${suffix ? "suffix" : ""}`}>{(type === "icon") ? <i className="material-icons material-icons-outlined" aria-hidden="true">{value}</i> : value}</span>
+        : <span className={`input-group-addon ${postfix ? "postfix" : ""}`}>{(type === "icon") ? <i className="material-icons material-icons-outlined" aria-hidden="true">{value}</i> : value}</span>
 );
 
 const Feedback = ({ icon }) => (
@@ -43,7 +43,7 @@ const InputGroup = ({
     successMessage,
     tooltip,
     optional,
-    suffix
+    postfix
 }) => {
     const attrs = {
         type: type || null,
@@ -82,7 +82,7 @@ const InputGroup = ({
             </label> : null}{label ? "\n" : null}
             {prefixValue || postfixValue || feedbackIcon || errorMessage ?
                 <div className={inputGrpClasses}>{"\n"}
-                    {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} suffix={suffix} /> : null }{prefixValue ? "\n" : null}
+                    {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} postfix={postfix} /> : null }{prefixValue ? "\n" : null}
                     {type === "textarea" ?
                         <textarea {...attrs}></textarea>
                         : type === "select" ?
@@ -97,7 +97,7 @@ const InputGroup = ({
                             <input {...attrs} />}
                     {"\n"}
                     {feedbackIcon ? <Feedback icon={feedbackIcon} /> : null} {feedbackIcon ? "\n" : null}
-                    {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} suffix={suffix} /> : null }{postfixValue ? "\n" : null}
+                    {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} postfix={postfix} /> : null }{postfixValue ? "\n" : null}
                 </div>
                 :
                 <>
