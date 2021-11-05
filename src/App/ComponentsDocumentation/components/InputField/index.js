@@ -66,19 +66,19 @@ const ContentGuidelines = forwardRef((props, ref) => <section ref={ref}>
                 <h3 className="mb-3 mt-0">Don&#x27;t</h3>
                 <InputGroup type="email" label="username" prefixType="icon" prefixValue="email"/>
             </div>
-            <p>Don’t use a prefix icon that dosen’t help to convey the meaning of the label. There shouldn’t be any confusion between what type of information an icon represents.</p>
+            <p>Don’t use a prefix icon that doesn’t help to convey the meaning of the label. There shouldn’t be any confusion between what type of information an icon represents.</p>
         </div>
         <div className="col-lg-6 col-sm-12 ">
             <div className="slab slab-plain slab-border-success pb-4">
                 <h3 className="mb-3 mt-0">Do</h3>
-                <InputGroup type="text" label="Fixed transaction fee, in SEK" suffix postfixValue="kr"/>
+                <InputGroup type="text" label="Fixed transaction fee, in SEK" postfix postfixValue="kr"/>
             </div>
             <p>The label in itself should clearly indicate what type of data to enter, since prefixes and suffixes are hidden from screen readers.</p>
         </div>
         <div className="col-lg-6 col-sm-12">
             <div className="slab slab-plain slab-border-error pb-4">
                 <h3 className="mb-3 mt-0">Don&#x27;t</h3>
-                <InputGroup type="text" label="Fixed transaction fee, in SEK" suffix postfixValue="kronor"/>
+                <InputGroup type="text" label="Fixed transaction fee, in SEK" postfix postfixValue="kronor"/>
             </div>
             <p>Use commonly understood abbreviations for text prefix or suffix, don’t use full words.</p>
         </div>
@@ -120,7 +120,7 @@ const ContentGuidelines = forwardRef((props, ref) => <section ref={ref}>
                 <h3 className="mb-3 mt-0">Don&#x27;t</h3>
                 <InputGroup type="text" validationState="error" helpBlock errorMessage="Invalid input" label="Email address" defaultValue="Name.com" id="another-input-error-example"/>
             </div>
-            <p>Don&#x27;t use technical jargong </p>
+            <p>Don&#x27;t use technical jargon. </p>
         </div>
     </div>
 </section>);

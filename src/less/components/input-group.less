@@ -38,13 +38,6 @@
         }
     }
 
-    &.has-feedback {
-        // Ensure icons don't overlap text
-        .form-control {
-            padding-right: @input-padding-x * 3;
-        }
-    }
-
     > .form-control {
         position: relative;
         flex: 1 1 auto;
@@ -107,18 +100,6 @@
             z-index: 2;
             pointer-events: none;
         }
-    }
-
-    .form-control-feedback {
-        position: absolute;
-        right: 0;
-        top: 0;
-        border: 1px solid transparent;
-        padding: @input-padding-y @input-padding-x @input-padding-y 0;
-        line-height: 0;
-        color: @input-addon-color;
-        z-index: 4;
-        pointer-events: none;
     }
 }
 

@@ -10,12 +10,6 @@ export const Addon = ({ type, value, color, disabled, postfix }) => (
         : <span className={`input-group-addon ${postfix ? "postfix" : ""}`}>{(type === "icon") ? <i className="material-icons material-icons-outlined" aria-hidden="true">{value}</i> : value}</span>
 );
 
-const Feedback = ({ icon }) => (
-    <span className="form-control-feedback">{"\n\t\t"}
-        <i className="material-icons" aria-hidden="true">{icon}</i>{"\n\t"}
-    </span>
-);
-
 const InputGroup = ({
     id,
     type,
@@ -37,7 +31,6 @@ const InputGroup = ({
     postfixValue,
     postfixType,
     postfixBtnColor,
-    feedbackIcon,
     helpBlock,
     errorMessage,
     successMessage,
@@ -61,8 +54,7 @@ const InputGroup = ({
 
     const inputGrpClasses = classnames(
         "input-group",
-        validationState ? `has-${validationState}` : null,
-        feedbackIcon ? "has-feedback" : null
+        validationState ? `has-${validationState}` : null
     );
 
     const selectAttrs = {
@@ -80,7 +72,7 @@ const InputGroup = ({
                     <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
                         help_outline{"\n"}</i>}{"\n"}
             </label> : null}{label ? "\n" : null}
-            {prefixValue || postfixValue || feedbackIcon || errorMessage ?
+            {prefixValue || postfixValue || errorMessage ?
                 <div className={inputGrpClasses}>{"\n"}
                     {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} postfix={postfix} /> : null }{prefixValue ? "\n" : null}
                     {type === "textarea" ?
@@ -96,7 +88,6 @@ const InputGroup = ({
                             :
                             <input {...attrs} />}
                     {"\n"}
-                    {feedbackIcon ? <Feedback icon={feedbackIcon} /> : null} {feedbackIcon ? "\n" : null}
                     {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} postfix={postfix} /> : null }{postfixValue ? "\n" : null}
                 </div>
                 :
@@ -141,7 +132,6 @@ InputGroup.propTypes = {
     postfixValue: PropTypes.string,
     postfixType: PropTypes.oneOf(["button", "icon", ""]),
     postfixBtnColor: PropTypes.oneOf(["primary", "secondary"]),
-    feedbackIcon: PropTypes.string,
     helpBlock: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.bool

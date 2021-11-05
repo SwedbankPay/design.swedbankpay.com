@@ -91,17 +91,15 @@ describe("Component: InputGroup -", () => {
         expect(wrapper.html()).toContain("this is a text in a label");
     });
 
-    it("renders div with class .input-group when prefixValue, postfixValue or feedbackIcon is provided", () => {
+    it("renders div with class .input-group when prefixValue or postfixValue is provided", () => {
         const wrapper1 = shallow(<InputGroup type="typetest" prefixType="button" prefixValue="button text" prefixBtnColor="primary" />);
-        const wrapper2 = shallow(<InputGroup type="typetest" feedbackIcon="testvalue" />);
         const wrapper3 = shallow(<InputGroup type="typetest" postfixValue="testvalue" />);
 
         expect(wrapper1.html()).toContain("input-group");
-        expect(wrapper2.html()).toContain("input-group");
         expect(wrapper3.html()).toContain("input-group");
     });
 
-    it("does not render div with class .input-group when prefixValue, postfixValue and feedbackIcon are not provided", () => {
+    it("does not render div with class .input-group when prefixValue or postfixValue are not provided", () => {
         const wrapper = shallow(<InputGroup type="typetest" label="this is a text in a label" />);
 
         expect(wrapper.html()).not.toContain("input-group");
@@ -155,17 +153,6 @@ describe("Component: InputGroup -", () => {
         selectOptions.forEach(value => {
             expect(selectField.html()).toContain(value);
         });
-    });
-
-    it("renders a form-group with a feedback icon if prop feedbackIcon is provided", () => {
-        const wrapper = mount(<InputGroup type="typetest" feedbackIcon="testvalue" />);
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("material-icons");
-
-        const icon = wrapper.find(".material-icons");
-
-        expect(icon.html()).toContain("testvalue");
     });
 
     it("renders a form-group with a postfix if prop postfixValue is provided", () => {

@@ -104,7 +104,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
         />
       </div>
       <p>
-        Don’t use a prefix icon that dosen’t help to convey the meaning of the label. There shouldn’t be any confusion between what type of information an icon represents.
+        Don’t use a prefix icon that doesn’t help to convey the meaning of the label. There shouldn’t be any confusion between what type of information an icon represents.
       </p>
     </div>
     <div
@@ -120,8 +120,8 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
         </h3>
         <InputGroup
           label="Fixed transaction fee, in SEK"
+          postfix={true}
           postfixValue="kr"
-          suffix={true}
           type="text"
         />
       </div>
@@ -142,8 +142,8 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
         </h3>
         <InputGroup
           label="Fixed transaction fee, in SEK"
+          postfix={true}
           postfixValue="kronor"
-          suffix={true}
           type="text"
         />
       </div>
@@ -260,7 +260,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
         />
       </div>
       <p>
-        Don't use technical jargong 
+        Don't use technical jargon. 
       </p>
     </div>
   </div>
