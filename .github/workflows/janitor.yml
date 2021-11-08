@@ -47,6 +47,5 @@ jobs:
 
       - name: Delete feature folders
         uses: azure/CLI@1.0.4
-        with:
-          inlineScript: |
-            az storage blob delete-batch -s "\$web" --pattern ${{ needs.branch.outputs.branchname }}/** --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_STAGE }}
+        run: |
+          az storage blob delete-batch -s "\$web" --pattern ${{ needs.branch.outputs.branchname }}/** --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_STAGE }}

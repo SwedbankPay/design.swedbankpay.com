@@ -46,6 +46,5 @@ jobs:
 
       - name: Azure Deploy
         uses: azure/CLI@1.0.4
-        with:
-          inlineScript: |
-            az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_STAGE }}
+        run: |
+          az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_STAGE }}
