@@ -5,7 +5,7 @@ import SheetComponent from "@components/Sheet";
 import CodeTags from "@components/CodeTags";
 
 import { sheet } from "@src/scripts/main";
-import NpmInformation from "~/src/App/docutils/NpmInformation";
+import NpmInformation from "@docutils/NpmInformation";
 
 const Example = () => (
     <>
