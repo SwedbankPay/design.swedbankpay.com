@@ -5,6 +5,7 @@ import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
 import { actionList } from "@src/scripts/main";
+import NpmInformation from "@docutils/NpmInformation";
 
 const items = [
     {
@@ -78,6 +79,7 @@ class ActionList extends Component {
                 <Overview />
                 <Anchorpoints />
                 <JavascriptMethods />
+                <NpmInformation componentName={"actionList"}/>
             </DocContainer>
         );
     }

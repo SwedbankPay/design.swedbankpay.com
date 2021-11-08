@@ -407,7 +407,10 @@ exports[`Component: InputGroup - renders a form-group with a select field with g
 
     <select
       className="form-control"
-      defaultValue="placeholder"
+      defaultValue=""
+      disabled={null}
+      readOnly={null}
+      required={null}
     >
       
 		

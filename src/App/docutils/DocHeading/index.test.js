@@ -3,6 +3,8 @@ import { shallow } from "enzyme";
 
 import DocHeading from "./index";
 
+const brandTitle = process.env.brandTitle;
+
 describe("Utilities: DocHeading", () => {
     it("is defined", () => {
         expect(DocHeading).toBeDefined();
@@ -17,7 +19,7 @@ describe("Utilities: DocHeading", () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("<h1>Test</h1>");
-        expect(document.title).toEqual("Test | Swedbank Pay DesignGuide");
+        expect(document.title).toEqual(`Test | ${brandTitle} Design Guide`);
     });
 
     it("correctly formats title", () => {
@@ -29,7 +31,7 @@ describe("Utilities: DocHeading", () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("<h1>Test test</h1>");
-        expect(document.title).toEqual("Test test | Swedbank Pay DesignGuide");
+        expect(document.title).toEqual(`Test test | ${brandTitle} Design Guide`);
     });
 });
 

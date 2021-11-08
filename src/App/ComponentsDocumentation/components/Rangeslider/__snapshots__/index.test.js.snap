@@ -107,7 +107,6 @@ exports[`Component: Rangeslider DeveloperDocumentation renders 1`] = `
     />
      to initialize one specific component.
   </p>
-  <DisableState />
 </section>
 `;
 
@@ -387,6 +386,7 @@ exports[`Component: Rangeslider Overview renders 1`] = `
   <p>
     Don’t use sliders for content without numeric values.
   </p>
+  <DisableState />
 </section>
 `;
 
@@ -400,5 +400,8 @@ exports[`Component: Rangeslider renders 1`] = `
   <Overview />
   <ContentGuidelines />
   <DeveloperDocumentation />
+  <NpmInformation
+    componentName="rangeslider"
+  />
 </DocContainer>
 `;

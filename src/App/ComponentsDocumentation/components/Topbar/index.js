@@ -8,6 +8,7 @@ import SidebarComponent from "@components/Sidebar";
 import { SidebarNavList } from "../Sidebar/constants";
 
 import { topbar, sidebar } from "@src/scripts/main";
+import NpmInformation from "@docutils/NpmInformation";
 
 const menu = {
     btn: {
@@ -145,6 +146,7 @@ class Topbar extends Component {
                 <TopbarWithSidebar />
                 <TopbarPNG />
                 <JavascriptMethods />
+                <NpmInformation componentName={"topbar"}/>
             </DocContainer>
         );
     }

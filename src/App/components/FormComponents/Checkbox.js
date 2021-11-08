@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, tooltip, optional, required, group, options }) => {
+const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, tooltip, optional, required, group, options, className }) => {
     const attrs = {
         type: "checkbox",
         id: id || null,
@@ -36,7 +36,7 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
                 </fieldset>
             </form>
                 : <>
-                    <div className={`checkbox${errorMessage ? " has-error" : ""}`}>{"\n"}
+                    <div className={`checkbox${className ? ` ${className}` : ""}${errorMessage ? " has-error" : ""}`}>{"\n"}
                         <input {...attrs} />{"\n"}
                         <label htmlFor={id}>{label}</label>{"\n"}
                     </div>
@@ -51,7 +51,10 @@ Checkbox.propTypes = {
     id: PropTypes.string,
     checked: PropTypes.bool,
     disabled: PropTypes.bool,
-    label: PropTypes.string,
+    label: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.object
+    ]),
     name: PropTypes.string,
     errorMessage: PropTypes.string,
     require: PropTypes.bool,

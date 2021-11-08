@@ -21,9 +21,7 @@ exports[`Components: Links ActionLink renders 1`] = `
       Object {
         "elements": Array [
           Object {
-            "component": <ShowcaseActionComponent
-              linkText="Pay now"
-            />,
+            "component": <ShowcaseActionComponent />,
             "description": <React.Fragment>
               <p>
                 Actions links can be customized in a few different ways to fit different contexts. Default styling contains a heading and an arrow icon. It can be modified be adding an info text that will give more information or with a number badge. If a the link is directing the user to an external web page or opens up a new tab, this should be indicated using an new tab icon instead of the arrow.  
@@ -406,18 +404,6 @@ exports[`Components: Links Overview renders 1`] = `
                   ],
                   "title": "Alternatives",
                 },
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "state_modifier",
-                      "name": "Disabled",
-                      "value": Object {
-                        "disabled": true,
-                      },
-                    },
-                  ],
-                  "title": "State modifier",
-                },
               ],
               "radio": Array [
                 Object {
@@ -463,18 +449,6 @@ exports[`Components: Links Overview renders 1`] = `
                     },
                   ],
                   "title": "Alternatives",
-                },
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "state_modifier",
-                      "name": "Disabled",
-                      "value": Object {
-                        "disabled": true,
-                      },
-                    },
-                  ],
-                  "title": "State modifiers",
                 },
               ],
               "radio": Array [

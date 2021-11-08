@@ -6,6 +6,7 @@ import AlertComponent from "@components/Alert";
 import CodeTags from "@components/CodeTags";
 import { alertsShowCase } from "./constants";
 import { alert } from "@src/scripts/main";
+import NpmInformation from "@docutils/NpmInformation";
 
 const Overview = () => (
     <section>
@@ -91,15 +92,6 @@ const DeveloperDocumentation = () => (
         <span className="h3">Javascript methods</span>
         <p className="mt-2">Use <CodeTags type="secondary" code="dg.alert.init()"/> to initialize all alerts.</p>
         <p>Use <CodeTags type="secondary" code='dg.alert.init("component-id")'/> to initialize one specific component.</p>
-
-        <section>
-            <h3>Usage with NPM</h3>
-            <p><Link to="/get-started/for-developers/">Usage with NPM</Link> will require you to import it from <CodeTags type="primary" code="@swedbankpay/design-guide" />.</p>
-            <ComponentPreview language="javascript" codeFigure dangerousHTML>
-                import &#123; alert &#125; from &quot;@swedbankpay/design-guide&quot;; {"\n"}
-                alert.init()
-            </ComponentPreview>
-        </section>
     </section>
 );
 
@@ -115,6 +107,7 @@ const Alerts = () => {
                 <Overview />
                 <ContentGuidelines />
                 <DeveloperDocumentation />
+                <NpmInformation componentName={"alert"}/>
             </section>
         </DocContainer>
     );

@@ -26,18 +26,12 @@ module.exports = (env, argv) => {
     const infoVersion = env && env.info_version ? env.info_version : "LOCAL_DEV";
 
     const config = {
-        experiments: {
-            outputModule: true
-        },
         mode: argv.mode || "production",
         entry: {
             // @babel/polyfill is here to support IE (it actually DOUBLES the dg.js size).
             // Looking forward to removing this when we don't support IE anymore [THN]
             dg: {
-                import: ["@babel/polyfill", "./src/scripts/main/index.js"],
-                library: {
-                    type: "module"
-                }
+                import: ["@babel/polyfill", "./src/scripts/main/index.js"]
             },
             "dg-dashboard": "./src/scripts/dashboard/index.js",
             swedbankpay: "./src/swedbankpay.js",
@@ -298,6 +292,10 @@ module.exports = (env, argv) => {
                                 {
                                     source: `./src/img/${brand}/resources/logotype/*.png`,
                                     destination: `./dist${basename}img/logotype`
+                                },
+                                {
+                                    source: `./src/img/${brand}/documentation/patterns/*.png`,
+                                    destination: `./dist${basename}img/documentation/patterns`
                                 },
                                 {
                                     source: `./src/img/${brand}/documentation/buttons/*.png`,

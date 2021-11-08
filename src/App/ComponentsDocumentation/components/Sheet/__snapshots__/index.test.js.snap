@@ -506,5 +506,8 @@ exports[`Documentation: Sheet renders 1`] = `
   <Example />
   <RequireAction />
   <JavascriptMethods />
+  <NpmInformation
+    componentName="sheet"
+  />
 </DocContainer>
 `;

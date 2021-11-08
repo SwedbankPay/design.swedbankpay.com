@@ -7,6 +7,7 @@ import CodeTags from "@components/CodeTags";
 import { tabsShowCasePanel } from "./constants";
 
 import { tabs } from "@src/scripts/main";
+import NpmInformation from "@docutils/NpmInformation";
 
 const tabItems = ["Selected", "Unselected", "Unselected", "Unselected", "Unselected", "Unselected"];
 
@@ -64,15 +65,6 @@ const DeveloperDocumentation = () => (
         <p>
             Moves the scroll position of the tabs to the user specified position. The value to be passed to <CodeTags type="secondary" code="scrollState" /> is the object <CodeTags type="secondary" code="{ scrollStart, scrollTotalAmount }" />. <CodeTags type="secondary" code="scrollStart" /> is the current scroll position, <CodeTags type="secondary" code="scrollTotalAmount" /> is the amount to be scrolled from the current scroll position (negative values for left scroll, positive values for right scroll). Note: <CodeTags type="primary" code={"<ul>"} /> is the scrollable element.
         </p>
-
-        <section>
-            <h3>Usage with NPM</h3>
-            <p><Link to="/get-started/for-developers/">Usage with NPM</Link> will require you to import it from <CodeTags type="primary" code="@swedbankpay/design-guide" />.</p>
-            <ComponentPreview language="javascript" codeFigure dangerousHTML>
-                import &#123; tabs &#125; from &quot;@swedbankpay/design-guide&quot;; {"\n"}
-                tabs.init()
-            </ComponentPreview>
-        </section>
     </>
 );
 
@@ -90,6 +82,7 @@ const Tabs = () => {
                 <Overview />
                 <ContentGuidelines />
                 <DeveloperDocumentation />
+                <NpmInformation componentName={"tabs"}/>
             </section>
         </DocContainer>
     );

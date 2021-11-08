@@ -494,5 +494,8 @@ exports[`Components: Topbar renders 1`] = `
   <TopbarWithSidebar />
   <TopbarPNG />
   <JavascriptMethods />
+  <NpmInformation
+    componentName="topbar"
+  />
 </DocContainer>
 `;

@@ -42,7 +42,6 @@ exports[`Main: App renders 1`] = `
               Array [
                 Object {
                   "appFolder": "GettingStarted",
-                  "entryCardText": "Learn more about how to setup and use our system",
                   "icon": Object {
                     "name": "wb_incandescent",
                     "rotate": true,
@@ -53,6 +52,9 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "getting-started/Introduction",
                       "path": "/get-started/introduction",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Introduction",
                     },
                     Object {
@@ -290,16 +292,6 @@ exports[`Main: App renders 1`] = `
                       "title": "Expandable",
                     },
                     Object {
-                      "componentPath": "components/Forms",
-                      "icon": "text_snippet",
-                      "outlined": true,
-                      "path": "/components/forms",
-                      "statusBadges": Array [
-                        "javascript",
-                      ],
-                      "title": "Forms",
-                    },
-                    Object {
                       "componentPath": "components/InputField",
                       "icon": "text_fields",
                       "path": "/components/input-field",
@@ -461,6 +453,7 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/toast",
                       "statusBadges": Array [
                         "javascript",
+                        "updated",
                       ],
                       "title": "Toast",
                     },
@@ -497,6 +490,43 @@ exports[`Main: App renders 1`] = `
                     },
                   ],
                   "title": "Components",
+                },
+                Object {
+                  "appFolder": "Patterns",
+                  "entryCardText": "Learn about how to we set up different structures",
+                  "icon": Object {
+                    "name": "dashboard",
+                  },
+                  "path": "/patterns",
+                  "redirect": "/patterns/patterns",
+                  "routes": Array [
+                    Object {
+                      "componentPath": "content/Patterns",
+                      "path": "/patterns/patterns",
+                      "title": "Overview",
+                    },
+                    Object {
+                      "componentPath": "content/Forms",
+                      "icon": "format_align_justify",
+                      "outlined": true,
+                      "path": "/patterns/forms",
+                      "statusBadges": Array [
+                        "new",
+                      ],
+                      "title": "Forms",
+                    },
+                    Object {
+                      "componentPath": "content/Login",
+                      "icon": "account_circle",
+                      "outlined": true,
+                      "path": "/patterns/login",
+                      "statusBadges": Array [
+                        "new",
+                      ],
+                      "title": "Login",
+                    },
+                  ],
+                  "title": "Patterns",
                 },
                 Object {
                   "appFolder": "Utilities",
@@ -645,6 +675,19 @@ exports[`Main: App renders 1`] = `
                   }
                 }
                 path="/examples"
+              />
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.lazy),
+                    "_init": [Function],
+                    "_payload": Object {
+                      "_result": [Function],
+                      "_status": -1,
+                    },
+                  }
+                }
+                path="/patterns"
               />
               <Route
                 component={

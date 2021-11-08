@@ -5,6 +5,7 @@ import NavComponent from "@components/Nav";
 import CodeTags from "@components/CodeTags";
 
 import { nav } from "@src/scripts/main";
+import NpmInformation from "@docutils/NpmInformation";
 
 const navItems = [
     {
@@ -80,6 +81,7 @@ const Nav = () => {
             <StandardNav />
             <WithIconsOnly />
             <JavascriptMethods />
+            <NpmInformation componentName={"nav"}/>
         </DocContainer>
     );
 };

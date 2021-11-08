@@ -4,6 +4,7 @@ import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
 import { tooltips } from "@src/scripts/main";
+import NpmInformation from "@docutils/NpmInformation";
 
 const Overview = () => (
     <>
@@ -119,6 +120,7 @@ const Tooltip = () => {
             <WithIcons />
             <ExtendedUsage />
             <JavascriptMethods />
+            <NpmInformation componentName={"tooltips"}/>
         </DocContainer>
     );
 };

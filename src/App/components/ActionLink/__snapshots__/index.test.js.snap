@@ -5,21 +5,28 @@ exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with 
   <div
     className="d-flex flex-column"
   >
+    
+
     <span
       className="action-link-content"
     >
+      
+
       <span
         className="action-link-label "
       >
         Link text
       </span>
-       
+      
+
       <span
         className="badge badge-default"
       >
         Badge
       </span>
     </span>
+    
+
   </div>
 </Fragment>
 `;
@@ -29,16 +36,23 @@ exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with 
   <div
     className="d-flex flex-column"
   >
+    
+
     <span
       className="action-link-content"
     >
+      
+
       <span
         className="action-link-label no-badge"
       >
         Link text
       </span>
-       
+      
+
     </span>
+    
+
   </div>
 </Fragment>
 `;
@@ -88,16 +102,23 @@ exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent witho
   <div
     className="d-flex flex-column"
   >
+    
+
     <span
       className="action-link-content"
     >
+      
+
       <span
         className="action-link-label no-badge"
       >
         Link text
       </span>
-       
+      
+
     </span>
+    
+
   </div>
 </Fragment>
 `;
@@ -107,16 +128,23 @@ exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent witho
   <div
     className="d-flex flex-column"
   >
+    
+
     <span
       className="action-link-content"
     >
+      
+
       <span
         className="action-link-label no-badge"
       >
         Link text
       </span>
-       
+      
+
     </span>
+    
+
   </div>
 </Fragment>
 `;

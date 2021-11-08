@@ -14,7 +14,7 @@ jobs:
       matrix:
         brand: ["payex", "swedbankpay"]
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v2.3.5
 
       # Set brand specific variables
       - name: Environment variables
@@ -40,12 +40,13 @@ jobs:
         run: npm run ${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env basename=${{ steps.variables.outputs.BRANCH }} --env semver=${{ steps.variables.outputs.BRANCH }} --env info_version=${{ steps.variables.outputs.VERSION }} --env github_actions=true
 
       - name: Azure Login
-        uses: azure/login@v1.3.0
+        uses: azure/login@v1.4.0
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS_STAGE }}
 
       - name: Azure Deploy
         uses: azure/CLI@1.0.4
         with:
+          azcliversion: 2.29.2
           inlineScript: |
             az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_STAGE }}

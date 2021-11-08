@@ -111,5 +111,8 @@ exports[`Components: Accordion renders 1`] = `
   <Overview />
   <AccordionGroup />
   <JavascriptMethods />
+  <NpmInformation
+    componentName="accordion"
+  />
 </DocContainer>
 `;

@@ -5,6 +5,7 @@ import SheetComponent from "@components/Sheet";
 import CodeTags from "@components/CodeTags";
 
 import { sheet } from "@src/scripts/main";
+import NpmInformation from "@docutils/NpmInformation";
 
 const Example = () => (
     <>
@@ -98,6 +99,7 @@ class Sheet extends Component {
                 <Example />
                 <RequireAction />
                 <JavascriptMethods />
+                <NpmInformation componentName={"sheet"}/>
             </DocContainer>
         );
     }

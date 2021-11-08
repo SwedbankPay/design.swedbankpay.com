@@ -7,7 +7,7 @@ import { tabs } from "@src/scripts/main";
 
 // NOTE: dangerousHTML prop is used when wanting to show html in the codefigure without encoding.
 
-const ComponentPreview = ({ children, language, removeOuterTag, hideValue, removeList, showCasePanel, showCasePanelAdvanced, showCasePanelSm, codeFigure, dangerousHTML, negative }) => {
+const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideCodeFigure, removeList, showCasePanel, showCasePanelAdvanced, showCasePanelSm, codeFigure, dangerousHTML, negative }) => {
     const _removeOuterTag = element => {
         const div = document.createElement("div");
 
@@ -116,6 +116,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                 // code = jsbeautifier(code);
                 break;
             case "terminal":
+            case "json":
                 break;
             default:
                 return "update switchcase!";
@@ -173,6 +174,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
 
             this.state = {
                 activeTab: this.props.showCasePanelAdvanced.elements[0],
+                hideOptions: this.props.showCasePanelAdvanced.hideOptions,
                 optionsOpen: window.innerWidth > 1200, // XL grid breakpoint
                 activeOptions: this.props.showCasePanelAdvanced.elements[0].activeOptions ? [...this.props.showCasePanelAdvanced.elements[0].activeOptions] : []
             };
@@ -257,7 +259,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
         render () {
             return (
                 <>
-                    <div id={this.props.showCasePanelAdvanced.id} className={`showcase-panel showcase-panel-advanced${this.state.optionsOpen ? " options-active" : ""}`}>
+                    <div id={this.props.showCasePanelAdvanced.id} className={`showcase-panel showcase-panel-advanced${this.state.optionsOpen ? " options-active" : ""}${this.state.hideOptions ? " hide-options" : ""}`}>
                         <div id={this.props.showCasePanelAdvanced.tabsId} className="tabs tabs-scroll">
                             <ul id={`${this.props.showCasePanelAdvanced.tabsId}-ul`}>
                                 {this.props.showCasePanelAdvanced.elements.map((element, i) => <li key={i} className={this.state.activeTab.tab === element.tab ? "active" : null}>
@@ -265,7 +267,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                                 </li>
                                 )}
                             </ul>
-                            <div className={`options-open${this.state.optionsOpen ? " hidden" : ""}`}>
+                            <div className={`options-open${this.state.optionsOpen ? " hidden" : ""}${this.state.hideOptions ? " d-none" : ""}`}>
                                 <i className="material-icons" onClick={() => this.setState({ optionsOpen: true })}>menu_open</i>
                             </div>
                         </div>
@@ -294,7 +296,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                                     }
                                 </div>
                             </div>
-                            {<div className={`options${this.state.optionsOpen ? " active" : ""}`}>
+                            {<div className={`options${this.state.optionsOpen ? " active" : ""}${this.state.hideOptions ? " d-none" : ""}`}>
                                 <div className="options-header">
                                     Options
                                     <i className="material-icons options-close" onClick={() => this.setState({ optionsOpen: false })}>close</i>
@@ -354,14 +356,16 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
                             </div>}
                         </div>
                     </div>
-                    <CodeFigure >
-                        {cloneElement(this.state.activeTab.component,
-                            this.state.activeOptions.reduce((acc, currentOption) => ({
-                                ...acc,
-                                ...currentOption.value
-                            }), {})
-                        )}
-                    </CodeFigure>
+                    {!hideCodeFigure &&
+                        <CodeFigure >
+                            {cloneElement(this.state.activeTab.component,
+                                this.state.activeOptions.reduce((acc, currentOption) => ({
+                                    ...acc,
+                                    ...currentOption.value
+                                }), {})
+                            )}
+                        </CodeFigure>
+                    }
                 </>
             );
 
@@ -379,6 +383,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, remov
 ComponentPreview.propTypes = {
     language: PropTypes.oneOf(["html", "javascript", "css", "terminal"]).isRequired,
     removeOuterTag: PropTypes.bool,
+    hideCodeFigure: PropTypes.bool,
     hideValue: PropTypes.bool,
     removeList: PropTypes.bool,
     showCasePanel: PropTypes.bool,

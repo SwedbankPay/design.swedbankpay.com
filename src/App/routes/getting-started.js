@@ -6,14 +6,14 @@ module.exports = [
             rotate: true
         },
         path: "/get-started",
-        entryCardText: "Learn more about how to setup and use our system",
         redirect: "/get-started/introduction",
         appFolder: "GettingStarted",
         routes: [
             {
                 title: "Introduction",
                 path: "/get-started/introduction",
-                componentPath: "getting-started/Introduction"
+                componentPath: "getting-started/Introduction",
+                statusBadges: ["updated"]
             },
             {
                 title: "For developers",

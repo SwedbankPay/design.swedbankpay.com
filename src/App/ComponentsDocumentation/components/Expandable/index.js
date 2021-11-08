@@ -5,6 +5,7 @@ import ExpandableComponent from "@components/Expandable";
 import CodeTags from "@components/CodeTags";
 
 import { expandable } from "@src/scripts/main";
+import NpmInformation from "@docutils/NpmInformation";
 
 const items = [
     {
@@ -73,6 +74,7 @@ const Expandable = () => {
             <Overview />
             <ExpandableGroup />
             <JavascriptMethods />
+            <NpmInformation componentName={"expandable"}/>
         </DocContainer>
     );
 };

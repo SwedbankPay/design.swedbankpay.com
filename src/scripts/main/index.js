@@ -25,18 +25,6 @@ window.addEventListener("popstate", () => {
     if (document.body.className.includes("has-vscroll")) { document.body.classList.remove("has-vscroll"); }
 });
 
-const currentScript = document.currentScript;
-
-if (currentScript) {
-    if (currentScript.getAttribute("global")) { window.dg = window.dg ? Object.assign(dg, window.dg) : dg; }
-
-    if (currentScript.getAttribute("autoload")) {
-        document.addEventListener("DOMContentLoaded", () => {
-            dg.script.initAll();
-        });
-    }
-}
-
 const dg = {
     accordion,
     actionList,
@@ -56,6 +44,21 @@ const dg = {
     utils,
     validation
 };
+
+const CDNSetup = () => {
+    const currentScript = document.querySelector("script[src$='dg.js']");
+
+    if (currentScript) {
+
+        if (currentScript.getAttribute("global")) { window.dg = window.dg ? Object.assign(dg, window.dg) : dg; }
+
+        if (currentScript.getAttribute("autoload")) {
+            dg.script.initAll();
+        }
+    }
+};
+
+document.readyState !== "loading" ? CDNSetup() : document.addEventListener("DOMContentLoaded", CDNSetup());
 
 export default dg;
 

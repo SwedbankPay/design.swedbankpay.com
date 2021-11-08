@@ -13,7 +13,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       className="dg-current-version text-uppercase"
     >
       Design Guide – v. 
-      7.0.1
+      7.1.0
     </span>
     <Switch>
       <Route
@@ -23,7 +23,6 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <RenderRoutes
         appFolder="GettingStarted"
-        entryCardText="Learn more about how to setup and use our system"
         icon={
           Object {
             "name": "wb_incandescent",
@@ -38,6 +37,9 @@ exports[`Utilities: RenderPage renders 1`] = `
             Object {
               "componentPath": "getting-started/Introduction",
               "path": "/get-started/introduction",
+              "statusBadges": Array [
+                "updated",
+              ],
               "title": "Introduction",
             },
             Object {
@@ -285,16 +287,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Expandable",
             },
             Object {
-              "componentPath": "components/Forms",
-              "icon": "text_snippet",
-              "outlined": true,
-              "path": "/components/forms",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Forms",
-            },
-            Object {
               "componentPath": "components/InputField",
               "icon": "text_fields",
               "path": "/components/input-field",
@@ -456,6 +448,7 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/toast",
               "statusBadges": Array [
                 "javascript",
+                "updated",
               ],
               "title": "Toast",
             },
@@ -493,6 +486,48 @@ exports[`Utilities: RenderPage renders 1`] = `
           ]
         }
         title="Components"
+      />
+      <RenderRoutes
+        appFolder="Patterns"
+        entryCardText="Learn about how to we set up different structures"
+        icon={
+          Object {
+            "name": "dashboard",
+          }
+        }
+        key="renderRoutes_Patterns"
+        path="/patterns"
+        redirect="/patterns/patterns"
+        routes={
+          Array [
+            Object {
+              "componentPath": "content/Patterns",
+              "path": "/patterns/patterns",
+              "title": "Overview",
+            },
+            Object {
+              "componentPath": "content/Forms",
+              "icon": "format_align_justify",
+              "outlined": true,
+              "path": "/patterns/forms",
+              "statusBadges": Array [
+                "new",
+              ],
+              "title": "Forms",
+            },
+            Object {
+              "componentPath": "content/Login",
+              "icon": "account_circle",
+              "outlined": true,
+              "path": "/patterns/login",
+              "statusBadges": Array [
+                "new",
+              ],
+              "title": "Login",
+            },
+          ]
+        }
+        title="Patterns"
       />
       <RenderRoutes
         appFolder="Utilities"

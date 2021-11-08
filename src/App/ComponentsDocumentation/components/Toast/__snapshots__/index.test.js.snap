@@ -1,544 +1,520 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components: Toast CustomHtml calls toast on click 1`] = `
-<Fragment>
-  <h2
-    id="custom-html"
+exports[`Components: Toast Content guidelines renders 1`] = `
+<section>
+  <h3>
+    Content guidelines
+  </h3>
+  <div
+    className="slab slab-plain mt-3 px-0"
   >
-    Custom HTML
-  </h2>
-  <p>
-    You can pass in an HTML String as the first argument as well. Take a look at the example below, where we pass in text as well as a flat button. If you call an external function instead of in-line JavaScript, you will not need to escape quotation marks.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="javascript"
-  >
-    const toastHtml = "&lt;span&gt;&lt;p&gt;I am toast content.&lt;/p&gt;&lt;p&gt;You can put me on several lines.&lt;/p&gt;&lt;/span&gt;&lt;button class='btn toast-action'&gt;Undo&lt;/button&gt;";
-    
-
-    toast({ html: toastHtml });
-  </ComponentPreview>
-  <ComponentPreview
-    language="html"
-    showCasePanel={true}
-  >
-    <button
-      className="btn btn-primary"
-      onClick={[Function]}
-      type="button"
+    <div
+      className="toast-example-container py-5"
     >
-      Toast with action
-    </button>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Toast CustomHtml renders 1`] = `
-<Fragment>
-  <h2
-    id="custom-html"
-  >
-    Custom HTML
-  </h2>
-  <p>
-    You can pass in an HTML String as the first argument as well. Take a look at the example below, where we pass in text as well as a flat button. If you call an external function instead of in-line JavaScript, you will not need to escape quotation marks.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="javascript"
-  >
-    const toastHtml = "&lt;span&gt;&lt;p&gt;I am toast content.&lt;/p&gt;&lt;p&gt;You can put me on several lines.&lt;/p&gt;&lt;/span&gt;&lt;button class='btn toast-action'&gt;Undo&lt;/button&gt;";
-    
-
-    toast({ html: toastHtml });
-  </ComponentPreview>
-  <ComponentPreview
-    language="html"
-    showCasePanel={true}
-  >
-    <button
-      className="btn btn-primary"
-      onClick={[Function]}
-      type="button"
-    >
-      Toast with action
-    </button>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Toast Options renders 1`] = `
-<Fragment>
-  <h2
-    id="options"
-  >
-    Options
-  </h2>
-  <table
-    className="table table-striped"
-  >
-    <thead>
-      <tr>
-        <th>
-          Name
-        </th>
-        <th>
-          Type
-        </th>
-        <th>
-          Default
-        </th>
-        <th>
-          Description
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          html
-        </td>
-        <td>
-          String
-        </td>
-        <td>
-          <CodeTags
-            code="\\"\\""
-            type="secondary"
-          />
-        </td>
-        <td>
-          The HTML content of the Toast.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          type
-        </td>
-        <td>
-          String
-        </td>
-        <td>
-          <CodeTags
-            code="\\"\\""
-            type="secondary"
-          />
-        </td>
-        <td>
-          Premade alert types; 
-          <CodeTags
-            code="success"
-            type="secondary"
-          />
-          , 
-          <CodeTags
-            code="neutral"
-            type="secondary"
-          />
-          , 
-          <CodeTags
-            code="warning"
-            type="secondary"
-          />
-           and 
-          <CodeTags
-            code="danger"
-            type="secondary"
-          />
-           are available.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          dismissable
-        </td>
-        <td>
-          Boolean
-        </td>
-        <td>
-          <CodeTags
-            code="true"
-            type="secondary"
-          />
-        </td>
-        <td>
-          Wether or not the alert should be dismissable by the user (close button).
-        </td>
-      </tr>
-      <tr>
-        <td>
-          icon
-        </td>
-        <td>
-          String
-        </td>
-        <td>
-          <CodeTags
-            code="\\"\\""
-            type="secondary"
-          />
-        </td>
-        <td>
-          Custom icon for the toast. See 
-          <Link
-            to="/core/iconography"
+      <div
+        className="m-auto col-12"
+        id="toast-container"
+      >
+        <div
+          className="toast toast-neutral col-12"
+        >
+          <i
+            className="material-icons"
           >
-            icons
-          </Link>
-           for more info.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          displayLength
-        </td>
-        <td>
-          Number
-        </td>
-        <td>
-          <CodeTags
-            code="4000"
-            type="secondary"
-          />
-        </td>
-        <td>
-          Length in ms the Toast stays before dismissal.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          classes
-        </td>
-        <td>
-          Array of strings
-        </td>
-        <td>
-          <CodeTags
-            code="[]"
-            type="secondary"
-          />
-        </td>
-        <td>
-          Classes to be added to the toast element.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          completeCallback
-        </td>
-        <td>
-          Function
-        </td>
-        <td>
-          <CodeTags
-            code="null"
-            type="secondary"
-          />
-        </td>
-        <td>
-          Callback function called when toast is dismissed.
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</Fragment>
+            info
+          </i>
+          <div
+            className="toast-content"
+          >
+            <b>
+              Message
+            </b>
+          </div>
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ul
+    className="list list-bullet"
+  >
+    <li>
+      The 
+      <b>
+        message
+      </b>
+       for toast should reflect the type of the toast, if it is informative it should explain and link the user further. If it is an error toast, it should clearly explain what the issue is and explain how the user can solve the problem.
+    </li>
+  </ul>
+</section>
 `;
 
-exports[`Components: Toast Overview calls toast on click 1`] = `
-<Fragment>
-  <h2
-    id="overview"
-  >
-    Overview
+exports[`Components: Toast Developer documentation renders 1`] = `
+<section
+  id="developer-documentation"
+>
+  <h2>
+    Developer documentation
   </h2>
   <p>
-    You want jam on that toast?
+    To use the Toast, call 
+    <CodeTags
+      code="dg.toast()"
+      type="secondary"
+    />
+     on an element with the desired options.
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="javascript"
-  >
-    toast({ html: "I am a toast!" });
-  </ComponentPreview>
   <ComponentPreview
     codeFigure={true}
     dangerousHTML={true}
     language="html"
   >
-    &lt;button onclick="toast({ html: 'I am a toast!' })" class="btn btn-primary"&gt;Toast!&lt;/button&gt;
+    &lt;button type="button" class="btn btn-primary" onclick="dg.toast({
+	type: 'neutral' 
+	html: '&lt;p&gt;&lt;b&gt;Info header&lt;/b&gt;
+		 Input informative alert information here, provide &lt;a href="#"&gt;link&lt;/a&gt; to solution or more info when possible.
+	&lt;/p&gt;'})"&gt;Neutral toast
+&lt;/button&gt;
   </ComponentPreview>
-  <ComponentPreview
-    language="html"
-    showCasePanel={true}
+  <h4>
+    Options
+  </h4>
+  <div
+    className="overflow-auto"
   >
-    <button
-      className="btn btn-primary"
-      onClick={[Function]}
-      type="button"
+    <table
+      className="table table-striped"
+      key="Name,Type,Default,Description"
     >
-      Click for toast!
-    </button>
-  </ComponentPreview>
-  <Alert
-    type="warning"
-  >
-    <h5>
-      Content restriction
-    </h5>
+      <thead>
+        <tr>
+          <th
+            key="Name0"
+          >
+            Name
+          </th>
+          <th
+            key="Type0"
+          >
+            Type
+          </th>
+          <th
+            key="Default0"
+          >
+            Default
+          </th>
+          <th
+            key="Description0"
+          >
+            Description
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          key="0"
+        >
+          <td
+            key="html0"
+          >
+            html
+          </td>
+          <td
+            key="String1"
+          >
+            String
+          </td>
+          <td
+            key="[object Object]2"
+          >
+            <CodeTags
+              code="\\"\\""
+              type="secondary"
+            />
+          </td>
+          <td
+            key="The HTML content of the Toast.3"
+          >
+            The HTML content of the Toast.
+          </td>
+        </tr>
+        <tr
+          key="1"
+        >
+          <td
+            key="type0"
+          >
+            type
+          </td>
+          <td
+            key="String1"
+          >
+            String
+          </td>
+          <td
+            key="[object Object]2"
+          >
+            <CodeTags
+              code="\\"\\""
+              type="secondary"
+            />
+          </td>
+          <td
+            key="[object Object]3"
+          >
+            Alert types: 
+            <CodeTags
+              code="success"
+              type="secondary"
+            />
+            , 
+            <CodeTags
+              code="neutral"
+              type="secondary"
+            />
+            , 
+            <CodeTags
+              code="warning"
+              type="secondary"
+            />
+            , 
+            <CodeTags
+              code="danger"
+              type="secondary"
+            />
+          </td>
+        </tr>
+        <tr
+          key="2"
+        >
+          <td
+            key="classes0"
+          >
+            classes
+          </td>
+          <td
+            key="Array of strings1"
+          >
+            Array of strings
+          </td>
+          <td
+            key="[object Object]2"
+          >
+            <CodeTags
+              code="[]"
+              type="secondary"
+            />
+          </td>
+          <td
+            key="Classes to be added to the toast element.3"
+          >
+            Classes to be added to the toast element.
+          </td>
+        </tr>
+        <tr
+          key="3"
+        >
+          <td
+            key="completeCallback0"
+          >
+            completeCallback
+          </td>
+          <td
+            key="Function1"
+          >
+            Function
+          </td>
+          <td
+            key="[object Object]2"
+          >
+            <CodeTags
+              code="null"
+              type="secondary"
+            />
+          </td>
+          <td
+            key="Callback function called when toast is dismissed.3"
+          >
+            Callback function called when toast is dismissed.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <section>
+    <h3>
+      Usage with NPM
+    </h3>
     <p>
-      Don’t put too much text in toasts as they are meant to be visible for only a short amount of time. Due to the time restriction you should also avoid putting vital information in them. A 
       <Link
-        to="/components/sheet"
+        to="/get-started/for-developers/"
       >
-        sheet
+        Usage with NPM
       </Link>
-       or 
-      <Link
-        to="/components/dialog"
-      >
-        dialog
-      </Link>
-       is recommended when recieving input or relaying large amounts of information.
+       will require you to import it from 
+      <CodeTags
+        code="@swedbankpay/design-guide"
+        type="primary"
+      />
+       before calling it on an element.
     </p>
-  </Alert>
-</Fragment>
+    <ComponentPreview
+      codeFigure={true}
+      dangerousHTML={true}
+      language="javascript"
+    >
+      import { toast } from "@swedbankpay/design-guide"; 
+      
+
+      toast();
+    </ComponentPreview>
+    <ComponentPreview
+      codeFigure={true}
+      dangerousHTML={true}
+      language="html"
+    >
+      &lt;button type="button" class="btn btn-primary" onclick="toast({
+	type: 'neutral' 
+	html: '&lt;p&gt;&lt;b&gt;Info header&lt;/b&gt;
+		 Input informative alert information here, provide &lt;a href="#"&gt;link&lt;/a&gt; to solution or more info when possible.
+		&lt;/p&gt;'})"&gt;Neutral toast
+&lt;/button&gt;
+    </ComponentPreview>
+  </section>
+</section>
 `;
 
 exports[`Components: Toast Overview renders 1`] = `
-<Fragment>
+<section>
   <h2
     id="overview"
   >
     Overview
   </h2>
-  <p>
-    You want jam on that toast?
-  </p>
   <ComponentPreview
-    codeFigure={true}
-    language="javascript"
-  >
-    toast({ html: "I am a toast!" });
-  </ComponentPreview>
+    hideCodeFigure={true}
+    language="html"
+    showCasePanel={true}
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <Toast
+              title="Neutral"
+              type="neutral"
+            />,
+            "description": "Use this toast to inform the user about something, in some cases a link can be used to direct the user towards continued reading. For information on how to trigger a toast, read more under Developer documentation.",
+            "options": Object {
+              "checkbox": Array [],
+            },
+            "tab": "Neutral",
+            "title": "Neutral toast",
+          },
+          Object {
+            "component": <Toast
+              title="Success"
+              type="success"
+            />,
+            "description": <React.Fragment>
+              <p>
+                Use success toast to show that the action performed by the user was successful.
+              </p>
+              <AlertBox />
+            </React.Fragment>,
+            "options": Object {
+              "checkbox": Array [],
+            },
+            "tab": "Success",
+            "title": "Success toast",
+          },
+          Object {
+            "component": <Toast
+              title="Warning"
+              type="warning"
+            />,
+            "description": <React.Fragment>
+              <p>
+                The warning toast warns the user about situations that might be unfavorable. Don’t use this to present critical information.
+              </p>
+              <AlertBox />
+            </React.Fragment>,
+            "options": Object {
+              "checkbox": Array [],
+            },
+            "tab": "Warning",
+            "title": "Warning toast",
+          },
+          Object {
+            "component": <Toast
+              title="Error"
+              type="danger"
+            />,
+            "description": <React.Fragment>
+              <p>
+                Error toast informs the user of error and issues that may have occurred. They should let the user know what has happened and how the user can solve the issue.
+              </p>
+              <AlertBox />
+            </React.Fragment>,
+            "options": Object {
+              "checkbox": Array [],
+            },
+            "tab": "Error",
+            "title": "Error toast",
+          },
+        ],
+        "hideOptions": true,
+        "id": "overviewToast",
+        "tabsId": "overviewToastTabs",
+      }
+    }
+  />
   <ComponentPreview
     codeFigure={true}
     dangerousHTML={true}
     language="html"
   >
-    &lt;button onclick="toast({ html: 'I am a toast!' })" class="btn btn-primary"&gt;Toast!&lt;/button&gt;
+    &lt;button type="button" class="btn btn-primary" onclick="dg.toast({
+	type: 'neutral' 
+	html: '&lt;p&gt;&lt;b&gt;Info header&lt;/b&gt; Input informative alert information here, provide &lt;a href="#"&gt;link&lt;/a&gt; to solution or more info when possible.&lt;/p&gt;'})"&gt;
+Show neutral toast
+&lt;/button&gt;
   </ComponentPreview>
-  <ComponentPreview
-    language="html"
-    showCasePanel={true}
-  >
-    <button
-      className="btn btn-primary"
-      onClick={[Function]}
-      type="button"
+  <section>
+    <h3>
+      When to consider something else
+    </h3>
+    <ul
+      className="list list-bullet"
     >
-      Click for toast!
-    </button>
-  </ComponentPreview>
-  <Alert
-    type="warning"
-  >
-    <h5>
-      Content restriction
-    </h5>
+      <li>
+        Toasts are temporary notifications, therefore in cases where you want to display a more permanent message to the user, use the 
+        <Link
+          to="/components/alerts"
+        >
+          alert
+        </Link>
+         component instead which stays permanently on the screen.
+      </li>
+      <li>
+        Similarly, if you require action from the user before continuing to the next page, use a 
+        <Link
+          to="/components/dialog"
+        >
+          dialog
+        </Link>
+         component instead.
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h3>
+      How to use toast
+    </h3>
+    <div
+      className="slab slab-plain slab-border-success"
+    >
+      <span
+        className="h3"
+      >
+        Do
+      </span>
+      <div
+        className="toast-example-container col-sm-10 col-12 p-0"
+      >
+        <div
+          className="col-12 ml-auto mt-3 p-0"
+          id="toast-container"
+        >
+          <div
+            className="toast toast-neutral col-sm-11 col-12"
+          >
+            <i
+              className="material-icons"
+            >
+              info
+            </i>
+            <div
+              className="toast-content"
+            >
+              <b>
+                Short information message
+              </b>
+            </div>
+            <i
+              className="material-icons"
+            >
+              close
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
     <p>
-      Don’t put too much text in toasts as they are meant to be visible for only a short amount of time. Due to the time restriction you should also avoid putting vital information in them. A 
-      <Link
-        to="/components/sheet"
-      >
-        sheet
-      </Link>
-       or 
-      <Link
-        to="/components/dialog"
-      >
-        dialog
-      </Link>
-       is recommended when recieving input or relaying large amounts of information.
+      The positioning of the toast component should always be at the top right corner of the page on web and top center on mobile devices.
     </p>
-  </Alert>
-</Fragment>
-`;
-
-exports[`Components: Toast PremadeToasts calls toast on click 1`] = `
-<Fragment>
-  <h2
-    id="premade-toasts"
-  >
-    Premade toasts
-  </h2>
-  <p>
-    There are four premade toast styles other than the default one; 
-    <CodeTags
-      code="neutral"
-      type="secondary"
-    />
-    , 
-    <CodeTags
-      code="success"
-      type="secondary"
-    />
-    , 
-    <CodeTags
-      code="warning"
-      type="secondary"
-    />
-     and 
-    <CodeTags
-      code="danger"
-      type="secondary"
-    />
-    . Apply the desired one to the options object and be amazed!
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    dangerousHTML={true}
-    language="html"
-  >
-    &lt;button type="button" onclick="toast({ html: 'I am a neutral toast!', type: 'neutral' })" class="btn btn-primary"&gt;Neutral toast&lt;/button&gt;
-    &lt;button type="button" onclick="toast({ html: 'I am a success toast!', type: 'success' })" class="btn btn-primary"&gt;Success toast&lt;/button&gt;
-    &lt;button type="button" onclick="toast({ html: 'I am a warning toast!', type: 'warning' })" class="btn btn-primary"&gt;Warning toast&lt;/button&gt;
-    &lt;button type="button" onclick="toast({ html: 'I am a danger toast!', type: 'danger' })" class="btn btn-primary"&gt;Danger toast&lt;/button&gt;
-  </ComponentPreview>
-  <ComponentPreview
-    language="html"
-    showCasePanel={true}
-  >
-    <button
-      className="btn btn-primary"
-      onClick={[Function]}
-      type="button"
+    <div
+      className="slab slab-plain slab-border-error"
     >
-      Neutral toast
-    </button>
-    
-
-    <button
-      className="btn btn-primary"
-      onClick={[Function]}
-      type="button"
-    >
-      Success toast
-    </button>
-    
-
-    <button
-      className="btn btn-primary"
-      onClick={[Function]}
-      type="button"
-    >
-      Warning toast
-    </button>
-    
-
-    <button
-      className="btn btn-primary"
-      onClick={[Function]}
-      type="button"
-    >
-      Danger toast
-    </button>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Toast PremadeToasts renders 1`] = `
-<Fragment>
-  <h2
-    id="premade-toasts"
-  >
-    Premade toasts
-  </h2>
-  <p>
-    There are four premade toast styles other than the default one; 
-    <CodeTags
-      code="neutral"
-      type="secondary"
-    />
-    , 
-    <CodeTags
-      code="success"
-      type="secondary"
-    />
-    , 
-    <CodeTags
-      code="warning"
-      type="secondary"
-    />
-     and 
-    <CodeTags
-      code="danger"
-      type="secondary"
-    />
-    . Apply the desired one to the options object and be amazed!
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    dangerousHTML={true}
-    language="html"
-  >
-    &lt;button type="button" onclick="toast({ html: 'I am a neutral toast!', type: 'neutral' })" class="btn btn-primary"&gt;Neutral toast&lt;/button&gt;
-    &lt;button type="button" onclick="toast({ html: 'I am a success toast!', type: 'success' })" class="btn btn-primary"&gt;Success toast&lt;/button&gt;
-    &lt;button type="button" onclick="toast({ html: 'I am a warning toast!', type: 'warning' })" class="btn btn-primary"&gt;Warning toast&lt;/button&gt;
-    &lt;button type="button" onclick="toast({ html: 'I am a danger toast!', type: 'danger' })" class="btn btn-primary"&gt;Danger toast&lt;/button&gt;
-  </ComponentPreview>
-  <ComponentPreview
-    language="html"
-    showCasePanel={true}
-  >
-    <button
-      className="btn btn-primary"
-      onClick={[Function]}
-      type="button"
-    >
-      Neutral toast
-    </button>
-    
-
-    <button
-      className="btn btn-primary"
-      onClick={[Function]}
-      type="button"
-    >
-      Success toast
-    </button>
-    
-
-    <button
-      className="btn btn-primary"
-      onClick={[Function]}
-      type="button"
-    >
-      Warning toast
-    </button>
-    
-
-    <button
-      className="btn btn-primary"
-      onClick={[Function]}
-      type="button"
-    >
-      Danger toast
-    </button>
-  </ComponentPreview>
-</Fragment>
+      <span
+        className="h3"
+      >
+        Don't
+      </span>
+      <div
+        className="toast-example-container col-sm-11 col-12 my-5 mx-auto"
+      >
+        <div
+          className="toast-dont-example col-12 m-auto px-0"
+          id="toast-container"
+        >
+          <div
+            className="toast toast-neutral"
+          >
+            <i
+              className="material-icons"
+            >
+              info
+            </i>
+            <div
+              className="toast-content"
+            >
+              <b>
+                Short information message
+              </b>
+            </div>
+            <i
+              className="material-icons"
+            >
+              close
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>
+      Since the toast component provides updates on user actions and never critical information, it should not disturb/abrupt the user flow. As seen on the example above, it should not pop up in the middle of the screen interrupting the user. 
+    </p>
+  </section>
+</section>
 `;
 
 exports[`Components: Toast renders 1`] = `
 <DocContainer>
-  <p
-    className="lead"
+  <section
+    id="toast-doc"
   >
-    Toasts can be used as a way to give feedback to a user. Use it to display short messages that something has happened that will not be immediately apparent on the website. This can be everything from a server query to saving some user settings.
-  </p>
-  <Overview />
-  <Options />
-  <PremadeToasts />
-  <CustomHtml />
+    <p
+      className="lead"
+    >
+      The toast component is only displayed when the user has performed an action. The components informs the user of the status of their request, warning and potential errors.
+    </p>
+    <Overview />
+    <ContentGuidelines />
+    <DeveloperDocumentation />
+  </section>
 </DocContainer>
 `;
