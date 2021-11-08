@@ -7,7 +7,7 @@ import DialogComponent from "@components/Dialog";
 import CodeTags from "@components/CodeTags";
 
 import { dialog } from "@src/scripts/main";
-import NpmInformation from "~/src/App/docutils/NpmInformation";
+import NpmInformation from "@docutils/NpmInformation";
 
 const HowItWorks = () => (
     <>

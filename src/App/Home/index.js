@@ -74,7 +74,7 @@ const Home = () => {
                     </span>
                 </div>
 
-                {changeLogs.map(log => (
+                {changeLogs.slice(0, 4).map(log => (
                     <div key={log.version} className="row border-bottom pb-2 mt-4">
                         <div className="px-0 pb-2">Version {log.version}</div>
                         <div className="dg-changelog-description px-0">

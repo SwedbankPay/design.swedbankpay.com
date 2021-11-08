@@ -14,7 +14,7 @@ const Overview = () => (
     <section>
         <h2 id="overview">Overview</h2>
 
-        <img src={`${basename}img/swedbankpay/documentation/patterns/login-pattern-example.png`} className="d-none d-md-block w-100 border-left border-right border-bottom" alt="Image for login screen" />
+        <img src={`${basename}img/documentation/patterns/login-pattern-example.png`} className="d-none d-md-block w-100 border-left border-right border-bottom" alt="Image for login screen" />
         <div className="container-fluid d-block d-md-none border-left border-right border-bottom border-top-brand py-3">
             <LoginForm passwordId="login-password-example" emailId="login-email-example" checkboxId="login-checkbox-example" additionalText helpDesk logo alternativeLogins title="h1" productLabel="Merchant Admin" />
         </div>
@@ -32,7 +32,7 @@ const Overview = () => (
                             <LoginForm passwordId="password-input-example" emailId="email-input-example" checkboxId="checkbox-example" additionalText helpDesk logo alternativeLogins title="h1" productLabel="Merchant Admin" />
                         </div>
                     </div>{"\n"}
-                    <img src={`${basename}img/swedbankpay/documentation/patterns/login-img-example.png`} alt="Image for login screen" className="d-none d-lg-block col-7 px-0" />
+                    <img src={`${basename}img/documentation/patterns/login-img-example.png`} alt="Image for login screen" className="d-none d-lg-block col-7 px-0" />
                 </div>
             </div>
         </ComponentPreview>
@@ -63,7 +63,7 @@ const ContentGuidelines = () => (
         </ul>
         <section>
             <h3>Image</h3>
-            <img src={`${basename}img/swedbankpay/documentation/patterns/login-img-collection-example.png`} alt="Fitting images for login screen" className="w-100 mb-3" />
+            <img src={`${basename}img/documentation/patterns/login-img-collection-example.png`} alt="Fitting images for login screen" className="w-100 mb-3" />
             <p>The login form is always accompanied by a image on the right side on desktop devices, the image is hidden on smaller devices. Above are an example of some images that would be fitting to be used as login images, the most important thing to look out for is telling a story, especially when it comes to the product. “Who is this product for?” If it is an product for consumers outside of our organization, try to relate the image to that segment of the user. For more guidance on how to design with images and find our image library, refer to the <Link to="/identity/imagery">Imagery section</Link>.
             </p>
         </section>

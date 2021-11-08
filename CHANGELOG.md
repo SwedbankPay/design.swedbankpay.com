@@ -1,21 +1,34 @@
 # Changelog
 
-## [7.0.1] - 23.09.2021
+## [7.1.0] - 28.10.2021
+
+## Added
+- Patterns section
+- Login Pattern
+- Forms Pattern
+- Usage with NPM - section to applicable components
+- ```<nav>``` tags around Breadcrumbs
+- Node package upgrade - Split code into various bundles which makes it possible to import specific components and color variables
+
 
 ## Changed
-- Content on Links page
+- Landing page entry cards
+- Toast component and documentation page
+- Updated list of Products using DG
+
+## Removed
+- Disabled state on Links
+- Styling rule on ```<small>``` tag
+- Whitespace on Payex svg logo
 
 ## Fixed
-- Screen reader reading the bubble images on the home page
-- Border radius bug on a:focus
-- Topbar missing focus state
-- Input field > Autocomplete section not showing "autocomplete"-attribute
-- Content in component overview not centered when option menu was closed
-- A lot of links not pointing to the right direction
+- Alert boxes with no content, due to the last release, on Dialog page and datepicker page
+- Togglebox focus state bug
+- Issues with root-relative links when importing Stylesheet
+- Text-default color. Is now #512b2b
+- Weird looking top-border on Topbar
+- Bugs when nesting accordions.
+- Scrolling issues with Dialog
 
-- Safari bugs
-  - Line breaks and text ends up outside of tooltip
-  - Tabs scrollable shadow
-  - Help icon for checkbox and radio button was not align correct
-  - Default checkbox showed up on Togglebox
+
 

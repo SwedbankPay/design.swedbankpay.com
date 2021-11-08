@@ -1,6 +1,7 @@
 import React from "react";
 
 import CodeTags from "@components/CodeTags";
+import Alert from "@components/Alert";
 import { toast } from "@src/scripts/main";
 
 const Toast = ({ type, title }) => (
@@ -11,7 +12,7 @@ const Toast = ({ type, title }) => (
                 Input informative alert information here, provide <a href>link</a> to solution or more info when possible.
             </p>`,
         type
-    })}>{title} toast</button>
+    })}>Show {title} toast</button>
 );
 
 export const optionsTable = [
@@ -55,19 +56,23 @@ export const optionsTable = [
     }
 ];
 
+const AlertBox = () => (
+    <Alert id="toast-overview-alert" type="informative" icon={"info"} text={<p><b>Static code example</b> The code viewer shows an example on how to trigger a neutral toast. Change the type for warning/error/success.</p>}/>
+);
+
 export const toastShowCase = {
     id: "overviewToast",
     tabsId: "overviewToastTabs",
     hideOptions: true,
     elements: [
         {
-            tab: "Information",
-            component: <Toast type="neutral" title="Information" />,
+            tab: "Neutral",
+            component: <Toast type="neutral" title="Neutral" />,
             options: {
                 checkbox: []
             },
-            title: "Information toast",
-            description: "Use this toast when you want to inform the user. The message should clearly state and explain what the information is about and in some cases a link can also be used to direct the user towards continued reading."
+            title: "Neutral toast",
+            description: "Use this toast to inform the user about something, in some cases a link can be used to direct the user towards continued reading. For information on how to trigger a toast, read more under Developer documentation."
         },
         {
             tab: "Success",
@@ -76,7 +81,10 @@ export const toastShowCase = {
                 checkbox: []
             },
             title: "Success toast",
-            description: "Use success toast when the action performed by the user has returned a success."
+            description: <>
+                <p>Use success toast to show that the action performed by the user was successful.</p>
+                <AlertBox />
+            </>
         },
         {
             tab: "Warning",
@@ -85,7 +93,10 @@ export const toastShowCase = {
                 checkbox: []
             },
             title: "Warning toast",
-            description: "The warning toast warns the user about situations that might be unfavorable. Don’t use this to present critical information."
+            description: <>
+                <p>The warning toast warns the user about situations that might be unfavorable. Don’t use this to present critical information.</p>
+                <AlertBox />
+            </>
         },
         {
             tab: "Error",
@@ -94,7 +105,10 @@ export const toastShowCase = {
                 checkbox: []
             },
             title: "Error toast",
-            description: "Error toast informs the user of error and issues that may have occurred, they should let the user know what has happened and how the user can solve the issue."
+            description: <>
+                <p>Error toast informs the user of error and issues that may have occurred. They should let the user know what has happened and how the user can solve the issue.</p>
+                <AlertBox />
+            </>
         }
     ]
 };

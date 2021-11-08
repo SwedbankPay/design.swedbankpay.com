@@ -7,7 +7,7 @@ import CodeTags from "@components/CodeTags";
 import RangesliderComponent from "~/src/App/components/Rangeslider";
 
 import { rangeslider } from "@src/scripts/main";
-import NpmInformation from "~/src/App/docutils/NpmInformation";
+import NpmInformation from "@docutils/NpmInformation";
 
 const Overview = () => (
     <section>

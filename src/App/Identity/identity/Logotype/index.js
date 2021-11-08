@@ -204,10 +204,10 @@ const HorizontalLogo = () => (
         <h2 id="horizontal-logo">Horizontal logo</h2>
         <p></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <img src={`${basename}img/payex-logo.svg`} alt="PayEx horizontal logo"/>
+            <img src={`${basename}designguide/assets/payex-logo.svg`} alt="PayEx horizontal logo"/>
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <img src={`${basename}img/payex-logo.png`} alt="PayEx horizontal logo"/>
+            <img src={`${basename}designguide/assets/payex-logo.png`} alt="PayEx horizontal logo"/>
         </ComponentPreview>
     </>
 );
@@ -260,8 +260,8 @@ const Favicon = () => (
             <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href={`${basename}/icons/apple-touch-startup-image-768x1004.png`} />
             <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href={`${basename}/icons/apple-touch-startup-image-1536x2008.png`} />
             <link rel="icon" type="image/png" sizes="16x16" href={`${basename}/icons/favicon-16x16.png`} />
-            <link rel="icon" type="image/png" sizes="228x228" href={`${basename}/icons/coast-228x228.png`} />
             <link rel="icon" type="image/png" sizes="32x32" href={`${basename}/icons/favicon-32x32.png`} />
+            <link rel="icon" type="image/png" sizes="48x48" href={`${basename}/icons/favicon-48x48.png`} />
             <link rel="manifest" href={`${basename}/icons/manifest.json`} />
             <link rel="shortcut icon" href={`${basename}/icons/favicon.ico`} />
             <meta name="apple-mobile-web-app-capable" content="yes" />

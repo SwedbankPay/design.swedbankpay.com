@@ -60,7 +60,7 @@ const LoginForm = ({ additionalText,
 
     return (
         <>
-            {productLabel && <span className="extra-small text-black-50">{productLabel}</span>}{"\n"}
+            {productLabel && <span className="extra-small text-secondary-light-1">{productLabel}</span>}{"\n"}
             {title && <span className={`${title} mb-4 mt-2 d-block`}>Log in</span>}{"\n"}
             {alternativeLogins && <AlternativeLogins />}
             {error && <Alert icon="cancel" type="danger" text={<p><b>Error.</b> Incorrect password</p>}/>}

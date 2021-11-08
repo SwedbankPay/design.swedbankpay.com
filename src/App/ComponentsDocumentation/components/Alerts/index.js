@@ -6,7 +6,7 @@ import AlertComponent from "@components/Alert";
 import CodeTags from "@components/CodeTags";
 import { alertsShowCase } from "./constants";
 import { alert } from "@src/scripts/main";
-import NpmInformation from "~/src/App/docutils/NpmInformation";
+import NpmInformation from "@docutils/NpmInformation";
 
 const Overview = () => (
     <section>

@@ -304,22 +304,27 @@ exports[`Components: Toast Overview renders 1`] = `
         "elements": Array [
           Object {
             "component": <Toast
-              title="Information"
+              title="Neutral"
               type="neutral"
             />,
-            "description": "Use this toast when you want to inform the user. The message should clearly state and explain what the information is about and in some cases a link can also be used to direct the user towards continued reading.",
+            "description": "Use this toast to inform the user about something, in some cases a link can be used to direct the user towards continued reading. For information on how to trigger a toast, read more under Developer documentation.",
             "options": Object {
               "checkbox": Array [],
             },
-            "tab": "Information",
-            "title": "Information toast",
+            "tab": "Neutral",
+            "title": "Neutral toast",
           },
           Object {
             "component": <Toast
               title="Success"
               type="success"
             />,
-            "description": "Use success toast when the action performed by the user has returned a success.",
+            "description": <React.Fragment>
+              <p>
+                Use success toast to show that the action performed by the user was successful.
+              </p>
+              <AlertBox />
+            </React.Fragment>,
             "options": Object {
               "checkbox": Array [],
             },
@@ -331,7 +336,12 @@ exports[`Components: Toast Overview renders 1`] = `
               title="Warning"
               type="warning"
             />,
-            "description": "The warning toast warns the user about situations that might be unfavorable. Don’t use this to present critical information.",
+            "description": <React.Fragment>
+              <p>
+                The warning toast warns the user about situations that might be unfavorable. Don’t use this to present critical information.
+              </p>
+              <AlertBox />
+            </React.Fragment>,
             "options": Object {
               "checkbox": Array [],
             },
@@ -343,7 +353,12 @@ exports[`Components: Toast Overview renders 1`] = `
               title="Error"
               type="danger"
             />,
-            "description": "Error toast informs the user of error and issues that may have occurred, they should let the user know what has happened and how the user can solve the issue.",
+            "description": <React.Fragment>
+              <p>
+                Error toast informs the user of error and issues that may have occurred. They should let the user know what has happened and how the user can solve the issue.
+              </p>
+              <AlertBox />
+            </React.Fragment>,
             "options": Object {
               "checkbox": Array [],
             },
@@ -365,7 +380,7 @@ exports[`Components: Toast Overview renders 1`] = `
     &lt;button type="button" class="btn btn-primary" onclick="dg.toast({
 	type: 'neutral' 
 	html: '&lt;p&gt;&lt;b&gt;Info header&lt;/b&gt; Input informative alert information here, provide &lt;a href="#"&gt;link&lt;/a&gt; to solution or more info when possible.&lt;/p&gt;'})"&gt;
-Neutral toast
+Show neutral toast
 &lt;/button&gt;
   </ComponentPreview>
   <section>

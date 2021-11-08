@@ -33,19 +33,14 @@ import { sheet } from "@swedbankpay/design-guide"
 sheet.init();
 ```
 
-#### CSS
-
-```css
-@import url("@swedbankpay/design-guide/dist/designguide/styles/swedbankpay.css");
+#### Less
+Make sure your bundler can handle `.less` files
+```less
+@import url("@swedbankpay/design-guide/src/less/swedbankpay.less");
 ```
+Our `.less` files use certain assets such as icons and fonts. These assets will automagically be handled by your bundler and be part of your own output. Usually this is your `/dist` folder. Your compiled `.css` file will then have proper references and urls to assets within your own `/dist` folder.
 
-#### Assets
-
-When using the node package you also need to host assets such as fonts and icons. Copy the files at `@swedbankpay/design-guide/dist/designguide` to your static files.
-
-E.g. fonts should be available at `yourdomain.com/designguide/fonts` 
-
-Check out the documentation for more information.
+By importing the `.less` file, you will also get access to variables such as `@brand-primary`
 
 ## Getting started as a developer
 

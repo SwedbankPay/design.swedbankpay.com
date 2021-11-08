@@ -121,7 +121,6 @@
         z-index: @zindex-sheet-backdrop;
         background: transparent;
         display: none;
-        border-top: solid 1px @brand-bg-gray;
 
         .sidebar {
             display: none;
@@ -294,6 +293,7 @@
 
         &.topbar-nav-open {
             animation: fade-in 0.5s forwards;
+            border-top: solid 1px @brand-bg-gray;
 
             .topbar-link-container {
                 animation: slide-in 0.5s ease forwards;

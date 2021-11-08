@@ -11,11 +11,5 @@ log(chalk.yellow(`
 `));
 
 log(chalk.green(
-    `Remember to copy our assets to your static folder! Recommended with a ${
-        chalk.green.underline.bold("postinstall")
-    } script!`
-));
-
-log(chalk.green(
     `Check out the documentation for more information. ${chalk.blue.underline.bold("https://design.swedbankpay.com")}`
 ));

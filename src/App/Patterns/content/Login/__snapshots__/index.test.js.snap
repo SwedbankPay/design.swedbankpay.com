@@ -40,21 +40,12 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
     >
       The 
       <b>
-        language selector action list
-      </b>
-       is used to change the language on the login page, default language should be based on the users IP address. 
-    </li>
-    <li
-      key="1"
-    >
-      The 
-      <b>
         Product label
       </b>
        should display the name of the product the user is about to log in to.
     </li>
     <li
-      key="2"
+      key="1"
     >
       <b>
         Log in
@@ -62,7 +53,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
        should always be the title of the login form.
     </li>
     <li
-      key="3"
+      key="2"
     >
       A section of links to 
       <b>
@@ -71,7 +62,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
        can be added. Use a divider to separate it from the standard login section. It can be placed either before or after depending on the most common or desired way to login to the specific portal. 
     </li>
     <li
-      key="4"
+      key="3"
     >
       The 
       <b>
@@ -80,7 +71,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
        varies depending on the type of login. The amount of required fields  differs depending on the authentication method. 
     </li>
     <li
-      key="5"
+      key="4"
     >
       <b>
         Remember me
@@ -88,15 +79,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
        is an optional field. When it is enabled it saves the data and present prefilled fields the next time the user is about to log in. 
     </li>
     <li
-      key="6"
-    >
-      <b>
-        Forgot your password
-      </b>
-       is only used for email login. It redirects the user to a page where he/she can recover their password.
-    </li>
-    <li
-      key="7"
+      key="5"
     >
       <b>
         Button
@@ -104,7 +87,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
        is used to allow the user to perform the login request.
     </li>
     <li
-      key="8"
+      key="6"
     >
       <b>
         Additional help text
@@ -112,7 +95,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
        is optional and can be added underneath the button in order to provide the user with additional help or guidelines.
     </li>
     <li
-      key="9"
+      key="7"
     >
       Login forms should always have the 
       <b>
@@ -128,7 +111,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
     <img
       alt="Fitting images for login screen"
       className="w-100 mb-3"
-      src="/TEST/img/swedbankpay/documentation/patterns/login-img-collection-example.png"
+      src="/TEST/img/documentation/patterns/login-img-collection-example.png"
     />
     <p>
       The login form is always accompanied by a image on the right side on desktop devices, the image is hidden on smaller devices. Above are an example of some images that would be fitting to be used as login images, the most important thing to look out for is telling a story, especially when it comes to the product. “Who is this product for?” If it is an product for consumers outside of our organization, try to relate the image to that segment of the user. For more guidance on how to design with images and find our image library, refer to the 
@@ -221,7 +204,7 @@ exports[`Forms: index Overview renders 1`] = `
   <img
     alt="Image for login screen"
     className="d-none d-md-block w-100 border-left border-right border-bottom"
-    src="/TEST/img/swedbankpay/documentation/patterns/login-pattern-example.png"
+    src="/TEST/img/documentation/patterns/login-pattern-example.png"
   />
   <div
     className="container-fluid d-block d-md-none border-left border-right border-bottom border-top-brand py-3"
@@ -284,7 +267,7 @@ exports[`Forms: index Overview renders 1`] = `
         <img
           alt="Image for login screen"
           className="d-none d-lg-block col-7 px-0"
-          src="/TEST/img/swedbankpay/documentation/patterns/login-img-example.png"
+          src="/TEST/img/documentation/patterns/login-img-example.png"
         />
       </div>
     </div>
