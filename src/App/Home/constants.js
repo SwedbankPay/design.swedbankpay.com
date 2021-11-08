@@ -23,10 +23,5 @@ export const changeLogs = [
         version: "6.0.1",
         title: "Bugfixes and security updates",
         text: "Internet explorer needed a tiny touch of 'love', it's nice to be safe with new security package updates, and the main css file is smaller. Yay."
-    },
-    {
-        version: "6.0.0",
-        title: "Splitting up forms component",
-        text: "Long time no see! We are back with a bigger update regarding the forms page and its components. In order make it easier to locate the various components (checkbox, select, radio buttons etc) that were included under the name “forms”, you will now be able to find components with a slightly updated design on their own pages with more detailed explanations and guides of usage!"
     }
 ];
