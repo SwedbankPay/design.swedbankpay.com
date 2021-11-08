@@ -1,0 +1,2 @@
+(self.webpackChunk_swedbankpay_design_guide=self.webpackChunk_swedbankpay_design_guide||[]).push([[4509],{15961:function(e,a,s){"use strict";s.r(a);var n=s(78709),t=s(16526),c=function(e){var a=e.className,s=e.children;return n.createElement("footer",{className:"page-footer".concat(a?" ".concat(a):"")},s||n.createElement("p",{className:"page-footer-rights"},"© Swedbank Pay"))};c.propTypes={className:s.n(t)().string},a.default=c}}]);
+//# sourceMappingURL=doc-route.chunk_107.js.map
