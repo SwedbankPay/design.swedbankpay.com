@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer } from "@docutils";
-import AlertComponent from "@components/Alert";
+import Alert from "@components/Alert";
 import CodeTags from "@components/CodeTags";
 import { alertsShowCase } from "./constants";
 import { alert } from "@src/scripts/main";
@@ -36,8 +36,8 @@ const HowTo = () => (
         <h3>How to align local alerts</h3>
         <div className="slab slab-plain slab-border-success">
             <span className="h3">Do</span>
-            <AlertComponent type="informative" icon="info" text={<p><b>Best practices:</b> To minimize the risk for a challenge request, it’s recommended that you add as much data as possible to the risk indicator object in the request below.</p>} />
-            <AlertComponent type="warning" icon="warning" text={<p><b>GDPR sensitive data:</b> If it is necessary to use GDPR sensitive data, it must be hashed and then the hash can be used in requests towards Swedbank Pay.</p>} />
+            <Alert type="informative" icon="info" text={<p><b>Best practices:</b> To minimize the risk for a challenge request, it’s recommended that you add as much data as possible to the risk indicator object in the request below.</p>} />
+            <Alert type="warning" icon="warning" text={<p><b>GDPR sensitive data:</b> If it is necessary to use GDPR sensitive data, it must be hashed and then the hash can be used in requests towards Swedbank Pay.</p>} />
         </div>
         <p>If multiple alerts are displayed subsequently they should be arranged vertically in consideration to readability.</p>
 
@@ -45,10 +45,10 @@ const HowTo = () => (
             <span className="h3">Don&apos;t</span>
             <div className="d-flex">
                 <div className="flex-fill mr-1">
-                    <AlertComponent type="informative" icon="info" text={<p><b>Best practices:</b> To minimize the risk for a challenge request, it’s recommended that you add as much data as possible to the risk indicator object in the request below.</p>} />
+                    <Alert type="informative" icon="info" text={<p><b>Best practices:</b> To minimize the risk for a challenge request, it’s recommended that you add as much data as possible to the risk indicator object in the request below.</p>} />
                 </div>
                 <div className="flex-fill ml-1">
-                    <AlertComponent type="warning" icon="warning" text={<p><b>GDPR sensitive data:</b> If it is necessary to use GDPR sensitive data, it must be hashed and then the hash can be used in requests towards Swedbank Pay.</p>} />
+                    <Alert type="warning" icon="warning" text={<p><b>GDPR sensitive data:</b> If it is necessary to use GDPR sensitive data, it must be hashed and then the hash can be used in requests towards Swedbank Pay.</p>} />
                 </div>
             </div>
         </div>
@@ -72,7 +72,7 @@ const ContentGuidelines = () => (
         <h2 id="content-guidelines">Content guidelines</h2>
         <div className="slab slab-plain py-4">
             <div className="d-flex justify-content-center align-items-center pt-3">
-                <AlertComponent type="danger" icon="info" text={<p><b>Error title:</b> Content text <a href="" >link</a></p>} />
+                <Alert type="danger" icon="info" text={<p><b>Error title:</b> Content text <a href="" >link</a></p>} />
             </div>
         </div>
 
