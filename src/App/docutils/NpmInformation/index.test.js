@@ -8,13 +8,6 @@ describe("Utilities: NpmInformation", () => {
         expect(NpmInformation).toBeDefined();
     });
 
-    it("renders", () => {
-        const wrapper = shallow(<NpmInformation/>);
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains("undefined.init()")).toEqual(true);
-    });
-
     it("renders with componentName-prop", () => {
         const wrapper = shallow(<NpmInformation componentName="test"/>);
 
