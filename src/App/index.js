@@ -30,7 +30,7 @@ const ScrollToTopComponent = withRouter(ScrollToTop);
 
 const Home = React.lazy(() => import(/* webpackChunkName: "home.chunk" */ "./Home/index.js"));
 
-const GettingStarted = React.lazy(() => import(/* webpackChunkName: "getting-started.chunk" */ "./GettingStarted/index.js"));
+const GetStarted = React.lazy(() => import(/* webpackChunkName: "get-started.chunk" */ "./GetStarted/index.js"));
 
 const Components = React.lazy(() => import(/* webpackChunkName: "components.chunk" */ "./ComponentsDocumentation/index.js"));
 
@@ -78,7 +78,7 @@ class App extends Component {
                                 <Suspense fallback={<LoadingComponent />}>
                                     <Switch>
                                         <Route exact path="/" component={Home} />
-                                        <Route path="/get-started" component={GettingStarted} />
+                                        <Route path="/get-started" component={GetStarted} />
                                         <Route path="/components" component={Components} />
                                         <Route path="/identity" component={Identity} />
                                         <Route path="/examples" component={Examples} />
