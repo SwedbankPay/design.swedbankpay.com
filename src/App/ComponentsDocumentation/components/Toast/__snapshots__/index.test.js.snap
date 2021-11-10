@@ -43,11 +43,11 @@ exports[`Components: Toast Content guidelines renders 1`] = `
     className="list list-bullet"
   >
     <li>
-      The 
+      The toast may have a bolded title to give a quick overview of the notification. It’s important that the 
       <b>
         message
       </b>
-       for toast should reflect the type of the toast, if it is informative it should explain and link the user further. If it is an error toast, it should clearly explain what the issue is and explain how the user can solve the problem.
+       reflect the toast type, e.g if it is an error toast, it should clearly state the issue and if possible explain how to solve the problem. 
     </li>
   </ul>
 </section>
@@ -66,7 +66,7 @@ exports[`Components: Toast Developer documentation renders 1`] = `
       code="dg.toast()"
       type="secondary"
     />
-     on an element with the desired options.
+     with the desired options.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -270,7 +270,16 @@ exports[`Components: Toast Developer documentation renders 1`] = `
       import { toast } from "@swedbankpay/design-guide"; 
       
 
-      toast();
+      toast({
+      
+	type: 'neutral' 
+	html: '&lt;p&gt;
+		&lt;b&gt;Info header&lt;/b&gt;
+		 Input informative alert information here, provide &lt;a href="#"&gt;link&lt;/a&gt; to solution or more info when possible.
+	&lt;/p&gt;'
+      
+
+      })
     </ComponentPreview>
     <ComponentPreview
       codeFigure={true}
@@ -454,7 +463,7 @@ Show neutral toast
       </div>
     </div>
     <p>
-      The positioning of the toast component should always be at the top right corner of the page on web and top center on mobile devices.
+      The positioning of the toast component should always be at the top right corner of the page on desktop and top center on mobile devices.
     </p>
     <div
       className="slab slab-plain slab-border-error"
@@ -496,7 +505,7 @@ Show neutral toast
       </div>
     </div>
     <p>
-      Since the toast component provides updates on user actions and never critical information, it should not disturb/abrupt the user flow. As seen on the example above, it should not pop up in the middle of the screen interrupting the user. 
+      The toast component should not pop up in the middle of the screen and interrupt the user flow. 
     </p>
   </section>
 </section>

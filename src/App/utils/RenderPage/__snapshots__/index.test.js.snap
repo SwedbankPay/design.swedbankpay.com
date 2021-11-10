@@ -58,6 +58,7 @@ exports[`Utilities: RenderPage renders 1`] = `
           ]
         }
         title="Get started"
+        wideCard={true}
       />
       <RenderRoutes
         appFolder="Identity"

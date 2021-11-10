@@ -119,7 +119,8 @@ exports[`Documentation: Alerts Overview renders 1`] = `
               text={
                 <p>
                   <b>
-                    Error title:
+                    Error
+                     title:
                   </b>
                    Input informative alert message here, provide link to solution or more info when 
                   <a
@@ -127,6 +128,7 @@ exports[`Documentation: Alerts Overview renders 1`] = `
                   >
                     possible
                   </a>
+                  .
                 </p>
               }
               type="danger"
@@ -157,7 +159,8 @@ exports[`Documentation: Alerts Overview renders 1`] = `
               text={
                 <p>
                   <b>
-                    Error title:
+                    Warning
+                     title:
                   </b>
                    Input informative alert message here, provide link to solution or more info when 
                   <a
@@ -165,6 +168,7 @@ exports[`Documentation: Alerts Overview renders 1`] = `
                   >
                     possible
                   </a>
+                  .
                 </p>
               }
               type="warning"
@@ -195,7 +199,8 @@ exports[`Documentation: Alerts Overview renders 1`] = `
               text={
                 <p>
                   <b>
-                    Error title:
+                    Informative
+                     title:
                   </b>
                    Input informative alert message here, provide link to solution or more info when 
                   <a
@@ -203,6 +208,7 @@ exports[`Documentation: Alerts Overview renders 1`] = `
                   >
                     possible
                   </a>
+                  .
                 </p>
               }
               type="informative"
@@ -233,7 +239,8 @@ exports[`Documentation: Alerts Overview renders 1`] = `
               text={
                 <p>
                   <b>
-                    Error title:
+                    Success
+                     title:
                   </b>
                    Input informative alert message here, provide link to solution or more info when 
                   <a
@@ -241,6 +248,7 @@ exports[`Documentation: Alerts Overview renders 1`] = `
                   >
                     possible
                   </a>
+                  .
                 </p>
               }
               type="success"

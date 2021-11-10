@@ -15,7 +15,9 @@ exports[`Component: Checkbox - renders 1`] = `
     />
     
 
-    <label />
+    <label
+      className="d-block"
+    />
     
 
   </div>
@@ -356,7 +358,9 @@ exports[`Component: Checkbox - renders with the checked attribute 1`] = `
     />
     
 
-    <label />
+    <label
+      className="d-block"
+    />
     
 
   </div>
@@ -378,7 +382,9 @@ exports[`Component: Checkbox - renders with the disabled attribute 1`] = `
     />
     
 
-    <label />
+    <label
+      className="d-block"
+    />
     
 
   </div>
@@ -401,6 +407,7 @@ exports[`Component: Checkbox - renders with the specified id 1`] = `
     
 
     <label
+      className="d-block"
       htmlFor="test"
     />
     
@@ -425,6 +432,7 @@ exports[`Component: Checkbox - renders with the specified id and label 1`] = `
     
 
     <label
+      className="d-block"
       htmlFor="test"
     >
       test
