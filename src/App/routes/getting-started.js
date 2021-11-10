@@ -6,6 +6,7 @@ module.exports = [
             rotate: true
         },
         path: "/get-started",
+        wideCard: true,
         redirect: "/get-started/introduction",
         appFolder: "GettingStarted",
         routes: [
