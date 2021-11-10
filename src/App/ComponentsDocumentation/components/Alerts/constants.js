@@ -1,15 +1,13 @@
 import React from "react";
 import Alert from "@components/Alert";
 
-const exampleText = <p><b>Error title:</b> Input informative alert message here, provide link to solution or more info when <a href="#">possible</a></p>;
-
 export const alertsShowCase = {
     id: "overviewAlert",
     tabsId: "overviewAlertTabs",
     elements: [
         {
             tab: "Error",
-            component: <Alert type="danger" icon="cancel" text={exampleText} />,
+            component: <Alert type="danger" icon="cancel" text={<p><b>Error title:</b> Input informative alert message here, provide link to solution or more info when <a href="#">possible</a></p>} />,
             options: {
                 checkbox: [
                     {
@@ -31,7 +29,7 @@ export const alertsShowCase = {
         },
         {
             tab: "Warning",
-            component: <Alert type="warning" icon="warning" text={exampleText} />,
+            component: <Alert type="warning" icon="warning" text={<p><b>Warning title:</b> Input informative alert message here, provide link to solution or more info when <a href="#">possible</a></p>} />,
             options: {
                 checkbox: [
                     {
@@ -53,7 +51,7 @@ export const alertsShowCase = {
         },
         {
             tab: "Informative",
-            component: <Alert type="informative" icon="info" text={exampleText}/>,
+            component: <Alert type="informative" icon="info" text={<p><b>Informative title:</b> Input informative alert message here, provide link to solution or more info when <a href="#">possible</a></p>}/>,
             options: {
                 checkbox: [
                     {
@@ -75,7 +73,7 @@ export const alertsShowCase = {
         },
         {
             tab: "Success",
-            component: <Alert type="success" icon="check_circle" text={exampleText} />,
+            component: <Alert type="success" icon="check_circle" text={<p><b>Success title:</b> Input informative alert message here, provide link to solution or more info when <a href="#">possible</a></p>} />,
             options: {
                 checkbox: [
                     {
