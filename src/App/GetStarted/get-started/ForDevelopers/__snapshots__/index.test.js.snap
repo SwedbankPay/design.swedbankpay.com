@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GettingStarted: ForDevelopers Contributing renders 1`] = `
+exports[`GetStarted: ForDevelopers Contributing renders 1`] = `
 <section>
   <h2
     id="contributing"
@@ -54,7 +54,7 @@ exports[`GettingStarted: ForDevelopers Contributing renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: ForDevelopers DiscoverMore renders 1`] = `
+exports[`GetStarted: ForDevelopers DiscoverMore renders 1`] = `
 <section>
   <h2
     id="discover-more"
@@ -137,7 +137,7 @@ exports[`GettingStarted: ForDevelopers DiscoverMore renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: ForDevelopers Feedback renders 1`] = `
+exports[`GetStarted: ForDevelopers Feedback renders 1`] = `
 <section>
   <h2
     id="feedback"
@@ -154,7 +154,7 @@ exports[`GettingStarted: ForDevelopers Feedback renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: ForDevelopers GridAndBreakpoints renders 1`] = `
+exports[`GetStarted: ForDevelopers GridAndBreakpoints renders 1`] = `
 <section>
   <h2
     id="grid-and-breakpoints"
@@ -270,7 +270,7 @@ exports[`GettingStarted: ForDevelopers GridAndBreakpoints renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
+exports[`GetStarted: ForDevelopers Installation renders 1`] = `
 <section>
   <h2
     id="installation"
@@ -571,7 +571,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: ForDevelopers renders 1`] = `
+exports[`GetStarted: ForDevelopers renders 1`] = `
 <DocContainer>
   <p
     className="lead mb-5"

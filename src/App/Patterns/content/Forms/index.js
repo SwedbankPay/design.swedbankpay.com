@@ -44,14 +44,14 @@ const ContentGuidelines = () => (
             <div className="col-12 col-sm-6 m-auto">
                 <h3 className="mb-0">Title</h3>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
-                <InputGroup id="guideline-input-example" type="text" label="Input label" placeholder="Placeholer text" tooltip className="mb-0"/>
+                <InputGroup id="guideline-input-example" type="text" label="Input label" placeholder="Placeholder text" tooltip className="mb-0"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small">24px</div>
                 <InputGroup type="select" label="Input label" placeholder="Select an option" selectOptions={["Option 1", "Option 2"]} optional className="mb-0"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small">24px</div>
-                <RadioButton groupTitle="Input label" name="guidelines-radio-example" group options={radioOptions} className="mb-0"/>
+                <RadioButton groupTitle="Input label" name="guidelines-radio-example" group options={radioOptions} className="mb-0 legend-example"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
-                <div className="d-flex justify-content-between">
-                    <Button type="primary" label="Submit"/>
+                <div className="d-flex">
+                    <Button type="primary" label="Submit" className="mr-3"/>
                     <Button type="link" label="Cancel"/>
                 </div>
             </div>

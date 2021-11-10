@@ -1,15 +1,15 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import GettingStarted from "./index";
+import GetStarted from "./index";
 
-describe("GettingStarted: index", () => {
+describe("GetStarted: index", () => {
     it("is defined", () => {
-        expect(GettingStarted).toBeDefined();
+        expect(GetStarted).toBeDefined();
     });
 
     it("renders", () => {
-        const wrapper = shallow(<GettingStarted />);
+        const wrapper = shallow(<GetStarted />);
 
         expect(wrapper).toMatchSnapshot();
     });

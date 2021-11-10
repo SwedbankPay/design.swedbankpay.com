@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Introduction, { GetStarted, WhatIsDG, UsingDG, OpenSimpleCaring } from "./index";
 
-describe("GettingStarted: Introduction", () => {
+describe("GetStarted: Introduction", () => {
     it("is defined", () => {
         expect(Introduction).toBeDefined();
     });

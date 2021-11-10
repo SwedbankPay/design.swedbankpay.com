@@ -85,13 +85,13 @@ export const formsShowCase = {
                         <legend>
                             <span className="h2">Step two</span>
                         </legend>
-                        <div className="row mb-4">
+                        <div className="row mb-2">
                             <InputGroup id="multi-form-example-1" type="text" label="Label" className="col-12 col-sm-6"/>
                             <InputGroup id="multi-form-example-2" type="text" label="Label" className="col-12 col-sm-6"/>
                         </div>
                         <InputGroup id="multi-form-example-3" type="text" label="Label" className="mb-4"/>
-                        <RadioButton group groupTitle="Input label" options={radioOptions} name="multi-step-radio-example" className="mb-4"/>
-                        <div className="d-flex justify-content-between mt-2">
+                        <RadioButton group groupTitle="Input label" options={radioOptions} name="multi-step-radio-example" className=" mb-4"/>
+                        <div className="d-flex justify-content-between pt-2">
                             <Button type="secondary" icon="arrow_back" label="Back"/>
                             <Button type="primary" label="Next step"/>
                         </div>

@@ -38,7 +38,7 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
                 : <>
                     <div className={`checkbox${className ? ` ${className}` : ""}${errorMessage ? " has-error" : ""}`}>{"\n"}
                         <input {...attrs} />{"\n"}
-                        <label htmlFor={id}>{label}</label>{"\n"}
+                        <label htmlFor={id} className="d-block">{label}</label>{"\n"}
                     </div>
                     {errorMessage ? <div className="help-block" data-error={errorMessage || null}></div> : null}
                 </>
