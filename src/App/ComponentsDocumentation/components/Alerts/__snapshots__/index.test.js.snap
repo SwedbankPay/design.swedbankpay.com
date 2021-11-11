@@ -119,7 +119,7 @@ exports[`Documentation: Alerts Overview renders 1`] = `
               text={
                 <p>
                   <b>
-                    Error
+                    Danger
                      title:
                   </b>
                    Input informative alert message here, provide link to solution or more info when 
@@ -150,8 +150,8 @@ exports[`Documentation: Alerts Overview renders 1`] = `
                 },
               ],
             },
-            "tab": "Error",
-            "title": "Error alert",
+            "tab": "Danger",
+            "title": "Danger alert",
           },
           Object {
             "component": <Alert

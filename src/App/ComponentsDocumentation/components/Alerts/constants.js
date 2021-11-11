@@ -10,8 +10,8 @@ export const alertsShowCase = {
     tabsId: "overviewAlertTabs",
     elements: [
         {
-            tab: "Error",
-            component: <Alert type="danger" icon="cancel" text={titleBuilder("Error")} />,
+            tab: "Danger",
+            component: <Alert type="danger" icon="cancel" text={titleBuilder("Danger")} />,
             options: {
                 checkbox: [
                     {
@@ -28,7 +28,7 @@ export const alertsShowCase = {
                     }
                 ]
             },
-            title: "Error alert",
+            title: "Danger alert",
             description: "Use this alert to let the user know that something went wrong. The message should clearly state the problem and if possible provide information on how to fix it."
         },
         {

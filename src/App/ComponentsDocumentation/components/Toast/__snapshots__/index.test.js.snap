@@ -359,20 +359,20 @@ exports[`Components: Toast Overview renders 1`] = `
           },
           Object {
             "component": <Toast
-              title="Error"
+              title="Danger"
               type="danger"
             />,
             "description": <React.Fragment>
               <p>
-                Error toast informs the user of error and issues that may have occurred. They should let the user know what has happened and how the user can solve the issue.
+                Danger toast informs the user of error and issues that may have occurred. They should let the user know what has happened and how the user can solve the issue.
               </p>
               <AlertBox />
             </React.Fragment>,
             "options": Object {
               "checkbox": Array [],
             },
-            "tab": "Error",
-            "title": "Error toast",
+            "tab": "Danger",
+            "title": "Danger toast",
           },
         ],
         "hideOptions": true,

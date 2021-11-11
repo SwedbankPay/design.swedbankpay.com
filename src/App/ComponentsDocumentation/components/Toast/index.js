@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 import { toastShowCase, optionsTable } from "./constants";
-import { toast } from "~/src/scripts/main";
 
 const Overview = () => (
     <section>
