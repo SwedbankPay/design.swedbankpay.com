@@ -30,27 +30,34 @@ const Home = () => {
                 <p className="front-page-lead">Here you can find components and guidelines to help you  and your team work more efficiently and create a cohesive user experience through all our products and touch points.</p>
 
                 <div className="row dg-cards-container mt-4">
-                    {routes.map(route => (
-                        route.title !== "Get started" && <div key={route.title} className="col-12 col-sm-6 col-lg-3 d-flex">
-                            <Link to={route.path} className="cards cards-primary">
-                                <div className="cards-icon">
-                                    <i className="material-icons-outlined" >{route.icon.name}</i>
-                                </div>
-                                <div className="cards-content">
-                                    <span className="h4">{route.title === "Utilities" ? "Utility" : route.title }</span>
-                                    <span>{route.entryCardText}</span>
-                                </div>
-                                <i className="material-icons">arrow_forward</i>
-                            </Link>
-                        </div>
-                    ))}
-                    <Link to={routes.find(route => route.title === "Get started").path} className="cards cards-primary cards-wide m-3">
-                        <div className="cards-content flex-row align-items-center m-0 w-100">
-                            <i className="material-icons material-icons-outlined mr-3 v-flip">wb_incandescent</i>
-                            <span className="h4 mb-0">Get started by setting up the Design Guide!</span>
-                            <i className="material-icons material-icons-outlined ml-auto">arrow_forward</i>
-                        </div>
-                    </Link>
+                    {routes.map((route, i) => {
+                        if (!route.wideCard) {
+                            return (
+                                <React.Fragment key={route.title}>
+                                    <div key={route.title} className="col-12 col-sm-6 col-lg-3 d-flex">
+                                        <Link to={route.path} className="cards cards-primary">
+                                            <div className="cards-icon">
+                                                <i className="material-icons-outlined" >{route.icon.name}</i>
+                                            </div>
+                                            <div className="cards-content">
+                                                <span className="h4">{route.title === "Utilities" ? "Utility" : route.title }</span>
+                                                <span>{route.entryCardText}</span>
+                                            </div>
+                                            <i className="material-icons">arrow_forward</i>
+                                        </Link>
+                                    </div>
+                                    {i === routes.length - 1 &&
+                                        <Link to={routes.find(route => route.wideCard === true).path} className="cards cards-primary cards-wide m-3">
+                                            <div className="cards-content flex-row align-items-center m-0 w-100">
+                                                <i className="material-icons material-icons-outlined mr-3 v-flip">wb_incandescent</i>
+                                                <span className="h4 mb-0">Get started by setting up the Design Guide!</span>
+                                                <i className="material-icons material-icons-outlined ml-auto">arrow_forward</i>
+                                            </div>
+                                        </Link>}
+                                </React.Fragment>
+                            );
+                        }
+                    })}
                 </div>
             </div>
             <div className="mt-auto d-none d-md-inline-flex mb-3">

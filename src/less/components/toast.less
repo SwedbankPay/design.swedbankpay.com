@@ -2,13 +2,14 @@
     display: block;
     position: fixed;
     z-index: @zindex-toast;
-    width: 21.4rem;
-    bottom: 5%;
+    max-width: 21.4rem;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 
     @media screen and (min-width: @screen-sm-min) {
-        min-width: initial;
-        bottom: initial;
-        top: 1rem;
+        left: auto;
         right: 1%;
     }
 
@@ -25,11 +26,20 @@
         cursor: default;
         box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.15);
         opacity: 1;
-        animation: slideInTopRight 0.5s forwards;
+        animation: slideInFromTopRight 0.5s forwards;
 
-        @keyframes slideInTopRight {
+        @keyframes slideInFromTopRight {
             from { right: -1000px; }
             to { right: 0; }
+        }
+
+        @media screen and (max-width: @screen-sm-min) {
+            animation: slideInFromTop 0.5s forwards;
+
+            @keyframes slideInFromTop {
+                from { top: -1000px; }
+                to { top: 0; }
+            }
         }
 
         &.fade {
@@ -55,7 +65,7 @@
 
         &.toast-warning {
             .material-icons {
-                color: #f35b1c;
+                color: @orange-headline;
             }
         }
 

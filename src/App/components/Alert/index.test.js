@@ -28,7 +28,7 @@ describe("Component: Alert", () => {
         const wrapper = shallow(<Alert type="test" icon="test" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="material-icons alert-icon mr-3" aria-hidden="true">test</i>)).toEqual(true);
+        expect(wrapper.contains(<i className="material-icons alert-icon" aria-hidden="true">test</i>)).toEqual(true);
     });
 
     it("renders an alert without an icon if no icon prop is provided", () => {

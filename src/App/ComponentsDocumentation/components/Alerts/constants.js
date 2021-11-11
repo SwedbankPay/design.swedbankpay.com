@@ -1,15 +1,17 @@
 import React from "react";
 import Alert from "@components/Alert";
 
-const exampleText = <p><b>Error title:</b> Input informative alert message here, provide link to solution or more info when <a href="#">possible</a></p>;
+const titleBuilder = type => (
+    <p><b>{type} title:</b> Input informative alert message here, provide link to solution or more info when <a href="#">possible</a>.</p>
+);
 
 export const alertsShowCase = {
     id: "overviewAlert",
     tabsId: "overviewAlertTabs",
     elements: [
         {
-            tab: "Error",
-            component: <Alert type="danger" icon="cancel" text={exampleText} />,
+            tab: "Danger",
+            component: <Alert type="danger" icon="cancel" text={titleBuilder("Danger")} />,
             options: {
                 checkbox: [
                     {
@@ -26,12 +28,12 @@ export const alertsShowCase = {
                     }
                 ]
             },
-            title: "Error alert",
+            title: "Danger alert",
             description: "Use this alert to let the user know that something went wrong. The message should clearly state the problem and if possible provide information on how to fix it."
         },
         {
             tab: "Warning",
-            component: <Alert type="warning" icon="warning" text={exampleText} />,
+            component: <Alert type="warning" icon="warning" text={titleBuilder("Warning")} />,
             options: {
                 checkbox: [
                     {
@@ -53,7 +55,7 @@ export const alertsShowCase = {
         },
         {
             tab: "Informative",
-            component: <Alert type="informative" icon="info" text={exampleText}/>,
+            component: <Alert type="informative" icon="info" text={titleBuilder("Informative")}/>,
             options: {
                 checkbox: [
                     {
@@ -75,7 +77,7 @@ export const alertsShowCase = {
         },
         {
             tab: "Success",
-            component: <Alert type="success" icon="check_circle" text={exampleText} />,
+            component: <Alert type="success" icon="check_circle" text={titleBuilder("Success")} />,
             options: {
                 checkbox: [
                     {

@@ -27,7 +27,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
         className="mb-0"
         id="guideline-input-example"
         label="Input label"
-        placeholder="Placeholer text"
+        placeholder="Placeholder text"
         tooltip={true}
         type="text"
       />
@@ -55,7 +55,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
         24px
       </div>
       <Radio
-        className="mb-0"
+        className="mb-0 forms-radio-example"
         group={true}
         groupTitle="Input label"
         name="guidelines-radio-example"
@@ -83,9 +83,10 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
         32px
       </div>
       <div
-        className="d-flex justify-content-between"
+        className="d-flex"
       >
         <Button
+          className="mr-3"
           label="Submit"
           type="primary"
         />
@@ -1024,9 +1025,7 @@ exports[`Forms: index Overview renders 1`] = `
                     ]
                   }
                 />
-                <fieldset
-                  className=""
-                >
+                <fieldset>
                   <legend>
                     <span
                       className="h2"
@@ -1035,7 +1034,7 @@ exports[`Forms: index Overview renders 1`] = `
                     </span>
                   </legend>
                   <div
-                    className="row mb-4"
+                    className="row mb-2"
                   >
                     <InputGroup
                       className="col-12 col-sm-6"
@@ -1080,7 +1079,7 @@ exports[`Forms: index Overview renders 1`] = `
                     }
                   />
                   <div
-                    className="d-flex justify-content-between mt-2"
+                    className="d-flex justify-content-between pt-2"
                   >
                     <Button
                       icon="arrow_back"

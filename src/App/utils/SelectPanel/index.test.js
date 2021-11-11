@@ -8,15 +8,6 @@ describe("Documentation: SelectPanel", () => {
         expect(SelectPanel).toBeDefined();
     });
 
-    // it("renders", () => {
-    //     const location = { pathname: "test" };
-    //     const wrapper = shallow(
-    //         <SelectPanel location={location} />
-    //     );
-
-    //     Expect(wrapper).toMatchSnapshot();
-    // });
-
     describe("SearchBox", () => {
         it("is defined", () => {
             expect(SearchBox).toBeDefined();

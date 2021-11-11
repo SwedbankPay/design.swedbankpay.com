@@ -281,7 +281,7 @@ exports[`Core: Logotype HorizontalLogo renders 1`] = `
   >
     <img
       alt="PayEx horizontal logo"
-      src="/TEST/designguide/assets/payex-logo.svg"
+      src="/TEST/img/logo/payex-logo.svg"
     />
   </ComponentPreview>
   <ComponentPreview
@@ -291,7 +291,7 @@ exports[`Core: Logotype HorizontalLogo renders 1`] = `
   >
     <img
       alt="PayEx horizontal logo"
-      src="/TEST/designguide/assets/payex-logo.png"
+      src="/TEST/img/logo/payex-logo.png"
     />
   </ComponentPreview>
 </Fragment>
@@ -320,7 +320,7 @@ exports[`Core: Logotype LogoBlack renders 1`] = `
           Object {
             "component": <Logotype
               alt="Swedbank Pay vertical logo"
-              src="/TEST/designguide/assets/swedbankpay-logo-v.svg"
+              src="/TEST/img/logo/swedbankpay-logo-v.svg"
               type="vertical"
             />,
             "description": "The vertical logo (with black text) is the primary logo is the primary logo and should always be considered before moving on to another version.",
@@ -373,7 +373,7 @@ exports[`Core: Logotype LogoBlack renders 1`] = `
           Object {
             "component": <Logotype
               alt="Swedbank Pay horizontal logo"
-              src="/TEST/designguide/assets/swedbankpay-logo-h.svg"
+              src="/TEST/img/logo/swedbankpay-logo-h.svg"
               type="horizontal"
             />,
             "description": <React.Fragment>
@@ -467,7 +467,7 @@ exports[`Core: Logotype LogoWhite renders 1`] = `
             "altBackground": true,
             "component": <Logotype
               alt="Swedbank Pay vertical logo"
-              src="/TEST/designguide/assets/swedbankpay-logo-v-neg.svg"
+              src="/TEST/img/logo/swedbankpay-logo-v-neg.svg"
               type="vertical"
             />,
             "description": <p>
@@ -523,7 +523,7 @@ exports[`Core: Logotype LogoWhite renders 1`] = `
             "altBackground": true,
             "component": <Logotype
               alt="Swedbank Pay horizontal logo"
-              src="/TEST/designguide/assets/swedbankpay-logo-h-neg.svg"
+              src="/TEST/img/logo/swedbankpay-logo-h-neg.svg"
               type="horizontal"
             />,
             "description": <p>

@@ -8,7 +8,7 @@ exports[`Component: Alert prop type is marked as required 1`] = `
 
   <i
     aria-hidden="true"
-    className="material-icons alert-icon mr-3"
+    className="material-icons alert-icon"
   />
   
 
@@ -23,7 +23,7 @@ exports[`Component: Alert renders an alert with a close-button 1`] = `
 
   <i
     aria-hidden="true"
-    className="material-icons alert-icon mr-3"
+    className="material-icons alert-icon"
   />
   
 
@@ -36,7 +36,7 @@ exports[`Component: Alert renders an alert with a close-button 1`] = `
 		
     <i
       aria-hidden="true"
-      className="material-icons ml-3"
+      className="material-icons"
     >
       close
     </i>
@@ -56,7 +56,7 @@ exports[`Component: Alert renders an alert with icon 1`] = `
 
   <i
     aria-hidden="true"
-    className="material-icons alert-icon mr-3"
+    className="material-icons alert-icon"
   >
     test
   </i>
@@ -73,7 +73,7 @@ exports[`Component: Alert renders an alert with text 1`] = `
 
   <i
     aria-hidden="true"
-    className="material-icons alert-icon mr-3"
+    className="material-icons alert-icon"
   />
   <p>
     test
@@ -91,7 +91,7 @@ exports[`Component: Alert renders an alert with the correct type recieved from i
 
   <i
     aria-hidden="true"
-    className="material-icons alert-icon mr-3"
+    className="material-icons alert-icon"
   />
   
 
@@ -106,7 +106,7 @@ exports[`Component: Alert renders an alert without a close-button if no close pr
 
   <i
     aria-hidden="true"
-    className="material-icons alert-icon mr-3"
+    className="material-icons alert-icon"
   />
   
 
@@ -121,7 +121,7 @@ exports[`Component: Alert renders an alert without an icon if no icon prop is pr
 
   <i
     aria-hidden="true"
-    className="material-icons alert-icon mr-3"
+    className="material-icons alert-icon"
   />
   
 
@@ -136,7 +136,7 @@ exports[`Component: Alert renders an alert without text if no text prop is provi
 
   <i
     aria-hidden="true"
-    className="material-icons alert-icon mr-3"
+    className="material-icons alert-icon"
   />
   
 
@@ -151,7 +151,7 @@ exports[`Component: Alert the close-button prevents default 1`] = `
 
   <i
     aria-hidden="true"
-    className="material-icons alert-icon mr-3"
+    className="material-icons alert-icon"
   />
   
 
@@ -164,7 +164,7 @@ exports[`Component: Alert the close-button prevents default 1`] = `
 		
     <i
       aria-hidden="true"
-      className="material-icons ml-3"
+      className="material-icons"
     >
       close
     </i>

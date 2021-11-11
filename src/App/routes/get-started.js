@@ -6,25 +6,26 @@ module.exports = [
             rotate: true
         },
         path: "/get-started",
+        wideCard: true,
         redirect: "/get-started/introduction",
-        appFolder: "GettingStarted",
+        appFolder: "GetStarted",
         routes: [
             {
                 title: "Introduction",
                 path: "/get-started/introduction",
-                componentPath: "getting-started/Introduction",
+                componentPath: "get-started/Introduction",
                 statusBadges: ["updated"]
             },
             {
                 title: "For developers",
                 path: "/get-started/for-developers",
-                componentPath: "getting-started/ForDevelopers",
+                componentPath: "get-started/ForDevelopers",
                 statusBadges: ["updated"]
             },
             {
                 title: "For designers",
                 path: "/get-started/for-designers",
-                componentPath: "getting-started/ForDesigners"
+                componentPath: "get-started/ForDesigners"
             }
         ]
     }

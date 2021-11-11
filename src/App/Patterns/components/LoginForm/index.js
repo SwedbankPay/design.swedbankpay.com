@@ -79,7 +79,7 @@ const LoginForm = ({ additionalText,
                     {additionalText}
                 </p>}{"\n"}
             {logo &&
-            <Logotype type="vertical d-none d-sm-block mx-auto mt-5" src={`${basename}designguide/assets/${brand}-logo-v.svg`} size="lg" alt={`${brand}-logo`} />}
+            <Logotype type="vertical d-none d-sm-block mx-auto mt-5" src={`${basename}img/logo/${brand}-logo-v.svg`} size="lg" alt={`${brand}-logo`} />}
         </>);
 };
 
