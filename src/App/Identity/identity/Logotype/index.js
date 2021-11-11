@@ -204,10 +204,10 @@ const HorizontalLogo = () => (
         <h2 id="horizontal-logo">Horizontal logo</h2>
         <p></p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <img src={`${basename}designguide/assets/payex-logo.svg`} alt="PayEx horizontal logo"/>
+            <img src={`${basename}img/logo/payex-logo.svg`} alt="PayEx horizontal logo"/>
         </ComponentPreview>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <img src={`${basename}designguide/assets/payex-logo.png`} alt="PayEx horizontal logo"/>
+            <img src={`${basename}img/logo/payex-logo.png`} alt="PayEx horizontal logo"/>
         </ComponentPreview>
     </>
 );

@@ -3,6 +3,10 @@ import React from "react";
 import LogotypeComponent from "@components/Logotype";
 
 const basename = process.env.basename;
+const brand = process.env.brand;
+
+console.log(basename);
+console.log(brand);
 
 export const logoBlack = {
     id: "logoBlack",
@@ -10,7 +14,7 @@ export const logoBlack = {
     elements: [
         {
             tab: "Vertical",
-            component: <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-v.svg`} alt="Swedbank Pay vertical logo" type="vertical" />,
+            component: <LogotypeComponent src={`${basename}img/logo/swedbankpay-logo-v.svg`} alt="Swedbank Pay vertical logo" type="vertical" />,
             options: {
                 radio: [
                     {
@@ -55,7 +59,7 @@ export const logoBlack = {
         },
         {
             tab: "Horizontal",
-            component: <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-h.svg`} alt="Swedbank Pay horizontal logo" type="horizontal" />,
+            component: <LogotypeComponent src={`${basename}img/logo/swedbankpay-logo-h.svg`} alt="Swedbank Pay horizontal logo" type="horizontal" />,
             options: {
                 radio: [
                     {
@@ -113,7 +117,7 @@ export const logoWhite = {
     elements: [
         {
             tab: "Vertical",
-            component: <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-v-neg.svg`} alt="Swedbank Pay vertical logo" type="vertical" />,
+            component: <LogotypeComponent src={`${basename}img/logo/swedbankpay-logo-v-neg.svg`} alt="Swedbank Pay vertical logo" type="vertical" />,
             altBackground: true,
             options: {
                 radio: [
@@ -162,7 +166,7 @@ export const logoWhite = {
         },
         {
             tab: "Horizontal",
-            component: <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-h-neg.svg`} alt="Swedbank Pay horizontal logo" type="horizontal" />,
+            component: <LogotypeComponent src={`${basename}img/logo/swedbankpay-logo-h-neg.svg`} alt="Swedbank Pay horizontal logo" type="horizontal" />,
             altBackground: true,
             options: {
                 radio: [

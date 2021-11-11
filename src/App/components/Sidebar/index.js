@@ -13,7 +13,7 @@ class Sidebar extends Component {
                 <nav className="sidebar-main-nav">
                     <div className="sidebar-logo">
                         <a href="/">
-                            <LogotypeComponent src={`${basename}designguide/assets/${brand}-logo-v.svg`} size="md" alt={`${process.env.brandTitle} vertical logo`} type="vertical" />
+                            <LogotypeComponent src={`${basename}img/logo/${brand}-logo-v.svg`} size="md" alt={`${process.env.brandTitle} vertical logo`} type="vertical" />
                         </a>
                     </div>
                     <ul className="main-nav-ul">
