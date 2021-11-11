@@ -3,10 +3,6 @@ import React from "react";
 import LogotypeComponent from "@components/Logotype";
 
 const basename = process.env.basename;
-const brand = process.env.brand;
-
-console.log(basename);
-console.log(brand);
 
 export const logoBlack = {
     id: "logoBlack",

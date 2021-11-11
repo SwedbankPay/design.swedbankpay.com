@@ -1025,9 +1025,7 @@ exports[`Forms: index Overview renders 1`] = `
                     ]
                   }
                 />
-                <fieldset
-                  className=""
-                >
+                <fieldset>
                   <legend>
                     <span
                       className="h2"
@@ -1058,7 +1056,7 @@ exports[`Forms: index Overview renders 1`] = `
                     type="text"
                   />
                   <Radio
-                    className=" mb-4"
+                    className="mb-4"
                     group={true}
                     groupTitle="Input label"
                     name="multi-step-radio-example"

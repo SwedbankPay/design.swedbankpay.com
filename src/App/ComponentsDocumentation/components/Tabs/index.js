@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import TabsComponent from "@components/Tabs";
-import { Link } from "react-router-dom";
 import CodeTags from "@components/CodeTags";
 import { tabsShowCasePanel } from "./constants";
 
