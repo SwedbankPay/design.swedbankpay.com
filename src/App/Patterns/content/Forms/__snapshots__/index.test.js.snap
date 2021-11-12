@@ -843,7 +843,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
      
     <img
       className="w-100"
-      src="/TEST/img/documentation/templates/img-button-placement.png"
+      src="/TEST/img/documentation/patterns/img-button-placement.png"
     />
   </section>
   <section>

@@ -76,7 +76,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
       <b>
         Remember me
       </b>
-       is an optional field. When it is enabled it saves the data and present prefilled fields the next time the user is about to log in. 
+       is an optional field. When it is enabled it saves the data and present pre-filled fields the next time the user is about to log in. 
     </li>
     <li
       key="5"
