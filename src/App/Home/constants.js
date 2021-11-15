@@ -2,7 +2,7 @@ export const changeLogs = [
     {
         version: "7.1.1",
         title: "Patch of styling and path updates",
-        text: "Small updates on the visuals of Toast and Form-pattern, and more consisted path naming. We also changed the path \"designguide/assets\" to \"img/logo\", because design/assets are being removed in future release."
+        text: "Small updates on the visuals of Toast and Form-pattern, and more consisted path naming. We also changed the path in the documentation for logos from \"designguide/assets\" to \"img/logo\"."
     },
     {
         version: "7.1.0",
