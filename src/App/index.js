@@ -10,6 +10,9 @@ import routes from "./routes/all";
 
 import { topbar } from "@src/scripts/main";
 
+import { hotjar } from "react-hotjar";
+
+
 const basename = process.env.basename || "/";
 
 const history = createBrowserHistory({ basename });
@@ -62,6 +65,7 @@ class App extends Component {
 
     componentDidMount () {
         topbar.init();
+        hotjar.initialize(2696258, 6);
     }
 
     render () {
