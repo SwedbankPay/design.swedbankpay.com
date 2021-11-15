@@ -7,4 +7,4 @@
 - Toast styling in mobile view
 - Form pattern styling
 - Getting-started to Get-started folders and paths
-- Path to Logos from designGuide/assets to img/logo
+- Documentation image paths/sources
