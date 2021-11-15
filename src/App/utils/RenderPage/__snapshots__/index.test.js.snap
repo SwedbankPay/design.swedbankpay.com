@@ -13,7 +13,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       className="dg-current-version text-uppercase"
     >
       Design Guide – v. 
-      7.1.0
+      7.1.1
     </span>
     <Switch>
       <Route
@@ -23,6 +23,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <RenderRoutes
         appFolder="GetStarted"
+        entryCardText="Get started by setting up the Design Guide!"
         icon={
           Object {
             "name": "wb_incandescent",

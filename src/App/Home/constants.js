@@ -1,5 +1,10 @@
 export const changeLogs = [
     {
+        version: "7.1.1",
+        title: "Patch of styling and path updates",
+        text: "Small updates on the visuals of Toast and Form-pattern, and more consisted path naming. We also changed the path in the documentation for logos from \"designguide/assets\" to \"img/logo\"."
+    },
+    {
         version: "7.1.0",
         title: "Node package upgrade and new Pattern section",
         text: "Node package upgrade incoming which supports selecting and importing specific component styling/script. Documentation wise, we added a new Pattern section to showcase best practice solutions for common product features, starting off with Login and Forms page. We also solved a bunch of forgotten GitHub issues and updated the Toast component."

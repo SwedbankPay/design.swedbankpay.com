@@ -1,11 +1,11 @@
 import React from "react";
 import { DocContainer } from "@docutils";
 import { Link } from "react-router-dom";
-import patternList from "@src/App/routes/patterns";
+import patternsRoutes from "@src/App/routes/patterns";
 
 const Overview = () => (
     <section className="component-overview hide-arrow-icon">
-        {patternList[0].routes.map(card => (
+        {patternsRoutes[0].routes.map(card => (
             card.icon &&
                 <Link key={card.title} to={card.path} className="cards cards-primary cards-wide">
                     <div className="cards-content flex-row align-items-center m-0 ">

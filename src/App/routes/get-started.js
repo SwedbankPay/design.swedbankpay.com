@@ -5,6 +5,7 @@ module.exports = [
             name: "wb_incandescent",
             rotate: true
         },
+        entryCardText: "Get started by setting up the Design Guide!",
         path: "/get-started",
         wideCard: true,
         redirect: "/get-started/introduction",
