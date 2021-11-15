@@ -23,6 +23,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <RenderRoutes
         appFolder="GetStarted"
+        entryCardText="Get started by setting up the Design Guide!"
         icon={
           Object {
             "name": "wb_incandescent",
