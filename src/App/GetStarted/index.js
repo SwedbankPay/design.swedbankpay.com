@@ -2,8 +2,8 @@ import React from "react";
 
 import { RenderPage } from "../utils";
 
-const GettingStarted = () => (
+const GetStarted = () => (
     <RenderPage path="/get-started" initPath="/get-started/introduction" />
 );
 
-export default GettingStarted;
+export default GetStarted;

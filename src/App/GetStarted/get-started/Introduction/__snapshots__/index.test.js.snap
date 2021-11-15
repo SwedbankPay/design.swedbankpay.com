@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GettingStarted: Introduction GetStarted renders 1`] = `
+exports[`GetStarted: Introduction GetStarted renders 1`] = `
 <section>
   <p>
     Below we have compiled a list of things you need to have and know in order to get started with our design guide.
@@ -76,7 +76,7 @@ exports[`GettingStarted: Introduction GetStarted renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: Introduction OpenSimpleCaring renders 1`] = `
+exports[`GetStarted: Introduction OpenSimpleCaring renders 1`] = `
 <section>
   <h2
     id="open-simple-caring"
@@ -103,7 +103,7 @@ exports[`GettingStarted: Introduction OpenSimpleCaring renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: Introduction UsingDG renders 1`] = `
+exports[`GetStarted: Introduction UsingDG renders 1`] = `
 <section>
   <h2
     id="using-dg"
@@ -126,7 +126,7 @@ exports[`GettingStarted: Introduction UsingDG renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: Introduction WhatIsDG renders 1`] = `
+exports[`GetStarted: Introduction WhatIsDG renders 1`] = `
 <section>
   <h2
     id="what-is-dg"
@@ -153,7 +153,7 @@ exports[`GettingStarted: Introduction WhatIsDG renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: Introduction renders 1`] = `
+exports[`GetStarted: Introduction renders 1`] = `
 <DocContainer>
   <p
     className="lead"

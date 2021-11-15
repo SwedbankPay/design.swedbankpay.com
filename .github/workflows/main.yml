@@ -14,7 +14,7 @@ jobs:
       matrix:
         brand: ["payex", "swedbankpay"]
     steps:
-      - uses: actions/checkout@v2.3.5
+      - uses: actions/checkout@v2.4.0
 
       # Set brand specific variables
       - name: Environment variables
@@ -45,8 +45,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS_STAGE }}
 
       - name: Azure Deploy
-        uses: azure/CLI@1.0.4
+        uses: azure/CLI@v1.0.5
         with:
-          azcliversion: 2.29.2
           inlineScript: |
             az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_STAGE }}

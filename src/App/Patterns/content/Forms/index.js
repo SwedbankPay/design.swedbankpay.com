@@ -44,14 +44,14 @@ const ContentGuidelines = () => (
             <div className="col-12 col-sm-6 m-auto">
                 <h3 className="mb-0">Title</h3>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
-                <InputGroup id="guideline-input-example" type="text" label="Input label" placeholder="Placeholer text" tooltip className="mb-0"/>
+                <InputGroup id="guideline-input-example" type="text" label="Input label" placeholder="Placeholder text" tooltip className="mb-0"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small">24px</div>
                 <InputGroup type="select" label="Input label" placeholder="Select an option" selectOptions={["Option 1", "Option 2"]} optional className="mb-0"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small">24px</div>
-                <RadioButton groupTitle="Input label" name="guidelines-radio-example" group options={radioOptions} className="mb-0"/>
+                <RadioButton groupTitle="Input label" name="guidelines-radio-example" group options={radioOptions} className="mb-0 forms-radio-example"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
-                <div className="d-flex justify-content-between">
-                    <Button type="primary" label="Submit"/>
+                <div className="d-flex">
+                    <Button type="primary" label="Submit" className="mr-3"/>
                     <Button type="link" label="Cancel"/>
                 </div>
             </div>
@@ -166,7 +166,7 @@ const HowToDesignForms = () => {
             <section>
                 <h3>Button placement</h3>
                 <p>The primary button should be left-aligned along with the left side of the form field. If additional actions are required, put the primary button first, then secondary buttons, then the link button. One exception is a multiple-step form where the “Back” secondary button sits at the very left, while the rest of the buttons are aligned to the right. In some cases, like on a <a href="">Login page</a>, buttons can be centered and set to the same width as the input fields. On mobile, the buttons are always centered, full width and stacked vertically with the primary action on top. </p> {/* TODO: Add link to Login template */}
-                <img src={`${process.env.basename}img/documentation/templates/img-button-placement.png`} className="w-100"/>
+                <img src={`${process.env.basename}img/documentation/patterns/img-button-placement.png`} className="w-100"/>
             </section>
             <section>
                 <h3>Error messages</h3>

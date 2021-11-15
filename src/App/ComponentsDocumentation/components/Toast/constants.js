@@ -8,7 +8,7 @@ const Toast = ({ type, title }) => (
     <button className="btn btn-primary" type="button" onClick={() => toast({
         html: `
             <p>
-                <b>${title} header:</b>
+                <b>${title} title:</b>
                 Input informative alert information here, provide <a href>link</a> to solution or more info when possible.
             </p>`,
         type
@@ -99,14 +99,14 @@ export const toastShowCase = {
             </>
         },
         {
-            tab: "Error",
-            component: <Toast type="danger" title="Error" />,
+            tab: "Danger",
+            component: <Toast type="danger" title="Danger" />,
             options: {
                 checkbox: []
             },
-            title: "Error toast",
+            title: "Danger toast",
             description: <>
-                <p>Error toast informs the user of error and issues that may have occurred. They should let the user know what has happened and how the user can solve the issue.</p>
+                <p>Danger toast informs the user of error and issues that may have occurred. They should let the user know what has happened and how the user can solve the issue.</p>
                 <AlertBox />
             </>
         }
