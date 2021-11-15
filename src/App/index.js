@@ -12,7 +12,6 @@ import { topbar } from "@src/scripts/main";
 
 import { hotjar } from "react-hotjar";
 
-
 const basename = process.env.basename || "/";
 
 const history = createBrowserHistory({ basename });
