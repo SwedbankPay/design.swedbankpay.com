@@ -54,3 +54,13 @@ jobs:
         with:
           inlineScript: |
             az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_PROD }}
+
+      - name: Create Release
+        # Only create a release on one brand to avoid duplicate error
+        if: contains(matrix.brand, 'swedbankpay')
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: Design Guide v${{ steps.variables.outputs.VERSION }}
+          body_path: RELEASE_NOTES.md
+          draft: true # Let's see if everything is nice and dandy before setting this to true
