@@ -3,6 +3,7 @@ import React from "react";
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 import { logoBlack, logoWhite } from "./constants";
+import LogotypeComponent from "@components/Logotype";
 
 const basename = process.env.basename;
 const brand = process.env.brand;
@@ -10,10 +11,6 @@ const brand = process.env.brand;
 const LogoBlack = () => (
     <>
         <h2 id="logo-black">Black text logotype</h2>
-        <p>
-            The vertical logo is primary – the one that will build recognition.
-            Always consider the vertical (primary) logo first before using the horizontal (secondary) logo.
-        </p>
         <p>For good visibility the black text logo should be used on all light/fair backgrounds.</p>
         <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={logoBlack} />
     </>
@@ -22,11 +19,7 @@ const LogoBlack = () => (
 const LogoWhite = () => (
     <>
         <h2 id="logo-white">White text logotype</h2>
-        <p>
-            The white text logo is used on Swedbank Pay’s primary color ({brand === "swedbankpay" ? "Yellow" : "Green"}) and dark backgrounds.
-            In situations where both the black and white version can be used,
-            the recommendation is to use the white version as it gives a lighter and more friendly impression.
-        </p>
+        <p>The white text logo is used on Swedbank Pay’s primary color (#yellow) and dark backgrounds.</p>
         <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={logoWhite} />
     </>
 );
@@ -164,37 +157,18 @@ const LogotypeBackgrounds = () => (
     <>
         <h2 id="logotype-backgrounds">Logotype and backgrounds</h2>
         <p>
-            Different versions of the logotype are used depending on what colour of the background is placed on.
-            In situations where both the black and white version can be used,
-            the recommendation is to use the white version as it gives a lighter and more friendly impression.
+        Different versions of the logotype is used depending on what colour of the background it is placed on. In situations where both the black and white version can be used, the recommendation is to use the white version as it gives a lighter and more friendly impression.
         </p>
         <p>
-            When placing the logotype on backgrounds, it may only be placed no an area that has low level of detail and is naturally light or dark.
-            Only use images from the Swedbank Pay image library. Use the white text version on dark images, and the black text version on light images. {"\n"}
+        When placing the logotype on backgrounds, it may only be placed no an area that has low level of detail and is naturally light or dark. Only use images from the Swedbank Pay image library. Use the white text version on dark images, and the black text version on light images.
         </p>
-        <p>
-            When placing the logotype on our primary yellow background, always use the white text version.
-            Make sure to keep the logotype above the minimum size recommendation for legibility.
-        </p>
+        <p>When placing the logotype on our primary yellow background, always use the white text version. Make sure to keep the logotype above the minimum size recommendation for legibility.</p>
 
         <div className="flex">
             <img src={`${basename}img/documentation/logotype/bg-apricot.png`} className="w-25 p-3"/>
             <img src={`${basename}img/documentation/logotype/bg-dark-img.png`} className="w-25 p-3"/>
             <img src={`${basename}img/documentation/logotype/bg-light-img.png`} className="w-25 p-3"/>
             <img src={`${basename}img/documentation/logotype/bg-yellow.png`} className="w-25 p-3"/>
-        </div>
-    </>
-);
-
-const Download = () => (
-    <>
-        <h2 id="download" className="invisible">Download</h2>
-        <div className="slab slab-primary p-5 d-flex flex-column justify-content-center align-items-center">
-            <h1 className="mb-4">Download all logotypes</h1>
-            <a className="btn btn-primary" href={`${basename}release/logos/Swedbank_Pay_Vector.zip`}>
-                <i className="material-icons" aria-hidden="true">arrow_downward</i>
-                <span>Download</span>
-            </a>
         </div>
     </>
 );
@@ -224,7 +198,7 @@ const Favicon = () => (
             </div>
         }
 
-        <p>To use our favicons download the zip-file below and extract it to the root of your build-folder. Insert the code below in the <CodeTags type="primary" code={"<head>"} /> tag of your HTML documents and you are ready to go.</p>
+        <p>To add a favicon to your application, download the favicon assets and extract it to the root of your build-folder. Insert the code below in the <CodeTags type="primary" code={"<head>"} /> tag of your HTML documents and you are ready to go.</p>
         <p>You should also rename the <CodeTags type="secondary" code="content" /> of
         the <CodeTags type="secondary" code="apple-mobile-web-app-title" /> and <CodeTags type="secondary" code="application-name" /> <CodeTags type="primary" code={"<meta>"} /> tags
         to reflect the title of your project. Make sure to also do this in the <CodeTags type="secondary" code="manifest.json" /> file in the icons folder.</p>
@@ -277,27 +251,48 @@ const Favicon = () => (
     </>
 );
 
+const Overview = () => (
+    <section>
+        <h2 className="overview">Overview</h2>
+        <div className="d-flex justify-content-between logotype-display mb-4">
+            <div className="background-light">
+                <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-v.svg`} type="vertical" alt="Swedbank Pay Vertical logo" size="md"/>
+            </div>
+            <div className="background-primary">
+                <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-v-neg.svg`} type="vertical" alt="Swedbank Pay Vertical logo" size="md"/>
+            </div>
+            <div className="background-light">
+                <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-h.svg`} type="horizontal" alt="Swedbank Pay Horizontal logo" size="md"/>
+            </div>
+            <div className="background-primary">
+                <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-h-neg.svg`} type="horizontal" alt="Swedbank Pay Horizontal logo" size="md"/>
+            </div>
+        </div>
+        <a href={`${basename}release/logos/Swedbank_Pay_Vector.zip`} className="icon-link mb-4">
+            <i className="material-icons" aria-hidden="true">download</i>
+            <span className="ml-2">Download Swedbank Pay logotype assets</span>
+        </a>
+
+        <p>The logotype is vectorized and all versions are provided as <CodeTags type="secondary" code=".svg" /> files, it is also available in <CodeTags type="secondary" code=".png" /> for contexts that might not support vectorized files. The sizes described are recommended sizes and if there is a need to scale the logotype, make sure the coin diameter is no smaller than at least 24 px and a multiple of 8.</p>
+    </section>
+);
+
 const Logotype = () => (
     <>
         {brand === "swedbankpay" &&
             <DocContainer docToc>
-                <p className="lead">
-                    The Swedbank Pay logotype exist in two versions – a black text logo and a white text logo.
-                    They are used depending on what colour of the background the logo is placed on. In situations where both the black and white version can be used,
-                    the recommendation is to use the white version as it gives a lighter and more friendly impression.
-                </p>
-                <p>
-                    The logotype is vectorized and all versions are provided as both <CodeTags type="secondary" code=".svg" /> and <CodeTags type="secondary" code=".eps" /> files.
-                    The sizes below are recommended sizes and if there is a need to scale the logotype larger,
-                    make sure the coin diameter is no smaller than at least 24 px and a multiple of 8.
-                </p>
-                <LogoBlack />
-                <LogoWhite />
-                <SpacingZone />
-                <MisuseLogo />
-                <LogotypeBackgrounds />
-                <Download />
-                <Favicon />
+                <section id="logotype-doc">
+                    <p className="lead">
+                    The Swedbank Pay logotype is available in a vertical and horizontal version, the vertical logo is primary and the one that will build recognition. The logotype exist in two colors – a black text logo and a white text logo. They are used depending on what colour of the background the logo is placed on.
+                    </p>
+                    <Overview />
+                    <LogoBlack />
+                    <LogoWhite />
+                    <SpacingZone />
+                    <MisuseLogo />
+                    <LogotypeBackgrounds />
+                    <Favicon />
+                </section>
             </DocContainer>
         }
         {brand === "payex" &&
@@ -312,4 +307,4 @@ const Logotype = () => (
 export default Logotype;
 
 /* For testing */
-export { HorizontalLogo, Download, LogoBlack, LogoWhite, SpacingZone, MisuseLogo, LogotypeBackgrounds, Favicon };
+export { Overview, HorizontalLogo, LogoBlack, LogoWhite, SpacingZone, MisuseLogo, LogotypeBackgrounds, Favicon };

@@ -1,39 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Core: Logotype Download renders 1`] = `
-<Fragment>
-  <h2
-    className="invisible"
-    id="download"
-  >
-    Download
-  </h2>
-  <div
-    className="slab slab-primary p-5 d-flex flex-column justify-content-center align-items-center"
-  >
-    <h1
-      className="mb-4"
-    >
-      Download all logotypes
-    </h1>
-    <a
-      className="btn btn-primary"
-      href="/TEST/release/logos/Swedbank_Pay_Vector.zip"
-    >
-      <i
-        aria-hidden="true"
-        className="material-icons"
-      >
-        arrow_downward
-      </i>
-      <span>
-        Download
-      </span>
-    </a>
-  </div>
-</Fragment>
-`;
-
 exports[`Core: Logotype Favicon renders 1`] = `
 <Fragment>
   <h2
@@ -50,7 +16,7 @@ exports[`Core: Logotype Favicon renders 1`] = `
     />
   </div>
   <p>
-    To use our favicons download the zip-file below and extract it to the root of your build-folder. Insert the code below in the 
+    To add a favicon to your application, download the favicon assets and extract it to the root of your build-folder. Insert the code below in the 
     <CodeTags
       code="<head>"
       type="primary"
@@ -305,9 +271,6 @@ exports[`Core: Logotype LogoBlack renders 1`] = `
     Black text logotype
   </h2>
   <p>
-    The vertical logo is primary – the one that will build recognition. Always consider the vertical (primary) logo first before using the horizontal (secondary) logo.
-  </p>
-  <p>
     For good visibility the black text logo should be used on all light/fair backgrounds.
   </p>
   <ComponentPreview
@@ -323,7 +286,7 @@ exports[`Core: Logotype LogoBlack renders 1`] = `
               src="/TEST/designguide/assets/swedbankpay-logo-v.svg"
               type="vertical"
             />,
-            "description": "The vertical logo (with black text) is the primary logo is the primary logo and should always be considered before moving on to another version.",
+            "description": "The vertical logo with black text is primary – the one that will build recognition. Always consider the vertical logo first before before the horizontal logo.",
             "options": Object {
               "radio": Array [
                 Object {
@@ -331,15 +294,20 @@ exports[`Core: Logotype LogoBlack renders 1`] = `
                   "title": "Sizes",
                   "values": Array [
                     Object {
-                      "description": <React.Fragment>
-                        <h4>
-                          Important
-                        </h4>
-                        <p>
-                          This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
-                        </p>
-                      </React.Fragment>,
-                      "name": "Smallest",
+                      "description": <Alert
+                        className="mb-0 mt-4"
+                        icon="warning"
+                        text={
+                          <p>
+                            <b>
+                              Important. 
+                            </b>
+                            This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
+                          </p>
+                        }
+                        type="warning"
+                      />,
+                      "name": "Extra small",
                       "value": Object {
                         "size": "xs",
                       },
@@ -377,9 +345,9 @@ exports[`Core: Logotype LogoBlack renders 1`] = `
               type="horizontal"
             />,
             "description": <React.Fragment>
-              The horizontal logo (with black text) is only used if the vertical primary logotype can’t be used. Reasons for using the horizontal logo might be:
+              The horizontal logo is only used if the vertical primary logotype can not be used. Reasons for using the horizontal logo might be:
               <ul
-                className="list list-bullet"
+                className="list list-bullet mt-3"
               >
                 <li>
                   The primary logo font is too similar in size to other fonts close by
@@ -396,14 +364,19 @@ exports[`Core: Logotype LogoBlack renders 1`] = `
                   "title": "Sizes",
                   "values": Array [
                     Object {
-                      "description": <React.Fragment>
-                        <h4>
-                          Important
-                        </h4>
-                        <p>
-                          This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
-                        </p>
-                      </React.Fragment>,
+                      "description": <Alert
+                        className="mb-0 mt-4"
+                        icon="warning"
+                        text={
+                          <p>
+                            <b>
+                              Important. 
+                            </b>
+                            This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
+                          </p>
+                        }
+                        type="warning"
+                      />,
                       "name": "Smallest",
                       "value": Object {
                         "size": "xs",
@@ -452,9 +425,7 @@ exports[`Core: Logotype LogoWhite renders 1`] = `
     White text logotype
   </h2>
   <p>
-    The white text logo is used on Swedbank Pay’s primary color (
-    Green
-    ) and dark backgrounds. In situations where both the black and white version can be used, the recommendation is to use the white version as it gives a lighter and more friendly impression.
+    The white text logo is used on Swedbank Pay’s primary color (#yellow) and dark backgrounds.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -471,7 +442,7 @@ exports[`Core: Logotype LogoWhite renders 1`] = `
               type="vertical"
             />,
             "description": <p>
-              Should only be used on Swedbank Pay’s primary color (Yellow) and on dark backgrounds. The vertical logo (with black text) is the primary logo is the primary logo and should always be considered before moving on to another version.
+              The vertical logo should always be considered before the horizontal logo.
             </p>,
             "options": Object {
               "radio": Array [
@@ -480,14 +451,19 @@ exports[`Core: Logotype LogoWhite renders 1`] = `
                   "title": "Sizes",
                   "values": Array [
                     Object {
-                      "description": <React.Fragment>
-                        <h4>
-                          Important
-                        </h4>
-                        <p>
-                          This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
-                        </p>
-                      </React.Fragment>,
+                      "description": <Alert
+                        className="mb-0 mt-4"
+                        icon="warning"
+                        text={
+                          <p>
+                            <b>
+                              Important. 
+                            </b>
+                            This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
+                          </p>
+                        }
+                        type="warning"
+                      />,
                       "name": "Smallest",
                       "value": Object {
                         "size": "xs",
@@ -527,7 +503,7 @@ exports[`Core: Logotype LogoWhite renders 1`] = `
               type="horizontal"
             />,
             "description": <p>
-              Should only used on Swedbank Pay’s primary color (Yellow) and on dark backgrounds. The vertical logo (with black text) is the primary logo is the primary logo and should always be considered before moving on to another version.
+              The horizontal logo is only used if the vertical logotype can not be used.
             </p>,
             "options": Object {
               "radio": Array [
@@ -536,14 +512,19 @@ exports[`Core: Logotype LogoWhite renders 1`] = `
                   "title": "Sizes",
                   "values": Array [
                     Object {
-                      "description": <React.Fragment>
-                        <h4>
-                          Important
-                        </h4>
-                        <p>
-                          This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
-                        </p>
-                      </React.Fragment>,
+                      "description": <Alert
+                        className="mb-0 mt-4"
+                        icon="warning"
+                        text={
+                          <p>
+                            <b>
+                              Important. 
+                            </b>
+                            This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
+                          </p>
+                        }
+                        type="warning"
+                      />,
                       "name": "Smallest",
                       "value": Object {
                         "size": "xs",
@@ -592,12 +573,10 @@ exports[`Core: Logotype LogotypeBackgrounds renders 1`] = `
     Logotype and backgrounds
   </h2>
   <p>
-    Different versions of the logotype are used depending on what colour of the background is placed on. In situations where both the black and white version can be used, the recommendation is to use the white version as it gives a lighter and more friendly impression.
+    Different versions of the logotype is used depending on what colour of the background it is placed on. In situations where both the black and white version can be used, the recommendation is to use the white version as it gives a lighter and more friendly impression.
   </p>
   <p>
-    When placing the logotype on backgrounds, it may only be placed no an area that has low level of detail and is naturally light or dark. Only use images from the Swedbank Pay image library. Use the white text version on dark images, and the black text version on light images. 
-    
-
+    When placing the logotype on backgrounds, it may only be placed no an area that has low level of detail and is naturally light or dark. Only use images from the Swedbank Pay image library. Use the white text version on dark images, and the black text version on light images.
   </p>
   <p>
     When placing the logotype on our primary yellow background, always use the white text version. Make sure to keep the logotype above the minimum size recommendation for legibility.
@@ -867,6 +846,89 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
     </div>
   </div>
 </Fragment>
+`;
+
+exports[`Core: Logotype Overview renders 1`] = `
+<section>
+  <h2
+    className="overview"
+  >
+    Overview
+  </h2>
+  <div
+    className="d-flex justify-content-between logotype-display mb-4"
+  >
+    <div
+      className="background-light"
+    >
+      <Logotype
+        alt="Swedbank Pay Vertical logo"
+        size="md"
+        src="/TEST/designguide/assets/swedbankpay-logo-v.svg"
+        type="vertical"
+      />
+    </div>
+    <div
+      className="background-primary"
+    >
+      <Logotype
+        alt="Swedbank Pay Vertical logo"
+        size="md"
+        src="/TEST/designguide/assets/swedbankpay-logo-v-neg.svg"
+        type="vertical"
+      />
+    </div>
+    <div
+      className="background-light"
+    >
+      <Logotype
+        alt="Swedbank Pay Horizontal logo"
+        size="md"
+        src="/TEST/designguide/assets/swedbankpay-logo-h.svg"
+        type="horizontal"
+      />
+    </div>
+    <div
+      className="background-primary"
+    >
+      <Logotype
+        alt="Swedbank Pay Horizontal logo"
+        size="md"
+        src="/TEST/designguide/assets/swedbankpay-logo-h-neg.svg"
+        type="horizontal"
+      />
+    </div>
+  </div>
+  <a
+    className="icon-link mb-4"
+    href="/TEST/release/logos/Swedbank_Pay_Vector.zip"
+  >
+    <i
+      aria-hidden="true"
+      className="material-icons"
+    >
+      download
+    </i>
+    <span
+      className="ml-2"
+    >
+      Download Swedbank Pay logotype assets
+    </span>
+  </a>
+  <p>
+    The logotype is vectorized and all versions are provided as 
+    <CodeTags
+      code=".svg"
+      type="secondary"
+    />
+     files, it is also available in 
+    <CodeTags
+      code=".png"
+      type="secondary"
+    />
+     for contexts that might not support vectorized files. The sizes described are recommended sizes and if there is a need to scale the logotype, make sure the coin diameter is no smaller than at least 24 px and a multiple of 8.
+  </p>
+</section>
 `;
 
 exports[`Core: Logotype SpacingZone renders 1`] = `
