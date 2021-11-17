@@ -6,119 +6,70 @@ const SELECTORS = {
 const _createPagination = paginationContainer => {
 
     const pages = paginationContainer.querySelectorAll("li");
-    const ul = paginationContainer.querySelector("ul");
 
-    // [...pages].map(page => page.classList.add("hidden"));
+    [...pages].map(page => page.addEventListener("click", e => {
+        _updateActive(pages, e);
+        paginate(pages);
+    }));
 
-    // const paginatedPages = _paginate(pages);
-
-    // [...pages].map(page => ul.appendChild(page));
-    // paginationContainer.appendChild(ul);
-/*
-    const _paginaterinho = () => {
-
-        const activeIndex = _getActiveIndex(pages);
-
-        if (pages.length > 7) {
-            const anchor = document.createElement("a");
-            const dotts = document.createElement("LI");
-
-            dotts.className = "d-none d-sm-block";
-
-            dotts.appendChild(anchor);
-            dotts.classList.add("dotts");
-            anchor.innerText = "...";
-
-            const div = paginationContainer.querySelector("div");
-
-            [...pages].map(page => page.classList.add("hidden"));
-
-            if (activeIndex < 4) {
-                [...pages].map((page, index) => {
-                    if (index < 6) {
-                        page.classList.remove("hidden");
-                    } else if (index === pages.length - 1) {
-                        page.classList.remove("hidden");
-                    }
-                });
-            } else if (activeIndex > 3 && activeIndex < pages.length - 4) {
-                [...pages].map((page, index) => {
-                    if (index === 1) {
-                        page.classList.remove("hidden");
-                    } else if (index === activeIndex - 1 || index === activeIndex || index === activeIndex + 1) {
-                        page.classList.remove("hidden");
-                    } else if (index === pages.length - 1) {
-                        page.classList.remove("hidden");
-                    }
-                });
-            } else if (activeIndex >= pages.length - 4) {
-                [...pages].map((page, index) => {
-                    if (index === 1) {
-                        page.classList.remove("hidden");
-                    } else if (index < pages.length - 1) {
-                        page.classList.remove("hidden");
-                    }
-                });
-            }
-        }
-    };
-
-    _paginaterinho();
-*/
+    paginate(pages);
 };
 
-// const pages = paginationContainer.querySelectorAll("li");
+const _updateActive = (pages, target) => {
+    [...pages].map(page => page.classList.remove("active"));
+    target.currentTarget.classList.add("active");
+};
 
-const paginate = () => {
-    const numberOfPages = 100;
+const paginate = pages => {
+    const numberOfPages = pages.length;
     let delta;
-    const range = [];
-    const rangeWithDots = [];
+    const paginatedPages = [];
+    const ellipsis = [];
     const firstPage = 1;
-    const currentPage = 1;
+    const currentPage = _getActiveIndex(pages) + 1;
+    let paginatedIndex;
 
     if (currentPage === 1 || currentPage === numberOfPages) {
         delta = 4;
-    } else if (currentPage === 2 || currentPage === numberOfPages - 2) {
+    } else if (currentPage === 2 || currentPage === numberOfPages - 1) {
         delta = 3;
-    } else if (currentPage === 3 || currentPage === numberOfPages - 3) {
+    } else if (currentPage === 3 || currentPage === numberOfPages - 2) {
         delta = 2;
     } else {
         delta = 1;
     }
 
-    let l;
-
-    range.push(firstPage);
+    paginatedPages.push(firstPage);
 
     if (numberOfPages <= 1) {
-        return range;
+        return paginatedPages;
     }
 
     for (let i = currentPage - delta; i <= currentPage + delta; i++) {
         if (i < numberOfPages && i > 1) {
-            range.push(i);
+            paginatedPages.push(i);
         }
     }
 
-    range.push(numberOfPages);
+    paginatedPages.push(numberOfPages);
+    console.log("paginated", paginatedPages);
 
-    for (const i of range) {
-        if (l) {
-            if (i - l === 2) {
-                rangeWithDots.push(l + 1);
-            } else if (i - l !== 1) {
-                rangeWithDots.push("...");
+    for (const i of paginatedPages) {
+        if (paginatedIndex) {
+            if (i - paginatedIndex === 2) {
+                ellipsis.push(paginatedIndex + 1);
+            } else if (i - paginatedIndex !== 1) {
+                ellipsis.push("...");
             }
         }
 
-        rangeWithDots.push(i);
-        l = i;
+        ellipsis.push(i);
+        paginatedIndex = i;
     }
 
-    console.log(rangeWithDots);
+    console.log(ellipsis);
 
-    return rangeWithDots;
+    return ellipsis;
 
 };
 
@@ -147,8 +98,6 @@ const init = id => {
 
             return null;
         }
-
-        paginate();
 
         return [...paginations].map(pagination => _createPagination(pagination));
     }

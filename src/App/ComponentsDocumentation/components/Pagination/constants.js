@@ -3,16 +3,16 @@ import Pagination from "~/src/App/components/Pagination";
 
 export const paginationItems = [
     /* eslint-disable object-property-newline */
-    { name: "1", href: "#", active: false },
-    { name: "2", href: "#", active: true },
-    { name: "3", href: "#", active: false },
-    { name: "4", href: "#", active: false },
-    { name: "5", href: "#", active: false },
-    { name: "6", href: "#", active: false },
-    { name: "7", href: "#", active: false },
-    { name: "8", href: "#", active: false },
-    { name: "9", href: "#", active: false },
-    { name: "10", href: "#", active: false }
+    { name: "1", active: false },
+    { name: "2", active: true },
+    { name: "3", active: false },
+    { name: "4", active: false },
+    { name: "5", active: false },
+    { name: "6", active: false },
+    { name: "7", active: false },
+    { name: "8", active: false },
+    { name: "9", active: false },
+    { name: "10", active: false }
     /* eslint-enable object-property-newline */
 ];
 
