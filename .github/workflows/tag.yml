@@ -25,18 +25,11 @@ jobs:
         env:
           TOKEN: ${{ secrets.SENTRY_TOKEN }}
 
-      - name: Set Node.js 12.x
-        uses: actions/setup-node@master
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v2
         with:
-          node-version: 12.x
-
-      - name: Cache dependencies
-        uses: actions/cache@v2.1.6
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: 16.x
+          cache: npm
 
       - name: Install
         run: npm ci
@@ -64,3 +57,24 @@ jobs:
           name: Design Guide v${{ steps.variables.outputs.VERSION }}
           body_path: RELEASE_NOTES.md
           draft: true # Let's see if everything is nice and dandy before setting this to false
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.4.0
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build:prod -- --env github_actions=true
+
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          access: "public"
