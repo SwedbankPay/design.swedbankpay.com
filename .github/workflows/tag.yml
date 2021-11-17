@@ -63,4 +63,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           name: Design Guide v${{ steps.variables.outputs.VERSION }}
           body_path: RELEASE_NOTES.md
-          draft: true # Let's see if everything is nice and dandy before setting this to true
+          draft: true # Let's see if everything is nice and dandy before setting this to false
