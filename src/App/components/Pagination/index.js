@@ -25,7 +25,7 @@ const Pagination = ({ type, items, id }) => {
                 <>
                     <nav className="pagination" role="navigation" aria-label="Pagination Navigation">
                         <Arrow type="start" mobile disabled/>
-                        <Arrow type="back" disabled/>
+                        <Arrow type="back"/>
                         <ul id={id} >
                             <div className="d-none d-sm-flex">
                                 { items.map(({ name, active }, i) => (

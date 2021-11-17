@@ -6,13 +6,14 @@ const SELECTORS = {
 const _createPagination = paginationContainer => {
 
     const pages = paginationContainer.querySelectorAll("li");
+    const paginationSection = paginationContainer.querySelector("ul");
 
     [...pages].map(page => page.addEventListener("click", e => {
         _updateActive(pages, e);
-        paginate(pages);
+        _renderPagination(paginationSection, paginate(pages));
     }));
 
-    paginate(pages);
+    _renderPagination(paginationSection, paginate(pages));
 };
 
 const _updateActive = (pages, target) => {
@@ -52,7 +53,6 @@ const paginate = pages => {
     }
 
     paginatedPages.push(numberOfPages);
-    console.log("paginated", paginatedPages);
 
     for (const i of paginatedPages) {
         if (paginatedIndex) {
@@ -67,10 +67,17 @@ const paginate = pages => {
         paginatedIndex = i;
     }
 
-    console.log(ellipsis);
-
     return ellipsis;
+};
 
+const _renderPagination = (paginationSection, ellipsis) => {
+    paginationSection.innerHTML = "";
+    ellipsis.map(object => {
+        paginationSection.innerHTML +=
+        `<li>
+            <a>${object}</a>
+        </li>`;
+    });
 };
 
 const _getActiveIndex = pages => {
