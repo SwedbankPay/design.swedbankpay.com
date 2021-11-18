@@ -13,6 +13,25 @@ const _createPagination = paginationContainer => {
         _renderPagination(paginationSection, paginate(pages));
     }));
 
+    const _renderPagination = (paginationSection, { ellipsis, currentPage }) => {
+        paginationSection.innerHTML = "";
+        ellipsis.map(object => {
+            paginationSection.innerHTML +=
+            `<li class=${typeof object === "string" ? "dotts" : ""}>
+                ${typeof object === "string" ? `<span>${object}</span>` : `<a>${object}</a>`}
+            </li>`;
+        });
+
+        const newPages = paginationSection.querySelectorAll("li");
+
+        [...newPages].map(page => page.innerText === currentPage.toString() ? page.classList.add("active") : null);
+
+        [...newPages].map(page => page.addEventListener("click", e => {
+            _updateActive(newPages, e);
+            _renderPagination(paginationSection, paginate(pages, e));
+        }));
+    };
+
     _renderPagination(paginationSection, paginate(pages));
 };
 
@@ -21,13 +40,13 @@ const _updateActive = (pages, target) => {
     target.currentTarget.classList.add("active");
 };
 
-const paginate = pages => {
+const paginate = (pages, e) => {
     const numberOfPages = pages.length;
     let delta;
     const paginatedPages = [];
     const ellipsis = [];
     const firstPage = 1;
-    const currentPage = _getActiveIndex(pages) + 1;
+    const currentPage = e ? Number(e.currentTarget.innerText) : _getActiveIndex(pages) + 1;
     let paginatedIndex;
 
     if (currentPage === 1 || currentPage === numberOfPages) {
@@ -46,6 +65,8 @@ const paginate = pages => {
         return paginatedPages;
     }
 
+    console.log(delta, "delta");
+
     for (let i = currentPage - delta; i <= currentPage + delta; i++) {
         if (i < numberOfPages && i > 1) {
             paginatedPages.push(i);
@@ -53,6 +74,7 @@ const paginate = pages => {
     }
 
     paginatedPages.push(numberOfPages);
+    console.log(paginatedPages, "paginated");
 
     for (const i of paginatedPages) {
         if (paginatedIndex) {
@@ -67,17 +89,8 @@ const paginate = pages => {
         paginatedIndex = i;
     }
 
-    return ellipsis;
-};
-
-const _renderPagination = (paginationSection, ellipsis) => {
-    paginationSection.innerHTML = "";
-    ellipsis.map(object => {
-        paginationSection.innerHTML +=
-        `<li>
-            <a>${object}</a>
-        </li>`;
-    });
+    return { ellipsis,
+        currentPage };
 };
 
 const _getActiveIndex = pages => {
