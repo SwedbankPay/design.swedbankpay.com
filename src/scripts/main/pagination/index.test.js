@@ -79,4 +79,38 @@ describe("scripts: pagination", () => {
             expect(pagination.init).toBeDefined();
         });
     });
+
+    it ("returns a single object when one element is initialized", () => {
+        ReactDOM.render(<TestPagination id="demo-pagination"/>, div);
+
+        const renderedPagination = document.querySelector(".pagination");
+
+        expect(renderedPagination).toBeTruthy();
+
+        const returnVal = pagination.init();
+
+        expect(Array.isArray(returnVal)).toBeTruthy();
+        expect(typeof returnVal).toEqual("object");
+    });
+
+    it("returns an array of objects when more than one element is initialized", () => {
+        ReactDOM.render(
+            <>
+                <TestPagination id="demo-pagination"/>
+                <TestPagination id="demo-pagination2"/>
+            </>, div);
+        
+        const renderedPaginations = document.querySelector(".pagination");
+
+        expect(renderedPaginations).toBeTruthy();
+
+        const returnVal = pagination.init();
+
+        console.log(returnVal);
+
+        expect(Array.isArray(returnVal)).toBeTruthy();
+        expect(typeof returnVal).toEqual(2);
+
+
+    });
 });

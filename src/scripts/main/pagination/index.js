@@ -18,7 +18,8 @@ const _createPagination = paginationContainer => {
         ellipsis.map(object => {
             paginationSection.innerHTML +=
             `<li class=${typeof object === "string" ? "dotts" : ""}>
-                ${typeof object === "string" ? `<span>${object}</span>` : `<a>${object}</a>`}
+                ${typeof object === "string" ? `<span>${object}</span>` :
+                `<a aria-label="Go to page ${object}">${object}</a>`}
             </li>`;
         });
 
@@ -65,8 +66,6 @@ const paginate = (pages, e) => {
         return paginatedPages;
     }
 
-    console.log(delta, "delta");
-
     for (let i = currentPage - delta; i <= currentPage + delta; i++) {
         if (i < numberOfPages && i > 1) {
             paginatedPages.push(i);
@@ -74,7 +73,6 @@ const paginate = (pages, e) => {
     }
 
     paginatedPages.push(numberOfPages);
-    console.log(paginatedPages, "paginated");
 
     for (const i of paginatedPages) {
         if (paginatedIndex) {
