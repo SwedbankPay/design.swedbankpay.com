@@ -80,7 +80,7 @@ describe("scripts: pagination", () => {
         });
     });
 
-    it ("returns a single object when one element is initialized", () => {
+    it("returns a single object when one element is initialized", () => {
         ReactDOM.render(<TestPagination id="demo-pagination"/>, div);
 
         const renderedPagination = document.querySelector(".pagination");
@@ -99,18 +99,29 @@ describe("scripts: pagination", () => {
                 <TestPagination id="demo-pagination"/>
                 <TestPagination id="demo-pagination2"/>
             </>, div);
-        
-        const renderedPaginations = document.querySelector(".pagination");
+
+        const renderedPaginations = document.querySelectorAll(".pagination");
 
         expect(renderedPaginations).toBeTruthy();
+        expect(renderedPaginations.length).toEqual(2);
 
         const returnVal = pagination.init();
 
-        console.log(returnVal);
-
         expect(Array.isArray(returnVal)).toBeTruthy();
-        expect(typeof returnVal).toEqual(2);
+        expect(returnVal.length).toEqual(2);
+    });
 
+    it("returns null if no pagination is found and prints a warning massaged", () => {
+        console.warn = jest.fn();
 
+        expect(pagination.init()).toBeNull();
+        expect(console.warn).toHaveBeenCalled();
+    });
+    // tests getActiveIndex
+    it ("returns activeIndex to be 1", () => {
+        ReactDOM.render(<TestPagination />, div);
+
+        const returnVal = pagination.init();
     });
 });
+

@@ -18,8 +18,7 @@ const _createPagination = paginationContainer => {
         ellipsis.map(object => {
             paginationSection.innerHTML +=
             `<li class=${typeof object === "string" ? "dotts" : ""}>
-                ${typeof object === "string" ? `<span>${object}</span>` :
-                `<a aria-label="Go to page ${object}">${object}</a>`}
+                ${typeof object === "string" ? `<span>${object}</span>` : `<a aria-label="Go to page ${object}">${object}</a>`}
             </li>`;
         });
 
@@ -120,8 +119,10 @@ const init = id => {
         return [...paginations].map(pagination => _createPagination(pagination));
     }
 };
+// For testing
 
 export default {
     init,
-    _createPagination
+    _createPagination,
+    _getActiveIndex
 };
