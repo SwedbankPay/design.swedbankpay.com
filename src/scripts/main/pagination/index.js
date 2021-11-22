@@ -7,11 +7,16 @@ const _createPagination = paginationContainer => {
 
     const pages = paginationContainer.querySelectorAll("li");
     const paginationSection = paginationContainer.querySelector("ul");
+    const arrows = paginationContainer.querySelectorAll("button");
 
     [...pages].map(page => page.addEventListener("click", e => {
         _updateActive(pages, e);
         _renderPagination(paginationSection, paginate(pages));
     }));
+
+    [...arrows].map(arrow => arrow.addEventListener("click", e => {
+        console.log("CLICK", e.currentTarget); // TODO Add classList update for disabled state or nah
+    }))
 
     const _renderPagination = (paginationSection, { ellipsis, currentPage }) => {
         paginationSection.innerHTML = "";
@@ -38,15 +43,16 @@ const _createPagination = paginationContainer => {
 const _updateActive = (pages, target) => {
     [...pages].map(page => page.classList.remove("active"));
     target.currentTarget.classList.add("active");
+    return target.currentTarget;
 };
 
-const paginate = (pages, e) => {
+const paginate = (pages, target) => {
     const numberOfPages = pages.length;
     let delta;
     const paginatedPages = [];
     const ellipsis = [];
     const firstPage = 1;
-    const currentPage = e ? Number(e.currentTarget.innerText) : _getActiveIndex(pages) + 1;
+    const currentPage = target ? Number(target.currentTarget.innerText) : _getActiveIndex(pages) + 1;
     let paginatedIndex;
 
     if (currentPage === 1 || currentPage === numberOfPages) {
@@ -124,5 +130,6 @@ const init = id => {
 export default {
     init,
     _createPagination,
-    _getActiveIndex
+    _getActiveIndex,
+    _updateActive
 };

@@ -2,7 +2,7 @@ import { beforeEach, expect, it } from "@jest/globals";
 import React from "react";
 import ReactDOM from "react-dom";
 
-import pagination from "./index";
+import pagination, { _getActiveIndex, _updateActive } from "./index";
 
 describe("scripts: pagination", () => {
 
@@ -64,6 +64,41 @@ describe("scripts: pagination", () => {
 
     );
 
+    const pages = () => (
+        <>
+            <li>
+                <a>1</a>
+            </li>
+            <li>
+                <a>2</a>
+            </li>
+            <li className="active">
+                <a>3</a>
+            </li>
+            <li>
+                <a>4</a>
+            </li>
+            <li>
+                <a>5</a>
+            </li>
+            <li>
+                <a>6</a>
+            </li>
+            <li>
+                <a>7</a>
+            </li>
+            <li>
+                <a>8</a>
+            </li>
+            <li>
+                <a>9</a>
+            </li>
+            <li>
+                <a>10</a>
+            </li>
+        </>
+    );
+
     const div = document.createElement("div");
 
     document.body.appendChild(div);
@@ -118,10 +153,17 @@ describe("scripts: pagination", () => {
         expect(console.warn).toHaveBeenCalled();
     });
     // tests getActiveIndex
-    it ("returns activeIndex to be 1", () => {
-        ReactDOM.render(<TestPagination />, div);
+    it ("returns activeIndex to be 0", () => {
 
-        const returnVal = pagination.init();
+        ReactDOM.render(<TestPagination/>, div);
+
+        const pages = document.querySelectorAll("li");
+
+        expect(pagination._getActiveIndex(pages)).toEqual(0);
+    });
+
+    it("updates active after event is fired", () => {
+        ReactDOM.render(<TestPagination/>, div);
+
     });
 });
-
