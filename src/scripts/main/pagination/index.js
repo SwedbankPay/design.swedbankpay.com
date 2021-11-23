@@ -7,23 +7,18 @@ const _createPagination = paginationContainer => {
 
     const pages = paginationContainer.querySelectorAll("li");
     const paginationSection = paginationContainer.querySelector("ul");
-    const arrows = paginationContainer.querySelectorAll("button");
 
     [...pages].map(page => page.addEventListener("click", e => {
         _updateActive(pages, e);
         _renderPagination(paginationSection, paginate(pages));
     }));
 
-    [...arrows].map(arrow => arrow.addEventListener("click", e => {
-        console.log("CLICK", e.currentTarget); // TODO Add classList update for disabled state or nah
-    }))
-
     const _renderPagination = (paginationSection, { ellipsis, currentPage }) => {
         paginationSection.innerHTML = "";
         ellipsis.map(object => {
             paginationSection.innerHTML +=
             `<li class=${typeof object === "string" ? "dotts" : ""}>
-                ${typeof object === "string" ? `<span>${object}</span>` : `<a aria-label="Go to page ${object}">${object}</a>`}
+                ${typeof object === "string" ? `<span aria-hidden="true">${object}</span>` : `<a href="#" aria-label="Go to page ${object}">${object}</a>`}
             </li>`;
         });
 
@@ -43,7 +38,6 @@ const _createPagination = paginationContainer => {
 const _updateActive = (pages, target) => {
     [...pages].map(page => page.classList.remove("active"));
     target.currentTarget.classList.add("active");
-    return target.currentTarget;
 };
 
 const paginate = (pages, target) => {
