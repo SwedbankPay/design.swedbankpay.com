@@ -398,7 +398,7 @@ exports[`Core: Logotype LogoPayex renders 1`] = `
           Object {
             "component": <Logotype
               alt="PayEx logo"
-              src="/TEST/img/logo/payex-logo.svg\\""
+              src="/TEST/img/logo/payex-logo.svg"
               type="horizontal"
             />,
             "description": "The green logo is the primary logo and should always be considered before moving on to another version.",
