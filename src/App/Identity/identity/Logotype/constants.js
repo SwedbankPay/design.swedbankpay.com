@@ -217,7 +217,7 @@ export const logoPayex = {
     elements: [
         {
             tab: "Green",
-            component: <LogotypeComponent src={`${basename}img/logo/payex-logo.svg"`} alt="PayEx logo" type="horizontal" />,
+            component: <LogotypeComponent src={`${basename}img/logo/payex-logo.svg`} alt="PayEx logo" type="horizontal" />,
             options: {
                 radio: [
                     {
