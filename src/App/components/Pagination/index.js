@@ -24,18 +24,18 @@ const Pagination = ({ type, items, id }) => {
                 :
                 <>
                     <nav className="pagination" role="navigation" aria-label="Pagination Navigation">
-                        <Arrow type="start" mobile disabled/>
+                        <Arrow type="start" mobile/>
                         <Arrow type="back"/>
-                        <ul id={id} >
-                            <div className="d-none d-sm-flex">
-                                { items.map(({ name, active }, i) => (
-                                    <li key={i} className={`${active ? " active" : ""}`}>{"\n"}
-                                        <a href="javascript:;" aria-label={`Go to page ${name}`} >{name}</a>{"\n"}
-                                    </li>
-                                ))}
-                            </div>
-                            <span className="text align-self-end d-block d-sm-none font-weight-bold">Page <span className="current-page">{items[0].name}</span> of {items.length}</span>
+                        <ul id={id}>
+                            { items.map(({ name, active }, i) => (
+                                <li key={i} className={`${active ? " active" : ""}`}>{"\n"}
+                                    <a href="#" onClick={e => e.preventDefault()} aria-label={`Go to page ${name}`}>{name}</a>{"\n"}
+                                </li>
+                            ))}
                         </ul>
+                        <span className="mobile">
+                            Page 1 of {items.length}
+                        </span>
                         <Arrow type="forward" />
                         <Arrow type="end" mobile/>
                     </nav>
