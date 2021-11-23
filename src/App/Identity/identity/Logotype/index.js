@@ -2,7 +2,7 @@ import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
-import { logoBlack, logoWhite } from "./constants";
+import { logoBlack, logoWhite, logoPayex, logoWhitePayex } from "./constants";
 
 const basename = process.env.basename;
 const brand = process.env.brand;
@@ -199,16 +199,15 @@ const Download = () => (
     </>
 );
 
-const HorizontalLogo = () => (
+const LogoPayex = () => (
     <>
-        <h2 id="horizontal-logo">Horizontal logo</h2>
-        <p></p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <img src={`${basename}img/logo/payex-logo.svg`} alt="PayEx horizontal logo"/>
-        </ComponentPreview>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <img src={`${basename}img/logo/payex-logo.png`} alt="PayEx horizontal logo"/>
-        </ComponentPreview>
+        <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={logoPayex} />
+    </>
+);
+
+const LogoWhitePayex = () => (
+    <>
+        <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={logoWhitePayex} />
     </>
 );
 
@@ -302,7 +301,8 @@ const Logotype = () => (
         }
         {brand === "payex" &&
             <DocContainer docToc>
-                <HorizontalLogo />
+                <LogoPayex />
+                <LogoWhitePayex />
                 <Favicon />
             </DocContainer>
         }
@@ -312,4 +312,4 @@ const Logotype = () => (
 export default Logotype;
 
 /* For testing */
-export { HorizontalLogo, Download, LogoBlack, LogoWhite, SpacingZone, MisuseLogo, LogotypeBackgrounds, Favicon };
+export { LogoPayex, LogoWhitePayex, Download, LogoBlack, LogoWhite, SpacingZone, MisuseLogo, LogotypeBackgrounds, Favicon };
