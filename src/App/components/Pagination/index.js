@@ -23,10 +23,10 @@ const Pagination = ({ type, items, id }) => {
                 </>
                 :
                 <>
-                    <nav className="pagination" role="navigation" aria-label="Pagination Navigation">
+                    <nav className="pagination" role="navigation" aria-label="Pagination Navigation" id={id}>
                         <Arrow type="start" mobile/>
                         <Arrow type="back"/>
-                        <ul id={id}>
+                        <ul>
                             { items.map(({ name, active }, i) => (
                                 <li key={i} className={`${active ? " active" : ""}`}>{"\n"}
                                     <a href="#" onClick={e => e.preventDefault()} aria-label={`Go to page ${name}`}>{name}</a>{"\n"}
