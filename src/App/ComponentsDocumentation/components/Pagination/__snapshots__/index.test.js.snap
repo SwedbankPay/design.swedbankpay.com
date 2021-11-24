@@ -55,56 +55,47 @@ exports[`Documentation: Pagination Overview renders 1`] = `
           Object {
             "component": <Pagination
               arrows={true}
+              id="overview"
               items={
                 Array [
                   Object {
                     "active": true,
-                    "href": "#",
                     "name": "1",
                   },
                   Object {
                     "active": false,
-                    "href": "#",
                     "name": "2",
                   },
                   Object {
                     "active": false,
-                    "href": "#",
                     "name": "3",
                   },
                   Object {
                     "active": false,
-                    "href": "#",
                     "name": "4",
                   },
                   Object {
                     "active": false,
-                    "href": "#",
                     "name": "5",
                   },
                   Object {
                     "active": false,
-                    "href": "#",
                     "name": "6",
                   },
                   Object {
                     "active": false,
-                    "href": "#",
                     "name": "7",
                   },
                   Object {
                     "active": false,
-                    "href": "#",
                     "name": "8",
                   },
                   Object {
                     "active": false,
-                    "href": "#",
                     "name": "9",
                   },
                   Object {
                     "active": false,
-                    "href": "#",
                     "name": "10",
                   },
                 ]
@@ -149,15 +140,72 @@ exports[`Documentation: Pagination Overview renders 1`] = `
     }
   />
   <h3>
+    Responsive design
+  </h3>
+  <div
+    className="mobile-view-container"
+  >
+    <nav
+      aria-label="Pagination Navigation"
+      className="pagination"
+      role="navigation"
+    >
+      <button
+        className="arrow-start d-block disabled"
+      >
+        <i
+          aria-label="start"
+          className="material-icons"
+        >
+          <a />
+        </i>
+      </button>
+      <button
+        className="arrow-back disabled"
+      >
+        <i
+          aria-label="back"
+          className="material-icons"
+        >
+          <a />
+        </i>
+      </button>
+      <span
+        className="mobile d-block"
+      >
+        Page 1 of 10
+      </span>
+      <button
+        className="arrow-forward"
+      >
+        <i
+          aria-label="forward"
+          className="material-icons"
+        >
+          <a />
+        </i>
+      </button>
+      <button
+        className="arrow-end d-block"
+      >
+        <i
+          aria-label="end"
+          className="material-icons"
+        >
+          <a />
+        </i>
+      </button>
+    </nav>
+  </div>
+  <p>
+    On smaller screens the page links are replaced with text showing the page information, still using arrows to go to next or previous page but with the option to go to the first or last page as well.
+  </p>
+  <h3>
     When to consider something else
   </h3>
-  <ul
-    className="pl-3 list list-bullet"
-  >
-    <li>
-      For exploration of content, where users are browsing aimlessly for something interesting, infinite scroll is better suited then using pagination. Pagination is best when the user is trying to accomplish a goal, for instance trying to find a particular article from a list. 
-    </li>
-  </ul>
+  <p>
+    For exploration of content, where users are browsing aimlessly for something interesting, infinite scroll is better suited then using pagination. Pagination is best when the user is trying to accomplish a goal, for instance trying to find a particular article from a list. 
+  </p>
   <h3>
     How to use Pagination
   </h3>

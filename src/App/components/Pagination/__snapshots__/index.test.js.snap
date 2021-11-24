@@ -46,17 +46,15 @@ exports[`Component: Pagination - prop type is enum and requires 'example' or non
     role="navigation"
   >
     <Arrow
-      disabled={true}
       mobile={true}
       type="start"
     />
     <Arrow
-      disabled={true}
       type="back"
     />
     <ul>
       <li
-        className="d-none d-sm-block"
+        className=""
         key="0"
       >
         
@@ -64,6 +62,7 @@ exports[`Component: Pagination - prop type is enum and requires 'example' or non
         <a
           aria-label="Go to page test#1"
           href="#"
+          onClick={[Function]}
         >
           test#1
         </a>
@@ -71,7 +70,7 @@ exports[`Component: Pagination - prop type is enum and requires 'example' or non
 
       </li>
       <li
-        className="d-none d-sm-block"
+        className=""
         key="1"
       >
         
@@ -79,25 +78,20 @@ exports[`Component: Pagination - prop type is enum and requires 'example' or non
         <a
           aria-label="Go to page test#2"
           href="#"
+          onClick={[Function]}
         >
           test#2
         </a>
         
 
       </li>
-      <span
-        className="text align-self-end d-block d-sm-none font-weight-bold"
-      >
-        Page 
-        <span
-          className="current-page"
-        >
-          test#1
-        </span>
-         of 
-        2
-      </span>
     </ul>
+    <span
+      className="mobile"
+    >
+      Page 1 of 
+      2
+    </span>
     <Arrow
       type="forward"
     />
@@ -117,17 +111,15 @@ exports[`Component: Pagination - renders 1`] = `
     role="navigation"
   >
     <Arrow
-      disabled={true}
       mobile={true}
       type="start"
     />
     <Arrow
-      disabled={true}
       type="back"
     />
     <ul>
       <li
-        className="d-none d-sm-block"
+        className=""
         key="0"
       >
         
@@ -135,6 +127,7 @@ exports[`Component: Pagination - renders 1`] = `
         <a
           aria-label="Go to page test#1"
           href="#"
+          onClick={[Function]}
         >
           test#1
         </a>
@@ -142,7 +135,7 @@ exports[`Component: Pagination - renders 1`] = `
 
       </li>
       <li
-        className="d-none d-sm-block"
+        className=""
         key="1"
       >
         
@@ -150,96 +143,20 @@ exports[`Component: Pagination - renders 1`] = `
         <a
           aria-label="Go to page test#2"
           href="#"
+          onClick={[Function]}
         >
           test#2
         </a>
         
 
       </li>
-      <span
-        className="text align-self-end d-block d-sm-none font-weight-bold"
-      >
-        Page 
-        <span
-          className="current-page"
-        >
-          test#1
-        </span>
-         of 
-        2
-      </span>
     </ul>
-    <Arrow
-      type="forward"
-    />
-    <Arrow
-      mobile={true}
-      type="end"
-    />
-  </nav>
-</Fragment>
-`;
-
-exports[`Component: Pagination - renders list items when prop items is provided 1`] = `
-<Fragment>
-  <nav
-    aria-label="Pagination Navigation"
-    className="pagination"
-    role="navigation"
-  >
-    <Arrow
-      disabled={true}
-      mobile={true}
-      type="start"
-    />
-    <Arrow
-      disabled={true}
-      type="back"
-    />
-    <ul>
-      <li
-        className="d-none d-sm-block"
-        key="0"
-      >
-        
-
-        <a
-          aria-label="Go to page test#1"
-          href="#"
-        >
-          test#1
-        </a>
-        
-
-      </li>
-      <li
-        className="d-none d-sm-block"
-        key="1"
-      >
-        
-
-        <a
-          aria-label="Go to page test#2"
-          href="#"
-        >
-          test#2
-        </a>
-        
-
-      </li>
-      <span
-        className="text align-self-end d-block d-sm-none font-weight-bold"
-      >
-        Page 
-        <span
-          className="current-page"
-        >
-          test#1
-        </span>
-         of 
-        2
-      </span>
-    </ul>
+    <span
+      className="mobile"
+    >
+      Page 1 of 
+      2
+    </span>
     <Arrow
       type="forward"
     />
