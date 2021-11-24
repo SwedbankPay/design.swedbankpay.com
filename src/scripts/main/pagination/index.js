@@ -8,12 +8,7 @@ const _createPagination = paginationContainer => {
     const pages = paginationContainer.querySelectorAll("li");
     const paginationSection = paginationContainer.querySelector("ul");
 
-    [...pages].map(page => page.addEventListener("click", e => {
-        _updateActive(pages, e);
-        _renderPagination(paginationSection, paginate(pages));
-    }));
-
-    const _renderPagination = (paginationSection, { ellipsis, currentPage }) => {
+    const _renderPagination = ({ ellipsis, currentPage }) => {
         paginationSection.innerHTML = "";
         ellipsis.map(object => {
             paginationSection.innerHTML +=
@@ -27,17 +22,38 @@ const _createPagination = paginationContainer => {
         [...newPages].map(page => page.innerText === currentPage.toString() ? page.classList.add("active") : null);
 
         [...newPages].map(page => page.addEventListener("click", e => {
-            _updateActive(newPages, e);
-            _renderPagination(paginationSection, paginate(pages, e));
+            _updateActive(newPages, e.currentTarget);
+            _renderPagination(paginate(pages, e.currentTarget));
         }));
+
+        addBtnListener(paginationContainer, newPages, _renderPagination);
     };
 
-    _renderPagination(paginationSection, paginate(pages));
+    _renderPagination(paginate(pages));
+};
+
+const addBtnListener = (paginationContainer, newPages, render) => {
+    const forwardBtn = paginationContainer.querySelector(".arrow-forward");
+    const backBtn = paginationContainer.querySelector(".arrow-back");
+    let target;
+
+    forwardBtn.addEventListener("click", () => {
+        _updateActive(newPages, target);
+        render(paginate(newPages, target));
+    });
+
+    const someshit = next => {
+        [...newPages].map(page => {
+            if (page.classList.contains("active")) {
+                target = next ? page.nextElementSibling : page.previousElementSibling;
+            }
+        });
+    };
 };
 
 const _updateActive = (pages, target) => {
     [...pages].map(page => page.classList.remove("active"));
-    target.currentTarget.classList.add("active");
+    target.classList.add("active");
 };
 
 const paginate = (pages, target) => {
@@ -46,7 +62,7 @@ const paginate = (pages, target) => {
     const paginatedPages = [];
     const ellipsis = [];
     const firstPage = 1;
-    const currentPage = target ? Number(target.currentTarget.innerText) : _getActiveIndex(pages) + 1;
+    const currentPage = target ? Number(target.innerText) : 1;
     let paginatedIndex;
 
     if (currentPage === 1 || currentPage === numberOfPages) {
