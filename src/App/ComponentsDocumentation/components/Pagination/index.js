@@ -12,10 +12,34 @@ const Overview = () => (
         <h2 id="pagination">Pagination</h2>
         <p>Pagination is commonly used for things like table listings, search results or directories.The need for pagination is influenced by the amount of data to be displayed and the aim is to not overwhelm users with information and to improve the loading performance of the system. </p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={PaginationShowCasePanel} codeFigure/>
+
+        <h3>Responsive design</h3>
+        <div className="mobile-view-container">
+            <nav className="pagination" role="navigation" aria-label="Pagination Navigation">
+                <button className="arrow-start d-block disabled">
+                    <i className="material-icons" aria-label="start">
+                        <a></a>
+                    </i></button><button className="arrow-back disabled">
+                    <i className="material-icons" aria-label="back">
+                        <a></a>
+                    </i>
+                </button>
+                <span className="mobile d-block">Page 1 of 10</span>
+                <button className="arrow-forward">
+                    <i className="material-icons" aria-label="forward">
+                        <a></a>
+                    </i></button>
+                <button className="arrow-end d-block">
+                    <i className="material-icons" aria-label="end">
+                        <a></a>
+                    </i>
+                </button>
+            </nav>
+        </div>
+        <p>On smaller screens the page links are replaced with text showing the page information, still using arrows to go to next or previous page but with the option to go to the first or last page as well.</p>
+
         <h3>When to consider something else</h3>
-        <ul className="pl-3 list list-bullet">
-            <li>For exploration of content, where users are browsing aimlessly for something interesting, infinite scroll is better suited then using pagination. Pagination is best when the user is trying to accomplish a goal, for instance trying to find a particular article from a list. </li>
-        </ul>
+        <p>For exploration of content, where users are browsing aimlessly for something interesting, infinite scroll is better suited then using pagination. Pagination is best when the user is trying to accomplish a goal, for instance trying to find a particular article from a list. </p>
 
         <h3>How to use Pagination</h3>
         <h4>Items per page</h4>
@@ -57,7 +81,7 @@ const DeveloperDocumentation = () => (
 
 const Pagination = () => {
     useEffect(() => {
-        pagination.init();
+        pagination.init("overview");
     });
 
     return (
