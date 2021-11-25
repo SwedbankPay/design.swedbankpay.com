@@ -5,6 +5,8 @@ import { setTitle, RemoveVscroll } from "../utils";
 import routes from "@src/App/routes/all";
 import packageJson from "~/package";
 
+import SearchComponent from "./SearchComponent/index";
+
 const basename = process.env.basename;
 const brandTitle = process.env.brandTitle;
 
@@ -22,6 +24,7 @@ const Home = () => {
                     <span className="dg-title-small d-block m-0">Welcome to the</span>
                     <span className="dg-title-big my-0">{brandTitle} Design Guide</span>
                 </header>
+                <SearchComponent />
 
                 <div className="dg-version-indicator">
                     <span>Ver. {packageJson.version}</span>
