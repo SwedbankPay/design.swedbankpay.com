@@ -18,6 +18,7 @@ export const paginationItems = [
 
 export const PaginationShowCasePanel = {
     id: "no-tabs",
+    hideOptions: true,
     elements: [
         {
             component: <Pagination id="overview" items={paginationItems} arrows text="1" />,
@@ -46,7 +47,6 @@ export const PaginationShowCasePanel = {
             title: "Pagination",
             description: <>
                 <p>The pagination component consist of page number links as well as arrows to go to next or previous page. The arrow to previous page is disabled when the first page is active and the next arrow when the last page is active. If there are 7 pages or fewer, all page number links will be shown, but if there are more pages an ellipsis is used to truncate the pages as follows: [first] ... [current-1] [current] [current+1] ... [last].</p>
-                <p> On smaller screens the page links are replaced with text showing the page information, still using arrows to go to next or previous page but with the option to go to the first or last page as well.</p>
             </>
         }
     ]
