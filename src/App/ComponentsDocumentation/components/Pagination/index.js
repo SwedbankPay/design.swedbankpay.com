@@ -36,7 +36,7 @@ const Overview = () => (
                 </button>
             </nav>
         </div>
-        <p>On smaller screens the page links are replaced with text showing the page information, still using arrows to go to next or previous page but with the option to go to the first or last page as well.</p>
+        <p className="mt-2">On smaller screens the page links are replaced with text showing the page information, still using arrows to go to next or previous page but with the option to go to the first or last page as well.</p>
 
         <h3>When to consider something else</h3>
         <p>For exploration of content, where users are browsing aimlessly for something interesting, infinite scroll is better suited then using pagination. Pagination is best when the user is trying to accomplish a goal, for instance trying to find a particular article from a list. </p>
