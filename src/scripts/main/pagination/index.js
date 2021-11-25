@@ -7,6 +7,8 @@ const _createPagination = paginationContainer => {
 
     const pages = paginationContainer.querySelectorAll("li");
     const paginationSection = paginationContainer.querySelector("ul");
+    const forwardBtn = paginationContainer.querySelector(".arrow-forward");
+    const backBtn = paginationContainer.querySelector(".arrow-back");
 
     const _renderPagination = ({ ellipsis, currentPage }) => {
         paginationSection.innerHTML = "";
@@ -19,36 +21,35 @@ const _createPagination = paginationContainer => {
 
         const newPages = paginationSection.querySelectorAll("li");
 
-        [...newPages].map(page => page.innerText === currentPage.toString() ? page.classList.add("active") : null);
+        [...newPages].map(page => {
+            page.innerText === currentPage.toString() ? page.classList.add("active") : null;
+            page.addEventListener("click", e => {
+                _updateActive(newPages, e.currentTarget);
+                _renderPagination(paginate(pages, e.currentTarget));
+            });
+        });
 
-        [...newPages].map(page => page.addEventListener("click", e => {
-            _updateActive(newPages, e.currentTarget);
-            _renderPagination(paginate(pages, e.currentTarget));
-        }));
+        forwardBtn.addEventListener("click", () => { navigate(newPages, true); });
+        backBtn.addEventListener("click", () => { navigate(newPages); });
+    };
 
-        addBtnListener(paginationContainer, newPages, _renderPagination);
+    const navigate = (newPages, forward) => {
+        let target;
+
+        [...newPages].map(page => {
+            if (page.classList.contains("active")) {
+                target = forward ? page.nextElementSibling : page.previousElementSibling;
+            }
+        });
+        _updateActive(newPages, target);
+        _renderPagination(paginate(pages, target));
     };
 
     _renderPagination(paginate(pages));
 };
 
-const addBtnListener = (paginationContainer, newPages, render) => {
-    const forwardBtn = paginationContainer.querySelector(".arrow-forward");
-    const backBtn = paginationContainer.querySelector(".arrow-back");
-    let target;
-
-    forwardBtn.addEventListener("click", () => {
-        _updateActive(newPages, target);
-        render(paginate(newPages, target));
-    });
-
-    const someshit = next => {
-        [...newPages].map(page => {
-            if (page.classList.contains("active")) {
-                target = next ? page.nextElementSibling : page.previousElementSibling;
-            }
-        });
-    };
+const disableNavigation = backArrow => {
+    // backArrow ? backArrow.classList.add("disabled") : forwardBtn.classList.add("disabled");
 };
 
 const _updateActive = (pages, target) => {
@@ -102,6 +103,14 @@ const paginate = (pages, target) => {
         paginatedIndex = i;
     }
 
+    if (currentPage === 1) {
+        disableNavigation(true);
+    }
+
+    if (currentPage === pages.length) {
+        disableNavigation();
+    }
+
     return { ellipsis,
         currentPage };
 };
@@ -124,7 +133,7 @@ const init = id => {
 
         return _createPagination(pagination);
     } else {
-        const paginations = document.querySelectorAll(`${SELECTORS.PAGINATION}:not(.example)`);
+        const paginations = document.querySelectorAll(`${SELECTORS.PAGINATION}`);
 
         if (!paginations.length) {
             console.warn("No paginations found");

@@ -5,7 +5,7 @@ const Pagination = ({ type, items, id }) => {
     const Arrow = ({ type, mobile, disabled }) => (
         <button className={`arrow-${type}${mobile ? " d-block d-sm-none" : ""}${disabled ? " disabled" : ""}`}>
             <i className="material-icons" aria-label={type} >{"\n"}
-                <a href="#"></a>
+                <a></a>
             </i>
         </button>
     );
