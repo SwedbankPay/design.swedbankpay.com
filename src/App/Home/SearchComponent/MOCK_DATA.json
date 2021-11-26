@@ -1,0 +1,276 @@
+[
+    {
+        "title": "Overview",
+        "path": "/components/components",
+        "componentPath": "components/Components"
+    },
+    {
+        "title": "Accordion",
+        "path": "/components/accordion"
+    },
+    {
+        "title": "Action list",
+        "path": "/components/action-list"
+    },
+    {
+        "title": "Alerts",
+        "path": "/components/alerts"
+    },
+    {
+        "title": "Badges",
+        "path": "/components/badge"
+    },
+    {
+        "title": "Breadcrumb",
+        "path": "/components/breadcrumb"
+    },
+    {
+        "title": "Buttons",
+        "path": "/components/buttons"
+    },
+    {
+        "title": "Cards",
+        "path": "/components/cards"
+    },
+    {
+        "title": "Charts",
+        "path": "/components/charts"
+    },
+    {
+        "title": "Checkbox",
+        "path": "/components/checkbox"
+    },
+    {
+        "title": "Code tags",
+        "path": "/components/code-tags"
+    },
+    {
+        "title": "Datepickers",
+        "path": "/components/datepickers"
+    },
+    {
+        "title": "Dialog",
+        "path": "/components/dialog"
+    },
+    {
+        "title": "Expandable",
+        "path": "/components/expandable"
+    },
+    {
+        "title": "Input field",
+        "path": "/components/input-field"
+    },
+    {
+        "title": "Links",
+        "path": "/components/links"
+    },
+    {
+        "title": "Lists",
+        "path": "/components/lists"
+    },
+    {
+        "title": "Loader",
+        "path": "/components/loader"
+    },
+    {
+        "title": "Media Object",
+        "path": "/components/media-object"
+    },
+    {
+        "title": "Navigation",
+        "path": "/components/nav"
+    },
+    {
+        "title": "Pagination",
+        "path": "/components/pagination"
+    },
+    {
+        "title": "Panel",
+        "path": "/components/panel"
+    },
+    {
+        "title": "Progress steps",
+        "path": "/components/progress-steps"
+    },
+    {
+        "title": "Radio button",
+        "path": "/components/radio-button"
+    },
+    {
+        "title": "Rangeslider",
+        "path": "/components/rangeslider"
+    },
+    {
+        "title": "Sheet",
+        "path": "/components/sheet"
+    },
+    {
+        "title": "Select",
+        "path": "/components/select"
+    },
+    {
+        "title": "Sidebar",
+        "path": "/components/sidebar"
+    },
+    {
+        "title": "Slab",
+        "path": "/components/slab"
+    },
+    {
+        "title": "Status",
+        "path": "/components/status"
+    },
+    {
+        "title": "Tables",
+        "path": "/components/tables"
+    },
+    {
+        "title": "Tabs",
+        "path": "/components/tabs"
+    },
+    {
+        "title": "Toast",
+        "path": "/components/toast"
+    },
+    {
+        "title": "Togglebox",
+        "path": "/components/togglebox"
+    },
+    {
+        "title": "Tooltips",
+        "path": "/components/tooltips"
+    },
+    {
+        "title": "Topbar",
+        "path": "/components/topbar"
+    },
+    {
+        "title": "Login",
+        "path": "/examples/login"
+    },
+    {
+        "title": "Settings",
+        "path": "/examples/settings"
+    },
+    {
+        "title": "FAQ",
+        "path": "/examples/faq"
+    },
+    {
+        "title": "Customers",
+        "path": "/examples/customers"
+    },
+    {
+        "title": "Sidebar",
+        "path": "/examples/sidebar"
+    },
+    {
+        "title": "Introduction",
+        "path": "/get-started/introduction"
+    },
+    {
+        "title": "For developers",
+        "path": "/get-started/for-developers"
+    },
+    {
+        "title": "For designers",
+        "path": "/get-started/for-designers"
+    },
+    {
+        "title": "Overview",
+        "path": "/identity/identity"
+    },
+    {
+        "title": "Accessibility",
+        "path": "/identity/accessibility"
+    },
+    {
+        "title": "Color",
+        "path": "/identity/color"
+    },
+    {
+        "title": "Copywriting",
+        "path": "/identity/copywriting"
+    },
+    {
+        "title": "Grid",
+        "path": "/identity/grid"
+    },
+    {
+        "title": "Iconography",
+        "path": "/identity/iconography"
+    },
+    {
+        "title": "Imagery",
+        "path": "/identity/imagery"
+    },
+    {
+        "title": "Logotype",
+        "path": "/identity/logotype"
+    },
+    {
+        "title": "Page layout",
+        "path": "/identity/page-layout"
+    },
+    {
+        "title": "Spacing",
+        "path": "/identity/spacing"
+    },
+    {
+        "title": "Typography",
+        "path": "/identity/typography"
+    },
+    {
+        "title": "Overview",
+        "path": "/patterns/patterns"
+    },
+    {
+        "title": "Forms",
+        "path": "/patterns/forms"
+    },
+    {
+        "title": "Login",
+        "path": "/patterns/login"
+    },
+    {
+        "title": "Overview",
+        "path": "/utilities/utilities"
+    },
+    {
+        "title": "Borders",
+        "path": "/utilities/borders"
+    },
+    {
+        "title": "Breakpoints",
+        "path": "/utilities/breakpoints"
+    },
+    {
+        "title": "Colors",
+        "path": "/utilities/colors"
+    },
+    {
+        "title": "Display",
+        "path": "/utilities/display"
+    },
+    {
+        "title": "Flex",
+        "path": "/utilities/flex"
+    },
+    {
+        "title": "Images",
+        "path": "/utilities/images"
+    },
+    {
+        "title": "Sizing",
+        "path": "/utilities/sizing"
+    },
+    {
+        "title": "Text",
+        "path": "/utilities/text"
+    },
+    {
+        "title": "Visibility",
+        "path": "/utilities/visibility"
+    }
+
+]
