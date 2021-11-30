@@ -1,11 +1,8 @@
 # Swedbank Pay Design Guide
 
 [![Version][version-badge]][version-tag]
-[![Build status][appveyor-badge]][appveyor-status]
+[![Tag][github-actions-badge]][github-actions-badge]
 [![Codecov][codecov-badge]][codecov-status]
-[![Dependabot Status][dependabot-badge]][dependabot]
-[![Dependencies Status][dep-badge]][dep-status]
-[![devDependencies Status][devdep-badge]][devdep-status]
 
 [![Swedbank Pay Design Guide][og-image]][swpdg]
 
@@ -211,36 +208,28 @@ Code and documentation © Swedbank Pay and contributors, released under the [MIT
 
 Inspired by [Bootstrap][bootstrap] and [Materialize][materialize].
 
-  [version-badge]:      https://img.shields.io/github/v/release/SwedbankPay/design.swedbankpay.com?sort=semver
-  [version-tag]:        https://github.com/swedbankpay/design.swedbankpay.com/releases/latest
-  [appveyor-badge]:     https://ci.appveyor.com/api/projects/status/1dii19sqw1m7xtsn/branch/master?svg=true
-  [appveyor-status]:    https://ci.appveyor.com/project/PayEx/design-swedbankpay-com/branch/master
-  [appveyor]:           https://www.appveyor.com/
-  [codecov-badge]:      https://codecov.io/gh/swedbankpay/design.swedbankpay.com/branch/develop/graph/badge.svg
-  [codecov-status]:     https://codecov.io/gh/swedbankpay/design.swedbankpay.com
-  [dependabot-badge]:   https://api.dependabot.com/badges/status?host=github&repo=SwedbankPay/design.swedbankpay.com
-  [dependabot]:         https://dependabot.com
-  [dep-badge]:          https://david-dm.org/swedbankpay/design.swedbankpay.com/status.svg
-  [dep-status]:         https://david-dm.org/swedbankpay/design.swedbankpay.com
-  [devdep-badge]:       https://david-dm.org/swedbankpay/design.swedbankpay.com/dev-status.svg
-  [devdep-status]:      https://david-dm.org/swedbankpay/design.swedbankpay.com?type=dev
-  [og-image]:           https://user-images.githubusercontent.com/21359433/132852104-9e2988db-f249-4a0f-9902-440846f0d669.png
-  [swpdg]:              https://design.swedbankpay.com
-  [nodejs]:             https://nodejs.org/en/
-  [slack]:              https://payex.slack.com/messages/C0L3W8B2S/
-  [react]:              https://reactjs.org/
-  [less]:               http://lesscss.org/
-  [webpack]:            https://webpack.js.org/
-  [semver]:             http://semver.org/
-  [issues]:             https://github.com/swedbankpay/design.swedbankpay.com/issues
-  [PhungNg]:            https://github.com/PhungNg
-  [VikingTristan]:      https://github.com/VikingTristan
-  [eskilsen]:           https://github.com/eskilsen
-  [babel]:              https://babeljs.io/
-  [eslint]:             https://eslint.org/
-  [sentry]:             https://sentry.io
-  [stylelint]:          https://stylelint.io/
-  [jest]:               https://facebook.github.io/jest/
-  [enzyme]:             http://airbnb.io/enzyme/
-  [bootstrap]:          http://getbootstrap.com/
-  [materialize]:        https://materializecss.com/
+  [version-badge]:        https://img.shields.io/github/v/release/SwedbankPay/design.swedbankpay.com?sort=semver
+  [version-tag]:          https://github.com/swedbankpay/design.swedbankpay.com/releases/latest
+  [github-actions-badge]: https://github.com/SwedbankPay/design.swedbankpay.com/workflows/Tag/badge.svg
+  [codecov-badge]:        https://codecov.io/gh/swedbankpay/design.swedbankpay.com/branch/develop/graph/badge.svg
+  [codecov-status]:       https://codecov.io/gh/swedbankpay/design.swedbankpay.com
+  [og-image]:             https://user-images.githubusercontent.com/21359433/132852104-9e2988db-f249-4a0f-9902-440846f0d669.png
+  [swpdg]:                https://design.swedbankpay.com
+  [nodejs]:               https://nodejs.org/en/
+  [slack]:                https://payex.slack.com/messages/C0L3W8B2S/
+  [react]:                https://reactjs.org/
+  [less]:                 http://lesscss.org/
+  [webpack]:              https://webpack.js.org/
+  [semver]:               http://semver.org/
+  [issues]:               https://github.com/swedbankpay/design.swedbankpay.com/issues
+  [PhungNg]:              https://github.com/PhungNg
+  [VikingTristan]:        https://github.com/VikingTristan
+  [eskilsen]:             https://github.com/eskilsen
+  [babel]:                https://babeljs.io/
+  [eslint]:               https://eslint.org/
+  [sentry]:               https://sentry.io
+  [stylelint]:            https://stylelint.io/
+  [jest]:                 https://facebook.github.io/jest/
+  [enzyme]:               http://airbnb.io/enzyme/
+  [bootstrap]:            http://getbootstrap.com/
+  [materialize]:          https://materializecss.com/
