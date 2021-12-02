@@ -629,7 +629,7 @@ exports[`Core: Typography Desktop renders 1`] = `
           Swedbank Headline Bold
         </td>
         <td>
-          24 px
+          28 px
         </td>
         <td>
           32 px
@@ -1071,7 +1071,7 @@ exports[`Core: Typography Mobile renders 1`] = `
           Swedbank Headline Bold
         </td>
         <td>
-          24 px
+          28 px
         </td>
         <td>
           32 px
