@@ -93,7 +93,7 @@ const InputGroup = ({
                                 ))}{"\n\t"}
                             </select>
                             :
-                            <input {...attrs} />}
+                            <input {...attrs}/>}
                     {"\n"}
                     {feedbackIcon ? <Feedback icon={feedbackIcon} /> : null} {feedbackIcon ? "\n" : null}
                     {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} /> : null }{postfixValue ? "\n" : null}
@@ -112,7 +112,7 @@ const InputGroup = ({
                                 ))}{"\n\t"}
                             </select>
                             :
-                            <input {...attrs} />}
+                            <input {...attrs}/>}
                 </>
             }
             {helpBlock ? <div className="help-block" data-success={successMessage || null} data-error={errorMessage || null}>{helpBlock}</div> : null}
