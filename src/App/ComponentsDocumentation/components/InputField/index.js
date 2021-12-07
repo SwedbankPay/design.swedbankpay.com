@@ -51,7 +51,7 @@ const ContentGuidelines = forwardRef((props, ref) => <section ref={ref}>
     </ul>
 
     <h3>Prefix and Postfix</h3>
-    <p>Prefixes and suffixes are useful when there’s a commonly understood icon, symbol or abbreviation for the type of information the user needs to enter since it can reduce mental load. </p>
+    <p>Prefixes and postfixes are useful when there’s a commonly understood icon, symbol or abbreviation for the type of information the user needs to enter since it can reduce mental load. </p>
 
     <div className="row placeholder-guideline">
         <div className="col-lg-6 col-sm-12 ">
@@ -73,14 +73,14 @@ const ContentGuidelines = forwardRef((props, ref) => <section ref={ref}>
                 <h3 className="mb-3 mt-0">Do</h3>
                 <InputGroup type="text" label="Fixed transaction fee, in SEK" postfix postfixValue="kr"/>
             </div>
-            <p>The label in itself should clearly indicate what type of data to enter, since prefixes and suffixes are hidden from screen readers.</p>
+            <p>The label in itself should clearly indicate what type of data to enter, since prefixes and postfixes are hidden from screen readers.</p>
         </div>
         <div className="col-lg-6 col-sm-12">
             <div className="slab slab-plain slab-border-error pb-4">
                 <h3 className="mb-3 mt-0">Don&#x27;t</h3>
                 <InputGroup type="text" label="Fixed transaction fee, in SEK" postfix postfixValue="kronor"/>
             </div>
-            <p>Use commonly understood abbreviations for text prefix or suffix, don’t use full words.</p>
+            <p>Use commonly understood abbreviations for text prefix or postfix, don’t use full words.</p>
         </div>
     </div>
 
