@@ -9,6 +9,10 @@ const _createPagination = paginationContainer => {
     const paginationSection = paginationContainer.querySelector("ul");
     const forwardBtn = paginationContainer.querySelector(".arrow-forward");
     const backBtn = paginationContainer.querySelector(".arrow-back");
+    const startBtn = paginationContainer.querySelector(".arrow-start");
+
+    backBtn.classList.add("disabled");
+    startBtn.classList.add("disabled");
 
     const _renderPagination = ({ ellipsis, currentPage }) => {
         paginationSection.innerHTML = "";
@@ -26,6 +30,12 @@ const _createPagination = paginationContainer => {
             page.addEventListener("click", e => {
                 _updateActive(newPages, e.currentTarget);
                 _renderPagination(paginate(pages, e.currentTarget));
+
+                const paginatedPages = paginate(pages, e.currentTarget);
+                const currentActive = paginatedPages.currentPage;
+
+                _renderPagination(paginatedPages);
+                _disableButtons(currentActive);
             });
         });
 
@@ -42,7 +52,19 @@ const _createPagination = paginationContainer => {
             }
         });
         _updateActive(newPages, target);
-        _renderPagination(paginate(pages, target));
+
+        const paginatedPages = paginate(pages, target);
+        const currentActive = paginatedPages.currentPage;
+
+        _renderPagination(paginatedPages);
+
+        _disableButtons(currentActive);
+
+    };
+
+    const _disableButtons = currentActive => {
+        currentActive === 1 ? backBtn.classList.add("disabled") : backBtn.classList.remove("disabled");
+        currentActive === pages.length ? forwardBtn.classList.add("disabled") : forwardBtn.classList.remove("disabled");
     };
 
     _renderPagination(paginate(pages));
