@@ -1,10 +1,5 @@
 [
     {
-        "title": "Overview",
-        "path": "/components/components",
-        "componentPath": "components/Components"
-    },
-    {
         "title": "Accordion",
         "path": "/components/accordion"
     },
@@ -62,6 +57,10 @@
     },
     {
         "title": "Links",
+        "path": "/components/links"
+    },
+    {
+        "title": "Action Links",
         "path": "/components/links"
     },
     {
@@ -145,26 +144,6 @@
         "path": "/components/topbar"
     },
     {
-        "title": "Login",
-        "path": "/examples/login"
-    },
-    {
-        "title": "Settings",
-        "path": "/examples/settings"
-    },
-    {
-        "title": "FAQ",
-        "path": "/examples/faq"
-    },
-    {
-        "title": "Customers",
-        "path": "/examples/customers"
-    },
-    {
-        "title": "Sidebar",
-        "path": "/examples/sidebar"
-    },
-    {
         "title": "Introduction",
         "path": "/get-started/introduction"
     },
@@ -175,10 +154,6 @@
     {
         "title": "For designers",
         "path": "/get-started/for-designers"
-    },
-    {
-        "title": "Overview",
-        "path": "/identity/identity"
     },
     {
         "title": "Accessibility",
@@ -221,20 +196,12 @@
         "path": "/identity/typography"
     },
     {
-        "title": "Overview",
-        "path": "/patterns/patterns"
-    },
-    {
         "title": "Forms",
         "path": "/patterns/forms"
     },
     {
         "title": "Login",
         "path": "/patterns/login"
-    },
-    {
-        "title": "Overview",
-        "path": "/utilities/utilities"
     },
     {
         "title": "Borders",
