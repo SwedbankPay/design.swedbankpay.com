@@ -16,11 +16,6 @@ export const browsers = [
         text: "Yes"
     },
     {
-        url: "img/documentation/forDevelopers/internet-explorer.png",
-        alt: "Image of Internet explorer",
-        text: "11"
-    },
-    {
         url: "img/documentation/forDevelopers/firefox.png",
         alt: "Image of Firefox",
         text: "Yes"

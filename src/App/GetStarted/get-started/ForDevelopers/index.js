@@ -70,6 +70,7 @@ const Installation = () => (
         </ComponentPreview>
 
         <h3>Browser Support</h3>
+        <p>The design guide is tested and currently supported by these browsers.</p>
         <div className="browser-support">
             {browsers.map(browser => (
                 <div key={browser.url}>
@@ -78,6 +79,8 @@ const Installation = () => (
                 </div>
             ))}
         </div>
+        <h4>Browser support for products using the Design Guide</h4>
+        <p>It is up to every Project manager and development team to decide which browsers their product should support. If you want to support other browsers than the ones supported by the Design Guide you need to maintain and test the component code in in your project. </p>
     </section>
 );
 const GridAndBreakpoints = () => (
