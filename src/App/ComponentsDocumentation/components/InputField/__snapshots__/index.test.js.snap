@@ -58,7 +58,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
     Prefix and Postfix
   </h3>
   <p>
-    Prefixes and suffixes are useful when there’s a commonly understood icon, symbol or abbreviation for the type of information the user needs to enter since it can reduce mental load. 
+    Prefixes and postfixes are useful when there’s a commonly understood icon, symbol or abbreviation for the type of information the user needs to enter since it can reduce mental load. 
   </p>
   <div
     className="row placeholder-guideline"
@@ -126,7 +126,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
         />
       </div>
       <p>
-        The label in itself should clearly indicate what type of data to enter, since prefixes and suffixes are hidden from screen readers.
+        The label in itself should clearly indicate what type of data to enter, since prefixes and postfixes are hidden from screen readers.
       </p>
     </div>
     <div
@@ -148,7 +148,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
         />
       </div>
       <p>
-        Use commonly understood abbreviations for text prefix or suffix, don’t use full words.
+        Use commonly understood abbreviations for text prefix or postfix, don’t use full words.
       </p>
     </div>
   </div>
