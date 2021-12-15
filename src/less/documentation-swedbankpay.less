@@ -1273,6 +1273,26 @@
             margin-bottom: 1rem;
         }
     }
+
+    #logotype-doc {
+        .logotype-display {
+            div {
+                display: flex;
+                height: 10rem;
+                width: 10rem;
+                justify-content: center;
+                align-items: center;
+
+                &.background-light {
+                    background-color: @light-gray;
+                }
+
+                &.background-primary {
+                    background-color: @brand-primary;
+                }
+            }
+        }
+    }
 }
 
 

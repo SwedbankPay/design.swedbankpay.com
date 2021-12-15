@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Logotype, { HorizontalLogo, Download, LogoBlack, LogoWhite, SpacingZone, MisuseLogo, LogotypeBackgrounds, Favicon } from "./index";
+import Logotype, { Overview, HorizontalLogo, LogoBlack, LogoWhite, SpacingZone, MisuseLogo, LogotypeBackgrounds, Favicon } from "./index";
 
 describe("Core: Logotype", () => {
     it("is defined", () => {
@@ -14,6 +14,18 @@ describe("Core: Logotype", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
+    describe("Overview", () => {
+        it("is defined", () => {
+            expect(Overview).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<Overview />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
     describe("HorizontalLogo", () => {
         it("is defined", () => {
             expect(HorizontalLogo).toBeDefined();
@@ -21,18 +33,6 @@ describe("Core: Logotype", () => {
 
         it("renders", () => {
             const wrapper = shallow(<HorizontalLogo />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Download", () => {
-        it("is defined", () => {
-            expect(Download).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Download />);
 
             expect(wrapper).toMatchSnapshot();
         });
