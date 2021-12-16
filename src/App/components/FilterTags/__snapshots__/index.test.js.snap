@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: FilterTags prop type is marked as required 1`] = `
+<span
+  className="filter-tag"
+>
+  <i
+    aria-hidden="true"
+    className="material-icons close-tag"
+  >
+    close
+  </i>
+</span>
+`;
+
+exports[`Component: FilterTags renders with class filter-tag 1`] = `
+<span
+  className="filter-tag"
+>
+  Tag
+  <i
+    aria-hidden="true"
+    className="material-icons close-tag"
+  >
+    close
+  </i>
+</span>
+`;
