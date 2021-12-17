@@ -318,3 +318,111 @@ export const logoWhitePayex = {
         }
     ]
 };
+
+export const logoPayex = {
+    id: "logoPayex",
+    tabsId: "logoPayexTabs",
+    elements: [
+        {
+            tab: "Green",
+            component: <LogotypeComponent src={`${basename}img/logo/payex-logo.svg`} alt="PayEx logo" type="horizontal" />,
+            options: {
+                radio: [
+                    {
+                        id: "size_radio",
+                        title: "Sizes",
+                        values: [
+                            {
+                                name: "Smallest",
+                                value: {
+                                    size: "xs"
+                                },
+                                description: <>
+                                    <h4>Important</h4>
+                                    <p>This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.</p>
+                                </>
+                            },
+                            {
+                                name: "Small",
+                                default: true,
+                                value: {
+                                    size: "sm"
+                                }
+                            },
+                            {
+                                name: "Medium",
+                                value: {
+                                    size: "md"
+                                }
+                            },
+                            {
+                                name: "Large",
+                                value: {
+                                    size: "lg"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            title: "Green logo",
+            description: "The green logo is the primary logo and should always be considered before moving on to another version."
+        }
+    ]
+};
+
+export const logoWhitePayex = {
+    id: "logoWhitePayEx",
+    tabsId: "logoWhitePayExTabs",
+    elements: [
+        {
+            tab: "White",
+            component: <LogotypeComponent src={`${basename}img/logo/payex-logo-neg.svg`} alt="PayEx logo" type="horizontal" />,
+            altBackground: true,
+            options: {
+                radio: [
+                    {
+                        id: "size_radio_white",
+                        title: "Sizes",
+                        values: [
+                            {
+                                name: "Smallest",
+                                value: {
+                                    size: "xs"
+                                },
+                                description: <>
+                                    <h4>Important</h4>
+                                    <p>This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.</p>
+                                </>
+                            },
+                            {
+                                name: "Small",
+                                default: true,
+                                value: {
+                                    size: "sm"
+                                }
+                            },
+                            {
+                                name: "Medium",
+                                value: {
+                                    size: "md"
+                                }
+                            },
+                            {
+                                name: "Large",
+                                value: {
+                                    size: "lg"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            title: "White logo",
+            description: <p>
+                Should only be used on PayEx primary color (green) and on dark backgrounds.
+                The green logo is the primary logo and should always be considered before moving on to another version.
+            </p>
+        }
+    ]
+};

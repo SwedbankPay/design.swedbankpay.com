@@ -457,6 +457,77 @@ exports[`Core: Logotype LogoPayex renders 1`] = `
 </Fragment>
 `;
 
+exports[`Core: Logotype LogoPayex renders 1`] = `
+<Fragment>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <Logotype
+              alt="PayEx logo"
+              src="/TEST/img/logo/payex-logo.svg"
+              type="horizontal"
+            />,
+            "description": "The green logo is the primary logo and should always be considered before moving on to another version.",
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "size_radio",
+                  "title": "Sizes",
+                  "values": Array [
+                    Object {
+                      "description": <React.Fragment>
+                        <h4>
+                          Important
+                        </h4>
+                        <p>
+                          This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
+                        </p>
+                      </React.Fragment>,
+                      "name": "Smallest",
+                      "value": Object {
+                        "size": "xs",
+                      },
+                    },
+                    Object {
+                      "default": true,
+                      "name": "Small",
+                      "value": Object {
+                        "size": "sm",
+                      },
+                    },
+                    Object {
+                      "name": "Medium",
+                      "value": Object {
+                        "size": "md",
+                      },
+                    },
+                    Object {
+                      "name": "Large",
+                      "value": Object {
+                        "size": "lg",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Green",
+            "title": "Green logo",
+          },
+        ],
+        "id": "logoPayex",
+        "tabsId": "logoPayexTabs",
+      }
+    }
+  />
+</Fragment>
+`;
+
 exports[`Core: Logotype LogoWhite renders 1`] = `
 <Fragment>
   <h2
@@ -599,6 +670,80 @@ exports[`Core: Logotype LogoWhite renders 1`] = `
         ],
         "id": "logoWhite",
         "tabsId": "logoWhiteTabs",
+      }
+    }
+  />
+</Fragment>
+`;
+
+exports[`Core: Logotype LogoWhitePayex renders 1`] = `
+<Fragment>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "altBackground": true,
+            "component": <Logotype
+              alt="PayEx logo"
+              src="/TEST/img/logo/payex-logo-neg.svg"
+              type="horizontal"
+            />,
+            "description": <p>
+              Should only be used on PayEx primary color (green) and on dark backgrounds. The green logo is the primary logo and should always be considered before moving on to another version.
+            </p>,
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "size_radio_white",
+                  "title": "Sizes",
+                  "values": Array [
+                    Object {
+                      "description": <React.Fragment>
+                        <h4>
+                          Important
+                        </h4>
+                        <p>
+                          This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
+                        </p>
+                      </React.Fragment>,
+                      "name": "Smallest",
+                      "value": Object {
+                        "size": "xs",
+                      },
+                    },
+                    Object {
+                      "default": true,
+                      "name": "Small",
+                      "value": Object {
+                        "size": "sm",
+                      },
+                    },
+                    Object {
+                      "name": "Medium",
+                      "value": Object {
+                        "size": "md",
+                      },
+                    },
+                    Object {
+                      "name": "Large",
+                      "value": Object {
+                        "size": "lg",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "White",
+            "title": "White logo",
+          },
+        ],
+        "id": "logoWhitePayEx",
+        "tabsId": "logoWhitePayExTabs",
       }
     }
   />
