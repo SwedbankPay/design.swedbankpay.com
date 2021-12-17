@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "@components/Button";
 
 export const filtersShowCase = {
     id: "overview-filters",
@@ -8,8 +9,9 @@ export const filtersShowCase = {
         {
             tab: "Horizontal topbar",
             component:
-            <div>
+            <div className="overview-container">
                 <h1>HORIZONTAL</h1>
+                <Button id="open-demo" className="view-demo-button" onClick={() => console.log("clicked")} name="View demo" label="View demo" icon="open_in_new" type="secondary" size="lg"></Button>
             </div>,
             title: "Horizontal topbar",
             description: "A horizontal topbar is a good option for filtering tables and also for pages made up of sections where the filter should affect local sections. Filter inputs are hidden in popover menus to limit vertical space, this means that the filters are a bit less accessible than in a sidebar and selected values should preferably be shown using tags."
