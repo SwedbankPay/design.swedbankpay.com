@@ -101,12 +101,11 @@ const HowToDesignFilters = () => (
                         </div>
                     </div>
                 </div>
-
                 <div className="col-6">
                     <div className="slab slab-plain slab-border-error">
                         <span className="h3">Don&#x27;t</span>
                         <div className="d-flex flex-column align-items-center">
-                            <div className="pt-3 pb-3">
+                            <div className="pt-3 pb-4">
                                 FilterTags
                             </div>
                         </div>
