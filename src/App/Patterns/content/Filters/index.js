@@ -6,6 +6,7 @@ import { ComponentPreview } from "~/src/App/docutils";
 import { filtersShowCase } from "./constants";
 
 import { Link } from "react-router-dom";
+import FilterDemonstration from "./FilterDemonstration";
 
 const Overview = () => (
     <section>
@@ -13,6 +14,7 @@ const Overview = () => (
         <p>There are different options in terms positioning and setup of a filter. For example it can be placed in a vertical sidebar, a horizontal topbar or within a Sheet component. Depending on your context different setups might be better suited.
         </p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={filtersShowCase} noOptions removeOuterTag/>
+        <FilterDemonstration/>
     </section>
 );
 

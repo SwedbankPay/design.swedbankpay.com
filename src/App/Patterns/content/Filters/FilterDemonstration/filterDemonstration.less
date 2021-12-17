@@ -1,0 +1,72 @@
+.filter-demonstration {
+    position: fixed;
+    top: 1rem;
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+    z-index: 1040;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+
+    > section {
+        position: relative;
+        max-width: 100vw;
+
+        .filer-demo-container {
+            background-color: #ffffff;
+            height: 100%;
+            top: 50%;
+            left: 9rem;
+            right: 9rem;
+        }
+
+        .filter-demo-header,
+        header {
+            /* stylelint-disable selector-list-comma-newline-after */
+            h1, h2, h3, h4, h5, h6,
+            .h1, .h2, .h3, .h4, .h5, .h6 {
+                margin-top: 0;
+                margin-bottom: 0;
+                flex-grow: 1;
+            }
+
+            /* stylelint-enable selector-list-comma-newline-after */
+            padding-left: 2rem;
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+        }
+
+        .filters {
+            display: flex;
+            padding: 1rem;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding-bottom: 2rem;
+
+            .tempTest {
+                padding: 1rem;
+                border: 1px solid #000000;
+                border-radius: 3px;
+                background-color: #fdc129;
+            }
+        }
+    }
+
+    section {
+        width: 100%;
+        height: 100%;
+    }
+
+    &.hide {
+        display: none;
+    }
+
+    .filter-demo-close-button {
+        right: 0;
+        top: 0;
+        position: absolute;
+    }
+}
+
