@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { DocContainer } from "@docutils";
 
 import { ComponentPreview } from "~/src/App/docutils";
 
 import { filtersShowCase } from "./constants";
-
 import { Link } from "react-router-dom";
-import FilterDemonstration from "./FilterDemonstration";
+import { dialog } from "@src/scripts/main";
 
 const Overview = () => (
     <section>
@@ -14,7 +13,6 @@ const Overview = () => (
         <p>There are different options in terms positioning and setup of a filter. For example it can be placed in a vertical sidebar, a horizontal topbar or within a Sheet component. Depending on your context different setups might be better suited.
         </p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={filtersShowCase} noOptions removeOuterTag/>
-        <FilterDemonstration/>
     </section>
 );
 
@@ -125,15 +123,20 @@ const DeveloperDocumentation = () => (
     </section>
 );
 
-const Filters = () => (
-    <DocContainer>
-        <p className="lead">Filtering allows users to trim down visible items in a list or table by using a combination of certain options and attributes.</p>
-        <Overview />
-        <ContentGuidelines />
-        <HowToDesignFilters />
-        <DeveloperDocumentation />
-    </DocContainer>
-);
+const Filters = () => {
+
+    useEffect(() => { dialog.init(); });
+
+    return (
+        <DocContainer>
+            <p className="lead">Filtering allows users to trim down visible items in a list or table by using a combination of certain options and attributes.</p>
+            <Overview />
+            <ContentGuidelines />
+            <HowToDesignFilters />
+            <DeveloperDocumentation />
+        </DocContainer>
+    );
+};
 
 export default Filters;
 
