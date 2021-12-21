@@ -1301,6 +1301,27 @@
             bottom: 1rem;
         }
     }
+
+    .dialog {
+        &.fullscreen {
+            overflow-y: hidden;
+
+            > section {
+                max-width: none;
+                margin: auto;
+                width: 90vw;
+
+                .dialog-body {
+                    max-height: 90vh;
+                    overflow: scroll;
+                }
+            }
+
+            footer {
+                display: none;
+            }
+        }
+    }
 }
 
 
