@@ -1,3 +1,13 @@
+.slab-variant(@bg-color) {
+    background-color: @bg-color;
+
+    &.slab-arrow {
+        &:before {
+            border: none;
+        }
+    }
+}
+
 .slab {
     min-height: 1rem;
     padding: @base-padding;

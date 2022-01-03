@@ -1,3 +1,15 @@
+@status-size:                               0.75rem;
+@status-padding-left:                       0.5rem;
+
+.status-size(@size, @padding) {
+    padding-left: @size + @padding;
+
+    &:before {
+        height: @size;
+        width: @size;
+    }
+}
+
 .status {
     display: flex;
     position: relative;

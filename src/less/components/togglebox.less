@@ -1,3 +1,5 @@
+@toggle-border-color:                     @brand-secondary;
+
 .togglebox {
     position: relative;
     display: flex;
@@ -30,7 +32,7 @@
                 left: -15px;
                 height: (@checkbox-height + 0.2);
                 width: (@checkbox-width * 2.2);
-                border: 1px solid @checkbox-border-color;
+                border: 1px solid @toggle-border-color;
                 border-radius: 1rem;
             }
         }
@@ -44,7 +46,7 @@
             right: 0;
             height: @checkbox-height;
             width: (@checkbox-width * 2);
-            border: 1px solid @checkbox-border-color;
+            border: 1px solid @toggle-border-color;
             border-radius: 1rem;
             color: @white;
             cursor: pointer;
@@ -61,7 +63,7 @@
             right: 1.35rem;
             height: 1.15rem;
             width: 1.15rem;
-            border: 1px solid @checkbox-border-color;
+            border: 1px solid @toggle-border-color;
             border-radius: 50%;
             color: @white;
             cursor: pointer;
