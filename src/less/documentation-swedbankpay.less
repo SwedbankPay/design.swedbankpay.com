@@ -1,6 +1,5 @@
 @import "_variables-swedbankpay.less";
-@import "_variables.less";
-@import "_mixins.less";
+@import "global.less";
 
 #designguide {
     display: flex;
@@ -82,6 +81,8 @@
 
     // Override the prism toolbar button rules
     figure {
+        margin: 0;
+
         .code-toolbar {
             > .toolbar {
                 opacity: 1;
@@ -175,7 +176,7 @@
 
                     .dg-title-big {
                         font-size: 3.5rem;
-                        font-family: "Swedbank Headline Black";
+                        font-family: @brand-black;
                     }
                 }
 
@@ -583,7 +584,7 @@
             margin: 0 1rem 0;
             padding: 0;
             list-style: none;
-            border: 1px solid @input-border-color;
+            border: 1px solid @light-brown;
             z-index: 2000;
             box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
             display: none;
@@ -673,7 +674,7 @@
                         height: 100%;
                         left: 0;
                         top: 0;
-                        background-color: @sheet-backdrop-bg;
+                        background-color: fade(@black, 50%);
                         z-index: @zindex-tabs;
                     }
                 }
