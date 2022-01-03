@@ -1,3 +1,11 @@
+@radio-circle-height:                       10px;
+@radio-circle-width:                        10px;
+
+@radio-height:                           1.375rem;
+@radio-width:                            @radio-height;
+
+@radio-label-padding:                    (@base-padding / 5);
+
 .radio {
     position: relative;
     display: flex;
@@ -35,7 +43,7 @@
         &:checked + label:before {
             background-color: @white;
             background-repeat: no-repeat;
-            background-image: url("../../../icons/shapes/circle.svg");
+            background-image: url("../../icons/shapes/circle.svg");
             border-color: @brand-secondary;
         }
 
@@ -54,7 +62,7 @@
 
             &:checked + label:before {
                 background-color: @white;
-                background-image: url("../../../icons/shapes/circle-disabled.svg");
+                background-image: url("../../icons/shapes/circle-disabled.svg");
             }
 
             + label,
