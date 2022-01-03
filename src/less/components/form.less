@@ -1,3 +1,50 @@
+@input-padding-y:                           0.375rem;
+@input-line-height:                         @line-height-base;
+@input-form-control-height:                 3rem;
+
+@input-color:                               @brand-secondary;
+@input-bg:                                  @white;
+@input-bg-disabled:                         @white;
+@input-checked-bg-disabled:                 @brand-secondary-light-3;
+@input-border-color:                        @border-color;
+
+@input-border-width:                        1px 1px 2px;
+
+@legend-color:                              @brand-secondary;
+@legend-bottom-margin:                      @base-margin;
+
+@helpblock-margin:                          (@base-margin * 0.5) 0;
+
+@select-option-margin:                      (@base-margin * 0.187) (@base-margin * 0.375);
+
+// Form control sizing
+//
+// Relative text size, padding, and border-radii changes for form controls. For
+// horizontal sizing, wrap controls in the predefined grid classes. `<select>`
+// element gets special love because it's special, and that's a fact!
+.input-size(@input-height;
+@padding-vertical;
+@padding-horizontal;
+@font-size;
+@line-height;
+@border-radius) {
+    height: @input-height;
+    padding: @padding-vertical @padding-horizontal;
+    font-size: @font-size;
+    line-height: @line-height;
+    border-radius: @border-radius;
+
+    select& {
+        height: @input-height;
+        line-height: @input-height;
+    }
+
+    textarea&,
+    select[multiple]& {
+        height: auto;
+    }
+}
+
 label {
     display: inline-flex;
     align-items: center;
@@ -175,6 +222,29 @@ legend {
     padding: @input-padding-y 0;
 }
 
+.form-control-focus(@color: @input-border-focus) {
+    @color-rgba: rgba(red(@color), green(@color), blue(@color), 1);
+
+    &:focus {
+        // outline: 0;
+        color: @text-color;
+        outline-color: @color-rgba;
+        box-shadow: none;
+        background-color: @white;
+    }
+}
+
+.placeholder(@color) {
+    // Firefox
+    &::-moz-placeholder {
+        color: @color;
+        opacity: 1; /* Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526 */
+    }
+
+    &:-ms-input-placeholder { color: @color; } /* Internet Explorer 10+ */
+    &::-webkit-input-placeholder { color: @color; } /* Safari and Chrome */
+}
+
 .form-control {
     height: @input-form-control-height;
     padding: 0 0.75rem;
@@ -216,7 +286,7 @@ legend {
 
     &[disabled],
     fieldset[disabled] & {
-        cursor: @cursor-disabled;
+        cursor: not-allowed;
     }
 
     // Reset height for `textarea`s
@@ -312,8 +382,24 @@ legend {
     }
 }
 
+textarea {
+    resize: vertical;
+}
+
 textarea[disabled] {
     resize: none;
+}
+
+select {
+    background: url(../../icons/shapes/expand-more.svg); // TODO:
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
 }
 
 select[multiple] {
