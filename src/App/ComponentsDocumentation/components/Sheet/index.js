@@ -14,10 +14,11 @@ const Example = () => (
             A standard sheet should display content that complements the screen’s primary content. It will close when the user clicks outside of the sheet or exits out of it in another way.
         </p>
         <p>
-            Sheets can be used for a number of different things, but common use cases for a sheet are for example displaying a list of actions that affet the screen’s primary content such as filters, deletion or other
+            Sheets can be used for a number of different things, but common use cases for a sheet are for example displaying a list of actions that affect the screen’s primary content such as filters, deletion or other
             ways to manipulate the main content. If you have a form then you could include an icon that opens said sheet to display more information about what the expected input is.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
+            <button className="btn btn-primary" type="button" data-sheet-open="demo-sheet">Open sheet</button>
             <SheetComponent id="demo-sheet">
                 <h2>Sheet component</h2>
                 <p>This is the sheet component. It can contain anything you want.</p>
@@ -53,7 +54,6 @@ const Example = () => (
                     <button className="btn btn-primary" type="submit" onClick={e => console.log("hei")}>Submit</button>
                 </form>
             </SheetComponent>{"\n"}
-            <button className="btn btn-primary" type="button" data-sheet-open="demo-sheet">Open sheet</button>
         </ComponentPreview>
     </>
 );

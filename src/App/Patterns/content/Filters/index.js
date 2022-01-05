@@ -5,7 +5,7 @@ import { ComponentPreview } from "~/src/App/docutils";
 
 import { filtersShowCase } from "./constants";
 import { Link } from "react-router-dom";
-import { dialog } from "@src/scripts/main";
+import { dialog, sheet } from "@src/scripts/main";
 
 const Overview = () => (
     <section>
@@ -125,7 +125,10 @@ const DeveloperDocumentation = () => (
 
 const Filters = () => {
 
-    useEffect(() => { dialog.init(); });
+    useEffect(() => {
+        dialog.init();
+
+    });
 
     return (
         <DocContainer>

@@ -1304,16 +1304,18 @@
 
     .dialog {
         &.fullscreen {
+            z-index: @zindex-test;
             overflow-y: hidden;
 
             > section {
                 max-width: none;
-                margin: auto;
-                width: 90vw;
+                //margin: auto;
+                width: 100%;
+                top: 1rem;
 
                 .dialog-body {
                     max-height: 90vh;
-                    overflow: scroll;
+                    overflow: auto;
                 }
             }
 
@@ -1324,6 +1326,18 @@
     }
 }
 
+
+@media screen and (max-width: @screen-md-max) {
+    .documentation {
+        .dialog {
+            &.fullscreen {
+                > section {
+                    top: 6rem;
+                }
+            }
+        }
+    }
+}
 
 @media screen and (max-width: @screen-xs-max) {
     .documentation {

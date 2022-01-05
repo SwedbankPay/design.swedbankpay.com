@@ -28,8 +28,8 @@ export const filtersShowCase = {
             <div className="overview-container">
                 <h1>VERTICAL</h1>
                 <button id="open-demo" className="btn btn-secondary view-demo-button" type="button" data-dialog-open="filtering"><i className="material-icons pr-1" aria-hidden="true">fullscreen</i>{"\n"}View demo{"\n"}</button>
-                <Dialog diaHeader="Payments" diaId="filtering">
-                    <FilterDemonstration/>
+                <Dialog className="fullscreen" diaId="filtering">
+                    <FilterDemonstration type="vertical"/>
                 </Dialog>
             </div>,
             title: "Vertical sidebar",
@@ -41,8 +41,8 @@ export const filtersShowCase = {
             <div className="overview-container">
                 <h1>$HEET</h1>
                 <button id="open-demo" className="btn btn-secondary view-demo-button" type="button" data-dialog-open="filtering"><i className="material-icons pr-1" aria-hidden="true">fullscreen</i>{"\n"}View demo{"\n"}</button>
-                <Dialog diaHeader="Payments" diaId="filtering">
-                    <FilterDemonstration/>
+                <Dialog className="fullscreen" diaId="filtering">
+                    <FilterDemonstration type="sheet"/>
                 </Dialog>
             </div>,
             title: "Sheet",
