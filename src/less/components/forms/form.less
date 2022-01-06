@@ -227,6 +227,32 @@ legend {
 }
 
 .form-group {
+    &.small-size {
+        .form-control,
+        .input-group {
+            height: 2rem;
+            font-size: 0.875rem;
+
+            .input-group-addon {
+                height: 2rem;
+                font-size: 0.875rem;
+            }
+        }
+    }
+
+    &.medium-size {
+        .form-control,
+        .input-group {
+            height: 2.5rem;
+            font-size: 0.875rem;
+
+            .input-group-addon {
+                height: 2.5rem;
+                font-size: 0.875rem;
+            }
+        }
+    }
+
     margin-bottom: @base-margin-lg;
 
     &:focus-within {

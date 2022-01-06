@@ -6,7 +6,6 @@ import { inputShowCase, textareaShowCase } from "./constants";
 
 const Overview = ({ scrollToRef }) => (
     <section id="input-field-overview">
-        <InputGroup type="text" label="testern" placeholder="testern" boxSize="small-size"/>
         <h2 id="input-field">Input field</h2>
         <p>Use a Input field when the expected user input is a single line of text. A Input field must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to <a href="javascript:;" onClick={() => scrollToRef()}>content guidelines</a> for more information.</p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={inputShowCase} codeFigure />
