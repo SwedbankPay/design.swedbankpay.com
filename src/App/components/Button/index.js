@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Button = ({ label, id, name, className, value, href, icon, loading, type, disabled, btnType, fullWidth, pullRight, input, active, size, bankId }) => {
+const Button = ({ label, id, name, className, value, href, icon, loading, type, disabled, btnType, fullWidth, pullRight, input, active, size, bankId, iconAfter }) => {
     const btnClasses = classnames(
         "btn",
         className ? className : null,
@@ -48,6 +48,7 @@ const Button = ({ label, id, name, className, value, href, icon, loading, type, 
             {icon ? <><i className="material-icons" aria-hidden="true">{icon}</i>{"\n\t\t"}</> : null}
             {((icon && label) || type === "link" || type === "link-destructive" || bankId) ? <span>{label}</span> : label}{icon ? "\n\t" : null}
             {bankId ? <><i className={`bank-id bank-id-${bankId}`} />{"\n\t\t"}</> : null}
+            {iconAfter ? <><i className="material-icons" aria-hidden="true">{iconAfter}</i>{"\n\t\t"}</> : null}
         </button>
     );
 };
@@ -70,7 +71,8 @@ Button.propTypes = {
     active: PropTypes.bool,
     size: PropTypes.oneOf(["lg", "sm", "xs"]),
     bankId: PropTypes.string,
-    className: PropTypes.string
+    className: PropTypes.string,
+    iconAfter: PropTypes.string
 };
 
 export default Button;
