@@ -12,7 +12,8 @@ const basename = process.env.basename;
 
 const Overview = () => (
     <>
-        <h2 id="overview">Which button to use?</h2>
+        <h2 id="overview">Button variants</h2>
+        <p>There are three different sizes of buttons to choose from: xsmall, small and large. Our button variants can also be customized with icons next to the label to clarify the action. </p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewButtons} codeFigure />
     </>
 );
@@ -235,17 +236,9 @@ const DeveloperDocumentation = () => (
 
 const Buttons = () => (
     <DocContainer docToc>
-        <p>
-            Buttons communicate actions that users can take. The intention of a button should be clear and predictable.
-            Users should be able to anticipate what will happen when they click on a button. Buttons are typically placed throughout your UI, in places like:
+        <p className="lead">
+        Buttons communicate actions that users can take. Buttons are typically placed throughout your UI, in places like: Dialogs, Modals, Forms, Cards and Toolbars.
         </p>
-        <ul className="list list-bullet">
-            <li>Dialogs</li>
-            <li>Modals</li>
-            <li>Forms</li>
-            <li>Cards</li>
-            <li>Toolbars</li>
-        </ul>
         <Overview />
         <DestructiveButton />
         <NamingButtons />
