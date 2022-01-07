@@ -8,7 +8,7 @@ export const overviewButtons = {
     elements: [
         {
             tab: "Primary",
-            component: <ButtonComponent type="primary" label="Do something" />,
+            component: <ButtonComponent type="primary" label="Link button" />,
             options: {
                 checkbox: [
                     {
@@ -18,14 +18,6 @@ export const overviewButtons = {
                                 name: "Icon",
                                 value: {
                                     icon: "cloud"
-                                }
-                            },
-                            {
-                                id: "loader_check",
-                                name: "Loader",
-                                value: {
-                                    loader: true,
-                                    loading: true
                                 }
                             }
                         ]
@@ -55,6 +47,33 @@ export const overviewButtons = {
                                 }
                             }
                         ]
+                    },
+                    {
+                        id: "state_modifiers",
+                        title: "State modifiers",
+                        values: [
+                            {
+                                name: "Enabled",
+                                value: {
+                                    loader: false,
+                                    loading: false,
+                                    disabled: false
+                                }
+                            },
+                            {
+                                name: "Loading",
+                                value: {
+                                    loader: true,
+                                    loading: true
+                                }
+                            },
+                            {
+                                name: "Disabled",
+                                value: {
+                                    disabled: true
+                                }
+                            }
+                        ]
                     }
                 ]
             },
@@ -63,7 +82,7 @@ export const overviewButtons = {
         },
         {
             tab: "BankID",
-            component: <ButtonComponent type="primary" bankId="se" label="Do something" />,
+            component: <ButtonComponent type="primary" bankId="se" label="Link button" />,
             options: {
                 checkbox: [
                     {
@@ -114,7 +133,7 @@ export const overviewButtons = {
         },
         {
             tab: "Secondary",
-            component: <ButtonComponent type="secondary" label="Do something" />,
+            component: <ButtonComponent type="secondary" label="Link button" />,
             options: {
                 checkbox: [
                     {
@@ -124,14 +143,6 @@ export const overviewButtons = {
                                 name: "Icon",
                                 value: {
                                     icon: "cloud"
-                                }
-                            },
-                            {
-                                id: "loader_check",
-                                name: "Loader",
-                                value: {
-                                    loader: true,
-                                    loading: true
                                 }
                             }
                         ]
@@ -161,6 +172,33 @@ export const overviewButtons = {
                                 }
                             }
                         ]
+                    },
+                    {
+                        id: "state_modifiers",
+                        title: "State modifiers",
+                        values: [
+                            {
+                                name: "Enabled",
+                                value: {
+                                    loader: false,
+                                    loading: false,
+                                    disabled: false
+                                }
+                            },
+                            {
+                                name: "Loading",
+                                value: {
+                                    loader: true,
+                                    loading: true
+                                }
+                            },
+                            {
+                                name: "Disabled",
+                                value: {
+                                    disabled: true
+                                }
+                            }
+                        ]
                     }
                 ]
             },
@@ -173,25 +211,88 @@ export const overviewButtons = {
             </p>
         },
         {
-            tab: "Text/Link button",
-            component: <ButtonComponent type="link" label="Do something" />,
+            tab: "Link",
+            component: <ButtonComponent type="link" label="Link button" />,
             title: "Link button",
             options: {
-                checkbox: [
+                radio: [
                     {
-                        inputs: [
+                        id: "icon_radio",
+                        title: "Icon",
+                        values: [
                             {
-                                id: "icon_check",
-                                name: "Icon",
+                                name: "None"
+                            },
+                            {
+                                name: "Before",
                                 value: {
                                     icon: "cloud"
+                                }
+                            },
+                            {
+                                name: "After",
+                                value: {
+                                    icon: "arrow-right"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        id: "size_radio",
+                        title: "Sizes",
+                        values: [
+                            {
+                                name: "Large",
+                                value: {
+                                    size: "lg"
+                                }
+                            },
+                            {
+                                name: "Small",
+                                value: {
+                                    size: "sm"
+                                }
+                            },
+                            {
+                                name: "Extra small",
+                                value: {
+                                    size: "xs"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        id: "state_modifiers",
+                        title: "State modifiers",
+                        values: [
+                            {
+                                name: "Enabled",
+                                value: {
+                                    loader: false,
+                                    loading: false,
+                                    disabled: false
+                                }
+                            },
+                            {
+                                name: "Loading",
+                                value: {
+                                    loader: true,
+                                    loading: true
+                                }
+                            },
+                            {
+                                name: "Disabled",
+                                value: {
+                                    disabled: true
                                 }
                             }
                         ]
                     }
                 ]
             },
-            description: "Only use in combination with a primary or secondary button – for stand alone links see Links. Use for less important or less commonly used actions since they’re less prominent. Text buttons are often embedded in contained components like cards and dialogs. Since text buttons don’t have a container, they don’t distract from nearby content."
+            description: <p>
+                Only use in combination with a primary or secondary button – for stand alone links see <Link to="/components/links">Links</Link>. Use for less important or less commonly used actions since they’re less prominent. Text buttons are often embedded in contained components like dialogs.
+            </p>
         }
     ]
 };
