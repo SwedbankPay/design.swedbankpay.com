@@ -30,49 +30,55 @@ const DestructiveButton = () => (
         <h3>How to use destructive buttons</h3>
 
         <div className="row">
-            <div className="col-lg-6">
-                <div className="slab slab-plain slab-border-success pb-5 h-100">
-                    <h4>Do</h4>
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-success pb-4">
+                    <h4 className="mb-3 mt-0">Do</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
                         <img src={`${basename}img/documentation/buttons/dos-guiding.png`} className="w-50"/>
                     </div>
-                    Use the <b>Guiding Destructive Buttons</b> to initiate a destructive action
-
-                    <div className="d-flex justify-content-center mt-5 mb-4">
-                        <img src={`${basename}img/documentation/buttons/dos.png`} className="w-75"/>
-                    </div>
-                    Use the <b>Executive Destructive Buttons</b> a contained space as a final destructive call to action
                 </div>
+                <p>Use the Guiding Destructive Buttons to initiate a destructive action.</p>
             </div>
-            <div className="col-lg-6">
-                <div className="slab slab-plain slab-border-error pb-5 h-100">
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-error pb-4">
                     <h4>{"Don't"}</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
                         <img src={`${basename}img/documentation/buttons/donts-executive.png`} className="w-50"/>
                     </div>
-                    Avoid using the <b>Executive Destructive Buttons</b> to initiate a destructive action
+                </div>
+                <p>Avoid using the Executive Destructive Buttons to initiate a destructive action</p>
+            </div>
+        </div>
 
-                    <div className="d-flex justify-content-center mt-5 mb-4">
+        <div className="row">
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-success pb-4">
+                    <div className="d-flex justify-content-center mt-4 mb-4">
+                        <img src={`${basename}img/documentation/buttons/dos.png`} className="w-75"/>
+                    </div>
+                </div>
+                <p>Use the Executive Destructive Buttons a contained space as a final destructive call to action.</p>
+            </div>
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-error pb-4">
+                    <div className="d-flex justify-content-center mt-4 mb-4">
                         <img src={`${basename}img/documentation/buttons/donts.png`} className="w-75"/>
                     </div>
-                    Avoid using multiple <b>Executive Destructive Buttons</b> in the same userflow
                 </div>
+                <p>Avoid using multiple Executive Destructive Buttons in the same user flow</p>
             </div>
         </div>
     </>
 );
 
-const NamingButtons = () => (
+const ContentGuidelines = () => (
     <>
-        <h2 id="naming-buttons">Naming button labels</h2>
+        <h2 id="content-guidelines">Content guidelines</h2>
         <p>
-            {"Buttons should always lead with a strong verb that encourages action. Provide enough context for users by using the {verb} + {noun} content \
-            formula instead of using “Yes”, “Confirm”, “Cancel” – except when it comes to the Text Button, which commonly uses “Cancel”. \
-            To avoid buttons breaking in smaller interfaces due to long names, always check that the button looks OK in a mobile view. Generally, \
-            try to keep the number of characters fairly low to provide more clarity."}
+            {"The intention of a button should be clear and predictable. Users should be able to anticipate what will happen when they click on a button. Buttons should always lead with a strong verb that encourages action. Provide enough context for users by using the {verb} + {noun} content formula instead of using “Yes”, “Confirm”, “Cancel” – except when it comes to the Text Button, which commonly uses “Cancel”. To avoid buttons breaking in smaller interfaces due to long names, always check that the button looks OK in a mobile view. Generally, try to keep the number of characters fairly low to provide more clarity."}
         </p>
 
-        <h4>Unique naming</h4>
+        <h3>Unique naming</h3>
         <p>
             {
                 "Avoid using the same name for multiple buttons in the same user flow. It’s particularly hard for users using a screen reader to tell four “Next” buttons one\
@@ -81,28 +87,47 @@ const NamingButtons = () => (
                 Try to separate the text as much as you can to improve the user experience, providing the user from accidentally making the wrong choice."
             }
         </p>
-
-        <h3>How to name destructive buttons</h3>
         <div className="row">
-            <div className="col-lg-6">
-                <div className="slab slab-plain slab-border-success pb-5 h-100">
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-success pb-4">
                     <h4>Do</h4>
-
                     <div className="d-flex justify-content-center mt-4 mb-4">
                         <img src={`${basename}img/documentation/buttons/dos-naming.png`} className="w-75"/>
                     </div>
-                    Make sure to differentiate the naming so that the user understands the difference between the actions the user can take.
                 </div>
+                <p>Make sure to differentiate the naming so that the user understands the difference between the actions the user can take.</p>
             </div>
-            <div className="col-lg-6">
-                <div className="slab slab-plain slab-border-error pb-5 h-100">
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-error pb-4">
                     <h4>{"Don't"}</h4>
-
                     <div className="d-flex justify-content-center mt-4 mb-4">
                         <img src={`${basename}img/documentation/buttons/donts-naming.png`} className="w-75"/>
                     </div>
-                    Avoid naming an <b>Executive Destructive Button</b> poorly – the button cancels the payment of the invoice and not the invoice, which isn’t clear at all.
                 </div>
+                <p>Avoid naming an Executive Destructive Button poorly – the button cancels the payment of the invoice and not the invoice, which isn’t clear at all.</p>
+            </div>
+        </div>
+
+        <h3>How to use icons</h3>
+
+        <div className="row">
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-success pb-4">
+                    <h4 className="mb-3 mt-0">Do</h4>
+                    <div className="d-flex justify-content-center mt-4 mb-4">
+                        <ButtonComponent type="guiding-destructive" label="Delete" icon="delete"/>
+                    </div>
+                </div>
+                <p>Use an icon to further convey the action, e.g. a trashcan icon for a delete button.</p>
+            </div>
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-success pb-4">
+                    <h4 className="mb-3 mt-0">Do</h4>
+                    <div className="d-flex justify-content-center mt-4 mb-4">
+                        <h2>TODO</h2>
+                    </div>
+                </div>
+                <p><i>Meaningful belonging text</i></p>
             </div>
         </div>
     </>
@@ -110,6 +135,7 @@ const NamingButtons = () => (
 
 const CombiningButtons = () => (
     <>
+        {/* Her */}
         <h2 id="combining-buttons">Combining buttons</h2>
         <p>
             When using buttons next to each other, always wrap them in a <CodeTags type="secondary" code=".button-group" /> and make sure to use 8px spacing
@@ -241,7 +267,7 @@ const Buttons = () => (
         </p>
         <Overview />
         <DestructiveButton />
-        <NamingButtons />
+        <ContentGuidelines />
         <CombiningButtons />
         <DeveloperDocumentation />
     </DocContainer>
@@ -250,4 +276,4 @@ const Buttons = () => (
 export default Buttons;
 
 /* for testing */
-export { Overview, DestructiveButton, NamingButtons, CombiningButtons, DeveloperDocumentation };
+export { Overview, DestructiveButton, ContentGuidelines, CombiningButtons, DeveloperDocumentation };
