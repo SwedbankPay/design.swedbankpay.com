@@ -8,23 +8,7 @@ import CodeTags from "@components/CodeTags";
 import { overviewButtons, destructiveButtons } from "./constants";
 import { Link } from "react-router-dom";
 
-import en from "@src/img/swedbankpay/documentation/buttons/dos-guiding.png";
-import to from "@src/img/swedbankpay/documentation/buttons/donts-executive.png";
-import tre from "@src/img/swedbankpay/documentation/buttons/dos.png";
-import fire from "@src/img/swedbankpay/documentation/buttons/donts.png";
-import fem from "@src/img/swedbankpay/documentation/buttons/dos-naming.png";
-import seks from "@src/img/swedbankpay/documentation/buttons/donts-naming.png";
-
 const basename = process.env.basename;
-
-/**
- 1. <img src={`${basename}img/documentation/buttons/dos-guiding.png`} className="w-50"
- 2. <img src={`${basename}img/documentation/buttons/donts-executive.png`} className="w-50"/>
- 3. <img src={`${basename}img/documentation/buttons/dos.png`} className="w-75"/>
- 4. <img src={`${basename}img/documentation/buttons/donts.png`} className="w-75"/>
- 5. <img src={`${basename}img/documentation/buttons/dos-naming.png`} className="w-75"/>
- 6. <img src={`${basename}img/documentation/buttons/donts-naming.png`} className="w-75"/>
- */
 
 const Overview = () => (
     <>
@@ -50,7 +34,7 @@ const DestructiveButton = () => (
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4 className="mb-3 mt-0">Do</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" src = {en} />
+                        <img className="img-fluid" src={`${basename}img/documentation/buttons/dos-guiding.png`} />
                     </div>
                 </div>
                 <p>Use the Guiding Destructive Buttons to initiate a destructive action.</p>
@@ -59,7 +43,7 @@ const DestructiveButton = () => (
                 <div className="slab slab-plain slab-border-error pb-4">
                     <h4>{"Don't"}</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" src = {to} />
+                        <img className="img-fluid" src={`${basename}img/documentation/buttons/donts-executive.png`} />
                     </div>
                 </div>
                 <p>Avoid using the Executive Destructive Buttons to initiate a destructive action.</p>
@@ -71,7 +55,7 @@ const DestructiveButton = () => (
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4>Do</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" src = {tre} />
+                        <img className="img-fluid" src={`${basename}img/documentation/buttons/dos.png`} />
                     </div>
                 </div>
                 <p>Use the Executive Destructive Buttons a contained space as a final destructive call to action.</p>
@@ -80,7 +64,7 @@ const DestructiveButton = () => (
                 <div className="slab slab-plain slab-border-error pb-4">
                     <h4>Don&apos;t</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" src = {fire} />
+                        <img className="img-fluid" src={`${basename}img/documentation/buttons/donts.png`} />
                     </div>
                 </div>
                 <p>Avoid using multiple Executive Destructive Buttons in the same user flow.</p>
@@ -110,7 +94,7 @@ const ContentGuidelines = () => (
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4>Do</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" src = {fem} />
+                        <img className="img-fluid" src={`${basename}img/documentation/buttons/dos-naming.png`} />
                     </div>
                 </div>
                 <p>Make sure to differentiate the naming so that the user understands the difference between the actions the user can take.</p>
@@ -119,7 +103,7 @@ const ContentGuidelines = () => (
                 <div className="slab slab-plain slab-border-error pb-4">
                     <h4>{"Don't"}</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" src = {seks} />
+                        <img className="img-fluid" src={`${basename}img/documentation/buttons/donts-naming.png`} />
                     </div>
                 </div>
                 <p>Avoid naming an Executive Destructive Button poorly – the button cancels the payment of the invoice and not the invoice, which isn’t clear at all.</p>
@@ -267,21 +251,6 @@ const CombiningButtons = () => (
 const DeveloperDocumentation = () => (
     <>
         <h2 id="developer-documentation">Developer documentation</h2>
-        <h3>Active state</h3>
-        <p>Buttons will appear pressed (with inset shadow) when active.
-            <b>There’s no need to add a class to <CodeTags type="primary" code={"<button>"} />s as they use a pseudo-class.</b> However,
-            you can still force the same active appearance with <CodeTags type="secondary" code=".active" /> (and
-            include the <CodeTags type="secondary" code={"aria-pressed=\"true\""} /> attribute) should you need to replicate the state programmatically.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="button-group">{"\n"}
-                <ButtonComponent href="#" active type="primary" label="Primary" />{"\n"}
-                <ButtonComponent href="#" active type="secondary" label="Secondary" />{"\n"}
-                <ButtonComponent active type="guiding-destructive" label="Guiding destructive" />{"\n"}
-                <ButtonComponent active type="executive-destructive" label="Executive destructive" />{"\n"}
-
-            </div>
-        </ComponentPreview>
-
         <h3>Disabled state</h3>
         <p>Make buttons look inactive by adding the <CodeTags type="secondary" code="disabled" /> boolean attribute to any <CodeTags type="primary" code={"<button>"} /> element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
@@ -295,19 +264,26 @@ const DeveloperDocumentation = () => (
 
             </div>
         </ComponentPreview>
+        <h4>Disabled with <CodeTags type="primary" code={"<a>"}/> tag</h4>
         <p>Disabled buttons using the <CodeTags type="primary" code={"<a>"} /> element behave a bit different:</p>
         <ul>
             <li><CodeTags type="primary" code={"<a>"} />s do not support the <CodeTags type="secondary" code="disabled" /> attribute, so you must add the <CodeTags type="secondary" code=".disabled" /> class to make it visually appear disabled.</li>
             <li>Some future-friendly styles are included to disable all <CodeTags type="secondary" code="pointer-events" /> on anchor buttons. In browsers which support that property, you won’t see the disabled cursor at all.</li>
             <li>Disabled buttons should include the <CodeTags type="secondary" code={"aria-disabled=\"true\""} /> attribute to indicate the state of the element to assistive technologies.</li>
         </ul>
+        <Alert type="warning" icon="warning" text={<p><b>Link functionality:</b> The <CodeTags type="secondary" code=".disabled" /> class uses <CodeTags type="secondary" code="pointer-events: none" /> to try to disable the link functionality of <CodeTags type="primary" code={"<a>"} />s, but that CSS property is not yet standardized. In addition, even in browsers that do support <CodeTags type="secondary" code="pointer-events: none" />, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a <CodeTags type="secondary" code={"tabindex=\"-1\""} /> attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.</p>} />
+
+        <h3>Loading state</h3>
+        <p>Use the loading state to show users their action is processing by adding the <CodeTags type="primary" code={".loading"}/> class to the <CodeTags type="primary" code={"<button>"}/> element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent href="#" disabled type="primary" label="Primary" />{"\n"}
-                <ButtonComponent href="#" disabled type="secondary" label="Secondary" />{"\n"}
+                <ButtonComponent disabled loading type="primary" label="Primary" />{"\n"}
+                <ButtonComponent disabled loading type="secondary" label="Secondary" />{"\n"}
+                <ButtonComponent disabled loading type="guiding-destructive" label="Guiding destructive" />{"\n"}
+                <ButtonComponent disabled loading type="executive-destructive" label="Executive destructive" />{"\n"}
+
             </div>
         </ComponentPreview>
-        <Alert type="warning" icon="warning" text={<p><b>Link functionality:</b> The <CodeTags type="secondary" code=".disabled" /> class uses <CodeTags type="secondary" code="pointer-events: none" /> to try to disable the link functionality of <CodeTags type="primary" code={"<a>"} />s, but that CSS property is not yet standardized. In addition, even in browsers that do support <CodeTags type="secondary" code="pointer-events: none" />, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a <CodeTags type="secondary" code={"tabindex=\"-1\""} /> attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.</p>} />
 
         <h3>Usage with other tags</h3>
         <p>The <CodeTags type="secondary" code=".btn" /> classes are designed to be used with the <CodeTags type="primary" code={"<button>"} /> element.
