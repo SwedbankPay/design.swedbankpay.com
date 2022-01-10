@@ -8,7 +8,23 @@ import CodeTags from "@components/CodeTags";
 import { overviewButtons, destructiveButtons } from "./constants";
 import { Link } from "react-router-dom";
 
+import en from "@src/img/swedbankpay/documentation/buttons/dos-guiding.png";
+import to from "@src/img/swedbankpay/documentation/buttons/donts-executive.png";
+import tre from "@src/img/swedbankpay/documentation/buttons/dos.png";
+import fire from "@src/img/swedbankpay/documentation/buttons/donts.png";
+import fem from "@src/img/swedbankpay/documentation/buttons/dos-naming.png";
+import seks from "@src/img/swedbankpay/documentation/buttons/donts-naming.png";
+
 const basename = process.env.basename;
+
+/**
+ 1. <img src={`${basename}img/documentation/buttons/dos-guiding.png`} className="w-50"
+ 2. <img src={`${basename}img/documentation/buttons/donts-executive.png`} className="w-50"/>
+ 3. <img src={`${basename}img/documentation/buttons/dos.png`} className="w-75"/>
+ 4. <img src={`${basename}img/documentation/buttons/donts.png`} className="w-75"/>
+ 5. <img src={`${basename}img/documentation/buttons/dos-naming.png`} className="w-75"/>
+ 6. <img src={`${basename}img/documentation/buttons/donts-naming.png`} className="w-75"/>
+ */
 
 const Overview = () => (
     <>
@@ -34,7 +50,7 @@ const DestructiveButton = () => (
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4 className="mb-3 mt-0">Do</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img src={`${basename}img/documentation/buttons/dos-guiding.png`} className="w-50"/>
+                        <img className="img-fluid" src = {en} />
                     </div>
                 </div>
                 <p>Use the Guiding Destructive Buttons to initiate a destructive action.</p>
@@ -43,29 +59,31 @@ const DestructiveButton = () => (
                 <div className="slab slab-plain slab-border-error pb-4">
                     <h4>{"Don't"}</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img src={`${basename}img/documentation/buttons/donts-executive.png`} className="w-50"/>
+                        <img className="img-fluid" src = {to} />
                     </div>
                 </div>
-                <p>Avoid using the Executive Destructive Buttons to initiate a destructive action</p>
+                <p>Avoid using the Executive Destructive Buttons to initiate a destructive action.</p>
             </div>
         </div>
 
         <div className="row">
             <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-success pb-4">
+                    <h4>Do</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img src={`${basename}img/documentation/buttons/dos.png`} className="w-75"/>
+                        <img className="img-fluid" src = {tre} />
                     </div>
                 </div>
                 <p>Use the Executive Destructive Buttons a contained space as a final destructive call to action.</p>
             </div>
             <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-error pb-4">
+                    <h4>Don&apos;t</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img src={`${basename}img/documentation/buttons/donts.png`} className="w-75"/>
+                        <img className="img-fluid" src = {fire} />
                     </div>
                 </div>
-                <p>Avoid using multiple Executive Destructive Buttons in the same user flow</p>
+                <p>Avoid using multiple Executive Destructive Buttons in the same user flow.</p>
             </div>
         </div>
     </>
@@ -92,7 +110,7 @@ const ContentGuidelines = () => (
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4>Do</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img src={`${basename}img/documentation/buttons/dos-naming.png`} className="w-75"/>
+                        <img className="img-fluid" src = {fem} />
                     </div>
                 </div>
                 <p>Make sure to differentiate the naming so that the user understands the difference between the actions the user can take.</p>
@@ -101,7 +119,7 @@ const ContentGuidelines = () => (
                 <div className="slab slab-plain slab-border-error pb-4">
                     <h4>{"Don't"}</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img src={`${basename}img/documentation/buttons/donts-naming.png`} className="w-75"/>
+                        <img className="img-fluid" src = {seks} />
                     </div>
                 </div>
                 <p>Avoid naming an Executive Destructive Button poorly – the button cancels the payment of the invoice and not the invoice, which isn’t clear at all.</p>
@@ -138,7 +156,7 @@ const CombiningButtons = () => (
         {/* Her */}
         <h2 id="combining-buttons">Combining buttons</h2>
         <p>
-            When using buttons next to each other, always wrap them in a <CodeTags type="secondary" code=".button-group" /> and make sure to use 8px spacing
+            When using buttons next to each other, always wrap them in a <CodeTags type="primary" code=".button-group" /> and make sure to use 8px spacing
             between the buttons, both in horizontally and vertically groupings. Strive not to use multiple buttons of the same kind –
             instead, use <Link to="/components/links#action-link">Action links</Link>.
         </p>
@@ -149,48 +167,98 @@ const CombiningButtons = () => (
             </div>
         </ComponentPreview>
 
-        <h3>{"Dos and don'ts"}</h3>
-        <div className="slab slab-plain slab-border-success mb-5">
-            <h4>Do</h4>
-            <div className="row">
-                <div className="col-lg-6">
-                    <img src={`${basename}img/documentation/buttons/dos1.png`} className="w-100 mb-4"/>
-                    <p>Place buttons in a hierarchly correct order and combine different kinds of button</p>
+        <h3>How to combine buttons</h3>
+        <div className="row">
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-success pb-4">
+                    <h4 className="mb-3 mt-0">Do</h4>
+                    <div className="d-flex flex-column button-group mt-4 ">
+                        <ButtonComponent className="mb-3 justify-content-center" type="primary" label="Primary action"/>
+                        <ButtonComponent className="mb-3 justify-content-center" type="secondary" label="Secondary action"/>
+                        <ButtonComponent className="justify-content-center" type="link" label="Cancel"/>
+                    </div>
                 </div>
-                <div className="col-lg-6">
-                    <img src={`${basename}img/documentation/buttons/dos3.png`} className="w-100 mb-4"/>
-                    <p>Place buttons side by side in Desktop view</p>
+                <p>Place buttons in hierarchal correct order and combine different kinds of buttons.</p>
+            </div>
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-success pb-5 h-75">
+                    <h4 className="mb-3 mt-0">Do</h4>
+                    <div className="d-flex button-group mt-4  align-items-center">
+                        <ButtonComponent className="mr-3" type="primary" label="Primary"/>
+                        <ButtonComponent className="" type="secondary" label="Secondary"/>
+                    </div>
                 </div>
-                <div className="col-lg-6">
-                    <img src={`${basename}img/documentation/buttons/dos2.png`} className="w-100 mb-4"/>
-                    <p>Use the <b>Text Button</b> as an discrete option to cancel</p>
+                <p>Place buttons side by side in desktop view.</p>
+            </div>
+        </div>
+        <div className="row">
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-success pb-5">
+                    <h4 className="mb-3 mt-0">Do</h4>
+                    <div className="d-flex flex-column button-group mt-4">
+                        <ButtonComponent className="mb-3 justify-content-center" type="primary" label="Primary action"/>
+                        <ButtonComponent className="justify-content-center" type="link" label="Cancel"/>
+                    </div>
                 </div>
-                <div className="col-lg-6">
-                    <img src={`${basename}img/documentation/buttons/dos4.png`} className="w-100 mb-4"/>
-                    <p>Combine <b>Executive Destructive Buttons</b> with normal <b>Text/Link Buttons</b></p>
+                <p>Use the Link button as a discrete option to cancel.</p>
+            </div>
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-success pb-5">
+                    <h4 className="mb-3 mt-0">Do</h4>
+                    <div className="d-flex flex-column button-group mt-4 ">
+                        <ButtonComponent className="mb-3 justify-content-center" type="executive-destructive" label="Executive destructive action"/>
+                        <ButtonComponent className="justify-content-center" type="link" label="Cancel"/>
+                    </div>
                 </div>
+                <p>Combine Executive destructive buttons with normal Link buttons.</p>
             </div>
         </div>
 
-        <div className="slab slab-plain slab-border-error">
-            <h4>{"Don't"}</h4>
-            <div className="row">
-                <div className="col-lg-6">
-                    <img src={`${basename}img/documentation/buttons/donts1.png`} className="w-100 mb-4"/>
-                    <p>Use the <b>Secondary Button</b> (and/or the <b>Text Button</b>) above the <b>Primary Button</b></p>
+        <h3>How not to combine buttons</h3>
+        <div className="row">
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-error pb-5">
+                    <h4 className="mb-3 mt-0">Don&apos;t</h4>
+                    <div className="d-flex flex-column button-group mt-4 ">
+                        <ButtonComponent className="mb-3 justify-content-center" type="secondary" label="Secondary action"/>
+                        <ButtonComponent className="justify-content-center" type="primary" label="Primary action"/>
+                    </div>
                 </div>
-                <div className="col-lg-6">
-                    <img src={`${basename}img/documentation/buttons/donts2.png`} className="w-100 mb-4"/>
-                    <p>List primary actions and/or combine <b>Primary Button</b> and <b>BankID Button</b></p>
+                <p>Don&apos;t use the Secondary button and/or the Link button above the Primary button.</p>
+            </div>
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-error pb-5">
+                    <h4 className="mb-3 mt-0">Don&apos;t</h4>
+                    <div className="d-flex flex-column button-group mt-4 ">
+                        <ButtonComponent className="mb-3 justify-content-center" type="primary" label="Primary action"/>
+                        <ButtonComponent className="justify-content-center" type="guiding-destructive" label="Destructive guiding action"/>
+                    </div>
                 </div>
-                <div className="col-lg-6">
-                    <img src={`${basename}img/documentation/buttons/donts3.png`} className="w-100 mb-4"/>
-                    <p>Use and combine destructive buttons the same way as normal buttons</p>
+                <p>Don&apos;t combine Primary buttons with Destructive buttons.</p>
+            </div>
+        </div>
+        <div className="row">
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-error pb-5">
+                    <h4 className="mb-3 mt-0">Don&apos;t</h4>
+                    <div className="d-flex flex-column button-group mt-4 ">
+                        <ButtonComponent className="mb-3 justify-content-center" type="primary" label="Primary action"/>
+                        <ButtonComponent className="justify-content-center mb-3" type="guiding-destructive" label="Destructive guiding action"/>
+                        <ButtonComponent className="justify-content-center" type="link-destructive" label="Cancel"/>
+                    </div>
                 </div>
-                <div className="col-lg-6">
-                    <img src={`${basename}img/documentation/buttons/donts4.png`} className="w-100 mb-4"/>
-                    <p>Combine normal buttons and destructive buttons</p>
+                <p>Don&apos;t use and combine Destructive buttons the same way as normal buttons.</p>
+            </div>
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-error pb-5">
+                    <h4 className="mb-3 mt-0">Don&apos;t</h4>
+                    <div className="d-flex flex-column button-group mt-4 ">
+                        <ButtonComponent className="mb-3 justify-content-center" type="primary" label="Primary action"/>
+                        <ButtonComponent bankId="se" className="mb-3 justify-content-center" type="primary" label="Primary action"/>
+                        <ButtonComponent className="justify-content-center" type="primary" label="Primary action"/>
+                    </div>
                 </div>
+                <p>Don&apos;t use multiple Primary buttons or combine with BankID button.</p>
             </div>
         </div>
     </>
