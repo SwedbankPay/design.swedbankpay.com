@@ -408,12 +408,19 @@ exports[`Documentation: Buttons Content guidelines renders 1`] = `
           Do
         </h4>
         <div
-          className="d-flex justify-content-center mt-4 mb-4"
+          className="d-flex button-group flex-column justify-content-center mt-4 mb-4"
         >
           <Button
+            className="justify-content-center mb-3"
             icon="delete"
             label="Delete"
             type="guiding-destructive"
+          />
+          <Button
+            className="justify-content-center"
+            icon="edit"
+            label="Edit"
+            type="secondary"
           />
         </div>
       </div>
