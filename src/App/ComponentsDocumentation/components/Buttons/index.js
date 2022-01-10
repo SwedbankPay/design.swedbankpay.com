@@ -116,8 +116,9 @@ const ContentGuidelines = () => (
             <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4 className="mb-3 mt-0">Do</h4>
-                    <div className="d-flex justify-content-center mt-4 mb-4">
-                        <ButtonComponent type="guiding-destructive" label="Delete" icon="delete"/>
+                    <div className="d-flex button-group flex-column justify-content-center mt-4 mb-4">
+                        <ButtonComponent className="justify-content-center mb-3" type="guiding-destructive" label="Delete" icon="delete"/>
+                        <ButtonComponent className="justify-content-center" type="secondary" label="Edit" icon="edit"/>
                     </div>
                 </div>
                 <p>Use an icon to further convey the action, e.g. a trashcan icon for a delete button.</p>
