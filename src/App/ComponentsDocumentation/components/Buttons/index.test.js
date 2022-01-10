@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Buttons, { Overview, DestructiveButton, NamingButtons, CombiningButtons, DeveloperDocumentation } from "./index";
+import Buttons, { Overview, DestructiveButton, ContentGuidelines, CombiningButtons, DeveloperDocumentation } from "./index";
 
 describe("Documentation: Buttons", () => {
     it("is defined", () => {
@@ -38,13 +38,13 @@ describe("Documentation: Buttons", () => {
         });
     });
 
-    describe("Naming buttons", () => {
+    describe("Content guidelines", () => {
         it("is defined", () => {
-            expect(NamingButtons).toBeDefined();
+            expect(ContentGuidelines).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<NamingButtons />);
+            const wrapper = shallow(<ContentGuidelines />);
 
             expect(wrapper).toMatchSnapshot();
         });
