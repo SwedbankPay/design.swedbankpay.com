@@ -546,13 +546,6 @@ export const destructiveButtons = {
                                 }
                             },
                             {
-                                name: "Loading",
-                                value: {
-                                    loader: true,
-                                    loading: true
-                                }
-                            },
-                            {
                                 name: "Disabled",
                                 value: {
                                     disabled: true
