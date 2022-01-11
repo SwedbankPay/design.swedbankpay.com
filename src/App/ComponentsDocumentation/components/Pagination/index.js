@@ -38,6 +38,57 @@ const Overview = () => (
         </div>
         <p className="mt-2">On smaller screens the page links are replaced with text showing the page information, still using arrows to go to next or previous page but with the option to go to the first or last page as well.</p>
 
+        <h3>The pagination algorithm</h3>
+        <p>Below you can see the algorithm implemented for our solution. Our paginate function takes in two arguments; <b>pages</b> (the original list of pages) and <b>target</b> (current active index). Remember, the maximum elements to be shown in our paginator is seven, including dots, first and last element.</p>
+        <p>Other parts to notice is <i>delta</i>. Delta takes the length of pages and calculates how many indexes to be showed before and after the current active index. <br/>For example: <CodeTags type="primary" code="currentActive = 6"/> (in a list with 10 elements), the correct delta would be 1, meaning both 5 and 7 would be included in the paginated list.</p>
+        <ComponentPreview language="javascript" codeFigure>
+        if (currentPage === 1 || currentPage === numberOfPages) &#x7b; {"\n"}{"\t"}delta = 4; &#x7d; {"\n"}
+        else if (currentPage === 2 || currentPage === numberOfPages - 1) &#x7b; {"\n"}{"\t"}delta = 3; &#x7d; {"\n"}
+        else if (currentPage === 3 || currentPage === numberOfPages - 2) &#x7b; {"\n"}{"\t"}delta = 2; &#x7d; {"\n"}
+        else &#x7b; delta = 1; &#x7d;
+        </ComponentPreview>
+        <p><i>Ellipsis</i> is the returned list with correct elements to be included and right placement of dots. Also, the function returns <i>currentPage</i>, which is the current page with active class. Tha utility class of <CodeTags type="primary" code="active"/> gives the current page a more accessible look and helps the user to perceive which page is active.
+        </p>
+        <p>Also, keep in mind that the arrows must correctly be given the belonging utility classes, called <CodeTags type="secondary" code="disabled"/>. This class provides the correct styling for disabling the arrow-buttons if currentPage is either first or last in the pagination.</p>
+
+        <ComponentPreview language="javascript" codeFigure>
+            const paginate = (pages, target) =&#x3e; &#x7b; {"\n"}{"\t"}
+                const numberOfPages = pages.length; {"\n"}{"\t"}
+                &#x2f;&#x2f; Remember to create a function to calculate the size of delta {"\n"}{"\t"}
+                let delta; {"\n"}{"\t"}
+                const paginatedPages = &#x5b;&#x5d;; {"\n"}{"\t"}
+                const ellipsis = &#x5b;&#x5d;;{"\n"}{"\t"}
+                let paginatedIndex;{"\n"}{"\t"}
+
+                const currentPage = target ? Number(target.innerText) : 1;{"\n"}{"\t"}
+                paginatedPages.push(firstPage);{"\n"}{"\t"}
+                if (numberOfPages &#x3c;= 1) &#x7b;{"\n"}{"\t"}{"\t"}
+                    return paginatedPages;{"\n"}{"\t"}
+                &#x7d;{"\n"}{"\t"}
+                for (let i = currentPage - delta ; i&#x3c;= currentPage + delta ; i++) &#x7b; {"\n"}{"\t"}{"\t"}
+                    if (i &#x3c; numberOfPages &#x26;&#x26; i &#x3e; 1) &#x7b; {"\n"}{"\t"}{"\t"}{"\t"}
+                        paginatedPages.push(i); {"\n"}{"\t"}{"\t"}
+                    &#x7d; {"\n"}{"\t"}
+                &#x7d; {"\n"}{"\t"}
+                paginatedPages.push(numberOfPages); {"\n"}{"\t"}
+                &#x2f;&#x2f; Algorithm to correctly place dots in paginatedPages {"\n"}{"\t"}
+                for (const i of paginatedPages) &#x7b; {"\n"}{"\t"}{"\t"}
+                    if (paginatedIndex) &#x7b; {"\n"}{"\t"}{"\t"}{"\t"}
+                        if (i - paginatedIndex === 2) &#x7b; {"\n"}{"\t"}{"\t"}{"\t"}{"\t"}
+                            ellipsis.push(paginatedIndex + 1); {"\n"}{"\t"}{"\t"}{"\t"}
+                        &#x7d; else if (i - paginatedIndex !== 1) &#x7b; {"\n"}{"\t"}{"\t"}{"\t"}{"\t"}
+                            ellipsis.push(&#x22;...&#x22;); {"\n"}{"\t"}{"\t"}{"\t"}
+                        &#x7d; {"\n"}{"\t"}{"\t"}
+                    &#x7d; {"\n"}{"\t"}{"\t"}
+                    ellipsis.push(i); {"\n"}{"\t"}{"\t"}
+                    paginatedIndex = i; {"\n"}{"\t"}
+                &#x7d; {"\n"}{"\t"}
+                &#x2f;&#x2f; Returns the new list with ellipsis and current active page {"\n"}{"\t"}
+                return &#x7b; ellipsis, {"\n"}{"\t"}{"\t"}
+                    currentPage&#x7d;; {"\n"}{"\t"}
+        </ComponentPreview>
+        <p>Don&apos;t hesitate to reach out to the design team for further explanation of the algorithm.</p>
+
         <h3>When to consider something else</h3>
         <p>For exploration of content, where users are browsing aimlessly for something interesting, infinite scroll is better suited then using pagination. Pagination is best when the user is trying to accomplish a goal, for instance trying to find a particular article from a list. </p>
 
