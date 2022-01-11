@@ -106,9 +106,6 @@ exports[`Documentation: Pagination Overview renders 1`] = `
               <p>
                 The pagination component consist of page number links as well as arrows to go to next or previous page. The arrow to previous page is disabled when the first page is active and the next arrow when the last page is active. If there are 7 pages or fewer, all page number links will be shown, but if there are more pages an ellipsis is used to truncate the pages as follows: [first] ... [current-1] [current] [current+1] ... [last].
               </p>
-              <p>
-                 On smaller screens the page links are replaced with text showing the page information, still using arrows to go to next or previous page but with the option to go to the first or last page as well.
-              </p>
             </React.Fragment>,
             "options": Object {
               "radio": Array [
@@ -135,6 +132,7 @@ exports[`Documentation: Pagination Overview renders 1`] = `
             "title": "Pagination",
           },
         ],
+        "hideOptions": true,
         "id": "no-tabs",
       }
     }
@@ -197,8 +195,250 @@ exports[`Documentation: Pagination Overview renders 1`] = `
       </button>
     </nav>
   </div>
-  <p>
+  <p
+    className="mt-2"
+  >
     On smaller screens the page links are replaced with text showing the page information, still using arrows to go to next or previous page but with the option to go to the first or last page as well.
+  </p>
+  <h3>
+    The pagination algorithm
+  </h3>
+  <p>
+    Below you can see the algorithm implemented for our solution. Our paginate function takes in two arguments; 
+    <b>
+      pages
+    </b>
+     (the original list of pages) and 
+    <b>
+      target
+    </b>
+     (current active index). Remember, the maximum elements to be shown in our paginator is seven, including dots, first and last element.
+  </p>
+  <p>
+    Other parts to notice is 
+    <i>
+      delta
+    </i>
+    . Delta takes the length of pages and calculates how many indexes to be showed before and after the current active index. 
+    <br />
+    For example: 
+    <CodeTags
+      code="currentActive = 6"
+      type="primary"
+    />
+     (in a list with 10 elements), the correct delta would be 1, meaning both 5 and 7 would be included in the paginated list.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    if (currentPage === 1 || currentPage === numberOfPages) { 
+    
+
+    	
+    delta = 4; } 
+    
+
+    else if (currentPage === 2 || currentPage === numberOfPages - 1) { 
+    
+
+    	
+    delta = 3; } 
+    
+
+    else if (currentPage === 3 || currentPage === numberOfPages - 2) { 
+    
+
+    	
+    delta = 2; } 
+    
+
+    else { delta = 1; }
+  </ComponentPreview>
+  <p>
+    <i>
+      Ellipsis
+    </i>
+     is the returned list with correct elements to be included and right placement of dots. Also, the function returns 
+    <i>
+      currentPage
+    </i>
+    , which is the current page with active class. Tha utility class of 
+    <CodeTags
+      code="active"
+      type="primary"
+    />
+     gives the current page a more accessible look and helps the user to perceive which page is active.
+  </p>
+  <p>
+    Also, keep in mind that the arrows must correctly be given the belonging utility classes, called 
+    <CodeTags
+      code="disabled"
+      type="secondary"
+    />
+    . This class provides the correct styling for disabling the arrow-buttons if currentPage is either first or last in the pagination.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    const paginate = (pages, target) =&gt; { 
+    
+
+    	
+    const numberOfPages = pages.length; 
+    
+
+    	
+    // Remember to create a function to calculate the size of delta 
+    
+
+    	
+    let delta; 
+    
+
+    	
+    const paginatedPages = []; 
+    
+
+    	
+    const ellipsis = [];
+    
+
+    	
+    let paginatedIndex;
+    
+
+    	
+    const currentPage = target ? Number(target.innerText) : 1;
+    
+
+    	
+    paginatedPages.push(firstPage);
+    
+
+    	
+    if (numberOfPages &lt;= 1) {
+    
+
+    	
+    	
+    return paginatedPages;
+    
+
+    	
+    }
+    
+
+    	
+    for (let i = currentPage - delta ; i&lt;= currentPage + delta ; i++) { 
+    
+
+    	
+    	
+    if (i &lt; numberOfPages && i &gt; 1) { 
+    
+
+    	
+    	
+    	
+    paginatedPages.push(i); 
+    
+
+    	
+    	
+    } 
+    
+
+    	
+    } 
+    
+
+    	
+    paginatedPages.push(numberOfPages); 
+    
+
+    	
+    // Algorithm to correctly place dots in paginatedPages 
+    
+
+    	
+    for (const i of paginatedPages) { 
+    
+
+    	
+    	
+    if (paginatedIndex) { 
+    
+
+    	
+    	
+    	
+    if (i - paginatedIndex === 2) { 
+    
+
+    	
+    	
+    	
+    	
+    ellipsis.push(paginatedIndex + 1); 
+    
+
+    	
+    	
+    	
+    } else if (i - paginatedIndex !== 1) { 
+    
+
+    	
+    	
+    	
+    	
+    ellipsis.push("..."); 
+    
+
+    	
+    	
+    	
+    } 
+    
+
+    	
+    	
+    } 
+    
+
+    	
+    	
+    ellipsis.push(i); 
+    
+
+    	
+    	
+    paginatedIndex = i; 
+    
+
+    	
+    } 
+    
+
+    	
+    // Returns the new list with ellipsis and current active page 
+    
+
+    	
+    return { ellipsis, 
+    
+
+    	
+    	
+    currentPage}; 
+    
+
+    	
+  </ComponentPreview>
+  <p>
+    Don't hesitate to reach out to the design team for further explanation of the algorithm.
   </p>
   <h3>
     When to consider something else
