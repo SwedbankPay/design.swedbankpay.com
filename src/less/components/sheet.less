@@ -31,27 +31,91 @@
         width: @sheet-width-xs;
         height: 100%;
         background: @sheet-section-bg;
-        padding: @sheet-section-padding;
+        padding-right: 3rem;
+        padding-left: 3rem;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
         transform: translateX(100%);
 
-        @media screen and (min-width: @screen-xs-min) and  (max-width: @screen-sm-max) {
-            right: -@sheet-width-sm;
-            width: @sheet-width-sm;
+        .sheet-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            position: sticky;
+            top: 0;
+            background-color: @white;
+            padding-top: 3rem;
+
+            .sheet-close {
+                align-self: center;
+                .close-button();
+            }
+        }
+
+        .sheet-content {
+            padding-bottom: 3rem;
+
+            &.has-footer {
+                padding-bottom: 0;
+            }
+        }
+
+        .sheet-footer {
+            display: flex;
+            flex-direction: row;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            justify-content: space-between;
+            position: sticky;
+            bottom: 0;
+            background-color: @white;
+
+            button {
+                width: 14.625rem;
+                justify-content: center;
+            }
         }
 
         @media screen and (min-width: @screen-sm-min) {
             right: -@sheet-width;
             width: @sheet-width;
         }
+    }
 
-        .sheet-close {
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            user-select: none;
+    @media screen and (min-width: @screen-xs-min) and  (max-width: @screen-sm-max) {
+        padding-top: 2rem;
 
-            .close-button();
+        @keyframes slide-up-sheet {
+            to {
+                top: 0;
+            }
+        }
+
+        @keyframes slide-down-sheet {
+            to {
+                top: 100%;
+            }
+        }
+
+        &.sheet-open {
+            > section {
+                position: relative;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                width: 100%;
+                right: 100%;
+                top: 100%;
+                animation: slide-up-sheet 0.5s ease forwards;
+            }
+        }
+
+        &.sheet-closing {
+            // animation: fade-down-sheet 0.3s forwards;
+            animation: slide-down-sheet 1s ease alternate;
+
+            > section {
+                // FUCK DET HER 
+            }
         }
     }
 }
@@ -72,6 +136,7 @@ body.sheet-open {
 }
 
 // Keyframe animations
+
 @keyframes slide-in-sheet {
     100% {
         transform: translateX(0%);
