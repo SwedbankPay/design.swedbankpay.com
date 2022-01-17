@@ -8,18 +8,28 @@ exports[`Component: Sheet - does not render with data-require-action if it is se
   <section>
     
 
-    <a
-      className="sheet-close"
-      href="#"
+    <div
+      className="sheet-header"
     >
-      
-			
-      <Icon
-        type="close"
+      <h2
+        className="mb-0"
       />
-      
+      <a
+        className="sheet-close"
+        href="#"
+      >
+        
+			
+        <Icon
+          type="close"
+        />
+        
 		
-    </a>
+      </a>
+    </div>
+    <div
+      className="sheet-content null"
+    />
   </section>
 </div>
 `;
@@ -32,18 +42,28 @@ exports[`Component: Sheet - renders 1`] = `
   <section>
     
 
-    <a
-      className="sheet-close"
-      href="#"
+    <div
+      className="sheet-header"
     >
-      
-			
-      <Icon
-        type="close"
+      <h2
+        className="mb-0"
       />
-      
+      <a
+        className="sheet-close"
+        href="#"
+      >
+        
+			
+        <Icon
+          type="close"
+        />
+        
 		
-    </a>
+      </a>
+    </div>
+    <div
+      className="sheet-content null"
+    />
   </section>
 </div>
 `;
@@ -56,18 +76,28 @@ exports[`Component: Sheet - renders with a close icon 1`] = `
   <section>
     
 
-    <a
-      className="sheet-close"
-      href="#"
+    <div
+      className="sheet-header"
     >
-      
-			
-      <Icon
-        type="close"
+      <h2
+        className="mb-0"
       />
-      
+      <a
+        className="sheet-close"
+        href="#"
+      >
+        
+			
+        <Icon
+          type="close"
+        />
+        
 		
-    </a>
+      </a>
+    </div>
+    <div
+      className="sheet-content null"
+    />
   </section>
 </div>
 `;
@@ -81,18 +111,28 @@ exports[`Component: Sheet - renders with an ID 1`] = `
   <section>
     
 
-    <a
-      className="sheet-close"
-      href="#"
+    <div
+      className="sheet-header"
     >
-      
-			
-      <Icon
-        type="close"
+      <h2
+        className="mb-0"
       />
-      
+      <a
+        className="sheet-close"
+        href="#"
+      >
+        
+			
+        <Icon
+          type="close"
+        />
+        
 		
-    </a>
+      </a>
+    </div>
+    <div
+      className="sheet-content null"
+    />
   </section>
 </div>
 `;
@@ -105,19 +145,30 @@ exports[`Component: Sheet - renders with children 1`] = `
   <section>
     
 
-    <a
-      className="sheet-close"
-      href="#"
+    <div
+      className="sheet-header"
     >
-      
-			
-      <Icon
-        type="close"
+      <h2
+        className="mb-0"
       />
-      
+      <a
+        className="sheet-close"
+        href="#"
+      >
+        
+			
+        <Icon
+          type="close"
+        />
+        
 		
-    </a>
-    Test
+      </a>
+    </div>
+    <div
+      className="sheet-content null"
+    >
+      Test
+    </div>
   </section>
 </div>
 `;
@@ -130,18 +181,28 @@ exports[`Component: Sheet - renders with the data-require-action attribute 1`] =
   <section>
     
 
-    <a
-      className="sheet-close"
-      href="#"
+    <div
+      className="sheet-header"
     >
-      
-			
-      <Icon
-        type="close"
+      <h2
+        className="mb-0"
       />
-      
+      <a
+        className="sheet-close"
+        href="#"
+      >
+        
+			
+        <Icon
+          type="close"
+        />
+        
 		
-    </a>
+      </a>
+    </div>
+    <div
+      className="sheet-content null"
+    />
   </section>
 </div>
 `;
