@@ -9,7 +9,7 @@ import NpmInformation from "@docutils/NpmInformation";
 
 import { sheetShowCase } from "./constants";
 
-const Example = () => (
+const SheetExample = () => (
     <>
         <h2 id="example">Example</h2>
         <p>
@@ -95,7 +95,7 @@ class Sheet extends Component {
                 <p className="lead">
                 A sheet is a container component that slides in and out from the edge of the screen and overlays the page content.  It can be used to focus users attention to a specific task without leaving the current page.
                 </p>
-                <Example />
+                <SheetExample />
                 <ContentGuidelines/>
                 <h2>Developer documentation</h2>
                 <JavascriptMethods />
@@ -108,4 +108,4 @@ class Sheet extends Component {
 export default Sheet;
 
 /* For testing */
-export { Example, JavascriptMethods };
+export { SheetExample, ContentGuidelines, JavascriptMethods };
