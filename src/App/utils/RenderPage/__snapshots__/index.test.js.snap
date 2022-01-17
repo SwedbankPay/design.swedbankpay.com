@@ -388,6 +388,7 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/sheet",
               "statusBadges": Array [
                 "javascript",
+                "updated",
               ],
               "title": "Sheet",
             },
@@ -526,6 +527,16 @@ exports[`Utilities: RenderPage renders 1`] = `
                 "new",
               ],
               "title": "Login",
+            },
+            Object {
+              "componentPath": "content/Filters",
+              "icon": "filter_alt",
+              "outlined": true,
+              "path": "/patterns/filters",
+              "statusBadges": Array [
+                "new",
+              ],
+              "title": "Filters",
             },
           ]
         }
