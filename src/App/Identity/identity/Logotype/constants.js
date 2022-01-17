@@ -259,14 +259,7 @@ export const logoPayex = {
             },
             title: "Green logo",
             description: "The green logo is the primary logo and should always be considered before moving on to another version."
-        }
-    ]
-};
-
-export const logoWhitePayex = {
-    id: "logoWhitePayEx",
-    tabsId: "logoWhitePayExTabs",
-    elements: [
+        },
         {
             tab: "White",
             component: <LogotypeComponent src={`${basename}img/logo/payex-logo-neg.svg`} alt="PayEx logo" type="horizontal" />,

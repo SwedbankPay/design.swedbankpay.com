@@ -3,7 +3,7 @@ import React from "react";
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 import LogotypeComponent from "@components/Logotype";
-import { logoBlack, logoWhite, logoPayex, logoWhitePayex } from "./constants";
+import { logoBlack, logoWhite, logoPayex } from "./constants";
 
 const basename = process.env.basename;
 const brand = process.env.brand;
@@ -179,12 +179,6 @@ const LogoPayex = () => (
     </>
 );
 
-const LogoWhitePayex = () => (
-    <>
-        <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={logoWhitePayex} />
-    </>
-);
-
 const Favicon = () => (
     <>
         <h2 id="our-favicon">Favicon</h2>
@@ -297,7 +291,6 @@ const Logotype = () => (
         {brand === "payex" &&
             <DocContainer docToc>
                 <LogoPayex />
-                <LogoWhitePayex />
                 <Favicon />
             </DocContainer>
         }
@@ -307,4 +300,4 @@ const Logotype = () => (
 export default Logotype;
 
 /* For testing */
-export { Overview, LogoBlack, LogoWhite, LogoPayex, LogoWhitePayex, SpacingZone, MisuseLogo, LogotypeBackgrounds, Favicon };
+export { Overview, LogoBlack, LogoWhite, LogoPayex, SpacingZone, MisuseLogo, LogotypeBackgrounds, Favicon };

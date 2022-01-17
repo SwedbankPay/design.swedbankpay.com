@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Logotype, { Overview, LogoBlack, LogoWhite, SpacingZone, MisuseLogo, LogotypeBackgrounds, Favicon, LogoPayex, LogoWhitePayex } from "./index";
+import Logotype, { Overview, LogoBlack, LogoWhite, SpacingZone, MisuseLogo, LogotypeBackgrounds, Favicon, LogoPayex } from "./index";
 
 describe("Core: Logotype", () => {
     it("is defined", () => {
@@ -33,18 +33,6 @@ describe("Core: Logotype", () => {
 
         it("renders", () => {
             const wrapper = shallow(<LogoPayex />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("LogoWhitePayex", () => {
-        it("is defined", () => {
-            expect(LogoWhitePayex).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<LogoWhitePayex />);
 
             expect(wrapper).toMatchSnapshot();
         });
