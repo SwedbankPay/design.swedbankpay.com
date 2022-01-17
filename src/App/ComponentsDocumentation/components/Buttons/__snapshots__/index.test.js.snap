@@ -358,6 +358,7 @@ exports[`Documentation: Buttons Content guidelines renders 1`] = `
           className="d-flex justify-content-center mt-4 mb-4"
         >
           <img
+            alt="Use different naming on buttons for differentiate actions."
             className="img-fluid"
             src="/TEST/img/documentation/buttons/dos-naming.png"
           />
@@ -380,6 +381,7 @@ exports[`Documentation: Buttons Content guidelines renders 1`] = `
           className="d-flex justify-content-center mt-4 mb-4"
         >
           <img
+            alt="Avoid naming executive destructive buttons poorly"
             className="img-fluid"
             src="/TEST/img/documentation/buttons/donts-naming.png"
           />
@@ -756,6 +758,7 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
           className="d-flex justify-content-center mt-4 mb-4"
         >
           <img
+            alt="Use Guiding Destructive buttons to for example 'Cancel Payment'"
             className="img-fluid"
             src="/TEST/img/documentation/buttons/dos-guiding.png"
           />
@@ -778,6 +781,7 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
           className="d-flex justify-content-center mt-4 mb-4"
         >
           <img
+            alt="Do not use executive destructive button to initiate a destructive action."
             className="img-fluid"
             src="/TEST/img/documentation/buttons/donts-executive.png"
           />
@@ -804,6 +808,7 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
           className="d-flex justify-content-center mt-4 mb-4"
         >
           <img
+            alt="Use executive destruction button to achieve final destructive call."
             className="img-fluid"
             src="/TEST/img/documentation/buttons/dos.png"
           />
@@ -826,6 +831,7 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
           className="d-flex justify-content-center mt-4 mb-4"
         >
           <img
+            alt="Avoid using multiple executive destructive buttons"
             className="img-fluid"
             src="/TEST/img/documentation/buttons/donts.png"
           />
