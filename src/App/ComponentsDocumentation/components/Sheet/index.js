@@ -1,104 +1,85 @@
 import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
-import SheetComponent from "@components/Sheet";
 import CodeTags from "@components/CodeTags";
+import { Link } from "react-router-dom";
 
 import { sheet } from "@src/scripts/main";
 import NpmInformation from "@docutils/NpmInformation";
-import ButtonComponent from "@components/Button";
+
+import { sheetShowCase } from "./constants";
 
 const Example = () => (
     <>
         <h2 id="example">Example</h2>
         <p>
-            A standard sheet should display content that complements the screen’s primary content. It will close when the user clicks outside of the sheet or exits out of it in another way.
+        The sheets is used to provide users with actions and information contextual to the page. It can be used in different contexts, but common use cases are to display multiple actions that will affect the screen’s primary content such as filters or other ways to manipulate the main content.
         </p>
-        <p>
-            Sheets can be used for a number of different things, but common use cases for a sheet are for example displaying a list of actions that affet the screen’s primary content such as filters, deletion or other
-            ways to manipulate the main content. If you have a form then you could include an icon that opens said sheet to display more information about what the expected input is.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <SheetComponent id="demo-sheet" title="Sheet Component" footer>
-                <p>This is the sheet component. It can contain anything you want.</p>
-                <p>It can also contain lots of useless text, just like the text in this paragraph. Or it can contain useful info and cheats. For example if you have a math quiz coming up;</p>
-                <ul className="list">
-                    <li><code>3 + 8 = 11</code></li>
-                    <li><code>36 - 22 = 14</code></li>
-                    <li><code>256 + 113 = 369</code></li>
-                    <li><code>356 - 1 = 355</code></li>
-                </ul>
-                <hr/>
-                <form onSubmit={e => e.preventDefault()}>
-                    <div className="form-group">
-                        <label htmlFor="full-name">Full name</label>
-                        <div className="input-group">
-                            <input type="text" className="form-control" id="full-name" placeholder="Enter your full name" />
-                        </div>
-                        <div className="help-block">Your full name</div>
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={sheetShowCase} codeFigure/>
+        <h3>When to consider something else</h3>
+        <ul>
+            <li>To enforce an action before the user can proceed, use the <Link to="/components/dialog">Dialog</Link> component.</li>
+            <li>To present a small amount of content or actions in a non-blocking overlay, use the <Link to="/components/popover">Popover</Link> component.</li>
+        </ul>
+
+        <h2>How to use Sheets</h2>
+        <div className="row">
+            <div className="col-lg-6">
+                <div className="slab slab-plain slab-border-success">
+                    <h3>Do</h3>
+                    <div className="d-flex flex-column align-items-center">
+                        <img src="" alt="Sheet component with correct margins and overflowing contents, showing possibility to scroll within the component." className="img-fluid"/>
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="email-address">Email</label>
-                        <div className="input-group">
-                            <input type="text" className="form-control" id="email-address" placeholder="Enter your email" />
-                        </div>
-                        <div className="help-block">Email means electronic mail, not express mail</div>
+                </div>
+                <p>Sheets can be vertically scrolled if the main content is long and exceeds the screen hight. The header and footer should still be fixed.</p>
+            </div>
+            <div className="col-lg-6">
+                <div className="slab slab-plain slab-border-error">
+                    <h3>Don&apos;t</h3>
+                    <div className="d-flex flex-column align-items-center">
+                        <img src="" alt="Sheet component with no margins." className="img-fluid"/>
                     </div>
-                    <div className="form-group">
-                        <div className="checkbox">
-                            <input type="checkbox" id="subscribe-checkbox" />
-                            <label htmlFor="subscribe-checkbox">Sign up to our math newsletter</label>
-                        </div>
+                </div>
+                <p>Do not allow horizontal scrolling in a Sheet or layout that suggests horizontal scrolling.</p>
+            </div>
+        </div>
+        <div className="row">
+            <div className="col-12">
+                <div className="slab slab-plain slab-border-success">
+                    <h3>Do</h3>
+                    <div className="d-flex flex-column align-items-center">
+                        <img src="" alt="Sheet component in mobile view. Displaying filter example." className="img-fluid"/>
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="full-name">Full name</label>
-                        <div className="input-group">
-                            <input type="text" className="form-control" id="full-name" placeholder="Enter your full name" />
-                        </div>
-                        <div className="help-block">Your full name</div>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="email-address">Email</label>
-                        <div className="input-group">
-                            <input type="text" className="form-control" id="email-address" placeholder="Enter your email" />
-                        </div>
-                        <div className="help-block">Email means electronic mail, not express mail</div>
-                    </div>
-                    <div className="form-group">
-                        <div className="checkbox">
-                            <input type="checkbox" id="subscribe-checkbox" />
-                            <label htmlFor="subscribe-checkbox">Sign up to our math newsletter</label>
-                        </div>
-                    </div>
-                </form>
-            </SheetComponent>{"\n"}
-            <button className="btn btn-primary" type="button" data-sheet-open="demo-sheet">Open sheet</button>
-        </ComponentPreview>
+                </div>
+                <p>A Sheet can be used as a container of a <Link to="/patterns/filters">filter</Link> functionality. This is especially helpful on small screens like mobile device where space is limited and can’t fit filter components inline with the content.</p>
+            </div>
+        </div>
     </>
 );
 
-const RequireAction = () => (
+const ContentGuidelines = () => (
     <>
-        <h2 id="require-action">Require action</h2>
-        <p>
-            To disable the listener responsible for closing the sheet when a user clicks outside, add <CodeTags type="secondary" code="data-require-action" /> to your Sheet.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <SheetComponent id="demo-sheet-1" title="Sheet component" requireAction>
-                <h2>Sheet component</h2>
-                <p>
-                    This sheet can not be closed by clicking outside its white area.
-                </p>
-            </SheetComponent>{"\n"}
-            <button className="btn btn-primary" type="button" data-sheet-open="demo-sheet-1">Open sheet</button>
-        </ComponentPreview>
+        <h2>Content guidelines</h2>
+        <div className="row">
+            <div className="col-12">
+                <div className="d-flex justify-content-center mt-4 mb-4">
+                    <img src="" alt="Sheet component with sticky header and footer" className="img-fluid"/>
+                </div>
+            </div>
+            <ul>
+                <li>The <b>header</b> should have a title and a close button.</li>
+                <li>The <b>main content</b> area can contain a number of different components and this area can be vertically scrollable.</li>
+                <li>The <b>footer</b> is optional and designed to contain buttons that will lead to certain actions. The footer is also sticky.</li>
+            </ul>
+        </div>
     </>
 );
 
 const JavascriptMethods = () => (
     <>
-        <h2 id="javascript-methods">JavaScript methods</h2>
-        <JavascriptDocs componentName="sheet"open close />
+        <h3 id="javascript-methods">JavaScript methods</h3>
+        <JavascriptDocs componentName="sheet" open close />
+        <p>To disable the listener responsible for closing the sheet when a user clicks outside, add <CodeTags type="secondary" code="data-require-action"/> to your sheet.</p>
     </>
 );
 
@@ -111,12 +92,12 @@ class Sheet extends Component {
     render () {
         return (
             <DocContainer docToc>
-
                 <p className="lead">
-                    Sheet is a container component that is anchored on the right side of the screen and can contain a number of different things.
+                A sheet is a container component that slides in and out from the edge of the screen and overlays the page content.  It can be used to focus users attention to a specific task without leaving the current page.
                 </p>
                 <Example />
-                <RequireAction />
+                <ContentGuidelines/>
+                <h2>Developer documentation</h2>
                 <JavascriptMethods />
                 <NpmInformation componentName={"sheet"}/>
             </DocContainer>
@@ -127,4 +108,4 @@ class Sheet extends Component {
 export default Sheet;
 
 /* For testing */
-export { Example, RequireAction, JavascriptMethods };
+export { Example, JavascriptMethods };
