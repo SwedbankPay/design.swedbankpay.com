@@ -13,7 +13,7 @@ export const filtersShowCase = {
             tab: "Horizontal topbar",
             component:
             <div className="overview-container">
-                <h1>HORIZONTAL</h1>
+                <img src="" alt="Example picture of horizontal filtering" className="img-fluid"/>
                 <button id="open-demo" className="btn btn-secondary view-demo-button" type="button" data-dialog-open="filtering"><i className="material-icons pr-1" aria-hidden="true">fullscreen</i>{"\n"}View demo{"\n"}</button>
                 <Dialog className="fullscreen" diaId="filtering">
                     <FilterDemonstration type="horizontal"/>
@@ -26,7 +26,7 @@ export const filtersShowCase = {
             tab: "Vertical sidebar",
             component:
             <div className="overview-container">
-                <h1>VERTICAL</h1>
+                <img src="" alt="Example picture of vertical filtering" className="img-fluid"/>
                 <button id="open-demo" className="btn btn-secondary view-demo-button" type="button" data-dialog-open="filtering"><i className="material-icons pr-1" aria-hidden="true">fullscreen</i>{"\n"}View demo{"\n"}</button>
                 <Dialog className="fullscreen" diaId="filtering">
                     <FilterDemonstration type="vertical"/>
@@ -39,7 +39,7 @@ export const filtersShowCase = {
             tab: "Sheet",
             component:
             <div className="overview-container">
-                <h1>$HEET</h1>
+                <img src="" alt="Example picture of filtering with sheet" className="img-fluid"/>
                 <button id="open-demo" className="btn btn-secondary view-demo-button" type="button" data-dialog-open="filtering"><i className="material-icons pr-1" aria-hidden="true">fullscreen</i>{"\n"}View demo{"\n"}</button>
                 <Dialog className="fullscreen" diaId="filtering">
                     <FilterDemonstration type="sheet"/>
