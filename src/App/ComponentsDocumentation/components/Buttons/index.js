@@ -34,7 +34,7 @@ const DestructiveButton = () => (
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4 className="mb-3 mt-0">Do</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" src={`${basename}img/documentation/buttons/dos-guiding.png`} />
+                        <img className="img-fluid" src={`${basename}img/documentation/buttons/dos-guiding.png`} alt="Use Guiding Destructive buttons to for example 'Cancel Payment'"/>
                     </div>
                 </div>
                 <p>Use the Guiding Destructive Buttons to initiate a destructive action.</p>
@@ -43,7 +43,7 @@ const DestructiveButton = () => (
                 <div className="slab slab-plain slab-border-error pb-4">
                     <h4>{"Don't"}</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" src={`${basename}img/documentation/buttons/donts-executive.png`} />
+                        <img className="img-fluid" src={`${basename}img/documentation/buttons/donts-executive.png`} alt="Do not use executive destructive button to initiate a destructive action."/>
                     </div>
                 </div>
                 <p>Avoid using the Executive Destructive Buttons to initiate a destructive action.</p>
@@ -55,7 +55,7 @@ const DestructiveButton = () => (
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4>Do</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" src={`${basename}img/documentation/buttons/dos.png`} />
+                        <img className="img-fluid" src={`${basename}img/documentation/buttons/dos.png`} alt="Use executive destruction button to achieve final destructive call." />
                     </div>
                 </div>
                 <p>Use the Executive Destructive Buttons a contained space as a final destructive call to action.</p>
@@ -64,7 +64,7 @@ const DestructiveButton = () => (
                 <div className="slab slab-plain slab-border-error pb-4">
                     <h4>Don&apos;t</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" src={`${basename}img/documentation/buttons/donts.png`} />
+                        <img className="img-fluid" src={`${basename}img/documentation/buttons/donts.png`} alt="Avoid using multiple executive destructive buttons" />
                     </div>
                 </div>
                 <p>Avoid using multiple Executive Destructive Buttons in the same user flow.</p>
@@ -94,7 +94,7 @@ const ContentGuidelines = () => (
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4>Do</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" src={`${basename}img/documentation/buttons/dos-naming.png`} />
+                        <img className="img-fluid" src={`${basename}img/documentation/buttons/dos-naming.png`} alt="Use different naming on buttons for differentiate actions." />
                     </div>
                 </div>
                 <p>Make sure to differentiate the naming so that the user understands the difference between the actions the user can take.</p>
@@ -103,7 +103,7 @@ const ContentGuidelines = () => (
                 <div className="slab slab-plain slab-border-error pb-4">
                     <h4>{"Don't"}</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" src={`${basename}img/documentation/buttons/donts-naming.png`} />
+                        <img className="img-fluid" src={`${basename}img/documentation/buttons/donts-naming.png`} alt="Avoid naming executive destructive buttons poorly"/>
                     </div>
                 </div>
                 <p>Avoid naming an Executive Destructive Button poorly – the button cancels the payment of the invoice and not the invoice, which isn’t clear at all.</p>
