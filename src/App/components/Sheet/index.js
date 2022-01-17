@@ -8,7 +8,7 @@ const Sheet = ({ id, requireAction, title, footer, children }) => (
     <div className="sheet" id={id} data-require-action={requireAction ? true : null}>
         <section>{"\n"}
             <div className="sheet-header">
-                <h2>{title}</h2>
+                <h2 className="mb-0">{title}</h2>
                 <a href="#" className="sheet-close">{"\n\t\t\t"}
                     <Icon type="close" />{"\n\t\t"}
                 </a>
