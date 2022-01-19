@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Accordion, { Overview, AccordionGroup } from "./index";
+import Accordion, { Overview, ContentGuidelines, JavascriptMethods } from "./index";
 
 describe("Components: Accordion", () => {
     it("is defined", () => {
@@ -26,13 +26,25 @@ describe("Components: Accordion", () => {
         });
     });
 
-    describe("AccordionGroup", () => {
+    describe("ContentGuidelines", () => {
         it("is defined", () => {
-            expect(AccordionGroup).toBeDefined();
+            expect(ContentGuidelines).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<AccordionGroup />);
+            const wrapper = shallow(<ContentGuidelines />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("JavascriptMethods", () => {
+        it("is defined", () => {
+            expect(JavascriptMethods).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<JavascriptMethods />);
 
             expect(wrapper).toMatchSnapshot();
         });

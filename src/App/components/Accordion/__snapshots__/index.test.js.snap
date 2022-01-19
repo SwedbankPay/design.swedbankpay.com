@@ -3,7 +3,7 @@
 exports[`Component: Accordion renders with correct number of accordions 1`] = `
 Array [
   <div
-    className="accordion"
+    className="accordion "
     key="0"
   >
     
@@ -30,7 +30,7 @@ Array [
     </div>
   </div>,
   <div
-    className="accordion"
+    className="accordion "
     key="1"
   >
     
@@ -57,7 +57,7 @@ Array [
     </div>
   </div>,
   <div
-    className="accordion"
+    className="accordion "
     key="2"
   >
     

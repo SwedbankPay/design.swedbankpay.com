@@ -124,4 +124,4 @@ const Accordion = () => {
 export default Accordion;
 
 /* For testing */
-export { Overview };
+export { Overview, ContentGuidelines, JavascriptMethods };
