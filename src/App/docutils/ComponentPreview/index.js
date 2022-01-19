@@ -381,7 +381,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
 };
 
 ComponentPreview.propTypes = {
-    language: PropTypes.oneOf(["html", "javascript", "css", "terminal"]).isRequired,
+    language: PropTypes.oneOf(["html", "javascript", "css", "terminal", "json"]).isRequired,
     removeOuterTag: PropTypes.bool,
     hideCodeFigure: PropTypes.bool,
     hideValue: PropTypes.bool,
