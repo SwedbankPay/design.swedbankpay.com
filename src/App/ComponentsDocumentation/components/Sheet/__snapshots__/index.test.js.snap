@@ -17,7 +17,7 @@ exports[`Documentation: Sheet ContentGuidelines renders 1`] = `
         <img
           alt="Sheet component with sticky header and footer"
           className="img-fluid"
-          src="/TEST//img/documentation/sheet/content-guidelines.png"
+          src="/TEST/img/documentation/sheet/content-guidelines.png"
         />
       </div>
     </div>
@@ -158,7 +158,7 @@ exports[`Documentation: Sheet SheetExample renders 1`] = `
           <img
             alt="Sheet component with correct margins and overflowing contents, showing possibility to scroll within the component."
             className="img-fluid"
-            src="/TEST//img/documentation/sheet/do1.png"
+            src="/TEST/img/documentation/sheet/do1.png"
           />
         </div>
       </div>
@@ -181,7 +181,7 @@ exports[`Documentation: Sheet SheetExample renders 1`] = `
           <img
             alt="Sheet component with no margins."
             className="img-fluid"
-            src="/TEST//img/documentation/sheet/dont1.png"
+            src="/TEST/img/documentation/sheet/dont1.png"
           />
         </div>
       </div>
@@ -208,7 +208,7 @@ exports[`Documentation: Sheet SheetExample renders 1`] = `
           <img
             alt="Sheet component in mobile view. Displaying filter example."
             className="img-fluid"
-            src="/TEST//img/documentation/sheet/do2.png"
+            src="/TEST/img/documentation/sheet/do2.png"
           />
         </div>
       </div>
