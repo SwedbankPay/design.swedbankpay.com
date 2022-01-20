@@ -75,12 +75,15 @@ const DeveloperDocumentation = () => (
     <section>
         <h2 id="developer-documentation">Developer documentation</h2>
         <span className="h3">Javascript methods</span>
-        <p className="mt-2">Use <CodeTags type="secondary" code="dg.pagination.init()"/> to initialize all paginations.</p>
+        <p className="mt-2">Use <CodeTags type="secondary" code="dg.pagination.init()"/> to initialize all pagination&apos;s.</p>
         <p>Use <CodeTags type="secondary" code='dg.pagination.init("component-id")'/> to initialize one specific component.</p>
+    </section>
+);
 
-        <h3>The pagination algorithm</h3>
-        <p>Since our pagination script is created specifically for DG&apos;s purposes, the NPM package does not include a script solution. Instead, we want to show how we solved the correct pagination by showing our algorithm.
-        The purpose of our pagination function is to correctly display the list elements, meaning each paginated item list has a maximum of seven spots (dots included)</p>
+const PaginationScriptPresentation = () => (
+    <section>
+        <h2 id="pagination-script">The pagination algorithm</h2>
+        <p>The purpose of our pagination function is to correctly display the list elements, meaning each paginated item list has a maximum of seven spots (ellipsis&apos; included)</p>
 
         <p>The paginate function takes in two arguments; <b>pages</b> (the original list of elements) and <b>target</b> (targeted current active).
         Another critical part of our solution is <b>delta</b>. Delta takes the length of pages and calculates how many elements to include in the finished paginated list, based on the currently active element.
@@ -91,12 +94,12 @@ const DeveloperDocumentation = () => (
         else if (currentPage === 3 || currentPage === numberOfPages - 2) &#x7b; {"\n"}{"\t"}delta = 2; &#x7d; {"\n"}
         else &#x7b; delta = 1; &#x7d;
         </ComponentPreview>
-        <p>The returned element of our function is <b>ellipsis</b> (the returned list with correct placement of elements and dots - the first and last element is always displayed) and <b>currentPage</b> (the updated current active element). </p>
+        <p>The returned element of our function is <b>finishedPagination</b> (the returned list with correct placement of elements and ellipsis - the first and last element is always displayed) and <b>currentPage</b> (the updated current active element). </p>
         <p><b>A practical example</b><br/>
         pages = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]<br/>
         target = 3<br/>
         delta = 2<br/>
-        returned ellipsis = [ 1, 2, 3, 4, 5, ... , 10 ]</p>
+        returned paginatedPages = [ 1, 2, 3, 4, 5, ... , 10 ]</p>
         <p>In this case, element 3 is given the class of <CodeTags type="primary" code="active"/>, which gives the correct appearance.</p>
 
         <ComponentPreview language="javascript" codeFigure>
@@ -105,7 +108,7 @@ const DeveloperDocumentation = () => (
                 &#x2f;&#x2f; Remember to create a function to calculate the size of delta {"\n"}{"\t"}
                 let delta; {"\n"}{"\t"}
                 const paginatedPages = &#x5b;&#x5d;; {"\n"}{"\t"}
-                const ellipsis = &#x5b;&#x5d;;{"\n"}{"\t"}
+                const finishedPagination = &#x5b;&#x5d;;{"\n"}{"\t"}
                 let paginatedIndex;{"\n"}{"\t"}
 
                 const currentPage = target ? Number(target.innerText) : 1;{"\n"}{"\t"}
@@ -119,24 +122,31 @@ const DeveloperDocumentation = () => (
                     &#x7d; {"\n"}{"\t"}
                 &#x7d; {"\n"}{"\t"}
                 paginatedPages.push(numberOfPages); {"\n"}{"\t"}
-                &#x2f;&#x2f; Algorithm to correctly place dots in paginatedPages {"\n"}{"\t"}
+                &#x2f;&#x2f; Algorithm to correctly place ellipsis in paginatedPages {"\n"}{"\t"}
                 for (const i of paginatedPages) &#x7b; {"\n"}{"\t"}{"\t"}
                     if (paginatedIndex) &#x7b; {"\n"}{"\t"}{"\t"}{"\t"}
                         if (i - paginatedIndex === 2) &#x7b; {"\n"}{"\t"}{"\t"}{"\t"}{"\t"}
-                            ellipsis.push(paginatedIndex + 1); {"\n"}{"\t"}{"\t"}{"\t"}
+                            finishedPagination.push(paginatedIndex + 1); {"\n"}{"\t"}{"\t"}{"\t"}
                         &#x7d; else if (i - paginatedIndex !== 1) &#x7b; {"\n"}{"\t"}{"\t"}{"\t"}{"\t"}
-                            ellipsis.push(&#x22;...&#x22;); {"\n"}{"\t"}{"\t"}{"\t"}
+                            finishedPagination.push(&#x22;...&#x22;); {"\n"}{"\t"}{"\t"}{"\t"}
                         &#x7d; {"\n"}{"\t"}{"\t"}
                     &#x7d; {"\n"}{"\t"}{"\t"}
-                    ellipsis.push(i); {"\n"}{"\t"}{"\t"}
+                    finishedPagination.push(i); {"\n"}{"\t"}{"\t"}
                     paginatedIndex = i; {"\n"}{"\t"}
                 &#x7d; {"\n"}{"\t"}
-                &#x2f;&#x2f; Returns the new list with ellipsis and current active page {"\n"}{"\t"}
-                return &#x7b; ellipsis, {"\n"}{"\t"}{"\t"}
+                &#x2f;&#x2f; Returns the new list (finishedPagination) with ellipsis and current active page {"\n"}{"\t"}
+                return &#x7b; finishedPagination, {"\n"}{"\t"}{"\t"}
                     currentPage&#x7d;; {"\n"}{"\t"}
         </ComponentPreview>
         <p>Also, keep in mind that the arrows must be given the proper class if current active element is either the first or last element in the list. The class is called <CodeTags type="secondary" code="disabled"/> and gives the correct appearances for this case.</p>
         <p>Do not hesitate to contact the design guide team for further explanation. </p>
+        <div className="slab slab-primary pb-5 d-flex flex-column justify-content-center align-items-center">
+            <h1 className="mb-4">Download the pagination script</h1>
+            <a className="btn btn-primary" href={"src/scripts/main/pagination/pagination_script.js"} download>
+                <i className="material-icons" aria-hidden="true">arrow_downward</i>
+                <span>Download</span>
+            </a>
+        </div>
     </section>
 );
 
@@ -152,6 +162,7 @@ const Pagination = () => {
             </p>
             <Overview/>
             <DeveloperDocumentation/>
+            <PaginationScriptPresentation/>
             {/* <NpmInformation componentName={"pagination"}/>  */}
         </DocContainer>
     );
