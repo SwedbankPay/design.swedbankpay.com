@@ -171,4 +171,4 @@ const Pagination = () => {
 export default Pagination;
 
 /* For testing */
-export { Overview, DeveloperDocumentation };
+export { Overview, DeveloperDocumentation, PaginationScriptPresentation };

@@ -20,7 +20,7 @@ exports[`Documentation: Pagination DeveloperDocumentation renders 1`] = `
       code="dg.pagination.init()"
       type="secondary"
     />
-     to initialize all paginations.
+     to initialize all pagination's.
   </p>
   <p>
     Use 
@@ -40,7 +40,7 @@ exports[`Documentation: Pagination Overview renders 1`] = `
   <h2
     id="pagination"
   >
-    Pagination
+    Overview
   </h2>
   <p>
     Pagination is commonly used for things like table listings, search results or directories.The need for pagination is influenced by the amount of data to be displayed and the aim is to not overwhelm users with information and to improve the loading performance of the system. 
@@ -201,246 +201,6 @@ exports[`Documentation: Pagination Overview renders 1`] = `
     On smaller screens the page links are replaced with text showing the page information, still using arrows to go to next or previous page but with the option to go to the first or last page as well.
   </p>
   <h3>
-    The pagination algorithm
-  </h3>
-  <p>
-    Below you can see the algorithm implemented for our solution. Our paginate function takes in two arguments; 
-    <b>
-      pages
-    </b>
-     (the original list of pages) and 
-    <b>
-      target
-    </b>
-     (current active index). Remember, the maximum elements to be shown in our paginator is seven, including dots, first and last element.
-  </p>
-  <p>
-    Other parts to notice is 
-    <i>
-      delta
-    </i>
-    . Delta takes the length of pages and calculates how many indexes to be showed before and after the current active index. 
-    <br />
-    For example: 
-    <CodeTags
-      code="currentActive = 6"
-      type="primary"
-    />
-     (in a list with 10 elements), the correct delta would be 1, meaning both 5 and 7 would be included in the paginated list.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="javascript"
-  >
-    if (currentPage === 1 || currentPage === numberOfPages) { 
-    
-
-    	
-    delta = 4; } 
-    
-
-    else if (currentPage === 2 || currentPage === numberOfPages - 1) { 
-    
-
-    	
-    delta = 3; } 
-    
-
-    else if (currentPage === 3 || currentPage === numberOfPages - 2) { 
-    
-
-    	
-    delta = 2; } 
-    
-
-    else { delta = 1; }
-  </ComponentPreview>
-  <p>
-    <i>
-      Ellipsis
-    </i>
-     is the returned list with correct elements to be included and right placement of dots. Also, the function returns 
-    <i>
-      currentPage
-    </i>
-    , which is the current page with active class. Tha utility class of 
-    <CodeTags
-      code="active"
-      type="primary"
-    />
-     gives the current page a more accessible look and helps the user to perceive which page is active.
-  </p>
-  <p>
-    Also, keep in mind that the arrows must correctly be given the belonging utility classes, called 
-    <CodeTags
-      code="disabled"
-      type="secondary"
-    />
-    . This class provides the correct styling for disabling the arrow-buttons if currentPage is either first or last in the pagination.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="javascript"
-  >
-    const paginate = (pages, target) =&gt; { 
-    
-
-    	
-    const numberOfPages = pages.length; 
-    
-
-    	
-    // Remember to create a function to calculate the size of delta 
-    
-
-    	
-    let delta; 
-    
-
-    	
-    const paginatedPages = []; 
-    
-
-    	
-    const ellipsis = [];
-    
-
-    	
-    let paginatedIndex;
-    
-
-    	
-    const currentPage = target ? Number(target.innerText) : 1;
-    
-
-    	
-    paginatedPages.push(firstPage);
-    
-
-    	
-    if (numberOfPages &lt;= 1) {
-    
-
-    	
-    	
-    return paginatedPages;
-    
-
-    	
-    }
-    
-
-    	
-    for (let i = currentPage - delta ; i&lt;= currentPage + delta ; i++) { 
-    
-
-    	
-    	
-    if (i &lt; numberOfPages && i &gt; 1) { 
-    
-
-    	
-    	
-    	
-    paginatedPages.push(i); 
-    
-
-    	
-    	
-    } 
-    
-
-    	
-    } 
-    
-
-    	
-    paginatedPages.push(numberOfPages); 
-    
-
-    	
-    // Algorithm to correctly place dots in paginatedPages 
-    
-
-    	
-    for (const i of paginatedPages) { 
-    
-
-    	
-    	
-    if (paginatedIndex) { 
-    
-
-    	
-    	
-    	
-    if (i - paginatedIndex === 2) { 
-    
-
-    	
-    	
-    	
-    	
-    ellipsis.push(paginatedIndex + 1); 
-    
-
-    	
-    	
-    	
-    } else if (i - paginatedIndex !== 1) { 
-    
-
-    	
-    	
-    	
-    	
-    ellipsis.push("..."); 
-    
-
-    	
-    	
-    	
-    } 
-    
-
-    	
-    	
-    } 
-    
-
-    	
-    	
-    ellipsis.push(i); 
-    
-
-    	
-    	
-    paginatedIndex = i; 
-    
-
-    	
-    } 
-    
-
-    	
-    // Returns the new list with ellipsis and current active page 
-    
-
-    	
-    return { ellipsis, 
-    
-
-    	
-    	
-    currentPage}; 
-    
-
-    	
-  </ComponentPreview>
-  <p>
-    Don't hesitate to reach out to the design team for further explanation of the algorithm.
-  </p>
-  <h3>
     When to consider something else
   </h3>
   <p>
@@ -537,6 +297,287 @@ exports[`Documentation: Pagination Overview renders 1`] = `
 </section>
 `;
 
+exports[`Documentation: Pagination PaginationScriptPresentation renders 1`] = `
+<section>
+  <h2
+    id="pagination-script"
+  >
+    The pagination algorithm
+  </h2>
+  <p>
+    The purpose of our pagination function is to correctly display the list elements, meaning each paginated item list has a maximum of seven spots (ellipsis' included)
+  </p>
+  <p>
+    The paginate function takes in two arguments; 
+    <b>
+      pages
+    </b>
+     (the original list of elements) and 
+    <b>
+      target
+    </b>
+     (targeted current active). Another critical part of our solution is 
+    <b>
+      delta
+    </b>
+    . Delta takes the length of pages and calculates how many elements to include in the finished paginated list, based on the currently active element. You can see our simple implementation below. 
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    if (currentPage === 1 || currentPage === numberOfPages) { 
+    
+
+    	
+    delta = 4; } 
+    
+
+    else if (currentPage === 2 || currentPage === numberOfPages - 1) { 
+    
+
+    	
+    delta = 3; } 
+    
+
+    else if (currentPage === 3 || currentPage === numberOfPages - 2) { 
+    
+
+    	
+    delta = 2; } 
+    
+
+    else { delta = 1; }
+  </ComponentPreview>
+  <p>
+    The returned element of our function is 
+    <b>
+      finishedPagination
+    </b>
+     (the returned list with correct placement of elements and ellipsis - the first and last element is always displayed) and 
+    <b>
+      currentPage
+    </b>
+     (the updated current active element). 
+  </p>
+  <p>
+    <b>
+      A practical example
+    </b>
+    <br />
+    pages = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+    <br />
+    target = 3
+    <br />
+    delta = 2
+    <br />
+    returned paginatedPages = [ 1, 2, 3, 4, 5, ... , 10 ]
+  </p>
+  <p>
+    In this case, element 3 is given the class of 
+    <CodeTags
+      code="active"
+      type="primary"
+    />
+    , which gives the correct appearance.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="javascript"
+  >
+    const paginate = (pages, target) =&gt; { 
+    
+
+    	
+    const numberOfPages = pages.length; 
+    
+
+    	
+    // Remember to create a function to calculate the size of delta 
+    
+
+    	
+    let delta; 
+    
+
+    	
+    const paginatedPages = []; 
+    
+
+    	
+    const finishedPagination = [];
+    
+
+    	
+    let paginatedIndex;
+    
+
+    	
+    const currentPage = target ? Number(target.innerText) : 1;
+    
+
+    	
+    paginatedPages.push(firstPage);
+    
+
+    	
+    if (numberOfPages &lt;= 1) {
+    
+
+    	
+    	
+    return paginatedPages;
+    
+
+    	
+    }
+    
+
+    	
+    for (let i = currentPage - delta ; i&lt;= currentPage + delta ; i++) { 
+    
+
+    	
+    	
+    if (i &lt; numberOfPages && i &gt; 1) { 
+    
+
+    	
+    	
+    	
+    paginatedPages.push(i); 
+    
+
+    	
+    	
+    } 
+    
+
+    	
+    } 
+    
+
+    	
+    paginatedPages.push(numberOfPages); 
+    
+
+    	
+    // Algorithm to correctly place ellipsis in paginatedPages 
+    
+
+    	
+    for (const i of paginatedPages) { 
+    
+
+    	
+    	
+    if (paginatedIndex) { 
+    
+
+    	
+    	
+    	
+    if (i - paginatedIndex === 2) { 
+    
+
+    	
+    	
+    	
+    	
+    finishedPagination.push(paginatedIndex + 1); 
+    
+
+    	
+    	
+    	
+    } else if (i - paginatedIndex !== 1) { 
+    
+
+    	
+    	
+    	
+    	
+    finishedPagination.push("..."); 
+    
+
+    	
+    	
+    	
+    } 
+    
+
+    	
+    	
+    } 
+    
+
+    	
+    	
+    finishedPagination.push(i); 
+    
+
+    	
+    	
+    paginatedIndex = i; 
+    
+
+    	
+    } 
+    
+
+    	
+    // Returns the new list (finishedPagination) with ellipsis and current active page 
+    
+
+    	
+    return { finishedPagination, 
+    
+
+    	
+    	
+    currentPage}; 
+    
+
+    	
+  </ComponentPreview>
+  <p>
+    Also, keep in mind that the arrows must be given the proper class if current active element is either the first or last element in the list. The class is called 
+    <CodeTags
+      code="disabled"
+      type="secondary"
+    />
+     and gives the correct appearances for this case.
+  </p>
+  <p>
+    Do not hesitate to contact the design guide team for further explanation. 
+  </p>
+  <div
+    className="slab slab-primary pb-5 d-flex flex-column justify-content-center align-items-center"
+  >
+    <h1
+      className="mb-4"
+    >
+      Download the pagination script
+    </h1>
+    <a
+      className="btn btn-primary"
+      download={true}
+      href="src/scripts/main/pagination/pagination_script.js"
+    >
+      <i
+        aria-hidden="true"
+        className="material-icons"
+      >
+        arrow_downward
+      </i>
+      <span>
+        Download
+      </span>
+    </a>
+  </div>
+</section>
+`;
+
 exports[`Documentation: Pagination renders 1`] = `
 <DocContainer
   docToc={true}
@@ -544,9 +585,10 @@ exports[`Documentation: Pagination renders 1`] = `
   <p
     className="lead"
   >
-    Use the pagination component to indicate that a series of related content exist across multiple pages.
+    Pagination is used to divide large amounts of content into separate pages and allows the user to navigate to next or previous pages.
   </p>
   <Overview />
   <DeveloperDocumentation />
+  <PaginationScriptPresentation />
 </DocContainer>
 `;
