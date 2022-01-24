@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Logotype, { Overview, HorizontalLogo, LogoBlack, LogoWhite, SpacingZone, MisuseLogo, LogotypeBackgrounds, Favicon } from "./index";
+import Logotype, { Overview, LogoBlack, LogoWhite, SpacingZone, MisuseLogo, LogotypeBackgrounds, Favicon, LogoPayex } from "./index";
 
 describe("Core: Logotype", () => {
     it("is defined", () => {
@@ -26,13 +26,13 @@ describe("Core: Logotype", () => {
         });
     });
 
-    describe("HorizontalLogo", () => {
+    describe("LogoPayex", () => {
         it("is defined", () => {
-            expect(HorizontalLogo).toBeDefined();
+            expect(LogoPayex).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<HorizontalLogo />);
+            const wrapper = shallow(<LogoPayex />);
 
             expect(wrapper).toMatchSnapshot();
         });
