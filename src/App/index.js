@@ -71,10 +71,11 @@ class App extends Component {
                     <AppHeader />
                     <div className="documentation">
                         <div className="d-md-flex">
+                            <a className="skip-main" href="#doc-view">Skip to main content</a>
                             <div className="d-none d-lg-block">
                                 <SelectPanel id="doc-sidebar" newSidebar={true} routes={routes} />
                             </div>
-                            <main className="doc-view">
+                            <main id="doc-view" className="doc-view">
                                 <Suspense fallback={<LoadingComponent />}>
                                     <Switch>
                                         <Route exact path="/" component={Home} />
