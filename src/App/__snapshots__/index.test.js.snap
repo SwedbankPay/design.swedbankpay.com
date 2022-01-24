@@ -32,6 +32,12 @@ exports[`Main: App renders 1`] = `
       <div
         className="d-md-flex"
       >
+        <a
+          className="skip-main"
+          href="#doc-view"
+        >
+          Skip to main content
+        </a>
         <div
           className="d-none d-lg-block"
         >
@@ -527,6 +533,16 @@ exports[`Main: App renders 1`] = `
                       ],
                       "title": "Login",
                     },
+                    Object {
+                      "componentPath": "content/Filters",
+                      "icon": "filter_alt",
+                      "outlined": true,
+                      "path": "/patterns/filters",
+                      "statusBadges": Array [
+                        "new",
+                      ],
+                      "title": "Filters",
+                    },
                   ],
                   "title": "Patterns",
                 },
@@ -607,6 +623,7 @@ exports[`Main: App renders 1`] = `
         </div>
         <main
           className="doc-view"
+          id="doc-view"
         >
           <Suspense
             fallback={<LoadingComponent />}
