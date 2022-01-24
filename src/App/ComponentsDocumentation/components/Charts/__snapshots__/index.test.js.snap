@@ -32,6 +32,7 @@ exports[`Dashboard: Charts BarChart renders 1`] = `
     showCasePanel={true}
   >
     <Chart
+      description="Bar chart example"
       id="simple-bar-chart"
       options={
         Object {
@@ -126,6 +127,7 @@ dg.chart("simple-bar-chart", {
     showCasePanel={true}
   >
     <Chart
+      description="Multiple datasets example"
       id="multi-bar-chart"
       options={
         Object {
@@ -264,6 +266,7 @@ dg.chart("multi-bar-chart", {
     showCasePanel={true}
   >
     <Chart
+      description="Stacked bar example"
       id="stacked-multi-bar-chart"
       options={
         Object {
@@ -431,6 +434,7 @@ exports[`Dashboard: Charts CustomColors renders 1`] = `
           "197, 19, 28",
         ]
       }
+      description="Custom colors example"
       id="custom-color-pie"
       options={
         Object {
@@ -521,6 +525,7 @@ exports[`Dashboard: Charts DoughnutAndPieCharts renders 1`] = `
     showCasePanel={true}
   >
     <Chart
+      description="Pie chart example"
       id="simple-pie-chart"
       options={
         Object {
@@ -591,6 +596,7 @@ dg.chart("simple-pie-chart", {
     showCasePanel={true}
   >
     <Chart
+      description="Doughnut example"
       id="doughnut-chart"
       options={
         Object {
@@ -680,6 +686,7 @@ exports[`Dashboard: Charts LineChart renders 1`] = `
     showCasePanel={true}
   >
     <Chart
+      description="Line chart example"
       id="simple-line-chart"
       options={
         Object {
@@ -739,6 +746,7 @@ dg.chart("simple-line-chart", {
     showCasePanel={true}
   >
     <Chart
+      description="Stepped and dashed line example"
       id="stepped-dashed-line-chart"
       options={
         Object {
@@ -826,6 +834,7 @@ dg.chart("stepped-dashed-line-chart", {
     showCasePanel={true}
   >
     <Chart
+      description="Advanced line example"
       id="advanced-line-chart"
       options={
         Object {
@@ -934,6 +943,7 @@ dg.chart("advanced-line-chart", {
     showCasePanel={true}
   >
     <Chart
+      description="Line example with fill"
       id="line-fill-chart"
       options={
         Object {
@@ -1015,6 +1025,7 @@ exports[`Dashboard: Charts MixingTypes renders 1`] = `
     showCasePanel={true}
   >
     <Chart
+      description="Mixing charts example"
       id="mixed-chart"
       options={
         Object {

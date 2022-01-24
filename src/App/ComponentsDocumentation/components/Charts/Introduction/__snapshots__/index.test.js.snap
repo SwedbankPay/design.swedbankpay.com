@@ -93,6 +93,22 @@ exports[`Dashboard: Introduction renders 1`] = `
       />
     </li>
   </ul>
+  <h3>
+    Accessibility
+  </h3>
+  <p>
+    For ensuring the charts being accessible, remember to include 
+    <CodeTags
+      code="role=\\"img\\""
+      type="primary"
+    />
+     and a precise 
+    <CodeTags
+      code="aria-label"
+      type="primary"
+    />
+     description.
+  </p>
   <QuickStart />
   <JavaScript />
 </Fragment>
