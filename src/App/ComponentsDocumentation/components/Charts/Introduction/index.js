@@ -40,6 +40,9 @@ const Introduction = () => (
             <li><CodeTags type="secondary" code={"\"bar\"/\"horizontalBar\""} /></li>
             <li><CodeTags type="secondary" code={"\"pie\"/\"doughnut\""} /></li>
         </ul>
+
+        <h3>Accessibility</h3>
+        <p>For ensuring the charts being accessible, remember to include <CodeTags type="primary" code={"role=\"img\""}/> and a precise <CodeTags type="primary" code={"aria-label"}/> description.</p>
         <QuickStart />
         <JavaScript />
     </>

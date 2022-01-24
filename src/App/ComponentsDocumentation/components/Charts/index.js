@@ -23,7 +23,7 @@ const LineChart = () => (
                         }
                     ]
                 }
-            }} />
+            }} description="Line chart example"/>
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure >
             {`
@@ -61,7 +61,7 @@ dg.chart("simple-line-chart", {
                         }
                     ]
                 }
-            }} />
+            }} description="Stepped and dashed line example"/>
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure >
             {`
@@ -116,7 +116,7 @@ dg.chart("stepped-dashed-line-chart", {
                         }]
                     }
                 }
-            }} />
+            }} description="Advanced line example"/>
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure >
             {`
@@ -166,7 +166,7 @@ dg.chart("advanced-line-chart", {
                         }
                     ]
                 }
-            }} />
+            }} description="Line example with fill"/>
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure >
             {`
@@ -215,7 +215,7 @@ const BarChart = () => (
                         }]
                     }
                 }
-            }} />
+            }} description="Bar chart example"/>
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure >
             {`
@@ -274,7 +274,7 @@ dg.chart("simple-bar-chart", {
                         }]
                     }
                 }
-            }} />
+            }} description="Multiple datasets example"/>
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure >
             {`
@@ -345,7 +345,7 @@ dg.chart("multi-bar-chart", {
                         }]
                     }
                 }
-            }} />
+            }} description="Stacked bar example"/>
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure >
             {`
@@ -404,7 +404,7 @@ const DoughnutAndPieCharts = () => (
                         }
                     ]
                 }
-            }} />
+            }} description="Pie chart example"/>
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure >
             {`
@@ -435,7 +435,7 @@ dg.chart("simple-pie-chart", {
                         }
                     ]
                 }
-            }} />
+            }} description="Doughnut example"/>
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure >
             {`
@@ -485,7 +485,7 @@ const MixingTypes = () => (
                         }]
                     }
                 }
-            }} />
+            }} description="Mixing charts example"/>
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure >
             {`
@@ -543,6 +543,7 @@ const CustomColors = () => (
                     "114, 96, 94",
                     "197, 19, 28"
                 ]}
+                description="Custom colors example"
             />
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure >
