@@ -82,12 +82,17 @@ class Sheet {
         }
     }
 
+    _focusMethod = () => {
+        document.getElementById("sheetClose").focus();
+    };
+
     open () {
         handleScrollbar();
         this.isOpen = true;
         this._el.classList.add("d-block");
         document.body.classList.add("sheet-open");
         this._el.classList.add("sheet-open");
+        this._focusMethod();
 
         const toastContainer = document.querySelector("#toast-container");
 
