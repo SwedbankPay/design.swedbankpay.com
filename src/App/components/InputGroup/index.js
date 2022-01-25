@@ -115,7 +115,7 @@ const InputGroup = ({
                             <input {...attrs} />}
                 </>
             }
-            {helpBlock ? <div className="help-block" data-success={successMessage || null} data-error={errorMessage || null}>{helpBlock}</div> : null}
+            {helpBlock ? <div className="help-block" data-success={successMessage || null} data-error={errorMessage || null}>{"\n"}{helpBlock}{errorMessage}</div> : null}
         </div>
     );
 };
