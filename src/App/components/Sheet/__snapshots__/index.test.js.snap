@@ -17,6 +17,7 @@ exports[`Component: Sheet - does not render with data-require-action if it is se
       <a
         className="sheet-close"
         href="#"
+        id="sheetClose"
       >
         
 			
@@ -51,6 +52,7 @@ exports[`Component: Sheet - renders 1`] = `
       <a
         className="sheet-close"
         href="#"
+        id="sheetClose"
       >
         
 			
@@ -85,6 +87,7 @@ exports[`Component: Sheet - renders with a close icon 1`] = `
       <a
         className="sheet-close"
         href="#"
+        id="sheetClose"
       >
         
 			
@@ -120,6 +123,7 @@ exports[`Component: Sheet - renders with an ID 1`] = `
       <a
         className="sheet-close"
         href="#"
+        id="sheetClose"
       >
         
 			
@@ -154,6 +158,7 @@ exports[`Component: Sheet - renders with children 1`] = `
       <a
         className="sheet-close"
         href="#"
+        id="sheetClose"
       >
         
 			
@@ -190,6 +195,7 @@ exports[`Component: Sheet - renders with the data-require-action attribute 1`] =
       <a
         className="sheet-close"
         href="#"
+        id="sheetClose"
       >
         
 			
