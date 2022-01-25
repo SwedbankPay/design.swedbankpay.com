@@ -9,7 +9,7 @@ const Sheet = ({ id, requireAction, title, footer, children }) => (
         <section>{"\n"}
             <div className="sheet-header">
                 <h2 className="mb-0">{title}</h2>
-                <a href="#" className="sheet-close">{"\n\t\t\t"}
+                <a href="#" id="sheetClose" className="sheet-close">{"\n\t\t\t"}
                     <Icon type="close" />{"\n\t\t"}
                 </a>
             </div>
