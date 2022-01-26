@@ -3,6 +3,7 @@ import Sheet from "@components/Sheet";
 
 const SheetButton = ({ footer }) => (
     <>
+        <button className="btn btn-primary" data-sheet-open="demo-sheet">Open sheet</button>
         <Sheet id="demo-sheet" footer={footer} title="Demonstration sheet">
             <p>This is the sheet component. It can contain anything you want.</p>
             <p>It can also contain lots of useless text, just like the text in this paragraph. Or it can contain useful info and cheats. For example if you have a math quiz coming up;</p>
@@ -36,7 +37,6 @@ const SheetButton = ({ footer }) => (
                 </div>
             </form>
         </Sheet>
-        <button className="btn btn-primary" data-sheet-open="demo-sheet">Open sheet</button>
     </>
 );
 
