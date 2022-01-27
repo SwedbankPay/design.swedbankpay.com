@@ -8,7 +8,7 @@ export const selectOverview = {
     id: "no-tabs",
     elements: [
         {
-            component: <InputGroup type="select" label="Label" placeholder={"Select option"} selectOptions={["Blueberry", "Blackberry", "Berryberry"]} />,
+            component: <InputGroup id="select-showcase-example" type="select" label="Label" placeholder="Select option" selectOptions={["Blueberry", "Blackberry", "Strawberry"]} />,
             options: {
                 checkbox: [
                     {

@@ -21,7 +21,7 @@ const WhenToUse = () => (
                         <div className="px-4 slab slab-plain slab-border-error h-100 mb-2 d-flex flex-column">
                             <span className="h4">Don&#x27;t</span>
                             <div >
-                                <InputGroup type="select" label={label} placeholder={placeholder} selectOptions={selectOptions} />
+                                <InputGroup type="select" id="dont-example" label={label} placeholder={placeholder} selectOptions={selectOptions} />
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@ const ContentGuidelines = () => (
         <h2 id="content-guidelines">Content guidelines</h2>
 
         <div className="d-flex justify-content-center slab slab-plain px-5 pt-5 pb-4 no-pointer-events">
-            <InputGroup type="select" label="Label" placeholder="Placeholder text" selectOptions={[]} helpBlock/>
+            <InputGroup type="select" id="content-guidelines-example" label="Label" placeholder="Placeholder text" selectOptions={[]} helpBlock/>
         </div>
         <ul className="pl-3">
             <li>The <b>Label</b> should be short, concise and to the point describing the functionality </li>
@@ -77,10 +77,10 @@ const DeveloperDocumentation = () => (
         <ComponentPreview language="html" codeFigure showCasePanel>
             <form className="no-pointer-events">
                 <div className="form-group has-error">{"\n"}
-                    <label>{"\n"}
+                    <label htmlFor="dev-doc-example">{"\n"}
                             Label{"\n"}
                     </label>{"\n"}
-                    <select className="form-control" defaultValue="placeholder" required>{"\n"}
+                    <select className="form-control" defaultValue="placeholder" id="dev-doc-example" required>{"\n"}
                         <option value="placeholder" disabled hidden>Select option</option>{"\n"}
                     </select>
                     <div className="help-block" data-error="Descriptive helpful error message."></div>
