@@ -50,6 +50,8 @@ exports[`Component: InputGroup - renders a form-group with a help block if prop 
       data-error={null}
       data-success={null}
     >
+      
+
       testvalue
     </div>
   </div>
@@ -94,7 +96,10 @@ exports[`Component: InputGroup - renders a form-group with a help block with dat
       data-error="error"
       data-success="success"
     >
+      
+
       testvalue
+      error
     </div>
   </div>
 </InputGroup>
@@ -353,6 +358,7 @@ exports[`Component: InputGroup - renders a form-group with a select field with g
     >
       
 		
+       
       <option
         value="Bounty hunter"
       >
