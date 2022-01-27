@@ -305,9 +305,9 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
 
                                     {this.state.activeTab.options.checkbox &&
                                         this.state.activeTab.options.checkbox.map((checkbox, i) => (
-                                            <div className="mb-4" key={i}>
+                                            <fieldset className="mb-4" key={i}>
                                                 {checkbox.title && (
-                                                    <h4>{checkbox.title}</h4>
+                                                    <legend className="h4">{checkbox.title}</legend>
                                                 )}
                                                 {checkbox.inputs.map((input, i) => (
                                                     <div key={i} className="checkbox" onChange={() => this.setActiveOptions(input.id, input.value, input.description, true)}>
@@ -315,7 +315,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                                                         <label htmlFor={input.id}>{input.name}</label>
                                                     </div>
                                                 ))}
-                                            </div>
+                                            </fieldset>
                                         )
                                         )
                                     }
@@ -333,9 +333,9 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                                     ))}
                                     {this.state.activeTab.options.radio && this.state.activeTab.options.radio.map((radio, i) => (
                                         <div className="mb-4" key={i}>
-                                            <h4>{radio.title}</h4>
+                                            <legend className="h4">{radio.title}</legend>
                                             {radio.values.map((val, j) => (
-                                                <div key={j} className="radio" onChange={e => this.setActiveOptions(
+                                                <fieldset key={j} className="radio" onChange={e => this.setActiveOptions(
                                                     radio.id,
                                                     radio.values[e.target.value].value,
                                                     radio.values[e.target.value].description
@@ -348,7 +348,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                                                         defaultChecked={val.default}
                                                     />
                                                     <label htmlFor={`${radio.id + val.name.replace(/\s/g, "")}${val.default ? "_default" : ""}`}>{val.name}</label>
-                                                </div>
+                                                </fieldset>
                                             ))}
                                         </div>
                                     ))}
