@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Rangeslider = ({ label, name, min, max, step, value, disabled, valueLabelPrefix, valueLabelPostfix, tooltip }) => {
+const Rangeslider = ({ id, label, name, min, max, step, value, disabled, valueLabelPrefix, valueLabelPostfix, tooltip }) => {
     const attrs = {
         type: "range",
         name,
@@ -16,7 +16,7 @@ const Rangeslider = ({ label, name, min, max, step, value, disabled, valueLabelP
         <div className="rangeslider">{"\n"}
             <input {...attrs}/>{"\n"}
             <div className="d-flex justify-content-between">{"\n"}
-                <label htmlFor="rangeslider" className="rangeslider-label">{"\n"}
+                <label htmlFor={id} className="rangeslider-label">{"\n"}
                     {label}{"\n"}
                     {tooltip &&
                         <>
@@ -25,7 +25,7 @@ const Rangeslider = ({ label, name, min, max, step, value, disabled, valueLabelP
                             </i>{"\n"}
                         </>}
                 </label>{"\n"}
-                <output className="value-label" >{"\n\t\t"}
+                <output id={id} className="value-label" >{"\n\t\t"}
                     <p>{"\n\t\t\t"}
                         {valueLabelPrefix ? <span>{valueLabelPrefix}</span> : null}{valueLabelPrefix ? "\n\t\t\t" : null}
                         <span data-rs-value>{value}</span>{"\n\t\t\t"}
@@ -42,6 +42,7 @@ const Rangeslider = ({ label, name, min, max, step, value, disabled, valueLabelP
 };
 
 Rangeslider.propTypes = {
+    id: PropTypes.string,
     name: PropTypes.string,
     label: PropTypes.string,
     min: PropTypes.number,
