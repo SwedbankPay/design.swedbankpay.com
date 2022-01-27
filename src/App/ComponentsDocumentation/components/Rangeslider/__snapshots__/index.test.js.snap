@@ -126,12 +126,13 @@ exports[`Component: Rangeslider Overview renders 1`] = `
         "elements": Array [
           Object {
             "component": <Rangeslider
+              id="rangeslider-showcase-example"
               label="Label"
               max={100}
               min={0}
               value={50}
             />,
-            "description": "The slider component has a label which decribes the intent of the slider. It also has a minimum and maximum range which displays the range which user can pick inbetween. By holding and draging the circle indicator along the line, the user can see the value change and update in real time.",
+            "description": "The slider component has a label which describes the intent of the slider. It also has a minimum and maximum range which displays the range which user can pick in between. By holding and dragging the circle indicator along the line, the user can see the value change and update in real time.",
             "options": Object {
               "checkbox": Array [
                 Object {
@@ -234,6 +235,7 @@ exports[`Component: Rangeslider Overview renders 1`] = `
         className="py-3 col-12 col-lg-8"
       >
         <Rangeslider
+          id="example-1"
           label="Label"
           max={200}
           min={0}
@@ -264,6 +266,7 @@ exports[`Component: Rangeslider Overview renders 1`] = `
         className="py-3 col-12 col-lg-8"
       >
         <Rangeslider
+          id="example-2"
           label="Label"
           max={100}
           min={0}
@@ -295,6 +298,7 @@ exports[`Component: Rangeslider Overview renders 1`] = `
         className="py-3 col-12 col-lg-8"
       >
         <Rangeslider
+          id="example-3"
           label="Label"
           max={200}
           min={0}
@@ -323,6 +327,7 @@ exports[`Component: Rangeslider Overview renders 1`] = `
         className="py-3 col-12 col-lg-8"
       >
         <Rangeslider
+          id="example-4"
           label="Label"
           value={50}
         />
