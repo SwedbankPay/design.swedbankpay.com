@@ -22,6 +22,7 @@ exports[`Components: Tabs ContentGuidelines renders 1`] = `
             "Unselected Label",
           ]
         }
+        scroll={true}
         ulId="tabs-scroll-example-ul"
       />
     </div>
@@ -219,7 +220,7 @@ exports[`Components: Tabs Overview renders 1`] = `
         Don't
       </h3>
       <Tabs
-        id="tabs-scroll-example"
+        id="tabs-scroll-example-dont"
         items={
           Array [
             "Selected",
