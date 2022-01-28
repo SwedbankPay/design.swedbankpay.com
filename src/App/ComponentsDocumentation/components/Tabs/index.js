@@ -44,7 +44,7 @@ const ContentGuidelines = () => (
         <h2 id="content-guidelines">Content guidelines</h2>
         <div className="slab slab-plain px-5">
             <div className="m-auto">
-                <TabsComponent id="tabs-scroll-example" ulId="tabs-scroll-example-ul" items={["Selected Label", "Unselected Label", "Unselected Label"]}/>
+                <TabsComponent id="tabs-scroll-example" ulId="tabs-scroll-example-ul" items={["Selected Label", "Unselected Label", "Unselected Label"]} scroll/>
             </div>
         </div>
         <ul className="list list-bullet">
