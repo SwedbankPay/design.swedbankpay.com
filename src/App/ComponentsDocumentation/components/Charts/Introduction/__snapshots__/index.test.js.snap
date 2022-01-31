@@ -97,17 +97,12 @@ exports[`Dashboard: Introduction renders 1`] = `
     Accessibility
   </h3>
   <p>
-    For ensuring the charts being accessible, remember to include 
-    <CodeTags
-      code="role=\\"img\\""
-      type="primary"
-    />
-     and a precise 
+    For ensuring the charts being accessible, please remember to include an appropriate 
     <CodeTags
       code="aria-label"
       type="primary"
     />
-     description.
+     description inside the canvas element.
   </p>
   <QuickStart />
   <JavaScript />
