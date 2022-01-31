@@ -42,7 +42,7 @@ const Introduction = () => (
         </ul>
 
         <h3>Accessibility</h3>
-        <p>For ensuring the charts being accessible, remember to include <CodeTags type="primary" code={"role=\"img\""}/> and a precise <CodeTags type="primary" code={"aria-label"}/> description.</p>
+        <p>For ensuring the charts being accessible, please remember to include an appropriate <CodeTags type="primary" code={"aria-label"}/> description inside the canvas element.</p>
         <QuickStart />
         <JavaScript />
     </>
