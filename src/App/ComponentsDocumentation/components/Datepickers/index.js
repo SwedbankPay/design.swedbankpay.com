@@ -7,7 +7,7 @@ import Alert from "@components/Alert";
 import CodeTags from "@components/CodeTags";
 
 import { datepicker } from "@src/scripts/main";
-import NpmInformation from "~/src/App/docutils/NpmInformation";
+import NpmInformation from "@docutils/NpmInformation";
 
 const AboutDatepickers = () => (
     <>

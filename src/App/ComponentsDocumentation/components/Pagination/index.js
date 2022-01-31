@@ -3,7 +3,6 @@ import React from "react";
 import { ComponentPreview, DocContainer } from "@docutils";
 import PaginationComponent from "@components/Pagination";
 import CodeTags from "@components/CodeTags";
-import NpmInformation from "~/src/App/docutils/NpmInformation";
 
 const paginationItems = [
     /* eslint-disable object-property-newline */

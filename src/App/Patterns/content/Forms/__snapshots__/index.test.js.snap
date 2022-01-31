@@ -8,10 +8,10 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
     Content guidelines
   </h2>
   <div
-    className="slab slab-plain py-5"
+    className="slab slab-plain py-5 px-0"
   >
     <div
-      className="col-12 col-lg-6 m-auto"
+      className="col-12 col-sm-6 m-auto"
     >
       <h3
         className="mb-0"
@@ -27,7 +27,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
         className="mb-0"
         id="guideline-input-example"
         label="Input label"
-        placeholder="Placeholer text"
+        placeholder="Placeholder text"
         tooltip={true}
         type="text"
       />
@@ -55,7 +55,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
         24px
       </div>
       <Radio
-        className="mb-0"
+        className="mb-0 forms-radio-example"
         group={true}
         groupTitle="Input label"
         name="guidelines-radio-example"
@@ -83,14 +83,15 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
         32px
       </div>
       <div
-        className="d-xs-flex d-block justify-content-between"
+        className="d-flex"
       >
         <Button
-          label="Submit button"
+          className="mr-3"
+          label="Submit"
           type="primary"
         />
         <Button
-          label="Cancel button"
+          label="Cancel"
           type="link"
         />
       </div>
@@ -157,7 +158,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
       <Link
         to="/components/select"
       >
-        select lists
+        select
       </Link>
       , 
       <Link
@@ -169,7 +170,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
       <Link
         to="/components/togglebox"
       >
-        toggle-switches
+        toggle-box
       </Link>
        and 
       <Link
@@ -358,8 +359,13 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
         className="col-12 col-sm-6 m-auto"
       >
         <form>
-          <fieldset>
+          <fieldset
+            className="mb-2"
+          >
             <legend>
+               
+              
+
               <span
                 className="h3"
               >
@@ -379,6 +385,9 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
           </fieldset>
           <fieldset>
             <legend>
+               
+              
+
               <span
                 className="h3"
               >
@@ -435,12 +444,14 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
             type="email"
           />
           <Checkbox
+            className="mb-4"
             id="disabled-fieldset-checkbox"
             label="I agree to terms of use"
           />
           
 
           <Button
+            className="mt-2"
             label="Submit"
             type="primary"
           />
@@ -477,12 +488,14 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
             type="email"
           />
           <Checkbox
+            className="mb-4"
             id="disabled-input-checkbox"
             label="I agree to terms of user"
           />
           
 
           <Button
+            className="mt-2"
             label="Submit"
             type="primary"
           />
@@ -522,13 +535,13 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
           className="row align-items-center justify-content-between"
         >
           <InputGroup
-            className="col-12 col-sm-3 px-0"
+            className="col-12 col-sm-3 px-0 mb-4"
             id="form-grid-name-example"
             label="Name"
             type="name"
           />
           <InputGroup
-            className="col-12 col-sm-6 px-0"
+            className="col-12 col-sm-6 px-0 mb-4"
             id="form-grid-email-example"
             label="Email"
             type="email"
@@ -589,7 +602,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
       Do not make an input full width of a desktop viewport, use the grid to restrict the width of the inputs to no more than half of the viewport. The field widths should reflect the intended length of the content while still aligning to the grid. On mobile devices, expand the input elements and buttons to make use of the whole viewport width.
     </p>
     <div
-      className="slab slab-plain slab-border-success"
+      className="slab slab-plain slab-border-success pb-4"
     >
       <span
         className="h4 d-block mb-4"
@@ -614,7 +627,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
             type="text"
           />
           <InputGroup
-            className="col-12 col-sm-7"
+            className="col-12 col-sm-7 mb-2"
             id="layout-city-example"
             label="City"
             type="text"
@@ -727,7 +740,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
             Do
           </span>
           <div
-            className="radio mb-2"
+            className="radio mb-3"
           >
             <input
               defaultChecked={true}
@@ -746,13 +759,13 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
             className="ml-2"
           >
             <InputGroup
-              className="ml-4"
+              className="ml-4 mb-4"
               label="E-mail address"
               type="text"
             />
           </div>
           <div
-            className="radio mb-2"
+            className="radio mb-3"
           >
             <input
               id="logical-flow-example-call"
@@ -781,6 +794,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
           </span>
           <Radio
             checked={true}
+            className="mb-3"
             id="logical-flow-example-email-2"
             label="E-mail"
             name="logical-flow-example-2"
@@ -789,12 +803,13 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
             className="ml-2"
           >
             <InputGroup
-              className="ml-4"
+              className="ml-4 mb-4"
               label="E-mail address"
               type="text"
             />
           </div>
           <Radio
+            className="mb-3"
             id="logical-flow-example-call-2"
             label="Call"
             name="logical-flow-example-2"
@@ -828,7 +843,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
      
     <img
       className="w-100"
-      src="/TEST/img/documentation/templates/img-button-placement.png"
+      src="/TEST/img/documentation/patterns/img-button-placement.png"
     />
   </section>
   <section>
@@ -897,11 +912,6 @@ exports[`Forms: index Overview renders 1`] = `
   >
     Overview
   </h2>
-  <label
-    htmlFor="select-ex"
-  >
-    Label
-  </label>
   <p>
     A form can include different type of user input components that can be arranged in different ways depending on your specific context and needs. You might for example design a form for a user to sign up for or log into an account, register for a service, reconfigure settings, take a survey, purchase a product or provide feedback.
   </p>
@@ -968,6 +978,7 @@ exports[`Forms: index Overview renders 1`] = `
                   
 
                   <Button
+                    className="mt-3"
                     label="Send message"
                     type="primary"
                   />
@@ -1014,9 +1025,7 @@ exports[`Forms: index Overview renders 1`] = `
                     ]
                   }
                 />
-                <fieldset
-                  className=""
-                >
+                <fieldset>
                   <legend>
                     <span
                       className="h2"
@@ -1025,7 +1034,7 @@ exports[`Forms: index Overview renders 1`] = `
                     </span>
                   </legend>
                   <div
-                    className="row"
+                    className="row mb-2"
                   >
                     <InputGroup
                       className="col-12 col-sm-6"
@@ -1041,12 +1050,13 @@ exports[`Forms: index Overview renders 1`] = `
                     />
                   </div>
                   <InputGroup
-                    className="mb-3"
+                    className="mb-4"
                     id="multi-form-example-3"
                     label="Label"
                     type="text"
                   />
                   <Radio
+                    className="mb-4"
                     group={true}
                     groupTitle="Input label"
                     name="multi-step-radio-example"
@@ -1069,7 +1079,7 @@ exports[`Forms: index Overview renders 1`] = `
                     }
                   />
                   <div
-                    className="d-flex justify-content-between"
+                    className="d-flex justify-content-between pt-2"
                   >
                     <Button
                       icon="arrow_back"

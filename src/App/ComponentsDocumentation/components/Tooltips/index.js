@@ -4,7 +4,7 @@ import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
 import { tooltips } from "@src/scripts/main";
-import NpmInformation from "~/src/App/docutils/NpmInformation";
+import NpmInformation from "@docutils/NpmInformation";
 
 const Overview = () => (
     <>

@@ -10,7 +10,7 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
         <ComponentPreview language="html" showCasePanel hideCodeFigure showCasePanelAdvanced={toastShowCase} />
         <ComponentPreview language="html" codeFigure dangerousHTML>
-            {"<button type=\"button\" class=\"btn btn-primary\" onclick=\"dg.toast({\n\ttype: 'neutral' \n\thtml: '<p><b>Info header</b> Input informative alert information here, provide <a href=\"#\">link</a> to solution or more info when possible.</p>'})\">\nNeutral toast\n</button>"}
+            {"<button type=\"button\" class=\"btn btn-primary\" onclick=\"dg.toast({\n\ttype: 'neutral' \n\thtml: '<p><b>Info header</b> Input informative alert information here, provide <a href=\"#\">link</a> to solution or more info when possible.</p>'})\">\nShow neutral toast\n</button>"}
         </ComponentPreview>
         <section>
             <h3>When to consider something else</h3>
@@ -34,7 +34,7 @@ const Overview = () => (
                     </div>
                 </div>
             </div>
-            <p>The positioning of the toast component should always be at the top right corner of the page on web and top center on mobile devices.</p>
+            <p>The positioning of the toast component should always be at the top right corner of the page on desktop and top center on mobile devices.</p>
 
             <div className="slab slab-plain slab-border-error">
                 <span className="h3">Don&apos;t</span>
@@ -48,7 +48,7 @@ const Overview = () => (
                     </div>
                 </div>
             </div>
-            <p>Since the toast component provides updates on user actions and never critical information, it should not disturb/abrupt the user flow. As seen on the example above, it should not pop up in the middle of the screen interrupting the user. </p>
+            <p>The toast component should not pop up in the middle of the screen and interrupt the user flow. </p>
         </section>
     </section>
 );
@@ -68,7 +68,7 @@ const ContentGuidelines = () => (
             </div>
         </div>
         <ul className="list list-bullet">
-            <li>The <b>message</b> for toast should reflect the type of the toast, if it is informative it should explain and link the user further. If it is an error toast, it should clearly explain what the issue is and explain how the user can solve the problem.</li>
+            <li>The toast may have a bolded title to give a quick overview of the notification. It’s important that the <b>message</b> reflect the toast type, e.g if it is an error toast, it should clearly state the issue and if possible explain how to solve the problem. </li>
         </ul>
     </section>
 );
@@ -76,7 +76,7 @@ const ContentGuidelines = () => (
 const DeveloperDocumentation = () => (
     <section id="developer-documentation">
         <h2>Developer documentation</h2>
-        <p>To use the Toast, call <CodeTags type="secondary" code="dg.toast()" /> on an element with the desired options.</p>
+        <p>To use the Toast, call <CodeTags type="secondary" code="dg.toast()" /> with the desired options.</p>
         <ComponentPreview language="html" codeFigure dangerousHTML>
             {"<button type=\"button\" class=\"btn btn-primary\" onclick=\"dg.toast({\n\ttype: 'neutral' \n\thtml: '<p><b>Info header</b>\n\t\t Input informative alert information here, provide <a href=\"#\">link</a> to solution or more info when possible.\n\t</p>'})\">Neutral toast\n</button>"}
         </ComponentPreview>
@@ -106,7 +106,7 @@ const DeveloperDocumentation = () => (
             <p><Link to="/get-started/for-developers/">Usage with NPM</Link> will require you to import it from <CodeTags type="primary" code="@swedbankpay/design-guide" /> before calling it on an element.</p>
             <ComponentPreview language="javascript" codeFigure dangerousHTML>
                 import &#123; toast &#125; from &quot;@swedbankpay/design-guide&quot;; {"\n"}
-                toast();
+                toast(&#123;{"\n\ttype: 'neutral' \n\thtml: '<p>\n\t\t<b>Info header</b>\n\t\t Input informative alert information here, provide <a href=\"#\">link</a> to solution or more info when possible.\n\t</p>'"}{"\n"}&#125;)
             </ComponentPreview>
             <ComponentPreview language="html" codeFigure dangerousHTML>
                 {"<button type=\"button\" class=\"btn btn-primary\" onclick=\"toast({\n\ttype: 'neutral' \n\thtml: '<p><b>Info header</b>\n\t\t Input informative alert information here, provide <a href=\"#\">link</a> to solution or more info when possible.\n\t\t</p>'})\">Neutral toast\n</button>"}

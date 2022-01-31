@@ -13,7 +13,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       className="dg-current-version text-uppercase"
     >
       Design Guide – v. 
-      7.0.1
+      7.1.1
     </span>
     <Switch>
       <Route
@@ -22,7 +22,8 @@ exports[`Utilities: RenderPage renders 1`] = `
         render={[Function]}
       />
       <RenderRoutes
-        appFolder="GettingStarted"
+        appFolder="GetStarted"
+        entryCardText="Get started by setting up the Design Guide!"
         icon={
           Object {
             "name": "wb_incandescent",
@@ -35,12 +36,15 @@ exports[`Utilities: RenderPage renders 1`] = `
         routes={
           Array [
             Object {
-              "componentPath": "getting-started/Introduction",
+              "componentPath": "get-started/Introduction",
               "path": "/get-started/introduction",
+              "statusBadges": Array [
+                "updated",
+              ],
               "title": "Introduction",
             },
             Object {
-              "componentPath": "getting-started/ForDevelopers",
+              "componentPath": "get-started/ForDevelopers",
               "path": "/get-started/for-developers",
               "statusBadges": Array [
                 "updated",
@@ -48,13 +52,14 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "For developers",
             },
             Object {
-              "componentPath": "getting-started/ForDesigners",
+              "componentPath": "get-started/ForDesigners",
               "path": "/get-started/for-designers",
               "title": "For designers",
             },
           ]
         }
         title="Get started"
+        wideCard={true}
       />
       <RenderRoutes
         appFolder="Identity"
@@ -445,6 +450,7 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/toast",
               "statusBadges": Array [
                 "javascript",
+                "updated",
               ],
               "title": "Toast",
             },
@@ -506,6 +512,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "format_align_justify",
               "outlined": true,
               "path": "/patterns/forms",
+              "statusBadges": Array [
+                "new",
+              ],
               "title": "Forms",
             },
             Object {
@@ -513,6 +522,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "account_circle",
               "outlined": true,
               "path": "/patterns/login",
+              "statusBadges": Array [
+                "new",
+              ],
               "title": "Login",
             },
           ]

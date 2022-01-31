@@ -43,11 +43,11 @@ exports[`Components: Toast Content guidelines renders 1`] = `
     className="list list-bullet"
   >
     <li>
-      The 
+      The toast may have a bolded title to give a quick overview of the notification. It’s important that the 
       <b>
         message
       </b>
-       for toast should reflect the type of the toast, if it is informative it should explain and link the user further. If it is an error toast, it should clearly explain what the issue is and explain how the user can solve the problem.
+       reflect the toast type, e.g if it is an error toast, it should clearly state the issue and if possible explain how to solve the problem. 
     </li>
   </ul>
 </section>
@@ -66,7 +66,7 @@ exports[`Components: Toast Developer documentation renders 1`] = `
       code="dg.toast()"
       type="secondary"
     />
-     on an element with the desired options.
+     with the desired options.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -270,7 +270,16 @@ exports[`Components: Toast Developer documentation renders 1`] = `
       import { toast } from "@swedbankpay/design-guide"; 
       
 
-      toast();
+      toast({
+      
+	type: 'neutral' 
+	html: '&lt;p&gt;
+		&lt;b&gt;Info header&lt;/b&gt;
+		 Input informative alert information here, provide &lt;a href="#"&gt;link&lt;/a&gt; to solution or more info when possible.
+	&lt;/p&gt;'
+      
+
+      })
     </ComponentPreview>
     <ComponentPreview
       codeFigure={true}
@@ -304,22 +313,27 @@ exports[`Components: Toast Overview renders 1`] = `
         "elements": Array [
           Object {
             "component": <Toast
-              title="Information"
+              title="Neutral"
               type="neutral"
             />,
-            "description": "Use this toast when you want to inform the user. The message should clearly state and explain what the information is about and in some cases a link can also be used to direct the user towards continued reading.",
+            "description": "Use this toast to inform the user about something, in some cases a link can be used to direct the user towards continued reading. For information on how to trigger a toast, read more under Developer documentation.",
             "options": Object {
               "checkbox": Array [],
             },
-            "tab": "Information",
-            "title": "Information toast",
+            "tab": "Neutral",
+            "title": "Neutral toast",
           },
           Object {
             "component": <Toast
               title="Success"
               type="success"
             />,
-            "description": "Use success toast when the action performed by the user has returned a success.",
+            "description": <React.Fragment>
+              <p>
+                Use success toast to show that the action performed by the user was successful.
+              </p>
+              <AlertBox />
+            </React.Fragment>,
             "options": Object {
               "checkbox": Array [],
             },
@@ -331,7 +345,12 @@ exports[`Components: Toast Overview renders 1`] = `
               title="Warning"
               type="warning"
             />,
-            "description": "The warning toast warns the user about situations that might be unfavorable. Don’t use this to present critical information.",
+            "description": <React.Fragment>
+              <p>
+                The warning toast warns the user about situations that might be unfavorable. Don’t use this to present critical information.
+              </p>
+              <AlertBox />
+            </React.Fragment>,
             "options": Object {
               "checkbox": Array [],
             },
@@ -340,15 +359,20 @@ exports[`Components: Toast Overview renders 1`] = `
           },
           Object {
             "component": <Toast
-              title="Error"
+              title="Danger"
               type="danger"
             />,
-            "description": "Error toast informs the user of error and issues that may have occurred, they should let the user know what has happened and how the user can solve the issue.",
+            "description": <React.Fragment>
+              <p>
+                Danger toast informs the user of error and issues that may have occurred. They should let the user know what has happened and how the user can solve the issue.
+              </p>
+              <AlertBox />
+            </React.Fragment>,
             "options": Object {
               "checkbox": Array [],
             },
-            "tab": "Error",
-            "title": "Error toast",
+            "tab": "Danger",
+            "title": "Danger toast",
           },
         ],
         "hideOptions": true,
@@ -365,7 +389,7 @@ exports[`Components: Toast Overview renders 1`] = `
     &lt;button type="button" class="btn btn-primary" onclick="dg.toast({
 	type: 'neutral' 
 	html: '&lt;p&gt;&lt;b&gt;Info header&lt;/b&gt; Input informative alert information here, provide &lt;a href="#"&gt;link&lt;/a&gt; to solution or more info when possible.&lt;/p&gt;'})"&gt;
-Neutral toast
+Show neutral toast
 &lt;/button&gt;
   </ComponentPreview>
   <section>
@@ -439,7 +463,7 @@ Neutral toast
       </div>
     </div>
     <p>
-      The positioning of the toast component should always be at the top right corner of the page on web and top center on mobile devices.
+      The positioning of the toast component should always be at the top right corner of the page on desktop and top center on mobile devices.
     </p>
     <div
       className="slab slab-plain slab-border-error"
@@ -481,7 +505,7 @@ Neutral toast
       </div>
     </div>
     <p>
-      Since the toast component provides updates on user actions and never critical information, it should not disturb/abrupt the user flow. As seen on the example above, it should not pop up in the middle of the screen interrupting the user. 
+      The toast component should not pop up in the middle of the screen and interrupt the user flow. 
     </p>
   </section>
 </section>

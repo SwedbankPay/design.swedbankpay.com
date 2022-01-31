@@ -5,7 +5,7 @@ import NavComponent from "@components/Nav";
 import CodeTags from "@components/CodeTags";
 
 import { nav } from "@src/scripts/main";
-import NpmInformation from "~/src/App/docutils/NpmInformation";
+import NpmInformation from "@docutils/NpmInformation";
 
 const navItems = [
     {

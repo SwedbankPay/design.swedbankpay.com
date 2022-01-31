@@ -65,7 +65,7 @@ export const formsShowCase = {
                         <Checkbox
                             id="forms-template-checkbox-example"
                             label={<>I have read and accept Swedbank Pays&#39;s&nbsp;<Links linkText="privacy policy" rightIcon="launch" /></>} />{"\n"}
-                        <Button type="primary" label="Send message"/>
+                        <Button type="primary" label="Send message" className="mt-3"/>
                     </fieldset>
                 </form>
             </div>,
@@ -81,17 +81,17 @@ export const formsShowCase = {
             <div className="col-md-10 col-12 px-0">
                 <form>
                     <ProgressSteps steps={steps} />
-                    <fieldset className="">
+                    <fieldset>
                         <legend>
                             <span className="h2">Step two</span>
                         </legend>
-                        <div className="row">
+                        <div className="row mb-2">
                             <InputGroup id="multi-form-example-1" type="text" label="Label" className="col-12 col-sm-6"/>
                             <InputGroup id="multi-form-example-2" type="text" label="Label" className="col-12 col-sm-6"/>
                         </div>
-                        <InputGroup id="multi-form-example-3" type="text" label="Label" className="mb-3" />
-                        <RadioButton group groupTitle="Input label" options={radioOptions} name="multi-step-radio-example"/>
-                        <div className="d-flex justify-content-between">
+                        <InputGroup id="multi-form-example-3" type="text" label="Label" className="mb-4"/>
+                        <RadioButton group groupTitle="Input label" options={radioOptions} name="multi-step-radio-example" className="mb-4"/>
+                        <div className="d-flex justify-content-between pt-2">
                             <Button type="secondary" icon="arrow_back" label="Back"/>
                             <Button type="primary" label="Next step"/>
                         </div>
@@ -122,7 +122,7 @@ export const guidelinesElementsList = [
     },
     {
         element: "Data inputs",
-        text: <>Information can be entered a variety of non-free form input field, <Link to="/components/checkbox">checkboxes</Link>, <Link to="/components/radio-button">radio button</Link>, <Link to="/components/select">select lists</Link>, <Link to="/components/datepickers">date pickers</Link>, <Link to="/components/togglebox">toggle-switches</Link> and <Link to="/components/rangeslider">rangesliders</Link>.</>
+        text: <>Information can be entered a variety of non-free form input field, <Link to="/components/checkbox">checkboxes</Link>, <Link to="/components/radio-button">radio button</Link>, <Link to="/components/select">select</Link>, <Link to="/components/datepickers">date pickers</Link>, <Link to="/components/togglebox">toggle-box</Link> and <Link to="/components/rangeslider">rangesliders</Link>.</>
     },
     {
         element: "Help",

@@ -7,7 +7,7 @@ import CodeTags from "@components/CodeTags";
 import { sidebar } from "@src/scripts/main";
 
 import { SidebarNavList, SidebarNavListExtended } from "./constants";
-import NpmInformation from "~/src/App/docutils/NpmInformation";
+import NpmInformation from "@docutils/NpmInformation";
 
 const Overview = () => (
     <>

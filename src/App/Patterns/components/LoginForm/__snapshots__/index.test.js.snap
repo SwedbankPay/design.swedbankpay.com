@@ -228,7 +228,7 @@ exports[`Pattern: LoginForm renders with a logo 1`] = `
   <Logotype
     alt="TESTBRAND-logo"
     size="lg"
-    src="/TEST/designguide/assets/TESTBRAND-logo-v.svg"
+    src="/TEST/img/logo/TESTBRAND-logo-v.svg"
     type="vertical d-none d-sm-block mx-auto mt-5"
   />
 </Fragment>
@@ -237,7 +237,7 @@ exports[`Pattern: LoginForm renders with a logo 1`] = `
 exports[`Pattern: LoginForm renders with a product label 1`] = `
 <Fragment>
   <span
-    className="extra-small text-black-50"
+    className="extra-small text-secondary-light-1"
   >
     Product Label
   </span>

@@ -2,12 +2,12 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
-import AlertComponent from "@components/Alert";
+import Alert from "@components/Alert";
 import DialogComponent from "@components/Dialog";
 import CodeTags from "@components/CodeTags";
 
 import { dialog } from "@src/scripts/main";
-import NpmInformation from "~/src/App/docutils/NpmInformation";
+import NpmInformation from "@docutils/NpmInformation";
 
 const HowItWorks = () => (
     <>
@@ -23,7 +23,7 @@ const HowItWorks = () => (
             The dialog body should contain the main content, usually just text confirming an action.
             In the footer you will find buttons to confirm or cancel the requested action.
         </p>
-        <AlertComponent type="warning" icon="warning" text={<p><b>Initializing dialog buttons:</b> To make a button open the dialog box you need to include <CodeTags type="secondary" code={"data-dialog-open=\"{#your-dialog-id}\""} /> as an attribute to that button.</p>} />
+        <Alert type="warning" icon="warning" text={<p><b>Initializing dialog buttons:</b> To make a button open the dialog box you need to include <CodeTags type="secondary" code={"data-dialog-open=\"{#your-dialog-id}\""} /> as an attribute to that button.</p>} />
     </>
 );
 

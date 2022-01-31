@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import ForDevelopers, { Installation, GridAndBreakpoints, Contributing, Feedback, DiscoverMore } from "./index";
 
-describe("GettingStarted: ForDevelopers", () => {
+describe("GetStarted: ForDevelopers", () => {
     it("is defined", () => {
         expect(ForDevelopers).toBeDefined();
     });

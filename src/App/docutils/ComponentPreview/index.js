@@ -116,6 +116,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                 // code = jsbeautifier(code);
                 break;
             case "terminal":
+            case "json":
                 break;
             default:
                 return "update switchcase!";

@@ -31,26 +31,32 @@ const Home = () => {
 
                 <div className="row dg-cards-container mt-4">
                     {routes.map(route => (
-                        route.title !== "Get started" && <div key={route.title} className="col-12 col-sm-6 col-lg-3 d-flex">
-                            <Link to={route.path} className="cards cards-primary">
-                                <div className="cards-icon">
-                                    <i className="material-icons-outlined" >{route.icon.name}</i>
-                                </div>
-                                <div className="cards-content">
-                                    <span className="h4">{route.title === "Utilities" ? "Utility" : route.title }</span>
-                                    <span>{route.entryCardText}</span>
-                                </div>
-                                <i className="material-icons">arrow_forward</i>
-                            </Link>
-                        </div>
+                        <React.Fragment key={route.title}>
+                            <div key={route.title} className={route.wideCard ? "w-100 order-5" : "col-12 col-sm-6 col-lg-3 d-flex"}>
+                                <Link to={route.path} className={`cards cards-primary ${route.wideCard && "cards-wide m-3"}`}>
+                                    {route.wideCard
+                                        ?
+                                        <div className="cards-content flex-row align-items-center m-0 w-100">
+                                            <i className="material-icons material-icons-outlined mr-3 v-flip">{route.icon.name}</i>
+                                            <span className="h4 mb-0">{route.entryCardText}</span>
+                                            <i className="material-icons material-icons-outlined ml-auto">arrow_forward</i>
+                                        </div>
+                                        :
+                                        <div>
+                                            <div className="cards-icon">
+                                                <i className="material-icons-outlined" >{route.icon.name}</i>
+                                            </div>
+                                            <div className="cards-content">
+                                                <span className="h4">{route.title === "Utilities" ? "Utility" : route.title }</span>
+                                                <span>{route.entryCardText}</span>
+                                            </div>
+                                            <i className="material-icons">arrow_forward</i>
+                                        </div>
+                                    }
+                                </Link>
+                            </div>
+                        </React.Fragment>
                     ))}
-                    <Link to={routes.find(route => route.title === "Get started").path} className="cards cards-primary cards-wide m-3">
-                        <div className="cards-content flex-row align-items-center m-0 w-100">
-                            <i className="material-icons material-icons-outlined mr-3 v-flip">wb_incandescent</i>
-                            <span className="h4 mb-0">Get started by setting up the Design Guide!</span>
-                            <i className="material-icons material-icons-outlined ml-auto">arrow_forward</i>
-                        </div>
-                    </Link>
                 </div>
             </div>
             <div className="mt-auto d-none d-md-inline-flex mb-3">
@@ -74,7 +80,7 @@ const Home = () => {
                     </span>
                 </div>
 
-                {changeLogs.map(log => (
+                {changeLogs.slice(0, 4).map(log => (
                     <div key={log.version} className="row border-bottom pb-2 mt-4">
                         <div className="px-0 pb-2">Version {log.version}</div>
                         <div className="dg-changelog-description px-0">

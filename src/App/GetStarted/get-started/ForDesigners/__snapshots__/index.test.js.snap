@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GettingStarted: ForDesigners Contributing renders 1`] = `
+exports[`GetStarted: ForDesigners Contributing renders 1`] = `
 <section>
   <h2
     id="contributing"
@@ -52,7 +52,7 @@ exports[`GettingStarted: ForDesigners Contributing renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: ForDesigners DiscoverMore renders 1`] = `
+exports[`GetStarted: ForDesigners DiscoverMore renders 1`] = `
 <section>
   <h2
     id="discover-more"
@@ -110,7 +110,7 @@ exports[`GettingStarted: ForDesigners DiscoverMore renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: ForDesigners Feedback renders 1`] = `
+exports[`GetStarted: ForDesigners Feedback renders 1`] = `
 <section>
   <h2
     id="feedback"
@@ -123,7 +123,7 @@ exports[`GettingStarted: ForDesigners Feedback renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: ForDesigners NeedToHave renders 1`] = `
+exports[`GetStarted: ForDesigners NeedToHave renders 1`] = `
 <section>
   <h2
     id="need-to-have"
@@ -200,7 +200,7 @@ exports[`GettingStarted: ForDesigners NeedToHave renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: ForDesigners NeedToKnow renders 1`] = `
+exports[`GetStarted: ForDesigners NeedToKnow renders 1`] = `
 <section>
   <h2
     id="need-to-know"
@@ -251,7 +251,7 @@ exports[`GettingStarted: ForDesigners NeedToKnow renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: ForDesigners renders 1`] = `
+exports[`GetStarted: ForDesigners renders 1`] = `
 <DocContainer>
   <p
     className="lead mb-5"

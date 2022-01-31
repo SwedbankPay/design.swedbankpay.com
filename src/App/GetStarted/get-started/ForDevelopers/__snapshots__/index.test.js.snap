@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GettingStarted: ForDevelopers Contributing renders 1`] = `
+exports[`GetStarted: ForDevelopers Contributing renders 1`] = `
 <section>
   <h2
     id="contributing"
@@ -54,7 +54,7 @@ exports[`GettingStarted: ForDevelopers Contributing renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: ForDevelopers DiscoverMore renders 1`] = `
+exports[`GetStarted: ForDevelopers DiscoverMore renders 1`] = `
 <section>
   <h2
     id="discover-more"
@@ -137,7 +137,7 @@ exports[`GettingStarted: ForDevelopers DiscoverMore renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: ForDevelopers Feedback renders 1`] = `
+exports[`GetStarted: ForDevelopers Feedback renders 1`] = `
 <section>
   <h2
     id="feedback"
@@ -154,7 +154,7 @@ exports[`GettingStarted: ForDevelopers Feedback renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: ForDevelopers GridAndBreakpoints renders 1`] = `
+exports[`GetStarted: ForDevelopers GridAndBreakpoints renders 1`] = `
 <section>
   <h2
     id="grid-and-breakpoints"
@@ -270,7 +270,7 @@ exports[`GettingStarted: ForDevelopers GridAndBreakpoints renders 1`] = `
 </section>
 `;
 
-exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
+exports[`GetStarted: ForDevelopers Installation renders 1`] = `
 <section>
   <h2
     id="installation"
@@ -380,7 +380,7 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     sheet.init();
   </ComponentPreview>
   <p>
-    For CSS you can choose to import it from a 
+    For our CSS you can choose to import it from a 
     <CodeTags
       code="css/less/scss"
       type="secondary"
@@ -404,66 +404,54 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
     codeFigure={true}
     language="css"
   >
-    @import url("@swedbankpay/design-guide/dist/designguide/styles/
+    @import url("@swedbankpay/design-guide/src/less/
     TESTBRAND
-    .css");
+    .less");
   </ComponentPreview>
-  <h3>
-    Assets
-  </h3>
   <p>
-    When using the node package you also need to host certain assets such as fonts and icons. Copy the 
+    Example from 
     <CodeTags
-      code="designguide"
+      code="angular.json"
       type="secondary"
     />
-     folder from the Design Guide package located in 
-    <CodeTags
-      code="node_modules/@swedbankpay/dist"
-      type="secondary"
-    />
-     over to your static file folder. 
   </p>
-  <p>
-    It might be a good idea to do this programmatically either through NPM
+  <ComponentPreview
+    codeFigure={true}
+    language="json"
+  >
+    "styles": [ 
     
 
-    s postinstall or webpack/angular/vue/react configurations.
-  </p>
+      "src/app.less", 
+    
+
+      "./node_modules/@swedbankpay/design-guide/src/less/
+    TESTBRAND
+    .less" 
+    
+
+    ],
+  </ComponentPreview>
   <p>
-    Example with 
+    Example from 
     <CodeTags
-      code="package.json"
+      code="nuxt.config.js"
       type="secondary"
     />
-     postinstall
   </p>
   <ComponentPreview
     codeFigure={true}
     language="javascript"
   >
-    "scripts": { 
+    "css": [ 
     
 
-    "postinstall": "node ./post-install.js" 
+      "./node_modules/@swedbankpay/design-guide/src/less/
+    TESTBRAND
+    .less" 
     
 
-    }
-  </ComponentPreview>
-  <p>
-    Example with webpack.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="javascript"
-  >
-    new CopyWebpackPlugin([ 
-    
-
-      { from: "./node_modules/@swedbankpay/dist/designguide", to: "./static/designguide" } 
-    
-
-    ]),
+    ],
   </ComponentPreview>
   <h3>
     How to initialize our JavaScript components
@@ -510,6 +498,9 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
   <h3>
     Browser Support
   </h3>
+  <p>
+    The design guide is tested and currently supported by these browsers.
+  </p>
   <div
     className="browser-support"
   >
@@ -533,17 +524,6 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
       />
       <p>
         Yes
-      </p>
-    </div>
-    <div
-      key="img/documentation/forDevelopers/internet-explorer.png"
-    >
-      <img
-        alt="Image of Internet explorer"
-        src="/TEST/img/documentation/forDevelopers/internet-explorer.png"
-      />
-      <p>
-        11
       </p>
     </div>
     <div
@@ -580,10 +560,16 @@ exports[`GettingStarted: ForDevelopers Installation renders 1`] = `
       </p>
     </div>
   </div>
+  <h4>
+    Browser support for products using the Design Guide
+  </h4>
+  <p>
+    It is up to every Project manager and development team to decide which browsers their product should support. If you want to support other browsers than the ones supported by the Design Guide you need to maintain and test the component code in in your project. 
+  </p>
 </section>
 `;
 
-exports[`GettingStarted: ForDevelopers renders 1`] = `
+exports[`GetStarted: ForDevelopers renders 1`] = `
 <DocContainer>
   <p
     className="lead mb-5"

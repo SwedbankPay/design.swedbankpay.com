@@ -157,7 +157,7 @@ exports[`Utilities: PageLayout renders 1`] = `
     />
      class. Use the 
     <Link
-      to="/utilities/spacing"
+      to="/identity/spacing"
     >
       spacing
     </Link>

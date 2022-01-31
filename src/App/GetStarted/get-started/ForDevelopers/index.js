@@ -40,29 +40,23 @@ const Installation = () => (
             import &#123; sheet &#125; from &quot;@swedbankpay/design-guide&quot;;  {"\n"}
             sheet.init();
         </ComponentPreview>
-        <p>For CSS you can choose to import it from a <CodeTags type="secondary" code="css/less/scss"/> file, from a <CodeTags type="secondary" code="js"/> file if your bundler supports it, or point to the file directly from your bundler.</p>
+        <p>For our CSS you can choose to import it from a <CodeTags type="secondary" code="css/less/scss"/> file, from a <CodeTags type="secondary" code="js"/> file if your bundler supports it, or point to the file directly from your bundler.</p>
         <p>Example from a <CodeTags type="secondary" code=".less"/> file</p>
         <ComponentPreview language="css" codeFigure>
-            @import url(&quot;@swedbankpay/design-guide/dist/designguide/styles/{brand}.css&quot;);
+            @import url(&quot;@swedbankpay/design-guide/src/less/{brand}.less&quot;);
         </ComponentPreview>
-        <h3>Assets</h3>
-        <p>When using the node package you also need to host certain assets such as fonts and icons. Copy the <CodeTags type="secondary" code="designguide"/> folder from the Design Guide package located in <CodeTags type="secondary" code="node_modules/@swedbankpay/dist"/> over to your static file folder. </p>
-        <p>It might be a good idea to do this programmatically either through NPM{"\n"}s postinstall or webpack/angular/vue/react configurations.</p>
-        <p>
-            Example with <CodeTags type="secondary" code="package.json"/> postinstall
-        </p>
-        <ComponentPreview language="javascript" codeFigure>
-        &quot;scripts&quot;: &#123; {"\n"}
-        &quot;postinstall&quot;: &quot;node ./post-install.js&quot; {"\n"}
-        &#125;
+        <p>Example from <CodeTags type="secondary" code="angular.json"/></p>
+        <ComponentPreview language="json" codeFigure>
+        &quot;styles&quot;: [ {"\n"}
+            &nbsp; &quot;src/app.less&quot;, {"\n"}
+            &nbsp; &quot;./node_modules/@swedbankpay/design-guide/src/less/{brand}.less&quot; {"\n"}
+        ],
         </ComponentPreview>
-        <p>
-            Example with webpack.
-        </p>
+        <p>Example from <CodeTags type="secondary" code="nuxt.config.js"/></p>
         <ComponentPreview language="javascript" codeFigure>
-            new CopyWebpackPlugin([ {"\n"}
-               &nbsp; &#123; from: &quot;./node_modules/@swedbankpay/dist/designguide&quot;, to: &quot;./static/designguide&quot; &#125; {"\n"}
-            ]),
+        &quot;css&quot;: [ {"\n"}
+            &nbsp; &quot;./node_modules/@swedbankpay/design-guide/src/less/{brand}.less&quot; {"\n"}
+        ],
         </ComponentPreview>
         <h3>How to initialize our JavaScript components</h3>
         <p>Our script runs <CodeTags type="secondary" code="dg.script.initAll();"/> on DOMContentLoaded making it so you have to run <CodeTags type="secondary" code="dg.<component_name>.init();"/> manually when a component is rendered after the event has fired.</p>
@@ -76,6 +70,7 @@ const Installation = () => (
         </ComponentPreview>
 
         <h3>Browser Support</h3>
+        <p>The design guide is tested and currently supported by these browsers.</p>
         <div className="browser-support">
             {browsers.map(browser => (
                 <div key={browser.url}>
@@ -84,6 +79,8 @@ const Installation = () => (
                 </div>
             ))}
         </div>
+        <h4>Browser support for products using the Design Guide</h4>
+        <p>It is up to every Project manager and development team to decide which browsers their product should support. If you want to support other browsers than the ones supported by the Design Guide you need to maintain and test the component code in in your project. </p>
     </section>
 );
 const GridAndBreakpoints = () => (

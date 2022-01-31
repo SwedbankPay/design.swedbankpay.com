@@ -19,14 +19,16 @@ module.exports = [
                 path: "/patterns/forms",
                 componentPath: "content/Forms",
                 icon: "format_align_justify",
-                outlined: true
+                outlined: true,
+                statusBadges: ["new"]
             },
             {
                 title: "Login",
                 path: "/patterns/login",
                 componentPath: "content/Login",
                 icon: "account_circle",
-                outlined: true
+                outlined: true,
+                statusBadges: ["new"]
             }
         ]
     }

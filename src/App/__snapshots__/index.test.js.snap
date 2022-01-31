@@ -41,7 +41,8 @@ exports[`Main: App renders 1`] = `
             routes={
               Array [
                 Object {
-                  "appFolder": "GettingStarted",
+                  "appFolder": "GetStarted",
+                  "entryCardText": "Get started by setting up the Design Guide!",
                   "icon": Object {
                     "name": "wb_incandescent",
                     "rotate": true,
@@ -50,12 +51,15 @@ exports[`Main: App renders 1`] = `
                   "redirect": "/get-started/introduction",
                   "routes": Array [
                     Object {
-                      "componentPath": "getting-started/Introduction",
+                      "componentPath": "get-started/Introduction",
                       "path": "/get-started/introduction",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Introduction",
                     },
                     Object {
-                      "componentPath": "getting-started/ForDevelopers",
+                      "componentPath": "get-started/ForDevelopers",
                       "path": "/get-started/for-developers",
                       "statusBadges": Array [
                         "updated",
@@ -63,12 +67,13 @@ exports[`Main: App renders 1`] = `
                       "title": "For developers",
                     },
                     Object {
-                      "componentPath": "getting-started/ForDesigners",
+                      "componentPath": "get-started/ForDesigners",
                       "path": "/get-started/for-designers",
                       "title": "For designers",
                     },
                   ],
                   "title": "Get started",
+                  "wideCard": true,
                 },
                 Object {
                   "appFolder": "Identity",
@@ -450,6 +455,7 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/toast",
                       "statusBadges": Array [
                         "javascript",
+                        "updated",
                       ],
                       "title": "Toast",
                     },
@@ -506,6 +512,9 @@ exports[`Main: App renders 1`] = `
                       "icon": "format_align_justify",
                       "outlined": true,
                       "path": "/patterns/forms",
+                      "statusBadges": Array [
+                        "new",
+                      ],
                       "title": "Forms",
                     },
                     Object {
@@ -513,6 +522,9 @@ exports[`Main: App renders 1`] = `
                       "icon": "account_circle",
                       "outlined": true,
                       "path": "/patterns/login",
+                      "statusBadges": Array [
+                        "new",
+                      ],
                       "title": "Login",
                     },
                   ],

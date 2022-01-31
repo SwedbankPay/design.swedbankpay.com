@@ -64,7 +64,7 @@ const PageLayout = () => (
     <DocContainer docToc >
         <p className="lead">
             Use grid with our <CodeTags type="secondary" code=".main-content" /> class to use a variety of page layouts. As we have a mobile first approach we only use 1rem as base padding for
-            our <CodeTags type="secondary" code=".main-content"/> class. Use the <Link to="/utilities/spacing">spacing</Link> classes to customize padding to fit your needs.
+            our <CodeTags type="secondary" code=".main-content"/> class. Use the <Link to="/identity/spacing">spacing</Link> classes to customize padding to fit your needs.
         </p>
         <FullWidth />
         <CenteredContent />

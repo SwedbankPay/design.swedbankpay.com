@@ -915,7 +915,7 @@
         &.mobile {
             h1,
             .h1 {
-                font-size: 1.5rem;
+                font-size: 1.75rem;
                 line-height: 2rem;
             }
 
@@ -1233,6 +1233,7 @@
                 top: auto;
                 right: 0;
                 z-index: 0;
+                margin: initial;
 
                 .toast {
                     animation: 0s;
@@ -1264,6 +1265,33 @@
 
     .overflow-auto {
         overflow: auto;
+    }
+
+    .forms-radio-example {
+        legend {
+            line-height: 1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    #logotype-doc {
+        .logotype-display {
+            div {
+                display: flex;
+                height: 10rem;
+                width: 10rem;
+                justify-content: center;
+                align-items: center;
+
+                &.background-light {
+                    background-color: @light-gray;
+                }
+
+                &.background-primary {
+                    background-color: @brand-primary;
+                }
+            }
+        }
     }
 }
 
