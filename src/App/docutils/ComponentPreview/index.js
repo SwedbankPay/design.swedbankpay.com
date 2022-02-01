@@ -218,7 +218,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                 tabs.init("tabs-showcase-example");
             }
 
-            if (this.state.activeTab.id === "accordion-showcase") {
+            if (this.state.activeTab.component.props.id === "accordion-showcase") {
                 this.state.activeTab.component.props.accordionGroup
                     ? accordion.init("accordion-group-example")
                     : accordion.init();

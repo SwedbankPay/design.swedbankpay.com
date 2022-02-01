@@ -35,8 +35,7 @@ export const accordionShowCase = {
     id: "no-tabs",
     elements: [
         {
-            component: <AccordionComponentExample />,
-            id: "accordion-showcase",
+            component: <AccordionComponentExample id="accordion-showcase" />,
             options: {
                 checkbox: [
                     {
