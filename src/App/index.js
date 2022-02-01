@@ -64,7 +64,7 @@ class App extends Component {
 
     componentDidMount () {
         topbar.init();
-        hotjar.initialize(2696258, 6);
+        hotjar.initialize(2809148, 6);
     }
 
     render () {
