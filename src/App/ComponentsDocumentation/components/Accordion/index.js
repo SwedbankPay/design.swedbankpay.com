@@ -14,9 +14,9 @@ const howToUseItems = [
         title: "Accordion title",
         content: <>
             <b>Sub section title</b>
-            <p>If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.</p>
+            <span>If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.</span>
             <b>Sub section title</b>
-            <p>If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.</p></>
+            <span>If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.</span></>
     }
 ];
 
@@ -42,7 +42,7 @@ const Overview = () => (
         <p>
         Accordions can make information discovery more effective by using progressive disclosure, that is showing the title while hiding the detailed information. They can be used to shorten pages and reduce scrolling when content is not crucial to read in full.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={accordionShowCase}/>
+        <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={accordionShowCase} removeOuterTag/>
 
         <h3>How to use Accordions</h3>
         <div className="row">
