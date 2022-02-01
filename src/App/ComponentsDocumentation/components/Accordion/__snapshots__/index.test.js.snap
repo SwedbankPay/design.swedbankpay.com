@@ -104,12 +104,15 @@ exports[`Components: Accordion Overview renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
     showCasePanelAdvanced={
       Object {
         "elements": Array [
           Object {
-            "component": <AccordionComponentExample />,
+            "component": <AccordionComponentExample
+              id="accordion-showcase"
+            />,
             "description": <p>
               The accordion component can be either collapsed or expanded. Accordions are by default in the collapsed state with the body content hidden. If a group of accordions are wrapped in a 
               <CodeTags
@@ -174,15 +177,15 @@ exports[`Components: Accordion Overview renders 1`] = `
                     <b>
                       Sub section title
                     </b>
-                    <p>
+                    <span>
                       If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.
-                    </p>
+                    </span>
                     <b>
                       Sub section title
                     </b>
-                    <p>
+                    <span>
                       If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.
-                    </p>
+                    </span>
                   </React.Fragment>,
                   "id": "exp-5",
                   "title": "Accordion title",
