@@ -10,7 +10,7 @@ const Accordion = ({ items, className }) => (
                 {"\n"}
             </button>
             <div className="accordion-body" id={id}>
-                <p>{content}</p>
+                {content}
             </div>
         </div>
     ))
@@ -22,7 +22,7 @@ Accordion.propTypes = {
         PropTypes.exact({
             id: PropTypes.string.isRequired,
             title: PropTypes.string.isRequired,
-            content: PropTypes.string.isRequired
+            content: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
         })
     ).isRequired
 };
