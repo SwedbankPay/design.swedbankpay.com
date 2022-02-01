@@ -1,0 +1,61 @@
+.tag {
+    display: flex;
+    width: fit-content;
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+    padding-left: 0.375rem;
+    padding-right: 0.375rem;
+    font-size: 14px;
+    align-items: center;
+    border-radius: 0.125rem;
+    background-color: @brand-bg-2;
+
+    &.removable {
+        padding-right: 0;
+    }
+
+    &.secondary {
+        background-color: @brand-bg-1;
+    }
+
+    &.tertiary {
+        background-color: @brand-bg-gray;
+    }
+
+    .close-button {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        cursor: pointer;
+        width: 1.5rem;
+        height: 1.5rem;
+        padding: 0;
+        margin-left: 2px;
+
+        i {
+            font-size: 1rem;
+        }
+    }
+
+    .close-button:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .close-button:focus {
+        border: none;
+        border-radius: 0.125rem;
+        box-shadow: 0 0 0 2px @black;
+        outline: none;
+    }
+
+    &.code {
+        background-color: @brand-bg-2;
+        border: 1px solid @brand-accent;
+        white-space: nowrap;
+
+        &.secondary {
+            background-color: @brand-bg-1;
+            border: 1px solid @brand-tertiary;
+        }
+    }
+}
