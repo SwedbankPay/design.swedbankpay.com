@@ -15,7 +15,7 @@ const Tag = ({ code, type, text, removable }) => (
 
 Tag.propTypes = {
     text: PropTypes.string.isRequired,
-    type: PropTypes.oneOf(["secondary", "tertiary"]) || "primary",
+    type: PropTypes.oneOf(["primary", "secondary", "tertiary"]),
     removable: PropTypes.bool,
     code: PropTypes.bool
 };
