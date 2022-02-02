@@ -4,13 +4,14 @@ exports[`Utilities: JavascriptDocs CloseDocs renders 1`] = `
 <Fragment>
   <JavascriptDocElement
     code={
-      <CodeTags
-        code="dg.test.close(<test-id>)"
+      <Tag
+        code={true}
         params={
           Array [
             "<test-id>",
           ]
         }
+        text="dg.test.close(<test-id>)"
         type="secondary"
       />
     }
@@ -28,13 +29,14 @@ exports[`Utilities: JavascriptDocs OpenDocs renders 1`] = `
 <Fragment>
   <JavascriptDocElement
     code={
-      <CodeTags
-        code="dg.test.open(<test-id>)"
+      <Tag
+        code={true}
         params={
           Array [
             "<test-id>",
           ]
         }
+        text="dg.test.open(<test-id>)"
         type="secondary"
       />
     }
@@ -55,8 +57,9 @@ exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
   >
     <JavascriptDocElement
       code={
-        <CodeTags
-          code="dg.test.init()"
+        <Tag
+          code={true}
+          text="dg.test.init()"
           type="secondary"
         />
       }
@@ -86,8 +89,9 @@ exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
   >
     <JavascriptDocElement
       code={
-        <CodeTags
-          code="dg.test.init()"
+        <Tag
+          code={true}
+          text="dg.test.init()"
           type="secondary"
         />
       }
@@ -117,8 +121,9 @@ exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
   >
     <JavascriptDocElement
       code={
-        <CodeTags
-          code="dg.test.init()"
+        <Tag
+          code={true}
+          text="dg.test.init()"
           type="secondary"
         />
       }
@@ -151,8 +156,9 @@ exports[`Utilities: JavascriptDocs renders only init method 1`] = `
   >
     <JavascriptDocElement
       code={
-        <CodeTags
-          code="dg.test.init()"
+        <Tag
+          code={true}
+          text="dg.test.init()"
           type="secondary"
         />
       }

@@ -8,8 +8,9 @@ exports[`Utilities: Borders Overview renders 1`] = `
     Overview
   </h2>
   <p>
-    <CodeTags
-      code=".border"
+    <Tag
+      code={true}
+      text=".border"
       type="secondary"
     />
      sets a border around the entire element whilst the rest sets a border on the named side.

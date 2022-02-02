@@ -1,7 +1,7 @@
 import React from "react";
 
 import { ComponentPreview } from "@docutils";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 const basename = process.env.basename;
 const scriptUrl = `${window.location.origin + basename}scripts/dg.js`;
@@ -17,7 +17,8 @@ const QuickStart = () => (
 const JavaScript = () => (
     <>
         <h2 id="javascript">JavaScript</h2>
-        <p>To add charts to your project you need to include a dashboard script to make it run properly. Add the dashboard script below the <CodeTags type="secondary" code="scripts" /> and at the bottom of your <CodeTags type="primary" code={"<body>"} /> tag like this: </p>
+        <p>The dashboard theme requires a separate script to run properly. So add the dashboard script below the <Tag code type="secondary" text="scripts" /> at the bottom
+        of your <Tag code type="primary" text={"<body>"} /> tag like this:</p>
         <ComponentPreview language="html" codeFigure>
             <script src={scriptUrl}></script>
             <script src={dashboardScriptUrl}></script>
@@ -35,9 +36,9 @@ const Introduction = () => (
         <p>Most options and settings available in the chart.js documentation will be available.</p>
         <p>For now, the following chart types are available:</p>
         <ul>
-            <li><CodeTags type="secondary" code={"\"line\""} /></li>
-            <li><CodeTags type="secondary" code={"\"bar\"/\"horizontalBar\""} /></li>
-            <li><CodeTags type="secondary" code={"\"pie\"/\"doughnut\""} /></li>
+            <li><Tag code type="secondary" text={"\"line\""} /></li>
+            <li><Tag code type="secondary" text={"\"bar\"/\"horizontalBar\""} /></li>
+            <li><Tag code type="secondary" text={"\"pie\"/\"doughnut\""} /></li>
         </ul>
         <QuickStart />
         <JavaScript />

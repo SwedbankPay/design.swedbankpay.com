@@ -7,7 +7,7 @@ import InputComponent from "@components/InputGroup";
 import CheckboxComponent from "@components/FormComponents/Checkbox";
 import { Link } from "react-router-dom";
 import { overviewLinks, overviewActionLinks, guidelinesContent } from "./constants";
-import CodeTags from "~/src/App/components/CodeTags";
+import Tag from "~/src/App/components/Tag";
 
 const Overview = ({ scrollToRef }) => (
     <section>
@@ -59,7 +59,7 @@ const Overview = ({ scrollToRef }) => (
                 </div>
             </div>
         </div>
-        <p className="mt-3">If the background is too dark for the regular link color add <CodeTags type="secondary" code=".bright"/>.</p>
+        <p className="mt-3">If the background is too dark for the regular link color add <Tag code type="secondary" text=".bright"/>.</p>
     </section>
 );
 

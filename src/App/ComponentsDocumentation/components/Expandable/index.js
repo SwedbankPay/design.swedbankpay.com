@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import ExpandableComponent from "@components/Expandable";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 import { expandable } from "@src/scripts/main";
 import NpmInformation from "@docutils/NpmInformation";
@@ -32,8 +32,8 @@ const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
         <p>
-            The expandable component shows only what is contained in the <CodeTags type="secondary" code=".expandable-header" /> when it is
-            closed. <CodeTags type="secondary" code=".expandable-body" /> will be visible in its open state.
+            The expandable component shows only what is contained in the <Tag code type="secondary" text=".expandable-header" /> when it is
+            closed. <Tag code type="secondary" text=".expandable-body" /> will be visible in its open state.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ExpandableComponent items={items} />
@@ -45,7 +45,7 @@ const ExpandableGroup = () => (
     <>
         <h2 id="expandable-group">Expandable Group</h2>
         <p>
-            If you use a wrapper with <CodeTags type="secondary" code=".expandable-group"/> then only one expandable can be open at the
+            If you use a wrapper with <Tag code type="secondary" text=".expandable-group"/> then only one expandable can be open at the
             same time.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
@@ -69,7 +69,7 @@ const Expandable = () => {
     return (
         <DocContainer docToc>
             <p className="lead">
-                Expandables toggle between hiding and showing content on click.
+                Expendables toggle between hiding and showing content on click.
             </p>
             <Overview />
             <ExpandableGroup />

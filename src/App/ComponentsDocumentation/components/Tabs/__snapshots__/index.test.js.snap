@@ -64,8 +64,9 @@ exports[`Components: Tabs DeveloperDocumentation renders 1`] = `
     className="my-3"
   >
     Use 
-    <CodeTags
-      code="dg.tabs.init()"
+    <Tag
+      code={true}
+      text="dg.tabs.init()"
       type="secondary"
     />
      to 
@@ -78,8 +79,9 @@ exports[`Components: Tabs DeveloperDocumentation renders 1`] = `
   </p>
   <p>
     Or 
-    <CodeTags
-      code="dg.tabs.init(\\"component-id\\")"
+    <Tag
+      code={true}
+      text="dg.tabs.init(\\"component-id\\")"
       type="secondary"
     />
      to initialize one specific component.
@@ -89,28 +91,33 @@ exports[`Components: Tabs DeveloperDocumentation renders 1`] = `
   </h4>
   <p>
     Moves the scroll position of the tabs to the user specified position. The value to be passed to 
-    <CodeTags
-      code="scrollState"
+    <Tag
+      code={true}
+      text="scrollState"
       type="secondary"
     />
      is the object 
-    <CodeTags
-      code="{ scrollStart, scrollTotalAmount }"
+    <Tag
+      code={true}
+      text="{ scrollStart, scrollTotalAmount }"
       type="secondary"
     />
     . 
-    <CodeTags
-      code="scrollStart"
+    <Tag
+      code={true}
+      text="scrollStart"
       type="secondary"
     />
      is the current scroll position, 
-    <CodeTags
-      code="scrollTotalAmount"
+    <Tag
+      code={true}
+      text="scrollTotalAmount"
       type="secondary"
     />
      is the amount to be scrolled from the current scroll position (negative values for left scroll, positive values for right scroll). Note: 
-    <CodeTags
-      code="<ul>"
+    <Tag
+      code={true}
+      text="<ul>"
       type="primary"
     />
      is the scrollable element.
@@ -141,8 +148,9 @@ exports[`Components: Tabs Overview renders 1`] = `
             />,
             "description": <React.Fragment>
               Tabs appear in a single row, above their content. Only one tab can be selected at a time and the selected tab decides which content that is shown in the container beneath. The width of each tab is dependent on its label and the width of the row of tabs is dependent on the container. If the container can’t display all the tabs at once the tabs can be set to scrollable by adding the class 
-              <CodeTags
-                code=".tabs-scroll"
+              <Tag
+                code={true}
+                text=".tabs-scroll"
                 type="secondary"
               />
               , but it is not optimized for desktop usage at the moment.

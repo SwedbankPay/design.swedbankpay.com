@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 import { tooltips } from "@src/scripts/main";
 import NpmInformation from "@docutils/NpmInformation";
@@ -9,8 +9,8 @@ import NpmInformation from "@docutils/NpmInformation";
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>Add the attribute <CodeTags type="secondary" code="tooltip" /> to the desired element and add your content in its value to create a tooltip.</p>
-        <p>You can use the attribute <CodeTags type="secondary" code="tooltip-position" /> to position the tooltip relative to the containing element, use the values <CodeTags type="secondary" code="top" />, <CodeTags type="secondary" code="right" />, <CodeTags type="secondary" code="bottom" /> or <CodeTags type="secondary" code="left" />. If the attribute is not provided, it will default to top.</p>
+        <p>Add the attribute <Tag code type="secondary" text="tooltip" /> to the desired element and add your content in its value to create a tooltip.</p>
+        <p>You can use the attribute <Tag code type="secondary" text="tooltip-position" /> to position the tooltip relative to the containing element, use the values <Tag code type="secondary" text="top" />, <Tag code type="secondary" text="right" />, <Tag code type="secondary" text="bottom" /> or <Tag code type="secondary" text="left" />. If the attribute is not provided, it will default to top.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <button
@@ -73,9 +73,9 @@ const ExtendedUsage = () => (
         <h2 id="extended-usage">Extended usage</h2>
         <p>
             The extended usage tooltip is meant to give more control over the tooltip, such as automatic repositioning of the tooltip if its content falls
-            out from the viewport (using <CodeTags type="secondary" code="dg.tooltips.init()" />). Recommended to be used on mobile focused
-            applications. <b>NOTE:</b> Only <CodeTags type="secondary" code="data-tooltip-position" /> with
-            the values <CodeTags type="secondary" code="top" /> and <CodeTags type="secondary" code="bottom" /> are supported.
+            out from the viewport (using <Tag code type="secondary" text="dg.tooltips.init()" />). Recommended to be used on mobile focused
+            applications. <b>NOTE:</b> Only <Tag code type="secondary" text="data-tooltip-position" /> with
+            the values <Tag code type="secondary" text="top" /> and <Tag code type="secondary" text="bottom" /> are supported.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="d-flex align-items-center">

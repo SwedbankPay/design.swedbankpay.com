@@ -1,12 +1,12 @@
 import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 const Intro = () => (
     <>
-        <p>Set the <CodeTags type="secondary" code="visibility" /> of elements with our visibility utilities. These do not modify the <CodeTags type="secondary" code="display" /> value at all and are helpful for hiding content from most users, but still keeping them for screen readers.</p>
-        <p>Apply <CodeTags type="secondary" code=".visible" /> or <CodeTags type="secondary" code=".invisible" /> as needed.</p>
+        <p>Set the <Tag code type="secondary" text="visibility" /> of elements with our visibility utilities. These do not modify the <Tag code type="secondary" text="display" /> value at all and are helpful for hiding content from most users, but still keeping them for screen readers.</p>
+        <p>Apply <Tag code type="secondary" text=".visible" /> or <Tag code type="secondary" text=".invisible" /> as needed.</p>
         <ComponentPreview language="html" codeFigure>
             <div className="visible">...</div>
             <div className="invisible">...</div>

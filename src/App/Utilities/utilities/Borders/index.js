@@ -1,12 +1,12 @@
 import React from "react";
 import { ComponentPreview, DocContainer } from "@docutils";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
         <p>
-            <CodeTags type="secondary" code=".border" /> sets a border around the entire element whilst the rest sets a border on the named side.
+            <Tag code type="secondary" text=".border" /> sets a border around the entire element whilst the rest sets a border on the named side.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="demo-square border" />

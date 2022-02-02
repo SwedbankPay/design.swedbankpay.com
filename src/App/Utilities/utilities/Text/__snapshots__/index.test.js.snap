@@ -148,8 +148,9 @@ exports[`Utilities: Text TextTransform renders 1`] = `
   </ComponentPreview>
   <p>
     Note how 
-    <CodeTags
-      code=".text-capitalize"
+    <Tag
+      codes={true}
+      text=".text-capitalize"
       type="secondary"
     />
      only changes the first letter of each word, leaving the case of any other letters unaffected.
@@ -166,8 +167,9 @@ exports[`Utilities: Text TextWrappingAndOverflow renders 1`] = `
   </h2>
   <p>
     Prevent text from wrapping with a 
-    <CodeTags
-      code=".text-nowrap"
+    <Tag
+      codes={true}
+      text=".text-nowrap"
       type="secondary"
     />
      class.
@@ -194,8 +196,9 @@ exports[`Utilities: Text TextWrappingAndOverflow renders 1`] = `
   </ComponentPreview>
   <p>
     For longer content, you can add a 
-    <CodeTags
-      code=".text-truncate"
+    <Tag
+      codes={true}
+      text=".text-truncate"
       type="secondary"
     />
      class to truncate the text with an ellipsis. 
@@ -203,8 +206,9 @@ exports[`Utilities: Text TextWrappingAndOverflow renders 1`] = `
       Requires
     </b>
      display: 
-    <CodeTags
-      code="inline-block"
+    <Tag
+      codes={true}
+      text="inline-block"
       type="secondary"
     />
      
@@ -212,8 +216,9 @@ exports[`Utilities: Text TextWrappingAndOverflow renders 1`] = `
       or
     </b>
      
-    <CodeTags
-      code="display: block"
+    <Tag
+      codes={true}
+      text="display: block"
       type="secondary"
     />
     .

@@ -9,16 +9,18 @@ exports[`Core: Typography Abbreviations renders 1`] = `
   </h2>
   <p>
     Stylized implementation of HTML’s 
-    <CodeTags
-      code="<abbr>"
+    <Tag
+      code={true}
+      text="<abbr>"
       type="primary"
     />
      element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.
   </p>
   <p>
     Add 
-    <CodeTags
-      code=".initialism"
+    <Tag
+      code={true}
+      text=".initialism"
       type="secondary"
     />
      to an abbreviation for a slightly smaller font-size.
@@ -95,13 +97,15 @@ exports[`Core: Typography Blockquotes renders 1`] = `
   </h2>
   <p>
     For quoting blocks of content from another source within your document. Wrap 
-    <CodeTags
-      code="<blockquote>"
+    <Tag
+      code={true}
+      text="<blockquote>"
       type="primary"
     />
      or 
-    <CodeTags
-      code=".blockquote"
+    <Tag
+      code={true}
+      text=".blockquote"
       type="secondary"
     />
      around any HTML as the quote.
@@ -129,13 +133,15 @@ exports[`Core: Typography Blockquotes renders 2`] = `
   </h3>
   <p>
     Add a 
-    <CodeTags
-      code="<footer>"
+    <Tag
+      code={true}
+      text="<footer>"
       type="primary"
     />
      for identifying the source. Wrap the name of the source work in 
-    <CodeTags
-      code="<cite>"
+    <Tag
+      code={true}
+      text="<cite>"
       type="primary"
     />
     .
@@ -209,13 +215,15 @@ exports[`Core: Typography Code renders 1`] = `
   </ComponentPreview>
   <p>
     The classes 
-    <CodeTags
-      code=".h1"
+    <Tag
+      code={true}
+      text=".h1"
       type="secondary"
     />
      through 
-    <CodeTags
-      code=".h6"
+    <Tag
+      code={true}
+      text=".h6"
       type="secondary"
     />
      are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
@@ -261,8 +269,9 @@ exports[`Core: Typography Code renders 1`] = `
   </h3>
   <p>
     The class 
-    <CodeTags
-      code=".hero"
+    <Tag
+      code={true}
+      text=".hero"
       type="secondary"
     />
      can be used to achieve the big and bold hero title styling.
@@ -288,8 +297,9 @@ exports[`Core: Typography Code renders 1`] = `
   </h3>
   <p>
     Make a paragraph stand out by using 
-    <CodeTags
-      code=".lead"
+    <Tag
+      code={true}
+      text=".lead"
       type="secondary"
     />
     .
@@ -371,46 +381,54 @@ exports[`Core: Typography Code renders 1`] = `
   </ComponentPreview>
   <p>
     The 
-    <CodeTags
-      code=".mark"
+    <Tag
+      code={true}
+      text=".mark"
       type="secondary"
     />
      and 
-    <CodeTags
-      code=".small"
+    <Tag
+      code={true}
+      text=".small"
       type="secondary"
     />
      classes are also available to apply the same styles as 
-    <CodeTags
-      code="<mark>"
+    <Tag
+      code={true}
+      text="<mark>"
       type="primary"
     />
      and 
-    <CodeTags
-      code="<small>"
+    <Tag
+      code={true}
+      text="<small>"
       type="primary"
     />
      while avoiding any unwanted semantic implications that the tags would bring.
   </p>
   <p>
     While not shown above, feel free to use 
-    <CodeTags
-      code="<b>"
+    <Tag
+      code={true}
+      text="<b>"
       type="primary"
     />
      and 
-    <CodeTags
-      code="<i>"
+    <Tag
+      code={true}
+      text="<i>"
       type="primary"
     />
      in HTML5. 
-    <CodeTags
-      code="<b>"
+    <Tag
+      code={true}
+      text="<b>"
       type="primary"
     />
      is meant to highlight words or phrases without conveying additional importance while 
-    <CodeTags
-      code="<i>"
+    <Tag
+      code={true}
+      text="<i>"
       type="primary"
     />
      is mostly for voice, technical terms, etc.
@@ -432,16 +450,18 @@ exports[`Core: Typography Code renders 1`] = `
   </h3>
   <p>
     Stylized implementation of HTML’s 
-    <CodeTags
-      code="<abbr>"
+    <Tag
+      code={true}
+      text="<abbr>"
       type="primary"
     />
      element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.
   </p>
   <p>
     Add 
-    <CodeTags
-      code=".initialism"
+    <Tag
+      code={true}
+      text=".initialism"
       type="secondary"
     />
      to an abbreviation for a slightly smaller font-size.
@@ -482,13 +502,15 @@ exports[`Core: Typography Code renders 1`] = `
   </h3>
   <p>
     For quoting blocks of content from another source within your document. Wrap 
-    <CodeTags
-      code="<blockquote>"
+    <Tag
+      code={true}
+      text="<blockquote>"
       type="primary"
     />
      or 
-    <CodeTags
-      code=".blockquote"
+    <Tag
+      code={true}
+      text=".blockquote"
       type="secondary"
     />
      around any HTML as the quote.
@@ -511,13 +533,15 @@ exports[`Core: Typography Code renders 1`] = `
   </h4>
   <p>
     Add a 
-    <CodeTags
-      code="<footer>"
+    <Tag
+      code={true}
+      text="<footer>"
       type="primary"
     />
      for identifying the source. Wrap the name of the source work in 
-    <CodeTags
-      code="<cite>"
+    <Tag
+      code={true}
+      text="<cite>"
       type="primary"
     />
     .
@@ -775,13 +799,15 @@ exports[`Core: Typography Headings renders 1`] = `
   </ComponentPreview>
   <p>
     The classes 
-    <CodeTags
-      code=".h1"
+    <Tag
+      code={true}
+      text=".h1"
       type="secondary"
     />
      through 
-    <CodeTags
-      code=".h6"
+    <Tag
+      code={true}
+      text=".h6"
       type="secondary"
     />
      are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.
@@ -834,8 +860,9 @@ exports[`Core: Typography HeroTitle renders 1`] = `
   </h2>
   <p>
     The class 
-    <CodeTags
-      code=".hero"
+    <Tag
+      code={true}
+      text=".hero"
       type="secondary"
     />
      can be used to achieve the big and bold hero title styling.
@@ -929,46 +956,54 @@ exports[`Core: Typography Inline renders 1`] = `
   </ComponentPreview>
   <p>
     The 
-    <CodeTags
-      code=".mark"
+    <Tag
+      code={true}
+      text=".mark"
       type="secondary"
     />
      and 
-    <CodeTags
-      code=".small"
+    <Tag
+      code={true}
+      text=".small"
       type="secondary"
     />
      classes are also available to apply the same styles as 
-    <CodeTags
-      code="<mark>"
+    <Tag
+      code={true}
+      text="<mark>"
       type="primary"
     />
      and 
-    <CodeTags
-      code="<small>"
+    <Tag
+      code={true}
+      text="<small>"
       type="primary"
     />
      while avoiding any unwanted semantic implications that the tags would bring.
   </p>
   <p>
     While not shown above, feel free to use 
-    <CodeTags
-      code="<b>"
+    <Tag
+      code={true}
+      text="<b>"
       type="primary"
     />
      and 
-    <CodeTags
-      code="<i>"
+    <Tag
+      code={true}
+      text="<i>"
       type="primary"
     />
      in HTML5. 
-    <CodeTags
-      code="<b>"
+    <Tag
+      code={true}
+      text="<b>"
       type="primary"
     />
      is meant to highlight words or phrases without conveying additional importance while 
-    <CodeTags
-      code="<i>"
+    <Tag
+      code={true}
+      text="<i>"
       type="primary"
     />
      is mostly for voice, technical terms, etc.
@@ -985,8 +1020,9 @@ exports[`Core: Typography Lead renders 1`] = `
   </h2>
   <p>
     Make a paragraph stand out by using 
-    <CodeTags
-      code=".lead"
+    <Tag
+      code={true}
+      text=".lead"
       type="secondary"
     />
     .

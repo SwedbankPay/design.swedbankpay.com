@@ -9,28 +9,33 @@ exports[`Documentation: Breadcrumb Basic BreadCrumb renders 1`] = `
   </h2>
   <p>
     Add class 
-    <CodeTags
-      code=".breadcrumb"
+    <Tag
+      code={true}
+      text=".breadcrumb"
       type="secondary"
     />
      to a containing 
-    <CodeTags
-      code="<ol>"
+    <Tag
+      code={true}
+      text="<ol>"
       type="primary"
     />
      element and nest a 
-    <CodeTags
-      code="<a>"
+    <Tag
+      code={true}
+      text="<a>"
       type="primary"
     />
      or 
-    <CodeTags
-      code="<span>"
+    <Tag
+      code={true}
+      text="<span>"
       type="primary"
     />
      element inside the 
-    <CodeTags
-      code="<li>"
+    <Tag
+      code={true}
+      text="<li>"
       type="primary"
     />
      elements.
@@ -74,13 +79,15 @@ exports[`Documentation: Breadcrumb Disabled BreadCrumb renders 1`] = `
   </h2>
   <p>
     To disable a breadcrumb element, simply use a 
-    <CodeTags
-      code="<span>"
+    <Tag
+      code={true}
+      text="<span>"
       type="primary"
     />
      element within the 
-    <CodeTags
-      code="<li>"
+    <Tag
+      code={true}
+      text="<li>"
       type="primary"
     />
      element (will not work for last-child).

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import Alert from "@components/Alert";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 import { alertsShowCase } from "./constants";
 import { alert } from "@src/scripts/main";
 import NpmInformation from "@docutils/NpmInformation";
@@ -90,8 +90,8 @@ const DeveloperDocumentation = () => (
     <section>
         <h2 id="developer-documentation">Developer documentation</h2>
         <span className="h3">Javascript methods</span>
-        <p className="mt-2">Use <CodeTags type="secondary" code="dg.alert.init()"/> to initialize all alerts.</p>
-        <p>Use <CodeTags type="secondary" code='dg.alert.init("component-id")'/> to initialize one specific component.</p>
+        <p className="mt-2">Use <Tag code type="secondary" text="dg.alert.init()"/> to initialize all alerts.</p>
+        <p>Use <Tag code type="secondary" text='dg.alert.init("component-id")'/> to initialize one specific component.</p>
     </section>
 );
 

@@ -17,36 +17,42 @@ exports[`Core: Logotype Favicon renders 1`] = `
   </div>
   <p>
     To add a favicon to your application, download the favicon assets and extract it to the root of your build-folder. Insert the code below in the 
-    <CodeTags
-      code="<head>"
+    <Tag
+      code={true}
+      text="<head>"
       type="primary"
     />
      tag of your HTML documents and you are ready to go.
   </p>
   <p>
     You should also rename the 
-    <CodeTags
-      code="content"
+    <Tag
+      code={true}
+      text="content"
       type="secondary"
     />
      of the 
-    <CodeTags
-      code="apple-mobile-web-app-title"
+    <Tag
+      code={true}
+      text="apple-mobile-web-app-title"
       type="secondary"
     />
      and 
-    <CodeTags
-      code="application-name"
+    <Tag
+      code={true}
+      text="application-name"
       type="secondary"
     />
      
-    <CodeTags
-      code="<meta>"
+    <Tag
+      code={true}
+      text="<meta>"
       type="primary"
     />
      tags to reflect the title of your project. Make sure to also do this in the 
-    <CodeTags
-      code="manifest.json"
+    <Tag
+      code={true}
+      text="manifest.json"
       type="secondary"
     />
      file in the icons folder.
@@ -1013,13 +1019,15 @@ exports[`Core: Logotype Overview renders 1`] = `
   </a>
   <p>
     The logotype is vectorized and all versions are provided as 
-    <CodeTags
-      code=".svg"
+    <Tag
+      code={true}
+      text=".svg"
       type="secondary"
     />
      files, it is also available in 
-    <CodeTags
-      code=".png"
+    <Tag
+      code={true}
+      text=".png"
       type="secondary"
     />
      for contexts that might not support vectorized files. The sizes described are recommended sizes and if there is a need to scale the logotype, make sure the coin diameter is no smaller than at least 24 px and a multiple of 8.

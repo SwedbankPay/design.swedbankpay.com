@@ -87,8 +87,9 @@ exports[`Component: Rangeslider DeveloperDocumentation renders 1`] = `
     className="my-3"
   >
     Use 
-    <CodeTags
-      code="dg.rangeslider.init()"
+    <Tag
+      code={true}
+      text="dg.rangeslider.init()"
       type="secondary"
     />
      to 
@@ -101,8 +102,9 @@ exports[`Component: Rangeslider DeveloperDocumentation renders 1`] = `
   </p>
   <p>
     Or 
-    <CodeTags
-      code="dg.rangeslider.init(\\"component-id\\")"
+    <Tag
+      code={true}
+      text="dg.rangeslider.init(\\"component-id\\")"
       type="secondary"
     />
      to initialize one specific component.

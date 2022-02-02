@@ -12,8 +12,9 @@ exports[`Utilities: NpmInformation renders with componentName-prop 1`] = `
       Usage with NPM
     </Link>
      will require you to import it from 
-    <CodeTags
-      code="@swedbankpay/design-guide"
+    <Tag
+      code={true}
+      text="@swedbankpay/design-guide"
       type="primary"
     />
     .
@@ -45,8 +46,9 @@ exports[`Utilities: NpmInformation renders with noInit- and componentName-prop 1
       Usage with NPM
     </Link>
      will require you to import it from 
-    <CodeTags
-      code="@swedbankpay/design-guide"
+    <Tag
+      code={true}
+      text="@swedbankpay/design-guide"
       type="primary"
     />
     .
@@ -77,8 +79,9 @@ exports[`Utilities: NpmInformation renders with noInit-prop 1`] = `
       Usage with NPM
     </Link>
      will require you to import it from 
-    <CodeTags
-      code="@swedbankpay/design-guide"
+    <Tag
+      code={true}
+      text="@swedbankpay/design-guide"
       type="primary"
     />
     .

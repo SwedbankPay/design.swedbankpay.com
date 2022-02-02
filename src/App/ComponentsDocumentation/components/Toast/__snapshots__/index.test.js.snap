@@ -62,8 +62,9 @@ exports[`Components: Toast Developer documentation renders 1`] = `
   </h2>
   <p>
     To use the Toast, call 
-    <CodeTags
-      code="dg.toast()"
+    <Tag
+      code={true}
+      text="dg.toast()"
       type="secondary"
     />
      with the desired options.
@@ -131,8 +132,9 @@ exports[`Components: Toast Developer documentation renders 1`] = `
           <td
             key="[object Object]2"
           >
-            <CodeTags
-              code="\\"\\""
+            <Tag
+              code={true}
+              text="\\"\\""
               type="secondary"
             />
           </td>
@@ -158,8 +160,9 @@ exports[`Components: Toast Developer documentation renders 1`] = `
           <td
             key="[object Object]2"
           >
-            <CodeTags
-              code="\\"\\""
+            <Tag
+              code={true}
+              text="\\"\\""
               type="secondary"
             />
           </td>
@@ -167,23 +170,27 @@ exports[`Components: Toast Developer documentation renders 1`] = `
             key="[object Object]3"
           >
             Alert types: 
-            <CodeTags
-              code="success"
+            <Tag
+              code={true}
+              text="success"
               type="secondary"
             />
             , 
-            <CodeTags
-              code="neutral"
+            <Tag
+              code={true}
+              text="neutral"
               type="secondary"
             />
             , 
-            <CodeTags
-              code="warning"
+            <Tag
+              code={true}
+              text="warning"
               type="secondary"
             />
             , 
-            <CodeTags
-              code="danger"
+            <Tag
+              code={true}
+              text="danger"
               type="secondary"
             />
           </td>
@@ -204,8 +211,9 @@ exports[`Components: Toast Developer documentation renders 1`] = `
           <td
             key="[object Object]2"
           >
-            <CodeTags
-              code="[]"
+            <Tag
+              code={true}
+              text="[]"
               type="secondary"
             />
           </td>
@@ -231,8 +239,9 @@ exports[`Components: Toast Developer documentation renders 1`] = `
           <td
             key="[object Object]2"
           >
-            <CodeTags
-              code="null"
+            <Tag
+              code={true}
+              text="null"
               type="secondary"
             />
           </td>
@@ -256,8 +265,9 @@ exports[`Components: Toast Developer documentation renders 1`] = `
         Usage with NPM
       </Link>
        will require you to import it from 
-      <CodeTags
-        code="@swedbankpay/design-guide"
+      <Tag
+        code={true}
+        text="@swedbankpay/design-guide"
         type="primary"
       />
        before calling it on an element.

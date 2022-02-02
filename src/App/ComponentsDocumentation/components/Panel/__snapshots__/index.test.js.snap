@@ -41,13 +41,15 @@ exports[`Documentation: Panel PanelHeaders renders 1`] = `
   </h2>
   <p>
     You can pick between two different panel headers, brand color with white text and white with green text. add 
-    <CodeTags
-      code=".panel-default"
+    <Tag
+      code={true}
+      text=".panel-default"
       type="secondary"
     />
      or 
-    <CodeTags
-      code=".panel-brand"
+    <Tag
+      code={true}
+      text=".panel-brand"
       type="secondary"
     />
      to the header to use one of them.
@@ -80,18 +82,21 @@ exports[`Documentation: Panel PanelTable renders 1`] = `
   </h2>
   <p>
     To display a full width table in a panel use 
-    <CodeTags
-      code=".panel-table"
+    <Tag
+      code={true}
+      text=".panel-table"
       type="secondary"
     />
      on a div wrapping the table. Put 
-    <CodeTags
-      code=".panel-table"
+    <Tag
+      code={true}
+      text=".panel-table"
       type="secondary"
     />
      as a direct child of 
-    <CodeTags
-      code=".panel"
+    <Tag
+      code={true}
+      text=".panel"
       type="secondary"
     />
     . Tables put in a panel are given a border bottom to separate it from the following elements.

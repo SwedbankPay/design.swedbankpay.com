@@ -9,8 +9,9 @@ exports[`Documentation: Lists BasicList renders 1`] = `
   </h2>
   <p>
     Add 
-    <CodeTags
-      code=".list"
+    <Tag
+      code={true}
+      text=".list"
       type="secondary"
     />
      to a list to display the basic list. Our lists do not use bullet points.
@@ -87,8 +88,9 @@ exports[`Documentation: Lists BulletList renders 1`] = `
   </h2>
   <p>
     Add 
-    <CodeTags
-      code=".list-bullet"
+    <Tag
+      code={true}
+      text=".list-bullet"
       type="secondary"
     />
      on a list to make it a bullet list.
@@ -124,8 +126,9 @@ exports[`Documentation: Lists DescriptionList renders 1`] = `
   </h2>
   <p>
     The description list lets you provide each item with a more specific description of each item. Add 
-    <CodeTags
-      code=".description-list"
+    <Tag
+      code={true}
+      text=".description-list"
       type="secondary"
     />
      to your dl.
@@ -178,13 +181,15 @@ exports[`Documentation: Lists HoverItemList renders 1`] = `
   </h2>
   <p>
     Include 
-    <CodeTags
-      code=".item-list-hover"
+    <Tag
+      code={true}
+      text=".item-list-hover"
       type="secondary"
     />
      to give your items a hover effect. You can use this on any variation of 
-    <CodeTags
-      code=".item-list"
+    <Tag
+      code={true}
+      text=".item-list"
       type="secondary"
     />
     .
@@ -259,8 +264,9 @@ exports[`Documentation: Lists InlineList renders 1`] = `
   </h2>
   <p>
     Use 
-    <CodeTags
-      code=".list-inline"
+    <Tag
+      code={true}
+      text=".list-inline"
       type="secondary"
     />
      on a list to make all items appear on the same line.
@@ -295,8 +301,9 @@ exports[`Documentation: Lists ItemList renders 1`] = `
     Item list 
   </h2>
   <p>
-    <CodeTags
-      code=".item-list"
+    <Tag
+      code={true}
+      text=".item-list"
       type="secondary"
     />
     s is a good way to offer more extensive information about each item. Each item has their own box which seperates the items more clearly than our other options.
@@ -569,8 +576,9 @@ exports[`Documentation: Lists SettingsList renders 1`] = `
   </h2>
   <p>
     Use 
-    <CodeTags
-      code=".settings-list"
+    <Tag
+      code={true}
+      text=".settings-list"
       type="secondary"
     />
      to visualize different settings in your web application.
@@ -636,8 +644,9 @@ exports[`Documentation: Lists StripedItemList prevents default on anchors 1`] = 
   </h2>
   <p>
     If you want more seperation between each item you can use 
-    <CodeTags
-      code=".item-list-striped"
+    <Tag
+      code={true}
+      text=".item-list-striped"
       type="secondary"
     />
     .
@@ -765,8 +774,9 @@ exports[`Documentation: Lists StripedItemList renders 1`] = `
   </h2>
   <p>
     If you want more seperation between each item you can use 
-    <CodeTags
-      code=".item-list-striped"
+    <Tag
+      code={true}
+      text=".item-list-striped"
       type="secondary"
     />
     .

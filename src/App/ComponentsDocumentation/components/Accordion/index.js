@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import AccordionComponent from "@components/Accordion";
+import Tag from "@components/Tag";
 
 import { accordion } from "@src/scripts/main";
 import NpmInformation from "@docutils/NpmInformation";
@@ -44,7 +45,8 @@ const Overview = () => (
     <section>
         <h2 id="overview">Overview</h2>
         <p>
-        Accordions can make information discovery more effective by using progressive disclosure, that is showing the title while hiding the detailed information. They can be used to shorten pages and reduce scrolling when content is not crucial to read in full.
+            The accordion component hides its content <Tag code type="secondary" text=".accordion-body" />, showing only its
+            title <Tag code type="secondary" text=".accordion-header" />, until it is opened.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={accordionShowCase} removeOuterTag/>
 

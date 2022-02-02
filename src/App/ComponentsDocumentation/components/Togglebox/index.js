@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer } from "@docutils";
 import Togglebox from "@components/FormComponents/Togglebox";
-import CodeTags from "~/src/App/components/CodeTags";
+import Tag from "~/src/App/components/Tag";
 import { toggleboxShowCase, howToUse } from "./constants";
 
 const Overview = () => (
@@ -67,7 +67,7 @@ const DeveloperDocumentation = () => (
     <>
         <h2 id="developer-documentation">Developer documentation</h2>
         <span className="h3 d-inline-block mt-3">Checked</span>
-        <p>Use the <CodeTags type="primary" code="checked" /> attribute to enable a toggle.</p>
+        <p>Use the <Tag type="primary" text="checked" /> attribute to enable a toggle.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="checked-example-container m-auto">
                 <Togglebox label="Label" id="toggle-checked-example" checked labelTop/>
@@ -75,7 +75,7 @@ const DeveloperDocumentation = () => (
         </ComponentPreview>
 
         <span className="h3 d-inline-block mt-3">Disabled</span>
-        <p>Disable a toggle by adding <CodeTags type="primary" code="disabled" /> attribute to the desired toggle.</p>
+        <p>Disable a toggle by adding <Tag codetype="primary" text="disabled" /> attribute to the desired toggle.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="w-25 p-3 m-auto">
                 <Togglebox label="Label" id="toggle-disabled-example" checked disabled />

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer } from "@docutils";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 const basename = process.env.basename;
 
@@ -140,54 +140,54 @@ const HowItWorks = () => (
                 </div>
             </div>
         </ComponentPreview>
-        <p>The above example creates three equal-width columns on small, medium, large, extra large, and extra extra large devices using our predefined grid classes. Those columns are centered in the page with the parent <CodeTags type="secondary" code=".container" />.</p>
+        <p>The above example creates three equal-width columns on small, medium, large, extra large, and extra extra large devices using our predefined grid classes. Those columns are centered in the page with the parent <Tag code type="secondary" text=".container" />.</p>
         <p>Breaking it down, here’s how it works:</p>
         <ul>
             <li>
-                {/* Use <CodeTags type="secondary" code=".container" /> for a responsive pixel width or <CodeTags type="secondary" code=".container-fluid" /> for <CodeTags type="secondary" code="width: 100%" /> across all viewport and device sizes. */}
+                {/* Use <Tag code type="secondary" text=".container" /> for a responsive pixel width or <Tag code type="secondary" text=".container-fluid" /> for <Tag code type="secondary" text="width: 100%" /> across all viewport and device sizes. */}
                 Containers provide a means to center and horizontally pad your site’s contents. We have 4 different container sizes available:
                 <ul>
                     <li>
-                        <CodeTags type="secondary" code=".container-sm" />
+                        <Tag code type="secondary" text=".container-sm" />
                         <p>Max-width: 992px.</p>
                     </li>
                     <li>
-                        <CodeTags type="secondary" code=".container" />
+                        <Tag code type="secondary" text=".container" />
                         <p>Max-width: 1200px.</p>
                     </li>
                     <li>
-                        <CodeTags type="secondary" code=".container-lg" />
+                        <Tag code type="secondary" text=".container-lg" />
                         <p>Max-width: 1600px.</p>
                     </li>
                     <li>
-                        <CodeTags type="secondary" code=".container-fluid" />
+                        <Tag code type="secondary" text=".container-fluid" />
                         <p>Max-width: none, takes up the entire page.</p>
                     </li>
                 </ul>
             </li>
             <li>
-                Rows are wrappers for columns. Each column has horizontal <CodeTags type="secondary" code="padding" /> (called a gutter) for controlling the space between them. This <CodeTags type="secondary" code="padding" /> is then counteracted on the rows with negative margins. This way, all the content in your columns is visually aligned down the left side.
+                Rows are wrappers for columns. Each column has horizontal <Tag code type="secondary" text="padding" /> (called a gutter) for controlling the space between them. This <Tag code type="secondary" text="padding" /> is then counteracted on the rows with negative margins. This way, all the content in your columns is visually aligned down the left side.
             </li>
             <li>
                 In a grid layout, content must be placed within columns and only columns may be immediate children of rows.
             </li>
             <li>
-                Thanks to flexbox, grid columns without a specified <CodeTags type="secondary" code="width" /> will automatically layout as equal width columns. For example, four instances of <CodeTags type="secondary" code=".col-sm" /> will each automatically be 25% wide from the small breakpoint and up. See the <a href="#auto-layout-columns">auto-layout</a> columns section for more examples.
+                Thanks to flexbox, grid columns without a specified <Tag code type="secondary" text="width" /> will automatically layout as equal width columns. For example, four instances of <Tag code type="secondary" text=".col-sm" /> will each automatically be 25% wide from the small breakpoint and up. See the <a href="#auto-layout-columns">auto-layout</a> columns section for more examples.
             </li>
             <li>
-                Column classes indicate the number of columns you’d like to use out of the possible 12 per row. So, if you want three equal-width columns across, you can use <CodeTags type="secondary" code=".col-4" />.
+                Column classes indicate the number of columns you’d like to use out of the possible 12 per row. So, if you want three equal-width columns across, you can use <Tag code type="secondary" text=".col-4" />.
             </li>
             <li>
-                Column <CodeTags type="secondary" code="width" />s are set in percentages, so they’re always fluid and sized relative to their parent element.
+                Column <Tag code type="secondary" text="width" />s are set in percentages, so they’re always fluid and sized relative to their parent element.
             </li>
             <li>
-                Columns have horizontal <CodeTags type="secondary" code="padding" /> to create the gutters between individual columns, however, you can remove the <CodeTags type="secondary" code="margin" /> from rows and <CodeTags type="secondary" code="padding" /> from columns with <CodeTags type="secondary" code=".no-gutters" /> on the <CodeTags type="secondary" code=".row" />.
+                Columns have horizontal <Tag code type="secondary" text="padding" /> to create the gutters between individual columns, however, you can remove the <Tag code type="secondary" text="margin" /> from rows and <Tag code type="secondary" text="padding" /> from columns with <Tag code type="secondary" text=".no-gutters" /> on the <Tag code type="secondary" text=".row" />.
             </li>
             <li>
                 To make the grid responsive, there are six grid breakpoints, one for each <Link to="/utilities/breakpoints">responsive breakpoint</Link>: all breakpoints (extra small), small, medium, large, extra large, and extra extra large.
             </li>
             <li>
-                Grid breakpoints are based on minimum width media queries, meaning they <b>apply to that one breakpoint and all those above it</b> (e.g., <CodeTags type="secondary" code=".col-sm-4" /> applies to small, medium, large, extra large and extra extra large devices, but not the first <CodeTags type="secondary" code="xs" /> breakpoint).
+                Grid breakpoints are based on minimum width media queries, meaning they <b>apply to that one breakpoint and all those above it</b> (e.g., <Tag code type="secondary" text=".col-sm-4" /> applies to small, medium, large, extra large and extra extra large devices, but not the first <Tag code type="secondary" text="xs" /> breakpoint).
             </li>
         </ul>
     </>
@@ -196,7 +196,7 @@ const HowItWorks = () => (
 const GridOptions = () => (
     <>
         <h2 id="grid-options">Grid options</h2>
-        <p>Most sizes in the {process.env.brandTitle} Design Guide is defined using <CodeTags type="secondary" code="rem" />s, <CodeTags type="secondary" code="px" />s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the font size.</p>
+        <p>Most sizes in the {process.env.brandTitle} Design Guide is defined using <Tag code type="secondary" text="rem" />s, <Tag code type="secondary" text="px" />s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the font size.</p>
         <p>Use this table to see how aspects of the grid system work across multiple devices.</p>
         <table className="table table-striped">
             <thead>
@@ -240,12 +240,12 @@ const GridOptions = () => (
                 </tr>
                 <tr>
                     <th scope="row">Class prefix</th>
-                    <td><CodeTags type="secondary" code=".col-" /></td>
-                    <td><CodeTags type="secondary" code=".col-sm-" /></td>
-                    <td><CodeTags type="secondary" code=".col-md-" /></td>
-                    <td><CodeTags type="secondary" code=".col-lg-" /></td>
-                    <td><CodeTags type="secondary" code=".col-xl-" /></td>
-                    <td><CodeTags type="secondary" code=".col-xxl-" /></td>
+                    <td><Tag code type="secondary" text=".col-" /></td>
+                    <td><Tag code type="secondary" text=".col-sm-" /></td>
+                    <td><Tag code type="secondary" text=".col-md-" /></td>
+                    <td><Tag code type="secondary" text=".col-lg-" /></td>
+                    <td><Tag code type="secondary" text=".col-xl-" /></td>
+                    <td><Tag code type="secondary" text=".col-xxl-" /></td>
                 </tr>
                 <tr>
                     <th scope="row">Gutter width</th>
@@ -267,9 +267,9 @@ const GridOptions = () => (
 const AutoLayoutColumns = () => (
     <>
         <h2 id="auto-layout-columns">Auto-layout columns</h2>
-        <p>Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like <CodeTags type="secondary" code=".col-sm-6" />.</p>
+        <p>Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like <Tag code type="secondary" text=".col-sm-6" />.</p>
         <h3>Equal-width</h3>
-        <p>For example, here are two grid layouts that apply to every device and viewport, from <CodeTags type="secondary" code="xs" /> to <CodeTags type="secondary" code="xxl" />. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.</p>
+        <p>For example, here are two grid layouts that apply to every device and viewport, from <Tag code type="secondary" text="xs" /> to <Tag code type="secondary" text="xxl" />. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="showcase-grid">
                 <div className="container">
@@ -328,7 +328,7 @@ const AutoLayoutColumns = () => (
         </ComponentPreview>
 
         <h3>Variable width content</h3>
-        <p>Use <CodeTags type="secondary" code="col-{breakpoint}-auto" /> classes to size columns based on the natural width of their content.</p>
+        <p>Use <Tag code type="secondary" text="col-{breakpoint}-auto" /> classes to size columns based on the natural width of their content.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="showcase-grid">
                 <div className="container">
@@ -359,7 +359,7 @@ const AutoLayoutColumns = () => (
         </ComponentPreview>
 
         <h3>Equal-width multi-row</h3>
-        <p>Create equal-width columns that span multiple rows by inserting a <CodeTags type="secondary" code=".w-100" /> where you want the columns to break to a new line. Make the breaks responsive by mixing the <CodeTags type="secondary" code=".w-100" /> with some <Link to="/utilities/display">responsive display utilities</Link>.</p>
+        <p>Create equal-width columns that span multiple rows by inserting a <Tag code type="secondary" text=".w-100" /> where you want the columns to break to a new line. Make the breaks responsive by mixing the <Tag code type="secondary" text=".w-100" /> with some <Link to="/utilities/display">responsive display utilities</Link>.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="showcase-grid">
                 <div className="container">
@@ -382,7 +382,7 @@ const ResponsiveClasses = () => (
         <p>Our grid includes six tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, extra large, or extra extra large devices however you see fit.</p>
 
         <h3>All breakpoints</h3>
-        <p>For grids that are the same from the smallest of devices to the largest, use the <CodeTags type="secondary" code=".col" /> and <CodeTags type="secondary" code=".col-*" /> classes. Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to <CodeTags type="secondary" code=".col" />.</p>
+        <p>For grids that are the same from the smallest of devices to the largest, use the <Tag code type="secondary" text=".col" /> and <Tag code type="secondary" text=".col-*" /> classes. Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to <Tag code type="secondary" text=".col" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="showcase-grid">
                 <div className="container">
@@ -401,7 +401,7 @@ const ResponsiveClasses = () => (
         </ComponentPreview>
 
         <h3>Stacked to horizontal</h3>
-        <p>Using a single set of <CodeTags type="secondary" code=".col-sm-*" /> classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (<CodeTags type="secondary" code="sm" />).</p>
+        <p>Using a single set of <Tag code type="secondary" text=".col-sm-*" /> classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (<Tag code type="secondary" text="sm" />).</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="showcase-grid">
                 <div className="container">
@@ -569,7 +569,7 @@ const Alignment = () => (
         </ComponentPreview>
 
         <h3>Column breaks</h3>
-        <p>Breaking columns to a new line in flexbox requires a small hack: add an element with <CodeTags type="secondary" code="width: 100%" /> wherever you want to wrap your columns to a new line. Normally this is accomplished with multiple <CodeTags type="secondary" code=".row" />s, but not every implementation method can account for this.</p>
+        <p>Breaking columns to a new line in flexbox requires a small hack: add an element with <Tag code type="secondary" text="width: 100%" /> wherever you want to wrap your columns to a new line. Normally this is accomplished with multiple <Tag code type="secondary" text=".row" />s, but not every implementation method can account for this.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="showcase-grid">
                 <div className="container">
@@ -608,7 +608,7 @@ const Reordering = () => (
     <>
         <h2 id="reordering">Reordering</h2>
         <h3>Order classes</h3>
-        <p>Use <CodeTags type="secondary" code=".order-" /> classes for controlling the <b>visual</b> order of your content. These classes are responsive, so you can set the <CodeTags type="secondary" code="order" /> by breakpoint (e.g., <CodeTags type="secondary" code=".order-1.order-md-2" />). Includes support for <CodeTags type="secondary" code="1" /> through <CodeTags type="secondary" code="12" /> across all five grid tiers.</p>
+        <p>Use <Tag code type="secondary" text=".order-" /> classes for controlling the <b>visual</b> order of your content. These classes are responsive, so you can set the <Tag code type="secondary" text="order" /> by breakpoint (e.g., <Tag code type="secondary" text=".order-1.order-md-2" />). Includes support for <Tag code type="secondary" text="1" /> through <Tag code type="secondary" text="12" /> across all five grid tiers.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="showcase-grid">
                 <div className="container">
@@ -626,7 +626,7 @@ const Reordering = () => (
                 </div>
             </div>
         </ComponentPreview>
-        <p>There are also responsive <CodeTags type="secondary" code=".order-first" /> and <CodeTags type="secondary" code=".order-last" /> classes that change the <CodeTags type="secondary" code="order" /> of an element by applying <CodeTags type="secondary" code="order: -1" /> and <CodeTags type="secondary" code="order: 13" />, respectively. These classes can also be intermixed with the numbered <CodeTags type="secondary" code=".order-*" /> classes as needed.</p>
+        <p>There are also responsive <Tag code type="secondary" text=".order-first" /> and <Tag code type="secondary" text=".order-last" /> classes that change the <Tag code type="secondary" text="order" /> of an element by applying <Tag code type="secondary" text="order: -1" /> and <Tag code type="secondary" text="order: 13" />, respectively. These classes can also be intermixed with the numbered <Tag code type="secondary" text=".order-*" /> classes as needed.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="showcase-grid">
                 <div className="container">
@@ -646,10 +646,10 @@ const Reordering = () => (
         </ComponentPreview>
 
         <h3>Offsetting columns</h3>
-        <p>You can offset grid columns in two ways: our responsive <CodeTags type="secondary" code=".offset-" /> grid classes and our <Link to="/utilities/display">margin utilities</Link>. Grid classes are sized to match columns while margins are more useful for quick layouts where the width of the offset is variable.</p>
+        <p>You can offset grid columns in two ways: our responsive <Tag code type="secondary" text=".offset-" /> grid classes and our <Link to="/utilities/display">margin utilities</Link>. Grid classes are sized to match columns while margins are more useful for quick layouts where the width of the offset is variable.</p>
 
         <h4>Offset classes</h4>
-        <p>Move columns to the right using <CodeTags type="secondary" code=".offset-md-*" /> classes. These classes increase the left margin of a column by <CodeTags type="secondary" code="*" /> columns. For example, <CodeTags type="secondary" code=".offset-md-4" /> moves <CodeTags type="secondary" code=".col-md-4" /> over four columns.</p>
+        <p>Move columns to the right using <Tag code type="secondary" text=".offset-md-*" /> classes. These classes increase the left margin of a column by <Tag code type="secondary" text="*" /> columns. For example, <Tag code type="secondary" text=".offset-md-4" /> moves <Tag code type="secondary" text=".col-md-4" /> over four columns.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="showcase-grid">
                 <div className="container">
@@ -684,7 +684,7 @@ const Reordering = () => (
         </ComponentPreview>
 
         <h4>Margin utilities</h4>
-        <p>You can also use margin utilities like <CodeTags type="secondary" code=".mr-auto" /> to force sibling columns away from one another.</p>
+        <p>You can also use margin utilities like <Tag code type="secondary" text=".mr-auto" /> to force sibling columns away from one another.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="showcase-grid">
                 <div className="container">
@@ -709,7 +709,7 @@ const Reordering = () => (
 const Nesting = () => (
     <>
         <h2 id="nesting">Nesting</h2>
-        <p>To nest your content with the default grid, add a new <CodeTags type="secondary" code=".row" /> and set of <CodeTags type="secondary" code=".col-sm-*" /> columns within an existing <CodeTags type="secondary" code=".col-sm-*" /> column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).</p>
+        <p>To nest your content with the default grid, add a new <Tag code type="secondary" text=".row" /> and set of <Tag code type="secondary" text=".col-sm-*" /> columns within an existing <Tag code type="secondary" text=".col-sm-*" /> column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="showcase-grid">
                 <div className="container">

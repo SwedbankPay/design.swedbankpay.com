@@ -9,26 +9,30 @@ exports[`Core: Breakpoints Overview renders 1`] = `
   </h2>
   <p>
     Like Bootstrap our breakpoints are ranged from 
-    <CodeTags
-      code="xs"
+    <Tag
+      code={true}
+      text="xs"
       type="secondary"
     />
      to 
-    <CodeTags
-      code="xl"
+    <Tag
+      code={true}
+      text="xl"
       type="secondary"
     />
     . In addition, we have added yet another breakpoint for even bigger screens called 
-    <CodeTags
-      code="xxl"
+    <Tag
+      code={true}
+      text="xxl"
       type="secondary"
     />
     .
   </p>
   <p>
     Note that when targeting screensize 
-    <CodeTags
-      code="xs"
+    <Tag
+      code={true}
+      text="xs"
       type="secondary"
     />
     , it is optional to append the infix to the classname.
@@ -52,26 +56,30 @@ exports[`Core: Breakpoints Overview renders 1`] = `
     <tbody>
       <tr>
         <td>
-          <CodeTags
-            code="xs"
+          <Tag
+            code={true}
+            text="xs"
             type="secondary"
           />
         </td>
         <td>
-          <CodeTags
-            code="0px"
+          <Tag
+            code={true}
+            text="0px"
             type="secondary"
           />
         </td>
         <td>
           <p>
-            <CodeTags
-              code=".col-8"
+            <Tag
+              code={true}
+              text=".col-8"
               type="secondary"
             />
             , 
-            <CodeTags
-              code=".d-block"
+            <Tag
+              code={true}
+              text=".d-block"
               type="secondary"
             />
           </p>
@@ -79,26 +87,30 @@ exports[`Core: Breakpoints Overview renders 1`] = `
       </tr>
       <tr>
         <td>
-          <CodeTags
-            code="sm"
+          <Tag
+            code={true}
+            text="sm"
             type="secondary"
           />
         </td>
         <td>
-          <CodeTags
-            code="576px"
+          <Tag
+            code={true}
+            text="576px"
             type="secondary"
           />
         </td>
         <td>
           <p>
-            <CodeTags
-              code=".col-sm-8"
+            <Tag
+              code={true}
+              text=".col-sm-8"
               type="secondary"
             />
             , 
-            <CodeTags
-              code=".d-sm-block"
+            <Tag
+              code={true}
+              text=".d-sm-block"
               type="secondary"
             />
           </p>
@@ -106,26 +118,30 @@ exports[`Core: Breakpoints Overview renders 1`] = `
       </tr>
       <tr>
         <td>
-          <CodeTags
-            code="md"
+          <Tag
+            code={true}
+            text="md"
             type="secondary"
           />
         </td>
         <td>
-          <CodeTags
-            code="768px"
+          <Tag
+            code={true}
+            text="768px"
             type="secondary"
           />
         </td>
         <td>
           <p>
-            <CodeTags
-              code=".col-md-8"
+            <Tag
+              code={true}
+              text=".col-md-8"
               type="secondary"
             />
             , 
-            <CodeTags
-              code=".d-md-block"
+            <Tag
+              code={true}
+              text=".d-md-block"
               type="secondary"
             />
           </p>
@@ -133,26 +149,30 @@ exports[`Core: Breakpoints Overview renders 1`] = `
       </tr>
       <tr>
         <td>
-          <CodeTags
-            code="lg"
+          <Tag
+            code={true}
+            text="lg"
             type="secondary"
           />
         </td>
         <td>
-          <CodeTags
-            code="992px"
+          <Tag
+            code={true}
+            text="992px"
             type="secondary"
           />
         </td>
         <td>
           <p>
-            <CodeTags
-              code=".col-lg-8"
+            <Tag
+              code={true}
+              text=".col-lg-8"
               type="secondary"
             />
             , 
-            <CodeTags
-              code=".d-lg-block"
+            <Tag
+              code={true}
+              text=".d-lg-block"
               type="secondary"
             />
           </p>
@@ -160,26 +180,30 @@ exports[`Core: Breakpoints Overview renders 1`] = `
       </tr>
       <tr>
         <td>
-          <CodeTags
-            code="xl"
+          <Tag
+            code={true}
+            text="xl"
             type="secondary"
           />
         </td>
         <td>
-          <CodeTags
-            code="1200px"
+          <Tag
+            code={true}
+            text="1200px"
             type="secondary"
           />
         </td>
         <td>
           <p>
-            <CodeTags
-              code=".col-xl-8"
+            <Tag
+              code={true}
+              text=".col-xl-8"
               type="secondary"
             />
             , 
-            <CodeTags
-              code=".d-xl-block"
+            <Tag
+              code={true}
+              text=".d-xl-block"
               type="secondary"
             />
           </p>
@@ -187,26 +211,30 @@ exports[`Core: Breakpoints Overview renders 1`] = `
       </tr>
       <tr>
         <td>
-          <CodeTags
-            code="xxl"
+          <Tag
+            code={true}
+            text="xxl"
             type="secondary"
           />
         </td>
         <td>
-          <CodeTags
-            code="1600px"
+          <Tag
+            code={true}
+            text="1600px"
             type="secondary"
           />
         </td>
         <td>
           <p>
-            <CodeTags
-              code=".col-xxl-8"
+            <Tag
+              code={true}
+              text=".col-xxl-8"
               type="secondary"
             />
             , 
-            <CodeTags
-              code=".d-xxl-block"
+            <Tag
+              code={true}
+              text=".d-xxl-block"
               type="secondary"
             />
           </p>

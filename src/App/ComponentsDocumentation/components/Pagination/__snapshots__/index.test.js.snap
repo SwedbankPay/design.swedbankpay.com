@@ -9,23 +9,27 @@ exports[`Documentation: Pagination DefaultPagination renders 1`] = `
   </h2>
   <p>
     Default pagination shows the pages as numbers. Add 
-    <CodeTags
-      code=".pagination"
+    <Tag
+      code={true}
+      text=".pagination"
       type="secondary"
     />
      to an 
-    <CodeTags
-      code="<ul>"
+    <Tag
+      code={true}
+      text="<ul>"
       type="primary"
     />
      containing
-    <CodeTags
-      code="<li>"
+    <Tag
+      code={true}
+      text="<li>"
       type="primary"
     />
     . If you wish to present the user with navigational arrows you need to add those as 
-    <CodeTags
-      code="<li>"
+    <Tag
+      code={true}
+      text="<li>"
       type="primary"
     />
      elements.
@@ -81,13 +85,15 @@ exports[`Documentation: Pagination PaginationBullets renders 1`] = `
   </h2>
   <p>
     If you want to show bullets instead of numbers you can add 
-    <CodeTags
-      code=".pagination-bullets"
+    <Tag
+      code={true}
+      text=".pagination-bullets"
       type="secondary"
     />
      to your 
-    <CodeTags
-      code="<ul>"
+    <Tag
+      code={true}
+      text="<ul>"
       type="primary"
     />
     .

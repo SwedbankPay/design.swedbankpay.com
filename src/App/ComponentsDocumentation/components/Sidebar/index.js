@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import { ComponentPreview, DocContainer, JavascriptDocs, JavascriptDocElement } from "@docutils";
 import SidebarComponent from "@components/Sidebar";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 import { sidebar } from "@src/scripts/main";
 
@@ -14,9 +14,9 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
         <p>
             The sidebar supports a depth of up to 3 levels. Note that if used with a sticky topbar, add
-            class <CodeTags type="secondary" code=".sidebar-topbar-sticky" />, <CodeTags type="secondary" code=".topbar-min-{breakpoint}-sticky" />, or <CodeTags type="secondary" code=".topbar-max-{breakpoint}-sticky" /> depending
+            class <Tag code type="secondary" text=".sidebar-topbar-sticky" />, <Tag code type="secondary" text=".topbar-min-{breakpoint}-sticky" />, or <Tag code type="secondary" text=".topbar-max-{breakpoint}-sticky" /> depending
             on the class of the sticky topbar,
-            to the outmost <CodeTags type="primary" code="<div>" /> of the sidebar.
+            to the outmost <Tag code type="primary" text="<div>" /> of the sidebar.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="container-fluid">
@@ -32,7 +32,7 @@ const Overview = () => (
 const ExtendedSidebar = () => (
     <>
         <h2 id="extended-sidebar">Extended sidebar</h2>
-        <p>This sidebar is an extended sidebar which supports a depth of up to 4 levels. To use the extended sidebar, add class <CodeTags type="secondary" code=".extended-sidebar" /> to the second <CodeTags type="primary" code="<ul>"/> along with the <CodeTags type="secondary" code=".secondary-nav-ul" /> class.
+        <p>This sidebar is an extended sidebar which supports a depth of up to 4 levels. To use the extended sidebar, add class <Tag code type="secondary" text=".extended-sidebar" /> to the second <Tag code type="primary" text="<ul>"/> along with the <Tag code type="secondary" text=".secondary-nav-ul" /> class.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="container-fluid">
@@ -48,7 +48,7 @@ const ExtendedSidebar = () => (
 const SetActiveState = ({ componentName }) => (
     <>
         <JavascriptDocElement
-            code={<CodeTags type="secondary" code="dg.sidebar.setActiveState(<sidebar-id>, group-index, subgroup-index, leaf-index)"/>}
+            code={<Tag code type="secondary" text="dg.sidebar.setActiveState(<sidebar-id>, group-index, subgroup-index, leaf-index)"/>}
             description={
                 <>
                     Note: This method is optional
@@ -56,16 +56,16 @@ const SetActiveState = ({ componentName }) => (
                     <br/>
 
                     Sets group, subgroup and leaf of the {componentName} to active depending on the parameters
-                    passed. The paramater <CodeTags type="secondary" code="group-index" /> is the index of the group to be set active,
-                    the paramater <CodeTags type="secondary" code="subgroup-index" /> is the index of the subgroup beneath the group selected
-                    by <CodeTags type="secondary" code="group-index" />, and the paramater <CodeTags type="secondary" code="leaf-index" /> is the
-                    index of the leaf beneath both <CodeTags type="secondary" code="group-index" /> and <CodeTags type="secondary" code="subgroup-index" />.
-                    If the group only has two levels, only <CodeTags type="secondary" code="group-index" /> and <CodeTags type="secondary" code="leaf-index" /> is
-                    needed. Since group always is present, <CodeTags type="secondary" code="group-index" /> should always be provided.
-                    Pass <CodeTags type="secondary" code="null" /> as a paramater in cases where the parameter needs to be empty, such as
-                    when <CodeTags type="secondary" code="subgroup-index" /> is the only one needed,
-                    use <CodeTags type="secondary" code="setActiveState(<sidebar-id>, group-index, null, null)"/>.
-                    The paramater <CodeTags type="secondary" code="<sidebar-id>"/> must always be a valid id.
+                    passed. The parameter <Tag code type="secondary" text="group-index" /> is the index of the group to be set active,
+                    the parameter <Tag code type="secondary" text="subgroup-index" /> is the index of the subgroup beneath the group selected
+                    by <Tag code type="secondary" text="group-index" />, and the parameter <Tag code type="secondary" text="leaf-index" /> is the
+                    index of the leaf beneath both <Tag code type="secondary" text="group-index" /> and <Tag code type="secondary" text="subgroup-index" />.
+                    If the group only has two levels, only <Tag code type="secondary" text="group-index" /> and <Tag code type="secondary" text="leaf-index" /> is
+                    needed. Since group always is present, <Tag code type="secondary" text="group-index" /> should always be provided.
+                    Pass <Tag code type="secondary" text="null" /> as a parameter in cases where the parameter needs to be empty, such as
+                    when <Tag code type="secondary" text="subgroup-index" /> is the only one needed,
+                    use <Tag code type="secondary" text="setActiveState(<sidebar-id>, group-index, null, null)"/>.
+                    The parameter <Tag code type="secondary" text="<sidebar-id>"/> must always be a valid id.
                 </>
             }
         />
@@ -76,7 +76,7 @@ const RemoveActiveState = ({ componentName }) => (
     <>
 
         <JavascriptDocElement
-            code={<CodeTags type="secondary" code="dg.sidebar.removeActiveState(<sidebar-id>, group-index, subgroup-index, leaf-index)"/>}
+            code={<Tag code type="secondary" text="dg.sidebar.removeActiveState(<sidebar-id>, group-index, subgroup-index, leaf-index)"/>}
             description={
                 <>
                     Note: This method is optional
@@ -84,16 +84,16 @@ const RemoveActiveState = ({ componentName }) => (
                     <br/>
 
                     Remove group, subgroup and leaf of the {componentName} active state depending on the parameters
-                    passed. The paramater <CodeTags type="secondary" code="group-index" /> is the index of the group to have the active state removed,
-                    the paramater <CodeTags type="secondary" code="subgroup-index" /> is the index of the subgroup beneath the group selected
-                    by <CodeTags type="secondary" code="group-index" />, and the paramater <CodeTags type="secondary" code="leaf-index" /> is the
-                    index of the leaf beneath both <CodeTags type="secondary" code="group-index" /> and <CodeTags type="secondary" code="subgroup-index" />.
-                    If the group only has two levels, only <CodeTags type="secondary" code="group-index" /> and <CodeTags type="secondary" code="leaf-index" /> is
-                    needed. Since group always is present, <CodeTags type="secondary" code="group-index" /> should always be provided.
-                    Pass <CodeTags type="secondary" code="null" /> as a paramater in cases where the parameter needs to be empty, such as
-                    when <CodeTags type="secondary" code="subgroup-index" /> is the only one needed,
-                    use <CodeTags type="secondary" code="removeActiveState(<sidebar-id>, group-index, null, null)"/>.
-                    The paramater <CodeTags type="secondary" code="<sidebar-id>"/> must always be a valid id.
+                    passed. The paramater <Tag code type="secondary" text="group-index" /> is the index of the group to have the active state removed,
+                    the paramater <Tag code type="secondary" text="subgroup-index" /> is the index of the subgroup beneath the group selected
+                    by <Tag code type="secondary" text="group-index" />, and the paramater <Tag code type="secondary" text="leaf-index" /> is the
+                    index of the leaf beneath both <Tag code type="secondary" text="group-index" /> and <Tag code type="secondary" text="subgroup-index" />.
+                    If the group only has two levels, only <Tag code type="secondary" text="group-index" /> and <Tag code type="secondary" text="leaf.index"/> is
+                    needed. Since group always is present, <Tag code type="secondary" text="group-index" /> should always be provided.
+                    Pass <Tag code type="secondary" text="null" /> as a paramater in cases where the parameter needs to be empty, such as
+                    when <Tag code type="secondary" text="subgroup-index" /> is the only one needed,
+                    use <Tag code type="secondary" text="removeActiveState(<sidebar-id>, group-index, null, null)"/>.
+                    The paramater <Tag code type="secondary" text="<sidebar-id>"/> must always be a valid id.
                 </>
             }
         />
@@ -103,17 +103,17 @@ const RemoveActiveState = ({ componentName }) => (
 const InitScrollListener = ({ componentName }) => (
     <>
         <JavascriptDocElement
-            code={<CodeTags type="secondary" code="dg.sidebar.initScrollListener(<sidebar-id>, content-id, header-type)"/>}
+            code={<Tag code type="secondary" text="dg.sidebar.initScrollListener(<sidebar-id>, content-id, header-type)"/>}
             description={
                 <>
                     Note: This method is optional
                     <br/>
                     <br/>
 
-                    Makes the {componentName} with id <CodeTags type="secondary" code="<sidebar-id>"/> listen to scroll events on the element
-                    with id <CodeTags type="secondary" code="content-id"/>, and matches a leaf with the corresponding header
-                    of <CodeTags type="secondary" code="header-type"/> to visualize active leaf depending on scroll position of element with
-                    id <CodeTags type="secondary" code="content-id"/>.
+                    Makes the {componentName} with id <Tag code type="secondary" text="<sidebar-id>"/> listen to scroll events on the element
+                    with id <Tag code type="secondary" text="content-id"/>, and matches a leaf with the corresponding header
+                    of <Tag code type="secondary" text="header-type"/> to visualize active leaf depending on scroll position of element with
+                    id <Tag code type="secondary" text="content-id"/>.
                 </>
             }
         />
@@ -123,7 +123,7 @@ const InitScrollListener = ({ componentName }) => (
 const RemoveScrollListener = () => (
     <>
         <JavascriptDocElement
-            code={<CodeTags type="secondary" code="dg.sidebar.removeScrollListener(<sidebar-id>, content-id)"/>}
+            code={<Tag code type="secondary" text="dg.sidebar.removeScrollListener(<sidebar-id>, content-id)"/>}
             description={
                 <>
                     Note: This method is optional
@@ -131,7 +131,7 @@ const RemoveScrollListener = () => (
                     <br />
 
                     Removes scroll listener on the element
-                    with id <CodeTags type="secondary" code="content-id"/>.
+                    with id <Tag code type="secondary" text="content-id"/>.
                 </>
             }
         />

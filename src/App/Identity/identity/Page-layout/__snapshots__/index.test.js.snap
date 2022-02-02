@@ -9,8 +9,9 @@ exports[`Utilities: PageLayout CenteredContent renders 1`] = `
   </h2>
   <p>
     For a centered layout use 
-    <CodeTags
-      code=".container"
+    <Tag
+      code={true}
+      text=".container"
       type="secondary"
     />
     , it has built in breakpoints and will switch to full-width if the screen size is small enough (see 
@@ -26,13 +27,15 @@ exports[`Utilities: PageLayout CenteredContent renders 1`] = `
       borders
     </Link>
      on the right and left side. To make your topbar fill the page horizontally you will have to wrap it in a 
-    <CodeTags
-      code=".row"
+    <Tag
+      code={true}
+      text=".row"
       type="secondary"
     />
      and 
-    <CodeTags
-      code=".container-fluid"
+    <Tag
+      code={true}
+      text=".container-fluid"
       type="secondary"
     />
     .
@@ -83,18 +86,21 @@ exports[`Utilities: PageLayout FullWidth renders 1`] = `
   </h2>
   <p>
     To use a full width layout use a combination of grid and the 
-    <CodeTags
-      code=".main-content"
+    <Tag
+      code={true}
+      text=".main-content"
       type="secondary"
     />
      class. 
-    <CodeTags
-      code=".main-content"
+    <Tag
+      code={true}
+      text=".main-content"
       type="secondary"
     />
      has a white background and some padding. For a full width layout use 
-    <CodeTags
-      code=".border-left"
+    <Tag
+      code={true}
+      text=".border-left"
       type="secondary"
     />
      to clearly separate the sidebar and the main content. See 
@@ -146,13 +152,15 @@ exports[`Utilities: PageLayout renders 1`] = `
     className="lead"
   >
     Use grid with our 
-    <CodeTags
-      code=".main-content"
+    <Tag
+      code={true}
+      text=".main-content"
       type="secondary"
     />
      class to use a variety of page layouts. As we have a mobile first approach we only use 1rem as base padding for our 
-    <CodeTags
-      code=".main-content"
+    <Tag
+      code={true}
+      text=".main-content"
       type="secondary"
     />
      class. Use the 

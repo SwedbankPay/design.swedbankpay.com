@@ -9,8 +9,9 @@ exports[`Identity: Spacing BaseIncrementOfRem renders 1`] = `
   </h2>
   <p>
     In our system the base size of a  
-    <CodeTags
-      code="rem"
+    <Tag
+      code={true}
+      text="rem"
       type="secondary"
     />
       unit is 
@@ -313,18 +314,21 @@ exports[`Identity: Spacing Examples renders 1`] = `
   </h3>
   <p>
     Additionally, DesignGuide also includes an 
-    <CodeTags
-      code=".mx-auto"
+    <Tag
+      code={true}
+      text=".mx-auto"
       type="secondary"
     />
      class for horizontally centering fixed-width block level content—that is, content that has 
-    <CodeTags
-      code="display: block"
+    <Tag
+      code={true}
+      text="display: block"
       type="secondary"
     />
      and a 
-    <CodeTags
-      code="width"
+    <Tag
+      code={true}
+      text="width"
       type="secondary"
     />
      set—by setting the horizontal margins to auto.
@@ -374,61 +378,72 @@ exports[`Identity: Spacing Notation renders 1`] = `
   </h2>
   <p>
     Spacing utilities that apply to all breakpoints, from 
-    <CodeTags
-      code="xs"
+    <Tag
+      code={true}
+      text="xs"
       type="secondary"
     />
      to 
-    <CodeTags
-      code="xxl"
+    <Tag
+      code={true}
+      text="xxl"
       type="secondary"
     />
     , have no breakpoint abbreviation in them. This is because those classes are applied from 
-    <CodeTags
-      code="min-width: 0"
+    <Tag
+      code={true}
+      text="min-width: 0"
       type="secondary"
     />
      and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
   </p>
   <p>
     The classes are named using the format 
-    <CodeTags
-      code="{property}{sides}-{size}"
+    <Tag
+      code={true}
+      text="{property}{sides}-{size}"
       type="secondary"
     />
      for 
-    <CodeTags
-      code="xs"
+    <Tag
+      code={true}
+      text="xs"
       type="secondary"
     />
      and 
-    <CodeTags
-      code="{property}{sides}-{breakpoint}-{size}"
+    <Tag
+      code={true}
+      text="{property}{sides}-{breakpoint}-{size}"
       type="secondary"
     />
      for 
-    <CodeTags
-      code="sm"
+    <Tag
+      code={true}
+      text="sm"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="md"
+    <Tag
+      code={true}
+      text="md"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="lg"
+    <Tag
+      code={true}
+      text="lg"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="xl"
+    <Tag
+      code={true}
+      text="xl"
       type="secondary"
     />
     , and 
-    <CodeTags
-      code="xxl"
+    <Tag
+      code={true}
+      text="xxl"
       type="secondary"
     />
     .
@@ -442,24 +457,28 @@ exports[`Identity: Spacing Notation renders 1`] = `
   </p>
   <ul>
     <li>
-      <CodeTags
-        code="m"
+      <Tag
+        code={true}
+        text="m"
         type="secondary"
       />
        - for classes that set 
-      <CodeTags
-        code="margin"
+      <Tag
+        code={true}
+        text="margin"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="p"
+      <Tag
+        code={true}
+        text="p"
         type="secondary"
       />
        - for classes that set 
-      <CodeTags
-        code="padding"
+      <Tag
+        code={true}
+        text="padding"
         type="secondary"
       />
     </li>
@@ -473,98 +492,116 @@ exports[`Identity: Spacing Notation renders 1`] = `
   </p>
   <ul>
     <li>
-      <CodeTags
-        code="t"
+      <Tag
+        code={true}
+        text="t"
         type="secondary"
       />
        - for classes that set 
-      <CodeTags
-        code="margin-top"
+      <Tag
+        code={true}
+        text="margin-top"
         type="secondary"
       />
        or 
-      <CodeTags
-        code="padding-top"
+      <Tag
+        code={true}
+        text="padding-top"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="b"
+      <Tag
+        code={true}
+        text="b"
         type="secondary"
       />
        - for classes that set 
-      <CodeTags
-        code="margin-bottom"
+      <Tag
+        code={true}
+        text="margin-bottom"
         type="secondary"
       />
        or 
-      <CodeTags
-        code="padding-bottom"
+      <Tag
+        code={true}
+        text="padding-bottom"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="l"
+      <Tag
+        code={true}
+        text="l"
         type="secondary"
       />
        - for classes that set 
-      <CodeTags
-        code="margin-left"
+      <Tag
+        code={true}
+        text="margin-left"
         type="secondary"
       />
        or 
-      <CodeTags
-        code="padding-left"
+      <Tag
+        code={true}
+        text="padding-left"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="r"
+      <Tag
+        code={true}
+        text="r"
         type="secondary"
       />
        - for classes that set 
-      <CodeTags
-        code="margin-right"
+      <Tag
+        code={true}
+        text="margin-right"
         type="secondary"
       />
        or 
-      <CodeTags
-        code="padding-right"
+      <Tag
+        code={true}
+        text="padding-right"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="x"
+      <Tag
+        code={true}
+        text="x"
         type="secondary"
       />
        - for classes that set both 
-      <CodeTags
-        code="*-left"
+      <Tag
+        code={true}
+        text="*-left"
         type="secondary"
       />
        or 
-      <CodeTags
-        code="*-right"
+      <Tag
+        code={true}
+        text="*-right"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="y"
+      <Tag
+        code={true}
+        text="y"
         type="secondary"
       />
        - for classes that set both 
-      <CodeTags
-        code="*-top"
+      <Tag
+        code={true}
+        text="*-top"
         type="secondary"
       />
        or 
-      <CodeTags
-        code="*-bottom"
+      <Tag
+        code={true}
+        text="*-bottom"
         type="secondary"
       />
     </li>
@@ -578,144 +615,171 @@ exports[`Identity: Spacing Notation renders 1`] = `
   </p>
   <ul>
     <li>
-      <CodeTags
-        code="0"
+      <Tag
+        code={true}
+        text="0"
         type="secondary"
       />
        - for classes that eliminate the 
-      <CodeTags
-        code="margin"
+      <Tag
+        code={true}
+        text="margin"
         type="secondary"
       />
        or 
-      <CodeTags
-        code="padding"
+      <Tag
+        code={true}
+        text="padding"
         type="secondary"
       />
        by setting it to 
-      <CodeTags
-        code="0"
+      <Tag
+        code={true}
+        text="0"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="1"
+      <Tag
+        code={true}
+        text="1"
         type="secondary"
       />
        - for classes that set the 
-      <CodeTags
-        code="margin"
+      <Tag
+        code={true}
+        text="margin"
         type="secondary"
       />
        or 
-      <CodeTags
-        code="padding"
+      <Tag
+        code={true}
+        text="padding"
         type="secondary"
       />
        to 
-      <CodeTags
-        code="@spacer * 0.25"
+      <Tag
+        code={true}
+        text="@spacer * 0.25"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="2"
+      <Tag
+        code={true}
+        text="2"
         type="secondary"
       />
        - for classes that set the 
-      <CodeTags
-        code="margin"
+      <Tag
+        code={true}
+        text="margin"
         type="secondary"
       />
        or 
-      <CodeTags
-        code="padding"
+      <Tag
+        code={true}
+        text="padding"
         type="secondary"
       />
        to 
-      <CodeTags
-        code="@spacer * 0.5"
+      <Tag
+        code={true}
+        text="@spacer * 0.5"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="3"
+      <Tag
+        code={true}
+        text="3"
         type="secondary"
       />
        - for classes that set the 
-      <CodeTags
-        code="margin"
+      <Tag
+        code={true}
+        text="margin"
         type="secondary"
       />
        or 
-      <CodeTags
-        code="padding"
+      <Tag
+        code={true}
+        text="padding"
         type="secondary"
       />
        to 
-      <CodeTags
-        code="@spacer"
+      <Tag
+        code={true}
+        text="@spacer"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="4"
+      <Tag
+        code={true}
+        text="4"
         type="secondary"
       />
        - for classes that set the 
-      <CodeTags
-        code="margin"
+      <Tag
+        code={true}
+        text="margin"
         type="secondary"
       />
        or 
-      <CodeTags
-        code="padding"
+      <Tag
+        code={true}
+        text="padding"
         type="secondary"
       />
        to 
-      <CodeTags
-        code="@spacer * 1.5"
+      <Tag
+        code={true}
+        text="@spacer * 1.5"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="5"
+      <Tag
+        code={true}
+        text="5"
         type="secondary"
       />
        - for classes that set the 
-      <CodeTags
-        code="margin"
+      <Tag
+        code={true}
+        text="margin"
         type="secondary"
       />
        or 
-      <CodeTags
-        code="padding"
+      <Tag
+        code={true}
+        text="padding"
         type="secondary"
       />
        to 
-      <CodeTags
-        code="@spacer * 3"
+      <Tag
+        code={true}
+        text="@spacer * 3"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="auto"
+      <Tag
+        code={true}
+        text="auto"
         type="secondary"
       />
        - for classes that set 
-      <CodeTags
-        code="margin"
+      <Tag
+        code={true}
+        text="margin"
         type="secondary"
       />
        to 
-      <CodeTags
-        code="auto"
+      <Tag
+        code={true}
+        text="auto"
         type="secondary"
       />
     </li>
@@ -726,103 +790,121 @@ exports[`Identity: Spacing Notation renders 1`] = `
       size
     </i>
      (excluding 
-    <CodeTags
-      code="0"
+    <Tag
+      code={true}
+      text="0"
       type="secondary"
     />
     ):
   </p>
   <ul>
     <li>
-      <CodeTags
-        code="n1"
+      <Tag
+        code={true}
+        text="n1"
         type="secondary"
       />
        - for classes that set the 
-      <CodeTags
-        code="margin"
+      <Tag
+        code={true}
+        text="margin"
         type="secondary"
       />
        to 
-      <CodeTags
-        code="-@spacer * 0.25"
+      <Tag
+        code={true}
+        text="-@spacer * 0.25"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="n2"
+      <Tag
+        code={true}
+        text="n2"
         type="secondary"
       />
        - for classes that set the 
-      <CodeTags
-        code="margin"
+      <Tag
+        code={true}
+        text="margin"
         type="secondary"
       />
        to 
-      <CodeTags
-        code="-@spacer * 0.5"
+      <Tag
+        code={true}
+        text="-@spacer * 0.5"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="n3"
+      <Tag
+        code={true}
+        text="n3"
         type="secondary"
       />
        - for classes that set the 
-      <CodeTags
-        code="margin"
+      <Tag
+        code={true}
+        text="margin"
         type="secondary"
       />
        to 
-      <CodeTags
-        code="-@spacer"
+      <Tag
+        code={true}
+        text="-@spacer"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="n4"
+      <Tag
+        code={true}
+        text="n4"
         type="secondary"
       />
        - for classes that set the 
-      <CodeTags
-        code="margin"
+      <Tag
+        code={true}
+        text="margin"
         type="secondary"
       />
        to 
-      <CodeTags
-        code="-@spacer * 1.5"
+      <Tag
+        code={true}
+        text="-@spacer * 1.5"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="n5"
+      <Tag
+        code={true}
+        text="n5"
         type="secondary"
       />
        - for classes that set the 
-      <CodeTags
-        code="margin"
+      <Tag
+        code={true}
+        text="margin"
         type="secondary"
       />
        to 
-      <CodeTags
-        code="-@spacer * 3"
+      <Tag
+        code={true}
+        text="-@spacer * 3"
         type="secondary"
       />
     </li>
   </ul>
   <p>
     (
-    <CodeTags
-      code="@spacer"
+    <Tag
+      code={true}
+      text="@spacer"
       type="secondary"
     />
      is set to 
-    <CodeTags
-      code="1rem (16px)"
+    <Tag
+      code={true}
+      text="1rem (16px)"
       type="secondary"
     />
     )

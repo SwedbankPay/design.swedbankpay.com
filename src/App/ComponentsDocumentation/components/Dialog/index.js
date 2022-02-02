@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import Alert from "@components/Alert";
 import DialogComponent from "@components/Dialog";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 import { dialog } from "@src/scripts/main";
 import NpmInformation from "@docutils/NpmInformation";
@@ -19,11 +19,11 @@ const HowItWorks = () => (
         </p>
         <p>
             Dialog boxes consist of a header, a body and a footer. In these you can put whatever you want, but some basic functionality should be included in all dialogs.
-            The header should contain a short descriptive text for what the dialog-box does. You can include an icon with class <CodeTags type="secondary" code=".dialog-close" /> if you wish to give your user a way to close the dialog box without choosing an option.
+            The header should contain a short descriptive text for what the dialog-box does. You can include an icon with class <Tag code type="secondary" text=".dialog-close" /> if you wish to give your user a way to close the dialog box without choosing an option.
             The dialog body should contain the main content, usually just text confirming an action.
             In the footer you will find buttons to confirm or cancel the requested action.
         </p>
-        <Alert type="warning" icon="warning" text={<p><b>Initializing dialog buttons:</b> To make a button open the dialog box you need to include <CodeTags type="secondary" code={"data-dialog-open=\"{#your-dialog-id}\""} /> as an attribute to that button.</p>} />
+        <Alert type="warning" icon="warning" text={<p><b>Initializing dialog buttons:</b> To make a button open the dialog box you need to include <Tag code type="secondary" text={"data-dialog-open=\"{#your-dialog-id}\""} /> as an attribute to that button.</p>} />
     </>
 );
 

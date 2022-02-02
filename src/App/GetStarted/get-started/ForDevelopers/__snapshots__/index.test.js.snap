@@ -287,8 +287,9 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
   </h3>
   <p>
     Copy-paste the following CSS code into 
-    <CodeTags
-      code="<head>"
+    <Tag
+      code={true}
+      text="<head>"
       type="secondary"
     />
      before all the other stylesheets in order to load our CSS.
@@ -307,13 +308,15 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
   </h3>
   <p>
     Many of our components requires the use of JavaScript in order to function. Place the following 
-    <CodeTags
-      code="<Script>"
+    <Tag
+      code={true}
+      text="<Script>"
       type="secondary"
     />
      tag near the end of your pages, right before the closing 
-    <CodeTags
-      code="</body>"
+    <Tag
+      code={true}
+      text="</body>"
       type="secondary"
     />
      tag to enable them.
@@ -330,13 +333,15 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
   </ComponentPreview>
   <p>
     The 
-    <CodeTags
-      code="global"
+    <Tag
+      code={true}
+      text="global"
       type="secondary"
     />
      attribute adds the script to the global scope. The 
-    <CodeTags
-      code="autoload"
+    <Tag
+      code={true}
+      text="autoload"
       type="secondary"
     />
      attribute automatically initiates all components when loaded. Great for plug and play.
@@ -381,21 +386,24 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
   </ComponentPreview>
   <p>
     For our CSS you can choose to import it from a 
-    <CodeTags
-      code="css/less/scss"
+    <Tag
+      code={true}
+      text="css/less/scss"
       type="secondary"
     />
      file, from a 
-    <CodeTags
-      code="js"
+    <Tag
+      code={true}
+      text="js"
       type="secondary"
     />
      file if your bundler supports it, or point to the file directly from your bundler.
   </p>
   <p>
     Example from a 
-    <CodeTags
-      code=".less"
+    <Tag
+      code={true}
+      text=".less"
       type="secondary"
     />
      file
@@ -410,8 +418,9 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
   </ComponentPreview>
   <p>
     Example from 
-    <CodeTags
-      code="angular.json"
+    <Tag
+      code={true}
+      text="angular.json"
       type="secondary"
     />
   </p>
@@ -434,8 +443,9 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
   </ComponentPreview>
   <p>
     Example from 
-    <CodeTags
-      code="nuxt.config.js"
+    <Tag
+      code={true}
+      text="nuxt.config.js"
       type="secondary"
     />
   </p>
@@ -458,26 +468,30 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
   </h3>
   <p>
     Our script runs 
-    <CodeTags
-      code="dg.script.initAll();"
+    <Tag
+      code={true}
+      text="dg.script.initAll();"
       type="secondary"
     />
      on DOMContentLoaded making it so you have to run 
-    <CodeTags
-      code="dg.<component_name>.init();"
+    <Tag
+      code={true}
+      text="dg.<component_name>.init();"
       type="secondary"
     />
      manually when a component is rendered after the event has fired.
   </p>
   <p>
     To initialize components use 
-    <CodeTags
-      code="dg.<component_name>.init();"
+    <Tag
+      code={true}
+      text="dg.<component_name>.init();"
       type="secondary"
     />
     . If the function is called without arguments it will target all components with class 
-    <CodeTags
-      code="<component_name>"
+    <Tag
+      code={true}
+      text="<component_name>"
       type="secondary"
     />
      on the page. Initializing only one component can be done by passing an ID, it must match an existing components ID and will print a warning message if the value is invalid.

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import CheckboxComponent from "@components/FormComponents/Checkbox";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 import { checkboxShowCase, guidelineOptions, developerDocOptions, doOptions, dontOptions } from "./constants";
 
 const HowTo = () => (
@@ -72,7 +72,7 @@ const DeveloperDocumentation = () => (
     <section>
         <h2 id="developer-documentation">Developer documentation</h2>
         <span className="h3 d-inline-block mt-3">Disabled state</span>
-        <p>Disable a checkbox by adding <CodeTags type="primary" code={"disabled"} /> attribute to the desired Checkbox.</p>
+        <p>Disable a checkbox by adding <Tag code type="primary" text={"disabled"} /> attribute to the desired Checkbox.</p>
 
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="d-flex justify-content-center">
@@ -81,7 +81,7 @@ const DeveloperDocumentation = () => (
         </ComponentPreview>
 
         <span className="h3 d-inline-block mt-3">Error state</span>
-        <p>Insert the error message in the attribute <CodeTags type="primary" code={"data-error"} /> in the <CodeTags type="secondary" code={".help-block"} /> element. </p>
+        <p>Insert the error message in the attribute <Tag code type="primary" text={"data-error"} /> in the <Tag code type="secondary" text={".help-block"} /> element. </p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="m-auto pl-5 col-sm-12 error-state-container">
                 <CheckboxComponent groupTitle="Group heading" name="checkbox-group-example" options={developerDocOptions} group errorMessage="Descriptive helpful error message." />

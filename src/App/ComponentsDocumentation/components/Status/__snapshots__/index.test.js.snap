@@ -199,8 +199,9 @@ exports[`Documentation: Status Overview renders 1`] = `
   </h2>
   <p>
     Be aware of what color you use when deciding what message you want to convey. A completion status should not use a warning or danger status, that is why 
-    <CodeTags
-      code=".status-success"
+    <Tag
+      code={true}
+      text=".status-success"
       type="secondary"
     />
      exists. 

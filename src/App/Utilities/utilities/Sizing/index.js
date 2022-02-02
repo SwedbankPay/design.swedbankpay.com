@@ -1,13 +1,13 @@
 import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 const Sizing = () => (
     <DocContainer>
         <p className="lead">Easily make an element as wide or as tall (relative to its parent) with our width and height utilities.</p>
         <p>
-        Width and height utilities are generated with support for values; <CodeTags type="secondary" code="25%" />, <CodeTags type="secondary" code="50%" />, <CodeTags type="secondary" code="75%" />, <CodeTags type="secondary" code="100%" />, and <CodeTags type="secondary" code="auto" />.
+        Width and height utilities are generated with support for values; <Tag code type="secondary" text="25%" />, <Tag code type="secondary" text="50%" />, <Tag code type="secondary" text="75%" />, <Tag code type="secondary" text="100%" />, and <Tag code type="secondary" text="auto" />.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="w-25 p-3 sc-highlight">Width 25%</div>
@@ -26,7 +26,7 @@ const Sizing = () => (
             </div>
         </ComponentPreview>
 
-        <p>You can also use <CodeTags type="secondary" code="max-width: 100%;" /> and <CodeTags type="secondary" code="max-height: 100%;" /> utilities as needed.</p>
+        <p>You can also use <Tag code type="secondary" text="max-width: 100%;" /> and <Tag code type="secondary" text="max-height: 100%;" /> utilities as needed.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="sc-highlight" style={{ height: "100px" }}>
                 <div className="mh-100 sc-highlight" style={{ width: "100px", height: "200px" }}>Max-height 100%</div> {/* eslint-disable-line object-property-newline */}

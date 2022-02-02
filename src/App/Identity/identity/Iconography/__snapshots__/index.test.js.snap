@@ -15,8 +15,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
   </h3>
   <p>
     To use an icon, provide the following markup: 
-    <CodeTags
-      code="<i class=\\"payment-icon payment-icon-{icon-name}\\" aria-hidden=\\"true\\" /i>"
+    <Tag
+      code={true}
+      text="<i class=\\"payment-icon payment-icon-{icon-name}\\" aria-hidden=\\"true\\" /i>"
       type="primary"
     />
   </p>
@@ -50,8 +51,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           Payment card
         </td>
         <td>
-          <CodeTags
-            code="payment-card"
+          <Tag
+            code={true}
+            text="payment-card"
             type="secondary"
           />
         </td>
@@ -69,8 +71,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           American Expres
         </td>
         <td>
-          <CodeTags
-            code="amex"
+          <Tag
+            code={true}
+            text="amex"
             type="secondary"
           />
         </td>
@@ -88,8 +91,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           Bank Accept
         </td>
         <td>
-          <CodeTags
-            code="bank-axept"
+          <Tag
+            code={true}
+            text="bank-axept"
             type="secondary"
           />
         </td>
@@ -107,8 +111,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           Coop
         </td>
         <td>
-          <CodeTags
-            code="coop"
+          <Tag
+            code={true}
+            text="coop"
             type="secondary"
           />
         </td>
@@ -126,8 +131,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           Dankort
         </td>
         <td>
-          <CodeTags
-            code="dankort"
+          <Tag
+            code={true}
+            text="dankort"
             type="secondary"
           />
         </td>
@@ -145,8 +151,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           Diners Club
         </td>
         <td>
-          <CodeTags
-            code="diners"
+          <Tag
+            code={true}
+            text="diners"
             type="secondary"
           />
         </td>
@@ -164,8 +171,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           Forbrugsforeningen
         </td>
         <td>
-          <CodeTags
-            code="forbrugsforeningen"
+          <Tag
+            code={true}
+            text="forbrugsforeningen"
             type="secondary"
           />
         </td>
@@ -183,8 +191,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           ICA
         </td>
         <td>
-          <CodeTags
-            code="ica"
+          <Tag
+            code={true}
+            text="ica"
             type="secondary"
           />
         </td>
@@ -202,8 +211,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           ICA Banken
         </td>
         <td>
-          <CodeTags
-            code="ica-banken"
+          <Tag
+            code={true}
+            text="ica-banken"
             type="secondary"
           />
         </td>
@@ -221,8 +231,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           Ikano Bank
         </td>
         <td>
-          <CodeTags
-            code="ikano-bank"
+          <Tag
+            code={true}
+            text="ikano-bank"
             type="secondary"
           />
         </td>
@@ -240,8 +251,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           JCB
         </td>
         <td>
-          <CodeTags
-            code="jcb"
+          <Tag
+            code={true}
+            text="jcb"
             type="secondary"
           />
         </td>
@@ -259,8 +271,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           Lindex
         </td>
         <td>
-          <CodeTags
-            code="lindex"
+          <Tag
+            code={true}
+            text="lindex"
             type="secondary"
           />
         </td>
@@ -278,8 +291,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           Maestro
         </td>
         <td>
-          <CodeTags
-            code="maestro"
+          <Tag
+            code={true}
+            text="maestro"
             type="secondary"
           />
         </td>
@@ -297,8 +311,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           Mastercard
         </td>
         <td>
-          <CodeTags
-            code="mastercard"
+          <Tag
+            code={true}
+            text="mastercard"
             type="secondary"
           />
         </td>
@@ -316,8 +331,9 @@ exports[`Core: Iconography CardIcons renders 1`] = `
           Visa
         </td>
         <td>
-          <CodeTags
-            code="visa"
+          <Tag
+            code={true}
+            text="visa"
             type="secondary"
           />
         </td>
@@ -431,13 +447,15 @@ exports[`Core: Iconography Flags renders 1`] = `
   </h2>
   <p>
     Below is a list of flag icons that we use in our system, To use the flag icons add the classes 
-    <CodeTags
-      code=".flag-icon"
+    <Tag
+      code={true}
+      text=".flag-icon"
       type="secondary"
     />
      and  
-    <CodeTags
-      code=".flag-icon-xx"
+    <Tag
+      code={true}
+      text=".flag-icon-xx"
       type="secondary"
     />
       (where xx is the 
@@ -447,8 +465,9 @@ exports[`Core: Iconography Flags renders 1`] = `
       ISO_3166-1-alpha-2-code
     </a>
      of a country) to an empty 
-    <CodeTags
-      code="<i>"
+    <Tag
+      code={true}
+      text="<i>"
       type="secondary"
     />
   </p>
@@ -483,8 +502,9 @@ exports[`Core: Iconography Flags renders 1`] = `
           Norway
         </td>
         <td>
-          <CodeTags
-            code="no"
+          <Tag
+            code={true}
+            text="no"
             type="secondary"
           />
         </td>
@@ -503,8 +523,9 @@ exports[`Core: Iconography Flags renders 1`] = `
           Sweden
         </td>
         <td>
-          <CodeTags
-            code="se"
+          <Tag
+            code={true}
+            text="se"
             type="secondary"
           />
         </td>
@@ -523,8 +544,9 @@ exports[`Core: Iconography Flags renders 1`] = `
           Denmark
         </td>
         <td>
-          <CodeTags
-            code="dk"
+          <Tag
+            code={true}
+            text="dk"
             type="secondary"
           />
         </td>
@@ -543,8 +565,9 @@ exports[`Core: Iconography Flags renders 1`] = `
           Finland
         </td>
         <td>
-          <CodeTags
-            code="fi"
+          <Tag
+            code={true}
+            text="fi"
             type="secondary"
           />
         </td>
@@ -563,8 +586,9 @@ exports[`Core: Iconography Flags renders 1`] = `
           EU
         </td>
         <td>
-          <CodeTags
-            code="eu"
+          <Tag
+            code={true}
+            text="eu"
             type="secondary"
           />
         </td>
@@ -696,8 +720,9 @@ exports[`Core: Iconography Flags renders 1`] = `
   </h3>
   <p>
     All flags can be used in a square format. In the example we see squared flags in the size tiny. All predefined sizes are available in combination with 
-    <CodeTags
-      code=".flag-icon-squared"
+    <Tag
+      code={true}
+      text=".flag-icon-squared"
       type="secondary"
     />
     . 
@@ -814,8 +839,9 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
   </h3>
   <p>
     To use an icon, provide the following markup: 
-    <CodeTags
-      code="<i class=\\"material-icons\\" aria-hidden=\\"true\\">{icon_name}</i>"
+    <Tag
+      code={true}
+      text="<i class=\\"material-icons\\" aria-hidden=\\"true\\">{icon_name}</i>"
       type="primary"
     />
   </p>
@@ -920,8 +946,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
   </h3>
   <p>
     To use an icon, provide the following markup: 
-    <CodeTags
-      code="<i class=\\"payment-icon payment-icon-{icon-name}\\" aria-hidden=\\"true\\" /i>"
+    <Tag
+      code={true}
+      text="<i class=\\"payment-icon payment-icon-{icon-name}\\" aria-hidden=\\"true\\" /i>"
       type="primary"
     />
   </p>
@@ -956,8 +983,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           Viabill
         </td>
         <td>
-          <CodeTags
-            code="viabill"
+          <Tag
+            code={true}
+            text="viabill"
             type="secondary"
           />
         </td>
@@ -976,8 +1004,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           Vipps
         </td>
         <td>
-          <CodeTags
-            code="vipps"
+          <Tag
+            code={true}
+            text="vipps"
             type="secondary"
           />
         </td>
@@ -996,8 +1025,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           Swish
         </td>
         <td>
-          <CodeTags
-            code="swish"
+          <Tag
+            code={true}
+            text="swish"
             type="secondary"
           />
         </td>
@@ -1016,8 +1046,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           MobilePay
         </td>
         <td>
-          <CodeTags
-            code="mobilepay"
+          <Tag
+            code={true}
+            text="mobilepay"
             type="secondary"
           />
         </td>
@@ -1036,8 +1067,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           CarPay
         </td>
         <td>
-          <CodeTags
-            code="carpay"
+          <Tag
+            code={true}
+            text="carpay"
             type="secondary"
           />
         </td>
@@ -1056,8 +1088,9 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           Trustly
         </td>
         <td>
-          <CodeTags
-            code="trustly"
+          <Tag
+            code={true}
+            text="trustly"
             type="secondary"
           />
         </td>

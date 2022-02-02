@@ -1,28 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: FilterTags prop type is marked as required 1`] = `
-<span
-  className="filter-tag"
->
-  <i
-    aria-hidden="true"
-    className="material-icons close-tag"
-  >
-    close
-  </i>
-</span>
+exports[`Component: Tag prop type string is marked as required 1`] = `
+<Fragment>
+  <span
+    className="tag primary "
+  />
+</Fragment>
 `;
 
-exports[`Component: FilterTags renders with class filter-tag 1`] = `
-<span
-  className="filter-tag"
->
-  Tag
-  <i
-    aria-hidden="true"
-    className="material-icons close-tag"
+exports[`Component: Tag renders code version of tag 1`] = `
+<Fragment>
+  <code
+    className="tag code primary"
   >
-    close
-  </i>
-</span>
+    Tag
+  </code>
+</Fragment>
+`;
+
+exports[`Component: Tag renders with class tag and with icon button 1`] = `
+<Fragment>
+  <span
+    className="tag primary removable"
+  >
+    Tag
+    <button
+      className="close-button"
+      type="button"
+    >
+      <i
+        aria-label="remove tag"
+        className="material-icons m-auto"
+      >
+        close
+      </i>
+    </button>
+  </span>
+</Fragment>
 `;

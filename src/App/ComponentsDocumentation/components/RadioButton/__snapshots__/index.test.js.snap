@@ -72,8 +72,9 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
   </span>
   <p>
     Disable a radio button by adding 
-    <CodeTags
-      code="disabled"
+    <Tag
+      code={true}
+      text="disabled"
       type="primary"
     />
      attribute to the desired radio button.

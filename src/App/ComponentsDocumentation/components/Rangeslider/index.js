@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import { howToUse, sliderShowCase } from "./constants";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 import RangesliderComponent from "~/src/App/components/Rangeslider";
 
 import { rangeslider } from "@src/scripts/main";
@@ -75,15 +75,15 @@ const DeveloperDocumentation = () => (
     <section>
         <h2 id="developer-documentation mb-3">Developer documentation</h2>
         <h3>Javascript methods</h3>
-        <p className="my-3">Use <CodeTags type="secondary" code="dg.rangeslider.init()"/> to <a href="/get-started/for-developers" >initialize</a> all rangesliders.</p>
-        <p>Or <CodeTags type="secondary" code='dg.rangeslider.init("component-id")'/> to initialize one specific component.</p>
+        <p className="my-3">Use <Tag code type="secondary" text="dg.rangeslider.init()"/> to <a href="/get-started/for-developers" >initialize</a> all rangesliders.</p>
+        <p>Or <Tag code type="secondary" text='dg.rangeslider.init("component-id")'/> to initialize one specific component.</p>
     </section>
 );
 
 const DisableState = () => (
     <>
         <h3>Disabled state</h3>
-        <p>Disable a slider by adding <CodeTags type="primary" code="disabled"/> attribute to the desired slider. </p>
+        <p>Disable a slider by adding <Tag code type="primary" text="disabled"/> attribute to the desired slider. </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className = "d-flex flex-column align-items-center">
                 <div className="py-3 col-12 col-lg-8">

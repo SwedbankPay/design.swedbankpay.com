@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer } from "@docutils";
 import Radio from "@components/FormComponents/Radio";
 import { radiobuttonShowCase, doOptions, dontOptions, ContentGuidelinesOptions } from "./constants";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 const HowTo = () => (
     <section id="how-to-container">
@@ -74,7 +74,7 @@ const DeveloperDocumentation = () => (
             </div>
         </div>
         <span className="h3 d-inline-block mt-3">Disabled state</span>
-        <p>Disable a radio button by adding <CodeTags type="primary" code="disabled"/> attribute to the desired radio button.</p>
+        <p>Disable a radio button by adding <Tag code type="primary" text="disabled"/> attribute to the desired radio button.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="d-flex justify-content-center">
                 <Radio id="radio-example-10" label="Radio button label" name="radio-example" disabled checked/>

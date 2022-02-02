@@ -62,23 +62,27 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
   </span>
   <p>
     If the user don’t select any option in a select that is required to be filled, an error message should be displayed. Add the 
-    <CodeTags
-      code=".has-error"
+    <Tag
+      code={true}
+      text=".has-error"
       type="secondary"
     />
      class to the 
-    <CodeTags
-      code="form-group"
+    <Tag
+      code={true}
+      text="form-group"
       type="primary"
     />
      element, and insert the error message in the attribute 
-    <CodeTags
-      code="data-error"
+    <Tag
+      code={true}
+      text="data-error"
       type="primary"
     />
      in the 
-    <CodeTags
-      code="help-block"
+    <Tag
+      code={true}
+      text="help-block"
       type="primary"
     />
      element. 
@@ -139,13 +143,15 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
   </span>
   <p>
     Disable a select by adding the 
-    <CodeTags
-      code="disabled"
+    <Tag
+      code={true}
+      text="disabled"
       type="primary"
     />
      attribute to the desired select and the 
-    <CodeTags
-      code="form-group"
+    <Tag
+      code={true}
+      text="form-group"
       type="primary"
     />
      where the select resides.

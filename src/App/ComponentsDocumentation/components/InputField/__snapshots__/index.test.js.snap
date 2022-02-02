@@ -283,8 +283,9 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
   </h3>
   <p>
     Add 
-    <CodeTags
-      code="autocomplete"
+    <Tag
+      code={true}
+      text="autocomplete"
       type="primary"
     />
      attributes to input fields when it is possible to make a form easier for users to fill. 
@@ -306,13 +307,15 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
   </h3>
   <p>
     Insert the error message in the attribute 
-    <CodeTags
-      code="data-error"
+    <Tag
+      code={true}
+      text="data-error"
       type="primary"
     />
      in the 
-    <CodeTags
-      code=".help-block"
+    <Tag
+      code={true}
+      text=".help-block"
       type="primary"
     />
      element. 
@@ -337,13 +340,15 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
   </h3>
   <p>
     Disable a input field by adding the 
-    <CodeTags
-      code="disabled"
+    <Tag
+      code={true}
+      text="disabled"
       type="primary"
     />
      attribute to the desired input field and the 
-    <CodeTags
-      code="form-group"
+    <Tag
+      code={true}
+      text="form-group"
       type="primary"
     />
      where the input field resides.
@@ -364,8 +369,9 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
     Javascript methods
   </h3>
   <p>
-    <CodeTags
-      code="dg.validation.init()"
+    <Tag
+      code={true}
+      text="dg.validation.init()"
       type="primary"
     />
      can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.
@@ -413,9 +419,24 @@ exports[`Component: InputField Overview renders 1`] = `
               <p>
                 The default input type is text but it can also be specified as for example Email which will make it automatically validated when submitted or Password which will mask the characters submitted.
               </p>
-              <p>
-                Input fields can have prefixes or postfixes which can help the user more quickly understand what kind of information that ius requested. These can be icons as well as text symbols or currency abbreviations like %, $ or kr.
-              </p>
+              <Alert
+                icon="info"
+                id="input-field-alert"
+                text={
+                  <p>
+                    <b>
+                      Usage with icon.
+                    </b>
+                     Remember to wrap your input field within an 
+                    <Tag
+                      code={true}
+                      text=".input-group"
+                      type="secondary"
+                    />
+                  </p>
+                }
+                type="informative"
+              />
             </React.Fragment>,
             "options": Object {
               "checkbox": Array [

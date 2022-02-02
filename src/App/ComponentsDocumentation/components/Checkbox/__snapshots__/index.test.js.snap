@@ -71,8 +71,9 @@ exports[`Component: Checkbox DeveloperDocumentation renders 1`] = `
   </span>
   <p>
     Disable a checkbox by adding 
-    <CodeTags
-      code="disabled"
+    <Tag
+      code={true}
+      text="disabled"
       type="primary"
     />
      attribute to the desired Checkbox.
@@ -100,13 +101,15 @@ exports[`Component: Checkbox DeveloperDocumentation renders 1`] = `
   </span>
   <p>
     Insert the error message in the attribute 
-    <CodeTags
-      code="data-error"
+    <Tag
+      code={true}
+      text="data-error"
       type="primary"
     />
      in the 
-    <CodeTags
-      code=".help-block"
+    <Tag
+      code={true}
+      text=".help-block"
       type="secondary"
     />
      element. 

@@ -1,6 +1,6 @@
 import React, { forwardRef, useRef } from "react";
 import { ComponentPreview, DocContainer } from "@docutils";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 import InputGroup from "@components/InputGroup";
 import { inputShowCase, textareaShowCase } from "./constants";
 
@@ -129,25 +129,25 @@ const DeveloperDocumentation = () => (
     <section id="developer-documentation-container">
         <h2 id="developer-documentation mb-3">Developer documentation</h2>
         <h3 className="mt-3">Autocomplete</h3>
-        <p>Add <CodeTags type="primary" code="autocomplete"/> attributes to input fields when it is possible to make a form easier for users to fill. </p>
+        <p>Add <Tag code type="primary" text="autocomplete"/> attributes to input fields when it is possible to make a form easier for users to fill. </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <InputGroup type="text" label="Name" autoComplete="name" id="developer-documentation-example" />
         </ComponentPreview>
 
         <h3>Error message</h3>
-        <p>Insert the error message in the attribute <CodeTags type="primary" code="data-error"/> in the <CodeTags type="primary" code=".help-block"/> element. </p>
+        <p>Insert the error message in the attribute <Tag code type="primary" text="data-error"/> in the <Tag code type="primary" text=".help-block"/> element. </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <InputGroup type="text" label="Input label" defaultValue="Input text" validationState="error" errorMessage="Descriptive helpful error message." helpBlock id="developer-documentation-error-example"/>
         </ComponentPreview>
 
         <h3>Disabled state</h3>
-        <p>Disable a input field by adding the <CodeTags type="primary" code="disabled"/> attribute to the desired input field and the <CodeTags type="primary" code="form-group"/> where the input field resides.</p>
+        <p>Disable a input field by adding the <Tag code type="primary" text="disabled"/> attribute to the desired input field and the <Tag code type="primary" text="form-group"/> where the input field resides.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <InputGroup type="text" label="Input label" placeholder="Placeholder text" disabled />
         </ComponentPreview>
 
         <h3>Javascript methods</h3>
-        <p><CodeTags type="primary" code="dg.validation.init()"/> can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.</p>
+        <p><Tag code type="primary" text="dg.validation.init()"/> can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.</p>
     </section>
 );
 

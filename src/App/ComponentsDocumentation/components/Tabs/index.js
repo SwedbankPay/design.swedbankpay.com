@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import TabsComponent from "@components/Tabs";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 import { tabsShowCasePanel } from "./constants";
 
 import { tabs } from "@src/scripts/main";
@@ -58,11 +58,11 @@ const DeveloperDocumentation = () => (
     <>
         <h2 id="developer-documentation">Developer documentation</h2>
         <span className="h3">Javascript methods</span>
-        <p className="my-3">Use <CodeTags type="secondary" code="dg.tabs.init()"/> to <a href="/get-started/for-developers" >initialize</a> all rangesliders.</p>
-        <p>Or <CodeTags type="secondary" code='dg.tabs.init("component-id")'/> to initialize one specific component.</p>
+        <p className="my-3">Use <Tag code type="secondary" text="dg.tabs.init()"/> to <a href="/get-started/for-developers" >initialize</a> all rangesliders.</p>
+        <p>Or <Tag code type="secondary" text='dg.tabs.init("component-id")'/> to initialize one specific component.</p>
         <h4>Move scroll position</h4>
         <p>
-            Moves the scroll position of the tabs to the user specified position. The value to be passed to <CodeTags type="secondary" code="scrollState" /> is the object <CodeTags type="secondary" code="{ scrollStart, scrollTotalAmount }" />. <CodeTags type="secondary" code="scrollStart" /> is the current scroll position, <CodeTags type="secondary" code="scrollTotalAmount" /> is the amount to be scrolled from the current scroll position (negative values for left scroll, positive values for right scroll). Note: <CodeTags type="primary" code={"<ul>"} /> is the scrollable element.
+            Moves the scroll position of the tabs to the user specified position. The value to be passed to <Tag code type="secondary" text="scrollState" /> is the object <Tag code type="secondary" text="{ scrollStart, scrollTotalAmount }" />. <Tag code type="secondary" text="scrollStart" /> is the current scroll position, <Tag code type="secondary" text="scrollTotalAmount" /> is the amount to be scrolled from the current scroll position (negative values for left scroll, positive values for right scroll). Note: <Tag code type="primary" text={"<ul>"} /> is the scrollable element.
         </p>
     </>
 );

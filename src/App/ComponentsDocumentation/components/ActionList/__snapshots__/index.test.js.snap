@@ -15,8 +15,9 @@ exports[`Components: ActionList Anchorpoints renders 1`] = `
   </h3>
   <p>
     Use class 
-    <CodeTags
-      code=".anchor-top-left"
+    <Tag
+      code={true}
+      text=".anchor-top-left"
       type="secondary"
     />
      to anchor action-list button to the top left corner of the menu.
@@ -55,8 +56,9 @@ exports[`Components: ActionList Anchorpoints renders 1`] = `
   </h3>
   <p>
     Use class 
-    <CodeTags
-      code=".anchor-bottom-right"
+    <Tag
+      code={true}
+      text=".anchor-bottom-right"
       type="secondary"
     />
      to anchor action-list button to the bottom right corner of the menu.
@@ -95,8 +97,9 @@ exports[`Components: ActionList Anchorpoints renders 1`] = `
   </h3>
   <p>
     Use class 
-    <CodeTags
-      code=".anchor-bottom-left"
+    <Tag
+      code={true}
+      text=".anchor-bottom-left"
       type="secondary"
     />
      to anchor action-list button to the bottom left corner of the menu.

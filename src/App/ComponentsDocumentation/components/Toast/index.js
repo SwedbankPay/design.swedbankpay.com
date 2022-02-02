@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer } from "@docutils";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 import { toastShowCase, optionsTable } from "./constants";
 
 const Overview = () => (
@@ -76,7 +76,7 @@ const ContentGuidelines = () => (
 const DeveloperDocumentation = () => (
     <section id="developer-documentation">
         <h2>Developer documentation</h2>
-        <p>To use the Toast, call <CodeTags type="secondary" code="dg.toast()" /> with the desired options.</p>
+        <p>To use the Toast, call <Tag code type="secondary" text="dg.toast()" /> with the desired options.</p>
         <ComponentPreview language="html" codeFigure dangerousHTML>
             {"<button type=\"button\" class=\"btn btn-primary\" onclick=\"dg.toast({\n\ttype: 'neutral' \n\thtml: '<p><b>Info header</b>\n\t\t Input informative alert information here, provide <a href=\"#\">link</a> to solution or more info when possible.\n\t</p>'})\">Neutral toast\n</button>"}
         </ComponentPreview>
@@ -103,7 +103,7 @@ const DeveloperDocumentation = () => (
         </div>
         <section>
             <h3>Usage with NPM</h3>
-            <p><Link to="/get-started/for-developers/">Usage with NPM</Link> will require you to import it from <CodeTags type="primary" code="@swedbankpay/design-guide" /> before calling it on an element.</p>
+            <p><Link to="/get-started/for-developers/">Usage with NPM</Link> will require you to import it from <Tag code type="primary" text="@swedbankpay/design-guide" /> before calling it on an element.</p>
             <ComponentPreview language="javascript" codeFigure dangerousHTML>
                 import &#123; toast &#125; from &quot;@swedbankpay/design-guide&quot;; {"\n"}
                 toast(&#123;{"\n\ttype: 'neutral' \n\thtml: '<p>\n\t\t<b>Info header</b>\n\t\t Input informative alert information here, provide <a href=\"#\">link</a> to solution or more info when possible.\n\t</p>'"}{"\n"}&#125;)

@@ -2,7 +2,7 @@ import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import BreadcrumbComponent from "@components/Breadcrumb";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 const BasicBreadCrumb = () => {
     const items = [
@@ -24,9 +24,9 @@ const BasicBreadCrumb = () => {
     return (
         <>
             <h2 id="basic-usage">Basic usage</h2>
-            <p>Add class <CodeTags type="secondary" code=".breadcrumb" /> to a containing <CodeTags type="primary" code={"<ol>"} /> element and nest
-            a <CodeTags type="primary" code={"<a>"} /> or <CodeTags type="primary" code={"<span>"} /> element inside
-            the <CodeTags type="primary" code={"<li>"} /> elements.</p>
+            <p>Add class <Tag code type="secondary" text=".breadcrumb" /> to a containing <Tag code type="primary" text={"<ol>"} /> element and nest
+            a <Tag code type="primary" text={"<a>"} /> or <Tag code type="primary" text={"<span>"} /> element inside
+            the <Tag code type="primary" text={"<li>"} /> elements.</p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <BreadcrumbComponent items={items} />
             </ComponentPreview>
@@ -51,8 +51,8 @@ const DisabledBreadcrumb = () => {
     return (
         <>
             <h2 id="disable-a-breadcrumb">Disable a breadcrumb</h2>
-            <p>To disable a breadcrumb element, simply use a <CodeTags type="primary" code={"<span>"} /> element within
-            the <CodeTags type="primary" code={"<li>"} /> element (will not work for last-child).</p>
+            <p>To disable a breadcrumb element, simply use a <Tag code type="primary" text={"<span>"} /> element within
+            the <Tag code type="primary" text={"<li>"} /> element (will not work for last-child).</p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <BreadcrumbComponent items={items} />
             </ComponentPreview>

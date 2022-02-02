@@ -9,8 +9,9 @@ exports[`Components: Expandable ExpandableGroup renders 1`] = `
   </h2>
   <p>
     If you use a wrapper with 
-    <CodeTags
-      code=".expandable-group"
+    <Tag
+      code={true}
+      text=".expandable-group"
       type="secondary"
     />
      then only one expandable can be open at the same time.
@@ -61,13 +62,15 @@ exports[`Components: Expandable Overview renders 1`] = `
   </h2>
   <p>
     The expandable component shows only what is contained in the 
-    <CodeTags
-      code=".expandable-header"
+    <Tag
+      code={true}
+      text=".expandable-header"
       type="secondary"
     />
      when it is closed. 
-    <CodeTags
-      code=".expandable-body"
+    <Tag
+      code={true}
+      text=".expandable-body"
       type="secondary"
     />
      will be visible in its open state.
@@ -112,7 +115,7 @@ exports[`Components: Expandable renders 1`] = `
   <p
     className="lead"
   >
-    Expandables toggle between hiding and showing content on click.
+    Expendables toggle between hiding and showing content on click.
   </p>
   <Overview />
   <ExpandableGroup />

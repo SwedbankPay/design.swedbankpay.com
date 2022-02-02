@@ -15,8 +15,9 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
       Typography
     </Link>
     . Using 
-    <CodeTags
-      code="<code>"
+    <Tag
+      code={true}
+      text="<code>"
       type="primary"
     />
      without any specied styling will result in the primary styling being applied. Chose which option that is more suitable for your project, or combine them to differentiate between different coding languages or styles.
@@ -41,8 +42,9 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
       
 
       This is an example of inline code 
-      <CodeTags
-        code="<ComponentName />"
+      <Tag
+        code={true}
+        text="<ComponentName />"
         type="primary"
       />
        with specified class.
@@ -53,8 +55,9 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
       
 
       This is another example of inline code 
-      <CodeTags
-        code="property.function()"
+      <Tag
+        code={true}
+        text="property.function()"
         type="secondary"
       />
        with another class to differentiate.

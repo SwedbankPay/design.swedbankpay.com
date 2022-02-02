@@ -3,7 +3,7 @@ import { DocContainer } from "@docutils";
 
 import Button from "@components/Button";
 import Checkbox from "@components/FormComponents/Checkbox";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 import InputGroup from "@components/InputGroup";
 import RadioButton from "@components/FormComponents/Radio";
 
@@ -195,12 +195,12 @@ const DeveloperDocumentation = () => (
         <h2 id="developer-documentation">Developer documentation</h2>
         <section>
             <h3>Errors and validation</h3>
-            <p>To use our validation, start by adding the attribute <CodeTags type="secondary" code="novalidate" /> to your <CodeTags type="primary" code={"<form>"} /> element.
-            If you wish to validate your entire form, add the <CodeTags type="secondary" code="validate" /> attribute to the <CodeTags type="primary" code={"<form>"}/> tag,
-            if not add it to the desired <CodeTags type="primary" code={"<input>"}/> tags. This will validate against <CodeTags type="secondary" code="required" /> and <CodeTags type="secondary" code="pattern" />, where pattern will override default patterns.</p>
+            <p>To use our validation, start by adding the attribute <Tag codes type="secondary" text="novalidate" /> to your <Tag codes type="primary" text={"<form>"} /> element.
+            If you wish to validate your entire form, add the <Tag codes type="secondary" text="validate" /> attribute to the <Tag codes type="primary" text={"<form>"}/> tag,
+            if not add it to the desired <Tag codes type="primary" text={"<input>"}/> tags. This will validate against <Tag codes type="secondary" text="required" /> and <Tag codes type="secondary" text="pattern" />, where pattern will override default patterns.</p>
 
             <b className="brand-headline">Client-side validation</b>
-            <p>Use client-side validation to validate as much data as possible before the user submits the form. Common errors include empty required fields, invalid characters or incorrect input format. To give users inline validation feedback insert a error message within the <CodeTags type="primary" code="form-group"/> in the <CodeTags type="primary" code="help-block"/> element in the attribute <CodeTags type="primary" code="data-error"/>.</p>
+            <p>Use client-side validation to validate as much data as possible before the user submits the form. Common errors include empty required fields, invalid characters or incorrect input format. To give users inline validation feedback insert a error message within the <Tag codes type="primary" text="form-group"/> in the <Tag codes type="primary" text="help-block"/> element in the attribute <Tag codes type="primary" text="data-error"/>.</p>
 
             <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag>
                 <div className="col-12 col-sm-6 m-auto pt-3">
@@ -223,7 +223,7 @@ const DeveloperDocumentation = () => (
         </section>
         <section>
             <h3>Fieldset</h3>
-            <p>You can use the <CodeTags type="primary" code="<fieldset>" /> to group related elements in a <CodeTags type="primary" code="form" /> and create more structure.</p>
+            <p>You can use the <Tag codes type="primary" text="<fieldset>" /> to group related elements in a <Tag codes type="primary" text="form" /> and create more structure.</p>
 
             <ComponentPreview language="html" codeFigure showCasePanel>
                 <div className="col-12 col-sm-6 m-auto">
@@ -248,7 +248,7 @@ const DeveloperDocumentation = () => (
         </section>
         <section>
             <h3>Disabled state</h3>
-            <p>You can disable an entire fieldset by adding <CodeTags type="primary" code="disabled"/> to the fieldset element. </p>
+            <p>You can disable an entire fieldset by adding <Tag codes type="primary" text="disabled"/> to the fieldset element. </p>
 
             <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag>
                 <div className="col-12 col-sm-6 m-auto">
@@ -260,7 +260,7 @@ const DeveloperDocumentation = () => (
                     </fieldset>
                 </div>
             </ComponentPreview>
-            <p>If you only wish to disable a specific form component, add the <CodeTags type="primary" code="disabled"/> attribute to the desired component.</p>
+            <p>If you only wish to disable a specific form component, add the <Tag codes type="primary" text="disabled"/> attribute to the desired component.</p>
 
             <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag>
                 <div className="col-12 col-sm-6 m-auto">
@@ -275,7 +275,7 @@ const DeveloperDocumentation = () => (
         </section>
         <section>
             <h3>Form grid</h3>
-            <p>If you need more than one column in your form, you can use the grid system to customize how forms are displayed. Wrap your form elements in a row container and remember to add <CodeTags type="secondary" code=".col-{your_size}"/> to the <CodeTags type="secondary" code=".form-group"/>.</p>
+            <p>If you need more than one column in your form, you can use the grid system to customize how forms are displayed. Wrap your form elements in a row container and remember to add <Tag codes type="secondary" text=".col-{your_size}"/> to the <Tag codes type="secondary" text=".form-group"/>.</p>
         </section>
         <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag>
             <div className="col-12 col-sm-10 m-auto pt-2">
@@ -290,11 +290,11 @@ const DeveloperDocumentation = () => (
         </ComponentPreview>
         <section>
             <h3>Static text</h3>
-            <p>To display static text in a form use <CodeTags type="secondary" code="<span>" /></p>
+            <p>To display static text in a form use <Tag codes type="secondary" text="<span>" /></p>
         </section>
         <section>
             <h3>JavaScript methods</h3>
-            <p><CodeTags type="primary" code="dg.validation.init()" /> can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.</p>
+            <p><Tag codes type="primary" text="dg.validation.init()" /> can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.</p>
         </section>
     </section>
 );

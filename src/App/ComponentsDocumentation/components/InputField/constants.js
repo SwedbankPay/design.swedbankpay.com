@@ -1,5 +1,7 @@
 import React from "react";
 import InputGroup from "@components/InputGroup";
+import Tag from "@components/Tag";
+import Alert from "@components/Alert";
 
 export const inputShowCase = {
     id: "no-tabs",
@@ -97,7 +99,7 @@ export const inputShowCase = {
             description: <>
                 <p>Inputs fields have a few different states which includes the default state, focus state, disabled state and error state.</p>
                 <p>The default input type is text but it can also be specified as for example Email which will make it automatically validated when submitted or Password which will mask the characters submitted.</p>
-                <p>Input fields can have prefixes or postfixes which can help the user more quickly understand what kind of information that ius requested. These can be icons as well as text symbols or currency abbreviations like %, $ or kr.</p>
+                <Alert id="input-field-alert" type="informative" icon={"info"} text={<p><b>Usage with icon.</b> Remember to wrap your input field within an <Tag code type="secondary" text=".input-group" /></p>}/>
             </>
         }
     ]

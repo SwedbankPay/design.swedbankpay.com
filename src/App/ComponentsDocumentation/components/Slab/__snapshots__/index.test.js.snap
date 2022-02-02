@@ -80,8 +80,9 @@ exports[`Components: Slab SlabArrow renders 1`] = `
     Slab arrow
   </h2>
   <p>
-    <CodeTags
-      code=".slab-arrow"
+    <Tag
+      code={true}
+      text=".slab-arrow"
       type="secondary"
     />
      inherits the color from the slab it is appended to.
@@ -210,18 +211,21 @@ exports[`Components: Slab SlabColors renders 1`] = `
   </h2>
   <p>
     We offer three additional slab types; 
-    <CodeTags
-      code=".slab-primary"
+    <Tag
+      code={true}
+      text=".slab-primary"
       type="secondary"
     />
     , 
-    <CodeTags
-      code=".slab-secondary"
+    <Tag
+      code={true}
+      text=".slab-secondary"
       type="secondary"
     />
      and 
-    <CodeTags
-      code=".slab-plain"
+    <Tag
+      code={true}
+      text=".slab-plain"
       type="secondary"
     />
     .
@@ -303,8 +307,9 @@ exports[`Components: Slab SlabColors renders 1`] = `
   </ComponentPreview>
   <p>
     If no slab extension class is added, it is defaulted to white. In this example we use the utility class 
-    <CodeTags
-      code=".border"
+    <Tag
+      code={true}
+      text=".border"
       type="secondary"
     />
      to make it easier for us to see the actual slab container.

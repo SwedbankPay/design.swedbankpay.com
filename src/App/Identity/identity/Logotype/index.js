@@ -1,7 +1,8 @@
 import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
+import { logoBlack, logoWhite } from "./constants";
 import LogotypeComponent from "@components/Logotype";
 import { logoBlack, logoWhite, logoPayex } from "./constants";
 
@@ -191,10 +192,10 @@ const Favicon = () => (
             </div>
         }
 
-        <p>To add a favicon to your application, download the favicon assets and extract it to the root of your build-folder. Insert the code below in the <CodeTags type="primary" code={"<head>"} /> tag of your HTML documents and you are ready to go.</p>
-        <p>You should also rename the <CodeTags type="secondary" code="content" /> of
-        the <CodeTags type="secondary" code="apple-mobile-web-app-title" /> and <CodeTags type="secondary" code="application-name" /> <CodeTags type="primary" code={"<meta>"} /> tags
-        to reflect the title of your project. Make sure to also do this in the <CodeTags type="secondary" code="manifest.json" /> file in the icons folder.</p>
+        <p>To add a favicon to your application, download the favicon assets and extract it to the root of your build-folder. Insert the code below in the <Tag code type="primary" text={"<head>"} /> tag of your HTML documents and you are ready to go.</p>
+        <p>You should also rename the <Tag code type="secondary" text="content" /> of
+        the <Tag code type="secondary" text="apple-mobile-web-app-title" /> and <Tag code type="secondary" text="application-name" /> <Tag code type="primary" text={"<meta>"} /> tags
+        to reflect the title of your project. Make sure to also do this in the <Tag code type="secondary" text="manifest.json" /> file in the icons folder.</p>
 
         {brand === "payex"
             ? <a className="btn btn-primary" href={`${basename}release/icons.zip`}>
@@ -266,7 +267,7 @@ const Overview = () => (
             <span className="ml-2">Download Swedbank Pay logotype assets</span>
         </a>
 
-        <p>The logotype is vectorized and all versions are provided as <CodeTags type="secondary" code=".svg" /> files, it is also available in <CodeTags type="secondary" code=".png" /> for contexts that might not support vectorized files. The sizes described are recommended sizes and if there is a need to scale the logotype, make sure the coin diameter is no smaller than at least 24 px and a multiple of 8.</p>
+        <p>The logotype is vectorized and all versions are provided as <Tag code type="secondary" text=".svg" /> files, it is also available in <Tag code type="secondary" text=".png" /> for contexts that might not support vectorized files. The sizes described are recommended sizes and if there is a need to scale the logotype, make sure the coin diameter is no smaller than at least 24 px and a multiple of 8.</p>
     </section>
 );
 

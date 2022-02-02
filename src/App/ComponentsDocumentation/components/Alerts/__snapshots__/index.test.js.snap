@@ -79,16 +79,18 @@ exports[`Documentation: Alerts Developer documentation renders 1`] = `
     className="mt-2"
   >
     Use 
-    <CodeTags
-      code="dg.alert.init()"
+    <Tag
+      code={true}
+      text="dg.alert.init()"
       type="secondary"
     />
      to initialize all alerts.
   </p>
   <p>
     Use 
-    <CodeTags
-      code="dg.alert.init(\\"component-id\\")"
+    <Tag
+      code={true}
+      text="dg.alert.init(\\"component-id\\")"
       type="secondary"
     />
      to initialize one specific component.

@@ -9,8 +9,9 @@ exports[`Utilities: Colors BackgroundColors renders 1`] = `
   </h2>
   <p>
     To alter the background-color of an element, add the class 
-    <CodeTags
-      code="background-{name}"
+    <Tag
+      code={true}
+      text="background-{name}"
       type="secondary"
     />
     .
@@ -76,8 +77,9 @@ exports[`Utilities: Colors TextColors renders 1`] = `
   </h2>
   <p>
     To use a color simply prepend 
-    <CodeTags
-      code=".text-{name}"
+    <Tag
+      code={true}
+      text=".text-{name}"
       type="secondary"
     />
     .
@@ -135,20 +137,23 @@ exports[`Utilities: Colors TextColors renders 1`] = `
   </ComponentPreview>
   <h3>
     With 
-    <CodeTags
-      code=".text-muted"
+    <Tag
+      code={true}
+      text=".text-muted"
       type="secondary"
     />
   </h3>
   <p>
     To get a muted effect on the color you are using, append a 
-    <CodeTags
-      code="<span>"
+    <Tag
+      code={true}
+      text="<span>"
       type="primary"
     />
     -element with the class 
-    <CodeTags
-      code=".text-muted"
+    <Tag
+      code={true}
+      text=".text-muted"
       type="secondary"
     />
      to the desired element.

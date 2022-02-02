@@ -48,8 +48,8 @@ exports[`Component: Togglebox DeveloperDocumentation renders 1`] = `
   </span>
   <p>
     Use the 
-    <CodeTags
-      code="checked"
+    <Tag
+      text="checked"
       type="primary"
     />
      attribute to enable a toggle.
@@ -78,9 +78,9 @@ exports[`Component: Togglebox DeveloperDocumentation renders 1`] = `
   </span>
   <p>
     Disable a toggle by adding 
-    <CodeTags
-      code="disabled"
-      type="primary"
+    <Tag
+      codetype="primary"
+      text="disabled"
     />
      attribute to the desired toggle.
   </p>

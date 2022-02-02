@@ -2,7 +2,7 @@ import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import StepsComponent from "@components/Steps";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 const BasicSteps = () => {
     const steps = [
@@ -61,7 +61,7 @@ const VerticalSteps = () => {
         <>
             <h2 id="vertical-steps">Vertical steps</h2>
             <p>
-                If you wish to use steps vertically you can add <CodeTags type="secondary" code=".steps-vertical" /> to the <CodeTags type="primary" code={"<div>"} /> element.
+                If you wish to use steps vertically you can add <Tag code type="secondary" text=".steps-vertical" /> to the <Tag code type="primary" text={"<div>"} /> element.
             </p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <StepsComponent steps={steps} vertical />
@@ -103,7 +103,7 @@ const ClickableSteps = () => {
         <>
             <h2 id="clickable-steps">Clickable steps</h2>
             <p>
-                Add an anchor element (<CodeTags type="primary" code={"<a>"} />) to the list item element ( <CodeTags type="primary" code={"<li>"} />).
+                Add an anchor element (<Tag code type="primary" text={"<a>"} />) to the list item element ( <Tag code type="primary" text={"<li>"} />).
                 Ensure that all content within the list element is also inside the anchor element.
             </p>
             <ComponentPreview language="html" showCasePanel codeFigure>

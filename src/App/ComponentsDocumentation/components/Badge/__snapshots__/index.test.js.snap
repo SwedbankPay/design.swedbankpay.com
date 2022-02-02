@@ -9,8 +9,9 @@ exports[`Components: Badge BadgeNumber renders 1`] = `
   </h2>
   <p>
     Badges are often used with numbers. Use 
-    <CodeTags
-      code=".badge-number"
+    <Tag
+      code={true}
+      text=".badge-number"
       type="secondary"
     />
      when a badge suited for use with numbers is desired.
@@ -57,13 +58,15 @@ exports[`Components: Badge Overview renders 1`] = `
   </h2>
   <p>
     Use class 
-    <CodeTags
-      code=".badge"
+    <Tag
+      code={true}
+      text=".badge"
       type="secondary"
     />
      along with 
-    <CodeTags
-      code=".badge-{color}"
+    <Tag
+      code={true}
+      text=".badge-{color}"
       type="secondary"
     />
      to display the badge of your choosing.

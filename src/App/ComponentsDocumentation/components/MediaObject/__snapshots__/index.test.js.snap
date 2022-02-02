@@ -9,8 +9,9 @@ exports[`Documentation: MediaObject MediaPosition renders 1`] = `
   </h2>
   <p>
     Use the 
-    <CodeTags
-      code=".media-right"
+    <Tag
+      code={true}
+      text=".media-right"
       type="secondary"
     />
      class to align the media content to the right.
@@ -45,8 +46,9 @@ exports[`Documentation: MediaObject Overview renders 1`] = `
   </h2>
   <p>
     Use the 
-    <CodeTags
-      code=".media"
+    <Tag
+      code={true}
+      text=".media"
       type="secondary"
     />
      class on an object to style it as a small container that feature a left- or right-aligned image/icon alongside textual content.
@@ -79,13 +81,15 @@ exports[`Documentation: MediaObject Sizes renders 1`] = `
   </h2>
   <p>
     Use 
-    <CodeTags
-      code=".media-sm"
+    <Tag
+      code={true}
+      text=".media-sm"
       type="secondary"
     />
      or 
-    <CodeTags
-      code=".media-lg"
+    <Tag
+      code={true}
+      text=".media-lg"
       type="secondary"
     />
      to modify the size of your media objects.

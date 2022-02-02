@@ -226,38 +226,45 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       To use our validation, start by adding the attribute 
-      <CodeTags
-        code="novalidate"
+      <Tag
+        codes={true}
+        text="novalidate"
         type="secondary"
       />
        to your 
-      <CodeTags
-        code="<form>"
+      <Tag
+        codes={true}
+        text="<form>"
         type="primary"
       />
        element. If you wish to validate your entire form, add the 
-      <CodeTags
-        code="validate"
+      <Tag
+        codes={true}
+        text="validate"
         type="secondary"
       />
        attribute to the 
-      <CodeTags
-        code="<form>"
+      <Tag
+        codes={true}
+        text="<form>"
         type="primary"
       />
        tag, if not add it to the desired 
-      <CodeTags
-        code="<input>"
+      <Tag
+        codes={true}
+        text="<input>"
         type="primary"
       />
        tags. This will validate against 
-      <CodeTags
-        code="required"
+      <Tag
+        codes={true}
+        text="required"
         type="secondary"
       />
        and 
-      <CodeTags
-        code="pattern"
+      <Tag
+        codes={true}
+        text="pattern"
         type="secondary"
       />
       , where pattern will override default patterns.
@@ -269,18 +276,21 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     </b>
     <p>
       Use client-side validation to validate as much data as possible before the user submits the form. Common errors include empty required fields, invalid characters or incorrect input format. To give users inline validation feedback insert a error message within the 
-      <CodeTags
-        code="form-group"
+      <Tag
+        codes={true}
+        text="form-group"
         type="primary"
       />
        in the 
-      <CodeTags
-        code="help-block"
+      <Tag
+        codes={true}
+        text="help-block"
         type="primary"
       />
        element in the attribute 
-      <CodeTags
-        code="data-error"
+      <Tag
+        codes={true}
+        text="data-error"
         type="primary"
       />
       .
@@ -339,13 +349,15 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       You can use the 
-      <CodeTags
-        code="<fieldset>"
+      <Tag
+        codes={true}
+        text="<fieldset>"
         type="primary"
       />
        to group related elements in a 
-      <CodeTags
-        code="form"
+      <Tag
+        codes={true}
+        text="form"
         type="primary"
       />
        and create more structure.
@@ -415,8 +427,9 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       You can disable an entire fieldset by adding 
-      <CodeTags
-        code="disabled"
+      <Tag
+        codes={true}
+        text="disabled"
         type="primary"
       />
        to the fieldset element. 
@@ -460,8 +473,9 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     </ComponentPreview>
     <p>
       If you only wish to disable a specific form component, add the 
-      <CodeTags
-        code="disabled"
+      <Tag
+        codes={true}
+        text="disabled"
         type="primary"
       />
        attribute to the desired component.
@@ -509,13 +523,15 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       If you need more than one column in your form, you can use the grid system to customize how forms are displayed. Wrap your form elements in a row container and remember to add 
-      <CodeTags
-        code=".col-{your_size}"
+      <Tag
+        codes={true}
+        text=".col-{your_size}"
         type="secondary"
       />
        to the 
-      <CodeTags
-        code=".form-group"
+      <Tag
+        codes={true}
+        text=".form-group"
         type="secondary"
       />
       .
@@ -563,8 +579,9 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       To display static text in a form use 
-      <CodeTags
-        code="<span>"
+      <Tag
+        codes={true}
+        text="<span>"
         type="secondary"
       />
     </p>
@@ -574,8 +591,9 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       JavaScript methods
     </h3>
     <p>
-      <CodeTags
-        code="dg.validation.init()"
+      <Tag
+        codes={true}
+        text="dg.validation.init()"
         type="primary"
       />
        can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.

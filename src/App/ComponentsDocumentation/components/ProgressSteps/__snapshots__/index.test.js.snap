@@ -50,13 +50,15 @@ exports[`Documentation: Progress Steps ClickableSteps renders 1`] = `
   </h2>
   <p>
     Add an anchor element (
-    <CodeTags
-      code="<a>"
+    <Tag
+      code={true}
+      text="<a>"
       type="primary"
     />
     ) to the list item element ( 
-    <CodeTags
-      code="<li>"
+    <Tag
+      code={true}
+      text="<li>"
       type="primary"
     />
     ). Ensure that all content within the list element is also inside the anchor element.
@@ -110,13 +112,15 @@ exports[`Documentation: Progress Steps VerticalSteps renders 1`] = `
   </h2>
   <p>
     If you wish to use steps vertically you can add 
-    <CodeTags
-      code=".steps-vertical"
+    <Tag
+      code={true}
+      text=".steps-vertical"
       type="secondary"
     />
      to the 
-    <CodeTags
-      code="<div>"
+    <Tag
+      code={true}
+      text="<div>"
       type="primary"
     />
      element.

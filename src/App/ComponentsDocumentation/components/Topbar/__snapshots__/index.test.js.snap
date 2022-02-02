@@ -27,16 +27,18 @@ exports[`Components: Topbar Overview renders 1`] = `
   </p>
   <ul>
     <li>
-      <CodeTags
-        code=".topbar"
+      <Tag
+        code={true}
+        text=".topbar"
         type="secondary"
       />
        wrapper.
     </li>
     <li>
       Anchor with class 
-      <CodeTags
-        code=".topbar-logo"
+      <Tag
+        code={true}
+        text=".topbar-logo"
         type="secondary"
       />
        to display the logo and make it clickable.
@@ -46,23 +48,27 @@ exports[`Components: Topbar Overview renders 1`] = `
     With this you get a topbar with the 
     TESTBRAND
      logo. In the topbar you can add additional functionality like a menu containing links. To enable this add a 
-    <CodeTags
-      code="<button>"
+    <Tag
+      code={true}
+      text="<button>"
       type="primary"
     />
      and a 
-    <CodeTags
-      code="<nav>"
+    <Tag
+      code={true}
+      text="<nav>"
       type="primary"
     />
      containing anchors. Remember to include 
-    <CodeTags
-      code="toggle-nav=\\"{your_nav_id}\\""
+    <Tag
+      code={true}
+      text="toggle-nav=\\"{your_nav_id}\\""
       type="secondary"
     />
      as a 
-    <CodeTags
-      code="<button>"
+    <Tag
+      code={true}
+      text="<button>"
       type="primary"
     />
      attribute to get the menu to appear when the menu-button is clicked.
@@ -114,13 +120,15 @@ exports[`Components: Topbar TopbarPNG renders 1`] = `
   </h2>
   <p>
     A PNG version of the logo can also be used. This is done by appending the class 
-    <CodeTags
-      code=".topbar-logo-png"
+    <Tag
+      code={true}
+      text=".topbar-logo-png"
       type="secondary"
     />
      to the anchor with class 
-    <CodeTags
-      code=".topbar-logo"
+    <Tag
+      code={true}
+      text=".topbar-logo"
       type="secondary"
     />
     . Only consider using the PNG version when there are issues with using the SVG version.
@@ -204,18 +212,21 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
   </h2>
   <p>
     A sticky topbar is also available, with class 
-    <CodeTags
-      code=".topbar-sticky"
+    <Tag
+      code={true}
+      text=".topbar-sticky"
       type="secondary"
     />
     . Use 
-    <CodeTags
-      code=".topbar-min-{breakpoint}-sticky"
+    <Tag
+      code={true}
+      text=".topbar-min-{breakpoint}-sticky"
       type="secondary"
     />
      to specify the minimum width the topbar should be sticky, or 
-    <CodeTags
-      code=".topbar-max-{breakpoint}-sticky"
+    <Tag
+      code={true}
+      text=".topbar-max-{breakpoint}-sticky"
       type="secondary"
     />
      to specify the maximum width the topbar should be sticky (see 

@@ -54,31 +54,36 @@ exports[`Utilities: Display HidingElements renders 1`] = `
   </p>
   <p>
     To hide elements simply use the 
-    <CodeTags
-      code=".d-none"
+    <Tag
+      code={true}
+      text=".d-none"
       type="secondary"
     />
      class or one of the 
-    <CodeTags
-      code=".d-{sm,md,lg,xl}-none"
+    <Tag
+      code={true}
+      text=".d-{sm,md,lg,xl}-none"
       type="secondary"
     />
      classes for any responsive screen variation.
   </p>
   <p>
     To show an element only on a given interval of screen sizes you can combine one 
-    <CodeTags
-      code=".d-*-none"
+    <Tag
+      code={true}
+      text=".d-*-none"
       type="secondary"
     />
      class with a 
-    <CodeTags
-      code=".d-*-*"
+    <Tag
+      code={true}
+      text=".d-*-*"
       type="secondary"
     />
      class, for example 
-    <CodeTags
-      code=".d-none .d-md-block .d-xl-none"
+    <Tag
+      code={true}
+      text=".d-none .d-md-block .d-xl-none"
       type="secondary"
     />
      will hide the element for all screen sizes except on medium and large devices.
@@ -102,8 +107,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden on all
         </td>
         <td>
-          <CodeTags
-            code=".d-none"
+          <Tag
+            code={true}
+            text=".d-none"
             type="secondary"
           />
         </td>
@@ -113,8 +119,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden only on xs
         </td>
         <td>
-          <CodeTags
-            code=".d-none .d-sm-block"
+          <Tag
+            code={true}
+            text=".d-none .d-sm-block"
             type="secondary"
           />
         </td>
@@ -124,8 +131,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden only on sm
         </td>
         <td>
-          <CodeTags
-            code=".d-sm-none .d-md-block"
+          <Tag
+            code={true}
+            text=".d-sm-none .d-md-block"
             type="secondary"
           />
         </td>
@@ -135,8 +143,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden only on md
         </td>
         <td>
-          <CodeTags
-            code=".d-md-none .d-lg-block"
+          <Tag
+            code={true}
+            text=".d-md-none .d-lg-block"
             type="secondary"
           />
         </td>
@@ -146,8 +155,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden only on lg
         </td>
         <td>
-          <CodeTags
-            code=".d-lg-none .d-xl-block"
+          <Tag
+            code={true}
+            text=".d-lg-none .d-xl-block"
             type="secondary"
           />
         </td>
@@ -157,8 +167,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden only on xl
         </td>
         <td>
-          <CodeTags
-            code=".d-xl-none .d-xxl-block"
+          <Tag
+            code={true}
+            text=".d-xl-none .d-xxl-block"
             type="secondary"
           />
         </td>
@@ -168,8 +179,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Hidden only on xxl
         </td>
         <td>
-          <CodeTags
-            code=".d-xxl-none"
+          <Tag
+            code={true}
+            text=".d-xxl-none"
             type="secondary"
           />
         </td>
@@ -179,8 +191,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible on all
         </td>
         <td>
-          <CodeTags
-            code=".d-block"
+          <Tag
+            code={true}
+            text=".d-block"
             type="secondary"
           />
         </td>
@@ -190,8 +203,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible only on xs
         </td>
         <td>
-          <CodeTags
-            code=".d-block .d-sm-none"
+          <Tag
+            code={true}
+            text=".d-block .d-sm-none"
             type="secondary"
           />
         </td>
@@ -201,8 +215,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible only on sm
         </td>
         <td>
-          <CodeTags
-            code=".d-sm-block .d-md-none"
+          <Tag
+            code={true}
+            text=".d-sm-block .d-md-none"
             type="secondary"
           />
         </td>
@@ -212,8 +227,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible only on md
         </td>
         <td>
-          <CodeTags
-            code=".d-md-block .d-lg-none"
+          <Tag
+            code={true}
+            text=".d-md-block .d-lg-none"
             type="secondary"
           />
         </td>
@@ -223,8 +239,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible only on lg
         </td>
         <td>
-          <CodeTags
-            code=".d-lg-block .d-xl-none"
+          <Tag
+            code={true}
+            text=".d-lg-block .d-xl-none"
             type="secondary"
           />
         </td>
@@ -234,8 +251,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible only on xl
         </td>
         <td>
-          <CodeTags
-            code=".d-xl-block .d-xxl-none"
+          <Tag
+            code={true}
+            text=".d-xl-block .d-xxl-none"
             type="secondary"
           />
         </td>
@@ -245,8 +263,9 @@ exports[`Utilities: Display HidingElements renders 1`] = `
           Visible only on xxl
         </td>
         <td>
-          <CodeTags
-            code=".d-xxl-block"
+          <Tag
+            code={true}
+            text=".d-xxl-block"
             type="secondary"
           />
         </td>
@@ -287,8 +306,9 @@ exports[`Utilities: Display HowItWorks renders 1`] = `
       display property
     </a>
      with our responsive display utility classes. We purposely support only a subset of all possible values for 
-    <CodeTags
-      code="display"
+    <Tag
+      code={true}
+      text="display"
       type="secondary"
     />
     . Classes can be combined for various effects as you need.
@@ -311,18 +331,21 @@ exports[`Utilities: Display Notation renders 1`] = `
       breakpoints
     </Link>
     , from 
-    <CodeTags
-      code="xs"
+    <Tag
+      code={true}
+      text="xs"
       type="secondary"
     />
      to 
-    <CodeTags
-      code="xxl"
+    <Tag
+      code={true}
+      text="xxl"
       type="secondary"
     />
     , have no breakpoint abbreviation in them. This is because those classes are applied from 
-    <CodeTags
-      code="min-width: 0;"
+    <Tag
+      code={true}
+      text="min-width: 0;"
       type="secondary"
     />
      and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
@@ -332,44 +355,52 @@ exports[`Utilities: Display Notation renders 1`] = `
   </p>
   <ul>
     <li>
-      <CodeTags
-        code=".d-{value}"
+      <Tag
+        code={true}
+        text=".d-{value}"
         type="secondary"
       />
        for 
-      <CodeTags
-        code="xs"
+      <Tag
+        code={true}
+        text="xs"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".d-{breakpoint}-{value}"
+      <Tag
+        code={true}
+        text=".d-{breakpoint}-{value}"
         type="secondary"
       />
        for 
-      <CodeTags
-        code="sm"
+      <Tag
+        code={true}
+        text="sm"
         type="secondary"
       />
       , 
-      <CodeTags
-        code="md"
+      <Tag
+        code={true}
+        text="md"
         type="secondary"
       />
       , 
-      <CodeTags
-        code="lg"
+      <Tag
+        code={true}
+        text="lg"
         type="secondary"
       />
       , 
-      <CodeTags
-        code="xl"
+      <Tag
+        code={true}
+        text="xl"
         type="secondary"
       />
        and 
-      <CodeTags
-        code="xxl"
+      <Tag
+        code={true}
+        text="xxl"
         type="secondary"
       />
       .
@@ -384,56 +415,65 @@ exports[`Utilities: Display Notation renders 1`] = `
   </p>
   <ul>
     <li>
-      <CodeTags
-        code="none"
+      <Tag
+        code={true}
+        text="none"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="inline"
+      <Tag
+        code={true}
+        text="inline"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="inline-block"
+      <Tag
+        code={true}
+        text="inline-block"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="block"
+      <Tag
+        code={true}
+        text="block"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="table"
+      <Tag
+        code={true}
+        text="table"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="table-cell"
+      <Tag
+        code={true}
+        text="table-cell"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="table-row"
+      <Tag
+        code={true}
+        text="table-row"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="flex"
+      <Tag
+        code={true}
+        text="flex"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code="inline-flex"
+      <Tag
+        code={true}
+        text="inline-flex"
         type="secondary"
       />
     </li>
@@ -444,23 +484,27 @@ exports[`Utilities: Display Notation renders 1`] = `
       or larger
     </i>
     . For example, 
-    <CodeTags
-      code=".d-xl-none"
+    <Tag
+      code={true}
+      text=".d-xl-none"
       type="secondary"
     />
      sets 
-    <CodeTags
-      code="display: none;"
+    <Tag
+      code={true}
+      text="display: none;"
       type="secondary"
     />
      on both 
-    <CodeTags
-      code="xl"
+    <Tag
+      code={true}
+      text="xl"
       type="secondary"
     />
      and 
-    <CodeTags
-      code="xxl"
+    <Tag
+      code={true}
+      text="xxl"
       type="secondary"
     />
      screens.

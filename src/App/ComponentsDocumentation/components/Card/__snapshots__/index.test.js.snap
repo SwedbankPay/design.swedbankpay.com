@@ -32,8 +32,9 @@ exports[`Documentation: Card OldCard renders 1`] = `
   </h3>
   <p>
     Use our grid along with cards to control their size and how they are displayed on different screen resolutions. Make sure to add 
-    <CodeTags
-      code=".d-flex"
+    <Tag
+      code={true}
+      text=".d-flex"
       type="secondary"
     />
      to the wrapper if you want the cards to be of equal height when next to each other.
@@ -109,18 +110,21 @@ exports[`Documentation: Card OldCard renders 1`] = `
   </h3>
   <p>
     We offer three different card types; 
-    <CodeTags
-      code=".card-primary"
+    <Tag
+      code={true}
+      text=".card-primary"
       type="secondary"
     />
     , 
-    <CodeTags
-      code=".card-secondary"
+    <Tag
+      code={true}
+      text=".card-secondary"
       type="secondary"
     />
      and 
-    <CodeTags
-      code=".card-plain"
+    <Tag
+      code={true}
+      text=".card-plain"
       type="secondary"
     />
     .

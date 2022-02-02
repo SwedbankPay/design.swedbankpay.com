@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer, StatusBadge } from "@docutils";
 import CardComponent from "@components/Card";
 import MediaObject from "@components/MediaObject";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 import { overviewCards } from "./constants";
 
 const textArr = ["This is a lot of text", "With some more text", "And then even some more", "Is it really possible to have this much text in one card?", "Yes!"];
@@ -72,7 +72,7 @@ const OldCard = () => (
         <h3>Card with grid</h3>
         <p>
             Use our grid along with cards to control their size and how they are displayed on different screen resolutions.
-            Make sure to add <CodeTags type="secondary" code=".d-flex" /> to the wrapper if you want the cards to be of equal height when next to each other.
+            Make sure to add <Tag code type="secondary" text=".d-flex" /> to the wrapper if you want the cards to be of equal height when next to each other.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="row">
@@ -117,7 +117,7 @@ const OldCard = () => (
         </ComponentPreview>
         <h3>Card Types</h3>
         <p>
-            We offer three different card types; <CodeTags type="secondary" code=".card-primary" />, <CodeTags type="secondary" code=".card-secondary" /> and <CodeTags type="secondary" code=".card-plain" />.
+            We offer three different card types; <Tag code type="secondary" text=".card-primary" />, <Tag code type="secondary" text=".card-secondary" /> and <Tag code type="secondary" text=".card-plain" />.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="row">

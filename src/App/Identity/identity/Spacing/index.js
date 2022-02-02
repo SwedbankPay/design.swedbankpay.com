@@ -2,7 +2,7 @@ import React from "react";
 import { ComponentPreview, DocContainer } from "@docutils";
 import { diveDeeper } from "./constants";
 
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 const basename = process.env.basename;
 
@@ -45,7 +45,7 @@ const TouchTarget = () => (
 const BaseIncrementOfRem = () => (
     <section>
         <h2 id="base-increment-of-rem">Base increment of rem</h2>
-        <p>In our system the base size of a  <CodeTags type="secondary" code="rem"/>  unit is <span className="font-weight-bold">16px</span>, this means you can easily use 0.5 rem increments to create layouts in code on a 8-point spacing system. See example below for reference: </p>
+        <p>In our system the base size of a  <Tag code type="secondary" text="rem"/>  unit is <span className="font-weight-bold">16px</span>, this means you can easily use 0.5 rem increments to create layouts in code on a 8-point spacing system. See example below for reference: </p>
 
         <table className="table table-plain spacing-table">
             <thead>
@@ -106,49 +106,49 @@ const Notation = () => (
     <section>
         <h2 id="notation">Notation</h2>
         <p>
-            Spacing utilities that apply to all breakpoints, from <CodeTags type="secondary" code="xs" /> to <CodeTags type="secondary" code="xxl" />, have no breakpoint abbreviation in them. This is because those classes are applied from <CodeTags type="secondary" code="min-width: 0" /> and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
+            Spacing utilities that apply to all breakpoints, from <Tag code type="secondary" text="xs" /> to <Tag code type="secondary" text="xxl" />, have no breakpoint abbreviation in them. This is because those classes are applied from <Tag code type="secondary" text="min-width: 0" /> and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
         </p>
         <p>
-            The classes are named using the format <CodeTags type="secondary" code="{property}{sides}-{size}" /> for <CodeTags type="secondary" code="xs" /> and <CodeTags type="secondary" code="{property}{sides}-{breakpoint}-{size}" /> for <CodeTags type="secondary" code="sm" />, <CodeTags type="secondary" code="md" />, <CodeTags type="secondary" code="lg" />, <CodeTags type="secondary" code="xl" />, and <CodeTags type="secondary" code="xxl" />.
+            The classes are named using the format <Tag code type="secondary" text="{property}{sides}-{size}" /> for <Tag code type="secondary" text="xs" /> and <Tag code type="secondary" text="{property}{sides}-{breakpoint}-{size}" /> for <Tag code type="secondary" text="sm" />, <Tag code type="secondary" text="md" />, <Tag code type="secondary" text="lg" />, <Tag code type="secondary" text="xl" />, and <Tag code type="secondary" text="xxl" />.
         </p>
 
         <p>Where <i>property</i> is one of:</p>
         <ul>
-            <li><CodeTags type="secondary" code="m" /> - for classes that set <CodeTags type="secondary" code="margin" /></li>
-            <li><CodeTags type="secondary" code="p" /> - for classes that set <CodeTags type="secondary" code="padding" /></li>
+            <li><Tag code type="secondary" text="m" /> - for classes that set <Tag code type="secondary" text="margin" /></li>
+            <li><Tag code type="secondary" text="p" /> - for classes that set <Tag code type="secondary" text="padding" /></li>
         </ul>
 
         <p>Where <i>sides</i> is one of:</p>
         <ul>
-            <li><CodeTags type="secondary" code="t" /> - for classes that set <CodeTags type="secondary" code="margin-top" /> or <CodeTags type="secondary" code="padding-top" /></li>
-            <li><CodeTags type="secondary" code="b" /> - for classes that set <CodeTags type="secondary" code="margin-bottom" /> or <CodeTags type="secondary" code="padding-bottom" /></li>
-            <li><CodeTags type="secondary" code="l" /> - for classes that set <CodeTags type="secondary" code="margin-left" /> or <CodeTags type="secondary" code="padding-left" /></li>
-            <li><CodeTags type="secondary" code="r" /> - for classes that set <CodeTags type="secondary" code="margin-right" /> or <CodeTags type="secondary" code="padding-right" /></li>
-            <li><CodeTags type="secondary" code="x" /> - for classes that set both <CodeTags type="secondary" code="*-left" /> or <CodeTags type="secondary" code="*-right" /></li>
-            <li><CodeTags type="secondary" code="y" /> - for classes that set both <CodeTags type="secondary" code="*-top" /> or <CodeTags type="secondary" code="*-bottom" /></li>
+            <li><Tag code type="secondary" text="t" /> - for classes that set <Tag code type="secondary" text="margin-top" /> or <Tag code type="secondary" text="padding-top" /></li>
+            <li><Tag code type="secondary" text="b" /> - for classes that set <Tag code type="secondary" text="margin-bottom" /> or <Tag code type="secondary" text="padding-bottom" /></li>
+            <li><Tag code type="secondary" text="l" /> - for classes that set <Tag code type="secondary" text="margin-left" /> or <Tag code type="secondary" text="padding-left" /></li>
+            <li><Tag code type="secondary" text="r" /> - for classes that set <Tag code type="secondary" text="margin-right" /> or <Tag code type="secondary" text="padding-right" /></li>
+            <li><Tag code type="secondary" text="x" /> - for classes that set both <Tag code type="secondary" text="*-left" /> or <Tag code type="secondary" text="*-right" /></li>
+            <li><Tag code type="secondary" text="y" /> - for classes that set both <Tag code type="secondary" text="*-top" /> or <Tag code type="secondary" text="*-bottom" /></li>
         </ul>
 
         <p>Where <i>size</i> is one of:</p>
         <ul>
-            <li><CodeTags type="secondary" code="0" /> - for classes that eliminate the <CodeTags type="secondary" code="margin" /> or <CodeTags type="secondary" code="padding" /> by setting it to <CodeTags type="secondary" code="0" /></li>
-            <li><CodeTags type="secondary" code="1" /> - for classes that set the <CodeTags type="secondary" code="margin" /> or <CodeTags type="secondary" code="padding" /> to <CodeTags type="secondary" code="@spacer * 0.25" /></li>
-            <li><CodeTags type="secondary" code="2" /> - for classes that set the <CodeTags type="secondary" code="margin" /> or <CodeTags type="secondary" code="padding" /> to <CodeTags type="secondary" code="@spacer * 0.5" /></li>
-            <li><CodeTags type="secondary" code="3" /> - for classes that set the <CodeTags type="secondary" code="margin" /> or <CodeTags type="secondary" code="padding" /> to <CodeTags type="secondary" code="@spacer" /></li>
-            <li><CodeTags type="secondary" code="4" /> - for classes that set the <CodeTags type="secondary" code="margin" /> or <CodeTags type="secondary" code="padding" /> to <CodeTags type="secondary" code="@spacer * 1.5" /></li>
-            <li><CodeTags type="secondary" code="5" /> - for classes that set the <CodeTags type="secondary" code="margin" /> or <CodeTags type="secondary" code="padding" /> to <CodeTags type="secondary" code="@spacer * 3" /></li>
-            <li><CodeTags type="secondary" code="auto" /> - for classes that set <CodeTags type="secondary" code="margin" /> to <CodeTags type="secondary" code="auto" /></li>
+            <li><Tag code type="secondary" text="0" /> - for classes that eliminate the <Tag code type="secondary" text="margin" /> or <Tag code type="secondary" text="padding" /> by setting it to <Tag code type="secondary" text="0" /></li>
+            <li><Tag code type="secondary" text="1" /> - for classes that set the <Tag code type="secondary" text="margin" /> or <Tag code type="secondary" text="padding" /> to <Tag code type="secondary" text="@spacer * 0.25" /></li>
+            <li><Tag code type="secondary" text="2" /> - for classes that set the <Tag code type="secondary" text="margin" /> or <Tag code type="secondary" text="padding" /> to <Tag code type="secondary" text="@spacer * 0.5" /></li>
+            <li><Tag code type="secondary" text="3" /> - for classes that set the <Tag code type="secondary" text="margin" /> or <Tag code type="secondary" text="padding" /> to <Tag code type="secondary" text="@spacer" /></li>
+            <li><Tag code type="secondary" text="4" /> - for classes that set the <Tag code type="secondary" text="margin" /> or <Tag code type="secondary" text="padding" /> to <Tag code type="secondary" text="@spacer * 1.5" /></li>
+            <li><Tag code type="secondary" text="5" /> - for classes that set the <Tag code type="secondary" text="margin" /> or <Tag code type="secondary" text="padding" /> to <Tag code type="secondary" text="@spacer * 3" /></li>
+            <li><Tag code type="secondary" text="auto" /> - for classes that set <Tag code type="secondary" text="margin" /> to <Tag code type="secondary" text="auto" /></li>
         </ul>
 
-        <p>For margin you can also set negative <i>size</i> (excluding <CodeTags type="secondary" code="0" />):</p>
+        <p>For margin you can also set negative <i>size</i> (excluding <Tag code type="secondary" text="0" />):</p>
         <ul>
-            <li><CodeTags type="secondary" code="n1" /> - for classes that set the <CodeTags type="secondary" code="margin" /> to <CodeTags type="secondary" code="-@spacer * 0.25" /></li>
-            <li><CodeTags type="secondary" code="n2" /> - for classes that set the <CodeTags type="secondary" code="margin" /> to <CodeTags type="secondary" code="-@spacer * 0.5" /></li>
-            <li><CodeTags type="secondary" code="n3" /> - for classes that set the <CodeTags type="secondary" code="margin" /> to <CodeTags type="secondary" code="-@spacer" /></li>
-            <li><CodeTags type="secondary" code="n4" /> - for classes that set the <CodeTags type="secondary" code="margin" /> to <CodeTags type="secondary" code="-@spacer * 1.5" /></li>
-            <li><CodeTags type="secondary" code="n5" /> - for classes that set the <CodeTags type="secondary" code="margin" /> to <CodeTags type="secondary" code="-@spacer * 3" /></li>
+            <li><Tag code type="secondary" text="n1" /> - for classes that set the <Tag code type="secondary" text="margin" /> to <Tag code type="secondary" text="-@spacer * 0.25" /></li>
+            <li><Tag code type="secondary" text="n2" /> - for classes that set the <Tag code type="secondary" text="margin" /> to <Tag code type="secondary" text="-@spacer * 0.5" /></li>
+            <li><Tag code type="secondary" text="n3" /> - for classes that set the <Tag code type="secondary" text="margin" /> to <Tag code type="secondary" text="-@spacer" /></li>
+            <li><Tag code type="secondary" text="n4" /> - for classes that set the <Tag code type="secondary" text="margin" /> to <Tag code type="secondary" text="-@spacer * 1.5" /></li>
+            <li><Tag code type="secondary" text="n5" /> - for classes that set the <Tag code type="secondary" text="margin" /> to <Tag code type="secondary" text="-@spacer * 3" /></li>
         </ul>
 
-        <p>(<CodeTags type="secondary" code="@spacer" /> is set to <CodeTags type="secondary" code="1rem (16px)" />)</p>
+        <p>(<Tag code type="secondary" text="@spacer" /> is set to <Tag code type="secondary" text="1rem (16px)" />)</p>
     </section>
 );
 
@@ -179,7 +179,7 @@ const Examples = () => (
 
         <h3>Horizontal centering</h3>
         <p>
-            Additionally, DesignGuide also includes an <CodeTags type="secondary" code=".mx-auto" /> class for horizontally centering fixed-width block level content—that is, content that has <CodeTags type="secondary" code="display: block" /> and a <CodeTags type="secondary" code="width" /> set—by setting the horizontal margins to auto.
+            Additionally, DesignGuide also includes an <Tag code type="secondary" text=".mx-auto" /> class for horizontally centering fixed-width block level content—that is, content that has <Tag code type="secondary" text="display: block" /> and a <Tag code type="secondary" text="width" /> set—by setting the horizontal margins to auto.
         </p>
         <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag>
             <div className="row">

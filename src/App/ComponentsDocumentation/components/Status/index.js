@@ -1,14 +1,14 @@
 import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
         <p>
             Be aware of what color you use when deciding what message you want to convey. A completion status should not use a warning or danger status,
-            that is why <CodeTags type="secondary" code=".status-success" /> exists. <b>NOTE:</b> Be careful not to rely solely on the color of the status icon to convey
+            that is why <Tag code type="secondary" text=".status-success" /> exists. <b>NOTE:</b> Be careful not to rely solely on the color of the status icon to convey
             your message.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure removeList>

@@ -3,7 +3,7 @@ import React from "react";
 import { ComponentPreview, DocContainer } from "@docutils";
 import InputGroup from "@components/InputGroup";
 import { selectOverview, whenToUse } from "./constants";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 const WhenToUse = () => (
     <>
@@ -72,7 +72,7 @@ const DeveloperDocumentation = () => (
         <h2 id="developer-documentation">Developer documentation</h2>
         <span className="h4 mt-3">Error state</span>
 
-        <p>If the user don’t select any option in a select that is required to be filled, an error message should be displayed. Add the <CodeTags type="secondary" code=".has-error"/> class to the <CodeTags type="primary" code="form-group"/> element, and insert the error message in the attribute <CodeTags type="primary" code="data-error"/> in the <CodeTags type="primary" code="help-block"/> element. </p>
+        <p>If the user don’t select any option in a select that is required to be filled, an error message should be displayed. Add the <Tag code type="secondary" text=".has-error"/> class to the <Tag code type="primary" text="form-group"/> element, and insert the error message in the attribute <Tag code type="primary" text="data-error"/> in the <Tag code type="primary" text="help-block"/> element. </p>
 
         <ComponentPreview language="html" codeFigure showCasePanel>
             <form className="no-pointer-events">
@@ -89,7 +89,7 @@ const DeveloperDocumentation = () => (
         </ComponentPreview>
 
         <span className="h4">Disabled state</span>
-        <p>Disable a select by adding the <CodeTags type="primary" code="disabled"/> attribute to the desired select and the <CodeTags type="primary" code="form-group"/> where the select resides.</p>
+        <p>Disable a select by adding the <Tag code type="primary" text="disabled"/> attribute to the desired select and the <Tag code type="primary" text="form-group"/> where the select resides.</p>
         <ComponentPreview language="html" codeFigure showCasePanel>
             <InputGroup type="select" label="Label" placeholder="Select option" selectOptions={[]} disabled />
         </ComponentPreview>

@@ -7,8 +7,19 @@ exports[`Components: Accordion ContentGuidelines renders 1`] = `
   >
     Content guidelines
   </h2>
-  <div
-    className="slab slab-plain"
+  <p>
+    If the accordions are wrapped in a 
+    <Tag
+      code={true}
+      text=".accordion-group"
+      type="secondary"
+    />
+    , only one will be open at a time.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
   >
     <div
       className="d-flex flex-column align-items-center py-5"
@@ -67,36 +78,16 @@ exports[`Components: Accordion JavascriptMethods renders 1`] = `
     JavaScript methods
   </h3>
   <p>
-    Use 
-    <CodeTags
-      code="dg.accordion.init()"
+    The accordion component hides its content 
+    <Tag
+      code={true}
+      text=".accordion-body"
       type="secondary"
     />
-     to 
-    <Link
-      to="/get-started/for-developers"
-    >
-      initialize
-    </Link>
-     all accordions. This will open and close the accordions automatically.
-  </p>
-  <p>
-    If you want to manually open and close a specific accordion, you need to include an 
-    <CodeTags
-      code="id"
-      type="primary"
-    />
-     on the 
-    <CodeTags
-      code="accordion-body"
-      type="primary"
-    />
-     element.
-  </p>
-  <p>
-    To open a given accordion, use 
-    <CodeTags
-      code="dg.accordion.open(<accordion-id>)"
+    , showing only its title 
+    <Tag
+      code={true}
+      text=".accordion-header"
       type="secondary"
     />
   </p>

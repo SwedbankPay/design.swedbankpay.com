@@ -1,12 +1,12 @@
 import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 const TextColors = () => (
     <>
         <h2 id="text-colors">Text colors</h2>
-        <p>To use a color simply prepend <CodeTags type="secondary" code=".text-{name}" />.</p>
+        <p>To use a color simply prepend <Tag code type="secondary" text=".text-{name}" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p className="text-brand">.text-brand</p>
             <p className="text-default">.text-default</p>
@@ -19,8 +19,8 @@ const TextColors = () => (
             <p className="text-white-50 bg-default">.text-white-50</p>
         </ComponentPreview>
 
-        <h3>With <CodeTags type="secondary" code=".text-muted" /></h3>
-        <p>To get a muted effect on the color you are using, append a <CodeTags type="primary" code={"<span>"} />-element with the class <CodeTags type="secondary" code=".text-muted" /> to the desired element.</p>
+        <h3>With <Tag code type="secondary" text=".text-muted" /></h3>
+        <p>To get a muted effect on the color you are using, append a <Tag code type="primary" text={"<span>"} />-element with the class <Tag code type="secondary" text=".text-muted" /> to the desired element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p className="text-brand">.text-brand <span className="text-muted">.text-muted</span></p>
             <p className="text-default">.text-default <span className="text-muted">.text-muted</span></p>
@@ -36,7 +36,7 @@ const TextColors = () => (
 const BackgroundColors = () => (
     <>
         <h2 id="background-colors">Background colors</h2>
-        <p>To alter the background-color of an element, add the class <CodeTags type="secondary" code="background-{name}" />.</p>
+        <p>To alter the background-color of an element, add the class <Tag code type="secondary" text="background-{name}" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="container">
                 <div className="row">

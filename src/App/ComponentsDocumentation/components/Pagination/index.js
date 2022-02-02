@@ -2,7 +2,7 @@ import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import PaginationComponent from "@components/Pagination";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 const paginationItems = [
     /* eslint-disable object-property-newline */
@@ -18,8 +18,8 @@ const DefaultPagination = () => (
     <>
         <h2 id="default-pagination">Default pagination</h2>
         <p>
-                Default pagination shows the pages as numbers. Add <CodeTags type="secondary" code=".pagination" /> to an <CodeTags type="primary" code={"<ul>"} /> containing
-            <CodeTags type="primary" code={"<li>"} />. If you wish to present the user with navigational arrows you need to add those as <CodeTags type="primary" code={"<li>"} /> elements.
+                Default pagination shows the pages as numbers. Add <Tag code type="secondary" text=".pagination" /> to an <Tag code type="primary" text={"<ul>"} /> containing
+            <Tag code type="primary" text={"<li>"} />. If you wish to present the user with navigational arrows you need to add those as <Tag code type="primary" text={"<li>"} /> elements.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <PaginationComponent items={paginationItems} arrows farArrows />
@@ -31,7 +31,7 @@ const PaginationBullets = () => (
     <>
         <h2 id="pagination-bullets">Pagination bullets</h2>
         <p>
-                If you want to show bullets instead of numbers you can add <CodeTags type="secondary" code=".pagination-bullets" /> to your <CodeTags type="primary" code={"<ul>"} />.
+                If you want to show bullets instead of numbers you can add <Tag code type="secondary" text=".pagination-bullets" /> to your <Tag code type="primary" text={"<ul>"} />.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <PaginationComponent type="bullets" items={paginationItems} arrows farArrows />

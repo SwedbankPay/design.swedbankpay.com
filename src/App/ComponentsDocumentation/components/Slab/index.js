@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 import { validation } from "@src/scripts/main";
 
@@ -31,7 +31,7 @@ const SlabColors = () => (
     <>
         <h2 id="slab-colors">Slab colors</h2>
         <p>
-        We offer three additional slab types; <CodeTags type="secondary" code=".slab-primary" />, <CodeTags type="secondary" code=".slab-secondary" /> and <CodeTags type="secondary" code=".slab-plain" />.
+        We offer three additional slab types; <Tag code type="secondary" text=".slab-primary" />, <Tag code type="secondary" text=".slab-secondary" /> and <Tag code type="secondary" text=".slab-plain" />.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="slab slab-primary">
@@ -71,7 +71,7 @@ const SlabColors = () => (
             </div>
         </ComponentPreview>
         <p>
-        If no slab extension class is added, it is defaulted to white. In this example we use the utility class <CodeTags type="secondary" code=".border" /> to make it easier for us to see the actual slab container.
+        If no slab extension class is added, it is defaulted to white. In this example we use the utility class <Tag code type="secondary" text=".border" /> to make it easier for us to see the actual slab container.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="slab border">
@@ -146,7 +146,7 @@ const SlabArrow = () => (
     <>
         <h2 id="slab-arrow">Slab arrow</h2>
         <p>
-            <CodeTags type="secondary" code=".slab-arrow" /> inherits the color from the slab it is appended to.
+            <Tag code type="secondary" text=".slab-arrow" /> inherits the color from the slab it is appended to.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="slab slab-default slab-arrow">

@@ -459,8 +459,9 @@ exports[`Documentation: Sheet RequireAction renders 1`] = `
   </h2>
   <p>
     To disable the listener responsible for closing the sheet when a user clicks outside, add 
-    <CodeTags
-      code="data-require-action"
+    <Tag
+      code={true}
+      text="data-require-action"
       type="secondary"
     />
      to your Sheet.

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import ActionListComponent from "@components/ActionList";
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 import { actionList } from "@src/scripts/main";
 import NpmInformation from "@docutils/NpmInformation";
@@ -41,17 +41,17 @@ const Anchorpoints = () => (
         <h2 id="anchorpoints">Anchorpoints</h2>
         <p>You can change where the action list will have its anchor, by default the anchor will be top right.</p>
         <h3>Top left</h3>
-        <p>Use class <CodeTags type="secondary" code=".anchor-top-left" /> to anchor action-list button to the top left corner of the menu.</p>
+        <p>Use class <Tag code type="secondary" text=".anchor-top-left" /> to anchor action-list button to the top left corner of the menu.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ActionListComponent classNames="anchor-top-left" items={items} />
         </ComponentPreview>
         <h3>Bottom right</h3>
-        <p>Use class <CodeTags type="secondary" code=".anchor-bottom-right" /> to anchor action-list button to the bottom right corner of the menu.</p>
+        <p>Use class <Tag code type="secondary" text=".anchor-bottom-right" /> to anchor action-list button to the bottom right corner of the menu.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ActionListComponent classNames="anchor-bottom-right" items={items} />
         </ComponentPreview>
         <h3>Bottom left</h3>
-        <p>Use class <CodeTags type="secondary" code=".anchor-bottom-left" /> to anchor action-list button to the bottom left corner of the menu.</p>
+        <p>Use class <Tag code type="secondary" text=".anchor-bottom-left" /> to anchor action-list button to the bottom left corner of the menu.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <ActionListComponent classNames="anchor-bottom-left" items={items} />
         </ComponentPreview>

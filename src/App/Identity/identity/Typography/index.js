@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import Button from "@components/Button";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 const basename = process.env.basename;
 const brand = process.env.brand;
@@ -222,7 +222,7 @@ const Code = () => (
             <h5>Heading h5</h5>
             <h6>Heading h6</h6>
         </ComponentPreview>
-        <p>The classes <CodeTags type="secondary" code=".h1" /> through <CodeTags type="secondary" code=".h6" /> are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
+        <p>The classes <Tag code type="secondary" text=".h1" /> through <Tag code type="secondary" text=".h6" /> are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p className="h1">.h1 heading</p>
             <p className="h2">.h2 heading</p>
@@ -233,14 +233,14 @@ const Code = () => (
         </ComponentPreview>
 
         <h3>Hero title</h3>
-        <p>The class <CodeTags type="secondary" code=".hero" /> can be used to achieve the big and bold hero title styling.</p>
+        <p>The class <Tag code type="secondary" text=".hero" /> can be used to achieve the big and bold hero title styling.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <h1 className="hero">Hero title</h1>
             <p className="hero">Hero title</p>
         </ComponentPreview>
 
         <h3>Lead</h3>
-        <p>Make a paragraph stand out by using <CodeTags type="secondary" code=".lead" />.</p>
+        <p>Make a paragraph stand out by using <Tag code type="secondary" text=".lead" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p className="lead">This is a leading paragraph which for instance can be used as an introduction.</p>
         </ComponentPreview>
@@ -260,22 +260,22 @@ const Code = () => (
             <p><i>This is the last line, it too will render as italicized text.</i></p>
         </ComponentPreview>
         <p>
-            The <CodeTags type="secondary" code=".mark" /> and <CodeTags type="secondary" code=".small" /> classes are also available to apply the same styles
-            as <CodeTags type="primary" code={"<mark>"} /> and <CodeTags type="primary" code={"<small>"} /> while
+            The <Tag code type="secondary" text=".mark" /> and <Tag code type="secondary" text=".small" /> classes are also available to apply the same styles
+            as <Tag code type="primary" text={"<mark>"} /> and <Tag code type="primary" text={"<small>"} /> while
             avoiding any unwanted semantic implications that the tags would bring.
         </p>
         <p>
-            While not shown above, feel free to use <CodeTags type="primary" code={"<b>"} /> and <CodeTags type="primary" code={"<i>"} /> in
-            HTML5. <CodeTags type="primary" code={"<b>"} /> is meant to highlight words or phrases without conveying additional importance
-            while <CodeTags type="primary" code={"<i>"} /> is mostly for voice, technical terms, etc.
+            While not shown above, feel free to use <Tag code type="primary" text={"<b>"} /> and <Tag code type="primary" text={"<i>"} /> in
+            HTML5. <Tag code type="primary" text={"<b>"} /> is meant to highlight words or phrases without conveying additional importance
+            while <Tag code type="primary" text={"<i>"} /> is mostly for voice, technical terms, etc.
         </p>
 
         <h3>Text utilities</h3>
         <p>Change text color with our <Link to="/utilities/colors">color utilities</Link>.</p>
 
         <h3>Abbreviations</h3>
-        <p>Stylized implementation of HTML’s <CodeTags type="primary" code={"<abbr>"} /> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.</p>
-        <p>Add <CodeTags type="secondary" code=".initialism" /> to an abbreviation for a slightly smaller font-size.</p>
+        <p>Stylized implementation of HTML’s <Tag code type="primary" text={"<abbr>"} /> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.</p>
+        <p>Add <Tag code type="secondary" text=".initialism" /> to an abbreviation for a slightly smaller font-size.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p><abbr title="Laugh Out Loud">LOL</abbr></p>
             <p><abbr title="HyperText Markup Language" className="initialism">HTML</abbr></p>
@@ -283,7 +283,7 @@ const Code = () => (
         <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr" target="_blank" rel="noopener noreferrer">Read more</a> about abbreviations.</p>
 
         <h3>Blockquotes</h3>
-        <p>For quoting blocks of content from another source within your document. Wrap <CodeTags type="primary" code={"<blockquote>"} /> or <CodeTags type="secondary" code=".blockquote" /> around any HTML as the quote.</p>
+        <p>For quoting blocks of content from another source within your document. Wrap <Tag code type="primary" text={"<blockquote>"} /> or <Tag code type="secondary" text=".blockquote" /> around any HTML as the quote.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <blockquote className="blockquote">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -291,7 +291,7 @@ const Code = () => (
         </ComponentPreview>
 
         <h4>Naming a source</h4>
-        <p>Add a <CodeTags type="primary" code={"<footer>"} /> for identifying the source. Wrap the name of the source work in <CodeTags type="primary" code={"<cite>"} />.</p>
+        <p>Add a <Tag code type="primary" text={"<footer>"} /> for identifying the source. Wrap the name of the source work in <Tag code type="primary" text={"<cite>"} />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <blockquote className="blockquote">
                 <p>
@@ -315,7 +315,7 @@ const Headings = () => (
             <h5>Heading h5</h5>
             <h6>Heading h6</h6>
         </ComponentPreview>
-        <p>The classes <CodeTags type="secondary" code=".h1" /> through <CodeTags type="secondary" code=".h6" /> are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
+        <p>The classes <Tag code type="secondary" text=".h1" /> through <Tag code type="secondary" text=".h6" /> are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p className="h1">.h1 heading</p>
             <p className="h2">.h2 heading</p>
@@ -330,7 +330,7 @@ const Headings = () => (
 const HeroTitle = () => (
     <>
         <h2 id="hero-title">Hero title</h2>
-        <p>The class <CodeTags type="secondary" code=".hero" /> can be used to achieve the big and bold hero title styling.</p>
+        <p>The class <Tag code type="secondary" text=".hero" /> can be used to achieve the big and bold hero title styling.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <h1 className="hero">Hero title</h1>
             <p className="hero">Hero title</p>
@@ -341,7 +341,7 @@ const HeroTitle = () => (
 const Lead = () => (
     <>
         <h2 id="lead">Lead</h2>
-        <p>Make a paragraph stand out by using <CodeTags type="secondary" code=".lead" />.</p>
+        <p>Make a paragraph stand out by using <Tag code type="secondary" text=".lead" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p className="lead">This is a leading paragraph which for instance can be used as an introduction.</p>
         </ComponentPreview>
@@ -365,14 +365,14 @@ const Inline = () => (
             <p><i>This is the last line, it too will render as italicized text.</i></p>
         </ComponentPreview>
         <p>
-            The <CodeTags type="secondary" code=".mark" /> and <CodeTags type="secondary" code=".small" /> classes are also available to apply the same styles
-            as <CodeTags type="primary" code={"<mark>"} /> and <CodeTags type="primary" code={"<small>"} /> while
+            The <Tag code type="secondary" text=".mark" /> and <Tag code type="secondary" text=".small" /> classes are also available to apply the same styles
+            as <Tag code type="primary" text={"<mark>"} /> and <Tag code type="primary" text={"<small>"} /> while
             avoiding any unwanted semantic implications that the tags would bring.
         </p>
         <p>
-        While not shown above, feel free to use <CodeTags type="primary" code={"<b>"} /> and <CodeTags type="primary" code={"<i>"} /> in
-        HTML5. <CodeTags type="primary" code={"<b>"} /> is meant to highlight words or phrases without conveying additional importance
-        while <CodeTags type="primary" code={"<i>"} /> is mostly for voice, technical terms, etc.
+        While not shown above, feel free to use <Tag code type="primary" text={"<b>"} /> and <Tag code type="primary" text={"<i>"} /> in
+        HTML5. <Tag code type="primary" text={"<b>"} /> is meant to highlight words or phrases without conveying additional importance
+        while <Tag code type="primary" text={"<i>"} /> is mostly for voice, technical terms, etc.
         </p>
     </>
 );
@@ -387,8 +387,8 @@ const TextUtilities = () => (
 const Abbreviations = () => (
     <>
         <h2 id="abbreviations">Abbreviations</h2>
-        <p>Stylized implementation of HTML’s <CodeTags type="primary" code={"<abbr>"} /> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.</p>
-        <p>Add <CodeTags type="secondary" code=".initialism" /> to an abbreviation for a slightly smaller font-size.</p>
+        <p>Stylized implementation of HTML’s <Tag code type="primary" text={"<abbr>"} /> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.</p>
+        <p>Add <Tag code type="secondary" text=".initialism" /> to an abbreviation for a slightly smaller font-size.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <p><abbr title="Laugh Out Loud">LOL</abbr></p>
             <p><abbr title="HyperText Markup Language" className="initialism">HTML</abbr></p>
@@ -401,7 +401,7 @@ const Blockquotes = () => {
     const BlockquotesText = () => (
         <>
             <h2 id="blockquotes">Blockquotes</h2>
-            <p>For quoting blocks of content from another source within your document. Wrap <CodeTags type="primary" code={"<blockquote>"} /> or <CodeTags type="secondary" code=".blockquote" /> around any HTML as the quote.</p>
+            <p>For quoting blocks of content from another source within your document. Wrap <Tag code type="primary" text={"<blockquote>"} /> or <Tag code type="secondary" text=".blockquote" /> around any HTML as the quote.</p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <blockquote className="blockquote">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
@@ -413,7 +413,7 @@ const Blockquotes = () => {
     const BlockquoteWithSourceText = () => (
         <>
             <h3>Naming a source</h3>
-            <p>Add a <CodeTags type="primary" code={"<footer>"} /> for identifying the source. Wrap the name of the source work in <CodeTags type="primary" code={"<cite>"} />.</p>
+            <p>Add a <Tag code type="primary" text={"<footer>"} /> for identifying the source. Wrap the name of the source work in <Tag code type="primary" text={"<cite>"} />.</p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <blockquote className="blockquote">
                     <p>

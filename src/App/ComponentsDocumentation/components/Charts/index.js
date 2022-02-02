@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import Chart from "@components/Chart";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 import Introduction from "./Introduction";
 import Alert from "@components/Alert";
 
@@ -566,7 +566,7 @@ const MixingTypes = () => (
 const CustomColors = () => (
     <>
         <h2 id="custom-colors">Custom colors</h2>
-        <p>Except for the three first colors, the rest of the colors are customizable. Call <CodeTags type="secondary" code="dg.chart" /> with a last optional argument consisting of a list of RGB color codes.</p>
+        <p>Except for the three first colors, the rest of the colors are customizable. Call <Tag code type="secondary" text="dg.chart" /> with a last optional argument consisting of a list of RGB color codes.</p>
         <ComponentPreview language="html" showCasePanel codeFigure >
             <Chart id="custom-color-pie"
                 options={{

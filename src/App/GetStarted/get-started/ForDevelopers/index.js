@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { browsers, gridAndBreakpoints, discoverMore } from "./constants";
 
 import { ComponentPreview, DocContainer } from "@docutils";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 const basename = process.env.basename;
 const brand = process.env.brand;
@@ -14,17 +14,17 @@ const Installation = () => (
         <h2 id="installation">Installation with CDN</h2>
         <p>To quickly add the {brandTitle} Design Guide to your project, include the snippets below in your project.</p>
         <h3>Include in the header</h3>
-        <p>Copy-paste the following CSS code into <CodeTags type="secondary" code="<head>"/> before all the other stylesheets in order to load our CSS.</p>
+        <p>Copy-paste the following CSS code into <Tag code type="secondary" text="<head>"/> before all the other stylesheets in order to load our CSS.</p>
         <ComponentPreview language="html" codeFigure>
             <link rel="stylesheet" href={`${window.location.origin + basename}styles/${brand}.css`} />
         </ComponentPreview>
 
         <h3>Include at the bottom</h3>
-        <p>Many of our components requires the use of JavaScript in order to function. Place the following <CodeTags type="secondary" code="<Script>"/> tag near the end of your pages, right before the closing <CodeTags type="secondary" code="</body>"/> tag to enable them.</p>
+        <p>Many of our components requires the use of JavaScript in order to function. Place the following <Tag code type="secondary" text="<Script>"/> tag near the end of your pages, right before the closing <Tag code type="secondary" text="</body>"/> tag to enable them.</p>
         <ComponentPreview language="html" codeFigure>
             <script src={`${window.location.origin + basename}scripts/dg.js`} global="true" autoload="true"></script>
         </ComponentPreview>
-        <p>The <CodeTags type="secondary" code="global"/> attribute adds the script to the global scope. The <CodeTags type="secondary" code="autoload"/> attribute automatically initiates all components when loaded. Great for plug and play.</p>
+        <p>The <Tag code type="secondary" text="global"/> attribute adds the script to the global scope. The <Tag code type="secondary" text="autoload"/> attribute automatically initiates all components when loaded. Great for plug and play.</p>
         <h2 id="installation-npm">Installation with NPM</h2>
         <p>If you want to host the Design Guide files in your own app, run the following command.</p>
         <ComponentPreview language="terminal" codeFigure>
@@ -40,28 +40,28 @@ const Installation = () => (
             import &#123; sheet &#125; from &quot;@swedbankpay/design-guide&quot;;  {"\n"}
             sheet.init();
         </ComponentPreview>
-        <p>For our CSS you can choose to import it from a <CodeTags type="secondary" code="css/less/scss"/> file, from a <CodeTags type="secondary" code="js"/> file if your bundler supports it, or point to the file directly from your bundler.</p>
-        <p>Example from a <CodeTags type="secondary" code=".less"/> file</p>
+        <p>For our CSS you can choose to import it from a <Tag code type="secondary" text="css/less/scss"/> file, from a <Tag code type="secondary" text="js"/> file if your bundler supports it, or point to the file directly from your bundler.</p>
+        <p>Example from a <Tag code type="secondary" text=".less"/> file</p>
         <ComponentPreview language="css" codeFigure>
             @import url(&quot;@swedbankpay/design-guide/src/less/{brand}.less&quot;);
         </ComponentPreview>
-        <p>Example from <CodeTags type="secondary" code="angular.json"/></p>
+        <p>Example from <Tag code type="secondary" text="angular.json"/></p>
         <ComponentPreview language="json" codeFigure>
         &quot;styles&quot;: [ {"\n"}
             &nbsp; &quot;src/app.less&quot;, {"\n"}
             &nbsp; &quot;./node_modules/@swedbankpay/design-guide/src/less/{brand}.less&quot; {"\n"}
         ],
         </ComponentPreview>
-        <p>Example from <CodeTags type="secondary" code="nuxt.config.js"/></p>
+        <p>Example from <Tag code type="secondary" text="nuxt.config.js"/></p>
         <ComponentPreview language="javascript" codeFigure>
         &quot;css&quot;: [ {"\n"}
             &nbsp; &quot;./node_modules/@swedbankpay/design-guide/src/less/{brand}.less&quot; {"\n"}
         ],
         </ComponentPreview>
         <h3>How to initialize our JavaScript components</h3>
-        <p>Our script runs <CodeTags type="secondary" code="dg.script.initAll();"/> on DOMContentLoaded making it so you have to run <CodeTags type="secondary" code="dg.<component_name>.init();"/> manually when a component is rendered after the event has fired.</p>
+        <p>Our script runs <Tag code type="secondary" text="dg.script.initAll();"/> on DOMContentLoaded making it so you have to run <Tag code type="secondary" text="dg.<component_name>.init();"/> manually when a component is rendered after the event has fired.</p>
 
-        <p>To initialize components use <CodeTags type="secondary" code="dg.<component_name>.init();"/>. If the function is called without arguments it will target all components with class <CodeTags type="secondary" code="<component_name>"/> on the page. Initializing only one component can be done by passing an ID, it must match an existing components ID and will print a warning message if the value is invalid.</p>
+        <p>To initialize components use <Tag code type="secondary" text="dg.<component_name>.init();"/>. If the function is called without arguments it will target all components with class <Tag code type="secondary" text="<component_name>"/> on the page. Initializing only one component can be done by passing an ID, it must match an existing components ID and will print a warning message if the value is invalid.</p>
 
         <p>If only one component is initialized then the init function will return one object. If several components are initialized it will return an array of objects.</p>
         <ComponentPreview language="html" codeFigure removeOuterTag>

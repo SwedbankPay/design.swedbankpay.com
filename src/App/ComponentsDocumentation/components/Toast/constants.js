@@ -1,6 +1,6 @@
 import React from "react";
 
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 import Alert from "@components/Alert";
 import { toast } from "@src/scripts/main";
 
@@ -23,7 +23,7 @@ export const optionsTable = [
                 tableData: [
                     "html",
                     "String",
-                    <><CodeTags type="secondary" code='""'/></>,
+                    <><Tag code type="secondary" text='""'/></>,
                     "The HTML content of the Toast."
                 ]
             },
@@ -31,8 +31,8 @@ export const optionsTable = [
                 tableData: [
                     "type",
                     "String",
-                    <><CodeTags type="secondary" code='""'/></>,
-                    <>Alert types: <CodeTags type="secondary" code="success"/>, <CodeTags type="secondary" code="neutral"/>, <CodeTags type="secondary" code="warning"/>, <CodeTags type="secondary" code="danger"/>
+                    <><Tag code type="secondary" text='""'/></>,
+                    <>Alert types: <Tag code type="secondary" text="success"/>, <Tag code type="secondary" text="neutral"/>, <Tag code type="secondary" text="warning"/>, <Tag code type="secondary" text="danger"/>
                     </>
                 ]
             },
@@ -40,7 +40,7 @@ export const optionsTable = [
                 tableData: [
                     "classes",
                     "Array of strings",
-                    <><CodeTags type="secondary" code="[]"/></>,
+                    <><Tag code type="secondary" text="[]"/></>,
                     "Classes to be added to the toast element."
                 ]
             },
@@ -48,7 +48,7 @@ export const optionsTable = [
                 tableData: [
                     "completeCallback",
                     "Function",
-                    <><CodeTags type="secondary" code="null"/></>,
+                    <><Tag code type="secondary" text="null"/></>,
                     "Callback function called when toast is dismissed."
                 ]
             }

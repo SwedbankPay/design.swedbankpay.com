@@ -1,13 +1,13 @@
 import React from "react";
 
 import { DocContainer } from "@docutils";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>Like Bootstrap our breakpoints are ranged from <CodeTags type="secondary" code="xs" /> to <CodeTags type="secondary" code="xl" />. In addition, we have added yet another breakpoint for even bigger screens called <CodeTags type="secondary" code="xxl" />.</p>
-        <p>Note that when targeting screensize <CodeTags type="secondary" code="xs" />, it is optional to append the infix to the classname.</p>
+        <p>Like Bootstrap our breakpoints are ranged from <Tag code type="secondary" text="xs" /> to <Tag code type="secondary" text="xl" />. In addition, we have added yet another breakpoint for even bigger screens called <Tag code type="secondary" text="xxl" />.</p>
+        <p>Note that when targeting screensize <Tag code type="secondary" text="xs" />, it is optional to append the infix to the classname.</p>
         <table className="table table-striped">
             <thead>
                 <tr>
@@ -19,79 +19,79 @@ const Overview = () => (
             <tbody>
                 <tr>
                     <td>
-                        <CodeTags type="secondary" code="xs" />
+                        <Tag code type="secondary" text="xs" />
                     </td>
                     <td>
-                        <CodeTags type="secondary" code="0px" />
+                        <Tag code type="secondary" text="0px" />
                     </td>
                     <td>
                         <p>
-                            <CodeTags type="secondary" code=".col-8" />, <CodeTags type="secondary" code=".d-block" />
+                            <Tag code type="secondary" text=".col-8" />, <Tag code type="secondary" text=".d-block" />
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <CodeTags type="secondary" code="sm" />
+                        <Tag code type="secondary" text="sm" />
                     </td>
                     <td>
-                        <CodeTags type="secondary" code="576px" />
+                        <Tag code type="secondary" text="576px" />
                     </td>
                     <td>
                         <p>
-                            <CodeTags type="secondary" code=".col-sm-8" />, <CodeTags type="secondary" code=".d-sm-block" />
+                            <Tag code type="secondary" text=".col-sm-8" />, <Tag code type="secondary" text=".d-sm-block" />
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <CodeTags type="secondary" code="md" />
+                        <Tag code type="secondary" text="md" />
                     </td>
                     <td>
-                        <CodeTags type="secondary" code="768px" />
+                        <Tag code type="secondary" text="768px" />
                     </td>
                     <td>
                         <p>
-                            <CodeTags type="secondary" code=".col-md-8" />, <CodeTags type="secondary" code=".d-md-block" />
+                            <Tag code type="secondary" text=".col-md-8" />, <Tag code type="secondary" text=".d-md-block" />
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <CodeTags type="secondary" code="lg" />
+                        <Tag code type="secondary" text="lg" />
                     </td>
                     <td>
-                        <CodeTags type="secondary" code="992px" />
+                        <Tag code type="secondary" text="992px" />
                     </td>
                     <td>
                         <p>
-                            <CodeTags type="secondary" code=".col-lg-8" />, <CodeTags type="secondary" code=".d-lg-block" />
+                            <Tag code type="secondary" text=".col-lg-8" />, <Tag code type="secondary" text=".d-lg-block" />
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <CodeTags type="secondary" code="xl" />
+                        <Tag code type="secondary" text="xl" />
                     </td>
                     <td>
-                        <CodeTags type="secondary" code="1200px" />
+                        <Tag code type="secondary" text="1200px" />
                     </td>
                     <td>
                         <p>
-                            <CodeTags type="secondary" code=".col-xl-8" />, <CodeTags type="secondary" code=".d-xl-block" />
+                            <Tag code type="secondary" text=".col-xl-8" />, <Tag code type="secondary" text=".d-xl-block" />
                         </p>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <CodeTags type="secondary" code="xxl" />
+                        <Tag code type="secondary" text="xxl" />
                     </td>
                     <td>
-                        <CodeTags type="secondary" code="1600px" />
+                        <Tag code type="secondary" text="1600px" />
                     </td>
                     <td>
                         <p>
-                            <CodeTags type="secondary" code=".col-xxl-8" />, <CodeTags type="secondary" code=".d-xxl-block" />
+                            <Tag code type="secondary" text=".col-xxl-8" />, <Tag code type="secondary" text=".d-xxl-block" />
                         </p>
                     </td>
                 </tr>

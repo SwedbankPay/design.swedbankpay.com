@@ -9,43 +9,51 @@ exports[`Utilities: Flex AlignContent renders 1`] = `
   </h2>
   <p>
     Use 
-    <CodeTags
-      code="align-content"
+    <Tag
+      code={true}
+      text="align-content"
       type="secondary"
     />
      utilities on flexbox containers to align flex items together on the cross axis. Choose from 
-    <CodeTags
-      code="start"
+    <Tag
+      code={true}
+      text="start"
       type="secondary"
     />
      (browser default), 
-    <CodeTags
-      code="end"
+    <Tag
+      code={true}
+      text="end"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="center"
+    <Tag
+      code={true}
+      text="center"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="between"
+    <Tag
+      code={true}
+      text="between"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="around"
+    <Tag
+      code={true}
+      text="around"
       type="secondary"
     />
     , or 
-    <CodeTags
-      code="stretch"
+    <Tag
+      code={true}
+      text="stretch"
       type="secondary"
     />
     . To demonstrate these utilities, we’ve enforced 
-    <CodeTags
-      code="flex-wrap: wrap"
+    <Tag
+      code={true}
+      text="flex-wrap: wrap"
       type="secondary"
     />
      and increased the number of flex items.
@@ -553,70 +561,81 @@ exports[`Utilities: Flex AlignContent renders 1`] = `
   </ComponentPreview>
   <p>
     Responsive variations also exist for 
-    <CodeTags
-      code="align-content"
+    <Tag
+      code={true}
+      text="align-content"
       type="secondary"
     />
     .
   </p>
   <ul>
     <li>
-      <CodeTags
-        code=".align-content-start"
+      <Tag
+        code={true}
+        text=".align-content-start"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-content-end"
+      <Tag
+        code={true}
+        text=".align-content-end"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-content-center"
+      <Tag
+        code={true}
+        text=".align-content-center"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-content-around"
+      <Tag
+        code={true}
+        text=".align-content-around"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-content-stretch"
+      <Tag
+        code={true}
+        text=".align-content-stretch"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-content-{breakpoint}-start"
+      <Tag
+        code={true}
+        text=".align-content-{breakpoint}-start"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-content-{breakpoint}-end"
+      <Tag
+        code={true}
+        text=".align-content-{breakpoint}-end"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-content-{breakpoint}-center"
+      <Tag
+        code={true}
+        text=".align-content-{breakpoint}-center"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-content-{breakpoint}-around"
+      <Tag
+        code={true}
+        text=".align-content-{breakpoint}-around"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-content-{breakpoint}-stretch"
+      <Tag
+        code={true}
+        text=".align-content-{breakpoint}-stretch"
         type="secondary"
       />
     </li>
@@ -633,38 +652,45 @@ exports[`Utilities: Flex AlignItems renders 1`] = `
   </h2>
   <p>
     Use 
-    <CodeTags
-      code="align-items"
+    <Tag
+      code={true}
+      text="align-items"
       type="secondary"
     />
      utilities on flexbox containers to change the alignment of flex items on the cross axis (the y-axis to start, x-axis if 
-    <CodeTags
-      code="flex-direction: column"
+    <Tag
+      code={true}
+      text="flex-direction: column"
       type="secondary"
     />
     ). Choose from 
-    <CodeTags
-      code="start"
+    <Tag
+      code={true}
+      text="start"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="end"
+    <Tag
+      code={true}
+      text="end"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="center"
+    <Tag
+      code={true}
+      text="center"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="baseline"
+    <Tag
+      code={true}
+      text="baseline"
       type="secondary"
     />
     , or 
-    <CodeTags
-      code="stretch"
+    <Tag
+      code={true}
+      text="stretch"
       type="secondary"
     />
      (browser default).
@@ -851,70 +877,81 @@ exports[`Utilities: Flex AlignItems renders 1`] = `
   </ComponentPreview>
   <p>
     Responsive variations also exist for 
-    <CodeTags
-      code="align-items"
+    <Tag
+      code={true}
+      text="align-items"
       type="secondary"
     />
     .
   </p>
   <ul>
     <li>
-      <CodeTags
-        code=".align-items-start"
+      <Tag
+        code={true}
+        text=".align-items-start"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-items-end"
+      <Tag
+        code={true}
+        text=".align-items-end"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-items-center"
+      <Tag
+        code={true}
+        text=".align-items-center"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-items-baseline"
+      <Tag
+        code={true}
+        text=".align-items-baseline"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-items-stretch"
+      <Tag
+        code={true}
+        text=".align-items-stretch"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-items-{breakpoint}-start"
+      <Tag
+        code={true}
+        text=".align-items-{breakpoint}-start"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-items-{breakpoint}-end"
+      <Tag
+        code={true}
+        text=".align-items-{breakpoint}-end"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-items-{breakpoint}-center"
+      <Tag
+        code={true}
+        text=".align-items-{breakpoint}-center"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-items-{breakpoint}-baseline"
+      <Tag
+        code={true}
+        text=".align-items-{breakpoint}-baseline"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-items-{breakpoint}-stretch"
+      <Tag
+        code={true}
+        text=".align-items-{breakpoint}-stretch"
         type="secondary"
       />
     </li>
@@ -931,43 +968,51 @@ exports[`Utilities: Flex AlignSelf renders 1`] = `
   </h2>
   <p>
     Use 
-    <CodeTags
-      code="align-self"
+    <Tag
+      code={true}
+      text="align-self"
       type="secondary"
     />
      utilities on flexbox items to individually change their alignment on the cross axis (the y-axis to start, x-axis if 
-    <CodeTags
-      code="flex-direction: column"
+    <Tag
+      code={true}
+      text="flex-direction: column"
       type="secondary"
     />
     ). Choose from he same options as 
-    <CodeTags
-      code="align-items"
+    <Tag
+      code={true}
+      text="align-items"
       type="secondary"
     />
     : 
-    <CodeTags
-      code="start"
+    <Tag
+      code={true}
+      text="start"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="end"
+    <Tag
+      code={true}
+      text="end"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="center"
+    <Tag
+      code={true}
+      text="center"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="baseline"
+    <Tag
+      code={true}
+      text="baseline"
       type="secondary"
     />
      or  
-    <CodeTags
-      code="stretch"
+    <Tag
+      code={true}
+      text="stretch"
       type="secondary"
     />
      (browswer default).
@@ -1129,70 +1174,81 @@ exports[`Utilities: Flex AlignSelf renders 1`] = `
   </ComponentPreview>
   <p>
     Responsive variations also exist for 
-    <CodeTags
-      code="align-self"
+    <Tag
+      code={true}
+      text="align-self"
       type="secondary"
     />
     .
   </p>
   <ul>
     <li>
-      <CodeTags
-        code=".align-self-start"
+      <Tag
+        code={true}
+        text=".align-self-start"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-self-end"
+      <Tag
+        code={true}
+        text=".align-self-end"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-self-center"
+      <Tag
+        code={true}
+        text=".align-self-center"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-self-baseline"
+      <Tag
+        code={true}
+        text=".align-self-baseline"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-self-stretch"
+      <Tag
+        code={true}
+        text=".align-self-stretch"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-self-{breakpoint}-start"
+      <Tag
+        code={true}
+        text=".align-self-{breakpoint}-start"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-self-{breakpoint}-end"
+      <Tag
+        code={true}
+        text=".align-self-{breakpoint}-end"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-self-{breakpoint}-center"
+      <Tag
+        code={true}
+        text=".align-self-{breakpoint}-center"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-self-{breakpoint}-baseline"
+      <Tag
+        code={true}
+        text=".align-self-{breakpoint}-baseline"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".align-self-{breakpoint}-stretch"
+      <Tag
+        code={true}
+        text=".align-self-{breakpoint}-stretch"
         type="secondary"
       />
     </li>
@@ -1209,13 +1265,15 @@ exports[`Utilities: Flex AutoMargins renders 1`] = `
   </h2>
   <p>
     Flexbox can do some pretty awesome things when you mix flex alignments with auto margins. Shown below are three examples of controlling flex items via auto margins: default (no auto margin), pushing two items to the right (
-    <CodeTags
-      code=".mr-auto"
+    <Tag
+      code={true}
+      text=".mr-auto"
       type="secondary"
     />
     ), and pushing two items to the left (
-    <CodeTags
-      code=".ml-auto"
+    <Tag
+      code={true}
+      text=".ml-auto"
       type="secondary"
     />
     ).
@@ -1288,23 +1346,27 @@ exports[`Utilities: Flex AutoMargins renders 1`] = `
   </h3>
   <p>
     Vertically move one flex item to the top or bottom of a container by mixing 
-    <CodeTags
-      code="align-items"
+    <Tag
+      code={true}
+      text="align-items"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="flex-direction: column"
+    <Tag
+      code={true}
+      text="flex-direction: column"
       type="secondary"
     />
     , and 
-    <CodeTags
-      code="margin-top: auto"
+    <Tag
+      code={true}
+      text="margin-top: auto"
       type="secondary"
     />
      or 
-    <CodeTags
-      code="margin-bottom: auto"
+    <Tag
+      code={true}
+      text="margin-bottom: auto"
       type="secondary"
     />
     .
@@ -1375,21 +1437,24 @@ exports[`Utilities: Flex Direction renders 1`] = `
   </h2>
   <p>
     Set the direction of flex items in a flex container with direction utilities. In most cases you can omit the horizontal class here as the browser default is 
-    <CodeTags
-      code="row"
+    <Tag
+      code={true}
+      text="row"
       type="secondary"
     />
     . However, you may encounter situations where you needed to explicitly set this value (like responsive layouts).
   </p>
   <p>
     Use 
-    <CodeTags
-      code=".flex-row"
+    <Tag
+      code={true}
+      text=".flex-row"
       type="secondary"
     />
      to set a horizontal direction (the browser default), or 
-    <CodeTags
-      code=".flex-row-reverse"
+    <Tag
+      code={true}
+      text=".flex-row-reverse"
       type="secondary"
     />
      to start the horizontal direction from the opposite side.
@@ -1440,13 +1505,15 @@ exports[`Utilities: Flex Direction renders 1`] = `
   </ComponentPreview>
   <p>
     Use 
-    <CodeTags
-      code=".flex-column"
+    <Tag
+      code={true}
+      text=".flex-column"
       type="secondary"
     />
      to set a vertical direction, or 
-    <CodeTags
-      code=".flex-column-reverse"
+    <Tag
+      code={true}
+      text=".flex-column-reverse"
       type="secondary"
     />
      to start the vertical direction from the opposite side.
@@ -1497,58 +1564,67 @@ exports[`Utilities: Flex Direction renders 1`] = `
   </ComponentPreview>
   <p>
     Responsive variations also exist for 
-    <CodeTags
-      code="flex-direction"
+    <Tag
+      code={true}
+      text="flex-direction"
       type="secondary"
     />
     .
   </p>
   <ul>
     <li>
-      <CodeTags
-        code=".flex-row"
+      <Tag
+        code={true}
+        text=".flex-row"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".flex-row-reverse"
+      <Tag
+        code={true}
+        text=".flex-row-reverse"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".flex-column"
+      <Tag
+        code={true}
+        text=".flex-column"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".flex-column-reverse"
+      <Tag
+        code={true}
+        text=".flex-column-reverse"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".flex-{breakpoint}-row"
+      <Tag
+        code={true}
+        text=".flex-{breakpoint}-row"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".flex-{breakpoint}-row-reverse"
+      <Tag
+        code={true}
+        text=".flex-{breakpoint}-row-reverse"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".flex-{breakpoint}-column"
+      <Tag
+        code={true}
+        text=".flex-{breakpoint}-column"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".flex-{breakpoint}-column-reverse"
+      <Tag
+        code={true}
+        text=".flex-{breakpoint}-column-reverse"
         type="secondary"
       />
     </li>
@@ -1565,8 +1641,9 @@ exports[`Utilities: Flex EnableFlexBehaviors renders 1`] = `
   </h2>
   <p>
     Apply 
-    <CodeTags
-      code="display"
+    <Tag
+      code={true}
+      text="display"
       type="secondary"
     />
      utilities to create a flexbox container and transform 
@@ -1599,39 +1676,45 @@ exports[`Utilities: Flex EnableFlexBehaviors renders 1`] = `
   </ComponentPreview>
   <p>
     Responsive variations also exist for 
-    <CodeTags
-      code=".d-flex"
+    <Tag
+      code={true}
+      text=".d-flex"
       type="secondary"
     />
      and 
-    <CodeTags
-      code=".d-inline-flex"
+    <Tag
+      code={true}
+      text=".d-inline-flex"
       type="secondary"
     />
     .
   </p>
   <ul>
     <li>
-      <CodeTags
-        code=".d-flex"
+      <Tag
+        code={true}
+        text=".d-flex"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".d-inline-flex"
+      <Tag
+        code={true}
+        text=".d-inline-flex"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".d-{breakpoint}-flex"
+      <Tag
+        code={true}
+        text=".d-{breakpoint}-flex"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".d-{breakpoint}-inline-flex"
+      <Tag
+        code={true}
+        text=".d-{breakpoint}-inline-flex"
         type="secondary"
       />
     </li>
@@ -1648,8 +1731,9 @@ exports[`Utilities: Flex Fill renders 1`] = `
   </h2>
   <p>
     Use 
-    <CodeTags
-      code=".flex-fill"
+    <Tag
+      code={true}
+      text=".flex-fill"
       type="secondary"
     />
      class on a series of sibling elements to force them into equal widths while taking up all available horizontal space.
@@ -1681,22 +1765,25 @@ exports[`Utilities: Flex Fill renders 1`] = `
   </ComponentPreview>
   <p>
     Responsive variations also exist for 
-    <CodeTags
-      code=".flex-fill"
+    <Tag
+      code={true}
+      text=".flex-fill"
       type="secondary"
     />
     .
   </p>
   <ul>
     <li>
-      <CodeTags
-        code=".flex-fill"
+      <Tag
+        code={true}
+        text=".flex-fill"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".flex-{breakpoint}-fill"
+      <Tag
+        code={true}
+        text=".flex-{breakpoint}-fill"
         type="secondary"
       />
     </li>
@@ -1713,13 +1800,15 @@ exports[`Utilities: Flex GrowAndShrink renders 1`] = `
   </h2>
   <p>
     Use 
-    <CodeTags
-      code=".flex-grow-*"
+    <Tag
+      code={true}
+      text=".flex-grow-*"
       type="secondary"
     />
      utilities to toggle a flex item’s ability to grow to fill available space. In the example below, the 
-    <CodeTags
-      code=".flex-grow-1"
+    <Tag
+      code={true}
+      text=".flex-grow-1"
       type="secondary"
     />
      elements uses all available space it can, while allowing the remaining two flex items their necessary space.
@@ -1751,18 +1840,21 @@ exports[`Utilities: Flex GrowAndShrink renders 1`] = `
   </ComponentPreview>
   <p>
     Use 
-    <CodeTags
-      code=".flex-shrink-*"
+    <Tag
+      code={true}
+      text=".flex-shrink-*"
       type="secondary"
     />
       utilities to toggle a flex item’s ability to shrink if necessary. In the example below, the second flex item with 
-    <CodeTags
-      code=".flex-shrink-1"
+    <Tag
+      code={true}
+      text=".flex-shrink-1"
       type="secondary"
     />
      is forced to wrap it’s contents to a new line, “shrinking” to allow more space for the previous flex item with 
-    <CodeTags
-      code=".w-100"
+    <Tag
+      code={true}
+      text=".w-100"
       type="secondary"
     />
     .
@@ -1789,39 +1881,45 @@ exports[`Utilities: Flex GrowAndShrink renders 1`] = `
   </ComponentPreview>
   <p>
     Responsive variations also exist for 
-    <CodeTags
-      code=".flex-grow"
+    <Tag
+      code={true}
+      text=".flex-grow"
       type="secondary"
     />
      and 
-    <CodeTags
-      code=".flex-shrink"
+    <Tag
+      code={true}
+      text=".flex-shrink"
       type="secondary"
     />
     .
   </p>
   <ul>
     <li>
-      <CodeTags
-        code=".flex-{grow|shrink}-0"
+      <Tag
+        code={true}
+        text=".flex-{grow|shrink}-0"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".flex-{grow|shrink}-1"
+      <Tag
+        code={true}
+        text=".flex-{grow|shrink}-1"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".flex-{breakpoint}-{grow|shrink}-0"
+      <Tag
+        code={true}
+        text=".flex-{breakpoint}-{grow|shrink}-0"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".flex-{breakpoint}-{grow|shrink}-1"
+      <Tag
+        code={true}
+        text=".flex-{breakpoint}-{grow|shrink}-1"
         type="secondary"
       />
     </li>
@@ -1838,43 +1936,51 @@ exports[`Utilities: Flex JustifyContent renders 1`] = `
   </h2>
   <p>
     Use 
-    <CodeTags
-      code="justify-content"
+    <Tag
+      code={true}
+      text="justify-content"
       type="secondary"
     />
      utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis to start, y-axis if 
-    <CodeTags
-      code="flex-direction: column"
+    <Tag
+      code={true}
+      text="flex-direction: column"
       type="secondary"
     />
     ). Choose from 
-    <CodeTags
-      code="start"
+    <Tag
+      code={true}
+      text="start"
       type="secondary"
     />
      (browser default), 
-    <CodeTags
-      code="end"
+    <Tag
+      code={true}
+      text="end"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="center"
+    <Tag
+      code={true}
+      text="center"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="between"
+    <Tag
+      code={true}
+      text="between"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="around"
+    <Tag
+      code={true}
+      text="around"
       type="secondary"
     />
     , or 
-    <CodeTags
-      code="evenly"
+    <Tag
+      code={true}
+      text="evenly"
       type="secondary"
     />
     .
@@ -2035,82 +2141,95 @@ exports[`Utilities: Flex JustifyContent renders 1`] = `
   </ComponentPreview>
   <p>
     Responsive variations also exist for 
-    <CodeTags
-      code="justify-content"
+    <Tag
+      code={true}
+      text="justify-content"
       type="secondary"
     />
     .
   </p>
   <ul>
     <li>
-      <CodeTags
-        code=".justify-content-start"
+      <Tag
+        code={true}
+        text=".justify-content-start"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".justify-content-end"
+      <Tag
+        code={true}
+        text=".justify-content-end"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".justify-content-center"
+      <Tag
+        code={true}
+        text=".justify-content-center"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".justify-content-between"
+      <Tag
+        code={true}
+        text=".justify-content-between"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".justify-content-around"
+      <Tag
+        code={true}
+        text=".justify-content-around"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".justify-content-evenly"
+      <Tag
+        code={true}
+        text=".justify-content-evenly"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".justify-content-{breakpoint}-start"
+      <Tag
+        code={true}
+        text=".justify-content-{breakpoint}-start"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".justify-content-{breakpoint}-end"
+      <Tag
+        code={true}
+        text=".justify-content-{breakpoint}-end"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".justify-content-{breakpoint}-center"
+      <Tag
+        code={true}
+        text=".justify-content-{breakpoint}-center"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".justify-content-{breakpoint}-between"
+      <Tag
+        code={true}
+        text=".justify-content-{breakpoint}-between"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".justify-content-{breakpoint}-around"
+      <Tag
+        code={true}
+        text=".justify-content-{breakpoint}-around"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".justify-content-{breakpoint}-evenly"
+      <Tag
+        code={true}
+        text=".justify-content-{breakpoint}-evenly"
         type="secondary"
       />
     </li>
@@ -2131,18 +2250,21 @@ exports[`Utilities: Flex Order renders 1`] = `
       visual
     </i>
      order of specific flex items with a handful of 
-    <CodeTags
-      code="order"
+    <Tag
+      code={true}
+      text="order"
       type="secondary"
     />
      utilities. We only provide options for making an item first or last, as well as a reset to use the DOM 
-    <CodeTags
-      code="order"
+    <Tag
+      code={true}
+      text="order"
       type="secondary"
     />
     . As order takes any integer value (e.g. 
-    <CodeTags
-      code="5"
+    <Tag
+      code={true}
+      text="5"
       type="secondary"
     />
     ), add custom CSS for any additional values needed.
@@ -2174,22 +2296,25 @@ exports[`Utilities: Flex Order renders 1`] = `
   </ComponentPreview>
   <p>
     Responsive variations also exist for 
-    <CodeTags
-      code="order"
+    <Tag
+      code={true}
+      text="order"
       type="secondary"
     />
     .
   </p>
   <ul>
     <li>
-      <CodeTags
-        code=".order-{0-12}"
+      <Tag
+        code={true}
+        text=".order-{0-12}"
         type="secondary"
       />
     </li>
     <li>
-      <CodeTags
-        code=".order-{breakpoint}-{0-12}"
+      <Tag
+        code={true}
+        text=".order-{breakpoint}-{0-12}"
         type="secondary"
       />
     </li>
@@ -2206,18 +2331,21 @@ exports[`Utilities: Flex Wrap renders 1`] = `
   </h2>
   <p>
     Change how flex items wrap in a flex container. Choose from no wrapping at all (the browser default) with 
-    <CodeTags
-      code=".flex-nowrap"
+    <Tag
+      code={true}
+      text=".flex-nowrap"
       type="secondary"
     />
     , wrapping with 
-    <CodeTags
-      code=".flex-wrap"
+    <Tag
+      code={true}
+      text=".flex-wrap"
       type="secondary"
     />
     , or reverse wrapping with 
-    <CodeTags
-      code=".flex-wrap-reverse"
+    <Tag
+      code={true}
+      text=".flex-wrap-reverse"
       type="secondary"
     />
     .

@@ -256,13 +256,15 @@ exports[`Core: Grid Alignment renders 1`] = `
   </h3>
   <p>
     Breaking columns to a new line in flexbox requires a small hack: add an element with 
-    <CodeTags
-      code="width: 100%"
+    <Tag
+      code={true}
+      text="width: 100%"
       type="secondary"
     />
      wherever you want to wrap your columns to a new line. Normally this is accomplished with multiple 
-    <CodeTags
-      code=".row"
+    <Tag
+      code={true}
+      text=".row"
       type="secondary"
     />
     s, but not every implementation method can account for this.
@@ -372,8 +374,9 @@ exports[`Core: Grid AutoLayoutColumns renders 1`] = `
   </h2>
   <p>
     Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like 
-    <CodeTags
-      code=".col-sm-6"
+    <Tag
+      code={true}
+      text=".col-sm-6"
       type="secondary"
     />
     .
@@ -383,13 +386,15 @@ exports[`Core: Grid AutoLayoutColumns renders 1`] = `
   </h3>
   <p>
     For example, here are two grid layouts that apply to every device and viewport, from 
-    <CodeTags
-      code="xs"
+    <Tag
+      code={true}
+      text="xs"
       type="secondary"
     />
      to 
-    <CodeTags
-      code="xxl"
+    <Tag
+      code={true}
+      text="xxl"
       type="secondary"
     />
     . Add any number of unit-less classes for each breakpoint you need and every column will be the same width.
@@ -506,8 +511,9 @@ exports[`Core: Grid AutoLayoutColumns renders 1`] = `
   </h3>
   <p>
     Use 
-    <CodeTags
-      code="col-{breakpoint}-auto"
+    <Tag
+      code={true}
+      text="col-{breakpoint}-auto"
       type="secondary"
     />
      classes to size columns based on the natural width of their content.
@@ -570,13 +576,15 @@ exports[`Core: Grid AutoLayoutColumns renders 1`] = `
   </h3>
   <p>
     Create equal-width columns that span multiple rows by inserting a 
-    <CodeTags
-      code=".w-100"
+    <Tag
+      code={true}
+      text=".w-100"
       type="secondary"
     />
      where you want the columns to break to a new line. Make the breaks responsive by mixing the 
-    <CodeTags
-      code=".w-100"
+    <Tag
+      code={true}
+      text=".w-100"
       type="secondary"
     />
      with some 
@@ -734,13 +742,15 @@ exports[`Core: Grid GridOptions renders 1`] = `
     Most sizes in the 
     TESTBRAND
      Design Guide is defined using 
-    <CodeTags
-      code="rem"
+    <Tag
+      code={true}
+      text="rem"
       type="secondary"
     />
     s, 
-    <CodeTags
-      code="px"
+    <Tag
+      code={true}
+      text="px"
       type="secondary"
     />
     s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the font size.
@@ -855,38 +865,44 @@ exports[`Core: Grid GridOptions renders 1`] = `
           Class prefix
         </th>
         <td>
-          <CodeTags
-            code=".col-"
+          <Tag
+            code={true}
+            text=".col-"
             type="secondary"
           />
         </td>
         <td>
-          <CodeTags
-            code=".col-sm-"
+          <Tag
+            code={true}
+            text=".col-sm-"
             type="secondary"
           />
         </td>
         <td>
-          <CodeTags
-            code=".col-md-"
+          <Tag
+            code={true}
+            text=".col-md-"
             type="secondary"
           />
         </td>
         <td>
-          <CodeTags
-            code=".col-lg-"
+          <Tag
+            code={true}
+            text=".col-lg-"
             type="secondary"
           />
         </td>
         <td>
-          <CodeTags
-            code=".col-xl-"
+          <Tag
+            code={true}
+            text=".col-xl-"
             type="secondary"
           />
         </td>
         <td>
-          <CodeTags
-            code=".col-xxl-"
+          <Tag
+            code={true}
+            text=".col-xxl-"
             type="secondary"
           />
         </td>
@@ -1108,8 +1124,9 @@ exports[`Core: Grid HowItWorks renders 1`] = `
   </ComponentPreview>
   <p>
     The above example creates three equal-width columns on small, medium, large, extra large, and extra extra large devices using our predefined grid classes. Those columns are centered in the page with the parent 
-    <CodeTags
-      code=".container"
+    <Tag
+      code={true}
+      text=".container"
       type="secondary"
     />
     .
@@ -1122,8 +1139,9 @@ exports[`Core: Grid HowItWorks renders 1`] = `
       Containers provide a means to center and horizontally pad your site’s contents. We have 4 different container sizes available:
       <ul>
         <li>
-          <CodeTags
-            code=".container-sm"
+          <Tag
+            code={true}
+            text=".container-sm"
             type="secondary"
           />
           <p>
@@ -1131,8 +1149,9 @@ exports[`Core: Grid HowItWorks renders 1`] = `
           </p>
         </li>
         <li>
-          <CodeTags
-            code=".container"
+          <Tag
+            code={true}
+            text=".container"
             type="secondary"
           />
           <p>
@@ -1140,8 +1159,9 @@ exports[`Core: Grid HowItWorks renders 1`] = `
           </p>
         </li>
         <li>
-          <CodeTags
-            code=".container-lg"
+          <Tag
+            code={true}
+            text=".container-lg"
             type="secondary"
           />
           <p>
@@ -1149,8 +1169,9 @@ exports[`Core: Grid HowItWorks renders 1`] = `
           </p>
         </li>
         <li>
-          <CodeTags
-            code=".container-fluid"
+          <Tag
+            code={true}
+            text=".container-fluid"
             type="secondary"
           />
           <p>
@@ -1161,13 +1182,15 @@ exports[`Core: Grid HowItWorks renders 1`] = `
     </li>
     <li>
       Rows are wrappers for columns. Each column has horizontal 
-      <CodeTags
-        code="padding"
+      <Tag
+        code={true}
+        text="padding"
         type="secondary"
       />
        (called a gutter) for controlling the space between them. This 
-      <CodeTags
-        code="padding"
+      <Tag
+        code={true}
+        text="padding"
         type="secondary"
       />
        is then counteracted on the rows with negative margins. This way, all the content in your columns is visually aligned down the left side.
@@ -1177,13 +1200,15 @@ exports[`Core: Grid HowItWorks renders 1`] = `
     </li>
     <li>
       Thanks to flexbox, grid columns without a specified 
-      <CodeTags
-        code="width"
+      <Tag
+        code={true}
+        text="width"
         type="secondary"
       />
        will automatically layout as equal width columns. For example, four instances of 
-      <CodeTags
-        code=".col-sm"
+      <Tag
+        code={true}
+        text=".col-sm"
         type="secondary"
       />
        will each automatically be 25% wide from the small breakpoint and up. See the 
@@ -1196,44 +1221,51 @@ exports[`Core: Grid HowItWorks renders 1`] = `
     </li>
     <li>
       Column classes indicate the number of columns you’d like to use out of the possible 12 per row. So, if you want three equal-width columns across, you can use 
-      <CodeTags
-        code=".col-4"
+      <Tag
+        code={true}
+        text=".col-4"
         type="secondary"
       />
       .
     </li>
     <li>
       Column 
-      <CodeTags
-        code="width"
+      <Tag
+        code={true}
+        text="width"
         type="secondary"
       />
       s are set in percentages, so they’re always fluid and sized relative to their parent element.
     </li>
     <li>
       Columns have horizontal 
-      <CodeTags
-        code="padding"
+      <Tag
+        code={true}
+        text="padding"
         type="secondary"
       />
        to create the gutters between individual columns, however, you can remove the 
-      <CodeTags
-        code="margin"
+      <Tag
+        code={true}
+        text="margin"
         type="secondary"
       />
        from rows and 
-      <CodeTags
-        code="padding"
+      <Tag
+        code={true}
+        text="padding"
         type="secondary"
       />
        from columns with 
-      <CodeTags
-        code=".no-gutters"
+      <Tag
+        code={true}
+        text=".no-gutters"
         type="secondary"
       />
        on the 
-      <CodeTags
-        code=".row"
+      <Tag
+        code={true}
+        text=".row"
         type="secondary"
       />
       .
@@ -1253,13 +1285,15 @@ exports[`Core: Grid HowItWorks renders 1`] = `
         apply to that one breakpoint and all those above it
       </b>
        (e.g., 
-      <CodeTags
-        code=".col-sm-4"
+      <Tag
+        code={true}
+        text=".col-sm-4"
         type="secondary"
       />
        applies to small, medium, large, extra large and extra extra large devices, but not the first 
-      <CodeTags
-        code="xs"
+      <Tag
+        code={true}
+        text="xs"
         type="secondary"
       />
        breakpoint).
@@ -1328,18 +1362,21 @@ exports[`Core: Grid Nesting renders 1`] = `
   </h2>
   <p>
     To nest your content with the default grid, add a new 
-    <CodeTags
-      code=".row"
+    <Tag
+      code={true}
+      text=".row"
       type="secondary"
     />
      and set of 
-    <CodeTags
-      code=".col-sm-*"
+    <Tag
+      code={true}
+      text=".col-sm-*"
       type="secondary"
     />
      columns within an existing 
-    <CodeTags
-      code=".col-sm-*"
+    <Tag
+      code={true}
+      text=".col-sm-*"
       type="secondary"
     />
      column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).
@@ -1434,8 +1471,9 @@ exports[`Core: Grid Reordering renders 1`] = `
   </h3>
   <p>
     Use 
-    <CodeTags
-      code=".order-"
+    <Tag
+      code={true}
+      text=".order-"
       type="secondary"
     />
      classes for controlling the 
@@ -1443,23 +1481,27 @@ exports[`Core: Grid Reordering renders 1`] = `
       visual
     </b>
      order of your content. These classes are responsive, so you can set the 
-    <CodeTags
-      code="order"
+    <Tag
+      code={true}
+      text="order"
       type="secondary"
     />
      by breakpoint (e.g., 
-    <CodeTags
-      code=".order-1.order-md-2"
+    <Tag
+      code={true}
+      text=".order-1.order-md-2"
       type="secondary"
     />
     ). Includes support for 
-    <CodeTags
-      code="1"
+    <Tag
+      code={true}
+      text="1"
       type="secondary"
     />
      through 
-    <CodeTags
-      code="12"
+    <Tag
+      code={true}
+      text="12"
       type="secondary"
     />
      across all five grid tiers.
@@ -1500,33 +1542,39 @@ exports[`Core: Grid Reordering renders 1`] = `
   </ComponentPreview>
   <p>
     There are also responsive 
-    <CodeTags
-      code=".order-first"
+    <Tag
+      code={true}
+      text=".order-first"
       type="secondary"
     />
      and 
-    <CodeTags
-      code=".order-last"
+    <Tag
+      code={true}
+      text=".order-last"
       type="secondary"
     />
      classes that change the 
-    <CodeTags
-      code="order"
+    <Tag
+      code={true}
+      text="order"
       type="secondary"
     />
      of an element by applying 
-    <CodeTags
-      code="order: -1"
+    <Tag
+      code={true}
+      text="order: -1"
       type="secondary"
     />
      and 
-    <CodeTags
-      code="order: 13"
+    <Tag
+      code={true}
+      text="order: 13"
       type="secondary"
     />
     , respectively. These classes can also be intermixed with the numbered 
-    <CodeTags
-      code=".order-*"
+    <Tag
+      code={true}
+      text=".order-*"
       type="secondary"
     />
      classes as needed.
@@ -1570,8 +1618,9 @@ exports[`Core: Grid Reordering renders 1`] = `
   </h3>
   <p>
     You can offset grid columns in two ways: our responsive 
-    <CodeTags
-      code=".offset-"
+    <Tag
+      code={true}
+      text=".offset-"
       type="secondary"
     />
      grid classes and our 
@@ -1587,23 +1636,27 @@ exports[`Core: Grid Reordering renders 1`] = `
   </h4>
   <p>
     Move columns to the right using 
-    <CodeTags
-      code=".offset-md-*"
+    <Tag
+      code={true}
+      text=".offset-md-*"
       type="secondary"
     />
      classes. These classes increase the left margin of a column by 
-    <CodeTags
-      code="*"
+    <Tag
+      code={true}
+      text="*"
       type="secondary"
     />
      columns. For example, 
-    <CodeTags
-      code=".offset-md-4"
+    <Tag
+      code={true}
+      text=".offset-md-4"
       type="secondary"
     />
      moves 
-    <CodeTags
-      code=".col-md-4"
+    <Tag
+      code={true}
+      text=".col-md-4"
       type="secondary"
     />
      over four columns.
@@ -1711,8 +1764,9 @@ exports[`Core: Grid Reordering renders 1`] = `
   </h4>
   <p>
     You can also use margin utilities like 
-    <CodeTags
-      code=".mr-auto"
+    <Tag
+      code={true}
+      text=".mr-auto"
       type="secondary"
     />
      to force sibling columns away from one another.
@@ -1792,18 +1846,21 @@ exports[`Core: Grid ResponsiveClasses renders 1`] = `
   </h3>
   <p>
     For grids that are the same from the smallest of devices to the largest, use the 
-    <CodeTags
-      code=".col"
+    <Tag
+      code={true}
+      text=".col"
       type="secondary"
     />
      and 
-    <CodeTags
-      code=".col-*"
+    <Tag
+      code={true}
+      text=".col-*"
       type="secondary"
     />
      classes. Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to 
-    <CodeTags
-      code=".col"
+    <Tag
+      code={true}
+      text=".col"
       type="secondary"
     />
     .
@@ -1866,13 +1923,15 @@ exports[`Core: Grid ResponsiveClasses renders 1`] = `
   </h3>
   <p>
     Using a single set of 
-    <CodeTags
-      code=".col-sm-*"
+    <Tag
+      code={true}
+      text=".col-sm-*"
       type="secondary"
     />
      classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (
-    <CodeTags
-      code="sm"
+    <Tag
+      code={true}
+      text="sm"
       type="secondary"
     />
     ).

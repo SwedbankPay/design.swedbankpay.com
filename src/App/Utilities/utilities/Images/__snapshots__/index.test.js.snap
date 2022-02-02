@@ -9,8 +9,9 @@ exports[`Utilities: Image ImageCircle renders 1`] = `
   </h2>
   <p>
     To make your image a perfect circle add 
-    <CodeTags
-      code=".img-circle"
+    <Tag
+      code={true}
+      text=".img-circle"
       type="secondary"
     />
     .
@@ -36,8 +37,9 @@ exports[`Utilities: Image ImageFluid renders 1`] = `
     Image fluid
   </h2>
   <p>
-    <CodeTags
-      code=".img-fluid"
+    <Tag
+      code={true}
+      text=".img-fluid"
       type="secondary"
     />
      makes your images responsive by forcing the picture to scale with its parent.
@@ -64,8 +66,9 @@ exports[`Utilities: Image ImageRounded renders 1`] = `
   </h2>
   <p>
     If you want to display your images with rounded corners just add 
-    <CodeTags
-      code=".img-rounded"
+    <Tag
+      code={true}
+      text=".img-rounded"
       type="secondary"
     />
      to your image
@@ -91,8 +94,9 @@ exports[`Utilities: Image ImageThumbnail renders 1`] = `
     Image thumbnail
   </h2>
   <p>
-    <CodeTags
-      code=".img-thumbnail"
+    <Tag
+      code={true}
+      text=".img-thumbnail"
       type="secondary"
     />
      adds a small border around the image and adds some padding to give the image a frame.

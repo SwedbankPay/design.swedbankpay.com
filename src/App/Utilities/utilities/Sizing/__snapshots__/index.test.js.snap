@@ -9,28 +9,33 @@ exports[`Utilities: Sizing renders 1`] = `
   </p>
   <p>
     Width and height utilities are generated with support for values; 
-    <CodeTags
-      code="25%"
+    <Tag
+      code={true}
+      text="25%"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="50%"
+    <Tag
+      code={true}
+      text="50%"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="75%"
+    <Tag
+      code={true}
+      text="75%"
       type="secondary"
     />
     , 
-    <CodeTags
-      code="100%"
+    <Tag
+      code={true}
+      text="100%"
       type="secondary"
     />
     , and 
-    <CodeTags
-      code="auto"
+    <Tag
+      code={true}
+      text="auto"
       type="secondary"
     />
     .
@@ -133,13 +138,15 @@ exports[`Utilities: Sizing renders 1`] = `
   </ComponentPreview>
   <p>
     You can also use 
-    <CodeTags
-      code="max-width: 100%;"
+    <Tag
+      code={true}
+      text="max-width: 100%;"
       type="secondary"
     />
      and 
-    <CodeTags
-      code="max-height: 100%;"
+    <Tag
+      code={true}
+      text="max-height: 100%;"
       type="secondary"
     />
      utilities as needed.

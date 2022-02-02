@@ -3,7 +3,7 @@ import * as tableData from "./constants";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import IconPreview from "@components/IconPreview";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 const brandTitle = process.env.brandTitle;
 
@@ -18,7 +18,7 @@ const MaterialIcons = () => (
         </a>
 
         <h3>Example of how to implement icons</h3>
-        <p>To use an icon, provide the following markup: <CodeTags type="primary" code={"<i class=\"material-icons\" aria-hidden=\"true\">{icon_name}</i>"} /></p>
+        <p>To use an icon, provide the following markup: <Tag code type="primary" text={"<i class=\"material-icons\" aria-hidden=\"true\">{icon_name}</i>"} /></p>
         <div className="d-flex justify-content-between p-4">
             {tableData.materialIcons.map(icon => (
                 <IconPreview key={icon} preview type="material-icons" name={icon} />
@@ -40,7 +40,7 @@ const CardIcons = () => (
         <p>Card icons are typically used to show users which card providers that are available. The payment-card icon can be used as a placeholder and/or when the card is not recognized. </p>
 
         <h3>Example of how to implement card icons</h3>
-        <p>To use an icon, provide the following markup: <CodeTags type="primary" code={"<i class=\"payment-icon payment-icon-{icon-name}\" aria-hidden=\"true\" /i>"} /></p>
+        <p>To use an icon, provide the following markup: <Tag code type="primary" text={"<i class=\"payment-icon payment-icon-{icon-name}\" aria-hidden=\"true\" /i>"} /></p>
 
         <table className="table table-plain">
             <thead>
@@ -55,7 +55,7 @@ const CardIcons = () => (
                     <tr key={icon.code}>
                         <td><IconPreview type="payment-icon" name={icon.code} /></td>
                         <td>{icon.title}</td>
-                        <td><CodeTags type="secondary" code={icon.code}/></td>
+                        <td><Tag code type="secondary" text={icon.code}/></td>
                     </tr>
                 ))}
             </tbody>
@@ -76,7 +76,7 @@ const PaymentIcons = () => (
         <p>Below is a list of payment icons that we use in our products. Be mindful when using payment logotypes. Try to make the payment icon feel more secondary in combination with the {brandTitle} logotype. We always want the {brandTitle} logotype to be primary.</p>
 
         <h3>Example of how to implement payment icons</h3>
-        <p>To use an icon, provide the following markup: <CodeTags type="primary" code={"<i class=\"payment-icon payment-icon-{icon-name}\" aria-hidden=\"true\" /i>"} /></p>
+        <p>To use an icon, provide the following markup: <Tag code type="primary" text={"<i class=\"payment-icon payment-icon-{icon-name}\" aria-hidden=\"true\" /i>"} /></p>
 
         <table className="table table-plain">
             <thead>
@@ -91,7 +91,7 @@ const PaymentIcons = () => (
                     <tr key={icon.code}>
                         <td><IconPreview type="payment-icon" name={icon.code} size="large"/></td>
                         <td>{icon.title}</td>
-                        <td><CodeTags type="secondary" code={icon.code}/></td>
+                        <td><Tag code type="secondary" text={icon.code}/></td>
                     </tr>
                 ))}
             </tbody>
@@ -109,7 +109,7 @@ const PaymentIcons = () => (
 const Flags = () => (
     <section>
         <h2 id="flags">Flags</h2>
-        <p>Below is a list of flag icons that we use in our system, To use the flag icons add the classes <CodeTags type="secondary" code=".flag-icon"/> and  <CodeTags type="secondary" code=".flag-icon-xx"/>  (where xx is the <a href="https://www.iso.org/obp/ui/#search">ISO_3166-1-alpha-2-code</a> of a country) to an empty <CodeTags type="secondary" code="<i>"/></p>
+        <p>Below is a list of flag icons that we use in our system, To use the flag icons add the classes <Tag code type="secondary" text=".flag-icon"/> and  <Tag code type="secondary" text=".flag-icon-xx"/>  (where xx is the <a href="https://www.iso.org/obp/ui/#search">ISO_3166-1-alpha-2-code</a> of a country) to an empty <Tag code type="secondary" text="<i>"/></p>
         <table className="table table-plain">
             <thead>
                 <tr>
@@ -123,7 +123,7 @@ const Flags = () => (
                     <tr key={icon.code}>
                         <td><IconPreview type="flag-icon" name={icon.code} size="medium"/></td>
                         <td>{icon.title}</td>
-                        <td><CodeTags type="secondary" code={icon.code}/></td>
+                        <td><Tag code  type="secondary" text={icon.code}/></td>
                     </tr>
                 ))}
             </tbody>
@@ -154,7 +154,7 @@ const Flags = () => (
         </ComponentPreview>
 
         <h3>Squared</h3>
-        <p>All flags can be used in a square format. In the example we see squared flags in the size tiny. All predefined sizes are available in combination with <CodeTags type="secondary" code=".flag-icon-squared"/>. </p>
+        <p>All flags can be used in a square format. In the example we see squared flags in the size tiny. All predefined sizes are available in combination with <Tag code type="secondary" text=".flag-icon-squared"/>. </p>
         <div className="d-flex justify-content-between align-items-end p-4">
             {tableData.flags.map((flag, i) => (
                 <React.Fragment key={flag.code}>
