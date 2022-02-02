@@ -227,43 +227,43 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     <p>
       To use our validation, start by adding the attribute 
       <Tag
-        codes={true}
+        code={true}
         text="novalidate"
         type="secondary"
       />
        to your 
       <Tag
-        codes={true}
+        code={true}
         text="<form>"
         type="primary"
       />
        element. If you wish to validate your entire form, add the 
       <Tag
-        codes={true}
+        code={true}
         text="validate"
         type="secondary"
       />
        attribute to the 
       <Tag
-        codes={true}
+        code={true}
         text="<form>"
         type="primary"
       />
        tag, if not add it to the desired 
       <Tag
-        codes={true}
+        code={true}
         text="<input>"
         type="primary"
       />
        tags. This will validate against 
       <Tag
-        codes={true}
+        code={true}
         text="required"
         type="secondary"
       />
        and 
       <Tag
-        codes={true}
+        code={true}
         text="pattern"
         type="secondary"
       />
@@ -277,19 +277,19 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     <p>
       Use client-side validation to validate as much data as possible before the user submits the form. Common errors include empty required fields, invalid characters or incorrect input format. To give users inline validation feedback insert a error message within the 
       <Tag
-        codes={true}
+        code={true}
         text="form-group"
         type="primary"
       />
        in the 
       <Tag
-        codes={true}
+        code={true}
         text="help-block"
         type="primary"
       />
        element in the attribute 
       <Tag
-        codes={true}
+        code={true}
         text="data-error"
         type="primary"
       />
@@ -350,13 +350,13 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     <p>
       You can use the 
       <Tag
-        codes={true}
+        code={true}
         text="<fieldset>"
         type="primary"
       />
        to group related elements in a 
       <Tag
-        codes={true}
+        code={true}
         text="form"
         type="primary"
       />
@@ -428,7 +428,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     <p>
       You can disable an entire fieldset by adding 
       <Tag
-        codes={true}
+        code={true}
         text="disabled"
         type="primary"
       />
@@ -474,7 +474,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     <p>
       If you only wish to disable a specific form component, add the 
       <Tag
-        codes={true}
+        code={true}
         text="disabled"
         type="primary"
       />
@@ -524,13 +524,13 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     <p>
       If you need more than one column in your form, you can use the grid system to customize how forms are displayed. Wrap your form elements in a row container and remember to add 
       <Tag
-        codes={true}
+        code={true}
         text=".col-{your_size}"
         type="secondary"
       />
        to the 
       <Tag
-        codes={true}
+        code={true}
         text=".form-group"
         type="secondary"
       />
@@ -580,7 +580,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     <p>
       To display static text in a form use 
       <Tag
-        codes={true}
+        code={true}
         text="<span>"
         type="secondary"
       />
@@ -592,7 +592,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       <Tag
-        codes={true}
+        code={true}
         text="dg.validation.init()"
         type="primary"
       />

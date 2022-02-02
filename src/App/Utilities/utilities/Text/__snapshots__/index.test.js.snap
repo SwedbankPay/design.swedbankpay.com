@@ -149,7 +149,7 @@ exports[`Utilities: Text TextTransform renders 1`] = `
   <p>
     Note how 
     <Tag
-      codes={true}
+      code={true}
       text=".text-capitalize"
       type="secondary"
     />
@@ -168,7 +168,7 @@ exports[`Utilities: Text TextWrappingAndOverflow renders 1`] = `
   <p>
     Prevent text from wrapping with a 
     <Tag
-      codes={true}
+      code={true}
       text=".text-nowrap"
       type="secondary"
     />
@@ -197,7 +197,7 @@ exports[`Utilities: Text TextWrappingAndOverflow renders 1`] = `
   <p>
     For longer content, you can add a 
     <Tag
-      codes={true}
+      code={true}
       text=".text-truncate"
       type="secondary"
     />
@@ -207,7 +207,7 @@ exports[`Utilities: Text TextWrappingAndOverflow renders 1`] = `
     </b>
      display: 
     <Tag
-      codes={true}
+      code={true}
       text="inline-block"
       type="secondary"
     />
@@ -217,7 +217,7 @@ exports[`Utilities: Text TextWrappingAndOverflow renders 1`] = `
     </b>
      
     <Tag
-      codes={true}
+      code={true}
       text="display: block"
       type="secondary"
     />
