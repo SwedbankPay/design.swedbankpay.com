@@ -32,14 +32,14 @@ const TextAlignment = () => (
 const TextWrappingAndOverflow = () => (
     <>
         <h2 id="text-wrapping-and-overflow">Text wrapping and overflow</h2>
-        <p>Prevent text from wrapping with a <Tag codes type="secondary" text=".text-nowrap" /> class.</p>
+        <p>Prevent text from wrapping with a <Tag code type="secondary" text=".text-nowrap" /> class.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="text-nowrap sc-highlight" style={{ width: "8rem" }}>{"\n"}
                 This text should overflow the parent.{"\n"}
             </div>
         </ComponentPreview>
 
-        <p>For longer content, you can add a <Tag codes type="secondary" text=".text-truncate" /> class to truncate the text with an ellipsis. <b>Requires</b> display: <Tag codes type="secondary" text="inline-block" /> <b>or</b> <Tag codes type="secondary" text="display: block" />.</p>
+        <p>For longer content, you can add a <Tag code type="secondary" text=".text-truncate" /> class to truncate the text with an ellipsis. <b>Requires</b> display: <Tag code type="secondary" text="inline-block" /> <b>or</b> <Tag code type="secondary" text="display: block" />.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="row">
                 <div className="col-3 text-truncate">
@@ -63,7 +63,7 @@ const TextTransform = () => (
             <p className="text-uppercase">Uppercased text.</p>
             <p className="text-capitalize">CapiTaliZed text.</p>
         </ComponentPreview>
-        <p>Note how <Tag codes type="secondary" text=".text-capitalize" /> only changes the first letter of each word, leaving the case of any other letters unaffected.</p>
+        <p>Note how <Tag code type="secondary" text=".text-capitalize" /> only changes the first letter of each word, leaving the case of any other letters unaffected.</p>
     </>
 );
 
