@@ -13,20 +13,25 @@ exports[`Component: Sheet - does not render with data-require-action if it is se
     >
       <h2
         className="mb-0"
-      />
-      <a
+      >
+        Test
+      </h2>
+      <button
         className="sheet-close"
         href="#"
         id="sheetClose"
       >
         
 			
-        <Icon
-          type="close"
-        />
+        <i
+          aria-label="Close sheet"
+          className="material-icons"
+        >
+          close
+        </i>
         
 		
-      </a>
+      </button>
     </div>
     <div
       className="sheet-content null"
@@ -48,20 +53,25 @@ exports[`Component: Sheet - renders 1`] = `
     >
       <h2
         className="mb-0"
-      />
-      <a
+      >
+        Test
+      </h2>
+      <button
         className="sheet-close"
         href="#"
         id="sheetClose"
       >
         
 			
-        <Icon
-          type="close"
-        />
+        <i
+          aria-label="Close sheet"
+          className="material-icons"
+        >
+          close
+        </i>
         
 		
-      </a>
+      </button>
     </div>
     <div
       className="sheet-content null"
@@ -83,20 +93,25 @@ exports[`Component: Sheet - renders with a close icon 1`] = `
     >
       <h2
         className="mb-0"
-      />
-      <a
+      >
+        test
+      </h2>
+      <button
         className="sheet-close"
         href="#"
         id="sheetClose"
       >
         
 			
-        <Icon
-          type="close"
-        />
+        <i
+          aria-label="Close sheet"
+          className="material-icons"
+        >
+          close
+        </i>
         
 		
-      </a>
+      </button>
     </div>
     <div
       className="sheet-content null"
@@ -119,20 +134,25 @@ exports[`Component: Sheet - renders with an ID 1`] = `
     >
       <h2
         className="mb-0"
-      />
-      <a
+      >
+        Test
+      </h2>
+      <button
         className="sheet-close"
         href="#"
         id="sheetClose"
       >
         
 			
-        <Icon
-          type="close"
-        />
+        <i
+          aria-label="Close sheet"
+          className="material-icons"
+        >
+          close
+        </i>
         
 		
-      </a>
+      </button>
     </div>
     <div
       className="sheet-content null"
@@ -154,20 +174,25 @@ exports[`Component: Sheet - renders with children 1`] = `
     >
       <h2
         className="mb-0"
-      />
-      <a
+      >
+        Test
+      </h2>
+      <button
         className="sheet-close"
         href="#"
         id="sheetClose"
       >
         
 			
-        <Icon
-          type="close"
-        />
+        <i
+          aria-label="Close sheet"
+          className="material-icons"
+        >
+          close
+        </i>
         
 		
-      </a>
+      </button>
     </div>
     <div
       className="sheet-content null"
@@ -191,20 +216,25 @@ exports[`Component: Sheet - renders with the data-require-action attribute 1`] =
     >
       <h2
         className="mb-0"
-      />
-      <a
+      >
+        Test
+      </h2>
+      <button
         className="sheet-close"
         href="#"
         id="sheetClose"
       >
         
 			
-        <Icon
-          type="close"
-        />
+        <i
+          aria-label="Close sheet"
+          className="material-icons"
+        >
+          close
+        </i>
         
 		
-      </a>
+      </button>
     </div>
     <div
       className="sheet-content null"
