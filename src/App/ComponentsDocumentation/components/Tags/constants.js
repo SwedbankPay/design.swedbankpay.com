@@ -2,10 +2,10 @@ import React from "react";
 import Tag from "@components/Tag";
 
 const TagComponent = ({ removable, type }) => (
-    <div className="d-flex w-75 justify-content-evenly">
-        <Tag removable={removable} type={type} text="Tag"/>
-        <Tag removable={removable} type={type} text="Tag"/>
-        <Tag removable={removable} type={type} text="Tag"/>
+    <div className="d-flex w-100 justify-content-center">
+        <Tag className="mr-2" removable={removable} type={type} text="Tag"/>
+        <Tag className="mr-2" removable={removable} type={type} text="Tag"/>
+        <Tag className="mr-2" removable={removable} type={type} text="Tag"/>
     </div>
 );
 

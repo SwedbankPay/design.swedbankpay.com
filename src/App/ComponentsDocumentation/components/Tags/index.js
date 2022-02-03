@@ -81,4 +81,4 @@ const Tags = () => (
 export default Tags;
 
 /* for testing */
-export { Overview };
+export { Overview, ContentGuidelines, DeveloperDocumentation };
