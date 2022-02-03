@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Tags, { Overview } from "./index";
+import Tags, { Overview, ContentGuidelines, DeveloperDocumentation } from "./index";
 
 describe("Documentation: CodeTags", () => {
     it("is defined", () => {
@@ -21,6 +21,30 @@ describe("Documentation: CodeTags", () => {
 
         it("renders", () => {
             const wrapper = shallow(<Overview />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("ContentGuidelines", () => {
+        it("is defined", () => {
+            expect(Overview).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<ContentGuidelines />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("DeveloperDocumentation", () => {
+        it("is defined", () => {
+            expect(Overview).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<DeveloperDocumentation/>);
 
             expect(wrapper).toMatchSnapshot();
         });
