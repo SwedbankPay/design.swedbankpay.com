@@ -9,12 +9,12 @@ describe("Component: Tag", () => {
         expect(Tag).toBeDefined();
     });
 
-    it("renders with class tag and with icon button", () => {
+    it("renders removable tag version", () => {
         const wrapper = shallow(<Tag removable text="Tag"/>);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(
-            <span className="tag primary removable">
+            <span className="tag primary removable ">
                 Tag<button type="button" className="close-button"><i className="material-icons m-auto" aria-label="remove tag">close</i></button>
             </span>
         )).toBeTruthy();
@@ -25,8 +25,12 @@ describe("Component: Tag", () => {
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.contains(
-            <code className="tag code primary">Tag</code>
+            <code className="tag code primary ">Tag</code>
         )).toBeTruthy();
+
+        expect(wrapper.contains(
+            <code className="tag code primary removable ">Tag</code>
+        )).toBeFalsy();
     });
 
     it("prop type string is marked as required", () => {

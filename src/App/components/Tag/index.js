@@ -4,10 +4,10 @@ import PropTypes from "prop-types";
 const Tag = ({ code, type, text, removable, className}) => (
     <>
         {code ?
-            <code className={`tag code ${type ? type : "primary"} ${className ? className : ""}`}>{"\n"}{text}</code>
+            <code className={`tag code ${type ? type : "primary"} ${className ? className : ""}`}>{text}</code>
             :
-            <span className={`tag ${type ? type : "primary"} ${removable ? "removable" : ""} ${className ? className : ""}`}>{"\n"}{text}{"\n"}
-                {removable ? <button type="button" className="close-button">{"\n"}<i className="material-icons m-auto" aria-label="remove tag">close</i>{"\n"}</button> : <></> }
+            <span className={`tag ${type ? type : "primary"} ${removable ? "removable" : ""} ${className ? className : ""}`}>{text}
+                {removable ? <button type="button" className="close-button"><i className="material-icons m-auto" aria-label="remove tag">close</i></button> : <></> }
             </span>
         }
     </>
