@@ -1,15 +1,15 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import CodeTags, { Overview } from "./index";
+import Tags, { Overview } from "./index";
 
 describe("Documentation: CodeTags", () => {
     it("is defined", () => {
-        expect(CodeTags).toBeDefined();
+        expect(Tags).toBeDefined();
     });
 
     it("renders", () => {
-        const wrapper = shallow(<CodeTags />);
+        const wrapper = shallow(<Tags />);
 
         expect(wrapper).toMatchSnapshot();
     });
