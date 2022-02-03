@@ -86,13 +86,6 @@ module.exports = [
                 statusBadges: ["updated"]
             },
             {
-                title: "Code tags",
-                path: "/components/code-tags",
-                componentPath: "components/CodeTags",
-                icon: "code",
-                outlined: true
-            },
-            {
                 title: "Datepickers",
                 path: "/components/datepickers",
                 componentPath: "components/Datepickers",
@@ -258,6 +251,13 @@ module.exports = [
                 icon: "folder",
                 outlined: true,
                 statusBadges: ["javascript", "updated"]
+            },
+            {
+                title: "Tags",
+                path: "/components/tags",
+                componentPath: "components/Tags",
+                icon: "code",
+                outlined: true
             },
             {
                 title: "Toast",
