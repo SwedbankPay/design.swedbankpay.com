@@ -47,8 +47,27 @@
             padding-top: 3rem;
 
             .sheet-close {
-                align-self: center;
+                height: 2rem;
+                width: 2.2rem;
+                border-radius: 0.125rem;
+                background-color: @white;
+
+                i {
+                    color: @black;
+                }
                 .close-button();
+            }
+
+            .sheet-close:hover {
+                background-color: rgba(73, 60, 59, 0.1);
+                cursor: pointer;
+            }
+
+            .sheet-close:focus {
+                border: none;
+                border-radius: 0.125rem;
+                box-shadow: 0 0 0 2px @black;
+                outline: none;
             }
         }
 
