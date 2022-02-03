@@ -3,7 +3,7 @@
 exports[`Component: Tag prop type string is marked as required 1`] = `
 <Fragment>
   <span
-    className="tag primary "
+    className="tag primary  "
   />
 </Fragment>
 `;
@@ -11,17 +11,17 @@ exports[`Component: Tag prop type string is marked as required 1`] = `
 exports[`Component: Tag renders code version of tag 1`] = `
 <Fragment>
   <code
-    className="tag code primary"
+    className="tag code primary "
   >
     Tag
   </code>
 </Fragment>
 `;
 
-exports[`Component: Tag renders with class tag and with icon button 1`] = `
+exports[`Component: Tag renders removable tag version 1`] = `
 <Fragment>
   <span
-    className="tag primary removable"
+    className="tag primary removable "
   >
     Tag
     <button

@@ -259,13 +259,6 @@ exports[`Main: App renders 1`] = `
                       "title": "Checkbox",
                     },
                     Object {
-                      "componentPath": "components/CodeTags",
-                      "icon": "code",
-                      "outlined": true,
-                      "path": "/components/code-tags",
-                      "title": "Code tags",
-                    },
-                    Object {
                       "componentPath": "components/Datepickers",
                       "icon": "event",
                       "outlined": true,
@@ -447,6 +440,13 @@ exports[`Main: App renders 1`] = `
                         "updated",
                       ],
                       "title": "Tabs",
+                    },
+                    Object {
+                      "componentPath": "components/Tags",
+                      "icon": "code",
+                      "outlined": true,
+                      "path": "/components/tags",
+                      "title": "Tags",
                     },
                     Object {
                       "componentPath": "components/Toast",
