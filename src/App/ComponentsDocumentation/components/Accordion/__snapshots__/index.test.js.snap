@@ -55,38 +55,55 @@ exports[`Components: Accordion ContentGuidelines renders 1`] = `
 exports[`Components: Accordion JavascriptMethods renders 1`] = `
 <Fragment>
   <h2
+    id="developer-documentation"
+  >
+    Developer documentation
+  </h2>
+  <h3
     id="javascript-methods"
   >
     JavaScript methods
-  </h2>
-  <JavascriptDocs
-    close={true}
-    componentName="accordion"
-    open={true}
-  />
-  <h4>
-    The ID attribute
-  </h4>
+  </h3>
   <p>
-    The 
+    Use 
     <CodeTags
-      code="dg.<component_name>.init()"
-      type="primary"
-    />
-     looks for every element with the appropriate component class and then sets up an event listener. If you want to manually call 
-    <CodeTags
-      code="dg.<component_name>.open();"
-      type="primary"
-    />
-     you will need to set a specific id on the same element that has the root class.
-  </p>
-  <p>
-    The id is placed in the 
-    <CodeTags
-      code="accordion-body"
+      code="dg.accordion.init()"
       type="secondary"
     />
-    , meaning it is this part of the component that opens and closes.
+     to 
+    <Link
+      to="/get-started/for-developers"
+    >
+      initialize
+    </Link>
+     all accordions. This will open and close the accordions automatically.
+  </p>
+  <p>
+    If you want to manually open and close a specific accordion, you need to include an 
+    <CodeTags
+      code="id"
+      type="primary"
+    />
+     on the 
+    <CodeTags
+      code="accordion-body"
+      type="primary"
+    />
+     element.
+  </p>
+  <p>
+    To open a given accordion, use 
+    <CodeTags
+      code="dg.accordion.open(<accordion-id>)"
+      type="secondary"
+    />
+  </p>
+  <p>
+    To close a given accordion, use 
+    <CodeTags
+      code="dg.accordion.close(<accordion-id>)"
+      type="secondary"
+    />
   </p>
 </Fragment>
 `;
@@ -274,7 +291,7 @@ exports[`Components: Accordion renders 1`] = `
   </p>
   <Overview />
   <ContentGuidelines />
-  <JavascriptMethods />
+  <DeveloperDocumentation />
   <NpmInformation
     componentName="accordion"
   />

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
 import AccordionComponent from "@components/Accordion";
 
 import { accordion } from "@src/scripts/main";
@@ -13,9 +14,9 @@ const howToUseItems = [
         id: "exp-5",
         title: "Accordion title",
         content: <>
-            <b>Sub section title</b>
+            <b className="d-block">Sub section title</b>
             <span>If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.</span>
-            <b>Sub section title</b>
+            <b className="d-block mt-2">Sub section title</b>
             <span>If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.</span></>
     }
 ];
@@ -93,13 +94,15 @@ const ContentGuidelines = () => (
     </section>
 );
 
-const JavascriptMethods = () => (
+const DeveloperDocumentation = () => (
     <>
-        <h2 id="javascript-methods">JavaScript methods</h2>
-        <JavascriptDocs componentName="accordion" open close />
-        <h4>The ID attribute</h4>
-        <p>The <CodeTags type="primary" code="dg.<component_name>.init()"/> looks for every element with the appropriate component class and then sets up an event listener. If you want to manually call <CodeTags type="primary" code="dg.<component_name>.open();"/> you will need to set a specific id on the same element that has the root class.</p>
-        <p>The id is placed in the <CodeTags type="secondary" code="accordion-body"/>, meaning it is this part of the component that opens and closes.</p>
+        <h2 id="developer-documentation">Developer documentation</h2>
+        <h3 id="javascript-methods">JavaScript methods</h3>
+        <p>Use <CodeTags type="secondary" code="dg.accordion.init()"/> to <Link to="/get-started/for-developers">initialize</Link> all accordions. This will open and close the accordions automatically.</p>
+
+        <p>If you want to manually open and close a specific accordion, you need to include an <CodeTags type="primary" code="id"/> on the <CodeTags type="primary" code="accordion-body"/> element.</p>
+        <p>To open a given accordion, use <CodeTags type="secondary" code="dg.accordion.open(<accordion-id>)"/></p>
+        <p>To close a given accordion, use <CodeTags type="secondary" code="dg.accordion.close(<accordion-id>)"/></p>
     </>
 );
 
@@ -115,7 +118,7 @@ const Accordion = () => {
             </p>
             <Overview />
             <ContentGuidelines/>
-            <JavascriptMethods />
+            <DeveloperDocumentation />
             <NpmInformation componentName={"accordion"}/>
         </DocContainer>
     );
@@ -124,4 +127,4 @@ const Accordion = () => {
 export default Accordion;
 
 /* For testing */
-export { Overview, ContentGuidelines, JavascriptMethods };
+export { Overview, ContentGuidelines, DeveloperDocumentation };
