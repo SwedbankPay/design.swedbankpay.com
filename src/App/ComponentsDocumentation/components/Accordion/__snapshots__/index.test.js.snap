@@ -191,13 +191,17 @@ exports[`Components: Accordion Overview renders 1`] = `
               Array [
                 Object {
                   "content": <React.Fragment>
-                    <b>
+                    <b
+                      className="d-block"
+                    >
                       Sub section title
                     </b>
                     <span>
                       If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.
                     </span>
-                    <b>
+                    <b
+                      className="d-block mt-2"
+                    >
                       Sub section title
                     </b>
                     <span>
