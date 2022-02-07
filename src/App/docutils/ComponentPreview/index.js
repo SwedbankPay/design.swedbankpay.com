@@ -321,7 +321,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                                     }
                                     {this.state.activeTab.options.dropdown && this.state.activeTab.options.dropdown.map((dropdown, i) => (
                                         <fieldset key={i} className="mb-4">
-                                            <h4>{dropdown.title}</h4>
+                                            <legend>{dropdown.title}</legend>
                                             <select id={dropdown.id} className="form-control" onChange={e => this.setActiveOptions(
                                                 dropdown.id,
                                                 dropdown.values[e.target.value].value,
