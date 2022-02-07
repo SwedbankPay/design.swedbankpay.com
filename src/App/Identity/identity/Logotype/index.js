@@ -2,9 +2,8 @@ import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import Tag from "@components/Tag";
-import { logoBlack, logoWhite } from "./constants";
-import LogotypeComponent from "@components/Logotype";
 import { logoBlack, logoWhite, logoPayex } from "./constants";
+import LogotypeComponent from "@components/Logotype";
 
 const basename = process.env.basename;
 const brand = process.env.brand;
