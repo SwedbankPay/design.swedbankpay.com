@@ -42,18 +42,6 @@ exports[`Documentation: CodeTags ContentGuidelines renders 1`] = `
 </section>
 `;
 
-exports[`Documentation: CodeTags DeveloperDocumentation renders 1`] = `
-<section
-  id="tags-developer-documentation"
->
-  <h2
-    id="developer-documentation"
-  >
-    Developer documentation
-  </h2>
-</section>
-`;
-
 exports[`Documentation: CodeTags Overview renders 1`] = `
 <section
   id="tag-overview"
@@ -120,7 +108,14 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
           },
           Object {
             "component": <CodeTagComponent />,
-            "description": "Code tags are used to present inline code. They use the Akkurat Mono font. Using [object Object] without any specified styling will result in the primary tag styling being applied. Chose which color that is more suitable for your project, or combine them to differentiate between different coding languages or styles.",
+            "description": <p>
+              Code tags are used to present inline code. They use the Akkurat Mono font. Using 
+              <Tag
+                code={true}
+                text="<code>"
+              />
+               without any specified styling will result in the primary tag styling being applied. Chose which color that is more suitable for your project, or combine them to differentiate between different coding languages or styles.
+            </p>,
             "options": Object {
               "radio": Array [
                 Object {
@@ -196,9 +191,17 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
         <div
           className="d-flex flex-column h-75 justify-content-center py-5"
         >
-          <h5>
-            Dropdown menu
-          </h5>
+          <button
+            className="btn btn-secondary btn-xs"
+            id="tag-dropdown-example"
+          >
+            Color 
+            <i
+              className="material-icons"
+            >
+              keyboard_arrow_down
+            </i>
+          </button>
           <div
             className="d-flex w-50  flex-row"
           >
@@ -234,7 +237,7 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
           className="d-flex flex-row h-75 align-items-center py-5"
         >
           <div
-            className="d-flex align-items-center w-50 pb-2 pt-1"
+            className="d-flex align-items-center w-50 pb-2 pt-2 pb-4"
           >
             <Tag
               className="mr-2"
@@ -281,6 +284,5 @@ exports[`Documentation: CodeTags renders 1`] = `
   </p>
   <Overview />
   <ContentGuidelines />
-  <DeveloperDocumentation />
 </DocContainer>
 `;
