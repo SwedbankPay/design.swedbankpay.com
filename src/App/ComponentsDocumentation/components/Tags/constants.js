@@ -5,14 +5,14 @@ const TagComponent = ({ removable, type }) => (
     <div className="d-flex w-100 justify-content-center">
         <Tag className="mr-2" removable={removable} type={type} text="Tag"/>
         <Tag className="mr-2" removable={removable} type={type} text="Tag"/>
-        <Tag className="mr-2" removable={removable} type={type} text="Tag"/>
+        <Tag removable={removable} type={type} text="Tag"/>
     </div>
 );
 
 const CodeTagComponent = ({ type }) => (
     <div>
-        Example of inline code using <Tag code type={"primary"} text={"<code>"}/><br/>
-        Example of inline code <Tag code type={type} text={"<ComponentName/>"}/> with specified class.
+        Example of inline code using <code>{"<code>"}</code><br/>
+        Example of inline code <Tag className="mt-2" code type={type} text={"<ComponentName/>"}/> with specified class.
     </div>
 );
 
@@ -99,7 +99,7 @@ export const overviewTags = {
                 ]
             },
             title: "Code tags",
-            description: `Code tags are used to present inline code. They use the Akkurat Mono font. Using ${<Tag code text="<code>"/>} without any specified styling will result in the primary tag styling being applied. Chose which color that is more suitable for your project, or combine them to differentiate between different coding languages or styles.`
+            description: <p>Code tags are used to present inline code. They use the Akkurat Mono font. Using {<Tag code text="<code>"/>} without any specified styling will result in the primary tag styling being applied. Chose which color that is more suitable for your project, or combine them to differentiate between different coding languages or styles.</p>
         }
     ]
 };

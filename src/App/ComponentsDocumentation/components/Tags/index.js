@@ -22,7 +22,7 @@ const Overview = () => (
                 <div className="slab slab-plain slab-border-success">
                     <h3>Do</h3>
                     <div className="d-flex flex-column h-75 justify-content-center py-5">
-                        <h5>Dropdown menu</h5>
+                        <button id="tag-dropdown-example" className="btn btn-secondary btn-xs">Color <i className="material-icons">keyboard_arrow_down</i></button>
                         <div className="d-flex w-50  flex-row">
                             <Tag className="mr-2" removable type="tertiary" text="Red"/>
                             <Tag className="mr-2" removable type="tertiary" text="Blue"/>
@@ -35,7 +35,7 @@ const Overview = () => (
                 <div className="slab slab-plain slab-border-success">
                     <h3>Do</h3>
                     <div className="d-flex flex-row h-75 align-items-center py-5">
-                        <div className="d-flex align-items-center w-50 pb-2 pt-1">
+                        <div className="d-flex align-items-center w-50 pb-2 pt-2 pb-4">
                             <Tag className="mr-2" removable type="tertiary" text="Invoice"/>
                             <Tag className="mr-2" removable type="tertiary" text="Card"/>
                             <Button size="sm" type="link" label="Clear filters"/>
@@ -63,22 +63,15 @@ const ContentGuidelines = () => (
     </section>
 );
 
-const DeveloperDocumentation = () => (
-    <section id="tags-developer-documentation">
-        <h2 id="developer-documentation">Developer documentation</h2>
-    </section>
-);
-
 const Tags = () => (
     <DocContainer docToc >
         <p className="lead">Tags are used to label, categorize and organize items using keywords that describe them. Tags can for example be used in <Link to="/patterns/filters">filters</Link> to represent selected filter values or in documentation to present inline code.</p>
         <Overview />
         <ContentGuidelines/>
-        <DeveloperDocumentation/>
     </DocContainer>
 );
 
 export default Tags;
 
 /* for testing */
-export { Overview, ContentGuidelines, DeveloperDocumentation };
+export { Overview, ContentGuidelines };
