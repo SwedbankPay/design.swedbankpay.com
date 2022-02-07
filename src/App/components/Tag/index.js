@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Tag = ({ code, type, text, removable, className}) => (
+const Tag = ({ code, type, text, removable, className }) => (
     <>
         {code ?
             <code className={`tag code ${type ? type : "primary"} ${className ? className : ""}`}>{text}</code>
