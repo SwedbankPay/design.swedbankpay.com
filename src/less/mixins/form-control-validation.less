@@ -41,20 +41,8 @@
     }
 
     + .help-block,
-    .help-block {
-        &:after {
-            color: @color;
-        }
-    }
-
-    + .help-block,
     @{help-block-selector} {
-        color: transparent;
         user-select: none;
         pointer-events: none;
-
-        &:after {
-            content: @content-attr-data;
-        }
     }
 }
