@@ -69,11 +69,12 @@ const InputGroup = ({
         defaultValue: "",
         disabled: disabled || null,
         readOnly: readOnly || null,
-        required: required || null
+        required: required || null,
+        id: id || null
     };
 
     return (
-        <div className={`form-group${disabled ? " disabled" : ""}${type === "select" ? errorMessage ? " has-error" : "" : ""}${className ? ` ${className}` : ""}`}>{"\n"}
+        <div className={`form-group${disabled ? " disabled" : ""} ${errorMessage ? " has-error" : ""}${className ? ` ${className}` : ""}`}>{"\n"}
             {label ? <label htmlFor={id}>{"\n"}{label} {optional && "(optional)"}{tooltip && "\n"}
                 {tooltip &&
                     <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
@@ -103,7 +104,7 @@ const InputGroup = ({
                     {type === "textarea" ?
                         <textarea {...attrs}></textarea>
                         : type === "select" ?
-                            <select {...selectAttrs} id={id}>{"\n\t\t"} {/* Placeholder for select is removed when ID is included here?? wtf */}
+                            <select {...selectAttrs}>{"\n\t\t"} {/* Placeholder for select is removed when ID is included here?? :) */}
                                 {placeholder && <option value="" disabled hidden>{placeholder}</option> }
                                 {selectOptions.map((opt, i) => (
                                     <Fragment key={opt + i}>
@@ -115,7 +116,7 @@ const InputGroup = ({
                             <input {...attrs} />}
                 </>
             }
-            {helpBlock ? <div className="help-block" data-success={successMessage || null} data-error={errorMessage || null}>{"\n"}{helpBlock}{errorMessage}</div> : null}
+            {helpBlock ? <div className="help-block" data-success={successMessage || null} >{errorMessage}{"\n"}</div> : null}
         </div>
     );
 };
