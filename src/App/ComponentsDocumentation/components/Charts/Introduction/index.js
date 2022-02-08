@@ -40,7 +40,7 @@ const Introduction = () => (
             <li><CodeTags type="secondary" code={"\"pie\"/\"doughnut\""} /></li>
         </ul>
 
-        <h3>Accessibility</h3>
+        <h2>Accessibility</h2>
         <p>For ensuring the charts being accessible, please remember to include an appropriate <CodeTags type="primary" code={"aria-label"}/> description inside the canvas element.</p>
         <QuickStart />
         <JavaScript />

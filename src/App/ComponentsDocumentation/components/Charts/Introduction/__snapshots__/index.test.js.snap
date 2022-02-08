@@ -93,9 +93,9 @@ exports[`Dashboard: Introduction renders 1`] = `
       />
     </li>
   </ul>
-  <h3>
+  <h2>
     Accessibility
-  </h3>
+  </h2>
   <p>
     For ensuring the charts being accessible, please remember to include an appropriate 
     <CodeTags
