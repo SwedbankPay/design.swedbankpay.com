@@ -87,7 +87,7 @@ const DisableState = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className = "d-flex flex-column align-items-center">
                 <div className="py-3 col-12 col-lg-8">
-                    <RangesliderComponent label="Label" min={0} max={100} value={50} disabled/>
+                    <RangesliderComponent id="disabled_state_example" label="Label" min={0} max={100} value={50} disabled/>
                 </div>
             </div>
         </ComponentPreview>
