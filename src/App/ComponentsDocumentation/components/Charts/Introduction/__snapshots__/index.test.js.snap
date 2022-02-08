@@ -8,17 +8,17 @@ exports[`Dashboard: Introduction JavaScript renders 1`] = `
     JavaScript
   </h2>
   <p>
-    The dashboard theme requires a separate script to run properly. So add the dashboard script below the 
+    To add charts to your project you need to include a dashboard script to make it run properly. Add the dashboard script below the 
     <CodeTags
       code="scripts"
       type="secondary"
     />
-     at the bottom of your 
+     and at the bottom of your 
     <CodeTags
       code="<body>"
       type="primary"
     />
-     tag like this:
+     tag like this: 
   </p>
   <ComponentPreview
     codeFigure={true}
