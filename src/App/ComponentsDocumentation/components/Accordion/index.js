@@ -14,12 +14,19 @@ const howToUseItems = [
         id: "exp-5",
         title: "Accordion title",
         content: <>
-            <small><b className=" d-block">Sub section title</b></small>
+            <small className="font-weight-bold">Sub section title</small>
             <p>If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.</p>
-            <small><b className="h5 d-block mt-2">Sub section title</b></small>
-            <p>If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.</p></>
+            <small className="font-weight-bold">Sub section title</small>
+            <p>If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.</p>
+        </>
     }
 ];
+
+const items = {
+    id: "none",
+    title: "Sub content",
+    content: <p>Do not use this method</p>
+};
 
 const howNotToUseItems = [
     {
@@ -27,12 +34,8 @@ const howNotToUseItems = [
         title: "Accordion title",
         content:
         <>
-            <AccordionComponent className="accordion-open show" items={[{ id: "none",
-                title: "Sub content",
-                content: <p>Do not use this method </p> }]}/>
-            <AccordionComponent items={[{ id: "none",
-                title: "Sub content",
-                content: <p>Do not use this method</p> }]}/>
+            <AccordionComponent className="accordion-open show" items={[items]}/>
+            <AccordionComponent items={[items]}/>
         </>
     }
 ];
