@@ -57,8 +57,8 @@ const ContentGuidelines = () => (
     <section>
         <h2 id="content-guidelines">Content guidelines</h2>
 
-        <div className="d-flex justify-content-center slab slab-plain px-5 pt-5 pb-4 no-pointer-events">
-            <InputGroup type="select" id="content-guidelines-example" label="Label" placeholder="Placeholder text" selectOptions={[]} helpBlock/>
+        <div className="d-flex justify-content-center slab slab-plain px-5 pt-5 pb-4">
+            <InputGroup type="select" id="content-guidelines-example" label="Label" placeholder="Placeholder text" selectOptions={["Related option"]} helpBlock/>
         </div>
         <ul className="pl-3">
             <li>The <b>Label</b> should be short, concise and to the point describing the functionality </li>
