@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 const Rangeslider = ({ id, label, name, min, max, step, value, disabled, valueLabelPrefix, valueLabelPostfix, tooltip }) => {
     const attrs = {
         type: "range",
+        id,
         name,
         min,
         max,
@@ -25,7 +26,7 @@ const Rangeslider = ({ id, label, name, min, max, step, value, disabled, valueLa
                             </i>{"\n"}
                         </>}
                 </label>{"\n"}
-                <output id={id} className="value-label" >{"\n\t\t"}
+                <output className="value-label" >{"\n\t\t"}
                     <p>{"\n\t\t\t"}
                         {valueLabelPrefix ? <span>{valueLabelPrefix}</span> : null}{valueLabelPrefix ? "\n\t\t\t" : null}
                         <span data-rs-value>{value}</span>{"\n\t\t\t"}
