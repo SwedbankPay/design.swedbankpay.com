@@ -29,14 +29,6 @@ module.exports = [
                 icon: "account_circle",
                 outlined: true,
                 statusBadges: ["new"]
-            },
-            {
-                title: "Filters",
-                path: "/patterns/filters",
-                componentPath: "content/Filters",
-                icon: "filter_alt",
-                outlined: true,
-                statusBadges: ["new"]
             }
         ]
     }
