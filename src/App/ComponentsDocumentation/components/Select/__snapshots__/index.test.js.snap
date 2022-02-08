@@ -8,14 +8,18 @@ exports[`Component: Select ContentGuidelines renders 1`] = `
     Content guidelines
   </h2>
   <div
-    className="d-flex justify-content-center slab slab-plain px-5 pt-5 pb-4 no-pointer-events"
+    className="d-flex justify-content-center slab slab-plain px-5 pt-5 pb-4"
   >
     <InputGroup
       helpBlock={true}
       id="content-guidelines-example"
       label="Label"
       placeholder="Placeholder text"
-      selectOptions={Array []}
+      selectOptions={
+        Array [
+          "Related option",
+        ]
+      }
       type="select"
     />
   </div>
@@ -185,7 +189,7 @@ exports[`Component: Select Overview renders 1`] = `
                 Array [
                   "Blueberry",
                   "Blackberry",
-                  "Strawberry",
+                  "Berryberry",
                 ]
               }
               type="select"

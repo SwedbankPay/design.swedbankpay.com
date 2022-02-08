@@ -2,7 +2,7 @@
 
 exports[`Component: InputGroup - renders 1`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -28,7 +28,7 @@ exports[`Component: InputGroup - renders a form-group with a feedback icon if pr
   type="typetest"
 >
   <div
-    className="form-group"
+    className="form-group "
   >
     
 
@@ -78,13 +78,14 @@ exports[`Component: InputGroup - renders a form-group with a feedback icon if pr
 </InputGroup>
 `;
 
-exports[`Component: InputGroup - renders a form-group with a help block if prop helpBlock is provided 1`] = `
+exports[`Component: InputGroup - renders a form-group with a help block with data-success and data-error attributes 1`] = `
 <InputGroup
   helpBlock="testvalue"
+  successMessage="success"
   type="typetest"
 >
   <div
-    className="form-group"
+    className="form-group "
   >
     
 
@@ -103,60 +104,10 @@ exports[`Component: InputGroup - renders a form-group with a help block if prop 
     />
     <div
       className="help-block"
-      data-error={null}
-      data-success={null}
-    >
-      
-
-      testvalue
-    </div>
-  </div>
-</InputGroup>
-`;
-
-exports[`Component: InputGroup - renders a form-group with a help block with data-success and data-error attributes 1`] = `
-<InputGroup
-  errorMessage="error"
-  helpBlock="testvalue"
-  successMessage="success"
-  type="typetest"
->
-  <div
-    className="form-group"
-  >
-    
-
-    <div
-      className="input-group"
-    >
-      
-
-      <input
-        autoComplete={null}
-        className="form-control"
-        data-validate={null}
-        defaultValue=""
-        disabled={null}
-        id={null}
-        pattern={null}
-        placeholder={null}
-        readOnly={null}
-        required={null}
-        type="typetest"
-      />
-      
-
-       
-    </div>
-    <div
-      className="help-block"
-      data-error="error"
       data-success="success"
     >
       
 
-      testvalue
-      error
     </div>
   </div>
 </InputGroup>
@@ -164,7 +115,7 @@ exports[`Component: InputGroup - renders a form-group with a help block with dat
 
 exports[`Component: InputGroup - renders a form-group with a label if prop label is provided 1`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -200,7 +151,7 @@ exports[`Component: InputGroup - renders a form-group with a postfix if prop pos
   type="typetest"
 >
   <div
-    className="form-group"
+    className="form-group "
   >
     
 
@@ -249,7 +200,7 @@ exports[`Component: InputGroup - renders a form-group with a prefix button if pr
   type="typetest"
 >
   <div
-    className="form-group"
+    className="form-group "
   >
     
 
@@ -300,7 +251,7 @@ exports[`Component: InputGroup - renders a form-group with a prefix icon if prop
   type="typetest"
 >
   <div
-    className="form-group"
+    className="form-group "
   >
     
 
@@ -353,7 +304,7 @@ exports[`Component: InputGroup - renders a form-group with a prefix label if pro
   type="typetest"
 >
   <div
-    className="form-group"
+    className="form-group "
   >
     
 
@@ -406,7 +357,7 @@ exports[`Component: InputGroup - renders a form-group with a select field with g
   type="select"
 >
   <div
-    className="form-group"
+    className="form-group "
   >
     
 
@@ -414,6 +365,7 @@ exports[`Component: InputGroup - renders a form-group with a select field with g
       className="form-control"
       defaultValue=""
       disabled={null}
+      id={null}
       readOnly={null}
       required={null}
     >
@@ -451,7 +403,7 @@ exports[`Component: InputGroup - renders a form-group with a text-area if type e
   type="textarea"
 >
   <div
-    className="form-group"
+    className="form-group "
   >
     
 
@@ -474,7 +426,7 @@ exports[`Component: InputGroup - renders a form-group with a text-area if type e
 
 exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an invalid value 1`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -496,7 +448,7 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
 
 exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an invalid value 2`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -518,7 +470,7 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
 
 exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an invalid value 3`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -540,7 +492,7 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
 
 exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an invalid value 4`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -562,7 +514,7 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
 
 exports[`Component: InputGroup - throws an error if postfixType prop has an invalid value 1`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -584,7 +536,7 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
 
 exports[`Component: InputGroup - throws an error if postfixType prop has an invalid value 2`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -606,7 +558,7 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
 
 exports[`Component: InputGroup - throws an error if postfixType prop has an invalid value 3`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -628,7 +580,7 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
 
 exports[`Component: InputGroup - throws an error if postfixType prop has an invalid value 4`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -650,7 +602,7 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
 
 exports[`Component: InputGroup - throws an error if postfixType prop has an invalid value 5`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -672,7 +624,7 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
 
 exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an invalid value 1`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -694,7 +646,7 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
 
 exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an invalid value 2`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -716,7 +668,7 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
 
 exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an invalid value 3`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -738,7 +690,7 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
 
 exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an invalid value 4`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -760,7 +712,7 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
 
 exports[`Component: InputGroup - throws an error if prefixType prop has an invalid value 1`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -782,7 +734,7 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
 
 exports[`Component: InputGroup - throws an error if prefixType prop has an invalid value 2`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -804,7 +756,7 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
 
 exports[`Component: InputGroup - throws an error if prefixType prop has an invalid value 3`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -826,7 +778,7 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
 
 exports[`Component: InputGroup - throws an error if prefixType prop has an invalid value 4`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -848,7 +800,7 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
 
 exports[`Component: InputGroup - throws an error if prefixType prop has an invalid value 5`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -870,7 +822,7 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
 
 exports[`Component: InputGroup - throws an error if type prop is not provided 1`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -892,7 +844,7 @@ exports[`Component: InputGroup - throws an error if type prop is not provided 1`
 
 exports[`Component: InputGroup - throws an error if validationState prop has an invalid value 1`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -914,7 +866,7 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
 
 exports[`Component: InputGroup - throws an error if validationState prop has an invalid value 2`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -936,7 +888,7 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
 
 exports[`Component: InputGroup - throws an error if validationState prop has an invalid value 3`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -958,7 +910,7 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
 
 exports[`Component: InputGroup - throws an error if validationState prop has an invalid value 4`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
@@ -980,7 +932,7 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
 
 exports[`Component: InputGroup - throws an error if validationState prop has an invalid value 5`] = `
 <div
-  className="form-group"
+  className="form-group "
 >
   
 
