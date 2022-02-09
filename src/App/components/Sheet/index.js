@@ -17,8 +17,8 @@ const Sheet = ({ id, requireAction, title, footer, children }) => (
             </div>
             {footer ?
                 <div className="sheet-footer">
-                    <Button type="primary" label="Primary" />
-                    <Button type="secondary" label="Secondary" />
+                    <Button type="primary" className="mr-2" label="Primary" />
+                    <Button type="secondary" className="ml-2" label="Secondary" />
                 </div> : <></>
             }
         </section>
