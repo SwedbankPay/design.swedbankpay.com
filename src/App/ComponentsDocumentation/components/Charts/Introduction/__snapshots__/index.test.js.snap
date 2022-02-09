@@ -102,7 +102,7 @@ exports[`Dashboard: Introduction renders 1`] = `
       code="aria-label"
       type="primary"
     />
-     description inside the canvas element.
+     description inside the canvas element describing the main focus areas of the data collection. Another solution is to include an alternate data representation i. e. data table.
   </p>
   <QuickStart />
   <JavaScript />
