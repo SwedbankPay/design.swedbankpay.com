@@ -41,7 +41,7 @@ const Introduction = () => (
         </ul>
 
         <h2>Accessibility</h2>
-        <p>For ensuring the charts being accessible, please remember to include an appropriate <CodeTags type="primary" code={"aria-label"}/> description inside the canvas element.</p>
+        <p>For ensuring the charts being accessible, please remember to include an appropriate <CodeTags type="primary" code={"aria-label"}/> description inside the canvas element describing the main focus areas of the data collection. Another solution is to include an alternate data representation i. e. data table.</p>
         <QuickStart />
         <JavaScript />
     </>

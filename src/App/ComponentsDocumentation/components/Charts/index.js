@@ -23,7 +23,7 @@ const LineChart = () => (
                         }
                     ]
                 }
-            }} description="Line chart example"/>
+            }} description="Line chart example: From the beginning, the values has rapidly increased from 261 in 2013 to 1067 in 2016, which also was the peak. Post 2016 the values have slowly decreased to 779 in 2018."/>
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure >
             {`
@@ -41,6 +41,31 @@ dg.chart("simple-line-chart", {
 });
                 `}
         </ComponentPreview>
+        <h4>Data table representation</h4>
+        <table className="table">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>2013</th>
+                    <th>2014</th>
+                    <th>2015</th>
+                    <th>2016</th>
+                    <th>2017</th>
+                    <th>2018</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Peak</td>
+                    <td>261</td>
+                    <td>673</td>
+                    <td>962</td>
+                    <td>1067</td>
+                    <td>1007</td>
+                    <td>779</td>
+                </tr>
+            </tbody>
+        </table>
 
         <h3>Stepped and dashed line</h3>
         <ComponentPreview language="html" showCasePanel codeFigure >
