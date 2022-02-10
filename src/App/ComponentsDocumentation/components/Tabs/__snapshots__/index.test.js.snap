@@ -158,7 +158,7 @@ exports[`Components: Tabs Overview renders 1`] = `
                       },
                     },
                   ],
-                  "title": "Behaviour",
+                  "title": "Behavior",
                 },
               ],
             },
