@@ -8,18 +8,18 @@ const Sheet = ({ id, requireAction, title, footer, children }) => (
         <section>{"\n"}
             <div className="sheet-header">
                 <h2 className="mb-0">{title}</h2>
-                <button href="#" id="sheetClose" className="sheet-close">{"\n\t\t\t"}
+                <button id="sheetClose" className="sheet-close">{"\n\t\t\t"}
                     <i className="material-icons" aria-label="Close sheet">close</i>{"\n\t\t"}
                 </button>
             </div>
-            <div className={`sheet-content ${footer ? "has-footer" : null}`}>
+            <div className={`sheet-content ${footer ? "has-footer" : ""}`}>
                 {children}
             </div>
-            {footer ?
+            {footer &&
                 <div className="sheet-footer">
                     <Button type="primary" className="mr-2" label="Primary" />
                     <Button type="secondary" className="ml-2" label="Secondary" />
-                </div> : <></>
+                </div>
             }
         </section>
     </div>
