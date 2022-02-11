@@ -41,7 +41,9 @@ exports[`Components: Accordion ContentGuidelines renders 1`] = `
       </div>
     </div>
   </div>
-  <ul>
+  <ul
+    className="list list-bullet"
+  >
     <li>
       The title in the Accordion header should be as brief as possible while still being clear and descriptive.
     </li>
