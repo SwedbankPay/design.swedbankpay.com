@@ -1,49 +1,50 @@
-const paginate = (pages, target) => {
-    const numberOfPages = pages.length;
-    let delta;
+const paginate = (arrayLength, currentActive) => {
     const paginatedPages = [];
-    const ellipsis = [];
-    const firstPage = 1;
-    const currentPage = target;
+    let delta;
+    const result = [];
     let paginatedIndex;
 
-    if (currentPage === 1 || currentPage === numberOfPages) {
+    if (currentActive === 1 || currentActive === arrayLength) {
         delta = 4;
-    } else if (currentPage === 2 || currentPage === numberOfPages - 1) {
+    } else if (currentActive === 2 || currentActive === arrayLength - 1) {
         delta = 3;
-    } else if (currentPage === 3 || currentPage === numberOfPages - 2) {
+    } else if (currentActive === 3 || currentActive === arrayLength - 2) {
         delta = 2;
     } else {
         delta = 1;
     }
 
-    paginatedPages.push(firstPage);
+    paginatedPages.push(1);
 
-    if (numberOfPages <= 1) {
-        return paginatedPages;
-    }
-
-    for (let i = currentPage - delta; i <= currentPage + delta; i++) {
-        if (i < numberOfPages && i > 1) {
+    for (let i = currentActive - delta; i <= currentActive + delta; i++) {
+        if (i < arrayLength && i > 1) {
             paginatedPages.push(i);
         }
     }
 
-    paginatedPages.push(numberOfPages);
+    paginatedPages.push(arrayLength);
 
     for (const i of paginatedPages) {
         if (paginatedIndex) {
             if (i - paginatedIndex === 2) {
-                ellipsis.push(paginatedIndex + 1);
+                result.push({
+                    page: paginatedIndex + 1,
+                    current: paginatedIndex + 1 === currentActive
+                });
             } else if (i - paginatedIndex !== 1) {
-                ellipsis.push("...");
+                result.push({
+                    page: null,
+                    current: false
+                });
             }
         }
 
-        ellipsis.push(i);
+        result.push({
+            page: i,
+            current: i === currentActive
+        });
         paginatedIndex = i;
     }
 
-    return { ellipsis,
-        currentPage };
+    return result;
 };
