@@ -115,10 +115,6 @@ class Sheet {
         }
     }
 
-    /* _focusMethod = () => {
-        document.getElementById("sheetClose").focus();
-    }; */
-
     open () {
         this.focusedElemBeforeSheet = document.activeElement;
         handleScrollbar();
