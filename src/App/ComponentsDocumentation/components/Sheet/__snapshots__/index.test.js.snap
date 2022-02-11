@@ -21,7 +21,9 @@ exports[`Documentation: Sheet ContentGuidelines renders 1`] = `
         />
       </div>
     </div>
-    <ul>
+    <ul
+      className="list list-bullet"
+    >
       <li>
         The 
         <b>
@@ -48,18 +50,46 @@ exports[`Documentation: Sheet ContentGuidelines renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Sheet JavascriptMethods renders 1`] = `
+exports[`Documentation: Sheet DeveloperDocumentation renders 1`] = `
 <Fragment>
+  <h2
+    id="developer-documentation"
+  >
+    Developer Documentation
+  </h2>
   <h3
     id="javascript-methods"
   >
     JavaScript methods
   </h3>
-  <JavascriptDocs
-    close={true}
-    componentName="sheet"
-    open={true}
-  />
+  <p>
+    Use 
+    <CodeTags
+      code="dg.sheet.init()"
+      type="secondary"
+    />
+     to 
+    <Link
+      to="/get-started/for-developers"
+    >
+      initialize
+    </Link>
+     all accordions. This will give the sheets open and close functions automatically.
+  </p>
+  <p>
+    To open a given sheet, use 
+    <CodeTags
+      code="dg.sheet.open(<sheet-id>)"
+      type="secondary"
+    />
+  </p>
+  <p>
+    To close a given sheet, use 
+    <CodeTags
+      code="dg.sheet.close(<sheet-id>)"
+      type="secondary"
+    />
+  </p>
   <p>
     To disable the listener responsible for closing the sheet when a user clicks outside, add 
     <CodeTags
@@ -117,7 +147,9 @@ exports[`Documentation: Sheet SheetExample renders 1`] = `
   <h3>
     When to consider something else
   </h3>
-  <ul>
+  <ul
+    className="list list-bullet"
+  >
     <li>
       To enforce an action before the user can proceed, use the 
       <Link
@@ -237,10 +269,7 @@ exports[`Documentation: Sheet renders 1`] = `
   </p>
   <SheetExample />
   <ContentGuidelines />
-  <h2>
-    Developer documentation
-  </h2>
-  <JavascriptMethods />
+  <DeveloperDocumentation />
   <NpmInformation
     componentName="sheet"
   />
