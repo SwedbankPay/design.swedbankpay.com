@@ -157,7 +157,7 @@ InputGroup.propTypes = {
     errorMessage: PropTypes.string,
     successMessage: PropTypes.string,
     className: PropTypes.string,
-    boxSize: PropTypes.oneOf(["medium-size", "small-size", ""])
+    boxSize: PropTypes.oneOf(["medium", "small", ""])
 };
 
 export default InputGroup;
