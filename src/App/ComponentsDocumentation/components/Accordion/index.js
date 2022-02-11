@@ -90,7 +90,7 @@ const ContentGuidelines = () => (
                 </div>
             </div>
         </div>
-        <ul>
+        <ul className="list list-bullet">
             <li>The title in the Accordion header should be as brief as possible while still being clear and descriptive.</li>
             <li>The Accordion body should contain detailed information related to the title.</li>
         </ul>
