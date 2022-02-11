@@ -19,7 +19,7 @@ const SheetExample = () => (
         </p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={sheetShowCase} codeFigure/>
         <h3>When to consider something else</h3>
-        <ul>
+        <ul className="list list-bullet">
             <li>To enforce an action before the user can proceed, use the <Link to="/components/dialog">Dialog</Link> component.</li>
             <li>To present a small amount of content or actions in a non-blocking overlay, use the <Link to="/components/popover">Popover</Link> component.</li>
         </ul>
@@ -68,7 +68,7 @@ const ContentGuidelines = () => (
                     <img src={`${basename}img/documentation/sheet/content-guidelines.png`} alt="Sheet component with sticky header and footer" className="img-fluid"/>
                 </div>
             </div>
-            <ul>
+            <ul className="list list-bullet">
                 <li>The <b>header</b> should have a title and a close button.</li>
                 <li>The <b>main content</b> area can contain a number of different components and this area can be vertically scrollable.</li>
                 <li>The <b>footer</b> is optional and designed to contain buttons that will lead to certain actions. The footer is also sticky.</li>
@@ -77,10 +77,13 @@ const ContentGuidelines = () => (
     </>
 );
 
-const JavascriptMethods = () => (
+const DeveloperDocumentation = () => (
     <>
+        <h2 id="developer-documentation">Developer Documentation</h2>
         <h3 id="javascript-methods">JavaScript methods</h3>
-        <JavascriptDocs componentName="sheet" open close />
+        <p>Use <CodeTags type="secondary" code="dg.sheet.init()"/> to <Link to="/get-started/for-developers">initialize</Link> all accordions. This will give the sheets open and close functions automatically.</p>
+        <p>To open a given sheet, use <CodeTags type="secondary" code="dg.sheet.open(<sheet-id>)"/></p>
+        <p>To close a given sheet, use <CodeTags type="secondary" code="dg.sheet.close(<sheet-id>)"/></p>
         <p>To disable the listener responsible for closing the sheet when a user clicks outside, add <CodeTags type="secondary" code="data-require-action"/> to your sheet.</p>
     </>
 );
@@ -99,8 +102,7 @@ class Sheet extends Component {
                 </p>
                 <SheetExample />
                 <ContentGuidelines/>
-                <h2>Developer documentation</h2>
-                <JavascriptMethods />
+                <DeveloperDocumentation />
                 <NpmInformation componentName={"sheet"}/>
             </DocContainer>
         );
@@ -110,4 +112,4 @@ class Sheet extends Component {
 export default Sheet;
 
 /* For testing */
-export { SheetExample, ContentGuidelines, JavascriptMethods };
+export { SheetExample, ContentGuidelines, DeveloperDocumentation };
