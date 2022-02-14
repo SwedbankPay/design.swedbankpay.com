@@ -21,7 +21,7 @@ const WhenToUse = () => (
                         <div className="px-4 slab slab-plain slab-border-error h-100 mb-2 d-flex flex-column">
                             <span className="h4">Don&#x27;t</span>
                             <div >
-                                <InputGroup type="select" id="dont-example" label={label} placeholder={placeholder} selectOptions={selectOptions} />
+                                <InputGroup type="select" id={`dont-example-${i}`} label={label} placeholder={placeholder} selectOptions={selectOptions} />
                             </div>
                         </div>
                     </div>
