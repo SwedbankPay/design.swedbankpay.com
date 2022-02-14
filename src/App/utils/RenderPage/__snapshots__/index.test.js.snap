@@ -527,16 +527,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               ],
               "title": "Login",
             },
-            Object {
-              "componentPath": "content/Filters",
-              "icon": "filter_alt",
-              "outlined": true,
-              "path": "/patterns/filters",
-              "statusBadges": Array [
-                "new",
-              ],
-              "title": "Filters",
-            },
           ]
         }
         title="Patterns"
