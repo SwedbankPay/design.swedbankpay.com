@@ -717,6 +717,60 @@ exports[`Dashboard: Charts LineChart renders 1`] = `
         }
       }
     />
+    <table
+      className="table table-plain px-5"
+    >
+      <thead>
+        <tr>
+          <th>
+            Year
+          </th>
+          <th>
+            2013
+          </th>
+          <th>
+            2014
+          </th>
+          <th>
+            2015
+          </th>
+          <th>
+            2016
+          </th>
+          <th>
+            2017
+          </th>
+          <th>
+            2018
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Peak
+          </td>
+          <td>
+            261
+          </td>
+          <td>
+            673
+          </td>
+          <td>
+            962
+          </td>
+          <td>
+            1067
+          </td>
+          <td>
+            1007
+          </td>
+          <td>
+            779
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </ComponentPreview>
   <ComponentPreview
     codeFigure={true}
@@ -737,63 +791,6 @@ dg.chart("simple-line-chart", {
 });
                 
   </ComponentPreview>
-  <h4>
-    Data table representation
-  </h4>
-  <table
-    className="table"
-  >
-    <thead>
-      <tr>
-        <th>
-          Year
-        </th>
-        <th>
-          2013
-        </th>
-        <th>
-          2014
-        </th>
-        <th>
-          2015
-        </th>
-        <th>
-          2016
-        </th>
-        <th>
-          2017
-        </th>
-        <th>
-          2018
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          Peak
-        </td>
-        <td>
-          261
-        </td>
-        <td>
-          673
-        </td>
-        <td>
-          962
-        </td>
-        <td>
-          1067
-        </td>
-        <td>
-          1007
-        </td>
-        <td>
-          779
-        </td>
-      </tr>
-    </tbody>
-  </table>
   <h3>
     Stepped and dashed line
   </h3>
