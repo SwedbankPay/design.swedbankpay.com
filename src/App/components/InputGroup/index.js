@@ -2,12 +2,12 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-export const Addon = ({ type, value, color, disabled }) => (
+export const Addon = ({ type, value, color, disabled, postfix }) => (
     (type === "button") ?
         <button type="button" className={`btn btn-${color}`} disabled={disabled}>
             {value}
         </button>
-        : <span className="input-group-addon">{(type === "icon") ? <i className="material-icons material-icons-outlined" aria-hidden="true">{value}</i> : value}</span>
+        : <span className={`input-group-addon ${postfix ? "postfix" : ""}`}>{(type === "icon") ? <i className="material-icons material-icons-outlined" aria-hidden="true">{value}</i> : value}</span>
 );
 
 const Feedback = ({ icon }) => (
@@ -42,7 +42,9 @@ const InputGroup = ({
     errorMessage,
     successMessage,
     tooltip,
-    optional
+    optional,
+    postfix,
+    boxSize
 }) => {
     const attrs = {
         type: type || null,
@@ -72,8 +74,16 @@ const InputGroup = ({
         required: required || null
     };
 
+    const formGroupClasses = classnames(
+        "form-group",
+        disabled ? "disabled" : null,
+        boxSize ? boxSize : null,
+        type === "select" ? errorMessage ? "has-error" : null : null,
+        className ? className : null
+    );
+
     return (
-        <div className={`form-group${disabled ? " disabled" : ""}${type === "select" ? errorMessage ? " has-error" : "" : ""}${className ? ` ${className}` : ""}`}>{"\n"}
+        <div className={formGroupClasses}>{"\n"}
             {label ? <label htmlFor={id}>{"\n"}{label} {optional && "(optional)"}{tooltip && "\n"}
                 {tooltip &&
                     <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
@@ -81,7 +91,7 @@ const InputGroup = ({
             </label> : null}{label ? "\n" : null}
             {prefixValue || postfixValue || feedbackIcon || errorMessage ?
                 <div className={inputGrpClasses}>{"\n"}
-                    {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
+                    {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} postfix={postfix} /> : null }{prefixValue ? "\n" : null}
                     {type === "textarea" ?
                         <textarea {...attrs}></textarea>
                         : type === "select" ?
@@ -95,8 +105,7 @@ const InputGroup = ({
                             :
                             <input {...attrs} />}
                     {"\n"}
-                    {feedbackIcon ? <Feedback icon={feedbackIcon} /> : null} {feedbackIcon ? "\n" : null}
-                    {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} /> : null }{postfixValue ? "\n" : null}
+                    {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} postfix={postfix} /> : null }{postfixValue ? "\n" : null}
                 </div>
                 :
                 <>
@@ -147,7 +156,8 @@ InputGroup.propTypes = {
     ]),
     errorMessage: PropTypes.string,
     successMessage: PropTypes.string,
-    className: PropTypes.string
+    className: PropTypes.string,
+    boxSize: PropTypes.oneOf(["medium", "small", ""])
 };
 
 export default InputGroup;

@@ -55,6 +55,104 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
     </li>
   </ul>
   <h3>
+    Prefix and Postfix
+  </h3>
+  <p>
+    Prefixes and postfixes are useful when there’s a commonly understood icon, symbol or abbreviation for the type of information the user needs to enter since it can reduce mental load. 
+  </p>
+  <div
+    className="row placeholder-guideline"
+  >
+    <div
+      className="col-lg-6 col-sm-12 "
+    >
+      <div
+        className="slab slab-plain slab-border-success pb-4"
+      >
+        <h3
+          className="mb-3 mt-0"
+        >
+          Do
+        </h3>
+        <InputGroup
+          label="Username"
+          prefixType="icon"
+          prefixValue="account_circle"
+          type="text"
+        />
+      </div>
+      <p>
+        Use a prefix icon to help convey the meaning of the label.
+      </p>
+    </div>
+    <div
+      className="col-lg-6 col-sm-12"
+    >
+      <div
+        className="slab slab-plain slab-border-error pb-4"
+      >
+        <h3
+          className="mb-3 mt-0"
+        >
+          Don't
+        </h3>
+        <InputGroup
+          label="username"
+          prefixType="icon"
+          prefixValue="email"
+          type="email"
+        />
+      </div>
+      <p>
+        Don’t use a prefix icon that doesn’t help to convey the meaning of the label. There shouldn’t be any confusion between what type of information an icon represents.
+      </p>
+    </div>
+    <div
+      className="col-lg-6 col-sm-12 "
+    >
+      <div
+        className="slab slab-plain slab-border-success pb-4"
+      >
+        <h3
+          className="mb-3 mt-0"
+        >
+          Do
+        </h3>
+        <InputGroup
+          label="Fixed transaction fee, in SEK"
+          postfix={true}
+          postfixValue="kr"
+          type="text"
+        />
+      </div>
+      <p>
+        The label in itself should clearly indicate what type of data to enter, since prefixes and postfixes are hidden from screen readers.
+      </p>
+    </div>
+    <div
+      className="col-lg-6 col-sm-12"
+    >
+      <div
+        className="slab slab-plain slab-border-error pb-4"
+      >
+        <h3
+          className="mb-3 mt-0"
+        >
+          Don't
+        </h3>
+        <InputGroup
+          label="Fixed transaction fee, in SEK"
+          postfix={true}
+          postfixValue="kronor"
+          type="text"
+        />
+      </div>
+      <p>
+        Use commonly understood abbreviations for text prefix or postfix, don’t use full words.
+      </p>
+    </div>
+  </div>
+  <h3>
     Placeholder text
   </h3>
   <p>
@@ -162,7 +260,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
         />
       </div>
       <p>
-        Don't use technical jargong 
+        Don't use technical jargon. 
       </p>
     </div>
   </div>
@@ -315,38 +413,12 @@ exports[`Component: InputField Overview renders 1`] = `
               <p>
                 The default input type is text but it can also be specified as for example Email which will make it automatically validated when submitted or Password which will mask the characters submitted.
               </p>
-              <Alert
-                icon="info"
-                id="input-field-alert"
-                text={
-                  <p>
-                    <b>
-                      Usage with icon.
-                    </b>
-                     Remember to wrap your input field within an 
-                    <CodeTags
-                      code=".input-group"
-                      type="secondary"
-                    />
-                  </p>
-                }
-                type="informative"
-              />
+              <p>
+                Input fields can have prefixes or postfixes which can help the user more quickly understand what kind of information that ius requested. These can be icons as well as text symbols or currency abbreviations like %, $ or kr.
+              </p>
             </React.Fragment>,
             "options": Object {
               "checkbox": Array [
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "input_icon",
-                      "name": "With icon",
-                      "value": Object {
-                        "prefixType": "icon",
-                        "prefixValue": "email",
-                      },
-                    },
-                  ],
-                },
                 Object {
                   "inputs": Array [
                     Object {
@@ -369,37 +441,37 @@ exports[`Component: InputField Overview renders 1`] = `
               ],
               "radio": Array [
                 Object {
-                  "id": "unit_radio",
-                  "title": "Input type examples",
+                  "id": "fix_radio",
+                  "title": "Prefix/Postfix",
                   "values": Array [
                     Object {
-                      "name": "Text",
+                      "name": "None",
                       "value": Object {
                         "type": "text",
                       },
                     },
                     Object {
-                      "name": "E-mail",
+                      "name": "Prefix - Icon",
                       "value": Object {
-                        "placeholder": "name@mail.com",
                         "prefixType": "icon",
+                        "prefixValue": "email",
                         "type": "email",
                       },
                     },
                     Object {
-                      "name": "Tel",
+                      "name": "Prefix - Text",
                       "value": Object {
-                        "placeholder": "+46 701234567",
-                        "prefixType": "icon",
-                        "type": "tel",
+                        "feedbackIcon": "kr",
+                        "prefixType": "text",
+                        "prefixValue": "€",
                       },
                     },
                     Object {
-                      "name": "Password",
+                      "name": "Postfix - Text",
                       "value": Object {
-                        "placeholder": "",
-                        "prefixType": "icon",
-                        "type": "password",
+                        "postfix": true,
+                        "postfixValue": "kr",
+                        "type": "text",
                       },
                     },
                   ],
