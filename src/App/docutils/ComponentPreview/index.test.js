@@ -17,7 +17,7 @@ describe("Utilities: ComponentPreview", () => {
     const TestComponentList = () => (
         <ul className="unordered-list">
             <li className="listElem">This</li>
-            <li className="listElem">Iis</li>
+            <li className="listElem">Is</li>
             <li className="listElem">A</li>
             <li className="listElem">Test</li>
         </ul>
