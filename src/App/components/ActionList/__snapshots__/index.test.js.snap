@@ -35,6 +35,7 @@ exports[`Component: ActionList prop types items prints an error if it does not c
     <ActionListToggle>
       <button
         aria-haspopup="true"
+        aria-label="Action list button"
         className="action-toggle"
         id="actionListToggle"
         type="button"
@@ -80,6 +81,7 @@ Array [
       <ActionListToggle>
         <button
           aria-haspopup="true"
+          aria-label="Action list button"
           className="action-toggle"
           id="actionListToggle"
           type="button"
@@ -136,6 +138,7 @@ Array [
       <ActionListToggle>
         <button
           aria-haspopup="true"
+          aria-label="Action list button"
           className="action-toggle"
           id="actionListToggle"
           type="button"
@@ -270,6 +273,7 @@ Array [
       <ActionListToggle>
         <button
           aria-haspopup="true"
+          aria-label="Action list button"
           className="action-toggle"
           id="actionListToggle"
           type="button"
@@ -399,6 +403,7 @@ Array [
       <ActionListToggle>
         <button
           aria-haspopup="true"
+          aria-label="Action list button"
           className="action-toggle"
           id="actionListToggle"
           type="button"
@@ -534,6 +539,7 @@ Array [
       <ActionListToggle>
         <button
           aria-haspopup="true"
+          aria-label="Action list button"
           className="action-toggle"
           id="actionListToggle"
           type="button"
@@ -664,6 +670,7 @@ Array [
       <ActionListToggle>
         <button
           aria-haspopup="true"
+          aria-label="Action list button"
           className="action-toggle"
           id="actionListToggle"
           type="button"
@@ -778,6 +785,7 @@ Array [
       <ActionListToggle>
         <button
           aria-haspopup="true"
+          aria-label="Action list button"
           className="action-toggle"
           id="actionListToggle"
           type="button"
@@ -834,6 +842,7 @@ Array [
       <ActionListToggle>
         <button
           aria-haspopup="true"
+          aria-label="Action list button"
           className="action-toggle"
           id="actionListToggle"
           type="button"
