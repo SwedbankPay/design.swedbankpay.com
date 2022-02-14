@@ -313,7 +313,7 @@ exports[`Component: Select When to use renders 1`] = `
         </span>
         <div>
           <InputGroup
-            id="dont-example"
+            id="dont-example-0"
             label="Background color"
             placeholder="Select color"
             selectOptions={
@@ -352,6 +352,7 @@ exports[`Component: Select When to use renders 1`] = `
           Do
         </span>
         <Datepicker
+          id="datepicker-example"
           label="Birthday"
           placeholder="DD/MM/YYY"
           prefixType="icon"
@@ -372,7 +373,7 @@ exports[`Component: Select When to use renders 1`] = `
         </span>
         <div>
           <InputGroup
-            id="dont-example"
+            id="dont-example-1"
             label="Day"
             placeholder="Select day"
             selectOptions={
@@ -440,6 +441,7 @@ exports[`Component: Select When to use renders 1`] = `
           Do
         </span>
         <InputGroup
+          id="select-do-example"
           label="Number of drinks"
           placeholder="4"
           type="text"
@@ -459,7 +461,7 @@ exports[`Component: Select When to use renders 1`] = `
         </span>
         <div>
           <InputGroup
-            id="dont-example"
+            id="dont-example-2"
             label="Number of drinks"
             placeholder="Select number"
             selectOptions={
