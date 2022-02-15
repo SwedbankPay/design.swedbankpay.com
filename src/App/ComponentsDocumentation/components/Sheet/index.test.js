@@ -14,7 +14,6 @@ describe("Documentation: Sheet", () => {
         const wrapper = shallow(<Sheet />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(console.warn).toHaveBeenCalled();
     });
 
     describe("SheetExample", () => {
