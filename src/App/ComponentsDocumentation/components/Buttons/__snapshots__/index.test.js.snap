@@ -1205,7 +1205,8 @@ exports[`Documentation: Buttons Overview renders 1`] = `
                     Object {
                       "name": "After",
                       "value": Object {
-                        "iconAfter": "keyboard_arrow_down",
+                        "icon": "keyboard_arrow_down",
+                        "iconAfter": true,
                       },
                     },
                   ],
@@ -1351,7 +1352,8 @@ exports[`Documentation: Buttons Overview renders 1`] = `
                     Object {
                       "name": "After",
                       "value": Object {
-                        "iconAfter": "keyboard_arrow_down",
+                        "icon": "keyboard_arrow_down",
+                        "iconAfter": true,
                       },
                     },
                   ],
@@ -1444,7 +1446,8 @@ exports[`Documentation: Buttons Overview renders 1`] = `
                     Object {
                       "name": "After",
                       "value": Object {
-                        "iconAfter": "keyboard_arrow_down",
+                        "icon": "keyboard_arrow_down",
+                        "iconAfter": true,
                       },
                     },
                   ],
