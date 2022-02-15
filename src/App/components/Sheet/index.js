@@ -12,7 +12,7 @@ const Sheet = ({ id, requireAction, title, footer, children }) => (
                     <i className="material-icons" aria-label="Close sheet">close</i>{"\n\t\t"}
                 </button>
             </div>
-            <div className={`sheet-content ${footer ? "has-footer" : ""}`}>
+            <div className={`sheet-content${footer ? " has-footer" : ""}`}>
                 {children}
             </div>
             {footer &&
