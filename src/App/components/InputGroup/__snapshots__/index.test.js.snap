@@ -22,7 +22,65 @@ exports[`Component: InputGroup - renders 1`] = `
 </div>
 `;
 
+
+exports[`Component: InputGroup - renders a form-group with a feedback icon if prop feedbackIcon is provided 1`] = `
+<InputGroup
+  feedbackIcon="testvalue"
+  type="typetest"
+>
+  <div
+    className="form-group "
+  >
+    
+
+    <div
+      className="input-group has-feedback"
+    >
+      
+
+      <input
+        autoComplete={null}
+        className="form-control"
+        data-validate={null}
+        defaultValue=""
+        disabled={null}
+        id={null}
+        pattern={null}
+        placeholder={null}
+        readOnly={null}
+        required={null}
+        type="typetest"
+      />
+      
+
+      <Feedback
+        icon="testvalue"
+      >
+        <span
+          className="form-control-feedback"
+        >
+          
+		
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            testvalue
+          </i>
+          
+	
+        </span>
+      </Feedback>
+       
+      
+
+    </div>
+  </div>
+</InputGroup>
+`;
+
 exports[`Component: InputGroup - renders a form-group with a help block with data-success and data-error attributes 1`] = `
+
 <InputGroup
   helpBlock="testvalue"
   successMessage="success"
@@ -50,8 +108,6 @@ exports[`Component: InputGroup - renders a form-group with a help block with dat
       className="help-block"
       data-success="success"
     >
-      
-
     </div>
   </div>
 </InputGroup>

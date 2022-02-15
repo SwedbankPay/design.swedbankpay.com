@@ -84,7 +84,8 @@ const InputGroup = ({
     );
 
     return (
-        <div className={formGroupClasses}>{"\n"}
+        <div className={`form-group${disabled ? " disabled" : ""} ${errorMessage ? " has-error" : ""}${className ? ` ${className}` : ""}`}>{"\n"}
+
             {label ? <label htmlFor={id}>{"\n"}{label} {optional && "(optional)"}{tooltip && "\n"}
                 {tooltip &&
                     <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
