@@ -27,7 +27,8 @@ export const overviewButtons = {
                             {
                                 name: "After",
                                 value: {
-                                    iconAfter: "keyboard_arrow_down"
+                                    icon: "keyboard_arrow_down",
+                                    iconAfter: true
                                 }
                             }
                         ]
@@ -160,7 +161,8 @@ export const overviewButtons = {
                             {
                                 name: "After",
                                 value: {
-                                    iconAfter: "keyboard_arrow_down"
+                                    icon: "keyboard_arrow_down",
+                                    iconAfter: true
                                 }
                             }
                         ]
@@ -248,7 +250,8 @@ export const overviewButtons = {
                             {
                                 name: "After",
                                 value: {
-                                    iconAfter: "keyboard_arrow_down"
+                                    icon: "keyboard_arrow_down",
+                                    iconAfter: true
                                 }
                             }
                         ]
