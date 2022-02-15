@@ -10,12 +10,6 @@ export const Addon = ({ type, value, color, disabled, postfix }) => (
         : <span className={`input-group-addon ${postfix ? "postfix" : ""}`}>{(type === "icon") ? <i className="material-icons material-icons-outlined" aria-hidden="true">{value}</i> : value}</span>
 );
 
-const Feedback = ({ icon }) => (
-    <span className="form-control-feedback">{"\n\t\t"}
-        <i className="material-icons" aria-hidden="true">{icon}</i>{"\n\t"}
-    </span>
-);
-
 const InputGroup = ({
     id,
     type,
@@ -79,12 +73,12 @@ const InputGroup = ({
         "form-group",
         disabled ? "disabled" : null,
         boxSize ? boxSize : null,
-        type === "select" ? errorMessage ? "has-error" : null : null,
+        errorMessage ? "has-error" : null,
         className ? className : null
     );
 
     return (
-        <div className={`form-group${disabled ? " disabled" : ""} ${errorMessage ? " has-error" : ""}${className ? ` ${className}` : ""}`}>{"\n"}
+        <div className={formGroupClasses}>{"\n"}
 
             {label ? <label htmlFor={id}>{"\n"}{label} {optional && "(optional)"}{tooltip && "\n"}
                 {tooltip &&
