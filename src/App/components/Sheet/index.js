@@ -16,9 +16,9 @@ const Sheet = ({ id, requireAction, title, footer, children }) => (
                 {children}
             </div>
             {footer &&
-                <div className="sheet-footer">
-                    <Button type="primary" className="mr-2" label="Primary" />
-                    <Button type="secondary" className="ml-2" label="Secondary" />
+                <div className="sheet-footer">{"\n"}
+                    <Button type="primary" className="mr-2" label="Primary" />{"\n"}
+                    <Button type="secondary" className="ml-2" label="Secondary" />{"\n"}
                 </div>
             }
         </section>

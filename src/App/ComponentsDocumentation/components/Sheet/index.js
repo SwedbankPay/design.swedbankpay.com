@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 
-import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 import { Link } from "react-router-dom";
 
@@ -62,18 +62,14 @@ const SheetExample = () => (
 const ContentGuidelines = () => (
     <>
         <h2>Content guidelines</h2>
-        <div>
-            <div className="col-12">
-                <div className="d-flex justify-content-center mt-4 mb-4">
-                    <img src={`${basename}img/documentation/sheet/content-guidelines.png`} alt="Sheet component with sticky header and footer" className="img-fluid"/>
-                </div>
-            </div>
-            <ul className="list list-bullet">
-                <li>The <b>header</b> should have a title and a close button.</li>
-                <li>The <b>main content</b> area can contain a number of different components and this area can be vertically scrollable.</li>
-                <li>The <b>footer</b> is optional and designed to contain buttons that will lead to certain actions. The footer is also sticky.</li>
-            </ul>
-        </div>
+        <img src={`${basename}img/documentation/sheet/content-guidelines.png`} alt="Sheet component with sticky header and footer" className="img-fluid"/>
+
+        <ul className="list list-bullet">
+            <li>The <b>header</b> should have a title and a close button.</li>
+            <li>The <b>main content</b> area can contain a number of different components and this area can be vertically scrollable.</li>
+            <li>The <b>footer</b> is optional and designed to contain buttons that will lead to certain actions. The footer is also sticky.</li>
+        </ul>
+
     </>
 );
 
@@ -88,26 +84,23 @@ const DeveloperDocumentation = () => (
     </>
 );
 
-class Sheet extends Component {
-
-    componentDidMount () {
+const Sheet = () => {
+    useEffect(() => {
         sheet.init();
-    }
+    }, []);
 
-    render () {
-        return (
-            <DocContainer docToc>
-                <p className="lead">
-                A sheet is a container component that slides in and out from the edge of the screen and overlays the page content.  It can be used to focus users attention to a specific task without leaving the current page.
-                </p>
-                <SheetExample />
-                <ContentGuidelines/>
-                <DeveloperDocumentation />
-                <NpmInformation componentName={"sheet"}/>
-            </DocContainer>
-        );
-    }
-}
+    return (
+        <DocContainer docToc>
+            <p className="lead">
+            A sheet is a container component that slides in and out from the edge of the screen and overlays the page content.  It can be used to focus users attention to a specific task without leaving the current page.
+            </p>
+            <SheetExample />
+            <ContentGuidelines/>
+            <DeveloperDocumentation />
+            <NpmInformation componentName={"sheet"}/>
+        </DocContainer>
+    );
+};
 
 export default Sheet;
 
