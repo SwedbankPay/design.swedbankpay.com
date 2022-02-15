@@ -71,7 +71,8 @@ const InputGroup = ({
         defaultValue: "",
         disabled: disabled || null,
         readOnly: readOnly || null,
-        required: required || null
+        required: required || null,
+        id: id || null
     };
 
     const formGroupClasses = classnames(
@@ -112,7 +113,7 @@ const InputGroup = ({
                     {type === "textarea" ?
                         <textarea {...attrs}></textarea>
                         : type === "select" ?
-                            <select {...selectAttrs} id={id}>{"\n\t\t"} {/* Placeholder for select is removed when ID is included here?? wtf */}
+                            <select {...selectAttrs}>{"\n\t\t"} {/* Placeholder for select is removed when ID is included here?? :) */}
                                 {placeholder && <option value="" disabled hidden>{placeholder}</option> }
                                 {selectOptions.map((opt, i) => (
                                     <Fragment key={opt + i}>
@@ -124,7 +125,7 @@ const InputGroup = ({
                             <input {...attrs} />}
                 </>
             }
-            {helpBlock ? <div className="help-block" data-success={successMessage || null} data-error={errorMessage || null}>{"\n"}{helpBlock}{errorMessage}</div> : null}
+            {helpBlock ? <div className="help-block" data-success={successMessage || null} >{errorMessage}{"\n"}</div> : null}
         </div>
     );
 };
