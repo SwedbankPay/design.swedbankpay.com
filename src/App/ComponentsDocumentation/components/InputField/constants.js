@@ -1,7 +1,5 @@
 import React from "react";
 import InputGroup from "@components/InputGroup";
-import CodeTags from "@components/CodeTags";
-import Alert from "@components/Alert";
 
 export const inputShowCase = {
     id: "no-tabs",
@@ -10,18 +8,6 @@ export const inputShowCase = {
             component: <InputGroup type="text" label="Input label" id="input-showcase-example" placeholder="Placeholder text" />,
             options: {
                 checkbox: [
-                    {
-                        inputs: [
-                            {
-                                id: "input_icon",
-                                name: "With icon",
-                                value: {
-                                    prefixType: "icon",
-                                    prefixValue: "email"
-                                }
-                            }
-                        ]
-                    },
                     {
                         title: "Label add on",
                         inputs: [
@@ -44,37 +30,37 @@ export const inputShowCase = {
                 ],
                 radio: [
                     {
-                        id: "unit_radio",
-                        title: "Input type examples",
+                        id: "fix_radio",
+                        title: "Prefix/Postfix",
                         values: [
                             {
-                                name: "Text",
+                                name: "None",
                                 value: {
                                     type: "text"
                                 }
                             },
                             {
-                                name: "E-mail",
+                                name: "Prefix - Icon",
                                 value: {
                                     type: "email",
                                     prefixType: "icon",
-                                    placeholder: "name@mail.com"
+                                    prefixValue: "email"
                                 }
                             },
                             {
-                                name: "Tel",
+                                name: "Prefix - Text",
                                 value: {
-                                    type: "tel",
-                                    prefixType: "icon",
-                                    placeholder: "+46 701234567"
+                                    prefixType: "text",
+                                    prefixValue: "€",
+                                    feedbackIcon: "kr"
                                 }
                             },
                             {
-                                name: "Password",
+                                name: "Postfix - Text",
                                 value: {
-                                    type: "password",
-                                    prefixType: "icon",
-                                    placeholder: ""
+                                    type: "text",
+                                    postfixValue: "kr",
+                                    postfix: true
                                 }
                             }
                         ]
@@ -111,7 +97,7 @@ export const inputShowCase = {
             description: <>
                 <p>Inputs fields have a few different states which includes the default state, focus state, disabled state and error state.</p>
                 <p>The default input type is text but it can also be specified as for example Email which will make it automatically validated when submitted or Password which will mask the characters submitted.</p>
-                <Alert id="input-field-alert" type="informative" icon={"info"} text={<p><b>Usage with icon.</b> Remember to wrap your input field within an <CodeTags type="secondary" code=".input-group" /></p>}/>
+                <p>Input fields can have prefixes or postfixes which can help the user more quickly understand what kind of information that ius requested. These can be icons as well as text symbols or currency abbreviations like %, $ or kr.</p>
             </>
         }
     ]

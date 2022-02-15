@@ -22,6 +22,7 @@ exports[`Component: InputGroup - renders 1`] = `
 </div>
 `;
 
+
 exports[`Component: InputGroup - renders a form-group with a feedback icon if prop feedbackIcon is provided 1`] = `
 <InputGroup
   feedbackIcon="testvalue"
@@ -79,6 +80,7 @@ exports[`Component: InputGroup - renders a form-group with a feedback icon if pr
 `;
 
 exports[`Component: InputGroup - renders a form-group with a help block with data-success and data-error attributes 1`] = `
+
 <InputGroup
   helpBlock="testvalue"
   successMessage="success"
@@ -106,8 +108,6 @@ exports[`Component: InputGroup - renders a form-group with a help block with dat
       className="help-block"
       data-success="success"
     >
-      
-
     </div>
   </div>
 </InputGroup>
@@ -175,12 +175,11 @@ exports[`Component: InputGroup - renders a form-group with a postfix if prop pos
       />
       
 
-       
       <Addon
         value="testvalue"
       >
         <span
-          className="input-group-addon"
+          className="input-group-addon "
         >
           testvalue
         </span>
@@ -238,7 +237,6 @@ exports[`Component: InputGroup - renders a form-group with a prefix button if pr
       />
       
 
-       
     </div>
   </div>
 </InputGroup>
@@ -265,7 +263,7 @@ exports[`Component: InputGroup - renders a form-group with a prefix icon if prop
         value="home"
       >
         <span
-          className="input-group-addon"
+          className="input-group-addon "
         >
           <i
             aria-hidden="true"
@@ -292,7 +290,6 @@ exports[`Component: InputGroup - renders a form-group with a prefix icon if prop
       />
       
 
-       
     </div>
   </div>
 </InputGroup>
@@ -317,7 +314,7 @@ exports[`Component: InputGroup - renders a form-group with a prefix label if pro
         value="label text"
       >
         <span
-          className="input-group-addon"
+          className="input-group-addon "
         >
           label text
         </span>
@@ -339,7 +336,6 @@ exports[`Component: InputGroup - renders a form-group with a prefix label if pro
       />
       
 
-       
     </div>
   </div>
 </InputGroup>

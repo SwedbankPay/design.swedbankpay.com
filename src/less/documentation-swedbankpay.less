@@ -140,7 +140,7 @@
         margin-right: auto;
         margin-left: auto;
         padding: 2rem 2rem;
-        max-width: 48.375rem;
+        max-width: 46.375rem;
 
         h1:first-of-type {
             margin-top: 1rem;
@@ -568,8 +568,6 @@
     }
 
     .doc-body {
-        padding-right: 2rem;
-
         @media (max-width: @screen-sm-max) {
             padding-right: 1rem;
         }
@@ -1219,6 +1217,14 @@
     }
 
     #tabs-overview {
+        #tabs-scroll-example-dont {
+            border-bottom: none;
+
+            > ul {
+                border-bottom: 1px solid #d4c4bc;
+            }
+        }
+
         .showcase-panel {
             .component-preview-content {
                 max-width: 30.75rem;
