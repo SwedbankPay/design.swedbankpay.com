@@ -6,14 +6,29 @@ import Checkbox from "@components/FormComponents/Checkbox";
 
 const SheetButton = ({ footer }) => (
     <>
-        <button className="btn btn-primary" data-sheet-open="demo-sheet">Open sheet</button>
-        <Sheet id="demo-sheet" footer={footer} title="Title">
-            <p>This is the sheet component. It can contain anything you want. Create a local component and replace this placeholder content component with it.</p>
-            <InputGroup type="text" label="Input label" id="input-showcase-example" placeholder="Placeholder text" />
-            <InputGroup type="text" label="Input label" id="input-showcase-example" placeholder="Placeholder text" />
-            <InputGroup type="text" label="Input label" id="input-showcase-example" placeholder="Placeholder text" />
-            <Checkbox label="Checkbox label" name="checkbox-group-example" />
-        </Sheet>
+        {footer ?
+            <div>
+                <button className="btn btn-primary" data-sheet-open={"demo-sheet-footer"}>Open sheet</button>
+                <Sheet id="demo-sheet-footer" footer={true} title="Title">
+                    <p>This is the sheet component. It can contain anything you want. Create a local component and replace this placeholder content component with it.</p>
+                    <InputGroup type="text" label="Input label" id="input-showcase-example" placeholder="Placeholder text" />
+                    <InputGroup type="text" label="Input label" id="input-showcase-example" placeholder="Placeholder text" />
+                    <InputGroup type="text" label="Input label" id="input-showcase-example" placeholder="Placeholder text" />
+                    <Checkbox label="Checkbox label" name="checkbox-group-example" />
+                </Sheet>
+            </div>
+            :
+            <>
+                <button className="btn btn-primary" data-sheet-open={"demo-sheet"}>Open sheet</button>
+                <Sheet id="demo-sheet" footer={false} title="Title">
+                    <p>This is the sheet component. It can contain anything you want. Create a local component and replace this placeholder content component with it.</p>
+                    <InputGroup type="text" label="Input label" id="input-showcase-example" placeholder="Placeholder text" />
+                    <InputGroup type="text" label="Input label" id="input-showcase-example" placeholder="Placeholder text" />
+                    <InputGroup type="text" label="Input label" id="input-showcase-example" placeholder="Placeholder text" />
+                    <Checkbox label="Checkbox label" name="checkbox-group-example" />
+                </Sheet>
+            </>
+        }
     </>
 );
 
@@ -21,7 +36,7 @@ export const sheetShowCase = {
     id: "no-tabs",
     elements: [
         {
-            component: <SheetButton/>,
+            component: <SheetButton id="sheet-showcase"/>,
             options: {
                 checkbox: [
                     {

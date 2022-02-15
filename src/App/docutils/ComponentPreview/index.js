@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { renderToStaticMarkup } from "react-dom/server";
 import jsbeautifier from "js-beautify";
 
-import { tabs } from "@src/scripts/main";
+import { tabs, sheet } from "@src/scripts/main";
 
 // NOTE: dangerousHTML prop is used when wanting to show html in the codefigure without encoding.
 
@@ -217,6 +217,10 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
 
             if (this.state.activeTab.component.props.id === "tabs-showcase-example") {
                 tabs.init("tabs-showcase-example");
+            }
+
+            if (this.state.activeTab.component.props.id === "sheet-showcase") {
+                sheet.init();
             }
         }
 
