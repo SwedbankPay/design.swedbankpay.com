@@ -9,6 +9,7 @@ exports[`Component: Topbar - logo prevents default when clicked 1`] = `
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
@@ -41,6 +42,7 @@ exports[`Component: Topbar - props logout prevents default when clicked 1`] = `
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
@@ -97,6 +99,7 @@ exports[`Component: Topbar - props logout renders logout link and adds topbar-li
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
@@ -204,6 +207,7 @@ exports[`Component: Topbar - props topbarContent menu links prevents default whe
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
@@ -388,6 +392,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
@@ -948,6 +953,7 @@ exports[`Component: Topbar - props topbarContent renders a topbar menu without m
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
@@ -1113,6 +1119,7 @@ exports[`Component: Topbar - props topbarContent renders a topbar-menu-button wh
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
@@ -1297,6 +1304,7 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
@@ -1504,6 +1512,7 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
@@ -1636,6 +1645,7 @@ exports[`Component: Topbar - props wide renders a topbar with the given breakpoi
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
