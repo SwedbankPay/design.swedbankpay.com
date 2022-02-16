@@ -15,11 +15,11 @@ const isDev = process.env.version === "LOCAL_DEV";
 const TopbarBtn = () => (
     <>
         <button type="button" className="topbar-btn">{"\n\t\t"}
-            <i className="material-icons topbar-btn-icon" aria-hidden="true">menu</i>
+            <i className="material-icons topbar-btn-icon">menu</i>
             {"\n\t\t"}
         </button>
         <button type="button" className="topbar-close">{"\n"}
-            <i className="material-icons topbar-btn-icon" aria-hidden="true">close</i>{"\n"}
+            <i className="material-icons topbar-btn-icon">close</i>{"\n"}
             {"\n\t\t"}
         </button>
     </>
@@ -36,7 +36,7 @@ const TopbarMenu = ({ menu, logout, sidebar }) => {
                         {"\n"}
                         <a href="#" className={item.name === "Home" ? "active" : null} onClick={e => e.preventDefault()}>
                             {"\n"}
-                            {item.icon ? <i className="material-icons" aria-hidden="true">{item.icon}</i> : null}
+                            {item.icon ? <i className="material-icons">{item.icon}</i> : null}
                             {"\n"}
                             <span>{item.name}</span>
                             {"\n"}
@@ -53,7 +53,7 @@ const TopbarMenu = ({ menu, logout, sidebar }) => {
 const TopbarLogout = () => (
     <>
         <a className="topbar-link-right" href="#" onClick={e => e.preventDefault()}>{"\n"}
-            <i className="material-icons" aria-hidden="true">exit_to_app</i>{"\n"}
+            <i className="material-icons">exit_to_app</i>{"\n"}
             <span>Log out</span>{"\n"}
         </a>{"\n"}
     </>
@@ -61,7 +61,7 @@ const TopbarLogout = () => (
 
 const TopbarLogo = ({ png }) => (
     <>
-        <a className={`topbar-logo${png ? " topbar-logo-png" : ""}`} href="/" onClick={e => e.preventDefault()}>{"\n"}
+        <a className={`topbar-logo${png ? " topbar-logo-png" : ""}`} href="/" onClick={e => e.preventDefault()} aria-label="To homepage">{"\n"}
             {(brand === "swedbankpay" && png)
                 ? <img src={`${process.env.basename}img/logo/${brand}-logo${brand === "swedbankpay"
                     ? "-v"
