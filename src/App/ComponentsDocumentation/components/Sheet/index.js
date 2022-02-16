@@ -21,7 +21,7 @@ const SheetExample = () => (
         <h3>When to consider something else</h3>
         <ul className="list list-bullet">
             <li>To enforce an action before the user can proceed, use the <Link to="/components/dialog">Dialog</Link> component.</li>
-            <li>To present a small amount of content or actions in a non-blocking overlay, use the <Link to="/components/popover">Popover</Link> component.</li>
+            {/* <li>To present a small amount of content or actions in a non-blocking overlay, use the <Link to="/components/popover">Popover</Link> component.</li>*/}
         </ul>
 
         <h2>How to use Sheets</h2>
@@ -53,7 +53,7 @@ const SheetExample = () => (
                         <img src={`${basename}img/documentation/sheet/do2.png`}alt="Sheet component in mobile view. Displaying filter example." className="img-fluid"/>
                     </div>
                 </div>
-                <p>A Sheet can be used as a container of a <Link to="/patterns/filters">filter</Link> functionality. This is especially helpful on small screens like mobile device where space is limited and can’t fit filter components inline with the content.</p>
+                <p>A Sheet can be used as a container for filter functionality. This is especially helpful on small screens like mobile device where space is limited and can’t fit filter components inline with the content.</p>
             </div>
         </div>
     </>

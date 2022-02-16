@@ -149,15 +149,6 @@ exports[`Documentation: Sheet SheetExample renders 1`] = `
       </Link>
        component.
     </li>
-    <li>
-      To present a small amount of content or actions in a non-blocking overlay, use the 
-      <Link
-        to="/components/popover"
-      >
-        Popover
-      </Link>
-       component.
-    </li>
   </ul>
   <h2>
     How to use Sheets
@@ -235,13 +226,7 @@ exports[`Documentation: Sheet SheetExample renders 1`] = `
         </div>
       </div>
       <p>
-        A Sheet can be used as a container of a 
-        <Link
-          to="/patterns/filters"
-        >
-          filter
-        </Link>
-         functionality. This is especially helpful on small screens like mobile device where space is limited and can’t fit filter components inline with the content.
+        A Sheet can be used as a container for filter functionality. This is especially helpful on small screens like mobile device where space is limited and can’t fit filter components inline with the content.
       </p>
     </div>
   </div>
