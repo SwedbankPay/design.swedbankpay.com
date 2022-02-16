@@ -1,102 +1,293 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components: Accordion AccordionGroup renders 1`] = `
-<Fragment>
+exports[`Components: Accordion ContentGuidelines renders 1`] = `
+<section>
   <h2
-    id="accordion-group"
+    id="content-guidelines"
   >
-    Accordion group
+    Content guidelines
   </h2>
-  <p>
-    If the accordions are wrapped in a 
-    <CodeTags
-      code=".accordion-group"
-      type="secondary"
-    />
-    , only one will be open at a time.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  <div
+    className="slab slab-plain"
   >
     <div
-      className="accordion-group"
+      className="d-flex flex-column align-items-center py-5"
     >
-      <Accordion
-        items={
-          Array [
-            Object {
-              "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
-              "id": "exp-1",
-              "title": "My title",
-            },
-            Object {
-              "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
-              "id": "exp-2",
-              "title": "My title",
-            },
-            Object {
-              "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
-              "id": "exp-3",
-              "title": "My title",
-            },
-          ]
-        }
-      />
+      <div
+        className="accordion show accordion-open w-50"
+      >
+        <button
+          aria-expanded="false"
+          className="accordion-header"
+          type="button"
+        >
+          
+
+          Title
+        </button>
+        <div
+          className="accordion-body"
+        >
+          <div
+            className="example-accordion pb-5 mb-3"
+          >
+            <p
+              className="pl-1 pt-1"
+            >
+              Body
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </ComponentPreview>
+  </div>
+  <ul
+    className="list list-bullet"
+  >
+    <li>
+      The title in the Accordion header should be as brief as possible while still being clear and descriptive.
+    </li>
+    <li>
+      The Accordion body should contain detailed information related to the title.
+    </li>
+  </ul>
+</section>
+`;
+
+exports[`Components: Accordion JavascriptMethods renders 1`] = `
+<Fragment>
+  <h2
+    id="developer-documentation"
+  >
+    Developer documentation
+  </h2>
+  <h3
+    id="javascript-methods"
+  >
+    JavaScript methods
+  </h3>
+  <p>
+    Use 
+    <CodeTags
+      code="dg.accordion.init()"
+      type="secondary"
+    />
+     to 
+    <Link
+      to="/get-started/for-developers"
+    >
+      initialize
+    </Link>
+     all accordions. This will open and close the accordions automatically.
+  </p>
+  <p>
+    If you want to manually open and close a specific accordion, you need to include an 
+    <CodeTags
+      code="id"
+      type="primary"
+    />
+     on the 
+    <CodeTags
+      code="accordion-body"
+      type="primary"
+    />
+     element.
+  </p>
+  <p>
+    To open a given accordion, use 
+    <CodeTags
+      code="dg.accordion.open(<accordion-id>)"
+      type="secondary"
+    />
+  </p>
+  <p>
+    To close a given accordion, use 
+    <CodeTags
+      code="dg.accordion.close(<accordion-id>)"
+      type="secondary"
+    />
+  </p>
 </Fragment>
 `;
 
 exports[`Components: Accordion Overview renders 1`] = `
-<Fragment>
+<section>
   <h2
     id="overview"
   >
     Overview
   </h2>
   <p>
-    The accordion component hides its content 
-    <CodeTags
-      code=".accordion-body"
-      type="secondary"
-    />
-    , showing only its title 
-    <CodeTags
-      code=".accordion-header"
-      type="secondary"
-    />
-    , until it is opened.
+    Accordions can make information discovery more effective by using progressive disclosure, that is showing the title while hiding the detailed information. They can be used to shorten pages and reduce scrolling when content is not crucial to read in full.
   </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
-  >
-    <Accordion
-      items={
-        Array [
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
           Object {
-            "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
-            "id": "exp-1",
-            "title": "My title",
+            "component": <AccordionComponentExample
+              id="accordion-showcase"
+            />,
+            "description": <p>
+              The accordion component can be either collapsed or expanded. Accordions are by default in the collapsed state with the body content hidden. If a group of accordions are wrapped in a 
+              <CodeTags
+                code=".accordion-group"
+                type="primary"
+              />
+              , only one will be open at a time.
+            </p>,
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "checkbox-accordions",
+                      "name": "Open one at a time",
+                      "value": Object {
+                        "accordionGroup": true,
+                      },
+                    },
+                  ],
+                  "title": "Accordion group",
+                },
+              ],
+            },
+            "title": "Accordion",
           },
-          Object {
-            "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
-            "id": "exp-2",
-            "title": "My title",
-          },
-          Object {
-            "content": "Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.",
-            "id": "exp-3",
-            "title": "My title",
-          },
-        ]
+        ],
+        "id": "no-tabs",
       }
-    />
-  </ComponentPreview>
-</Fragment>
+    }
+  />
+  <h3>
+    How to use Accordions
+  </h3>
+  <div
+    className="row"
+  >
+    <div
+      className="col-lg-6"
+    >
+      <div
+        className="slab slab-plain slab-border-success"
+        style={
+          Object {
+            "height": "85%",
+          }
+        }
+      >
+        <h3>
+          Do
+        </h3>
+        <div
+          className="d-flex flex-column align-items-center pt-3"
+        >
+          <Accordion
+            className="w-100 show accordion-open"
+            id="howToUseAccordions"
+            items={
+              Array [
+                Object {
+                  "content": <React.Fragment>
+                    <small
+                      className="font-weight-bold"
+                    >
+                      Sub section title
+                    </small>
+                    <p>
+                      If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.
+                    </p>
+                    <small
+                      className="font-weight-bold"
+                    >
+                      Sub section title
+                    </small>
+                    <p>
+                      If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.
+                    </p>
+                  </React.Fragment>,
+                  "id": "exp-5",
+                  "title": "Accordion title",
+                },
+              ]
+            }
+          />
+        </div>
+      </div>
+      <p>
+        Body content inside the Accordion may be split into paragraphs and include sub-headers if needed.
+      </p>
+    </div>
+    <div
+      className="col-lg-6"
+    >
+      <div
+        className="slab slab-plain slab-border-error"
+        style={
+          Object {
+            "height": "85%",
+          }
+        }
+      >
+        <h3>
+          Don't
+        </h3>
+        <div
+          className="d-flex flex-column align-items-center pt-3"
+        >
+          <Accordion
+            className="w-100 show accordion-open"
+            id="howNotToUseAccordions"
+            items={
+              Array [
+                Object {
+                  "content": <React.Fragment>
+                    <Accordion
+                      className="accordion-open show"
+                      items={
+                        Array [
+                          Object {
+                            "content": <p>
+                              Do not use this method
+                            </p>,
+                            "id": "none",
+                            "title": "Sub content",
+                          },
+                        ]
+                      }
+                    />
+                    <Accordion
+                      items={
+                        Array [
+                          Object {
+                            "content": <p>
+                              Do not use this method
+                            </p>,
+                            "id": "none",
+                            "title": "Sub content",
+                          },
+                        ]
+                      }
+                    />
+                  </React.Fragment>,
+                  "id": "exp-6",
+                  "title": "Accordion title",
+                },
+              ]
+            }
+          />
+        </div>
+      </div>
+      <p>
+        Do not put an Accordion inside of another Accordion.
+      </p>
+    </div>
+  </div>
+</section>
 `;
 
 exports[`Components: Accordion renders 1`] = `
@@ -109,8 +300,8 @@ exports[`Components: Accordion renders 1`] = `
     Accordions are components that toggles between hiding and showing content
   </p>
   <Overview />
-  <AccordionGroup />
-  <JavascriptMethods />
+  <ContentGuidelines />
+  <DeveloperDocumentation />
   <NpmInformation
     componentName="accordion"
   />
