@@ -97,12 +97,8 @@
     }
 
     &.has-error {
-        + .help-block[data-error] {
+        .help-block {
             color: @brand-error;
-
-            &:after {
-                content: attr(data-error);
-            }
         }
 
         input[type="checkbox"] {
@@ -139,12 +135,8 @@ fieldset {
     }
 
     &.has-error {
-        .help-block[data-error] {
+        .help-block {
             color: @brand-error;
-
-            &:after {
-                content: attr(data-error);
-            }
         }
 
         input[type="checkbox"] {
