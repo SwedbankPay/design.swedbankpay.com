@@ -61,7 +61,7 @@ const TopbarLogout = () => (
 
 const TopbarLogo = ({ png }) => (
     <>
-        <a className={`topbar-logo${png ? " topbar-logo-png" : ""}`} href="/" onClick={e => e.preventDefault()}>{"\n"}
+        <a className={`topbar-logo${png ? " topbar-logo-png" : ""}`} href="/" onClick={e => e.preventDefault()} aria-label="To homepage">{"\n"}
             {(brand === "swedbankpay" && png)
                 ? <img src={`${process.env.basename}img/logo/${brand}-logo${brand === "swedbankpay"
                     ? "-v"
