@@ -95,7 +95,6 @@ const LineChart = () => (
                 }
             }} description="Stepped and dashed line example"/>
         </ComponentPreview>
-        <AccessibilityAlert/>
         <ComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("stepped-dashed-line-chart", {
@@ -118,6 +117,7 @@ const LineChart = () => (
                 });
             `}
         </ComponentPreview>
+        <AccessibilityAlert/>
 
         <h3>Advanced options</h3>
         <ComponentPreview language="html" showCasePanel codeFigure >
@@ -151,7 +151,6 @@ const LineChart = () => (
                 }
             }} description="Advanced line example"/>
         </ComponentPreview>
-        <AccessibilityAlert/>
         <ComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("advanced-line-chart", {
@@ -185,6 +184,7 @@ const LineChart = () => (
                 });
             `}
         </ComponentPreview>
+        <AccessibilityAlert/>
 
         <h3>With fill</h3>
         <ComponentPreview language="html" showCasePanel codeFigure >
@@ -202,7 +202,6 @@ const LineChart = () => (
                 }
             }} description="Line example with fill"/>
         </ComponentPreview>
-        <AccessibilityAlert/>
         <ComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("line-fill-chart", {
@@ -220,6 +219,7 @@ const LineChart = () => (
                 });
             `}
         </ComponentPreview>
+        <AccessibilityAlert/>
     </>
 );
 
@@ -252,7 +252,6 @@ const BarChart = () => (
                 }
             }} description="Bar chart example"/>
         </ComponentPreview>
-        <AccessibilityAlert/>
         <ComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("simple-bar-chart", {
@@ -278,6 +277,7 @@ const BarChart = () => (
                 });
             `}
         </ComponentPreview>
+        <AccessibilityAlert/>
 
         <h3>Multiple datasets</h3>
         <p>You can add multiple datasets</p>
@@ -312,7 +312,6 @@ const BarChart = () => (
                 }
             }} description="Multiple datasets example"/>
         </ComponentPreview>
-        <AccessibilityAlert/>
         <ComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("multi-bar-chart", {
@@ -346,6 +345,7 @@ const BarChart = () => (
                 });
             `}
         </ComponentPreview>
+        <AccessibilityAlert/>
 
         <h3>Stacked bar</h3>
         <p className="lead">You can stack, because a stacked bar is almost as good as a stocked one</p>
@@ -384,7 +384,6 @@ const BarChart = () => (
                 }
             }} description="Stacked bar example"/>
         </ComponentPreview>
-        <AccessibilityAlert/>
         <ComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("stacked-multi-bar-chart", {
@@ -422,6 +421,7 @@ const BarChart = () => (
                 });
             `}
         </ComponentPreview>
+        <AccessibilityAlert/>
     </>
 );
 
@@ -444,7 +444,6 @@ const DoughnutAndPieCharts = () => (
                 }
             }} description="Pie chart example"/>
         </ComponentPreview>
-        <AccessibilityAlert/>
         <ComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("simple-pie-chart", {
@@ -460,6 +459,7 @@ const DoughnutAndPieCharts = () => (
                 });
             `}
         </ComponentPreview>
+        <AccessibilityAlert/>
 
         <h2>Doughnut</h2>
         <p className="lead">Did anyone say <code className="token string">doughnut</code>?</p>
@@ -476,7 +476,7 @@ const DoughnutAndPieCharts = () => (
                 }
             }} description="Doughnut example"/>
         </ComponentPreview>
-        <AccessibilityAlert/>
+
         <ComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("doughnut-chart", {
@@ -492,6 +492,7 @@ const DoughnutAndPieCharts = () => (
                 });
             `}
         </ComponentPreview>
+        <AccessibilityAlert/>
     </>
 );
 
@@ -527,7 +528,7 @@ const MixingTypes = () => (
                 }
             }} description="Mixing charts example"/>
         </ComponentPreview>
-        <AccessibilityAlert/>
+
         <ComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("mixed-chart", {
@@ -558,6 +559,7 @@ const MixingTypes = () => (
                 });
             `}
         </ComponentPreview>
+        <AccessibilityAlert/>
     </>
 );
 
@@ -587,7 +589,7 @@ const CustomColors = () => (
                 description="Custom colors example"
             />
         </ComponentPreview>
-        <AccessibilityAlert/>
+
         <ComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("custom-color-pie", {
@@ -608,7 +610,7 @@ const CustomColors = () => (
                 "197, 19, 28"]);
             `}
         </ComponentPreview>
-
+        <AccessibilityAlert/>
     </>
 );
 

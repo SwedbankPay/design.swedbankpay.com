@@ -109,7 +109,6 @@ exports[`Dashboard: Charts BarChart renders 1`] = `
       }
     />
   </ComponentPreview>
-  <AccessibilityAlert />
   <ComponentPreview
     codeFigure={true}
     language="javascript"
@@ -138,6 +137,7 @@ exports[`Dashboard: Charts BarChart renders 1`] = `
                 });
             
   </ComponentPreview>
+  <AccessibilityAlert />
   <h3>
     Multiple datasets
   </h3>
@@ -239,7 +239,6 @@ exports[`Dashboard: Charts BarChart renders 1`] = `
       }
     />
   </ComponentPreview>
-  <AccessibilityAlert />
   <ComponentPreview
     codeFigure={true}
     language="javascript"
@@ -276,6 +275,7 @@ exports[`Dashboard: Charts BarChart renders 1`] = `
                 });
             
   </ComponentPreview>
+  <AccessibilityAlert />
   <h3>
     Stacked bar
   </h3>
@@ -385,7 +385,6 @@ exports[`Dashboard: Charts BarChart renders 1`] = `
       }
     />
   </ComponentPreview>
-  <AccessibilityAlert />
   <ComponentPreview
     codeFigure={true}
     language="javascript"
@@ -426,6 +425,7 @@ exports[`Dashboard: Charts BarChart renders 1`] = `
                 });
             
   </ComponentPreview>
+  <AccessibilityAlert />
 </Fragment>
 `;
 
@@ -492,7 +492,6 @@ exports[`Dashboard: Charts CustomColors renders 1`] = `
       }
     />
   </ComponentPreview>
-  <AccessibilityAlert />
   <ComponentPreview
     codeFigure={true}
     language="javascript"
@@ -516,6 +515,7 @@ exports[`Dashboard: Charts CustomColors renders 1`] = `
                 "197, 19, 28"]);
             
   </ComponentPreview>
+  <AccessibilityAlert />
 </Fragment>
 `;
 
@@ -584,7 +584,6 @@ exports[`Dashboard: Charts DoughnutAndPieCharts renders 1`] = `
       }
     />
   </ComponentPreview>
-  <AccessibilityAlert />
   <ComponentPreview
     codeFigure={true}
     language="javascript"
@@ -603,6 +602,7 @@ exports[`Dashboard: Charts DoughnutAndPieCharts renders 1`] = `
                 });
             
   </ComponentPreview>
+  <AccessibilityAlert />
   <h2>
     Doughnut
   </h2>
@@ -660,7 +660,6 @@ exports[`Dashboard: Charts DoughnutAndPieCharts renders 1`] = `
       }
     />
   </ComponentPreview>
-  <AccessibilityAlert />
   <ComponentPreview
     codeFigure={true}
     language="javascript"
@@ -679,6 +678,7 @@ exports[`Dashboard: Charts DoughnutAndPieCharts renders 1`] = `
                 });
             
   </ComponentPreview>
+  <AccessibilityAlert />
 </Fragment>
 `;
 
@@ -882,7 +882,6 @@ exports[`Dashboard: Charts LineChart renders 1`] = `
       }
     />
   </ComponentPreview>
-  <AccessibilityAlert />
   <ComponentPreview
     codeFigure={true}
     language="javascript"
@@ -908,6 +907,7 @@ exports[`Dashboard: Charts LineChart renders 1`] = `
                 });
             
   </ComponentPreview>
+  <AccessibilityAlert />
   <h3>
     Advanced options
   </h3>
@@ -981,7 +981,6 @@ exports[`Dashboard: Charts LineChart renders 1`] = `
       }
     />
   </ComponentPreview>
-  <AccessibilityAlert />
   <ComponentPreview
     codeFigure={true}
     language="javascript"
@@ -1018,6 +1017,7 @@ exports[`Dashboard: Charts LineChart renders 1`] = `
                 });
             
   </ComponentPreview>
+  <AccessibilityAlert />
   <h3>
     With fill
   </h3>
@@ -1060,7 +1060,6 @@ exports[`Dashboard: Charts LineChart renders 1`] = `
       }
     />
   </ComponentPreview>
-  <AccessibilityAlert />
   <ComponentPreview
     codeFigure={true}
     language="javascript"
@@ -1081,6 +1080,7 @@ exports[`Dashboard: Charts LineChart renders 1`] = `
                 });
             
   </ComponentPreview>
+  <AccessibilityAlert />
 </Fragment>
 `;
 
@@ -1162,7 +1162,6 @@ exports[`Dashboard: Charts MixingTypes renders 1`] = `
       }
     />
   </ComponentPreview>
-  <AccessibilityAlert />
   <ComponentPreview
     codeFigure={true}
     language="javascript"
@@ -1196,6 +1195,7 @@ exports[`Dashboard: Charts MixingTypes renders 1`] = `
                 });
             
   </ComponentPreview>
+  <AccessibilityAlert />
 </Fragment>
 `;
 
