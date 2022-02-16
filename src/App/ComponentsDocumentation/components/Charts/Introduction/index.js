@@ -17,8 +17,7 @@ const QuickStart = () => (
 const JavaScript = () => (
     <>
         <h2 id="javascript">JavaScript</h2>
-        <p>The dashboard theme requires a separate script to run properly. So add the dashboard script below the <CodeTags type="secondary" code="scripts" /> at the bottom
-        of your <CodeTags type="primary" code={"<body>"} /> tag like this:</p>
+        <p>To add charts to your project you need to include a dashboard script to make it run properly. Add the dashboard script below the <CodeTags type="secondary" code="scripts" /> and at the bottom of your <CodeTags type="primary" code={"<body>"} /> tag like this: </p>
         <ComponentPreview language="html" codeFigure>
             <script src={scriptUrl}></script>
             <script src={dashboardScriptUrl}></script>
