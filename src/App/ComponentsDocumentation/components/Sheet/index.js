@@ -60,7 +60,7 @@ const SheetExample = () => (
 );
 
 const ContentGuidelines = () => (
-    <>
+    <section>
         <h2>Content guidelines</h2>
         <img src={`${basename}img/documentation/sheet/content-guidelines.png`} alt="Sheet component with sticky header and footer" className="img-fluid mb-3"/>
 
@@ -70,18 +70,18 @@ const ContentGuidelines = () => (
             <li>The <b>footer</b> is optional and designed to contain buttons that will lead to certain actions. The footer is also sticky.</li>
         </ul>
 
-    </>
+    </section>
 );
 
 const DeveloperDocumentation = () => (
-    <>
+    <section>
         <h2 id="developer-documentation">Developer Documentation</h2>
         <h3 id="javascript-methods">JavaScript methods</h3>
         <p>Use <CodeTags type="secondary" code="dg.sheet.init()"/> to <Link to="/get-started/for-developers">initialize</Link> all accordions. This will give the sheets open and close functions automatically.</p>
         <p>To open a given sheet, use <CodeTags type="secondary" code="dg.sheet.open(<sheet-id>)"/></p>
         <p>To close a given sheet, use <CodeTags type="secondary" code="dg.sheet.close(<sheet-id>)"/></p>
         <p>To disable the listener responsible for closing the sheet when a user clicks outside, add <CodeTags type="primary" code="data-require-action"/> to your sheet.</p>
-    </>
+    </section>
 );
 
 const Sheet = () => {

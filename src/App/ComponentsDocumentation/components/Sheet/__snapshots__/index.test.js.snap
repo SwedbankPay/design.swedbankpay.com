@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: Sheet ContentGuidelines renders 1`] = `
-<Fragment>
+<section>
   <h2>
     Content guidelines
   </h2>
@@ -35,11 +35,11 @@ exports[`Documentation: Sheet ContentGuidelines renders 1`] = `
        is optional and designed to contain buttons that will lead to certain actions. The footer is also sticky.
     </li>
   </ul>
-</Fragment>
+</section>
 `;
 
 exports[`Documentation: Sheet DeveloperDocumentation renders 1`] = `
-<Fragment>
+<section>
   <h2
     id="developer-documentation"
   >
@@ -86,7 +86,7 @@ exports[`Documentation: Sheet DeveloperDocumentation renders 1`] = `
     />
      to your sheet.
   </p>
-</Fragment>
+</section>
 `;
 
 exports[`Documentation: Sheet SheetExample renders 1`] = `
