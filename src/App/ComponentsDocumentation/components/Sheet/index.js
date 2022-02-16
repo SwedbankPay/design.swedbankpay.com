@@ -62,7 +62,7 @@ const SheetExample = () => (
 const ContentGuidelines = () => (
     <>
         <h2>Content guidelines</h2>
-        <img src={`${basename}img/documentation/sheet/content-guidelines.png`} alt="Sheet component with sticky header and footer" className="img-fluid"/>
+        <img src={`${basename}img/documentation/sheet/content-guidelines.png`} alt="Sheet component with sticky header and footer" className="img-fluid mb-3"/>
 
         <ul className="list list-bullet">
             <li>The <b>header</b> should have a title and a close button.</li>
