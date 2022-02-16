@@ -5,10 +5,9 @@ exports[`Documentation: Sheet ContentGuidelines renders 1`] = `
   <h2>
     Content guidelines
   </h2>
-<<<<<<< HEAD
   <img
     alt="Sheet component with sticky header and footer"
-    className="img-fluid"
+    className="img-fluid mb-3"
     src="/TEST/img/documentation/sheet/content-guidelines.png"
   />
   <ul
@@ -36,50 +35,6 @@ exports[`Documentation: Sheet ContentGuidelines renders 1`] = `
        is optional and designed to contain buttons that will lead to certain actions. The footer is also sticky.
     </li>
   </ul>
-=======
-  <div
-    className="row"
-  >
-    <div
-      className="col-12"
-    >
-      <div
-        className="d-flex justify-content-center mt-4 mb-4"
-      >
-        <img
-          alt="Sheet component with sticky header and footer"
-          className="img-fluid"
-          src="/TEST/img/documentation/sheet/content-guidelines.png"
-        />
-      </div>
-    </div>
-    <ul
-      className="list list-bullet"
-    >
-      <li>
-        The 
-        <b>
-          header
-        </b>
-         should have a title and a close button.
-      </li>
-      <li>
-        The 
-        <b>
-          main content
-        </b>
-         area can contain a number of different components and this area can be vertically scrollable.
-      </li>
-      <li>
-        The 
-        <b>
-          footer
-        </b>
-         is optional and designed to contain buttons that will lead to certain actions. The footer is also sticky.
-      </li>
-    </ul>
-  </div>
->>>>>>> f0afb46680c64bf50e9d96db4a575db046a78570
 </Fragment>
 `;
 
@@ -127,11 +82,7 @@ exports[`Documentation: Sheet DeveloperDocumentation renders 1`] = `
     To disable the listener responsible for closing the sheet when a user clicks outside, add 
     <CodeTags
       code="data-require-action"
-<<<<<<< HEAD
       type="primary"
-=======
-      type="secondary"
->>>>>>> f0afb46680c64bf50e9d96db4a575db046a78570
     />
      to your sheet.
   </p>
@@ -156,13 +107,9 @@ exports[`Documentation: Sheet SheetExample renders 1`] = `
       Object {
         "elements": Array [
           Object {
-<<<<<<< HEAD
             "component": <SheetButton
               id="sheet-showcase"
             />,
-=======
-            "component": <SheetButton />,
->>>>>>> f0afb46680c64bf50e9d96db4a575db046a78570
             "description": "The Sheets component appears when triggered by a user action, such as tapping a button. At large screen sizes, the sheet component enters the page from the right side of the screen and at small screen sizes, the sheet component enters the page from the bottom of the screen. It has a header with a title and close button and a main content area that can contain a number of different components. An optional feature that can useful is a sticky footer with actions.",
             "options": Object {
               "checkbox": Array [
@@ -197,7 +144,6 @@ exports[`Documentation: Sheet SheetExample renders 1`] = `
       To enforce an action before the user can proceed, use the 
       <Link
         to="/components/dialog"
-<<<<<<< HEAD
       >
         Dialog
       </Link>
@@ -225,35 +171,6 @@ exports[`Documentation: Sheet SheetExample renders 1`] = `
       <div
         className="slab slab-plain slab-border-success"
       >
-=======
-      >
-        Dialog
-      </Link>
-       component.
-    </li>
-    <li>
-      To present a small amount of content or actions in a non-blocking overlay, use the 
-      <Link
-        to="/components/popover"
-      >
-        Popover
-      </Link>
-       component.
-    </li>
-  </ul>
-  <h2>
-    How to use Sheets
-  </h2>
-  <div
-    className="row"
-  >
-    <div
-      className="col-lg-6"
-    >
-      <div
-        className="slab slab-plain slab-border-success"
-      >
->>>>>>> f0afb46680c64bf50e9d96db4a575db046a78570
         <h3>
           Do
         </h3>

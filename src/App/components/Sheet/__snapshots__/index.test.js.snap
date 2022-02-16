@@ -33,11 +33,7 @@ exports[`Component: Sheet - does not render with data-require-action if it is se
       </button>
     </div>
     <div
-<<<<<<< HEAD
       className="sheet-content"
-=======
-      className="sheet-content "
->>>>>>> f0afb46680c64bf50e9d96db4a575db046a78570
     />
   </section>
 </div>
@@ -76,11 +72,7 @@ exports[`Component: Sheet - renders 1`] = `
       </button>
     </div>
     <div
-<<<<<<< HEAD
       className="sheet-content"
-=======
-      className="sheet-content "
->>>>>>> f0afb46680c64bf50e9d96db4a575db046a78570
     />
   </section>
 </div>
@@ -119,11 +111,7 @@ exports[`Component: Sheet - renders with a close icon 1`] = `
       </button>
     </div>
     <div
-<<<<<<< HEAD
       className="sheet-content"
-=======
-      className="sheet-content "
->>>>>>> f0afb46680c64bf50e9d96db4a575db046a78570
     />
   </section>
 </div>
@@ -163,11 +151,7 @@ exports[`Component: Sheet - renders with an ID 1`] = `
       </button>
     </div>
     <div
-<<<<<<< HEAD
       className="sheet-content"
-=======
-      className="sheet-content "
->>>>>>> f0afb46680c64bf50e9d96db4a575db046a78570
     />
   </section>
 </div>
@@ -206,11 +190,7 @@ exports[`Component: Sheet - renders with children 1`] = `
       </button>
     </div>
     <div
-<<<<<<< HEAD
       className="sheet-content"
-=======
-      className="sheet-content "
->>>>>>> f0afb46680c64bf50e9d96db4a575db046a78570
     >
       Test
     </div>
@@ -251,11 +231,7 @@ exports[`Component: Sheet - renders with the data-require-action attribute 1`] =
       </button>
     </div>
     <div
-<<<<<<< HEAD
       className="sheet-content"
-=======
-      className="sheet-content "
->>>>>>> f0afb46680c64bf50e9d96db4a575db046a78570
     />
   </section>
 </div>
