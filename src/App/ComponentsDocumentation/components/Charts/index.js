@@ -4,6 +4,14 @@ import { ComponentPreview, DocContainer } from "@docutils";
 import Chart from "@components/Chart";
 import CodeTags from "@components/CodeTags";
 import Introduction from "./Introduction";
+import Alert from "@components/Alert";
+
+const AccessibilityAlert = () => (
+    <Alert type="informative" icon="info" className="mt-3" text={
+        <p><b>Accessibility considerations:</b><br/>
+        Remember to include at least two alternate ways for interpreting the data. Either by showing the chart data in a table or by providing a text summary in the <CodeTags type="primary" code="aria-label"/>.
+        </p>} />
+);
 
 const LineChart = () => (
     <>
@@ -51,19 +59,19 @@ const LineChart = () => (
         </ComponentPreview>
         <ComponentPreview language="javascript" codeFigure >
             {`
-dg.chart("simple-line-chart", {
-    type: "line",
-    data: {
-        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
-        datasets: [
-            {
-                label: "Peak",
-                data: [261, 673, 962, 1067, 1007, 779]
-            }
-        ]
-    }
-});
-                `}
+                dg.chart("simple-line-chart", {
+                    type: "line",
+                    data: {
+                        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
+                        datasets: [
+                            {
+                                label: "Peak",
+                                data: [261, 673, 962, 1067, 1007, 779]
+                            }
+                        ]
+                    }
+                });
+            `}
         </ComponentPreview>
 
         <h3>Stepped and dashed line</h3>
@@ -87,27 +95,28 @@ dg.chart("simple-line-chart", {
                 }
             }} description="Stepped and dashed line example"/>
         </ComponentPreview>
+        <AccessibilityAlert/>
         <ComponentPreview language="javascript" codeFigure >
             {`
-dg.chart("stepped-dashed-line-chart", {
-    type: "line",
-    data: {
-        labels: ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"],
-        datasets: [
-            {
-                label: "Active users",
-                data: [1815, 1958, 2080, 2210, 2341, 2471, 2600, 2725],
-                steppedLine: true
-            },
-            {
-                label: "Registered users",
-                data: [2196, 2327, 2421, 2573, 2644, 2767, 2913, 3004],
-                borderDash: [15, 5]
-            }
-        ]
-    }
-});
-                `}
+                dg.chart("stepped-dashed-line-chart", {
+                    type: "line",
+                    data: {
+                        labels: ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"],
+                        datasets: [
+                            {
+                                label: "Active users",
+                                data: [1815, 1958, 2080, 2210, 2341, 2471, 2600, 2725],
+                                steppedLine: true
+                            },
+                            {
+                                label: "Registered users",
+                                data: [2196, 2327, 2421, 2573, 2644, 2767, 2913, 3004],
+                                borderDash: [15, 5]
+                            }
+                        ]
+                    }
+                });
+            `}
         </ComponentPreview>
 
         <h3>Advanced options</h3>
@@ -142,38 +151,39 @@ dg.chart("stepped-dashed-line-chart", {
                 }
             }} description="Advanced line example"/>
         </ComponentPreview>
+        <AccessibilityAlert/>
         <ComponentPreview language="javascript" codeFigure >
             {`
-dg.chart("advanced-line-chart", {
-    type: "line",
-    data: {
-        labels: ["2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018"],
-        datasets: [
-            {
-                label: "DotA2 TI Prize Pool",
-                data: [1.6, 1.6, 2.87, 10.92, 18.42, 20.77, 24.78, 25.53]
-            },
-            {
-                label: "LoL World Championship Prize Pool",
-                data: [0.1, 2, 2.05, 2.13, 2.13, 5.07, 4.94, 2.25]
-            }
-        ]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                scaleLabel: {
-                    display: true,
-                    labelString: "In millions"
-                },
-                ticks: {
-                    callback: value => \`$\${value}\`
-                }
-            }]
-        }
-    }
-});
-                `}
+                dg.chart("advanced-line-chart", {
+                    type: "line",
+                    data: {
+                        labels: ["2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018"],
+                        datasets: [
+                            {
+                                label: "DotA2 TI Prize Pool",
+                                data: [1.6, 1.6, 2.87, 10.92, 18.42, 20.77, 24.78, 25.53]
+                            },
+                            {
+                                label: "LoL World Championship Prize Pool",
+                                data: [0.1, 2, 2.05, 2.13, 2.13, 5.07, 4.94, 2.25]
+                            }
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                scaleLabel: {
+                                    display: true,
+                                    labelString: "In millions"
+                                },
+                                ticks: {
+                                    callback: value => \`$\${value}\`
+                                }
+                            }]
+                        }
+                    }
+                });
+            `}
         </ComponentPreview>
 
         <h3>With fill</h3>
@@ -192,22 +202,23 @@ dg.chart("advanced-line-chart", {
                 }
             }} description="Line example with fill"/>
         </ComponentPreview>
+        <AccessibilityAlert/>
         <ComponentPreview language="javascript" codeFigure >
             {`
-dg.chart("line-fill-chart", {
-    type: "line-fill",
-    data: {
-        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
-        datasets: [
-            {
-                label: "Peak",
-                data: [261, 673, 962, 1067, 1007, 779],
-                fill: true
-            }
-        ]
-    }
-});
-                `}
+                dg.chart("line-fill-chart", {
+                    type: "line-fill",
+                    data: {
+                        labels: ["2013", "2014", "2015", "2016", "2017", "2018"],
+                        datasets: [
+                            {
+                                label: "Peak",
+                                data: [261, 673, 962, 1067, 1007, 779],
+                                fill: true
+                            }
+                        ]
+                    }
+                });
+            `}
         </ComponentPreview>
     </>
 );
@@ -241,30 +252,31 @@ const BarChart = () => (
                 }
             }} description="Bar chart example"/>
         </ComponentPreview>
+        <AccessibilityAlert/>
         <ComponentPreview language="javascript" codeFigure >
             {`
-dg.chart("simple-bar-chart", {
-    type: "bar",
-    data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-        datasets: [
-            {
-                label: "Hours of daylight",
-                data: [6.75, 9.25, 11.75, 14.5, 17, 18.75, 18, 15.5, 13, 10.25, 7.5, 6]
-            }
-        ]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
-        `}
+                dg.chart("simple-bar-chart", {
+                    type: "bar",
+                    data: {
+                        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                        datasets: [
+                            {
+                                label: "Hours of daylight",
+                                data: [6.75, 9.25, 11.75, 14.5, 17, 18.75, 18, 15.5, 13, 10.25, 7.5, 6]
+                            }
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+            `}
         </ComponentPreview>
 
         <h3>Multiple datasets</h3>
@@ -300,37 +312,38 @@ dg.chart("simple-bar-chart", {
                 }
             }} description="Multiple datasets example"/>
         </ComponentPreview>
+        <AccessibilityAlert/>
         <ComponentPreview language="javascript" codeFigure >
             {`
-dg.chart("multi-bar-chart", {
-    type: "bar",
-    data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-        datasets: [
-            {
-                label: "Hours of daylight",
-                data: [6.75, 9.25, 11.75, 14.5, 17, 18.75, 18, 15.5, 13, 10.25, 7.5, 6]
-            },
-            {
-                label: "Total rain (in cm)",
-                data: [4.9, 3.6, 4.7, 4.1, 5.3, 6.5, 8.1, 8.9, 9, 8.4, 7.3, 5.5]
-            },
-            {
-                label: "Average temperature (in celcius)",
-                data: [-1.7, -4.1, -2.3, 6.5, 16.1, 17.9, 22.2, 16.3, 12.5, 7.4, 1.6, -1.5]
-            }
-        ]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
+                dg.chart("multi-bar-chart", {
+                    type: "bar",
+                    data: {
+                        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                        datasets: [
+                            {
+                                label: "Hours of daylight",
+                                data: [6.75, 9.25, 11.75, 14.5, 17, 18.75, 18, 15.5, 13, 10.25, 7.5, 6]
+                            },
+                            {
+                                label: "Total rain (in cm)",
+                                data: [4.9, 3.6, 4.7, 4.1, 5.3, 6.5, 8.1, 8.9, 9, 8.4, 7.3, 5.5]
+                            },
+                            {
+                                label: "Average temperature (in celcius)",
+                                data: [-1.7, -4.1, -2.3, 6.5, 16.1, 17.9, 22.2, 16.3, 12.5, 7.4, 1.6, -1.5]
+                            }
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
             `}
         </ComponentPreview>
 
@@ -371,42 +384,43 @@ dg.chart("multi-bar-chart", {
                 }
             }} description="Stacked bar example"/>
         </ComponentPreview>
+        <AccessibilityAlert/>
         <ComponentPreview language="javascript" codeFigure >
             {`
-dg.chart("stacked-multi-bar-chart", {
-    type: "bar",
-    data: {
-        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-        datasets: [
-            {
-                label: "Paid with cash",
-                data: [19, 23, 29, 24, 28, 33, 21, 24, 20, 17, 23, 24]
-            },
-            {
-                label: "Paid with credit card",
-                data: [31, 29, 32, 17, 25, 32, 28, 30, 24, 22, 20, 37]
-            },
-            {
-                label: "Paid with Vipps",
-                data: [11, 9, 7, 12, 4, 13, 8, 10, 4, 1, 13, 16]
-            }
-        ]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                stacked: true,
-                ticks: {
-                    beginAtZero: true
-                }
-            }],
-            xAxes: [{
-                stacked: true
-            }]
-        }
-    }
-});
-                `}
+                dg.chart("stacked-multi-bar-chart", {
+                    type: "bar",
+                    data: {
+                        labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                        datasets: [
+                            {
+                                label: "Paid with cash",
+                                data: [19, 23, 29, 24, 28, 33, 21, 24, 20, 17, 23, 24]
+                            },
+                            {
+                                label: "Paid with credit card",
+                                data: [31, 29, 32, 17, 25, 32, 28, 30, 24, 22, 20, 37]
+                            },
+                            {
+                                label: "Paid with Vipps",
+                                data: [11, 9, 7, 12, 4, 13, 8, 10, 4, 1, 13, 16]
+                            }
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                stacked: true,
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }],
+                            xAxes: [{
+                                stacked: true
+                            }]
+                        }
+                    }
+                });
+            `}
         </ComponentPreview>
     </>
 );
@@ -430,19 +444,20 @@ const DoughnutAndPieCharts = () => (
                 }
             }} description="Pie chart example"/>
         </ComponentPreview>
+        <AccessibilityAlert/>
         <ComponentPreview language="javascript" codeFigure >
             {`
-dg.chart("simple-pie-chart", {
-    type: "pie",
-    data: {
-        labels: ["Chrome", "Internet Explorer", "Firefox", "Edge", "Safari", "Opera", "Other"],
-        datasets: [
-            {
-                data: [63.14, 11.43, 10.23, 4.34, 3.83, 1.56, 4.19]
-            }
-        ]
-    }
-});
+                dg.chart("simple-pie-chart", {
+                    type: "pie",
+                    data: {
+                        labels: ["Chrome", "Internet Explorer", "Firefox", "Edge", "Safari", "Opera", "Other"],
+                        datasets: [
+                            {
+                                data: [63.14, 11.43, 10.23, 4.34, 3.83, 1.56, 4.19]
+                            }
+                        ]
+                    }
+                });
             `}
         </ComponentPreview>
 
@@ -461,20 +476,21 @@ dg.chart("simple-pie-chart", {
                 }
             }} description="Doughnut example"/>
         </ComponentPreview>
+        <AccessibilityAlert/>
         <ComponentPreview language="javascript" codeFigure >
             {`
-dg.chart("doughnut-chart", {
-    type: "doughnut",
-    data: {
-        labels: ["Chrome", "Internet Explorer", "Firefox", "Edge", "Safari", "Opera", "Other"],
-        datasets: [
-            {
-                data: [63.14, 11.43, 10.23, 4.34, 3.83, 1.56, 4.19]
-            }
-        ]
-    }
-});
-        `}
+                dg.chart("doughnut-chart", {
+                    type: "doughnut",
+                    data: {
+                        labels: ["Chrome", "Internet Explorer", "Firefox", "Edge", "Safari", "Opera", "Other"],
+                        datasets: [
+                            {
+                                data: [63.14, 11.43, 10.23, 4.34, 3.83, 1.56, 4.19]
+                            }
+                        ]
+                    }
+                });
+            `}
         </ComponentPreview>
     </>
 );
@@ -511,35 +527,36 @@ const MixingTypes = () => (
                 }
             }} description="Mixing charts example"/>
         </ComponentPreview>
+        <AccessibilityAlert/>
         <ComponentPreview language="javascript" codeFigure >
             {`
-dg.chart("mixed-chart", {
-    type: "bar",
-    data: {
-        labels: ["2016", "2017", "2018", "2019", "2020", "2021"],
-        datasets: [
-            {
-                label: "Growth",
-                data: [20, 25, 30]
-            },
-            {
-                label: "Expected Growth",
-                data: [20, 25, 30, 35, 40, 45],
-                type: "line" // Changes this dataset to become a line
-            }
-        ]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
-});
-        `}
+                dg.chart("mixed-chart", {
+                    type: "bar",
+                    data: {
+                        labels: ["2016", "2017", "2018", "2019", "2020", "2021"],
+                        datasets: [
+                            {
+                                label: "Growth",
+                                data: [20, 25, 30]
+                            },
+                            {
+                                label: "Expected Growth",
+                                data: [20, 25, 30, 35, 40, 45],
+                                type: "line" // Changes this dataset to become a line
+                            }
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        }
+                    }
+                });
+            `}
         </ComponentPreview>
     </>
 );
@@ -570,24 +587,25 @@ const CustomColors = () => (
                 description="Custom colors example"
             />
         </ComponentPreview>
+        <AccessibilityAlert/>
         <ComponentPreview language="javascript" codeFigure >
             {`
-dg.chart("custom-color-pie", {
-    type: "pie",
-    data: {
-        labels: ["Chrome", "Internet Explorer", "Firefox", "Edge", "Safari", "Opera", "Other"],
-        datasets: [
-            {
-                data: [63.14, 11.43, 10.23, 4.34, 3.83, 1.56, 4.19]
-            }
-        ]
-    }
-},
-["81, 43, 43",
-"81, 151, 27",
-"163, 139, 128",
-"114, 96, 94",
-"197, 19, 28"]);
+                dg.chart("custom-color-pie", {
+                    type: "pie",
+                    data: {
+                        labels: ["Chrome", "Internet Explorer", "Firefox", "Edge", "Safari", "Opera", "Other"],
+                        datasets: [
+                            {
+                                data: [63.14, 11.43, 10.23, 4.34, 3.83, 1.56, 4.19]
+                            }
+                        ]
+                    }
+                },
+                ["81, 43, 43",
+                "81, 151, 27",
+                "163, 139, 128",
+                "114, 96, 94",
+                "197, 19, 28"]);
             `}
         </ComponentPreview>
 
@@ -612,5 +630,5 @@ class Charts extends Component {
 export default Charts;
 
 /* For testing */
-export { LineChart, BarChart, DoughnutAndPieCharts, MixingTypes, CustomColors };
+export { LineChart, BarChart, DoughnutAndPieCharts, MixingTypes, CustomColors, AccessibilityAlert };
 
