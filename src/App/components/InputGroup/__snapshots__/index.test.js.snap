@@ -49,10 +49,7 @@ exports[`Component: InputGroup - renders a form-group with a help block with dat
     <div
       className="help-block"
       data-success="success"
-    >
-      
-
-    </div>
+    />
   </div>
 </InputGroup>
 `;
@@ -311,7 +308,6 @@ exports[`Component: InputGroup - renders a form-group with a select field with g
     >
       
 		
-       
       <option
         value="Bounty hunter"
       >

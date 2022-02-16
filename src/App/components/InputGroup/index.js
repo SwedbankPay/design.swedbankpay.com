@@ -79,7 +79,6 @@ const InputGroup = ({
 
     return (
         <div className={formGroupClasses}>{"\n"}
-
             {label ? <label htmlFor={id}>{"\n"}{label} {optional && "(optional)"}{tooltip && "\n"}
                 {tooltip &&
                     <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
@@ -108,7 +107,7 @@ const InputGroup = ({
                     {type === "textarea" ?
                         <textarea {...attrs}></textarea>
                         : type === "select" ?
-                            <select {...selectAttrs}>{"\n\t\t"} {/* Placeholder for select is removed when ID is included here?? :) */}
+                            <select {...selectAttrs}>{"\n\t\t"}
                                 {placeholder && <option value="" disabled hidden>{placeholder}</option> }
                                 {selectOptions.map((opt, i) => (
                                     <Fragment key={opt + i}>
@@ -120,7 +119,7 @@ const InputGroup = ({
                             <input {...attrs} />}
                 </>
             }
-            {helpBlock ? <div className="help-block" data-success={successMessage || null} >{errorMessage}{"\n"}</div> : null}
+            {helpBlock ? <div className="help-block" data-success={successMessage || null} >{errorMessage}</div> : null}
         </div>
     );
 };
