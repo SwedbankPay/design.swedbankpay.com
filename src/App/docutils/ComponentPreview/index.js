@@ -2,8 +2,7 @@ import React, { Component, cloneElement } from "react";
 import PropTypes from "prop-types";
 import { renderToStaticMarkup } from "react-dom/server";
 import jsbeautifier from "js-beautify";
-
-import { tabs, sheet } from "@src/scripts/main";
+import { tabs, accordion, sheet } from "@src/scripts/main";
 
 // NOTE: dangerousHTML prop is used when wanting to show html in the codefigure without encoding.
 
@@ -206,7 +205,6 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
 
         componentDidMount () {
             tabs.init(this.props.showCasePanelAdvanced.tabsId);
-
             this._resetOptions();
         }
 
@@ -222,10 +220,16 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
             if (this.state.activeTab.component.props.id === "sheet-showcase") {
                 sheet.init();
             }
+            
+            if (this.state.activeTab.component.props.id === "accordion-showcase") {
+                this.state.activeTab.component.props.accordionGroup
+                    ? accordion.init("accordion-group-example")
+                    : accordion.init();
+
+            }
         }
 
         setActiveTab (e, i) {
-
             e.preventDefault();
 
             this.setState(prevState => ({ ...prevState,
@@ -385,7 +389,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
 };
 
 ComponentPreview.propTypes = {
-    language: PropTypes.oneOf(["html", "javascript", "css", "terminal"]).isRequired,
+    language: PropTypes.oneOf(["html", "javascript", "css", "terminal", "json"]).isRequired,
     removeOuterTag: PropTypes.bool,
     hideCodeFigure: PropTypes.bool,
     hideValue: PropTypes.bool,

@@ -22,9 +22,10 @@ exports[`Component: InputGroup - renders 1`] = `
 </div>
 `;
 
-exports[`Component: InputGroup - renders a form-group with a help block if prop helpBlock is provided 1`] = `
+exports[`Component: InputGroup - renders a form-group with a help block with data-success and data-error attributes 1`] = `
 <InputGroup
   helpBlock="testvalue"
+  successMessage="success"
   type="typetest"
 >
   <div
@@ -47,55 +48,8 @@ exports[`Component: InputGroup - renders a form-group with a help block if prop 
     />
     <div
       className="help-block"
-      data-error={null}
-      data-success={null}
-    >
-      testvalue
-    </div>
-  </div>
-</InputGroup>
-`;
-
-exports[`Component: InputGroup - renders a form-group with a help block with data-success and data-error attributes 1`] = `
-<InputGroup
-  errorMessage="error"
-  helpBlock="testvalue"
-  successMessage="success"
-  type="typetest"
->
-  <div
-    className="form-group"
-  >
-    
-
-    <div
-      className="input-group"
-    >
-      
-
-      <input
-        autoComplete={null}
-        className="form-control"
-        data-validate={null}
-        defaultValue=""
-        disabled={null}
-        id={null}
-        pattern={null}
-        placeholder={null}
-        readOnly={null}
-        required={null}
-        type="typetest"
-      />
-      
-
-    </div>
-    <div
-      className="help-block"
-      data-error="error"
       data-success="success"
-    >
-      testvalue
-    </div>
+    />
   </div>
 </InputGroup>
 `;
@@ -348,6 +302,7 @@ exports[`Component: InputGroup - renders a form-group with a select field with g
       className="form-control"
       defaultValue=""
       disabled={null}
+      id={null}
       readOnly={null}
       required={null}
     >
