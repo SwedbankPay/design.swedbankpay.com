@@ -1313,25 +1313,21 @@
     }
 
     #pagination-overview {
-        .mobile-view-container {
-            background-color: @light-gray;
-            height: 7.5rem;
-            align-items: center;
-            display: flex;
-            justify-content: center;
+        .pagination {
+            &.example {
+                pointer-events: none;
 
-            .mobile {
-                display: block;
-                align-self: center;
-                font-weight: @font-weight-bold;
-                margin: 0 24px;
+                .example-box {
+                    width: 6rem;
+                    height: 0.625rem;
+                    background-color: @brand-secondary;
+                    border-radius: 0.125rem;
+                }
             }
         }
 
         .pagination-content-box-example {
             height: 2.5rem;
-            width: 75%;
-            margin-bottom: 1rem;
             background-color: @brand-bg-gray;
             border-radius: 0.125rem;
         }
