@@ -1,176 +1,76 @@
+const paginate = (pages, currentActive) => {
+    if (currentActive > pages) {
+        console.warn("CurrentActive can not be greater then total pages.");
 
-const SELECTORS = {
-    PAGINATION: ".pagination"
-};
+        return;
+    }
 
-const _createPagination = paginationContainer => {
+    if (currentActive <= 0) {
+        console.warn("CurrentActive must be greater then 0");
 
-    const pages = paginationContainer.querySelectorAll("li");
-    const paginationSection = paginationContainer.querySelector("ul");
-    const forwardBtn = paginationContainer.querySelector(".arrow-forward");
-    const backBtn = paginationContainer.querySelector(".arrow-back");
-    const startBtn = paginationContainer.querySelector(".arrow-start");
+        return;
+    }
 
-    backBtn.classList.add("disabled");
-    startBtn.classList.add("disabled");
+    if (pages < 8) {
+        console.warn("ArrayLength must be greater then 7");
 
-    const _renderPagination = ({ ellipsis, currentPage }) => {
-        paginationSection.innerHTML = "";
-        ellipsis.map(object => {
-            paginationSection.innerHTML +=
-            `<li class=${typeof object === "string" ? "dotts" : ""}>
-                ${typeof object === "string" ? `<span aria-hidden="true">${object}</span>` : `<a aria-label="Go to page ${object}">${object}</a>`}
-            </li>`;
-        });
+        return;
+    }
 
-        const newPages = paginationSection.querySelectorAll("li");
-
-        [...newPages].map(page => {
-            page.innerText === currentPage.toString() ? page.classList.add("active") : null;
-            page.addEventListener("click", e => {
-                _updateActive(newPages, e.currentTarget);
-                _renderPagination(paginate(pages, e.currentTarget));
-
-                const paginatedPages = paginate(pages, e.currentTarget);
-                const currentActive = paginatedPages.currentPage;
-
-                _renderPagination(paginatedPages);
-                _disableButtons(currentActive);
-            });
-        });
-
-        forwardBtn.addEventListener("click", () => { navigate(newPages, true); });
-        backBtn.addEventListener("click", () => { navigate(newPages); });
+    const getDelta = () => {
+        if (currentActive === 1 || currentActive === pages) {
+            return 4;
+        } else if (currentActive === 2 || currentActive === pages - 1) {
+            return 3;
+        } else if (currentActive === 3 || currentActive === pages - 2) {
+            return 2;
+        } else {
+            return 1;
+        }
     };
 
-    const navigate = (newPages, forward) => {
-        let target;
-
-        [...newPages].map(page => {
-            if (page.classList.contains("active")) {
-                target = forward ? page.nextElementSibling : page.previousElementSibling;
-            }
-        });
-        _updateActive(newPages, target);
-
-        const paginatedPages = paginate(pages, target);
-        const currentActive = paginatedPages.currentPage;
-
-        _renderPagination(paginatedPages);
-
-        _disableButtons(currentActive);
-
-    };
-
-    const _disableButtons = currentActive => {
-        currentActive === 1 ? backBtn.classList.add("disabled") : backBtn.classList.remove("disabled");
-        currentActive === pages.length ? forwardBtn.classList.add("disabled") : forwardBtn.classList.remove("disabled");
-    };
-
-    _renderPagination(paginate(pages));
-};
-
-const disableNavigation = backArrow => {
-    // backArrow ? backArrow.classList.add("disabled") : forwardBtn.classList.add("disabled");
-};
-
-const _updateActive = (pages, target) => {
-    [...pages].map(page => page.classList.remove("active"));
-    target.classList.add("active");
-};
-
-const paginate = (pages, target) => {
-    const numberOfPages = pages.length;
-    let delta;
+    const delta = getDelta();
     const paginatedPages = [];
-    const ellipsis = [];
-    const firstPage = 1;
-    const currentPage = target ? Number(target.innerText) : 1;
-    let paginatedIndex;
 
-    if (currentPage === 1 || currentPage === numberOfPages) {
-        delta = 4;
-    } else if (currentPage === 2 || currentPage === numberOfPages - 1) {
-        delta = 3;
-    } else if (currentPage === 3 || currentPage === numberOfPages - 2) {
-        delta = 2;
-    } else {
-        delta = 1;
-    }
+    const paginationProps = page => ({ page,
+        current: currentActive === page });
 
-    paginatedPages.push(firstPage);
+    for (let i = currentActive - delta; i <= currentActive + delta; i++) {
+        if (i + delta - currentActive === 0) {
+            paginatedPages.push(paginationProps(1));
+        }
 
-    if (numberOfPages <= 1) {
-        return paginatedPages;
-    }
+        if (currentActive === 4 && currentActive - i === 1) {
+            paginatedPages.push(paginationProps(i - 1));
+        }
 
-    for (let i = currentPage - delta; i <= currentPage + delta; i++) {
-        if (i < numberOfPages && i > 1) {
-            paginatedPages.push(i);
+        if (currentActive > 4 && currentActive < pages - 2) {
+            if (currentActive - i === 1) { paginatedPages.push(paginationProps(null)); }
+        }
+
+        if (currentActive >= pages - 2 && currentActive <= pages) {
+            if (currentActive - i === delta) { paginatedPages.push(paginationProps(null)); }
+        }
+
+        if (i < pages && i > 1) {
+            paginatedPages.push(paginationProps(i));
+        }
+
+        if (currentActive < pages - 3 && currentActive - i < 0 && i > 4) {
+            paginatedPages.push(paginationProps(null));
+        }
+
+        if (currentActive === pages - 3 && currentActive - i === -1) {
+            paginatedPages.push(paginationProps(pages - 1));
+        }
+
+        if (currentActive + delta - i === 0) {
+            paginatedPages.push(paginationProps(pages));
         }
     }
 
-    paginatedPages.push(numberOfPages);
-
-    for (const i of paginatedPages) {
-        if (paginatedIndex) {
-            if (i - paginatedIndex === 2) {
-                ellipsis.push(paginatedIndex + 1);
-            } else if (i - paginatedIndex !== 1) {
-                ellipsis.push("...");
-            }
-        }
-
-        ellipsis.push(i);
-        paginatedIndex = i;
-    }
-
-    if (currentPage === 1) {
-        disableNavigation(true);
-    }
-
-    if (currentPage === pages.length) {
-        disableNavigation();
-    }
-
-    return { ellipsis,
-        currentPage };
+    return paginatedPages;
 };
 
-const _getActiveIndex = pages => {
-    const index = [...pages].find(page => page.classList.contains("active"));
+export default paginate;
 
-    return [].indexOf.call(pages, index);
-};
-
-const init = id => {
-    if (id) {
-        const pagination = document.getElementById(id);
-
-        if (!pagination) {
-            console.warn(`No pagination with id ${id} found`);
-
-            return null;
-        }
-
-        return _createPagination(pagination);
-    } else {
-        const paginations = document.querySelectorAll(`${SELECTORS.PAGINATION}`);
-
-        if (!paginations.length) {
-            console.warn("No paginations found");
-
-            return null;
-        }
-
-        return [...paginations].map(pagination => _createPagination(pagination));
-    }
-};
-// For testing
-
-export default {
-    init,
-    _createPagination,
-    _getActiveIndex,
-    _updateActive
-};
