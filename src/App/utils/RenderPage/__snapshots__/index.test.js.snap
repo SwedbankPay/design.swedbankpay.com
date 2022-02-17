@@ -441,6 +441,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "code",
               "outlined": true,
               "path": "/components/tags",
+              "statusBadges": Array [
+                "new",
+              ],
               "title": "Tags",
             },
             Object {
