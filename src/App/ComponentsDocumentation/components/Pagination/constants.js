@@ -1,27 +1,12 @@
 import React from "react";
 import Pagination from "~/src/App/components/Pagination";
 
-export const paginationItems = [
-    /* eslint-disable object-property-newline */
-    { name: "1", active: true },
-    { name: "2", active: false },
-    { name: "3", active: false },
-    { name: "4", active: false },
-    { name: "5", active: false },
-    { name: "6", active: false },
-    { name: "7", active: false },
-    { name: "8", active: false },
-    { name: "9", active: false },
-    { name: "10", active: false }
-    /* eslint-enable object-property-newline */
-];
-
 export const PaginationShowCasePanel = {
     id: "no-tabs",
     hideOptions: true,
     elements: [
         {
-            component: <Pagination id="overview" items={paginationItems} arrows text="1" />,
+            component: <Pagination id="overview" length={10} currentActive={1} />,
             options: {
                 radio: [
                     {

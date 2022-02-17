@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Pagination, { Overview, DeveloperDocumentation, PaginationScriptPresentation } from "./index";
+import Pagination, { Overview, DeveloperDocumentation } from "./index";
 
 describe("Documentation: Pagination", () => {
     it("is defined", () => {
@@ -37,17 +37,4 @@ describe("Documentation: Pagination", () => {
             expect(wrapper).toMatchSnapshot();
         });
     });
-
-    describe("PaginationScriptPresentation", () => {
-        it("is defined", () => {
-            expect(PaginationScriptPresentation).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<PaginationScriptPresentation />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
 });
