@@ -11,8 +11,9 @@ exports[`Dashboard: Charts AccessibilityAlert renders 1`] = `
       </b>
       <br />
       Remember to include at least two alternate ways for interpreting the data. Either by showing the chart data in a table or by providing a text summary in the 
-      <CodeTags
-        code="aria-label"
+      <Tag
+        code={true}
+        text="aria-label"
         type="primary"
       />
       .

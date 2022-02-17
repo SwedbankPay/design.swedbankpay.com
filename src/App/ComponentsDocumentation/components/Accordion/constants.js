@@ -1,6 +1,6 @@
 import React from "react";
 import Accordion from "@components/Accordion";
-import CodeTags from "@components/CodeTags";
+import Tag from "@components/Tag";
 
 const items = [];
 
@@ -43,7 +43,7 @@ export const accordionShowCase = {
                 ]
             },
             title: "Accordion",
-            description: <p>The accordion component can be either collapsed or expanded. Accordions are by default in the collapsed state with the body content hidden. If a group of accordions are wrapped in a <CodeTags type="primary" code=".accordion-group"/>, only one will be open at a time.</p>
+            description: <p>The accordion component can be either collapsed or expanded. Accordions are by default in the collapsed state with the body content hidden. If a group of accordions are wrapped in a <Tag code type="primary" text=".accordion-group"/>, only one will be open at a time.</p>
         }
     ]
 };

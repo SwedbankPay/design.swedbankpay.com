@@ -3,7 +3,7 @@ import { shallow } from "enzyme";
 
 import Tags, { Overview, ContentGuidelines } from "./index";
 
-describe("Documentation: CodeTags", () => {
+describe("Documentation: Tags", () => {
     it("is defined", () => {
         expect(Tags).toBeDefined();
     });

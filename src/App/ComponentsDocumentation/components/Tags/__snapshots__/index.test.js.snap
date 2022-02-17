@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: CodeTags ContentGuidelines renders 1`] = `
+exports[`Documentation: Tags ContentGuidelines renders 1`] = `
 <section
   id="tags-content-guidelines"
 >
@@ -42,7 +42,7 @@ exports[`Documentation: CodeTags ContentGuidelines renders 1`] = `
 </section>
 `;
 
-exports[`Documentation: CodeTags Overview renders 1`] = `
+exports[`Documentation: Tags Overview renders 1`] = `
 <section
   id="tag-overview"
 >
@@ -267,7 +267,7 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
 </section>
 `;
 
-exports[`Documentation: CodeTags renders 1`] = `
+exports[`Documentation: Tags renders 1`] = `
 <DocContainer
   docToc={true}
 >

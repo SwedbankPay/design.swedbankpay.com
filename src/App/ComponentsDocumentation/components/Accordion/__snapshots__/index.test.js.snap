@@ -7,19 +7,8 @@ exports[`Components: Accordion ContentGuidelines renders 1`] = `
   >
     Content guidelines
   </h2>
-  <p>
-    If the accordions are wrapped in a 
-    <Tag
-      code={true}
-      text=".accordion-group"
-      type="secondary"
-    />
-    , only one will be open at a time.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  <div
+    className="slab slab-plain"
   >
     <div
       className="d-flex flex-column align-items-center py-5"
@@ -78,23 +67,48 @@ exports[`Components: Accordion JavascriptMethods renders 1`] = `
     JavaScript methods
   </h3>
   <p>
-    The accordion component hides its content 
+    Use 
     <Tag
       code={true}
-      text=".accordion-body"
+      text="dg.accordion.init()"
       type="secondary"
     />
-    , showing only its title 
+     to 
+    <Link
+      to="/get-started/for-developers"
+    >
+      initialize
+    </Link>
+     all accordions. This will open and close the accordions automatically.
+  </p>
+  <p>
+    If you want to manually open and close a specific accordion, you need to include an 
     <Tag
       code={true}
-      text=".accordion-header"
+      text="id"
+      type="primary"
+    />
+     on the 
+    <Tag
+      code={true}
+      text="accordion-body"
+      type="primary"
+    />
+     element.
+  </p>
+  <p>
+    To open a given accordion, use 
+    <Tag
+      code={true}
+      text="dg.accordion.open(<accordion-id>)"
       type="secondary"
     />
   </p>
   <p>
     To close a given accordion, use 
-    <CodeTags
-      code="dg.accordion.close(<accordion-id>)"
+    <Tag
+      code={true}
+      text="dg.accordion.close(<accordion-id>)"
       type="secondary"
     />
   </p>
@@ -109,10 +123,21 @@ exports[`Components: Accordion Overview renders 1`] = `
     Overview
   </h2>
   <p>
-    Accordions can make information discovery more effective by using progressive disclosure, that is showing the title while hiding the detailed information. They can be used to shorten pages and reduce scrolling when content is not crucial to read in full.
+    The accordion component hides its content 
+    <Tag
+      code={true}
+      text=".accordion-body"
+      type="secondary"
+    />
+    , showing only its title 
+    <Tag
+      code={true}
+      text=".accordion-header"
+      type="secondary"
+    />
+    , until it is opened.
   </p>
   <ComponentPreview
-    codeFigure={true}
     language="html"
     removeOuterTag={true}
     showCasePanel={true}
@@ -125,8 +150,9 @@ exports[`Components: Accordion Overview renders 1`] = `
             />,
             "description": <p>
               The accordion component can be either collapsed or expanded. Accordions are by default in the collapsed state with the body content hidden. If a group of accordions are wrapped in a 
-              <CodeTags
-                code=".accordion-group"
+              <Tag
+                code={true}
+                text=".accordion-group"
                 type="primary"
               />
               , only one will be open at a time.
@@ -153,6 +179,7 @@ exports[`Components: Accordion Overview renders 1`] = `
         "id": "no-tabs",
       }
     }
+    textFigure={true}
   />
   <h3>
     How to use Accordions

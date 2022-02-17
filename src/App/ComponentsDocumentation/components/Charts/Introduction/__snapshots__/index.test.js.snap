@@ -20,7 +20,7 @@ exports[`Dashboard: Introduction JavaScript renders 1`] = `
       text="<body>"
       type="primary"
     />
-     tag like this: 
+     tag like this:
   </p>
   <ComponentPreview
     codeFigure={true}

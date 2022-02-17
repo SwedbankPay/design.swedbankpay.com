@@ -9,7 +9,7 @@ import Alert from "@components/Alert";
 const AccessibilityAlert = () => (
     <Alert type="informative" icon="info" className="mt-3" text={
         <p><b>Accessibility considerations:</b><br/>
-        Remember to include at least two alternate ways for interpreting the data. Either by showing the chart data in a table or by providing a text summary in the <CodeTags type="primary" code="aria-label"/>.
+        Remember to include at least two alternate ways for interpreting the data. Either by showing the chart data in a table or by providing a text summary in the <Tag type="primary" code text="aria-label"/>.
         </p>} />
 );
 
