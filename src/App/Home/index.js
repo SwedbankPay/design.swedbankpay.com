@@ -37,20 +37,20 @@ const Home = () => {
                                     {route.wideCard
                                         ?
                                         <div className="cards-content flex-row align-items-center m-0 w-100">
-                                            <i className="material-icons material-icons-outlined mr-3 v-flip">{route.icon.name}</i>
+                                            <i className="material-icons material-icons-outlined mr-3 v-flip" aria-hidden="true">{route.icon.name}</i>
                                             <span className="h4 mb-0">{route.entryCardText}</span>
-                                            <i className="material-icons material-icons-outlined ml-auto">arrow_forward</i>
+                                            <i className="material-icons material-icons-outlined ml-auto" aria-hidden="true">arrow_forward</i>
                                         </div>
                                         :
                                         <div>
                                             <div className="cards-icon">
-                                                <i className="material-icons-outlined" >{route.icon.name}</i>
+                                                <i className="material-icons-outlined" aria-hidden="true">{route.icon.name}</i>
                                             </div>
                                             <div className="cards-content">
                                                 <span className="h4">{route.title === "Utilities" ? "Utility" : route.title }</span>
                                                 <span>{route.entryCardText}</span>
                                             </div>
-                                            <i className="material-icons">arrow_forward</i>
+                                            <i className="material-icons" aria-hidden="true">arrow_forward</i>
                                         </div>
                                     }
                                 </Link>
@@ -63,7 +63,7 @@ const Home = () => {
                 <a className="dg-next-page-content mx-auto"
                     onClick={() => window.scrollTo(0, document.body.scrollHeight)}>
                     <span>Click here to see changelog</span>
-                    <i className="material-icons">expand_more</i>
+                    <i className="material-icons" aria-hidden="true">expand_more</i>
                 </a>
             </div>
             <img src={`${basename}img/background/large-bubble.svg`} className="background-img large-bubble d-none d-xl-block" alt=""/>
