@@ -3,18 +3,18 @@ import React from "react";
 export const SidebarNavList = [
     {
         title: "Home Page",
-        icon: <i className="material-icons-outlined">home</i>
+        icon: <i className="material-icons-outlined" aria-hidden="true">home</i>
     },
     {
         title: "Get Started",
-        icon: <i className="material-icons-outlined rotated">wb_incandescent</i>,
+        icon: <i className="material-icons-outlined rotated" aria-hidden="true">wb_incandescent</i>,
         children: [
             {
-                icon: <i className="material-icons-outlined rotated">accessibility</i>,
+                icon: <i className="material-icons-outlined rotated" aria-hidden="true">accessibility</i>,
                 title: "Accessibility"
             },
             {
-                icon: <i className="material-icons-outlined rotated">palette</i>,
+                icon: <i className="material-icons-outlined rotated" aria-hidden="true">palette</i>,
                 title: "Colors",
                 children: [
                     {
@@ -29,18 +29,18 @@ export const SidebarNavList = [
                 ]
             },
             {
-                icon: <i className="material-icons-outlined rotated">grid_on</i>,
+                icon: <i className="material-icons-outlined rotated" aria-hidden="true">grid_on</i>,
                 title: "Grid"
             },
             {
-                icon: <i className="material-icons-outlined rotated">space_bar</i>,
+                icon: <i className="material-icons-outlined rotated" aria-hidden="true">space_bar</i>,
                 title: "Spacing"
             }
         ]
     },
     {
         title: "Identity",
-        icon: <i className="material-icons-outlined">palette</i>,
+        icon: <i className="material-icons-outlined" aria-hidden="true">palette</i>,
         lastParent: false,
         children: [
             {
@@ -71,18 +71,18 @@ export const SidebarNavList = [
 export const SidebarNavListExtended = [
     {
         title: "Home Page",
-        icon: <i className="material-icons-outlined">home</i>
+        icon: <i className="material-icons-outlined" aria-hidden="true">home</i>
     },
     {
         title: "Get Started",
-        icon: <i className="material-icons-outlined rotated">wb_incandescent</i>,
+        icon: <i className="material-icons-outlined rotated" aria-hidden="true">wb_incandescent</i>,
         children: [
             {
-                icon: <i className="material-icons-outlined rotated">accessibility</i>,
+                icon: <i className="material-icons-outlined rotated" aria-hidden="true">accessibility</i>,
                 title: "Accessibility"
             },
             {
-                icon: <i className="material-icons-outlined rotated">palette</i>,
+                icon: <i className="material-icons-outlined rotated" aria-hidden="true">palette</i>,
                 title: "Colors",
                 children: [
                     {
@@ -108,18 +108,18 @@ export const SidebarNavListExtended = [
                 ]
             },
             {
-                icon: <i className="material-icons-outlined rotated">grid_on</i>,
+                icon: <i className="material-icons-outlined rotated" aria-hidden="true">grid_on</i>,
                 title: "Grid"
             },
             {
-                icon: <i className="material-icons-outlined rotated">space_bar</i>,
+                icon: <i className="material-icons-outlined rotated" aria-hidden="true">space_bar</i>,
                 title: "Spacing"
             }
         ]
     },
     {
         title: "Identity",
-        icon: <i className="material-icons-outlined">palette</i>,
+        icon: <i className="material-icons-outlined" aria-hidden="true">palette</i>,
         lastParent: false,
         children: [
             {

@@ -86,7 +86,7 @@ export const howToUse = [
                     <div className="d-flex">
                         <button disabled className="btn btn-primary btn-bank-id">
                             ID authentication
-                            <i className="bank-id bank-id-se"></i>
+                            <i className="bank-id bank-id-se" aria-hidden="true"></i>
                         </button>
                         <div className="loader loader-sm align-self-center"></div>
                     </div>
