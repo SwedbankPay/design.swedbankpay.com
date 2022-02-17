@@ -1,14 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
+import classnames from "classnames";
+import { paginate } from "@src/scripts/main";
 
-const Pagination = ({ type, items, id }) => {
-    const Arrow = ({ type, mobile, disabled }) => (
-        <button className={`arrow-${type}${mobile ? " d-block d-sm-none" : ""}${disabled ? " disabled" : ""}`}>
-            <i className="material-icons" aria-label={type} >{"\n"}
-                <a></a>
-            </i>
-        </button>
-    );
+const Pagination = ({ length, currentActive, type, id }) => {
+
+    const [current, setCurrent] = useState(currentActive);
+
+    const Arrow = ({ type, mobile }) => {
+        let disabled = false;
+
+        if (type === "back" || type === "start") { disabled = current === 1; }
+
+        if (type === "forward" || type === "end") { disabled = current === length; }
+
+        const arrowClasses = classnames(
+            `arrow-${type}`,
+            mobile ? "d-block d-sm-none" : null,
+            disabled ? "disabled" : null
+        );
+
+        const navigate = () => {
+            if (type === "forward") { setCurrent(current + 1); }
+
+            if (type === "back") { setCurrent(current - 1); }
+
+            if (type === "end") { setCurrent(length); }
+
+            if (type === "start") { setCurrent(1); }
+        };
+
+        return (
+            <button className={arrowClasses} onClick={() => navigate()}>{"\n"}
+                <i className="material-icons" aria-label={type}></i>{"\n"}
+            </button>
+        );
+    };
+
+    const goToPage = (e, page) => {
+        e.preventDefault();
+        setCurrent(current => current = page);
+    };
 
     return (
         <>
@@ -18,23 +50,25 @@ const Pagination = ({ type, items, id }) => {
                         <Arrow type="back"/>
                         <div className="example-box"></div>
                         <Arrow type="forward"/>
-
                     </nav>
                 </>
                 :
                 <>
-                    <nav className="pagination" role="navigation" aria-label="Pagination Navigation" id={id}>
-                        <Arrow type="start" mobile/>
+                    <nav className="pagination" role="navigation" aria-label="Pagination Navigation" id={id}>{"\n"}
+                        <Arrow type="start" mobile/>{"\n"}
                         <Arrow type="back"/>
                         <ul>
-                            { items.map(({ name, active }, i) => (
-                                <li key={i} className={`${active ? " active" : ""}`}>{"\n"}
-                                    <a href="#" onClick={e => e.preventDefault()} aria-label={`Go to page ${name}`}>{name}</a>{"\n"}
+                            {paginate(length, current).map(({ page, current }, i) => (
+                                <li key={i} className={`${current ? "active" : ""}`}>{"\n"}
+                                    {page
+                                        ? <a href="#" onClick={e => goToPage(e, page)}aria-label={`Go to page ${page}`}>{page}</a>
+                                        : <span>...</span>
+                                    }
                                 </li>
                             ))}
                         </ul>
                         <span className="mobile">
-                            Page 1 of {items.length}
+                            Page {current} of {length}
                         </span>
                         <Arrow type="forward" />
                         <Arrow type="end" mobile/>
@@ -47,7 +81,6 @@ const Pagination = ({ type, items, id }) => {
 
 Pagination.propTypes = {
     type: PropTypes.oneOf(["example"]),
-    items: PropTypes.array,
     text: PropTypes.string,
     arrows: PropTypes.bool,
     mobileView: PropTypes.bool
