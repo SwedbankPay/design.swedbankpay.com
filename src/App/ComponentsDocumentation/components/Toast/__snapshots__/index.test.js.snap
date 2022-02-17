@@ -19,6 +19,7 @@ exports[`Components: Toast Content guidelines renders 1`] = `
           className="toast toast-neutral col-12"
         >
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             info
@@ -31,6 +32,7 @@ exports[`Components: Toast Content guidelines renders 1`] = `
             </b>
           </div>
           <i
+            aria-label="Close toast"
             className="material-icons"
           >
             close
@@ -442,6 +444,7 @@ Show neutral toast
             className="toast toast-neutral col-sm-11 col-12"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               info
@@ -454,6 +457,7 @@ Show neutral toast
               </b>
             </div>
             <i
+              aria-label="Close toast"
               className="material-icons"
             >
               close
@@ -484,6 +488,7 @@ Show neutral toast
             className="toast toast-neutral"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               info
@@ -496,6 +501,7 @@ Show neutral toast
               </b>
             </div>
             <i
+              aria-label="Close toast"
               className="material-icons"
             >
               close
