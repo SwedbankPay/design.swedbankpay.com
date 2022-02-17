@@ -257,7 +257,8 @@ module.exports = [
                 path: "/components/tags",
                 componentPath: "components/Tags",
                 icon: "code",
-                outlined: true
+                outlined: true,
+                statusBadges: ["new"]
             },
             {
                 title: "Toast",
