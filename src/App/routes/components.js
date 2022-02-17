@@ -212,7 +212,7 @@ module.exports = [
                 componentPath: "components/Sheet",
                 icon: "vertical_split",
                 outlined: true,
-                statusBadges: ["javascript"]
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Select",

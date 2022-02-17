@@ -388,6 +388,7 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/sheet",
               "statusBadges": Array [
                 "javascript",
+                "updated",
               ],
               "title": "Sheet",
             },

@@ -742,7 +742,7 @@
             .component-preview {
                 margin-top: 2.5rem;
                 border-bottom: 1px solid @brand-secondary-light-3;
-                z-index: 100;
+                // z-index: 100; Er denne viktig? https://github.com/SwedbankPay/design.swedbankpay.com/commit/280feef5c3bacf2cfb04a7060d089c39b38c9f87
 
                 .component-preview-content {
                     position: relative;
@@ -755,6 +755,10 @@
 
                     &.component-preview-alt-background {
                         background-color: @brand-primary;
+                    }
+
+                    form {
+                        z-index: 100;
                     }
 
                     .loader-preview-container {

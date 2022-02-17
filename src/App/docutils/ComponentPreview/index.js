@@ -2,8 +2,7 @@ import React, { Component, cloneElement } from "react";
 import PropTypes from "prop-types";
 import { renderToStaticMarkup } from "react-dom/server";
 import jsbeautifier from "js-beautify";
-
-import { tabs, accordion } from "@src/scripts/main";
+import { tabs, accordion, sheet } from "@src/scripts/main";
 
 // NOTE: dangerousHTML prop is used when wanting to show html in the codefigure without encoding.
 
@@ -218,10 +217,15 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                 tabs.init("tabs-showcase-example");
             }
 
+            if (this.state.activeTab.component.props.id === "sheet-showcase") {
+                sheet.init();
+            }
+            
             if (this.state.activeTab.component.props.id === "accordion-showcase") {
                 this.state.activeTab.component.props.accordionGroup
                     ? accordion.init("accordion-group-example")
                     : accordion.init();
+
             }
         }
 

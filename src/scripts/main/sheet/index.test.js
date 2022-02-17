@@ -13,7 +13,7 @@ describe("scripts: sheet", () => {
     const Sheet = ({ id }) => (
         <>
             <div className="sheet" id={id}>
-                <section></section>
+                <section><a id="sheetClose" href="#" ></a></section>
             </div>
             <button className="btn btn-primary" type="button" data-sheet-open="demo-sheet">Open sheet</button>
         </>
@@ -23,7 +23,7 @@ describe("scripts: sheet", () => {
         <>
             <div className="sheet sheet-open" id="demo-sheet">
                 <section>
-                    <a href="#" className="sheet-close">
+                    <a href="#" className="sheet-close" id="sheetClose">
                         <i className="material-icons" aria-hidden="true">close</i>
                     </a>
                 </section>
