@@ -2,7 +2,6 @@ import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import { PaginationShowCasePanel } from "./constants";
-import PaginationComponent from "~/src/App/components/Pagination";
 
 import CodeTags from "~/src/App/components/CodeTags";
 
@@ -45,7 +44,7 @@ const Overview = () => (
             {["success", "error"].map((slabType, key) => <div key={key + slabType} className="col-lg-6">
                 <div className={`slab slab-plain slab-border-${slabType}`}>
                     <h4>Do{slabType === "error" && "n't"}</h4>
-                    {slabType === "success" && [...Array(4)].map(i => <div key={i} className="pagination-content-box-example mt-3 mx-auto"></div>)}
+                    {slabType === "success" && [...Array(4)].map((x, i) => <div key={slabType + i} className="pagination-content-box-example mt-3 mx-auto"></div>)}
                     <nav className="pagination example">
                         <button className="arrow-back">{"\n"}
                             <i className="material-icons"></i>{"\n"}
@@ -55,7 +54,7 @@ const Overview = () => (
                             <i className="material-icons"></i>{"\n"}
                         </button>
                     </nav>
-                    {slabType === "error" && [...Array(4)].map(i => <div key={i} className="pagination-content-box-example mb-3 mx-auto"></div>)}
+                    {slabType === "error" && [...Array(4)].map((x, i) => <div key={slabType + i} className="pagination-content-box-example mb-3 mx-auto"></div>)}
                 </div>
             </div>
             )}
