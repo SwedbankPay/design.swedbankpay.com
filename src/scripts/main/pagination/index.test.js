@@ -1,169 +1,163 @@
-import { beforeEach, expect, it } from "@jest/globals";
-import React from "react";
-import ReactDOM from "react-dom";
+import { expect, it } from "@jest/globals";
 
-import pagination, { _getActiveIndex, _updateActive } from "./index";
+import paginate from "./index";
 
-describe("scripts: pagination", () => {
-
-    const TestPagination = ({ id }) => (
-        <nav className="pagination" id={id}>
-            <button className="arrow-start d-block d-sm-none disabled">
-                <i className="material-icons" aria-label="start">
-                    <a href="#"></a>
-                </i>
-            </button>
-            <button className="arrow-back disabled">
-                <i className="material-icons" aria-label="back">
-                    <a href="#"></a>
-                </i>
-            </button>
-            <ul>
-                <li className="d-none d-sm-block active">
-                    <a href="#" aria-label="Go to page 1">1</a>
-                </li>
-                <li className="d-none d-sm-block">
-                    <a href="#" aria-label="Go to page 2">2</a>
-                </li>
-                <li className="d-none d-sm-block">
-                    <a href="#" aria-label="Go to page 3">3</a>
-                </li>
-                <li className="d-none d-sm-block">
-                    <a href="#" aria-label="Go to page 4">4</a>
-                </li>
-                <li className="d-none d-sm-block">
-                    <a href="#" aria-label="Go to page 5">5</a>
-                </li>
-                <li className="d-none d-sm-block">
-                    <a href="#" aria-label="Go to page 6">6</a>
-                </li>
-                <li className="d-none d-sm-block">
-                    <a href="#" aria-label="Go to page 7">7</a>
-                </li>
-                <li className="d-none d-sm-block">
-                    <a href="#" aria-label="Go to page 8">8</a>
-                </li>
-                <li className="d-none d-sm-block">
-                    <a href="#" aria-label="Go to page 9">9</a>
-                </li>
-                <li className="d-none d-sm-block">
-                    <a href="#" aria-label="Go to page 10">10</a>
-                </li><span className="text align-self-end d-block d-sm-none font-weight-bold">Page <span className="current-page">1</span> of 10</span>
-            </ul>
-            <button className="arrow-forward">
-                <i className="material-icons" aria-label="forward">
-                    <a href="#"></a>
-                </i>
-            </button>
-            <button className="arrow-end d-block d-sm-none">
-                <i className="material-icons" aria-label="end">
-                    <a href="#"></a>
-                </i>
-            </button>
-        </nav>
-
-    );
-
-    const pages = () => (
-        <>
-            <li>
-                <a>1</a>
-            </li>
-            <li>
-                <a>2</a>
-            </li>
-            <li className="active">
-                <a>3</a>
-            </li>
-            <li>
-                <a>4</a>
-            </li>
-            <li>
-                <a>5</a>
-            </li>
-            <li>
-                <a>6</a>
-            </li>
-            <li>
-                <a>7</a>
-            </li>
-            <li>
-                <a>8</a>
-            </li>
-            <li>
-                <a>9</a>
-            </li>
-            <li>
-                <a>10</a>
-            </li>
-        </>
-    );
-
-    const div = document.createElement("div");
-
-    document.body.appendChild(div);
-
-    beforeEach(() => ReactDOM.unmountComponentAtNode(div));
-
+describe("scripts: paginate", () => {
     it("is defined", () => {
-        expect(pagination).toBeDefined();
+        expect(paginate).toBeDefined();
     });
 
-    describe("pagination.init", () => {
-        it("is defined", () => {
-            expect(pagination.init).toBeDefined();
+    it("returns an object with page and current properties", () => {
+        expect(paginate(10, 5)).toEqual(expect.arrayContaining([
+            expect.objectContaining({ page: 1,
+                current: false }
+            )
+        ]));
+
+        expect(typeof paginate(10, 5)).toEqual("object");
+    });
+
+    it("always return an array length of 7", () => {
+        expect(paginate(10, 5).length).toEqual(7);
+        expect(paginate(100, 50).length).toEqual(7);
+    });
+
+    it("returns the current page", () => {
+        expect(paginate(10, 5)).toEqual(expect.arrayContaining([
+            expect.objectContaining({ page: 5,
+                current: true })
+        ]));
+
+        expect(paginate(100, 27)).toEqual(expect.arrayContaining([
+            expect.objectContaining({ page: 27,
+                current: true })
+        ]));
+
+        expect(paginate(1000, 666)).toEqual(expect.arrayContaining([
+            expect.objectContaining({ page: 666,
+                current: true })
+        ]));
+    });
+
+    it("returns correct total pages", () => {
+        expect(paginate(10, 5).slice(-1)[0]).toEqual(
+            expect.objectContaining({ page: 10,
+                current: false })
+        );
+
+        expect(paginate(55, 5).slice(-1)[0]).toEqual(
+            expect.objectContaining({ page: 55,
+                current: false })
+        );
+
+        expect(paginate(123, 5).slice(-1)[0]).toEqual(
+            expect.objectContaining({ page: 123,
+                current: false })
+        );
+    });
+
+    describe("Ellipsis", () => {
+        describe("left side ellipsis", () => {
+            it("always has index 1", () => {
+                expect(paginate(10, 5)[1]).toEqual(
+                    expect.objectContaining({ page: null })
+                );
+
+                expect(paginate(100, 60)[1]).toEqual(
+                    expect.objectContaining({ page: null })
+                );
+
+                expect(paginate(50, 30)[1]).toEqual(
+                    expect.objectContaining({ page: null })
+                );
+            });
+
+            it("appears when currentActive is higher then 4", () => {
+                expect(paginate(10, 5)[1]).toEqual(
+                    expect.objectContaining({ page: null })
+                );
+
+                expect(paginate(10, 8)[1]).toEqual(
+                    expect.objectContaining({ page: null })
+                );
+
+                expect(paginate(10, 10)[1]).toEqual(
+                    expect.objectContaining({ page: null })
+                );
+
+                expect(paginate(10, 4)[1]).not.toEqual(
+                    expect.objectContaining({ page: null })
+                );
+
+                expect(paginate(10, 1)[1]).not.toEqual(
+                    expect.objectContaining({ page: null })
+                );
+            });
         });
+
+        describe("right side ellipsis", () => {
+            it("always has index pages - 2", () => {
+                expect(paginate(10, 5).slice(-2)[0]).toEqual(
+                    expect.objectContaining({ page: null })
+                );
+
+                expect(paginate(100, 60).slice(-2)[0]).toEqual(
+                    expect.objectContaining({ page: null })
+                );
+
+                expect(paginate(50, 30).slice(-2)[0]).toEqual(
+                    expect.objectContaining({ page: null })
+                );
+            });
+
+            it("appears when currentActive lower then pages - 3", () => {
+                expect(paginate(10, 5).slice(-2)[0]).toEqual(
+                    expect.objectContaining({ page: null })
+                );
+
+                expect(paginate(10, 6).slice(-2)[0]).toEqual(
+                    expect.objectContaining({ page: null })
+                );
+
+                expect(paginate(10, 1).slice(-2)[0]).toEqual(
+                    expect.objectContaining({ page: null })
+                );
+
+                expect(paginate(10, 10).slice(-2)[0]).not.toEqual(
+                    expect.objectContaining({ page: null })
+                );
+
+                expect(paginate(10, 7).slice(-2)[0]).not.toEqual(
+                    expect.objectContaining({ page: null })
+                );
+            });
+        });
+
+        describe("ellipsis on both sides", () => {
+            it("appears when current active is higher then 4 and lower then pages - 3", () => {
+                expect(paginate(10, 5)[1]).toEqual(expect.objectContaining({ page: null }));
+                expect(paginate(10, 5).slice(-2)[0]).toEqual(expect.objectContaining({ page: null }));
+
+                expect(paginate(10, 4)[1]).not.toEqual(expect.objectContaining({ page: null }));
+                expect(paginate(10, 8).slice(-2)[0]).not.toEqual(expect.objectContaining({ page: null }));
+
+            });
+        });
+
     });
 
-    it("returns a single object when one element is initialized", () => {
-        ReactDOM.render(<TestPagination id="demo-pagination"/>, div);
+    describe("Error throws", () => {
+        it("throws error when currentActive is greater then total pages", () => {
+            expect(() => paginate(10, 11)).toThrowError("CurrentActive can not be greater then total pages.");
+        });
 
-        const renderedPagination = document.querySelector(".pagination");
+        it("throws error when currentActive is 0 or less", () => {
+            expect(() => paginate(10, 0)).toThrowError("CurrentActive must be greater then 0");
+            expect(() => paginate(10, -1)).toThrowError("CurrentActive must be greater then 0");
+        });
 
-        expect(renderedPagination).toBeTruthy();
-
-        const returnVal = pagination.init();
-
-        expect(Array.isArray(returnVal)).toBeTruthy();
-        expect(typeof returnVal).toEqual("object");
-    });
-
-    it("returns an array of objects when more than one element is initialized", () => {
-        ReactDOM.render(
-            <>
-                <TestPagination id="demo-pagination"/>
-                <TestPagination id="demo-pagination2"/>
-            </>, div);
-
-        const renderedPaginations = document.querySelectorAll(".pagination");
-
-        expect(renderedPaginations).toBeTruthy();
-        expect(renderedPaginations.length).toEqual(2);
-
-        const returnVal = pagination.init();
-
-        expect(Array.isArray(returnVal)).toBeTruthy();
-        expect(returnVal.length).toEqual(2);
-    });
-
-    it("returns null if no pagination is found and prints a warning massaged", () => {
-        console.warn = jest.fn();
-
-        expect(pagination.init()).toBeNull();
-        expect(console.warn).toHaveBeenCalled();
-    });
-    // tests getActiveIndex
-    it ("returns activeIndex to be 0", () => {
-
-        ReactDOM.render(<TestPagination/>, div);
-
-        const pages = document.querySelectorAll("li");
-
-        expect(pagination._getActiveIndex(pages)).toEqual(0);
-    });
-
-    it("updates active after event is fired", () => {
-        ReactDOM.render(<TestPagination/>, div);
-
+        it("throws error when pages is less then 8", () => {
+            expect(() => paginate(7, 1)).toThrowError("ArrayLength must be greater then 7");
+        });
     });
 });
