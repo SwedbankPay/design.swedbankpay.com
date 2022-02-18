@@ -1,20 +1,14 @@
 const paginate = (pages, currentActive) => {
     if (currentActive > pages) {
-        console.warn("CurrentActive can not be greater then total pages.");
-
-        return;
+        throw "CurrentActive can not be greater then total pages.";
     }
 
     if (currentActive <= 0) {
-        console.warn("CurrentActive must be greater then 0");
-
-        return;
+        throw ("CurrentActive must be greater then 0");
     }
 
     if (pages < 8) {
-        console.warn("ArrayLength must be greater then 7");
-
-        return;
+        throw "ArrayLength must be greater then 7";
     }
 
     const getDelta = () => {
