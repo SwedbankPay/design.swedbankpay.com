@@ -49,9 +49,9 @@ const Pagination = ({ length, currentActive, id }) => {
                 <Arrow type="back"/>
                 <ul>
                     {paginate(length, current).map(({ page, current }, i) => (
-                        <li key={i} className={`${current ? "active" : ""}`}>{"\n"}
+                        <li key={i} className={`${current ? "active" : ""}`}aria-label={`Go to page ${page}`}>{"\n"}
                             {page
-                                ? <a href="#" onClick={e => goToPage(e, page)}aria-label={`Go to page ${page}`}>{page}</a>
+                                ? <a href="#" onClick={e => goToPage(e, page)}>{page}</a>
                                 : <span>...</span>
                             }
                         </li>
@@ -69,7 +69,8 @@ const Pagination = ({ length, currentActive, id }) => {
 Pagination.propTypes = {
     text: PropTypes.string,
     arrows: PropTypes.bool,
-    mobileView: PropTypes.bool
+    mobileView: PropTypes.bool,
+    id: PropTypes.string.isRequired
 };
 
 export default Pagination;
