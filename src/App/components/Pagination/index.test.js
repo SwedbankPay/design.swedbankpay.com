@@ -1,57 +1,103 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { mount, shallow } from "enzyme";
 
 import Pagination from "./index";
 
 describe("Component: Pagination -", () => {
-    const items = [
-        /* eslint-disable object-property-newline */
-        { name: "test#1", href: "#", active: false },
-        { name: "test#2", href: "#", active: false }
-        /* eslint-enable object-property-newline */
-    ];
 
     it("is defined", () => {
         expect(Pagination).toBeDefined();
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Pagination items={items} />);
+        const wrapper = shallow(<Pagination length={10} currentActive={1} id="test" />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
-    it("prop type is enum and requires 'example' or none and produces an error when neither is provided", () => {
+    it("throws error if initialized without id prop", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(<Pagination type="test" items={items} />);
+        const wrapper = shallow(<Pagination length={10} currentActive={1}/>);
 
         expect(wrapper).toMatchSnapshot();
         expect(console.error).toHaveBeenCalled();
     });
 
-    it("prop type is enum and requires 'example' or none and does not produce an error when either is provided", () => {
+    it("does not throw error if initialized with id prop", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(
-            <div>
-                <Pagination type="example" items={items} />
-                <Pagination items={items} />
-            </div>
-        );
+        const wrapper = shallow(<Pagination length={10} currentActive={1} id="does-not-throw-error"/>);
 
         expect(wrapper).toMatchSnapshot();
         expect(console.error).not.toHaveBeenCalled();
     });
 
-    // it("renders list items when prop items is provided", () => {
+    it("renders with an li with active class", () => {
+        const wrapper = shallow(<Pagination length={10} currentActive={4} id="test" />);
 
-    //     const wrapper = shallow(<Pagination items={items} />);
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.exists(".active")).toEqual(true);
 
-    //     expect(wrapper).toMatchSnapshot();
+    });
 
-    //     expect(wrapper.contains(<a aria-label="Go to page test#1">1</a>)).toEqual(true);
-    // }); fungerer ikke lengre. kommenterer ut
+    it("receives correct properties", () => {
+        const wrapper = mount(<Pagination length={10} currentActive={5} id="test" />);
+
+        expect(wrapper.prop("length")).toEqual(10);
+        expect(wrapper.prop("currentActive")).toEqual(5);
+        expect(wrapper.prop("id")).toEqual("test");
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it("renders only one instance with class active", () => {
+        const wrapper = shallow(<Pagination length={10} currentActive={4} id="tets"/>);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.find(".active").length).toBe(1);
+    });
+
+    it("renders only li elements inside ul element", () => {
+        const wrapper = shallow(<Pagination length={10} currentActive={4} id="tets"/>);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.find("ul").childAt(0)
+            .type()).toEqual("li");
+    });
+
+    it("renders with correct number of list elements. It should always be 7 (max number of places)", () => {
+        const wrapper = shallow(<Pagination length={8} currentActive={2} id={"test-pagination"}/>);
+        const wrapper2 = shallow(<Pagination length={100} currentActive={2} id={"test-pagination2"}/>);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper2).toMatchSnapshot();
+        expect(wrapper.find("li").length).toBe(7);
+        expect(wrapper2.find("li").length).toBe(7);
+    });
+    // eslint-disable-next-line jest/no-commented-out-tests
+    /*
+    // Need to find a way for skipping onClick={[Function: onClick]}
+    it("renders with class of active on currentActive list element", () => {
+        const wrapper = shallow(<Pagination length={8} currentActive={2} id={"test-pagination"}/>);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.contains(<span className="mobile">Page 2 og 8</span>)).toBeTruthy();
+    });
+
+    it("renders arrows correctly", () => {
+        const wrapper = shallow(<Pagination length={8} currentActive={2} id={"test-pagination"}/>);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.contains("<Arrow type='start' mobile={true} />")).toBeTruthy();
+    }); */
+
+    it("renders four arrows", () => {
+        const wrapper = shallow(<Pagination length={8} currentActive={2} id={"test-pagination"}/>);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.find("Arrow").length).toBe(4);
+    });
+
 });
 
 // Todo: Skrive test for ny parameter
