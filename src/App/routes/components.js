@@ -176,7 +176,8 @@ module.exports = [
                 path: "/components/pagination",
                 componentPath: "components/Pagination",
                 icon: "power_input",
-                outlined: true
+                outlined: true,
+                statusBadges: ["updated"]
             },
             {
                 title: "Panel",
