@@ -35,6 +35,8 @@ const Overview = () => (
         <p>For exploration of content, where users are browsing aimlessly for something interesting, infinite scroll is better suited then using pagination. Pagination is best when the user is trying to accomplish a goal, for instance trying to find a particular article from a list. </p>
 
         <h3>How to use Pagination</h3>
+        <h4>Number of pages</h4>
+        <p>Something clever, nothin more than 20 pages pls or you need to RETHINK your solution </p>
         <h4>Items per page</h4>
         <p>10 items per page can be used as a general rule, but in reality it depends on your specific context. Consider the display size of each item, showing 10 items and leaving half the screen unused is not good practice.</p>
         <h4>Placement</h4>
@@ -65,17 +67,20 @@ const Overview = () => (
 const DeveloperDocumentation = () => (
     <section>
         <h2 id="developer-documentation">Developer documentation</h2>
-        <span className="h3">Javascript methods</span>
+        <h3>Pagination attributes</h3>
+        <p>Remember to add <CodeTags type="primary" code={"<link rel=\"prev\" href=\"prev_page\">"}/> and <CodeTags type="primary" code={"<link rel=\"next\" href=\"next_page\">"}/> in <CodeTags type="primary" code={"<head>"}/> of your HTML page. These attributes are used to indicate the relations between a sequence of pages to search engines.</p>
+        <h3>Javascript methods</h3>
         <p>Our pagination component works without a script, so the styling is still working where Javascript is prohibited. But where it is allowed, and where you do not want to spend time banging your head to figure out the algorithm, we have provided a script that paginates the pages for you! <CodeTags type="secondary" code="dg.paginate(pages, currentActive)"/>. The script takes in two props, <CodeTags type="primary" code="pages"/> and <CodeTags type="primary" code="currentActive"/>, where <CodeTags type="primary" code="pages"/> is total pages and <CodeTags type="primary" code="currentActive"/> is the current active page.</p>
         <p>The script returns the paginated pages, an array which contains an object with two properties, <CodeTags type="primary" code="page"/> and <CodeTags type="primary" code="current"/>. <CodeTags type="primary" code="page"/> shows an integer, and <CodeTags type="primary" code="null"/> when it should be replaced with an ellipsis. The <CodeTags type="primary" code="current"/> is a bool that indicates whether the page is active or not.</p>
 
-        <h3>Example</h3>
-        <ComponentPreview language="javascript" codeFigure>
+        <section>
+            <h3>Example</h3>
+            <ComponentPreview language="javascript" codeFigure>
             import &#123; paginate &#125; from &quot;@src/scripts/main&quot;;{"\n"}{"\n"}
 
             console.log(paginate(10, 5)){"\n"}{"\n"}
 
-            {"//expected output:"}{"\n"}
+                {"//expected output:"}{"\n"}
             [&#123;page: 1, current: false&#125;,{"\n"}
             &#123;page: null, current: false&#125;,{"\n"}
             &#123;page: 4, current: false&#125;,{"\n"}
@@ -83,7 +88,8 @@ const DeveloperDocumentation = () => (
             &#123;page: 6, current: false&#125;,{"\n"}
             &#123;page: null, current: false&#125;,{"\n"}
             &#123;page: 10, current: false&#125;]
-        </ComponentPreview>
+            </ComponentPreview>
+        </section>
     </section>
 );
 
