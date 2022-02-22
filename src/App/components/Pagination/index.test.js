@@ -39,6 +39,8 @@ describe("Component: Pagination -", () => {
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.exists(".active")).toEqual(true);
 
+        expect(wrapper.find(".active")).toHaveLength(1);
+
     });
 
     it("receives correct properties", () => {
@@ -48,13 +50,6 @@ describe("Component: Pagination -", () => {
         expect(wrapper.prop("currentActive")).toEqual(5);
         expect(wrapper.prop("id")).toEqual("test");
         expect(wrapper).toMatchSnapshot();
-    });
-
-    it("renders only one instance with class active", () => {
-        const wrapper = shallow(<Pagination length={10} currentActive={4} id="tets"/>);
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.find(".active").length).toBe(1);
     });
 
     it("renders only li elements inside ul element", () => {
@@ -74,22 +69,6 @@ describe("Component: Pagination -", () => {
         expect(wrapper.find("li").length).toBe(7);
         expect(wrapper2.find("li").length).toBe(7);
     });
-    // eslint-disable-next-line jest/no-commented-out-tests
-    /*
-    // Need to find a way for skipping onClick={[Function: onClick]}
-    it("renders with class of active on currentActive list element", () => {
-        const wrapper = shallow(<Pagination length={8} currentActive={2} id={"test-pagination"}/>);
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<span className="mobile">Page 2 og 8</span>)).toBeTruthy();
-    });
-
-    it("renders arrows correctly", () => {
-        const wrapper = shallow(<Pagination length={8} currentActive={2} id={"test-pagination"}/>);
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains("<Arrow type='start' mobile={true} />")).toBeTruthy();
-    }); */
 
     it("renders four arrows", () => {
         const wrapper = shallow(<Pagination length={8} currentActive={2} id={"test-pagination"}/>);
@@ -98,6 +77,18 @@ describe("Component: Pagination -", () => {
         expect(wrapper.find("Arrow").length).toBe(4);
     });
 
+    it("renders with one ellipsis", () => {
+        const wrapper = shallow(<Pagination length={10} currentActive={2} id={"test-pagination"}/>);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.find("span").length).toBe(2);
+    });
+
+    it("renders with two ellipsis", () => {
+        const wrapper = shallow(<Pagination length={10} currentActive={5} id={"test-pagination"}/>);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.find("span").length).toBe(3);
+    });
 });
 
-// Todo: Skrive test for ny parameter

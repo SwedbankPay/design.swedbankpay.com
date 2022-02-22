@@ -762,147 +762,6 @@ exports[`Component: Pagination - renders only li elements inside ul element 1`] 
 </Fragment>
 `;
 
-exports[`Component: Pagination - renders only one instance with class active 1`] = `
-<Fragment>
-  <nav
-    aria-label="Pagination Navigation"
-    className="pagination"
-    id="tets"
-    role="navigation"
-  >
-    
-
-    <Arrow
-      mobile={true}
-      type="start"
-    />
-    
-
-    <Arrow
-      type="back"
-    />
-    <ul>
-      <li
-        aria-label="Go to page 1"
-        className=""
-        key="0"
-      >
-        
-
-        <a
-          href="#"
-          onClick={[Function]}
-        >
-          1
-        </a>
-      </li>
-      <li
-        aria-label="Go to page 2"
-        className=""
-        key="1"
-      >
-        
-
-        <a
-          href="#"
-          onClick={[Function]}
-        >
-          2
-        </a>
-      </li>
-      <li
-        aria-label="Go to page 3"
-        className=""
-        key="2"
-      >
-        
-
-        <a
-          href="#"
-          onClick={[Function]}
-        >
-          3
-        </a>
-      </li>
-      <li
-        aria-label="Go to page 4"
-        className="active"
-        key="3"
-      >
-        
-
-        <a
-          href="#"
-          onClick={[Function]}
-        >
-          4
-        </a>
-      </li>
-      <li
-        aria-label="Go to page 5"
-        className=""
-        key="4"
-      >
-        
-
-        <a
-          href="#"
-          onClick={[Function]}
-        >
-          5
-        </a>
-      </li>
-      <li
-        aria-label="Go to page null"
-        className=""
-        key="5"
-      >
-        
-
-        <span>
-          ...
-        </span>
-      </li>
-      <li
-        aria-label="Go to page 10"
-        className=""
-        key="6"
-      >
-        
-
-        <a
-          href="#"
-          onClick={[Function]}
-        >
-          10
-        </a>
-      </li>
-    </ul>
-    
-
-    <span
-      className="mobile"
-    >
-      Page 
-      4
-       of 
-      10
-    </span>
-    
-
-    <Arrow
-      type="forward"
-    />
-    
-
-    <Arrow
-      mobile={true}
-      type="end"
-    />
-  </nav>
-</Fragment>
-`;
-
 exports[`Component: Pagination - renders with an li with active class 1`] = `
 <Fragment>
   <nav
@@ -1310,6 +1169,285 @@ exports[`Component: Pagination - renders with correct number of list elements. I
       2
        of 
       100
+    </span>
+    
+
+    <Arrow
+      type="forward"
+    />
+    
+
+    <Arrow
+      mobile={true}
+      type="end"
+    />
+  </nav>
+</Fragment>
+`;
+
+exports[`Component: Pagination - renders with one ellipsis 1`] = `
+<Fragment>
+  <nav
+    aria-label="Pagination Navigation"
+    className="pagination"
+    id="test-pagination"
+    role="navigation"
+  >
+    
+
+    <Arrow
+      mobile={true}
+      type="start"
+    />
+    
+
+    <Arrow
+      type="back"
+    />
+    <ul>
+      <li
+        aria-label="Go to page 1"
+        className=""
+        key="0"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          1
+        </a>
+      </li>
+      <li
+        aria-label="Go to page 2"
+        className="active"
+        key="1"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          2
+        </a>
+      </li>
+      <li
+        aria-label="Go to page 3"
+        className=""
+        key="2"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          3
+        </a>
+      </li>
+      <li
+        aria-label="Go to page 4"
+        className=""
+        key="3"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          4
+        </a>
+      </li>
+      <li
+        aria-label="Go to page 5"
+        className=""
+        key="4"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          5
+        </a>
+      </li>
+      <li
+        aria-label="Go to page null"
+        className=""
+        key="5"
+      >
+        
+
+        <span>
+          ...
+        </span>
+      </li>
+      <li
+        aria-label="Go to page 10"
+        className=""
+        key="6"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          10
+        </a>
+      </li>
+    </ul>
+    
+
+    <span
+      className="mobile"
+    >
+      Page 
+      2
+       of 
+      10
+    </span>
+    
+
+    <Arrow
+      type="forward"
+    />
+    
+
+    <Arrow
+      mobile={true}
+      type="end"
+    />
+  </nav>
+</Fragment>
+`;
+
+exports[`Component: Pagination - renders with two ellipsis 1`] = `
+<Fragment>
+  <nav
+    aria-label="Pagination Navigation"
+    className="pagination"
+    id="test-pagination"
+    role="navigation"
+  >
+    
+
+    <Arrow
+      mobile={true}
+      type="start"
+    />
+    
+
+    <Arrow
+      type="back"
+    />
+    <ul>
+      <li
+        aria-label="Go to page 1"
+        className=""
+        key="0"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          1
+        </a>
+      </li>
+      <li
+        aria-label="Go to page null"
+        className=""
+        key="1"
+      >
+        
+
+        <span>
+          ...
+        </span>
+      </li>
+      <li
+        aria-label="Go to page 4"
+        className=""
+        key="2"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          4
+        </a>
+      </li>
+      <li
+        aria-label="Go to page 5"
+        className="active"
+        key="3"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          5
+        </a>
+      </li>
+      <li
+        aria-label="Go to page 6"
+        className=""
+        key="4"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          6
+        </a>
+      </li>
+      <li
+        aria-label="Go to page null"
+        className=""
+        key="5"
+      >
+        
+
+        <span>
+          ...
+        </span>
+      </li>
+      <li
+        aria-label="Go to page 10"
+        className=""
+        key="6"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          10
+        </a>
+      </li>
+    </ul>
+    
+
+    <span
+      className="mobile"
+    >
+      Page 
+      5
+       of 
+      10
     </span>
     
 
