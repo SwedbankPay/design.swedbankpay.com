@@ -72,7 +72,7 @@ const DeveloperDocumentation = () => (
         <h2 id="developer-documentation">Developer documentation</h2>
         <span className="h4 mt-3">Error state</span>
 
-        <p>If the user don’t select any option in a select that is required to be filled, an error message should be displayed. Add the <CodeTags type="secondary" code=".has-error"/> class to the <CodeTags type="primary" code="form-group"/> element, and insert the error message in the attribute <CodeTags type="primary" code="data-error"/> in the <CodeTags type="primary" code="help-block"/> element. </p>
+        <p>If the user don’t select any option in a select that is required to be filled, an error message should be displayed. To display the error message, add the <CodeTags type="secondary" code={".has-error"} /> class to the parent element, then add the <CodeTags type="secondary" code={".help-block"} /> element as the last child with the error message.</p>
 
         <ComponentPreview language="html" codeFigure showCasePanel>
             <form className="no-pointer-events">
