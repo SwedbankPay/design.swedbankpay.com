@@ -47,7 +47,7 @@ const Button = ({ label, id, name, className, value, href, icon, loading, type, 
         <button className={btnClasses} {...attrs}>{icon ? "\n\t\t" : null}
             {icon ? <><i className="material-icons" aria-hidden="true">{icon}</i>{"\n\t\t"}</> : null}
             {((icon && label) || type === "link" || type === "link-destructive" || bankId) ? <span>{label}</span> : label}{icon ? "\n\t" : null}
-            {bankId ? <><i className={`bank-id bank-id-${bankId}`} />{"\n\t\t"}</> : null}
+            {bankId ? <><i className={`bank-id bank-id-${bankId}`} aria-hidden="true"/>{"\n\t\t"}</> : null}
         </button>
     );
 };

@@ -226,6 +226,7 @@ exports[`Documentation: Card Overview renders 1`] = `
             "component": <Cards
               icon={
                 <i
+                  aria-hidden="true"
                   className="material-icons material-icons-outlined"
                 >
                   shopping_basket
@@ -253,6 +254,7 @@ exports[`Documentation: Card Overview renders 1`] = `
                       "name": "With icon",
                       "value": Object {
                         "icon": <i
+                          aria-hidden="true"
                           className="material-icons material-icons-outlined"
                         >
                           shopping_basket

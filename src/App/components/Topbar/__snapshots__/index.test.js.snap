@@ -173,6 +173,7 @@ exports[`Component: Topbar - props topbarContent menu links prevents default whe
 
     <TopbarBtn>
       <button
+        aria-label="Open menu"
         className="topbar-btn"
         type="button"
       >
@@ -187,6 +188,7 @@ exports[`Component: Topbar - props topbarContent menu links prevents default whe
 		
       </button>
       <button
+        aria-label="Close menu"
         className="topbar-close"
         type="button"
       >
@@ -358,6 +360,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
 
     <TopbarBtn>
       <button
+        aria-label="Open menu"
         className="topbar-btn"
         type="button"
       >
@@ -372,6 +375,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
 		
       </button>
       <button
+        aria-label="Close menu"
         className="topbar-close"
         type="button"
       >
@@ -468,6 +472,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
               Array [
                 Object {
                   "icon": <i
+                    aria-hidden="true"
                     className="material-icons-outlined"
                   >
                     home
@@ -478,6 +483,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                   "children": Array [
                     Object {
                       "icon": <i
+                        aria-hidden="true"
                         className="material-icons-outlined rotated"
                       >
                         accessibility
@@ -497,6 +503,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                         },
                       ],
                       "icon": <i
+                        aria-hidden="true"
                         className="material-icons-outlined rotated"
                       >
                         palette
@@ -505,6 +512,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                     },
                     Object {
                       "icon": <i
+                        aria-hidden="true"
                         className="material-icons-outlined rotated"
                       >
                         grid_on
@@ -513,6 +521,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                     },
                     Object {
                       "icon": <i
+                        aria-hidden="true"
                         className="material-icons-outlined rotated"
                       >
                         space_bar
@@ -521,6 +530,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                     },
                   ],
                   "icon": <i
+                    aria-hidden="true"
                     className="material-icons-outlined rotated"
                   >
                     wb_incandescent
@@ -552,6 +562,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                     },
                   ],
                   "icon": <i
+                    aria-hidden="true"
                     className="material-icons-outlined"
                   >
                     palette
@@ -573,6 +584,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                   className="sidebar-logo"
                 >
                   <a
+                    aria-label="To homepage"
                     href="/"
                   >
                     <Logotype
@@ -601,6 +613,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                       onClick={[Function]}
                     >
                       <i
+                        aria-hidden="true"
                         className="material-icons-outlined"
                       >
                         home
@@ -617,6 +630,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                       onClick={[Function]}
                     >
                       <i
+                        aria-hidden="true"
                         className="material-icons-outlined rotated"
                       >
                         wb_incandescent
@@ -643,6 +657,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                             onClick={[Function]}
                           >
                             <i
+                              aria-hidden="true"
                               className="material-icons-outlined rotated"
                             >
                               accessibility
@@ -659,6 +674,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                             onClick={[Function]}
                           >
                             <i
+                              aria-hidden="true"
                               className="material-icons-outlined rotated"
                             >
                               palette
@@ -712,6 +728,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                             onClick={[Function]}
                           >
                             <i
+                              aria-hidden="true"
                               className="material-icons-outlined rotated"
                             >
                               grid_on
@@ -728,6 +745,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                             onClick={[Function]}
                           >
                             <i
+                              aria-hidden="true"
                               className="material-icons-outlined rotated"
                             >
                               space_bar
@@ -747,6 +765,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                       onClick={[Function]}
                     >
                       <i
+                        aria-hidden="true"
                         className="material-icons-outlined"
                       >
                         palette
@@ -919,6 +938,7 @@ exports[`Component: Topbar - props topbarContent renders a topbar menu without m
 
     <TopbarBtn>
       <button
+        aria-label="Open menu"
         className="topbar-btn"
         type="button"
       >
@@ -933,6 +953,7 @@ exports[`Component: Topbar - props topbarContent renders a topbar menu without m
 		
       </button>
       <button
+        aria-label="Close menu"
         className="topbar-close"
         type="button"
       >
@@ -1085,6 +1106,7 @@ exports[`Component: Topbar - props topbarContent renders a topbar-menu-button wh
 
     <TopbarBtn>
       <button
+        aria-label="Open menu"
         className="topbar-btn"
         type="button"
       >
@@ -1099,6 +1121,7 @@ exports[`Component: Topbar - props topbarContent renders a topbar-menu-button wh
 		
       </button>
       <button
+        aria-label="Close menu"
         className="topbar-close"
         type="button"
       >
@@ -1270,6 +1293,7 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 
     <TopbarBtn>
       <button
+        aria-label="Open menu"
         className="topbar-btn"
         type="button"
       >
@@ -1284,6 +1308,7 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 		
       </button>
       <button
+        aria-label="Close menu"
         className="topbar-close"
         type="button"
       >
@@ -1478,6 +1503,7 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 
     <TopbarBtn>
       <button
+        aria-label="Open menu"
         className="topbar-btn"
         type="button"
       >
@@ -1492,6 +1518,7 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 		
       </button>
       <button
+        aria-label="Close menu"
         className="topbar-close"
         type="button"
       >
