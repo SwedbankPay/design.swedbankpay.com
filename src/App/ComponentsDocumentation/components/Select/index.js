@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import InputGroup from "@components/InputGroup";
 import { selectOverview, whenToUse } from "./constants";
 import CodeTags from "@components/CodeTags";
+import { datepicker } from "@src/scripts/main";
 
 const WhenToUse = () => (
     <>
@@ -96,16 +97,23 @@ const DeveloperDocumentation = () => (
     </section>
 );
 
-const Select = () => (
-    <DocContainer>
-        <section id="select-doc">
-            <p className="lead">The select component is used in forms and allows the user to select a desired value. When activated the component expands and presents a scrollable list of pre-defined options which user can choose from.</p>
-            <Overview />
-            <ContentGuidelines />
-            <DeveloperDocumentation />
-        </section>
-    </DocContainer>
-);
+const Select = () => {
+
+    useEffect(() => {
+        datepicker.init();
+    });
+
+    return (
+        <DocContainer>
+            <section id="select-doc">
+                <p className="lead">The select component is used in forms and allows the user to select a desired value. When activated the component expands and presents a scrollable list of pre-defined options which user can choose from.</p>
+                <Overview />
+                <ContentGuidelines />
+                <DeveloperDocumentation />
+            </section>
+        </DocContainer>
+    );
+};
 
 export default Select;
 
