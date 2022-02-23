@@ -47,12 +47,12 @@ exports[`Documentation: Pagination DeveloperDocumentation renders 1`] = `
     Javascript methods
   </h3>
   <p>
-    Our pagination component works without a script, so the styling is still working where Javascript is prohibited. But where it is allowed, and where you do not want to spend time banging your head to figure out the algorithm, we have provided a script that paginates the pages for you! 
+    Our pagination component works without a script, so the styling is still working where JavaScript is prohibited. But where it is allowed, and where you do not want to spend time banging your head to figure out the algorithm, the Design Guide provides a reference implementation! 
     <CodeTags
       code="dg.paginate(pages, currentActive)"
       type="secondary"
     />
-    . The script takes in two props, 
+    . The script takes in two arguments; 
     <CodeTags
       code="pages"
       type="primary"
@@ -75,7 +75,7 @@ exports[`Documentation: Pagination DeveloperDocumentation renders 1`] = `
      is the current active page.
   </p>
   <p>
-    The script returns the paginated pages, an array which contains an object with two properties, 
+    The script returns the paginated pages, an array of objects with two properties, 
     <CodeTags
       code="page"
       type="primary"
