@@ -98,7 +98,7 @@ const DeveloperDocumentation = () => (
 const Pagination = () => (
     <DocContainer docToc>
         <p className="lead">
-            Pagination is used to divide large amounts of content into separate pages and allows the user to navigate to next or previous pages.
+            Pagination is used to divide large amounts of content into separate pages and allows the user to navigate to the next or previous pages.
         </p>
         <Overview/>
         <DeveloperDocumentation/>
