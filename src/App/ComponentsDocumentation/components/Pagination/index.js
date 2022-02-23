@@ -36,7 +36,7 @@ const Overview = () => (
 
         <h3>How to use Pagination</h3>
         <h4>Number of pages</h4>
-        <p>While the pagination component supports an infinite amount of pages, it is difficult to deliver a good user experience when the number of pages exceeds 10. In circumstances where it is difficult for a user to find what they are looking for within the first few search results, they may develop bad habits (such as finding what they are looking for on page 13, search result 5). To mitigate this, more advanced solutions than a single field search should be considered, such as categorization, labels, faceted search, etc</p>
+        <p>While the pagination component supports an infinite amount of pages, it is difficult to deliver a good user experience when the number of pages exceeds 10. In circumstances where it is difficult for a user to find what they are looking for within the first few search results, they may develop bad habits (such as finding what they are looking for on page 13, search result 5). To mitigate this, more advanced solutions than a single search field should be considered, such as categorization, labels, faceted search, etc.</p>
         <h4>Items per page</h4>
         <p>10 items per page can be used as a general rule, but in reality it depends on your specific context. Consider the display size of each item, showing 10 items and leaving half the screen unused is not good practice.</p>
         <h4>Placement</h4>
