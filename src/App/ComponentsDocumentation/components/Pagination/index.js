@@ -8,7 +8,7 @@ import CodeTags from "~/src/App/components/CodeTags";
 const Overview = () => (
     <section id="pagination-overview">
         <h2 id="pagination">Overview</h2>
-        <p>Pagination is commonly used for things like table listings, search results or directories.The need for pagination is influenced by the amount of data to be displayed and the aim is to not overwhelm users with information and to improve the loading performance of the system. </p>
+        <p>Pagination is commonly used for things like table listings, search results or directories. The need for pagination is influenced by the amount of data to be displayed and the aim is to not overwhelm users with information and to improve the loading performance of the system. </p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={PaginationShowCasePanel} codeFigure/>
 
         <h3>Responsive design</h3>
@@ -32,11 +32,11 @@ const Overview = () => (
         <p>On smaller screens the page links are replaced with text showing the page information, still using arrows to go to next or previous page but with the option to go to the first or last page as well.</p>
 
         <h3>When to consider something else</h3>
-        <p>For exploration of content, where users are browsing aimlessly for something interesting, infinite scroll is better suited then using pagination. Pagination is best when the user is trying to accomplish a goal, for instance trying to find a particular article from a list. </p>
+        <p>For exploration of content, where users are browsing aimlessly for something interesting, infinite scroll is better suited than using pagination. Pagination is best when the user is trying to accomplish a goal, for instance trying to find a particular article from a list.</p>
 
         <h3>How to use Pagination</h3>
         <h4>Number of pages</h4>
-        <p>Something clever, nothin more than 20 pages pls or you need to RETHINK your solution </p>
+        <p>While the pagination component supports an infinite amount of pages, it is difficult to deliver a good user experience when the number of pages exceeds 10. In circumstances where it is difficult for a user to find what they are looking for within the first few search results, they may develop bad habits (such as finding what they are looking for on page 13, search result 5). To mitigate this, more advanced solutions than a single field search should be considered, such as categorization, labels, faceted search, etc</p>
         <h4>Items per page</h4>
         <p>10 items per page can be used as a general rule, but in reality it depends on your specific context. Consider the display size of each item, showing 10 items and leaving half the screen unused is not good practice.</p>
         <h4>Placement</h4>
@@ -67,8 +67,8 @@ const Overview = () => (
 const DeveloperDocumentation = () => (
     <section>
         <h2 id="developer-documentation">Developer documentation</h2>
-        <h3>Pagination attributes</h3>
-        <p>Remember to add <CodeTags type="primary" code={"<link rel=\"prev\" href=\"prev_page\">"}/> and <CodeTags type="primary" code={"<link rel=\"next\" href=\"next_page\">"}/> in <CodeTags type="primary" code={"<head>"}/> of your HTML page. These attributes are used to indicate the relations between a sequence of pages to search engines.</p>
+        <h3>Link relations</h3>
+        <p>Consider adding <CodeTags type="primary" code={"<link rel=\"…\" href=\"…\">"}/> to the <CodeTags type="primary" code={"<head>"}/> element of your HTML page. These links are used to indicate the relationships between a sequence of pages to web browsers and search engines. Link relations to consider adding are <CodeTags type="primary" code={"first"}/>, <CodeTags type="primary" code={"last"}/>, <CodeTags type="primary" code={"next"}/> and <CodeTags type="primary" code={"prev"}/>.</p>
         <h3>Javascript methods</h3>
         <p>Our pagination component works without a script, so the styling is still working where Javascript is prohibited. But where it is allowed, and where you do not want to spend time banging your head to figure out the algorithm, we have provided a script that paginates the pages for you! <CodeTags type="secondary" code="dg.paginate(pages, currentActive)"/>. The script takes in two props, <CodeTags type="primary" code="pages"/> and <CodeTags type="primary" code="currentActive"/>, where <CodeTags type="primary" code="pages"/> is total pages and <CodeTags type="primary" code="currentActive"/> is the current active page.</p>
         <p>The script returns the paginated pages, an array which contains an object with two properties, <CodeTags type="primary" code="page"/> and <CodeTags type="primary" code="current"/>. <CodeTags type="primary" code="page"/> shows an integer, and <CodeTags type="primary" code="null"/> when it should be replaced with an ellipsis. The <CodeTags type="primary" code="current"/> is a bool that indicates whether the page is active or not.</p>
@@ -81,13 +81,15 @@ const DeveloperDocumentation = () => (
             console.log(paginate(10, 5)){"\n"}{"\n"}
 
                 {"//expected output:"}{"\n"}
-            [&#123;page: 1, current: false&#125;,{"\n"}
-            &#123;page: null, current: false&#125;,{"\n"}
-            &#123;page: 4, current: false&#125;,{"\n"}
-            &#123;page: 5, current: true&#125;,{"\n"}
-            &#123;page: 6, current: false&#125;,{"\n"}
-            &#123;page: null, current: false&#125;,{"\n"}
-            &#123;page: 10, current: false&#125;]
+            [
+                &#123;page: 1, current: false&#125;,{"\n"}
+                &#123;page: null, current: false&#125;,{"\n"}
+                &#123;page: 4, current: false&#125;,{"\n"}
+                &#123;page: 5, current: true&#125;,{"\n"}
+                &#123;page: 6, current: false&#125;,{"\n"}
+                &#123;page: null, current: false&#125;,{"\n"}
+                &#123;page: 10, current: false&#125;
+            ]
             </ComponentPreview>
         </section>
     </section>
