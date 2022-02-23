@@ -72,7 +72,7 @@ describe("scripts: paginate", () => {
                 );
             });
 
-            it("appears when currentActive is higher then 4", () => {
+            it("appears when currentActive is higher than 4", () => {
                 expect(paginate(10, 5)[1]).toEqual(
                     expect.objectContaining({ page: null })
                 );
@@ -110,7 +110,7 @@ describe("scripts: paginate", () => {
                 );
             });
 
-            it("appears when currentActive lower then pages - 3", () => {
+            it("appears when currentActive lower than pages - 3", () => {
                 expect(paginate(10, 5).slice(-2)[0]).toEqual(
                     expect.objectContaining({ page: null })
                 );
@@ -134,7 +134,7 @@ describe("scripts: paginate", () => {
         });
 
         describe("ellipsis on both sides", () => {
-            it("appears when current active is higher then 4 and lower then pages - 3", () => {
+            it("appears when current active is higher than 4 and lower than pages - 3", () => {
                 expect(paginate(10, 5)[1]).toEqual(expect.objectContaining({ page: null }));
                 expect(paginate(10, 5).slice(-2)[0]).toEqual(expect.objectContaining({ page: null }));
 
@@ -147,17 +147,17 @@ describe("scripts: paginate", () => {
     });
 
     describe("Error throws", () => {
-        it("throws error when currentActive is greater then total pages", () => {
-            expect(() => paginate(10, 11)).toThrowError("CurrentActive can not be greater then total pages.");
+        it("throws error when currentActive is greater than total pages", () => {
+            expect(() => paginate(10, 11)).toThrowError("CurrentActive can not be greater than total pages.");
         });
 
         it("throws error when currentActive is 0 or less", () => {
-            expect(() => paginate(10, 0)).toThrowError("CurrentActive must be greater then 0");
-            expect(() => paginate(10, -1)).toThrowError("CurrentActive must be greater then 0");
+            expect(() => paginate(10, 0)).toThrowError("CurrentActive must be greater than 0");
+            expect(() => paginate(10, -1)).toThrowError("CurrentActive must be greater than 0");
         });
 
-        it("throws error when pages is less then 8", () => {
-            expect(() => paginate(7, 1)).toThrowError("ArrayLength must be greater then 7");
+        it("throws error when pages is less than 8", () => {
+            expect(() => paginate(7, 1)).toThrowError("ArrayLength must be greater than 7");
         });
     });
 });
