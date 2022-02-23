@@ -91,7 +91,7 @@ const DeveloperDocumentation = () => (
         <span className="h4">Disabled state</span>
         <p>Disable a select by adding the <CodeTags type="primary" code="disabled"/> attribute to the desired select and the <CodeTags type="primary" code="form-group"/> where the select resides.</p>
         <ComponentPreview language="html" codeFigure showCasePanel>
-            <InputGroup type="select" label="Label" placeholder="Select option" selectOptions={[]} disabled />
+            <InputGroup type="select" id="disabled-state-example" label="Label" placeholder="Select option" selectOptions={[]} disabled />
         </ComponentPreview>
     </section>
 );
