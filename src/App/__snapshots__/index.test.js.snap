@@ -330,6 +330,9 @@ exports[`Main: App renders 1`] = `
                       "icon": "power_input",
                       "outlined": true,
                       "path": "/components/pagination",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Pagination",
                     },
                     Object {

@@ -1,76 +1,94 @@
 import React from "react";
-import { shallow, mount } from "enzyme";
+import { mount, shallow } from "enzyme";
 
 import Pagination from "./index";
 
 describe("Component: Pagination -", () => {
+
     it("is defined", () => {
         expect(Pagination).toBeDefined();
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Pagination />);
+        const wrapper = shallow(<Pagination length={10} currentActive={1} id="test" />);
 
         expect(wrapper).toMatchSnapshot();
     });
 
-    it("prop type is enum and requires 'bullets' or 'simple' and produces an error when neither is provided", () => {
+    it("throws error if initialized without id prop", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(<Pagination type="test" />);
+        const wrapper = shallow(<Pagination length={10} currentActive={1}/>);
 
         expect(wrapper).toMatchSnapshot();
         expect(console.error).toHaveBeenCalled();
     });
 
-    it("prop type is enum and requires 'bullets' or 'simple' and does not produce an error when either is provided", () => {
+    it("does not throw error if initialized with id prop", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(
-            <div>
-                <Pagination type="bullets" />
-                <Pagination type="simple" />
-            </div>
-        );
+        const wrapper = shallow(<Pagination length={10} currentActive={1} id="does-not-throw-error"/>);
 
         expect(wrapper).toMatchSnapshot();
         expect(console.error).not.toHaveBeenCalled();
     });
 
-    it("renders list items when prop items is provided", () => {
-        const items = [
-            /* eslint-disable object-property-newline */
-            { name: "test#1", href: "#", active: false },
-            { name: "test#2", href: "#", active: true }
-            /* eslint-enable object-property-newline */
-        ];
-
-        const wrapper = shallow(<Pagination items={items} />);
+    it("renders with an li with active class", () => {
+        const wrapper = shallow(<Pagination length={10} currentActive={4} id="test" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<a href="#">test#1</a>)).toEqual(true);
+        expect(wrapper.exists(".active")).toEqual(true);
+
+        expect(wrapper.find(".active")).toHaveLength(1);
+
     });
 
-    it("renders text element when prop text is provided", () => {
-        const wrapper = mount(<Pagination text="test" />);
+    it("receives correct properties", () => {
+        const wrapper = mount(<Pagination length={10} currentActive={5} id="test" />);
 
+        expect(wrapper.prop("length")).toEqual(10);
+        expect(wrapper.prop("currentActive")).toEqual(5);
+        expect(wrapper.prop("id")).toEqual("test");
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<span className="text">test</span>)).toEqual(true);
     });
 
-    it("renders arrows when prop arrows is provided", () => {
-        const wrapper = mount(<Pagination arrows />);
+    it("renders only li elements inside ul element", () => {
+        const wrapper = shallow(<Pagination length={10} currentActive={4} id="tets"/>);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("arrow-back");
-        expect(wrapper.html()).toContain("arrow-forward");
+        expect(wrapper.find("ul").childAt(0)
+            .type()).toEqual("li");
     });
 
-    it("renders outermost arrows when prop farArrows is provided", () => {
-        const wrapper = mount(<Pagination farArrows />);
+    it("renders with correct number of list elements. It should always be 7 (max number of places)", () => {
+        const wrapper = shallow(<Pagination length={8} currentActive={2} id={"test-pagination"}/>);
+        const wrapper2 = shallow(<Pagination length={100} currentActive={2} id={"test-pagination2"}/>);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("arrow-end");
-        expect(wrapper.html()).toContain("arrow-start");
+        expect(wrapper2).toMatchSnapshot();
+        expect(wrapper.find("li").length).toBe(7);
+        expect(wrapper2.find("li").length).toBe(7);
+    });
+
+    it("renders four arrows", () => {
+        const wrapper = shallow(<Pagination length={8} currentActive={2} id={"test-pagination"}/>);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.find("Arrow").length).toBe(4);
+    });
+
+    it("renders with one ellipsis", () => {
+        const wrapper = shallow(<Pagination length={10} currentActive={2} id={"test-pagination"}/>);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.find("span").length).toBe(2);
+    });
+
+    it("renders with two ellipsis", () => {
+        const wrapper = shallow(<Pagination length={10} currentActive={5} id={"test-pagination"}/>);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.find("span").length).toBe(3);
     });
 });
+

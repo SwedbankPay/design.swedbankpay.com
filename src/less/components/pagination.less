@@ -3,163 +3,140 @@
     justify-content: center;
     padding-left: 0;
     margin: @base-margin 0;
+    font-family: @brand-headline;
 
-    li {
+    .mobile {
+        display: none;
+        margin: 0 1rem;
+
+        @media screen and (max-width: (@screen-sm-min - 1)) {
+            display: block;
+            align-self: center;
+            font-weight: @font-weight-bold;
+            font-size: 1rem;
+        }
+    }
+
+    button {
+        all: unset;
+        margin: 0.5rem;
+        max-height: 1.75rem;
         display: flex;
-        position: relative;
+        align-items: center;
+        align-self: center;
+        cursor: pointer;
 
-        a,
-        span {
-            display: flex;
-            align-items: center;
-            padding: 0 @base-margin-sm;
-            font-weight: bold;
-            color: @pagination-default-color;
-            cursor: pointer;
-            user-select: none;
-            text-decoration: none;
+        &.disabled {
+            pointer-events: none;
 
-            &:hover {
-                text-decoration: none;
-                color: @pagination-active-color;
-            }
-
-            &.text {
-                cursor: default;
-                color: @text-color;
-                font-weight: 300;
-            }
-        }
-
-        &:not(.arrow-start):not(.arrow-back):not(.arrow-forward):not(.arrow-end) {
-            a,
-            span {
-                padding: 0.25rem 0.75rem;
-            }
-        }
-
-        &.active {
-            a,
-            span {
-                cursor: default;
-                color: @pagination-active-color;
-            }
-        }
-
-        &.arrow-back {
-            a,
-            span {
-                &:after {
-                    content: "chevron_left";
-                    .material-icons-styling(@color: @brand-accent-links, @margin: 0, @font-size: 1.75rem);
+            i {
+                &:before {
+                    color: @light-brown;
                 }
             }
+        }
 
-            span {
-                cursor: default;
+        &:focus,
+        &:hover {
+            i {
+                border: 2px solid @brand-secondary;
+                border-radius: 0.125rem;
+            }
+        }
 
-                &:after {
-                    color: @pagination-default-color;
-                }
+        i {
+            border: 2px solid transparent;
+
+            &:before {
+                .material-icons-styling(@color: @brand-secondary, @margin: 0, @font-size: 1.75rem);
             }
         }
 
         &.arrow-start {
-            a,
-            span {
+            i {
+                display: unset;
+
                 &:before {
                     content: "first_page";
-                    .material-icons-styling(@color: @brand-accent-links, @margin: 0, @font-size: 1.75rem);
                 }
             }
+        }
 
-            span {
-                cursor: default;
-
-                &:before,
-                &:after {
-                    color: @pagination-default-color;
+        &.arrow-back {
+            i {
+                &:before {
+                    content: "chevron_left";
                 }
             }
         }
 
         &.arrow-forward {
-            a,
-            span {
-                &:after {
+            i {
+                &:before {
                     content: "chevron_right";
-                    .material-icons-styling(@color: @brand-accent-links, @margin: 0, @font-size: 1.75rem);
-                }
-            }
-
-            span {
-                cursor: default;
-
-                &:after {
-                    color: @pagination-default-color;
                 }
             }
         }
 
         &.arrow-end {
-            a,
-            span {
+            i {
+                display: unset;
+
                 &:before {
                     content: "last_page";
-                    .material-icons-styling(@color: @brand-accent-links, @margin: 0, @font-size: 1.75rem);
-                }
-            }
-
-            span {
-                cursor: default;
-
-                &:before,
-                &:after {
-                    color: @pagination-default-color;
                 }
             }
         }
     }
 
-    &.pagination-bullets {
-        li:not(.arrow-start):not(.arrow-back):not(.arrow-forward):not(.arrow-end) {
+    ul {
+        display: none;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        li {
+            display: flex;
+            margin: 0.5rem;
+            border-radius: 0.125rem;
+
             a,
             span {
-                //Hide the text, we just want to see bullets
-                color: rgba(0, 0, 0, 0);
-                position: relative;
-                padding: 0.25rem 0.75rem;
+                min-width: 1.75rem;
+                color: @brand-secondary;
+                border: 2px solid transparent;
+                text-align: center;
+                cursor: pointer;
+                text-decoration: none;
+                padding-top: 0.1rem;
+            }
 
+            span {
+                cursor: default;
+            }
 
-                &:after {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    right: 0;
-                    top: 0;
-                    bottom: 0;
-                    width: 1rem;
-                    height: 1rem;
-                    border-radius: 50%;
-                    background-color: @pagination-default-color;
-                    margin: auto;
+            a {
+                &:hover,
+                &:focus {
+                    border: 2px solid @brand-secondary;
+                    border-radius: 0.125rem;
                 }
 
-                &:hover {
-                    &:after {
-                        background-color: @pagination-arrow-color;
-                    }
+                &:focus {
+                    outline: none;
                 }
             }
 
             &.active {
-                a,
-                span {
-                    &:after {
-                        background-color: @pagination-arrow-color;
-                    }
+                background-color: @brand-secondary;
+
+                a {
+                    cursor: default;
+                    color: @white;
                 }
             }
+        }
+        @media screen and (min-width: @screen-sm-min) {
+            display: flex;
         }
     }
 }

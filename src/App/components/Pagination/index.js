@@ -1,58 +1,77 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
+import { paginate } from "@src/scripts/main";
 
-const Pagination = ({ type, items, text, arrows, farArrows }) => {
-    let activeItem = -1;
-    const itemLength = items ? items.length - 1 : -2;
+const Pagination = ({ length, currentActive, id }) => {
 
-    const paginationClasses = classnames(
-        "pagination",
-        type ? `pagination-${type}` : ""
-    );
+    const [current, setCurrent] = useState(currentActive);
 
-    const Arrow = ({ type }) => {
+    const Arrow = ({ type, mobile }) => {
         let disabled = false;
 
-        if (type === "start" || type === "back") {
-            disabled = activeItem === 0;
-        } else if (type === "forward" || type === "end") {
-            disabled = activeItem === itemLength;
-        }
+        if (type === "back" || type === "start") { disabled = current === 1; }
+
+        if (type === "forward" || type === "end") { disabled = current === length; }
+
+        const arrowClasses = classnames(
+            `arrow-${type}`,
+            mobile ? "d-block d-sm-none" : null,
+            disabled ? "disabled" : null
+        );
+
+        const navigate = () => {
+            if (type === "forward") { setCurrent(current + 1); }
+
+            if (type === "back") { setCurrent(current - 1); }
+
+            if (type === "end") { setCurrent(length); }
+
+            if (type === "start") { setCurrent(1); }
+        };
 
         return (
-            <li className={`arrow-${type}`} aria-label={type} >{"\n"}
-                {disabled ? <span></span> : <a href="#"></a>}{"\n"}
-            </li>
+            <button className={arrowClasses} onClick={() => navigate()}>{"\n"}
+                <i className="material-icons" aria-label={type}></i>{"\n"}
+            </button>
         );
     };
 
-    return (
-        <ul className={paginationClasses}>
-            {farArrows ? <Arrow type="start" /> : null}
-            {arrows ? <Arrow type="back" /> : null}
-            {items ? items.map(({ name, href, active }, i) => {
-                if (active) { activeItem = i; }
+    const goToPage = (e, page) => {
+        e.preventDefault();
+        setCurrent(current => current = page);
+    };
 
-                return (
-                    <li key={i} className={`${active ? "active" : ""}`}>{"\n"}
-                        <a href={href}>{name}</a>{"\n"}
-                    </li>
-                );
-            }) : null}
-            {text ? <li>{"\n"}<span className="text">{text}</span>{"\n"}</li> : null}
-            {arrows ? <Arrow type="forward" /> : null}
-            {farArrows ? <Arrow type="end" /> : null}
-        </ul>
+    return (
+        <>
+            <nav id={id} className="pagination" role="navigation" aria-label="Pagination Navigation">{"\n"}
+                <Arrow type="start" mobile/>{"\n"}
+                <Arrow type="back"/>
+                <ul>
+                    {paginate(length, current).map(({ page, current }, i) => (
+                        <li key={i} className={`${current ? "active" : ""}`}aria-label={`Go to page ${page}`}>{"\n"}
+                            {page
+                                ? <a href="#" onClick={e => goToPage(e, page)}>{page}</a>
+                                : <span>...</span>
+                            }
+                        </li>
+                    ))}
+                </ul>{"\n"}
+                <span className="mobile">Page {current} of {length}</span>{"\n"}
+                <Arrow type="forward" />{"\n"}
+                <Arrow type="end" mobile/>
+            </nav>
+        </>
+
     );
 };
 
 Pagination.propTypes = {
-    type: PropTypes.oneOf(["bullets", "simple"]),
-    items: PropTypes.array,
     text: PropTypes.string,
     arrows: PropTypes.bool,
-    farArrows: PropTypes.bool
+    mobileView: PropTypes.bool,
+    id: PropTypes.string.isRequired
 };
 
 export default Pagination;
+
