@@ -104,8 +104,8 @@ const DeveloperDocumentation = () => (
         <p>Use <CodeTags type="secondary" code="dg.accordion.init()"/> to <Link to="/get-started/for-developers">initialize</Link> all accordions. This will open and close the accordions automatically.</p>
 
         <p>If you want to manually open and close a specific accordion, you need to include an <CodeTags type="primary" code="id"/> on the <CodeTags type="primary" code="accordion-body"/> element.</p>
-        <p>To open a given accordion, use <CodeTags type="secondary" code="dg.accordion.open(<accordion-id>)"/></p>
-        <p>To close a given accordion, use <CodeTags type="secondary" code="dg.accordion.close(<accordion-id>)"/></p>
+        <p>To open a given accordion, use <CodeTags type="secondary" code="dg.accordion.open(<accordion-body-id>)"/></p>
+        <p>To close a given accordion, use <CodeTags type="secondary" code="dg.accordion.close(<accordion-body-id>)"/></p>
     </>
 );
 
