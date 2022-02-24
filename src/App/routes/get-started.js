@@ -14,14 +14,12 @@ module.exports = [
             {
                 title: "Introduction",
                 path: "/get-started/introduction",
-                componentPath: "get-started/Introduction",
-                statusBadges: ["updated"]
+                componentPath: "get-started/Introduction"
             },
             {
                 title: "For developers",
                 path: "/get-started/for-developers",
-                componentPath: "get-started/ForDevelopers",
-                statusBadges: ["updated"]
+                componentPath: "get-started/ForDevelopers"
             },
             {
                 title: "For designers",

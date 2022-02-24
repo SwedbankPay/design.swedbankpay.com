@@ -28,6 +28,7 @@ exports[`Component: Alert renders an alert with a close-button 1`] = `
   
 
   <a
+    aria-label="Close alert"
     data-alert-close=""
     href="#"
     onClick={[Function]}
@@ -35,7 +36,6 @@ exports[`Component: Alert renders an alert with a close-button 1`] = `
     
 		
     <i
-      aria-hidden="true"
       className="material-icons"
     >
       close
@@ -156,6 +156,7 @@ exports[`Component: Alert the close-button prevents default 1`] = `
   
 
   <a
+    aria-label="Close alert"
     data-alert-close=""
     href="#"
     onClick={[Function]}
@@ -163,7 +164,6 @@ exports[`Component: Alert the close-button prevents default 1`] = `
     
 		
     <i
-      aria-hidden="true"
       className="material-icons"
     >
       close

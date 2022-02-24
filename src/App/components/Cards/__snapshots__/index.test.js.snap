@@ -24,6 +24,7 @@ exports[`Component: Cards - renders a child object 1`] = `
       
 
       <i
+        aria-hidden="true"
         className="material-icons"
       >
         arrow_forward
@@ -63,6 +64,7 @@ exports[`Component: Cards - renders a text in card-body 1`] = `
       
 
       <i
+        aria-hidden="true"
         className="material-icons"
       >
         arrow_forward
@@ -104,6 +106,7 @@ exports[`Component: Cards - renders a title 1`] = `
       
 
       <i
+        aria-hidden="true"
         className="material-icons"
       >
         arrow_forward
@@ -136,6 +139,7 @@ exports[`Component: Cards - renders a wide card when wide is true 1`] = `
     
 
     <i
+      aria-hidden="true"
       className="material-icons"
     >
       arrow_forward
@@ -180,6 +184,7 @@ exports[`Component: Cards - renders an icon when icon is provided 1`] = `
       
 
       <i
+        aria-hidden="true"
         className="material-icons"
       >
         arrow_forward
@@ -219,6 +224,7 @@ exports[`Component: Cards - renders an image 1`] = `
       
 
       <i
+        aria-hidden="true"
         className="material-icons"
       >
         arrow_forward
@@ -255,6 +261,7 @@ exports[`Component: Cards - renders with correct type 1`] = `
       
 
       <i
+        aria-hidden="true"
         className="material-icons"
       >
         arrow_forward
@@ -291,6 +298,7 @@ exports[`Component: Cards - throws an error if type does not match proptypes 1`]
       
 
       <i
+        aria-hidden="true"
         className="material-icons"
       >
         arrow_forward

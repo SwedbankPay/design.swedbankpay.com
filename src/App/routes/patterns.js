@@ -19,8 +19,7 @@ module.exports = [
                 path: "/patterns/forms",
                 componentPath: "content/Forms",
                 icon: "format_align_justify",
-                outlined: true,
-                statusBadges: ["new"]
+                outlined: true
             },
             {
                 title: "Login",
@@ -29,14 +28,7 @@ module.exports = [
                 icon: "account_circle",
                 outlined: true,
                 statusBadges: ["new"]
-            },
-            {
-                title: "Filters",
-                path: "/patterns/filters",
-                componentPath: "content/Filters",
-                icon: "filter_alt",
-                outlined: true,
-                statusBadges: ["new"]
+                outlined: true
             }
         ]
     }

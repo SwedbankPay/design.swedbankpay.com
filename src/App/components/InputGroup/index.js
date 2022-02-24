@@ -10,12 +10,6 @@ export const Addon = ({ type, value, color, disabled, postfix }) => (
         : <span className={`input-group-addon ${postfix ? "postfix" : ""}`}>{(type === "icon") ? <i className="material-icons material-icons-outlined" aria-hidden="true">{value}</i> : value}</span>
 );
 
-const Feedback = ({ icon }) => (
-    <span className="form-control-feedback">{"\n\t\t"}
-        <i className="material-icons" aria-hidden="true">{icon}</i>{"\n\t"}
-    </span>
-);
-
 const InputGroup = ({
     id,
     type,
@@ -71,14 +65,15 @@ const InputGroup = ({
         defaultValue: "",
         disabled: disabled || null,
         readOnly: readOnly || null,
-        required: required || null
+        required: required || null,
+        id: id || null
     };
 
     const formGroupClasses = classnames(
         "form-group",
         disabled ? "disabled" : null,
         boxSize ? boxSize : null,
-        type === "select" ? errorMessage ? "has-error" : null : null,
+        errorMessage ? "has-error" : null,
         className ? className : null
     );
 
@@ -95,7 +90,7 @@ const InputGroup = ({
                     {type === "textarea" ?
                         <textarea {...attrs}></textarea>
                         : type === "select" ?
-                            <select className="form-control" disabled={disabled} readOnly={readOnly}>{"\n\t\t"}
+                            <select className="form-control" id={id} disabled={disabled} readOnly={readOnly}>{"\n\t\t"}
                                 {selectOptions.map((opt, i) => (
                                     <Fragment key={opt + i}>
                                         <option>{opt}</option>{(i !== selectOptions.length - 1) ? "\n\t\t" : ""}
@@ -124,7 +119,7 @@ const InputGroup = ({
                             <input {...attrs} />}
                 </>
             }
-            {helpBlock ? <div className="help-block" data-success={successMessage || null} data-error={errorMessage || null}>{helpBlock}</div> : null}
+            {helpBlock ? <div className="help-block" data-success={successMessage || null} >{errorMessage}</div> : null}
         </div>
     );
 };

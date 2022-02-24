@@ -274,6 +274,7 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
               Array [
                 Object {
                   "icon": <i
+                    aria-hidden="true"
                     className="material-icons-outlined"
                   >
                     home
@@ -284,6 +285,7 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
                   "children": Array [
                     Object {
                       "icon": <i
+                        aria-hidden="true"
                         className="material-icons-outlined rotated"
                       >
                         accessibility
@@ -303,6 +305,7 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
                         },
                       ],
                       "icon": <i
+                        aria-hidden="true"
                         className="material-icons-outlined rotated"
                       >
                         palette
@@ -311,6 +314,7 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
                     },
                     Object {
                       "icon": <i
+                        aria-hidden="true"
                         className="material-icons-outlined rotated"
                       >
                         grid_on
@@ -319,6 +323,7 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
                     },
                     Object {
                       "icon": <i
+                        aria-hidden="true"
                         className="material-icons-outlined rotated"
                       >
                         space_bar
@@ -327,6 +332,7 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
                     },
                   ],
                   "icon": <i
+                    aria-hidden="true"
                     className="material-icons-outlined rotated"
                   >
                     wb_incandescent
@@ -358,6 +364,7 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
                     },
                   ],
                   "icon": <i
+                    aria-hidden="true"
                     className="material-icons-outlined"
                   >
                     palette

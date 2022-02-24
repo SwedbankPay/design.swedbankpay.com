@@ -256,8 +256,9 @@ exports[`Component: Checkbox - renders checkbox group with error 1`] = `
       </div>
       <div
         className="help-block"
-        data-error="error"
-      />
+      >
+        error
+      </div>
     </fieldset>
   </form>
 </Fragment>

@@ -162,7 +162,7 @@ describe("Component: Topbar -", () => {
             it("renders a topbar with anchor with class .topbar-logo-png", () => {
                 const wrapper = shallow(<Topbar png />);
 
-                expect(wrapper.html()).toContain("<a class=\"topbar-logo topbar-logo-png\" href=\"/\">");
+                expect(wrapper.html()).toContain("<a class=\"topbar-logo topbar-logo-png\" href=\"/\" aria-label=\"To homepage\">");
             });
         });
 

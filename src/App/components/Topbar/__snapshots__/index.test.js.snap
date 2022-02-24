@@ -9,6 +9,7 @@ exports[`Component: Topbar - logo prevents default when clicked 1`] = `
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
@@ -41,6 +42,7 @@ exports[`Component: Topbar - props logout prevents default when clicked 1`] = `
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
@@ -67,7 +69,6 @@ exports[`Component: Topbar - props logout prevents default when clicked 1`] = `
         
 
         <i
-          aria-hidden="true"
           className="material-icons"
         >
           exit_to_app
@@ -98,6 +99,7 @@ exports[`Component: Topbar - props logout renders logout link and adds topbar-li
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
@@ -124,7 +126,6 @@ exports[`Component: Topbar - props logout renders logout link and adds topbar-li
         
 
         <i
-          aria-hidden="true"
           className="material-icons"
         >
           exit_to_app
@@ -172,13 +173,13 @@ exports[`Component: Topbar - props topbarContent menu links prevents default whe
 
     <TopbarBtn>
       <button
+        aria-label="Open menu"
         className="topbar-btn"
         type="button"
       >
         
 		
         <i
-          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           menu
@@ -187,13 +188,13 @@ exports[`Component: Topbar - props topbarContent menu links prevents default whe
 		
       </button>
       <button
+        aria-label="Close menu"
         className="topbar-close"
         type="button"
       >
         
 
         <i
-          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           close
@@ -208,6 +209,7 @@ exports[`Component: Topbar - props topbarContent menu links prevents default whe
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
@@ -264,7 +266,6 @@ exports[`Component: Topbar - props topbarContent menu links prevents default whe
             
 
             <i
-              aria-hidden="true"
               className="material-icons"
             >
               home
@@ -287,7 +288,6 @@ exports[`Component: Topbar - props topbarContent menu links prevents default whe
             
 
             <i
-              aria-hidden="true"
               className="material-icons"
             >
               shopping_cart
@@ -310,7 +310,6 @@ exports[`Component: Topbar - props topbarContent menu links prevents default whe
             
 
             <i
-              aria-hidden="true"
               className="material-icons"
             >
               settings
@@ -361,13 +360,13 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
 
     <TopbarBtn>
       <button
+        aria-label="Open menu"
         className="topbar-btn"
         type="button"
       >
         
 		
         <i
-          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           menu
@@ -376,13 +375,13 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
 		
       </button>
       <button
+        aria-label="Close menu"
         className="topbar-close"
         type="button"
       >
         
 
         <i
-          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           close
@@ -397,6 +396,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
@@ -454,7 +454,6 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
             
 
             <i
-              aria-hidden="true"
               className="material-icons"
             >
               home
@@ -473,6 +472,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
               Array [
                 Object {
                   "icon": <i
+                    aria-hidden="true"
                     className="material-icons-outlined"
                   >
                     home
@@ -483,6 +483,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                   "children": Array [
                     Object {
                       "icon": <i
+                        aria-hidden="true"
                         className="material-icons-outlined rotated"
                       >
                         accessibility
@@ -502,6 +503,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                         },
                       ],
                       "icon": <i
+                        aria-hidden="true"
                         className="material-icons-outlined rotated"
                       >
                         palette
@@ -510,6 +512,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                     },
                     Object {
                       "icon": <i
+                        aria-hidden="true"
                         className="material-icons-outlined rotated"
                       >
                         grid_on
@@ -518,6 +521,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                     },
                     Object {
                       "icon": <i
+                        aria-hidden="true"
                         className="material-icons-outlined rotated"
                       >
                         space_bar
@@ -526,6 +530,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                     },
                   ],
                   "icon": <i
+                    aria-hidden="true"
                     className="material-icons-outlined rotated"
                   >
                     wb_incandescent
@@ -557,6 +562,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                     },
                   ],
                   "icon": <i
+                    aria-hidden="true"
                     className="material-icons-outlined"
                   >
                     palette
@@ -578,6 +584,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                   className="sidebar-logo"
                 >
                   <a
+                    aria-label="To homepage"
                     href="/"
                   >
                     <Logotype
@@ -606,6 +613,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                       onClick={[Function]}
                     >
                       <i
+                        aria-hidden="true"
                         className="material-icons-outlined"
                       >
                         home
@@ -622,6 +630,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                       onClick={[Function]}
                     >
                       <i
+                        aria-hidden="true"
                         className="material-icons-outlined rotated"
                       >
                         wb_incandescent
@@ -648,6 +657,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                             onClick={[Function]}
                           >
                             <i
+                              aria-hidden="true"
                               className="material-icons-outlined rotated"
                             >
                               accessibility
@@ -664,6 +674,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                             onClick={[Function]}
                           >
                             <i
+                              aria-hidden="true"
                               className="material-icons-outlined rotated"
                             >
                               palette
@@ -717,6 +728,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                             onClick={[Function]}
                           >
                             <i
+                              aria-hidden="true"
                               className="material-icons-outlined rotated"
                             >
                               grid_on
@@ -733,6 +745,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                             onClick={[Function]}
                           >
                             <i
+                              aria-hidden="true"
                               className="material-icons-outlined rotated"
                             >
                               space_bar
@@ -752,6 +765,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                       onClick={[Function]}
                     >
                       <i
+                        aria-hidden="true"
                         className="material-icons-outlined"
                       >
                         palette
@@ -856,7 +870,6 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
             
 
             <i
-              aria-hidden="true"
               className="material-icons"
             >
               shopping_cart
@@ -879,7 +892,6 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
             
 
             <i
-              aria-hidden="true"
               className="material-icons"
             >
               settings
@@ -926,13 +938,13 @@ exports[`Component: Topbar - props topbarContent renders a topbar menu without m
 
     <TopbarBtn>
       <button
+        aria-label="Open menu"
         className="topbar-btn"
         type="button"
       >
         
 		
         <i
-          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           menu
@@ -941,13 +953,13 @@ exports[`Component: Topbar - props topbarContent renders a topbar menu without m
 		
       </button>
       <button
+        aria-label="Close menu"
         className="topbar-close"
         type="button"
       >
         
 
         <i
-          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           close
@@ -962,6 +974,7 @@ exports[`Component: Topbar - props topbarContent renders a topbar menu without m
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
@@ -1093,13 +1106,13 @@ exports[`Component: Topbar - props topbarContent renders a topbar-menu-button wh
 
     <TopbarBtn>
       <button
+        aria-label="Open menu"
         className="topbar-btn"
         type="button"
       >
         
 		
         <i
-          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           menu
@@ -1108,13 +1121,13 @@ exports[`Component: Topbar - props topbarContent renders a topbar-menu-button wh
 		
       </button>
       <button
+        aria-label="Close menu"
         className="topbar-close"
         type="button"
       >
         
 
         <i
-          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           close
@@ -1129,6 +1142,7 @@ exports[`Component: Topbar - props topbarContent renders a topbar-menu-button wh
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
@@ -1185,7 +1199,6 @@ exports[`Component: Topbar - props topbarContent renders a topbar-menu-button wh
             
 
             <i
-              aria-hidden="true"
               className="material-icons"
             >
               home
@@ -1208,7 +1221,6 @@ exports[`Component: Topbar - props topbarContent renders a topbar-menu-button wh
             
 
             <i
-              aria-hidden="true"
               className="material-icons"
             >
               shopping_cart
@@ -1231,7 +1243,6 @@ exports[`Component: Topbar - props topbarContent renders a topbar-menu-button wh
             
 
             <i
-              aria-hidden="true"
               className="material-icons"
             >
               settings
@@ -1282,13 +1293,13 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 
     <TopbarBtn>
       <button
+        aria-label="Open menu"
         className="topbar-btn"
         type="button"
       >
         
 		
         <i
-          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           menu
@@ -1297,13 +1308,13 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 		
       </button>
       <button
+        aria-label="Close menu"
         className="topbar-close"
         type="button"
       >
         
 
         <i
-          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           close
@@ -1318,6 +1329,7 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
@@ -1374,7 +1386,6 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
             
 
             <i
-              aria-hidden="true"
               className="material-icons"
             >
               home
@@ -1397,7 +1408,6 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
             
 
             <i
-              aria-hidden="true"
               className="material-icons"
             >
               shopping_cart
@@ -1420,7 +1430,6 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
             
 
             <i
-              aria-hidden="true"
               className="material-icons"
             >
               settings
@@ -1444,7 +1453,6 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
               
 
               <i
-                aria-hidden="true"
                 className="material-icons"
               >
                 exit_to_app
@@ -1495,13 +1503,13 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 
     <TopbarBtn>
       <button
+        aria-label="Open menu"
         className="topbar-btn"
         type="button"
       >
         
 		
         <i
-          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           menu
@@ -1510,13 +1518,13 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 		
       </button>
       <button
+        aria-label="Close menu"
         className="topbar-close"
         type="button"
       >
         
 
         <i
-          aria-hidden="true"
           className="material-icons topbar-btn-icon"
         >
           close
@@ -1531,6 +1539,7 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}
@@ -1587,7 +1596,6 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
             
 
             <i
-              aria-hidden="true"
               className="material-icons"
             >
               home
@@ -1610,7 +1618,6 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
             
 
             <i
-              aria-hidden="true"
               className="material-icons"
             >
               shopping_cart
@@ -1633,7 +1640,6 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
             
 
             <i
-              aria-hidden="true"
               className="material-icons"
             >
               settings
@@ -1666,6 +1672,7 @@ exports[`Component: Topbar - props wide renders a topbar with the given breakpoi
 
     <TopbarLogo>
       <a
+        aria-label="To homepage"
         className="topbar-logo"
         href="/"
         onClick={[Function]}

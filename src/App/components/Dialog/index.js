@@ -1,16 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Icon } from "@docutils";
-
 const Dialog = ({ diaId, diaHeader, children }) => (
     <>
         <div className="dialog" id={diaId} role="dialog" aria-modal="true" aria-labelledby="aria-label-dia" aria-describedby="aria-describe-dia">
             <section>
                 <header className="dialog-header" id="aria-label-dia">
                     <h4>{diaHeader}</h4>{"\n"}
-                    <button type="button" className="dialog-close">{"\n"}
-                        <Icon type="close" />{"\n"}
+                    <button type="button" className="dialog-close" aria-label="Close dialog">{"\n"}
+                        <i className="material-icons">close</i>{"\n"}
                     </button>
                 </header>
                 <div className="dialog-body" id="aria-describe-dia">

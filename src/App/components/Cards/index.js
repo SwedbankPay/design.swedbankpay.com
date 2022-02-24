@@ -15,7 +15,7 @@ const Cards = ({ type, titleTxt, imgSrc, icon, text, children, wide }) => (
                         {text && <span>{text}</span>}{"\n"}
                         {children && children }
                     </div>{"\n"}
-                    <i className="material-icons">arrow_forward</i>{"\n"}
+                    <i className="material-icons" aria-hidden="true">arrow_forward</i>{"\n"}
                 </a>{"\n"}
             </div>
             :
@@ -29,7 +29,7 @@ const Cards = ({ type, titleTxt, imgSrc, icon, text, children, wide }) => (
                         {text && <span>{text}</span>}{"\n"}
                         {children && children }
                     </div>{"\n"}
-                    <i className="material-icons">arrow_forward</i>{"\n"}
+                    <i className="material-icons" aria-hidden="true">arrow_forward</i>{"\n"}
                 </a>{"\n"}
             </>
         }
