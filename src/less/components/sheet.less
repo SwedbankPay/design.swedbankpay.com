@@ -27,6 +27,8 @@
 
     > section {
         position: fixed;
+        display: flex;
+        flex-direction: column;
         right: -@sheet-width-xs;
         width: @sheet-width-xs;
         height: 100%;
@@ -73,7 +75,6 @@
 
         .sheet-content {
             padding-bottom: 3rem;
-            height: 100%;
 
             &.has-footer {
                 padding-bottom: 0;
@@ -83,11 +84,12 @@
         .sheet-footer {
             display: flex;
             flex-direction: row;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
             position: sticky;
             position: -webkit-sticky;
             bottom: 0;
+            margin-top: auto;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
             background-color: @white;
 
             button {
