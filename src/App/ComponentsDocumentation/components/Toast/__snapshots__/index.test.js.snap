@@ -30,11 +30,16 @@ exports[`Components: Toast Content guidelines renders 1`] = `
               Message
             </b>
           </div>
-          <i
-            className="material-icons"
+          <button
+            aria-label="Close button"
+            className="toast-close ml-auto"
           >
-            close
-          </i>
+            <i
+              className="material-icons"
+            >
+              close
+            </i>
+          </button>
         </div>
       </div>
     </div>
@@ -453,11 +458,16 @@ Show neutral toast
                 Short information message
               </b>
             </div>
-            <i
-              className="material-icons"
+            <button
+              aria-label="Close button"
+              className="toast-close ml-auto"
             >
-              close
-            </i>
+              <i
+                className="material-icons"
+              >
+                close
+              </i>
+            </button>
           </div>
         </div>
       </div>
@@ -495,11 +505,16 @@ Show neutral toast
                 Short information message
               </b>
             </div>
-            <i
-              className="material-icons"
+            <button
+              aria-label="Close button"
+              className="toast-close ml-auto"
             >
-              close
-            </i>
+              <i
+                className="material-icons"
+              >
+                close
+              </i>
+            </button>
           </div>
         </div>
       </div>

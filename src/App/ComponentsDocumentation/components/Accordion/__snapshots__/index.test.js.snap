@@ -96,14 +96,14 @@ exports[`Components: Accordion JavascriptMethods renders 1`] = `
   <p>
     To open a given accordion, use 
     <CodeTags
-      code="dg.accordion.open(<accordion-id>)"
+      code="dg.accordion.open(<accordion-body-id>)"
       type="secondary"
     />
   </p>
   <p>
     To close a given accordion, use 
     <CodeTags
-      code="dg.accordion.close(<accordion-id>)"
+      code="dg.accordion.close(<accordion-body-id>)"
       type="secondary"
     />
   </p>
@@ -173,21 +173,16 @@ exports[`Components: Accordion Overview renders 1`] = `
       className="col-lg-6"
     >
       <div
-        className="slab slab-plain slab-border-success"
-        style={
-          Object {
-            "height": "85%",
-          }
-        }
+        className="slab slab-plain slab-border-success pb-5"
       >
         <h3>
           Do
         </h3>
         <div
-          className="d-flex flex-column align-items-center pt-3"
+          className="mt-3"
         >
           <Accordion
-            className="w-100 show accordion-open"
+            className="show accordion-open"
             id="howToUseAccordions"
             items={
               Array [
@@ -227,20 +222,15 @@ exports[`Components: Accordion Overview renders 1`] = `
     >
       <div
         className="slab slab-plain slab-border-error"
-        style={
-          Object {
-            "height": "85%",
-          }
-        }
       >
         <h3>
           Don't
         </h3>
         <div
-          className="d-flex flex-column align-items-center pt-3"
+          className="mt-3"
         >
           <Accordion
-            className="w-100 show accordion-open"
+            className="show accordion-open"
             id="howNotToUseAccordions"
             items={
               Array [
@@ -294,16 +284,20 @@ exports[`Components: Accordion renders 1`] = `
 <DocContainer
   docToc={true}
 >
-  <p
-    className="lead"
+  <section
+    id="accordion-doc"
   >
-    Accordions are components that toggles between hiding and showing content
-  </p>
-  <Overview />
-  <ContentGuidelines />
-  <DeveloperDocumentation />
-  <NpmInformation
-    componentName="accordion"
-  />
+    <p
+      className="lead"
+    >
+      Accordions are components that toggles between hiding and showing content
+    </p>
+    <Overview />
+    <ContentGuidelines />
+    <DeveloperDocumentation />
+    <NpmInformation
+      componentName="accordion"
+    />
+  </section>
 </DocContainer>
 `;

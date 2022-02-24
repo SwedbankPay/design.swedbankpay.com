@@ -64,11 +64,9 @@ exports[`Component: Checkbox DeveloperDocumentation renders 1`] = `
   >
     Developer documentation
   </h2>
-  <span
-    className="h3 d-inline-block mt-3"
-  >
+  <h3>
     Disabled state
-  </span>
+  </h3>
   <p>
     Disable a checkbox by adding 
     <CodeTags
@@ -93,23 +91,21 @@ exports[`Component: Checkbox DeveloperDocumentation renders 1`] = `
       />
     </div>
   </ComponentPreview>
-  <span
-    className="h3 d-inline-block mt-3"
-  >
+  <h3>
     Error state
-  </span>
+  </h3>
   <p>
-    Insert the error message in the attribute 
+    To display the error state, add the 
     <CodeTags
-      code="data-error"
-      type="primary"
+      code=".has-error"
+      type="secondary"
     />
-     in the 
+     class to the parent element, then add the 
     <CodeTags
       code=".help-block"
       type="secondary"
     />
-     element. 
+     element as the last child with the error message. 
   </p>
   <ComponentPreview
     codeFigure={true}
