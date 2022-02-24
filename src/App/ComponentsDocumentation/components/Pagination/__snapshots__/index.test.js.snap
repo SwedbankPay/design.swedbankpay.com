@@ -273,7 +273,7 @@ exports[`Documentation: Pagination Overview renders 1`] = `
     Number of pages
   </h4>
   <p>
-    While the pagination component supports an infinite amount of pages, it is difficult to deliver a good user experience when the number of pages exceeds 10. In circumstances where it is difficult for a user to find what they are looking for within the first few search results, they may develop bad habits (such as finding what they are looking for on page 13, search result 5). To mitigate this, more advanced solutions than a single search field should be considered, such as categorization, labels, faceted search, etc.
+    While the pagination component supports infinite amount of pages, it is difficult for the user to find what they are looking for if the number of pages are high. To mitigate this ux problem, consider supplementing the pagination with a search as well as more advanced filter functionality.
   </p>
   <h4>
     Items per page
