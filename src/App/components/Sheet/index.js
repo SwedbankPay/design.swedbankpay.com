@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Button from "@components/Button";
 
 const Sheet = ({ id, requireAction, title, footer, children }) => (
-    <div className="sheet" id={id} data-require-action={requireAction ? true : null}>
+    <div className="sheet" id={id} data-require-action={requireAction ? true : null}>{"\n"}
         <section>{"\n"}
             <div className="sheet-header">
                 <h2 className="mb-0">{title}</h2>
@@ -17,8 +17,8 @@ const Sheet = ({ id, requireAction, title, footer, children }) => (
             </div>
             {footer &&
                 <div className="sheet-footer">{"\n"}
+                    <button className="btn ml-2 btn-primary" data-sheet-close={id} type="button">Primary</button>{"\n"}
                     <Button type="secondary" className="mr-2" label="Secondary" />{"\n"}
-                    <Button type="primary" className="ml-2" label="Primary" />{"\n"}
                 </div>
             }
         </section>
