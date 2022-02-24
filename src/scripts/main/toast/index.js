@@ -79,6 +79,7 @@ class Toast {
 
             if (iconType === "close") {
                 button.setAttribute("class", "toast-close");
+                button.setAttribute("id", "toast-close-button");
                 button.setAttribute("aria-label", "Close button");
                 button.appendChild(icon);
             } else {
@@ -149,7 +150,13 @@ class Toast {
         // Append toast
         Toast._container.appendChild(toast);
 
+        if (this.options.dismissable) { this._focusMethod(); }
+
         return toast;
+    }
+
+    _focusMethod () {
+        document.getElementById("toast-close-button").focus();
     }
 
     _setTimer () {
