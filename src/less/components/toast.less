@@ -85,20 +85,31 @@
 
         .material-icons {
             user-select: none;
+            margin-right: (@base-margin-sm * 2);
+            margin-left: (-@base-margin-sm);
+        }
 
-            &:first-child {
-                margin-right: (@base-margin-sm * 2);
-                margin-left: (-@base-margin-sm);
-            }
+        .toast-close {
+            all: unset;
+            display: inline-flex;
+            height: 1.75rem;
 
-            &:last-child {
+            .material-icons {
                 cursor: pointer;
                 margin-left: auto;
                 margin-right: (-@base-margin-sm);
                 color: @medium-brown;
+                border: 2px solid transparent;
+                border-radius: 0.175rem;
 
                 &:hover {
                     color: @dark-brown;
+                }
+            }
+
+            &:focus {
+                .material-icons {
+                    border: 2px solid @brand-secondary;
                 }
             }
         }

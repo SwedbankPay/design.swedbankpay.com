@@ -1112,9 +1112,15 @@
             }
         }
 
-        .wrong {
+        .how-to-use {
             .form-group {
                 width: 100%;
+            }
+        }
+
+        @media screen and (max-width: @screen-xs-max) {
+            .slab-border-error {
+                margin-top: 1.5rem;
             }
         }
 
@@ -1312,10 +1318,17 @@
         }
     }
 
-    .accordion {
-        .accordion-body {
-            .example-accordion {
-                border: 2px dotted @light-brown;
+    #accordion-doc {
+        .slab-border-error,
+        .slab-border-success {
+            height: 27rem;
+        }
+
+        .accordion {
+            .accordion-body {
+                .example-accordion {
+                    border: 2px dotted @light-brown;
+                }
             }
         }
     }

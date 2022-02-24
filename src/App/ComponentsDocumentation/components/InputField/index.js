@@ -135,7 +135,7 @@ const DeveloperDocumentation = () => (
         </ComponentPreview>
 
         <h3>Error message</h3>
-        <p>Insert the error message in the attribute <CodeTags type="primary" code="data-error"/> in the <CodeTags type="primary" code=".help-block"/> element. </p>
+        <p>To display the error state, add the <CodeTags type="secondary" code={".has-error"} /> class to the parent element, then add the <CodeTags type="secondary" code={".help-block"} /> element as the last child with the error message.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <InputGroup type="text" label="Input label" defaultValue="Input text" validationState="error" errorMessage="Descriptive helpful error message." helpBlock id="developer-documentation-error-example"/>
         </ComponentPreview>

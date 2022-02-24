@@ -67,7 +67,6 @@ class Toast {
         const toastContent = document.createElement("div");
 
         toast.classList.add("toast");
-
         this.sheetOpen ? Toast._container.setAttribute("style", `margin-right: ${this.sheetComponent.querySelector("section").offsetWidth}px`) : null;
 
         if (this.options.classes.length) {
@@ -75,22 +74,27 @@ class Toast {
         }
 
         const _createIcon = (iconType, dismiss) => {
+            const button = document.createElement("button");
             const icon = document.createElement("i");
 
-            iconType === "close"
-                ? icon.setAttribute("aria-label", "Close button")
-                : icon.setAttribute("aria-hidden", "true");
+            if (iconType === "close") {
+                button.setAttribute("class", "toast-close");
+                button.setAttribute("aria-label", "Close button");
+                button.appendChild(icon);
+            } else {
+                icon.setAttribute("aria-hidden", "true");
+            }
 
             icon.classList.add("material-icons");
             icon.innerHTML = iconType;
 
             if (dismiss) {
-                icon.addEventListener("click", () => {
+                button.addEventListener("click", () => {
                     this.dismiss();
                 });
             }
 
-            return icon;
+            return iconType === "close" ? button : icon;
         };
 
         // Set toast type

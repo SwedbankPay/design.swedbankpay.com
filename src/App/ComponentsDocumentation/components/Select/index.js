@@ -11,15 +11,15 @@ const WhenToUse = () => (
         <p>{whenToUse.lead}</p>
         {whenToUse.content.map(({ correct, placeholder, selectOptions, label, text }, i) => (
             <React.Fragment key={i}>
-                <div className="row wrong mb-3">
-                    <div className="col-12 col-sm-6 mb-2">
-                        <div className="px-4 slab slab-plain slab-border-success h-100 d-flex flex-column mb-2">
+                <div className="row how-to-use mb-3">
+                    <div className="col-12 col-sm-6">
+                        <div className="slab slab-plain slab-border-success mb-2">
                             <span className="h4">Do</span>
                             {correct}
                         </div>
                     </div>
                     <div className="col-12 col-sm-6">
-                        <div className="px-4 slab slab-plain slab-border-error h-100 mb-2 d-flex flex-column">
+                        <div className="slab slab-plain slab-border-error mb-2">
                             <span className="h4">Don&#x27;t</span>
                             <div >
                                 <InputGroup type="select" id={`dont-example-${i}`} label={label} placeholder={placeholder} selectOptions={selectOptions} />
@@ -73,7 +73,7 @@ const DeveloperDocumentation = () => (
         <h2 id="developer-documentation">Developer documentation</h2>
         <span className="h4 mt-3">Error state</span>
 
-        <p>If the user don’t select any option in a select that is required to be filled, an error message should be displayed. Add the <CodeTags type="secondary" code=".has-error"/> class to the <CodeTags type="primary" code="form-group"/> element, and insert the error message in the attribute <CodeTags type="primary" code="data-error"/> in the <CodeTags type="primary" code="help-block"/> element. </p>
+        <p>If the user don’t select any option in a select that is required to be filled, an error message should be displayed. To display the error message, add the <CodeTags type="secondary" code={".has-error"} /> class to the parent element, then add the <CodeTags type="secondary" code={".help-block"} /> element as the last child with the error message.</p>
 
         <ComponentPreview language="html" codeFigure showCasePanel>
             <form className="no-pointer-events">
@@ -92,7 +92,7 @@ const DeveloperDocumentation = () => (
         <span className="h4">Disabled state</span>
         <p>Disable a select by adding the <CodeTags type="primary" code="disabled"/> attribute to the desired select and the <CodeTags type="primary" code="form-group"/> where the select resides.</p>
         <ComponentPreview language="html" codeFigure showCasePanel>
-            <InputGroup type="select" label="Label" placeholder="Select option" selectOptions={[]} disabled />
+            <InputGroup type="select" id="disabled-state-example" label="Label" placeholder="Select option" selectOptions={[]} disabled />
         </ComponentPreview>
     </section>
 );

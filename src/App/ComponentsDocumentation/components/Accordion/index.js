@@ -51,20 +51,20 @@ const Overview = () => (
         <h3>How to use Accordions</h3>
         <div className="row">
             <div className="col-lg-6">
-                <div className="slab slab-plain slab-border-success" style={{ height: "85%" }}>
+                <div className="slab slab-plain slab-border-success pb-5">
                     <h3>Do</h3>
-                    <div className="d-flex flex-column align-items-center pt-3">
-                        <AccordionComponent id="howToUseAccordions" className="w-100 show accordion-open" items={howToUseItems}/>
+                    <div className="mt-3">
+                        <AccordionComponent id="howToUseAccordions" className="show accordion-open" items={howToUseItems}/>
                     </div>
                 </div>
                 <p>Body content inside the Accordion may be split into paragraphs and include sub-headers if needed.</p>
             </div>
 
             <div className="col-lg-6">
-                <div className="slab slab-plain slab-border-error" style={{ height: "85%" }}>
+                <div className="slab slab-plain slab-border-error">
                     <h3>Don&apos;t</h3>
-                    <div className="d-flex flex-column align-items-center pt-3">
-                        <AccordionComponent id="howNotToUseAccordions" className="w-100 show accordion-open" items={howNotToUseItems}/>
+                    <div className="mt-3">
+                        <AccordionComponent id="howNotToUseAccordions" className="show accordion-open" items={howNotToUseItems}/>
                     </div>
                 </div>
                 <p>Do not put an Accordion inside of another Accordion.</p>
@@ -104,8 +104,8 @@ const DeveloperDocumentation = () => (
         <p>Use <CodeTags type="secondary" code="dg.accordion.init()"/> to <Link to="/get-started/for-developers">initialize</Link> all accordions. This will open and close the accordions automatically.</p>
 
         <p>If you want to manually open and close a specific accordion, you need to include an <CodeTags type="primary" code="id"/> on the <CodeTags type="primary" code="accordion-body"/> element.</p>
-        <p>To open a given accordion, use <CodeTags type="secondary" code="dg.accordion.open(<accordion-id>)"/></p>
-        <p>To close a given accordion, use <CodeTags type="secondary" code="dg.accordion.close(<accordion-id>)"/></p>
+        <p>To open a given accordion, use <CodeTags type="secondary" code="dg.accordion.open(<accordion-body-id>)"/></p>
+        <p>To close a given accordion, use <CodeTags type="secondary" code="dg.accordion.close(<accordion-body-id>)"/></p>
     </>
 );
 
@@ -116,13 +116,15 @@ const Accordion = () => {
 
     return (
         <DocContainer docToc>
-            <p className="lead">
+            <section id="accordion-doc">
+                <p className="lead">
                 Accordions are components that toggles between hiding and showing content
-            </p>
-            <Overview />
-            <ContentGuidelines/>
-            <DeveloperDocumentation />
-            <NpmInformation componentName={"accordion"}/>
+                </p>
+                <Overview />
+                <ContentGuidelines/>
+                <DeveloperDocumentation />
+                <NpmInformation componentName={"accordion"}/>
+            </section>
         </DocContainer>
     );
 };
