@@ -83,7 +83,7 @@ export const whenToUse = {
             text: <p>In the example above, when there are very few choices, they should not be hidden inside a select list as this makes it harder for user to get an overview. Use <Link to="/components/radio-button">radio buttons</Link> instead.</p>
         },
         {
-            correct: <Datepicker id="datepicker-example" label="Birthday" prefixType="icon" prefixValue="event" placeholder="DD/MM/YYY" />,
+            correct: <Datepicker id="datepicker-example" label="Birthday" prefixType="icon" prefixValue="event" placeholder="YYYY-MM-DD" />,
             selectOptions: [...Array(32).keys()].slice(1),
             placeholder: "Select day",
             label: "Day",

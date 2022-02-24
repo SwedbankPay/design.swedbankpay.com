@@ -27,9 +27,8 @@ exports[`Component: Alert renders an alert with a close-button 1`] = `
   />
   
 
-  <a
+  <button
     data-alert-close=""
-    href="#"
     onClick={[Function]}
   >
     
@@ -41,7 +40,7 @@ exports[`Component: Alert renders an alert with a close-button 1`] = `
     </i>
     
 	
-  </a>
+  </button>
   
 
 </div>
@@ -154,9 +153,8 @@ exports[`Component: Alert the close-button prevents default 1`] = `
   />
   
 
-  <a
+  <button
     data-alert-close=""
-    href="#"
     onClick={[Function]}
   >
     
@@ -168,7 +166,7 @@ exports[`Component: Alert the close-button prevents default 1`] = `
     </i>
     
 	
-  </a>
+  </button>
   
 
 </div>

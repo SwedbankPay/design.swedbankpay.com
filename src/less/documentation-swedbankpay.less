@@ -1100,7 +1100,7 @@
         &.help-icon {
             width: 1.25rem;
             height: 1.25rem;
-            color: @soft-brown;
+            color: @brand-secondary;
         }
     }
 
@@ -1237,7 +1237,15 @@
 
         .showcase-panel {
             .component-preview-content {
-                max-width: 30.75rem;
+                max-width: 29.5rem;
+
+                @media screen and (max-width: @screen-xs-max) {
+                    max-width: 24.5rem;
+                }
+
+                .tabs-example-container {
+                    width: 80%;
+                }
             }
         }
     }

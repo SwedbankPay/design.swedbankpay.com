@@ -38,6 +38,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
       </div>
       <InputGroup
         className="mb-0"
+        id="guideline-select-example"
         label="Input label"
         optional={true}
         placeholder="Select an option"
@@ -685,10 +686,12 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
             Do
           </span>
           <InputGroup
+            id="required-optional-do-email-example"
             label="E-mail"
             type="text"
           />
           <InputGroup
+            id="required-optional-do-phone-example"
             label="Telephone number"
             optional={true}
             type="text"
@@ -707,10 +710,12 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
             Don't
           </span>
           <InputGroup
+            id="required-optional-dont-email-example"
             label="E-mail*"
             type="text"
           />
           <InputGroup
+            id="required-optional-dont-phone-example"
             label="Telephone number"
             type="tel"
           />
@@ -760,6 +765,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
           >
             <InputGroup
               className="ml-4 mb-4"
+              id="logical-flow-do-email-example"
               label="E-mail address"
               type="text"
             />
@@ -804,6 +810,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
           >
             <InputGroup
               className="ml-4 mb-4"
+              id="logical-flow-dont-email-example"
               label="E-mail address"
               type="text"
             />
@@ -819,6 +826,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
           >
             <InputGroup
               className="ml-4"
+              id="logical-flow-dont-phone-example"
               label="Phone number"
               type="text"
             />
@@ -945,6 +953,7 @@ exports[`Forms: index Overview renders 1`] = `
                       type="email"
                     />
                     <InputGroup
+                      id="form-select-example"
                       label="Subject"
                       optional={true}
                       placeholder="Select a subject"
