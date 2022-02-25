@@ -90,7 +90,7 @@ exports[`Documentation: Sheet DeveloperDocumentation renders 1`] = `
 `;
 
 exports[`Documentation: Sheet SheetExample renders 1`] = `
-<Fragment>
+<section>
   <h2
     id="example"
   >
@@ -110,7 +110,7 @@ exports[`Documentation: Sheet SheetExample renders 1`] = `
             "component": <SheetButton
               id="sheet-showcase"
             />,
-            "description": "The Sheets component appears when triggered by a user action, such as tapping a button. At large screen sizes, the sheet component enters the page from the right side of the screen and at small screen sizes, the sheet component enters the page from the bottom of the screen. It has a header with a title and close button and a main content area that can contain a number of different components. An optional feature that can useful is a sticky footer with actions.",
+            "description": "The Sheets component appears when triggered by a user action, such as tapping a button. At large screen sizes, the sheet component enters the page from the right side of the screen and at small screen sizes, the sheet component enters the page from the bottom of the screen. It has a header with a title and close button and a main content area that can contain a number of different components. An optional feature that can be useful is a sticky footer with actions.",
             "options": Object {
               "checkbox": Array [
                 Object {
@@ -230,7 +230,7 @@ exports[`Documentation: Sheet SheetExample renders 1`] = `
       </p>
     </div>
   </div>
-</Fragment>
+</section>
 `;
 
 exports[`Documentation: Sheet renders 1`] = `
