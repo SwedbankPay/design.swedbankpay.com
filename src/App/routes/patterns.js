@@ -28,7 +28,6 @@ module.exports = [
                 icon: "account_circle",
                 outlined: true,
                 statusBadges: ["new"]
-                outlined: true
             }
         ]
     }

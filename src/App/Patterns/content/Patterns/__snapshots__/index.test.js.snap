@@ -54,31 +54,6 @@ exports[`Patterns Overview renders 1`] = `
       arrow_forward
     </i>
   </Link>
-  <Link
-    className="cards cards-primary cards-wide"
-    key="Filters"
-    to="/patterns/filters"
-  >
-    <div
-      className="cards-content flex-row align-items-center m-0 "
-    >
-      <i
-        className="material-icons material-icons-outlined mr-3"
-      >
-        filter_alt
-      </i>
-      <span
-        className="h3 m-0"
-      >
-        Filters
-      </span>
-    </div>
-    <i
-      className="material-icons material-icons-outlined"
-    >
-      arrow_forward
-    </i>
-  </Link>
 </section>
 `;
 
