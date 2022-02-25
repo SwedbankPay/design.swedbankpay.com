@@ -305,17 +305,17 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
     Error message
   </h3>
   <p>
-    Insert the error message in the attribute 
+    To display the error state, add the 
     <CodeTags
-      code="data-error"
-      type="primary"
+      code=".has-error"
+      type="secondary"
     />
-     in the 
+     class to the parent element, then add the 
     <CodeTags
       code=".help-block"
-      type="primary"
+      type="secondary"
     />
-     element. 
+     element as the last child with the error message.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -414,7 +414,7 @@ exports[`Component: InputField Overview renders 1`] = `
                 The default input type is text but it can also be specified as for example Email which will make it automatically validated when submitted or Password which will mask the characters submitted.
               </p>
               <p>
-                Input fields can have prefixes or postfixes which can help the user more quickly understand what kind of information that ius requested. These can be icons as well as text symbols or currency abbreviations like %, $ or kr.
+                Input fields can have prefixes or postfixes which can help the user more quickly understand what kind of information that is requested. These can be icons as well as text symbols or currency abbreviations like %, $ or kr.
               </p>
             </React.Fragment>,
             "options": Object {
@@ -456,14 +456,6 @@ exports[`Component: InputField Overview renders 1`] = `
                         "prefixType": "icon",
                         "prefixValue": "email",
                         "type": "email",
-                      },
-                    },
-                    Object {
-                      "name": "Prefix - Text",
-                      "value": Object {
-                        "feedbackIcon": "kr",
-                        "prefixType": "text",
-                        "prefixValue": "€",
                       },
                     },
                     Object {

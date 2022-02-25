@@ -82,7 +82,7 @@ const DeveloperDocumentation = () => (
             <p>Use client-side validation to validate as much data as possible inline before the user submits the form. Common inline errors include empty required fields, invalid characters or incorrect input format. </p>
             <ComponentPreview language="html" codeFigure showCasePanel>
                 <div className="col-sm-6 col-12 m-auto px-0 pt-3">
-                    <InputGroup type="email" validationState="error" label="Email" helpBlock errorMessage="Email is required" />
+                    <InputGroup type="email" id="login-client-side" validationState="error" label="Email" helpBlock errorMessage="Email is required" />
                 </div>
             </ComponentPreview>
         </section>

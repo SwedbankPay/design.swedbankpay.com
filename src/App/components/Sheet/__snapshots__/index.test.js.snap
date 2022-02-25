@@ -5,6 +5,8 @@ exports[`Component: Sheet - does not render with data-require-action if it is se
   className="sheet"
   data-require-action={null}
 >
+  
+
   <section>
     
 
@@ -44,6 +46,8 @@ exports[`Component: Sheet - renders 1`] = `
   className="sheet"
   data-require-action={null}
 >
+  
+
   <section>
     
 
@@ -83,6 +87,8 @@ exports[`Component: Sheet - renders with a close icon 1`] = `
   className="sheet"
   data-require-action={null}
 >
+  
+
   <section>
     
 
@@ -123,6 +129,8 @@ exports[`Component: Sheet - renders with an ID 1`] = `
   data-require-action={null}
   id="demo-sheet"
 >
+  
+
   <section>
     
 
@@ -162,6 +170,8 @@ exports[`Component: Sheet - renders with children 1`] = `
   className="sheet"
   data-require-action={null}
 >
+  
+
   <section>
     
 
@@ -203,6 +213,8 @@ exports[`Component: Sheet - renders with the data-require-action attribute 1`] =
   className="sheet"
   data-require-action={true}
 >
+  
+
   <section>
     
 

@@ -270,7 +270,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                     <div id={this.props.showCasePanelAdvanced.id} className={`showcase-panel showcase-panel-advanced${this.state.optionsOpen ? " options-active" : ""}${this.state.hideOptions ? " hide-options" : ""}`}>
                         <div id={this.props.showCasePanelAdvanced.tabsId} className="tabs tabs-scroll">
                             <ul id={`${this.props.showCasePanelAdvanced.tabsId}-ul`}>
-                                {this.props.showCasePanelAdvanced.elements.map((element, i) => <li key={i} className={`${this.state.activeTab.tab === element.tab ? "active" : null}${this.state.hideOptions ? " d-none " : ""}`}>
+                                {this.props.showCasePanelAdvanced.elements.map((element, i) => <li key={i} className={`${this.state.activeTab.tab === element.tab ? "active" : null}`}>
                                     <a href="#" onClick={e => this.setActiveTab(e, i)}>{element.tab}</a>
                                 </li>
                                 )}
@@ -307,7 +307,9 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                             {<div className={`options${this.state.optionsOpen ? " active" : ""}${this.state.hideOptions ? " d-none" : ""}`}>
                                 <div className="options-header">
                                     Options
-                                    <i className="material-icons options-close" onClick={() => this.setState({ optionsOpen: false })} aria-label="Close options menu">close</i>
+                                    <button className="options-close d-flex" aria-label="Close options menu">
+                                        <i className="material-icons" onClick={() => this.setState({ optionsOpen: false })}>close</i>
+                                    </button>
                                 </div>
                                 {this.state.activeTab.options && <form className="options-body">
 

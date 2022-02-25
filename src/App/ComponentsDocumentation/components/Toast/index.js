@@ -29,7 +29,9 @@ const Overview = () => (
                         <div className="toast toast-neutral col-sm-11 col-12">
                             <i className="material-icons" aria-hidden="true">info</i>
                             <div className="toast-content"><b>Short information message</b></div>
-                            <i className="material-icons" aria-label="Close toast">close</i>
+                            <button className="toast-close ml-auto" aria-label="Close button">
+                                <i className="material-icons">close</i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -43,7 +45,9 @@ const Overview = () => (
                         <div className="toast toast-neutral">
                             <i className="material-icons" aria-hidden="true">info</i>
                             <div className="toast-content"><b>Short information message</b></div>
-                            <i className="material-icons" aria-label="Close toast">close</i>
+                            <button className="toast-close ml-auto" aria-label="Close button">
+                                <i className="material-icons">close</i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -62,7 +66,9 @@ const ContentGuidelines = () => (
                     <div className="toast toast-neutral col-12">
                         <i className="material-icons" aria-hidden="true">info</i>
                         <div className="toast-content"><b>Message</b></div>
-                        <i className="material-icons" aria-label="Close toast">close</i>
+                        <button className="toast-close ml-auto" aria-label="Close button">
+                            <i className="material-icons">close</i>
+                        </button>
                     </div>
                 </div>
             </div>

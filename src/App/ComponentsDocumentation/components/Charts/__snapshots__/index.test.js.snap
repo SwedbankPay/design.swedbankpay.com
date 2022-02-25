@@ -746,7 +746,7 @@ exports[`Dashboard: Charts LineChart renders 1`] = `
       }
     />
     <table
-      className="table table-plain px-5"
+      className="table table-plain mt-4"
     >
       <thead>
         <tr>

@@ -71,7 +71,7 @@ const ContentGuidelines = () => (
 const DeveloperDocumentation = () => (
     <section>
         <h2 id="developer-documentation">Developer documentation</h2>
-        <span className="h3 d-inline-block mt-3">Disabled state</span>
+        <h3>Disabled state</h3>
         <p>Disable a checkbox by adding <CodeTags type="primary" code={"disabled"} /> attribute to the desired Checkbox.</p>
 
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
@@ -80,8 +80,8 @@ const DeveloperDocumentation = () => (
             </div>
         </ComponentPreview>
 
-        <span className="h3 d-inline-block mt-3">Error state</span>
-        <p>Insert the error message in the attribute <CodeTags type="primary" code={"data-error"} /> in the <CodeTags type="secondary" code={".help-block"} /> element. </p>
+        <h3>Error state</h3>
+        <p>To display the error state, add the <CodeTags type="secondary" code={".has-error"} /> class to the parent element, then add the <CodeTags type="secondary" code={".help-block"} /> element as the last child with the error message. </p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="m-auto pl-5 col-sm-12 error-state-container">
                 <CheckboxComponent groupTitle="Group heading" name="checkbox-group-example" options={developerDocOptions} group errorMessage="Descriptive helpful error message." />

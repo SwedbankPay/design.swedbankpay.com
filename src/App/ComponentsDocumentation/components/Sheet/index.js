@@ -12,7 +12,7 @@ import { sheetShowCase } from "./constants";
 const basename = process.env.basename;
 
 const SheetExample = () => (
-    <>
+    <section>
         <h2 id="example">Example</h2>
         <p>
         The sheets is used to provide users with actions and information contextual to the page. It can be used in different contexts, but common use cases are to display multiple actions that will affect the screen’s primary content such as filters or other ways to manipulate the main content.
@@ -56,7 +56,7 @@ const SheetExample = () => (
                 <p>A Sheet can be used as a container for filter functionality. This is especially helpful on small screens like mobile device where space is limited and can’t fit filter components inline with the content.</p>
             </div>
         </div>
-    </>
+    </section>
 );
 
 const ContentGuidelines = () => (

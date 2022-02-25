@@ -402,7 +402,7 @@
         }
 
         section {
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
 
             > h3 {
                 margin-top: 2rem;
@@ -811,7 +811,15 @@
                     height: 2.5rem;
 
                     .options-close {
+                        all: unset;
                         cursor: pointer;
+
+                        &:focus {
+                            border: none;
+                            border-radius: 0.125rem;
+                            box-shadow: 0 0 0 2px @black;
+                            outline: none;
+                        }
                     }
                 }
 
@@ -1100,7 +1108,7 @@
         &.help-icon {
             width: 1.25rem;
             height: 1.25rem;
-            color: @soft-brown;
+            color: @brand-secondary;
         }
     }
 
@@ -1112,9 +1120,15 @@
             }
         }
 
-        .wrong {
+        .how-to-use {
             .form-group {
                 width: 100%;
+            }
+        }
+
+        @media screen and (max-width: @screen-xs-max) {
+            .slab-border-error {
+                margin-top: 1.5rem;
             }
         }
 
@@ -1231,7 +1245,16 @@
 
         .showcase-panel {
             .component-preview-content {
-                max-width: 30.75rem;
+                max-width: 29.5rem;
+                padding: 0;
+
+                @media screen and (max-width: @screen-xs-max) {
+                    max-width: 22.5rem;
+                }
+
+                .tabs-example-container {
+                    width: 80%;
+                }
             }
         }
     }
@@ -1304,10 +1327,17 @@
         }
     }
 
-    .accordion {
-        .accordion-body {
-            .example-accordion {
-                border: 2px dotted @light-brown;
+    #accordion-doc {
+        .slab-border-error,
+        .slab-border-success {
+            height: 27rem;
+        }
+
+        .accordion {
+            .accordion-body {
+                .example-accordion {
+                    border: 2px dotted @light-brown;
+                }
             }
         }
     }
