@@ -493,6 +493,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "account_circle",
               "outlined": true,
               "path": "/patterns/login",
+              "statusBadges": Array [
+                "new",
+              ],
               "title": "Login",
             },
           ]

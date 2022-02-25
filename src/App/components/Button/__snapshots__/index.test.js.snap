@@ -30,21 +30,6 @@ exports[`Component: Button - Anchor tag: renders a button inside an anchor tag w
 />
 `;
 
-exports[`Component: Button - Anchor tag: renders a button inside an anchor tag with class pull-right when prop href and pullRight is provided 1`] = `
-<a
-  active={null}
-  aria-disabled={null}
-  aria-pressed={null}
-  className="btn btn-primary pull-right"
-  disabled={null}
-  href="test"
-  onClick={[Function]}
-  role="button"
-  tabIndex={null}
-  type={null}
-/>
-`;
-
 exports[`Component: Button - Anchor tag: renders a button inside an anchor tag with id when prop href and id is provided 1`] = `
 <a
   active={null}
@@ -256,18 +241,6 @@ exports[`Component: Button - Button tag: renders a button with class active when
 />
 `;
 
-exports[`Component: Button - Button tag: renders a button with class pull-right when prop pullRight is provided 1`] = `
-<button
-  active={null}
-  aria-disabled={null}
-  aria-pressed={null}
-  className="btn btn-primary pull-right"
-  role={null}
-  tabIndex={null}
-  type="button"
-/>
-`;
-
 exports[`Component: Button - Button tag: renders a button with icon and label when prop icon and label is provided 1`] = `
 <button
   active={null}
@@ -426,18 +399,6 @@ exports[`Component: Button - Input tag: renders a button with class active insid
   aria-disabled={null}
   aria-pressed={true}
   className="btn btn-primary"
-  role={null}
-  tabIndex={null}
-  type="button"
-/>
-`;
-
-exports[`Component: Button - Input tag: renders a button with class pull-right inside an input tag when prop input and pullRight is provided 1`] = `
-<input
-  active={null}
-  aria-disabled={null}
-  aria-pressed={null}
-  className="btn btn-primary pull-right"
   role={null}
   tabIndex={null}
   type="button"

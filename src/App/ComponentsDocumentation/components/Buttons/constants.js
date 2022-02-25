@@ -8,30 +8,31 @@ export const overviewButtons = {
     elements: [
         {
             tab: "Primary",
-            component: <ButtonComponent type="primary" label="Do something" />,
+            component: <ButtonComponent type="primary" label="Link button" />,
             options: {
-                checkbox: [
+                radio: [
                     {
-                        inputs: [
+                        id: "icon_radio",
+                        title: "Icon",
+                        values: [
                             {
-                                id: "icon_check",
-                                name: "Icon",
+                                name: "None"
+                            },
+                            {
+                                name: "Before",
                                 value: {
                                     icon: "cloud"
                                 }
                             },
                             {
-                                id: "loader_check",
-                                name: "Loader",
+                                name: "After",
                                 value: {
-                                    loader: true,
-                                    loading: true
+                                    icon: "keyboard_arrow_down",
+                                    iconAfter: true
                                 }
                             }
                         ]
-                    }
-                ],
-                radio: [
+                    },
                     {
                         id: "size_radio",
                         title: "Sizes",
@@ -55,6 +56,33 @@ export const overviewButtons = {
                                 }
                             }
                         ]
+                    },
+                    {
+                        id: "state_modifiers",
+                        title: "State modifiers",
+                        values: [
+                            {
+                                name: "Enabled",
+                                value: {
+                                    loader: false,
+                                    loading: false,
+                                    disabled: false
+                                }
+                            },
+                            {
+                                name: "Loading",
+                                value: {
+                                    loader: true,
+                                    loading: true
+                                }
+                            },
+                            {
+                                name: "Disabled",
+                                value: {
+                                    disabled: true
+                                }
+                            }
+                        ]
                     }
                 ]
             },
@@ -63,7 +91,7 @@ export const overviewButtons = {
         },
         {
             tab: "BankID",
-            component: <ButtonComponent type="primary" bankId="se" label="Do something" />,
+            component: <ButtonComponent type="primary" bankId="se" label="Link button" />,
             options: {
                 checkbox: [
                     {
@@ -114,30 +142,31 @@ export const overviewButtons = {
         },
         {
             tab: "Secondary",
-            component: <ButtonComponent type="secondary" label="Do something" />,
+            component: <ButtonComponent type="secondary" label="Link button" />,
             options: {
-                checkbox: [
+                radio: [
                     {
-                        inputs: [
+                        id: "icon_radio",
+                        title: "Icon",
+                        values: [
                             {
-                                id: "icon_check",
-                                name: "Icon",
+                                name: "None"
+                            },
+                            {
+                                name: "Before",
                                 value: {
                                     icon: "cloud"
                                 }
                             },
                             {
-                                id: "loader_check",
-                                name: "Loader",
+                                name: "After",
                                 value: {
-                                    loader: true,
-                                    loading: true
+                                    icon: "keyboard_arrow_down",
+                                    iconAfter: true
                                 }
                             }
                         ]
-                    }
-                ],
-                radio: [
+                    },
                     {
                         id: "size_radio",
                         title: "Sizes",
@@ -161,6 +190,33 @@ export const overviewButtons = {
                                 }
                             }
                         ]
+                    },
+                    {
+                        id: "state_modifiers",
+                        title: "State modifiers",
+                        values: [
+                            {
+                                name: "Enabled",
+                                value: {
+                                    loader: false,
+                                    loading: false,
+                                    disabled: false
+                                }
+                            },
+                            {
+                                name: "Loading",
+                                value: {
+                                    loader: true,
+                                    loading: true
+                                }
+                            },
+                            {
+                                name: "Disabled",
+                                value: {
+                                    disabled: true
+                                }
+                            }
+                        ]
                     }
                 ]
             },
@@ -173,62 +229,35 @@ export const overviewButtons = {
             </p>
         },
         {
-            tab: "Text/Link button",
-            component: <ButtonComponent type="link" label="Do something" />,
+            tab: "Link",
+            component: <ButtonComponent type="link" label="Link button" />,
             title: "Link button",
             options: {
-                checkbox: [
+                radio: [
                     {
-                        inputs: [
+                        id: "icon_radio",
+                        title: "Icon",
+                        values: [
                             {
-                                id: "icon_check",
-                                name: "Icon",
-                                value: {
-                                    icon: "cloud"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            description: "Only use in combination with a primary or secondary button – for stand alone links see Links. Use for less important or less commonly used actions since they’re less prominent. Text buttons are often embedded in contained components like cards and dialogs. Since text buttons don’t have a container, they don’t distract from nearby content."
-        }
-    ]
-};
-
-export const destructiveButtons = {
-    id: "destructiveButtons",
-    tabsId: "destructiveButtonsTabs",
-    elements: [
-        {
-            tab: "Guiding",
-            component: <ButtonComponent type="guiding-destructive" label="Do something" />,
-            options: {
-                checkbox: [
-                    {
-                        inputs: [
-
+                                name: "None"
+                            },
                             {
-                                id: "icon_check_destructive",
-                                name: "Icon",
+                                name: "Before",
                                 value: {
                                     icon: "cloud"
                                 }
                             },
                             {
-                                id: "loader_check_destructive",
-                                name: "Loader",
+                                name: "After",
                                 value: {
-                                    loader: true,
-                                    loading: true
+                                    icon: "keyboard_arrow_down",
+                                    iconAfter: true
                                 }
                             }
                         ]
-                    }
-                ],
-                radio: [
+                    },
                     {
-                        id: "size_radio_destructive",
+                        id: "size_radio",
                         title: "Sizes",
                         values: [
                             {
@@ -247,6 +276,116 @@ export const destructiveButtons = {
                                 name: "Extra small",
                                 value: {
                                     size: "xs"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        id: "state_modifiers",
+                        title: "State modifiers",
+                        values: [
+                            {
+                                name: "Enabled",
+                                value: {
+                                    loader: false,
+                                    loading: false,
+                                    disabled: false
+                                }
+                            },
+                            {
+                                name: "Disabled",
+                                value: {
+                                    disabled: true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            description: <p>
+                Only use in combination with a primary or secondary button – for stand alone links see <Link to="/components/links">Links</Link>. Use for less important or less commonly used actions since they’re less prominent. Text buttons are often embedded in contained components like dialogs.
+            </p>
+        }
+    ]
+};
+
+export const destructiveButtons = {
+    id: "destructiveButtons",
+    tabsId: "destructiveButtonsTabs",
+    elements: [
+        {
+            tab: "Guiding",
+            component: <ButtonComponent type="guiding-destructive" label="Guiding button" />,
+            options: {
+                radio: [
+                    {
+                        id: "destructive_icon_radio",
+                        title: "Icon",
+                        values: [
+                            {
+                                name: "None"
+                            },
+                            {
+                                name: "Before",
+                                value: {
+                                    icon: "cloud"
+                                }
+                            },
+                            {
+                                name: "After",
+                                value: {
+                                    iconAfter: "keyboard_arrow_down"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        id: "destructive_size_radio",
+                        title: "Sizes",
+                        values: [
+                            {
+                                name: "Large",
+                                value: {
+                                    size: "lg"
+                                }
+                            },
+                            {
+                                name: "Small",
+                                value: {
+                                    size: "sm"
+                                }
+                            },
+                            {
+                                name: "Extra small",
+                                value: {
+                                    size: "xs"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        id: "destructive_state_modifiers",
+                        title: "State modifiers",
+                        values: [
+                            {
+                                name: "Enabled",
+                                value: {
+                                    loader: false,
+                                    loading: false,
+                                    disabled: false
+                                }
+                            },
+                            {
+                                name: "Loading",
+                                value: {
+                                    loader: true,
+                                    loading: true
+                                }
+                            },
+                            {
+                                name: "Disabled",
+                                value: {
+                                    disabled: true
                                 }
                             }
                         ]
@@ -266,56 +405,34 @@ export const destructiveButtons = {
             </>
         },
         {
-            tab: "Text/Link",
-            component: <ButtonComponent type="link-destructive" label="Do something" />,
+            tab: "Executive",
+            component: <ButtonComponent type="executive-destructive" label="Guiding button" />,
+            title: "Executive destructive button",
             options: {
-                checkbox: [
+                radio: [
                     {
-                        inputs: [
-
+                        id: "destructive_icon_radio",
+                        title: "Icon",
+                        values: [
                             {
-                                id: "icon_check_destructive",
-                                name: "Icon",
+                                name: "None"
+                            },
+                            {
+                                name: "Before",
                                 value: {
                                     icon: "cloud"
                                 }
-                            }
-                        ]
-                    }
-                ]
-            },
-            title: "Destructive button",
-            description: "The text destructive button is used as an alternative for the guiding destructive button and can be used when there is limited space, within other components or various containers."
-        },
-        {
-            tab: "Executive",
-            component: <ButtonComponent type="executive-destructive" label="Do something" />,
-            title: "Executive destructive button",
-            options: {
-                checkbox: [
-                    {
-                        inputs: [
-                            {
-                                id: "icon_check_destructive",
-                                name: "Icon",
-                                value: {
-                                    icon: "close"
-                                }
                             },
                             {
-                                id: "loader_check_destructive",
-                                name: "Loader",
+                                name: "After",
                                 value: {
-                                    loader: true,
-                                    loading: true
+                                    iconAfter: "keyboard_arrow_down"
                                 }
                             }
                         ]
-                    }
-                ],
-                radio: [
+                    },
                     {
-                        id: "size_radio_destructive",
+                        id: "destructive_size_radio",
                         title: "Sizes",
                         values: [
                             {
@@ -337,10 +454,112 @@ export const destructiveButtons = {
                                 }
                             }
                         ]
+                    },
+                    {
+                        id: "destructive_state_modifiers",
+                        title: "State modifiers",
+                        values: [
+                            {
+                                name: "Enabled",
+                                value: {
+                                    loader: false,
+                                    loading: false,
+                                    disabled: false
+                                }
+                            },
+                            {
+                                name: "Loading",
+                                value: {
+                                    loader: true,
+                                    loading: true
+                                }
+                            },
+                            {
+                                name: "Disabled",
+                                value: {
+                                    disabled: true
+                                }
+                            }
+                        ]
                     }
                 ]
             },
             description: "The executive destructive button should be used sparingly and only in case of a final destructive call to action. The executive destructive button visually takes up a lot of the attention. To not distract the user from other content it is often used in simpler contexts such as dialogs, for example when confirming removal of certain information."
+        },
+        {
+            tab: "Link",
+            component: <ButtonComponent type="link-destructive" label="Guiding button" />,
+            options: {
+                radio: [
+                    {
+                        id: "destructive_icon_radio",
+                        title: "Icon",
+                        values: [
+                            {
+                                name: "None"
+                            },
+                            {
+                                name: "Before",
+                                value: {
+                                    icon: "cloud"
+                                }
+                            },
+                            {
+                                name: "After",
+                                value: {
+                                    iconAfter: "keyboard_arrow_down"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        id: "destructive_size_radio",
+                        title: "Sizes",
+                        values: [
+                            {
+                                name: "Large",
+                                value: {
+                                    size: "lg"
+                                }
+                            },
+                            {
+                                name: "Small",
+                                value: {
+                                    size: "sm"
+                                }
+                            },
+                            {
+                                name: "Extra small",
+                                value: {
+                                    size: "xs"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        id: "destructive_state_modifiers",
+                        title: "State modifiers",
+                        values: [
+                            {
+                                name: "Enabled",
+                                value: {
+                                    loader: false,
+                                    loading: false,
+                                    disabled: false
+                                }
+                            },
+                            {
+                                name: "Disabled",
+                                value: {
+                                    disabled: true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            title: "Destructive button",
+            description: "The text destructive button is used as an alternative for the guiding destructive button and can be used when there is limited space, within other components or various containers."
         }
     ]
 };

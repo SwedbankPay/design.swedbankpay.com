@@ -26,7 +26,8 @@ module.exports = [
                 path: "/patterns/login",
                 componentPath: "content/Login",
                 icon: "account_circle",
-                outlined: true
+                outlined: true,
+                statusBadges: ["new"]
             }
         ]
     }

@@ -11,7 +11,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
     When using buttons next to each other, always wrap them in a 
     <CodeTags
       code=".button-group"
-      type="secondary"
+      type="primary"
     />
      and make sure to use 8px spacing between the buttons, both in horizontally and vertically groupings. Strive not to use multiple buttons of the same kind – instead, use 
     <Link
@@ -46,145 +46,389 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
     </div>
   </ComponentPreview>
   <h3>
-    Dos and don'ts
+    How to combine buttons
   </h3>
   <div
-    className="slab slab-plain slab-border-success mb-5"
+    className="row"
   >
-    <h4>
-      Do
-    </h4>
     <div
-      className="row"
+      className="col-lg-6 col-sm-12"
     >
       <div
-        className="col-lg-6"
+        className="slab slab-plain slab-border-success pb-4"
       >
-        <img
-          className="w-100 mb-4"
-          src="/TEST/img/documentation/buttons/dos1.png"
-        />
-        <p>
-          Place buttons in a hierarchly correct order and combine different kinds of button
-        </p>
+        <h4
+          className="mb-3 mt-0"
+        >
+          Do
+        </h4>
+        <div
+          className="d-flex flex-column button-group mt-4 "
+        >
+          <Button
+            className="mb-3 justify-content-center"
+            label="Primary action"
+            type="primary"
+          />
+          <Button
+            className="mb-3 justify-content-center"
+            label="Secondary action"
+            type="secondary"
+          />
+          <Button
+            className="justify-content-center"
+            label="Cancel"
+            type="link"
+          />
+        </div>
       </div>
+      <p>
+        Place buttons in hierarchal correct order and combine different kinds of buttons.
+      </p>
+    </div>
+    <div
+      className="col-lg-6 col-sm-12"
+    >
       <div
-        className="col-lg-6"
+        className="slab slab-plain slab-border-success pb-5 h-75"
       >
-        <img
-          className="w-100 mb-4"
-          src="/TEST/img/documentation/buttons/dos3.png"
-        />
-        <p>
-          Place buttons side by side in Desktop view
-        </p>
+        <h4
+          className="mb-3 mt-0"
+        >
+          Do
+        </h4>
+        <div
+          className="d-flex button-group mt-4  align-items-center"
+        >
+          <Button
+            className="mr-3"
+            label="Primary"
+            type="primary"
+          />
+          <Button
+            className=""
+            label="Secondary"
+            type="secondary"
+          />
+        </div>
       </div>
-      <div
-        className="col-lg-6"
-      >
-        <img
-          className="w-100 mb-4"
-          src="/TEST/img/documentation/buttons/dos2.png"
-        />
-        <p>
-          Use the 
-          <b>
-            Text Button
-          </b>
-           as an discrete option to cancel
-        </p>
-      </div>
-      <div
-        className="col-lg-6"
-      >
-        <img
-          className="w-100 mb-4"
-          src="/TEST/img/documentation/buttons/dos4.png"
-        />
-        <p>
-          Combine 
-          <b>
-            Executive Destructive Buttons
-          </b>
-           with normal 
-          <b>
-            Text/Link Buttons
-          </b>
-        </p>
-      </div>
+      <p>
+        Place buttons side by side in desktop view.
+      </p>
     </div>
   </div>
   <div
-    className="slab slab-plain slab-border-error"
+    className="row mt-1"
   >
-    <h4>
-      Don't
-    </h4>
     <div
-      className="row"
+      className="col-lg-6 col-sm-12"
     >
       <div
-        className="col-lg-6"
+        className="slab slab-plain slab-border-success pb-5"
       >
-        <img
-          className="w-100 mb-4"
-          src="/TEST/img/documentation/buttons/donts1.png"
-        />
-        <p>
-          Use the 
-          <b>
-            Secondary Button
-          </b>
-           (and/or the 
-          <b>
-            Text Button
-          </b>
-          ) above the 
-          <b>
-            Primary Button
-          </b>
-        </p>
+        <h4
+          className="mb-3 mt-0"
+        >
+          Do
+        </h4>
+        <div
+          className="d-flex flex-column button-group mt-4"
+        >
+          <Button
+            className="mb-3 justify-content-center"
+            label="Primary action"
+            type="primary"
+          />
+          <Button
+            className="justify-content-center"
+            label="Cancel"
+            type="link"
+          />
+        </div>
       </div>
+      <p>
+        Use the Link button as a discrete option to cancel.
+      </p>
+    </div>
+    <div
+      className="col-lg-6 col-sm-12"
+    >
       <div
-        className="col-lg-6"
+        className="slab slab-plain slab-border-success pb-5"
       >
-        <img
-          className="w-100 mb-4"
-          src="/TEST/img/documentation/buttons/donts2.png"
-        />
-        <p>
-          List primary actions and/or combine 
-          <b>
-            Primary Button
-          </b>
-           and 
-          <b>
-            BankID Button
-          </b>
-        </p>
+        <h4
+          className="mb-3 mt-0"
+        >
+          Do
+        </h4>
+        <div
+          className="d-flex flex-column button-group mt-4 "
+        >
+          <Button
+            className="mb-3 justify-content-center"
+            label="Executive destructive action"
+            type="executive-destructive"
+          />
+          <Button
+            className="justify-content-center"
+            label="Cancel"
+            type="link"
+          />
+        </div>
       </div>
+      <p>
+        Combine Executive destructive buttons with normal Link buttons.
+      </p>
+    </div>
+  </div>
+  <h3>
+    How not to combine buttons
+  </h3>
+  <div
+    className="row"
+  >
+    <div
+      className="col-lg-6 col-sm-12"
+    >
       <div
-        className="col-lg-6"
+        className="slab slab-plain slab-border-error pb-5"
       >
-        <img
-          className="w-100 mb-4"
-          src="/TEST/img/documentation/buttons/donts3.png"
-        />
-        <p>
-          Use and combine destructive buttons the same way as normal buttons
-        </p>
+        <h4
+          className="mb-3 mt-0"
+        >
+          Don't
+        </h4>
+        <div
+          className="d-flex flex-column button-group mt-4 "
+        >
+          <Button
+            className="mb-3 justify-content-center"
+            label="Secondary action"
+            type="secondary"
+          />
+          <Button
+            className="justify-content-center"
+            label="Primary action"
+            type="primary"
+          />
+        </div>
       </div>
+      <p>
+        Don't use the Secondary button and/or the Link button above the Primary button.
+      </p>
+    </div>
+    <div
+      className="col-lg-6 col-sm-12"
+    >
       <div
-        className="col-lg-6"
+        className="slab slab-plain slab-border-error pb-5"
       >
-        <img
-          className="w-100 mb-4"
-          src="/TEST/img/documentation/buttons/donts4.png"
-        />
-        <p>
-          Combine normal buttons and destructive buttons
-        </p>
+        <h4
+          className="mb-3 mt-0"
+        >
+          Don't
+        </h4>
+        <div
+          className="d-flex flex-column button-group mt-4 "
+        >
+          <Button
+            className="mb-3 justify-content-center"
+            label="Primary action"
+            type="primary"
+          />
+          <Button
+            className="justify-content-center"
+            label="Destructive guiding action"
+            type="guiding-destructive"
+          />
+        </div>
       </div>
+      <p>
+        Don't combine Primary buttons with Destructive buttons.
+      </p>
+    </div>
+  </div>
+  <div
+    className="row mt-1"
+  >
+    <div
+      className="col-lg-6 col-sm-12"
+    >
+      <div
+        className="slab slab-plain slab-border-error pb-5"
+      >
+        <h4
+          className="mb-3 mt-0"
+        >
+          Don't
+        </h4>
+        <div
+          className="d-flex flex-column button-group mt-4 "
+        >
+          <Button
+            className="mb-3 justify-content-center"
+            label="Primary action"
+            type="primary"
+          />
+          <Button
+            className="justify-content-center mb-3"
+            label="Destructive guiding action"
+            type="guiding-destructive"
+          />
+          <Button
+            className="justify-content-center"
+            label="Cancel"
+            type="link-destructive"
+          />
+        </div>
+      </div>
+      <p>
+        Don't use and combine Destructive buttons the same way as normal buttons.
+      </p>
+    </div>
+    <div
+      className="col-lg-6 col-sm-12"
+    >
+      <div
+        className="slab slab-plain slab-border-error pb-5"
+      >
+        <h4
+          className="mb-3 mt-0"
+        >
+          Don't
+        </h4>
+        <div
+          className="d-flex flex-column button-group mt-4 "
+        >
+          <Button
+            className="mb-3 justify-content-center"
+            label="Primary action"
+            type="primary"
+          />
+          <Button
+            bankId="se"
+            className="mb-3 justify-content-center"
+            label="Primary action"
+            type="primary"
+          />
+          <Button
+            className="justify-content-center"
+            label="Primary action"
+            type="primary"
+          />
+        </div>
+      </div>
+      <p>
+        Don't use multiple Primary buttons or combine with BankID button.
+      </p>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`Documentation: Buttons Content guidelines renders 1`] = `
+<Fragment>
+  <h2
+    id="content-guidelines"
+  >
+    Content guidelines
+  </h2>
+  <p>
+    The intention of a button should be clear and predictable. Users should be able to anticipate what will happen when they click on a button. Buttons should always lead with a strong verb that encourages action. Provide enough context for users by using the {verb} + {noun} content formula instead of using “Yes”, “Confirm”, “Cancel” – except when it comes to the Text Button, which commonly uses “Cancel”. To avoid buttons breaking in smaller interfaces due to long names, always check that the button looks OK in a mobile view. Generally, try to keep the number of characters fairly low to provide more clarity.
+  </p>
+  <h3>
+    Unique naming
+  </h3>
+  <p>
+    Avoid using the same name for multiple buttons in the same user flow. It’s particularly hard for users using a screen reader to tell four “Next” buttons one                after another apart.                 When combining an "Executive Destructive Button" with a "Text Button" be careful to not name both buttons “Cancel”.                Try to separate the text as much as you can to improve the user experience, providing the user from accidentally making the wrong choice.
+  </p>
+  <div
+    className="row"
+  >
+    <div
+      className="col-lg-6 col-sm-12"
+    >
+      <div
+        className="slab slab-plain slab-border-success pb-4"
+      >
+        <h4>
+          Do
+        </h4>
+        <div
+          className="d-flex justify-content-center mt-4 mb-4"
+        >
+          <img
+            alt="Use different naming on buttons for differentiate actions."
+            className="img-fluid"
+            src="/TEST/img/documentation/buttons/dos-naming.png"
+          />
+        </div>
+      </div>
+      <p>
+        Make sure to differentiate the naming so that the user understands the difference between the actions the user can take.
+      </p>
+    </div>
+    <div
+      className="col-lg-6 col-sm-12"
+    >
+      <div
+        className="slab slab-plain slab-border-error pb-4"
+      >
+        <h4>
+          Don't
+        </h4>
+        <div
+          className="d-flex justify-content-center mt-4 mb-4"
+        >
+          <img
+            alt="Avoid naming executive destructive buttons poorly"
+            className="img-fluid"
+            src="/TEST/img/documentation/buttons/donts-naming.png"
+          />
+        </div>
+      </div>
+      <p>
+        Avoid naming an Executive Destructive Button poorly – the button cancels the payment of the invoice and not the invoice, which isn’t clear at all.
+      </p>
+    </div>
+  </div>
+  <h3>
+    How to use icons
+  </h3>
+  <div
+    className="row"
+  >
+    <div
+      className="col-sm-12"
+    >
+      <div
+        className="slab slab-plain slab-border-success pb-4"
+      >
+        <h4
+          className="mb-3 mt-0"
+        >
+          Do
+        </h4>
+        <div
+          className="d-flex button-group flex-column align-items-center justify-content-center mt-4 mb-4"
+        >
+          <Button
+            className="justify-content-center mb-3 w-50"
+            icon="delete"
+            label="Delete"
+            type="guiding-destructive"
+          />
+          <Button
+            className="justify-content-center w-50"
+            icon="edit"
+            label="Edit"
+            type="secondary"
+          />
+        </div>
+      </div>
+      <p>
+        Use an icon to further convey the action, e.g. a trashcan icon for a delete button.
+      </p>
     </div>
   </div>
 </Fragment>
@@ -209,7 +453,7 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
         "elements": Array [
           Object {
             "component": <Button
-              label="Do something"
+              label="Guiding button"
               type="guiding-destructive"
             />,
             "description": <React.Fragment>
@@ -221,30 +465,30 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
               </p>
             </React.Fragment>,
             "options": Object {
-              "checkbox": Array [
+              "radio": Array [
                 Object {
-                  "inputs": Array [
+                  "id": "destructive_icon_radio",
+                  "title": "Icon",
+                  "values": Array [
                     Object {
-                      "id": "icon_check_destructive",
-                      "name": "Icon",
+                      "name": "None",
+                    },
+                    Object {
+                      "name": "Before",
                       "value": Object {
                         "icon": "cloud",
                       },
                     },
                     Object {
-                      "id": "loader_check_destructive",
-                      "name": "Loader",
+                      "name": "After",
                       "value": Object {
-                        "loader": true,
-                        "loading": true,
+                        "iconAfter": "keyboard_arrow_down",
                       },
                     },
                   ],
                 },
-              ],
-              "radio": Array [
                 Object {
-                  "id": "size_radio_destructive",
+                  "id": "destructive_size_radio",
                   "title": "Sizes",
                   "values": Array [
                     Object {
@@ -263,6 +507,33 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
                       "name": "Extra small",
                       "value": Object {
                         "size": "xs",
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "destructive_state_modifiers",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Enabled",
+                      "value": Object {
+                        "disabled": false,
+                        "loader": false,
+                        "loading": false,
+                      },
+                    },
+                    Object {
+                      "name": "Loading",
+                      "value": Object {
+                        "loader": true,
+                        "loading": true,
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
                       },
                     },
                   ],
@@ -274,59 +545,35 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
           },
           Object {
             "component": <Button
-              label="Do something"
-              type="link-destructive"
-            />,
-            "description": "The text destructive button is used as an alternative for the guiding destructive button and can be used when there is limited space, within other components or various containers.",
-            "options": Object {
-              "checkbox": Array [
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "icon_check_destructive",
-                      "name": "Icon",
-                      "value": Object {
-                        "icon": "cloud",
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "Text/Link",
-            "title": "Destructive button",
-          },
-          Object {
-            "component": <Button
-              label="Do something"
+              label="Guiding button"
               type="executive-destructive"
             />,
             "description": "The executive destructive button should be used sparingly and only in case of a final destructive call to action. The executive destructive button visually takes up a lot of the attention. To not distract the user from other content it is often used in simpler contexts such as dialogs, for example when confirming removal of certain information.",
             "options": Object {
-              "checkbox": Array [
+              "radio": Array [
                 Object {
-                  "inputs": Array [
+                  "id": "destructive_icon_radio",
+                  "title": "Icon",
+                  "values": Array [
                     Object {
-                      "id": "icon_check_destructive",
-                      "name": "Icon",
+                      "name": "None",
+                    },
+                    Object {
+                      "name": "Before",
                       "value": Object {
-                        "icon": "close",
+                        "icon": "cloud",
                       },
                     },
                     Object {
-                      "id": "loader_check_destructive",
-                      "name": "Loader",
+                      "name": "After",
                       "value": Object {
-                        "loader": true,
-                        "loading": true,
+                        "iconAfter": "keyboard_arrow_down",
                       },
                     },
                   ],
                 },
-              ],
-              "radio": Array [
                 Object {
-                  "id": "size_radio_destructive",
+                  "id": "destructive_size_radio",
                   "title": "Sizes",
                   "values": Array [
                     Object {
@@ -349,10 +596,115 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
                     },
                   ],
                 },
+                Object {
+                  "id": "destructive_state_modifiers",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Enabled",
+                      "value": Object {
+                        "disabled": false,
+                        "loader": false,
+                        "loading": false,
+                      },
+                    },
+                    Object {
+                      "name": "Loading",
+                      "value": Object {
+                        "loader": true,
+                        "loading": true,
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
               ],
             },
             "tab": "Executive",
             "title": "Executive destructive button",
+          },
+          Object {
+            "component": <Button
+              label="Guiding button"
+              type="link-destructive"
+            />,
+            "description": "The text destructive button is used as an alternative for the guiding destructive button and can be used when there is limited space, within other components or various containers.",
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "destructive_icon_radio",
+                  "title": "Icon",
+                  "values": Array [
+                    Object {
+                      "name": "None",
+                    },
+                    Object {
+                      "name": "Before",
+                      "value": Object {
+                        "icon": "cloud",
+                      },
+                    },
+                    Object {
+                      "name": "After",
+                      "value": Object {
+                        "iconAfter": "keyboard_arrow_down",
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "destructive_size_radio",
+                  "title": "Sizes",
+                  "values": Array [
+                    Object {
+                      "name": "Large",
+                      "value": Object {
+                        "size": "lg",
+                      },
+                    },
+                    Object {
+                      "name": "Small",
+                      "value": Object {
+                        "size": "sm",
+                      },
+                    },
+                    Object {
+                      "name": "Extra small",
+                      "value": Object {
+                        "size": "xs",
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "destructive_state_modifiers",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Enabled",
+                      "value": Object {
+                        "disabled": false,
+                        "loader": false,
+                        "loading": false,
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Link",
+            "title": "Destructive button",
           },
         ],
         "id": "destructiveButtons",
@@ -367,47 +719,35 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
     className="row"
   >
     <div
-      className="col-lg-6"
+      className="col-lg-6 col-sm-12"
     >
       <div
-        className="slab slab-plain slab-border-success pb-5 h-100"
+        className="slab slab-plain slab-border-success pb-4"
       >
-        <h4>
+        <h4
+          className="mb-3 mt-0"
+        >
           Do
         </h4>
         <div
           className="d-flex justify-content-center mt-4 mb-4"
         >
           <img
-            className="w-50"
+            alt="Use Guiding Destructive buttons to for example 'Cancel Payment'"
+            className="img-fluid"
             src="/TEST/img/documentation/buttons/dos-guiding.png"
           />
         </div>
-        Use the 
-        <b>
-          Guiding Destructive Buttons
-        </b>
-         to initiate a destructive action
-        <div
-          className="d-flex justify-content-center mt-5 mb-4"
-        >
-          <img
-            className="w-75"
-            src="/TEST/img/documentation/buttons/dos.png"
-          />
-        </div>
-        Use the 
-        <b>
-          Executive Destructive Buttons
-        </b>
-         a contained space as a final destructive call to action
       </div>
+      <p>
+        Use the Guiding Destructive Buttons to initiate a destructive action.
+      </p>
     </div>
     <div
-      className="col-lg-6"
+      className="col-lg-6 col-sm-12"
     >
       <div
-        className="slab slab-plain slab-border-error pb-5 h-100"
+        className="slab slab-plain slab-border-error pb-4"
       >
         <h4>
           Don't
@@ -416,29 +756,65 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
           className="d-flex justify-content-center mt-4 mb-4"
         >
           <img
-            className="w-50"
+            alt="Do not use executive destructive button to initiate a destructive action."
+            className="img-fluid"
             src="/TEST/img/documentation/buttons/donts-executive.png"
           />
         </div>
-        Avoid using the 
-        <b>
-          Executive Destructive Buttons
-        </b>
-         to initiate a destructive action
+      </div>
+      <p>
+        Avoid using the Executive Destructive Buttons to initiate a destructive action.
+      </p>
+    </div>
+  </div>
+  <div
+    className="row mt-1"
+  >
+    <div
+      className="col-lg-6 col-sm-12"
+    >
+      <div
+        className="slab slab-plain slab-border-success pb-4"
+      >
+        <h4>
+          Do
+        </h4>
         <div
-          className="d-flex justify-content-center mt-5 mb-4"
+          className="d-flex justify-content-center mt-4 mb-4"
         >
           <img
-            className="w-75"
+            alt="Use executive destruction button to achieve final destructive call."
+            className="img-fluid"
+            src="/TEST/img/documentation/buttons/dos.png"
+          />
+        </div>
+      </div>
+      <p>
+        Use the Executive Destructive Buttons a contained space as a final destructive call to action.
+      </p>
+    </div>
+    <div
+      className="col-lg-6 col-sm-12"
+    >
+      <div
+        className="slab slab-plain slab-border-error pb-4"
+      >
+        <h4>
+          Don't
+        </h4>
+        <div
+          className="d-flex justify-content-center mt-4 mb-4"
+        >
+          <img
+            alt="Avoid using multiple executive destructive buttons"
+            className="img-fluid"
             src="/TEST/img/documentation/buttons/donts.png"
           />
         </div>
-        Avoid using multiple 
-        <b>
-          Executive Destructive Buttons
-        </b>
-         in the same userflow
       </div>
+      <p>
+        Avoid using multiple Executive Destructive Buttons in the same user flow.
+      </p>
     </div>
   </div>
 </Fragment>
@@ -451,74 +827,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
   >
     Developer documentation
   </h2>
-  <h3>
-    Active state
-  </h3>
-  <p>
-    Buttons will appear pressed (with inset shadow) when active.
-    <b>
-      There’s no need to add a class to 
-      <CodeTags
-        code="<button>"
-        type="primary"
-      />
-      s as they use a pseudo-class.
-    </b>
-     However, you can still force the same active appearance with 
-    <CodeTags
-      code=".active"
-      type="secondary"
-    />
-     (and include the 
-    <CodeTags
-      code="aria-pressed=\\"true\\""
-      type="secondary"
-    />
-     attribute) should you need to replicate the state programmatically.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        active={true}
-        href="#"
-        label="Primary"
-        type="primary"
-      />
-      
-
-      <Button
-        active={true}
-        href="#"
-        label="Secondary"
-        type="secondary"
-      />
-      
-
-      <Button
-        active={true}
-        label="Guiding destructive"
-        type="guiding-destructive"
-      />
-      
-
-      <Button
-        active={true}
-        label="Executive destructive"
-        type="executive-destructive"
-      />
-      
-
-    </div>
-  </ComponentPreview>
   <h3>
     Disabled state
   </h3>
@@ -590,6 +898,14 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
 
     </div>
   </ComponentPreview>
+  <h4>
+    Disabled with 
+    <CodeTags
+      code="<a>"
+      type="primary"
+    />
+     tag
+  </h4>
   <p>
     Disabled buttons using the 
     <CodeTags
@@ -633,35 +949,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
        attribute to indicate the state of the element to assistive technologies.
     </li>
   </ul>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <Button
-        disabled={true}
-        href="#"
-        label="Primary"
-        type="primary"
-      />
-      
-
-      <Button
-        disabled={true}
-        href="#"
-        label="Secondary"
-        type="secondary"
-      />
-      
-
-    </div>
-  </ComponentPreview>
   <Alert
     icon="warning"
     text={
@@ -699,6 +986,67 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
     }
     type="warning"
   />
+  <h3>
+    Loading state
+  </h3>
+  <p>
+    Use the loading state to show users their action is processing by adding the 
+    <CodeTags
+      code=".loading"
+      type="primary"
+    />
+     class to the 
+    <CodeTags
+      code="<button>"
+      type="primary"
+    />
+     element.
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    removeOuterTag={true}
+    showCasePanel={true}
+  >
+    <div
+      className="button-group"
+    >
+      
+
+      <Button
+        disabled={true}
+        label="Primary"
+        loading={true}
+        type="primary"
+      />
+      
+
+      <Button
+        disabled={true}
+        label="Secondary"
+        loading={true}
+        type="secondary"
+      />
+      
+
+      <Button
+        disabled={true}
+        label="Guiding destructive"
+        loading={true}
+        type="guiding-destructive"
+      />
+      
+
+      <Button
+        disabled={true}
+        label="Executive destructive"
+        loading={true}
+        type="executive-destructive"
+      />
+      
+
+    </div>
+  </ComponentPreview>
   <h3>
     Usage with other tags
   </h3>
@@ -791,83 +1139,16 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
 </Fragment>
 `;
 
-exports[`Documentation: Buttons Naming buttons renders 1`] = `
-<Fragment>
-  <h2
-    id="naming-buttons"
-  >
-    Naming button labels
-  </h2>
-  <p>
-    Buttons should always lead with a strong verb that encourages action. Provide enough context for users by using the {verb} + {noun} content             formula instead of using “Yes”, “Confirm”, “Cancel” – except when it comes to the Text Button, which commonly uses “Cancel”.             To avoid buttons breaking in smaller interfaces due to long names, always check that the button looks OK in a mobile view. Generally,             try to keep the number of characters fairly low to provide more clarity.
-  </p>
-  <h4>
-    Unique naming
-  </h4>
-  <p>
-    Avoid using the same name for multiple buttons in the same user flow. It’s particularly hard for users using a screen reader to tell four “Next” buttons one                after another apart.                 When combining an "Executive Destructive Button" with a "Text Button" be careful to not name both buttons “Cancel”.                Try to separate the text as much as you can to improve the user experience, providing the user from accidentally making the wrong choice.
-  </p>
-  <h3>
-    How to name destructive buttons
-  </h3>
-  <div
-    className="row"
-  >
-    <div
-      className="col-lg-6"
-    >
-      <div
-        className="slab slab-plain slab-border-success pb-5 h-100"
-      >
-        <h4>
-          Do
-        </h4>
-        <div
-          className="d-flex justify-content-center mt-4 mb-4"
-        >
-          <img
-            className="w-75"
-            src="/TEST/img/documentation/buttons/dos-naming.png"
-          />
-        </div>
-        Make sure to differentiate the naming so that the user understands the difference between the actions the user can take.
-      </div>
-    </div>
-    <div
-      className="col-lg-6"
-    >
-      <div
-        className="slab slab-plain slab-border-error pb-5 h-100"
-      >
-        <h4>
-          Don't
-        </h4>
-        <div
-          className="d-flex justify-content-center mt-4 mb-4"
-        >
-          <img
-            className="w-75"
-            src="/TEST/img/documentation/buttons/donts-naming.png"
-          />
-        </div>
-        Avoid naming an 
-        <b>
-          Executive Destructive Button
-        </b>
-         poorly – the button cancels the payment of the invoice and not the invoice, which isn’t clear at all.
-      </div>
-    </div>
-  </div>
-</Fragment>
-`;
-
 exports[`Documentation: Buttons Overview renders 1`] = `
 <Fragment>
   <h2
     id="overview"
   >
-    Which button to use?
+    Button variants
   </h2>
+  <p>
+    There are three different sizes of buttons to choose from: xsmall, small and large. Our button variants can also be customized with icons next to the label to clarify the action. 
+  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
@@ -877,33 +1158,34 @@ exports[`Documentation: Buttons Overview renders 1`] = `
         "elements": Array [
           Object {
             "component": <Button
-              label="Do something"
+              label="Link button"
               type="primary"
             />,
             "description": "Use a primary button as the main call to action on a page. Avoid using multiple default buttons on a single page. Having more than one main call to action reduces their impact, and makes it harder for users to know what to do next.",
             "options": Object {
-              "checkbox": Array [
+              "radio": Array [
                 Object {
-                  "inputs": Array [
+                  "id": "icon_radio",
+                  "title": "Icon",
+                  "values": Array [
                     Object {
-                      "id": "icon_check",
-                      "name": "Icon",
+                      "name": "None",
+                    },
+                    Object {
+                      "name": "Before",
                       "value": Object {
                         "icon": "cloud",
                       },
                     },
                     Object {
-                      "id": "loader_check",
-                      "name": "Loader",
+                      "name": "After",
                       "value": Object {
-                        "loader": true,
-                        "loading": true,
+                        "icon": "keyboard_arrow_down",
+                        "iconAfter": true,
                       },
                     },
                   ],
                 },
-              ],
-              "radio": Array [
                 Object {
                   "id": "size_radio",
                   "title": "Sizes",
@@ -928,6 +1210,33 @@ exports[`Documentation: Buttons Overview renders 1`] = `
                     },
                   ],
                 },
+                Object {
+                  "id": "state_modifiers",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Enabled",
+                      "value": Object {
+                        "disabled": false,
+                        "loader": false,
+                        "loading": false,
+                      },
+                    },
+                    Object {
+                      "name": "Loading",
+                      "value": Object {
+                        "loader": true,
+                        "loading": true,
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
               ],
             },
             "tab": "Primary",
@@ -936,7 +1245,7 @@ exports[`Documentation: Buttons Overview renders 1`] = `
           Object {
             "component": <Button
               bankId="se"
-              label="Do something"
+              label="Link button"
               type="primary"
             />,
             "description": <React.Fragment>
@@ -988,7 +1297,7 @@ exports[`Documentation: Buttons Overview renders 1`] = `
           },
           Object {
             "component": <Button
-              label="Do something"
+              label="Link button"
               type="secondary"
             />,
             "description": <p>
@@ -1001,28 +1310,29 @@ exports[`Documentation: Buttons Overview renders 1`] = `
               .
             </p>,
             "options": Object {
-              "checkbox": Array [
+              "radio": Array [
                 Object {
-                  "inputs": Array [
+                  "id": "icon_radio",
+                  "title": "Icon",
+                  "values": Array [
                     Object {
-                      "id": "icon_check",
-                      "name": "Icon",
+                      "name": "None",
+                    },
+                    Object {
+                      "name": "Before",
                       "value": Object {
                         "icon": "cloud",
                       },
                     },
                     Object {
-                      "id": "loader_check",
-                      "name": "Loader",
+                      "name": "After",
                       "value": Object {
-                        "loader": true,
-                        "loading": true,
+                        "icon": "keyboard_arrow_down",
+                        "iconAfter": true,
                       },
                     },
                   ],
                 },
-              ],
-              "radio": Array [
                 Object {
                   "id": "size_radio",
                   "title": "Sizes",
@@ -1047,6 +1357,33 @@ exports[`Documentation: Buttons Overview renders 1`] = `
                     },
                   ],
                 },
+                Object {
+                  "id": "state_modifiers",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Enabled",
+                      "value": Object {
+                        "disabled": false,
+                        "loader": false,
+                        "loading": false,
+                      },
+                    },
+                    Object {
+                      "name": "Loading",
+                      "value": Object {
+                        "loader": true,
+                        "loading": true,
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
               ],
             },
             "tab": "Secondary",
@@ -1054,26 +1391,89 @@ exports[`Documentation: Buttons Overview renders 1`] = `
           },
           Object {
             "component": <Button
-              label="Do something"
+              label="Link button"
               type="link"
             />,
-            "description": "Only use in combination with a primary or secondary button – for stand alone links see Links. Use for less important or less commonly used actions since they’re less prominent. Text buttons are often embedded in contained components like cards and dialogs. Since text buttons don’t have a container, they don’t distract from nearby content.",
+            "description": <p>
+              Only use in combination with a primary or secondary button – for stand alone links see 
+              <Link
+                to="/components/links"
+              >
+                Links
+              </Link>
+              . Use for less important or less commonly used actions since they’re less prominent. Text buttons are often embedded in contained components like dialogs.
+            </p>,
             "options": Object {
-              "checkbox": Array [
+              "radio": Array [
                 Object {
-                  "inputs": Array [
+                  "id": "icon_radio",
+                  "title": "Icon",
+                  "values": Array [
                     Object {
-                      "id": "icon_check",
-                      "name": "Icon",
+                      "name": "None",
+                    },
+                    Object {
+                      "name": "Before",
                       "value": Object {
                         "icon": "cloud",
+                      },
+                    },
+                    Object {
+                      "name": "After",
+                      "value": Object {
+                        "icon": "keyboard_arrow_down",
+                        "iconAfter": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "size_radio",
+                  "title": "Sizes",
+                  "values": Array [
+                    Object {
+                      "name": "Large",
+                      "value": Object {
+                        "size": "lg",
+                      },
+                    },
+                    Object {
+                      "name": "Small",
+                      "value": Object {
+                        "size": "sm",
+                      },
+                    },
+                    Object {
+                      "name": "Extra small",
+                      "value": Object {
+                        "size": "xs",
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "state_modifiers",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Enabled",
+                      "value": Object {
+                        "disabled": false,
+                        "loader": false,
+                        "loading": false,
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
                       },
                     },
                   ],
                 },
               ],
             },
-            "tab": "Text/Link button",
+            "tab": "Link",
             "title": "Link button",
           },
         ],
@@ -1089,31 +1489,14 @@ exports[`Documentation: Buttons renders 1`] = `
 <DocContainer
   docToc={true}
 >
-  <p>
-    Buttons communicate actions that users can take. The intention of a button should be clear and predictable. Users should be able to anticipate what will happen when they click on a button. Buttons are typically placed throughout your UI, in places like:
-  </p>
-  <ul
-    className="list list-bullet"
+  <p
+    className="lead"
   >
-    <li>
-      Dialogs
-    </li>
-    <li>
-      Modals
-    </li>
-    <li>
-      Forms
-    </li>
-    <li>
-      Cards
-    </li>
-    <li>
-      Toolbars
-    </li>
-  </ul>
+    Buttons communicate actions that users can take. Buttons are typically placed throughout your UI, in places like: Dialogs, Modals, Forms, Cards and Toolbars.
+  </p>
   <Overview />
   <DestructiveButton />
-  <NamingButtons />
+  <ContentGuidelines />
   <CombiningButtons />
   <DeveloperDocumentation />
 </DocContainer>

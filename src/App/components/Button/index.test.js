@@ -53,13 +53,6 @@ describe("Component: Button -", () => {
             expect(wrapper.html()).toContain("btn-block");
         });
 
-        it("renders a button inside an anchor tag with class pull-right when prop href and pullRight is provided", () => {
-            const wrapper = shallow(<Button type="primary" href="test" pullRight />);
-
-            expect(wrapper).toMatchSnapshot();
-            expect(wrapper.html()).toContain("pull-right");
-        });
-
         it("renders a button inside an anchor tag with class active when prop href and active is provided", () => {
             const wrapper = shallow(<Button type="primary" href="test" active />);
 
@@ -131,13 +124,6 @@ describe("Component: Button -", () => {
 
             expect(wrapper).toMatchSnapshot();
             expect(wrapper.html()).toContain("btn-block");
-        });
-
-        it("renders a button with class pull-right inside an input tag when prop input and pullRight is provided", () => {
-            const wrapper = shallow(<Button type="primary" input pullRight />);
-
-            expect(wrapper).toMatchSnapshot();
-            expect(wrapper.html()).toContain("pull-right");
         });
 
         it("renders a button with class active inside an input tag when prop input and active is provided", () => {
@@ -219,13 +205,6 @@ describe("Component: Button -", () => {
 
             expect(wrapper).toMatchSnapshot();
             expect(wrapper.html()).toContain("btn-block");
-        });
-
-        it("renders a button with class pull-right when prop pullRight is provided", () => {
-            const wrapper = shallow(<Button type="primary" pullRight />);
-
-            expect(wrapper).toMatchSnapshot();
-            expect(wrapper.html()).toContain("pull-right");
         });
 
         it("renders a button with class active when prop active is provided", () => {
