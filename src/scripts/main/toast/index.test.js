@@ -147,20 +147,6 @@ describe("scripts: toast", () => {
         expect(icon.innerHTML).toEqual("cancel");
     });
 
-    it("adds a custom icon when type is not set", () => {
-        toast({
-            html: "Test",
-            icon: "android"
-        });
-
-        const renderedToast = document.querySelector(".toast");
-        const icon = renderedToast.querySelector("i.material-icons");
-
-        expect(renderedToast).toBeDefined();
-        expect(icon).toBeDefined();
-        expect(icon.innerHTML).toEqual("android");
-    });
-
     it("does not add a custom icon when type is not set", () => {
         toast({
             html: "Test",

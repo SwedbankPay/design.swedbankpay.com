@@ -124,6 +124,10 @@ class Toast {
                 break;
         }
 
+        if (this.options.dismissable) {
+            toast.appendChild(_createIcon("close", true));
+        }
+
         // Set content
         toastContent.classList.add("toast-content");
         toastContent.innerHTML = this.message;
@@ -133,10 +137,6 @@ class Toast {
 
         if (this.options.icon && !this.options.type) {
             toast.appendChild(_createIcon(this.options.icon));
-        }
-
-        if (this.options.dismissable) {
-            toast.appendChild(_createIcon("close", true));
         }
 
         toast.addEventListener("mouseenter", () => {
