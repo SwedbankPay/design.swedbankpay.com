@@ -32,7 +32,7 @@ const LineChart = () => (
                     ]
                 }
             }} description="Line chart example: From the beginning, the values has rapidly increased from 261 in 2013 to 1067 in 2016, which also was the peak. Post 2016 the values have slowly decreased to 779 in 2018."/>
-            <table className="table table-plain px-5">
+            <table className="table table-plain mt-4">
                 <thead>
                     <tr>
                         <th>Year</th>
