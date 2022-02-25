@@ -34,10 +34,6 @@
         &:not(:last-child) {
             margin-right: @base-margin-sm;
         }
-
-        &.after {
-            margin-left: 0.5rem;
-        }
     }
 
     &:last-child {
@@ -160,10 +156,18 @@
     &.btn-sm {
         // line-height: ensure proper height of button next to small input
         .button-size(0.75rem; 2.5rem; @font-size-small; @line-height-small; @btn-border-radius-small);
+
+        i {
+            font-size: @font-size-small;
+        }
     }
 
     &.btn-xs {
         .button-size(0.5rem; 2rem; @font-size-small; @line-height-small; @btn-border-radius-small);
+
+        i {
+            font-size: @font-size-small;
+        }
     }
 
     // Block button
