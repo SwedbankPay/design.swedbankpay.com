@@ -8,7 +8,7 @@ const TabsExample = ({ scroll, id }) => (
     <div className="tabs-example-container">
         {scroll === true
             ? <><Tabs id={id} items={tabItems} scroll="true"/></>
-            : <Tabs id={id} scroll="true" items={tabItems.slice(0, 3)} />
+            : <Tabs id={id} items={tabItems.slice(0, 3)} />
         }
         <p>Content of the selected tabs</p>
     </div>
