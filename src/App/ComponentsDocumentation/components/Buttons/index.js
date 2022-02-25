@@ -50,7 +50,7 @@ const DestructiveButton = () => (
             </div>
         </div>
 
-        <div className="row">
+        <div className="row mt-1">
             <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4>Do</h4>
@@ -167,7 +167,7 @@ const CombiningButtons = () => (
                 <p>Place buttons side by side in desktop view.</p>
             </div>
         </div>
-        <div className="row">
+        <div className="row mt-1">
             <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-success pb-5">
                     <h4 className="mb-3 mt-0">Do</h4>
@@ -213,7 +213,7 @@ const CombiningButtons = () => (
                 <p>Don&apos;t combine Primary buttons with Destructive buttons.</p>
             </div>
         </div>
-        <div className="row">
+        <div className="row mt-1">
             <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-error pb-5">
                     <h4 className="mb-3 mt-0">Don&apos;t</h4>

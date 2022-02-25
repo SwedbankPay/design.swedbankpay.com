@@ -118,7 +118,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
     </div>
   </div>
   <div
-    className="row"
+    className="row mt-1"
   >
     <div
       className="col-lg-6 col-sm-12"
@@ -249,7 +249,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
     </div>
   </div>
   <div
-    className="row"
+    className="row mt-1"
   >
     <div
       className="col-lg-6 col-sm-12"
@@ -768,7 +768,7 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
     </div>
   </div>
   <div
-    className="row"
+    className="row mt-1"
   >
     <div
       className="col-lg-6 col-sm-12"
