@@ -997,7 +997,7 @@ exports[`Core: Logotype Overview renders 1`] = `
   </div>
   <a
     className="icon-link mb-4"
-    href="/TEST/release/logos/Swedbank_Pay_Vector.zip"
+    href="/TEST/release/logos/Swedbank_Pay_Logotype.zip"
   >
     <i
       aria-hidden="true"

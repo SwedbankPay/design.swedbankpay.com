@@ -261,7 +261,7 @@ const Overview = () => (
                 <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-h-neg.svg`} type="horizontal" alt="Swedbank Pay Horizontal logo" size="md"/>
             </div>
         </div>
-        <a href={`${basename}release/logos/Swedbank_Pay_Vector.zip`} className="icon-link mb-4">
+        <a href={`${basename}release/logos/Swedbank_Pay_Logotype.zip`} className="icon-link mb-4">
             <i className="material-icons" aria-hidden="true">download</i>
             <span className="ml-2">Download Swedbank Pay logotype assets</span>
         </a>
