@@ -53,17 +53,11 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "get-started/Introduction",
                       "path": "/get-started/introduction",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Introduction",
                     },
                     Object {
                       "componentPath": "get-started/ForDevelopers",
                       "path": "/get-started/for-developers",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "For developers",
                     },
                     Object {
@@ -98,9 +92,6 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "identity/Color",
                       "path": "/identity/color",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "text": "Our color palette with HEX codes",
                       "title": "Color",
                     },
@@ -119,9 +110,6 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "identity/Iconography",
                       "path": "/identity/iconography",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "text": "Guidelines and icon library",
                       "title": "Iconography",
                     },
@@ -185,6 +173,7 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/accordion",
                       "statusBadges": Array [
                         "javascript",
+                        "updated",
                       ],
                       "title": "Accordion",
                     },
@@ -203,7 +192,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/alerts",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Alerts",
                     },
@@ -226,6 +214,9 @@ exports[`Main: App renders 1`] = `
                       "icon": "touch_app",
                       "outlined": true,
                       "path": "/components/buttons",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Buttons",
                     },
                     Object {
@@ -233,9 +224,6 @@ exports[`Main: App renders 1`] = `
                       "icon": "view_agenda",
                       "outlined": true,
                       "path": "/components/cards",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Cards",
                     },
                     Object {
@@ -253,9 +241,6 @@ exports[`Main: App renders 1`] = `
                       "icon": "check_box",
                       "outlined": true,
                       "path": "/components/checkbox",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Checkbox",
                     },
                     Object {
@@ -307,9 +292,6 @@ exports[`Main: App renders 1`] = `
                       "icon": "link",
                       "outlined": true,
                       "path": "/components/links",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Links",
                     },
                     Object {
@@ -324,9 +306,6 @@ exports[`Main: App renders 1`] = `
                       "icon": "loop",
                       "outlined": true,
                       "path": "/components/loader",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Loader",
                     },
                     Object {
@@ -351,6 +330,9 @@ exports[`Main: App renders 1`] = `
                       "icon": "power_input",
                       "outlined": true,
                       "path": "/components/pagination",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Pagination",
                     },
                     Object {
@@ -370,9 +352,6 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/RadioButton",
                       "icon": "radio_button_checked",
                       "path": "/components/radio-button",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Radio button",
                     },
                     Object {
@@ -382,7 +361,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/rangeslider",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Rangeslider",
                     },
@@ -456,7 +434,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/toast",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Toast",
                     },
@@ -465,9 +442,6 @@ exports[`Main: App renders 1`] = `
                       "icon": "toggle_off",
                       "outlined": true,
                       "path": "/components/togglebox",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Togglebox",
                     },
                     Object {
@@ -477,7 +451,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/tooltips",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Tooltips",
                     },
@@ -513,9 +486,6 @@ exports[`Main: App renders 1`] = `
                       "icon": "format_align_justify",
                       "outlined": true,
                       "path": "/patterns/forms",
-                      "statusBadges": Array [
-                        "new",
-                      ],
                       "title": "Forms",
                     },
                     Object {
@@ -523,9 +493,6 @@ exports[`Main: App renders 1`] = `
                       "icon": "account_circle",
                       "outlined": true,
                       "path": "/patterns/login",
-                      "statusBadges": Array [
-                        "new",
-                      ],
                       "title": "Login",
                     },
                   ],

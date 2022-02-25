@@ -27,7 +27,6 @@ module.exports = [
                 title: "Color",
                 path: "/identity/color",
                 componentPath: "identity/Color",
-                statusBadges: ["updated"],
                 text: "Our color palette with HEX codes"
             },
             {
@@ -46,7 +45,6 @@ module.exports = [
                 title: "Iconography",
                 path: "/identity/iconography",
                 componentPath: "identity/Iconography",
-                statusBadges: ["updated"],
                 text: "Guidelines and icon library"
             },
             {

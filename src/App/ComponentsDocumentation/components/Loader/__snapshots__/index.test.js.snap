@@ -164,6 +164,7 @@ exports[`Documentation: Loaders Overview renders 1`] = `
               >
                 ID authentication
                 <i
+                  aria-hidden="true"
                   className="bank-id bank-id-se"
                 />
               </button>

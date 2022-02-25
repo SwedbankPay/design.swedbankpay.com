@@ -10,11 +10,11 @@ const brand = process.env.brand;
 
 const AppHeader = () => (
     <header id="dg-topbar" className="topbar topbar-max-md-sticky d-md-flex d-lg-none designguide-header">
-        <button type="button" className="topbar-btn">
-            <i className="material-icons topbar-btn-icon" aria-hidden="true">menu</i>
+        <button type="button" className="topbar-btn" aria-label="Open menu">
+            <i className="material-icons topbar-btn-icon">menu</i>
         </button>
-        <button type="button" className="topbar-close">
-            <i className="material-icons topbar-btn-icon" aria-hidden="true">close</i>
+        <button type="button" className="topbar-close" aria-label="Close menu">
+            <i className="material-icons topbar-btn-icon">close</i>
         </button>
         <a href="/" className="topbar-logo">{"\n"}
             <img src={`${basename}img/logo/${brand}-logo-h.svg`} alt={`${brand}-logo`} className="logotype-horizontal logotype-md"/> {"\n"}

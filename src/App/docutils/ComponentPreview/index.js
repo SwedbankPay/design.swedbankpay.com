@@ -136,7 +136,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                 <div className="code-view">
                     <header className="code-view-header">
                         {language.toUpperCase()}
-                        <button className="copy-btn d-flex p-0">
+                        <button className="copy-btn d-flex p-0" aria-label="Copy to clipboard">
                             <i className="material-icons material-icons-outlined" data-tooltip onMouseEnter={e => tooltipContent(e)} onClick={e => copyToClipboard(e)}>content_copy</i>
                         </button>
                     </header>
@@ -220,7 +220,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
             if (this.state.activeTab.component.props.id === "sheet-showcase") {
                 sheet.init();
             }
-            
+
             if (this.state.activeTab.component.props.id === "accordion-showcase") {
                 this.state.activeTab.component.props.accordionGroup
                     ? accordion.init("accordion-group-example")
@@ -270,13 +270,13 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                     <div id={this.props.showCasePanelAdvanced.id} className={`showcase-panel showcase-panel-advanced${this.state.optionsOpen ? " options-active" : ""}${this.state.hideOptions ? " hide-options" : ""}`}>
                         <div id={this.props.showCasePanelAdvanced.tabsId} className="tabs tabs-scroll">
                             <ul id={`${this.props.showCasePanelAdvanced.tabsId}-ul`}>
-                                {this.props.showCasePanelAdvanced.elements.map((element, i) => <li key={i} className={this.state.activeTab.tab === element.tab ? "active" : null}>
+                                {this.props.showCasePanelAdvanced.elements.map((element, i) => <li key={i} className={`${this.state.activeTab.tab === element.tab ? "active" : null}${this.state.hideOptions ? " d-none " : ""}`}>
                                     <a href="#" onClick={e => this.setActiveTab(e, i)}>{element.tab}</a>
                                 </li>
                                 )}
                             </ul>
                             <div className={`options-open${this.state.optionsOpen ? " hidden" : ""}${this.state.hideOptions ? " d-none" : ""}`}>
-                                <i className="material-icons" onClick={() => this.setState({ optionsOpen: true })}>menu_open</i>
+                                <i className="material-icons" onClick={() => this.setState({ optionsOpen: true })} aria-label="Open options menu">menu_open</i>
                             </div>
                         </div>
                         <div className="d-flex">
@@ -307,7 +307,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                             {<div className={`options${this.state.optionsOpen ? " active" : ""}${this.state.hideOptions ? " d-none" : ""}`}>
                                 <div className="options-header">
                                     Options
-                                    <i className="material-icons options-close" onClick={() => this.setState({ optionsOpen: false })}>close</i>
+                                    <i className="material-icons options-close" onClick={() => this.setState({ optionsOpen: false })} aria-label="Close options menu">close</i>
                                 </div>
                                 {this.state.activeTab.options && <form className="options-body">
 
