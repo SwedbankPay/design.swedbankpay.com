@@ -117,7 +117,7 @@ const ContentGuidelines = () => (
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4 className="mb-3 mt-0">Do</h4>
                     <div className="d-flex button-group flex-column align-items-center justify-content-center mt-4 mb-4">
-                        <ButtonComponent className="justify-content-center mb-3 w-50" type="guiding-destructive" label="Delete" icon="delete"/>
+                        <ButtonComponent className="justify-content-center w-50" type="guiding-destructive" label="Delete" icon="delete"/>
                         <ButtonComponent className="justify-content-center w-50" type="secondary" label="Edit" icon="edit"/>
                     </div>
                 </div>
@@ -149,8 +149,8 @@ const CombiningButtons = () => (
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4 className="mb-3 mt-0">Do</h4>
                     <div className="d-flex flex-column button-group mt-4 ">
-                        <ButtonComponent className="mb-3 justify-content-center" type="primary" label="Primary action"/>
-                        <ButtonComponent className="mb-3 justify-content-center" type="secondary" label="Secondary action"/>
+                        <ButtonComponent className="justify-content-center" type="primary" label="Primary action"/>
+                        <ButtonComponent className="justify-content-center" type="secondary" label="Secondary action"/>
                         <ButtonComponent className="justify-content-center" type="link" label="Cancel"/>
                     </div>
                 </div>
@@ -160,8 +160,8 @@ const CombiningButtons = () => (
                 <div className="slab slab-plain slab-border-success pb-5 h-75">
                     <h4 className="mb-3 mt-0">Do</h4>
                     <div className="d-flex button-group mt-4  align-items-center">
-                        <ButtonComponent className="mr-3" type="primary" label="Primary"/>
-                        <ButtonComponent className="" type="secondary" label="Secondary"/>
+                        <ButtonComponent type="primary" label="Primary"/>
+                        <ButtonComponent type="secondary" label="Secondary"/>
                     </div>
                 </div>
                 <p>Place buttons side by side in desktop view.</p>
@@ -172,7 +172,7 @@ const CombiningButtons = () => (
                 <div className="slab slab-plain slab-border-success pb-5">
                     <h4 className="mb-3 mt-0">Do</h4>
                     <div className="d-flex flex-column button-group mt-4">
-                        <ButtonComponent className="mb-3 justify-content-center" type="primary" label="Primary action"/>
+                        <ButtonComponent className="justify-content-center" type="primary" label="Primary action"/>
                         <ButtonComponent className="justify-content-center" type="link" label="Cancel"/>
                     </div>
                 </div>
@@ -182,7 +182,7 @@ const CombiningButtons = () => (
                 <div className="slab slab-plain slab-border-success pb-5">
                     <h4 className="mb-3 mt-0">Do</h4>
                     <div className="d-flex flex-column button-group mt-4 ">
-                        <ButtonComponent className="mb-3 justify-content-center" type="executive-destructive" label="Executive destructive action"/>
+                        <ButtonComponent className="justify-content-center" type="executive-destructive" label="Executive destructive action"/>
                         <ButtonComponent className="justify-content-center" type="link" label="Cancel"/>
                     </div>
                 </div>
@@ -196,7 +196,7 @@ const CombiningButtons = () => (
                 <div className="slab slab-plain slab-border-error pb-5">
                     <h4 className="mb-3 mt-0">Don&apos;t</h4>
                     <div className="d-flex flex-column button-group mt-4 ">
-                        <ButtonComponent className="mb-3 justify-content-center" type="secondary" label="Secondary action"/>
+                        <ButtonComponent className="justify-content-center" type="secondary" label="Secondary action"/>
                         <ButtonComponent className="justify-content-center" type="primary" label="Primary action"/>
                     </div>
                 </div>
@@ -206,7 +206,7 @@ const CombiningButtons = () => (
                 <div className="slab slab-plain slab-border-error pb-5">
                     <h4 className="mb-3 mt-0">Don&apos;t</h4>
                     <div className="d-flex flex-column button-group mt-4 ">
-                        <ButtonComponent className="mb-3 justify-content-center" type="primary" label="Primary action"/>
+                        <ButtonComponent className="justify-content-center" type="primary" label="Primary action"/>
                         <ButtonComponent className="justify-content-center" type="guiding-destructive" label="Destructive guiding action"/>
                     </div>
                 </div>
@@ -218,8 +218,8 @@ const CombiningButtons = () => (
                 <div className="slab slab-plain slab-border-error pb-5">
                     <h4 className="mb-3 mt-0">Don&apos;t</h4>
                     <div className="d-flex flex-column button-group mt-4 ">
-                        <ButtonComponent className="mb-3 justify-content-center" type="primary" label="Primary action"/>
-                        <ButtonComponent className="justify-content-center mb-3" type="guiding-destructive" label="Destructive guiding action"/>
+                        <ButtonComponent className="justify-content-center" type="primary" label="Primary action"/>
+                        <ButtonComponent className="justify-content-center" type="guiding-destructive" label="Destructive guiding action"/>
                         <ButtonComponent className="justify-content-center" type="link-destructive" label="Cancel"/>
                     </div>
                 </div>
@@ -229,8 +229,8 @@ const CombiningButtons = () => (
                 <div className="slab slab-plain slab-border-error pb-5">
                     <h4 className="mb-3 mt-0">Don&apos;t</h4>
                     <div className="d-flex flex-column button-group mt-4 ">
-                        <ButtonComponent className="mb-3 justify-content-center" type="primary" label="Primary action"/>
-                        <ButtonComponent bankId="se" className="mb-3 justify-content-center" type="primary" label="Primary action"/>
+                        <ButtonComponent className="justify-content-center" type="primary" label="Primary action"/>
+                        <ButtonComponent bankId="se" className="justify-content-center" type="primary" label="Primary action"/>
                         <ButtonComponent className="justify-content-center" type="primary" label="Primary action"/>
                     </div>
                 </div>
