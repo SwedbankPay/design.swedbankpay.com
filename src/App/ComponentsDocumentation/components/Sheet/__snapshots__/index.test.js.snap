@@ -204,7 +204,7 @@ exports[`Documentation: Sheet SheetExample renders 1`] = `
     </div>
   </div>
   <div
-    className="row"
+    className="row mt-2"
   >
     <div
       className="col-12"
@@ -220,7 +220,7 @@ exports[`Documentation: Sheet SheetExample renders 1`] = `
         >
           <img
             alt="Sheet component in mobile view. Displaying filter example."
-            className="img-fluid"
+            className="w-50"
             src="/TEST/img/documentation/sheet/do2.png"
           />
         </div>
