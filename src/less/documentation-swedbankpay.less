@@ -735,6 +735,18 @@
                         &.hidden {
                             display: none;
                         }
+
+                        button {
+                            &.open-options-menu {
+                                all: unset;
+                            }
+
+                            &:focus {
+                                border-radius: 0.125rem;
+                                box-shadow: 0 0 0 2px @black;
+                                outline: none;
+                            }
+                        }
                     }
                 }
             }

@@ -264,6 +264,10 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
             }
         }
 
+        setOptionsMenuState (e, state) {
+            if (e.keyCode === 13) { this.setState({ optionsOpen: state }); }
+        }
+
         render () {
             return (
                 <>
@@ -276,7 +280,11 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                                 )}
                             </ul>
                             <div className={`options-open${this.state.optionsOpen ? " hidden" : ""}${this.state.hideOptions ? " d-none" : ""}`}>
-                                <i className="material-icons" onClick={() => this.setState({ optionsOpen: true })} aria-label="Open options menu">menu_open</i>
+                                <button className="open-options-menu d-flex" aria-label="Open options menu"
+                                    onKeyDown={e => this.setOptionsMenuState(e, true)}
+                                    onClick={() => this.setState({ optionsOpen: true })}>
+                                    <i className="material-icons" >menu_open</i>
+                                </button>
                             </div>
                         </div>
                         <div className="d-flex">
@@ -307,8 +315,10 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                             {<div className={`options${this.state.optionsOpen ? " active" : ""}${this.state.hideOptions ? " d-none" : ""}`}>
                                 <div className="options-header">
                                     Options
-                                    <button className="options-close d-flex" aria-label="Close options menu">
-                                        <i className="material-icons" onClick={() => this.setState({ optionsOpen: false })}>close</i>
+                                    <button className="options-close d-flex" aria-label="Close options menu"
+                                        onKeyDown={e => this.setOptionsMenuState(e, false)}
+                                        onClick={() => this.setState({ optionsOpen: false })}>
+                                        <i className="material-icons">close</i>
                                     </button>
                                 </div>
                                 {this.state.activeTab.options && <form className="options-body">
