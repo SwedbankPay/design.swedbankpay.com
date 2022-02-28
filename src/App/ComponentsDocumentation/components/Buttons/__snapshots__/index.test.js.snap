@@ -32,6 +32,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
       
 
       <Button
+        className="mr-2"
         label="Activate"
         type="primary"
       />
@@ -66,12 +67,12 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           className="d-flex flex-column button-group mt-4 "
         >
           <Button
-            className="justify-content-center"
+            className="justify-content-center mb-2"
             label="Primary action"
             type="primary"
           />
           <Button
-            className="justify-content-center"
+            className="justify-content-center mb-2"
             label="Secondary action"
             type="secondary"
           />
@@ -98,9 +99,10 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           Do
         </h4>
         <div
-          className="d-flex button-group mt-4  align-items-center"
+          className="d-flex button-group mt-4 align-items-center"
         >
           <Button
+            className="mr-2"
             label="Primary"
             type="primary"
           />
@@ -116,7 +118,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
     </div>
   </div>
   <div
-    className="row mt-1"
+    className="row mt-2"
   >
     <div
       className="col-lg-6 col-sm-12"
@@ -133,7 +135,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           className="d-flex flex-column button-group mt-4"
         >
           <Button
-            className="justify-content-center"
+            className="justify-content-center mb-2"
             label="Primary action"
             type="primary"
           />
@@ -163,7 +165,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           className="d-flex flex-column button-group mt-4 "
         >
           <Button
-            className="justify-content-center"
+            className="justify-content-center mb-2"
             label="Executive destructive action"
             type="executive-destructive"
           />
@@ -200,7 +202,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           className="d-flex flex-column button-group mt-4 "
         >
           <Button
-            className="justify-content-center"
+            className="justify-content-center mb-2"
             label="Secondary action"
             type="secondary"
           />
@@ -230,7 +232,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           className="d-flex flex-column button-group mt-4 "
         >
           <Button
-            className="justify-content-center"
+            className="justify-content-center mb-2"
             label="Primary action"
             type="primary"
           />
@@ -247,7 +249,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
     </div>
   </div>
   <div
-    className="row mt-1"
+    className="row mt-2"
   >
     <div
       className="col-lg-6 col-sm-12"
@@ -264,12 +266,12 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           className="d-flex flex-column button-group mt-4 "
         >
           <Button
-            className="justify-content-center"
+            className="justify-content-center mb-2"
             label="Primary action"
             type="primary"
           />
           <Button
-            className="justify-content-center"
+            className="justify-content-center mb-2"
             label="Destructive guiding action"
             type="guiding-destructive"
           />
@@ -299,13 +301,13 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           className="d-flex flex-column button-group mt-4 "
         >
           <Button
-            className="justify-content-center"
+            className="justify-content-center mb-2"
             label="Primary action"
             type="primary"
           />
           <Button
             bankId="se"
-            className="justify-content-center"
+            className="justify-content-center mb-2"
             label="Primary action"
             type="primary"
           />
@@ -411,7 +413,7 @@ exports[`Documentation: Buttons Content guidelines renders 1`] = `
           className="d-flex button-group flex-column align-items-center justify-content-center mt-4 mb-4"
         >
           <Button
-            className="justify-content-center w-50"
+            className="justify-content-center mb-2 w-50"
             icon="delete"
             label="Delete"
             type="guiding-destructive"
@@ -771,7 +773,7 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
     </div>
   </div>
   <div
-    className="row mt-1"
+    className="row mt-2"
   >
     <div
       className="col-lg-6 col-sm-12"
@@ -858,6 +860,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
+        className="mr-2 mb-2"
         disabled={true}
         label="Primary"
         type="primary"
@@ -865,6 +868,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
+        className="mr-2 mb-2"
         disabled={true}
         label="Secondary"
         type="secondary"
@@ -872,6 +876,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
+        className="mr-2 mb-2"
         disabled={true}
         label="Text/Link"
         type="link"
@@ -879,6 +884,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
+        className="mr-2 mb-2"
         disabled={true}
         label="Guiding destructive"
         type="guiding-destructive"
@@ -886,6 +892,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
+        className="mr-2"
         disabled={true}
         label="Link destructive"
         type="link-destructive"
@@ -1017,6 +1024,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
+        className="mr-2 mb-2"
         disabled={true}
         label="Primary"
         loading={true}
@@ -1025,6 +1033,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
+        className="mr-2 mb-2"
         disabled={true}
         label="Secondary"
         loading={true}
@@ -1033,6 +1042,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
+        className="mr-2 mb-2"
         disabled={true}
         label="Guiding destructive"
         loading={true}
@@ -1101,6 +1111,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
+        className="mr-2"
         href="#"
         label="Anchor"
         type="primary"
@@ -1108,6 +1119,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
+        className="mr-2"
         label="Button"
         type="primary"
       />
@@ -1115,6 +1127,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
 
       <Button
         btnType="button"
+        className="mr-2"
         input={true}
         type="primary"
         value="Input"
@@ -1123,6 +1136,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
 
       <Button
         btnType="submit"
+        className="mr-2"
         input={true}
         type="primary"
         value="Submit"
