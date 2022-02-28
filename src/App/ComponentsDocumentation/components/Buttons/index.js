@@ -138,7 +138,7 @@ const CombiningButtons = () => (
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="button-group">{"\n"}
-                <ButtonComponent className="mr-2" type="primary" label="Activate" />{"\n"}
+                <ButtonComponent className="mr-1" type="primary" label="Activate" />{"\n"}
                 <ButtonComponent type="secondary" label="Disable" />{"\n"}
             </div>
         </ComponentPreview>
@@ -247,12 +247,12 @@ const DeveloperDocumentation = () => (
         <p>Make buttons look inactive by adding the <CodeTags type="secondary" code="disabled" /> boolean attribute to any <CodeTags type="primary" code={"<button>"} /> element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent className="mr-2 mb-2" disabled type="primary" label="Primary" />{"\n"}
-                <ButtonComponent className="mr-2 mb-2" disabled type="secondary" label="Secondary" />{"\n"}
-                <ButtonComponent className="mr-2 mb-2" disabled type="link" label="Text/Link" />{"\n"}
-                <ButtonComponent className="mr-2 mb-2" disabled type="guiding-destructive" label="Guiding destructive" />{"\n"}
-                <ButtonComponent className="mr-2" disabled type="link-destructive" label="Link destructive" />{"\n"}
-                <ButtonComponent disabled type="executive-destructive" label="Executive destructive" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled type="primary" label="Primary" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled type="secondary" label="Secondary" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled type="link" label="Link" />{"\n"}
+                <ButtonComponent disabled type="executive-destructive" label="Destructive Executive" />{"\n"}
+                <ButtonComponent className="mr-1" disabled type="guiding-destructive" label="Guiding destructive" />{"\n"}
+                <ButtonComponent className="mr-1" disabled type="link-destructive" label="Destructive link" />{"\n"}
 
             </div>
         </ComponentPreview>
@@ -269,10 +269,10 @@ const DeveloperDocumentation = () => (
         <p>Use the loading state to show users their action is processing by adding the <CodeTags type="primary" code={".loading"}/> class to the <CodeTags type="primary" code={"<button>"}/> element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent className="mr-2 mb-2" disabled loading type="primary" label="Primary" />{"\n"}
-                <ButtonComponent className="mr-2 mb-2" disabled loading type="secondary" label="Secondary" />{"\n"}
-                <ButtonComponent className="mr-2 mb-2" disabled loading type="guiding-destructive" label="Guiding destructive" />{"\n"}
-                <ButtonComponent disabled loading type="executive-destructive" label="Executive destructive" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled loading type="primary" label="Primary" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled loading type="secondary" label="Secondary" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled loading type="guiding-destructive" label="Guiding destructive" />{"\n"}
+                <ButtonComponent className="mr-1 " disabled loading type="executive-destructive" label="Executive destructive" />{"\n"}
 
             </div>
         </ComponentPreview>
@@ -286,11 +286,11 @@ const DeveloperDocumentation = () => (
         a <CodeTags type="secondary" code={"role=\"button\""} /> to appropriately convey their purpose to assistive technologies such as screen readers.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent className="mr-2" type="primary" label="Anchor" href="#" />{"\n"}
-                <ButtonComponent className="mr-2" type="primary" label="Button" />{"\n"}
-                <ButtonComponent className="mr-2" type="primary" input value="Input" btnType="button" />{"\n"}
-                <ButtonComponent className="mr-2" type="primary" input value="Submit" btnType="submit" />{"\n"}
-                <ButtonComponent type="primary" input value="Reset" btnType="reset" />{"\n"}
+                <ButtonComponent className="mr-1" type="primary" label="Anchor" href="#" />{"\n"}
+                <ButtonComponent className="mr-1" type="primary" label="Button" />{"\n"}
+                <ButtonComponent className="mr-1" type="primary" input value="Input" btnType="button" />{"\n"}
+                <ButtonComponent className="mr-1" type="primary" input value="Submit" btnType="submit" />{"\n"}
+                <ButtonComponent className="mr-1" type="primary" input value="Reset" btnType="reset" />{"\n"}
             </div>
         </ComponentPreview>
     </>
