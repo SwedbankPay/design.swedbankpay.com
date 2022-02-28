@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: Buttons Combining buttons renders 1`] = `
-<Fragment>
+<section>
   <h2
     id="combining-buttons"
   >
@@ -32,7 +32,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
       
 
       <Button
-        className="mr-2"
+        className="mr-1"
         label="Activate"
         type="primary"
       />
@@ -267,8 +267,8 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
         >
           <Button
             className="justify-content-center mb-2"
-            label="Primary action"
-            type="primary"
+            label="Executive destructive action"
+            type="executive-destructive"
           />
           <Button
             className="justify-content-center mb-2"
@@ -323,11 +323,11 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
       </p>
     </div>
   </div>
-</Fragment>
+</section>
 `;
 
 exports[`Documentation: Buttons Content guidelines renders 1`] = `
-<Fragment>
+<section>
   <h2
     id="content-guidelines"
   >
@@ -431,11 +431,11 @@ exports[`Documentation: Buttons Content guidelines renders 1`] = `
       </p>
     </div>
   </div>
-</Fragment>
+</section>
 `;
 
 exports[`Documentation: Buttons Destructive button renders 1`] = `
-<Fragment>
+<section>
   <h2
     id="destructive-button"
   >
@@ -699,6 +699,14 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
                       },
                     },
                     Object {
+                      "name": "Loading",
+                      "value": Object {
+                        "disabled": true,
+                        "loader": true,
+                        "loading": true,
+                      },
+                    },
+                    Object {
                       "name": "Disabled",
                       "value": Object {
                         "disabled": true,
@@ -822,11 +830,11 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
       </p>
     </div>
   </div>
-</Fragment>
+</section>
 `;
 
 exports[`Documentation: Buttons Developer documentation renders 1`] = `
-<Fragment>
+<section>
   <h2
     id="developer-documentation"
   >
@@ -839,7 +847,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
     Make buttons look inactive by adding the 
     <CodeTags
       code="disabled"
-      type="secondary"
+      type="primary"
     />
      boolean attribute to any 
     <CodeTags
@@ -860,7 +868,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-2 mb-2"
+        className="mr-1 mb-2"
         disabled={true}
         label="Primary"
         type="primary"
@@ -868,7 +876,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-2 mb-2"
+        className="mr-1 mb-2"
         disabled={true}
         label="Secondary"
         type="secondary"
@@ -876,15 +884,23 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-2 mb-2"
+        className="mr-1 mb-2"
         disabled={true}
-        label="Text/Link"
+        label="Link"
         type="link"
       />
       
 
       <Button
-        className="mr-2 mb-2"
+        className="mr-1 mb-2"
+        disabled={true}
+        label="Destructive Executive"
+        type="executive-destructive"
+      />
+      
+
+      <Button
+        className="mr-1"
         disabled={true}
         label="Guiding destructive"
         type="guiding-destructive"
@@ -892,17 +908,10 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-2"
+        className="mr-1"
         disabled={true}
-        label="Link destructive"
+        label="Destructive link"
         type="link-destructive"
-      />
-      
-
-      <Button
-        disabled={true}
-        label="Executive destructive"
-        type="executive-destructive"
       />
       
 
@@ -994,7 +1003,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
          attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
       </p>
     }
-    type="warning"
+    type="informative"
   />
   <h3>
     Loading state
@@ -1024,7 +1033,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-2 mb-2"
+        className="mr-1 mb-2"
         disabled={true}
         label="Primary"
         loading={true}
@@ -1033,7 +1042,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-2 mb-2"
+        className="mr-1 mb-2"
         disabled={true}
         label="Secondary"
         loading={true}
@@ -1042,19 +1051,38 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-2 mb-2"
+        className="mr-1 mb-2"
         disabled={true}
-        label="Guiding destructive"
+        label="Link"
+        loading={true}
+        type="link"
+      />
+      
+
+      <Button
+        className="mr-1 "
+        disabled={true}
+        label="Destructive executive"
+        loading={true}
+        type="executive-destructive"
+      />
+      
+
+      <Button
+        className="mr-1 mb-2"
+        disabled={true}
+        label="Destructive guiding"
         loading={true}
         type="guiding-destructive"
       />
       
 
       <Button
+        className="mr-1 mb-2"
         disabled={true}
-        label="Executive destructive"
+        label="Destructive link"
         loading={true}
-        type="executive-destructive"
+        type="link-destructive"
       />
       
 
@@ -1111,7 +1139,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-2"
+        className="mr-1"
         href="#"
         label="Anchor"
         type="primary"
@@ -1119,7 +1147,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-2"
+        className="mr-1"
         label="Button"
         type="primary"
       />
@@ -1127,7 +1155,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
 
       <Button
         btnType="button"
-        className="mr-2"
+        className="mr-1"
         input={true}
         type="primary"
         value="Input"
@@ -1136,7 +1164,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
 
       <Button
         btnType="submit"
-        className="mr-2"
+        className="mr-1"
         input={true}
         type="primary"
         value="Submit"
@@ -1145,6 +1173,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
 
       <Button
         btnType="reset"
+        className="mr-1"
         input={true}
         type="primary"
         value="Reset"
@@ -1153,11 +1182,11 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
 
     </div>
   </ComponentPreview>
-</Fragment>
+</section>
 `;
 
 exports[`Documentation: Buttons Overview renders 1`] = `
-<Fragment>
+<section>
   <h2
     id="overview"
   >
@@ -1497,6 +1526,14 @@ exports[`Documentation: Buttons Overview renders 1`] = `
                       },
                     },
                     Object {
+                      "name": "Loading",
+                      "value": Object {
+                        "disabled": true,
+                        "loader": true,
+                        "loading": true,
+                      },
+                    },
+                    Object {
                       "name": "Disabled",
                       "value": Object {
                         "disabled": true,
@@ -1515,7 +1552,7 @@ exports[`Documentation: Buttons Overview renders 1`] = `
       }
     }
   />
-</Fragment>
+</section>
 `;
 
 exports[`Documentation: Buttons renders 1`] = `

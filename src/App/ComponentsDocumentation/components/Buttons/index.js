@@ -11,15 +11,15 @@ import { Link } from "react-router-dom";
 const basename = process.env.basename;
 
 const Overview = () => (
-    <>
+    <section>
         <h2 id="overview">Button variants</h2>
         <p>There are three different sizes of buttons to choose from: xsmall, small and large. Our button variants can also be customized with icons next to the label to clarify the action. </p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewButtons} codeFigure />
-    </>
+    </section>
 );
 
 const DestructiveButton = () => (
-    <>
+    <section>
         <h2 id="destructive-button">Destructive button</h2>
         <p>
             Only use warning buttons for actions with serious destructive consequences that cannot be easily recovered or undone by a user.
@@ -70,11 +70,11 @@ const DestructiveButton = () => (
                 <p>Avoid using multiple Executive Destructive Buttons in the same user flow.</p>
             </div>
         </div>
-    </>
+    </section>
 );
 
 const ContentGuidelines = () => (
-    <>
+    <section>
         <h2 id="content-guidelines">Content guidelines</h2>
         <p>
             {"The intention of a button should be clear and predictable. Users should be able to anticipate what will happen when they click on a button. Buttons should always lead with a strong verb that encourages action. Provide enough context for users by using the {verb} + {noun} content formula instead of using “Yes”, “Confirm”, “Cancel” – except when it comes to the Text Button, which commonly uses “Cancel”. To avoid buttons breaking in smaller interfaces due to long names, always check that the button looks OK in a mobile view. Generally, try to keep the number of characters fairly low to provide more clarity."}
@@ -124,12 +124,11 @@ const ContentGuidelines = () => (
                 <p>Use an icon to further convey the action, e.g. a trashcan icon for a delete button.</p>
             </div>
         </div>
-    </>
+    </section>
 );
 
 const CombiningButtons = () => (
-    <>
-        {/* Her */}
+    <section>
         <h2 id="combining-buttons">Combining buttons</h2>
         <p>
             When using buttons next to each other, always wrap them in a <CodeTags type="primary" code=".button-group" /> and make sure to use 8px spacing
@@ -237,11 +236,11 @@ const CombiningButtons = () => (
                 <p>Don&apos;t use multiple Primary buttons or combine with BankID button.</p>
             </div>
         </div>
-    </>
+    </section>
 );
 
 const DeveloperDocumentation = () => (
-    <>
+    <section>
         <h2 id="developer-documentation">Developer documentation</h2>
         <h3>Disabled state</h3>
         <p>Make buttons look inactive by adding the <CodeTags type="primary" code="disabled" /> boolean attribute to any <CodeTags type="primary" code={"<button>"} /> element.</p>
@@ -295,7 +294,7 @@ const DeveloperDocumentation = () => (
                 <ButtonComponent className="mr-1" type="primary" input value="Reset" btnType="reset" />{"\n"}
             </div>
         </ComponentPreview>
-    </>
+    </section>
 );
 
 const Buttons = () => (
