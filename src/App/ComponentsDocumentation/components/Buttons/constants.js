@@ -73,7 +73,8 @@ export const overviewButtons = {
                                 name: "Loading",
                                 value: {
                                     loader: true,
-                                    loading: true
+                                    loading: true,
+                                    disabled: true
                                 }
                             },
                             {
@@ -93,20 +94,6 @@ export const overviewButtons = {
             tab: "BankID",
             component: <ButtonComponent type="primary" bankId="se" label="Link button" />,
             options: {
-                checkbox: [
-                    {
-                        inputs: [
-                            {
-                                id: "loader_check",
-                                name: "Loader",
-                                value: {
-                                    loader: true,
-                                    loading: true
-                                }
-                            }
-                        ]
-                    }
-                ],
                 radio: [
                     {
                         id: "country_radio",
@@ -122,6 +109,34 @@ export const overviewButtons = {
                                 name: "Norway",
                                 value: {
                                     bankId: "no"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        id: "loading_icon",
+                        title: "State modifiers",
+                        values: [
+                            {
+                                name: "Enabled",
+                                value: {
+                                    loader: false,
+                                    loading: false,
+                                    disabled: false
+                                }
+                            },
+                            {
+                                name: "Loading",
+                                value: {
+                                    loader: true,
+                                    loading: true,
+                                    disabled: true
+                                }
+                            },
+                            {
+                                name: "Disabled",
+                                value: {
+                                    disabled: true
                                 }
                             }
                         ]
@@ -207,7 +222,8 @@ export const overviewButtons = {
                                 name: "Loading",
                                 value: {
                                     loader: true,
-                                    loading: true
+                                    loading: true,
+                                    disabled: true
                                 }
                             },
                             {
@@ -334,7 +350,8 @@ export const destructiveButtons = {
                             {
                                 name: "After",
                                 value: {
-                                    iconAfter: "keyboard_arrow_down"
+                                    icon: "keyboard_arrow_down",
+                                    iconAfter: true
                                 }
                             }
                         ]
@@ -379,7 +396,8 @@ export const destructiveButtons = {
                                 name: "Loading",
                                 value: {
                                     loader: true,
-                                    loading: true
+                                    loading: true,
+                                    disabled: true
                                 }
                             },
                             {
@@ -426,7 +444,8 @@ export const destructiveButtons = {
                             {
                                 name: "After",
                                 value: {
-                                    iconAfter: "keyboard_arrow_down"
+                                    icon: "keyboard_arrow_down",
+                                    iconAfter: true
                                 }
                             }
                         ]
@@ -471,7 +490,8 @@ export const destructiveButtons = {
                                 name: "Loading",
                                 value: {
                                     loader: true,
-                                    loading: true
+                                    loading: true,
+                                    disabled: true
                                 }
                             },
                             {
@@ -507,7 +527,8 @@ export const destructiveButtons = {
                             {
                                 name: "After",
                                 value: {
-                                    iconAfter: "keyboard_arrow_down"
+                                    icon: "keyboard_arrow_down",
+                                    iconAfter: true
                                 }
                             }
                         ]

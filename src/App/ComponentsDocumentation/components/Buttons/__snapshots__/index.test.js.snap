@@ -66,12 +66,12 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           className="d-flex flex-column button-group mt-4 "
         >
           <Button
-            className="mb-3 justify-content-center"
+            className="justify-content-center"
             label="Primary action"
             type="primary"
           />
           <Button
-            className="mb-3 justify-content-center"
+            className="justify-content-center"
             label="Secondary action"
             type="secondary"
           />
@@ -101,12 +101,10 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           className="d-flex button-group mt-4  align-items-center"
         >
           <Button
-            className="mr-3"
             label="Primary"
             type="primary"
           />
           <Button
-            className=""
             label="Secondary"
             type="secondary"
           />
@@ -135,7 +133,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           className="d-flex flex-column button-group mt-4"
         >
           <Button
-            className="mb-3 justify-content-center"
+            className="justify-content-center"
             label="Primary action"
             type="primary"
           />
@@ -165,7 +163,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           className="d-flex flex-column button-group mt-4 "
         >
           <Button
-            className="mb-3 justify-content-center"
+            className="justify-content-center"
             label="Executive destructive action"
             type="executive-destructive"
           />
@@ -202,7 +200,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           className="d-flex flex-column button-group mt-4 "
         >
           <Button
-            className="mb-3 justify-content-center"
+            className="justify-content-center"
             label="Secondary action"
             type="secondary"
           />
@@ -232,7 +230,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           className="d-flex flex-column button-group mt-4 "
         >
           <Button
-            className="mb-3 justify-content-center"
+            className="justify-content-center"
             label="Primary action"
             type="primary"
           />
@@ -266,12 +264,12 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           className="d-flex flex-column button-group mt-4 "
         >
           <Button
-            className="mb-3 justify-content-center"
+            className="justify-content-center"
             label="Primary action"
             type="primary"
           />
           <Button
-            className="justify-content-center mb-3"
+            className="justify-content-center"
             label="Destructive guiding action"
             type="guiding-destructive"
           />
@@ -301,13 +299,13 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           className="d-flex flex-column button-group mt-4 "
         >
           <Button
-            className="mb-3 justify-content-center"
+            className="justify-content-center"
             label="Primary action"
             type="primary"
           />
           <Button
             bankId="se"
-            className="mb-3 justify-content-center"
+            className="justify-content-center"
             label="Primary action"
             type="primary"
           />
@@ -413,7 +411,7 @@ exports[`Documentation: Buttons Content guidelines renders 1`] = `
           className="d-flex button-group flex-column align-items-center justify-content-center mt-4 mb-4"
         >
           <Button
-            className="justify-content-center mb-3 w-50"
+            className="justify-content-center w-50"
             icon="delete"
             label="Delete"
             type="guiding-destructive"
@@ -482,7 +480,8 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
                     Object {
                       "name": "After",
                       "value": Object {
-                        "iconAfter": "keyboard_arrow_down",
+                        "icon": "keyboard_arrow_down",
+                        "iconAfter": true,
                       },
                     },
                   ],
@@ -526,6 +525,7 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
                     Object {
                       "name": "Loading",
                       "value": Object {
+                        "disabled": true,
                         "loader": true,
                         "loading": true,
                       },
@@ -567,7 +567,8 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
                     Object {
                       "name": "After",
                       "value": Object {
-                        "iconAfter": "keyboard_arrow_down",
+                        "icon": "keyboard_arrow_down",
+                        "iconAfter": true,
                       },
                     },
                   ],
@@ -611,6 +612,7 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
                     Object {
                       "name": "Loading",
                       "value": Object {
+                        "disabled": true,
                         "loader": true,
                         "loading": true,
                       },
@@ -652,7 +654,8 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
                     Object {
                       "name": "After",
                       "value": Object {
-                        "iconAfter": "keyboard_arrow_down",
+                        "icon": "keyboard_arrow_down",
+                        "iconAfter": true,
                       },
                     },
                   ],
@@ -1225,6 +1228,7 @@ exports[`Documentation: Buttons Overview renders 1`] = `
                     Object {
                       "name": "Loading",
                       "value": Object {
+                        "disabled": true,
                         "loader": true,
                         "loading": true,
                       },
@@ -1257,20 +1261,6 @@ exports[`Documentation: Buttons Overview renders 1`] = `
               </p>
             </React.Fragment>,
             "options": Object {
-              "checkbox": Array [
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "loader_check",
-                      "name": "Loader",
-                      "value": Object {
-                        "loader": true,
-                        "loading": true,
-                      },
-                    },
-                  ],
-                },
-              ],
               "radio": Array [
                 Object {
                   "id": "country_radio",
@@ -1286,6 +1276,34 @@ exports[`Documentation: Buttons Overview renders 1`] = `
                       "name": "Norway",
                       "value": Object {
                         "bankId": "no",
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "loading_icon",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Enabled",
+                      "value": Object {
+                        "disabled": false,
+                        "loader": false,
+                        "loading": false,
+                      },
+                    },
+                    Object {
+                      "name": "Loading",
+                      "value": Object {
+                        "disabled": true,
+                        "loader": true,
+                        "loading": true,
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
                       },
                     },
                   ],
@@ -1372,6 +1390,7 @@ exports[`Documentation: Buttons Overview renders 1`] = `
                     Object {
                       "name": "Loading",
                       "value": Object {
+                        "disabled": true,
                         "loader": true,
                         "loading": true,
                       },
