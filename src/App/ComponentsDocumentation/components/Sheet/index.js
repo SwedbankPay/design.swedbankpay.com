@@ -45,12 +45,12 @@ const SheetExample = () => (
                 <p>Do not allow horizontal scrolling in a Sheet or layout that suggests horizontal scrolling.</p>
             </div>
         </div>
-        <div className="row">
+        <div className="row mt-2">
             <div className="col-12">
                 <div className="slab slab-plain slab-border-success">
                     <h3>Do</h3>
                     <div className="d-flex flex-column align-items-center">
-                        <img src={`${basename}img/documentation/sheet/do2.png`}alt="Sheet component in mobile view. Displaying filter example." className="img-fluid"/>
+                        <img src={`${basename}img/documentation/sheet/do2.png`}alt="Sheet component in mobile view. Displaying filter example." className="w-50"/>
                     </div>
                 </div>
                 <p>A Sheet can be used as a container for filter functionality. This is especially helpful on small screens like mobile device where space is limited and can’t fit filter components inline with the content.</p>
