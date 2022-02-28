@@ -250,7 +250,7 @@ const DeveloperDocumentation = () => (
                 <ButtonComponent className="mr-1 mb-2" disabled type="primary" label="Primary" />{"\n"}
                 <ButtonComponent className="mr-1 mb-2" disabled type="secondary" label="Secondary" />{"\n"}
                 <ButtonComponent className="mr-1 mb-2" disabled type="link" label="Link" />{"\n"}
-                <ButtonComponent disabled type="executive-destructive" label="Destructive Executive" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled type="executive-destructive" label="Destructive Executive" />{"\n"}
                 <ButtonComponent className="mr-1" disabled type="guiding-destructive" label="Guiding destructive" />{"\n"}
                 <ButtonComponent className="mr-1" disabled type="link-destructive" label="Destructive link" />{"\n"}
 

@@ -5,14 +5,14 @@ import classnames from "classnames";
 const Button = ({ label, id, name, className, value, href, icon, loading, type, disabled, btnType, fullWidth, input, active, size, bankId, iconAfter }) => {
     const btnClasses = classnames(
         "btn",
-        className ? className : null,
         type ? `btn-${type}` : null,
         size ? `btn-${size}` : null,
         loading ? "loading" : null,
         fullWidth ? "btn-block" : null,
         active && href ? "active" : null,
         disabled && href ? "disabled" : null,
-        bankId ? "btn-bank-id" : null
+        bankId ? "btn-bank-id" : null,
+        className ? className : null
     );
 
     const attrs = {
@@ -44,9 +44,9 @@ const Button = ({ label, id, name, className, value, href, icon, loading, type, 
 
     return (
         <button className={btnClasses} {...attrs}>{icon ? "\n\t\t" : null}
-            {icon && !iconAfter ? <><i className="material-icons" aria-hidden="true">{icon}</i>{"\n\t\t"}</> : null}
-            {((icon && label) || type === "link" || type === "link-destructive" || bankId) ? <span>{label}</span> : label}{icon ? "\n\t" : null}
-            {bankId ? <><i className={`bank-id bank-id-${bankId}`} />{"\n\t\t"}</> : null}
+            {icon && !iconAfter ? <><i className="material-icons" aria-hidden="true">{icon}</i>{"\n\t"}</> : null}
+            {((icon && label) || type === "link" || type === "link-destructive" || bankId) ? <>{bankId ? "\n" : null}<span>{label}</span></> : label}{icon ? "\n\t" : null}
+            {bankId ? <>{"\n"}<i className={`bank-id bank-id-${bankId}`} />{"\n"}</> : null}
             {loading ? <></> : <>{icon && iconAfter ? <><i className="material-icons ml-2" aria-hidden="true">{icon}</i>{"\n\t\t"}</> : null}</>}
         </button>
     );
