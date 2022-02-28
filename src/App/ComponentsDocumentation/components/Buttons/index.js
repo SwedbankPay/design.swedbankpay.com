@@ -218,7 +218,7 @@ const CombiningButtons = () => (
                 <div className="slab slab-plain slab-border-error pb-5">
                     <h4 className="mb-3 mt-0">Don&apos;t</h4>
                     <div className="d-flex flex-column button-group mt-4 ">
-                        <ButtonComponent className="justify-content-center mb-2" type="primary" label="Primary action"/>
+                        <ButtonComponent className="justify-content-center mb-2" type="executive-destructive" label="Executive destructive action"/>
                         <ButtonComponent className="justify-content-center mb-2" type="guiding-destructive" label="Destructive guiding action"/>
                         <ButtonComponent className="justify-content-center" type="link-destructive" label="Cancel"/>
                     </div>
@@ -244,7 +244,7 @@ const DeveloperDocumentation = () => (
     <>
         <h2 id="developer-documentation">Developer documentation</h2>
         <h3>Disabled state</h3>
-        <p>Make buttons look inactive by adding the <CodeTags type="secondary" code="disabled" /> boolean attribute to any <CodeTags type="primary" code={"<button>"} /> element.</p>
+        <p>Make buttons look inactive by adding the <CodeTags type="primary" code="disabled" /> boolean attribute to any <CodeTags type="primary" code={"<button>"} /> element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent className="mr-1 mb-2" disabled type="primary" label="Primary" />{"\n"}
@@ -263,7 +263,7 @@ const DeveloperDocumentation = () => (
             <li>Some future-friendly styles are included to disable all <CodeTags type="secondary" code="pointer-events" /> on anchor buttons. In browsers which support that property, you won’t see the disabled cursor at all.</li>
             <li>Disabled buttons should include the <CodeTags type="secondary" code={"aria-disabled=\"true\""} /> attribute to indicate the state of the element to assistive technologies.</li>
         </ul>
-        <Alert type="warning" icon="warning" text={<p><b>Link functionality:</b> The <CodeTags type="secondary" code=".disabled" /> class uses <CodeTags type="secondary" code="pointer-events: none" /> to try to disable the link functionality of <CodeTags type="primary" code={"<a>"} />s, but that CSS property is not yet standardized. In addition, even in browsers that do support <CodeTags type="secondary" code="pointer-events: none" />, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a <CodeTags type="secondary" code={"tabindex=\"-1\""} /> attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.</p>} />
+        <Alert type="informative" icon="warning" text={<p><b>Link functionality:</b> The <CodeTags type="secondary" code=".disabled" /> class uses <CodeTags type="secondary" code="pointer-events: none" /> to try to disable the link functionality of <CodeTags type="primary" code={"<a>"} />s, but that CSS property is not yet standardized. In addition, even in browsers that do support <CodeTags type="secondary" code="pointer-events: none" />, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a <CodeTags type="secondary" code={"tabindex=\"-1\""} /> attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.</p>} />
 
         <h3>Loading state</h3>
         <p>Use the loading state to show users their action is processing by adding the <CodeTags type="primary" code={".loading"}/> class to the <CodeTags type="primary" code={"<button>"}/> element.</p>
@@ -271,8 +271,10 @@ const DeveloperDocumentation = () => (
             <div className="button-group">{"\n"}
                 <ButtonComponent className="mr-1 mb-2" disabled loading type="primary" label="Primary" />{"\n"}
                 <ButtonComponent className="mr-1 mb-2" disabled loading type="secondary" label="Secondary" />{"\n"}
-                <ButtonComponent className="mr-1 mb-2" disabled loading type="guiding-destructive" label="Guiding destructive" />{"\n"}
-                <ButtonComponent className="mr-1 " disabled loading type="executive-destructive" label="Executive destructive" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled loading type="link" label="Link" />{"\n"}
+                <ButtonComponent className="mr-1 " disabled loading type="executive-destructive" label="Destructive executive" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled loading type="guiding-destructive" label="Destructive guiding" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled loading type="link-destructive" label="Destructive link" />{"\n"}
 
             </div>
         </ComponentPreview>
