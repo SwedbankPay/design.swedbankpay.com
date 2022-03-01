@@ -223,7 +223,7 @@ exports[`Component: Button - Button tag: renders a button with an icon when prop
     test
   </i>
   
-		
+	
   
 	
 </button>
@@ -260,7 +260,7 @@ exports[`Component: Button - Button tag: renders a button with icon and label wh
     icon
   </i>
   
-		
+	
   <span>
     test
   </span>

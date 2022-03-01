@@ -2,6 +2,87 @@ import React from "react";
 import ButtonComponent from "@components/Button";
 import { Link } from "react-router-dom";
 
+const ButtonOptions = idAddOn => (
+    {
+        radio: [
+            {
+                id: `${idAddOn ? idAddOn : ""}icon_radio`,
+                title: "Icon",
+                values: [
+                    {
+                        name: "None"
+                    },
+                    {
+                        name: "Before",
+                        value: {
+                            icon: "cloud"
+                        }
+                    },
+                    {
+                        name: "After",
+                        value: {
+                            icon: "keyboard_arrow_down",
+                            iconAfter: true
+                        }
+                    }
+                ]
+            },
+            {
+                id: `${idAddOn ? idAddOn : ""}size_radio`,
+                title: "Sizes",
+                values: [
+                    {
+                        name: "Large",
+                        value: {
+                            size: "lg"
+                        }
+                    },
+                    {
+                        name: "Small",
+                        value: {
+                            size: "sm"
+                        }
+                    },
+                    {
+                        name: "Extra small",
+                        value: {
+                            size: "xs"
+                        }
+                    }
+                ]
+            },
+            {
+                id: `${idAddOn ? idAddOn : ""}state_modifiers`,
+                title: "State modifiers",
+                values: [
+                    {
+                        name: "Enabled",
+                        value: {
+                            loader: false,
+                            loading: false,
+                            disabled: false
+                        }
+                    },
+                    {
+                        name: "Loading",
+                        value: {
+                            loader: true,
+                            loading: true,
+                            disabled: true
+                        }
+                    },
+                    {
+                        name: "Disabled",
+                        value: {
+                            disabled: true
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+);
+
 export const overviewButtons = {
     id: "overviewButtons",
     tabsId: "overviewButtonsTabs",
@@ -9,83 +90,7 @@ export const overviewButtons = {
         {
             tab: "Primary",
             component: <ButtonComponent type="primary" label="Link button" />,
-            options: {
-                radio: [
-                    {
-                        id: "icon_radio",
-                        title: "Icon",
-                        values: [
-                            {
-                                name: "None"
-                            },
-                            {
-                                name: "Before",
-                                value: {
-                                    icon: "cloud"
-                                }
-                            },
-                            {
-                                name: "After",
-                                value: {
-                                    icon: "keyboard_arrow_down",
-                                    iconAfter: true
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: "size_radio",
-                        title: "Sizes",
-                        values: [
-                            {
-                                name: "Large",
-                                value: {
-                                    size: "lg"
-                                }
-                            },
-                            {
-                                name: "Small",
-                                value: {
-                                    size: "sm"
-                                }
-                            },
-                            {
-                                name: "Extra small",
-                                value: {
-                                    size: "xs"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: "state_modifiers",
-                        title: "State modifiers",
-                        values: [
-                            {
-                                name: "Enabled",
-                                value: {
-                                    loader: false,
-                                    loading: false,
-                                    disabled: false
-                                }
-                            },
-                            {
-                                name: "Loading",
-                                value: {
-                                    loader: true,
-                                    loading: true
-                                }
-                            },
-                            {
-                                name: "Disabled",
-                                value: {
-                                    disabled: true
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
+            options: ButtonOptions(),
             title: "Primary button",
             description: "Use a primary button as the main call to action on a page. Avoid using multiple default buttons on a single page. Having more than one main call to action reduces their impact, and makes it harder for users to know what to do next."
         },
@@ -93,20 +98,6 @@ export const overviewButtons = {
             tab: "BankID",
             component: <ButtonComponent type="primary" bankId="se" label="Link button" />,
             options: {
-                checkbox: [
-                    {
-                        inputs: [
-                            {
-                                id: "loader_check",
-                                name: "Loader",
-                                value: {
-                                    loader: true,
-                                    loading: true
-                                }
-                            }
-                        ]
-                    }
-                ],
                 radio: [
                     {
                         id: "country_radio",
@@ -122,6 +113,34 @@ export const overviewButtons = {
                                 name: "Norway",
                                 value: {
                                     bankId: "no"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        id: "loading_icon",
+                        title: "State modifiers",
+                        values: [
+                            {
+                                name: "Enabled",
+                                value: {
+                                    loader: false,
+                                    loading: false,
+                                    disabled: false
+                                }
+                            },
+                            {
+                                name: "Loading",
+                                value: {
+                                    loader: true,
+                                    loading: true,
+                                    disabled: true
+                                }
+                            },
+                            {
+                                name: "Disabled",
+                                value: {
+                                    disabled: true
                                 }
                             }
                         ]
@@ -143,83 +162,7 @@ export const overviewButtons = {
         {
             tab: "Secondary",
             component: <ButtonComponent type="secondary" label="Link button" />,
-            options: {
-                radio: [
-                    {
-                        id: "icon_radio",
-                        title: "Icon",
-                        values: [
-                            {
-                                name: "None"
-                            },
-                            {
-                                name: "Before",
-                                value: {
-                                    icon: "cloud"
-                                }
-                            },
-                            {
-                                name: "After",
-                                value: {
-                                    icon: "keyboard_arrow_down",
-                                    iconAfter: true
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: "size_radio",
-                        title: "Sizes",
-                        values: [
-                            {
-                                name: "Large",
-                                value: {
-                                    size: "lg"
-                                }
-                            },
-                            {
-                                name: "Small",
-                                value: {
-                                    size: "sm"
-                                }
-                            },
-                            {
-                                name: "Extra small",
-                                value: {
-                                    size: "xs"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: "state_modifiers",
-                        title: "State modifiers",
-                        values: [
-                            {
-                                name: "Enabled",
-                                value: {
-                                    loader: false,
-                                    loading: false,
-                                    disabled: false
-                                }
-                            },
-                            {
-                                name: "Loading",
-                                value: {
-                                    loader: true,
-                                    loading: true
-                                }
-                            },
-                            {
-                                name: "Disabled",
-                                value: {
-                                    disabled: true
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
+            options: ButtonOptions(),
             title: "Secondary button",
             description: <p>
                 Use secondary buttons for secondary call to actions on a page.
@@ -232,76 +175,7 @@ export const overviewButtons = {
             tab: "Link",
             component: <ButtonComponent type="link" label="Link button" />,
             title: "Link button",
-            options: {
-                radio: [
-                    {
-                        id: "icon_radio",
-                        title: "Icon",
-                        values: [
-                            {
-                                name: "None"
-                            },
-                            {
-                                name: "Before",
-                                value: {
-                                    icon: "cloud"
-                                }
-                            },
-                            {
-                                name: "After",
-                                value: {
-                                    icon: "keyboard_arrow_down",
-                                    iconAfter: true
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: "size_radio",
-                        title: "Sizes",
-                        values: [
-                            {
-                                name: "Large",
-                                value: {
-                                    size: "lg"
-                                }
-                            },
-                            {
-                                name: "Small",
-                                value: {
-                                    size: "sm"
-                                }
-                            },
-                            {
-                                name: "Extra small",
-                                value: {
-                                    size: "xs"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: "state_modifiers",
-                        title: "State modifiers",
-                        values: [
-                            {
-                                name: "Enabled",
-                                value: {
-                                    loader: false,
-                                    loading: false,
-                                    disabled: false
-                                }
-                            },
-                            {
-                                name: "Disabled",
-                                value: {
-                                    disabled: true
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
+            options: ButtonOptions(),
             description: <p>
                 Only use in combination with a primary or secondary button – for stand alone links see <Link to="/components/links">Links</Link>. Use for less important or less commonly used actions since they’re less prominent. Text buttons are often embedded in contained components like dialogs.
             </p>
@@ -316,82 +190,7 @@ export const destructiveButtons = {
         {
             tab: "Guiding",
             component: <ButtonComponent type="guiding-destructive" label="Guiding button" />,
-            options: {
-                radio: [
-                    {
-                        id: "destructive_icon_radio",
-                        title: "Icon",
-                        values: [
-                            {
-                                name: "None"
-                            },
-                            {
-                                name: "Before",
-                                value: {
-                                    icon: "cloud"
-                                }
-                            },
-                            {
-                                name: "After",
-                                value: {
-                                    iconAfter: "keyboard_arrow_down"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: "destructive_size_radio",
-                        title: "Sizes",
-                        values: [
-                            {
-                                name: "Large",
-                                value: {
-                                    size: "lg"
-                                }
-                            },
-                            {
-                                name: "Small",
-                                value: {
-                                    size: "sm"
-                                }
-                            },
-                            {
-                                name: "Extra small",
-                                value: {
-                                    size: "xs"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: "destructive_state_modifiers",
-                        title: "State modifiers",
-                        values: [
-                            {
-                                name: "Enabled",
-                                value: {
-                                    loader: false,
-                                    loading: false,
-                                    disabled: false
-                                }
-                            },
-                            {
-                                name: "Loading",
-                                value: {
-                                    loader: true,
-                                    loading: true
-                                }
-                            },
-                            {
-                                name: "Disabled",
-                                value: {
-                                    disabled: true
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
+            options: ButtonOptions("destructive_"),
             title: "Destructive button",
             description: <>
                 <p>
@@ -408,156 +207,13 @@ export const destructiveButtons = {
             tab: "Executive",
             component: <ButtonComponent type="executive-destructive" label="Guiding button" />,
             title: "Executive destructive button",
-            options: {
-                radio: [
-                    {
-                        id: "destructive_icon_radio",
-                        title: "Icon",
-                        values: [
-                            {
-                                name: "None"
-                            },
-                            {
-                                name: "Before",
-                                value: {
-                                    icon: "cloud"
-                                }
-                            },
-                            {
-                                name: "After",
-                                value: {
-                                    iconAfter: "keyboard_arrow_down"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: "destructive_size_radio",
-                        title: "Sizes",
-                        values: [
-                            {
-                                name: "Large",
-                                value: {
-                                    size: "lg"
-                                }
-                            },
-                            {
-                                name: "Small",
-                                value: {
-                                    size: "sm"
-                                }
-                            },
-                            {
-                                name: "Extra small",
-                                value: {
-                                    size: "xs"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: "destructive_state_modifiers",
-                        title: "State modifiers",
-                        values: [
-                            {
-                                name: "Enabled",
-                                value: {
-                                    loader: false,
-                                    loading: false,
-                                    disabled: false
-                                }
-                            },
-                            {
-                                name: "Loading",
-                                value: {
-                                    loader: true,
-                                    loading: true
-                                }
-                            },
-                            {
-                                name: "Disabled",
-                                value: {
-                                    disabled: true
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
+            options: ButtonOptions("destructive_"),
             description: "The executive destructive button should be used sparingly and only in case of a final destructive call to action. The executive destructive button visually takes up a lot of the attention. To not distract the user from other content it is often used in simpler contexts such as dialogs, for example when confirming removal of certain information."
         },
         {
             tab: "Link",
             component: <ButtonComponent type="link-destructive" label="Guiding button" />,
-            options: {
-                radio: [
-                    {
-                        id: "destructive_icon_radio",
-                        title: "Icon",
-                        values: [
-                            {
-                                name: "None"
-                            },
-                            {
-                                name: "Before",
-                                value: {
-                                    icon: "cloud"
-                                }
-                            },
-                            {
-                                name: "After",
-                                value: {
-                                    iconAfter: "keyboard_arrow_down"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: "destructive_size_radio",
-                        title: "Sizes",
-                        values: [
-                            {
-                                name: "Large",
-                                value: {
-                                    size: "lg"
-                                }
-                            },
-                            {
-                                name: "Small",
-                                value: {
-                                    size: "sm"
-                                }
-                            },
-                            {
-                                name: "Extra small",
-                                value: {
-                                    size: "xs"
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: "destructive_state_modifiers",
-                        title: "State modifiers",
-                        values: [
-                            {
-                                name: "Enabled",
-                                value: {
-                                    loader: false,
-                                    loading: false,
-                                    disabled: false
-                                }
-                            },
-                            {
-                                name: "Disabled",
-                                value: {
-                                    disabled: true
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
+            options: ButtonOptions("destructive_"),
             title: "Destructive button",
             description: "The text destructive button is used as an alternative for the guiding destructive button and can be used when there is limited space, within other components or various containers."
         }

@@ -381,7 +381,7 @@
 
             @media (min-width: @screen-md-min) {
                 a {
-                    max-width: 21rem;
+                    max-width: 20.5rem;
                 }
             }
 
@@ -734,6 +734,18 @@
 
                         &.hidden {
                             display: none;
+                        }
+
+                        button {
+                            &.open-options-menu {
+                                all: unset;
+                            }
+
+                            &:focus {
+                                border-radius: 0.125rem;
+                                box-shadow: 0 0 0 2px @black;
+                                outline: none;
+                            }
                         }
                     }
                 }
