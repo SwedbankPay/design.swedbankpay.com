@@ -32,7 +32,7 @@ exports[`Documentation: Sheet ContentGuidelines renders 1`] = `
       <b>
         footer
       </b>
-       is optional and designed to contain buttons that will lead to certain actions. The footer is also sticky.
+       is optional and designed to contain buttons that will lead to certain actions.
     </li>
   </ul>
 </section>

@@ -67,7 +67,7 @@ const ContentGuidelines = () => (
         <ul className="list list-bullet">
             <li>The <b>header</b> should have a title and a close button.</li>
             <li>The <b>main content</b> area can contain a number of different components and this area can be vertically scrollable.</li>
-            <li>The <b>footer</b> is optional and designed to contain buttons that will lead to certain actions. The footer is also sticky.</li>
+            <li>The <b>footer</b> is optional and designed to contain buttons that will lead to certain actions.</li>
         </ul>
 
     </section>
