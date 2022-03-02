@@ -89,14 +89,14 @@ export const overviewButtons = {
     elements: [
         {
             tab: "Primary",
-            component: <ButtonComponent type="primary" label="Link button" />,
+            component: <ButtonComponent type="primary" label="Primary button" />,
             options: ButtonOptions(),
             title: "Primary button",
             description: "Use a primary button as the main call to action on a page. Avoid using multiple default buttons on a single page. Having more than one main call to action reduces their impact, and makes it harder for users to know what to do next."
         },
         {
             tab: "BankID",
-            component: <ButtonComponent type="primary" bankId="se" label="Link button" />,
+            component: <ButtonComponent type="primary" bankId="se" label="BankId button" />,
             options: {
                 radio: [
                     {
@@ -161,7 +161,7 @@ export const overviewButtons = {
         },
         {
             tab: "Secondary",
-            component: <ButtonComponent type="secondary" label="Link button" />,
+            component: <ButtonComponent type="secondary" label="Secondary button" />,
             options: ButtonOptions(),
             title: "Secondary button",
             description: <p>
@@ -189,7 +189,7 @@ export const destructiveButtons = {
     elements: [
         {
             tab: "Guiding",
-            component: <ButtonComponent type="guiding-destructive" label="Guiding button" />,
+            component: <ButtonComponent type="guiding-destructive" label="Guiding destructive button" />,
             options: ButtonOptions("destructive_"),
             title: "Destructive button",
             description: <>
@@ -205,14 +205,14 @@ export const destructiveButtons = {
         },
         {
             tab: "Executive",
-            component: <ButtonComponent type="executive-destructive" label="Guiding button" />,
+            component: <ButtonComponent type="executive-destructive" label="Executive destructive button" />,
             title: "Executive destructive button",
             options: ButtonOptions("destructive_"),
             description: "The executive destructive button should be used sparingly and only in case of a final destructive call to action. The executive destructive button visually takes up a lot of the attention. To not distract the user from other content it is often used in simpler contexts such as dialogs, for example when confirming removal of certain information."
         },
         {
             tab: "Link",
-            component: <ButtonComponent type="link-destructive" label="Guiding button" />,
+            component: <ButtonComponent type="link-destructive" label="Link destructive button" />,
             options: ButtonOptions("destructive_"),
             title: "Destructive button",
             description: "The text destructive button is used as an alternative for the guiding destructive button and can be used when there is limited space, within other components or various containers."
