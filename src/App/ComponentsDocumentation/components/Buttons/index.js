@@ -265,7 +265,7 @@ const DeveloperDocumentation = () => (
         <Alert type="informative" icon="warning" text={<p><b>Link functionality:</b> The <CodeTags type="secondary" code=".disabled" /> class uses <CodeTags type="secondary" code="pointer-events: none" /> to try to disable the link functionality of <CodeTags type="primary" code={"<a>"} />s, but that CSS property is not yet standardized. In addition, even in browsers that do support <CodeTags type="secondary" code="pointer-events: none" />, keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a <CodeTags type="secondary" code={"tabindex=\"-1\""} /> attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.</p>} />
 
         <h3>Loading state</h3>
-        <p>Use the loading state to show users their action is processing by adding the <CodeTags type="primary" code={".loading"}/> class to the <CodeTags type="primary" code={"<button>"}/> element.</p>
+        <p>Use the loading state to show users their action is processing by adding the <CodeTags type="primary" code={".loading"}/> class to the <CodeTags type="primary" code={"<button>"}/> element, and the <CodeTags type="primary" code={"disabled"}/> attribute.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <ButtonComponent className="mr-1 mb-2" disabled loading type="primary" label="Primary" />{"\n"}
