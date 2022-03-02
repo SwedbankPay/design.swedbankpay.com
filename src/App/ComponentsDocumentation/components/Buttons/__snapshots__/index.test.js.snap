@@ -453,7 +453,7 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
         "elements": Array [
           Object {
             "component": <Button
-              label="Guiding button"
+              label="Guiding destructive button"
               type="guiding-destructive"
             />,
             "description": <React.Fragment>
@@ -547,7 +547,7 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
           },
           Object {
             "component": <Button
-              label="Guiding button"
+              label="Executive destructive button"
               type="executive-destructive"
             />,
             "description": "The executive destructive button should be used sparingly and only in case of a final destructive call to action. The executive destructive button visually takes up a lot of the attention. To not distract the user from other content it is often used in simpler contexts such as dialogs, for example when confirming removal of certain information.",
@@ -634,7 +634,7 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
           },
           Object {
             "component": <Button
-              label="Guiding button"
+              label="Link destructive button"
               type="link-destructive"
             />,
             "description": "The text destructive button is used as an alternative for the guiding destructive button and can be used when there is limited space, within other components or various containers.",
@@ -1019,7 +1019,12 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       code="<button>"
       type="primary"
     />
-     element.
+     element, and the 
+    <CodeTags
+      code="disabled"
+      type="primary"
+    />
+     attribute.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -1204,7 +1209,7 @@ exports[`Documentation: Buttons Overview renders 1`] = `
         "elements": Array [
           Object {
             "component": <Button
-              label="Link button"
+              label="Primary button"
               type="primary"
             />,
             "description": "Use a primary button as the main call to action on a page. Avoid using multiple default buttons on a single page. Having more than one main call to action reduces their impact, and makes it harder for users to know what to do next.",
@@ -1292,7 +1297,7 @@ exports[`Documentation: Buttons Overview renders 1`] = `
           Object {
             "component": <Button
               bankId="se"
-              label="Link button"
+              label="BankId button"
               type="primary"
             />,
             "description": <React.Fragment>
@@ -1358,7 +1363,7 @@ exports[`Documentation: Buttons Overview renders 1`] = `
           },
           Object {
             "component": <Button
-              label="Link button"
+              label="Secondary button"
               type="secondary"
             />,
             "description": <p>
