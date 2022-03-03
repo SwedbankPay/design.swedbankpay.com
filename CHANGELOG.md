@@ -2,31 +2,42 @@
 
 ## [8.0.0] - 02.03.2022
 
-## Changed
-- Accordion: "for developer"-documentation
-- Button: component and documentation
-- Input-field: documentation
-- Pagination: component and documentation
-- Sheet: component, script and documentation
-- Browser support documentation
-- Design guide content container width
-- Logotype: asset folder and documentation
-- Size H1 mobile & H2 desktop
-- Status-badges
+## Breaking changes
+-   Pagination component has got a new design and along comes a script as well!
 
-## Fixes
-- Extended sidebar, forth level
-- Radio-button is now tabable
-- Select component - text overlapping arrow
-- Tabs documentation bugs
+## Changed
+-   Accordion
+    -   Updated description under Developer documentation to be more intuitive
+-   Button
+    -   Now supports icon after
+    -   Some styling changes
+    -   Documentation
+-   Input-field
+    -   Implemented postfix
+    -   Documentation 
+-   Sheet
+    -   Now supports a footer
+    -   Updated scripts to handle focus/tabbing inside the component
+    -   Documentation
+-   Logotype
+    -   Updated logotype assets folder(updated logos)
+    -   Documentation
+-   Browser support documentation
+-   Design guide doc-container width(is now a tiny bit smaller)
+-   Size H1 mobile & H2 desktop is now 28px, up from 24px
 
 ## Added
-- Accessibility:
-    - Aria-labels
-    - Labels for= - attributes
-    - Error text
-    - Form/Fieldset sections grouped
-    - Auto focus when modal is opened
-- Hotjar tracking code
-- Pagination script
-- Postfix on input-field
+-   Accessibility improvements for various components:
+    -   Aria-labels
+    -   Labels for= - attributes
+    -   Error text
+    -   Form/Fieldset sections grouped
+    -   Auto focus when modal is opened
+-   Hotjar tracking code
+
+## Fixed
+-   Fourth level of extended sidebar did not show
+-   Tabbing issues with Radio-buttons
+-   Text overlapping arrow-button on the Select component
+-   Bug on Tabs examples in the documentation
+
