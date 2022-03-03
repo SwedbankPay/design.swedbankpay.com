@@ -27,9 +27,11 @@ const Overview = () => (
                 <div className="toast-example-container col-sm-10 col-12 p-0">
                     <div id="toast-container" className="col-12 ml-auto mt-3 p-0">
                         <div className="toast toast-neutral col-sm-11 col-12">
-                            <i className="material-icons">info</i>
+                            <i className="material-icons" aria-hidden="true">info</i>
                             <div className="toast-content"><b>Short information message</b></div>
-                            <i className="material-icons">close</i>
+                            <button className="toast-close ml-auto" aria-label="Close button">
+                                <i className="material-icons">close</i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -41,9 +43,11 @@ const Overview = () => (
                 <div className="toast-example-container col-sm-11 col-12 my-5 mx-auto">
                     <div id="toast-container" className="toast-dont-example col-12 m-auto px-0">
                         <div className="toast toast-neutral">
-                            <i className="material-icons">info</i>
+                            <i className="material-icons" aria-hidden="true">info</i>
                             <div className="toast-content"><b>Short information message</b></div>
-                            <i className="material-icons">close</i>
+                            <button className="toast-close ml-auto" aria-label="Close button">
+                                <i className="material-icons">close</i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -60,9 +64,11 @@ const ContentGuidelines = () => (
             <div className="toast-example-container py-5">
                 <div id="toast-container" className="m-auto col-12">
                     <div className="toast toast-neutral col-12">
-                        <i className="material-icons">info</i>
+                        <i className="material-icons" aria-hidden="true">info</i>
                         <div className="toast-content"><b>Message</b></div>
-                        <i className="material-icons">close</i>
+                        <button className="toast-close ml-auto" aria-label="Close button">
+                            <i className="material-icons">close</i>
+                        </button>
                     </div>
                 </div>
             </div>

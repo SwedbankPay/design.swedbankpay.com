@@ -5,21 +5,38 @@ exports[`Component: Sheet - does not render with data-require-action if it is se
   className="sheet"
   data-require-action={null}
 >
+  
+
   <section>
     
 
-    <a
-      className="sheet-close"
-      href="#"
+    <div
+      className="sheet-header"
     >
-      
+      <h2
+        className="mb-0"
+      >
+        Test
+      </h2>
+      <button
+        aria-label="Close sheet"
+        className="sheet-close"
+        id="sheetClose"
+      >
+        
 			
-      <Icon
-        type="close"
-      />
-      
+        <i
+          className="material-icons"
+        >
+          close
+        </i>
+        
 		
-    </a>
+      </button>
+    </div>
+    <div
+      className="sheet-content"
+    />
   </section>
 </div>
 `;
@@ -29,21 +46,38 @@ exports[`Component: Sheet - renders 1`] = `
   className="sheet"
   data-require-action={null}
 >
+  
+
   <section>
     
 
-    <a
-      className="sheet-close"
-      href="#"
+    <div
+      className="sheet-header"
     >
-      
+      <h2
+        className="mb-0"
+      >
+        Test
+      </h2>
+      <button
+        aria-label="Close sheet"
+        className="sheet-close"
+        id="sheetClose"
+      >
+        
 			
-      <Icon
-        type="close"
-      />
-      
+        <i
+          className="material-icons"
+        >
+          close
+        </i>
+        
 		
-    </a>
+      </button>
+    </div>
+    <div
+      className="sheet-content"
+    />
   </section>
 </div>
 `;
@@ -53,21 +87,38 @@ exports[`Component: Sheet - renders with a close icon 1`] = `
   className="sheet"
   data-require-action={null}
 >
+  
+
   <section>
     
 
-    <a
-      className="sheet-close"
-      href="#"
+    <div
+      className="sheet-header"
     >
-      
+      <h2
+        className="mb-0"
+      >
+        test
+      </h2>
+      <button
+        aria-label="Close sheet"
+        className="sheet-close"
+        id="sheetClose"
+      >
+        
 			
-      <Icon
-        type="close"
-      />
-      
+        <i
+          className="material-icons"
+        >
+          close
+        </i>
+        
 		
-    </a>
+      </button>
+    </div>
+    <div
+      className="sheet-content"
+    />
   </section>
 </div>
 `;
@@ -78,21 +129,38 @@ exports[`Component: Sheet - renders with an ID 1`] = `
   data-require-action={null}
   id="demo-sheet"
 >
+  
+
   <section>
     
 
-    <a
-      className="sheet-close"
-      href="#"
+    <div
+      className="sheet-header"
     >
-      
+      <h2
+        className="mb-0"
+      >
+        Test
+      </h2>
+      <button
+        aria-label="Close sheet"
+        className="sheet-close"
+        id="sheetClose"
+      >
+        
 			
-      <Icon
-        type="close"
-      />
-      
+        <i
+          className="material-icons"
+        >
+          close
+        </i>
+        
 		
-    </a>
+      </button>
+    </div>
+    <div
+      className="sheet-content"
+    />
   </section>
 </div>
 `;
@@ -102,22 +170,40 @@ exports[`Component: Sheet - renders with children 1`] = `
   className="sheet"
   data-require-action={null}
 >
+  
+
   <section>
     
 
-    <a
-      className="sheet-close"
-      href="#"
+    <div
+      className="sheet-header"
     >
-      
+      <h2
+        className="mb-0"
+      >
+        Test
+      </h2>
+      <button
+        aria-label="Close sheet"
+        className="sheet-close"
+        id="sheetClose"
+      >
+        
 			
-      <Icon
-        type="close"
-      />
-      
+        <i
+          className="material-icons"
+        >
+          close
+        </i>
+        
 		
-    </a>
-    Test
+      </button>
+    </div>
+    <div
+      className="sheet-content"
+    >
+      Test
+    </div>
   </section>
 </div>
 `;
@@ -127,21 +213,38 @@ exports[`Component: Sheet - renders with the data-require-action attribute 1`] =
   className="sheet"
   data-require-action={true}
 >
+  
+
   <section>
     
 
-    <a
-      className="sheet-close"
-      href="#"
+    <div
+      className="sheet-header"
     >
-      
+      <h2
+        className="mb-0"
+      >
+        Test
+      </h2>
+      <button
+        aria-label="Close sheet"
+        className="sheet-close"
+        id="sheetClose"
+      >
+        
 			
-      <Icon
-        type="close"
-      />
-      
+        <i
+          className="material-icons"
+        >
+          close
+        </i>
+        
 		
-    </a>
+      </button>
+    </div>
+    <div
+      className="sheet-content"
+    />
   </section>
 </div>
 `;

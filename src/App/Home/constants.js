@@ -1,5 +1,10 @@
 export const changeLogs = [
     {
+        version: "8.0.0",
+        title: "WCAG kickoff, Pagination, Sheet and more",
+        text: "We’re kickin’ of towards a more accessible Design Guide, starting with clearing issues related to overlays, forms and buttons. The Pagination component got an update including a new styling script, and the Sheet component got a more mobile friendly design. An updated version of the Swedbank Pay Logotype is also included. To get the full picture - head over to the detailed changelog!"
+    },
+    {
         version: "7.1.1",
         title: "Patch of styling and path updates",
         text: "Small updates on the visuals of Toast and Form-pattern, and more consisted path naming. We also changed the path in the documentation for logos from \"designguide/assets\" to \"img/logo\"."

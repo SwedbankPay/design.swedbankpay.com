@@ -47,11 +47,13 @@
         padding: 1rem;
         text-align: start;
         font-weight: @font-weight-bold;
+        font-family: @brand-headline;
         font-size: 1rem;
 
         &:before {
-            .material-icons-styling(@margin: 0 0.5rem);
+            .material-icons-styling();
 
+            color: @brand-secondary;
             content: "keyboard_arrow_down";
             position: absolute;
             right: 0;

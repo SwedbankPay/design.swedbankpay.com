@@ -13,7 +13,7 @@ export const overviewCards = {
                 titleTxt="Title"
                 type="primary"
                 text="Write the supportive paragraph here."
-                icon={<i className="material-icons material-icons-outlined">shopping_basket</i>}
+                icon={<i className="material-icons material-icons-outlined" aria-hidden="true">shopping_basket</i>}
             />,
             options: {
                 radio: [
@@ -31,7 +31,7 @@ export const overviewCards = {
                                 name: "With icon",
                                 default: true,
                                 value: {
-                                    icon: <i className="material-icons material-icons-outlined">shopping_basket</i>
+                                    icon: <i className="material-icons material-icons-outlined" aria-hidden="true">shopping_basket</i>
                                 }
                             },
                             {

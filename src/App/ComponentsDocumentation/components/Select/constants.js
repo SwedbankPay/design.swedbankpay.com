@@ -8,7 +8,7 @@ export const selectOverview = {
     id: "no-tabs",
     elements: [
         {
-            component: <InputGroup type="select" label="Label" placeholder={"Select option"} selectOptions={["Blueberry", "Blackberry", "Berryberry"]} />,
+            component: <InputGroup id="select-showcase-example" type="select" label="Label" placeholder="Select option" selectOptions={["Blueberry", "Blackberry", "Berryberry"]} />,
             options: {
                 checkbox: [
                     {
@@ -72,8 +72,8 @@ export const whenToUse = {
     content: [
         {
             correct:
-                <div className="pb-3">
-                    <p>Background color</p>
+                <div className="mb-1">
+                    <p className="mb-2">Background color</p>
                     <Radio id="radio-example-1" label="Blue" name="radio-example" checked/>
                     <Radio id="radio-example-2" label="Red" name="radio-example"/>
                 </div>,
@@ -83,14 +83,14 @@ export const whenToUse = {
             text: <p>In the example above, when there are very few choices, they should not be hidden inside a select list as this makes it harder for user to get an overview. Use <Link to="/components/radio-button">radio buttons</Link> instead.</p>
         },
         {
-            correct: <Datepicker label="Birthday" prefixType="icon" prefixValue="event" placeholder="DD/MM/YYY" />,
+            correct: <Datepicker id="datepicker-example" label="Birthday" prefixType="icon" prefixValue="event" placeholder="YYYY-MM-DD" />,
             selectOptions: [...Array(32).keys()].slice(1),
             placeholder: "Select day",
             label: "Day",
             text: <p>Instead of using a dropdown input for selecting a day of the month. It is better to use a <Link to="/components/datepickers">datepicker</Link> to let user select the right date faster.</p>
         },
         {
-            correct: <InputGroup type="text" label="Number of drinks" placeholder="4"/>,
+            correct: <InputGroup id="select-do-example" type="text" label="Number of drinks" placeholder="4"/>,
             selectOptions: [1, 2, 3, 4],
             placeholder: "Select number",
             label: "Number of drinks",

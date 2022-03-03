@@ -12,7 +12,7 @@ jobs:
       matrix:
         brand: ["payex", "swedbankpay"]
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3
 
       # Set brand specific variables
       - name: Environment variables
@@ -25,18 +25,11 @@ jobs:
         env:
           TOKEN: ${{ secrets.SENTRY_TOKEN }}
 
-      - name: Set Node.js 12.x
-        uses: actions/setup-node@master
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v2
         with:
-          node-version: 12.x
-
-      - name: Cache dependencies
-        uses: actions/cache@v2.1.6
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: 16.x
+          cache: npm
 
       - name: Install
         run: npm ci
@@ -45,12 +38,43 @@ jobs:
         run: npm run ${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env release=true --env basename="v/${{ steps.variables.outputs.VERSION }}" --env semver=${{ steps.variables.outputs.VERSION }} --env info_version=${{ steps.variables.outputs.VERSION }} --env github_actions=true
 
       - name: Azure Login
-        uses: azure/login@v1.4.0
+        uses: azure/login@v1.4.3
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Azure Deploy
-        uses: azure/CLI@v1.0.5
+        uses: azure/CLI@v1.0.6
         with:
           inlineScript: |
             az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_PROD }}
+
+      - name: Create Release
+        # Only create a release on one brand to avoid duplicate error
+        if: contains(matrix.brand, 'swedbankpay')
+        uses: softprops/action-gh-release@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: Design Guide v${{ steps.variables.outputs.VERSION }}
+          body_path: RELEASE_NOTES.md
+          draft: true # Let's see if everything is nice and dandy before setting this to false
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build:prod -- --env github_actions=true
+
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          access: "public"

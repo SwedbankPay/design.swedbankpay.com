@@ -2,117 +2,121 @@
 
 exports[`Component: Radio - renders checkbox group with disabled state 1`] = `
 <Fragment>
-  <fieldset
-    className="radio-group"
-    disabled={true}
-  >
-    <legend>
-      
-
-    </legend>
-    <div
-      className="radio"
-      key="0"
+  <form>
+    <fieldset
+      className="radio-group"
+      disabled={true}
     >
-      
+      <legend>
+        
 
-      <input
-        disabled={true}
-        id="radio-example-1"
-        name={null}
-        type="radio"
-      />
-      
-
-      <label
-        htmlFor="radio-example-1"
+      </legend>
+      <div
+        className="radio"
+        key="0"
       >
-        Radio label
-      </label>
-      
+        
 
-    </div>
-    <div
-      className="radio"
-      key="1"
-    >
-      
+        <input
+          disabled={true}
+          id="radio-example-1"
+          name={null}
+          type="radio"
+        />
+        
 
-      <input
-        disabled={true}
-        id="radio-example-2"
-        name={null}
-        type="radio"
-      />
-      
+        <label
+          htmlFor="radio-example-1"
+        >
+          Radio label
+        </label>
+        
 
-      <label
-        htmlFor="radio-example-2"
+      </div>
+      <div
+        className="radio"
+        key="1"
       >
-        Radio label
-      </label>
-      
+        
 
-    </div>
-  </fieldset>
+        <input
+          disabled={true}
+          id="radio-example-2"
+          name={null}
+          type="radio"
+        />
+        
+
+        <label
+          htmlFor="radio-example-2"
+        >
+          Radio label
+        </label>
+        
+
+      </div>
+    </fieldset>
+  </form>
 </Fragment>
 `;
 
 exports[`Component: Radio - renders checkbox group with groupTitle 1`] = `
 <Fragment>
-  <fieldset
-    className="radio-group"
-  >
-    <legend>
-      Group title
-      
-
-    </legend>
-    <div
-      className="radio"
-      key="0"
+  <form>
+    <fieldset
+      className="radio-group"
     >
-      
+      <legend>
+        Group title
+        
 
-      <input
-        disabled={null}
-        id="radio-example-1"
-        name={null}
-        type="radio"
-      />
-      
-
-      <label
-        htmlFor="radio-example-1"
+      </legend>
+      <div
+        className="radio"
+        key="0"
       >
-        Radio label
-      </label>
-      
+        
 
-    </div>
-    <div
-      className="radio"
-      key="1"
-    >
-      
+        <input
+          disabled={null}
+          id="radio-example-1"
+          name={null}
+          type="radio"
+        />
+        
 
-      <input
-        disabled={null}
-        id="radio-example-2"
-        name={null}
-        type="radio"
-      />
-      
+        <label
+          htmlFor="radio-example-1"
+        >
+          Radio label
+        </label>
+        
 
-      <label
-        htmlFor="radio-example-2"
+      </div>
+      <div
+        className="radio"
+        key="1"
       >
-        Radio label
-      </label>
-      
+        
 
-    </div>
-  </fieldset>
+        <input
+          disabled={null}
+          id="radio-example-2"
+          name={null}
+          type="radio"
+        />
+        
+
+        <label
+          htmlFor="radio-example-2"
+        >
+          Radio label
+        </label>
+        
+
+      </div>
+    </fieldset>
+  </form>
 </Fragment>
 `;
 
@@ -158,58 +162,60 @@ exports[`Component: Radio - renders disabled 1`] = `
 
 exports[`Component: Radio - renders radio group 1`] = `
 <Fragment>
-  <fieldset
-    className="radio-group"
-  >
-    <legend>
-      
-
-    </legend>
-    <div
-      className="radio"
-      key="0"
+  <form>
+    <fieldset
+      className="radio-group"
     >
-      
+      <legend>
+        
 
-      <input
-        disabled={null}
-        id="radio-example-1"
-        name={null}
-        type="radio"
-      />
-      
-
-      <label
-        htmlFor="radio-example-1"
+      </legend>
+      <div
+        className="radio"
+        key="0"
       >
-        Radio label
-      </label>
-      
+        
 
-    </div>
-    <div
-      className="radio"
-      key="1"
-    >
-      
+        <input
+          disabled={null}
+          id="radio-example-1"
+          name={null}
+          type="radio"
+        />
+        
 
-      <input
-        disabled={null}
-        id="radio-example-2"
-        name={null}
-        type="radio"
-      />
-      
+        <label
+          htmlFor="radio-example-1"
+        >
+          Radio label
+        </label>
+        
 
-      <label
-        htmlFor="radio-example-2"
+      </div>
+      <div
+        className="radio"
+        key="1"
       >
-        Radio label
-      </label>
-      
+        
 
-    </div>
-  </fieldset>
+        <input
+          disabled={null}
+          id="radio-example-2"
+          name={null}
+          type="radio"
+        />
+        
+
+        <label
+          htmlFor="radio-example-2"
+        >
+          Radio label
+        </label>
+        
+
+      </div>
+    </fieldset>
+  </form>
 </Fragment>
 `;
 

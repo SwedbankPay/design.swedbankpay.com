@@ -156,10 +156,18 @@
     &.btn-sm {
         // line-height: ensure proper height of button next to small input
         .button-size(0.75rem; 2.5rem; @font-size-small; @line-height-small; @btn-border-radius-small);
+
+        i {
+            font-size: @font-size-small;
+        }
     }
 
     &.btn-xs {
         .button-size(0.5rem; 2rem; @font-size-small; @line-height-small; @btn-border-radius-small);
+
+        i {
+            font-size: @font-size-small;
+        }
     }
 
     // Block button
@@ -201,46 +209,26 @@
         }
 
         &.btn-primary,
-        &.btn-secondary {
+        &.btn-secondary,
+        &.btn-link {
             &:after {
                 border-color: lighten(@brand-secondary, 40%);
                 border-left-color: @brand-secondary;
             }
         }
 
-        &.btn-secondary {
-            &:hover {
-                &:after {
-                    border-left-color: @white;
-                }
-            }
-        }
-
         &.btn-executive-destructive {
             &:after {
                 border-color: hsla(0, 0%, 100%, 0.5);
-                border-left-color: @white;
+                border-left-color: @brand-error;
             }
         }
 
-        &.btn-guiding-destructive {
+        &.btn-guiding-destructive,
+        &.btn-link-destructive {
             &:after {
                 border-color: @brand-error-light;
                 border-left-color: @brand-error;
-            }
-
-            &:hover {
-                &:after {
-                    border-color: hsla(0, 0%, 100%, 0.5);
-                    border-left-color: @white;
-                }
-            }
-        }
-
-        &.btn-lg {
-            &:after {
-                width: 1rem;
-                height: $width;
             }
         }
 
@@ -253,11 +241,6 @@
         }
 
         &.btn-bank-id {
-            &:after {
-                width: 1.5rem;
-                height: 1.5rem;
-            }
-
             i.bank-id {
                 display: none;
             }

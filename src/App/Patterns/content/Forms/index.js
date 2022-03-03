@@ -46,7 +46,7 @@ const ContentGuidelines = () => (
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
                 <InputGroup id="guideline-input-example" type="text" label="Input label" placeholder="Placeholder text" tooltip className="mb-0"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small">24px</div>
-                <InputGroup type="select" label="Input label" placeholder="Select an option" selectOptions={["Option 1", "Option 2"]} optional className="mb-0"/>
+                <InputGroup id="guideline-select-example" type="select" label="Input label" placeholder="Select an option" selectOptions={["Option 1", "Option 2"]} optional className="mb-0"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small">24px</div>
                 <RadioButton groupTitle="Input label" name="guidelines-radio-example" group options={radioOptions} className="mb-0 forms-radio-example"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
@@ -107,15 +107,15 @@ const HowToDesignForms = () => {
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-success">
                             <span className="h4 d-block mb-4">Do</span>
-                            <InputGroup type="text" label="E-mail"/>
-                            <InputGroup type="text" label="Telephone number" optional/>
+                            <InputGroup id="required-optional-do-email-example" type="text" label="E-mail"/>
+                            <InputGroup id="required-optional-do-phone-example" type="text" label="Telephone number" optional/>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-error">
                             <span className="h4 d-block mb-4">Don&apos;t</span>
-                            <InputGroup type="text" label="E-mail*"/>
-                            <InputGroup type="tel" label="Telephone number"/>
+                            <InputGroup id="required-optional-dont-email-example" type="text" label="E-mail*"/>
+                            <InputGroup id="required-optional-dont-phone-example" type="tel" label="Telephone number"/>
                         </div>
                     </div>
                 </div>
@@ -134,7 +134,7 @@ const HowToDesignForms = () => {
                             </div>
                             {showInput &&
                                 <div className="ml-2">
-                                    <InputGroup type="text" label="E-mail address" className="ml-4 mb-4"/>
+                                    <InputGroup id="logical-flow-do-email-example" type="text" label="E-mail address" className="ml-4 mb-4"/>
                                 </div>
                             }
                             <div className="radio mb-3">
@@ -143,7 +143,7 @@ const HowToDesignForms = () => {
                             </div>
                             {!showInput &&
                                 <div className="ml-2">
-                                    <InputGroup type="text" label="Telephone number" className="ml-4"/>
+                                    <InputGroup id="logical-flow-do-phone-example" type="text" label="Telephone number" className="ml-4"/>
                                 </div>
                             }
                         </div>
@@ -153,11 +153,11 @@ const HowToDesignForms = () => {
                             <span className="h4 d-block mb-4">Don&apos;t</span>
                             <RadioButton label="E-mail" name="logical-flow-example-2" id="logical-flow-example-email-2" checked className="mb-3"/>
                             <div className="ml-2">
-                                <InputGroup type="text" label="E-mail address" className="ml-4 mb-4"/>
+                                <InputGroup id="logical-flow-dont-email-example" type="text" label="E-mail address" className="ml-4 mb-4"/>
                             </div>
                             <RadioButton label="Call" name="logical-flow-example-2" id="logical-flow-example-call-2" className="mb-3"/>
                             <div className="ml-2">
-                                <InputGroup type="text" label="Phone number" className="ml-4"/>
+                                <InputGroup id="logical-flow-dont-phone-example" type="text" label="Phone number" className="ml-4"/>
                             </div>
                         </div>
                     </div>

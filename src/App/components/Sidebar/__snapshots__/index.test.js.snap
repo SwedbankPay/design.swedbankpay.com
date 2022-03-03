@@ -12,6 +12,7 @@ exports[`Component: Sidebar renders 1`] = `
       className="sidebar-logo"
     >
       <a
+        aria-label="To homepage"
         href="/"
       >
         <Logotype
@@ -199,6 +200,7 @@ exports[`Component: Sidebar renders four levels when four levels is provided 1`]
       className="sidebar-logo"
     >
       <a
+        aria-label="To homepage"
         href="/"
       >
         <Logotype
@@ -343,6 +345,7 @@ exports[`Component: Sidebar renders one level when one level is provided 1`] = `
       className="sidebar-logo"
     >
       <a
+        aria-label="To homepage"
         href="/"
       >
         <Logotype
@@ -405,6 +408,7 @@ exports[`Component: Sidebar renders three levels when three levels is provided 1
       className="sidebar-logo"
     >
       <a
+        aria-label="To homepage"
         href="/"
       >
         <Logotype
@@ -506,6 +510,7 @@ exports[`Component: Sidebar renders two levels when two levels is provided 1`] =
       className="sidebar-logo"
     >
       <a
+        aria-label="To homepage"
         href="/"
       >
         <Logotype

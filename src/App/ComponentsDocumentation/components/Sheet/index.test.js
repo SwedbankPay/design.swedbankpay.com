@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Sheet, { Example, RequireAction, JavascriptMethods } from "./index";
+import Sheet, { SheetExample, ContentGuidelines, DeveloperDocumentation } from "./index";
 
 describe("Documentation: Sheet", () => {
     it("is defined", () => {
@@ -14,59 +14,40 @@ describe("Documentation: Sheet", () => {
         const wrapper = shallow(<Sheet />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(console.warn).toHaveBeenCalled();
     });
 
-    describe("Example", () => {
+    describe("SheetExample", () => {
         it("is defined", () => {
-            expect(Example).toBeDefined();
+            expect(SheetExample).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Example />);
+            const wrapper = shallow(<SheetExample />);
 
             expect(wrapper).toMatchSnapshot();
         });
 
-        it("onSubmit prevents default", () => {
-            const wrapper = shallow(<Example />);
-            const eventHandler = { preventDefault: jest.fn() };
-
-            wrapper.find("form").simulate("submit", eventHandler);
-            expect(eventHandler.preventDefault).toHaveBeenCalled();
-            expect(wrapper).toMatchSnapshot();
-        });
-
-        it("onClick prevents default", () => {
-            const wrapper = shallow(<Example />);
-            const clickHandler = { preventDefault: jest.fn() };
-            const formBtn = wrapper.find("form").find("button");
-
-            formBtn.simulate("click", clickHandler);
-            expect(clickHandler.preventDefault).toHaveBeenCalled();
-            expect(wrapper).toMatchSnapshot();
-        });
     });
 
-    describe("RequireAction", () => {
+    describe("ContentGuidelines", () => {
         it("is defined", () => {
-            expect(RequireAction).toBeDefined();
+            expect(ContentGuidelines).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<RequireAction />);
+            const wrapper = shallow(<ContentGuidelines />);
 
             expect(wrapper).toMatchSnapshot();
         });
     });
 
-    describe("JavascriptMethods", () => {
+    describe("DeveloperDocumentation", () => {
         it("is defined", () => {
-            expect(JavascriptMethods).toBeDefined();
+            expect(DeveloperDocumentation).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<JavascriptMethods />);
+            const wrapper = shallow(<DeveloperDocumentation />);
 
             expect(wrapper).toMatchSnapshot();
         });

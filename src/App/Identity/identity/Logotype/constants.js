@@ -1,6 +1,7 @@
 import React from "react";
 
 import LogotypeComponent from "@components/Logotype";
+import Alert from "@components/Alert";
 
 const basename = process.env.basename;
 
@@ -18,14 +19,15 @@ export const logoBlack = {
                         title: "Sizes",
                         values: [
                             {
-                                name: "Smallest",
+                                name: "Extra small",
                                 value: {
                                     size: "xs"
                                 },
-                                description: <>
-                                    <h4>Important</h4>
-                                    <p>This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.</p>
-                                </>
+                                description: <Alert type="warning" icon="warning" className="mb-0 mt-4" text={
+                                    <p><b>Important. </b>
+                                        This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
+                                    </p>
+                                } />
                             },
                             {
                                 name: "Small",
@@ -51,7 +53,7 @@ export const logoBlack = {
                 ]
             },
             title: "Vertical logo",
-            description: "The vertical logo (with black text) is the primary logo is the primary logo and should always be considered before moving on to another version."
+            description: "The vertical logo with black text is primary – the one that will build recognition. Always consider the vertical logo first before before the horizontal logo."
         },
         {
             tab: "Horizontal",
@@ -67,10 +69,11 @@ export const logoBlack = {
                                 value: {
                                     size: "xs"
                                 },
-                                description: <>
-                                    <h4>Important</h4>
-                                    <p>This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.</p>
-                                </>
+                                description: <Alert type="warning" icon="warning" className="mb-0 mt-4" text={
+                                    <p><b>Important. </b>
+                                        This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
+                                    </p>
+                                } />
                             },
                             {
                                 name: "Small",
@@ -97,8 +100,8 @@ export const logoBlack = {
             },
             title: "Horizontal logo",
             description: <>
-                The horizontal logo (with black text) is only used if the vertical primary logotype can’t be used. Reasons for using the horizontal logo might be:
-                <ul className="list list-bullet">
+                The horizontal logo is only used if the vertical primary logotype can not be used. Reasons for using the horizontal logo might be:
+                <ul className="list list-bullet mt-3">
                     <li>The primary logo font is too similar in size to other fonts close by</li>
                     <li>The primary logo is too small/wrong format compared to other logotypes in the same context</li>
                 </ul>
@@ -126,6 +129,106 @@ export const logoWhite = {
                                 value: {
                                     size: "xs"
                                 },
+                                description: <Alert type="warning" icon="warning" className="mb-0 mt-4" text={
+                                    <p><b>Important. </b>
+                                        This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
+                                    </p>
+                                } />
+                            },
+                            {
+                                name: "Small",
+                                default: true,
+                                value: {
+                                    size: "sm"
+                                }
+                            },
+                            {
+                                name: "Medium",
+                                value: {
+                                    size: "md"
+                                }
+                            },
+                            {
+                                name: "Large",
+                                value: {
+                                    size: "lg"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            title: "Vertical logo",
+            description: <p>The vertical logo should always be considered before the horizontal logo.</p>
+        },
+        {
+            tab: "Horizontal",
+            component: <LogotypeComponent src={`${basename}img/logo/swedbankpay-logo-h-neg.svg`} alt="Swedbank Pay horizontal logo" type="horizontal" />,
+            altBackground: true,
+            options: {
+                radio: [
+                    {
+                        id: "size_radio_white",
+                        title: "Sizes",
+                        values: [
+                            {
+                                name: "Smallest",
+                                value: {
+                                    size: "xs"
+                                },
+                                description: <Alert type="warning" icon="warning" className="mb-0 mt-4" text={
+                                    <p><b>Important. </b>
+                                        This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
+                                    </p>
+                                } />
+                            },
+                            {
+                                name: "Small",
+                                default: true,
+                                value: {
+                                    size: "sm"
+                                }
+                            },
+                            {
+                                name: "Medium",
+                                value: {
+                                    size: "md"
+                                }
+                            },
+                            {
+                                name: "Large",
+                                value: {
+                                    size: "lg"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            title: "Horizontal logo",
+            description: <p>The horizontal logo is only used if the vertical logotype can not be used.</p>
+        }
+    ]
+};
+
+export const logoPayex = {
+    id: "logoPayex",
+    tabsId: "logoPayexTabs",
+    elements: [
+        {
+            tab: "Green",
+            component: <LogotypeComponent src={`${basename}img/logo/payex-logo.svg`} alt="PayEx logo" type="horizontal" />,
+            options: {
+                radio: [
+                    {
+                        id: "size_radio",
+                        title: "Sizes",
+                        values: [
+                            {
+                                name: "Smallest",
+                                value: {
+                                    size: "xs"
+                                },
                                 description: <>
                                     <h4>Important</h4>
                                     <p>This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.</p>
@@ -154,15 +257,12 @@ export const logoWhite = {
                     }
                 ]
             },
-            title: "Vertical logo",
-            description: <p>
-                Should only be used on Swedbank Pay’s primary color (Yellow) and on dark backgrounds.
-                The vertical logo (with black text) is the primary logo is the primary logo and should always be considered before moving on to another version.
-            </p>
+            title: "Green logo",
+            description: "The green logo is the primary logo and should always be considered before moving on to another version."
         },
         {
-            tab: "Horizontal",
-            component: <LogotypeComponent src={`${basename}img/logo/swedbankpay-logo-h-neg.svg`} alt="Swedbank Pay horizontal logo" type="horizontal" />,
+            tab: "White",
+            component: <LogotypeComponent src={`${basename}img/logo/payex-logo-neg.svg`} alt="PayEx logo" type="horizontal" />,
             altBackground: true,
             options: {
                 radio: [
@@ -203,10 +303,10 @@ export const logoWhite = {
                     }
                 ]
             },
-            title: "Horizontal logo",
+            title: "White logo",
             description: <p>
-                Should only used on Swedbank Pay’s primary color (Yellow) and on dark backgrounds.
-                The vertical logo (with black text) is the primary logo is the primary logo and should always be considered before moving on to another version.
+                Should only be used on PayEx primary color (green) and on dark backgrounds.
+                The green logo is the primary logo and should always be considered before moving on to another version.
             </p>
         }
     ]

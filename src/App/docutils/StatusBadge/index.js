@@ -3,19 +3,19 @@ import PropTypes from "prop-types";
 
 const statusBadgeContent = {
     new: {
-        icon: <i className="material-icons">child_care</i>,
+        icon: <i className="material-icons" aria-hidden="true">child_care</i>,
         text: "New"
     },
     updated: {
-        icon: <i className="material-icons">mood</i>,
+        icon: <i className="material-icons" aria-hidden="true">mood</i>,
         text: "Newly updated"
     },
     remove: {
-        icon: <i className="material-icons">sentiment_very_dissatisfied</i>,
+        icon: <i className="material-icons" aria-hidden="true">sentiment_very_dissatisfied</i>,
         text: "Being removed"
     },
     javascript: {
-        icon: <i className="javascript-icon"/>,
+        icon: <i className="javascript-icon" aria-hidden="true"/>,
         text: "Uses JavaScript"
     }
 

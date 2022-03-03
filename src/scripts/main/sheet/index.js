@@ -7,14 +7,23 @@ const SELECTORS = {
     CLOSEICON: ".sheet-close"
 };
 
+const FOCUSELEMENTS = "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex=\"0\"], [contenteditable]";
+
 const _sheets = [];
 
 class Sheet {
     constructor (el) {
+        this.el = el;
         this._closeHandler = this._closeHandler.bind(this);
         this._openHandler = this._openHandler.bind(this);
         this._closeOutsideClickHandler = this._closeOutsideClickHandler.bind(this);
         this.constructSheet(el);
+
+        // find focusable elements
+        this.focusedElemBeforeSheet = null;
+        this.focusableElements = [...el.querySelectorAll(FOCUSELEMENTS)];
+        this.firstTabStop = this.focusableElements[0];
+        this.lastTabStop = this.focusableElements[this.focusableElements.length - 1];
     }
 
     constructSheet (el) {
@@ -48,6 +57,30 @@ class Sheet {
         });
 
         this._initializeButtons();
+        this._initializeKeyListeners();
+    }
+
+    _initializeKeyListeners () {
+        this._el.addEventListener("keydown", e => {
+            if (e.key === "Tab") {
+                // SHIFT + TAB
+                if (e.shiftKey) {
+                    if (document.activeElement === this.firstTabStop) {
+                        e.preventDefault();
+                        this.lastTabStop.focus();
+                    }
+
+                    // TAB
+                } else if (document.activeElement === this.lastTabStop) {
+                    e.preventDefault();
+                    this.firstTabStop.focus();
+                }
+            }
+
+            if (e.key === "Esc" || e.key === "Escape") {
+                this.close();
+            }
+        });
     }
 
     _closeHandler (e) {
@@ -83,6 +116,7 @@ class Sheet {
     }
 
     open () {
+        this.focusedElemBeforeSheet = document.activeElement;
         handleScrollbar();
         this.isOpen = true;
         this._el.classList.add("d-block");
@@ -92,6 +126,7 @@ class Sheet {
         const toastContainer = document.querySelector("#toast-container");
 
         toastContainer ? toastContainer.setAttribute("style", `margin-right: ${this._el.querySelector("section").offsetWidth}px; transition: margin 0.3s ease-in-out;`) : null;
+        this.firstTabStop.focus();
     }
 
     close () {
@@ -108,6 +143,7 @@ class Sheet {
         const toastContainer = document.querySelector("#toast-container");
 
         toastContainer ? toastContainer.setAttribute("style", "transition: margin 0.3s ease-in-out;") : null;
+        this.focusedElemBeforeSheet ? this.focusedElemBeforeSheet.focus() : null;
     }
 }
 

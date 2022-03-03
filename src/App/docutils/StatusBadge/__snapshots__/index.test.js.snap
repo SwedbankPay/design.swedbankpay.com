@@ -8,6 +8,7 @@ exports[`Utilities: StatusBadge renders javascript status badge when type is 'ja
     className="status-badge status-badge-javascript"
   >
     <i
+      aria-hidden="true"
       className="javascript-icon"
     />
     Uses JavaScript
@@ -21,6 +22,7 @@ exports[`Utilities: StatusBadge renders new status badge when type is 'new' 1`] 
     className="status-badge status-badge-new"
   >
     <i
+      aria-hidden="true"
       className="material-icons"
     >
       child_care
@@ -36,6 +38,7 @@ exports[`Utilities: StatusBadge renders remove status badge when type is 'remove
     className="status-badge status-badge-remove"
   >
     <i
+      aria-hidden="true"
       className="material-icons"
     >
       sentiment_very_dissatisfied
@@ -51,6 +54,7 @@ exports[`Utilities: StatusBadge renders updated status badge when type is 'updat
     className="status-badge status-badge-updated"
   >
     <i
+      aria-hidden="true"
       className="material-icons"
     >
       mood

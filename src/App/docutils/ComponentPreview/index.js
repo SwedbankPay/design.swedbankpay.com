@@ -2,8 +2,7 @@ import React, { Component, cloneElement } from "react";
 import PropTypes from "prop-types";
 import { renderToStaticMarkup } from "react-dom/server";
 import jsbeautifier from "js-beautify";
-
-import { tabs } from "@src/scripts/main";
+import { tabs, accordion, sheet } from "@src/scripts/main";
 
 // NOTE: dangerousHTML prop is used when wanting to show html in the codefigure without encoding.
 
@@ -137,7 +136,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                 <div className="code-view">
                     <header className="code-view-header">
                         {language.toUpperCase()}
-                        <button className="copy-btn d-flex p-0">
+                        <button className="copy-btn d-flex p-0" aria-label="Copy to clipboard">
                             <i className="material-icons material-icons-outlined" data-tooltip onMouseEnter={e => tooltipContent(e)} onClick={e => copyToClipboard(e)}>content_copy</i>
                         </button>
                     </header>
@@ -206,7 +205,6 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
 
         componentDidMount () {
             tabs.init(this.props.showCasePanelAdvanced.tabsId);
-
             this._resetOptions();
         }
 
@@ -218,10 +216,20 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
             if (this.state.activeTab.component.props.id === "tabs-showcase-example") {
                 tabs.init("tabs-showcase-example");
             }
+
+            if (this.state.activeTab.component.props.id === "sheet-showcase") {
+                sheet.init();
+            }
+
+            if (this.state.activeTab.component.props.id === "accordion-showcase") {
+                this.state.activeTab.component.props.accordionGroup
+                    ? accordion.init("accordion-group-example")
+                    : accordion.init();
+
+            }
         }
 
         setActiveTab (e, i) {
-
             e.preventDefault();
 
             this.setState(prevState => ({ ...prevState,
@@ -256,19 +264,27 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
             }
         }
 
+        setOptionsMenuState (e, state) {
+            if (e.keyCode === 13) { this.setState({ optionsOpen: state }); }
+        }
+
         render () {
             return (
                 <>
                     <div id={this.props.showCasePanelAdvanced.id} className={`showcase-panel showcase-panel-advanced${this.state.optionsOpen ? " options-active" : ""}${this.state.hideOptions ? " hide-options" : ""}`}>
                         <div id={this.props.showCasePanelAdvanced.tabsId} className="tabs tabs-scroll">
                             <ul id={`${this.props.showCasePanelAdvanced.tabsId}-ul`}>
-                                {this.props.showCasePanelAdvanced.elements.map((element, i) => <li key={i} className={this.state.activeTab.tab === element.tab ? "active" : null}>
+                                {this.props.showCasePanelAdvanced.elements.map((element, i) => <li key={i} className={`${this.state.activeTab.tab === element.tab ? "active" : null}`}>
                                     <a href="#" onClick={e => this.setActiveTab(e, i)}>{element.tab}</a>
                                 </li>
                                 )}
                             </ul>
                             <div className={`options-open${this.state.optionsOpen ? " hidden" : ""}${this.state.hideOptions ? " d-none" : ""}`}>
-                                <i className="material-icons" onClick={() => this.setState({ optionsOpen: true })}>menu_open</i>
+                                <button className="open-options-menu d-flex" aria-label="Open options menu"
+                                    onKeyDown={e => this.setOptionsMenuState(e, true)}
+                                    onClick={() => this.setState({ optionsOpen: true })}>
+                                    <i className="material-icons" >menu_open</i>
+                                </button>
                             </div>
                         </div>
                         <div className="d-flex">
@@ -299,15 +315,19 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                             {<div className={`options${this.state.optionsOpen ? " active" : ""}${this.state.hideOptions ? " d-none" : ""}`}>
                                 <div className="options-header">
                                     Options
-                                    <i className="material-icons options-close" onClick={() => this.setState({ optionsOpen: false })}>close</i>
+                                    <button className="options-close d-flex" aria-label="Close options menu"
+                                        onKeyDown={e => this.setOptionsMenuState(e, false)}
+                                        onClick={() => this.setState({ optionsOpen: false })}>
+                                        <i className="material-icons">close</i>
+                                    </button>
                                 </div>
-                                {this.state.activeTab.options && <div className="options-body">
+                                {this.state.activeTab.options && <form className="options-body">
 
                                     {this.state.activeTab.options.checkbox &&
                                         this.state.activeTab.options.checkbox.map((checkbox, i) => (
-                                            <div className="mb-4" key={i}>
+                                            <fieldset className="mb-4" key={i}>
                                                 {checkbox.title && (
-                                                    <h4>{checkbox.title}</h4>
+                                                    <legend className="h4">{checkbox.title}</legend>
                                                 )}
                                                 {checkbox.inputs.map((input, i) => (
                                                     <div key={i} className="checkbox" onChange={() => this.setActiveOptions(input.id, input.value, input.description, true)}>
@@ -315,13 +335,13 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                                                         <label htmlFor={input.id}>{input.name}</label>
                                                     </div>
                                                 ))}
-                                            </div>
+                                            </fieldset>
                                         )
                                         )
                                     }
                                     {this.state.activeTab.options.dropdown && this.state.activeTab.options.dropdown.map((dropdown, i) => (
-                                        <div key={i} className="mb-4">
-                                            <h4>{dropdown.title}</h4>
+                                        <fieldset key={i} className="mb-4">
+                                            <legend>{dropdown.title}</legend>
                                             <select id={dropdown.id} className="form-control" onChange={e => this.setActiveOptions(
                                                 dropdown.id,
                                                 dropdown.values[e.target.value].value,
@@ -329,11 +349,11 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                                             )}>
                                                 {dropdown.values.map((val, j) => <option key={j} value={j}>{val.name}</option>)}
                                             </select>
-                                        </div>
+                                        </fieldset>
                                     ))}
                                     {this.state.activeTab.options.radio && this.state.activeTab.options.radio.map((radio, i) => (
-                                        <div className="mb-4" key={i}>
-                                            <h4>{radio.title}</h4>
+                                        <fieldset className="mb-4" key={i}>
+                                            <legend className="h4">{radio.title}</legend>
                                             {radio.values.map((val, j) => (
                                                 <div key={j} className="radio" onChange={e => this.setActiveOptions(
                                                     radio.id,
@@ -350,9 +370,9 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                                                     <label htmlFor={`${radio.id + val.name.replace(/\s/g, "")}${val.default ? "_default" : ""}`}>{val.name}</label>
                                                 </div>
                                             ))}
-                                        </div>
+                                        </fieldset>
                                     ))}
-                                </div>}
+                                </form>}
                             </div>}
                         </div>
                     </div>
@@ -381,7 +401,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
 };
 
 ComponentPreview.propTypes = {
-    language: PropTypes.oneOf(["html", "javascript", "css", "terminal"]).isRequired,
+    language: PropTypes.oneOf(["html", "javascript", "css", "terminal", "json"]).isRequired,
     removeOuterTag: PropTypes.bool,
     hideCodeFigure: PropTypes.bool,
     hideValue: PropTypes.bool,

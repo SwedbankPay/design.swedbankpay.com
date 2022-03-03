@@ -159,6 +159,16 @@ legend {
     font-size: @base-font-size;
     line-height: @input-line-height;
     color: @input-color;
+
+    &.medium {
+        height: 2.5rem;
+        font-size: 0.875rem;
+    }
+
+    &.small {
+        height: 2rem;
+        font-size: 0.875rem;
+    }
 }
 
 .form-control-text {
@@ -217,6 +227,32 @@ legend {
 }
 
 .form-group {
+    &.small {
+        .form-control,
+        .input-group {
+            height: 2rem;
+            font-size: 0.875rem;
+
+            .input-group-addon {
+                height: 2rem;
+                font-size: 0.875rem;
+            }
+        }
+    }
+
+    &.medium {
+        .form-control,
+        .input-group {
+            height: 2.5rem;
+            font-size: 0.875rem;
+
+            .input-group-addon {
+                height: 2.5rem;
+                font-size: 0.875rem;
+            }
+        }
+    }
+
     margin-bottom: @base-margin-lg;
 
     &:focus-within {
@@ -232,6 +268,7 @@ legend {
 
         .input-group-addon {
             border-color: @brand-secondary-light-3;
+            color: @brand-secondary-light-3;
 
             i {
                 color: @brand-secondary-light-3;
@@ -285,5 +322,11 @@ select[multiple] {
 
     option {
         padding: @select-option-margin;
+    }
+}
+
+select {
+    &.form-control {
+        padding-right: 2.5rem;
     }
 }

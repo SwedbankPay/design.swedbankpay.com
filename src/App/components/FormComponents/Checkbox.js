@@ -32,7 +32,7 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
 
                         </label>{"\n"}
                     </div>)}
-                    {errorMessage ? <div className="help-block" data-error={errorMessage || null}></div> : null}
+                    {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
                 </fieldset>
             </form>
                 : <>
@@ -40,7 +40,7 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
                         <input {...attrs} />{"\n"}
                         <label htmlFor={id} className="d-block">{label}</label>{"\n"}
                     </div>
-                    {errorMessage ? <div className="help-block" data-error={errorMessage || null}></div> : null}
+                    {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
                 </>
             }
         </>

@@ -140,7 +140,7 @@
         margin-right: auto;
         margin-left: auto;
         padding: 2rem 2rem;
-        max-width: 48.375rem;
+        max-width: 46.375rem;
 
         h1:first-of-type {
             margin-top: 1rem;
@@ -381,7 +381,7 @@
 
             @media (min-width: @screen-md-min) {
                 a {
-                    max-width: 21rem;
+                    max-width: 20.5rem;
                 }
             }
 
@@ -402,7 +402,7 @@
         }
 
         section {
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
 
             > h3 {
                 margin-top: 2rem;
@@ -568,8 +568,6 @@
     }
 
     .doc-body {
-        padding-right: 2rem;
-
         @media (max-width: @screen-sm-max) {
             padding-right: 1rem;
         }
@@ -737,6 +735,18 @@
                         &.hidden {
                             display: none;
                         }
+
+                        button {
+                            &.open-options-menu {
+                                all: unset;
+                            }
+
+                            &:focus {
+                                border-radius: 0.125rem;
+                                box-shadow: 0 0 0 2px @black;
+                                outline: none;
+                            }
+                        }
                     }
                 }
             }
@@ -744,7 +754,7 @@
             .component-preview {
                 margin-top: 2.5rem;
                 border-bottom: 1px solid @brand-secondary-light-3;
-                z-index: 100;
+                // z-index: 100; Er denne viktig? https://github.com/SwedbankPay/design.swedbankpay.com/commit/280feef5c3bacf2cfb04a7060d089c39b38c9f87
 
                 .component-preview-content {
                     position: relative;
@@ -757,6 +767,10 @@
 
                     &.component-preview-alt-background {
                         background-color: @brand-primary;
+                    }
+
+                    form {
+                        z-index: 100;
                     }
 
                     .loader-preview-container {
@@ -809,7 +823,15 @@
                     height: 2.5rem;
 
                     .options-close {
+                        all: unset;
                         cursor: pointer;
+
+                        &:focus {
+                            border: none;
+                            border-radius: 0.125rem;
+                            box-shadow: 0 0 0 2px @black;
+                            outline: none;
+                        }
                     }
                 }
 
@@ -915,7 +937,7 @@
         &.mobile {
             h1,
             .h1 {
-                font-size: 1.5rem;
+                font-size: 1.75rem;
                 line-height: 2rem;
             }
 
@@ -1098,7 +1120,7 @@
         &.help-icon {
             width: 1.25rem;
             height: 1.25rem;
-            color: @soft-brown;
+            color: @brand-secondary;
         }
     }
 
@@ -1110,9 +1132,15 @@
             }
         }
 
-        .wrong {
+        .how-to-use {
             .form-group {
                 width: 100%;
+            }
+        }
+
+        @media screen and (max-width: @screen-xs-max) {
+            .slab-border-error {
+                margin-top: 1.5rem;
             }
         }
 
@@ -1219,9 +1247,26 @@
     }
 
     #tabs-overview {
+        #tabs-scroll-example-dont {
+            border-bottom: none;
+
+            > ul {
+                border-bottom: 1px solid #d4c4bc;
+            }
+        }
+
         .showcase-panel {
             .component-preview-content {
-                max-width: 30.75rem;
+                max-width: 29.5rem;
+                padding: 0;
+
+                @media screen and (max-width: @screen-xs-max) {
+                    max-width: 22.5rem;
+                }
+
+                .tabs-example-container {
+                    width: 80%;
+                }
             }
         }
     }
@@ -1271,6 +1316,66 @@
         legend {
             line-height: 1rem;
             margin-bottom: 1rem;
+        }
+    }
+
+    #logotype-doc {
+        .logotype-display {
+            div {
+                display: flex;
+                height: 10rem;
+                width: 10rem;
+                justify-content: center;
+                align-items: center;
+
+                &.background-light {
+                    background-color: @light-gray;
+                }
+
+                &.background-primary {
+                    background-color: @brand-primary;
+                }
+            }
+        }
+    }
+
+    #accordion-doc {
+        .slab-border-error,
+        .slab-border-success {
+            height: 27rem;
+        }
+
+        .accordion {
+            .accordion-body {
+                .example-accordion {
+                    border: 2px dotted @light-brown;
+                }
+            }
+        }
+    }
+
+    #pagination-overview {
+        .component-preview-content {
+            padding: 0;
+        }
+
+        .pagination {
+            &.example {
+                pointer-events: none;
+
+                .example-box {
+                    width: 6rem;
+                    height: 0.625rem;
+                    background-color: @brand-secondary;
+                    border-radius: 0.125rem;
+                }
+            }
+        }
+
+        .pagination-content-box-example {
+            height: 2.5rem;
+            background-color: @brand-bg-gray;
+            border-radius: 0.125rem;
         }
     }
 }

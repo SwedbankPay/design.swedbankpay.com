@@ -16,6 +16,7 @@ exports[`Utilities: ComponentPreview CodeFigure removes outer tag from markup 1`
         >
           HTML
           <button
+            aria-label="Copy to clipboard"
             className="copy-btn d-flex p-0"
           >
             <i
@@ -76,6 +77,7 @@ exports[`Utilities: ComponentPreview CodeFigure removes outer tag from markup ev
         >
           HTML
           <button
+            aria-label="Copy to clipboard"
             className="copy-btn d-flex p-0"
           >
             <i
@@ -136,6 +138,7 @@ exports[`Utilities: ComponentPreview CodeFigure removes outer tag from multiple 
         >
           HTML
           <button
+            aria-label="Copy to clipboard"
             className="copy-btn d-flex p-0"
           >
             <i
@@ -208,6 +211,7 @@ exports[`Utilities: ComponentPreview CodeFigure removes value property 1`] = `
         >
           HTML
           <button
+            aria-label="Copy to clipboard"
             className="copy-btn d-flex p-0"
           >
             <i
@@ -267,6 +271,7 @@ exports[`Utilities: ComponentPreview CodeFigure renders css string 1`] = `
         >
           CSS
           <button
+            aria-label="Copy to clipboard"
             className="copy-btn d-flex p-0"
           >
             <i
@@ -326,6 +331,7 @@ exports[`Utilities: ComponentPreview CodeFigure renders multiple html tags 1`] =
         >
           HTML
           <button
+            aria-label="Copy to clipboard"
             className="copy-btn d-flex p-0"
           >
             <i
@@ -391,6 +397,7 @@ exports[`Utilities: ComponentPreview CodeFigure renders multiple javascript stri
         >
           JAVASCRIPT
           <button
+            aria-label="Copy to clipboard"
             className="copy-btn d-flex p-0"
           >
             <i
@@ -451,6 +458,7 @@ exports[`Utilities: ComponentPreview CodeFigure returns a message if no child is
         >
           HTML
           <button
+            aria-label="Copy to clipboard"
             className="copy-btn d-flex p-0"
           >
             <i
@@ -510,6 +518,7 @@ exports[`Utilities: ComponentPreview CodeFigure warns about unhandled children 1
         >
           CSS
           <button
+            aria-label="Copy to clipboard"
             className="copy-btn d-flex p-0"
           >
             <i
@@ -569,6 +578,7 @@ exports[`Utilities: ComponentPreview Codefigure removes list tags 1`] = `
         >
           HTML
           <button
+            aria-label="Copy to clipboard"
             className="copy-btn d-flex p-0"
           >
             <i
@@ -611,7 +621,7 @@ exports[`Utilities: ComponentPreview Codefigure removes list tags 1`] = `
                   This
                   
 
-                  Iis
+                  Is
                   
 
                   A
@@ -647,6 +657,7 @@ exports[`Utilities: ComponentPreview Codefigure removes list tags from multiple 
         >
           HTML
           <button
+            aria-label="Copy to clipboard"
             className="copy-btn d-flex p-0"
           >
             <i
@@ -713,7 +724,7 @@ exports[`Utilities: ComponentPreview Codefigure removes list tags from multiple 
                   This
                   
 
-                  Iis
+                  Is
                   
 
                   A
@@ -725,7 +736,7 @@ exports[`Utilities: ComponentPreview Codefigure removes list tags from multiple 
                   This
                   
 
-                  Iis
+                  Is
                   
 
                   A
@@ -737,7 +748,7 @@ exports[`Utilities: ComponentPreview Codefigure removes list tags from multiple 
                   This
                   
 
-                  Iis
+                  Is
                   
 
                   A
@@ -793,6 +804,7 @@ exports[`Utilities: ComponentPreview does not render showCasePanel when prop is 
         >
           HTML
           <button
+            aria-label="Copy to clipboard"
             className="copy-btn d-flex p-0"
           >
             <i
@@ -852,6 +864,7 @@ exports[`Utilities: ComponentPreview does not render showCasePanelAdvanced when 
         >
           HTML
           <button
+            aria-label="Copy to clipboard"
             className="copy-btn d-flex p-0"
           >
             <i

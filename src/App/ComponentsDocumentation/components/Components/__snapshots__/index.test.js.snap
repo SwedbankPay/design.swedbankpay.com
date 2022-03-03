@@ -13,6 +13,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         calendar_view_day
@@ -24,6 +25,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -38,6 +40,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons mr-3"
       >
         list
@@ -49,6 +52,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -63,6 +67,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons mr-3"
       >
         error_outlined
@@ -74,6 +79,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -88,6 +94,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         more
@@ -99,6 +106,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -113,6 +121,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         last_page
@@ -124,6 +133,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -138,6 +148,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         touch_app
@@ -149,6 +160,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -163,6 +175,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         view_agenda
@@ -174,6 +187,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -188,6 +202,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         bar_chart
@@ -199,6 +214,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -213,6 +229,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         check_box
@@ -224,6 +241,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -238,6 +256,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         code
@@ -249,6 +268,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -263,6 +283,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         event
@@ -274,6 +295,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -288,6 +310,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         picture_in_picture
@@ -299,6 +322,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -313,6 +337,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons mr-3"
       >
         text_fields
@@ -324,6 +349,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -338,6 +364,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         link
@@ -349,6 +376,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -363,6 +391,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         sort
@@ -374,6 +403,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -388,6 +418,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         loop
@@ -399,6 +430,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -413,6 +445,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         account_circle
@@ -424,6 +457,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -438,6 +472,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         explore
@@ -449,6 +484,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -463,6 +499,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         power_input
@@ -474,6 +511,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -488,6 +526,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         table_rows
@@ -499,6 +538,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -513,6 +553,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons mr-3"
       >
         hdr_strong
@@ -524,6 +565,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -538,6 +580,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons mr-3"
       >
         radio_button_checked
@@ -549,6 +592,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -563,6 +607,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         tune
@@ -574,6 +619,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -588,6 +634,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         vertical_split
@@ -599,6 +646,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -613,6 +661,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         arrow_drop_down_circle
@@ -624,6 +673,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -638,6 +688,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         view_sidebar
@@ -649,6 +700,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -663,6 +715,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         crop_landscape
@@ -674,6 +727,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -688,6 +742,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         check_circle
@@ -699,6 +754,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -713,6 +769,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         view_list
@@ -724,6 +781,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -738,6 +796,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         folder
@@ -749,6 +808,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -763,6 +823,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         picture_in_picture
@@ -774,6 +835,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -788,6 +850,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         toggle_off
@@ -799,6 +862,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -813,6 +877,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
         filter_frames
@@ -824,6 +889,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward
@@ -838,6 +904,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       className="cards-content flex-row align-items-center m-0 "
     >
       <i
+        aria-hidden="true"
         className="material-icons material-icons-outlined v-flip mr-3"
       >
         call_to_action
@@ -849,6 +916,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
       </span>
     </div>
     <i
+      aria-hidden="true"
       className="material-icons material-icons-outlined"
     >
       arrow_forward

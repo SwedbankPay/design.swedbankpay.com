@@ -19,6 +19,7 @@ exports[`Components: Toast Content guidelines renders 1`] = `
           className="toast toast-neutral col-12"
         >
           <i
+            aria-hidden="true"
             className="material-icons"
           >
             info
@@ -30,11 +31,16 @@ exports[`Components: Toast Content guidelines renders 1`] = `
               Message
             </b>
           </div>
-          <i
-            className="material-icons"
+          <button
+            aria-label="Close button"
+            className="toast-close ml-auto"
           >
-            close
-          </i>
+            <i
+              className="material-icons"
+            >
+              close
+            </i>
+          </button>
         </div>
       </div>
     </div>
@@ -442,6 +448,7 @@ Show neutral toast
             className="toast toast-neutral col-sm-11 col-12"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               info
@@ -453,11 +460,16 @@ Show neutral toast
                 Short information message
               </b>
             </div>
-            <i
-              className="material-icons"
+            <button
+              aria-label="Close button"
+              className="toast-close ml-auto"
             >
-              close
-            </i>
+              <i
+                className="material-icons"
+              >
+                close
+              </i>
+            </button>
           </div>
         </div>
       </div>
@@ -484,6 +496,7 @@ Show neutral toast
             className="toast toast-neutral"
           >
             <i
+              aria-hidden="true"
               className="material-icons"
             >
               info
@@ -495,11 +508,16 @@ Show neutral toast
                 Short information message
               </b>
             </div>
-            <i
-              className="material-icons"
+            <button
+              aria-label="Close button"
+              className="toast-close ml-auto"
             >
-              close
-            </i>
+              <i
+                className="material-icons"
+              >
+                close
+              </i>
+            </button>
           </div>
         </div>
       </div>

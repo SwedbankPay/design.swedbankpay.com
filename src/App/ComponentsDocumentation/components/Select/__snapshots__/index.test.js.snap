@@ -8,13 +8,18 @@ exports[`Component: Select ContentGuidelines renders 1`] = `
     Content guidelines
   </h2>
   <div
-    className="d-flex justify-content-center slab slab-plain px-5 pt-5 pb-4 no-pointer-events"
+    className="d-flex justify-content-center slab slab-plain px-5 pt-5 pb-4"
   >
     <InputGroup
       helpBlock={true}
+      id="content-guidelines-example"
       label="Label"
       placeholder="Placeholder text"
-      selectOptions={Array []}
+      selectOptions={
+        Array [
+          "Related option",
+        ]
+      }
       type="select"
     />
   </div>
@@ -56,27 +61,17 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
     Error state
   </span>
   <p>
-    If the user don’t select any option in a select that is required to be filled, an error message should be displayed. Add the 
+    If the user don’t select any option in a select that is required to be filled, an error message should be displayed. To display the error message, add the 
     <CodeTags
       code=".has-error"
       type="secondary"
     />
-     class to the 
+     class to the parent element, then add the 
     <CodeTags
-      code="form-group"
-      type="primary"
+      code=".help-block"
+      type="secondary"
     />
-     element, and insert the error message in the attribute 
-    <CodeTags
-      code="data-error"
-      type="primary"
-    />
-     in the 
-    <CodeTags
-      code="help-block"
-      type="primary"
-    />
-     element. 
+     element as the last child with the error message.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -91,7 +86,9 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
       >
         
 
-        <label>
+        <label
+          htmlFor="dev-doc-example"
+        >
           
 
           Label
@@ -103,6 +100,7 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
         <select
           className="form-control"
           defaultValue="placeholder"
+          id="dev-doc-example"
           required={true}
         >
           
@@ -149,6 +147,7 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
   >
     <InputGroup
       disabled={true}
+      id="disabled-state-example"
       label="Label"
       placeholder="Select option"
       selectOptions={Array []}
@@ -174,6 +173,7 @@ exports[`Component: Select Overview renders 1`] = `
         "elements": Array [
           Object {
             "component": <InputGroup
+              id="select-showcase-example"
               label="Label"
               placeholder="Select option"
               selectOptions={
@@ -258,13 +258,13 @@ exports[`Component: Select When to use renders 1`] = `
     The select component should be used sparsely, often times there are better and more intuitive ways to present choices for the user.
   </p>
   <div
-    className="row wrong mb-3"
+    className="row how-to-use mb-3"
   >
     <div
-      className="col-12 col-sm-6 mb-2"
+      className="col-12 col-sm-6"
     >
       <div
-        className="px-4 slab slab-plain slab-border-success h-100 d-flex flex-column mb-2"
+        className="slab slab-plain slab-border-success mb-2"
       >
         <span
           className="h4"
@@ -272,9 +272,11 @@ exports[`Component: Select When to use renders 1`] = `
           Do
         </span>
         <div
-          className="pb-3"
+          className="mb-1"
         >
-          <p>
+          <p
+            className="mb-2"
+          >
             Background color
           </p>
           <Radio
@@ -295,7 +297,7 @@ exports[`Component: Select When to use renders 1`] = `
       className="col-12 col-sm-6"
     >
       <div
-        className="px-4 slab slab-plain slab-border-error h-100 mb-2 d-flex flex-column"
+        className="slab slab-plain slab-border-error mb-2"
       >
         <span
           className="h4"
@@ -304,6 +306,7 @@ exports[`Component: Select When to use renders 1`] = `
         </span>
         <div>
           <InputGroup
+            id="dont-example-0"
             label="Background color"
             placeholder="Select color"
             selectOptions={
@@ -328,13 +331,13 @@ exports[`Component: Select When to use renders 1`] = `
      instead.
   </p>
   <div
-    className="row wrong mb-3"
+    className="row how-to-use mb-3"
   >
     <div
-      className="col-12 col-sm-6 mb-2"
+      className="col-12 col-sm-6"
     >
       <div
-        className="px-4 slab slab-plain slab-border-success h-100 d-flex flex-column mb-2"
+        className="slab slab-plain slab-border-success mb-2"
       >
         <span
           className="h4"
@@ -342,8 +345,9 @@ exports[`Component: Select When to use renders 1`] = `
           Do
         </span>
         <Datepicker
+          id="datepicker-example"
           label="Birthday"
-          placeholder="DD/MM/YYY"
+          placeholder="YYYY-MM-DD"
           prefixType="icon"
           prefixValue="event"
         />
@@ -353,7 +357,7 @@ exports[`Component: Select When to use renders 1`] = `
       className="col-12 col-sm-6"
     >
       <div
-        className="px-4 slab slab-plain slab-border-error h-100 mb-2 d-flex flex-column"
+        className="slab slab-plain slab-border-error mb-2"
       >
         <span
           className="h4"
@@ -362,6 +366,7 @@ exports[`Component: Select When to use renders 1`] = `
         </span>
         <div>
           <InputGroup
+            id="dont-example-1"
             label="Day"
             placeholder="Select day"
             selectOptions={
@@ -415,13 +420,13 @@ exports[`Component: Select When to use renders 1`] = `
      to let user select the right date faster.
   </p>
   <div
-    className="row wrong mb-3"
+    className="row how-to-use mb-3"
   >
     <div
-      className="col-12 col-sm-6 mb-2"
+      className="col-12 col-sm-6"
     >
       <div
-        className="px-4 slab slab-plain slab-border-success h-100 d-flex flex-column mb-2"
+        className="slab slab-plain slab-border-success mb-2"
       >
         <span
           className="h4"
@@ -429,6 +434,7 @@ exports[`Component: Select When to use renders 1`] = `
           Do
         </span>
         <InputGroup
+          id="select-do-example"
           label="Number of drinks"
           placeholder="4"
           type="text"
@@ -439,7 +445,7 @@ exports[`Component: Select When to use renders 1`] = `
       className="col-12 col-sm-6"
     >
       <div
-        className="px-4 slab slab-plain slab-border-error h-100 mb-2 d-flex flex-column"
+        className="slab slab-plain slab-border-error mb-2"
       >
         <span
           className="h4"
@@ -448,6 +454,7 @@ exports[`Component: Select When to use renders 1`] = `
         </span>
         <div>
           <InputGroup
+            id="dont-example-2"
             label="Number of drinks"
             placeholder="Select number"
             selectOptions={

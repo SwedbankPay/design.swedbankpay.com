@@ -4,16 +4,15 @@ import Tabs from "@components/Tabs";
 
 const tabItems = ["Selected", "Unselected", "Unselected", "Unselected", "Unselected", "Unselected"];
 
-const TabsExample = ({ scroll, id }) => {
-    const items = scroll ? tabItems : tabItems.slice(0, 3);
-
-    return (
-        <div className="w-75">
-            <Tabs id={id} items={items} scroll={scroll}/>
-            <p>Content of the selected tabs</p>
-        </div>
-    );
-};
+const TabsExample = ({ scroll, id }) => (
+    <div className="tabs-example-container">
+        {scroll === true
+            ? <><Tabs id={id} items={tabItems} scroll="true"/></>
+            : <Tabs id={id} items={tabItems.slice(0, 3)} />
+        }
+        <p>Content of the selected tabs</p>
+    </div>
+);
 
 export const tabsShowCasePanel = {
     id: "no-tabs",
@@ -23,7 +22,7 @@ export const tabsShowCasePanel = {
             options: {
                 checkbox: [
                     {
-                        title: "Behaviour",
+                        title: "Behavior",
                         inputs: [
                             {
                                 id: "scroll",

@@ -9,7 +9,7 @@ jobs:
       matrix:
         brand: ["payex", "swedbankpay"]
     steps:
-      - uses: actions/checkout@v2.4.0
+      - uses: actions/checkout@v3
 
       # Set brand specific variables
       - name: Environment variables
@@ -22,7 +22,7 @@ jobs:
           node-version: 12.x
 
       - name: Cache dependencies
-        uses: actions/cache@v2.1.6
+        uses: actions/cache@v2.1.7
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -39,7 +39,7 @@ jobs:
         #   files: ./coverage/lcov.info
           # fail_ci_if_error: true
 
-      - uses: preactjs/compressed-size-action@2.3.0
+      - uses: preactjs/compressed-size-action@2.4.0
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           build-script: "${{ steps.variables.outputs.BUILD_SCRIPT }}"

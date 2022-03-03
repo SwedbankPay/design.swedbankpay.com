@@ -4,22 +4,22 @@ import Rangeslider from "@components/Rangeslider";
 export const howToUse = [
     {
         type: "success",
-        component: <Rangeslider label="Label" min={0} max={200} value={100}/>,
+        component: <Rangeslider id="example-1" label="Label" min={0} max={200} value={100}/>,
         text: <p>Do use <b>sliders</b> for content with numeric values.</p>
     },
     {
         type: "success",
-        component: <Rangeslider label="Label" min={0} max={100} value={50} valueLabelPostfix="%"/>,
+        component: <Rangeslider id="example-2" label="Label" min={0} max={100} value={50} valueLabelPostfix="%"/>,
         text: <p>The <b>sliders</b> component also have a post label for special symbols to help the user easier understand the slider value. It could be shown as above with the percentage symbol.</p>
     },
     {
         type: "success",
-        component: <Rangeslider label="Label" min={0} max={200} value={100} valueLabelPrefix="$" />,
+        component: <Rangeslider id="example-3" label="Label" min={0} max={200} value={100} valueLabelPrefix="$" />,
         text: <p>It also have a pre label for other symbols such as currency e.g. €, $ and £.</p>
     },
     {
         type: "error",
-        component: <Rangeslider label="Label" value={50} />,
+        component: <Rangeslider id="example-4" label="Label" value={50} />,
         text: <p>Don’t modify and remove label and maximum/minimum indicators as this makes it harder for user to grasp the content and context of use.</p>
     },
     {
@@ -48,7 +48,7 @@ export const sliderShowCase = {
     id: "no-tabs",
     elements: [
         {
-            component: <Rangeslider label="Label" min={0} max={100} value={50}/>,
+            component: <Rangeslider id="rangeslider-showcase-example" label="Label" min={0} max={100} value={50}/>,
             options: {
                 checkbox: [
                     {
@@ -111,7 +111,7 @@ export const sliderShowCase = {
                 ]
             },
             title: "Slider",
-            description: "The slider component has a label which decribes the intent of the slider. It also has a minimum and maximum range which displays the range which user can pick inbetween. By holding and draging the circle indicator along the line, the user can see the value change and update in real time."
+            description: "The slider component has a label which describes the intent of the slider. It also has a minimum and maximum range which displays the range which user can pick in between. By holding and dragging the circle indicator along the line, the user can see the value change and update in real time."
         }
     ]
 };
