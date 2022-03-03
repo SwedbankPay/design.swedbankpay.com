@@ -28,7 +28,9 @@
     -   Documentation
 
 -   Browser support documentation
+
 -   Design guide doc-container width(is now a tiny bit smaller)
+
 -   Size H1 mobile & H2 desktop is now 28px, up from 24px
 
 ## Added
@@ -46,4 +48,5 @@
 -   Tabbing issues with Radio-buttons
 -   Text overlapping arrow-button on the Select component
 -   Bug on Tabs examples in the documentation
+
 
