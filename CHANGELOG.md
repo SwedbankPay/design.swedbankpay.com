@@ -8,20 +8,25 @@
 ## Changed
 -   Accordion
     -   Updated description under Developer documentation to be more intuitive
+
 -   Button
     -   Now supports icon after
     -   Some styling changes
     -   Documentation
+
 -   Input-field
     -   Implemented postfix
     -   Documentation 
+
 -   Sheet
     -   Now supports a footer
     -   Updated scripts to handle focus/tabbing inside the component
     -   Documentation
+
 -   Logotype
     -   Updated logotype assets folder(updated logos)
     -   Documentation
+
 -   Browser support documentation
 -   Design guide doc-container width(is now a tiny bit smaller)
 -   Size H1 mobile & H2 desktop is now 28px, up from 24px
@@ -33,6 +38,7 @@
     -   Error text
     -   Form/Fieldset sections grouped
     -   Auto focus when modal is opened
+
 -   Hotjar tracking code
 
 ## Fixed
