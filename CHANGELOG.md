@@ -3,7 +3,8 @@
 ## [8.0.0] - 02.03.2022
 
 ## Breaking changes
--   Pagination component has got a new design and along comes a script as well!
+-   Pagination component has got a new design, and along comes a script that paginates the pages for you as well!
+-   Form-group error message - Since the error message was presented with CSS, it was impossible for a screen reader to perceive it since it was not plain text. Therefor it is no longer created through the data-error attribute. But instead, placed directly inside the ``.help-block`` element.
 
 ## Changed
 -   Accordion
@@ -14,14 +15,18 @@
     -   Some styling changes
     -   Documentation
 
+-   Charts
+    -   Updated documentation and now includes an Accessibility section.
+
 -   Input-field
     -   Implemented postfix
     -   Documentation 
 
 -   Sheet
-    -   Now supports a footer
+    -   Is now mobile friendly
+    -   Now has a header and supports a sticky footer
     -   Updated scripts to handle focus/tabbing inside the component
-    -   Documentation
+    -   Documentation 
 
 -   Logotype
     -   Updated logotype assets folder(updated logos)
