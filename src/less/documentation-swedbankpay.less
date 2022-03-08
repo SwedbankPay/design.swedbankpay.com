@@ -1257,8 +1257,14 @@
 
         .showcase-panel {
             .component-preview-content {
-                max-width: 29.5rem;
                 padding: 0;
+
+                .tabs {
+                    &.tabs-scroll {
+                        max-width: 29.7rem;
+                        margin-left: 0;
+                    }
+                }
 
                 @media screen and (max-width: @screen-xs-max) {
                     max-width: 22.5rem;
