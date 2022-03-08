@@ -27,9 +27,9 @@ export const howToUse = [
         component:
             <div>
                 <div className="rangeslider">
-                    <input type="range"/>
+                    <input id="example-5" type="range"/>
                     <div className="d-flex justify-content-between">
-                        <p className="rangeslider-label">Label</p>
+                        <label htmlFor="example-5">Label</label>
                         <output className="value-label px-2 align-items-center">
                             Average
                         </output>
