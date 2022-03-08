@@ -311,3 +311,66 @@ export const logoPayex = {
         }
     ]
 };
+
+export const logotypeMisuses = [
+    {
+        src: "img/documentation/logotype/old_logo.png",
+        height: "h-100",
+        title: "Use old version",
+        description: "Do not use the old version of the logo – darker and more detailed coin."
+    },
+    {
+        src: "img/documentation/logotype/resize_logo.png",
+        height: "h-100",
+        title: "Resize",
+        description: "Do not distort or wrap the logo in any way."
+    },
+    {
+        src: "img/documentation/logotype/pay_text.png",
+        height: "h-50",
+        title: "Demount",
+        description: "Do not use the wordmark without the icon (the coin)."
+    },
+    {
+        src: "img/documentation/logotype/swedbank_logo.png",
+        height: "h-75",
+        title: "Use Swedbank logo",
+        description: "Do not use the Swedbank logo instead or in combination with the Swedbank Pay logo."
+    },
+    {
+        src: "img/documentation/logotype/rotated_logo.png",
+        height: "h-100",
+        title: "Rotate",
+        description: "Do not rotate the logo"
+    },
+    {
+        src: "img/documentation/logotype/green_logo.png",
+        height: "h-100",
+        title: "Alter color",
+        description: "Do not change the logo colour or tone in any way."
+    },
+    {
+        src: "img/documentation/logotype/black_and_white_logo.png",
+        height: "h-100",
+        title: "Make B/W",
+        description: "Do not change the hue of the logo"
+    },
+    {
+        src: "img/documentation/logotype/shadowed_logo.png",
+        height: "h-100",
+        title: "Add effect",
+        description: "Do not add any shadows or other effects to the logo."
+    },
+    {
+        src: "img/documentation/logotype/changed_wordmark.png",
+        height: "h-100",
+        title: "Change wordmark",
+        description: "Do not manipulate or replace the wordmark"
+    },
+    {
+        src: "img/documentation/logotype/moved_wordmark.png",
+        height: "h-50",
+        title: "Move wordmark",
+        description: "Do not move the workmark from its original position"
+    },
+];
