@@ -323,9 +323,6 @@ exports[`Components: Toast Overview renders 1`] = `
               type="neutral"
             />,
             "description": "Use this toast to inform the user about something, in some cases a link can be used to direct the user towards continued reading. For information on how to trigger a toast, read more under Developer documentation.",
-            "options": Object {
-              "checkbox": Array [],
-            },
             "tab": "Neutral",
             "title": "Neutral toast",
           },
@@ -340,9 +337,6 @@ exports[`Components: Toast Overview renders 1`] = `
               </p>
               <AlertBox />
             </React.Fragment>,
-            "options": Object {
-              "checkbox": Array [],
-            },
             "tab": "Success",
             "title": "Success toast",
           },
@@ -357,9 +351,6 @@ exports[`Components: Toast Overview renders 1`] = `
               </p>
               <AlertBox />
             </React.Fragment>,
-            "options": Object {
-              "checkbox": Array [],
-            },
             "tab": "Warning",
             "title": "Warning toast",
           },
@@ -374,9 +365,6 @@ exports[`Components: Toast Overview renders 1`] = `
               </p>
               <AlertBox />
             </React.Fragment>,
-            "options": Object {
-              "checkbox": Array [],
-            },
             "tab": "Danger",
             "title": "Danger toast",
           },

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Core: Logotype Favicon renders 1`] = `
-<Fragment>
+<section>
   <h2
     id="our-favicon"
   >
@@ -229,11 +229,11 @@ exports[`Core: Logotype Favicon renders 1`] = `
       name="theme-color"
     />
   </ComponentPreview>
-</Fragment>
+</section>
 `;
 
 exports[`Core: Logotype LogoBlack renders 1`] = `
-<Fragment>
+<section>
   <h2
     id="logo-black"
   >
@@ -383,11 +383,11 @@ exports[`Core: Logotype LogoBlack renders 1`] = `
       }
     }
   />
-</Fragment>
+</section>
 `;
 
 exports[`Core: Logotype LogoPayex renders 1`] = `
-<Fragment>
+<section>
   <ComponentPreview
     codeFigure={true}
     language="html"
@@ -510,11 +510,11 @@ exports[`Core: Logotype LogoPayex renders 1`] = `
       }
     }
   />
-</Fragment>
+</section>
 `;
 
 exports[`Core: Logotype LogoWhite renders 1`] = `
-<Fragment>
+<section>
   <h2
     id="logo-white"
   >
@@ -658,11 +658,11 @@ exports[`Core: Logotype LogoWhite renders 1`] = `
       }
     }
   />
-</Fragment>
+</section>
 `;
 
 exports[`Core: Logotype LogotypeBackgrounds renders 1`] = `
-<Fragment>
+<section>
   <h2
     id="logotype-backgrounds"
   >
@@ -697,11 +697,11 @@ exports[`Core: Logotype LogotypeBackgrounds renders 1`] = `
       src="/TEST/img/documentation/logotype/bg-yellow.png"
     />
   </div>
-</Fragment>
+</section>
 `;
 
 exports[`Core: Logotype MisuseLogo renders 1`] = `
-<Fragment>
+<section>
   <h2
     id="misuse-logo"
   >
@@ -713,14 +713,17 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
   <div
     className="slab slab-plain slab-border-error"
   >
-    <h4>
+    <span
+      className="h3 d-block mb-3"
+    >
       Don't
-    </h4>
+    </span>
     <div
       className="row"
     >
       <div
         className="col-lg-3 col-md-4 col-sm-6"
+        key="img/documentation/logotype/old_logo.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -733,9 +736,11 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
               src="/TEST/img/documentation/logotype/old_logo.png"
             />
           </div>
-          <h4>
+          <span
+            className="h4 mb-4"
+          >
             Use old version
-          </h4>
+          </span>
           <p>
             Do not use the old version of the logo – darker and more detailed coin.
           </p>
@@ -743,6 +748,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
       </div>
       <div
         className="col-lg-3 col-md-4 col-sm-6"
+        key="img/documentation/logotype/resize_logo.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -755,9 +761,11 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
               src="/TEST/img/documentation/logotype/resize_logo.png"
             />
           </div>
-          <h4>
+          <span
+            className="h4 mb-4"
+          >
             Resize
-          </h4>
+          </span>
           <p>
             Do not distort or wrap the logo in any way.
           </p>
@@ -765,6 +773,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
       </div>
       <div
         className="col-lg-3 col-md-4 col-sm-6"
+        key="img/documentation/logotype/pay_text.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -777,9 +786,11 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
               src="/TEST/img/documentation/logotype/pay_text.png"
             />
           </div>
-          <h4>
+          <span
+            className="h4 mb-4"
+          >
             Demount
-          </h4>
+          </span>
           <p>
             Do not use the wordmark without the icon (the coin).
           </p>
@@ -787,6 +798,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
       </div>
       <div
         className="col-lg-3 col-md-4 col-sm-6"
+        key="img/documentation/logotype/swedbank_logo.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -799,9 +811,11 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
               src="/TEST/img/documentation/logotype/swedbank_logo.png"
             />
           </div>
-          <h4>
+          <span
+            className="h4 mb-4"
+          >
             Use Swedbank logo
-          </h4>
+          </span>
           <p>
             Do not use the Swedbank logo instead or in combination with the Swedbank Pay logo.
           </p>
@@ -809,6 +823,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
       </div>
       <div
         className="col-lg-3 col-md-4 col-sm-6"
+        key="img/documentation/logotype/rotated_logo.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -821,16 +836,19 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
               src="/TEST/img/documentation/logotype/rotated_logo.png"
             />
           </div>
-          <h4>
+          <span
+            className="h4 mb-4"
+          >
             Rotate
-          </h4>
+          </span>
           <p>
-            Do not rotate the logo.
+            Do not rotate the logo
           </p>
         </div>
       </div>
       <div
         className="col-lg-3 col-md-4 col-sm-6"
+        key="img/documentation/logotype/green_logo.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -843,9 +861,11 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
               src="/TEST/img/documentation/logotype/green_logo.png"
             />
           </div>
-          <h4>
+          <span
+            className="h4 mb-4"
+          >
             Alter color
-          </h4>
+          </span>
           <p>
             Do not change the logo colour or tone in any way.
           </p>
@@ -853,6 +873,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
       </div>
       <div
         className="col-lg-3 col-md-4 col-sm-6"
+        key="img/documentation/logotype/black_and_white_logo.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -865,16 +886,19 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
               src="/TEST/img/documentation/logotype/black_and_white_logo.png"
             />
           </div>
-          <h4>
+          <span
+            className="h4 mb-4"
+          >
             Make B/W
-          </h4>
+          </span>
           <p>
-            Do not use a change the hue of the logo.
+            Do not change the hue of the logo
           </p>
         </div>
       </div>
       <div
         className="col-lg-3 col-md-4 col-sm-6"
+        key="img/documentation/logotype/shadowed_logo.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -887,9 +911,11 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
               src="/TEST/img/documentation/logotype/shadowed_logo.png"
             />
           </div>
-          <h4>
-            Add effects
-          </h4>
+          <span
+            className="h4 mb-4"
+          >
+            Add effect
+          </span>
           <p>
             Do not add any shadows or other effects to the logo.
           </p>
@@ -897,6 +923,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
       </div>
       <div
         className="col-lg-3 col-md-4 col-sm-6"
+        key="img/documentation/logotype/changed_wordmark.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -909,16 +936,19 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
               src="/TEST/img/documentation/logotype/changed_wordmark.png"
             />
           </div>
-          <h4>
+          <span
+            className="h4 mb-4"
+          >
             Change wordmark
-          </h4>
+          </span>
           <p>
-            Do not manipulate or replace the wordmark.
+            Do not manipulate or replace the wordmark
           </p>
         </div>
       </div>
       <div
         className="col-lg-3 col-md-4 col-sm-6"
+        key="img/documentation/logotype/moved_wordmark.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -931,17 +961,19 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
               src="/TEST/img/documentation/logotype/moved_wordmark.png"
             />
           </div>
-          <h4>
+          <span
+            className="h4 mb-4"
+          >
             Move wordmark
-          </h4>
+          </span>
           <p>
-            Do not move the workmark from its original position.
+            Do not move the workmark from its original position
           </p>
         </div>
       </div>
     </div>
   </div>
-</Fragment>
+</section>
 `;
 
 exports[`Core: Logotype Overview renders 1`] = `
@@ -1028,7 +1060,7 @@ exports[`Core: Logotype Overview renders 1`] = `
 `;
 
 exports[`Core: Logotype SpacingZone renders 1`] = `
-<Fragment>
+<section>
   <h2
     id="spacing-zone"
   >
@@ -1059,7 +1091,7 @@ exports[`Core: Logotype SpacingZone renders 1`] = `
       src="/TEST/img/documentation/logotype/horizontal-measure.png"
     />
   </div>
-</Fragment>
+</section>
 `;
 
 exports[`Core: Logotype renders 1`] = `<Fragment />`;

@@ -264,10 +264,10 @@ exports[`Component: Select When to use renders 1`] = `
       className="col-12 col-sm-6"
     >
       <div
-        className="slab slab-plain slab-border-success mb-2"
+        className="slab slab-plain slab-border-success"
       >
         <span
-          className="h4"
+          className="h3 d-block mb-3"
         >
           Do
         </span>
@@ -297,10 +297,10 @@ exports[`Component: Select When to use renders 1`] = `
       className="col-12 col-sm-6"
     >
       <div
-        className="slab slab-plain slab-border-error mb-2"
+        className="slab slab-plain slab-border-error"
       >
         <span
-          className="h4"
+          className="h3 d-block mb-3"
         >
           Don't
         </span>
@@ -321,7 +321,9 @@ exports[`Component: Select When to use renders 1`] = `
       </div>
     </div>
   </div>
-  <p>
+  <p
+    className="mb-4"
+  >
     In the example above, when there are very few choices, they should not be hidden inside a select list as this makes it harder for user to get an overview. Use 
     <Link
       to="/components/radio-button"
@@ -337,10 +339,10 @@ exports[`Component: Select When to use renders 1`] = `
       className="col-12 col-sm-6"
     >
       <div
-        className="slab slab-plain slab-border-success mb-2"
+        className="slab slab-plain slab-border-success"
       >
         <span
-          className="h4"
+          className="h3 d-block mb-3"
         >
           Do
         </span>
@@ -357,10 +359,10 @@ exports[`Component: Select When to use renders 1`] = `
       className="col-12 col-sm-6"
     >
       <div
-        className="slab slab-plain slab-border-error mb-2"
+        className="slab slab-plain slab-border-error"
       >
         <span
-          className="h4"
+          className="h3 d-block mb-3"
         >
           Don't
         </span>
@@ -410,7 +412,9 @@ exports[`Component: Select When to use renders 1`] = `
       </div>
     </div>
   </div>
-  <p>
+  <p
+    className="mb-4"
+  >
     Instead of using a dropdown input for selecting a day of the month. It is better to use a 
     <Link
       to="/components/datepickers"
@@ -426,10 +430,10 @@ exports[`Component: Select When to use renders 1`] = `
       className="col-12 col-sm-6"
     >
       <div
-        className="slab slab-plain slab-border-success mb-2"
+        className="slab slab-plain slab-border-success"
       >
         <span
-          className="h4"
+          className="h3 d-block mb-3"
         >
           Do
         </span>
@@ -445,10 +449,10 @@ exports[`Component: Select When to use renders 1`] = `
       className="col-12 col-sm-6"
     >
       <div
-        className="slab slab-plain slab-border-error mb-2"
+        className="slab slab-plain slab-border-error"
       >
         <span
-          className="h4"
+          className="h3 d-block mb-3"
         >
           Don't
         </span>
@@ -471,7 +475,9 @@ exports[`Component: Select When to use renders 1`] = `
       </div>
     </div>
   </div>
-  <p>
+  <p
+    className="mb-4"
+  >
     Instead of using a dropdown input that will force the user to choose from a set of predefined options it is sometimes better to use an 
     <Link
       to="/components/input-field"
