@@ -68,18 +68,12 @@ export const toastShowCase = {
         {
             tab: "Neutral",
             component: <Toast type="neutral" title="Neutral" />,
-            options: {
-                checkbox: []
-            },
             title: "Neutral toast",
             description: "Use this toast to inform the user about something, in some cases a link can be used to direct the user towards continued reading. For information on how to trigger a toast, read more under Developer documentation."
         },
         {
             tab: "Success",
             component: <Toast type="success" title="Success" />,
-            options: {
-                checkbox: []
-            },
             title: "Success toast",
             description: <>
                 <p>Use success toast to show that the action performed by the user was successful.</p>
@@ -89,9 +83,6 @@ export const toastShowCase = {
         {
             tab: "Warning",
             component: <Toast type="warning" title="Warning" />,
-            options: {
-                checkbox: []
-            },
             title: "Warning toast",
             description: <>
                 <p>The warning toast warns the user about situations that might be unfavorable. Don’t use this to present critical information.</p>
@@ -101,9 +92,6 @@ export const toastShowCase = {
         {
             tab: "Danger",
             component: <Toast type="danger" title="Danger" />,
-            options: {
-                checkbox: []
-            },
             title: "Danger toast",
             description: <>
                 <p>Danger toast informs the user of error and issues that may have occurred. They should let the user know what has happened and how the user can solve the issue.</p>
