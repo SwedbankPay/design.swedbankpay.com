@@ -169,7 +169,7 @@ export const contentGuidelines = [
             },
             {
                 slabType: "error",
-                content: <InputGroup id="guidelines-input-example-2" type="email" label="username" prefixType="icon" prefixValue="email"/>,
+                content: <InputGroup id="guidelines-input-example-2" type="email" label="Username" prefixType="icon" prefixValue="email"/>,
                 description: "Don’t use a prefix icon that doesn’t help to convey the meaning of the label. There shouldn’t be any confusion between what type of information an icon represents."
             },
             {
