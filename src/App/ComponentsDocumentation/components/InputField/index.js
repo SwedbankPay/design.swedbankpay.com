@@ -2,7 +2,7 @@ import React, { forwardRef, useRef } from "react";
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 import InputGroup from "@components/InputGroup";
-import { inputShowCase, textareaShowCase } from "./constants";
+import { inputShowCase, textareaShowCase, contentGuidelines } from "./constants";
 
 const Overview = ({ scrollToRef }) => (
     <section id="input-field-overview">
@@ -10,7 +10,7 @@ const Overview = ({ scrollToRef }) => (
         <p>Use a Input field when the expected user input is a single line of text. A Input field must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to <a href="javascript:;" onClick={() => scrollToRef()}>content guidelines</a> for more information.</p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={inputShowCase} codeFigure />
         <h3>When to consider something else</h3>
-        <ul className="pl-3 list list-bullet">
+        <ul className="list list-bullet">
             <li>Use a <b>Textarea</b> when the expected user input is more than one sentence</li>
         </ul>
     </section>
@@ -24,7 +24,7 @@ const Textarea = ({ scrollToRef }) => (
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={textareaShowCase} codeFigure />
 
         <h3>When to consider something else</h3>
-        <ul className="pl-3 list list-bullet">
+        <ul className="list list-bullet">
             <li>Use a <b>Input field</b> when the expected user input is a short text</li>
         </ul>
     </section>
@@ -49,80 +49,23 @@ const ContentGuidelines = forwardRef((props, ref) => <section ref={ref}>
         <li>When a text field is not required to be filled by the user, label it as “optional”.</li>
         <li>If there is a need for a more detailed description, a help icon can be added after the label. </li>
     </ul>
-
-    <h3>Prefix and Postfix</h3>
-    <p>Prefixes and postfixes are useful when there’s a commonly understood icon, symbol or abbreviation for the type of information the user needs to enter since it can reduce mental load. </p>
-
-    <div className="row placeholder-guideline">
-        <div className="col-lg-6 col-sm-12 ">
-            <div className="slab slab-plain slab-border-success pb-4">
-                <h3 className="mb-3 mt-0">Do</h3>
-                <InputGroup type="text" label="Username" prefixType="icon" prefixValue="account_circle"/>
+    {contentGuidelines.map(section => (
+        <section key={section.lead}>
+            <h3>{section.heading}</h3>
+            <p>{section.lead}</p>
+            <div className="row placeholder-guideline">
+                {section.examples.map(({ slabType, description, content },) => (
+                    <div key={description} className="col-lg-6 col-sm-12">
+                        <div className={`slab slab-plain slab-border-${slabType}`}>
+                            <span className="h3 d-block mb-3">Do{slabType === "error" && "n't" }</span>
+                            {content}
+                        </div>
+                        <p className="mb-4">{description}</p>
+                    </div>
+                ))}
             </div>
-            <p>Use a prefix icon to help convey the meaning of the label.</p>
-        </div>
-        <div className="col-lg-6 col-sm-12">
-            <div className="slab slab-plain slab-border-error pb-4">
-                <h3 className="mb-3 mt-0">Don&#x27;t</h3>
-                <InputGroup type="email" label="username" prefixType="icon" prefixValue="email"/>
-            </div>
-            <p>Don’t use a prefix icon that doesn’t help to convey the meaning of the label. There shouldn’t be any confusion between what type of information an icon represents.</p>
-        </div>
-        <div className="col-lg-6 col-sm-12 ">
-            <div className="slab slab-plain slab-border-success pb-4">
-                <h3 className="mb-3 mt-0">Do</h3>
-                <InputGroup type="text" label="Fixed transaction fee, in SEK" postfix postfixValue="kr"/>
-            </div>
-            <p>The label in itself should clearly indicate what type of data to enter, since prefixes and postfixes are hidden from screen readers.</p>
-        </div>
-        <div className="col-lg-6 col-sm-12">
-            <div className="slab slab-plain slab-border-error pb-4">
-                <h3 className="mb-3 mt-0">Don&#x27;t</h3>
-                <InputGroup type="text" label="Fixed transaction fee, in SEK" postfix postfixValue="kronor"/>
-            </div>
-            <p>Use commonly understood abbreviations for text prefix or postfix, don’t use full words.</p>
-        </div>
-    </div>
-
-    <h3>Placeholder text</h3>
-    <p>A placeholder text may be used inside of the input field to serve as an example of what the user can enter, consider to start with “e.g.” or similar abbreviation in corresponding language. </p>
-
-    <div className="row placeholder-guideline">
-        <div className="col-lg-6 col-sm-12 ">
-            <div className="slab slab-plain slab-border-success pb-4">
-                <h3 className="mb-3 mt-0">Do</h3>
-                <InputGroup type="text" label="Personal authentication number" placeholder="YYYYMMDDNNNN"/>
-            </div>
-            <p>Use the placeholder text as an example of what to enter.</p>
-        </div>
-        <div className="col-lg-6 col-sm-12">
-            <div className="slab slab-plain slab-border-error pb-4">
-                <h3 className="mb-3 mt-0">Don&#x27;t</h3>
-                <InputGroup type="text" label="Personal authentication number" placeholder="Enter with 10 digits"/>
-            </div>
-            <p>Don’t use the placeholder text as an instruction of what to enter.</p>
-        </div>
-    </div>
-
-    <h3>Error message</h3>
-    <p>When input isn’t accepted, input fields should display a short and concise error message, it should be no more than a single sentence</p>
-
-    <div className="row placeholder-guideline">
-        <div className="col-lg-6 col-sm-12">
-            <div className="slab slab-plain slab-border-success pb-4">
-                <h3 className="mb-3 mt-0">Do</h3>
-                <InputGroup type="text" validationState="error" helpBlock errorMessage='The email address must include "@"' label="Email address" defaultValue="Name.com" id="input-error-example"/>
-            </div>
-            <p>Do explain what went wrong and how to fix it.</p>
-        </div>
-        <div className="col-lg-6 col-sm-12">
-            <div className="slab slab-plain slab-border-error pb-4">
-                <h3 className="mb-3 mt-0">Don&#x27;t</h3>
-                <InputGroup type="text" validationState="error" helpBlock errorMessage="Invalid input" label="Email address" defaultValue="Name.com" id="another-input-error-example"/>
-            </div>
-            <p>Don&#x27;t use technical jargon. </p>
-        </div>
-    </div>
+        </section>
+    ))}
 </section>);
 
 const DeveloperDocumentation = () => (
