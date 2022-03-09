@@ -7,12 +7,13 @@ import { inputShowCase, textareaShowCase, contentGuidelines } from "./constants"
 const Overview = ({ scrollToRef }) => (
     <section id="input-field-overview">
         <h2 id="input-field">Input field</h2>
-        <p>Use a Input field when the expected user input is a single line of text. A Input field must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to <a href="javascript:;" onClick={() => scrollToRef()}>content guidelines</a> for more information.</p>
+        <p>Use an Input field when the expected user input is a single line of text. An Input field must always have a label that clearly describes the requirement of the input. Refer to <a href="javascript:;" onClick={() => scrollToRef()}>content guidelines</a> for more information.</p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={inputShowCase} codeFigure />
         <h3>When to consider something else</h3>
         <ul className="list list-bullet">
             <li>Use a <b>Textarea</b> when the expected user input is more than one sentence</li>
         </ul>
+        <p>Use an Input field when the expected user input is a single line of text. An Input field must always have a label that clearly describes the requirement of the input. Refer to <a href="javascript:;" onClick={() => scrollToRef()}>content guidelines</a></p>
     </section>
 );
 
@@ -25,7 +26,7 @@ const Textarea = ({ scrollToRef }) => (
 
         <h3>When to consider something else</h3>
         <ul className="list list-bullet">
-            <li>Use a <b>Input field</b> when the expected user input is a short text</li>
+            <li>Use an <b>Input field</b> when the expected user input is a short text</li>
         </ul>
     </section>
 );

@@ -429,7 +429,7 @@ exports[`Component: InputField Overview renders 1`] = `
     Input field
   </h2>
   <p>
-    Use a Input field when the expected user input is a single line of text. A Input field must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to 
+    Use an Input field when the expected user input is a single line of text. An Input field must always have a label that clearly describes the requirement of the input. Refer to 
     <a
       href="javascript:;"
       onClick={[Function]}
@@ -563,6 +563,15 @@ exports[`Component: InputField Overview renders 1`] = `
        when the expected user input is more than one sentence
     </li>
   </ul>
+  <p>
+    Use an Input field when the expected user input is a single line of text. An Input field must always have a label that clearly describes the requirement of the input. Refer to 
+    <a
+      href="javascript:;"
+      onClick={[Function]}
+    >
+      content guidelines
+    </a>
+  </p>
 </section>
 `;
 
@@ -664,7 +673,7 @@ exports[`Component: InputField Textarea renders 1`] = `
     className="list list-bullet"
   >
     <li>
-      Use a 
+      Use an 
       <b>
         Input field
       </b>
