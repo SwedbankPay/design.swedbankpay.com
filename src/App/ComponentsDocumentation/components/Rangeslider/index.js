@@ -47,9 +47,9 @@ const ContentGuidelines = () => (
                 <div className="py-3 col-12 col-lg-8">
                     <div>
                         <div className="rangeslider">
-                            <input type="range"/>
+                            <input id="content-guidelines-example" type="range"/>
                             <div className="d-flex justify-content-between">
-                                <p className="rangeslider-label">Label</p>
+                                <label htmlFor="content-guidelines-example">Label</label>
                                 <output className="value-label px-2 align-items-center">
                                     Selected Value
                                 </output>

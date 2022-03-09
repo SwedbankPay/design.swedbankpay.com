@@ -21,16 +21,17 @@ exports[`Component: Rangeslider ContentGuidelines renders 1`] = `
             className="rangeslider"
           >
             <input
+              id="content-guidelines-example"
               type="range"
             />
             <div
               className="d-flex justify-content-between"
             >
-              <p
-                className="rangeslider-label"
+              <label
+                htmlFor="content-guidelines-example"
               >
                 Label
-              </p>
+              </label>
               <output
                 className="value-label px-2 align-items-center"
               >
@@ -357,16 +358,17 @@ exports[`Component: Rangeslider Overview renders 1`] = `
             className="rangeslider"
           >
             <input
+              id="example-5"
               type="range"
             />
             <div
               className="d-flex justify-content-between"
             >
-              <p
-                className="rangeslider-label"
+              <label
+                htmlFor="example-5"
               >
                 Label
-              </p>
+              </label>
               <output
                 className="value-label px-2 align-items-center"
               >

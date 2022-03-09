@@ -183,7 +183,7 @@ exports[`Utilities: RenderPage renders 1`] = `
             },
             Object {
               "componentPath": "components/Alerts",
-              "icon": "error_outlined",
+              "icon": "error_outline",
               "path": "/components/alerts",
               "statusBadges": Array [
                 "javascript",

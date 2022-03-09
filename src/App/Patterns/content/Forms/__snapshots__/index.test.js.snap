@@ -995,15 +995,6 @@ exports[`Forms: index Overview renders 1`] = `
               </form>
             </div>,
             "description": "This in an example of a single page contact form using a collection of components including input fields, select list, checkbox and button.",
-            "options": Object {
-              "checkbox": Array [
-                Object {
-                  "inputs": Array [
-                    Object {},
-                  ],
-                },
-              ],
-            },
             "tab": "Form",
             "title": "Form",
           },
@@ -1104,15 +1095,6 @@ exports[`Forms: index Overview renders 1`] = `
               </form>
             </div>,
             "description": "This in an example of a multi-page form using a collection of components including a stepper, input fields, radio buttons and buttons.",
-            "options": Object {
-              "checkbox": Array [
-                Object {
-                  "inputs": Array [
-                    Object {},
-                  ],
-                },
-              ],
-            },
             "tab": "Multi-step form",
             "title": "Multi-step form",
           },

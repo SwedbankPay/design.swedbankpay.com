@@ -55,7 +55,7 @@ exports[`Components: Accordion ContentGuidelines renders 1`] = `
 `;
 
 exports[`Components: Accordion JavascriptMethods renders 1`] = `
-<Fragment>
+<section>
   <h2
     id="developer-documentation"
   >
@@ -107,7 +107,7 @@ exports[`Components: Accordion JavascriptMethods renders 1`] = `
       type="secondary"
     />
   </p>
-</Fragment>
+</section>
 `;
 
 exports[`Components: Accordion Overview renders 1`] = `

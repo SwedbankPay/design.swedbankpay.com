@@ -754,7 +754,6 @@
             .component-preview {
                 margin-top: 2.5rem;
                 border-bottom: 1px solid @brand-secondary-light-3;
-                // z-index: 100; Er denne viktig? https://github.com/SwedbankPay/design.swedbankpay.com/commit/280feef5c3bacf2cfb04a7060d089c39b38c9f87
 
                 .component-preview-content {
                     position: relative;
@@ -1257,8 +1256,14 @@
 
         .showcase-panel {
             .component-preview-content {
-                max-width: 29.5rem;
                 padding: 0;
+
+                .tabs {
+                    &.tabs-scroll {
+                        max-width: 29.7rem;
+                        margin-left: 0;
+                    }
+                }
 
                 @media screen and (max-width: @screen-xs-max) {
                     max-width: 22.5rem;
