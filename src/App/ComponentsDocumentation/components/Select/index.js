@@ -13,14 +13,14 @@ const WhenToUse = () => (
             <React.Fragment key={i}>
                 <div className="row how-to-use mb-3">
                     <div className="col-12 col-sm-6">
-                        <div className="slab slab-plain slab-border-success mb-2">
-                            <span className="h4">Do</span>
+                        <div className="slab slab-plain slab-border-success">
+                            <span className="h3 d-block mb-3">Do</span>
                             {correct}
                         </div>
                     </div>
                     <div className="col-12 col-sm-6">
-                        <div className="slab slab-plain slab-border-error mb-2">
-                            <span className="h4">Don&#x27;t</span>
+                        <div className="slab slab-plain slab-border-error">
+                            <span className="h3 d-block mb-3">Don&#x27;t</span>
                             <div >
                                 <InputGroup type="select" id={`dont-example-${i}`} label={label} placeholder={placeholder} selectOptions={selectOptions} />
                             </div>

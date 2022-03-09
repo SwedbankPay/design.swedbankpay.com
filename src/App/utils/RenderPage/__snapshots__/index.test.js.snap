@@ -13,7 +13,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       className="dg-current-version text-uppercase"
     >
       Design Guide – v. 
-      8.0.0
+      8.0.1
     </span>
     <Switch>
       <Route
@@ -183,7 +183,7 @@ exports[`Utilities: RenderPage renders 1`] = `
             },
             Object {
               "componentPath": "components/Alerts",
-              "icon": "error_outlined",
+              "icon": "error_outline",
               "path": "/components/alerts",
               "statusBadges": Array [
                 "javascript",

@@ -37,7 +37,7 @@ module.exports = [
                 title: "Alerts",
                 path: "/components/alerts",
                 componentPath: "components/Alerts",
-                icon: "error_outlined",
+                icon: "error_outline",
                 statusBadges: ["javascript"]
             },
             {

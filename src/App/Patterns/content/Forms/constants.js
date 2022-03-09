@@ -69,9 +69,6 @@ export const formsShowCase = {
                     </fieldset>
                 </form>
             </div>,
-            options: {
-                checkbox: [{ inputs: [{}] }]
-            },
             title: "Form",
             description: "This in an example of a single page contact form using a collection of components including input fields, select list, checkbox and button."
         },
@@ -98,9 +95,6 @@ export const formsShowCase = {
                     </fieldset>
                 </form>
             </div>,
-            options: {
-                checkbox: [{ inputs: [{}] }]
-            },
             title: "Multi-step form",
             description: "This in an example of a multi-page form using a collection of components including a stepper, input fields, radio buttons and buttons."
         }
