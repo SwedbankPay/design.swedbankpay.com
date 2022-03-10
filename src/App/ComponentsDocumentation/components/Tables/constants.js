@@ -123,7 +123,7 @@ export const tableShowcase = {
                 ]
             },
             title: "Table",
-            description: <p>The table component should be preceded by either a <Tag type="primary" code="<caption>"/> or a heading that introduces the content of the table. The table color can either be striped or plain with borders, and there is also a more condensed version of the table with more narrow rows. A row hover state can help the user visually scan the data in a row even if the row is not interactive..</p>
+            description: <p>The table component should be preceded by either a <Tag type="primary" code="<caption>"/> or a heading that introduces the content of the table. The table color can either be striped or plain with borders, and there is also a more condensed version of the table with more narrow rows. A row hover state can help the user visually scan the data in a row even if the row is not interactive.</p>
 
         }
     ]
