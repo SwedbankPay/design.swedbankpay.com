@@ -292,19 +292,12 @@ exports[`Documentation: Table StripedTable renders 1`] = `
 `;
 
 exports[`Documentation: Table renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >
-    Lots of nice info about tables will be here...
+    A table displays information in a grid of rows and columns.
   </p>
-  <BasicTable />
-  <PlainTable />
-  <CondensedTable />
-  <HoverTable />
-  <HoverPlainTable />
-  <DescriptionTable />
+  <Overview />
 </DocContainer>
 `;
