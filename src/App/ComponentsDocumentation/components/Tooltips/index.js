@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import CodeTags from "@components/CodeTags";
-
+import TooltipComponent from "@components/Tooltips";
 import { tooltips } from "@src/scripts/main";
 import NpmInformation from "@docutils/NpmInformation";
 
@@ -11,6 +11,32 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
         <p>Add the attribute <CodeTags type="secondary" code="tooltip" /> to the desired element and add your content in its value to create a tooltip.</p>
         <p>You can use the attribute <CodeTags type="secondary" code="tooltip-position" /> to position the tooltip relative to the containing element, use the values <CodeTags type="secondary" code="top" />, <CodeTags type="secondary" code="right" />, <CodeTags type="secondary" code="bottom" /> or <CodeTags type="secondary" code="left" />. If the attribute is not provided, it will default to top.</p>
+
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <div className="form-group">{"\n"}
+                <label htmlFor="input-showcase-example">Input label{"\n"}
+                    <TooltipComponent id="showcase-tooltip-example" text="Tooltip Top" />{"\n"}
+                </label>{"\n"}
+                <input className="form-control" id="input-showcase-example" aria-describedby="input-showcase-example" />
+            </div>
+        </ComponentPreview>
+
+        <ComponentPreview language="html" showCasePanel codeFigure>
+            <TooltipComponent id="showcase-tooltip-example" text="Tooltip Bottom" icon="help_outline" position="bottom" />
+        </ComponentPreview>
+        {/*
+        <ComponentPreview language="html" showCasePanel codeFigure >
+            <button className="tooltip2 tooltip-right">
+                <i className="material-icons mr-3"
+                    data-tooltip=""
+                    data-tooltip-position="top">{"\n"}
+                    help_outline{"\n"}
+                    <span className="tooltip">{"\n"}
+                        Payment capture is the process by which payments are secured once the payment has been authorized by the customer.{"\n"}
+                    </span>{"\n"}
+                </i>{"\n"}
+            </button>
+        </ComponentPreview>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
                 <button
@@ -42,7 +68,7 @@ const Overview = () => (
                 >Tooltip to the right
                 </button>{"\n"}
             </div>
-        </ComponentPreview>
+        </ComponentPreview> */}
     </>
 );
 
@@ -117,10 +143,10 @@ const Tooltip = () => {
         <DocContainer docToc>
             <p className="lead">Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.</p>
             <Overview />
-            <WithIcons />
-            <ExtendedUsage />
-            <JavascriptMethods />
-            <NpmInformation componentName={"tooltips"}/>
+            {/* <WithIcons /> */}
+            {/* <ExtendedUsage /> */}
+            {/* <JavascriptMethods /> */}
+            {/* <NpmInformation componentName={"tooltips"}/> */}
         </DocContainer>
     );
 };
