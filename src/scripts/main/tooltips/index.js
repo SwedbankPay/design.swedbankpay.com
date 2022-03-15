@@ -11,21 +11,19 @@ const _repositionTooltip = e => {
 };
 
 const _createTooltip = tooltip => {
-    console.log("tooltip", tooltip);
 
     const tip = tooltip.querySelector("[role=tooltip]");
 
-    // tooltip.addEventListener("mouseover", _repositionTooltip);
     window.addEventListener("keydown", e => {
         if (e.key === "Esc" || e.key === "Escape") {
             if (window.getComputedStyle(tip).visibility === "visible") {
-                console.log("heihsaann");
+                tip.style.visibility = "hidden";
             }
         }
     });
 
-    window.addEventListener("click", e => {
-        tooltip.classList.remove("");
+    tooltip.addEventListener("click", e => {
+        tip.style.visibility = "visible";
     });
 
     return {
