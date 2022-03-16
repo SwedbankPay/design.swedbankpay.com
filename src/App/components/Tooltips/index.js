@@ -5,7 +5,6 @@ import classnames from "classnames";
 const Tooltip = ({ text, position, id, icon }) => {
     const tooltipClasses = classnames(
         "tooltip",
-        "hidden",
         position ? `tooltip-${position}` : null
     );
 
