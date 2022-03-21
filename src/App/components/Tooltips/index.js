@@ -19,7 +19,7 @@ const Tooltip = ({ text, position, id, icon }) => {
 };
 
 Tooltip.propTypes = {
-    position: PropTypes.oneOfType(["right", "left", "bottom"]),
+    position: PropTypes.string,
     text: PropTypes.string.isRequired
 };
 
