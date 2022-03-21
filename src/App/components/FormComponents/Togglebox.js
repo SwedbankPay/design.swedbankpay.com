@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Tooltip from "@components/Tooltips"
 
 const Togglebox = ({ id, checked, disabled, label, tooltip, labelTop }) => {
     const attrs = {
@@ -15,11 +16,8 @@ const Togglebox = ({ id, checked, disabled, label, tooltip, labelTop }) => {
             {label ? <label htmlFor={id}>{"\n"}
                 {label}{"\n"}
                 {tooltip &&
-                    <>
-                        <i className="material-icons help-icon" data-tooltip="Some informational text" data-tooltip-position="top">{"\n"}
-                                help_outline{"\n"}
-                        </i>{"\n"}
-                    </>}
+                    <Tooltip text={"Additional information"} id={"togglebox-tooltip-example"} />
+                }
             </label> : null}{label ? "\n" : null}
         </div>
     );
