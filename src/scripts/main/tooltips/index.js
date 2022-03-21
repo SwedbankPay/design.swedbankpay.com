@@ -1,8 +1,9 @@
-const _repositionTooltip = e => {
-    const tooltipContent = e.target.querySelector(".tooltip");
+const _repositionTooltip = (e) => {
+    const tooltipContent = e.target.nextElementSibling;
     const tooltipContentPosition = tooltipContent.getBoundingClientRect();
 
-    // TODO: Fix
+    console.log(tooltipContentPosition);
+
     if (tooltipContentPosition.left < 16) {
         tooltipContent.style.left = `${tooltipContent.offsetLeft - tooltipContentPosition.left + 16}px`;
     } else if (tooltipContentPosition.right > window.innerWidth - 16) {
@@ -26,9 +27,9 @@ const _createTooltip = tooltip => {
         tip.style.visibility = "visible";
     });
 
-    return {
-        container: tooltip
-    };
+    tooltip.addEventListener("mouseover", _repositionTooltip);
+
+
 };
 
 const init = id => {
