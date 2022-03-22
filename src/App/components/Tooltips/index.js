@@ -2,15 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Tooltip = ({ text, position, id, icon }) => {
+const Tooltip = ({ title, text, className, position, id, icon }) => {
     const tooltipClasses = classnames(
         "tooltip",
-        position ? `tooltip-${position}` : null
+        position ? `tooltip-${position}` : null,
+        icon ? "has-icon" : null,
+        className ? `${className}` : null
     );
 
     return (
         <button aria-describedby={icon ? id : null} className={tooltipClasses}>{"\n"}
-            <i className="material-icons">{icon ? icon : "help_outline"}</i>
+            {title}{"\n"}
+            {icon ? <i className="material-icons">{icon ? "help_outline" : "help_outline"}</i> : null}
             <div role="tooltip" id={id}>
                 {text}
             </div>
