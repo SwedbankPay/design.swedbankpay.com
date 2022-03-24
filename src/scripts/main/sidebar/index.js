@@ -99,6 +99,8 @@ class Sidebar2 {
         this._initListeners();
     }
 
+
+
     _popStateListener () {
         if (this.el && !this.el.querySelector(".main-nav-li.active")
             .querySelector(".sidebar-secondary-nav")) {
@@ -113,6 +115,8 @@ class Sidebar2 {
         const navLeaves = this.el.querySelectorAll(".nav-leaf");
         const previousNavs = this.el.querySelectorAll(".previous-nav");
 
+        const skipLink = document.querySelector("#skipLink");
+
         window.addEventListener("popstate", this._popStateListener);
 
         [...mainNavLI].map(mainNavElement => mainNavElement.querySelector("a").addEventListener("click", () => this._setActiveStatus(mainNavElement, ".main-nav-li")));
@@ -120,6 +124,7 @@ class Sidebar2 {
         [...tertiaryNavLI].map(tertiaryNavElement => tertiaryNavElement.querySelector("a").addEventListener("click", () => this._setActiveStatus(tertiaryNavElement, ".tertiary-nav-li")));
         [...navLeaves].map(navLeaf => navLeaf.addEventListener("click", () => this._setActiveStatus(navLeaf, SELECTORS.NAVLEAF)));
         [...previousNavs].map(previousNav => previousNav.addEventListener("click", () => this._setActiveStatus(previousNav, ".secondary-nav-li")));
+        [...secondaryNavLI].map(secNavLi => secNavLi.addEventListener("click", () => skipLink.focus()));
     }
 
     _closeChildElements (element, closeElement) {
