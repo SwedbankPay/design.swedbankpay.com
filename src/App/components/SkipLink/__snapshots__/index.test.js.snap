@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: SkipLink renders 1`] = `
+<a
+  className="skipLink btn btn-link"
+  href="#doc-view"
+  id="skipLink"
+>
+  Skip to content
+</a>
+`;
