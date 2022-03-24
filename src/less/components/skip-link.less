@@ -1,0 +1,20 @@
+.skipLink {
+    left: -120rem;
+    position: absolute;
+    top: auto;
+    overflow: hidden;
+    z-index: -999;
+
+    &:focus,
+    &:active {
+        left: auto;
+        height: auto;
+        z-index: 999;
+    }
+
+    &.btn-link {
+        &:focus {
+            background-color: @white;
+        }
+    }
+}
