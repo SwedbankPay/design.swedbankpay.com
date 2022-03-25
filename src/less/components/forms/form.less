@@ -295,20 +295,57 @@ legend {
     }
 }
 
+.help-block-error {
+    position: relative;
+    display: block;
+    margin: @helpblock-margin;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    min-height: 1rem;
+}
+
 .help-block {
     position: relative;
     display: block;
     margin: @helpblock-margin;
-    color: @brand-secondary-light-2;
+    color: @medium-brown;
     font-size: 0.875rem;
     line-height: 1rem;
     min-height: 1rem;
+}
 
-    &:after {
-        opacity: 1;
-        position: absolute;
-        top: 0;
-        left: 0;
+.help-block-expander {
+    position: relative;
+    margin: @helpblock-margin;
+    line-height: 1rem;
+    min-height: 1rem;
+
+    .hide_content {
+        display: none;
+    }
+
+    input:checked + label + .content {
+        display: block;
+    }
+
+    label {
+        color: @turquoise-links;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+        transition: ease 0.5s;
+
+        i {
+            font-size: 0.875rem;
+            margin-right: 0.75rem;
+        }
+    }
+
+    .content {
+        color: @medium-brown;
+        font-size: 0.875rem;
     }
 }
 
