@@ -13,7 +13,6 @@ export const Addon = ({ type, value, color, disabled, postfix }) => (
 const InputGroup = ({
     id,
     type,
-    placeholder,
     pattern,
     validate,
     className,
@@ -44,7 +43,6 @@ const InputGroup = ({
         type: type || null,
         className: "form-control",
         id: id || null,
-        placeholder: placeholder || null,
         defaultValue: defaultValue || "",
         disabled: disabled || null,
         readOnly: readOnly || null,
@@ -108,7 +106,6 @@ const InputGroup = ({
                         <textarea {...attrs}></textarea>
                         : type === "select" ?
                             <select {...selectAttrs}>{"\n\t\t"}
-                                {placeholder && <option value="" disabled hidden>{placeholder}</option> }
                                 {selectOptions.map((opt, i) => (
                                     <Fragment key={opt + i}>
                                         <option value={opt}>{opt}</option>{(i !== selectOptions.length - 1) ? "\n\t\t" : ""}
@@ -127,7 +124,6 @@ const InputGroup = ({
 InputGroup.propTypes = {
     type: PropTypes.string.isRequired,
     id: PropTypes.string,
-    placeholder: PropTypes.string,
     pattern: PropTypes.string,
     validate: PropTypes.bool,
     required: PropTypes.bool,
