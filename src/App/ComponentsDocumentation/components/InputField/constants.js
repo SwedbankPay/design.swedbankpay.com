@@ -12,17 +12,24 @@ export const inputShowCase = {
                         title: "Label add on",
                         inputs: [
                             {
-                                id: "help_icon",
-                                name: "With help icon",
-                                value: {
-                                    tooltip: true
-                                }
-                            },
-                            {
                                 id: "optional",
                                 name: "Is optional",
                                 value: {
                                     optional: true
+                                }
+                            },
+                            {
+                                id: "hint_text",
+                                name: "Hint text",
+                                value: {
+                                    helpBlock: true
+                                }
+                            },
+                            {
+                                id: "expander_hint_text",
+                                name: "Expander hint",
+                                value: {
+                                    expandingHintText: true
                                 }
                             }
                         ]
@@ -70,8 +77,6 @@ export const inputShowCase = {
                             {
                                 name: "Error",
                                 value: {
-                                    helpBlock: true,
-                                    validationState: "error",
                                     errorMessage: "Descriptive helpful error message."
                                 }
                             },
@@ -106,17 +111,24 @@ export const textareaShowCase = {
                         title: "Label add on",
                         inputs: [
                             {
-                                id: "help_icon_textarea",
-                                name: "With help icon",
-                                value: {
-                                    tooltip: true
-                                }
-                            },
-                            {
                                 id: "optional_textarea",
                                 name: "Is optional",
                                 value: {
                                     optional: true
+                                }
+                            },
+                            {
+                                id: "hint_text_textarea",
+                                name: "Hint text",
+                                value: {
+                                    helpBlock: true
+                                }
+                            },
+                            {
+                                id: "expander_hint_textarea",
+                                name: "Expander hint",
+                                value: {
+                                    expandingHintText: true
                                 }
                             }
                         ]

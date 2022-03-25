@@ -15,17 +15,24 @@ export const selectOverview = {
                         title: "Label add on",
                         inputs: [
                             {
-                                id: "help_icon",
-                                name: "Help icon",
-                                value: {
-                                    tooltip: true
-                                }
-                            },
-                            {
                                 id: "optional",
                                 name: "Is optional",
                                 value: {
                                     optional: true
+                                }
+                            },
+                            {
+                                id: "hint_text_select",
+                                name: "Hint text",
+                                value: {
+                                    helpBlock: true
+                                }
+                            },
+                            {
+                                id: "expander_hint_text",
+                                name: "Expander hint",
+                                value: {
+                                    expandingHintText: true
                                 }
                             }
                         ]
