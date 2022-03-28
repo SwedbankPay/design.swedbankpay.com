@@ -82,7 +82,7 @@ const InputGroup = ({
                     <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
                         help_outline{"\n"}</i>}{"\n"}
             </label> : null}{label ? "\n" : null}
-            {prefixValue || postfixValue || feedbackIcon || errorMessage ?
+            {prefixValue || postfixValue || feedbackIcon ?
                 <div className={inputGrpClasses}>{"\n"}
                     {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} postfix={postfix} /> : null }{prefixValue ? "\n" : null}
                     {type === "textarea" ?
@@ -98,7 +98,7 @@ const InputGroup = ({
                             :
                             <input {...attrs} />}
                     {"\n"}
-                    {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} postfix={postfix} /> : null }{postfixValue ? "\n" : null}
+                    {errorMessage ? null : <>{postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} postfix={postfix} /> : null }{postfixValue ? "\n" : null}</>}
                 </div>
                 :
                 <>
@@ -116,16 +116,16 @@ const InputGroup = ({
                             <input {...attrs} />}
                 </>
             }
-            {errorMessage ? <div className="help-block-error">{errorMessage}</div> : null}
-            {helpBlock ? <div className="help-block">Hint text</div> : null}
-            {expandingHintText ? 
+            {errorMessage && <div className="help-block-error">{errorMessage}</div>}
+            {helpBlock && <div className="help-block">{helpBlock}</div>}
+            {expandingHintText && 
             <div className="help-block-expander">
                 <input type="checkbox" id="expanding-hint-text" className="hide_content"/>
-                <label tabindex="0" for="expanding-hint-text"><i className="material-icons">keyboard_arrow_down</i> Expander hint text</label>
+                <label tabindex="0" for="expanding-hint-text"><i className="material-icons">keyboard_arrow_down</i>{expandingHintText}</label>
                 <div className="content hide_content">
                 This information is less important and only a minority of users will need it or the text is very long. In this case; both.
                 </div>
-            </div> : null}
+            </div>}
         </div>
     );
 };
