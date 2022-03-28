@@ -1,110 +1,112 @@
 import React from "react";
 import InputGroup from "@components/InputGroup";
 
-export const inputShowCase = {
-    id: "no-tabs",
-    elements: [
-        {
-            component: <InputGroup type="text" label="Input label" id="input-showcase-example" placeholder="Placeholder text" />,
-            options: {
-                checkbox: [
+const InputOptions = () => (
+    {
+        checkbox: [
+            {
+                title: "Label add on",
+                inputs: [
                     {
-                        title: "Label add on",
-                        inputs: [
-                            {
-                                id: "optional",
-                                name: "Is optional",
-                                value: {
-                                    optional: true
-                                }
-                            },
-                            {
-                                id: "hint_text",
-                                name: "Hint text",
-                                value: {
-                                    helpBlock: true
-                                }
-                            },
-                            {
-                                id: "expander_hint_text",
-                                name: "Expander hint",
-                                value: {
-                                    expandingHintText: true
-                                }
-                            }
-                        ]
-                    }
-                ],
-                radio: [
-                    {
-                        id: "fix_radio",
-                        title: "Prefix/Postfix",
-                        values: [
-                            {
-                                name: "None",
-                                value: {
-                                    type: "text"
-                                }
-                            },
-                            {
-                                name: "Prefix - Icon",
-                                value: {
-                                    type: "email",
-                                    prefixType: "icon",
-                                    prefixValue: "email"
-                                }
-                            },
-                            {
-                                name: "Postfix - Text",
-                                value: {
-                                    type: "text",
-                                    postfixValue: "kr",
-                                    postfix: true
-                                }
-                            }
-                        ]
+                        id: "optional",
+                        name: "Is optional",
+                        value: {
+                            optional: true
+                        }
                     },
                     {
-                        id: "state_radio",
-                        title: "State modifiers",
-                        values: [
-                            {
-                                name: "Default",
-                                value: {
-                                    disabled: false
-                                }
-                            },
-                            {
-                                name: "Error",
-                                value: {
-                                    errorMessage: "Descriptive helpful error message."
-                                }
-                            },
-                            {
-                                name: "Disabled",
-                                value: {
-                                    disabled: true
-                                }
-                            }
-                        ]
+                        id: "hint_text",
+                        name: "Hint text",
+                        value: {
+                            helpBlock: "Hint text"
+                        }
+                    },
+                    {
+                        id: "expander_hint_text",
+                        name: "Expander hint",
+                        value: {
+                            expandingHintText: "Expanding hint text"
+                        }
+                    }
+                ]
+            }
+        ],
+        radio: [
+            {
+                id: "fix_radio",
+                title: "Prefix/Postfix",
+                values: [
+                    {
+                        name: "None",
+                        value: {
+                            type: "text"
+                        }
+                    },
+                    {
+                        name: "Prefix - Icon",
+                        value: {
+                            type: "email",
+                            prefixType: "icon",
+                            prefixValue: "email"
+                        }
+                    },
+                    {
+                        name: "Postfix - Text",
+                        value: {
+                            type: "text",
+                            postfixValue: "kr",
+                            postfix: true
+                        }
                     }
                 ]
             },
-            title: "Input field",
-            description: <>
-                <p>Inputs fields have a few different states which includes the default state, focus state, disabled state and error state.</p>
-                <p>The default input type is text but it can also be specified as for example Email which will make it automatically validated when submitted or Password which will mask the characters submitted.</p>
-                <p>Input fields can have prefixes or postfixes which can help the user more quickly understand what kind of information that is requested. These can be icons as well as text symbols or currency abbreviations like %, $ or kr.</p>
-            </>
-        }
-    ]
-};
+            {
+                id: "state_radio",
+                title: "State modifiers",
+                values: [
+                    {
+                        name: "Default",
+                        value: {
+                            disabled: false
+                        }
+                    },
+                    {
+                        name: "Error",
+                        value: {
+                            errorMessage: "Descriptive helpful error message."
+                        }
+                    },
+                    {
+                        name: "Disabled",
+                        value: {
+                            disabled: true
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+);
 
-export const textareaShowCase = {
-    id: "no-tabs-2",
+export const inputShowCase = {
+    id: "no-tabs",
+    tabsId: "overviewInputFieldTabs",
     elements: [
         {
-            component: <InputGroup type="textarea" label="Input label" placeholder="Placeholder text" />,
+            tab: "Input field",
+            component: <InputGroup type="text" label="Label" id="input-showcase-example"/>,
+            options: InputOptions(),
+            title: "Input field",
+            description: <>
+            <p>Use an input field when the expected user input is a single line of text. The default input type is text but it can also be specified as for example Email which will make it automatically validated when submitted or Password which will mask the characters submitted.</p>
+            <p>Input fields can have prefixes or suffixes which can help the user more quickly understand what kind of information that is requested. These can be icons as well as text symbols or currency abbreviations like %, € or kr.</p>
+
+
+            </>
+        },
+        {
+            tab: "Text area",
+            component: <InputGroup type="textarea" label="Label" />,
             options: {
                 checkbox: [
                     {
@@ -121,14 +123,14 @@ export const textareaShowCase = {
                                 id: "hint_text_textarea",
                                 name: "Hint text",
                                 value: {
-                                    helpBlock: true
+                                    helpBlock: "Hint text"
                                 }
                             },
                             {
                                 id: "expander_hint_textarea",
                                 name: "Expander hint",
                                 value: {
-                                    expandingHintText: true
+                                    expandingHintText: "Expanding hint text"
                                 }
                             }
                         ]
@@ -148,8 +150,6 @@ export const textareaShowCase = {
                             {
                                 name: "Error",
                                 value: {
-                                    helpBlock: true,
-                                    validationState: "error",
                                     errorMessage: "Descriptive helpful error message."
                                 }
                             },
@@ -163,8 +163,8 @@ export const textareaShowCase = {
                     }
                 ]
             },
-            title: "Textarea",
-            description: "Textareas have a few different sates which includes the default state, focus state, disabled state and error state. "
+            title: "Text area",
+            description: "Use a Text area when the expected user input is more than one sentence."
         }
     ]
 };

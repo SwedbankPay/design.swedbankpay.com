@@ -1,4 +1,5 @@
 import React, { forwardRef, useRef } from "react";
+import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 import InputGroup from "@components/InputGroup";
@@ -6,30 +7,16 @@ import { inputShowCase, textareaShowCase, contentGuidelines } from "./constants"
 
 const Overview = ({ scrollToRef }) => (
     <section id="input-field-overview">
-        <h2 id="input-field">Input field</h2>
-        <p>Use an Input field when the expected user input is a single line of text. An Input field must always have a label that clearly describes the requirement of the input. Refer to <a href="javascript:;" onClick={() => scrollToRef()}>content guidelines</a> for more information.</p>
+        <h2 id="input-field">Overview</h2>
+        <p>Depending on the expected length of the user input use either a Input field for shorter input or a Textarea for longer input. </p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={inputShowCase} codeFigure />
         <h3>When to consider something else</h3>
         <ul className="list list-bullet">
-            <li>Use a <b>Textarea</b> when the expected user input is more than one sentence</li>
-        </ul>
-        <p>Use an Input field when the expected user input is a single line of text. An Input field must always have a label that clearly describes the requirement of the input. Refer to <a href="javascript:;" onClick={() => scrollToRef()}>content guidelines</a></p>
-    </section>
-);
-
-const Textarea = ({ scrollToRef }) => (
-    <section id="textarea-overview">
-        <h2 id="textarea">Textarea</h2>
-        <p>Use a Textarea when the expected user input is more than one sentence. Textareas must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to <a href="javascript:;" onClick={() => scrollToRef()}>content guidelines</a> for more information. </p>
-
-        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={textareaShowCase} codeFigure />
-
-        <h3>When to consider something else</h3>
-        <ul className="list list-bullet">
-            <li>Use an <b>Input field</b> when the expected user input is a short text</li>
+            <li>If you want users to choose from a list of responses, instead consider <Link to="/components/radio-button">radio buttons</Link>, <Link to="/components/checkbox">checkboxes</Link> or a <Link to="/components/select">select</Link>.</li>
         </ul>
     </section>
 );
+
 
 const ContentGuidelines = forwardRef((props, ref) => <section ref={ref}>
     <h2 id="content-guidelines">Content guidelines</h2>
@@ -37,19 +24,43 @@ const ContentGuidelines = forwardRef((props, ref) => <section ref={ref}>
     <div className="slab slab-plain h-100 mb-2">
         <div className="d-flex flex-column align-items-center">
             <div className="py-3">
-                <InputGroup type="text" label="Input label" defaultValue="Input text" validationState="error" errorMessage="Error message" helpBlock tooltip id="input-guidelines-example"/>
-                <InputGroup type="textarea" label="Input label" optional placeholder="Placeholder text"/>
+                <InputGroup type="text" label="Label" defaultValue="Input text"  helpBlock="Hint text" id="input-guidelines-example"/>
+                <InputGroup type="textarea" label="Label" expandingHintText="Expander hint text"/>
             </div>
         </div>
     </div>
 
-    <h3>Input label</h3>
+    <h3>Label</h3>
     <p>An input field must have a label that clearly describes the type of input a field requires. </p>
     <ul className="list list-bullet">
-        <li>Use a label that is meaningful, clear, and concise.</li>
         <li>When a text field is not required to be filled by the user, label it as “optional”.</li>
-        <li>If there is a need for a more detailed description, a help icon can be added after the label. </li>
     </ul>
+
+    <h3>Hint text</h3>
+    <p>A hint text should complement the label and provide clarifying details. It can be used to:</p>
+    <ul className="list list-bullet">
+        <li>Provide an example of what to enter</li>
+        <li>Explain why you are asking a certain question</li>
+        <li>Inform the user about where to find the requested information</li>
+    </ul>
+    <p>Primarily use the visible by default hint text and secondarily a hint expander. Try to avoid using both a visible hint text and expander.</p>
+    <div className="row">
+        <div className="col-lg-6 col-sm-12">
+            <div className="slab slab-plain slab-border-success">
+                <span className="h3 d-block mb-3">Do</span>
+                <InputGroup id="do-example-expanding" type="text" label="Personal identification number" helpBlock="YYYYMMDDNNNN"/>
+            </div>
+            <p>If the information is fairly important and many users will need it, provide a hint text that is visible by default.</p>
+        </div>
+        <div className="col-lg-6 col-sm-12">
+            <div className="slab slab-plain slab-border-success">
+                <span className="h3 d-block mb-3">Do</span>
+                <InputGroup id="do-example-expanding" type="text" label="Security code (CVC)" expandingHintText="Where to find the code?"/>
+            </div>
+            <p>Use a hint expander if the information is long and won’t be needed by the majority of users. Write the hint expander to help users understand what they will see before they click.</p>
+        </div>
+    </div>
+
     {contentGuidelines.map(section => (
         <section key={section.lead}>
             <h3>{section.heading}</h3>
@@ -103,9 +114,8 @@ const InputField = () => {
 
         <DocContainer>
             <section id="input-field-doc">
-                <p className="lead">Input fields typically reside in forms and enable the user to interact with and input words, characters or numbers. Depending on the expected length of the user input use either a Input field for shorter input or a Textarea for longer input.</p>
+                <p className="lead">Input fields typically reside in forms and enable the user to interact with and input words, characters or numbers.</p>
                 <Overview scrollToRef={scrollToRef} />
-                <Textarea scrollToRef={scrollToRef} />
                 <ContentGuidelines ref={guidelinesRef}/>
                 <DeveloperDocumentation />
             </section>
@@ -117,4 +127,4 @@ ContentGuidelines.displayName = "ContentGuidelines";
 
 export default InputField;
 
-export { Overview, Textarea, ContentGuidelines, DeveloperDocumentation };
+export { Overview, ContentGuidelines, DeveloperDocumentation };
