@@ -191,17 +191,24 @@ exports[`Component: Select Overview renders 1`] = `
                 Object {
                   "inputs": Array [
                     Object {
-                      "id": "help_icon",
-                      "name": "Help icon",
-                      "value": Object {
-                        "tooltip": true,
-                      },
-                    },
-                    Object {
                       "id": "optional",
                       "name": "Is optional",
                       "value": Object {
                         "optional": true,
+                      },
+                    },
+                    Object {
+                      "id": "hint_text_select",
+                      "name": "Hint text",
+                      "value": Object {
+                        "helpBlock": true,
+                      },
+                    },
+                    Object {
+                      "id": "expander_hint_text",
+                      "name": "Expander hint",
+                      "value": Object {
+                        "expandingHintText": true,
                       },
                     },
                   ],
