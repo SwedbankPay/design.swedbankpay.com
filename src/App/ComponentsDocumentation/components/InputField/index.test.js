@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import InputField, { Overview, Textarea, ContentGuidelines, DeveloperDocumentation } from "./index";
+import InputField, { Overview, ContentGuidelines, DeveloperDocumentation } from "./index";
 
 describe("Component: InputField", () => {
     it("is defined", () => {
@@ -26,17 +26,6 @@ describe("Component: InputField", () => {
         });
     });
 
-    describe("Textarea", () => {
-        it("is defined", () => {
-            expect(Textarea).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Textarea />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
 
     describe("ContentGuidelines", () => {
         it("is defined", () => {
