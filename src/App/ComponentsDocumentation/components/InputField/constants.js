@@ -171,6 +171,32 @@ export const inputShowCase = {
 
 export const contentGuidelines = [
     {
+        heading: "Hint text",
+        lead: <>
+                <p>A hint text should complement the label and provide clarifying details. It can be used to:</p>
+                <ul className="list list-bullet">
+                    <li>Provide an example of what to enter</li>
+                    <li>Explain why you are asking a certain question</li>
+                    <li>Inform the user about where to find the requested information</li>
+                </ul>
+                <p>Primarily use the visible by default hint text and secondarily a hint expander. Try to avoid using both a visible hint text and expander.</p>
+            </>,
+        examples: [
+            {
+                slabType: "success",
+                content: <InputGroup id="do-example-expanding" type="text" label="Personal identification number" helpBlock="YYYYMMDDNNNN"/>,
+                hintText: "YYYYMMDDNNNN",
+                description: "If the information is fairly important and many users will need it, provide a hint text that is visible by default."
+            },
+            {
+                slabType: "success",
+                content: <InputGroup id="do-example-expanding" type="text" label="Security code (CVC)" expandingHintText="Where to find the code?"/>,
+                expandingHintText: "Where to find the code?",
+                description: "Use a hint expander if the information is long and won’t be needed by the majority of users. Write the hint expander to help users understand what they will see before they click."
+            }
+        ]
+    },
+    {
         heading: "Prefix and postfix",
         lead: "Prefixes and postfixes are useful when there’s a commonly understood icon, symbol or abbreviation for the type of information the user needs to enter since it can reduce mental load.",
         examples: [
@@ -193,23 +219,6 @@ export const contentGuidelines = [
                 slabType: "error",
                 content: <InputGroup id="guidelines-input-example-4" type="text" label="Fixed transaction fee, in SEK" postfix postfixValue="kronor"/>,
                 description: "Use commonly understood abbreviations for text prefix or postfix, don’t use full words."
-            }
-        ]
-
-    },
-    {
-        heading: "Placeholder text",
-        lead: "A placeholder text may be used inside of the input field to serve as an example of what the user can enter, consider to start with “e.g.” or similar abbreviation in corresponding language.",
-        examples: [
-            {
-                slabType: "success",
-                content: <InputGroup id="guidelines-input-example-5" type="text" label="Personal authentication number" placeholder="YYYYMMDDNNNN"/>,
-                description: "Use the placeholder text as an example of what to enter."
-            },
-            {
-                slabType: "error",
-                content: <InputGroup id="guidelines-input-example-6" type="text" label="Personal authentication number" placeholder="Enter with 10 digits"/>,
-                description: "Don’t use the placeholder text as an instruction of what to enter."
             }
         ]
 
