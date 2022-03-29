@@ -30,7 +30,9 @@ exports[`Component: Checkbox - renders checkbox group 1`] = `
     <fieldset
       className="checkbox-group"
     >
-      <legend />
+      <label
+        className="checkbox-label"
+      />
       <div
         className="checkbox"
         key="0"
@@ -109,7 +111,9 @@ exports[`Component: Checkbox - renders checkbox group with disabled state 1`] = 
       className="checkbox-group"
       disabled={true}
     >
-      <legend />
+      <label
+        className="checkbox-label"
+      />
       <div
         className="checkbox"
         key="0"
@@ -187,7 +191,9 @@ exports[`Component: Checkbox - renders checkbox group with error 1`] = `
     <fieldset
       className="checkbox-group has-error"
     >
-      <legend />
+      <label
+        className="checkbox-label"
+      />
       <div
         className="checkbox"
         key="0"
@@ -255,7 +261,7 @@ exports[`Component: Checkbox - renders checkbox group with error 1`] = `
 
       </div>
       <div
-        className="help-block"
+        className="help-block-error"
       >
         error
       </div>
@@ -270,9 +276,11 @@ exports[`Component: Checkbox - renders checkbox group with groupTitle 1`] = `
     <fieldset
       className="checkbox-group"
     >
-      <legend>
+      <label
+        className="checkbox-label"
+      >
         Group title
-      </legend>
+      </label>
       <div
         className="checkbox"
         key="0"
