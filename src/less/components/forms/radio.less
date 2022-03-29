@@ -68,9 +68,19 @@
 
 fieldset {
     &.radio-group {
+        .radio-label {
+            margin-bottom: 0.5rem;
+        }
+
         span {
             font-weight: normal;
             margin-left: 0.2rem;
+        }
+
+        &.has-error {
+            input[type="radio"] + label:before {
+                border-color: @brand-error;
+            }
         }
 
         .help-block-expander {
@@ -110,7 +120,7 @@ fieldset {
     }
 
     &[disabled] {
-        legend {
+        label {
             color: @light-brown;
         }
     }
