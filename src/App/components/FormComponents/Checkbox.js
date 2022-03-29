@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, hintText, hintTextExpanded, tooltip, optional, required, group, options, className }) => {
+const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, hintText, hintTextExpanded, optional, required, group, options, className }) => {
     const attrs = {
         type: "checkbox",
         id: id || null,
@@ -19,11 +19,6 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
                         {groupTitle}
                         {optional && <>{"\n"}
                             <span>(optional)</span>
-                        </>}
-                        {tooltip && <>{"\n"}
-                            <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
-                                    help_outline{"\n"}
-                            </i>
                         </>}
                     </label>
                     {options.map(({ label, id }, i) => <div className="checkbox" key={i}>{"\n"}
@@ -79,8 +74,9 @@ Checkbox.propTypes = {
     group: PropTypes.bool,
     groupTitle: PropTypes.string,
     options: PropTypes.array,
-    tooltip: PropTypes.bool,
-    optional: PropTypes.bool
+    optional: PropTypes.bool,
+    hintText: PropTypes.string,
+    hintTextExpanded: PropTypes.string
 };
 
 export default Checkbox;
