@@ -68,16 +68,43 @@
 
 fieldset {
     &.radio-group {
-        legend {
-            position: relative;
-            border: none;
-            font-weight: bold;
-            margin-bottom: 0;
+        span {
+            font-weight: normal;
+            margin-left: 0.2rem;
+        }
 
-            .help-icon {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
+        .help-block-expander {
+            position: relative;
+            margin: @helpblock-margin;
+            line-height: 1rem;
+            min-height: 1rem;
+
+            .hide-content {
+                display: none;
+            }
+
+            input:checked + label + .content {
+                display: block;
+            }
+
+            label {
+                color: @turquoise-links;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                margin-bottom: 0.5rem;
+                font-size: 0.875rem;
+                transition: ease 0.5s;
+
+                i {
+                    font-size: 0.875rem;
+                    margin-right: 0.75rem;
+                }
+            }
+
+            .content {
+                color: @medium-brown;
+                font-size: 0.875rem;
             }
         }
     }
