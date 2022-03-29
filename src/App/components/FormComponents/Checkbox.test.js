@@ -90,7 +90,7 @@ describe("Component: Checkbox -", () => {
         const wrapper = shallow(<Checkbox group groupTitle="Group title" options={options} />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("legend");
+        expect(wrapper.html()).toContain("label class=\"checkbox-label\"");
     });
 
     it("renders checkbox group with error", () => {

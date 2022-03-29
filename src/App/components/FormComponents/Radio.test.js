@@ -83,7 +83,7 @@ describe("Component: Radio -", () => {
         const wrapper = shallow(<Radio group groupTitle="Group title" options={options} />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("legend");
+        expect(wrapper.html()).toContain("label class=\"radio-label\"");
     });
 
     it("renders checkbox group with disabled state", () => {
