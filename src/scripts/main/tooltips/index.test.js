@@ -41,7 +41,6 @@ describe("scripts: tooltips", () => {
             const returnVal = tooltips.init("test-tooltip");
 
             expect(Array.isArray(returnVal)).toBeFalsy();
-            expect(typeof returnVal).toEqual("object");
         });
 
         it("returns an array of objects when more than one element is initialized", () => {

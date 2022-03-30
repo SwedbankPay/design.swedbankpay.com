@@ -46,55 +46,36 @@ exports[`Components: Tooltip Overview renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
   >
-    <div
-      className="button-group"
-    >
-      
-
-      <button
-        className="btn btn-primary"
-        data-tooltip="This is a tooltip!"
-        data-tooltip-position="left"
-        type="button"
-      >
-        Tooltip to the left
-      </button>
-      
-
-      <button
-        className="btn btn-primary"
-        data-tooltip="Payment capture is the process by which payments are secured once the payment has been authorized by the customer."
-        data-tooltip-position="top"
-        type="button"
-      >
-        Tooltip on top
-      </button>
-      
-
-      <button
-        className="btn btn-primary"
-        data-tooltip="This is a tooltip!"
-        data-tooltip-position="bottom"
-        type="button"
-      >
-        Tooltip to the bottom
-      </button>
-      
-
-      <button
-        className="btn btn-primary"
-        data-tooltip="Payment capture is the process by which payments are secured once the payment has been authorized by the customer!"
-        data-tooltip-position="right"
-        type="button"
-      >
-        Tooltip to the right
-      </button>
-      
-
-    </div>
+    <Tooltip
+      className="btn btn-primary"
+      id="tooltip-left-example"
+      position="left"
+      text="This is a tooltip!"
+      title="Tooltip to the left"
+    />
+    <Tooltip
+      className="btn btn-primary"
+      id="tooltip-top-example"
+      position="top"
+      text="Payment capture is the process by which payments are secured once the payment has been authorized by the customer."
+      title="Tooltip on top"
+    />
+    <Tooltip
+      className="btn btn-primary"
+      id="tooltip-left-example"
+      position="right"
+      text="This is a tooltip!"
+      title="Tooltip to the right"
+    />
+    <Tooltip
+      className="btn btn-primary mt-1"
+      id="tooltip-left-example"
+      position="bottom"
+      text="Payment capture is the process by which payments are secured once the payment has been authorized by the customer."
+      title="Tooltip on bottom"
+    />
   </ComponentPreview>
 </Fragment>
 `;
@@ -109,8 +90,6 @@ exports[`Components: Tooltip renders 1`] = `
     Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.
   </p>
   <Overview />
-  <WithIcons />
-  <ExtendedUsage />
   <JavascriptMethods />
   <NpmInformation
     componentName="tooltips"
