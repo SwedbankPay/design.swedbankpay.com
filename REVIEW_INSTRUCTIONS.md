@@ -1,8 +1,9 @@
 # Reviewer instructions
 The reviewer has the responsibility to check the below points, and to approve or reject the QA request.   
 If you have questions regarding the functionality talk to the developer,   
-if you have questions about design, contact the architect.  
-Every code review should validate the following:  
+if you have questions about design, contact the designer.
+For viewing the code in stage type www.design.stage.swedbankpay/feature/<branch-name>.
+Every code review should validate the following:
 
 ## General
 - Is all the code easily understood?
@@ -12,18 +13,14 @@ Every code review should validate the following:
 - Is there any commented out code?
 - Can any of the code be replaced with library functions?
 - Can any logging or debugging code be removed?
-- All flags and markers like TO-DO should have a corresponding Jira task
-
-## Security
-- Is all dynamic data put into the DOM escaped
-- Is the CSP changed, why? 
-- Is the authentication changed, why?
-- Is configurations from 3-parties validated?
+- Is there any typos in the documentation files?
+- Does the PR have a linked Jira task in the description? 
 
 ## WCAG
 - Can the html be more semantic?
 - Would the html make sense for a user using a screen reader?
 - Can the functionality be accessed only using a keyboard?
+- Are ARIA-lables used and are they used correctly? 
 - Does the text and other visual elements have a good contrast ratio and size?
 
 ## Documentation
