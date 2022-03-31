@@ -42,7 +42,7 @@ class NavGroup extends Component {
         return (
             <li className="nav-group">
                 <div className="nav-group-heading">
-                    <i className="material-icons" aria-hidden="true"onClick={() => this.toggleActive()}>arrow_right</i>
+                    <i className="material-icons" aria-hidden="true" onClick={() => this.toggleActive()}>arrow_right</i>
                     <span>{title}</span>
                 </div>
                 <ul className="nav-ul">
@@ -60,7 +60,7 @@ class NavGroup extends Component {
 class SelectPanel extends Component {
 
     componentDidMount () {
-        sidebar.init(this.props.id, this.props.newSidebar);
+        sidebar.init(this.props.id);
 
         if (this.props.location.pathname !== "/") {
             const sidebarElement = document.getElementById(this.props.id);
