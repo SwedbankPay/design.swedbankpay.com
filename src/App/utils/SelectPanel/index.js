@@ -122,7 +122,7 @@ class SelectPanel extends Component {
                         </nav>
                     </div>
                     :
-                    <div id={this.props.id} className="sidebar-2">
+                    <div id={this.props.id} className="sidebar">
                         <nav className="sidebar-main-nav">
                             <div className="sidebar-logo">
                                 <a href="/" aria-label="To homepage">
