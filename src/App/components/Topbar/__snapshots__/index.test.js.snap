@@ -574,7 +574,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
             }
           >
             <div
-              className="sidebar-2"
+              className="sidebar"
               id="topbar-sidebar"
             >
               <nav

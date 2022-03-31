@@ -2,7 +2,7 @@
 
 exports[`Component: Sidebar renders 1`] = `
 <div
-  className="sidebar-2"
+  className="sidebar"
   id="sidebar-1"
 >
   <nav
@@ -190,7 +190,7 @@ exports[`Component: Sidebar renders 1`] = `
 
 exports[`Component: Sidebar renders four levels when four levels is provided 1`] = `
 <div
-  className="sidebar-2"
+  className="sidebar"
   id="test"
 >
   <nav
@@ -335,7 +335,7 @@ exports[`Component: Sidebar renders four levels when four levels is provided 1`]
 
 exports[`Component: Sidebar renders one level when one level is provided 1`] = `
 <div
-  className="sidebar-2"
+  className="sidebar"
   id="test"
 >
   <nav
@@ -398,7 +398,7 @@ exports[`Component: Sidebar renders one level when one level is provided 1`] = `
 
 exports[`Component: Sidebar renders three levels when three levels is provided 1`] = `
 <div
-  className="sidebar-2"
+  className="sidebar"
   id="test"
 >
   <nav
@@ -500,7 +500,7 @@ exports[`Component: Sidebar renders three levels when three levels is provided 1
 
 exports[`Component: Sidebar renders two levels when two levels is provided 1`] = `
 <div
-  className="sidebar-2"
+  className="sidebar"
   id="test"
 >
   <nav
