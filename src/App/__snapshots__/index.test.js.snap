@@ -37,7 +37,6 @@ exports[`Main: App renders 1`] = `
         >
           <withRouter(SelectPanel)
             id="doc-sidebar"
-            newSidebar={true}
             routes={
               Array [
                 Object {
