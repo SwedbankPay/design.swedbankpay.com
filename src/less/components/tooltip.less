@@ -3,8 +3,12 @@
     display: inline-flex;
     margin-left: 0.25rem;
 
-    &.has-icon {
-        all: unset;
+    &.isVisible {
+        &:before,
+        [role="tooltip"] {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 
     &:before {
@@ -34,7 +38,7 @@
         transform: translateX(-50%) translateY(-100%);
         background: @white;
         color: @brand-secondary;
-        text-align: left;
+        text-align: center;
         font-size: 0.875rem;
         line-height: 1.5;
         white-space: normal;
