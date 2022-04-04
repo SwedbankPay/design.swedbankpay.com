@@ -157,23 +157,6 @@
                         display: flex;
                         width: 30px;
                     }
-
-                    .sidebar-version {
-                        display: block;
-
-                        .sidebar-version-header {
-                            font-family: @brand-headline;
-                            font-weight: @font-weight-normal;
-                            color: @brand-secondary;
-                            font-size: 1.125rem;
-                            line-height: 1.5rem;
-                        }
-
-                        .small,
-                        small {
-                            color: @brand-secondary;
-                        }
-                    }
                 }
 
                 .main-nav-ul {
@@ -182,9 +165,20 @@
                             .nav-group-heading {
                                 color: @brand-secondary;
                             }
+
+                            .nav-ul {
+                                visibility: visible;
+                                max-height: 1500px;
+                            }
                         }
 
                         .nav-group-heading {
+                            all: unset;
+                            display: flex;
+                            padding: 0.5rem;
+                            padding-left: 0;
+                            border: 2px solid transparent;
+
                             &:hover,
                             &:focus {
                                 color: @brand-secondary;
@@ -193,9 +187,17 @@
                                     text-decoration: underline;
                                 }
                             }
+
+                            &:focus {
+                                border: 2px solid @brand-secondary;
+                                border-radius: 2px;
+                            }
                         }
 
                         .nav-ul {
+                            visibility: hidden;
+                            max-height: 0;
+
                             .nav-subgroup {
                                 &.active {
                                     > .nav-group-heading {
