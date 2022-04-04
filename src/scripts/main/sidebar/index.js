@@ -5,7 +5,7 @@ const scrollBuffer = 20;
 
 const _sidebars = [];
 
-class Sidebar {
+class TopbarSidebar {
     constructor (el) {
         this.constructSidebar(el);
     }
@@ -292,7 +292,7 @@ const removeScrollListener = id => {
     window.removeEventListener("scroll", sidebar._contentScrollListener);
 };
 
-const _createSidebar = sidebarQuery => {
+const _createTopbarSidebar = sidebarQuery => {
 
     if (_sidebars.filter(sidebar => sidebar.id === sidebarQuery.id).length > 0) {
         const updatedSidebarObject = _sidebars.filter(sidebar => sidebar.id === sidebarQuery.id)[0];
@@ -302,14 +302,14 @@ const _createSidebar = sidebarQuery => {
         return updatedSidebarObject;
     }
 
-    const sidebarObject = new Sidebar(sidebarQuery);
+    const sidebarObject = new TopbarSidebar(sidebarQuery);
 
     _sidebars.push(sidebarObject);
 
     return sidebarObject;
 };
 
-const _createSidebar2 = sidebarQuery => {
+const _createSidebar = sidebarQuery => {
 
     if (_sidebars.filter(sidebar => sidebar.id === sidebarQuery.id).length > 0) {
         const updatedSidebarObject = _sidebars.filter(sidebar => sidebar.id === sidebarQuery.id)[0];
@@ -346,7 +346,7 @@ const populateSidebarTertiary = (id, leafList) => {
     });
 };
 
-const init = (id, newSidebar) => {
+const init = (id, topbarSidebar) => {
     if (id) {
 
         const sidebar = document.getElementById(id);
@@ -357,7 +357,7 @@ const init = (id, newSidebar) => {
             return null;
         }
 
-        const sidebarObject = newSidebar ? _createSidebar2(sidebar) : _createSidebar(sidebar);
+        const sidebarObject = topbarSidebar ? _createTopbarSidebar(sidebar) : _createSidebar(sidebar);
 
         return sidebarObject;
     } else {
