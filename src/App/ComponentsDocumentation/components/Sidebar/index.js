@@ -10,7 +10,7 @@ import { SidebarNavList, SidebarNavListExtended } from "./constants";
 import NpmInformation from "@docutils/NpmInformation";
 
 const Overview = () => (
-    <>
+    <section>
         <h2 id="overview">Overview</h2>
         <p>
             The sidebar supports a depth of up to 3 levels. Note that if used with a sticky topbar, add
@@ -26,11 +26,11 @@ const Overview = () => (
                 </div>
             </div>
         </ComponentPreview>
-    </>
+    </section>
 );
 
 const ExtendedSidebar = () => (
-    <>
+    <section>
         <h2 id="extended-sidebar">Extended sidebar</h2>
         <p>This sidebar is an extended sidebar which supports a depth of up to 4 levels. To use the extended sidebar, add class <CodeTags type="secondary" code=".extended-sidebar" /> to the second <CodeTags type="primary" code="<ul>"/> along with the <CodeTags type="secondary" code=".secondary-nav-ul" /> class.
         </p>
@@ -42,11 +42,11 @@ const ExtendedSidebar = () => (
                 </div>
             </div>
         </ComponentPreview>
-    </>
+    </section>
 );
 
 const SetActiveState = ({ componentName }) => (
-    <>
+    <section>
         <JavascriptDocElement
             code={<CodeTags type="secondary" code="dg.sidebar.setActiveState(<sidebar-id>, group-index, subgroup-index, leaf-index)"/>}
             description={
@@ -69,11 +69,11 @@ const SetActiveState = ({ componentName }) => (
                 </>
             }
         />
-    </>
+    </section>
 );
 
 const RemoveActiveState = ({ componentName }) => (
-    <>
+    <section>
 
         <JavascriptDocElement
             code={<CodeTags type="secondary" code="dg.sidebar.removeActiveState(<sidebar-id>, group-index, subgroup-index, leaf-index)"/>}
@@ -97,11 +97,11 @@ const RemoveActiveState = ({ componentName }) => (
                 </>
             }
         />
-    </>
+    </section>
 );
 
 const InitScrollListener = ({ componentName }) => (
-    <>
+    <section>
         <JavascriptDocElement
             code={<CodeTags type="secondary" code="dg.sidebar.initScrollListener(<sidebar-id>, content-id, header-type)"/>}
             description={
@@ -117,11 +117,11 @@ const InitScrollListener = ({ componentName }) => (
                 </>
             }
         />
-    </>
+    </section>
 );
 
 const RemoveScrollListener = () => (
-    <>
+    <section>
         <JavascriptDocElement
             code={<CodeTags type="secondary" code="dg.sidebar.removeScrollListener(<sidebar-id>, content-id)"/>}
             description={
@@ -135,21 +135,21 @@ const RemoveScrollListener = () => (
                 </>
             }
         />
-    </>
+    </section>
 );
 
 const JavascriptMethods = () => (
-    <>
+    <section>
         <h2 id="javascript-methods">JavaScript methods</h2>
         <p className="pl-3 mb-0">Note: The sidebar should be initialized with ID</p>
         <JavascriptDocs componentName="sidebar" others={[SetActiveState, RemoveActiveState, InitScrollListener, RemoveScrollListener]} />
-    </>
+    </section>
 );
 
 const Sidebar = () => {
     useEffect(() => {
-        sidebar.init("dg-sidebar1", true);
-        sidebar.init("dg-sidebar2", true);
+        sidebar.init("dg-sidebar1");
+        sidebar.init("dg-sidebar2");
     });
 
     return (
