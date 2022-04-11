@@ -25,14 +25,14 @@ export const selectOverview = {
                                 id: "hint_text_select",
                                 name: "Hint text",
                                 value: {
-                                    helpBlock: true
+                                    helpBlock: "Hint text"
                                 }
                             },
                             {
                                 id: "expander_hint_text",
                                 name: "Expander hint",
                                 value: {
-                                    expandingHintText: true
+                                    expandingHintText: "Expanding hint text",
                                 }
                             }
                         ]
@@ -53,9 +53,6 @@ export const selectOverview = {
                                 name: "Error",
                                 value: {
                                     errorMessage: "Descriptive helpful error message.",
-                                    validationState: "error",
-                                    helpBlock: true,
-                                    required: true
                                 }
                             },
                             {
