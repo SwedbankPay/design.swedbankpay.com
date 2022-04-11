@@ -170,6 +170,6 @@ describe("Component: InputGroup -", () => {
         const wrapper = mount(<InputGroup type="typetest" helpBlock="testvalue" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("help-block");
+        expect(wrapper.html()).toContain("hint-text");
     });
 });
