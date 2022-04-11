@@ -116,8 +116,8 @@ const InputGroup = ({
                             <input {...attrs} />}
                 </>
             }
-            {errorMessage && <div className="help-block-error">{errorMessage}</div>}{"\n"}
-            {helpBlock && <div className="help-block">{helpBlock}</div>}{"\n"}
+            {errorMessage && <div className="help-block">{errorMessage}</div>}{"\n"}
+            {helpBlock && <div className="hint-text">{helpBlock}</div>}{"\n"}
             {expandingHintText && 
             <label className="help-block-expander">
                 <input disabled={disabled} type="checkbox"/>

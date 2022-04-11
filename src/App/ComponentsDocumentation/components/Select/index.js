@@ -84,7 +84,7 @@ const DeveloperDocumentation = () => (
                     <select className="form-control" defaultValue="placeholder" id="dev-doc-example" required>{"\n"}
                         <option value="placeholder" disabled hidden>Select option</option>{"\n"}
                     </select>
-                    <div className="help-block-error">Descriptive helpful error message</div>
+                    <div className="help-block">Descriptive helpful error message</div>
                 </div>
             </form>
         </ComponentPreview>
