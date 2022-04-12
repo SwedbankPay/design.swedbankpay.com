@@ -55,7 +55,7 @@
         font-weight: bold;
         display: flex;
         position: absolute;
-        left: 1.25rem;
+        left: 1rem;
         padding: 0;
         border: 0;
         outline: 0;
@@ -318,7 +318,7 @@
                 }
 
                 > a:first-of-type {
-                    padding-top: 3rem;
+                    margin-top: 1rem;
                 }
 
                 > a {
@@ -349,6 +349,10 @@
 
             .topbar-link-container {
                 animation: slide-out 0.3s ease alternate;
+
+                > a:first-of-type {
+                    margin-top: 1rem;
+                }
             }
         }
 
@@ -424,6 +428,14 @@
             }
         }
     }
+
+    &.topbar-xl-wide {
+        padding: 0 1.5rem;
+
+        .topbar-logo {
+            // margin-left: 1.5rem;
+        }
+    }
 }
 
 .topbar-wide {
@@ -433,11 +445,12 @@
 
     .topbar-logo {
         margin-top: 0;
+        margin-right: 2rem;
     }
 
     .topbar-link-right {
         margin-left: auto;
-        margin-right: 1rem;
+        // margin-right: 1rem;
         padding: 0;
         align-items: center;
         font-family: @brand-headline;
