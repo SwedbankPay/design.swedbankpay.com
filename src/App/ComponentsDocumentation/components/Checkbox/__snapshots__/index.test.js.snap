@@ -102,7 +102,7 @@ exports[`Component: Checkbox DeveloperDocumentation renders 1`] = `
     />
      class to the parent element, then add the 
     <CodeTags
-      code=".help-block-error"
+      code=".help-block"
       type="secondary"
     />
      element as the last child with the error message. 
@@ -299,7 +299,7 @@ exports[`Component: Checkbox Overview renders 1`] = `
                       "id": "hint_text_expander",
                       "name": "Hint expander",
                       "value": Object {
-                        "hintTextExpanded": "Expanding hint text",
+                        "expandingHintText": "Expanding hint text",
                       },
                     },
                   ],
