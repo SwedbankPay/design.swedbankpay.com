@@ -84,7 +84,7 @@ const DeveloperDocumentation = () => (
             </div>
         </ComponentPreview>
         <span className="h3 d-inline-block mt-3">Error state</span>
-        <p>To display the error state, add the <CodeTags type="primary" code=".has-error"/> class to the parent element, then add the <CodeTags type="secondary" code="help-block-error"/> element as the last child with the error message.</p>
+        <p>To display the error state, add the <CodeTags type="primary" code=".has-error"/> class to the parent element, then add the <CodeTags type="secondary" code="help-block"/> element as the last child with the error message.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="d-flex justify-content-center">
                 <Radio id="radio-example-11" groupTitle="Group label" errorMessage="Error message" label="Radio button label" name="radio-example" options={ErrorStateOptions} group/>

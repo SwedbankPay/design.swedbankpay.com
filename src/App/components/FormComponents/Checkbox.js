@@ -27,8 +27,8 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
 
                         </label>{"\n"}
                     </div>)}
-                    {errorMessage ? <div className="help-block-error">{errorMessage}</div> : null}
-                    {hintText && <div className="help-block">{hintText}</div>}
+                    {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
+                    {hintText && <div className="hint-text">{hintText}</div>}
                     {hintTextExpanded && 
                     <div className="help-block-expander">
                         <input type="checkbox" id="expanding-hint-text" className="hide-content"/>
@@ -44,8 +44,8 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
                         <input {...attrs} />{"\n"}
                         <label htmlFor={id} className="d-block">{label}</label>{"\n"}
                     </div>
-                    {errorMessage ? <div className="help-block-error">{errorMessage}</div> : null}
-                    {hintText && <div className="help-block">{hintText}</div>}
+                    {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
+                    {hintText && <div className="hint-text">{hintText}</div>}
                     {hintTextExpanded && 
                     <div className="help-block-expander">
                         <input type="checkbox" id="expanding-hint-text" className="hide-content"/>

@@ -23,8 +23,8 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
                             <input {...attrs} id={id} defaultChecked={checked}/>{"\n"}
                             <label htmlFor={id}>{label}</label>{"\n"}
                         </div>)}
-                        {errorMessage ? <div className="help-block-error">{errorMessage}</div> : null}
-                        {hintText && <div className="help-block">{hintText}</div>}
+                        {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
+                        {hintText && <div className="hint-text">{hintText}</div>}
                         {hintTextExpanded && 
                         <div className="help-block-expander">
                             <input type="checkbox" id="expanding-hint-text" className="hide-content"/>
@@ -40,8 +40,8 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
                         <input {...attrs} />{"\n"}
                         {label ? <label htmlFor={id}>{label}</label> : null}{label ? "\n" : null}
                     </div>
-                    {errorMessage ? <div className="help-block-error">{errorMessage}</div> : null}
-                    {hintText && <div className="help-block">{hintText}</div>}
+                    {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
+                    {hintText && <div className="hint-text">{hintText}</div>}
                     {hintTextExpanded && 
                     <div className="help-block-expander">
                         <input type="checkbox" id="expanding-hint-text" className="hide-content"/>
