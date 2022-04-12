@@ -127,37 +127,53 @@ fieldset {
         }
 
         .help-block-expander {
-            position: relative;
-            margin: @helpblock-margin;
-            line-height: 1rem;
-            min-height: 1rem;
+            display: block;
+            margin-top: 0.5rem;
 
-            .hide-content {
-                display: none;
+            input {
+                position: absolute;
+                top: 0;
+                left: 0;
+                left: -9999px;
+
+                &:focus ~ .header {
+                    outline: 1px solid @brand-secondary;
+                }
             }
 
-            input:checked + label + .content {
-                display: block;
-            }
-
-            label {
-                color: @turquoise-links;
-                cursor: pointer;
+            .header {
                 display: flex;
-                align-items: center;
-                margin-bottom: 0.5rem;
+                cursor: pointer;
+                color: @brand-accent-links;
                 font-size: 0.875rem;
-                transition: ease 0.5s;
 
-                i {
+                .arrow {
+                    display: inline-block;
+                    margin-right: 0.5rem;
+                    color: @brand-accent-links;
                     font-size: 0.875rem;
-                    margin-right: 0.75rem;
+                    align-self: center;
+                    transition: all 0.5s ease;
                 }
             }
 
             .content {
+                font-size: 0;
+                margin: 0;
+                opacity: 0;
+                padding: 0;
                 color: @medium-brown;
+            }
+
+            input:checked ~ .arrow {
+                transform: rotateZ(-90deg);
+            }
+
+            input:checked ~ .content {
                 font-size: 0.875rem;
+                opacity: 1;
+                height: auto;
+                padding: 5px 0;
             }
         }
     }
@@ -165,6 +181,18 @@ fieldset {
     &[disabled] {
         label {
             color: @light-brown;
+        }
+
+        .help-block-expander {
+            .header,
+            .arrow,
+            .content {
+                color: @brand-secondary-light-3;
+            }
+
+            .header {
+                cursor: not-allowed;
+            }
         }
     }
 

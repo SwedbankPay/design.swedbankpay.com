@@ -40,7 +40,7 @@ export const checkboxShowCase = {
                                 id: "hint_text_expander",
                                 name: "Hint expander",
                                 value: {
-                                    hintTextExpanded: "Expanding hint text"
+                                    expandingHintText: "Expanding hint text"
                                 }
                             }
                         ]

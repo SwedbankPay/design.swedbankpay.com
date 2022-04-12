@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, hintText, hintTextExpanded, optional, required, group, options, className }) => {
+const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, hintText, optional, required, group, options, className, expandingHintText }) => {
     const attrs = {
         type: "checkbox",
         id: id || null,
@@ -29,14 +29,12 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
                     </div>)}
                     {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
                     {hintText && <div className="hint-text">{hintText}</div>}
-                    {hintTextExpanded && 
-                    <div className="help-block-expander">
-                        <input type="checkbox" id="expanding-hint-text" className="hide-content"/>
-                        <label tabindex="0" htmlFor="expanding-hint-text"><i className="material-icons">keyboard_arrow_down</i>{hintTextExpanded}</label>
-                        <div className="content hide-content">
-                        This information is less important and only a minority of users will need it or the text is very long. In this case; both.
-                        </div>
-                    </div>}
+                    {expandingHintText && 
+                    <label className="help-block-expander">
+                        <input disabled={disabled} type="checkbox"/>
+                        <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintText}</span>
+                        <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
+                    </label>}
                 </fieldset>
             </form>
                 : <>
@@ -46,14 +44,12 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
                     </div>
                     {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
                     {hintText && <div className="hint-text">{hintText}</div>}
-                    {hintTextExpanded && 
-                    <div className="help-block-expander">
-                        <input type="checkbox" id="expanding-hint-text" className="hide-content"/>
-                        <label tabindex="0" htmlFor="expanding-hint-text"><i className="material-icons">keyboard_arrow_down</i>{hintTextExpanded}</label>
-                        <div className="content hide-content">
-                        This information is less important and only a minority of users will need it or the text is very long. In this case; both.
-                        </div>
-                    </div>}
+                    {expandingHintText && 
+                    <label className="help-block-expander">
+                        <input disabled={disabled} type="checkbox"/>
+                        <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintText}</span>
+                        <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
+                    </label>}
                 </>
             }
         </>
@@ -76,7 +72,7 @@ Checkbox.propTypes = {
     options: PropTypes.array,
     optional: PropTypes.bool,
     hintText: PropTypes.string,
-    hintTextExpanded: PropTypes.string
+    expandingHintText: PropTypes.string,
 };
 
 export default Checkbox;
