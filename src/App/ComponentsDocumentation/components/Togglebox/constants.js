@@ -11,39 +11,7 @@ export const toggleboxShowCase = {
         {
             component: <Togglebox label="Label" id="togglebox-example"/>,
             options: {
-                checkbox: [
-                    {
-                        title: "Label add on",
-                        inputs: [
-                            {
-                                id: "help_icon",
-                                name: "With help icon",
-                                value: {
-                                    tooltip: true
-                                }
-                            }
-                        ]
-                    }
-                ],
                 radio: [
-                    {
-                        id: "state_radio",
-                        title: "State modifiers",
-                        values: [
-                            {
-                                name: "Enabled",
-                                value: {
-                                    disabled: false
-                                }
-                            },
-                            {
-                                name: "Disabled",
-                                value: {
-                                    disabled: true
-                                }
-                            }
-                        ]
-                    },
                     {
                         id: "label_position",
                         title: "Label position",
@@ -61,11 +29,29 @@ export const toggleboxShowCase = {
                                 }
                             }
                         ]
+                    },
+                    {
+                        id: "state_radio",
+                        title: "State modifiers",
+                        values: [
+                            {
+                                name: "Enabled",
+                                value: {
+                                    disabled: false
+                                }
+                            },
+                            {
+                                name: "Disabled",
+                                value: {
+                                    disabled: true
+                                }
+                            }
+                        ]
                     }
                 ]
             },
             title: "Togglebox",
-            description: "Toggleboxes have two states: on and off. Each of these have default, hover, focus and disabled states. A togglebox must always be accompanied by a label, on the left side or on the top, that clearly conveys what option a user will turn on or off. If there is a need for a more detailed description, a help icon can be added after the label."
+            description: "Toggleboxes have two states: on and off. Each of these have default, hover, focus and disabled states. A togglebox must always be accompanied by a label, on the left side or on the top, that clearly conveys what option a user will turn on or off."
         }
     ]
 };
