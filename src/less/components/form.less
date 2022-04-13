@@ -396,6 +396,10 @@ select {
     background-position: right 0.5rem center;
     -moz-appearance: none;
     -webkit-appearance: none;
+
+    &.form-control {
+        padding-right: 2.5rem;
+    }
 }
 
 select::-ms-expand {
@@ -408,11 +412,5 @@ select[multiple] {
 
     option {
         padding: @select-option-margin;
-    }
-}
-
-select {
-    &.form-control {
-        padding-right: 2.5rem;
     }
 }
