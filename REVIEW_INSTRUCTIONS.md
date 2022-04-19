@@ -22,6 +22,7 @@ Every code review should validate the following:
 - Can the functionality be accessed only using a keyboard?
 - Are ARIA-lables used and are they used correctly? 
 - Does the text and other visual elements have a good contrast ratio and size?
+- Does images have an appropriate alt-text?
 
 ## Documentation
 - Comments should only be used if code is deviation from normal practices or are related to non-trivial business rules. 
