@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Rangeslider = ({ id, label, name, min, max, step, value, disabled, valueLabelPrefix, valueLabelPostfix, tooltip }) => {
+const Rangeslider = ({ id, label, name, min, max, step, value, disabled, valueLabelPrefix, valueLabelPostfix }) => {
     const attrs = {
         type: "range",
         id,
@@ -19,12 +19,6 @@ const Rangeslider = ({ id, label, name, min, max, step, value, disabled, valueLa
             <div className="d-flex justify-content-between">{"\n"}
                 <label htmlFor={id} className="rangeslider-label">{"\n"}
                     {label}{"\n"}
-                    {tooltip &&
-                        <>
-                            <i className="material-icons help-icon" data-tooltip="Some informational text" data-tooltip-position="top">{"\n"}
-                                help_outline{"\n"}
-                            </i>{"\n"}
-                        </>}
                 </label>{"\n"}
                 <output className="value-label" >{"\n\t\t"}
                     <p>{"\n\t\t\t"}
