@@ -4,8 +4,6 @@ import PropTypes from "prop-types";
 
 import SearchBox from "../SearchBox/index";
 
-import pkg from "~/package.json";
-
 import LogotypeComponent from "@components/Logotype";
 
 const basename = process.env.basename;
@@ -41,10 +39,10 @@ class NavGroup extends Component {
 
         return (
             <li className="nav-group">
-                <div className="nav-group-heading">
-                    <i className="material-icons" aria-hidden="true"onClick={() => this.toggleActive()}>arrow_right</i>
+                <button className="nav-group-heading" onClick={() => this.toggleActive()}>
+                    <i className="material-icons" aria-hidden="true">arrow_right</i>
                     <span>{title}</span>
-                </div>
+                </button>
                 <ul className="nav-ul">
                     {routes.map((childRoute, i) => (
                         <li key={`nav_leaf_${i}`} className="nav-leaf">
@@ -60,7 +58,7 @@ class NavGroup extends Component {
 class SelectPanel extends Component {
 
     componentDidMount () {
-        sidebar.init(this.props.id, this.props.newSidebar);
+        sidebar.init(this.props.id, this.props.topbarSidebar);
 
         if (this.props.location.pathname !== "/") {
             const sidebarElement = document.getElementById(this.props.id);
@@ -101,17 +99,6 @@ class SelectPanel extends Component {
                         {/* A fully functional search box will be added later. */}
                         {/* <SearchBox routes={this.props.routes} /> */}
                         <nav className="sidebar-nav">
-                            <a href="/" className="sidebar-top">{"\n"}
-                                <img className="d-none d-lg-block logotype-vertical logotype-sm" src={`${basename}img/logo/${brand}-logo-v.svg`} alt={`${brand}-logo`} />{"\n"}
-                                <div className="sidebar-version">
-                                    <div className="sidebar-version-header">
-                                        Design Guide
-                                    </div>
-                                    <small>
-                                        Version {process.env.version || pkg.version}
-                                    </small>
-                                </div>
-                            </a>
                             <ul className="main-nav-ul">
                                 {this.props.routes.map((route, i) => {
                                     const NavGroupWithRouter = withRouter(NavGroup);
