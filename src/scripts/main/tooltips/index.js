@@ -2,8 +2,6 @@ const _repositionTooltip = (e) => {
     const tooltipContent = e.target.nextElementSibling;
     const tooltipContentPosition = tooltipContent.getBoundingClientRect();
 
-    console.log(tooltipContentPosition);
-
     if (tooltipContentPosition.left < 16) {
         tooltipContent.style.left = `${tooltipContent.offsetLeft - tooltipContentPosition.left + 16}px`;
     } else if (tooltipContentPosition.right > window.innerWidth - 16) {
