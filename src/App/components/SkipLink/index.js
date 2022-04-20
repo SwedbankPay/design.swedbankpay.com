@@ -1,7 +1,7 @@
 import React from "react";
 
-const SkipLink = () => (
-    <a id="skipLink" className="skipLink btn btn-link" href="#doc-view">Skip to content</a>
+const SkipLink = ({ id }) => (
+    <a id={`${id ? id : "skip-link"}`} className="skip-link" href="#doc-view">Skip to main content</a>
 );
 
 export default SkipLink;
