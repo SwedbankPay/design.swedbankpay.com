@@ -209,7 +209,7 @@ exports[`Component: Select Overview renders 1`] = `
                       "id": "expander_hint_text",
                       "name": "Expander hint",
                       "value": Object {
-                        "expandingHintText": "Expanding hint text",
+                        "expandingHintTitle": "Expanding hint text",
                       },
                     },
                   ],

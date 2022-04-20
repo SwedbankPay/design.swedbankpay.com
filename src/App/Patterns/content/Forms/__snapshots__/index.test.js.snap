@@ -57,7 +57,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
       </div>
       <Radio
         className="mb-0 forms-radio-example"
-        expandingHintText="Expander hint text"
+        expandingHintTitle="Expander hint text"
         group={true}
         groupTitle="Input label"
         name="guidelines-radio-example"
@@ -788,7 +788,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
             Do
           </span>
           <InputGroup
-            expandingHintText="Where to find the code?"
+            expandingHintTitle="Where to find the code?"
             id="cvc-example"
             label="Security code (CVC)"
             type="text"
@@ -1031,7 +1031,7 @@ exports[`Forms: index Overview renders 1`] = `
                     />
                     <InputGroup
                       expandingHintContent="If you select a subject it will make it easier for our support team to handle your request which will make the processing time much faster."
-                      expandingHintText="Why should you select subject?"
+                      expandingHintTitle="Why should you select subject?"
                       id="form-select-example"
                       label="Subject"
                       optional={true}
