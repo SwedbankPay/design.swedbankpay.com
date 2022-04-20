@@ -25,7 +25,7 @@ const InputOptions = () => (
                         id: "expander_hint_text",
                         name: "Expander hint",
                         value: {
-                            expandingHintText: "Expanding hint text"
+                            expandingHintTitle: "Expanding hint text"
                         }
                     }
                 ]
@@ -130,7 +130,7 @@ export const inputShowCase = {
                                 id: "expander_hint_textarea",
                                 name: "Expander hint",
                                 value: {
-                                    expandingHintText: "Expanding hint text"
+                                    expandingHintTitle: "Expanding hint text"
                                 }
                             }
                         ]
@@ -190,8 +190,8 @@ export const contentGuidelines = [
             },
             {
                 slabType: "success",
-                content: <InputGroup id="do-example-expanding" type="text" label="Security code (CVC)" expandingHintText="Where to find the code?"/>,
-                expandingHintText: "Where to find the code?",
+                content: <InputGroup id="do-example-expanding" type="text" label="Security code (CVC)" expandingHintTitle="Where to find the code?"/>,
+                expandingHintTitle: "Where to find the code?",
                 description: "Use a hint expander if the information is long and won’t be needed by the majority of users. Write the hint expander to help users understand what they will see before they click."
             }
         ]

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optional, name, required, className, hintText, expandingHintText, errorMessage }) => {
+const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optional, name, required, className, hintText, expandingHintTitle, errorMessage }) => {
     const attrs = {
         type: "radio",
         id: id || null,
@@ -25,10 +25,10 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
                         </div>)}
                         {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
                         {hintText && <div className="hint-text">{hintText}</div>}
-                        {expandingHintText && 
+                        {expandingHintTitle && 
                         <label className="help-block-expander">
                             <input disabled={disabled} type="checkbox"/>
-                            <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintText}</span>
+                            <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
                             <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
                     </label>}
                     </fieldset>
@@ -40,10 +40,10 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
                     </div>
                     {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
                     {hintText && <div className="hint-text">{hintText}</div>}
-                    {expandingHintText && 
+                    {expandingHintTitle && 
                     <label className="help-block-expander">
                         <input disabled={disabled} type="checkbox"/>
-                        <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintText}</span>
+                        <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
                         <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
                     </label>}
                 </>
@@ -65,7 +65,7 @@ Radio.propTypes = {
     tooltip: PropTypes.bool,
     className: PropTypes.string,
     hintText: PropTypes.string,
-    expandingHintText: PropTypes.string,
+    expandingHintTitle: PropTypes.string,
     optional: PropTypes.bool
 };
 

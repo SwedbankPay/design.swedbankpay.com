@@ -33,7 +33,7 @@ const InputGroup = ({
     feedbackIcon,
     helpBlock,
     errorMessage,
-    expandingHintText,
+    expandingHintTitle,
     expandingHintContent,
     tooltip,
     optional,
@@ -119,10 +119,10 @@ const InputGroup = ({
             }
             {errorMessage && <><div className="help-block">{errorMessage}</div>{"\n"}</>}
             {helpBlock && <><div className="hint-text">{helpBlock}</div>{"\n"}</>}
-            {expandingHintText && 
+            {expandingHintTitle && 
             <label className="help-block-expander">{"\n"}
                 <input disabled={disabled} type="checkbox"/>{"\n"}
-                <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintText}</span>
+                <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
                 <div className="content">{expandingHintContent ? expandingHintContent : "This information is less important and only a minority of users will need it or the text is very long. In this case; both."}</div>
             </label>}
         </div>
@@ -157,7 +157,7 @@ InputGroup.propTypes = {
     successMessage: PropTypes.string,
     className: PropTypes.string,
     boxSize: PropTypes.oneOf(["medium", "small", ""]),
-    expandingHintText: PropTypes.string,
+    expandingHintTitle: PropTypes.string,
     expandingHintContent: PropTypes.string,
 };
 
