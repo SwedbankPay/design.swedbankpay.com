@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
-import Tooltip from "@components/Tooltips"
 
 export const Addon = ({ type, value, color, disabled, postfix }) => (
     (type === "button") ?
@@ -35,7 +34,6 @@ const InputGroup = ({
     helpBlock,
     errorMessage,
     expandingHintText,
-    tooltip,
     optional,
     postfix,
     boxSize
@@ -51,7 +49,6 @@ const InputGroup = ({
         required: required || null,
         pattern: pattern ? "" : null,
         "data-validate": validate ? "" : null,
-        "aria-describedby": tooltip ? "field-tooltip-example" : null,
     };
 
     const inputGrpClasses = classnames(
@@ -79,9 +76,7 @@ const InputGroup = ({
 
     return (
         <div className={formGroupClasses}>{"\n"}
-            {label ? <label htmlFor={id}>{"\n"}{label} {optional && "(optional)"}{tooltip && "\n"}
-                {tooltip &&
-                    <Tooltip text={"Some information"} position={"top"} id={"field-tooltip-example"}/>}{"\n"}
+            {label ? <label htmlFor={id}>{"\n"}{label} {optional && "(optional)"}
             </label> : null}{label ? "\n" : null}
             {prefixValue || postfixValue || feedbackIcon ?
                 <div className={inputGrpClasses}>{"\n"}

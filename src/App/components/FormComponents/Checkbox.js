@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Tooltip from "@components/Tooltips";
 
 const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, hintText, optional, required, group, options, className, expandingHintText }) => {
     const attrs = {
