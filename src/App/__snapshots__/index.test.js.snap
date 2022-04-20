@@ -32,6 +32,7 @@ exports[`Main: App renders 1`] = `
       <div
         className="d-md-flex"
       >
+        <SkipLink />
         <div
           className="d-none d-lg-block"
         >
@@ -396,6 +397,16 @@ exports[`Main: App renders 1`] = `
                       "title": "Sidebar",
                     },
                     Object {
+                      "componentPath": "components/SkipLink",
+                      "icon": "skip_next",
+                      "outlined": true,
+                      "path": "/components/skip-link",
+                      "statusBadges": Array [
+                        "new",
+                      ],
+                      "title": "Skip link",
+                    },
+                    Object {
                       "componentPath": "components/Slab",
                       "icon": "crop_landscape",
                       "outlined": true,
@@ -578,6 +589,7 @@ exports[`Main: App renders 1`] = `
         </div>
         <main
           className="doc-view"
+          id="doc-view"
         >
           <Suspense
             fallback={<LoadingComponent />}

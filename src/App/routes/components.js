@@ -216,6 +216,14 @@ module.exports = [
                 statusBadges: ["javascript"]
             },
             {
+                title: "Skip link",
+                path: "/components/skip-link",
+                componentPath: "components/SkipLink",
+                icon: "skip_next",
+                outlined: true,
+                statusBadges: ["new"]
+            },
+            {
                 title: "Slab",
                 path: "/components/slab",
                 componentPath: "components/Slab",

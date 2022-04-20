@@ -391,6 +391,16 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Sidebar",
             },
             Object {
+              "componentPath": "components/SkipLink",
+              "icon": "skip_next",
+              "outlined": true,
+              "path": "/components/skip-link",
+              "statusBadges": Array [
+                "new",
+              ],
+              "title": "Skip link",
+            },
+            Object {
               "componentPath": "components/Slab",
               "icon": "crop_landscape",
               "outlined": true,
