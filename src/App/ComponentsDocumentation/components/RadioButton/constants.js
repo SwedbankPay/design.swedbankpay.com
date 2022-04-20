@@ -58,15 +58,15 @@ export const radiobuttonShowCase = {
                                 }
                             },
                             {
-                                name: "Error",
-                                value: {
-                                    errorMessage: "Descriptive helpful error message."
-                                }
-                            },
-                            {
                                 name: "Disabled",
                                 value: {
                                     disabled: true
+                                }
+                            },
+                            {
+                                name: "Error",
+                                value: {
+                                    errorMessage: "Descriptive helpful error message."
                                 }
                             }
                         ]
