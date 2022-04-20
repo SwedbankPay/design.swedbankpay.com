@@ -16,9 +16,9 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
             {group ?
                 <form>
                     <fieldset className={`radio-group${errorMessage ? " has-error" : ""}${className ? ` ${className}` : ""}`} disabled={disabled}>{"\n"}
-                        <label className="radio-label">
+                        <legend>
                             {groupTitle} {optional && <span>(optional)</span>}
-                        </label>{"\n"}
+                        </legend>{"\n"}
                         {options.map(({ label, id, checked }, i) => <div className="radio" key={i}>{"\n"}
                             <input {...attrs} id={id} defaultChecked={checked}/>{"\n"}
                             <label htmlFor={id}>{label}</label>{"\n"}
