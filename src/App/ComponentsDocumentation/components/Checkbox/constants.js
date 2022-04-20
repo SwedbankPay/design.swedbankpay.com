@@ -4,15 +4,11 @@ import Checkbox from "@components/FormComponents/Checkbox";
 const options = [
     {
         id: "radio-example-1",
-        label: "Checkbox label"
+        label: "Label"
     },
     {
         id: "radio-example-2",
-        label: "Checkbox label"
-    },
-    {
-        id: "radio-example-3",
-        label: "Checkbox label"
+        label: "Label"
     }
 ];
 
@@ -20,7 +16,7 @@ export const checkboxShowCase = {
     id: "no-tabs",
     elements: [
         {
-            component: <Checkbox groupTitle="Group heading" name="checkbox-group-example" options={options} group />,
+            component: <Checkbox groupTitle="Group label" name="checkbox-group-example" options={options} group />,
             options: {
                 checkbox: [
                     {
@@ -28,16 +24,23 @@ export const checkboxShowCase = {
                         inputs: [
                             {
                                 id: "checkbox_labels",
-                                name: "Optional",
+                                name: "Is optional",
                                 value: {
                                     optional: true
                                 }
                             },
                             {
-                                id: "with_help_icon",
-                                name: "With help icon",
+                                id: "hint_text",
+                                name: "Hint text",
                                 value: {
-                                    tooltip: true
+                                    hintText: "Hint text"
+                                }
+                            },
+                            {
+                                id: "hint_text_expander",
+                                name: "Hint expander",
+                                value: {
+                                    expandingHintText: "Expanding hint text"
                                 }
                             }
                         ]
@@ -71,7 +74,7 @@ export const checkboxShowCase = {
                 ]
             },
             title: "Checkbox group",
-            description: "The default setup of the checkbox group always has a label on top which describes the checkbox group and each individual checkbox is then followed by a label which clearly describes what the options and what checking the box represents"
+            description: "The default setup of the checkbox group has a label on top which describes the checkbox group and each individual checkbox is then followed by a label which clearly describes the option and what checking the box represents."
         }
     ]
 };
@@ -79,30 +82,30 @@ export const checkboxShowCase = {
 export const guidelineOptions = [
     {
         id: "radio-guidelines-example-1",
-        label: "Checkbox label"
+        label: "Label"
     },
     {
         id: "radio-guidelines-example-2",
-        label: "Checkbox label"
+        label: "Label"
     },
     {
         id: "radio-guidelines-example-3",
-        label: "Checkbox label"
+        label: "Label"
     }
 ];
 
 export const developerDocOptions = [
     {
         id: "error-example-1",
-        label: "Checkbox label"
+        label: "Label"
     },
     {
         id: "error-example-2",
-        label: "Checkbox label"
+        label: "Label"
     },
     {
         id: "error-example-3",
-        label: "Checkbox label"
+        label: "Label"
     }
 ];
 

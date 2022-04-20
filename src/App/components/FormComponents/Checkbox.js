@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, tooltip, optional, required, group, options, className }) => {
+const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, hintText, optional, required, group, options, className, expandingHintText }) => {
     const attrs = {
         type: "checkbox",
         id: id || null,
@@ -20,11 +20,6 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
                         {optional && <>{"\n"}
                             <span>(optional)</span>
                         </>}
-                        {tooltip && <>{"\n"}
-                            <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
-                                    help_outline{"\n"}
-                            </i>
-                        </>}
                     </legend>
                     {options.map(({ label, id }, i) => <div className="checkbox" key={i}>{"\n"}
                         <input {...attrs} id={id} />{"\n"}
@@ -33,6 +28,13 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
                         </label>{"\n"}
                     </div>)}
                     {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
+                    {hintText && <div className="hint-text">{hintText}</div>}
+                    {expandingHintText && 
+                    <label className="help-block-expander">
+                        <input disabled={disabled} type="checkbox"/>
+                        <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintText}</span>
+                        <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
+                    </label>}
                 </fieldset>
             </form>
                 : <>
@@ -41,6 +43,13 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
                         <label htmlFor={id} className="d-block">{label}</label>{"\n"}
                     </div>
                     {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
+                    {hintText && <div className="hint-text">{hintText}</div>}
+                    {expandingHintText && 
+                    <label className="help-block-expander">
+                        <input disabled={disabled} type="checkbox"/>
+                        <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintText}</span>
+                        <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
+                    </label>}
                 </>
             }
         </>
@@ -61,8 +70,9 @@ Checkbox.propTypes = {
     group: PropTypes.bool,
     groupTitle: PropTypes.string,
     options: PropTypes.array,
-    tooltip: PropTypes.bool,
-    optional: PropTypes.bool
+    optional: PropTypes.bool,
+    hintText: PropTypes.string,
+    expandingHintText: PropTypes.string,
 };
 
 export default Checkbox;

@@ -4,16 +4,12 @@ import Radio from "@components/FormComponents/Radio";
 const options = [
     {
         id: "radio-example-1",
-        label: "Radio button label",
+        label: "Label",
         checked: true
     },
     {
         id: "radio-example-2",
-        label: "Radio button label"
-    },
-    {
-        id: "radio-example-3",
-        label: "Radio button label"
+        label: "Label"
     }
 ];
 
@@ -21,17 +17,30 @@ export const radiobuttonShowCase = {
     id: "no-tabs",
     elements: [
         {
-            component: <Radio groupTitle="Group heading" name="radio-group-example" options={options} group/>,
+            component: <Radio groupTitle="Group label" name="radio-group-example" options={options} group/>,
             options: {
                 checkbox: [
                     {
                         title: "Label add on",
                         inputs: [
                             {
-                                id: "with_help_icon",
-                                name: "With help icon",
+                                id: "is_optional",
+                                name: "Is optional",
                                 value: {
-                                    tooltip: true
+                                    optional: true
+                                }
+                            },     
+                            {
+                                id: "hint_text",
+                                name: "Hint text",
+                                value: {
+                                    hintText: "Hint text"
+                                }
+                            },                            {
+                                id: "hint_text_expander",
+                                name: "Hint expander",
+                                value: {
+                                    expandingHintText: "Expander hint text"
                                 }
                             }
                         ]
@@ -53,13 +62,19 @@ export const radiobuttonShowCase = {
                                 value: {
                                     disabled: true
                                 }
+                            },
+                            {
+                                name: "Error",
+                                value: {
+                                    errorMessage: "Descriptive helpful error message."
+                                }
                             }
                         ]
                     }
                 ]
             },
             title: "Radio button group",
-            description: "The default setup of the radio button group has a label on top which describes the radio button group and each individual radio button is then followed by a label which clearly describes the options and what selecting an option entails. In a radio button group one choice is always selected by default."
+            description: "The radio button group has a label on top which describes the group. Each individual radio button is followed by a label which clearly describes the options. The main guideline for radio button groups is to select one of the radio buttons by default, there might however be situations where you can’t identify a default selection."
         }
     ]
 };
@@ -98,15 +113,30 @@ export const dontOptions = [
 export const ContentGuidelinesOptions = [
     {
         id: "radio-guidelines-example-1",
-        label: "Radio button label",
+        label: "Label",
         checked: true
     },
     {
         id: "radio-guidelines-example-2",
-        label: "Radio button label"
+        label: "Label"
     },
     {
         id: "radio-guidelines-example-3",
-        label: "Radio button label"
+        label: "Label"
+    }
+];
+
+export const ErrorStateOptions = [
+    {
+        id: "radio-guidelines-example-1",
+        label: "Label"
+    },
+    {
+        id: "radio-guidelines-example-2",
+        label: "Label"
+    },
+    {
+        id: "radio-guidelines-example-3",
+        label: "Label"
     }
 ];

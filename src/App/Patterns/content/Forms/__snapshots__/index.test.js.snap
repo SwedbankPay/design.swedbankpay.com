@@ -28,7 +28,6 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
         id="guideline-input-example"
         label="Input label"
         placeholder="Placeholder text"
-        tooltip={true}
         type="text"
       />
       <div
