@@ -299,7 +299,7 @@ exports[`Component: Checkbox Overview renders 1`] = `
                       "id": "hint_text_expander",
                       "name": "Hint expander",
                       "value": Object {
-                        "expandingHintText": "Expanding hint text",
+                        "expandingHintTitle": "Expanding hint text",
                       },
                     },
                   ],
