@@ -116,11 +116,11 @@ const InputGroup = ({
                             <input {...attrs} />}
                 </>
             }
-            {errorMessage && <div className="help-block">{errorMessage}</div>}{"\n"}
-            {helpBlock && <div className="hint-text">{helpBlock}</div>}{"\n"}
+            {errorMessage && <><div className="help-block">{errorMessage}</div>{"\n"}</>}
+            {helpBlock && <><div className="hint-text">{helpBlock}</div>{"\n"}</>}
             {expandingHintText && 
-            <label className="help-block-expander">
-                <input disabled={disabled} type="checkbox"/>
+            <label className="help-block-expander">{"\n"}
+                <input disabled={disabled} type="checkbox"/>{"\n"}
                 <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintText}</span>
                 <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
             </label>}
