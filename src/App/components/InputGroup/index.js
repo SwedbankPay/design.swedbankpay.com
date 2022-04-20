@@ -35,7 +35,6 @@ const InputGroup = ({
     errorMessage,
     expandingHintTitle,
     expandingHintContent,
-    tooltip,
     optional,
     postfix,
     boxSize
@@ -50,7 +49,7 @@ const InputGroup = ({
         autoComplete: autoComplete || null,
         required: required || null,
         pattern: pattern ? "" : null,
-        "data-validate": validate ? "" : null
+        "data-validate": validate ? "" : null,
     };
 
     const inputGrpClasses = classnames(
@@ -78,10 +77,7 @@ const InputGroup = ({
 
     return (
         <div className={formGroupClasses}>{"\n"}
-            {label ? <label htmlFor={id}>{"\n"}{label} {optional && "(optional)"}{tooltip && "\n"}
-                {tooltip &&
-                    <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
-                        help_outline{"\n"}</i>}{"\n"}
+            {label ? <label htmlFor={id}>{"\n"}{label} {optional && "(optional)"}
             </label> : null}{label ? "\n" : null}
             {prefixValue || postfixValue || feedbackIcon ?
                 <div className={inputGrpClasses}>{"\n"}

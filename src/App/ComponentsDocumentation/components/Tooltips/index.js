@@ -1,107 +1,93 @@
 import React, { useEffect } from "react";
 
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
-import CodeTags from "@components/CodeTags";
-
 import { tooltips } from "@src/scripts/main";
 import NpmInformation from "@docutils/NpmInformation";
+
+import ButtonComponent from "@components/Button";
+import TooltipComponent from "@components/Tooltips";
+import InputGroup from "@components/InputGroup";
+
+import { tooltipShowCase } from "./constants";
+
+const basename = process.env.basename;
 
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <p>Add the attribute <CodeTags type="secondary" code="tooltip" /> to the desired element and add your content in its value to create a tooltip.</p>
-        <p>You can use the attribute <CodeTags type="secondary" code="tooltip-position" /> to position the tooltip relative to the containing element, use the values <CodeTags type="secondary" code="top" />, <CodeTags type="secondary" code="right" />, <CodeTags type="secondary" code="bottom" /> or <CodeTags type="secondary" code="left" />. If the attribute is not provided, it will default to top.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="button-group">{"\n"}
-                <button
-                    className="btn btn-primary"
-                    type="button"
-                    data-tooltip="This is a tooltip!"
-                    data-tooltip-position="left"
-                >Tooltip to the left
-                </button>{"\n"}
-                <button
-                    className="btn btn-primary"
-                    type="button"
-                    data-tooltip="Payment capture is the process by which payments are secured once the payment has been authorized by the customer."
-                    data-tooltip-position="top"
-                >Tooltip on top
-                </button>{"\n"}
-                <button
-                    className="btn btn-primary"
-                    type="button"
-                    data-tooltip="This is a tooltip!"
-                    data-tooltip-position="bottom"
-                >Tooltip to the bottom
-                </button>{"\n"}
-                <button
-                    className="btn btn-primary"
-                    type="button"
-                    data-tooltip="Payment capture is the process by which payments are secured once the payment has been authorized by the customer!"
-                    data-tooltip-position="right"
-                >Tooltip to the right
-                </button>{"\n"}
+        <p>Tooltips should be used sparingly. If you’re building something that requires a lot of tooltips, work on clarifying the design and the language in the experience.</p>
+
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={tooltipShowCase} codeFigure/>
+
+        <h3>When to consider something else</h3>
+        <p>If there are sufficient space within the design it is always preferred to keep content visible by default.</p>
+        <div className="row mb-2">
+            <div className="col-md-6 col-12">
+                <div className="slab slab-plain slab-border-success pb-4">
+                    <h3>Do</h3>
+                    <div className="d-flex justify-content-center pb-2">
+                        <ButtonComponent type="link" label="Contact us" id="do-example-tooltip" icon="chat_bubble_outline" />
+                    </div>
+                </div>
             </div>
-        </ComponentPreview>
+            <div className="col-md-6 col-12">
+                <div className="slab slab-plain slab-border-error h-100">
+                    <h3>Don&apos;t</h3>
+                    <div className="d-flex justify-content-center mt-3">
+                        <TooltipComponent isVisible text="Contact us" icon="chat_bubble_outline"/>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <p>If you think the function of an icon button need to be explained, consider using a button with icon and text instead.</p>
+        { /*
+        <div className="row mb-2">
+            <div className="col-md-6 col-12">
+                <div className="slab slab-plain slab-border-success pb-4">
+                    <h3>Do</h3>
+                    <div className="d-flex justify-content-center pb-2">
+                        TODO example with input fields
+                    </div>
+                </div>
+            </div>
+            <div className="col-md-6 col-12">
+                <div className="slab slab-plain slab-border-error h-100">
+                    <h3>Don&apos;t</h3>
+                    <div className="d-flex justify-content-center mt-3">
+                        TODO example with input fields
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <p>If you need to clarify the label of a from input field, show the content in a visible hint text or consider a better pattern for toggling content as an expander.</p>
+        */}
+        <h3>How to use tooltips</h3>
+        <div className="row mb-2">
+            <div className="col-12">
+                <div className="slab slab-plain slab-border-error h-100 pb-5">
+                    <h3>Don&apos;t</h3>
+                    <div className="d-flex justify-content-center">
+                    <img id="tooltip-error-image" src={`${basename}img/documentation/tooltips/dont-example.png`} alt="Do not use tooltips as an alternate possibility for describing error messages."/>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <p>Tooltips should not be used to communicate critical information, including errors in forms or other interaction feedback.</p>
     </>
 );
 
-const WithIcons = () => (
-    <>
-        <h2 id="with-icons">With icons</h2>
-        <p>Tooltips can be used with icons to give further information, for instance to inform about CVC</p>
-
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="form-group">{"\n"}
-                <label htmlFor="cvc">{"\n"}
-                    CVC{"\n"}
-                    <i className="material-icons"
-                        data-tooltip="Payment capture is the process by which payments are secured once the payment has been authorized by the customer."
-                        data-tooltip-position="top"
-                    >{"\n"}
-                        help_outline{"\n"}
-                    </i>{"\n"}
-                </label>{"\n"}
-                <input type="text" className="form-control" id="cvc" style={{ width: "250px" }} />{"\n"}
-            </div>
-        </ComponentPreview>
-    </>
+const ContentGuidelines = () => (
+    <section>
+        <h2>Content guidelines</h2>
+        <div className="slab slab-plain py-5 d-flex justify-content-center">
+        <img id="tooltip-content-image" src={`${basename}img/documentation/tooltips/content.png`} alt="Tooltip content should be short and concise."/>
+        </div>
+        <ul className="list list-bullet">
+            <li>The tooltip <b>content</b> should be short and concise providing useful, additional information or clarification.</li>
+        </ul>
+    </section>
 );
 
-const ExtendedUsage = () => (
-    <>
-        <h2 id="extended-usage">Extended usage</h2>
-        <p>
-            The extended usage tooltip is meant to give more control over the tooltip, such as automatic repositioning of the tooltip if its content falls
-            out from the viewport (using <CodeTags type="secondary" code="dg.tooltips.init()" />). Recommended to be used on mobile focused
-            applications. <b>NOTE:</b> Only <CodeTags type="secondary" code="data-tooltip-position" /> with
-            the values <CodeTags type="secondary" code="top" /> and <CodeTags type="secondary" code="bottom" /> are supported.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="d-flex align-items-center">
-                <i className="material-icons mr-3"
-                    data-tooltip=""
-                    data-tooltip-position="top"
-                >{"\n"}
-                    help_outline{"\n"}
-                    <span className="tooltip">{"\n"}
-                        Payment capture is the process by which payments are secured once the payment has been authorized by the customer.{"\n"}
-                    </span>{"\n"}
-                </i>{"\n"}
-                <button
-                    className="btn btn-primary"
-                    type="button"
-                    data-tooltip=""
-                    data-tooltip-position="bottom"
-                >{"\n"}
-                    Tooltip on bottom{"\n"}
-                    <span className="tooltip">Payment capture is the process by which payments are secured once the payment has been authorized by the customer.</span>{"\n"}
-                </button>{"\n"}
-            </div>
-        </ComponentPreview>
-
-    </>
-);
 
 const JavascriptMethods = () => (
     <>
@@ -115,12 +101,11 @@ const Tooltip = () => {
 
     return (
         <DocContainer docToc>
-            <p className="lead">Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.</p>
+            <p className="lead">The tooltip component displays a brief explanation when a cursor hovers over an interface element. The tooltip is always anchored to this element.</p>
             <Overview />
-            <WithIcons />
-            <ExtendedUsage />
+            <ContentGuidelines/>
             <JavascriptMethods />
-            <NpmInformation componentName={"tooltips"}/>
+            <NpmInformation componentName={"tooltips"}/> 
         </DocContainer>
     );
 };
@@ -128,4 +113,4 @@ const Tooltip = () => {
 export default Tooltip;
 
 /* For testing */
-export { Overview, WithIcons, ExtendedUsage, JavascriptMethods };
+export { Overview, JavascriptMethods };
