@@ -50,27 +50,13 @@ export const sliderShowCase = {
         {
             component: <Rangeslider id="rangeslider-showcase-example" label="Label" min={0} max={100} value={50}/>,
             options: {
-                checkbox: [
-                    {
-                        title: "Label add on",
-                        inputs: [
-                            {
-                                id: "help_icon",
-                                name: "With help icon",
-                                value: {
-                                    tooltip: true
-                                }
-                            }
-                        ]
-                    }
-                ],
                 radio: [
                     {
                         id: "unit_radio",
                         title: "Unit value",
                         values: [
                             {
-                                name: "Default",
+                                name: "None",
                                 value: {
                                     valueLabelPrefix: "",
                                     valueLabelPostfix: ""

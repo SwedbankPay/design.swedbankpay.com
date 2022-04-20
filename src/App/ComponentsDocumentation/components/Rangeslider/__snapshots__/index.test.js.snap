@@ -135,27 +135,13 @@ exports[`Component: Rangeslider Overview renders 1`] = `
             />,
             "description": "The slider component has a label which describes the intent of the slider. It also has a minimum and maximum range which displays the range which user can pick in between. By holding and dragging the circle indicator along the line, the user can see the value change and update in real time.",
             "options": Object {
-              "checkbox": Array [
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "help_icon",
-                      "name": "With help icon",
-                      "value": Object {
-                        "tooltip": true,
-                      },
-                    },
-                  ],
-                  "title": "Label add on",
-                },
-              ],
               "radio": Array [
                 Object {
                   "id": "unit_radio",
                   "title": "Unit value",
                   "values": Array [
                     Object {
-                      "name": "Default",
+                      "name": "None",
                       "value": Object {
                         "valueLabelPostfix": "",
                         "valueLabelPrefix": "",
