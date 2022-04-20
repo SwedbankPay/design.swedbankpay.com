@@ -44,11 +44,11 @@ const ContentGuidelines = () => (
             <div className="col-12 col-sm-6 m-auto">
                 <h3 className="mb-0">Title</h3>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
-                <InputGroup id="guideline-input-example" type="text" label="Input label" placeholder="Placeholder text" className="mb-0"/>
+                <InputGroup id="guideline-input-example" type="text" label="Input label" placeholder="Placeholder text" className="mb-0" helpBlock="Hint text"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small">24px</div>
-                <InputGroup id="guideline-select-example" type="select" label="Input label" placeholder="Select an option" selectOptions={["Option 1", "Option 2"]} optional className="mb-0"/>
+                <InputGroup id="guideline-select-example" type="select" label="Label" placeholder="Select an option" selectOptions={["Option 1", "Option 2"]} optional className="mb-0"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small">24px</div>
-                <RadioButton groupTitle="Input label" name="guidelines-radio-example" group options={radioOptions} className="mb-0 forms-radio-example"/>
+                <RadioButton groupTitle="Input label" name="guidelines-radio-example" group options={radioOptions} className="mb-0 forms-radio-example" expandingHintText="Expander hint text"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
                 <div className="d-flex">
                     <Button type="primary" label="Submit" className="mr-3"/>
@@ -120,10 +120,36 @@ const HowToDesignForms = () => {
                     </div>
                 </div>
             </section>
+
+            <section>
+                <h3>Label and hints</h3>
+                <p>It is important to give the users the information required to fill in the form and help them be successful the first time. An input must have a label that clearly describes the type of input a field requires. The label can be complemented with a hint text or a hint expander to provide clarifying details, try do avoid using both a visible hint text and a hint expander.</p> 
+                <p>Consider the following to decide where to place the information:</p>
+                <ul className="list list-bullet">
+                    <li>If the information is very important and most or all users will need it, make it part of the label.</li>
+                    <li>If the information is important and many users will need it, provide hint text that is visible by default.</li>
+                    <li>If the information is less important and only a minority of users will need it, put it in a <b>hint expander</b>.</li>
+                </ul>
+                <div className="row">
+                    <div className="col-lg-6 col-12">
+                        <div className="slab slab-plain slab-border-success">
+                            <span className="h4 d-block mb-4">Do</span>
+                            <InputGroup id="personal-identification-number-example" type="text" label="Personal identification number" helpBlock="YYYYMMDDNNNN"/>
+                        </div>
+                        <p>Use a hint text for important information that is secondary to the label.</p>
+                    </div>
+                    <div className="col-lg-6 col-12">
+                        <div className="slab slab-plain slab-border-success">
+                            <span className="h4 d-block mb-4">Do</span>
+                            <InputGroup id="cvc-example" type="text" label="Security code (CVC)" expandingHintText="Where to find the code?"/>
+                        </div>
+                        <p>Use hint expander for additional information that is less important or long.</p>
+                    </div>
+                </div>
+            </section>
             <section>
                 <h3>Logical flow</h3>
                 <p>To create a better user flow, ask questions in a logical order and group related inputs into sections or steps. Also consider using progressive disclosure to reveal additional content based on how a user answered the previous question. The flow will then better resemble a conversation and guide the user through the task.</p>
-
                 <div className="row">
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-success h-100">
