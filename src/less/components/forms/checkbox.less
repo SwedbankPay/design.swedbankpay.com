@@ -116,21 +116,89 @@ fieldset {
             font-weight: bold;
             border: none;
             margin-bottom: 0;
-
-            .help-icon {
-                transform: translateY(25%);
-                margin-left: 0;
-            }
         }
 
         span {
             font-weight: normal;
+            margin-left: 0.2rem;
+        }
+
+        &.has-error {
+            input[type="checkbox"] + label:after {
+                border-color: @brand-error;
+            }
+        }
+
+        .help-block-expander {
+            display: block;
+            margin-top: 0.5rem;
+
+            input {
+                position: absolute;
+                top: 0;
+                left: 0;
+                left: -9999px;
+
+                &:focus ~ .header {
+                    outline: 1px solid @brand-secondary;
+                }
+            }
+
+            .header {
+                display: flex;
+                cursor: pointer;
+                color: @brand-accent-links;
+                font-size: 0.875rem;
+
+                .arrow {
+                    display: inline-block;
+                    margin-right: 0.5rem;
+                    color: @brand-accent-links;
+                    font-size: 0.875rem;
+                    align-self: center;
+                    transition: transform 0.5s ease;
+                }
+            }
+
+            .content {
+                font-size: 0;
+                margin: 0;
+                opacity: 0;
+                padding: 0;
+                color: @medium-brown;
+            }
+
+            input:checked ~ .header {
+                .arrow {
+                    transform: rotate(180deg);
+                }
+            }
+
+            input:checked ~ .content {
+                font-size: 0.875rem;
+                opacity: 1;
+                height: auto;
+                padding: 5px 0;
+            }
         }
     }
 
     &[disabled] {
-        legend {
+        legend,
+        .hint-text {
             color: @light-brown;
+        }
+
+        .help-block-expander {
+            .header,
+            .arrow,
+            .content {
+                color: @brand-secondary-light-3;
+            }
+
+            .header {
+                cursor: not-allowed;
+            }
         }
     }
 
@@ -140,7 +208,7 @@ fieldset {
         }
 
         input[type="checkbox"] {
-            + label:after {
+            + label:before {
                 border-color: @brand-error;
             }
         }

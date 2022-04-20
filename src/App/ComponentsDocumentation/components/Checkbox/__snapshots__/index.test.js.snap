@@ -15,21 +15,21 @@ exports[`Component: Checkbox ContentGuidelines renders 1`] = `
     >
       <Checkbox
         group={true}
-        groupTitle="Group heading"
+        groupTitle="Group label"
         name="radio-guidelines"
         options={
           Array [
             Object {
               "id": "radio-guidelines-example-1",
-              "label": "Checkbox label",
+              "label": "Label",
             },
             Object {
               "id": "radio-guidelines-example-2",
-              "label": "Checkbox label",
+              "label": "Label",
             },
             Object {
               "id": "radio-guidelines-example-3",
-              "label": "Checkbox label",
+              "label": "Label",
             },
           ]
         }
@@ -42,9 +42,9 @@ exports[`Component: Checkbox ContentGuidelines renders 1`] = `
     <li>
       The 
       <b>
-        Group heading
+        group label
       </b>
-       should descriptive, explaining the context of the options to choose from. 
+       should be descriptive, explaining the context of the options to choose from. 
     </li>
     <li>
       The 
@@ -119,21 +119,21 @@ exports[`Component: Checkbox DeveloperDocumentation renders 1`] = `
       <Checkbox
         errorMessage="Descriptive helpful error message."
         group={true}
-        groupTitle="Group heading"
+        groupTitle="Group label"
         name="checkbox-group-example"
         options={
           Array [
             Object {
               "id": "error-example-1",
-              "label": "Checkbox label",
+              "label": "Label",
             },
             Object {
               "id": "error-example-2",
-              "label": "Checkbox label",
+              "label": "Label",
             },
             Object {
               "id": "error-example-3",
-              "label": "Checkbox label",
+              "label": "Label",
             },
           ]
         }
@@ -261,42 +261,45 @@ exports[`Component: Checkbox Overview renders 1`] = `
           Object {
             "component": <Checkbox
               group={true}
-              groupTitle="Group heading"
+              groupTitle="Group label"
               name="checkbox-group-example"
               options={
                 Array [
                   Object {
                     "id": "radio-example-1",
-                    "label": "Checkbox label",
+                    "label": "Label",
                   },
                   Object {
                     "id": "radio-example-2",
-                    "label": "Checkbox label",
-                  },
-                  Object {
-                    "id": "radio-example-3",
-                    "label": "Checkbox label",
+                    "label": "Label",
                   },
                 ]
               }
             />,
-            "description": "The default setup of the checkbox group always has a label on top which describes the checkbox group and each individual checkbox is then followed by a label which clearly describes what the options and what checking the box represents",
+            "description": "The default setup of the checkbox group has a label on top which describes the checkbox group and each individual checkbox is then followed by a label which clearly describes the option and what checking the box represents.",
             "options": Object {
               "checkbox": Array [
                 Object {
                   "inputs": Array [
                     Object {
                       "id": "checkbox_labels",
-                      "name": "Optional",
+                      "name": "Is optional",
                       "value": Object {
                         "optional": true,
                       },
                     },
                     Object {
-                      "id": "with_help_icon",
-                      "name": "With help icon",
+                      "id": "hint_text",
+                      "name": "Hint text",
                       "value": Object {
-                        "tooltip": true,
+                        "hintText": "Hint text",
+                      },
+                    },
+                    Object {
+                      "id": "hint_text_expander",
+                      "name": "Hint expander",
+                      "value": Object {
+                        "expandingHintText": "Expanding hint text",
                       },
                     },
                   ],
