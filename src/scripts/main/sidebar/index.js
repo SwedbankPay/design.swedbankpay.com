@@ -115,7 +115,7 @@ class Sidebar2 {
         const navLeaves = this.el.querySelectorAll(".nav-leaf");
         const previousNavs = this.el.querySelectorAll(".previous-nav");
 
-        const skipLink = document.querySelector("#skipLink");
+        const skipLink = document.querySelector("#skip-link");
 
         window.addEventListener("popstate", this._popStateListener);
 
