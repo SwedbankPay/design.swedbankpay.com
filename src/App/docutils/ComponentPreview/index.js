@@ -227,15 +227,6 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                     : accordion.init();
 
             }
-
-            if (this.state.activeTab.component.props.id === "rangeslider-showcase-example" ||
-                this.state.activeTab.component.props.id === "select-showcase-example" ||
-                this.state.activeTab.component.props.id === "togglebox-example" ||
-                this.state.activeTab.component.props.id === "radioGroup-showcase-example" ||
-                this.state.activeTab.component.props.id === "input-showcase-example" ||
-                this.state.activeTab.component.props.id === "checkbox-showcase-example" ) {
-                tooltips.init();
-            }
         }
 
         setActiveTab (e, i) {
