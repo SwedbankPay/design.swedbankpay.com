@@ -34,6 +34,7 @@ const InputGroup = ({
     helpBlock,
     errorMessage,
     expandingHintText,
+    expandingHintContent,
     tooltip,
     optional,
     postfix,
@@ -122,7 +123,7 @@ const InputGroup = ({
             <label className="help-block-expander">{"\n"}
                 <input disabled={disabled} type="checkbox"/>{"\n"}
                 <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintText}</span>
-                <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
+                <div className="content">{expandingHintContent ? expandingHintContent : "This information is less important and only a minority of users will need it or the text is very long. In this case; both."}</div>
             </label>}
         </div>
     );
@@ -156,7 +157,8 @@ InputGroup.propTypes = {
     successMessage: PropTypes.string,
     className: PropTypes.string,
     boxSize: PropTypes.oneOf(["medium", "small", ""]),
-    expandingHintText: PropTypes.bool,
+    expandingHintText: PropTypes.string,
+    expandingHintContent: PropTypes.string,
 };
 
 export default InputGroup;
