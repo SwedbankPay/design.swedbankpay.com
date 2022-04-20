@@ -15,7 +15,7 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
         <>
             {group ? <form>
                 <fieldset className={`checkbox-group${errorMessage ? " has-error" : ""}`} disabled={disabled}>
-                    <legend className="checkbox-label">
+                    <legend>
                         {groupTitle}
                         {optional && <>{"\n"}
                             <span>(optional)</span>
