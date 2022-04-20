@@ -24,7 +24,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           type="text"
         />
         <InputGroup
-          expandingHintText="Expander hint text"
+          expandingHintTitle="Expander hint text"
           label="Label"
           type="textarea"
         />
@@ -112,7 +112,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             Do
           </span>
           <InputGroup
-            expandingHintText="Where to find the code?"
+            expandingHintTitle="Where to find the code?"
             id="do-example-expanding"
             label="Security code (CVC)"
             type="text"
@@ -478,7 +478,7 @@ exports[`Component: InputField Overview renders 1`] = `
                       "id": "expander_hint_text",
                       "name": "Expander hint",
                       "value": Object {
-                        "expandingHintText": "Expanding hint text",
+                        "expandingHintTitle": "Expanding hint text",
                       },
                     },
                   ],
@@ -571,7 +571,7 @@ exports[`Component: InputField Overview renders 1`] = `
                       "id": "expander_hint_textarea",
                       "name": "Expander hint",
                       "value": Object {
-                        "expandingHintText": "Expanding hint text",
+                        "expandingHintTitle": "Expanding hint text",
                       },
                     },
                   ],

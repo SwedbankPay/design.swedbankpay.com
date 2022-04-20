@@ -25,6 +25,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
       </div>
       <InputGroup
         className="mb-0"
+        helpBlock="Hint text"
         id="guideline-input-example"
         label="Input label"
         placeholder="Placeholder text"
@@ -38,7 +39,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
       <InputGroup
         className="mb-0"
         id="guideline-select-example"
-        label="Input label"
+        label="Label"
         optional={true}
         placeholder="Select an option"
         selectOptions={
@@ -56,6 +57,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
       </div>
       <Radio
         className="mb-0 forms-radio-example"
+        expandingHintTitle="Expander hint text"
         group={true}
         groupTitle="Input label"
         name="guidelines-radio-example"
@@ -724,6 +726,82 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
   </section>
   <section>
     <h3>
+      Label and hints
+    </h3>
+    <p>
+      It is important to give the users the information required to fill in the form and help them be successful the first time. An input must have a label that clearly describes the type of input a field requires. The label can be complemented with a hint text or a hint expander to provide clarifying details, try do avoid using both a visible hint text and a hint expander.
+    </p>
+    <p>
+      Consider the following to decide where to place the information:
+    </p>
+    <ul
+      className="list list-bullet"
+    >
+      <li>
+        If the information is very important and most or all users will need it, make it part of the label.
+      </li>
+      <li>
+        If the information is important and many users will need it, provide hint text that is visible by default.
+      </li>
+      <li>
+        If the information is less important and only a minority of users will need it, put it in a 
+        <b>
+          hint expander
+        </b>
+        .
+      </li>
+    </ul>
+    <div
+      className="row"
+    >
+      <div
+        className="col-lg-6 col-12"
+      >
+        <div
+          className="slab slab-plain slab-border-success"
+        >
+          <span
+            className="h4 d-block mb-4"
+          >
+            Do
+          </span>
+          <InputGroup
+            helpBlock="YYYYMMDDNNNN"
+            id="personal-identification-number-example"
+            label="Personal identification number"
+            type="text"
+          />
+        </div>
+        <p>
+          Use a hint text for important information that is secondary to the label.
+        </p>
+      </div>
+      <div
+        className="col-lg-6 col-12"
+      >
+        <div
+          className="slab slab-plain slab-border-success"
+        >
+          <span
+            className="h4 d-block mb-4"
+          >
+            Do
+          </span>
+          <InputGroup
+            expandingHintTitle="Where to find the code?"
+            id="cvc-example"
+            label="Security code (CVC)"
+            type="text"
+          />
+        </div>
+        <p>
+          Use hint expander for additional information that is less important or long.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h3>
       Logical flow
     </h3>
     <p>
@@ -952,6 +1030,8 @@ exports[`Forms: index Overview renders 1`] = `
                       type="email"
                     />
                     <InputGroup
+                      expandingHintContent="If you select a subject it will make it easier for our support team to handle your request which will make the processing time much faster."
+                      expandingHintTitle="Why should you select subject?"
                       id="form-select-example"
                       label="Subject"
                       optional={true}

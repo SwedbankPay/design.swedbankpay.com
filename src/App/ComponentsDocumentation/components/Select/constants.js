@@ -32,7 +32,7 @@ export const selectOverview = {
                                 id: "expander_hint_text",
                                 name: "Expander hint",
                                 value: {
-                                    expandingHintText: "Expanding hint text",
+                                    expandingHintTitle: "Expanding hint text",
                                 }
                             }
                         ]

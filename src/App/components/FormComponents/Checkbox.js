@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, hintText, optional, required, group, options, className, expandingHintText }) => {
+const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, hintText, optional, required, group, options, className, expandingHintTitle }) => {
     const attrs = {
         type: "checkbox",
         id: id || null,
@@ -29,10 +29,10 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
                     </div>)}
                     {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
                     {hintText && <div className="hint-text">{hintText}</div>}
-                    {expandingHintText && 
+                    {expandingHintTitle && 
                     <label className="help-block-expander">
                         <input disabled={disabled} type="checkbox"/>
-                        <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintText}</span>
+                        <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
                         <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
                     </label>}
                 </fieldset>
@@ -44,10 +44,10 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
                     </div>
                     {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
                     {hintText && <div className="hint-text">{hintText}</div>}
-                    {expandingHintText && 
+                    {expandingHintTitle && 
                     <label className="help-block-expander">
                         <input disabled={disabled} type="checkbox"/>
-                        <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintText}</span>
+                        <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
                         <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
                     </label>}
                 </>
@@ -72,7 +72,7 @@ Checkbox.propTypes = {
     options: PropTypes.array,
     optional: PropTypes.bool,
     hintText: PropTypes.string,
-    expandingHintText: PropTypes.string,
+    expandingHintTitle: PropTypes.string,
 };
 
 export default Checkbox;

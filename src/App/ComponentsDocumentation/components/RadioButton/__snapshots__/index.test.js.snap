@@ -313,7 +313,7 @@ exports[`Component: RadioButton Overview renders 1`] = `
                       "id": "hint_text_expander",
                       "name": "Hint expander",
                       "value": Object {
-                        "expandingHintText": "Expander hint text",
+                        "expandingHintTitle": "Expander hint text",
                       },
                     },
                   ],
