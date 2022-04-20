@@ -2,13 +2,14 @@ import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import { skipLinkShowcase } from "./constants";
-
+import SkipLinkComponent from "@components/SkipLink";
 import CodeTags from "@components/CodeTags";
 
 const Overview = () => (
-    <section>
+    <section id="skip-link-overview">
         <h2 id="overview">Overview</h2>
-        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={skipLinkShowcase} codeFigure/>
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={skipLinkShowcase} hideCodeFigure/>
+        <ComponentPreview language="html" codeFigure><SkipLinkComponent/></ComponentPreview>
     </section>
 );
 

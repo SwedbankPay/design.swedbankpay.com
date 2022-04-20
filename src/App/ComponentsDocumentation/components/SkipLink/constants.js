@@ -4,8 +4,7 @@ import SkipLink from "@components/SkipLink";
 const SkipLinkComponent = () => (
     <>
         <p>To view the skip link component tab to this example, or click inside this example and press tab.</p>
-        
-        <SkipLink/>
+        <SkipLink id="skip-link-example"/>
     </>
 );
 
