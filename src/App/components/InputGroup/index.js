@@ -13,7 +13,6 @@ export const Addon = ({ type, value, color, disabled, postfix }) => (
 const InputGroup = ({
     id,
     type,
-    placeholder,
     pattern,
     validate,
     className,
@@ -34,7 +33,7 @@ const InputGroup = ({
     feedbackIcon,
     helpBlock,
     errorMessage,
-    successMessage,
+    expandingHintText,
     tooltip,
     optional,
     postfix,
@@ -44,7 +43,6 @@ const InputGroup = ({
         type: type || null,
         className: "form-control",
         id: id || null,
-        placeholder: placeholder || null,
         defaultValue: defaultValue || "",
         disabled: disabled || null,
         readOnly: readOnly || null,
@@ -84,7 +82,7 @@ const InputGroup = ({
                     <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
                         help_outline{"\n"}</i>}{"\n"}
             </label> : null}{label ? "\n" : null}
-            {prefixValue || postfixValue || feedbackIcon || errorMessage ?
+            {prefixValue || postfixValue || feedbackIcon ?
                 <div className={inputGrpClasses}>{"\n"}
                     {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} postfix={postfix} /> : null }{prefixValue ? "\n" : null}
                     {type === "textarea" ?
@@ -100,7 +98,7 @@ const InputGroup = ({
                             :
                             <input {...attrs} />}
                     {"\n"}
-                    {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} postfix={postfix} /> : null }{postfixValue ? "\n" : null}
+                    {errorMessage ? null : <>{postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} postfix={postfix} /> : null }{postfixValue ? "\n" : null}</>}
                 </div>
                 :
                 <>
@@ -108,7 +106,6 @@ const InputGroup = ({
                         <textarea {...attrs}></textarea>
                         : type === "select" ?
                             <select {...selectAttrs}>{"\n\t\t"}
-                                {placeholder && <option value="" disabled hidden>{placeholder}</option> }
                                 {selectOptions.map((opt, i) => (
                                     <Fragment key={opt + i}>
                                         <option value={opt}>{opt}</option>{(i !== selectOptions.length - 1) ? "\n\t\t" : ""}
@@ -119,7 +116,14 @@ const InputGroup = ({
                             <input {...attrs} />}
                 </>
             }
-            {helpBlock ? <div className="help-block" data-success={successMessage || null} >{errorMessage}</div> : null}
+            {errorMessage && <><div className="help-block">{errorMessage}</div>{"\n"}</>}
+            {helpBlock && <><div className="hint-text">{helpBlock}</div>{"\n"}</>}
+            {expandingHintText && 
+            <label className="help-block-expander">{"\n"}
+                <input disabled={disabled} type="checkbox"/>{"\n"}
+                <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintText}</span>
+                <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
+            </label>}
         </div>
     );
 };
@@ -127,7 +131,6 @@ const InputGroup = ({
 InputGroup.propTypes = {
     type: PropTypes.string.isRequired,
     id: PropTypes.string,
-    placeholder: PropTypes.string,
     pattern: PropTypes.string,
     validate: PropTypes.bool,
     required: PropTypes.bool,
@@ -152,7 +155,8 @@ InputGroup.propTypes = {
     errorMessage: PropTypes.string,
     successMessage: PropTypes.string,
     className: PropTypes.string,
-    boxSize: PropTypes.oneOf(["medium", "small", ""])
+    boxSize: PropTypes.oneOf(["medium", "small", ""]),
+    expandingHintText: PropTypes.bool,
 };
 
 export default InputGroup;

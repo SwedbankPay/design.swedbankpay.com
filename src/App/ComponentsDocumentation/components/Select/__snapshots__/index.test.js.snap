@@ -117,8 +117,9 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
         </select>
         <div
           className="help-block"
-          data-error="Descriptive helpful error message."
-        />
+        >
+          Descriptive helpful error message
+        </div>
       </div>
     </form>
   </ComponentPreview>
@@ -191,17 +192,24 @@ exports[`Component: Select Overview renders 1`] = `
                 Object {
                   "inputs": Array [
                     Object {
-                      "id": "help_icon",
-                      "name": "Help icon",
-                      "value": Object {
-                        "tooltip": true,
-                      },
-                    },
-                    Object {
                       "id": "optional",
                       "name": "Is optional",
                       "value": Object {
                         "optional": true,
+                      },
+                    },
+                    Object {
+                      "id": "hint_text_select",
+                      "name": "Hint text",
+                      "value": Object {
+                        "helpBlock": "Hint text",
+                      },
+                    },
+                    Object {
+                      "id": "expander_hint_text",
+                      "name": "Expander hint",
+                      "value": Object {
+                        "expandingHintText": "Expanding hint text",
                       },
                     },
                   ],
@@ -223,9 +231,6 @@ exports[`Component: Select Overview renders 1`] = `
                       "name": "Error",
                       "value": Object {
                         "errorMessage": "Descriptive helpful error message.",
-                        "helpBlock": true,
-                        "required": true,
-                        "validationState": "error",
                       },
                     },
                     Object {
