@@ -392,7 +392,7 @@ exports[`Utilities: RenderPage renders 1`] = `
             },
             Object {
               "componentPath": "components/SkipLink",
-              "icon": "accessible_forward",
+              "icon": "skip_next",
               "outlined": true,
               "path": "/components/skip-link",
               "statusBadges": Array [

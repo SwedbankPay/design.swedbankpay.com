@@ -718,7 +718,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
         aria-hidden="true"
         className="material-icons material-icons-outlined mr-3"
       >
-        accessible_forward
+        skip_next
       </i>
       <span
         className="h3 m-0"

@@ -219,7 +219,7 @@ module.exports = [
                 title: "Skip link",
                 path: "/components/skip-link",
                 componentPath: "components/SkipLink",
-                icon: "accessible_forward",
+                icon: "skip_next",
                 outlined: true,
                 statusBadges: ["new"]
             },
