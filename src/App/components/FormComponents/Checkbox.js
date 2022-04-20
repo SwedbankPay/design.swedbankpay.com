@@ -15,12 +15,12 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
         <>
             {group ? <form>
                 <fieldset className={`checkbox-group${errorMessage ? " has-error" : ""}`} disabled={disabled}>
-                    <label className="checkbox-label">
+                    <legend className="checkbox-label">
                         {groupTitle}
                         {optional && <>{"\n"}
                             <span>(optional)</span>
                         </>}
-                    </label>
+                    </legend>
                     {options.map(({ label, id }, i) => <div className="checkbox" key={i}>{"\n"}
                         <input {...attrs} id={id} />{"\n"}
                         <label htmlFor={id}>{label}
