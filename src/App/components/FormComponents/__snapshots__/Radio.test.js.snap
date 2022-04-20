@@ -9,11 +9,9 @@ exports[`Component: Radio - renders checkbox group with disabled state 1`] = `
     >
       
 
-      <label
-        className="radio-label"
-      >
+      <legend>
          
-      </label>
+      </legend>
       
 
       <div
@@ -73,12 +71,10 @@ exports[`Component: Radio - renders checkbox group with groupTitle 1`] = `
     >
       
 
-      <label
-        className="radio-label"
-      >
+      <legend>
         Group title
          
-      </label>
+      </legend>
       
 
       <div
@@ -178,11 +174,9 @@ exports[`Component: Radio - renders radio group 1`] = `
     >
       
 
-      <label
-        className="radio-label"
-      >
+      <legend>
          
-      </label>
+      </legend>
       
 
       <div

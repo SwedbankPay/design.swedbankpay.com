@@ -332,15 +332,15 @@ exports[`Component: RadioButton Overview renders 1`] = `
                       },
                     },
                     Object {
-                      "name": "Error",
-                      "value": Object {
-                        "errorMessage": "Descriptive helpful error message.",
-                      },
-                    },
-                    Object {
                       "name": "Disabled",
                       "value": Object {
                         "disabled": true,
+                      },
+                    },
+                    Object {
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
                       },
                     },
                   ],
