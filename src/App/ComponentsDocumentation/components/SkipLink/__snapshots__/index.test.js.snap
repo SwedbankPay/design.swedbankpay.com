@@ -22,14 +22,16 @@ exports[`Documentation: SkipLink DeveloperDocumentation renders 1`] = `
 `;
 
 exports[`Documentation: SkipLink Overview renders 1`] = `
-<section>
+<section
+  id="skip-link-overview"
+>
   <h2
     id="overview"
   >
     Overview
   </h2>
   <ComponentPreview
-    codeFigure={true}
+    hideCodeFigure={true}
     language="html"
     showCasePanel={true}
     showCasePanelAdvanced={
@@ -53,6 +55,12 @@ exports[`Documentation: SkipLink Overview renders 1`] = `
       }
     }
   />
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+  >
+    <SkipLink />
+  </ComponentPreview>
 </section>
 `;
 

@@ -2,10 +2,10 @@
 
 exports[`Component: SkipLink renders 1`] = `
 <a
-  className="skipLink btn btn-link"
+  className="skip-link"
   href="#doc-view"
-  id="skipLink"
+  id="skip-link"
 >
-  Skip to content
+  Skip to main content
 </a>
 `;
