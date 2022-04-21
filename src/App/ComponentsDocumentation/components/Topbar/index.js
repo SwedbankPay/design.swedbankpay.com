@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
 import TopbarComponent from "@components/Topbar";
 import CodeTags from "@components/CodeTags";
-import SidebarComponent from "@components/Sidebar";
-import { SidebarNavList } from "../Sidebar/constants";
 import { topbarShowcase } from "./constants";
 import { topbar, sidebar } from "@src/scripts/main";
 import NpmInformation from "@docutils/NpmInformation";
@@ -45,78 +43,13 @@ const Overview = () => (
     </section>
 );
 
-const TopbarWide = () => (
-    <>
-        <h2 id="topbar-wide">Wide topbar</h2>
-        <p>
-            This is a wide topbar.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent id="demo-topbar-1" topbarContent={menu} wide="xl" logout />
-        </ComponentPreview>
-    </>
-);
-
-const TopbarSticky = () => (
-    <>
-        <h2 id="topbar-sticky">Sticky topbar</h2>
-        <p>
-            A sticky topbar is also available, with class <CodeTags type="secondary" code=".topbar-sticky" />.
-            Use <CodeTags type="secondary" code=".topbar-min-{breakpoint}-sticky" /> to specify the minimum width the topbar should be sticky,
-            or <CodeTags type="secondary" code=".topbar-max-{breakpoint}-sticky" /> to specify the maximum width the topbar should be sticky
-            (see <Link to="/utilities/breakpoints">breakpoints</Link> for more information on breakpoints). Note that the sticky topbar does
-            not work in Internet Explorer 11.
-        </p>
-        <Link to="/components/sidebar">sidebar</Link>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="container-fluid">
-                <TopbarComponent id="demo-topbar-sticky" topbarContent={menu} wide="xl" logout sticky />
-                <div className="row">
-                    <div className="col-auto">
-                        <SidebarComponent id="topbar-sticky-sidebar" sidebarNavList={SidebarNavList} sticky />
-                    </div>
-                    <main className="col main-content border-left">Main content things...</main>
-                </div>
-            </div>
-        </ComponentPreview>
-    </>
-);
-
-const TopbarWithSidebar = () => (
-    <>
-        <h2 id="topbar-with-sidebar">Topbar with sidebar content</h2>
-        <p>
-            It is recommended to have the sidebar content in the topbar menu on smaller devices, such as phones and tablets (see more on sidebar <Link to="/components/sidebar">here</Link>).
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent topbarContent={menu} logout id="demo-topbar-sidebar" sidebar />
-        </ComponentPreview>
-    </>
-);
-
-const TopbarPNG = () => (
-    <section>
-        <h2 id="topbar-png">Topbar with PNG logo</h2>
-        <p>
-            A PNG version of the logo can also be used. This is done by appending the class <CodeTags type="secondary" code=".topbar-logo-png" /> to the
-            anchor with class <CodeTags type="secondary" code=".topbar-logo" />. Only consider using the PNG version when there are issues with using the SVG version.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent topbarContent={menu} logout id="demo-topbar-png" png/>
-        </ComponentPreview>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent id="demo-topbar-1-png" topbarContent={menu} wide="xl" logout png/>
-        </ComponentPreview>
-    </section>
-);
-
 const DeveloperDocumentation = () => (
     <section>
         <h2 id="developer-documentation">Developer documentation</h2>
 
         <section>
             <h3>Align with page content</h3>
-            <p>The content within the desktop topbar, <CodeTags type="secondary" code=".topbar-xl-wide" />, is by default fluid to the screen size. If you want to restrict the width of the content within the topbar to align with your page container, simply add a <CodeTags type="secondary" code=".max-width" />     to the topbar <CodeTags type="secondary" code=".nav-container" /> to match it.</p> {/* TODO: Whats this ... ? */}
+            <p>The content within the desktop topbar, <CodeTags type="secondary" code=".topbar-xl-wide" />, is by default fluid to the screen size. If you want to restrict the width of the content within the topbar to align with your page container, simply add a <CodeTags type="secondary" code=".max-width" /> to the topbar <CodeTags type="secondary" code=".nav-container" /> to match it.</p>
 
             <div className="d-flex flex-column align-items-center">
                 <div className="row mt-2">
