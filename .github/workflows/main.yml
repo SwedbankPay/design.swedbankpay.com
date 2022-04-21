@@ -48,4 +48,4 @@ jobs:
         uses: azure/CLI@v1.0.6
         with:
           inlineScript: |
-            az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_STAGE }}
+            az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_STAGE }} --overwrite
