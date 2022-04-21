@@ -80,7 +80,7 @@ const Topbar = ({ topbarContent, wide, logout, id, png, sticky, sidebar }) => (
     <header className={`topbar${wide ? ` topbar-${wide}-wide` : ""}${sticky ? " topbar-sticky" : ""}`} id={id}>{"\n"}
         
             {topbarContent ?
-                <div className="topbar-nav-container">
+                <div className="topbar-nav-container">{"\n"}
                     <TopbarBtn />{"\n"}
                     <TopbarLogo png={png}/>
                     <TopbarMenu menu={topbarContent} logout={!!logout} sidebar={sidebar} />
