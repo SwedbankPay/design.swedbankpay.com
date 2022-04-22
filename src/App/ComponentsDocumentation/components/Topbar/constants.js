@@ -40,13 +40,13 @@ export const topbarShowcase = {
             tab: "Desktop",
             component: <Topbar wide="xl" logout />,
             title: "Desktop",
-            description: <p>The minimum requirement in a Topbar is to include the Swedbank Pay Logotype, common additional functionality is a list with navigation links. On smaller screens use a menu button to toggle a vertical navigation drawer with links when the menu button is clicked. On desktop use <CodeTags type="secondary" code=".topbar-xl-wide" /> to show the links listed horizontally in the topbar. </p>
+            description: <p>The minimum requirement in a Topbar is to include the Swedbank Pay Logotype, common additional functionality is a list with navigation links. On desktop use <CodeTags type="secondary" code=".topbar-xl-wide" /> to show the links listed horizontally in the topbar. </p>
         },
         {
             tab: "Mobile/tablet",
             component: <Topbar logout wide={false}/>,
             title: "Mobile/tablet",
-            description: <p>The minimum requirement in a Topbar is to include the Swedbank Pay Logotype, common additional functionality is a list with navigation links. On smaller screens use a menu button to toggle a vertical navigation drawer with links when the menu button is clicked. On desktop use <CodeTags type="secondary" code=".topbar-xl-wide" /> to show the links listed horizontally in the topbar. </p>
+            description: <p>The minimum requirement in a Topbar is to include the Swedbank Pay Logotype, common additional functionality is a list with navigation links. On smaller screens use a menu button to toggle a vertical navigation drawer with links when the menu button is clicked. </p>
         }
     ]
 }
