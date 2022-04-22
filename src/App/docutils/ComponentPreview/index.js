@@ -368,7 +368,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                                                         defaultChecked={val.default}
                                                     />
                                                     <label htmlFor={`${radio.id + val.name.replace(/\s/g, "")}${val.default ? "_default" : ""}`}>{val.name}</label>
-                                                    {val.toBeRemoved ? <label className="status-badge status-badge-remove">To be removed</label> : null}
+                                                    {val.toBeRemoved ? <span className="status-badge status-badge-remove my-1">To be removed</span> : null}
                                                 </div>
                                             ))}
                                         </fieldset>
