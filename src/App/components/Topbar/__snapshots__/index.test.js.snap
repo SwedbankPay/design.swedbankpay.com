@@ -172,8 +172,10 @@ exports[`Component: Topbar - props topbarContent menu links prevents default whe
     
 
     <div
-      className="topbar-nav-container"
+      className="nav-container"
     >
+      
+
       <TopbarBtn>
         <button
           aria-label="Open menu"
@@ -359,8 +361,10 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
     
 
     <div
-      className="topbar-nav-container"
+      className="nav-container"
     >
+      
+
       <TopbarBtn>
         <button
           aria-label="Open menu"
@@ -937,8 +941,10 @@ exports[`Component: Topbar - props topbarContent renders a topbar menu without m
     
 
     <div
-      className="topbar-nav-container"
+      className="nav-container"
     >
+      
+
       <TopbarBtn>
         <button
           aria-label="Open menu"
@@ -1105,8 +1111,10 @@ exports[`Component: Topbar - props topbarContent renders a topbar-menu-button wh
     
 
     <div
-      className="topbar-nav-container"
+      className="nav-container"
     >
+      
+
       <TopbarBtn>
         <button
           aria-label="Open menu"
@@ -1292,8 +1300,10 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
     
 
     <div
-      className="topbar-nav-container"
+      className="nav-container"
     >
+      
+
       <TopbarBtn>
         <button
           aria-label="Open menu"
@@ -1502,8 +1512,10 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
     
 
     <div
-      className="topbar-nav-container"
+      className="nav-container"
     >
+      
+
       <TopbarBtn>
         <button
           aria-label="Open menu"
