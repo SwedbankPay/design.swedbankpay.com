@@ -32,55 +32,21 @@ const Topbar = ({ sticky, wide, logout }) => (
 );
 
 export const topbarShowcase = {
-    id: "no-tabs",
+    id: "overviewTopbar",
+    tabsId: "overviewTopbarTabs",
+    hideOptions: true,
     elements: [
         {
-            component: <Topbar />,
-            options: {
-                checkbox: [
-                    {
-                        title: "Optional",
-                        inputs: [
-                            {
-                                id: "sticky_topbar",
-                                name: "Sticky",
-                                value: {
-                                    sticky: true
-                                }
-                            },
-                            {
-                                id: "logout_topbar",
-                                name: "Logout",
-                                value: {
-                                    logout: true
-                                }
-                            }
-                        ]
-                    }
-                ],
-                radio: [
-                    {
-                        id: "mobile_radio",
-                        title: "Device",
-                        values: [
-                            {
-                                name: "Mobile/tablet",
-                                value: {
-                                    wide: false
-                                }
-                            },
-                            {
-                                name: "Desktop",
-                                value: {
-                                    wide: "xl"
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-            title: "Topbar",
+            tab: "Desktop",
+            component: <Topbar wide="xl" logout />,
+            title: "Desktop",
+            description: <p>The minimum requirement in a Topbar is to include the Swedbank Pay Logotype, common additional functionality is a list with navigation links. On smaller screens use a menu button to toggle a vertical navigation drawer with links when the menu button is clicked. On desktop use <CodeTags type="secondary" code=".topbar-xl-wide" /> to show the links listed horizontally in the topbar. </p>
+        },
+        {
+            tab: "Mobile/tablet",
+            component: <Topbar logout wide={false}/>,
+            title: "Mobile/tablet",
             description: <p>The minimum requirement in a Topbar is to include the Swedbank Pay Logotype, common additional functionality is a list with navigation links. On smaller screens use a menu button to toggle a vertical navigation drawer with links when the menu button is clicked. On desktop use <CodeTags type="secondary" code=".topbar-xl-wide" /> to show the links listed horizontally in the topbar. </p>
         }
     ]
-};
+}
