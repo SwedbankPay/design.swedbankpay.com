@@ -66,6 +66,8 @@ export const tableShowcase = {
             options: {
                 checkbox: [
                     {
+                        id: "table_addons",
+                        title: "Add on",
                         inputs: [
                             {
                                 id: "hover_effect",
@@ -114,6 +116,7 @@ export const tableShowcase = {
                             },
                             {
                                 name: "Description",
+                                toBeRemoved: true,
                                 value: {
                                     description: true
                                 }
