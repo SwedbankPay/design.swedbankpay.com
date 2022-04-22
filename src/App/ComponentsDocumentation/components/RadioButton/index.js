@@ -37,7 +37,7 @@ const HowTo = () => (
 );
 
 const Overview = () => (
-    <>
+    <section id="radio-button-overview">
         <h2 id="overview">Overview</h2>
 
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={radiobuttonShowCase} codeFigure />
@@ -53,7 +53,7 @@ const Overview = () => (
         </ul>
 
         <HowTo />
-    </>
+    </section>
 );
 
 const ContentGuidelines = () => (
