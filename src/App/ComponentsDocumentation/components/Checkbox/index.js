@@ -37,7 +37,7 @@ const HowTo = () => (
 );
 
 const Overview = () => (
-    <section>
+    <section id="checkbox-overview">
         <h2 id="overview">Overview</h2>
 
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={checkboxShowCase} />
