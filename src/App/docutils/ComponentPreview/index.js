@@ -355,7 +355,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                                         <fieldset className="mb-4" key={i}>
                                             <legend className="h4">{radio.title}</legend>
                                             {radio.values.map((val, j) => (
-                                                <div key={j} className="radio" onChange={e => this.setActiveOptions(
+                                                <div key={j} className={`radio${val.toBeRemoved ? ` d-block` : ""}`} onChange={e => this.setActiveOptions(
                                                     radio.id,
                                                     radio.values[e.target.value].value,
                                                     radio.values[e.target.value].description
@@ -368,6 +368,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                                                         defaultChecked={val.default}
                                                     />
                                                     <label htmlFor={`${radio.id + val.name.replace(/\s/g, "")}${val.default ? "_default" : ""}`}>{val.name}</label>
+                                                    {val.toBeRemoved ? <label className="status-badge status-badge-remove">To be removed</label> : null}
                                                 </div>
                                             ))}
                                         </fieldset>
