@@ -16,7 +16,7 @@ const Overview = () => (
 
         <h3>When to consider something else</h3>
         <ul className="list list-bullet">
-            <li>Use a <Link to="/components/input-field">text input</Link> instead when the user needs to select specific number.</li>
+            <li>Use a <Link to="/components/input-field">input field</Link> instead when the user needs to select specific number.</li>
         </ul>
 
         <h3>How to use sliders</h3>
@@ -34,7 +34,6 @@ const Overview = () => (
                 {text}
             </React.Fragment>
         ))}
-        <DisableState/>
     </section>
 );
 
@@ -68,6 +67,7 @@ const ContentGuidelines = () => (
             <li>The <b>label</b> should clearly explain the context of the slider</li>
             <li>Make sure to align the <b>values</b> so that they all follow the same structure and not mixed values or symbols</li>
         </ul>
+        <DisableState/>
     </section>
 );
 
