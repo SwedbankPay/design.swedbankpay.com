@@ -40,7 +40,7 @@ export const howToUse = [
                     </div>
                 </div>
             </div>,
-        text: <p>Don’t use sliders for content without numeric values.</p>
+        text: <p>Don&apos;t use sliders for content without numeric values.</p>
     }
 ];
 
@@ -97,7 +97,7 @@ export const sliderShowCase = {
                 ]
             },
             title: "Slider",
-            description: "The slider component has a label which describes the intent of the slider. It also has a minimum and maximum range which displays the range which user can pick in between. By holding and dragging the circle indicator along the line, the user can see the value change and update in real time."
+            description: "The rangeslider has a label which indicates what value the slider is changing. It also has a minimum and maximum range which displays the range which user can select within. By holding and dragging the circle indicator along the line, the user can see the value change in real time."
         }
     ]
 };
