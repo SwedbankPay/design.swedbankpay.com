@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Topbar, { Overview, TopbarWide, TopbarSticky, TopbarWithSidebar, TopbarPNG, JavascriptMethods } from "./index";
+import Topbar, { Overview, DeveloperDocumentation } from "./index";
 
 import { topbar } from "@src/scripts/main";
 
@@ -34,61 +34,13 @@ describe("Components: Topbar", () => {
         });
     });
 
-    describe("TopbarWide", () => {
+    describe("DeveloperDocumentation", () => {
         it("is defined", () => {
-            expect(TopbarWide).toBeDefined();
+            expect(DeveloperDocumentation).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<TopbarWide />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("TopbarSticky", () => {
-        it("is defined", () => {
-            expect(TopbarSticky).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<TopbarSticky />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("TopbarWithSidebar", () => {
-        it("is defined", () => {
-            expect(TopbarWithSidebar).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<TopbarWithSidebar />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("TopbarPNG", () => {
-        it("is defined", () => {
-            expect(TopbarPNG).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<TopbarPNG />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("JavascriptMethods", () => {
-        it("is defined", () => {
-            expect(JavascriptMethods).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<JavascriptMethods />);
+            const wrapper = shallow(<DeveloperDocumentation />);
 
             expect(wrapper).toMatchSnapshot();
         });

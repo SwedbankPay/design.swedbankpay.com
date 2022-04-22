@@ -281,7 +281,7 @@ module.exports = [
                 componentPath: "components/Topbar",
                 icon: "call_to_action",
                 outlined: true,
-                statusBadges: ["javascript"]
+                statusBadges: ["javascript", "updated"]
             }
         ]
     }

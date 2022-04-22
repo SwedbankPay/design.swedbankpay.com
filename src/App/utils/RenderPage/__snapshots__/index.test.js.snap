@@ -466,6 +466,7 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/topbar",
               "statusBadges": Array [
                 "javascript",
+                "updated",
               ],
               "title": "Topbar",
             },

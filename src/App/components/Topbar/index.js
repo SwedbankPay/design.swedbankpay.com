@@ -19,7 +19,7 @@ const TopbarBtn = () => (
             {"\n\t\t"}
         </button>
         <button type="button" className="topbar-close" aria-label="Close menu">{"\n"}
-            <i className="material-icons topbar-btn-icon">close</i>{"\n"}
+            <i className="material-icons topbar-btn-icon">close</i>
             {"\n\t\t"}
         </button>
     </>
@@ -30,7 +30,7 @@ const TopbarMenu = ({ menu, logout, sidebar }) => {
 
     return (
         <nav className="topbar-nav">
-            <div className="topbar-link-container">{"\n"}
+            <div className="topbar-link-container">
                 {items.map((item, i) => (
                     <Fragment key={i}>
                         {"\n"}
@@ -65,12 +65,12 @@ const TopbarLogo = ({ png }) => (
             {(brand === "swedbankpay" && png)
                 ? <img src={`${process.env.basename}img/logo/${brand}-logo${brand === "swedbankpay"
                     ? "-v"
-                    : ""}.png`} alt={`${brand}-logo`} className="logotype-vertical logotype-md"/>
+                    : ""}.png`} alt={`${brand}-logo`} className="logotype-vertical logotype-sm"/>
                 : <img src={isDev
                     ? devLogo
                     : `${process.env.basename}img/logo/${brand}-logo${brand === "swedbankpay"
                         ? "-v"
-                        : ""}.svg`} alt={`${brand}-logo`} className="logotype-vertical logotype-md"/>
+                        : ""}.svg`} alt={`${brand}-logo`} className="logotype-vertical logotype-sm"/>
             }{"\n"}
         </a>{"\n"}
     </>
@@ -78,16 +78,19 @@ const TopbarLogo = ({ png }) => (
 
 const Topbar = ({ topbarContent, wide, logout, id, png, sticky, sidebar }) => (
     <header className={`topbar${wide ? ` topbar-${wide}-wide` : ""}${sticky ? " topbar-sticky" : ""}`} id={id}>{"\n"}
-        {topbarContent ?
-            <>
-                <TopbarBtn />{"\n"}
-                <TopbarLogo png={png}/>
-                <TopbarMenu menu={topbarContent} logout={!!logout} sidebar={sidebar} />
-            </> :
-            <>
-                <TopbarLogo png={png} />
-                {logout ? <TopbarLogout /> : null}
-            </>}
+        
+            {topbarContent ?
+                <div className="nav-container">{"\n"}
+                    <TopbarBtn />{"\n"}
+                    <TopbarLogo png={png}/>
+                    <TopbarMenu menu={topbarContent} logout={!!logout} sidebar={sidebar} />
+                </div>
+                :
+                <>
+                    <TopbarLogo png={png} />
+                    {logout ? <TopbarLogout /> : null}
+                </>}
+        
     </header>
 );
 

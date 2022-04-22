@@ -1,243 +1,156 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components: Topbar JavascriptMethods renders 1`] = `
-<Fragment>
+exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
+<section>
   <h2
-    id="javascript-methods"
+    id="developer-documentation"
   >
-    JavaScript Methods
+    Developer documentation
   </h2>
-  <JavascriptDocs
-    close={true}
-    componentName="topbar"
-    open={true}
-  />
-</Fragment>
-`;
-
-exports[`Components: Topbar Overview renders 1`] = `
-<Fragment>
-  <h2
-    id="overview"
-  >
-    Overview
-  </h2>
-  <p>
-    To use a topbar the bare minimum markup required is:
-  </p>
-  <ul>
-    <li>
+  <section>
+    <h3>
+      Align with page content
+    </h3>
+    <p>
+      The content within the desktop topbar, 
       <CodeTags
-        code=".topbar"
+        code=".topbar-xl-wide"
         type="secondary"
       />
-       wrapper.
-    </li>
-    <li>
-      Anchor with class 
+      , is by default fluid to the screen size. If you want to restrict the width of the content within the topbar to align with your page container, simply add a 
+      <CodeTags
+        code=".max-width"
+        type="secondary"
+      />
+       to the topbar 
+      <CodeTags
+        code=".nav-container"
+        type="secondary"
+      />
+       to match it.
+    </p>
+    <div
+      className="d-flex flex-column align-items-center"
+    >
+      <div
+        className="row mt-2"
+      >
+        <img
+          alt="Topbar with fluid width"
+          className="col-sm-6 col-12"
+          src="/TEST/img/documentation/topbar/topbar-fluid.png"
+        />
+        <img
+          alt="Topbar with restricted width"
+          className="col-sm-6 col-12"
+          src="/TEST/img/documentation/topbar/topbar-restricted.png"
+        />
+      </div>
+      <span
+        className="caption-text"
+      >
+        <span
+          className="font-weight-bold"
+        >
+          Figure 1. 
+        </span>
+        Image showing Topbar with fluid width VS width adjusted to the content on the page
+      </span>
+    </div>
+  </section>
+  <section>
+    <h3>
+      Sticky topbar options
+    </h3>
+    <p>
+      The topbar can be made sticky by adding the class 
+      <CodeTags
+        code=".topbar-sticky"
+        type="secondary"
+      />
+      . Use 
+      <CodeTags
+        code=".topbar-min-{breakpoint}-sticky"
+        type="secondary"
+      />
+       to specify the minimum width the topbar should be sticky, or 
+      <CodeTags
+        code=".topbar-max-{breakpoint}-sticky"
+        type="secondary"
+      />
+       to specify the maximum width the topbar should be sticky (see 
+      <Link
+        to="/utilities/breakpoints"
+      >
+        breakpoints
+      </Link>
+       for more information on breakpoints). 
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      showCasePanel={true}
+    >
+      <div
+        className="container-fluid"
+      >
+        <Topbar
+          id="demo-topbar-sticky"
+          sticky={true}
+          topbarContent={
+            Object {
+              "btn": Object {
+                "icon": "menu",
+                "name": "Menu",
+              },
+              "items": Array [
+                Object {
+                  "icon": "home",
+                  "name": "Home",
+                },
+                Object {
+                  "icon": "shopping_cart",
+                  "name": "Purchases",
+                },
+                Object {
+                  "icon": "settings",
+                  "name": "Settings",
+                },
+              ],
+            }
+          }
+          wide="xl"
+        />
+        <main />
+      </div>
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Topbar with PNG logo
+    </h3>
+    <p>
+      A PNG version of the logo can also be used. This is done by appending the class 
+      <CodeTags
+        code=".topbar-logo-png"
+        type="secondary"
+      />
+       to the anchor with class 
       <CodeTags
         code=".topbar-logo"
         type="secondary"
       />
-       to display the logo and make it clickable.
-    </li>
-  </ul>
-  <p>
-    With this you get a topbar with the 
-    TESTBRAND
-     logo. In the topbar you can add additional functionality like a menu containing links. To enable this add a 
-    <CodeTags
-      code="<button>"
-      type="primary"
-    />
-     and a 
-    <CodeTags
-      code="<nav>"
-      type="primary"
-    />
-     containing anchors. Remember to include 
-    <CodeTags
-      code="toggle-nav=\\"{your_nav_id}\\""
-      type="secondary"
-    />
-     as a 
-    <CodeTags
-      code="<button>"
-      type="primary"
-    />
-     attribute to get the menu to appear when the menu-button is clicked.
-  </p>
-  <p>
-    Note that scrolling is locked when the menu is displayed.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Topbar
-      id="demo-topbar"
-      logout={true}
-      topbarContent={
-        Object {
-          "btn": Object {
-            "icon": "menu",
-            "name": "Menu",
-          },
-          "items": Array [
-            Object {
-              "icon": "home",
-              "name": "Home",
-            },
-            Object {
-              "icon": "shopping_cart",
-              "name": "Purchase history",
-            },
-            Object {
-              "icon": "settings",
-              "name": "Settings",
-            },
-          ],
-        }
-      }
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Topbar TopbarPNG renders 1`] = `
-<Fragment>
-  <h2
-    id="topbar-png"
-  >
-    Topbar with PNG logo
-  </h2>
-  <p>
-    A PNG version of the logo can also be used. This is done by appending the class 
-    <CodeTags
-      code=".topbar-logo-png"
-      type="secondary"
-    />
-     to the anchor with class 
-    <CodeTags
-      code=".topbar-logo"
-      type="secondary"
-    />
-    . Only consider using the PNG version when there are issues with using the SVG version.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Topbar
-      id="demo-topbar-png"
-      logout={true}
-      png={true}
-      topbarContent={
-        Object {
-          "btn": Object {
-            "icon": "menu",
-            "name": "Menu",
-          },
-          "items": Array [
-            Object {
-              "icon": "home",
-              "name": "Home",
-            },
-            Object {
-              "icon": "shopping_cart",
-              "name": "Purchase history",
-            },
-            Object {
-              "icon": "settings",
-              "name": "Settings",
-            },
-          ],
-        }
-      }
-    />
-  </ComponentPreview>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Topbar
-      id="demo-topbar-1-png"
-      logout={true}
-      png={true}
-      topbarContent={
-        Object {
-          "btn": Object {
-            "icon": "menu",
-            "name": "Menu",
-          },
-          "items": Array [
-            Object {
-              "icon": "home",
-              "name": "Home",
-            },
-            Object {
-              "icon": "shopping_cart",
-              "name": "Purchase history",
-            },
-            Object {
-              "icon": "settings",
-              "name": "Settings",
-            },
-          ],
-        }
-      }
-      wide="xl"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Topbar TopbarSticky renders 1`] = `
-<Fragment>
-  <h2
-    id="topbar-sticky"
-  >
-    Sticky topbar
-  </h2>
-  <p>
-    A sticky topbar is also available, with class 
-    <CodeTags
-      code=".topbar-sticky"
-      type="secondary"
-    />
-    . Use 
-    <CodeTags
-      code=".topbar-min-{breakpoint}-sticky"
-      type="secondary"
-    />
-     to specify the minimum width the topbar should be sticky, or 
-    <CodeTags
-      code=".topbar-max-{breakpoint}-sticky"
-      type="secondary"
-    />
-     to specify the maximum width the topbar should be sticky (see 
-    <Link
-      to="/utilities/breakpoints"
-    >
-      breakpoints
-    </Link>
-     for more information on breakpoints). Note that the sticky topbar does not work in Internet Explorer 11.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <div
-      className="container-fluid"
+      . Only consider using the PNG version when there are issues with using the SVG version.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      showCasePanel={true}
     >
       <Topbar
-        id="demo-topbar-sticky"
+        id="demo-topbar-png"
         logout={true}
-        sticky={true}
+        png={true}
         topbarContent={
           Object {
             "btn": Object {
@@ -251,7 +164,7 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
               },
               Object {
                 "icon": "shopping_cart",
-                "name": "Purchase history",
+                "name": "Purchases",
               },
               Object {
                 "icon": "settings",
@@ -260,249 +173,124 @@ exports[`Components: Topbar TopbarSticky renders 1`] = `
             ],
           }
         }
-        wide="xl"
       />
-      <div
-        className="row"
-      >
-        <div
-          className="col-auto"
-        >
-          <Sidebar
-            id="topbar-sticky-sidebar"
-            sidebarNavList={
-              Array [
-                Object {
-                  "icon": <i
-                    aria-hidden="true"
-                    className="material-icons-outlined"
-                  >
-                    home
-                  </i>,
-                  "title": "Home Page",
-                },
-                Object {
-                  "children": Array [
-                    Object {
-                      "icon": <i
-                        aria-hidden="true"
-                        className="material-icons-outlined rotated"
-                      >
-                        accessibility
-                      </i>,
-                      "title": "Accessibility",
-                    },
-                    Object {
-                      "children": Array [
-                        Object {
-                          "title": "Primary colors",
-                        },
-                        Object {
-                          "title": "Secondary colors",
-                        },
-                        Object {
-                          "title": "Tertiary colors",
-                        },
-                      ],
-                      "icon": <i
-                        aria-hidden="true"
-                        className="material-icons-outlined rotated"
-                      >
-                        palette
-                      </i>,
-                      "title": "Colors",
-                    },
-                    Object {
-                      "icon": <i
-                        aria-hidden="true"
-                        className="material-icons-outlined rotated"
-                      >
-                        grid_on
-                      </i>,
-                      "title": "Grid",
-                    },
-                    Object {
-                      "icon": <i
-                        aria-hidden="true"
-                        className="material-icons-outlined rotated"
-                      >
-                        space_bar
-                      </i>,
-                      "title": "Spacing",
-                    },
-                  ],
-                  "icon": <i
-                    aria-hidden="true"
-                    className="material-icons-outlined rotated"
-                  >
-                    wb_incandescent
-                  </i>,
-                  "title": "Get Started",
-                },
-                Object {
-                  "children": Array [
-                    Object {
-                      "title": "Introduction",
-                    },
-                    Object {
-                      "children": Array [
-                        Object {
-                          "title": "Event 1",
-                        },
-                        Object {
-                          "title": "Event 2",
-                        },
-                        Object {
-                          "title": "Event 3",
-                        },
-                      ],
-                      "lastParent": true,
-                      "title": "Events",
-                    },
-                    Object {
-                      "title": "Conclusion",
-                    },
-                  ],
-                  "icon": <i
-                    aria-hidden="true"
-                    className="material-icons-outlined"
-                  >
-                    palette
-                  </i>,
-                  "lastParent": false,
-                  "title": "Identity",
-                },
-              ]
-            }
-            sticky={true}
-          />
-        </div>
-        <main
-          className="col main-content border-left"
-        >
-          Main content things...
-        </main>
-      </div>
-    </div>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Topbar TopbarWide renders 1`] = `
-<Fragment>
-  <h2
-    id="topbar-wide"
-  >
-    Wide topbar
-  </h2>
-  <p>
-    This is a wide topbar.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Topbar
-      id="demo-topbar-1"
-      logout={true}
-      topbarContent={
-        Object {
-          "btn": Object {
-            "icon": "menu",
-            "name": "Menu",
-          },
-          "items": Array [
-            Object {
-              "icon": "home",
-              "name": "Home",
-            },
-            Object {
-              "icon": "shopping_cart",
-              "name": "Purchase history",
-            },
-            Object {
-              "icon": "settings",
-              "name": "Settings",
-            },
-          ],
-        }
-      }
-      wide="xl"
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Topbar TopbarWithSidebar renders 1`] = `
-<Fragment>
-  <h2
-    id="topbar-with-sidebar"
-  >
-    Topbar with sidebar content
-  </h2>
-  <p>
-    It is recommended to have the sidebar content in the topbar menu on smaller devices, such as phones and tablets (see more on sidebar 
-    <Link
-      to="/components/sidebar"
-    >
-      here
-    </Link>
-    ).
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Topbar
-      id="demo-topbar-sidebar"
-      logout={true}
-      sidebar={true}
-      topbarContent={
-        Object {
-          "btn": Object {
-            "icon": "menu",
-            "name": "Menu",
-          },
-          "items": Array [
-            Object {
-              "icon": "home",
-              "name": "Home",
-            },
-            Object {
-              "icon": "shopping_cart",
-              "name": "Purchase history",
-            },
-            Object {
-              "icon": "settings",
-              "name": "Settings",
-            },
-          ],
-        }
-      }
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Topbar renders 1`] = `
-<DocContainer
-  docToc={true}
->
-  <p
-    className="lead"
-  >
-    The topbar is used to give users an easily available navigational bar at the top of your web application.
-  </p>
-  <Overview />
-  <TopbarWide />
-  <TopbarSticky />
-  <TopbarWithSidebar />
-  <TopbarPNG />
-  <JavascriptMethods />
+      <main />
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Javascript methods
+    </h3>
+    <p>
+      <CodeTags
+        code="dg.topbar.init()"
+        type="secondary"
+      />
+       initializes the topbar.
+    </p>
+    <p>
+      <CodeTags
+        code="dg.topbar.open(<topbar-id>)"
+        type="secondary"
+      />
+       opens the given topbar.
+    </p>
+    <p>
+      <CodeTags
+        code="dg.topbar.close(<topbar-id>)"
+        type="secondary"
+      />
+       closes the given topbar.
+    </p>
+  </section>
   <NpmInformation
     componentName="topbar"
   />
+</section>
+`;
+
+exports[`Components: Topbar Overview renders 1`] = `
+<section>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <p>
+    The topbar component is one of the most visible and familiar ways of helping users navigate a site. It typically consist of links to the top levels in the information architecture. 
+  </p>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <Topbar
+              logout={true}
+              wide="xl"
+            />,
+            "description": <p>
+              The minimum requirement in a Topbar is to include the Swedbank Pay Logotype, common additional functionality is a list with navigation links. On desktop use 
+              <CodeTags
+                code=".topbar-xl-wide"
+                type="secondary"
+              />
+               to show the links listed horizontally in the topbar. 
+            </p>,
+            "tab": "Desktop",
+            "title": "Desktop",
+          },
+          Object {
+            "component": <Topbar
+              logout={true}
+              wide={false}
+            />,
+            "description": <p>
+              The minimum requirement in a Topbar is to include the Swedbank Pay Logotype, common additional functionality is a list with navigation links. On smaller screens use a menu button to toggle a vertical navigation drawer with links when the menu button is clicked. 
+            </p>,
+            "tab": "Mobile/tablet",
+            "title": "Mobile/tablet",
+          },
+        ],
+        "hideOptions": true,
+        "id": "overviewTopbar",
+        "tabsId": "overviewTopbarTabs",
+      }
+    }
+  />
+  <h3>
+    When to consider something else
+  </h3>
+  <ul
+    className="list list-bullet"
+  >
+    <li>
+       The topbar doesn’t accommodate more then one level hierarchy or a large amount of items in the list. If you need more levels or more space, consider a 
+      <Link
+        to="/components/sidebar"
+      >
+        sidebar
+      </Link>
+       component instead. 
+    </li>
+  </ul>
+</section>
+`;
+
+exports[`Components: Topbar renders 1`] = `
+<DocContainer>
+  <section
+    id="topbar-doc"
+  >
+    <p
+      className="lead"
+    >
+      The topbar is used to give users an easily available navigational bar at the top of your web application.
+    </p>
+    <Overview />
+    <DeveloperDocumentation />
+  </section>
 </DocContainer>
 `;
