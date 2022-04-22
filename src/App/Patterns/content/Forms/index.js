@@ -84,7 +84,7 @@ const HowToDesignForms = () => {
 
                 <div className="slab slab-plain slab-border-success pb-4">
                     <span className="h4 d-block mb-4">Do</span>
-                    <div className="col-12 col-sm-8 px-0">
+                    <div className="col-12 col-sm-8 m-auto px-0">
                         <InputGroup id="layout-address-example" type="text" label="Address"/>
                         <div className="row">
                             <InputGroup id="layout-postal-example" type="text" label="Postal code" className="col-12 col-sm-5"/>
@@ -126,8 +126,8 @@ const HowToDesignForms = () => {
                 <p>It is important to give the users the information required to fill in the form and help them be successful the first time. An input must have a label that clearly describes the type of input a field requires. The label can be complemented with a hint text or a hint expander to provide clarifying details, try do avoid using both a visible hint text and a hint expander.</p> 
                 <p>Consider the following to decide where to place the information:</p>
                 <ul className="list list-bullet">
-                    <li>If the information is very important and most or all users will need it, make it part of the label.</li>
-                    <li>If the information is important and many users will need it, provide hint text that is visible by default.</li>
+                    <li>If the information is very important and most or all users will need it, make it part of the <b>label</b>.</li>
+                    <li>If the information is important and many users will need it, provide <b>hint text</b> that is visible by default.</li>
                     <li>If the information is less important and only a minority of users will need it, put it in a <b>hint expander</b>.</li>
                 </ul>
                 <div className="row">
