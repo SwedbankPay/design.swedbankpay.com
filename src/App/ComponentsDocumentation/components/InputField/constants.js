@@ -190,7 +190,7 @@ export const contentGuidelines = [
             },
             {
                 slabType: "success",
-                content: <InputGroup id="do-example-expanding" type="text" label="Security code (CVC)" expandingHintTitle="Where to find the code?"/>,
+                content: <InputGroup id="do-example-expanding" type="text" label="Security code (CVC)" expandingHintTitle="Where to find the code?" expandingHintContent="Three to four digits on the back or the front of your card."/>,
                 expandingHintTitle: "Where to find the code?",
                 description: "Use a hint expander if the information is long and won’t be needed by the majority of users. Write the hint expander to help users understand what they will see before they click."
             }
