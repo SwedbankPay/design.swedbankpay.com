@@ -66,7 +66,7 @@ const Overview = () => (
                 <div className="slab slab-plain slab-border-error h-100 pb-5">
                     <h3>Don&apos;t</h3>
                     <div className="d-flex justify-content-center">
-                        <img id="tooltip-error-image" src={`${basename}img/documentation/tooltips/dont-example.png`} alt="Do not use tooltips as an alternate possibility for describing error messages."/>
+                    <img id="tooltip-error-image" src={`${basename}img/documentation/tooltips/dont-example.png`} alt="Do not use tooltips as an alternate possibility for describing error messages." className="col-12 col-sm-9"/>
                     </div>
                 </div>
             </div>
