@@ -124,7 +124,11 @@ class Sidebar2 {
         [...tertiaryNavLI].map(tertiaryNavElement => tertiaryNavElement.querySelector("a").addEventListener("click", () => this._setActiveStatus(tertiaryNavElement, ".tertiary-nav-li")));
         [...navLeaves].map(navLeaf => navLeaf.addEventListener("click", () => this._setActiveStatus(navLeaf, SELECTORS.NAVLEAF)));
         [...previousNavs].map(previousNav => previousNav.addEventListener("click", () => this._setActiveStatus(previousNav, ".secondary-nav-li")));
-        [...secondaryNavLI].map(secNavLi => secNavLi.addEventListener("click", () => skipLink.focus()));
+        [...secondaryNavLI].map(secNavLi => secNavLi.addEventListener("keyup", e => {
+            if (e.keyCode === 13) {
+                skipLink.focus();
+            }
+        }));
     }
 
     _closeChildElements (element, closeElement) {
