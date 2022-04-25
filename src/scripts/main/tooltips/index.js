@@ -16,7 +16,7 @@ const _createTooltip = tooltip => {
     window.addEventListener("keydown", e => {
         if (e.key === "Esc" || e.key === "Escape") {
             if (window.getComputedStyle(tip).visibility === "visible") {
-                tip.style.visibility = "hidden";
+                tooltip.blur();
             }
         }
     });
