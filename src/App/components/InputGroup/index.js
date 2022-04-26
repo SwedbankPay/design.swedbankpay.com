@@ -37,7 +37,9 @@ const InputGroup = ({
     expandingHintContent,
     optional,
     postfix,
-    boxSize
+    boxSize,
+    hintTextId,
+    expandingHintId
 }) => {
     const attrs = {
         type: type || null,
@@ -50,6 +52,7 @@ const InputGroup = ({
         required: required || null,
         pattern: pattern ? "" : null,
         "data-validate": validate ? "" : null,
+        "aria-describedby": `${helpBlock ? hintTextId : ""}${expandingHintTitle ? ` ${expandingHintId}` : ""}`
     };
 
     const inputGrpClasses = classnames(
@@ -64,7 +67,8 @@ const InputGroup = ({
         disabled: disabled || null,
         readOnly: readOnly || null,
         required: required || null,
-        id: id || null
+        id: id || null,
+        "aria-describedby": `${helpBlock ? hintTextId : ""}${expandingHintTitle ? ` ${expandingHintId}` : ""}`
     };
 
     const formGroupClasses = classnames(
@@ -114,12 +118,12 @@ const InputGroup = ({
                 </>
             }
             {errorMessage && <><div className="help-block">{errorMessage}</div>{"\n"}</>}
-            {helpBlock && <><div className="hint-text">{helpBlock}</div>{"\n"}</>}
+            {helpBlock && <><div className="hint-text" id={hintTextId}>{helpBlock}</div>{"\n"}</>}
             {expandingHintTitle && 
             <label className="help-block-expander">{"\n"}
                 <input disabled={disabled} type="checkbox"/>{"\n"}
-                <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
-                <div className="content">{expandingHintContent ? expandingHintContent : "This information is less important and only a minority of users will need it or the text is very long. In this case; both."}</div>
+                <span className="header"><span aria-hidden="true" className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
+                <div className="content" id={expandingHintId}>{expandingHintContent ? expandingHintContent : "This information is less important and only a minority of users will need it or the text is very long. In this case; both."}</div>
             </label>}
         </div>
     );

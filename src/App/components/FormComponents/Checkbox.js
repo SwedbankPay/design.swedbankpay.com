@@ -1,14 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, hintText, optional, required, group, options, className, expandingHintTitle }) => {
+const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, hintText, optional, required, group, options, className, expandingHintTitle, hintTextId, expandingHintId }) => {
     const attrs = {
         type: "checkbox",
         id: id || null,
         name,
         disabled: disabled || null,
         defaultChecked: checked || null,
-        required
+        required,
+        "aria-describedby": `${hintText ? hintTextId : ""}${expandingHintTitle ? ` ${expandingHintId}` : ""}`
     };
 
     return (
@@ -28,12 +29,12 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
                         </label>{"\n"}
                     </div>)}
                     {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
-                    {hintText && <div className="hint-text">{hintText}</div>}
+                    {hintText && <div className="hint-text" id={hintTextId}>{hintText}</div>}
                     {expandingHintTitle && 
                     <label className="help-block-expander">
                         <input disabled={disabled} type="checkbox"/>
-                        <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
-                        <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
+                        <span className="header"><span aria-hidden="true" className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
+                        <div className="content" id={expandingHintId}>This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
                     </label>}
                 </fieldset>
             </form>
@@ -42,13 +43,13 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
                         <input {...attrs} />{"\n"}
                         <label htmlFor={id} className="d-block">{label}</label>{"\n"}
                     </div>
-                    {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
+                    {errorMessage ? <div className="help-block" id={hintTextId}>{errorMessage}</div> : null}
                     {hintText && <div className="hint-text">{hintText}</div>}
                     {expandingHintTitle && 
                     <label className="help-block-expander">
                         <input disabled={disabled} type="checkbox"/>
-                        <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
-                        <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
+                        <span className="header"><span aria-hidden="true" className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
+                        <div className="content" id={expandingHintId}>This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
                     </label>}
                 </>
             }

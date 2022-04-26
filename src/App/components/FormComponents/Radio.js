@@ -1,14 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optional, name, required, className, hintText, expandingHintTitle, errorMessage }) => {
+const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optional, name, required, className, hintText, expandingHintTitle, hintTextId, expandingHintId, errorMessage }) => {
     const attrs = {
         type: "radio",
         id: id || null,
         name: name || null,
         disabled: disabled || null,
         defaultChecked: checked || null,
-        required
+        required,
+        "aria-describedby": `${hintText ? hintTextId : ""}${expandingHintTitle ? ` ${expandingHintId}` : ""}`
     };
 
     return (
@@ -24,12 +25,12 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
                             <label htmlFor={id}>{label}</label>{"\n"}
                         </div>)}
                         {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
-                        {hintText && <div className="hint-text">{hintText}</div>}
+                        {hintText && <div className="hint-text" id={hintTextId}>{hintText}</div>}
                         {expandingHintTitle && 
                         <label className="help-block-expander">
                             <input disabled={disabled} type="checkbox"/>
-                            <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
-                            <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
+                            <span className="header"><span aria-hidden="true" className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
+                            <div className="content" id={expandingHintId}>This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
                     </label>}
                     </fieldset>
                 </form>
@@ -39,12 +40,12 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
                         {label ? <label htmlFor={id}>{label}</label> : null}{label ? "\n" : null}
                     </div>
                     {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
-                    {hintText && <div className="hint-text">{hintText}</div>}
+                    {hintText && <div className="hint-text" id={hintTextId}>{hintText}</div>}
                     {expandingHintTitle && 
                     <label className="help-block-expander">
                         <input disabled={disabled} type="checkbox"/>
-                        <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
-                        <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
+                        <span className="header"><span aria-hidden="true" className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
+                        <div className="content" id={expandingHintId}>This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
                     </label>}
                 </>
             }
