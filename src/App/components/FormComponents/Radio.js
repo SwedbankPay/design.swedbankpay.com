@@ -8,7 +8,8 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
         name: name || null,
         disabled: disabled || null,
         defaultChecked: checked || null,
-        required
+        required,
+        "aria-describedby": `${hintText ? hintTextId : ""}${expandingHintTitle ? ` ${expandingHintId}` : ""}`
     };
 
     return (

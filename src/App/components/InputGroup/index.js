@@ -38,7 +38,9 @@ const InputGroup = ({
     expanderId,
     optional,
     postfix,
-    boxSize
+    boxSize,
+    hintTextId,
+    expandingHintId
 }) => {
     const attrs = {
         type: type || null,
@@ -50,7 +52,8 @@ const InputGroup = ({
         autoComplete: autoComplete || null,
         required: required || null,
         pattern: pattern ? "" : null,
-        "data-validate": validate ? "" : null
+        "data-validate": validate ? "" : null,
+        "aria-describedby": `${helpBlock ? hintTextId : ""}${expandingHintTitle ? ` ${expandingHintId}` : ""}`
     };
 
     const inputGrpClasses = classnames(
@@ -65,7 +68,8 @@ const InputGroup = ({
         disabled: disabled || null,
         readOnly: readOnly || null,
         required: required || null,
-        id: id || null
+        id: id || null,
+        "aria-describedby": `${helpBlock ? hintTextId : ""}${expandingHintTitle ? ` ${expandingHintId}` : ""}`
     };
 
     const formGroupClasses = classnames(
