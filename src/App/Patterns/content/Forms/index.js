@@ -44,11 +44,11 @@ const ContentGuidelines = () => (
             <div className="col-12 col-sm-6 m-auto">
                 <h3 className="mb-0">Title</h3>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
-                <InputGroup id="guideline-input-example" type="text" label="Input label" placeholder="Placeholder text" className="mb-0" helpBlock="Hint text"/>
+                <InputGroup id="guideline-input-example" type="text" label="Input label" placeholder="Placeholder text" className="mb-0" helpBlock="Hint text" hintTextId="formsHintTextExample"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small">24px</div>
                 <InputGroup id="guideline-select-example" type="select" label="Label" placeholder="Select an option" selectOptions={["Option 1", "Option 2"]} optional className="mb-0"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small">24px</div>
-                <RadioButton groupTitle="Input label" name="guidelines-radio-example" group options={radioOptions} className="mb-0 forms-radio-example" expandingHintTitle="Expander hint text"/>
+                <RadioButton groupTitle="Input label" name="guidelines-radio-example" group options={radioOptions} className="mb-0 forms-radio-example" expandingHintTitle="Expander hint text" expandingHintId="expandingFormsRadioExample"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
                 <div className="d-flex">
                     <Button type="primary" label="Submit" className="mr-3"/>
@@ -134,14 +134,14 @@ const HowToDesignForms = () => {
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-success">
                             <span className="h4 d-block mb-4">Do</span>
-                            <InputGroup id="personal-identification-number-example" type="text" label="Personal identification number" helpBlock="YYYYMMDDNNNN"/>
+                            <InputGroup id="personal-identification-number-example" type="text" label="Personal identification number" helpBlock="YYYYMMDDNNNN" hintTextId="personalIdNumberExample"/>
                         </div>
                         <p>Use a hint text for important information that is secondary to the label.</p>
                     </div>
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-success">
                             <span className="h4 d-block mb-4">Do</span>
-                            <InputGroup id="cvc-example" type="text" label="Security code (CVC)" expandingHintTitle="Where to find the code?"/>
+                            <InputGroup id="cvc-example" type="text" label="Security code (CVC)" expandingHintTitle="Where to find the code?" expandingHintId="expandingWhereToFindExample"/>
                         </div>
                         <p>Use hint expander for additional information that is less important or long.</p>
                     </div>
@@ -201,13 +201,13 @@ const HowToDesignForms = () => {
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-success">
                             <span className="h4 d-block mb-4">Do</span>
-                            <InputGroup type="text" validationState="error" helpBlock errorMessage='The email address must include "@"' label="Email address" defaultValue="Name.com" id="input-error-do-example"/>
+                            <InputGroup type="text" validationState="error" errorMessage='The email address must include "@"' label="Email address" defaultValue="Name.com" id="input-error-do-example"/>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-error">
                             <span className="h4 d-block mb-4">Don&apos;t</span>
-                            <InputGroup type="text" validationState="error" helpBlock errorMessage="Invalid input" label="Email address" defaultValue="Name.com" id="input-error-dont-example"/>
+                            <InputGroup type="text" validationState="error" errorMessage="Invalid input" label="Email address" defaultValue="Name.com" id="input-error-dont-example"/>
                         </div>
                     </div>
                 </div>
@@ -230,7 +230,7 @@ const DeveloperDocumentation = () => (
 
             <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag>
                 <div className="col-12 col-sm-6 m-auto pt-3">
-                    <InputGroup type="text" validationState="error" helpBlock errorMessage='The email address must include "@"' label="Email" defaultValue="Name.com" id="input-error-client-example"/>
+                    <InputGroup type="text" validationState="error" errorMessage='The email address must include "@"' label="Email" defaultValue="Name.com" id="input-error-client-example"/>
                 </div>
             </ComponentPreview>
 

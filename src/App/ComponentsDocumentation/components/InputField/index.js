@@ -23,8 +23,8 @@ const ContentGuidelines = forwardRef((props, ref) => <section ref={ref}>
     <div className="slab slab-plain h-100 mb-2">
         <div className="d-flex flex-column align-items-center">
             <div className="py-3">
-                <InputGroup type="text" label="Label" defaultValue="Input text"  helpBlock="Hint text" id="input-guidelines-example"/>
-                <InputGroup type="textarea" label="Label" expandingHintTitle="Expander hint text"/>
+                <InputGroup type="text" label="Label" defaultValue="Input text" hintTextId="contentGuidelinesExample"  helpBlock="Hint text" id="input-guidelines-example"/>
+                <InputGroup type="textarea" label="Label" expandingHintId="contentGuidelinesExpandingExample" expandingHintTitle="Expander hint text"/>
             </div>
         </div>
     </div>
