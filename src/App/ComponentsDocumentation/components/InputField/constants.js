@@ -18,7 +18,8 @@ const InputOptions = () => (
                         id: "hint_text",
                         name: "Hint text",
                         value: {
-                            helpBlock: "Hint text"
+                            helpBlock: "Hint text",
+                            hintTextId: "hintTextExampleId"
                         }
                     },
                     {
@@ -123,7 +124,8 @@ export const inputShowCase = {
                                 id: "hint_text_textarea",
                                 name: "Hint text",
                                 value: {
-                                    helpBlock: "Hint text"
+                                    helpBlock: "Hint text",
+                                    hintTextId: "hintTextTextAreaExample"
                                 }
                             },
                             {
@@ -185,13 +187,13 @@ export const contentGuidelines = [
         examples: [
             {
                 slabType: "success",
-                content: <InputGroup id="do-example-expanding" type="text" label="Personal identification number" helpBlock="YYYYMMDDNNNN"/>,
+                content: <InputGroup id="do-example-expanding" type="text" label="Personal identification number" helpBlock="YYYYMMDDNNNN" hintTextId="birthnumberExample"/>,
                 hintText: "YYYYMMDDNNNN",
                 description: "If the information is fairly important and many users will need it, provide a hint text that is visible by default."
             },
             {
                 slabType: "success",
-                content: <InputGroup id="do-example-expanding" type="text" label="Security code (CVC)" expandingHintTitle="Where to find the code?" expandingHintContent="Three to four digits on the back or the front of your card."/>,
+                content: <InputGroup id="do-example-expanding" type="text" label="Security code (CVC)" expandingHintTitle="Where to find the code?" expandingHintId="whereToFindExample" expandingHintContent="Three to four digits on the back or the front of your card."/>,
                 expandingHintTitle: "Where to find the code?",
                 description: "Use a hint expander if the information is long and won’t be needed by the majority of users. Write the hint expander to help users understand what they will see before they click."
             }
@@ -230,12 +232,12 @@ export const contentGuidelines = [
         examples: [
             {
                 slabType: "success",
-                content: <InputGroup type="text" validationState="error" helpBlock errorMessage='The email address must include "@"' label="Email address" defaultValue="Name.com" id="guidelines-input-example-7"/>,
+                content: <InputGroup type="text" validationState="error" errorMessage='The email address must include "@"' label="Email address" defaultValue="Name.com" id="guidelines-input-example-7"/>,
                 description: "Do explain what went wrong and how to fix it."
             },
             {
                 slabType: "error",
-                content: <InputGroup type="text" validationState="error" helpBlock errorMessage="Invalid input" label="Email address" defaultValue="Name.com" id="guidelines-input-example-8"/>,
+                content: <InputGroup type="text" validationState="error" errorMessage="Invalid input" label="Email address" defaultValue="Name.com" id="guidelines-input-example-8"/>,
                 description: "Don't use technical jargon."
             }
         ]

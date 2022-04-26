@@ -33,7 +33,8 @@ export const checkboxShowCase = {
                                 id: "hint_text",
                                 name: "Hint text",
                                 value: {
-                                    helpBlock: "Hint text"
+                                    hintText: "Hint text",
+                                    hintTextId: "hintTextCheckboxExample"
                                 }
                             },
                             {

@@ -59,7 +59,7 @@ export const formsShowCase = {
                         </legend>
                         <div className="col-12 col-sm-9 px-0">
                             <InputGroup id="form-email-example" type="email" label="E-mail"/>
-                            <InputGroup type="select" id="form-select-example" label="Subject" placeholder="Select a subject" optional selectOptions={["Subject 1", "Subject 2", "Subject 3"]} expandingHintTitle="Why should you select subject?" expandingHintContent="If you select a subject it will make it easier for our support team to handle your request which will make the processing time much faster."/>
+                            <InputGroup type="select" id="form-select-example" label="Subject" placeholder="Select a subject" optional selectOptions={["Subject 1", "Subject 2", "Subject 3"]} expandingHintTitle="Why should you select subject?" expandingHintContent="If you select a subject it will make it easier for our support team to handle your request which will make the processing time much faster." expandingHintId="expandingHintFormsExample"/>
                         </div>
                         <InputGroup id="form-textarea-example" type="textarea" label="Message" />
                         <Checkbox
