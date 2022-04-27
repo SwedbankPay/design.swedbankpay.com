@@ -419,6 +419,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "view_list",
               "outlined": true,
               "path": "/components/tables",
+              "statusBadges": Array [
+                "updated",
+              ],
               "title": "Tables",
             },
             Object {

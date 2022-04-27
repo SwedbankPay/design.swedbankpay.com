@@ -11,12 +11,13 @@ exports[`Component: RadioButton ContentGuidelines renders 1`] = `
     className="slab slab-plain"
   >
     <div
-      className="d-flex flex-column align-items-center"
+      className="d-flex flex-column align-items-center py-3"
     >
       <div>
         <Radio
           group={true}
           groupTitle="Group label"
+          hintText="Hint text"
           name="radio-dont-example"
           options={
             Array [
@@ -55,6 +56,13 @@ exports[`Component: RadioButton ContentGuidelines renders 1`] = `
         radio button label
       </b>
        should be short, to the point and clearly explain the option. It is also preferred to have fewer than three words per label as longer words could extend a label to multiple rows which could disrupt the reading experience.
+    </li>
+    <li>
+      A 
+      <b>
+        hint text
+      </b>
+       can be used to complement the group label and provide clarifying details. If the information is long or won't be needed by the majority of users, a hint expander can be used instead of a text that is visible by default. 
     </li>
   </ul>
 </Fragment>
@@ -275,7 +283,9 @@ exports[`Component: RadioButton HowTo renders 1`] = `
 `;
 
 exports[`Component: RadioButton Overview renders 1`] = `
-<Fragment>
+<section
+  id="radio-button-overview"
+>
   <h2
     id="overview"
   >
@@ -325,6 +335,7 @@ exports[`Component: RadioButton Overview renders 1`] = `
                       "name": "Hint text",
                       "value": Object {
                         "hintText": "Hint text",
+                        "hintTextId": "hintTextRadioExample",
                       },
                     },
                     Object {
@@ -399,7 +410,7 @@ exports[`Component: RadioButton Overview renders 1`] = `
     </li>
   </ul>
   <HowTo />
-</Fragment>
+</section>
 `;
 
 exports[`Component: RadioButton renders 1`] = `
