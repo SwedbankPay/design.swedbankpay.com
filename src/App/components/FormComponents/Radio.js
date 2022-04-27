@@ -63,7 +63,6 @@ Radio.propTypes = {
     groupTitle: PropTypes.string,
     options: PropTypes.array,
     require: PropTypes.bool,
-    tooltip: PropTypes.bool,
     className: PropTypes.string,
     hintText: PropTypes.string,
     expandingHintTitle: PropTypes.string,
