@@ -28,6 +28,7 @@ exports[`Documentation: Table Overview renders 1`] = `
             "options": Object {
               "checkbox": Array [
                 Object {
+                  "id": "table_addons",
                   "inputs": Array [
                     Object {
                       "id": "hover_effect",
@@ -37,6 +38,7 @@ exports[`Documentation: Table Overview renders 1`] = `
                       },
                     },
                   ],
+                  "title": "Add on",
                 },
               ],
               "radio": Array [
@@ -76,6 +78,7 @@ exports[`Documentation: Table Overview renders 1`] = `
                     },
                     Object {
                       "name": "Description",
+                      "toBeRemoved": true,
                       "value": Object {
                         "description": true,
                       },

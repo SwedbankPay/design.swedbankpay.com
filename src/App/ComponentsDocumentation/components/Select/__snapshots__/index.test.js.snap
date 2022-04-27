@@ -11,10 +11,10 @@ exports[`Component: Select ContentGuidelines renders 1`] = `
     className="d-flex justify-content-center slab slab-plain px-5 pt-5 pb-4"
   >
     <InputGroup
-      helpBlock={true}
+      helpBlock="Hint text"
+      hintTextId="selectContentGuidelinesExample"
       id="content-guidelines-example"
       label="Label"
-      placeholder="Placeholder text"
       selectOptions={
         Array [
           "Related option",
@@ -31,18 +31,21 @@ exports[`Component: Select ContentGuidelines renders 1`] = `
       <b>
         Label
       </b>
-       should be short, concise and to the point describing the functionality 
+       should be short, concise and clearly describe what the user is selecting. If the user is not required to select an option, label it as “optional”.
     </li>
     <li>
       The 
       <b>
         Placeholder text
       </b>
-       should begin with the verb 
-      "
-      Select..
-      "
-       preferably followed by what type of options the user is choosing from.
+       should begin with the verb "Select.." preferably followed by what type of options the user is choosing from.
+    </li>
+    <li>
+      A 
+      <b>
+        hint text
+      </b>
+       can be used to complement the label and provide clarifying details. If the information is long or won't be needed by the majority of users, a hint expander can be used instead of a text that is visible by default. 
     </li>
   </ul>
 </section>
@@ -186,7 +189,7 @@ exports[`Component: Select Overview renders 1`] = `
               }
               type="select"
             />,
-            "description": "The select component looks similar to an input field in terms of structure, both with a label and placeholder text. But it does function differently and when activated expands and displays a list of options.",
+            "description": "The select component looks similar to an input field but works differently. When activated it expands and displays a list of selectable options.",
             "options": Object {
               "checkbox": Array [
                 Object {
@@ -203,12 +206,14 @@ exports[`Component: Select Overview renders 1`] = `
                       "name": "Hint text",
                       "value": Object {
                         "helpBlock": "Hint text",
+                        "hintTextId": "selectHintTextExample",
                       },
                     },
                     Object {
                       "id": "expander_hint_text",
                       "name": "Expander hint",
                       "value": Object {
+                        "expandingHintId": "selectExpandingHintExample",
                         "expandingHintTitle": "Expanding hint text",
                       },
                     },
