@@ -93,7 +93,6 @@ const DeveloperDocumentation = () => (
     </section>
 );
 
-
 const RadioButton = () => (
     <DocContainer>
         <section id="radio-button-doc">
