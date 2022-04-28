@@ -1,9 +1,10 @@
-import React, { forwardRef, useRef } from "react";
+import React, { forwardRef, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 import InputGroup from "@components/InputGroup";
 import { inputShowCase, textareaShowCase, contentGuidelines } from "./constants";
+import { hintTextExpander } from "@src/scripts/main";
 
 const Overview = () => (
     <section id="input-field-overview">
@@ -23,7 +24,7 @@ const ContentGuidelines = forwardRef((props, ref) => <section ref={ref}>
     <div className="slab slab-plain h-100 mb-2">
         <div className="d-flex flex-column align-items-center">
             <div className="py-3">
-                <InputGroup type="text" label="Label" defaultValue="Input text"  helpBlock="Hint text" id="input-guidelines-example"/>
+                <InputGroup type="text" label="Label" defaultValue="Input text" helpBlock="Hint text" id="input-guidelines-example"/>
                 <InputGroup type="textarea" label="Label" expandingHintTitle="Expander hint text"/>
             </div>
         </div>
@@ -35,10 +36,10 @@ const ContentGuidelines = forwardRef((props, ref) => <section ref={ref}>
         <li>When a text field is not required to be filled by the user, label it as “optional”.</li>
     </ul>
 
-    {contentGuidelines.map(section => (
-        <section key={section.lead}>
+    {contentGuidelines.map((section, i) => (
+        <section key={section.lead + i}>
             <h3>{section.heading}</h3>
-            <p>{section.lead}</p>
+            {section.lead}
             <div className="row placeholder-guideline">
                 {section.examples.map(({ slabType, description, content },) => (
                     <div key={description} className="col-lg-6 col-sm-12">
@@ -83,6 +84,10 @@ const DeveloperDocumentation = () => (
 const InputField = () => {
     const guidelinesRef = useRef();
     const scrollToRef = () => guidelinesRef.current.scrollIntoView();
+
+    useEffect(() => {
+        hintTextExpander.init();
+    });
 
     return (
 
