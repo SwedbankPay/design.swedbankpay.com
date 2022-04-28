@@ -64,82 +64,103 @@ exports[`Component: Checkbox DeveloperDocumentation renders 1`] = `
   >
     Developer documentation
   </h2>
-  <h3>
-    Disabled state
-  </h3>
-  <p>
-    Disable a checkbox by adding 
-    <CodeTags
-      code="disabled"
-      type="primary"
-    />
-     attribute to the desired Checkbox.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="d-flex justify-content-center"
-    >
-      <Checkbox
-        disabled={true}
-        id="disabled-example"
-        label="Checkbox label"
+  <section>
+    <h3>
+      Disabled state
+    </h3>
+    <p>
+      Disable a checkbox by adding 
+      <CodeTags
+        code="disabled"
+        type="primary"
       />
-    </div>
-  </ComponentPreview>
-  <h3>
-    Error state
-  </h3>
-  <p>
-    To display the error state, add the 
-    <CodeTags
-      code=".has-error"
-      type="secondary"
-    />
-     class to the parent element, then add the 
-    <CodeTags
-      code=".help-block"
-      type="secondary"
-    />
-     element as the last child with the error message. 
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="m-auto pl-5 col-sm-12 error-state-container"
+       attribute to the desired Checkbox.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      removeOuterTag={true}
+      showCasePanel={true}
     >
-      <Checkbox
-        errorMessage="Descriptive helpful error message."
-        group={true}
-        groupTitle="Group label"
-        name="checkbox-group-example"
-        options={
-          Array [
-            Object {
-              "id": "error-example-1",
-              "label": "Label",
-            },
-            Object {
-              "id": "error-example-2",
-              "label": "Label",
-            },
-            Object {
-              "id": "error-example-3",
-              "label": "Label",
-            },
-          ]
-        }
+      <div
+        className="d-flex justify-content-center"
+      >
+        <Checkbox
+          disabled={true}
+          id="disabled-example"
+          label="Checkbox label"
+        />
+      </div>
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Error state
+    </h3>
+    <p>
+      To display the error state, add the 
+      <CodeTags
+        code=".has-error"
+        type="secondary"
       />
-    </div>
-  </ComponentPreview>
+       class to the parent element, then add the 
+      <CodeTags
+        code=".help-block"
+        type="secondary"
+      />
+       element as the last child with the error message. 
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      removeOuterTag={true}
+      showCasePanel={true}
+    >
+      <div
+        className="m-auto pl-5 col-sm-12 error-state-container"
+      >
+        <Checkbox
+          errorMessage="Descriptive helpful error message."
+          group={true}
+          groupTitle="Group label"
+          name="checkbox-group-example"
+          options={
+            Array [
+              Object {
+                "id": "error-example-1",
+                "label": "Label",
+              },
+              Object {
+                "id": "error-example-2",
+                "label": "Label",
+              },
+              Object {
+                "id": "error-example-3",
+                "label": "Label",
+              },
+            ]
+          }
+        />
+      </div>
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Javascript methods
+    </h3>
+    <p>
+      <CodeTags
+        code="dg.hintTextExpander.init()"
+        type="secondary"
+      />
+       can be used to initialize all Hint text expanders. Or 
+      <CodeTags
+        code="dg.hintTextExpander.init(<hint-text-expander-id>)"
+        type="secondary"
+      />
+       to initialize a specific one.
+    </p>
+  </section>
 </section>
 `;
 
@@ -262,6 +283,7 @@ exports[`Component: Checkbox Overview renders 1`] = `
             "component": <Checkbox
               group={true}
               groupTitle="Group label"
+              hintExpander={true}
               name="checkbox-group-example"
               options={
                 Array [
@@ -292,13 +314,14 @@ exports[`Component: Checkbox Overview renders 1`] = `
                       "id": "hint_text",
                       "name": "Hint text",
                       "value": Object {
-                        "hintText": "Hint text",
+                        "helpBlock": "Hint text",
                       },
                     },
                     Object {
-                      "id": "hint_text_expander",
+                      "id": "hint_expander",
                       "name": "Hint expander",
                       "value": Object {
+                        "expanderId": "expander-showcase",
                         "expandingHintTitle": "Expanding hint text",
                       },
                     },

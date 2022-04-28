@@ -55,106 +55,123 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
   >
     Developer documentation
   </h2>
-  <span
-    className="h4 mt-3"
-  >
-    Error state
-  </span>
-  <p>
-    If the user don’t select any option in a select that is required to be filled, an error message should be displayed. To display the error message, add the 
-    <CodeTags
-      code=".has-error"
-      type="secondary"
-    />
-     class to the parent element, then add the 
-    <CodeTags
-      code=".help-block"
-      type="secondary"
-    />
-     element as the last child with the error message.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <form
-      className="no-pointer-events"
+  <section>
+    <h3>
+      Error state
+    </h3>
+    <p>
+      If the user don’t select any option in a select that is required to be filled, an error message should be displayed. To display the error message, add the 
+      <CodeTags
+        code=".has-error"
+        type="secondary"
+      />
+       class to the parent element, then add the 
+      <CodeTags
+        code=".help-block"
+        type="secondary"
+      />
+       element as the last child with the error message.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      showCasePanel={true}
     >
-      <div
-        className="form-group has-error"
+      <form
+        className="no-pointer-events"
       >
-        
-
-        <label
-          htmlFor="dev-doc-example"
-        >
-          
-
-          Label
-          
-
-        </label>
-        
-
-        <select
-          className="form-control"
-          defaultValue="placeholder"
-          id="dev-doc-example"
-          required={true}
-        >
-          
-
-          <option
-            disabled={true}
-            hidden={true}
-            value="placeholder"
-          >
-            Select option
-          </option>
-          
-
-        </select>
         <div
-          className="help-block"
+          className="form-group has-error"
         >
-          Descriptive helpful error message
+          
+
+          <label
+            htmlFor="dev-doc-example"
+          >
+            
+
+            Label
+            
+
+          </label>
+          
+
+          <select
+            className="form-control"
+            defaultValue="placeholder"
+            id="dev-doc-example"
+            required={true}
+          >
+            
+
+            <option
+              disabled={true}
+              hidden={true}
+              value="placeholder"
+            >
+              Select option
+            </option>
+            
+
+          </select>
+          <div
+            className="help-block"
+          >
+            Descriptive helpful error message
+          </div>
         </div>
-      </div>
-    </form>
-  </ComponentPreview>
-  <span
-    className="h4"
-  >
-    Disabled state
-  </span>
-  <p>
-    Disable a select by adding the 
-    <CodeTags
-      code="disabled"
-      type="primary"
-    />
-     attribute to the desired select and the 
-    <CodeTags
-      code="form-group"
-      type="primary"
-    />
-     where the select resides.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <InputGroup
-      disabled={true}
-      id="disabled-state-example"
-      label="Label"
-      placeholder="Select option"
-      selectOptions={Array []}
-      type="select"
-    />
-  </ComponentPreview>
+      </form>
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Disabled state
+    </h3>
+    <p>
+      Disable a select by adding the 
+      <CodeTags
+        code="disabled"
+        type="primary"
+      />
+       attribute to the desired select and the 
+      <CodeTags
+        code="form-group"
+        type="primary"
+      />
+       where the select resides.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      showCasePanel={true}
+    >
+      <InputGroup
+        disabled={true}
+        id="disabled-state-example"
+        label="Label"
+        placeholder="Select option"
+        selectOptions={Array []}
+        type="select"
+      />
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Javascript methods
+    </h3>
+    <p>
+      <CodeTags
+        code="dg.hintTextExpander.init()"
+        type="secondary"
+      />
+       can be used to initialize all Hint text expanders. Or 
+      <CodeTags
+        code="dg.hintTextExpander.init(<hint-text-expander-id>)"
+        type="secondary"
+      />
+       to initialize a specific one.
+    </p>
+  </section>
 </section>
 `;
 
@@ -174,6 +191,7 @@ exports[`Component: Select Overview renders 1`] = `
         "elements": Array [
           Object {
             "component": <InputGroup
+              hintExpander={true}
               id="select-showcase-example"
               label="Label"
               placeholder="Select option"
@@ -206,9 +224,10 @@ exports[`Component: Select Overview renders 1`] = `
                       },
                     },
                     Object {
-                      "id": "expander_hint_text",
+                      "id": "hint_expander",
                       "name": "Expander hint",
                       "value": Object {
+                        "expanderId": "expander-showcase",
                         "expandingHintTitle": "Expanding hint text",
                       },
                     },
