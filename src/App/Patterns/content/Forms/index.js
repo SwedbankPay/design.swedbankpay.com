@@ -141,7 +141,7 @@ const HowToDesignForms = () => {
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-success">
                             <span className="h4 d-block mb-4">Do</span>
-                            <InputGroup id="cvc-example" type="text" label="Security code (CVC)" expandingHintTitle="Where to find the code?" expandingHintId="expandingWhereToFindExample"/>
+                            <InputGroup id="cvc-example" type="text" label="Security code (CVC)" expandingHintTitle="Where to find the code?" expandingHintContent="Three to four digits on the back or the front of your card." expandingHintId="expandingWhereToFindExample"/>
                         </div>
                         <p>Use hint expander for additional information that is less important or long.</p>
                     </div>
