@@ -26,7 +26,6 @@ describe("Component: InputField", () => {
         });
     });
 
-
     describe("ContentGuidelines", () => {
         it("is defined", () => {
             expect(ContentGuidelines).toBeDefined();

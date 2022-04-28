@@ -6,7 +6,6 @@ import NpmInformation from "@docutils/NpmInformation";
 
 import ButtonComponent from "@components/Button";
 import TooltipComponent from "@components/Tooltips";
-import InputGroup from "@components/InputGroup";
 
 import { tooltipShowCase } from "./constants";
 
@@ -37,7 +36,7 @@ const Overview = () => (
                         <TooltipComponent isVisible text="Contact us" icon="chat_bubble_outline"/>
                     </div>
                 </div>
-            </div>   
+            </div>
         </div>
         <p>If you think the function of an icon button need to be explained, consider using a button with icon and text instead.</p>
         { /*
@@ -57,7 +56,7 @@ const Overview = () => (
                         TODO example with input fields
                     </div>
                 </div>
-            </div>   
+            </div>
         </div>
         <p>If you need to clarify the label of a from input field, show the content in a visible hint text or consider a better pattern for toggling content as an expander.</p>
         */}
@@ -67,10 +66,10 @@ const Overview = () => (
                 <div className="slab slab-plain slab-border-error h-100 pb-5">
                     <h3>Don&apos;t</h3>
                     <div className="d-flex justify-content-center">
-                    <img id="tooltip-error-image" src={`${basename}img/documentation/tooltips/dont-example.png`} alt="Do not use tooltips as an alternate possibility for describing error messages."/>
+                        <img id="tooltip-error-image" src={`${basename}img/documentation/tooltips/dont-example.png`} alt="Do not use tooltips as an alternate possibility for describing error messages."/>
                     </div>
                 </div>
-            </div>   
+            </div>
         </div>
         <p>Tooltips should not be used to communicate critical information, including errors in forms or other interaction feedback.</p>
     </>
@@ -80,14 +79,13 @@ const ContentGuidelines = () => (
     <section>
         <h2>Content guidelines</h2>
         <div className="slab slab-plain py-5 d-flex justify-content-center">
-        <img id="tooltip-content-image" src={`${basename}img/documentation/tooltips/content.png`} alt="Tooltip content should be short and concise."/>
+            <img id="tooltip-content-image" src={`${basename}img/documentation/tooltips/content.png`} alt="Tooltip content should be short and concise."/>
         </div>
         <ul className="list list-bullet">
             <li>The tooltip <b>content</b> should be short and concise providing useful, additional information or clarification.</li>
         </ul>
     </section>
 );
-
 
 const JavascriptMethods = () => (
     <>
@@ -105,7 +103,7 @@ const Tooltip = () => {
             <Overview />
             <ContentGuidelines/>
             <JavascriptMethods />
-            <NpmInformation componentName={"tooltips"}/> 
+            <NpmInformation componentName={"tooltips"}/>
         </DocContainer>
     );
 };

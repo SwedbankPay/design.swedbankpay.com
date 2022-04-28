@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 import InputGroup from "@components/InputGroup";
-import { inputShowCase, textareaShowCase, contentGuidelines } from "./constants";
+import { inputShowCase, contentGuidelines } from "./constants";
 import { hintTextExpander } from "@src/scripts/main";
 
 const Overview = () => (
