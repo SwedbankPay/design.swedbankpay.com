@@ -67,13 +67,13 @@ const ContentGuidelines = () => (
             <li>The <b>label</b> should clearly explain the context of the slider</li>
             <li>Make sure to align the <b>values</b> so that they all follow the same structure and not mixed values or symbols</li>
         </ul>
-        <DisableState/>
     </section>
 );
 
 const DeveloperDocumentation = () => (
     <section>
         <h2 id="developer-documentation mb-3">Developer documentation</h2>
+        <DisableState/>
         <h3>Javascript methods</h3>
         <p className="my-3">Use <CodeTags type="secondary" code="dg.rangeslider.init()"/> to <a href="/get-started/for-developers" >initialize</a> all rangesliders.</p>
         <p>Or <CodeTags type="secondary" code='dg.rangeslider.init("component-id")'/> to initialize one specific component.</p>
