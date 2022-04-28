@@ -71,7 +71,6 @@ exports[`Component: Rangeslider ContentGuidelines renders 1`] = `
        so that they all follow the same structure and not mixed values or symbols
     </li>
   </ul>
-  <DisableState />
 </section>
 `;
 
@@ -82,6 +81,7 @@ exports[`Component: Rangeslider DeveloperDocumentation renders 1`] = `
   >
     Developer documentation
   </h2>
+  <DisableState />
   <h3>
     Javascript methods
   </h3>
