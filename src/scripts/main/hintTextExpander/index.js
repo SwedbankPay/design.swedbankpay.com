@@ -27,15 +27,15 @@ const init = id => {
 
         return _createExpander(expander);
     } else {
-        const hintTextExpanders = document.querySelectorAll(".help-block-expander");
+        const expanders = document.querySelectorAll(".hint-text-expander");
 
-        if (!hintTextExpanders.length) {
+        if (!expanders.length) {
             console.warn("No text expanders found");
 
             return null;
         }
 
-        return [...hintTextExpanders].map(expander => _createExpander(expander));
+        return [...expanders].map(expander => _createExpander(expander));
     }
 };
 
