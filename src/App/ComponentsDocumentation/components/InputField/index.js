@@ -58,26 +58,35 @@ const ContentGuidelines = forwardRef((props, ref) => <section ref={ref}>
 const DeveloperDocumentation = () => (
     <section id="developer-documentation-container">
         <h2 id="developer-documentation mb-3">Developer documentation</h2>
-        <h3 className="mt-3">Autocomplete</h3>
-        <p>Add <CodeTags type="primary" code="autocomplete"/> attributes to input fields when it is possible to make a form easier for users to fill. </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <InputGroup type="text" label="Name" autoComplete="name" id="developer-documentation-example" />
-        </ComponentPreview>
+        <section>
+            <h3 className="mt-3">Autocomplete</h3>
+            <p>Add <CodeTags type="primary" code="autocomplete"/> attributes to input fields when it is possible to make a form easier for users to fill. </p>
+            <ComponentPreview language="html" showCasePanel codeFigure>
+                <InputGroup type="text" label="Name" autoComplete="name" id="developer-documentation-example" />
+            </ComponentPreview>
+        </section>
 
-        <h3>Error message</h3>
-        <p>To display the error state, add the <CodeTags type="secondary" code={".has-error"} /> class to the parent element, then add the <CodeTags type="secondary" code={".help-block"} /> element as the last child with the error message.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <InputGroup type="text" label="Input label" defaultValue="Input text" errorMessage="Descriptive helpful error message." id="developer-documentation-error-example"/>
-        </ComponentPreview>
+        <section>
+            <h3>Error message</h3>
+            <p>To display the error state, add the <CodeTags type="secondary" code={".has-error"} /> class to the parent element, then add the <CodeTags type="secondary" code={".help-block"} /> element as the last child with the error message.</p>
+            <ComponentPreview language="html" showCasePanel codeFigure>
+                <InputGroup type="text" label="Input label" defaultValue="Input text" errorMessage="Descriptive helpful error message." id="developer-documentation-error-example"/>
+            </ComponentPreview>
+        </section>
 
-        <h3>Disabled state</h3>
-        <p>Disable a input field by adding the <CodeTags type="primary" code="disabled"/> attribute to the desired input field and the <CodeTags type="primary" code="form-group"/> where the input field resides.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <InputGroup type="text" label="Input label" disabled />
-        </ComponentPreview>
+        <section>
+            <h3>Disabled state</h3>
+            <p>Disable a input field by adding the <CodeTags type="primary" code="disabled"/> attribute to the desired input field and the <CodeTags type="primary" code="form-group"/> where the input field resides.</p>
+            <ComponentPreview language="html" showCasePanel codeFigure>
+                <InputGroup type="text" label="Input label" disabled />
+            </ComponentPreview>
+        </section>
 
-        <h3>Javascript methods</h3>
-        <p><CodeTags type="primary" code="dg.validation.init()"/> can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.</p>
+        <section>
+            <h3>Javascript methods</h3>
+            <p><CodeTags type="secondary" code="dg.validation.init()"/> can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.</p>
+            <p><CodeTags type="secondary" code="dg.hintTextExpander.init()"/> can be used to initialize all Hint text expanders. Or <CodeTags type="secondary" code="dg.hintTextExpander.init(<hint-text-expander-id>)"/> to initialize a specific one.</p>
+        </section>
     </section>
 );
 
