@@ -798,6 +798,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
             Do
           </span>
           <InputGroup
+            expandingHintContent="Three to four digits on the back or the front of your card."
             expandingHintId="expandingWhereToFindExample"
             expandingHintTitle="Where to find the code?"
             id="cvc-example"
