@@ -124,11 +124,9 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
         const copyToClipboard = e => {
             navigator.clipboard.writeText(code);
 
-            e.target.dataset.tooltip = "Copied!";
-        };
+            const tip = document.getElementById("tooltipCopy");
 
-        const tooltipContent = e => {
-            e.target.dataset.tooltip = "Copy to clipboard";
+            tip.innerHTML="Copied!";
         };
 
         return (
@@ -136,8 +134,11 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                 <div className="code-view">
                     <header className="code-view-header">
                         {language.toUpperCase()}
-                        <button className="copy-btn d-flex p-0" aria-label="Copy to clipboard">
-                            <i className="material-icons material-icons-outlined" data-tooltip onMouseEnter={e => tooltipContent(e)} onClick={e => copyToClipboard(e)}>content_copy</i>
+                        <button aria-describedby="tooltipCopy" className="tooltip" onClick={e => copyToClipboard(e)}>
+                            <i className="material-icons-outlined">content_copy</i>
+                            <div role="tooltip" id="tooltipCopy">
+                                Copy to clipboard
+                            </div>
                         </button>
                     </header>
                     <table className="code-view-table">
@@ -206,6 +207,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
         componentDidMount () {
             tabs.init(this.props.showCasePanelAdvanced.tabsId);
             this._resetOptions();
+            tooltips.init();
         }
 
         componentDidUpdate (prevProps, prevState) {
