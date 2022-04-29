@@ -49,4 +49,4 @@ export const topbarShowcase = {
             description: <p>The minimum requirement in a Topbar is to include the Swedbank Pay Logotype, common additional functionality is a list with navigation links. On smaller screens use a menu button to toggle a vertical navigation drawer with links when the menu button is clicked. </p>
         }
     ]
-}
+};

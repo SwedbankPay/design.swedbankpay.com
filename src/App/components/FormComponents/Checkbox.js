@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, hintText, optional, required, group, options, className, expandingHintTitle }) => {
+const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, helpBlock, optional, required, group, options, className, expandingHintTitle, expanderId }) => {
     const attrs = {
         type: "checkbox",
         id: id || null,
@@ -23,18 +23,18 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
                     </legend>
                     {options.map(({ label, id }, i) => <div className="checkbox" key={i}>{"\n"}
                         <input {...attrs} id={id} />{"\n"}
-                        <label htmlFor={id}>{label}
-
-                        </label>{"\n"}
+                        <label htmlFor={id}>{label}</label>{"\n"}
                     </div>)}
-                    {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
-                    {hintText && <div className="hint-text">{hintText}</div>}
-                    {expandingHintTitle && 
-                    <label className="help-block-expander">
-                        <input disabled={disabled} type="checkbox"/>
-                        <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
-                        <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
-                    </label>}
+                    {errorMessage && <><div className="help-block">{errorMessage}</div>{"\n"}</>}
+                    {helpBlock && <><p id="hint-text" className="hint-text">{helpBlock}</p>{"\n"}</>}
+                    {expandingHintTitle &&
+                        <div id={expanderId && "hint-text-expander"} className="hint-text-expander">{"\n"}
+                            <button type="button" aria-controls={expanderId} aria-expanded={false}>{"\n"}
+                                <span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}{"\n"}
+                            </button>{"\n"}
+                            <p id={expanderId} className="content" aria-hidden={true}>This information is less important and only a minority of users will need it or the text is very long. In this case; both.</p>{"\n"}
+                        </div>
+                    }
                 </fieldset>
             </form>
                 : <>
@@ -42,14 +42,6 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
                         <input {...attrs} />{"\n"}
                         <label htmlFor={id} className="d-block">{label}</label>{"\n"}
                     </div>
-                    {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
-                    {hintText && <div className="hint-text">{hintText}</div>}
-                    {expandingHintTitle && 
-                    <label className="help-block-expander">
-                        <input disabled={disabled} type="checkbox"/>
-                        <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
-                        <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
-                    </label>}
                 </>
             }
         </>
@@ -71,8 +63,8 @@ Checkbox.propTypes = {
     groupTitle: PropTypes.string,
     options: PropTypes.array,
     optional: PropTypes.bool,
-    hintText: PropTypes.string,
-    expandingHintTitle: PropTypes.string,
+    helpBlock: PropTypes.string,
+    expandingHintTitle: PropTypes.string
 };
 
 export default Checkbox;

@@ -71,29 +71,37 @@ const ContentGuidelines = () => (
 const DeveloperDocumentation = () => (
     <section>
         <h2 id="developer-documentation">Developer documentation</h2>
-        <span className="h4 mt-3">Error state</span>
+        <section>
+            <h3>Error state</h3>
+            <p>If the user don’t select any option in a select that is required to be filled, an error message should be displayed. To display the error message, add the <CodeTags type="secondary" code={".has-error"} /> class to the parent element, then add the <CodeTags type="secondary" code={".help-block"} /> element as the last child with the error message.</p>
 
-        <p>If the user don’t select any option in a select that is required to be filled, an error message should be displayed. To display the error message, add the <CodeTags type="secondary" code={".has-error"} /> class to the parent element, then add the <CodeTags type="secondary" code={".help-block"} /> element as the last child with the error message.</p>
-
-        <ComponentPreview language="html" codeFigure showCasePanel>
-            <form className="no-pointer-events">
-                <div className="form-group has-error">{"\n"}
-                    <label htmlFor="dev-doc-example">{"\n"}
+            <ComponentPreview language="html" codeFigure showCasePanel>
+                <form className="no-pointer-events">
+                    <div className="form-group has-error">{"\n"}
+                        <label htmlFor="dev-doc-example">{"\n"}
                             Label{"\n"}
-                    </label>{"\n"}
-                    <select className="form-control" defaultValue="placeholder" id="dev-doc-example" required>{"\n"}
-                        <option value="placeholder" disabled hidden>Select option</option>{"\n"}
-                    </select>
-                    <div className="help-block">Descriptive helpful error message</div>
-                </div>
-            </form>
-        </ComponentPreview>
+                        </label>{"\n"}
+                        <select className="form-control" defaultValue="placeholder" id="dev-doc-example" required>{"\n"}
+                            <option value="placeholder" disabled hidden>Select option</option>{"\n"}
+                        </select>
+                        <div className="help-block">Descriptive helpful error message</div>
+                    </div>
+                </form>
+            </ComponentPreview>
+        </section>
 
-        <span className="h4">Disabled state</span>
-        <p>Disable a select by adding the <CodeTags type="primary" code="disabled"/> attribute to the desired select and the <CodeTags type="primary" code="form-group"/> where the select resides.</p>
-        <ComponentPreview language="html" codeFigure showCasePanel>
-            <InputGroup type="select" id="disabled-state-example" label="Label" placeholder="Select option" selectOptions={[]} disabled />
-        </ComponentPreview>
+        <section>
+            <h3>Disabled state</h3>
+            <p>Disable a select by adding the <CodeTags type="primary" code="disabled"/> attribute to the desired select and the <CodeTags type="primary" code="form-group"/> where the select resides.</p>
+            <ComponentPreview language="html" codeFigure showCasePanel>
+                <InputGroup type="select" id="disabled-state-example" label="Label" placeholder="Select option" selectOptions={[]} disabled />
+            </ComponentPreview>
+        </section>
+
+        <section>
+            <h3>Javascript methods</h3>
+            <p><CodeTags type="secondary" code="dg.hintTextExpander.init()"/> can be used to initialize all Hint text expanders. Or <CodeTags type="secondary" code="dg.hintTextExpander.init(<hint-text-expander-id>)"/> to initialize a specific one.</p>
+        </section>
     </section>
 );
 

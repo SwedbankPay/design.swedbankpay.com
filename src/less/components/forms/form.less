@@ -40,16 +40,18 @@ fieldset {
             resize: none;
         }
 
-        select {
+        select,
+        .form-group,
+        input + input,
+        .hint-text,
+        .hint-text-expander > * {
             color: @brand-secondary-light-3;
         }
 
-        .form-group {
-            color: @brand-secondary-light-3;
-        }
-
-        input + label {
-            color: @brand-secondary-light-3;
+        .hint-text-expander {
+            button {
+                pointer-events: none;
+            }
         }
 
         .checkbox input[type="checkbox"] {
@@ -279,19 +281,14 @@ legend {
             pointer-events: none;
         }
 
-        .hint-text {
+        .hint-text,
+        .hint-text-expander > * {
             color: @brand-secondary-light-3;
         }
 
-        .help-block-expander {
-            .header,
-            .arrow,
-            .content {
-                color: @brand-secondary-light-3;
-            }
-
-            .header {
-                cursor: not-allowed;
+        .hint-text-expander {
+            button {
+                pointer-events: none;
             }
         }
     }
@@ -324,54 +321,51 @@ legend {
     color: @medium-brown;
 }
 
-.help-block-expander {
+.hint-text-expander {
     display: block;
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
 
-    input {
-        position: absolute;
-        left: -9999px;
-
-        &:focus ~ .header {
-            outline: 1px solid @brand-secondary;
-        }
-    }
-
-    .header {
+    button {
+        all: unset;
         display: flex;
-        cursor: pointer;
         color: @brand-accent-links;
+        padding-right: 0.25rem;
+        border: 1px solid transparent;
+        cursor: pointer;
         font-size: 0.875rem;
 
         .arrow {
-            display: inline-block;
             margin-right: 0.5rem;
-            color: @brand-accent-links;
             font-size: 0.875rem;
             align-self: center;
             transition: transform 0.5s ease;
         }
-    }
 
-    .content {
-        font-size: 0;
-        margin: 0;
-        opacity: 0;
-        padding: 0;
-        color: @medium-brown;
-    }
+        &:focus {
+            border: 1px solid @brand-secondary;
+            border-radius: 0.125rem;
+        }
 
-    input:checked ~ .header {
-        .arrow {
-            transform: rotateZ(180deg);
+        &.content-expanded {
+            .arrow {
+                transform: rotate(180deg);
+                transition: transform 0.3s ease;
+            }
+
+            ~ .content {
+                visibility: visible;
+                height: auto;
+            }
         }
     }
 
-    input:checked ~ .content {
+    .content {
+        visibility: hidden;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        color: @medium-brown;
         font-size: 0.875rem;
-        opacity: 1;
-        height: auto;
-        padding: 5px 0;
     }
 }
 

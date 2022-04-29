@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optional, name, required, className, hintText, expandingHintTitle, errorMessage }) => {
+const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optional, name, required, className, helpBlock, expanderId, expandingHintTitle, errorMessage }) => {
     const attrs = {
         type: "radio",
         id: id || null,
@@ -23,14 +23,16 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
                             <input {...attrs} id={id} defaultChecked={checked}/>{"\n"}
                             <label htmlFor={id}>{label}</label>{"\n"}
                         </div>)}
-                        {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
-                        {hintText && <div className="hint-text">{hintText}</div>}
-                        {expandingHintTitle && 
-                        <label className="help-block-expander">
-                            <input disabled={disabled} type="checkbox"/>
-                            <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
-                            <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
-                    </label>}
+                        {errorMessage && <><div className="help-block">{errorMessage}</div>{"\n"}</>}
+                        {helpBlock && <><p id="hint-text" className="hint-text">{helpBlock}</p>{"\n"}</>}
+                        {expandingHintTitle &&
+                        <div id={expanderId && "hint-text-expander"} className="hint-text-expander">{"\n"}
+                            <button type="button" aria-controls={expanderId} aria-expanded={false}>{"\n"}
+                                <span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}{"\n"}
+                            </button>{"\n"}
+                            <p id={expanderId} className="content" aria-hidden={true}>This information is less important and only a minority of users will need it or the text is very long. In this case; both.</p>{"\n"}
+                        </div>
+                        }
                     </fieldset>
                 </form>
                 : <>
@@ -38,14 +40,6 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
                         <input {...attrs} />{"\n"}
                         {label ? <label htmlFor={id}>{label}</label> : null}{label ? "\n" : null}
                     </div>
-                    {errorMessage ? <div className="help-block">{errorMessage}</div> : null}
-                    {hintText && <div className="hint-text">{hintText}</div>}
-                    {expandingHintTitle && 
-                    <label className="help-block-expander">
-                        <input disabled={disabled} type="checkbox"/>
-                        <span className="header"><span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
-                        <div className="content">This information is less important and only a minority of users will need it or the text is very long. In this case; both.</div>
-                    </label>}
                 </>
             }
         </>
@@ -64,7 +58,7 @@ Radio.propTypes = {
     require: PropTypes.bool,
     tooltip: PropTypes.bool,
     className: PropTypes.string,
-    hintText: PropTypes.string,
+    helpBlock: PropTypes.string,
     expandingHintTitle: PropTypes.string,
     optional: PropTypes.bool
 };

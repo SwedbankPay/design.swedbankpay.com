@@ -1028,8 +1028,12 @@
         }
 
         .form-group {
-            min-width: 17.3rem;
+            min-width: 19rem;
             max-width: 21.25rem;
+
+            .hint-text-expander {
+                max-width: 19rem;
+            }
         }
 
         .component-description {
@@ -1187,6 +1191,14 @@
     }
 
     #checkbox-doc {
+        .showcase-panel {
+            .component-preview-content {
+                form {
+                    max-width: 100%;
+                }
+            }
+        }
+
         .slab-border-error,
         .slab-border-success {
             min-height: 19rem;

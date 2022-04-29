@@ -18,6 +18,8 @@ exports[`Component: InputGroup - renders 1`] = `
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -43,11 +45,14 @@ exports[`Component: InputGroup - renders a form-group with a help block 1`] = `
       required={null}
       type="typetest"
     />
-    <div
+    
+
+    <p
       className="hint-text"
+      id="hint-text"
     >
       testvalue
-    </div>
+    </p>
     
 
   </div>
@@ -61,10 +66,7 @@ exports[`Component: InputGroup - renders a form-group with a label if prop label
   
 
   <label>
-    
-
     this is a text in a label
-     
   </label>
   
 
@@ -80,6 +82,8 @@ exports[`Component: InputGroup - renders a form-group with a label if prop label
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -323,6 +327,8 @@ exports[`Component: InputGroup - renders a form-group with a select field with g
       
 	
     </select>
+    
+
   </div>
 </InputGroup>
 `;
@@ -348,6 +354,8 @@ exports[`Component: InputGroup - renders a form-group with a text-area if type e
       required={null}
       type="textarea"
     />
+    
+
   </div>
 </InputGroup>
 `;
@@ -370,6 +378,8 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -391,6 +401,8 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -412,6 +424,8 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -433,6 +447,8 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -454,6 +470,8 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -475,6 +493,8 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -496,6 +516,8 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -517,6 +539,8 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -538,6 +562,8 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -559,6 +585,8 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -580,6 +608,8 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -601,6 +631,8 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -622,6 +654,8 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -643,6 +677,8 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -664,6 +700,8 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -685,6 +723,8 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -706,6 +746,8 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -727,6 +769,8 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -748,6 +792,8 @@ exports[`Component: InputGroup - throws an error if type prop is not provided 1`
     required={null}
     type={null}
   />
+  
+
 </div>
 `;
 
@@ -769,6 +815,8 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -790,6 +838,8 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -811,6 +861,8 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -832,6 +884,8 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -853,5 +907,7 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;

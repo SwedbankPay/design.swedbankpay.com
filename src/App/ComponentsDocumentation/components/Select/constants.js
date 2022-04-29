@@ -8,7 +8,7 @@ export const selectOverview = {
     id: "no-tabs",
     elements: [
         {
-            component: <InputGroup id="select-showcase-example" type="select" label="Label" placeholder="Select option" selectOptions={["Blueberry", "Blackberry", "Berryberry"]} />,
+            component: <InputGroup id="select-showcase-example" type="select" label="Label" placeholder="Select option" selectOptions={["Blueberry", "Blackberry", "Berryberry"]} hintExpander={true} />,
             options: {
                 checkbox: [
                     {
@@ -29,10 +29,11 @@ export const selectOverview = {
                                 }
                             },
                             {
-                                id: "expander_hint_text",
+                                id: "hint_expander",
                                 name: "Expander hint",
                                 value: {
                                     expandingHintTitle: "Expanding hint text",
+                                    expanderId: "expander-showcase"
                                 }
                             }
                         ]
@@ -52,7 +53,7 @@ export const selectOverview = {
                             {
                                 name: "Error",
                                 value: {
-                                    errorMessage: "Descriptive helpful error message.",
+                                    errorMessage: "Descriptive helpful error message."
                                 }
                             },
                             {
