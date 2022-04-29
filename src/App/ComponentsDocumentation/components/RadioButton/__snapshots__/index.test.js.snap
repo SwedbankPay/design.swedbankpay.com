@@ -141,15 +141,15 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
         options={
           Array [
             Object {
-              "id": "radio-guidelines-example-1",
+              "id": "radio-error-example-1",
               "label": "Label",
             },
             Object {
-              "id": "radio-guidelines-example-2",
+              "id": "radio-error-example-2",
               "label": "Label",
             },
             Object {
-              "id": "radio-guidelines-example-3",
+              "id": "radio-error-example-3",
               "label": "Label",
             },
           ]

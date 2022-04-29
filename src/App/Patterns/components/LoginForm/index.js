@@ -40,7 +40,6 @@ const LoginForm = ({ additionalText,
         defaultValue: defaultPassword ? "qwerty1234" : null,
         errorMessage: error ? "Incorrect password" : null,
         id: passwordId,
-        helpBlock: error ? error : false,
         label: passwordLabel ? passwordLabel : "Password",
         type: "password",
         validationState: error ? "error" : null
