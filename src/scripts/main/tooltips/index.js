@@ -23,7 +23,7 @@ const _createTooltip = tooltip => {
 
     tooltip.addEventListener("focus", () => {
         tip.style.visibility = "visible";
-    })
+    });
 
     tooltip.addEventListener("mouseover", () => {
         tip.style.visibility = "visible";
