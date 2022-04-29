@@ -173,7 +173,6 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
 
             this.state = {
                 activeTab: this.props.showCasePanelAdvanced.elements[0],
-                component: this.props.showCasePanelAdvanced.elements[0].component,
                 hideOptions: this.props.showCasePanelAdvanced.hideOptions,
                 optionsOpen: window.innerWidth > 1200, // XL grid breakpoint
                 activeOptions: this.props.showCasePanelAdvanced.elements[0].activeOptions ? [...this.props.showCasePanelAdvanced.elements[0].activeOptions] : []
