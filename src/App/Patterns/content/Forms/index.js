@@ -123,7 +123,7 @@ const HowToDesignForms = () => {
 
             <section>
                 <h3>Label and hints</h3>
-                <p>It is important to give the users the information required to fill in the form and help them be successful the first time. An input must have a label that clearly describes the type of input a field requires. The label can be complemented with a hint text or a hint expander to provide clarifying details, try do avoid using both a visible hint text and a hint expander.</p> 
+                <p>It is important to give the users the information required to fill in the form and help them be successful the first time. An input must have a label that clearly describes the type of input a field requires. The label can be complemented with a hint text or a hint expander to provide clarifying details, try do avoid using both a visible hint text and a hint expander.</p>
                 <p>Consider the following to decide where to place the information:</p>
                 <ul className="list list-bullet">
                     <li>If the information is very important and most or all users will need it, make it part of the <b>label</b>.</li>

@@ -1,17 +1,15 @@
 import React from "react";
 import TooltipComponent from "@components/Tooltips";
 
-import { tooltip } from "@src/scripts/main";
-
 const Tooltip = ({ position }) => (
-    <TooltipComponent position={position} icon="edit" text="Edit"  />
+    <TooltipComponent position={position} icon="edit" text="Edit" />
 );
 
 export const tooltipShowCase = {
     id: "overviewTooltips",
     elements: [
         {
-            component: <Tooltip/>, 
+            component: <Tooltip/>,
             options: {
                 radio: [
                     {

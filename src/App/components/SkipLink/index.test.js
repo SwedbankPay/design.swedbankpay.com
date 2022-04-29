@@ -12,5 +12,5 @@ describe("Component: SkipLink", () => {
         const wrapper = shallow(<SkipLink/>);
 
         expect(wrapper).toMatchSnapshot();
-    })
-})
+    });
+});

@@ -32,4 +32,4 @@ const SkipLink = () => (
 export default SkipLink;
 
 /* For testing */
-export { Overview, DeveloperDocumentation};
+export { Overview, DeveloperDocumentation };

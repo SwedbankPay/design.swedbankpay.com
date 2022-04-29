@@ -47,31 +47,29 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
     </li>
   </ul>
   <section
-    key="[object Object]"
+    key="[object Object]0"
   >
     <h3>
       Hint text
     </h3>
     <p>
-      <p>
-        A hint text should complement the label and provide clarifying details. It can be used to:
-      </p>
-      <ul
-        className="list list-bullet"
-      >
-        <li>
-          Provide an example of what to enter
-        </li>
-        <li>
-          Explain why you are asking a certain question
-        </li>
-        <li>
-          Inform the user about where to find the requested information
-        </li>
-      </ul>
-      <p>
-        Primarily use the visible by default hint text and secondarily a hint expander. Try to avoid using both a visible hint text and expander.
-      </p>
+      A hint text should complement the label and provide clarifying details. It can be used to:
+    </p>
+    <ul
+      className="list list-bullet"
+    >
+      <li>
+        Provide an example of what to enter
+      </li>
+      <li>
+        Explain why you are asking a certain question
+      </li>
+      <li>
+        Inform the user about where to find the requested information
+      </li>
+    </ul>
+    <p>
+      Primarily use the visible by default hint text and secondarily a hint expander. Try to avoid using both a visible hint text and expander.
     </p>
     <div
       className="row placeholder-guideline"
@@ -132,7 +130,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
     </div>
   </section>
   <section
-    key="Prefixes and postfixes are useful when there’s a commonly understood icon, symbol or abbreviation for the type of information the user needs to enter since it can reduce mental load."
+    key="[object Object]1"
   >
     <h3>
       Prefix and postfix
@@ -252,7 +250,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
     </div>
   </section>
   <section
-    key="When input isn’t accepted, input fields should display a short and concise error message, it should be no more than a single sentence."
+    key="[object Object]2"
   >
     <h3>
       Error message
@@ -332,97 +330,117 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
   >
     Developer documentation
   </h2>
-  <h3
-    className="mt-3"
-  >
-    Autocomplete
-  </h3>
-  <p>
-    Add 
-    <CodeTags
-      code="autocomplete"
-      type="primary"
-    />
-     attributes to input fields when it is possible to make a form easier for users to fill. 
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <InputGroup
-      autoComplete="name"
-      id="developer-documentation-example"
-      label="Name"
-      type="text"
-    />
-  </ComponentPreview>
-  <h3>
-    Error message
-  </h3>
-  <p>
-    To display the error state, add the 
-    <CodeTags
-      code=".has-error"
-      type="secondary"
-    />
-     class to the parent element, then add the 
-    <CodeTags
-      code=".help-block"
-      type="secondary"
-    />
-     element as the last child with the error message.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <InputGroup
-      defaultValue="Input text"
-      errorMessage="Descriptive helpful error message."
-      id="developer-documentation-error-example"
-      label="Input label"
-      type="text"
-    />
-  </ComponentPreview>
-  <h3>
-    Disabled state
-  </h3>
-  <p>
-    Disable a input field by adding the 
-    <CodeTags
-      code="disabled"
-      type="primary"
-    />
-     attribute to the desired input field and the 
-    <CodeTags
-      code="form-group"
-      type="primary"
-    />
-     where the input field resides.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <InputGroup
-      disabled={true}
-      label="Input label"
-      type="text"
-    />
-  </ComponentPreview>
-  <h3>
-    Javascript methods
-  </h3>
-  <p>
-    <CodeTags
-      code="dg.validation.init()"
-      type="primary"
-    />
-     can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.
-  </p>
+  <section>
+    <h3
+      className="mt-3"
+    >
+      Autocomplete
+    </h3>
+    <p>
+      Add 
+      <CodeTags
+        code="autocomplete"
+        type="primary"
+      />
+       attributes to input fields when it is possible to make a form easier for users to fill. 
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      showCasePanel={true}
+    >
+      <InputGroup
+        autoComplete="name"
+        id="developer-documentation-example"
+        label="Name"
+        type="text"
+      />
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Error message
+    </h3>
+    <p>
+      To display the error state, add the 
+      <CodeTags
+        code=".has-error"
+        type="secondary"
+      />
+       class to the parent element, then add the 
+      <CodeTags
+        code=".help-block"
+        type="secondary"
+      />
+       element as the last child with the error message.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      showCasePanel={true}
+    >
+      <InputGroup
+        defaultValue="Input text"
+        errorMessage="Descriptive helpful error message."
+        id="developer-documentation-error-example"
+        label="Input label"
+        type="text"
+      />
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Disabled state
+    </h3>
+    <p>
+      Disable a input field by adding the 
+      <CodeTags
+        code="disabled"
+        type="primary"
+      />
+       attribute to the desired input field and the 
+      <CodeTags
+        code="form-group"
+        type="primary"
+      />
+       where the input field resides.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      showCasePanel={true}
+    >
+      <InputGroup
+        disabled={true}
+        label="Input label"
+        type="text"
+      />
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Javascript methods
+    </h3>
+    <p>
+      <CodeTags
+        code="dg.validation.init()"
+        type="secondary"
+      />
+       can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.
+    </p>
+    <p>
+      <CodeTags
+        code="dg.hintTextExpander.init()"
+        type="secondary"
+      />
+       can be used to initialize all Hint text expanders. Or 
+      <CodeTags
+        code="dg.hintTextExpander.init(<hint-expander-id>)"
+        type="secondary"
+      />
+       to initialize a specific one.
+    </p>
+  </section>
 </section>
 `;
 
@@ -447,6 +465,7 @@ exports[`Component: InputField Overview renders 1`] = `
         "elements": Array [
           Object {
             "component": <InputGroup
+              hintExpander={true}
               id="input-showcase-example"
               label="Label"
               type="text"
@@ -479,10 +498,10 @@ exports[`Component: InputField Overview renders 1`] = `
                       },
                     },
                     Object {
-                      "id": "expander_hint_text",
-                      "name": "Expander hint",
+                      "id": "hint_expander",
+                      "name": "Hint expander",
                       "value": Object {
-                        "expandingHintId": "expandingHintExampleId",
+                        "expanderId": "expander-showcase",
                         "expandingHintTitle": "Expanding hint text",
                       },
                     },
@@ -550,6 +569,7 @@ exports[`Component: InputField Overview renders 1`] = `
           },
           Object {
             "component": <InputGroup
+              hintExpander={true}
               label="Label"
               type="textarea"
             />,
@@ -574,10 +594,10 @@ exports[`Component: InputField Overview renders 1`] = `
                       },
                     },
                     Object {
-                      "id": "expander_hint_textarea",
-                      "name": "Expander hint",
+                      "id": "hint_expander_textarea",
+                      "name": "Hint expander",
                       "value": Object {
-                        "expandingHintId": "expandingHintTextAreaExample",
+                        "expanderId": "expander-showcase",
                         "expandingHintTitle": "Expanding hint text",
                       },
                     },

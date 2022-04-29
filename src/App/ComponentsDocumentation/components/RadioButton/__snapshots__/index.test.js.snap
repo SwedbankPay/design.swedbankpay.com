@@ -73,63 +73,59 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
   <h2>
     Developer documentation
   </h2>
-  <span
-    className="h3 d-inline-block mt-3"
-  >
-    Disabled state
-  </span>
-  <p>
-    Disable a radio button by adding 
-    <CodeTags
-      code="disabled"
-      type="primary"
-    />
-     attribute to the desired radio button.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="d-flex justify-content-center"
-    >
-      <Radio
-        checked={true}
-        disabled={true}
-        id="radio-example-10"
-        label="Radio button label"
-        name="radio-example"
+  <section>
+    <h3>
+      Disabled state
+    </h3>
+    <p>
+      Disable a radio button by adding 
+      <CodeTags
+        code="disabled"
+        type="primary"
       />
-    </div>
-  </ComponentPreview>
-  <span
-    className="h3 d-inline-block mt-3"
-  >
-    Error state
-  </span>
-  <p>
-    To display the error state, add the 
-    <CodeTags
-      code=".has-error"
-      type="primary"
-    />
-     class to the parent element, then add the 
-    <CodeTags
-      code="help-block"
-      type="secondary"
-    />
-     element as the last child with the error message.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="d-flex justify-content-center"
+       attribute to the desired radio button.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      removeOuterTag={true}
+      showCasePanel={true}
+    >
+      <div
+        className="d-flex justify-content-center"
+      >
+        <Radio
+          checked={true}
+          disabled={true}
+          id="radio-example-10"
+          label="Radio button label"
+          name="radio-example"
+        />
+      </div>
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Error state
+    </h3>
+    <p>
+      To display the error state, add the 
+      <CodeTags
+        code=".has-error"
+        type="primary"
+      />
+       class to the parent element, then add the 
+      <CodeTags
+        code="help-block"
+        type="secondary"
+      />
+       element as the last child with the error message.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      removeOuterTag={true}
+      showCasePanel={true}
     >
       <Radio
         errorMessage="Error message"
@@ -155,8 +151,14 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
           ]
         }
       />
-    </div>
-  </ComponentPreview>
+       can be used to initialize all Hint text expanders. Or 
+      <CodeTags
+        code="dg.hintTextExpander.init(<hint-text-expander-id>)"
+        type="secondary"
+      />
+       to initialize a specific one.
+    </p>
+  </section>
 </section>
 `;
 
@@ -285,6 +287,7 @@ exports[`Component: RadioButton Overview renders 1`] = `
             "component": <Radio
               group={true}
               groupTitle="Group label"
+              hintExpander={true}
               name="radio-group-example"
               options={
                 Array [
@@ -321,10 +324,10 @@ exports[`Component: RadioButton Overview renders 1`] = `
                       },
                     },
                     Object {
-                      "id": "hint_text_expander",
+                      "id": "hint_expander",
                       "name": "Hint expander",
                       "value": Object {
-                        "expandingHintId": "expanderRadioExample",
+                        "expanderId": "expander-showcase",
                         "expandingHintTitle": "Expander hint text",
                       },
                     },

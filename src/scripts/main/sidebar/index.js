@@ -99,8 +99,6 @@ class Sidebar2 {
         this._initListeners();
     }
 
-
-
     _popStateListener () {
         if (this.el && !this.el.querySelector(".main-nav-li.active")
             .querySelector(".sidebar-secondary-nav")) {

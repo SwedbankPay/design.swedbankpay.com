@@ -1,4 +1,4 @@
-const _repositionTooltip = (e) => {
+const _repositionTooltip = e => {
     const tooltipContent = e.target.nextElementSibling;
     const tooltipContentPosition = tooltipContent.getBoundingClientRect();
 
@@ -28,7 +28,6 @@ const _createTooltip = tooltip => {
     tooltip.addEventListener("mouseover", () => {
         tip.style.visibility = "visible";
     });
-
 
 };
 

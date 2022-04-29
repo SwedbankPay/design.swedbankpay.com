@@ -23,11 +23,11 @@ const InputOptions = () => (
                         }
                     },
                     {
-                        id: "expander_hint_text",
-                        name: "Expander hint",
+                        id: "hint_expander",
+                        name: "Hint expander",
                         value: {
                             expandingHintTitle: "Expanding hint text",
-                            expandingHintId: "expandingHintExampleId"
+                            expanderId: "expander-showcase"
                         }
                     }
                 ]
@@ -96,19 +96,18 @@ export const inputShowCase = {
     elements: [
         {
             tab: "Input field",
-            component: <InputGroup type="text" label="Label" id="input-showcase-example"/>,
+            component: <InputGroup type="text" label="Label" id="input-showcase-example" hintExpander={true} />,
             options: InputOptions(),
             title: "Input field",
             description: <>
-            <p>Use an input field when the expected user input is a single line of text. The default input type is text but it can also be specified as for example Email which will make it automatically validated when submitted or Password which will mask the characters submitted.</p>
-            <p>Input fields can have prefixes or suffixes which can help the user more quickly understand what kind of information that is requested. These can be icons as well as text symbols or currency abbreviations like %, € or kr.</p>
-
+                <p>Use an input field when the expected user input is a single line of text. The default input type is text but it can also be specified as for example Email which will make it automatically validated when submitted or Password which will mask the characters submitted.</p>
+                <p>Input fields can have prefixes or suffixes which can help the user more quickly understand what kind of information that is requested. These can be icons as well as text symbols or currency abbreviations like %, € or kr.</p>
 
             </>
         },
         {
             tab: "Text area",
-            component: <InputGroup type="textarea" label="Label" />,
+            component: <InputGroup type="textarea" label="Label" hintExpander={true} />,
             options: {
                 checkbox: [
                     {
@@ -130,11 +129,11 @@ export const inputShowCase = {
                                 }
                             },
                             {
-                                id: "expander_hint_textarea",
-                                name: "Expander hint",
+                                id: "hint_expander_textarea",
+                                name: "Hint expander",
                                 value: {
                                     expandingHintTitle: "Expanding hint text",
-                                    expandingHintId: "expandingHintTextAreaExample"
+                                    expanderId: "expander-showcase"
                                 }
                             }
                         ]
@@ -177,14 +176,14 @@ export const contentGuidelines = [
     {
         heading: "Hint text",
         lead: <>
-                <p>A hint text should complement the label and provide clarifying details. It can be used to:</p>
-                <ul className="list list-bullet">
-                    <li>Provide an example of what to enter</li>
-                    <li>Explain why you are asking a certain question</li>
-                    <li>Inform the user about where to find the requested information</li>
-                </ul>
-                <p>Primarily use the visible by default hint text and secondarily a hint expander. Try to avoid using both a visible hint text and expander.</p>
-            </>,
+            <p>A hint text should complement the label and provide clarifying details. It can be used to:</p>
+            <ul className="list list-bullet">
+                <li>Provide an example of what to enter</li>
+                <li>Explain why you are asking a certain question</li>
+                <li>Inform the user about where to find the requested information</li>
+            </ul>
+            <p>Primarily use the visible by default hint text and secondarily a hint expander. Try to avoid using both a visible hint text and expander.</p>
+        </>,
         examples: [
             {
                 slabType: "success",
@@ -202,7 +201,7 @@ export const contentGuidelines = [
     },
     {
         heading: "Prefix and postfix",
-        lead: "Prefixes and postfixes are useful when there’s a commonly understood icon, symbol or abbreviation for the type of information the user needs to enter since it can reduce mental load.",
+        lead: <p>Prefixes and postfixes are useful when there’s a commonly understood icon, symbol or abbreviation for the type of information the user needs to enter since it can reduce mental load.</p>,
         examples: [
             {
                 slabType: "success",
@@ -229,7 +228,7 @@ export const contentGuidelines = [
     },
     {
         heading: "Error message",
-        lead: "When input isn’t accepted, input fields should display a short and concise error message, it should be no more than a single sentence.",
+        lead: <p>When input isn’t accepted, input fields should display a short and concise error message, it should be no more than a single sentence.</p>,
         examples: [
             {
                 slabType: "success",

@@ -11,7 +11,7 @@ const bottom = "bottom";
 const left = "left";
 const right = "right";
 
-describe("Component: Tooltip - ", () =>{
+describe("Component: Tooltip -", () => {
     it("is defined", () => {
         expect(Tooltip).toBeDefined();
     });

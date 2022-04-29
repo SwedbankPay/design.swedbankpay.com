@@ -35,6 +35,7 @@ const InputGroup = ({
     errorMessage,
     expandingHintTitle,
     expandingHintContent,
+    expanderId,
     optional,
     postfix,
     boxSize,
@@ -81,7 +82,7 @@ const InputGroup = ({
 
     return (
         <div className={formGroupClasses}>{"\n"}
-            {label ? <label htmlFor={id}>{"\n"}{label} {optional && "(optional)"}
+            {label ? <label htmlFor={id}>{label}{optional && " (optional)"}
             </label> : null}{label ? "\n" : null}
             {prefixValue || postfixValue || feedbackIcon ?
                 <div className={inputGrpClasses}>{"\n"}
@@ -114,17 +115,20 @@ const InputGroup = ({
                                 ))}{"\n\t"}
                             </select>
                             :
-                            <input {...attrs} />}
+                            <input {...attrs} />}{"\n"}
                 </>
             }
             {errorMessage && <><div className="help-block">{errorMessage}</div>{"\n"}</>}
-            {helpBlock && <><div className="hint-text" id={hintTextId}>{helpBlock}</div>{"\n"}</>}
-            {expandingHintTitle && 
-            <label className="help-block-expander">{"\n"}
-                <input disabled={disabled} type="checkbox"/>{"\n"}
-                <span className="header"><span aria-hidden="true" className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}</span>
-                <div className="content" id={expandingHintId}>{expandingHintContent ? expandingHintContent : "This information is less important and only a minority of users will need it or the text is very long. In this case; both."}</div>
-            </label>}
+            {helpBlock && <><p id="hint-text" className="hint-text">{helpBlock}</p>{"\n"}</>}
+            {expandingHintTitle &&
+            <div id={expanderId && "hint-text-expander"} className="hint-text-expander">{"\n"}
+                <button aria-controls={expanderId} aria-expanded={false}>{"\n"}
+                    <span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}{"\n"}
+                </button>{"\n"}
+                <p id={expanderId} className="content" aria-hidden={true}>{expandingHintContent
+                    ? expandingHintContent
+                    : "This information is less important and only a minority of users will need it or the text is very long. In this case; both."}</p>{"\n"}
+            </div>}
         </div>
     );
 };
@@ -159,6 +163,7 @@ InputGroup.propTypes = {
     boxSize: PropTypes.oneOf(["medium", "small", ""]),
     expandingHintTitle: PropTypes.string,
     expandingHintContent: PropTypes.string,
+    expanderId: PropTypes.string
 };
 
 export default InputGroup;
