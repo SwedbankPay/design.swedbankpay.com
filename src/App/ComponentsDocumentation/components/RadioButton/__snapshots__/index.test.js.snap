@@ -127,29 +127,44 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
       removeOuterTag={true}
       showCasePanel={true}
     >
-      <Radio
-        errorMessage="Error message"
-        group={true}
-        groupTitle="Group label"
-        id="radio-example-11"
-        label="Radio button label"
-        name="radio-example"
-        options={
-          Array [
-            Object {
-              "id": "radio-error-example-1",
-              "label": "Label",
-            },
-            Object {
-              "id": "radio-error-example-2",
-              "label": "Label",
-            },
-            Object {
-              "id": "radio-error-example-3",
-              "label": "Label",
-            },
-          ]
-        }
+      <div
+        className="d-flex justify-content-center"
+      >
+        <Radio
+          errorMessage="Error message"
+          group={true}
+          groupTitle="Group label"
+          id="radio-example-11"
+          label="Radio button label"
+          name="radio-example"
+          options={
+            Array [
+              Object {
+                "id": "radio-error-example-1",
+                "label": "Label",
+              },
+              Object {
+                "id": "radio-error-example-2",
+                "label": "Label",
+              },
+              Object {
+                "id": "radio-error-example-3",
+                "label": "Label",
+              },
+            ]
+          }
+        />
+      </div>
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Javascript methods
+    </h3>
+    <p>
+      <CodeTags
+        code="dg.hintTextExpander.init()"
+        type="secondary"
       />
        can be used to initialize all Hint text expanders. Or 
       <CodeTags
@@ -319,7 +334,7 @@ exports[`Component: RadioButton Overview renders 1`] = `
                       "id": "hint_text",
                       "name": "Hint text",
                       "value": Object {
-                        "hintText": "Hint text",
+                        "helpBlock": "Hint text",
                         "hintTextId": "hintTextRadioExample",
                       },
                     },

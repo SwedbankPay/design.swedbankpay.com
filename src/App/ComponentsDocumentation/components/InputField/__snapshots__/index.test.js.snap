@@ -19,13 +19,11 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
         <InputGroup
           defaultValue="Input text"
           helpBlock="Hint text"
-          hintTextId="contentGuidelinesExample"
           id="input-guidelines-example"
           label="Label"
           type="text"
         />
         <InputGroup
-          expandingHintId="contentGuidelinesExpandingExample"
           expandingHintTitle="Expander hint text"
           label="Label"
           type="textarea"

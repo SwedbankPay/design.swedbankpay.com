@@ -325,6 +325,7 @@ exports[`Component: Checkbox Overview renders 1`] = `
                       "name": "Hint text",
                       "value": Object {
                         "helpBlock": "Hint text",
+                        "hintTextId": "hintTextCheckboxExample",
                       },
                     },
                     Object {
