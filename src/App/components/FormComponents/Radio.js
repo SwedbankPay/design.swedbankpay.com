@@ -8,7 +8,8 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
         name: name || null,
         disabled: disabled || null,
         defaultChecked: checked || null,
-        required
+        required,
+        "aria-describedby": helpBlock || expandingHintTitle ? `${helpBlock ? helpBlock : ""}${expandingHintTitle ? ` ${expanderId}` : ""}` : null
     };
 
     return (
@@ -56,7 +57,6 @@ Radio.propTypes = {
     groupTitle: PropTypes.string,
     options: PropTypes.array,
     require: PropTypes.bool,
-    tooltip: PropTypes.bool,
     className: PropTypes.string,
     helpBlock: PropTypes.string,
     expandingHintTitle: PropTypes.string,

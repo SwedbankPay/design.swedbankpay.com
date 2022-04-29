@@ -12,7 +12,9 @@
     position: relative;
 
     .nav-container {
-        display: contents;
+        display: flex;
+        width: 100%;
+        justify-content: center;
     }
 
     &.topbar-sticky {
@@ -63,6 +65,7 @@
         padding: 0;
         border: 0;
         outline: 0;
+        align-self: center;
 
         &:hover {
             cursor: pointer;
@@ -92,6 +95,7 @@
         border: 0;
         outline: 0;
         cursor: pointer;
+        align-self: center;
 
         &:hover {
             color: @brand-secondary-dark-2;

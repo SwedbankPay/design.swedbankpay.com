@@ -37,7 +37,7 @@ const HowTo = () => (
 );
 
 const Overview = () => (
-    <section>
+    <section id="checkbox-overview">
         <h2 id="overview">Overview</h2>
 
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={checkboxShowCase} />
@@ -57,13 +57,14 @@ const ContentGuidelines = () => (
     <section>
         <h2 id="content-guidelines">Content guidelines</h2>
         <div className="slab slab-plain">
-            <div className="d-flex flex-column align-items-center py-5">
-                <CheckboxComponent groupTitle="Group label" name="radio-guidelines" options={guidelineOptions} group />
+            <div className="d-flex flex-column align-items-center py-3">
+                <CheckboxComponent groupTitle="Group label" name="radio-guidelines" options={guidelineOptions} group hintText="Hint text"/>
             </div>
         </div>
         <ul className="list list-bullet">
             <li>The <b>group label</b> should be descriptive, explaining the context of the options to choose from. </li>
             <li>The <b>checkbox labels</b> should be short, to the point and clearly explain the option. It is also preferred to have fewer than three words per label as longer words could extend a label to multiple rows which could disrupt the reading experience.</li>
+            <li>A <b>hint text</b> can be used to complement the group label and provide clarifying details. If the information is long or won&apos;t be needed by the majority of users, a hint expander can be used instead of a text that is visible by default. </li>
         </ul>
     </section>
 );

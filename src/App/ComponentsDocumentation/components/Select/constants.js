@@ -25,7 +25,8 @@ export const selectOverview = {
                                 id: "hint_text_select",
                                 name: "Hint text",
                                 value: {
-                                    helpBlock: "Hint text"
+                                    helpBlock: "Hint text",
+                                    hintTextId: "selectHintTextExample",
                                 }
                             },
                             {
@@ -67,7 +68,7 @@ export const selectOverview = {
                 ]
             },
             title: "Select",
-            description: "The select component looks similar to an input field in terms of structure, both with a label and placeholder text. But it does function differently and when activated expands and displays a list of options."
+            description: "The select component looks similar to an input field but works differently. When activated it expands and displays a list of selectable options."
         }
     ]
 };

@@ -56,9 +56,7 @@ const ContentGuidelines = () => (
             <div><Togglebox label="Label" labelTop id="toggle-disable-example"/></div>
         </div>
         <ul className="list list-bullet">
-            <li>The label should be short and concise, preferably three words or less.</li>
-            <li>Label should be written as to describe the on state of the toggle.</li>
-            <li>Avoid using negations such as “Notifications Off”, which would mean the user would have to turn the switch on to turn the setting off.</li>
+            <li>The label should be short and concise preferably three words or less. Avoid using negations such as “Notifications Off”, which would mean the user would have to turn the switch on to turn the setting off.</li>
         </ul>
     </>
 );

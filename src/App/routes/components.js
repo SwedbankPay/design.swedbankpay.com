@@ -242,7 +242,8 @@ module.exports = [
                 path: "/components/tables",
                 componentPath: "components/Tables",
                 icon: "view_list",
-                outlined: true
+                outlined: true,
+                statusBadges: ["updated"]
             },
             {
                 title: "Tabs",

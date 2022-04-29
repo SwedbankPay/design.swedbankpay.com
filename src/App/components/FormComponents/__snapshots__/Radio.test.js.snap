@@ -21,6 +21,7 @@ exports[`Component: Radio - renders checkbox group with disabled state 1`] = `
         
 
         <input
+          aria-describedby={null}
           disabled={true}
           id="radio-example-1"
           name={null}
@@ -43,6 +44,7 @@ exports[`Component: Radio - renders checkbox group with disabled state 1`] = `
         
 
         <input
+          aria-describedby={null}
           disabled={true}
           id="radio-example-2"
           name={null}
@@ -84,6 +86,7 @@ exports[`Component: Radio - renders checkbox group with groupTitle 1`] = `
         
 
         <input
+          aria-describedby={null}
           disabled={null}
           id="radio-example-1"
           name={null}
@@ -106,6 +109,7 @@ exports[`Component: Radio - renders checkbox group with groupTitle 1`] = `
         
 
         <input
+          aria-describedby={null}
           disabled={null}
           id="radio-example-2"
           name={null}
@@ -134,6 +138,7 @@ exports[`Component: Radio - renders checked 1`] = `
     
 
     <input
+      aria-describedby={null}
       defaultChecked={true}
       disabled={null}
       id={null}
@@ -154,6 +159,7 @@ exports[`Component: Radio - renders disabled 1`] = `
     
 
     <input
+      aria-describedby={null}
       defaultChecked={null}
       disabled={true}
       id={null}
@@ -186,6 +192,7 @@ exports[`Component: Radio - renders radio group 1`] = `
         
 
         <input
+          aria-describedby={null}
           disabled={null}
           id="radio-example-1"
           name={null}
@@ -208,6 +215,7 @@ exports[`Component: Radio - renders radio group 1`] = `
         
 
         <input
+          aria-describedby={null}
           disabled={null}
           id="radio-example-2"
           name={null}
@@ -236,6 +244,7 @@ exports[`Component: Radio - renders with id and label 1`] = `
     
 
     <input
+      aria-describedby={null}
       defaultChecked={null}
       disabled={null}
       id="test"
@@ -263,6 +272,7 @@ exports[`Component: Radio - renders with name 1`] = `
     
 
     <input
+      aria-describedby={null}
       defaultChecked={null}
       disabled={null}
       id={null}
@@ -283,6 +293,7 @@ exports[`Component: Radio - renders without label 1`] = `
     
 
     <input
+      aria-describedby={null}
       defaultChecked={null}
       disabled={null}
       id={null}

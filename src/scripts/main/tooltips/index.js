@@ -21,11 +21,13 @@ const _createTooltip = tooltip => {
         }
     });
 
-    tooltip.addEventListener("click", e => {
+    tooltip.addEventListener("focus", () => {
         tip.style.visibility = "visible";
     });
 
-    tooltip.addEventListener("mouseover", _repositionTooltip);
+    tooltip.addEventListener("mouseover", () => {
+        tip.style.visibility = "visible";
+    });
 
 };
 

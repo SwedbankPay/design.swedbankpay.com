@@ -26,6 +26,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
       <InputGroup
         className="mb-0"
         helpBlock="Hint text"
+        hintTextId="formsHintTextExample"
         id="guideline-input-example"
         label="Input label"
         placeholder="Placeholder text"
@@ -57,6 +58,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
       </div>
       <Radio
         className="mb-0 forms-radio-example"
+        expandingHintId="expandingFormsRadioExample"
         expandingHintTitle="Expander hint text"
         group={true}
         groupTitle="Input label"
@@ -183,13 +185,13 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
       .
     </li>
     <li
-      key="Help"
+      key="Hints"
     >
       <b>
-        Help
+        Hints
       </b>
        
-      Provides in-context guidance for the user through a placeholder text or a clickable help icon
+      Provides in-context guidance for the user through an always visible hint text or hint expander which displays more information when expanded.
     </li>
     <li
       key="Buttons"
@@ -299,7 +301,6 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
         <InputGroup
           defaultValue="Name.com"
           errorMessage="The email address must include \\"@\\""
-          helpBlock={true}
           id="input-error-client-example"
           label="Email"
           type="text"
@@ -612,7 +613,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
         Do
       </span>
       <div
-        className="col-12 col-sm-8 px-0"
+        className="col-12 col-sm-8 m-auto px-0"
       >
         <InputGroup
           id="layout-address-example"
@@ -738,10 +739,18 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
       className="list list-bullet"
     >
       <li>
-        If the information is very important and most or all users will need it, make it part of the label.
+        If the information is very important and most or all users will need it, make it part of the 
+        <b>
+          label
+        </b>
+        .
       </li>
       <li>
-        If the information is important and many users will need it, provide hint text that is visible by default.
+        If the information is important and many users will need it, provide 
+        <b>
+          hint text
+        </b>
+         that is visible by default.
       </li>
       <li>
         If the information is less important and only a minority of users will need it, put it in a 
@@ -767,6 +776,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
           </span>
           <InputGroup
             helpBlock="YYYYMMDDNNNN"
+            hintTextId="personalIdNumberExample"
             id="personal-identification-number-example"
             label="Personal identification number"
             type="text"
@@ -788,6 +798,8 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
             Do
           </span>
           <InputGroup
+            expandingHintContent="Three to four digits on the back or the front of your card."
+            expandingHintId="expandingWhereToFindExample"
             expandingHintTitle="Where to find the code?"
             id="cvc-example"
             label="Security code (CVC)"
@@ -955,7 +967,6 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
           <InputGroup
             defaultValue="Name.com"
             errorMessage="The email address must include \\"@\\""
-            helpBlock={true}
             id="input-error-do-example"
             label="Email address"
             type="text"
@@ -977,7 +988,6 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
           <InputGroup
             defaultValue="Name.com"
             errorMessage="Invalid input"
-            helpBlock={true}
             id="input-error-dont-example"
             label="Email address"
             type="text"
@@ -1031,6 +1041,7 @@ exports[`Forms: index Overview renders 1`] = `
                     />
                     <InputGroup
                       expandingHintContent="If you select a subject it will make it easier for our support team to handle your request which will make the processing time much faster."
+                      expandingHintId="expandingHintFormsExample"
                       expandingHintTitle="Why should you select subject?"
                       id="form-select-example"
                       label="Subject"

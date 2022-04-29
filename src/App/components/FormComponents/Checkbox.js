@@ -8,7 +8,8 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
         name,
         disabled: disabled || null,
         defaultChecked: checked || null,
-        required
+        required,
+        "aria-describedby": helpBlock || expandingHintTitle ? `${helpBlock ? "hint-text" : null}${expandingHintTitle ? ` ${expanderId}` : null}` : null
     };
 
     return (

@@ -7,7 +7,6 @@ const Tooltip = ({ title, text, className, position, id, icon, isVisible }) => {
         "tooltip",
         "btn btn-link",
         position && `tooltip-${position}`,
-        isVisible && "isVisible",
         className && `${className}`
     );
 
@@ -25,8 +24,7 @@ const Tooltip = ({ title, text, className, position, id, icon, isVisible }) => {
 Tooltip.propTypes = {
     position: PropTypes.string,
     text: PropTypes.string.isRequired,
-    icon: PropTypes.string,
-    isVisible: PropTypes.bool
+    icon: PropTypes.string
 };
 
 export default Tooltip;
