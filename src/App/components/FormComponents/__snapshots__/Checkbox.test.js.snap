@@ -8,7 +8,7 @@ exports[`Component: Checkbox - renders 1`] = `
     
 
     <input
-      aria-describedby=""
+      aria-describedby={null}
       defaultChecked={null}
       disabled={null}
       id={null}
@@ -39,7 +39,7 @@ exports[`Component: Checkbox - renders checkbox group 1`] = `
         
 
         <input
-          aria-describedby=""
+          aria-describedby={null}
           defaultChecked={null}
           disabled={null}
           id="radio-example-1"
@@ -62,7 +62,7 @@ exports[`Component: Checkbox - renders checkbox group 1`] = `
         
 
         <input
-          aria-describedby=""
+          aria-describedby={null}
           defaultChecked={null}
           disabled={null}
           id="radio-example-2"
@@ -85,7 +85,7 @@ exports[`Component: Checkbox - renders checkbox group 1`] = `
         
 
         <input
-          aria-describedby=""
+          aria-describedby={null}
           defaultChecked={null}
           disabled={null}
           id="radio-example-3"
@@ -121,7 +121,7 @@ exports[`Component: Checkbox - renders checkbox group with disabled state 1`] = 
         
 
         <input
-          aria-describedby=""
+          aria-describedby={null}
           defaultChecked={null}
           disabled={true}
           id="radio-example-1"
@@ -144,7 +144,7 @@ exports[`Component: Checkbox - renders checkbox group with disabled state 1`] = 
         
 
         <input
-          aria-describedby=""
+          aria-describedby={null}
           defaultChecked={null}
           disabled={true}
           id="radio-example-2"
@@ -167,7 +167,7 @@ exports[`Component: Checkbox - renders checkbox group with disabled state 1`] = 
         
 
         <input
-          aria-describedby=""
+          aria-describedby={null}
           defaultChecked={null}
           disabled={true}
           id="radio-example-3"
@@ -202,7 +202,7 @@ exports[`Component: Checkbox - renders checkbox group with error 1`] = `
         
 
         <input
-          aria-describedby=""
+          aria-describedby={null}
           defaultChecked={null}
           disabled={null}
           id="radio-example-1"
@@ -225,7 +225,7 @@ exports[`Component: Checkbox - renders checkbox group with error 1`] = `
         
 
         <input
-          aria-describedby=""
+          aria-describedby={null}
           defaultChecked={null}
           disabled={null}
           id="radio-example-2"
@@ -248,7 +248,7 @@ exports[`Component: Checkbox - renders checkbox group with error 1`] = `
         
 
         <input
-          aria-describedby=""
+          aria-describedby={null}
           defaultChecked={null}
           disabled={null}
           id="radio-example-3"
@@ -292,7 +292,7 @@ exports[`Component: Checkbox - renders checkbox group with groupTitle 1`] = `
         
 
         <input
-          aria-describedby=""
+          aria-describedby={null}
           defaultChecked={null}
           disabled={null}
           id="radio-example-1"
@@ -315,7 +315,7 @@ exports[`Component: Checkbox - renders checkbox group with groupTitle 1`] = `
         
 
         <input
-          aria-describedby=""
+          aria-describedby={null}
           defaultChecked={null}
           disabled={null}
           id="radio-example-2"
@@ -338,7 +338,7 @@ exports[`Component: Checkbox - renders checkbox group with groupTitle 1`] = `
         
 
         <input
-          aria-describedby=""
+          aria-describedby={null}
           defaultChecked={null}
           disabled={null}
           id="radio-example-3"
@@ -367,7 +367,7 @@ exports[`Component: Checkbox - renders with the checked attribute 1`] = `
     
 
     <input
-      aria-describedby=""
+      aria-describedby={null}
       defaultChecked={true}
       disabled={null}
       id={null}
@@ -392,7 +392,7 @@ exports[`Component: Checkbox - renders with the disabled attribute 1`] = `
     
 
     <input
-      aria-describedby=""
+      aria-describedby={null}
       defaultChecked={null}
       disabled={true}
       id={null}
@@ -417,7 +417,7 @@ exports[`Component: Checkbox - renders with the specified id 1`] = `
     
 
     <input
-      aria-describedby=""
+      aria-describedby={null}
       defaultChecked={null}
       disabled={null}
       id="test"
@@ -443,7 +443,7 @@ exports[`Component: Checkbox - renders with the specified id and label 1`] = `
     
 
     <input
-      aria-describedby=""
+      aria-describedby={null}
       defaultChecked={null}
       disabled={null}
       id="test"

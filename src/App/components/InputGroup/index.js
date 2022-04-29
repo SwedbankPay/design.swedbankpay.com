@@ -53,7 +53,7 @@ const InputGroup = ({
         required: required || null,
         pattern: pattern ? "" : null,
         "data-validate": validate ? "" : null,
-        "aria-describedby": `${helpBlock ? hintTextId : ""}${expandingHintTitle ? ` ${expandingHintId}` : ""}`
+        "aria-describedby": helpBlock || expandingHintTitle ? `${helpBlock ? hintTextId : ""}${expandingHintTitle ? ` ${expandingHintId}` : ""}` : null
     };
 
     const inputGrpClasses = classnames(
@@ -69,7 +69,7 @@ const InputGroup = ({
         readOnly: readOnly || null,
         required: required || null,
         id: id || null,
-        "aria-describedby": `${helpBlock ? hintTextId : ""}${expandingHintTitle ? ` ${expandingHintId}` : ""}`
+        "aria-describedby": helpBlock || expandingHintTitle ? `${helpBlock ? hintTextId : ""}${expandingHintTitle ? ` ${expandingHintId}` : ""}` : null
     };
 
     const formGroupClasses = classnames(

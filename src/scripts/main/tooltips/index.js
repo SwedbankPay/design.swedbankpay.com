@@ -16,7 +16,6 @@ const _createTooltip = tooltip => {
     window.addEventListener("keydown", e => {
         if (e.key === "Esc" || e.key === "Escape") {
             if (window.getComputedStyle(tip).visibility === "visible") {
-                // tooltip.blur();
                 tip.style.visibility = "hidden";
             }
         }
@@ -26,7 +25,9 @@ const _createTooltip = tooltip => {
         tip.style.visibility = "visible";
     })
 
-    tooltip.addEventListener("mouseover", _repositionTooltip);
+    tooltip.addEventListener("mouseover", () => {
+        tip.style.visibility = "visible";
+    });
 
 };
 

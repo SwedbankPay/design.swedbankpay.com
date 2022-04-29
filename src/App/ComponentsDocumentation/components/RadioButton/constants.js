@@ -130,15 +130,15 @@ export const ContentGuidelinesOptions = [
 
 export const ErrorStateOptions = [
     {
-        id: "radio-guidelines-example-1",
+        id: "radio-error-example-1",
         label: "Label"
     },
     {
-        id: "radio-guidelines-example-2",
+        id: "radio-error-example-2",
         label: "Label"
     },
     {
-        id: "radio-guidelines-example-3",
+        id: "radio-error-example-3",
         label: "Label"
     }
 ];
