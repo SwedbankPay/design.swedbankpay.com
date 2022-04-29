@@ -432,7 +432,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
       />
        can be used to initialize all Hint text expanders. Or 
       <CodeTags
-        code="dg.hintTextExpander.init(<hint-text-expander-id>)"
+        code="dg.hintTextExpander.init(<hint-expander-id>)"
         type="secondary"
       />
        to initialize a specific one.
