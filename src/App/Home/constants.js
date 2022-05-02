@@ -1,5 +1,10 @@
 export const changeLogs = [
     {
+        version: "9.0.0",
+        title: "Accesibility train keeps on rollin’ 🚂",
+        text: "Heads up, this one includes breaking changes making the topbar and the tooltip components more accessible. We’re also removing support for tooltips as help text containers in form input components. Instead introducing hint texts and expanding hint text to make information more accessible for everyone. More so, we added a new skip link component that will make navigation easier for keyboard users. The sidebar is improved for keyboard navigation and the the tables now support a caption element. Enjoy! "
+    },
+    {
         version: "8.0.1",
         title: "Patch of documentation and minor bugs",
         text: "Update of text (typos) on input field, select and logotype documentation. Bug fixes on tabs, alert icon and radio button offset.."
