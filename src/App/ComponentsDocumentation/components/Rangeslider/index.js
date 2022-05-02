@@ -81,7 +81,7 @@ const DeveloperDocumentation = () => (
 );
 
 const DisableState = () => (
-    <>
+    <section>
         <h3>Disabled state</h3>
         <p>Disable a slider by adding <CodeTags type="primary" code="disabled"/> attribute to the desired slider. </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
@@ -91,7 +91,7 @@ const DisableState = () => (
                 </div>
             </div>
         </ComponentPreview>
-    </>
+    </section>
 );
 
 const Rangeslider = () => {
