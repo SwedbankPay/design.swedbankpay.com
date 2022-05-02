@@ -26,7 +26,6 @@
 -   Table documentation 
 -   Form pattern documentation
 
-
 ## Added
 
 -   Hint text
@@ -38,6 +37,7 @@
     -   Input fields
     -   Radio buttons
     -   Checkboxes
+
 -   Skiplink component
 
 -   Tables
