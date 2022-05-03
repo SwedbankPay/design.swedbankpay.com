@@ -86,7 +86,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           </span>
           <InputGroup
             helpBlock="YYYYMMDDNNNN"
-            hintTextId="birthnumberExample"
+            hintTextId="birthnumber-example"
             id="do-example-expanding"
             label="Personal identification number"
             type="text"
@@ -112,7 +112,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           </span>
           <InputGroup
             expandingHintContent="Three to four digits on the back or the front of your card."
-            expandingHintId="whereToFindExample"
+            expandingHintId="where-to-find-example"
             expandingHintTitle="Where to find the code?"
             id="do-example-expanding"
             label="Security code (CVC)"
@@ -492,7 +492,7 @@ exports[`Component: InputField Overview renders 1`] = `
                       "name": "Hint text",
                       "value": Object {
                         "helpBlock": "Hint text",
-                        "hintTextId": "hintTextExampleId",
+                        "hintTextId": "hint-text-example-id",
                       },
                     },
                     Object {
@@ -588,7 +588,7 @@ exports[`Component: InputField Overview renders 1`] = `
                       "name": "Hint text",
                       "value": Object {
                         "helpBlock": "Hint text",
-                        "hintTextId": "hintTextTextAreaExample",
+                        "hintTextId": "hint-text-text-area-example",
                       },
                     },
                     Object {

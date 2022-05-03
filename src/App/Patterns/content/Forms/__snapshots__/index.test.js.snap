@@ -26,7 +26,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
       <InputGroup
         className="mb-0"
         helpBlock="Hint text"
-        hintTextId="formsHintTextExample"
+        hintTextId="forms-hint-text-example"
         id="guideline-input-example"
         label="Input label"
         placeholder="Placeholder text"
@@ -58,7 +58,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
       </div>
       <Radio
         className="mb-0 forms-radio-example"
-        expandingHintId="expandingFormsRadioExample"
+        expandingHintId="expanding-forms-radio-example"
         expandingHintTitle="Expander hint text"
         group={true}
         groupTitle="Input label"
@@ -776,7 +776,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
           </span>
           <InputGroup
             helpBlock="YYYYMMDDNNNN"
-            hintTextId="personalIdNumberExample"
+            hintTextId="personal-id-number-example"
             id="personal-identification-number-example"
             label="Personal identification number"
             type="text"
@@ -799,7 +799,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
           </span>
           <InputGroup
             expandingHintContent="Three to four digits on the back or the front of your card."
-            expandingHintId="expandingWhereToFindExample"
+            expandingHintId="expanding-where-to-find-example"
             expandingHintTitle="Where to find the code?"
             id="cvc-example"
             label="Security code (CVC)"
@@ -1041,7 +1041,7 @@ exports[`Forms: index Overview renders 1`] = `
                     />
                     <InputGroup
                       expandingHintContent="If you select a subject it will make it easier for our support team to handle your request which will make the processing time much faster."
-                      expandingHintId="expandingHintFormsExample"
+                      expandingHintId="expanding-hint-forms-example"
                       expandingHintTitle="Why should you select subject?"
                       id="form-select-example"
                       label="Subject"
