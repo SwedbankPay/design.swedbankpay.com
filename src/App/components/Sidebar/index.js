@@ -9,7 +9,7 @@ const brand = process.env.brand;
 class Sidebar extends Component {
     render () {
         return (
-            <div id={this.props.id} className={`sidebar-2${this.props.sticky ? " sidebar-topbar-sticky" : ""}`}>
+            <div id={this.props.id} className={`sidebar${this.props.sticky ? " sidebar-topbar-sticky" : ""}`}>
                 <nav className="sidebar-main-nav">
                     <div className="sidebar-logo">
                         <a href="/" aria-label="To homepage">
