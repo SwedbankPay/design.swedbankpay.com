@@ -62,14 +62,14 @@ const ContentGuidelines = () => (
         <div className="slab slab-plain">
             <div className="d-flex flex-column align-items-center py-3">
                 <div>
-                    <Radio groupTitle="Group label" name="radio-dont-example" options={ContentGuidelinesOptions} group hintText="Hint text"/>
+                    <Radio groupTitle="Group legend" name="radio-dont-example" options={ContentGuidelinesOptions} group hintText="Hint text"/>
                 </div>
             </div>
         </div>
         <ul className="list list-bullet">
-            <li>The <b>group label</b> should be descriptive, explaining the context of the options to choose from.</li>
+            <li>The <b>group legend</b> should be descriptive, explaining the context of the options to choose from.</li>
             <li>The <b>radio button label</b> should be short, to the point and clearly explain the option. It is also preferred to have fewer than three words per label as longer words could extend a label to multiple rows which could disrupt the reading experience.</li>
-            <li>A <b>hint text</b> can be used to complement the group label and provide clarifying details. If the information is long or won&apos;t be needed by the majority of users, a hint expander can be used instead of a text that is visible by default. </li>
+            <li>A <b>hint text</b> can be used to complement the group legend and provide clarifying details. If the information is long or won&apos;t be needed by the majority of users, a hint expander can be used instead of a text that is visible by default. </li>
         </ul>
     </>
 );
@@ -92,7 +92,7 @@ const DeveloperDocumentation = () => (
             <p>To display the error state, add the <CodeTags type="primary" code=".has-error"/> class to the parent element, then add the <CodeTags type="secondary" code="help-block"/> element as the last child with the error message.</p>
             <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
                 <div className="d-flex justify-content-center">
-                    <Radio id="radio-example-11" groupTitle="Group label" errorMessage="Error message" label="Radio button label" name="radio-example" options={ErrorStateOptions} group/>
+                    <Radio id="radio-example-11" groupTitle="Group legend" errorMessage="Error message" label="Radio button label" name="radio-example" options={ErrorStateOptions} group/>
                 </div>
             </ComponentPreview>
         </section>
