@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { DocContainer } from "@docutils";
 
 import Button from "@components/Button";
@@ -11,6 +11,7 @@ import LoginForm from "../../components/LoginForm/index";
 
 import { ComponentPreview } from "~/src/App/docutils";
 import { guidelinesElementsList, formsShowCase } from "./constants";
+import { hintTextExpander } from "@src/scripts/main";
 
 const radioOptions = [
     {
@@ -325,15 +326,22 @@ const DeveloperDocumentation = () => (
     </section>
 );
 
-const Forms = () => (
-    <DocContainer>
-        <p className="lead">A form is a collection of input components that allows users to provide and submit data.</p>
-        <Overview />
-        <ContentGuidelines />
-        <HowToDesignForms />
-        <DeveloperDocumentation />
-    </DocContainer>
-);
+const Forms = () => {
+    useEffect(() => {
+        hintTextExpander.init();
+    });
+
+    return (
+
+        <DocContainer>
+            <p className="lead">A form is a collection of input components that allows users to provide and submit data.</p>
+            <Overview />
+            <ContentGuidelines />
+            <HowToDesignForms />
+            <DeveloperDocumentation />
+        </DocContainer>
+    );
+};
 
 export default Forms;
 

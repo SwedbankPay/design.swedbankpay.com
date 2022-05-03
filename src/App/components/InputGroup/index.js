@@ -122,7 +122,7 @@ const InputGroup = ({
             {helpBlock && <><p id="hint-text" className="hint-text">{helpBlock}</p>{"\n"}</>}
             {expandingHintTitle &&
             <div id={expanderId && "hint-text-expander"} className="hint-text-expander">{"\n"}
-                <button aria-controls={expanderId} aria-expanded={false}>{"\n"}
+                <button type="button" aria-controls={expanderId} aria-expanded={false}>{"\n"}
                     <span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}{"\n"}
                 </button>{"\n"}
                 <p id={expanderId} className="content" aria-hidden={true}>{expandingHintContent
