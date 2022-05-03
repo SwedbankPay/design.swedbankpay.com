@@ -54,7 +54,8 @@ export const selectOverview = {
                             {
                                 name: "Error",
                                 value: {
-                                    errorMessage: "Descriptive helpful error message."
+                                    errorMessage: "Descriptive helpful error message.",
+                                    required: true
                                 }
                             },
                             {
