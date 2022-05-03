@@ -75,7 +75,7 @@ const ContentGuidelines = () => (
 
 const DeveloperDocumentation = () => (
     <section>
-        <h2 id="developer-documentation">Developer Documentation</h2>
+        <h2 id="developer-documentation">Developer documentation</h2>
         <h3 id="javascript-methods">JavaScript methods</h3>
         <p>Use <CodeTags type="secondary" code="dg.sheet.init()"/> to <Link to="/get-started/for-developers">initialize</Link> all accordions. This will give the sheets open and close functions automatically.</p>
         <p>To open a given sheet, use <CodeTags type="secondary" code="dg.sheet.open(<sheet-id>)"/></p>

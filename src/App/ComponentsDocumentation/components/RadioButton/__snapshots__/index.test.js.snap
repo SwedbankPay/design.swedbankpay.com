@@ -16,7 +16,7 @@ exports[`Component: RadioButton ContentGuidelines renders 1`] = `
       <div>
         <Radio
           group={true}
-          groupTitle="Group label"
+          groupTitle="Group legend"
           hintText="Hint text"
           name="radio-dont-example"
           options={
@@ -46,7 +46,7 @@ exports[`Component: RadioButton ContentGuidelines renders 1`] = `
     <li>
       The 
       <b>
-        group label
+        group legend
       </b>
        should be descriptive, explaining the context of the options to choose from.
     </li>
@@ -62,7 +62,7 @@ exports[`Component: RadioButton ContentGuidelines renders 1`] = `
       <b>
         hint text
       </b>
-       can be used to complement the group label and provide clarifying details. If the information is long or won't be needed by the majority of users, a hint expander can be used instead of a text that is visible by default. 
+       can be used to complement the group legend and provide clarifying details. If the information is long or won't be needed by the majority of users, a hint expander can be used instead of a text that is visible by default. 
     </li>
   </ul>
 </Fragment>
@@ -133,7 +133,7 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
         <Radio
           errorMessage="Error message"
           group={true}
-          groupTitle="Group label"
+          groupTitle="Group legend"
           id="radio-example-11"
           label="Radio button label"
           name="radio-example"
@@ -301,7 +301,7 @@ exports[`Component: RadioButton Overview renders 1`] = `
           Object {
             "component": <Radio
               group={true}
-              groupTitle="Group label"
+              groupTitle="Group legend"
               hintExpander={true}
               name="radio-group-example"
               options={
@@ -335,7 +335,7 @@ exports[`Component: RadioButton Overview renders 1`] = `
                       "name": "Hint text",
                       "value": Object {
                         "helpBlock": "Hint text",
-                        "hintTextId": "hintTextRadioExample",
+                        "hintTextId": "hint-text-radio-example",
                       },
                     },
                     Object {

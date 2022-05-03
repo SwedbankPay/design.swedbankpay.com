@@ -45,11 +45,11 @@ const ContentGuidelines = () => (
             <div className="col-12 col-sm-6 m-auto">
                 <h3 className="mb-0">Title</h3>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
-                <InputGroup id="guideline-input-example" type="text" label="Input label" placeholder="Placeholder text" className="mb-0" helpBlock="Hint text" hintTextId="formsHintTextExample"/>
+                <InputGroup id="guideline-input-example" type="text" label="Input label" placeholder="Placeholder text" className="mb-0" helpBlock="Hint text" hintTextId="forms-hint-text-example"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small">24px</div>
                 <InputGroup id="guideline-select-example" type="select" label="Label" placeholder="Select an option" selectOptions={["Option 1", "Option 2"]} optional className="mb-0"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small">24px</div>
-                <RadioButton groupTitle="Input label" name="guidelines-radio-example" group options={radioOptions} className="mb-0 forms-radio-example" expandingHintTitle="Expander hint text" expandingHintId="expandingFormsRadioExample"/>
+                <RadioButton groupTitle="Input label" name="guidelines-radio-example" group options={radioOptions} className="mb-0 forms-radio-example" expandingHintTitle="Expander hint text" expandingHintId="expanding-forms-radio-example"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
                 <div className="d-flex">
                     <Button type="primary" label="Submit" className="mr-3"/>
@@ -135,14 +135,14 @@ const HowToDesignForms = () => {
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-success">
                             <span className="h4 d-block mb-4">Do</span>
-                            <InputGroup id="personal-identification-number-example" type="text" label="Personal identification number" helpBlock="YYYYMMDDNNNN" hintTextId="personalIdNumberExample"/>
+                            <InputGroup id="personal-identification-number-example" type="text" label="Personal identification number" helpBlock="YYYYMMDDNNNN" hintTextId="personal-id-number-example"/>
                         </div>
                         <p>Use a hint text for important information that is secondary to the label.</p>
                     </div>
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-success">
                             <span className="h4 d-block mb-4">Do</span>
-                            <InputGroup id="cvc-example" type="text" label="Security code (CVC)" expandingHintTitle="Where to find the code?" expandingHintContent="Three to four digits on the back or the front of your card." expandingHintId="expandingWhereToFindExample"/>
+                            <InputGroup id="cvc-example" type="text" label="Security code (CVC)" expandingHintTitle="Where to find the code?" expandingHintContent="Three to four digits on the back or the front of your card." expandingHintId="expanding-where-to-find-example"/>
                         </div>
                         <p>Use hint expander for additional information that is less important or long.</p>
                     </div>
