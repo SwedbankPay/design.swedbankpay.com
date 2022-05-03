@@ -126,7 +126,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
 
             const tip = document.getElementById("tooltipCopy");
 
-            tip.innerHTML="Copied!";
+            tip.innerHTML = "Copied!";
         };
 
         return (
@@ -363,7 +363,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                                         <fieldset className="mb-4" key={i}>
                                             <legend className="h4">{radio.title}</legend>
                                             {radio.values.map((val, j) => (
-                                                <div key={j} className={`radio${val.toBeRemoved ? ` d-block` : ""}`} onChange={e => this.setActiveOptions(
+                                                <div key={j} className={`radio${val.toBeRemoved ? " d-block" : ""}`} onChange={e => this.setActiveOptions(
                                                     radio.id,
                                                     radio.values[e.target.value].value,
                                                     radio.values[e.target.value].description
