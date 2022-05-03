@@ -41,7 +41,7 @@ class NavGroup extends Component {
             <li className="nav-group">
                 <button className="nav-group-heading" onClick={() => this.toggleActive()}>
                     <i className="material-icons" aria-hidden="true">arrow_right</i>
-                    <span>{title}</span>
+                    {title}
                 </button>
                 <ul className="nav-ul">
                     {routes.map((childRoute, i) => (
