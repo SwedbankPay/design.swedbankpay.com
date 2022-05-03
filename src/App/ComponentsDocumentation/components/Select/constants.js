@@ -26,7 +26,7 @@ export const selectOverview = {
                                 name: "Hint text",
                                 value: {
                                     helpBlock: "Hint text",
-                                    hintTextId: "selectHintTextExample",
+                                    hintTextId: "select-hint-text-example",
                                 }
                             },
                             {

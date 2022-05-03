@@ -35,7 +35,7 @@ export const radiobuttonShowCase = {
                                 name: "Hint text",
                                 value: {
                                     helpBlock: "Hint text",
-                                    hintTextId: "hintTextRadioExample",
+                                    hintTextId: "hint-text-radio-example",
                                 }
                             }, {
                                 id: "hint_expander",

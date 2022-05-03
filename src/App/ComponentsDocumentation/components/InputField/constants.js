@@ -19,7 +19,7 @@ const InputOptions = () => (
                         name: "Hint text",
                         value: {
                             helpBlock: "Hint text",
-                            hintTextId: "hintTextExampleId"
+                            hintTextId: "hint-text-example-id"
                         }
                     },
                     {
@@ -125,7 +125,7 @@ export const inputShowCase = {
                                 name: "Hint text",
                                 value: {
                                     helpBlock: "Hint text",
-                                    hintTextId: "hintTextTextAreaExample"
+                                    hintTextId: "hint-text-text-area-example"
                                 }
                             },
                             {
@@ -187,13 +187,13 @@ export const contentGuidelines = [
         examples: [
             {
                 slabType: "success",
-                content: <InputGroup id="do-example-expanding" type="text" label="Personal identification number" helpBlock="YYYYMMDDNNNN" hintTextId="birthnumberExample"/>,
+                content: <InputGroup id="do-example-expanding" type="text" label="Personal identification number" helpBlock="YYYYMMDDNNNN" hintTextId="birthnumber-example"/>,
                 hintText: "YYYYMMDDNNNN",
                 description: "If the information is fairly important and many users will need it, provide a hint text that is visible by default."
             },
             {
                 slabType: "success",
-                content: <InputGroup id="do-example-expanding" type="text" label="Security code (CVC)" expandingHintTitle="Where to find the code?" expandingHintId="whereToFindExample" expandingHintContent="Three to four digits on the back or the front of your card."/>,
+                content: <InputGroup id="do-example-expanding" type="text" label="Security code (CVC)" expandingHintTitle="Where to find the code?" expandingHintId="where-to-find-example" expandingHintContent="Three to four digits on the back or the front of your card."/>,
                 expandingHintTitle: "Where to find the code?",
                 description: "Use a hint expander if the information is long and won’t be needed by the majority of users. Write the hint expander to help users understand what they will see before they click."
             }
