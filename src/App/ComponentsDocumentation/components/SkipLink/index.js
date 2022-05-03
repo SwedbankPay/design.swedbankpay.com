@@ -15,7 +15,7 @@ const Overview = () => (
 
 const DeveloperDocumentation = () => (
     <section>
-        <h2 id="developer-documentation">Developer Documentation</h2>
+        <h2 id="developer-documentation">Developer documentation</h2>
         <p>It is important to place the skip link in the top level of your navigation tree. The skip link should be the first thing users can tab to.</p>
         <p>Remember to include the correct <CodeTags type="primary" code="href"/> path to your skip link.</p>
     </section>
