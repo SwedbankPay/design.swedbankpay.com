@@ -30,3 +30,6 @@
 - [ ] I have updated the **CHANGELOG** document.
 - [ ] I have added tests to cover my changes.
 - [ ] All new and existing tests passed.
+
+## Review instructions
+[Review instructions](../REVIEW_INSTRUCTIONS.md)

@@ -1,12 +1,5 @@
-const SELECTORS = {
-    TOOLTIP_TOP: "[data-tooltip-position='top']",
-    TOOLTIP_BOTTOM: "[data-tooltip-position='bottom']"
-
-};
-
 const _repositionTooltip = e => {
-    const tooltipContent = e.target.querySelector(".tooltip");
-
+    const tooltipContent = e.target.nextElementSibling;
     const tooltipContentPosition = tooltipContent.getBoundingClientRect();
 
     if (tooltipContentPosition.left < 16) {
@@ -17,11 +10,25 @@ const _repositionTooltip = e => {
 };
 
 const _createTooltip = tooltip => {
-    tooltip.addEventListener("mouseover", _repositionTooltip);
 
-    return {
-        container: tooltip
-    };
+    const tip = tooltip.querySelector("[role=tooltip]");
+
+    window.addEventListener("keydown", e => {
+        if (e.key === "Esc" || e.key === "Escape") {
+            if (window.getComputedStyle(tip).visibility === "visible") {
+                tip.style.visibility = "hidden";
+            }
+        }
+    });
+
+    tooltip.addEventListener("focus", () => {
+        tip.style.visibility = "visible";
+    });
+
+    tooltip.addEventListener("mouseover", () => {
+        tip.style.visibility = "visible";
+    });
+
 };
 
 const init = id => {
@@ -36,7 +43,7 @@ const init = id => {
 
         return _createTooltip(tooltipParent);
     } else {
-        const tooltipParents = document.querySelectorAll(`${SELECTORS.TOOLTIP_TOP}, ${SELECTORS.TOOLTIP_BOTTOM}`);
+        const tooltipParents = document.querySelectorAll(".tooltip");
 
         if (!tooltipParents.length) {
             console.warn("No top or bottom tooltips found");
@@ -44,7 +51,8 @@ const init = id => {
             return null;
         }
 
-        return [...tooltipParents].filter(tooltipParent => tooltipParent.querySelector(".tooltip")).map(tooltip => _createTooltip(tooltip));
+        return [...tooltipParents].map(tooltip => _createTooltip(tooltip));
+
     }
 };
 

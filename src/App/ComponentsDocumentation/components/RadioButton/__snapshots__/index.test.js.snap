@@ -7,22 +7,62 @@ exports[`Component: RadioButton ContentGuidelines renders 1`] = `
   >
     Content guidelines
   </h2>
+  <div
+    className="slab slab-plain"
+  >
+    <div
+      className="d-flex flex-column align-items-center py-3"
+    >
+      <div>
+        <Radio
+          group={true}
+          groupTitle="Group legend"
+          hintText="Hint text"
+          name="radio-dont-example"
+          options={
+            Array [
+              Object {
+                "checked": true,
+                "id": "radio-guidelines-example-1",
+                "label": "Label",
+              },
+              Object {
+                "id": "radio-guidelines-example-2",
+                "label": "Label",
+              },
+              Object {
+                "id": "radio-guidelines-example-3",
+                "label": "Label",
+              },
+            ]
+          }
+        />
+      </div>
+    </div>
+  </div>
   <ul
     className="list list-bullet"
   >
     <li>
       The 
       <b>
-        group heading
+        group legend
       </b>
-       should descriptive, explaining the context of the options to choose from.
+       should be descriptive, explaining the context of the options to choose from.
     </li>
     <li>
       The 
       <b>
-        radio
+        radio button label
       </b>
-       button label should be short, to the point and clearly explain the option. It is also preferred to have fewer than three words per label as longer words could extend a label to multiple rows which could disrupt the reading experience.
+       should be short, to the point and clearly explain the option. It is also preferred to have fewer than three words per label as longer words could extend a label to multiple rows which could disrupt the reading experience.
+    </li>
+    <li>
+      A 
+      <b>
+        hint text
+      </b>
+       can be used to complement the group legend and provide clarifying details. If the information is long or won't be needed by the majority of users, a hint expander can be used instead of a text that is visible by default. 
     </li>
   </ul>
 </Fragment>
@@ -33,69 +73,107 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
   <h2>
     Developer documentation
   </h2>
-  <div
-    className="slab slab-plain"
-  >
-    <div
-      className="d-flex flex-column align-items-center"
+  <section>
+    <h3>
+      Disabled state
+    </h3>
+    <p>
+      Disable a radio button by adding 
+      <CodeTags
+        code="disabled"
+        type="primary"
+      />
+       attribute to the desired radio button.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      removeOuterTag={true}
+      showCasePanel={true}
     >
-      <div>
+      <div
+        className="d-flex justify-content-center"
+      >
         <Radio
+          checked={true}
+          disabled={true}
+          id="radio-example-10"
+          label="Radio button label"
+          name="radio-example"
+        />
+      </div>
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Error state
+    </h3>
+    <p>
+      To display the error state, add the 
+      <CodeTags
+        code=".has-error"
+        type="primary"
+      />
+       class to the parent element, then add the 
+      <CodeTags
+        code="help-block"
+        type="secondary"
+      />
+       element as the last child with the error message.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      removeOuterTag={true}
+      showCasePanel={true}
+    >
+      <div
+        className="d-flex justify-content-center"
+      >
+        <Radio
+          errorMessage="Error message"
           group={true}
-          groupTitle="Group heading"
-          name="radio-dont-example"
+          groupTitle="Group legend"
+          id="radio-example-11"
+          label="Radio button label"
+          name="radio-example"
           options={
             Array [
               Object {
-                "checked": true,
-                "id": "radio-guidelines-example-1",
-                "label": "Radio button label",
+                "id": "radio-error-example-1",
+                "label": "Label",
               },
               Object {
-                "id": "radio-guidelines-example-2",
-                "label": "Radio button label",
+                "id": "radio-error-example-2",
+                "label": "Label",
               },
               Object {
-                "id": "radio-guidelines-example-3",
-                "label": "Radio button label",
+                "id": "radio-error-example-3",
+                "label": "Label",
               },
             ]
           }
         />
       </div>
-    </div>
-  </div>
-  <span
-    className="h3 d-inline-block mt-3"
-  >
-    Disabled state
-  </span>
-  <p>
-    Disable a radio button by adding 
-    <CodeTags
-      code="disabled"
-      type="primary"
-    />
-     attribute to the desired radio button.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="d-flex justify-content-center"
-    >
-      <Radio
-        checked={true}
-        disabled={true}
-        id="radio-example-10"
-        label="Radio button label"
-        name="radio-example"
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Javascript methods
+    </h3>
+    <p>
+      <CodeTags
+        code="dg.hintTextExpander.init()"
+        type="secondary"
       />
-    </div>
-  </ComponentPreview>
+       can be used to initialize all Hint text expanders. Or 
+      <CodeTags
+        code="dg.hintTextExpander.init(<hint-text-expander-id>)"
+        type="secondary"
+      />
+       to initialize a specific one.
+    </p>
+  </section>
 </section>
 `;
 
@@ -205,7 +283,9 @@ exports[`Component: RadioButton HowTo renders 1`] = `
 `;
 
 exports[`Component: RadioButton Overview renders 1`] = `
-<Fragment>
+<section
+  id="radio-button-overview"
+>
   <h2
     id="overview"
   >
@@ -221,36 +301,49 @@ exports[`Component: RadioButton Overview renders 1`] = `
           Object {
             "component": <Radio
               group={true}
-              groupTitle="Group heading"
+              groupTitle="Group legend"
+              hintExpander={true}
               name="radio-group-example"
               options={
                 Array [
                   Object {
                     "checked": true,
                     "id": "radio-example-1",
-                    "label": "Radio button label",
+                    "label": "Label",
                   },
                   Object {
                     "id": "radio-example-2",
-                    "label": "Radio button label",
-                  },
-                  Object {
-                    "id": "radio-example-3",
-                    "label": "Radio button label",
+                    "label": "Label",
                   },
                 ]
               }
             />,
-            "description": "The default setup of the radio button group has a label on top which describes the radio button group and each individual radio button is then followed by a label which clearly describes the options and what selecting an option entails. In a radio button group one choice is always selected by default.",
+            "description": "The radio button group has a label on top which describes the group. Each individual radio button is followed by a label which clearly describes the options. The main guideline for radio button groups is to select one of the radio buttons by default, there might however be situations where you can’t identify a default selection.",
             "options": Object {
               "checkbox": Array [
                 Object {
                   "inputs": Array [
                     Object {
-                      "id": "with_help_icon",
-                      "name": "With help icon",
+                      "id": "is_optional",
+                      "name": "Is optional",
                       "value": Object {
-                        "tooltip": true,
+                        "optional": true,
+                      },
+                    },
+                    Object {
+                      "id": "hint_text",
+                      "name": "Hint text",
+                      "value": Object {
+                        "helpBlock": "Hint text",
+                        "hintTextId": "hint-text-radio-example",
+                      },
+                    },
+                    Object {
+                      "id": "hint_expander",
+                      "name": "Hint expander",
+                      "value": Object {
+                        "expanderId": "expander-showcase",
+                        "expandingHintTitle": "Expander hint text",
                       },
                     },
                   ],
@@ -272,6 +365,12 @@ exports[`Component: RadioButton Overview renders 1`] = `
                       "name": "Disabled",
                       "value": Object {
                         "disabled": true,
+                      },
+                    },
+                    Object {
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
                       },
                     },
                   ],
@@ -300,9 +399,18 @@ exports[`Component: RadioButton Overview renders 1`] = `
       </Link>
        group should be used instead of radio buttons.
     </li>
+    <li>
+      If you want to present a large amount of options consider the 
+      <Link
+        to="/components/select"
+      >
+        select
+      </Link>
+       component instead of a radio button group to avoid overwhelming the user and to save space.
+    </li>
   </ul>
   <HowTo />
-</Fragment>
+</section>
 `;
 
 exports[`Component: RadioButton renders 1`] = `

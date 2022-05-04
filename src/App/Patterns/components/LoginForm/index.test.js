@@ -48,7 +48,7 @@ describe("Pattern: LoginForm", () => {
         expect(wrapper.html()).toContain("alert alert-danger");
         expect(wrapper.html()).toContain("<b>Error.</b>");
         expect(wrapper.html()).toContain("Incorrect password");
-        expect(wrapper.html()).toContain("input-group has-error");
+        expect(wrapper.html()).toContain("form-group has-error");
         expect(wrapper.html()).toContain("help-block");
     });
 

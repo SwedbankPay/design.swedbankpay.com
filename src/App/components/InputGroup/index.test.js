@@ -166,11 +166,10 @@ describe("Component: InputGroup -", () => {
         expect(span.html()).toContain("testvalue");
     });
 
-    it("renders a form-group with a help block with data-success and data-error attributes", () => {
-        const wrapper = mount(<InputGroup type="typetest" successMessage="success" helpBlock="testvalue" />);
+    it("renders a form-group with a help block", () => {
+        const wrapper = mount(<InputGroup type="typetest" helpBlock="testvalue" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("help-block");
-        expect(wrapper.html()).toContain("data-success");
+        expect(wrapper.html()).toContain("hint-text");
     });
 });

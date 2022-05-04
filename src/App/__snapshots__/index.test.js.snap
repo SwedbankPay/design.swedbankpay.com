@@ -32,6 +32,7 @@ exports[`Main: App renders 1`] = `
       <div
         className="d-md-flex"
       >
+        <SkipLink />
         <div
           className="d-none d-lg-block"
         >
@@ -173,7 +174,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/accordion",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Accordion",
                     },
@@ -214,9 +214,6 @@ exports[`Main: App renders 1`] = `
                       "icon": "touch_app",
                       "outlined": true,
                       "path": "/components/buttons",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Buttons",
                     },
                     Object {
@@ -241,6 +238,10 @@ exports[`Main: App renders 1`] = `
                       "icon": "check_box",
                       "outlined": true,
                       "path": "/components/checkbox",
+                      "statusBadges": Array [
+                        "javascript",
+                        "updated",
+                      ],
                       "title": "Checkbox",
                     },
                     Object {
@@ -283,6 +284,7 @@ exports[`Main: App renders 1`] = `
                       "icon": "text_fields",
                       "path": "/components/input-field",
                       "statusBadges": Array [
+                        "javascript",
                         "updated",
                       ],
                       "title": "Input field",
@@ -331,7 +333,7 @@ exports[`Main: App renders 1`] = `
                       "outlined": true,
                       "path": "/components/pagination",
                       "statusBadges": Array [
-                        "updated",
+                        "javascript",
                       ],
                       "title": "Pagination",
                     },
@@ -352,6 +354,10 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/RadioButton",
                       "icon": "radio_button_checked",
                       "path": "/components/radio-button",
+                      "statusBadges": Array [
+                        "javascript",
+                        "updated",
+                      ],
                       "title": "Radio button",
                     },
                     Object {
@@ -361,6 +367,7 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/rangeslider",
                       "statusBadges": Array [
                         "javascript",
+                        "updated",
                       ],
                       "title": "Rangeslider",
                     },
@@ -371,7 +378,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/sheet",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Sheet",
                     },
@@ -381,6 +387,7 @@ exports[`Main: App renders 1`] = `
                       "outlined": true,
                       "path": "/components/select",
                       "statusBadges": Array [
+                        "javascript",
                         "updated",
                       ],
                       "title": "Select",
@@ -392,8 +399,19 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/sidebar",
                       "statusBadges": Array [
                         "javascript",
+                        "updated",
                       ],
                       "title": "Sidebar",
+                    },
+                    Object {
+                      "componentPath": "components/SkipLink",
+                      "icon": "skip_next",
+                      "outlined": true,
+                      "path": "/components/skip-link",
+                      "statusBadges": Array [
+                        "new",
+                      ],
+                      "title": "Skip link",
                     },
                     Object {
                       "componentPath": "components/Slab",
@@ -414,6 +432,9 @@ exports[`Main: App renders 1`] = `
                       "icon": "view_list",
                       "outlined": true,
                       "path": "/components/tables",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Tables",
                     },
                     Object {
@@ -423,7 +444,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/tabs",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Tabs",
                     },
@@ -442,6 +462,9 @@ exports[`Main: App renders 1`] = `
                       "icon": "toggle_off",
                       "outlined": true,
                       "path": "/components/togglebox",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Togglebox",
                     },
                     Object {
@@ -451,6 +474,7 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/tooltips",
                       "statusBadges": Array [
                         "javascript",
+                        "updated",
                       ],
                       "title": "Tooltips",
                     },
@@ -461,6 +485,7 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/topbar",
                       "statusBadges": Array [
                         "javascript",
+                        "updated",
                       ],
                       "title": "Topbar",
                     },
@@ -578,6 +603,7 @@ exports[`Main: App renders 1`] = `
         </div>
         <main
           className="doc-view"
+          id="doc-view"
         >
           <Suspense
             fallback={<LoadingComponent />}

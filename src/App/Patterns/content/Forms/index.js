@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { DocContainer } from "@docutils";
 
 import Button from "@components/Button";
@@ -11,6 +11,7 @@ import LoginForm from "../../components/LoginForm/index";
 
 import { ComponentPreview } from "~/src/App/docutils";
 import { guidelinesElementsList, formsShowCase } from "./constants";
+import { hintTextExpander } from "@src/scripts/main";
 
 const radioOptions = [
     {
@@ -44,11 +45,11 @@ const ContentGuidelines = () => (
             <div className="col-12 col-sm-6 m-auto">
                 <h3 className="mb-0">Title</h3>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
-                <InputGroup id="guideline-input-example" type="text" label="Input label" placeholder="Placeholder text" tooltip className="mb-0"/>
+                <InputGroup id="guideline-input-example" type="text" label="Input label" placeholder="Placeholder text" className="mb-0" helpBlock="Hint text" hintTextId="forms-hint-text-example"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small">24px</div>
-                <InputGroup id="guideline-select-example" type="select" label="Input label" placeholder="Select an option" selectOptions={["Option 1", "Option 2"]} optional className="mb-0"/>
+                <InputGroup id="guideline-select-example" type="select" label="Label" placeholder="Select an option" selectOptions={["Option 1", "Option 2"]} optional className="mb-0"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small">24px</div>
-                <RadioButton groupTitle="Input label" name="guidelines-radio-example" group options={radioOptions} className="mb-0 forms-radio-example"/>
+                <RadioButton groupTitle="Input label" name="guidelines-radio-example" group options={radioOptions} className="mb-0 forms-radio-example" expandingHintTitle="Expander hint text" expandingHintId="expanding-forms-radio-example"/>
                 <div className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
                 <div className="d-flex">
                     <Button type="primary" label="Submit" className="mr-3"/>
@@ -84,7 +85,7 @@ const HowToDesignForms = () => {
 
                 <div className="slab slab-plain slab-border-success pb-4">
                     <span className="h4 d-block mb-4">Do</span>
-                    <div className="col-12 col-sm-8 px-0">
+                    <div className="col-12 col-sm-8 m-auto px-0">
                         <InputGroup id="layout-address-example" type="text" label="Address"/>
                         <div className="row">
                             <InputGroup id="layout-postal-example" type="text" label="Postal code" className="col-12 col-sm-5"/>
@@ -120,10 +121,36 @@ const HowToDesignForms = () => {
                     </div>
                 </div>
             </section>
+
+            <section>
+                <h3>Label and hints</h3>
+                <p>It is important to give the users the information required to fill in the form and help them be successful the first time. An input must have a label that clearly describes the type of input a field requires. The label can be complemented with a hint text or a hint expander to provide clarifying details, try do avoid using both a visible hint text and a hint expander.</p>
+                <p>Consider the following to decide where to place the information:</p>
+                <ul className="list list-bullet">
+                    <li>If the information is very important and most or all users will need it, make it part of the <b>label</b>.</li>
+                    <li>If the information is important and many users will need it, provide <b>hint text</b> that is visible by default.</li>
+                    <li>If the information is less important and only a minority of users will need it, put it in a <b>hint expander</b>.</li>
+                </ul>
+                <div className="row">
+                    <div className="col-lg-6 col-12">
+                        <div className="slab slab-plain slab-border-success">
+                            <span className="h4 d-block mb-4">Do</span>
+                            <InputGroup id="personal-identification-number-example" type="text" label="Personal identification number" helpBlock="YYYYMMDDNNNN" hintTextId="personal-id-number-example"/>
+                        </div>
+                        <p>Use a hint text for important information that is secondary to the label.</p>
+                    </div>
+                    <div className="col-lg-6 col-12">
+                        <div className="slab slab-plain slab-border-success">
+                            <span className="h4 d-block mb-4">Do</span>
+                            <InputGroup id="cvc-example" type="text" label="Security code (CVC)" expandingHintTitle="Where to find the code?" expandingHintContent="Three to four digits on the back or the front of your card." expandingHintId="expanding-where-to-find-example"/>
+                        </div>
+                        <p>Use hint expander for additional information that is less important or long.</p>
+                    </div>
+                </div>
+            </section>
             <section>
                 <h3>Logical flow</h3>
                 <p>To create a better user flow, ask questions in a logical order and group related inputs into sections or steps. Also consider using progressive disclosure to reveal additional content based on how a user answered the previous question. The flow will then better resemble a conversation and guide the user through the task.</p>
-
                 <div className="row">
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-success h-100">
@@ -175,13 +202,13 @@ const HowToDesignForms = () => {
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-success">
                             <span className="h4 d-block mb-4">Do</span>
-                            <InputGroup type="text" validationState="error" helpBlock errorMessage='The email address must include "@"' label="Email address" defaultValue="Name.com" id="input-error-do-example"/>
+                            <InputGroup type="text" validationState="error" errorMessage='The email address must include "@"' label="Email address" defaultValue="Name.com" id="input-error-do-example"/>
                         </div>
                     </div>
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-error">
                             <span className="h4 d-block mb-4">Don&apos;t</span>
-                            <InputGroup type="text" validationState="error" helpBlock errorMessage="Invalid input" label="Email address" defaultValue="Name.com" id="input-error-dont-example"/>
+                            <InputGroup type="text" validationState="error" errorMessage="Invalid input" label="Email address" defaultValue="Name.com" id="input-error-dont-example"/>
                         </div>
                     </div>
                 </div>
@@ -204,7 +231,7 @@ const DeveloperDocumentation = () => (
 
             <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag>
                 <div className="col-12 col-sm-6 m-auto pt-3">
-                    <InputGroup type="text" validationState="error" helpBlock errorMessage='The email address must include "@"' label="Email" defaultValue="Name.com" id="input-error-client-example"/>
+                    <InputGroup type="text" validationState="error" errorMessage='The email address must include "@"' label="Email" defaultValue="Name.com" id="input-error-client-example"/>
                 </div>
             </ComponentPreview>
 
@@ -299,15 +326,22 @@ const DeveloperDocumentation = () => (
     </section>
 );
 
-const Forms = () => (
-    <DocContainer>
-        <p className="lead">A form is a collection of input components that allows users to provide and submit data.</p>
-        <Overview />
-        <ContentGuidelines />
-        <HowToDesignForms />
-        <DeveloperDocumentation />
-    </DocContainer>
-);
+const Forms = () => {
+    useEffect(() => {
+        hintTextExpander.init();
+    });
+
+    return (
+
+        <DocContainer>
+            <p className="lead">A form is a collection of input components that allows users to provide and submit data.</p>
+            <Overview />
+            <ContentGuidelines />
+            <HowToDesignForms />
+            <DeveloperDocumentation />
+        </DocContainer>
+    );
+};
 
 export default Forms;
 

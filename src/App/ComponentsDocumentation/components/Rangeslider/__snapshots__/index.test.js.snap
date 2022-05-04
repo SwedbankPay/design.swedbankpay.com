@@ -81,6 +81,7 @@ exports[`Component: Rangeslider DeveloperDocumentation renders 1`] = `
   >
     Developer documentation
   </h2>
+  <DisableState />
   <h3>
     Javascript methods
   </h3>
@@ -133,29 +134,15 @@ exports[`Component: Rangeslider Overview renders 1`] = `
               min={0}
               value={50}
             />,
-            "description": "The slider component has a label which describes the intent of the slider. It also has a minimum and maximum range which displays the range which user can pick in between. By holding and dragging the circle indicator along the line, the user can see the value change and update in real time.",
+            "description": "The rangeslider has a label which indicates what value the slider is changing. It also has a minimum and maximum range which displays the range which user can select within. By holding and dragging the circle indicator along the line, the user can see the value change in real time.",
             "options": Object {
-              "checkbox": Array [
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "help_icon",
-                      "name": "With help icon",
-                      "value": Object {
-                        "tooltip": true,
-                      },
-                    },
-                  ],
-                  "title": "Label add on",
-                },
-              ],
               "radio": Array [
                 Object {
                   "id": "unit_radio",
                   "title": "Unit value",
                   "values": Array [
                     Object {
-                      "name": "Default",
+                      "name": "None",
                       "value": Object {
                         "valueLabelPostfix": "",
                         "valueLabelPrefix": "",
@@ -213,7 +200,7 @@ exports[`Component: Rangeslider Overview renders 1`] = `
       <Link
         to="/components/input-field"
       >
-        text input
+        input field
       </Link>
        instead when the user needs to select specific number.
     </li>
@@ -391,9 +378,8 @@ exports[`Component: Rangeslider Overview renders 1`] = `
     </div>
   </div>
   <p>
-    Don’t use sliders for content without numeric values.
+    Don't use sliders for content without numeric values.
   </p>
-  <DisableState />
 </section>
 `;
 

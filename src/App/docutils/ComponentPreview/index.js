@@ -2,7 +2,7 @@ import React, { Component, cloneElement } from "react";
 import PropTypes from "prop-types";
 import { renderToStaticMarkup } from "react-dom/server";
 import jsbeautifier from "js-beautify";
-import { tabs, accordion, sheet } from "@src/scripts/main";
+import { tabs, accordion, sheet, hintTextExpander, tooltips } from "@src/scripts/main";
 
 // NOTE: dangerousHTML prop is used when wanting to show html in the codefigure without encoding.
 
@@ -124,11 +124,9 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
         const copyToClipboard = e => {
             navigator.clipboard.writeText(code);
 
-            e.target.dataset.tooltip = "Copied!";
-        };
+            const tip = document.getElementById("tooltipCopy");
 
-        const tooltipContent = e => {
-            e.target.dataset.tooltip = "Copy to clipboard";
+            tip.innerHTML = "Copied!";
         };
 
         return (
@@ -136,8 +134,11 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                 <div className="code-view">
                     <header className="code-view-header">
                         {language.toUpperCase()}
-                        <button className="copy-btn d-flex p-0" aria-label="Copy to clipboard">
-                            <i className="material-icons material-icons-outlined" data-tooltip onMouseEnter={e => tooltipContent(e)} onClick={e => copyToClipboard(e)}>content_copy</i>
+                        <button aria-describedby="tooltipCopy" className="tooltip" onClick={e => copyToClipboard(e)}>
+                            <i className="material-icons-outlined">content_copy</i>
+                            <div role="tooltip" id="tooltipCopy">
+                                Copy to clipboard
+                            </div>
                         </button>
                     </header>
                     <table className="code-view-table">
@@ -206,6 +207,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
         componentDidMount () {
             tabs.init(this.props.showCasePanelAdvanced.tabsId);
             this._resetOptions();
+            tooltips.init();
         }
 
         componentDidUpdate (prevProps, prevState) {
@@ -221,10 +223,16 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                 sheet.init();
             }
 
+            if (this.state.activeTab.component.props.hintExpander) {
+                if (!prevState.activeOptions.some(option => option.id === "hint_expander" || option.id === "hint_expander_textarea")) {
+                    hintTextExpander.init("hint-text-expander");
+                }
+            }
+
             if (this.state.activeTab.component.props.id === "accordion-showcase") {
                 this.state.activeTab.component.props.accordionGroup
                     ? accordion.init("accordion-group-example")
-                    : accordion.init();
+                    : accordion.init("expander-showcase");
 
             }
         }
@@ -355,7 +363,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                                         <fieldset className="mb-4" key={i}>
                                             <legend className="h4">{radio.title}</legend>
                                             {radio.values.map((val, j) => (
-                                                <div key={j} className="radio" onChange={e => this.setActiveOptions(
+                                                <div key={j} className={`radio${val.toBeRemoved ? " d-block" : ""}`} onChange={e => this.setActiveOptions(
                                                     radio.id,
                                                     radio.values[e.target.value].value,
                                                     radio.values[e.target.value].description
@@ -368,6 +376,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                                                         defaultChecked={val.default}
                                                     />
                                                     <label htmlFor={`${radio.id + val.name.replace(/\s/g, "")}${val.default ? "_default" : ""}`}>{val.name}</label>
+                                                    {val.toBeRemoved ? <span className="status-badge status-badge-remove my-1">To be removed</span> : null}
                                                 </div>
                                             ))}
                                         </fieldset>

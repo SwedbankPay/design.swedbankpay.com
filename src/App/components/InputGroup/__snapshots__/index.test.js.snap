@@ -7,6 +7,7 @@ exports[`Component: InputGroup - renders 1`] = `
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -14,18 +15,18 @@ exports[`Component: InputGroup - renders 1`] = `
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
-exports[`Component: InputGroup - renders a form-group with a help block with data-success and data-error attributes 1`] = `
+exports[`Component: InputGroup - renders a form-group with a help block 1`] = `
 <InputGroup
   helpBlock="testvalue"
-  successMessage="success"
   type="typetest"
 >
   <div
@@ -34,6 +35,7 @@ exports[`Component: InputGroup - renders a form-group with a help block with dat
     
 
     <input
+      aria-describedby="undefined"
       autoComplete={null}
       className="form-control"
       data-validate={null}
@@ -41,15 +43,20 @@ exports[`Component: InputGroup - renders a form-group with a help block with dat
       disabled={null}
       id={null}
       pattern={null}
-      placeholder={null}
       readOnly={null}
       required={null}
       type="typetest"
     />
-    <div
-      className="help-block"
-      data-success="success"
-    />
+    
+
+    <p
+      className="hint-text"
+      id="hint-text"
+    >
+      testvalue
+    </p>
+    
+
   </div>
 </InputGroup>
 `;
@@ -61,16 +68,12 @@ exports[`Component: InputGroup - renders a form-group with a label if prop label
   
 
   <label>
-    
-
     this is a text in a label
-     
-    
-
   </label>
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -78,11 +81,12 @@ exports[`Component: InputGroup - renders a form-group with a label if prop label
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -102,6 +106,7 @@ exports[`Component: InputGroup - renders a form-group with a postfix if prop pos
       
 
       <input
+        aria-describedby={null}
         autoComplete={null}
         className="form-control"
         data-validate={null}
@@ -109,7 +114,6 @@ exports[`Component: InputGroup - renders a form-group with a postfix if prop pos
         disabled={null}
         id={null}
         pattern={null}
-        placeholder={null}
         readOnly={null}
         required={null}
         type="typetest"
@@ -164,6 +168,7 @@ exports[`Component: InputGroup - renders a form-group with a prefix button if pr
       
 
       <input
+        aria-describedby={null}
         autoComplete={null}
         className="form-control"
         data-validate={null}
@@ -171,7 +176,6 @@ exports[`Component: InputGroup - renders a form-group with a prefix button if pr
         disabled={null}
         id={null}
         pattern={null}
-        placeholder={null}
         readOnly={null}
         required={null}
         type="typetest"
@@ -217,6 +221,7 @@ exports[`Component: InputGroup - renders a form-group with a prefix icon if prop
       
 
       <input
+        aria-describedby={null}
         autoComplete={null}
         className="form-control"
         data-validate={null}
@@ -224,7 +229,6 @@ exports[`Component: InputGroup - renders a form-group with a prefix icon if prop
         disabled={null}
         id={null}
         pattern={null}
-        placeholder={null}
         readOnly={null}
         required={null}
         type="typetest"
@@ -263,6 +267,7 @@ exports[`Component: InputGroup - renders a form-group with a prefix label if pro
       
 
       <input
+        aria-describedby={null}
         autoComplete={null}
         className="form-control"
         data-validate={null}
@@ -270,7 +275,6 @@ exports[`Component: InputGroup - renders a form-group with a prefix label if pro
         disabled={null}
         id={null}
         pattern={null}
-        placeholder={null}
         readOnly={null}
         required={null}
         type="typetest"
@@ -299,6 +303,7 @@ exports[`Component: InputGroup - renders a form-group with a select field with g
     
 
     <select
+      aria-describedby={null}
       className="form-control"
       defaultValue=""
       disabled={null}
@@ -330,6 +335,8 @@ exports[`Component: InputGroup - renders a form-group with a select field with g
       
 	
     </select>
+    
+
   </div>
 </InputGroup>
 `;
@@ -344,6 +351,7 @@ exports[`Component: InputGroup - renders a form-group with a text-area if type e
     
 
     <textarea
+      aria-describedby={null}
       autoComplete={null}
       className="form-control"
       data-validate={null}
@@ -351,11 +359,12 @@ exports[`Component: InputGroup - renders a form-group with a text-area if type e
       disabled={null}
       id={null}
       pattern={null}
-      placeholder={null}
       readOnly={null}
       required={null}
       type="textarea"
     />
+    
+
   </div>
 </InputGroup>
 `;
@@ -367,6 +376,7 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -374,11 +384,12 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -389,6 +400,7 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -396,11 +408,12 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -411,6 +424,7 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -418,11 +432,12 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -433,6 +448,7 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -440,11 +456,12 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -455,6 +472,7 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -462,11 +480,12 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -477,6 +496,7 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -484,11 +504,12 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -499,6 +520,7 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -506,11 +528,12 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -521,6 +544,7 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -528,11 +552,12 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -543,6 +568,7 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -550,11 +576,12 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -565,6 +592,7 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -572,11 +600,12 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -587,6 +616,7 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -594,11 +624,12 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -609,6 +640,7 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -616,11 +648,12 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -631,6 +664,7 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -638,11 +672,12 @@ exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an i
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -653,6 +688,7 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -660,11 +696,12 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -675,6 +712,7 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -682,11 +720,12 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -697,6 +736,7 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -704,11 +744,12 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -719,6 +760,7 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -726,11 +768,12 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -741,6 +784,7 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -748,11 +792,12 @@ exports[`Component: InputGroup - throws an error if prefixType prop has an inval
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -763,6 +808,7 @@ exports[`Component: InputGroup - throws an error if type prop is not provided 1`
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -770,11 +816,12 @@ exports[`Component: InputGroup - throws an error if type prop is not provided 1`
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type={null}
   />
+  
+
 </div>
 `;
 
@@ -785,6 +832,7 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -792,11 +840,12 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -807,6 +856,7 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -814,11 +864,12 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -829,6 +880,7 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -836,11 +888,12 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -851,6 +904,7 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -858,11 +912,12 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;
 
@@ -873,6 +928,7 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
   
 
   <input
+    aria-describedby={null}
     autoComplete={null}
     className="form-control"
     data-validate={null}
@@ -880,10 +936,11 @@ exports[`Component: InputGroup - throws an error if validationState prop has an 
     disabled={null}
     id={null}
     pattern={null}
-    placeholder={null}
     readOnly={null}
     required={null}
     type="typetest"
   />
+  
+
 </div>
 `;

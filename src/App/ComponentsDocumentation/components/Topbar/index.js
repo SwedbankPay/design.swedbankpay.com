@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
+import { ComponentPreview, DocContainer } from "@docutils";
 import TopbarComponent from "@components/Topbar";
 import CodeTags from "@components/CodeTags";
-import SidebarComponent from "@components/Sidebar";
-import { SidebarNavList } from "../Sidebar/constants";
-
+import { topbarShowcase } from "./constants";
 import { topbar, sidebar } from "@src/scripts/main";
 import NpmInformation from "@docutils/NpmInformation";
+
+const basename = process.env.basename;
 
 const menu = {
     btn: {
@@ -21,7 +21,7 @@ const menu = {
             icon: "home"
         },
         {
-            name: "Purchase history",
+            name: "Purchases",
             icon: "shopping_cart"
         },
         {
@@ -32,101 +32,66 @@ const menu = {
 };
 
 const Overview = () => (
-    <>
+    <section>
         <h2 id="overview">Overview</h2>
-        <p>
-            To use a topbar the bare minimum markup required is:
-        </p>
-        <ul>
-            <li><CodeTags type="secondary" code=".topbar" /> wrapper.</li>
-            <li>Anchor with class <CodeTags type="secondary" code=".topbar-logo" /> to display the logo and make it clickable.</li>
+        <p>The topbar component is one of the most visible and familiar ways of helping users navigate a site. It typically consist of links to the top levels in the information architecture. </p>
+        <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={topbarShowcase}/>
+        <h3>When to consider something else</h3>
+        <ul className="list list-bullet">
+            <li> The topbar doesn’t accommodate more then one level hierarchy or a large amount of items in the list. If you need more levels or more space, consider a <Link to="/components/sidebar">sidebar</Link> component instead. </li>
         </ul>
-        <p>
-            With this you get a topbar with the {process.env.brandTitle} logo.
-            In the topbar you can add additional functionality like a menu containing links. To enable this add a <CodeTags type="primary" code={"<button>"} /> and
-            a <CodeTags type="primary" code={"<nav>"} /> containing anchors. Remember to include <CodeTags type="secondary" code={"toggle-nav=\"{your_nav_id}\""} /> as
-            a <CodeTags type="primary" code={"<button>"} /> attribute
-            to get the menu to appear when the menu-button is clicked.
-        </p>
-
-        <p>
-            Note that scrolling is locked when the menu is displayed.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent topbarContent={menu} logout id="demo-topbar" />
-        </ComponentPreview>
-    </>
+    </section>
 );
 
-const TopbarWide = () => (
-    <>
-        <h2 id="topbar-wide">Wide topbar</h2>
-        <p>
-            This is a wide topbar.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent id="demo-topbar-1" topbarContent={menu} wide="xl" logout />
-        </ComponentPreview>
-    </>
-);
+const DeveloperDocumentation = () => (
+    <section>
+        <h2 id="developer-documentation">Developer documentation</h2>
 
-const TopbarSticky = () => (
-    <>
-        <h2 id="topbar-sticky">Sticky topbar</h2>
-        <p>
-            A sticky topbar is also available, with class <CodeTags type="secondary" code=".topbar-sticky" />.
-            Use <CodeTags type="secondary" code=".topbar-min-{breakpoint}-sticky" /> to specify the minimum width the topbar should be sticky,
-            or <CodeTags type="secondary" code=".topbar-max-{breakpoint}-sticky" /> to specify the maximum width the topbar should be sticky
-            (see <Link to="/utilities/breakpoints">breakpoints</Link> for more information on breakpoints). Note that the sticky topbar does
-            not work in Internet Explorer 11.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="container-fluid">
-                <TopbarComponent id="demo-topbar-sticky" topbarContent={menu} wide="xl" logout sticky />
-                <div className="row">
-                    <div className="col-auto">
-                        <SidebarComponent id="topbar-sticky-sidebar" sidebarNavList={SidebarNavList} sticky />
-                    </div>
-                    <main className="col main-content border-left">Main content things...</main>
-                </div>
+        <section>
+            <h3>Align with page content</h3>
+            <p>The content within the desktop topbar, <CodeTags type="secondary" code=".topbar-xl-wide" />, is by default fluid to the screen size. If you want to restrict the width of the content within the topbar to align with your page container, simply add a <CodeTags type="secondary" code=".max-width" /> to the topbar <CodeTags type="secondary" code=".nav-container" /> to match it.</p>
+
+            <div className="d-flex flex-column align-items-center">
+                <img src={`${basename}img/documentation/topbar/topbar-example.png`} className="w-100" alt="Topbar with fluid width" />
+                <span className="caption-text">
+                    <span className="font-weight-bold">Figure 1. </span>
+                    Image showing Topbar with fluid width VS width adjusted to the content on the page
+                </span>
             </div>
-        </ComponentPreview>
-    </>
-);
+        </section>
 
-const TopbarWithSidebar = () => (
-    <>
-        <h2 id="topbar-with-sidebar">Topbar with sidebar content</h2>
-        <p>
-            It is recommended to have the sidebar content in the topbar menu on smaller devices, such as phones and tablets (see more on sidebar <Link to="/components/sidebar">here</Link>).
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent topbarContent={menu} logout id="demo-topbar-sidebar" sidebar />
-        </ComponentPreview>
-    </>
-);
+        <section>
+            <h3>Sticky topbar options</h3>
+            <p>The topbar can be made sticky by adding the class <CodeTags type="secondary" code=".topbar-sticky" />. Use <CodeTags type="secondary" code=".topbar-min-{breakpoint}-sticky" /> to specify the minimum width the topbar should be sticky, or <CodeTags type="secondary" code=".topbar-max-{breakpoint}-sticky" /> to specify the maximum width the topbar should be sticky (see <Link to="/utilities/breakpoints">breakpoints</Link> for more information on breakpoints). </p>
+            <ComponentPreview language="html" showCasePanel codeFigure>
+                <div className="container-fluid">
+                    <TopbarComponent id="demo-topbar-sticky" topbarContent={menu} wide="xl" sticky />
+                    <main></main>
+                </div>
+            </ComponentPreview>
+        </section>
 
-const TopbarPNG = () => (
-    <>
-        <h2 id="topbar-png">Topbar with PNG logo</h2>
-        <p>
+        <section>
+            <h3>Topbar with PNG logo</h3>
+            <p>
             A PNG version of the logo can also be used. This is done by appending the class <CodeTags type="secondary" code=".topbar-logo-png" /> to the
             anchor with class <CodeTags type="secondary" code=".topbar-logo" />. Only consider using the PNG version when there are issues with using the SVG version.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent topbarContent={menu} logout id="demo-topbar-png" png/>
-        </ComponentPreview>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <TopbarComponent id="demo-topbar-1-png" topbarContent={menu} wide="xl" logout png/>
-        </ComponentPreview>
-    </>
-);
+            </p>
+            <ComponentPreview language="html" showCasePanel codeFigure>
+                <TopbarComponent topbarContent={menu} logout id="demo-topbar-png" png/>
+                <main></main>
+            </ComponentPreview>
+        </section>
 
-const JavascriptMethods = () => (
-    <>
-        <h2 id="javascript-methods">JavaScript Methods</h2>
-        <JavascriptDocs componentName="topbar" open close />
-    </>
+        <section>
+            <h3>Javascript methods</h3>
+            <p><CodeTags type="secondary" code="dg.topbar.init()" /> initializes the topbar.</p>
+            <p><CodeTags type="secondary" code="dg.topbar.open(<topbar-id>)" /> opens the given topbar.</p>
+            <p><CodeTags type="secondary" code="dg.topbar.close(<topbar-id>)" /> closes the given topbar.</p>
+        </section>
+
+        <NpmInformation componentName={"topbar"}/>
+    </section>
 );
 
 class Topbar extends Component {
@@ -138,15 +103,12 @@ class Topbar extends Component {
 
     render () {
         return (
-            <DocContainer docToc>
-                <p className="lead">The topbar is used to give users an easily available navigational bar at the top of your web application.</p>
-                <Overview />
-                <TopbarWide />
-                <TopbarSticky />
-                <TopbarWithSidebar />
-                <TopbarPNG />
-                <JavascriptMethods />
-                <NpmInformation componentName={"topbar"}/>
+            <DocContainer>
+                <section id="topbar-doc">
+                    <p className="lead">The topbar is used to give users an easily available navigational bar at the top of your web application.</p>
+                    <Overview />
+                    <DeveloperDocumentation />
+                </section>
             </DocContainer>
         );
     }
@@ -155,4 +117,4 @@ class Topbar extends Component {
 export default Topbar;
 
 /* For testing */
-export { Overview, TopbarWide, TopbarSticky, TopbarWithSidebar, TopbarPNG, JavascriptMethods };
+export { Overview, DeveloperDocumentation };

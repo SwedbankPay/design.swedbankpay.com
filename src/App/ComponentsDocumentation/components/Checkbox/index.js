@@ -37,7 +37,7 @@ const HowTo = () => (
 );
 
 const Overview = () => (
-    <section>
+    <section id="checkbox-overview">
         <h2 id="overview">Overview</h2>
 
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={checkboxShowCase} />
@@ -57,13 +57,14 @@ const ContentGuidelines = () => (
     <section>
         <h2 id="content-guidelines">Content guidelines</h2>
         <div className="slab slab-plain">
-            <div className="d-flex flex-column align-items-center py-5">
-                <CheckboxComponent groupTitle="Group heading" name="radio-guidelines" options={guidelineOptions} group />
+            <div className="d-flex flex-column align-items-center py-3">
+                <CheckboxComponent groupTitle="Group legend" name="radio-guidelines" options={guidelineOptions} group hintText="Hint text"/>
             </div>
         </div>
         <ul className="list list-bullet">
-            <li>The <b>Group heading</b> should descriptive, explaining the context of the options to choose from. </li>
+            <li>The <b>group legend</b> should be descriptive, explaining the context of the options to choose from. </li>
             <li>The <b>checkbox labels</b> should be short, to the point and clearly explain the option. It is also preferred to have fewer than three words per label as longer words could extend a label to multiple rows which could disrupt the reading experience.</li>
+            <li>A <b>hint text</b> can be used to complement the group legend and provide clarifying details. If the information is long or won&apos;t be needed by the majority of users, a hint expander can be used instead of a text that is visible by default. </li>
         </ul>
     </section>
 );
@@ -71,22 +72,31 @@ const ContentGuidelines = () => (
 const DeveloperDocumentation = () => (
     <section>
         <h2 id="developer-documentation">Developer documentation</h2>
-        <h3>Disabled state</h3>
-        <p>Disable a checkbox by adding <CodeTags type="primary" code={"disabled"} /> attribute to the desired Checkbox.</p>
+        <section>
+            <h3>Disabled state</h3>
+            <p>Disable a checkbox by adding <CodeTags type="primary" code={"disabled"} /> attribute to the desired Checkbox.</p>
 
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="d-flex justify-content-center">
-                <CheckboxComponent id="disabled-example" label="Checkbox label" disabled/>
-            </div>
-        </ComponentPreview>
+            <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+                <div className="d-flex justify-content-center">
+                    <CheckboxComponent id="disabled-example" label="Checkbox label" disabled/>
+                </div>
+            </ComponentPreview>
+        </section>
 
-        <h3>Error state</h3>
-        <p>To display the error state, add the <CodeTags type="secondary" code={".has-error"} /> class to the parent element, then add the <CodeTags type="secondary" code={".help-block"} /> element as the last child with the error message. </p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="m-auto pl-5 col-sm-12 error-state-container">
-                <CheckboxComponent groupTitle="Group heading" name="checkbox-group-example" options={developerDocOptions} group errorMessage="Descriptive helpful error message." />
-            </div>
-        </ComponentPreview>
+        <section>
+            <h3>Error state</h3>
+            <p>To display the error state, add the <CodeTags type="secondary" code={".has-error"} /> class to the parent element, then add the <CodeTags type="secondary" code={".help-block"} /> element as the last child with the error message. </p>
+            <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+                <div className="m-auto pl-5 col-sm-12 error-state-container">
+                    <CheckboxComponent groupTitle="Group legend" name="checkbox-group-example" options={developerDocOptions} group errorMessage="Descriptive helpful error message." />
+                </div>
+            </ComponentPreview>
+        </section>
+
+        <section>
+            <h3>Javascript methods</h3>
+            <p><CodeTags type="secondary" code="dg.hintTextExpander.init()"/> can be used to initialize all Hint text expanders. Or <CodeTags type="secondary" code="dg.hintTextExpander.init(<hint-text-expander-id>)"/> to initialize a specific one.</p>
+        </section>
     </section>
 );
 

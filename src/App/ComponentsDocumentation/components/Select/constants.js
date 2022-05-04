@@ -8,24 +8,33 @@ export const selectOverview = {
     id: "no-tabs",
     elements: [
         {
-            component: <InputGroup id="select-showcase-example" type="select" label="Label" placeholder="Select option" selectOptions={["Blueberry", "Blackberry", "Berryberry"]} />,
+            component: <InputGroup id="select-showcase-example" type="select" label="Label" placeholder="Select option" selectOptions={["Blueberry", "Blackberry", "Berryberry"]} hintExpander={true} />,
             options: {
                 checkbox: [
                     {
                         title: "Label add on",
                         inputs: [
                             {
-                                id: "help_icon",
-                                name: "Help icon",
-                                value: {
-                                    tooltip: true
-                                }
-                            },
-                            {
                                 id: "optional",
                                 name: "Is optional",
                                 value: {
                                     optional: true
+                                }
+                            },
+                            {
+                                id: "hint_text_select",
+                                name: "Hint text",
+                                value: {
+                                    helpBlock: "Hint text",
+                                    hintTextId: "select-hint-text-example",
+                                }
+                            },
+                            {
+                                id: "hint_expander",
+                                name: "Expander hint",
+                                value: {
+                                    expandingHintTitle: "Expanding hint text",
+                                    expanderId: "expander-showcase"
                                 }
                             }
                         ]
@@ -46,8 +55,6 @@ export const selectOverview = {
                                 name: "Error",
                                 value: {
                                     errorMessage: "Descriptive helpful error message.",
-                                    validationState: "error",
-                                    helpBlock: true,
                                     required: true
                                 }
                             },
@@ -62,7 +69,7 @@ export const selectOverview = {
                 ]
             },
             title: "Select",
-            description: "The select component looks similar to an input field in terms of structure, both with a label and placeholder text. But it does function differently and when activated expands and displays a list of options."
+            description: "The select component looks similar to an input field but works differently. When activated it expands and displays a list of selectable options."
         }
     ]
 };

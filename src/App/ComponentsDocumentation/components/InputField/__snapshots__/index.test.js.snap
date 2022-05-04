@@ -18,25 +18,21 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
       >
         <InputGroup
           defaultValue="Input text"
-          errorMessage="Error message"
-          helpBlock={true}
+          helpBlock="Hint text"
           id="input-guidelines-example"
-          label="Input label"
-          tooltip={true}
+          label="Label"
           type="text"
-          validationState="error"
         />
         <InputGroup
-          label="Input label"
-          optional={true}
-          placeholder="Placeholder text"
+          expandingHintTitle="Expander hint text"
+          label="Label"
           type="textarea"
         />
       </div>
     </div>
   </div>
   <h3>
-    Input label
+    Label
   </h3>
   <p>
     An input field must have a label that clearly describes the type of input a field requires. 
@@ -45,17 +41,94 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
     className="list list-bullet"
   >
     <li>
-      Use a label that is meaningful, clear, and concise.
-    </li>
-    <li>
       When a text field is not required to be filled by the user, label it as “optional”.
-    </li>
-    <li>
-      If there is a need for a more detailed description, a help icon can be added after the label. 
     </li>
   </ul>
   <section
-    key="Prefixes and postfixes are useful when there’s a commonly understood icon, symbol or abbreviation for the type of information the user needs to enter since it can reduce mental load."
+    key="[object Object]0"
+  >
+    <h3>
+      Hint text
+    </h3>
+    <p>
+      A hint text should complement the label and provide clarifying details. It can be used to:
+    </p>
+    <ul
+      className="list list-bullet"
+    >
+      <li>
+        Provide an example of what to enter
+      </li>
+      <li>
+        Explain why you are asking a certain question
+      </li>
+      <li>
+        Inform the user about where to find the requested information
+      </li>
+    </ul>
+    <p>
+      Primarily use the visible by default hint text and secondarily a hint expander. Try to avoid using both a visible hint text and expander.
+    </p>
+    <div
+      className="row placeholder-guideline"
+    >
+      <div
+        className="col-lg-6 col-sm-12"
+        key="If the information is fairly important and many users will need it, provide a hint text that is visible by default."
+      >
+        <div
+          className="slab slab-plain slab-border-success"
+        >
+          <span
+            className="h3 d-block mb-3"
+          >
+            Do
+          </span>
+          <InputGroup
+            helpBlock="YYYYMMDDNNNN"
+            hintTextId="birthnumber-example"
+            id="do-example-expanding"
+            label="Personal identification number"
+            type="text"
+          />
+        </div>
+        <p
+          className="mb-4"
+        >
+          If the information is fairly important and many users will need it, provide a hint text that is visible by default.
+        </p>
+      </div>
+      <div
+        className="col-lg-6 col-sm-12"
+        key="Use a hint expander if the information is long and won’t be needed by the majority of users. Write the hint expander to help users understand what they will see before they click."
+      >
+        <div
+          className="slab slab-plain slab-border-success"
+        >
+          <span
+            className="h3 d-block mb-3"
+          >
+            Do
+          </span>
+          <InputGroup
+            expandingHintContent="Three to four digits on the back or the front of your card."
+            expandingHintId="where-to-find-example"
+            expandingHintTitle="Where to find the code?"
+            id="do-example-expanding"
+            label="Security code (CVC)"
+            type="text"
+          />
+        </div>
+        <p
+          className="mb-4"
+        >
+          Use a hint expander if the information is long and won’t be needed by the majority of users. Write the hint expander to help users understand what they will see before they click.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section
+    key="[object Object]1"
   >
     <h3>
       Prefix and postfix
@@ -175,72 +248,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
     </div>
   </section>
   <section
-    key="A placeholder text may be used inside of the input field to serve as an example of what the user can enter, consider to start with “e.g.” or similar abbreviation in corresponding language."
-  >
-    <h3>
-      Placeholder text
-    </h3>
-    <p>
-      A placeholder text may be used inside of the input field to serve as an example of what the user can enter, consider to start with “e.g.” or similar abbreviation in corresponding language.
-    </p>
-    <div
-      className="row placeholder-guideline"
-    >
-      <div
-        className="col-lg-6 col-sm-12"
-        key="Use the placeholder text as an example of what to enter."
-      >
-        <div
-          className="slab slab-plain slab-border-success"
-        >
-          <span
-            className="h3 d-block mb-3"
-          >
-            Do
-          </span>
-          <InputGroup
-            id="guidelines-input-example-5"
-            label="Personal authentication number"
-            placeholder="YYYYMMDDNNNN"
-            type="text"
-          />
-        </div>
-        <p
-          className="mb-4"
-        >
-          Use the placeholder text as an example of what to enter.
-        </p>
-      </div>
-      <div
-        className="col-lg-6 col-sm-12"
-        key="Don’t use the placeholder text as an instruction of what to enter."
-      >
-        <div
-          className="slab slab-plain slab-border-error"
-        >
-          <span
-            className="h3 d-block mb-3"
-          >
-            Do
-            n't
-          </span>
-          <InputGroup
-            id="guidelines-input-example-6"
-            label="Personal authentication number"
-            placeholder="Enter with 10 digits"
-            type="text"
-          />
-        </div>
-        <p
-          className="mb-4"
-        >
-          Don’t use the placeholder text as an instruction of what to enter.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section
-    key="When input isn’t accepted, input fields should display a short and concise error message, it should be no more than a single sentence."
+    key="[object Object]2"
   >
     <h3>
       Error message
@@ -266,7 +274,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           <InputGroup
             defaultValue="Name.com"
             errorMessage="The email address must include \\"@\\""
-            helpBlock={true}
             id="guidelines-input-example-7"
             label="Email address"
             type="text"
@@ -295,7 +302,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           <InputGroup
             defaultValue="Name.com"
             errorMessage="Invalid input"
-            helpBlock={true}
             id="guidelines-input-example-8"
             label="Email address"
             type="text"
@@ -322,100 +328,117 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
   >
     Developer documentation
   </h2>
-  <h3
-    className="mt-3"
-  >
-    Autocomplete
-  </h3>
-  <p>
-    Add 
-    <CodeTags
-      code="autocomplete"
-      type="primary"
-    />
-     attributes to input fields when it is possible to make a form easier for users to fill. 
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <InputGroup
-      autoComplete="name"
-      id="developer-documentation-example"
-      label="Name"
-      type="text"
-    />
-  </ComponentPreview>
-  <h3>
-    Error message
-  </h3>
-  <p>
-    To display the error state, add the 
-    <CodeTags
-      code=".has-error"
-      type="secondary"
-    />
-     class to the parent element, then add the 
-    <CodeTags
-      code=".help-block"
-      type="secondary"
-    />
-     element as the last child with the error message.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <InputGroup
-      defaultValue="Input text"
-      errorMessage="Descriptive helpful error message."
-      helpBlock={true}
-      id="developer-documentation-error-example"
-      label="Input label"
-      type="text"
-      validationState="error"
-    />
-  </ComponentPreview>
-  <h3>
-    Disabled state
-  </h3>
-  <p>
-    Disable a input field by adding the 
-    <CodeTags
-      code="disabled"
-      type="primary"
-    />
-     attribute to the desired input field and the 
-    <CodeTags
-      code="form-group"
-      type="primary"
-    />
-     where the input field resides.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <InputGroup
-      disabled={true}
-      label="Input label"
-      placeholder="Placeholder text"
-      type="text"
-    />
-  </ComponentPreview>
-  <h3>
-    Javascript methods
-  </h3>
-  <p>
-    <CodeTags
-      code="dg.validation.init()"
-      type="primary"
-    />
-     can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.
-  </p>
+  <section>
+    <h3
+      className="mt-3"
+    >
+      Autocomplete
+    </h3>
+    <p>
+      Add 
+      <CodeTags
+        code="autocomplete"
+        type="primary"
+      />
+       attributes to input fields when it is possible to make a form easier for users to fill. 
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      showCasePanel={true}
+    >
+      <InputGroup
+        autoComplete="name"
+        id="developer-documentation-example"
+        label="Name"
+        type="text"
+      />
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Error message
+    </h3>
+    <p>
+      To display the error state, add the 
+      <CodeTags
+        code=".has-error"
+        type="secondary"
+      />
+       class to the parent element, then add the 
+      <CodeTags
+        code=".help-block"
+        type="secondary"
+      />
+       element as the last child with the error message.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      showCasePanel={true}
+    >
+      <InputGroup
+        defaultValue="Input text"
+        errorMessage="Descriptive helpful error message."
+        id="developer-documentation-error-example"
+        label="Input label"
+        type="text"
+      />
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Disabled state
+    </h3>
+    <p>
+      Disable a input field by adding the 
+      <CodeTags
+        code="disabled"
+        type="primary"
+      />
+       attribute to the desired input field and the 
+      <CodeTags
+        code="form-group"
+        type="primary"
+      />
+       where the input field resides.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      showCasePanel={true}
+    >
+      <InputGroup
+        disabled={true}
+        label="Input label"
+        type="text"
+      />
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Javascript methods
+    </h3>
+    <p>
+      <CodeTags
+        code="dg.validation.init()"
+        type="secondary"
+      />
+       can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.
+    </p>
+    <p>
+      <CodeTags
+        code="dg.hintTextExpander.init()"
+        type="secondary"
+      />
+       can be used to initialize all Hint text expanders. Or 
+      <CodeTags
+        code="dg.hintTextExpander.init(<hint-expander-id>)"
+        type="secondary"
+      />
+       to initialize a specific one.
+    </p>
+  </section>
 </section>
 `;
 
@@ -426,17 +449,10 @@ exports[`Component: InputField Overview renders 1`] = `
   <h2
     id="input-field"
   >
-    Input field
+    Overview
   </h2>
   <p>
-    Use an Input field when the expected user input is a single line of text. An Input field must always have a label that clearly describes the requirement of the input. Refer to 
-    <a
-      href="javascript:;"
-      onClick={[Function]}
-    >
-      content guidelines
-    </a>
-     for more information.
+    Depending on the expected length of the user input use either a Input field for shorter input or a Textarea for longer input. 
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -447,20 +463,17 @@ exports[`Component: InputField Overview renders 1`] = `
         "elements": Array [
           Object {
             "component": <InputGroup
+              hintExpander={true}
               id="input-showcase-example"
-              label="Input label"
-              placeholder="Placeholder text"
+              label="Label"
               type="text"
             />,
             "description": <React.Fragment>
               <p>
-                Inputs fields have a few different states which includes the default state, focus state, disabled state and error state.
+                Use an input field when the expected user input is a single line of text. The default input type is text but it can also be specified as for example Email which will make it automatically validated when submitted or Password which will mask the characters submitted.
               </p>
               <p>
-                The default input type is text but it can also be specified as for example Email which will make it automatically validated when submitted or Password which will mask the characters submitted.
-              </p>
-              <p>
-                Input fields can have prefixes or postfixes which can help the user more quickly understand what kind of information that is requested. These can be icons as well as text symbols or currency abbreviations like %, $ or kr.
+                Input fields can have prefixes or suffixes which can help the user more quickly understand what kind of information that is requested. These can be icons as well as text symbols or currency abbreviations like %, € or kr.
               </p>
             </React.Fragment>,
             "options": Object {
@@ -468,17 +481,26 @@ exports[`Component: InputField Overview renders 1`] = `
                 Object {
                   "inputs": Array [
                     Object {
-                      "id": "help_icon",
-                      "name": "With help icon",
-                      "value": Object {
-                        "tooltip": true,
-                      },
-                    },
-                    Object {
                       "id": "optional",
                       "name": "Is optional",
                       "value": Object {
                         "optional": true,
+                      },
+                    },
+                    Object {
+                      "id": "hint_text",
+                      "name": "Hint text",
+                      "value": Object {
+                        "helpBlock": "Hint text",
+                        "hintTextId": "hint-text-example-id",
+                      },
+                    },
+                    Object {
+                      "id": "hint_expander",
+                      "name": "Hint expander",
+                      "value": Object {
+                        "expanderId": "expander-showcase",
+                        "expandingHintTitle": "Expanding hint text",
                       },
                     },
                   ],
@@ -528,8 +550,6 @@ exports[`Component: InputField Overview renders 1`] = `
                       "name": "Error",
                       "value": Object {
                         "errorMessage": "Descriptive helpful error message.",
-                        "helpBlock": true,
-                        "validationState": "error",
                       },
                     },
                     Object {
@@ -542,88 +562,41 @@ exports[`Component: InputField Overview renders 1`] = `
                 },
               ],
             },
+            "tab": "Input field",
             "title": "Input field",
           },
-        ],
-        "id": "no-tabs",
-      }
-    }
-  />
-  <h3>
-    When to consider something else
-  </h3>
-  <ul
-    className="list list-bullet"
-  >
-    <li>
-      Use a 
-      <b>
-        Textarea
-      </b>
-       when the expected user input is more than one sentence
-    </li>
-  </ul>
-  <p>
-    Use an Input field when the expected user input is a single line of text. An Input field must always have a label that clearly describes the requirement of the input. Refer to 
-    <a
-      href="javascript:;"
-      onClick={[Function]}
-    >
-      content guidelines
-    </a>
-  </p>
-</section>
-`;
-
-exports[`Component: InputField Textarea renders 1`] = `
-<section
-  id="textarea-overview"
->
-  <h2
-    id="textarea"
-  >
-    Textarea
-  </h2>
-  <p>
-    Use a Textarea when the expected user input is more than one sentence. Textareas must always have a Input label that clearly describes the type of input a field requires and it may also have a Placeholder example text, refer to 
-    <a
-      href="javascript:;"
-      onClick={[Function]}
-    >
-      content guidelines
-    </a>
-     for more information. 
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-    showCasePanelAdvanced={
-      Object {
-        "elements": Array [
           Object {
             "component": <InputGroup
-              label="Input label"
-              placeholder="Placeholder text"
+              hintExpander={true}
+              label="Label"
               type="textarea"
             />,
-            "description": "Textareas have a few different sates which includes the default state, focus state, disabled state and error state. ",
+            "description": "Use a Text area when the expected user input is more than one sentence.",
             "options": Object {
               "checkbox": Array [
                 Object {
                   "inputs": Array [
                     Object {
-                      "id": "help_icon_textarea",
-                      "name": "With help icon",
-                      "value": Object {
-                        "tooltip": true,
-                      },
-                    },
-                    Object {
                       "id": "optional_textarea",
                       "name": "Is optional",
                       "value": Object {
                         "optional": true,
+                      },
+                    },
+                    Object {
+                      "id": "hint_text_textarea",
+                      "name": "Hint text",
+                      "value": Object {
+                        "helpBlock": "Hint text",
+                        "hintTextId": "hint-text-text-area-example",
+                      },
+                    },
+                    Object {
+                      "id": "hint_expander_textarea",
+                      "name": "Hint expander",
+                      "value": Object {
+                        "expanderId": "expander-showcase",
+                        "expandingHintTitle": "Expanding hint text",
                       },
                     },
                   ],
@@ -645,8 +618,6 @@ exports[`Component: InputField Textarea renders 1`] = `
                       "name": "Error",
                       "value": Object {
                         "errorMessage": "Descriptive helpful error message.",
-                        "helpBlock": true,
-                        "validationState": "error",
                       },
                     },
                     Object {
@@ -659,10 +630,12 @@ exports[`Component: InputField Textarea renders 1`] = `
                 },
               ],
             },
-            "title": "Textarea",
+            "tab": "Text area",
+            "title": "Text area",
           },
         ],
-        "id": "no-tabs-2",
+        "id": "no-tabs",
+        "tabsId": "overviewInputFieldTabs",
       }
     }
   />
@@ -673,11 +646,25 @@ exports[`Component: InputField Textarea renders 1`] = `
     className="list list-bullet"
   >
     <li>
-      Use an 
-      <b>
-        Input field
-      </b>
-       when the expected user input is a short text
+      If you want users to choose from a list of responses, instead consider 
+      <Link
+        to="/components/radio-button"
+      >
+        radio buttons
+      </Link>
+      , 
+      <Link
+        to="/components/checkbox"
+      >
+        checkboxes
+      </Link>
+       or a 
+      <Link
+        to="/components/select"
+      >
+        select
+      </Link>
+      .
     </li>
   </ul>
 </section>
@@ -691,14 +678,9 @@ exports[`Component: InputField renders 1`] = `
     <p
       className="lead"
     >
-      Input fields typically reside in forms and enable the user to interact with and input words, characters or numbers. Depending on the expected length of the user input use either a Input field for shorter input or a Textarea for longer input.
+      Input fields typically reside in forms and enable the user to interact with and input words, characters or numbers.
     </p>
-    <Overview
-      scrollToRef={[Function]}
-    />
-    <Textarea
-      scrollToRef={[Function]}
-    />
+    <Overview />
     <ContentGuidelines />
     <DeveloperDocumentation />
   </section>

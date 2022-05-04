@@ -156,7 +156,6 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       >
         <InputGroup
           errorMessage="Email is required"
-          helpBlock={true}
           id="login-client-side"
           label="Email"
           type="email"

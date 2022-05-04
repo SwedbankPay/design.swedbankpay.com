@@ -326,6 +326,10 @@ module.exports = (env, argv) => {
                                     destination: `./dist${basename}img/documentation/spacing`
                                 },
                                 {
+                                    source: `./src/img/${brand}/documentation/tooltips/*.png`,
+                                    destination: `./dist${basename}img/documentation/tooltips`
+                                },
+                                {
                                     source: `./src/img/${brand}/documentation/copywriting/*.png`,
                                     destination: `./dist${basename}img/documentation/copywriting`
                                 },
@@ -348,6 +352,10 @@ module.exports = (env, argv) => {
                                 {
                                     source: `./src/img/${brand}/documentation/forDesigners/*.png`,
                                     destination: `./dist${basename}img/documentation/forDesigners`
+                                },
+                                {
+                                    source: `./src/img/${brand}/documentation/topbar/*.png`,
+                                    destination: `./dist${basename}img/documentation/topbar`
                                 },
                                 {
                                     source: "./src/img/background/*.svg",

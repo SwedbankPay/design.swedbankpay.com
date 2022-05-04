@@ -1,226 +1,4 @@
 .sidebar {
-    position: sticky;
-    top: 0;
-
-    &.sidebar-topbar-sticky {
-        top: @topbar-height;
-
-        .sidebar-nav {
-            max-height: calc((100vh - @topbar-height));
-        }
-    }
-
-    each(@grid-breakpoints, .(@min-width, @infix) {
-        &.sidebar-topbar-min-@{infix}-sticky {
-            @media screen and (min-width: @min-width) {
-                .sidebar-topbar-sticky();
-            }
-        }
-    });
-
-    each(@grid-breakpoints-max, .(@max-width, @infix) {
-        &.sidebar-topbar-max-@{infix}-sticky {
-            @media screen and (max-width: @max-width) {
-                .sidebar-topbar-sticky();
-            }
-        }
-    });
-
-    .sidebar-nav {
-        max-height: 100vh;
-        overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-
-        .main-nav-ul {
-            list-style: none;
-            padding: 0;
-
-            .nav-group {
-                .nav-ul-active() {
-                    > .nav-ul {
-                        max-height: 1500px;
-                        transition: max-height 1.5s ease-in-out;
-                    }
-                }
-
-                .nav-heading-active() {
-                    color: @brand-accent-links;
-
-                    i {
-                        transform: rotate(90deg);
-                        transition: transform 0.3s;
-                    }
-                }
-
-                &.active {
-                    .nav-ul-active();
-
-                    > .nav-group-heading {
-                        .nav-heading-active();
-                    }
-                }
-
-                .nav-group-heading {
-                    cursor: pointer;
-                    display: flex;
-                    align-items: flex-start;
-                    min-height: 2.5rem;
-                    padding: 0.5rem 0;
-
-                    &:hover,
-                    &:focus {
-                        color: @brand-accent-links;
-                    }
-
-                    &:active,
-                    &:hover {
-                        outline: 0;
-                    }
-
-                    &:focus {
-                        .tab-focus();
-                    }
-
-                    > i.material-icons {
-                        user-select: none;
-                    }
-
-                    i {
-                        font-size: 1.5rem;
-                        transition: transform 0.5s ease-in-out;
-                    }
-
-                    span {
-                        padding-left: 0.5rem;
-                        font-family: @brand-headline;
-                        font-weight: @font-weight-normal;
-                        font-size: 1.125rem;
-                        line-height: 1.5rem;
-                    }
-                }
-
-                .nav-ul {
-                    list-style: none;
-                    padding-left: 0.75rem;
-                    max-height: 0;
-                    overflow: hidden;
-                    transition: max-height 0.5s ease-in-out;
-
-                    .nav-subgroup {
-                        padding-left: 1rem;
-
-                        &.active {
-                            .nav-ul-active();
-
-                            > .nav-subgroup-heading {
-                                .nav-heading-active();
-
-                                span {
-                                    font-weight: @font-weight-bold;
-                                }
-                            }
-                        }
-
-                        .nav-subgroup-heading {
-                            cursor: pointer;
-                            display: flex;
-                            align-items: flex-start;
-                            min-height: 2.5rem;
-                            padding: 0.5rem 0;
-
-                            &:hover,
-                            &:focus {
-                                color: @brand-accent-links;
-                            }
-
-                            &:active,
-                            &:hover {
-                                outline: 0;
-                            }
-
-                            &:focus {
-                                .tab-focus();
-                            }
-
-                            > i.material-icons {
-                                user-select: none;
-                            }
-
-                            span {
-                                padding-left: 0.5rem;
-                                font-size: 1rem;
-                                line-height: 1.5rem;
-                            }
-                        }
-                    }
-
-                    .nav-leaf {
-                        position: relative;
-                        display: flex;
-                        align-items: center;
-                        min-height: 2.5rem;
-
-                        &.active {
-                            &:before {
-                                background-color: @brand-accent-links;
-                            }
-
-                            a {
-                                color: @brand-accent-links;
-                                font-weight: @font-weight-bold;
-                            }
-                        }
-
-                        &:before {
-                            content: "";
-                            position: absolute;
-                            height: 100%;
-                            width: 0.125rem;
-                            left: 0;
-                            top: 0;
-                            background-color: @brand-bg-gray;
-                        }
-
-                        &:active,
-                        &:hover {
-                            &:before {
-                                background-color: @brand-accent;
-                            }
-
-                            a {
-                                color: @brand-accent-links;
-                            }
-                        }
-
-                        &.nav-subgroup-leaf {
-                            &:before {
-                                display: none;
-                            }
-
-                            a {
-                                font-size: 1rem;
-                                padding: 0.625rem 0 0.625rem 3rem;
-                            }
-                        }
-
-                        a {
-                            font-size: 0.875rem;
-                            line-height: 1.25rem;
-                            color: @brand-secondary;
-                            text-decoration: none;
-                            padding: 0.625rem 1.75rem;
-                            width: 100%;
-                            height: 100%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-.sidebar-2 {
     display: flex;
     height: 100vh;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
@@ -324,12 +102,12 @@
                     }
 
                     .sidebar-secondary-nav {
-                        display: block;
+                        visibility: visible;
                     }
                 }
 
                 .sidebar-secondary-nav {
-                    display: none;
+                    visibility: hidden;
                     padding: 2rem;
                     height: 100%;
                     width: 18.375rem;
@@ -375,6 +153,7 @@
 
                             &.leaf {
                                 > a {
+                                    &:focus,
                                     &:hover {
                                         &:after {
                                             content: "chevron_right";
@@ -388,6 +167,7 @@
 
                             &.group {
                                 > a {
+                                    &:focus,
                                     &:hover {
                                         &:after {
                                             content: "expand_more";
@@ -401,7 +181,9 @@
 
                             &.active {
                                 .tertiary-nav-ul {
-                                    display: block;
+                                    visibility: visible;
+                                    max-height: 1500px;
+                                    transition: max-height 0.5s ease-in-out;
                                 }
 
                                 &.leaf {
@@ -435,7 +217,6 @@
                             > a {
                                 display: flex;
                                 align-items: center;
-                                //justify-content: space-between;
                                 padding: 0.5rem 0;
                                 text-decoration: none;
                                 color: @brand-secondary;
@@ -455,7 +236,7 @@
                                 list-style: none;
                                 overflow: hidden;
                                 padding-left: 0;
-                                transition: max-height 0.5s ease-in-out;
+                                visibility: hidden;
 
                                 .nav-leaf {
                                     position: relative;
@@ -557,6 +338,7 @@
 
                                 &.leaf {
                                     > a {
+                                        &:focus,
                                         &:hover {
                                             &:after {
                                                 content: "chevron_right";
@@ -568,6 +350,7 @@
 
                                 &.group {
                                     > a {
+                                        &:focus,
                                         &:hover {
                                             &:after {
                                                 content: "expand_more";
@@ -579,7 +362,9 @@
 
                                 &.active {
                                     .quaternary-nav-ul {
+                                        visibility: visible;
                                         max-height: 1500px;
+                                        transition: max-height 0.5s ease-in-out;
                                     }
 
                                     > a {

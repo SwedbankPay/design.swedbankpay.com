@@ -11,6 +11,12 @@
     padding: 0 1.25rem;
     position: relative;
 
+    .nav-container {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
     &.topbar-sticky {
         position: sticky;
         top: 0;
@@ -55,10 +61,11 @@
         font-weight: bold;
         display: flex;
         position: absolute;
-        left: 1.25rem;
+        left: 1rem;
         padding: 0;
         border: 0;
         outline: 0;
+        align-self: center;
 
         &:hover {
             cursor: pointer;
@@ -88,6 +95,7 @@
         border: 0;
         outline: 0;
         cursor: pointer;
+        align-self: center;
 
         &:hover {
             color: @brand-secondary-dark-2;
@@ -136,101 +144,137 @@
         .sidebar {
             display: none;
             position: relative;
-            padding-left: 1rem;
-            margin-top: 0;
             height: auto;
+            margin-top: 0;
+            top: 0;
+            padding-left: 1rem;
+
+            &.sidebar-topbar-sticky {
+                top: @topbar-height;
+
+                .sidebar-nav {
+                    max-height: calc((100vh - @topbar-height));
+                }
+            }
+
+            each(@grid-breakpoints, .(@min-width, @infix) {
+                &.sidebar-topbar-min-@{infix}-sticky {
+                    @media screen and (min-width: @min-width) {
+                        .sidebar-topbar-sticky();
+                    }
+                }
+            });
+
+            each(@grid-breakpoints-max, .(@max-width, @infix) {
+                &.sidebar-topbar-max-@{infix}-sticky {
+                    @media screen and (max-width: @max-width) {
+                        .sidebar-topbar-sticky();
+                    }
+                }
+            });
 
             .sidebar-nav {
                 max-height: none;
-                overflow-y: visible;
-
-                .sidebar-top {
-                    padding: 1rem 0;
-                    margin-bottom: 1rem;
-                    border-bottom: 1px solid @brand-secondary-light-3;
-                    display: flex;
-                    align-items: center;
-                    text-decoration: none;
-
-                    img {
-                        margin-right: 1.5rem;
-                        display: flex;
-                        width: 30px;
-                    }
-
-                    .sidebar-version {
-                        display: block;
-
-                        .sidebar-version-header {
-                            font-family: @brand-headline;
-                            font-weight: @font-weight-normal;
-                            color: @brand-secondary;
-                            font-size: 1.125rem;
-                            line-height: 1.5rem;
-                        }
-
-                        .small,
-                        small {
-                            color: @brand-secondary;
-                        }
-                    }
-                }
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
 
                 .main-nav-ul {
+                    list-style: none;
+                    padding: 0;
+
                     .nav-group {
+                        .nav-ul-active() {
+                            > .nav-ul {
+                                max-height: 1500px;
+                                transition: max-height 1.5s ease-in-out;
+                                visibility: visible;
+                            }
+                        }
+
+                        .nav-heading-active() {
+                            color: @brand-secondary;
+
+                            i {
+                                transform: rotate(90deg);
+                                transition: transform 0.3s;
+                            }
+                        }
+
                         &.active {
-                            .nav-group-heading {
-                                color: @brand-secondary;
+                            .nav-ul-active();
+
+                            > .nav-group-heading {
+                                .nav-heading-active();
                             }
                         }
 
                         .nav-group-heading {
+                            all: unset;
+                            display: flex;
+                            padding: 0.5rem;
+                            padding-left: 0;
+                            border: 2px solid transparent;
+                            font-weight: @font-weight-bold;
+                            line-height: 1.5rem;
+
+                            i {
+                                margin-right: 0.5rem;
+                            }
+
                             &:hover,
                             &:focus {
-                                color: @brand-secondary;
+                                cursor: pointer;
 
                                 span {
                                     text-decoration: underline;
                                 }
                             }
+
+                            &:focus {
+                                border: 2px solid @brand-secondary;
+                                border-radius: 2px;
+                            }
                         }
 
                         .nav-ul {
-                            .nav-subgroup {
-                                &.active {
-                                    > .nav-group-heading {
-                                        color: @brand-secondary;
-                                    }
-                                }
-
-                                .nav-subgroup-heading {
-                                    &:hover,
-                                    &:focus {
-                                        color: @brand-secondary;
-                                    }
-                                }
-                            }
+                            list-style: none;
+                            padding-left: 0.75rem;
+                            max-height: 0;
+                            overflow: hidden;
+                            visibility: hidden;
 
                             .nav-leaf {
-                                &.active {
-                                    &:before {
-                                        background-color: @brand-secondary;
-                                    }
+                                position: relative;
+                                display: flex;
+                                align-items: center;
+                                min-height: 2.5rem;
 
-                                    a {
-                                        color: @brand-secondary;
-                                    }
-                                }
-
-                                &:active,
+                                &.active,
                                 &:hover {
                                     &:before {
                                         background-color: @brand-secondary;
                                     }
+                                }
 
-                                    a {
-                                        color: @brand-secondary;
-                                    }
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    height: 100%;
+                                    width: 0.125rem;
+                                    left: 0;
+                                    top: 0;
+                                    background-color: @brand-bg-gray;
+                                }
+
+                                a {
+                                    font-size: 0.875rem;
+                                    line-height: 1.25rem;
+                                    color: @brand-secondary;
+                                    text-decoration: none;
+                                    padding: 0.625rem 1.75rem;
+                                    width: 100%;
+                                    height: 100%;
                                 }
                             }
                         }
@@ -318,7 +362,7 @@
                 }
 
                 > a:first-of-type {
-                    padding-top: 3rem;
+                    margin-top: 1rem;
                 }
 
                 > a {
@@ -349,6 +393,10 @@
 
             .topbar-link-container {
                 animation: slide-out 0.3s ease alternate;
+
+                > a:first-of-type {
+                    margin-top: 1rem;
+                }
             }
         }
 
@@ -424,6 +472,10 @@
             }
         }
     }
+
+    &.topbar-xl-wide {
+        padding: 0 1.5rem;
+    }
 }
 
 .topbar-wide {
@@ -433,11 +485,11 @@
 
     .topbar-logo {
         margin-top: 0;
+        margin-right: 2rem;
     }
 
     .topbar-link-right {
         margin-left: auto;
-        margin-right: 1rem;
         padding: 0;
         align-items: center;
         font-family: @brand-headline;

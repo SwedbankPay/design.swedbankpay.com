@@ -16,7 +16,7 @@ const Overview = () => (
 
         <h3>When to consider something else</h3>
         <ul className="list list-bullet">
-            <li>Use a <Link to="/components/input-field">text input</Link> instead when the user needs to select specific number.</li>
+            <li>Use a <Link to="/components/input-field">input field</Link> instead when the user needs to select specific number.</li>
         </ul>
 
         <h3>How to use sliders</h3>
@@ -34,7 +34,6 @@ const Overview = () => (
                 {text}
             </React.Fragment>
         ))}
-        <DisableState/>
     </section>
 );
 
@@ -74,6 +73,7 @@ const ContentGuidelines = () => (
 const DeveloperDocumentation = () => (
     <section>
         <h2 id="developer-documentation mb-3">Developer documentation</h2>
+        <DisableState/>
         <h3>Javascript methods</h3>
         <p className="my-3">Use <CodeTags type="secondary" code="dg.rangeslider.init()"/> to <a href="/get-started/for-developers" >initialize</a> all rangesliders.</p>
         <p>Or <CodeTags type="secondary" code='dg.rangeslider.init("component-id")'/> to initialize one specific component.</p>
@@ -81,7 +81,7 @@ const DeveloperDocumentation = () => (
 );
 
 const DisableState = () => (
-    <>
+    <section>
         <h3>Disabled state</h3>
         <p>Disable a slider by adding <CodeTags type="primary" code="disabled"/> attribute to the desired slider. </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
@@ -91,7 +91,7 @@ const DisableState = () => (
                 </div>
             </div>
         </ComponentPreview>
-    </>
+    </section>
 );
 
 const Rangeslider = () => {

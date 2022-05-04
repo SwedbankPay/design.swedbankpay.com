@@ -1,32 +1,39 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Radio = ({ id, checked, disabled, label, group, groupTitle, options, name, tooltip, required, className }) => {
+const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optional, name, required, className, helpBlock, expanderId, expandingHintTitle, errorMessage }) => {
     const attrs = {
         type: "radio",
         id: id || null,
         name: name || null,
         disabled: disabled || null,
         defaultChecked: checked || null,
-        required
+        required,
+        "aria-describedby": helpBlock || expandingHintTitle ? `${helpBlock ? helpBlock : ""}${expandingHintTitle ? ` ${expanderId}` : ""}` : null
     };
 
     return (
         <>
             {group ?
                 <form>
-                    <fieldset className={`radio-group${className ? ` ${className}` : ""}`} disabled={disabled}>
+                    <fieldset className={`radio-group${errorMessage ? " has-error" : ""}${className ? ` ${className}` : ""}`} disabled={disabled}>{"\n"}
                         <legend>
-                            {groupTitle}
-                            {tooltip && <>
-                                {"\n"}<i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
-                                help_outline{"\n"}</i>
-                            </>}{"\n"}
-                        </legend>
+                            {groupTitle} {optional && <span>(optional)</span>}
+                        </legend>{"\n"}
                         {options.map(({ label, id, checked }, i) => <div className="radio" key={i}>{"\n"}
                             <input {...attrs} id={id} defaultChecked={checked}/>{"\n"}
                             <label htmlFor={id}>{label}</label>{"\n"}
                         </div>)}
+                        {errorMessage && <><div className="help-block">{errorMessage}</div>{"\n"}</>}
+                        {helpBlock && <><p id="hint-text" className="hint-text">{helpBlock}</p>{"\n"}</>}
+                        {expandingHintTitle &&
+                        <div id={expanderId && "hint-text-expander"} className="hint-text-expander">{"\n"}
+                            <button type="button" aria-controls={expanderId} aria-expanded={false}>{"\n"}
+                                <span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}{"\n"}
+                            </button>{"\n"}
+                            <p id={expanderId} className="content" aria-hidden={true}>This information is less important and only a minority of users will need it or the text is very long. In this case; both.</p>{"\n"}
+                        </div>
+                        }
                     </fieldset>
                 </form>
                 : <>
@@ -50,8 +57,10 @@ Radio.propTypes = {
     groupTitle: PropTypes.string,
     options: PropTypes.array,
     require: PropTypes.bool,
-    tooltip: PropTypes.bool,
-    className: PropTypes.string
+    className: PropTypes.string,
+    helpBlock: PropTypes.string,
+    expandingHintTitle: PropTypes.string,
+    optional: PropTypes.bool
 };
 
 export default Radio;

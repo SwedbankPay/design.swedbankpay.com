@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Togglebox = ({ id, checked, disabled, label, tooltip, labelTop }) => {
+const Togglebox = ({ id, checked, disabled, label, labelTop }) => {
     const attrs = {
         type: "checkbox",
         id: id || null,
@@ -14,12 +14,6 @@ const Togglebox = ({ id, checked, disabled, label, tooltip, labelTop }) => {
             <input {...attrs} />{"\n"}
             {label ? <label htmlFor={id}>{"\n"}
                 {label}{"\n"}
-                {tooltip &&
-                    <>
-                        <i className="material-icons help-icon" data-tooltip="Some informational text" data-tooltip-position="top">{"\n"}
-                                help_outline{"\n"}
-                        </i>{"\n"}
-                    </>}
             </label> : null}{label ? "\n" : null}
         </div>
     );

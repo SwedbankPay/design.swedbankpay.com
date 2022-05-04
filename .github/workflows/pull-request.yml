@@ -22,7 +22,7 @@ jobs:
           node-version: 12.x
 
       - name: Cache dependencies
-        uses: actions/cache@v2.1.7
+        uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -34,7 +34,7 @@ jobs:
       - name: Tests and linting
         run: npm run lint && npm run test:coverage
 
-      - uses: codecov/codecov-action@v2.1.0
+      - uses: codecov/codecov-action@v3.1.0
         # with:
         #   files: ./coverage/lcov.info
           # fail_ci_if_error: true

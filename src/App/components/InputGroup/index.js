@@ -13,7 +13,6 @@ export const Addon = ({ type, value, color, disabled, postfix }) => (
 const InputGroup = ({
     id,
     type,
-    placeholder,
     pattern,
     validate,
     className,
@@ -34,24 +33,27 @@ const InputGroup = ({
     feedbackIcon,
     helpBlock,
     errorMessage,
-    successMessage,
-    tooltip,
+    expandingHintTitle,
+    expandingHintContent,
+    expanderId,
     optional,
     postfix,
-    boxSize
+    boxSize,
+    hintTextId,
+    expandingHintId
 }) => {
     const attrs = {
         type: type || null,
         className: "form-control",
         id: id || null,
-        placeholder: placeholder || null,
         defaultValue: defaultValue || "",
         disabled: disabled || null,
         readOnly: readOnly || null,
         autoComplete: autoComplete || null,
         required: required || null,
         pattern: pattern ? "" : null,
-        "data-validate": validate ? "" : null
+        "data-validate": validate ? "" : null,
+        "aria-describedby": helpBlock || expandingHintTitle ? `${helpBlock ? hintTextId : ""}${expandingHintTitle ? ` ${expandingHintId}` : ""}` : null
     };
 
     const inputGrpClasses = classnames(
@@ -66,7 +68,8 @@ const InputGroup = ({
         disabled: disabled || null,
         readOnly: readOnly || null,
         required: required || null,
-        id: id || null
+        id: id || null,
+        "aria-describedby": helpBlock || expandingHintTitle ? `${helpBlock ? hintTextId : ""}${expandingHintTitle ? ` ${expandingHintId}` : ""}` : null
     };
 
     const formGroupClasses = classnames(
@@ -79,12 +82,9 @@ const InputGroup = ({
 
     return (
         <div className={formGroupClasses}>{"\n"}
-            {label ? <label htmlFor={id}>{"\n"}{label} {optional && "(optional)"}{tooltip && "\n"}
-                {tooltip &&
-                    <i className="material-icons help-icon" data-tooltip="Some informative text" data-tooltip-position="top">{"\n"}
-                        help_outline{"\n"}</i>}{"\n"}
+            {label ? <label htmlFor={id}>{label}{optional && " (optional)"}
             </label> : null}{label ? "\n" : null}
-            {prefixValue || postfixValue || feedbackIcon || errorMessage ?
+            {prefixValue || postfixValue || feedbackIcon ?
                 <div className={inputGrpClasses}>{"\n"}
                     {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} postfix={postfix} /> : null }{prefixValue ? "\n" : null}
                     {type === "textarea" ?
@@ -100,7 +100,7 @@ const InputGroup = ({
                             :
                             <input {...attrs} />}
                     {"\n"}
-                    {postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} postfix={postfix} /> : null }{postfixValue ? "\n" : null}
+                    {errorMessage ? null : <>{postfixValue ? <Addon type={postfixType} value={postfixValue} color={postfixBtnColor} disabled={disabled} postfix={postfix} /> : null }{postfixValue ? "\n" : null}</>}
                 </div>
                 :
                 <>
@@ -108,7 +108,6 @@ const InputGroup = ({
                         <textarea {...attrs}></textarea>
                         : type === "select" ?
                             <select {...selectAttrs}>{"\n\t\t"}
-                                {placeholder && <option value="" disabled hidden>{placeholder}</option> }
                                 {selectOptions.map((opt, i) => (
                                     <Fragment key={opt + i}>
                                         <option value={opt}>{opt}</option>{(i !== selectOptions.length - 1) ? "\n\t\t" : ""}
@@ -116,10 +115,20 @@ const InputGroup = ({
                                 ))}{"\n\t"}
                             </select>
                             :
-                            <input {...attrs} />}
+                            <input {...attrs} />}{"\n"}
                 </>
             }
-            {helpBlock ? <div className="help-block" data-success={successMessage || null} >{errorMessage}</div> : null}
+            {errorMessage && <><div className="help-block">{errorMessage}</div>{"\n"}</>}
+            {helpBlock && <><p id="hint-text" className="hint-text">{helpBlock}</p>{"\n"}</>}
+            {expandingHintTitle &&
+            <div id={expanderId && "hint-text-expander"} className="hint-text-expander">{"\n"}
+                <button type="button" aria-controls={expanderId} aria-expanded={false}>{"\n"}
+                    <span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}{"\n"}
+                </button>{"\n"}
+                <p id={expanderId} className="content" aria-hidden={true}>{expandingHintContent
+                    ? expandingHintContent
+                    : "This information is less important and only a minority of users will need it or the text is very long. In this case; both."}</p>{"\n"}
+            </div>}
         </div>
     );
 };
@@ -127,7 +136,6 @@ const InputGroup = ({
 InputGroup.propTypes = {
     type: PropTypes.string.isRequired,
     id: PropTypes.string,
-    placeholder: PropTypes.string,
     pattern: PropTypes.string,
     validate: PropTypes.bool,
     required: PropTypes.bool,
@@ -152,7 +160,10 @@ InputGroup.propTypes = {
     errorMessage: PropTypes.string,
     successMessage: PropTypes.string,
     className: PropTypes.string,
-    boxSize: PropTypes.oneOf(["medium", "small", ""])
+    boxSize: PropTypes.oneOf(["medium", "small", ""]),
+    expandingHintTitle: PropTypes.string,
+    expandingHintContent: PropTypes.string,
+    expanderId: PropTypes.string
 };
 
 export default InputGroup;

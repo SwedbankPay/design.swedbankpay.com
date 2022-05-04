@@ -1020,8 +1020,12 @@
         }
 
         .form-group {
-            min-width: 17.3rem;
+            min-width: 19rem;
             max-width: 21.25rem;
+
+            .hint-text-expander {
+                max-width: 19rem;
+            }
         }
 
         .component-description {
@@ -1179,6 +1183,14 @@
     }
 
     #checkbox-doc {
+        .showcase-panel {
+            .component-preview-content {
+                form {
+                    max-width: 100%;
+                }
+            }
+        }
+
         .slab-border-error,
         .slab-border-success {
             min-height: 19rem;
@@ -1206,6 +1218,24 @@
 
     .small-text {
         font-size: 0.875rem;
+    }
+
+    #skip-link-overview {
+        #skip-link-example {
+            margin-top: 3rem;
+        }
+    }
+
+    #radio-button-overview {
+        .component-preview-content {
+            justify-content: flex-start;
+        }
+    }
+
+    #checkbox-overview {
+        .component-preview-content {
+            justify-content: flex-start;
+        }
     }
 
     #loader-page-overview {
@@ -1381,6 +1411,19 @@
             height: 2.5rem;
             background-color: @brand-bg-gray;
             border-radius: 0.125rem;
+        }
+    }
+
+    #topbar-doc {
+        .component-preview-content {
+            padding: 1rem 0;
+        }
+
+        .topbar {
+            + main {
+                height: 10rem;
+                background-color: @light-gray;
+            }
         }
     }
 }

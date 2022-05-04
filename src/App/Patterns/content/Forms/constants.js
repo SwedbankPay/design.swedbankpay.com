@@ -59,7 +59,7 @@ export const formsShowCase = {
                         </legend>
                         <div className="col-12 col-sm-9 px-0">
                             <InputGroup id="form-email-example" type="email" label="E-mail"/>
-                            <InputGroup type="select" id="form-select-example" label="Subject" placeholder="Select a subject" optional selectOptions={["Subject 1", "Subject 2", "Subject 3"]}/>
+                            <InputGroup type="select" id="form-select-example" label="Subject" placeholder="Select a subject" optional selectOptions={["Subject 1", "Subject 2", "Subject 3"]} expandingHintTitle="Why should you select subject?" expandingHintContent="If you select a subject it will make it easier for our support team to handle your request which will make the processing time much faster." expandingHintId="expanding-hint-forms-example"/>
                         </div>
                         <InputGroup id="form-textarea-example" type="textarea" label="Message" />
                         <Checkbox
@@ -119,8 +119,8 @@ export const guidelinesElementsList = [
         text: <>Information can be entered a variety of non-free form input field, <Link to="/components/checkbox">checkboxes</Link>, <Link to="/components/radio-button">radio button</Link>, <Link to="/components/select">select</Link>, <Link to="/components/datepickers">date pickers</Link>, <Link to="/components/togglebox">toggle-box</Link> and <Link to="/components/rangeslider">rangesliders</Link>.</>
     },
     {
-        element: "Help",
-        text: "Provides in-context guidance for the user through a placeholder text or a clickable help icon"
+        element: "Hints",
+        text: "Provides in-context guidance for the user through an always visible hint text or hint expander which displays more information when expanded."
     },
     {
         element: "Buttons",

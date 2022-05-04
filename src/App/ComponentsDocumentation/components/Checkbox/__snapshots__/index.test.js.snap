@@ -11,25 +11,26 @@ exports[`Component: Checkbox ContentGuidelines renders 1`] = `
     className="slab slab-plain"
   >
     <div
-      className="d-flex flex-column align-items-center py-5"
+      className="d-flex flex-column align-items-center py-3"
     >
       <Checkbox
         group={true}
-        groupTitle="Group heading"
+        groupTitle="Group legend"
+        hintText="Hint text"
         name="radio-guidelines"
         options={
           Array [
             Object {
               "id": "radio-guidelines-example-1",
-              "label": "Checkbox label",
+              "label": "Label",
             },
             Object {
               "id": "radio-guidelines-example-2",
-              "label": "Checkbox label",
+              "label": "Label",
             },
             Object {
               "id": "radio-guidelines-example-3",
-              "label": "Checkbox label",
+              "label": "Label",
             },
           ]
         }
@@ -42,9 +43,9 @@ exports[`Component: Checkbox ContentGuidelines renders 1`] = `
     <li>
       The 
       <b>
-        Group heading
+        group legend
       </b>
-       should descriptive, explaining the context of the options to choose from. 
+       should be descriptive, explaining the context of the options to choose from. 
     </li>
     <li>
       The 
@@ -52,6 +53,13 @@ exports[`Component: Checkbox ContentGuidelines renders 1`] = `
         checkbox labels
       </b>
        should be short, to the point and clearly explain the option. It is also preferred to have fewer than three words per label as longer words could extend a label to multiple rows which could disrupt the reading experience.
+    </li>
+    <li>
+      A 
+      <b>
+        hint text
+      </b>
+       can be used to complement the group legend and provide clarifying details. If the information is long or won't be needed by the majority of users, a hint expander can be used instead of a text that is visible by default. 
     </li>
   </ul>
 </section>
@@ -64,82 +72,103 @@ exports[`Component: Checkbox DeveloperDocumentation renders 1`] = `
   >
     Developer documentation
   </h2>
-  <h3>
-    Disabled state
-  </h3>
-  <p>
-    Disable a checkbox by adding 
-    <CodeTags
-      code="disabled"
-      type="primary"
-    />
-     attribute to the desired Checkbox.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="d-flex justify-content-center"
-    >
-      <Checkbox
-        disabled={true}
-        id="disabled-example"
-        label="Checkbox label"
+  <section>
+    <h3>
+      Disabled state
+    </h3>
+    <p>
+      Disable a checkbox by adding 
+      <CodeTags
+        code="disabled"
+        type="primary"
       />
-    </div>
-  </ComponentPreview>
-  <h3>
-    Error state
-  </h3>
-  <p>
-    To display the error state, add the 
-    <CodeTags
-      code=".has-error"
-      type="secondary"
-    />
-     class to the parent element, then add the 
-    <CodeTags
-      code=".help-block"
-      type="secondary"
-    />
-     element as the last child with the error message. 
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-  >
-    <div
-      className="m-auto pl-5 col-sm-12 error-state-container"
+       attribute to the desired Checkbox.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      removeOuterTag={true}
+      showCasePanel={true}
     >
-      <Checkbox
-        errorMessage="Descriptive helpful error message."
-        group={true}
-        groupTitle="Group heading"
-        name="checkbox-group-example"
-        options={
-          Array [
-            Object {
-              "id": "error-example-1",
-              "label": "Checkbox label",
-            },
-            Object {
-              "id": "error-example-2",
-              "label": "Checkbox label",
-            },
-            Object {
-              "id": "error-example-3",
-              "label": "Checkbox label",
-            },
-          ]
-        }
+      <div
+        className="d-flex justify-content-center"
+      >
+        <Checkbox
+          disabled={true}
+          id="disabled-example"
+          label="Checkbox label"
+        />
+      </div>
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Error state
+    </h3>
+    <p>
+      To display the error state, add the 
+      <CodeTags
+        code=".has-error"
+        type="secondary"
       />
-    </div>
-  </ComponentPreview>
+       class to the parent element, then add the 
+      <CodeTags
+        code=".help-block"
+        type="secondary"
+      />
+       element as the last child with the error message. 
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      removeOuterTag={true}
+      showCasePanel={true}
+    >
+      <div
+        className="m-auto pl-5 col-sm-12 error-state-container"
+      >
+        <Checkbox
+          errorMessage="Descriptive helpful error message."
+          group={true}
+          groupTitle="Group legend"
+          name="checkbox-group-example"
+          options={
+            Array [
+              Object {
+                "id": "error-example-1",
+                "label": "Label",
+              },
+              Object {
+                "id": "error-example-2",
+                "label": "Label",
+              },
+              Object {
+                "id": "error-example-3",
+                "label": "Label",
+              },
+            ]
+          }
+        />
+      </div>
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Javascript methods
+    </h3>
+    <p>
+      <CodeTags
+        code="dg.hintTextExpander.init()"
+        type="secondary"
+      />
+       can be used to initialize all Hint text expanders. Or 
+      <CodeTags
+        code="dg.hintTextExpander.init(<hint-text-expander-id>)"
+        type="secondary"
+      />
+       to initialize a specific one.
+    </p>
+  </section>
 </section>
 `;
 
@@ -246,7 +275,9 @@ exports[`Component: Checkbox HowTo renders 1`] = `
 `;
 
 exports[`Component: Checkbox Overview renders 1`] = `
-<section>
+<section
+  id="checkbox-overview"
+>
   <h2
     id="overview"
   >
@@ -261,42 +292,48 @@ exports[`Component: Checkbox Overview renders 1`] = `
           Object {
             "component": <Checkbox
               group={true}
-              groupTitle="Group heading"
+              groupTitle="Group legend"
+              hintExpander={true}
               name="checkbox-group-example"
               options={
                 Array [
                   Object {
                     "id": "radio-example-1",
-                    "label": "Checkbox label",
+                    "label": "Label",
                   },
                   Object {
                     "id": "radio-example-2",
-                    "label": "Checkbox label",
-                  },
-                  Object {
-                    "id": "radio-example-3",
-                    "label": "Checkbox label",
+                    "label": "Label",
                   },
                 ]
               }
             />,
-            "description": "The default setup of the checkbox group always has a label on top which describes the checkbox group and each individual checkbox is then followed by a label which clearly describes what the options and what checking the box represents",
+            "description": "The default setup of the checkbox group has a label on top which describes the checkbox group and each individual checkbox is then followed by a label which clearly describes the option and what checking the box represents.",
             "options": Object {
               "checkbox": Array [
                 Object {
                   "inputs": Array [
                     Object {
                       "id": "checkbox_labels",
-                      "name": "Optional",
+                      "name": "Is optional",
                       "value": Object {
                         "optional": true,
                       },
                     },
                     Object {
-                      "id": "with_help_icon",
-                      "name": "With help icon",
+                      "id": "hint_text",
+                      "name": "Hint text",
                       "value": Object {
-                        "tooltip": true,
+                        "helpBlock": "Hint text",
+                        "hintTextId": "hint-text-checkbox-example",
+                      },
+                    },
+                    Object {
+                      "id": "hint_expander",
+                      "name": "Hint expander",
+                      "value": Object {
+                        "expanderId": "expander-showcase",
+                        "expandingHintTitle": "Expanding hint text",
                       },
                     },
                   ],

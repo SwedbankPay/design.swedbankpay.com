@@ -5,7 +5,7 @@ const scrollBuffer = 20;
 
 const _sidebars = [];
 
-class Sidebar {
+class TopbarSidebar {
     constructor (el) {
         this.constructSidebar(el);
     }
@@ -113,6 +113,8 @@ class Sidebar2 {
         const navLeaves = this.el.querySelectorAll(".nav-leaf");
         const previousNavs = this.el.querySelectorAll(".previous-nav");
 
+        const skipLink = document.querySelector("#skip-link");
+
         window.addEventListener("popstate", this._popStateListener);
 
         [...mainNavLI].map(mainNavElement => mainNavElement.querySelector("a").addEventListener("click", () => this._setActiveStatus(mainNavElement, ".main-nav-li")));
@@ -120,6 +122,11 @@ class Sidebar2 {
         [...tertiaryNavLI].map(tertiaryNavElement => tertiaryNavElement.querySelector("a").addEventListener("click", () => this._setActiveStatus(tertiaryNavElement, ".tertiary-nav-li")));
         [...navLeaves].map(navLeaf => navLeaf.addEventListener("click", () => this._setActiveStatus(navLeaf, SELECTORS.NAVLEAF)));
         [...previousNavs].map(previousNav => previousNav.addEventListener("click", () => this._setActiveStatus(previousNav, ".secondary-nav-li")));
+        [...secondaryNavLI].map(secNavLi => secNavLi.addEventListener("keyup", e => {
+            if (e.keyCode === 13) {
+                skipLink.focus();
+            }
+        }));
     }
 
     _closeChildElements (element, closeElement) {
@@ -292,7 +299,7 @@ const removeScrollListener = id => {
     window.removeEventListener("scroll", sidebar._contentScrollListener);
 };
 
-const _createSidebar = sidebarQuery => {
+const _createTopbarSidebar = sidebarQuery => {
 
     if (_sidebars.filter(sidebar => sidebar.id === sidebarQuery.id).length > 0) {
         const updatedSidebarObject = _sidebars.filter(sidebar => sidebar.id === sidebarQuery.id)[0];
@@ -302,14 +309,14 @@ const _createSidebar = sidebarQuery => {
         return updatedSidebarObject;
     }
 
-    const sidebarObject = new Sidebar(sidebarQuery);
+    const sidebarObject = new TopbarSidebar(sidebarQuery);
 
     _sidebars.push(sidebarObject);
 
     return sidebarObject;
 };
 
-const _createSidebar2 = sidebarQuery => {
+const _createSidebar = sidebarQuery => {
 
     if (_sidebars.filter(sidebar => sidebar.id === sidebarQuery.id).length > 0) {
         const updatedSidebarObject = _sidebars.filter(sidebar => sidebar.id === sidebarQuery.id)[0];
@@ -338,7 +345,8 @@ const populateSidebarTertiary = (id, leafList) => {
         const newLeafContent = document.createElement("a");
 
         newLeafContent.textContent = leaf.textContent;
-        // newLeafContent.href = "javascript:;";
+        newLeafContent.href = "#";
+        newLeafContent.onclick = e => { e.preventDefault(); };
         newLeaf.appendChild(newLeafContent);
         newLeaf.classList.add("nav-leaf");
 
@@ -346,7 +354,7 @@ const populateSidebarTertiary = (id, leafList) => {
     });
 };
 
-const init = (id, newSidebar) => {
+const init = (id, topbarSidebar) => {
     if (id) {
 
         const sidebar = document.getElementById(id);
@@ -357,7 +365,7 @@ const init = (id, newSidebar) => {
             return null;
         }
 
-        const sidebarObject = newSidebar ? _createSidebar2(sidebar) : _createSidebar(sidebar);
+        const sidebarObject = topbarSidebar ? _createTopbarSidebar(sidebar) : _createSidebar(sidebar);
 
         return sidebarObject;
     } else {

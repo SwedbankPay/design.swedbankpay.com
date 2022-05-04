@@ -1,0 +1,20 @@
+.skip-link {
+    left: -120rem;
+    position: absolute;
+    top: auto;
+    overflow: hidden;
+    z-index: -999;
+    padding: 0.75rem;
+    background-color: @white;
+
+    &:focus,
+    &:active {
+        left: auto;
+        height: auto;
+        z-index: 999;
+        outline: none;
+        border: 2px solid @brand-secondary;
+        border-radius: 2px;
+        color: @brand-secondary;
+    }
+}

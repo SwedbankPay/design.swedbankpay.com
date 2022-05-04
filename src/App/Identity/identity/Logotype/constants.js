@@ -372,5 +372,5 @@ export const logotypeMisuses = [
         height: "h-50",
         title: "Move wordmark",
         description: "Do not move the workmark from its original position"
-    },
+    }
 ];

@@ -8,94 +8,150 @@ exports[`Components: Tooltip Overview renders 1`] = `
     Overview
   </h2>
   <p>
-    Add the attribute 
-    <CodeTags
-      code="tooltip"
-      type="secondary"
-    />
-     to the desired element and add your content in its value to create a tooltip.
-  </p>
-  <p>
-    You can use the attribute 
-    <CodeTags
-      code="tooltip-position"
-      type="secondary"
-    />
-     to position the tooltip relative to the containing element, use the values 
-    <CodeTags
-      code="top"
-      type="secondary"
-    />
-    , 
-    <CodeTags
-      code="right"
-      type="secondary"
-    />
-    , 
-    <CodeTags
-      code="bottom"
-      type="secondary"
-    />
-     or 
-    <CodeTags
-      code="left"
-      type="secondary"
-    />
-    . If the attribute is not provided, it will default to top.
+    Tooltips should be used sparingly. If you’re building something that requires a lot of tooltips, work on clarifying the design and the language in the experience.
   </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <Tooltip />,
+            "description": <p>
+              Tooltips can be useful when the the interface is space-constrained. However when there are sufficient space within the design it is always preferred to explore other design options to keep content visible by default as tooltips can be hard to spot, require more effort from the user, block parts of the interface and may be cropped on smaller screens. 
+            </p>,
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "title": "Orientation",
+                  "values": Array [
+                    Object {
+                      "default": true,
+                      "id": "top",
+                      "name": "Top",
+                      "value": Object {
+                        "position": "top",
+                      },
+                    },
+                    Object {
+                      "id": "bottom",
+                      "name": "Bottom",
+                      "value": Object {
+                        "position": "bottom",
+                      },
+                    },
+                    Object {
+                      "id": "left",
+                      "name": "Left",
+                      "value": Object {
+                        "position": "left",
+                      },
+                    },
+                    Object {
+                      "id": "right",
+                      "name": "Right",
+                      "value": Object {
+                        "position": "right",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "title": "Tooltip",
+          },
+        ],
+        "id": "overviewTooltips",
+      }
+    }
+  />
+  <h3>
+    When to consider something else
+  </h3>
+  <p>
+    If there are sufficient space within the design it is always preferred to keep content visible by default.
+  </p>
+  <div
+    className="row mb-2"
   >
     <div
-      className="button-group"
+      className="col-md-6 col-12"
     >
-      
-
-      <button
-        className="btn btn-primary"
-        data-tooltip="This is a tooltip!"
-        data-tooltip-position="left"
-        type="button"
+      <div
+        className="slab slab-plain slab-border-success pb-4"
       >
-        Tooltip to the left
-      </button>
-      
-
-      <button
-        className="btn btn-primary"
-        data-tooltip="Payment capture is the process by which payments are secured once the payment has been authorized by the customer."
-        data-tooltip-position="top"
-        type="button"
-      >
-        Tooltip on top
-      </button>
-      
-
-      <button
-        className="btn btn-primary"
-        data-tooltip="This is a tooltip!"
-        data-tooltip-position="bottom"
-        type="button"
-      >
-        Tooltip to the bottom
-      </button>
-      
-
-      <button
-        className="btn btn-primary"
-        data-tooltip="Payment capture is the process by which payments are secured once the payment has been authorized by the customer!"
-        data-tooltip-position="right"
-        type="button"
-      >
-        Tooltip to the right
-      </button>
-      
-
+        <h3>
+          Do
+        </h3>
+        <div
+          className="d-flex justify-content-center pb-2"
+        >
+          <Button
+            icon="chat_bubble_outline"
+            id="do-example-tooltip"
+            label="Contact us"
+            type="link"
+          />
+        </div>
+      </div>
     </div>
-  </ComponentPreview>
+    <div
+      className="col-md-6 col-12"
+    >
+      <div
+        className="slab slab-plain slab-border-error h-100"
+      >
+        <h3>
+          Don't
+        </h3>
+        <div
+          className="d-flex justify-content-center mt-3"
+        >
+          <Tooltip
+            icon="chat_bubble_outline"
+            isVisible={true}
+            text="Contact us"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>
+    If you think the function of an icon button need to be explained, consider using a button with icon and text instead.
+  </p>
+  <h3>
+    How to use tooltips
+  </h3>
+  <div
+    className="row mb-2"
+  >
+    <div
+      className="col-12"
+    >
+      <div
+        className="slab slab-plain slab-border-error h-100 pb-5"
+      >
+        <h3>
+          Don't
+        </h3>
+        <div
+          className="d-flex justify-content-center"
+        >
+          <img
+            alt="Do not use tooltips as an alternate possibility for describing error messages."
+            className="col-12 col-sm-9"
+            id="tooltip-error-image"
+            src="/TEST/img/documentation/tooltips/dont-example.png"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>
+    Tooltips should not be used to communicate critical information, including errors in forms or other interaction feedback.
+  </p>
 </Fragment>
 `;
 
@@ -106,11 +162,10 @@ exports[`Components: Tooltip renders 1`] = `
   <p
     className="lead"
   >
-    Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.
+    The tooltip component displays a brief explanation when a cursor hovers over an interface element. The tooltip is always anchored to this element.
   </p>
   <Overview />
-  <WithIcons />
-  <ExtendedUsage />
+  <ContentGuidelines />
   <JavascriptMethods />
   <NpmInformation
     componentName="tooltips"

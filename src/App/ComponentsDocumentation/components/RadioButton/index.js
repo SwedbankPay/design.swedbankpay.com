@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import Radio from "@components/FormComponents/Radio";
-import { radiobuttonShowCase, doOptions, dontOptions, ContentGuidelinesOptions } from "./constants";
+import { radiobuttonShowCase, doOptions, dontOptions, ContentGuidelinesOptions, ErrorStateOptions } from "./constants";
 import CodeTags from "@components/CodeTags";
 
 const HowTo = () => (
@@ -37,7 +37,7 @@ const HowTo = () => (
 );
 
 const Overview = () => (
-    <>
+    <section id="radio-button-overview">
         <h2 id="overview">Overview</h2>
 
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={radiobuttonShowCase} codeFigure />
@@ -47,18 +47,29 @@ const Overview = () => (
             <li>
                 If you want to present multiple choices where the user can select more than one option, a <Link to="/components/checkbox">checkbox</Link> group should be used instead of radio buttons.
             </li>
+            <li>
+                If you want to present a large amount of options consider the <Link to="/components/select">select</Link> component instead of a radio button group to avoid overwhelming the user and to save space.
+            </li>
         </ul>
 
         <HowTo />
-    </>
+    </section>
 );
 
 const ContentGuidelines = () => (
     <>
         <h2 id="content-guidelines">Content guidelines</h2>
+        <div className="slab slab-plain">
+            <div className="d-flex flex-column align-items-center py-3">
+                <div>
+                    <Radio groupTitle="Group legend" name="radio-dont-example" options={ContentGuidelinesOptions} group hintText="Hint text"/>
+                </div>
+            </div>
+        </div>
         <ul className="list list-bullet">
-            <li>The <b>group heading</b> should descriptive, explaining the context of the options to choose from.</li>
-            <li>The <b>radio</b> button label should be short, to the point and clearly explain the option. It is also preferred to have fewer than three words per label as longer words could extend a label to multiple rows which could disrupt the reading experience.</li>
+            <li>The <b>group legend</b> should be descriptive, explaining the context of the options to choose from.</li>
+            <li>The <b>radio button label</b> should be short, to the point and clearly explain the option. It is also preferred to have fewer than three words per label as longer words could extend a label to multiple rows which could disrupt the reading experience.</li>
+            <li>A <b>hint text</b> can be used to complement the group legend and provide clarifying details. If the information is long or won&apos;t be needed by the majority of users, a hint expander can be used instead of a text that is visible by default. </li>
         </ul>
     </>
 );
@@ -66,20 +77,30 @@ const ContentGuidelines = () => (
 const DeveloperDocumentation = () => (
     <section>
         <h2>Developer documentation</h2>
-        <div className="slab slab-plain">
-            <div className="d-flex flex-column align-items-center">
-                <div>
-                    <Radio groupTitle="Group heading" name="radio-dont-example" options={ContentGuidelinesOptions} group/>
+        <section>
+            <h3>Disabled state</h3>
+            <p>Disable a radio button by adding <CodeTags type="primary" code="disabled"/> attribute to the desired radio button.</p>
+            <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+                <div className="d-flex justify-content-center">
+                    <Radio id="radio-example-10" label="Radio button label" name="radio-example" disabled checked/>
                 </div>
-            </div>
-        </div>
-        <span className="h3 d-inline-block mt-3">Disabled state</span>
-        <p>Disable a radio button by adding <CodeTags type="primary" code="disabled"/> attribute to the desired radio button.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
-            <div className="d-flex justify-content-center">
-                <Radio id="radio-example-10" label="Radio button label" name="radio-example" disabled checked/>
-            </div>
-        </ComponentPreview>
+            </ComponentPreview>
+        </section>
+
+        <section>
+            <h3>Error state</h3>
+            <p>To display the error state, add the <CodeTags type="primary" code=".has-error"/> class to the parent element, then add the <CodeTags type="secondary" code="help-block"/> element as the last child with the error message.</p>
+            <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+                <div className="d-flex justify-content-center">
+                    <Radio id="radio-example-11" groupTitle="Group legend" errorMessage="Error message" label="Radio button label" name="radio-example" options={ErrorStateOptions} group/>
+                </div>
+            </ComponentPreview>
+        </section>
+
+        <section>
+            <h3>Javascript methods</h3>
+            <p><CodeTags type="secondary" code="dg.hintTextExpander.init()"/> can be used to initialize all Hint text expanders. Or <CodeTags type="secondary" code="dg.hintTextExpander.init(<hint-text-expander-id>)"/> to initialize a specific one.</p>
+        </section>
     </section>
 );
 

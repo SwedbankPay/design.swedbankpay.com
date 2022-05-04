@@ -22,13 +22,7 @@ exports[`Component: Togglebox ContentGuidelines renders 1`] = `
     className="list list-bullet"
   >
     <li>
-      The label should be short and concise, preferably three words or less.
-    </li>
-    <li>
-      Label should be written as to describe the on state of the toggle.
-    </li>
-    <li>
-      Avoid using negations such as “Notifications Off”, which would mean the user would have to turn the switch on to turn the setting off.
+      The label should be short and concise preferably three words or less. Avoid using negations such as “Notifications Off”, which would mean the user would have to turn the switch on to turn the setting off.
     </li>
   </ul>
 </Fragment>
@@ -131,41 +125,9 @@ exports[`Component: Togglebox Overview renders 1`] = `
               id="togglebox-example"
               label="Label"
             />,
-            "description": "Toggleboxes have two states: on and off. Each of these have default, hover, focus and disabled states. A togglebox must always be accompanied by a label, on the left side or on the top, that clearly conveys what option a user will turn on or off. If there is a need for a more detailed description, a help icon can be added after the label.",
+            "description": "Toggleboxes have two states: on and off. Each of these have default, hover, focus and disabled states. A togglebox must always be accompanied by a label, on the left side or on the top, that clearly conveys what option a user will turn on or off.",
             "options": Object {
-              "checkbox": Array [
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "help_icon",
-                      "name": "With help icon",
-                      "value": Object {
-                        "tooltip": true,
-                      },
-                    },
-                  ],
-                  "title": "Label add on",
-                },
-              ],
               "radio": Array [
-                Object {
-                  "id": "state_radio",
-                  "title": "State modifiers",
-                  "values": Array [
-                    Object {
-                      "name": "Enabled",
-                      "value": Object {
-                        "disabled": false,
-                      },
-                    },
-                    Object {
-                      "name": "Disabled",
-                      "value": Object {
-                        "disabled": true,
-                      },
-                    },
-                  ],
-                },
                 Object {
                   "id": "label_position",
                   "title": "Label position",
@@ -180,6 +142,24 @@ exports[`Component: Togglebox Overview renders 1`] = `
                       "name": "Top",
                       "value": Object {
                         "labelTop": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "state_radio",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Enabled",
+                      "value": Object {
+                        "disabled": false,
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
                       },
                     },
                   ],

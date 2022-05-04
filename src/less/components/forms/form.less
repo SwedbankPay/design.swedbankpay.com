@@ -40,16 +40,18 @@ fieldset {
             resize: none;
         }
 
-        select {
+        select,
+        .form-group,
+        input + input,
+        .hint-text-expander > button,
+        .hint-text-expander > p {
             color: @brand-secondary-light-3;
         }
 
-        .form-group {
-            color: @brand-secondary-light-3;
-        }
-
-        input + label {
-            color: @brand-secondary-light-3;
+        .hint-text-expander {
+            button {
+                pointer-events: none;
+            }
         }
 
         .checkbox input[type="checkbox"] {
@@ -182,7 +184,7 @@ legend {
     background-clip: padding-box;
     border: solid @input-border-color;
     border-width: @input-border-width;
-    border-bottom-color: @brand-secondary-light-2;
+    border-bottom-color: @medium-brown;
     border-radius: 2px 2px 0 0;
     box-shadow: none;
     .form-control-focus(@brand-secondary);
@@ -255,11 +257,10 @@ legend {
 
     margin-bottom: @base-margin-lg;
 
-    &:focus-within {
-        .form-control {
-            outline: 2px auto @brand-secondary;
-            border-color: transparent;
-        }
+
+    .form-control:focus-within {
+        outline: 2px auto @brand-secondary;
+        border-color: transparent;
     }
 
     &.disabled,
@@ -279,6 +280,18 @@ legend {
             color: @brand-secondary-light-3;
             pointer-events: none;
         }
+
+        .hint-text,
+        .hint-text-expander > button,
+        .hint-text-expander > p {
+            color: @brand-secondary-light-3;
+        }
+
+        .hint-text-expander {
+            button {
+                pointer-events: none;
+            }
+        }
     }
 }
 
@@ -295,20 +308,66 @@ legend {
     }
 }
 
-.help-block {
+.help-block,
+.hint-text {
     position: relative;
     display: block;
     margin: @helpblock-margin;
-    color: @brand-secondary-light-2;
     font-size: 0.875rem;
     line-height: 1rem;
     min-height: 1rem;
+}
 
-    &:after {
-        opacity: 1;
-        position: absolute;
-        top: 0;
-        left: 0;
+.hint-text {
+    color: @medium-brown;
+}
+
+.hint-text-expander {
+    display: block;
+    margin-top: 0.25rem;
+
+    button {
+        all: unset;
+        display: flex;
+        color: @brand-accent-links;
+        padding-right: 0.25rem;
+        border: 1px solid transparent;
+        cursor: pointer;
+        font-size: 0.875rem;
+        line-height: 1rem;
+
+        .arrow {
+            margin-right: 0.5rem;
+            font-size: 0.875rem;
+            align-self: center;
+            transition: transform 0.5s ease;
+        }
+
+        &:focus {
+            border: 1px solid @brand-secondary;
+            border-radius: 0.125rem;
+        }
+
+        &.content-expanded {
+            .arrow {
+                transform: rotate(180deg);
+                transition: transform 0.3s ease;
+            }
+
+            ~ .content {
+                visibility: visible;
+                height: auto;
+            }
+        }
+    }
+
+    .content {
+        visibility: hidden;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        color: @medium-brown;
+        font-size: 0.875rem;
     }
 }
 

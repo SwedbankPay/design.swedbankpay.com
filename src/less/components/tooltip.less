@@ -1,10 +1,20 @@
-[data-tooltip] {
+.tooltip {
     position: relative;
     display: inline-flex;
+    margin-left: 0.25rem;
+
+    &.isVisible {
+        &:before,
+        [role="tooltip"] {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
 
     &:before {
         content: "";
         position: absolute;
+        visibility: visible;
         font-family: @font-stack;
         top: -8px;
         left: 50%;
@@ -17,19 +27,18 @@
         transition: opacity 0.3s ease-in-out;
     }
 
-    .tooltip,
-    &:after {
-        content: attr(data-tooltip);
+    [role="tooltip"] {
+        visibility: hidden;
         position: absolute;
         font-family: @font-stack;
-        left: 0;
+        left: 50%;
         width: max-content;
         max-width: 250px;
         top: -8px;
         transform: translateX(-50%) translateY(-100%);
         background: @white;
         color: @brand-secondary;
-        text-align: left;
+        text-align: center;
         font-size: 0.875rem;
         line-height: 1.5;
         white-space: normal;
@@ -43,66 +52,15 @@
         min-width: 5rem;
     }
 
-    &[data-tooltip=""]:after {
-        display: none;
-    }
-
-    &[data-tooltip-position="left"]:before {
-        left: 0%;
-        top: 50%;
-        margin-left: -13px;
-        transform: translateY(-50%) rotate(-90deg);
-    }
-
-    &[data-tooltip-position="left"] {
-        .tooltip,
-        &:after {
-            left: 0%;
+    &.tooltip-right {
+        &:before {
+            left: 100%;
             top: 50%;
-            margin-left: -9px;
-            transform: translateX(-100%) translateY(-50%);
+            margin-left: 2px;
+            transform: translateY(-50%) rotate(90deg);
         }
-    }
 
-    &[data-tooltip-position="top"]:before {
-        left: 50%;
-        margin-top: -2px;
-    }
-
-    &[data-tooltip-position="top"] {
-        .tooltip,
-        &:after {
-            left: 50%;
-            margin-top: -2px;
-        }
-    }
-
-    &[data-tooltip-position="bottom"]:before {
-        top: 100%;
-        margin-top: calc(@base-margin-sm + 2px);
-        transform: translateX(-50%) translateY(-100%) rotate(-180deg);
-    }
-
-    &[data-tooltip-position="bottom"] {
-        .tooltip,
-        &:after {
-            left: 50%;
-            top: 100%;
-            margin-top: calc(@base-margin-sm + 2px);
-            transform: translateX(-50%) translateY(0%);
-        }
-    }
-
-    &[data-tooltip-position="right"]:before {
-        left: 100%;
-        top: 50%;
-        margin-left: 2px;
-        transform: translateY(-50%) rotate(90deg);
-    }
-
-    &[data-tooltip-position="right"] {
-        .tooltip,
-        &:after {
+        [role="tooltip"] {
             left: 100%;
             top: 50%;
             margin-left: 10px;
@@ -110,50 +68,60 @@
         }
     }
 
-    &:hover {
-        .tooltip,
-        &:after,
+    &.tooltip-bottom {
         &:before {
+            top: 100%;
+            margin-top: calc(@base-margin-sm + 2px);
+            transform: translateX(-50%) translateY(-100%) rotate(-180deg);
+        }
+
+        [role="tooltip"] {
+            left: 50%;
+            top: 100%;
+            margin-top: calc(@base-margin-sm + 2px);
+            transform: translateX(-50%) translateY(0%);
+        }
+    }
+
+    &.tooltip-left {
+        &:before {
+            left: 0%;
+            top: 50%;
+            margin-left: -13px;
+            transform: translateY(-50%) rotate(-90deg);
+        }
+
+        [role="tooltip"] {
+            left: 0%;
+            top: 50%;
+            margin-left: -9px;
+            transform: translateX(-100%) translateY(-50%);
+        }
+    }
+
+    &:focus,
+    &:hover {
+        &:before,
+        [role="tooltip"] {
+            visibility: visible;
             opacity: 1;
         }
     }
 
     &:focus {
-        &:not(:hover) {
-            .tooltip,
-            &:before,
-            &:after {
-                opacity: 0;
-                content: "";
-            }
-        }
+        outline: 1.5px solid @brand-secondary;
     }
-}
 
-i {
-    &[data-tooltip] {
-        color: @soft-brown;
-        margin-left: 0.25rem;
+    i {
+        color: @brand-secondary;
         font-size: 1.25rem;
     }
 }
 
 @media screen and (max-width: @screen-sm-max) {
-    [data-tooltip] {
-        .tooltip {
+    .tooltip {
+        [role="tooltip"] {
             max-width: calc(100vw - 3rem);
-        }
-    }
-}
-
-
-//IE11 fallback
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    [data-tooltip] {
-        .tooltip,
-        &:after {
-            display: table;
-            min-width: 150px;
         }
     }
 }
