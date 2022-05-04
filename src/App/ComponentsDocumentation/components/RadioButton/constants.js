@@ -17,7 +17,7 @@ export const radiobuttonShowCase = {
     id: "no-tabs",
     elements: [
         {
-            component: <Radio groupTitle="Group label" name="radio-group-example" options={options} group hintExpander={true} />,
+            component: <Radio groupTitle="Group legend" name="radio-group-example" options={options} group hintExpander={true} />,
             options: {
                 checkbox: [
                     {
@@ -35,7 +35,7 @@ export const radiobuttonShowCase = {
                                 name: "Hint text",
                                 value: {
                                     helpBlock: "Hint text",
-                                    hintTextId: "hintTextRadioExample",
+                                    hintTextId: "hint-text-radio-example",
                                 }
                             }, {
                                 id: "hint_expander",

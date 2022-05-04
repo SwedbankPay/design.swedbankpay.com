@@ -15,7 +15,7 @@ exports[`Component: Checkbox ContentGuidelines renders 1`] = `
     >
       <Checkbox
         group={true}
-        groupTitle="Group label"
+        groupTitle="Group legend"
         hintText="Hint text"
         name="radio-guidelines"
         options={
@@ -43,7 +43,7 @@ exports[`Component: Checkbox ContentGuidelines renders 1`] = `
     <li>
       The 
       <b>
-        group label
+        group legend
       </b>
        should be descriptive, explaining the context of the options to choose from. 
     </li>
@@ -59,7 +59,7 @@ exports[`Component: Checkbox ContentGuidelines renders 1`] = `
       <b>
         hint text
       </b>
-       can be used to complement the group label and provide clarifying details. If the information is long or won't be needed by the majority of users, a hint expander can be used instead of a text that is visible by default. 
+       can be used to complement the group legend and provide clarifying details. If the information is long or won't be needed by the majority of users, a hint expander can be used instead of a text that is visible by default. 
     </li>
   </ul>
 </section>
@@ -130,7 +130,7 @@ exports[`Component: Checkbox DeveloperDocumentation renders 1`] = `
         <Checkbox
           errorMessage="Descriptive helpful error message."
           group={true}
-          groupTitle="Group label"
+          groupTitle="Group legend"
           name="checkbox-group-example"
           options={
             Array [
@@ -292,7 +292,7 @@ exports[`Component: Checkbox Overview renders 1`] = `
           Object {
             "component": <Checkbox
               group={true}
-              groupTitle="Group label"
+              groupTitle="Group legend"
               hintExpander={true}
               name="checkbox-group-example"
               options={
@@ -325,7 +325,7 @@ exports[`Component: Checkbox Overview renders 1`] = `
                       "name": "Hint text",
                       "value": Object {
                         "helpBlock": "Hint text",
-                        "hintTextId": "hintTextCheckboxExample",
+                        "hintTextId": "hint-text-checkbox-example",
                       },
                     },
                     Object {

@@ -26,7 +26,7 @@ export const selectOverview = {
                                 name: "Hint text",
                                 value: {
                                     helpBlock: "Hint text",
-                                    hintTextId: "selectHintTextExample",
+                                    hintTextId: "select-hint-text-example",
                                 }
                             },
                             {
@@ -54,7 +54,8 @@ export const selectOverview = {
                             {
                                 name: "Error",
                                 value: {
-                                    errorMessage: "Descriptive helpful error message."
+                                    errorMessage: "Descriptive helpful error message.",
+                                    required: true
                                 }
                             },
                             {

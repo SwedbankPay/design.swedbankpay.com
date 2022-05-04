@@ -41,7 +41,7 @@ class NavGroup extends Component {
             <li className="nav-group">
                 <button className="nav-group-heading" onClick={() => this.toggleActive()}>
                     <i className="material-icons" aria-hidden="true">arrow_right</i>
-                    <span>{title}</span>
+                    {title}
                 </button>
                 <ul className="nav-ul">
                     {routes.map((childRoute, i) => (
@@ -109,7 +109,7 @@ class SelectPanel extends Component {
                         </nav>
                     </div>
                     :
-                    <div id={this.props.id} className="sidebar-2">
+                    <div id={this.props.id} className="sidebar">
                         <nav className="sidebar-main-nav">
                             <div className="sidebar-logo">
                                 <a href="/" aria-label="To homepage">

@@ -59,7 +59,7 @@ const ContentGuidelines = () => (
         <h2 id="content-guidelines">Content guidelines</h2>
 
         <div className="d-flex justify-content-center slab slab-plain px-5 pt-5 pb-4">
-            <InputGroup type="select" id="content-guidelines-example" label="Label" selectOptions={["Related option"]} helpBlock="Hint text" hintTextId="selectContentGuidelinesExample"/>
+            <InputGroup type="select" id="content-guidelines-example" label="Label" selectOptions={["Related option"]} helpBlock="Hint text" hintTextId="select-content-guidelines-example"/>
         </div>
         <ul className="pl-3">
             <li>The <b>Label</b> should be short, concise and clearly describe what the user is selecting. If the user is not required to select an option, label it as “optional”.</li>

@@ -24,7 +24,7 @@ module.exports = [
                 componentPath: "components/Accordion",
                 icon: "calendar_view_day",
                 outlined: true,
-                statusBadges: ["javascript", "updated"]
+                statusBadges: ["javascript"]
             },
             {
                 title: "Action list",
@@ -59,8 +59,7 @@ module.exports = [
                 path: "/components/buttons",
                 componentPath: "components/Buttons",
                 icon: "touch_app",
-                outlined: true,
-                statusBadges: ["updated"]
+                outlined: true
             },
             {
                 title: "Cards",
@@ -82,7 +81,8 @@ module.exports = [
                 path: "/components/checkbox",
                 componentPath: "components/Checkbox",
                 icon: "check_box",
-                outlined: true
+                outlined: true,
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Code tags",
@@ -118,7 +118,7 @@ module.exports = [
                 path: "/components/input-field",
                 componentPath: "components/InputField",
                 icon: "text_fields",
-                statusBadges: ["updated"]
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Links",
@@ -162,7 +162,7 @@ module.exports = [
                 componentPath: "components/Pagination",
                 icon: "power_input",
                 outlined: true,
-                statusBadges: ["updated"]
+                statusBadges: ["javascript"]
             },
             {
                 title: "Panel",
@@ -181,7 +181,8 @@ module.exports = [
                 title: "Radio button",
                 path: "/components/radio-button",
                 componentPath: "components/RadioButton",
-                icon: "radio_button_checked"
+                icon: "radio_button_checked",
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Rangeslider",
@@ -189,7 +190,7 @@ module.exports = [
                 componentPath: "components/Rangeslider",
                 icon: "tune",
                 outlined: true,
-                statusBadges: ["javascript"]
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Sheet",
@@ -197,7 +198,7 @@ module.exports = [
                 componentPath: "components/Sheet",
                 icon: "vertical_split",
                 outlined: true,
-                statusBadges: ["javascript", "updated"]
+                statusBadges: ["javascript"]
             },
             {
                 title: "Select",
@@ -205,7 +206,7 @@ module.exports = [
                 componentPath: "components/Select",
                 icon: "arrow_drop_down_circle",
                 outlined: true,
-                statusBadges: ["updated"]
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Sidebar",
@@ -213,7 +214,7 @@ module.exports = [
                 componentPath: "components/Sidebar",
                 icon: "view_sidebar",
                 outlined: true,
-                statusBadges: ["javascript"]
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Skip link",
@@ -251,7 +252,7 @@ module.exports = [
                 componentPath: "components/Tabs",
                 icon: "folder",
                 outlined: true,
-                statusBadges: ["javascript", "updated"]
+                statusBadges: ["javascript"]
             },
             {
                 title: "Toast",
@@ -266,7 +267,8 @@ module.exports = [
                 path: "/components/togglebox",
                 componentPath: "components/Togglebox",
                 icon: "toggle_off",
-                outlined: true
+                outlined: true,
+                statusBadges: ["updated"]
             },
             {
                 title: "Tooltips",
@@ -274,7 +276,7 @@ module.exports = [
                 componentPath: "components/Tooltips",
                 icon: "filter_frames",
                 outlined: true,
-                statusBadges: ["javascript"]
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Topbar",

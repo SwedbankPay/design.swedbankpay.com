@@ -12,7 +12,7 @@ exports[`Component: Select ContentGuidelines renders 1`] = `
   >
     <InputGroup
       helpBlock="Hint text"
-      hintTextId="selectContentGuidelinesExample"
+      hintTextId="select-content-guidelines-example"
       id="content-guidelines-example"
       label="Label"
       selectOptions={
@@ -224,7 +224,7 @@ exports[`Component: Select Overview renders 1`] = `
                       "name": "Hint text",
                       "value": Object {
                         "helpBlock": "Hint text",
-                        "hintTextId": "selectHintTextExample",
+                        "hintTextId": "select-hint-text-example",
                       },
                     },
                     Object {
@@ -254,6 +254,7 @@ exports[`Component: Select Overview renders 1`] = `
                       "name": "Error",
                       "value": Object {
                         "errorMessage": "Descriptive helpful error message.",
+                        "required": true,
                       },
                     },
                     Object {

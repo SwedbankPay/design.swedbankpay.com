@@ -32,20 +32,11 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
     <div
       className="d-flex flex-column align-items-center"
     >
-      <div
-        className="row mt-2"
-      >
-        <img
-          alt="Topbar with fluid width"
-          className="col-sm-6 col-12"
-          src="/TEST/img/documentation/topbar/topbar-fluid.png"
-        />
-        <img
-          alt="Topbar with restricted width"
-          className="col-sm-6 col-12"
-          src="/TEST/img/documentation/topbar/topbar-restricted.png"
-        />
-      </div>
+      <img
+        alt="Topbar with fluid width"
+        className="w-100"
+        src="/TEST/img/documentation/topbar/topbar-example.png"
+      />
       <span
         className="caption-text"
       >

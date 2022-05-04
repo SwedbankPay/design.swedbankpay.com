@@ -91,9 +91,6 @@ const DeveloperDocumentation = () => (
 );
 
 const InputField = () => {
-    const guidelinesRef = useRef();
-    const scrollToRef = () => guidelinesRef.current.scrollIntoView();
-
     useEffect(() => {
         hintTextExpander.init();
     });

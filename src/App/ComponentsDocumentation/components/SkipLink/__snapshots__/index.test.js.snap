@@ -5,7 +5,7 @@ exports[`Documentation: SkipLink DeveloperDocumentation renders 1`] = `
   <h2
     id="developer-documentation"
   >
-    Developer Documentation
+    Developer documentation
   </h2>
   <p>
     It is important to place the skip link in the top level of your navigation tree. The skip link should be the first thing users can tab to.

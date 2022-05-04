@@ -52,10 +52,7 @@ const DeveloperDocumentation = () => (
             <p>The content within the desktop topbar, <CodeTags type="secondary" code=".topbar-xl-wide" />, is by default fluid to the screen size. If you want to restrict the width of the content within the topbar to align with your page container, simply add a <CodeTags type="secondary" code=".max-width" /> to the topbar <CodeTags type="secondary" code=".nav-container" /> to match it.</p>
 
             <div className="d-flex flex-column align-items-center">
-                <div className="row mt-2">
-                    <img src={`${basename}img/documentation/topbar/topbar-fluid.png`} className="col-sm-6 col-12" alt="Topbar with fluid width" />
-                    <img src={`${basename}img/documentation/topbar/topbar-restricted.png`} className="col-sm-6 col-12" alt="Topbar with restricted width" />
-                </div>
+                <img src={`${basename}img/documentation/topbar/topbar-example.png`} className="w-100" alt="Topbar with fluid width" />
                 <span className="caption-text">
                     <span className="font-weight-bold">Figure 1. </span>
                     Image showing Topbar with fluid width VS width adjusted to the content on the page
