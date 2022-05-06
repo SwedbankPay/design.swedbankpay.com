@@ -9,9 +9,99 @@ import { sidebar } from "@src/scripts/main";
 import { SidebarNavList, SidebarNavListExtended } from "./constants";
 import NpmInformation from "@docutils/NpmInformation";
 
+const Test = () => (
+    <section>
+        <div className="container-fluid">
+            <div className="row">
+                <div id="dg-sidebar3" className="sidebar">
+                    <nav className="sidebar-main-nav">
+                        <div className="sidebar-logo"><a href="/" aria-label="To homepage"><img src="/img/logo/swedbankpay-logo-v.svg" alt="Swedbank Pay vertical logo" className="logotype-vertical logotype-md" /></a></div>
+                        <ul className="main-nav-ul">
+                            <li className="main-nav-li active">
+                                <a><i className="material-icons-outlined" aria-hidden="true">home</i>Home Page</a>
+                            </li>
+                            <li className="main-nav-li">
+                                <a><i className="material-icons-outlined rotated" aria-hidden="true">wb_incandescent</i>Get Started</a>
+                                <nav className="sidebar-secondary-nav">
+                                    <header className="secondary-nav-header">Get Started</header>
+                                    <ul className="secondary-nav-ul extended-sidebar">
+                                        <li className="secondary-nav-li leaf">
+                                            <a><i className="material-icons-outlined rotated" aria-hidden="true">accessibility</i>Accessibility</a>
+                                        </li>
+                                        <li className="secondary-nav-li leaf">
+                                            <a><i className="material-icons-outlined rotated" aria-hidden="true">palette</i>Colors</a>
+                                            <ul>
+                                                <a className="icon-link text-decoration-none previous-nav">
+                                                    <i className="material-icons" aria-hidden="true">arrow_back_ios</i>
+                                                    <span className="ml-2">Back to Get Started</span>
+                                                </a>
+                                                <header className="mt-2">
+                                                    <i className="material-icons-outlined rotated" aria-hidden="true">palette</i>Colors
+                                                </header>
+                                                <li className="leaf"><a>Primary colors</a></li>
+                                                <li className="leaf"><a>Tertiary colors</a>
+                                                    <ul>
+                                                        <a className="icon-link text-decoration-none previous-nav">
+                                                            <i className="material-icons" aria-hidden="true">arrow_back_ios</i>
+                                                            <span className="ml-2">Back to colors</span>
+                                                        </a>
+                                                        <header className="test-header mt-2">
+                                                            <i className="material-icons-outlined rotated" aria-hidden="true">palette</i>Tertiary
+                                                        </header>
+                                                        <li className="leaf"><a>Children 1</a></li>
+                                                        <li className="leaf">
+                                                            <a>Children 2</a>
+                                                            <ul>
+                                                                <a className="icon-link text-decoration-none previous-nav">
+                                                                    <i className="material-icons" aria-hidden="true">arrow_back_ios</i>
+                                                                    <span className="ml-2">Back to Tertiary</span>
+                                                                </a>
+                                                                <header className="test-header mt-2">
+                                                                    <i className="material-icons-outlined rotated" aria-hidden="true">palette</i>Children 2
+                                                                </header>
+                                                                <li className="leaf"><a>Granchildren 1</a></li>
+                                                                <li className="leaf"><a>Granchildren 2</a></li>
+                                                                <li className="leaf">
+                                                                    <a>Granchildren 3</a>
+                                                                    <ul>
+                                                                        <a className="icon-link text-decoration-none previous-nav">
+                                                                            <i className="material-icons" aria-hidden="true">arrow_back_ios</i>
+                                                                            <span className="ml-2">Back to Children 2</span>
+                                                                        </a>
+                                                                        <header className="test-header mt-2">
+                                                                            <i className="material-icons-outlined rotated" aria-hidden="true">palette</i>Grandchildren 3
+                                                                        </header>
+                                                                        <li className="leaf"><a>Children 1</a></li>
+                                                                        <li className="group">
+                                                                            <a>Children 2</a>
+                                                                            <ul>
+                                                                                <li className="nav-leaf"><a>Grangranchildren 1</a></li>
+                                                                                <li className="nav-leaf"><a>Grangranchildren 2</a></li>
+                                                                                <li className="nav-leaf"><a>Grangranchildren 3</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <main className="col main-content">Main content things...</main>
+            </div>
+        </div>
+    </section>
+);
 const Overview = () => (
     <section>
-        <h2 id="overview">Overview</h2>
+        <h2 id ="overview">Overview</h2>
         <p>
             The sidebar supports a depth of up to 3 levels. Note that if used with a sticky topbar, add
             class <CodeTags type="secondary" code=".sidebar-topbar-sticky" />, <CodeTags type="secondary" code=".topbar-min-{breakpoint}-sticky" />, or <CodeTags type="secondary" code=".topbar-max-{breakpoint}-sticky" /> depending
@@ -150,10 +240,12 @@ const Sidebar = () => {
     useEffect(() => {
         sidebar.init("dg-sidebar1");
         sidebar.init("dg-sidebar2");
+        sidebar.init("dg-sidebar3");
     });
 
     return (
         <DocContainer docToc>
+            <Test />
             <p className="lead">The sidebar is used to give users an easily available navigational bar on the left side of your web application.</p>
             <Overview />
             <ExtendedSidebar />
