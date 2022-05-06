@@ -13,6 +13,12 @@
         .sidebar-main-nav {
             box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
 
+            .sidebar-secondary-nav {
+                li > ul {
+                    visibility: visible;
+                }
+            }
+
             &:before {
                 display: block;
             }
@@ -129,7 +135,9 @@
                         }
                     }
 
-                    .tertiary-nav-header {
+                    header {
+                        font-family: @brand-black;
+                        font-size: 1.5rem;
                         display: flex;
                         align-items: center;
 
@@ -138,18 +146,13 @@
                         }
                     }
 
-                    .secondary-nav-header,
-                    .tertiary-nav-header {
-                        font-family: @brand-black;
-                        font-size: 1.5rem;
-                    }
-
                     .secondary-nav-ul {
                         list-style: none;
                         padding-left: 0;
 
-                        .secondary-nav-li {
+                        li {
                             margin: 0.5rem 0;
+                            list-style: none;
 
                             &.leaf {
                                 > a {
@@ -162,6 +165,18 @@
                                             margin-left: auto;
                                         }
                                     }
+                                }
+
+                                > ul {
+                                    background-color: @white;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 18.375rem;
+                                    margin-right: 520px;
+                                    height: 100%;
+                                    width: 100%;
+                                    padding: 2rem;
+                                    transition: 0.3s ease-in-out;
                                 }
                             }
 
@@ -177,13 +192,22 @@
                                         }
                                     }
                                 }
+
+                                ul {
+                                    max-height: 0;
+                                    list-style: none;
+                                    overflow: hidden;
+                                    padding-left: 0;
+                                    visibility: hidden;
+                                }
                             }
 
                             &.active {
-                                .tertiary-nav-ul {
+                                > ul {
+                                    left: 0;
                                     visibility: visible;
                                     max-height: 1500px;
-                                    transition: max-height 0.5s ease-in-out;
+                                    transition: 0.5s ease-in-out;
                                 }
 
                                 &.leaf {
@@ -202,10 +226,6 @@
                                         &:after {
                                             content: none;
                                         }
-                                    }
-
-                                    .tertiary-nav-ul {
-                                        max-height: 1500px;
                                     }
                                 }
 
@@ -229,147 +249,49 @@
                                     margin-right: 0.5rem;
                                 }
                             }
+                        }
 
-                            .tertiary-nav-ul,
-                            .quaternary-nav-ul {
-                                max-height: 0;
-                                list-style: none;
-                                overflow: hidden;
-                                padding-left: 0;
-                                visibility: hidden;
+                        .nav-leaf {
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            min-height: 2.5rem;
 
-                                .nav-leaf {
-                                    position: relative;
-                                    display: flex;
-                                    align-items: center;
-                                    min-height: 2.5rem;
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                height: 100%;
+                                width: 0.125rem;
+                                left: 0;
+                                top: 0;
+                                background-color: @brand-bg-gray;
+                            }
 
-                                    &:before {
-                                        content: "";
-                                        position: absolute;
-                                        height: 100%;
-                                        width: 0.125rem;
-                                        left: 0;
-                                        top: 0;
-                                        background-color: @brand-bg-gray;
-                                    }
-
-                                    &.active,
-                                    &:hover {
-                                        &:before {
-                                            background-color: @brand-secondary;
-                                        }
-
-                                        a {
-                                            font-weight: @font-weight-bold;
-                                        }
-                                    }
-
-                                    a {
-                                        color: @brand-secondary;
-                                        text-decoration: none;
-                                        padding: 0.625rem 0 0.625rem 1.75rem;
-                                        width: 100%;
-                                        height: 100%;
-                                        cursor: pointer;
-                                    }
+                            &.active,
+                            &:hover {
+                                &:before {
+                                    background-color: @brand-secondary;
                                 }
+
+                                a {
+                                    font-weight: @font-weight-bold;
+                                }
+                            }
+
+                            a {
+                                color: @brand-secondary;
+                                text-decoration: none;
+                                padding: 0.625rem 0 0.625rem 1.75rem;
+                                width: 100%;
+                                height: 100%;
+                                cursor: pointer;
                             }
                         }
 
                         &.extended-sidebar {
                             .secondary-nav-li {
-                                margin: 0.5rem 0;
-
-                                &.active {
-                                    .tertiary-nav-ul {
-                                        right: 0;
-                                        margin-right: 0;
-                                        transition: right 0.3s;
-                                    }
-                                }
-
-                                &.group {
-                                    > a {
-                                        &:hover {
-                                            &:after {
-                                                content: "chevron_right";
-                                                .material-icons-styling();
-
-                                                margin-left: auto;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            .tertiary-nav-ul {
-                                background-color: @white;
-                                position: absolute;
-                                top: 0;
-                                right: -220px;
-                                margin-right: 520px;
-                                height: 100%;
-                                width: 100%;
-                                padding: 2rem;
-                                transition: 0.3s linear;
-
-                                a {
+                                .previous-nav {
                                     color: @brand-secondary;
-                                }
-                            }
-
-                            .tertiary-nav-li {
-                                margin: 0.5rem 0;
-                                list-style: none;
-
-                                a {
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: space-between;
-                                    padding: 0.5rem 0;
-                                    text-decoration: none;
-                                    color: @brand-secondary;
-
-                                    &:hover {
-                                        font-weight: @font-weight-bold;
-                                    }
-                                }
-
-                                &.leaf {
-                                    > a {
-                                        &:focus,
-                                        &:hover {
-                                            &:after {
-                                                content: "chevron_right";
-                                                .material-icons-styling();
-                                            }
-                                        }
-                                    }
-                                }
-
-                                &.group {
-                                    > a {
-                                        &:focus,
-                                        &:hover {
-                                            &:after {
-                                                content: "expand_more";
-                                                .material-icons-styling();
-                                            }
-                                        }
-                                    }
-                                }
-
-                                &.active {
-                                    .quaternary-nav-ul {
-                                        visibility: visible;
-                                        max-height: 1500px;
-                                        transition: max-height 0.5s ease-in-out;
-                                    }
-
-                                    > a {
-                                        font-weight: @font-weight-bold;
-                                    }
                                 }
                             }
                         }
