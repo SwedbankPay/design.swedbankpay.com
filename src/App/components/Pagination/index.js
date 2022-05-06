@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import { paginate } from "@src/scripts/main";
 
-const Pagination = ({ length, currentActive, id }) => {
+const Pagination = ({ length, currentActive, id, anchorArrows }) => {
 
     const [current, setCurrent] = useState(currentActive);
 
@@ -17,10 +17,12 @@ const Pagination = ({ length, currentActive, id }) => {
         const arrowClasses = classnames(
             `arrow-${type}`,
             mobile ? "d-block d-sm-none" : null,
-            disabled ? "disabled" : null
+            disabled ? "disabled" : null,
+            anchorArrows ? "anchor" : null
         );
 
-        const navigate = () => {
+        const navigate = (e) => {
+            e.preventDefault();
             if (type === "forward") { setCurrent(current + 1); }
 
             if (type === "back") { setCurrent(current - 1); }
@@ -31,9 +33,18 @@ const Pagination = ({ length, currentActive, id }) => {
         };
 
         return (
-            <button className={arrowClasses} onClick={() => navigate()}>{"\n"}
-                <i className="material-icons" aria-label={type}></i>{"\n"}
-            </button>
+            <>
+            {anchorArrows ? 
+                <a className={arrowClasses} href="#" onClick={e => navigate(e)}>{"\n"}
+                    <i className="material-icons" aria-label={type}></i>{"\n"}
+                </a>
+                : 
+                <button className={arrowClasses} onClick={(e) => navigate(e)}>{"\n"}
+                    <i className="material-icons" aria-label={type}></i>{"\n"}
+                </button>
+            }
+            </>
+            
         );
     };
 
@@ -70,7 +81,8 @@ Pagination.propTypes = {
     text: PropTypes.string,
     arrows: PropTypes.bool,
     mobileView: PropTypes.bool,
-    id: PropTypes.string.isRequired
+    id: PropTypes.string.isRequired,
+    anchorArrows: PropTypes.bool
 };
 
 export default Pagination;
