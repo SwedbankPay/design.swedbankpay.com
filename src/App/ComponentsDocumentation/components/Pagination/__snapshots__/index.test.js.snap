@@ -182,12 +182,7 @@ exports[`Documentation: Pagination Overview renders 1`] = `
                   code="<a>"
                   type="primary"
                 />
-                 tags with the class 
-                <CodeTags
-                  code="anchor"
-                  type="secondary"
-                />
-                .
+                 tags.
               </p>
             </React.Fragment>,
             "title": "Pagination",

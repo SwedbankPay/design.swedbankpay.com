@@ -17,12 +17,12 @@ const Pagination = ({ length, currentActive, id, anchorArrows }) => {
         const arrowClasses = classnames(
             `arrow-${type}`,
             mobile ? "d-block d-sm-none" : null,
-            disabled ? "disabled" : null,
-            anchorArrows ? "anchor" : null
+            disabled ? "disabled" : null
         );
 
-        const navigate = (e) => {
+        const navigate = e => {
             e.preventDefault();
+
             if (type === "forward") { setCurrent(current + 1); }
 
             if (type === "back") { setCurrent(current - 1); }
@@ -34,17 +34,17 @@ const Pagination = ({ length, currentActive, id, anchorArrows }) => {
 
         return (
             <>
-            {anchorArrows ? 
-                <a className={arrowClasses} href="#" onClick={e => navigate(e)}>{"\n"}
-                    <i className="material-icons" aria-label={type}></i>{"\n"}
-                </a>
-                : 
-                <button className={arrowClasses} onClick={(e) => navigate(e)}>{"\n"}
-                    <i className="material-icons" aria-label={type}></i>{"\n"}
-                </button>
-            }
+                {anchorArrows ?
+                    <a className={arrowClasses} href="#" onClick={e => navigate(e)}>{"\n"}
+                        <i className="material-icons" aria-label={type}></i>{"\n"}
+                    </a>
+                    :
+                    <button className={arrowClasses} onClick={e => navigate(e)}>{"\n"}
+                        <i className="material-icons" aria-label={type}></i>{"\n"}
+                    </button>
+                }
             </>
-            
+
         );
     };
 
