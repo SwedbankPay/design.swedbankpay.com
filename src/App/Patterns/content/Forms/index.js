@@ -193,7 +193,7 @@ const HowToDesignForms = () => {
             <section>
                 <h3>Button placement</h3>
                 <p>The primary button should be left-aligned along with the left side of the form field. If additional actions are required, put the primary button first, then secondary buttons, then the link button. One exception is a multiple-step form where the “Back” secondary button sits at the very left, while the rest of the buttons are aligned to the right. In some cases, like on a <a href="">Login page</a>, buttons can be centered and set to the same width as the input fields. On mobile, the buttons are always centered, full width and stacked vertically with the primary action on top. </p> {/* TODO: Add link to Login template */}
-                <img src={`${process.env.basename}img/documentation/patterns/img-button-placement.png`} className="w-100"/>
+                <img src={`${process.env.basename}img/documentation/patterns/img-button-placement.png`} className="w-100" alt=""/>
             </section>
             <section>
                 <h3>Error messages</h3>

@@ -30,7 +30,7 @@ const LoginContent = () => (
                 </form>
             </div>
             <div className="col-lg-7 d-none d-lg-block">
-                <img src="https://picsum.photos/1000/600?image=744" className="w-100 h-100" />
+                <img src="https://picsum.photos/1000/600?image=744" alt="" className="w-100 h-100" />
             </div>
         </div>
     </div>
