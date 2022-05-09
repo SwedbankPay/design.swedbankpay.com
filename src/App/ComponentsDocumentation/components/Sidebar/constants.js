@@ -16,6 +16,7 @@ export const SidebarNavList = [
             {
                 icon: <i className="material-icons-outlined rotated" aria-hidden="true">palette</i>,
                 title: "Colors",
+                group: true,
                 children: [
                     {
                         title: "Primary colors"
@@ -74,74 +75,59 @@ export const SidebarNavListExtended = [
         icon: <i className="material-icons-outlined" aria-hidden="true">home</i>
     },
     {
-        title: "Get Started",
+        title: "Get started",
         icon: <i className="material-icons-outlined rotated" aria-hidden="true">wb_incandescent</i>,
         children: [
             {
-                icon: <i className="material-icons-outlined rotated" aria-hidden="true">accessibility</i>,
-                title: "Accessibility"
+                title: "Second level"
             },
             {
-                icon: <i className="material-icons-outlined rotated" aria-hidden="true">palette</i>,
-                title: "Colors",
+                title: "Second level",
                 children: [
                     {
-                        title: "Primary colors"
+                        title: "Third level"
                     },
                     {
-                        title: "Secondary colors"
-                    },
-                    {
-                        title: "Tertiary colors",
+                        title: "Third level",
                         children: [
                             {
-                                title: "Children 1"
+                                title: "Fourth level",
+                                group: true,
+                                children: [
+                                    {
+                                        title: "Fourth group"
+                                    },
+                                    {
+                                        title: "Fourth group"
+                                    },
+                                    {
+                                        title: "Fourth group"
+                                    }
+                                ]
                             },
                             {
-                                title: "Children 2"
-                            },
-                            {
-                                title: "Children 3"
+                                title: "Fourth level",
+                                children: [
+                                    {
+                                        title: "Fifth level"
+                                    },
+                                    {
+                                        title: "Fifth level",
+                                        group: true,
+                                        children: [
+                                            {
+                                                title: "Sixth level"
+                                            },
+                                            {
+                                                title: "Sixth level"
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ]
                     }
                 ]
-            },
-            {
-                icon: <i className="material-icons-outlined rotated" aria-hidden="true">grid_on</i>,
-                title: "Grid"
-            },
-            {
-                icon: <i className="material-icons-outlined rotated" aria-hidden="true">space_bar</i>,
-                title: "Spacing"
-            }
-        ]
-    },
-    {
-        title: "Identity",
-        icon: <i className="material-icons-outlined" aria-hidden="true">palette</i>,
-        lastParent: false,
-        children: [
-            {
-                title: "Introduction"
-            },
-            {
-                title: "Events",
-                lastParent: true,
-                children: [
-                    {
-                        title: "Event 1"
-                    },
-                    {
-                        title: "Event 2"
-                    },
-                    {
-                        title: "Event 3"
-                    }
-                ]
-            },
-            {
-                title: "Conclusion"
             }
         ]
     }
