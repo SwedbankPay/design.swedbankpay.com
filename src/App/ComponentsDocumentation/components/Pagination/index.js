@@ -2,7 +2,6 @@ import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import { PaginationShowCasePanel } from "./constants";
-
 import CodeTags from "~/src/App/components/CodeTags";
 
 const Overview = () => (
