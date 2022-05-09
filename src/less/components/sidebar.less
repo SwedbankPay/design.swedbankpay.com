@@ -136,6 +136,7 @@
                     }
 
                     header {
+                        margin-top: 0.5rem;
                         font-family: @brand-black;
                         font-size: 1.5rem;
                         display: flex;
@@ -251,11 +252,16 @@
                             }
                         }
 
+                        .previous-nav {
+                            color: @brand-secondary;
+                        }
+
                         .nav-leaf {
                             position: relative;
                             display: flex;
                             align-items: center;
                             min-height: 2.5rem;
+                            margin: 0;
 
                             &:before {
                                 content: "";
@@ -285,14 +291,6 @@
                                 width: 100%;
                                 height: 100%;
                                 cursor: pointer;
-                            }
-                        }
-
-                        &.extended-sidebar {
-                            .secondary-nav-li {
-                                .previous-nav {
-                                    color: @brand-secondary;
-                                }
                             }
                         }
                     }
