@@ -34,9 +34,9 @@ const NewNav = ({ currentNav, previousTitle }) => (
 const Sidebar = ({ id, sticky, navList }) => (
     <div id={id} className={`sidebar${sticky ? " sidebar-topbar-sticky" : ""}`}>
         <nav className="sidebar-main-nav">
-            <div className="sidebar-logo">
-                <a href="/" aria-label="To homepage">
-                    <LogotypeComponent src={`${basename}img/logo/${brand}-logo-v.svg`} size="md" alt={`${process.env.brandTitle} vertical logo`} type="vertical" />
+            <div className="sidebar-logo">{"\n"}
+                <a href="/" aria-label="To homepage">{"\n"}
+                    <LogotypeComponent src={`${basename}img/logo/${brand}-logo-v.svg`} size="md" alt={`${process.env.brandTitle} vertical logo`} type="vertical" />{"\n"}
                 </a>
             </div>
             <ul className="main-nav-ul">

@@ -1,4 +1,5 @@
 import React from "react";
+import Sidebar from "@components/Sidebar";
 
 export const SidebarNavList = [
     {
@@ -42,14 +43,13 @@ export const SidebarNavList = [
     {
         title: "Identity",
         icon: <i className="material-icons-outlined" aria-hidden="true">palette</i>,
-        lastParent: false,
         children: [
             {
                 title: "Introduction"
             },
             {
                 title: "Events",
-                lastParent: true,
+                group: true,
                 children: [
                     {
                         title: "Event 1"
@@ -76,13 +76,25 @@ export const SidebarNavListExtended = [
     },
     {
         title: "Get started",
-        icon: <i className="material-icons-outlined rotated" aria-hidden="true">wb_incandescent</i>,
+        icon: <i className="material-icons-outlined" aria-hidden="true">play_circle_outline</i>,
         children: [
             {
-                title: "Second level"
+                title: "Second level (li.group)",
+                group: true,
+                children: [
+                    {
+                        title: "li.nav-leaf"
+                    },
+                    {
+                        title: "li.nav-leaf"
+                    },
+                    {
+                        title: "li.nav-leaf"
+                    }
+                ]
             },
             {
-                title: "Second level",
+                title: "Second level (li.leaf)",
                 children: [
                     {
                         title: "Third level"
@@ -91,19 +103,7 @@ export const SidebarNavListExtended = [
                         title: "Third level",
                         children: [
                             {
-                                title: "Fourth level",
-                                group: true,
-                                children: [
-                                    {
-                                        title: "Fourth group"
-                                    },
-                                    {
-                                        title: "Fourth group"
-                                    },
-                                    {
-                                        title: "Fourth group"
-                                    }
-                                ]
+                                title: "Fourth level"
                             },
                             {
                                 title: "Fourth level",
@@ -116,10 +116,10 @@ export const SidebarNavListExtended = [
                                         group: true,
                                         children: [
                                             {
-                                                title: "Sixth level"
+                                                title: "Sixth level (li.nav-leaf)"
                                             },
                                             {
-                                                title: "Sixth level"
+                                                title: "Sixth level (li.nav-leaf)"
                                             }
                                         ]
                                     }
@@ -130,5 +130,58 @@ export const SidebarNavListExtended = [
                 ]
             }
         ]
+    },
+    {
+        title: "Group",
+        icon: <i className="material-icons-outlined" aria-hidden="true">expand_circle_down</i>,
+        children: [
+            {
+                title: "li.group",
+                group: true,
+                children: [
+                    {
+                        title: "li.nav-leaf"
+                    },
+                    {
+                        title: "li.nav-leaf"
+                    },
+                    {
+                        title: "li.nav-leaf"
+                    }
+                ]
+            },
+            {
+                title: "li.group",
+                group: true,
+                children: [
+                    {
+                        title: "li.nav-leaf"
+                    },
+                    {
+                        title: "li.nav-leaf"
+                    },
+                    {
+                        title: "li.nav-leaf"
+                    }
+                ]
+            }
+        ]
     }
 ];
+
+export const SidebarShowcase = {
+    id: "no-tabs",
+    hideOptions: true,
+    elements: [
+        {
+            component: <div className="container-fluid">
+                <div className="row">
+                    <Sidebar id="dg-sidebar" navList={SidebarNavListExtended} />
+                    <main className="col main-content">Main content things...</main>
+                </div>,
+            </div>,
+            title: "Sidebar",
+            description: "The sidebar supports an infinite depth of levels. But we actually do not recommend to go higher then 4, due to accessibility issues."
+        }
+    ]
+};
