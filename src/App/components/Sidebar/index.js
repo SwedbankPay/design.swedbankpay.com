@@ -6,12 +6,12 @@ const basename = process.env.basename;
 const brand = process.env.brand;
 
 const NewNav = ({ currentNav, previousTitle }) => (
-    <ul>
+    <ul>{"\n"}
         {!currentNav.group &&
             <>
-                <a href="#" onClick={e => e.preventDefault()} className="icon-link text-decoration-none previous-nav">
-                    <i className="material-icons" aria-hidden="true">arrow_back_ios</i>
-                    <span className="ml-2">Back to {previousTitle}</span>
+                <a href="#" onClick={e => e.preventDefault()} className="previous-nav">{"\n"}
+                    <i className="material-icons" aria-hidden="true">arrow_back_ios</i>{"\n"}
+                    <span>Back to {previousTitle}</span>{"\n"}
                 </a>
                 <header>
                     {currentNav.icon}
@@ -19,7 +19,7 @@ const NewNav = ({ currentNav, previousTitle }) => (
                 </header>
             </>
         }
-        {currentNav.children.map((nextNav, i) => <li key={nextNav.title + i} className={`${currentNav.group ? "nav-leaf" : nextNav.group ? " group" : " leaf"}`}>
+        {currentNav.children.map((nextNav, i) => <li key={nextNav.title + i} className={`${currentNav.group ? "nav-leaf" : nextNav.group ? "group" : "leaf"}`}>{"\n"}
             <a href="#" onClick={e => e.preventDefault()}>
                 {nextNav.icon}
                 {nextNav.title}
@@ -40,19 +40,18 @@ const Sidebar = ({ id, sticky, navList }) => (
                 </a>
             </div>
             <ul className="main-nav-ul">
-                {navList.map((mainNav, i) => <li key={mainNav.title} className={`main-nav-li${i === 0 ? " active" : ""}`}>
-                    <a href="#" onClick={e => e.preventDefault()}>
-                        {mainNav.icon}
-                        {mainNav.title}
+                {navList.map((mainNav, i) => <li key={mainNav.title} className={`main-nav-li${i === 0 ? " active" : ""}`}>{"\n"}
+                    <a href="#" onClick={e => e.preventDefault()}>{"\n"}
+                        {mainNav.icon}{"\n"}
+                        {mainNav.title}{"\n"}
                     </a>
                     {mainNav.children &&
                         <nav className="sidebar-secondary-nav">
                             <header className="secondary-nav-header">
-                                {mainNav.icon}
                                 {mainNav.title}
                             </header>
                             <ul className="secondary-nav-ul">
-                                {mainNav.children.map((secondNav, i) => <li key={secondNav.title + i} className={`secondary-nav-li${secondNav.group ? " group" : " leaf"}`}>
+                                {mainNav.children.map((secondNav, i) => <li key={secondNav.title + i} className={`secondary-nav-li${secondNav.group ? " group" : " leaf"}`}>{"\n"}
                                     <a href="#" onClick={e => e.preventDefault()}>
                                         {secondNav.icon}
                                         {secondNav.title}
