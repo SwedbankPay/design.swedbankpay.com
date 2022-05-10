@@ -471,7 +471,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
             </a>
             <Sidebar
               id="topbar-sidebar"
-              sidebarNavList={
+              navList={
                 Array [
                   Object {
                     "icon": <i
@@ -505,6 +505,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                             "title": "Tertiary colors",
                           },
                         ],
+                        "group": true,
                         "icon": <i
                           aria-hidden="true"
                           className="material-icons-outlined rotated"
@@ -557,7 +558,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                             "title": "Event 3",
                           },
                         ],
-                        "lastParent": true,
+                        "group": true,
                         "title": "Events",
                       },
                       Object {
@@ -570,7 +571,6 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                     >
                       palette
                     </i>,
-                    "lastParent": false,
                     "title": "Identity",
                   },
                 ]
@@ -586,10 +586,14 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                   <div
                     className="sidebar-logo"
                   >
+                    
+
                     <a
                       aria-label="To homepage"
                       href="/"
                     >
+                      
+
                       <Logotype
                         alt="TESTBRAND vertical logo"
                         size="md"
@@ -602,6 +606,8 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                           src="/TEST/img/logo/TESTBRAND-logo-v.svg"
                         />
                       </Logotype>
+                      
+
                     </a>
                   </div>
                   <ul
@@ -611,34 +617,50 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                       className="main-nav-li active"
                       key="Home Page"
                     >
+                      
+
                       <a
                         href="#"
                         onClick={[Function]}
                       >
+                        
+
                         <i
                           aria-hidden="true"
                           className="material-icons-outlined"
                         >
                           home
                         </i>
+                        
+
                         Home Page
+                        
+
                       </a>
                     </li>
                     <li
                       className="main-nav-li"
                       key="Get Started"
                     >
+                      
+
                       <a
                         href="#"
                         onClick={[Function]}
                       >
+                        
+
                         <i
                           aria-hidden="true"
                           className="material-icons-outlined rotated"
                         >
                           wb_incandescent
                         </i>
+                        
+
                         Get Started
+                        
+
                       </a>
                       <nav
                         className="sidebar-secondary-nav"
@@ -649,12 +671,14 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                           Get Started
                         </header>
                         <ul
-                          className="secondary-nav-ul "
+                          className="secondary-nav-ul"
                         >
                           <li
                             className="secondary-nav-li leaf"
-                            key="Accessibility"
+                            key="Accessibility0"
                           >
+                            
+
                             <a
                               href="#"
                               onClick={[Function]}
@@ -670,8 +694,10 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                           </li>
                           <li
                             className="secondary-nav-li group"
-                            key="Colors"
+                            key="Colors1"
                           >
+                            
+
                             <a
                               href="#"
                               onClick={[Function]}
@@ -684,48 +710,83 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                               </i>
                               Colors
                             </a>
-                            <ul
-                              className="tertiary-nav-ul"
+                            <NewNav
+                              currentNav={
+                                Object {
+                                  "children": Array [
+                                    Object {
+                                      "title": "Primary colors",
+                                    },
+                                    Object {
+                                      "title": "Secondary colors",
+                                    },
+                                    Object {
+                                      "title": "Tertiary colors",
+                                    },
+                                  ],
+                                  "group": true,
+                                  "icon": <i
+                                    aria-hidden="true"
+                                    className="material-icons-outlined rotated"
+                                  >
+                                    palette
+                                  </i>,
+                                  "title": "Colors",
+                                }
+                              }
+                              previousTitle="Get Started"
                             >
-                              <li
-                                className="nav-leaf leaf"
-                                key="Primary colors"
-                              >
-                                <a
-                                  href="#"
-                                  onClick={[Function]}
+                              <ul>
+                                
+
+                                <li
+                                  className="nav-leaf"
+                                  key="Primary colors0"
                                 >
-                                  Primary colors
-                                </a>
-                              </li>
-                              <li
-                                className="nav-leaf leaf"
-                                key="Secondary colors"
-                              >
-                                <a
-                                  href="#"
-                                  onClick={[Function]}
+                                  
+
+                                  <a
+                                    href="#"
+                                    onClick={[Function]}
+                                  >
+                                    Primary colors
+                                  </a>
+                                </li>
+                                <li
+                                  className="nav-leaf"
+                                  key="Secondary colors1"
                                 >
-                                  Secondary colors
-                                </a>
-                              </li>
-                              <li
-                                className="nav-leaf leaf"
-                                key="Tertiary colors"
-                              >
-                                <a
-                                  href="#"
-                                  onClick={[Function]}
+                                  
+
+                                  <a
+                                    href="#"
+                                    onClick={[Function]}
+                                  >
+                                    Secondary colors
+                                  </a>
+                                </li>
+                                <li
+                                  className="nav-leaf"
+                                  key="Tertiary colors2"
                                 >
-                                  Tertiary colors
-                                </a>
-                              </li>
-                            </ul>
+                                  
+
+                                  <a
+                                    href="#"
+                                    onClick={[Function]}
+                                  >
+                                    Tertiary colors
+                                  </a>
+                                </li>
+                              </ul>
+                            </NewNav>
                           </li>
                           <li
                             className="secondary-nav-li leaf"
-                            key="Grid"
+                            key="Grid2"
                           >
+                            
+
                             <a
                               href="#"
                               onClick={[Function]}
@@ -741,8 +802,10 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                           </li>
                           <li
                             className="secondary-nav-li leaf"
-                            key="Spacing"
+                            key="Spacing3"
                           >
+                            
+
                             <a
                               href="#"
                               onClick={[Function]}
@@ -763,17 +826,25 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                       className="main-nav-li"
                       key="Identity"
                     >
+                      
+
                       <a
                         href="#"
                         onClick={[Function]}
                       >
+                        
+
                         <i
                           aria-hidden="true"
                           className="material-icons-outlined"
                         >
                           palette
                         </i>
+                        
+
                         Identity
+                        
+
                       </a>
                       <nav
                         className="sidebar-secondary-nav"
@@ -784,12 +855,14 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                           Identity
                         </header>
                         <ul
-                          className="secondary-nav-ul "
+                          className="secondary-nav-ul"
                         >
                           <li
                             className="secondary-nav-li leaf"
-                            key="Introduction"
+                            key="Introduction0"
                           >
+                            
+
                             <a
                               href="#"
                               onClick={[Function]}
@@ -799,56 +872,87 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                           </li>
                           <li
                             className="secondary-nav-li group"
-                            key="Events"
+                            key="Events1"
                           >
+                            
+
                             <a
                               href="#"
                               onClick={[Function]}
                             >
                               Events
                             </a>
-                            <ul
-                              className="tertiary-nav-ul"
+                            <NewNav
+                              currentNav={
+                                Object {
+                                  "children": Array [
+                                    Object {
+                                      "title": "Event 1",
+                                    },
+                                    Object {
+                                      "title": "Event 2",
+                                    },
+                                    Object {
+                                      "title": "Event 3",
+                                    },
+                                  ],
+                                  "group": true,
+                                  "title": "Events",
+                                }
+                              }
+                              previousTitle="Identity"
                             >
-                              <li
-                                className="nav-leaf leaf"
-                                key="Event 1"
-                              >
-                                <a
-                                  href="#"
-                                  onClick={[Function]}
+                              <ul>
+                                
+
+                                <li
+                                  className="nav-leaf"
+                                  key="Event 10"
                                 >
-                                  Event 1
-                                </a>
-                              </li>
-                              <li
-                                className="nav-leaf leaf"
-                                key="Event 2"
-                              >
-                                <a
-                                  href="#"
-                                  onClick={[Function]}
+                                  
+
+                                  <a
+                                    href="#"
+                                    onClick={[Function]}
+                                  >
+                                    Event 1
+                                  </a>
+                                </li>
+                                <li
+                                  className="nav-leaf"
+                                  key="Event 21"
                                 >
-                                  Event 2
-                                </a>
-                              </li>
-                              <li
-                                className="nav-leaf leaf"
-                                key="Event 3"
-                              >
-                                <a
-                                  href="#"
-                                  onClick={[Function]}
+                                  
+
+                                  <a
+                                    href="#"
+                                    onClick={[Function]}
+                                  >
+                                    Event 2
+                                  </a>
+                                </li>
+                                <li
+                                  className="nav-leaf"
+                                  key="Event 32"
                                 >
-                                  Event 3
-                                </a>
-                              </li>
-                            </ul>
+                                  
+
+                                  <a
+                                    href="#"
+                                    onClick={[Function]}
+                                  >
+                                    Event 3
+                                  </a>
+                                </li>
+                              </ul>
+                            </NewNav>
                           </li>
                           <li
                             className="secondary-nav-li leaf"
-                            key="Conclusion"
+                            key="Conclusion2"
                           >
+                            
+
                             <a
                               href="#"
                               onClick={[Function]}

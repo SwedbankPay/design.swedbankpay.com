@@ -1,168 +1,249 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components: Sidebar ExtendedSidebar renders 1`] = `
+exports[`Components: Sidebar DeveloperDocumentation renders 1`] = `
 <section>
   <h2
-    id="extended-sidebar"
+    id="developer-documentation"
   >
-    Extended sidebar
+    Developer Documentation
   </h2>
   <p>
-    This sidebar is an extended sidebar which supports a depth of up to 4 levels. To use the extended sidebar, add class 
+    <b>
+      Note:
+    </b>
+     If used with a sticky topbar, add class 
     <CodeTags
-      code=".extended-sidebar"
+      code=".sidebar-topbar-sticky"
       type="secondary"
     />
-     to the second 
+    , 
     <CodeTags
-      code="<ul>"
+      code=".topbar-min-{breakpoint}-sticky"
+      type="secondary"
+    />
+    , or 
+    <CodeTags
+      code=".topbar-max-{breakpoint}-sticky"
+      type="secondary"
+    />
+     depending on the class of the sticky topbar, to the outmost 
+    <CodeTags
+      code="<div>"
       type="primary"
     />
-     along with the 
-    <CodeTags
-      code=".secondary-nav-ul"
-      type="secondary"
-    />
-     class.
+     of the sidebar.
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <div
-      className="container-fluid"
-    >
-      <div
-        className="row"
-      >
-        <Sidebar
-          extendedSidebar={true}
-          id="dg-sidebar2"
-          sidebarNavList={
-            Array [
-              Object {
-                "icon": <i
-                  aria-hidden="true"
-                  className="material-icons-outlined"
-                >
-                  home
-                </i>,
-                "title": "Home Page",
-              },
-              Object {
-                "children": Array [
-                  Object {
-                    "icon": <i
-                      aria-hidden="true"
-                      className="material-icons-outlined rotated"
-                    >
-                      accessibility
-                    </i>,
-                    "title": "Accessibility",
-                  },
-                  Object {
-                    "children": Array [
-                      Object {
-                        "title": "Primary colors",
-                      },
-                      Object {
-                        "title": "Secondary colors",
-                      },
-                      Object {
-                        "children": Array [
-                          Object {
-                            "title": "Children 1",
-                          },
-                          Object {
-                            "title": "Children 2",
-                          },
-                          Object {
-                            "title": "Children 3",
-                          },
-                        ],
-                        "title": "Tertiary colors",
-                      },
-                    ],
-                    "icon": <i
-                      aria-hidden="true"
-                      className="material-icons-outlined rotated"
-                    >
-                      palette
-                    </i>,
-                    "title": "Colors",
-                  },
-                  Object {
-                    "icon": <i
-                      aria-hidden="true"
-                      className="material-icons-outlined rotated"
-                    >
-                      grid_on
-                    </i>,
-                    "title": "Grid",
-                  },
-                  Object {
-                    "icon": <i
-                      aria-hidden="true"
-                      className="material-icons-outlined rotated"
-                    >
-                      space_bar
-                    </i>,
-                    "title": "Spacing",
-                  },
-                ],
-                "icon": <i
-                  aria-hidden="true"
-                  className="material-icons-outlined rotated"
-                >
-                  wb_incandescent
-                </i>,
-                "title": "Get Started",
-              },
-              Object {
-                "children": Array [
-                  Object {
-                    "title": "Introduction",
-                  },
-                  Object {
-                    "children": Array [
-                      Object {
-                        "title": "Event 1",
-                      },
-                      Object {
-                        "title": "Event 2",
-                      },
-                      Object {
-                        "title": "Event 3",
-                      },
-                    ],
-                    "lastParent": true,
-                    "title": "Events",
-                  },
-                  Object {
-                    "title": "Conclusion",
-                  },
-                ],
-                "icon": <i
-                  aria-hidden="true"
-                  className="material-icons-outlined"
-                >
-                  palette
-                </i>,
-                "lastParent": false,
-                "title": "Identity",
-              },
-            ]
-          }
+  <section>
+    <h3>
+      Infinite depth
+    </h3>
+    <section>
+      <h4>
+        Deeper?
+      </h4>
+      <p>
+        To create four levels and more, inside 
+        <CodeTags
+          code=".secondary-nav-li.leaf"
+          type="secondary"
         />
-        <main
-          className="col main-content"
+        , insert a 
+        <CodeTags
+          code="<ul>"
+          type="primary"
+        />
+        , containing 
+        <CodeTags
+          code="a.previous-nav"
+          type="secondary"
+        />
+        , followed by a 
+        <CodeTags
+          code="<header>"
+          type="primary"
+        />
+        , then the next 
+        <CodeTags
+          code="<li>"
+          type="primary"
+        />
+        -elements. Repeat this pattern into eternity.
+      </p>
+      <ComponentPreview
+        codeFigure={true}
+        language="html"
+      >
+        <li
+          className="secondary-nav-li leaf"
         >
-          Main content things...
-        </main>
-      </div>
-    </div>
-  </ComponentPreview>
+          
+
+          <a
+            href="#"
+          >
+            Li title
+          </a>
+          
+
+          <ul>
+            
+
+            <a
+              className="previous-nav"
+              href="#"
+            >
+              
+
+              <i
+                aria-hidden="true"
+                className="material-icons"
+              >
+                arrow_back_ios
+              </i>
+              
+
+              <span>
+                Back to Previous
+              </span>
+              
+
+            </a>
+            <header>
+              Icon Title
+            </header>
+            <li
+              className="leaf"
+            >
+              
+
+              <a
+                href="#"
+              >
+                Li title
+              </a>
+              
+
+              {*
+               Continue the pattern here 
+              *}
+            </li>
+          </ul>
+        </li>
+      </ComponentPreview>
+    </section>
+    <section>
+      <h4>
+        Deep enough?
+      </h4>
+      <p>
+        Replace the 
+        <CodeTags
+          code=".leaf"
+          type="secondary"
+        />
+         class with 
+        <CodeTags
+          code=".group"
+          type="secondary"
+        />
+        . And the last 
+        <CodeTags
+          code="<li>"
+          type="primary"
+        />
+        's should have 
+        <CodeTags
+          code=".nav-leaf"
+          type="secondary"
+        />
+      </p>
+      <ComponentPreview
+        codeFigure={true}
+        language="html"
+      >
+        <li
+          className="group"
+        >
+          
+
+          <a
+            href="#"
+          >
+            Li title
+          </a>
+          
+
+          <ul>
+            
+
+            <li
+              className="nav-leaf"
+            >
+              
+
+              <a
+                href="#"
+              >
+                Li title
+              </a>
+              
+
+            </li>
+            <li
+              className="nav-leaf"
+            >
+              
+
+              <a
+                href="#"
+              >
+                Li title
+              </a>
+              
+
+            </li>
+            <li
+              className="nav-leaf"
+            >
+              
+
+              <a
+                href="#"
+              >
+                Li title
+              </a>
+              
+
+            </li>
+          </ul>
+        </li>
+      </ComponentPreview>
+    </section>
+  </section>
+  <section>
+    <h3>
+      JavaScript methods
+    </h3>
+    <p
+      className="pl-3 mb-0"
+    >
+      <b>
+        Note:
+      </b>
+       The sidebar should be initialized with ID
+    </p>
+    <JavascriptDocs
+      componentName="sidebar"
+      others={
+        Array [
+          [Function],
+          [Function],
+          [Function],
+          [Function],
+        ]
+      }
+    />
+  </section>
 </section>
 `;
 
@@ -208,188 +289,165 @@ exports[`Components: Sidebar InitScrollListener renders 1`] = `
 </section>
 `;
 
-exports[`Components: Sidebar JavascriptMethods renders 1`] = `
-<section>
-  <h2
-    id="javascript-methods"
-  >
-    JavaScript methods
-  </h2>
-  <p
-    className="pl-3 mb-0"
-  >
-    Note: The sidebar should be initialized with ID
-  </p>
-  <JavascriptDocs
-    componentName="sidebar"
-    others={
-      Array [
-        [Function],
-        [Function],
-        [Function],
-        [Function],
-      ]
-    }
-  />
-</section>
-`;
-
 exports[`Components: Sidebar Overview renders 1`] = `
-<section>
+<section
+  id="sidebar-overview"
+>
   <h2
     id="overview"
   >
     Overview
   </h2>
-  <p>
-    The sidebar supports a depth of up to 3 levels. Note that if used with a sticky topbar, add class 
-    <CodeTags
-      code=".sidebar-topbar-sticky"
-      type="secondary"
-    />
-    , 
-    <CodeTags
-      code=".topbar-min-{breakpoint}-sticky"
-      type="secondary"
-    />
-    , or 
-    <CodeTags
-      code=".topbar-max-{breakpoint}-sticky"
-      type="secondary"
-    />
-     depending on the class of the sticky topbar, to the outmost 
-    <CodeTags
-      code="<div>"
-      type="primary"
-    />
-     of the sidebar.
-  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
-  >
-    <div
-      className="container-fluid"
-    >
-      <div
-        className="row"
-      >
-        <Sidebar
-          id="dg-sidebar1"
-          sidebarNavList={
-            Array [
-              Object {
-                "icon": <i
-                  aria-hidden="true"
-                  className="material-icons-outlined"
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <div
+              className="container-fluid"
+            >
+              <div
+                className="row"
+              >
+                <Sidebar
+                  id="dg-sidebar"
+                  navList={
+                    Array [
+                      Object {
+                        "icon": <i
+                          aria-hidden="true"
+                          className="material-icons-outlined"
+                        >
+                          home
+                        </i>,
+                        "title": "Home Page",
+                      },
+                      Object {
+                        "children": Array [
+                          Object {
+                            "children": Array [
+                              Object {
+                                "title": "li.nav-leaf",
+                              },
+                              Object {
+                                "title": "li.nav-leaf",
+                              },
+                              Object {
+                                "title": "li.nav-leaf",
+                              },
+                            ],
+                            "group": true,
+                            "title": "Second level (li.group)",
+                          },
+                          Object {
+                            "children": Array [
+                              Object {
+                                "title": "Third level",
+                              },
+                              Object {
+                                "children": Array [
+                                  Object {
+                                    "title": "Fourth level",
+                                  },
+                                  Object {
+                                    "children": Array [
+                                      Object {
+                                        "title": "Fifth level",
+                                      },
+                                      Object {
+                                        "children": Array [
+                                          Object {
+                                            "title": "Sixth level (li.nav-leaf)",
+                                          },
+                                          Object {
+                                            "title": "Sixth level (li.nav-leaf)",
+                                          },
+                                        ],
+                                        "group": true,
+                                        "title": "Fifth level",
+                                      },
+                                    ],
+                                    "title": "Fourth level",
+                                  },
+                                ],
+                                "title": "Third level",
+                              },
+                            ],
+                            "title": "Second level (li.leaf)",
+                          },
+                        ],
+                        "icon": <i
+                          aria-hidden="true"
+                          className="material-icons-outlined"
+                        >
+                          play_circle_outline
+                        </i>,
+                        "title": "Get started",
+                      },
+                      Object {
+                        "children": Array [
+                          Object {
+                            "children": Array [
+                              Object {
+                                "title": "li.nav-leaf",
+                              },
+                              Object {
+                                "title": "li.nav-leaf",
+                              },
+                              Object {
+                                "title": "li.nav-leaf",
+                              },
+                            ],
+                            "group": true,
+                            "title": "li.group",
+                          },
+                          Object {
+                            "children": Array [
+                              Object {
+                                "title": "li.nav-leaf",
+                              },
+                              Object {
+                                "title": "li.nav-leaf",
+                              },
+                              Object {
+                                "title": "li.nav-leaf",
+                              },
+                            ],
+                            "group": true,
+                            "title": "li.group",
+                          },
+                        ],
+                        "icon": <i
+                          aria-hidden="true"
+                          className="material-icons-outlined"
+                        >
+                          expand_circle_down
+                        </i>,
+                        "title": "Group",
+                      },
+                    ]
+                  }
+                />
+                <main
+                  className="col main-content"
                 >
-                  home
-                </i>,
-                "title": "Home Page",
-              },
-              Object {
-                "children": Array [
-                  Object {
-                    "icon": <i
-                      aria-hidden="true"
-                      className="material-icons-outlined rotated"
-                    >
-                      accessibility
-                    </i>,
-                    "title": "Accessibility",
-                  },
-                  Object {
-                    "children": Array [
-                      Object {
-                        "title": "Primary colors",
-                      },
-                      Object {
-                        "title": "Secondary colors",
-                      },
-                      Object {
-                        "title": "Tertiary colors",
-                      },
-                    ],
-                    "icon": <i
-                      aria-hidden="true"
-                      className="material-icons-outlined rotated"
-                    >
-                      palette
-                    </i>,
-                    "title": "Colors",
-                  },
-                  Object {
-                    "icon": <i
-                      aria-hidden="true"
-                      className="material-icons-outlined rotated"
-                    >
-                      grid_on
-                    </i>,
-                    "title": "Grid",
-                  },
-                  Object {
-                    "icon": <i
-                      aria-hidden="true"
-                      className="material-icons-outlined rotated"
-                    >
-                      space_bar
-                    </i>,
-                    "title": "Spacing",
-                  },
-                ],
-                "icon": <i
-                  aria-hidden="true"
-                  className="material-icons-outlined rotated"
-                >
-                  wb_incandescent
-                </i>,
-                "title": "Get Started",
-              },
-              Object {
-                "children": Array [
-                  Object {
-                    "title": "Introduction",
-                  },
-                  Object {
-                    "children": Array [
-                      Object {
-                        "title": "Event 1",
-                      },
-                      Object {
-                        "title": "Event 2",
-                      },
-                      Object {
-                        "title": "Event 3",
-                      },
-                    ],
-                    "lastParent": true,
-                    "title": "Events",
-                  },
-                  Object {
-                    "title": "Conclusion",
-                  },
-                ],
-                "icon": <i
-                  aria-hidden="true"
-                  className="material-icons-outlined"
-                >
-                  palette
-                </i>,
-                "lastParent": false,
-                "title": "Identity",
-              },
-            ]
-          }
-        />
-        <main
-          className="col main-content"
-        >
-          Main content things...
-        </main>
-      </div>
-    </div>
-  </ComponentPreview>
+                  Main content things...
+                </main>
+              </div>
+              ,
+            </div>,
+            "description": "The sidebar supports an infinite depth of levels. But we actually do not recommend to go higher then 4, due to accessibility issues.",
+            "title": "Sidebar",
+          },
+        ],
+        "hideOptions": true,
+        "id": "no-tabs",
+      }
+    }
+  />
 </section>
 `;
 
@@ -594,19 +652,20 @@ exports[`Components: Sidebar SetActiveState renders 1`] = `
 `;
 
 exports[`Components: Sidebar renders 1`] = `
-<DocContainer
-  docToc={true}
->
-  <p
-    className="lead"
+<DocContainer>
+  <section
+    id="sidebar-doc"
   >
-    The sidebar is used to give users an easily available navigational bar on the left side of your web application.
-  </p>
-  <Overview />
-  <ExtendedSidebar />
-  <JavascriptMethods />
-  <NpmInformation
-    componentName="sidebar"
-  />
+    <p
+      className="lead"
+    >
+      The sidebar is used to give users an easily available navigational bar on the left side of your web application.
+    </p>
+    <Overview />
+    <DeveloperDocumentation />
+    <NpmInformation
+      componentName="sidebar"
+    />
+  </section>
 </DocContainer>
 `;
