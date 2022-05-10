@@ -13,12 +13,6 @@
         .sidebar-main-nav {
             box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
 
-            .sidebar-secondary-nav {
-                li > ul {
-                    visibility: visible;
-                }
-            }
-
             &:before {
                 display: block;
             }
@@ -119,7 +113,7 @@
                     padding: 2rem;
                     max-height: 0;
                     width: 18.375rem;
-                    overflow-y: hidden;
+                    overflow: hidden;
                     position: absolute;
                     top: 0;
                     left: 100%;
@@ -173,6 +167,7 @@
                                 > ul {
                                     background-color: @white;
                                     position: absolute;
+                                    visibility: hidden;
                                     top: 0;
                                     left: 18.375rem;
                                     margin-right: 520px;
@@ -196,7 +191,7 @@
                                     }
                                 }
 
-                                ul {
+                                > ul {
                                     max-height: 0;
                                     list-style: none;
                                     overflow: hidden;
@@ -246,6 +241,21 @@
 
                         .previous-nav {
                             color: @brand-secondary;
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
+
+                            > i {
+                                font-size: 1rem;
+                                margin-right: 0.5rem;
+                            }
+
+                            &:hover,
+                            :focus {
+                                > span {
+                                    text-decoration: underline;
+                                }
+                            }
                         }
 
                         .nav-leaf {
