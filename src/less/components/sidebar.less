@@ -108,14 +108,16 @@
                     }
 
                     .sidebar-secondary-nav {
-                        visibility: visible;
+                        height: 100%;
+                        max-height: 1500px;
+                        display: block;
                     }
                 }
 
                 .sidebar-secondary-nav {
-                    visibility: hidden;
+                    display: none;
                     padding: 2rem;
-                    height: 100%;
+                    max-height: 0;
                     width: 18.375rem;
                     overflow-y: hidden;
                     position: absolute;
@@ -174,7 +176,7 @@
                                     top: 0;
                                     left: 18.375rem;
                                     margin-right: 520px;
-                                    height: 100%;
+                                    max-height: 0;
                                     width: 100%;
                                     padding: 2rem;
                                     transition: 0.3s ease-in-out;
@@ -207,19 +209,9 @@
                                 > ul {
                                     left: 0;
                                     visibility: visible;
+                                    height: 100%;
                                     max-height: 1500px;
                                     transition: 0.5s ease-in-out;
-                                }
-
-                                &.leaf {
-                                    > a {
-                                        &:after {
-                                            content: "chevron_right";
-                                            .material-icons-styling();
-
-                                            margin-left: auto;
-                                        }
-                                    }
                                 }
 
                                 &.group {
@@ -277,10 +269,6 @@
                             &:hover {
                                 &:before {
                                     background-color: @brand-secondary;
-                                }
-
-                                a {
-                                    font-weight: @font-weight-bold;
                                 }
                             }
 
