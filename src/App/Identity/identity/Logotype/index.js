@@ -25,13 +25,13 @@ const LogoWhite = () => (
 );
 
 const SpacingZone = () => (
-    <section>
+    <section id="spacing-zone-doc">
         <h2 id="spacing-zone">Spacing zone</h2>
         <p>
             The spacing zone is the spacing around the logotype that prevents the logo from interfering with other UI elements.
             The logotype’s spacing zone should always be at least 30% of the coin’s diameter and then rounded up to the closest multiple of 8 (marked as X in the diagram).
         </p>
-        <table className="table table-striped table-condensed">
+        <table className="table table-plain">
             <caption>Measurement example for vertical logotype</caption>
             <thead>
                 <tr>
