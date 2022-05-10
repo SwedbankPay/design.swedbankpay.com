@@ -133,11 +133,13 @@ class Sidebar {
         element.classList.add("active");
 
         if (element.classList.contains("main-nav-li")) {
+            this._closeChildElements(this.el, true);
+            element.classList.add("active");
+
             if (element.querySelector(".sidebar-secondary-nav")) {
                 this.el.classList.add("has-secondary-nav");
             } else {
                 this.el.classList.remove("has-secondary-nav");
-                this._closeChildElements(this.el, true);
             }
         }
     }
