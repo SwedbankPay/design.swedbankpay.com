@@ -8,25 +8,47 @@ exports[`Core: Color BackgroundColors renders 1`] = `
     Background colors
   </h2>
   <p>
-    Apricot is our primary background color. Light gray and light turquoise are secondary. 
+    To maintain an open and welcoming experience we mostly use no background color, that is white. Our background colors have a functional role and are used to organize, structure or highlight a section. Apricot is our primary background color, gray and light turquoise are complementary. 
   </p>
   <div
     className="color-group"
   >
     <ColorDisplay
-      hex="#FBF2EA"
+      border="has-border"
+      contrastBlackApproved={true}
+      hex="#FFFFFF"
       key="0"
-      rgb="251, 241, 234"
+      noWhiteExample={true}
+      subTitle="bg-white"
+      title="White"
     />
     <ColorDisplay
-      hex="#F9F8F6"
+      contrastBlackApproved={true}
+      hex="#FBF2EA"
       key="1"
-      rgb="249, 248, 246"
+      subTitle="bg-primary"
+      title="Apricot"
     />
     <ColorDisplay
+      contrastBlackApproved={true}
       hex="#EBF8F2"
       key="2"
-      rgb="235, 248, 242"
+      subTitle="bg-secondary"
+      title="Turquoise lighter"
+    />
+    <ColorDisplay
+      contrastBlackApproved={true}
+      hex="#EBE7E2"
+      key="3"
+      subTitle="bg-tertiary"
+      title="Gray"
+    />
+    <ColorDisplay
+      contrastBlackApproved={true}
+      hex="#F9F8F6"
+      key="4"
+      subTitle="bg-quaternary"
+      title="Gray light"
     />
   </div>
 </section>
@@ -40,166 +62,98 @@ exports[`Core: Color BrownScaleColors renders 1`] = `
     Brown scale colors
   </h2>
   <p>
-    The brown scale colors are primarily used for borders and backgrounds. These colors cannot be used as text colors. 
+    Brown scale colors are used for both typography, borders and interface details to maintain a warm and welcoming expression.
   </p>
   <div
     className="color-group"
   >
     <ColorDisplay
-      fontColor="font-white"
+      contrastWhiteApproved={true}
       hex="#2F2424"
       key="0"
-      rgb="47, 36, 36"
+      subTitle="brown-solid"
+      title="Brown solid"
     />
     <ColorDisplay
-      fontColor="font-white"
+      contrastWhiteApproved={true}
       hex="#493C3B"
       key="1"
-      rgb="73, 60, 59"
+      subTitle="brown-dark"
+      title="Brown dark"
     />
     <ColorDisplay
-      fontColor="font-white"
+      contrastWhiteApproved={true}
       hex="#72605E"
       key="2"
-      rgb="114, 96, 94"
+      subTitle="brown-medium"
+      title="Brown medium"
     />
     <ColorDisplay
-      fontColor="#222222"
+      contrastBlackAlert={true}
+      contrastWhiteAlert={true}
       hex="#A38B80"
       key="3"
-      rgb="163, 139, 128"
+      subTitle="brown-soft"
+      title="Brown soft"
     />
     <ColorDisplay
+      contrastBlackAlert={true}
       hex="#D4C4BC"
       key="4"
-      rgb="212, 196, 188"
+      subTitle="brown-light"
+      title="Brown light"
     />
   </div>
 </section>
 `;
 
-exports[`Core: Color ButtonColors renders 1`] = `
+exports[`Core: Color ColorContrast renders 1`] = `
 <section>
-  <h2
-    id="buttons-colors"
-  >
-    Button colors
-  </h2>
   <p>
-    Our primary buttons are yellow and our secondary buttons are brown. Go to Buttons to see and interact with all buttons. 
+    It is important to maintain sufficient color contrast in our products to meet accessability requirements. For normal text content this means a 4.5:1 ratio against background and for graphics and large text (18 px, or bold 14 px) a 3:1 ratio against background. To help you to make informed color decisions, we showcase the contrast ratio of each color to our default text (brown) and background (white) color here. 
   </p>
   <div
-    className="color-group"
+    className="d-flex flex-row justify-content-around color-contrast-section"
   >
-    <ColorDisplay
-      hex="#FDC129"
-      key="0"
-      rgb="253, 193, 41"
-    />
-    <ColorDisplay
-      fontColor="font-white"
-      hex="#512B2B"
-      key="1"
-      rgb="81, 43, 43"
-    />
-    <ColorDisplay
-      border="has-border"
-      hex="#FFFFFF"
-      key="2"
-      rgb="255, 255, 255"
-    />
-  </div>
-</section>
-`;
-
-exports[`Core: Color CommunicationColors renders 1`] = `
-<section>
-  <h2
-    id="communication-colors"
-  >
-    Communication colors
-  </h2>
-  <p>
-    Yellow is used on backgrounds, in main graphical elements and on underlines for highlighting relevant parts of a message. When the yellow is used as a background choose the white text version of the logotype.
-  </p>
-  <div
-    className="color-group communication-colors justify-content-between"
-  >
-    <ColorDisplay
-      hex="#FDC129"
-      key="0"
-      rgb="253, 193, 41"
-    />
-    <ColorDisplay
-      border="has-border"
-      hex="#FFFFFF"
-      key="1"
-      rgb="255, 255, 255"
-    />
-  </div>
-</section>
-`;
-
-exports[`Core: Color ComplementaryColors renders 1`] = `
-<section>
-  <h2
-    id="complementary-colors"
-  >
-    Complementary colors
-  </h2>
-  <p>
-    Can be used for decorative elements in combination with corresponding background colors. These colors cannot be used as text colors. 
-  </p>
-  <div
-    className="color-group"
-  >
-    <ColorDisplay
-      hex="#8ACDC3"
-      key="0"
-      rgb="138, 205, 195"
-    />
-    <ColorDisplay
-      hex="#EFB7B6"
-      key="1"
-      rgb="239, 183, 182"
-    />
-  </div>
-</section>
-`;
-
-exports[`Core: Color GrayScaleColors renders 1`] = `
-<section>
-  <h2
-    id="gray-scale-colors"
-  >
-    Gray scale colors
-  </h2>
-  <div
-    className="color-group"
-  >
-    <ColorDisplay
-      fontColor="font-white"
-      hex="#222222"
-      key="0"
-      rgb="34, 34, 34"
-    />
-    <ColorDisplay
-      fontColor="font-white"
-      hex="#999999"
-      key="1"
-      rgb="153, 153, 153"
-    />
-    <ColorDisplay
-      hex="#F9F8F6"
-      key="2"
-      rgb="249, 248, 246"
-    />
-    <ColorDisplay
-      border="has-border"
-      hex="#FFFFFF"
-      key="3"
-      rgb="255, 255, 255"
-    />
+    <span
+      className="d-flex"
+    >
+      <i
+        aria-hidden="true"
+        className="material-icons check mr-1"
+      >
+        check_circle
+      </i>
+      <b>
+        Pass (≥ 4.5:1)
+      </b>
+    </span>
+    <span
+      className="d-flex"
+    >
+      <i
+        aria-hidden="true"
+        className="material-icons cancel mr-1"
+      >
+        warning
+      </i>
+      <b>
+        OK for graphics or large text (≥ 3:1)
+      </b>
+    </span>
+    <span
+      className="d-flex"
+    >
+      <i
+        aria-hidden="true"
+        className="material-icons alert-warning mr-1"
+      >
+        cancel
+      </i>
+      <b>
+        Fail
+      </b>
+    </span>
   </div>
 </section>
 `;
@@ -209,7 +163,7 @@ exports[`Core: Color Lead renders 1`] = `
   <p
     className="lead"
   >
-    To give a unified appearance and effectively create visual recognition, the communication color of Swedbank Pay is yellow. Yellow is an energetic and vibrant color that matches the brand of Swedbank Pay. In complement to this, Swedbank Pay uses a selection of colors from Swedbank’s color palette.
+    The primary color of Swedbank Pay is yellow, it is used to give a unified appearance and create visual recognition. Yellow is an energetic and vibrant color that matches the brand of Swedbank Pay. In complement to this, Swedbank Pay uses a selection of colors from Swedbank´s color palette.
   </p>
   <div
     className="d-flex flex-column align-items-center mt-5"
@@ -297,58 +251,67 @@ exports[`Core: Color SystemColors renders 1`] = `
     className="color-group"
   >
     <ColorDisplay
-      fontColor="font-white"
-      hex="#C5131C"
+      contrastWhiteApproved={true}
+      hex="#8c0d14"
       key="0"
-      rgb="197, 19, 28"
+      subTitle="system-error-dark"
+      title="Error dark"
     />
     <ColorDisplay
-      fontColor="font-white"
-      hex="#E07088"
+      contrastWhiteApproved={true}
+      hex="#B5111A"
       key="1"
-      rgb="224, 112, 136"
+      subTitle="system-error"
+      title="Error"
     />
     <ColorDisplay
-      hex="#F9DED3"
+      contrastBlackApproved={true}
+      hex="#FCEEE9"
       key="2"
-      rgb="249, 222, 211"
+      subTitle="system-error-light"
+      title="Error light"
     />
     <ColorDisplay
-      fontColor="font-white"
-      hex="#3E6AB6"
+      contrastWhiteApproved={true}
+      hex="#C15715"
       key="3"
-      rgb="62, 106, 182"
+      subTitle="system-warning"
+      title="Warning"
     />
     <ColorDisplay
-      hex="#E8EFF9"
+      contrastBlackApproved={true}
+      hex="#FEF2E2"
       key="4"
-      rgb="232, 239, 249"
+      subTitle="system-warning-light"
+      title="Warning light"
     />
     <ColorDisplay
-      fontColor="font-white"
-      hex="#437E15"
+      contrastWhiteApproved={true}
+      hex="#3C7213"
       key="5"
-      rgb="67, 126, 21"
+      subTitle="system-success"
+      title="Success"
     />
     <ColorDisplay
-      hex="#99CC66"
-      key="6"
-      rgb="153, 204, 102"
-    />
-    <ColorDisplay
+      contrastBlackApproved={true}
       hex="#F2F7EB"
+      key="6"
+      subTitle="system-success-light"
+      title="Success light"
+    />
+    <ColorDisplay
+      contrastWhiteApproved={true}
+      hex="#3961A7"
       key="7"
-      rgb="242, 24, 235"
+      subTitle="system-info"
+      title="Info"
     />
     <ColorDisplay
-      hex="#F9CE22"
+      contrastBlackApproved={true}
+      hex="#EBF1FA"
       key="8"
-      rgb="249, 206, 34"
-    />
-    <ColorDisplay
-      hex="#FFF3D5"
-      key="9"
-      rgb="255, 243, 213"
+      subTitle="system-info-light"
+      title="Info light"
     />
   </div>
 </section>
@@ -362,34 +325,42 @@ exports[`Core: Color TextColors renders 1`] = `
     Text colors
   </h2>
   <p>
-    Brown is our primary text color that should be used for all text besides link and text on dark backgrounds and images. For links, use turquoise and for dark backgrounds/images use white. Gray is used for smaller text that has to be presented in the interface but we don’t want to be the primary focus. 
+    Brown is our default text color that should be used for all normal text besides links and text on dark backgrounds or images. For links, use turquoise and for text on dark backgrounds or images use white. A lighter brown is used as a muted text color for smaller or less important text that shouldn’t be the primary focus.
   </p>
   <div
     className="color-group"
   >
     <ColorDisplay
-      fontColor="font-white"
+      contrastWhiteApproved={true}
       hex="#512B2B"
       key="0"
-      rgb="81,43,43"
+      noBlackExample={true}
+      subTitle="text-default"
+      title="Brown"
     />
     <ColorDisplay
-      fontColor="font-white"
-      hex="#257886"
+      contrastBlackAlert={true}
+      contrastWhiteApproved={true}
+      hex="#72605E"
       key="1"
-      rgb="37, 119, 134"
+      subTitle="text-muted"
+      title="Brown medium"
+    />
+    <ColorDisplay
+      contrastWhiteApproved={true}
+      hex="#257886"
+      key="2"
+      subTitle="text-link"
+      title="Turquoise dark"
     />
     <ColorDisplay
       border="has-border"
+      contrastBlackApproved={true}
       hex="#FFFFFF"
-      key="2"
-      rgb="255, 255, 255"
-    />
-    <ColorDisplay
-      fontColor="font-white"
-      hex="#696969"
       key="3"
-      rgb="105, 105, 105"
+      noWhiteExample={true}
+      subTitle="text-white"
+      title="White"
     />
   </div>
 </section>
