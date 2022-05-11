@@ -710,7 +710,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                               </i>
                               Colors
                             </a>
-                            <NewNav
+                            <AddNewLevel
                               currentNav={
                                 Object {
                                   "children": Array [
@@ -779,7 +779,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                                   </a>
                                 </li>
                               </ul>
-                            </NewNav>
+                            </AddNewLevel>
                           </li>
                           <li
                             className="secondary-nav-li leaf"
@@ -882,7 +882,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                             >
                               Events
                             </a>
-                            <NewNav
+                            <AddNewLevel
                               currentNav={
                                 Object {
                                   "children": Array [
@@ -945,7 +945,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                                   </a>
                                 </li>
                               </ul>
-                            </NewNav>
+                            </AddNewLevel>
                           </li>
                           <li
                             className="secondary-nav-li leaf"

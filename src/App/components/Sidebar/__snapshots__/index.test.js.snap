@@ -125,7 +125,7 @@ exports[`Component: Sidebar renders 1`] = `
                 </i>
                 Colors
               </a>
-              <NewNav
+              <AddNewLevel
                 currentNav={
                   Object {
                     "children": Array [
@@ -320,7 +320,7 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
                   </i>
                   Level 2
                 </a>
-                <NewNav
+                <AddNewLevel
                   currentNav={
                     Object {
                       "children": Array [
@@ -419,7 +419,7 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
                       >
                         Level 3
                       </a>
-                      <NewNav
+                      <AddNewLevel
                         currentNav={
                           Object {
                             "children": Array [
@@ -503,7 +503,7 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
                             >
                               Level 4
                             </a>
-                            <NewNav
+                            <AddNewLevel
                               currentNav={
                                 Object {
                                   "children": Array [
@@ -582,7 +582,7 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
                                   >
                                     Level 5
                                   </a>
-                                  <NewNav
+                                  <AddNewLevel
                                     currentNav={
                                       Object {
                                         "children": Array [
@@ -656,7 +656,7 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
                                         >
                                           Level 6
                                         </a>
-                                        <NewNav
+                                        <AddNewLevel
                                           currentNav={
                                             Object {
                                               "children": Array [
@@ -725,7 +725,7 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
                                               >
                                                 Level 7
                                               </a>
-                                              <NewNav
+                                              <AddNewLevel
                                                 currentNav={
                                                   Object {
                                                     "children": Array [
@@ -789,7 +789,7 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
                                                     >
                                                       Level 8
                                                     </a>
-                                                    <NewNav
+                                                    <AddNewLevel
                                                       currentNav={
                                                         Object {
                                                           "children": Array [
@@ -848,7 +848,7 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
                                                           >
                                                             Level 9
                                                           </a>
-                                                          <NewNav
+                                                          <AddNewLevel
                                                             currentNav={
                                                               Object {
                                                                 "children": Array [
@@ -879,28 +879,28 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
                                                                 </a>
                                                               </li>
                                                             </ul>
-                                                          </NewNav>
+                                                          </AddNewLevel>
                                                         </li>
                                                       </ul>
-                                                    </NewNav>
+                                                    </AddNewLevel>
                                                   </li>
                                                 </ul>
-                                              </NewNav>
+                                              </AddNewLevel>
                                             </li>
                                           </ul>
-                                        </NewNav>
+                                        </AddNewLevel>
                                       </li>
                                     </ul>
-                                  </NewNav>
+                                  </AddNewLevel>
                                 </li>
                               </ul>
-                            </NewNav>
+                            </AddNewLevel>
                           </li>
                         </ul>
-                      </NewNav>
+                      </AddNewLevel>
                     </li>
                   </ul>
-                </NewNav>
+                </AddNewLevel>
               </li>
             </ul>
           </nav>
@@ -1042,7 +1042,7 @@ exports[`Component: Sidebar renders five levels when four levels is provided 1`]
                   </i>
                   Accessibility
                 </a>
-                <NewNav
+                <AddNewLevel
                   currentNav={
                     Object {
                       "children": Array [
@@ -1116,7 +1116,7 @@ exports[`Component: Sidebar renders five levels when four levels is provided 1`]
                       >
                         Primary colors
                       </a>
-                      <NewNav
+                      <AddNewLevel
                         currentNav={
                           Object {
                             "children": Array [
@@ -1175,7 +1175,7 @@ exports[`Component: Sidebar renders five levels when four levels is provided 1`]
                             >
                               Children 2
                             </a>
-                            <NewNav
+                            <AddNewLevel
                               currentNav={
                                 Object {
                                   "children": Array [
@@ -1206,13 +1206,13 @@ exports[`Component: Sidebar renders five levels when four levels is provided 1`]
                                   </a>
                                 </li>
                               </ul>
-                            </NewNav>
+                            </AddNewLevel>
                           </li>
                         </ul>
-                      </NewNav>
+                      </AddNewLevel>
                     </li>
                   </ul>
-                </NewNav>
+                </AddNewLevel>
               </li>
             </ul>
           </nav>
@@ -1349,7 +1349,7 @@ exports[`Component: Sidebar renders four levels when four levels is provided 1`]
                   </i>
                   Accessibility
                 </a>
-                <NewNav
+                <AddNewLevel
                   currentNav={
                     Object {
                       "children": Array [
@@ -1418,7 +1418,7 @@ exports[`Component: Sidebar renders four levels when four levels is provided 1`]
                       >
                         Primary colors
                       </a>
-                      <NewNav
+                      <AddNewLevel
                         currentNav={
                           Object {
                             "children": Array [
@@ -1449,10 +1449,10 @@ exports[`Component: Sidebar renders four levels when four levels is provided 1`]
                             </a>
                           </li>
                         </ul>
-                      </NewNav>
+                      </AddNewLevel>
                     </li>
                   </ul>
-                </NewNav>
+                </AddNewLevel>
               </li>
             </ul>
           </nav>
@@ -1658,7 +1658,7 @@ exports[`Component: Sidebar renders three levels when three levels is provided 1
                 >
                   Accessibility
                 </a>
-                <NewNav
+                <AddNewLevel
                   currentNav={
                     Object {
                       "children": Array [
@@ -1689,7 +1689,7 @@ exports[`Component: Sidebar renders three levels when three levels is provided 1
                       </a>
                     </li>
                   </ul>
-                </NewNav>
+                </AddNewLevel>
               </li>
             </ul>
           </nav>
