@@ -2,48 +2,162 @@
 
 exports[`DisplayColor renders with optional props 1`] = `
 <div
-  className="has-border"
+  className="d-flex flex-column mb-2"
 >
-  <svg>
-    <rect
-      fill="#FDC129"
-    />
-  </svg>
   <div
-    className="pl-3 512B2B"
+    className="color-box has-border"
+  >
+    <svg>
+      <rect
+        fill="#FDC129"
+      />
+    </svg>
+  </div>
+  <div
+    className="text-box d-flex flex-column"
   >
     <p
-      className="mb-0"
+      className="font-weight-bold mb-0"
+    />
+    <small
+      className="small mb-0"
+    />
+    <small
+      className="small mb-0 text-uppercase"
     >
       #FDC129
-    </p>
-    <p>
-      253, 193, 41
-    </p>
+    </small>
+    <div
+      className="contrast-box"
+    >
+      <div
+        className="contrast-white-container"
+      >
+        <svg
+          className="white-box first-svg"
+        >
+          <rect
+            fill="#FFFFFF"
+          />
+        </svg>
+        <svg
+          className="second-svg"
+        >
+          <rect
+            fill="#FDC129"
+          />
+        </svg>
+        <i
+          className="material-icons cancel"
+        >
+          cancel
+        </i>
+      </div>
+      <div
+        className="contrast-black-container"
+      >
+        <svg
+          className="first-svg"
+        >
+          <rect
+            fill="#000000"
+          />
+        </svg>
+        <svg
+          className="second-svg"
+        >
+          <rect
+            fill="#FDC129"
+          />
+        </svg>
+        <i
+          className="material-icons cancel"
+        >
+          cancel
+        </i>
+      </div>
+    </div>
   </div>
 </div>
 `;
 
 exports[`DisplayColor renders with required props 1`] = `
 <div
-  className=""
+  className="d-flex flex-column mb-2"
 >
-  <svg>
-    <rect
-      fill="#FDC129"
-    />
-  </svg>
   <div
-    className="pl-3 "
+    className="color-box "
+  >
+    <svg>
+      <rect
+        fill="#FDC129"
+      />
+    </svg>
+  </div>
+  <div
+    className="text-box d-flex flex-column"
   >
     <p
-      className="mb-0"
+      className="font-weight-bold mb-0"
+    />
+    <small
+      className="small mb-0"
+    />
+    <small
+      className="small mb-0 text-uppercase"
     >
       #FDC129
-    </p>
-    <p>
-      253, 193, 41
-    </p>
+    </small>
+    <div
+      className="contrast-box"
+    >
+      <div
+        className="contrast-white-container"
+      >
+        <svg
+          className="white-box first-svg"
+        >
+          <rect
+            fill="#FFFFFF"
+          />
+        </svg>
+        <svg
+          className="second-svg"
+        >
+          <rect
+            fill="#FDC129"
+          />
+        </svg>
+        <i
+          className="material-icons cancel"
+        >
+          cancel
+        </i>
+      </div>
+      <div
+        className="contrast-black-container"
+      >
+        <svg
+          className="first-svg"
+        >
+          <rect
+            fill="#000000"
+          />
+        </svg>
+        <svg
+          className="second-svg"
+        >
+          <rect
+            fill="#FDC129"
+          />
+        </svg>
+        <i
+          className="material-icons cancel"
+        >
+          cancel
+        </i>
+      </div>
+    </div>
   </div>
 </div>
 `;
