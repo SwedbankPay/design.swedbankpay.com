@@ -973,6 +973,25 @@
         }
     }
 
+    .color-contrast-section {
+        i {
+            font-size: 1rem;
+            align-self: center;
+
+            &.check {
+                color: #3c7213;
+            }
+
+            &.cancel {
+                color: #b5111a;
+            }
+
+            &.alert-warning {
+                color: #c15715;
+            }
+        }
+    }
+
     .color-group {
         display: flex;
         flex-wrap: wrap;
@@ -980,7 +999,7 @@
         .color-box {
             height: 7.875rem;
             width: 7.875rem;
-            margin-right: 1rem; //not last one on each row
+            margin-right: 0.5rem;
             overflow: hidden;
             border-radius: 5px;
 
@@ -1001,6 +1020,8 @@
         }
 
         .text-box {
+            margin-top: 4px;
+
             small {
                 color: @medium-brown;
             }
