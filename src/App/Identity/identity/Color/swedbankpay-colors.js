@@ -1,107 +1,157 @@
-export const communicationColors = [
+export const brandColors = [
     {
+        title: "Yellow",
+        subTitle: "brand-primary",
         hex: "#FDC129",
-        rgb: "253, 193, 41"
+        contrastBlackApproved: true
     },
     {
-        hex: "#FFFFFF",
-        rgb: "255, 255, 255",
-        border: "has-border"
-    }
-];
-
-export const textColors = [
-    {
-        hex: "#512B2B",
-        rgb: "81,43,43",
-        fontColor: "font-white",
-        noWhiteExample: true
+        title: "Yellow light",
+        subTitle: "brand-primary-light",
+        hex: "#FBDD91",
+        contrastBlackApproved: true
     },
     {
-        hex: "#257886",
-        rgb: "37, 119, 134",
-        fontColor: "font-white"
-    },
-    {
-        hex: "#FFFFFF",
-        rgb: "255, 255, 255",
-        border: "has-border",
-        noBlackExample: true
-    },
-    {
-        hex: "#696969",
-        rgb: "105, 105, 105",
-        fontColor: "font-white"
-    }
-];
-
-export const backgroundColors = [
-    {
-        hex: "#FBF2EA",
-        rgb: "251, 241, 234"
-    },
-    {
-        hex: "#F9F8F6",
-        rgb: "249, 248, 246"
-    },
-    {
-        hex: "#EBF8F2",
-        rgb: "235, 248, 242"
-    }
-];
-
-export const buttonColors = [
-    {
-        hex: "#FDC129",
-        rgb: "253, 193, 41"
-    },
-    {
-        hex: "#512B2B",
-        rgb: "81, 43, 43",
-        fontColor: "font-white"
-    },
-    {
-        hex: "#FFFFFF",
-        rgb: "255, 255, 255",
-        border: "has-border"
-    }
-];
-
-export const brownScaleColors = [
-    {
-        hex: "#2F2424",
-        rgb: "47, 36, 36",
-        fontColor: "font-white"
-    },
-    {
-        hex: "#493C3B",
-        rgb: "73, 60, 59",
-        fontColor: "font-white"
-    },
-    {
-        hex: "#72605E",
-        rgb: "114, 96, 94",
-        fontColor: "font-white"
-    },
-    {
-        hex: "#A38B80",
-        rgb: "163, 139, 128",
-        fontColor: "#222222"
-    },
-    {
-        hex: "#D4C4BC",
-        rgb: "212, 196, 188"
+        title: "Yellow lighter",
+        subTitle: "brand-primary-lighter",
+        hex: "#FFF3D5",
+        contrastWhiteApproved: true
     }
 ];
 
 export const complementaryColors = [
     {
-        hex: "#8ACDC3",
-        rgb: "138, 205, 195"
+        title: "Orange",
+        subTitle: "brand-orange",
+        hex: "#EE7023",
+        contrastWhiteAlert: true,
+        contrastBlackAlert: true
     },
     {
+        title: "Turquoise",
+        subTitle: "brand-turquoise",
+        hex: "#31A3AE",
+        contrastWhiteAlert: true,
+        contrastBlackAlert: true
+    },
+    {
+        title: "Turquoise light",
+        subTitle: "brand-turquoise-light",
+        hex: "#8ACDC3",
+        contrastBlackApproved: true
+    },
+    {
+        title: "Pink",
+        subTitle: "brand-pink",
         hex: "#EFB7B6",
-        rgb: "239, 183, 182"
+        contrastBlackApproved: true
+    },
+    {
+        title: "Brown",
+        subTitle: "brand-brown",
+        hex: "#512B2B",
+        contrastWhiteApproved: true,
+        noBlackExample: true
+    }
+];
+
+export const brownScaleColors = [
+    {
+        title: "Brown solid",
+        subTitle: "brown-solid",
+        hex: "#2F2424",
+        contrastWhiteApproved: true
+    },
+    {
+        title: "Brown dark",
+        subTitle: "brown-dark",
+        hex: "#493C3B",
+        contrastWhiteApproved: true
+    },
+    {
+        title: "Brown medium",
+        subTitle: "brown-medium",
+        hex: "#72605E",
+        contrastWhiteApproved: true
+    },
+    {
+        title: "Brown soft",
+        subTitle: "brown-soft",
+        hex: "#A38B80",
+        contrastWhiteAlert: true,
+        contrastBlackAlert: true
+    },
+    {
+        title: "Brown light",
+        subTitle: "brown-light",
+        hex: "#D4C4BC",
+        contrastBlackAlert: true
+    }
+];
+
+export const textColors = [
+    {
+        title: "Brown",
+        subTitle: "text-default",
+        hex: "#512B2B",
+        contrastWhiteApproved: true,
+        noBlackExample: true
+    },
+    {
+        title: "Brown medium",
+        subTitle: "text-muted",
+        hex: "#72605E",
+        contrastWhiteApproved: true,
+        contrastBlackAlert: true
+    },
+    {
+        title: "Turquoise dark",
+        subTitle: "text-link",
+        hex: "#257886",
+        contrastWhiteApproved: true
+    },
+    {
+        title: "White",
+        subTitle: "text-white",
+        hex: "#FFFFFF",
+        border: "has-border",
+        contrastBlackApproved: true,
+        noWhiteExample: true
+    }
+];
+
+export const backgroundColors = [
+    {
+        title: "White",
+        subTitle: "bg-white",
+        hex: "#FFFFFF",
+        border: "has-border",
+        contrastBlackApproved: true,
+        noWhiteExample: true
+    },
+    {
+        title: "Apricot",
+        subTitle: "bg-primary",
+        hex: "#FBF2EA",
+        contrastBlackApproved: true
+    },
+    {
+        title: "Turquoise lighter",
+        subTitle: "bg-secondary",
+        hex: "#EBF8F2",
+        contrastBlackApproved: true
+    },
+    {
+        title: "Gray",
+        subTitle: "bg-tertiary",
+        hex: "#EBE7E2",
+        contrastBlackApproved: true
+    },
+    {
+        title: "Gray light",
+        subTitle: "bg-quaternary",
+        hex: "#F9F8F6",
+        contrastBlackApproved: true
     }
 ];
 
@@ -161,26 +211,3 @@ export const systemColors = [
         contrastBlackApproved: true
     }
 ];
-
-export const grayScaleColors = [
-    {
-        hex: "#222222",
-        rgb: "34, 34, 34",
-        fontColor: "font-white"
-    },
-    {
-        hex: "#999999",
-        rgb: "153, 153, 153",
-        fontColor: "font-white"
-    },
-    {
-        hex: "#F9F8F6",
-        rgb: "249, 248, 246"
-    },
-    {
-        hex: "#FFFFFF",
-        rgb: "255, 255, 255",
-        border: "has-border"
-    }
-];
-
