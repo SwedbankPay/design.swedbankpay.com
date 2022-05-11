@@ -5,7 +5,7 @@ import LogotypeComponent from "@components/Logotype";
 const basename = process.env.basename;
 const brand = process.env.brand;
 
-const NewNav = ({ currentNav, previousTitle }) => (
+const AddNewLevel = ({ currentNav, previousTitle }) => (
     <ul>{"\n"}
         {!currentNav.group &&
             <>
@@ -25,7 +25,7 @@ const NewNav = ({ currentNav, previousTitle }) => (
                 {nextNav.title}
             </a>
             {nextNav.children &&
-                <NewNav currentNav={nextNav} previousTitle={currentNav.title}/>
+                <AddNewLevel currentNav={nextNav} previousTitle={currentNav.title}/>
             }
         </li>)}
     </ul>
@@ -57,7 +57,7 @@ const Sidebar = ({ id, sticky, navList }) => (
                                         {secondNav.title}
                                     </a>
                                     {secondNav.children &&
-                                        <NewNav currentNav={secondNav} previousTitle={mainNav.title}/>
+                                        <AddNewLevel currentNav={secondNav} previousTitle={mainNav.title}/>
                                     }
                                 </li>)}
                             </ul>
