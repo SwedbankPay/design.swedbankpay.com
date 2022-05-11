@@ -178,14 +178,14 @@ const Color = () => (
         {brand === "swedbankpay" &&
             <DocContainer>
                 <Lead />
-                <CommunicationColors />
-                <TextColors />
+                {/* <CommunicationColors />
+                 <TextColors />
                 <BackgroundColors />
                 <ButtonColors />
                 <BrownScaleColors />
-                <ComplementaryColors />
+<ComplementaryColors />*/}
                 <SystemColors />
-                <GrayScaleColors />
+                {/* <GrayScaleColors />*/}
             </DocContainer>
         }
         {brand === "payex" &&
