@@ -13,7 +13,6 @@ const Intro = () => (
         <p className="lead">At {brandTitle} we value accessibility. Our products are meant to be used by people no matter of their abilities and therefor we strive to be WCAG (Web Content Accessibility Guidelines) compliant. We’re currently working on our accessibility awareness and meeting the terms of the  accessibility laws in Norway and Sweden. </p>
         <h2>What is accessibility</h2>
         <p>Accessibility ties back to our values <i>simple</i> and <i>caring</i>. About 15 percent of the western world’s population is living with a disability of some kind. This translates to over 1 billion people, and includes visual, auditory, physical, speech, cognitive, and neurological disabilities. </p>
-
         <p>Microsoft defines it like this:</p>
         <ol>
             <li>The qualities that make an experience open to all.</li>
@@ -42,44 +41,52 @@ const WcagStandard = () => (
         <h2 id="wcag-standard">WCAG standards and support material</h2>
         <p>WCAG has almost become a buzzword, thrown around by designers, developers and  stakeholders on regular basis. But what does it mean? WCAG is short for Web Content   Accessibility Guidelines and is a collection of accessibility standards and support material developed and written by the W3C Web Accessibility Initiative (WAI). WCAG is    a work in progress with several different versions (see <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer">https://w3.org/WAI</a>).</p>
         <p>The guidelines ties back to four core terms: A website should be perceivable,  operable, understandable and robust. In these four areas there are sets of criteria  that has to be met for a certain term to be considered achieved (see Figure 2). Each  criteria also has one or more sub-criteria which are graded on a scale from A to AAA where A is least acceptable and AAA is considered “very good”.</p>
+        <section>
+            <h4>Perceivable</h4>
+            <ul className="list list-bullet">
+                <li>Provide <b>text alternatives</b> for non-text content.</li>
+                <li>Provide <b>captions and alternatives</b> for audio and video content.</li>
+                <li>Make content <b>adaptable</b>; and make it available to assistive technologies.</li>
+                <li>Use <b>sufficient contrast</b> to make things easy to see and hear.</li>
+            </ul>
+        </section>
+        <section>
+            <h4>Operable</h4>
+            <ul className="list list-bullet">
+                <li>Make all functionality <b>keyboard accessible</b>.</li>
+                <li>Give users <b>enough time</b> to read and use content.</li>
+                <li>Do not use content that causes <b>seizures</b>.</li>
+                <li>Help users <b>navigate and find</b> content.</li>
+                <li>Make it easier to use <b>inputs other than keyboard</b>.</li>
+            </ul>
+        </section>
+        <section>
+            <h4>Understandable</h4>
+            <ul className="list list-bullet">
+                <li>Make text <b>readable and understandable</b>.</li>
+                <li>Make content appear and operate in <b>predictable</b> ways.</li>
+                <li>Help users <b>avoid and correct mistakes</b>.</li>
+            </ul>
+        </section>
+        <section>
+            <h4>Perceivable</h4>
+            <ul className="list list-bullet">
+                <li>Maximize <b>compatibility</b> with current and future technologies.</li>
+            </ul>
+        </section>
+        <section>
+            <h3>More than a checklist</h3>
+            <p>Important to remember is that WCAG and accessibility is more than a checklist! It  sure can start with a checklist (such as this one) but it is a practice and mindset   that must be present amongst all product employees. To meet the whole target group these terms are necessary to meet. </p>
+            <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
+                <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+                <span className="mr-2">What is WCAG?</span>
+            </a>
 
-        <h4>Perceivable</h4>
-        <ul className="list list-bullet">
-            <li>Provide <b>text alternatives</b> for non-text content.</li>
-            <li>Provide <b>captions and alternatives</b> for audio and video content.</li>
-            <li>Make content <b>adaptable</b>; and make it available to assistive technologies.</li>
-            <li>Use <b>sufficient contrast</b> to make things easy to see and hear.</li>
-        </ul>
-        <h4>Operable</h4>
-        <ul className="list list-bullet">
-            <li>Make all functionality <b>keyboard accessible</b>.</li>
-            <li>Give users <b>enough time</b> to read and use content.</li>
-            <li>Do not use content that causes <b>seizures</b>.</li>
-            <li>Help users <b>navigate and find</b> content.</li>
-            <li>Make it easier to use <b>inputs other than keyboard</b>.</li>
-        </ul>
-        <h4>Understandable</h4>
-        <ul className="list list-bullet">
-            <li>Make text <b>readable and understandable</b>.</li>
-            <li>Make content appear and operate in <b>predictable</b> ways.</li>
-            <li>Help users <b>avoid and correct mistakes</b>.</li>
-        </ul>
-        <h4>Perceivable</h4>
-        <ul className="list list-bullet">
-            <li>Maximize <b>compatibility</b> with current and future technologies.</li>
-        </ul>
-
-        <h3>More than a checklist</h3>
-        <p>Important to remember is that WCAG and accessibility is more than a checklist! It  sure can start with a checklist (such as this one) but it is a practice and mindset   that must be present amongst all product employees. To meet the whole target group these terms are necessary to meet. </p>
-        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer" className="icon-link d-flex">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">What is WCAG?</span>
-        </a>
-
-        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/" target="_blank" rel="noopener noreferrer" className="icon-link">
-            <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
-            <span className="mr-2">W3C – WCAG 2.1    Recommendations </span>
-        </a>
+            <a href="https://www.w3.org/WAI/standards-guidelines/wcag/glance/" target="_blank" rel="noopener noreferrer" className="icon-link">
+                <i className="material-icons mr-2" aria-hidden="true">open_in_new</i>
+                <span className="mr-2">W3C – WCAG 2.1    Recommendations </span>
+            </a>
+        </section>
     </section>
 );
 
