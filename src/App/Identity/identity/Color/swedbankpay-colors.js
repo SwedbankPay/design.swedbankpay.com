@@ -109,47 +109,56 @@ export const systemColors = [
     {
         title: "Error dark",
         subTitle: "system-error-dark",
-        hex: "#8c0d14"
+        hex: "#8c0d14",
+        contrastWhiteApproved: true
     },
     {
         title: "Error",
         subTitle: "system-error",
-        hex: "#B5111A"
+        hex: "#B5111A",
+        contrastWhiteApproved: true
     },
     {
         title: "Error light",
         subTitle: "system-error-light",
-        hex: "#FCEEE9"
+        hex: "#FCEEE9",
+        contrastBlackApproved: true
     },
     {
         title: "Warning",
         subTitle: "system-warning",
-        hex: "#C15715"
+        hex: "#C15715",
+        contrastWhiteApproved: true
     },
     {
         title: "Warning light",
         subTitle: "system-warning-light",
-        hex: "#FEF2E2"
+        hex: "#FEF2E2",
+        contrastBlackApproved: true
     },
     {
         title: "Success",
         subTitle: "system-success",
-        hex: "#3C7213"
+        hex: "#3C7213",
+        contrastWhiteApproved: true
     },
     {
         title: "Success light",
         subTitle: "system-success-light",
-        hex: "#F2F7EB"
+        hex: "#F2F7EB",
+        contrastBlackApproved: true
     },
     {
         title: "Info",
         subTitle: "system-info",
-        hex: "#3961A7"
+        hex: "#3961A7",
+        contrastWhiteApproved: true
     },
     {
         title: "Info light",
         subTitle: "system-info-light",
-        hex: "#EBF1FA"
+        hex: "#EBF1FA",
+        contrastBlackApproved: true
     }
 ];
 
