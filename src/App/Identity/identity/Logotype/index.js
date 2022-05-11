@@ -64,8 +64,8 @@ const SpacingZone = () => (
         </table>
 
         <div className="d-md-flex mt-5">
-            <img src={`${basename}img/documentation/logotype/vertical-measure.png`} className="logotype-vertical-measure mr-5"/>
-            <img src={`${basename}img/documentation/logotype/horizontal-measure.png`} className="logotype-horizontal-measure mt-5"/>
+            <img src={`${basename}img/documentation/logotype/vertical-measure.png`} className="logotype-vertical-measure mr-5" alt="Vertical measure spacing zones of logotype"/>
+            <img src={`${basename}img/documentation/logotype/horizontal-measure.png`} className="logotype-horizontal-measure mt-5" alt="Horizontal measure spacing zones of logotype"/>
         </div>
     </section>
 );
@@ -86,7 +86,7 @@ const MisuseLogo = () => (
                     <div key={src} className="col-lg-3 col-md-4 col-sm-6">
                         <div className="logotype-misuse-donts">
                             <div className="logotype-misuse-donts-img">
-                                <img src={`${basename}${src}`} className={height}/>
+                                <img src={`${basename}${src}`} className={height} alt=""/>
                             </div>
                             <span className="h4 mb-4">{title}</span>
                             <p>{description}</p>
@@ -110,10 +110,10 @@ const LogotypeBackgrounds = () => (
         <p>When placing the logotype on our primary yellow background, always use the white text version. Make sure to keep the logotype above the minimum size recommendation for legibility.</p>
 
         <div className="flex">
-            <img src={`${basename}img/documentation/logotype/bg-apricot.png`} className="w-25 p-3"/>
-            <img src={`${basename}img/documentation/logotype/bg-dark-img.png`} className="w-25 p-3"/>
-            <img src={`${basename}img/documentation/logotype/bg-light-img.png`} className="w-25 p-3"/>
-            <img src={`${basename}img/documentation/logotype/bg-yellow.png`} className="w-25 p-3"/>
+            <img src={`${basename}img/documentation/logotype/bg-apricot.png`} className="w-25 p-3" alt=""/>
+            <img src={`${basename}img/documentation/logotype/bg-dark-img.png`} className="w-25 p-3" alt=""/>
+            <img src={`${basename}img/documentation/logotype/bg-light-img.png`} className="w-25 p-3" alt=""/>
+            <img src={`${basename}img/documentation/logotype/bg-yellow.png`} className="w-25 p-3" alt=""/>
         </div>
     </section>
 );

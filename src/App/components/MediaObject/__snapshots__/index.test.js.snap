@@ -185,6 +185,7 @@ exports[`Component: MediaObject - renders an image 1`] = `
 
      
     <img
+      alt=""
       src="https://via.placeholder.com/48x48"
     />
      

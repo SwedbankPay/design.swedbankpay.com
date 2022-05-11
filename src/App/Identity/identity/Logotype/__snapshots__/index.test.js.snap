@@ -681,18 +681,22 @@ exports[`Core: Logotype LogotypeBackgrounds renders 1`] = `
     className="flex"
   >
     <img
+      alt=""
       className="w-25 p-3"
       src="/TEST/img/documentation/logotype/bg-apricot.png"
     />
     <img
+      alt=""
       className="w-25 p-3"
       src="/TEST/img/documentation/logotype/bg-dark-img.png"
     />
     <img
+      alt=""
       className="w-25 p-3"
       src="/TEST/img/documentation/logotype/bg-light-img.png"
     />
     <img
+      alt=""
       className="w-25 p-3"
       src="/TEST/img/documentation/logotype/bg-yellow.png"
     />
@@ -732,6 +736,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-100"
               src="/TEST/img/documentation/logotype/old_logo.png"
             />
@@ -757,6 +762,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-100"
               src="/TEST/img/documentation/logotype/resize_logo.png"
             />
@@ -782,6 +788,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-50"
               src="/TEST/img/documentation/logotype/pay_text.png"
             />
@@ -807,6 +814,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-75"
               src="/TEST/img/documentation/logotype/swedbank_logo.png"
             />
@@ -832,6 +840,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-100"
               src="/TEST/img/documentation/logotype/rotated_logo.png"
             />
@@ -857,6 +866,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-100"
               src="/TEST/img/documentation/logotype/green_logo.png"
             />
@@ -882,6 +892,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-100"
               src="/TEST/img/documentation/logotype/black_and_white_logo.png"
             />
@@ -907,6 +918,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-100"
               src="/TEST/img/documentation/logotype/shadowed_logo.png"
             />
@@ -932,6 +944,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-100"
               src="/TEST/img/documentation/logotype/changed_wordmark.png"
             />
@@ -957,6 +970,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-50"
               src="/TEST/img/documentation/logotype/moved_wordmark.png"
             />
@@ -1156,10 +1170,12 @@ exports[`Core: Logotype SpacingZone renders 1`] = `
     className="d-md-flex mt-5"
   >
     <img
+      alt="Vertical measure spacing zones of logotype"
       className="logotype-vertical-measure mr-5"
       src="/TEST/img/documentation/logotype/vertical-measure.png"
     />
     <img
+      alt="Horizontal measure spacing zones of logotype"
       className="logotype-horizontal-measure mt-5"
       src="/TEST/img/documentation/logotype/horizontal-measure.png"
     />

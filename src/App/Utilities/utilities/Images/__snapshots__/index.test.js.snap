@@ -21,6 +21,7 @@ exports[`Utilities: Image ImageCircle renders 1`] = `
     showCasePanel={true}
   >
     <img
+      alt="A deer in the sunset"
       className="img-circle mx-auto d-block"
       src="https://picsum.photos/200?image=790"
     />
@@ -48,6 +49,7 @@ exports[`Utilities: Image ImageFluid renders 1`] = `
     showCasePanel={true}
   >
     <img
+      alt="Goat looking out for danger"
       className="img-fluid"
       src="https://picsum.photos/1000/250?image=937"
     />
@@ -76,6 +78,7 @@ exports[`Utilities: Image ImageRounded renders 1`] = `
     showCasePanel={true}
   >
     <img
+      alt="Human jumping in the sunset"
       className="img-rounded mx-auto d-block"
       src="https://picsum.photos/200?image=770"
     />
@@ -103,6 +106,7 @@ exports[`Utilities: Image ImageThumbnail renders 1`] = `
     showCasePanel={true}
   >
     <img
+      alt="Girl photographing the photographer"
       className="img-thumbnail mx-auto d-block"
       src="https://picsum.photos/200?image=823"
     />
