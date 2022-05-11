@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ColorDisplay = ({ title, subTitle, hex, rgb, fontColor, border, noWhiteExample, noBlackExample }) => (
+const ColorDisplay = ({ title, subTitle, hex, border, contrastWhiteApproved, contrastBlackApproved, noWhiteExample, noBlackExample }) => (
     <div className="d-flex flex-column mb-2">
         <div className={`color-box ${border ? border : ""}`}>
             <svg>
@@ -13,24 +13,27 @@ const ColorDisplay = ({ title, subTitle, hex, rgb, fontColor, border, noWhiteExa
             <small className="small mb-0">{subTitle}</small>
             <small className="small mb-0 text-uppercase">{hex}</small>
             <div className="contrast-box">
-                <div className="contrast-white-container">
-                    <svg className="white-box first-svg">
-                        <rect fill={"#FFFFFF"}/>
-                    </svg>
-                    <svg className="second-svg">
-                        <rect fill={hex}/>
-                    </svg>
-                    <i className="material-icons check">check_circle</i>
-                    <i className="material-icons cancel">cancel</i>
-                </div>
-                <div className="contrast-black-container">
-                    <svg className="first-svg">
-                        <rect fill={"#000000"}/>
-                    </svg>
-                    <svg className="second-svg">
-                        <rect fill={hex}/>
-                    </svg>
-                </div>
+                {noWhiteExample ? <></> :
+                    <div className="contrast-white-container">
+                        <svg className="white-box first-svg">
+                            <rect fill={"#FFFFFF"}/>
+                        </svg>
+                        <svg className="second-svg">
+                            <rect fill={hex}/>
+                        </svg>
+                        {contrastWhiteApproved ? <i className="material-icons check">check_circle</i> : <i className="material-icons cancel">cancel</i>}
+                    </div>}
+
+                {noBlackExample ? <></> :
+                    <div className="contrast-black-container">
+                        <svg className="first-svg">
+                            <rect fill={"#000000"}/>
+                        </svg>
+                        <svg className="second-svg">
+                            <rect fill={hex}/>
+                        </svg>
+                        {contrastBlackApproved ? <i className="material-icons check">check_circle</i> : <i className="material-icons cancel">cancel</i>}
+                    </div>}
             </div>
         </div>
     </div>
