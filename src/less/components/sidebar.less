@@ -102,16 +102,18 @@
                     }
 
                     .sidebar-secondary-nav {
-                        visibility: visible;
+                        height: 100%;
+                        max-height: 1500px;
+                        display: block;
                     }
                 }
 
                 .sidebar-secondary-nav {
-                    visibility: hidden;
+                    display: none;
                     padding: 2rem;
-                    height: 100%;
+                    max-height: 0;
                     width: 18.375rem;
-                    overflow-y: hidden;
+                    overflow: hidden;
                     position: absolute;
                     top: 0;
                     left: 100%;
@@ -129,7 +131,10 @@
                         }
                     }
 
-                    .tertiary-nav-header {
+                    header {
+                        margin-top: 0.5rem;
+                        font-family: @brand-black;
+                        font-size: 1.5rem;
                         display: flex;
                         align-items: center;
 
@@ -138,18 +143,13 @@
                         }
                     }
 
-                    .secondary-nav-header,
-                    .tertiary-nav-header {
-                        font-family: @brand-black;
-                        font-size: 1.5rem;
-                    }
-
                     .secondary-nav-ul {
                         list-style: none;
                         padding-left: 0;
 
-                        .secondary-nav-li {
+                        li {
                             margin: 0.5rem 0;
+                            list-style: none;
 
                             &.leaf {
                                 > a {
@@ -162,6 +162,19 @@
                                             margin-left: auto;
                                         }
                                     }
+                                }
+
+                                > ul {
+                                    background-color: @white;
+                                    position: absolute;
+                                    visibility: hidden;
+                                    top: 0;
+                                    left: 18.375rem;
+                                    margin-right: 520px;
+                                    max-height: 0;
+                                    width: 100%;
+                                    padding: 2rem;
+                                    transition: 0.3s ease-in-out;
                                 }
                             }
 
@@ -177,24 +190,23 @@
                                         }
                                     }
                                 }
+
+                                > ul {
+                                    max-height: 0;
+                                    list-style: none;
+                                    overflow: hidden;
+                                    padding-left: 0;
+                                    visibility: hidden;
+                                }
                             }
 
                             &.active {
-                                .tertiary-nav-ul {
+                                > ul {
+                                    left: 0;
                                     visibility: visible;
+                                    height: 100%;
                                     max-height: 1500px;
-                                    transition: max-height 0.5s ease-in-out;
-                                }
-
-                                &.leaf {
-                                    > a {
-                                        &:after {
-                                            content: "chevron_right";
-                                            .material-icons-styling();
-
-                                            margin-left: auto;
-                                        }
-                                    }
+                                    transition: 0.5s ease-in-out;
                                 }
 
                                 &.group {
@@ -202,10 +214,6 @@
                                         &:after {
                                             content: none;
                                         }
-                                    }
-
-                                    .tertiary-nav-ul {
-                                        max-height: 1500px;
                                     }
                                 }
 
@@ -229,148 +237,58 @@
                                     margin-right: 0.5rem;
                                 }
                             }
+                        }
 
-                            .tertiary-nav-ul,
-                            .quaternary-nav-ul {
-                                max-height: 0;
-                                list-style: none;
-                                overflow: hidden;
-                                padding-left: 0;
-                                visibility: hidden;
+                        .previous-nav {
+                            color: @brand-secondary;
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
 
-                                .nav-leaf {
-                                    position: relative;
-                                    display: flex;
-                                    align-items: center;
-                                    min-height: 2.5rem;
+                            > i {
+                                font-size: 1rem;
+                                margin-right: 0.5rem;
+                            }
 
-                                    &:before {
-                                        content: "";
-                                        position: absolute;
-                                        height: 100%;
-                                        width: 0.125rem;
-                                        left: 0;
-                                        top: 0;
-                                        background-color: @brand-bg-gray;
-                                    }
-
-                                    &.active,
-                                    &:hover {
-                                        &:before {
-                                            background-color: @brand-secondary;
-                                        }
-
-                                        a {
-                                            font-weight: @font-weight-bold;
-                                        }
-                                    }
-
-                                    a {
-                                        color: @brand-secondary;
-                                        text-decoration: none;
-                                        padding: 0.625rem 0 0.625rem 1.75rem;
-                                        width: 100%;
-                                        height: 100%;
-                                        cursor: pointer;
-                                    }
+                            &:hover,
+                            :focus {
+                                > span {
+                                    text-decoration: underline;
                                 }
                             }
                         }
 
-                        &.extended-sidebar {
-                            .secondary-nav-li {
-                                margin: 0.5rem 0;
+                        .nav-leaf {
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            min-height: 2.5rem;
+                            margin: 0;
 
-                                &.active {
-                                    .tertiary-nav-ul {
-                                        right: 0;
-                                        margin-right: 0;
-                                        transition: right 0.3s;
-                                    }
-                                }
-
-                                &.group {
-                                    > a {
-                                        &:hover {
-                                            &:after {
-                                                content: "chevron_right";
-                                                .material-icons-styling();
-
-                                                margin-left: auto;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            .tertiary-nav-ul {
-                                background-color: @white;
+                            &:before {
+                                content: "";
                                 position: absolute;
-                                top: 0;
-                                right: -220px;
-                                margin-right: 520px;
                                 height: 100%;
-                                width: 100%;
-                                padding: 2rem;
-                                transition: 0.3s linear;
+                                width: 0.125rem;
+                                left: 0;
+                                top: 0;
+                                background-color: @brand-bg-gray;
+                            }
 
-                                a {
-                                    color: @brand-secondary;
+                            &.active,
+                            &:hover {
+                                &:before {
+                                    background-color: @brand-secondary;
                                 }
                             }
 
-                            .tertiary-nav-li {
-                                margin: 0.5rem 0;
-                                list-style: none;
-
-                                a {
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: space-between;
-                                    padding: 0.5rem 0;
-                                    text-decoration: none;
-                                    color: @brand-secondary;
-
-                                    &:hover {
-                                        font-weight: @font-weight-bold;
-                                    }
-                                }
-
-                                &.leaf {
-                                    > a {
-                                        &:focus,
-                                        &:hover {
-                                            &:after {
-                                                content: "chevron_right";
-                                                .material-icons-styling();
-                                            }
-                                        }
-                                    }
-                                }
-
-                                &.group {
-                                    > a {
-                                        &:focus,
-                                        &:hover {
-                                            &:after {
-                                                content: "expand_more";
-                                                .material-icons-styling();
-                                            }
-                                        }
-                                    }
-                                }
-
-                                &.active {
-                                    .quaternary-nav-ul {
-                                        visibility: visible;
-                                        max-height: 1500px;
-                                        transition: max-height 0.5s ease-in-out;
-                                    }
-
-                                    > a {
-                                        font-weight: @font-weight-bold;
-                                    }
-                                }
+                            a {
+                                color: @brand-secondary;
+                                text-decoration: none;
+                                padding: 0.625rem 0 0.625rem 1.75rem;
+                                width: 100%;
+                                height: 100%;
+                                cursor: pointer;
                             }
                         }
                     }

@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 
 import Sidebar from "./index";
 
@@ -10,7 +10,7 @@ describe("Component: Sidebar", () => {
     });
 
     it("renders", () => {
-        const SidebarNavList = [
+        const navList = [
             {
                 title: "Home Page",
                 icon: <i className="material-icons-outlined">home</i>
@@ -32,6 +32,7 @@ describe("Component: Sidebar", () => {
                             },
                             {
                                 title: "Secondary colors",
+                                group: true,
                                 children: [
                                     {
                                         title: "Children 1"
@@ -47,17 +48,15 @@ describe("Component: Sidebar", () => {
             }
         ];
 
-        const wrapper = shallow(<Sidebar id="sidebar-1" sidebarNavList={SidebarNavList} extendedSidebar={true} />);
+        const wrapper = shallow(<Sidebar id="sidebar-1" navList={navList} extendedSidebar={true} />);
 
         expect(wrapper.find(".main-nav-li")).toHaveLength(2);
         expect(wrapper.find(".secondary-nav-li")).toHaveLength(2);
-        expect(wrapper.find(".tertiary-nav-li")).toHaveLength(2);
-        expect(wrapper.find(".nav-leaf")).toHaveLength(2);
         expect(wrapper).toMatchSnapshot();
     });
 
     it("renders one level when one level is provided", () => {
-        const SidebarNavList = [
+        const navList = [
             {
                 title: "Home Page",
                 icon: <i className="material-icons-outlined">home</i>
@@ -68,7 +67,7 @@ describe("Component: Sidebar", () => {
             }
         ];
 
-        const wrapper = shallow(<Sidebar id="test" sidebarNavList={SidebarNavList} />);
+        const wrapper = shallow(<Sidebar id="test" navList={navList} />);
         const mainNavUl = wrapper.find(".main-nav-ul");
 
         expect(mainNavUl.find(".main-nav-ul")).toHaveLength(1);
@@ -78,7 +77,7 @@ describe("Component: Sidebar", () => {
     });
 
     it("renders two levels when two levels is provided", () => {
-        const SidebarNavList = [
+        const navList = [
             {
                 title: "Get Started",
                 icon: <i className="material-icons-outlined rotated">wb_incandescent</i>,
@@ -95,7 +94,7 @@ describe("Component: Sidebar", () => {
             }
         ];
 
-        const wrapper = shallow(<Sidebar id="test" sidebarNavList={SidebarNavList} />);
+        const wrapper = shallow(<Sidebar id="test" navList={navList} />);
         const mainNavUl = wrapper.find(".main-nav-ul");
 
         expect(mainNavUl.find(".sidebar-secondary-nav")).toHaveLength(1);
@@ -105,7 +104,35 @@ describe("Component: Sidebar", () => {
     });
 
     it("renders three levels when three levels is provided", () => {
-        const SidebarNavList = [
+        const navList = [
+            {
+                title: "Get Started",
+                icon: <i className="material-icons-outlined rotated">wb_incandescent</i>,
+                children: [
+                    {
+                        title: "Accessibility",
+                        group: true,
+                        children: [
+                            {
+                                title: "Primary colors"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ];
+
+        const wrapper = mount(<Sidebar id="test" navList={navList} />);
+        const mainNavUl = wrapper.find(".main-nav-ul");
+
+        expect(mainNavUl.find(".secondary-nav-ul")).toHaveLength(1);
+        expect(mainNavUl.find("ul > li")).toHaveLength(3);
+        expect(mainNavUl.find(".nav-leaf")).toHaveLength(1);
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it("renders four levels when four levels is provided", () => {
+        const navList = [
             {
                 title: "Get Started",
                 icon: <i className="material-icons-outlined rotated">wb_incandescent</i>,
@@ -115,10 +142,13 @@ describe("Component: Sidebar", () => {
                         title: "Accessibility",
                         children: [
                             {
-                                title: "Primary colors"
-                            },
-                            {
-                                title: "Secondary colors"
+                                title: "Primary colors",
+                                group: true,
+                                children: [
+                                    {
+                                        title: "Children 1"
+                                    }
+                                ]
                             }
                         ]
                     }
@@ -126,18 +156,15 @@ describe("Component: Sidebar", () => {
             }
         ];
 
-        const wrapper = shallow(<Sidebar id="test" sidebarNavList={SidebarNavList} />);
-        const mainNavUl = wrapper.find(".main-nav-ul");
+        const wrapper = mount(<Sidebar id="test" navList={navList} extendedSidebar={true}/>);
 
-        expect(mainNavUl.find(".secondary-nav-ul")).toHaveLength(1);
-        expect(mainNavUl.find(".secondary-nav-li")).toHaveLength(1);
-        expect(mainNavUl.find(".tertiary-nav-ul")).toHaveLength(1);
-        expect(mainNavUl.find(".nav-leaf")).toHaveLength(2);
+        expect(wrapper.find("ul > li")).toHaveLength(4);
+        expect(wrapper.find(".nav-leaf")).toHaveLength(1);
         expect(wrapper).toMatchSnapshot();
     });
 
-    it("renders four levels when four levels is provided", () => {
-        const SidebarNavList = [
+    it("renders five levels when four levels is provided", () => {
+        const navList = [
             {
                 title: "Get Started",
                 icon: <i className="material-icons-outlined rotated">wb_incandescent</i>,
@@ -150,10 +177,13 @@ describe("Component: Sidebar", () => {
                                 title: "Primary colors",
                                 children: [
                                     {
-                                        title: "Children 1"
-                                    },
-                                    {
-                                        title: "Children 2"
+                                        title: "Children 2",
+                                        group: true,
+                                        children: [
+                                            {
+                                                title: "Gran children 1"
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -163,18 +193,77 @@ describe("Component: Sidebar", () => {
             }
         ];
 
-        const wrapper = shallow(<Sidebar id="test" sidebarNavList={SidebarNavList} extendedSidebar={true}/>);
-        const mainNavUl = wrapper.find(".main-nav-ul");
+        const wrapper = mount(<Sidebar id="test" navList={navList} extendedSidebar={true}/>);
 
-        expect(mainNavUl.find(".tertiary-nav-ul")).toHaveLength(1);
-        expect(mainNavUl.find(".tertiary-nav-li")).toHaveLength(1);
-        expect(mainNavUl.find(".quaternary-nav-ul")).toHaveLength(1);
-        expect(mainNavUl.find(".nav-leaf")).toHaveLength(2);
+        expect(wrapper.find("ul > li")).toHaveLength(5);
+        expect(wrapper.find(".nav-leaf")).toHaveLength(1);
+        expect(wrapper).toMatchSnapshot();
+    });
+
+    it("renders 10 levels when four levels is provided", () => {
+        const navList = [
+            {
+                title: "Level 1",
+                icon: <i className="material-icons-outlined rotated">wb_incandescent</i>,
+                children: [
+                    {
+                        icon: <i className="material-icons-outlined rotated">accessibility</i>,
+                        title: "Level 2",
+                        children: [
+                            {
+                                title: "Level 3",
+                                children: [
+                                    {
+                                        title: "Level 4",
+                                        children: [
+                                            {
+                                                title: "Level 5",
+                                                children: [
+                                                    {
+                                                        title: "Level 6",
+                                                        children: [
+                                                            {
+                                                                title: "Level 7",
+                                                                children: [
+                                                                    {
+                                                                        title: "Level 8",
+                                                                        children: [
+                                                                            {
+                                                                                title: "Level 9",
+                                                                                group: true,
+                                                                                children: [
+                                                                                    {
+                                                                                        title: "Level 10"
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ];
+
+        const wrapper = mount(<Sidebar id="test" navList={navList} extendedSidebar={true}/>);
+
+        expect(wrapper.find("ul > li")).toHaveLength(10);
+        expect(wrapper.find(".nav-leaf")).toHaveLength(1);
         expect(wrapper).toMatchSnapshot();
     });
 
     it("renders with class .sidebar-topbar-sticky when sticky is provided", () => {
-        const SidebarNavList = [
+        const navList = [
             {
                 title: "Home page",
                 icon: <i className="material-icons-outlined">home</i>
@@ -210,7 +299,7 @@ describe("Component: Sidebar", () => {
                 ]
             }
         ];
-        const wrapper = shallow(<Sidebar id="sidebar" sidebarNavList={SidebarNavList} sticky/>);
+        const wrapper = shallow(<Sidebar id="sidebar" navList={navList} sticky/>);
 
         expect(wrapper.html()).toContain("sidebar-topbar-sticky");
     });

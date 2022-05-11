@@ -1,47 +1,18 @@
 import React, { useEffect } from "react";
 
 import { ComponentPreview, DocContainer, JavascriptDocs, JavascriptDocElement } from "@docutils";
-import SidebarComponent from "@components/Sidebar";
 import CodeTags from "@components/CodeTags";
 
 import { sidebar } from "@src/scripts/main";
 
-import { SidebarNavList, SidebarNavListExtended } from "./constants";
+import { SidebarShowcase } from "./constants";
 import NpmInformation from "@docutils/NpmInformation";
 
 const Overview = () => (
-    <section>
-        <h2 id="overview">Overview</h2>
-        <p>
-            The sidebar supports a depth of up to 3 levels. Note that if used with a sticky topbar, add
-            class <CodeTags type="secondary" code=".sidebar-topbar-sticky" />, <CodeTags type="secondary" code=".topbar-min-{breakpoint}-sticky" />, or <CodeTags type="secondary" code=".topbar-max-{breakpoint}-sticky" /> depending
-            on the class of the sticky topbar,
-            to the outmost <CodeTags type="primary" code="<div>" /> of the sidebar.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="container-fluid">
-                <div className="row">
-                    <SidebarComponent id="dg-sidebar1" sidebarNavList={SidebarNavList}/>
-                    <main className="col main-content">Main content things...</main>
-                </div>
-            </div>
-        </ComponentPreview>
-    </section>
-);
+    <section id="sidebar-overview">
+        <h2 id ="overview">Overview</h2>
 
-const ExtendedSidebar = () => (
-    <section>
-        <h2 id="extended-sidebar">Extended sidebar</h2>
-        <p>This sidebar is an extended sidebar which supports a depth of up to 4 levels. To use the extended sidebar, add class <CodeTags type="secondary" code=".extended-sidebar" /> to the second <CodeTags type="primary" code="<ul>"/> along with the <CodeTags type="secondary" code=".secondary-nav-ul" /> class.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="container-fluid">
-                <div className="row">
-                    <SidebarComponent id="dg-sidebar2" sidebarNavList={SidebarNavListExtended} extendedSidebar={true}/>
-                    <main className="col main-content">Main content things...</main>
-                </div>
-            </div>
-        </ComponentPreview>
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={SidebarShowcase} codeFigure />
     </section>
 );
 
@@ -138,27 +109,73 @@ const RemoveScrollListener = () => (
     </section>
 );
 
-const JavascriptMethods = () => (
+const DeveloperDocumentation = () => (
     <section>
-        <h2 id="javascript-methods">JavaScript methods</h2>
-        <p className="pl-3 mb-0">Note: The sidebar should be initialized with ID</p>
-        <JavascriptDocs componentName="sidebar" others={[SetActiveState, RemoveActiveState, InitScrollListener, RemoveScrollListener]} />
+        <h2 id="developer-documentation">Developer Documentation</h2>
+        <section>
+            <h3>Infinite depth</h3>
+            <section>
+                <h4>Deeper?</h4>
+                <p>To create four levels and more, inside <CodeTags type="secondary" code=".secondary-nav-li.leaf" />, insert a <CodeTags type="primary" code="<ul>" />, containing <CodeTags type="secondary" code="a.previous-nav" />, followed by a <CodeTags type="primary" code="<header>" />, then the next <CodeTags type="primary" code="<li>" />-elements. Repeat this pattern into eternity.</p>
+                <ComponentPreview language="html" codeFigure>
+                    <li className="secondary-nav-li leaf">{"\n"}
+                        <a href="#">Li title</a>{"\n"}
+                        <ul>{"\n"}
+                            <a href="#" className="previous-nav">{"\n"}
+                                <i className="material-icons" aria-hidden="true">arrow_back_ios</i>{"\n"}
+                                <span>Back to Previous</span>{"\n"}
+                            </a>
+                            <header>Icon Title</header>
+                            <li className="leaf">{"\n"}
+                                <a href="#">Li title</a>{"\n"}
+                                {"{*"} Continue the pattern here {"*}"}
+                            </li>
+                        </ul>
+                    </li>
+                </ComponentPreview>
+            </section>
+            <section>
+                <h4>Deep enough?</h4>
+                <p>Replace the <CodeTags type="secondary" code=".leaf" /> class with <CodeTags type="secondary" code=".group" />. And the last <CodeTags type="primary" code="<li>" />&apos;s should have <CodeTags type="secondary" code=".nav-leaf" /></p>
+                <ComponentPreview language="html" codeFigure>
+                    <li className="group">{"\n"}
+                        <a href="#">Li title</a>{"\n"}
+                        <ul>{"\n"}
+                            <li className="nav-leaf">{"\n"}
+                                <a href="#">Li title</a>{"\n"}
+                            </li>
+                            <li className="nav-leaf">{"\n"}
+                                <a href="#">Li title</a>{"\n"}
+                            </li>
+                            <li className="nav-leaf">{"\n"}
+                                <a href="#">Li title</a>{"\n"}
+                            </li>
+                        </ul>
+                    </li>
+                </ComponentPreview>
+            </section>
+        </section>
+        <section>
+            <h3>JavaScript methods</h3>
+            <p className="pl-3 mb-0"><b>Note:</b> The sidebar should be initialized with ID</p>
+            <JavascriptDocs componentName="sidebar" others={[SetActiveState, RemoveActiveState, InitScrollListener, RemoveScrollListener]} />
+        </section>
     </section>
 );
 
 const Sidebar = () => {
     useEffect(() => {
-        sidebar.init("dg-sidebar1");
-        sidebar.init("dg-sidebar2");
+        sidebar.init("dg-sidebar");
     });
 
     return (
-        <DocContainer docToc>
-            <p className="lead">The sidebar is used to give users an easily available navigational bar on the left side of your web application.</p>
-            <Overview />
-            <ExtendedSidebar />
-            <JavascriptMethods />
-            <NpmInformation componentName={"sidebar"}/>
+        <DocContainer>
+            <section id="sidebar-doc">
+                <p className="lead">The sidebar is used to give users an easily available navigational bar on the left side of your web application.</p>
+                <Overview />
+                <DeveloperDocumentation />
+                <NpmInformation componentName={"sidebar"}/>
+            </section>
         </DocContainer>
     );
 };
@@ -166,4 +183,4 @@ const Sidebar = () => {
 export default Sidebar;
 
 /* For testing */
-export { Overview, ExtendedSidebar, JavascriptMethods, SetActiveState, RemoveActiveState, InitScrollListener, RemoveScrollListener };
+export { Overview, DeveloperDocumentation, SetActiveState, RemoveActiveState, InitScrollListener, RemoveScrollListener };

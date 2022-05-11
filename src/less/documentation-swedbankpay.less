@@ -1441,6 +1441,30 @@
             }
         }
     }
+
+    #sidebar-doc {
+        #sidebar-overview {
+            figure {
+                .code-view-table {
+                    max-height: 35rem;
+                    overflow: auto;
+                }
+            }
+        }
+
+        .component-preview-content {
+            #dg-sidebar {
+                &.sidebar {
+                    position: relative;
+                    max-height: 45rem;
+                }
+
+                ~ main {
+                    min-height: auto;
+                }
+            }
+        }
+    }
 }
 
 

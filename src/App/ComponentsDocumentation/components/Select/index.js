@@ -63,7 +63,7 @@ const ContentGuidelines = () => (
         </div>
         <ul className="pl-3">
             <li>The <b>Label</b> should be short, concise and clearly describe what the user is selecting. If the user is not required to select an option, label it as “optional”.</li>
-            <li>The <b>Placeholder text</b> should begin with the verb "Select.." preferably followed by what type of options the user is choosing from.</li>
+            <li>The <b>Placeholder text</b> should begin with the verb &quot;Select..&quot; preferably followed by what type of options the user is choosing from.</li>
             <li>A <b>hint text</b> can be used to complement the label and provide clarifying details. If the information is long or won&apos;t be needed by the majority of users, a hint expander can be used instead of a text that is visible by default. </li>
         </ul>
     </section>

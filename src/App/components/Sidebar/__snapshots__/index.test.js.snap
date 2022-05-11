@@ -11,16 +11,22 @@ exports[`Component: Sidebar renders 1`] = `
     <div
       className="sidebar-logo"
     >
+      
+
       <a
         aria-label="To homepage"
         href="/"
       >
+        
+
         <Logotype
           alt="TESTBRAND vertical logo"
           size="md"
           src="/TEST/img/logo/TESTBRAND-logo-v.svg"
           type="vertical"
         />
+        
+
       </a>
     </div>
     <ul
@@ -30,32 +36,48 @@ exports[`Component: Sidebar renders 1`] = `
         className="main-nav-li active"
         key="Home Page"
       >
+        
+
         <a
           href="#"
           onClick={[Function]}
         >
+          
+
           <i
             className="material-icons-outlined"
           >
             home
           </i>
+          
+
           Home Page
+          
+
         </a>
       </li>
       <li
         className="main-nav-li"
         key="Get Started"
       >
+        
+
         <a
           href="#"
           onClick={[Function]}
         >
+          
+
           <i
             className="material-icons-outlined rotated"
           >
             wb_incandescent
           </i>
+          
+
           Get Started
+          
+
         </a>
         <nav
           className="sidebar-secondary-nav"
@@ -66,12 +88,14 @@ exports[`Component: Sidebar renders 1`] = `
             Get Started
           </header>
           <ul
-            className="secondary-nav-ul extended-sidebar"
+            className="secondary-nav-ul"
           >
             <li
               className="secondary-nav-li leaf"
-              key="Accessibility"
+              key="Accessibility0"
             >
+              
+
               <a
                 href="#"
                 onClick={[Function]}
@@ -85,9 +109,11 @@ exports[`Component: Sidebar renders 1`] = `
               </a>
             </li>
             <li
-              className="secondary-nav-li group"
-              key="Colors"
+              className="secondary-nav-li leaf"
+              key="Colors1"
             >
+              
+
               <a
                 href="#"
                 onClick={[Function]}
@@ -99,86 +125,36 @@ exports[`Component: Sidebar renders 1`] = `
                 </i>
                 Colors
               </a>
-              <ul
-                className="tertiary-nav-ul"
-              >
-                <a
-                  className="icon-link text-decoration-none previous-nav"
-                  href="#"
-                  onClick={[Function]}
-                >
-                  <i
-                    aria-hidden="true"
-                    className="material-icons"
-                  >
-                    arrow_back_ios
-                  </i>
-                  <span
-                    className="ml-2"
-                  >
-                    Back to 
-                    Get Started
-                  </span>
-                </a>
-                <header
-                  className="tertiary-nav-header mt-2"
-                >
-                  <i
-                    className="material-icons-outlined rotated"
-                  >
-                    palette
-                  </i>
-                  Colors
-                </header>
-                <li
-                  className="tertiary-nav-li leaf"
-                  key="Primary colors"
-                >
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                  >
-                    Primary colors
-                  </a>
-                </li>
-                <li
-                  className="tertiary-nav-li group"
-                  key="Secondary colors"
-                >
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                  >
-                    Secondary colors
-                  </a>
-                  <ul
-                    className="quaternary-nav-ul"
-                  >
-                    <li
-                      className="nav-leaf"
-                      key="Children 1"
+              <AddNewLevel
+                currentNav={
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "Primary colors",
+                      },
+                      Object {
+                        "children": Array [
+                          Object {
+                            "title": "Children 1",
+                          },
+                          Object {
+                            "title": "Children 2",
+                          },
+                        ],
+                        "group": true,
+                        "title": "Secondary colors",
+                      },
+                    ],
+                    "icon": <i
+                      className="material-icons-outlined rotated"
                     >
-                      <a
-                        href="#"
-                        onClick={[Function]}
-                      >
-                        Children 1
-                      </a>
-                    </li>
-                    <li
-                      className="nav-leaf"
-                      key="Children 2"
-                    >
-                      <a
-                        href="#"
-                        onClick={[Function]}
-                      >
-                        Children 2
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+                      palette
+                    </i>,
+                    "title": "Colors",
+                  }
+                }
+                previousTitle="Get Started"
+              />
             </li>
           </ul>
         </nav>
@@ -188,96 +164,876 @@ exports[`Component: Sidebar renders 1`] = `
 </div>
 `;
 
-exports[`Component: Sidebar renders four levels when four levels is provided 1`] = `
-<div
-  className="sidebar"
+exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] = `
+<Sidebar
+  extendedSidebar={true}
   id="test"
->
-  <nav
-    className="sidebar-main-nav"
-  >
-    <div
-      className="sidebar-logo"
-    >
-      <a
-        aria-label="To homepage"
-        href="/"
-      >
-        <Logotype
-          alt="TESTBRAND vertical logo"
-          size="md"
-          src="/TEST/img/logo/TESTBRAND-logo-v.svg"
-          type="vertical"
-        />
-      </a>
-    </div>
-    <ul
-      className="main-nav-ul"
-    >
-      <li
-        className="main-nav-li active"
-        key="Get Started"
-      >
-        <a
-          href="#"
-          onClick={[Function]}
-        >
-          <i
-            className="material-icons-outlined rotated"
-          >
-            wb_incandescent
-          </i>
-          Get Started
-        </a>
-        <nav
-          className="sidebar-secondary-nav"
-        >
-          <header
-            className="secondary-nav-header"
-          >
-            Get Started
-          </header>
-          <ul
-            className="secondary-nav-ul extended-sidebar"
-          >
-            <li
-              className="secondary-nav-li group"
-              key="Accessibility"
+  navList={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "children": Array [
+              Object {
+                "children": Array [
+                  Object {
+                    "children": Array [
+                      Object {
+                        "children": Array [
+                          Object {
+                            "children": Array [
+                              Object {
+                                "children": Array [
+                                  Object {
+                                    "children": Array [
+                                      Object {
+                                        "children": Array [
+                                          Object {
+                                            "title": "Level 10",
+                                          },
+                                        ],
+                                        "group": true,
+                                        "title": "Level 9",
+                                      },
+                                    ],
+                                    "title": "Level 8",
+                                  },
+                                ],
+                                "title": "Level 7",
+                              },
+                            ],
+                            "title": "Level 6",
+                          },
+                        ],
+                        "title": "Level 5",
+                      },
+                    ],
+                    "title": "Level 4",
+                  },
+                ],
+                "title": "Level 3",
+              },
+            ],
+            "icon": <i
+              className="material-icons-outlined rotated"
             >
-              <a
-                href="#"
-                onClick={[Function]}
+              accessibility
+            </i>,
+            "title": "Level 2",
+          },
+        ],
+        "icon": <i
+          className="material-icons-outlined rotated"
+        >
+          wb_incandescent
+        </i>,
+        "title": "Level 1",
+      },
+    ]
+  }
+>
+  <div
+    className="sidebar"
+    id="test"
+  >
+    <nav
+      className="sidebar-main-nav"
+    >
+      <div
+        className="sidebar-logo"
+      >
+        
+
+        <a
+          aria-label="To homepage"
+          href="/"
+        >
+          
+
+          <Logotype
+            alt="TESTBRAND vertical logo"
+            size="md"
+            src="/TEST/img/logo/TESTBRAND-logo-v.svg"
+            type="vertical"
+          >
+            <img
+              alt="TESTBRAND vertical logo"
+              className="logotype-vertical logotype-md"
+              src="/TEST/img/logo/TESTBRAND-logo-v.svg"
+            />
+          </Logotype>
+          
+
+        </a>
+      </div>
+      <ul
+        className="main-nav-ul"
+      >
+        <li
+          className="main-nav-li active"
+          key="Level 1"
+        >
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons-outlined rotated"
+            >
+              wb_incandescent
+            </i>
+            
+
+            Level 1
+            
+
+          </a>
+          <nav
+            className="sidebar-secondary-nav"
+          >
+            <header
+              className="secondary-nav-header"
+            >
+              Level 1
+            </header>
+            <ul
+              className="secondary-nav-ul"
+            >
+              <li
+                className="secondary-nav-li leaf"
+                key="Level 20"
               >
-                <i
-                  className="material-icons-outlined rotated"
-                >
-                  accessibility
-                </i>
-                Accessibility
-              </a>
-              <ul
-                className="tertiary-nav-ul"
-              >
+                
+
                 <a
-                  className="icon-link text-decoration-none previous-nav"
                   href="#"
                   onClick={[Function]}
                 >
                   <i
-                    aria-hidden="true"
-                    className="material-icons"
+                    className="material-icons-outlined rotated"
                   >
-                    arrow_back_ios
+                    accessibility
                   </i>
-                  <span
-                    className="ml-2"
-                  >
-                    Back to 
-                    Get Started
-                  </span>
+                  Level 2
                 </a>
-                <header
-                  className="tertiary-nav-header mt-2"
+                <AddNewLevel
+                  currentNav={
+                    Object {
+                      "children": Array [
+                        Object {
+                          "children": Array [
+                            Object {
+                              "children": Array [
+                                Object {
+                                  "children": Array [
+                                    Object {
+                                      "children": Array [
+                                        Object {
+                                          "children": Array [
+                                            Object {
+                                              "children": Array [
+                                                Object {
+                                                  "children": Array [
+                                                    Object {
+                                                      "title": "Level 10",
+                                                    },
+                                                  ],
+                                                  "group": true,
+                                                  "title": "Level 9",
+                                                },
+                                              ],
+                                              "title": "Level 8",
+                                            },
+                                          ],
+                                          "title": "Level 7",
+                                        },
+                                      ],
+                                      "title": "Level 6",
+                                    },
+                                  ],
+                                  "title": "Level 5",
+                                },
+                              ],
+                              "title": "Level 4",
+                            },
+                          ],
+                          "title": "Level 3",
+                        },
+                      ],
+                      "icon": <i
+                        className="material-icons-outlined rotated"
+                      >
+                        accessibility
+                      </i>,
+                      "title": "Level 2",
+                    }
+                  }
+                  previousTitle="Level 1"
+                >
+                  <ul>
+                    
+
+                    <a
+                      className="previous-nav"
+                      href="#"
+                      onClick={[Function]}
+                    >
+                      
+
+                      <i
+                        aria-hidden="true"
+                        className="material-icons"
+                      >
+                        arrow_back_ios
+                      </i>
+                      
+
+                      <span>
+                        Back to 
+                        Level 1
+                      </span>
+                      
+
+                    </a>
+                    <header>
+                      <i
+                        className="material-icons-outlined rotated"
+                      >
+                        accessibility
+                      </i>
+                      Level 2
+                    </header>
+                    <li
+                      className="leaf"
+                      key="Level 30"
+                    >
+                      
+
+                      <a
+                        href="#"
+                        onClick={[Function]}
+                      >
+                        Level 3
+                      </a>
+                      <AddNewLevel
+                        currentNav={
+                          Object {
+                            "children": Array [
+                              Object {
+                                "children": Array [
+                                  Object {
+                                    "children": Array [
+                                      Object {
+                                        "children": Array [
+                                          Object {
+                                            "children": Array [
+                                              Object {
+                                                "children": Array [
+                                                  Object {
+                                                    "children": Array [
+                                                      Object {
+                                                        "title": "Level 10",
+                                                      },
+                                                    ],
+                                                    "group": true,
+                                                    "title": "Level 9",
+                                                  },
+                                                ],
+                                                "title": "Level 8",
+                                              },
+                                            ],
+                                            "title": "Level 7",
+                                          },
+                                        ],
+                                        "title": "Level 6",
+                                      },
+                                    ],
+                                    "title": "Level 5",
+                                  },
+                                ],
+                                "title": "Level 4",
+                              },
+                            ],
+                            "title": "Level 3",
+                          }
+                        }
+                        previousTitle="Level 2"
+                      >
+                        <ul>
+                          
+
+                          <a
+                            className="previous-nav"
+                            href="#"
+                            onClick={[Function]}
+                          >
+                            
+
+                            <i
+                              aria-hidden="true"
+                              className="material-icons"
+                            >
+                              arrow_back_ios
+                            </i>
+                            
+
+                            <span>
+                              Back to 
+                              Level 2
+                            </span>
+                            
+
+                          </a>
+                          <header>
+                            Level 3
+                          </header>
+                          <li
+                            className="leaf"
+                            key="Level 40"
+                          >
+                            
+
+                            <a
+                              href="#"
+                              onClick={[Function]}
+                            >
+                              Level 4
+                            </a>
+                            <AddNewLevel
+                              currentNav={
+                                Object {
+                                  "children": Array [
+                                    Object {
+                                      "children": Array [
+                                        Object {
+                                          "children": Array [
+                                            Object {
+                                              "children": Array [
+                                                Object {
+                                                  "children": Array [
+                                                    Object {
+                                                      "children": Array [
+                                                        Object {
+                                                          "title": "Level 10",
+                                                        },
+                                                      ],
+                                                      "group": true,
+                                                      "title": "Level 9",
+                                                    },
+                                                  ],
+                                                  "title": "Level 8",
+                                                },
+                                              ],
+                                              "title": "Level 7",
+                                            },
+                                          ],
+                                          "title": "Level 6",
+                                        },
+                                      ],
+                                      "title": "Level 5",
+                                    },
+                                  ],
+                                  "title": "Level 4",
+                                }
+                              }
+                              previousTitle="Level 3"
+                            >
+                              <ul>
+                                
+
+                                <a
+                                  className="previous-nav"
+                                  href="#"
+                                  onClick={[Function]}
+                                >
+                                  
+
+                                  <i
+                                    aria-hidden="true"
+                                    className="material-icons"
+                                  >
+                                    arrow_back_ios
+                                  </i>
+                                  
+
+                                  <span>
+                                    Back to 
+                                    Level 3
+                                  </span>
+                                  
+
+                                </a>
+                                <header>
+                                  Level 4
+                                </header>
+                                <li
+                                  className="leaf"
+                                  key="Level 50"
+                                >
+                                  
+
+                                  <a
+                                    href="#"
+                                    onClick={[Function]}
+                                  >
+                                    Level 5
+                                  </a>
+                                  <AddNewLevel
+                                    currentNav={
+                                      Object {
+                                        "children": Array [
+                                          Object {
+                                            "children": Array [
+                                              Object {
+                                                "children": Array [
+                                                  Object {
+                                                    "children": Array [
+                                                      Object {
+                                                        "children": Array [
+                                                          Object {
+                                                            "title": "Level 10",
+                                                          },
+                                                        ],
+                                                        "group": true,
+                                                        "title": "Level 9",
+                                                      },
+                                                    ],
+                                                    "title": "Level 8",
+                                                  },
+                                                ],
+                                                "title": "Level 7",
+                                              },
+                                            ],
+                                            "title": "Level 6",
+                                          },
+                                        ],
+                                        "title": "Level 5",
+                                      }
+                                    }
+                                    previousTitle="Level 4"
+                                  >
+                                    <ul>
+                                      
+
+                                      <a
+                                        className="previous-nav"
+                                        href="#"
+                                        onClick={[Function]}
+                                      >
+                                        
+
+                                        <i
+                                          aria-hidden="true"
+                                          className="material-icons"
+                                        >
+                                          arrow_back_ios
+                                        </i>
+                                        
+
+                                        <span>
+                                          Back to 
+                                          Level 4
+                                        </span>
+                                        
+
+                                      </a>
+                                      <header>
+                                        Level 5
+                                      </header>
+                                      <li
+                                        className="leaf"
+                                        key="Level 60"
+                                      >
+                                        
+
+                                        <a
+                                          href="#"
+                                          onClick={[Function]}
+                                        >
+                                          Level 6
+                                        </a>
+                                        <AddNewLevel
+                                          currentNav={
+                                            Object {
+                                              "children": Array [
+                                                Object {
+                                                  "children": Array [
+                                                    Object {
+                                                      "children": Array [
+                                                        Object {
+                                                          "children": Array [
+                                                            Object {
+                                                              "title": "Level 10",
+                                                            },
+                                                          ],
+                                                          "group": true,
+                                                          "title": "Level 9",
+                                                        },
+                                                      ],
+                                                      "title": "Level 8",
+                                                    },
+                                                  ],
+                                                  "title": "Level 7",
+                                                },
+                                              ],
+                                              "title": "Level 6",
+                                            }
+                                          }
+                                          previousTitle="Level 5"
+                                        >
+                                          <ul>
+                                            
+
+                                            <a
+                                              className="previous-nav"
+                                              href="#"
+                                              onClick={[Function]}
+                                            >
+                                              
+
+                                              <i
+                                                aria-hidden="true"
+                                                className="material-icons"
+                                              >
+                                                arrow_back_ios
+                                              </i>
+                                              
+
+                                              <span>
+                                                Back to 
+                                                Level 5
+                                              </span>
+                                              
+
+                                            </a>
+                                            <header>
+                                              Level 6
+                                            </header>
+                                            <li
+                                              className="leaf"
+                                              key="Level 70"
+                                            >
+                                              
+
+                                              <a
+                                                href="#"
+                                                onClick={[Function]}
+                                              >
+                                                Level 7
+                                              </a>
+                                              <AddNewLevel
+                                                currentNav={
+                                                  Object {
+                                                    "children": Array [
+                                                      Object {
+                                                        "children": Array [
+                                                          Object {
+                                                            "children": Array [
+                                                              Object {
+                                                                "title": "Level 10",
+                                                              },
+                                                            ],
+                                                            "group": true,
+                                                            "title": "Level 9",
+                                                          },
+                                                        ],
+                                                        "title": "Level 8",
+                                                      },
+                                                    ],
+                                                    "title": "Level 7",
+                                                  }
+                                                }
+                                                previousTitle="Level 6"
+                                              >
+                                                <ul>
+                                                  
+
+                                                  <a
+                                                    className="previous-nav"
+                                                    href="#"
+                                                    onClick={[Function]}
+                                                  >
+                                                    
+
+                                                    <i
+                                                      aria-hidden="true"
+                                                      className="material-icons"
+                                                    >
+                                                      arrow_back_ios
+                                                    </i>
+                                                    
+
+                                                    <span>
+                                                      Back to 
+                                                      Level 6
+                                                    </span>
+                                                    
+
+                                                  </a>
+                                                  <header>
+                                                    Level 7
+                                                  </header>
+                                                  <li
+                                                    className="leaf"
+                                                    key="Level 80"
+                                                  >
+                                                    
+
+                                                    <a
+                                                      href="#"
+                                                      onClick={[Function]}
+                                                    >
+                                                      Level 8
+                                                    </a>
+                                                    <AddNewLevel
+                                                      currentNav={
+                                                        Object {
+                                                          "children": Array [
+                                                            Object {
+                                                              "children": Array [
+                                                                Object {
+                                                                  "title": "Level 10",
+                                                                },
+                                                              ],
+                                                              "group": true,
+                                                              "title": "Level 9",
+                                                            },
+                                                          ],
+                                                          "title": "Level 8",
+                                                        }
+                                                      }
+                                                      previousTitle="Level 7"
+                                                    >
+                                                      <ul>
+                                                        
+
+                                                        <a
+                                                          className="previous-nav"
+                                                          href="#"
+                                                          onClick={[Function]}
+                                                        >
+                                                          
+
+                                                          <i
+                                                            aria-hidden="true"
+                                                            className="material-icons"
+                                                          >
+                                                            arrow_back_ios
+                                                          </i>
+                                                          
+
+                                                          <span>
+                                                            Back to 
+                                                            Level 7
+                                                          </span>
+                                                          
+
+                                                        </a>
+                                                        <header>
+                                                          Level 8
+                                                        </header>
+                                                        <li
+                                                          className="group"
+                                                          key="Level 90"
+                                                        >
+                                                          
+
+                                                          <a
+                                                            href="#"
+                                                            onClick={[Function]}
+                                                          >
+                                                            Level 9
+                                                          </a>
+                                                          <AddNewLevel
+                                                            currentNav={
+                                                              Object {
+                                                                "children": Array [
+                                                                  Object {
+                                                                    "title": "Level 10",
+                                                                  },
+                                                                ],
+                                                                "group": true,
+                                                                "title": "Level 9",
+                                                              }
+                                                            }
+                                                            previousTitle="Level 8"
+                                                          >
+                                                            <ul>
+                                                              
+
+                                                              <li
+                                                                className="nav-leaf"
+                                                                key="Level 100"
+                                                              >
+                                                                
+
+                                                                <a
+                                                                  href="#"
+                                                                  onClick={[Function]}
+                                                                >
+                                                                  Level 10
+                                                                </a>
+                                                              </li>
+                                                            </ul>
+                                                          </AddNewLevel>
+                                                        </li>
+                                                      </ul>
+                                                    </AddNewLevel>
+                                                  </li>
+                                                </ul>
+                                              </AddNewLevel>
+                                            </li>
+                                          </ul>
+                                        </AddNewLevel>
+                                      </li>
+                                    </ul>
+                                  </AddNewLevel>
+                                </li>
+                              </ul>
+                            </AddNewLevel>
+                          </li>
+                        </ul>
+                      </AddNewLevel>
+                    </li>
+                  </ul>
+                </AddNewLevel>
+              </li>
+            </ul>
+          </nav>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</Sidebar>
+`;
+
+exports[`Component: Sidebar renders five levels when four levels is provided 1`] = `
+<Sidebar
+  extendedSidebar={true}
+  id="test"
+  navList={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "children": Array [
+              Object {
+                "children": Array [
+                  Object {
+                    "children": Array [
+                      Object {
+                        "title": "Gran children 1",
+                      },
+                    ],
+                    "group": true,
+                    "title": "Children 2",
+                  },
+                ],
+                "title": "Primary colors",
+              },
+            ],
+            "icon": <i
+              className="material-icons-outlined rotated"
+            >
+              accessibility
+            </i>,
+            "title": "Accessibility",
+          },
+        ],
+        "icon": <i
+          className="material-icons-outlined rotated"
+        >
+          wb_incandescent
+        </i>,
+        "title": "Get Started",
+      },
+    ]
+  }
+>
+  <div
+    className="sidebar"
+    id="test"
+  >
+    <nav
+      className="sidebar-main-nav"
+    >
+      <div
+        className="sidebar-logo"
+      >
+        
+
+        <a
+          aria-label="To homepage"
+          href="/"
+        >
+          
+
+          <Logotype
+            alt="TESTBRAND vertical logo"
+            size="md"
+            src="/TEST/img/logo/TESTBRAND-logo-v.svg"
+            type="vertical"
+          >
+            <img
+              alt="TESTBRAND vertical logo"
+              className="logotype-vertical logotype-md"
+              src="/TEST/img/logo/TESTBRAND-logo-v.svg"
+            />
+          </Logotype>
+          
+
+        </a>
+      </div>
+      <ul
+        className="main-nav-ul"
+      >
+        <li
+          className="main-nav-li active"
+          key="Get Started"
+        >
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons-outlined rotated"
+            >
+              wb_incandescent
+            </i>
+            
+
+            Get Started
+            
+
+          </a>
+          <nav
+            className="sidebar-secondary-nav"
+          >
+            <header
+              className="secondary-nav-header"
+            >
+              Get Started
+            </header>
+            <ul
+              className="secondary-nav-ul"
+            >
+              <li
+                className="secondary-nav-li leaf"
+                key="Accessibility0"
+              >
+                
+
+                <a
+                  href="#"
+                  onClick={[Function]}
                 >
                   <i
                     className="material-icons-outlined rotated"
@@ -285,52 +1041,426 @@ exports[`Component: Sidebar renders four levels when four levels is provided 1`]
                     accessibility
                   </i>
                   Accessibility
-                </header>
-                <li
-                  className="tertiary-nav-li group"
-                  key="Primary colors"
+                </a>
+                <AddNewLevel
+                  currentNav={
+                    Object {
+                      "children": Array [
+                        Object {
+                          "children": Array [
+                            Object {
+                              "children": Array [
+                                Object {
+                                  "title": "Gran children 1",
+                                },
+                              ],
+                              "group": true,
+                              "title": "Children 2",
+                            },
+                          ],
+                          "title": "Primary colors",
+                        },
+                      ],
+                      "icon": <i
+                        className="material-icons-outlined rotated"
+                      >
+                        accessibility
+                      </i>,
+                      "title": "Accessibility",
+                    }
+                  }
+                  previousTitle="Get Started"
                 >
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                  >
-                    Primary colors
-                  </a>
-                  <ul
-                    className="quaternary-nav-ul"
-                  >
-                    <li
-                      className="nav-leaf"
-                      key="Children 1"
+                  <ul>
+                    
+
+                    <a
+                      className="previous-nav"
+                      href="#"
+                      onClick={[Function]}
                     >
+                      
+
+                      <i
+                        aria-hidden="true"
+                        className="material-icons"
+                      >
+                        arrow_back_ios
+                      </i>
+                      
+
+                      <span>
+                        Back to 
+                        Get Started
+                      </span>
+                      
+
+                    </a>
+                    <header>
+                      <i
+                        className="material-icons-outlined rotated"
+                      >
+                        accessibility
+                      </i>
+                      Accessibility
+                    </header>
+                    <li
+                      className="leaf"
+                      key="Primary colors0"
+                    >
+                      
+
                       <a
                         href="#"
                         onClick={[Function]}
                       >
-                        Children 1
+                        Primary colors
                       </a>
-                    </li>
-                    <li
-                      className="nav-leaf"
-                      key="Children 2"
-                    >
-                      <a
-                        href="#"
-                        onClick={[Function]}
+                      <AddNewLevel
+                        currentNav={
+                          Object {
+                            "children": Array [
+                              Object {
+                                "children": Array [
+                                  Object {
+                                    "title": "Gran children 1",
+                                  },
+                                ],
+                                "group": true,
+                                "title": "Children 2",
+                              },
+                            ],
+                            "title": "Primary colors",
+                          }
+                        }
+                        previousTitle="Accessibility"
                       >
-                        Children 2
-                      </a>
+                        <ul>
+                          
+
+                          <a
+                            className="previous-nav"
+                            href="#"
+                            onClick={[Function]}
+                          >
+                            
+
+                            <i
+                              aria-hidden="true"
+                              className="material-icons"
+                            >
+                              arrow_back_ios
+                            </i>
+                            
+
+                            <span>
+                              Back to 
+                              Accessibility
+                            </span>
+                            
+
+                          </a>
+                          <header>
+                            Primary colors
+                          </header>
+                          <li
+                            className="group"
+                            key="Children 20"
+                          >
+                            
+
+                            <a
+                              href="#"
+                              onClick={[Function]}
+                            >
+                              Children 2
+                            </a>
+                            <AddNewLevel
+                              currentNav={
+                                Object {
+                                  "children": Array [
+                                    Object {
+                                      "title": "Gran children 1",
+                                    },
+                                  ],
+                                  "group": true,
+                                  "title": "Children 2",
+                                }
+                              }
+                              previousTitle="Primary colors"
+                            >
+                              <ul>
+                                
+
+                                <li
+                                  className="nav-leaf"
+                                  key="Gran children 10"
+                                >
+                                  
+
+                                  <a
+                                    href="#"
+                                    onClick={[Function]}
+                                  >
+                                    Gran children 1
+                                  </a>
+                                </li>
+                              </ul>
+                            </AddNewLevel>
+                          </li>
+                        </ul>
+                      </AddNewLevel>
                     </li>
                   </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </li>
-    </ul>
-  </nav>
-</div>
+                </AddNewLevel>
+              </li>
+            </ul>
+          </nav>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</Sidebar>
+`;
+
+exports[`Component: Sidebar renders four levels when four levels is provided 1`] = `
+<Sidebar
+  extendedSidebar={true}
+  id="test"
+  navList={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "children": Array [
+              Object {
+                "children": Array [
+                  Object {
+                    "title": "Children 1",
+                  },
+                ],
+                "group": true,
+                "title": "Primary colors",
+              },
+            ],
+            "icon": <i
+              className="material-icons-outlined rotated"
+            >
+              accessibility
+            </i>,
+            "title": "Accessibility",
+          },
+        ],
+        "icon": <i
+          className="material-icons-outlined rotated"
+        >
+          wb_incandescent
+        </i>,
+        "title": "Get Started",
+      },
+    ]
+  }
+>
+  <div
+    className="sidebar"
+    id="test"
+  >
+    <nav
+      className="sidebar-main-nav"
+    >
+      <div
+        className="sidebar-logo"
+      >
+        
+
+        <a
+          aria-label="To homepage"
+          href="/"
+        >
+          
+
+          <Logotype
+            alt="TESTBRAND vertical logo"
+            size="md"
+            src="/TEST/img/logo/TESTBRAND-logo-v.svg"
+            type="vertical"
+          >
+            <img
+              alt="TESTBRAND vertical logo"
+              className="logotype-vertical logotype-md"
+              src="/TEST/img/logo/TESTBRAND-logo-v.svg"
+            />
+          </Logotype>
+          
+
+        </a>
+      </div>
+      <ul
+        className="main-nav-ul"
+      >
+        <li
+          className="main-nav-li active"
+          key="Get Started"
+        >
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              className="material-icons-outlined rotated"
+            >
+              wb_incandescent
+            </i>
+            
+
+            Get Started
+            
+
+          </a>
+          <nav
+            className="sidebar-secondary-nav"
+          >
+            <header
+              className="secondary-nav-header"
+            >
+              Get Started
+            </header>
+            <ul
+              className="secondary-nav-ul"
+            >
+              <li
+                className="secondary-nav-li leaf"
+                key="Accessibility0"
+              >
+                
+
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  <i
+                    className="material-icons-outlined rotated"
+                  >
+                    accessibility
+                  </i>
+                  Accessibility
+                </a>
+                <AddNewLevel
+                  currentNav={
+                    Object {
+                      "children": Array [
+                        Object {
+                          "children": Array [
+                            Object {
+                              "title": "Children 1",
+                            },
+                          ],
+                          "group": true,
+                          "title": "Primary colors",
+                        },
+                      ],
+                      "icon": <i
+                        className="material-icons-outlined rotated"
+                      >
+                        accessibility
+                      </i>,
+                      "title": "Accessibility",
+                    }
+                  }
+                  previousTitle="Get Started"
+                >
+                  <ul>
+                    
+
+                    <a
+                      className="previous-nav"
+                      href="#"
+                      onClick={[Function]}
+                    >
+                      
+
+                      <i
+                        aria-hidden="true"
+                        className="material-icons"
+                      >
+                        arrow_back_ios
+                      </i>
+                      
+
+                      <span>
+                        Back to 
+                        Get Started
+                      </span>
+                      
+
+                    </a>
+                    <header>
+                      <i
+                        className="material-icons-outlined rotated"
+                      >
+                        accessibility
+                      </i>
+                      Accessibility
+                    </header>
+                    <li
+                      className="group"
+                      key="Primary colors0"
+                    >
+                      
+
+                      <a
+                        href="#"
+                        onClick={[Function]}
+                      >
+                        Primary colors
+                      </a>
+                      <AddNewLevel
+                        currentNav={
+                          Object {
+                            "children": Array [
+                              Object {
+                                "title": "Children 1",
+                              },
+                            ],
+                            "group": true,
+                            "title": "Primary colors",
+                          }
+                        }
+                        previousTitle="Accessibility"
+                      >
+                        <ul>
+                          
+
+                          <li
+                            className="nav-leaf"
+                            key="Children 10"
+                          >
+                            
+
+                            <a
+                              href="#"
+                              onClick={[Function]}
+                            >
+                              Children 1
+                            </a>
+                          </li>
+                        </ul>
+                      </AddNewLevel>
+                    </li>
+                  </ul>
+                </AddNewLevel>
+              </li>
+            </ul>
+          </nav>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</Sidebar>
 `;
 
 exports[`Component: Sidebar renders one level when one level is provided 1`] = `
@@ -344,16 +1474,22 @@ exports[`Component: Sidebar renders one level when one level is provided 1`] = `
     <div
       className="sidebar-logo"
     >
+      
+
       <a
         aria-label="To homepage"
         href="/"
       >
+        
+
         <Logotype
           alt="TESTBRAND vertical logo"
           size="md"
           src="/TEST/img/logo/TESTBRAND-logo-v.svg"
           type="vertical"
         />
+        
+
       </a>
     </div>
     <ul
@@ -363,32 +1499,48 @@ exports[`Component: Sidebar renders one level when one level is provided 1`] = `
         className="main-nav-li active"
         key="Home Page"
       >
+        
+
         <a
           href="#"
           onClick={[Function]}
         >
+          
+
           <i
             className="material-icons-outlined"
           >
             home
           </i>
+          
+
           Home Page
+          
+
         </a>
       </li>
       <li
         className="main-nav-li"
         key="Get Started"
       >
+        
+
         <a
           href="#"
           onClick={[Function]}
         >
+          
+
           <i
             className="material-icons-outlined rotated"
           >
             wb_incandescent
           </i>
+          
+
           Get Started
+          
+
         </a>
       </li>
     </ul>
@@ -397,105 +1549,155 @@ exports[`Component: Sidebar renders one level when one level is provided 1`] = `
 `;
 
 exports[`Component: Sidebar renders three levels when three levels is provided 1`] = `
-<div
-  className="sidebar"
+<Sidebar
   id="test"
+  navList={
+    Array [
+      Object {
+        "children": Array [
+          Object {
+            "children": Array [
+              Object {
+                "title": "Primary colors",
+              },
+            ],
+            "group": true,
+            "title": "Accessibility",
+          },
+        ],
+        "icon": <i
+          className="material-icons-outlined rotated"
+        >
+          wb_incandescent
+        </i>,
+        "title": "Get Started",
+      },
+    ]
+  }
 >
-  <nav
-    className="sidebar-main-nav"
+  <div
+    className="sidebar"
+    id="test"
   >
-    <div
-      className="sidebar-logo"
+    <nav
+      className="sidebar-main-nav"
     >
-      <a
-        aria-label="To homepage"
-        href="/"
+      <div
+        className="sidebar-logo"
       >
-        <Logotype
-          alt="TESTBRAND vertical logo"
-          size="md"
-          src="/TEST/img/logo/TESTBRAND-logo-v.svg"
-          type="vertical"
-        />
-      </a>
-    </div>
-    <ul
-      className="main-nav-ul"
-    >
-      <li
-        className="main-nav-li active"
-        key="Get Started"
-      >
+        
+
         <a
-          href="#"
-          onClick={[Function]}
+          aria-label="To homepage"
+          href="/"
         >
-          <i
-            className="material-icons-outlined rotated"
+          
+
+          <Logotype
+            alt="TESTBRAND vertical logo"
+            size="md"
+            src="/TEST/img/logo/TESTBRAND-logo-v.svg"
+            type="vertical"
           >
-            wb_incandescent
-          </i>
-          Get Started
+            <img
+              alt="TESTBRAND vertical logo"
+              className="logotype-vertical logotype-md"
+              src="/TEST/img/logo/TESTBRAND-logo-v.svg"
+            />
+          </Logotype>
+          
+
         </a>
-        <nav
-          className="sidebar-secondary-nav"
+      </div>
+      <ul
+        className="main-nav-ul"
+      >
+        <li
+          className="main-nav-li active"
+          key="Get Started"
         >
-          <header
-            className="secondary-nav-header"
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
           >
-            Get Started
-          </header>
-          <ul
-            className="secondary-nav-ul "
-          >
-            <li
-              className="secondary-nav-li group"
-              key="Accessibility"
+            
+
+            <i
+              className="material-icons-outlined rotated"
             >
-              <a
-                href="#"
-                onClick={[Function]}
+              wb_incandescent
+            </i>
+            
+
+            Get Started
+            
+
+          </a>
+          <nav
+            className="sidebar-secondary-nav"
+          >
+            <header
+              className="secondary-nav-header"
+            >
+              Get Started
+            </header>
+            <ul
+              className="secondary-nav-ul"
+            >
+              <li
+                className="secondary-nav-li group"
+                key="Accessibility0"
               >
-                <i
-                  className="material-icons-outlined rotated"
+                
+
+                <a
+                  href="#"
+                  onClick={[Function]}
                 >
-                  accessibility
-                </i>
-                Accessibility
-              </a>
-              <ul
-                className="tertiary-nav-ul"
-              >
-                <li
-                  className="nav-leaf leaf"
-                  key="Primary colors"
+                  Accessibility
+                </a>
+                <AddNewLevel
+                  currentNav={
+                    Object {
+                      "children": Array [
+                        Object {
+                          "title": "Primary colors",
+                        },
+                      ],
+                      "group": true,
+                      "title": "Accessibility",
+                    }
+                  }
+                  previousTitle="Get Started"
                 >
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                  >
-                    Primary colors
-                  </a>
-                </li>
-                <li
-                  className="nav-leaf leaf"
-                  key="Secondary colors"
-                >
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                  >
-                    Secondary colors
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </li>
-    </ul>
-  </nav>
-</div>
+                  <ul>
+                    
+
+                    <li
+                      className="nav-leaf"
+                      key="Primary colors0"
+                    >
+                      
+
+                      <a
+                        href="#"
+                        onClick={[Function]}
+                      >
+                        Primary colors
+                      </a>
+                    </li>
+                  </ul>
+                </AddNewLevel>
+              </li>
+            </ul>
+          </nav>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</Sidebar>
 `;
 
 exports[`Component: Sidebar renders two levels when two levels is provided 1`] = `
@@ -509,16 +1711,22 @@ exports[`Component: Sidebar renders two levels when two levels is provided 1`] =
     <div
       className="sidebar-logo"
     >
+      
+
       <a
         aria-label="To homepage"
         href="/"
       >
+        
+
         <Logotype
           alt="TESTBRAND vertical logo"
           size="md"
           src="/TEST/img/logo/TESTBRAND-logo-v.svg"
           type="vertical"
         />
+        
+
       </a>
     </div>
     <ul
@@ -528,16 +1736,24 @@ exports[`Component: Sidebar renders two levels when two levels is provided 1`] =
         className="main-nav-li active"
         key="Get Started"
       >
+        
+
         <a
           href="#"
           onClick={[Function]}
         >
+          
+
           <i
             className="material-icons-outlined rotated"
           >
             wb_incandescent
           </i>
+          
+
           Get Started
+          
+
         </a>
         <nav
           className="sidebar-secondary-nav"
@@ -548,12 +1764,14 @@ exports[`Component: Sidebar renders two levels when two levels is provided 1`] =
             Get Started
           </header>
           <ul
-            className="secondary-nav-ul "
+            className="secondary-nav-ul"
           >
             <li
               className="secondary-nav-li leaf"
-              key="Accessibility"
+              key="Accessibility0"
             >
+              
+
               <a
                 href="#"
                 onClick={[Function]}
@@ -568,8 +1786,10 @@ exports[`Component: Sidebar renders two levels when two levels is provided 1`] =
             </li>
             <li
               className="secondary-nav-li leaf"
-              key="Colors"
+              key="Colors1"
             >
+              
+
               <a
                 href="#"
                 onClick={[Function]}

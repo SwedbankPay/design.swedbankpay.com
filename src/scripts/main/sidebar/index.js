@@ -85,7 +85,7 @@ class TopbarSidebar {
 
 }
 
-class Sidebar2 {
+class Sidebar {
     constructor (el) {
         this.constructSidebar(el);
     }
@@ -107,26 +107,46 @@ class Sidebar2 {
     }
 
     _initListeners () {
-        const mainNavLI = this.el.querySelectorAll(".main-nav-li");
         const secondaryNavLI = this.el.querySelectorAll(".secondary-nav-li");
-        const tertiaryNavLI = this.el.querySelectorAll(".tertiary-nav-li");
-        const navLeaves = this.el.querySelectorAll(".nav-leaf");
         const previousNavs = this.el.querySelectorAll(".previous-nav");
 
         const skipLink = document.querySelector("#skip-link");
 
+        const liList = this.el.querySelectorAll("li");
+
         window.addEventListener("popstate", this._popStateListener);
 
-        [...mainNavLI].map(mainNavElement => mainNavElement.querySelector("a").addEventListener("click", () => this._setActiveStatus(mainNavElement, ".main-nav-li")));
-        [...secondaryNavLI].map(secondaryNavElement => secondaryNavElement.querySelector("a").addEventListener("click", () => this._setActiveStatus(secondaryNavElement, ".secondary-nav-li")));
-        [...tertiaryNavLI].map(tertiaryNavElement => tertiaryNavElement.querySelector("a").addEventListener("click", () => this._setActiveStatus(tertiaryNavElement, ".tertiary-nav-li")));
-        [...navLeaves].map(navLeaf => navLeaf.addEventListener("click", () => this._setActiveStatus(navLeaf, SELECTORS.NAVLEAF)));
-        [...previousNavs].map(previousNav => previousNav.addEventListener("click", () => this._setActiveStatus(previousNav, ".secondary-nav-li")));
+        [...liList].map(li => li.querySelector("a").addEventListener("click", () => this._activate(li)));
+        [...previousNavs].map(previousNav => previousNav.addEventListener("click", () => this._setPreviousNav(previousNav)));
         [...secondaryNavLI].map(secNavLi => secNavLi.addEventListener("keyup", e => {
             if (e.keyCode === 13) {
                 skipLink.focus();
             }
         }));
+    }
+
+    _activate (element) {
+        if (element.parentElement.querySelector("li.active")) {
+            element.parentElement.querySelector("li.active").classList.remove("active");
+        }
+
+        element.classList.add("active");
+
+        if (element.classList.contains("main-nav-li")) {
+            this._closeChildElements(this.el, true);
+            element.classList.add("active");
+
+            if (element.querySelector(".sidebar-secondary-nav")) {
+                this.el.classList.add("has-secondary-nav");
+            } else {
+                this.el.classList.remove("has-secondary-nav");
+            }
+        }
+    }
+
+    _setPreviousNav (element) {
+        element.closest("li.leaf").classList.remove("active");
+        this._closeChildElements(element.parentElement, true);
     }
 
     _closeChildElements (element, closeElement) {
@@ -154,10 +174,6 @@ class Sidebar2 {
 
         [...activeElements].map(activeElement => {
             element !== activeElement && this._closeChildElements(activeElement, true);
-
-            if (selector === ".secondary-nav-li") {
-                activeElement === element && !element.classList.contains("leaf") && this._closeChildElements(activeElement);
-            }
         });
     }
 
@@ -326,7 +342,7 @@ const _createSidebar = sidebarQuery => {
         return updatedSidebarObject;
     }
 
-    const sidebarObject = new Sidebar2(sidebarQuery);
+    const sidebarObject = new Sidebar(sidebarQuery);
 
     _sidebars.push(sidebarObject);
 
