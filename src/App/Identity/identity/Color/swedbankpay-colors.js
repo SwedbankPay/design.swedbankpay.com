@@ -14,7 +14,8 @@ export const textColors = [
     {
         hex: "#512B2B",
         rgb: "81,43,43",
-        fontColor: "font-white"
+        fontColor: "font-white",
+        noWhiteExample: true
     },
     {
         hex: "#257886",
@@ -24,7 +25,8 @@ export const textColors = [
     {
         hex: "#FFFFFF",
         rgb: "255, 255, 255",
-        border: "has-border"
+        border: "has-border",
+        noBlackExample: true
     },
     {
         hex: "#696969",
@@ -105,48 +107,49 @@ export const complementaryColors = [
 
 export const systemColors = [
     {
-        hex: "#C5131C",
-        rgb: "197, 19, 28",
-        fontColor: "font-white"
+        title: "Error dark",
+        subTitle: "system-error-dark",
+        hex: "#8c0d14"
     },
     {
-        hex: "#E07088",
-        rgb: "224, 112, 136",
-        fontColor: "font-white"
+        title: "Error",
+        subTitle: "system-error",
+        hex: "#B5111A"
     },
     {
-        hex: "#F9DED3",
-        rgb: "249, 222, 211"
+        title: "Error light",
+        subTitle: "system-error-light",
+        hex: "#FCEEE9"
     },
     {
-        hex: "#3E6AB6",
-        rgb: "62, 106, 182",
-        fontColor: "font-white"
+        title: "Warning",
+        subTitle: "system-warning",
+        hex: "#C15715"
     },
     {
-        hex: "#E8EFF9",
-        rgb: "232, 239, 249"
+        title: "Warning light",
+        subTitle: "system-warning-light",
+        hex: "#FEF2E2"
     },
     {
-        hex: "#437E15",
-        rgb: "67, 126, 21",
-        fontColor: "font-white"
+        title: "Success",
+        subTitle: "system-success",
+        hex: "#3C7213"
     },
     {
-        hex: "#99CC66",
-        rgb: "153, 204, 102"
+        title: "Success light",
+        subTitle: "system-success-light",
+        hex: "#F2F7EB"
     },
     {
-        hex: "#F2F7EB",
-        rgb: "242, 24, 235"
+        title: "Info",
+        subTitle: "system-info",
+        hex: "#3961A7"
     },
     {
-        hex: "#F9CE22",
-        rgb: "249, 206, 34"
-    },
-    {
-        hex: "#FFF3D5",
-        rgb: "255, 243, 213"
+        title: "Info light",
+        subTitle: "system-info-light",
+        hex: "#EBF1FA"
     }
 ];
 
