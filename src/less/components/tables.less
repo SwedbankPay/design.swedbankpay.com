@@ -82,6 +82,13 @@
     &.table-plain {
         tbody {
             > tr {
+                &:first-child {
+                    th,
+                    td {
+                        border-top: 1px solid @table-border-color;
+                    }
+                }
+
                 th,
                 td {
                     border-bottom: 1px solid @table-border-color;

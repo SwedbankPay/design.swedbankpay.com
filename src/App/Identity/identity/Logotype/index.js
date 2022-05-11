@@ -25,15 +25,43 @@ const LogoWhite = () => (
 );
 
 const SpacingZone = () => (
-    <section>
+    <section id="spacing-zone-doc">
         <h2 id="spacing-zone">Spacing zone</h2>
         <p>
             The spacing zone is the spacing around the logotype that prevents the logo from interfering with other UI elements.
             The logotype’s spacing zone should always be at least 30% of the coin’s diameter and then rounded up to the closest multiple of 8 (marked as X in the diagram).
         </p>
-        <h3>Measurement example (vertical logotype)</h3>
-        <p>X = spacing zone</p>
-        <img src={`${basename}img/documentation/logotype/icon-table.png`} className="logotype-icon-table" alt="Spacing zones for visual logotype size"/>
+        <table className="table table-plain">
+            <caption>Measurement example for vertical logotype</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Size</th>
+                    <th scope="col">Coin size</th>
+                    <th scope="col">30%</th>
+                    <th scope="col">X</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scrope="row">Smallest</th>
+                    <td>24 px</td>
+                    <td>7.2 px</td>
+                    <th>8 px</th>
+                </tr>
+                <tr>
+                    <th scrope="row">Small</th>
+                    <td>32 px</td>
+                    <td>9.6 px</td>
+                    <th>16 px</th>
+                </tr>
+                <tr>
+                    <th scrope="row">Medium</th>
+                    <td>40 px</td>
+                    <td>12 px</td>
+                    <th>16 px</th>
+                </tr>
+            </tbody>
+        </table>
 
         <div className="d-md-flex mt-5">
             <img src={`${basename}img/documentation/logotype/vertical-measure.png`} className="logotype-vertical-measure mr-5" alt="Vertical measure spacing zones of logotype"/>
