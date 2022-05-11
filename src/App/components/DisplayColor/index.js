@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ColorDisplay = ({ title, subTitle, hex, border, contrastWhiteApproved, contrastBlackApproved, noWhiteExample, noBlackExample }) => (
+const ColorDisplay = ({ title, subTitle, hex, border, contrastWhiteApproved, contrastBlackApproved, contrastWhiteAlert, contrastBlackAlert, noWhiteExample, noBlackExample }) => (
     <div className="d-flex flex-column mb-2">
         <div className={`color-box ${border ? border : ""}`}>
             <svg>
@@ -21,7 +21,9 @@ const ColorDisplay = ({ title, subTitle, hex, border, contrastWhiteApproved, con
                         <svg className="second-svg">
                             <rect fill={hex}/>
                         </svg>
-                        {contrastWhiteApproved ? <i className="material-icons check">check_circle</i> : <i className="material-icons cancel">cancel</i>}
+                        {contrastWhiteApproved ?
+                            <i className="material-icons check">check_circle</i> :
+                            <>{contrastWhiteAlert ? <i className="material-icons alert-warning">warning</i> : <i className="material-icons cancel">cancel</i>}</>}
                     </div>}
 
                 {noBlackExample ? <></> :
@@ -32,7 +34,9 @@ const ColorDisplay = ({ title, subTitle, hex, border, contrastWhiteApproved, con
                         <svg className="second-svg">
                             <rect fill={hex}/>
                         </svg>
-                        {contrastBlackApproved ? <i className="material-icons check">check_circle</i> : <i className="material-icons cancel">cancel</i>}
+                        {contrastBlackApproved ?
+                            <i className="material-icons check">check_circle</i> :
+                            <>{contrastBlackAlert ? <i className="material-icons alert-warning">warning</i> : <i className="material-icons cancel">cancel</i>}</>}
                     </div>}
             </div>
         </div>
