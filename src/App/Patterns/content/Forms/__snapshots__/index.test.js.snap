@@ -939,7 +939,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
     </p>
      
     <img
-      alt=""
+      alt="Visualization of button placement in forms."
       className="w-100"
       src="/TEST/img/documentation/patterns/img-button-placement.png"
     />
