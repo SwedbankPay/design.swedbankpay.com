@@ -7,32 +7,6 @@ exports[`Components: Sidebar DeveloperDocumentation renders 1`] = `
   >
     Developer Documentation
   </h2>
-  <p>
-    <b>
-      Note:
-    </b>
-     If used with a sticky topbar, add class 
-    <CodeTags
-      code=".sidebar-topbar-sticky"
-      type="secondary"
-    />
-    , 
-    <CodeTags
-      code=".topbar-min-{breakpoint}-sticky"
-      type="secondary"
-    />
-    , or 
-    <CodeTags
-      code=".topbar-max-{breakpoint}-sticky"
-      type="secondary"
-    />
-     depending on the class of the sticky topbar, to the outmost 
-    <CodeTags
-      code="<div>"
-      type="primary"
-    />
-     of the sidebar.
-  </p>
   <section>
     <h3>
       Infinite depth
@@ -437,9 +411,8 @@ exports[`Components: Sidebar Overview renders 1`] = `
                   Main content things...
                 </main>
               </div>
-              ,
             </div>,
-            "description": "The sidebar supports an infinite depth of levels. But we actually do not recommend to go higher then 4, due to accessibility issues.",
+            "description": "The sidebar supports an infinite depth of levels. Be considerate of how many levels you are using in your product as deep navigation can make it hard to find content and disorient users. How many levels you need depends on your product specific use case, but with consideration of UX best practices we recommend a more flat navigation.",
             "title": "Sidebar",
           },
         ],

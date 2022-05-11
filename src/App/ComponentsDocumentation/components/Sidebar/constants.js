@@ -178,10 +178,10 @@ export const SidebarShowcase = {
                 <div className="row">
                     <Sidebar id="dg-sidebar" navList={SidebarNavListExtended} />
                     <main className="col main-content">Main content things...</main>
-                </div>,
+                </div>
             </div>,
             title: "Sidebar",
-            description: "The sidebar supports an infinite depth of levels. But we actually do not recommend to go higher then 4, due to accessibility issues."
+            description: "The sidebar supports an infinite depth of levels. Be considerate of how many levels you are using in your product as deep navigation can make it hard to find content and disorient users. How many levels you need depends on your product specific use case, but with consideration of UX best practices we recommend a more flat navigation."
         }
     ]
 };

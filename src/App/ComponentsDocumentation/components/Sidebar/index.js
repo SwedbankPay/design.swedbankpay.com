@@ -112,8 +112,6 @@ const RemoveScrollListener = () => (
 const DeveloperDocumentation = () => (
     <section>
         <h2 id="developer-documentation">Developer Documentation</h2>
-        <p><b>Note:</b> If used with a sticky topbar, add class <CodeTags type="secondary" code=".sidebar-topbar-sticky" />, <CodeTags type="secondary" code=".topbar-min-{breakpoint}-sticky" />, or <CodeTags type="secondary" code=".topbar-max-{breakpoint}-sticky" /> depending on the class of the sticky topbar, to the outmost <CodeTags type="primary" code="<div>" /> of the sidebar.</p>
-
         <section>
             <h3>Infinite depth</h3>
             <section>
