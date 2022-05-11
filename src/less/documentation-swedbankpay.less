@@ -996,6 +996,8 @@
                 flex-direction: column;
 
                 .contrast-white-container {
+                    margin-bottom: 0.25rem;
+
                     .white-box {
                         border: 1px solid @medium-brown;
                     }
@@ -1003,10 +1005,14 @@
 
                 .contrast-white-container,
                 .contrast-black-container {
+                    position: relative;
+                    display: flex;
+
                     svg {
                         height: 1rem;
                         width: 1rem;
                         border-radius: 2px;
+                        position: relative;
 
                         &.white-box {
                             border: 1px solid @medium-brown;
@@ -1018,14 +1024,26 @@
                         }
                     }
 
-                    & .second-svg {
-                        // need to fix the overflow bit..
+                    .second-svg {
+                        position: relative;
+                        left: -8px;
+                    }
+
+                    .first-svg {
+                        z-index: 100;
                     }
 
                     i {
-                        // color: green;
                         font-size: 14px;
                         align-self: center;
+
+                        &.check {
+                            color: #3c7213;
+                        }
+
+                        &.cancel {
+                            color: #b5111a;
+                        }
                     }
                 }
             }
