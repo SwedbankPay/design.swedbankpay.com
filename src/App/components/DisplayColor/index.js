@@ -14,13 +14,14 @@ const ColorDisplay = ({ title, subTitle, hex, rgb, fontColor, border, noWhiteExa
             <small className="small mb-0 text-uppercase">{hex}</small>
             <div className="contrast-box">
                 <div className="contrast-white-container">
-                    <svg className="white-box">
+                    <svg className="white-box first-svg">
                         <rect fill={"#FFFFFF"}/>
                     </svg>
                     <svg className="second-svg">
                         <rect fill={hex}/>
                     </svg>
-                    <i className="material-icons">check_circle</i>
+                    <i className="material-icons check">check_circle</i>
+                    <i className="material-icons cancel">cancel</i>
                 </div>
                 <div className="contrast-black-container">
                     <svg className="first-svg">
