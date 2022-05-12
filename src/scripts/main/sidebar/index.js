@@ -126,10 +126,13 @@ class Sidebar {
     }
 
     _activate (element) {
+        const ul = element.querySelector("a ~ ul");
+
         if (element.parentElement.querySelector("li.active")) {
             element.parentElement.querySelector("li.active").classList.remove("active");
         }
 
+        ul.setAttribute("aria-hidden", "false");
         element.classList.add("active");
 
         if (element.classList.contains("main-nav-li")) {
@@ -145,8 +148,13 @@ class Sidebar {
     }
 
     _setPreviousNav (element) {
+        const ul = element.parentElement;
+
         element.closest("li.leaf").classList.remove("active");
-        this._closeChildElements(element.parentElement, true);
+        ul.setAttribute("aria-hidden", "true");
+        ul.querySelector("li.group > ul").setAttribute("aria-hidden", "true");
+
+        this._closeChildElements(ul, true);
     }
 
     _closeChildElements (element, closeElement) {

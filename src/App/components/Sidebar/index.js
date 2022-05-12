@@ -6,7 +6,7 @@ const basename = process.env.basename;
 const brand = process.env.brand;
 
 const AddNewLevel = ({ currentNav, previousTitle }) => (
-    <ul>{"\n"}
+    <ul aria-hidden>{"\n"}
         {!currentNav.group &&
             <>
                 <a href="#" onClick={e => e.preventDefault()} className="previous-nav">{"\n"}
