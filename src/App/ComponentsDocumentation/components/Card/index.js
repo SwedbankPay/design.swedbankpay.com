@@ -21,7 +21,7 @@ const Overview = () => (
                 <div className="slab slab-plain slab-border-success h-100">
                     <h4>Do</h4>
                     When presenting a group of cards, make sure their color match and have the same size and text length
-                    <img alt="When presenting cards in a group, make sure their color match, standard view" src={`${basename}img/documentation/cards/do-cards.png`} className="w-100 mt-4 mb-4"/>
+                    <img alt="Card and color group example, standard view" src={`${basename}img/documentation/cards/do-cards.png`} className="w-100 mt-4 mb-4"/>
                 </div>
             </div>
             <div className="col-xl-6 mb-4">

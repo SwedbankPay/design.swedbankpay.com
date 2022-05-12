@@ -387,7 +387,7 @@ exports[`Documentation: Card Overview renders 1`] = `
         </h4>
         When presenting a group of cards, make sure their color match and have the same size and text length
         <img
-          alt="When presenting cards in a group, make sure their color match, standard view"
+          alt="Card and color group example, standard view"
           className="w-100 mt-4 mb-4"
           src="/TEST/img/documentation/cards/do-cards.png"
         />

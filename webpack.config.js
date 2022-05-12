@@ -318,7 +318,7 @@ module.exports = (env, argv) => {
                                     destination: `./dist${basename}img/documentation/accessibility`
                                 },
                                 {
-                                    source: `./src/img/${brand}/documentation/imagery/*.svg`,
+                                    source: `./src/img/${brand}/documentation/imagery/*.*`,
                                     destination: `./dist${basename}img/documentation/imagery`
                                 },
                                 {

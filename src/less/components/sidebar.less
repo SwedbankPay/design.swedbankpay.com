@@ -103,7 +103,6 @@
 
                     .sidebar-secondary-nav {
                         height: 100%;
-                        max-height: 1500px;
                         display: block;
                     }
                 }
@@ -111,7 +110,6 @@
                 .sidebar-secondary-nav {
                     display: none;
                     padding: 2rem;
-                    max-height: 0;
                     width: 18.375rem;
                     overflow: hidden;
                     position: absolute;
@@ -165,15 +163,14 @@
                                 }
 
                                 > ul {
-                                    background-color: @white;
-                                    position: absolute;
                                     visibility: hidden;
+                                    position: absolute;
                                     top: 0;
                                     left: 18.375rem;
-                                    margin-right: 520px;
                                     max-height: 0;
                                     width: 100%;
                                     padding: 2rem;
+                                    background-color: @white;
                                     transition: 0.3s ease-in-out;
                                 }
                             }
@@ -192,20 +189,20 @@
                                 }
 
                                 > ul {
-                                    max-height: 0;
-                                    list-style: none;
-                                    overflow: hidden;
-                                    padding-left: 0;
                                     visibility: hidden;
+                                    max-height: 0;
+                                    padding-left: 0;
+                                    overflow: hidden;
+                                    list-style: none;
                                 }
                             }
 
                             &.active {
                                 > ul {
-                                    left: 0;
                                     visibility: visible;
                                     height: 100%;
                                     max-height: 1500px;
+                                    left: 0;
                                     transition: 0.5s ease-in-out;
                                 }
 

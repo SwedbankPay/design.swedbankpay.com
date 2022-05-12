@@ -8,7 +8,7 @@ exports[`Core: Imagery FocalPoints renders 1`] = `
     Focal points and angles
   </h2>
   <p>
-    As designers and developer we have the power and responsibility to influence users behaviour. In our products we want to use images not only in a decorative way but also to guide user, pointing them directly towards particular messaging or call-to-actions. And using lines and angles, we can guide the eyes of the user.
+    As designers and developer we have the power and responsibility to influence users behavior. In our products we want to use images not only in a decorative way but also to guide user, pointing them directly towards particular messaging or call-to-actions. And using lines and angles, we can guide the eyes of the user.
   </p>
   <p>
     Choose images with a strong focal point for the products main banner – this is the first part of your product users will see, so the imagery should be powerful and relevant to your site. The person looking to the right in this photo (see Figure 1) guides the eye towards to the content to the right of the image.
@@ -38,11 +38,47 @@ exports[`Core: Imagery FocalPoints renders 1`] = `
   <p>
     Using text on images is tricky from several point of views. First of all, the text has to be visible on the images. We recommend you to NOT use text on images if you feel the slightest insecure about if the text is readable or not. 
   </p>
-  <img
-    alt="Image describing what not to do"
-    className="w-100"
-    src="/TEST/img/documentation/imagery/donts-1.svg"
-  />
+  <div
+    className="slab slab-plain slab-border-error"
+  >
+    <h3>
+      Don´t
+    </h3>
+    <div
+      className="row"
+    >
+      <div
+        className="col-12 col-sm-6"
+      >
+        <img
+          alt="Example of text over faces"
+          className="img-fluid"
+          src="/TEST/img/documentation/imagery/dont1.png"
+        />
+        <h4>
+          Cover focal point
+        </h4>
+        <p>
+          Do not change the hue of the images. 
+        </p>
+      </div>
+      <div
+        className="col-12 col-sm-6"
+      >
+        <img
+          alt="Example of text over faces"
+          className="img-fluid"
+          src="/TEST/img/documentation/imagery/dont2.png"
+        />
+        <h4>
+          Use unaccessible text colors
+        </h4>
+        <p>
+          Do not use light text colors on light backgrounds and vice versa.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 `;
 
@@ -119,11 +155,137 @@ exports[`Core: Imagery UsingImagery renders 1`] = `
   <p>
     We use images in many different ways. An image can be used to brighten up interfaces, break up heavy text and also to tell a story of our company, values, and/or target audience. While it’s great to break up text with imagery, don’t over do it! We don’t want the page to read disjointed or the message to be diluted – it’s a fine balance.
   </p>
-  <img
-    alt="Image describing what not to do"
-    className="w-100"
-    src="/TEST/img/documentation/imagery/donts-2.svg"
-  />
+  <div
+    className="slab slab-plain slab-border-error"
+  >
+    <h3>
+      Don´t
+    </h3>
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-6 col-12"
+        key="img/documentation/imagery/dont3.png"
+      >
+        <div
+          className="imagery-misuse-donts-img"
+        >
+          <img
+            alt=""
+            className="img-fluid"
+            src="/TEST/img/documentation/imagery/dont3.png"
+          />
+        </div>
+        <h4>
+          Make black/white
+        </h4>
+        <p>
+          Do not change the hue of the images.
+        </p>
+      </div>
+      <div
+        className="col-sm-6 col-12"
+        key="img/documentation/imagery/dont4.png"
+      >
+        <div
+          className="imagery-misuse-donts-img"
+        >
+          <img
+            alt=""
+            className="img-fluid"
+            src="/TEST/img/documentation/imagery/dont4.png"
+          />
+        </div>
+        <h4>
+          Add effects
+        </h4>
+        <p>
+          Do not add any shadows or other effects to the images.
+        </p>
+      </div>
+      <div
+        className="col-sm-6 col-12"
+        key="img/documentation/imagery/dont5.png"
+      >
+        <div
+          className="imagery-misuse-donts-img"
+        >
+          <img
+            alt=""
+            className="img-fluid"
+            src="/TEST/img/documentation/imagery/dont5.png"
+          />
+        </div>
+        <h4>
+          Alter color
+        </h4>
+        <p>
+          Do not change the image color or tone in any way.
+        </p>
+      </div>
+      <div
+        className="col-sm-6 col-12"
+        key="img/documentation/imagery/dont6.png"
+      >
+        <div
+          className="imagery-misuse-donts-img"
+        >
+          <img
+            alt=""
+            className="w-75"
+            src="/TEST/img/documentation/imagery/dont6.png"
+          />
+        </div>
+        <h4>
+          Flip
+        </h4>
+        <p>
+          Do not flip the images horizontally or vertically.
+        </p>
+      </div>
+      <div
+        className="col-sm-6 col-12"
+        key="img/documentation/imagery/dont7.png"
+      >
+        <div
+          className="imagery-misuse-donts-img"
+        >
+          <img
+            alt=""
+            className="img-fluid"
+            src="/TEST/img/documentation/imagery/dont7.png"
+          />
+        </div>
+        <h4>
+          Rotate
+        </h4>
+        <p>
+          Do not rotate the images.
+        </p>
+      </div>
+      <div
+        className="col-sm-6 col-12"
+        key="img/documentation/imagery/dont8.png"
+      >
+        <div
+          className="imagery-misuse-donts-img"
+        >
+          <img
+            alt=""
+            className="img-fluid"
+            src="/TEST/img/documentation/imagery/dont8.png"
+          />
+        </div>
+        <h4>
+          Resize
+        </h4>
+        <p>
+          Do not distort or wrap the images in any way.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 `;
 

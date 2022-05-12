@@ -736,7 +736,9 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                               }
                               previousTitle="Get Started"
                             >
-                              <ul>
+                              <ul
+                                aria-hidden={true}
+                              >
                                 
 
                                 <li
@@ -902,7 +904,9 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                               }
                               previousTitle="Identity"
                             >
-                              <ul>
+                              <ul
+                                aria-hidden={true}
+                              >
                                 
 
                                 <li

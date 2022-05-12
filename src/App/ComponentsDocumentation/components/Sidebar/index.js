@@ -111,7 +111,7 @@ const RemoveScrollListener = () => (
 
 const DeveloperDocumentation = () => (
     <section>
-        <h2 id="developer-documentation">Developer Documentation</h2>
+        <h2 id="developer-documentation">Developer documentation</h2>
         <section>
             <h3>Infinite depth</h3>
             <section>

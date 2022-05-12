@@ -347,7 +347,7 @@ export const logotypeMisuses = [
         src: "img/documentation/logotype/green_logo.png",
         height: "h-100",
         title: "Alter color",
-        description: "Do not change the logo colour or tone in any way."
+        description: "Do not change the logo color or tone in any way."
     },
     {
         src: "img/documentation/logotype/black_and_white_logo.png",
