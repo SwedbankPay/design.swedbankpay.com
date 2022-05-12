@@ -10,6 +10,7 @@
 ## Fixed
 -   Landing page bug
     -   Containers was overflowing each other in smaller screens
+    
 ## WCAG
 -   Added alt-text on img tags missing it
 -   Added information from pictures into real text (Logotype- and Accessibility documentation)
