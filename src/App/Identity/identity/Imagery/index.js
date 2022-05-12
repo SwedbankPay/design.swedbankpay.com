@@ -1,6 +1,8 @@
 import React from "react";
 import { DocContainer } from "@docutils";
 
+import { imageMisuses } from "./constants";
+
 const basename = process.env.basename;
 const brandTitle = process.env.brandTitle;
 
@@ -32,7 +34,7 @@ const ImageSizes = () => (
 const FocalPoints = () => (
     <section>
         <h2 id="focal-points">Focal points and angles</h2>
-        <p>As designers and developer we have the power and responsibility to influence users behaviour. In our products we want to use images not only in a decorative way but also to guide user, pointing them directly towards particular messaging or call-to-actions. And using lines and angles, we can guide the eyes of the user.</p>
+        <p>As designers and developer we have the power and responsibility to influence users behavior. In our products we want to use images not only in a decorative way but also to guide user, pointing them directly towards particular messaging or call-to-actions. And using lines and angles, we can guide the eyes of the user.</p>
         <p>Choose images with a strong focal point for the products main banner – this is the first part of your product users will see, so the imagery should be powerful and relevant to your site. The person looking to the right in this photo (see Figure 1) guides the eye towards to the content to the right of the image.</p>
 
         <div className="d-flex flex-column align-items-center">
@@ -42,7 +44,21 @@ const FocalPoints = () => (
 
         <h3>Text on images</h3>
         <p>Using text on images is tricky from several point of views. First of all, the text has to be visible on the images. We recommend you to NOT use text on images if you feel the slightest insecure about if the text is readable or not. </p>
-        <img src={`${basename}img/documentation/imagery/donts-1.svg`} className="w-100" alt="Image describing what not to do"/>
+        <div className="slab slab-plain slab-border-error">
+            <h3>Don´t</h3>
+            <div className="row">
+                <div className="col-12 col-sm-6">
+                    <img src={`${basename}img/documentation/imagery/dont1.png`} alt="Example of text over faces" className="img-fluid"/>
+                    <h4>Cover focal point</h4>
+                    <p>Do not change the hue of the images. </p>
+                </div>
+                <div className="col-12 col-sm-6">
+                    <img src={`${basename}img/documentation/imagery/dont2.png`} alt="Example of text over faces" className="img-fluid"/>
+                    <h4>Use unaccessible text colors</h4>
+                    <p>Do not use light text colors on light backgrounds and vice versa.</p>
+                </div>
+            </div>
+        </div>
     </section>
 );
 
@@ -50,7 +66,20 @@ const UsingImagery = () => (
     <section>
         <h2 id="using-imagery">Using imagery in creative ways</h2>
         <p>We use images in many different ways. An image can be used to brighten up interfaces, break up heavy text and also to tell a story of our company, values, and/or target audience. While it’s great to break up text with imagery, don’t over do it! We don’t want the page to read disjointed or the message to be diluted – it’s a fine balance.</p>
-        <img src={`${basename}img/documentation/imagery/donts-2.svg`} className="w-100" alt="Image describing what not to do"/>
+        <div className="slab slab-plain slab-border-error">
+            <h3>Don´t</h3>
+            <div className="row">
+                {imageMisuses.map(({ src, style, title, description }) => (
+                    <div key={src} className="col-sm-6 col-12">
+                        <div className="imagery-misuse-donts-img">
+                            <img src={`${basename}${src}`} className={style} alt=""/>
+                        </div>
+                        <h4>{title}</h4>
+                        <p>{description}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
     </section>
 );
 

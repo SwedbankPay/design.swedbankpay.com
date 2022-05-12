@@ -1,5 +1,10 @@
 export const changeLogs = [
     {
+        version: "9.1.0",
+        title: "Infinite sidebar 😱 and more WCAG",
+        text: "Minor alert! This version supports infinite sidebar levels without breaking the component! Read about the changes on it´s documentation page. We also support anchor-tags for arrows in our pagination component. In addition, some WCAG changes has been made. To see all details, head over to the changelog on GitHub."
+    },
+    {
         version: "9.0.0",
         title: "Accesibility train keeps on rollin’ 🚂",
         text: "Heads up, this one includes breaking changes making the topbar and the tooltip components more accessible. We’re also removing support for tooltips as help text containers in form input components. Instead introducing hint texts and expanding hint text to make information more accessible for everyone. More so, we added a new skip link component that will make navigation easier for keyboard users. The sidebar is improved for keyboard navigation and the the tables now support a caption element. Enjoy! "

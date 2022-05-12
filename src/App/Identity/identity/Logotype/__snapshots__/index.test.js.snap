@@ -681,18 +681,22 @@ exports[`Core: Logotype LogotypeBackgrounds renders 1`] = `
     className="flex"
   >
     <img
+      alt=""
       className="w-25 p-3"
       src="/TEST/img/documentation/logotype/bg-apricot.png"
     />
     <img
+      alt=""
       className="w-25 p-3"
       src="/TEST/img/documentation/logotype/bg-dark-img.png"
     />
     <img
+      alt=""
       className="w-25 p-3"
       src="/TEST/img/documentation/logotype/bg-light-img.png"
     />
     <img
+      alt=""
       className="w-25 p-3"
       src="/TEST/img/documentation/logotype/bg-yellow.png"
     />
@@ -732,6 +736,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-100"
               src="/TEST/img/documentation/logotype/old_logo.png"
             />
@@ -757,6 +762,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-100"
               src="/TEST/img/documentation/logotype/resize_logo.png"
             />
@@ -782,6 +788,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-50"
               src="/TEST/img/documentation/logotype/pay_text.png"
             />
@@ -807,6 +814,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-75"
               src="/TEST/img/documentation/logotype/swedbank_logo.png"
             />
@@ -832,6 +840,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-100"
               src="/TEST/img/documentation/logotype/rotated_logo.png"
             />
@@ -857,6 +866,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-100"
               src="/TEST/img/documentation/logotype/green_logo.png"
             />
@@ -867,7 +877,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             Alter color
           </span>
           <p>
-            Do not change the logo colour or tone in any way.
+            Do not change the logo color or tone in any way.
           </p>
         </div>
       </div>
@@ -882,6 +892,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-100"
               src="/TEST/img/documentation/logotype/black_and_white_logo.png"
             />
@@ -907,6 +918,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-100"
               src="/TEST/img/documentation/logotype/shadowed_logo.png"
             />
@@ -932,6 +944,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-100"
               src="/TEST/img/documentation/logotype/changed_wordmark.png"
             />
@@ -957,6 +970,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
+              alt=""
               className="h-50"
               src="/TEST/img/documentation/logotype/moved_wordmark.png"
             />
@@ -1060,7 +1074,9 @@ exports[`Core: Logotype Overview renders 1`] = `
 `;
 
 exports[`Core: Logotype SpacingZone renders 1`] = `
-<section>
+<section
+  id="spacing-zone-doc"
+>
   <h2
     id="spacing-zone"
   >
@@ -1069,24 +1085,97 @@ exports[`Core: Logotype SpacingZone renders 1`] = `
   <p>
     The spacing zone is the spacing around the logotype that prevents the logo from interfering with other UI elements. The logotype’s spacing zone should always be at least 30% of the coin’s diameter and then rounded up to the closest multiple of 8 (marked as X in the diagram).
   </p>
-  <h3>
-    Measurement example (vertical logotype)
-  </h3>
-  <p>
-    X = spacing zone
-  </p>
-  <img
-    className="logotype-icon-table"
-    src="/TEST/img/documentation/logotype/icon-table.png"
-  />
+  <table
+    className="table table-plain"
+  >
+    <caption>
+      Measurement example for vertical logotype
+    </caption>
+    <thead>
+      <tr>
+        <th
+          scope="col"
+        >
+          Size
+        </th>
+        <th
+          scope="col"
+        >
+          Coin size
+        </th>
+        <th
+          scope="col"
+        >
+          30%
+        </th>
+        <th
+          scope="col"
+        >
+          X
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th
+          scrope="row"
+        >
+          Smallest
+        </th>
+        <td>
+          24 px
+        </td>
+        <td>
+          7.2 px
+        </td>
+        <th>
+          8 px
+        </th>
+      </tr>
+      <tr>
+        <th
+          scrope="row"
+        >
+          Small
+        </th>
+        <td>
+          32 px
+        </td>
+        <td>
+          9.6 px
+        </td>
+        <th>
+          16 px
+        </th>
+      </tr>
+      <tr>
+        <th
+          scrope="row"
+        >
+          Medium
+        </th>
+        <td>
+          40 px
+        </td>
+        <td>
+          12 px
+        </td>
+        <th>
+          16 px
+        </th>
+      </tr>
+    </tbody>
+  </table>
   <div
     className="d-md-flex mt-5"
   >
     <img
+      alt="Vertical measure spacing zones of logotype"
       className="logotype-vertical-measure mr-5"
       src="/TEST/img/documentation/logotype/vertical-measure.png"
     />
     <img
+      alt="Horizontal measure spacing zones of logotype"
       className="logotype-horizontal-measure mt-5"
       src="/TEST/img/documentation/logotype/horizontal-measure.png"
     />

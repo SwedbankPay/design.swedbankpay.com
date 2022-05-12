@@ -95,7 +95,7 @@ class SelectPanel extends Component {
         return (
             <>
                 {this.props.topbarId ?
-                    <div id={this.props.id} className="sidebar dg-sidebar dg-only-style">
+                    <div id={this.props.id} className="sidebar dg-sidebar">
                         {/* A fully functional search box will be added later. */}
                         {/* <SearchBox routes={this.props.routes} /> */}
                         <nav className="sidebar-nav">

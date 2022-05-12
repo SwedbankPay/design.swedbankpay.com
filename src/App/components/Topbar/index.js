@@ -41,7 +41,7 @@ const TopbarMenu = ({ menu, logout, sidebar }) => {
                             <span>{item.name}</span>
                             {"\n"}
                         </a>
-                        {i === 0 && sidebar && <SidebarComponent id="topbar-sidebar" sidebarNavList={SidebarNavList} />}
+                        {i === 0 && sidebar && <SidebarComponent id="topbar-sidebar" navList={SidebarNavList} />}
                     </Fragment>
                 ))}{"\n"}
                 {logout ? <TopbarLogout /> : null}

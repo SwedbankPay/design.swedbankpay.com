@@ -1,54 +1,16 @@
 # Changelog
 
-## [9.0.0] - 02.05.2022
-
-## Breaking changes
--   Tooltip
-
--   Removed support of Tooltips in:
-    -   Inputfields (Replace with hint text and expanding hint text)
-    -   Checkbox (Replace with hint text and expanding hint text)
-    -   Radio buttons (Replace with hint text and expanding hint text)
-    -   Togglebox
-    -   Rangeslider
-
--   Topbar:
-    -   Added nav-container class
+## [9.1.0] - 11.05.2022
 
 ## Changed
--   Topbar documentation
--   Tooltip documentation
--   Input field documentation
--   Radio buttons documentation
--   Togglebox documentation
--   Rangeslider documentation
--   Checkbox documentation
--   Table documentation 
--   Form pattern documentation
+-   Sidebar component and documentation
+    -   Support of infinite levels
+-   Anchor support for pagination arrows
 
-## Added
-
--   Hint text
-    -   Input fields
-    -   Radio buttons
-    -   Checkboxes
-
--   Expanding hint text
-    -   Input fields
-    -   Radio buttons
-    -   Checkboxes
-
--   Skiplink component
-
--   Tables
-    -   Added caption
-
+## Fixed
+-   Landing page bug
+    -   Containers was overflowing each other in smaller screens
+    
 ## WCAG
--   Mobile menu improvements
-
--   Sidebar:
-    -   Outline on navbar
-    -   Possible to tab on all links
-
--   Tooltip:
-    -   More keyboard functions
+-   Added alt-text on img tags missing it
+-   Added information from pictures into real text (Logotype- and Accessibility documentation)

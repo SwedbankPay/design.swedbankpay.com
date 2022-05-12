@@ -387,6 +387,7 @@ exports[`Documentation: Card Overview renders 1`] = `
         </h4>
         When presenting a group of cards, make sure their color match and have the same size and text length
         <img
+          alt="Card and color group example, standard view"
           className="w-100 mt-4 mb-4"
           src="/TEST/img/documentation/cards/do-cards.png"
         />
@@ -403,6 +404,7 @@ exports[`Documentation: Card Overview renders 1`] = `
         </h4>
         Avoid miss-match colors, different sizes and length on text in order to present a clean view
         <img
+          alt="Cards miss-match example, standard view"
           className="w-100 mt-4 mb-4"
           src="/TEST/img/documentation/cards/dont-cards.png"
         />
@@ -423,6 +425,7 @@ exports[`Documentation: Card Overview renders 1`] = `
         </h4>
         When presenting a group of cards, make sure they match visually. Try keeping it the same text length and to one row when possible.
         <img
+          alt="Cards length matching example, wide view"
           className="w-100 mt-4 mb-4"
           src="/TEST/img/documentation/cards/do-wide-cards.png"
         />
@@ -439,6 +442,7 @@ exports[`Documentation: Card Overview renders 1`] = `
         </h4>
         Avoid miss-match colors, different sizes and length on text in order to present a clean view. When using numbers make sure the numbering is sequenced and follows the correct order.
         <img
+          alt="Cards miss-match example, wide view"
           className="w-100 mt-4 mb-4"
           src="/TEST/img/documentation/cards/dont-wide-cards.png"
         />

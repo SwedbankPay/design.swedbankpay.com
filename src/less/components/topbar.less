@@ -144,10 +144,14 @@
         .sidebar {
             display: none;
             position: relative;
-            height: auto;
+            height: 100%;
             margin-top: 0;
             top: 0;
             padding-left: 1rem;
+
+            &.has-secondary-nav {
+                padding-right: 0;
+            }
 
             &.sidebar-topbar-sticky {
                 top: @topbar-height;

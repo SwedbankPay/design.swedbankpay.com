@@ -280,7 +280,7 @@
                 .dg-front-page-container,
                 .dg-changelog-container {
                     padding-top: 1rem;
-                    height: 91vh; /* Eliminate whitespace when topbar is viewed */
+                    height: auto;
 
                     header {
                         .dg-title-small {
@@ -893,6 +893,15 @@
         }
     }
 
+    .imagery-misuse-donts-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 9.75rem;
+        padding: 2rem;
+    }
+
     .caption-text {
         margin-top: 1rem;
         font-style: italic;
@@ -1372,6 +1381,21 @@
                 }
             }
         }
+
+        #spacing-zone-doc {
+            table {
+                &.table-plain {
+                    tbody,
+                    thead {
+                        tr {
+                            :last-child {
+                                background-color: #fdf0d5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     #accordion-doc {
@@ -1423,6 +1447,30 @@
             + main {
                 height: 10rem;
                 background-color: @light-gray;
+            }
+        }
+    }
+
+    #sidebar-doc {
+        #sidebar-overview {
+            figure {
+                .code-view-table {
+                    max-height: 35rem;
+                    overflow: auto;
+                }
+            }
+        }
+
+        .component-preview-content {
+            #dg-sidebar {
+                &.sidebar {
+                    position: relative;
+                    max-height: 45rem;
+                }
+
+                ~ main {
+                    min-height: auto;
+                }
             }
         }
     }

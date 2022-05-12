@@ -21,14 +21,14 @@ const Overview = () => (
                 <div className="slab slab-plain slab-border-success h-100">
                     <h4>Do</h4>
                     When presenting a group of cards, make sure their color match and have the same size and text length
-                    <img src={`${basename}img/documentation/cards/do-cards.png`} className="w-100 mt-4 mb-4"/>
+                    <img alt="Card and color group example, standard view" src={`${basename}img/documentation/cards/do-cards.png`} className="w-100 mt-4 mb-4"/>
                 </div>
             </div>
             <div className="col-xl-6 mb-4">
                 <div className="slab slab-plain slab-border-error h-100">
                     <h4>{"Don't"}</h4>
                     Avoid miss-match colors, different sizes and length on text in order to present a clean view
-                    <img src={`${basename}img/documentation/cards/dont-cards.png`} className="w-100 mt-4 mb-4"/>
+                    <img alt="Cards miss-match example, standard view" src={`${basename}img/documentation/cards/dont-cards.png`} className="w-100 mt-4 mb-4"/>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@ const Overview = () => (
                 <div className="slab slab-plain slab-border-success h-100">
                     <h4>Do</h4>
                     When presenting a group of cards, make sure they match visually. Try keeping it the same text length and to one row when possible.
-                    <img src={`${basename}img/documentation/cards/do-wide-cards.png`} className="w-100 mt-4 mb-4"/>
+                    <img alt="Cards length matching example, wide view" src={`${basename}img/documentation/cards/do-wide-cards.png`} className="w-100 mt-4 mb-4"/>
                 </div>
             </div>
             <div className="col-xl-6 mb-4">
@@ -45,7 +45,7 @@ const Overview = () => (
                     <h4>{"Don't"}</h4>
                     Avoid miss-match colors, different sizes and length on text in order to present a clean view.
                     When using numbers make sure the numbering is sequenced and follows the correct order.
-                    <img src={`${basename}img/documentation/cards/dont-wide-cards.png`} className="w-100 mt-4 mb-4"/>
+                    <img alt="Cards miss-match example, wide view" src={`${basename}img/documentation/cards/dont-wide-cards.png`} className="w-100 mt-4 mb-4"/>
                 </div>
             </div>
         </div>
