@@ -12,13 +12,15 @@ const Intro = () => (
     <section>
         <p className="lead">At {brandTitle} we value accessibility. Our products are meant to be used by people no matter of their abilities and therefor we strive to be WCAG (Web Content Accessibility Guidelines) compliant. We’re currently working on our accessibility awareness and meeting the terms of the  accessibility laws in Norway and Sweden. </p>
         <h2>What is accessibility</h2>
-        <p>Accessibility ties back to our values <i>simple</i> and <i>caring</i>. About 15 percent of the western world’s population is living with a disability of some kind. This translates to over 1 billion people, and includes visual, auditory, physical, speech, cognitive, and neurological disabilities. </p>
+        <p>Accessibility ties back to our core values <i>simple</i> and <i>caring</i>. About 15 percent of the world’s population is living with a disability of some kind (WHO). This translates to over 1 billion people, and includes visual, auditory, physical, speech, cognitive, and neurological disabilities. </p>
         <p>Microsoft defines it like this:</p>
         <ol>
             <li>The qualities that make an experience open to all.</li>
             <li>A professional discipline aimed at achieving No. 1.</li>
         </ol>
-        <p>So what do we mean when we talk about disabilities and impairments? Well, a disability is a limitation when interacting in society in accordance to how society is built. It can be permanent, temporary or situational –permanent could be someone with only one arm, temporary someone with a broken arm, and situational a new parent (often carrying the baby in one arm). So, when we design for permanent impairment and disabilities we automatically include people with both temporary and situational impairments as well.</p>
+        <p>So what do we mean when we talk about disabilities and impairments? Well, a disability is a limitation when interacting in society in accordance to how society is built. It can be permanent, temporary or situational.
+        Permanent disabilities include persons with disabilities like having only one arm or being permanently blind. The temporary category includes disabilities that will heal or be fixed over time, like having a broken arm. Situational disability is a bit difficult to explain, and is easily overlooked, but they are when persons get into situations where they need similar accommodations as someone with a permanent or temporary disability. For example, carrying a child with one arm.</p>
+        <p>So, when we design for permanent impairment and disabilities we automatically include people with both temporary and situational impairments as well.</p>
 
         <div className="d-flex flex-column align-items-center mb-4">
             <img src={`${basename}img/documentation/accessibility/impairments.png`} className="w-100" alt="Illustration of impairments"/>
