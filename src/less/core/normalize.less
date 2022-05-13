@@ -1,27 +1,84 @@
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 
-/* Document
-   ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
+// Body reset
 
 html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 100%;
+    scroll-behavior: smooth;
+
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
+
+    @media (min-width: @screen-lg-max) {
+        scroll-snap-type: y mandatory;
+    }
 }
 
-/* Sections
-   ========================================================================== */
-
-/**
- * Remove the margin in all browsers.
- */
-
 body {
+    font-family: @font-stack;
+    font-size: @base-font-size;
+    line-height: 1.5;
+    color: @brand-secondary;
+    background-color: @white;
+    height: 100%;
     margin: 0;
+
+    &.no-vscroll {
+        overflow-x: hidden;
+    }
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+
+    &.has-vscroll {
+        overflow: hidden;
+
+        @media screen and (min-width: @screen-sm-min) {
+            padding-right: 17px;
+
+            .dialog {
+                padding-right: 17px;
+            }
+
+            .topbar {
+                padding: 0 20px;
+            }
+        }
+    }
+
+    &.intent-mouse {
+        :focus {
+            outline: 0;
+        }
+    }
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+// Images
+
+img {
+    vertical-align: middle;
+}
+
+
+// Horizontal rules
+
+hr {
+    margin-top: @base-margin;
+    margin-bottom: @base-margin;
+    border: 0;
+    border-top: 1px solid @brand-secondary-light-3;
 }
 
 /**
