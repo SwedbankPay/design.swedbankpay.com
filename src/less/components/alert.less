@@ -8,10 +8,10 @@
 }
 
 .alert {
-    padding: @base-padding;
+    padding: 1rem;
     position: relative;
     margin-top: 0;
-    margin-bottom: @base-margin;
+    margin-bottom: 1rem;
     display: flex;
     color: @black;
     border-radius: 0.25rem;
@@ -42,21 +42,4 @@
 
         .close-button();
     }
-
-    //Will be restored at a later stage
-
-    /*
-    &.alert-global {
-        color: @white;
-        border-radius: 0;
-        margin-bottom: 0;
-
-        &.alert-warning {
-            .alert-variant(@white, @brand-error);
-        }
-
-        &.alert-informative {
-            .alert-variant(@white, @brand-info);
-        }
-    } */
 }
