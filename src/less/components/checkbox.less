@@ -110,14 +110,10 @@
         .help-block[data-error] {
             color: @brand-error;
 
-            &:after {
-                content: attr(data-error);
-            }
-        }
-
-        input[type="checkbox"] {
-            + label:after {
-                border-color: @brand-error;
+            input[type="checkbox"] {
+                + label:after {
+                    border-color: @brand-error;
+                }
             }
         }
     }
@@ -127,18 +123,19 @@ fieldset {
     &.checkbox-group {
         legend {
             position: relative;
-            font-weight: bold;
             border: none;
             margin-bottom: 0;
-
-            .help-icon {
-                transform: translateY(25%);
-                margin-left: 0;
-            }
         }
 
         span {
             font-weight: normal;
+            margin-left: 0.2rem;
+        }
+
+        &.has-error {
+            input[type="checkbox"] + label:after {
+                border-color: @brand-error;
+            }
         }
     }
 
@@ -154,7 +151,7 @@ fieldset {
         }
 
         input[type="checkbox"] {
-            + label:after {
+            + label:before {
                 border-color: @brand-error;
             }
         }
