@@ -1,9 +1,11 @@
+@import "../components/form.less";
+
 @checkbox-checked-color:                    @brand-secondary;
 
 @checkbox-height:                           1.375rem;
 @checkbox-width:                            @checkbox-height; /* This also controls togglebox */
 
-@checkbox-label-padding:                    (@base-padding / 5);
+@checkbox-label-padding:                    (1rem / 5);
 
 @checkbox-checkmark-height:                 2px;
 @checkbox-checkmark-width:                  2px;
@@ -14,7 +16,7 @@
     flex-direction: column;
 
     &:not(:last-child) {
-        margin-bottom: @base-margin;
+        margin-bottom: 1rem;
     }
 
     label {
@@ -28,7 +30,7 @@
 
     input[type="checkbox"] {
         position: absolute;
-        margin-right: @base-margin;
+        margin-right: 1rem;
         opacity: 0;
 
         + label:after {
