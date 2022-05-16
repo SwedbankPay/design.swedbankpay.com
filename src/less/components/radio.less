@@ -1,10 +1,12 @@
+@import "./form.less";
+
 @radio-circle-height:                       10px;
 @radio-circle-width:                        10px;
 
 @radio-height:                           1.375rem;
 @radio-width:                            @radio-height;
 
-@radio-label-padding:                    (@base-padding / 5);
+@radio-label-padding:                    (1rem / 5);
 
 .radio {
     position: relative;
@@ -12,7 +14,7 @@
     align-items: center;
 
     &:not(:last-child) {
-        margin-bottom: @base-margin;
+        margin-bottom: 1rem;
     }
 
     label {
@@ -20,7 +22,7 @@
         align-items: center;
         margin: 0;
         margin-left: 1rem;
-        padding-left: @checkbox-label-padding;
+        padding-left: (1rem / 5);
         min-height: 1.5rem;
     }
 
