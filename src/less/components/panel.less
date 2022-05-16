@@ -1,4 +1,4 @@
-@panel-default-border-color:                @border-color;
+@panel-default-border-color: @brand-secondary-light-3;
 
 .panel-variant(@bg-color, @border-color) {
     > header {
@@ -13,8 +13,8 @@
 }
 
 .panel {
-    margin-top: @base-margin;
-    margin-bottom: @base-margin;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     background-color: transparent;
 
     /* Contextual variations */
@@ -74,7 +74,7 @@
     }
 
     .panel-table {
-        border-bottom: 1px solid @table-border-color;
+        border-bottom: 1px solid @brand-secondary-light-3;
 
         .table {
             margin-bottom: 0;
@@ -83,11 +83,11 @@
             tbody {
                 tr {
                     > :first-child {
-                        padding-left: @base-padding-xl;
+                        padding-left: 2rem;
                     }
 
                     > :last-child {
-                        padding-right: @base-padding-xl;
+                        padding-right: 2rem;
                     }
                 }
             }
@@ -100,8 +100,8 @@
 
     // Optional heading
     > header {
-        padding: @base-padding;
-        padding-left: @base-padding-xl;
+        padding: 1rem;
+        padding-left: 2rem;
         border-bottom: 1px solid @panel-default-border-color;
     }
 
