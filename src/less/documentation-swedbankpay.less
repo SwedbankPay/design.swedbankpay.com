@@ -675,7 +675,7 @@
                         left: 0;
                         top: 0;
                         background-color: fade(@black, 50%);
-                        z-index: @zindex-tabs;
+                        z-index: 100;
                     }
                 }
             }
@@ -806,7 +806,7 @@
                 min-width: 0;
                 border-left: 1px solid @brand-secondary-light-3;
                 transition: min-width 1s ease-in-out;
-                z-index: calc(@zindex-tabs + 2);
+                z-index: calc(100 + 2);
 
                 &.active {
                     display: block;
