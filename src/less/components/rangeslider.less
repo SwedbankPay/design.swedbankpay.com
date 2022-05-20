@@ -196,5 +196,27 @@
             display: none;
         }
     }
+
+    //cursor: not-allowed;
+
+    &::-webkit-slider-thumb {
+        .slider-thumb(@input-checked-bg-disabled, @input-bg-disabled);
+    }
+
+    &::-moz-range-thumb {
+        .slider-thumb(@input-checked-bg-disabled, @input-bg-disabled);
+    }
+
+    &::-ms-thumb {
+        .slider-thumb(@input-checked-bg-disabled, @input-bg-disabled);
+    }
+
+    + .value-label {
+        background: @input-checked-bg-disabled;
+
+        &:after {
+            border-top-color: @input-checked-bg-disabled !important; /* stylelint-disable-line declaration-no-important */
+        }
+    }
 }
 
