@@ -69,15 +69,24 @@
         text-align: start;
 
         .expandable-headline {
-            .h3();
+            font-size: 1.125rem;
+            font-family: @brand-headline;
+            line-height: 1.5rem;
+            font-weight: @font-weight-normal;
+
+            .material-icons {
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
 
             margin: 0;
         }
 
         .expandable-subtitle {
             font-family: @font-stack;
-
-            .small();
+            font-size: 0.875rem;
+            font-weight: @font-weight-normal;
+            line-height: 1rem;
         }
 
         &:before {
