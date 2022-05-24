@@ -31,7 +31,7 @@ class Sheet {
         this.requireAction = el.dataset.requireAction;
         this.id = el.id;
         this.closeIcon = el.querySelector(SELECTORS.CLOSEICON);
-        this.isOpen = el.classList.contains("sheet-open");
+        this.isOpen = el.style.display === "block";
         this.openBtns = this.id ? document.querySelectorAll(`[data-sheet-open=${this.id}]`) : null;
         this.closeBtns = this.id ? document.querySelectorAll(`[data-sheet-close=${this.id}]`) : null;
 
@@ -40,7 +40,6 @@ class Sheet {
         }
 
         if (this.isOpen) {
-            this._el.classList.add("d-block");
             document.body.classList.add("sheet-open");
         }
 
@@ -119,7 +118,7 @@ class Sheet {
         this.focusedElemBeforeSheet = document.activeElement;
         handleScrollbar();
         this.isOpen = true;
-        this._el.classList.add("d-block");
+        this._el.style.display = "block";
         document.body.classList.add("sheet-open");
         this._el.classList.add("sheet-open");
 
@@ -137,7 +136,7 @@ class Sheet {
         this._el.classList.add("sheet-closing");
         setTimeout(() => {
             this._el.classList.remove("sheet-closing");
-            this._el.classList.remove("d-block");
+            this._el.style.display = "none";
         }, 300);
 
         const toastContainer = document.querySelector("#toast-container");
