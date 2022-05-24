@@ -1,4 +1,5 @@
 @import "./form.less";
+@import "../global.less";
 
 @radio-circle-height:                       10px;
 @radio-circle-width:                        10px;
@@ -88,11 +89,15 @@ fieldset {
             font-weight: normal;
             margin-left: 0.2rem;
         }
+    }
 
-        &.has-error {
-            input[type="radio"] + label:before {
-                border-color: @brand-error;
-            }
+    &.has-error {
+        input[type="radio"] + label:before {
+            border-color: @brand-error;
+        }
+
+        .help-block {
+            color: @brand-error;
         }
     }
 
