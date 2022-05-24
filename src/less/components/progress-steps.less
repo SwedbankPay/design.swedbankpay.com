@@ -88,7 +88,7 @@
 
                 content: "";
                 box-sizing: border-box;
-                z-index: @zindex-steps-circle;
+                z-index: 10;
                 border-radius: 50%;
                 border: 2px solid @brand-primary;
             }
@@ -110,7 +110,7 @@
 
             content: "";
             box-sizing: border-box;
-            z-index: @zindex-steps-circle;
+            z-index: 10;
             border-radius: 50%;
             border: 2px solid @brand-bg-gray;
             background-color: @brand-bg-white;
@@ -120,7 +120,7 @@
             .circle-base();
 
             color: @brand-secondary;
-            z-index: @zindex-steps-icon;
+            z-index: 15;
             line-height: @circle-size;
             text-align: center;
             font-size: 1.1rem;
@@ -130,7 +130,7 @@
             .circle-base();
 
             font-family: @brand-headline;
-            z-index: @zindex-steps-icon;
+            z-index: 15;
             line-height: @circle-size;
             text-align: center;
             font-size: 1rem;
@@ -141,7 +141,7 @@
             content: "";
             position: absolute;
             background-color: @brand-bg-gray;
-            z-index: @zindex-steps-line;
+            z-index: 5;
             height: @line-width;
 
             /* Prevents small render gaps on certain resolutions */
