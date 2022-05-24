@@ -1,4 +1,5 @@
 @import "../global.less";
+@import "./button.less";
 
 @toast-height:                              3.5rem;
 @toast-color:                               @white;
@@ -8,7 +9,7 @@
 #toast-container {
     display: block;
     position: fixed;
-    z-index: @zindex-toast;
+    z-index: 10000;
     max-width: 21.4rem;
     top: 1rem;
     left: 0;
