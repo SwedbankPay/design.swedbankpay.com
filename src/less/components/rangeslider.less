@@ -1,3 +1,4 @@
+@import "../global.less";
 @import "./form.less";
 
 @range-height:                              (1.375rem / 4);
@@ -119,6 +120,11 @@
     background: transparent;
     margin: 1rem 0;
     .slider-color(@brand-secondary);
+
+    .information-container {
+        display: flex;
+        justify-content: space-between;
+    }
 
     .rangeslider-label {
         margin-bottom: 0;
