@@ -1,4 +1,4 @@
-@import "../global.less";
+@import "./button.less";
 
 @topbar-height:                             80px;
 @topbar-border-width:                       0.5rem;
@@ -12,7 +12,7 @@
     margin: 0 auto;
     height: @topbar-height;
     width: 100%;
-    z-index: @zindex-topbar;
+    z-index: 550;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,7 +145,7 @@
         right: 0;
         width: 100%;
         height: calc(100vh - (@topbar-height + @topbar-border-width - 8px));
-        z-index: @zindex-sheet-backdrop;
+        z-index: 3000;
         background: transparent;
         display: none;
 
@@ -420,7 +420,7 @@
             background-color: @white;
             overflow-x: hidden;
             overflow-y: auto;
-            z-index: @zindex-topbar-nav;
+            z-index: 2000;
             padding: 0;
             align-items: center;
             transform: translateX(-100%);
