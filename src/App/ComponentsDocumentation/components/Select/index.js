@@ -5,6 +5,7 @@ import InputGroup from "@components/InputGroup";
 import { selectOverview, whenToUse } from "./constants";
 import CodeTags from "@components/CodeTags";
 import { datepicker } from "@src/scripts/main";
+import AlertComponent from "@components/Alert";
 
 const WhenToUse = () => (
     <>
@@ -38,6 +39,8 @@ const Overview = () => (
     <section>
         <h2 id="overview">Overview</h2>
         <ComponentPreview language="html" codeFigure showCasePanel showCasePanelAdvanced={selectOverview} />
+
+        <AlertComponent id="input-group-info" type="informative" text={<p><b>Styling: </b>The Select component is part of the input group. Therefore, be sure to import the input-group style file to give your Select the appropriate styling.</p>} icon="info"/>
 
         {/*
             Will be back in a later release

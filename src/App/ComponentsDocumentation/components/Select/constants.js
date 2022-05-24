@@ -26,7 +26,7 @@ export const selectOverview = {
                                 name: "Hint text",
                                 value: {
                                     helpBlock: "Hint text",
-                                    hintTextId: "select-hint-text-example",
+                                    hintTextId: "select-hint-text-example"
                                 }
                             },
                             {
@@ -101,7 +101,7 @@ export const whenToUse = {
             selectOptions: [1, 2, 3, 4],
             placeholder: "Select number",
             label: "Number of drinks",
-            text: <p className="mb-4">Instead of using a dropdown input that will force the user to choose from a set of predefined options it is sometimes better to use an <Link to="/components/input-field">input field</Link> where the user can type their answer .</p>
+            text: <p className="mb-4">Instead of using a dropdown input that will force the user to choose from a set of predefined options it is sometimes better to use an <Link to="/components/input-field">input field</Link> where the user can type their answer.</p>
         }
     ]
 };
