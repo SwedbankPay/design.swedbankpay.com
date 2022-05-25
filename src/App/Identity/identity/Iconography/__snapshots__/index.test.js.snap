@@ -859,7 +859,7 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
   >
     <i
       aria-hidden="true"
-      className="material-icons"
+      className="material-icons material-icons-outlined"
     >
       insert_invitation
     </i>
@@ -867,7 +867,7 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
 
     <i
       aria-hidden="true"
-      className="material-icons"
+      className="material-icons material-icons-outlined"
     >
       cake
     </i>
@@ -875,7 +875,7 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
 
     <i
       aria-hidden="true"
-      className="material-icons"
+      className="material-icons material-icons-outlined"
     >
       mood
     </i>
@@ -883,7 +883,7 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
 
     <i
       aria-hidden="true"
-      className="material-icons"
+      className="material-icons material-icons-outlined"
     >
       thumb_up_alt
     </i>
@@ -891,7 +891,7 @@ exports[`Core: Iconography MaterialIcons renders 1`] = `
 
     <i
       aria-hidden="true"
-      className="material-icons"
+      className="material-icons material-icons-outlined"
     >
       whatshot
     </i>
