@@ -13,6 +13,7 @@
 @light-gray:                                #F4F4F4;
 @white:                                     #ffffff;
 @soft-brown:                                #707070;
+@medium-brown:                              #72605e;
 
 /* Main Brand Color Variants */
 @brand-primary:                             #2A9D3F;
@@ -106,3 +107,15 @@
 @tab-link:                                  @help-block-text;
 @radiobutton-border:                        @help-block-text;
 @checkbox-checked-color:                    @brand-secondary-light-2;
+
+html,
+body {
+    font-family: @brand-default;
+
+    p {
+        &.lead {
+            font-family: @brand-black;
+            font-weight: 500;
+        }
+    }
+}
