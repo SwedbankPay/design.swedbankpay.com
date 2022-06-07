@@ -1,10 +1,9 @@
-[data-tooltip] {
+.tooltip {
     &:before {
         border-color: @brand-secondary transparent transparent transparent;
     }
 
-    .tooltip,
-    &:after {
+    [role="tooltip"] {
         background-color: @brand-secondary;
         color: @white;
     }
