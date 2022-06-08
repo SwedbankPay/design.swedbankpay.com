@@ -196,8 +196,6 @@ describe("scripts: dialog", () => {
         it("opens dialog when calling dialog.open", () => {
             ReactDOM.render(<Dialog id="demo-dialog" />, div);
 
-            const renderedDialog = document.querySelector(".dialog");
-
             expect(document.body.classList).not.toContain("dialog-open");
 
             dialog.init();
@@ -211,8 +209,6 @@ describe("scripts: dialog", () => {
         it("does not open dialog when calling dialog.open with wrong id and prints warn to console", () => {
             console.warn = jest.fn();
             ReactDOM.render(<Dialog id="demo-dialog" />, div);
-
-            const renderedDialog = document.querySelector(".dialog");
 
             dialog.init();
             expect(document.body.classList).not.toContain("dialog-open");
