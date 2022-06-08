@@ -89,9 +89,9 @@ export default class NavMenu {
 
         window.removeEventListener("resize", this.resizeEvent, { passive: true });
         this.navMenuElement.classList.remove("topbar-nav-open");
-        this.navMenuElement.classList.remove("d-block");
-        this.btnElement.classList.remove("d-none");
-        this.closeNavIcon.classList.remove("d-flex");
+        this.navMenuElement.style.display = "none";
+        this.btnElement.style.display = "flex";
+        this.closeNavIcon.style.display = "none";
     }
 
     _setFirstTabStop (index) {
@@ -107,9 +107,9 @@ export default class NavMenu {
         this.resizeEvent = this._resizeListener.bind(this);
         window.addEventListener("resize", this.resizeEvent, { passive: true });
         this.navMenuElement.classList.add("topbar-nav-open");
-        this.navMenuElement.classList.add("d-block");
-        this.btnElement.classList.add("d-none");
-        this.closeNavIcon.classList.add("d-flex");
+        this.navMenuElement.style.display = "block";
+        this.btnElement.style.display = "none";
+        this.closeNavIcon.style.display = "flex";
 
         this._setFirstTabStop(0);
         this.firstTabStop.focus();
@@ -126,9 +126,9 @@ export default class NavMenu {
             this.focusedElementBeforeNav ? this.focusedElemBeforeNav.focus() : null;
 
             this.navMenuElement.classList.remove("topbar-nav-closing");
-            this.navMenuElement.classList.remove("d-block");
-            this.btnElement.classList.remove("d-none");
-            this.closeNavIcon.classList.remove("d-flex");
+            this.navMenuElement.style.display = "none";
+            this.btnElement.style.display = "flex";
+            this.closeNavIcon.style.display = "none";
         }, 300);
 
         this._setFirstTabStop(0);
