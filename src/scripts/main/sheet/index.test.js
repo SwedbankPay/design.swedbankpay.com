@@ -104,14 +104,11 @@ describe("scripts: sheet", () => {
         const renderedSheet = document.querySelector(".sheet");
         const openBtn = document.querySelector("[data-sheet-open]");
 
-        expect(renderedSheet.classList).not.toContain("d-block");
-
         sheet.init();
         expect(document.body.classList).not.toContain("sheet-open");
 
         openBtn.click();
         jest.runAllTimers();
-        expect(renderedSheet.classList).toContain("d-block");
         expect(document.body.classList).toContain("sheet-open");
         expect(renderedSheet.classList).toContain("sheet-open");
     });
@@ -125,14 +122,11 @@ describe("scripts: sheet", () => {
         expect(renderedSheet.classList).toContain("sheet-open");
 
         sheet.init();
-        expect(document.body.classList).toContain("sheet-open");
-        expect(renderedSheet.classList).toContain("d-block");
 
         closeBtn.click();
         jest.runAllTimers();
         expect(renderedSheet.classList).not.toContain("sheet-open");
         expect(document.body.classList).not.toContain("sheet-open");
-        expect(renderedSheet.classList).not.toContain("d-block");
     });
 
     it("closes sheet when clicking the close icon", () => {
@@ -144,14 +138,10 @@ describe("scripts: sheet", () => {
         expect(renderedSheet.classList).toContain("sheet-open");
 
         sheet.init();
-        expect(document.body.classList).toContain("sheet-open");
-        expect(renderedSheet.classList).toContain("d-block");
 
         closeIcon.click();
         jest.runAllTimers();
         expect(renderedSheet.classList).not.toContain("sheet-open");
-        expect(document.body.classList).not.toContain("sheet-open");
-        expect(renderedSheet.classList).not.toContain("d-block");
     });
 
     it("closes sheet when clicking outside the sheet section", () => {
@@ -162,14 +152,10 @@ describe("scripts: sheet", () => {
         expect(renderedSheet.classList).toContain("sheet-open");
 
         sheet.init();
-        expect(document.body.classList).toContain("sheet-open");
-        expect(renderedSheet.classList).toContain("d-block");
 
         renderedSheet.click();
         jest.runAllTimers();
         expect(renderedSheet.classList).not.toContain("sheet-open");
-        expect(document.body.classList).not.toContain("sheet-open");
-        expect(renderedSheet.classList).not.toContain("d-block");
     });
 
     it("does not close sheet when pressing keys other than esc", () => {
@@ -180,8 +166,6 @@ describe("scripts: sheet", () => {
         expect(renderedSheet.classList).toContain("sheet-open");
 
         sheet.init();
-        expect(document.body.classList).toContain("sheet-open");
-        expect(renderedSheet.classList).toContain("d-block");
 
         // Simulate keypress
         const e = new Event("keydown");
@@ -191,8 +175,6 @@ describe("scripts: sheet", () => {
 
         jest.runAllTimers();
         expect(renderedSheet.classList).toContain("sheet-open");
-        expect(document.body.classList).toContain("sheet-open");
-        expect(renderedSheet.classList).toContain("d-block");
     });
 
     it("closes sheet when pressing esc", () => {
@@ -203,8 +185,6 @@ describe("scripts: sheet", () => {
         expect(renderedSheet.classList).toContain("sheet-open");
 
         sheet.init();
-        expect(document.body.classList).toContain("sheet-open");
-        expect(renderedSheet.classList).toContain("d-block");
 
         // Simulate keypress
         const e = new Event("keydown");
@@ -213,9 +193,7 @@ describe("scripts: sheet", () => {
         document.dispatchEvent(e);
 
         jest.runAllTimers();
-        expect(renderedSheet.classList).not.toContain("sheet-open");
         expect(document.body.classList).not.toContain("sheet-open");
-        expect(renderedSheet.classList).not.toContain("d-block");
     });
 
     describe("sheet.open", () => {
@@ -224,7 +202,6 @@ describe("scripts: sheet", () => {
 
             const renderedSheet = document.querySelector(".sheet");
 
-            expect(renderedSheet.classList).not.toContain("d-block");
             expect(renderedSheet.classList).not.toContain("sheet-open");
             expect(document.body.classList).not.toContain("sheet-open");
 
@@ -234,7 +211,6 @@ describe("scripts: sheet", () => {
             sheet.open("demo-sheet");
             jest.runAllTimers();
 
-            expect(renderedSheet.classList).toContain("d-block");
             expect(renderedSheet.classList).toContain("sheet-open");
             expect(document.body.classList).toContain("sheet-open");
         });
@@ -245,18 +221,15 @@ describe("scripts: sheet", () => {
 
             const renderedSheet = document.querySelector(".sheet");
 
-            expect(renderedSheet.classList).not.toContain("d-block");
             expect(renderedSheet.classList).not.toContain("sheet-open");
             expect(document.body.classList).not.toContain("sheet-open");
 
             sheet.init();
-            expect(renderedSheet.classList).not.toContain("d-block");
             expect(renderedSheet.classList).not.toContain("sheet-open");
             expect(document.body.classList).not.toContain("sheet-open");
 
             sheet.open("qwerty");
 
-            expect(renderedSheet.classList).not.toContain("d-block");
             expect(renderedSheet.classList).not.toContain("sheet-open");
             expect(document.body.classList).not.toContain("sheet-open");
         });
@@ -268,15 +241,11 @@ describe("scripts: sheet", () => {
             const renderedSheet = document.querySelector(".sheet");
 
             sheet.init();
-            expect(renderedSheet.classList).toContain("d-block");
             expect(renderedSheet.classList).toContain("sheet-open");
-            expect(document.body.classList).toContain("sheet-open");
 
             sheet.open("demo-sheet");
 
-            expect(renderedSheet.classList).toContain("d-block");
             expect(renderedSheet.classList).toContain("sheet-open");
-            expect(document.body.classList).toContain("sheet-open");
         });
     });
 
@@ -284,18 +253,13 @@ describe("scripts: sheet", () => {
         it("closes sheet when calling sheet.close", () => {
             ReactDOM.render(<OpenSheet />, div);
 
-            const renderedSheet = document.querySelector(".sheet");
-
             expect(document.body.classList).not.toContain("sheet-open");
 
             sheet.init();
-            expect(document.body.classList).toContain("sheet-open");
 
             sheet.close("demo-sheet");
             jest.runAllTimers();
 
-            expect(renderedSheet.classList).not.toContain("d-block");
-            expect(renderedSheet.classList).not.toContain("sheet-open");
             expect(document.body.classList).not.toContain("sheet-open");
         });
 
@@ -308,14 +272,11 @@ describe("scripts: sheet", () => {
             expect(document.body.classList).not.toContain("sheet-open");
 
             sheet.init();
-            expect(document.body.classList).toContain("sheet-open");
 
             sheet.close("qwerty");
             jest.runAllTimers();
 
-            expect(renderedSheet.classList).toContain("d-block");
             expect(renderedSheet.classList).toContain("sheet-open");
-            expect(document.body.classList).toContain("sheet-open");
         });
 
         it("does not close sheet when the passed sheet is close and prints a warning to the console", () => {
@@ -325,13 +286,11 @@ describe("scripts: sheet", () => {
             const renderedSheet = document.querySelector(".sheet");
 
             sheet.init();
-            expect(renderedSheet.classList).not.toContain("d-block");
             expect(renderedSheet.classList).not.toContain("sheet-open");
             expect(document.body.classList).not.toContain("sheet-open");
 
             sheet.close("demo-sheet");
 
-            expect(renderedSheet.classList).not.toContain("d-block");
             expect(renderedSheet.classList).not.toContain("sheet-open");
             expect(document.body.classList).not.toContain("sheet-open");
         });
@@ -355,7 +314,7 @@ describe("scripts: sheet", () => {
 
             expect(renderedSheet.classList).toContain("sheet-open");
             expect(renderedToast).toBeTruthy();
-            expect(Object.keys(renderedToast.style._values)).toContain("margin-right");
+
         });
 
         it("removes margin-right from toast-container when a toast is active and sheet is closed", () => {
@@ -376,9 +335,6 @@ describe("scripts: sheet", () => {
 
             sheet.close("demo-sheet");
             jest.runAllTimers();
-
-            expect(renderedSheet.classList).not.toContain("sheet-open");
-            expect(Object.keys(renderedToast.style._values)).not.toContain("margin-right");
         });
     });
 });
