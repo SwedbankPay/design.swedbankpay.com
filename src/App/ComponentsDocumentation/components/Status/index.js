@@ -20,13 +20,13 @@ const Overview = () => (
                     <span className="status status-success">Success</span>
                 </li>
                 <li>
-                    <span className="status status-warning">Mild Warning</span>
-                </li>
-                <li>
-                    <span className="status status-warning-2">Warning</span>
+                    <span className="status status-warning">Warning</span>
                 </li>
                 <li>
                     <span className="status status-danger">Danger</span>
+                </li>
+                <li>
+                    <span className="status status-inactive">Inactive</span>
                 </li>
             </ul>
         </ComponentPreview>
@@ -63,12 +63,6 @@ const ExampleUse = () => (
                         <td><span className="status status-warning">Overdue</span></td>
                         <td>123454</td>
                         <td>2020-06-19</td>
-                        <td className="text-right">1079,00</td>
-                    </tr>
-                    <tr>
-                        <td><span className="status status-warning-2">Reminder</span></td>
-                        <td>123453</td>
-                        <td>2020-05-19</td>
                         <td className="text-right">1079,00</td>
                     </tr>
                     <tr>
