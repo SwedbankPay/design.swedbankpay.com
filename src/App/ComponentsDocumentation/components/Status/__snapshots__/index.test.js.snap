@@ -103,26 +103,6 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
         <tr>
           <td>
             <span
-              className="status status-warning-2"
-            >
-              Reminder
-            </span>
-          </td>
-          <td>
-            123453
-          </td>
-          <td>
-            2020-05-19
-          </td>
-          <td
-            className="text-right"
-          >
-            1079,00
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span
               className="status status-danger"
             >
               Sent to collection
@@ -236,13 +216,6 @@ exports[`Documentation: Status Overview renders 1`] = `
         <span
           className="status status-warning"
         >
-          Mild Warning
-        </span>
-      </li>
-      <li>
-        <span
-          className="status status-warning-2"
-        >
           Warning
         </span>
       </li>
@@ -251,6 +224,13 @@ exports[`Documentation: Status Overview renders 1`] = `
           className="status status-danger"
         >
           Danger
+        </span>
+      </li>
+      <li>
+        <span
+          className="status status-inactive"
+        >
+          Inactive
         </span>
       </li>
     </ul>
