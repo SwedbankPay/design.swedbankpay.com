@@ -4,21 +4,7 @@
 @input-padding-y:                           0.375rem;
 @input-line-height:                         @line-height-base;
 @input-form-control-height:                 3rem;
-
-@input-color:                               @brand-secondary;
-@input-bg:                                  @white;
-@input-bg-disabled:                         @white;
-@input-checked-bg-disabled:                 @brand-secondary-light-3;
-@input-border-color:                        @border-color;
-
 @input-border-width:                        1px 1px 2px;
-
-@legend-color:                              @brand-secondary;
-@legend-bottom-margin:                      @base-margin;
-
-@helpblock-margin:                          (@base-margin * 0.5) 0;
-
-@select-option-margin:                      (@base-margin * 0.187) (@base-margin * 0.375);
 
 // Form control sizing
 //
@@ -172,9 +158,9 @@ fieldset {
 legend {
     display: block;
     width: 100%;
-    margin-bottom: @legend-bottom-margin;
+    margin-bottom: @base-margin;
     line-height: (@base-font-size * 2.8);
-    color: @legend-color;
+    color: @brand-secondary;
     border: 0;
 }
 
@@ -359,7 +345,7 @@ legend {
 .hint-text {
     position: relative;
     display: block;
-    margin: @helpblock-margin;
+    margin: (@base-margin * 0.5) 0;
     font-size: 0.875rem;
     line-height: 1rem;
     min-height: 1rem;
@@ -447,6 +433,6 @@ select[multiple] {
     padding: 0;
 
     option {
-        padding: @select-option-margin;
+        padding: (@base-margin * 0.187) (@base-margin * 0.375);
     }
 }

@@ -1,8 +1,5 @@
 @import "../global.less";
-@import "./button.less";
 
-@dialog-content-bg:                         @white;
-@dialog-backdrop-bg:                        fade(@black, 50%);
 @dialog-border:                             1px solid @light-gray;
 
 .dialog {
@@ -12,7 +9,7 @@
     bottom: 0;
     left: 0;
     z-index: 1040; //
-    background: @dialog-backdrop-bg;
+    background: fade(@black, 50%);
     display: none;
     justify-content: center;
     align-items: center;
@@ -71,7 +68,7 @@
         }
 
         .dialog-body {
-            background: @dialog-content-bg;
+            background: @white;
             padding: 2rem 1.5rem;
         }
 
