@@ -16,7 +16,7 @@ const Rangeslider = ({ id, label, name, min, max, step, value, disabled, valueLa
     return (
         <div className="rangeslider">{"\n"}
             <input {...attrs}/>{"\n"}
-            <div className="information-container">{"\n"}
+            <div>{"\n"}
                 <label htmlFor={id} className="rangeslider-label">{"\n"}
                     {label}{"\n"}
                 </label>{"\n"}
