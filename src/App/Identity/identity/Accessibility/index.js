@@ -42,7 +42,7 @@ const WcagStandard = () => (
     <section>
         <h2 id="wcag-standard">WCAG standards and support material</h2>
         <p>WCAG has almost become a buzzword, thrown around by designers, developers and  stakeholders on regular basis. But what does it mean? WCAG is short for Web Content   Accessibility Guidelines and is a collection of accessibility standards and support material developed and written by the W3C Web Accessibility Initiative (WAI). WCAG is    a work in progress with several different versions (see <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer">https://w3.org/WAI</a>).</p>
-        <p>The guidelines ties back to four core terms: A website should be perceivable,  operable, understandable and robust. In these four areas there are sets of criteria  that has to be met for a certain term to be considered achieved (see Figure 2). Each  criteria also has one or more sub-criteria which are graded on a scale from A to AAA where A is least acceptable and AAA is considered “very good”.</p>
+        <p>The guidelines ties back to four core terms: A website should be perceivable,  operable, understandable and robust. In these four areas there are sets of criteria  that has to be met for a certain term to be considered achieved. Each  criteria also has one or more sub-criteria which are graded on a scale from A to AAA where A is least acceptable and AAA is considered “very good”.</p>
         <section>
             <h4>Perceivable</h4>
             <ul className="list list-bullet">
