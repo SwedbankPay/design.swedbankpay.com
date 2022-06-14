@@ -23,48 +23,66 @@ exports[`Utilities: Colors BackgroundColors renders 1`] = `
       >
         <div
           className="col-12 text-default bg-brand p-3"
+          key="0brand"
         >
-          .bg-white
+          .bg-
+          brand
         </div>
         <div
           className="col-12 text-default bg-primary p-3"
+          key="1primary"
         >
-          .bg-primary
+          .bg-
+          primary
         </div>
         <div
           className="col-12 text-default bg-secondary p-3"
+          key="2secondary"
         >
-          .bg-secondary
+          .bg-
+          secondary
         </div>
         <div
           className="col-12 text-default bg-tertiary p-3"
+          key="3tertiary"
         >
-          .bg-tertiary
+          .bg-
+          tertiary
         </div>
         <div
           className="col-12 text-default bg-quaternary p-3"
+          key="4quaternary"
         >
-          .bg-quaternary
+          .bg-
+          quaternary
         </div>
         <div
           className="col-12 text-default bg-danger p-3"
+          key="5danger"
         >
-          .bg-danger
+          .bg-
+          danger
         </div>
         <div
           className="col-12 text-default bg-warning p-3"
+          key="6warning"
         >
-          .bg-warning
+          .bg-
+          warning
         </div>
         <div
           className="col-12 text-default bg-success p-3"
+          key="7success"
         >
-          .bg-success
+          .bg-
+          success
         </div>
         <div
           className="col-12 text-default bg-neutral p-3"
+          key="8neutral"
         >
-          .bg-neutral
+          .bg-
+          neutral
         </div>
       </div>
     </div>
@@ -89,38 +107,52 @@ exports[`Utilities: Colors TextColors renders 1`] = `
   >
     <p
       className="text-default p-2"
+      key="0default"
     >
-      .text-default
+      .text-
+      default
     </p>
     <p
       className="text-muted p-2"
+      key="1muted"
     >
-      .text-muted
+      .text-
+      muted
     </p>
     <p
       className="text-white p-2"
+      key="2white"
     >
-      .text-white
+      .text-
+      white
     </p>
     <p
       className="text-danger p-2"
+      key="3danger"
     >
-      .text-danger
+      .text-
+      danger
     </p>
     <p
       className="text-warning p-2"
+      key="4warning"
     >
-      .text-warning
+      .text-
+      warning
     </p>
     <p
       className="text-neutral p-2"
+      key="5neutral"
     >
-      .text-neutral
+      .text-
+      neutral
     </p>
     <p
       className="text-success p-2"
+      key="6success"
     >
-      .text-success
+      .text-
+      success
     </p>
   </ComponentPreview>
 </Fragment>

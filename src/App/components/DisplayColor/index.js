@@ -44,10 +44,16 @@ const ColorDisplay = ({ title, subTitle, hex, border, contrastWhiteApproved, con
 );
 
 ColorDisplay.propTypes = {
+    title: PropTypes.string.isRequired,
+    subTitle: PropTypes.string,
     hex: PropTypes.string.isRequired,
-    rgb: PropTypes.string.isRequired,
-    fontColor: PropTypes.string,
-    border: PropTypes.string
+    border: PropTypes.string,
+    contrastWhiteApproved: PropTypes.string,
+    contrastBlackApproved: PropTypes.string,
+    contrastWhiteAlert: PropTypes.string,
+    contrastBlackAlert: PropTypes.string,
+    noWhiteExample: PropTypes.string,
+    noBlackExample: PropTypes.string
 };
 
 export default ColorDisplay;
