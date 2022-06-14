@@ -27,7 +27,7 @@ const MaterialIcons = () => (
         <ComponentPreview language="html" codeFigure>
             {tableData.materialIcons.map(icon => (
                 <React.Fragment key={icon}>
-                    <i className="material-icons" aria-hidden="true">{icon}</i>{"\n"}
+                    <i className="material-icons material-icons-outlined" aria-hidden="true">{icon}</i>{"\n"}
                 </React.Fragment>
             ))}
         </ComponentPreview>

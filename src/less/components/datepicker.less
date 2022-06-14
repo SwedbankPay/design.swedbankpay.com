@@ -1,3 +1,5 @@
+@import "./input-group.less";
+
 /* Flatpickr css added here so that we are not dependent
  * on a node package. This makes it easier for clients to
  * import this .less file [THN]
@@ -19,7 +21,7 @@
 
 .flatpickr-calendar {
     &.open {
-        z-index: @zindex-datepicker;
+        z-index: 530;
     }
 
     &.hasTime {
@@ -30,7 +32,7 @@
 
     .flatpickr-weekday {
         color: @brand-secondary;
-        font-size: @base-font-size;
+        font-size: 1rem;
     }
 
     .flatpickr-day.selected {
@@ -40,7 +42,7 @@
     }
 
     .flatpickr-current-month span.cur-month {
-        font-weight: @font-weight-base;
+        font-weight: 400;
     }
 
     .flatpickr-current-month span.cur-month:hover {

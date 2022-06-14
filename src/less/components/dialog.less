@@ -1,11 +1,15 @@
+@import "../global.less";
+
+@dialog-border:                             1px solid @light-gray;
+
 .dialog {
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: @zindex-dialog-backdrop;
-    background: @dialog-backdrop-bg;
+    z-index: 1040; //
+    background: fade(@black, 50%);
     display: none;
     justify-content: center;
     align-items: center;
@@ -64,7 +68,7 @@
         }
 
         .dialog-body {
-            background: @dialog-content-bg;
+            background: @white;
             padding: 2rem 1.5rem;
         }
 

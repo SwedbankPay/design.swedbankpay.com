@@ -1,7 +1,21 @@
+@code-tags-padding: 2px 6px;
+@code-tags-border-radius: 4px;
+
+code {
+    padding: @code-tags-padding;
+    border-radius: @code-tags-border-radius;
+    font-family: "Akkurat Mono", monospace;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    white-space: nowrap;
+    background-color: @brand-bg-2;
+    border: 1px solid @brand-accent;
+}
+
 .code-tags {
     padding: @code-tags-padding;
     border-radius: @code-tags-border-radius;
-    font-family: @brand-monofont;
+    font-family: "Akkurat Mono", monospace;
     font-size: 0.875rem;
     line-height: 1.25rem;
     white-space: nowrap;

@@ -1,3 +1,5 @@
+@import "../global.less";
+
 .cards {
     display: flex;
     flex-grow: 1;
@@ -253,7 +255,7 @@
         /* stylelint-disable selector-list-comma-newline-after */
         h1, h2, h3, h4, h5, h6,
         .h1, .h2, .h3, .h4, .h5, .h6 {
-            margin: @base-margin 0;
+            margin: 1rem 0;
 
             & a {
                 text-decoration: none;
@@ -269,7 +271,7 @@
 
         .footer-text {
             p {
-                margin: @base-margin-xs 0;
+                margin: 0.25rem 0;
             }
         }
 
@@ -280,7 +282,7 @@
     }
 
     .card-img {
-        height: @card-image-height;
+        height: 10rem;
 
         img {
             height: 100%;

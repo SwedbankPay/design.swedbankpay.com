@@ -1,11 +1,13 @@
+@import "../global.less";
+
 .tabs {
     font-family: @brand-headline;
-    font-weight: @font-weight-normal;
+    font-weight: 400;
     position: relative;
-    margin: @base-margin auto;
+    margin: 1rem auto;
     height: 40px;
     display: flex;
-    z-index: @zindex-tabs;
+    z-index: 100;
     border-bottom: 1px solid @brand-secondary-light-3;
 
     @media screen and (max-width: @screen-sm-max) {
@@ -39,14 +41,14 @@
             content: "";
             position: absolute;
             height: 100%;
-            width: @tabs-fade-width;
+            width: 3.125rem;
             display: none;
             background-image: url(../../icons/shapes/arrow-forward.svg), linear-gradient(to right, rgba(255, 255, 255, 0.35), @white 68%, rgba(255, 255, 255, 0.8));
             background-repeat: no-repeat;
             background-position: 100%;
             background-size: auto 1rem;
             pointer-events: none;
-            z-index: @zindex-tabs;
+            z-index: 100;
         }
 
         &.tabs-fade-right {
@@ -77,7 +79,6 @@
             display: block;
 
             a {
-                height: 2.5rem;
                 padding: 0.5rem 1rem;
                 white-space: nowrap;
                 color: @medium-brown;

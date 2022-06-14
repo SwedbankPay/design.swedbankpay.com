@@ -1,10 +1,18 @@
+@import "../global.less";
+
+@topbar-height:                             80px;
+@topbar-border-width:                       0.5rem;
+@topbar-header-height:                      calc(@topbar-height + @topbar-border-width);
+@topbar-border-top:                         @topbar-border-width solid @brand-primary;
+@topbar-link-container-width:               288px;
+
 .topbar {
     border-top: @topbar-border-top;
     background-color: @white;
     margin: 0 auto;
     height: @topbar-height;
     width: 100%;
-    z-index: @zindex-topbar;
+    z-index: 550;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,7 +145,7 @@
         right: 0;
         width: 100%;
         height: calc(100vh - (@topbar-height + @topbar-border-width - 8px));
-        z-index: @zindex-sheet-backdrop;
+        z-index: 3000;
         background: transparent;
         display: none;
 
@@ -412,7 +420,7 @@
             background-color: @white;
             overflow-x: hidden;
             overflow-y: auto;
-            z-index: @zindex-topbar-nav;
+            z-index: 2000;
             padding: 0;
             align-items: center;
             transform: translateX(-100%);
@@ -618,13 +626,13 @@ each(@grid-breakpoints, .(@min-width, @infix) {
     }
 
     100% {
-        background: @sheet-backdrop-bg;
+        background: fade(@black, 50%);
     }
 }
 
 @keyframes fade-out {
     0% {
-        background: @sheet-backdrop-bg;
+        background: fade(@black, 50%);
     }
 
     100% {

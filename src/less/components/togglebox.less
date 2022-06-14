@@ -1,3 +1,8 @@
+@import "../global.less";
+@import "./form.less";
+
+@toggle-border-color:                     @brand-secondary;
+
 .togglebox {
     position: relative;
     display: flex;
@@ -28,9 +33,9 @@
                 position: absolute;
                 bottom: 0.5px;
                 left: -15px;
-                height: (@checkbox-height + 0.2);
-                width: (@checkbox-width * 2.2);
-                border: 1px solid @checkbox-border-color;
+                height: (1.375rem + 0.2);
+                width: (1.375rem * 2.2);
+                border: 1px solid @toggle-border-color;
                 border-radius: 1rem;
             }
         }
@@ -42,9 +47,9 @@
             position: absolute;
             top: 0;
             right: 0;
-            height: @checkbox-height;
-            width: (@checkbox-width * 2);
-            border: 1px solid @checkbox-border-color;
+            height: 1.375rem;
+            width: (1.375rem * 2);
+            border: 1px solid @toggle-border-color;
             border-radius: 1rem;
             color: @white;
             cursor: pointer;
@@ -61,7 +66,7 @@
             right: 1.35rem;
             height: 1.15rem;
             width: 1.15rem;
-            border: 1px solid @checkbox-border-color;
+            border: 1px solid @toggle-border-color;
             border-radius: 50%;
             color: @white;
             cursor: pointer;
@@ -70,7 +75,7 @@
         &:checked + label:before {
             transition: background-color 0.2s ease;
             background-color: @brand-secondary;
-            border-color: @checkbox-checked-color;
+            border-color: @brand-secondary;
         }
 
         &:checked + label:after {

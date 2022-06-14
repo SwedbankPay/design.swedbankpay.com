@@ -1,6 +1,6 @@
 {
   "name": "@swedbankpay/design-guide",
-  "version": "9.1.0",
+  "version": "9.1.0-beta.6",
   "description": "Swedbank Pay Design Guide",
   "main": "src/scripts/main/index.js",
   "scripts": {
@@ -104,8 +104,17 @@
   "files": [
     "src/fonts/",
     "src/icons/",
-    "src/img",
-    "src/less",
+    "src/img/payex",
+    "src/img/swedbankpay/logo",
+    "src/img/swedbankpay/favicon.png",
+    "src/less/components",
+    "src/less/core",
+    "src/less/utilities",
+    "src/less/global.less",
+    "src/less/payex.less",
+    "src/less/variables-payex.less",
+    "src/less/swedbankpay.less",
+    "src/less/variables-swedbankpay.less",
     "src/polyfills/",
     "src/scripts/main/",
     "src/scripts/dashboard/",

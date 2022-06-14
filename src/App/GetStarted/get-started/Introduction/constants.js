@@ -47,7 +47,7 @@ export const designGuideUsers = [
     {
         name: "Onboarding Sales",
         icon: "check",
-        text: "yes"
+        text: "Yes"
     },
     {
         name: "Onboarding Magma",

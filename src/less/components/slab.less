@@ -1,6 +1,20 @@
+@import "../global.less";
+
+@text-muted: fade(@brand-secondary, 75%);
+
+.slab-variant(@bg-color) {
+    background-color: @bg-color;
+
+    &.slab-arrow {
+        &:before {
+            border: none;
+        }
+    }
+}
+
 .slab {
     min-height: 1rem;
-    padding: @base-padding;
+    padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 2px;
     background-color: @white;
@@ -34,11 +48,11 @@
     }
 
     &.slab-lg {
-        padding: @base-padding-lg;
+        padding: 1.5rem;
     }
 
     &.slab-sm {
-        padding: @base-padding-sm;
+        padding: 0.5rem;
     }
 
     &.slab-arrow {

@@ -1,3 +1,14 @@
+@import "../global.less";
+
+/* stylelint-disable */
+@badge-list: {
+    default: @brand-primary;
+    inactive: @list-gray;
+    warning: @brand-error;
+}
+
+/* stylelint-enable */
+
 .badge {
     display: inline-block;
     color: @white;
@@ -7,6 +18,8 @@
     min-width: 1.375rem;
     height: 1.375rem;
     text-align: center;
+    font-family: @font-stack;
+    line-height: 1.5;
 
     each(@badge-list, .(@color, @name) {
         &.badge-@{name} {
@@ -26,7 +39,7 @@
 
     &.badge-number {
         font-family: @brand-headline;
-        font-weight: @font-weight-normal;
+        font-weight: 400;
     }
 }
 
@@ -37,7 +50,7 @@
     padding: 0 0.75rem;
     border-radius: 2rem;
     font-size: 0.875rem;
-    font-weight: @font-weight-bold;
+    font-weight: 700;
     min-width: 1.375rem;
     height: 1.75rem;
     margin: 1rem;
