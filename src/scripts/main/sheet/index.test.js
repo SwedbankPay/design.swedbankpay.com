@@ -334,6 +334,7 @@ describe("scripts: sheet", () => {
             expect(Object.keys(renderedToast.style._values)).toContain("margin-right");
 
             sheet.close("demo-sheet");
+            expect(document.body.classList).not.toContain("sheet-open");
             jest.runAllTimers();
         });
     });
