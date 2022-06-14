@@ -1,34 +1,20 @@
 import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
-import CodeTags from "@components/CodeTags";
+import Link from "@components/Link";
 
 const TextColors = () => (
     <>
         <h2 id="text-colors">Text colors</h2>
-        <p>To use a color simply prepend <CodeTags type="secondary" code=".text-{name}" />.</p>
+        <p>To set the color of a text, use any of the following utility classes.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <p className="text-brand">.text-brand</p>
-            <p className="text-default">.text-default</p>
-            <p className="text-neutral">.text-neutral</p>
-            <p className="text-success">.text-success</p>
-            <p className="text-warning">.text-warning</p>
-            <p className="text-danger">.text-danger</p>
-            <p className="text-white bg-default">.text-white</p>
-            <p className="text-black-50">.text-black-50</p>
-            <p className="text-white-50 bg-default">.text-white-50</p>
-        </ComponentPreview>
-
-        <h3>With <CodeTags type="secondary" code=".text-muted" /></h3>
-        <p>To get a muted effect on the color you are using, append a <CodeTags type="primary" code={"<span>"} />-element with the class <CodeTags type="secondary" code=".text-muted" /> to the desired element.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <p className="text-brand">.text-brand <span className="text-muted">.text-muted</span></p>
-            <p className="text-default">.text-default <span className="text-muted">.text-muted</span></p>
-            <p className="text-neutral">.text-neutral <span className="text-muted">.text-muted</span></p>
-            <p className="text-success">.text-success <span className="text-muted">.text-muted</span></p>
-            <p className="text-warning">.text-warning <span className="text-muted">.text-muted</span></p>
-            <p className="text-danger">.text-danger <span className="text-muted">.text-muted</span></p>
-            <p className="text-white bg-default">.text-white <span className="text-muted">.text-muted</span></p>
+            <p className="text-default p-2">.text-default</p>
+            <p className="text-muted p-2">.text-muted</p>
+            <p className="text-white p-2">.text-white</p>
+            <p className="text-danger p-2">.text-danger</p>
+            <p className="text-warning p-2">.text-warning</p>
+            <p className="text-neutral p-2">.text-neutral</p>
+            <p className="text-success p-2">.text-success</p>
         </ComponentPreview>
     </>
 );
@@ -36,17 +22,19 @@ const TextColors = () => (
 const BackgroundColors = () => (
     <>
         <h2 id="background-colors">Background colors</h2>
-        <p>To alter the background-color of an element, add the class <CodeTags type="secondary" code="background-{name}" />.</p>
+        <p>To alter the background-color of an element, use any of the following utility classes.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="container">
                 <div className="row">
-                    <div className="col-12 text-white bg-brand p-2">.bg-brand</div>
-                    <div className="col-12 text-white bg-default p-2">.bg-default</div>
-                    <div className="col-12 text-white bg-neutral p-2">.bg-neutral</div>
-                    <div className="col-12 text-white bg-success p-2">.bg-success</div>
-                    <div className="col-12 text-white bg-warning p-2">.bg-warning</div>
-                    <div className="col-12 text-white bg-danger p-2">.bg-danger</div>
-                    <div className="col-12 bg-white p-2">.bg-white</div>
+                    <div className="col-12 text-default bg-brand p-3">.bg-white</div>
+                    <div className="col-12 text-default bg-primary p-3">.bg-primary</div>
+                    <div className="col-12 text-default bg-secondary p-3">.bg-secondary</div>
+                    <div className="col-12 text-default bg-tertiary p-3">.bg-tertiary</div>
+                    <div className="col-12 text-default bg-quaternary p-3">.bg-quaternary</div>
+                    <div className="col-12 text-default bg-danger p-3">.bg-danger</div>
+                    <div className="col-12 text-default bg-warning p-3">.bg-warning</div>
+                    <div className="col-12 text-default bg-success p-3">.bg-success</div>
+                    <div className="col-12 text-default bg-neutral p-3">.bg-neutral</div>
                 </div>
             </div>
         </ComponentPreview>
@@ -55,7 +43,7 @@ const BackgroundColors = () => (
 
 const Colors = () => (
     <DocContainer docToc>
-        <p className="lead">Convey meaning through color with a handful of color utility classes.</p>
+        <p className="lead">We have a few color utility classes. For more information about our colors refer to the <a href="../identity/color">Color section</a> under Identity.</p>
         <TextColors />
         <BackgroundColors />
     </DocContainer>

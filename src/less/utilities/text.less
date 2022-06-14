@@ -70,6 +70,14 @@ each(@grid-breakpoints, .(@size, @abbr) {
         .text-muted {
             color: fade(@color, 75%) !important;
         }
+
+        &.text-white,
+        .text-white {
+            color: #ffffff !important;
+            background-color: #000000 !important;
+            width: 20% !important;
+            border-radius: 2px;
+        }
     }
 }
 
