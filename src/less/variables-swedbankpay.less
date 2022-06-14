@@ -17,13 +17,18 @@
 @medium-brown:                              #72605e;
 @soft-brown:                                #a38b80;
 @light-brown:                               #d4c4bc;
+@brown-solid:                               @solid-brown;
+@brown-dark:                                @dark-brown;
+@brown-medium:                              @medium-brown;
+@brown-soft:                                @soft-brown;
+@brown-light:                               @light-brown;
 
 /* Main Brand Color Variants */
 @brand-primary:                             #fdc129;
 @brand-primary-light:                       #ffcc00;
 @brand-primary-light-2:                     #ffdf88;
 @brand-primary-light-3:                     #fff3d5;
-@brand-primary-faded:                         fade(@brand-primary, 60%);
+@brand-primary-faded:                       fade(@brand-primary, 60%);
 @brand-secondary-dark-1:                    @dark-brown;
 @brand-secondary-dark-2:                    @solid-brown;
 @brand-secondary:                           #512b2b;
@@ -39,6 +44,18 @@
 @brand-accent-links:                        #257886;
 @brand-accent-disabled:                     #98d0d6;
 
+@brand-orange:                              @brand-tertiary;
+@brand-turquoise:                           @brand-accent;
+@brand-turquoise-light:                     @brand-secondary-info-1;
+@brand-pink:                                @brand-secondary-info-2;
+@brand-brown:                               @brand-secondary;
+
+/* Text colors */
+@text-default:                              @brand-secondary;
+@text-muted:                                @brown-medium;
+@text-link:                                 @brand-accent-links;
+@text-white:                                @brand-bg-white;
+
 
 /* Background Colors */
 @brand-bg-1:                                #fbf2ea;
@@ -47,6 +64,11 @@
 @brand-bg-4:                                #e9f7fb;
 @brand-bg-gray:                             #ebe7e2;
 @brand-bg-white:                            #ffffff;
+@bg-white:                                  @brand-bg-white;
+@bg-primary:                                @brand-bg-1;
+@bg-secondary:                              @brand-bg-2;
+@bg-tertiary:                               @brand-bg-gray;
+@bg-quaternary:                             @light-gray;
 
 /* State colors */
 @brand-success:                             #3C7213;
@@ -61,6 +83,17 @@
 @brand-error-dark:                          #8C0D14;
 @brand-info:                                #3961A7;
 @brand-info-light:                          #EBF1FA;
+
+/* System colors */
+@system-error-dark:                         @brand-error-dark;
+@system-error:                              @brand-error;
+@system-error-light:                        @brand-error-light;
+@system-warning:                            @brand-warning;
+@system-warning-light:                      @brand-warning-light;
+@system-success:                            @brand-success;
+@system-success-light:                      @brand-success-light;
+@system-info:                               @brand-info;
+@system-info-light:                         @brand-info-light;
 
 /* Brand fonts */
 @brand-headline:                            "Swedbank Headline", "Arial", sans-serif;
