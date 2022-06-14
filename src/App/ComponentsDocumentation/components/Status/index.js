@@ -20,13 +20,13 @@ const Overview = () => (
                     <span className="status status-success">Success</span>
                 </li>
                 <li>
-                    <span className="status status-warning">Mild Warning</span>
-                </li>
-                <li>
-                    <span className="status status-warning-2">Warning</span>
+                    <span className="status status-warning">Warning</span>
                 </li>
                 <li>
                     <span className="status status-danger">Danger</span>
+                </li>
+                <li>
+                    <span className="status status-inactive">Inactive</span>
                 </li>
             </ul>
         </ComponentPreview>
@@ -66,12 +66,6 @@ const ExampleUse = () => (
                         <td className="text-right">1079,00</td>
                     </tr>
                     <tr>
-                        <td><span className="status status-warning-2">Reminder</span></td>
-                        <td>123453</td>
-                        <td>2020-05-19</td>
-                        <td className="text-right">1079,00</td>
-                    </tr>
-                    <tr>
                         <td><span className="status status-danger">Sent to collection</span></td>
                         <td>123452</td>
                         <td>2020-04-19</td>
@@ -92,8 +86,7 @@ const ExtendedUsage = () => (
         <ComponentPreview language="html" showCasePanel codeFigure>
             <h1 className="status status-neutral">Neutral</h1>
             <h2 className="status status-success">Success</h2>
-            <h3 className="status status-warning">Mild Warning</h3>
-            <h4 className="status status-warning-2">Warning</h4>
+            <h3 className="status status-warning">Warning</h3>
             <h5 className="status status-danger">Danger</h5>
         </ComponentPreview>
     </>
