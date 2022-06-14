@@ -17,7 +17,7 @@ class Dialog {
         this.id = el.id;
         this.closeIcon = el.querySelector(SELECTORS.CLOSEICON);
         this.header = el.querySelector(".dialog-header");
-        this.isOpen = el.style.display === "flex"; // this must be rewritten
+        this.isOpen = el.style.display === "flex";
 
         // Find all related buttons
         this.openBtns = this.id ? [...document.querySelectorAll(`[data-dialog-open=${this.id}]`)] : [];
