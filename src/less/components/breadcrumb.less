@@ -1,6 +1,8 @@
+@import "../global.less";
+
 ul.breadcrumb,
 ol.breadcrumb {
-    margin: @base-margin 0;
+    margin: 1rem 0;
     padding-left: 0;
     display: flex;
 
@@ -8,10 +10,11 @@ ol.breadcrumb {
         display: flex;
         list-style: none;
         align-items: center;
-        color: @link-color;
+        color: @brand-secondary;
 
         a {
             text-decoration: none;
+            color: @brand-accent-links;
         }
 
         &:not(:last-child) {

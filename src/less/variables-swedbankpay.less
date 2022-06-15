@@ -17,10 +17,16 @@
 @medium-brown:                              #72605e;
 @soft-brown:                                #a38b80;
 @light-brown:                               #d4c4bc;
+@brown-solid:                               @solid-brown;
+@brown-dark:                                @dark-brown;
+@brown-medium:                              @medium-brown;
+@brown-soft:                                @soft-brown;
+@brown-light:                               @light-brown;
 
 /* Main Brand Color Variants */
 @brand-primary:                             #fdc129;
 @brand-primary-light:                       #ffcc00;
+@brand-primary-lighter:                     @brand-primary-light-3;
 @brand-primary-light-2:                     #ffdf88;
 @brand-primary-light-3:                     #fff3d5;
 @brand-primary-faded:                         fade(@brand-primary, 60%);
@@ -39,6 +45,18 @@
 @brand-accent-links:                        #257886;
 @brand-accent-disabled:                     #98d0d6;
 
+@brand-orange:                              @brand-tertiary;
+@brand-turquoise:                           @brand-accent;
+@brand-turquoise-light:                     @brand-secondary-info-1;
+@brand-pink:                                @brand-secondary-info-2;
+@brand-brown:                               @brand-secondary;
+
+/* Text colors */
+@text-default:                              @brand-secondary;
+@text-muted:                                @brown-medium;
+@text-link:                                 @brand-accent-links;
+@text-white:                                @brand-bg-white;
+
 
 /* Background Colors */
 @brand-bg-1:                                #fbf2ea;
@@ -47,25 +65,45 @@
 @brand-bg-4:                                #e9f7fb;
 @brand-bg-gray:                             #ebe7e2;
 @brand-bg-white:                            #ffffff;
+@bg-white:                                  @brand-bg-white;
+@bg-primary:                                @brand-bg-1;
+@bg-secondary:                              @brand-bg-2;
+@bg-tertiary:                               @brand-bg-gray;
+@bg-quaternary:                             @light-gray;
 
 /* State colors */
-@brand-success:                             #437e15;
+@brand-success:                             #3C7213;
 @brand-success-light:                       #f2f7eb;
 @brand-success-light-2:                     #99cc66;
-@brand-warning:                             #f9ce22;
-@brand-warning-light:                       #fff3d5;
+@brand-warning:                             #C15715;
+@brand-warning-light:                       #FEF2E2;
 @brand-warning-2:                           @brand-tertiary;
 @brand-error-border:                        #f1bbb9;
-@brand-error:                               #c5131c;
-@brand-error-light:                         #f9ded3;
-@brand-info:                                #3e6ab6;
-@brand-info-light:                          #e8eff9;
+@brand-error:                               #B5111A;
+@brand-error-light:                         #FCEEE9;
+@brand-error-dark:                          #8C0D14;
+@brand-info:                                #3961A7;
+@brand-info-light:                          #EBF1FA;
+
+/* System colors */
+@system-error-dark:                         @brand-error-dark;
+@system-error:                              @brand-error;
+@system-error-light:                        @brand-error-light;
+@system-warning:                            @brand-warning;
+@system-warning-light:                      @brand-warning-light;
+@system-success:                            @brand-success;
+@system-success-light:                      @brand-success-light;
+@system-info:                               @brand-info;
+@system-info-light:                         @brand-info-light;
 
 /* Brand fonts */
 @brand-headline:                            "Swedbank Headline", "Arial", sans-serif;
 @brand-black:                               "Swedbank Headline Black", "Arial", sans-serif;
 @brand-monofont:                            "Akkurat Mono", monospace;
 @brand-default:                             "Arial", sans-serif;
+
+/* Checkbox */
+@checkbox-checked-color:                    @brand-secondary;
 
 /* Button colors */
 @primary-disabled-bg:                       @brand-primary-light-3;
@@ -86,12 +124,23 @@
 
 @btn-destructive-color:                     @white;
 @btn-destructive-bg:                        @brand-error;
-@btn-destructive-hover:                     #e07088;
+@btn-destructive-hover:                     @brand-error-dark;
 @btn-destructive-disabled-color:            @white;
 @btn-destructive-disabled-bg:               @destructive-disabled-bg;
 
 @btn-link-color:                            @brand-secondary;
 @btn-link-disabled-color:                   @brand-secondary-light-3;
+
+/* Input */
+@input-color:                               @brand-secondary;
+@input-bg:                                  @white;
+@input-bg-disabled:                         @white;
+@input-checked-bg-disabled:                 @brand-secondary-light-3;
+@input-addon-color:                         @medium-brown;
+@input-border-color:                        @border-color;
+
+/* Panel */
+@panel-default-border-color: @brand-secondary-light-3;
 
 /* Other colors */
 @yellow-faded:                              #fbdd91;

@@ -1,8 +1,19 @@
+@import "../global.less";
+
+.alert-variant(@color, @bg-color) {
+    background-color: @bg-color;
+
+    .alert-icon {
+        color: @color;
+        margin-right: 1rem;
+    }
+}
+
 .alert {
-    padding: @base-padding;
+    padding: 1rem;
     position: relative;
     margin-top: 0;
-    margin-bottom: @base-margin;
+    margin-bottom: 1rem;
     display: flex;
     color: @black;
     border-radius: 0.25rem;
@@ -12,7 +23,7 @@
     }
 
     &.alert-warning {
-        .alert-variant(#F35B1C, @brand-warning-light);
+        .alert-variant(@brand-warning, @brand-warning-light);
     }
 
     &.alert-danger {
@@ -25,29 +36,14 @@
 
     > p {
         margin-bottom: 0;
+        margin-top: 0;
     }
 
     [data-alert-close] {
         all: unset;
         align-self: baseline;
+        margin-left: 0.5rem;
 
         .close-button();
     }
-
-    //Will be restored at a later stage
-
-    /*
-    &.alert-global {
-        color: @white;
-        border-radius: 0;
-        margin-bottom: 0;
-
-        &.alert-warning {
-            .alert-variant(@white, @brand-error);
-        }
-
-        &.alert-informative {
-            .alert-variant(@white, @brand-info);
-        }
-    } */
 }

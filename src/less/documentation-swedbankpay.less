@@ -1,6 +1,5 @@
-@import "_variables-swedbankpay.less";
-@import "_variables.less";
-@import "_mixins.less";
+@import "variables-swedbankpay.less";
+@import "global.less";
 
 #designguide {
     display: flex;
@@ -8,7 +7,7 @@
     min-height: 100%;
 
     .designguide-header {
-        z-index: calc(@zindex-topbar + 1);
+        z-index: 551;
     }
 
     pre {
@@ -82,6 +81,8 @@
 
     // Override the prism toolbar button rules
     figure {
+        margin: 0;
+
         .code-toolbar {
             > .toolbar {
                 opacity: 1;
@@ -175,7 +176,7 @@
 
                     .dg-title-big {
                         font-size: 3.5rem;
-                        font-family: "Swedbank Headline Black";
+                        font-family: @brand-black;
                     }
                 }
 
@@ -583,7 +584,7 @@
             margin: 0 1rem 0;
             padding: 0;
             list-style: none;
-            border: 1px solid @input-border-color;
+            border: 1px solid @light-brown;
             z-index: 2000;
             box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
             display: none;
@@ -673,8 +674,8 @@
                         height: 100%;
                         left: 0;
                         top: 0;
-                        background-color: @sheet-backdrop-bg;
-                        z-index: @zindex-tabs;
+                        background-color: fade(@black, 50%);
+                        z-index: 100;
                     }
                 }
             }
@@ -805,7 +806,7 @@
                 min-width: 0;
                 border-left: 1px solid @brand-secondary-light-3;
                 transition: min-width 1s ease-in-out;
-                z-index: calc(@zindex-tabs + 2);
+                z-index: calc(100 + 2);
 
                 &.active {
                     display: block;
@@ -972,50 +973,118 @@
         }
     }
 
+    .color-contrast-section {
+        i {
+            font-size: 1rem;
+            align-self: center;
+
+            &.check {
+                color: @brand-success;
+            }
+
+            &.cancel {
+                color: @brand-error;
+            }
+
+            &.warning {
+                color: @brand-warning;
+            }
+        }
+    }
+
     .color-group {
         display: flex;
         flex-wrap: wrap;
 
-        > div {
-            display: flex;
-            position: relative;
-            height: 7.15rem;
-            width: 7.75rem;
-            margin-right: 0.875rem;
-            margin-bottom: 0.875rem;
+        .color-box {
+            height: 7.875rem;
+            width: 7.875rem;
+            margin-right: 0.5rem;
+            overflow: hidden;
+            border-radius: 5px;
+
+            &.has-border {
+                border: 1px solid @brand-secondary;
+            }
 
             svg {
                 width: 100%;
+                height: 100%;
 
                 rect {
+                    rx: 5;
                     width: 100%;
                     height: 100%;
-                    rx: 5;
-                }
-            }
-
-            &.has-border {
-                border: 1px solid @black;
-                border-radius: 5px;
-            }
-
-            div {
-                position: absolute;
-                font-size: 0.75rem;
-                bottom: 0;
-                font-weight: bold;
-
-                &.font-white {
-                    color: #ffffff;
                 }
             }
         }
 
-        &.communication-colors {
-            > div {
-                width: 100%;
-                max-width: 21rem;
-                margin: 0.875rem 0 0;
+        .text-box {
+            margin-top: 4px;
+
+            small {
+                color: @medium-brown;
+            }
+
+            .contrast-box {
+                display: flex;
+                flex-direction: column;
+
+                .contrast-white-container {
+                    margin-bottom: 0.25rem;
+
+                    .white-box {
+                        border: 1px solid @medium-brown;
+                    }
+                }
+
+                .contrast-white-container,
+                .contrast-black-container {
+                    position: relative;
+                    display: flex;
+
+                    svg {
+                        height: 1rem;
+                        width: 1rem;
+                        border-radius: 2px;
+                        position: relative;
+
+                        &.white-box {
+                            border: 1px solid @medium-brown;
+                        }
+
+                        rect {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .second-svg {
+                        position: relative;
+                        left: -8px;
+                    }
+
+                    .first-svg {
+                        z-index: 100;
+                    }
+
+                    i {
+                        font-size: 14px;
+                        align-self: center;
+
+                        &.check {
+                            color: @brand-success;
+                        }
+
+                        &.cancel {
+                            color: @brand-error;
+                        }
+
+                        &.warning {
+                            color: @brand-warning;
+                        }
+                    }
+                }
             }
         }
     }

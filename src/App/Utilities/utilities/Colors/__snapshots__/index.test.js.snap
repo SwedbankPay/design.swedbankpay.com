@@ -8,12 +8,7 @@ exports[`Utilities: Colors BackgroundColors renders 1`] = `
     Background colors
   </h2>
   <p>
-    To alter the background-color of an element, add the class 
-    <CodeTags
-      code="background-{name}"
-      type="secondary"
-    />
-    .
+    To alter the background-color of an element, use any of the following utility classes.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -27,39 +22,67 @@ exports[`Utilities: Colors BackgroundColors renders 1`] = `
         className="row"
       >
         <div
-          className="col-12 text-white bg-brand p-2"
+          className="col-12 text-default bg-brand p-3"
+          key="0brand"
         >
-          .bg-brand
+          .bg-
+          brand
         </div>
         <div
-          className="col-12 text-white bg-default p-2"
+          className="col-12 text-default bg-primary p-3"
+          key="1primary"
         >
-          .bg-default
+          .bg-
+          primary
         </div>
         <div
-          className="col-12 text-white bg-neutral p-2"
+          className="col-12 text-default bg-secondary p-3"
+          key="2secondary"
         >
-          .bg-neutral
+          .bg-
+          secondary
         </div>
         <div
-          className="col-12 text-white bg-success p-2"
+          className="col-12 text-default bg-tertiary p-3"
+          key="3tertiary"
         >
-          .bg-success
+          .bg-
+          tertiary
         </div>
         <div
-          className="col-12 text-white bg-warning p-2"
+          className="col-12 text-default bg-quaternary p-3"
+          key="4quaternary"
         >
-          .bg-warning
+          .bg-
+          quaternary
         </div>
         <div
-          className="col-12 text-white bg-danger p-2"
+          className="col-12 text-default bg-danger p-3"
+          key="5danger"
         >
-          .bg-danger
+          .bg-
+          danger
         </div>
         <div
-          className="col-12 bg-white p-2"
+          className="col-12 text-default bg-warning p-3"
+          key="6warning"
         >
-          .bg-white
+          .bg-
+          warning
+        </div>
+        <div
+          className="col-12 text-default bg-success p-3"
+          key="7success"
+        >
+          .bg-
+          success
+        </div>
+        <div
+          className="col-12 text-default bg-neutral p-3"
+          key="8neutral"
+        >
+          .bg-
+          neutral
         </div>
       </div>
     </div>
@@ -75,12 +98,7 @@ exports[`Utilities: Colors TextColors renders 1`] = `
     Text colors
   </h2>
   <p>
-    To use a color simply prepend 
-    <CodeTags
-      code=".text-{name}"
-      type="secondary"
-    />
-    .
+    To set the color of a text, use any of the following utility classes.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -88,145 +106,53 @@ exports[`Utilities: Colors TextColors renders 1`] = `
     showCasePanel={true}
   >
     <p
-      className="text-brand"
+      className="text-default p-2"
+      key="0default"
     >
-      .text-brand
+      .text-
+      default
     </p>
     <p
-      className="text-default"
+      className="text-muted p-2"
+      key="1muted"
     >
-      .text-default
+      .text-
+      muted
     </p>
     <p
-      className="text-neutral"
+      className="text-white p-2"
+      key="2white"
     >
-      .text-neutral
+      .text-
+      white
     </p>
     <p
-      className="text-success"
+      className="text-danger p-2"
+      key="3danger"
     >
-      .text-success
+      .text-
+      danger
     </p>
     <p
-      className="text-warning"
+      className="text-warning p-2"
+      key="4warning"
     >
-      .text-warning
+      .text-
+      warning
     </p>
     <p
-      className="text-danger"
+      className="text-neutral p-2"
+      key="5neutral"
     >
-      .text-danger
+      .text-
+      neutral
     </p>
     <p
-      className="text-white bg-default"
+      className="text-success p-2"
+      key="6success"
     >
-      .text-white
-    </p>
-    <p
-      className="text-black-50"
-    >
-      .text-black-50
-    </p>
-    <p
-      className="text-white-50 bg-default"
-    >
-      .text-white-50
-    </p>
-  </ComponentPreview>
-  <h3>
-    With 
-    <CodeTags
-      code=".text-muted"
-      type="secondary"
-    />
-  </h3>
-  <p>
-    To get a muted effect on the color you are using, append a 
-    <CodeTags
-      code="<span>"
-      type="primary"
-    />
-    -element with the class 
-    <CodeTags
-      code=".text-muted"
-      type="secondary"
-    />
-     to the desired element.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <p
-      className="text-brand"
-    >
-      .text-brand 
-      <span
-        className="text-muted"
-      >
-        .text-muted
-      </span>
-    </p>
-    <p
-      className="text-default"
-    >
-      .text-default 
-      <span
-        className="text-muted"
-      >
-        .text-muted
-      </span>
-    </p>
-    <p
-      className="text-neutral"
-    >
-      .text-neutral 
-      <span
-        className="text-muted"
-      >
-        .text-muted
-      </span>
-    </p>
-    <p
-      className="text-success"
-    >
-      .text-success 
-      <span
-        className="text-muted"
-      >
-        .text-muted
-      </span>
-    </p>
-    <p
-      className="text-warning"
-    >
-      .text-warning 
-      <span
-        className="text-muted"
-      >
-        .text-muted
-      </span>
-    </p>
-    <p
-      className="text-danger"
-    >
-      .text-danger 
-      <span
-        className="text-muted"
-      >
-        .text-muted
-      </span>
-    </p>
-    <p
-      className="text-white bg-default"
-    >
-      .text-white 
-      <span
-        className="text-muted"
-      >
-        .text-muted
-      </span>
+      .text-
+      success
     </p>
   </ComponentPreview>
 </Fragment>
@@ -239,7 +165,13 @@ exports[`Utilities: Colors renders 1`] = `
   <p
     className="lead"
   >
-    Convey meaning through color with a handful of color utility classes.
+    We have a few color utility classes. For more information about our colors refer to the 
+    <a
+      href="../identity/color"
+    >
+      Color section
+    </a>
+     under Identity.
   </p>
   <TextColors />
   <BackgroundColors />

@@ -17,7 +17,7 @@ class Dialog {
         this.id = el.id;
         this.closeIcon = el.querySelector(SELECTORS.CLOSEICON);
         this.header = el.querySelector(".dialog-header");
-        this.isOpen = el.classList.contains("d-flex");
+        this.isOpen = el.style.display === "flex";
 
         // Find all related buttons
         this.openBtns = this.id ? [...document.querySelectorAll(`[data-dialog-open=${this.id}]`)] : [];
@@ -94,7 +94,7 @@ class Dialog {
         this.focusedElemBeforeDialog = document.activeElement;
         handleScrollbar();
         this.isOpen = true;
-        this._el.classList.add("d-flex");
+        this._el.style.display = "flex";
         document.body.classList.add("dialog-open");
         this.lastTabStop.focus();
     }
@@ -102,6 +102,7 @@ class Dialog {
     close () {
         handleScrollbar();
         this.isOpen = false;
+        this._el.style.display = "none";
         this._el.classList.remove("d-flex");
         document.body.classList.remove("dialog-open");
         this.focusedElemBeforeDialog ? this.focusedElemBeforeDialog.focus() : null;

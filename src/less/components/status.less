@@ -1,8 +1,21 @@
+@status-size:                               0.75rem;
+@status-padding-left:                       0.5rem;
+
+.status-size(@size, @padding) {
+    padding-left: @size + @padding;
+
+    &:before {
+        height: @size;
+        width: @size;
+    }
+}
+
 .status {
     display: flex;
     position: relative;
     padding-left: (@status-size + @status-padding-left);
     align-items: center;
+    font-family: Arial, sans-serif;
 
     &:before {
         content: "";
@@ -20,19 +33,19 @@
         }
 
         .status-success& {
-            background-color: @brand-success-light-2;
+            background-color: @brand-success;
         }
 
         .status-warning& {
             background-color: @brand-warning;
         }
 
-        .status-warning-2& {
-            background-color: @brand-warning-2;
-        }
-
         .status-danger& {
             background-color: @brand-error;
+        }
+
+        .status-inactive& {
+            background-color: @soft-brown;
         }
     }
 

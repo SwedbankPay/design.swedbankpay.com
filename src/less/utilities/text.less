@@ -1,10 +1,17 @@
+/* Text color list */
+
 /* stylelint-disable block-opening-brace-space-before, declaration-no-important */
 
 // Alignment
 
 .text-justify  { text-align: justify !important; }
 .text-nowrap   { white-space: nowrap !important; }
-.text-truncate { .text-truncate(); }
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 
 // Font family
 
@@ -38,6 +45,41 @@ each(@grid-breakpoints, .(@size, @abbr) {
 .font-italic         { font-style: italic !important; }
 
 // Contextual colors
+
+@color-list: {
+    default: @text-color;
+    black: @black;
+    white: @white;
+    brand: @brand-primary;
+    success: @brand-success;
+    neutral: @brand-info;
+    warning: @brand-warning;
+    danger: @brand-error;
+    muted: fade(@text-color, 75%);
+}
+
+.color-variant(@parent, @color) {
+    .@{parent} {
+        color: @color !important;
+
+        a&:hover {
+            color: darken(@color, 10%) !important;
+        }
+
+        &.text-muted,
+        .text-muted {
+            color: fade(@color, 75%) !important;
+        }
+
+        &.text-white,
+        .text-white {
+            color: #ffffff !important;
+            background-color: #000000 !important;
+            width: 20% !important;
+            border-radius: 2px;
+        }
+    }
+}
 
 each(@color-list, .(@color, @name) {
     .color-variant(~"text-@{name}", @color);

@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
-    color: @headings-color;
+    color: @brand-secondary;
 
     &:first-child {
         margin-top: 0;
@@ -130,7 +130,7 @@ h6,
 
 p {
     margin-top: 0;
-    margin-bottom: @paragraph-margin-bottom;
+    margin-bottom: @base-margin;
 }
 
 //
@@ -151,8 +151,8 @@ small,
 
 mark,
 .mark {
-    padding: @mark-padding;
-    background-color: @mark-background;
+    padding: 0.2rem;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 //
@@ -195,7 +195,7 @@ blockquote,
     footer {
         display: block;
         font-size: 80%;
-        color: @footer-small-color;
+        color: @list-gray;
 
         &:before {
             content: "\2014 \00A0";

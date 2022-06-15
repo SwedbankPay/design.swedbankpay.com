@@ -1,3 +1,51 @@
+@import "../global.less";
+
+@list-item-padding:                         4.25rem 0 0 0;
+@list-item-padding-desktop-top:             4.25rem;
+@list-item-padding-desktop:                 @list-item-padding-desktop-top 0 1.2rem 0;
+@list-item-padding-desktop-vertical:        2rem 1.5rem 2rem 5.25rem;
+
+@circle-size:                               30px;
+@circle-size-desktop:                       40px;
+
+@vertical-left:                             1.7rem;
+@vertical-margin:                           ((@circle-size-desktop / 2) - (@line-width-desktop / 2));
+
+@line-width:                                2px;
+@line-width-desktop:                        2px;
+
+.negative-margin (@margin-list) {
+    @length: length(@margin-list);
+
+    & when (@length = 1) {
+        margin: -@margin-list;
+    }
+
+    & when (@length = 2) {
+        @top-bottom: extract(@margin-list, 1);
+        @right-left: extract(@margin-list, 2);
+
+        margin: -@top-bottom -@right-left;
+    }
+
+    & when (@length = 3) {
+        @top: extract(@margin-list, 1);
+        @right-left: extract(@margin-list, 2);
+        @bottom: extract(@margin-list, 3);
+
+        margin: -@top -@right-left -@bottom;
+    }
+
+    & when (@length = 4) {
+        @top: extract(@margin-list, 1);
+        @right: extract(@margin-list, 2);
+        @bottom: extract(@margin-list, 3);
+        @left: extract(@margin-list, 4);
+
+        margin: -@top -@right -@bottom -@left;
+    }
+};
+
 .steps ol {
     list-style: none;
     margin: 0;
@@ -40,7 +88,7 @@
 
                 content: "";
                 box-sizing: border-box;
-                z-index: @zindex-steps-circle;
+                z-index: 10;
                 border-radius: 50%;
                 border: 2px solid @brand-primary;
             }
@@ -62,7 +110,7 @@
 
             content: "";
             box-sizing: border-box;
-            z-index: @zindex-steps-circle;
+            z-index: 10;
             border-radius: 50%;
             border: 2px solid @brand-bg-gray;
             background-color: @brand-bg-white;
@@ -72,7 +120,7 @@
             .circle-base();
 
             color: @brand-secondary;
-            z-index: @zindex-steps-icon;
+            z-index: 15;
             line-height: @circle-size;
             text-align: center;
             font-size: 1.1rem;
@@ -82,7 +130,7 @@
             .circle-base();
 
             font-family: @brand-headline;
-            z-index: @zindex-steps-icon;
+            z-index: 15;
             line-height: @circle-size;
             text-align: center;
             font-size: 1rem;
@@ -93,7 +141,7 @@
             content: "";
             position: absolute;
             background-color: @brand-bg-gray;
-            z-index: @zindex-steps-line;
+            z-index: 5;
             height: @line-width;
 
             /* Prevents small render gaps on certain resolutions */

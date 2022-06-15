@@ -230,10 +230,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
             }
 
             if (this.state.activeTab.component.props.id === "accordion-showcase") {
-                this.state.activeTab.component.props.accordionGroup
-                    ? accordion.init("accordion-group-example")
-                    : accordion.init("expander-showcase");
-
+                accordion.init();
             }
         }
 

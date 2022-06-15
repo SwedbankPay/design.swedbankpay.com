@@ -1,7 +1,21 @@
+@import "../global.less";
+
+.panel-variant(@bg-color, @border-color) {
+    > header {
+        background-color: @bg-color;
+        border-color: @border-color;
+        border-width: 2px;
+    }
+
+    > footer {
+        border-bottom-color: @border-color;
+    }
+}
+
 .panel {
-    margin-top: @base-margin;
-    margin-bottom: @base-margin;
-    background-color: @panel-background-color;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: transparent;
 
     /* Contextual variations */
     &.panel-default {
@@ -52,7 +66,7 @@
     /* Panel contents */
     .panel-body {
         background-color: @white;
-        padding: @panel-body-padding;
+        padding: 2rem;
 
         > .panel-heading {
             margin: -15px -30px 15px -30px;
@@ -60,7 +74,7 @@
     }
 
     .panel-table {
-        border-bottom: 1px solid @table-border-color;
+        border-bottom: 1px solid @brand-secondary-light-3;
 
         .table {
             margin-bottom: 0;
@@ -69,11 +83,11 @@
             tbody {
                 tr {
                     > :first-child {
-                        padding-left: @base-padding-xl;
+                        padding-left: 2rem;
                     }
 
                     > :last-child {
-                        padding-right: @base-padding-xl;
+                        padding-right: 2rem;
                     }
                 }
             }
@@ -86,8 +100,8 @@
 
     // Optional heading
     > header {
-        padding: @base-padding;
-        padding-left: @base-padding-xl;
+        padding: 1rem;
+        padding-left: 2rem;
         border-bottom: 1px solid @panel-default-border-color;
     }
 
@@ -124,7 +138,7 @@
     // Optional footer (stays gray in every modifier class)
     > footer {
         background-color: @white;
-        padding: @panel-footer-padding;
+        padding: 2rem;
         border-top: 1px solid @panel-default-border-color;
     }
 

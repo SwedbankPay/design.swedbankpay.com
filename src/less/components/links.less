@@ -1,4 +1,28 @@
+@import "../global.less";
+@import "./badge.less";
+
+@action-link-height:                        3rem;
+@action-link-new-tab-height:                3rem;
+@action-link-arrow-font-size:               1.5rem;
+
 a {
+    color: @brand-accent-links;
+
+    &:hover,
+    &:focus {
+        color: darken(@brand-accent-links, 10%);
+        text-decoration: none;
+    }
+
+    &:active,
+    &:hover {
+        outline: 0;
+    }
+
+    &:focus {
+        .tab-focus();
+    }
+
     &.bright {
         color: @blue-syntax-highlight;
     }
@@ -50,6 +74,7 @@ a {
         .action-link-label {
             font-size: 1.125rem;
             font-family: @brand-headline;
+            margin-right: 0.25rem;
         }
 
         &.disabled {

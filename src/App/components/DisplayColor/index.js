@@ -1,23 +1,59 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ColorDisplay = ({ hex, rgb, fontColor, border }) => (
-    <div className={`${border ? border : ""}`}>
-        <svg>
-            <rect fill={hex} />
-        </svg>
-        <div className={`pl-3 ${fontColor ? fontColor : ""}`}>
-            <p className="mb-0">{hex}</p>
-            <p>{rgb}</p>
+const ColorDisplay = ({ title, subTitle, hex, border, contrastWhiteApproved, contrastBlackApproved, contrastWhiteAlert, contrastBlackAlert, noWhiteExample, noBlackExample }) => (
+    <div className="d-flex flex-column mb-2">
+        <div className={`color-box ${border ? border : ""}`}>
+            <svg>
+                <rect fill={hex} />
+            </svg>
+        </div>
+        <div className="text-box d-flex flex-column">
+            <p className="font-weight-bold mb-0">{title}</p>
+            <small className="small mb-0">{subTitle}</small>
+            <small className="small mb-0 text-uppercase">{hex}</small>
+            <div className="contrast-box">
+                {noWhiteExample ? <></> :
+                    <div className="contrast-white-container">
+                        <svg className="white-box first-svg">
+                            <rect fill={"#FFFFFF"}/>
+                        </svg>
+                        <svg className="second-svg">
+                            <rect fill={hex}/>
+                        </svg>
+                        {contrastWhiteApproved ?
+                            <i className="material-icons check">check_circle</i> :
+                            <>{contrastWhiteAlert ? <i className="material-icons warning">warning</i> : <i className="material-icons cancel">error</i>}</>}
+                    </div>}
+
+                {noBlackExample ? <></> :
+                    <div className="contrast-black-container">
+                        <svg className="first-svg">
+                            <rect fill={"#000000"}/>
+                        </svg>
+                        <svg className="second-svg">
+                            <rect fill={hex}/>
+                        </svg>
+                        {contrastBlackApproved ?
+                            <i className="material-icons check">check_circle</i> :
+                            <>{contrastBlackAlert ? <i className="material-icons warning">warning</i> : <i className="material-icons cancel">error</i>}</>}
+                    </div>}
+            </div>
         </div>
     </div>
 );
 
 ColorDisplay.propTypes = {
+    title: PropTypes.string.isRequired,
+    subTitle: PropTypes.string,
     hex: PropTypes.string.isRequired,
-    rgb: PropTypes.string.isRequired,
-    fontColor: PropTypes.string,
-    border: PropTypes.string
+    border: PropTypes.string,
+    contrastWhiteApproved: PropTypes.string,
+    contrastBlackApproved: PropTypes.string,
+    contrastWhiteAlert: PropTypes.string,
+    contrastBlackAlert: PropTypes.string,
+    noWhiteExample: PropTypes.string,
+    noBlackExample: PropTypes.string
 };
 
 export default ColorDisplay;

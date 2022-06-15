@@ -324,7 +324,7 @@ exports[`Core: Accessibility WcagStandard renders 1`] = `
     ).
   </p>
   <p>
-    The guidelines ties back to four core terms: A website should be perceivable,  operable, understandable and robust. In these four areas there are sets of criteria  that has to be met for a certain term to be considered achieved (see Figure 2). Each  criteria also has one or more sub-criteria which are graded on a scale from A to AAA where A is least acceptable and AAA is considered “very good”.
+    The guidelines ties back to four core terms: A website should be perceivable,  operable, understandable and robust. In these four areas there are sets of criteria  that has to be met for a certain term to be considered achieved. Each  criteria also has one or more sub-criteria which are graded on a scale from A to AAA where A is least acceptable and AAA is considered “very good”.
   </p>
   <section>
     <h4>

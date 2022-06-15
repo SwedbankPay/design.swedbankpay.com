@@ -1,3 +1,5 @@
+@import "../global.less";
+
 .action-list {
     position: relative;
     display: inline-flex;
@@ -6,9 +8,9 @@
         position: absolute;
         top: 2.7rem;
         right: 0;
-        z-index: @zindex-action-list;
+        z-index: 501;
         overflow: hidden;
-        box-shadow: @action-list-shadow;
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
         background-color: @white;
         display: none;
 
@@ -23,7 +25,7 @@
             color: @brand-secondary-dark-2;
 
             > .material-icons {
-                margin-right: @base-margin-sm;
+                margin-right: 0.5rem;
             }
 
             &:hover,

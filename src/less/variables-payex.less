@@ -13,6 +13,7 @@
 @light-gray:                                #F4F4F4;
 @white:                                     #ffffff;
 @soft-brown:                                #707070;
+@medium-brown:                              #72605e;
 
 /* Main Brand Color Variants */
 @brand-primary:                             #2A9D3F;
@@ -34,7 +35,7 @@
 @brand-tertiary:                            @brand-primary;
 @brand-accent:                              @brand-secondary;
 @blue-bright:                               @brand-secondary-light-2;
-@brand-accent-links:                        @brand-secondary;
+@brand-accent-links:                        @brand-primary;
 @payex-light-blue:                          #32B2DD;
 @payex-dark-blue:                           #1E3A6E;
 
@@ -66,7 +67,9 @@
 @brand-monofont:                            monospace;
 
 @payex-material-icons:                      "Material Icons Outlined";
-@payex-material-icons-alert-toast:          "Material Icons";
+
+/* Checkbox */
+@checkbox-checked-color:                    @brand-secondary;
 
 /* Button colors */
 @primary-disabled-bg:                       #f5b895;
@@ -74,8 +77,8 @@
 @destructive-disabled-bg:                   #f9ded3;
 
 @btn-primary-color:                         @white;
-@btn-primary-bg:                            #1C7D2E;
-@btn-primary-hover:                         @brand-success;
+@btn-primary-bg:                            @brand-success;
+@btn-primary-hover:                         @brand-tertiary;
 @btn-primary-disabled-color:                @white;
 @btn-primary-disabled-bg:                   @brand-secondary-light-2;
 
@@ -96,6 +99,17 @@
 @link-hover-color:                          @brand-primary;
 @link-color:                                @btn-primary-bg;
 
+/* Input */
+@input-color:                               @brand-secondary;
+@input-bg:                                  @white;
+@input-bg-disabled:                         @white;
+@input-checked-bg-disabled:                 @brand-secondary-light-3;
+@input-addon-color:                         @brand-secondary;
+@input-border-color:                        @border-color;
+
+/* Panel */
+@panel-default-border-color: @brand-secondary-light-3;
+
 /* Other colors */
 @yellow-faded:                              #FBDD91;
 @green-syntax-highlight:                    #99CC66;
@@ -108,3 +122,23 @@
 @tab-link:                                  @help-block-text;
 @radiobutton-border:                        @help-block-text;
 @checkbox-checked-color:                    @brand-secondary-light-2;
+
+html,
+body {
+    font-family: @brand-default;
+
+    p {
+        &.lead {
+            font-family: @brand-black;
+            font-weight: 500;
+        }
+    }
+}
+
+.material-icons {
+    font-family: @payex-material-icons;
+
+    &.alert-icon {
+        font-family: "Material icons";
+    }
+}

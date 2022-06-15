@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Color, { Lead, CommunicationColors, TextColors, BackgroundColors, ButtonColors, BrownScaleColors, ComplementaryColors, SystemColors, GrayScaleColors, MainColors } from "./index";
+import Color, { Lead, ColorContrast, TextColors, BackgroundColors, BrownScaleColors, SystemColors, MainColors } from "./index";
 
 describe("Core: Color", () => {
     it("is defined", () => {
@@ -28,11 +28,11 @@ describe("Core: Color", () => {
 
     describe("CommunicationColors", () => {
         it("is defined", () => {
-            expect(CommunicationColors).toBeDefined();
+            expect(ColorContrast).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<CommunicationColors />);
+            const wrapper = shallow(<ColorContrast />);
 
             expect(wrapper).toMatchSnapshot();
         });
@@ -62,18 +62,6 @@ describe("Core: Color", () => {
         });
     });
 
-    describe("ButtonColors", () => {
-        it("is defined", () => {
-            expect(ButtonColors).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<ButtonColors />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
     describe("BrownScaleColors", () => {
         it("is defined", () => {
             expect(BrownScaleColors).toBeDefined();
@@ -86,18 +74,6 @@ describe("Core: Color", () => {
         });
     });
 
-    describe("ComplementaryColors", () => {
-        it("is defined", () => {
-            expect(ComplementaryColors).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<ComplementaryColors />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
     describe("SystemColors", () => {
         it("is defined", () => {
             expect(SystemColors).toBeDefined();
@@ -105,18 +81,6 @@ describe("Core: Color", () => {
 
         it("renders", () => {
             const wrapper = shallow(<SystemColors />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("GrayScaleColors", () => {
-        it("is defined", () => {
-            expect(GrayScaleColors).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<GrayScaleColors />);
 
             expect(wrapper).toMatchSnapshot();
         });

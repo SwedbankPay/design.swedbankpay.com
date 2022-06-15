@@ -1,10 +1,16 @@
+@import "./form.less";
+@import "../global.less";
+
+@radio-height:                           1.375rem;
+@radio-width:                            @radio-height;
+
 .radio {
     position: relative;
     display: flex;
     align-items: center;
 
     &:not(:last-child) {
-        margin-bottom: @base-margin;
+        margin-bottom: 1rem;
     }
 
     label {
@@ -12,7 +18,7 @@
         align-items: center;
         margin: 0;
         margin-left: 1rem;
-        padding-left: @checkbox-label-padding;
+        padding-left: (1rem / 5);
         min-height: 1.5rem;
     }
 
@@ -35,7 +41,7 @@
         &:checked + label:before {
             background-color: @white;
             background-repeat: no-repeat;
-            background-image: url("../../../icons/shapes/circle.svg");
+            background-image: url("../../icons/shapes/circle.svg");
             border-color: @brand-secondary;
         }
 
@@ -54,7 +60,7 @@
 
             &:checked + label:before {
                 background-color: @white;
-                background-image: url("../../../icons/shapes/circle-disabled.svg");
+                background-image: url("../../icons/shapes/circle-disabled.svg");
             }
 
             + label,
@@ -78,11 +84,15 @@ fieldset {
             font-weight: normal;
             margin-left: 0.2rem;
         }
+    }
 
-        &.has-error {
-            input[type="radio"] + label:before {
-                border-color: @brand-error;
-            }
+    &.has-error {
+        input[type="radio"] + label:before {
+            border-color: @brand-error;
+        }
+
+        .help-block {
+            color: @brand-error;
         }
     }
 
