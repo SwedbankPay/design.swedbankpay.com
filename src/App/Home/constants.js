@@ -1,4 +1,11 @@
+import React from "react";
+
 export const changeLogs = [
+    {
+        version: "10.0.0",
+        title: "Design guide light 👑",
+        text: <p>It´s finally here! Design guide light is live and direct! Choose what components you want, and leave the rest. Go to <a href="/get-started/for-developers">for developers</a> to read the updated documentation. We also updated some of the colors and the presentation is brand new! Head over to the <a href="/identity/color">color section</a> in Identity to see hex-codes, variables and more! ApplePay icon has also been added.</p>
+    },
     {
         version: "9.1.0",
         title: "Infinite sidebar 😱 and more WCAG",

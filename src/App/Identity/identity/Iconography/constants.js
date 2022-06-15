@@ -87,6 +87,10 @@ export const paymentIcons = [
     {
         title: "Trustly",
         code: "trustly"
+    },
+    {
+        title: "ApplePay",
+        code: "applepay"
     }
 ];
 

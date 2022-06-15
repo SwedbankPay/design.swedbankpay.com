@@ -67,7 +67,7 @@ const Installation = () => (
 
             <h4>Installing individual components</h4>
             <p>Import <CodeTags type="primary" code={`variables-${brand}.less`}/> and the desired component, i.e. Expandable:</p>
-            <ComponentPreview language="javascript" codeFigure>
+            <ComponentPreview language="css" codeFigure>
                 @import url(&quot;@swedbankpay/design-guide/src/less/variables-{brand}.less&quot;); {"\n"}
                 @import url(&quot;@swedbankpay/design-guide/src/less/components/expandable.less&quot;);
             </ComponentPreview>

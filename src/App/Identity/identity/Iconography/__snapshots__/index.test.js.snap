@@ -1062,6 +1062,26 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           />
         </td>
       </tr>
+      <tr
+        key="applepay"
+      >
+        <td>
+          <IconPreview
+            name="applepay"
+            size="large"
+            type="payment-icon"
+          />
+        </td>
+        <td>
+          ApplePay
+        </td>
+        <td>
+          <CodeTags
+            code="applepay"
+            type="secondary"
+          />
+        </td>
+      </tr>
     </tbody>
   </table>
   <ComponentPreview
@@ -1101,6 +1121,12 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
     <i
       aria-hidden="true"
       className="payment-icon payment-icon-trustly"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-applepay"
     />
     
 

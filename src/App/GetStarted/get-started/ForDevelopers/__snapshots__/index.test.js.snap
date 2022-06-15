@@ -471,7 +471,7 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
     </p>
     <ComponentPreview
       codeFigure={true}
-      language="javascript"
+      language="css"
     >
       @import url("@swedbankpay/design-guide/src/less/variables-
       TESTBRAND
