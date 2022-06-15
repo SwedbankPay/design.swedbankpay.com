@@ -1,16 +1,15 @@
 # Changelog
 
-## [9.1.0] - 11.05.2022
+## [10.0.0] - 15.06.2022
 
-## Changed
--   Sidebar component and documentation
-    -   Support of infinite levels
--   Anchor support for pagination arrows
-
-## Fixed
--   Landing page bug
-    -   Containers was overflowing each other in smaller screens
-    
+## Breaking
+-   Files path change
+    -   Component variables is placed in their respective component files
+    -   Same applies for mixins
+    -   Global.less is meved up one level
+## Added
+-   More color variables
+-   ApplePay icon
 ## WCAG
--   Added alt-text on img tags missing it
--   Added information from pictures into real text (Logotype- and Accessibility documentation)
+-   Updated colors for swedbankpay brand
+-   Updated color documentation in Utilities and Identity

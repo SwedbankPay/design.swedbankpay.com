@@ -1,6 +1,6 @@
 {
   "name": "@swedbankpay/design-guide",
-  "version": "9.1.0-beta.6",
+  "version": "10.0.0",
   "description": "Swedbank Pay Design Guide",
   "main": "src/scripts/main/index.js",
   "scripts": {
