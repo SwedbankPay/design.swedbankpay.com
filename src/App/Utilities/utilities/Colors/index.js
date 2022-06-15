@@ -1,7 +1,6 @@
 import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
-import Link from "@components/Link";
 
 const backgroundColors = ["brand", "primary", "secondary", "tertiary", "quaternary", "danger", "warning", "success", "neutral"];
 const textColors = ["default", "muted", "white", "danger", "warning", "neutral", "success"];
