@@ -282,80 +282,84 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
     TESTBRAND
      Design Guide to your project, include the snippets below in your project.
   </p>
-  <h3>
-    Include in the header
-  </h3>
-  <p>
-    Copy-paste the following CSS code into 
-    <CodeTags
-      code="<head>"
-      type="secondary"
-    />
-     before all the other stylesheets in order to load our CSS.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-  >
-    <link
-      href="http://localhost/TEST/styles/TESTBRAND.css"
-      rel="stylesheet"
-    />
-  </ComponentPreview>
-  <h3>
-    Include at the bottom
-  </h3>
-  <p>
-    Many of our components requires the use of JavaScript in order to function. Place the following 
-    <CodeTags
-      code="<Script>"
-      type="secondary"
-    />
-     tag near the end of your pages, right before the closing 
-    <CodeTags
-      code="</body>"
-      type="secondary"
-    />
-     tag to enable them.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-  >
-    <script
-      autoload="true"
-      global="true"
-      src="http://localhost/TEST/scripts/dg.js"
-    />
-  </ComponentPreview>
-  <p>
-    The 
-    <CodeTags
-      code="global"
-      type="secondary"
-    />
-     attribute adds the script to the global scope. The 
-    <CodeTags
-      code="autoload"
-      type="secondary"
-    />
-     attribute automatically initiates all components when loaded. Great for plug and play.
-  </p>
-  <h2
-    id="installation-npm"
-  >
-    Installation with NPM
-  </h2>
-  <p>
-    If you want to host the Design Guide files in your own app, run the following command.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="terminal"
-  >
-    npm install @swedbankpay/design-guide
-  </ComponentPreview>
   <section>
+    <h3>
+      Include in the header
+    </h3>
+    <p>
+      Copy-paste the following CSS code into 
+      <CodeTags
+        code="<head>"
+        type="secondary"
+      />
+       before all the other stylesheets in order to load our CSS.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+    >
+      <link
+        href="http://localhost/TEST/styles/TESTBRAND.css"
+        rel="stylesheet"
+      />
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Include at the bottom
+    </h3>
+    <p>
+      Many of our components requires the use of JavaScript in order to function. Place the following 
+      <CodeTags
+        code="<Script>"
+        type="secondary"
+      />
+       tag near the end of your pages, right before the closing 
+      <CodeTags
+        code="</body>"
+        type="secondary"
+      />
+       tag to enable them.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+    >
+      <script
+        autoload="true"
+        global="true"
+        src="http://localhost/TEST/scripts/dg.js"
+      />
+    </ComponentPreview>
+    <p>
+      The 
+      <CodeTags
+        code="global"
+        type="secondary"
+      />
+       attribute adds the script to the global scope. The 
+      <CodeTags
+        code="autoload"
+        type="secondary"
+      />
+       attribute automatically initiates all components when loaded. Great for plug and play.
+    </p>
+  </section>
+  <section>
+    <h2
+      id="installation-npm"
+    >
+      Installation with NPM
+    </h2>
+    <p>
+      If you want to host the Design Guide files in your own app, run the following command.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="terminal"
+    >
+      npm install @swedbankpay/design-guide
+    </ComponentPreview>
     <h3>
       Usage with NPM
     </h3>
@@ -477,119 +481,123 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
       @import url("@swedbankpay/design-guide/src/less/components/expandable.less");
     </ComponentPreview>
   </section>
-  <h3>
-    How to initialize our JavaScript components
-  </h3>
-  <p>
-    Our script runs 
-    <CodeTags
-      code="dg.script.initAll();"
-      type="secondary"
-    />
-     on DOMContentLoaded making it so you have to run 
-    <CodeTags
-      code="dg.<component_name>.init();"
-      type="secondary"
-    />
-     manually when a component is rendered after the event has fired.
-  </p>
-  <p>
-    To initialize components use 
-    <CodeTags
-      code="dg.<component_name>.init();"
-      type="secondary"
-    />
-    . If the function is called without arguments it will target all components with class 
-    <CodeTags
-      code="<component_name>"
-      type="secondary"
-    />
-     on the page. Initializing only one component can be done by passing an ID, it must match an existing components ID and will print a warning message if the value is invalid.
-  </p>
-  <p>
-    If only one component is initialized then the init function will return one object. If several components are initialized it will return an array of objects.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-  >
-    dg.component.init();
-    
+  <section>
+    <h3>
+      How to initialize our JavaScript components
+    </h3>
+    <p>
+      Our script runs 
+      <CodeTags
+        code="dg.script.initAll();"
+        type="secondary"
+      />
+       on DOMContentLoaded making it so you have to run 
+      <CodeTags
+        code="dg.<component_name>.init();"
+        type="secondary"
+      />
+       manually when a component is rendered after the event has fired.
+    </p>
+    <p>
+      To initialize components use 
+      <CodeTags
+        code="dg.<component_name>.init();"
+        type="secondary"
+      />
+      . If the function is called without arguments it will target all components with class 
+      <CodeTags
+        code="<component_name>"
+        type="secondary"
+      />
+       on the page. Initializing only one component can be done by passing an ID, it must match an existing components ID and will print a warning message if the value is invalid.
+    </p>
+    <p>
+      If only one component is initialized then the init function will return one object. If several components are initialized it will return an array of objects.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      removeOuterTag={true}
+    >
+      dg.component.init();
+      
 
-    dg.component.init("demo-component-id");
-  </ComponentPreview>
-  <h3>
-    Browser Support
-  </h3>
-  <p>
-    The design guide is tested and currently supported by these browsers.
-  </p>
-  <div
-    className="browser-support"
-  >
+      dg.component.init("demo-component-id");
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Browser Support
+    </h3>
+    <p>
+      The design guide is tested and currently supported by these browsers.
+    </p>
     <div
-      key="img/documentation/forDevelopers/chrome.png"
+      className="browser-support"
     >
-      <img
-        alt="Image of chrome"
-        src="/TEST/img/documentation/forDevelopers/chrome.png"
-      />
-      <p>
-        Yes
-      </p>
+      <div
+        key="img/documentation/forDevelopers/chrome.png"
+      >
+        <img
+          alt="Image of chrome"
+          src="/TEST/img/documentation/forDevelopers/chrome.png"
+        />
+        <p>
+          Yes
+        </p>
+      </div>
+      <div
+        key="img/documentation/forDevelopers/edge.png"
+      >
+        <img
+          alt="Image of Edge"
+          src="/TEST/img/documentation/forDevelopers/edge.png"
+        />
+        <p>
+          Yes
+        </p>
+      </div>
+      <div
+        key="img/documentation/forDevelopers/firefox.png"
+      >
+        <img
+          alt="Image of Firefox"
+          src="/TEST/img/documentation/forDevelopers/firefox.png"
+        />
+        <p>
+          Yes
+        </p>
+      </div>
+      <div
+        key="img/documentation/forDevelopers/opera.png"
+      >
+        <img
+          alt="Image of Opera"
+          src="/TEST/img/documentation/forDevelopers/opera.png"
+        />
+        <p>
+          Yes
+        </p>
+      </div>
+      <div
+        key="img/documentation/forDevelopers/safari.png"
+      >
+        <img
+          alt="Image of Safari"
+          src="/TEST/img/documentation/forDevelopers/safari.png"
+        />
+        <p>
+          Yes
+        </p>
+      </div>
     </div>
-    <div
-      key="img/documentation/forDevelopers/edge.png"
-    >
-      <img
-        alt="Image of Edge"
-        src="/TEST/img/documentation/forDevelopers/edge.png"
-      />
-      <p>
-        Yes
-      </p>
-    </div>
-    <div
-      key="img/documentation/forDevelopers/firefox.png"
-    >
-      <img
-        alt="Image of Firefox"
-        src="/TEST/img/documentation/forDevelopers/firefox.png"
-      />
-      <p>
-        Yes
-      </p>
-    </div>
-    <div
-      key="img/documentation/forDevelopers/opera.png"
-    >
-      <img
-        alt="Image of Opera"
-        src="/TEST/img/documentation/forDevelopers/opera.png"
-      />
-      <p>
-        Yes
-      </p>
-    </div>
-    <div
-      key="img/documentation/forDevelopers/safari.png"
-    >
-      <img
-        alt="Image of Safari"
-        src="/TEST/img/documentation/forDevelopers/safari.png"
-      />
-      <p>
-        Yes
-      </p>
-    </div>
-  </div>
-  <h4>
-    Browser support for products using the Design Guide
-  </h4>
-  <p>
-    It is up to every Project manager and development team to decide which browsers their product should support. If you want to support other browsers than the ones supported by the Design Guide you need to maintain and test the component code in in your project. 
-  </p>
+    <h4>
+      Browser support for products using the Design Guide
+    </h4>
+    <p>
+      It is up to every Project manager and development team to decide which browsers their product should support. If you want to support other browsers than the ones supported by the Design Guide you need to maintain and test the component code in in your project. 
+    </p>
+  </section>
 </section>
 `;
 
