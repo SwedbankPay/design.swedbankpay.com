@@ -13,6 +13,7 @@ const Installation = () => (
     <section>
         <h2 id="installation">Installation with CDN</h2>
         <p>To quickly add the {brandTitle} Design Guide to your project, include the snippets below in your project.</p>
+
         <h3>Include in the header</h3>
         <p>Copy-paste the following CSS code into <CodeTags type="secondary" code="<head>"/> before all the other stylesheets in order to load our CSS.</p>
         <ComponentPreview language="html" codeFigure>
@@ -25,39 +26,51 @@ const Installation = () => (
             <script src={`${window.location.origin + basename}scripts/dg.js`} global="true" autoload="true"></script>
         </ComponentPreview>
         <p>The <CodeTags type="secondary" code="global"/> attribute adds the script to the global scope. The <CodeTags type="secondary" code="autoload"/> attribute automatically initiates all components when loaded. Great for plug and play.</p>
+
         <h2 id="installation-npm">Installation with NPM</h2>
         <p>If you want to host the Design Guide files in your own app, run the following command.</p>
         <ComponentPreview language="terminal" codeFigure>
             npm install @swedbankpay/design-guide
         </ComponentPreview>
-        <h3>Usage with NPM</h3>
-        <p>When importing the Design Guide javascript, you can choose to either import the whole thing or only the components you want to use.</p>
-        <ComponentPreview language="javascript" codeFigure>
-            import dg from &quot;@swedbankpay/design-guide&quot;; {"\n"}
-            dg.script.initAll();
-        </ComponentPreview>
-        <ComponentPreview language="javascript" codeFigure>
-            import &#123; sheet &#125; from &quot;@swedbankpay/design-guide&quot;;  {"\n"}
-            sheet.init();
-        </ComponentPreview>
-        <p>For our CSS you can choose to import it from a <CodeTags type="secondary" code="css/less/scss"/> file, from a <CodeTags type="secondary" code="js"/> file if your bundler supports it, or point to the file directly from your bundler.</p>
-        <p>Example from a <CodeTags type="secondary" code=".less"/> file</p>
-        <ComponentPreview language="css" codeFigure>
-            @import url(&quot;@swedbankpay/design-guide/src/less/{brand}.less&quot;);
-        </ComponentPreview>
-        <p>Example from <CodeTags type="secondary" code="angular.json"/></p>
-        <ComponentPreview language="json" codeFigure>
-        &quot;styles&quot;: [ {"\n"}
-            &nbsp; &quot;src/app.less&quot;, {"\n"}
-            &nbsp; &quot;./node_modules/@swedbankpay/design-guide/src/less/{brand}.less&quot; {"\n"}
-        ],
-        </ComponentPreview>
-        <p>Example from <CodeTags type="secondary" code="nuxt.config.js"/></p>
-        <ComponentPreview language="javascript" codeFigure>
-        &quot;css&quot;: [ {"\n"}
-            &nbsp; &quot;./node_modules/@swedbankpay/design-guide/src/less/{brand}.less&quot; {"\n"}
-        ],
-        </ComponentPreview>
+
+        <section>
+            <h3>Usage with NPM</h3>
+            <p>When importing the Design Guide javascript, you can choose to either import the whole thing or only the components you want to use.</p>
+            <ComponentPreview language="javascript" codeFigure>
+                import dg from &quot;@swedbankpay/design-guide&quot;; {"\n"}
+                dg.script.initAll();
+            </ComponentPreview>
+            <ComponentPreview language="javascript" codeFigure>
+                import &#123; sheet &#125; from &quot;@swedbankpay/design-guide&quot;;  {"\n"}
+                sheet.init();
+            </ComponentPreview>
+            <p>For our CSS you can choose to import it from a <CodeTags type="secondary" code="css/less/scss"/> file, from a <CodeTags type="secondary" code="js"/> file if your bundler supports it, or point to the file directly from your bundler.</p>
+            <p>Example from a <CodeTags type="secondary" code=".less"/> file</p>
+            <ComponentPreview language="css" codeFigure>
+                @import url(&quot;@swedbankpay/design-guide/src/less/{brand}.less&quot;);
+            </ComponentPreview>
+            <p>Example from <CodeTags type="secondary" code="angular.json"/></p>
+            <ComponentPreview language="json" codeFigure>
+            &quot;styles&quot;: [ {"\n"}
+                &nbsp; &quot;src/app.less&quot;, {"\n"}
+                &nbsp; &quot;./node_modules/@swedbankpay/design-guide/src/less/{brand}.less&quot; {"\n"}
+            ],
+            </ComponentPreview>
+            <p>Example from <CodeTags type="secondary" code="nuxt.config.js"/></p>
+            <ComponentPreview language="javascript" codeFigure>
+            &quot;css&quot;: [ {"\n"}
+                &nbsp; &quot;./node_modules/@swedbankpay/design-guide/src/less/{brand}.less&quot; {"\n"}
+            ],
+            </ComponentPreview>
+
+            <h4>Installing individual components</h4>
+            <p>Import <CodeTags type="primary" code={`variables-${brand}.less`}/> and the desired component, i.e. Expandable:</p>
+            <ComponentPreview language="javascript" codeFigure>
+                @import url(&quot;@swedbankpay/design-guide/src/less/variables-{brand}.less&quot;); {"\n"}
+                @import url(&quot;@swedbankpay/design-guide/src/less/components/expandable.less&quot;);
+            </ComponentPreview>
+        </section>
+
         <h3>How to initialize our JavaScript components</h3>
         <p>Our script runs <CodeTags type="secondary" code="dg.script.initAll();"/> on DOMContentLoaded making it so you have to run <CodeTags type="secondary" code="dg.<component_name>.init();"/> manually when a component is rendered after the event has fired.</p>
 
