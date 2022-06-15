@@ -6,7 +6,7 @@
 -   Files path change
     -   Component variables is placed in their respective component files
     -   Same applies for mixins
-    -   Global.less is meved up one level
+    -   Global.less is moved up one level
 ## Added
 -   More color variables
 -   ApplePay icon
