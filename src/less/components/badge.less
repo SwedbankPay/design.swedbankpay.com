@@ -3,7 +3,7 @@
 /* stylelint-disable */
 @badge-list: {
     default: @brand-primary;
-    inactive: @list-gray;
+    inactive: @brand-bg-gray;
     warning: @brand-error;
 }
 
@@ -33,7 +33,8 @@
         vertical-align: text-top;
     }
 
-    &.badge-default {
+    &.badge-default,
+    .badge-inactive {
         color: @brand-secondary-dark-2;
     }
 

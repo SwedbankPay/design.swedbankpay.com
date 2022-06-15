@@ -10,7 +10,7 @@ const basename = process.env.basename;
 
 const Lead = () => (
     <section>
-        <p className="lead">To give a unified appearance and effectively create visual recognition, the communication color of Swedbank Pay is yellow. Yellow is an energetic and vibrant color that matches the brand of Swedbank Pay. In complement to this, Swedbank Pay uses a selection of colors from Swedbank’s color palette.</p>
+        <p className="lead">The primary color of Swedbank Pay is yellow, it is used to give a unified appearance and create visual recognition. Yellow is an energetic and vibrant color that matches the brand of Swedbank Pay. In complement to this, Swedbank Pay uses a selection of colors from Swedbank´s color palette.</p>
         <div className="d-flex flex-column align-items-center mt-5">
             <img src={`${basename}img/documentation/colors/color-palette.png`} className="w-100" alt="The Swedbank Pay color palette" />
             <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> The Swedbank Pay color palette</span>
@@ -18,12 +18,43 @@ const Lead = () => (
     </section>
 );
 
-const CommunicationColors = () => (
+const ColorContrast = () => (
     <section>
-        <h2 id="communication-colors">Communication colors</h2>
-        <p>Yellow is used on backgrounds, in main graphical elements and on underlines for highlighting relevant parts of a message. When the yellow is used as a background choose the white text version of the logotype.</p>
-        <div className="color-group communication-colors justify-content-between">
-            {sbColors.communicationColors.map((color, i) => (
+        <p>It is important to maintain sufficient color contrast in our products to meet accessability requirements. For normal text content this means a 4.5:1 ratio against background and for graphics and large text (18 px, or bold 14 px) a 3:1 ratio against background. To help you to make informed color decisions, we showcase the contrast ratio of each color to our default text (brown) and background (white) color here. </p>
+        <div className="d-flex flex-row justify-content-around color-contrast-section">
+            <span className="d-flex"><i className="material-icons check mr-1" aria-hidden="true">check_circle</i><b>Pass (&ge; 4.5:1)</b></span>
+            <span className="d-flex"><i className="material-icons warning mr-1" aria-hidden="true">warning</i><b>OK for graphics or large text (&ge; 3:1)</b></span>
+            <span className="d-flex"><i className="material-icons cancel mr-1" aria-hidden="true">error</i><b>Fail</b></span>
+        </div>
+    </section>
+);
+
+const BrandColors = () => (
+    <section>
+        <h2 id="brand-colors">Brand colors</h2>
+        <h3>Primary colors</h3>
+        <p>Yellow is used as an identity marker in graphical elements and in our primary buttons. Yellow should not be used as a text color.</p>
+        <div className="color-group">
+            {sbColors.brandColors.map((color, i) => (
+                <DisplayColor key={i} {...color}/>
+            ))}
+        </div>
+        <h3 id="complementary-colors">Complementary colors</h3>
+        <p>Our complementary brand colors can be used in graphical elements to separate and emphasize different messages. </p>
+        <div className="color-group">
+            {sbColors.complementaryColors.map((color, i) => (
+                <DisplayColor key={i} {...color}/>
+            ))}
+        </div>
+    </section>
+);
+
+const BrownScaleColors = () => (
+    <section>
+        <h2 id="brown-scale-colors">Brown scale colors</h2>
+        <p>Brown scale colors are used for both typography, borders and interface details to maintain a warm and welcoming expression.</p>
+        <div className="color-group">
+            {sbColors.brownScaleColors.map((color, i) => (
                 <DisplayColor key={i} {...color}/>
             ))}
         </div>
@@ -33,7 +64,7 @@ const CommunicationColors = () => (
 const TextColors = () => (
     <section>
         <h2 id="text-colors">Text colors</h2>
-        <p>Brown is our primary text color that should be used for all text besides link and text on dark backgrounds and images. For links, use turquoise and for dark backgrounds/images use white. Gray is used for smaller text that has to be presented in the interface but we don’t want to be the primary focus. </p>
+        <p>Brown is our default text color that should be used for all normal text besides links and text on dark backgrounds or images. For links, use turquoise and for text on dark backgrounds or images use white. A lighter brown is used as a muted text color for smaller or less important text that shouldn’t be the primary focus.</p>
         <div className="color-group">
             {sbColors.textColors.map((color, i) => (
                 <DisplayColor key={i} {...color}/>
@@ -45,45 +76,9 @@ const TextColors = () => (
 const BackgroundColors = () => (
     <section>
         <h2 id="background-colors">Background colors</h2>
-        <p>Apricot is our primary background color. Light gray and light turquoise are secondary. </p>
+        <p>To maintain an open and welcoming experience we mostly use no background color, that is white. Our background colors have a functional role and are used to organize, structure or highlight a section. Apricot is our primary background color, gray and light turquoise are complementary. </p>
         <div className="color-group">
             {sbColors.backgroundColors.map((color, i) => (
-                <DisplayColor key={i} {...color}/>
-            ))}
-        </div>
-    </section>
-);
-
-const ButtonColors = () => (
-    <section>
-        <h2 id="buttons-colors">Button colors</h2>
-        <p>Our primary buttons are yellow and our secondary buttons are brown. Go to Buttons to see and interact with all buttons. </p>
-        <div className="color-group">
-            {sbColors.buttonColors.map((color, i) => (
-                <DisplayColor key={i} {...color}/>
-            ))}
-        </div>
-    </section>
-);
-
-const BrownScaleColors = () => (
-    <section>
-        <h2 id="brown-scale-colors">Brown scale colors</h2>
-        <p>The brown scale colors are primarily used for borders and backgrounds. These colors cannot be used as text colors. </p>
-        <div className="color-group">
-            {sbColors.brownScaleColors.map((color, i) => (
-                <DisplayColor key={i} {...color}/>
-            ))}
-        </div>
-    </section>
-);
-
-const ComplementaryColors = () => (
-    <section>
-        <h2 id="complementary-colors">Complementary colors</h2>
-        <p>Can be used for decorative elements in combination with corresponding background colors. These colors cannot be used as text colors. </p>
-        <div className="color-group">
-            {sbColors.complementaryColors.map((color, i) => (
                 <DisplayColor key={i} {...color}/>
             ))}
         </div>
@@ -96,17 +91,6 @@ const SystemColors = () => (
         <p>We have four primary system colors (red, blue, green, and yellow) which all have a lighter complementary version as well. </p>
         <div className="color-group">
             {sbColors.systemColors.map((color, i) => (
-                <DisplayColor key={i} {...color}/>
-            ))}
-        </div>
-    </section>
-);
-
-const GrayScaleColors = () => (
-    <section>
-        <h2 id="gray-scale-colors">Gray scale colors</h2>
-        <div className="color-group">
-            {sbColors.grayScaleColors.map((color, i) => (
                 <DisplayColor key={i} {...color}/>
             ))}
         </div>
@@ -178,14 +162,12 @@ const Color = () => (
         {brand === "swedbankpay" &&
             <DocContainer>
                 <Lead />
-                <CommunicationColors />
-                <TextColors />
-                <BackgroundColors />
-                <ButtonColors />
-                <BrownScaleColors />
-                <ComplementaryColors />
-                <SystemColors />
-                <GrayScaleColors />
+                <ColorContrast/>
+                <BrandColors/>
+                <BrownScaleColors/>
+                <TextColors/>
+                <BackgroundColors/>
+                <SystemColors/>
             </DocContainer>
         }
         {brand === "payex" &&
@@ -202,4 +184,4 @@ const Color = () => (
 
 export default Color;
 
-export { Lead, CommunicationColors, TextColors, BackgroundColors, ButtonColors, BrownScaleColors, ComplementaryColors, SystemColors, GrayScaleColors, MainColors };
+export { Lead, ColorContrast, BrandColors, BrownScaleColors, TextColors, BackgroundColors, SystemColors, MainColors };
