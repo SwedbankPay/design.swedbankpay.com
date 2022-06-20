@@ -68,7 +68,7 @@ exports[`Core: Imagery AltTextAndCaptions renders 1`] = `
       </li>
       <li>
         <b>
-          Image captions and alt text should not be tha same to avoid repetition.
+          Image captions and alt text should not be the same to avoid repetition.
         </b>
          If the caption or nearby text already explains the informational image, you might usa a very brief or empty alt text (alt="").
       </li>

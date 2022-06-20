@@ -104,7 +104,7 @@ const AltTextAndCaptions = () => (
             <h3>Image description guidelines</h3>
             <ul className="list list-bullet">
                 <li><b>All images must have a caption or alt text.</b> If an image is purely decorative it should have an empty alt text (alt=&quot;&quot;), for example a pattern.</li>
-                <li><b>Image captions and alt text should not be tha same to avoid repetition.</b> If the caption or nearby text already explains the informational image, you might usa a very brief or empty alt text (alt=&quot;&quot;).</li>
+                <li><b>Image captions and alt text should not be the same to avoid repetition.</b> If the caption or nearby text already explains the informational image, you might usa a very brief or empty alt text (alt=&quot;&quot;).</li>
                 <li><b>Keep it short.</b> An alt text should be around one to two sentences. Remember that the entire text will be read aloud by a screen reader, so don’t overwhelm the user.</li>
                 <li><b>Include only the most relevant visual details.</b> It’s not practical to include every visual detail in a photo or illustration. </li>
                 <li><b>Describe only what is in the image.</b> Don’t provide additional context that is not visually apparent; such context belongs in an image caption.</li>
