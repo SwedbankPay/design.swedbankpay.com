@@ -46,7 +46,7 @@ const Overview = () => (
                 <div className="slab slab-plain slab-border-error h-100 pb-5">
                     <h3>Don&apos;t</h3>
                     <div className="d-flex justify-content-center">
-                        <img id="tooltip-error-image" src={`${basename}img/documentation/tooltips/dont-example.png`} alt="Do not use tooltips as an alternate possibility for describing error messages." className="col-12 col-sm-9"/>
+                        <img id="tooltip-error-image" src={`${basename}img/documentation/tooltips/dont-example.png`} alt="An e-mail input field in error state with a tooltip displaying an error message." className="col-12 col-sm-9"/>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@ const ContentGuidelines = () => (
     <section>
         <h2>Content guidelines</h2>
         <div className="slab slab-plain py-5 d-flex justify-content-center">
-            <img className="w-25" src={`${basename}img/documentation/tooltips/content.png`} alt="Tooltip content should be short and concise."/>
+            <img className="w-25" src={`${basename}img/documentation/tooltips/content.png`} alt="A small tooltip containting only the word Content."/>
         </div>
         <ul className="list list-bullet">
             <li>The tooltip <b>content</b> should be short and concise providing useful, additional information or clarification.</li>
