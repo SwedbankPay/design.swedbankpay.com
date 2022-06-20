@@ -276,7 +276,7 @@ exports[`Core: Accessibility Intro renders 1`] = `
     className="d-flex flex-column align-items-center"
   >
     <img
-      alt="Copy text"
+      alt="Commercial text with a package price offering."
       className="mb-1 w-100"
       src="/TEST/img/documentation/copywriting/terminology-copy.png"
     />
@@ -288,9 +288,9 @@ exports[`Core: Accessibility Intro renders 1`] = `
       >
         Figure 1.
       </span>
-       This is an example of “pure” copy text from 
+      Figure 1. Example of “pure” copy text from 
       TESTBRAND
-      .se
+      .se.
     </span>
   </div>
   <h3>
@@ -303,7 +303,7 @@ exports[`Core: Accessibility Intro renders 1`] = `
     className="d-flex flex-column align-items-center"
   >
     <img
-      alt="Microcopy copy text"
+      alt="Microcopy text as link labels in global navigation."
       className="mb-1 w-100"
       src="/TEST/img/documentation/copywriting/terminology-microcopy.png"
     />
@@ -315,7 +315,7 @@ exports[`Core: Accessibility Intro renders 1`] = `
       >
         Figure 2.
       </span>
-       This is an example of microcopy copy text.
+      Example of microcopy text from swedbankpay.com.
     </span>
   </div>
   <h3>

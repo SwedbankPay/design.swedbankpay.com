@@ -198,7 +198,7 @@ exports[`Identity: Spacing EightPointSystem renders 1`] = `
     className="d-flex flex-column align-items-center mb-4"
   >
     <img
-      alt="Example on multiples of 8px horizontal spacing between elements"
+      alt=""
       className="w-100"
       src="/TEST/img/documentation/spacing/horizontal-spacing-example.svg"
     />
@@ -210,7 +210,7 @@ exports[`Identity: Spacing EightPointSystem renders 1`] = `
       >
         Figure 1.
       </span>
-       Example on multiples of 8px horizontal spacing between elements.
+       Examples of horizontal spacing between elements using multiples of 8px. 
     </span>
   </div>
   <p>
@@ -860,7 +860,7 @@ exports[`Identity: Spacing VerticalSpacing renders 1`] = `
     className="d-flex flex-column align-items-center"
   >
     <img
-      alt="Example on multiples of 8 px vertical spacing between elements"
+      alt=""
       className="w-100"
       src="/TEST/img/documentation/spacing/vertical-spacing-example.svg"
     />
@@ -872,7 +872,7 @@ exports[`Identity: Spacing VerticalSpacing renders 1`] = `
       >
         Figure 2.
       </span>
-       Example on multiples of 8 px vertical spacing between elements
+       Examples of vertical spacing between elements using multiples of 8px.
     </span>
   </div>
 </section>

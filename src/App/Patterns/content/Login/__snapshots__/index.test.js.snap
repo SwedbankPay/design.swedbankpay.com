@@ -109,7 +109,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
       Image
     </h3>
     <img
-      alt="Fitting images for login screen"
+      alt="Selection of images showing people in different settings using digital devices."
       className="w-100 mb-3"
       src="/TEST/img/documentation/patterns/login-img-collection-example.png"
     />
@@ -202,7 +202,7 @@ exports[`Forms: index Overview renders 1`] = `
     Overview
   </h2>
   <img
-    alt="Image for login screen"
+    alt="A login screen with the login functionality to the left and an image to the right showing a woman using a laptop."
     className="d-none d-md-block w-100 border-left border-right border-bottom"
     src="/TEST/img/documentation/patterns/login-pattern-example.png"
   />

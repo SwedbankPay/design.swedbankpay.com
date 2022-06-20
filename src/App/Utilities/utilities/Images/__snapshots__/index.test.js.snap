@@ -49,7 +49,7 @@ exports[`Utilities: Image ImageFluid renders 1`] = `
     showCasePanel={true}
   >
     <img
-      alt="Goat looking out for danger"
+      alt="A rocky landscape with a white goat surrounded by trees."
       className="img-fluid"
       src="https://picsum.photos/1000/250?image=937"
     />
@@ -78,7 +78,7 @@ exports[`Utilities: Image ImageRounded renders 1`] = `
     showCasePanel={true}
   >
     <img
-      alt="Human jumping in the sunset"
+      alt="A mountaineous landscape at sunset with a person jumping in the foreground."
       className="img-rounded mx-auto d-block"
       src="https://picsum.photos/200?image=770"
     />
@@ -106,7 +106,7 @@ exports[`Utilities: Image ImageThumbnail renders 1`] = `
     showCasePanel={true}
   >
     <img
-      alt="Girl photographing the photographer"
+      alt="A woman in a forest taking a photo facing the camera."
       className="img-thumbnail mx-auto d-block"
       src="https://picsum.photos/200?image=823"
     />

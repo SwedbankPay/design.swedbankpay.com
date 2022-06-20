@@ -358,7 +358,7 @@ exports[`Documentation: Buttons Content guidelines renders 1`] = `
           className="d-flex justify-content-center mt-4 mb-4"
         >
           <img
-            alt="Use different naming on buttons for differentiate actions."
+            alt="An executive destructive button reads Yes, cancel payment process with a text destructive button that reads No, take me back."
             className="img-fluid"
             src="/TEST/img/documentation/buttons/dos-naming.png"
           />
@@ -381,7 +381,7 @@ exports[`Documentation: Buttons Content guidelines renders 1`] = `
           className="d-flex justify-content-center mt-4 mb-4"
         >
           <img
-            alt="Avoid naming executive destructive buttons poorly"
+            alt="An executive destructive button that reads Cancel to cancel payment, and a link button that also reads Cancel."
             className="img-fluid"
             src="/TEST/img/documentation/buttons/donts-naming.png"
           />
@@ -746,7 +746,7 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
           className="d-flex justify-content-center mt-4 mb-4"
         >
           <img
-            alt="Use Guiding Destructive buttons to for example 'Cancel Payment'"
+            alt="A destructive button within a payment flow, with a guiding destructive button that reads Cancel payment."
             className="img-fluid"
             src="/TEST/img/documentation/buttons/dos-guiding.png"
           />
@@ -769,7 +769,7 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
           className="d-flex justify-content-center mt-4 mb-4"
         >
           <img
-            alt="Do not use executive destructive button to initiate a destructive action."
+            alt="Destructive button within a payment flow, with an executive destructive button that reads Cancel."
             className="img-fluid"
             src="/TEST/img/documentation/buttons/donts-executive.png"
           />
@@ -796,14 +796,14 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
           className="d-flex justify-content-center mt-4 mb-4"
         >
           <img
-            alt="Use executive destruction button to achieve final destructive call."
+            alt="Multiple destructive buttons in a payment flow. The guiding destructive button reads Cancel payment and leads to a second step with an executive destructive button that reads, Yes, cancel payment process."
             className="img-fluid"
             src="/TEST/img/documentation/buttons/dos.png"
           />
         </div>
       </div>
       <p>
-        Use the Executive Destructive Buttons a contained space as a final destructive call to action.
+        Use the Executive Destructive Buttons in a contained space as a final destructive call to action.
       </p>
     </div>
     <div
@@ -819,7 +819,7 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
           className="d-flex justify-content-center mt-4 mb-4"
         >
           <img
-            alt="Avoid using multiple executive destructive buttons"
+            alt="Multiple destructive buttons in a payment flow. An executive destructive button reads Cancel and leads to a second step with another executive destructive button that also reads Cancel."
             className="img-fluid"
             src="/TEST/img/documentation/buttons/donts.png"
           />

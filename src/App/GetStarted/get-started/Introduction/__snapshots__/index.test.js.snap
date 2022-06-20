@@ -96,7 +96,7 @@ exports[`GetStarted: Introduction OpenSimpleCaring renders 1`] = `
     .
   </p>
   <img
-    alt="Illustration of our vision, values and purpose"
+    alt="Illustration explaining the Swedbank Pay vision, values and purpose. The vision is to enable people, business and society to grow. The values are open, simple and caring. The purpose is to promote a sound and sustainable financial situation for the many households and businesses."
     className="img-fluid"
     src="/TEST/img/documentation/introduction/pyramid.png"
   />

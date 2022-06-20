@@ -17,7 +17,7 @@ exports[`Component: Topbar - logo prevents default when clicked 1`] = `
         
 
         <img
-          alt="TESTBRAND-logo"
+          alt="TESTBRAND logo"
           className="logotype-vertical logotype-sm"
           src="/TEST/img/logo/TESTBRAND-logo.svg"
         />
@@ -50,7 +50,7 @@ exports[`Component: Topbar - props logout prevents default when clicked 1`] = `
         
 
         <img
-          alt="TESTBRAND-logo"
+          alt="TESTBRAND logo"
           className="logotype-vertical logotype-sm"
           src="/TEST/img/logo/TESTBRAND-logo.svg"
         />
@@ -107,7 +107,7 @@ exports[`Component: Topbar - props logout renders logout link and adds topbar-li
         
 
         <img
-          alt="TESTBRAND-logo"
+          alt="TESTBRAND logo"
           className="logotype-vertical logotype-sm"
           src="/TEST/img/logo/TESTBRAND-logo.svg"
         />
@@ -220,7 +220,7 @@ exports[`Component: Topbar - props topbarContent menu links prevents default whe
           
 
           <img
-            alt="TESTBRAND-logo"
+            alt="TESTBRAND logo"
             className="logotype-vertical logotype-sm"
             src="/TEST/img/logo/TESTBRAND-logo.svg"
           />
@@ -409,7 +409,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
           
 
           <img
-            alt="TESTBRAND-logo"
+            alt="TESTBRAND logo"
             className="logotype-vertical logotype-sm"
             src="/TEST/img/logo/TESTBRAND-logo.svg"
           />
@@ -1097,7 +1097,7 @@ exports[`Component: Topbar - props topbarContent renders a topbar menu without m
           
 
           <img
-            alt="TESTBRAND-logo"
+            alt="TESTBRAND logo"
             className="logotype-vertical logotype-sm"
             src="/TEST/img/logo/TESTBRAND-logo.svg"
           />
@@ -1267,7 +1267,7 @@ exports[`Component: Topbar - props topbarContent renders a topbar-menu-button wh
           
 
           <img
-            alt="TESTBRAND-logo"
+            alt="TESTBRAND logo"
             className="logotype-vertical logotype-sm"
             src="/TEST/img/logo/TESTBRAND-logo.svg"
           />
@@ -1456,7 +1456,7 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
           
 
           <img
-            alt="TESTBRAND-logo"
+            alt="TESTBRAND logo"
             className="logotype-vertical logotype-sm"
             src="/TEST/img/logo/TESTBRAND-logo.svg"
           />
@@ -1668,7 +1668,7 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
           
 
           <img
-            alt="TESTBRAND-logo"
+            alt="TESTBRAND logo"
             className="logotype-vertical logotype-sm"
             src="/TEST/img/logo/TESTBRAND-logo.svg"
           />
@@ -1800,7 +1800,7 @@ exports[`Component: Topbar - props wide renders a topbar with the given breakpoi
         
 
         <img
-          alt="TESTBRAND-logo"
+          alt="TESTBRAND logo"
           className="logotype-vertical logotype-sm"
           src="/TEST/img/logo/TESTBRAND-logo.svg"
         />
