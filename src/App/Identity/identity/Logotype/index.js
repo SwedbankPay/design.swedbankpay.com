@@ -64,8 +64,8 @@ const SpacingZone = () => (
         </table>
 
         <div className="d-md-flex mt-5">
-            <img src={`${basename}img/documentation/logotype/vertical-measure.png`} className="logotype-vertical-measure mr-5" alt="Vertical measure spacing zones of logotype"/>
-            <img src={`${basename}img/documentation/logotype/horizontal-measure.png`} className="logotype-horizontal-measure mt-5" alt="Horizontal measure spacing zones of logotype"/>
+            <img src={`${basename}img/documentation/logotype/vertical-measure.png`} className="logotype-vertical-measure mr-5" alt="Visualization of spacing zone X for vertical logotype."/>
+            <img src={`${basename}img/documentation/logotype/horizontal-measure.png`} className="logotype-horizontal-measure mt-5" alt="Visualization of spacing zone X  for horizontal logotype."/>
         </div>
     </section>
 );
@@ -82,11 +82,11 @@ const MisuseLogo = () => (
         <div className="slab slab-plain slab-border-error">
             <span className="h3 d-block mb-3">Don&apos;t</span>
             <div className="row">
-                {logotypeMisuses.map(({ src, height, title, description }) => (
+                {logotypeMisuses.map(({ src, height, title, description, alt }) => (
                     <div key={src} className="col-lg-3 col-md-4 col-sm-6">
                         <div className="logotype-misuse-donts">
                             <div className="logotype-misuse-donts-img">
-                                <img src={`${basename}${src}`} className={height} alt=""/>
+                                <img src={`${basename}${src}`} className={height} alt={alt}/>
                             </div>
                             <span className="h4 mb-4">{title}</span>
                             <p>{description}</p>
@@ -110,10 +110,10 @@ const LogotypeBackgrounds = () => (
         <p>When placing the logotype on our primary yellow background, always use the white text version. Make sure to keep the logotype above the minimum size recommendation for legibility.</p>
 
         <div className="flex">
-            <img src={`${basename}img/documentation/logotype/bg-apricot.png`} className="w-25 p-3" alt=""/>
-            <img src={`${basename}img/documentation/logotype/bg-dark-img.png`} className="w-25 p-3" alt=""/>
-            <img src={`${basename}img/documentation/logotype/bg-light-img.png`} className="w-25 p-3" alt=""/>
-            <img src={`${basename}img/documentation/logotype/bg-yellow.png`} className="w-25 p-3" alt=""/>
+            <img src={`${basename}img/documentation/logotype/bg-apricot.png`} className="w-25 p-3" alt="Swedbank Pay logo with black text on light color background."/>
+            <img src={`${basename}img/documentation/logotype/bg-dark-img.png`} className="w-25 p-3" alt="Swedbank Pay logo with white text on dark image background."/>
+            <img src={`${basename}img/documentation/logotype/bg-light-img.png`} className="w-25 p-3" alt="Swedbank Pay logo with black text on light image background."/>
+            <img src={`${basename}img/documentation/logotype/bg-yellow.png`} className="w-25 p-3" alt="Swedbank Pay logo with white text on primary yellow color background."/>
         </div>
     </section>
 );
@@ -132,7 +132,7 @@ const Favicon = () => (
                 <img src={`${basename}icons/android-chrome-96x96.png`} alt="PayEx favicon"/>
             </ComponentPreview>
             : <div className="slab slab-plain pb-0 pt-4 d-flex justify-content-center">
-                <img src={`${basename}img/documentation/logotype/favicon-slab-example.png`} alt="Favicon example"/>
+                <img src={`${basename}img/documentation/logotype/favicon-slab-example.png`} alt="Swedbank pay favicon as shown in a browser window."/>
             </div>
         }
 
@@ -194,16 +194,16 @@ const Overview = () => (
         <h2 className="overview">Overview</h2>
         <div className="d-flex justify-content-between logotype-display mb-4">
             <div className="background-light">
-                <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-v.svg`} type="vertical" alt="Swedbank Pay Vertical logo" size="md"/>
+                <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-v.svg`} type="vertical" alt="Swedbank Pay vertical logo with black text." size="md"/>
             </div>
             <div className="background-primary">
-                <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-v-neg.svg`} type="vertical" alt="Swedbank Pay Vertical logo" size="md"/>
+                <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-v-neg.svg`} type="vertical" alt="Swedbank Pay vertical logo with white text." size="md"/>
             </div>
             <div className="background-light">
-                <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-h.svg`} type="horizontal" alt="Swedbank Pay Horizontal logo" size="md"/>
+                <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-h.svg`} type="horizontal" alt="Swedbank Pay Horizontal logo with black text" size="md"/>
             </div>
             <div className="background-primary">
-                <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-h-neg.svg`} type="horizontal" alt="Swedbank Pay Horizontal logo" size="md"/>
+                <LogotypeComponent src={`${basename}designguide/assets/swedbankpay-logo-h-neg.svg`} type="horizontal" alt="Swedbank Pay Horizontal logo with white text" size="md"/>
             </div>
         </div>
         <a href={`${basename}release/logos/Swedbank_Pay_Logotype.zip`} className="icon-link mb-4">

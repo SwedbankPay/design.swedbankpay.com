@@ -17,8 +17,8 @@ const Terminology = () => (
             an example of “pure” copy is the short texts you see on the website aiming to explain and “sell” the brand/product (see Figure 1).
         </p>
         <div className="d-flex flex-column align-items-center">
-            <img src={`${basename}img/documentation/copywriting/terminology-copy.png`} className="mb-1 w-100" alt="Copy text" />
-            <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> This is an example of “pure” copy text from {brand}.se</span>
+            <img src={`${basename}img/documentation/copywriting/terminology-copy.png`} className="mb-1 w-100" alt="Commercial text with a package price offering." />
+            <span className="caption-text"><span className="font-weight-bold">Figure 1.</span>Figure 1. Example of “pure” copy text from {brand}.se.</span>
         </div>
 
         <h3>Microcopy</h3>
@@ -28,8 +28,8 @@ const Terminology = () => (
             minimizes uncertainty in hard-to-decide situations, alleviates worries and sets expectations.
         </p>
         <div className="d-flex flex-column align-items-center">
-            <img src={`${basename}img/documentation/copywriting/terminology-microcopy.png`} className="mb-1 w-100" alt="Microcopy copy text" />
-            <span className="caption-text"><span className="font-weight-bold">Figure 2.</span> This is an example of microcopy copy text.</span>
+            <img src={`${basename}img/documentation/copywriting/terminology-microcopy.png`} className="mb-1 w-100" alt="Microcopy text as link labels in global navigation." />
+            <span className="caption-text"><span className="font-weight-bold">Figure 2.</span>Example of microcopy text from swedbankpay.com.</span>
         </div>
 
         <h3>UX copy</h3>
