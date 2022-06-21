@@ -11,7 +11,7 @@ class Toast {
     constructor (options) {
         this.options = extendObj(true, this._defaults(), options);
         this.message = this.options.html;
-        this.evtTarget = this.options.event.target;
+        this.evtTarget = this.options.event ? this.options.event.target : null;
         this.timeRemaining = this.options.displayLength; // Time remaining until the toast is removed.
         this.sheetComponent = document.querySelector(SELECTORS.SHEET.COMPONENT);
         this.sheetOpen = document.querySelector(SELECTORS.SHEET.OPEN);
@@ -50,7 +50,7 @@ class Toast {
 
         container.setAttribute("id", "toast-container");
 
-        evtTarget.after(container);
+        evtTarget ? evtTarget.after(container) : document.body.appendChild(container);
         this._container = container;
     }
 
