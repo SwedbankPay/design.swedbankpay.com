@@ -59,7 +59,7 @@ const ContentGuidelines = () => (
     <section>
         <h2>Content guidelines</h2>
         <div className="slab slab-plain py-5 d-flex justify-content-center">
-            <img className="w-25" src={`${basename}img/documentation/tooltips/content.png`} alt="A small tooltip containting only the word Content."/>
+            <img className="w-25" src={`${basename}img/documentation/tooltips/content.png`} alt="A small tooltip containing only the word Content."/>
         </div>
         <ul className="list list-bullet">
             <li>The tooltip <b>content</b> should be short and concise providing useful, additional information or clarification.</li>

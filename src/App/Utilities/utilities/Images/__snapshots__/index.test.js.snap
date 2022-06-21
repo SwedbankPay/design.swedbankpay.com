@@ -78,7 +78,7 @@ exports[`Utilities: Image ImageRounded renders 1`] = `
     showCasePanel={true}
   >
     <img
-      alt="A mountaineous landscape at sunset with a person jumping in the foreground."
+      alt="A mountainous landscape at sunset with a person jumping in the foreground."
       className="img-rounded mx-auto d-block"
       src="https://picsum.photos/200?image=770"
     />

@@ -18,7 +18,7 @@ const ImageRounded = () => (
         <h2 id="image-rounded">Image rounded</h2>
         <p>If you want to display your images with rounded corners just add <CodeTags type="secondary" code=".img-rounded" /> to your image</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <img src="https://picsum.photos/200?image=770" className="img-rounded mx-auto d-block" alt="A mountaineous landscape at sunset with a person jumping in the foreground."/>
+            <img src="https://picsum.photos/200?image=770" className="img-rounded mx-auto d-block" alt="A mountainous landscape at sunset with a person jumping in the foreground."/>
         </ComponentPreview>
     </>
 );
