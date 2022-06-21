@@ -77,7 +77,7 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
           <td
             className="text-right"
           >
-            1079,00
+            1945,00
           </td>
         </tr>
         <tr>
@@ -97,7 +97,7 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
           <td
             className="text-right"
           >
-            1079,00
+            1814,00
           </td>
         </tr>
         <tr>
@@ -117,7 +117,27 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
           <td
             className="text-right"
           >
-            1079,00
+            1337,00
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span
+              className="status status-inactive"
+            >
+              Reserved
+            </span>
+          </td>
+          <td>
+            123453
+          </td>
+          <td>
+            1994-02-22
+          </td>
+          <td
+            className="text-right"
+          >
+            69 420,00
           </td>
         </tr>
       </tbody>
@@ -156,6 +176,11 @@ exports[`Documentation: Status ExtendedUsage renders 1`] = `
     >
       Warning
     </h3>
+    <h4
+      className="status status-inactive"
+    >
+      Inactive
+    </h4>
     <h5
       className="status status-danger"
     >
