@@ -57,7 +57,7 @@ export const optionsTable = [
 ];
 
 const AlertBox = () => (
-    <Alert id="toast-overview-alert" type="informative" icon={"info"} text={<p><b>Static code example</b> The code viewer shows an example on how to trigger a neutral toast. Change the type for warning/error/success.</p>}/>
+    <Alert id="toast-overview-alert" type="informative" icon={"info"} text={<p><b>Static code example</b> The code viewer shows an example on how to trigger a neutral toast. Change the type for warning/danger/success.</p>}/>
 );
 
 export const toastShowCase = {

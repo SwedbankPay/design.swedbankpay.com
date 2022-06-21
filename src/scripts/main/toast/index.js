@@ -117,7 +117,7 @@ class Toast {
                 break;
             case "danger":
                 toast.classList.add("toast-danger");
-                toast.appendChild(_createIcon("cancel"));
+                toast.appendChild(_createIcon("error"));
 
                 break;
             default:
