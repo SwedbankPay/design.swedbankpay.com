@@ -5,7 +5,8 @@ import Alert from "@components/Alert";
 import { toast } from "@src/scripts/main";
 
 const Toast = ({ type, title }) => (
-    <button className="btn btn-primary" type="button" onClick={() => toast({
+    <button className="btn btn-primary" type="button" onClick={event => toast({
+        event,
         html: `
             <p>
                 <b>${title} title:</b>
