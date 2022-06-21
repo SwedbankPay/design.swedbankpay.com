@@ -90,52 +90,6 @@ exports[`Component: InputGroup - renders a form-group with a label if prop label
 </div>
 `;
 
-exports[`Component: InputGroup - renders a form-group with a postfix if prop postfixValue is provided 1`] = `
-<InputGroup
-  postfixValue="testvalue"
-  type="typetest"
->
-  <div
-    className="form-group"
-  >
-    
-
-    <div
-      className="input-group"
-    >
-      
-
-      <input
-        aria-describedby={null}
-        autoComplete={null}
-        className="form-control"
-        data-validate={null}
-        defaultValue=""
-        disabled={null}
-        id={null}
-        pattern={null}
-        readOnly={null}
-        required={null}
-        type="typetest"
-      />
-      
-
-      <Addon
-        value="testvalue"
-      >
-        <span
-          className="input-group-addon "
-        >
-          testvalue
-        </span>
-      </Addon>
-      
-
-    </div>
-  </div>
-</InputGroup>
-`;
-
 exports[`Component: InputGroup - renders a form-group with a prefix button if prop prefixValue is provided 1`] = `
 <InputGroup
   prefixBtnColor="primary"
@@ -216,52 +170,6 @@ exports[`Component: InputGroup - renders a form-group with a prefix icon if prop
           >
             home
           </i>
-        </span>
-      </Addon>
-      
-
-      <input
-        aria-describedby={null}
-        autoComplete={null}
-        className="form-control"
-        data-validate={null}
-        defaultValue=""
-        disabled={null}
-        id={null}
-        pattern={null}
-        readOnly={null}
-        required={null}
-        type="typetest"
-      />
-      
-
-    </div>
-  </div>
-</InputGroup>
-`;
-
-exports[`Component: InputGroup - renders a form-group with a prefix label if prop prefixValue is provided and no prefixType is given 1`] = `
-<InputGroup
-  prefixValue="label text"
-  type="typetest"
->
-  <div
-    className="form-group"
-  >
-    
-
-    <div
-      className="input-group"
-    >
-      
-
-      <Addon
-        value="label text"
-      >
-        <span
-          className="input-group-addon "
-        >
-          label text
         </span>
       </Addon>
       

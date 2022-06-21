@@ -115,7 +115,7 @@ exports[`Documentation: Alerts Overview renders 1`] = `
         "elements": Array [
           Object {
             "component": <Alert
-              icon="cancel"
+              icon="error"
               text={
                 <p>
                   <b>
