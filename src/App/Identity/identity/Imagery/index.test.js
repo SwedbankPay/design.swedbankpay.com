@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Imagery, { ImageLibrary, ImageSizes, FocalPoints, UsingImagery } from "./index";
+import Imagery, { ImageLibrary, ImageSizes, FocalPoints, UsingImagery, AltTextAndCaptions } from "./index";
 
 describe("Core: Imagery", () => {
     it("is defined", () => {
@@ -57,6 +57,18 @@ describe("Core: Imagery", () => {
 
         it("renders", () => {
             const wrapper = shallow(<UsingImagery />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("AltTextAndCaptions", () => {
+        it("is defined", () => {
+            expect(AltTextAndCaptions).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<AltTextAndCaptions />);
 
             expect(wrapper).toMatchSnapshot();
         });
