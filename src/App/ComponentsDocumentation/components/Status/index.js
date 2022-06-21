@@ -57,19 +57,25 @@ const ExampleUse = () => (
                         <td><span className="status status-success">Paid</span></td>
                         <td>123455</td>
                         <td>2020-07-19</td>
-                        <td className="text-right">1079,00</td>
+                        <td className="text-right">1945,00</td>
                     </tr>
                     <tr>
                         <td><span className="status status-warning">Overdue</span></td>
                         <td>123454</td>
                         <td>2020-06-19</td>
-                        <td className="text-right">1079,00</td>
+                        <td className="text-right">1814,00</td>
                     </tr>
                     <tr>
                         <td><span className="status status-danger">Sent to collection</span></td>
                         <td>123452</td>
                         <td>2020-04-19</td>
-                        <td className="text-right">1079,00</td>
+                        <td className="text-right">1337,00</td>
+                    </tr>
+                    <tr>
+                        <td><span className="status status-inactive">Reserved</span></td>
+                        <td>123453</td>
+                        <td>1994-02-22</td>
+                        <td className="text-right">69 420,00</td>
                     </tr>
                 </tbody>
             </table>
@@ -87,6 +93,7 @@ const ExtendedUsage = () => (
             <h1 className="status status-neutral">Neutral</h1>
             <h2 className="status status-success">Success</h2>
             <h3 className="status status-warning">Warning</h3>
+            <h4 className="status status-inactive">Inactive</h4>
             <h5 className="status status-danger">Danger</h5>
         </ComponentPreview>
     </>
