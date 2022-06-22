@@ -112,17 +112,6 @@ describe("Component: InputGroup -", () => {
         expect(wrapper.html()).toContain("btn btn-primary");
     });
 
-    it("renders a form-group with a prefix label if prop prefixValue is provided and no prefixType is given", () => {
-        const wrapper = mount(<InputGroup type="typetest" prefixValue="label text" />);
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("input-group-addon");
-
-        const inputGroupAddon = wrapper.find(".input-group-addon");
-
-        expect(inputGroupAddon.html()).toContain("label text");
-    });
-
     it("renders a form-group with a prefix icon if prop prefixValue equals icon", () => {
         const wrapper = mount(<InputGroup type="typetest" prefixType="icon" prefixValue="home" />);
 
@@ -153,17 +142,6 @@ describe("Component: InputGroup -", () => {
         selectOptions.forEach(value => {
             expect(selectField.html()).toContain(value);
         });
-    });
-
-    it("renders a form-group with a postfix if prop postfixValue is provided", () => {
-        const wrapper = mount(<InputGroup type="typetest" postfixValue="testvalue" />);
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("input-group-addon");
-
-        const span = wrapper.find(".input-group-addon");
-
-        expect(span.html()).toContain("testvalue");
     });
 
     it("renders a form-group with a help block", () => {
