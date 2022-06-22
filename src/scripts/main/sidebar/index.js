@@ -117,6 +117,7 @@ class Sidebar {
         window.addEventListener("popstate", this._popStateListener);
 
         [...liList].map(li => li.querySelector("a").addEventListener("click", () => this._activate(li)));
+        Array.from(this.el.querySelectorAll("ul")).map(ul => ul.parentElement.classList.contains("active") ? ul.setAttribute("aria-expanded", "true") : ul.setAttribute("aria-expanded", "false"));
         [...previousNavs].map(previousNav => previousNav.addEventListener("click", () => this._setPreviousNav(previousNav)));
         [...secondaryNavLI].map(secNavLi => secNavLi.addEventListener("keyup", e => {
             if (e.keyCode === 13) {
@@ -128,13 +129,14 @@ class Sidebar {
     _activate (element) {
         if (element.parentElement.querySelector("li.active")) {
             element.parentElement.querySelector("li.active").classList.remove("active");
-        }
-
-        if (element.querySelector("a ~ ul")) {
-            element.querySelector("a ~ ul").setAttribute("aria-hidden", "false");
+            element.parentElement.querySelector("[aria-expanded=true]").setAttribute("aria-expanded", "false");
         }
 
         element.classList.add("active");
+
+        if (element.querySelector("a ~ ul")) {
+            element.querySelector("a ~ ul").setAttribute("aria-expanded", "true");
+        }
 
         if (element.classList.contains("main-nav-li")) {
             this._closeChildElements(this.el, true);
@@ -152,8 +154,8 @@ class Sidebar {
         const ul = element.parentElement;
 
         element.closest("li.leaf").classList.remove("active");
-        ul.setAttribute("aria-hidden", "true");
-        ul.querySelector("li.group > ul").setAttribute("aria-hidden", "true");
+        ul.setAttribute("aria-expanded", "false");
+        ul.querySelector("li.group > ul").setAttribute("aria-expanded", "false");
 
         this._closeChildElements(ul, true);
     }

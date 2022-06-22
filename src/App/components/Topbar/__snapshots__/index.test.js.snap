@@ -737,7 +737,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                               previousTitle="Get Started"
                             >
                               <ul
-                                aria-hidden={true}
+                                aria-expanded={true}
                               >
                                 
 
@@ -905,7 +905,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                               previousTitle="Identity"
                             >
                               <ul
-                                aria-hidden={true}
+                                aria-expanded={true}
                               >
                                 
 
