@@ -11,12 +11,13 @@ class Toast {
     constructor (options) {
         this.options = extendObj(true, this._defaults(), options);
         this.message = this.options.html;
+        this.evtTarget = this.options.event ? this.options.event.target : null;
         this.timeRemaining = this.options.displayLength; // Time remaining until the toast is removed.
         this.sheetComponent = document.querySelector(SELECTORS.SHEET.COMPONENT);
         this.sheetOpen = document.querySelector(SELECTORS.SHEET.OPEN);
 
         if (Toast._toasts.length === 0) {
-            Toast._createContainer();
+            Toast._createContainer(this.evtTarget);
         }
 
         // Create new toast
@@ -44,14 +45,12 @@ class Toast {
         };
     }
 
-    static _createContainer () {
+    static _createContainer (evtTarget) {
         const container = document.createElement("div");
 
         container.setAttribute("id", "toast-container");
 
-        // TODO: Add event handlers
-
-        document.body.appendChild(container);
+        evtTarget ? evtTarget.after(container) : document.body.appendChild(container);
         this._container = container;
     }
 
