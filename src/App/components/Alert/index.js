@@ -14,7 +14,7 @@ const Alert = ({ id, type, icon, close, text, className }) => {
             <i className="material-icons alert-icon" aria-hidden="true">{icon}</i>
             {text}{"\n"}
             {close ? <>
-                <button aria-label="Close alert" data-alert-close="" onClick={e => e.preventDefault()}>{"\n\t\t"}
+                <button className="alert-close" aria-label="Close alert" data-alert-close="" onClick={e => e.preventDefault()}>{"\n\t\t"}
                     <i className="material-icons">close</i>{"\n\t"}
                 </button>{"\n"}
             </> : null}

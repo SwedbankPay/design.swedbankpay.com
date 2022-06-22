@@ -29,6 +29,7 @@ exports[`Component: Alert renders an alert with a close-button 1`] = `
 
   <button
     aria-label="Close alert"
+    className="alert-close"
     data-alert-close=""
     onClick={[Function]}
   >
@@ -156,6 +157,7 @@ exports[`Component: Alert the close-button prevents default 1`] = `
 
   <button
     aria-label="Close alert"
+    className="alert-close"
     data-alert-close=""
     onClick={[Function]}
   >
