@@ -71,7 +71,7 @@ const ContentGuidelines = () => (
 );
 
 const HowToDesignForms = () => {
-    const [showInput, setShowInput] = useState(true);
+    const [showInput, setShowInput] = useState("email");
 
     return (
         <section>
@@ -156,19 +156,19 @@ const HowToDesignForms = () => {
                         <div className="slab slab-plain slab-border-success h-100">
                             <span className="h4 d-block mb-4">Do</span>
                             <div className="radio mb-3">
-                                <input type="radio" id="logical-flow-example-email" name="logical-flow-example" defaultChecked/>
-                                <label htmlFor="logical-flow-example-email" onClick={() => setShowInput(!showInput)}>E-mail</label>
+                                <input type="radio" id="logical-flow-example-email" name="logical-flow-example" defaultChecked onChange={() => setShowInput("email")}/>
+                                <label htmlFor="logical-flow-example-email">E-mail</label>
                             </div>
-                            {showInput &&
+                            {showInput === "email" &&
                                 <div className="ml-2">
                                     <InputGroup id="logical-flow-do-email-example" type="text" label="E-mail address" className="ml-4 mb-4"/>
                                 </div>
                             }
                             <div className="radio mb-3">
-                                <input type="radio" id="logical-flow-example-call" name="logical-flow-example"/>
-                                <label htmlFor="logical-flow-example-call" onClick={() => setShowInput(!showInput)}>Call</label>
+                                <input type="radio" id="logical-flow-example-call" name="logical-flow-example" onChange={() => setShowInput("phone")}/>
+                                <label htmlFor="logical-flow-example-call">Call</label>
                             </div>
-                            {!showInput &&
+                            {showInput === "phone" &&
                                 <div className="ml-2">
                                     <InputGroup id="logical-flow-do-phone-example" type="text" label="Telephone number" className="ml-4"/>
                                 </div>
