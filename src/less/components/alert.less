@@ -39,11 +39,21 @@
         margin-top: 0;
     }
 
-    [data-alert-close] {
+    .alert-close {
         all: unset;
         align-self: baseline;
         margin-left: 0.5rem;
 
+        &:hover {
+            background-color: @brand-bg-gray;
+        }
         .close-button();
+
+        &:focus {
+            border: none;
+            border-radius: 0.125rem;
+            box-shadow: 0 0 0 2px @black;
+            outline: none;
+        }
     }
 }

@@ -46,10 +46,17 @@
                 margin-right: -0.5rem;
 
                 &:hover,
-                &:focus,
-                &.focus {
+                &.hover {
                     color: @brand-secondary-dark-2;
                     text-decoration: none;
+                    background-color: @brand-bg-gray;
+                }
+
+                &:focus {
+                    border: none;
+                    border-radius: 0.125rem;
+                    box-shadow: 0 0 0 2px @black;
+                    outline: none;
                 }
 
                 &[active],
