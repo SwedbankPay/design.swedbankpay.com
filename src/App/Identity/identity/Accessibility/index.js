@@ -23,8 +23,8 @@ const Intro = () => (
         <p>So, when we design for permanent impairment and disabilities we automatically include people with both temporary and situational impairments as well.</p>
 
         <div className="d-flex flex-column align-items-center mb-4">
-            <img src={`${basename}img/documentation/accessibility/impairments.png`} className="w-100" alt="Illustration of impairments"/>
-            <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> An illustration visualizing permanent, beneath temporary and situational impairment.</span>
+            <img src={`${basename}img/documentation/accessibility/impairments.png`} className="w-100" alt=""/>
+            <span className="caption-text"><span className="font-weight-bold">Figure 1.</span>Examples of permanent, temporary and situational impairment.</span>
         </div>
 
         <p>At {brandTitle} we strive to give all customers with disabilities and impairments (permanent, temporary and/or situational) a better chance of using our services on the same terms as others. </p>

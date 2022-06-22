@@ -169,7 +169,7 @@ exports[`Core: Color Lead renders 1`] = `
     className="d-flex flex-column align-items-center mt-5"
   >
     <img
-      alt="The Swedbank Pay color palette"
+      alt=""
       className="w-100"
       src="/TEST/img/documentation/colors/color-palette.png"
     />
@@ -181,7 +181,7 @@ exports[`Core: Color Lead renders 1`] = `
       >
         Figure 1.
       </span>
-       The Swedbank Pay color palette
+      A selection of colors from the Swedbank Pay color palette.
     </span>
   </div>
 </section>

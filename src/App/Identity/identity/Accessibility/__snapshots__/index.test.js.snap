@@ -282,7 +282,7 @@ exports[`Core: Accessibility Intro renders 1`] = `
     className="d-flex flex-column align-items-center mb-4"
   >
     <img
-      alt="Illustration of impairments"
+      alt=""
       className="w-100"
       src="/TEST/img/documentation/accessibility/impairments.png"
     />
@@ -294,7 +294,7 @@ exports[`Core: Accessibility Intro renders 1`] = `
       >
         Figure 1.
       </span>
-       An illustration visualizing permanent, beneath temporary and situational impairment.
+      Examples of permanent, temporary and situational impairment.
     </span>
   </div>
   <p>

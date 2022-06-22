@@ -35,7 +35,7 @@ exports[`GetStarted: ForDesigners Contributing renders 1`] = `
     className="d-flex flex-column align-items-center"
   >
     <Lightbox
-      alt="Our modified Vanilla pattern design intake process"
+      alt="Flow chart of the Design Guide intake process."
       imgSrc="/TEST/img/documentation/forDesigners/vanilla-pattern.png"
     />
     <span
@@ -46,7 +46,7 @@ exports[`GetStarted: ForDesigners Contributing renders 1`] = `
       >
         Figure 1.
       </span>
-       Our modified Vanilla pattern design intake process(Click to view)
+      The Design Guide intake process explaining how to contribute to the system (Click to view)
     </span>
   </div>
 </section>

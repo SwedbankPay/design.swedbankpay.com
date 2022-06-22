@@ -11,7 +11,7 @@ exports[`Core: Logotype Favicon renders 1`] = `
     className="slab slab-plain pb-0 pt-4 d-flex justify-content-center"
   >
     <img
-      alt="Favicon example"
+      alt="Swedbank pay favicon as shown in a browser window."
       src="/TEST/img/documentation/logotype/favicon-slab-example.png"
     />
   </div>
@@ -681,22 +681,22 @@ exports[`Core: Logotype LogotypeBackgrounds renders 1`] = `
     className="flex"
   >
     <img
-      alt=""
+      alt="Swedbank Pay logo with black text on light color background."
       className="w-25 p-3"
       src="/TEST/img/documentation/logotype/bg-apricot.png"
     />
     <img
-      alt=""
+      alt="Swedbank Pay logo with white text on dark image background."
       className="w-25 p-3"
       src="/TEST/img/documentation/logotype/bg-dark-img.png"
     />
     <img
-      alt=""
+      alt="Swedbank Pay logo with black text on light image background."
       className="w-25 p-3"
       src="/TEST/img/documentation/logotype/bg-light-img.png"
     />
     <img
-      alt=""
+      alt="Swedbank Pay logo with white text on primary yellow color background."
       className="w-25 p-3"
       src="/TEST/img/documentation/logotype/bg-yellow.png"
     />
@@ -736,7 +736,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
-              alt=""
+              alt="Old Swedbank Pay logo."
               className="h-100"
               src="/TEST/img/documentation/logotype/old_logo.png"
             />
@@ -762,7 +762,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
-              alt=""
+              alt="Distorted Swedbank Pay logo."
               className="h-100"
               src="/TEST/img/documentation/logotype/resize_logo.png"
             />
@@ -788,7 +788,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
-              alt=""
+              alt="Swedbank Pay logo without the coin."
               className="h-50"
               src="/TEST/img/documentation/logotype/pay_text.png"
             />
@@ -814,7 +814,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
-              alt=""
+              alt="Swedbank logo."
               className="h-75"
               src="/TEST/img/documentation/logotype/swedbank_logo.png"
             />
@@ -840,7 +840,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
-              alt=""
+              alt="Rotated Swedbank Pay logo."
               className="h-100"
               src="/TEST/img/documentation/logotype/rotated_logo.png"
             />
@@ -866,7 +866,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
-              alt=""
+              alt="Swedbank Pay logo with altered colors."
               className="h-100"
               src="/TEST/img/documentation/logotype/green_logo.png"
             />
@@ -892,7 +892,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
-              alt=""
+              alt="Black and white Swedbank Pay logo."
               className="h-100"
               src="/TEST/img/documentation/logotype/black_and_white_logo.png"
             />
@@ -918,7 +918,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
-              alt=""
+              alt="Swedbank Pay logo with shadow."
               className="h-100"
               src="/TEST/img/documentation/logotype/shadowed_logo.png"
             />
@@ -944,7 +944,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
-              alt=""
+              alt="Swedbank Pay logo with changed wordmark."
               className="h-100"
               src="/TEST/img/documentation/logotype/changed_wordmark.png"
             />
@@ -970,7 +970,7 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
             className="logotype-misuse-donts-img"
           >
             <img
-              alt=""
+              alt="Swedbank Pay logo with moved wordmark."
               className="h-50"
               src="/TEST/img/documentation/logotype/moved_wordmark.png"
             />
@@ -1004,7 +1004,7 @@ exports[`Core: Logotype Overview renders 1`] = `
       className="background-light"
     >
       <Logotype
-        alt="Swedbank Pay Vertical logo"
+        alt="Swedbank Pay vertical logo with black text."
         size="md"
         src="/TEST/designguide/assets/swedbankpay-logo-v.svg"
         type="vertical"
@@ -1014,7 +1014,7 @@ exports[`Core: Logotype Overview renders 1`] = `
       className="background-primary"
     >
       <Logotype
-        alt="Swedbank Pay Vertical logo"
+        alt="Swedbank Pay vertical logo with white text."
         size="md"
         src="/TEST/designguide/assets/swedbankpay-logo-v-neg.svg"
         type="vertical"
@@ -1024,7 +1024,7 @@ exports[`Core: Logotype Overview renders 1`] = `
       className="background-light"
     >
       <Logotype
-        alt="Swedbank Pay Horizontal logo"
+        alt="Swedbank Pay Horizontal logo with black text"
         size="md"
         src="/TEST/designguide/assets/swedbankpay-logo-h.svg"
         type="horizontal"
@@ -1034,7 +1034,7 @@ exports[`Core: Logotype Overview renders 1`] = `
       className="background-primary"
     >
       <Logotype
-        alt="Swedbank Pay Horizontal logo"
+        alt="Swedbank Pay Horizontal logo with white text"
         size="md"
         src="/TEST/designguide/assets/swedbankpay-logo-h-neg.svg"
         type="horizontal"
@@ -1170,12 +1170,12 @@ exports[`Core: Logotype SpacingZone renders 1`] = `
     className="d-md-flex mt-5"
   >
     <img
-      alt="Vertical measure spacing zones of logotype"
+      alt="Visualization of spacing zone X for vertical logotype."
       className="logotype-vertical-measure mr-5"
       src="/TEST/img/documentation/logotype/vertical-measure.png"
     />
     <img
-      alt="Horizontal measure spacing zones of logotype"
+      alt="Visualization of spacing zone X  for horizontal logotype."
       className="logotype-horizontal-measure mt-5"
       src="/TEST/img/documentation/logotype/horizontal-measure.png"
     />

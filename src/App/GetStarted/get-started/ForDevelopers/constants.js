@@ -7,27 +7,27 @@ const iconography = identityRoute[0].routes.find(component => component.title ==
 export const browsers = [
     {
         url: "img/documentation/forDevelopers/chrome.png",
-        alt: "Image of chrome",
+        alt: "Chrome logo",
         text: "Yes"
     },
     {
         url: "img/documentation/forDevelopers/edge.png",
-        alt: "Image of Edge",
+        alt: "Edge logo",
         text: "Yes"
     },
     {
         url: "img/documentation/forDevelopers/firefox.png",
-        alt: "Image of Firefox",
+        alt: "Firefox logo",
         text: "Yes"
     },
     {
         url: "img/documentation/forDevelopers/opera.png",
-        alt: "Image of Opera",
+        alt: "Opera logo",
         text: "Yes"
     },
     {
         url: "img/documentation/forDevelopers/safari.png",
-        alt: "Image of Safari",
+        alt: "Safari logo",
         text: "Yes"
     }
 ];

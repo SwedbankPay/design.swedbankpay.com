@@ -539,7 +539,7 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
         key="img/documentation/forDevelopers/chrome.png"
       >
         <img
-          alt="Image of chrome"
+          alt="Chrome logo"
           src="/TEST/img/documentation/forDevelopers/chrome.png"
         />
         <p>
@@ -550,7 +550,7 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
         key="img/documentation/forDevelopers/edge.png"
       >
         <img
-          alt="Image of Edge"
+          alt="Edge logo"
           src="/TEST/img/documentation/forDevelopers/edge.png"
         />
         <p>
@@ -561,7 +561,7 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
         key="img/documentation/forDevelopers/firefox.png"
       >
         <img
-          alt="Image of Firefox"
+          alt="Firefox logo"
           src="/TEST/img/documentation/forDevelopers/firefox.png"
         />
         <p>
@@ -572,7 +572,7 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
         key="img/documentation/forDevelopers/opera.png"
       >
         <img
-          alt="Image of Opera"
+          alt="Opera logo"
           src="/TEST/img/documentation/forDevelopers/opera.png"
         />
         <p>
@@ -583,7 +583,7 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
         key="img/documentation/forDevelopers/safari.png"
       >
         <img
-          alt="Image of Safari"
+          alt="Safari logo"
           src="/TEST/img/documentation/forDevelopers/safari.png"
         />
         <p>
