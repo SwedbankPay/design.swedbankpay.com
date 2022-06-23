@@ -719,9 +719,15 @@
                         &:before {
                             content: "";
                             position: absolute;
-                            top: 39px;
+                            bottom: 2px;
                             width: 100%;
                             border-bottom: 1px solid @brand-secondary-light-3;
+                        }
+
+                        &#undefined-ul {
+                            &:before {
+                                border-color: transparent;
+                            }
                         }
                     }
 
