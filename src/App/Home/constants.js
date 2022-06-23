@@ -2,6 +2,11 @@ import React from "react";
 
 export const changeLogs = [
     {
+        version: "10.1.0",
+        title: "WCAG updates",
+        text: "Major WCAG update! The design guide is now accessibility-friendly based on the feedback we received from FUNKA 🎉 This version holds mostly technical updates with correct usage of aria-labels, support for zoom up to 200%, and correct placement of the Toast component in the DOM when called on. We also updated our documentation regarding alt-texts and captions. Thank you for all feedback from the last release and findings of bugs 🪲 Enjoy!"
+    },
+    {
         version: "10.0.0",
         title: "Design guide light 👑",
         text: <p>It´s finally here! Design guide light is live and direct! Choose what components you want, and leave the rest. Go to <a href="/get-started/for-developers">for developers</a> to read the updated documentation. We also updated some of the colors and the presentation is brand new! Head over to the <a href="/identity/color">color section</a> in Identity to see hex-codes, variables and more! ApplePay icon has also been added.</p>
