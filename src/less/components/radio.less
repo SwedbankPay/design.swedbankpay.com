@@ -17,19 +17,20 @@
         position: relative;
         align-items: center;
         margin: 0;
-        margin-left: 1rem;
+        margin-left: 1.75rem;
         padding-left: (1rem / 5);
         min-height: 1.5rem;
     }
 
     input[type="radio"] {
         opacity: 0;
+        position: absolute;
 
         + label:before {
             content: "";
             position: absolute;
             visibility: visible;
-            left: -28px;
+            left: -1.5rem;
             height: @radio-height;
             width: @radio-width;
             background-color: @white;
