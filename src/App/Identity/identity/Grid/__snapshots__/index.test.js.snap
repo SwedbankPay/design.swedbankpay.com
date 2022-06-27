@@ -944,7 +944,7 @@ exports[`Core: Grid GridSystem renders 1`] = `
   >
     <article>
       <img
-        alt="Illustration of Columns"
+        alt="Illustration of columns."
         className="img-fluid"
         src="/TEST/img/documentation/grid/columns.png"
       />
@@ -982,7 +982,7 @@ exports[`Core: Grid GridSystem renders 1`] = `
     </article>
     <article>
       <img
-        alt="Illustration of Gutters"
+        alt="Illustration of gutters"
         className="img-fluid"
         src="/TEST/img/documentation/grid/gutters.png"
       />
@@ -1034,7 +1034,7 @@ exports[`Core: Grid GridTypes renders 1`] = `
   >
     <article>
       <img
-        alt="Illustration of fluid"
+        alt="Illustration of fluid grid."
         className="img-fluid"
         src="/TEST/img/documentation/grid/fluid.png"
       />
@@ -1047,7 +1047,7 @@ exports[`Core: Grid GridTypes renders 1`] = `
     </article>
     <article>
       <img
-        alt="Illustration of fixed"
+        alt="Illustration of fixed grid"
         className="img-fluid"
         src="/TEST/img/documentation/grid/fixed.png"
       />
@@ -1400,7 +1400,7 @@ exports[`Core: Grid OffsettingGrid renders 1`] = `
   >
     <article>
       <img
-        alt="Grid offset with left side menu"
+        alt=""
         className="mb-3 img-fluid"
         src="/TEST/img/documentation/grid/grid-offset-left.png"
       />
@@ -1410,7 +1410,7 @@ exports[`Core: Grid OffsettingGrid renders 1`] = `
     </article>
     <article>
       <img
-        alt="Grid offset with menu on each side"
+        alt=""
         className="mb-3 img-fluid"
         src="/TEST/img/documentation/grid/grid-offset-both-sides.png"
       />

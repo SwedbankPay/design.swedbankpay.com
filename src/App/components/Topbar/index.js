@@ -65,12 +65,12 @@ const TopbarLogo = ({ png }) => (
             {(brand === "swedbankpay" && png)
                 ? <img src={`${process.env.basename}img/logo/${brand}-logo${brand === "swedbankpay"
                     ? "-v"
-                    : ""}.png`} alt={`${brand}-logo`} className="logotype-vertical logotype-sm"/>
+                    : ""}.png`} alt={`${brand} logo`} className="logotype-vertical logotype-sm"/>
                 : <img src={isDev
                     ? devLogo
                     : `${process.env.basename}img/logo/${brand}-logo${brand === "swedbankpay"
                         ? "-v"
-                        : ""}.svg`} alt={`${brand}-logo`} className="logotype-vertical logotype-sm"/>
+                        : ""}.svg`} alt={`${brand} logo`} className="logotype-vertical logotype-sm"/>
             }{"\n"}
         </a>{"\n"}
     </>

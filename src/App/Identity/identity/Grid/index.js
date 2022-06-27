@@ -18,7 +18,7 @@ const GridSystem = () => (
         <h2 id="grid-system">Grid system</h2>
         <div className="grid-guide">
             <article>
-                <img src={`${basename}img/documentation/grid/columns.png`} className="img-fluid" alt="Illustration of Columns" />
+                <img src={`${basename}img/documentation/grid/columns.png`} className="img-fluid" alt="Illustration of columns." />
                 <h3>Columns</h3>
                 <p>We use a <span className="font-weight-bold">12 column</span> grid system where the width of the column changes depending on the size of the grid.</p>
             </article>
@@ -28,7 +28,7 @@ const GridSystem = () => (
                 <p>Within the 12 column grid system, there are also <span className="font-weight-bold">6 tiers</span> of responsive column spans. </p>
             </article>
             <article>
-                <img src={`${basename}img/documentation/grid/gutters.png`} className="img-fluid" alt="Illustration of Gutters" />
+                <img src={`${basename}img/documentation/grid/gutters.png`} className="img-fluid" alt="Illustration of gutters" />
                 <h3>Gutters</h3>
                 <p>Gutters are the gap between columns, these values (16 px, 24 px etc.) are <span className="font-weight-bold">fixed</span> and depends on our breakpoints. </p>
             </article>
@@ -46,12 +46,12 @@ const GridTypes = () => (
         <h2 id="grid-types">Grid types</h2>
         <div className="grid-guide">
             <article>
-                <img src={`${basename}img/documentation/grid/fluid.png`} className="img-fluid" alt="Illustration of fluid" />
+                <img src={`${basename}img/documentation/grid/fluid.png`} className="img-fluid" alt="Illustration of fluid grid." />
                 <h3>Fluid</h3>
                 <p>A fluid grid takes up 100% of the viewport and scales dynamically as the sizing of the grid changes.</p>
             </article>
             <article>
-                <img src={`${basename}img/documentation/grid/fixed.png`} className="img-fluid" alt="Illustration of fixed" />
+                <img src={`${basename}img/documentation/grid/fixed.png`} className="img-fluid" alt="Illustration of fixed grid" />
                 <h3>Fixed</h3>
                 <p>A fixed grid has a fixed size on its maximum width, meaning the grid will not scale as the grid changes.</p>
             </article>
@@ -65,11 +65,11 @@ const OffsettingGrid = () => (
         <p>A standard 12 column grid typically fills 100% of the viewport. When there is a side menu present in the design we must offset the grid in order to align the elements. In this case, the width of the menu is removed from the calculation and the grid takes 100% of the remaining space.</p>
         <div className="grid-guide">
             <article>
-                <img src={`${basename}img/documentation/grid/grid-offset-left.png`} className="mb-3 img-fluid" alt="Grid offset with left side menu" />
+                <img src={`${basename}img/documentation/grid/grid-offset-left.png`} className="mb-3 img-fluid" alt="" />
                 <p>Grid offset with left side menu</p>
             </article>
             <article>
-                <img src={`${basename}img/documentation/grid/grid-offset-both-sides.png`} className="mb-3 img-fluid" alt="Grid offset with menu on each side" />
+                <img src={`${basename}img/documentation/grid/grid-offset-both-sides.png`} className="mb-3 img-fluid" alt="" />
                 <p>Grid offset with menu on each side</p>
             </article>
         </div>

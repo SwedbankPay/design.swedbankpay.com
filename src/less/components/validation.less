@@ -63,16 +63,6 @@
     &.has-error {
         .form-control-validation(@brand-error, "error");
 
-        input {
-            &:not(:focus) {
-                padding-right: 2.5rem;
-                background-image: url("../../icons/shapes/warning.svg");
-                background-size: 24px 24px;
-                background-repeat: no-repeat;
-                background-position: calc(100% - 0.5rem) 50%;
-            }
-        }
-
         &:focus-within:not("hint-text-expander") {
             .form-control,
             .input-group-addon {

@@ -140,7 +140,7 @@ exports[`Components: Tooltip Overview renders 1`] = `
           className="d-flex justify-content-center"
         >
           <img
-            alt="Do not use tooltips as an alternate possibility for describing error messages."
+            alt="An e-mail input field in error state with a tooltip displaying an error message."
             className="col-12 col-sm-9"
             id="tooltip-error-image"
             src="/TEST/img/documentation/tooltips/dont-example.png"

@@ -1,5 +1,126 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Core: Imagery AltTextAndCaptions renders 1`] = `
+<section>
+  <section>
+    <h2
+      id="alt-text-and-captions"
+    >
+      Alt text and captions
+    </h2>
+    <p>
+      When adding images to your web page, it is important to ensure that images that convey information have appropriate text alternatives or descriptions. Having a description of an image will ensure that they are accessible to everyone. Alternative text and captions are the most commonly used methods to describe images.
+    </p>
+    <p>
+      <b>
+        Alt text
+      </b>
+       is not visible on the web page itself, but allows screen reader users, such as individuals with cognitive or visual disabilities, to obtain a text interpretation of an image.
+    </p>
+    <p>
+      <b>
+        Captions
+      </b>
+       are available to both sighted and non-sighted users, and can be used to ensure that everyone has equal access to the image description. Captions should describe the context of the image rather than the visual content. If the image is referenced elsewhere on the page, it should have a title, e.g "figure 2".
+    </p>
+    <p>
+      See example of caption and alt text below.
+    </p>
+    <ComponentPreview
+      codeFigure={true}
+      language="html"
+      removeOuterTag={true}
+      showCasePanel={true}
+    >
+      <div
+        className="d-flex flex-column align-items-center"
+      >
+        <img
+          alt="A woman with headphones sitting on a bus looking out through the window to the right."
+          className="w-100"
+          src="/TEST/img/documentation/imagery/women-on-bus.svg"
+        />
+        <span
+          className="caption-text"
+        >
+          <span
+            className="font-weight-bold"
+          >
+            Figure 1.
+          </span>
+           A woman with headphones sitting on a bus looking out through the window to the right.
+        </span>
+      </div>
+    </ComponentPreview>
+  </section>
+  <section>
+    <h3>
+      Image description guidelines
+    </h3>
+    <ul
+      className="list list-bullet"
+    >
+      <li>
+        <b>
+          All images must have a caption or alt text.
+        </b>
+         If an image is purely decorative it should have an empty alt text (alt=""), for example a pattern.
+      </li>
+      <li>
+        <b>
+          Image captions and alt text should not be the same to avoid repetition.
+        </b>
+         If the caption or nearby text already explains the informational image, you might usa a very brief or empty alt text (alt="").
+      </li>
+      <li>
+        <b>
+          Keep it short.
+        </b>
+         An alt text should be around one to two sentences. Remember that the entire text will be read aloud by a screen reader, so don’t overwhelm the user.
+      </li>
+      <li>
+        <b>
+          Include only the most relevant visual details.
+        </b>
+         It’s not practical to include every visual detail in a photo or illustration. 
+      </li>
+      <li>
+        <b>
+          Describe only what is in the image.
+        </b>
+         Don’t provide additional context that is not visually apparent; such context belongs in an image caption.
+      </li>
+      <li>
+        <b>
+          Use correct grammar and punctuation.
+        </b>
+         Capitalize the first word, and end alt texts with a period. Don’t use quotation marks or apostrophes as browsers can interpret these punctuation marks as the end of the alt text.
+      </li>
+      <li>
+        <b>
+          Don’t begin the alt text with "Photo of…"; or "Image of…".
+        </b>
+         Users already know that an image is being described. If it’s relevant to clarify that it’s not a photo, it is ok to write "Illustration of…", or similar.
+      </li>
+      <li>
+        <b>
+          For images of infographics, charts, and maps:
+        </b>
+         Focus on the highest informational value. Rely on surrounding text and captions to provide further information.
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h3>
+      Who should write it?
+    </h3>
+    <p>
+      If you create the image or select the image for a wireframe or prototype, you should write the alt text. If you’re a developer implementing a UI with images based on something created by a designer, you should not be responsible for writing the alt text – you are responsible for the implementation of it.
+    </p>
+  </section>
+</section>
+`;
+
 exports[`Core: Imagery FocalPoints renders 1`] = `
 <section>
   <h2
@@ -17,7 +138,7 @@ exports[`Core: Imagery FocalPoints renders 1`] = `
     className="d-flex flex-column align-items-center"
   >
     <img
-      alt="A woman with headphones sitting on a bus looking out through the window to the right"
+      alt="A woman with headphones sitting on a bus looking out through the window to the right."
       className="w-100"
       src="/TEST/img/documentation/imagery/women-on-bus.svg"
     />
@@ -99,7 +220,7 @@ exports[`Core: Imagery ImageLibrary renders 1`] = `
      productions. If you need access to the library, contact current Head of Marketing. 
   </p>
   <img
-    alt="collection of images"
+    alt="Collection of images from the Swedbank Pay image library."
     className="w-100"
     src="/TEST/img/documentation/imagery/image-group.svg"
   />
@@ -300,5 +421,6 @@ exports[`Core: Imagery renders 1`] = `
   <ImageSizes />
   <FocalPoints />
   <UsingImagery />
+  <AltTextAndCaptions />
 </DocContainer>
 `;

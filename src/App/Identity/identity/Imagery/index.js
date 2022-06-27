@@ -3,6 +3,8 @@ import { DocContainer } from "@docutils";
 
 import { imageMisuses } from "./constants";
 
+import ComponentPreview from "@docutils/ComponentPreview";
+
 const basename = process.env.basename;
 const brandTitle = process.env.brandTitle;
 
@@ -14,7 +16,7 @@ const ImageLibrary = () => (
         {brandTitle === "Swedbank Pay" &&
             <a href="https://payex.pickit.com/" target="_blank" rel="noopener noreferrer" className="icon-link d-block d-flex"><i className="material-icons mr-2" aria-hidden="true">open_in_new</i><span className="mr-2">Visit the Swedbank Pay Image Library</span></a>
         }
-        <img src={`${basename}img/documentation/imagery/image-group.svg`} className="w-100" alt="collection of images"/>
+        <img src={`${basename}img/documentation/imagery/image-group.svg`} className="w-100" alt="Collection of images from the Swedbank Pay image library."/>
 
         <h3>Finding the right images</h3>
         <p>There are several images to choose from when working with {brandTitle} products. Because {brandTitle} is a payment service for all, it’s extra important to think about diversity when picking images for a product. To choose a great image, reflect over the context you’re bringing the image into and check if and where the image is used in other {brandTitle} products. If an images is strongly associated with a certain page or feature, consider using another. We strive to use a variation of the library images while also giving the image a purpose. </p>
@@ -38,7 +40,7 @@ const FocalPoints = () => (
         <p>Choose images with a strong focal point for the products main banner – this is the first part of your product users will see, so the imagery should be powerful and relevant to your site. The person looking to the right in this photo (see Figure 1) guides the eye towards to the content to the right of the image.</p>
 
         <div className="d-flex flex-column align-items-center">
-            <img src={`${basename}img/documentation/imagery/women-on-bus.svg`} className="w-100" alt="A woman with headphones sitting on a bus looking out through the window to the right"/>
+            <img src={`${basename}img/documentation/imagery/women-on-bus.svg`} className="w-100" alt="A woman with headphones sitting on a bus looking out through the window to the right."/>
             <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> A woman with headphones sitting on a bus looking out through the window to the right.</span>
         </div>
 
@@ -83,6 +85,41 @@ const UsingImagery = () => (
     </section>
 );
 
+const AltTextAndCaptions = () => (
+    <section>
+        <section>
+            <h2 id="alt-text-and-captions">Alt text and captions</h2>
+            <p>When adding images to your web page, it is important to ensure that images that convey information have appropriate text alternatives or descriptions. Having a description of an image will ensure that they are accessible to everyone. Alternative text and captions are the most commonly used methods to describe images.</p>
+            <p><b>Alt text</b> is not visible on the web page itself, but allows screen reader users, such as individuals with cognitive or visual disabilities, to obtain a text interpretation of an image.</p>
+            <p><b>Captions</b> are available to both sighted and non-sighted users, and can be used to ensure that everyone has equal access to the image description. Captions should describe the context of the image rather than the visual content. If the image is referenced elsewhere on the page, it should have a title, e.g &quot;figure 2&quot;.</p>
+            <p>See example of caption and alt text below.</p>
+            <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+                <div className="d-flex flex-column align-items-center">
+                    <img src={`${basename}img/documentation/imagery/women-on-bus.svg`} className="w-100" alt="A woman with headphones sitting on a bus looking out through the window to the right."/>
+                    <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> A woman with headphones sitting on a bus looking out through the window to the right.</span>
+                </div>
+            </ComponentPreview>
+        </section>
+        <section>
+            <h3>Image description guidelines</h3>
+            <ul className="list list-bullet">
+                <li><b>All images must have a caption or alt text.</b> If an image is purely decorative it should have an empty alt text (alt=&quot;&quot;), for example a pattern.</li>
+                <li><b>Image captions and alt text should not be the same to avoid repetition.</b> If the caption or nearby text already explains the informational image, you might usa a very brief or empty alt text (alt=&quot;&quot;).</li>
+                <li><b>Keep it short.</b> An alt text should be around one to two sentences. Remember that the entire text will be read aloud by a screen reader, so don’t overwhelm the user.</li>
+                <li><b>Include only the most relevant visual details.</b> It’s not practical to include every visual detail in a photo or illustration. </li>
+                <li><b>Describe only what is in the image.</b> Don’t provide additional context that is not visually apparent; such context belongs in an image caption.</li>
+                <li><b>Use correct grammar and punctuation.</b> Capitalize the first word, and end alt texts with a period. Don’t use quotation marks or apostrophes as browsers can interpret these punctuation marks as the end of the alt text.</li>
+                <li><b>Don’t begin the alt text with &quot;Photo of…&quot;; or &quot;Image of…&quot;.</b> Users already know that an image is being described. If it’s relevant to clarify that it’s not a photo, it is ok to write &quot;Illustration of…&quot;, or similar.</li>
+                <li><b>For images of infographics, charts, and maps:</b> Focus on the highest informational value. Rely on surrounding text and captions to provide further information.</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Who should write it?</h3>
+            <p>If you create the image or select the image for a wireframe or prototype, you should write the alt text. If you’re a developer implementing a UI with images based on something created by a designer, you should not be responsible for writing the alt text – you are responsible for the implementation of it.</p>
+        </section>
+    </section>
+);
+
 const Imagery = () => (
     <DocContainer>
         <p className="lead">
@@ -92,9 +129,10 @@ const Imagery = () => (
         <ImageSizes />
         <FocalPoints />
         <UsingImagery />
+        <AltTextAndCaptions/>
     </DocContainer>
 );
 
 export default Imagery;
 
-export { ImageLibrary, ImageSizes, FocalPoints, UsingImagery };
+export { ImageLibrary, ImageSizes, FocalPoints, UsingImagery, AltTextAndCaptions };

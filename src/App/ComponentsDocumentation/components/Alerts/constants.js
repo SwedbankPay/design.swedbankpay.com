@@ -11,7 +11,7 @@ export const alertsShowCase = {
     elements: [
         {
             tab: "Danger",
-            component: <Alert type="danger" icon="cancel" text={titleBuilder("Danger")} />,
+            component: <Alert type="danger" icon="error" text={titleBuilder("Danger")} />,
             options: {
                 checkbox: [
                     {

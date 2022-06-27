@@ -144,7 +144,7 @@ describe("scripts: toast", () => {
 
         expect(renderedToast).toBeDefined();
         expect(icon).toBeDefined();
-        expect(icon.innerHTML).toEqual("cancel");
+        expect(icon.innerHTML).toEqual("error");
     });
 
     it("does not add a custom icon when type is not set", () => {

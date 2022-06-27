@@ -30,7 +30,7 @@ const SheetExample = () => (
                 <div className="slab slab-plain slab-border-success">
                     <h3>Do</h3>
                     <div className="d-flex flex-column align-items-center">
-                        <img src={`${basename}img/documentation/sheet/do1.png`} alt="Sheet component with correct margins and overflowing contents, showing possibility to scroll within the component." className="img-fluid"/>
+                        <img src={`${basename}img/documentation/sheet/do1.png`} alt="Mobile view of a sheet component indicating vertically scrollable main content." className="img-fluid"/>
                     </div>
                 </div>
                 <p>Sheets can be vertically scrolled if the main content is long and exceeds the screen hight. The header and footer should still be fixed.</p>
@@ -39,7 +39,7 @@ const SheetExample = () => (
                 <div className="slab slab-plain slab-border-error">
                     <h3>Don&apos;t</h3>
                     <div className="d-flex flex-column align-items-center">
-                        <img src={`${basename}img/documentation/sheet/dont1.png`} alt="Sheet component with no margins." className="img-fluid"/>
+                        <img src={`${basename}img/documentation/sheet/dont1.png`} alt="Mobile view of a sheet component with content overflowing horizontally." className="img-fluid"/>
                     </div>
                 </div>
                 <p>Do not allow horizontal scrolling in a Sheet or layout that suggests horizontal scrolling.</p>
@@ -50,7 +50,7 @@ const SheetExample = () => (
                 <div className="slab slab-plain slab-border-success">
                     <h3>Do</h3>
                     <div className="d-flex flex-column align-items-center">
-                        <img src={`${basename}img/documentation/sheet/do2.png`} alt="Sheet component in mobile view. Displaying filter example." className="w-50"/>
+                        <img src={`${basename}img/documentation/sheet/do2.png`} alt="Mobile view of a sheet component used as a filter." className="w-50"/>
                     </div>
                 </div>
                 <p>A Sheet can be used as a container for filter functionality. This is especially helpful on small screens like mobile device where space is limited and can’t fit filter components inline with the content.</p>
@@ -62,7 +62,7 @@ const SheetExample = () => (
 const ContentGuidelines = () => (
     <section>
         <h2>Content guidelines</h2>
-        <img src={`${basename}img/documentation/sheet/content-guidelines.png`} alt="Sheet component with sticky header and footer" className="img-fluid mb-3"/>
+        <img src={`${basename}img/documentation/sheet/content-guidelines.png`} alt="Illustration showing the sheet component in desktop view with title, main content and footer." className="img-fluid mb-3"/>
 
         <ul className="list list-bullet">
             <li>The <b>header</b> should have a title and a close button.</li>

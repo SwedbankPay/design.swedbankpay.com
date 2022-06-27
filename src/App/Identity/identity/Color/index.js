@@ -12,8 +12,8 @@ const Lead = () => (
     <section>
         <p className="lead">The primary color of Swedbank Pay is yellow, it is used to give a unified appearance and create visual recognition. Yellow is an energetic and vibrant color that matches the brand of Swedbank Pay. In complement to this, Swedbank Pay uses a selection of colors from Swedbank´s color palette.</p>
         <div className="d-flex flex-column align-items-center mt-5">
-            <img src={`${basename}img/documentation/colors/color-palette.png`} className="w-100" alt="The Swedbank Pay color palette" />
-            <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> The Swedbank Pay color palette</span>
+            <img src={`${basename}img/documentation/colors/color-palette.png`} className="w-100" alt="" />
+            <span className="caption-text"><span className="font-weight-bold">Figure 1.</span>A selection of colors from the Swedbank Pay color palette.</span>
         </div>
     </section>
 );

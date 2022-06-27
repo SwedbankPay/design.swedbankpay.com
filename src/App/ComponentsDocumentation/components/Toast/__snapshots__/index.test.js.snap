@@ -380,7 +380,8 @@ exports[`Components: Toast Overview renders 1`] = `
     dangerousHTML={true}
     language="html"
   >
-    &lt;button type="button" class="btn btn-primary" onclick="dg.toast({
+    &lt;button type="button" class="btn btn-primary" onclick="event =&gt; dg.toast({
+	event,
 	type: 'neutral' 
 	html: '&lt;p&gt;&lt;b&gt;Info header&lt;/b&gt; Input informative alert information here, provide &lt;a href="#"&gt;link&lt;/a&gt; to solution or more info when possible.&lt;/p&gt;'})"&gt;
 Show neutral toast

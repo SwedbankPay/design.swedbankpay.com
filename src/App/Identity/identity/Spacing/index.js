@@ -12,8 +12,8 @@ const EightPointSystem = () => (
         <p>We follow a 8-point spacing system – multiples of 8 to define the different dimensions, margins and paddings of our elements. The reason for this is to streamline the process, saving time by minimize the amount of choices and create consistent usage of space across all our product. </p>
 
         <div className="d-flex flex-column align-items-center mb-4">
-            <img src={`${basename}img/documentation/spacing/horizontal-spacing-example.svg`} className="w-100" alt="Example on multiples of 8px horizontal spacing between elements"/>
-            <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> Example on multiples of 8px horizontal spacing between elements.</span>
+            <img src={`${basename}img/documentation/spacing/horizontal-spacing-example.svg`} className="w-100" alt=""/>
+            <span className="caption-text"><span className="font-weight-bold">Figure 1.</span> Examples of horizontal spacing between elements using multiples of 8px. </span>
         </div>
 
         <p>If you are interested in learning more about the 8-point spacing system, you can read more about it in this <a href="https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632" target="_blank" rel="noopener noreferrer"className="icon-link m-0"><span className="mr-2">Introduction article</span><i className="material-icons" aria-hidden="true">open_in_new</i></a>, which provides a brief explanation of the reasons why to use the 8-point spacing system. To dive even deeper into the nitty gritty, please refer to this <a href="https://spec.fm/specifics/8-pt-grid" target="_blank" rel="noopener noreferrer"className="icon-link m-0"><span className="mr-2">in-depth explanation</span><i className="material-icons" aria-hidden="true">open_in_new</i></a> of the 8-point spacing system.</p>
@@ -28,8 +28,8 @@ const VerticalSpacing = () => (
         <h2 id="vertical-spacing">Vertical spacing</h2>
         <p>Similar to horizontal spacing, we also use spacing vertically in order to create good vertical structure. While we don’t have strict usage definitions for each size, it is important to always evaluate what fits best in your context and what type of devices you are designing for. Make sure to group items relevant to each other close and separate sections with good amount of spacing to provide a clear separation.</p>
         <div className="d-flex flex-column align-items-center">
-            <img src={`${basename}img/documentation/spacing/vertical-spacing-example.svg`} className="w-100" alt="Example on multiples of 8 px vertical spacing between elements"/>
-            <span className="caption-text"><span className="font-weight-bold">Figure 2.</span> Example on multiples of 8 px vertical spacing between elements</span>
+            <img src={`${basename}img/documentation/spacing/vertical-spacing-example.svg`} className="w-100" alt=""/>
+            <span className="caption-text"><span className="font-weight-bold">Figure 2.</span> Examples of vertical spacing between elements using multiples of 8px.</span>
         </div>
     </section>
 );

@@ -24,7 +24,7 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
                             <input {...attrs} id={id} defaultChecked={checked}/>{"\n"}
                             <label htmlFor={id}>{label}</label>{"\n"}
                         </div>)}
-                        {errorMessage && <><div className="help-block">{errorMessage}</div>{"\n"}</>}
+                        {errorMessage && <><div className="help-block"><i className="material-icons">error</i>{errorMessage}</div>{"\n"}</>}
                         {helpBlock && <><p id="hint-text" className="hint-text">{helpBlock}</p>{"\n"}</>}
                         {expandingHintTitle &&
                         <div id={expanderId && "hint-text-expander"} className="hint-text-expander">{"\n"}

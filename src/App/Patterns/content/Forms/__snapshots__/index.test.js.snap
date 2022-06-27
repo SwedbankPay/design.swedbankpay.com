@@ -840,11 +840,11 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
               defaultChecked={true}
               id="logical-flow-example-email"
               name="logical-flow-example"
+              onChange={[Function]}
               type="radio"
             />
             <label
               htmlFor="logical-flow-example-email"
-              onClick={[Function]}
             >
               E-mail
             </label>
@@ -865,11 +865,11 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
             <input
               id="logical-flow-example-call"
               name="logical-flow-example"
+              onChange={[Function]}
               type="radio"
             />
             <label
               htmlFor="logical-flow-example-call"
-              onClick={[Function]}
             >
               Call
             </label>
