@@ -155,9 +155,5 @@ describe("scripts: paginate", () => {
             expect(() => paginate(10, 0)).toThrowError("CurrentActive must be greater than 0");
             expect(() => paginate(10, -1)).toThrowError("CurrentActive must be greater than 0");
         });
-
-        it("throws error when pages is less than 8", () => {
-            expect(() => paginate(7, 1)).toThrowError("ArrayLength must be greater than 7");
-        });
     });
 });
