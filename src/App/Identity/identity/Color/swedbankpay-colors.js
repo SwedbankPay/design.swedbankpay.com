@@ -15,7 +15,7 @@ export const brandColors = [
         title: "Yellow lighter",
         subTitle: "brand-primary-lighter",
         hex: "#FFF3D5",
-        contrastWhiteApproved: true
+        contrastBlackApproved: true
     }
 ];
 
