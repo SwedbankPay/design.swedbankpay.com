@@ -4,7 +4,7 @@ import { browsers, gridAndBreakpoints, discoverMore } from "./constants";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
-import DGLightVideo from "./dg-light-video";
+import DGLightVideo from "./dgLightVideo";
 
 const basename = process.env.basename;
 const brand = process.env.brand;
