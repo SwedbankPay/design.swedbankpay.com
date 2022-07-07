@@ -1,11 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Lightbox from "@components/Lightbox";
-
 import { DocContainer } from "@docutils";
 
-const basename = process.env.basename;
 const brandTitle = process.env.brandTitle;
 
 const NeedToHave = () => (
@@ -29,6 +26,7 @@ const NeedToHave = () => (
         <p>We use our own customized typefaces & fonts. To access the these, please, head over to the <Link to="/identity/typography">Typography section</Link>. There you can also find guidelines on how to use all the different typefaces.  </p>
     </section>
 );
+
 const NeedToKnow = () => (
     <section>
         <h2 id="need-to-know">What you need to know</h2>
@@ -48,25 +46,7 @@ const NeedToKnow = () => (
         <p>Additionally, while designing we also incorporates a flexible 8-point spacing system for spacing between our components and layouts. A flexible 8-point spacing system means we use multiples of 8 most of the times. This not only creates consistency across all our digital products but also makes it easier for developers to know what values they should use. You can learn more about how it works under the <Link to="/identity/spacing">Spacing section</Link>. </p>
     </section>
 );
-const Contributing = () => (
-    <section>
-        <h2 id="contributing">Contributing</h2>
-        <p>When working on the different products across our brand it is important for you as a designer to understand how you can contribute to the Design Guide. It is equally important to understand which types of components can be added to the design guide and which ones are designed specific for your product. In general, the best practice is to keep a close dialogue with the design guide team and its designers and they will guide you through the process.</p>
 
-        <p>As we all know, sometimes you face niche problems which requires specific solutions, this is normal and something that we have accounted for. This is where snowflake comes in and in order to learn about when you should create a snowflake and how, check out our guidelines here in the <a href="https://www.figma.com/file/sRWbYlMbR0c4T3vT8DBHIU/Snowflakes?node-id=1%3A4" target="_blank" rel="noopener noreferrer" className="icon-link"><span className="mr-2">Snowflake Figma file</span><i className="material-icons" aria-hidden="true">open_in_new</i></a></p>
-
-        <div className="d-flex flex-column align-items-center">
-            <Lightbox imgSrc={`${basename}img/documentation/forDesigners/vanilla-pattern.png`} alt="Flow chart of the Design Guide intake process."/>
-            <span className="caption-text"><span className="font-weight-bold">Figure 1.</span>The Design Guide intake process explaining how to contribute to the system (Click to view)</span>
-        </div>
-    </section>
-);
-const Feedback = () => (
-    <section>
-        <h2 id="feedback">Feedback</h2>
-        <p>We want to do our best to provide top quality components for you to use, but this is only possible with the help from you! If you have any suggestions for how we could potentially improve a component please don’t hesitate to reach out, you can report it directly to one of the designers working on the design guide or reach us at #design-guide-feedback on Slack.</p>
-    </section>
-);
 const DiscoverMore = () => (
     <section>
         <h2 id="discover-more">Discover more</h2>
@@ -92,12 +72,10 @@ const ForDevelopers = () => (
         <p className="lead mb-5">We are thrilled to have you onboard in the {brandTitle} Design team. In order to get started designing with us we have prepared a get started guide to help you understand the way our design system and this Design Guide works. Enjoy!</p>
         <NeedToHave />
         <NeedToKnow />
-        <Contributing />
-        <Feedback />
         <DiscoverMore />
     </DocContainer>
 );
 
 export default ForDevelopers;
 
-export { NeedToHave, NeedToKnow, Contributing, Feedback, DiscoverMore };
+export { NeedToHave, NeedToKnow, DiscoverMore };

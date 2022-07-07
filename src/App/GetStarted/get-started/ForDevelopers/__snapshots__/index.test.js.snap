@@ -56,7 +56,7 @@ exports[`GetStarted: ForDevelopers Contributing renders 1`] = `
 
 exports[`GetStarted: ForDevelopers DGLightVideo renders 1`] = `
 <div
-  className="dg-light-video"
+  className="video"
 >
   <iframe
     allowFullScreen={true}

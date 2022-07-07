@@ -30,32 +30,12 @@ export const designGuideUsers = [
         text: "No, but are following the Design Guide"
     },
     {
-        name: "Ecom Merchant Admin",
+        name: "Onboarding Portals",
         icon: "check",
         text: "Yes"
     },
     {
-        name: "Ecom Owner Admin",
-        icon: "check",
-        text: "Yes"
-    },
-    {
-        name: "Onboarding Signup",
-        icon: "check",
-        text: "Yes"
-    },
-    {
-        name: "Onboarding Sales",
-        icon: "check",
-        text: "Yes"
-    },
-    {
-        name: "Onboarding Magma",
-        icon: "check",
-        text: "Yes"
-    },
-    {
-        name: "Terminal Management System",
+        name: "Terminal Management Systems",
         icon: "check",
         text: "Yes"
     }

@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { designGuideUsers } from "./constants";
+import Lightbox from "@components/Lightbox";
 
 import { DocContainer } from "@docutils";
+import ContributionVideo from "./contributionVideo";
 
 const basename = process.env.basename;
 const brandTitle = process.env.brandTitle;
@@ -35,54 +37,54 @@ const GetStarted = () => (
 );
 
 const WhatIsDG = () => (
-    <section>
+    <section id="what-design-guide">
         <h2 id="what-is-dg">What is the Design Guide?</h2>
         <p>The {brandTitle} design system consists of two parts; the Figma designs and the web Design Guide (where you are right now). The Design Guide is the ready-to-use part of the design system and the Figma design library is for designing and prototyping.</p>
         <p>The Design Guide consists of more than design. It contains all the parts of the design system that actually can be used and implemented by developers working with {brandTitle} products.</p>
-        <blockquote className="blockquote">
-            <p>A design system is the single source of truth which groups all the elements that will allow the teams to design, realize and develop a product.</p>
-        </blockquote>
-    </section>
-);
 
-const UsingDG = () => (
-    <section>
-        <h2 id="using-dg">Using the Design Guide</h2>
-        <p>Let’s clarify the definition of using the Design Guide. Just because an interface looks right according to the Design Guide, our brand and the design system in general it still doesn’t mean that it per definition “uses the Design Guide”. The definition of using our Design Guide is the technical implementation and using the components taken straight from the Design Guide. </p>
-        <blockquote className="blockquote">
-            <p>The Design Guide enables a cohesive and unified design across the organization which saves time for everyone involved. </p>
-        </blockquote>
-        <p>By doing so, when an adjustment or change occurs with one of the Design Guide components, all the projects which uses the said component will have the changes applied to their product automatically. This way the Design Guide enables a cohesive and unified design across the organization which saves time for everyone involved.  </p>
-
-        {brandTitle === "Swedbank Pay" && <>
+        <section>
+            <h2>Working with the Design Guide</h2>
+            <p>The Design Guide is an organically growing system that evolves with the products. Product teams can use the Design Guide for brand identity, components, guidelines, and documentation regarding accessibility, copywriting, and more. Product teams also contribute to the system by suggesting changes and improvements to already existing components and guidelines, as well as by adding completely new ones.</p>
+            <Lightbox imgSrc={`${basename}img/documentation/introduction/working-dg.png`} className="img-fluid" alt="Illustation of how product teams can use the design system and how to contribute."/>
+        </section>
+        <section>
+            <h3>Contributing to the system</h3>
+            <p>Components and assets that can be reused in other products should be added to the system for others to use. However, some components that fulfill an isolated need for a specific product will remain local for that product only. This informational video explains the design workflow and snowflake process, and how your product team can contribute to the Design Guide:</p>
+            <ContributionVideo/>
+            <a className="icon-link mt-3" target="_blank" rel="noopener noreferrer" href={"http://www.figma.com/proto/p1QcsYCJ3T466As9xQQGBM/Design-Guide-Mantra?page-id=11%3A4123&node-id=233%3A4515&viewport=306%2C372%2C0.1&scaling=min-zoom&starting-point-node-id=233%3A4515"}><i className="material-icons mr-2" aria-hidden="true">launch</i>View the contribution process prototype</a>
+        </section>
+        <section>
             <h3>Products using the Design Guide</h3>
-            <p>Because there’s a difference of following the design guidelines and using the Design Guide, not all {brandTitle} products per definition uses the Design Guide. </p>
-            <table className="table table-plain">
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Using Design Guide</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {designGuideUsers.map(product => (
-                        <tr key={product.name}>
-                            <td>{product.name}</td>
-                            <td><i className="material-icons mr-3">{product.icon}</i>{product.text}</td>
+            <p>An interface may look right according to the Design Guide, our brand, and the design system in general, but that does not mean that it, per definition, “uses the Design Guide“. The definition of using our Design Guide is the technical implementation and using the components taken straight from the Design Guide.</p>
+            <p>When an adjustment or change occurs with one of the Design Guide components, all the projects using said component will have the changes applied to their product automatically. This way, the Design Guide enables a cohesive and unified design across the organization, which saves time for everyone involved.</p>
+            {brandTitle === "Swedbank Pay" && <>
+                <h3>Products using the Design Guide</h3>
+                <p>Because there’s a difference of following the design guidelines and using the Design Guide, not all {brandTitle} products per definition uses the Design Guide. </p>
+                <table className="table table-plain">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Using Design Guide</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
-        </>}
+                    </thead>
+                    <tbody>
+                        {designGuideUsers.map(product => (
+                            <tr key={product.name}>
+                                <td>{product.name}</td>
+                                <td><i className="material-icons mr-3">{product.icon}</i>{product.text}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </>}
+        </section>
     </section>
 );
 
-const OpenSimpleCaring = () => (
+const Feedback = () => (
     <section>
-        <h2 id="open-simple-caring">Open, simple, caring</h2>
-        <p>Swedbank Pay is a sub-brand to Swedbank and a part of the “Coin family”. That means that Swedbank Pay is built on the same foundation as Swedbank and shares the same brand platform and overall guidelines. Swedbank Pay express its own identity through the logotype, yellow color, images and tonality.</p>
-        <p>To build awareness we display Swedbank Pay’s name and logotype with impact. We express a distinguishing attitude through the logotype, yellow color, images and tonality – always as simple and uncomplicated as possible. Read more about the brand in the <Link to="/identity/identity">Identity overview</Link>.</p>
-        <img src={`${basename}img/documentation/introduction/pyramid.png`} className="img-fluid" alt="Illustration explaining the Swedbank Pay vision, values and purpose. The vision is to enable people, business and society to grow. The values are open, simple and caring. The purpose is to promote a sound and sustainable financial situation for the many households and businesses."/>
+        <h2 id="feedback">Feedback</h2>
+        <p>We want to do our best to provide top-quality components for you to use, but this is only possible with your help. If you have any suggestions for how we could potentially improve a component, please don´t hesitate to reach out. If you have questions, feedback, or want to know what’s new in the Design Guide, feel free to join us in the #design-guide-general channel on Slack.</p>
     </section>
 );
 
@@ -91,11 +93,10 @@ const Introduction = () => (
         <p className="lead">We are so glad to see that you are interested in learning more about the {brandTitle} Design Guide. We know that it can be daunting to start with something new and complex. But don’t worry, we have got what you need!</p>
         <GetStarted />
         <WhatIsDG />
-        <UsingDG />
-        {brandTitle === "Swedbank Pay" && <OpenSimpleCaring />}
+        <Feedback/>
     </DocContainer>
 );
 
 export default Introduction;
 
-export { GetStarted, WhatIsDG, UsingDG, OpenSimpleCaring };
+export { GetStarted, WhatIsDG, Feedback };
