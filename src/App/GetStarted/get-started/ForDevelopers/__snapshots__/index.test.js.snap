@@ -54,6 +54,19 @@ exports[`GetStarted: ForDevelopers Contributing renders 1`] = `
 </section>
 `;
 
+exports[`GetStarted: ForDevelopers DGLightVideo renders 1`] = `
+<div
+  className="dg-light-video"
+>
+  <iframe
+    allowFullScreen={true}
+    className="responsive-iframe"
+    frameBorder="0"
+    src="https://player.vimeo.com/video/727352249?h=232b0bec4c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+  />
+</div>
+`;
+
 exports[`GetStarted: ForDevelopers DiscoverMore renders 1`] = `
 <section>
   <h2
@@ -458,9 +471,9 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
 
       ],
     </ComponentPreview>
-    <h4>
+    <h3>
       Installing individual components
-    </h4>
+    </h3>
     <p>
       Import 
       <CodeTags
@@ -480,6 +493,13 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
 
       @import url("@swedbankpay/design-guide/src/less/components/expandable.less");
     </ComponentPreview>
+    <h3>
+      Design guide light demonstration
+    </h3>
+    <p>
+      In this video we show a real life example on how to use the design guide through NPM.
+    </p>
+    <DGLightVideo />
   </section>
   <section>
     <h3>
