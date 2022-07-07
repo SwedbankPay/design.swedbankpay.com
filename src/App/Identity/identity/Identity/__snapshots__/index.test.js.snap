@@ -244,6 +244,33 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
 </section>
 `;
 
+exports[`Identity: Identity OpenSimpleCaring renders 1`] = `
+<section>
+  <h2
+    id="open-simple-caring"
+  >
+    Open, simple, caring
+  </h2>
+  <p>
+    Swedbank Pay is a sub-brand to Swedbank and a part of the “Coin family”. That means that Swedbank Pay is built on the same foundation as Swedbank and shares the same brand platform and overall guidelines. Swedbank Pay express its own identity through the logotype, yellow color, images and tonality.
+  </p>
+  <p>
+    To build awareness we display Swedbank Pay’s name and logotype with impact. We express a distinguishing attitude through the logotype, yellow color, images and tonality – always as simple and uncomplicated as possible. Read more about the brand in the 
+    <Link
+      to="/identity/identity"
+    >
+      Identity overview
+    </Link>
+    .
+  </p>
+  <img
+    alt="Illustration explaining the Swedbank Pay vision, values and purpose. The vision is to enable people, business and society to grow. The values are open, simple and caring. The purpose is to promote a sound and sustainable financial situation for the many households and businesses."
+    className="img-fluid"
+    src="/TEST/img/documentation/introduction/pyramid.png"
+  />
+</section>
+`;
+
 exports[`Identity: Identity OurBrand renders 1`] = `
 <section>
   <h2

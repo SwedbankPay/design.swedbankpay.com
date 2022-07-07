@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Introduction, { GetStarted, WhatIsDG, UsingDG, OpenSimpleCaring } from "./index";
+import Introduction, { GetStarted, WhatIsDG, Feedback } from "./index";
 
 describe("GetStarted: Introduction", () => {
     it("is defined", () => {
@@ -38,25 +38,13 @@ describe("GetStarted: Introduction", () => {
         });
     });
 
-    describe("UsingDG", () => {
+    describe("Feedback", () => {
         it("is defined", () => {
-            expect(UsingDG).toBeDefined();
+            expect(Feedback).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<UsingDG />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("OpenSimpleCaring", () => {
-        it("is defined", () => {
-            expect(OpenSimpleCaring).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<OpenSimpleCaring />);
+            const wrapper = shallow(<Feedback/>);
 
             expect(wrapper).toMatchSnapshot();
         });

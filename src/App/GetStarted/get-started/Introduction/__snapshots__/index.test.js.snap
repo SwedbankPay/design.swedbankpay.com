@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`GetStarted: Introduction Feedback renders 1`] = `
+<section>
+  <h2
+    id="feedback"
+  >
+    Feedback
+  </h2>
+  <p>
+    We want to do our best to provide top-quality components for you to use, but this is only possible with your help. If you have any suggestions for how we could potentially improve a component, please don´t hesitate to reach out. If you have questions, feedback, or want to know what’s new in the Design Guide, feel free to join us in the #design-guide-general channel on Slack.
+  </p>
+</section>
+`;
+
 exports[`GetStarted: Introduction GetStarted renders 1`] = `
 <section>
   <p>
@@ -76,58 +89,10 @@ exports[`GetStarted: Introduction GetStarted renders 1`] = `
 </section>
 `;
 
-exports[`GetStarted: Introduction OpenSimpleCaring renders 1`] = `
-<section>
-  <h2
-    id="open-simple-caring"
-  >
-    Open, simple, caring
-  </h2>
-  <p>
-    Swedbank Pay is a sub-brand to Swedbank and a part of the “Coin family”. That means that Swedbank Pay is built on the same foundation as Swedbank and shares the same brand platform and overall guidelines. Swedbank Pay express its own identity through the logotype, yellow color, images and tonality.
-  </p>
-  <p>
-    To build awareness we display Swedbank Pay’s name and logotype with impact. We express a distinguishing attitude through the logotype, yellow color, images and tonality – always as simple and uncomplicated as possible. Read more about the brand in the 
-    <Link
-      to="/identity/identity"
-    >
-      Identity overview
-    </Link>
-    .
-  </p>
-  <img
-    alt="Illustration explaining the Swedbank Pay vision, values and purpose. The vision is to enable people, business and society to grow. The values are open, simple and caring. The purpose is to promote a sound and sustainable financial situation for the many households and businesses."
-    className="img-fluid"
-    src="/TEST/img/documentation/introduction/pyramid.png"
-  />
-</section>
-`;
-
-exports[`GetStarted: Introduction UsingDG renders 1`] = `
-<section>
-  <h2
-    id="using-dg"
-  >
-    Using the Design Guide
-  </h2>
-  <p>
-    Let’s clarify the definition of using the Design Guide. Just because an interface looks right according to the Design Guide, our brand and the design system in general it still doesn’t mean that it per definition “uses the Design Guide”. The definition of using our Design Guide is the technical implementation and using the components taken straight from the Design Guide. 
-  </p>
-  <blockquote
-    className="blockquote"
-  >
-    <p>
-      The Design Guide enables a cohesive and unified design across the organization which saves time for everyone involved. 
-    </p>
-  </blockquote>
-  <p>
-    By doing so, when an adjustment or change occurs with one of the Design Guide components, all the projects which uses the said component will have the changes applied to their product automatically. This way the Design Guide enables a cohesive and unified design across the organization which saves time for everyone involved.  
-  </p>
-</section>
-`;
-
 exports[`GetStarted: Introduction WhatIsDG renders 1`] = `
-<section>
+<section
+  id="what-design-guide"
+>
   <h2
     id="what-is-dg"
   >
@@ -143,13 +108,53 @@ exports[`GetStarted: Introduction WhatIsDG renders 1`] = `
     TESTBRAND
      products.
   </p>
-  <blockquote
-    className="blockquote"
-  >
+  <section>
+    <h2>
+      Working with the Design Guide
+    </h2>
     <p>
-      A design system is the single source of truth which groups all the elements that will allow the teams to design, realize and develop a product.
+      The Design Guide is an organically growing system that evolves with the products. Product teams can use the Design Guide for brand identity, components, guidelines, and documentation regarding accessibility, copywriting, and more. Product teams also contribute to the system by suggesting changes and improvements to already existing components and guidelines, as well as by adding completely new ones.
     </p>
-  </blockquote>
+    <Lightbox
+      alt="Illustation of how product teams can use the design system and how to contribute."
+      className="img-fluid"
+      imgSrc="/TEST/img/documentation/introduction/working-dg.png"
+    />
+  </section>
+  <section>
+    <h3>
+      Contributing to the system
+    </h3>
+    <p>
+      Components and assets that can be reused in other products should be added to the system for others to use. However, some components that fulfill an isolated need for a specific product will remain local for that product only. This informational video explains the design workflow and snowflake process, and how your product team can contribute to the Design Guide:
+    </p>
+    <ContributionVideo />
+    <a
+      className="icon-link mt-3"
+      href="http://www.figma.com/proto/p1QcsYCJ3T466As9xQQGBM/Design-Guide-Mantra?page-id=11%3A4123&node-id=233%3A4515&viewport=306%2C372%2C0.1&scaling=min-zoom&starting-point-node-id=233%3A4515"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <i
+        aria-hidden="true"
+        className="material-icons mr-2"
+      >
+        launch
+      </i>
+      View the contribution process prototype
+    </a>
+  </section>
+  <section>
+    <h3>
+      Products using the Design Guide
+    </h3>
+    <p>
+      An interface may look right according to the Design Guide, our brand, and the design system in general, but that does not mean that it, per definition, “uses the Design Guide“. The definition of using our Design Guide is the technical implementation and using the components taken straight from the Design Guide.
+    </p>
+    <p>
+      When an adjustment or change occurs with one of the Design Guide components, all the projects using said component will have the changes applied to their product automatically. This way, the Design Guide enables a cohesive and unified design across the organization, which saves time for everyone involved.
+    </p>
+  </section>
 </section>
 `;
 
@@ -164,6 +169,6 @@ exports[`GetStarted: Introduction renders 1`] = `
   </p>
   <GetStarted />
   <WhatIsDG />
-  <UsingDG />
+  <Feedback />
 </DocContainer>
 `;
