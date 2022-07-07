@@ -4,6 +4,7 @@ import { browsers, gridAndBreakpoints, discoverMore } from "./constants";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
+import DGLightVideo from "./dg-light-video";
 
 const basename = process.env.basename;
 const brand = process.env.brand;
@@ -65,12 +66,16 @@ const Installation = () => (
             ],
             </ComponentPreview>
 
-            <h4>Installing individual components</h4>
+            <h3>Installing individual components</h3>
             <p>Import <CodeTags type="primary" code={`variables-${brand}.less`}/> and the desired component, i.e. Expandable:</p>
             <ComponentPreview language="css" codeFigure>
                 @import url(&quot;@swedbankpay/design-guide/src/less/variables-{brand}.less&quot;); {"\n"}
                 @import url(&quot;@swedbankpay/design-guide/src/less/components/expandable.less&quot;);
             </ComponentPreview>
+
+            <h3>Design guide light demonstration</h3>
+            <p>In this video we show a real life example on how to use the design guide through NPM.</p>
+            <DGLightVideo/>
         </section>
         <section>
             <h3>How to initialize our JavaScript components</h3>
@@ -171,4 +176,4 @@ const ForDevelopers = () => (
 
 export default ForDevelopers;
 
-export { Installation, GridAndBreakpoints, Contributing, Feedback, DiscoverMore };
+export { Installation, GridAndBreakpoints, Contributing, Feedback, DiscoverMore, DGLightVideo };
