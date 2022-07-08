@@ -373,133 +373,139 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
     >
       npm install @swedbankpay/design-guide
     </ComponentPreview>
-    <h3>
-      Usage with NPM
-    </h3>
-    <p>
-      When importing the Design Guide javascript, you can choose to either import the whole thing or only the components you want to use.
-    </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="javascript"
-    >
-      import dg from "@swedbankpay/design-guide"; 
-      
+    <section>
+      <h3>
+        Usage with NPM
+      </h3>
+      <p>
+        When importing the Design Guide javascript, you can choose to either import the whole thing or only the components you want to use.
+      </p>
+      <ComponentPreview
+        codeFigure={true}
+        language="javascript"
+      >
+        import dg from "@swedbankpay/design-guide"; 
+        
 
-      dg.script.initAll();
-    </ComponentPreview>
-    <ComponentPreview
-      codeFigure={true}
-      language="javascript"
-    >
-      import { sheet } from "@swedbankpay/design-guide";  
-      
+        dg.script.initAll();
+      </ComponentPreview>
+      <ComponentPreview
+        codeFigure={true}
+        language="javascript"
+      >
+        import { sheet } from "@swedbankpay/design-guide";  
+        
 
-      sheet.init();
-    </ComponentPreview>
-    <p>
-      For our CSS you can choose to import it from a 
-      <CodeTags
-        code="css/less/scss"
-        type="secondary"
-      />
-       file, from a 
-      <CodeTags
-        code="js"
-        type="secondary"
-      />
-       file if your bundler supports it, or point to the file directly from your bundler.
-    </p>
-    <p>
-      Example from a 
-      <CodeTags
-        code=".less"
-        type="secondary"
-      />
-       file
-    </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="css"
-    >
-      @import url("@swedbankpay/design-guide/src/less/
-      TESTBRAND
-      .less");
-    </ComponentPreview>
-    <p>
-      Example from 
-      <CodeTags
-        code="angular.json"
-        type="secondary"
-      />
-    </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="json"
-    >
-      "styles": [ 
-      
+        sheet.init();
+      </ComponentPreview>
+      <p>
+        For our CSS you can choose to import it from a 
+        <CodeTags
+          code="css/less/scss"
+          type="secondary"
+        />
+         file, from a 
+        <CodeTags
+          code="js"
+          type="secondary"
+        />
+         file if your bundler supports it, or point to the file directly from your bundler.
+      </p>
+      <p>
+        Example from a 
+        <CodeTags
+          code=".less"
+          type="secondary"
+        />
+         file
+      </p>
+      <ComponentPreview
+        codeFigure={true}
+        language="css"
+      >
+        @import url("@swedbankpay/design-guide/src/less/
+        TESTBRAND
+        .less");
+      </ComponentPreview>
+      <p>
+        Example from 
+        <CodeTags
+          code="angular.json"
+          type="secondary"
+        />
+      </p>
+      <ComponentPreview
+        codeFigure={true}
+        language="json"
+      >
+        "styles": [ 
+        
 
-        "src/app.less", 
-      
+          "src/app.less", 
+        
 
-        "./node_modules/@swedbankpay/design-guide/src/less/
-      TESTBRAND
-      .less" 
-      
+          "./node_modules/@swedbankpay/design-guide/src/less/
+        TESTBRAND
+        .less" 
+        
 
-      ],
-    </ComponentPreview>
-    <p>
-      Example from 
-      <CodeTags
-        code="nuxt.config.js"
-        type="secondary"
-      />
-    </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="javascript"
-    >
-      "css": [ 
-      
+        ],
+      </ComponentPreview>
+      <p>
+        Example from 
+        <CodeTags
+          code="nuxt.config.js"
+          type="secondary"
+        />
+      </p>
+      <ComponentPreview
+        codeFigure={true}
+        language="javascript"
+      >
+        "css": [ 
+        
 
-        "./node_modules/@swedbankpay/design-guide/src/less/
-      TESTBRAND
-      .less" 
-      
+          "./node_modules/@swedbankpay/design-guide/src/less/
+        TESTBRAND
+        .less" 
+        
 
-      ],
-    </ComponentPreview>
-    <h3>
-      Installing individual components
-    </h3>
-    <p>
-      Import 
-      <CodeTags
-        code="variables-TESTBRAND.less"
-        type="primary"
-      />
-       and the desired component, i.e. Expandable:
-    </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="css"
-    >
-      @import url("@swedbankpay/design-guide/src/less/variables-
-      TESTBRAND
-      .less"); 
-      
+        ],
+      </ComponentPreview>
+    </section>
+    <section>
+      <h3>
+        Installing individual components
+      </h3>
+      <p>
+        Import 
+        <CodeTags
+          code="variables-TESTBRAND.less"
+          type="primary"
+        />
+         and the desired component, i.e. Expandable:
+      </p>
+      <ComponentPreview
+        codeFigure={true}
+        language="css"
+      >
+        @import url("@swedbankpay/design-guide/src/less/variables-
+        TESTBRAND
+        .less"); 
+        
 
-      @import url("@swedbankpay/design-guide/src/less/components/expandable.less");
-    </ComponentPreview>
-    <h3>
-      Design guide light demonstration
-    </h3>
-    <p>
-      In this video we show a real life example on how to use the design guide through NPM.
-    </p>
-    <DGLightVideo />
+        @import url("@swedbankpay/design-guide/src/less/components/expandable.less");
+      </ComponentPreview>
+    </section>
+    <section>
+      <h3>
+        Design guide light demonstration
+      </h3>
+      <p>
+        In this video we show a real life example on how to use the design guide through NPM.
+      </p>
+      <DGLightVideo />
+    </section>
   </section>
   <section>
     <h3>
