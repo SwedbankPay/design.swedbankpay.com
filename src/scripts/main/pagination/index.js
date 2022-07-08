@@ -7,10 +7,6 @@ const paginate = (pages, currentActive) => {
         throw ("CurrentActive must be greater than 0");
     }
 
-    if (pages < 8) {
-        throw "ArrayLength must be greater than 7";
-    }
-
     const getDelta = () => {
         if (currentActive === 1 || currentActive === pages) {
             return 4;
@@ -28,6 +24,14 @@ const paginate = (pages, currentActive) => {
 
     const paginationProps = page => ({ page,
         current: currentActive === page });
+
+    if (pages < 8) {
+        for (let i = 1; i < pages + 1; i++) {
+            paginatedPages.push(paginationProps(i));
+        }
+
+        return paginatedPages;
+    }
 
     for (let i = currentActive - delta; i <= currentActive + delta; i++) {
         if (i + delta - currentActive === 0) {

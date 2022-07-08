@@ -15,7 +15,7 @@ export const brandColors = [
         title: "Yellow lighter",
         subTitle: "brand-primary-lighter",
         hex: "#FFF3D5",
-        contrastWhiteApproved: true
+        contrastBlackApproved: true
     }
 ];
 
@@ -151,7 +151,8 @@ export const backgroundColors = [
         title: "Gray light",
         subTitle: "bg-quaternary",
         hex: "#F9F8F6",
-        contrastBlackApproved: true
+        contrastBlackApproved: true,
+        border: "has-border"
     }
 ];
 

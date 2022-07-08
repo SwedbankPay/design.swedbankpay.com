@@ -44,6 +44,7 @@ exports[`Core: Color BackgroundColors renders 1`] = `
       title="Gray"
     />
     <ColorDisplay
+      border="has-border"
       contrastBlackApproved={true}
       hex="#F9F8F6"
       key="4"
