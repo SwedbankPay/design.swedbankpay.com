@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import ForDesigners, { NeedToHave, NeedToKnow, Contributing, Feedback, DiscoverMore } from "./index";
+import ForDesigners, { NeedToHave, NeedToKnow, DiscoverMore } from "./index";
 
 describe("GetStarted: ForDesigners", () => {
     it("is defined", () => {
@@ -33,30 +33,6 @@ describe("GetStarted: ForDesigners", () => {
 
         it("renders", () => {
             const wrapper = shallow(<NeedToKnow />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Contributing", () => {
-        it("is defined", () => {
-            expect(Contributing).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Contributing />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("Feedback", () => {
-        it("is defined", () => {
-            expect(Feedback).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Feedback />);
 
             expect(wrapper).toMatchSnapshot();
         });

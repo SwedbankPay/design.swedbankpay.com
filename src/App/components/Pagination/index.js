@@ -16,7 +16,7 @@ const Pagination = ({ length, currentActive, id, anchorArrows }) => {
 
         const arrowClasses = classnames(
             `arrow-${type}`,
-            mobile ? "d-block d-sm-none" : null,
+            mobile ? "d-sm-none" : null,
             disabled ? "disabled" : null
         );
 

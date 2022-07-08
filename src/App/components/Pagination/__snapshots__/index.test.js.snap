@@ -160,7 +160,7 @@ exports[`Component: Pagination - receives correct properties 1`] = `
       type="start"
     >
       <button
-        className="arrow-start d-block d-sm-none"
+        className="arrow-start d-sm-none"
         onClick={[Function]}
       >
         
@@ -322,7 +322,7 @@ exports[`Component: Pagination - receives correct properties 1`] = `
       type="end"
     >
       <button
-        className="arrow-end d-block d-sm-none"
+        className="arrow-end d-sm-none"
         onClick={[Function]}
       >
         

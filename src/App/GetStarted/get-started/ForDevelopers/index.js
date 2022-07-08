@@ -4,6 +4,7 @@ import { browsers, gridAndBreakpoints, discoverMore } from "./constants";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
+import DGLightVideo from "./dgLightVideo";
 
 const basename = process.env.basename;
 const brand = process.env.brand;
@@ -35,42 +36,49 @@ const Installation = () => (
             <ComponentPreview language="terminal" codeFigure>
             npm install @swedbankpay/design-guide
             </ComponentPreview>
-
-            <h3>Usage with NPM</h3>
-            <p>When importing the Design Guide javascript, you can choose to either import the whole thing or only the components you want to use.</p>
-            <ComponentPreview language="javascript" codeFigure>
+            <section>
+                <h3>Usage with NPM</h3>
+                <p>When importing the Design Guide javascript, you can choose to either import the whole thing or only the components you want to use.</p>
+                <ComponentPreview language="javascript" codeFigure>
                 import dg from &quot;@swedbankpay/design-guide&quot;; {"\n"}
                 dg.script.initAll();
-            </ComponentPreview>
-            <ComponentPreview language="javascript" codeFigure>
+                </ComponentPreview>
+                <ComponentPreview language="javascript" codeFigure>
                 import &#123; sheet &#125; from &quot;@swedbankpay/design-guide&quot;;  {"\n"}
                 sheet.init();
-            </ComponentPreview>
-            <p>For our CSS you can choose to import it from a <CodeTags type="secondary" code="css/less/scss"/> file, from a <CodeTags type="secondary" code="js"/> file if your bundler supports it, or point to the file directly from your bundler.</p>
-            <p>Example from a <CodeTags type="secondary" code=".less"/> file</p>
-            <ComponentPreview language="css" codeFigure>
+                </ComponentPreview>
+                <p>For our CSS you can choose to import it from a <CodeTags type="secondary" code="css/less/scss"/> file, from a <CodeTags type="secondary" code="js"/> file if your bundler supports it, or point to the file directly from your bundler.</p>
+                <p>Example from a <CodeTags type="secondary" code=".less"/> file</p>
+                <ComponentPreview language="css" codeFigure>
                 @import url(&quot;@swedbankpay/design-guide/src/less/{brand}.less&quot;);
-            </ComponentPreview>
-            <p>Example from <CodeTags type="secondary" code="angular.json"/></p>
-            <ComponentPreview language="json" codeFigure>
+                </ComponentPreview>
+                <p>Example from <CodeTags type="secondary" code="angular.json"/></p>
+                <ComponentPreview language="json" codeFigure>
             &quot;styles&quot;: [ {"\n"}
                 &nbsp; &quot;src/app.less&quot;, {"\n"}
                 &nbsp; &quot;./node_modules/@swedbankpay/design-guide/src/less/{brand}.less&quot; {"\n"}
             ],
-            </ComponentPreview>
-            <p>Example from <CodeTags type="secondary" code="nuxt.config.js"/></p>
-            <ComponentPreview language="javascript" codeFigure>
+                </ComponentPreview>
+                <p>Example from <CodeTags type="secondary" code="nuxt.config.js"/></p>
+                <ComponentPreview language="javascript" codeFigure>
             &quot;css&quot;: [ {"\n"}
                 &nbsp; &quot;./node_modules/@swedbankpay/design-guide/src/less/{brand}.less&quot; {"\n"}
             ],
-            </ComponentPreview>
-
-            <h4>Installing individual components</h4>
-            <p>Import <CodeTags type="primary" code={`variables-${brand}.less`}/> and the desired component, i.e. Expandable:</p>
-            <ComponentPreview language="css" codeFigure>
+                </ComponentPreview>
+            </section>
+            <section>
+                <h3>Installing individual components</h3>
+                <p>Import <CodeTags type="primary" code={`variables-${brand}.less`}/> and the desired component, i.e. Expandable:</p>
+                <ComponentPreview language="css" codeFigure>
                 @import url(&quot;@swedbankpay/design-guide/src/less/variables-{brand}.less&quot;); {"\n"}
                 @import url(&quot;@swedbankpay/design-guide/src/less/components/expandable.less&quot;);
-            </ComponentPreview>
+                </ComponentPreview>
+            </section>
+            <section>
+                <h3>Design guide light demonstration</h3>
+                <p>In this video we show a real life example on how to use the design guide through NPM.</p>
+                <DGLightVideo/>
+            </section>
         </section>
         <section>
             <h3>How to initialize our JavaScript components</h3>
@@ -171,4 +179,4 @@ const ForDevelopers = () => (
 
 export default ForDevelopers;
 
-export { Installation, GridAndBreakpoints, Contributing, Feedback, DiscoverMore };
+export { Installation, GridAndBreakpoints, Contributing, Feedback, DiscoverMore, DGLightVideo };

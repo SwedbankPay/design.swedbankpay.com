@@ -1,57 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GetStarted: ForDesigners Contributing renders 1`] = `
-<section>
-  <h2
-    id="contributing"
-  >
-    Contributing
-  </h2>
-  <p>
-    When working on the different products across our brand it is important for you as a designer to understand how you can contribute to the Design Guide. It is equally important to understand which types of components can be added to the design guide and which ones are designed specific for your product. In general, the best practice is to keep a close dialogue with the design guide team and its designers and they will guide you through the process.
-  </p>
-  <p>
-    As we all know, sometimes you face niche problems which requires specific solutions, this is normal and something that we have accounted for. This is where snowflake comes in and in order to learn about when you should create a snowflake and how, check out our guidelines here in the 
-    <a
-      className="icon-link"
-      href="https://www.figma.com/file/sRWbYlMbR0c4T3vT8DBHIU/Snowflakes?node-id=1%3A4"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      <span
-        className="mr-2"
-      >
-        Snowflake Figma file
-      </span>
-      <i
-        aria-hidden="true"
-        className="material-icons"
-      >
-        open_in_new
-      </i>
-    </a>
-  </p>
-  <div
-    className="d-flex flex-column align-items-center"
-  >
-    <Lightbox
-      alt="Flow chart of the Design Guide intake process."
-      imgSrc="/TEST/img/documentation/forDesigners/vanilla-pattern.png"
-    />
-    <span
-      className="caption-text"
-    >
-      <span
-        className="font-weight-bold"
-      >
-        Figure 1.
-      </span>
-      The Design Guide intake process explaining how to contribute to the system (Click to view)
-    </span>
-  </div>
-</section>
-`;
-
 exports[`GetStarted: ForDesigners DiscoverMore renders 1`] = `
 <section>
   <h2
@@ -107,19 +55,6 @@ exports[`GetStarted: ForDesigners DiscoverMore renders 1`] = `
       </i>
     </Link>
   </div>
-</section>
-`;
-
-exports[`GetStarted: ForDesigners Feedback renders 1`] = `
-<section>
-  <h2
-    id="feedback"
-  >
-    Feedback
-  </h2>
-  <p>
-    We want to do our best to provide top quality components for you to use, but this is only possible with the help from you! If you have any suggestions for how we could potentially improve a component please don’t hesitate to reach out, you can report it directly to one of the designers working on the design guide or reach us at #design-guide-feedback on Slack.
-  </p>
 </section>
 `;
 
@@ -262,8 +197,6 @@ exports[`GetStarted: ForDesigners renders 1`] = `
   </p>
   <NeedToHave />
   <NeedToKnow />
-  <Contributing />
-  <Feedback />
   <DiscoverMore />
 </DocContainer>
 `;

@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import ForDevelopers, { Installation, GridAndBreakpoints, Contributing, Feedback, DiscoverMore } from "./index";
+import ForDevelopers, { Installation, GridAndBreakpoints, Contributing, Feedback, DiscoverMore, DGLightVideo } from "./index";
 
 describe("GetStarted: ForDevelopers", () => {
     it("is defined", () => {
@@ -69,6 +69,18 @@ describe("GetStarted: ForDevelopers", () => {
 
         it("renders", () => {
             const wrapper = shallow(<DiscoverMore />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("DGLightVideo", () => {
+        it("is defined", () => {
+            expect(DGLightVideo).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<DGLightVideo />);
 
             expect(wrapper).toMatchSnapshot();
         });
