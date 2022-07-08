@@ -57,7 +57,7 @@ const WhatIsDG = () => (
             <h3>Products using the Design Guide</h3>
             <p>An interface may look right according to the Design Guide, our brand, and the design system in general, but that does not mean that it, per definition, “uses the Design Guide“. The definition of using our Design Guide is the technical implementation and using the components taken straight from the Design Guide.</p>
             <p>When an adjustment or change occurs with one of the Design Guide components, all the projects using said component will have the changes applied to their product automatically. This way, the Design Guide enables a cohesive and unified design across the organization, which saves time for everyone involved.</p>
-            {brandTitle === "Swedbank Pay" && <>
+            {brandTitle === "Swedbank Pay" && <section>
                 <h3>Products using the Design Guide</h3>
                 <p>Because there’s a difference of following the design guidelines and using the Design Guide, not all {brandTitle} products per definition uses the Design Guide. </p>
                 <table className="table table-plain">
@@ -76,7 +76,7 @@ const WhatIsDG = () => (
                         ))}
                     </tbody>
                 </table>
-            </>}
+            </section>}
         </section>
     </section>
 );
