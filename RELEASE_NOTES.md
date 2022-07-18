@@ -12,9 +12,9 @@
 -   Documentation in get-started/introduction and get-started/for-developers.
 -   Relocated "Open, Simple, Caring"-section from get-started/introduction to identity/introduction.
 ## Added
+-   Design Guide process image in get-started/introduction section.
 -   Videos
     -   "Contributing to the system" by Filippos Kargiotidis, located in get-started/introduction section.
     -   "Using Design Guide Light" by Eskil Hognestad, located in get-started/for-developers.
--   Design Guide process image in get-started/introduction section.
 ## Removed
 -   Snowflake-image in get-started/for-designers.
