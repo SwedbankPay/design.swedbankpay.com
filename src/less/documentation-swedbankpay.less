@@ -409,6 +409,38 @@
                 margin-top: 2rem;
             }
         }
+
+        .search-container {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+
+            .form-group {
+                margin-bottom: 0;
+
+                .input-group {
+                    width: 21rem;
+                    height: 2.5rem;
+                }
+            }
+
+            .result-box {
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                width: 21rem;
+                position: absolute;
+                margin-top: 1rem;
+                z-index: 10000000;
+                background-color: @white;
+                border: 1px solid @brand-secondary;
+                border-radius: 2px;
+
+                button {
+                    all: unset;
+                }
+            }
+        }
     }
 
     .doc-card {

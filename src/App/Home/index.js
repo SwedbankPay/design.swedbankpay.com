@@ -4,6 +4,7 @@ import { changeLogs } from "./constants";
 import { setTitle, RemoveVscroll } from "../utils";
 import routes from "@src/App/routes/all";
 import packageJson from "~/package";
+import SearchBox from "../utils/SearchBox";
 
 const basename = process.env.basename;
 const brandTitle = process.env.brandTitle;
@@ -102,6 +103,7 @@ const Home = () => {
 
     return (
         <div className="doc-container dg-front-page py-0">
+            <SearchBox/>
             <FrontPage />
             <Changelog />
             <img src={`${basename}img/background/two-bubbles.svg`} className="background-img two-bubbles d-none d-xl-block" alt=""/>
