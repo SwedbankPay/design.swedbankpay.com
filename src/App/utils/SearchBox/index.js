@@ -1,29 +1,36 @@
 import React, { useState } from "react";
-import Routes from "../../routes/components";
+import ComponentRoutes from "../../routes/components";
+import GetStartedRoutes from "../../routes/get-started";
+import IdentityRoutes from "../../routes/identity";
+import PatternRoutes from "../../routes/patterns";
+import UtilityRoutes from "../../routes/utilities";
+
+const allRoutes = [ComponentRoutes, GetStartedRoutes, PatternRoutes, IdentityRoutes, UtilityRoutes];
 
 const SearchBox = () => {
 
     const [searchTerm, setSearchTerm] = useState("");
 
-    const pathchange = val => {
+    const pathChange = val => {
         window.location.href = val;
     };
 
     const results = () => {
-        const searchResults = Routes[0].routes.filter(val => {
+        const searchResultList = allRoutes.map(route => route[0].routes.filter(val => {
+
             if (searchTerm === "") {
                 return "";
             } else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
                 return val;
             }
-        });
+        }));
 
         return (
-            <div className="result-box">
-                <ul className="item-list item-list-hover">
-                    {searchResults.map(val => <li key={val.path}><button onClick={ e => pathchange(val.path)}>{val.title}</button></li>)}
-                </ul>
-            </div>
+
+            <ul className="item-list item-list-hover">
+                {searchResultList.map(searchResult => searchResult.map(result => <li key={result.path}><a onClick={ () => pathChange(result.path)}>{result.title}</a></li>)
+                )}
+            </ul>
         );
 
     };
@@ -36,7 +43,9 @@ const SearchBox = () => {
                     <span className="input-group-addon postfix"><i className="material-icons" aria-hidden="true">search</i></span>
                 </div>
             </div>
-            {results()}
+            {searchTerm !== "" && <div className="result-box">
+                {results()}
+            </div> }
         </div>
     );
 };

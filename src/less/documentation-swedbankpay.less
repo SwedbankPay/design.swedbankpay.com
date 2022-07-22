@@ -431,13 +431,33 @@
                 width: 21rem;
                 position: absolute;
                 margin-top: 1rem;
-                z-index: 10000000;
+                z-index: 103;
                 background-color: @white;
                 border: 1px solid @brand-secondary;
                 border-radius: 2px;
+                max-height: 50vh;
+                overflow: scroll;
 
-                button {
-                    all: unset;
+                .item-list {
+                    margin-bottom: 0;
+
+                    &.item-list-hover {
+                        li {
+                            &:hover {
+                                background-color: @bg-primary;
+                                cursor: pointer;
+                            }
+
+                            a {
+                                color: @brand-secondary;
+                                display: inline-block;
+                                position: relative;
+                                z-index: 1;
+                                padding: 1rem;
+                                margin: -1rem;
+                            }
+                        }
+                    }
                 }
             }
         }
