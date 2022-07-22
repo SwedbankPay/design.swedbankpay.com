@@ -298,7 +298,7 @@
             @media (max-width: @screen-xs-max) {
                 .dg-front-page-container {
                     height: auto;
-                    padding: 2rem 0;
+                    padding: 5rem 0;
 
                     header {
                         line-height: 2rem;
@@ -334,6 +334,17 @@
                         padding-bottom: 0.5rem;
                     }
                 }
+
+                .search-container {
+                    margin-top: 0.5rem;
+                    right: auto;
+
+                    .form-group {
+                        .input-group {
+                            width: 22rem;
+                        }
+                    }
+                }
             }
 
             /* Background images */
@@ -358,6 +369,10 @@
             .single-bubble {
                 bottom: 3rem;
                 left: 94%;
+            }
+
+            .search-container {
+                right: 0;
             }
         }
 
@@ -414,6 +429,7 @@
             position: absolute;
             top: 1rem;
             right: 1rem;
+            z-index: 103;
 
             .form-group {
                 margin-bottom: 0;
