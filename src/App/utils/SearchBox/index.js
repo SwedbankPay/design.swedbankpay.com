@@ -11,8 +11,17 @@ const SearchBox = () => {
 
     const [searchTerm, setSearchTerm] = useState("");
 
-    const pathChange = val => {
-        window.location.href = val;
+    const modify = (result, searchTerm) => {
+        const re = new RegExp(searchTerm.split("").map(x => x.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"))
+            .join("[.\\s.]*"), "ig");
+
+        return result.replace(re, "<b>$&</b>");
+    };
+
+    const bolded = (result, searchTerm) => {
+        const bolded = modify(result, searchTerm);
+
+        return bolded; // will be removed
     };
 
     const results = () => {
@@ -26,9 +35,8 @@ const SearchBox = () => {
         }));
 
         return (
-
             <ul className="item-list item-list-hover">
-                {searchResultList.map(searchResult => searchResult.map(result => <li key={result.path}><a onClick={ () => pathChange(result.path)}>{result.title}</a></li>)
+                {searchResultList.map(searchResult => searchResult.map(result => <li key={result.path}><a className="result" href={`${result.path}`} key={result.path}>{bolded(result.title, searchTerm)}</a></li>)
                 )}
             </ul>
         );
