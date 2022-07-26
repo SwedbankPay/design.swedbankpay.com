@@ -27,3 +27,5 @@ RenderPage.propTypes = {
 };
 
 export default RenderPage;
+
+export { SearchBox };

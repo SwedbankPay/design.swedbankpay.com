@@ -4,6 +4,7 @@ exports[`Home: index renders 1`] = `
 <div
   className="doc-container dg-front-page py-0"
 >
+  <SearchBox />
   <FrontPage />
   <Changelog />
   <img
@@ -16,5 +17,37 @@ exports[`Home: index renders 1`] = `
     className="background-img single-bubble d-none d-xl-block"
     src="/TEST/img/background/single-bubble.svg"
   />
+</div>
+`;
+
+exports[`SearchBox renders 1`] = `
+<div
+  className="search-container"
+>
+  <div
+    className="form-group"
+  >
+    <div
+      className="input-group"
+    >
+      <input
+        className="form-control"
+        id="search-box"
+        onChange={[Function]}
+        placeholder="Search"
+        type="text"
+      />
+      <span
+        className="input-group-addon postfix"
+      >
+        <i
+          aria-hidden="true"
+          className="material-icons"
+        >
+          search
+        </i>
+      </span>
+    </div>
+  </div>
 </div>
 `;
