@@ -18,12 +18,6 @@ const SearchBox = () => {
         return result.replace(re, "<b>$&</b>");
     };
 
-    const bolded = (result, searchTerm) => {
-        const bolded = modify(result, searchTerm);
-
-        return bolded; // will be removed
-    };
-
     const results = () => {
         const searchResultList = allRoutes.map(route => route[0].routes.filter(val => {
 
@@ -36,11 +30,10 @@ const SearchBox = () => {
 
         return (
             <ul className="item-list item-list-hover">
-                {searchResultList.map(searchResult => searchResult.map(result => <li key={result.path}><a className="result" href={`${result.path}`} key={result.path}>{bolded(result.title, searchTerm)}</a></li>)
+                {searchResultList.map(searchResult => searchResult.map(result => <li key={result.path}><a className="result" href={`${result.path}`} key={result.path} dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></a></li>)
                 )}
             </ul>
         );
-
     };
 
     return (
