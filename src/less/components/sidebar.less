@@ -296,3 +296,36 @@
         }
     }
 }
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .sidebar {
+        .sidebar-main-nav {
+            .main-nav-ul {
+                .main-nav-li {
+                    > a {
+                        &:before {
+                            transition: width 0s ease-in-out;
+                        }
+                    }
+
+                    .sidebar-secondary-nav {
+                        .secondary-nav-ul {
+                            li {
+                                &.leaf {
+                                    > ul {
+                                        transition: 0s ease-in-out;
+                                    }
+                                }
+                                &.active {
+                                    > ul {
+                                        transition: 0s ease-in-out;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
