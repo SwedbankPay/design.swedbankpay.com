@@ -639,3 +639,39 @@ each(@grid-breakpoints, .(@min-width, @infix) {
         background: transparent;
     }
 }
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .topbar {
+        .topbar-nav {
+            .sidebar {
+                .sidebar-nav {
+                    .main-nav-ul {
+                        .nav-group {
+                            .nav-ul-active() {
+                                > .nav-ul {
+                                    transition: max-height 0s ease-in-out;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.topbar-nav-open {
+                animation: fade-in 0s forwards;
+
+                .topbar-link-container {
+                    animation: slide-in 0s ease forwards;
+                }
+            }
+
+            &.topbar-nav-closing {
+                animation: fade-out 0s forwards;
+
+                .topbar-link-container {
+                    animation: slide-out 0s ease alternate;
+                }
+            }
+        }
+    }
+}
