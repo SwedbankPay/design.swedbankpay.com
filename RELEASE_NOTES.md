@@ -1,16 +1,21 @@
 # Changelog
 
-## [10.1.0] - 23.06.2022
-## WCAG
--   Support for legibility and usability when zoomed 200% (in the design guide)
--   Correct placement of Toast when called on
--   Update alternate text and captions documentation
--   Update alt-text and captions for all images in DG
--   Added aria-expanded for sidebar-component, both component and the one used in DG
--   Update error icons and error messages in form components
--   Conditional reveals in Patterns/Forms example
--   Update text color for inactive state (badge)
--   Update close buttons to have same style for all components
+## [10.2.0] - 18.07.2022
 
+## Fixes
+-   Pagination script to allow 7 or fewer pages.
+-   Pagination markup bug on arrows.
+-   Color page bug fixes.
+-   Toast alignment bug fix.
+-   Hover state background color on item list is aligned to be the same as hover state background color for tables.
+## Changed
+-   Documentation in get-started/introduction and get-started/for-developers.
+-   Relocated "Open, Simple, Caring"-section from get-started/introduction to identity/introduction.
 ## Added
--   Inactive example in status badge documentation
+-   Design Guide process image in get-started/introduction section.
+
+-   Videos
+    -   "Contributing to the system" by Filippos Kargiotidis, located in get-started/introduction section.
+    -   "Using Design Guide Light" by Eskil Hognestad, located in get-started/for-developers.
+## Removed
+-   Snowflake-image in get-started/for-designers.

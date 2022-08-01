@@ -2,6 +2,11 @@ import React from "react";
 
 export const changeLogs = [
     {
+        version: "10.2.0",
+        title: "Contribution is key 🔑",
+        text: <p>In this release, we have given our contribution sections an update. To have the most robust design system, we need to continuously improve ourselves, which is only doable through the help of our users. Therefore, we have updated our documentation and created two videos; one to emphasize the <a href="/get-started/introduction">contribution process</a>, and one video to show users how to use the new <a href="/get-started/for-developers">Design Guide light</a>. Check them out! This release also includes bug fixes: the pagination script is now supporting lists with seven elements or fewer, markup bug on pagination arrows, and small fixes on the color page. If you find something wrong or weird, do not hesitate to contact us through our slack channel #design-guide-general 🎉</p>
+    },
+    {
         version: "10.1.0",
         title: "WCAG updates",
         text: "Major WCAG update! The design guide is now accessibility-friendly based on the feedback we received from FUNKA 🎉 This version holds mostly technical updates with correct usage of aria-labels, support for zoom up to 200%, and correct placement of the Toast component in the DOM when called on. We also updated our documentation regarding alt-texts and captions. Thank you for all feedback from the last release and findings of bugs 🪲 Enjoy!"
