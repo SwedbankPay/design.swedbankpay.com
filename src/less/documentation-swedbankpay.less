@@ -424,63 +424,6 @@
                 margin-top: 2rem;
             }
         }
-
-        .search-container {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            z-index: 103;
-
-            .form-group {
-                margin-bottom: 0;
-
-                .input-group {
-                    width: 21rem;
-                    height: 2.5rem;
-                }
-            }
-
-            .result-box {
-                display: flex;
-                flex-direction: column;
-                height: auto;
-                width: 21rem;
-                position: absolute;
-                margin-top: 1rem;
-                z-index: 103;
-                background-color: @white;
-
-                border-radius: 2px;
-                max-height: 50vh;
-                overflow: scroll;
-                box-shadow: 1px 2px 20px rgb(0 0 0 / 15%);
-
-                .item-list {
-                    margin-bottom: 0;
-
-                    &.item-list-hover {
-                        li {
-                            border-bottom: none;
-
-                            &:hover {
-                                background-color: @bg-primary;
-                                cursor: pointer;
-                            }
-
-                            a {
-                                color: @brand-secondary;
-                                display: inline-block;
-                                position: relative;
-                                z-index: 1;
-                                padding: 1rem;
-                                margin: -1rem;
-                                text-decoration: none;
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 
     .doc-card {
@@ -624,6 +567,62 @@
         padding-left: 0;
         padding-right: 0;
         background: @brand-bg-white;
+
+        .search-container {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 103;
+
+            .form-group {
+                margin-bottom: 0;
+
+                .input-group {
+                    width: 21rem;
+                    height: 2.5rem;
+                }
+            }
+
+            .result-box {
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                width: 21rem;
+                position: absolute;
+                margin-top: 1rem;
+                z-index: 103;
+                background-color: @white;
+                border-radius: 2px;
+                max-height: 50vh;
+                overflow: scroll;
+                box-shadow: 1px 2px 20px rgb(0 0 0 / 15%);
+
+                .item-list {
+                    margin-bottom: 0;
+
+                    &.item-list-hover {
+                        li {
+                            border-bottom: none;
+
+                            &:hover {
+                                background-color: @bg-primary;
+                                cursor: pointer;
+                            }
+
+                            a {
+                                color: @brand-secondary;
+                                display: inline-block;
+                                position: relative;
+                                z-index: 1;
+                                padding: 1rem;
+                                margin: -1rem;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .view-heading {

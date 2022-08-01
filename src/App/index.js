@@ -10,6 +10,8 @@ import routes from "./routes/all";
 
 import SkipLink from "@components/SkipLink";
 
+import SearchBox from "./utils/SearchBox";
+
 import { topbar } from "@src/scripts/main";
 
 const basename = process.env.basename || "/";
@@ -78,6 +80,7 @@ class App extends Component {
                                 <SelectPanel id="doc-sidebar" newSidebar={true} routes={routes} />
                             </div>
                             <main id="doc-view" className="doc-view">
+                                <SearchBox/>
                                 <Suspense fallback={<LoadingComponent />}>
                                     <Switch>
                                         <Route exact path="/" component={Home} />

@@ -103,7 +103,6 @@ const Home = () => {
 
     return (
         <div className="doc-container dg-front-page py-0">
-            <SearchBox/>
             <FrontPage />
             <Changelog />
             <img src={`${basename}img/background/two-bubbles.svg`} className="background-img two-bubbles d-none d-xl-block" alt=""/>

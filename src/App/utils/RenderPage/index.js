@@ -10,7 +10,6 @@ import SearchBox from "../SearchBox";
 const RenderPage = ({ path, initPath }) => (
     <Suspense fallback={<LoadingComponent />}>
         <div className="doc-container">
-            <SearchBox/>
             <span className="dg-current-version text-uppercase">Design Guide – v. {packageJson.version}</span>
             <Switch>
                 <Route exact path={path} render={() => <Redirect to={initPath} />} />
