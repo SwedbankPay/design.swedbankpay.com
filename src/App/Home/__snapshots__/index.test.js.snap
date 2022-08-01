@@ -4,7 +4,6 @@ exports[`Home: index renders 1`] = `
 <div
   className="doc-container dg-front-page py-0"
 >
-  <SearchBox />
   <FrontPage />
   <Changelog />
   <img

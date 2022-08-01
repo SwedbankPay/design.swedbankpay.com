@@ -41,7 +41,6 @@ exports[`Utilities: RenderPage renders 1`] = `
   <div
     className="doc-container"
   >
-    <SearchBox />
     <span
       className="dg-current-version text-uppercase"
     >
