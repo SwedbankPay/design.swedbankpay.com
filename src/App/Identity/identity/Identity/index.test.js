@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Identity, { OurBrand, MenuOverview } from "./index";
+import Identity, { OurBrand, MenuOverview, OpenSimpleCaring } from "./index";
 
 describe("Identity: Identity", () => {
     it("is defined", () => {
@@ -33,6 +33,18 @@ describe("Identity: Identity", () => {
 
         it("renders", () => {
             const wrapper = shallow(<MenuOverview />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+    });
+
+    describe("OpenSimpleCaring", () => {
+        it("is defined", () => {
+            expect(OpenSimpleCaring).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<OpenSimpleCaring />);
 
             expect(wrapper).toMatchSnapshot();
         });
