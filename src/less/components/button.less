@@ -8,6 +8,7 @@
     &.focus {
         outline: 0;
         box-shadow: 0 0 0 0.1rem @focus-shadow;
+        background-color: @hover;
     }
 
     &:hover {
@@ -229,7 +230,8 @@
     /* padding-top-bottom, padding-left-right, font-size, line-height */
     .button-size(@btn-padding-horizontal; @btn-default-height; @btn-font-size; @line-height-large; @btn-border-radius-large);
 
-    .material-icons {
+    .material-icons,
+    .material-icons-outlined {
         font-size: 1.25rem;
         position: relative;
         display: inline-block;
