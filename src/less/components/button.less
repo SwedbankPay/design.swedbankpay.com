@@ -38,16 +38,17 @@
     }
 }
 
-.button-outline-variant(@color, @background, @hover-color, @disabled-color, @disabled-bg) {
+.button-outline-variant(@color, @background, @hover-color, @disabled-color, @disabled-bg, @focus-shadow) {
     background: transparent;
     color: @color;
     border-color: @background;
 
     &:focus,
     &.focus {
-        outline-offset: 0;
+        outline: 0;
         color: @hover-color;
         background-color: @background;
+        box-shadow: 0 0 0 0.1rem @focus-shadow;
     }
 
     &:hover {
@@ -328,11 +329,11 @@
     }
 
     &.btn-secondary {
-        .button-outline-variant(@btn-secondary-bg, @btn-secondary-bg, @btn-secondary-color, @btn-secondary-disabled-bg, @btn-secondary-disabled-color);
+        .button-outline-variant(@btn-secondary-bg, @btn-secondary-bg, @btn-secondary-color, @btn-secondary-disabled-bg, @btn-secondary-disabled-color, @brand-primary);
     }
 
     &.btn-guiding-destructive {
-        .button-outline-variant(@btn-destructive-bg, @btn-destructive-bg, @btn-destructive-color, @btn-destructive-disabled-bg, @btn-destructive-disabled-color);
+        .button-outline-variant(@btn-destructive-bg, @btn-destructive-bg, @btn-destructive-color, @btn-destructive-disabled-bg, @btn-destructive-disabled-color, transparent);
     }
 
     &.btn-executive-destructive {
