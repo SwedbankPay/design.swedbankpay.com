@@ -110,6 +110,7 @@
     &:focus {
         outline: 0;
         box-shadow: 0 0 0 0.1rem @focus-shadow;
+        border-color: @color;
     }
 
     &:hover,
@@ -121,11 +122,15 @@
     fieldset[disabled] & {
         color: @disabled-color;
         text-decoration: none;
-        border-color: @disabled-color;
+        border: none;
     }
 
     span {
-        text-decoration: underline;
+        text-decoration: none;
+    }
+
+    span:only-child {
+        text-decoration: underline; // TODO
     }
 }
 
