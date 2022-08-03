@@ -422,25 +422,13 @@
 
         &.btn-primary,
         &.btn-secondary,
-        &.btn-link {
-            &:after {
-                border-color: lighten(@brand-secondary, 40%);
-                border-left-color: @brand-secondary;
-            }
-        }
-
-        &.btn-executive-destructive {
-            &:after {
-                border-color: hsla(0, 0%, 100%, 0.5);
-                border-left-color: @brand-error;
-            }
-        }
-
+        &.btn-link,
+        &.btn-executive-destructive,
         &.btn-guiding-destructive,
         &.btn-link-destructive {
             &:after {
-                border-color: @brand-error-light;
-                border-left-color: @brand-error;
+                border-color: lighten(@brand-secondary, 40%);
+                border-left-color: @brand-secondary;
             }
         }
 
