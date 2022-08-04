@@ -54,12 +54,12 @@ const Table = ({ plain, condensed, hover, divided, sortable, caption, tableData 
             <tbody>
                 {tableData.tbody.map(({ tr }, i) => (
                     <tr key={tr + i}>
-                        {tr.map(({ content, th, classname }) => (
+                        {tr.map(({ content, th, classname }, j) => (
                             th
-                                ? <th>{content}</th>
+                                ? <th key={j}>{content}</th>
                                 : classname
-                                    ? <td className={classname}>{content}</td>
-                                    : <td>{content}</td>
+                                    ? <td key={j}className={classname}>{content}</td>
+                                    : <td key={j}>{content}</td>
                         ))}
                     </tr>
                 ))}
