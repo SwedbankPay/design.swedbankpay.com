@@ -21,41 +21,7 @@ const Buttons = ({ actionList, favBtn, deleteBtn }) => (
     </span>
 );
 
-const showcaseTableObj = {
-    thead: [
-        { content: "#" },
-        { content: "Name" },
-        { content: "Statue" }
-    ],
-    tbody: [
-        { tr: [
-            { content: "1",
-                th: true },
-            { content: "O'Malley" },
-            { content: <span className="status status-success">Success</span> }
-        ] },
-        { tr: [
-            { content: "2",
-                th: true },
-            { content: "Diaz" },
-            { content: <span className="status status-danger">Busy</span> }
-        ] },
-        { tr: [
-            { content: "3",
-                th: true },
-            { content: "Bisping" },
-            { content: <span className="status status-neutral">Available</span> }
-        ] },
-        { tr: [
-            { content: "4",
-                th: true },
-            { content: "McGregor" },
-            { content: <span className="status status-inactive">Inactive</span> }
-        ] }
-    ]
-};
-
-export const showcaseTableObj1 = buttons => {
+export const showcaseTableObj = buttons => {
     const tableData = {
         thead: [
             { content: "#" },
@@ -65,14 +31,15 @@ export const showcaseTableObj1 = buttons => {
         tbody: []
     };
 
-    const array = ["Sean O'Malley", "McGregor", "Bisping", "Mike Perry"];
+    const array = ["McGregor", "Sean O'Malley", "Bisping", "Mike Perry"];
+    const status = ["success", "danger", "neutral", "inactive"];
 
     array.map((name, i) => {
         tableData.tbody.push({ tr: [
             { content: i + 1,
                 th: true },
             { content: name },
-            { content: <span className="status status-neutral">Available</span> }
+            { content: <span className={`status status-${status[i]}`}>{status[i].charAt(0).toUpperCase() + status[i].slice(1)}</span> }
         ] });
     });
 
@@ -85,72 +52,11 @@ export const showcaseTableObj1 = buttons => {
     return tableData;
 };
 
-const showcaseTableObjButtons = {
-    thead: [
-        { content: "#" },
-        { content: "Name" },
-        { content: "Statue" },
-        { content: "Edit",
-            classname: "no-sort align-right" }
-    ],
-    tbody: [
-        { tr: [
-            {
-                content: "1",
-                th: true
-            },
-            { content: "O'Malley" },
-            { content: <span className="status status-success">Success</span> },
-            {
-                content: <Buttons />,
-                classname: "align-right"
-            }
-        ] },
-        { tr: [
-            {
-                content: "2",
-                th: true
-            },
-            { content: "Diaz" },
-            { content: <span className="status status-danger">Busy</span> },
-            {
-                content: <Buttons />,
-                classname: "align-right"
-            }
-        ] },
-        { tr: [
-            {
-                content: "3",
-                th: true
-            },
-            { content: "Bisping" },
-            { content: <span className="status status-neutral">heee</span> },
-            {
-                content: <Buttons />,
-                classname: "align-right"
-            }
-        ] },
-        { tr: [
-            {
-                content: "4",
-                th: true
-            },
-            { content: "McGregor" },
-            { content: <span className="status status-inactive">Inactive</span> },
-            {
-                content: <Buttons />,
-                classname: "align-right"
-            }
-        ] }
-    ]
-};
-const a = showcaseTableObj1(true);
-
 export const tableShowcase = {
     id: "overviewTables",
     elements: [
         {
-            component: <Table tableData={showcaseTableObj1()} caption="Employees"/>,
+            component: <Table tableData={showcaseTableObj()} caption="Employees"/>,
             options: {
                 checkbox: [
                     {
@@ -175,7 +81,7 @@ export const tableShowcase = {
                                 id: "table_buttons",
                                 name: "Buttons",
                                 value: {
-                                    tableData: a
+                                    tableData: showcaseTableObj(true)
                                 }
                             },
                             {
@@ -257,17 +163,16 @@ export const alignmentTable = alignRight => {
 
 export const consistencyTable = chaos => {
     const tableData = {
-        thead: [
-            { content: "Column 1" },
-            { content: "Column 2" },
-            { content: "Column 3" },
-            { content: "Buttons",
-                classname: chaos ? null : "align-right" }
-        ],
+        thead: [],
         tbody: []
     };
 
     for (let i = 0; i < 4; i++) {
+        i === 3
+            ? tableData.thead.push({ content: "Buttons",
+                classname: chaos ? null : "align-right" })
+            : tableData.thead.push({ content: `Column ${i + 1}` });
+
         tableData.tbody.push({ tr: [
             { content: "Text" },
             { content: "Text" },
