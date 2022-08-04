@@ -3,6 +3,24 @@ import Tag from "@components/CodeTags";
 import Table from "@components/Table";
 import ActionList from "@components/ActionList";
 
+const Buttons = ({ actionList, favBtn, deleteBtn }) => (
+    <span className="button-container">
+        {actionList
+            ? <ActionList items={[]}/>
+            : <>
+                <button className="table-button"><i className="material-icons material-icons-outlined">edit</i></button>
+                {deleteBtn
+                    ? <button className="btn btn-secondary">Delete</button>
+                    : <button className="table-button"><i className="material-icons material-icons-outlined">delete</i></button>
+                }
+                {favBtn &&
+                    <button className="table-button"><i className="material-icons material-icons-outlined">favorite_border</i></button>
+                }
+            </>
+        }
+    </span>
+);
+
 const showcaseTableObj = {
     thead: [
         { content: "#" },
@@ -26,7 +44,7 @@ const showcaseTableObj = {
             { content: "3",
                 th: true },
             { content: "Bisping" },
-            { content: <span className="status status-neutral">hedddee</span> }
+            { content: <span className="status status-neutral">Available</span> }
         ] },
         { tr: [
             { content: "4",
@@ -35,6 +53,36 @@ const showcaseTableObj = {
             { content: <span className="status status-inactive">Inactive</span> }
         ] }
     ]
+};
+
+export const showcaseTableObj1 = buttons => {
+    const tableData = {
+        thead: [
+            { content: "#" },
+            { content: "Name" },
+            { content: "Status" }
+        ],
+        tbody: []
+    };
+
+    const array = ["Sean O'Malley", "McGregor", "Bisping", "Mike Perry"];
+
+    array.map((name, i) => {
+        tableData.tbody.push({ tr: [
+            { content: i + 1,
+                th: true },
+            { content: name },
+            { content: <span className="status status-neutral">Available</span> }
+        ] });
+    });
+
+    if (buttons) {
+        tableData.thead.push({ content: "Edit",
+            classname: "no-sort align-right" });
+        tableData.tbody.map(object => object.tr.push({ content: <Buttons /> }));
+    }
+
+    return tableData;
 };
 
 const showcaseTableObjButtons = {
@@ -96,12 +144,13 @@ const showcaseTableObjButtons = {
         ] }
     ]
 };
+const a = showcaseTableObj1(true);
 
 export const tableShowcase = {
     id: "overviewTables",
     elements: [
         {
-            component: <Table tableData={showcaseTableObj} caption="Employees"/>,
+            component: <Table tableData={showcaseTableObj1()} caption="Employees"/>,
             options: {
                 checkbox: [
                     {
@@ -126,7 +175,7 @@ export const tableShowcase = {
                                 id: "table_buttons",
                                 name: "Buttons",
                                 value: {
-                                    tableData: showcaseTableObjButtons
+                                    tableData: a
                                 }
                             },
                             {
@@ -205,24 +254,6 @@ export const alignmentTable = alignRight => {
 
     return tableData;
 };
-
-const Buttons = ({ actionList, favBtn, deleteBtn }) => (
-    <span className="button-container">
-        {actionList
-            ? <ActionList />
-            : <>
-                <button className="table-button"><i className="material-icons material-icons-outlined">edit</i></button>
-                {deleteBtn
-                    ? <button className="btn btn-secondary">Delete</button>
-                    : <button className="table-button"><i className="material-icons material-icons-outlined">delete</i></button>
-                }
-                {favBtn &&
-                    <button className="table-button"><i className="material-icons material-icons-outlined">favorite_border</i></button>
-                }
-            </>
-        }
-    </span>
-);
 
 export const consistencyTable = chaos => {
     const tableData = {

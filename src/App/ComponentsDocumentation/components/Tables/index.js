@@ -1,6 +1,6 @@
 import React from "react";
 
-import { tableShowcase, buttonTypesTable, actionListTable, alignmentTable, consistencyTable } from "./constants";
+import { tableShowcase, buttonTypesTable, alignmentTable, consistencyTable } from "./constants";
 import { ComponentPreview, DocContainer } from "@docutils";
 import Table from "@components/Table";
 
