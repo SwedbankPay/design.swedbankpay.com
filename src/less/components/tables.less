@@ -2,14 +2,12 @@
 
 /* Colors */
 @table-bg:                                  transparent;
-@table-header-color:                        @brand-secondary;
 @table-border-color:                        @border-color;
 @table-stripe-color:                        @brand-bg-1;
 
 /* Dimensions */
 @table-cell-padding:                        0.5rem 1em;
 @table-cell-condensed-padding:              0.5rem 0.6rem;
-@table-button-padding:                      (@base-padding-xs / 2) @base-padding-xs;
 @table-line-height:                         1.4rem;
 
 table {
@@ -85,13 +83,6 @@ th {
         }
     }
 
-    thead {
-        th {
-            font-size: 1rem;
-            color: @table-header-color;
-        }
-    }
-
     &.sortable {
         thead {
             th {
@@ -132,18 +123,6 @@ th {
                         right: 0.25rem;
                     }
                 }
-            }
-        }
-    }
-
-    // Remove top border from thead by default
-    > caption + thead,
-    > colgroup + thead,
-    > thead:first-child {
-        > tr:first-child {
-            > th,
-            > td {
-                border-top: 0;
             }
         }
     }
@@ -241,14 +220,5 @@ th {
                 }
             }
         }
-    }
-
-    // Nesting
-    .table {
-        background-color: @table-bg;
-    }
-
-    > tfoot {
-        font-weight: 600;
     }
 }
