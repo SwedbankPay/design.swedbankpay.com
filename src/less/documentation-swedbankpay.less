@@ -133,6 +133,128 @@
     // }
 }
 
+.search-container {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 103;
+
+    .form-group {
+        margin-bottom: 0;
+
+        .input-group {
+            width: 21rem;
+            height: 2.5rem;
+        }
+    }
+
+    .result-box {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 21rem;
+        position: absolute;
+        margin-top: 1rem;
+        z-index: 103;
+        background-color: @white;
+        border-radius: 2px;
+        max-height: 50vh;
+        overflow: scroll;
+        box-shadow: 1px 2px 20px rgb(0 0 0 / 15%);
+
+        .item-list {
+            margin-bottom: 0;
+
+            &.item-list-hover {
+                li {
+                    border-bottom: none;
+
+                    &:hover {
+                        background-color: @bg-primary;
+                        cursor: pointer;
+                    }
+
+                    a {
+                        color: @brand-secondary;
+                        display: inline-block;
+                        position: relative;
+                        z-index: 1;
+                        padding: 1rem;
+                        margin: -1rem;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+    &.search-expander {
+        width: 3rem;
+
+        .input-group {
+            width: 4rem;
+
+            input {
+                max-width: 0;
+                border: 0;
+                padding: 0;
+            }
+
+            span {
+                border-radius: 2px;
+                border: 1px solid #d4c4bc;
+            }
+        }
+
+        &.expanded {
+            width: 15rem;
+
+            .input-group {
+                width: 100%;
+
+                input {
+                    max-width: 15rem;
+                    border: solid #d4c4bc;
+                    border-right: none;
+                    border-width: 1px 1px 2px;
+                    border-bottom-color: #72605e;
+                    border-radius: 2px 2px 0 0;
+                    padding: 0 0.75rem;
+                    animation: 1s slidein;
+
+                    &:focus {
+                        border-right: transparent;
+                    }
+                }
+
+                span {
+                    border-left: transparent;
+                    border-right: 1px solid #d4c4bc;
+                    border-radius: 0 2px 2px 0;
+                    border-bottom-width: 2px;
+                    border-bottom-color: #72605e;
+                }
+            }
+        }
+
+        .result-box {
+            max-width: 15rem;
+        }
+
+        @keyframes slidein {
+            from {
+                margin-left: 75%;
+                width: 300%;
+            }
+
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+    }
+}
+
 .documentation {
     width: 100%;
 
@@ -334,17 +456,6 @@
                         padding-bottom: 0.5rem;
                     }
                 }
-
-                .search-container {
-                    margin-top: 0.5rem;
-                    right: auto;
-
-                    .form-group {
-                        .input-group {
-                            width: 22rem;
-                        }
-                    }
-                }
             }
 
             /* Background images */
@@ -369,10 +480,6 @@
             .single-bubble {
                 bottom: 3rem;
                 left: 94%;
-            }
-
-            .search-container {
-                right: 0;
             }
         }
 
@@ -567,62 +674,6 @@
         padding-left: 0;
         padding-right: 0;
         background: @brand-bg-white;
-
-        .search-container {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            z-index: 103;
-
-            .form-group {
-                margin-bottom: 0;
-
-                .input-group {
-                    width: 21rem;
-                    height: 2.5rem;
-                }
-            }
-
-            .result-box {
-                display: flex;
-                flex-direction: column;
-                height: auto;
-                width: 21rem;
-                position: absolute;
-                margin-top: 1rem;
-                z-index: 103;
-                background-color: @white;
-                border-radius: 2px;
-                max-height: 50vh;
-                overflow: scroll;
-                box-shadow: 1px 2px 20px rgb(0 0 0 / 15%);
-
-                .item-list {
-                    margin-bottom: 0;
-
-                    &.item-list-hover {
-                        li {
-                            border-bottom: none;
-
-                            &:hover {
-                                background-color: @bg-primary;
-                                cursor: pointer;
-                            }
-
-                            a {
-                                color: @brand-secondary;
-                                display: inline-block;
-                                position: relative;
-                                z-index: 1;
-                                padding: 1rem;
-                                margin: -1rem;
-                                text-decoration: none;
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 
     .view-heading {
@@ -642,35 +693,6 @@
     .doc-body {
         @media (max-width: @screen-sm-max) {
             padding-right: 1rem;
-        }
-    }
-
-    .doc-search {
-        padding: @base-padding 1rem;
-
-        .search-results {
-            position: absolute;
-            left: 0;
-            width: ~"calc(100% - 2rem)";
-            margin: 0 1rem 0;
-            padding: 0;
-            list-style: none;
-            border: 1px solid @light-brown;
-            z-index: 2000;
-            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
-            display: none;
-            background-color: @white;
-
-            .search-result a {
-                border: 0;
-                display: block;
-                padding: 0.25rem 0.5rem;
-                text-decoration: none;
-
-                &:hover {
-                    background-color: @light-gray;
-                }
-            }
         }
     }
 
