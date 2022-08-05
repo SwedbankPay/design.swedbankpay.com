@@ -142,17 +142,22 @@
     .form-group {
         margin-bottom: 0;
 
+        &:hover {
+            .input-group-addon {
+                box-shadow: 0 0 9px rgb(0 0 0 / 50%);
+            }
+        }
+
         .input-group {
             width: 21rem;
-            height: 2.5rem;
         }
     }
 
     .result-box {
         display: flex;
         flex-direction: column;
+        width: 100%;
         height: auto;
-        width: 21rem;
         position: absolute;
         margin-top: 1rem;
         z-index: 103;
@@ -189,67 +194,60 @@
     }
 
     &.search-expander {
-        width: 3rem;
+        &:hover {
+            .input-group {
+                transform: scale(1);
+                transition: 0.2s;
+            }
+        }
 
         .input-group {
-            width: 4rem;
+            width: 100%;
+            transform: scale(0.7);
+            transition: 0.2s;
 
             input {
                 max-width: 0;
-                border: 0;
                 padding: 0;
+                border-width: 0;
+                border-top-left-radius: 30%;
+                border-bottom-left-radius: 30%;
             }
 
-            span {
-                border-radius: 2px;
-                border: 1px solid #d4c4bc;
+            .input-group-addon {
+                border-radius: 50%;
+                border-width: 1px;
+                border-left: 1px solid;
+                border-color: @medium-brown;
             }
         }
 
         &.expanded {
-            width: 15rem;
-
             .input-group {
-                width: 100%;
+                transform: scale(1);
 
-                input {
-                    max-width: 15rem;
-                    border: solid #d4c4bc;
-                    border-right: none;
-                    border-width: 1px 1px 2px;
-                    border-bottom-color: #72605e;
-                    border-radius: 2px 2px 0 0;
-                    padding: 0 0.75rem;
-                    animation: 1s slidein;
-
-                    &:focus {
-                        border-right: transparent;
+                &:hover {
+                    .input-group-addon {
+                        box-shadow: none;
                     }
                 }
 
-                span {
-                    border-left: transparent;
-                    border-right: 1px solid #d4c4bc;
-                    border-radius: 0 2px 2px 0;
-                    border-bottom-width: 2px;
-                    border-bottom-color: #72605e;
+                input {
+                    max-width: 20rem;
+                    padding: 0 0.75rem;
+                    border-width: 1px 1px 2px 1px;
+                    border-top-left-radius: 2px;
+                    border-bottom-left-radius: 2px;
+                    transition: 0.3s linear, border 0.2s linear;
                 }
-            }
-        }
 
-        .result-box {
-            max-width: 15rem;
-        }
-
-        @keyframes slidein {
-            from {
-                margin-left: 75%;
-                width: 300%;
-            }
-
-            to {
-                margin-left: 0%;
-                width: 100%;
+                .input-group-addon {
+                    border-radius: 0 2px 2px 0;
+                    border-color: @light-brown;
+                    border-bottom: 2px solid @medium-brown;
+                    border-left: 0;
+                    transition: border-top-right-radius 0.3s linear, border-bottom-right-radius 0.3s linear, border 0.2s linear;
+                }
             }
         }
     }
