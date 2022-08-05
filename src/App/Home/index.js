@@ -4,7 +4,6 @@ import { changeLogs } from "./constants";
 import { setTitle, RemoveVscroll } from "../utils";
 import routes from "@src/App/routes/all";
 import packageJson from "~/package";
-import SearchBox from "../utils/SearchBox";
 
 const basename = process.env.basename;
 const brandTitle = process.env.brandTitle;
@@ -112,5 +111,3 @@ const Home = () => {
 };
 
 export default Home;
-
-export { SearchBox };
