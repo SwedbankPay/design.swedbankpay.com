@@ -142,12 +142,6 @@
     .form-group {
         margin-bottom: 0;
 
-        &:hover {
-            .input-group-addon {
-                box-shadow: 0 0 9px rgb(0 0 0 / 50%);
-            }
-        }
-
         .input-group {
             width: 21rem;
         }
@@ -199,6 +193,10 @@
                 transform: scale(1);
                 transition: 0.2s;
             }
+
+            .input-group-addon {
+                box-shadow: 0 0 9px rgb(0 0 0 / 50%);
+            }
         }
 
         .input-group {
@@ -239,6 +237,17 @@
                     border-top-left-radius: 2px;
                     border-bottom-left-radius: 2px;
                     transition: 0.3s linear, border 0.2s linear;
+
+                    &:focus {
+                        border-right: none;
+                        transition: none;
+
+                        ~ .input-group-addon {
+                            border-width: 1px 1px 1px;
+                            transition: none;
+                            border-color: black;
+                        }
+                    }
                 }
 
                 .input-group-addon {

@@ -42,10 +42,17 @@ const SearchBox = ({ classname }) => {
         );
     };
 
+    const activateSearch = e => {
+        setExpanded(true);
+        console.log(e.target.firstChild);
+        e.target.firstChild.focus();
+        console.log({e});
+    };
+
     return (
         <div className={`search-container${classname ? ` ${classname}` : ""}${expanded ? " expanded" : ""}`}>
             <div className="form-group">
-                <div onClick={() => setExpanded(true)} onFocus={() => setExpanded(true)} className="input-group">
+                <div onClick={e => activateSearch(e)} className="input-group">
                     <input type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
                     <span className="input-group-addon postfix"><i className="material-icons" aria-hidden="true">search</i></span>
                 </div>
