@@ -224,3 +224,23 @@ body.sheet-open {
         background: transparent;
     }
 }
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .sheet {
+        &.sheet-open {
+            animation: fade-in-sheet 0s forwards;
+
+            > section {
+                animation: slide-in-sheet 0s ease forwards;
+            }
+        }
+
+        &.sheet-closing {
+            animation: fade-out-sheet 0s forwards;
+
+            > section {
+                animation: slide-out-sheet 0s ease alternate;
+            }
+        }
+    }
+}
