@@ -117,7 +117,7 @@ exports[`Documentation: Table Overview renders 1`] = `
                 code="<caption>"
                 type="primary"
               />
-                   or a heading that introduces the content of the table. The table color can either be striped or plain with borders, and there is also a condensed version of the table with more narrow rows. Column dividers can be added to make the content easier to read vertically. Adding a row hover state can help the user visually scan the data in a row, even if the row is not interactive - this is especially helpful in large tables. When you need to use sorting on your table, you can do it in one or more columns, by ascending (A-Z, 0-9) or descending (Z-A, 9-0) order.
+               or a heading that introduces the content of the table. The table color can either be striped or plain with borders, and there is also a condensed version of the table with more narrow rows. Column dividers can be added to make the content easier to read vertically. Adding a row hover state can help the user visually scan the data in a row, even if the row is not interactive - this is especially helpful in large tables. When you need to use sorting on your table, you can do it in one or more columns, by ascending (A-Z, 0-9) or descending (Z-A, 9-0) order.
             </p>,
             "options": Object {
               "checkbox": Array [
@@ -345,6 +345,10 @@ exports[`Documentation: Table Overview renders 1`] = `
               Object {
                 "tr": Array [
                   Object {
+                    "classname": "text-center",
+                    "content": "Text",
+                  },
+                  Object {
                     "classname": "text-end",
                     "content": "Text",
                   },
@@ -353,31 +357,7 @@ exports[`Documentation: Table Overview renders 1`] = `
                     "content": "Text",
                   },
                   Object {
-                    "classname": "text-center",
-                    "content": "Text",
-                  },
-                  Object {
-                    "classname": "",
-                    "content": <Buttons />,
-                  },
-                ],
-              },
-              Object {
-                "tr": Array [
-                  Object {
-                    "classname": "text-center",
-                    "content": "Text",
-                  },
-                  Object {
-                    "classname": "",
-                    "content": "Text",
-                  },
-                  Object {
-                    "classname": "",
-                    "content": "Text",
-                  },
-                  Object {
-                    "classname": "text-center",
+                    "classname": "text-end",
                     "content": <Buttons />,
                   },
                 ],
@@ -393,11 +373,31 @@ exports[`Documentation: Table Overview renders 1`] = `
                     "content": "Text",
                   },
                   Object {
-                    "classname": "",
+                    "classname": "text-end",
                     "content": "Text",
                   },
                   Object {
-                    "classname": "",
+                    "classname": "text-end",
+                    "content": <Buttons />,
+                  },
+                ],
+              },
+              Object {
+                "tr": Array [
+                  Object {
+                    "classname": "text-end",
+                    "content": "Text",
+                  },
+                  Object {
+                    "classname": "text-center",
+                    "content": "Text",
+                  },
+                  Object {
+                    "classname": "text-center",
+                    "content": "Text",
+                  },
+                  Object {
+                    "classname": "text-end",
                     "content": <Buttons />,
                   },
                 ],
@@ -409,11 +409,11 @@ exports[`Documentation: Table Overview renders 1`] = `
                     "content": "Text",
                   },
                   Object {
-                    "classname": "",
+                    "classname": "text-end",
                     "content": "Text",
                   },
                   Object {
-                    "classname": "",
+                    "classname": "text-end",
                     "content": "Text",
                   },
                   Object {
