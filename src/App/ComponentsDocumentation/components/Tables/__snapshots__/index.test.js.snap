@@ -357,47 +357,7 @@ exports[`Documentation: Table Overview renders 1`] = `
                     "content": "Text",
                   },
                   Object {
-                    "classname": "text-end",
-                    "content": <Buttons />,
-                  },
-                ],
-              },
-              Object {
-                "tr": Array [
-                  Object {
-                    "classname": "text-center",
-                    "content": "Text",
-                  },
-                  Object {
                     "classname": "",
-                    "content": "Text",
-                  },
-                  Object {
-                    "classname": "",
-                    "content": "Text",
-                  },
-                  Object {
-                    "classname": "text-end",
-                    "content": <Buttons />,
-                  },
-                ],
-              },
-              Object {
-                "tr": Array [
-                  Object {
-                    "classname": "text-center",
-                    "content": "Text",
-                  },
-                  Object {
-                    "classname": "text-center",
-                    "content": "Text",
-                  },
-                  Object {
-                    "classname": "text-center",
-                    "content": "Text",
-                  },
-                  Object {
-                    "classname": "text-end",
                     "content": <Buttons />,
                   },
                 ],
@@ -409,11 +369,51 @@ exports[`Documentation: Table Overview renders 1`] = `
                     "content": "Text",
                   },
                   Object {
+                    "classname": "text-center",
+                    "content": "Text",
+                  },
+                  Object {
                     "classname": "",
                     "content": "Text",
                   },
                   Object {
                     "classname": "text-center",
+                    "content": <Buttons />,
+                  },
+                ],
+              },
+              Object {
+                "tr": Array [
+                  Object {
+                    "classname": "text-end",
+                    "content": "Text",
+                  },
+                  Object {
+                    "classname": "text-end",
+                    "content": "Text",
+                  },
+                  Object {
+                    "classname": "",
+                    "content": "Text",
+                  },
+                  Object {
+                    "classname": "text-center",
+                    "content": <Buttons />,
+                  },
+                ],
+              },
+              Object {
+                "tr": Array [
+                  Object {
+                    "classname": "text-center",
+                    "content": "Text",
+                  },
+                  Object {
+                    "classname": "text-end",
+                    "content": "Text",
+                  },
+                  Object {
+                    "classname": "",
                     "content": "Text",
                   },
                   Object {
