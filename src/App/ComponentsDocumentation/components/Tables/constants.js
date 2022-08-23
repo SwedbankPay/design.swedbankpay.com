@@ -134,7 +134,7 @@ export const tableShowcase = {
                 ]
             },
             title: "Table",
-            description: <p>The table component should be preceded by either a <Tag type="primary" code="<caption>"/>     or a heading that introduces the content of the table. The table color can either be striped or plain with borders, and there is also a condensed version of the table with more narrow rows. Column dividers can be added to make the content easier to read vertically. Adding a row hover state can help the user visually scan the data in a row, even if the row is not interactive - this is especially helpful in large tables. When you need to use sorting on your table, you can do it in one or more columns, by ascending (A-Z, 0-9) or descending (Z-A, 9-0) order.</p>
+            description: <p>The table component should be preceded by either a <Tag type="primary" code="<caption>"/> or a heading that introduces the content of the table. The table color can either be striped or plain with borders, and there is also a condensed version of the table with more narrow rows. Column dividers can be added to make the content easier to read vertically. Adding a row hover state can help the user visually scan the data in a row, even if the row is not interactive - this is especially helpful in large tables. When you need to use sorting on your table, you can do it in one or more columns, by ascending (A-Z, 0-9) or descending (Z-A, 9-0) order.</p>
 
         }
     ]
