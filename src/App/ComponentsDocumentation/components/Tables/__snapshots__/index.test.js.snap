@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Table Overview renders 1`] = `
+exports[`Documentation: Tables Overview renders 1`] = `
 <section>
   <h2>
     Overview
@@ -345,15 +345,15 @@ exports[`Documentation: Table Overview renders 1`] = `
               Object {
                 "tr": Array [
                   Object {
-                    "classname": "text-center",
-                    "content": "Text",
-                  },
-                  Object {
-                    "classname": "text-center",
-                    "content": "Text",
-                  },
-                  Object {
                     "classname": "text-end",
+                    "content": "Text",
+                  },
+                  Object {
+                    "classname": "text-center",
+                    "content": "Text",
+                  },
+                  Object {
+                    "classname": "",
                     "content": "Text",
                   },
                   Object {
@@ -373,11 +373,11 @@ exports[`Documentation: Table Overview renders 1`] = `
                     "content": "Text",
                   },
                   Object {
-                    "classname": "",
+                    "classname": "text-center",
                     "content": "Text",
                   },
                   Object {
-                    "classname": "text-center",
+                    "classname": "",
                     "content": <Buttons />,
                   },
                 ],
@@ -385,19 +385,19 @@ exports[`Documentation: Table Overview renders 1`] = `
               Object {
                 "tr": Array [
                   Object {
-                    "classname": "text-end",
-                    "content": "Text",
-                  },
-                  Object {
-                    "classname": "text-end",
-                    "content": "Text",
-                  },
-                  Object {
                     "classname": "",
                     "content": "Text",
                   },
                   Object {
+                    "classname": "text-end",
+                    "content": "Text",
+                  },
+                  Object {
                     "classname": "text-center",
+                    "content": "Text",
+                  },
+                  Object {
+                    "classname": "text-end",
                     "content": <Buttons />,
                   },
                 ],
@@ -409,11 +409,11 @@ exports[`Documentation: Table Overview renders 1`] = `
                     "content": "Text",
                   },
                   Object {
-                    "classname": "text-end",
+                    "classname": "text-center",
                     "content": "Text",
                   },
                   Object {
-                    "classname": "",
+                    "classname": "text-center",
                     "content": "Text",
                   },
                   Object {
@@ -1069,7 +1069,7 @@ exports[`Documentation: Table Overview renders 1`] = `
 </section>
 `;
 
-exports[`Documentation: Table renders 1`] = `
+exports[`Documentation: Tables renders 1`] = `
 <DocContainer>
   <section
     id="table-doc"
