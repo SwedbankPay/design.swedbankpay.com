@@ -1,0 +1,883 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Table - renders 1`] = `
+<table
+  className="table"
+>
+  <caption>
+    Test
+  </caption>
+  <thead>
+    <tr>
+      <th
+        key="#0"
+        onClick={[Function]}
+      >
+        #
+      </th>
+      <th
+        key="Name1"
+        onClick={[Function]}
+      >
+        Name
+      </th>
+      <th
+        key="Status2"
+        onClick={[Function]}
+      >
+        Status
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      key="[object Object],[object Object],[object Object]0"
+    >
+      <th
+        key="0"
+      >
+        1
+      </th>
+      <td
+        key="1"
+      >
+        McGregor
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-success"
+        >
+          Success
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]1"
+    >
+      <th
+        key="0"
+      >
+        2
+      </th>
+      <td
+        key="1"
+      >
+        Sean O'Malley
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-danger"
+        >
+          Danger
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]2"
+    >
+      <th
+        key="0"
+      >
+        3
+      </th>
+      <td
+        key="1"
+      >
+        Bisping
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-neutral"
+        >
+          Neutral
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]3"
+    >
+      <th
+        key="0"
+      >
+        4
+      </th>
+      <td
+        key="1"
+      >
+        Mike Perry
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-inactive"
+        >
+          Inactive
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Component: Table - renders with class name sortable when sortable prop is included 1`] = `
+<table
+  className="table sortable"
+>
+  <caption>
+    Test
+  </caption>
+  <thead>
+    <tr>
+      <th
+        key="#0"
+        onClick={[Function]}
+      >
+        #
+      </th>
+      <th
+        key="Name1"
+        onClick={[Function]}
+      >
+        Name
+      </th>
+      <th
+        key="Status2"
+        onClick={[Function]}
+      >
+        Status
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      key="[object Object],[object Object],[object Object]0"
+    >
+      <th
+        key="0"
+      >
+        1
+      </th>
+      <td
+        key="1"
+      >
+        McGregor
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-success"
+        >
+          Success
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]1"
+    >
+      <th
+        key="0"
+      >
+        2
+      </th>
+      <td
+        key="1"
+      >
+        Sean O'Malley
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-danger"
+        >
+          Danger
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]2"
+    >
+      <th
+        key="0"
+      >
+        3
+      </th>
+      <td
+        key="1"
+      >
+        Bisping
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-neutral"
+        >
+          Neutral
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]3"
+    >
+      <th
+        key="0"
+      >
+        4
+      </th>
+      <td
+        key="1"
+      >
+        Mike Perry
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-inactive"
+        >
+          Inactive
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Component: Table - renders with class name table-condensed when condensed prop is included 1`] = `
+<table
+  className="table table-condensed"
+>
+  <caption>
+    Test
+  </caption>
+  <thead>
+    <tr>
+      <th
+        key="#0"
+        onClick={[Function]}
+      >
+        #
+      </th>
+      <th
+        key="Name1"
+        onClick={[Function]}
+      >
+        Name
+      </th>
+      <th
+        key="Status2"
+        onClick={[Function]}
+      >
+        Status
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      key="[object Object],[object Object],[object Object]0"
+    >
+      <th
+        key="0"
+      >
+        1
+      </th>
+      <td
+        key="1"
+      >
+        McGregor
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-success"
+        >
+          Success
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]1"
+    >
+      <th
+        key="0"
+      >
+        2
+      </th>
+      <td
+        key="1"
+      >
+        Sean O'Malley
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-danger"
+        >
+          Danger
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]2"
+    >
+      <th
+        key="0"
+      >
+        3
+      </th>
+      <td
+        key="1"
+      >
+        Bisping
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-neutral"
+        >
+          Neutral
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]3"
+    >
+      <th
+        key="0"
+      >
+        4
+      </th>
+      <td
+        key="1"
+      >
+        Mike Perry
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-inactive"
+        >
+          Inactive
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Component: Table - renders with class name table-divided when divided prop is included 1`] = `
+<table
+  className="table table-divided"
+>
+  <caption>
+    Test
+  </caption>
+  <thead>
+    <tr>
+      <th
+        key="#0"
+        onClick={[Function]}
+      >
+        #
+      </th>
+      <th
+        key="Name1"
+        onClick={[Function]}
+      >
+        Name
+      </th>
+      <th
+        key="Status2"
+        onClick={[Function]}
+      >
+        Status
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      key="[object Object],[object Object],[object Object]0"
+    >
+      <th
+        key="0"
+      >
+        1
+      </th>
+      <td
+        key="1"
+      >
+        McGregor
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-success"
+        >
+          Success
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]1"
+    >
+      <th
+        key="0"
+      >
+        2
+      </th>
+      <td
+        key="1"
+      >
+        Sean O'Malley
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-danger"
+        >
+          Danger
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]2"
+    >
+      <th
+        key="0"
+      >
+        3
+      </th>
+      <td
+        key="1"
+      >
+        Bisping
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-neutral"
+        >
+          Neutral
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]3"
+    >
+      <th
+        key="0"
+      >
+        4
+      </th>
+      <td
+        key="1"
+      >
+        Mike Perry
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-inactive"
+        >
+          Inactive
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Component: Table - renders with class name table-hover when hover prop is included 1`] = `
+<table
+  className="table table-hover"
+>
+  <caption>
+    Test
+  </caption>
+  <thead>
+    <tr>
+      <th
+        key="#0"
+        onClick={[Function]}
+      >
+        #
+      </th>
+      <th
+        key="Name1"
+        onClick={[Function]}
+      >
+        Name
+      </th>
+      <th
+        key="Status2"
+        onClick={[Function]}
+      >
+        Status
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      key="[object Object],[object Object],[object Object]0"
+    >
+      <th
+        key="0"
+      >
+        1
+      </th>
+      <td
+        key="1"
+      >
+        McGregor
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-success"
+        >
+          Success
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]1"
+    >
+      <th
+        key="0"
+      >
+        2
+      </th>
+      <td
+        key="1"
+      >
+        Sean O'Malley
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-danger"
+        >
+          Danger
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]2"
+    >
+      <th
+        key="0"
+      >
+        3
+      </th>
+      <td
+        key="1"
+      >
+        Bisping
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-neutral"
+        >
+          Neutral
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]3"
+    >
+      <th
+        key="0"
+      >
+        4
+      </th>
+      <td
+        key="1"
+      >
+        Mike Perry
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-inactive"
+        >
+          Inactive
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Component: Table - renders with class name table-plain when plain prop is included 1`] = `
+<table
+  className="table table-plain"
+>
+  <caption>
+    Test
+  </caption>
+  <thead>
+    <tr>
+      <th
+        key="#0"
+        onClick={[Function]}
+      >
+        #
+      </th>
+      <th
+        key="Name1"
+        onClick={[Function]}
+      >
+        Name
+      </th>
+      <th
+        key="Status2"
+        onClick={[Function]}
+      >
+        Status
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      key="[object Object],[object Object],[object Object]0"
+    >
+      <th
+        key="0"
+      >
+        1
+      </th>
+      <td
+        key="1"
+      >
+        McGregor
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-success"
+        >
+          Success
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]1"
+    >
+      <th
+        key="0"
+      >
+        2
+      </th>
+      <td
+        key="1"
+      >
+        Sean O'Malley
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-danger"
+        >
+          Danger
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]2"
+    >
+      <th
+        key="0"
+      >
+        3
+      </th>
+      <td
+        key="1"
+      >
+        Bisping
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-neutral"
+        >
+          Neutral
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]3"
+    >
+      <th
+        key="0"
+      >
+        4
+      </th>
+      <td
+        key="1"
+      >
+        Mike Perry
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-inactive"
+        >
+          Inactive
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Component: Table - renders with no class name plain, condensed, hover, divided or sortable when props are not included 1`] = `
+<table
+  className="table"
+>
+  <caption>
+    Test
+  </caption>
+  <thead>
+    <tr>
+      <th
+        key="#0"
+        onClick={[Function]}
+      >
+        #
+      </th>
+      <th
+        key="Name1"
+        onClick={[Function]}
+      >
+        Name
+      </th>
+      <th
+        key="Status2"
+        onClick={[Function]}
+      >
+        Status
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      key="[object Object],[object Object],[object Object]0"
+    >
+      <th
+        key="0"
+      >
+        1
+      </th>
+      <td
+        key="1"
+      >
+        McGregor
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-success"
+        >
+          Success
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]1"
+    >
+      <th
+        key="0"
+      >
+        2
+      </th>
+      <td
+        key="1"
+      >
+        Sean O'Malley
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-danger"
+        >
+          Danger
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]2"
+    >
+      <th
+        key="0"
+      >
+        3
+      </th>
+      <td
+        key="1"
+      >
+        Bisping
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-neutral"
+        >
+          Neutral
+        </span>
+      </td>
+    </tr>
+    <tr
+      key="[object Object],[object Object],[object Object]3"
+    >
+      <th
+        key="0"
+      >
+        4
+      </th>
+      <td
+        key="1"
+      >
+        Mike Perry
+      </td>
+      <td
+        key="2"
+      >
+        <span
+          className="status status-inactive"
+        >
+          Inactive
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
