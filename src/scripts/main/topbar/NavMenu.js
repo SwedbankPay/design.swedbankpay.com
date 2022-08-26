@@ -111,6 +111,8 @@ export default class NavMenu {
         this.btnElement.style.display = "none";
         this.closeNavIcon.style.display = "flex";
 
+        this.btnElement.setAttribute("aria-expanded", "true");
+
         this._setFirstTabStop(0);
         this.firstTabStop.focus();
     }
@@ -130,6 +132,8 @@ export default class NavMenu {
             this.btnElement.style.display = "flex";
             this.closeNavIcon.style.display = "none";
         }, 300);
+
+        this.btnElement.setAttribute("aria-expanded", "false");
 
         this._setFirstTabStop(0);
     }
