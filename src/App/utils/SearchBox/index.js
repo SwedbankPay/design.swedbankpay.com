@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ComponentRoutes from "../../routes/components";
 import GetStartedRoutes from "../../routes/get-started";
 import IdentityRoutes from "../../routes/identity";
@@ -7,11 +7,11 @@ import UtilityRoutes from "../../routes/utilities";
 
 const allRoutes = [ComponentRoutes, GetStartedRoutes, PatternRoutes, IdentityRoutes, UtilityRoutes];
 
-const SearchBox = ({ classname }) => {
+const SearchBox = ({ classname, mobile }) => {
 
     const [searchTerm, setSearchTerm] = useState("");
-    const [tempList, setTempList] = useState([]);
     const [expanded, setExpanded] = useState(false);
+    const ref = useRef(null);
 
     const modify = (result, searchTerm) => {
         const re = new RegExp(searchTerm.split("").map(x => x.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"))
@@ -29,10 +29,6 @@ const SearchBox = ({ classname }) => {
                 return val;
             }
         }));
-        // const temp = [];
-        // const resultList = searchResultList.map(searchResult => searchResult.map(result => temp.push(result.title)));
-
-        // console.log(temp.sort((a, b) => a.localeCompare(b))); Weighted search in the works
 
         return (
             <ul className="item-list item-list-hover">
@@ -42,25 +38,41 @@ const SearchBox = ({ classname }) => {
         );
     };
 
-    const activateSearch = e => {
-        setExpanded(true);
-        console.log(e.target.firstChild);
-        e.target.firstChild.focus();
-        console.log({e});
+    const activateSearch = () => {
+        setExpanded(!expanded);
+        setTimeout(() => { ref.current.focus(); }, 10);
+
     };
 
     return (
-        <div className={`search-container${classname ? ` ${classname}` : ""}${expanded ? " expanded" : ""}`}>
-            <div className="form-group">
-                <div onClick={e => activateSearch(e)} className="input-group">
-                    <input type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
-                    <span className="input-group-addon postfix"><i className="material-icons" aria-hidden="true">search</i></span>
-                </div>
-            </div>
-            {searchTerm !== "" && <div className="result-box">
-                {results()}
-            </div> }
-        </div>
+        <>
+            {mobile ?
+                <>
+                    <div className={`search-container${classname ? ` ${classname}` : ""}${expanded ? " expanded" : ""}`}>
+                        <div className="form-group">
+                            <input type="text" ref={ref} className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
+                            <button className={`btn btn-${expanded ? "secondary" : "primary"} btn-xs`} type="button" onClick={() => activateSearch()}><i className="material-icons">{expanded ? "close" : "search"}</i></button>
+                        </div>
+                        {expanded && searchTerm !== "" && <div className="result-box">
+                            {results()}
+                        </div>}
+                    </div>
+                </>
+                :
+                <>
+                    <div className={`search-container${classname ? ` ${classname}` : ""}${expanded ? " expanded" : ""}`}>
+                        <div className="form-group">
+                            <div onClick={() => setExpanded(true)} className="input-group">
+                                <input type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
+                                <span className="input-group-addon postfix"><i className="material-icons" aria-hidden="true">search</i></span>
+                            </div>
+                        </div>
+                        {searchTerm !== "" && <div className="result-box">
+                            {results()}
+                        </div> }
+                    </div>
+                </>}
+        </>
     );
 };
 
