@@ -5,7 +5,6 @@ import packageJson from "~/package";
 
 import { RenderRoutes, LoadingComponent } from "../";
 import routes from "@src/App/routes/all";
-import SearchBox from "../SearchBox";
 
 const RenderPage = ({ path, initPath }) => (
     <Suspense fallback={<LoadingComponent />}>
@@ -26,5 +25,3 @@ RenderPage.propTypes = {
 };
 
 export default RenderPage;
-
-export { SearchBox };
