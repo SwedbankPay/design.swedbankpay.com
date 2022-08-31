@@ -4,6 +4,7 @@ import GetStartedRoutes from "../../routes/get-started";
 import IdentityRoutes from "../../routes/identity";
 import PatternRoutes from "../../routes/patterns";
 import UtilityRoutes from "../../routes/utilities";
+import { Link } from "react-router-dom";
 
 const allRoutes = [ComponentRoutes, GetStartedRoutes, PatternRoutes, IdentityRoutes, UtilityRoutes];
 
@@ -32,7 +33,7 @@ const SearchBox = ({ classname, mobile }) => {
 
         return (
             <ul className="item-list item-list-hover">
-                {searchResultList.map(searchResult => searchResult.map(result => <li key={result.path}><a className="result" href={`${result.path}`} key={result.path} dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></a></li>)
+                {searchResultList.map(searchResult => searchResult.map(result => <Link key={result.path} onClick = {() => setExpanded(false)} to={result.path}><li><span className="result" dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></span></li></Link>)
                 )}
             </ul>
         );
