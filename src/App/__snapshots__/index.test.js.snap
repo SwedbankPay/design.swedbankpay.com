@@ -605,7 +605,9 @@ exports[`Main: App renders 1`] = `
           className="doc-view"
           id="doc-view"
         >
-          <SearchBox />
+          <SearchBox
+            classname="d-none d-lg-block"
+          />
           <Suspense
             fallback={<LoadingComponent />}
           >

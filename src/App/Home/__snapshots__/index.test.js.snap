@@ -18,35 +18,3 @@ exports[`Home: index renders 1`] = `
   />
 </div>
 `;
-
-exports[`SearchBox renders 1`] = `
-<div
-  className="search-container"
->
-  <div
-    className="form-group"
-  >
-    <div
-      className="input-group"
-    >
-      <input
-        className="form-control"
-        id="search-box"
-        onChange={[Function]}
-        placeholder="Search"
-        type="text"
-      />
-      <span
-        className="input-group-addon postfix"
-      >
-        <i
-          aria-hidden="true"
-          className="material-icons"
-        >
-          search
-        </i>
-      </span>
-    </div>
-  </div>
-</div>
-`;
