@@ -5,6 +5,7 @@ import IdentityRoutes from "../../routes/identity";
 import PatternRoutes from "../../routes/patterns";
 import UtilityRoutes from "../../routes/utilities";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const allRoutes = [ComponentRoutes, GetStartedRoutes, PatternRoutes, IdentityRoutes, UtilityRoutes];
 
@@ -12,6 +13,7 @@ const SearchBox = ({ classname, mobile }) => {
 
     const [searchTerm, setSearchTerm] = useState("");
     const [expanded, setExpanded] = useState(false);
+    const [visibleResultBox, setVisibleResultBox] = useState(false);
     const ref = useRef(null);
 
     const modify = (result, searchTerm) => {
@@ -33,10 +35,15 @@ const SearchBox = ({ classname, mobile }) => {
 
         return (
             <ul className="item-list item-list-hover">
-                {searchResultList.map(searchResult => searchResult.map(result => <Link key={result.path} onClick = {() => setExpanded(false)} to={result.path}><li><span className="result" dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></span></li></Link>)
+                {searchResultList.map(searchResult => searchResult.map(result => <Link key={result.path} onClick = {() => hideResultBox()} to={result.path}><li><span className="result" dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></span></li></Link>)
                 )}
             </ul>
         );
+    };
+
+    const hideResultBox = () => {
+        setExpanded(false);
+        setVisibleResultBox(false);
     };
 
     const activateSearch = () => {
@@ -48,33 +55,35 @@ const SearchBox = ({ classname, mobile }) => {
     return (
         <>
             {mobile ?
-                <>
-                    <div className={`search-container${classname ? ` ${classname}` : ""}${expanded ? " expanded" : ""}`}>
-                        <div className="form-group">
-                            <input type="text" ref={ref} className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
-                            <button className={`btn btn-${expanded ? "secondary" : "primary"} btn-xs`} type="button" onClick={() => activateSearch()}><i className="material-icons">{expanded ? "close" : "search"}</i></button>
-                        </div>
-                        {expanded && searchTerm !== "" && <div className="result-box">
-                            {results()}
-                        </div>}
+                <div className={`search-container${classname ? ` ${classname}` : ""}${expanded ? " expanded" : ""}`}>
+                    <div className="form-group">
+                        <input type="text" ref={ref} className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
+                        <button className={`btn btn-${expanded ? "secondary" : "primary"} btn-xs`} type="button" onClick={() => activateSearch()}><i className="material-icons">{expanded ? "close" : "search"}</i></button>
                     </div>
-                </>
+                    {expanded && searchTerm !== "" && <div className="result-box">
+                        {results()}
+                    </div>}
+                </div>
                 :
-                <>
-                    <div className={`search-container${classname ? ` ${classname}` : ""}${expanded ? " expanded" : ""}`}>
-                        <div className="form-group">
-                            <div onClick={() => setExpanded(true)} className="input-group">
-                                <input type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
-                                <span className="input-group-addon postfix"><i className="material-icons" aria-hidden="true">search</i></span>
-                            </div>
+                <div className={`search-container${classname ? ` ${classname}` : ""}${expanded ? " expanded" : ""}`}>
+                    <div className="form-group">
+                        <div onClick={() => setExpanded(true)} className="input-group">
+                            <input type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} onFocus={() => setVisibleResultBox(true)}/>
+                            <span className="input-group-addon postfix"><i className="material-icons" aria-hidden="true">search</i></span>
                         </div>
-                        {searchTerm !== "" && <div className="result-box">
-                            {results()}
-                        </div> }
                     </div>
-                </>}
+                    {visibleResultBox && searchTerm !== "" && <div className="result-box">
+                        {results()}
+                    </div> }
+                </div>
+            }
         </>
     );
+};
+
+SearchBox.propTypes = {
+    className: PropTypes.string,
+    mobile: PropTypes.bool
 };
 
 export default SearchBox;
