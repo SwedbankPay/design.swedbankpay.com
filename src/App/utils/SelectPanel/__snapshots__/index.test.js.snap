@@ -20,16 +20,16 @@ exports[`Documentation: SelectPanel SearchBox renders 1`] = `
           placeholder="Search"
           type="text"
         />
-        <span
-          className="input-group-addon postfix"
+        <button
+          className="btn btn-link"
+          type="button"
         >
           <i
-            aria-hidden="true"
             className="material-icons"
           >
             search
           </i>
-        </span>
+        </button>
       </div>
     </div>
   </div>
