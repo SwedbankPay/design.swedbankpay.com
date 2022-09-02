@@ -14,7 +14,8 @@ const SearchBox = ({ classname, mobile }) => {
     const [searchTerm, setSearchTerm] = useState("");
     const [expanded, setExpanded] = useState(false);
     const [visibleResultBox, setVisibleResultBox] = useState(false);
-    const ref = useRef(null);
+    const mobileInput = useRef(null);
+    const inputfieldText = useRef(null);
 
     const modify = (result, searchTerm) => {
         const re = new RegExp(searchTerm.split("").map(x => x.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"))
@@ -49,12 +50,14 @@ const SearchBox = ({ classname, mobile }) => {
 
     const activateSearch = () => {
         setExpanded(!expanded);
-        setTimeout(() => { ref.current.focus(); }, 10);
+        setTimeout(() => { mobileInput.current.focus(); }, 10);
 
     };
 
     const clearSearchTerm = () => {
         setSearchTerm("");
+        setTimeout(() => inputfieldText.current.value = "");
+
     };
 
     return (
@@ -62,7 +65,7 @@ const SearchBox = ({ classname, mobile }) => {
             {mobile ?
                 <div className={`search-container${classname ? ` ${classname}` : ""}${expanded ? " expanded" : ""}`}>
                     <div className="form-group">
-                        <input type="text" ref={ref} className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
+                        <input type="text" ref={mobileInput} className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
                         <button className={`btn btn-${expanded ? "secondary" : "primary"} btn-xs`} type="button" onClick={() => activateSearch()}><i className="material-icons">{expanded ? "close" : "search"}</i></button>
                     </div>
                     {expanded && searchTerm !== "" && <div className="result-box">
@@ -73,7 +76,7 @@ const SearchBox = ({ classname, mobile }) => {
                 <div className={`search-container${classname ? ` ${classname}` : ""}${expanded ? " expanded" : ""}`}>
                     <div className="form-group">
                         <div onClick={() => setExpanded(true)} className="input-group">
-                            <input type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} onFocus={() => setVisibleResultBox(true)}/>
+                            <input ref={inputfieldText} type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} onFocus={() => setVisibleResultBox(true)}/>
                             {searchTerm !== "" ? <button className="btn btn-link" type="button" onClick={() => clearSearchTerm()}><i className="material-icons">{searchTerm === "" ? "search" : "close"}</i></button>
                                 : <button className="btn btn-link" type="button"><i className="material-icons">search</i></button>}
                         </div>
