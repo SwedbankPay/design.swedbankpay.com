@@ -45,7 +45,7 @@ const SearchBox = ({ classname, mobile }) => {
     const hideResultBox = () => {
         setExpanded(false);
         setVisibleResultBox(false);
-        setSearchTerm("");
+        clearSearchTerm();
     };
 
     const activateSearch = () => {
