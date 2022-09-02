@@ -44,12 +44,17 @@ const SearchBox = ({ classname, mobile }) => {
     const hideResultBox = () => {
         setExpanded(false);
         setVisibleResultBox(false);
+        setSearchTerm("");
     };
 
     const activateSearch = () => {
         setExpanded(!expanded);
         setTimeout(() => { ref.current.focus(); }, 10);
 
+    };
+
+    const clearSearchTerm = () => {
+        setSearchTerm("");
     };
 
     return (
@@ -69,7 +74,8 @@ const SearchBox = ({ classname, mobile }) => {
                     <div className="form-group">
                         <div onClick={() => setExpanded(true)} className="input-group">
                             <input type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} onFocus={() => setVisibleResultBox(true)}/>
-                            <span className="input-group-addon postfix"><i className="material-icons" aria-hidden="true">search</i></span>
+                            {searchTerm !== "" ? <button className="btn btn-link" type="button" onClick={() => clearSearchTerm()}><i className="material-icons">{searchTerm === "" ? "search" : "close"}</i></button>
+                                : <button className="btn btn-link" type="button"><i className="material-icons">search</i></button>}
                         </div>
                     </div>
                     {visibleResultBox && searchTerm !== "" && <div className="result-box">
