@@ -246,14 +246,14 @@ describe("Component: Button -", () => {
             const wrapper = shallow(<Button type="primary" icon="test" />);
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<i className="material-icons" aria-hidden="true">test</i>)).toEqual(true);
+            expect(wrapper.contains(<i className="material-icons-outlined" aria-hidden="true">test</i>)).toEqual(true);
         });
 
         it("renders a button with icon and label when prop icon and label is provided", () => {
             const wrapper = shallow(<Button type="primary" icon="icon" label="test" />);
 
             expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<i className="material-icons" aria-hidden="true">icon</i>)).toEqual(true);
+            expect(wrapper.contains(<i className="material-icons-outlined" aria-hidden="true">icon</i>)).toEqual(true);
             expect(wrapper.contains("test")).toEqual(true);
         });
     });
