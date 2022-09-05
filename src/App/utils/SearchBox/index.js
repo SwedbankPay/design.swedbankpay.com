@@ -74,7 +74,7 @@ const SearchBox = ({ classname, mobile }) => {
                     </div>}
                 </div>
                 :
-                <div className={`search-container${classname ? ` ${classname}` : ""}${expanded ? " expanded" : ""}`}>
+                <div className="search-container">
                     <div className="form-group">
                         <div onClick={() => setExpanded(true)} className="input-group">
                             <input ref={inputFieldText} type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} onFocus={() => setVisibleResultBox(true)}/>
