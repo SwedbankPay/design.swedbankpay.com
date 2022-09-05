@@ -236,6 +236,10 @@
         .form-group {
             display: flex;
 
+            #search-box:focus + button {
+                border-color: @soft-brown;
+            }
+
             button {
                 position: absolute;
                 right: 0;
@@ -268,8 +272,11 @@
 
                     &:hover,
                     &:focus {
+                        background-color: transparent;
+                        outline-color: @brand-secondary;
+
                         i {
-                            color: #ffffff;
+                            color: #000000;
                         }
                     }
                 }
