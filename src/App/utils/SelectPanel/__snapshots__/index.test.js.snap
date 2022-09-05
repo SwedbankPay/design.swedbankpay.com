@@ -22,6 +22,7 @@ exports[`Documentation: SelectPanel SearchBox renders 1`] = `
         />
         <button
           className="btn btn-link"
+          onClick={[Function]}
           type="button"
         >
           <i
