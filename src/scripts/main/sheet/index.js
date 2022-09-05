@@ -126,6 +126,8 @@ class Sheet {
 
         toastContainer ? toastContainer.setAttribute("style", `margin-right: ${this._el.querySelector("section").offsetWidth}px; transition: margin 0.3s ease-in-out;`) : null;
         this.firstTabStop.focus();
+
+        return this._el;
     }
 
     close () {
@@ -143,6 +145,8 @@ class Sheet {
 
         toastContainer ? toastContainer.setAttribute("style", "transition: margin 0.3s ease-in-out;") : null;
         this.focusedElemBeforeSheet ? this.focusedElemBeforeSheet.focus() : null;
+
+        return this._el;
     }
 }
 
