@@ -24,4 +24,3 @@
 ## WCAG
 -   Menu button on topbar/sidebar mobile view
     -   aria-haspopup, aria-controls and aria-expanded
-
