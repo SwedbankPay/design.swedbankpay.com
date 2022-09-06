@@ -1,88 +1,101 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { useState, useRef } from "react";
+import ComponentRoutes from "../../routes/components";
+import GetStartedRoutes from "../../routes/get-started";
+import IdentityRoutes from "../../routes/identity";
+import PatternRoutes from "../../routes/patterns";
+import UtilityRoutes from "../../routes/utilities";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-class SearchBox extends Component {
-    constructor (props) {
-        super(props);
+const allRoutes = [ComponentRoutes, GetStartedRoutes, PatternRoutes, IdentityRoutes, UtilityRoutes];
 
-        this.state = {
-            query: "",
-            results: [],
-            showResults: false
-        };
+const SearchBox = ({ classname, mobile }) => {
 
-        this.getResults = this.getResults.bind(this);
-        this.closeResults = this.closeResults.bind(this);
-        this.handleInputChange = this.handleInputChange.bind(this);
-    }
+    const [searchTerm, setSearchTerm] = useState("");
+    const [expanded, setExpanded] = useState(false);
+    const [visibleResultBox, setVisibleResultBox] = useState(false);
+    const inputFieldText = useRef(null);
 
-    getResults (query) {
-        const results = [];
+    const modify = (result, searchTerm) => {
+        const re = new RegExp(searchTerm.split("").map(x => x.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"))
+            .join("[.\\s.]*"), "ig");
 
-        if (query) {
-            this.props.routes.forEach(route => {
-                route.routes.forEach(r => {
-                    if (r.title.toLowerCase().includes(query.toLowerCase())) {
-                        results.push(r);
-                    }
-                });
-            });
+        return result.replace(re, "<b>$&</b>");
+    };
 
-            this.setState({ showResults: true });
-        }
+    const results = () => {
+        const searchResultList = allRoutes.map(route => route[0].routes.filter(val => {
 
-        this.setState({ results });
-    }
+            if (searchTerm === "") {
+                return "";
+            } else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+                return val;
+            }
+        }));
 
-    closeResults (e) {
-        if ((e.type === "keydown" && e.key === "Escape") || (e.type === "click" && !e.target.closest(".doc-search"))) {
-            this.setState({ showResults: false });
-        }
-    }
-
-    handleInputChange (e) {
-        this.getResults(e.target.value);
-    }
-
-    componentWillUnmount () {
-        document.removeEventListener("keydown", this.closeResults);
-        document.removeEventListener("click", this.closeResults);
-    }
-
-    componentDidMount () {
-        document.addEventListener("keydown", this.closeResults);
-        document.addEventListener("click", this.closeResults);
-    }
-
-    render () {
         return (
-            <form className="doc-search">
-                <input
-                    type="text"
-                    className="form-control"
-                    name="designguide-search"
-                    placeholder="Search..."
-                    autoComplete="off"
-                    onChange={this.handleInputChange}
-                    onFocus={() => this.setState({ showResults: true })}
-                />
-                {this.state.results.length ?
-                    <ul className={`search-results ${this.state.showResults ? "d-block" : null}`}>
-                        {this.state.results.map(({ path, title }, i) => <li className="search-result" key={`search_result_${i}`}>
-                            <Link
-                                to={path}
-                                onClick={() => this.setState({ showResults: false })}
-                            >{title}</Link>
-                        </li>)}
-                    </ul> : null}
-            </form>
+            <ul className="item-list item-list-hover">
+                {searchResultList.map(searchResult => searchResult.map(result => <Link key={result.path} onClick = {() => hideResultBox()} to={result.path}><li><span className="result" dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></span></li></Link>)
+                )}
+            </ul>
         );
-    }
-}
+    };
+
+    const hideResultBox = () => {
+        setExpanded(false);
+        setVisibleResultBox(false);
+        clearSearchTerm();
+    };
+
+    const activateSearch = () => {
+        setExpanded(true);
+        setTimeout(() => { inputFieldText.current.focus(); }, 10);
+    };
+
+    const clearSearchTerm = () => {
+        setSearchTerm("");
+        setExpanded(false);
+        setTimeout(() => inputFieldText.current.value = "");
+    };
+
+    return (
+        <>
+            {mobile ?
+                <div className={`search-container${classname ? ` ${classname}` : ""}${expanded ? " expanded" : ""}`}>
+                    <div className="form-group">
+                        <input type="text" ref={inputFieldText} className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
+                        {expanded ?
+                            <button onClick={() => clearSearchTerm()} className="btn btn-secondary btn-xs"><i className="material-icons">close</i></button>
+                            :
+                            <button onClick={() => activateSearch()} className="btn btn-primary btn-xs" type="button"><i className="material-icons">search</i></button>}
+                    </div>
+                    {expanded && searchTerm !== "" && <div className="result-box">
+                        {results()}
+                    </div>}
+                </div>
+                :
+                <div className="search-container">
+                    <div className="form-group">
+                        <div onClick={() => setExpanded(true)} className="input-group">
+                            <input ref={inputFieldText} type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} onFocus={() => setVisibleResultBox(true)}/>
+                            {searchTerm !== "" ?
+                                <button className="btn btn-link" type="button" onClick={() => clearSearchTerm()}><i className="material-icons">close</i></button>
+                                :
+                                <button onClick={() => activateSearch()} className="btn btn-link" type="button"><i className="material-icons">search</i></button>}
+                        </div>
+                    </div>
+                    {visibleResultBox && searchTerm !== "" && <div className="result-box">
+                        {results()}
+                    </div> }
+                </div>
+            }
+        </>
+    );
+};
 
 SearchBox.propTypes = {
-    routes: PropTypes.array.isRequired
+    className: PropTypes.string,
+    mobile: PropTypes.bool
 };
 
 export default SearchBox;
