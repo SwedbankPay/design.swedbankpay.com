@@ -174,8 +174,6 @@ GitHub Actions will also create and deploy a release on Azure for the PayEx bran
 
 ## Core development team
 
-- [Phung Nguyen][PhungNg]
-- [Thomas Lorntzen][VikingTristan]
 - [Eskil Hognestad][eskilsen]
 
 ## Contents of this project
