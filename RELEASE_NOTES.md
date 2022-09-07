@@ -23,6 +23,7 @@
     -   Accordion, Expandable, Sidebar, Sheet, Topbar
 
 -   Added callback to sheet and dialog component when firing off open/close methods.
+
 -   Return Chart instance when new chart() is ran.
 
 ## WCAG
