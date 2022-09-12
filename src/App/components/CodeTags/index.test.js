@@ -31,12 +31,17 @@ describe("Component: CodeTags", () => {
         expect(console.error).toHaveBeenCalled();
     });
 
-    it("prop code is marked as required", () => {
-        console.error = jest.fn();
-
-        const wrapper = shallow(<CodeTags type="primary" />);
+    it("renders with class tag-primary when primary is provided as type", () => {
+        const wrapper = shallow(<CodeTags type="primary" text="test"/>);
 
         expect(wrapper).toMatchSnapshot();
-        expect(console.error).toHaveBeenCalled();
+        expect(wrapper.contains(<span className="tag tag-primary">test</span>)).toBeTruthy();
+    });
+
+    it("renders with class removable when removable is provided and renders a button", () => {
+        const wrapper = shallow(<CodeTags type="primary" text="test" removable/>);
+
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.contains(<span className="tag tag-primary removable">test<button type="button" className="close-button"><i className="material-icons m-auto" aria-label="remove tag">close</i></button></span>)).toBeTruthy();
     });
 });
