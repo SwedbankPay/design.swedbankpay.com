@@ -1,13 +1,7 @@
 import React, { useState, useRef } from "react";
-import ComponentRoutes from "../../routes/components";
-import GetStartedRoutes from "../../routes/get-started";
-import IdentityRoutes from "../../routes/identity";
-import PatternRoutes from "../../routes/patterns";
-import UtilityRoutes from "../../routes/utilities";
+import routes from "@src/App/routes/all";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-
-const allRoutes = [ComponentRoutes, GetStartedRoutes, PatternRoutes, IdentityRoutes, UtilityRoutes];
 
 const SearchBox = ({ classname, mobile }) => {
 
@@ -24,7 +18,7 @@ const SearchBox = ({ classname, mobile }) => {
     };
 
     const results = () => {
-        const searchResultList = allRoutes.map(route => route[0].routes.filter(val => {
+        const searchResultList = routes.map(route => route.routes.filter(val => {
 
             if (searchTerm === "") {
                 return "";
