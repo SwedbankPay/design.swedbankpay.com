@@ -239,13 +239,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Checkbox",
             },
             Object {
-              "componentPath": "components/CodeTags",
-              "icon": "code",
-              "outlined": true,
-              "path": "/components/code-tags",
-              "title": "Code tags",
-            },
-            Object {
               "componentPath": "components/Datepickers",
               "icon": "event",
               "outlined": true,
@@ -440,6 +433,16 @@ exports[`Utilities: RenderPage renders 1`] = `
                 "javascript",
               ],
               "title": "Tabs",
+            },
+            Object {
+              "componentPath": "components/CodeTags",
+              "icon": "code",
+              "outlined": true,
+              "path": "/components/tags",
+              "statusBadges": Array [
+                "new",
+              ],
+              "title": "Tags",
             },
             Object {
               "componentPath": "components/Toast",

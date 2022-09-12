@@ -1,31 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: CodeTags prop code is marked as required 1`] = `
-<code
-  className="code-tags code-tags-primary"
-/>
-`;
-
 exports[`Component: CodeTags prop type is marked as required 1`] = `
-<code
-  className="code-tags code-tags-undefined"
->
-  test
-</code>
+<Fragment>
+  <code
+    className="code-tags code-tags-undefined"
+  >
+    test
+  </code>
+</Fragment>
 `;
 
 exports[`Component: CodeTags renders with class code-tags-primary when primary is provided as type 1`] = `
-<code
-  className="code-tags code-tags-primary"
->
-  test
-</code>
+<Fragment>
+  <code
+    className="code-tags code-tags-primary"
+  >
+    test
+  </code>
+</Fragment>
 `;
 
 exports[`Component: CodeTags renders with class code-tags-secondary when secondary is provided as type 1`] = `
-<code
-  className="code-tags code-tags-secondary"
->
-  test
-</code>
+<Fragment>
+  <code
+    className="code-tags code-tags-secondary"
+  >
+    test
+  </code>
+</Fragment>
+`;
+
+exports[`Component: CodeTags renders with class removable when removable is provided and renders a button 1`] = `
+<Fragment>
+  <span
+    className="tag tag-primary removable"
+  >
+    test
+    <button
+      className="close-button"
+      type="button"
+    >
+      <i
+        aria-label="remove tag"
+        className="material-icons m-auto"
+      >
+        close
+      </i>
+    </button>
+  </span>
+</Fragment>
+`;
+
+exports[`Component: CodeTags renders with class tag-primary when primary is provided as type 1`] = `
+<Fragment>
+  <span
+    className="tag tag-primary"
+  >
+    test
+  </span>
+</Fragment>
 `;
