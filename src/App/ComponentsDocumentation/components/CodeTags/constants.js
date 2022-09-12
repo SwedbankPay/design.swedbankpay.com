@@ -65,7 +65,7 @@ export const overviewTags = {
                 ]
             },
             title: "Tag",
-            description: "A Tag should represent a keyword, search term or filter and will always include a label. Tags come in three different colors and have the option to be removable and will in this case have a close button after the label."
+            description: "A Tag should represent a keyword, search term or filter and will always include a label. Tags could be used in different colors and have the option to be removable and will in this case have a close button after the label."
         },
         {
             tab: "Code tag",
