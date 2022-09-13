@@ -82,19 +82,19 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
                   "title": "Color",
                   "values": Array [
                     Object {
-                      "name": "Primary",
+                      "name": "Example 1",
                       "value": Object {
                         "type": "primary",
                       },
                     },
                     Object {
-                      "name": "Secondary",
+                      "name": "Example 2",
                       "value": Object {
                         "type": "secondary",
                       },
                     },
                     Object {
-                      "name": "Tertiary",
+                      "name": "Example 3",
                       "value": Object {
                         "type": "tertiary",
                       },
@@ -122,19 +122,19 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
                   "title": "Color",
                   "values": Array [
                     Object {
-                      "name": "Primary",
+                      "name": "Example 1",
                       "value": Object {
                         "type": "primary",
                       },
                     },
                     Object {
-                      "name": "Secondary",
+                      "name": "Example 2",
                       "value": Object {
                         "type": "secondary",
                       },
                     },
                     Object {
-                      "name": "Tertiary",
+                      "name": "Example 3",
                       "value": Object {
                         "type": "tertiary",
                       },
@@ -277,7 +277,7 @@ exports[`Documentation: CodeTags renders 1`] = `
   <p
     className="lead"
   >
-    Tags are used to label, categorize and organize items using keywords that describe them. Code tags can be used to display code in text.
+    Tags are used to label, categorize and organize items using keywords that describe them. Tags can for example be used in filters to represent selected filter values or in documentation to present inline code.
   </p>
   <Overview />
   <ContentGuidelines />
