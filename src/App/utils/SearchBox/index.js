@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import routes from "@src/App/routes/all";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -9,6 +9,7 @@ const SearchBox = ({ classname, mobile }) => {
     const [expanded, setExpanded] = useState(false);
     const [visibleResultBox, setVisibleResultBox] = useState(false);
     const inputFieldText = useRef(null);
+    const searchResultList = [];
 
     const modify = (result, searchTerm) => {
         const re = new RegExp(searchTerm.split("").map(x => x.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"))
@@ -18,19 +19,22 @@ const SearchBox = ({ classname, mobile }) => {
     };
 
     const results = () => {
-        const searchResultList = routes.map(route => route.routes.filter(val => {
+        const tempSearchResultList = routes.map(route => route.routes.filter(val => {
 
             if (searchTerm === "") {
                 return "";
             } else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
                 return val;
             }
+
         }));
+
+        tempSearchResultList.forEach(directory => directory.forEach(route => searchResultList.push(route)));
 
         return (
             <ul className="item-list item-list-hover">
-                {searchResultList.map(searchResult => searchResult.map(result => <Link key={result.path} onClick = {() => hideResultBox()} to={result.path}><li><span className="result" dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></span></li></Link>)
-                )}
+                {searchResultList.map(result => <Link onKeyDown={e => arrowNavigation(e)} className="res" key={result.path} onClick = {() => hideResultBox()} to={result.path}><li><span className="result" dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></span></li></Link>)
+                }
             </ul>
         );
     };
@@ -52,6 +56,25 @@ const SearchBox = ({ classname, mobile }) => {
         setTimeout(() => inputFieldText.current.value = "");
     };
 
+    let index = 0;
+
+    const arrowNavigation = e => {
+        const listItems = document.getElementsByClassName("res");
+
+        if (e.keyCode === 40 && index <= listItems.length) { // down key
+            listItems[index].focus();
+            e.preventDefault();
+            index += 1;
+
+        }
+
+        if (e.keyCode === 38 && index > -1) { // up key
+            index -= 1;
+            listItems[index].focus();
+            e.preventDefault();
+        }
+    };
+
     return (
         <>
             {mobile ?
@@ -70,8 +93,8 @@ const SearchBox = ({ classname, mobile }) => {
                 :
                 <div className="search-container">
                     <div className="form-group">
-                        <div onClick={() => setExpanded(true)} className="input-group">
-                            <input ref={inputFieldText} type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} onFocus={() => setVisibleResultBox(true)}/>
+                        <div onClick={() => setExpanded(true)} className="input-group" onKeyDown={e => arrowNavigation(e)}>
+                            <input ref={inputFieldText} type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} onFocus={() => setVisibleResultBox(true)} />
                             {searchTerm !== "" ?
                                 <button className="btn btn-link" type="button" onClick={() => clearSearchTerm()}><i className="material-icons">close</i></button>
                                 :

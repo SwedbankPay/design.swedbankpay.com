@@ -196,8 +196,14 @@
             margin-bottom: 0;
 
             a {
-                height: 40px;
+                padding-top: 0.25rem;
+                padding-bottom: 0.25rem;
                 text-decoration: none;
+
+                &:focus {
+                    outline: 5px auto @brand-secondary;
+                    outline-offset: -2px;
+                }
 
                 li {
                     margin-left: 7px;
