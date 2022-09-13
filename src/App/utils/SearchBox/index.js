@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import routes from "@src/App/routes/all";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -30,10 +30,11 @@ const SearchBox = ({ classname, mobile }) => {
         }));
 
         tempSearchResultList.forEach(directory => directory.forEach(route => searchResultList.push(route)));
+        console.log(tempSearchResultList);
 
         return (
             <ul className="item-list item-list-hover">
-                {searchResultList.map(result => <Link onKeyDown={e => arrowNavigation(e)} className="res" key={result.path} onClick = {() => hideResultBox()} to={result.path}><li><span className="result" dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></span></li></Link>)
+                {searchResultList.map(result => <Link onKeyDown={e => arrowNavigation(e)} className="res" key={result.path} onClick = {() => hideResultBox()} to={result.path}><li><span className="result" dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></span><span>{result.path.split("/")[1]}</span></li></Link>)
                 }
             </ul>
         );
