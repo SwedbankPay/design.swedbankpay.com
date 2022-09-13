@@ -68,7 +68,7 @@ const ContentGuidelines = () => (
 
 const CodeTags = () => (
     <DocContainer docToc >
-        <p className="lead">Tags are used to label, categorize and organize items using keywords that describe them. Code tags can be used to display code in text.</p>
+        <p className="lead">Tags are used to label, categorize and organize items using keywords that describe them. Tags can for example be used in filters to represent selected filter values or in documentation to present inline code.</p>
         <Overview />
         <ContentGuidelines/>
     </DocContainer>

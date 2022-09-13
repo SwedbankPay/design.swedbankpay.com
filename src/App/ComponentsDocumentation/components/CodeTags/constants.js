@@ -43,19 +43,19 @@ export const overviewTags = {
                         title: "Color",
                         values: [
                             {
-                                name: "Primary",
+                                name: "Example 1",
                                 value: {
                                     type: "primary"
                                 }
                             },
                             {
-                                name: "Secondary",
+                                name: "Example 2",
                                 value: {
                                     type: "secondary"
                                 }
                             },
                             {
-                                name: "Tertiary",
+                                name: "Example 3",
                                 value: {
                                     type: "tertiary"
                                 }
@@ -77,19 +77,19 @@ export const overviewTags = {
                         title: "Color",
                         values: [
                             {
-                                name: "Primary",
+                                name: "Example 1",
                                 value: {
                                     type: "primary"
                                 }
                             },
                             {
-                                name: "Secondary",
+                                name: "Example 2",
                                 value: {
                                     type: "secondary"
                                 }
                             },
                             {
-                                name: "Tertiary",
+                                name: "Example 3",
                                 value: {
                                     type: "tertiary"
                                 }
