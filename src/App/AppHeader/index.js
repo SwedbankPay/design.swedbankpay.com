@@ -19,7 +19,7 @@ const AppHeader = () => (
             <i className="material-icons topbar-btn-icon">close</i>
         </button>
         <a href="/" className="topbar-logo">{"\n"}
-            <img src={`${basename}img/logo/${brand}-logo-v.svg`} alt={`${brand}-logo`} className="logotype-vertical logotype-md"/> {"\n"}
+            <img src={`${basename}img/logo/${brand}-logo-v.svg`} alt={`${brand}-logo`} className="logotype-vertical logotype-xs"/> {"\n"}
         </a>
         <SearchBox mobile classname={"search-expander"}/>
         <nav className="topbar-nav">
