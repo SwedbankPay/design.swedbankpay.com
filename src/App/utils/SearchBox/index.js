@@ -44,13 +44,19 @@ const SearchBox = ({ classname, mobile }) => {
 
     const activateSearch = () => {
         setExpanded(true);
-        setTimeout(() => inputFieldText.current.focus());
+
+        const timer = setTimeout(() => inputFieldText.current.focus());
+
+        return () => clearTimeout(timer);
     };
 
     const clearSearchTerm = () => {
         setSearchTerm("");
         setExpanded(false);
-        setTimeout(() => inputFieldText.current.value = "");
+
+        const timer = setTimeout(() => inputFieldText.current.value = "");
+
+        return () => clearTimeout(timer);
     };
 
     let index = 0;
