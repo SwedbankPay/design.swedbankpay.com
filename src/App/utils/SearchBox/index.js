@@ -64,15 +64,21 @@ const SearchBox = ({ classname, mobile }) => {
     const arrowNavigation = e => {
         const listItems = document.getElementsByClassName("res");
 
-        if (e.keyCode === 40 && index <= listItems.length) { // down key
+        if (e.keyCode === 40) { // down key
             listItems[index].focus();
             e.preventDefault();
-            index += 1;
+
+            if (index < listItems.length - 1) {
+                index += 1;
+            }
 
         }
 
-        if (e.keyCode === 38 && index > -1) { // up key
-            index -= 1;
+        if (e.keyCode === 38) { // up key
+            if (index > 0) {
+                index -= 1;
+            }
+
             listItems[index].focus();
             e.preventDefault();
         }
