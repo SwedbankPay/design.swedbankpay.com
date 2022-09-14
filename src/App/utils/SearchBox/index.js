@@ -9,7 +9,6 @@ const SearchBox = ({ classname, mobile }) => {
     const [expanded, setExpanded] = useState(false);
     const [visibleResultBox, setVisibleResultBox] = useState(false);
     const inputFieldText = useRef(null);
-    const searchResultList = [];
 
     const modify = (result, searchTerm) => {
         const re = new RegExp(searchTerm.split("").map(x => x.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"))
@@ -29,11 +28,9 @@ const SearchBox = ({ classname, mobile }) => {
 
         }));
 
-        tempSearchResultList.forEach(directory => directory.forEach(route => searchResultList.push(route)));
-
         return (
             <ul className="item-list item-list-hover">
-                {tempSearchResultList.map(directory => directory.map(result => <Link onKeyDown={e => arrowNavigation(e)} className="res" key={result.path} onClick = {() => hideResultBox()} to={result.path}><li><span className="result" dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></span><span className="directory">{result.path.split("/")[1].charAt(0).toUpperCase() + result.path.split("/")[1].slice(1)}</span></li></Link>))
+                {tempSearchResultList.map(directory => directory.map(result => <Link tabIndex="-1" onKeyDown={e => arrowNavigation(e)} className="res" key={result.path} onClick = {() => hideResultBox()} to={result.path}><li><span className="result" dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></span><span className="directory">{result.path.split("/")[1].charAt(0).toUpperCase() + result.path.split("/")[1].slice(1)}</span></li></Link>))
                 }
             </ul>
         );
@@ -47,7 +44,7 @@ const SearchBox = ({ classname, mobile }) => {
 
     const activateSearch = () => {
         setExpanded(true);
-        setTimeout(() => { inputFieldText.current.focus(); }, 10);
+        setTimeout(() => inputFieldText.current.focus());
     };
 
     const clearSearchTerm = () => {
