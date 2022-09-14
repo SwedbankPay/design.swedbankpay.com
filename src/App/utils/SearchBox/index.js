@@ -30,11 +30,10 @@ const SearchBox = ({ classname, mobile }) => {
         }));
 
         tempSearchResultList.forEach(directory => directory.forEach(route => searchResultList.push(route)));
-        console.log(tempSearchResultList);
 
         return (
             <ul className="item-list item-list-hover">
-                {searchResultList.map(result => <Link onKeyDown={e => arrowNavigation(e)} className="res" key={result.path} onClick = {() => hideResultBox()} to={result.path}><li><span className="result" dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></span><span>{result.path.split("/")[1]}</span></li></Link>)
+                {tempSearchResultList.map(directory => directory.map(result => <Link onKeyDown={e => arrowNavigation(e)} className="res" key={result.path} onClick = {() => hideResultBox()} to={result.path}><li><span className="result" dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></span><span className="directory">{result.path.split("/")[1].charAt(0).toUpperCase() + result.path.split("/")[1].slice(1)}</span></li></Link>))
                 }
             </ul>
         );
@@ -76,6 +75,11 @@ const SearchBox = ({ classname, mobile }) => {
         }
     };
 
+    const listener = e => {
+        setVisibleResultBox(true);
+        arrowNavigation(e);
+    };
+
     return (
         <>
             {mobile ?
@@ -94,8 +98,8 @@ const SearchBox = ({ classname, mobile }) => {
                 :
                 <div className="search-container">
                     <div className="form-group">
-                        <div onClick={() => setExpanded(true)} className="input-group" onKeyDown={e => arrowNavigation(e)}>
-                            <input ref={inputFieldText} type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} onFocus={() => setVisibleResultBox(true)} />
+                        <div className="input-group">
+                            <input ref={inputFieldText} onKeyDown={e => listener(e)} type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} />
                             {searchTerm !== "" ?
                                 <button className="btn btn-link" type="button" onClick={() => clearSearchTerm()}><i className="material-icons">close</i></button>
                                 :

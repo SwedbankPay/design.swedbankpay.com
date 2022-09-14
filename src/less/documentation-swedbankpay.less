@@ -201,8 +201,11 @@
                 text-decoration: none;
 
                 &:focus {
+                    outline: none;
+                }
+
+                &:focus-visible {
                     outline: 5px auto @brand-secondary;
-                    outline-offset: -2px;
                 }
 
                 li {
@@ -229,6 +232,11 @@
                         position: relative;
                         z-index: 1;
                         text-decoration: none;
+                    }
+
+                    .directory {
+                        color: @brown-soft;
+                        font-size: 0.875rem;
                     }
                 }
             }
