@@ -10,13 +10,12 @@ exports[`Documentation: SelectPanel SearchBox renders 1`] = `
     >
       <div
         className="input-group"
-        onClick={[Function]}
       >
         <input
           className="form-control"
           id="search-box"
           onChange={[Function]}
-          onFocus={[Function]}
+          onKeyDown={[Function]}
           placeholder="Search"
           type="text"
         />
