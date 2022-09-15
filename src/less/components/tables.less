@@ -89,24 +89,30 @@ th {
                 position: relative;
                 cursor: pointer;
 
-                &:after {
-                    content: "";
-                    position: absolute;
-                    top: 0.7rem;
-                    width: 1.5rem;
-                    height: 1.5rem;
-                    background-image: url(../../icons/sort/sort.svg);
-                }
+                .svg-container {
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
 
-                &.sort-descending {
-                    &:after {
-                        content: url(../../icons/sort/sort_down.svg);
+                    .sort-svg {
+                        height: 0.7rem;
+
+                        .sort {
+                            fill: @brown-light;
+                            stroke: @brand-secondary;
+                        }
                     }
-                }
 
-                &.sort-ascending {
-                    &:after {
-                        content: url(../../icons/sort/sort_up.svg);
+                    &.up {
+                        .sort-up {
+                            fill: @brand-secondary;
+                        }
+                    }
+
+                    &.down {
+                        .sort-down {
+                            fill: @brand-secondary;
+                        }
                     }
                 }
 
