@@ -606,7 +606,7 @@ exports[`Main: App renders 1`] = `
           id="doc-view"
         >
           <SearchBox
-            classname="d-none d-lg-block"
+            className="d-none d-lg-block"
           />
           <Suspense
             fallback={<LoadingComponent />}
