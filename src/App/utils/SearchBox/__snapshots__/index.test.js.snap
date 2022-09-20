@@ -1,0 +1,345 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Manipulating input values for input field Testing components methods directly modify method gives <b> tags around parts of searchterm if searchterm is in beginning of result 1`] = `
+<SearchBox>
+  <div
+    className="search-container"
+  >
+    <div
+      className="form-group"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          className="form-control"
+          id="search-box"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Search"
+          type="text"
+        />
+        <button
+          className="btn btn-link"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+        </button>
+      </div>
+    </div>
+  </div>
+</SearchBox>
+`;
+
+exports[`Manipulating input values for input field Testing components methods directly modify method gives <b> tags around parts of searchterm if searchterm is in the end of result 1`] = `
+<SearchBox>
+  <div
+    className="search-container"
+  >
+    <div
+      className="form-group"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          className="form-control"
+          id="search-box"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Search"
+          type="text"
+        />
+        <button
+          className="btn btn-link"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+        </button>
+      </div>
+    </div>
+  </div>
+</SearchBox>
+`;
+
+exports[`Manipulating input values for input field Testing components methods directly modify method returns result if searchterm does not match result and no <b> tags 1`] = `
+<SearchBox>
+  <div
+    className="search-container"
+  >
+    <div
+      className="form-group"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          className="form-control"
+          id="search-box"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Search"
+          type="text"
+        />
+        <button
+          className="btn btn-link"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+        </button>
+      </div>
+    </div>
+  </div>
+</SearchBox>
+`;
+
+exports[`Manipulating input values for input field button icon changes from search to close after input field manipulation 1`] = `
+<SearchBox>
+  <div
+    className="search-container"
+  >
+    <div
+      className="form-group"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          className="form-control"
+          id="search-box"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Search"
+          type="text"
+        />
+        <button
+          className="btn btn-link"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+        </button>
+      </div>
+    </div>
+  </div>
+</SearchBox>
+`;
+
+exports[`Manipulating input values for input field does not render the result box before manipulating the search field 1`] = `
+<SearchBox>
+  <div
+    className="search-container"
+  >
+    <div
+      className="form-group"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          className="form-control"
+          id="search-box"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Search"
+          type="text"
+        />
+        <button
+          className="btn btn-link"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="material-icons"
+          >
+            search
+          </i>
+        </button>
+      </div>
+    </div>
+  </div>
+</SearchBox>
+`;
+
+exports[`Utilities; SearchBox does not render with className prop 1`] = `
+<Fragment>
+  <div
+    className="search-container"
+  >
+    <div
+      className="form-group"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          className="form-control"
+          id="search-box"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Search"
+          type="text"
+        />
+        <button
+          className="btn btn-link"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="material-icons"
+          >
+            search
+          </i>
+        </button>
+      </div>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`Utilities; SearchBox renders different buttons after click in mobile version 1`] = `
+<Fragment>
+  <div
+    className="search-container expanded"
+  >
+    <div
+      className="form-group"
+    >
+      <input
+        className="form-control"
+        id="search-box"
+        onChange={[Function]}
+        placeholder="Search"
+        type="text"
+      />
+      <button
+        className="btn btn-secondary btn-xs"
+        onClick={[Function]}
+      >
+        <i
+          className="material-icons"
+        >
+          close
+        </i>
+      </button>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`Utilities; SearchBox renders with mobile prop 1`] = `
+<Fragment>
+  <div
+    className="search-container"
+  >
+    <div
+      className="form-group"
+    >
+      <input
+        className="form-control"
+        id="search-box"
+        onChange={[Function]}
+        placeholder="Search"
+        type="text"
+      />
+      <button
+        className="btn btn-primary btn-xs"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          className="material-icons"
+        >
+          search
+        </i>
+      </button>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`Utilities; SearchBox renders with no props 1`] = `
+<Fragment>
+  <div
+    className="search-container"
+  >
+    <div
+      className="form-group"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          className="form-control"
+          id="search-box"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Search"
+          type="text"
+        />
+        <button
+          className="btn btn-link"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="material-icons"
+          >
+            search
+          </i>
+        </button>
+      </div>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`Utilities; SearchBox renders with props mobile and className 1`] = `
+<Fragment>
+  <div
+    className="search-container test"
+  >
+    <div
+      className="form-group"
+    >
+      <input
+        className="form-control"
+        id="search-box"
+        onChange={[Function]}
+        placeholder="Search"
+        type="text"
+      />
+      <button
+        className="btn btn-primary btn-xs"
+        onClick={[Function]}
+        type="button"
+      >
+        <i
+          className="material-icons"
+        >
+          search
+        </i>
+      </button>
+    </div>
+  </div>
+</Fragment>
+`;
