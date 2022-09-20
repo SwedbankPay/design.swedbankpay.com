@@ -159,6 +159,10 @@
             border: 1px solid @soft-brown;
             border-left: none;
 
+            i {
+                color: @brown-soft;
+            }
+
             &:hover {
                 border-color: @soft-brown;
             }
@@ -172,7 +176,8 @@
             &:focus,
             &:hover {
                 i {
-                    color: #000000;
+                    color: @brand-secondary;
+                    transform: scale(1.2);
                 }
             }
         }
@@ -257,12 +262,14 @@
                 height: 2.5rem;
                 border-left: 1px solid @soft-brown;
 
+
                 &:focus {
                     border-left: transparent;
                 }
 
                 i {
                     font-size: 1.25rem;
+                    color: @brand-secondary;
                 }
             }
 
@@ -283,7 +290,7 @@
                     &:hover,
                     &:focus {
                         background-color: transparent;
-                        outline-color: @brand-secondary;
+                        outline-color: @brand-secondary; // TODO
 
                         i {
                             color: #000000;
