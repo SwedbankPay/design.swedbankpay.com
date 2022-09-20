@@ -3,19 +3,19 @@ import routes from "@src/App/routes/all";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const SearchBox = ({ classname, mobile }) => {
+const modify = (result, searchTerm) => {
+    const re = new RegExp(searchTerm.split("").map(x => x.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"))
+        .join("[.\\s.]*"), "ig");
+
+    return result.replace(re, "<b>$&</b>");
+};
+
+const SearchBox = ({ className, mobile }) => {
 
     const [searchTerm, setSearchTerm] = useState("");
     const [expanded, setExpanded] = useState(false);
     const [visibleResultBox, setVisibleResultBox] = useState(false);
     const inputFieldText = useRef(null);
-
-    const modify = (result, searchTerm) => {
-        const re = new RegExp(searchTerm.split("").map(x => x.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"))
-            .join("[.\\s.]*"), "ig");
-
-        return result.replace(re, "<b>$&</b>");
-    };
 
     const results = () => {
         const tempSearchResultList = routes.map(route => route.routes.filter(val => {
@@ -92,7 +92,7 @@ const SearchBox = ({ classname, mobile }) => {
     return (
         <>
             {mobile ?
-                <div className={`search-container${classname ? ` ${classname}` : ""}${expanded ? " expanded" : ""}`}>
+                <div className={`search-container${className ? ` ${className}` : ""}${expanded ? " expanded" : ""}`}>
                     <div className="form-group">
                         <input type="text" ref={inputFieldText} className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
                         {expanded ?
@@ -130,3 +130,5 @@ SearchBox.propTypes = {
 };
 
 export default SearchBox;
+
+export { modify };
