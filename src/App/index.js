@@ -80,7 +80,7 @@ class App extends Component {
                                 <SelectPanel id="doc-sidebar" newSidebar={true} routes={routes} />
                             </div>
                             <main id="doc-view" className="doc-view">
-                                <SearchBox classname={"d-none d-lg-block"}/>
+                                <SearchBox className={"d-none d-lg-block"}/>
                                 <Suspense fallback={<LoadingComponent />}>
                                     <Switch>
                                         <Route exact path="/" component={Home} />
