@@ -59,17 +59,18 @@ const SearchBox = ({ className, mobile }) => {
         return () => clearTimeout(timer);
     };
 
-    let index = 0;
+    let index = -1;
 
     const arrowNavigation = e => {
         const listItems = document.getElementsByClassName("res");
 
         if (e.keyCode === 40) { // down key
-            listItems[index].focus();
+
             e.preventDefault();
 
             if (index < listItems.length - 1) {
                 index += 1;
+                listItems[index].focus();
             }
 
         }
@@ -77,9 +78,9 @@ const SearchBox = ({ className, mobile }) => {
         if (e.keyCode === 38) { // up key
             if (index > 0) {
                 index -= 1;
+                listItems[index].focus();
             }
 
-            listItems[index].focus();
             e.preventDefault();
         }
     };
