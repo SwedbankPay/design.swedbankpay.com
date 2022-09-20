@@ -61,7 +61,7 @@ const SearchBox = ({ className, mobile }) => {
 
     const arrowNavigation = e => {
         const listItems = document.getElementsByClassName("res");
-        const inff = inputFieldText.current;
+        const searchField = inputFieldText.current;
 
         if (e.keyCode === 40) { // down key
             if (index < -1) {
@@ -89,7 +89,14 @@ const SearchBox = ({ className, mobile }) => {
 
         if (index === -1 && e.keyCode === 38) {
             index = -1;
-            inff.focus();
+            searchField.focus();
+        }
+
+        if (e.keyCode === 27) {
+            clearSearchTerm();
+            setExpanded(false);
+            searchField.blur();
+
         }
     };
 
