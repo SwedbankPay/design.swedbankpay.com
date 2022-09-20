@@ -14,7 +14,6 @@ const SearchBox = ({ className, mobile }) => {
 
     const [searchTerm, setSearchTerm] = useState("");
     const [expanded, setExpanded] = useState(false);
-    const [visibleResultBox, setVisibleResultBox] = useState(false);
     const inputFieldText = useRef(null);
 
     const results = () => {
@@ -38,7 +37,6 @@ const SearchBox = ({ className, mobile }) => {
 
     const hideResultBox = () => {
         setExpanded(false);
-        setVisibleResultBox(false);
         clearSearchTerm();
     };
 
@@ -63,8 +61,12 @@ const SearchBox = ({ className, mobile }) => {
 
     const arrowNavigation = e => {
         const listItems = document.getElementsByClassName("res");
+        const inff = inputFieldText.current;
 
         if (e.keyCode === 40) { // down key
+            if (index < -1) {
+                index = -1;
+            }
 
             e.preventDefault();
 
@@ -76,18 +78,19 @@ const SearchBox = ({ className, mobile }) => {
         }
 
         if (e.keyCode === 38) { // up key
-            if (index > 0) {
-                index -= 1;
+            index -= 1;
+
+            if (index >= 0) {
                 listItems[index].focus();
             }
 
             e.preventDefault();
         }
-    };
 
-    const listener = e => {
-        setVisibleResultBox(true);
-        arrowNavigation(e);
+        if (index === -1 && e.keyCode === 38) {
+            index = -1;
+            inff.focus();
+        }
     };
 
     return (
@@ -95,7 +98,7 @@ const SearchBox = ({ className, mobile }) => {
             {mobile ?
                 <div className={`search-container${className ? ` ${className}` : ""}${expanded ? " expanded" : ""}`}>
                     <div className="form-group">
-                        <input type="text" ref={inputFieldText} className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
+                        <input type="text" ref={inputFieldText} onKeyDown={e => arrowNavigation(e)} className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
                         {expanded ?
                             <button onClick={() => clearSearchTerm()} className="btn btn-secondary btn-xs"><i className="material-icons">close</i></button>
                             :
@@ -109,14 +112,14 @@ const SearchBox = ({ className, mobile }) => {
                 <div className="search-container">
                     <div className="form-group">
                         <div className="input-group">
-                            <input ref={inputFieldText} onKeyDown={e => listener(e)} type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} />
+                            <input ref={inputFieldText} onKeyDown={e => arrowNavigation(e)} type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} />
                             {searchTerm !== "" ?
                                 <button className="btn btn-link" type="button" onClick={() => clearSearchTerm()}><i className="material-icons">close</i></button>
                                 :
                                 <button onClick={() => activateSearch()} className="btn btn-link" type="button"><i className="material-icons">search</i></button>}
                         </div>
                     </div>
-                    {visibleResultBox && searchTerm !== "" && <div className="result-box">
+                    {searchTerm !== "" && <div className="result-box">
                         {results()}
                     </div> }
                 </div>
