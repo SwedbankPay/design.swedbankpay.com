@@ -24,13 +24,13 @@ const Overview = () => (
         <section>
             <h3>How to align columns properly</h3>
             <p>Headers, generally, should carry whatever alignment their data has. This keeps the vertical lines of the table clean with or without dividers, and provides consistency and context.</p>
-            <div className="slab slab-plain slab-border-error table-align-example">
-                <h3>Don&#x27;t</h3>
-                <Table tableData={consistencyTable(true)} />
-            </div>
             <div className="slab slab-plain slab-border-success table-align-example">
                 <h3>Do</h3>
                 <Table tableData={consistencyTable()} />
+            </div>
+            <div className="slab slab-plain slab-border-error table-align-example">
+                <h3>Don&#x27;t</h3>
+                <Table tableData={consistencyTable(true)} />
             </div>
             <p>By default, most column data is left aligned. There could be two exceptions which should be right aligned to help users identify number size and interactions.</p>
             <div className="row">
@@ -55,7 +55,7 @@ const Overview = () => (
             <div className="row">
                 <div className="col-6">
                     <div className="slab slab-plain slab-border-success">
-                        <h3>Dosss</h3>
+                        <h3>Do</h3>
                         <Table tableData={buttonTypesTable("actionList")} />
                     </div>
                 </div>

@@ -1,69 +1,111 @@
 import React, { useState, useRef } from "react";
-import ComponentRoutes from "../../routes/components";
-import GetStartedRoutes from "../../routes/get-started";
-import IdentityRoutes from "../../routes/identity";
-import PatternRoutes from "../../routes/patterns";
-import UtilityRoutes from "../../routes/utilities";
+import routes from "@src/App/routes/all";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const allRoutes = [ComponentRoutes, GetStartedRoutes, PatternRoutes, IdentityRoutes, UtilityRoutes];
+const modify = (result, searchTerm) => {
+    const re = new RegExp(searchTerm.split("").map(x => x.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"))
+        .join("[.\\s.]*"), "ig");
 
-const SearchBox = ({ classname, mobile }) => {
+    return result.replace(re, "<b>$&</b>");
+};
+
+const SearchBox = ({ className, mobile }) => {
 
     const [searchTerm, setSearchTerm] = useState("");
     const [expanded, setExpanded] = useState(false);
-    const [visibleResultBox, setVisibleResultBox] = useState(false);
     const inputFieldText = useRef(null);
 
-    const modify = (result, searchTerm) => {
-        const re = new RegExp(searchTerm.split("").map(x => x.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"))
-            .join("[.\\s.]*"), "ig");
-
-        return result.replace(re, "<b>$&</b>");
-    };
-
     const results = () => {
-        const searchResultList = allRoutes.map(route => route[0].routes.filter(val => {
+        const tempSearchResultList = routes.map(route => route.routes.filter(val => {
 
             if (searchTerm === "") {
                 return "";
             } else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
                 return val;
             }
+
         }));
 
         return (
             <ul className="item-list item-list-hover">
-                {searchResultList.map(searchResult => searchResult.map(result => <Link key={result.path} onClick = {() => hideResultBox()} to={result.path}><li><span className="result" dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></span></li></Link>)
-                )}
+                {tempSearchResultList.map(directory => directory.map(result => <Link tabIndex="-1" onKeyDown={e => arrowNavigation(e)} className="res" key={result.path} onClick = {() => hideResultBox()} to={result.path}><li><span className="result" dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></span><span className="directory">{result.path.split("/")[1].charAt(0).toUpperCase() + result.path.split("/")[1].slice(1)}</span></li></Link>))
+                }
             </ul>
         );
     };
 
     const hideResultBox = () => {
         setExpanded(false);
-        setVisibleResultBox(false);
         clearSearchTerm();
     };
 
     const activateSearch = () => {
         setExpanded(true);
-        setTimeout(() => { inputFieldText.current.focus(); }, 10);
+
+        const timer = setTimeout(() => inputFieldText.current.focus());
+
+        return () => clearTimeout(timer);
     };
 
     const clearSearchTerm = () => {
         setSearchTerm("");
         setExpanded(false);
-        setTimeout(() => inputFieldText.current.value = "");
+
+        const timer = setTimeout(() => inputFieldText.current.value = "");
+
+        return () => clearTimeout(timer);
+    };
+
+    let index = -1;
+
+    const arrowNavigation = e => {
+        const listItems = document.getElementsByClassName("res");
+        const searchField = inputFieldText.current;
+
+        if (e.keyCode === 40) { // down key
+            if (index < -1) {
+                index = -1;
+            }
+
+            e.preventDefault();
+
+            if (index < listItems.length - 1) {
+                index += 1;
+                listItems[index].focus();
+            }
+
+        }
+
+        if (e.keyCode === 38) { // up key
+            index -= 1;
+
+            if (index >= 0) {
+                listItems[index].focus();
+            }
+
+            e.preventDefault();
+        }
+
+        if (index === -1 && e.keyCode === 38) {
+            index = -1;
+            searchField.focus();
+        }
+
+        if (e.keyCode === 27) {
+            clearSearchTerm();
+            setExpanded(false);
+            searchField.blur();
+
+        }
     };
 
     return (
         <>
             {mobile ?
-                <div className={`search-container${classname ? ` ${classname}` : ""}${expanded ? " expanded" : ""}`}>
+                <div className={`search-container${className ? ` ${className}` : ""}${expanded ? " expanded" : ""}`}>
                     <div className="form-group">
-                        <input type="text" ref={inputFieldText} className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
+                        <input type="text" ref={inputFieldText} onKeyDown={e => arrowNavigation(e)} className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
                         {expanded ?
                             <button onClick={() => clearSearchTerm()} className="btn btn-secondary btn-xs"><i className="material-icons">close</i></button>
                             :
@@ -76,15 +118,15 @@ const SearchBox = ({ classname, mobile }) => {
                 :
                 <div className="search-container">
                     <div className="form-group">
-                        <div onClick={() => setExpanded(true)} className="input-group">
-                            <input ref={inputFieldText} type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} onFocus={() => setVisibleResultBox(true)}/>
+                        <div className="input-group">
+                            <input ref={inputFieldText} onKeyDown={e => arrowNavigation(e)} type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} />
                             {searchTerm !== "" ?
                                 <button className="btn btn-link" type="button" onClick={() => clearSearchTerm()}><i className="material-icons">close</i></button>
                                 :
                                 <button onClick={() => activateSearch()} className="btn btn-link" type="button"><i className="material-icons">search</i></button>}
                         </div>
                     </div>
-                    {visibleResultBox && searchTerm !== "" && <div className="result-box">
+                    {searchTerm !== "" && <div className="result-box">
                         {results()}
                     </div> }
                 </div>
@@ -99,3 +141,5 @@ SearchBox.propTypes = {
 };
 
 export default SearchBox;
+
+export { modify };

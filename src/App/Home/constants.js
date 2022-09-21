@@ -2,6 +2,11 @@ import React from "react";
 
 export const changeLogs = [
     {
+        version: "10.3.0",
+        title: "Search bar and other treats 🍬",
+        text: "Hello to all users of the design guide! In this release, various snacks are provided. First off, in the top right corner, you can see our brand-new search bar! 🔍 This little spinster gives you an alternative way to reach your destination. It is not the most sophisticated search field, but it does the trick! Some WCAG updates have also been made. For instance, the option of reduced animations based on your settings of reducing motion on your OS. Inclusion all the way! Buttons have obtained new designs for their states, and the table component has been modernized, with belonging documentation. Check the changelog to see all the changes."
+    },
+    {
         version: "10.2.0",
         title: "Contribution is key 🔑",
         text: <p>In this release, we have given our contribution sections an update. To have the most robust design system, we need to continuously improve ourselves, which is only doable through the help of our users. Therefore, we have updated our documentation and created two videos; one to emphasize the <a href="/get-started/introduction">contribution process</a>, and one video to show users how to use the new <a href="/get-started/for-developers">Design Guide light</a>. Check them out! This release also includes bug fixes: the pagination script is now supporting lists with seven elements or fewer, markup bug on pagination arrows, and small fixes on the color page. If you find something wrong or weird, do not hesitate to contact us through our slack channel #design-guide-general 🎉</p>

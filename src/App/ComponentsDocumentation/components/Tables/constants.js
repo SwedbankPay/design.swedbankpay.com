@@ -140,23 +140,25 @@ export const tableShowcase = {
     ]
 };
 
+const array = ["Text", "Text", "Text", "Text"];
+
 export const alignmentTable = alignRight => {
     const tableData = {
         thead: [
             { content: "Column 1" },
-            { content: "Amount",
+            { content: "Column 2",
                 classname: alignRight ? "align-right" : null }
         ],
         tbody: []
     };
 
-    for (let i = 0; i < 4; i++) {
+    array.map(content => {
         tableData.tbody.push({ tr: [
-            { content: "Text" },
+            { content },
             { content: "4 500,00 SEK",
                 classname: "align-right" }
         ] });
-    }
+    });
 
     return tableData;
 };
@@ -194,14 +196,12 @@ export const consistencyTable = chaos => {
 export const buttonTypesTable = buttonType => {
     const tableData = {
         thead: [
-            { content: "Employee" },
-            { content: "Actions",
+            { content: "Column 1" },
+            { content: "Column 2",
                 classname: "align-right" }
         ],
         tbody: []
     };
-
-    const array = ["Sean O'Malley", "McGregor", "Bisping", "Mike Perry"];
 
     const attrs = {
         deleteBtn: buttonType === "delete" ? true : null,

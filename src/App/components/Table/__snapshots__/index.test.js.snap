@@ -140,18 +140,27 @@ exports[`Component: Table - renders with class name sortable when sortable prop 
         onClick={[Function]}
       >
         #
+        <SortSvg
+          id="sortable-id-0"
+        />
       </th>
       <th
         key="Name1"
         onClick={[Function]}
       >
         Name
+        <SortSvg
+          id="sortable-id-1"
+        />
       </th>
       <th
         key="Status2"
         onClick={[Function]}
       >
         Status
+        <SortSvg
+          id="sortable-id-2"
+        />
       </th>
     </tr>
   </thead>

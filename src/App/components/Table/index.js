@@ -1,6 +1,8 @@
 import React from "react";
 import classnames from "classnames";
 
+import SortSvg from "./sort-svg";
+
 const Table = ({ plain, condensed, hover, divided, sortable, caption, tableData }) => {
     const tableClasses = classnames(
         "table",
@@ -12,31 +14,19 @@ const Table = ({ plain, condensed, hover, divided, sortable, caption, tableData 
 
     );
 
-    const sort = e => {
+    const sort = (e, i) => {
         if (!sortable) { return; }
 
-        const thClassList = e.target.classList;
-        const thList = e.target.parentElement.children;
+        const buttonElement = document.getElementById(`sortable-id-${i}`);
 
-        if (thClassList.contains("sort-ascending")) {
-            changeSortClasses(thList);
-            thClassList.add("sort-descending");
-        } else if (thClassList.contains("sort-descending")) {
-            changeSortClasses(thList);
-            thClassList.add("sort-ascending");
-        } else {
-            changeSortClasses(thList);
-            thClassList.add("sort-ascending");
+        if (buttonElement.classList.length === 1) {
+            buttonElement.classList.add("up");
+        } else if (buttonElement.classList.contains("up")) {
+            buttonElement.classList.remove("up");
+            buttonElement.classList.add("down");
+        } else if (buttonElement.classList.contains("down")) {
+            buttonElement.classList.remove("down");
         }
-    };
-
-    const changeSortClasses = list => {
-        [...list].map(th => {
-            if (th.classList.length > 0) {
-                th.classList.remove("sort-ascending");
-                th.classList.remove("sort-descending");
-            }
-        });
     };
 
     return (
@@ -46,8 +36,8 @@ const Table = ({ plain, condensed, hover, divided, sortable, caption, tableData 
                 <tr>
                     {tableData.thead.map(({ content, classname }, i) => (
                         classname
-                            ? <th key={content + i} className={classname} onClick={ e => sort(e)}>{content}</th>
-                            : <th key={content + i} onClick={ e => sort(e)}>{content}</th>
+                            ? <th key={content + i} className={classname} onClick={ e => sort(e, i)}>{content}{sortable ? <SortSvg id={`sortable-id-${i}`}/> : ""}</th>
+                            : <th key={content + i} onClick={ e => sort(e, i)}>{content}{sortable ? <SortSvg id={`sortable-id-${i}`}/> : ""}</th>
                     ))}
                 </tr>
             </thead>

@@ -19,9 +19,9 @@ const AppHeader = () => (
             <i className="material-icons topbar-btn-icon">close</i>
         </button>
         <a href="/" className="topbar-logo">{"\n"}
-            <img src={`${basename}img/logo/${brand}-logo-v.svg`} alt={`${brand}-logo`} className="logotype-vertical logotype-md"/> {"\n"}
+            <img src={`${basename}img/logo/${brand}-logo-v.svg`} alt={`${brand}-logo`} className="logotype-vertical logotype-xs"/> {"\n"}
         </a>
-        <SearchBox mobile classname={"search-expander"}/>
+        <SearchBox mobile className={"search-expander"}/>
         <nav className="topbar-nav">
             <div className="topbar-link-container">
                 <SelectPanel id="doc-topbar-sidebar" topbarId="dg-topbar" topbarSidebar={true} routes={routes} />
