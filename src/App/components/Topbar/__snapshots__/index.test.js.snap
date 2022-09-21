@@ -178,6 +178,9 @@ exports[`Component: Topbar - props topbarContent menu links prevents default whe
 
       <TopbarBtn>
         <button
+          aria-controls="topbar-nav"
+          aria-expanded="false"
+          aria-haspopup="menu"
           aria-label="Open menu"
           className="topbar-btn"
           type="button"
@@ -367,6 +370,9 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
 
       <TopbarBtn>
         <button
+          aria-controls="topbar-nav"
+          aria-expanded="false"
+          aria-haspopup="menu"
           aria-label="Open menu"
           className="topbar-btn"
           type="button"
@@ -1055,6 +1061,9 @@ exports[`Component: Topbar - props topbarContent renders a topbar menu without m
 
       <TopbarBtn>
         <button
+          aria-controls="topbar-nav"
+          aria-expanded="false"
+          aria-haspopup="menu"
           aria-label="Open menu"
           className="topbar-btn"
           type="button"
@@ -1225,6 +1234,9 @@ exports[`Component: Topbar - props topbarContent renders a topbar-menu-button wh
 
       <TopbarBtn>
         <button
+          aria-controls="topbar-nav"
+          aria-expanded="false"
+          aria-haspopup="menu"
           aria-label="Open menu"
           className="topbar-btn"
           type="button"
@@ -1414,6 +1426,9 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 
       <TopbarBtn>
         <button
+          aria-controls="topbar-nav"
+          aria-expanded="false"
+          aria-haspopup="menu"
           aria-label="Open menu"
           className="topbar-btn"
           type="button"
@@ -1626,6 +1641,9 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 
       <TopbarBtn>
         <button
+          aria-controls="topbar-nav"
+          aria-expanded="false"
+          aria-haspopup="menu"
           aria-label="Open menu"
           className="topbar-btn"
           type="button"

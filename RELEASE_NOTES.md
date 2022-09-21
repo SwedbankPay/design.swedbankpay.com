@@ -1,21 +1,31 @@
 # Changelog
 
-## [10.2.0] - 18.07.2022
+## [10.3.0] - 06.09.2022
 
-## Fixes
--   Pagination script to allow 7 or fewer pages.
--   Pagination markup bug on arrows.
--   Color page bug fixes.
--   Toast alignment bug fix.
--   Hover state background color on item list is aligned to be the same as hover state background color for tables.
 ## Changed
--   Documentation in get-started/introduction and get-started/for-developers.
--   Relocated "Open, Simple, Caring"-section from get-started/introduction to identity/introduction.
-## Added
--   Design Guide process image in get-started/introduction section.
+-   Button component
+    -   Updated design for different states; hover, focus, active, etc.
 
--   Videos
-    -   "Contributing to the system" by Filippos Kargiotidis, located in get-started/introduction section.
-    -   "Using Design Guide Light" by Eskil Hognestad, located in get-started/for-developers.
-## Removed
--   Snowflake-image in get-started/for-designers.
+-   Tables component
+    -   Column dividers
+    -   Sorting option
+    -   Handling of buttons
+
+-   Tables documentation
+    -   Added do and don't examples on how to structure a table
+## Added
+-   Searchbox for the design system
+    -   Simple search on the different pages of the system.
+    -   Different design for mobile view.
+
+-   Optinal prefers-reduced-animation class
+    -   Components with animations can be turned off if user applies this on their OS.
+    -   Accordion, Expandable, Sidebar, Sheet, Topbar
+
+-   Added callback to sheet and dialog component when firing off open/close methods.
+
+-   Return Chart instance when new chart() is ran.
+
+## WCAG
+-   Menu button on topbar/sidebar mobile view
+    -   aria-haspopup, aria-controls and aria-expanded

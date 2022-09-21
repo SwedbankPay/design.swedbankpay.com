@@ -1,28 +1,16 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Table, { Overview } from "./index";
+import Tables from "./index";
 
-describe("Documentation: Table", () => {
+describe("Documentation: Tables", () => {
     it("is defined", () => {
-        expect(Table).toBeDefined();
+        expect(Tables).toBeDefined();
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Table />);
+        const wrapper = shallow(<Tables/>);
 
         expect(wrapper).toMatchSnapshot();
-    });
-
-    describe("Overview", () => {
-        it("is defined", () => {
-            expect(Overview).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Overview />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
     });
 });

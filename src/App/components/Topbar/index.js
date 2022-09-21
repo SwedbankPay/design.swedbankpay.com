@@ -14,7 +14,7 @@ const isDev = process.env.version === "LOCAL_DEV";
 
 const TopbarBtn = () => (
     <>
-        <button type="button" className="topbar-btn" aria-label="Open menu">{"\n\t\t"}
+        <button type="button" className="topbar-btn" aria-label="Open menu" aria-haspopup="menu" aria-expanded="false" aria-controls="topbar-nav">{"\n\t\t"}
             <i className="material-icons topbar-btn-icon">menu</i>
             {"\n\t\t"}
         </button>

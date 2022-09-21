@@ -84,3 +84,13 @@
         transition: height 0.3s ease;
     }
 }
+
+@media (prefers-reduced-motion) {
+    .accordion {
+        transition: none;
+
+        .expanding {
+            transition: none;
+        }
+    }
+}

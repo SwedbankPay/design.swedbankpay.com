@@ -218,7 +218,7 @@ exports[`Component: Button - Button tag: renders a button with an icon when prop
 		
   <i
     aria-hidden="true"
-    className="material-icons"
+    className="material-icons-outlined"
   >
     test
   </i>
@@ -255,7 +255,7 @@ exports[`Component: Button - Button tag: renders a button with icon and label wh
 		
   <i
     aria-hidden="true"
-    className="material-icons"
+    className="material-icons-outlined"
   >
     icon
   </i>

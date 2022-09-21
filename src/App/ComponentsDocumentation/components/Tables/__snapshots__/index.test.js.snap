@@ -1,109 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Table Overview renders 1`] = `
-<section>
-  <h2>
-    Overview
-  </h2>
-  <p>
-    Use the table component to make information easier to compare and scan for users.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-    showCasePanelAdvanced={
-      Object {
-        "elements": Array [
-          Object {
-            "component": <Table />,
-            "description": <p>
-              The table component should be preceded by either a 
-              <CodeTags
-                code="<caption>"
-                type="primary"
-              />
-               or a heading that introduces the content of the table. The table color can either be striped or plain with borders, and there is also a more condensed version of the table with more narrow rows. A row hover state can help the user visually scan the data in a row even if the row is not interactive.
-            </p>,
-            "options": Object {
-              "checkbox": Array [
-                Object {
-                  "id": "table_addons",
-                  "inputs": Array [
-                    Object {
-                      "id": "hover_effect",
-                      "name": "Hover effect",
-                      "value": Object {
-                        "hover": true,
-                      },
-                    },
-                  ],
-                  "title": "Add on",
-                },
-              ],
-              "radio": Array [
-                Object {
-                  "id": "table_color",
-                  "title": "Color",
-                  "values": Array [
-                    Object {
-                      "name": "Striped",
-                      "value": Object {
-                        "plain": false,
-                      },
-                    },
-                    Object {
-                      "name": "Plain",
-                      "value": Object {
-                        "plain": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "table_style",
-                  "title": "Style",
-                  "values": Array [
-                    Object {
-                      "name": "Default",
-                      "value": Object {
-                        "condensed": false,
-                      },
-                    },
-                    Object {
-                      "name": "Condensed",
-                      "value": Object {
-                        "condensed": true,
-                      },
-                    },
-                    Object {
-                      "name": "Description",
-                      "toBeRemoved": true,
-                      "value": Object {
-                        "description": true,
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "title": "Table",
-          },
-        ],
-        "id": "overviewTables",
-      }
-    }
-  />
-</section>
-`;
-
-exports[`Documentation: Table renders 1`] = `
+exports[`Documentation: Tables renders 1`] = `
 <DocContainer>
-  <p
-    className="lead"
+  <section
+    id="table-doc"
   >
-    A table displays information in a grid of rows and columns.
-  </p>
-  <Overview />
+    <p
+      className="lead"
+    >
+      A table displays information in a grid of rows and columns.
+    </p>
+    <Overview />
+  </section>
 </DocContainer>
 `;

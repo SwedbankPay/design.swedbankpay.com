@@ -1,88 +1,145 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { useState, useRef } from "react";
+import routes from "@src/App/routes/all";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-class SearchBox extends Component {
-    constructor (props) {
-        super(props);
+const modify = (result, searchTerm) => {
+    const re = new RegExp(searchTerm.split("").map(x => x.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"))
+        .join("[.\\s.]*"), "ig");
 
-        this.state = {
-            query: "",
-            results: [],
-            showResults: false
-        };
+    return result.replace(re, "<b>$&</b>");
+};
 
-        this.getResults = this.getResults.bind(this);
-        this.closeResults = this.closeResults.bind(this);
-        this.handleInputChange = this.handleInputChange.bind(this);
-    }
+const SearchBox = ({ className, mobile }) => {
 
-    getResults (query) {
-        const results = [];
+    const [searchTerm, setSearchTerm] = useState("");
+    const [expanded, setExpanded] = useState(false);
+    const inputFieldText = useRef(null);
 
-        if (query) {
-            this.props.routes.forEach(route => {
-                route.routes.forEach(r => {
-                    if (r.title.toLowerCase().includes(query.toLowerCase())) {
-                        results.push(r);
-                    }
-                });
-            });
+    const results = () => {
+        const tempSearchResultList = routes.map(route => route.routes.filter(val => {
 
-            this.setState({ showResults: true });
-        }
+            if (searchTerm === "") {
+                return "";
+            } else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+                return val;
+            }
 
-        this.setState({ results });
-    }
+        }));
 
-    closeResults (e) {
-        if ((e.type === "keydown" && e.key === "Escape") || (e.type === "click" && !e.target.closest(".doc-search"))) {
-            this.setState({ showResults: false });
-        }
-    }
-
-    handleInputChange (e) {
-        this.getResults(e.target.value);
-    }
-
-    componentWillUnmount () {
-        document.removeEventListener("keydown", this.closeResults);
-        document.removeEventListener("click", this.closeResults);
-    }
-
-    componentDidMount () {
-        document.addEventListener("keydown", this.closeResults);
-        document.addEventListener("click", this.closeResults);
-    }
-
-    render () {
         return (
-            <form className="doc-search">
-                <input
-                    type="text"
-                    className="form-control"
-                    name="designguide-search"
-                    placeholder="Search..."
-                    autoComplete="off"
-                    onChange={this.handleInputChange}
-                    onFocus={() => this.setState({ showResults: true })}
-                />
-                {this.state.results.length ?
-                    <ul className={`search-results ${this.state.showResults ? "d-block" : null}`}>
-                        {this.state.results.map(({ path, title }, i) => <li className="search-result" key={`search_result_${i}`}>
-                            <Link
-                                to={path}
-                                onClick={() => this.setState({ showResults: false })}
-                            >{title}</Link>
-                        </li>)}
-                    </ul> : null}
-            </form>
+            <ul className="item-list item-list-hover">
+                {tempSearchResultList.map(directory => directory.map(result => <Link tabIndex="-1" onKeyDown={e => arrowNavigation(e)} className="res" key={result.path} onClick = {() => hideResultBox()} to={result.path}><li><span className="result" dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></span><span className="directory">{result.path.split("/")[1].charAt(0).toUpperCase() + result.path.split("/")[1].slice(1)}</span></li></Link>))
+                }
+            </ul>
         );
-    }
-}
+    };
+
+    const hideResultBox = () => {
+        setExpanded(false);
+        clearSearchTerm();
+    };
+
+    const activateSearch = () => {
+        setExpanded(true);
+
+        const timer = setTimeout(() => inputFieldText.current.focus());
+
+        return () => clearTimeout(timer);
+    };
+
+    const clearSearchTerm = () => {
+        setSearchTerm("");
+        setExpanded(false);
+
+        const timer = setTimeout(() => inputFieldText.current.value = "");
+
+        return () => clearTimeout(timer);
+    };
+
+    let index = -1;
+
+    const arrowNavigation = e => {
+        const listItems = document.getElementsByClassName("res");
+        const searchField = inputFieldText.current;
+
+        if (e.keyCode === 40) { // down key
+            if (index < -1) {
+                index = -1;
+            }
+
+            e.preventDefault();
+
+            if (index < listItems.length - 1) {
+                index += 1;
+                listItems[index].focus();
+            }
+
+        }
+
+        if (e.keyCode === 38) { // up key
+            index -= 1;
+
+            if (index >= 0) {
+                listItems[index].focus();
+            }
+
+            e.preventDefault();
+        }
+
+        if (index === -1 && e.keyCode === 38) {
+            index = -1;
+            searchField.focus();
+        }
+
+        if (e.keyCode === 27) {
+            clearSearchTerm();
+            setExpanded(false);
+            searchField.blur();
+
+        }
+    };
+
+    return (
+        <>
+            {mobile ?
+                <div className={`search-container${className ? ` ${className}` : ""}${expanded ? " expanded" : ""}`}>
+                    <div className="form-group">
+                        <input type="text" ref={inputFieldText} onKeyDown={e => arrowNavigation(e)} className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
+                        {expanded ?
+                            <button onClick={() => clearSearchTerm()} className="btn btn-secondary btn-xs"><i className="material-icons">close</i></button>
+                            :
+                            <button onClick={() => activateSearch()} className="btn btn-primary btn-xs" type="button"><i className="material-icons">search</i></button>}
+                    </div>
+                    {expanded && searchTerm !== "" && <div className="result-box">
+                        {results()}
+                    </div>}
+                </div>
+                :
+                <div className="search-container">
+                    <div className="form-group">
+                        <div className="input-group">
+                            <input ref={inputFieldText} onKeyDown={e => arrowNavigation(e)} type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} />
+                            {searchTerm !== "" ?
+                                <button className="btn btn-link" type="button" onClick={() => clearSearchTerm()}><i className="material-icons">close</i></button>
+                                :
+                                <button onClick={() => activateSearch()} className="btn btn-link" type="button"><i className="material-icons">search</i></button>}
+                        </div>
+                    </div>
+                    {searchTerm !== "" && <div className="result-box">
+                        {results()}
+                    </div> }
+                </div>
+            }
+        </>
+    );
+};
 
 SearchBox.propTypes = {
-    routes: PropTypes.array.isRequired
+    className: PropTypes.string,
+    mobile: PropTypes.bool
 };
 
 export default SearchBox;
+
+export { modify };

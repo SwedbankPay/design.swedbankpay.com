@@ -133,6 +133,184 @@
     // }
 }
 
+.search-container {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 103;
+
+    .form-group {
+        margin-bottom: 0;
+
+        #search-box:focus + button {
+            border-color: transparent;
+        }
+
+        input {
+            width: 21rem;
+            height: 2.5rem;
+            border: 1px solid @soft-brown;
+            border-right: none;
+            border-radius: 2px 0 0 0;
+        }
+
+        button {
+            height: 2.5rem;
+            border: 1px solid @soft-brown;
+            border-left: none;
+
+            i {
+                color: @brown-soft;
+            }
+
+            &:hover {
+                border-color: @soft-brown;
+            }
+
+            &:active,
+            &:focus {
+                border-color: transparent;
+                box-shadow: none;
+            }
+
+            &:focus,
+            &:hover {
+                i {
+                    color: @brand-secondary;
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    .result-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        z-index: 103;
+        background-color: @white;
+        border-radius: 2px;
+        max-height: 50vh;
+        overflow: scroll;
+        box-shadow: 1px 2px 20px rgb(0 0 0 / 15%);
+        padding-top: 0.5rem;
+
+        .item-list {
+            margin-bottom: 0;
+
+            a {
+                padding-top: 0.25rem;
+                padding-bottom: 0.25rem;
+                text-decoration: none;
+
+                &:focus-visible {
+                    outline: 5px auto @brand-secondary;
+                }
+
+                li {
+                    margin-left: 7px;
+                    margin-right: 7px;
+                }
+            }
+
+            &.item-list-hover {
+                li {
+                    border-bottom: none;
+                    height: 2rem;
+                    padding: 0.5rem;
+                    border-radius: 2px;
+
+                    &:hover {
+                        background-color: @bg-primary;
+                        cursor: pointer;
+                    }
+
+                    span {
+                        color: @brand-secondary;
+                        display: inline-block;
+                        position: relative;
+                        z-index: 1;
+                        text-decoration: none;
+                    }
+
+                    .directory {
+                        color: @brown-soft;
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &.search-expander {
+        top: unset;
+        left: 1rem;
+
+        .form-group {
+            display: flex;
+
+            #search-box:focus + button {
+                border-color: @soft-brown;
+            }
+
+            button {
+                position: absolute;
+                right: 0;
+                top: -1.2rem;
+                height: 2.5rem;
+                border-left: 1px solid @soft-brown;
+
+
+                &:focus {
+                    border-left: transparent;
+                }
+
+                i {
+                    font-size: 1.25rem;
+                    color: @brand-secondary;
+                }
+            }
+
+            input {
+                display: none;
+            }
+        }
+
+        &.expanded {
+            .form-group {
+                button {
+                    position: unset;
+                    right: unset;
+                    top: unset;
+                    height: 2.5rem;
+                    border: 1px solid @soft-brown;
+
+                    &:hover,
+                    &:focus {
+                        background-color: transparent;
+                        outline-color: @brand-secondary; // TODO
+
+                        i {
+                            color: #000000;
+                        }
+                    }
+                }
+
+                input {
+                    display: block;
+                    line-height: 1.5;
+                    font-size: 0.875rem;
+                    margin-right: 0.5rem;
+                    width: 100%;
+                    border-right: 1px solid @soft-brown;
+                }
+            }
+        }
+    }
+}
+
 .documentation {
     width: 100%;
 
@@ -298,7 +476,7 @@
             @media (max-width: @screen-xs-max) {
                 .dg-front-page-container {
                     height: auto;
-                    padding: 2rem 0;
+                    padding: 5rem 0;
 
                     header {
                         line-height: 2rem;
@@ -571,35 +749,6 @@
     .doc-body {
         @media (max-width: @screen-sm-max) {
             padding-right: 1rem;
-        }
-    }
-
-    .doc-search {
-        padding: @base-padding 1rem;
-
-        .search-results {
-            position: absolute;
-            left: 0;
-            width: ~"calc(100% - 2rem)";
-            margin: 0 1rem 0;
-            padding: 0;
-            list-style: none;
-            border: 1px solid @light-brown;
-            z-index: 2000;
-            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
-            display: none;
-            background-color: @white;
-
-            .search-result a {
-                border: 0;
-                display: block;
-                padding: 0.25rem 0.5rem;
-                text-decoration: none;
-
-                &:hover {
-                    background-color: @light-gray;
-                }
-            }
         }
     }
 
@@ -1575,6 +1724,23 @@
             right: 0;
             width: 100%;
             height: 100%;
+        }
+    }
+
+    #table-doc {
+        .table-align-example {
+            .table {
+                width: 75%;
+                margin: auto;
+            }
+        }
+
+        .button-table-example {
+            .btn {
+                height: 2rem;
+                width: 5rem;
+                padding: 0 0.75rem;
+            }
         }
     }
 }

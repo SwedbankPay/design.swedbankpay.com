@@ -113,3 +113,17 @@
         transition: height 0.3s ease;
     }
 }
+
+@media (prefers-reduced-motion) {
+    .expandable {
+        transition: none;
+
+        &:after {
+            transition: none;
+        }
+
+        .expanding {
+            transition: none;
+        }
+    }
+}

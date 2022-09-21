@@ -97,6 +97,8 @@ class Dialog {
         this._el.style.display = "flex";
         document.body.classList.add("dialog-open");
         this.lastTabStop.focus();
+
+        return this._el;
     }
 
     close () {
@@ -106,6 +108,8 @@ class Dialog {
         this._el.classList.remove("d-flex");
         document.body.classList.remove("dialog-open");
         this.focusedElemBeforeDialog ? this.focusedElemBeforeDialog.focus() : null;
+
+        return this._el;
     }
 }
 

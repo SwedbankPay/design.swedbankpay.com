@@ -85,7 +85,7 @@ const _init = (ctx, userOptions, colorPool) => {
     }
 
     if (options) {
-        new Chart(ctx, options);
+        return new Chart(ctx, options);
     }
 };
 
@@ -99,7 +99,7 @@ const chart = (id, userOptions, colorPool) => {
             console.warn("Chart: You need to provide options.data.");
         } else {
             // ..._colorPool.slice(0, 3) is due to the three first colors always having to be included (because of branding)
-            _init(element.getContext("2d"), userOptions, colorPool ? [..._colorPool.slice(0, 3), ...colorPool] : _colorPool);
+            return _init(element.getContext("2d"), userOptions, colorPool ? [..._colorPool.slice(0, 3), ...colorPool] : _colorPool);
         }
 
     } else if (element) {
