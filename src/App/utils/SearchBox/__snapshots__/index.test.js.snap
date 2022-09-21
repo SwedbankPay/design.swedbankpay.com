@@ -1,113 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Manipulating input values for input field Testing components methods directly modify method gives <b> tags around parts of searchterm if searchterm is in beginning of result 1`] = `
-<SearchBox>
-  <div
-    className="search-container"
-  >
-    <div
-      className="form-group"
-    >
-      <div
-        className="input-group"
-      >
-        <input
-          className="form-control"
-          id="search-box"
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          placeholder="Search"
-          type="text"
-        />
-        <button
-          className="btn btn-link"
-          onClick={[Function]}
-          type="button"
-        >
-          <i
-            className="material-icons"
-          >
-            close
-          </i>
-        </button>
-      </div>
-    </div>
-  </div>
-</SearchBox>
-`;
-
-exports[`Manipulating input values for input field Testing components methods directly modify method gives <b> tags around parts of searchterm if searchterm is in the end of result 1`] = `
-<SearchBox>
-  <div
-    className="search-container"
-  >
-    <div
-      className="form-group"
-    >
-      <div
-        className="input-group"
-      >
-        <input
-          className="form-control"
-          id="search-box"
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          placeholder="Search"
-          type="text"
-        />
-        <button
-          className="btn btn-link"
-          onClick={[Function]}
-          type="button"
-        >
-          <i
-            className="material-icons"
-          >
-            close
-          </i>
-        </button>
-      </div>
-    </div>
-  </div>
-</SearchBox>
-`;
-
-exports[`Manipulating input values for input field Testing components methods directly modify method returns result if searchterm does not match result and no <b> tags 1`] = `
-<SearchBox>
-  <div
-    className="search-container"
-  >
-    <div
-      className="form-group"
-    >
-      <div
-        className="input-group"
-      >
-        <input
-          className="form-control"
-          id="search-box"
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          placeholder="Search"
-          type="text"
-        />
-        <button
-          className="btn btn-link"
-          onClick={[Function]}
-          type="button"
-        >
-          <i
-            className="material-icons"
-          >
-            close
-          </i>
-        </button>
-      </div>
-    </div>
-  </div>
-</SearchBox>
-`;
-
 exports[`Manipulating input values for input field button icon changes from search to close after input field manipulation 1`] = `
 <SearchBox>
   <div
@@ -140,11 +32,18 @@ exports[`Manipulating input values for input field button icon changes from sear
         </button>
       </div>
     </div>
+    <div
+      className="result-box"
+    >
+      <ul
+        className="item-list item-list-hover"
+      />
+    </div>
   </div>
 </SearchBox>
 `;
 
-exports[`Manipulating input values for input field does not render the result box before manipulating the search field 1`] = `
+exports[`Manipulating input values for input field result box is not visible before input is manipulated 1`] = `
 <SearchBox>
   <div
     className="search-container"
@@ -171,13 +70,1937 @@ exports[`Manipulating input values for input field does not render the result bo
           <i
             className="material-icons"
           >
-            search
+            close
           </i>
         </button>
       </div>
     </div>
+    <div
+      className="result-box"
+    >
+      <ul
+        className="item-list item-list-hover"
+      />
+    </div>
   </div>
 </SearchBox>
+`;
+
+exports[`Manipulating input values for input field result box is visible after input field change 1`] = `
+<SearchBox>
+  <div
+    className="search-container"
+  >
+    <div
+      className="form-group"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          className="form-control"
+          id="search-box"
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Search"
+          type="text"
+        />
+        <button
+          className="btn btn-link"
+          onClick={[Function]}
+          type="button"
+        >
+          <i
+            className="material-icons"
+          >
+            close
+          </i>
+        </button>
+      </div>
+    </div>
+    <div
+      className="result-box"
+    >
+      <ul
+        className="item-list item-list-hover"
+      />
+    </div>
+  </div>
+</SearchBox>
+`;
+
+exports[`Search box results tests renders more than 10 li elements when search term is 'i' 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <SearchBox>
+      <div
+        className="search-container"
+      >
+        <div
+          className="form-group"
+        >
+          <div
+            className="input-group"
+          >
+            <input
+              className="form-control"
+              id="search-box"
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              placeholder="Search"
+              type="text"
+            />
+            <button
+              className="btn btn-link"
+              onClick={[Function]}
+              type="button"
+            >
+              <i
+                className="material-icons"
+              >
+                close
+              </i>
+            </button>
+          </div>
+        </div>
+        <div
+          className="result-box"
+        >
+          <ul
+            className="item-list item-list-hover"
+          >
+            <Link
+              className="res"
+              key="/get-started/introduction"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/get-started/introduction"
+            >
+              <LinkAnchor
+                className="res"
+                href="/get-started/introduction"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/get-started/introduction"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<b>I</b>ntroduct<b>i</b>on",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Get-started
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/get-started/for-designers"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/get-started/for-designers"
+            >
+              <LinkAnchor
+                className="res"
+                href="/get-started/for-designers"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/get-started/for-designers"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "For des<b>i</b>gners",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Get-started
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/identity/identity"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/identity/identity"
+            >
+              <LinkAnchor
+                className="res"
+                href="/identity/identity"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/identity/identity"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Overv<b>i</b>ew",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Identity
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/identity/accessibility"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/identity/accessibility"
+            >
+              <LinkAnchor
+                className="res"
+                href="/identity/accessibility"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/identity/accessibility"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Access<b>i</b>b<b>i</b>l<b>i</b>ty",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Identity
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/identity/copywriting"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/identity/copywriting"
+            >
+              <LinkAnchor
+                className="res"
+                href="/identity/copywriting"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/identity/copywriting"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Copywr<b>i</b>t<b>i</b>ng",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Identity
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/identity/grid"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/identity/grid"
+            >
+              <LinkAnchor
+                className="res"
+                href="/identity/grid"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/identity/grid"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Gr<b>i</b>d",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Identity
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/identity/iconography"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/identity/iconography"
+            >
+              <LinkAnchor
+                className="res"
+                href="/identity/iconography"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/identity/iconography"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<b>I</b>conography",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Identity
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/identity/imagery"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/identity/imagery"
+            >
+              <LinkAnchor
+                className="res"
+                href="/identity/imagery"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/identity/imagery"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<b>I</b>magery",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Identity
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/identity/spacing"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/identity/spacing"
+            >
+              <LinkAnchor
+                className="res"
+                href="/identity/spacing"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/identity/spacing"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Spac<b>i</b>ng",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Identity
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/components/components"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/components/components"
+            >
+              <LinkAnchor
+                className="res"
+                href="/components/components"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/components/components"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Overv<b>i</b>ew",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/components/accordion"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/components/accordion"
+            >
+              <LinkAnchor
+                className="res"
+                href="/components/accordion"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/components/accordion"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Accord<b>i</b>on",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/components/action-list"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/components/action-list"
+            >
+              <LinkAnchor
+                className="res"
+                href="/components/action-list"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/components/action-list"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Act<b>i</b>on l<b>i</b>st",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/components/datepickers"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/components/datepickers"
+            >
+              <LinkAnchor
+                className="res"
+                href="/components/datepickers"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/components/datepickers"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Datep<b>i</b>ckers",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/components/dialog"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/components/dialog"
+            >
+              <LinkAnchor
+                className="res"
+                href="/components/dialog"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/components/dialog"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "D<b>i</b>alog",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/components/input-field"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/components/input-field"
+            >
+              <LinkAnchor
+                className="res"
+                href="/components/input-field"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/components/input-field"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<b>I</b>nput f<b>i</b>eld",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/components/links"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/components/links"
+            >
+              <LinkAnchor
+                className="res"
+                href="/components/links"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/components/links"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "L<b>i</b>nks",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/components/lists"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/components/lists"
+            >
+              <LinkAnchor
+                className="res"
+                href="/components/lists"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/components/lists"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "L<b>i</b>sts",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/components/media-object"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/components/media-object"
+            >
+              <LinkAnchor
+                className="res"
+                href="/components/media-object"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/components/media-object"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Med<b>i</b>a Object",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/components/nav"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/components/nav"
+            >
+              <LinkAnchor
+                className="res"
+                href="/components/nav"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/components/nav"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Nav<b>i</b>gat<b>i</b>on",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/components/pagination"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/components/pagination"
+            >
+              <LinkAnchor
+                className="res"
+                href="/components/pagination"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/components/pagination"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Pag<b>i</b>nat<b>i</b>on",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/components/radio-button"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/components/radio-button"
+            >
+              <LinkAnchor
+                className="res"
+                href="/components/radio-button"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/components/radio-button"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Rad<b>i</b>o button",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/components/rangeslider"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/components/rangeslider"
+            >
+              <LinkAnchor
+                className="res"
+                href="/components/rangeslider"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/components/rangeslider"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Rangesl<b>i</b>der",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/components/sidebar"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/components/sidebar"
+            >
+              <LinkAnchor
+                className="res"
+                href="/components/sidebar"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/components/sidebar"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "S<b>i</b>debar",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/components/skip-link"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/components/skip-link"
+            >
+              <LinkAnchor
+                className="res"
+                href="/components/skip-link"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/components/skip-link"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Sk<b>i</b>p l<b>i</b>nk",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/components/tooltips"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/components/tooltips"
+            >
+              <LinkAnchor
+                className="res"
+                href="/components/tooltips"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/components/tooltips"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Toolt<b>i</b>ps",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/patterns/patterns"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/patterns/patterns"
+            >
+              <LinkAnchor
+                className="res"
+                href="/patterns/patterns"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/patterns/patterns"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Overv<b>i</b>ew",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Patterns
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/patterns/login"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/patterns/login"
+            >
+              <LinkAnchor
+                className="res"
+                href="/patterns/login"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/patterns/login"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Log<b>i</b>n",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Patterns
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/utilities/utilities"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/utilities/utilities"
+            >
+              <LinkAnchor
+                className="res"
+                href="/utilities/utilities"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/utilities/utilities"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Overv<b>i</b>ew",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Utilities
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/utilities/breakpoints"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/utilities/breakpoints"
+            >
+              <LinkAnchor
+                className="res"
+                href="/utilities/breakpoints"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/utilities/breakpoints"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Breakpo<b>i</b>nts",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Utilities
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/utilities/display"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/utilities/display"
+            >
+              <LinkAnchor
+                className="res"
+                href="/utilities/display"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/utilities/display"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "D<b>i</b>splay",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Utilities
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/utilities/images"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/utilities/images"
+            >
+              <LinkAnchor
+                className="res"
+                href="/utilities/images"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/utilities/images"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<b>I</b>mages",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Utilities
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/utilities/sizing"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/utilities/sizing"
+            >
+              <LinkAnchor
+                className="res"
+                href="/utilities/sizing"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/utilities/sizing"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "S<b>i</b>z<b>i</b>ng",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Utilities
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/utilities/visibility"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/utilities/visibility"
+            >
+              <LinkAnchor
+                className="res"
+                href="/utilities/visibility"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/utilities/visibility"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "V<b>i</b>s<b>i</b>b<b>i</b>l<b>i</b>ty",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Utilities
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+          </ul>
+        </div>
+      </div>
+    </SearchBox>
+  </Router>
+</BrowserRouter>
+`;
+
+exports[`Search box results tests renders no items if search term has no matches 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <SearchBox>
+      <div
+        className="search-container"
+      >
+        <div
+          className="form-group"
+        >
+          <div
+            className="input-group"
+          >
+            <input
+              className="form-control"
+              id="search-box"
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              placeholder="Search"
+              type="text"
+            />
+            <button
+              className="btn btn-link"
+              onClick={[Function]}
+              type="button"
+            >
+              <i
+                className="material-icons"
+              >
+                close
+              </i>
+            </button>
+          </div>
+        </div>
+        <div
+          className="result-box"
+        >
+          <ul
+            className="item-list item-list-hover"
+          />
+        </div>
+      </div>
+    </SearchBox>
+  </Router>
+</BrowserRouter>
+`;
+
+exports[`Search box results tests renders several li elements when search term is 'f 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <SearchBox>
+      <div
+        className="search-container"
+      >
+        <div
+          className="form-group"
+        >
+          <div
+            className="input-group"
+          >
+            <input
+              className="form-control"
+              id="search-box"
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              placeholder="Search"
+              type="text"
+            />
+            <button
+              className="btn btn-link"
+              onClick={[Function]}
+              type="button"
+            >
+              <i
+                className="material-icons"
+              >
+                close
+              </i>
+            </button>
+          </div>
+        </div>
+        <div
+          className="result-box"
+        >
+          <ul
+            className="item-list item-list-hover"
+          >
+            <Link
+              className="res"
+              key="/get-started/for-developers"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/get-started/for-developers"
+            >
+              <LinkAnchor
+                className="res"
+                href="/get-started/for-developers"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/get-started/for-developers"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<b>F</b>or developers",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Get-started
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/get-started/for-designers"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/get-started/for-designers"
+            >
+              <LinkAnchor
+                className="res"
+                href="/get-started/for-designers"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/get-started/for-designers"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<b>F</b>or designers",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Get-started
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/components/input-field"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/components/input-field"
+            >
+              <LinkAnchor
+                className="res"
+                href="/components/input-field"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/components/input-field"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Input <b>f</b>ield",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/patterns/forms"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/patterns/forms"
+            >
+              <LinkAnchor
+                className="res"
+                href="/patterns/forms"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/patterns/forms"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<b>F</b>orms",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Patterns
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+            <Link
+              className="res"
+              key="/utilities/flex"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/utilities/flex"
+            >
+              <LinkAnchor
+                className="res"
+                href="/utilities/flex"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/utilities/flex"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<b>F</b>lex",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Utilities
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+          </ul>
+        </div>
+      </div>
+    </SearchBox>
+  </Router>
+</BrowserRouter>
+`;
+
+exports[`Search box results tests renders toggelbox after searcing for 'gg' 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <SearchBox>
+      <div
+        className="search-container"
+      >
+        <div
+          className="form-group"
+        >
+          <div
+            className="input-group"
+          >
+            <input
+              className="form-control"
+              id="search-box"
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              placeholder="Search"
+              type="text"
+            />
+            <button
+              className="btn btn-link"
+              onClick={[Function]}
+              type="button"
+            >
+              <i
+                className="material-icons"
+              >
+                close
+              </i>
+            </button>
+          </div>
+        </div>
+        <div
+          className="result-box"
+        >
+          <ul
+            className="item-list item-list-hover"
+          >
+            <Link
+              className="res"
+              key="/components/togglebox"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              tabIndex="-1"
+              to="/components/togglebox"
+            >
+              <LinkAnchor
+                className="res"
+                href="/components/togglebox"
+                navigate={[Function]}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                tabIndex="-1"
+              >
+                <a
+                  className="res"
+                  href="/components/togglebox"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "To<b>gg</b>lebox",
+                        }
+                      }
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
+            </Link>
+          </ul>
+        </div>
+      </div>
+    </SearchBox>
+  </Router>
+</BrowserRouter>
 `;
 
 exports[`Utilities; SearchBox does not render with className prop 1`] = `
@@ -228,6 +2051,7 @@ exports[`Utilities; SearchBox renders different buttons after click in mobile ve
         className="form-control"
         id="search-box"
         onChange={[Function]}
+        onKeyDown={[Function]}
         placeholder="Search"
         type="text"
       />
@@ -258,6 +2082,7 @@ exports[`Utilities; SearchBox renders with mobile prop 1`] = `
         className="form-control"
         id="search-box"
         onChange={[Function]}
+        onKeyDown={[Function]}
         placeholder="Search"
         type="text"
       />
@@ -325,6 +2150,7 @@ exports[`Utilities; SearchBox renders with props mobile and className 1`] = `
         className="form-control"
         id="search-box"
         onChange={[Function]}
+        onKeyDown={[Function]}
         placeholder="Search"
         type="text"
       />
