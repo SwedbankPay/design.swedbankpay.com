@@ -15,7 +15,7 @@ const Overview = () => (
 );
 
 const Dropdown = () => (
-    <DocContainer docToc>
+    <DocContainer>
         <p className="lead">Some informational text about the dropdown component</p>
         <Overview/>
     </DocContainer>
