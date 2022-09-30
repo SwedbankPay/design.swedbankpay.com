@@ -3,6 +3,8 @@ import React from "react";
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
+import { showcaseStatusComponent } from "./constants";
+
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
@@ -11,24 +13,7 @@ const Overview = () => (
             that is why <CodeTags type="secondary" code=".status-success" /> exists. <b>NOTE:</b> Be careful not to rely solely on the color of the status icon to convey
             your message.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeList>
-            <ul className="list status-list">
-                <li>
-                    <span className="status status-neutral">Neutral</span>
-                </li>
-                <li>
-                    <span className="status status-success">Success</span>
-                </li>
-                <li>
-                    <span className="status status-warning">Warning</span>
-                </li>
-                <li>
-                    <span className="status status-danger">Danger</span>
-                </li>
-                <li>
-                    <span className="status status-inactive">Inactive</span>
-                </li>
-            </ul>
+        <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={showcaseStatusComponent} >
         </ComponentPreview>
     </>
 );
