@@ -22,14 +22,6 @@ describe("Utilities; SearchBox", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    it("does not render with className prop", () => {
-        const wrapper = shallow(<SearchBox className="test" />);
-
-        expect(wrapper.html()).not.toContain("search-container test");
-
-        expect(wrapper).toMatchSnapshot();
-    });
-
     it("renders with props mobile and className", () => {
         const wrapper = shallow(<SearchBox mobile className="test"/>);
 

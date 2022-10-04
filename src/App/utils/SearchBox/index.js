@@ -116,7 +116,7 @@ const SearchBox = ({ className, mobile }) => {
                     </div>}
                 </div>
                 :
-                <div className="search-container">
+                <div className={`search-container${className ? ` ${className}` : ""}${expanded ? " expanded" : ""}`}>
                     <div className="form-group">
                         <div className="input-group">
                             <input ref={inputFieldText} onKeyDown={e => arrowNavigation(e)} type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} />
