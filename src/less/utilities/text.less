@@ -74,8 +74,6 @@ each(@grid-breakpoints, .(@size, @abbr) {
         &.text-white,
         .text-white {
             color: #ffffff !important;
-            background-color: #000000 !important;
-            width: 20% !important;
             border-radius: 2px;
         }
     }
@@ -101,3 +99,9 @@ each(@color-list, .(@color, @name) {
 // Highlight
 
 .text-highlight { border-bottom: 4px solid @brand-primary; }
+
+// Dark background
+
+.text-dark-background {
+    background-color: @brand-secondary;
+}
