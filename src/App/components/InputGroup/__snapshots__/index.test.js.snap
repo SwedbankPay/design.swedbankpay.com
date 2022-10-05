@@ -136,6 +136,8 @@ exports[`Component: InputGroup - renders a form-group with a prefix button if pr
       />
       
 
+      
+
     </div>
   </div>
 </InputGroup>
@@ -187,6 +189,8 @@ exports[`Component: InputGroup - renders a form-group with a prefix icon if prop
         required={null}
         type="typetest"
       />
+      
+
       
 
     </div>

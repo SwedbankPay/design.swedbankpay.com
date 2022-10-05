@@ -28,9 +28,6 @@ const InputGroup = ({
     prefixType,
     prefixBtnColor,
     postfixValue,
-    postfixType,
-    postfixBtnColor,
-    feedbackIcon,
     helpBlock,
     errorMessage,
     expandingHintTitle,
@@ -58,8 +55,7 @@ const InputGroup = ({
 
     const inputGrpClasses = classnames(
         "input-group",
-        validationState ? `has-${validationState}` : null,
-        feedbackIcon ? "has-feedback" : null
+        validationState ? `has-${validationState}` : null
     );
 
     const selectAttrs = {
@@ -84,7 +80,7 @@ const InputGroup = ({
         <div className={formGroupClasses}>{"\n"}
             {label ? <label htmlFor={id}>{label}{optional && " (optional)"}
             </label> : null}{label ? "\n" : null}
-            {prefixValue || postfixValue || feedbackIcon ?
+            {prefixValue || postfixValue ?
                 <div className={inputGrpClasses}>{"\n"}
                     {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} postfix={postfix} /> : null }{prefixValue ? "\n" : null}
                     {type === "textarea" ?
@@ -98,7 +94,10 @@ const InputGroup = ({
                                 ))}{"\n\t"}
                             </select>
                             :
-                            <input {...attrs} />}
+                            <>
+                                <input {...attrs} />
+                                {postfix ? <Addon type={type} value={postfixValue} disabled={disabled} postfix={postfix} /> : null }{prefixValue ? "\n" : null}
+                            </>}
                     {"\n"}
                 </div>
                 :
@@ -151,7 +150,6 @@ InputGroup.propTypes = {
     postfixValue: PropTypes.string,
     postfixType: PropTypes.oneOf(["button", "icon", ""]),
     postfixBtnColor: PropTypes.oneOf(["primary", "secondary"]),
-    feedbackIcon: PropTypes.string,
     helpBlock: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.bool
