@@ -120,7 +120,7 @@ exports[`Utilities: Colors TextColors renders 1`] = `
       muted
     </p>
     <p
-      className="text-white p-2"
+      className="text-white text-dark-background p-2"
       key="2white"
     >
       .text-
