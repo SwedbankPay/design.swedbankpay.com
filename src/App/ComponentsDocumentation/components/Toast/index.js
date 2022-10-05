@@ -59,7 +59,7 @@ const Overview = () => (
 
 const ContentGuidelines = () => (
     <section>
-        <h3>Content guidelines</h3>
+        <h2 id="content-guidelines">Content guidelines</h2>
         <div className="slab slab-plain mt-3 px-0">
             <div className="toast-example-container py-5">
                 <div id="toast-container" className="m-auto col-12">
@@ -80,8 +80,8 @@ const ContentGuidelines = () => (
 );
 
 const DeveloperDocumentation = () => (
-    <section id="developer-documentation">
-        <h2>Developer documentation</h2>
+    <section id="developer-documentation-container">
+        <h2 id="developer-documentation">Developer documentation</h2>
         <p>To use the Toast, call <CodeTags type="secondary" code="dg.toast()" /> with the desired options.</p>
         <ComponentPreview language="html" codeFigure dangerousHTML>
             {"<button type=\"button\" class=\"btn btn-primary\" onclick=\"dg.toast({\n\ttype: 'neutral' \n\thtml: '<p><b>Info header</b>\n\t\t Input informative alert information here, provide <a href=\"#\">link</a> to solution or more info when possible.\n\t</p>'})\">Neutral toast\n</button>"}
