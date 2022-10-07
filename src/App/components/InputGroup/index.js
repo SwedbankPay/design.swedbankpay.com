@@ -2,12 +2,8 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-export const Addon = ({ type, value, color, disabled, postfix }) => (
-    (type === "button") ?
-        <button type="button" className={`btn btn-${color}`} disabled={disabled}>
-            {value}
-        </button>
-        : <span className={`input-group-addon ${postfix ? "postfix" : ""}`}>{(type === "icon") ? <i className="material-icons material-icons-outlined" aria-hidden="true">{value}</i> : value}</span>
+export const Addon = ({ type, value, postfix }) => (
+    <span className={`input-group-addon ${postfix ? "postfix" : ""}`}>{(type === "icon") ? <i className="material-icons material-icons-outlined" aria-hidden="true">{value}</i> : value}</span>
 );
 
 const InputGroup = ({
@@ -25,8 +21,7 @@ const InputGroup = ({
     validationState,
     selectOptions,
     prefixValue,
-    prefixType,
-    prefixBtnColor,
+    addOnType,
     postfixValue,
     helpBlock,
     errorMessage,
@@ -82,7 +77,7 @@ const InputGroup = ({
             </label> : null}{label ? "\n" : null}
             {prefixValue || postfixValue ?
                 <div className={inputGrpClasses}>{"\n"}
-                    {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} postfix={postfix} /> : null }{prefixValue ? "\n" : null}
+                    {prefixValue ? <Addon type={addOnType} value={prefixValue} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
                     {type === "textarea" ?
                         <textarea {...attrs}></textarea>
                         : type === "select" ?
@@ -95,8 +90,8 @@ const InputGroup = ({
                             </select>
                             :
                             <>
-                                <input {...attrs} />
-                                {postfix ? <Addon type={type} value={postfixValue} disabled={disabled} postfix={postfix} /> : null }{prefixValue ? "\n" : null}
+                                <input {...attrs} />{"\n\t"}
+                                {postfix ? <Addon type={addOnType} value={postfixValue} disabled={disabled} postfix={postfix} /> : null }{prefixValue ? "\n" : null}
                             </>}
                     {"\n"}
                 </div>
