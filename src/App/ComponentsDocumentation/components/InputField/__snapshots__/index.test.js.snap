@@ -521,7 +521,7 @@ exports[`Component: InputField Overview renders 1`] = `
                     Object {
                       "name": "Prefix - Icon",
                       "value": Object {
-                        "prefixType": "icon",
+                        "addOnType": "icon",
                         "prefixValue": "email",
                         "type": "email",
                       },
@@ -529,9 +529,9 @@ exports[`Component: InputField Overview renders 1`] = `
                     Object {
                       "name": "Postfix - Text",
                       "value": Object {
+                        "addOnType": "text",
                         "postfix": true,
                         "postfixValue": "kr",
-                        "type": "text",
                       },
                     },
                   ],

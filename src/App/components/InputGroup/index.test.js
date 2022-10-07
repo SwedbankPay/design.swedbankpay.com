@@ -105,15 +105,8 @@ describe("Component: InputGroup -", () => {
         expect(wrapper.html()).not.toContain("input-group");
     });
 
-    it("renders a form-group with a prefix button if prop prefixValue is provided", () => {
-        const wrapper = mount(<InputGroup type="typetest" prefixType="button" prefixValue="button text" prefixBtnColor="primary" />);
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("btn btn-primary");
-    });
-
     it("renders a form-group with a prefix icon if prop prefixValue equals icon", () => {
-        const wrapper = mount(<InputGroup type="typetest" prefixType="icon" prefixValue="home" />);
+        const wrapper = mount(<InputGroup type="typetest" addOnType="icon" prefixValue="home" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("material-icons");

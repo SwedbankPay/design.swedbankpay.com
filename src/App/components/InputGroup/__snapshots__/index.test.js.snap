@@ -90,62 +90,9 @@ exports[`Component: InputGroup - renders a form-group with a label if prop label
 </div>
 `;
 
-exports[`Component: InputGroup - renders a form-group with a prefix button if prop prefixValue is provided 1`] = `
-<InputGroup
-  prefixBtnColor="primary"
-  prefixType="button"
-  prefixValue="button text"
-  type="typetest"
->
-  <div
-    className="form-group"
-  >
-    
-
-    <div
-      className="input-group"
-    >
-      
-
-      <Addon
-        color="primary"
-        type="button"
-        value="button text"
-      >
-        <button
-          className="btn btn-primary"
-          type="button"
-        >
-          button text
-        </button>
-      </Addon>
-      
-
-      <input
-        aria-describedby={null}
-        autoComplete={null}
-        className="form-control"
-        data-validate={null}
-        defaultValue=""
-        disabled={null}
-        id={null}
-        pattern={null}
-        readOnly={null}
-        required={null}
-        type="typetest"
-      />
-      
-
-      
-
-    </div>
-  </div>
-</InputGroup>
-`;
-
 exports[`Component: InputGroup - renders a form-group with a prefix icon if prop prefixValue equals icon 1`] = `
 <InputGroup
-  prefixType="icon"
+  addOnType="icon"
   prefixValue="home"
   type="typetest"
 >
@@ -189,6 +136,8 @@ exports[`Component: InputGroup - renders a form-group with a prefix icon if prop
         required={null}
         type="typetest"
       />
+      
+	
       
 
       
