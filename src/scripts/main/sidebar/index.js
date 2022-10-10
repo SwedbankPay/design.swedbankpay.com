@@ -128,8 +128,10 @@ class Sidebar {
 
     _activate (element) {
         if (element.parentElement.querySelector("li.active")) {
-            element.parentElement.querySelector("li.active").classList.remove("active");
-            element.parentElement.querySelector("[aria-expanded=true]").setAttribute("aria-expanded", "false");
+            try {
+                element.parentElement.querySelector("li.active").classList.remove("active");
+                element.parentElement.querySelector("[aria-expanded=true]").setAttribute("aria-expanded", "false");
+            } catch (e) { console.info("No properties to setAttribute aria-expanded"); }
         }
 
         element.classList.add("active");
