@@ -35,52 +35,16 @@ describe("Component: InputGroup -", () => {
         expect(console.error).toHaveBeenCalledTimes(3);
     });
 
-    it("throws an error if prefixType prop has an invalid value", () => {
-        const testValues = ["button", "icon", "", "invalid", "test"];
+    it("throws an error if addOnType prop has an invalid value", () => {
+        const testValues = ["button", "icon", "", "invalid", "test", "text"];
 
         console.error = jest.fn();
         testValues.forEach(testValue => {
-            const wrapper = shallow(<InputGroup type="typetest" prefixType={testValue} />);
+            const wrapper = shallow(<InputGroup type="typetest" addOnType={testValue} />);
 
             expect(wrapper).toMatchSnapshot();
         });
-        expect(console.error).toHaveBeenCalledTimes(2);
-    });
-
-    it("throws an error if prefixBtnColor prop has an invalid value", () => {
-        const testValues = ["primary", "secondary", "invalid", "test"];
-
-        console.error = jest.fn();
-        testValues.forEach(testValue => {
-            const wrapper = shallow(<InputGroup type="typetest" prefixBtnColor={testValue} />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-        expect(console.error).toHaveBeenCalledTimes(2);
-    });
-
-    it("throws an error if postfixType prop has an invalid value", () => {
-        const testValues = ["button", "icon", "", "invalid", "test"];
-
-        console.error = jest.fn();
-        testValues.forEach(testValue => {
-            const wrapper = shallow(<InputGroup type="typetest" postfixType={testValue} />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-        expect(console.error).toHaveBeenCalledTimes(2);
-    });
-
-    it("throws an error if postfixBtnColor prop has an invalid value", () => {
-        const testValues = ["primary", "secondary", "invalid", "test"];
-
-        console.error = jest.fn();
-        testValues.forEach(testValue => {
-            const wrapper = shallow(<InputGroup type="typetest" postfixBtnColor={testValue} />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-        expect(console.error).toHaveBeenCalledTimes(2);
+        expect(console.error).toHaveBeenCalledTimes(3);
     });
 
     it("renders a form-group with a label if prop label is provided", () => {
@@ -105,15 +69,8 @@ describe("Component: InputGroup -", () => {
         expect(wrapper.html()).not.toContain("input-group");
     });
 
-    it("renders a form-group with a prefix button if prop prefixValue is provided", () => {
-        const wrapper = mount(<InputGroup type="typetest" prefixType="button" prefixValue="button text" prefixBtnColor="primary" />);
-
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("btn btn-primary");
-    });
-
     it("renders a form-group with a prefix icon if prop prefixValue equals icon", () => {
-        const wrapper = mount(<InputGroup type="typetest" prefixType="icon" prefixValue="home" />);
+        const wrapper = mount(<InputGroup type="typetest" addOnType="icon" prefixValue="home" />);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain("material-icons");
