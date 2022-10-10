@@ -140,8 +140,6 @@ exports[`Component: InputGroup - renders a form-group with a prefix icon if prop
 	
       
 
-      
-
     </div>
   </div>
 </InputGroup>
@@ -230,7 +228,7 @@ exports[`Component: InputGroup - renders a form-group with a text-area if type e
 </InputGroup>
 `;
 
-exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an invalid value 1`] = `
+exports[`Component: InputGroup - throws an error if addOnType prop has an invalid value 1`] = `
 <div
   className="form-group"
 >
@@ -254,7 +252,7 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
 </div>
 `;
 
-exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an invalid value 2`] = `
+exports[`Component: InputGroup - throws an error if addOnType prop has an invalid value 2`] = `
 <div
   className="form-group"
 >
@@ -278,7 +276,7 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
 </div>
 `;
 
-exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an invalid value 3`] = `
+exports[`Component: InputGroup - throws an error if addOnType prop has an invalid value 3`] = `
 <div
   className="form-group"
 >
@@ -302,7 +300,7 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
 </div>
 `;
 
-exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an invalid value 4`] = `
+exports[`Component: InputGroup - throws an error if addOnType prop has an invalid value 4`] = `
 <div
   className="form-group"
 >
@@ -326,7 +324,7 @@ exports[`Component: InputGroup - throws an error if postfixBtnColor prop has an 
 </div>
 `;
 
-exports[`Component: InputGroup - throws an error if postfixType prop has an invalid value 1`] = `
+exports[`Component: InputGroup - throws an error if addOnType prop has an invalid value 5`] = `
 <div
   className="form-group"
 >
@@ -350,295 +348,7 @@ exports[`Component: InputGroup - throws an error if postfixType prop has an inva
 </div>
 `;
 
-exports[`Component: InputGroup - throws an error if postfixType prop has an invalid value 2`] = `
-<div
-  className="form-group"
->
-  
-
-  <input
-    aria-describedby={null}
-    autoComplete={null}
-    className="form-control"
-    data-validate={null}
-    defaultValue=""
-    disabled={null}
-    id={null}
-    pattern={null}
-    readOnly={null}
-    required={null}
-    type="typetest"
-  />
-  
-
-</div>
-`;
-
-exports[`Component: InputGroup - throws an error if postfixType prop has an invalid value 3`] = `
-<div
-  className="form-group"
->
-  
-
-  <input
-    aria-describedby={null}
-    autoComplete={null}
-    className="form-control"
-    data-validate={null}
-    defaultValue=""
-    disabled={null}
-    id={null}
-    pattern={null}
-    readOnly={null}
-    required={null}
-    type="typetest"
-  />
-  
-
-</div>
-`;
-
-exports[`Component: InputGroup - throws an error if postfixType prop has an invalid value 4`] = `
-<div
-  className="form-group"
->
-  
-
-  <input
-    aria-describedby={null}
-    autoComplete={null}
-    className="form-control"
-    data-validate={null}
-    defaultValue=""
-    disabled={null}
-    id={null}
-    pattern={null}
-    readOnly={null}
-    required={null}
-    type="typetest"
-  />
-  
-
-</div>
-`;
-
-exports[`Component: InputGroup - throws an error if postfixType prop has an invalid value 5`] = `
-<div
-  className="form-group"
->
-  
-
-  <input
-    aria-describedby={null}
-    autoComplete={null}
-    className="form-control"
-    data-validate={null}
-    defaultValue=""
-    disabled={null}
-    id={null}
-    pattern={null}
-    readOnly={null}
-    required={null}
-    type="typetest"
-  />
-  
-
-</div>
-`;
-
-exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an invalid value 1`] = `
-<div
-  className="form-group"
->
-  
-
-  <input
-    aria-describedby={null}
-    autoComplete={null}
-    className="form-control"
-    data-validate={null}
-    defaultValue=""
-    disabled={null}
-    id={null}
-    pattern={null}
-    readOnly={null}
-    required={null}
-    type="typetest"
-  />
-  
-
-</div>
-`;
-
-exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an invalid value 2`] = `
-<div
-  className="form-group"
->
-  
-
-  <input
-    aria-describedby={null}
-    autoComplete={null}
-    className="form-control"
-    data-validate={null}
-    defaultValue=""
-    disabled={null}
-    id={null}
-    pattern={null}
-    readOnly={null}
-    required={null}
-    type="typetest"
-  />
-  
-
-</div>
-`;
-
-exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an invalid value 3`] = `
-<div
-  className="form-group"
->
-  
-
-  <input
-    aria-describedby={null}
-    autoComplete={null}
-    className="form-control"
-    data-validate={null}
-    defaultValue=""
-    disabled={null}
-    id={null}
-    pattern={null}
-    readOnly={null}
-    required={null}
-    type="typetest"
-  />
-  
-
-</div>
-`;
-
-exports[`Component: InputGroup - throws an error if prefixBtnColor prop has an invalid value 4`] = `
-<div
-  className="form-group"
->
-  
-
-  <input
-    aria-describedby={null}
-    autoComplete={null}
-    className="form-control"
-    data-validate={null}
-    defaultValue=""
-    disabled={null}
-    id={null}
-    pattern={null}
-    readOnly={null}
-    required={null}
-    type="typetest"
-  />
-  
-
-</div>
-`;
-
-exports[`Component: InputGroup - throws an error if prefixType prop has an invalid value 1`] = `
-<div
-  className="form-group"
->
-  
-
-  <input
-    aria-describedby={null}
-    autoComplete={null}
-    className="form-control"
-    data-validate={null}
-    defaultValue=""
-    disabled={null}
-    id={null}
-    pattern={null}
-    readOnly={null}
-    required={null}
-    type="typetest"
-  />
-  
-
-</div>
-`;
-
-exports[`Component: InputGroup - throws an error if prefixType prop has an invalid value 2`] = `
-<div
-  className="form-group"
->
-  
-
-  <input
-    aria-describedby={null}
-    autoComplete={null}
-    className="form-control"
-    data-validate={null}
-    defaultValue=""
-    disabled={null}
-    id={null}
-    pattern={null}
-    readOnly={null}
-    required={null}
-    type="typetest"
-  />
-  
-
-</div>
-`;
-
-exports[`Component: InputGroup - throws an error if prefixType prop has an invalid value 3`] = `
-<div
-  className="form-group"
->
-  
-
-  <input
-    aria-describedby={null}
-    autoComplete={null}
-    className="form-control"
-    data-validate={null}
-    defaultValue=""
-    disabled={null}
-    id={null}
-    pattern={null}
-    readOnly={null}
-    required={null}
-    type="typetest"
-  />
-  
-
-</div>
-`;
-
-exports[`Component: InputGroup - throws an error if prefixType prop has an invalid value 4`] = `
-<div
-  className="form-group"
->
-  
-
-  <input
-    aria-describedby={null}
-    autoComplete={null}
-    className="form-control"
-    data-validate={null}
-    defaultValue=""
-    disabled={null}
-    id={null}
-    pattern={null}
-    readOnly={null}
-    required={null}
-    type="typetest"
-  />
-  
-
-</div>
-`;
-
-exports[`Component: InputGroup - throws an error if prefixType prop has an invalid value 5`] = `
+exports[`Component: InputGroup - throws an error if addOnType prop has an invalid value 6`] = `
 <div
   className="form-group"
 >

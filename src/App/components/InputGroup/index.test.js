@@ -35,52 +35,16 @@ describe("Component: InputGroup -", () => {
         expect(console.error).toHaveBeenCalledTimes(3);
     });
 
-    it("throws an error if prefixType prop has an invalid value", () => {
-        const testValues = ["button", "icon", "", "invalid", "test"];
+    it("throws an error if addOnType prop has an invalid value", () => {
+        const testValues = ["button", "icon", "", "invalid", "test", "text"];
 
         console.error = jest.fn();
         testValues.forEach(testValue => {
-            const wrapper = shallow(<InputGroup type="typetest" prefixType={testValue} />);
+            const wrapper = shallow(<InputGroup type="typetest" addOnType={testValue} />);
 
             expect(wrapper).toMatchSnapshot();
         });
-        expect(console.error).toHaveBeenCalledTimes(2);
-    });
-
-    it("throws an error if prefixBtnColor prop has an invalid value", () => {
-        const testValues = ["primary", "secondary", "invalid", "test"];
-
-        console.error = jest.fn();
-        testValues.forEach(testValue => {
-            const wrapper = shallow(<InputGroup type="typetest" prefixBtnColor={testValue} />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-        expect(console.error).toHaveBeenCalledTimes(2);
-    });
-
-    it("throws an error if postfixType prop has an invalid value", () => {
-        const testValues = ["button", "icon", "", "invalid", "test"];
-
-        console.error = jest.fn();
-        testValues.forEach(testValue => {
-            const wrapper = shallow(<InputGroup type="typetest" postfixType={testValue} />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-        expect(console.error).toHaveBeenCalledTimes(2);
-    });
-
-    it("throws an error if postfixBtnColor prop has an invalid value", () => {
-        const testValues = ["primary", "secondary", "invalid", "test"];
-
-        console.error = jest.fn();
-        testValues.forEach(testValue => {
-            const wrapper = shallow(<InputGroup type="typetest" postfixBtnColor={testValue} />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-        expect(console.error).toHaveBeenCalledTimes(2);
+        expect(console.error).toHaveBeenCalledTimes(3);
     });
 
     it("renders a form-group with a label if prop label is provided", () => {

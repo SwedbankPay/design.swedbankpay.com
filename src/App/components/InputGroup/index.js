@@ -91,7 +91,7 @@ const InputGroup = ({
                             :
                             <>
                                 <input {...attrs} />{"\n\t"}
-                                {postfix ? <Addon type={addOnType} value={postfixValue} disabled={disabled} postfix={postfix} /> : null }{prefixValue ? "\n" : null}
+                                {postfix ? <Addon type={addOnType} value={postfixValue} disabled={disabled} postfix={postfix} /> : null }{postfix ? "\n" : null}
                             </>}
                     {"\n"}
                 </div>
@@ -140,17 +140,14 @@ InputGroup.propTypes = {
     validationState: PropTypes.oneOf(["error", ""]),
     selectOptions: PropTypes.array,
     prefixValue: PropTypes.string,
-    prefixType: PropTypes.oneOf(["button", "icon", ""]),
-    prefixBtnColor: PropTypes.oneOf(["primary", "secondary"]),
+    addOnType: PropTypes.oneOf(["text", "icon", ""]),
+    postfix: PropTypes.bool,
     postfixValue: PropTypes.string,
-    postfixType: PropTypes.oneOf(["button", "icon", ""]),
-    postfixBtnColor: PropTypes.oneOf(["primary", "secondary"]),
     helpBlock: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.bool
     ]),
     errorMessage: PropTypes.string,
-    successMessage: PropTypes.string,
     className: PropTypes.string,
     boxSize: PropTypes.oneOf(["medium", "small", ""]),
     expandingHintTitle: PropTypes.string,
