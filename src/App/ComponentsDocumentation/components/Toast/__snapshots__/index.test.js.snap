@@ -62,9 +62,7 @@ exports[`Components: Toast Content guidelines renders 1`] = `
 `;
 
 exports[`Components: Toast Developer documentation renders 1`] = `
-<section
-  id="developer-documentation-container"
->
+<section>
   <h2
     id="developer-documentation"
   >

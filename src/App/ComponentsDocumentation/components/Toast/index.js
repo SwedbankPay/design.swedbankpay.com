@@ -80,7 +80,7 @@ const ContentGuidelines = () => (
 );
 
 const DeveloperDocumentation = () => (
-    <section id="developer-documentation-container">
+    <section>
         <h2 id="developer-documentation">Developer documentation</h2>
         <p>To use the Toast, call <CodeTags type="secondary" code="dg.toast()" /> with the desired options.</p>
         <ComponentPreview language="html" codeFigure dangerousHTML>
