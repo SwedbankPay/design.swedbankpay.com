@@ -350,7 +350,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
 exports[`Components: Links Overview renders 1`] = `
 <section>
   <h2
-    id="links"
+    id="overview"
   >
     Overview
   </h2>

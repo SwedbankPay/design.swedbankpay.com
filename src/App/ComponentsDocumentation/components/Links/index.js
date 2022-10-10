@@ -11,7 +11,7 @@ import CodeTags from "~/src/App/components/CodeTags";
 
 const Overview = ({ scrollToRef }) => (
     <section>
-        <h2 id="links">Overview</h2>
+        <h2 id="overview">Overview</h2>
         <p>Links should be used when you want to direct a user to a new section, page or website. They can be used on their own or inline within paragraphs.</p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewLinks} codeFigure removeOuterTag/>
 
