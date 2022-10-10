@@ -10,7 +10,14 @@ const TextColors = () => (
         <h2 id="text-colors">Text colors</h2>
         <p>To set the color of a text, use any of the following utility classes.</p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            {textColors.map((color, i) => <p key={i + color} className={`text-${color} p-2`}>.text-{color}</p>)}
+            {textColors.map((color, i) => {
+                if (color === "white") {
+                    return (<p key={i + color} className={`text-${color} text-dark-background p-2`}>.text-{color}</p>);
+                } else {
+                    return (<p key={i + color} className={`text-${color} p-2`}>.text-{color}</p>);
+                }
+            })}
+
         </ComponentPreview>
     </>
 );
