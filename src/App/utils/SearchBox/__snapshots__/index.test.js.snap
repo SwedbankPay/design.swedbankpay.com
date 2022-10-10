@@ -2003,42 +2003,6 @@ exports[`Search box results tests renders toggelbox after searcing for 'gg' 1`] 
 </BrowserRouter>
 `;
 
-exports[`Utilities; SearchBox does not render with className prop 1`] = `
-<Fragment>
-  <div
-    className="search-container"
-  >
-    <div
-      className="form-group"
-    >
-      <div
-        className="input-group"
-      >
-        <input
-          className="form-control"
-          id="search-box"
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          placeholder="Search"
-          type="text"
-        />
-        <button
-          className="btn btn-link"
-          onClick={[Function]}
-          type="button"
-        >
-          <i
-            className="material-icons"
-          >
-            search
-          </i>
-        </button>
-      </div>
-    </div>
-  </div>
-</Fragment>
-`;
-
 exports[`Utilities; SearchBox renders different buttons after click in mobile version 1`] = `
 <Fragment>
   <div
