@@ -2,9 +2,11 @@
 
 exports[`Components: Toast Content guidelines renders 1`] = `
 <section>
-  <h3>
+  <h2
+    id="content-guidelines"
+  >
     Content guidelines
-  </h3>
+  </h2>
   <div
     className="slab slab-plain mt-3 px-0"
   >
@@ -60,10 +62,10 @@ exports[`Components: Toast Content guidelines renders 1`] = `
 `;
 
 exports[`Components: Toast Developer documentation renders 1`] = `
-<section
-  id="developer-documentation"
->
-  <h2>
+<section>
+  <h2
+    id="developer-documentation"
+  >
     Developer documentation
   </h2>
   <p>
