@@ -107,7 +107,9 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
             "title": "Tag",
           },
           Object {
-            "component": <CodeTagsComponent />,
+            "component": <CodeTagsComponent
+              type="primary"
+            />,
             "description": <p>
               Code tags are used to present inline code. They use the Akkurat Mono font. Using 
               <CodeTags

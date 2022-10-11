@@ -3,15 +3,15 @@ import CodeTags from "@components/CodeTags";
 
 const TagComponent = ({ removable, type }) => (
     <div className="d-flex justify-content-center">
-        <CodeTags type={type} removable={removable} className="mr-2" text="Tag" />
-        <CodeTags type={type} removable={removable} className="mr-2" text="Tag" />
+        <CodeTags type={type} removable={removable} className="mr-2" text="Tag" />{"\n"}
+        <CodeTags type={type} removable={removable} className="mr-2" text="Tag" />{"\n"}
         <CodeTags type={type} removable={removable} text="Tag" />
     </div>
 );
 
 const CodeTagsComponent = ({ type }) => (
     <div>
-        Example of inline code using <code>{"<code>"}</code><br/>
+        Example of inline code using <code>{"<code>"}</code><br/>{"\n"}
         Example of inline code <CodeTags type={type} code={"<ComponentName/>"}/> with specified class.
     </div>
 );
@@ -69,7 +69,7 @@ export const overviewTags = {
         },
         {
             tab: "Code tag",
-            component: <CodeTagsComponent/>,
+            component: <CodeTagsComponent type="primary"/>,
             options: {
                 radio: [
                     {
