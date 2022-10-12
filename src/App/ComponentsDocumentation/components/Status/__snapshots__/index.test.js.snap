@@ -210,51 +210,37 @@ exports[`Documentation: Status Overview renders 1`] = `
      Be careful not to rely solely on the color of the status icon to convey your message.
   </p>
   <ComponentPreview
-    codeFigure={true}
     language="html"
-    removeList={true}
     showCasePanel={true}
-  >
-    <ul
-      className="list status-list"
-    >
-      <li>
-        <span
-          className="status status-neutral"
-        >
-          Neutral
-        </span>
-      </li>
-      <li>
-        <span
-          className="status status-success"
-        >
-          Success
-        </span>
-      </li>
-      <li>
-        <span
-          className="status status-warning"
-        >
-          Warning
-        </span>
-      </li>
-      <li>
-        <span
-          className="status status-danger"
-        >
-          Danger
-        </span>
-      </li>
-      <li>
-        <span
-          className="status status-inactive"
-        >
-          Inactive
-        </span>
-      </li>
-    </ul>
-  </ComponentPreview>
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <Status />,
+            "description": "The component has two different states; regular and trailing. Please use the status most suitable for your solution.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "right",
+                      "name": "Trailing",
+                      "value": Object {
+                        "right": true,
+                      },
+                    },
+                  ],
+                  "title": "Position",
+                },
+              ],
+            },
+            "title": "Status",
+          },
+        ],
+        "id": "overviewStatus",
+      }
+    }
+  />
 </Fragment>
 `;
 

@@ -13,7 +13,7 @@ const Overview = () => (
             that is why <CodeTags type="secondary" code=".status-success" /> exists. <b>NOTE:</b> Be careful not to rely solely on the color of the status icon to convey
             your message.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={showcaseStatusComponent} >
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={showcaseStatusComponent} >
         </ComponentPreview>
     </>
 );

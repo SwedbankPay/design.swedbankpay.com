@@ -1,7 +1,7 @@
 import React from "react";
 
 const Status = ({ right }) => (
-    <ul className="list status-list">
+    <ul className={`list status-list d-flex flex-column${right ? " align-items-end" : ""}`}>
         <li>
             <span className={`status${right ? " status-right" : ""} status-neutral`}>Neutral</span>
         </li>
@@ -42,7 +42,7 @@ export const showcaseStatusComponent = {
                 ]
             },
             title: "Status",
-            description: "Additional information REGARDING STATUS AND PLACEMENT OF THE DOT"
+            description: "The component has two different states; regular and trailing. Please use the status most suitable for your solution."
         }
     ]
 };
