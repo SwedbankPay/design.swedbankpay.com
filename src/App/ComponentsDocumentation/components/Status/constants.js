@@ -42,7 +42,7 @@ export const showcaseStatusComponent = {
                 ]
             },
             title: "Status",
-            description: "The component has two different states; regular and trailing. Please use the status most suitable for your solution."
+            description: "The component has two different states; leading and trailing. Use the status most suitable for your solution. Please beware, when using the trailing option, you must self-add code to make it align correctly."
         }
     ]
 };
