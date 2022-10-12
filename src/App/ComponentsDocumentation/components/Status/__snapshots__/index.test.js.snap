@@ -7,6 +7,9 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
   >
     Example of use
   </h2>
+  <h3>
+    Leading example
+  </h3>
   <ComponentPreview
     language="html"
     showCasePanel={true}
@@ -138,6 +141,105 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
             className="text-right"
           >
             69 420,00
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ComponentPreview>
+  <h3>
+    Trailing example
+  </h3>
+  <ComponentPreview
+    language="html"
+    showCasePanel={true}
+  >
+    <table
+      className="table table-plain"
+    >
+      <thead>
+        <tr>
+          <th
+            scope="col"
+          >
+            Name
+          </th>
+          <th
+            className="text-right"
+            scope="col"
+          >
+            Status
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Micheal Scott
+          </td>
+          <td
+            className="d-flex align-items-center justify-content-end"
+          >
+            <span
+              className="status status-right status-neutral"
+            >
+              Current Manager
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Dwight Shrute
+          </td>
+          <td
+            className="d-flex align-items-center justify-content-end"
+          >
+            <span
+              className="status status-right status-success"
+            >
+              Assistant (to the) manager
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Jim Halpert
+          </td>
+          <td
+            className="d-flex align-items-center justify-content-end"
+          >
+            <span
+              className="status status-right status-warning"
+            >
+              Time waster
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Todd Packer
+          </td>
+          <td
+            className="d-flex align-items-center justify-content-end"
+          >
+            <span
+              className="status status-right status-danger"
+            >
+              Former employee
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Pam Beesly
+          </td>
+          <td
+            className="d-flex align-items-center justify-content-end"
+          >
+            <span
+              className="status status-right status-inactive"
+            >
+              No experience
+            </span>
           </td>
         </tr>
       </tbody>
