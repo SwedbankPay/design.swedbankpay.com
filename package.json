@@ -79,7 +79,7 @@
     "eslint-plugin-react": "7.24.0",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-testcafe": "^0.2.1",
-    "favicons": "^6.2.2",
+    "favicons": "^7.0.1",
     "favicons-webpack-plugin": "^5.0.2",
     "file-loader": "^6.2.0",
     "filemanager-webpack-plugin": "^7.0.0",
