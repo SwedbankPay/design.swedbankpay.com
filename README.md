@@ -228,6 +228,7 @@ Inspired by [Bootstrap][bootstrap] and [Materialize][materialize].
   [PhungNg]:              https://github.com/PhungNg
   [VikingTristan]:        https://github.com/VikingTristan
   [eskilsen]:             https://github.com/eskilsen
+  [goldenraphti]          https://github.com/goldenraphti
   [babel]:                https://babeljs.io/
   [eslint]:               https://eslint.org/
   [sentry]:               https://sentry.io
