@@ -18,7 +18,7 @@ const RenderRoutes = ({ path, redirect, routes, appFolder }) => (
             return <Route key={`doc_route_${path}`} exact path={path} render={() => <>
                 <div className="d-flex align-items-center ">
                     <DocHeading />
-                    {route.statusBadges && route.statusBadges.map((statusBadge, i) => <StatusBadge key={i} type={statusBadge} />)}
+                    {route.statusBadges && route.statusBadges.map(statusBadge => <StatusBadge key={`status-badge-${statusBadge}`} type={statusBadge} />)}
                 </div>
                 <RouteRenderComponent />
             </>} />;
