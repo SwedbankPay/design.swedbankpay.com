@@ -2,7 +2,7 @@ import React, { Fragment, useEffect } from "react";
 import PropTypes from "prop-types";
 import { dropdown } from "@src/scripts/main";
 
-const DropdownToggle = ({ isIconButton = false, label = "Default label", icon, iconAfter }) => {
+const DropdownToggle = ({ isIconButton = false, label = "Default label", icon = isIconButton && !icon ? "more_vert" : "keyboard_arrow_down", iconAfter }) => {
 
     useEffect(() => {
         dropdown.init();
@@ -18,7 +18,7 @@ const DropdownToggle = ({ isIconButton = false, label = "Default label", icon, i
             >{"\n"}
                 {isIconButton ?
                     <>
-                        <i className="material-icons">more_vert</i>{"\n"}
+                        <i className="material-icons">{icon}</i>{"\n"}
                     </> :
                     <>
                         {!iconAfter && <><i className={`material-icons ${iconAfter ? "ml-2" : "mr-2"}`} aria-hidden="true">{icon}</i>{"\n"}</>}
@@ -35,7 +35,7 @@ const DropdownToggle = ({ isIconButton = false, label = "Default label", icon, i
 const Dropdown = ({ id,
     classNames,
     label,
-    icon = "keyboard_arrow_down",
+    icon,
     iconAfter = true,
     isIconButton,
     fullWidth,

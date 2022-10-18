@@ -23,38 +23,34 @@ const Dropdown = ({ label, isIconButton, fullWidth, position, icon, iconAfter, e
 
 const contentGuidelinesItems = {
     overviewExample: {
-        actionsListItems: <>
-            <a href="#" onClick={e => e.preventDefault()} key="item-overview-action-1" >
-                <Icon type="bookmark"/>
-                    Edit
-            </a>
-            <a href="#" onClick={e => e.preventDefault()} key="item-overview-action-2" >
-                <Icon type="delete_outline"/>
-                    Delete
-            </a>
-        </>,
-        formItems: [
+        checkboxFormItems: [
             {
-                id: "dropdown-form-inputs-example-1",
-                label: "Option 1"
+                id: "dropdown-checkbox-overview-form-inputs-example-1",
+                label: "Card"
             },
             {
-                id: "dropdown-form-inputs-example-2",
-                label: "Option with a longer text 2"
+                id: "dropdown-checkbox-overview-form-inputs-example-2",
+                label: "Credit"
             },
             {
-                id: "dropdown-form-inputs-example-3",
-                label: "Option 3"
+                id: "dropdown-checkbox-overview-form-inputs-example-3",
+                label: "Invoice"
             }
         ],
-        formGroup: <>
-            <div className="d-flex">
-                <InputGroup type="text" label="From, in SEK" postfixValue="kr" postfix={true} id="form-group-input-1-example" className="mr-2" />
-                <InputGroup type="text" label="To, in SEK" postfixValue="kr" postfix={true} id="form-group-input-2-example" />
-            </div>
-            <ButtonComponent type="primary" label="Apply filter" className="mr-2" />
-            <ButtonComponent type="link" label="Clear filters" />
-        </>
+        radiobuttonsFormItems: [
+            {
+                id: "dropdown-radiobuttons-overview-form-inputs-example-1",
+                label: "Date"
+            },
+            {
+                id: "dropdown-radiobuttons-overview-form-inputs-example-2",
+                label: "Name"
+            },
+            {
+                id: "dropdown-radiobuttons-overview-form-inputs-example-3",
+                label: "Price"
+            }
+        ]
     },
     doDontExamples: {
         example1:
@@ -143,126 +139,134 @@ const contentGuidelinesItems = {
     }
 };
 
+const tabsContent = {
+    actionsListItems: <>
+        <a href="#" onClick={e => e.preventDefault()} key="item-overview-action-1" >
+            <Icon type="bookmark"/>
+            Edit
+        </a>
+        <a href="#" onClick={e => e.preventDefault()} key="item-overview-action-2" >
+            <Icon type="delete_outline"/>
+            Delete
+        </a>
+    </>,
+    checkboxes: <CheckboxComponent groupTitle="" name="dropdown-checkboxes-examples" options={contentGuidelinesItems.overviewExample.checkboxFormItems} group />,
+    radiobuttons: <Radio groupTitle="" name="dropdown-radio-examples" options={contentGuidelinesItems.overviewExample.radiobuttonsFormItems} group />,
+    formGroup: <>
+        <div className="d-flex">
+            <InputGroup type="text" label="From, in SEK" postfixValue="kr" postfix={true} id="form-group-input-1-example" className="mr-2" />
+            <InputGroup type="text" label="To, in SEK" postfixValue="kr" postfix={true} id="form-group-input-2-example" />
+        </div>
+        <ButtonComponent type="primary" label="Apply filter" className="mr-2" />
+        <ButtonComponent type="link" label="Clear filters" />
+    </>
+};
+
+const dropdownSidebarOptions = {
+    radio: [
+        {
+            id: "toggle_examples",
+            title: "Toggle, examples",
+            values: [
+                {
+                    name: "Secondary button",
+                    value: {
+                        isIconButton: false
+                    }
+                },
+                {
+                    name: "Icon button",
+                    value: {
+                        isIconButton: true
+                    }
+                }
+            ]
+        },
+        {
+            id: "modal_width",
+            title: "Modal width",
+            values: [
+                {
+                    name: "default",
+                    value: {
+                        fullWidth: false
+                    }
+                },
+                {
+                    name: "Full width",
+                    value: {
+                        fullWidth: true
+                    }
+                }
+            ]
+        },
+        {
+            id: "preffered_position",
+            title: "Position",
+            values: [
+                {
+                    name: "Align left",
+                    value: {
+                        position: "anchor-top-left"
+                    }
+                },
+                {
+                    name: "Align right",
+                    value: {
+                        position: "anchor-top-right"
+                    }
+                }
+            ]
+        }
+
+    ],
+    checkbox: [
+        {
+            title: "State modifiers",
+            inputs: [
+                {
+                    id: "state-modifier-error",
+                    name: "Error",
+                    value: {
+                        errorMessage: "Descriptive helpful error message."
+                    }
+                }
+            ]
+        }
+    ]
+};
+
 export const dropdownOverview = {
-    id: "no-tabs",
+    id: "overviewDropdown",
+    tabsId: "overviewDropdownTabs",
     elements: [
         {
-            component: <Dropdown />,
-            options: {
-                radio: [
-                    {
-                        id: "toggle_examples",
-                        title: "Toggle, examples",
-                        values: [
-                            {
-                                name: "Secondary button",
-                                value: {
-                                    isIconButton: false,
-                                    label: "Actions"
-                                }
-                            },
-                            {
-                                name: "Icon button",
-                                value: {
-                                    isIconButton: true
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: "modal_width",
-                        title: "Modal width",
-                        values: [
-                            {
-                                name: "default",
-                                value: {
-                                    fullWidth: false
-                                }
-                            },
-                            {
-                                name: "Full width",
-                                value: {
-                                    fullWidth: true
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: "container_examples",
-                        title: "Container, examples",
-                        values: [
-                            {
-                                name: "Action list",
-                                value: {
-                                    content: contentGuidelinesItems.overviewExample.actionsListItems,
-                                    largePadding: false
-                                }
-                            },
-                            {
-                                name: "Checkbox group",
-                                value: {
-                                    content: <CheckboxComponent groupTitle="" name="dropdown-checkboxes-examples" options={contentGuidelinesItems.overviewExample.formItems} group />,
-                                    largePadding: true
-                                }
-                            },
-                            {
-                                name: "Radiobutton group",
-                                value: {
-                                    content: <Radio groupTitle="" name="dropdown-radio-examples" options={contentGuidelinesItems.overviewExample.formItems} group />,
-                                    largePadding: true
-                                }
-                            },
-                            {
-                                name: "Form-group",
-                                value: {
-                                    content: contentGuidelinesItems.overviewExample.formGroup,
-                                    largePadding: true
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        id: "preffered_position",
-                        title: "Position",
-                        values: [
-                            {
-                                name: "Align left",
-                                value: {
-                                    position: "anchor-top-left"
-                                }
-                            },
-                            {
-                                name: "Align right",
-                                value: {
-                                    position: "anchor-top-right"
-                                }
-                            }
-                        ]
-                    }
-
-                ],
-                checkbox: [
-                    {
-                        title: "State modifiers",
-                        inputs: [
-                            {
-                                id: "state-modifier-error",
-                                name: "Error",
-                                value: {
-                                    errorMessage: "Descriptive helpful error message."
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
+            tab: "Dropdown",
+            component: <Dropdown label="Actions" content={tabsContent.actionsListItems} largePadding={false} />,
+            options: dropdownSidebarOptions,
             title: "Dropdown menu",
-            description: `A dropdown consist of a dropdown toggle and a dropdown container.
-            Any button component can be used as a dropdown toggle. The dropdown container usually contain
-            a list of actions or options, but it can also contain other controls or content like Input fields
-            and Buttons. You can set the preffered position of the dropdown container in relation to it’s toggle,
-            by default the position will be top left. The container will make sure it is positioned
-            within the viewport, this means that sometimes it flips or move slightly to the left or right.`
+            description: "The popover is a container for various content. It usually contains a list of actions or options but it can also contain other type of controls or content like input fields and buttons. Popovers are usually triggered by a button component but they can also be triggerd by other elements. You can set the preffered position of the Popover in relation to it’s trigger, by default the position will be bottom left. It will make sure it is positioned within the viewport, this means that sometimes the Popover flips or move slightly to the left or right."
+        },
+        {
+            tab: "Checkbox list",
+            component: <Dropdown label="Payment method" content={tabsContent.checkboxes} largePadding={true} />,
+            options: dropdownSidebarOptions,
+            title: "Checkbox list",
+            description: "Use a checkbox list if you have a small to a medium number of options, and want the user to select one or more of the options. When using a checkbox list drop-down menu, could be combined with the tag component to indicate the chosen options from the drop-down menu."
+        },
+        {
+            tab: "Radio buttons list",
+            component: <Dropdown label="Sort by" content={tabsContent.radiobuttons} largePadding={true} icon="sort" />,
+            options: dropdownSidebarOptions,
+            title: "Radio button list",
+            description: "Radio button lists are used when the user needs to select a single option out of a list of options."
+        },
+        {
+            tab: "Form Group",
+            component: <Dropdown label="Amount" content={tabsContent.formGroup} largePadding={true} />,
+            options: dropdownSidebarOptions,
+            title: "Form-group",
+            description: "Form-group can use different type of components ex. date pickers, rannge sliders etc."
         }
     ]
 };
