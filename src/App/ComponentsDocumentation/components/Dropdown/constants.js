@@ -1,35 +1,38 @@
 import React from "react";
 import DropdownComponent from "@components/Dropdown";
 import ButtonComponent from "@components/Button";
+import { Icon } from "@docutils";
+import CheckboxComponent from "@components/FormComponents/Checkbox";
+import Radio from "@components/FormComponents/Radio";
+import InputGroup from "@components/InputGroup";
 
-const Dropdown = ({ label, isIconButton, fullWidth, position, dropdownType, actionItems, formItems, icon, iconAfter, errorMessage }) => (
+const Dropdown = ({ label, isIconButton, fullWidth, position, icon, iconAfter, errorMessage, content, largePadding }) => (
     <DropdownComponent
         label={label}
         isIconButton={isIconButton}
         fullWidth={fullWidth}
         position={position}
-        dropdownType={dropdownType}
         classNames=""
-        actionItems={actionItems}
-        formItems={formItems}
         icon={icon}
         iconAfter={iconAfter}
         errorMessage={errorMessage}
+        content={content}
+        largePadding={largePadding}
     />
 );
 
 const contentGuidelinesItems = {
     overviewExample: {
-        actionItems: [
-            {
-                name: "Edit",
-                icon: "bookmark"
-            },
-            {
-                name: "Delete",
-                icon: "delete_outline"
-            }
-        ],
+        actionsListItems: <>
+            <a href="#" onClick={e => e.preventDefault()} key="item-overview-action-1" >
+                <Icon type="bookmark"/>
+                    Edit
+            </a>
+            <a href="#" onClick={e => e.preventDefault()} key="item-overview-action-2" >
+                <Icon type="delete_outline"/>
+                    Delete
+            </a>
+        </>,
         formItems: [
             {
                 id: "dropdown-form-inputs-example-1",
@@ -43,71 +46,100 @@ const contentGuidelinesItems = {
                 id: "dropdown-form-inputs-example-3",
                 label: "Option 3"
             }
-        ]
+        ],
+        formGroup: <>
+            <div className="d-flex">
+                <InputGroup type="text" label="From, in SEK" postfixValue="kr" postfix={true} id="form-group-input-1-example" className="mr-2" />
+                <InputGroup type="text" label="To, in SEK" postfixValue="kr" postfix={true} id="form-group-input-2-example" />
+            </div>
+            <ButtonComponent type="primary" label="Apply filter" className="mr-2" />
+            <ButtonComponent type="link" label="Clear filters" />
+        </>
     },
     doDontExamples: {
-        example1: [
-            {
-                id: "dropdown-dodont-example-1",
-                label: "Successful"
-            },
-            {
-                id: "dropdown-dodont-example-2",
-                label: "Failed"
-            },
-            {
-                id: "dropdown-dodont-example-3",
-                label: "Cancelled"
-            }
-        ],
-        example2: [
-            {
-                id: "dropdown-dodont-example-1-test",
-                label: "Successful"
-            }
-        ]
+        example1:
+            <CheckboxComponent
+                groupTitle=""
+                name="dropdown-checkboxes-dodont-examples-1"
+                options={[
+                    {
+                        id: "dropdown-dodont-example-1",
+                        label: "Successful"
+                    },
+                    {
+                        id: "dropdown-dodont-example-2",
+                        label: "Failed"
+                    },
+                    {
+                        id: "dropdown-dodont-example-3",
+                        label: "Cancelled"
+                    }
+                ]}
+                group
+            />,
+        example2:
+            <>
+                <CheckboxComponent
+                    groupTitle="Filter by"
+                    name="dropdown-checkboxes-dodont-examples-2"
+                    options={[
+                        {
+                            id: "dropdown-dodont-example-2-test-item-1",
+                            label: "Card"
+                        },
+                        {
+                            id: "dropdown-dodont-example-2-test-item-2",
+                            label: "Credit"
+                        },
+                        {
+                            id: "dropdown-dodont-example-2-test-item-3",
+                            label: "Invoice"
+                        }
+                    ]}
+                    group
+                />
+                <p className="pt-4">Actions</p>
+                <a href="#" onClick={e => e.preventDefault()} key="item-dodont-example2-action-1" >
+                        Edit
+                </a>
+                <a href="#" onClick={e => e.preventDefault()} key="item-dodont-example2-action-2" >
+                        Delete
+                </a>
+            </>
     },
     contentGuidelinesExamples: {
-        example1: [
-            {
-                name: "Rename",
-                icon: ""
-            },
-            {
-                name: "Edit HTML",
-                icon: ""
-            }
-        ],
-        example2: [
-            {
-                name: "HTML editing options",
-                icon: ""
-            },
-            {
-                name: "File name changes",
-                icon: ""
-            }
-        ],
-        example3: [
-            {
-                name: "Add items",
-                icon: ""
-            },
-            {
-                name: "Edit list",
-                icon: ""
-            }
-        ],
-        example4: [
-            {
-                name: "Add an item",
-                icon: ""
-            },
-            {
-                name: "Edit the list",
-                icon: ""
-            }
-        ]
+        example1: <>
+            <a href="#" onClick={e => e.preventDefault()} key="item-dodont-example1-action-1" >
+                Rename
+            </a>
+            <a href="#" onClick={e => e.preventDefault()} key="item-dodont-example1-action-2" >
+                Edit HTML
+            </a>
+        </>,
+        example2: <>
+            <a href="#" onClick={e => e.preventDefault()} key="item-dodont-example2-action-1" >
+            HTML editing options
+            </a>
+            <a href="#" onClick={e => e.preventDefault()} key="item-dodont-example2-action-2" >
+            File name changes
+            </a>
+        </>,
+        example3: <>
+            <a href="#" onClick={e => e.preventDefault()} key="item-dodont-example3-action-1" >
+            Add item
+            </a>
+            <a href="#" onClick={e => e.preventDefault()} key="item-dodont-example3-action-2" >
+            Edit list
+            </a>
+        </>,
+        example4: <>
+            <a href="#" onClick={e => e.preventDefault()} key="item-dodont-example4-action-1" >
+            Add an item
+            </a>
+            <a href="#" onClick={e => e.preventDefault()} key="item-dodont-example4-action-2" >
+            Edit the list
+            </a>
+        </>
     }
 };
 
@@ -115,7 +147,7 @@ export const dropdownOverview = {
     id: "no-tabs",
     elements: [
         {
-            component: <Dropdown actionItems={contentGuidelinesItems.overviewExample.actionItems} formItems={contentGuidelinesItems.overviewExample.formItems} />,
+            component: <Dropdown />,
             options: {
                 radio: [
                     {
@@ -162,25 +194,29 @@ export const dropdownOverview = {
                             {
                                 name: "Action list",
                                 value: {
-                                    dropdownType: "action-list"
+                                    content: contentGuidelinesItems.overviewExample.actionsListItems,
+                                    largePadding: false
                                 }
                             },
                             {
                                 name: "Checkbox group",
                                 value: {
-                                    dropdownType: "checkbox-group"
+                                    content: <CheckboxComponent groupTitle="" name="dropdown-checkboxes-examples" options={contentGuidelinesItems.overviewExample.formItems} group />,
+                                    largePadding: true
                                 }
                             },
                             {
                                 name: "Radiobutton group",
                                 value: {
-                                    dropdownType: "radiobutton-group"
+                                    content: <Radio groupTitle="" name="dropdown-radio-examples" options={contentGuidelinesItems.overviewExample.formItems} group />,
+                                    largePadding: true
                                 }
                             },
                             {
                                 name: "Form-group",
                                 value: {
-                                    dropdownType: "form-group"
+                                    content: contentGuidelinesItems.overviewExample.formGroup,
+                                    largePadding: true
                                 }
                             }
                         ]
@@ -237,11 +273,11 @@ export const contentGuidelines = [
         examples: [
             {
                 slabType: "success",
-                content: <><Dropdown id="howto-dropdown-example-1" dropdownType="checkbox-group" label="Filter" formItems={contentGuidelinesItems.doDontExamples.example1} isIconButton={false} icon="filter_list" iconAfter={false} /><ButtonComponent type="secondary" label="Edit" className="ml-2" icon="edit" /></>
+                content: <><Dropdown id="howto-dropdown-example-1" label="Filter" content={contentGuidelinesItems.doDontExamples.example1} isIconButton={false} icon="filter_list" iconAfter={false} largePadding={true} /><ButtonComponent type="secondary" label="Edit" className="ml-2" icon="edit" /></>
             },
             {
                 slabType: "error",
-                content: <Dropdown id="howto-dropdown-example-2" dropdownType="form-group" label="Action" formItems={contentGuidelinesItems.doDontExamples.example2} isIconButton={false} />,
+                content: <Dropdown id="howto-dropdown-example-2" label="Actions" content={contentGuidelinesItems.doDontExamples.example2} isIconButton={false} largePadding={true} />,
                 rowDescription: "The Dropdown should contain actions, options or other elements that share a relationships to each other."
             }
         ]
@@ -252,20 +288,20 @@ export const contentGuidelines = [
         examples: [
             {
                 slabType: "success",
-                content: <Dropdown id="guidelines-dropdown-example-1" dropdownType="action-list" actionItems={contentGuidelinesItems.contentGuidelinesExamples.example1} isIconButton={true} />
+                content: <Dropdown id="guidelines-dropdown-example-1" content={contentGuidelinesItems.contentGuidelinesExamples.example1} isIconButton={true} />
             },
             {
                 slabType: "error",
-                content: <Dropdown id="guidelines-dropdown-example-2" dropdownType="action-list" actionItems={contentGuidelinesItems.contentGuidelinesExamples.example2} isIconButton={true} />,
+                content: <Dropdown id="guidelines-dropdown-example-2" content={contentGuidelinesItems.contentGuidelinesExamples.example2} isIconButton={true} />,
                 rowDescription: "If a Dropdown container contains actions, they should be action-led, menaing led by a strong verb that encourages action."
             },
             {
                 slabType: "success",
-                content: <Dropdown id="guidelines-dropdown-example-3" dropdownType="action-list" actionItems={contentGuidelinesItems.contentGuidelinesExamples.example3} isIconButton={true} />
+                content: <Dropdown id="guidelines-dropdown-example-3" content={contentGuidelinesItems.contentGuidelinesExamples.example3} isIconButton={true} />
             },
             {
                 slabType: "error",
-                content: <Dropdown id="guidelines-dropdown-example-4" dropdownType="action-list" actionItems={contentGuidelinesItems.contentGuidelinesExamples.example4} isIconButton={true} />,
+                content: <Dropdown id="guidelines-dropdown-example-4" content={contentGuidelinesItems.contentGuidelinesExamples.example4} isIconButton={true} />,
                 rowDescription: "If a Dropdown container contains list of actions or options, they should be scannable. Avoid unnecessary words such as “the”, “an”, or “a”."
             }
         ]
