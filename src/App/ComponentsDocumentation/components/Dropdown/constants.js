@@ -6,7 +6,7 @@ import CheckboxComponent from "@components/FormComponents/Checkbox";
 import Radio from "@components/FormComponents/Radio";
 import InputGroup from "@components/InputGroup";
 
-const Dropdown = ({ label, isIconButton, fullWidth, position, icon, iconAfter, errorMessage, content, largePadding }) => (
+const Dropdown = ({ label, isIconButton, fullWidth, position, icon, iconAfter, errorMessage, content, largePadding, dropdownSelect }) => (
     <DropdownComponent
         label={label}
         isIconButton={isIconButton}
@@ -18,6 +18,7 @@ const Dropdown = ({ label, isIconButton, fullWidth, position, icon, iconAfter, e
         errorMessage={errorMessage}
         content={content}
         largePadding={largePadding}
+        dropdownSelect={dropdownSelect}
     />
 );
 
@@ -162,6 +163,32 @@ const tabsContent = {
     </>
 };
 
+const selectSidebarOptions = {
+    radio: [
+        {
+            id: "select_example",
+            title: "Select variants",
+            values: [
+                {
+                    name: "Select",
+                    value: {
+                        dropdownSelect: true
+                    }
+                },
+                {
+                    name: "Radiobuttons",
+                    value: {
+                        dropdownSelect: false,
+                        label: "Payment method",
+                        content: tabsContent.radiobuttons,
+                        largePadding: true
+                    }
+                }
+            ]
+        }
+    ]
+};
+
 const dropdownSidebarOptions = {
     radio: [
         {
@@ -241,7 +268,7 @@ export const dropdownOverview = {
     tabsId: "overviewDropdownTabs",
     elements: [
         {
-            tab: "Dropdown",
+            tab: "Actions",
             component: <Dropdown label="Actions" content={tabsContent.actionsListItems} largePadding={false} />,
             options: dropdownSidebarOptions,
             title: "Dropdown menu",
@@ -255,11 +282,11 @@ export const dropdownOverview = {
             description: "Use a checkbox list if you have a small to a medium number of options, and want the user to select one or more of the options. When using a checkbox list drop-down menu, could be combined with the tag component to indicate the chosen options from the drop-down menu."
         },
         {
-            tab: "Radio buttons",
-            component: <Dropdown label="Sort by" content={tabsContent.radiobuttons} largePadding={true} icon="sort" />,
-            options: dropdownSidebarOptions,
-            title: "Radio button list",
-            description: "Radio button lists are used when the user needs to select a single option out of a list of options."
+            tab: "Select",
+            component: <Dropdown dropdownSelect/>,
+            options: selectSidebarOptions,
+            title: "Select list",
+            description: "The select options are used when you want the user to choose one element. It can be implemented as a customized select or a radio button list."
         },
         {
             tab: "Form Group",
