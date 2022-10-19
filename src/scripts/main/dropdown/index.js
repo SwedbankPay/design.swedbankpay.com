@@ -14,6 +14,7 @@ class ActionList {
         this.container = element;
         this.dropdownMenu = element.querySelector(SELECTORS.DROPDOWNMENU);
         this.dropdownMenuLinks = this.dropdownMenu.querySelectorAll("a");
+        this.dropdownMenuButtons = this.dropdownMenu.querySelectorAll(".btn-elem");
         this.isOpen = this.container.classList.contains("active");
         this.toggleBtn = element.querySelector(SELECTORS.TOGGLE);
 
@@ -27,6 +28,7 @@ class ActionList {
 
         // close menu when clicking on links
         this.dropdownMenuLinks.forEach(link => link.addEventListener("click", () => this.close()));
+        this.dropdownMenuButtons.forEach(link => link.addEventListener("click", () => this.close()));
     }
 
     open () {
