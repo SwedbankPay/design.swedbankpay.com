@@ -182,7 +182,7 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
             <span
               className="status status-right status-neutral"
             >
-              Current Manager
+              Regional Manager
             </span>
           </td>
         </tr>
@@ -196,7 +196,7 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
             <span
               className="status status-right status-success"
             >
-              Assistant (to the) manager
+              Assistant (to the) regional manager
             </span>
           </td>
         </tr>

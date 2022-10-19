@@ -1,7 +1,7 @@
 import React from "react";
 
 const Status = ({ right }) => (
-    <ul className={`list status-list d-flex flex-column${right ? " align-items-end" : ""}`}>
+    <ul className={`list status-list${right ? " text-right" : ""}`}>
         <li>
             <span className={`status${right ? " status-right" : ""} status-neutral`}>Neutral</span>
         </li>
@@ -103,11 +103,11 @@ export const trailingExample = (
         <tbody>
             <tr>
                 <td>Micheal Scott</td>
-                <td className="d-flex align-items-center justify-content-end"><span className="status status-right status-neutral">Current Manager</span></td>
+                <td className="d-flex align-items-center justify-content-end"><span className="status status-right status-neutral">Regional Manager</span></td>
             </tr>
             <tr>
                 <td>Dwight Shrute</td>
-                <td className="d-flex align-items-center justify-content-end"><span className="status status-right status-success">Assistant (to the) manager</span></td>
+                <td className="d-flex align-items-center justify-content-end"><span className="status status-right status-success">Assistant (to the) regional manager</span></td>
             </tr>
             <tr>
                 <td>Jim Halpert</td>
