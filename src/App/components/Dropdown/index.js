@@ -1,6 +1,37 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { dropdown } from "@src/scripts/main";
+
+const DropdownSelect = () => {
+    const [buttonLabel, setButtonLabel] = useState("Card type");
+    const cardTypes = ["VISA", "Mastercard", "AMEX", "Maestro card", "Stripe", "Vipps", "Swish"];
+
+    useEffect(() => {
+        dropdown.init();
+    });
+
+    return (
+        <>
+            <div className="dropdown-list anchor-top-left">
+                <div className="toggle-menu-container">
+                    <button
+                        className="dropdown-toggle btn btn-secondary"
+                        id="dropdownSelect"
+                        type="button"
+                        aria-label="dropdown button"
+                    >{buttonLabel}
+                        <i className="material-icons ml-2" aria-hidden="true">keyboard_arrow_down</i>
+                    </button>{"\n"}
+                    <div className="dropdown-menu">
+                        {cardTypes.map(card => (
+                            <button className="btn-elem" onClick={() => setButtonLabel(card)}key={card}>{card}</button>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+};
 
 const DropdownToggle = ({ isIconButton = false, label = "Default label", icon = isIconButton && !icon ? "more_vert" : "keyboard_arrow_down", iconAfter }) => {
 
@@ -41,16 +72,19 @@ const Dropdown = ({ id,
     position = "anchor-top-left",
     errorMessage,
     content,
-    largePadding }) => (
+    largePadding,
+    dropdownSelect }) => (
     <>
-        <div id={id} className={`dropdown-list ${position} ${classNames ? ` ${classNames}` : ""} ${errorMessage ? "has-error" : ""}`}>{"\n"}
-            <div className="toggle-menu-container">
-                <DropdownToggle isIconButton={isIconButton} label={label} icon={icon} iconAfter={iconAfter} />
-                <div className={`dropdown-menu ${fullWidth ? "full-width" : ""} ${largePadding ? "p-3" : ""} `} aria-labelledby="dropdownToggle">{"\n"}
-                    {content}
+        {dropdownSelect ? <DropdownSelect/> :
+            <div id={id} className={`dropdown-list ${position} ${classNames ? ` ${classNames}` : ""} ${errorMessage ? "has-error" : ""}`}>{"\n"}
+                <div className="toggle-menu-container">
+                    <DropdownToggle isIconButton={isIconButton} label={label} icon={icon} iconAfter={iconAfter} />
+                    <div className={`dropdown-menu ${fullWidth ? "full-width" : ""} ${largePadding ? "p-3" : ""} `} aria-labelledby="dropdownToggle">{"\n"}
+                        {content}
+                    </div>
                 </div>
-            </div>
-            {errorMessage && <><div className="help-block"><i className="material-icons">error</i>{errorMessage}</div>{"\n"}</>}        </div>
+                {errorMessage && <><div className="help-block"><i className="material-icons">error</i>{errorMessage}</div>{"\n"}</>}        </div>
+        }
     </>
 );
 
@@ -64,8 +98,8 @@ Dropdown.propTypes = {
     fullWidth: PropTypes.bool,
     position: PropTypes.oneOf(["anchor-top-left", "anchor-top-right"]),
     errorMessage: PropTypes.string,
-    content: PropTypes.oneOfType(PropTypes.string, PropTypes.object).isRequired,
-    largePadding: PropTypes.bool
+    largePadding: PropTypes.bool,
+    dropdownSelect: PropTypes.bool
 };
 
 export default Dropdown;
