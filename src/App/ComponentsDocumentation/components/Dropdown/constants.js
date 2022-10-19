@@ -248,14 +248,14 @@ export const dropdownOverview = {
             description: "The popover is a container for various content. It usually contains a list of actions or options but it can also contain other type of controls or content like input fields and buttons. Popovers are usually triggered by a button component but they can also be triggerd by other elements. You can set the preffered position of the Popover in relation to it’s trigger, by default the position will be bottom left. It will make sure it is positioned within the viewport, this means that sometimes the Popover flips or move slightly to the left or right."
         },
         {
-            tab: "Checkbox list",
+            tab: "Checkbox",
             component: <Dropdown label="Payment method" content={tabsContent.checkboxes} largePadding={true} />,
             options: dropdownSidebarOptions,
             title: "Checkbox list",
             description: "Use a checkbox list if you have a small to a medium number of options, and want the user to select one or more of the options. When using a checkbox list drop-down menu, could be combined with the tag component to indicate the chosen options from the drop-down menu."
         },
         {
-            tab: "Radio buttons list",
+            tab: "Radio buttons",
             component: <Dropdown label="Sort by" content={tabsContent.radiobuttons} largePadding={true} icon="sort" />,
             options: dropdownSidebarOptions,
             title: "Radio button list",

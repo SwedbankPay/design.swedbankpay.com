@@ -12,7 +12,6 @@ const DropdownToggle = ({ isIconButton = false, label = "Default label", icon = 
         <>
             <button
                 className={`dropdown-toggle ${isIconButton ? " dropdown-toggle-icon " : " btn btn-secondary"}`}
-                id="DropdownToggle"
                 type="button"
                 aria-label="dropdown button"
             >{"\n"}

@@ -1,0 +1,776 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: Dropdown Overview renders 1`] = `
+<section>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <Dropdown
+              content={
+                <React.Fragment>
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    <Icon
+                      type="bookmark"
+                    />
+                    Edit
+                  </a>
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    <Icon
+                      type="delete_outline"
+                    />
+                    Delete
+                  </a>
+                </React.Fragment>
+              }
+              label="Actions"
+              largePadding={false}
+            />,
+            "description": "The popover is a container for various content. It usually contains a list of actions or options but it can also contain other type of controls or content like input fields and buttons. Popovers are usually triggered by a button component but they can also be triggerd by other elements. You can set the preffered position of the Popover in relation to it’s trigger, by default the position will be bottom left. It will make sure it is positioned within the viewport, this means that sometimes the Popover flips or move slightly to the left or right.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "state-modifier-error",
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
+                      },
+                    },
+                  ],
+                  "title": "State modifiers",
+                },
+              ],
+              "radio": Array [
+                Object {
+                  "id": "toggle_examples",
+                  "title": "Toggle, examples",
+                  "values": Array [
+                    Object {
+                      "name": "Secondary button",
+                      "value": Object {
+                        "isIconButton": false,
+                      },
+                    },
+                    Object {
+                      "name": "Icon button",
+                      "value": Object {
+                        "isIconButton": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "modal_width",
+                  "title": "Modal width",
+                  "values": Array [
+                    Object {
+                      "name": "default",
+                      "value": Object {
+                        "fullWidth": false,
+                      },
+                    },
+                    Object {
+                      "name": "Full width",
+                      "value": Object {
+                        "fullWidth": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "preffered_position",
+                  "title": "Position",
+                  "values": Array [
+                    Object {
+                      "name": "Align left",
+                      "value": Object {
+                        "position": "anchor-top-left",
+                      },
+                    },
+                    Object {
+                      "name": "Align right",
+                      "value": Object {
+                        "position": "anchor-top-right",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Dropdown",
+            "title": "Dropdown menu",
+          },
+          Object {
+            "component": <Dropdown
+              content={
+                <Checkbox
+                  group={true}
+                  groupTitle=""
+                  name="dropdown-checkboxes-examples"
+                  options={
+                    Array [
+                      Object {
+                        "id": "dropdown-checkbox-overview-form-inputs-example-1",
+                        "label": "Card",
+                      },
+                      Object {
+                        "id": "dropdown-checkbox-overview-form-inputs-example-2",
+                        "label": "Credit",
+                      },
+                      Object {
+                        "id": "dropdown-checkbox-overview-form-inputs-example-3",
+                        "label": "Invoice",
+                      },
+                    ]
+                  }
+                />
+              }
+              label="Payment method"
+              largePadding={true}
+            />,
+            "description": "Use a checkbox list if you have a small to a medium number of options, and want the user to select one or more of the options. When using a checkbox list drop-down menu, could be combined with the tag component to indicate the chosen options from the drop-down menu.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "state-modifier-error",
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
+                      },
+                    },
+                  ],
+                  "title": "State modifiers",
+                },
+              ],
+              "radio": Array [
+                Object {
+                  "id": "toggle_examples",
+                  "title": "Toggle, examples",
+                  "values": Array [
+                    Object {
+                      "name": "Secondary button",
+                      "value": Object {
+                        "isIconButton": false,
+                      },
+                    },
+                    Object {
+                      "name": "Icon button",
+                      "value": Object {
+                        "isIconButton": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "modal_width",
+                  "title": "Modal width",
+                  "values": Array [
+                    Object {
+                      "name": "default",
+                      "value": Object {
+                        "fullWidth": false,
+                      },
+                    },
+                    Object {
+                      "name": "Full width",
+                      "value": Object {
+                        "fullWidth": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "preffered_position",
+                  "title": "Position",
+                  "values": Array [
+                    Object {
+                      "name": "Align left",
+                      "value": Object {
+                        "position": "anchor-top-left",
+                      },
+                    },
+                    Object {
+                      "name": "Align right",
+                      "value": Object {
+                        "position": "anchor-top-right",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Checkbox",
+            "title": "Checkbox list",
+          },
+          Object {
+            "component": <Dropdown
+              content={
+                <Radio
+                  group={true}
+                  groupTitle=""
+                  name="dropdown-radio-examples"
+                  options={
+                    Array [
+                      Object {
+                        "id": "dropdown-radiobuttons-overview-form-inputs-example-1",
+                        "label": "Date",
+                      },
+                      Object {
+                        "id": "dropdown-radiobuttons-overview-form-inputs-example-2",
+                        "label": "Name",
+                      },
+                      Object {
+                        "id": "dropdown-radiobuttons-overview-form-inputs-example-3",
+                        "label": "Price",
+                      },
+                    ]
+                  }
+                />
+              }
+              icon="sort"
+              label="Sort by"
+              largePadding={true}
+            />,
+            "description": "Radio button lists are used when the user needs to select a single option out of a list of options.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "state-modifier-error",
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
+                      },
+                    },
+                  ],
+                  "title": "State modifiers",
+                },
+              ],
+              "radio": Array [
+                Object {
+                  "id": "toggle_examples",
+                  "title": "Toggle, examples",
+                  "values": Array [
+                    Object {
+                      "name": "Secondary button",
+                      "value": Object {
+                        "isIconButton": false,
+                      },
+                    },
+                    Object {
+                      "name": "Icon button",
+                      "value": Object {
+                        "isIconButton": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "modal_width",
+                  "title": "Modal width",
+                  "values": Array [
+                    Object {
+                      "name": "default",
+                      "value": Object {
+                        "fullWidth": false,
+                      },
+                    },
+                    Object {
+                      "name": "Full width",
+                      "value": Object {
+                        "fullWidth": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "preffered_position",
+                  "title": "Position",
+                  "values": Array [
+                    Object {
+                      "name": "Align left",
+                      "value": Object {
+                        "position": "anchor-top-left",
+                      },
+                    },
+                    Object {
+                      "name": "Align right",
+                      "value": Object {
+                        "position": "anchor-top-right",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Radio buttons",
+            "title": "Radio button list",
+          },
+          Object {
+            "component": <Dropdown
+              content={
+                <React.Fragment>
+                  <div
+                    className="d-flex"
+                  >
+                    <InputGroup
+                      className="mr-2"
+                      id="form-group-input-1-example"
+                      label="From, in SEK"
+                      postfix={true}
+                      postfixValue="kr"
+                      type="text"
+                    />
+                    <InputGroup
+                      id="form-group-input-2-example"
+                      label="To, in SEK"
+                      postfix={true}
+                      postfixValue="kr"
+                      type="text"
+                    />
+                  </div>
+                  <Button
+                    className="mr-2"
+                    label="Apply filter"
+                    type="primary"
+                  />
+                  <Button
+                    label="Clear filters"
+                    type="link"
+                  />
+                </React.Fragment>
+              }
+              label="Amount"
+              largePadding={true}
+            />,
+            "description": "Form-group can use different type of components ex. date pickers, rannge sliders etc.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "state-modifier-error",
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
+                      },
+                    },
+                  ],
+                  "title": "State modifiers",
+                },
+              ],
+              "radio": Array [
+                Object {
+                  "id": "toggle_examples",
+                  "title": "Toggle, examples",
+                  "values": Array [
+                    Object {
+                      "name": "Secondary button",
+                      "value": Object {
+                        "isIconButton": false,
+                      },
+                    },
+                    Object {
+                      "name": "Icon button",
+                      "value": Object {
+                        "isIconButton": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "modal_width",
+                  "title": "Modal width",
+                  "values": Array [
+                    Object {
+                      "name": "default",
+                      "value": Object {
+                        "fullWidth": false,
+                      },
+                    },
+                    Object {
+                      "name": "Full width",
+                      "value": Object {
+                        "fullWidth": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "preffered_position",
+                  "title": "Position",
+                  "values": Array [
+                    Object {
+                      "name": "Align left",
+                      "value": Object {
+                        "position": "anchor-top-left",
+                      },
+                    },
+                    Object {
+                      "name": "Align right",
+                      "value": Object {
+                        "position": "anchor-top-right",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Form Group",
+            "title": "Form-group",
+          },
+        ],
+        "id": "overviewDropdown",
+        "tabsId": "overviewDropdownTabs",
+      }
+    }
+  />
+  <h3>
+    When to consider something else
+  </h3>
+  <ul
+    className="list list-bullet"
+  >
+    <li
+      key="when-else-1"
+    >
+      For important actions and information, consider displaying them 
+      <b>
+        directly on the page
+      </b>
+       instead of hiding them in a Dropdown menu
+    </li>
+    <li
+      key="when-else-2"
+    >
+      To display a brief explanation when a cursor hovers over an interactive element, use the 
+      <Link
+        to="/components/tooltips"
+      >
+        Tooltip
+      </Link>
+       component
+    </li>
+  </ul>
+  <section
+    key="section-dropdown-0"
+  >
+    <h3>
+      How to use Dropdown menus
+    </h3>
+    <div
+      className="row placeholder-guideline"
+    >
+      <div
+        className="col-lg-6 col-sm-12"
+      >
+        <div
+          className="slab slab-plain slab-border-success"
+        >
+          <span
+            className="h3 d-block mb-3"
+          >
+            Do
+          </span>
+          <Dropdown
+            content={
+              <Checkbox
+                group={true}
+                groupTitle=""
+                name="dropdown-checkboxes-dodont-examples-1"
+                options={
+                  Array [
+                    Object {
+                      "id": "dropdown-dodont-example-1",
+                      "label": "Successful",
+                    },
+                    Object {
+                      "id": "dropdown-dodont-example-2",
+                      "label": "Failed",
+                    },
+                    Object {
+                      "id": "dropdown-dodont-example-3",
+                      "label": "Cancelled",
+                    },
+                  ]
+                }
+              />
+            }
+            icon="filter_list"
+            iconAfter={false}
+            id="howto-dropdown-example-1"
+            isIconButton={false}
+            label="Filter"
+            largePadding={true}
+          />
+          <Button
+            className="ml-2"
+            icon="edit"
+            label="Edit"
+            type="secondary"
+          />
+        </div>
+      </div>
+      <div
+        className="col-lg-6 col-sm-12"
+        data-i="The Dropdown should contain actions, options or other elements that share a relationships to each other."
+        key="The Dropdown should contain actions, options or other elements that share a relationships to each other."
+      >
+        <div
+          className="slab slab-plain slab-border-error"
+        >
+          <span
+            className="h3 d-block mb-3"
+          >
+            Do
+            n't
+          </span>
+          <Dropdown
+            content={
+              <React.Fragment>
+                <Checkbox
+                  group={true}
+                  groupTitle="Filter by"
+                  name="dropdown-checkboxes-dodont-examples-2"
+                  options={
+                    Array [
+                      Object {
+                        "id": "dropdown-dodont-example-2-test-item-1",
+                        "label": "Card",
+                      },
+                      Object {
+                        "id": "dropdown-dodont-example-2-test-item-2",
+                        "label": "Credit",
+                      },
+                      Object {
+                        "id": "dropdown-dodont-example-2-test-item-3",
+                        "label": "Invoice",
+                      },
+                    ]
+                  }
+                />
+                <p
+                  className="pt-4"
+                >
+                  Actions
+                </p>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Edit
+                </a>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Delete
+                </a>
+              </React.Fragment>
+            }
+            id="howto-dropdown-example-2"
+            isIconButton={false}
+            label="Actions"
+            largePadding={true}
+          />
+        </div>
+      </div>
+      <p
+        className="col-12 mt-2 mb-4"
+      >
+        The Dropdown should contain actions, options or other elements that share a relationships to each other.
+      </p>
+    </div>
+  </section>
+  <section
+    key="section-dropdown-1"
+  >
+    <h3>
+      Content guidelines for container
+    </h3>
+    <div
+      className="row placeholder-guideline"
+    >
+      <div
+        className="col-lg-6 col-sm-12"
+      >
+        <div
+          className="slab slab-plain slab-border-success"
+        >
+          <span
+            className="h3 d-block mb-3"
+          >
+            Do
+          </span>
+          <Dropdown
+            content={
+              <React.Fragment>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Rename
+                </a>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Edit HTML
+                </a>
+              </React.Fragment>
+            }
+            id="guidelines-dropdown-example-1"
+            isIconButton={true}
+          />
+        </div>
+      </div>
+      <div
+        className="col-lg-6 col-sm-12"
+        data-i="If a Dropdown container contains actions, they should be action-led, menaing led by a strong verb that encourages action."
+        key="If a Dropdown container contains actions, they should be action-led, menaing led by a strong verb that encourages action."
+      >
+        <div
+          className="slab slab-plain slab-border-error"
+        >
+          <span
+            className="h3 d-block mb-3"
+          >
+            Do
+            n't
+          </span>
+          <Dropdown
+            content={
+              <React.Fragment>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  HTML editing options
+                </a>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  File name changes
+                </a>
+              </React.Fragment>
+            }
+            id="guidelines-dropdown-example-2"
+            isIconButton={true}
+          />
+        </div>
+      </div>
+      <p
+        className="col-12 mt-2 mb-4"
+      >
+        If a Dropdown container contains actions, they should be action-led, menaing led by a strong verb that encourages action.
+      </p>
+      <div
+        className="col-lg-6 col-sm-12"
+      >
+        <div
+          className="slab slab-plain slab-border-success"
+        >
+          <span
+            className="h3 d-block mb-3"
+          >
+            Do
+          </span>
+          <Dropdown
+            content={
+              <React.Fragment>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Add item
+                </a>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Edit list
+                </a>
+              </React.Fragment>
+            }
+            id="guidelines-dropdown-example-3"
+            isIconButton={true}
+          />
+        </div>
+      </div>
+      <div
+        className="col-lg-6 col-sm-12"
+        data-i="If a Dropdown container contains list of actions or options, they should be scannable. Avoid unnecessary words such as “the”, “an”, or “a”."
+        key="If a Dropdown container contains list of actions or options, they should be scannable. Avoid unnecessary words such as “the”, “an”, or “a”."
+      >
+        <div
+          className="slab slab-plain slab-border-error"
+        >
+          <span
+            className="h3 d-block mb-3"
+          >
+            Do
+            n't
+          </span>
+          <Dropdown
+            content={
+              <React.Fragment>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Add an item
+                </a>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Edit the list
+                </a>
+              </React.Fragment>
+            }
+            id="guidelines-dropdown-example-4"
+            isIconButton={true}
+          />
+        </div>
+      </div>
+      <p
+        className="col-12 mt-2 mb-4"
+      >
+        If a Dropdown container contains list of actions or options, they should be scannable. Avoid unnecessary words such as “the”, “an”, or “a”.
+      </p>
+    </div>
+  </section>
+</section>
+`;
+
+exports[`Documentation: Dropdown renders 1`] = `
+<DocContainer>
+  <p
+    className="lead"
+  >
+    Dropdown’s are toggleable overlays that open on demand. They let users access additional content and actions without cluttering the page.
+  </p>
+  <Overview />
+</DocContainer>
+`;

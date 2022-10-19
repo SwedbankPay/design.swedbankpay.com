@@ -266,6 +266,17 @@ exports[`Utilities: RenderPage renders 1`] = `
               "title": "Dialog",
             },
             Object {
+              "componentPath": "components/Dropdown",
+              "icon": "search",
+              "outlined": true,
+              "path": "/components/dropdown",
+              "statusBadges": Array [
+                "javascript",
+                "new",
+              ],
+              "title": "Dropdown",
+            },
+            Object {
               "componentPath": "components/Expandable",
               "path": "/components/expandable",
               "statusBadges": Array [

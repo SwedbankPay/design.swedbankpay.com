@@ -41,3 +41,6 @@ const Dropdown = () => (
 );
 
 export default Dropdown;
+
+/* For testing */
+export { Overview };
