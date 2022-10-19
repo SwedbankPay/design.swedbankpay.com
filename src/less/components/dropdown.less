@@ -1,4 +1,5 @@
 @import "../global.less";
+@import "./button.less";
 
 .dropdown-list {
     position: relative;
@@ -39,16 +40,23 @@
             min-width: 100%;
         }
 
-        > a {
+        .btn-elem {
+            border: none;
+            background: transparent;
+            width: 100%;
+        }
+
+        > a,
+        .btn-elem {
             display: flex;
             padding: 0.5rem 1rem 0.3rem 0.5rem;
-            visibility: hidden;
             position: relative;
             text-decoration: none;
             white-space: nowrap;
             align-items: center;
             color: @brand-secondary;
             border-radius: 4px;
+            cursor: pointer;
 
             > .material-icons {
                 margin-right: 0.5rem;
@@ -89,7 +97,7 @@
         &:active,
         &.active {
             background-color: @brand-secondary;
-            outline: 2px solid #944E4E;
+            outline: 2px solid @brand-error;
             color: @white;
         }
 
