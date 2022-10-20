@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { dropdown } from "@src/scripts/main";
 
-const DropdownSelect = () => {
+const DropdownSelect = ({ disabled, errorMessage, fullWidth, position }) => {
     const [buttonLabel, setButtonLabel] = useState("Card type");
     const cardTypes = ["VISA", "Mastercard", "AMEX", "Maestro card", "Stripe", "Vipps", "Swish"];
 
@@ -12,28 +12,30 @@ const DropdownSelect = () => {
 
     return (
         <>
-            <div className="dropdown-list anchor-top-left">
+            <div className={`dropdown ${position}${errorMessage ? " has-error" : ""}${disabled ? " disabled" : ""}`}>
                 <div className="toggle-menu-container">
                     <button
                         className="dropdown-toggle btn btn-secondary"
                         id="dropdownSelect"
                         type="button"
                         aria-label="dropdown button"
+                        disabled={disabled}
                     >{buttonLabel}
                         <i className="material-icons ml-2" aria-hidden="true">keyboard_arrow_down</i>
                     </button>{"\n"}
-                    <div className="dropdown-menu">
+                    <div className={`dropdown-menu ${fullWidth ? "full-width" : ""}`}>
                         {cardTypes.map(card => (
                             <button className="btn-elem" onClick={() => setButtonLabel(card)}key={card}>{card}</button>
                         ))}
                     </div>
                 </div>
+                {errorMessage && <><div className="help-block"><i className="material-icons">error</i>{errorMessage}</div>{"\n"}</>}
             </div>
         </>
     );
 };
 
-const DropdownToggle = ({ isIconButton = false, label = "Default label", icon = isIconButton && !icon ? "more_vert" : "keyboard_arrow_down", iconAfter }) => {
+const DropdownToggle = ({ disabled, isIconButton = false, label = "Default label", icon = isIconButton && !icon ? "more_vert" : "keyboard_arrow_down", iconAfter }) => {
 
     useEffect(() => {
         dropdown.init();
@@ -42,9 +44,10 @@ const DropdownToggle = ({ isIconButton = false, label = "Default label", icon = 
     return (
         <>
             <button
-                className={`dropdown-toggle ${isIconButton ? " dropdown-toggle-icon " : " btn btn-secondary"}`}
+                className={`dropdown-toggle${isIconButton ? " dropdown-toggle-icon" : " btn btn-secondary"}`}
                 type="button"
                 aria-label="dropdown button"
+                disabled={disabled}
             >{"\n"}
                 {isIconButton ?
                     <>
@@ -73,17 +76,19 @@ const Dropdown = ({ id,
     errorMessage,
     content,
     largePadding,
+    disabled,
     dropdownSelect }) => (
     <>
-        {dropdownSelect ? <DropdownSelect/> :
-            <div id={id} className={`dropdown-list ${position} ${classNames ? ` ${classNames}` : ""} ${errorMessage ? "has-error" : ""}`}>{"\n"}
+        {dropdownSelect ? <DropdownSelect disabled={disabled} errorMessage={errorMessage} fullWidth={fullWidth} position={position}/> :
+            <div id={id} className={`dropdown ${position} ${classNames ? ` ${classNames}` : ""}${errorMessage ? " has-error" : ""}${disabled ? " disabled" : ""}`}>{"\n"}
                 <div className="toggle-menu-container">
-                    <DropdownToggle isIconButton={isIconButton} label={label} icon={icon} iconAfter={iconAfter} />
+                    <DropdownToggle disabled={disabled} isIconButton={isIconButton} label={label} icon={icon} iconAfter={iconAfter} />
                     <div className={`dropdown-menu ${fullWidth ? "full-width" : ""} ${largePadding ? "p-3" : ""} `} aria-labelledby="dropdownToggle">{"\n"}
                         {content}
                     </div>
                 </div>
-                {errorMessage && <><div className="help-block"><i className="material-icons">error</i>{errorMessage}</div>{"\n"}</>}        </div>
+                {errorMessage && <><div className="help-block"><i className="material-icons">error</i>{errorMessage}</div>{"\n"}</>}
+            </div>
         }
     </>
 );
