@@ -1,7 +1,7 @@
 // FIXME: THIS IS A VERY TEMPORARY SCRIPT ADAPTING THE ACTION-LINK SCRIPT FOR DROPDOWN
 
 const SELECTORS = {
-    DROPDOWNLIST: ".dropdown-list",
+    DROPDOWNLIST: ".dropdown",
     DROPDOWNMENU: ".dropdown-menu",
     TOGGLE: ".dropdown-toggle"
 };
