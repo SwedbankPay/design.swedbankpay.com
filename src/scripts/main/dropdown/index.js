@@ -1,123 +1,70 @@
-// FIXME: THIS IS A VERY TEMPORARY SCRIPT ADAPTING THE ACTION-LINK SCRIPT FOR DROPDOWN
-
 const SELECTORS = {
     DROPDOWNLIST: ".dropdown",
     DROPDOWNMENU: ".dropdown-menu",
     TOGGLE: ".dropdown-toggle"
 };
 
-const _dropdownLists = [];
+const openMenu = container => {
+    container.classList.add("active");
+};
 
-class ActionList {
-    constructor (element) {
-        this.id = element.id ? element.id : null;
-        this.container = element;
-        this.dropdownMenu = element.querySelector(SELECTORS.DROPDOWNMENU);
-        this.dropdownMenuLinks = this.dropdownMenu.querySelectorAll("a");
-        this.dropdownMenuButtons = this.dropdownMenu.querySelectorAll(".btn-elem");
-        this.isOpen = this.container.classList.contains("active");
-        this.toggleBtn = element.querySelector(SELECTORS.TOGGLE);
+const closeMenu = container => {
+    container.classList.remove("active");
+};
 
-        try {
-            this.toggleBtn.addEventListener("click", () => {
-                this._toggleMenu();
-            });
-        } catch (e) {
-            console.warn("No toggle element exist, add an element with the class .dropdown-toggle");
-        }
+const isOpen = container => container.classList.contains("active");
 
-        // close menu when clicking on links
-        this.dropdownMenuLinks.forEach(link => link.addEventListener("click", () => this.close()));
-        this.dropdownMenuButtons.forEach(link => link.addEventListener("click", () => this.close()));
+const toggleMenu = container => isOpen(container) ? closeMenu(container) : openMenu(container);
+
+const listenToToggleBtn = toggleBtn => {
+    try {
+        toggleBtn.addEventListener("click", () => {
+            toggleMenu(toggleBtn.closest(".dropdown"));
+        });
+    } catch (e) {
+        console.warn("No toggle element exist, add an element with the class .dropdown-toggle");
     }
+};
 
-    open () {
-        this.container.classList.add("active");
-        this.isOpen = true;
-    }
-
-    close () {
-        this.container.classList.remove("active");
-        this.isOpen = false;
-    }
-
-    _toggleMenu () {
-        this.isOpen ? this.close() : this.open();
-    }
-}
-
-const _createActionList = dropdownListQuery => {
-    const dropdownListObject = new ActionList(dropdownListQuery);
-
-    _dropdownLists.push(dropdownListObject);
-
-    document.addEventListener("click", e => {
-        if (e.target.closest(SELECTORS.DROPDOWNLIST) !== dropdownListObject.container && dropdownListObject.isOpen) {
-            dropdownListObject.close();
+const listenToEscToCloseMenu = () => {
+    document.addEventListener("keydown", e => {
+        if (e.key === "Escape") {
+            [...document.querySelectorAll(".dropdown.active")].map(containerToClose => closeMenu(containerToClose));
         }
     });
-
-    return dropdownListObject;
 };
 
-const init = id => {
-    if (id) {
-        const dropdownList = document.getElementById(id);
-
-        if (!dropdownList) {
-            console.warn(`No dropdown List with id ${id} found`);
-
-            return null;
+// closes the menu if user clicks outside the dropdown menu && the menu is opened
+const closeMenuOnClickOutsideDropdown = dropdownContainer => {
+    document.addEventListener("click", e => {
+        if (e.target.closest(SELECTORS.DROPDOWNLIST) !== dropdownContainer && isOpen(dropdownContainer)) {
+            closeMenu(dropdownContainer);
         }
-
-        return _createActionList(dropdownList);
-    } else {
-        const dropdownLists = document.querySelectorAll(SELECTORS.DROPDOWNLIST);
-
-        if (!dropdownLists.length) {
-            console.warn("No dropdown lists found");
-
-            return null;
-        }
-
-        return [...dropdownLists].map(dropdownList => _createActionList(dropdownList));
-    }
+    });
 };
 
-const close = id => {
-    let dropdownlist = null;
+// closes the menu if user clicks a button or link in the dropdown menu
+const closesOnLinkOrBtnClick = container => {
+    [...container.querySelectorAll("a, button")].forEach(link => link.addEventListener("click", () => close(container)));
+};
 
-    _dropdownLists.forEach(d => d.id === id ? dropdownlist = d : null);
+const init = () => {
+    const dropdownContainers = document.querySelectorAll(SELECTORS.DROPDOWNLIST);
 
-    try {
-        dropdownlist.close();
-    } catch (e) {
-        console.warn(`dropdownlist.close: No dropdownlist with id "${id}" found.`);
+    if (!dropdownContainers.length) {
+        console.warn("No dropdown lists found");
 
-        return false;
+        return null;
     }
 
-    return dropdownlist;
+    [...dropdownContainers].map(dropdownContainer => {
+        listenToToggleBtn(dropdownContainer);
+        closeMenuOnClickOutsideDropdown(dropdownContainer);
+        closesOnLinkOrBtnClick(dropdownContainer);
+    });
+
+    listenToEscToCloseMenu();
+
 };
 
-const open = id => {
-    let dropdownlist = null;
-
-    _dropdownLists.forEach(d => d.id === id ? dropdownlist = d : null);
-
-    try {
-        dropdownlist.open();
-    } catch (e) {
-        console.warn(`dropdownlist.open: No dropdownlist with id "${id}" found.`);
-
-        return false;
-    }
-
-    return dropdownlist;
-};
-
-export default {
-    init,
-    open,
-    close
-};
+export default { init };
