@@ -1,18 +1,55 @@
 @import "../global.less";
 @import "./button.less";
 
-.dropdown-list {
+.dropdown {
     position: relative;
     display: inline-flex;
     flex-direction: column;
 
+    &.has-error {
+        .dropdown-toggle {
+            border: 2px solid @brand-error;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: @brand-error-light;
+                color: @brand-secondary;
+                border: 2px solid @brand-error;
+            }
+
+            &:focus {
+                outline: 1px solid @brand-secondary;
+            }
+
+            i {
+                color: @brand-error;
+            }
+        }
+    }
+
+    &.disabled {
+        .dropdown-toggle {
+            background-color: @white;
+            color: @secondary-disabled-bg;
+            border-color: @secondary-disabled-bg;
+            border-width: 1px;
+
+            &:hover,
+            &:active {
+                cursor: not-allowed;
+                background-color: @white;
+                color: @secondary-disabled-bg;
+                border-color: @secondary-disabled-bg;
+                border-width: 1px;
+            }
+        }
+    }
+
     &:focus-within .dropdown-toggle {
         border-width: 2px;
-
-        &.btn.btn-secondary {
-            background-color: @brand-secondary;
-            color: @white;
-        }
+        background-color: @brand-secondary;
+        color: @white;
     }
 
     .toggle-menu-container {
@@ -74,12 +111,7 @@
         }
     }
 
-    .btn.btn-secondary {
-        background: @white;
-        color: @brand-secondary;
-        border-color: @brand-secondary;
-        width: max-content;
-
+    .dropdown-toggle {
         &:focus,
         &.focus {
             color: @white;
@@ -97,35 +129,8 @@
         &:active,
         &.active {
             background-color: @brand-secondary;
-            outline: 2px solid @brand-error;
+            //outline: 2px solid @brand-error;
             color: @white;
-        }
-
-        &.disabled,
-        &[disabled],
-        fieldset[disabled] &,
-        &.disabled:hover,
-        &[disabled]:hover,
-        fieldset[disabled] &:hover,
-        &.disabled:focus,
-        &[disabled]:focus,
-        fieldset[disabled] &:focus,
-        &.disabled.focus,
-        &[disabled].focus,
-        fieldset[disabled] &.focus,
-        &.disabled[active],
-        &[disabled][active],
-        fieldset[disabled] &[active],
-        &.disabled:active,
-        &[disabled]:active,
-        fieldset[disabled] &:active,
-        &.disabled.active,
-        &[disabled].active,
-        fieldset[disabled] &.active {
-            background-color: @white;
-            color: @secondary-disabled-bg;
-            border-color: @secondary-disabled-bg;
-            border-width: 1px;
         }
 
         & i {
@@ -162,7 +167,7 @@
             color: @white;
             border-width: 0;
 
-            &.btn.btn-secondary i {
+            & i {
                 transform: rotate(180deg);
                 transition: transform 0.3s ease;
             }
@@ -197,9 +202,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .dropdown-list {
-        & .btn.btn-secondary i,
-        &.active .dropdown-toggle .btn.btn-secondary i {
+    .dropdown {
+        & i,
+        &.active .dropdown-toggle i {
             transition: none;
         }
     }
