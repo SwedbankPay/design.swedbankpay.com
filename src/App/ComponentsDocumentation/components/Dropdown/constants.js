@@ -6,7 +6,7 @@ import CheckboxComponent from "@components/FormComponents/Checkbox";
 import Radio from "@components/FormComponents/Radio";
 import InputGroup from "@components/InputGroup";
 
-const Dropdown = ({ label, isIconButton, fullWidth, position, icon, iconAfter, errorMessage, content, largePadding, dropdownSelect }) => (
+const Dropdown = ({ label, isIconButton, fullWidth, position, icon, iconAfter, errorMessage, content, largePadding, dropdownSelect, disabled }) => (
     <DropdownComponent
         label={label}
         isIconButton={isIconButton}
@@ -19,6 +19,7 @@ const Dropdown = ({ label, isIconButton, fullWidth, position, icon, iconAfter, e
         content={content}
         largePadding={largePadding}
         dropdownSelect={dropdownSelect}
+        disabled = {disabled}
     />
 );
 
@@ -185,36 +186,13 @@ const selectSidebarOptions = {
                     }
                 }
             ]
-        }
-    ]
-};
-
-const dropdownSidebarOptions = {
-    radio: [
-        {
-            id: "toggle_examples",
-            title: "Toggle, examples",
-            values: [
-                {
-                    name: "Secondary button",
-                    value: {
-                        isIconButton: false
-                    }
-                },
-                {
-                    name: "Icon button",
-                    value: {
-                        isIconButton: true
-                    }
-                }
-            ]
         },
         {
             id: "modal_width",
-            title: "Modal width",
+            title: "Menu width",
             values: [
                 {
-                    name: "default",
+                    name: "Default",
                     value: {
                         fullWidth: false
                     }
@@ -232,30 +210,117 @@ const dropdownSidebarOptions = {
             title: "Position",
             values: [
                 {
-                    name: "Align left",
+                    name: "Left",
                     value: {
                         position: "anchor-top-left"
                     }
                 },
                 {
-                    name: "Align right",
+                    name: "Right",
                     value: {
                         position: "anchor-top-right"
                     }
                 }
             ]
-        }
-
-    ],
-    checkbox: [
+        },
         {
+            id: "state-modifiers",
             title: "State modifiers",
-            inputs: [
+            values: [
                 {
-                    id: "state-modifier-error",
+                    name: "Default"
+                },
+                {
                     name: "Error",
                     value: {
                         errorMessage: "Descriptive helpful error message."
+                    }
+                },
+                {
+                    name: "Disabled",
+                    value: {
+                        disabled: true
+                    }
+                }
+
+            ]
+        }
+    ]
+};
+
+const dropdownSidebarOptions = {
+    radio: [
+        {
+            id: "toggle_examples",
+            title: "Toggle types",
+            values: [
+                {
+                    name: "Button",
+                    value: {
+                        isIconButton: false
+                    }
+                },
+                {
+                    name: "Icon button",
+                    value: {
+                        isIconButton: true
+                    }
+                }
+            ]
+        },
+        {
+            id: "modal_width",
+            title: "Menu width",
+            values: [
+                {
+                    name: "Default",
+                    value: {
+                        fullWidth: false
+                    }
+                },
+                {
+                    name: "Full width",
+                    value: {
+                        fullWidth: true
+                    }
+                }
+            ]
+        },
+        {
+            id: "preffered_position",
+            title: "Position",
+            values: [
+                {
+                    name: "Left",
+                    value: {
+                        position: "anchor-top-left"
+                    }
+                },
+                {
+                    name: "Right",
+                    value: {
+                        position: "anchor-top-right"
+                    }
+                }
+            ]
+        },
+        {
+            id: "state-modifiers",
+            title: "State modifiers",
+            values: [
+                {
+                    name: "Default"
+                },
+                {
+                    name: "Error",
+                    value: {
+                        errorMessage: "Descriptive helpful error message."
+                    }
+                },
+                {
+                    name: "Disabled",
+                    value: {
+                        disabled: true
                     }
                 }
             ]
