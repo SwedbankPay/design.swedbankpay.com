@@ -3,7 +3,7 @@
 exports[`Component: Dropdown - clicks on the toggle btn and it opens the menu list 1`] = `
 <Fragment>
   <div
-    className="dropdown-list anchor-top-left  "
+    className="dropdown anchor-top-left "
   >
     
 
@@ -23,7 +23,6 @@ exports[`Component: Dropdown - clicks on the toggle btn and it opens the menu li
         text content inside menu list
       </div>
     </div>
-            
   </div>
 </Fragment>
 `;
@@ -31,7 +30,7 @@ exports[`Component: Dropdown - clicks on the toggle btn and it opens the menu li
 exports[`Component: Dropdown - renders 1`] = `
 <Fragment>
   <div
-    className="dropdown-list anchor-top-left  "
+    className="dropdown anchor-top-left "
   >
     
 
@@ -49,7 +48,6 @@ exports[`Component: Dropdown - renders 1`] = `
 
       </div>
     </div>
-            
   </div>
 </Fragment>
 `;
@@ -57,7 +55,7 @@ exports[`Component: Dropdown - renders 1`] = `
 exports[`Component: Dropdown - renders children components passed as content prop inside the menu list 1`] = `
 <Fragment>
   <div
-    className="dropdown-list anchor-top-left  "
+    className="dropdown anchor-top-left "
   >
     
 
@@ -89,7 +87,6 @@ exports[`Component: Dropdown - renders children components passed as content pro
         </a>
       </div>
     </div>
-            
   </div>
 </Fragment>
 `;
@@ -97,7 +94,7 @@ exports[`Component: Dropdown - renders children components passed as content pro
 exports[`Component: Dropdown - renders error state with the error icon and an error text 1`] = `
 <Fragment>
   <div
-    className="dropdown-list anchor-top-left  has-error"
+    className="dropdown anchor-top-left  has-error"
   >
     
 
@@ -127,7 +124,6 @@ exports[`Component: Dropdown - renders error state with the error icon and an er
     </div>
     
 
-            
   </div>
 </Fragment>
 `;
@@ -135,7 +131,7 @@ exports[`Component: Dropdown - renders error state with the error icon and an er
 exports[`Component: Dropdown - renders the toggle button with the icon being either before or after the icon is after the text 1`] = `
 <Fragment>
   <div
-    className="dropdown-list anchor-top-left  "
+    className="dropdown anchor-top-left "
   >
     
 
@@ -156,7 +152,6 @@ exports[`Component: Dropdown - renders the toggle button with the icon being eit
 
       </div>
     </div>
-            
   </div>
 </Fragment>
 `;
@@ -164,7 +159,7 @@ exports[`Component: Dropdown - renders the toggle button with the icon being eit
 exports[`Component: Dropdown - renders the toggle button with the icon being either before or after the icon is before the text 1`] = `
 <Fragment>
   <div
-    className="dropdown-list anchor-top-left  "
+    className="dropdown anchor-top-left "
   >
     
 
@@ -185,7 +180,6 @@ exports[`Component: Dropdown - renders the toggle button with the icon being eit
 
       </div>
     </div>
-            
   </div>
 </Fragment>
 `;
@@ -193,7 +187,7 @@ exports[`Component: Dropdown - renders the toggle button with the icon being eit
 exports[`Component: Dropdown - renders the toggle button, when passing with specific label and custom icon props 1`] = `
 <Fragment>
   <div
-    className="dropdown-list anchor-top-left  "
+    className="dropdown anchor-top-left "
   >
     
 
@@ -214,7 +208,6 @@ exports[`Component: Dropdown - renders the toggle button, when passing with spec
 
       </div>
     </div>
-            
   </div>
 </Fragment>
 `;
@@ -222,7 +215,7 @@ exports[`Component: Dropdown - renders the toggle button, when passing with spec
 exports[`Component: Dropdown - renders, when passing no label nor icon props, a toggle button set as secondary button with a chevron icon 1`] = `
 <Fragment>
   <div
-    className="dropdown-list anchor-top-left  "
+    className="dropdown anchor-top-left "
   >
     
 
@@ -240,7 +233,6 @@ exports[`Component: Dropdown - renders, when passing no label nor icon props, a 
 
       </div>
     </div>
-            
   </div>
 </Fragment>
 `;
@@ -248,7 +240,7 @@ exports[`Component: Dropdown - renders, when passing no label nor icon props, a 
 exports[`Component: Dropdown - the toggle icon btn with and without a passed icon renders the toggle btn as icon btn with no icon passed has a default of the three vertical dots icon 1`] = `
 <Fragment>
   <div
-    className="dropdown-list anchor-top-left  "
+    className="dropdown anchor-top-left "
   >
     
 
@@ -268,7 +260,6 @@ exports[`Component: Dropdown - the toggle icon btn with and without a passed ico
 
       </div>
     </div>
-            
   </div>
 </Fragment>
 `;
@@ -276,7 +267,7 @@ exports[`Component: Dropdown - the toggle icon btn with and without a passed ico
 exports[`Component: Dropdown - the toggle icon btn with and without a passed icon renders the toggle btn as icon btn with the icon passed as props 1`] = `
 <Fragment>
   <div
-    className="dropdown-list anchor-top-left  "
+    className="dropdown anchor-top-left "
   >
     
 
@@ -297,7 +288,6 @@ exports[`Component: Dropdown - the toggle icon btn with and without a passed ico
 
       </div>
     </div>
-            
   </div>
 </Fragment>
 `;

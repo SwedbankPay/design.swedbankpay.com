@@ -26,7 +26,7 @@ describe("Component: Dropdown -", () => {
         const wrapper = shallow(<Dropdown/>);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain(`<button class="dropdown-toggle  btn btn-secondary" type="button" aria-label="dropdown button">
+        expect(wrapper.html()).toContain(`<button class="dropdown-toggle btn btn-secondary" type="button" aria-label="dropdown button">
 <span>Default label</span>
 <i class="material-icons ml-2" aria-hidden="true">keyboard_arrow_down</i>
 </button>`
@@ -38,7 +38,7 @@ describe("Component: Dropdown -", () => {
         const wrapper = shallow(<Dropdown label="Filter" isIconButton={false} icon="filter_list" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain(`<button class="dropdown-toggle  btn btn-secondary" type="button" aria-label="dropdown button">
+        expect(wrapper.html()).toContain(`<button class="dropdown-toggle btn btn-secondary" type="button" aria-label="dropdown button">
 <span>Filter</span>
 <i class="material-icons ml-2" aria-hidden="true">filter_list</i>
 </button>`
@@ -91,7 +91,8 @@ describe("Component: Dropdown -", () => {
         const checkboxListContent = <a href="#"><i className="material-icons" aria-hidden="true">bookmark</i>Edit</a>;
         const checkboxListContentStringExpected = `
 <div class="dropdown-menu  p-3 " aria-labelledby="dropdownToggle">
-<a href="#"><i class="material-icons" aria-hidden="true">bookmark</i>Edit</a></div></div>        </div>`;
+<a href="#"><i class="material-icons" aria-hidden="true">bookmark</i>Edit</a></div></div></div>`;
+
         const wrapper = shallow(<Dropdown label="Sort" isIconButton={true} icon="sort" content={checkboxListContent} largePadding={true} />);
 
         expect(wrapper).toMatchSnapshot();
@@ -99,13 +100,13 @@ describe("Component: Dropdown -", () => {
         expect(wrapper.html()).toContain(checkboxListContentStringExpected);
     });
 
-    // TODO: test menu opens when clicks btn-secondary & BTN ICON
     it("clicks on the toggle btn and it opens the menu list", () => {
-        const wrapper = shallow(<Dropdown label="Sort"content="text content inside menu list" largePadding={true} />);
 
-        expect(wrapper).toMatchSnapshot();
-        // TODO: simulate a click on teh toggle btn
-        // TODO: check the the menu list is opened (check the classnames)
+        const wrapper = shallow(<Dropdown label="Sort"content={<p>Text content inside menu list</p>} largePadding={true} />);
+
+        // expect(wrapper).toMatchSnapshot(); TODO
+
+        expect(wrapper.html().toContain("something")).toBeFalsy();
     });
 
     // TODO: GOOD STUFF

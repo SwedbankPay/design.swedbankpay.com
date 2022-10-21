@@ -1,477 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Dropdown Overview renders 1`] = `
+exports[`Documentation: Dropdown ContentGuidelines renders 1`] = `
 <section>
   <h2
-    id="overview"
+    id="content-guidelines"
   >
-    Overview
+    Content guidelines
   </h2>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-    showCasePanelAdvanced={
-      Object {
-        "elements": Array [
-          Object {
-            "component": <Dropdown
-              content={
-                <React.Fragment>
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                  >
-                    <Icon
-                      type="bookmark"
-                    />
-                    Edit
-                  </a>
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                  >
-                    <Icon
-                      type="delete_outline"
-                    />
-                    Delete
-                  </a>
-                </React.Fragment>
-              }
-              label="Actions"
-              largePadding={false}
-            />,
-            "description": "The popover is a container for various content. It usually contains a list of actions or options but it can also contain other type of controls or content like input fields and buttons. Popovers are usually triggered by a button component but they can also be triggerd by other elements. You can set the preffered position of the Popover in relation to it’s trigger, by default the position will be bottom left. It will make sure it is positioned within the viewport, this means that sometimes the Popover flips or move slightly to the left or right.",
-            "options": Object {
-              "checkbox": Array [
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "state-modifier-error",
-                      "name": "Error",
-                      "value": Object {
-                        "errorMessage": "Descriptive helpful error message.",
-                      },
-                    },
-                  ],
-                  "title": "State modifiers",
-                },
-              ],
-              "radio": Array [
-                Object {
-                  "id": "toggle_examples",
-                  "title": "Toggle, examples",
-                  "values": Array [
-                    Object {
-                      "name": "Secondary button",
-                      "value": Object {
-                        "isIconButton": false,
-                      },
-                    },
-                    Object {
-                      "name": "Icon button",
-                      "value": Object {
-                        "isIconButton": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "modal_width",
-                  "title": "Modal width",
-                  "values": Array [
-                    Object {
-                      "name": "default",
-                      "value": Object {
-                        "fullWidth": false,
-                      },
-                    },
-                    Object {
-                      "name": "Full width",
-                      "value": Object {
-                        "fullWidth": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "preffered_position",
-                  "title": "Position",
-                  "values": Array [
-                    Object {
-                      "name": "Align left",
-                      "value": Object {
-                        "position": "anchor-top-left",
-                      },
-                    },
-                    Object {
-                      "name": "Align right",
-                      "value": Object {
-                        "position": "anchor-top-right",
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "Dropdown",
-            "title": "Dropdown menu",
-          },
-          Object {
-            "component": <Dropdown
-              content={
-                <Checkbox
-                  group={true}
-                  groupTitle=""
-                  name="dropdown-checkboxes-examples"
-                  options={
-                    Array [
-                      Object {
-                        "id": "dropdown-checkbox-overview-form-inputs-example-1",
-                        "label": "Card",
-                      },
-                      Object {
-                        "id": "dropdown-checkbox-overview-form-inputs-example-2",
-                        "label": "Credit",
-                      },
-                      Object {
-                        "id": "dropdown-checkbox-overview-form-inputs-example-3",
-                        "label": "Invoice",
-                      },
-                    ]
-                  }
-                />
-              }
-              label="Payment method"
-              largePadding={true}
-            />,
-            "description": "Use a checkbox list if you have a small to a medium number of options, and want the user to select one or more of the options. When using a checkbox list drop-down menu, could be combined with the tag component to indicate the chosen options from the drop-down menu.",
-            "options": Object {
-              "checkbox": Array [
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "state-modifier-error",
-                      "name": "Error",
-                      "value": Object {
-                        "errorMessage": "Descriptive helpful error message.",
-                      },
-                    },
-                  ],
-                  "title": "State modifiers",
-                },
-              ],
-              "radio": Array [
-                Object {
-                  "id": "toggle_examples",
-                  "title": "Toggle, examples",
-                  "values": Array [
-                    Object {
-                      "name": "Secondary button",
-                      "value": Object {
-                        "isIconButton": false,
-                      },
-                    },
-                    Object {
-                      "name": "Icon button",
-                      "value": Object {
-                        "isIconButton": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "modal_width",
-                  "title": "Modal width",
-                  "values": Array [
-                    Object {
-                      "name": "default",
-                      "value": Object {
-                        "fullWidth": false,
-                      },
-                    },
-                    Object {
-                      "name": "Full width",
-                      "value": Object {
-                        "fullWidth": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "preffered_position",
-                  "title": "Position",
-                  "values": Array [
-                    Object {
-                      "name": "Align left",
-                      "value": Object {
-                        "position": "anchor-top-left",
-                      },
-                    },
-                    Object {
-                      "name": "Align right",
-                      "value": Object {
-                        "position": "anchor-top-right",
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "Checkbox",
-            "title": "Checkbox list",
-          },
-          Object {
-            "component": <Dropdown
-              content={
-                <Radio
-                  group={true}
-                  groupTitle=""
-                  name="dropdown-radio-examples"
-                  options={
-                    Array [
-                      Object {
-                        "id": "dropdown-radiobuttons-overview-form-inputs-example-1",
-                        "label": "Date",
-                      },
-                      Object {
-                        "id": "dropdown-radiobuttons-overview-form-inputs-example-2",
-                        "label": "Name",
-                      },
-                      Object {
-                        "id": "dropdown-radiobuttons-overview-form-inputs-example-3",
-                        "label": "Price",
-                      },
-                    ]
-                  }
-                />
-              }
-              icon="sort"
-              label="Sort by"
-              largePadding={true}
-            />,
-            "description": "Radio button lists are used when the user needs to select a single option out of a list of options.",
-            "options": Object {
-              "checkbox": Array [
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "state-modifier-error",
-                      "name": "Error",
-                      "value": Object {
-                        "errorMessage": "Descriptive helpful error message.",
-                      },
-                    },
-                  ],
-                  "title": "State modifiers",
-                },
-              ],
-              "radio": Array [
-                Object {
-                  "id": "toggle_examples",
-                  "title": "Toggle, examples",
-                  "values": Array [
-                    Object {
-                      "name": "Secondary button",
-                      "value": Object {
-                        "isIconButton": false,
-                      },
-                    },
-                    Object {
-                      "name": "Icon button",
-                      "value": Object {
-                        "isIconButton": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "modal_width",
-                  "title": "Modal width",
-                  "values": Array [
-                    Object {
-                      "name": "default",
-                      "value": Object {
-                        "fullWidth": false,
-                      },
-                    },
-                    Object {
-                      "name": "Full width",
-                      "value": Object {
-                        "fullWidth": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "preffered_position",
-                  "title": "Position",
-                  "values": Array [
-                    Object {
-                      "name": "Align left",
-                      "value": Object {
-                        "position": "anchor-top-left",
-                      },
-                    },
-                    Object {
-                      "name": "Align right",
-                      "value": Object {
-                        "position": "anchor-top-right",
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "Radio buttons",
-            "title": "Radio button list",
-          },
-          Object {
-            "component": <Dropdown
-              content={
-                <React.Fragment>
-                  <div
-                    className="d-flex"
-                  >
-                    <InputGroup
-                      className="mr-2"
-                      id="form-group-input-1-example"
-                      label="From, in SEK"
-                      postfix={true}
-                      postfixValue="kr"
-                      type="text"
-                    />
-                    <InputGroup
-                      id="form-group-input-2-example"
-                      label="To, in SEK"
-                      postfix={true}
-                      postfixValue="kr"
-                      type="text"
-                    />
-                  </div>
-                  <Button
-                    className="mr-2"
-                    label="Apply filter"
-                    type="primary"
-                  />
-                  <Button
-                    label="Clear filters"
-                    type="link"
-                  />
-                </React.Fragment>
-              }
-              label="Amount"
-              largePadding={true}
-            />,
-            "description": "Form-group can use different type of components ex. date pickers, rannge sliders etc.",
-            "options": Object {
-              "checkbox": Array [
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "state-modifier-error",
-                      "name": "Error",
-                      "value": Object {
-                        "errorMessage": "Descriptive helpful error message.",
-                      },
-                    },
-                  ],
-                  "title": "State modifiers",
-                },
-              ],
-              "radio": Array [
-                Object {
-                  "id": "toggle_examples",
-                  "title": "Toggle, examples",
-                  "values": Array [
-                    Object {
-                      "name": "Secondary button",
-                      "value": Object {
-                        "isIconButton": false,
-                      },
-                    },
-                    Object {
-                      "name": "Icon button",
-                      "value": Object {
-                        "isIconButton": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "modal_width",
-                  "title": "Modal width",
-                  "values": Array [
-                    Object {
-                      "name": "default",
-                      "value": Object {
-                        "fullWidth": false,
-                      },
-                    },
-                    Object {
-                      "name": "Full width",
-                      "value": Object {
-                        "fullWidth": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "preffered_position",
-                  "title": "Position",
-                  "values": Array [
-                    Object {
-                      "name": "Align left",
-                      "value": Object {
-                        "position": "anchor-top-left",
-                      },
-                    },
-                    Object {
-                      "name": "Align right",
-                      "value": Object {
-                        "position": "anchor-top-right",
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "Form Group",
-            "title": "Form-group",
-          },
-        ],
-        "id": "overviewDropdown",
-        "tabsId": "overviewDropdownTabs",
-      }
-    }
-  />
-  <h3>
-    When to consider something else
-  </h3>
-  <ul
-    className="list list-bullet"
-  >
-    <li
-      key="when-else-1"
-    >
-      For important actions and information, consider displaying them 
-      <b>
-        directly on the page
-      </b>
-       instead of hiding them in a Dropdown menu
-    </li>
-    <li
-      key="when-else-2"
-    >
-      To display a brief explanation when a cursor hovers over an interactive element, use the 
-      <Link
-        to="/components/tooltips"
-      >
-        Tooltip
-      </Link>
-       component
-    </li>
-  </ul>
   <section
     key="section-dropdown-0"
   >
@@ -764,13 +299,558 @@ exports[`Documentation: Dropdown Overview renders 1`] = `
 </section>
 `;
 
+exports[`Documentation: Dropdown DeveloperDocumentation renders 1`] = `
+<section>
+  <h2
+    id="developer-documentation"
+  >
+    Developer Documentation
+  </h2>
+  <h3>
+    JavaScript methods
+  </h3>
+  <p>
+    Use 
+    <CodeTags
+      code="dg.dropdown.init()"
+      type="secondary"
+    />
+     to initialize all dropdowns. This will open and close the dropdowns automatically.
+  </p>
+  <h3>
+    Accessibility considerations
+  </h3>
+  <p>
+    By default, keyboard navigation is implemented in the script. If your dropdown includes solely buttons or anchor-tags, you can use arrow naivigation between elements. If your 
+    <CodeTags
+      code=".dropdown-menu"
+      type="primary"
+    />
+     consist of other components, arrow down will give focus to the first element of the menu.
+  </p>
+  <p>
+    The default keyboard navigation can be disabled by adding the 
+    <CodeTags
+      code="<something>"
+      type="secondary"
+    />
+     prop in the init function.
+  </p>
+</section>
+`;
+
+exports[`Documentation: Dropdown Overview renders 1`] = `
+<section>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <Dropdown
+              content={
+                <React.Fragment>
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    <Icon
+                      type="bookmark"
+                    />
+                    Edit
+                  </a>
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    <Icon
+                      type="delete_outline"
+                    />
+                    Delete
+                  </a>
+                </React.Fragment>
+              }
+              label="Actions"
+              largePadding={false}
+            />,
+            "description": "The popover is a container for various content. It usually contains a list of actions or options but it can also contain other type of controls or content like input fields and buttons. Popovers are usually triggered by a button component but they can also be triggerd by other elements. You can set the preffered position of the Popover in relation to it’s trigger, by default the position will be bottom left. It will make sure it is positioned within the viewport, this means that sometimes the Popover flips or move slightly to the left or right.",
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "toggle_examples",
+                  "title": "Toggle types",
+                  "values": Array [
+                    Object {
+                      "name": "Button",
+                      "value": Object {
+                        "isIconButton": false,
+                      },
+                    },
+                    Object {
+                      "name": "Icon button",
+                      "value": Object {
+                        "isIconButton": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "modal_width",
+                  "title": "Menu width",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                      "value": Object {
+                        "fullWidth": false,
+                      },
+                    },
+                    Object {
+                      "name": "Full width",
+                      "value": Object {
+                        "fullWidth": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "preffered_position",
+                  "title": "Position",
+                  "values": Array [
+                    Object {
+                      "name": "Left",
+                      "value": Object {
+                        "position": "anchor-top-left",
+                      },
+                    },
+                    Object {
+                      "name": "Right",
+                      "value": Object {
+                        "position": "anchor-top-right",
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "state-modifiers",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                    },
+                    Object {
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Actions",
+            "title": "Dropdown menu",
+          },
+          Object {
+            "component": <Dropdown
+              content={
+                <Checkbox
+                  group={true}
+                  groupTitle=""
+                  name="dropdown-checkboxes-examples"
+                  options={
+                    Array [
+                      Object {
+                        "id": "dropdown-checkbox-overview-form-inputs-example-1",
+                        "label": "Card",
+                      },
+                      Object {
+                        "id": "dropdown-checkbox-overview-form-inputs-example-2",
+                        "label": "Credit",
+                      },
+                      Object {
+                        "id": "dropdown-checkbox-overview-form-inputs-example-3",
+                        "label": "Invoice",
+                      },
+                    ]
+                  }
+                />
+              }
+              label="Payment method"
+              largePadding={true}
+            />,
+            "description": "Use a checkbox list if you have a small to a medium number of options, and want the user to select one or more of the options. When using a checkbox list drop-down menu, could be combined with the tag component to indicate the chosen options from the drop-down menu.",
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "toggle_examples",
+                  "title": "Toggle types",
+                  "values": Array [
+                    Object {
+                      "name": "Button",
+                      "value": Object {
+                        "isIconButton": false,
+                      },
+                    },
+                    Object {
+                      "name": "Icon button",
+                      "value": Object {
+                        "isIconButton": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "modal_width",
+                  "title": "Menu width",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                      "value": Object {
+                        "fullWidth": false,
+                      },
+                    },
+                    Object {
+                      "name": "Full width",
+                      "value": Object {
+                        "fullWidth": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "preffered_position",
+                  "title": "Position",
+                  "values": Array [
+                    Object {
+                      "name": "Left",
+                      "value": Object {
+                        "position": "anchor-top-left",
+                      },
+                    },
+                    Object {
+                      "name": "Right",
+                      "value": Object {
+                        "position": "anchor-top-right",
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "state-modifiers",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                    },
+                    Object {
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Checkbox",
+            "title": "Checkbox list",
+          },
+          Object {
+            "component": <Dropdown
+              dropdownSelect={true}
+            />,
+            "description": "The select options are used when you want the user to choose one element. It can be implemented as a customized select or a radio button list.",
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "select_example",
+                  "title": "Select variants",
+                  "values": Array [
+                    Object {
+                      "name": "Select",
+                      "value": Object {
+                        "dropdownSelect": true,
+                      },
+                    },
+                    Object {
+                      "name": "Radiobuttons",
+                      "value": Object {
+                        "content": <Radio
+                          group={true}
+                          groupTitle=""
+                          name="dropdown-radio-examples"
+                          options={
+                            Array [
+                              Object {
+                                "id": "dropdown-radiobuttons-overview-form-inputs-example-1",
+                                "label": "Date",
+                              },
+                              Object {
+                                "id": "dropdown-radiobuttons-overview-form-inputs-example-2",
+                                "label": "Name",
+                              },
+                              Object {
+                                "id": "dropdown-radiobuttons-overview-form-inputs-example-3",
+                                "label": "Price",
+                              },
+                            ]
+                          }
+                        />,
+                        "dropdownSelect": false,
+                        "label": "Payment method",
+                        "largePadding": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "modal_width",
+                  "title": "Menu width",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                      "value": Object {
+                        "fullWidth": false,
+                      },
+                    },
+                    Object {
+                      "name": "Full width",
+                      "value": Object {
+                        "fullWidth": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "preffered_position",
+                  "title": "Position",
+                  "values": Array [
+                    Object {
+                      "name": "Left",
+                      "value": Object {
+                        "position": "anchor-top-left",
+                      },
+                    },
+                    Object {
+                      "name": "Right",
+                      "value": Object {
+                        "position": "anchor-top-right",
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "state-modifiers",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                    },
+                    Object {
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Select",
+            "title": "Select list",
+          },
+          Object {
+            "component": <Dropdown
+              content={
+                <React.Fragment>
+                  <div
+                    className="d-flex"
+                  >
+                    <InputGroup
+                      className="mr-2"
+                      id="form-group-input-1-example"
+                      label="From, in SEK"
+                      postfix={true}
+                      postfixValue="kr"
+                      type="text"
+                    />
+                    <InputGroup
+                      id="form-group-input-2-example"
+                      label="To, in SEK"
+                      postfix={true}
+                      postfixValue="kr"
+                      type="text"
+                    />
+                  </div>
+                  <Button
+                    className="mr-2"
+                    label="Apply filter"
+                    type="primary"
+                  />
+                  <Button
+                    label="Clear filters"
+                    type="link"
+                  />
+                </React.Fragment>
+              }
+              label="Amount"
+              largePadding={true}
+            />,
+            "description": "Form-group can use different type of components ex. date pickers, rannge sliders etc.",
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "toggle_examples",
+                  "title": "Toggle types",
+                  "values": Array [
+                    Object {
+                      "name": "Button",
+                      "value": Object {
+                        "isIconButton": false,
+                      },
+                    },
+                    Object {
+                      "name": "Icon button",
+                      "value": Object {
+                        "isIconButton": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "modal_width",
+                  "title": "Menu width",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                      "value": Object {
+                        "fullWidth": false,
+                      },
+                    },
+                    Object {
+                      "name": "Full width",
+                      "value": Object {
+                        "fullWidth": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "preffered_position",
+                  "title": "Position",
+                  "values": Array [
+                    Object {
+                      "name": "Left",
+                      "value": Object {
+                        "position": "anchor-top-left",
+                      },
+                    },
+                    Object {
+                      "name": "Right",
+                      "value": Object {
+                        "position": "anchor-top-right",
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "state-modifiers",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                    },
+                    Object {
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Form Group",
+            "title": "Form-group",
+          },
+        ],
+        "id": "overviewDropdown",
+        "tabsId": "overviewDropdownTabs",
+      }
+    }
+  />
+  <h3>
+    When to consider something else
+  </h3>
+  <ul
+    className="list list-bullet"
+  >
+    <li
+      key="when-else-1"
+    >
+      For important actions and information, consider displaying them 
+      <b>
+        directly on the page
+      </b>
+       instead of hiding them in a Dropdown menu
+    </li>
+    <li
+      key="when-else-2"
+    >
+      To display a brief explanation when a cursor hovers over an interactive element, use the 
+      <Link
+        to="/components/tooltips"
+      >
+        Tooltip
+      </Link>
+       component
+    </li>
+  </ul>
+</section>
+`;
+
 exports[`Documentation: Dropdown renders 1`] = `
 <DocContainer>
-  <p
-    className="lead"
-  >
-    Dropdown’s are toggleable overlays that open on demand. They let users access additional content and actions without cluttering the page.
-  </p>
-  <Overview />
+  <section>
+    <p
+      className="lead"
+    >
+      Dropdown’s are toggleable overlays that open on demand. They let users access additional content and actions without cluttering the page.
+    </p>
+    <Overview />
+    <ContentGuidelines />
+    <DeveloperDocumentation />
+  </section>
 </DocContainer>
 `;
