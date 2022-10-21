@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Dropdown, { Overview } from "./index";
+import Dropdown, { Overview, ContentGuidelines, DeveloperDocumentation } from "./index";
 
 describe("Documentation: Dropdown", () => {
     it("is defined", () => {
@@ -23,6 +23,32 @@ describe("Documentation: Dropdown", () => {
 
         it("renders", () => {
             const wrapper = shallow(<Overview />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+
+    });
+
+    describe("ContentGuidelines", () => {
+        it("is defined", () => {
+            expect(Overview).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<ContentGuidelines />);
+
+            expect(wrapper).toMatchSnapshot();
+        });
+
+    });
+
+    describe("DeveloperDocumentation", () => {
+        it("is defined", () => {
+            expect(Overview).toBeDefined();
+        });
+
+        it("renders", () => {
+            const wrapper = shallow(<DeveloperDocumentation />);
 
             expect(wrapper).toMatchSnapshot();
         });

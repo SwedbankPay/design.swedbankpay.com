@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer } from "@docutils";
 import { dropdownOverview, contentGuidelines } from "./constants";
+import CodeTags from "@components/CodeTags";
 
 const Overview = () => (
     <section>
@@ -12,6 +13,12 @@ const Overview = () => (
             <li key="when-else-1">For important actions and information, consider displaying them <b>directly on the page</b> instead of hiding them in a Dropdown menu</li>
             <li key="when-else-2">To display a brief explanation when a cursor hovers over an interactive element, use the <Link to="/components/tooltips">Tooltip</Link> component</li>
         </ul>
+    </section>
+);
+
+const ContentGuidelines = () => (
+    <section>
+        <h2 id="content-guidelines">Content guidelines</h2>
         {contentGuidelines.map((section, i) => (
             <section key={`section-dropdown-${i}`} >
                 <h3>{section.heading}</h3>
@@ -33,14 +40,29 @@ const Overview = () => (
     </section>
 );
 
+const DeveloperDocumentation = () => (
+    <section>
+        <h2 id="developer-documentation">Developer Documentation</h2>
+        <h3>JavaScript methods</h3>
+        <p>Use <CodeTags type="secondary" code="dg.dropdown.init()"/> to initialize all dropdowns. This will open and close the dropdowns automatically.</p>
+        <h3>Accessibility considerations</h3>
+        <p>By default, keyboard navigation is implemented in the script. If your dropdown includes solely buttons or anchor-tags, you can use arrow naivigation between elements. If your <CodeTags type="primary" code=".dropdown-menu"/> consist of other components, arrow down will give focus to the first element of the menu.</p>
+        <p>The default keyboard navigation can be disabled by adding the <CodeTags type="secondary" code="<something>"/> prop in the init function.</p>
+    </section>
+);
+
 const Dropdown = () => (
     <DocContainer>
-        <p className="lead">Dropdown’s are toggleable overlays that open on demand. They let users access additional content and actions without cluttering the page.</p>
-        <Overview/>
+        <section>
+            <p className="lead">Dropdown’s are toggleable overlays that open on demand. They let users access additional content and actions without cluttering the page.</p>
+            <Overview/>
+            <ContentGuidelines/>
+            <DeveloperDocumentation />
+        </section>
     </DocContainer>
 );
 
 export default Dropdown;
 
 /* For testing */
-export { Overview };
+export { Overview, DeveloperDocumentation, ContentGuidelines };
