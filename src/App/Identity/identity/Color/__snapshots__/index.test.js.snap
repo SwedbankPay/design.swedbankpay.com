@@ -274,7 +274,7 @@ exports[`Core: Color SystemColors renders 1`] = `
     />
     <ColorDisplay
       contrastWhiteApproved={true}
-      hex="#C15715"
+      hex="#E97423"
       key="3"
       subTitle="system-warning"
       title="Warning"

@@ -3,6 +3,8 @@ import React from "react";
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
+import { showcaseStatusComponent, leadingExample, trailingExample } from "./constants";
+
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
@@ -11,24 +13,7 @@ const Overview = () => (
             that is why <CodeTags type="secondary" code=".status-success" /> exists. <b>NOTE:</b> Be careful not to rely solely on the color of the status icon to convey
             your message.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeList>
-            <ul className="list status-list">
-                <li>
-                    <span className="status status-neutral">Neutral</span>
-                </li>
-                <li>
-                    <span className="status status-success">Success</span>
-                </li>
-                <li>
-                    <span className="status status-warning">Warning</span>
-                </li>
-                <li>
-                    <span className="status status-danger">Danger</span>
-                </li>
-                <li>
-                    <span className="status status-inactive">Inactive</span>
-                </li>
-            </ul>
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={showcaseStatusComponent} >
         </ComponentPreview>
     </>
 );
@@ -36,49 +21,13 @@ const Overview = () => (
 const ExampleUse = () => (
     <>
         <h2 id="example-use">Example of use</h2>
+        <h3>Leading example</h3>
         <ComponentPreview language="html" showCasePanel >
-            <table className="table table-plain">
-                <thead>
-                    <tr>
-                        <th scope="col">Status</th>
-                        <th scope="col">Invoice number</th>
-                        <th scope="col">Due date</th>
-                        <th className="text-right" scope="col">Amount</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><span className="status status-neutral">Unpaid</span></td>
-                        <td>123456</td>
-                        <td>2020-08-19</td>
-                        <td className="text-right">1079,00</td>
-                    </tr>
-                    <tr>
-                        <td><span className="status status-success">Paid</span></td>
-                        <td>123455</td>
-                        <td>2020-07-19</td>
-                        <td className="text-right">1945,00</td>
-                    </tr>
-                    <tr>
-                        <td><span className="status status-warning">Overdue</span></td>
-                        <td>123454</td>
-                        <td>2020-06-19</td>
-                        <td className="text-right">1814,00</td>
-                    </tr>
-                    <tr>
-                        <td><span className="status status-danger">Sent to collection</span></td>
-                        <td>123452</td>
-                        <td>2020-04-19</td>
-                        <td className="text-right">1337,00</td>
-                    </tr>
-                    <tr>
-                        <td><span className="status status-inactive">Reserved</span></td>
-                        <td>123453</td>
-                        <td>1994-02-22</td>
-                        <td className="text-right">69 420,00</td>
-                    </tr>
-                </tbody>
-            </table>
+            {leadingExample}
+        </ComponentPreview>
+        <h3>Trailing example</h3>
+        <ComponentPreview language="html" showCasePanel >
+            {trailingExample}
         </ComponentPreview>
     </>
 );

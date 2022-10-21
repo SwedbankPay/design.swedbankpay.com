@@ -178,7 +178,7 @@ export const systemColors = [
     {
         title: "Warning",
         subTitle: "system-warning",
-        hex: "#C15715",
+        hex: "#E97423",
         contrastWhiteApproved: true
     },
     {
