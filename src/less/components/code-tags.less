@@ -1,5 +1,5 @@
 @code-tags-padding: 2px 6px;
-@code-tags-border-radius: 4px;
+@code-tags-border-radius: 2px;
 
 code {
     padding: @code-tags-padding;
@@ -9,7 +9,6 @@ code {
     line-height: 1.25rem;
     white-space: nowrap;
     background-color: @brand-bg-2;
-    border: 1px solid @brand-accent;
 }
 
 .code-tags {
@@ -22,11 +21,63 @@ code {
 
     &.code-tags-primary {
         background-color: @brand-bg-2;
-        border: 1px solid @brand-accent;
     }
 
     &.code-tags-secondary {
         background-color: @brand-bg-1;
-        border: 1px solid @brand-tertiary;
+    }
+
+    &.code-tags-tertiary {
+        background-color: @brand-bg-gray;
+    }
+}
+
+.tag {
+    display: flex;
+    width: fit-content;
+    padding: @code-tags-padding;
+    font-size: 1rem;
+    align-items: center;
+    border-radius: @code-tags-border-radius;
+    background-color: @brand-bg-2;
+    max-height: 1.5rem;
+
+    &.tag-secondary {
+        background-color: @brand-bg-1;
+    }
+
+    &.tag-tertiary {
+        background-color: @brand-bg-gray;
+    }
+
+    &.removable {
+        padding-right: 0;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        cursor: pointer;
+        width: 1.5rem;
+        height: 1.5rem;
+        padding: 0;
+        margin-left: 0.125rem;
+
+        i {
+            font-size: 1rem;
+        }
+
+        &:hover {
+            background-color: rgba(0, 0, 0 / 10%);
+            border-radius: 0.125rem;
+        }
+
+        &:focus {
+            border: none;
+            border-radius: 0.125rem;
+            box-shadow: 0 0 0 0.125rem @black;
+            outline: none;
+        }
     }
 }
