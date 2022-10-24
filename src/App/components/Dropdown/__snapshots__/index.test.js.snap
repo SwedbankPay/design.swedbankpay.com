@@ -1,36 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Dropdown - clicks on the toggle btn and it opens the menu list 1`] = `
-<Fragment>
-  <div
-    className="dropdown anchor-top-left "
-  >
-    
-
-    <div
-      className="toggle-menu-container"
-    >
-      <DropdownToggle
-        iconAfter={true}
-        label="Sort"
-      />
-      <div
-        aria-labelledby="dropdownToggle"
-        className="dropdown-menu  p-3 "
-      >
-        
-
-        text content inside menu list
-      </div>
-    </div>
-  </div>
-</Fragment>
-`;
-
 exports[`Component: Dropdown - renders 1`] = `
 <Fragment>
   <div
     className="dropdown anchor-top-left "
+    data-disable-default-keyboard-nav={null}
+    id={null}
   >
     
 
@@ -56,6 +31,8 @@ exports[`Component: Dropdown - renders children components passed as content pro
 <Fragment>
   <div
     className="dropdown anchor-top-left "
+    data-disable-default-keyboard-nav={null}
+    id={null}
   >
     
 
@@ -95,6 +72,8 @@ exports[`Component: Dropdown - renders error state with the error icon and an er
 <Fragment>
   <div
     className="dropdown anchor-top-left  has-error"
+    data-disable-default-keyboard-nav={null}
+    id={null}
   >
     
 
@@ -132,6 +111,8 @@ exports[`Component: Dropdown - renders the toggle button with the icon being eit
 <Fragment>
   <div
     className="dropdown anchor-top-left "
+    data-disable-default-keyboard-nav={null}
+    id={null}
   >
     
 
@@ -160,6 +141,8 @@ exports[`Component: Dropdown - renders the toggle button with the icon being eit
 <Fragment>
   <div
     className="dropdown anchor-top-left "
+    data-disable-default-keyboard-nav={null}
+    id={null}
   >
     
 
@@ -188,6 +171,8 @@ exports[`Component: Dropdown - renders the toggle button, when passing with spec
 <Fragment>
   <div
     className="dropdown anchor-top-left "
+    data-disable-default-keyboard-nav={null}
+    id={null}
   >
     
 
@@ -216,6 +201,8 @@ exports[`Component: Dropdown - renders, when passing no label nor icon props, a 
 <Fragment>
   <div
     className="dropdown anchor-top-left "
+    data-disable-default-keyboard-nav={null}
+    id={null}
   >
     
 
@@ -241,6 +228,8 @@ exports[`Component: Dropdown - the toggle icon btn with and without a passed ico
 <Fragment>
   <div
     className="dropdown anchor-top-left "
+    data-disable-default-keyboard-nav={null}
+    id={null}
   >
     
 
@@ -268,6 +257,8 @@ exports[`Component: Dropdown - the toggle icon btn with and without a passed ico
 <Fragment>
   <div
     className="dropdown anchor-top-left "
+    data-disable-default-keyboard-nav={null}
+    id={null}
   >
     
 

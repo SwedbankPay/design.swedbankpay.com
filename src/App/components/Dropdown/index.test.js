@@ -21,7 +21,6 @@ describe("Component: Dropdown -", () => {
         expect(wrapper.html()).toContain("<div class=\"help-block\"><i class=\"material-icons\">error</i>test error message</div>");
     });
 
-    // somehow the indent of the template literal has an importance in the test when comparing the HTML received and the one expected. This should probably be fixed later to remove this somehow flakyness. Until then don't modify the indent.
     it("renders, when passing no label nor icon props, a toggle button set as secondary button with a chevron icon", () => {
         const wrapper = shallow(<Dropdown/>);
 
@@ -33,7 +32,6 @@ describe("Component: Dropdown -", () => {
         );
     });
 
-    // somehow the indent of the template literal has an importance in the test when comparing the HTML received and the one expected. This should probably be fixed later to remove this somehow flakyness. Until then don't modify the indent.
     it("renders the toggle button, when passing with specific label and custom icon props", () => {
         const wrapper = shallow(<Dropdown label="Filter" isIconButton={false} icon="filter_list" />);
 
@@ -99,35 +97,4 @@ describe("Component: Dropdown -", () => {
 
         expect(wrapper.html()).toContain(checkboxListContentStringExpected);
     });
-
-    it("clicks on the toggle btn and it opens the menu list", () => {
-
-        const wrapper = shallow(<Dropdown label="Sort"content={<p>Text content inside menu list</p>} largePadding={true} />);
-
-        // expect(wrapper).toMatchSnapshot(); TODO
-
-        expect(wrapper.html().toContain("something")).toBeFalsy();
-    });
-
-    // TODO: GOOD STUFF
-    // TODO: test width = not full width on default
-    // TODO: test full width width
-    // TODO: test align-left / align-right
-    // TODO: test Props that are required
-    // TODO: test A11y ?
-    // TODO: test throw error if no menu-list found
-
-    // TODO: OPTIONAL-BONUS - test secondary btn with text and chevron icon rotation on click & derotation when closes
-    // describe("test the click functionalities", () => {
-
-    // const div = document.createElement("div");
-    // ReactDOM.render(<Dropdown label="Filter" isIconButton={false} icon="filter_list" iconAfter={false} />, div);
-    // it("rotates the icon", () => {
-
-    //     const icon = document.querySelector(".material-icons");
-    //     const styles = getComputedStyle(icon);
-
-    //     expect(styles.transform).notToBe("none");
-    // });
-    // });
 });
