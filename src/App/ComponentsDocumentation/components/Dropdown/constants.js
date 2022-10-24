@@ -6,8 +6,21 @@ import CheckboxComponent from "@components/FormComponents/Checkbox";
 import Radio from "@components/FormComponents/Radio";
 import InputGroup from "@components/InputGroup";
 
-const Dropdown = ({ label, isIconButton, fullWidth, position, icon, iconAfter, errorMessage, content, largePadding, dropdownSelect, disabled }) => (
+const Dropdown = ({ id,
+    label,
+    isIconButton,
+    fullWidth,
+    position,
+    icon,
+    iconAfter,
+    errorMessage,
+    content,
+    largePadding,
+    dropdownSelect,
+    disabled,
+    disableDefaultKeyboardNavigation }) => (
     <DropdownComponent
+        id={id}
         label={label}
         isIconButton={isIconButton}
         fullWidth={fullWidth}
@@ -20,6 +33,7 @@ const Dropdown = ({ label, isIconButton, fullWidth, position, icon, iconAfter, e
         largePadding={largePadding}
         dropdownSelect={dropdownSelect}
         disabled = {disabled}
+        disableDefaultKeyboardNavigation = {disableDefaultKeyboardNavigation}
     />
 );
 

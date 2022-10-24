@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { dropdown } from "@src/scripts/main";
 
@@ -77,10 +77,15 @@ const Dropdown = ({ id,
     content,
     largePadding,
     disabled,
-    dropdownSelect }) => (
+    dropdownSelect,
+    disableDefaultKeyboardNavigation = false }) => (
     <>
         {dropdownSelect ? <DropdownSelect disabled={disabled} errorMessage={errorMessage} fullWidth={fullWidth} position={position}/> :
-            <div id={id} className={`dropdown ${position} ${classNames ? ` ${classNames}` : ""}${errorMessage ? " has-error" : ""}${disabled ? " disabled" : ""}`}>{"\n"}
+            <div
+                id={id ? id : null}
+                className={`dropdown ${position} ${classNames ? ` ${classNames}` : ""}${errorMessage ? " has-error" : ""}${disabled ? " disabled" : ""}`}
+                data-disable-default-keyboard-nav={disableDefaultKeyboardNavigation ? "true" : null}
+            >{"\n"}
                 <div className="toggle-menu-container">
                     <DropdownToggle disabled={disabled} isIconButton={isIconButton} label={label} icon={icon} iconAfter={iconAfter} />
                     <div className={`dropdown-menu ${fullWidth ? "full-width" : ""} ${largePadding ? "p-3" : ""} `} aria-labelledby="dropdownToggle">{"\n"}
@@ -94,7 +99,6 @@ const Dropdown = ({ id,
 );
 
 Dropdown.propTypes = {
-    id: PropTypes.string,
     classNames: PropTypes.string,
     label: PropTypes.string,
     icon: PropTypes.string,
@@ -104,7 +108,8 @@ Dropdown.propTypes = {
     position: PropTypes.oneOf(["anchor-top-left", "anchor-top-right"]),
     errorMessage: PropTypes.string,
     largePadding: PropTypes.bool,
-    dropdownSelect: PropTypes.bool
+    dropdownSelect: PropTypes.bool,
+    disableDefaultKeyboardNavigation: PropTypes.bool
 };
 
 export default Dropdown;

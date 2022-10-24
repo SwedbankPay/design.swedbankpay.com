@@ -1,7 +1,9 @@
 const SELECTORS = {
     DROPDOWNLIST: ".dropdown",
     DROPDOWNMENU: ".dropdown-menu",
-    TOGGLE: ".dropdown-toggle"
+    TOGGLE: ".dropdown-toggle",
+    FOCUSELEMENTSFIRSTLEVELARROW: ":scope > a[href], :scope > button:not([disabled]), :scope > [tabindex=\"0\"]",
+    FOCUSELEMENTSFIRSTMOVE: "a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex=\"0\"], [contenteditable]"
 };
 
 const openMenu = container => container.classList.add("active");
@@ -21,10 +23,6 @@ const listenToToggleBtn = toggleBtn => {
         console.warn("No toggle element exist, add an element with the class .dropdown-toggle");
     }
 };
-
-const closeMenuOnEscape = e => e.key === "Escape" ? [...document.querySelectorAll(".dropdown.active")]?.map(containerToClose => closeMenu(containerToClose)) : null;
-
-const listenToEscToCloseMenu = () => document.addEventListener("keydown", closeMenuOnEscape);
 
 // closes the menu if user clicks outside the dropdown menu && the menu is opened
 const listenToClickOutsideDropdown = dropdownContainer => {
@@ -64,13 +62,85 @@ const init = () => {
     }
 
     [...dropdownContainers].map(dropdownContainer => {
-        listenToToggleBtn(dropdownContainer.querySelector(".dropdown-toggle"));
+        listenToToggleBtn(dropdownContainer.querySelector(SELECTORS.TOGGLE));
         listenToClickOutsideDropdown(dropdownContainer);
-        closesOnLinkOrBtnClick(dropdownContainer.querySelector(".dropdown-menu"));
+        closesOnLinkOrBtnClick(dropdownContainer.querySelector(SELECTORS.DROPDOWNMENU));
+        checkAndAddMenuKeyboardNavigation(dropdownContainer, dropdownContainer.querySelector(SELECTORS.DROPDOWNMENU));
     });
 
-    listenToEscToCloseMenu();
+};
 
+const isDisablingDefaultKeyboardNav = dropdownContainer => dropdownContainer?.dataset?.disableDefaultKayboardNav === "true";
+
+const checkAndAddMenuKeyboardNavigation = (dropdownContainer, dropdownMenu) => {
+
+    const initialFocusableElements = getFocusableElementsForFirstMoveOnly(dropdownMenu);
+
+    if (isDisablingDefaultKeyboardNav() || !initialFocusableElements?.length) {
+        // don't modify the keyboard navigation
+        return null;
+    } else {
+        dropdownContainer.addEventListener("keydown", keyboardListener);
+    }
+};
+
+const keyboardNavOnlyToFirstItem = dropdownMenu => {
+    const initialFocusableElements = getFocusableElements(dropdownMenu);
+
+    return initialFocusableElements.length !== dropdownMenu.childElementCount;
+};
+
+// Find focusable elements
+const getFocusableElements = dropdownMenu => [...dropdownMenu.querySelectorAll(SELECTORS.FOCUSELEMENTSFIRSTLEVELARROW)];
+const getFocusableElementsForFirstMoveOnly = dropdownMenu => [...dropdownMenu.querySelectorAll(SELECTORS.FOCUSELEMENTSFIRSTMOVE)];
+
+const keyboardListener = e => {
+
+    const dropdownContainer = e.target.closest(".dropdown");
+
+    const dropdownMenu = dropdownContainer.querySelector(SELECTORS.DROPDOWNMENU);
+    const dropdownToggle = dropdownContainer.querySelector(SELECTORS.TOGGLE);
+
+    const listItems = getFocusableElements(dropdownMenu);
+    const listItemsForFirstMoveOnly = getFocusableElementsForFirstMoveOnly(dropdownMenu);
+
+    const activeElement = document.activeElement;
+
+    if (!dropdownContainer.classList.contains("active")) {
+        return null;
+    }
+
+    if (e.code === "ArrowDown") {
+
+        if (activeElement === dropdownToggle) {
+            listItemsForFirstMoveOnly[0].focus();
+            e.preventDefault();
+        } else if (listItems.find(el => activeElement === el) && !keyboardNavOnlyToFirstItem(dropdownMenu)) {
+            const activeItemIndex = listItems.findIndex(el => activeElement === el);
+
+            listItems[activeItemIndex === listItems.length - 1 ? 0 : activeItemIndex + 1]?.focus();
+            e.preventDefault();
+        }
+
+    }
+
+    if (e.code === "ArrowUp") {
+        if (activeElement === dropdownToggle) {
+            listItemsForFirstMoveOnly[listItemsForFirstMoveOnly.length - 1].focus();
+            e.preventDefault();
+        } else if (listItems.find(el => activeElement === el) && !keyboardNavOnlyToFirstItem(dropdownMenu)) {
+            const activeItemIndex = listItems.findIndex(el => activeElement === el);
+
+            listItems[activeItemIndex === 0 ? listItems.length - 1 : activeItemIndex - 1]?.focus();
+            e.preventDefault();
+        }
+
+    }
+
+    if (e.key === "Esc" || e.key === "Escape") {
+        dropdownToggle.focus();
+        closeMenu(dropdownContainer);
+    }
 };
 
 export default { init };
