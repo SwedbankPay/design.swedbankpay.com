@@ -101,6 +101,14 @@ module.exports = [
                 statusBadges: ["javascript"]
             },
             {
+                title: "Dropdown",
+                path: "/components/dropdown",
+                componentPath: "components/Dropdown",
+                icon: "search",
+                outlined: true,
+                statusBadges: ["javascript", "new"]
+            },
+            {
                 title: "Expandable",
                 path: "/components/expandable",
                 componentPath: "components/Expandable",

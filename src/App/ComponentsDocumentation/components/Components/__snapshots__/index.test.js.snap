@@ -303,6 +303,33 @@ exports[`Components: Components MenuOverview renders 1`] = `
   </Link>
   <Link
     className="cards cards-primary cards-wide"
+    key="Dropdown"
+    to="/components/dropdown"
+  >
+    <div
+      className="cards-content flex-row align-items-center m-0 "
+    >
+      <i
+        aria-hidden="true"
+        className="material-icons material-icons-outlined mr-3"
+      >
+        search
+      </i>
+      <span
+        className="h3 m-0"
+      >
+        Dropdown
+      </span>
+    </div>
+    <i
+      aria-hidden="true"
+      className="material-icons material-icons-outlined"
+    >
+      arrow_forward
+    </i>
+  </Link>
+  <Link
+    className="cards cards-primary cards-wide"
     key="Input field"
     to="/components/input-field"
   >

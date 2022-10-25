@@ -1,0 +1,857 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation: Dropdown ContentGuidelines renders 1`] = `
+<section>
+  <h2
+    id="content-guidelines"
+  >
+    Content guidelines
+  </h2>
+  <section
+    key="section-dropdown-0"
+  >
+    <h3>
+      Content guidelines for container
+    </h3>
+    <div
+      className="row placeholder-guideline"
+    >
+      <div
+        className="col-lg-6 col-sm-12"
+      >
+        <div
+          className="slab slab-plain slab-border-success pb-5"
+        >
+          <span
+            className="h3 d-block mb-4"
+          >
+            Do
+          </span>
+          <Dropdown
+            content={
+              <React.Fragment>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Rename
+                </a>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Edit HTML
+                </a>
+              </React.Fragment>
+            }
+            id="guidelines-dropdown-example-1"
+            isIconButton={true}
+          />
+        </div>
+      </div>
+      <div
+        className="col-lg-6 col-sm-12"
+        data-i="If a Dropdown container contains actions, they should be action-led, menaing led by a strong verb that encourages action."
+        key="If a Dropdown container contains actions, they should be action-led, menaing led by a strong verb that encourages action."
+      >
+        <div
+          className="slab slab-plain slab-border-error pb-5"
+        >
+          <span
+            className="h3 d-block mb-4"
+          >
+            Do
+            n't
+          </span>
+          <Dropdown
+            content={
+              <React.Fragment>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  HTML editing options
+                </a>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  File name changes
+                </a>
+              </React.Fragment>
+            }
+            id="guidelines-dropdown-example-2"
+            isIconButton={true}
+          />
+        </div>
+      </div>
+      <p
+        className="col-12 mt-2 mb-4"
+      >
+        If a Dropdown container contains actions, they should be action-led, menaing led by a strong verb that encourages action.
+      </p>
+      <div
+        className="col-lg-6 col-sm-12"
+      >
+        <div
+          className="slab slab-plain slab-border-success pb-5"
+        >
+          <span
+            className="h3 d-block mb-4"
+          >
+            Do
+          </span>
+          <Dropdown
+            content={
+              <React.Fragment>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Add item
+                </a>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Edit list
+                </a>
+              </React.Fragment>
+            }
+            id="guidelines-dropdown-example-3"
+            isIconButton={true}
+          />
+        </div>
+      </div>
+      <div
+        className="col-lg-6 col-sm-12"
+        data-i="If a Dropdown container contains list of actions or options, they should be scannable. Avoid unnecessary words such as “the”, “an”, or “a”."
+        key="If a Dropdown container contains list of actions or options, they should be scannable. Avoid unnecessary words such as “the”, “an”, or “a”."
+      >
+        <div
+          className="slab slab-plain slab-border-error pb-5"
+        >
+          <span
+            className="h3 d-block mb-4"
+          >
+            Do
+            n't
+          </span>
+          <Dropdown
+            content={
+              <React.Fragment>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Add an item
+                </a>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Edit the list
+                </a>
+              </React.Fragment>
+            }
+            id="guidelines-dropdown-example-4"
+            isIconButton={true}
+          />
+        </div>
+      </div>
+      <p
+        className="col-12 mt-2 mb-4"
+      >
+        If a Dropdown container contains list of actions or options, they should be scannable. Avoid unnecessary words such as “the”, “an”, or “a”.
+      </p>
+    </div>
+  </section>
+</section>
+`;
+
+exports[`Documentation: Dropdown DeveloperDocumentation renders 1`] = `
+<section>
+  <h2
+    id="developer-documentation"
+  >
+    Developer Documentation
+  </h2>
+  <h3>
+    JavaScript methods
+  </h3>
+  <p>
+    Use 
+    <CodeTags
+      code="dg.dropdown.init()"
+      type="secondary"
+    />
+     to initialize all dropdowns. This will open and close the dropdowns automatically.
+  </p>
+  <h3>
+    Accessibility considerations
+  </h3>
+  <p>
+    By default, keyboard navigation is implemented in the script. If your dropdown includes solely buttons or anchor-tags, you can use arrow naivigation between elements. If your 
+    <CodeTags
+      code=".dropdown-menu"
+      type="primary"
+    />
+     consist of other components, arrow down will give focus to the first element of the menu.
+  </p>
+</section>
+`;
+
+exports[`Documentation: Dropdown Overview renders 1`] = `
+<section>
+  <h2
+    id="overview"
+  >
+    Overview
+  </h2>
+  <ComponentPreview
+    codeFigure={true}
+    language="html"
+    showCasePanel={true}
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <Dropdown
+              dropdownSelect={true}
+            />,
+            "description": <p>
+              The select options are used when you want the user to choose one element. It can be implemented as a customized select or a radio button list. If you are using the select variant in a form, consider using the 
+              <Link
+                to="/components/select"
+              >
+                Select component
+              </Link>
+               instead.
+            </p>,
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "select_example",
+                  "title": "Select variants",
+                  "values": Array [
+                    Object {
+                      "name": "Select",
+                      "value": Object {
+                        "dropdownSelect": true,
+                      },
+                    },
+                    Object {
+                      "name": "Radiobuttons",
+                      "value": Object {
+                        "content": <Radio
+                          group={true}
+                          groupTitle=""
+                          name="dropdown-radio-examples"
+                          options={
+                            Array [
+                              Object {
+                                "id": "dropdown-radiobuttons-overview-form-inputs-example-1",
+                                "label": "Date",
+                              },
+                              Object {
+                                "id": "dropdown-radiobuttons-overview-form-inputs-example-2",
+                                "label": "Name",
+                              },
+                              Object {
+                                "id": "dropdown-radiobuttons-overview-form-inputs-example-3",
+                                "label": "Price",
+                              },
+                            ]
+                          }
+                        />,
+                        "dropdownSelect": false,
+                        "label": "Sort on",
+                        "largePadding": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "modal_width",
+                  "title": "Menu width",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                      "value": Object {
+                        "fullWidth": false,
+                      },
+                    },
+                    Object {
+                      "name": "Full width",
+                      "value": Object {
+                        "fullWidth": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "preffered_position",
+                  "title": "Position",
+                  "values": Array [
+                    Object {
+                      "name": "Left",
+                      "value": Object {
+                        "position": "anchor-top-left",
+                      },
+                    },
+                    Object {
+                      "name": "Right",
+                      "value": Object {
+                        "position": "anchor-top-right",
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "state-modifiers",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                    },
+                    Object {
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Select",
+            "title": "Select",
+          },
+          Object {
+            "component": <Dropdown
+              content={
+                <React.Fragment>
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    <Icon
+                      type="bookmark"
+                    />
+                    Edit
+                  </a>
+                  
+
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    <Icon
+                      type="delete_outline"
+                    />
+                    Delete
+                  </a>
+                </React.Fragment>
+              }
+              label="Actions"
+            />,
+            "description": "The popover is a container for various content. It usually contains a list of actions or options but it can also contain other type of controls or content like input fields and buttons. Popovers are usually triggered by a button component but they can also be triggerd by other elements. You can set the preffered position of the Popover in relation to it’s trigger, by default the position will be bottom left. It will make sure it is positioned within the viewport, this means that sometimes the Popover flips or move slightly to the left or right.",
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "toggle_examples",
+                  "title": "Toggle types",
+                  "values": Array [
+                    Object {
+                      "name": "Button",
+                      "value": Object {
+                        "isIconButton": false,
+                      },
+                    },
+                    Object {
+                      "name": "Icon button",
+                      "value": Object {
+                        "isIconButton": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "modal_width",
+                  "title": "Menu width",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                      "value": Object {
+                        "fullWidth": false,
+                      },
+                    },
+                    Object {
+                      "name": "Full width",
+                      "value": Object {
+                        "fullWidth": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "preffered_position",
+                  "title": "Position",
+                  "values": Array [
+                    Object {
+                      "name": "Left",
+                      "value": Object {
+                        "position": "anchor-top-left",
+                      },
+                    },
+                    Object {
+                      "name": "Right",
+                      "value": Object {
+                        "position": "anchor-top-right",
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "state-modifiers",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                    },
+                    Object {
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Action list",
+            "title": "Action list",
+          },
+          Object {
+            "component": <Dropdown
+              content={
+                <Checkbox
+                  group={true}
+                  groupTitle=""
+                  name="dropdown-checkboxes-examples"
+                  options={
+                    Array [
+                      Object {
+                        "id": "dropdown-checkbox-overview-form-inputs-example-1",
+                        "label": "Card",
+                      },
+                      Object {
+                        "id": "dropdown-checkbox-overview-form-inputs-example-2",
+                        "label": "Credit",
+                      },
+                      Object {
+                        "id": "dropdown-checkbox-overview-form-inputs-example-3",
+                        "label": "Invoice",
+                      },
+                    ]
+                  }
+                />
+              }
+              label="Payment method"
+              largePadding={true}
+            />,
+            "description": "Use a checkbox list if you have a small to a medium number of options, and want the user to select one or more of the options. When using a checkbox list drop-down menu, could be combined with the tag component to indicate the chosen options from the drop-down menu.",
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "toggle_examples",
+                  "title": "Toggle types",
+                  "values": Array [
+                    Object {
+                      "name": "Button",
+                      "value": Object {
+                        "isIconButton": false,
+                      },
+                    },
+                    Object {
+                      "name": "Icon button",
+                      "value": Object {
+                        "isIconButton": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "modal_width",
+                  "title": "Menu width",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                      "value": Object {
+                        "fullWidth": false,
+                      },
+                    },
+                    Object {
+                      "name": "Full width",
+                      "value": Object {
+                        "fullWidth": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "preffered_position",
+                  "title": "Position",
+                  "values": Array [
+                    Object {
+                      "name": "Left",
+                      "value": Object {
+                        "position": "anchor-top-left",
+                      },
+                    },
+                    Object {
+                      "name": "Right",
+                      "value": Object {
+                        "position": "anchor-top-right",
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "state-modifiers",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                    },
+                    Object {
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Checkbox",
+            "title": "Checkbox",
+          },
+          Object {
+            "component": <Dropdown
+              content={
+                <React.Fragment>
+                  <div
+                    className="d-flex"
+                  >
+                    <InputGroup
+                      className="mr-2"
+                      id="form-group-input-1-example"
+                      label="From, in SEK"
+                      postfix={true}
+                      postfixValue="kr"
+                      type="text"
+                    />
+                    <InputGroup
+                      id="form-group-input-2-example"
+                      label="To, in SEK"
+                      postfix={true}
+                      postfixValue="kr"
+                      type="text"
+                    />
+                  </div>
+                  <Button
+                    className="mr-2"
+                    label="Apply filter"
+                    type="primary"
+                  />
+                  <Button
+                    label="Clear filters"
+                    type="link"
+                  />
+                </React.Fragment>
+              }
+              label="Amount"
+              largePadding={true}
+            />,
+            "description": "The dropdown menu can also have form component inside it. Here you can use different type of components ex. date pickers, rannge sliders etc.",
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "toggle_examples",
+                  "title": "Toggle types",
+                  "values": Array [
+                    Object {
+                      "name": "Button",
+                      "value": Object {
+                        "isIconButton": false,
+                      },
+                    },
+                    Object {
+                      "name": "Icon button",
+                      "value": Object {
+                        "isIconButton": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "modal_width",
+                  "title": "Menu width",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                      "value": Object {
+                        "fullWidth": false,
+                      },
+                    },
+                    Object {
+                      "name": "Full width",
+                      "value": Object {
+                        "fullWidth": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "preffered_position",
+                  "title": "Position",
+                  "values": Array [
+                    Object {
+                      "name": "Left",
+                      "value": Object {
+                        "position": "anchor-top-left",
+                      },
+                    },
+                    Object {
+                      "name": "Right",
+                      "value": Object {
+                        "position": "anchor-top-right",
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "state-modifiers",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                    },
+                    Object {
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Form group",
+            "title": "Form group",
+          },
+        ],
+        "id": "overviewDropdown",
+        "tabsId": "overviewDropdownTabs",
+      }
+    }
+  />
+  <h3>
+    When to consider something else
+  </h3>
+  <ul
+    className="list list-bullet"
+  >
+    <li
+      key="when-else-1"
+    >
+      For important actions and information, consider displaying them 
+      <b>
+        directly on the page
+      </b>
+       instead of hiding them in a Dropdown menu
+    </li>
+    <li
+      key="when-else-2"
+    >
+      To display a brief explanation when a cursor hovers over an interactive element, use the 
+      <Link
+        to="/components/tooltips"
+      >
+        Tooltip
+      </Link>
+       component
+    </li>
+  </ul>
+  <h3>
+    How to use dropdowns
+  </h3>
+  <section
+    key="section-dropdown-0"
+  >
+    <div
+      className="row placeholder-guideline"
+    >
+      <div
+        className="col-lg-6 col-sm-12"
+      >
+        <div
+          className="slab slab-plain slab-border-success pb-5"
+        >
+          <span
+            className="h3 d-block mb-4"
+          >
+            Do
+          </span>
+          <Dropdown
+            content={
+              <Checkbox
+                group={true}
+                groupTitle=""
+                name="dropdown-checkboxes-dodont-examples-1"
+                options={
+                  Array [
+                    Object {
+                      "id": "dropdown-dodont-example-1",
+                      "label": "Successful",
+                    },
+                    Object {
+                      "id": "dropdown-dodont-example-2",
+                      "label": "Failed",
+                    },
+                    Object {
+                      "id": "dropdown-dodont-example-3",
+                      "label": "Cancelled",
+                    },
+                  ]
+                }
+              />
+            }
+            icon="filter_list"
+            iconAfter={false}
+            id="howto-dropdown-example-1"
+            isIconButton={false}
+            label="Filter"
+            largePadding={true}
+          />
+          <Button
+            className="ml-2"
+            icon="edit"
+            label="Edit"
+            type="secondary"
+          />
+        </div>
+      </div>
+      <div
+        className="col-lg-6 col-sm-12"
+        data-i="The Dropdown should contain actions, options or other elements that share a relationships to each other."
+        key="The Dropdown should contain actions, options or other elements that share a relationships to each other."
+      >
+        <div
+          className="slab slab-plain slab-border-error pb-5"
+        >
+          <span
+            className="h3 d-block mb-4"
+          >
+            Do
+            n't
+          </span>
+          <Dropdown
+            content={
+              <React.Fragment>
+                <Checkbox
+                  group={true}
+                  groupTitle="Filter by"
+                  name="dropdown-checkboxes-dodont-examples-2"
+                  options={
+                    Array [
+                      Object {
+                        "id": "dropdown-dodont-example-2-test-item-1",
+                        "label": "Card",
+                      },
+                      Object {
+                        "id": "dropdown-dodont-example-2-test-item-2",
+                        "label": "Credit",
+                      },
+                      Object {
+                        "id": "dropdown-dodont-example-2-test-item-3",
+                        "label": "Invoice",
+                      },
+                    ]
+                  }
+                />
+                <p
+                  className="pt-4"
+                >
+                  Actions
+                </p>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Edit
+                </a>
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Delete
+                </a>
+              </React.Fragment>
+            }
+            id="howto-dropdown-example-2"
+            isIconButton={false}
+            label="Actions"
+            largePadding={true}
+          />
+        </div>
+      </div>
+      <p
+        className="col-12 mt-2 mb-4"
+      >
+        The Dropdown should contain actions, options or other elements that share a relationships to each other.
+      </p>
+    </div>
+  </section>
+</section>
+`;
+
+exports[`Documentation: Dropdown renders 1`] = `
+<DocContainer>
+  <section>
+    <p
+      className="lead"
+    >
+      Dropdown’s are toggleable overlays that open on demand. They let users access additional content and actions without cluttering the page.
+    </p>
+    <Overview />
+    <ContentGuidelines />
+    <DeveloperDocumentation />
+  </section>
+</DocContainer>
+`;
