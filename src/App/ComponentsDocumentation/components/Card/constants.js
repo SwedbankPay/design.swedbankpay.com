@@ -48,19 +48,19 @@ export const overviewCards = {
                         title: "Accent color",
                         values: [
                             {
-                                name: "Primary",
+                                name: "Example 1",
                                 value: {
                                     type: "primary"
                                 }
                             },
                             {
-                                name: "Complementary 1",
+                                name: "Example 2",
                                 value: {
                                     type: "secondary"
                                 }
                             },
                             {
-                                name: "Complementary 2",
+                                name: "Example 3",
                                 value: {
                                     type: "tertiary"
                                 }
