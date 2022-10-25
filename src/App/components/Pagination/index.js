@@ -3,7 +3,11 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import { paginate } from "@src/scripts/main";
 
-const Pagination = ({ length, currentActive, id, anchorArrows }) => {
+const Pagination = ({ length,
+    currentActive,
+    id,
+    anchorArrows,
+    short = false }) => {
 
     const [current, setCurrent] = useState(currentActive);
 
@@ -55,22 +59,25 @@ const Pagination = ({ length, currentActive, id, anchorArrows }) => {
 
     return (
         <>
-            <nav id={id} className="pagination" role="navigation" aria-label="Pagination Navigation">{"\n"}
-                <Arrow type="start" mobile/>{"\n"}
+            <nav id={id} className={`pagination ${short ? "short" : ""}`} role="navigation" aria-label="Pagination Navigation">{"\n"}
+                <Arrow type="start" mobile={!short ? "true" : null}/>{"\n"}
                 <Arrow type="back"/>
-                <ul>
-                    {paginate(length, current).map(({ page, current }, i) => (
-                        <li key={i} className={`${current ? "active" : ""}`}aria-label={`Go to page ${page}`}>{"\n"}
-                            {page
-                                ? <a href="#" onClick={e => goToPage(e, page)}>{page}</a>
-                                : <span>...</span>
-                            }
-                        </li>
-                    ))}
-                </ul>{"\n"}
-                <span className="mobile">Page {current} of {length}</span>{"\n"}
+                {!short &&
+                <>
+                    <ul>
+                        {paginate(length, current).map(({ page, current }, i) => (
+                            <li key={i} className={`${current ? "active" : ""}`}aria-label={`Go to page ${page}`}>{"\n"}
+                                {page
+                                    ? <a href="#" onClick={e => goToPage(e, page)}>{page}</a>
+                                    : <span>...</span>
+                                }
+                            </li>
+                        ))}
+                    </ul>{"\n"}
+                </>}
+                <span className={!short ? "mobile" : "short"}>Page {current} of {length}</span>{"\n"}
                 <Arrow type="forward" />{"\n"}
-                <Arrow type="end" mobile/>
+                <Arrow type="end" mobile={!short ? "true" : null}/>
             </nav>
         </>
 
@@ -82,7 +89,8 @@ Pagination.propTypes = {
     arrows: PropTypes.bool,
     mobileView: PropTypes.bool,
     id: PropTypes.string.isRequired,
-    anchorArrows: PropTypes.bool
+    anchorArrows: PropTypes.bool,
+    short: PropTypes.bool
 };
 
 export default Pagination;
