@@ -13,7 +13,7 @@ const DropdownSelect = ({ disabled, errorMessage, fullWidth, position }) => {
     return (
         <>
             <div className={`dropdown ${position}${errorMessage ? " has-error" : ""}${disabled ? " disabled" : ""}`}>
-                <div className="toggle-menu-container">
+                <div className="toggle-menu-container">{"\n"}
                     <button
                         className="dropdown-toggle btn btn-secondary"
                         id="dropdownSelect"
@@ -23,9 +23,9 @@ const DropdownSelect = ({ disabled, errorMessage, fullWidth, position }) => {
                     >{buttonLabel}
                         <i className="material-icons ml-2" aria-hidden="true">keyboard_arrow_down</i>
                     </button>{"\n"}
-                    <div className={`dropdown-menu ${fullWidth ? "full-width" : ""}`}>
-                        {cardTypes.map(card => (
-                            <button className="btn-elem" onClick={() => setButtonLabel(card)}key={card}>{card}</button>
+                    <div className={`dropdown-menu ${fullWidth ? "full-width" : ""}`}>{"\n"}
+                        {cardTypes.map(card => (<>
+                            <button className="btn-elem" onClick={() => setButtonLabel(card)}key={card}>{card}</button>{"\n"}</>
                         ))}
                     </div>
                 </div>
@@ -54,9 +54,9 @@ const DropdownToggle = ({ disabled, isIconButton = false, label = "Default label
                         <i className="material-icons">{icon}</i>{"\n"}
                     </> :
                     <>
-                        {!iconAfter && <><i className={`material-icons ${iconAfter ? "ml-2" : "mr-2"}`} aria-hidden="true">{icon}</i>{"\n"}</>}
+                        {!iconAfter && <><i className="material-icons" aria-hidden="true">{icon}</i>{"\n"}</>}
                         <span>{label}</span>{"\n"}
-                        {iconAfter && <><i className={`material-icons ${iconAfter ? "ml-2" : "mr-2"}`} aria-hidden="true">{icon}</i>{"\n"}</>}
+                        {iconAfter && <><i className="material-icons" aria-hidden="true">{icon}</i>{"\n"}</>}
 
                     </>
                 }
@@ -86,9 +86,9 @@ const Dropdown = ({ id,
                 className={`dropdown ${position} ${classNames ? ` ${classNames}` : ""}${errorMessage ? " has-error" : ""}${disabled ? " disabled" : ""}`}
                 data-disable-default-keyboard-nav={disableDefaultKeyboardNavigation ? "true" : null}
             >{"\n"}
-                <div className="toggle-menu-container">
+                <div className="toggle-menu-container">{"\n"}
                     <DropdownToggle disabled={disabled} isIconButton={isIconButton} label={label} icon={icon} iconAfter={iconAfter} />
-                    <div className={`dropdown-menu ${fullWidth ? "full-width" : ""} ${largePadding ? "p-3" : ""} `} aria-labelledby="dropdownToggle">{"\n"}
+                    <div className={`dropdown-menu${fullWidth ? " full-width" : ""}${largePadding ? " p-3" : ""}`} aria-labelledby="dropdownToggle">{"\n"}
                         {content}
                     </div>
                 </div>
