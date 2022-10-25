@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import PropTypes from "prop-types";
 import { dropdown } from "@src/scripts/main";
 
@@ -24,8 +24,9 @@ const DropdownSelect = ({ disabled, errorMessage, fullWidth, position }) => {
                         <i className="material-icons ml-2" aria-hidden="true">keyboard_arrow_down</i>
                     </button>{"\n"}
                     <div className={`dropdown-menu ${fullWidth ? "full-width" : ""}`}>{"\n"}
-                        {cardTypes.map(card => (<>
-                            <button className="btn-elem" onClick={() => setButtonLabel(card)}key={card}>{card}</button>{"\n"}</>
+                        {cardTypes.map(card => (<Fragment key={card}>
+                            <button className="btn-elem" onClick={() => setButtonLabel(card)}>{card}</button>{"\n"}
+                        </Fragment>
                         ))}
                     </div>
                 </div>

@@ -147,13 +147,6 @@ export const overviewDropdown = {
     tabsId: "overviewDropdownTabs",
     elements: [
         {
-            tab: "Action list",
-            component: <DropdownComponent label="Actions" content={tabsContent.actionsListItems}/>,
-            options: dropdownSidebarOptions(),
-            title: "Action list",
-            description: "The popover is a container for various content. It usually contains a list of actions or options but it can also contain other type of controls or content like input fields and buttons. Popovers are usually triggered by a button component but they can also be triggerd by other elements. You can set the preffered position of the Popover in relation to it’s trigger, by default the position will be bottom left. It will make sure it is positioned within the viewport, this means that sometimes the Popover flips or move slightly to the left or right."
-        },
-        {
             tab: "Select",
             component: <DropdownComponent dropdownSelect/>,
             options: {
@@ -241,6 +234,13 @@ export const overviewDropdown = {
             },
             title: "Select",
             description: <p>The select options are used when you want the user to choose one element. It can be implemented as a customized select or a radio button list. If you are using the select variant in a form, consider using the <Link to="/components/select">Select component</Link> instead.</p>
+        },
+        {
+            tab: "Action list",
+            component: <DropdownComponent label="Actions" content={tabsContent.actionsListItems}/>,
+            options: dropdownSidebarOptions(),
+            title: "Action list",
+            description: "The popover is a container for various content. It usually contains a list of actions or options but it can also contain other type of controls or content like input fields and buttons. Popovers are usually triggered by a button component but they can also be triggerd by other elements. You can set the preffered position of the Popover in relation to it’s trigger, by default the position will be bottom left. It will make sure it is positioned within the viewport, this means that sometimes the Popover flips or move slightly to the left or right."
         },
         {
             tab: "Checkbox",
