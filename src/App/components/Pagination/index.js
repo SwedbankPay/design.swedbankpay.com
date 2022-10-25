@@ -60,7 +60,7 @@ const Pagination = ({ length,
     return (
         <>
             <nav id={id} className={`pagination ${short ? "short" : ""}`} role="navigation" aria-label="Pagination Navigation">{"\n"}
-                <Arrow type="start" mobile={!short ? "true" : null}/>{"\n"}
+                <Arrow type="start" mobile={!short ? true : null}/>{"\n"}
                 <Arrow type="back"/>
                 {!short &&
                 <>
@@ -77,7 +77,7 @@ const Pagination = ({ length,
                 </>}
                 <span className={!short ? "mobile" : "short"}>Page {current} of {length}</span>{"\n"}
                 <Arrow type="forward" />{"\n"}
-                <Arrow type="end" mobile={!short ? "true" : null}/>
+                <Arrow type="end" mobile={!short ? true : null}/>
             </nav>
         </>
 

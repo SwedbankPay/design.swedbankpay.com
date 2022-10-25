@@ -185,10 +185,28 @@ exports[`Documentation: Pagination Overview renders 1`] = `
                  tags.
               </p>
             </React.Fragment>,
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "pagination width",
+                  "title": "Width view",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                    },
+                    Object {
+                      "name": "Short Width",
+                      "value": Object {
+                        "short": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
             "title": "Pagination",
           },
         ],
-        "hideOptions": true,
         "id": "no-tabs",
       }
     }

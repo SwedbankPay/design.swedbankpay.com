@@ -4,7 +4,7 @@ exports[`Component: Pagination - does not throw error if initialized with id pro
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination"
+    className="pagination "
     id="does-not-throw-error"
     role="navigation"
   >
@@ -149,7 +149,7 @@ exports[`Component: Pagination - receives correct properties 1`] = `
 >
   <nav
     aria-label="Pagination Navigation"
-    className="pagination"
+    className="pagination "
     id="test"
     role="navigation"
   >
@@ -343,7 +343,7 @@ exports[`Component: Pagination - renders 1`] = `
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination"
+    className="pagination "
     id="test"
     role="navigation"
   >
@@ -484,7 +484,7 @@ exports[`Component: Pagination - renders four arrows 1`] = `
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination"
+    className="pagination "
     id="test-pagination"
     role="navigation"
   >
@@ -625,7 +625,7 @@ exports[`Component: Pagination - renders only li elements inside ul element 1`] 
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination"
+    className="pagination "
     id="tets"
     role="navigation"
   >
@@ -762,11 +762,312 @@ exports[`Component: Pagination - renders only li elements inside ul element 1`] 
 </Fragment>
 `;
 
+exports[`Component: Pagination - renders the default view as long view 1`] = `
+<Pagination
+  currentActive={5}
+  id="test-pagination"
+  length={10}
+>
+  <nav
+    aria-label="Pagination Navigation"
+    className="pagination "
+    id="test-pagination"
+    role="navigation"
+  >
+    
+
+    <Arrow
+      mobile={true}
+      type="start"
+    >
+      <button
+        className="arrow-start d-sm-none"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          aria-label="start"
+          className="material-icons"
+        />
+        
+
+      </button>
+    </Arrow>
+    
+
+    <Arrow
+      type="back"
+    >
+      <button
+        className="arrow-back"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          aria-label="back"
+          className="material-icons"
+        />
+        
+
+      </button>
+    </Arrow>
+    <ul>
+      <li
+        aria-label="Go to page 1"
+        className=""
+        key="0"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          1
+        </a>
+      </li>
+      <li
+        aria-label="Go to page null"
+        className=""
+        key="1"
+      >
+        
+
+        <span>
+          ...
+        </span>
+      </li>
+      <li
+        aria-label="Go to page 4"
+        className=""
+        key="2"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          4
+        </a>
+      </li>
+      <li
+        aria-label="Go to page 5"
+        className="active"
+        key="3"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          5
+        </a>
+      </li>
+      <li
+        aria-label="Go to page 6"
+        className=""
+        key="4"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          6
+        </a>
+      </li>
+      <li
+        aria-label="Go to page null"
+        className=""
+        key="5"
+      >
+        
+
+        <span>
+          ...
+        </span>
+      </li>
+      <li
+        aria-label="Go to page 10"
+        className=""
+        key="6"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          10
+        </a>
+      </li>
+    </ul>
+    
+
+    <span
+      className="mobile"
+    >
+      Page 
+      5
+       of 
+      10
+    </span>
+    
+
+    <Arrow
+      type="forward"
+    >
+      <button
+        className="arrow-forward"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          aria-label="forward"
+          className="material-icons"
+        />
+        
+
+      </button>
+    </Arrow>
+    
+
+    <Arrow
+      mobile={true}
+      type="end"
+    >
+      <button
+        className="arrow-end d-sm-none"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          aria-label="end"
+          className="material-icons"
+        />
+        
+
+      </button>
+    </Arrow>
+  </nav>
+</Pagination>
+`;
+
+exports[`Component: Pagination - renders the short view with the short class 1`] = `
+<Pagination
+  currentActive={5}
+  id="test-pagination"
+  length={10}
+  short={true}
+>
+  <nav
+    aria-label="Pagination Navigation"
+    className="pagination short"
+    id="test-pagination"
+    role="navigation"
+  >
+    
+
+    <Arrow
+      mobile={null}
+      type="start"
+    >
+      <button
+        className="arrow-start"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          aria-label="start"
+          className="material-icons"
+        />
+        
+
+      </button>
+    </Arrow>
+    
+
+    <Arrow
+      type="back"
+    >
+      <button
+        className="arrow-back"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          aria-label="back"
+          className="material-icons"
+        />
+        
+
+      </button>
+    </Arrow>
+    <span
+      className="short"
+    >
+      Page 
+      5
+       of 
+      10
+    </span>
+    
+
+    <Arrow
+      type="forward"
+    >
+      <button
+        className="arrow-forward"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          aria-label="forward"
+          className="material-icons"
+        />
+        
+
+      </button>
+    </Arrow>
+    
+
+    <Arrow
+      mobile={null}
+      type="end"
+    >
+      <button
+        className="arrow-end"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          aria-label="end"
+          className="material-icons"
+        />
+        
+
+      </button>
+    </Arrow>
+  </nav>
+</Pagination>
+`;
+
 exports[`Component: Pagination - renders with an li with active class 1`] = `
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination"
+    className="pagination "
     id="test"
     role="navigation"
   >
@@ -907,7 +1208,7 @@ exports[`Component: Pagination - renders with correct number of list elements. I
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination"
+    className="pagination "
     id="test-pagination"
     role="navigation"
   >
@@ -1048,7 +1349,7 @@ exports[`Component: Pagination - renders with correct number of list elements. I
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination"
+    className="pagination "
     id="test-pagination2"
     role="navigation"
   >
@@ -1189,7 +1490,7 @@ exports[`Component: Pagination - renders with one ellipsis 1`] = `
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination"
+    className="pagination "
     id="test-pagination"
     role="navigation"
   >
@@ -1330,7 +1631,7 @@ exports[`Component: Pagination - renders with two ellipsis 1`] = `
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination"
+    className="pagination "
     id="test-pagination"
     role="navigation"
   >
@@ -1468,7 +1769,7 @@ exports[`Component: Pagination - throws error if initialized without id prop 1`]
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination"
+    className="pagination "
     role="navigation"
   >
     
