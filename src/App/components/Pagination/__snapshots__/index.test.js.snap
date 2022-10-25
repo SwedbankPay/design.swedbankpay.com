@@ -19,6 +19,8 @@ exports[`Component: Pagination - does not throw error if initialized with id pro
     <Arrow
       type="back"
     />
+    
+
     <ul>
       <li
         aria-label="Go to page 1"
@@ -192,6 +194,8 @@ exports[`Component: Pagination - receives correct properties 1`] = `
 
       </button>
     </Arrow>
+    
+
     <ul>
       <li
         aria-label="Go to page 1"
@@ -358,6 +362,8 @@ exports[`Component: Pagination - renders 1`] = `
     <Arrow
       type="back"
     />
+    
+
     <ul>
       <li
         aria-label="Go to page 1"
@@ -499,6 +505,8 @@ exports[`Component: Pagination - renders four arrows 1`] = `
     <Arrow
       type="back"
     />
+    
+
     <ul>
       <li
         aria-label="Go to page 1"
@@ -640,6 +648,8 @@ exports[`Component: Pagination - renders only li elements inside ul element 1`] 
     <Arrow
       type="back"
     />
+    
+
     <ul>
       <li
         aria-label="Go to page 1"
@@ -814,6 +824,8 @@ exports[`Component: Pagination - renders the compact view with the compact class
 
       </button>
     </Arrow>
+    
+
     <span
       className="compact"
     >
@@ -916,6 +928,8 @@ exports[`Component: Pagination - renders the default view as long view 1`] = `
 
       </button>
     </Arrow>
+    
+
     <ul>
       <li
         aria-label="Go to page 1"
@@ -1082,6 +1096,8 @@ exports[`Component: Pagination - renders with an li with active class 1`] = `
     <Arrow
       type="back"
     />
+    
+
     <ul>
       <li
         aria-label="Go to page 1"
@@ -1223,6 +1239,8 @@ exports[`Component: Pagination - renders with correct number of list elements. I
     <Arrow
       type="back"
     />
+    
+
     <ul>
       <li
         aria-label="Go to page 1"
@@ -1364,6 +1382,8 @@ exports[`Component: Pagination - renders with correct number of list elements. I
     <Arrow
       type="back"
     />
+    
+
     <ul>
       <li
         aria-label="Go to page 1"
@@ -1505,6 +1525,8 @@ exports[`Component: Pagination - renders with one ellipsis 1`] = `
     <Arrow
       type="back"
     />
+    
+
     <ul>
       <li
         aria-label="Go to page 1"
@@ -1646,6 +1668,8 @@ exports[`Component: Pagination - renders with two ellipsis 1`] = `
     <Arrow
       type="back"
     />
+    
+
     <ul>
       <li
         aria-label="Go to page 1"
@@ -1783,6 +1807,8 @@ exports[`Component: Pagination - throws error if initialized without id prop 1`]
     <Arrow
       type="back"
     />
+    
+
     <ul>
       <li
         aria-label="Go to page 1"

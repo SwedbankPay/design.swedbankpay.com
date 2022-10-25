@@ -61,7 +61,7 @@ const Pagination = ({ length,
         <>
             <nav id={id} className="pagination" role="navigation" aria-label="Pagination Navigation">{"\n"}
                 <Arrow type="start" mobile={!compact ? true : null}/>{"\n"}
-                <Arrow type="back"/>
+                <Arrow type="back"/>{"\n"}
                 {!compact &&
                 <>
                     <ul>
