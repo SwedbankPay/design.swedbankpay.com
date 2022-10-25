@@ -59,7 +59,7 @@ const Pagination = ({ length,
 
     return (
         <>
-            <nav id={id} className={`pagination ${compact ? "compact-layout" : ""}`} role="navigation" aria-label="Pagination Navigation">{"\n"}
+            <nav id={id} className="pagination" role="navigation" aria-label="Pagination Navigation">{"\n"}
                 <Arrow type="start" mobile={!compact ? true : null}/>{"\n"}
                 <Arrow type="back"/>
                 {!compact &&
@@ -94,4 +94,3 @@ Pagination.propTypes = {
 };
 
 export default Pagination;
-

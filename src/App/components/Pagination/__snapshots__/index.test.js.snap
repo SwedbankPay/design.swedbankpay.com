@@ -4,7 +4,7 @@ exports[`Component: Pagination - does not throw error if initialized with id pro
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination "
+    className="pagination"
     id="does-not-throw-error"
     role="navigation"
   >
@@ -149,7 +149,7 @@ exports[`Component: Pagination - receives correct properties 1`] = `
 >
   <nav
     aria-label="Pagination Navigation"
-    className="pagination "
+    className="pagination"
     id="test"
     role="navigation"
   >
@@ -343,7 +343,7 @@ exports[`Component: Pagination - renders 1`] = `
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination "
+    className="pagination"
     id="test"
     role="navigation"
   >
@@ -484,7 +484,7 @@ exports[`Component: Pagination - renders four arrows 1`] = `
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination "
+    className="pagination"
     id="test-pagination"
     role="navigation"
   >
@@ -625,7 +625,7 @@ exports[`Component: Pagination - renders only li elements inside ul element 1`] 
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination "
+    className="pagination"
     id="tets"
     role="navigation"
   >
@@ -771,7 +771,7 @@ exports[`Component: Pagination - renders the compact view with the compact class
 >
   <nav
     aria-label="Pagination Navigation"
-    className="pagination compact-layout"
+    className="pagination"
     id="test-pagination"
     role="navigation"
   >
@@ -873,7 +873,7 @@ exports[`Component: Pagination - renders the default view as long view 1`] = `
 >
   <nav
     aria-label="Pagination Navigation"
-    className="pagination "
+    className="pagination"
     id="test-pagination"
     role="navigation"
   >
@@ -1067,7 +1067,7 @@ exports[`Component: Pagination - renders with an li with active class 1`] = `
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination "
+    className="pagination"
     id="test"
     role="navigation"
   >
@@ -1208,7 +1208,7 @@ exports[`Component: Pagination - renders with correct number of list elements. I
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination "
+    className="pagination"
     id="test-pagination"
     role="navigation"
   >
@@ -1349,7 +1349,7 @@ exports[`Component: Pagination - renders with correct number of list elements. I
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination "
+    className="pagination"
     id="test-pagination2"
     role="navigation"
   >
@@ -1490,7 +1490,7 @@ exports[`Component: Pagination - renders with one ellipsis 1`] = `
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination "
+    className="pagination"
     id="test-pagination"
     role="navigation"
   >
@@ -1631,7 +1631,7 @@ exports[`Component: Pagination - renders with two ellipsis 1`] = `
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination "
+    className="pagination"
     id="test-pagination"
     role="navigation"
   >
@@ -1769,7 +1769,7 @@ exports[`Component: Pagination - throws error if initialized without id prop 1`]
 <Fragment>
   <nav
     aria-label="Pagination Navigation"
-    className="pagination "
+    className="pagination"
     role="navigation"
   >
     
