@@ -27,7 +27,7 @@ describe("Component: Dropdown -", () => {
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain(`<button class="dropdown-toggle btn btn-secondary" type="button" aria-label="dropdown button">
 <span>Default label</span>
-<i class="material-icons ml-2" aria-hidden="true">keyboard_arrow_down</i>
+<i class="material-icons" aria-hidden="true">keyboard_arrow_down</i>
 </button>`
         );
     });
@@ -38,7 +38,7 @@ describe("Component: Dropdown -", () => {
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).toContain(`<button class="dropdown-toggle btn btn-secondary" type="button" aria-label="dropdown button">
 <span>Filter</span>
-<i class="material-icons ml-2" aria-hidden="true">filter_list</i>
+<i class="material-icons" aria-hidden="true">filter_list</i>
 </button>`
         );
     });
@@ -50,7 +50,7 @@ describe("Component: Dropdown -", () => {
             expect(wrapper).toMatchSnapshot();
             expect(wrapper.html()).toContain(`
 <span>Filter</span>
-<i class="material-icons ml-2" aria-hidden="true">filter_list</i>
+<i class="material-icons" aria-hidden="true">filter_list</i>
 `
             );
         });
@@ -59,7 +59,7 @@ describe("Component: Dropdown -", () => {
 
             expect(wrapper).toMatchSnapshot();
             expect(wrapper.html()).toContain(`
-<i class="material-icons mr-2" aria-hidden="true">filter_list</i>
+<i class="material-icons" aria-hidden="true">filter_list</i>
 <span>Filter</span>
 `
             );
@@ -88,7 +88,7 @@ describe("Component: Dropdown -", () => {
 
         const checkboxListContent = <a href="#"><i className="material-icons" aria-hidden="true">bookmark</i>Edit</a>;
         const checkboxListContentStringExpected = `
-<div class="dropdown-menu  p-3 " aria-labelledby="dropdownToggle">
+<div class="dropdown-menu p-3" aria-labelledby="dropdownToggle">
 <a href="#"><i class="material-icons" aria-hidden="true">bookmark</i>Edit</a></div></div></div>`;
 
         const wrapper = shallow(<Dropdown label="Sort" isIconButton={true} icon="sort" content={checkboxListContent} largePadding={true} />);

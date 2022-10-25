@@ -12,12 +12,14 @@ exports[`Component: Dropdown - renders 1`] = `
     <div
       className="toggle-menu-container"
     >
+      
+
       <DropdownToggle
         iconAfter={true}
       />
       <div
         aria-labelledby="dropdownToggle"
-        className="dropdown-menu   "
+        className="dropdown-menu"
       >
         
 
@@ -39,6 +41,8 @@ exports[`Component: Dropdown - renders children components passed as content pro
     <div
       className="toggle-menu-container"
     >
+      
+
       <DropdownToggle
         icon="sort"
         iconAfter={true}
@@ -47,7 +51,7 @@ exports[`Component: Dropdown - renders children components passed as content pro
       />
       <div
         aria-labelledby="dropdownToggle"
-        className="dropdown-menu  p-3 "
+        className="dropdown-menu p-3"
       >
         
 
@@ -80,12 +84,14 @@ exports[`Component: Dropdown - renders error state with the error icon and an er
     <div
       className="toggle-menu-container"
     >
+      
+
       <DropdownToggle
         iconAfter={true}
       />
       <div
         aria-labelledby="dropdownToggle"
-        className="dropdown-menu   "
+        className="dropdown-menu"
       >
         
 
@@ -119,6 +125,8 @@ exports[`Component: Dropdown - renders the toggle button with the icon being eit
     <div
       className="toggle-menu-container"
     >
+      
+
       <DropdownToggle
         icon="filter_list"
         iconAfter={true}
@@ -127,7 +135,7 @@ exports[`Component: Dropdown - renders the toggle button with the icon being eit
       />
       <div
         aria-labelledby="dropdownToggle"
-        className="dropdown-menu   "
+        className="dropdown-menu"
       >
         
 
@@ -149,6 +157,8 @@ exports[`Component: Dropdown - renders the toggle button with the icon being eit
     <div
       className="toggle-menu-container"
     >
+      
+
       <DropdownToggle
         icon="filter_list"
         iconAfter={false}
@@ -157,7 +167,7 @@ exports[`Component: Dropdown - renders the toggle button with the icon being eit
       />
       <div
         aria-labelledby="dropdownToggle"
-        className="dropdown-menu   "
+        className="dropdown-menu"
       >
         
 
@@ -179,6 +189,8 @@ exports[`Component: Dropdown - renders the toggle button, when passing with spec
     <div
       className="toggle-menu-container"
     >
+      
+
       <DropdownToggle
         icon="filter_list"
         iconAfter={true}
@@ -187,7 +199,7 @@ exports[`Component: Dropdown - renders the toggle button, when passing with spec
       />
       <div
         aria-labelledby="dropdownToggle"
-        className="dropdown-menu   "
+        className="dropdown-menu"
       >
         
 
@@ -209,12 +221,14 @@ exports[`Component: Dropdown - renders, when passing no label nor icon props, a 
     <div
       className="toggle-menu-container"
     >
+      
+
       <DropdownToggle
         iconAfter={true}
       />
       <div
         aria-labelledby="dropdownToggle"
-        className="dropdown-menu   "
+        className="dropdown-menu"
       >
         
 
@@ -236,6 +250,8 @@ exports[`Component: Dropdown - the toggle icon btn with and without a passed ico
     <div
       className="toggle-menu-container"
     >
+      
+
       <DropdownToggle
         iconAfter={true}
         isIconButton={true}
@@ -243,7 +259,7 @@ exports[`Component: Dropdown - the toggle icon btn with and without a passed ico
       />
       <div
         aria-labelledby="dropdownToggle"
-        className="dropdown-menu   "
+        className="dropdown-menu"
       >
         
 
@@ -265,6 +281,8 @@ exports[`Component: Dropdown - the toggle icon btn with and without a passed ico
     <div
       className="toggle-menu-container"
     >
+      
+
       <DropdownToggle
         icon="sort"
         iconAfter={true}
@@ -273,7 +291,7 @@ exports[`Component: Dropdown - the toggle icon btn with and without a passed ico
       />
       <div
         aria-labelledby="dropdownToggle"
-        className="dropdown-menu   "
+        className="dropdown-menu"
       >
         
 
