@@ -328,14 +328,6 @@ exports[`Documentation: Dropdown DeveloperDocumentation renders 1`] = `
     />
      consist of other components, arrow down will give focus to the first element of the menu.
   </p>
-  <p>
-    The default keyboard navigation can be disabled by adding the 
-    <CodeTags
-      code="<something>"
-      type="secondary"
-    />
-     prop in the init function.
-  </p>
 </section>
 `;
 

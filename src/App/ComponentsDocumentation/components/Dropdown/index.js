@@ -47,7 +47,6 @@ const DeveloperDocumentation = () => (
         <p>Use <CodeTags type="secondary" code="dg.dropdown.init()"/> to initialize all dropdowns. This will open and close the dropdowns automatically.</p>
         <h3>Accessibility considerations</h3>
         <p>By default, keyboard navigation is implemented in the script. If your dropdown includes solely buttons or anchor-tags, you can use arrow naivigation between elements. If your <CodeTags type="primary" code=".dropdown-menu"/> consist of other components, arrow down will give focus to the first element of the menu.</p>
-        <p>The default keyboard navigation can be disabled by adding the <CodeTags type="secondary" code="<something>"/> prop in the init function.</p>
     </section>
 );
 

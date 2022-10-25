@@ -24,7 +24,6 @@ const listenToToggleBtn = toggleBtn => {
     }
 };
 
-// closes the menu if user clicks outside the dropdown menu && the menu is opened
 const listenToClickOutsideDropdown = dropdownContainer => {
     const closeMenuOnClickOutsideMenu = e => e.target?.closest(SELECTORS.DROPDOWNLIST) !== dropdownContainer && isOpen(dropdownContainer) ? closeMenu(dropdownContainer) : null;
 
@@ -33,7 +32,6 @@ const listenToClickOutsideDropdown = dropdownContainer => {
 
 const closeContainerFromEvent = e => closeMenu(e.target?.closest(".dropdown"));
 
-// closes the menu if user clicks a button or link in the dropdown menu
 const closesOnLinkOrBtnClick = dropdownMenu => {
     [...dropdownMenu.querySelectorAll("a, button")]?.forEach(link => link.addEventListener("click", closeContainerFromEvent));
 };
