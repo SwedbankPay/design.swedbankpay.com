@@ -92,12 +92,13 @@ describe("Component: Pagination -", () => {
     });
 
     // TODO:
-    it("renders the short view with the short class", () => {
-        const wrapper = mount(<Pagination length={10} currentActive={5} id={"test-pagination"} short={true} />);
+    it("renders the compact view with the compact class", () => {
+        const wrapper = mount(<Pagination length={10} currentActive={5} id={"test-pagination"} compact={true} />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.find(".pagination.short").length).toBe(1);
+        expect(wrapper.find(".pagination.compact-layout").length).toBe(1);
         expect(wrapper.find("ul").length).toBe(0);
+        expect(wrapper.find("span.compact").length).toBe(1);
         expect(wrapper.find("button.arrow-start").length).toBe(1);
         expect(wrapper.find("button.arrow-start.d-sm-none").length).toBe(0);
         expect(wrapper.find("button.arrow-end").length).toBe(1);
@@ -109,8 +110,9 @@ describe("Component: Pagination -", () => {
         const wrapper = mount(<Pagination length={10} currentActive={5} id={"test-pagination"}/>);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.find(".pagination.short").length).toBe(0);
+        expect(wrapper.find(".pagination.compact-layout").length).toBe(0);
         expect(wrapper.find("ul").length).toBe(1);
+        expect(wrapper.find("span.mobile").length).toBe(1);
         expect(wrapper.find("button.arrow-start.d-sm-none").length).toBe(1);
         expect(wrapper.find("button.arrow-end.d-sm-none").length).toBe(1);
     });

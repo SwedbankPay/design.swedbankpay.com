@@ -189,15 +189,15 @@ exports[`Documentation: Pagination Overview renders 1`] = `
               "radio": Array [
                 Object {
                   "id": "pagination width",
-                  "title": "Width view",
+                  "title": "Layout",
                   "values": Array [
                     Object {
                       "name": "Default",
                     },
                     Object {
-                      "name": "Short Width",
+                      "name": "Compact",
                       "value": Object {
-                        "short": true,
+                        "compact": true,
                       },
                     },
                   ],

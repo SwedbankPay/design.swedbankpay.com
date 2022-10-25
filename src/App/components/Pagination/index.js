@@ -7,7 +7,7 @@ const Pagination = ({ length,
     currentActive,
     id,
     anchorArrows,
-    short = false }) => {
+    compact = false }) => {
 
     const [current, setCurrent] = useState(currentActive);
 
@@ -59,10 +59,10 @@ const Pagination = ({ length,
 
     return (
         <>
-            <nav id={id} className={`pagination ${short ? "short" : ""}`} role="navigation" aria-label="Pagination Navigation">{"\n"}
-                <Arrow type="start" mobile={!short ? true : null}/>{"\n"}
+            <nav id={id} className={`pagination ${compact ? "compact-layout" : ""}`} role="navigation" aria-label="Pagination Navigation">{"\n"}
+                <Arrow type="start" mobile={!compact ? true : null}/>{"\n"}
                 <Arrow type="back"/>
-                {!short &&
+                {!compact &&
                 <>
                     <ul>
                         {paginate(length, current).map(({ page, current }, i) => (
@@ -75,9 +75,9 @@ const Pagination = ({ length,
                         ))}
                     </ul>{"\n"}
                 </>}
-                <span className={!short ? "mobile" : "short"}>Page {current} of {length}</span>{"\n"}
+                <span className={!compact ? "mobile" : "compact"}>Page {current} of {length}</span>{"\n"}
                 <Arrow type="forward" />{"\n"}
-                <Arrow type="end" mobile={!short ? true : null}/>
+                <Arrow type="end" mobile={!compact ? true : null}/>
             </nav>
         </>
 
@@ -90,7 +90,7 @@ Pagination.propTypes = {
     mobileView: PropTypes.bool,
     id: PropTypes.string.isRequired,
     anchorArrows: PropTypes.bool,
-    short: PropTypes.bool
+    compact: PropTypes.bool
 };
 
 export default Pagination;

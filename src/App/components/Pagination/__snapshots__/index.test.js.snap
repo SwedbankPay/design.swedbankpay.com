@@ -762,6 +762,109 @@ exports[`Component: Pagination - renders only li elements inside ul element 1`] 
 </Fragment>
 `;
 
+exports[`Component: Pagination - renders the compact view with the compact class 1`] = `
+<Pagination
+  compact={true}
+  currentActive={5}
+  id="test-pagination"
+  length={10}
+>
+  <nav
+    aria-label="Pagination Navigation"
+    className="pagination compact-layout"
+    id="test-pagination"
+    role="navigation"
+  >
+    
+
+    <Arrow
+      mobile={null}
+      type="start"
+    >
+      <button
+        className="arrow-start"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          aria-label="start"
+          className="material-icons"
+        />
+        
+
+      </button>
+    </Arrow>
+    
+
+    <Arrow
+      type="back"
+    >
+      <button
+        className="arrow-back"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          aria-label="back"
+          className="material-icons"
+        />
+        
+
+      </button>
+    </Arrow>
+    <span
+      className="compact"
+    >
+      Page 
+      5
+       of 
+      10
+    </span>
+    
+
+    <Arrow
+      type="forward"
+    >
+      <button
+        className="arrow-forward"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          aria-label="forward"
+          className="material-icons"
+        />
+        
+
+      </button>
+    </Arrow>
+    
+
+    <Arrow
+      mobile={null}
+      type="end"
+    >
+      <button
+        className="arrow-end"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          aria-label="end"
+          className="material-icons"
+        />
+        
+
+      </button>
+    </Arrow>
+  </nav>
+</Pagination>
+`;
+
 exports[`Component: Pagination - renders the default view as long view 1`] = `
 <Pagination
   currentActive={5}
@@ -944,109 +1047,6 @@ exports[`Component: Pagination - renders the default view as long view 1`] = `
     >
       <button
         className="arrow-end d-sm-none"
-        onClick={[Function]}
-      >
-        
-
-        <i
-          aria-label="end"
-          className="material-icons"
-        />
-        
-
-      </button>
-    </Arrow>
-  </nav>
-</Pagination>
-`;
-
-exports[`Component: Pagination - renders the short view with the short class 1`] = `
-<Pagination
-  currentActive={5}
-  id="test-pagination"
-  length={10}
-  short={true}
->
-  <nav
-    aria-label="Pagination Navigation"
-    className="pagination short"
-    id="test-pagination"
-    role="navigation"
-  >
-    
-
-    <Arrow
-      mobile={null}
-      type="start"
-    >
-      <button
-        className="arrow-start"
-        onClick={[Function]}
-      >
-        
-
-        <i
-          aria-label="start"
-          className="material-icons"
-        />
-        
-
-      </button>
-    </Arrow>
-    
-
-    <Arrow
-      type="back"
-    >
-      <button
-        className="arrow-back"
-        onClick={[Function]}
-      >
-        
-
-        <i
-          aria-label="back"
-          className="material-icons"
-        />
-        
-
-      </button>
-    </Arrow>
-    <span
-      className="short"
-    >
-      Page 
-      5
-       of 
-      10
-    </span>
-    
-
-    <Arrow
-      type="forward"
-    >
-      <button
-        className="arrow-forward"
-        onClick={[Function]}
-      >
-        
-
-        <i
-          aria-label="forward"
-          className="material-icons"
-        />
-        
-
-      </button>
-    </Arrow>
-    
-
-    <Arrow
-      mobile={null}
-      type="end"
-    >
-      <button
-        className="arrow-end"
         onClick={[Function]}
       >
         

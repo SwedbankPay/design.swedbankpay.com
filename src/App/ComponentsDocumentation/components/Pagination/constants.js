@@ -16,15 +16,15 @@ export const PaginationShowCasePanel = {
                 radio: [
                     {
                         id: "pagination width",
-                        title: "Width view",
+                        title: "Layout",
                         values: [
                             {
                                 name: "Default"
                             },
                             {
-                                name: "Short Width",
+                                name: "Compact",
                                 value: {
-                                    short: true
+                                    compact: true
                                 }
                             }]
                     }
