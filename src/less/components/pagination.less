@@ -7,15 +7,19 @@
     margin: 1rem 0;
     font-family: @brand-headline;
 
+    .compact {
+        margin: 0 1rem;
+        display: block;
+        align-self: center;
+        font-weight: @font-weight-bold;
+        font-size: 1rem;
+    }
+
     .mobile {
         display: none;
-        margin: 0 1rem;
 
         @media screen and (max-width: (@screen-sm-min - 1)) {
-            display: block;
-            align-self: center;
-            font-weight: @font-weight-bold;
-            font-size: 1rem;
+            .compact();
         }
     }
 
