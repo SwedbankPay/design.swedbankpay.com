@@ -66,7 +66,7 @@ const DropdownToggle = ({ disabled, isIconButton = false, label = "Default label
 };
 
 const Dropdown = ({ id,
-    classNames,
+    className,
     label,
     icon,
     iconAfter = true,
@@ -83,7 +83,7 @@ const Dropdown = ({ id,
         {dropdownSelect ? <DropdownSelect disabled={disabled} errorMessage={errorMessage} fullWidth={fullWidth} position={position}/> :
             <div
                 id={id ? id : null}
-                className={`dropdown ${position} ${classNames ? ` ${classNames}` : ""}${errorMessage ? " has-error" : ""}${disabled ? " disabled" : ""}`}
+                className={`dropdown ${position}${className ? ` ${className}` : ""}${errorMessage ? " has-error" : ""}${disabled ? " disabled" : ""}`}
                 data-disable-default-keyboard-nav={disableDefaultKeyboardNavigation ? "true" : null}
             >{"\n"}
                 <div className="toggle-menu-container">{"\n"}
