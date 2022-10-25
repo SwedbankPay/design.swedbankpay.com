@@ -26,7 +26,7 @@ const WhenToConsider = () => (
         <ul className="list list-bullet">
             <li>If an action will destroy the users work consider a more intrusive pattern such as a <Link to="/components/dialog">Dialog</Link> to confirm the action.</li>
             <li>Always use field-level error messages in forms to indicate inaccurate input. Error alerts can be used to supplement these messages.</li>
-            <li>Consider using a <Link to="/components/dialog">Toast</Link> to confirm the system response to an user action that do not correspond to a specific section of the page.</li>
+            <li>Consider using a <Link to="/components/toast">Toast</Link> to confirm the system response to an user action that do not correspond to a specific section of the page.</li>
         </ul>
     </section>
 );
