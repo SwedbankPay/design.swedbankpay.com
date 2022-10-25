@@ -2,6 +2,14 @@ import React from "react";
 
 export const changeLogs = [
     {
+        version: "10.4.0",
+        title: "New developer New component",
+        text: <p>The design guide team is growing, and so is our component collection! Say hello to our brand new ✨<a href="/components/dropdown">Dropdown</a>✨ component. Check it out!
+            We have also included several changes based on feedback from you guys, our users. Thank you for all your input, and keep’em coming!
+            We have, amongst other things, added filter tags, updated status badges, updated error icons, and resolved a lot of bugs 🐛
+            Head over to the complete changelog to see all the specific changes.</p>
+    },
+    {
         version: "10.3.0",
         title: "Search bar and other treats 🍬",
         text: "Hello to all users of the design guide! In this release, various snacks are provided. First off, in the top right corner, you can see our brand-new search bar! 🔍 This little spinster gives you an alternative way to reach your destination. It is not the most sophisticated search field, but it does the trick! Some WCAG updates have also been made. For instance, the option of reduced animations based on your settings of reducing motion on your OS. Inclusion all the way! Buttons have obtained new designs for their states, and the table component has been modernized, with belonging documentation. Check the changelog to see all the changes."
