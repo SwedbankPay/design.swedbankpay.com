@@ -20,7 +20,7 @@ const tabsContent = {
             </a>
         </>,
     checkboxes:
-        <CheckboxComponent groupTitle="" name="dropdown-checkboxes-examples" options={[
+        <CheckboxComponent name="dropdown-checkboxes-examples" options={[
             {
                 id: "dropdown-checkbox-overview-form-inputs-example-1",
                 label: "Card"
@@ -35,7 +35,7 @@ const tabsContent = {
             }
         ]} group />,
     radiobuttons:
-        <Radio groupTitle="" name="dropdown-radio-examples" options={[
+        <Radio name="dropdown-radio-examples" options={[
             {
                 id: "dropdown-radiobuttons-overview-form-inputs-example-1",
                 label: "Date"
