@@ -133,21 +133,21 @@ const ContentGuidelines = () => (
                             <CheckboxComponent groupTitle="" name="dropdown-checkboxes-examples" options={[
                                 {
                                     id: "dropdown-checkbox-overview-form-inputs-example-1",
-                                    label: "Card"
+                                    label: "Successful"
                                 },
                                 {
                                     id: "dropdown-checkbox-overview-form-inputs-example-2",
-                                    label: "Credit"
+                                    label: "Failed"
                                 },
                                 {
                                     id: "dropdown-checkbox-overview-form-inputs-example-3",
-                                    label: "Invoice"
+                                    label: "Cancelled"
                                 }
                             ]} group />}
                         />
                     </div>
                 </div>
-                <p>Use an icon to further convey the action, e.g. a trashcan icon for a delete button.</p>
+                <p>Use an arrow icon to indicate that the button will trigger a dropdown menu.</p>
             </div>
         </div>
     </section>
