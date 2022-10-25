@@ -217,117 +217,6 @@ exports[`Documentation: Dropdown Overview renders 1`] = `
         "elements": Array [
           Object {
             "component": <Dropdown
-              content={
-                <React.Fragment>
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                  >
-                    <Icon
-                      type="bookmark"
-                    />
-                    Edit
-                  </a>
-                  
-
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                  >
-                    <Icon
-                      type="delete_outline"
-                    />
-                    Delete
-                  </a>
-                </React.Fragment>
-              }
-              label="Actions"
-            />,
-            "description": "The popover is a container for various content. It usually contains a list of actions or options but it can also contain other type of controls or content like input fields and buttons. Popovers are usually triggered by a button component but they can also be triggerd by other elements. You can set the preffered position of the Popover in relation to it’s trigger, by default the position will be bottom left. It will make sure it is positioned within the viewport, this means that sometimes the Popover flips or move slightly to the left or right.",
-            "options": Object {
-              "radio": Array [
-                Object {
-                  "id": "toggle_examples",
-                  "title": "Toggle types",
-                  "values": Array [
-                    Object {
-                      "name": "Button",
-                      "value": Object {
-                        "isIconButton": false,
-                      },
-                    },
-                    Object {
-                      "name": "Icon button",
-                      "value": Object {
-                        "isIconButton": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "modal_width",
-                  "title": "Menu width",
-                  "values": Array [
-                    Object {
-                      "name": "Default",
-                      "value": Object {
-                        "fullWidth": false,
-                      },
-                    },
-                    Object {
-                      "name": "Full width",
-                      "value": Object {
-                        "fullWidth": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "preffered_position",
-                  "title": "Position",
-                  "values": Array [
-                    Object {
-                      "name": "Left",
-                      "value": Object {
-                        "position": "anchor-top-left",
-                      },
-                    },
-                    Object {
-                      "name": "Right",
-                      "value": Object {
-                        "position": "anchor-top-right",
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "state-modifiers",
-                  "title": "State modifiers",
-                  "values": Array [
-                    Object {
-                      "name": "Default",
-                    },
-                    Object {
-                      "name": "Error",
-                      "value": Object {
-                        "errorMessage": "Descriptive helpful error message.",
-                      },
-                    },
-                    Object {
-                      "name": "Disabled",
-                      "value": Object {
-                        "disabled": true,
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "Action list",
-            "title": "Action list",
-          },
-          Object {
-            "component": <Dropdown
               dropdownSelect={true}
             />,
             "description": <p>
@@ -443,6 +332,117 @@ exports[`Documentation: Dropdown Overview renders 1`] = `
             },
             "tab": "Select",
             "title": "Select",
+          },
+          Object {
+            "component": <Dropdown
+              content={
+                <React.Fragment>
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    <Icon
+                      type="bookmark"
+                    />
+                    Edit
+                  </a>
+                  
+
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    <Icon
+                      type="delete_outline"
+                    />
+                    Delete
+                  </a>
+                </React.Fragment>
+              }
+              label="Actions"
+            />,
+            "description": "The popover is a container for various content. It usually contains a list of actions or options but it can also contain other type of controls or content like input fields and buttons. Popovers are usually triggered by a button component but they can also be triggerd by other elements. You can set the preffered position of the Popover in relation to it’s trigger, by default the position will be bottom left. It will make sure it is positioned within the viewport, this means that sometimes the Popover flips or move slightly to the left or right.",
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "toggle_examples",
+                  "title": "Toggle types",
+                  "values": Array [
+                    Object {
+                      "name": "Button",
+                      "value": Object {
+                        "isIconButton": false,
+                      },
+                    },
+                    Object {
+                      "name": "Icon button",
+                      "value": Object {
+                        "isIconButton": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "modal_width",
+                  "title": "Menu width",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                      "value": Object {
+                        "fullWidth": false,
+                      },
+                    },
+                    Object {
+                      "name": "Full width",
+                      "value": Object {
+                        "fullWidth": true,
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "preffered_position",
+                  "title": "Position",
+                  "values": Array [
+                    Object {
+                      "name": "Left",
+                      "value": Object {
+                        "position": "anchor-top-left",
+                      },
+                    },
+                    Object {
+                      "name": "Right",
+                      "value": Object {
+                        "position": "anchor-top-right",
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "state-modifiers",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                    },
+                    Object {
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Action list",
+            "title": "Action list",
           },
           Object {
             "component": <Dropdown
