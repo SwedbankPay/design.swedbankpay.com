@@ -38,12 +38,14 @@ const ExtendedUsage = () => (
         <p>
             The status component inherits the size of its direct parent.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <h1 className="status status-neutral">Neutral</h1>
-            <h2 className="status status-success">Success</h2>
-            <h3 className="status status-warning">Warning</h3>
-            <h4 className="status status-inactive">Inactive</h4>
-            <h5 className="status status-danger">Danger</h5>
+        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+            <div className="d-flex flex-column">
+                <h1 className="status status-neutral">Neutral</h1>
+                <h2 className="status status-success">Success</h2>
+                <h3 className="status status-warning">Warning</h3>
+                <h4 className="status status-inactive">Inactive</h4>
+                <h5 className="status status-danger">Danger</h5>
+            </div>
         </ComponentPreview>
     </>
 );
