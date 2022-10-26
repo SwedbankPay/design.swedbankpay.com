@@ -56,7 +56,7 @@ const tabsContent = {
                 <InputGroup type="text" label="To, in SEK" postfixValue="kr" postfix={true} id="form-group-input-2-example" />
             </div>
             <ButtonComponent type="primary" label="Apply filter" className="mr-2" />
-            <ButtonComponent type="link" label="Clear filters" />
+            <ButtonComponent type="link" label="Clear filters" /> {/* TODO: Add clear filters function */}
         </>
 };
 
