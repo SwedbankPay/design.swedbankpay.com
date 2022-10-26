@@ -56,8 +56,16 @@ const tabsContent = {
                 <InputGroup type="text" label="To, in SEK" postfixValue="kr" postfix={true} id="form-group-input-2-example" />
             </div>
             <ButtonComponent type="primary" label="Apply filter" className="mr-2" />
-            <ButtonComponent type="link" label="Clear filters" /> {/* TODO: Add clear filters function */}
+            <button className="btn btn-link" tyoe="button" onClick={() => clearFilters()}>Clear filters</button>
         </>
+};
+
+const clearFilters = () => {
+    const input1 = document.getElementById("form-group-input-1-example");
+    const input2 = document.getElementById("form-group-input-2-example");
+
+    input1.value = "";
+    input2.value = "";
 };
 
 const dropdownSidebarOptions = () => (
