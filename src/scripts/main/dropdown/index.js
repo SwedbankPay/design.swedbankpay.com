@@ -33,7 +33,7 @@ const listenToClickOutsideDropdown = dropdownContainer => {
 const closeContainerFromEvent = e => closeMenu(e.target?.closest(".dropdown"));
 
 const closesOnLinkOrBtnClick = dropdownMenu => {
-    [...dropdownMenu.querySelectorAll("a, button")]?.forEach(link => link.addEventListener("click", closeContainerFromEvent));
+    dropdownMenu.querySelectorAll("a, button")?.forEach(link => link.addEventListener("click", closeContainerFromEvent));
 };
 
 const init = () => {
@@ -59,7 +59,7 @@ const init = () => {
         return null;
     }
 
-    [...dropdownContainers].map(dropdownContainer => {
+    dropdownContainers.forEach(dropdownContainer => {
         listenToToggleBtn(dropdownContainer.querySelector(SELECTORS.TOGGLE));
         listenToClickOutsideDropdown(dropdownContainer);
         closesOnLinkOrBtnClick(dropdownContainer.querySelector(SELECTORS.DROPDOWNMENU));
