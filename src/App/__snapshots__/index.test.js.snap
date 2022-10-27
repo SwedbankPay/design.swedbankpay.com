@@ -240,7 +240,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/checkbox",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Checkbox",
                     },
@@ -360,7 +359,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/radio-button",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Radio button",
                     },
@@ -371,7 +369,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/rangeslider",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Rangeslider",
                     },
@@ -382,6 +379,7 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/sheet",
                       "statusBadges": Array [
                         "javascript",
+                        "updated",
                       ],
                       "title": "Sheet",
                     },
@@ -392,7 +390,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/select",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Select",
                     },
@@ -403,7 +400,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/sidebar",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Sidebar",
                     },
@@ -412,9 +408,6 @@ exports[`Main: App renders 1`] = `
                       "icon": "skip_next",
                       "outlined": true,
                       "path": "/components/skip-link",
-                      "statusBadges": Array [
-                        "new",
-                      ],
                       "title": "Skip link",
                     },
                     Object {
@@ -429,6 +422,9 @@ exports[`Main: App renders 1`] = `
                       "icon": "check_circle",
                       "outlined": true,
                       "path": "/components/status",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Status",
                     },
                     Object {
@@ -436,9 +432,6 @@ exports[`Main: App renders 1`] = `
                       "icon": "view_list",
                       "outlined": true,
                       "path": "/components/tables",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Tables",
                     },
                     Object {
@@ -457,7 +450,7 @@ exports[`Main: App renders 1`] = `
                       "outlined": true,
                       "path": "/components/tags",
                       "statusBadges": Array [
-                        "new",
+                        "updated",
                       ],
                       "title": "Tags",
                     },
@@ -476,9 +469,6 @@ exports[`Main: App renders 1`] = `
                       "icon": "toggle_off",
                       "outlined": true,
                       "path": "/components/togglebox",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Togglebox",
                     },
                     Object {
@@ -488,7 +478,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/tooltips",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Tooltips",
                     },
@@ -499,7 +488,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/topbar",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Topbar",
                     },

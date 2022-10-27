@@ -455,15 +455,15 @@ exports[`Documentation: Buttons Content guidelines renders 1`] = `
                   Array [
                     Object {
                       "id": "dropdown-checkbox-overview-form-inputs-example-1",
-                      "label": "Card",
+                      "label": "Successful",
                     },
                     Object {
                       "id": "dropdown-checkbox-overview-form-inputs-example-2",
-                      "label": "Credit",
+                      "label": "Failed",
                     },
                     Object {
                       "id": "dropdown-checkbox-overview-form-inputs-example-3",
-                      "label": "Invoice",
+                      "label": "Cancelled",
                     },
                   ]
                 }
@@ -476,7 +476,7 @@ exports[`Documentation: Buttons Content guidelines renders 1`] = `
         </div>
       </div>
       <p>
-        Use an icon to further convey the action, e.g. a trashcan icon for a delete button.
+        Use an arrow icon to indicate that the button will trigger a dropdown menu.
       </p>
     </div>
   </div>

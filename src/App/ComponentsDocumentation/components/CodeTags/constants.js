@@ -40,7 +40,7 @@ export const overviewTags = {
                 radio: [
                     {
                         id: "tag_color",
-                        title: "Color",
+                        title: "Accent color",
                         values: [
                             {
                                 name: "Example 1",
@@ -74,7 +74,7 @@ export const overviewTags = {
                 radio: [
                     {
                         id: "code_tag_color",
-                        title: "Color",
+                        title: "Accent color",
                         values: [
                             {
                                 name: "Example 1",

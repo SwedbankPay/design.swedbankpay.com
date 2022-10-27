@@ -245,7 +245,6 @@ exports[`Documentation: Dropdown Overview renders 1`] = `
                       "value": Object {
                         "content": <Radio
                           group={true}
-                          groupTitle=""
                           name="dropdown-radio-examples"
                           options={
                             Array [
@@ -449,7 +448,6 @@ exports[`Documentation: Dropdown Overview renders 1`] = `
               content={
                 <Checkbox
                   group={true}
-                  groupTitle=""
                   name="dropdown-checkboxes-examples"
                   options={
                     Array [
@@ -583,10 +581,13 @@ exports[`Documentation: Dropdown Overview renders 1`] = `
                     label="Apply filter"
                     type="primary"
                   />
-                  <Button
-                    label="Clear filters"
-                    type="link"
-                  />
+                  <button
+                    className="btn btn-link"
+                    onClick={[Function]}
+                    tyoe="button"
+                  >
+                    Clear filters
+                  </button>
                 </React.Fragment>
               }
               label="Amount"

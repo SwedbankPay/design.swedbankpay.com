@@ -261,33 +261,38 @@ exports[`Documentation: Status ExtendedUsage renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
   >
-    <h1
-      className="status status-neutral"
+    <div
+      className="d-flex flex-column"
     >
-      Neutral
-    </h1>
-    <h2
-      className="status status-success"
-    >
-      Success
-    </h2>
-    <h3
-      className="status status-warning"
-    >
-      Warning
-    </h3>
-    <h4
-      className="status status-inactive"
-    >
-      Inactive
-    </h4>
-    <h5
-      className="status status-danger"
-    >
-      Danger
-    </h5>
+      <h1
+        className="status status-neutral"
+      >
+        Neutral
+      </h1>
+      <h2
+        className="status status-success"
+      >
+        Success
+      </h2>
+      <h3
+        className="status status-warning"
+      >
+        Warning
+      </h3>
+      <h4
+        className="status status-inactive"
+      >
+        Inactive
+      </h4>
+      <h5
+        className="status status-danger"
+      >
+        Danger
+      </h5>
+    </div>
   </ComponentPreview>
 </Fragment>
 `;

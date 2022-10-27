@@ -79,7 +79,7 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
               "radio": Array [
                 Object {
                   "id": "tag_color",
-                  "title": "Color",
+                  "title": "Accent color",
                   "values": Array [
                     Object {
                       "name": "Example 1",
@@ -121,7 +121,7 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
               "radio": Array [
                 Object {
                   "id": "code_tag_color",
-                  "title": "Color",
+                  "title": "Accent color",
                   "values": Array [
                     Object {
                       "name": "Example 1",

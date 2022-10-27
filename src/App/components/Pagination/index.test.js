@@ -91,7 +91,6 @@ describe("Component: Pagination -", () => {
         expect(wrapper.find("span").length).toBe(3);
     });
 
-    // TODO:
     it("renders the compact view with the compact class", () => {
         const wrapper = mount(<Pagination length={10} currentActive={5} id={"test-pagination"} compact={true} />);
 
@@ -104,7 +103,6 @@ describe("Component: Pagination -", () => {
         expect(wrapper.find("button.arrow-end.d-sm-none").length).toBe(0);
     });
 
-    // TODO:
     it("renders the default view as long view", () => {
         const wrapper = mount(<Pagination length={10} currentActive={5} id={"test-pagination"}/>);
 

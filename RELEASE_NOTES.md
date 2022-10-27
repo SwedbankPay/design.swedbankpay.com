@@ -1,31 +1,36 @@
 # Changelog
 
-## [10.3.0] - 06.09.2022
+## [10.4.0] - 25.10.2022
 
 ## Changed
--   Button component
-    -   Updated design for different states; hover, focus, active, etc.
+-   Error icons
+    -   Updated error icons to use “warning” icon instead
 
--   Tables component
-    -   Column dividers
-    -   Sorting option
-    -   Handling of buttons
+-   Sheet component
+    -   Update z-index for sheet header for ensuring the header is visually represented when scrolling inside the sheet.
 
--   Tables documentation
-    -   Added do and don't examples on how to structure a table
+-   Pagination component documentation
+    -   Showcasing compact version of pagination
+
+-   Pagination component
+    -   Update pagination.less to include .compact class for pagination styling as “mobile view”
+
 ## Added
--   Searchbox for the design system
-    -   Simple search on the different pages of the system.
-    -   Different design for mobile view.
+-   Codetags component
+    -   Added class for filter tag styling
 
--   Optinal prefers-reduced-animation class
-    -   Components with animations can be turned off if user applies this on their OS.
-    -   Accordion, Expandable, Sidebar, Sheet, Topbar
+-   Dropdown component
 
--   Added callback to sheet and dialog component when firing off open/close methods.
+## Bugfixes
+-   Input group
+    -   Readded postfix for input group elements
 
--   Return Chart instance when new chart() is ran.
+-   Searchbox
+    -   Visual bug in mobile view fixed
 
-## WCAG
--   Menu button on topbar/sidebar mobile view
-    -   aria-haspopup, aria-controls and aria-expanded
+-   Sidebar
+    -   Added id for overview in Toast and Tables so it can appear in sidebar
+    -   Stop error messages to appear when secondary nav does not have any children
+
+-   Toast documentation page
+    -   Anchor linked to wrong page

@@ -9,20 +9,18 @@ describe("Scripts: Dropdown", () => {
     document.body.appendChild(div);
 
     const Dropdown = ({ id, active }) => (
-        <>
-            <div id={id} className={`dropdown anchor-top-left${active ? " active" : ""}`}>
-                <div className="toggle-menu-container">
-                    <button className="dropdown-toggle btn btn-secondary" type="button" aria-label="dropdown button">
+        <div id={id} className={`dropdown anchor-top-left${active ? " active" : ""}`}>
+            <div className="toggle-menu-container">
+                <button className="dropdown-toggle btn btn-secondary" type="button" aria-label="dropdown button">
                     Actions
-                        <i className="material-icons ml-2" aria-hidden="true">keyboard_arrow_down</i>
-                    </button>
-                    <div className="dropdown-menu   " aria-labelledby="dropdownToggle">
-                        <a id="firstElem" href="#"><i className="material-icons" aria-hidden="true">bookmark</i>Edit</a>
-                        <a href="#"><i className="material-icons" aria-hidden="true">delete_outline</i>Delete</a>
-                    </div>
+                    <i className="material-icons ml-2" aria-hidden="true">keyboard_arrow_down</i>
+                </button>
+                <div className="dropdown-menu   " aria-labelledby="dropdownToggle">
+                    <a id="firstElem" href="#"><i className="material-icons" aria-hidden="true">bookmark</i>Edit</a>
+                    <a href="#"><i className="material-icons" aria-hidden="true">delete_outline</i>Delete</a>
                 </div>
             </div>
-        </>
+        </div>
     );
 
     afterEach(() => {

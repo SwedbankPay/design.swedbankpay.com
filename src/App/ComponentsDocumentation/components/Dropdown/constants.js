@@ -20,7 +20,7 @@ const tabsContent = {
             </a>
         </>,
     checkboxes:
-        <CheckboxComponent groupTitle="" name="dropdown-checkboxes-examples" options={[
+        <CheckboxComponent name="dropdown-checkboxes-examples" options={[
             {
                 id: "dropdown-checkbox-overview-form-inputs-example-1",
                 label: "Card"
@@ -35,7 +35,7 @@ const tabsContent = {
             }
         ]} group />,
     radiobuttons:
-        <Radio groupTitle="" name="dropdown-radio-examples" options={[
+        <Radio name="dropdown-radio-examples" options={[
             {
                 id: "dropdown-radiobuttons-overview-form-inputs-example-1",
                 label: "Date"
@@ -56,8 +56,16 @@ const tabsContent = {
                 <InputGroup type="text" label="To, in SEK" postfixValue="kr" postfix={true} id="form-group-input-2-example" />
             </div>
             <ButtonComponent type="primary" label="Apply filter" className="mr-2" />
-            <ButtonComponent type="link" label="Clear filters" />
+            <button className="btn btn-link" tyoe="button" onClick={() => clearFilters()}>Clear filters</button>
         </>
+};
+
+const clearFilters = () => {
+    const input1 = document.getElementById("form-group-input-1-example");
+    const input2 = document.getElementById("form-group-input-2-example");
+
+    input1.value = "";
+    input2.value = "";
 };
 
 const dropdownSidebarOptions = () => (
