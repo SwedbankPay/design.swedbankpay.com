@@ -13,7 +13,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       className="dg-current-version text-uppercase"
     >
       Design Guide – v. 
-      10.3.0
+      10.4.0
     </span>
     <Switch>
       <Route
@@ -234,16 +234,8 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/checkbox",
               "statusBadges": Array [
                 "javascript",
-                "updated",
               ],
               "title": "Checkbox",
-            },
-            Object {
-              "componentPath": "components/CodeTags",
-              "icon": "code",
-              "outlined": true,
-              "path": "/components/code-tags",
-              "title": "Code tags",
             },
             Object {
               "componentPath": "components/Datepickers",
@@ -264,6 +256,17 @@ exports[`Utilities: RenderPage renders 1`] = `
                 "javascript",
               ],
               "title": "Dialog",
+            },
+            Object {
+              "componentPath": "components/Dropdown",
+              "icon": "search",
+              "outlined": true,
+              "path": "/components/dropdown",
+              "statusBadges": Array [
+                "javascript",
+                "new",
+              ],
+              "title": "Dropdown",
             },
             Object {
               "componentPath": "components/Expandable",
@@ -350,7 +353,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/radio-button",
               "statusBadges": Array [
                 "javascript",
-                "updated",
               ],
               "title": "Radio button",
             },
@@ -361,7 +363,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/rangeslider",
               "statusBadges": Array [
                 "javascript",
-                "updated",
               ],
               "title": "Rangeslider",
             },
@@ -372,6 +373,7 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/sheet",
               "statusBadges": Array [
                 "javascript",
+                "updated",
               ],
               "title": "Sheet",
             },
@@ -382,7 +384,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/select",
               "statusBadges": Array [
                 "javascript",
-                "updated",
               ],
               "title": "Select",
             },
@@ -393,7 +394,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/sidebar",
               "statusBadges": Array [
                 "javascript",
-                "updated",
               ],
               "title": "Sidebar",
             },
@@ -402,9 +402,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "skip_next",
               "outlined": true,
               "path": "/components/skip-link",
-              "statusBadges": Array [
-                "new",
-              ],
               "title": "Skip link",
             },
             Object {
@@ -419,6 +416,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "check_circle",
               "outlined": true,
               "path": "/components/status",
+              "statusBadges": Array [
+                "updated",
+              ],
               "title": "Status",
             },
             Object {
@@ -426,9 +426,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "view_list",
               "outlined": true,
               "path": "/components/tables",
-              "statusBadges": Array [
-                "updated",
-              ],
               "title": "Tables",
             },
             Object {
@@ -440,6 +437,16 @@ exports[`Utilities: RenderPage renders 1`] = `
                 "javascript",
               ],
               "title": "Tabs",
+            },
+            Object {
+              "componentPath": "components/CodeTags",
+              "icon": "code",
+              "outlined": true,
+              "path": "/components/tags",
+              "statusBadges": Array [
+                "updated",
+              ],
+              "title": "Tags",
             },
             Object {
               "componentPath": "components/Toast",
@@ -456,9 +463,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "toggle_off",
               "outlined": true,
               "path": "/components/togglebox",
-              "statusBadges": Array [
-                "updated",
-              ],
               "title": "Togglebox",
             },
             Object {
@@ -468,7 +472,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/tooltips",
               "statusBadges": Array [
                 "javascript",
-                "updated",
               ],
               "title": "Tooltips",
             },
@@ -479,7 +482,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/topbar",
               "statusBadges": Array [
                 "javascript",
-                "updated",
               ],
               "title": "Topbar",
             },

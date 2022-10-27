@@ -7,6 +7,9 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
   >
     Example of use
   </h2>
+  <h3>
+    Leading example
+  </h3>
   <ComponentPreview
     language="html"
     showCasePanel={true}
@@ -143,6 +146,105 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
       </tbody>
     </table>
   </ComponentPreview>
+  <h3>
+    Trailing example
+  </h3>
+  <ComponentPreview
+    language="html"
+    showCasePanel={true}
+  >
+    <table
+      className="table table-plain"
+    >
+      <thead>
+        <tr>
+          <th
+            scope="col"
+          >
+            Name
+          </th>
+          <th
+            className="text-right"
+            scope="col"
+          >
+            Status
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Micheal Scott
+          </td>
+          <td
+            className="d-flex align-items-center justify-content-end"
+          >
+            <span
+              className="status status-right status-neutral"
+            >
+              Regional Manager
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Dwight Shrute
+          </td>
+          <td
+            className="d-flex align-items-center justify-content-end"
+          >
+            <span
+              className="status status-right status-success"
+            >
+              Assistant (to the) regional manager
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Jim Halpert
+          </td>
+          <td
+            className="d-flex align-items-center justify-content-end"
+          >
+            <span
+              className="status status-right status-warning"
+            >
+              Time waster
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Todd Packer
+          </td>
+          <td
+            className="d-flex align-items-center justify-content-end"
+          >
+            <span
+              className="status status-right status-danger"
+            >
+              Former employee
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Pam Beesly
+          </td>
+          <td
+            className="d-flex align-items-center justify-content-end"
+          >
+            <span
+              className="status status-right status-inactive"
+            >
+              No experience
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </ComponentPreview>
 </Fragment>
 `;
 
@@ -159,33 +261,38 @@ exports[`Documentation: Status ExtendedUsage renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
   >
-    <h1
-      className="status status-neutral"
+    <div
+      className="d-flex flex-column"
     >
-      Neutral
-    </h1>
-    <h2
-      className="status status-success"
-    >
-      Success
-    </h2>
-    <h3
-      className="status status-warning"
-    >
-      Warning
-    </h3>
-    <h4
-      className="status status-inactive"
-    >
-      Inactive
-    </h4>
-    <h5
-      className="status status-danger"
-    >
-      Danger
-    </h5>
+      <h1
+        className="status status-neutral"
+      >
+        Neutral
+      </h1>
+      <h2
+        className="status status-success"
+      >
+        Success
+      </h2>
+      <h3
+        className="status status-warning"
+      >
+        Warning
+      </h3>
+      <h4
+        className="status status-inactive"
+      >
+        Inactive
+      </h4>
+      <h5
+        className="status status-danger"
+      >
+        Danger
+      </h5>
+    </div>
   </ComponentPreview>
 </Fragment>
 `;
@@ -210,51 +317,37 @@ exports[`Documentation: Status Overview renders 1`] = `
      Be careful not to rely solely on the color of the status icon to convey your message.
   </p>
   <ComponentPreview
-    codeFigure={true}
     language="html"
-    removeList={true}
     showCasePanel={true}
-  >
-    <ul
-      className="list status-list"
-    >
-      <li>
-        <span
-          className="status status-neutral"
-        >
-          Neutral
-        </span>
-      </li>
-      <li>
-        <span
-          className="status status-success"
-        >
-          Success
-        </span>
-      </li>
-      <li>
-        <span
-          className="status status-warning"
-        >
-          Warning
-        </span>
-      </li>
-      <li>
-        <span
-          className="status status-danger"
-        >
-          Danger
-        </span>
-      </li>
-      <li>
-        <span
-          className="status status-inactive"
-        >
-          Inactive
-        </span>
-      </li>
-    </ul>
-  </ComponentPreview>
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <Status />,
+            "description": "The component has two different states; leading and trailing. Use the status most suitable for your solution. Please beware, when using the trailing option, you must self-add code to make it align correctly.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "right",
+                      "name": "Trailing",
+                      "value": Object {
+                        "right": true,
+                      },
+                    },
+                  ],
+                  "title": "Position",
+                },
+              ],
+            },
+            "title": "Status",
+          },
+        ],
+        "id": "overviewStatus",
+      }
+    }
+  />
 </Fragment>
 `;
 

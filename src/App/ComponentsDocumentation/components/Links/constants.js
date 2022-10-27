@@ -2,15 +2,14 @@ import React from "react";
 import Link from "@components/Link";
 import ActionLink from "~/src/App/components/ActionLink";
 
-const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroundDark, bright, standalone, disabled }) => {
+const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroundDark, bright, standalone }) => {
     const attrs = {
         rightIcon,
         leftIcon,
         linkText,
         smallFont,
         bright,
-        standalone,
-        disabled
+        standalone
     };
 
     return (
@@ -25,7 +24,7 @@ const ShowcaseComponent = ({ rightIcon, leftIcon, linkText, smallFont, backgroun
     );
 };
 
-const ShowcaseActionComponent = ({ badge, smallText, multiline, newTab, disabled }) => {
+const ShowcaseActionComponent = ({ badge, smallText, multiline, newTab }) => {
     const attrs = {
         badge: badge ? {
             type: "badge-default",
@@ -33,8 +32,7 @@ const ShowcaseActionComponent = ({ badge, smallText, multiline, newTab, disabled
         } : null,
         smallText,
         multiline,
-        newTab,
-        disabled
+        newTab
     };
 
     return (
@@ -253,18 +251,6 @@ export const overviewActionLinks = {
                                 name: "External link",
                                 value: {
                                     newTab: true
-                                }
-                            }
-                        ]
-                    },
-                    {
-                        title: "State modifier",
-                        inputs: [
-                            {
-                                id: "state_modifiers",
-                                name: "Disabled",
-                                value: {
-                                    disabled: true
                                 }
                             }
                         ]

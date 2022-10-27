@@ -11,40 +11,77 @@
 }
 
 .status {
-    display: flex;
+    display: inline-flex;
     position: relative;
     padding-left: (@status-size + @status-padding-left);
     align-items: center;
     font-family: Arial, sans-serif;
 
-    &:before {
+    &:before,
+    &:after {
         content: "";
-        position: absolute;
-        width: @status-size;
         height: @status-size;
+        width: @status-size;
         border-radius: 50%;
+        transform: translateY(-55%);
+    }
+
+    &.status-right {
+        padding-left: 0;
+
+        &:before {
+            display: none;
+        }
+
+        &:after {
+            margin-left: 0.5rem;
+            align-self: end;
+            display: block;
+        }
+    }
+
+    &:after {
+        display: none;
+    }
+
+    &:before {
+        position: absolute;
         display: block;
         left: 0;
         top: 50%;
-        transform: translateY(-55%);
+    }
 
-        .status-neutral& {
+    &.status-neutral {
+        &:before,
+        &:after {
             background-color: @brand-info;
         }
+    }
 
-        .status-success& {
+    &.status-success {
+        &:before,
+        &:after {
             background-color: @brand-success;
         }
+    }
 
-        .status-warning& {
+    &.status-warning {
+        &:before,
+        &:after {
             background-color: @brand-warning;
         }
+    }
 
-        .status-danger& {
+    &.status-danger {
+        &:before,
+        &:after {
             background-color: @brand-error;
         }
+    }
 
-        .status-inactive& {
+    &.status-inactive {
+        &:before,
+        &:after {
             background-color: @soft-brown;
         }
     }

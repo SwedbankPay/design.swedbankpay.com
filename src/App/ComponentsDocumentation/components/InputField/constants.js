@@ -48,14 +48,14 @@ const InputOptions = () => (
                         name: "Prefix - Icon",
                         value: {
                             type: "email",
-                            prefixType: "icon",
+                            addOnType: "icon",
                             prefixValue: "email"
                         }
                     },
                     {
                         name: "Postfix - Text",
                         value: {
-                            type: "text",
+                            addOnType: "text",
                             postfixValue: "kr",
                             postfix: true
                         }

@@ -1,86 +1,275 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Documentation: CodeTags ContentGuidelines renders 1`] = `
+<section
+  id="tags-content-guidelines"
+>
+  <h2
+    id="content-guidelines"
+  >
+    Content guidelines
+  </h2>
+  <div
+    className="slab slab-plain h-100 w-100 align-items-center d-flex justify-content-center py-5"
+  >
+    <CodeTags
+      className="mr-2"
+      text="Default"
+      type="tertiary"
+    />
+    <CodeTags
+      className="mr-2"
+      removable={true}
+      text="Removable"
+      type="tertiary"
+    />
+    <CodeTags
+      code="Code"
+      type="tertiary"
+    />
+  </div>
+  <ul>
+    <li>
+      Keep the 
+      <b>
+        label
+      </b>
+       short and concise, use 1-2 words.
+    </li>
+  </ul>
+</section>
+`;
+
 exports[`Documentation: CodeTags Overview renders 1`] = `
-<Fragment>
+<section
+  id="tag-overview"
+>
   <h2
     id="overview"
   >
     Overview
   </h2>
-  <p>
-    Code tags use Akkurat Mono as the font. Akkurat Mono can be found in 
-    <Link
-      to="/identity/typography"
-    >
-      Typography
-    </Link>
-    . Using 
-    <CodeTags
-      code="<code>"
-      type="primary"
-    />
-     without any specied styling will result in the primary styling being applied. Chose which option that is more suitable for your project, or combine them to differentiate between different coding languages or styles.
-  </p>
   <ComponentPreview
     codeFigure={true}
     language="html"
+    removeOuterTag={true}
     showCasePanel={true}
-  >
-    <p>
-      
-
-      This is an example of inline code using 
-      <code>
-        default.styling
-      </code>
-       with default styling.
-      
-
-    </p>
-    <p>
-      
-
-      This is an example of inline code 
-      <CodeTags
-        code="<ComponentName />"
-        type="primary"
-      />
-       with specified class.
-      
-
-    </p>
-    <p>
-      
-
-      This is another example of inline code 
-      <CodeTags
-        code="property.function()"
-        type="secondary"
-      />
-       with another class to differentiate.
-      
-
-    </p>
-    <p>
-      
-
-      <span
-        className="code-tags code-tags-primary"
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <TagComponent
+              type="primary"
+            />,
+            "description": "A Tag should represent a keyword, search term or filter and will always include a label. Tags could be used in different colors and have the option to be removable and will in this case have a close button after the label.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "removable",
+                      "name": "Removable",
+                      "value": Object {
+                        "removable": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+              "radio": Array [
+                Object {
+                  "id": "tag_color",
+                  "title": "Accent color",
+                  "values": Array [
+                    Object {
+                      "name": "Example 1",
+                      "value": Object {
+                        "type": "primary",
+                      },
+                    },
+                    Object {
+                      "name": "Example 2",
+                      "value": Object {
+                        "type": "secondary",
+                      },
+                    },
+                    Object {
+                      "name": "Example 3",
+                      "value": Object {
+                        "type": "tertiary",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Tag",
+            "title": "Tag",
+          },
+          Object {
+            "component": <CodeTagsComponent
+              type="primary"
+            />,
+            "description": <p>
+              Code tags are used to present inline code. They use the Akkurat Mono font. Using 
+              <CodeTags
+                code="<code>"
+              />
+               without any specified styling will result in the primary tag styling being applied. Chose which color that is more suitable for your project, or combine them to differentiate between different coding languages or styles.
+            </p>,
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "code_tag_color",
+                  "title": "Accent color",
+                  "values": Array [
+                    Object {
+                      "name": "Example 1",
+                      "value": Object {
+                        "type": "primary",
+                      },
+                    },
+                    Object {
+                      "name": "Example 2",
+                      "value": Object {
+                        "type": "secondary",
+                      },
+                    },
+                    Object {
+                      "name": "Example 3",
+                      "value": Object {
+                        "type": "tertiary",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Code tag",
+            "title": "Code tags",
+          },
+        ],
+        "id": "overviewTags",
+        "tabsId": "overviewTagsTabs",
+      }
+    }
+  />
+  <section>
+    <h3>
+      When to consider something else
+    </h3>
+    <ul>
+      <li>
+        To show the status of an object, use the 
+        <Link
+          to="/components/badge"
+        >
+          badge
+        </Link>
+         or the 
+        <Link
+          to="/components/status"
+        >
+          status
+        </Link>
+         component instead.
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h3>
+      How to use tags
+    </h3>
+    <div
+      className="row"
+    >
+      <div
+        className="col-lg-6"
       >
-        &lt;span&gt;
-      </span>
-       can also be used to 
-      <span
-        className="code-tags code-tags-secondary"
+        <div
+          className="slab slab-plain slab-border-success"
+        >
+          <h3>
+            Do
+          </h3>
+          <div
+            className="d-flex flex-column justify-content-center pb-4 pt-3"
+          >
+            <button
+              className="btn btn-secondary btn-xs"
+              id="tag-dropdown-example"
+            >
+              Color 
+              <i
+                className="material-icons ml-1"
+              >
+                keyboard_arrow_down
+              </i>
+            </button>
+            <div
+              className="d-flex  flex-row"
+            >
+              <CodeTags
+                className="mr-2"
+                removable={true}
+                text="Red"
+                type="tertiary"
+              />
+              <CodeTags
+                className="mr-2"
+                removable={true}
+                text="Blue"
+                type="tertiary"
+              />
+            </div>
+          </div>
+        </div>
+        <p>
+          Removable tags are related to a input component that allows to add and remove tags. Aim to keep the related component close so the user understands the relation.
+        </p>
+      </div>
+      <div
+        className="col-lg-6"
       >
-        presentCode()
-      </span>
-      .
-      
-
-    </p>
-  </ComponentPreview>
-</Fragment>
+        <div
+          className="slab slab-plain slab-border-success"
+        >
+          <h3>
+            Do
+          </h3>
+          <div
+            className="d-flex flex-row align-items-center"
+          >
+            <div
+              className="d-flex align-items-center pt-4 pb-5"
+            >
+              <CodeTags
+                className="mr-2"
+                removable={true}
+                text="Invoice"
+                type="tertiary"
+              />
+              <CodeTags
+                className="mr-2"
+                removable={true}
+                text="Card"
+                type="tertiary"
+              />
+              <Button
+                label="Clear filters"
+                size="sm"
+                type="link"
+              />
+            </div>
+          </div>
+        </div>
+        <p>
+          It\`s recommended to add a bulk remove action next to a group with removable tags.
+        </p>
+      </div>
+    </div>
+  </section>
+</section>
 `;
 
 exports[`Documentation: CodeTags renders 1`] = `
@@ -90,8 +279,9 @@ exports[`Documentation: CodeTags renders 1`] = `
   <p
     className="lead"
   >
-    Code tags are used to present inline code.
+    Tags are used to label, categorize and organize items using keywords that describe them. Tags can for example be used in filters to represent selected filter values or in documentation to present inline code.
   </p>
   <Overview />
+  <ContentGuidelines />
 </DocContainer>
 `;

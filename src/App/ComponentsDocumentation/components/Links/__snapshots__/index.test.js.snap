@@ -59,18 +59,6 @@ exports[`Components: Links ActionLink renders 1`] = `
                   ],
                   "title": "Modifiers",
                 },
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "state_modifiers",
-                      "name": "Disabled",
-                      "value": Object {
-                        "disabled": true,
-                      },
-                    },
-                  ],
-                  "title": "State modifier",
-                },
               ],
             },
             "title": "Action links",
@@ -362,9 +350,9 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
 exports[`Components: Links Overview renders 1`] = `
 <section>
   <h2
-    id="links"
+    id="overview"
   >
-    Links
+    Overview
   </h2>
   <p>
     Links should be used when you want to direct a user to a new section, page or website. They can be used on their own or inline within paragraphs.

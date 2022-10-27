@@ -2,12 +2,8 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-export const Addon = ({ type, value, color, disabled, postfix }) => (
-    (type === "button") ?
-        <button type="button" className={`btn btn-${color}`} disabled={disabled}>
-            {value}
-        </button>
-        : <span className={`input-group-addon ${postfix ? "postfix" : ""}`}>{(type === "icon") ? <i className="material-icons material-icons-outlined" aria-hidden="true">{value}</i> : value}</span>
+export const Addon = ({ type, value, postfix }) => (
+    <span className={`input-group-addon ${postfix ? "postfix" : ""}`}>{(type === "icon") ? <i className="material-icons material-icons-outlined" aria-hidden="true">{value}</i> : value}</span>
 );
 
 const InputGroup = ({
@@ -25,12 +21,8 @@ const InputGroup = ({
     validationState,
     selectOptions,
     prefixValue,
-    prefixType,
-    prefixBtnColor,
+    addOnType,
     postfixValue,
-    postfixType,
-    postfixBtnColor,
-    feedbackIcon,
     helpBlock,
     errorMessage,
     expandingHintTitle,
@@ -58,8 +50,7 @@ const InputGroup = ({
 
     const inputGrpClasses = classnames(
         "input-group",
-        validationState ? `has-${validationState}` : null,
-        feedbackIcon ? "has-feedback" : null
+        validationState ? `has-${validationState}` : null
     );
 
     const selectAttrs = {
@@ -84,9 +75,9 @@ const InputGroup = ({
         <div className={formGroupClasses}>{"\n"}
             {label ? <label htmlFor={id}>{label}{optional && " (optional)"}
             </label> : null}{label ? "\n" : null}
-            {prefixValue || postfixValue || feedbackIcon ?
+            {prefixValue || postfixValue ?
                 <div className={inputGrpClasses}>{"\n"}
-                    {prefixValue ? <Addon type={prefixType} value={prefixValue} color={prefixBtnColor} disabled={disabled} postfix={postfix} /> : null }{prefixValue ? "\n" : null}
+                    {prefixValue ? <Addon type={addOnType} value={prefixValue} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
                     {type === "textarea" ?
                         <textarea {...attrs}></textarea>
                         : type === "select" ?
@@ -98,7 +89,10 @@ const InputGroup = ({
                                 ))}{"\n\t"}
                             </select>
                             :
-                            <input {...attrs} />}
+                            <>
+                                <input {...attrs} />{"\n\t"}
+                                {postfix ? <Addon type={addOnType} value={postfixValue} disabled={disabled} postfix={postfix} /> : null }{postfix ? "\n" : null}
+                            </>}
                     {"\n"}
                 </div>
                 :
@@ -117,7 +111,7 @@ const InputGroup = ({
                             <input {...attrs} />}{"\n"}
                 </>
             }
-            {errorMessage && <><div className="help-block"><i className="material-icons">error</i>{errorMessage}</div>{"\n"}</>}
+            {errorMessage && <><div className="help-block"><i className="material-icons">warning</i>{errorMessage}</div>{"\n"}</>}
             {helpBlock && <><p id="hint-text" className="hint-text">{helpBlock}</p>{"\n"}</>}
             {expandingHintTitle &&
             <div id={expanderId && "hint-text-expander"} className="hint-text-expander">{"\n"}
@@ -146,18 +140,14 @@ InputGroup.propTypes = {
     validationState: PropTypes.oneOf(["error", ""]),
     selectOptions: PropTypes.array,
     prefixValue: PropTypes.string,
-    prefixType: PropTypes.oneOf(["button", "icon", ""]),
-    prefixBtnColor: PropTypes.oneOf(["primary", "secondary"]),
+    addOnType: PropTypes.oneOf(["text", "icon", ""]),
+    postfix: PropTypes.bool,
     postfixValue: PropTypes.string,
-    postfixType: PropTypes.oneOf(["button", "icon", ""]),
-    postfixBtnColor: PropTypes.oneOf(["primary", "secondary"]),
-    feedbackIcon: PropTypes.string,
     helpBlock: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.bool
     ]),
     errorMessage: PropTypes.string,
-    successMessage: PropTypes.string,
     className: PropTypes.string,
     boxSize: PropTypes.oneOf(["medium", "small", ""]),
     expandingHintTitle: PropTypes.string,

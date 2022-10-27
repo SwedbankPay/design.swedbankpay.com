@@ -4,6 +4,8 @@ import { ComponentPreview, DocContainer } from "@docutils";
 import ButtonComponent from "@components/Button";
 import Alert from "@components/Alert";
 import CodeTags from "@components/CodeTags";
+import Dropdown from "@components/Dropdown";
+import CheckboxComponent from "@components/FormComponents/Checkbox";
 
 import { overviewButtons, destructiveButtons } from "./constants";
 import { Link } from "react-router-dom";
@@ -113,7 +115,7 @@ const ContentGuidelines = () => (
         <h3>How to use icons</h3>
 
         <div className="row">
-            <div className="col-sm-12">
+            <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4 className="mb-3 mt-0">Do</h4>
                     <div className="d-flex button-group flex-column align-items-center justify-content-center mt-4 mb-4">
@@ -122,6 +124,30 @@ const ContentGuidelines = () => (
                     </div>
                 </div>
                 <p>Use an icon to further convey the action, e.g. a trashcan icon for a delete button.</p>
+            </div>
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-success pb-4">
+                    <h4 className="mb-3 mt-0">Do</h4>
+                    <div className="d-flex button-group flex-column align-items-center justify-content-center mt-5 mb-5">
+                        <Dropdown className="pt-2" label="Status" icon="keyboard_arrow_down" largePadding content={
+                            <CheckboxComponent groupTitle="" name="dropdown-checkboxes-examples" options={[
+                                {
+                                    id: "dropdown-checkbox-overview-form-inputs-example-1",
+                                    label: "Successful"
+                                },
+                                {
+                                    id: "dropdown-checkbox-overview-form-inputs-example-2",
+                                    label: "Failed"
+                                },
+                                {
+                                    id: "dropdown-checkbox-overview-form-inputs-example-3",
+                                    label: "Cancelled"
+                                }
+                            ]} group />}
+                        />
+                    </div>
+                </div>
+                <p>Use an arrow icon to indicate that the button will trigger a dropdown menu.</p>
             </div>
         </div>
     </section>

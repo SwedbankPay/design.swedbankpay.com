@@ -3,6 +3,7 @@ import "../../polyfills";
 import accordion from "./accordion";
 import actionList from "./action-list";
 import alert from "./alert";
+import dropdown from "./dropdown";
 import datepicker from "./datepicker";
 import dialog from "./dialog";
 import expandable from "./expandable";
@@ -31,6 +32,7 @@ const dg = {
     accordion,
     actionList,
     alert,
+    dropdown,
     datepicker,
     dialog,
     expandable,
@@ -70,6 +72,7 @@ export {
     accordion,
     actionList,
     alert,
+    dropdown,
     datepicker,
     dialog,
     expandable,
