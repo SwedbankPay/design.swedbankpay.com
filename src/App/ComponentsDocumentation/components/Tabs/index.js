@@ -64,6 +64,10 @@ const DeveloperDocumentation = () => (
         <p>
             Moves the scroll position of the tabs to the user specified position. The value to be passed to <CodeTags type="secondary" code="scrollState" /> is the object <CodeTags type="secondary" code="{ scrollStart, scrollTotalAmount }" />. <CodeTags type="secondary" code="scrollStart" /> is the current scroll position, <CodeTags type="secondary" code="scrollTotalAmount" /> is the amount to be scrolled from the current scroll position (negative values for left scroll, positive values for right scroll). Note: <CodeTags type="primary" code={"<ul>"} /> is the scrollable element.
         </p>
+        <h4>🎨 Styling support for <CodeTags type="secondary" code=".active" /> class</h4>
+        <p>
+            The same styling will be applied whether the <CodeTags type="secondary" code=".active" /> class is applied on the <CodeTags type="secondary" code="<li>" /> element or the <CodeTags type="secondary" code="<a>" /> element. This way it supports out of the box Nuxt router's behavior.
+        </p>
     </>
 );
 
