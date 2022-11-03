@@ -1,10 +1,12 @@
 import React from "react";
 
+const basename = process.env.basename;
+
 export const changeLogs = [
     {
         version: "10.4.0",
         title: "New developer New component",
-        text: <p>The design guide team is growing, and so is our component collection! Say hello to our brand new ✨<a href="/components/dropdown">Dropdown</a>✨ component. Check it out!
+        text: <p>The design guide team is growing, and so is our component collection! Say hello to our brand new ✨<a href={`${basename}/components/dropdown`}>Dropdown</a>✨ component. Check it out!
             We have also included several changes based on feedback from you guys, our users. Thank you for all your input, and keep’em coming!
             We have, amongst other things, added filter tags, updated status badges, updated error icons, and resolved a lot of bugs 🐛
             Head over to the complete <a href="https://github.com/SwedbankPay/design.swedbankpay.com/releases">changelog</a> to see all the specific changes.</p>
