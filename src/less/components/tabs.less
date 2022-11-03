@@ -92,12 +92,13 @@
 
             &.active {
                 padding-left: 0;
+            }
 
-                > a {
-                    color: @brand-secondary;
-                    position: relative;
-                    border-bottom: 2px solid @medium-brown;
-                }
+            &.active > a,
+            a.active {
+                color: @brand-secondary;
+                position: relative;
+                border-bottom: 2px solid @medium-brown;
             }
         }
     }
