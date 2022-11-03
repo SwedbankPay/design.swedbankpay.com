@@ -25,7 +25,7 @@ describe("Component: Dropdown -", () => {
         const wrapper = shallow(<Dropdown/>);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain(`<button class="dropdown-toggle btn btn-secondary" type="button" aria-label="dropdown button">
+        expect(wrapper.html()).toContain(`<button class="dropdown-toggle" type="button" aria-label="dropdown button">
 <span>Default label</span>
 <i class="material-icons" aria-hidden="true">keyboard_arrow_down</i>
 </button>`
@@ -36,7 +36,7 @@ describe("Component: Dropdown -", () => {
         const wrapper = shallow(<Dropdown label="Filter" isIconButton={false} icon="filter_list" />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain(`<button class="dropdown-toggle btn btn-secondary" type="button" aria-label="dropdown button">
+        expect(wrapper.html()).toContain(`<button class="dropdown-toggle" type="button" aria-label="dropdown button">
 <span>Filter</span>
 <i class="material-icons" aria-hidden="true">filter_list</i>
 </button>`
