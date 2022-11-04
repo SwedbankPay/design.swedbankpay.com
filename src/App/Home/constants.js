@@ -5,8 +5,8 @@ const basename = process.env.basename;
 export const changeLogs = [
     {
         version: "10.4.1",
-        title: "Hotifxes incoming 🚤",
-        text: "Here is a release solely based on feedback from our users 🤝 Turns out the dropdown component wasn’t perfect after all, and it had some weird alignment behavior when placed side-by-side with other components. This is now taken care of. We also renamed the class used to style the buttons inside the dropdown menu from '.btn-elem' to '.dropdown-option'. In addition, we removed the css dependency from the button componen, so it is now independant. You can now use it as you want without having to import the button styles. We also added style support for the tabs component. Now the <a> element can also have the class of active instead of the <li> and the correct style will be applied. This to ensure an out of the box support for Nuxt router. Enjoy 😊"
+        title: "Hotfixes incoming 🚤",
+        text: "Here is a release solely based on feedback from our users 🤝 Turns out the dropdown component wasn’t perfect after all, and it had some weird alignment behavior when placed side-by-side with other components. This is now taken care of. We also renamed the class used to style the buttons inside the dropdown menu from '.btn-elem' to '.dropdown-option'. In addition, we removed the css dependency from the button component, so it is now independent. You can now use it as you want without having to import the button styles. We also added style support for the tabs component. Now the <a> element can also have the class of active instead of the <li> and the correct style will be applied. This to ensure an out of the box support for Nuxt router. Enjoy 😊"
     },
     {
         version: "10.4.0",
