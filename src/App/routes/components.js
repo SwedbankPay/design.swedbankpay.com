@@ -252,7 +252,7 @@ module.exports = [
                 componentPath: "components/Tabs",
                 icon: "folder",
                 outlined: true,
-                statusBadges: ["javascript"]
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Tags",
