@@ -4,16 +4,17 @@
 
 ## Changed
 -   Dropdown component
-    -   Remove weird border behavior to avoid shifting sibling elements
+    -   📐 Fix weird border behavior to avoid shifting sibling elements
     -   🧹 Remove css button style dependency
+    -   ✏ Rename ".btn-elem" class name to ".dropdown-option". Use this class to style buttons inside the dropdown menu
 
 ## Added
 -   Tabs component
-    -   Added support for active class on anchor tag for Nuxt router support
+    -   🎨 Added styling support for active class on anchor tag for Nuxt router support
 
 ## Bugfixes
 -   Copywrite section
-    -   Duplicate subsection: "Simple and guiding" and "Positive voice" was the same
+    -   ✒ Duplicate subsection: "Simple and guiding" and "Positive voice" was the same
 
 -   Links in homepage changelog
-    -   Dead links
+    -   🔗 Fix dead links

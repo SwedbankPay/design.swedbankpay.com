@@ -25,7 +25,7 @@ const DropdownSelect = ({ disabled, errorMessage, fullWidth, position }) => {
                     </button>{"\n"}
                     <div className={`dropdown-menu ${fullWidth ? "full-width" : ""}`}>{"\n"}
                         {cardTypes.map(card => (<Fragment key={card}>
-                            <button className="btn-elem" onClick={() => setButtonLabel(card)}>{card}</button>{"\n"}
+                            <button className="dropdown-option" onClick={() => setButtonLabel(card)}>{card}</button>{"\n"}
                         </Fragment>
                         ))}
                     </div>
