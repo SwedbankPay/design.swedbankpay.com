@@ -15,7 +15,7 @@ const DropdownSelect = ({ disabled, errorMessage, fullWidth, position }) => {
             <div className={`dropdown ${position}${errorMessage ? " has-error" : ""}${disabled ? " disabled" : ""}`}>
                 <div className="toggle-menu-container">{"\n"}
                     <button
-                        className="dropdown-toggle btn btn-secondary"
+                        className="dropdown-toggle"
                         id="dropdownSelect"
                         type="button"
                         aria-label="dropdown button"
@@ -45,7 +45,7 @@ const DropdownToggle = ({ disabled, isIconButton = false, label = "Default label
     return (
         <>
             <button
-                className={`dropdown-toggle${isIconButton ? " dropdown-toggle-icon" : " btn btn-secondary"}`}
+                className={`dropdown-toggle${isIconButton ? " dropdown-toggle-icon" : ""}`}
                 type="button"
                 aria-label="dropdown button"
                 disabled={disabled}
