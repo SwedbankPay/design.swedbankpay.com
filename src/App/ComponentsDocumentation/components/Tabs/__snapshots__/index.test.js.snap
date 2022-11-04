@@ -115,6 +115,32 @@ exports[`Components: Tabs DeveloperDocumentation renders 1`] = `
     />
      is the scrollable element.
   </p>
+  <h4>
+    🎨 Styling support for 
+    <CodeTags
+      code=".active"
+      type="secondary"
+    />
+     class
+  </h4>
+  <p>
+    The same styling will be applied whether the 
+    <CodeTags
+      code=".active"
+      type="secondary"
+    />
+     class is applied on the 
+    <CodeTags
+      code="<li>"
+      type="secondary"
+    />
+     element or the 
+    <CodeTags
+      code="<a>"
+      type="secondary"
+    />
+     element. This way it supports out of the box Nuxt router's behavior.
+  </p>
 </Fragment>
 `;
 
