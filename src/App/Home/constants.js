@@ -6,7 +6,7 @@ export const changeLogs = [
     {
         version: "10.4.0",
         title: "New developer New component",
-        text: <p>The design guide team is growing, and so is our component collection! Say hello to our brand new ✨<a href={`${basename}/components/dropdown`}>Dropdown</a>✨ component. Check it out!
+        text: <p>The design guide team is growing, and so is our component collection! Say hello to our brand new ✨<a href={`${basename}components/dropdown`}>Dropdown</a>✨ component. Check it out!
             We have also included several changes based on feedback from you guys, our users. Thank you for all your input, and keep’em coming!
             We have, amongst other things, added filter tags, updated status badges, updated error icons, and resolved a lot of bugs 🐛
             Head over to the complete <a href="https://github.com/SwedbankPay/design.swedbankpay.com/releases">changelog</a> to see all the specific changes.</p>
@@ -19,7 +19,7 @@ export const changeLogs = [
     {
         version: "10.2.0",
         title: "Contribution is key 🔑",
-        text: <p>In this release, we have given our contribution sections an update. To have the most robust design system, we need to continuously improve ourselves, which is only doable through the help of our users. Therefore, we have updated our documentation and created two videos; one to emphasize the <a href="/get-started/introduction">contribution process</a>, and one video to show users how to use the new <a href="/get-started/for-developers">Design Guide light</a>. Check them out! This release also includes bug fixes: the pagination script is now supporting lists with seven elements or fewer, markup bug on pagination arrows, and small fixes on the color page. If you find something wrong or weird, do not hesitate to contact us through our slack channel #design-guide-general 🎉</p>
+        text: <p>In this release, we have given our contribution sections an update. To have the most robust design system, we need to continuously improve ourselves, which is only doable through the help of our users. Therefore, we have updated our documentation and created two videos; one to emphasize the <a href={`${basename}get-started/introduction`}>contribution process</a>, and one video to show users how to use the new <a href={`${basename}get-started/for-developers`}>Design Guide light</a>. Check them out! This release also includes bug fixes: the pagination script is now supporting lists with seven elements or fewer, markup bug on pagination arrows, and small fixes on the color page. If you find something wrong or weird, do not hesitate to contact us through our slack channel #design-guide-general 🎉</p>
     },
     {
         version: "10.1.0",
@@ -29,7 +29,7 @@ export const changeLogs = [
     {
         version: "10.0.0",
         title: "Design guide light 👑",
-        text: <p>It´s finally here! Design guide light is live and direct! Choose what components you want, and leave the rest. Go to <a href="/get-started/for-developers">for developers</a> to read the updated documentation. We also updated some of the colors and the presentation is brand new! Head over to the <a href="/identity/color">color section</a> in Identity to see hex-codes, variables and more! ApplePay icon has also been added.</p>
+        text: <p>It´s finally here! Design guide light is live and direct! Choose what components you want, and leave the rest. Go to <a href={`${basename}get-started/for-developers`}>for developers</a> to read the updated documentation. We also updated some of the colors and the presentation is brand new! Head over to the <a href={`${basename}identity/color`}>color section</a> in Identity to see hex-codes, variables and more! ApplePay icon has also been added.</p>
     },
     {
         version: "9.1.0",
