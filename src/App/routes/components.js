@@ -104,7 +104,7 @@ module.exports = [
                 title: "Dropdown",
                 path: "/components/dropdown",
                 componentPath: "components/Dropdown",
-                icon: "search",
+                icon: "expand_more",
                 outlined: true,
                 statusBadges: ["javascript", "new"]
             },
@@ -112,6 +112,7 @@ module.exports = [
                 title: "Expandable",
                 path: "/components/expandable",
                 componentPath: "components/Expandable",
+                icon: "expand",
                 statusBadges: ["javascript"]
             },
             {

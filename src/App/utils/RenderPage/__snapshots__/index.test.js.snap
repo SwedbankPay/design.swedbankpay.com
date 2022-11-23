@@ -259,7 +259,7 @@ exports[`Utilities: RenderPage renders 1`] = `
             },
             Object {
               "componentPath": "components/Dropdown",
-              "icon": "search",
+              "icon": "expand_more",
               "outlined": true,
               "path": "/components/dropdown",
               "statusBadges": Array [
@@ -270,6 +270,7 @@ exports[`Utilities: RenderPage renders 1`] = `
             },
             Object {
               "componentPath": "components/Expandable",
+              "icon": "expand",
               "path": "/components/expandable",
               "statusBadges": Array [
                 "javascript",
