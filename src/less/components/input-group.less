@@ -12,8 +12,12 @@
     width: 100%;
     min-height: 2rem;
 
+    &:focus-visible{
+        outline: 2px solid @brand-secondary; 
+    }
+
     &:focus-within {
-        outline: auto @brand-secondary;
+        outline: 2px solid @brand-secondary;
 
         .input-group-addon,
         .form-control {

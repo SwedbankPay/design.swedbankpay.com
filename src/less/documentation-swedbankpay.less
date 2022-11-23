@@ -82,6 +82,16 @@
     // Override the prism toolbar button rules
     figure {
         margin: 0;
+        td {
+            &:focus-visible{
+                outline: 2px solid @brand-primary; 
+            }
+        }
+        button {
+            &:focus-visible{
+                outline: 2px solid @brand-primary; 
+            }
+        }
 
         .code-toolbar {
             > .toolbar {
@@ -106,7 +116,7 @@
     }
 
     #loading-component {
-        display: flex;
+        display: flex;          
         justify-content: center;
         flex-grow: 1;
 
@@ -139,11 +149,19 @@
     right: 1rem;
     z-index: 103;
 
+    &:focus-visible{
+        outline: 2px solid @brand-secondary; 
+    }
+
     .form-group {
         margin-bottom: 0;
 
         #search-box:focus + button {
             border-color: transparent;
+        }
+
+        &:focus-visible{
+            outline: 2px solid @brand-secondary; 
         }
 
         input {
@@ -152,6 +170,15 @@
             border: 1px solid @soft-brown;
             border-right: none;
             border-radius: 2px 0 0 0;
+            &:focus-visible{
+                outline: 2px solid @brand-secondary;
+            }
+        }
+        
+        .input-group{
+            &:focus-within{
+                    outline: 2px solid @brand-secondary; 
+            }        
         }
 
         button {
@@ -170,7 +197,7 @@
             &:active,
             &:focus {
                 border-color: transparent;
-                box-shadow: none;
+                box-shadow: none; 
             }
 
             &:focus,
@@ -193,7 +220,7 @@
         background-color: @white;
         border-radius: 2px;
         max-height: 50vh;
-        overflow: scroll;
+        overflow: auto;
         box-shadow: 1px 2px 20px rgb(0 0 0 / 25%);
         padding-top: 0.5rem;
 
@@ -260,8 +287,7 @@
                 right: 0;
                 top: -1.2rem;
                 height: 2.5rem;
-                border-left: 1px solid @soft-brown;
-
+                border-left: 1px solid @soft-brown; 
 
                 &:focus {
                     border-left: transparent;
@@ -802,7 +828,7 @@
         border-radius: 2px 0;
         border: 1px solid @brand-secondary-light-3;
 
-        &.showcasepanel-sm {
+    &.showcasepanel-sm {
             max-width: 20rem;
         }
 
@@ -1636,6 +1662,9 @@
         }
 
         .accordion {
+            :focus-visible{
+                    outline: 2px solid @brand-secondary
+            }
             .accordion-body {
                 .example-accordion {
                     border: 2px dotted @light-brown;
@@ -1747,6 +1776,10 @@
                 height: 2rem;
                 width: 5rem;
                 padding: 0 0.75rem;
+
+                &:focus{
+                    outline: 2px solid @brand-secondary;
+                }
             }
         }
     }
