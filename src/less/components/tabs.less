@@ -34,6 +34,10 @@
                 width: 0;
                 display: none;
             }
+
+            &:focus-visible {
+                outline: 2px solid @brand-secondary;
+            }
         }
 
         &:after,
@@ -87,6 +91,10 @@
 
                 &:hover {
                     border-bottom: 2px solid @medium-brown;
+                }
+
+                &:focus-visible {
+                    outline: 2px solid @brand-secondary;
                 }
             }
 

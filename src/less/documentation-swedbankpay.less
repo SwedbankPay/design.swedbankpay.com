@@ -83,12 +83,12 @@
     figure {
         margin: 0;
         td {
-            &:focus-visible{
+            &:focus-visible {
                 outline: 2px solid @brand-primary; 
             }
         }
         button {
-            &:focus-visible{
+            &:focus-visible {
                 outline: 2px solid @brand-primary; 
             }
         }
@@ -116,7 +116,7 @@
     }
 
     #loading-component {
-        display: flex;          
+        display: flex;
         justify-content: center;
         flex-grow: 1;
 
@@ -149,7 +149,7 @@
     right: 1rem;
     z-index: 103;
 
-    &:focus-visible{
+    &:focus-visible {
         outline: 2px solid @brand-secondary; 
     }
 
@@ -160,7 +160,7 @@
             border-color: transparent;
         }
 
-        &:focus-visible{
+        &:focus-visible {
             outline: 2px solid @brand-secondary; 
         }
 
@@ -170,13 +170,13 @@
             border: 1px solid @soft-brown;
             border-right: none;
             border-radius: 2px 0 0 0;
-            &:focus-visible{
+            &:focus-visible {
                 outline: 2px solid @brand-secondary;
             }
         }
         
         .input-group{
-            &:focus-within{
+            &:focus-within {
                     outline: 2px solid @brand-secondary; 
             }        
         }
@@ -197,7 +197,7 @@
             &:active,
             &:focus {
                 border-color: transparent;
-                box-shadow: none; 
+                box-shadow: none;
             }
 
             &:focus,
@@ -224,6 +224,10 @@
         box-shadow: 1px 2px 20px rgb(0 0 0 / 25%);
         padding-top: 0.5rem;
 
+        &:focus-visible {
+            outline: 2px solid @brand-secondary;
+        }
+
         .item-list {
             margin-bottom: 0;
 
@@ -233,7 +237,7 @@
                 text-decoration: none;
 
                 &:focus-visible {
-                    outline: 5px auto @brand-secondary;
+                    outline: 2px solid @brand-secondary;
                 }
 
                 li {
@@ -288,7 +292,7 @@
                 top: -1.2rem;
                 height: 2.5rem;
                 border-left: 1px solid @soft-brown; 
-
+                
                 &:focus {
                     border-left: transparent;
                 }
@@ -1662,7 +1666,7 @@
         }
 
         .accordion {
-            :focus-visible{
+            :focus-visible {
                     outline: 2px solid @brand-secondary
             }
             .accordion-body {
@@ -1777,7 +1781,7 @@
                 width: 5rem;
                 padding: 0 0.75rem;
 
-                &:focus{
+                &:focus {
                     outline: 2px solid @brand-secondary;
                 }
             }
