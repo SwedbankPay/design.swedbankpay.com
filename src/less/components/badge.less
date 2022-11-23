@@ -3,8 +3,41 @@
 /* stylelint-disable */
 @badge-list: {
     default: @brand-primary;
-    inactive: @brand-bg-gray;
+    inactive: @list-gray;
     warning: @brand-error;
+    yellow: @brand-primary;
+    yellow-light: @brand-primary-light;
+    yellow-lighter: @brand-primary-lighter;
+    red: @brand-error;
+    red-dark: @brand-error-dark;
+    red-light: @brand-error-light;
+    white: @brand-bg-white;
+    pink: @brand-pink;
+    brown: @brand-brown;
+    brown-medium: @brown-medium;
+    brown-solid: @solid-brown;
+    brown-soft: @brown-soft;
+    brown-dark: @dark-brown;
+    brown-light: @brown-light;
+    turqouise: @brand-turquoise;
+    turqouise-dark: @brand-turqouise-dark;
+    turqouise-darker: @brand-turqouise-darker;
+    turqouise-light: @brand-turquoise-light;
+    turqouise-lighter: @brand-turqouise-lighter;
+    apricot: @brand-apricot;
+    gray: @brand-bg-gray;
+    gray-dark: @brand-bg-gray;
+    gray-light: @light-gray;
+    orange: @brand-orange;
+    orange-light: @brand-warning-light;
+    green: @brand-green;
+    green-light: @brand-green-light;
+    blue: @brand-blue;
+    blue-light: @brand-blue-light;
+
+    // Should be reworked to variables containing both text color and bg color?
+
+    // Contrast checker -> https://webaim.org/resources/contrastchecker/
 }
 
 /* stylelint-enable */
@@ -33,9 +66,24 @@
         vertical-align: text-top;
     }
 
-    &.badge-default,
-    &.badge-inactive {
-        color: @brand-secondary-dark-2;
+    // set text color
+    &.badge-yellow,
+    &.badge-yellow-light,
+    &.badge-yellow-lighter,
+    &.badge-white,
+    &.badge-turqouise-light,
+    &.badge-turqouise-lighter,
+    &.badge-pink,
+    &.badge-brown-light,
+    &.badge-apricot,
+    &.badge-gray,
+    &.badge-gray-light,
+    &.badge-red-light,
+    &.badge-orange-light,
+    &.badge-green-light,
+    &.badge-blue-light,
+    &.badge-default {
+        color: @brand-secondary;
     }
 
     &.badge-number {
