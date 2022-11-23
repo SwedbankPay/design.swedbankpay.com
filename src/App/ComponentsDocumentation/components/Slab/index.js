@@ -2,13 +2,14 @@ import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
+import { overviewSlabs } from "./constants";
 
 import { validation } from "@src/scripts/main";
 
 const DefaultSlab = () => (
     <>
         <h2 id="default-slab">Default slab</h2>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewSlabs} codeFigure>
             <div className="slab slab-default">
                 <p>Do you want to sign up for the slab mailing list?</p>
                 <form action="#" noValidate data-validate>
