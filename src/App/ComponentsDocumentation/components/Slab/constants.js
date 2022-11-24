@@ -20,8 +20,7 @@ const Slab = () => (
 );
 
 export const overviewSlabs = {
-    id: "overviewCards",
-    tabsId: "overviewButtonsTabs",
+    id: "overviewSlabs",
     elements: [
         {
             component: <Slab/>,
@@ -55,8 +54,8 @@ export const overviewSlabs = {
                     }
                 ]
             },
-            title: "Standard cards",
-            description: "The standard card component can be customized either icon or picture in order to make it easier for users to scan the content. Mixing simple card without icon should mostly be done when separating the cards functionality such as when there are more cards to be displayed or when appropriate icons can not be found."
+            title: "Overview slabs",
+            description: "Slab component is basically a content frame which is used as graphic element background in order to display different types of content on it surface. Slab component uses drop shadows to be more visible and noticeable on the UI. Drop shadows can be an amazing way to add depth and emphasis to your designs, creating an image of floating UI elements. Shadows are a way of creating a container for content without making it feel boxed in."
         }
     ]
 };

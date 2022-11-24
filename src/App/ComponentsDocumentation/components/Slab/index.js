@@ -3,128 +3,40 @@ import React, { Component } from "react";
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 import { overviewSlabs } from "./constants";
-
 import { validation } from "@src/scripts/main";
+
+const basename = process.env.basename;
 
 const DefaultSlab = () => (
     <>
         <h2 id="default-slab">Overview</h2>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewSlabs} codeFigure/>
-    </>
-);
-
-const SlabColors = () => (
-    <>
-        <h2 id="slab-colors">Slab colors</h2>
-        <p>
-        We offer three additional slab types; <CodeTags type="secondary" code=".slab-primary" />, <CodeTags type="secondary" code=".slab-secondary" /> and <CodeTags type="secondary" code=".slab-plain" />.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-primary">
-                <h4>Here is some text and then a striped item list</h4>
-                <small>
-                    Some text with a small listing of items underneath.
-                </small>
-                <ul className="list item-list">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                </ul>
-            </div>
-
-            <div className="slab slab-secondary">
-                <h4>Here is some text and then a striped item list</h4>
-                <small>
-                    Some text with a small listing of items underneath.
-                </small>
-                <ul className="list item-list">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                </ul>
-            </div>
-
-            <div className="slab slab-plain">
-                <h4>Here is some text and then a striped item list</h4>
-                <small>
-                    Some text with a small listing of items underneath.
-                </small>
-                <ul className="list item-list">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                </ul>
-            </div>
-        </ComponentPreview>
-        <p>
-        If no slab extension class is added, it is defaulted to white. In this example we use the utility class <CodeTags type="secondary" code=".border" /> to make it easier for us to see the actual slab container.
-        </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab border">
-                <h4>Here is some text and then a striped item list</h4>
-                <small>
-                    Some text with a small listing of items underneath.
-                </small>
-                <ul className="list item-list">
-                    <li>Item 1</li>
-                    <li>Item 2</li>
-                    <li>Item 3</li>
-                </ul>
-            </div>
-        </ComponentPreview>
-    </>
-);
-
-const SlabBorderTop = () => (
-    <>
-        <h2 id="slab-border-top">Slab with top border</h2>
-        <p>Slab with top border can be used to display, for instance, pros and cons lists.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="row">
-                <div className="col-6">
-                    <div className="slab slab-plain slab-border-success">
-                        <h3>Do</h3>
-                        <ul className="list list-bullet">
-                            <li>Do this</li>
-                            <li>Do that</li>
-                            <li>Do the other</li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="col-6">
-                    <div className="slab slab-plain slab-border-error">
-                        <h3>Don&apos;t</h3>
-                        <ul className="list list-bullet">
-                            <li>Don&apos;t do this</li>
-                            <li>Don&apos;t do that</li>
-                            <li>Don&apos;t to the other</li>
-                        </ul>
+        <h3>Things to consider</h3>
+        <ul className="list list-bullet">
+            <li>When using the slab component with a combination of other elements on it, we need to consider how the border radius of the slab it is affecting the border radius of the element which takes place as content in the slab.</li>
+            <li>Using a slab component, the border radius could differ for different devices and sizes. Border radius always requires to be adjusted accordingly to the dimensions.</li>
+        </ul>
+        <h3>How to adjust slab radius</h3>
+        <div className="row">
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-success pb-4">
+                    <h4 className="mb-3 mt-0">Do</h4>
+                    <div className="d-flex justify-content-center mt-4 mb-4">
+                        <img className="img-fluid" alt="A destructive button within a payment flow, with a guiding destructive button that reads Cancel payment." src={`${basename}img/documentation/slab/do-nested-slabs.png`}/>
                     </div>
                 </div>
             </div>
-        </ComponentPreview>
-    </>
-);
-
-const SlabElevated = () => (
-    <>
-        <h2 id="elevated-slab">Elevated slab</h2>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-default slab-elevated">
-                Look ma, im elevated!
+            <div className="col-lg-6 col-sm-12">
+                <div className="slab slab-plain slab-border-error pb-4">
+                    <h4>{"Don't"}</h4>
+                    <div className="d-flex justify-content-center mt-4 mb-4">
+                        <img className="img-fluid" alt="Destructive button within a payment flow, with an executive destructive button that reads Cancel." src={`${basename}img/documentation/slab/dont-nested-slabs.png`}/>
+                    </div>
+                </div>
             </div>
-        </ComponentPreview>
-    </>
-);
-
-const SlabWell = () => (
-    <>
-        <h2 id="slab-well">Slab well</h2>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-default slab-well">
-                Look ma, im in a well!
-            </div>
-        </ComponentPreview>
+        </div>
+        <br/>
+        <div> Using a mini slab in to a slab component, in that case the inner slab needs to adjust its border radius accordingly in order the padding between the slabs to remain relevant and consistent.</div>
     </>
 );
 
@@ -135,60 +47,10 @@ const SlabArrow = () => (
             <CodeTags type="secondary" code=".slab-arrow" /> inherits the color from the slab it is appended to.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            {/* border */}
             <div className="slab slab-arrow">
                 <p>
                     This slab has some connection to the content above.
                 </p>
-            </div>
-            {/* <div className="slab slab-default slab-arrow">
-                <p>
-                    This slab has some connection to the content above.
-                </p>
-            </div>
-            <div className="slab slab-primary slab-arrow">
-                <p>
-                    This slab has some connection to the content above.
-                </p>
-            </div>
-            <div className="slab slab-secondary slab-arrow">
-                <p>
-                    This slab has some connection to the content above.
-                </p>
-            </div>
-            <div className="slab slab-plain slab-arrow">
-                <p>
-                    This slab has some connection to the content above.
-                </p>
-            </div> */}
-        </ComponentPreview>
-    </>
-);
-
-const SlabMuted = () => (
-    <>
-        <h2 id="slab-muted">Slab muted</h2>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-default slab-muted">
-                <h4>This text will be gray.</h4>{"\n"}
-                <span>And this text will be gray.</span>{"\n"}
-                Even this text will be gray!
-            </div>
-        </ComponentPreview>
-    </>
-);
-
-const SlabSizes = () => (
-    <>
-        <h2 id="slab-sizes">Slab sizes</h2>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-default slab-sm">
-                This is very snug.
-            </div>
-        </ComponentPreview>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-default slab-lg">
-                This is so spacious I can hardly believe it!
             </div>
         </ComponentPreview>
     </>
@@ -207,12 +69,6 @@ class Slab extends Component {
                 </p>
                 <DefaultSlab />
                 <SlabArrow />
-                {/* <SlabColors />
-                <SlabBorderTop />
-                <SlabElevated />
-                <SlabWell />
-                <SlabMuted />
-                <SlabSizes /> */}
             </DocContainer>
         );
     }
@@ -221,4 +77,4 @@ class Slab extends Component {
 export default Slab;
 
 /* For testing */
-export { DefaultSlab, SlabElevated, SlabWell, SlabArrow, SlabColors, SlabSizes, SlabMuted, SlabBorderTop };
+export { DefaultSlab, SlabArrow };
