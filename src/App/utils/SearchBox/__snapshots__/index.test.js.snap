@@ -195,7 +195,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/get-started/introduction"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/get-started/introduction"
             >
               <LinkAnchor
@@ -204,14 +204,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/get-started/introduction"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -236,7 +236,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/get-started/for-designers"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/get-started/for-designers"
             >
               <LinkAnchor
@@ -245,14 +245,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/get-started/for-designers"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -277,7 +277,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/identity/identity"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/identity/identity"
             >
               <LinkAnchor
@@ -286,14 +286,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/identity/identity"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -318,7 +318,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/identity/accessibility"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/identity/accessibility"
             >
               <LinkAnchor
@@ -327,14 +327,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/identity/accessibility"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -359,7 +359,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/identity/copywriting"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/identity/copywriting"
             >
               <LinkAnchor
@@ -368,14 +368,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/identity/copywriting"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -400,7 +400,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/identity/grid"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/identity/grid"
             >
               <LinkAnchor
@@ -409,14 +409,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/identity/grid"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -441,7 +441,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/identity/iconography"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/identity/iconography"
             >
               <LinkAnchor
@@ -450,14 +450,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/identity/iconography"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -482,7 +482,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/identity/imagery"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/identity/imagery"
             >
               <LinkAnchor
@@ -491,14 +491,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/identity/imagery"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -523,7 +523,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/identity/spacing"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/identity/spacing"
             >
               <LinkAnchor
@@ -532,14 +532,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/identity/spacing"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -564,7 +564,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/components/components"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/components/components"
             >
               <LinkAnchor
@@ -573,14 +573,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/components/components"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -605,7 +605,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/components/accordion"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/components/accordion"
             >
               <LinkAnchor
@@ -614,14 +614,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/components/accordion"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -646,7 +646,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/components/action-list"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/components/action-list"
             >
               <LinkAnchor
@@ -655,14 +655,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/components/action-list"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -687,7 +687,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/components/datepickers"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/components/datepickers"
             >
               <LinkAnchor
@@ -696,14 +696,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/components/datepickers"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -728,7 +728,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/components/dialog"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/components/dialog"
             >
               <LinkAnchor
@@ -737,14 +737,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/components/dialog"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -769,7 +769,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/components/input-field"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/components/input-field"
             >
               <LinkAnchor
@@ -778,14 +778,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/components/input-field"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -810,7 +810,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/components/links"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/components/links"
             >
               <LinkAnchor
@@ -819,14 +819,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/components/links"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -851,7 +851,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/components/lists"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/components/lists"
             >
               <LinkAnchor
@@ -860,14 +860,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/components/lists"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -892,7 +892,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/components/media-object"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/components/media-object"
             >
               <LinkAnchor
@@ -901,14 +901,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/components/media-object"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -933,7 +933,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/components/nav"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/components/nav"
             >
               <LinkAnchor
@@ -942,14 +942,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/components/nav"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -974,7 +974,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/components/pagination"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/components/pagination"
             >
               <LinkAnchor
@@ -983,14 +983,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/components/pagination"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1015,7 +1015,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/components/radio-button"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/components/radio-button"
             >
               <LinkAnchor
@@ -1024,14 +1024,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/components/radio-button"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1056,7 +1056,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/components/rangeslider"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/components/rangeslider"
             >
               <LinkAnchor
@@ -1065,14 +1065,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/components/rangeslider"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1097,7 +1097,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/components/sidebar"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/components/sidebar"
             >
               <LinkAnchor
@@ -1106,14 +1106,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/components/sidebar"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1138,7 +1138,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/components/skip-link"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/components/skip-link"
             >
               <LinkAnchor
@@ -1147,14 +1147,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/components/skip-link"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1179,7 +1179,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/components/tooltips"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/components/tooltips"
             >
               <LinkAnchor
@@ -1188,14 +1188,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/components/tooltips"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1220,7 +1220,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/patterns/patterns"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/patterns/patterns"
             >
               <LinkAnchor
@@ -1229,14 +1229,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/patterns/patterns"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1261,7 +1261,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/patterns/login"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/patterns/login"
             >
               <LinkAnchor
@@ -1270,14 +1270,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/patterns/login"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1302,7 +1302,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/utilities/utilities"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/utilities/utilities"
             >
               <LinkAnchor
@@ -1311,14 +1311,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/utilities/utilities"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1343,7 +1343,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/utilities/breakpoints"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/utilities/breakpoints"
             >
               <LinkAnchor
@@ -1352,14 +1352,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/utilities/breakpoints"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1384,7 +1384,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/utilities/display"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/utilities/display"
             >
               <LinkAnchor
@@ -1393,14 +1393,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/utilities/display"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1425,7 +1425,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/utilities/images"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/utilities/images"
             >
               <LinkAnchor
@@ -1434,14 +1434,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/utilities/images"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1466,7 +1466,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/utilities/sizing"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/utilities/sizing"
             >
               <LinkAnchor
@@ -1475,14 +1475,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/utilities/sizing"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1507,7 +1507,7 @@ exports[`Search box results tests renders more than 10 li elements when search t
               key="/utilities/visibility"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/utilities/visibility"
             >
               <LinkAnchor
@@ -1516,14 +1516,14 @@ exports[`Search box results tests renders more than 10 li elements when search t
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/utilities/visibility"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1685,7 +1685,7 @@ exports[`Search box results tests renders several li elements when search term i
               key="/get-started/for-developers"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/get-started/for-developers"
             >
               <LinkAnchor
@@ -1694,14 +1694,14 @@ exports[`Search box results tests renders several li elements when search term i
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/get-started/for-developers"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1726,7 +1726,7 @@ exports[`Search box results tests renders several li elements when search term i
               key="/get-started/for-designers"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/get-started/for-designers"
             >
               <LinkAnchor
@@ -1735,14 +1735,14 @@ exports[`Search box results tests renders several li elements when search term i
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/get-started/for-designers"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1767,7 +1767,7 @@ exports[`Search box results tests renders several li elements when search term i
               key="/components/input-field"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/components/input-field"
             >
               <LinkAnchor
@@ -1776,14 +1776,14 @@ exports[`Search box results tests renders several li elements when search term i
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/components/input-field"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1808,7 +1808,7 @@ exports[`Search box results tests renders several li elements when search term i
               key="/patterns/forms"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/patterns/forms"
             >
               <LinkAnchor
@@ -1817,14 +1817,14 @@ exports[`Search box results tests renders several li elements when search term i
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/patterns/forms"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1849,7 +1849,7 @@ exports[`Search box results tests renders several li elements when search term i
               key="/utilities/flex"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/utilities/flex"
             >
               <LinkAnchor
@@ -1858,14 +1858,14 @@ exports[`Search box results tests renders several li elements when search term i
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/utilities/flex"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
@@ -1959,7 +1959,7 @@ exports[`Search box results tests renders toggelbox after searcing for 'gg' 1`] 
               key="/components/togglebox"
               onClick={[Function]}
               onKeyDown={[Function]}
-              tabIndex="-1"
+              tabIndex="0"
               to="/components/togglebox"
             >
               <LinkAnchor
@@ -1968,14 +1968,14 @@ exports[`Search box results tests renders toggelbox after searcing for 'gg' 1`] 
                 navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
-                tabIndex="-1"
+                tabIndex="0"
               >
                 <a
                   className="res"
                   href="/components/togglebox"
                   onClick={[Function]}
                   onKeyDown={[Function]}
-                  tabIndex="-1"
+                  tabIndex="0"
                 >
                   <li>
                     <span
