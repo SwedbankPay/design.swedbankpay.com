@@ -17,8 +17,8 @@ const Sheet = ({ id, requireAction, title, footer, children }) => (
             </div>
             {footer &&
                 <div className="sheet-footer">{"\n"}
-                    <Button type="secondary" className="mr-1" label="Secondary" />{"\n"}
-                    <button className="btn ml-1 btn-primary" data-sheet-close={id} type="button">Primary</button>{"\n"}
+                    <Button type="primary" className="mr-1" label="Primary" />{"\n"}
+                    <button className="btn ml-1 btn-secondary" data-sheet-close={id} type="button">Cancel</button>{"\n"}
                 </div>
             }
         </section>
