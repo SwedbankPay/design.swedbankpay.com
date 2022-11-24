@@ -1,79 +1,135 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components: Slab DefaultSlab renders 1`] = `
-<Fragment>
+exports[`Components: Slab OverviewSlab renders 1`] = `
+<section
+  id="slab-overview"
+>
   <h2
     id="default-slab"
   >
-    Default slab
+    Overview
   </h2>
   <ComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    showCasePanelAdvanced={
+      Object {
+        "elements": Array [
+          Object {
+            "component": <Slab />,
+            "description": "Slab component is basically a content frame which is used as graphic element background in order to display different types of content on it surface. Slab component uses drop shadows to be more visible and noticeable on the UI. Drop shadows can be an amazing way to add depth and emphasis to your designs, creating an image of floating UI elements. Shadows are a way of creating a container for content without making it feel boxed in.",
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "shadow-type",
+                  "title": "Shadow type",
+                  "values": Array [
+                    Object {
+                      "name": "Drop shadow 15%",
+                      "value": Object {
+                        "darkShadow": false,
+                        "noShadow": false,
+                      },
+                    },
+                    Object {
+                      "name": "Drop shadow 25%",
+                      "value": Object {
+                        "darkShadow": true,
+                        "noShadow": false,
+                      },
+                    },
+                    Object {
+                      "name": "Without shadow",
+                      "value": Object {
+                        "darkShadow": false,
+                        "noShadow": true,
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "title": "Overview slabs",
+          },
+        ],
+        "id": "overviewSlabs",
+      }
+    }
+  />
+  <h3>
+    Things to consider
+  </h3>
+  <ul
+    className="list list-bullet"
+  >
+    <li>
+      When using the slab component with a combination of other elements on it, we need to consider how the border radius of the slab it is affecting the border radius of the element which takes place as content in the slab.
+    </li>
+    <li>
+      Using a slab component, the border radius could differ for different devices and sizes. Border radius always requires to be adjusted accordingly to the dimensions.
+    </li>
+  </ul>
+  <h3>
+    How to adjust slab radius
+  </h3>
+  <div
+    className="row"
   >
     <div
-      className="slab slab-default"
+      className="col-lg-6 col-sm-12"
     >
-      <p>
-        Do you want to sign up for the slab mailing list?
-      </p>
-      <form
-        action="#"
-        data-validate={true}
-        noValidate={true}
+      <div
+        className="slab slab-plain slab-border-success pb-4"
       >
+        <h4
+          className="mb-3 mt-0"
+        >
+          Do
+        </h4>
         <div
-          className="form-group"
+          className="d-flex justify-content-center mt-4 mb-4"
         >
-          <label
-            htmlFor="validation-email-2"
-          >
-            Email
-          </label>
-          <div
-            className="input-group"
-          >
-            <span
-              className="input-group-addon"
-            >
-              <i
-                aria-hidden="true"
-                className="material-icons"
-              >
-                email
-              </i>
-            </span>
-            <input
-              className="form-control"
-              id="validation-email-2"
-              placeholder="bob.corlsan@example.com"
-              required={true}
-              type="email"
-            />
-          </div>
-          <div
-            className="help-block"
-            data-error="Wrong!"
-            data-success="Right!"
-          >
-            This one might be a little tricky
-          </div>
+          <img
+            alt="A slab with a smaller slab inside of it. Their border radius values are equal, the padding size is therefore not consistent."
+            className="img-fluid"
+            src="/TEST/img/documentation/slab/do-nested-slabs.png"
+          />
         </div>
-        <button
-          className="btn btn-primary"
-          type="submit"
-        >
-          Submit
-        </button>
-      </form>
+      </div>
     </div>
-  </ComponentPreview>
-</Fragment>
+    <div
+      className="col-lg-6 col-sm-12"
+    >
+      <div
+        className="slab slab-plain slab-border-error pb-4"
+      >
+        <h4>
+          Don't
+        </h4>
+        <div
+          className="d-flex justify-content-center mt-4 mb-4"
+        >
+          <img
+            alt="A slab with a smaller slab inside of it. Their border radius value are not equal, which makes the padding consistent."
+            className="img-fluid"
+            src="/TEST/img/documentation/slab/dont-nested-slabs.png"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div>
+     Using a mini slab in a slab component, in that case the inner slab needs to adjust its border radius accordingly in order the padding between the slabs to remain relevant and consistent.
+  </div>
+</section>
 `;
 
 exports[`Components: Slab SlabArrow renders 1`] = `
-<Fragment>
+<section
+  id="arrow-slab"
+>
   <h2
     id="slab-arrow"
   >
@@ -92,358 +148,14 @@ exports[`Components: Slab SlabArrow renders 1`] = `
     showCasePanel={true}
   >
     <div
-      className="slab slab-default slab-arrow"
-    >
-      <p>
-        This slab has some connection to the content above.
-      </p>
-    </div>
-    <div
-      className="slab border slab-arrow"
-    >
-      <p>
-        This slab has some connection to the content above.
-      </p>
-    </div>
-    <div
-      className="slab slab-primary slab-arrow"
-    >
-      <p>
-        This slab has some connection to the content above.
-      </p>
-    </div>
-    <div
-      className="slab slab-secondary slab-arrow"
-    >
-      <p>
-        This slab has some connection to the content above.
-      </p>
-    </div>
-    <div
-      className="slab slab-plain slab-arrow"
+      className="slab slab-arrow"
     >
       <p>
         This slab has some connection to the content above.
       </p>
     </div>
   </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Slab SlabBorderTop renders 1`] = `
-<Fragment>
-  <h2
-    id="slab-border-top"
-  >
-    Slab with top border
-  </h2>
-  <p>
-    Slab with top border can be used to display, for instance, pros and cons lists.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <div
-      className="row"
-    >
-      <div
-        className="col-6"
-      >
-        <div
-          className="slab slab-plain slab-border-success"
-        >
-          <h3>
-            Do
-          </h3>
-          <ul
-            className="list list-bullet"
-          >
-            <li>
-              Do this
-            </li>
-            <li>
-              Do that
-            </li>
-            <li>
-              Do the other
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div
-        className="col-6"
-      >
-        <div
-          className="slab slab-plain slab-border-error"
-        >
-          <h3>
-            Don't
-          </h3>
-          <ul
-            className="list list-bullet"
-          >
-            <li>
-              Don't do this
-            </li>
-            <li>
-              Don't do that
-            </li>
-            <li>
-              Don't to the other
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Slab SlabColors renders 1`] = `
-<Fragment>
-  <h2
-    id="slab-colors"
-  >
-    Slab colors
-  </h2>
-  <p>
-    We offer three additional slab types; 
-    <CodeTags
-      code=".slab-primary"
-      type="secondary"
-    />
-    , 
-    <CodeTags
-      code=".slab-secondary"
-      type="secondary"
-    />
-     and 
-    <CodeTags
-      code=".slab-plain"
-      type="secondary"
-    />
-    .
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <div
-      className="slab slab-primary"
-    >
-      <h4>
-        Here is some text and then a striped item list
-      </h4>
-      <small>
-        Some text with a small listing of items underneath.
-      </small>
-      <ul
-        className="list item-list"
-      >
-        <li>
-          Item 1
-        </li>
-        <li>
-          Item 2
-        </li>
-        <li>
-          Item 3
-        </li>
-      </ul>
-    </div>
-    <div
-      className="slab slab-secondary"
-    >
-      <h4>
-        Here is some text and then a striped item list
-      </h4>
-      <small>
-        Some text with a small listing of items underneath.
-      </small>
-      <ul
-        className="list item-list"
-      >
-        <li>
-          Item 1
-        </li>
-        <li>
-          Item 2
-        </li>
-        <li>
-          Item 3
-        </li>
-      </ul>
-    </div>
-    <div
-      className="slab slab-plain"
-    >
-      <h4>
-        Here is some text and then a striped item list
-      </h4>
-      <small>
-        Some text with a small listing of items underneath.
-      </small>
-      <ul
-        className="list item-list"
-      >
-        <li>
-          Item 1
-        </li>
-        <li>
-          Item 2
-        </li>
-        <li>
-          Item 3
-        </li>
-      </ul>
-    </div>
-  </ComponentPreview>
-  <p>
-    If no slab extension class is added, it is defaulted to white. In this example we use the utility class 
-    <CodeTags
-      code=".border"
-      type="secondary"
-    />
-     to make it easier for us to see the actual slab container.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <div
-      className="slab border"
-    >
-      <h4>
-        Here is some text and then a striped item list
-      </h4>
-      <small>
-        Some text with a small listing of items underneath.
-      </small>
-      <ul
-        className="list item-list"
-      >
-        <li>
-          Item 1
-        </li>
-        <li>
-          Item 2
-        </li>
-        <li>
-          Item 3
-        </li>
-      </ul>
-    </div>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Slab SlabElevated renders 1`] = `
-<Fragment>
-  <h2
-    id="elevated-slab"
-  >
-    Elevated slab
-  </h2>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <div
-      className="slab slab-default slab-elevated"
-    >
-      Look ma, im elevated!
-    </div>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Slab SlabMuted renders 1`] = `
-<Fragment>
-  <h2
-    id="slab-muted"
-  >
-    Slab muted
-  </h2>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <div
-      className="slab slab-default slab-muted"
-    >
-      <h4>
-        This text will be gray.
-      </h4>
-      
-
-      <span>
-        And this text will be gray.
-      </span>
-      
-
-      Even this text will be gray!
-    </div>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Slab SlabSizes renders 1`] = `
-<Fragment>
-  <h2
-    id="slab-sizes"
-  >
-    Slab sizes
-  </h2>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <div
-      className="slab slab-default slab-sm"
-    >
-      This is very snug.
-    </div>
-  </ComponentPreview>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <div
-      className="slab slab-default slab-lg"
-    >
-      This is so spacious I can hardly believe it!
-    </div>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Components: Slab SlabWell renders 1`] = `
-<Fragment>
-  <h2
-    id="slab-well"
-  >
-    Slab well
-  </h2>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <div
-      className="slab slab-default slab-well"
-    >
-      Look ma, im in a well!
-    </div>
-  </ComponentPreview>
-</Fragment>
+</section>
 `;
 
 exports[`Components: Slab renders 1`] = `
@@ -455,13 +167,7 @@ exports[`Components: Slab renders 1`] = `
   >
     Slabs are container components, therefore it works with whatever you want to put in it.
   </p>
-  <DefaultSlab />
-  <SlabColors />
-  <SlabBorderTop />
-  <SlabElevated />
-  <SlabWell />
+  <OverviewSlab />
   <SlabArrow />
-  <SlabMuted />
-  <SlabSizes />
 </DocContainer>
 `;
