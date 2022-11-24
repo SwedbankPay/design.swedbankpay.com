@@ -7,8 +7,8 @@ import { validation } from "@src/scripts/main";
 
 const basename = process.env.basename;
 
-const DefaultSlab = () => (
-    <>
+const OverviewSlab = () => (
+    <section id="slab-overview">
         <h2 id="default-slab">Overview</h2>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewSlabs} codeFigure/>
         <h3>Things to consider</h3>
@@ -22,7 +22,7 @@ const DefaultSlab = () => (
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4 className="mb-3 mt-0">Do</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" alt="A destructive button within a payment flow, with a guiding destructive button that reads Cancel payment." src={`${basename}img/documentation/slab/do-nested-slabs.png`}/>
+                        <img className="img-fluid" alt="A slab with a smaller slab inside of it. Their border radius values are equal, the padding size is therefore not consistent." src={`${basename}img/documentation/slab/do-nested-slabs.png`}/>
                     </div>
                 </div>
             </div>
@@ -30,18 +30,18 @@ const DefaultSlab = () => (
                 <div className="slab slab-plain slab-border-error pb-4">
                     <h4>{"Don't"}</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" alt="Destructive button within a payment flow, with an executive destructive button that reads Cancel." src={`${basename}img/documentation/slab/dont-nested-slabs.png`}/>
+                        <img className="img-fluid" alt="A slab with a smaller slab inside of it. Their border radius value are not equal, which makes the padding consistent." src={`${basename}img/documentation/slab/dont-nested-slabs.png`}/>
                     </div>
                 </div>
             </div>
         </div>
         <br/>
-        <div> Using a mini slab in to a slab component, in that case the inner slab needs to adjust its border radius accordingly in order the padding between the slabs to remain relevant and consistent.</div>
-    </>
+        <div> Using a mini slab in a slab component, in that case the inner slab needs to adjust its border radius accordingly in order the padding between the slabs to remain relevant and consistent.</div>
+    </section>
 );
 
 const SlabArrow = () => (
-    <>
+    <section id="arrow-slab">
         <h2 id="slab-arrow">Slab arrow</h2>
         <p>
             <CodeTags type="secondary" code=".slab-arrow" /> inherits the color from the slab it is appended to.
@@ -53,7 +53,7 @@ const SlabArrow = () => (
                 </p>
             </div>
         </ComponentPreview>
-    </>
+    </section>
 );
 
 class Slab extends Component {
@@ -67,7 +67,7 @@ class Slab extends Component {
                 <p className="lead">
                     Slabs are container components, therefore it works with whatever you want to put in it.
                 </p>
-                <DefaultSlab />
+                <OverviewSlab />
                 <SlabArrow />
             </DocContainer>
         );
@@ -77,4 +77,4 @@ class Slab extends Component {
 export default Slab;
 
 /* For testing */
-export { DefaultSlab, SlabArrow };
+export { OverviewSlab, SlabArrow };

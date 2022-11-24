@@ -1,9 +1,7 @@
 import React from "react";
 
-const basename = process.env.basename;
-
-const Slab = () => (
-    <div className="slab slab-default">
+const Slab = ({ darkShadow, noShadow }) => (
+    <div className={`slab slab-default${darkShadow ? " dark" : ""}${noShadow ? " flat" : ""}`}>
         <p>Do you want to sign up for the slab mailing list?</p>
         <form action="#" noValidate data-validate>
             <div className="form-group">
@@ -33,21 +31,22 @@ export const overviewSlabs = {
                             {
                                 name: "Drop shadow 15%",
                                 value: {
-                                    // icon: null
+                                    darkShadow: false,
+                                    noShadow: false
                                 }
                             },
                             {
                                 name: "Drop shadow 25%",
-                                default: true,
                                 value: {
-                                    // icon: <i className="material-icons material-icons-outlined" aria-hidden="true">shopping_basket</i>
+                                    darkShadow: true,
+                                    noShadow: false
                                 }
                             },
                             {
                                 name: "Without shadow",
                                 value: {
-                                    // imgSrc: `${basename}img/documentation/cards/img-example.png`,
-                                    // icon: null
+                                    darkShadow: false,
+                                    noShadow: true
                                 }
                             }
                         ]
