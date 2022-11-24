@@ -36,9 +36,6 @@ const Overview = () => (
                 </div>
             </div>
         </div>
-        <div>
-            <p>If possible, try not to use more than three words. Do not use too long labels or whole sentences.</p>
-        </div>
     </>
 );
 
