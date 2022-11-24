@@ -14,10 +14,6 @@
         font-size: 87.5%;
     }
 
-    a:focus-visible {
-        outline: 2px solid @brand-secondary;
-    }
-
     .color-preview {
         display: grid;
         row-gap: 1rem;
@@ -90,11 +86,13 @@
         td {
             &:focus-visible {
                 outline: 2px solid @brand-primary;
+                border-radius: 2px;
             }
         }
 
         button:focus-visible {
             outline: 2px solid @brand-primary;
+            border-radius: 2px;
         }
 
         .code-toolbar {
@@ -155,6 +153,7 @@
 
     &:focus-visible {
         outline: 2px solid @brand-secondary;
+        border-radius: 2px;
     }
 
     .form-group {
@@ -221,6 +220,7 @@
 
         &:focus-visible {
             outline: 2px solid @brand-secondary;
+            border-radius: 2px;
         }
 
         .item-list {
@@ -1523,6 +1523,11 @@
         .link-dark-background {
             background-color: @brand-secondary;
             border-radius: 8px;
+
+            a:focus-visible {
+                outline: 2px solid @brand-primary;
+                border-radius: 2px;
+            }
         }
 
         #action-link-container {
@@ -1664,6 +1669,7 @@
         .accordion {
             :focus-visible {
                 outline: 2px solid @brand-secondary;
+                border-radius: 2px;
             }
 
             .accordion-body {
@@ -1780,6 +1786,7 @@
 
                 &:focus {
                     outline: 2px solid @brand-secondary;
+                    border-radius: 2px;
                 }
             }
         }

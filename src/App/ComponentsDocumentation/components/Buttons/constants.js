@@ -24,6 +24,13 @@ const ButtonOptions = idAddOn => (
                             icon: "keyboard_arrow_down",
                             iconAfter: true
                         }
+                    },
+                    {
+                        name: "Icon",
+                        value: {
+                            icon: "cloud",
+                            iconOnly: true
+                        }
                     }
                 ]
             },

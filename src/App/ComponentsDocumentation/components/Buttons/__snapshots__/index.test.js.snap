@@ -535,6 +535,13 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
                         "iconAfter": true,
                       },
                     },
+                    Object {
+                      "name": "Icon",
+                      "value": Object {
+                        "icon": "cloud",
+                        "iconOnly": true,
+                      },
+                    },
                   ],
                 },
                 Object {
@@ -622,6 +629,13 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
                         "iconAfter": true,
                       },
                     },
+                    Object {
+                      "name": "Icon",
+                      "value": Object {
+                        "icon": "cloud",
+                        "iconOnly": true,
+                      },
+                    },
                   ],
                 },
                 Object {
@@ -707,6 +721,13 @@ exports[`Documentation: Buttons Destructive button renders 1`] = `
                       "value": Object {
                         "icon": "keyboard_arrow_down",
                         "iconAfter": true,
+                      },
+                    },
+                    Object {
+                      "name": "Icon",
+                      "value": Object {
+                        "icon": "cloud",
+                        "iconOnly": true,
                       },
                     },
                   ],
@@ -1284,6 +1305,13 @@ exports[`Documentation: Buttons Overview renders 1`] = `
                         "iconAfter": true,
                       },
                     },
+                    Object {
+                      "name": "Icon",
+                      "value": Object {
+                        "icon": "cloud",
+                        "iconOnly": true,
+                      },
+                    },
                   ],
                 },
                 Object {
@@ -1446,6 +1474,13 @@ exports[`Documentation: Buttons Overview renders 1`] = `
                         "iconAfter": true,
                       },
                     },
+                    Object {
+                      "name": "Icon",
+                      "value": Object {
+                        "icon": "cloud",
+                        "iconOnly": true,
+                      },
+                    },
                   ],
                 },
                 Object {
@@ -1539,6 +1574,13 @@ exports[`Documentation: Buttons Overview renders 1`] = `
                       "value": Object {
                         "icon": "keyboard_arrow_down",
                         "iconAfter": true,
+                      },
+                    },
+                    Object {
+                      "name": "Icon",
+                      "value": Object {
+                        "icon": "cloud",
+                        "iconOnly": true,
                       },
                     },
                   ],
