@@ -93,10 +93,8 @@
             }
         }
 
-        button {
-            &:focus-visible {
-                outline: 2px solid @brand-primary; 
-            }
+        button:focus-visible {
+            outline: 2px solid @brand-primary;
         }
 
         .code-toolbar {
@@ -167,7 +165,7 @@
         }
 
         &:focus-visible {
-            outline: 2px solid @brand-secondary; 
+            outline: 2px solid @brand-secondary;
         }
 
         input {
@@ -181,12 +179,9 @@
                 outline: 2px solid @brand-secondary;
             }
         }
-        
-        .input-group {
 
-            &:focus-within {
-                    outline: 2px solid @brand-secondary;
-            }        
+        .input-group:focus-within {
+                outline: 2px solid @brand-secondary;
         }
 
         button {
@@ -300,7 +295,7 @@
                 right: 0;
                 top: -1.2rem;
                 height: 2.5rem;
-                border-left: 1px solid @soft-brown; 
+                border-left: 1px solid @soft-brown;
 
                 &:focus {
                     border-left: transparent;
@@ -842,7 +837,7 @@
         border: 1px solid @brand-secondary-light-3;
 
     &.showcasepanel-sm {
-            max-width: 20rem;
+        max-width: 20rem;
         }
 
         &.showcase-panel-negative {
@@ -1678,6 +1673,7 @@
             :focus-visible {
                 outline: 2px solid @brand-secondary;
             }
+            
             .accordion-body {
                 .example-accordion {
                     border: 2px dotted @light-brown;
