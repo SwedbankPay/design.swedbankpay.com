@@ -8,23 +8,8 @@ import { validation } from "@src/scripts/main";
 
 const DefaultSlab = () => (
     <>
-        <h2 id="default-slab">Default slab</h2>
-        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewSlabs} codeFigure>
-            <div className="slab slab-default">
-                <p>Do you want to sign up for the slab mailing list?</p>
-                <form action="#" noValidate data-validate>
-                    <div className="form-group">
-                        <label htmlFor="validation-email-2">Email</label>
-                        <div className="input-group">
-                            <span className="input-group-addon"><i className="material-icons" aria-hidden="true">email</i></span>
-                            <input type="email" className="form-control" id="validation-email-2" placeholder="bob.corlsan@example.com" required />
-                        </div>
-                        <div className="help-block" data-success="Right!" data-error="Wrong!">This one might be a little tricky</div>
-                    </div>
-                    <button className="btn btn-primary" type="submit">Submit</button>
-                </form>
-            </div>
-        </ComponentPreview>
+        <h2 id="default-slab">Overview</h2>
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewSlabs} codeFigure/>
     </>
 );
 
@@ -150,12 +135,13 @@ const SlabArrow = () => (
             <CodeTags type="secondary" code=".slab-arrow" /> inherits the color from the slab it is appended to.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
-            <div className="slab slab-default slab-arrow">
+            {/* border */}
+            <div className="slab slab-arrow">
                 <p>
                     This slab has some connection to the content above.
                 </p>
             </div>
-            <div className="slab border slab-arrow">
+            {/* <div className="slab slab-default slab-arrow">
                 <p>
                     This slab has some connection to the content above.
                 </p>
@@ -174,7 +160,7 @@ const SlabArrow = () => (
                 <p>
                     This slab has some connection to the content above.
                 </p>
-            </div>
+            </div> */}
         </ComponentPreview>
     </>
 );
@@ -220,13 +206,13 @@ class Slab extends Component {
                     Slabs are container components, therefore it works with whatever you want to put in it.
                 </p>
                 <DefaultSlab />
-                <SlabColors />
+                <SlabArrow />
+                {/* <SlabColors />
                 <SlabBorderTop />
                 <SlabElevated />
                 <SlabWell />
-                <SlabArrow />
                 <SlabMuted />
-                <SlabSizes />
+                <SlabSizes /> */}
             </DocContainer>
         );
     }
