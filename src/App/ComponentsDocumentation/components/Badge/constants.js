@@ -62,4 +62,4 @@ export const badgeShowcase = {
             description: "Use the Badge Component Symbol to draw attention to another interface element or to display a notification. It enhances the component to which it is attached with additional information, disclosed to the user upon interacting with it."
         }
     ]
-}
+};
