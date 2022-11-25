@@ -17,7 +17,7 @@ const Overview = () => (
             <li>If possible, try not to use more than three words.</li>
         </ul>
 
-        <h3>Do`s and Dont`s</h3>
+        <h3>Content guidelines</h3>
         <div className="row">
             <div className="col-lg-6">
                 <div className="slab slab-plain slab-border-success">

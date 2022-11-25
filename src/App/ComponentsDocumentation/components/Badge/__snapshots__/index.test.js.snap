@@ -89,7 +89,7 @@ exports[`Components: Badge Overview renders 1`] = `
     </li>
   </ul>
   <h3>
-    Do\`s and Dont\`s
+    Content guidelines
   </h3>
   <div
     className="row"
