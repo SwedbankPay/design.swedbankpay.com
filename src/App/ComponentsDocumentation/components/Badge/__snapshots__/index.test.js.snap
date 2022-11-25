@@ -23,7 +23,7 @@ exports[`Components: Badge Overview renders 1`] = `
       code=".badge-number"
       type="secondary"
     />
-     when a badge suited for use with numbers is desired.
+     when a badge with only numbers is desired.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -37,7 +37,7 @@ exports[`Components: Badge Overview renders 1`] = `
             "component": <BadgeOptions
               id="badge-showcase"
             />,
-            "description": "Use the Badge Component Symbol to draw attention to another interface element or to display a notification. It enhances the component to which it is attached with additional information, disclosed to the user upon interacting with it. ",
+            "description": "Use the Badge Component Symbol to draw attention to another interface element or to display a notification. It enhances the component to which it is attached with additional information, disclosed to the user upon interacting with it.",
             "options": Object {
               "radio": Array [
                 Object {
@@ -79,7 +79,7 @@ exports[`Components: Badge Overview renders 1`] = `
       A normal badge does not feature interaction, use the button component instead.
     </li>
     <li>
-      If you want removable badges considering using the tag component instead.
+      If you want removable badges consider using the tag component instead.
     </li>
     <li>
       Do not use too long labels or whole sentences.
@@ -88,9 +88,9 @@ exports[`Components: Badge Overview renders 1`] = `
       If possible, try not to use more than three words.
     </li>
   </ul>
-  <h2>
-    Do's and Dont's
-  </h2>
+  <h3>
+    Do\`s and Dont\`s
+  </h3>
   <div
     className="row"
   >

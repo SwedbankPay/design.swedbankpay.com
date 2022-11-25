@@ -3,18 +3,17 @@ import React from "react";
 const BadgeOptions = ({ number }) => (
     <>
         {number ?
-            // numbers here
             <div className="badge-showcase">
-                <p> <span className="badge badge-yellow badge-number">1</span></p> 
-                <p> <span className="badge badge-gray badge-number">2</span></p> 
-                <p> <span className="badge badge-red badge-number">3</span></p> 
-                <p> <span className="badge badge-blue badge-number">4</span></p> 
-                <p> <span className="badge badge-pink badge-number">5</span></p> 
-                <p> <span className="badge badge-green badge-number">6</span></p> 
-                <p> <span className="badge badge-orange badge-number">7</span></p> 
-                <p> <span className="badge badge-turqouise badge-number">8</span></p> 
-                <p> <span className="badge badge-brown badge-number">9</span></p> 
-            </div> 
+                <p> <span className="badge badge-yellow badge-number">1</span></p>
+                <p> <span className="badge badge-gray badge-number">2</span></p>
+                <p> <span className="badge badge-red badge-number">3</span></p>
+                <p> <span className="badge badge-blue badge-number">4</span></p>
+                <p> <span className="badge badge-pink badge-number">5</span></p>
+                <p> <span className="badge badge-green badge-number">6</span></p>
+                <p> <span className="badge badge-orange badge-number">7</span></p>
+                <p> <span className="badge badge-turqouise badge-number">8</span></p>
+                <p> <span className="badge badge-brown badge-number">9</span></p>
+            </div>
             :
             <div className="badge-showcase">
                 <p> <span className="badge badge-yellow-light">Document</span></p>
@@ -60,7 +59,7 @@ export const badgeShowcase = {
                 ]
             },
             title: "Badge",
-            description: "Use the Badge Component Symbol to draw attention to another interface element or to display a notification. It enhances the component to which it is attached with additional information, disclosed to the user upon interacting with it. "
+            description: "Use the Badge Component Symbol to draw attention to another interface element or to display a notification. It enhances the component to which it is attached with additional information, disclosed to the user upon interacting with it."
         }
     ]
 }
