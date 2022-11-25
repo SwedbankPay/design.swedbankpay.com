@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Badge, { Overview, BadgeNumber } from "./index";
+import Badge, { Overview } from "./index";
 
 describe("Components: Badge", () => {
     it("is defined", () => {
@@ -21,18 +21,6 @@ describe("Components: Badge", () => {
 
         it("renders", () => {
             const wrapper = shallow(<Overview />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
-    });
-
-    describe("BadgeNumber", () => {
-        it("is defined", () => {
-            expect(BadgeNumber).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<BadgeNumber />);
 
             expect(wrapper).toMatchSnapshot();
         });
