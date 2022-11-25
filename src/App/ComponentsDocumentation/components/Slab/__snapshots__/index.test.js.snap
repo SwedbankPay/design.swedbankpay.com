@@ -2,7 +2,7 @@
 
 exports[`Components: Slab OverviewSlab renders 1`] = `
 <section
-  id="slab-overview"
+  id="slab-doc"
 >
   <h2
     id="default-slab"
@@ -18,7 +18,7 @@ exports[`Components: Slab OverviewSlab renders 1`] = `
         "elements": Array [
           Object {
             "component": <Slab />,
-            "description": "Slab component is basically a content frame which is used as graphic element background in order to display different types of content on it surface. Slab component uses drop shadows to be more visible and noticeable on the UI. Drop shadows can be an amazing way to add depth and emphasis to your designs, creating an image of floating UI elements. Shadows are a way of creating a container for content without making it feel boxed in.",
+            "description": "Slab component is basically a content frame which is used as a graphic element background in order to display different types of content on it surface. Slab component uses drop shadows to be more visible and noticeable on the UI. Drop shadows can be an amazing way to add depth and emphasis to your designs, creating an image of floating UI elements. Shadows are a way of creating a container for content without making it feel boxed in.",
             "options": Object {
               "radio": Array [
                 Object {
@@ -67,7 +67,7 @@ exports[`Components: Slab OverviewSlab renders 1`] = `
       When using the slab component with a combination of other elements on it, we need to consider how the border radius of the slab it is affecting the border radius of the element which takes place as content in the slab.
     </li>
     <li>
-      Using a slab component, the border radius could differ for different devices and sizes. Border radius always requires to be adjusted accordingly to the dimensions.
+      When using a slab component, the border radius could differ for different devices and sizes. Border radius always requires to be adjusted accordingly to the dimensions.
     </li>
   </ul>
   <h3>
@@ -121,14 +121,14 @@ exports[`Components: Slab OverviewSlab renders 1`] = `
   </div>
   <br />
   <div>
-     Using a mini slab in a slab component, in that case the inner slab needs to adjust its border radius accordingly in order the padding between the slabs to remain relevant and consistent.
+     When using a smaller slab in a slab component, in that case the inner slab needs to adjust its border radius accordingly in order the padding between the slabs to remain relevant and consistent.
   </div>
 </section>
 `;
 
 exports[`Components: Slab SlabArrow renders 1`] = `
 <section
-  id="arrow-slab"
+  id="slab-arrow"
 >
   <h2
     id="slab-arrow"

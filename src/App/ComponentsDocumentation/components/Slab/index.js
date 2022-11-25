@@ -8,13 +8,13 @@ import { validation } from "@src/scripts/main";
 const basename = process.env.basename;
 
 const OverviewSlab = () => (
-    <section id="slab-overview">
+    <section id="slab-doc">
         <h2 id="default-slab">Overview</h2>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewSlabs} codeFigure/>
         <h3>Things to consider</h3>
         <ul className="list list-bullet">
             <li>When using the slab component with a combination of other elements on it, we need to consider how the border radius of the slab it is affecting the border radius of the element which takes place as content in the slab.</li>
-            <li>Using a slab component, the border radius could differ for different devices and sizes. Border radius always requires to be adjusted accordingly to the dimensions.</li>
+            <li>When using a slab component, the border radius could differ for different devices and sizes. Border radius always requires to be adjusted accordingly to the dimensions.</li>
         </ul>
         <h3>How to adjust slab radius</h3>
         <div className="row">
@@ -36,12 +36,12 @@ const OverviewSlab = () => (
             </div>
         </div>
         <br/>
-        <div> Using a mini slab in a slab component, in that case the inner slab needs to adjust its border radius accordingly in order the padding between the slabs to remain relevant and consistent.</div>
+        <div> When using a smaller slab in a slab component, in that case the inner slab needs to adjust its border radius accordingly in order the padding between the slabs to remain relevant and consistent.</div>
     </section>
 );
 
 const SlabArrow = () => (
-    <section id="arrow-slab">
+    <section id="slab-arrow">
         <h2 id="slab-arrow">Slab arrow</h2>
         <p>
             <CodeTags type="secondary" code=".slab-arrow" /> inherits the color from the slab it is appended to.
