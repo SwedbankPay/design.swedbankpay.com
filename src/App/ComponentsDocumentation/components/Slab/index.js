@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
+
 import CodeTags from "@components/CodeTags";
+
 import { overviewSlabs } from "./constants";
 import { validation } from "@src/scripts/main";
 
@@ -19,17 +21,17 @@ const OverviewSlab = () => (
         <h3>How to adjust slab radius</h3>
         <div className="row">
             <div className="col-lg-6 col-sm-12">
-                <div className="slab slab-plain slab-border-success pb-4">
+                <div className="slab slab-plain slab-border-success pb-1">
                     <h4 className="mb-3 mt-0">Do</h4>
-                    <div className="d-flex justify-content-center mt-4 mb-4">
+                    <div className="d-flex justify-content-center mt-3 mb-3">
                         <img className="img-fluid" src={`${basename}img/documentation/slab/do-nested-slabs.png`} alt="A slab with a smaller slab inside of it. Their border radius values are equal, the padding size is therefore not consistent." />
                     </div>
                 </div>
             </div>
             <div className="col-lg-6 col-sm-12">
-                <div className="slab slab-plain slab-border-error pb-4">
+                <div className="slab slab-plain slab-border-error pb-1">
                     <h4>{"Don't"}</h4>
-                    <div className="d-flex justify-content-center mt-4 mb-4">
+                    <div className="d-flex justify-content-center mt-3 mb-3">
                         <img className="img-fluid" src={`${basename}img/documentation/slab/dont-nested-slabs.png`} alt="A slab with a smaller slab inside of it. Their border radius value are not equal, which makes the padding consistent."/>
                     </div>
                 </div>
