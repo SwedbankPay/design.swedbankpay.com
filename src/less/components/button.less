@@ -6,8 +6,7 @@
 
     &:focus,
     &.focus {
-        outline: 0;
-        border: 2px solid @focus-shadow;
+        outline: 2px solid @focus-shadow;
         background-color: @hover;
     }
 
@@ -41,7 +40,50 @@
         &.active {
             background: @disabled-bg;
             color: @disabled-color;
-            border: none;
+        }
+    }
+}
+
+.button-default-variant(@color, @background, @hover, @disabled-color, @disabled-bg, @focus-shadow, @active-border-color, @active-bg-color) {
+    color: @color;
+    background-color: @background;
+
+    &:focus,
+    &.focus {
+        outline: 2px solid @focus-shadow;
+        background-color: @background;
+    }
+
+    &:hover {
+        color: @color;
+        background-color: @hover;
+    }
+
+    &[active],
+    &:active,
+    &.active {
+        .button-active-state(@active-border-color);
+
+        &:hover,
+        &:focus,
+        &.focus {
+            color: @color;
+            background-color: @active-bg-color;
+        }
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &[active],
+        &:active,
+        &.active {
+            background: @disabled-bg;
+            color: @disabled-color;
         }
     }
 }
@@ -53,10 +95,10 @@
 
     &:focus,
     &.focus {
-        outline: 0;
+        //outline: 0;
         color: @hover-color;
         background-color: @background;
-        border: 2px solid @focus-shadow;
+        outline: 2px solid @focus-shadow;
     }
 
     &:hover {
@@ -159,12 +201,12 @@
 }
 
 .button-active-state(@border) {
-    border: 2px solid @border;
+    outline: 2px solid @border;
 }
 
 .button-outline-variant-active-state(@background; @border; @text) {
     background-color: @background;
-    border: 2px solid @border;
+    outline: 2px solid @border;
     color: @text;
 }
 
@@ -175,6 +217,15 @@
     line-height: @line-height;
     border-radius: @border-radius;
     height: @height;
+}
+
+.button-icon-size(@padding-horizontal; @height; @width; @font-size; @line-height; @border-radius) {
+    padding: 0 @padding-horizontal;
+    font-size: @font-size;
+    line-height: @line-height;
+    border-radius: @border-radius;
+    height: @height;
+    width: @width;
 }
 
 .btn-loader-variant(@max-height; @min-height; @width; @margin; @font-size; @btn-height) {
@@ -213,6 +264,7 @@
 
 @btn-padding-horizontal:                    1rem;
 @btn-default-height:                        3rem;
+@btn-default-width:                         auto;
 
 .button-group {
     margin-bottom: -3px;
@@ -240,6 +292,7 @@
 
     /* padding-top-bottom, padding-left-right, font-size, line-height */
     .button-size(@btn-padding-horizontal; @btn-default-height; @btn-font-size; @line-height-large; @btn-border-radius-large);
+    .button-icon-size(@btn-padding-horizontal; @btn-default-height; @btn-default-width; @btn-font-size; @line-height-large; @btn-border-radius-large);
 
     .material-icons,
     .material-icons-outlined {
@@ -342,6 +395,10 @@
         .button-outline-variant(@btn-secondary-bg, @btn-secondary-bg, @btn-secondary-color, @btn-secondary-disabled-bg, @btn-secondary-disabled-color, @brand-primary, #944E4E);
     }
 
+    &.btn-default {
+        .button-default-variant(@btn-secondary-bg, transparent, #e5e2e2 , @btn-secondary-disabled-bg, @btn-secondary-disabled-color, @brand-secondary, transparent, #d8d2d2);
+    }
+
     &.btn-guiding-destructive {
         .button-outline-variant(@btn-destructive-bg, @btn-destructive-bg, @btn-destructive-color, @btn-destructive-disabled-bg, @btn-destructive-disabled-color, @brand-secondary, #EE5058);
     }
@@ -377,6 +434,22 @@
 
     &.btn-xs {
         .button-size(0.5rem; 2rem; @font-size-small; @line-height-small; @btn-border-radius-small);
+    }
+
+    &.btn-icon-xl {
+        .button-icon-size(0.8rem; 3rem; 3rem; @font-size-small; @line-height-small; @btn-border-radius-small);
+    }
+
+    &.btn-icon-lg {
+        .button-icon-size(0.55rem; 2.5rem; 2.5rem; @font-size-small; @line-height-small; @btn-border-radius-small);
+    }
+
+    &.btn-icon-sm {
+        .button-icon-size(0.3rem; 2rem; 2rem; @font-size-small; @line-height-small; @btn-border-radius-small);
+    }
+
+    &.btn-icon-xs {
+        .button-icon-size(0.05rem; 1.5rem; 1.5rem; @font-size-small; @line-height-small; @btn-border-radius-small);
     }
 
     // Block button
