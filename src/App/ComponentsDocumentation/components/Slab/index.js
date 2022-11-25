@@ -22,7 +22,7 @@ const OverviewSlab = () => (
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4 className="mb-3 mt-0">Do</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" alt="A slab with a smaller slab inside of it. Their border radius values are equal, the padding size is therefore not consistent." src={`${basename}img/documentation/slab/do-nested-slabs.png`}/>
+                        <img className="img-fluid" src={`${basename}img/documentation/slab/do-nested-slabs.png`} alt="A slab with a smaller slab inside of it. Their border radius values are equal, the padding size is therefore not consistent." />
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@ const OverviewSlab = () => (
                 <div className="slab slab-plain slab-border-error pb-4">
                     <h4>{"Don't"}</h4>
                     <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" alt="A slab with a smaller slab inside of it. Their border radius value are not equal, which makes the padding consistent." src={`${basename}img/documentation/slab/dont-nested-slabs.png`}/>
+                        <img className="img-fluid" src={`${basename}img/documentation/slab/dont-nested-slabs.png`} alt="A slab with a smaller slab inside of it. Their border radius value are not equal, which makes the padding consistent."/>
                     </div>
                 </div>
             </div>
