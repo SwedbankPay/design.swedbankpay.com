@@ -87,7 +87,7 @@ export const radiobuttonShowCase = {
         },
         {
             tab: "Checkmark",
-            component: <Radio groupTitle="Group legend" name="radio-group-example" options={options} group hintExpander={true} style="checkmark" />,
+            component: <Radio className="row" groupTitle="Group legend" name="radio-group-example" options={options} group hintExpander={true} style="checkmark" />,
             options: {
                 checkbox: [
                     {

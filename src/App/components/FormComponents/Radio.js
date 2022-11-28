@@ -20,9 +20,9 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
                         <legend>
                             {groupTitle} {optional && <span>(optional)</span>}
                         </legend>{"\n"}
-                        {options.map(({ label, id, checked }, i) => <div className={`radio ${style}`} key={i}>{"\n"}
+                        {options.map(({ label, id, checked }, i) => <div className={`radio${style ? ` ${style}` : ""}`} key={i}>{"\n"}
                             <input {...attrs} id={id} defaultChecked={checked}/>{"\n"}
-                            <label htmlFor={id}>{(style=="checkmark") && <i class="material-icons" >check_circle</i>} {label}</label>{"\n"}
+                            <label htmlFor={id}>{(style=="checkmark") && <i class="material-icons">check_circle</i>} {label}</label>{"\n"}
                         </div>)}
                         {errorMessage && <><div className="help-block"><i className="material-icons">warning</i>{errorMessage}</div>{"\n"}</>}
                         {helpBlock && <><p id="hint-text" className="hint-text">{helpBlock}</p>{"\n"}</>}
@@ -37,9 +37,9 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
                     </fieldset>
                 </form>
                 : <>
-                    <div className={`radio ${style}`}>{"\n"}
+                    <div className={`radio${style ? ` ${style}` : ""}`}>{"\n"}
                         <input {...attrs} />{"\n"}
-                        {label ? <label htmlFor={id}>{label}</label> : null}{label ? "\n" : null}
+                        {label ? <label htmlFor={id}>{(style=="checkmark") && <i class="material-icons">check_circle</i>} {label}</label> : null}{label ? "\n" : null}
                     </div>
                 </>
             }

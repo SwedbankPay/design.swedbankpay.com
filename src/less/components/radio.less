@@ -78,91 +78,91 @@
     border-radius: 8px;
     height: 33.5px;
     font-weight: 100;
-    font-family: "Arial", sans-serif;
     border: 2px solid transparent;
     pointer-events: none;
     width: auto;
-  }
   
-  .checkmark:active {
-    border: 2px solid transparent;
-  }
+    &:active {
+        border: 2px solid transparent;
+    }
+    
+    &:hover {
+        background-color: transparent;
+    }
+    &:disabled {
+        border: 2px solid transparent;
+        margin: auto;
+    }
+    
+    * {
+        pointer-events: all;
+    }
+    
+    label {
+        outline: 1px solid #000;
+        border-radius: 8px;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        gap: 5px;
+        padding-left: 20px;
+        padding-right: 35px;
+    }
+    
+    label::before {
+        display: none;
+    }
+    
+    label .material-icons {
+        color: #fff;
+        margin-left: -10px;
+    }
+    
+    input[type="radio"]:hover + label {
+        background-color: #f9f8f6;
+        color: #72605e;
+        border-radius: 8px;
+        border: 0 solid transparent;
+        outline: 1px solid #72605e;
+    }
+    
+    input[type="radio"]:hover + label .material-icons {
+        visibility: hidden;
+    }
+    
+    input[type="radio"]:checked + label {
+        background-color: #512b2b;
+        border-radius: 8px;
+        color: #fff;
+        padding-right: 25px;
+        padding-left: 30px;
+    }
+    input[type="radio"]:checked:hover + label {
+        background-color: #72605e;
+    }
+    
+    input[type="radio"]:checked + label .material-icons {
+        visibility: visible;
+    }
+    
+    input[type="radio"]:checked + label > i {
+        visibility: visible;
+    }
   
-  .checkmark:hover {
-    background-color: transparent;
-  }
-  .checkmark:disabled {
-    border: 2px solid transparent;
-    margin: auto;
-  }
-  
-  .checkmark * {
-    pointer-events: all;
-  }
-  
-  .checkmark > label {
-    outline: 1px solid #000;
-    border-radius: 8px;
-    margin: auto;
-    height: 100%;
-    width: 100%;
-    gap: 5px;
-    padding-left: 20px;
-    padding-right: 35px;
-  }
-  
-  .checkmark > label::before {
-    display: none;
-  }
-  
-  .checkmark > label .material-icons {
-    color: #fff;
-    margin-left: -10px;
-  }
-  
-  .checkmark input[type="radio"]:hover + label {
-    background-color: #f9f8f6;
-    color: #72605e;
-    border-radius: 8px;
-    border: 0 solid transparent;
-    outline: 1px solid #72605e;
-  }
-  
-  .checkmark input[type="radio"]:hover + label .material-icons {
-    visibility: hidden;
-  }
-  
-  .checkmark input[type="radio"]:checked + label {
-    background-color: #512b2b;
-    border-radius: 8px;
-    color: #fff;
-    padding-right: 25px;
-    padding-left: 30px;
-  }
-  .checkmark input[type="radio"]:checked:hover + label {
-    background-color: #72605e;
-  }
-  
-  .checkmark input[type="radio"]:checked + label .material-icons {
-    visibility: visible;
-  }
-  
-  .checkmark input[type="radio"]:checked + label > i {
-    visibility: visible;
-  }
-  
-  .checkmark input[type="radio"]:disabled + label {
-    background-color: transparent;
-    color: #d4c4bc;
-    height: 30px;
-    outline: 0px;
-  }
-  .checkmark input[type="radio"]:checked:disabled + label {
-    background-color: #D4C4BC;
-    color: @white;
-    height: 30px;
-    outline: 0px;
-  }
+    input[type="radio"]:disabled + label {
+        background-color: transparent;
+        color: #d4c4bc;
+        height: 30px;
+        outline: 0px;
+    }
+
+    input[type="radio"]:checked:disabled + label {
+        background-color: #D4C4BC;
+        color: @white;
+        height: 30px;
+        outline: 0px;
+    }
+}
 
 fieldset {
     &.radio-group {
