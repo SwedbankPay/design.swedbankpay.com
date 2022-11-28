@@ -246,7 +246,7 @@ export const overviewButtons = {
                 ]
             },
             description: <p>
-                Use this button in constrained places. This button is accessible for screen reader users, but remember to describe the action in aria-label. This button also comes in the following states: Enabled, hover, focus, active and disabled.
+                Use this button in constrained places. This button is accessible for screen reader users, but remember to describe the action in aria-label. This button also comes in the following states: Enabled, hover, focus, active andgit disabled.
             </p>
         }
     ]

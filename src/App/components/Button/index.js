@@ -72,8 +72,7 @@ Button.propTypes = {
     size: PropTypes.oneOf(["lg", "sm", "xs", "icon-xl", "icon-lg", "icon-sm", "icon-xs"]),
     bankId: PropTypes.string,
     className: PropTypes.string,
-    iconAfter: PropTypes.bool,
-    iconOnly: PropTypes.bool
+    iconAfter: PropTypes.bool
 };
 
 export default Button;
