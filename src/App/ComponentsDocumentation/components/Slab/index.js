@@ -39,6 +39,11 @@ const OverviewSlab = () => (
         </div>
         <br/>
         <div> When using a smaller slab in a slab component, in that case the inner slab needs to adjust its border radius accordingly in order the padding between the slabs to remain relevant and consistent.</div>
+        <h3>New design</h3>
+        <p className="list">
+            This is a breaking change regarding the visuals of the component.
+            If necessary, <CodeTags type="secondary" code=".slab-edges"/> will sharpen the corners and make it look like the old design.
+        </p>
     </section>
 );
 

@@ -13,7 +13,7 @@
 }
 
 .slab {
-    min-height: 1rem;
+    min-height: 0.5rem;
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 16px;
@@ -30,18 +30,6 @@
 
     &.slab-default {
         .slab-variant(@white);
-
-        &.light {
-            filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.15));
-        }
-
-        &.dark {
-            filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.25));
-        }
-
-        &.flat {
-            filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
-        }
     }
 
     &.slab-plain {
@@ -50,6 +38,18 @@
 
     &:last-child {
         margin-bottom: 0;
+    }
+
+    &.light {
+        filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.15));
+    }
+
+    &.dark {
+        filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.25));
+    }
+
+    &.flat {
+        filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
     }
 
     &.slab-elevated {
@@ -102,5 +102,9 @@
 
     &.slab-border-error {
         border-top: 4px solid @brand-error;
+    }
+
+    &.slab-edges {
+        border-radius: 2px;
     }
 }
