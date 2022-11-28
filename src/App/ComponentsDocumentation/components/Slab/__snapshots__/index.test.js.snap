@@ -80,7 +80,7 @@ exports[`Components: Slab OverviewSlab renders 1`] = `
       className="col-lg-6 col-sm-12"
     >
       <div
-        className="slab slab-plain slab-border-success pb-4"
+        className="slab slab-plain slab-border-success pb-1"
       >
         <h4
           className="mb-3 mt-0"
@@ -88,7 +88,7 @@ exports[`Components: Slab OverviewSlab renders 1`] = `
           Do
         </h4>
         <div
-          className="d-flex justify-content-center mt-4 mb-4"
+          className="d-flex justify-content-center mt-3 mb-3"
         >
           <img
             alt="A slab with a smaller slab inside of it. Their border radius values are equal, the padding size is therefore not consistent."
@@ -102,13 +102,13 @@ exports[`Components: Slab OverviewSlab renders 1`] = `
       className="col-lg-6 col-sm-12"
     >
       <div
-        className="slab slab-plain slab-border-error pb-4"
+        className="slab slab-plain slab-border-error pb-1"
       >
         <h4>
           Don't
         </h4>
         <div
-          className="d-flex justify-content-center mt-4 mb-4"
+          className="d-flex justify-content-center mt-3 mb-3"
         >
           <img
             alt="A slab with a smaller slab inside of it. Their border radius value are not equal, which makes the padding consistent."
