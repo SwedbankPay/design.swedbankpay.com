@@ -28,7 +28,7 @@ const Button = ({ label, id, name, className, value, href, icon, loading, type, 
         "aria-pressed": active ? true : null,
         "aria-disabled": href && disabled ? true : null,
         tabIndex: href && disabled ? "-1" : null,
-        "aria-label": type === "icon" ? "" : null
+        "aria-label": type === "icon" ? "Describe-this-action" : null
     };
 
     if (href) {

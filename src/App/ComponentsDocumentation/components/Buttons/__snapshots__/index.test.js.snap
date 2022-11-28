@@ -1600,6 +1600,80 @@ exports[`Documentation: Buttons Overview renders 1`] = `
             "tab": "Link",
             "title": "Link button",
           },
+          Object {
+            "component": <Button
+              icon="cloud"
+              kind="default"
+              size="icon-xl"
+              type="icon"
+            />,
+            "description": <p>
+              Use this button in constrained places. This button is accessible for screen reader users, but remember to describe the action in aria-label. This button also comes in the following states: Enabled, hover, focus, active and disabled.
+            </p>,
+            "options": Object {
+              "radio": Array [
+                Object {
+                  "id": "type_radio",
+                  "title": "Type",
+                  "values": Array [
+                    Object {
+                      "name": "Default",
+                      "value": Object {
+                        "icon": "cloud",
+                        "kind": "default",
+                      },
+                    },
+                    Object {
+                      "name": "Primary",
+                      "value": Object {
+                        "icon": "cloud",
+                        "kind": "primary",
+                      },
+                    },
+                    Object {
+                      "name": "Secondary",
+                      "value": Object {
+                        "icon": "cloud",
+                        "kind": "secondary",
+                      },
+                    },
+                  ],
+                },
+                Object {
+                  "id": "size",
+                  "title": "Sizes",
+                  "values": Array [
+                    Object {
+                      "name": "Extra large",
+                      "value": Object {
+                        "size": "icon-xl",
+                      },
+                    },
+                    Object {
+                      "name": "Large",
+                      "value": Object {
+                        "size": "icon-lg",
+                      },
+                    },
+                    Object {
+                      "name": "Small",
+                      "value": Object {
+                        "size": "icon-sm",
+                      },
+                    },
+                    Object {
+                      "name": "Extra small",
+                      "value": Object {
+                        "size": "icon-xs",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Icon only",
+            "title": "Icon only button",
+          },
         ],
         "id": "overviewButtons",
         "tabsId": "overviewButtonsTabs",
