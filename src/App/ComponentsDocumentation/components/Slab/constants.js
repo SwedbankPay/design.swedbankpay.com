@@ -1,7 +1,7 @@
 import React from "react";
 
 const Slab = ({ darkShadow, noShadow }) => (
-    <div id="slab-doc"className={`slab slab-default${darkShadow ? " dark" : ""}${noShadow ? " flat" : ""}`}/>
+    <div id="slab-doc" className={`slab slab-default${darkShadow ? " dark" : ""}${noShadow ? " flat" : ""}`}/>
 );
 
 export const overviewSlabs = {
@@ -41,7 +41,7 @@ export const overviewSlabs = {
                 ]
             },
             title: "Overview slabs",
-            description: "Slab component is basically a content frame which is used as a graphic element background in order to display different types of content on it surface. Slab component uses drop shadows to be more visible and noticeable on the UI. Drop shadows can be an amazing way to add depth and emphasis to your designs, creating an image of floating UI elements. Shadows are a way of creating a container for content without making it feel boxed in."
+            description: "The slab component is a content frame that is used as a graphic element background in order to display different types of content on its surface. By adding drop shadows it gets more noticeable and adds depth and emphasis to the design, creating an image of floating UI elements."
         }
     ]
 };

@@ -14,7 +14,6 @@ describe("Components: Slab", () => {
         const wrapper = shallow(<Slab />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(console.warn).toHaveBeenCalled();
     });
 
     describe("OverviewSlab", () => {
