@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Button = ({ label, id, name, className, value, href, icon, loading, type, disabled, btnType, fullWidth, input, active, size, bankId, iconAfter, iconOnly }) => {
+const Button = ({ label, id, name, className, value, href, icon, loading, type, disabled, btnType, fullWidth, input, active, size, bankId, iconAfter }) => {
     const btnClasses = classnames(
         "btn",
         type ? `btn-${type}` : null,
@@ -71,7 +71,6 @@ Button.propTypes = {
     bankId: PropTypes.string,
     className: PropTypes.string,
     iconAfter: PropTypes.bool,
-    iconOnly: PropTypes.bool
 };
 
 export default Button;
