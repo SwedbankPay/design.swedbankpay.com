@@ -12,6 +12,7 @@ exports[`Component: Button - Anchor tag: renders a button inside an anchor tag w
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 />
 `;
@@ -28,6 +29,7 @@ exports[`Component: Button - Anchor tag: renders a button inside an anchor tag w
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 />
 `;
@@ -45,6 +47,7 @@ exports[`Component: Button - Anchor tag: renders a button inside an anchor tag w
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 />
 `;
@@ -61,6 +64,7 @@ exports[`Component: Button - Anchor tag: renders a button inside an anchor tag w
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 >
   test
@@ -80,6 +84,7 @@ exports[`Component: Button - Anchor tag: renders a button inside an anchor tag w
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 />
 `;
@@ -96,6 +101,7 @@ exports[`Component: Button - Anchor tag: renders a button with icon and label in
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 >
   <i
@@ -122,6 +128,7 @@ exports[`Component: Button - Anchor tag: renders a button with icon inside an an
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 >
   <i
@@ -145,6 +152,7 @@ exports[`Component: Button - Anchor tag: renders a button with specified size in
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 />
 `;
@@ -161,6 +169,7 @@ exports[`Component: Button - Anchor tag: renders a disabled button inside an anc
   onClick={[Function]}
   role="button"
   tabIndex="-1"
+  title={null}
   type={null}
 />
 `;
@@ -177,6 +186,7 @@ exports[`Component: Button - Anchor tag: renders a full width button inside an a
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 />
 `;
@@ -193,6 +203,7 @@ exports[`Component: Button - Anchor tag: renders a loading button inside an anch
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 />
 `;
@@ -206,6 +217,7 @@ exports[`Component: Button - Button tag: renders a button with a label when prop
   className="btn btn-primary"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 >
   test
@@ -221,6 +233,7 @@ exports[`Component: Button - Button tag: renders a button with an icon when prop
   className="btn btn-primary"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 >
   
@@ -231,6 +244,8 @@ exports[`Component: Button - Button tag: renders a button with an icon when prop
   >
     test
   </i>
+  
+	
   
 	
 </button>
@@ -245,6 +260,7 @@ exports[`Component: Button - Button tag: renders a button with class active when
   className="btn btn-primary"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -258,6 +274,7 @@ exports[`Component: Button - Button tag: renders a button with icon and label wh
   className="btn btn-primary"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 >
   
@@ -273,6 +290,8 @@ exports[`Component: Button - Button tag: renders a button with icon and label wh
   <span>
     test
   </span>
+  
+	
 </button>
 `;
 
@@ -285,6 +304,7 @@ exports[`Component: Button - Button tag: renders a button with specified size wh
   className="btn btn-primary btn-size-test"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -299,6 +319,7 @@ exports[`Component: Button - Button tag: renders a button with the specified id 
   id="test"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -313,6 +334,7 @@ exports[`Component: Button - Button tag: renders a button with the specified nam
   name="test"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -326,6 +348,7 @@ exports[`Component: Button - Button tag: renders a button with the specified typ
   className="btn btn-primary"
   role={null}
   tabIndex={null}
+  title={null}
   type="test"
 />
 `;
@@ -340,6 +363,7 @@ exports[`Component: Button - Button tag: renders a disabled button when prop dis
   disabled={true}
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -353,6 +377,7 @@ exports[`Component: Button - Button tag: renders a full width button when prop f
   className="btn btn-primary btn-block"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -366,6 +391,7 @@ exports[`Component: Button - Button tag: renders a loading button when prop load
   className="btn btn-primary loading"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -379,6 +405,7 @@ exports[`Component: Button - Button tag: renders a primary button and defaults t
   className="btn btn-primary"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -392,6 +419,7 @@ exports[`Component: Button - Input tag: renders a button inside an input tag and
   className="btn btn-primary"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -406,6 +434,7 @@ exports[`Component: Button - Input tag: renders a button inside an input tag wit
   defaultValue="test"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -419,6 +448,7 @@ exports[`Component: Button - Input tag: renders a button with class active insid
   className="btn btn-primary"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -432,6 +462,7 @@ exports[`Component: Button - Input tag: renders a button with specified size ins
   className="btn btn-primary btn-size-test"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -446,6 +477,7 @@ exports[`Component: Button - Input tag: renders a button with the specified id i
   id="test"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -460,6 +492,7 @@ exports[`Component: Button - Input tag: renders a button with the specified name
   name="test"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -473,6 +506,7 @@ exports[`Component: Button - Input tag: renders a button with the specified type
   className="btn btn-primary"
   role={null}
   tabIndex={null}
+  title={null}
   type="test"
 />
 `;
@@ -487,6 +521,7 @@ exports[`Component: Button - Input tag: renders a disabled button inside an inpu
   disabled={true}
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -500,6 +535,7 @@ exports[`Component: Button - Input tag: renders a full width button inside an in
   className="btn btn-primary btn-block"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -513,6 +549,7 @@ exports[`Component: Button - Input tag: renders a loading button inside an input
   className="btn btn-primary loading"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -526,6 +563,7 @@ exports[`Component: Button - prop type is marked as required 1`] = `
   className="btn"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;

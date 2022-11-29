@@ -1603,9 +1603,9 @@ exports[`Documentation: Buttons Overview renders 1`] = `
           Object {
             "component": <Button
               icon="cloud"
-              kind="default"
+              iconOnly={true}
               size="icon-xl"
-              type="icon"
+              type="default"
             />,
             "description": <p>
               Use this button in constrained places. This button is accessible for screen reader users, but remember to describe the action in aria-label. This button also comes in the following states: Enabled, hover, focus, active and disabled.
@@ -1620,21 +1620,21 @@ exports[`Documentation: Buttons Overview renders 1`] = `
                       "name": "Default",
                       "value": Object {
                         "icon": "cloud",
-                        "kind": "default",
+                        "type": "default",
                       },
                     },
                     Object {
                       "name": "Primary",
                       "value": Object {
                         "icon": "cloud",
-                        "kind": "primary",
+                        "type": "primary",
                       },
                     },
                     Object {
                       "name": "Secondary",
                       "value": Object {
                         "icon": "cloud",
-                        "kind": "secondary",
+                        "type": "secondary",
                       },
                     },
                   ],
