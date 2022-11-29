@@ -182,7 +182,7 @@ export const overviewButtons = {
         },
         {
             tab: "Icon only",
-            component: <ButtonComponent type="icon" kind="default" icon="cloud" size="icon-xl"/>,
+            component: <ButtonComponent type="default" icon="cloud" size="icon-xl" iconOnly={true}/>,
             title: "Icon only button",
             options: {
                 radio: [
@@ -193,21 +193,21 @@ export const overviewButtons = {
                             {
                                 name: "Default",
                                 value: {
-                                    kind: "default",
+                                    type: "default",
                                     icon: "cloud"
                                 }
                             },
                             {
                                 name: "Primary",
                                 value: {
-                                    kind: "primary",
+                                    type: "primary",
                                     icon: "cloud"
                                 }
                             },
                             {
                                 name: "Secondary",
                                 value: {
-                                    kind: "secondary",
+                                    type: "secondary",
                                     icon: "cloud"
                                 }
                             }

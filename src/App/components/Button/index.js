@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Button = ({ label, id, name, className, value, href, icon, loading, type, disabled, btnType, fullWidth, input, active, size, bankId, iconAfter, kind }) => {
+const Button = ({ label, id, name, className, value, href, icon, loading, type, disabled, btnType, fullWidth, input, active, size, bankId, iconAfter, iconOnly }) => {
     const btnClasses = classnames(
         "btn",
         type ? `btn-${type}` : null,
@@ -12,7 +12,6 @@ const Button = ({ label, id, name, className, value, href, icon, loading, type, 
         active && href ? "active" : null,
         disabled && href ? "disabled" : null,
         bankId ? "btn-bank-id" : null,
-        kind ? `btn-${kind}` : null,
         className ? className : null
     );
 
@@ -28,7 +27,8 @@ const Button = ({ label, id, name, className, value, href, icon, loading, type, 
         "aria-pressed": active ? true : null,
         "aria-disabled": href && disabled ? true : null,
         tabIndex: href && disabled ? "-1" : null,
-        "aria-label": type === "icon" ? "Describe-this-action" : null
+        "aria-label": iconOnly ? "Describe this action" : null,
+        "title": iconOnly ? "Describe this action" : null
     };
 
     if (href) {
@@ -47,7 +47,7 @@ const Button = ({ label, id, name, className, value, href, icon, loading, type, 
     return (
         <button className={btnClasses} {...attrs}>{icon ? "\n\t\t" : null}
             {icon && !iconAfter ? <><i className="material-icons-outlined" aria-hidden="true">{icon}</i>{"\n\t"}</> : null}
-            {((icon && label) || type === "link" || type === "link-destructive" || bankId) ? <>{bankId ? "\n" : null}<span>{label}</span></> : label}{icon && !type === "icon" ? "\n\t" : null}
+            {((icon && label) || type === "link" || type === "link-destructive" || bankId) ? <>{bankId ? "\n" : null}<span>{label}</span></> : label}{icon && !iconOnly ? "\n\t" : null}
             {bankId ? <>{"\n"}<i className={`bank-id bank-id-${bankId}`} />{"\n"}</> : null}
             {loading ? <></> : <>{icon && iconAfter ? <><i className="material-icons ml-2" aria-hidden="true">{icon}</i>{"\n\t\t"}</> : null}</>}
         </button>
@@ -55,7 +55,7 @@ const Button = ({ label, id, name, className, value, href, icon, loading, type, 
 };
 
 Button.propTypes = {
-    type: PropTypes.oneOf(["primary", "secondary", "link", "guiding-destructive", "executive-destructive", "link-destructive", "icon"]).isRequired,
+    type: PropTypes.oneOf(["default", "primary", "secondary", "link", "guiding-destructive", "executive-destructive", "link-destructive"]).isRequired,
     label: PropTypes.string,
     id: PropTypes.string,
     name: PropTypes.string,
@@ -72,7 +72,8 @@ Button.propTypes = {
     size: PropTypes.oneOf(["lg", "sm", "xs", "icon-xl", "icon-lg", "icon-sm", "icon-xs"]),
     bankId: PropTypes.string,
     className: PropTypes.string,
-    iconAfter: PropTypes.bool
+    iconAfter: PropTypes.bool,
+    iconOnly: PropTypes.bool
 };
 
 export default Button;

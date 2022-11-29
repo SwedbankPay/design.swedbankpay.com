@@ -95,7 +95,6 @@
 
     &:focus,
     &.focus {
-        //outline: 0;
         color: @hover-color;
         background-color: @background;
         outline: 2px solid @focus-shadow;
@@ -307,24 +306,32 @@
     }
 
     &.btn-icon-xl {
+        .button-icon-size(0.45rem; 3rem; 3rem; @font-size-small; @line-height-small; @btn-border-radius-small);
+
         .material-icons-outlined {
             font-size: 2rem;
         }
     }
 
     &.btn-icon-lg {
+        .button-icon-size(0.3rem; 2.5rem; 2.5rem; @font-size-small; @line-height-small; @btn-border-radius-small);
+
         .material-icons-outlined {
             font-size: 1.75rem;
         }
     }
 
     &.btn-icon-sm {
+        .button-icon-size(0.2rem; 2rem; 2rem; @font-size-small; @line-height-small; @btn-border-radius-small);
+
         .material-icons-outlined {
             font-size: 1.5rem;
         }
     }
 
     &.btn-icon-xs {
+        .button-icon-size(2px; 1.5rem; 1.5rem; @font-size-small; @line-height-small; @btn-border-radius-small);
+
         .material-icons-outlined {
             font-size: 1.15rem;
         }
@@ -458,22 +465,6 @@
 
     &.btn-xs {
         .button-size(0.5rem; 2rem; @font-size-small; @line-height-small; @btn-border-radius-small);
-    }
-
-    &.btn-icon-xl {
-        .button-icon-size(0.45rem; 3rem; 3rem; @font-size-small; @line-height-small; @btn-border-radius-small);
-    }
-
-    &.btn-icon-lg {
-        .button-icon-size(0.3rem; 2.5rem; 2.5rem; @font-size-small; @line-height-small; @btn-border-radius-small);
-    }
-
-    &.btn-icon-sm {
-        .button-icon-size(0.2rem; 2rem; 2rem; @font-size-small; @line-height-small; @btn-border-radius-small);
-    }
-
-    &.btn-icon-xs {
-        .button-icon-size(2px; 1.5rem; 1.5rem; @font-size-small; @line-height-small; @btn-border-radius-small);
     }
 
     // Block button
