@@ -277,7 +277,7 @@
     &[active],
     &:active,
     &.active {
-        outline: 0;
+        outline: 3px solid transparent;
         background-image: none;
     }
 
@@ -452,5 +452,13 @@
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@media (forced-colors: active) {
+    .btn,
+    .button-variant,
+    .button-outline-variant {
+        border: 3px solid;
     }
 }
