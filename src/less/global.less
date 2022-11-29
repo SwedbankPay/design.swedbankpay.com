@@ -319,9 +319,9 @@ ol {
     font-feature-settings: "liga";
 }
 
-.tab-focus() {
+.tab-focus(@color: @brand-secondary) {
     /* Default */
-    outline: thin dotted;
+    outline: 2px solid @color;
 
     /* Webkit */
     outline: 5px auto -webkit-focus-ring-color;

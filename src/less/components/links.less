@@ -25,6 +25,11 @@ a {
 
     &.bright {
         color: @blue-syntax-highlight;
+        
+        &:focus-visible {
+            outline: 2px solid @brand-primary;
+            border-radius: 2px;
+        }
     }
 
     &.icon-link {
@@ -84,9 +89,10 @@ a {
             }
         }
 
-        &:focus {
-            box-shadow: 0 0 0 1px @brand-secondary;
-            outline: none;
+        &:focus-visible {
+            outline: 2px solid @brand-secondary;
+            outline-offset: 0px;
+            border-radius: 2px;
         }
 
         h4 {

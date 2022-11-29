@@ -83,6 +83,18 @@
     figure {
         margin: 0;
 
+        td {
+            &:focus-visible {
+                outline: 2px solid @brand-primary;
+                border-radius: 2px;
+            }
+        }
+
+        button:focus-visible {
+            outline: 2px solid @brand-primary;
+            border-radius: 2px;
+        }
+
         .code-toolbar {
             > .toolbar {
                 opacity: 1;
@@ -139,11 +151,21 @@
     right: 1rem;
     z-index: 103;
 
+    &:focus-visible {
+        outline: 2px solid @brand-secondary;
+        border-radius: 2px;
+    }
+
     .form-group {
         margin-bottom: 0;
 
         #search-box:focus + button {
             border-color: transparent;
+        }
+
+        &:focus-visible {
+            outline: 2px solid @brand-secondary;
+            border-radius: 2px;
         }
 
         input {
@@ -193,9 +215,14 @@
         background-color: @white;
         border-radius: 2px;
         max-height: 50vh;
-        overflow: scroll;
+        overflow: auto;
         box-shadow: 1px 2px 20px rgb(0 0 0 / 25%);
         padding-top: 0.5rem;
+
+        &:focus-visible {
+            outline: 2px solid @brand-secondary;
+            border-radius: 2px;
+        }
 
         .item-list {
             margin-bottom: 0;
@@ -206,7 +233,9 @@
                 text-decoration: none;
 
                 &:focus-visible {
-                    outline: 5px auto @brand-secondary;
+                    outline: 2px solid @brand-secondary;
+                    outline-offset: -2px;
+                    border-radius: 2px;
                 }
 
                 li {
@@ -261,7 +290,6 @@
                 top: -1.2rem;
                 height: 2.5rem;
                 border-left: 1px solid @soft-brown;
-
 
                 &:focus {
                     border-left: transparent;
@@ -1497,6 +1525,11 @@
         .link-dark-background {
             background-color: @brand-secondary;
             border-radius: 8px;
+
+            a:focus-visible {
+                outline: 2px solid @brand-primary;
+                border-radius: 2px;
+            }
         }
 
         #action-link-container {
@@ -1636,6 +1669,11 @@
         }
 
         .accordion {
+            :focus-visible {
+                outline: 2px solid @brand-secondary;
+                border-radius: 2px;
+            }
+
             .accordion-body {
                 .example-accordion {
                     border: 2px dotted @light-brown;
@@ -1747,6 +1785,11 @@
                 height: 2rem;
                 width: 5rem;
                 padding: 0 0.75rem;
+
+                &:focus {
+                    outline: 2px solid @brand-secondary;
+                    border-radius: 2px;
+                }
             }
         }
     }
