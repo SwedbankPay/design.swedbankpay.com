@@ -70,7 +70,7 @@ Button.propTypes = {
     size: PropTypes.oneOf(["lg", "sm", "xs"]),
     bankId: PropTypes.string,
     className: PropTypes.string,
-    iconAfter: PropTypes.bool,
+    iconAfter: PropTypes.bool
 };
 
 export default Button;
