@@ -377,10 +377,95 @@ exports[`Component: RadioButton Overview renders 1`] = `
                 },
               ],
             },
+            "tab": "Primary",
+            "title": "Radio button group",
+          },
+          Object {
+            "component": <Radio
+              group={true}
+              groupTitle="Group legend"
+              hintExpander={true}
+              name="radio-group-example"
+              options={
+                Array [
+                  Object {
+                    "checked": true,
+                    "id": "radio-example-1",
+                    "label": "Label",
+                  },
+                  Object {
+                    "id": "radio-example-2",
+                    "label": "Label",
+                  },
+                ]
+              }
+              style="checkmark"
+            />,
+            "description": "The radio button group has a label on top which describes the group. Each individual radio button is followed by a label which clearly describes the options. The main guideline for radio button groups is to select one of the radio buttons by default, there might however be situations where you can’t identify a default selection.",
+            "options": Object {
+              "checkbox": Array [
+                Object {
+                  "inputs": Array [
+                    Object {
+                      "id": "is_optional",
+                      "name": "Is optional",
+                      "value": Object {
+                        "optional": true,
+                      },
+                    },
+                    Object {
+                      "id": "hint_text",
+                      "name": "Hint text",
+                      "value": Object {
+                        "helpBlock": "Hint text",
+                        "hintTextId": "hint-text-radio-example",
+                      },
+                    },
+                    Object {
+                      "id": "hint_expander",
+                      "name": "Hint expander",
+                      "value": Object {
+                        "expanderId": "expander-showcase",
+                        "expandingHintTitle": "Expander hint text",
+                      },
+                    },
+                  ],
+                  "title": "Label add on",
+                },
+              ],
+              "radio": Array [
+                Object {
+                  "id": "state_radio",
+                  "title": "State modifiers",
+                  "values": Array [
+                    Object {
+                      "name": "Enabled",
+                      "value": Object {
+                        "disabled": false,
+                      },
+                    },
+                    Object {
+                      "name": "Disabled",
+                      "value": Object {
+                        "disabled": true,
+                      },
+                    },
+                    Object {
+                      "name": "Error",
+                      "value": Object {
+                        "errorMessage": "Descriptive helpful error message.",
+                      },
+                    },
+                  ],
+                },
+              ],
+            },
+            "tab": "Checkmark",
             "title": "Radio button group",
           },
         ],
-        "id": "no-tabs",
+        "id": "radioShowcase",
+        "tabsId": "radioShowcaseTabs",
       }
     }
   />
