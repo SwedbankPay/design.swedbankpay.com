@@ -4,6 +4,9 @@
 @radio-height:                           1.375rem;
 @radio-width:                            @radio-height;
 
+@checkmark-width:                        7.5rem;
+@checkmark-heigth:                        33.5px;
+
 .radio {
     position: relative;
     display: flex;
@@ -76,11 +79,15 @@
 .checkmark {
     padding: 0;
     border-radius: 8px;
-    height: 33.5px;
-    font-weight: 100;
     border: 2px solid transparent;
     pointer-events: none;
-    width: auto;
+    width: @checkmark-width;
+    height: @checkmark-heigth;
+    
+    
+    &:not(:last-child) {
+        margin-right: 4px;
+    }
   
     &:active {
         border: 2px solid transparent;
@@ -99,7 +106,7 @@
     }
     
     label {
-        outline: 1px solid #000;
+        outline: 1px solid @black;
         border-radius: 8px;
         margin: auto;
         height: 100%;
@@ -114,7 +121,7 @@
     }
     
     label .material-icons {
-        color: #fff;
+        color: @white;
         margin-left: -10px;
     }
     
@@ -141,17 +148,14 @@
         background-color: #72605e;
     }
     
+    input[type="radio"]:checked + label > i,
     input[type="radio"]:checked + label .material-icons {
-        visibility: visible;
-    }
-    
-    input[type="radio"]:checked + label > i {
         visibility: visible;
     }
   
     input[type="radio"]:disabled + label {
         background-color: transparent;
-        color: #d4c4bc;
+        color: #D4C4BC;
         height: 30px;
         outline: 0px;
     }
@@ -166,6 +170,10 @@
 
 fieldset {
     &.radio-group {
+        .radio-row {
+            display: flex;
+        }
+
         legend {
             position: relative;
             border: none;
@@ -181,6 +189,12 @@ fieldset {
     &.has-error {
         input[type="radio"] + label:before {
             border-color: @brand-error;
+        }
+
+        .checkmark{
+            input[type="radio"]:not(:checked) + label{
+                outline: 2px solid @brand-error;
+            }            
         }
 
         .help-block {

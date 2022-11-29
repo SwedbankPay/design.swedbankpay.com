@@ -20,10 +20,21 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
                         <legend>
                             {groupTitle} {optional && <span>(optional)</span>}
                         </legend>{"\n"}
-                        {options.map(({ label, id, checked }, i) => <div className={`radio${style ? ` ${style}` : ""}`} key={i}>{"\n"}
+                        {style === "checkmark" ?
+                        <div className="radio-row">
+                            {options.map(({ label, id, checked }, i) => <div className={`radio${style ? ` ${style}` : ""}`} key={i}>{"\n"}
+                                <input {...attrs} id={id} defaultChecked={checked}/>{"\n"}
+                                <label htmlFor={id}>{(style=="checkmark") && <i class="material-icons">check_circle</i>} {label}</label>{"\n"}
+                            </div>)}
+                        </div> :
+                        <>
+                        {options.map(({ label, id, checked }, i) => <div className={`radio`} key={i}>{"\n"}
                             <input {...attrs} id={id} defaultChecked={checked}/>{"\n"}
-                            <label htmlFor={id}>{(style=="checkmark") && <i class="material-icons">check_circle</i>} {label}</label>{"\n"}
+                            <label htmlFor={id}>{label}</label>{"\n"}
                         </div>)}
+                        </>
+                        }
+
                         {errorMessage && <><div className="help-block"><i className="material-icons">warning</i>{errorMessage}</div>{"\n"}</>}
                         {helpBlock && <><p id="hint-text" className="hint-text">{helpBlock}</p>{"\n"}</>}
                         {expandingHintTitle &&
@@ -31,7 +42,7 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
                             <button type="button" aria-controls={expanderId} aria-expanded={false}>{"\n"}
                                 <span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}{"\n"}
                             </button>{"\n"}
-                            <p id={expanderId} className="content" aria-hidden={true}>This information is less important and only a minority of users will need it or the text is very long. In this case; both.</p>{"\n"}
+                            <p id={expanderId} className="content" aria-hidden={true}>Additional information if text is long!</p>{"\n"}
                         </div>
                         }
                     </fieldset>

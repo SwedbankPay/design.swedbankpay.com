@@ -10,10 +10,6 @@ const options = [
     {
         id: "radio-example-2",
         label: "Label"
-    },
-    {
-        id: "radio-example-3",
-        label: "Label"
     }
 ];
 
@@ -87,7 +83,7 @@ export const radiobuttonShowCase = {
         },
         {
             tab: "Checkmark",
-            component: <Radio className="row" groupTitle="Group legend" name="radio-group-example" options={options} group hintExpander={true} style="checkmark" />,
+            component: <Radio groupTitle="Group legend" name="radio-group-example" options={options} group hintExpander={true} style="checkmark" />,
             options: {
                 checkbox: [
                     {
