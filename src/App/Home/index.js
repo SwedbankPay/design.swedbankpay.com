@@ -25,6 +25,7 @@ const Home = () => {
 
                 <div className="dg-version-indicator">
                     <span>Ver. {packageJson.version}</span>
+                    <span className="ml-3">Go to newest version</span>
                 </div>
 
                 <p className="front-page-lead">Here you can find components and guidelines to help you  and your team work more efficiently and create a cohesive user experience through all our products and touch points.</p>
