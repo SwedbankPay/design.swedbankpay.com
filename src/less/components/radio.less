@@ -83,28 +83,28 @@
     pointer-events: none;
     width: @checkmark-width;
     height: @checkmark-heigth;
-    
-    
+
     &:not(:last-child) {
         margin-right: 4px;
     }
-  
+
     &:active {
         border: 2px solid transparent;
     }
-    
+
     &:hover {
         background-color: transparent;
     }
+
     &:disabled {
         border: 2px solid transparent;
         margin: auto;
     }
-    
+
     * {
         pointer-events: all;
     }
-    
+
     label {
         outline: 1px solid @black;
         border-radius: 8px;
@@ -115,56 +115,65 @@
         padding-left: 20px;
         padding-right: 35px;
     }
-    
-    label::before {
+
+    label:before {
         display: none;
     }
-    
+
     label .material-icons {
         color: @white;
         margin-left: -10px;
     }
-    
+
     input[type="radio"]:hover + label {
         background-color: #f9f8f6;
         color: #72605e;
         border-radius: 8px;
         border: 0 solid transparent;
         outline: 1px solid #72605e;
+
+        .material-icons {
+            visibility: hidden;
+        }
     }
-    
-    input[type="radio"]:hover + label .material-icons {
-        visibility: hidden;
-    }
-    
+
     input[type="radio"]:checked + label {
         background-color: #512b2b;
         border-radius: 8px;
-        color: #fff;
+        color: @white;
         padding-right: 25px;
         padding-left: 30px;
+
+        i,
+        .material-icons {
+            visibility: visible;
+        }
     }
+
     input[type="radio"]:checked:hover + label {
         background-color: #72605e;
     }
-    
-    input[type="radio"]:checked + label > i,
-    input[type="radio"]:checked + label .material-icons {
-        visibility: visible;
-    }
-  
+
     input[type="radio"]:disabled + label {
         background-color: transparent;
-        color: #D4C4BC;
+        color: @light-brown;
         height: 30px;
-        outline: 0px;
+        outline: 0;
     }
 
     input[type="radio"]:checked:disabled + label {
-        background-color: #D4C4BC;
+        background-color: @light-brown;
         color: @white;
         height: 30px;
-        outline: 0px;
+        outline: 0;
+    }
+
+    input[type="radio"] {
+        &:focus + label,
+        &:hover + label {
+            box-shadow: 0 0 0 0.3rem @brand-secondary-light-3;
+            border-color: @brand-secondary;
+        }
     }
 }
 
@@ -191,10 +200,10 @@ fieldset {
             border-color: @brand-error;
         }
 
-        .checkmark{
-            input[type="radio"]:not(:checked) + label{
+        .checkmark {
+            input[type="radio"]:not(:checked) + label {
                 outline: 2px solid @brand-error;
-            }            
+            }
         }
 
         .help-block {
