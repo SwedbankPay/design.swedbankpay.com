@@ -156,7 +156,10 @@
 }
 
 @media (forced-colors: active) {
-    .togglebox {
-        border: 3px solid;
+    input[type="checkbox"] {
+        &:checked + label:after {
+            background-color: currentColor;
+            border: 9px solid;
+        }
     }
 }

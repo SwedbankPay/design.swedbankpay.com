@@ -1768,13 +1768,22 @@
 
 @media (forced-colors: active) {
     #designguide,
-    .documentation,
-    .search-container {
+    .documentation {
         border: 2px solid;
         fill: currentColor;
     }
 
+    .search-container {
+        input {
+            border: 2px solid;
+        }
+    }
+
     &:focus {
         outline-color: currentColor;
+    }
+
+    .options-open {
+        border: 2px solid;
     }
 }
