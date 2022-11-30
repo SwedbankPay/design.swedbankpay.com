@@ -119,3 +119,22 @@ each(@grid-breakpoints-max, .(@max-width, @infix) {
         }
     }
 });
+
+@media (forced-colors: active) {
+    .tabs {
+        ul {
+            li {
+                a {
+                    &:hover {
+                        border-bottom: 3px solid;
+                    }
+                }
+
+                &.active > a,
+                a.active {
+                    border-bottom: 3px solid;
+                }
+            }
+        }
+    }
+}

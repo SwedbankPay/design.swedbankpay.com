@@ -97,6 +97,14 @@
 @media (forced-colors: active) {
     .slab-variant,
     .slab {
-        border: 3px solid;
+        border: 1px solid;
+
+        &.slab-border-success,
+        &.slab-border-error {
+            border-top: 4px solid;
+            border-left: 1px solid;
+            border-right: 1px solid;
+            border-bottom: 1px solid;
+        }
     }
 }

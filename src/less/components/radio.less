@@ -106,7 +106,12 @@ fieldset {
 }
 
 @media (forced-colors: active) {
-    .fieldset {
-        border: 3px solid;
+    .radio {
+        input[type="radio"] {
+            &:checked + label:before {
+                background-color: none;
+                border-style: dashed;
+            }
+        }
     }
 }
