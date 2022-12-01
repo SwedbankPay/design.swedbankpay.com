@@ -12,7 +12,7 @@ const OverviewSlab = () => (
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewSlabs} codeFigure/>
         <h3>Things to consider</h3>
         <ul className="list list-bullet">
-            <li>When combining other components with the slab, one must consider how the slab's border-radius affects the edges of the on-top placed component.</li>
+            <li>When combining other components with the slab, one must consider how the slab`s border-radius affects the edges of the on-top placed component.</li>
             <li>When using a slab component, the border-radius could differ for different devices and sizes. Border-radius always requires to be adjusted accordingly to the dimensions.</li>
         </ul>
         <h3>How to adjust slab radius</h3>
