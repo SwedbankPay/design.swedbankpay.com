@@ -1787,3 +1787,11 @@
         border: 2px solid;
     }
 }
+
+@media (forced-colors: active) and (prefers-color-scheme: dark) {
+    .showcase-panel {
+        canvas {
+            filter: brightness(170%);
+        }
+    }
+}
