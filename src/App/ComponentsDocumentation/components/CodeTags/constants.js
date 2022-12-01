@@ -2,7 +2,7 @@ import React from "react";
 import CodeTags from "@components/CodeTags";
 
 const TagComponent = ({ removable, type }) => (
-    <div className="d-flex justify-content-center">
+    <div className="d-flex justify-content-center align-items-center">
         <CodeTags type={type} removable={removable} className="mr-2" text="Tag" />{"\n"}
         <CodeTags type={type} removable={removable} className="mr-2" text="Tag" />{"\n"}
         <CodeTags type={type} removable={removable} text="Tag" />
