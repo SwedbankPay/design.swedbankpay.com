@@ -64,7 +64,7 @@ exports[`Components: Slab OverviewSlab renders 1`] = `
     className="list list-bullet"
   >
     <li>
-      When combining other components with the slab, one must consider how the slab's border-radius affects the edges of the on-top placed component.
+      When combining other components with the slab, one must consider how the slab\`s border-radius affects the edges of the on-top placed component.
     </li>
     <li>
       When using a slab component, the border-radius could differ for different devices and sizes. Border-radius always requires to be adjusted accordingly to the dimensions.
