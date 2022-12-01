@@ -106,12 +106,18 @@ fieldset {
 }
 
 @media (forced-colors: active) {
-    .radio {
-        input[type="radio"] {
-            &:checked + label:before {
-                background-color: none;
-                border-style: dashed;
-            }
+    input[type="radio"] {
+        &:checked + label:before {
+            background-image: none;
+            border-style: dashed;
+        }
+    }
+}
+
+@media (forced-colors: active) and (prefers-color-scheme: dark) {
+    input[type="radio"] {
+        &:checked + label:before {
+            filter: brightness(1000%);
         }
     }
 }

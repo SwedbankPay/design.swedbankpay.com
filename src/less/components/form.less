@@ -452,10 +452,15 @@ select[multiple] {
     .fieldset,
     .legend {
         border: 3px solid;
-        fill: currentColor;
     }
 
     .form-control-focus {
         outline-color: currentColor;
+    }
+}
+
+@media (forced-colors: active) and (prefers-color-scheme: dark) {
+    select {
+        filter: brightness(1000%);
     }
 }

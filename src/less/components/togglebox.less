@@ -157,9 +157,8 @@
 
 @media (forced-colors: active) {
     input[type="checkbox"] {
-        &:checked + label:after {
-            background-color: currentColor;
-            border: 9px solid;
+        + label:after {
+            outline: 3px solid;
         }
     }
 }

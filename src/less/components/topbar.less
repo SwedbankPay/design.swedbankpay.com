@@ -680,4 +680,22 @@ each(@grid-breakpoints, .(@min-width, @infix) {
     #toast-container {
         border: 3px solid;
     }
+
+    .nav-group {
+        .nav-leaf {
+            &.active {
+                font-weight: 1000;
+            }
+
+            a {
+                border-bottom: 1px solid;
+
+                .active,
+                &:hover {
+                    font-weight: 1000;
+                    border-bottom: 4px solid;
+                }
+            }
+        }
+    }
 }
