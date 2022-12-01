@@ -7,7 +7,7 @@
     margin: 1rem auto;
     height: 40px;
     display: flex;
-    z-index: 100;
+    z-index: @tabs-z-index;
     border-bottom: 1px solid @brand-secondary-light-3;
 
     @media screen and (max-width: @screen-sm-max) {
@@ -53,7 +53,7 @@
             background-position: 100%;
             background-size: auto 1rem;
             pointer-events: none;
-            z-index: 100;
+            z-index: @tabs-z-index;
         }
 
         &.tabs-fade-right {

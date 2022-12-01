@@ -12,7 +12,7 @@
     right: 0;
     width: 100%;
     height: 100%;
-    z-index: 3000;
+    z-index: @sheet-z-index;
     background: transparent;
     display: none;
 
@@ -41,8 +41,6 @@
         width: @sheet-width-xs;
         height: 100%;
         background: @sheet-section-bg;
-        padding-right: 3rem;
-        padding-left: 3rem;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
         transform: translateX(100%);
 
@@ -53,8 +51,8 @@
             position: sticky;
             top: 0;
             background-color: @white;
-            padding: 3rem 0 2rem 0;
-            z-index: 2;
+            padding: 3rem 3rem 2rem 3rem;
+            z-index: 1000;
 
             .sheet-close {
                 height: 2rem;
@@ -82,7 +80,7 @@
         }
 
         .sheet-content {
-            padding-bottom: 3rem;
+            padding: 0 3rem 3rem 3rem;
 
             &.has-footer {
                 padding-bottom: 0;
@@ -119,7 +117,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        z-index: 3000;
+        z-index: @sheet-z-index;
         background: transparent;
         display: none;
 
@@ -183,7 +181,7 @@ body.sheet-open {
     }
 
     .flatpickr-calendar {
-        z-index: 4000;
+        z-index: @sheet-z-index;
     }
 }
 
