@@ -1,11 +1,11 @@
 import { extendObj } from "../utils";
 
-const SELECTORS = {
-    SHEET: {
-        COMPONENT: ".sheet",
-        OPEN: ".sheet-open"
-    }
-};
+// const SELECTORS = {
+//     SHEET: {
+//         COMPONENT: ".sheet",
+//         OPEN: ".sheet-open"
+//     }
+// };
 
 class Toast {
     constructor (options) {
@@ -13,8 +13,8 @@ class Toast {
         this.message = this.options.html;
         this.evtTarget = this.options.event ? this.options.event.target : null;
         this.timeRemaining = this.options.displayLength; // Time remaining until the toast is removed.
-        this.sheetComponent = document.querySelector(SELECTORS.SHEET.COMPONENT);
-        this.sheetOpen = document.querySelector(SELECTORS.SHEET.OPEN);
+        // this.sheetComponent = document.querySelector(SELECTORS.SHEET.COMPONENT);
+        //        this.sheetOpen = document.querySelector(SELECTORS.SHEET.OPEN);
 
         if (Toast._toasts.length === 0) {
             Toast._createContainer(this.evtTarget);
@@ -66,7 +66,7 @@ class Toast {
         const toastContent = document.createElement("div");
 
         toast.classList.add("toast");
-        this.sheetOpen ? Toast._container.setAttribute("style", `margin-right: ${this.sheetComponent.querySelector("section").offsetWidth}px`) : null;
+        // this.sheetOpen ? Toast._container.setAttribute("style", `margin-right: ${this.sheetComponent.querySelector("section").offsetWidth}px`) : null;
 
         if (this.options.classes.length) {
             toast.classList.add(...this.options.classes);
