@@ -5,7 +5,7 @@
 @radio-width:                            @radio-height;
 
 @checkmark-width:                        7.5rem;
-@checkmark-heigth:                       33.5px;
+@checkmark-heigth:                       2rem;
 
 .radio {
     position: relative;
@@ -79,13 +79,10 @@
 }
 
 .checkmark {
-    padding: 0;
-    border-radius: 8px;
     border: 2px solid transparent;
     pointer-events: none;
     width: @checkmark-width;
     height: @checkmark-heigth;
-    margin-bottom: 0%;
 
     &:not(:last-child) {
         margin-right: 8px;
@@ -115,8 +112,7 @@
         height: 100%;
         width: 100%;
         gap: 5px;
-        padding-left: 20px;
-        padding-right: 35px;
+        padding-left: 1.25rem;
     }
 
     label:before {
@@ -128,54 +124,54 @@
         margin-left: -10px;
     }
 
-    input[type="radio"]:hover + label {
+    input[type="radio"]:hover:not(:disabled) + label {
         background-color: #f9f8f6;
         color: #72605e;
         border-radius: 8px;
         border: 0 solid transparent;
         outline: 1px solid #72605e;
-
-        .material-icons {
-            visibility: hidden;
-        }
     }
 
     input[type="radio"]:checked + label {
         background-color: #512b2b;
         border-radius: 8px;
         color: @white;
-        padding-right: 25px;
-        padding-left: 30px;
-
-        i,
-        .material-icons {
-            visibility: visible;
-        }
+        padding-left: 1.875rem;
     }
 
     input[type="radio"]:checked:hover + label {
         background-color: #72605e;
+        color: @white;
     }
 
     input[type="radio"]:disabled + label {
-        background-color: transparent;
         color: @light-brown;
-        height: 30px;
-        outline: 0;
+        outline: 1px solid @light-brown;
     }
 
     input[type="radio"]:checked:disabled + label {
         background-color: @light-brown;
         color: @white;
-        height: 30px;
         outline: 0;
+        padding-left: 1.25rem;
+
+        i {
+            visibility: hidden;
+        }
     }
 
     input[type="radio"] {
         &:focus + label,
-        &:hover + label {
+        &:hover:not(:disabled) + label {
             box-shadow: 0 0 0 0.3rem @brand-secondary-light-3;
             border-color: @brand-secondary;
+        }
+
+        // checkmark hidden when not selected
+        &:not(:checked) + label {
+            i {
+                visibility: hidden;
+            }
         }
     }
 }
@@ -183,7 +179,7 @@
 fieldset {
     &.radio-group {
         .radio-row {
-            display: flex;
+            display: inline-flex;
         }
 
         legend {
