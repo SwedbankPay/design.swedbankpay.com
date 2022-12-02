@@ -58,7 +58,7 @@ a {
         align-items: center;
         min-height: @action-link-height;
         padding-left: 1rem;
-        border: 0;
+        border: 1px solid transparent;
         text-decoration: none;
         background-color: @brand-bg-1;
         color: @brand-secondary;
@@ -154,5 +154,11 @@ a {
 @media (forced-colors: active) {
     .a {
         border: 3px solid;
+    }
+
+    &.action-link {
+        &:before {
+            border: 2px solid;
+        }
     }
 }

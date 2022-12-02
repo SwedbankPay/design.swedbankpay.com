@@ -231,7 +231,21 @@ th {
 
 @media (forced-colors: active) {
     .table {
-        border: 3px solid;
-        fill: currentColor;
+        &.table-plain {
+            border-bottom: 1px solid;
+        }
+
+        &.table-hover {
+            tbody > tr {
+                &:hover {
+                    border: 2px solid;
+
+                    th,
+                    td {
+                        border: 2px solid;
+                    }
+                }
+            }
+        }
     }
 }
