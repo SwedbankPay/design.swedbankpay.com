@@ -5,15 +5,17 @@
 @radio-width:                            @radio-height;
 
 @checkmark-width:                        7.5rem;
-@checkmark-heigth:                        33.5px;
+@checkmark-heigth:                       33.5px;
 
 .radio {
     position: relative;
     display: flex;
     align-items: center;
 
-    &:not(:last-child):not(.checkmark) {
-        margin-bottom: 1rem;
+    &:not(:last-child) {
+        &:not(.checkmark) {
+            margin-bottom: 1rem;
+        }
     }
 
     label {
@@ -86,7 +88,7 @@
     margin-bottom: 0%;
 
     &:not(:last-child) {
-        margin-right: 4px;
+        margin-right: 8px;
     }
 
     &:active {

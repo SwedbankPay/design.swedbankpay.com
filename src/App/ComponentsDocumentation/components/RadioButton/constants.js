@@ -142,8 +142,8 @@ export const radiobuttonShowCase = {
                     }
                 ]
             },
-            title: "Radio button group",
-            description: "The radio button group has a label on top which describes the group. Each individual radio button is followed by a label which clearly describes the options. The main guideline for radio button groups is to select one of the radio buttons by default, there might however be situations where you can’t identify a default selection."
+            title: "Checkmark buttons",
+            description: "The checkmark buttons work just as normal radio buttons, but with a different look."
         }
     ]
 };
