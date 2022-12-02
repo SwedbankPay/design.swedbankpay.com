@@ -401,7 +401,7 @@ exports[`Component: RadioButton Overview renders 1`] = `
               }
               style="checkmark"
             />,
-            "description": "The radio button group has a label on top which describes the group. Each individual radio button is followed by a label which clearly describes the options. The main guideline for radio button groups is to select one of the radio buttons by default, there might however be situations where you can’t identify a default selection.",
+            "description": "The checkmark buttons work just as normal radio buttons, but with a different look.",
             "options": Object {
               "checkbox": Array [
                 Object {
@@ -461,7 +461,7 @@ exports[`Component: RadioButton Overview renders 1`] = `
               ],
             },
             "tab": "Checkmark",
-            "title": "Radio button group",
+            "title": "Checkmark buttons",
           },
         ],
         "id": "radioShowcase",
