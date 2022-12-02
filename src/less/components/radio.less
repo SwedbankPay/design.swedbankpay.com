@@ -116,7 +116,7 @@ fieldset {
 @media (forced-colors: active) and (prefers-color-scheme: dark) {
     input[type="radio"] {
         &:checked + label:before {
-            filter: brightness(1000%);
+            filter: saturate(1000%);
         }
     }
 }

@@ -7,7 +7,7 @@
 
     &.slab-arrow {
         &:before {
-            border: none;
+            border: 1px solid transparent;
         }
     }
 }
@@ -105,6 +105,25 @@
             border-left: 1px solid;
             border-right: 1px solid;
             border-bottom: 1px solid;
+        }
+    }
+}
+
+@media (forced-colors: active) and (prefers-color-scheme: dark) {
+    .slab {
+        // Styling for new slab arrow
+        &.slab-arrow {
+            &:after {
+                forced-color-adjust: none;
+                filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.25));
+            }
+
+            // Styling for old slab
+            &.slab-arrow {
+                &:before {
+                    border-width: 1px 0 0 1px;
+                }
+            }
         }
     }
 }

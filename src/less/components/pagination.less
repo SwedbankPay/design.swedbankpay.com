@@ -155,13 +155,16 @@
 
         ul {
             li {
-                a,
-                span {
+                a {
                     &:hover,
-                    &:focus,
-                    &.active {
+                    &:focus {
                         border: 2px dashed;
                     }
+                }
+
+                &.active {
+                    outline: 3px dashed ButtonBorder;
+                    filter: contrast(100%);
                 }
             }
         }
