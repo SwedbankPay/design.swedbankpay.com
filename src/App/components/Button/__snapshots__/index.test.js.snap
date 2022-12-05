@@ -4,6 +4,7 @@ exports[`Component: Button - Anchor tag: renders a button inside an anchor tag w
 <a
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   disabled={null}
@@ -11,6 +12,7 @@ exports[`Component: Button - Anchor tag: renders a button inside an anchor tag w
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 />
 `;
@@ -19,6 +21,7 @@ exports[`Component: Button - Anchor tag: renders a button inside an anchor tag w
 <a
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={true}
   className="btn btn-primary active"
   disabled={null}
@@ -26,6 +29,7 @@ exports[`Component: Button - Anchor tag: renders a button inside an anchor tag w
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 />
 `;
@@ -34,6 +38,7 @@ exports[`Component: Button - Anchor tag: renders a button inside an anchor tag w
 <a
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   disabled={null}
@@ -42,6 +47,7 @@ exports[`Component: Button - Anchor tag: renders a button inside an anchor tag w
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 />
 `;
@@ -50,6 +56,7 @@ exports[`Component: Button - Anchor tag: renders a button inside an anchor tag w
 <a
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   disabled={null}
@@ -57,6 +64,7 @@ exports[`Component: Button - Anchor tag: renders a button inside an anchor tag w
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 >
   test
@@ -67,6 +75,7 @@ exports[`Component: Button - Anchor tag: renders a button inside an anchor tag w
 <a
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   disabled={null}
@@ -75,6 +84,7 @@ exports[`Component: Button - Anchor tag: renders a button inside an anchor tag w
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 />
 `;
@@ -83,6 +93,7 @@ exports[`Component: Button - Anchor tag: renders a button with icon and label in
 <a
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   disabled={null}
@@ -90,10 +101,9 @@ exports[`Component: Button - Anchor tag: renders a button with icon and label in
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 >
-  
-	
   <i
     aria-hidden="true"
     className="material-icons"
@@ -110,6 +120,7 @@ exports[`Component: Button - Anchor tag: renders a button with icon inside an an
 <a
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   disabled={null}
@@ -117,10 +128,9 @@ exports[`Component: Button - Anchor tag: renders a button with icon inside an an
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 >
-  
-	
   <i
     aria-hidden="true"
     className="material-icons"
@@ -134,6 +144,7 @@ exports[`Component: Button - Anchor tag: renders a button with specified size in
 <a
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary btn-size-test"
   disabled={null}
@@ -141,6 +152,7 @@ exports[`Component: Button - Anchor tag: renders a button with specified size in
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 />
 `;
@@ -149,6 +161,7 @@ exports[`Component: Button - Anchor tag: renders a disabled button inside an anc
 <a
   active={null}
   aria-disabled={true}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary disabled"
   disabled={null}
@@ -156,6 +169,7 @@ exports[`Component: Button - Anchor tag: renders a disabled button inside an anc
   onClick={[Function]}
   role="button"
   tabIndex="-1"
+  title={null}
   type={null}
 />
 `;
@@ -164,6 +178,7 @@ exports[`Component: Button - Anchor tag: renders a full width button inside an a
 <a
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary btn-block"
   disabled={null}
@@ -171,6 +186,7 @@ exports[`Component: Button - Anchor tag: renders a full width button inside an a
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 />
 `;
@@ -179,6 +195,7 @@ exports[`Component: Button - Anchor tag: renders a loading button inside an anch
 <a
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary loading"
   disabled={null}
@@ -186,6 +203,7 @@ exports[`Component: Button - Anchor tag: renders a loading button inside an anch
   onClick={[Function]}
   role="button"
   tabIndex={null}
+  title={null}
   type={null}
 />
 `;
@@ -194,10 +212,12 @@ exports[`Component: Button - Button tag: renders a button with a label when prop
 <button
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 >
   test
@@ -208,10 +228,12 @@ exports[`Component: Button - Button tag: renders a button with an icon when prop
 <button
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 >
   
@@ -233,10 +255,12 @@ exports[`Component: Button - Button tag: renders a button with class active when
 <button
   active=""
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={true}
   className="btn btn-primary"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -245,10 +269,12 @@ exports[`Component: Button - Button tag: renders a button with icon and label wh
 <button
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 >
   
@@ -273,10 +299,12 @@ exports[`Component: Button - Button tag: renders a button with specified size wh
 <button
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary btn-size-test"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -285,11 +313,13 @@ exports[`Component: Button - Button tag: renders a button with the specified id 
 <button
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   id="test"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -298,11 +328,13 @@ exports[`Component: Button - Button tag: renders a button with the specified nam
 <button
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   name="test"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -311,10 +343,12 @@ exports[`Component: Button - Button tag: renders a button with the specified typ
 <button
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   role={null}
   tabIndex={null}
+  title={null}
   type="test"
 />
 `;
@@ -323,11 +357,13 @@ exports[`Component: Button - Button tag: renders a disabled button when prop dis
 <button
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   disabled={true}
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -336,10 +372,12 @@ exports[`Component: Button - Button tag: renders a full width button when prop f
 <button
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary btn-block"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -348,10 +386,12 @@ exports[`Component: Button - Button tag: renders a loading button when prop load
 <button
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary loading"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -360,10 +400,12 @@ exports[`Component: Button - Button tag: renders a primary button and defaults t
 <button
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -372,10 +414,12 @@ exports[`Component: Button - Input tag: renders a button inside an input tag and
 <input
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -384,11 +428,13 @@ exports[`Component: Button - Input tag: renders a button inside an input tag wit
 <input
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   defaultValue="test"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -397,10 +443,12 @@ exports[`Component: Button - Input tag: renders a button with class active insid
 <input
   active=""
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={true}
   className="btn btn-primary"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -409,10 +457,12 @@ exports[`Component: Button - Input tag: renders a button with specified size ins
 <input
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary btn-size-test"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -421,11 +471,13 @@ exports[`Component: Button - Input tag: renders a button with the specified id i
 <input
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   id="test"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -434,11 +486,13 @@ exports[`Component: Button - Input tag: renders a button with the specified name
 <input
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   name="test"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -447,10 +501,12 @@ exports[`Component: Button - Input tag: renders a button with the specified type
 <input
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   role={null}
   tabIndex={null}
+  title={null}
   type="test"
 />
 `;
@@ -459,11 +515,13 @@ exports[`Component: Button - Input tag: renders a disabled button inside an inpu
 <input
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary"
   disabled={true}
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -472,10 +530,12 @@ exports[`Component: Button - Input tag: renders a full width button inside an in
 <input
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary btn-block"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -484,10 +544,12 @@ exports[`Component: Button - Input tag: renders a loading button inside an input
 <input
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn btn-primary loading"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;
@@ -496,10 +558,12 @@ exports[`Component: Button - prop type is marked as required 1`] = `
 <button
   active={null}
   aria-disabled={null}
+  aria-label={null}
   aria-pressed={null}
   className="btn"
   role={null}
   tabIndex={null}
+  title={null}
   type="button"
 />
 `;

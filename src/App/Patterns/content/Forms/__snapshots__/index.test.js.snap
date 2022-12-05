@@ -19,7 +19,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
         Title
       </h3>
       <div
-        className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small"
+        className="slab slab-christmas flat slab-edges d-flex justify-content-center mb-0 py-2 extra-small"
       >
         32px
       </div>
@@ -33,7 +33,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
         type="text"
       />
       <div
-        className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small"
+        className="slab slab-christmas flat slab-edges d-flex justify-content-center mb-0 py-1 extra-small"
       >
         24px
       </div>
@@ -52,7 +52,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
         type="select"
       />
       <div
-        className="slab slab-primary d-flex justify-content-center mb-0 py-1 extra-small"
+        className="slab slab-christmas flat slab-edges d-flex justify-content-center mb-0 py-1 extra-small"
       >
         24px
       </div>
@@ -82,7 +82,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
         }
       />
       <div
-        className="slab slab-primary d-flex justify-content-center mb-0 py-2 extra-small"
+        className="slab slab-christmas flat slab-edges d-flex justify-content-center mb-0 py-2 extra-small"
       >
         32px
       </div>
