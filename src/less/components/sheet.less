@@ -95,7 +95,7 @@
             position: -webkit-sticky;
             bottom: 0;
             margin-top: auto;
-            padding: 3rem 2rem 3rem 2rem;
+            padding: 2rem 3rem 2rem 3rem;
             background-color: @white;
 
             button {
@@ -140,29 +140,50 @@
             > section {
                 animation: slide-up-sheet 0.5s ease forwards;
                 position: relative;
-                padding-left: 1.5rem;
-                padding-right: 1.5rem;
                 width: 100%;
                 right: 100%;
                 top: 100%;
+
+                .sheet-header {
+                    padding-left: 1.5rem;
+                    padding-right: 1.5rem;
+                }
+
+                .sheet-content {
+                    padding-left: 1.5rem;
+                    padding-right: 1.5rem;
+                }
+
+                .sheet-footer {
+                    padding-left: 1.5rem;
+                    padding-right: 1.5rem;
+                }
             }
         }
 
         &.sheet-closing {
             animation: fade-out-sheet 1s forwards;
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
             padding-top: 2rem;
 
             > section {
                 animation: slide-down-sheet 0.5s ease forwards;
                 width: 100%;
                 right: 100%;
-                padding-right: 1.5rem;
-                padding-left: 1.5rem;
+
+                .sheet-header {
+                    padding-left: 1.5rem;
+                    padding-right: 1.5rem;
+                }
+
+                .sheet-content {
+                    padding-left: 1.5rem;
+                    padding-right: 1.5rem;
+                }
 
                 .sheet-footer {
                     position: relative;
+                    padding-left: 1.5rem;
+                    padding-right: 1.5rem;
                 }
             }
         }
