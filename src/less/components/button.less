@@ -6,7 +6,7 @@
 
     &:focus,
     &.focus {
-        outline: 0;
+        outline: 2px solid transparent;
         border: 2px solid @focus-shadow;
         background-color: @hover;
     }
@@ -272,6 +272,7 @@
     &.focus {
         color: @btn-secondary-color;
         text-decoration: none;
+        outline: 3px solid transparent;
     }
 
     &[active],
@@ -460,5 +461,16 @@
     .button-variant,
     .button-outline-variant {
         border: 3px solid;
+    }
+}
+
+@media (forced-colors: active) {
+    .btn {
+        &.btn-link,
+        &.btn-link-destructive {
+            &:focus {
+                outline: 2px solid transparent;
+            }
+        }
     }
 }

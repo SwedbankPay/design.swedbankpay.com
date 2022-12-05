@@ -247,8 +247,14 @@ body.sheet-open {
 
 @media (forced-colors: active) {
     .sheet {
-        section {
+        > section {
             border: 10px solid;
+
+            .sheet-header {
+                .sheet-close:focus-visible {
+                    outline: 4px solid transparent;
+                }
+            }
         }
     }
 }

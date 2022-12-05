@@ -264,7 +264,7 @@
 
 
                 &:focus {
-                    border-left: transparent;
+                    border-left: 2px solid transparent;
                 }
 
                 i {
@@ -900,7 +900,7 @@
                             &:focus {
                                 border-radius: 0.125rem;
                                 box-shadow: 0 0 0 2px @black;
-                                outline: none;
+                                outline: 2px solid transparent;
                             }
                         }
                     }
@@ -982,7 +982,7 @@
                         cursor: pointer;
 
                         &:focus {
-                            border: none;
+                            border: 2px solid transparent;
                             border-radius: 0.125rem;
                             box-shadow: 0 0 0 2px @black;
                             outline: none;
@@ -1777,10 +1777,6 @@
         input {
             border: 2px solid;
         }
-    }
-
-    &:focus {
-        outline-color: currentColor;
     }
 
     .options-open {
