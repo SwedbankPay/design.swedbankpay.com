@@ -333,7 +333,7 @@ ol {
     opacity: 0.8;
     line-height: 0.7;
     transition: opacity 0.3s ease-in-out;
-    border: 2px solid transparent;
+    border: none;
 
     &:hover {
         opacity: 1;
@@ -348,4 +348,10 @@ ol {
 
 * {
     box-sizing: border-box;
+}
+
+@media (forced-colors: active) {
+    .close-button() {
+        outline: 2px solid transparent;
+    }
 }
