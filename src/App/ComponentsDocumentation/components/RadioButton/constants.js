@@ -14,9 +14,11 @@ const options = [
 ];
 
 export const radiobuttonShowCase = {
-    id: "no-tabs",
+    id: "radioShowcase",
+    tabsId: "radioShowcaseTabs",
     elements: [
         {
+            tab: "Primary",
             component: <Radio groupTitle="Group legend" name="radio-group-example" options={options} group hintExpander={true} />,
             options: {
                 checkbox: [
@@ -35,9 +37,10 @@ export const radiobuttonShowCase = {
                                 name: "Hint text",
                                 value: {
                                     helpBlock: "Hint text",
-                                    hintTextId: "hint-text-radio-example",
+                                    hintTextId: "hint-text-radio-example"
                                 }
-                            }, {
+                            },
+                            {
                                 id: "hint_expander",
                                 name: "Hint expander",
                                 value: {
@@ -77,6 +80,70 @@ export const radiobuttonShowCase = {
             },
             title: "Radio button group",
             description: "The radio button group has a label on top which describes the group. Each individual radio button is followed by a label which clearly describes the options. The main guideline for radio button groups is to select one of the radio buttons by default, there might however be situations where you can’t identify a default selection."
+        },
+        {
+            tab: "Checkmark",
+            component: <Radio groupTitle="Group legend" name="radio-group-example" options={options} group hintExpander={true} style="checkmark" />,
+            options: {
+                checkbox: [
+                    {
+                        title: "Label add on",
+                        inputs: [
+                            {
+                                id: "is_optional",
+                                name: "Is optional",
+                                value: {
+                                    optional: true
+                                }
+                            },
+                            {
+                                id: "hint_text",
+                                name: "Hint text",
+                                value: {
+                                    helpBlock: "Hint text",
+                                    hintTextId: "hint-text-radio-example"
+                                }
+                            },
+                            {
+                                id: "hint_expander",
+                                name: "Hint expander",
+                                value: {
+                                    expandingHintTitle: "Expander hint text",
+                                    expanderId: "expander-showcase"
+                                }
+                            }
+                        ]
+                    }
+                ],
+                radio: [
+                    {
+                        id: "state_radio",
+                        title: "State modifiers",
+                        values: [
+                            {
+                                name: "Enabled",
+                                value: {
+                                    disabled: false
+                                }
+                            },
+                            {
+                                name: "Disabled",
+                                value: {
+                                    disabled: true
+                                }
+                            },
+                            {
+                                name: "Error",
+                                value: {
+                                    errorMessage: "Descriptive helpful error message."
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            title: "Checkmark buttons",
+            description: "The checkmark buttons work just as normal radio buttons, but with a different look."
         }
     ]
 };
