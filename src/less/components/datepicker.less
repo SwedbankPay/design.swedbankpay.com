@@ -87,3 +87,23 @@
         box-shadow: -10px 0 0 @brand-primary;
     }
 }
+
+@media (forced-colors: active) {
+    .flatpickr-calendar {
+        outline: 10px solid;
+    }
+
+    span.arrowUp, 
+    span.arrowDown,
+    .flatpickr-prev-month svg,
+    .flatpickr-next-month svg {
+        fill: currentColor;
+        border: 1px solid;
+    }
+
+    .flatpickr-day {
+        &:focus-visible {
+            outline: 3px solid;
+        }
+    }
+}

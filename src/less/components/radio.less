@@ -55,6 +55,7 @@
         &:hover + label:before {
             box-shadow: 0 0 0 0.375rem @brand-secondary-light-3;
             border-color: @brand-secondary;
+            outline: 4px solid transparent;
         }
 
         &[disabled] {
@@ -213,6 +214,14 @@ fieldset {
         label,
         .hint-text {
             color: @light-brown;
+        }
+    }
+}
+
+@media (forced-colors: active) and (prefers-color-scheme: dark) {
+    input[type="radio"] {
+        &:checked + label:before {
+            filter: saturate(1000%);
         }
     }
 }

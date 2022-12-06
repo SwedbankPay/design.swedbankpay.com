@@ -339,3 +339,62 @@
         }
     }
 }
+
+@media (forced-colors: active) {
+    .sidebar-main-nav {
+        &:before {
+            border-top: 7px solid;
+        }
+    }
+
+    .main-nav-li {
+        > a {
+            &:hover {
+                &:before {
+                    border: 3px solid;
+                }
+            }
+
+            .material-icons-outlined {
+                border: 1px solid;
+            }
+        }
+
+        &.active {
+            > a {
+                &:before {
+                    border: 3px solid;
+                }
+            }
+        }
+
+        .sidebar-secondary-nav {
+            border-left: 10px solid;
+            border-right: 10px solid;
+        }
+
+        .secondary-nav-ul {
+            li {
+                &.active {
+                    > a {
+                        border-bottom: 4px solid;
+                    }
+                }
+
+                > a {
+                    border-bottom: 1px solid;
+
+                    &:hover {
+                        border-bottom: 3px solid;
+                    }
+                }
+            }
+
+            .nav-leaf {
+                .a {
+                    border-bottom: 3px solid;
+                }
+            }
+        }
+    }
+}

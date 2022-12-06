@@ -103,3 +103,20 @@
         }
     }
 }
+
+@media (forced-colors: active) {
+    .action-list {
+        &.active {
+            .action-menu {
+                outline: 10px solid;
+
+                > a {
+                    &:hover,
+                    &:focus {
+                        outline: 2px solid;
+                    }
+                }
+            }
+        }
+    }
+}

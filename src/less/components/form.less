@@ -454,3 +454,15 @@ select[multiple] {
         padding: (@base-margin * 0.187) (@base-margin * 0.375);
     }
 }
+
+@media (forced-colors: active) {
+    select {
+        filter: saturate(1000%);
+    }
+
+    button {
+        &:focus {
+            outline: 2px solid transparent;
+        }
+    }
+}

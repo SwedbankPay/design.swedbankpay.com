@@ -103,3 +103,31 @@
         overflow-y: auto;
     }
 }
+
+@media (forced-colors: active) {
+    .dialog {
+        border: 10px solid;
+
+        > section {
+            outline: 10px solid;
+
+            .dialog-header,
+            .header {
+                .dialog-close {
+                    &:focus {
+                        outline: 2px solid;
+                    }
+
+                    &[active],
+                    &:active,
+                    &.active {
+                        &:focus,
+                        &.focus {
+                            outline: 2px solid;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

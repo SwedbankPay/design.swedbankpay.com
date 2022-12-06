@@ -292,7 +292,7 @@
                 border-left: 1px solid @soft-brown;
 
                 &:focus {
-                    border-left: transparent;
+                    border-left: 2px solid transparent;
                 }
 
                 i {
@@ -937,7 +937,7 @@
                             &:focus {
                                 border-radius: 0.125rem;
                                 box-shadow: 0 0 0 2px @black;
-                                outline: none;
+                                outline: 2px solid transparent;
                             }
                         }
                     }
@@ -1022,7 +1022,6 @@
                             border: none;
                             border-radius: 0.125rem;
                             box-shadow: 0 0 0 2px @black;
-                            outline: none;
                         }
                     }
                 }
@@ -1826,6 +1825,46 @@
             .material-icons {
                 font-size: 4rem;
             }
+        }
+    }
+}
+
+@media (forced-colors: active) {
+    #designguide,
+    .documentation {
+        border: 2px solid;
+
+        #link-doc {
+            .link-dark-background {
+                a:focus-visible {
+                    outline: 1px solid transparent;
+                }
+            }
+        }
+
+        .options-close {
+            &:focus {
+                outline: 2px solid;
+            }
+        }
+    }
+
+
+    .search-container {
+        input {
+            border: 2px solid;
+        }
+    }
+
+    .options-open {
+        border: 2px solid;
+    }
+}
+
+@media (forced-colors: active) and (prefers-color-scheme: dark) {
+    .showcase-panel {
+        canvas {
+            filter: saturate(1000%);
         }
     }
 }

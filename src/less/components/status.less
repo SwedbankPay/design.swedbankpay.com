@@ -110,3 +110,10 @@
         .status-size(0.5rem, @status-padding-left);
     }
 }
+
+@media (forced-colors: active) {
+    .status:before,
+    .status:after {
+        border: 1px solid;
+    }
+}

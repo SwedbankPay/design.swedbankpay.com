@@ -63,7 +63,7 @@ a {
         align-items: center;
         min-height: @action-link-height;
         padding-left: 1rem;
-        border: 0;
+        border: 1px solid transparent;
         text-decoration: none;
         background-color: @brand-bg-1;
         color: @brand-secondary;
@@ -154,5 +154,21 @@ a {
         font-size: 0.75rem;
         color: @brand-secondary;
         padding-left: 0.5rem;
+    }
+}
+
+@media (forced-colors: active) {
+    .a {
+        border: 3px solid;
+    }
+
+    &.action-link {
+        &:before {
+            border: 2px solid;
+        }
+
+        &:focus-visible {
+            outline: 2px solid transparent;
+        }
     }
 }

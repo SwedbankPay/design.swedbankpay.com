@@ -232,7 +232,7 @@ body {
 
     &.intent-mouse {
         :focus {
-            outline: 0;
+            outline: 4px solid transparent;
         }
     }
 }
@@ -366,4 +366,10 @@ ol {
 
 * {
     box-sizing: border-box;
+}
+
+@media (forced-colors: active) {
+    .close-button() {
+        outline: 2px solid transparent;
+    }
 }

@@ -262,3 +262,17 @@ body.sheet-open {
         }
     }
 }
+
+@media (forced-colors: active) {
+    .sheet {
+        > section {
+            border: 10px solid;
+
+            .sheet-header {
+                .sheet-close:focus {
+                    outline: 4px solid transparent;
+                }
+            }
+        }
+    }
+}

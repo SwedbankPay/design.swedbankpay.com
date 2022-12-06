@@ -73,10 +73,16 @@ code {
         }
 
         &:focus {
-            border: none;
+            border: 2px solid transparent;
             border-radius: 0.125rem;
             box-shadow: 0 0 0 0.125rem @black;
             outline: none;
         }
+    }
+}
+
+@media (forced-colors: active) {
+    .tag {
+        border: 1px solid;
     }
 }

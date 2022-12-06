@@ -145,3 +145,23 @@
         }
     }
 }
+
+@media (forced-colors: active) {
+    #toast-container {
+        .toast {
+            border: 10px solid;
+
+            .toast-close {
+                &:focus {
+                    .material-icons {
+                        outline: 2px solid;
+
+                        &:hover {
+                            outline: 4px solid;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

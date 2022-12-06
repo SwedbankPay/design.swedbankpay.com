@@ -72,7 +72,7 @@
         left: 1rem;
         padding: 0;
         border: 0;
-        outline: 0;
+        outline: 1px solid transparent;
         align-self: center;
 
         &:hover {
@@ -669,6 +669,53 @@ each(@grid-breakpoints, .(@min-width, @infix) {
 
                 .topbar-link-container {
                     animation: slide-out 0s ease alternate;
+                }
+            }
+        }
+    }
+}
+
+@media (forced-colors: active) {
+    #dg-topbar {
+        border-bottom: 3px solid;
+    }
+
+    .topbar-link-container {
+        border: 10px solid;
+    }
+
+    .topbar {
+        .topbar-close {
+            outline: 2px solid;
+
+            &:hover,
+            &:focus,
+            &.focus {
+                outline: 2px solid;
+            }
+
+            &[active],
+            &:active,
+            &.active {
+                outline: 2px solid;
+            }
+
+            &:focus,
+            &.focus {
+                outline: 2px solid;
+            }
+        }
+    }
+
+    .nav-group {
+        .nav-leaf {
+            a {
+                border-bottom: 1px solid;
+
+                &:focus,
+                &:hover,
+                &.active {
+                    border-bottom: 4px solid;
                 }
             }
         }

@@ -356,12 +356,13 @@
     &.focus {
         color: @btn-secondary-color;
         text-decoration: none;
+        outline: 3px solid transparent;
     }
 
     &[active],
     &:active,
     &.active {
-        outline: 0;
+        outline: 3px solid transparent;
         background-image: none;
     }
 
@@ -540,5 +541,29 @@
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@media (forced-colors: active) {
+    .btn,
+    .button-variant,
+    .button-outline-variant {
+        border: 3px solid;
+
+        &:focus,
+        &.focus {
+
+        }
+    }
+}
+
+@media (forced-colors: active) {
+    .btn {
+        &.btn-link,
+        &.btn-link-destructive {
+            &:focus {
+                outline: 2px solid transparent;
+            }
+        }
     }
 }
