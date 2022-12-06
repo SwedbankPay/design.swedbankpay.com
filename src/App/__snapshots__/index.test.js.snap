@@ -200,6 +200,9 @@ exports[`Main: App renders 1`] = `
                       "icon": "more",
                       "outlined": true,
                       "path": "/components/badge",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Badges",
                     },
                     Object {
@@ -214,6 +217,9 @@ exports[`Main: App renders 1`] = `
                       "icon": "touch_app",
                       "outlined": true,
                       "path": "/components/buttons",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Buttons",
                     },
                     Object {
@@ -270,7 +276,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/dropdown",
                       "statusBadges": Array [
                         "javascript",
-                        "new",
                       ],
                       "title": "Dropdown",
                     },
@@ -289,7 +294,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/input-field",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Input field",
                     },
@@ -360,6 +364,7 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/radio-button",
                       "statusBadges": Array [
                         "javascript",
+                        "updated",
                       ],
                       "title": "Radio button",
                     },
@@ -380,7 +385,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/sheet",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Sheet",
                     },
@@ -416,6 +420,9 @@ exports[`Main: App renders 1`] = `
                       "icon": "crop_landscape",
                       "outlined": true,
                       "path": "/components/slab",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Slab",
                     },
                     Object {
@@ -423,9 +430,6 @@ exports[`Main: App renders 1`] = `
                       "icon": "check_circle",
                       "outlined": true,
                       "path": "/components/status",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Status",
                     },
                     Object {
@@ -442,7 +446,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/tabs",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Tabs",
                     },
@@ -451,9 +454,6 @@ exports[`Main: App renders 1`] = `
                       "icon": "code",
                       "outlined": true,
                       "path": "/components/tags",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Tags",
                     },
                     Object {

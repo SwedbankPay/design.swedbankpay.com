@@ -26,9 +26,6 @@
 -   Badges:
     -   Added a lot more color variants to badges.
 
--   Latest version:
-    -   Added a banner on the home page that redirects to the latest version of the DG. Also added a link on the top of the component page.
-
 ## Bugfixes
 -   Button:
     -   Fixed pixel pushing on click.
