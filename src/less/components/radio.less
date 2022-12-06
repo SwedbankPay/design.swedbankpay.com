@@ -4,13 +4,18 @@
 @radio-height:                           1.375rem;
 @radio-width:                            @radio-height;
 
+@checkmark-width:                        7.5rem;
+@checkmark-heigth:                       2rem;
+
 .radio {
     position: relative;
     display: flex;
     align-items: center;
 
     &:not(:last-child) {
-        margin-bottom: 1rem;
+        &:not(.checkmark) {
+            margin-bottom: 1rem;
+        }
     }
 
     label {
@@ -50,6 +55,7 @@
         &:hover + label:before {
             box-shadow: 0 0 0 0.375rem @brand-secondary-light-3;
             border-color: @brand-secondary;
+            outline: 4px solid transparent;
         }
 
         &[disabled] {
@@ -73,8 +79,109 @@
     }
 }
 
+.checkmark {
+    border: 2px solid transparent;
+    pointer-events: none;
+    width: @checkmark-width;
+    height: @checkmark-heigth;
+
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    &:active {
+        border: 2px solid transparent;
+    }
+
+    &:hover {
+        background-color: transparent;
+    }
+
+    &:disabled {
+        border: 2px solid transparent;
+        margin: auto;
+    }
+
+    * {
+        pointer-events: all;
+    }
+
+    label {
+        outline: 1px solid @black;
+        border-radius: 8px;
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        gap: 5px;
+        padding-left: 1.25rem;
+    }
+
+    label:before {
+        display: none;
+    }
+
+    label .material-icons {
+        color: @white;
+        margin-left: -10px;
+    }
+
+    input[type="radio"]:hover:not(:disabled) + label {
+        background-color: @light-gray;
+        color: @medium-brown;
+        border-radius: 8px;
+        border: 0 solid transparent;
+        outline: 1px solid @medium-brown;
+    }
+
+    input[type="radio"]:checked + label {
+        background-color: @brand-secondary;
+        border-radius: 8px;
+        color: @white;
+        padding-left: 1.875rem;
+    }
+
+    input[type="radio"]:checked:hover + label {
+        background-color: @medium-brown;
+        color: @white;
+    }
+
+    input[type="radio"]:disabled + label {
+        color: @light-brown;
+        outline: 1px solid @light-brown;
+    }
+
+    input[type="radio"]:checked:disabled + label {
+        background-color: @light-brown;
+        color: @white;
+        outline: 0;
+        padding-left: 1.25rem;
+
+        i {
+            visibility: hidden;
+        }
+    }
+
+    input[type="radio"] {
+        &:focus + label,
+        &:hover:not(:disabled) + label {
+            box-shadow: 0 0 0 0.3rem @brand-secondary-light-3;
+            border-color: @brand-secondary;
+        }
+
+        &:not(:checked) + label {
+            i {
+                visibility: hidden;
+            }
+        }
+    }
+}
+
 fieldset {
     &.radio-group {
+        .radio-row {
+            display: inline-flex;
+        }
+
         legend {
             position: relative;
             border: none;
@@ -92,6 +199,12 @@ fieldset {
             border-color: @brand-error;
         }
 
+        .checkmark {
+            input[type="radio"]:not(:checked) + label {
+                outline: 2px solid @brand-error;
+            }
+        }
+
         .help-block {
             color: @brand-error;
         }
@@ -101,6 +214,20 @@ fieldset {
         label,
         .hint-text {
             color: @light-brown;
+        }
+    }
+}
+
+@media (forced-colors: active) and (prefers-color-scheme: dark) {
+    input[type="radio"] {
+        &:checked + label:before {
+            filter: saturate(1000%);
+        }
+    }
+
+    .checkmark {
+        input:focus + label {
+            outline: 5px solid;
         }
     }
 }

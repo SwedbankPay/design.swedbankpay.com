@@ -290,10 +290,14 @@ legend {
 
     margin-bottom: @base-margin-lg;
 
-
     .form-control:focus-within {
         outline: 2px auto @brand-secondary;
         border-color: transparent;
+    }
+
+    .form-control:focus-visible {
+        outline: 2px solid @brand-secondary;
+        border-radius: 2px;
     }
 
     &.disabled,
@@ -387,8 +391,12 @@ legend {
         }
 
         &:focus {
-            border: 1px solid @brand-secondary;
             border-radius: 0.125rem;
+        }
+
+        &:focus-visible {
+            outline: 2px solid @brand-secondary;
+            border-radius: 2px;
         }
 
         &.content-expanded {
@@ -444,5 +452,17 @@ select[multiple] {
 
     option {
         padding: (@base-margin * 0.187) (@base-margin * 0.375);
+    }
+}
+
+@media (forced-colors: active) {
+    select {
+        filter: saturate(1000%);
+    }
+
+    button {
+        &:focus {
+            outline: 2px solid transparent;
+        }
     }
 }

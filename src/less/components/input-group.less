@@ -12,8 +12,13 @@
     width: 100%;
     min-height: 2rem;
 
+    &:focus-visible {
+        outline: 2px solid @brand-secondary;
+        border-radius: 2px;
+    }
+
     &:focus-within {
-        outline: auto @brand-secondary;
+        outline: 2px solid @brand-secondary;
 
         .input-group-addon,
         .form-control {
@@ -25,10 +30,8 @@
 
         .postfix {
             border-right: 2px solid @black;
-            border-bottom: 1px solid @black;
             border-left: transparent;
             border-top-left-radius: 0;
-            border-top: 1px solid @black;
         }
     }
 
@@ -52,10 +55,6 @@
         /* Add width 1% and flex-basis auto to ensure that button will not wrap out
          * the column. Applies to IE Edge+ and Firefox. Chrome does not require this. */
         width: 1%;
-
-        &:focus {
-            z-index: 3;
-        }
 
         + .form-control {
             margin-left: -1px;
@@ -103,7 +102,6 @@
             border-left: transparent;
             border-right: 1px solid @input-border-color;
             border-radius: 0 2px 2px 0;
-            z-index: 2;
             pointer-events: none;
         }
     }

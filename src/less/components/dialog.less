@@ -8,7 +8,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 1040; //
+    z-index: @dialog-z-index;
     background: fade(@black, 50%);
     display: none;
     justify-content: center;
@@ -101,5 +101,33 @@
     .dialog {
         overflow-x: hidden;
         overflow-y: auto;
+    }
+}
+
+@media (forced-colors: active) {
+    .dialog {
+        border: 10px solid;
+
+        > section {
+            outline: 10px solid;
+
+            .dialog-header,
+            .header {
+                .dialog-close {
+                    &:focus {
+                        outline: 2px solid;
+                    }
+
+                    &[active],
+                    &:active,
+                    &.active {
+                        &:focus,
+                        &.focus {
+                            outline: 2px solid;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

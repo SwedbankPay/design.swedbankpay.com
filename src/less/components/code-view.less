@@ -32,6 +32,11 @@
         border-bottom-right-radius: 4px;
         width: 100%;
 
+        &:focus-visible {
+            outline: 2px solid @brand-primary;
+            border-radius: 2px;
+        }
+
         &,
         tbody,
         tr {
@@ -120,5 +125,15 @@
             transition: color 0.3s ease-in-out;
             color: @light-brown;
         }
+    }
+}
+
+@media (forced-colors: active) {
+    .code-view {
+        border: 3px solid;
+    }
+
+    .code-view-header {
+        border-bottom: 3px solid;
     }
 }

@@ -1,4 +1,5 @@
 @import "./input-group.less";
+@import "../global.less";
 
 /* Flatpickr css added here so that we are not dependent
  * on a node package. This makes it easier for clients to
@@ -21,7 +22,7 @@
 
 .flatpickr-calendar {
     &.open {
-        z-index: 530;
+        z-index: @datepicker-z-index;
     }
 
     &.hasTime {
@@ -84,5 +85,25 @@
     .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)),
     .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {
         box-shadow: -10px 0 0 @brand-primary;
+    }
+}
+
+@media (forced-colors: active) {
+    .flatpickr-calendar {
+        outline: 10px solid;
+    }
+
+    span.arrowUp, 
+    span.arrowDown,
+    .flatpickr-prev-month svg,
+    .flatpickr-next-month svg {
+        fill: currentColor;
+        border: 1px solid;
+    }
+
+    .flatpickr-day {
+        &:focus-visible {
+            outline: 3px solid;
+        }
     }
 }

@@ -6,8 +6,7 @@
 
     &:focus,
     &.focus {
-        outline: 0;
-        border: 2px solid @focus-shadow;
+        outline: 2px solid @focus-shadow;
         background-color: @hover;
     }
 
@@ -41,7 +40,52 @@
         &.active {
             background: @disabled-bg;
             color: @disabled-color;
-            border: none;
+            outline: none;
+        }
+    }
+}
+
+.button-default-variant(@color, @background, @hover, @disabled-color, @disabled-bg, @focus-shadow, @active-border-color, @active-bg-color) {
+    color: @color;
+    background-color: @background;
+
+    &:focus,
+    &.focus {
+        outline: 2px solid @focus-shadow;
+        background-color: @background;
+    }
+
+    &:hover {
+        color: @color;
+        background-color: @hover;
+    }
+
+    &[active],
+    &:active,
+    &.active {
+        .button-active-state(@active-border-color);
+
+        &:hover,
+        &:focus,
+        &.focus {
+            color: @color;
+            background-color: @active-bg-color;
+        }
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &[active],
+        &:active,
+        &.active {
+            background: @disabled-bg;
+            color: @disabled-color;
+            outline: none;
         }
     }
 }
@@ -53,10 +97,9 @@
 
     &:focus,
     &.focus {
-        outline: 0;
         color: @hover-color;
         background-color: @background;
-        border: 2px solid @focus-shadow;
+        outline: 2px solid @focus-shadow;
     }
 
     &:hover {
@@ -84,6 +127,7 @@
             color: @disabled-color;
             border-color: @disabled-color;
             border-width: 1px;
+            outline: none;
         }
     }
 }
@@ -159,12 +203,12 @@
 }
 
 .button-active-state(@border) {
-    border: 2px solid @border;
+    outline: 2px solid @border;
 }
 
 .button-outline-variant-active-state(@background; @border; @text) {
     background-color: @background;
-    border: 2px solid @border;
+    outline: 2px solid @border;
     color: @text;
 }
 
@@ -175,6 +219,15 @@
     line-height: @line-height;
     border-radius: @border-radius;
     height: @height;
+}
+
+.button-icon-size(@padding-horizontal; @height; @width; @font-size; @line-height; @border-radius) {
+    padding: 0 @padding-horizontal;
+    font-size: @font-size;
+    line-height: @line-height;
+    border-radius: @border-radius;
+    height: @height;
+    width: @width;
 }
 
 .btn-loader-variant(@max-height; @min-height; @width; @margin; @font-size; @btn-height) {
@@ -213,6 +266,7 @@
 
 @btn-padding-horizontal:                    1rem;
 @btn-default-height:                        3rem;
+@btn-default-width:                         auto;
 
 .button-group {
     margin-bottom: -3px;
@@ -240,6 +294,7 @@
 
     /* padding-top-bottom, padding-left-right, font-size, line-height */
     .button-size(@btn-padding-horizontal; @btn-default-height; @btn-font-size; @line-height-large; @btn-border-radius-large);
+    .button-icon-size(@btn-padding-horizontal; @btn-default-height; @btn-default-width; @btn-font-size; @line-height-large; @btn-border-radius-large);
 
     .material-icons,
     .material-icons-outlined {
@@ -250,6 +305,38 @@
 
         &:not(:last-child) {
             margin-right: 0.5rem;
+        }
+    }
+
+    &.btn-icon-xl {
+        .button-icon-size(0.45rem; 3rem; 3rem; @font-size-small; @line-height-small; @btn-border-radius-small);
+
+        .material-icons-outlined {
+            font-size: 2rem;
+        }
+    }
+
+    &.btn-icon-lg {
+        .button-icon-size(0.3rem; 2.5rem; 2.5rem; @font-size-small; @line-height-small; @btn-border-radius-small);
+
+        .material-icons-outlined {
+            font-size: 1.75rem;
+        }
+    }
+
+    &.btn-icon-sm {
+        .button-icon-size(0.2rem; 2rem; 2rem; @font-size-small; @line-height-small; @btn-border-radius-small);
+
+        .material-icons-outlined {
+            font-size: 1.5rem;
+        }
+    }
+
+    &.btn-icon-xs {
+        .button-icon-size(2px; 1.5rem; 1.5rem; @font-size-small; @line-height-small; @btn-border-radius-small);
+
+        .material-icons-outlined {
+            font-size: 1.15rem;
         }
     }
 
@@ -272,12 +359,13 @@
     &.focus {
         color: @btn-secondary-color;
         text-decoration: none;
+        outline: 3px solid transparent;
     }
 
     &[active],
     &:active,
     &.active {
-        outline: 0;
+        outline: 3px solid transparent;
         background-image: none;
     }
 
@@ -340,6 +428,10 @@
 
     &.btn-secondary {
         .button-outline-variant(@btn-secondary-bg, @btn-secondary-bg, @btn-secondary-color, @btn-secondary-disabled-bg, @btn-secondary-disabled-color, @brand-primary, #944E4E);
+    }
+
+    &.btn-default {
+        .button-default-variant(@btn-secondary-bg, transparent, #e5e2e2 , @btn-secondary-disabled-bg, @btn-secondary-disabled-color, @brand-secondary, transparent, #d8d2d2);
     }
 
     &.btn-guiding-destructive {
@@ -452,5 +544,29 @@
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@media (forced-colors: active) {
+    .btn,
+    .button-variant,
+    .button-outline-variant {
+        border: 3px solid;
+
+        &:focus,
+        &.focus {
+            outline: 2px solid;
+        }
+    }
+}
+
+@media (forced-colors: active) {
+    .btn {
+        &.btn-link,
+        &.btn-link-destructive {
+            &:focus {
+                outline: 2px solid transparent;
+            }
+        }
     }
 }

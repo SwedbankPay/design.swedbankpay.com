@@ -327,46 +327,6 @@ exports[`Core: Imagery UsingImagery renders 1`] = `
       </div>
       <div
         className="col-sm-6 col-12"
-        key="img/documentation/imagery/dont5.png"
-      >
-        <div
-          className="imagery-misuse-donts-img"
-        >
-          <img
-            alt=""
-            className="img-fluid"
-            src="/TEST/img/documentation/imagery/dont5.png"
-          />
-        </div>
-        <h4>
-          Alter color
-        </h4>
-        <p>
-          Do not change the image color or tone in any way.
-        </p>
-      </div>
-      <div
-        className="col-sm-6 col-12"
-        key="img/documentation/imagery/dont6.png"
-      >
-        <div
-          className="imagery-misuse-donts-img"
-        >
-          <img
-            alt=""
-            className="w-75"
-            src="/TEST/img/documentation/imagery/dont6.png"
-          />
-        </div>
-        <h4>
-          Flip
-        </h4>
-        <p>
-          Do not flip the images horizontally or vertically.
-        </p>
-      </div>
-      <div
-        className="col-sm-6 col-12"
         key="img/documentation/imagery/dont7.png"
       >
         <div
@@ -379,10 +339,10 @@ exports[`Core: Imagery UsingImagery renders 1`] = `
           />
         </div>
         <h4>
-          Rotate
+          Alter color
         </h4>
         <p>
-          Do not rotate the images.
+          Do not change the image color or tone in any way.
         </p>
       </div>
       <div
@@ -394,8 +354,48 @@ exports[`Core: Imagery UsingImagery renders 1`] = `
         >
           <img
             alt=""
-            className="img-fluid"
+            className="w-75"
             src="/TEST/img/documentation/imagery/dont8.png"
+          />
+        </div>
+        <h4>
+          Flip
+        </h4>
+        <p>
+          Do not flip the images horizontally or vertically.
+        </p>
+      </div>
+      <div
+        className="col-sm-6 col-12"
+        key="img/documentation/imagery/dont5.png"
+      >
+        <div
+          className="imagery-misuse-donts-img"
+        >
+          <img
+            alt=""
+            className="img-fluid"
+            src="/TEST/img/documentation/imagery/dont5.png"
+          />
+        </div>
+        <h4>
+          Rotate
+        </h4>
+        <p>
+          Do not rotate the images.
+        </p>
+      </div>
+      <div
+        className="col-sm-6 col-12"
+        key="img/documentation/imagery/dont6.png"
+      >
+        <div
+          className="imagery-misuse-donts-img"
+        >
+          <img
+            alt=""
+            className="img-fluid"
+            src="/TEST/img/documentation/imagery/dont6.png"
           />
         </div>
         <h4>

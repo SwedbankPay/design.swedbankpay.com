@@ -13,7 +13,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       className="dg-current-version text-uppercase"
     >
       Design Guide – v. 
-      10.4.1
+      10.5.0
     </span>
     <Switch>
       <Route
@@ -194,6 +194,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "more",
               "outlined": true,
               "path": "/components/badge",
+              "statusBadges": Array [
+                "updated",
+              ],
               "title": "Badges",
             },
             Object {
@@ -208,6 +211,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "touch_app",
               "outlined": true,
               "path": "/components/buttons",
+              "statusBadges": Array [
+                "updated",
+              ],
               "title": "Buttons",
             },
             Object {
@@ -259,17 +265,17 @@ exports[`Utilities: RenderPage renders 1`] = `
             },
             Object {
               "componentPath": "components/Dropdown",
-              "icon": "search",
+              "icon": "expand_more",
               "outlined": true,
               "path": "/components/dropdown",
               "statusBadges": Array [
                 "javascript",
-                "new",
               ],
               "title": "Dropdown",
             },
             Object {
               "componentPath": "components/Expandable",
+              "icon": "expand",
               "path": "/components/expandable",
               "statusBadges": Array [
                 "javascript",
@@ -282,7 +288,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/input-field",
               "statusBadges": Array [
                 "javascript",
-                "updated",
               ],
               "title": "Input field",
             },
@@ -353,6 +358,7 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/radio-button",
               "statusBadges": Array [
                 "javascript",
+                "updated",
               ],
               "title": "Radio button",
             },
@@ -373,7 +379,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/sheet",
               "statusBadges": Array [
                 "javascript",
-                "updated",
               ],
               "title": "Sheet",
             },
@@ -409,6 +414,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "crop_landscape",
               "outlined": true,
               "path": "/components/slab",
+              "statusBadges": Array [
+                "updated",
+              ],
               "title": "Slab",
             },
             Object {
@@ -416,9 +424,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "check_circle",
               "outlined": true,
               "path": "/components/status",
-              "statusBadges": Array [
-                "updated",
-              ],
               "title": "Status",
             },
             Object {
@@ -435,7 +440,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/tabs",
               "statusBadges": Array [
                 "javascript",
-                "updated",
               ],
               "title": "Tabs",
             },
@@ -444,9 +448,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "code",
               "outlined": true,
               "path": "/components/tags",
-              "statusBadges": Array [
-                "updated",
-              ],
               "title": "Tags",
             },
             Object {

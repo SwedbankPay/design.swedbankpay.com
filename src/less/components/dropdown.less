@@ -68,7 +68,7 @@
     .dropdown-menu {
         position: absolute;
         right: 0;
-        z-index: 501;
+        z-index: @dropdown-z-index;
         overflow: hidden;
         box-shadow: 1px 2px 10px rgba(0, 0, 0, 15%);
         border-radius: 4px;
@@ -233,6 +233,40 @@
         & i,
         &.active .dropdown-toggle i {
             transition: none;
+        }
+    }
+}
+
+@media (forced-colors: active) {
+    .dropdown {
+        border: 3px solid;
+
+        &.has-error {
+            border: none;
+        }
+
+        > a,
+        .dropdown-option {
+            &:hover,
+            &:focus {
+                outline: 2px solid;
+            }
+        }
+
+        .dropdown-toggle-icon {
+            border: 3px solid;
+        }
+
+        .dropdown-menu {
+            outline: 10px solid;
+
+            > a,
+            .dropdown-option {
+                &:hover,
+                &:focus {
+                    outline: 2px solid;
+                }
+            }
         }
     }
 }

@@ -25,6 +25,11 @@ a {
 
     &.bright {
         color: @blue-syntax-highlight;
+
+        &:focus-visible {
+            outline: 2px solid @brand-primary;
+            border-radius: 2px;
+        }
     }
 
     &.icon-link {
@@ -58,7 +63,7 @@ a {
         align-items: center;
         min-height: @action-link-height;
         padding-left: 1rem;
-        border: 0;
+        border: 1px solid transparent;
         text-decoration: none;
         background-color: @brand-bg-1;
         color: @brand-secondary;
@@ -84,9 +89,10 @@ a {
             }
         }
 
-        &:focus {
-            box-shadow: 0 0 0 1px @brand-secondary;
-            outline: none;
+        &:focus-visible {
+            outline: 2px solid @brand-secondary;
+            outline-offset: 0;
+            border-radius: 2px;
         }
 
         h4 {
@@ -148,5 +154,21 @@ a {
         font-size: 0.75rem;
         color: @brand-secondary;
         padding-left: 0.5rem;
+    }
+}
+
+@media (forced-colors: active) {
+    .a {
+        border: 3px solid;
+    }
+
+    &.action-link {
+        &:before {
+            border: 2px solid;
+        }
+
+        &:focus-visible {
+            outline: 2px solid transparent;
+        }
     }
 }

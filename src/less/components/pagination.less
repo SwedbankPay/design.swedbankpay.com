@@ -147,3 +147,36 @@
         }
     }
 }
+
+@media (forced-colors: active) {
+    .pagination {
+        border: 2px solid;
+        fill: currentColor;
+
+        ul {
+            li {
+                a {
+                    &:hover,
+                    &:focus {
+                        border: 2px dashed;
+                    }
+                }
+
+                &.active {
+                    outline: 3px dashed ButtonBorder;
+                    filter: contrast(100%);
+                }
+            }
+        }
+
+        button,
+        > a {
+            &:focus,
+            &:hover {
+                i {
+                    border: 4px dashed;
+                }
+            }
+        }
+    }
+}

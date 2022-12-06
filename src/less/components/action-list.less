@@ -8,7 +8,7 @@
         position: absolute;
         top: 2.7rem;
         right: 0;
-        z-index: 501;
+        z-index: @action-list-z-index;
         overflow: hidden;
         box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
         background-color: @white;
@@ -61,6 +61,11 @@
             cursor: pointer;
             background-color: @light-gray;
         }
+
+        &:focus-visible {
+            outline: 2px solid @brand-secondary;
+            border-radius: 2px;
+        }
     }
 
     &.active {
@@ -95,6 +100,23 @@
             top: auto;
             left: 0;
             bottom: 2.7rem;
+        }
+    }
+}
+
+@media (forced-colors: active) {
+    .action-list {
+        &.active {
+            .action-menu {
+                outline: 10px solid;
+
+                > a {
+                    &:hover,
+                    &:focus {
+                        outline: 2px solid;
+                    }
+                }
+            }
         }
     }
 }

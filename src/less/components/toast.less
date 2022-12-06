@@ -8,7 +8,7 @@
 #toast-container {
     display: block;
     position: fixed;
-    z-index: 10000;
+    z-index: @toast-z-index;
     max-width: 21.4rem;
     top: 1rem;
     left: 0;
@@ -142,6 +142,26 @@
         @media screen and (max-width: @screen-sm-max) {
             width: 100%;
             border-radius: 0;
+        }
+    }
+}
+
+@media (forced-colors: active) {
+    #toast-container {
+        .toast {
+            border: 10px solid;
+
+            .toast-close {
+                &:focus {
+                    .material-icons {
+                        outline: 2px solid;
+
+                        &:hover {
+                            outline: 4px solid;
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -38,7 +38,7 @@
 
     &:focus {
         box-shadow: 0 0 0 2px @brand-secondary;
-        outline: none;
+        outline: 2px solid transparent;
         color: @brand-secondary;
 
         &:after {
@@ -288,6 +288,17 @@
             height: 100%;
             width: 100%;
             object-fit: cover;
+        }
+    }
+}
+
+@media (forced-colors: active) {
+    .cards,
+    .card {
+        border: 3px solid;
+
+        &:hover {
+            outline: 5px solid;
         }
     }
 }

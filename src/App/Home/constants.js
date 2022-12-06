@@ -4,6 +4,15 @@ const basename = process.env.basename;
 
 export const changeLogs = [
     {
+        version: "10.5.0",
+        title: "Experis' Christmas gift",
+        text: <p>This is an early christmas present🎁 for you guys! A new release✨! Some components received some freshness. The button components got some new styles, The slab component got reworked - The shadows should look better now, and the badge component got more ✨colorful✨💅 We have also made a lot of accessibility upgrades. Especially regarding high contrast and focus on elements.
+        Bugs🐛 were squashed! The expandable component tried to take an early christmas vacation and disappeared from the component overview. It was quickly caught and returned to component jail🚨 We also removed a scrollbar from the search results because two bars does not make you scroll faster 😔
+        The button has been bullying its surrounding pixels. After a stern talk it agreed to stop pushing them around. Talk about personal growth! 🏅
+        That&apos;s it for now! Hope you have a great holiday!🎅🎄🤶</p>,
+        latestVersion: true
+    },
+    {
         version: "10.4.1",
         title: "Hotfixes incoming 🚤",
         text: "Here is a release solely based on feedback from our users 🤝 Turns out the dropdown component wasn’t perfect after all, and it had some weird alignment behavior when placed side-by-side with other components. This is now taken care of. We also renamed the class used to style the buttons inside the dropdown menu from '.btn-elem' to '.dropdown-option'. In addition, we removed the css dependency from the button component, so it is now independent. You can now use it as you want without having to import the button styles. We also added style support for the tabs component. Now the <a> element can also have the class of active instead of the <li> and the correct style will be applied. This to ensure an out of the box support for Nuxt router. Enjoy 😊"

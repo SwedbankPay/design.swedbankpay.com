@@ -7,17 +7,18 @@
 
     &.slab-arrow {
         &:before {
-            border: none;
+            border: 1px solid transparent;
         }
     }
 }
 
 .slab {
-    min-height: 1rem;
+    min-height: 0.5rem;
     padding: 1rem;
     margin-bottom: 1rem;
-    border-radius: 2px;
+    border-radius: 1rem;
     background-color: @white;
+    filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.15));
 
     &.slab-primary {
         .slab-variant(@brand-bg-1);
@@ -28,15 +29,37 @@
     }
 
     &.slab-default {
-        .slab-variant(@brand-bg-gray);
+        .slab-variant(@white);
     }
 
     &.slab-plain {
         .slab-variant(@light-gray);
     }
 
+    &.slab-funny {
+        color: @black;
+        background: repeating-linear-gradient(-45deg, #ffefc7, #ffefc7 10px, #fdc129 10px, #fdc129 15px);
+    }
+
+    &.slab-christmas {
+        color: @white;
+        background: repeating-linear-gradient(-45deg, #bb0101, #bb0101 10px, #42b864 10px, #42b864 15px);
+    }
+
     &:last-child {
         margin-bottom: 0;
+    }
+
+    &.light {
+        filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.15));
+    }
+
+    &.dark {
+        filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.25));
+    }
+
+    &.flat {
+        filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
     }
 
     &.slab-elevated {
@@ -58,17 +81,15 @@
     &.slab-arrow {
         position: relative;
 
-        &:before {
-            border: solid @brand-secondary-light-3;
-            border-width: 1px 0 0 1px;
+        &:after {
             content: "";
             height: 1rem;
-            width: 1rem;
-            transform: rotate(45deg);
+            width: 2rem;
             background-color: inherit;
             position: absolute;
-            top: -9px;
+            top: -14px;
             left: 1.5rem;
+            clip-path: polygon(40% 15%, 2% 90%, 78% 90%);
         }
     }
 
@@ -91,5 +112,43 @@
 
     &.slab-border-error {
         border-top: 4px solid @brand-error;
+    }
+
+    &.slab-edges {
+        border-radius: 2px;
+    }
+}
+
+@media (forced-colors: active) {
+    .slab-variant,
+    .slab {
+        border: 1px solid;
+
+        &.slab-border-success,
+        &.slab-border-error {
+            border-top: 4px solid;
+            border-left: 1px solid;
+            border-right: 1px solid;
+            border-bottom: 1px solid;
+        }
+    }
+}
+
+@media (forced-colors: active) and (prefers-color-scheme: dark) {
+    .slab {
+        // Styling for new slab arrow
+        &.slab-arrow {
+            &:after {
+                forced-color-adjust: none;
+                filter: drop-shadow(1px 2px 5px rgba(0, 0, 0, 0.25));
+            }
+
+            // Styling for old slab
+            &.slab-arrow {
+                &:before {
+                    border-width: 1px 0 0 1px;
+                }
+            }
+        }
     }
 }

@@ -256,6 +256,7 @@ exports[`Component: Radio - renders with id and label 1`] = `
     <label
       htmlFor="test"
     >
+       
       test
     </label>
     

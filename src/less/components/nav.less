@@ -179,7 +179,7 @@
 
                     ul {
                         margin: 0;
-                        z-index: 520;
+                        z-index: @navigation-z-index;
                         background-color: @white;
                         display: block;
                         position: absolute;
@@ -292,6 +292,7 @@
 
             a {
                 padding: 0.5rem;
+                border-bottom: 1px solid transparent;
 
                 span {
                     display: inline;
@@ -402,3 +403,12 @@ each(@grid-breakpoints, .(@min-width, @infix) {
         }
     }
 });
+
+@media (forced-colors: active) {
+    a {
+        &:hover {
+            outline: 2px solid;
+            border-bottom: 3px solid;
+        }
+    }
+}
