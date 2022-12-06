@@ -155,3 +155,20 @@
         margin-bottom: 0;
     }
 }
+
+@media (forced-colors: active) {
+    .togglebox {
+        input[type="checkbox"] {
+            &:focus,
+            &:hover {
+                + label:after {
+                    border: 9px solid;
+                }
+
+                + label:before {
+                    outline: 8px solid;
+                }
+            }
+        }
+    }
+}
