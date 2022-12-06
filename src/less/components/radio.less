@@ -126,22 +126,22 @@
     }
 
     input[type="radio"]:hover:not(:disabled) + label {
-        background-color: #f9f8f6;
-        color: #72605e;
+        background-color: @light-gray;
+        color: @medium-brown;
         border-radius: 8px;
         border: 0 solid transparent;
-        outline: 1px solid #72605e;
+        outline: 1px solid @medium-brown;
     }
 
     input[type="radio"]:checked + label {
-        background-color: #512b2b;
+        background-color: @brand-secondary;
         border-radius: 8px;
         color: @white;
         padding-left: 1.875rem;
     }
 
     input[type="radio"]:checked:hover + label {
-        background-color: #72605e;
+        background-color: @medium-brown;
         color: @white;
     }
 
@@ -222,6 +222,12 @@ fieldset {
     input[type="radio"] {
         &:checked + label:before {
             filter: saturate(1000%);
+        }
+    }
+
+    .checkmark {
+        input:focus + label {
+            outline: 5px solid;
         }
     }
 }
