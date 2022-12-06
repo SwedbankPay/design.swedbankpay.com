@@ -32,7 +32,6 @@ exports[`Component: Table - renders 1`] = `
   <tbody>
     <tr
       key="[object Object],[object Object],[object Object]0"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -56,7 +55,6 @@ exports[`Component: Table - renders 1`] = `
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]1"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -80,7 +78,6 @@ exports[`Component: Table - renders 1`] = `
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]2"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -104,7 +101,6 @@ exports[`Component: Table - renders 1`] = `
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]3"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -171,7 +167,6 @@ exports[`Component: Table - renders with class name sortable when sortable prop 
   <tbody>
     <tr
       key="[object Object],[object Object],[object Object]0"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -195,7 +190,6 @@ exports[`Component: Table - renders with class name sortable when sortable prop 
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]1"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -219,7 +213,6 @@ exports[`Component: Table - renders with class name sortable when sortable prop 
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]2"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -243,7 +236,6 @@ exports[`Component: Table - renders with class name sortable when sortable prop 
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]3"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -301,7 +293,6 @@ exports[`Component: Table - renders with class name table-condensed when condens
   <tbody>
     <tr
       key="[object Object],[object Object],[object Object]0"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -325,7 +316,6 @@ exports[`Component: Table - renders with class name table-condensed when condens
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]1"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -349,7 +339,6 @@ exports[`Component: Table - renders with class name table-condensed when condens
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]2"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -373,7 +362,6 @@ exports[`Component: Table - renders with class name table-condensed when condens
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]3"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -431,7 +419,6 @@ exports[`Component: Table - renders with class name table-divided when divided p
   <tbody>
     <tr
       key="[object Object],[object Object],[object Object]0"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -455,7 +442,6 @@ exports[`Component: Table - renders with class name table-divided when divided p
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]1"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -479,7 +465,6 @@ exports[`Component: Table - renders with class name table-divided when divided p
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]2"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -503,7 +488,6 @@ exports[`Component: Table - renders with class name table-divided when divided p
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]3"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -561,7 +545,6 @@ exports[`Component: Table - renders with class name table-hover when hover prop 
   <tbody>
     <tr
       key="[object Object],[object Object],[object Object]0"
-      tabIndex="0"
     >
       <th
         key="0"
@@ -585,7 +568,6 @@ exports[`Component: Table - renders with class name table-hover when hover prop 
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]1"
-      tabIndex="0"
     >
       <th
         key="0"
@@ -609,7 +591,6 @@ exports[`Component: Table - renders with class name table-hover when hover prop 
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]2"
-      tabIndex="0"
     >
       <th
         key="0"
@@ -633,7 +614,6 @@ exports[`Component: Table - renders with class name table-hover when hover prop 
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]3"
-      tabIndex="0"
     >
       <th
         key="0"
@@ -691,7 +671,6 @@ exports[`Component: Table - renders with class name table-plain when plain prop 
   <tbody>
     <tr
       key="[object Object],[object Object],[object Object]0"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -715,7 +694,6 @@ exports[`Component: Table - renders with class name table-plain when plain prop 
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]1"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -739,7 +717,6 @@ exports[`Component: Table - renders with class name table-plain when plain prop 
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]2"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -763,7 +740,6 @@ exports[`Component: Table - renders with class name table-plain when plain prop 
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]3"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -821,7 +797,6 @@ exports[`Component: Table - renders with no class name plain, condensed, hover, 
   <tbody>
     <tr
       key="[object Object],[object Object],[object Object]0"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -845,7 +820,6 @@ exports[`Component: Table - renders with no class name plain, condensed, hover, 
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]1"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -869,7 +843,6 @@ exports[`Component: Table - renders with no class name plain, condensed, hover, 
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]2"
-      tabIndex={null}
     >
       <th
         key="0"
@@ -893,7 +866,6 @@ exports[`Component: Table - renders with no class name plain, condensed, hover, 
     </tr>
     <tr
       key="[object Object],[object Object],[object Object]3"
-      tabIndex={null}
     >
       <th
         key="0"

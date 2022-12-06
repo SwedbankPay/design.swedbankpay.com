@@ -1022,7 +1022,6 @@
                             border: none;
                             border-radius: 0.125rem;
                             box-shadow: 0 0 0 2px @black;
-                            outline: none;
                         }
                     }
                 }
@@ -1842,13 +1841,14 @@
                 }
             }
         }
-    }
 
-    .options-close {
-        &:focus {
-            outline: 2px solid transparent;
+        .options-close {
+            &:focus {
+                outline: 2px solid;
+            }
         }
     }
+
 
     .search-container {
         input {
