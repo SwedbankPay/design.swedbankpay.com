@@ -25,7 +25,7 @@ a {
 
     &.bright {
         color: @blue-syntax-highlight;
-        
+
         &:focus-visible {
             outline: 2px solid @brand-primary;
             border-radius: 2px;
@@ -91,7 +91,7 @@ a {
 
         &:focus-visible {
             outline: 2px solid @brand-secondary;
-            outline-offset: 0px;
+            outline-offset: 0;
             border-radius: 2px;
         }
 
@@ -165,6 +165,10 @@ a {
     &.action-link {
         &:before {
             border: 2px solid;
+        }
+
+        &:focus-visible {
+            outline: 2px solid transparent;
         }
     }
 }

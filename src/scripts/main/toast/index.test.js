@@ -1,4 +1,3 @@
-import React from "react";
 import ReactDOM from "react-dom";
 import toast from "./index";
 
@@ -13,14 +12,6 @@ describe("scripts: toast", () => {
     const div = document.createElement("div");
 
     document.body.appendChild(div);
-
-    const Sheet = () => (
-        <div className="sheet" id="demo-sheet">
-            <section>
-                <p>Some content</p>
-            </section>
-        </div>
-    );
 
     it("is defined", () => {
         expect(toast).toBeDefined();
@@ -215,16 +206,5 @@ describe("scripts: toast", () => {
         jest.runAllTimers();
 
         expect(testFunc).toHaveBeenCalled();
-    });
-
-    it("adds margin-right to toast-container if a sheet is open", () => {
-        ReactDOM.render(<Sheet />, div);
-        document.querySelector("body").classList.add("sheet-open");
-        toast({ html: "Test" });
-
-        const renderedToast = document.querySelector("#toast-container");
-
-        expect(renderedToast).toBeTruthy();
-        expect(Object.keys(renderedToast.style._values)).toContain("margin-right");
     });
 });

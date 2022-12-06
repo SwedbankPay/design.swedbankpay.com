@@ -294,7 +294,7 @@ legend {
         outline: 2px auto @brand-secondary;
         border-color: transparent;
     }
-    
+
     .form-control:focus-visible {
         outline: 2px solid @brand-secondary;
         border-radius: 2px;
@@ -458,5 +458,11 @@ select[multiple] {
 @media (forced-colors: active) {
     select {
         filter: saturate(1000%);
+    }
+
+    button {
+        &:focus {
+            outline: 2px solid transparent;
+        }
     }
 }
