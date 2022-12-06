@@ -53,7 +53,7 @@
                 }
 
                 &:focus {
-                    border: 2px solid transparent;
+                    border: none;
                     border-radius: 0.125rem;
                     box-shadow: 0 0 0 2px @black;
                     outline: none;
@@ -106,10 +106,28 @@
 
 @media (forced-colors: active) {
     .dialog {
-        border: 3px solid;
+        border: 10px solid;
 
         > section {
             outline: 10px solid;
+
+            .dialog-header,
+            .header {
+                .dialog-close {
+                    &:focus {
+                        outline: 2px solid;
+                    }
+
+                    &[active],
+                    &:active,
+                    &.active {
+                        &:focus,
+                        &.focus {
+                            outline: 2px solid;
+                        }
+                    }
+                }
+            }
         }
     }
 }

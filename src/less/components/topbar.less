@@ -684,9 +684,26 @@ each(@grid-breakpoints, .(@min-width, @infix) {
         border: 10px solid;
     }
 
-    .topbar-btn {
-        &:hover {
-            outline: 3px solid;
+    .topbar {
+        .topbar-close {
+            outline: 2px solid;
+
+            &:hover,
+            &:focus,
+            &.focus {
+                outline: 2px solid;
+            }
+
+            &[active],
+            &:active,
+            &.active {
+                outline: 2px solid;
+            }
+
+            &:focus,
+            &.focus {
+                outline: 2px solid;
+            }
         }
     }
 

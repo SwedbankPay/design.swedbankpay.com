@@ -53,13 +53,19 @@
             border: none;
             border-radius: 0.125rem;
             box-shadow: 0 0 0 2px @black;
-            outline: 2px solid transparent;
+            outline: 2px solid;
         }
     }
 }
 
 @media (forced-colors: active) {
     .alert {
-        border: 3px solid;
+        border: 10px solid;
+
+        .alert-close {
+            &:focus {
+                outline: 2px solid;
+            }
+        }
     }
 }
