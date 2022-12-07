@@ -47,5 +47,7 @@ jobs:
       - name: Azure Deploy
         uses: azure/CLI@v1.0.7
         with:
+          azcliversion: 2.42.0
           inlineScript: |
             az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_STAGE }} --overwrite
+          
