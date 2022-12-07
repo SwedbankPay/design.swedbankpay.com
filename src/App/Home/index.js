@@ -20,7 +20,7 @@ const Home = () => {
                 <img src={`${basename}img/background/cluster-bubbles.svg`} className="background-img cluster-bubble d-none d-xl-block mt-n5" alt=""/>
                 <header>
                     <span className="dg-title-small d-block m-0">Welcome to the</span>
-                    <span className="dg-title-big my-0">{brandTitle} Design Guide</span>
+                    <span className="dg-title-big my-0">{brandTitle} Design Håkon</span>
                 </header>
 
                 <div className="dg-version-indicator">
