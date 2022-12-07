@@ -45,8 +45,7 @@ module.exports = (env, argv) => {
             path: path.resolve(__dirname, `dist${basename}`),
             filename: "scripts/[name].js",
             chunkFilename: "scripts/[name].js",
-            publicPath: basename,
-            hashFunction: "xxhash64"
+            publicPath: basename
         },
         devtool: isProd ? "source-map" : "eval",
         devServer: {
