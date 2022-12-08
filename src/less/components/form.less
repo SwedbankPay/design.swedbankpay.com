@@ -220,6 +220,7 @@ legend {
     border-bottom-color: @medium-brown;
     border-radius: 2px 2px 0 0;
     box-shadow: none;
+
     .form-control-focus(@brand-secondary);
     .placeholder(@brand-secondary-light-2);
 
@@ -289,6 +290,10 @@ legend {
     }
 
     margin-bottom: @base-margin-lg;
+
+    .input-group .form-control:not(:last-child) {
+        border-right: none;
+    }
 
     .form-control:focus-within {
         outline: 2px auto @brand-secondary;
