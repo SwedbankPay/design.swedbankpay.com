@@ -49,14 +49,17 @@ module.exports = (env, argv) => {
         },
         devtool: isProd ? "source-map" : "eval",
         devServer: {
-            contentBase: path.resolve(__dirname, `dist${basename}`),
-            publicPath: basename,
+            static: {
+                directory: path.resolve(__dirname, `dist${basename}`),
+                publicPath: basename
+            },
             compress: true,
             port: 3000,
             hot: true,
-            clientLogLevel: "warning",
-            historyApiFallback: true,
-            disableHostCheck: true /* Temporary fix for the websocket issue with webpack dev server on IE11 [AW] */
+            client: {
+                logging: "warn"
+            },
+            historyApiFallback: true
         },
         module: {
             rules: [
