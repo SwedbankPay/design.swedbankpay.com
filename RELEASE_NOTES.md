@@ -1,40 +1,14 @@
 # Changelog
 
-## [10.5.0] - 06.12.2022
+## [10.5.1] - 09.12.2022
 
 ## Changed
--   Slab component:
-    -   Changes to the design. Shadows are reworked. Changed slab arrow to a clip-path. Removed colors from examples.
-
--   Z-index:
-    -   Moved variables to global to get a better overview. Updated all values so stacking works correctly.
-
--   A11y:
-    -   Made element focus on keyboard navigation more visible and improved consistency between Chromium and non-chromium browsers.
-    -   Updated components to better work with high contrast mode on the user's OS. 
-
--   Documentation:
-    -   Updated some component documentation: Badge, Radio button, Button and Slab
-
-## Added
--   Icon only Button:
-    -   Added a new button variant with only an icon. 
-
--   Radio button:
-    -   Added a new radio button style. It looks like a normal button, but with radio functionality. 
-
--   Badges:
-    -   Added a lot more color variants to badges.
+-   Tooltip component:
+    -   The only component that was still dependent on another component's style. Added styles to the tooltip.less file, so it is independent. This is *kind of* a breaking change, but not really since the old version still works, but if you want to keep up2date, delete `.btn` and `.btn-link` classes.
 
 ## Bugfixes
--   Button:
-    -   Fixed pixel pushing on click.
+-   Tooltip component:
+    -   Z-index changes from v/10.5.0 removed the belonging arrow between the tooltip icon and the tooltip.
 
--   Documentation page:
-    -   Component overview:
-        -   Fixed expandable component not appearing in the main overview.
-        -   Added icons for expandable and dropdown.
-    -   Sheet component:
-        -   In the Sheet demo: renamed the buttons and modified the actions. 
-    -   Search scroll bar:
-        -   Fixed the scroll bar to only show when needed. Removed bottom scroll bar.
+-   Input field component: 
+    -   Had some issues with borders when postfix was displayed. This is now fixed
