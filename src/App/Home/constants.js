@@ -1,16 +1,22 @@
 import React from "react";
+import CodeTags from "@components/CodeTags";
 
 const basename = process.env.basename;
 
 export const changeLogs = [
     {
         version: "10.5.0",
+        title: "A quick and clean hotfix incoming!",
+        text: <p>Small bugs were located post producing last version. These are now fixed! The tooltip component was before dependent on button&apos;s .less file. Not anymore! Be aware! This is kind of, not really, a breaking change, meaning your old code will still work, but you need to delete <CodeTags type="secondary" code=".btn"/> and <CodeTags type="secondary" code=".btn-link"/> classes in your tooltip component to be fully up2d8. In addition, we added back the arrow pointing up to the tooltip that are appearing, and removed the annoying border in input fields if you add postfix to it. That&apos;s all folks! Have a merry Christmas! 🎅🏼🎅🏼</p>,
+        latestVersion: true
+    },
+    {
+        version: "10.5.0",
         title: "Experis' Christmas gift",
         text: <p>This is an early christmas present🎁 for you guys! A new release✨! Some components received some freshness. The button components got some new styles, The slab component got reworked - The shadows should look better now, and the badge component got more ✨colorful✨💅 We have also made a lot of accessibility upgrades. Especially regarding high contrast and focus on elements.
         Bugs🐛 were squashed! The expandable component tried to take an early christmas vacation and disappeared from the component overview. It was quickly caught and returned to component jail🚨 We also removed a scrollbar from the search results because two bars does not make you scroll faster 😔
         The button has been bullying its surrounding pixels. After a stern talk it agreed to stop pushing them around. Talk about personal growth! 🏅
-        That&apos;s it for now! Hope you have a great holiday!🎅🎄🤶</p>,
-        latestVersion: true
+        That&apos;s it for now! Hope you have a great holiday!🎅🎄🤶</p>
     },
     {
         version: "10.4.1",

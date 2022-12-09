@@ -13,7 +13,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       className="dg-current-version text-uppercase"
     >
       Design Guide – v. 
-      10.5.0
+      10.5.1
     </span>
     <Switch>
       <Route
@@ -474,6 +474,7 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/tooltips",
               "statusBadges": Array [
                 "javascript",
+                "updated",
               ],
               "title": "Tooltips",
             },
