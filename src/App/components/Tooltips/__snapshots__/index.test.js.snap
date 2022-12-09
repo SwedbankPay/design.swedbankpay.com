@@ -3,7 +3,7 @@
 exports[`Component: Tooltip - prop type is marked as defined 1`] = `
 <button
   aria-describedby={null}
-  className="tooltip btn btn-link"
+  className="tooltip"
 >
   
 
@@ -17,7 +17,7 @@ exports[`Component: Tooltip - prop type is marked as defined 1`] = `
 
 exports[`Component: Tooltip - renders 1`] = `
 <button
-  className="tooltip btn btn-link"
+  className="tooltip"
 >
   
 
@@ -40,7 +40,7 @@ exports[`Component: Tooltip - renders 1`] = `
 exports[`Component: Tooltip - renders div with class tooltip 1`] = `
 <button
   aria-describedby={null}
-  className="tooltip btn btn-link"
+  className="tooltip"
 >
   
 
@@ -56,7 +56,7 @@ exports[`Component: Tooltip - renders div with class tooltip 1`] = `
 
 exports[`Component: Tooltip - renders with icon if icon is provided 1`] = `
 <button
-  className="tooltip btn btn-link"
+  className="tooltip"
 >
   
 
@@ -78,7 +78,7 @@ exports[`Component: Tooltip - renders with icon if icon is provided 1`] = `
 exports[`Component: Tooltip - renders with title text if provided 1`] = `
 <button
   aria-describedby={null}
-  className="tooltip btn btn-link"
+  className="tooltip"
 >
   
 
@@ -96,7 +96,7 @@ exports[`Component: Tooltip - renders with title text if provided 1`] = `
 exports[`Component: Tooltip - renders with tooltip position bottom 1`] = `
 <button
   aria-describedby={null}
-  className="tooltip btn btn-link tooltip-bottom"
+  className="tooltip tooltip-bottom"
 >
   
 
@@ -113,7 +113,7 @@ exports[`Component: Tooltip - renders with tooltip position bottom 1`] = `
 exports[`Component: Tooltip - renders with tooltip position left 1`] = `
 <button
   aria-describedby={null}
-  className="tooltip btn btn-link tooltip-left"
+  className="tooltip tooltip-left"
 >
   
 
@@ -130,7 +130,7 @@ exports[`Component: Tooltip - renders with tooltip position left 1`] = `
 exports[`Component: Tooltip - renders with tooltip position right 1`] = `
 <button
   aria-describedby={null}
-  className="tooltip btn btn-link tooltip-right"
+  className="tooltip tooltip-right"
 >
   
 
@@ -147,7 +147,7 @@ exports[`Component: Tooltip - renders with tooltip position right 1`] = `
 exports[`Component: Tooltip - renders with tooltip position top 1`] = `
 <button
   aria-describedby={null}
-  className="tooltip btn btn-link tooltip-top"
+  className="tooltip tooltip-top"
 >
   
 

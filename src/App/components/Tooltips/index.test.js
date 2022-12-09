@@ -56,27 +56,27 @@ describe("Component: Tooltip -", () => {
         const wrapper = shallow(<Tooltip text={text} position={right} />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<button class=\"tooltip btn btn-link tooltip-right\">");
+        expect(wrapper.html()).toContain("<button class=\"tooltip tooltip-right\">");
     });
 
     it("renders with tooltip position left", () => {
         const wrapper = shallow(<Tooltip text={text} position={left} />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<button class=\"tooltip btn btn-link tooltip-left\">");
+        expect(wrapper.html()).toContain("<button class=\"tooltip tooltip-left\">");
     });
 
     it("renders with tooltip position top", () => {
         const wrapper = shallow(<Tooltip text={text} position={top} />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<button class=\"tooltip btn btn-link tooltip-top\">");
+        expect(wrapper.html()).toContain("<button class=\"tooltip tooltip-top\">");
     });
 
     it("renders with tooltip position bottom", () => {
         const wrapper = shallow(<Tooltip text={text} position={bottom} />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<button class=\"tooltip btn btn-link tooltip-bottom\">");
+        expect(wrapper.html()).toContain("<button class=\"tooltip tooltip-bottom\">");
     });
 });
