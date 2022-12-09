@@ -2,10 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Tooltip = ({ title, text, className, position, id, icon, isVisible }) => {
+const Tooltip = ({ title, text, className, position, id, icon }) => {
     const tooltipClasses = classnames(
         "tooltip",
-        "btn btn-link",
         position && `tooltip-${position}`,
         className && `${className}`
     );

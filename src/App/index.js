@@ -49,20 +49,6 @@ const Patterns = React.lazy(() => import(/* webpackChunkName: "utilities.chunk" 
 const ErrorPage404 = React.lazy(() => import(/* webpackChunkName: "404.chunk" */ "./ErrorPage404/index.js"));
 
 class App extends Component {
-    constructor () {
-        super();
-
-        if (process.env.google) {
-            history.listen(location => {
-                window.gtag("config", "UA-3440932-20", {
-                    /* eslint-disable camelcase */
-                    page_location: window.location.href,
-                    page_path: location.pathname
-                    /* eslint-enable camelcase */
-                });
-            });
-        }
-    }
 
     componentDidMount () {
         topbar.init();
