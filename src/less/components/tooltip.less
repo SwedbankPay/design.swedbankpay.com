@@ -1,9 +1,21 @@
-@import "./button.less";
-
 .tooltip {
     position: relative;
     display: inline-flex;
     margin-left: 0.25rem;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.5rem;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:hover {
+        border-color: @brand-secondary;
+    }
+
+    &:focus-visible,
+    &:active {
+        outline: 2px solid @brand-secondary;
+    }
 
     &.isVisible {
         &:before,
@@ -11,6 +23,11 @@
             visibility: visible;
             opacity: 1;
         }
+    }
+
+    i {
+        color: @brand-secondary;
+        font-size: 1.25rem;
     }
 
     &:before {
@@ -108,15 +125,6 @@
             visibility: visible;
             opacity: 1;
         }
-    }
-
-    &:focus-visible {
-        outline: 1.5px solid @brand-secondary;
-    }
-
-    i {
-        color: @brand-secondary;
-        font-size: 1.25rem;
     }
 }
 
