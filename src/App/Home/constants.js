@@ -5,7 +5,7 @@ const basename = process.env.basename;
 
 export const changeLogs = [
     {
-        version: "10.5.0",
+        version: "10.5.1",
         title: "A quick and clean hotfix incoming!",
         text: <p>Small bugs were located post producing last version. These are now fixed! The tooltip component was before dependent on button&apos;s .less file. Not anymore! Be aware! This is kind of, not really, a breaking change, meaning your old code will still work, but you need to delete <CodeTags type="secondary" code=".btn"/> and <CodeTags type="secondary" code=".btn-link"/> classes in your tooltip component to be fully up2d8. In addition, we added back the arrow pointing up to the tooltip that are appearing, and removed the annoying border in input fields if you add postfix to it. That&apos;s all folks! Have a merry Christmas! 🎅🏼🎅🏼</p>,
         latestVersion: true
