@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import routes from "@src/App/routes/all";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
@@ -100,6 +100,21 @@ const SearchBox = ({ className, mobile }) => {
         }
     };
 
+    const searchFocus = () => setTimeout(() => inputFieldText.current.focus());
+
+    const searchFocusShortcutListener = e => {
+        if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+            if (document.getElementById("search-box")) {
+                e.preventDefault();
+                searchFocus();
+            }
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener("keydown", searchFocusShortcutListener);
+    }, []);
+
     return (
         <>
             {mobile ?
@@ -119,7 +134,20 @@ const SearchBox = ({ className, mobile }) => {
                 <div className={`search-container${className ? ` ${className}` : ""}${expanded ? " expanded" : ""}`}>
                     <div className="form-group">
                         <div className="input-group">
-                            <input ref={inputFieldText} onKeyDown={e => arrowNavigation(e)} type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} />
+                            <div className="input-container" style={{
+                                position: "relative"
+                            }}>
+                                <input ref={inputFieldText} onKeyDown={e => arrowNavigation(e)} type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} />
+                                <button
+                                    onClick={searchFocus}
+                                    type="button"
+                                    tabIndex={"-1"}
+                                    className="hint-shortcuts"
+                                >
+                                    <kbd>Ctrl</kbd>
+                                    <kbd>K</kbd>
+                                </button>
+                            </div>
                             {searchTerm !== "" ?
                                 <button className="btn btn-link" type="button" onClick={() => clearSearchTerm()}><i className="material-icons">close</i></button>
                                 :
