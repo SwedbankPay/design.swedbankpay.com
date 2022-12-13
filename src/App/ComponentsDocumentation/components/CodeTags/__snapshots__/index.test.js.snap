@@ -52,7 +52,6 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
     showCasePanelAdvanced={
       Object {

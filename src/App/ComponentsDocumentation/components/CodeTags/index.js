@@ -10,7 +10,7 @@ import { overviewTags } from "./constants";
 const Overview = () => (
     <section id="tag-overview">
         <h2 id="overview">Overview</h2>
-        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewTags} codeFigure removeOuterTag/>
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewTags} codeFigure/>
         <section>
             <h3>When to consider something else</h3>
             <ul>
