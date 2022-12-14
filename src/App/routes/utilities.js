@@ -33,6 +33,12 @@ module.exports = [
                 text: "See our color utility classes"
             },
             {
+                title: "Cheat sheet",
+                path: "/utilities/cheatSheet",
+                componentPath: "utilities/CheatSheet",
+                text: "Overview of all utility classes"
+            },
+            {
                 title: "Display",
                 path: "/utilities/display",
                 componentPath: "utilities/Display",
