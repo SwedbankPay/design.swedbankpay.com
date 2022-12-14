@@ -234,9 +234,7 @@ exports[`Documentation: Panel TableContent renders 1`] = `
 `;
 
 exports[`Documentation: Panel renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >

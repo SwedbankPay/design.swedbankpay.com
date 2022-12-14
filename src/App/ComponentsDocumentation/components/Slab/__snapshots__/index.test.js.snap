@@ -172,9 +172,7 @@ exports[`Components: Slab SlabArrow renders 1`] = `
 `;
 
 exports[`Components: Slab renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >

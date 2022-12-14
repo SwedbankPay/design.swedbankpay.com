@@ -148,9 +148,7 @@ exports[`Component: Nav WithIconsOnly renders 1`] = `
 `;
 
 exports[`Component: Nav renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >

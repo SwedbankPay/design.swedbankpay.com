@@ -192,9 +192,7 @@ exports[`Documentation: Loaders Overview renders 1`] = `
 `;
 
 exports[`Documentation: Loaders renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >
