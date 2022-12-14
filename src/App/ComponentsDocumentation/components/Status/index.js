@@ -51,7 +51,7 @@ const ExtendedUsage = () => (
 );
 
 const Status = () => (
-    <DocContainer docToc>
+    <DocContainer>
         <p className="lead">
             The status component is a good way to convey to the user the state of something.
         </p>

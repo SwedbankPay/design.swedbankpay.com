@@ -133,7 +133,7 @@ const Links = () => {
     const scrollToRef = () => actionLinkRef.current.scrollIntoView();
 
     return (
-        <DocContainer docToc>
+        <DocContainer>
             <section id="link-doc">
                 <p className="lead">
                 Links are used as navigational elements and can be used on their own or inline within paragraphs of text.

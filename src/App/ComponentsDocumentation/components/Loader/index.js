@@ -32,7 +32,7 @@ const Overview = () => (
 );
 
 const Loader = () => (
-    <DocContainer docToc>
+    <DocContainer>
         <p className="lead">
             The loader component should be used when the site or application is performing computation, notifying   the user that their action is being processed.
         </p>

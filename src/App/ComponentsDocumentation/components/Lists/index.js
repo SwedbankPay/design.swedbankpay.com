@@ -326,7 +326,7 @@ class Lists extends Component {
 
     render () {
         return (
-            <DocContainer docToc>
+            <DocContainer>
                 <p className="lead">
                     Use lists to give a structured view of information.
                 </p>

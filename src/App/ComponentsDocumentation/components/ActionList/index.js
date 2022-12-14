@@ -72,7 +72,7 @@ class ActionList extends Component {
 
     render () {
         return (
-            <DocContainer docToc>
+            <DocContainer>
                 <p className="lead">
                     Action lists are small menus that remain hidden until clicked. In these you can put page links or anchors that trigger an action elsewhere.
                 </p>

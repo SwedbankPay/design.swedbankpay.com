@@ -20,7 +20,7 @@ const Overview = () => (
         </section>
 
         <section>
-            <h3>Content guidelines</h3>
+            <h2>Content guidelines</h2>
             <div className="row">
                 <div className="col-lg-6">
                     <div className="slab slab-plain slab-border-success">
@@ -44,7 +44,7 @@ const Overview = () => (
 );
 
 const Badge = () => (
-    <DocContainer docToc>
+    <DocContainer>
         <p className="lead">
             Badges are small rectangular boxes which can convey a message and or state with their text and color.
         </p>
