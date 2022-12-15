@@ -1684,9 +1684,7 @@ exports[`Documentation: Buttons Overview renders 1`] = `
 `;
 
 exports[`Documentation: Buttons renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >

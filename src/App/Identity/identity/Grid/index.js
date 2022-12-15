@@ -733,7 +733,7 @@ const Nesting = () => (
 );
 
 const Grid = () => (
-    <DocContainer doctoc>
+    <DocContainer>
         <Intro />
         <GridSystem />
         <GridTypes />

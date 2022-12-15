@@ -617,7 +617,7 @@ const CustomColors = () => (
 class Charts extends Component {
     render () {
         return (
-            <DocContainer docToc>
+            <DocContainer>
                 <Introduction />
                 <LineChart />
                 <BarChart />

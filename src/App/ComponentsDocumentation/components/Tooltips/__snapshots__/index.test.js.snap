@@ -156,9 +156,7 @@ exports[`Components: Tooltip Overview renders 1`] = `
 `;
 
 exports[`Components: Tooltip renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >

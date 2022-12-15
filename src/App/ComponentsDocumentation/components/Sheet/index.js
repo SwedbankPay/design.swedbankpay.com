@@ -90,7 +90,7 @@ const Sheet = () => {
     }, []);
 
     return (
-        <DocContainer docToc>
+        <DocContainer>
             <p className="lead">
             A sheet is a container component that slides in and out from the edge of the screen and overlays the page content.  It can be used to focus users attention to a specific task without leaving the current page.
             </p>

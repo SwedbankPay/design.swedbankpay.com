@@ -414,9 +414,7 @@ exports[`Documentation: Pagination Overview renders 1`] = `
 `;
 
 exports[`Documentation: Pagination renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >

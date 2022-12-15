@@ -19,7 +19,7 @@ const Overview = () => (
 );
 
 const Borders = () => (
-    <DocContainer docToc>
+    <DocContainer>
         <p className="lead">
             Use our border utilities to set borders that suit your needs. Our borders are always 1px thick, solid and a light gray.
         </p>

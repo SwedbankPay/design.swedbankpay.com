@@ -720,9 +720,7 @@ exports[`Documentation: Datepickers ValidDates renders 1`] = `
 `;
 
 exports[`Documentation: Datepickers renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >

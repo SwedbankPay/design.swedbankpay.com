@@ -281,9 +281,7 @@ exports[`Components: Accordion Overview renders 1`] = `
 `;
 
 exports[`Components: Accordion renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <section
     id="accordion-doc"
   >

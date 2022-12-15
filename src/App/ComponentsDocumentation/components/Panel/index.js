@@ -111,7 +111,7 @@ const PanelTable = () => (
 );
 
 const Panel = () => (
-    <DocContainer docToc>
+    <DocContainer>
         <p className="lead">
             Panels are large containers meant to be able to contain all of our other components.
         </p>

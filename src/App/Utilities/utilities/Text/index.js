@@ -81,7 +81,7 @@ const FontWeightAndItalics = () => (
 );
 
 const Text = () => (
-    <DocContainer docToc>
+    <DocContainer>
         <p className="lead">Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.</p>
         <TextAlignment />
         <TextWrappingAndOverflow />
