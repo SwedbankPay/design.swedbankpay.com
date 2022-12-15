@@ -352,9 +352,7 @@ exports[`Documentation: Status Overview renders 1`] = `
 `;
 
 exports[`Documentation: Status renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >

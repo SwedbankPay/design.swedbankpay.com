@@ -61,7 +61,7 @@ const DisabledBreadcrumb = () => {
 };
 
 const Breadcrumb = () => (
-    <DocContainer docToc>
+    <DocContainer>
         <p className="lead">Breadcrumbs are a good way to display your current location. This is usually used when you have multiple layers of content.</p>
         <BasicBreadCrumb />
         <DisabledBreadcrumb />

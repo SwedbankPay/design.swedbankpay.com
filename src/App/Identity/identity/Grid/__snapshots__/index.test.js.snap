@@ -1997,9 +1997,7 @@ exports[`Core: Grid ResponsiveClasses renders 1`] = `
 `;
 
 exports[`Core: Grid renders 1`] = `
-<DocContainer
-  doctoc={true}
->
+<DocContainer>
   <Intro />
   <GridSystem />
   <GridTypes />

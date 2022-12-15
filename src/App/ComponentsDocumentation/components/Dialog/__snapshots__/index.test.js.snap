@@ -99,9 +99,7 @@ exports[`Documentation: Dialog JavascriptMethods renders 1`] = `
 `;
 
 exports[`Documentation: Dialog renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >

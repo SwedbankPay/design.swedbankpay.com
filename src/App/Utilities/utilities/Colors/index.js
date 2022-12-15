@@ -37,7 +37,7 @@ const BackgroundColors = () => (
 );
 
 const Colors = () => (
-    <DocContainer docToc>
+    <DocContainer>
         <p className="lead">We have a few color utility classes. For more information about our colors refer to the <a href="../identity/color">Color section</a> under Identity.</p>
         <TextColors />
         <BackgroundColors />

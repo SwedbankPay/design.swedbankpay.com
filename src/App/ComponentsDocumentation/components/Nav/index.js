@@ -74,7 +74,7 @@ const Nav = () => {
     useEffect(() => { nav.init(); });
 
     return (
-        <DocContainer docToc>
+        <DocContainer>
             <p className="lead">
                 Use navs to create a basic navigational element containing links.
             </p>

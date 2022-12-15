@@ -67,7 +67,7 @@ const Expandable = () => {
     useEffect(() => { expandable.init(); }, []);
 
     return (
-        <DocContainer docToc>
+        <DocContainer>
             <p className="lead">
                 Expandables toggle between hiding and showing content on click.
             </p>

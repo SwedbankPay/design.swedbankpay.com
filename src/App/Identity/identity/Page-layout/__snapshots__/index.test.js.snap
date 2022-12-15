@@ -139,9 +139,7 @@ exports[`Utilities: PageLayout FullWidth renders 1`] = `
 `;
 
 exports[`Utilities: PageLayout renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >

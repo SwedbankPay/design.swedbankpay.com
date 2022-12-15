@@ -114,7 +114,7 @@ const ClickableSteps = () => {
 };
 
 const Steps = () => (
-    <DocContainer docToc>
+    <DocContainer>
         <p className="lead">
             Use steps to visualize the users progress through a process.
         </p>

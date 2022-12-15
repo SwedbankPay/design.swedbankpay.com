@@ -886,9 +886,7 @@ exports[`Documentation: Lists StripedItemList renders 1`] = `
 `;
 
 exports[`Documentation: Lists renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >
