@@ -327,11 +327,13 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/Nav",
+                      "deprecated": true,
                       "icon": "explore",
                       "outlined": true,
                       "path": "/components/nav",
                       "statusBadges": Array [
                         "javascript",
+                        "deprecated",
                       ],
                       "title": "Navigation",
                     },

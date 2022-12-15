@@ -158,7 +158,8 @@ module.exports = [
                 componentPath: "components/Nav",
                 icon: "explore",
                 outlined: true,
-                statusBadges: ["javascript"]
+                statusBadges: ["javascript", "deprecated"],
+                deprecated: true
             },
             {
                 title: "Pagination",

@@ -12,6 +12,7 @@ const MenuOverview = () => (
                 <div className="cards-content flex-row align-items-center m-0 ">
                     <i className={`material-icons${card.outlined ? " material-icons-outlined" : ""}${card.icon === "call_to_action" ? " v-flip" : ""} mr-3`} aria-hidden="true">{card.icon}</i>
                     <span className="h3 m-0">{card.title}</span>
+                    {card.deprecated && <span className="badge badge-deprecated ml-3">Deprecated</span>}
                 </div>
                 <i className="material-icons material-icons-outlined" aria-hidden="true">arrow_forward</i>
             </Link>
