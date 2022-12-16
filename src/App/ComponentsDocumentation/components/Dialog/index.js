@@ -50,7 +50,7 @@ const Dialog = () => {
     useEffect(() => { dialog.init(); });
 
     return (
-        <DocContainer docToc>
+        <DocContainer>
             <p className="lead">
                 Dialog is meant to be used to show a snippet of text like a confirmation box before you delete something.
                 Use <Link to="/components/sheet">sheet</Link> if you wish to receive input from the user or display a large chunk of information.

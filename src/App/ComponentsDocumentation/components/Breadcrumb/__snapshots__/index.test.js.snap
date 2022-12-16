@@ -115,9 +115,7 @@ exports[`Documentation: Breadcrumb Disabled BreadCrumb renders 1`] = `
 `;
 
 exports[`Documentation: Breadcrumb renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >

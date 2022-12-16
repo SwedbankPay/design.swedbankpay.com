@@ -39,9 +39,7 @@ exports[`Utilities: Borders Overview renders 1`] = `
 `;
 
 exports[`Utilities: Borders renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >

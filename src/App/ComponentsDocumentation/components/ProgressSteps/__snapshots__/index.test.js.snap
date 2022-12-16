@@ -153,9 +153,7 @@ exports[`Documentation: Progress Steps VerticalSteps renders 1`] = `
 `;
 
 exports[`Documentation: Progress Steps renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >

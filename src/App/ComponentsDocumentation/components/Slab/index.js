@@ -61,7 +61,7 @@ const SlabArrow = () => (
 );
 
 const Slab = () => (
-    <DocContainer docToc>
+    <DocContainer>
         <p className="lead">
             Slabs are container components, therefore it works with whatever you want to put in it.
         </p>

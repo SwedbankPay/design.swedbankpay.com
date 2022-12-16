@@ -18,7 +18,7 @@ const Overview = () => (
 );
 
 const Footer = () => (
-    <DocContainer docToc>
+    <DocContainer>
         <p className="lead">
             The Swedbank Pay footer.
         </p>

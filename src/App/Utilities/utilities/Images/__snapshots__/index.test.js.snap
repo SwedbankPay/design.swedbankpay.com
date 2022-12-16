@@ -115,9 +115,7 @@ exports[`Utilities: Image ImageThumbnail renders 1`] = `
 `;
 
 exports[`Utilities: Image renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >

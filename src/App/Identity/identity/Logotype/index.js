@@ -218,7 +218,7 @@ const Overview = () => (
 const Logotype = () => (
     <>
         {brand === "swedbankpay" &&
-            <DocContainer docToc>
+            <DocContainer>
                 <section id="logotype-doc">
                     <p className="lead">
                     The Swedbank Pay logotype is available in a vertical and horizontal version, the vertical logo is primary and the one that will build recognition. The logotype exist in two colors – a black text logo and a white text logo. They are used depending on what colour of the background the logo is placed on.
@@ -234,7 +234,7 @@ const Logotype = () => (
             </DocContainer>
         }
         {brand === "payex" &&
-            <DocContainer docToc>
+            <DocContainer>
                 <LogoPayex />
                 <Favicon />
             </DocContainer>

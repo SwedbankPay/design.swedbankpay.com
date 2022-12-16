@@ -397,7 +397,7 @@ class Datepickers extends Component {
 
     render () {
         return (
-            <DocContainer docToc>
+            <DocContainer>
                 <p className="lead">
                     Datepickers makes it easy to get dates from your users. With datepickers you do not have to worry about how your users
                     write the given date, alleviating the need to do format validation.

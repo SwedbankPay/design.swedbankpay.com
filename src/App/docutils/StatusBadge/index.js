@@ -17,6 +17,10 @@ const statusBadgeContent = {
     javascript: {
         icon: <i className="javascript-icon" aria-hidden="true"/>,
         text: "Uses JavaScript"
+    },
+    deprecated: {
+        icon: <i className="material-icons" aria-hidden="true">delete_forever</i>,
+        text: "Deprecated"
     }
 
 };

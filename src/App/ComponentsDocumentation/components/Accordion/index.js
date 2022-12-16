@@ -115,7 +115,7 @@ const Accordion = () => {
     }, []);
 
     return (
-        <DocContainer docToc>
+        <DocContainer>
             <section id="accordion-doc">
                 <p className="lead">
                 Accordions are components that toggles between hiding and showing content

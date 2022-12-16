@@ -469,9 +469,7 @@ exports[`Utilities: Display Notation renders 1`] = `
 `;
 
 exports[`Utilities: Display renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >

@@ -11,14 +11,36 @@ exports[`Manipulating input values for input field button icon changes from sear
       <div
         className="input-group"
       >
-        <input
-          className="form-control"
-          id="search-box"
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          placeholder="Search"
-          type="text"
-        />
+        <div
+          className="input-container"
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <input
+            className="form-control"
+            id="search-box"
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Search"
+            type="text"
+          />
+          <button
+            className="hint-shortcuts"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          >
+            <kbd>
+              Ctrl
+            </kbd>
+            <kbd>
+              K
+            </kbd>
+          </button>
+        </div>
         <button
           className="btn btn-link"
           onClick={[Function]}
@@ -54,14 +76,36 @@ exports[`Manipulating input values for input field result box is not visible bef
       <div
         className="input-group"
       >
-        <input
-          className="form-control"
-          id="search-box"
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          placeholder="Search"
-          type="text"
-        />
+        <div
+          className="input-container"
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <input
+            className="form-control"
+            id="search-box"
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Search"
+            type="text"
+          />
+          <button
+            className="hint-shortcuts"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          >
+            <kbd>
+              Ctrl
+            </kbd>
+            <kbd>
+              K
+            </kbd>
+          </button>
+        </div>
         <button
           className="btn btn-link"
           onClick={[Function]}
@@ -97,14 +141,36 @@ exports[`Manipulating input values for input field result box is visible after i
       <div
         className="input-group"
       >
-        <input
-          className="form-control"
-          id="search-box"
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          placeholder="Search"
-          type="text"
-        />
+        <div
+          className="input-container"
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <input
+            className="form-control"
+            id="search-box"
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Search"
+            type="text"
+          />
+          <button
+            className="hint-shortcuts"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          >
+            <kbd>
+              Ctrl
+            </kbd>
+            <kbd>
+              K
+            </kbd>
+          </button>
+        </div>
         <button
           className="btn btn-link"
           onClick={[Function]}
@@ -163,14 +229,36 @@ exports[`Search box results tests renders more than 10 li elements when search t
           <div
             className="input-group"
           >
-            <input
-              className="form-control"
-              id="search-box"
-              onChange={[Function]}
-              onKeyDown={[Function]}
-              placeholder="Search"
-              type="text"
-            />
+            <div
+              className="input-container"
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                className="form-control"
+                id="search-box"
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder="Search"
+                type="text"
+              />
+              <button
+                className="hint-shortcuts"
+                onClick={[Function]}
+                tabIndex="-1"
+                type="button"
+              >
+                <kbd>
+                  Ctrl
+                </kbd>
+                <kbd>
+                  K
+                </kbd>
+              </button>
+            </div>
             <button
               className="btn btn-link"
               onClick={[Function]}
@@ -1585,14 +1673,36 @@ exports[`Search box results tests renders no items if search term has no matches
           <div
             className="input-group"
           >
-            <input
-              className="form-control"
-              id="search-box"
-              onChange={[Function]}
-              onKeyDown={[Function]}
-              placeholder="Search"
-              type="text"
-            />
+            <div
+              className="input-container"
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                className="form-control"
+                id="search-box"
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder="Search"
+                type="text"
+              />
+              <button
+                className="hint-shortcuts"
+                onClick={[Function]}
+                tabIndex="-1"
+                type="button"
+              >
+                <kbd>
+                  Ctrl
+                </kbd>
+                <kbd>
+                  K
+                </kbd>
+              </button>
+            </div>
             <button
               className="btn btn-link"
               onClick={[Function]}
@@ -1653,14 +1763,36 @@ exports[`Search box results tests renders several li elements when search term i
           <div
             className="input-group"
           >
-            <input
-              className="form-control"
-              id="search-box"
-              onChange={[Function]}
-              onKeyDown={[Function]}
-              placeholder="Search"
-              type="text"
-            />
+            <div
+              className="input-container"
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                className="form-control"
+                id="search-box"
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder="Search"
+                type="text"
+              />
+              <button
+                className="hint-shortcuts"
+                onClick={[Function]}
+                tabIndex="-1"
+                type="button"
+              >
+                <kbd>
+                  Ctrl
+                </kbd>
+                <kbd>
+                  K
+                </kbd>
+              </button>
+            </div>
             <button
               className="btn btn-link"
               onClick={[Function]}
@@ -1927,14 +2059,36 @@ exports[`Search box results tests renders toggelbox after searcing for 'gg' 1`] 
           <div
             className="input-group"
           >
-            <input
-              className="form-control"
-              id="search-box"
-              onChange={[Function]}
-              onKeyDown={[Function]}
-              placeholder="Search"
-              type="text"
-            />
+            <div
+              className="input-container"
+              style={
+                Object {
+                  "position": "relative",
+                }
+              }
+            >
+              <input
+                className="form-control"
+                id="search-box"
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                placeholder="Search"
+                type="text"
+              />
+              <button
+                className="hint-shortcuts"
+                onClick={[Function]}
+                tabIndex="-1"
+                type="button"
+              >
+                <kbd>
+                  Ctrl
+                </kbd>
+                <kbd>
+                  K
+                </kbd>
+              </button>
+            </div>
             <button
               className="btn btn-link"
               onClick={[Function]}
@@ -2077,14 +2231,36 @@ exports[`Utilities; SearchBox renders with no props 1`] = `
       <div
         className="input-group"
       >
-        <input
-          className="form-control"
-          id="search-box"
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          placeholder="Search"
-          type="text"
-        />
+        <div
+          className="input-container"
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <input
+            className="form-control"
+            id="search-box"
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Search"
+            type="text"
+          />
+          <button
+            className="hint-shortcuts"
+            onClick={[Function]}
+            tabIndex="-1"
+            type="button"
+          >
+            <kbd>
+              Ctrl
+            </kbd>
+            <kbd>
+              K
+            </kbd>
+          </button>
+        </div>
         <button
           className="btn btn-link"
           onClick={[Function]}

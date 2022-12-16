@@ -44,7 +44,7 @@ const ImageThumbnail = () => (
 );
 
 const Image = () => (
-    <DocContainer docToc>
+    <DocContainer>
         <p className="lead">Use our image utilties to modify how they are displayed or work when resized.</p>
         <ImageFluid />
         <ImageRounded />

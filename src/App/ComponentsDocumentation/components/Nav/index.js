@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-
+import Alert from "@components/Alert";
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import NavComponent from "@components/Nav";
 import CodeTags from "@components/CodeTags";
@@ -74,7 +74,8 @@ const Nav = () => {
     useEffect(() => { nav.init(); });
 
     return (
-        <DocContainer docToc>
+        <DocContainer>
+            <Alert type="danger" icon="error" text={<p><b>Deprecated:</b> Be aware, this component will not be maintained anymore. Instead, consider using the <a href="/components/topbar">topbar</a> or <a href="/components/sidebar">sidebar</a>.</p>}/>
             <p className="lead">
                 Use navs to create a basic navigational element containing links.
             </p>

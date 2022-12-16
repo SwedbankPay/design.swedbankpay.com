@@ -622,9 +622,7 @@ exports[`Components: Links Overview renders 1`] = `
 `;
 
 exports[`Components: Links renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <section
     id="link-doc"
   >

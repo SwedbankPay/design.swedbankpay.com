@@ -324,7 +324,7 @@ const DeveloperDocumentation = () => (
 );
 
 const Buttons = () => (
-    <DocContainer docToc>
+    <DocContainer>
         <p className="lead">
         Buttons communicate actions that users can take. Buttons are typically placed throughout your UI, in places like: Dialogs, Modals, Forms, Cards and Toolbars.
         </p>
