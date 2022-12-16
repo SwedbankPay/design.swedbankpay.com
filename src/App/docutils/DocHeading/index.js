@@ -12,6 +12,10 @@ const DocHeading = ({ location }) => {
         .join(" ");
 
     document.title = `${title} | ${brandTitle} Design Guide`;
+    
+    if (title === "CheatSheet") {
+        return <h1>Cheat Sheet</h1>
+    }
 
     return <h1>{title}</h1>;
 };
