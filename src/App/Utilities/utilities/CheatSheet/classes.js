@@ -91,11 +91,6 @@ export const borderClasses = [
 
 export const breakpointClasses = [
     {
-        name: "Infix",
-        css: "Min-width",
-        px: "Example use"
-    },
-    {
         name: "xs",
         css: "0px",
         px: ".col-8 .d-block"
