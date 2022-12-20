@@ -285,79 +285,6 @@ exports[`GetStarted: ForDevelopers GridAndBreakpoints renders 1`] = `
 
 exports[`GetStarted: ForDevelopers Installation renders 1`] = `
 <section>
-  <h2
-    id="installation"
-  >
-    Installation with CDN
-  </h2>
-  <p>
-    To quickly add the 
-    TESTBRAND
-     Design Guide to your project, include the snippets below in your project.
-  </p>
-  <section>
-    <h3>
-      Include in the header
-    </h3>
-    <p>
-      Copy-paste the following CSS code into 
-      <CodeTags
-        code="<head>"
-        type="secondary"
-      />
-       before all the other stylesheets in order to load our CSS.
-    </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="html"
-    >
-      <link
-        href="http://localhost/TEST/styles/TESTBRAND.css"
-        rel="stylesheet"
-      />
-    </ComponentPreview>
-  </section>
-  <section>
-    <h3>
-      Include at the bottom
-    </h3>
-    <p>
-      Many of our components requires the use of JavaScript in order to function. Place the following 
-      <CodeTags
-        code="<Script>"
-        type="secondary"
-      />
-       tag near the end of your pages, right before the closing 
-      <CodeTags
-        code="</body>"
-        type="secondary"
-      />
-       tag to enable them.
-    </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="html"
-    >
-      <script
-        autoload="true"
-        global="true"
-        src="http://localhost/TEST/scripts/dg.js"
-      />
-    </ComponentPreview>
-    <p>
-      The 
-      <CodeTags
-        code="global"
-        type="secondary"
-      />
-       attribute adds the script to the global scope. The 
-      <CodeTags
-        code="autoload"
-        type="secondary"
-      />
-       attribute automatically initiates all components when loaded. Great for plug and play.
-    </p>
-  </section>
   <section>
     <h2
       id="installation-npm"
@@ -375,10 +302,52 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
     </ComponentPreview>
     <section>
       <h3>
-        Usage with NPM
+        JavaScript
       </h3>
       <p>
-        When importing the Design Guide javascript, you can choose to either import the whole thing or only the components you want to use.
+        Some of the Design System components require javascript (not all of them). To achieve this:
+        <ul>
+          <li>
+            Import the scripts of each component used
+          </li>
+          <li>
+            Once imported, to initialize each component we need to call its \`init()\`method.
+          </li>
+        </ul>
+      </p>
+      <div
+        className="alert alert-informative"
+      >
+        <i
+          aria-hidden="true"
+          className="material-icons alert-icon"
+        >
+          info
+        </i>
+        <p>
+          <b>
+            Recommended way:
+          </b>
+           Importing component per component means you do not end up importing the javascript for components you are not using. This way your js served to the user is smaller, thus enhancing a faster experience for the users.
+        </p>
+      </div>
+      <p>
+        Importing component per component:
+      </p>
+      <ComponentPreview
+        codeFigure={true}
+        language="javascript"
+      >
+        import { expandable, sheet  } from "@swedbankpay/design-guide";  
+        
+
+        expandable.init(); 
+        
+
+        sheet.init();
+      </ComponentPreview>
+      <p>
+        You can also import the whole bundle:
       </p>
       <ComponentPreview
         codeFigure={true}
@@ -389,15 +358,29 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
 
         dg.script.initAll();
       </ComponentPreview>
-      <ComponentPreview
-        codeFigure={true}
-        language="javascript"
+      <div
+        className="alert alert-informative"
       >
-        import { sheet } from "@swedbankpay/design-guide";  
-        
-
-        sheet.init();
-      </ComponentPreview>
+        <i
+          aria-hidden="true"
+          className="material-icons alert-icon"
+        >
+          info
+        </i>
+        <p>
+          <b>
+            Standards:
+          </b>
+           Our JS uses modern features such as optional-chaining. If you're experiencing issues you might want to look at our browser support. In the case our browser support is not enough for your project you might want to use polyfills and/or Babel transpiling to fix it.
+          <br />
+          Also, some build tools such as Webpack 4 do not support some of those features. You can then use Babel to transpile the code from the Design System package.
+        </p>
+      </div>
+    </section>
+    <section>
+      <h3>
+        CSS/Less
+      </h3>
       <p>
         For our CSS you can choose to import it from a 
         <CodeTags
@@ -409,8 +392,23 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
           code="js"
           type="secondary"
         />
-         file if your bundler supports it, or point to the file directly from your bundler.
+         file if your bundler supports it, 
+        <em>
+          or
+        </em>
+         point to the file directly from your bundler.
       </p>
+      <p>
+        We do not have a recommended way so far. This being said, importing from the style file might be easier and can leverage the CSS layers ( 
+        <CodeTags
+          code="@layer"
+          type="secondary"
+        />
+         ).
+      </p>
+      <h4>
+        Importing from a style file
+      </h4>
       <p>
         Example from a 
         <CodeTags
@@ -427,6 +425,9 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
         TESTBRAND
         .less");
       </ComponentPreview>
+      <h4>
+        Importing through the build tool
+      </h4>
       <p>
         Example from 
         <CodeTags
@@ -472,6 +473,26 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
 
         ],
       </ComponentPreview>
+      <div
+        className="alert alert-informative"
+      >
+        <i
+          aria-hidden="true"
+          className="material-icons alert-icon"
+        >
+          info
+        </i>
+        <p>
+          <b>
+            Import only once:
+          </b>
+           Either import from the style file 
+          <em>
+            OR
+          </em>
+           from the build tool. If you import through both you will end up loading twice the styles on the client, which has a negative impact on the web-performance.
+        </p>
+      </div>
     </section>
     <section>
       <h3>
@@ -496,6 +517,22 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
 
         @import url("@swedbankpay/design-guide/src/less/components/expandable.less");
       </ComponentPreview>
+      <div
+        className="alert alert-informative"
+      >
+        <i
+          aria-hidden="true"
+          className="material-icons alert-icon"
+        >
+          info
+        </i>
+        <p>
+          <b>
+            Web-perf:
+          </b>
+           Importing the style of individual components means fewer css imported, hence smaller file size. If you do not want to import them individually then you might want to check about tree-shaking (purging dead code).
+        </p>
+      </div>
     </section>
     <section>
       <h3>
@@ -505,6 +542,81 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
         In this video we show a real life example on how to use the design guide through NPM.
       </p>
       <DGLightVideo />
+    </section>
+  </section>
+  <section>
+    <h2
+      id="installation"
+    >
+      Installation with CDN
+    </h2>
+    <p>
+      To quickly add the 
+      TESTBRAND
+       Design Guide to your project, include the snippets below in your project.
+    </p>
+    <section>
+      <h3>
+        Include in the header
+      </h3>
+      <p>
+        Copy-paste the following CSS code into 
+        <CodeTags
+          code="<head>"
+          type="secondary"
+        />
+         before all the other stylesheets in order to load our CSS.
+      </p>
+      <ComponentPreview
+        codeFigure={true}
+        language="html"
+      >
+        <link
+          href="http://localhost/TEST/styles/TESTBRAND.css"
+          rel="stylesheet"
+        />
+      </ComponentPreview>
+    </section>
+    <section>
+      <h3>
+        Include at the bottom
+      </h3>
+      <p>
+        Many of our components requires the use of JavaScript in order to function. Place the following 
+        <CodeTags
+          code="<Script>"
+          type="secondary"
+        />
+         tag near the end of your pages, right before the closing 
+        <CodeTags
+          code="</body>"
+          type="secondary"
+        />
+         tag to enable them.
+      </p>
+      <ComponentPreview
+        codeFigure={true}
+        language="html"
+      >
+        <script
+          autoload="true"
+          global="true"
+          src="http://localhost/TEST/scripts/dg.js"
+        />
+      </ComponentPreview>
+      <p>
+        The 
+        <CodeTags
+          code="global"
+          type="secondary"
+        />
+         attribute adds the script to the global scope. The 
+        <CodeTags
+          code="autoload"
+          type="secondary"
+        />
+         attribute automatically initiates all components when loaded. Great for plug and play.
+      </p>
     </section>
   </section>
   <section>
@@ -616,6 +728,22 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
           Yes
         </p>
       </div>
+    </div>
+    <div
+      className="alert alert-informative mt-4"
+    >
+      <i
+        aria-hidden="true"
+        className="material-icons alert-icon"
+      >
+        info
+      </i>
+      <p>
+        <b>
+          Target Browser:
+        </b>
+         "Last 3 versions, &gt; 1%, not dead"
+      </p>
     </div>
     <h4>
       Browser support for products using the Design Guide
