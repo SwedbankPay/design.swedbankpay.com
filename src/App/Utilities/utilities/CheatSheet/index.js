@@ -3,7 +3,7 @@ import { DocContainer } from "@docutils";
 import ExpandableComponent from "@components/Expandable";
 import CodeTagComponent from "@components/CodeTags";
 import { expandable } from "~/src/scripts/main";
-import { spacings, borders, breakpoints, colors } from "./constants";
+import { spacings, borders, breakpoints, colors, displayHidingElements, flex, images, sizings, text, visibility } from "./constants";
 
 const Border = () => (
     <section id="borderOverview">
@@ -34,24 +34,33 @@ const Colors = () => (
 const Display = () => (
     <section>
         <h2 id="display">Display</h2>
+        <p>Display utility classes apply to all breakpoints, from <CodeTagComponent type="secondary" code="xs"/> to <CodeTagComponent type="secondary" code="xxl"/>, or you can apply them without breakpoints.</p>
+        <ExpandableComponent items={displayHidingElements}/>
     </section>
 );
 
 const Flex = () => (
-    <section>
+    <section className="combinedExpandables">
         <h2 id="flex">Flex</h2>
+        <div className="d-flex flex-wrap">
+            <ExpandableComponent items={flex}/>
+        </div>
     </section>
 );
 
 const Images = () => (
     <section>
         <h2 id="images">Images</h2>
+        <p>For seeing the classes in action, head over to <a href="/utilities/images">images</a></p>
+        <ExpandableComponent items={images}/>
     </section>
 );
 
 const Sizing = () => (
     <section>
         <h2 id="sizing">Sizing</h2>
+        <p>Some information</p>
+        <ExpandableComponent items={sizings}/>
     </section>
 );
 
@@ -60,7 +69,8 @@ const Spacing = () => (
         <h2 id="spacing">Spacing</h2>
         <p>One can alter only desired sides of the element. Just add the letter t(op), b(ottom), l(eft) or r(ight) after your m(argin) or p(adding).</p> 
         <p>For example, <CodeTagComponent code="mt-5" type="secondary"/> will give <CodeTagComponent code="margin-top: 3rem" type="secondary"/></p>
-        <div className="d-flex flex-wrap">
+        You can also approach the spacings with the x and y-axis. <CodeTagComponent type="secondary" code="my-5"/> will give you <CodeTagComponent code="margin-top: 3rem; margin-bottom: 3rem" type="secondary"/>
+        <div className="d-flex flex-wrap mt-3">
             <ExpandableComponent items={spacings}/>
         </div>
     </section>
@@ -69,12 +79,16 @@ const Spacing = () => (
 const Text = () => (
     <section>
         <h2 id="text">Text</h2>
+        <p>For controlling alignment, wrapping, weight and more.</p>
+        <ExpandableComponent items={text}/>
     </section>
 );
 
 const Visibility = () => (
     <section>
         <h2 id="visibility">Visibility</h2>
+        <p>Control the visibility without modifying the display of your elements.</p>
+        <ExpandableComponent items={visibility}/>
     </section>
 );
 

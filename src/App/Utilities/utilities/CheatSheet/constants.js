@@ -1,5 +1,5 @@
 import React from "react";
-import { spacingClasses, borderClasses, breakpointClasses } from "./classes";
+import { spacingClasses, borderClasses, breakpointClasses, hidingElementClasses, flexClasses, imageClasses, sizingClasses, textClasses, visibilityClasses } from "./classes";
 import CodeTagComponent from "@components/CodeTags";
 
 const UtilityPresenter = ({name, css, px}) => (
@@ -15,6 +15,19 @@ const BreakpointPresenter = ({name, css, px}) => (
         <CodeTagComponent code={name} type="primary"/>
         <CodeTagComponent code={css} type="secondary"/>
         <CodeTagComponent code={px} type="tertiary"/>
+    </div>
+);
+
+const DisplayPresenter = ({ screenSize, dClass }) => (
+    <div className="d-flex justify-content-between mb-2">
+        <span>{screenSize}</span>
+        <CodeTagComponent code={dClass} type="primary"/>
+    </div>
+);
+
+const FlexPresenter = ({code}) => (
+    <div className="d-flex  mb-2">
+        <CodeTagComponent code={code} type="primary"/>
     </div>
 );
 
@@ -103,3 +116,185 @@ export const colors = [
         </>
     }
 ];
+
+export const displayHidingElements = [
+    {
+        id: "displaynotation",
+        title: "Notation",
+        subtitle: "Quick display classes. d(isplay)-<value>",
+        content: <>
+        <div className="d-flex justify-content-between">
+            <span className="font-weight-bold mb-2">Value</span>
+            <span className="font-weight-bold ">CSS</span>
+        </div>
+            {hidingElementClasses.notation.map((rule) => (
+                <UtilityPresenter name={rule.value} css={rule.css}/>
+            ))}
+        </>
+    },
+    {
+        id: "hidingElmenents",
+        title: "Hiding elements",
+        subtitle: "For faster mobile-friendly development",
+        content: <>
+            {hidingElementClasses.hidingElements.map((rule) => (
+                <DisplayPresenter screenSize={rule.screenSize} dClass={rule.dClass}/>
+            ))}
+        </>
+    }
+];
+
+export const flex = [
+    {
+        id: "enableflexbahaviour",
+        title: "Enable flex bahaviour",
+        subtitle: "For creating a flexbox",
+        content: <>
+        {flexClasses.flexBehaviour.map((rule) => (
+            <FlexPresenter code={rule.code} explaination={rule.explaination}/>
+        ))}
+        </>
+    },
+    {
+        id: "flexDirection",
+        title: "Direction",
+        subtitle: "Direct the flex",
+        content: <>
+        {flexClasses.direction.map((rule) => (
+            <FlexPresenter code={rule.code} explaination={rule.explaination}/>
+        ))}
+        </>
+    },
+    {
+        id: "justifyContent",
+        title: "Justify content",
+        subtitle: "Justify your flex contents",
+        content: <>
+        {flexClasses.justifyContent.map((rule) => (
+            <FlexPresenter code={rule.code} explaination={rule.explaination}/>
+        ))}
+        </>
+    },
+    {
+        id: "alignItems",
+        title: "Align items",
+        subtitle: "Your items must be aligned",
+        content: <>
+        {flexClasses.alignItems.map((rule) => (
+            <FlexPresenter code={rule.code} explaination={rule.explaination}/>
+        ))}
+        </>
+    },
+    {
+        id: "alignSelf",
+        title: "Align self",
+        subtitle: "Self alignment is balance",
+        content: <>
+        {flexClasses.alignSelf.map((rule) => (
+            <FlexPresenter code={rule.code} explaination={rule.explaination}/>
+        ))}
+        </>
+    },
+    {
+        id: "fill",
+        title: "Fill",
+        subtitle: "Flex fill",
+        content: <>
+        {flexClasses.fill.map((rule) => (
+            <FlexPresenter code={rule.code} explaination={rule.explaination}/>
+        ))}
+        </>
+    },
+    {
+        id: "growAndShrink",
+        title: "Grow and shrink",
+        subtitle: "Self control is key",
+        content: <>
+        {flexClasses.growAndShrink.map((rule) => (
+            <FlexPresenter code={rule.code} explaination={rule.explaination}/>
+        ))}
+        </>
+    },
+    {
+        id: "wrap",
+        title: "Wrap",
+        subtitle: "Now I am hungry..",
+        content: <>
+        {flexClasses.wrap.map((rule) => (
+            <FlexPresenter code={rule.code} explaination={rule.explaination}/>
+        ))}
+        </>
+    },
+    {
+        id: "order",
+        title: "Order",
+        subtitle: "Major! Control your flexboxes!",
+        content: <>
+        {flexClasses.order.map((rule) => (
+            <FlexPresenter code={rule.code} explaination={rule.explaination}/>
+        ))}
+        </>
+    },
+    {
+        id: "alignContent",
+        title: "Align content",
+        subtitle: "YEAH",
+        content: <>
+        {flexClasses.alignContent.map((rule) => (
+            <FlexPresenter code={rule.code} explaination={rule.explaination}/>
+        ))}
+        </>
+    }
+];
+
+export const images = [
+    {
+        id: "images",
+        title: "Images",
+        subtitle: "Utility classes to your images",
+        content: <>
+        {imageClasses.map((rule) => (
+            <DisplayPresenter dClass={rule.code} screenSize={rule.explaination}/>
+        ))}
+        </>
+    }
+];
+
+export const sizings = [
+    {
+        id: "sizing",
+        title: "Sizing",
+        subtitle: "Resize your elements",
+        content: <>
+        {sizingClasses.map((rule) => (
+            <FlexPresenter code={rule.code}/>
+        ))}
+        </>
+    }
+];
+
+export const text = [
+    {
+        id: "text",
+        title: "Text",
+        subtitle: "Modify your text elements",
+        content: <>
+        {textClasses.map((rule) => (
+            <FlexPresenter code={rule.code}/>
+        ))}
+        </>
+    }
+]
+
+export const visibility = [
+    {
+        id: "visibility",
+        title: "Visibility",
+        subtitle: "Modify the visual representation of your elements",
+        content: <>
+        {visibilityClasses.map((rule) => (
+            <FlexPresenter code={rule.code}/>
+        ))}
+        </>
+    }
+]
