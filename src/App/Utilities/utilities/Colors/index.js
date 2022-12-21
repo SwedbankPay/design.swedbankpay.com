@@ -1,5 +1,5 @@
 import React from "react";
-
+import Alert from "@components/Alert";
 import { ComponentPreview, DocContainer } from "@docutils";
 
 const backgroundColors = ["brand", "primary", "secondary", "tertiary", "quaternary", "danger", "warning", "success", "neutral"];
@@ -38,6 +38,7 @@ const BackgroundColors = () => (
 
 const Colors = () => (
     <DocContainer>
+        <Alert type="danger" icon="error" text={<p><b>To be removed:</b> This documentation page will be removed.</p>}/>
         <p className="lead">We have a few color utility classes. For more information about our colors refer to the <a href="../identity/color">Color section</a> under Identity.</p>
         <TextColors />
         <BackgroundColors />

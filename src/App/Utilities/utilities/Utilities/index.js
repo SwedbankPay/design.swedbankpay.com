@@ -9,7 +9,8 @@ const MenuOverview = () => (
         {overviewList[0].routes.slice(1).map(card => (
             <Link key={card.title} to={card.path} className="cards cards-primary cards-wide">
                 <div className="cards-content m-0">
-                    <span className="h3">{card.title}</span>
+                    <div className="d-flex flex-row"><span className="h3">{card.title}</span>
+                        {card.deprecated && <span className="badge badge-deprecated ml-3">To be removed</span>}</div>
                     <span>{card.text}</span>
                 </div>
                 <i className="material-icons">arrow_forward</i>

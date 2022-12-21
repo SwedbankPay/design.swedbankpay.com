@@ -1,10 +1,11 @@
 import React from "react";
-
+import Alert from "@components/Alert";
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
 const Sizing = () => (
     <DocContainer>
+        <Alert type="danger" icon="error" text={<p><b>To be removed:</b> This documentation page will be removed.</p>}/>
         <p className="lead">Easily make an element as wide or as tall (relative to its parent) with our width and height utilities.</p>
         <p>
         Width and height utilities are generated with support for values; <CodeTags type="secondary" code="25%" />, <CodeTags type="secondary" code="50%" />, <CodeTags type="secondary" code="75%" />, <CodeTags type="secondary" code="100%" />, and <CodeTags type="secondary" code="auto" />.

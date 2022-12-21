@@ -1,5 +1,5 @@
 import React from "react";
-
+import Alert from "@components/Alert";
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
@@ -82,6 +82,7 @@ const FontWeightAndItalics = () => (
 
 const Text = () => (
     <DocContainer>
+        <Alert type="danger" icon="error" text={<p><b>To be removed:</b> This documentation page will be removed.</p>}/>
         <p className="lead">Documentation and examples for common text utilities to control alignment, wrapping, weight, and more.</p>
         <TextAlignment />
         <TextWrappingAndOverflow />

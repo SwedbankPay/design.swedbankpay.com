@@ -1,5 +1,5 @@
 import React from "react";
-
+import Alert from "@components/Alert";
 import { DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
@@ -102,6 +102,7 @@ const Overview = () => (
 
 const Breakpoints = () => (
     <DocContainer>
+        <Alert type="danger" icon="error" text={<p><b>To be removed:</b> This documentation page will be removed.</p>}/>
         <p className="lead">Our breakpoints is based on <a href="http://getbootstrap.com/docs/4.1/layout/overview/#responsive-breakpoints">Bootstrap{"'"}s breakpoints</a>, but has some modifications.</p>
         <Overview />
     </DocContainer>

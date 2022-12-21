@@ -1,5 +1,5 @@
 import React from "react";
-
+import Alert from "@components/Alert";
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
@@ -26,6 +26,7 @@ const Intro = () => (
 
 const Visibility = () => (
     <DocContainer>
+        <Alert type="danger" icon="error" text={<p><b>To be removed:</b> This documentation page will be removed.</p>}/>
         <p className="lead">Control the visibility, without modifying the display, of elements with visibility utilities.</p>
         <Intro />
     </DocContainer>

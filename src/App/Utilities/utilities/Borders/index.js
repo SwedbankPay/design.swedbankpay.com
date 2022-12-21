@@ -1,6 +1,7 @@
 import React from "react";
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
+import Alert from "@components/Alert";
 
 const Overview = () => (
     <>
@@ -20,6 +21,7 @@ const Overview = () => (
 
 const Borders = () => (
     <DocContainer>
+        <Alert type="danger" icon="error" text={<p><b>To be removed:</b> This documentation page will be removed.</p>}/>
         <p className="lead">
             Use our border utilities to set borders that suit your needs. Our borders are always 1px thick, solid and a light gray.
         </p>

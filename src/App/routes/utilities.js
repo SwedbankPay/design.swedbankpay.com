@@ -18,19 +18,25 @@ module.exports = [
                 title: "Borders",
                 path: "/utilities/borders",
                 componentPath: "utilities/Borders",
-                text: "Set borders that suit your needs"
+                text: "Set borders that suit your needs",
+                statusBadges: ["deprecated"],
+                deprecated: true
             },
             {
                 title: "Breakpoints",
                 path: "/utilities/breakpoints",
                 componentPath: "utilities/Breakpoints",
-                text: "See our display breakpoints"
+                text: "See our display breakpoints",
+                statusBadges: ["deprecated"],
+                deprecated: true
             },
             {
                 title: "Colors",
                 path: "/utilities/colors",
                 componentPath: "utilities/Colors",
-                text: "See our color utility classes"
+                text: "See our color utility classes",
+                statusBadges: ["deprecated"],
+                deprecated: true
             },
             {
                 title: "Cheat sheet",
@@ -42,13 +48,17 @@ module.exports = [
                 title: "Display",
                 path: "/utilities/display",
                 componentPath: "utilities/Display",
-                text: "See our display properties"
+                text: "See our display properties",
+                statusBadges: ["deprecated"],
+                deprecated: true
             },
             {
                 title: "Flex",
                 path: "/utilities/flex",
                 componentPath: "utilities/Flex",
-                text: "Layout, alignment and grid"
+                text: "Layout, alignment and grid",
+                statusBadges: ["deprecated"],
+                deprecated: true
             },
             {
                 title: "Images",
@@ -60,19 +70,25 @@ module.exports = [
                 title: "Sizing",
                 path: "/utilities/sizing",
                 componentPath: "utilities/Sizing",
-                text: "Size according to your needs"
+                text: "Size according to your needs",
+                statusBadges: ["deprecated"],
+                deprecated: true
             },
             {
                 title: "Text",
                 path: "/utilities/text",
                 componentPath: "utilities/Text",
-                text: "Control wrapping, weight and more"
+                text: "Control wrapping, weight and more",
+                statusBadges: ["deprecated"],
+                deprecated: true
             },
             {
                 title: "Visibility",
                 path: "/utilities/visibility",
                 componentPath: "utilities/Visibility",
-                text: "Control visibilities of display"
+                text: "Control visibilities of display",
+                statusBadges: ["deprecated"],
+                deprecated: true
             }
         ]
     }
