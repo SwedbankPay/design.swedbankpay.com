@@ -8,7 +8,7 @@ import { spacings, borders, breakpoints, colors, displayHidingElements, flex, im
 const Border = () => (
     <section id="borderOverview">
         <h2 id="border">Border</h2>
-            <ExpandableComponent items={borders}/>
+        <ExpandableComponent items={borders}/>
     </section>
 );
 
@@ -25,11 +25,11 @@ const Colors = () => (
     <section className="combinedExpandables">
         <h2 id="colors">Color</h2>
         <p>We have a few color utility classes. For more information about our colors, refer to this <a href="/identity/color">color section</a>.</p>
-        <div className="d-flex flex-wrap">
+        <div className="d-flex">
             <ExpandableComponent items={colors}/>
         </div>
     </section>
-)
+);
 
 const Display = () => (
     <section>
@@ -42,6 +42,7 @@ const Display = () => (
 const Flex = () => (
     <section className="combinedExpandables">
         <h2 id="flex">Flex</h2>
+        <p>For quickly managing the layout, alignment, sizing of grid columns, navigation, components and more.</p>
         <div className="d-flex flex-wrap">
             <ExpandableComponent items={flex}/>
         </div>
@@ -59,7 +60,7 @@ const Images = () => (
 const Sizing = () => (
     <section>
         <h2 id="sizing">Sizing</h2>
-        <p>Some information</p>
+        <p>Easily make an element as wide or tall as you like. (Relative to it&apos;s parent)</p>
         <ExpandableComponent items={sizings}/>
     </section>
 );
@@ -67,7 +68,7 @@ const Sizing = () => (
 const Spacing = () => (
     <section className="combinedExpandables">
         <h2 id="spacing">Spacing</h2>
-        <p>One can alter only desired sides of the element. Just add the letter t(op), b(ottom), l(eft) or r(ight) after your m(argin) or p(adding).</p> 
+        <p>One can alter only desired sides of the element. Just add the letter t(op), b(ottom), l(eft) or r(ight) after your m(argin) or p(adding).</p>
         <p>For example, <CodeTagComponent code="mt-5" type="secondary"/> will give <CodeTagComponent code="margin-top: 3rem" type="secondary"/></p>
         You can also approach the spacings with the x and y-axis. <CodeTagComponent type="secondary" code="my-5"/> will give you <CodeTagComponent code="margin-top: 3rem; margin-bottom: 3rem" type="secondary"/>
         <div className="d-flex flex-wrap mt-3">
@@ -95,29 +96,29 @@ const Visibility = () => (
 const CheatSheet = () => {
     useEffect(() => {
         expandable.init();
-    })
+    });
 
     return (
         <DocContainer>
-        <p className="lead">
-            The utility classes in our design system is based on Bootstrap. Here you can view (in our opinion) the <i>most</i> used and important classes.
-        </p>
-        <Border/>
-        <Breakpoints />
-        <Colors/>
-        <Display/>
-        <Flex/>
-        <Images/>
-        <Spacing />
-        <Sizing/>
-        <Text/>
-        <Visibility/>
-    </DocContainer>
+            <p className="lead">
+                The utility classes in our design system is based on Bootstrap. Here you can view (in our opinion) the <i>most</i> used and important classes.
+            </p>
+            <Border/>
+            <Breakpoints />
+            <Colors/>
+            <Display/>
+            <Flex/>
+            <Images/>
+            <Spacing />
+            <Sizing/>
+            <Text/>
+            <Visibility/>
+        </DocContainer>
     );
-}
+};
 
 export default CheatSheet;
 
 /* For testing */
 
-//export default { <components.....>};
+// export default { <components.....>};

@@ -1835,10 +1835,14 @@
     }
 
     .combinedExpandables {
-        .expandable {
-            width: 20.6rem;
+        > div {
+            gap: 1%;
             justify-content: space-between;
-            margin-right: 0.5rem;
+        }
+
+        .expandable {
+            width: 49%;
+            justify-content: space-between;
             margin-bottom: 0.2rem;
             height: fit-content;
         }
