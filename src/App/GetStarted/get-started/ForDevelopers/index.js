@@ -12,72 +12,103 @@ const brandTitle = process.env.brandTitle;
 
 const Installation = () => (
     <section>
-        <h2 id="installation">Installation with CDN</h2>
-        <p>To quickly add the {brandTitle} Design Guide to your project, include the snippets below in your project.</p>
-
-        <section>
-            <h3>Include in the header</h3>
-            <p>Copy-paste the following CSS code into <CodeTags type="secondary" code="<head>"/> before all the other stylesheets in order to load our CSS.</p>
-            <ComponentPreview language="html" codeFigure>
-                <link rel="stylesheet" href={`${window.location.origin + basename}styles/${brand}.css`} />
-            </ComponentPreview>
-        </section>
-        <section>
-            <h3>Include at the bottom</h3>
-            <p>Many of our components requires the use of JavaScript in order to function. Place the following <CodeTags type="secondary" code="<Script>"/> tag near the end of your pages, right before the closing <CodeTags type="secondary" code="</body>"/> tag to enable them.</p>
-            <ComponentPreview language="html" codeFigure>
-                <script src={`${window.location.origin + basename}scripts/dg.js`} global="true" autoload="true"></script>
-            </ComponentPreview>
-            <p>The <CodeTags type="secondary" code="global"/> attribute adds the script to the global scope. The <CodeTags type="secondary" code="autoload"/> attribute automatically initiates all components when loaded. Great for plug and play.</p>
-        </section>
         <section>
             <h2 id="installation-npm">Installation with NPM</h2>
             <p>If you want to host the Design Guide files in your own app, run the following command.</p>
             <ComponentPreview language="terminal" codeFigure>
-            npm install @swedbankpay/design-guide
+        npm install @swedbankpay/design-guide
             </ComponentPreview>
             <section>
-                <h3>Usage with NPM</h3>
-                <p>When importing the Design Guide javascript, you can choose to either import the whole thing or only the components you want to use.</p>
+                <h3>JavaScript</h3>
+                <p>Some of the Design System components require javascript (not all of them). To achieve this:
+                    <ul>
+                        <li>Import the scripts of each component used</li>
+                        <li>Once imported, to initialize each component we need to call its `init()`method.</li>
+                    </ul>
+                </p>
+                <div className="alert alert-informative">
+                    <i className="material-icons alert-icon" aria-hidden="true">info</i>
+                    <p><b>Recommended way:</b> Importing component per component means you do not end up importing the javascript for components you are not using. This way your js served to the user is smaller, thus enhancing a faster experience for the users.</p>
+                </div>
+                <p>Importing component per component:</p>
                 <ComponentPreview language="javascript" codeFigure>
-                import dg from &quot;@swedbankpay/design-guide&quot;; {"\n"}
-                dg.script.initAll();
+                                import &#123; expandable, sheet  &#125; from &quot;@swedbankpay/design-guide&quot;;  {"\n"}
+                                expandable.init(); {"\n"}
+                                sheet.init();
                 </ComponentPreview>
+                <p>You can also import the whole bundle:</p>
                 <ComponentPreview language="javascript" codeFigure>
-                import &#123; sheet &#125; from &quot;@swedbankpay/design-guide&quot;;  {"\n"}
-                sheet.init();
+                                import dg from &quot;@swedbankpay/design-guide&quot;; {"\n"}
+                                dg.script.initAll();
                 </ComponentPreview>
-                <p>For our CSS you can choose to import it from a <CodeTags type="secondary" code="css/less/scss"/> file, from a <CodeTags type="secondary" code="js"/> file if your bundler supports it, or point to the file directly from your bundler.</p>
+                <div className="alert alert-informative">
+                    <i className="material-icons alert-icon" aria-hidden="true">info</i>
+                    <p><b>Standards:</b> Our JS uses modern features such as optional-chaining. If you're experiencing issues you might want to look at our browser support. In the case our browser support is not enough for your project you might want to use polyfills and/or Babel transpiling to fix it.<br></br>Also, some build tools such as Webpack 4 do not support some of those features. You can then use Babel to transpile the code from the Design System package.</p>
+                </div>
+            </section>
+            <section>
+                <h3>CSS/Less</h3>
+                <p>For our CSS you can choose to import it from a <CodeTags type="secondary" code="css/less/scss"/> file, from a <CodeTags type="secondary" code="js"/> file if your bundler supports it, <em>or</em> point to the file directly from your bundler.</p>
+                <p>We do not have a recommended way so far. This being said, importing from the style file might be easier and can leverage the CSS layers ( <CodeTags type="secondary" code="@layer"/> ).</p>
+                <h4>Importing from a style file</h4>
                 <p>Example from a <CodeTags type="secondary" code=".less"/> file</p>
                 <ComponentPreview language="css" codeFigure>
-                @import url(&quot;@swedbankpay/design-guide/src/less/{brand}.less&quot;);
+                    @import url(&quot;@swedbankpay/design-guide/src/less/{brand}.less&quot;);
                 </ComponentPreview>
+                <h4>Importing through the build tool</h4>
                 <p>Example from <CodeTags type="secondary" code="angular.json"/></p>
                 <ComponentPreview language="json" codeFigure>
-            &quot;styles&quot;: [ {"\n"}
-                &nbsp; &quot;src/app.less&quot;, {"\n"}
-                &nbsp; &quot;./node_modules/@swedbankpay/design-guide/src/less/{brand}.less&quot; {"\n"}
-            ],
+                    &quot;styles&quot;: [ {"\n"}
+                        &nbsp; &quot;src/app.less&quot;, {"\n"}
+                        &nbsp; &quot;./node_modules/@swedbankpay/design-guide/src/less/{brand}.less&quot; {"\n"}
+                    ],
                 </ComponentPreview>
                 <p>Example from <CodeTags type="secondary" code="nuxt.config.js"/></p>
                 <ComponentPreview language="javascript" codeFigure>
-            &quot;css&quot;: [ {"\n"}
-                &nbsp; &quot;./node_modules/@swedbankpay/design-guide/src/less/{brand}.less&quot; {"\n"}
-            ],
+                    &quot;css&quot;: [ {"\n"}
+                        &nbsp; &quot;./node_modules/@swedbankpay/design-guide/src/less/{brand}.less&quot; {"\n"}
+                    ],
                 </ComponentPreview>
+                <div className="alert alert-informative">
+                    <i className="material-icons alert-icon" aria-hidden="true">info</i>
+                    <p><b>Import only once:</b> Either import from the style file <em>OR</em> from the build tool. If you import through both you will end up loading twice the styles on the client, which has a negative impact on the web-performance.</p>
+                </div>
             </section>
             <section>
                 <h3>Installing individual components</h3>
                 <p>Import <CodeTags type="primary" code={`variables-${brand}.less`}/> and the desired component, i.e. Expandable:</p>
                 <ComponentPreview language="css" codeFigure>
-                @import url(&quot;@swedbankpay/design-guide/src/less/variables-{brand}.less&quot;); {"\n"}
-                @import url(&quot;@swedbankpay/design-guide/src/less/components/expandable.less&quot;);
+                    @import url(&quot;@swedbankpay/design-guide/src/less/variables-{brand}.less&quot;); {"\n"}
+                    @import url(&quot;@swedbankpay/design-guide/src/less/components/expandable.less&quot;);
                 </ComponentPreview>
+                <div className="alert alert-informative">
+                    <i className="material-icons alert-icon" aria-hidden="true">info</i>
+                    <p><b>Web-perf:</b> Importing the style of individual components means fewer css imported, hence smaller file size. If you do not want to import them individually then you might want to check about tree-shaking (purging dead code).</p>
+                </div>
             </section>
             <section>
                 <h3>Design guide light demonstration</h3>
                 <p>In this video we show a real life example on how to use the design guide through NPM.</p>
                 <DGLightVideo/>
+            </section>
+        </section>
+        <section>
+            <h2 id="installation">Installation with CDN</h2>
+            <p>To quickly add the {brandTitle} Design Guide to your project, include the snippets below in your project.</p>
+            <section>
+                <h3>Include in the header</h3>
+                <p>Copy-paste the following CSS code into <CodeTags type="secondary" code="<head>"/> before all the other stylesheets in order to load our CSS.</p>
+                <ComponentPreview language="html" codeFigure>
+                    <link rel="stylesheet" href={`${window.location.origin + basename}styles/${brand}.css`} />
+                </ComponentPreview>
+            </section>
+            <section>
+                <h3>Include at the bottom</h3>
+                <p>Many of our components requires the use of JavaScript in order to function. Place the following <CodeTags type="secondary" code="<Script>"/> tag near the end of your pages, right before the closing <CodeTags type="secondary" code="</body>"/> tag to enable them.</p>
+                <ComponentPreview language="html" codeFigure>
+                    <script src={`${window.location.origin + basename}scripts/dg.js`} global="true" autoload="true"></script>
+                </ComponentPreview>
+                <p>The <CodeTags type="secondary" code="global"/> attribute adds the script to the global scope. The <CodeTags type="secondary" code="autoload"/> attribute automatically initiates all components when loaded. Great for plug and play.</p>
             </section>
         </section>
         <section>
@@ -102,6 +133,10 @@ const Installation = () => (
                         <p>{browser.text}</p>
                     </div>
                 ))}
+            </div>
+            <div className="alert alert-informative mt-4">
+                <i className="material-icons alert-icon" aria-hidden="true">info</i>
+                <p><b>Target Browser:</b> "Last 3 versions, > 1%, not dead"</p>
             </div>
             <h4>Browser support for products using the Design Guide</h4>
             <p>It is up to every Project manager and development team to decide which browsers their product should support. If you want to support other browsers than the ones supported by the Design Guide you need to maintain and test the component code in in your project. </p>
