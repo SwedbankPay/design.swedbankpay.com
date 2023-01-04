@@ -14,7 +14,7 @@
         "mocha": true,
         "jest/globals": true
     },
-    "globals": { 
+    "globals": {
         "dg": true
     },
     "plugins": [
@@ -51,7 +51,6 @@
         "block-scoped-var":                     ["warn"],
         "brace-style":                          ["error", "1tbs", { "allowSingleLine": true }],
         "camelcase":                            ["warn"],
-        "comma-dangle":                         ["warn", "never"],
         "comma-spacing":                        ["warn"],
         "comma-style":                          ["warn"],
         "computed-property-spacing":            ["warn"],

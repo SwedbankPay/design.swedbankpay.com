@@ -37,9 +37,10 @@
   "browserslist": [
     "last 3 versions",
     "> 1%",
-    "ie >= 11"
+    "not dead"
   ],
   "dependencies": {
+    "@codesandbox/sandpack-react": "^1.18.4",
     "@sentry/browser": "^6.9.0",
     "chalk": "^4.1.1",
     "chart.js": "^2.9.4",
