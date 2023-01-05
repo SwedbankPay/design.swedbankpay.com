@@ -90,7 +90,10 @@ const ComponentPreview = ({
             template="vanilla"
             customSetup={{
                 dependencies: {
-                    "@swedbankpay/design-guide": "10.3.0"
+                    "@swedbankpay/design-guide": "10.5.1"
+                },
+                devDependencies: {
+                    "@babel/core": "7.2.0",
                 },
             }}
             options={{
