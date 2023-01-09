@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, cloneElement } from "react";
 import PropTypes from "prop-types";
 import { SandpackProvider, SandpackCodeEditor, SandpackPreview } from "@codesandbox/sandpack-react";
 import { codeParsingForEditor } from "./codeParserFuncsForEditor";
 import { ShowCasePanelAdvanced } from "./ShowCasePanelAdvanced";
+import { useCodeParser } from "./useCodeParser";
 
+// TODO: should the preview of showCasePanel & the one of advancedShowCasePanel use the same component ?
+// in a way it is using the same SndpackPreview, so it would keep them in sync (e.g. add additional button "copy to clipboard", etc)
+// on the other hand the whole container around is different (for some reason)
 const ShowCasePanel = ({ showCasePanelSm, negative }) => (
     <div className={`showcase-panel${showCasePanelSm ? " showcasepanel-sm" : ""}${negative ? " showcase-panel-negative" : ""}`}>
         <SandpackPreview />
@@ -12,6 +16,10 @@ const ShowCasePanel = ({ showCasePanelSm, negative }) => (
 
 const CodeFigure = () => <SandpackCodeEditor showInlineErrors />;
 
+// TODO: fix the previous componentsDidUpdate -> it used to re-init things like tab, etc
+// TODO: fix styling of tabs & options (classes brought by Sandpack screw our own styling)
+// TODO: fix the initial options active
+// TODO: fix the setActiveOptions on sidebar
 const ComponentPreview = ({
     children: childrenPassed,
     language,
@@ -27,7 +35,50 @@ const ComponentPreview = ({
     negative
 }) => {
 
+    const [codeParsed, setCodeParsed] = useCodeParser({ showCasePanelAdvanced,
+        childrenPassed,
+        activeTab,
+        activeOptions });
     const [activeTab, setActiveTab] = useState(showCasePanelAdvanced?.elements[0]);
+
+    // TODO: set initial activeOptions: -> CANNOT CHECK WITH CHECKBOXES (broken ?) only exist in prod with radio
+    /**
+     * An activeOption
+     * @typedef {Object} ActiveOption
+     * @property {string|undefined} description - The optional description, for the text
+     * @property {string} id - The option id
+     * @property {object} value - The option value (e.g. `size: "lg",` -or- `disabled: true,`)
+     */
+
+    const [activeOptions, setActiveOptions] = useState(showCasePanelAdvanced?.elements[0]?.activeOptions ? [...showCasePanelAdvanced.elements[0].activeOptions] : []);
+
+    const updateActiveOptions = (inputModified, inputType) => {
+
+        // if radio => id = id of the section
+        // checkbox id = each their own id
+        // dropdown => ?! where are dropdown used ?!! 🤔
+
+        if (inputType === "checkbox") {
+            if (activeOptions.some(option => option.id === inputModified.id)) {
+                setActiveOptions(
+                    [...activeOptions.filter(option => option.id !== inputModified.id)]
+                );
+            } else {
+                setActiveOptions(
+                    [...activeOptions.filter(option => option.id !== inputModified.id),
+                        inputModified]
+                );
+            }
+        }
+
+        /* dropdown.id,
+        dropdown.values[e.target.value].value,
+        dropdown.values[e.target.value].description */
+
+        /* radio.id,
+        radio.values[e.target.value].value,
+        radio.values[e.target.value].description */
+    };
 
     const content = () => {
         if (showCasePanel) {
@@ -37,6 +88,8 @@ const ComponentPreview = ({
                         showCasePanelAdvanced={showCasePanelAdvanced}
                         activeTab={activeTab}
                         setActiveTab={setActiveTab}
+                        activeOptions={activeOptions}
+                        updateActiveOptions={updateActiveOptions}
                     >
                         <CodeFigure
                             childrenPassed={childrenPassed}
@@ -72,13 +125,25 @@ const ComponentPreview = ({
         }
     };
 
+    // TODO: should this function be moved to the "codeParsingUtilities" file ?
+    // in this case we would have to transfer all {...args}
+    // if used anywhere else -> should it be a custom hook ? (but I don't think it is used anywhere else, so probably not needed)
     const code = () => {
+        console.log("code func called");
+
         let code = "";
 
         if (!showCasePanelAdvanced || !showCasePanelAdvanced.elements?.length) {
-            code = codeParsingForEditor(childrenPassed, language, removeOuterTag, removeList, dangerousHTML, hideValue);
+            code = codeParsingForEditor(childrenPassed, language, removeOuterTag, removeList, dangerousHTML, hideValue, activeOptions);
         } else {
-            code = codeParsingForEditor(activeTab?.component, language, removeOuterTag, removeList, dangerousHTML, hideValue);
+            const componentCodeToParse = cloneElement(activeTab.component,
+                activeOptions.reduce((acc, currentOption) => ({
+                    ...acc,
+                    ...currentOption.value
+                }), {})
+            );
+
+            code = codeParsingForEditor(componentCodeToParse, language, removeOuterTag, removeList, dangerousHTML, hideValue, activeOptions);
         }
 
         return code;
@@ -109,6 +174,9 @@ const ComponentPreview = ({
                     active: true
                 },
                 "src/index.js": {
+                    // TODO: refactor moving this ugly code somewhere else
+                    // TODO: make this JS initialization specific per component and show it to the user in tabs, until then it can be hidden
+                    hidden: true,
                     code:
 `import dg from "@swedbankpay/design-guide";
 dg.script.initAll();

@@ -246,6 +246,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
 
         setActiveOptions (id, value, description, checkbox) {
             if (checkbox) {
+                // if this checkbox is already in the activeOptions -> remove it
                 if (this.state.activeOptions.filter(option => id === option.id).length > 0) {
                     this.setState(prevState => ({ ...prevState,
                         activeOptions: this.state.activeOptions.filter(option => id !== option.id) }));
