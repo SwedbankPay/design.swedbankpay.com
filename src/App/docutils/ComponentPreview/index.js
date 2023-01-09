@@ -35,10 +35,6 @@ const ComponentPreview = ({
     negative
 }) => {
 
-    const [codeParsed, setCodeParsed] = useCodeParser({ showCasePanelAdvanced,
-        childrenPassed,
-        activeTab,
-        activeOptions });
     const [activeTab, setActiveTab] = useState(showCasePanelAdvanced?.elements[0]);
 
     // TODO: set initial activeOptions: -> CANNOT CHECK WITH CHECKBOXES (broken ?) only exist in prod with radio
@@ -48,9 +44,18 @@ const ComponentPreview = ({
      * @property {string|undefined} description - The optional description, for the text
      * @property {string} id - The option id
      * @property {object} value - The option value (e.g. `size: "lg",` -or- `disabled: true,`)
-     */
+    */
 
     const [activeOptions, setActiveOptions] = useState(showCasePanelAdvanced?.elements[0]?.activeOptions ? [...showCasePanelAdvanced.elements[0].activeOptions] : []);
+    const codeParsed = useCodeParser({ showCasePanelAdvanced,
+        childrenPassed,
+        activeTab,
+        activeOptions,
+        language,
+        removeOuterTag,
+        removeList,
+        dangerousHTML,
+        hideValue });
 
     const updateActiveOptions = (inputModified, inputType) => {
 
@@ -125,30 +130,6 @@ const ComponentPreview = ({
         }
     };
 
-    // TODO: should this function be moved to the "codeParsingUtilities" file ?
-    // in this case we would have to transfer all {...args}
-    // if used anywhere else -> should it be a custom hook ? (but I don't think it is used anywhere else, so probably not needed)
-    const code = () => {
-        console.log("code func called");
-
-        let code = "";
-
-        if (!showCasePanelAdvanced || !showCasePanelAdvanced.elements?.length) {
-            code = codeParsingForEditor(childrenPassed, language, removeOuterTag, removeList, dangerousHTML, hideValue, activeOptions);
-        } else {
-            const componentCodeToParse = cloneElement(activeTab.component,
-                activeOptions.reduce((acc, currentOption) => ({
-                    ...acc,
-                    ...currentOption.value
-                }), {})
-            );
-
-            code = codeParsingForEditor(componentCodeToParse, language, removeOuterTag, removeList, dangerousHTML, hideValue, activeOptions);
-        }
-
-        return code;
-    };
-
     return (
         <SandpackProvider
             theme="dark"
@@ -170,7 +151,7 @@ const ComponentPreview = ({
             }}
             files={{
                 "/index.html": {
-                    code: code(),
+                    code: codeParsed,
                     active: true
                 },
                 "src/index.js": {
