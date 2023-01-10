@@ -64,7 +64,7 @@ export const spacingClasses = {
             px: "48px"
         }
     ]
-}
+};
 
 export const borderClasses = [
     {
@@ -87,7 +87,7 @@ export const borderClasses = [
         name: "border-right",
         css: "border-right: 1px solid @light-brown"
     }
-]
+];
 
 export const breakpointClasses = [
     {
@@ -155,9 +155,9 @@ export const hidingElementClasses = {
         {
             screenSize: "Visble only on xxl",
             dClass: "d-xxl-block"
-        },
+        }
     ],
-    
+
     notation: [
         {
             value: "d-none",
@@ -307,7 +307,7 @@ export const flexClasses = {
         },
         {
             code: "align-items-{breakpoint}-stretch"
-        },
+        }
     ],
 
     alignSelf: [
@@ -354,16 +354,16 @@ export const flexClasses = {
 
     growAndShrink: [
         {
-            code: "flex-{grow|shrink}-0",
+            code: "flex-{grow|shrink}-0"
         },
         {
-            code: "flex-{grow|shrink}-1",
+            code: "flex-{grow|shrink}-1"
         },
         {
-            code: "flex-{breakpoint}-{grow|shrink}-0",
+            code: "flex-{breakpoint}-{grow|shrink}-0"
         },
         {
-            code: "flex-{breakpoint}-{grow|shrink}-1",
+            code: "flex-{breakpoint}-{grow|shrink}-1"
         }
     ],
 
@@ -378,7 +378,7 @@ export const flexClasses = {
             code: "flex-wrap-reverse"
         }
     ],
-    
+
     order: [
         {
             code: "order-{0-12}"
@@ -420,7 +420,7 @@ export const flexClasses = {
             code: "align-content-{breakpoint}-stretch"
         }
     ]
-}
+};
 
 export const imageClasses = [
     {
@@ -453,7 +453,7 @@ export const sizingClasses = [
     },
     {
         code: "{w|h}-100"
-    },
+    }
 ];
 
 export const textClasses = [
