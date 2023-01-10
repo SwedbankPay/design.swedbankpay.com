@@ -6,7 +6,7 @@ const UtilityPresenter = ({ util, css, example, breakpointVersion }) => (
     <div className="d-flex justify-content-between mb-2">
         <CodeTagComponent code={util} type="primary"/>
         <CodeTagComponent code={css} type="secondary"/>
-        {breakpointVersion ? <CodeTagComponent code={example}/> : <>{example && <span>{example}</span>}</>}
+        {breakpointVersion ? <CodeTagComponent type="tertiary" code={example}/> : <>{example && <span>{example}</span>}</>}
     </div>
 );
 
@@ -29,8 +29,8 @@ export const borders = [
         title: "Border",
         subtitle: "Gives borders to an element.",
         content: <>
-            {borderClasses.map(rule => (
-                <UtilityPresenter key={rule} util={rule.name} css={rule.css}/>
+            {borderClasses.map((rule, i) => (
+                <UtilityPresenter key={rule + i} util={rule.name} css={rule.css}/>
             ))}
         </>
     }];
@@ -46,8 +46,8 @@ export const breakpoints = [
                 <p className="font-weight-bold">Min-width</p>
                 <p className="font-weight-bold">Example use</p>
             </div>
-            {breakpointClasses.map(rule => (
-                <UtilityPresenter breakpointVersion key={rule} util={rule.name} css={rule.css} example={rule.px}/>
+            {breakpointClasses.map((rule, i) => (
+                <UtilityPresenter breakpointVersion key={rule + i} util={rule.name} css={rule.css} example={rule.px}/>
             ))}
         </>
     }
@@ -59,8 +59,8 @@ export const spacings = [
         title: "Margin",
         subtitle: "For seperating elements.",
         content: <>
-            {spacingClasses.margins.map(rule => (
-                <UtilityPresenter key={rule} util={rule.name} css={rule.css} example={rule.px}/>
+            {spacingClasses.margins.map((rule, i) => (
+                <UtilityPresenter key={rule + i} util={rule.name} css={rule.css} example={rule.px}/>
             ))}
         </>
     },
@@ -69,8 +69,8 @@ export const spacings = [
         title: "Padding",
         subtitle: "Give the element some space.",
         content: <>
-            {spacingClasses.paddings.map(rule => (
-                <UtilityPresenter key={rule} util={rule.name} css={rule.css} example={rule.px}/>
+            {spacingClasses.paddings.map((rule, i) => (
+                <UtilityPresenter key={rule + i} util={rule.name} css={rule.css} example={rule.px}/>
             ))}
         </>
     }
@@ -115,8 +115,8 @@ export const displayHidingElements = [
         title: "Notation",
         subtitle: "Quick display classes. d(isplay)-<value>",
         content: <>
-            {hidingElementClasses.notation.map(rule => (
-                <DisplayPresenter key={rule} util={rule.value} css={rule.css}/>
+            {hidingElementClasses.notation.map((rule, i) => (
+                <DisplayPresenter key={rule + i} util={rule.value} css={rule.css}/>
             ))}
         </>
     },
@@ -125,8 +125,8 @@ export const displayHidingElements = [
         title: "Hiding elements",
         subtitle: "For faster mobile-friendly development",
         content: <>
-            {hidingElementClasses.hidingElements.map(rule => (
-                <DisplayPresenter key={rule} util={rule.screenSize} css={rule.dClass} textVersion/>
+            {hidingElementClasses.hidingElements.map((rule, i) => (
+                <DisplayPresenter key={rule + i} util={rule.screenSize} css={rule.dClass} textVersion/>
             ))}
         </>
     }
@@ -138,8 +138,8 @@ export const flex = [
         title: "Enable flex bahaviour",
         subtitle: "For creating a flexbox",
         content: <>
-            {flexClasses.flexBehaviour.map(rule => (
-                <FlexPresenter key={rule} code={rule.code} explaination={rule.explaination}/>
+            {flexClasses.flexBehaviour.map((rule, i) => (
+                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
             ))}
         </>
     },
@@ -148,8 +148,8 @@ export const flex = [
         title: "Direction",
         subtitle: "Direct the flex",
         content: <>
-            {flexClasses.direction.map(rule => (
-                <FlexPresenter key={rule} code={rule.code} explaination={rule.explaination}/>
+            {flexClasses.direction.map((rule, i) => (
+                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
             ))}
         </>
     },
@@ -158,8 +158,8 @@ export const flex = [
         title: "Justify content",
         subtitle: "Justify your flex contents",
         content: <>
-            {flexClasses.justifyContent.map(rule => (
-                <FlexPresenter key={rule} code={rule.code} explaination={rule.explaination}/>
+            {flexClasses.justifyContent.map((rule, i) => (
+                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
             ))}
         </>
     },
@@ -168,8 +168,8 @@ export const flex = [
         title: "Align items",
         subtitle: "Align set of elements",
         content: <>
-            {flexClasses.alignItems.map(rule => (
-                <FlexPresenter key={rule} code={rule.code} explaination={rule.explaination}/>
+            {flexClasses.alignItems.map((rule, i) => (
+                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
             ))}
         </>
     },
@@ -178,8 +178,8 @@ export const flex = [
         title: "Align self",
         subtitle: "Align element",
         content: <>
-            {flexClasses.alignSelf.map(rule => (
-                <FlexPresenter key={rule} code={rule.code} explaination={rule.explaination}/>
+            {flexClasses.alignSelf.map((rule, i) => (
+                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
             ))}
         </>
     },
@@ -188,8 +188,8 @@ export const flex = [
         title: "Fill",
         subtitle: "Flex fill",
         content: <>
-            {flexClasses.fill.map(rule => (
-                <FlexPresenter key={rule} code={rule.code} explaination={rule.explaination}/>
+            {flexClasses.fill.map((rule, i) => (
+                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
             ))}
         </>
     },
@@ -198,8 +198,8 @@ export const flex = [
         title: "Grow and shrink",
         subtitle: "Effective use of space",
         content: <>
-            {flexClasses.growAndShrink.map(rule => (
-                <FlexPresenter key={rule} code={rule.code} explaination={rule.explaination}/>
+            {flexClasses.growAndShrink.map((rule, i) => (
+                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
             ))}
         </>
     },
@@ -208,8 +208,8 @@ export const flex = [
         title: "Wrap",
         subtitle: "Nowrap is a browsers defualt",
         content: <>
-            {flexClasses.wrap.map(rule => (
-                <FlexPresenter key={rule} code={rule.code} explaination={rule.explaination}/>
+            {flexClasses.wrap.map((rule, i) => (
+                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
             ))}
         </>
     },
@@ -218,8 +218,8 @@ export const flex = [
         title: "Order",
         subtitle: "Modifies the visual order",
         content: <>
-            {flexClasses.order.map(rule => (
-                <FlexPresenter key={rule} code={rule.code} explaination={rule.explaination}/>
+            {flexClasses.order.map((rule, i) => (
+                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
             ))}
         </>
     },
@@ -228,8 +228,8 @@ export const flex = [
         title: "Align content",
         subtitle: "No effect on single rows of flex items",
         content: <>
-            {flexClasses.alignContent.map(rule => (
-                <FlexPresenter key={rule} code={rule.code} explaination={rule.explaination}/>
+            {flexClasses.alignContent.map((rule, i) => (
+                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
             ))}
         </>
     }
@@ -241,8 +241,8 @@ export const images = [
         title: "Images",
         subtitle: "Utility classes to your images",
         content: <>
-            {imageClasses.map(rule => (
-                <DisplayPresenter key={rule} util={rule.explaination} css={rule.code} textVersion/>
+            {imageClasses.map((rule, i) => (
+                <DisplayPresenter key={rule + i} util={rule.explaination} css={rule.code} textVersion/>
             ))}
         </>
     }
@@ -254,8 +254,8 @@ export const sizings = [
         title: "Sizing",
         subtitle: "Resize your elements",
         content: <>
-            {sizingClasses.map(rule => (
-                <FlexPresenter key={rule} code={rule.code}/>
+            {sizingClasses.map((rule, i) => (
+                <FlexPresenter key={rule + i} code={rule.code}/>
             ))}
         </>
     }
@@ -267,8 +267,8 @@ export const text = [
         title: "Text",
         subtitle: "Modify your text elements",
         content: <>
-            {textClasses.map(rule => (
-                <FlexPresenter key={rule} code={rule.code}/>
+            {textClasses.map((rule, i) => (
+                <FlexPresenter key={rule + i} code={rule.code}/>
             ))}
         </>
     }
@@ -280,8 +280,8 @@ export const visibility = [
         title: "Visibility",
         subtitle: "Modify the visual representation of your elements",
         content: <>
-            {visibilityClasses.map(rule => (
-                <FlexPresenter key={rule} code={rule.code}/>
+            {visibilityClasses.map((rule, i) => (
+                <FlexPresenter key={rule + i} code={rule.code}/>
             ))}
         </>
     }
