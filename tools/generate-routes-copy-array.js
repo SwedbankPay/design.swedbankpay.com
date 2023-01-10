@@ -2,7 +2,6 @@ const ROOTROUTES = ["/components", "/core", "examples", "/utilities", "/get-star
 const componentsRoutes = require("../src/App/routes/components");
 const coreRoutes = require("../src/App/routes/identity");
 const getStartedRoutes = require("../src/App/routes/get-started");
-const utilitiesRoutes = require("../src/App/routes/utilities");
 const patternsRoutes = require("../src/App/routes/patterns");
 // const examplesRoutes = require("../src/App/routes/examples");
 
@@ -13,7 +12,6 @@ const getRoutes = () => {
         ...componentsRoutes,
         ...coreRoutes,
         ...getStartedRoutes,
-        ...utilitiesRoutes,
         ...patternsRoutes
         // ...examplesRoutes
     ].forEach(route => {
