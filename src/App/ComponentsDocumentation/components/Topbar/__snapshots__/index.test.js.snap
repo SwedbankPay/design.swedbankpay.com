@@ -71,9 +71,9 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
       />
        to specify the maximum width the topbar should be sticky (see 
       <Link
-        to="/utilities/breakpoints"
+        to="/utilities"
       >
-        breakpoints
+        utilities
       </Link>
        for more information on breakpoints). 
     </p>

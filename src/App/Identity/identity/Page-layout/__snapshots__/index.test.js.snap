@@ -21,7 +21,7 @@ exports[`Utilities: PageLayout CenteredContent renders 1`] = `
     </Link>
     ). When the content is centered it will require 
     <Link
-      to="/utilities/borders"
+      to="/utilities"
     >
       borders
     </Link>
