@@ -1,9 +1,9 @@
-import React, { useState, cloneElement } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { SandpackProvider, SandpackCodeEditor, SandpackPreview } from "@codesandbox/sandpack-react";
-import { codeParsingForEditor } from "./codeParserFuncsForEditor";
 import { ShowCasePanelAdvanced } from "./ShowCasePanelAdvanced";
 import { useCodeParser } from "./useCodeParser";
+import { resetOptions } from "./optionsUtils";
 
 // TODO: should the preview of showCasePanel & the one of advancedShowCasePanel use the same component ?
 // in a way it is using the same SndpackPreview, so it would keep them in sync (e.g. add additional button "copy to clipboard", etc)
@@ -16,10 +16,8 @@ const ShowCasePanel = ({ showCasePanelSm, negative }) => (
 
 const CodeFigure = () => <SandpackCodeEditor showInlineErrors />;
 
-// TODO: fix the previous componentsDidUpdate -> it used to re-init things like tab, etc
+// TODO: fix the previous componentsDidUpdate -> it used to re-init things like tab, accordion, hint-expander, sheetetc
 // TODO: fix styling of tabs & options (classes brought by Sandpack screw our own styling)
-// TODO: fix the initial options active
-// TODO: fix the setActiveOptions on sidebar
 const ComponentPreview = ({
     children: childrenPassed,
     language,
@@ -37,7 +35,6 @@ const ComponentPreview = ({
 
     const [activeTab, setActiveTab] = useState(showCasePanelAdvanced?.elements[0]);
 
-    // TODO: set initial activeOptions: -> CANNOT CHECK WITH CHECKBOXES (broken ?) only exist in prod with radio
     /**
      * An activeOption
      * @typedef {Object} ActiveOption
@@ -79,6 +76,15 @@ const ComponentPreview = ({
         }
 
     };
+
+    const jsInitAllCode =
+    `import dg from "@swedbankpay/design-guide";
+    dg.script.initAll();
+    /* but if can adapt for each examples then the best would be to use the recommended way, i.e. importing only the specific element. But for this demo we don't care 😬
+    EXAMPLE:
+    import { accordion } from "@swedbankpay/design-guide";
+    accordion.init();
+    */`;
 
     const content = () => {
         if (showCasePanel) {
@@ -125,6 +131,10 @@ const ComponentPreview = ({
         }
     };
 
+    useEffect(() => {
+        resetOptions({ showCasePanelAdvanced });
+    }, [activeTab]);
+
     return (
         <SandpackProvider
             theme="dark"
@@ -152,14 +162,7 @@ const ComponentPreview = ({
                 "src/index.js": {
                     // TODO: make this JS initialization specific per component and show it to the user in tabs, until then it can be hidden
                     hidden: true,
-                    code:
-`import dg from "@swedbankpay/design-guide";
-dg.script.initAll();
-/* but if can adapt for each examples then the best would be to use the recommended way, i.e. importing only the specific element. But for this demo we don't care 😬
-EXAMPLE:
-import { accordion } from "@swedbankpay/design-guide";
-accordion.init();
-*/`
+                    code: jsInitAllCode,
                 }
             }}
         >
