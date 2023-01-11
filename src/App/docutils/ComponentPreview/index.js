@@ -59,10 +59,6 @@ const ComponentPreview = ({
 
     const updateActiveOptions = (inputModified, inputType) => {
 
-        // if radio => id = id of the section
-        // checkbox id = each their own id
-        // dropdown => ?! where are dropdown used ?!! 🤔
-
         if (inputType === "checkbox") {
             if (activeOptions.some(option => option.id === inputModified.id)) {
                 setActiveOptions(
@@ -74,15 +70,14 @@ const ComponentPreview = ({
                         inputModified]
                 );
             }
+        } else {
+            setActiveOptions([...activeOptions.filter(option => inputModified.id !== option.id), {
+                id: inputModified.id,
+                value: inputModified.value,
+                description: inputModified.description
+            }]);
         }
 
-        /* dropdown.id,
-        dropdown.values[e.target.value].value,
-        dropdown.values[e.target.value].description */
-
-        /* radio.id,
-        radio.values[e.target.value].value,
-        radio.values[e.target.value].description */
     };
 
     const content = () => {
@@ -155,7 +150,6 @@ const ComponentPreview = ({
                     active: true
                 },
                 "src/index.js": {
-                    // TODO: refactor moving this ugly code somewhere else
                     // TODO: make this JS initialization specific per component and show it to the user in tabs, until then it can be hidden
                     hidden: true,
                     code:
