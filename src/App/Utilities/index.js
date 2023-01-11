@@ -83,7 +83,7 @@ const utilitiyDocPresenter = [
 const Utilities = () => {
     useEffect(() => {
         expandable.init();
-    });
+    }, []);
 
     return (
         <div className="doc-container utilities-page">

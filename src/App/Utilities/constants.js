@@ -139,7 +139,7 @@ export const flex = [
         subtitle: "For creating a flexbox",
         content: <>
             {flexClasses.flexBehaviour.map((rule, i) => (
-                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
+                <FlexPresenter key={rule + i} code={rule.code}/>
             ))}
         </>
     },
@@ -149,7 +149,7 @@ export const flex = [
         subtitle: "Direct the flex",
         content: <>
             {flexClasses.direction.map((rule, i) => (
-                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
+                <FlexPresenter key={rule + i} code={rule.code} />
             ))}
         </>
     },
@@ -159,7 +159,7 @@ export const flex = [
         subtitle: "Justify your flex contents",
         content: <>
             {flexClasses.justifyContent.map((rule, i) => (
-                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
+                <FlexPresenter key={rule + i} code={rule.code} />
             ))}
         </>
     },
@@ -169,7 +169,7 @@ export const flex = [
         subtitle: "Align set of elements",
         content: <>
             {flexClasses.alignItems.map((rule, i) => (
-                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
+                <FlexPresenter key={rule + i} code={rule.code} />
             ))}
         </>
     },
@@ -179,7 +179,7 @@ export const flex = [
         subtitle: "Align element",
         content: <>
             {flexClasses.alignSelf.map((rule, i) => (
-                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
+                <FlexPresenter key={rule + i} code={rule.code} />
             ))}
         </>
     },
@@ -189,7 +189,7 @@ export const flex = [
         subtitle: "Flex fill",
         content: <>
             {flexClasses.fill.map((rule, i) => (
-                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
+                <FlexPresenter key={rule + i} code={rule.code} />
             ))}
         </>
     },
@@ -199,7 +199,7 @@ export const flex = [
         subtitle: "Effective use of space",
         content: <>
             {flexClasses.growAndShrink.map((rule, i) => (
-                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
+                <FlexPresenter key={rule + i} code={rule.code} />
             ))}
         </>
     },
@@ -209,7 +209,7 @@ export const flex = [
         subtitle: "Nowrap is a browsers defualt",
         content: <>
             {flexClasses.wrap.map((rule, i) => (
-                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
+                <FlexPresenter key={rule + i} code={rule.code} />
             ))}
         </>
     },
@@ -219,7 +219,7 @@ export const flex = [
         subtitle: "Modifies the visual order",
         content: <>
             {flexClasses.order.map((rule, i) => (
-                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
+                <FlexPresenter key={rule + i} code={rule.code} />
             ))}
         </>
     },
@@ -229,7 +229,7 @@ export const flex = [
         subtitle: "No effect on single rows of flex items",
         content: <>
             {flexClasses.alignContent.map((rule, i) => (
-                <FlexPresenter key={rule + i} code={rule.code} explaination={rule.explaination}/>
+                <FlexPresenter key={rule + i} code={rule.code} />
             ))}
         </>
     }
