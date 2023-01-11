@@ -9,7 +9,7 @@ describe("Utilities: index", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Utilities />);
+        const wrapper = shallow(<Utilities/>);
 
         expect(wrapper).toMatchSnapshot();
     });

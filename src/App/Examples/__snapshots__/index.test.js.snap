@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Examples: index renders 1`] = `
-<RenderPage
-  initPath="/examples/login"
-  path="/examples"
-/>
-`;

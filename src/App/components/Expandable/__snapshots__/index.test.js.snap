@@ -75,7 +75,7 @@ exports[`Component: Expandable returns a number of expandables matching the leng
 >
   <div
     className="expandable"
-    key="0"
+    key="Foo0"
   >
     
 
@@ -102,14 +102,12 @@ exports[`Component: Expandable returns a number of expandables matching the leng
     <div
       className="expandable-body"
     >
-      <p>
-        My accordion content
-      </p>
+      My accordion content
     </div>
   </div>
   <div
     className="expandable"
-    key="1"
+    key="Bar1"
   >
     
 
@@ -136,14 +134,12 @@ exports[`Component: Expandable returns a number of expandables matching the leng
     <div
       className="expandable-body"
     >
-      <p>
-        My accordion content
-      </p>
+      My accordion content
     </div>
   </div>
   <div
     className="expandable"
-    key="2"
+    key="Baz2"
   >
     
 
@@ -170,9 +166,7 @@ exports[`Component: Expandable returns a number of expandables matching the leng
     <div
       className="expandable-body"
     >
-      <p>
-        My accordion content
-      </p>
+      My accordion content
     </div>
   </div>
 </Expandable>

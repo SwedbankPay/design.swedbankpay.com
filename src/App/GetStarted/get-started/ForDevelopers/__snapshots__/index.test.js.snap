@@ -102,29 +102,6 @@ exports[`GetStarted: ForDevelopers DiscoverMore renders 1`] = `
     </Link>
     <Link
       className="cards cards-primary cards-wide"
-      key="/utilities"
-      to="/utilities"
-    >
-      <div
-        className="cards-content m-0"
-      >
-        <span
-          className="h3"
-        >
-          Utilities
-        </span>
-        <span>
-          See all available components
-        </span>
-      </div>
-      <i
-        className="material-icons"
-      >
-        arrow_forward
-      </i>
-    </Link>
-    <Link
-      className="cards cards-primary cards-wide"
       key="/identity/iconography"
       to="/identity/iconography"
     >

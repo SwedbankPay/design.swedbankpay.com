@@ -375,6 +375,11 @@
             font-family: @brand-black;
         }
 
+        &.utilities-page {
+            max-width: 70rem;
+            padding-top: 3rem;
+        }
+
         &.dg-front-page {
             position: relative;
             max-width: 82rem;
@@ -1831,6 +1836,20 @@
                     border-radius: 2px;
                 }
             }
+        }
+    }
+
+    .combinedExpandables {
+        > div {
+            gap: 1%;
+            justify-content: space-between;
+        }
+
+        .expandable {
+            width: 49%;
+            justify-content: space-between;
+            margin-bottom: 0.2rem;
+            height: fit-content;
         }
     }
 }

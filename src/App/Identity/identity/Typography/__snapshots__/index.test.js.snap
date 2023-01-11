@@ -421,7 +421,7 @@ exports[`Core: Typography Code renders 1`] = `
   <p>
     Change text color with our 
     <Link
-      to="/utilities/colors"
+      to="/utilities"
     >
       color utilities
     </Link>
@@ -1220,7 +1220,7 @@ exports[`Core: Typography Text Utilities renders 1`] = `
   <p>
     Change text color with our 
     <Link
-      to="/utilities/colors"
+      to="/utilities"
     >
       color utilities
     </Link>
