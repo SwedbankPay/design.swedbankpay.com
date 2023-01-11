@@ -97,9 +97,9 @@ const ComponentPreview = ({
                         activeOptions={activeOptions}
                         updateActiveOptions={updateActiveOptions}
                     >
-                        <CodeFigure
+                        {!hideCodeFigure && <CodeFigure
                             childrenPassed={childrenPassed}
-                        />
+                        />}
                     </ShowCasePanelAdvanced>
                 );
             } else if (!showCasePanelAdvanced && codeFigure) {
@@ -132,7 +132,9 @@ const ComponentPreview = ({
     };
 
     useEffect(() => {
-        resetOptions({ showCasePanelAdvanced });
+        if (showCasePanelAdvanced) {
+            resetOptions({ showCasePanelAdvanced });
+        }
     }, [activeTab]);
 
     return (
