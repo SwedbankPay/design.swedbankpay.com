@@ -120,7 +120,7 @@ const SearchBox = ({ className, mobile }) => {
             {mobile ?
                 <div className={`search-container${className ? ` ${className}` : ""}${expanded ? " expanded" : ""}`}>
                     <div className="form-group">
-                        <input type="text" ref={inputFieldText} onKeyDown={e => arrowNavigation(e)} className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
+                        <input type="text" ref={inputFieldText} onKeyDown={e => arrowNavigation(e)} className="form-control" id="search-box-mobile" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
                         {expanded ?
                             <button onClick={() => clearSearchTerm()} className="btn btn-secondary btn-xs"><i className="material-icons">close</i></button>
                             :
