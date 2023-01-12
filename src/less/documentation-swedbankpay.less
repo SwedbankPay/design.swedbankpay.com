@@ -338,7 +338,7 @@
                     &:hover,
                     &:focus {
                         background-color: transparent;
-                        outline-color: @brand-secondary; // TODO
+                        outline-color: @brand-secondary;
 
                         i {
                             color: #000000;
@@ -1758,6 +1758,8 @@
         }
 
         .topbar {
+            z-index: calc(@sidebar-z-index - 1);
+
             + main {
                 height: 10rem;
                 background-color: @light-gray;
@@ -1850,6 +1852,16 @@
             justify-content: space-between;
             margin-bottom: 0.2rem;
             height: fit-content;
+        }
+    }
+
+    #dropdown-doc {
+        .component-preview-content {
+            .dropdown {
+                .dropdown-menu {
+                    z-index: calc(@dropdown-z-index + 3);
+                }
+            }
         }
     }
 }
