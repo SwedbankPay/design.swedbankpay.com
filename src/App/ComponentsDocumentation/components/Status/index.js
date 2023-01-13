@@ -22,11 +22,11 @@ const ExampleUse = () => (
     <>
         <h2 id="example-use">Example of use</h2>
         <h3>Leading example</h3>
-        <ComponentPreview language="html" showCasePanel >
+        <ComponentPreview language="html" showCasePanel previewMinHeight={400}>
             {leadingExample}
         </ComponentPreview>
         <h3>Trailing example</h3>
-        <ComponentPreview language="html" showCasePanel >
+        <ComponentPreview language="html" showCasePanel previewMinHeight={400}>
             {trailingExample}
         </ComponentPreview>
     </>

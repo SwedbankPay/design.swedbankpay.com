@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer } from "@docutils";
+import { ComponentPreview, DocContainer, OldComponentPreview } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
 const basename = process.env.basename;
@@ -123,7 +123,7 @@ const HowItWorks = () => (
     <>
         <h2 id="how-it-works">How it works in code</h2>
         <p>The grid system uses a series of containers, rows, and columns to layout and align content. It’s built with flexbox and is fully responsive. Below is an example and an in-depth look at how the grid comes together.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row">
@@ -270,7 +270,7 @@ const AutoLayoutColumns = () => (
         <p>Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like <CodeTags type="secondary" code=".col-sm-6" />.</p>
         <h3>Equal-width</h3>
         <p>For example, here are two grid layouts that apply to every device and viewport, from <CodeTags type="secondary" code="xs" /> to <CodeTags type="secondary" code="xxl" />. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row">
@@ -298,7 +298,7 @@ const AutoLayoutColumns = () => (
 
         <h3>Setting one column width</h3>
         <p>Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row">
@@ -329,7 +329,7 @@ const AutoLayoutColumns = () => (
 
         <h3>Variable width content</h3>
         <p>Use <CodeTags type="secondary" code="col-{breakpoint}-auto" /> classes to size columns based on the natural width of their content.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row justify-content-md-center">
@@ -360,7 +360,7 @@ const AutoLayoutColumns = () => (
 
         <h3>Equal-width multi-row</h3>
         <p>Create equal-width columns that span multiple rows by inserting a <CodeTags type="secondary" code=".w-100" /> where you want the columns to break to a new line. Make the breaks responsive by mixing the <CodeTags type="secondary" code=".w-100" /> with some <Link to="/utilities/display">responsive display utilities</Link>.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row">
@@ -383,7 +383,7 @@ const ResponsiveClasses = () => (
 
         <h3>All breakpoints</h3>
         <p>For grids that are the same from the smallest of devices to the largest, use the <CodeTags type="secondary" code=".col" /> and <CodeTags type="secondary" code=".col-*" /> classes. Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to <CodeTags type="secondary" code=".col" />.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row">
@@ -402,7 +402,7 @@ const ResponsiveClasses = () => (
 
         <h3>Stacked to horizontal</h3>
         <p>Using a single set of <CodeTags type="secondary" code=".col-sm-*" /> classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (<CodeTags type="secondary" code="sm" />).</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row">
@@ -420,7 +420,7 @@ const ResponsiveClasses = () => (
 
         <h3>Mix and match</h3>
         <p>Don’t want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed. See the example below for a better idea of how it all works.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row">
@@ -449,7 +449,7 @@ const Alignment = () => (
         <h2 id="alignment">Alignment</h2>
         <p>Use flexbox alignment utilities to vertically and horizontally align columns.</p>
         <h3>Vertical alignment</h3>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid showcase-vertical-space">
                 <div className="container">
                     <div className="row align-items-start">
@@ -488,7 +488,7 @@ const Alignment = () => (
                 </div>
             </div>
         </ComponentPreview>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid showcase-vertical-space">
                 <div className="container">
                     <div className="row">
@@ -507,7 +507,7 @@ const Alignment = () => (
         </ComponentPreview>
 
         <h3>Horizontal alignment</h3>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row justify-content-start">
@@ -556,7 +556,7 @@ const Alignment = () => (
 
         <h3>Column wrapping</h3>
         <p>If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row">
@@ -570,7 +570,7 @@ const Alignment = () => (
 
         <h3>Column breaks</h3>
         <p>Breaking columns to a new line in flexbox requires a small hack: add an element with <CodeTags type="secondary" code="width: 100%" /> wherever you want to wrap your columns to a new line. Normally this is accomplished with multiple <CodeTags type="secondary" code=".row" />s, but not every implementation method can account for this.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row">
@@ -586,7 +586,7 @@ const Alignment = () => (
             </div>
         </ComponentPreview>
         <p>You may also apply this break at specific breakpoints with our <Link to="/utilities/display">responsive display utilities</Link>.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row">
@@ -609,7 +609,7 @@ const Reordering = () => (
         <h2 id="reordering">Reordering</h2>
         <h3>Order classes</h3>
         <p>Use <CodeTags type="secondary" code=".order-" /> classes for controlling the <b>visual</b> order of your content. These classes are responsive, so you can set the <CodeTags type="secondary" code="order" /> by breakpoint (e.g., <CodeTags type="secondary" code=".order-1.order-md-2" />). Includes support for <CodeTags type="secondary" code="1" /> through <CodeTags type="secondary" code="12" /> across all five grid tiers.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row">
@@ -627,7 +627,7 @@ const Reordering = () => (
             </div>
         </ComponentPreview>
         <p>There are also responsive <CodeTags type="secondary" code=".order-first" /> and <CodeTags type="secondary" code=".order-last" /> classes that change the <CodeTags type="secondary" code="order" /> of an element by applying <CodeTags type="secondary" code="order: -1" /> and <CodeTags type="secondary" code="order: 13" />, respectively. These classes can also be intermixed with the numbered <CodeTags type="secondary" code=".order-*" /> classes as needed.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row">
@@ -650,7 +650,7 @@ const Reordering = () => (
 
         <h4>Offset classes</h4>
         <p>Move columns to the right using <CodeTags type="secondary" code=".offset-md-*" /> classes. These classes increase the left margin of a column by <CodeTags type="secondary" code="*" /> columns. For example, <CodeTags type="secondary" code=".offset-md-4" /> moves <CodeTags type="secondary" code=".col-md-4" /> over four columns.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row">
@@ -668,7 +668,7 @@ const Reordering = () => (
             </div>
         </ComponentPreview>
         <p>In addition to column clearing at responsive breakpoints, you may need to reset offsets.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row">
@@ -685,7 +685,7 @@ const Reordering = () => (
 
         <h4>Margin utilities</h4>
         <p>You can also use margin utilities like <CodeTags type="secondary" code=".mr-auto" /> to force sibling columns away from one another.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row">
@@ -710,7 +710,7 @@ const Nesting = () => (
     <>
         <h2 id="nesting">Nesting</h2>
         <p>To nest your content with the default grid, add a new <CodeTags type="secondary" code=".row" /> and set of <CodeTags type="secondary" code=".col-sm-*" /> columns within an existing <CodeTags type="secondary" code=".col-sm-*" /> column. Nested rows should include a set of columns that add up to 12 or fewer (it is not required that you use all 12 available columns).</p>
-        <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
                     <div className="row">

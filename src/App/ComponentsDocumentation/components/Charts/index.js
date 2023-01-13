@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { ComponentPreview, DocContainer } from "@docutils";
+import { ComponentPreview, OldComponentPreview, DocContainer } from "@docutils";
 import Chart from "@components/Chart";
 import CodeTags from "@components/CodeTags";
 import Introduction from "./Introduction";
@@ -19,7 +19,7 @@ const LineChart = () => (
         <p className="lead">If Johnny Cash could, then you too should be able to...</p>
         <p>A line chart is a way of plotting data points on a line. Often, it is used to show trend data, or the comparison of two data sets.</p>
         <p>See <a href="https://www.chartjs.org/docs/latest/charts/line.html" target="_blank" rel="noopener noreferrer">chart.js</a> for more information on line charts.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure >
+        <OldComponentPreview language="html" showCasePanel codeFigure >
             <Chart id="simple-line-chart" options={{
                 type: "line",
                 data: {
@@ -56,8 +56,8 @@ const LineChart = () => (
                     </tr>
                 </tbody>
             </table>
-        </ComponentPreview>
-        <ComponentPreview language="javascript" codeFigure >
+        </OldComponentPreview>
+        <OldComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("simple-line-chart", {
                     type: "line",
@@ -72,10 +72,10 @@ const LineChart = () => (
                     }
                 });
             `}
-        </ComponentPreview>
+        </OldComponentPreview>
 
         <h3>Stepped and dashed line</h3>
-        <ComponentPreview language="html" showCasePanel codeFigure >
+        <OldComponentPreview language="html" showCasePanel codeFigure >
             <Chart id="stepped-dashed-line-chart" options={{
                 type: "line",
                 data: {
@@ -94,8 +94,8 @@ const LineChart = () => (
                     ]
                 }
             }} description="Stepped and dashed line example"/>
-        </ComponentPreview>
-        <ComponentPreview language="javascript" codeFigure >
+        </OldComponentPreview>
+        <OldComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("stepped-dashed-line-chart", {
                     type: "line",
@@ -116,11 +116,11 @@ const LineChart = () => (
                     }
                 });
             `}
-        </ComponentPreview>
+        </OldComponentPreview>
         <AccessibilityAlert/>
 
         <h3>Advanced options</h3>
-        <ComponentPreview language="html" showCasePanel codeFigure >
+        <OldComponentPreview language="html" showCasePanel codeFigure >
             <Chart id="advanced-line-chart" options={{
                 type: "line",
                 data: {
@@ -150,8 +150,8 @@ const LineChart = () => (
                     }
                 }
             }} description="Advanced line example"/>
-        </ComponentPreview>
-        <ComponentPreview language="javascript" codeFigure >
+        </OldComponentPreview>
+        <OldComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("advanced-line-chart", {
                     type: "line",
@@ -183,11 +183,11 @@ const LineChart = () => (
                     }
                 });
             `}
-        </ComponentPreview>
+        </OldComponentPreview>
         <AccessibilityAlert/>
 
         <h3>With fill</h3>
-        <ComponentPreview language="html" showCasePanel codeFigure >
+        <OldComponentPreview language="html" showCasePanel codeFigure >
             <Chart id="line-fill-chart" options={{
                 type: "line-fill",
                 data: {
@@ -201,8 +201,8 @@ const LineChart = () => (
                     ]
                 }
             }} description="Line example with fill"/>
-        </ComponentPreview>
-        <ComponentPreview language="javascript" codeFigure >
+        </OldComponentPreview>
+        <OldComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("line-fill-chart", {
                     type: "line-fill",
@@ -218,7 +218,7 @@ const LineChart = () => (
                     }
                 });
             `}
-        </ComponentPreview>
+        </OldComponentPreview>
         <AccessibilityAlert/>
     </>
 );
@@ -229,7 +229,7 @@ const BarChart = () => (
         <p className="lead">A priest and a rabbi walked into a bar...</p>
         <p>A bar chart provides a way of showing data values represented as vertical bars. It is sometimes used to show trend data, and the comparison of multiple data sets side by side.</p>
         <p>See <a href="https://www.chartjs.org/docs/latest/charts/bar.html" target="_blank" rel="noopener noreferrer">chart.js</a> for more information on bar charts.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure >
+        <OldComponentPreview language="html" showCasePanel codeFigure >
             <Chart id="simple-bar-chart" options={{
                 type: "bar",
                 data: {
@@ -251,8 +251,8 @@ const BarChart = () => (
                     }
                 }
             }} description="Bar chart example"/>
-        </ComponentPreview>
-        <ComponentPreview language="javascript" codeFigure >
+        </OldComponentPreview>
+        <OldComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("simple-bar-chart", {
                     type: "bar",
@@ -276,12 +276,12 @@ const BarChart = () => (
                     }
                 });
             `}
-        </ComponentPreview>
+        </OldComponentPreview>
         <AccessibilityAlert/>
 
         <h3>Multiple datasets</h3>
         <p>You can add multiple datasets</p>
-        <ComponentPreview language="html" showCasePanel codeFigure >
+        <OldComponentPreview language="html" showCasePanel codeFigure >
             <Chart id="multi-bar-chart" options={{
                 type: "bar",
                 data: {
@@ -311,8 +311,8 @@ const BarChart = () => (
                     }
                 }
             }} description="Multiple datasets example"/>
-        </ComponentPreview>
-        <ComponentPreview language="javascript" codeFigure >
+        </OldComponentPreview>
+        <OldComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("multi-bar-chart", {
                     type: "bar",
@@ -344,12 +344,12 @@ const BarChart = () => (
                     }
                 });
             `}
-        </ComponentPreview>
+        </OldComponentPreview>
         <AccessibilityAlert/>
 
         <h3>Stacked bar</h3>
         <p className="lead">You can stack, because a stacked bar is almost as good as a stocked one</p>
-        <ComponentPreview language="html" showCasePanel codeFigure >
+        <OldComponentPreview language="html" showCasePanel codeFigure >
             <Chart id="stacked-multi-bar-chart" options={{
                 type: "bar",
                 data: {
@@ -383,8 +383,8 @@ const BarChart = () => (
                     }
                 }
             }} description="Stacked bar example"/>
-        </ComponentPreview>
-        <ComponentPreview language="javascript" codeFigure >
+        </OldComponentPreview>
+        <OldComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("stacked-multi-bar-chart", {
                     type: "bar",
@@ -420,7 +420,7 @@ const BarChart = () => (
                     }
                 });
             `}
-        </ComponentPreview>
+        </OldComponentPreview>
         <AccessibilityAlert/>
     </>
 );
@@ -431,7 +431,7 @@ const DoughnutAndPieCharts = () => (
         <p className="lead">Stress cannot exist in the presence of pie...</p>
         <p>Pie and doughnut charts are probably the most commonly used charts. They are divided into segments, the arc of each segment shows the proportional value of each piece of data.</p>
         <p>See <a href="https://www.chartjs.org/docs/latest/charts/doughnut.html" target="_blank" rel="noopener noreferrer">chart.js</a> for more information on doughnut and pie charts.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure >
+        <OldComponentPreview language="html" showCasePanel codeFigure >
             <Chart id="simple-pie-chart" options={{
                 type: "pie",
                 data: {
@@ -443,8 +443,8 @@ const DoughnutAndPieCharts = () => (
                     ]
                 }
             }} description="Pie chart example"/>
-        </ComponentPreview>
-        <ComponentPreview language="javascript" codeFigure >
+        </OldComponentPreview>
+        <OldComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("simple-pie-chart", {
                     type: "pie",
@@ -458,12 +458,12 @@ const DoughnutAndPieCharts = () => (
                     }
                 });
             `}
-        </ComponentPreview>
+        </OldComponentPreview>
         <AccessibilityAlert/>
 
         <h2>Doughnut</h2>
         <p className="lead">Did anyone say <code className="token string">doughnut</code>?</p>
-        <ComponentPreview language="html" showCasePanel codeFigure >
+        <OldComponentPreview language="html" showCasePanel codeFigure >
             <Chart id="doughnut-chart" options={{
                 type: "doughnut",
                 data: {
@@ -475,9 +475,9 @@ const DoughnutAndPieCharts = () => (
                     ]
                 }
             }} description="Doughnut example"/>
-        </ComponentPreview>
+        </OldComponentPreview>
 
-        <ComponentPreview language="javascript" codeFigure >
+        <OldComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("doughnut-chart", {
                     type: "doughnut",
@@ -491,7 +491,7 @@ const DoughnutAndPieCharts = () => (
                     }
                 });
             `}
-        </ComponentPreview>
+        </OldComponentPreview>
         <AccessibilityAlert/>
     </>
 );
@@ -500,7 +500,7 @@ const MixingTypes = () => (
     <>
         <h2 id="mixing-types">Mixing types</h2>
         <p className="lead">With Chart.js, it is possible to create <a href="https://www.chartjs.org/docs/latest/charts/mixed.html" target="_blank" rel="noopener noreferrer">mixed charts</a> that are a combination of two or more different chart types. A common example is a bar chart that also includes a line dataset.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure >
+        <OldComponentPreview language="html" showCasePanel codeFigure >
             <Chart id="mixed-chart" options={{
                 type: "bar",
                 data: {
@@ -527,9 +527,9 @@ const MixingTypes = () => (
                     }
                 }
             }} description="Mixing charts example"/>
-        </ComponentPreview>
+        </OldComponentPreview>
 
-        <ComponentPreview language="javascript" codeFigure >
+        <OldComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("mixed-chart", {
                     type: "bar",
@@ -558,7 +558,7 @@ const MixingTypes = () => (
                     }
                 });
             `}
-        </ComponentPreview>
+        </OldComponentPreview>
         <AccessibilityAlert/>
     </>
 );
@@ -567,7 +567,7 @@ const CustomColors = () => (
     <>
         <h2 id="custom-colors">Custom colors</h2>
         <p>Except for the three first colors, the rest of the colors are customizable. Call <CodeTags type="secondary" code="dg.chart" /> with a last optional argument consisting of a list of RGB color codes.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure >
+        <OldComponentPreview language="html" showCasePanel codeFigure >
             <Chart id="custom-color-pie"
                 options={{
                     type: "pie",
@@ -588,9 +588,9 @@ const CustomColors = () => (
                 ]}
                 description="Custom colors example"
             />
-        </ComponentPreview>
+        </OldComponentPreview>
 
-        <ComponentPreview language="javascript" codeFigure >
+        <OldComponentPreview language="javascript" codeFigure >
             {`
                 dg.chart("custom-color-pie", {
                     type: "pie",
@@ -609,7 +609,7 @@ const CustomColors = () => (
                 "114, 96, 94",
                 "197, 19, 28"]);
             `}
-        </ComponentPreview>
+        </OldComponentPreview>
         <AccessibilityAlert/>
     </>
 );

@@ -30,7 +30,7 @@ const HowItWorks = () => (
 const Example = () => (
     <>
         <h2 id="overview">Example</h2>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview>
             <button className="btn btn-primary" type="button" data-dialog-open="demo-dialog">{"\n"}Open dialog{"\n"}</button>
             <DialogComponent diaHeader="Delete item 456?" diaId="demo-dialog">
                 <p>Are you sure you want to permanently delete the item <i>German Swashbuckle (456)?</i></p>

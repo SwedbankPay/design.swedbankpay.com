@@ -46,7 +46,7 @@ const Overview = () => (
         <p>
         Accordions can make information discovery more effective by using progressive disclosure, that is showing the title while hiding the detailed information. They can be used to shorten pages and reduce scrolling when content is not crucial to read in full.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={accordionShowCase} removeOuterTag/>
+        <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={accordionShowCase} removeOuterTag previewMinHeight={500} />
 
         <h3>How to use Accordions</h3>
         <div className="row">

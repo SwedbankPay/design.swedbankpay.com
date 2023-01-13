@@ -29,7 +29,7 @@ const Sizes = () => (
             <MediaObjectComponent size="sm" icon="account_circle" heading="Bob Corlsan" text={`bob.corlsan@${brand}.com`} />
         </ComponentPreview>
         <h3>Large</h3>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={250}>
             <MediaObjectComponent size="lg" imgUrl="https://via.placeholder.com/56x56" heading="Bob Corlsan" text={`bob.corlsan@${brand}.com`} />
             <MediaObjectComponent size="lg" icon="account_circle" heading="Bob Corlsan" text={`bob.corlsan@${brand}.com`} />
         </ComponentPreview>

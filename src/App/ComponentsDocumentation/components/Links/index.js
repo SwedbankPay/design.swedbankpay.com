@@ -66,7 +66,7 @@ const Overview = ({ scrollToRef }) => (
 const ActionLink = forwardRef((props, ref) => <section id="action-link-container" ref={ref}>
     <h2 id="action-links">Action links</h2>
     <p>Although links are to be used for navigation and not actions we sometimes have a need to highlight links and make them appear more as call to actions. In this case Action links, that will redirect the user to perform an action on another page, can be used. Actions links are normally used in a collection consisting of a few different action links with equally important actions to be made.</p>
-    <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewActionLinks} codeFigure removeOuterTag/>
+    <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewActionLinks} codeFigure removeOuterTag previewMinHeight={350} />
     <span className="h3 d-inline-block mt-3">When to consider something else</span>
     <ul className="list list-bullet">
         <li>

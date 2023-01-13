@@ -10,7 +10,7 @@ const Overview = () => (
     <section id="input-field-overview">
         <h2 id="input-field">Overview</h2>
         <p>Depending on the expected length of the user input use either a Input field for shorter input or a Textarea for longer input. </p>
-        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={inputShowCase} codeFigure />
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={inputShowCase} codeFigure previewMinHeight={250} />
         <h3>When to consider something else</h3>
         <ul className="list list-bullet">
             <li>If you want users to choose from a list of responses, instead consider <Link to="/components/radio-button">radio buttons</Link>, <Link to="/components/checkbox">checkboxes</Link> or a <Link to="/components/select">select</Link>.</li>

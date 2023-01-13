@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer } from "@docutils";
+import { ComponentPreview, DocContainer, OldComponentPreview } from "@docutils";
 import { overviewSlabs } from "./constants";
 import CodeTags from "@components/CodeTags";
 
@@ -9,7 +9,7 @@ const basename = process.env.basename;
 const OverviewSlab = () => (
     <section id="slab-doc">
         <h2 id="default-slab">Overview</h2>
-        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewSlabs} codeFigure/>
+        <OldComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewSlabs} codeFigure/>
         <h3>Things to consider</h3>
         <ul className="list list-bullet">
             <li>When combining other components with the slab, one must consider how the slab`s border-radius affects the edges of the on-top placed component.</li>
@@ -50,13 +50,13 @@ const SlabArrow = () => (
         <p>
             <CodeTags type="secondary" code=".slab-arrow" /> inherits the color from the slab it is appended to.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <OldComponentPreview language="html" showCasePanel codeFigure>
             <div className="slab slab-arrow">
                 <p>
                     This slab has some connection to the content above.
                 </p>
             </div>
-        </ComponentPreview>
+        </OldComponentPreview>
     </section>
 );
 

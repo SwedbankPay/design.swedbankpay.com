@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer } from "@docutils";
+import { ComponentPreview, DocContainer, OldComponentPreview } from "@docutils";
 import { PaginationShowCasePanel } from "./constants";
 import CodeTags from "~/src/App/components/CodeTags";
 
@@ -8,7 +8,7 @@ const Overview = () => (
     <section id="pagination-overview">
         <h2 id="pagination">Overview</h2>
         <p>Pagination is commonly used for things like table listings, search results or directories. The need for pagination is influenced by the amount of data to be displayed and the aim is to not overwhelm users with information and to improve the loading performance of the system. </p>
-        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={PaginationShowCasePanel} codeFigure/>
+        <OldComponentPreview language="html" showCasePanel showCasePanelAdvanced={PaginationShowCasePanel} codeFigure/>
 
         <h3>Responsive design</h3>
         <div className="slab slab-plain">

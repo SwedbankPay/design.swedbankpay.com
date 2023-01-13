@@ -43,7 +43,7 @@ const BasicList = () => (
         <p>
             Use nesting with lists to signify that some items are children of another item.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={250} >
             <ul className="list">
                 <li>Coffee</li>
                 <li>Tea {"\n"}
@@ -96,7 +96,7 @@ const DescriptionList = () => (
         <p>
             The description list lets you provide each item with a more specific description of each item. Add <CodeTags type="secondary" code=".description-list" /> to your dl.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={300} >
             <dl className="description-list">{"\n"}
                 <dt>Frog</dt>
                 <dd>Wet green thing that croaks.</dd>{"\n"}
@@ -140,7 +140,7 @@ const ItemList = () => (
         <p>
             <CodeTags type="secondary" code=".item-list"/>s is a good way to offer more extensive information about each item. Each item has their own box which seperates the items more clearly than our other options.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={320}>
             <ul className="item-list">
                 <li>
                     <div>
@@ -177,7 +177,7 @@ const ItemList = () => (
 const ItemListLarge = () => (
     <>
         <h2 id="item-list-lg">Large item list </h2>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={470}>
             <ul className="item-list item-list-lg">
                 <li>
                     <div>
@@ -221,7 +221,7 @@ const ItemListLarge = () => (
 const ItemListBordered = () => (
     <>
         <h2 id="item-list-bordered">Bordered item list </h2>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={500}>
             <ul className="item-list item-list-bordered">
                 <li>
                     <div>
@@ -268,7 +268,7 @@ const HoverItemList = () => (
         <p>
             Include <CodeTags type="secondary" code=".item-list-hover" /> to give your items a hover effect. You can use this on any variation of <CodeTags type="secondary" code=".item-list" />.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={250}>
             <ul className="item-list item-list-hover">
                 <li>{"\n"}
                     <span>4925*********004</span>{"\n"}
@@ -293,7 +293,7 @@ const StripedItemList = () => (
         <p>
             If you want more seperation between each item you can use <CodeTags type="secondary" code=".item-list-striped" />.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={350}>
             <ul className="item-list item-list-striped">
                 <li>
                     <span>4925*********004</span>

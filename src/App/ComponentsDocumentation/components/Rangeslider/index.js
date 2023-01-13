@@ -84,7 +84,7 @@ const DisableState = () => (
     <section>
         <h3>Disabled state</h3>
         <p>Disable a slider by adding <CodeTags type="primary" code="disabled"/> attribute to the desired slider. </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={250}>
             <div className = "d-flex flex-column align-items-center">
                 <div className="py-3 col-12 col-lg-8">
                     <RangesliderComponent id="disabled_state_example" label="Label" min={0} max={100} value={50} disabled/>

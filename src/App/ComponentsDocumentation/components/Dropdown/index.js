@@ -7,7 +7,7 @@ import CodeTags from "@components/CodeTags";
 const Overview = () => (
     <section>
         <h2 id="overview">Overview</h2>
-        <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={overviewDropdown} />
+        <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={overviewDropdown} staticPreview/>
         <h3>When to consider something else</h3>
         <ul className="list list-bullet">
             <li key="when-else-1">For important actions and information, consider displaying them <b>directly on the page</b> instead of hiding them in a Dropdown menu</li>

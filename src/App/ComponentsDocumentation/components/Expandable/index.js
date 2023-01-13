@@ -35,7 +35,7 @@ const Overview = () => (
             The expandable component shows only what is contained in the <CodeTags type="secondary" code=".expandable-header" /> when it is
             closed. <CodeTags type="secondary" code=".expandable-body" /> will be visible in its open state.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={500}>
             <ExpandableComponent items={items} />
         </ComponentPreview>
     </>
@@ -48,7 +48,7 @@ const ExpandableGroup = () => (
             If you use a wrapper with <CodeTags type="secondary" code=".expandable-group"/> then only one expandable can be open at the
             same time.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={550}>
             <div className="expandable-group">
                 <ExpandableComponent items={items} />
             </div>

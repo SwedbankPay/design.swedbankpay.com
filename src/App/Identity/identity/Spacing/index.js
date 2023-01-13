@@ -9,7 +9,7 @@ const basename = process.env.basename;
 const EightPointSystem = () => (
     <section>
         <h2 id="eight-point-system">8-point spacing system</h2>
-        <p>We follow a 8-point spacing system – multiples of 8 to define the different dimensions, margins and paddings of our elements. The reason for this is to streamline the process, saving time by minimize the amount of choices and create consistent usage of space across all our product. </p>
+        <p>We follow a 8-point spacing system - multiples of 8 to define the different dimensions, margins and paddings of our elements. The reason for this is to streamline the process, saving time by minimize the amount of choices and create consistent usage of space across all our product. </p>
 
         <div className="d-flex flex-column align-items-center mb-4">
             <img src={`${basename}img/documentation/spacing/horizontal-spacing-example.svg`} className="w-100" alt=""/>
@@ -161,16 +161,16 @@ const Examples = () => (
                 .mt-0 {
                     margin-top: 0 !important;
                 }
-                
+
                 .ml-1 {
                     margin-left: (@spacer * 0.25) !important;
                 }
-                
+
                 .px-2 {
                     padding-left: (@spacer * 0.5) !important;
                     padding-right: (@spacer * 0.5) !important;
                 }
-                
+
                 .p-3 {
                     padding: @spacer !important;
                 }
@@ -181,7 +181,7 @@ const Examples = () => (
         <p>
             Additionally, DesignGuide also includes an <CodeTags type="secondary" code=".mx-auto" /> class for horizontally centering fixed-width block level content—that is, content that has <CodeTags type="secondary" code="display: block" /> and a <CodeTags type="secondary" code="width" /> set—by setting the horizontal margins to auto.
         </p>
-        <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag>
+        <ComponentPreview language="html" codeFigure showCasePanel>
             <div className="row">
                 <div className="mx-auto p-2 bg-default">{"\n"}
                     Centered element{"\n"}

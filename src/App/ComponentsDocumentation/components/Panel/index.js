@@ -62,7 +62,7 @@ const Overview = () => (
             A panel consists of three parts: A header, a body and a footer. You can mostly put whatever you want in any of these,
             but try not to put too much in the header and footer as these are meant to contain short and concise information about the body content.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={500}>
             <PanelComponent
                 title="Panel title"
                 subTitle="Panel subtitle"
@@ -81,7 +81,7 @@ const PanelHeaders = () => (
             You can pick between two different panel headers, brand color with white text and white with green text. add <CodeTags type="secondary" code=".panel-default" /> or <CodeTags type="secondary" code=".panel-brand" /> to
             the header to use one of them.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={300}>
             <PanelComponent title="Default panel" />{"\n\n"}
             <PanelComponent type="brand" title="Panel brand" />
         </ComponentPreview>
@@ -96,7 +96,7 @@ const PanelTable = () => (
             Put <CodeTags type="secondary" code=".panel-table" /> as a direct child of <CodeTags type="secondary" code=".panel" />. Tables put in a panel are given a
             border bottom to separate it from the following elements.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={800}>
             <PanelComponent
                 type="brand"
                 title="Panel title"

@@ -9,7 +9,7 @@ const Overview = () => (
         <section>
             <h2 id="overview">Overview</h2>
             <p>Use class <CodeTags type="secondary" code=".badge" /> along with <CodeTags type="secondary" code=".badge-{color}" /> to display the badge of your choosing. Badges are often used with numbers. Use <CodeTags type="secondary" code=".badge-number" /> when a badge with only numbers is desired.</p>
-            <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={badgeShowcase} codeFigure removeOuterTag/>
+            <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={badgeShowcase} codeFigure removeOuterTag previewMinHeight={400} />
             <h3>Things to consider</h3>
             <ul className="list list-bullet">
                 <li>A normal badge does not feature interaction, use the button component instead.</li>

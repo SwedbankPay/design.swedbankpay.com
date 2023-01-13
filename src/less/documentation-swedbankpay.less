@@ -63,6 +63,12 @@
                 }
             }
         }
+
+        --preview-min-height: 200px;
+
+        iframe {
+            min-height: var(--preview-min-height);
+        }
     }
 
     .browser-support-table {
@@ -972,10 +978,14 @@
                     position: relative;
                     min-height: 9.5rem;
                     height: 100%;
-                    padding: 2rem;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+
+                    // can be removed once we convert all components previews to the new Sandpack previews and not use the OldComponentPreview component anywheere anymore
+                    &.old-preview {
+                        padding: 2rem;
+                    }
 
                     &.component-preview-alt-background {
                         background-color: @brand-primary;
@@ -1539,21 +1549,13 @@
         }
     }
 
-    #loader-page-overview {
-        .component-preview-content {
-            padding: 7.5rem;
-
-            .loader-preview-container {
-                &.dark {
-                    background-color: @dark-brown;
-                }
-            }
+    #loader-page-overview  .component-preview-content {
+        .loader-preview-container.dark {
+            background-color: @dark-brown;
         }
 
-        #loaders-how-to-use {
-            .slab {
-                height: 15.375rem;
-            }
+        #loaders-how-to-use .slab {
+            height: 15.375rem;
         }
     }
 
@@ -1834,7 +1836,6 @@
         }
     }
 }
-
 
 @media screen and (max-width: @screen-xs-max) {
     .documentation {

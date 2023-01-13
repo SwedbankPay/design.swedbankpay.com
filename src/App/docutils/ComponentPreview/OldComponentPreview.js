@@ -8,7 +8,7 @@ import { tabs, accordion, sheet, hintTextExpander, tooltips } from "@src/scripts
 
 // NOTE: dangerousHTML prop is used when wanting to show html in the codefigure without encoding.
 
-const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideCodeFigure, removeList, showCasePanel, showCasePanelAdvanced, showCasePanelSm, codeFigure, dangerousHTML, negative }) => {
+export const OldComponentPreview = ({ children, language, removeOuterTag, hideValue, hideCodeFigure, removeList, showCasePanel, showCasePanelAdvanced, showCasePanelSm, codeFigure, dangerousHTML, negative }) => {
     const _removeOuterTag = element => {
         const div = document.createElement("div");
 
@@ -298,7 +298,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
                         <div className="d-flex">
                             <div className="d-flex flex-column flex-fill">
                                 <div className="component-preview flex-fill">
-                                    <div className={`component-preview-content${this.state.activeTab.altBackground ? " component-preview-alt-background" : ""}`}>
+                                    <div className={`component-preview-content old-preview ${this.state.activeTab.altBackground ? " component-preview-alt-background" : ""}`}>
                                         {cloneElement(this.state.activeTab.component,
                                             this.state.activeOptions.reduce((acc, currentOption) => ({
                                                 ...acc,
@@ -409,7 +409,7 @@ const ComponentPreview = ({ children, language, removeOuterTag, hideValue, hideC
     );
 };
 
-ComponentPreview.propTypes = {
+OldComponentPreview.propTypes = {
     language: PropTypes.oneOf(["html", "javascript", "css", "terminal", "json"]).isRequired,
     removeOuterTag: PropTypes.bool,
     hideCodeFigure: PropTypes.bool,
@@ -422,5 +422,3 @@ ComponentPreview.propTypes = {
     dangerousHTML: PropTypes.bool,
     negative: PropTypes.bool
 };
-
-export default ComponentPreview;

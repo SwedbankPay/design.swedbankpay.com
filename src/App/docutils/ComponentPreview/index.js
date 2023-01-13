@@ -8,9 +8,16 @@ import { resetOptions } from "./optionsUtils";
 // TODO: should the preview of showCasePanel & the one of advancedShowCasePanel use the same component ?
 // in a way it is using the same SndpackPreview, so it would keep them in sync (e.g. add additional button "copy to clipboard", etc)
 // on the other hand the whole container around is different (for some reason)
-const ShowCasePanel = ({ showCasePanelSm, negative }) => (
-    <div className={`showcase-panel${showCasePanelSm ? " showcasepanel-sm" : ""}${negative ? " showcase-panel-negative" : ""}`}>
-        <SandpackPreview />
+const ShowCasePanel = ({ showCasePanelSm, negative, childrenPassed, staticPreview, previewMinHeight }) => (
+    <div
+        className={`showcase-panel${showCasePanelSm ? " showcasepanel-sm" : ""}${negative ? " showcase-panel-negative" : ""}`}
+        style={ previewMinHeight ? {
+            "--preview-min-height": `${previewMinHeight}px`,
+        } : null}
+    >
+        {staticPreview ?
+            childrenPassed
+            : <SandpackPreview /> }
     </div>
 );
 
@@ -28,9 +35,11 @@ const ComponentPreview = ({
     showCasePanel,
     showCasePanelAdvanced,
     showCasePanelSm,
+    previewMinHeight = false,
     codeFigure,
     dangerousHTML,
-    negative
+    negative,
+    staticPreview = false
 }) => {
 
     const [activeTab, setActiveTab] = useState(showCasePanelAdvanced?.elements[0]);
@@ -78,13 +87,17 @@ const ComponentPreview = ({
     };
 
     const jsInitAllCode =
-    `import dg from "@swedbankpay/design-guide";
+    `import "./styles.css";
+    import dg from "@swedbankpay/design-guide";
     dg.script.initAll();
     /* but if can adapt for each examples then the best would be to use the recommended way, i.e. importing only the specific element. But for this demo we don't care 😬
     EXAMPLE:
     import { accordion } from "@swedbankpay/design-guide";
     accordion.init();
     */`;
+
+    // when only code, or only preview, or staticPreview such as toast/Sheet/etc (at least those staticpreviews at the first iterations of the new sandbox)
+    const isReadOnly = staticPreview || (!showCasePanel && codeFigure);
 
     const content = () => {
         if (showCasePanel) {
@@ -96,6 +109,8 @@ const ComponentPreview = ({
                         setActiveTab={setActiveTab}
                         activeOptions={activeOptions}
                         updateActiveOptions={updateActiveOptions}
+                        staticPreview={staticPreview}
+                        previewMinHeight={previewMinHeight}
                     >
                         {!hideCodeFigure && <CodeFigure
                             childrenPassed={childrenPassed}
@@ -109,6 +124,8 @@ const ComponentPreview = ({
                             showCasePanelSm={showCasePanelSm}
                             negative={negative}
                             childrenPassed={childrenPassed}
+                            staticPreview={staticPreview}
+                            previewMinHeight={previewMinHeight}
                         />
                         <CodeFigure
                             childrenPassed={childrenPassed}
@@ -120,6 +137,8 @@ const ComponentPreview = ({
                     showCasePanelSm={showCasePanelSm}
                     negative={negative}
                     childrenPassed={childrenPassed}
+                    staticPreview={staticPreview}
+                    previewMinHeight={previewMinHeight}
                 />;
             }
         } else if (!showCasePanel && codeFigure) {
@@ -128,6 +147,58 @@ const ComponentPreview = ({
             />;
         } else {
             return null;
+        }
+    };
+
+    const commonStyleInIframe = `
+    body {
+        height: fit-content;
+        padding: 2rem;
+      }`;
+
+    const codeFiles = () => {
+        if (language === "html") {
+            return ({
+                "/index.html": {
+                    code: codeParsed,
+                    active: true,
+                    hidden: false,
+                    readOnly: isReadOnly,
+                },
+                "src/index.js": {
+                    // TODO: make this JS initialization specific per component and show it to the user in tabs, until then it can be hidden
+                    hidden: true,
+                    code: jsInitAllCode,
+                    readOnly: isReadOnly,
+                },
+                "src/styles.css": {
+                    code: commonStyleInIframe,
+                    hidden: true
+                }
+            });
+        } else if (language === "javascript" || language === "json") {
+            return ({
+                "src/index.js": {
+                    code: codeParsed,
+                    readOnly: isReadOnly,
+                }
+            });
+        } else if (language === "css") {
+            return ({ "src/index.less": {
+                code: codeParsed,
+                readOnly: isReadOnly,
+                active: true,
+                hideTabs: true,
+            } });
+        } else {
+            return ({
+                "src/index.js": {
+                    code: codeParsed,
+                    readOnly: isReadOnly,
+                    hideTabs: true,
+                    active: true,
+                }
+            });
         }
     };
 
@@ -150,23 +221,12 @@ const ComponentPreview = ({
                 },
             }}
             options={{
+                showTabs: true,
                 externalResources: [
                     "https://design.swedbankpay.com/v/10.5.1/styles/swedbankpay.css"
                 ],
-                readOnly: false,
-                showTabs: true,
             }}
-            files={{
-                "/index.html": {
-                    code: codeParsed,
-                    active: true
-                },
-                "src/index.js": {
-                    // TODO: make this JS initialization specific per component and show it to the user in tabs, until then it can be hidden
-                    hidden: true,
-                    code: jsInitAllCode,
-                }
-            }}
+            files={codeFiles()}
         >
             {content()}
         </SandpackProvider>
@@ -181,10 +241,13 @@ ComponentPreview.propTypes = {
     removeList: PropTypes.bool,
     showCasePanel: PropTypes.bool,
     showCasePanelSm: PropTypes.bool,
+    previewMinHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.exact(false)]),
     showCasePanelAdvanced: PropTypes.object,
     codeFigure: PropTypes.bool,
     dangerousHTML: PropTypes.bool,
-    negative: PropTypes.bool
+    negative: PropTypes.bool,
+    staticPreview: PropTypes.bool,
+    previewHeight: PropTypes.oneOf(["default", "lg", "xl"])
 };
 
 export default ComponentPreview;

@@ -13,7 +13,7 @@ const basename = process.env.basename;
 const Overview = () => (
     <>
         <h2 id="overview">Overview</h2>
-        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewCards} codeFigure />
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewCards} codeFigure previewMinHeight={400} />
 
         <h3>{"Dos and dont's"}</h3>
         <div className="row">

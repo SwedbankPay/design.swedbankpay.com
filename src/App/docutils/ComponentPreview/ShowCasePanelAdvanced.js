@@ -10,7 +10,9 @@ export const ShowCasePanelAdvanced = ({
     activeTab,
     setActiveTab,
     activeOptions,
-    updateActiveOptions
+    updateActiveOptions,
+    staticPreview,
+    previewMinHeight
 }) => {
     const [sidebarDisplayed, setSidebarDisplayed] = useState(false);
 
@@ -38,6 +40,10 @@ export const ShowCasePanelAdvanced = ({
                     <div className="d-flex flex-column flex-fill">
                         <Preview
                             alternativeBackground={activeTab.alternativeBackground}
+                            activeTab={activeTab}
+                            staticPreview={staticPreview}
+                            activeOptions={activeOptions}
+                            previewMinHeight={previewMinHeight}
                         />
                         <ComponentDescription
                             title={activeTab.title}

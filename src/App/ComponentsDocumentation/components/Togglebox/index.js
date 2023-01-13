@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ComponentPreview, DocContainer } from "@docutils";
+import { ComponentPreview, OldComponentPreview, DocContainer } from "@docutils";
 import Togglebox from "@components/FormComponents/Togglebox";
 import CodeTags from "~/src/App/components/CodeTags";
 import { toggleboxShowCase, howToUse } from "./constants";
@@ -10,7 +10,7 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
         <p>Toggleboxes are used to enable or disable a mode, feature, or function. Most common toggles are used to switch between on/off in preferences or settings, in forms or for other on/off functionality. Toggles are similar to radio groups in function but optimized for toggling between two states. A togglebox can also be similar to a checkobox with the difference being that a toggle-switch will trigger a state change directly when you toggle it, while a checkbox is generally used for state marking together with a submit action.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={toggleboxShowCase}/>
+        <OldComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={toggleboxShowCase}/>
 
         <span className="h3 d-inline-block mt-3">When to consider something else</span>
         <ul className="list list-bullet">

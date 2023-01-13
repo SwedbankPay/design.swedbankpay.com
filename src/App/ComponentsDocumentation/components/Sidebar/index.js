@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { ComponentPreview, DocContainer, JavascriptDocs, JavascriptDocElement } from "@docutils";
+import { ComponentPreview, DocContainer, JavascriptDocs, JavascriptDocElement, OldComponentPreview } from "@docutils";
 import CodeTags from "@components/CodeTags";
 
 import { sidebar } from "@src/scripts/main";
@@ -12,7 +12,7 @@ const Overview = () => (
     <section id="sidebar-overview">
         <h2 id ="overview">Overview</h2>
 
-        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={SidebarShowcase} codeFigure />
+        <OldComponentPreview language="html" showCasePanel showCasePanelAdvanced={SidebarShowcase} codeFigure />
     </section>
 );
 

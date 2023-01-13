@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer } from "@docutils";
+import { ComponentPreview, OldComponentPreview, DocContainer } from "@docutils";
 import TopbarComponent from "@components/Topbar";
 import CodeTags from "@components/CodeTags";
 import { topbarShowcase } from "./constants";
@@ -35,7 +35,7 @@ const Overview = () => (
     <section>
         <h2 id="overview">Overview</h2>
         <p>The topbar component is one of the most visible and familiar ways of helping users navigate a site. It typically consist of links to the top levels in the information architecture. </p>
-        <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={topbarShowcase}/>
+        <OldComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={topbarShowcase} />
         <h3>When to consider something else</h3>
         <ul className="list list-bullet">
             <li> The topbar doesn’t accommodate more then one level hierarchy or a large amount of items in the list. If you need more levels or more space, consider a <Link to="/components/sidebar">sidebar</Link> component instead. </li>
@@ -63,12 +63,12 @@ const DeveloperDocumentation = () => (
         <section>
             <h3>Sticky topbar options</h3>
             <p>The topbar can be made sticky by adding the class <CodeTags type="secondary" code=".topbar-sticky" />. Use <CodeTags type="secondary" code=".topbar-min-{breakpoint}-sticky" /> to specify the minimum width the topbar should be sticky, or <CodeTags type="secondary" code=".topbar-max-{breakpoint}-sticky" /> to specify the maximum width the topbar should be sticky (see <Link to="/utilities/breakpoints">breakpoints</Link> for more information on breakpoints). </p>
-            <ComponentPreview language="html" showCasePanel codeFigure>
+            <OldComponentPreview language="html" showCasePanel codeFigure>
                 <div className="container-fluid">
                     <TopbarComponent id="demo-topbar-sticky" topbarContent={menu} wide="xl" sticky />
                     <main></main>
                 </div>
-            </ComponentPreview>
+            </OldComponentPreview>
         </section>
 
         <section>
@@ -77,10 +77,10 @@ const DeveloperDocumentation = () => (
             A PNG version of the logo can also be used. This is done by appending the class <CodeTags type="secondary" code=".topbar-logo-png" /> to the
             anchor with class <CodeTags type="secondary" code=".topbar-logo" />. Only consider using the PNG version when there are issues with using the SVG version.
             </p>
-            <ComponentPreview language="html" showCasePanel codeFigure>
+            <OldComponentPreview language="html" showCasePanel codeFigure>
                 <TopbarComponent topbarContent={menu} logout id="demo-topbar-png" png/>
                 <main></main>
-            </ComponentPreview>
+            </OldComponentPreview>
         </section>
 
         <section>

@@ -43,7 +43,7 @@ const Installation = () => (
                 </ComponentPreview>
                 <div className="alert alert-informative">
                     <i className="material-icons alert-icon" aria-hidden="true">info</i>
-                    <p><b>Standards:</b> Our JS uses modern features such as optional-chaining. If you're experiencing issues you might want to look at our browser support. In the case our browser support is not enough for your project you might want to use polyfills and/or Babel transpiling to fix it.<br></br>Also, some build tools such as Webpack 4 do not support some of those features. You can then use Babel to transpile the code from the Design System package.</p>
+                    <p><b>Standards:</b> Our JS uses modern features such as optional-chaining. If you&apos;re experiencing issues you might want to look at our browser support. In the case our browser support is not enough for your project you might want to use polyfills and/or Babel transpiling to fix it.<br></br>Also, some build tools such as Webpack 4 do not support some of those features. You can then use Babel to transpile the code from the Design System package.</p>
                 </div>
             </section>
             <section>
@@ -118,7 +118,7 @@ const Installation = () => (
             <p>To initialize components use <CodeTags type="secondary" code="dg.<component_name>.init();"/>. If the function is called without arguments it will target all components with class <CodeTags type="secondary" code="<component_name>"/> on the page. Initializing only one component can be done by passing an ID, it must match an existing components ID and will print a warning message if the value is invalid.</p>
 
             <p>If only one component is initialized then the init function will return one object. If several components are initialized it will return an array of objects.</p>
-            <ComponentPreview language="html" codeFigure removeOuterTag>
+            <ComponentPreview language="javascript" codeFigure removeOuterTag>
                 dg.component.init();{"\n"}
                 dg.component.init(&quot;demo-component-id&quot;);
             </ComponentPreview>
@@ -136,7 +136,7 @@ const Installation = () => (
             </div>
             <div className="alert alert-informative mt-4">
                 <i className="material-icons alert-icon" aria-hidden="true">info</i>
-                <p><b>Target Browser:</b> "Last 3 versions, > 1%, not dead"</p>
+                <p><b>Target Browser:</b> &quot;Last 3 versions, &gt; 1%, not dead&quot;</p>
             </div>
             <h4>Browser support for products using the Design Guide</h4>
             <p>It is up to every Project manager and development team to decide which browsers their product should support. If you want to support other browsers than the ones supported by the Design Guide you need to maintain and test the component code in in your project. </p>

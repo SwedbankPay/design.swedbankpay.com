@@ -10,7 +10,7 @@ const Overview = () => (
         <p>Use the table component to make information easier to compare and scan for users.</p>
         <p>Tables can be used for several different things, but common use cases for a table are, for example displaying a list that contains different types of data (text, numbers) and in some cases combined with interactions and various graphical elements.</p>
 
-        <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={tableShowcase} />
+        <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={tableShowcase} previewMinHeight={400} />
 
         <section>
             <h3>Things to consider</h3>

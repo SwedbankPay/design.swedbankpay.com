@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { ComponentPreview, DocContainer } from "@docutils";
+import { ComponentPreview, DocContainer, OldComponentPreview } from "@docutils";
 import CodeTags from "@components/CodeTags";
 import { Link } from "react-router-dom";
 
@@ -17,7 +17,7 @@ const SheetExample = () => (
         <p>
         The sheets is used to provide users with actions and information contextual to the page. It can be used in different contexts, but common use cases are to display multiple actions that will affect the screen’s primary content such as filters or other ways to manipulate the main content.
         </p>
-        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={sheetShowCase} codeFigure/>
+        <OldComponentPreview language="html" showCasePanel showCasePanelAdvanced={sheetShowCase} codeFigure/>
         <h3>When to consider something else</h3>
         <ul className="list list-bullet">
             <li>To enforce an action before the user can proceed, use the <Link to="/components/dialog">Dialog</Link> component.</li>

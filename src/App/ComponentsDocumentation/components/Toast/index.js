@@ -8,8 +8,8 @@ import { toastShowCase, optionsTable } from "./constants";
 const Overview = () => (
     <section>
         <h2 id="overview">Overview</h2>
-        <ComponentPreview language="html" showCasePanel hideCodeFigure showCasePanelAdvanced={toastShowCase} />
-        <ComponentPreview language="html" codeFigure dangerousHTML>
+        <ComponentPreview language="html" showCasePanel hideCodeFigure showCasePanelAdvanced={toastShowCase} staticPreview />
+        <ComponentPreview language="html" codeFigure dangerousHTML staticPreview>
             {"<button type=\"button\" class=\"btn btn-primary\" onclick=\"event => dg.toast({\n\tevent,\n\ttype: 'neutral' \n\thtml: '<p><b>Info header</b> Input informative alert information here, provide <a href=\"#\">link</a> to solution or more info when possible.</p>'})\">\nShow neutral toast\n</button>"}
         </ComponentPreview>
         <section>

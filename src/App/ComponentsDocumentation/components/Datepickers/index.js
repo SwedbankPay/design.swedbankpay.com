@@ -27,7 +27,7 @@ const SimpleDatepicker = () => (
             A basic datepicker can be made by applying the attribute <CodeTags type="secondary" code="data-datepicker" /> to an input element inside a <CodeTags type="secondary" code=".form-group" />.
             The basic datepicker has a read-only input field.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview>
             <DatepickerComponent
                 label="Date"
                 prefixType="icon"
@@ -45,7 +45,7 @@ const AllowInput = () => (
             By default datepickers do not allow input but you can use <CodeTags type="secondary" code="data-datepicker-allowinput" />. When
             you allow input then the given date has to match the datepicker format (<CodeTags type="secondary" code="iso8601"/> if you have not specified a format).
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview>
             <DatepickerComponent
                 label="Date"
                 prefixType="icon"
@@ -61,7 +61,7 @@ const InitialValue = () => (
     <>
         <h2 id="initial-value">Initial value</h2>
         <p>If you want to set an initial value for your datepicker use <CodeTags type="secondary" code={"data-datepicker-value=\"{your-date}\""} />.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview>
             <DatepickerComponent
                 value="1972-12-28"
                 label="Date"
@@ -79,7 +79,7 @@ const HumanReadable = () => (
         <p>
             If you wish to make the date more readable to humans you can add <CodeTags type="secondary" code={"data-datepicker-fulldate=\"true\""} />
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview>
             <DatepickerComponent
                 value="1972-12-28"
                 label="Date"
@@ -99,7 +99,7 @@ const CustomFormat = () => (
             To use a custom format include <CodeTags type="secondary" code={"data-datepicker-format=\"[nb|sv|da|fi|en|iso8601(default)]\""} />. If no
             format is provided then datepicker will default to <CodeTags type="secondary" code="iso8601" />. Same behaviour applies if you try to set an invalid date.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview>
             <DatepickerComponent
                 label="nb (norwegian):"
                 value="28.12.1972"
@@ -159,7 +159,7 @@ const IncludeTime = () => (
             Adding time to your datepicker is as easy as using <CodeTags type="secondary" code={"data-datepicker-time=\"true\" "} />. If you wish to set
             a default time for the time picker just include it in the <CodeTags type="secondary" code="data-datepicker-value" /> attribute.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview>
             <DatepickerComponent
                 time
                 format="nb"
@@ -176,7 +176,7 @@ const ShowingMultipleMonths = () => (
     <>
         <h2 id="showing-multiple-months">Showing multiple months</h2>
         <p>If you need to show more than one month in your date picker use the attribute <CodeTags type="secondary" code={"data-datepicker-months=\"{number}\""} />.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview>
             <DatepickerComponent
                 months="2"
                 label="Date"
@@ -194,7 +194,7 @@ const ValidDates = () => (
         <p>
             You can set a range of available dates to select from by using <CodeTags type="secondary" code="data-datepicker-min" /> and <CodeTags type="secondary" code="data-datepicker-max" />.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview>
             <DatepickerComponent
                 value="28.12.1972"
                 min="28.12.1972"
@@ -215,7 +215,7 @@ const DateRange = () => (
         <p>
             You can make it possible to select a range of dates with <CodeTags type="secondary" code={"data-datepicker-mode=\"range\""} />.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview>
             <DatepickerComponent
                 min="10.12.1972"
                 label="date"
@@ -235,7 +235,7 @@ const MultipleDates = () => (
         <p>
             Set <CodeTags type="secondary" code="data-datepicker-mode" /> to <CodeTags type="secondary" code="multiple" /> for multiple date selection.
         </p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure staticPreview>
             <DatepickerComponent
                 min="10.12.1972"
                 label="date"

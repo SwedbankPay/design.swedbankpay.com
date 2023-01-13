@@ -6,6 +6,7 @@ import ExperimentalComponentAlert from "./ExperimentalComponentAlert";
 import Icon from "./Icon";
 import JavascriptDocs from "./JavascriptDocs";
 import JavascriptDocElement from "./JavascriptDocElement";
+import { OldComponentPreview } from "./ComponentPreview/OldComponentPreview";
 import StatusBadge from "./StatusBadge";
 
 export {
@@ -17,5 +18,6 @@ export {
     Icon,
     JavascriptDocs,
     JavascriptDocElement,
+    OldComponentPreview,
     StatusBadge
 };

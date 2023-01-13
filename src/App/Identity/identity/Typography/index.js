@@ -214,7 +214,7 @@ const Code = () => (
 
         <h3>Headings</h3>
         <p>Swedbank Pay Design Guide provides basic styling on all headings (h1-h6).</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={400}>
             <h1>Heading h1</h1>
             <h2>Heading h2</h2>
             <h3>Heading h3</h3>
@@ -223,7 +223,7 @@ const Code = () => (
             <h6>Heading h6</h6>
         </ComponentPreview>
         <p>The classes <CodeTags type="secondary" code=".h1" /> through <CodeTags type="secondary" code=".h6" /> are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={350}>
             <p className="h1">.h1 heading</p>
             <p className="h2">.h2 heading</p>
             <p className="h3">.h3 heading</p>
@@ -234,7 +234,7 @@ const Code = () => (
 
         <h3>Hero title</h3>
         <p>The class <CodeTags type="secondary" code=".hero" /> can be used to achieve the big and bold hero title styling.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={300}>
             <h1 className="hero">Hero title</h1>
             <p className="hero">Hero title</p>
         </ComponentPreview>
@@ -247,7 +247,7 @@ const Code = () => (
 
         <h3>Inline text elements</h3>
         <p>Styling for common inline HTML5 elements.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={500}>
             <p>You can use the mark tag to <mark>highlight</mark> text.</p>
             <p><del>This line of text is meant to be treated as deleted text.</del></p>
             <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
@@ -284,7 +284,7 @@ const Code = () => (
 
         <h3>Blockquotes</h3>
         <p>For quoting blocks of content from another source within your document. Wrap <CodeTags type="primary" code={"<blockquote>"} /> or <CodeTags type="secondary" code=".blockquote" /> around any HTML as the quote.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure >
             <blockquote className="blockquote">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
             </blockquote>
@@ -292,7 +292,7 @@ const Code = () => (
 
         <h4>Naming a source</h4>
         <p>Add a <CodeTags type="primary" code={"<footer>"} /> for identifying the source. Wrap the name of the source work in <CodeTags type="primary" code={"<cite>"} />.</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
+        <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={200}>
             <blockquote className="blockquote">
                 <p>
                     Better learn balance. Balance is key. Balance good, karate good. Everything good. Balance bad, better pack up, go home. Understand?
@@ -303,6 +303,7 @@ const Code = () => (
     </section>
 );
 
+// used for PayEx side of DS
 const Headings = () => (
     <>
         <h2 id="headings">Headings</h2>
@@ -327,6 +328,7 @@ const Headings = () => (
     </>
 );
 
+// used for PayEx side of DS
 const HeroTitle = () => (
     <>
         <h2 id="hero-title">Hero title</h2>
@@ -338,6 +340,7 @@ const HeroTitle = () => (
     </>
 );
 
+// used for PayEx side of DS
 const Lead = () => (
     <>
         <h2 id="lead">Lead</h2>
@@ -348,6 +351,7 @@ const Lead = () => (
     </>
 );
 
+// used for PayEx side of DS
 const Inline = () => (
     <>
         <h2 id="inline-text-elements">Inline text elements</h2>
@@ -377,6 +381,7 @@ const Inline = () => (
     </>
 );
 
+// used for PayEx side of DS
 const TextUtilities = () => (
     <>
         <h2 id="text-utilities">Text utilities</h2>
@@ -384,6 +389,7 @@ const TextUtilities = () => (
     </>
 );
 
+// used for PayEx side of DS
 const Abbreviations = () => (
     <>
         <h2 id="abbreviations">Abbreviations</h2>
@@ -397,6 +403,7 @@ const Abbreviations = () => (
     </>
 );
 
+// used for PayEx side of DS
 const Blockquotes = () => {
     const BlockquotesText = () => (
         <>
@@ -412,7 +419,7 @@ const Blockquotes = () => {
 
     const BlockquoteWithSourceText = () => (
         <>
-            <h3>Naming a source</h3>
+            <h3>Naming a source test</h3>
             <p>Add a <CodeTags type="primary" code={"<footer>"} /> for identifying the source. Wrap the name of the source work in <CodeTags type="primary" code={"<cite>"} />.</p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <blockquote className="blockquote">
@@ -433,6 +440,7 @@ const Blockquotes = () => {
     );
 };
 
+// used for PayEx side of DS
 const AkkuratMono = () => (
     <>
         <h2 id="akkurat-mono">Akkurat Mono</h2>

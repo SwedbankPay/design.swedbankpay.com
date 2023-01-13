@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
+import { ComponentPreview, OldComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import { tooltips } from "@src/scripts/main";
 import NpmInformation from "@docutils/NpmInformation";
 
@@ -16,7 +16,7 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
         <p>Tooltips should be used sparingly. If you’re building something that requires a lot of tooltips, work on clarifying the design and the language in the experience.</p>
 
-        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={tooltipShowCase} codeFigure/>
+        <OldComponentPreview language="html" showCasePanel showCasePanelAdvanced={tooltipShowCase} codeFigure/>
 
         <h3>When to consider something else</h3>
         <p>If there are sufficient space within the design it is always preferred to keep content visible by default.</p>

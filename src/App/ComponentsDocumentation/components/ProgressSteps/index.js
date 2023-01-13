@@ -31,7 +31,7 @@ const BasicSteps = () => {
             <p>
                 The standard steps component will render horizontally and scale according to the size of its parent.
             </p>
-            <ComponentPreview language="html" showCasePanel codeFigure>
+            <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={250}>
                 <StepsComponent steps={steps} />
             </ComponentPreview>
         </>
@@ -63,7 +63,7 @@ const VerticalSteps = () => {
             <p>
                 If you wish to use steps vertically you can add <CodeTags type="secondary" code=".steps-vertical" /> to the <CodeTags type="primary" code={"<div>"} /> element.
             </p>
-            <ComponentPreview language="html" showCasePanel codeFigure>
+            <ComponentPreview language="html" showCasePanel codeFigure previewMinHeight={400}>
                 <StepsComponent steps={steps} vertical />
             </ComponentPreview>
         </>
@@ -106,7 +106,7 @@ const ClickableSteps = () => {
                 Add an anchor element (<CodeTags type="primary" code={"<a>"} />) to the list item element ( <CodeTags type="primary" code={"<li>"} />).
                 Ensure that all content within the list element is also inside the anchor element.
             </p>
-            <ComponentPreview language="html" showCasePanel codeFigure>
+            <ComponentPreview language="html" showCasePanel codeFigure >
                 <StepsComponent steps={steps} />
             </ComponentPreview>
         </>
