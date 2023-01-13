@@ -46,7 +46,8 @@ export const topbarShowcase = {
             tab: "Mobile/tablet",
             component: <Topbar logout wide={false}/>,
             title: "Mobile/tablet",
-            description: <p>The minimum requirement in a Topbar is to include the Swedbank Pay Logotype, common additional functionality is a list with navigation links. On smaller screens use a menu button to toggle a vertical navigation drawer with links when the menu button is clicked. </p>
+            description: <><p>The minimum requirement in a Topbar is to include the Swedbank Pay Logotype, common additional functionality is a list with navigation links. On smaller screens use a menu button to toggle a vertical navigation drawer with links when the menu button is clicked.</p>
+                <p>Be aware; The <CodeTags code="max-height" type="primary"/> attribute for element <CodeTags type="secondary" code=".nav-ul"/> when it is active is set to 2500px. This is to ensure animation for the transition to happen. You can easily alter this by creating custom css.</p></>
         }
     ]
 };
