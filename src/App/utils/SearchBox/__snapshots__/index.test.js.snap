@@ -1880,7 +1880,7 @@ exports[`Utilities; SearchBox renders different buttons after click in mobile ve
     >
       <input
         className="form-control"
-        id="search-box"
+        id="search-box-mobile"
         onChange={[Function]}
         onKeyDown={[Function]}
         placeholder="Search"
@@ -1911,7 +1911,7 @@ exports[`Utilities; SearchBox renders with mobile prop 1`] = `
     >
       <input
         className="form-control"
-        id="search-box"
+        id="search-box-mobile"
         onChange={[Function]}
         onKeyDown={[Function]}
         placeholder="Search"
@@ -2001,7 +2001,7 @@ exports[`Utilities; SearchBox renders with props mobile and className 1`] = `
     >
       <input
         className="form-control"
-        id="search-box"
+        id="search-box-mobile"
         onChange={[Function]}
         onKeyDown={[Function]}
         placeholder="Search"
