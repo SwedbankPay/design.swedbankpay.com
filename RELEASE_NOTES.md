@@ -9,7 +9,6 @@
 -   Searchbox (documentation):
     -   Shortcut for accessing the searchbox quicker (Ctrl/Cmd + K)
 
-
 ## Changed
 -   Utilities section (documentation):
     -   Deleted all subpages and replaced it with only one page with overview of all utility classes we provide. More straight to the point for our users.
