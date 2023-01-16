@@ -6,7 +6,7 @@ import { spacings, borders, breakpoints, colors, displayHidingElements, flex, im
 import StatusBadgeComponent from "@docutils/StatusBadge";
 
 const UtilitiesPresentation = () => (
-    <section id="borderOverview" className="">
+    <section id="borderOverview">
         <div className="row">
             {utilitiyDocPresenter.map(({ title, items, description }, i) => (
                 <div key={i} className="col-lg-6 co-sm-12 mb-4">
