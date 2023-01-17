@@ -63,7 +63,7 @@ const ComponentPreview = ({
         dangerousHTML,
         hideValue });
 
-    const updateActiveOptions = (inputModified, inputType) => {
+    const updateActiveOptions = (inputModified, inputType, id) => {
 
         if (inputType === "checkbox") {
             if (activeOptions.some(option => option.id === inputModified.id)) {
@@ -77,8 +77,8 @@ const ComponentPreview = ({
                 );
             }
         } else {
-            setActiveOptions([...activeOptions.filter(option => inputModified.id !== option.id), {
-                id: inputModified.id,
+            setActiveOptions([...activeOptions.filter(option => id !== option.id), {
+                id,
                 value: inputModified.value,
                 description: inputModified.description
             }]);

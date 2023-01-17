@@ -49,7 +49,7 @@ export const Sidebar = ({
                 <fieldset className="mb-4" key={i}>
                     <legend className="h4">{radio.title}</legend>
                     {radio.values.map((val, j) => (
-                        <div key={j} className={`radio${val.toBeRemoved ? " d-block" : ""}`} onChange={e => updateActiveOptions(val, "radio")}>
+                        <div key={j} className={`radio${val.toBeRemoved ? " d-block" : ""}`} onChange={e => updateActiveOptions(val, "radio", radio.id)}>
                             <input
                                 type="radio"
                                 id={`${radio.id + val.name.replace(/\s/g, "")}${val.default ? "_default" : ""}`}
