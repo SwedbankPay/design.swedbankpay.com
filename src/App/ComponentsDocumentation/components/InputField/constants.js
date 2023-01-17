@@ -12,7 +12,7 @@ const InputOptions = () => (
                         name: "Is optional",
                         value: {
                             optional: true
-                        }
+                        },
                     },
                     {
                         id: "hint_text",
@@ -49,7 +49,7 @@ const InputOptions = () => (
                         value: {
                             type: "email",
                             addOnType: "icon",
-                            prefixValue: "email"
+                            prefixValue: "email",
                         }
                     },
                     {

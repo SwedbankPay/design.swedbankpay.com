@@ -37,11 +37,15 @@
     }
 
     // resetting the styles modified by the Sandpack sandbox
-    .sp-wrapper > div:not(.sp-stack) {
-        font-size: initial;
-        line-height: 1.5;
-        font-family: @brand-default;
-        color: @brand-secondary;
+    .sp-wrapper {
+        margin-bottom: 1rem;
+
+        & > div:not(.sp-stack) {
+            font-size: initial;
+            line-height: 1.5;
+            font-family: @brand-default;
+            color: @brand-secondary;
+        }
     }
 
     .showcase-panel {

@@ -4,7 +4,6 @@ export const Topbar = ({
     tabsId,
     tabs,
     hideOptions,
-    onTabClick,
     sidebarDisplayed,
     setSidebarDisplayed,
     setActiveTab,
@@ -15,7 +14,6 @@ export const Topbar = ({
         { tabs && <Tabs
             tabsId={tabsId}
             tabs={tabs}
-            onTabClick={onTabClick}
             activeTab={activeTab}
             setActiveTab={setActiveTab}
         />}
@@ -35,7 +33,6 @@ const Tabs = ({
     tabs,
     activeTab,
     setActiveTab,
-    onTabClick
 }) => (
     <ul id={`${tabsId}-ul`}>
         {tabs.map((element, i) => <li key={i} className={`${activeTab?.tab === element.tab ? "active" : null}`}>

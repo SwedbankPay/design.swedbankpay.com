@@ -24,7 +24,6 @@ const ShowCasePanel = ({ showCasePanelSm, negative, childrenPassed, staticPrevie
 const CodeFigure = () => <SandpackCodeEditor showInlineErrors />;
 
 // TODO: fix the previous componentsDidUpdate -> it used to re-init things like tab, accordion, hint-expander, sheetetc
-// TODO: fix styling of tabs & options (classes brought by Sandpack screw our own styling)
 const ComponentPreview = ({
     children: childrenPassed,
     language,
@@ -43,14 +42,6 @@ const ComponentPreview = ({
 }) => {
 
     const [activeTab, setActiveTab] = useState(showCasePanelAdvanced?.elements[0]);
-
-    /**
-     * An activeOption
-     * @typedef {Object} ActiveOption
-     * @property {string|undefined} description - The optional description, for the text
-     * @property {string} id - The option id
-     * @property {object} value - The option value (e.g. `size: "lg",` -or- `disabled: true,`)
-    */
 
     const [activeOptions, setActiveOptions] = useState(showCasePanelAdvanced?.elements[0]?.activeOptions ? [...showCasePanelAdvanced.elements[0].activeOptions] : []);
     const codeParsed = useCodeParser({ showCasePanelAdvanced,
@@ -166,7 +157,6 @@ const ComponentPreview = ({
                     readOnly: isReadOnly,
                 },
                 "src/index.js": {
-                    // TODO: make this JS initialization specific per component and show it to the user in tabs, until then it can be hidden
                     hidden: true,
                     code: jsInitAllCode,
                     readOnly: isReadOnly,

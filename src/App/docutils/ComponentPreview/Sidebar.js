@@ -37,14 +37,6 @@ export const Sidebar = ({
                     )
                     )
             }
-            {activeTab.options.dropdown && activeTab.options.dropdown.map((dropdown, i) => (
-                <fieldset key={i} className="mb-4">
-                    <legend>{dropdown.title}</legend>
-                    <select id={dropdown.id} className="form-control" onChange={e => updateActiveOptions(dropdown, "dropdown")}>
-                        {dropdown.values.map((val, j) => <option key={j} value={j}>{val.name}</option>)}
-                    </select>
-                </fieldset>
-            ))}
             {activeTab.options.radio && activeTab.options.radio.map((radio, i) => (
                 <fieldset className="mb-4" key={i}>
                     <legend className="h4">{radio.title}</legend>

@@ -16,8 +16,6 @@ export const ShowCasePanelAdvanced = ({
 }) => {
     const [sidebarDisplayed, setSidebarDisplayed] = useState(false);
 
-    const onTabClick = e => console.log("tabClicked", e);
-
     // TODO: could this be done via CSS instead ?
     useEffect(() => {
         setSidebarDisplayed(window.innerWidth > 1200); // XL grid breakpoint
@@ -28,7 +26,6 @@ export const ShowCasePanelAdvanced = ({
             <div id={showCasePanelAdvanced.id} className={"showcase-panel showcase-panel-advanced"}>
                 <Topbar
                     tabs={showCasePanelAdvanced?.elements}
-                    onTabClick={onTabClick}
                     tabsId={showCasePanelAdvanced.tabsId}
                     hideOptions={showCasePanelAdvanced.hideOptions}
                     sidebarDisplayed={sidebarDisplayed}
@@ -48,6 +45,7 @@ export const ShowCasePanelAdvanced = ({
                         <ComponentDescription
                             title={activeTab.title}
                             description={activeTab.description}
+                            activeOptions={activeOptions}
                         />
                     </div>
                     <Sidebar

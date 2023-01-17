@@ -1,4 +1,4 @@
-// TODO: to be removed !!!
+// TODO: to be removed once all previews are done using the sandpack sandboxes !!!
 
 import React, { Component, cloneElement } from "react";
 import PropTypes from "prop-types";
