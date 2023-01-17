@@ -99,7 +99,7 @@ export const overviewTags = {
                 ]
             },
             title: "Code tags",
-            description: <p>Code tags are used to present inline code. They use the Akkurat Mono font. Using {<CodeTags code="<code>"/>} without any specified styling will result in the primary tag styling being applied. Chose which color that is more suitable for your project, or combine them to differentiate between different coding languages or styles.</p>
+            description: <p>Code tags are used to present inline code. They use the Akkurat Mono font. Using {<CodeTags type="primary" code="<code>"/>} without any specified styling will result in the primary tag styling being applied. Chose which color that is more suitable for your project, or combine them to differentiate between different coding languages or styles.</p>
         }
     ]
 };

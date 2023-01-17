@@ -113,6 +113,7 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
               Code tags are used to present inline code. They use the Akkurat Mono font. Using 
               <CodeTags
                 code="<code>"
+                type="primary"
               />
                without any specified styling will result in the primary tag styling being applied. Chose which color that is more suitable for your project, or combine them to differentiate between different coding languages or styles.
             </p>,
