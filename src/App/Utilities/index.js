@@ -5,6 +5,7 @@ import { expandable } from "~/src/scripts/main";
 import { spacings, borders, breakpoints, colors, displayHidingElements, flex, images, sizings, text, visibility } from "./constants";
 import StatusBadgeComponent from "@docutils/StatusBadge";
 import packageJson from "~/package";
+import { Link } from "react-router-dom";
 
 const UtilitiesPresentation = () => (
     <section id="borderOverview">
@@ -38,7 +39,7 @@ const utilitiyDocPresenter = [
     {
         title: "Color",
         items: colors,
-        description: <p>We have a few color utility classes. For more information about our colors, refer to this <a href="/identity/color">color section</a>.</p>
+        description: <p>We have a few color utility classes. For more information about our colors, refer to this <Link to="/identity/color">color section</Link>.</p>
     },
     {
         title: "Display",
