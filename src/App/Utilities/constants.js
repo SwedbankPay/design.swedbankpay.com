@@ -206,7 +206,7 @@ export const flex = [
     {
         id: "wrap",
         title: "Wrap",
-        subtitle: "Nowrap is a browsers defualt",
+        subtitle: "Nowrap is the browser's default value",
         content: <>
             {flexClasses.wrap.map((rule, i) => (
                 <FlexPresenter key={rule + i} code={rule.code} />

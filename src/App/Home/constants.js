@@ -6,8 +6,8 @@ const basename = process.env.basename;
 export const changeLogs = [
     {
         version: "10.6.0",
-        title: "A brand new Utilites page 😱",
-        text: <p>Utilities section has been updated, now you can get direct access to your favorite util classes! Some minor bugfixes has been fixed, updated our get-started section for our users and added a crisp shortcut to make your searches even faster (Ctrl/Cmd + K)🔥 Lastly, the navigation component is officialy ❌deprecated❌ meaning we will not be updating or prioritize maintenance for this component. As always, you can read the thorough changelog on Github!</p>,
+        title: "A brand new Utilities page 😱",
+        text: <p>Utilities section has been updated, now you can get direct access to your favorite utility classes! Some minor bugfixes has been fixed, updated our get-started section for our users and added a crisp shortcut to make your searches even faster (Ctrl/Cmd + K)🔥 Lastly, the navigation component is officialy ❌deprecated❌ meaning we will not be updating or prioritize maintenance for this component. As always, you can read the thorough changelog on Github!</p>,
         latestVersion: true
     },
     {
