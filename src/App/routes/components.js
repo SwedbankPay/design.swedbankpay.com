@@ -45,8 +45,7 @@ module.exports = [
                 path: "/components/badge",
                 componentPath: "components/Badge",
                 icon: "more",
-                outlined: true,
-                statusBadges: ["updated"]
+                outlined: true
             },
             {
                 title: "Breadcrumb",
@@ -60,8 +59,7 @@ module.exports = [
                 path: "/components/buttons",
                 componentPath: "components/Buttons",
                 icon: "touch_app",
-                outlined: true,
-                statusBadges: ["updated"]
+                outlined: true
             },
             {
                 title: "Cards",
@@ -187,7 +185,7 @@ module.exports = [
                 path: "/components/radio-button",
                 componentPath: "components/RadioButton",
                 icon: "radio_button_checked",
-                statusBadges: ["javascript", "updated"]
+                statusBadges: ["javascript"]
             },
             {
                 title: "Rangeslider",
@@ -233,8 +231,7 @@ module.exports = [
                 path: "/components/slab",
                 componentPath: "components/Slab",
                 icon: "crop_landscape",
-                outlined: true,
-                statusBadges: ["updated"]
+                outlined: true
             },
             {
                 title: "Status",
@@ -263,6 +260,7 @@ module.exports = [
                 path: "/components/tags",
                 componentPath: "components/CodeTags",
                 icon: "code",
+                statusBadges: ["updated"],
                 outlined: true
             },
             {
@@ -286,7 +284,7 @@ module.exports = [
                 componentPath: "components/Tooltips",
                 icon: "filter_frames",
                 outlined: true,
-                statusBadges: ["javascript", "updated"]
+                statusBadges: ["javascript"]
             },
             {
                 title: "Topbar",

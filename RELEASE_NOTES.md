@@ -1,14 +1,31 @@
 # Changelog
 
-## [10.5.1] - 09.12.2022
+## [10.6.0] - 13.01.2023
+
+## Added
+-   Navigation component:
+    -   Deprecated component: Will not maintain or further develop this component. (It will still be accessible for those of you who use it)
+
+-   Searchbox (documentation):
+    -   Shortcut for accessing the searchbox quicker (Ctrl/Cmd + K)
 
 ## Changed
--   Tooltip component:
-    -   The only component that was still dependent on another component's style. Added styles to the tooltip.less file, so it is independent. This is *kind of* a breaking change, but not really since the old version still works, but if you want to keep up2date, delete `.btn` and `.btn-link` classes.
+-   Utilities section (documentation):
+    -   Deleted all subpages and replaced it with only one page with overview of all utility classes we provide. More straight to the point for our users.
+
+-   Get started (documentation):
+    -   Update information on getting started for developers, npm, cdn, nuxt, etc..
+
+-   Tags component:
+    -   Change from display flex, to inline-flex. Most likely this is the best option for this component. 
+
+-   PayEx Design Guide Font for Status component:
+    -   Wrong font was applied, this is now fixed.
 
 ## Bugfixes
--   Tooltip component:
-    -   Z-index changes from v/10.5.0 removed the belonging arrow between the tooltip icon and the tooltip.
+-   Dublicate searchbox ids (documentation page)
+-   Topbar(sidebar) had a minor shadow bug, this is now fixed. 
+-   Z-Index fix for documentation page
 
--   Input field component: 
-    -   Had some issues with borders when postfix was displayed. This is now fixed
+## Removed
+-   DocToc prop in doc components

@@ -4,9 +4,10 @@ import CodeTagComponent from "@components/CodeTags";
 import { expandable } from "~/src/scripts/main";
 import { spacings, borders, breakpoints, colors, displayHidingElements, flex, images, sizings, text, visibility } from "./constants";
 import StatusBadgeComponent from "@docutils/StatusBadge";
+import packageJson from "~/package";
 
 const UtilitiesPresentation = () => (
-    <section id="borderOverview" className="">
+    <section id="borderOverview">
         <div className="row">
             {utilitiyDocPresenter.map(({ title, items, description }, i) => (
                 <div key={i} className="col-lg-6 co-sm-12 mb-4">
@@ -87,7 +88,7 @@ const Utilities = () => {
 
     return (
         <div className="doc-container utilities-page">
-            <span className="dg-current-version text-uppercase">Design Guide - v. 10.5.1</span>
+            <span className="dg-current-version text-uppercase">Design Guide - v. {packageJson.version}</span>
             <div className="d-flex align-items-center"><h1>Utilities</h1><StatusBadgeComponent type={"new"} /></div>
             <p className="lead">
                 The utility classes in our design system is based on Bootstrap. Here you can view the <i>most</i> used and important classes.

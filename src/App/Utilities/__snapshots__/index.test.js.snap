@@ -7,7 +7,8 @@ exports[`Utilities: index renders 1`] = `
   <span
     className="dg-current-version text-uppercase"
   >
-    Design Guide - v. 10.5.1
+    Design Guide - v. 
+    10.6.0
   </span>
   <div
     className="d-flex align-items-center"
