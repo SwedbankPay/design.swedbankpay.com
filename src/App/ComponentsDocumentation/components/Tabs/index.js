@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-
+import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer } from "@docutils";
 import TabsComponent from "@components/Tabs";
 import CodeTags from "@components/CodeTags";
@@ -58,7 +58,7 @@ const DeveloperDocumentation = () => (
     <>
         <h2 id="developer-documentation">Developer documentation</h2>
         <span className="h3">Javascript methods</span>
-        <p className="my-3">Use <CodeTags type="secondary" code="dg.tabs.init()"/> to <a href="/get-started/for-developers" >initialize</a> all rangesliders.</p>
+        <p className="my-3">Use <CodeTags type="secondary" code="dg.tabs.init()"/> to <Link to="/get-started/for-developers" >initialize</Link> all rangesliders.</p>
         <p>Or <CodeTags type="secondary" code='dg.tabs.init("component-id")'/> to initialize one specific component.</p>
         <h4>Move scroll position</h4>
         <p>
@@ -66,7 +66,7 @@ const DeveloperDocumentation = () => (
         </p>
         <h4>🎨 Styling support for <CodeTags type="secondary" code=".active" /> class</h4>
         <p>
-            The same styling will be applied whether the <CodeTags type="secondary" code=".active" /> class is applied on the <CodeTags type="secondary" code="<li>" /> element or the <CodeTags type="secondary" code="<a>" /> element. This way it supports out of the box Nuxt router's behavior.
+            The same styling will be applied whether the <CodeTags type="secondary" code=".active" /> class is applied on the <CodeTags type="secondary" code="<li>" /> element or the <CodeTags type="secondary" code="<a>" /> element. This way it supports out of the box Nuxt router&apos;s behavior.
         </p>
     </>
 );
