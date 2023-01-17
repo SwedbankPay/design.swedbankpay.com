@@ -3,6 +3,7 @@ import Alert from "@components/Alert";
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import NavComponent from "@components/Nav";
 import CodeTags from "@components/CodeTags";
+import { Link } from "react-router-dom";
 
 import { nav } from "@src/scripts/main";
 import NpmInformation from "@docutils/NpmInformation";
@@ -75,7 +76,7 @@ const Nav = () => {
 
     return (
         <DocContainer>
-            <Alert type="danger" icon="error" text={<p><b>Deprecated:</b> Be aware, this component will not be maintained anymore. Instead, consider using the <a href="/components/topbar">topbar</a> or <a href="/components/sidebar">sidebar</a>.</p>}/>
+            <Alert type="danger" icon="error" text={<p><b>Deprecated:</b> Be aware, this component will not be maintained anymore. Instead, consider using the <Link to="/components/topbar">topbar</Link> or <Link to="/components/sidebar">sidebar</Link>.</p>}/>
             <p className="lead">
                 Use navs to create a basic navigational element containing links.
             </p>

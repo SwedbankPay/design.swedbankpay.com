@@ -157,17 +157,17 @@ exports[`Component: Nav renders 1`] = `
           Deprecated:
         </b>
          Be aware, this component will not be maintained anymore. Instead, consider using the 
-        <a
-          href="/components/topbar"
+        <Link
+          to="/components/topbar"
         >
           topbar
-        </a>
+        </Link>
          or 
-        <a
-          href="/components/sidebar"
+        <Link
+          to="/components/sidebar"
         >
           sidebar
-        </a>
+        </Link>
         .
       </p>
     }
