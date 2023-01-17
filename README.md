@@ -97,7 +97,7 @@ shortcuts for common paths. The shortcuts are as following:
 |      `~`      | root of the project (example `import package from "~/package";`)                       |
 |    `@src`     | `~/src`-folder (example `import dg from "@src/scripts";`)                              |
 | `@components` | `~/src/App/components`-folder (example `import Alert from "@components/Alert";`)       |
-|  `@docutils`  | `~/src/App/Documentation/utils`-folder (example `import { DocToc } from "@docutils";`) |
+|  `@docutils`  | `~/src/App/utils`-folder (example `import { SearchBox } from "@docutils";`) |
 | `@constants`  | `~/src/constants`-folder                                                               |
 
 The shortcuts are specified in the `~/.babelrc`-file. Specifying the

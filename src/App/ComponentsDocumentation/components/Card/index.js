@@ -163,7 +163,7 @@ const OldCard = () => (
 class Card extends Component {
     render () {
         return (
-            <DocContainer docToc>
+            <DocContainer>
                 <p>
                     The card component is a flexible container that groups and informs about the content and action.
                     The information presented should be concise, to the point and easy to understand. The card

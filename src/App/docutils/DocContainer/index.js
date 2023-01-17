@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import PropTypes from "prop-types";
 
 import { sidebar } from "@src/scripts/main";
 
@@ -17,10 +16,6 @@ const DocContainer = ({ children }) => {
             <DocContent />
         </div>
     );
-};
-
-DocContainer.propTypes = {
-    docToc: PropTypes.bool
 };
 
 export default DocContainer;

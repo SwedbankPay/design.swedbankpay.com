@@ -91,9 +91,9 @@ exports[`Components: Badge Overview renders 1`] = `
     </ul>
   </section>
   <section>
-    <h3>
+    <h2>
       Content guidelines
-    </h3>
+    </h2>
     <div
       className="row"
     >
@@ -143,9 +143,7 @@ exports[`Components: Badge Overview renders 1`] = `
 `;
 
 exports[`Components: Badge renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >

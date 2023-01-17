@@ -56,7 +56,7 @@ import { ComponentPreview, DocContainer } from "@docutils";
 import MyExampleComponent from "@components/MyExampleComponent";
 
 const MyExampleDocumentationComponent = () => (
-    <DocContainer docToc>
+    <DocContainer>
         <p className="lead">This is the documentation for My Example Component.</p>
         <h2 id="example-usage">Example usage</h2>
         <ComponentPreview language="html" showCasePanel codeFigure>
@@ -70,7 +70,7 @@ export default MyExampleDocumentationComponent;
 
 Use the custom `ComponentPreview` component to preview your component. It has several props, for this example we are going to be using `language`, `showCasePanel` and `codeFigure`.
 
-We are also using the `DocContainer` component to sentralize the layout of the documentation, pass the `docToc` prop to add a dynamic table of contents to the documentation of your component. This component scans the provided component for `<h2>`-tags and creates anchors for easier navigation. Just remember to add an id to the `<h2>`-tag.
+We are also using the `DocContainer` component to sentralize the layout of the documentation. This component scans the provided component for `<h2>`-tags and creates anchors for easier navigation. Just remember to add an id to the `<h2>`-tag.
 
 ### Add MyExampleDocumentationComponent to the routes
 
@@ -216,7 +216,7 @@ class MyExampleDocumentationComponent extends Component {
 
     render() {
         return (
-            <DocContainer docToc>
+            <DocContainer>
                 <p className="lead">This is the documentation for My Example Component.</p>
                 <h2 id="example-usage">Example usage</h2>
                 <ComponentPreview language="html" showCasePanel codeFigure>

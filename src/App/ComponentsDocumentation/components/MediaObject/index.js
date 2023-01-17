@@ -48,7 +48,7 @@ const MediaPosition = () => (
 );
 
 const MediaObject = () => (
-    <DocContainer docToc>
+    <DocContainer>
         <p className="lead">
             Use media objects to showcase basic user information with text and a small image element or an icon.
         </p>

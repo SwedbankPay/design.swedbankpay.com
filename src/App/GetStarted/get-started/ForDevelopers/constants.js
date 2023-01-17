@@ -1,6 +1,5 @@
 import identityRoute from "@src/App/routes/identity";
 import componentRoute from "@src/App/routes/components";
-import utilitiesRoute from "@src/App/routes/utilities";
 
 const iconography = identityRoute[0].routes.find(component => component.title === "Iconography");
 
@@ -63,11 +62,6 @@ export const discoverMore = [
     {
         title: componentRoute[0].title,
         url: componentRoute[0].path,
-        text: "See all available components"
-    },
-    {
-        title: utilitiesRoute[0].title,
-        url: utilitiesRoute[0].path,
         text: "See all available components"
     },
     {

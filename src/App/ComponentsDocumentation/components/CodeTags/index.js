@@ -10,7 +10,7 @@ import { overviewTags } from "./constants";
 const Overview = () => (
     <section id="tag-overview">
         <h2 id="overview">Overview</h2>
-        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewTags} codeFigure removeOuterTag/>
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewTags} codeFigure/>
         <section>
             <h3>When to consider something else</h3>
             <ul>
@@ -67,7 +67,7 @@ const ContentGuidelines = () => (
 );
 
 const CodeTags = () => (
-    <DocContainer docToc >
+    <DocContainer >
         <p className="lead">Tags are used to label, categorize and organize items using keywords that describe them. Tags can for example be used in filters to represent selected filter values or in documentation to present inline code.</p>
         <Overview />
         <ContentGuidelines/>

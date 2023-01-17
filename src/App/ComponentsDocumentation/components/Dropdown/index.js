@@ -70,7 +70,7 @@ const DeveloperDocumentation = () => (
 
 const Dropdown = () => (
     <DocContainer>
-        <section>
+        <section id="dropdown-doc">
             <p className="lead">Dropdown’s are toggleable overlays that open on demand. They let users access additional content and actions without cluttering the page.</p>
             <Overview/>
             <ContentGuidelines/>

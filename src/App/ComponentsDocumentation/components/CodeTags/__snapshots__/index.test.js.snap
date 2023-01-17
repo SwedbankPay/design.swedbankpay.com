@@ -52,7 +52,6 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
     showCasePanelAdvanced={
       Object {
@@ -273,9 +272,7 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
 `;
 
 exports[`Documentation: CodeTags renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >

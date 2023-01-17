@@ -234,9 +234,7 @@ exports[`Documentation: Sheet SheetExample renders 1`] = `
 `;
 
 exports[`Documentation: Sheet renders 1`] = `
-<DocContainer
-  docToc={true}
->
+<DocContainer>
   <p
     className="lead"
   >

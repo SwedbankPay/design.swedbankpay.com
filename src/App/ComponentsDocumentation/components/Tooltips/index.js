@@ -78,7 +78,7 @@ const Tooltip = () => {
     useEffect(() => { tooltips.init(); });
 
     return (
-        <DocContainer docToc>
+        <DocContainer>
             <p className="lead">The tooltip component displays a brief explanation when a cursor hovers over an interface element. The tooltip is always anchored to this element.</p>
             <Overview />
             <ContentGuidelines/>

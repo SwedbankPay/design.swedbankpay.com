@@ -60,7 +60,7 @@ class SelectPanel extends Component {
     componentDidMount () {
         sidebar.init(this.props.id, this.props.topbarSidebar);
 
-        if (this.props.location.pathname !== "/") {
+        if (this.props.location.pathname !== "/" && this.props.location.pathname !== "/utilities") {
             const sidebarElement = document.getElementById(this.props.id);
 
             sidebarElement && sidebarElement.classList.add("has-secondary-nav");
@@ -96,8 +96,6 @@ class SelectPanel extends Component {
             <>
                 {this.props.topbarId ?
                     <div id={this.props.id} className="sidebar dg-sidebar">
-                        {/* A fully functional search box will be added later. */}
-                        {/* <SearchBox routes={this.props.routes} /> */}
                         <nav className="sidebar-nav">
                             <ul className="main-nav-ul">
                                 {this.props.routes.map((route, i) => {
@@ -148,6 +146,12 @@ class SelectPanel extends Component {
                                         </nav>
                                     }
                                 </li>)}
+                                <li className={"main-nav-li"}>
+                                    <NavLink activeClassName="active" to={"/utilities"}>
+                                        <i className="material-icons-outlined" aria-hidden="true">build</i>
+                                        Utilities
+                                    </NavLink>
+                                </li>
                             </ul>
                         </nav>
                     </div>
