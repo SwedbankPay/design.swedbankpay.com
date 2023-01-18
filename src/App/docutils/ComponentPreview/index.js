@@ -54,6 +54,11 @@ const ComponentPreview = ({
         dangerousHTML,
         hideValue });
 
+    const updateActiveTab = newTab => {
+        setActiveOptions([]);
+        setActiveTab(newTab);
+    };
+
     const updateActiveOptions = (inputModified, inputType, id) => {
 
         if (inputType === "checkbox") {
@@ -89,7 +94,7 @@ const ComponentPreview = ({
                     <ShowCasePanelAdvanced
                         showCasePanelAdvanced={showCasePanelAdvanced}
                         activeTab={activeTab}
-                        setActiveTab={setActiveTab}
+                        updateActiveTab={updateActiveTab}
                         activeOptions={activeOptions}
                         updateActiveOptions={updateActiveOptions}
                         staticPreview={staticPreview}
@@ -202,7 +207,7 @@ const ComponentPreview = ({
             template="vanilla"
             customSetup={{
                 dependencies: {
-                    "@swedbankpay/design-guide": "10.5.1"
+                    "@swedbankpay/design-guide": "10.6.1"
                 },
                 devDependencies: {
                     "@babel/core": "7.2.0",

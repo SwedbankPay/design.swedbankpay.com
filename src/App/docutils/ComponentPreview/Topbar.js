@@ -7,7 +7,7 @@ export const Topbar = ({
     hideOptions,
     sidebarDisplayed,
     setSidebarDisplayed,
-    setActiveTab,
+    updateActiveTab,
     activeTab
 }) => (
     <div id={tabsId} className="tabs tabs-scroll">
@@ -15,7 +15,7 @@ export const Topbar = ({
             tabsId={tabsId}
             tabs={tabs}
             activeTab={activeTab}
-            setActiveTab={setActiveTab}
+            updateActiveTab={updateActiveTab}
         />}
         <CloseOptionsButton
             hideOptions={hideOptions}
@@ -32,7 +32,7 @@ const Tabs = ({
     tabsId,
     tabs,
     activeTab,
-    setActiveTab,
+    updateActiveTab,
 }) => {
     useEffect(() => {
         tabsScript.init();
@@ -41,7 +41,7 @@ const Tabs = ({
     return (
         <ul id={`${tabsId}-ul`}>
             {tabs.map((element, i) => <li key={i} className={`${activeTab?.tab === element.tab ? "active" : null}`}>
-                <a href="#" onClick={e => setActiveTab(tabs[i])}>{element.tab}</a>
+                <a href="#" onClick={() => updateActiveTab(tabs[i]) }>{element.tab}</a>
             </li>
             )}
         </ul>

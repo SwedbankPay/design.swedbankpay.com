@@ -8,7 +8,7 @@ export const ShowCasePanelAdvanced = ({
     showCasePanelAdvanced,
     children,
     activeTab,
-    setActiveTab,
+    updateActiveTab,
     activeOptions,
     updateActiveOptions,
     staticPreview,
@@ -31,7 +31,7 @@ export const ShowCasePanelAdvanced = ({
                     sidebarDisplayed={sidebarDisplayed}
                     setSidebarDisplayed={setSidebarDisplayed}
                     activeTab={activeTab}
-                    setActiveTab={setActiveTab}
+                    updateActiveTab={updateActiveTab}
                 />
                 <div className="d-flex">
                     <div className="d-flex flex-column flex-fill">
