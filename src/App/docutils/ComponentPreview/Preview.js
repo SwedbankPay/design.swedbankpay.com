@@ -1,7 +1,6 @@
 import React, { cloneElement } from "react";
 import { SandpackPreview } from "@codesandbox/sandpack-react";
 
-/* TODO: test alternative background (cards?) */
 export const Preview = ({ alternativeBackground, activeTab, staticPreview, activeOptions, previewMinHeight }) => (
     <div className="component-preview flex-fill">
         <div

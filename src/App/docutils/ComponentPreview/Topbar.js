@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { tabs as tabsScript } from "@src/scripts/main";
 
 export const Topbar = ({
     tabsId,
@@ -9,7 +10,6 @@ export const Topbar = ({
     setActiveTab,
     activeTab
 }) => (
-    // TODO: fix the horizontal scrolling fade on narrow viewport
     <div id={tabsId} className="tabs tabs-scroll">
         { tabs && <Tabs
             tabsId={tabsId}
@@ -33,14 +33,20 @@ const Tabs = ({
     tabs,
     activeTab,
     setActiveTab,
-}) => (
-    <ul id={`${tabsId}-ul`}>
-        {tabs.map((element, i) => <li key={i} className={`${activeTab?.tab === element.tab ? "active" : null}`}>
-            <a href="#" onClick={e => setActiveTab(tabs[i])}>{element.tab}</a>
-        </li>
-        )}
-    </ul>
-);
+}) => {
+    useEffect(() => {
+        tabsScript.init();
+    }, []);
+
+    return (
+        <ul id={`${tabsId}-ul`}>
+            {tabs.map((element, i) => <li key={i} className={`${activeTab?.tab === element.tab ? "active" : null}`}>
+                <a href="#" onClick={e => setActiveTab(tabs[i])}>{element.tab}</a>
+            </li>
+            )}
+        </ul>
+    );
+};
 
 const CloseOptionsButton = ({
     hideOptions,

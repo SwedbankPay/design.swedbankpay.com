@@ -24,7 +24,6 @@ const ShowCasePanel = ({ showCasePanelSm, negative, childrenPassed, staticPrevie
 
 const CodeFigure = () => <SandpackCodeEditor showInlineErrors />;
 
-// TODO: fix the previous componentsDidUpdate -> it used to re-init things like tab, accordion, hint-expander, sheetetc
 const ComponentPreview = ({
     children: childrenPassed,
     codeFigure,
@@ -141,6 +140,7 @@ const ComponentPreview = ({
     }
 
     /* styles fixing specific components (e.g. alternate background (loader + links) ) */
+    /* the elements inside the iframe are only styled by the design-system npm package documentations css does not affect them */
     .loader-preview-container.dark {
         background-color: #493c3b;
     }  `;
