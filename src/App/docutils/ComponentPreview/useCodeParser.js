@@ -12,10 +12,13 @@ export const useCodeParser = ({ showCasePanelAdvanced,
     hideValue }) => {
 
     const [codeParsed, setCodeParsed] = useState("");
+    const [outerElement, setOuterElement] = useState(null);
 
     useEffect(() => {
         if (!showCasePanelAdvanced || !showCasePanelAdvanced.elements?.length) {
-            setCodeParsed(codeParsingForEditor(childrenPassed, language, removeOuterTag, removeList, dangerousHTML, hideValue));
+            setCodeParsed(codeParsingForEditor(childrenPassed, language, removeOuterTag, removeList, dangerousHTML, hideValue)[0]);
+
+            if (removeOuterTag) { setOuterElement(codeParsingForEditor(childrenPassed, language, removeOuterTag, removeList, dangerousHTML, hideValue)[1]); }
         } else if (!activeTab?.component || !activeOptions) {
             setCodeParsed("");
         } else {
@@ -26,7 +29,9 @@ export const useCodeParser = ({ showCasePanelAdvanced,
                 }), {})
             );
 
-            setCodeParsed(codeParsingForEditor(componentCodeToParse, language, removeOuterTag, removeList, dangerousHTML, hideValue));
+            setCodeParsed(codeParsingForEditor(componentCodeToParse, language, removeOuterTag, removeList, dangerousHTML, hideValue)[0]);
+
+            if (removeOuterTag) { setOuterElement(codeParsingForEditor(componentCodeToParse, language, removeOuterTag, removeList, dangerousHTML, hideValue)[1]); }
         }
     }, [showCasePanelAdvanced,
         childrenPassed,
@@ -38,5 +43,7 @@ export const useCodeParser = ({ showCasePanelAdvanced,
         dangerousHTML,
         hideValue]);
 
-    return codeParsed;
+    const outerElementCssClasses = outerElement && outerElement?.classList ? [...outerElement?.classList] : [];
+
+    return [codeParsed, outerElement, outerElementCssClasses];
 };

@@ -4,6 +4,7 @@ import { SandpackProvider, SandpackCodeEditor, SandpackPreview } from "@codesand
 import { ShowCasePanelAdvanced } from "./ShowCasePanelAdvanced";
 import { useCodeParser } from "./useCodeParser";
 import { resetOptions } from "./optionsUtils";
+import { useJsSandboxInitCode } from "./useSandboxInitCode";
 
 // TODO: should the preview of showCasePanel & the one of advancedShowCasePanel use the same component ?
 // in a way it is using the same SndpackPreview, so it would keep them in sync (e.g. add additional button "copy to clipboard", etc)
@@ -26,25 +27,25 @@ const CodeFigure = () => <SandpackCodeEditor showInlineErrors />;
 // TODO: fix the previous componentsDidUpdate -> it used to re-init things like tab, accordion, hint-expander, sheetetc
 const ComponentPreview = ({
     children: childrenPassed,
-    language,
-    removeOuterTag,
-    hideValue,
+    codeFigure,
+    dangerousHTML,
     hideCodeFigure,
+    hideValue,
+    language,
+    negative,
+    previewMinHeight = false,
     removeList,
+    removeOuterTag,
     showCasePanel,
     showCasePanelAdvanced,
     showCasePanelSm,
-    previewMinHeight = false,
-    codeFigure,
-    dangerousHTML,
-    negative,
     staticPreview = false
 }) => {
 
     const [activeTab, setActiveTab] = useState(showCasePanelAdvanced?.elements[0]);
 
     const [activeOptions, setActiveOptions] = useState(showCasePanelAdvanced?.elements[0]?.activeOptions ? [...showCasePanelAdvanced.elements[0].activeOptions] : []);
-    const codeParsed = useCodeParser({ showCasePanelAdvanced,
+    const [codeParsed, outerElement, outerElementCssClasses] = useCodeParser({ showCasePanelAdvanced,
         childrenPassed,
         activeTab,
         activeOptions,
@@ -77,15 +78,7 @@ const ComponentPreview = ({
 
     };
 
-    const jsInitAllCode =
-    `import "./styles.css";
-    import dg from "@swedbankpay/design-guide";
-    dg.script.initAll();
-    /* but if can adapt for each examples then the best would be to use the recommended way, i.e. importing only the specific element. But for this demo we don't care 😬
-    EXAMPLE:
-    import { accordion } from "@swedbankpay/design-guide";
-    accordion.init();
-    */`;
+    const jsInitAllCode = useJsSandboxInitCode(outerElementCssClasses, removeOuterTag);
 
     // when only code, or only preview, or staticPreview such as toast/Sheet/etc (at least those staticpreviews at the first iterations of the new sandbox)
     const isReadOnly = staticPreview || (!showCasePanel && codeFigure);
@@ -145,7 +138,12 @@ const ComponentPreview = ({
     body {
         height: fit-content;
         padding: 2rem;
-      }`;
+    }
+
+    /* styles fixing specific components (e.g. alternate background (loader + links) ) */
+    .loader-preview-container.dark {
+        background-color: #493c3b;
+    }  `;
 
     const codeFiles = () => {
         if (language === "html") {

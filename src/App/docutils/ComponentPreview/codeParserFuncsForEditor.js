@@ -52,13 +52,25 @@ const setDangerousHtml = val => {
     return code;
 };
 
+const copyOuterElement = element => {
+    const renderedElement = document.createElement("div");
+
+    renderedElement.innerHTML = renderToStaticMarkup(element);
+
+    const clonedElement = renderedElement.firstElementChild?.cloneNode(false);
+
+    return clonedElement;
+};
+
 export const codeParsingForEditor = (codePassedAsProp, language, removeOuterTag, removeList, dangerousHTML, hideValue) => {
     let code = "";
+    let outerElement = null;
 
     if (language === "html" && dangerousHTML) {
         /* usually used for NPM  scripts informations at the bottome of component pages */
         code = setDangerousHtml(codePassedAsProp);
     } else if (language === "html" && codePassedAsProp && typeof codePassedAsProp.map === "function") {
+        // typically used for scripts to use in HTML (e.g. Charts)
         codePassedAsProp.map(child => {
             if (removeOuterTag) {
                 code += _removeOuterTag(child);
@@ -71,7 +83,8 @@ export const codeParsingForEditor = (codePassedAsProp, language, removeOuterTag,
 
     } else if (language === "html") {
         if (removeOuterTag) {
-            code += _removeOuterTag(codePassedAsProp);
+            code = _removeOuterTag(codePassedAsProp);
+            outerElement = copyOuterElement(codePassedAsProp);
         } else if (removeList) {
             code += _removeList(codePassedAsProp);
         } else {
@@ -117,5 +130,5 @@ export const codeParsingForEditor = (codePassedAsProp, language, removeOuterTag,
             return "update switchcase!";
     }
 
-    return code;
+    return [code, outerElement];
 };
