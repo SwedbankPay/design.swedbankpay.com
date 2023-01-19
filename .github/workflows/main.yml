@@ -41,7 +41,7 @@ jobs:
 
       - name: Create latest reference file
         run: |
-          echo "${{ steps.variables.outputs.VERSION }}" > ./dist/latest.txt
+          echo "${{ steps.variables.outputs.BRANCH }}" > ./dist/latest.txt
 
       - name: Azure Login
         uses: azure/login@v1.4.6
