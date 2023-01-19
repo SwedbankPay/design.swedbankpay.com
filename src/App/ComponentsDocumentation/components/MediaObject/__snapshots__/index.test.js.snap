@@ -117,6 +117,7 @@ exports[`Documentation: MediaObject Sizes renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={250}
     showCasePanel={true}
   >
     <MediaObject

@@ -376,11 +376,13 @@ exports[`Components: Toast Overview renders 1`] = `
         "tabsId": "overviewToastTabs",
       }
     }
+    staticPreview={true}
   />
   <ComponentPreview
     codeFigure={true}
     dangerousHTML={true}
     language="html"
+    staticPreview={true}
   >
     &lt;button type="button" class="btn btn-primary" onclick="event =&gt; dg.toast({
 	event,

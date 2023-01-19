@@ -123,6 +123,7 @@ exports[`Components: Accordion Overview renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={500}
     removeOuterTag={true}
     showCasePanel={true}
     showCasePanelAdvanced={

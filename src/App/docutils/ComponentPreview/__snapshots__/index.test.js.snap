@@ -6,6 +6,2514 @@ exports[`Utilities: ComponentPreview CodeFigure removes outer tag from markup 1`
   language="html"
   removeOuterTag={true}
 >
+  <$s
+    customSetup={
+      Object {
+        "dependencies": Object {
+          "@swedbankpay/design-guide": "10.6.1",
+        },
+        "devDependencies": Object {
+          "@babel/core": "7.2.0",
+        },
+      }
+    }
+    files={
+      Object {
+        "/index.html": Object {
+          "active": true,
+          "code": "<h1 class=\\"h1-class\\">test1</h1>",
+          "hidden": false,
+          "readOnly": true,
+        },
+        "src/index.js": Object {
+          "code": "import \\"./styles.css\\";
+import dg from \\"@swedbankpay/design-guide\\";
+
+// needed to set the classes from the eventual removed outerTag to the iframe body
+const body = document.querySelector('body');
+body.classList = [];
+function applyOuterElementToRemoveClassesToBody (cssClass) {
+  body.classList.add(cssClass);
+}
+
+applyOuterElementToRemoveClassesToBody('div-class');
+
+dg.script.initAll();
+/* but if can adapt for each examples then the best would be to use the recommended way, i.e. importing only the specific element. But for this first iteration let's go wide with the whole bundle, as before 😬
+EXAMPLE:
+import { accordion } from \\"@swedbankpay/design-guide\\";
+accordion.init();
+*/",
+          "hidden": true,
+          "readOnly": true,
+        },
+        "src/styles.css": Object {
+          "code": "
+    body {
+        height: fit-content;
+        padding: 2rem;
+    }
+
+    /* styles fixing specific components (e.g. alternate background (loader + links) ) */
+    /* the elements inside the iframe are only styled by the design-system npm package documentations css does not affect them */
+    .loader-preview-container.dark {
+        background-color: #493c3b;
+    }  ",
+          "hidden": true,
+        },
+      }
+    }
+    options={
+      Object {
+        "externalResources": Array [
+          "https://design.swedbankpay.com/v/10.5.1/styles/swedbankpay.css",
+        ],
+        "showTabs": true,
+      }
+    }
+    template="vanilla"
+    theme="dark"
+  >
+    <ClasserProvider>
+      <Ns
+        theme="dark"
+      >
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <CodeFigure
+            childrenPassed={<TestComponentH1WithOuterTags />}
+          >
+            <ForwardRef
+              showInlineErrors={true}
+            >
+              <ne
+                className="sp-editor"
+              >
+                <div
+                  className="sp-stack sp-c-kLppIp sp-editor"
+                >
+                  <div
+                    className="sp-code-editor sp-c-bNbSGz"
+                  >
+                    <ForwardRef
+                      code="<h1 class=\\"h1-class\\">test1</h1>"
+                      editorState="pristine"
+                      filePath="/index.html"
+                      initMode="lazy"
+                      key="/index.html"
+                      onCodeUpdate={[Function]}
+                      readOnly={true}
+                      showInlineErrors={true}
+                      showLineNumbers={false}
+                      wrapContent={false}
+                    >
+                      <pre
+                        className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+                        translate="no"
+                      >
+                        <code
+                          className="sp-pre-placeholder sp-c-fWymNx"
+                          style={
+                            Object {
+                              "marginLeft": "var(--sp-space-4)",
+                            }
+                          }
+                        >
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="10"
+                          >
+                            &lt;
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="31"
+                          >
+                            h1
+                          </span>
+                           
+                          <span
+                            className="sp-syntax-property"
+                            key="94"
+                          >
+                            class
+                          </span>
+                          =
+                          <span
+                            className="sp-syntax-string"
+                            key="2010"
+                          >
+                            "h1-class"
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="2120"
+                          >
+                            &gt;
+                          </span>
+                          test1
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="2826"
+                          >
+                            &lt;/
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="3028"
+                          >
+                            h1
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="3130"
+                          >
+                            &gt;
+                          </span>
+                        </code>
+                      </pre>
+                      <span
+                        className="sp-read-only sp-c-czQzXp"
+                      >
+                        Read-only
+                      </span>
+                    </ForwardRef>
+                  </div>
+                </div>
+              </ne>
+            </ForwardRef>
+          </CodeFigure>
+        </div>
+      </Ns>
+    </ClasserProvider>
+  </$s>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview CodeFigure removes outer tag from markup even if no child element exists 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="html"
+  removeOuterTag={true}
+>
+  <$s
+    customSetup={
+      Object {
+        "dependencies": Object {
+          "@swedbankpay/design-guide": "10.6.1",
+        },
+        "devDependencies": Object {
+          "@babel/core": "7.2.0",
+        },
+      }
+    }
+    files={
+      Object {
+        "/index.html": Object {
+          "active": true,
+          "code": "test text with no wrapping element",
+          "hidden": false,
+          "readOnly": true,
+        },
+        "src/index.js": Object {
+          "code": "import \\"./styles.css\\";
+import dg from \\"@swedbankpay/design-guide\\";
+
+// needed to set the classes from the eventual removed outerTag to the iframe body
+const body = document.querySelector('body');
+body.classList = [];
+function applyOuterElementToRemoveClassesToBody (cssClass) {
+  body.classList.add(cssClass);
+}
+
+
+dg.script.initAll();
+/* but if can adapt for each examples then the best would be to use the recommended way, i.e. importing only the specific element. But for this first iteration let's go wide with the whole bundle, as before 😬
+EXAMPLE:
+import { accordion } from \\"@swedbankpay/design-guide\\";
+accordion.init();
+*/",
+          "hidden": true,
+          "readOnly": true,
+        },
+        "src/styles.css": Object {
+          "code": "
+    body {
+        height: fit-content;
+        padding: 2rem;
+    }
+
+    /* styles fixing specific components (e.g. alternate background (loader + links) ) */
+    /* the elements inside the iframe are only styled by the design-system npm package documentations css does not affect them */
+    .loader-preview-container.dark {
+        background-color: #493c3b;
+    }  ",
+          "hidden": true,
+        },
+      }
+    }
+    options={
+      Object {
+        "externalResources": Array [
+          "https://design.swedbankpay.com/v/10.5.1/styles/swedbankpay.css",
+        ],
+        "showTabs": true,
+      }
+    }
+    template="vanilla"
+    theme="dark"
+  >
+    <ClasserProvider>
+      <Ns
+        theme="dark"
+      >
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <CodeFigure
+            childrenPassed={<TestComponentNoElement />}
+          >
+            <ForwardRef
+              showInlineErrors={true}
+            >
+              <ne
+                className="sp-editor"
+              >
+                <div
+                  className="sp-stack sp-c-kLppIp sp-editor"
+                >
+                  <div
+                    className="sp-code-editor sp-c-bNbSGz"
+                  >
+                    <ForwardRef
+                      code="test text with no wrapping element"
+                      editorState="pristine"
+                      filePath="/index.html"
+                      initMode="lazy"
+                      key="/index.html"
+                      onCodeUpdate={[Function]}
+                      readOnly={true}
+                      showInlineErrors={true}
+                      showLineNumbers={false}
+                      wrapContent={false}
+                    >
+                      <pre
+                        className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+                        translate="no"
+                      >
+                        <code
+                          className="sp-pre-placeholder sp-c-fWymNx"
+                          style={
+                            Object {
+                              "marginLeft": "var(--sp-space-4)",
+                            }
+                          }
+                        >
+                          
+
+
+                        </code>
+                      </pre>
+                      <span
+                        className="sp-read-only sp-c-czQzXp"
+                      >
+                        Read-only
+                      </span>
+                    </ForwardRef>
+                  </div>
+                </div>
+              </ne>
+            </ForwardRef>
+          </CodeFigure>
+        </div>
+      </Ns>
+    </ClasserProvider>
+  </$s>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview CodeFigure removes outer tag from multiple html tags 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="html"
+  removeOuterTag={true}
+>
+  <$s
+    customSetup={
+      Object {
+        "dependencies": Object {
+          "@swedbankpay/design-guide": "10.6.1",
+        },
+        "devDependencies": Object {
+          "@babel/core": "7.2.0",
+        },
+      }
+    }
+    files={
+      Object {
+        "/index.html": Object {
+          "active": true,
+          "code": "<h1 class=\\"h1-class\\">test1</h1>
+<h1 class=\\"h1-class\\">test1</h1>
+<h1 class=\\"h1-class\\">test1</h1>",
+          "hidden": false,
+          "readOnly": true,
+        },
+        "src/index.js": Object {
+          "code": "import \\"./styles.css\\";
+import dg from \\"@swedbankpay/design-guide\\";
+
+// needed to set the classes from the eventual removed outerTag to the iframe body
+const body = document.querySelector('body');
+body.classList = [];
+function applyOuterElementToRemoveClassesToBody (cssClass) {
+  body.classList.add(cssClass);
+}
+
+
+dg.script.initAll();
+/* but if can adapt for each examples then the best would be to use the recommended way, i.e. importing only the specific element. But for this first iteration let's go wide with the whole bundle, as before 😬
+EXAMPLE:
+import { accordion } from \\"@swedbankpay/design-guide\\";
+accordion.init();
+*/",
+          "hidden": true,
+          "readOnly": true,
+        },
+        "src/styles.css": Object {
+          "code": "
+    body {
+        height: fit-content;
+        padding: 2rem;
+    }
+
+    /* styles fixing specific components (e.g. alternate background (loader + links) ) */
+    /* the elements inside the iframe are only styled by the design-system npm package documentations css does not affect them */
+    .loader-preview-container.dark {
+        background-color: #493c3b;
+    }  ",
+          "hidden": true,
+        },
+      }
+    }
+    options={
+      Object {
+        "externalResources": Array [
+          "https://design.swedbankpay.com/v/10.5.1/styles/swedbankpay.css",
+        ],
+        "showTabs": true,
+      }
+    }
+    template="vanilla"
+    theme="dark"
+  >
+    <ClasserProvider>
+      <Ns
+        theme="dark"
+      >
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <CodeFigure
+            childrenPassed={
+              Array [
+                <TestComponentH1WithOuterTags />,
+                <TestComponentH1WithOuterTags />,
+                <TestComponentH1WithOuterTags />,
+              ]
+            }
+          >
+            <ForwardRef
+              showInlineErrors={true}
+            >
+              <ne
+                className="sp-editor"
+              >
+                <div
+                  className="sp-stack sp-c-kLppIp sp-editor"
+                >
+                  <div
+                    className="sp-code-editor sp-c-bNbSGz"
+                  >
+                    <ForwardRef
+                      code="<h1 class=\\"h1-class\\">test1</h1>
+<h1 class=\\"h1-class\\">test1</h1>
+<h1 class=\\"h1-class\\">test1</h1>"
+                      editorState="pristine"
+                      filePath="/index.html"
+                      initMode="lazy"
+                      key="/index.html"
+                      onCodeUpdate={[Function]}
+                      readOnly={true}
+                      showInlineErrors={true}
+                      showLineNumbers={false}
+                      wrapContent={false}
+                    >
+                      <pre
+                        className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+                        translate="no"
+                      >
+                        <code
+                          className="sp-pre-placeholder sp-c-fWymNx"
+                          style={
+                            Object {
+                              "marginLeft": "var(--sp-space-4)",
+                            }
+                          }
+                        >
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="10"
+                          >
+                            &lt;
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="31"
+                          >
+                            h1
+                          </span>
+                           
+                          <span
+                            className="sp-syntax-property"
+                            key="94"
+                          >
+                            class
+                          </span>
+                          =
+                          <span
+                            className="sp-syntax-string"
+                            key="2010"
+                          >
+                            "h1-class"
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="2120"
+                          >
+                            &gt;
+                          </span>
+                          test1
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="2826"
+                          >
+                            &lt;/
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="3028"
+                          >
+                            h1
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="3130"
+                          >
+                            &gt;
+                          </span>
+                          
+
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="3332"
+                          >
+                            &lt;
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="3533"
+                          >
+                            h1
+                          </span>
+                           
+                          <span
+                            className="sp-syntax-property"
+                            key="4136"
+                          >
+                            class
+                          </span>
+                          =
+                          <span
+                            className="sp-syntax-string"
+                            key="5242"
+                          >
+                            "h1-class"
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="5352"
+                          >
+                            &gt;
+                          </span>
+                          test1
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="6058"
+                          >
+                            &lt;/
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="6260"
+                          >
+                            h1
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="6362"
+                          >
+                            &gt;
+                          </span>
+                          
+
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="6564"
+                          >
+                            &lt;
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="6765"
+                          >
+                            h1
+                          </span>
+                           
+                          <span
+                            className="sp-syntax-property"
+                            key="7368"
+                          >
+                            class
+                          </span>
+                          =
+                          <span
+                            className="sp-syntax-string"
+                            key="8474"
+                          >
+                            "h1-class"
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="8584"
+                          >
+                            &gt;
+                          </span>
+                          test1
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="9290"
+                          >
+                            &lt;/
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="9492"
+                          >
+                            h1
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="9594"
+                          >
+                            &gt;
+                          </span>
+                        </code>
+                      </pre>
+                      <span
+                        className="sp-read-only sp-c-czQzXp"
+                      >
+                        Read-only
+                      </span>
+                    </ForwardRef>
+                  </div>
+                </div>
+              </ne>
+            </ForwardRef>
+          </CodeFigure>
+        </div>
+      </Ns>
+    </ClasserProvider>
+  </$s>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview CodeFigure removes value property 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  hideValue={true}
+  language="html"
+>
+  <$s
+    customSetup={
+      Object {
+        "dependencies": Object {
+          "@swedbankpay/design-guide": "10.6.1",
+        },
+        "devDependencies": Object {
+          "@babel/core": "7.2.0",
+        },
+      }
+    }
+    files={
+      Object {
+        "/index.html": Object {
+          "active": true,
+          "code": "<div>This is a test-link</a></div>",
+          "hidden": false,
+          "readOnly": true,
+        },
+        "src/index.js": Object {
+          "code": "import \\"./styles.css\\";
+import dg from \\"@swedbankpay/design-guide\\";
+
+// needed to set the classes from the eventual removed outerTag to the iframe body
+const body = document.querySelector('body');
+body.classList = [];
+function applyOuterElementToRemoveClassesToBody (cssClass) {
+  body.classList.add(cssClass);
+}
+
+
+dg.script.initAll();
+/* but if can adapt for each examples then the best would be to use the recommended way, i.e. importing only the specific element. But for this first iteration let's go wide with the whole bundle, as before 😬
+EXAMPLE:
+import { accordion } from \\"@swedbankpay/design-guide\\";
+accordion.init();
+*/",
+          "hidden": true,
+          "readOnly": true,
+        },
+        "src/styles.css": Object {
+          "code": "
+    body {
+        height: fit-content;
+        padding: 2rem;
+    }
+
+    /* styles fixing specific components (e.g. alternate background (loader + links) ) */
+    /* the elements inside the iframe are only styled by the design-system npm package documentations css does not affect them */
+    .loader-preview-container.dark {
+        background-color: #493c3b;
+    }  ",
+          "hidden": true,
+        },
+      }
+    }
+    options={
+      Object {
+        "externalResources": Array [
+          "https://design.swedbankpay.com/v/10.5.1/styles/swedbankpay.css",
+        ],
+        "showTabs": true,
+      }
+    }
+    template="vanilla"
+    theme="dark"
+  >
+    <ClasserProvider>
+      <Ns
+        theme="dark"
+      >
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <CodeFigure
+            childrenPassed={<TestComponentValue />}
+          >
+            <ForwardRef
+              showInlineErrors={true}
+            >
+              <ne
+                className="sp-editor"
+              >
+                <div
+                  className="sp-stack sp-c-kLppIp sp-editor"
+                >
+                  <div
+                    className="sp-code-editor sp-c-bNbSGz"
+                  >
+                    <ForwardRef
+                      code="<div>This is a test-link</a></div>"
+                      editorState="pristine"
+                      filePath="/index.html"
+                      initMode="lazy"
+                      key="/index.html"
+                      onCodeUpdate={[Function]}
+                      readOnly={true}
+                      showInlineErrors={true}
+                      showLineNumbers={false}
+                      wrapContent={false}
+                    >
+                      <pre
+                        className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+                        translate="no"
+                      >
+                        <code
+                          className="sp-pre-placeholder sp-c-fWymNx"
+                          style={
+                            Object {
+                              "marginLeft": "var(--sp-space-4)",
+                            }
+                          }
+                        >
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="10"
+                          >
+                            &lt;
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="41"
+                          >
+                            div
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="54"
+                          >
+                            &gt;
+                          </span>
+                          This is a test-link
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="2624"
+                          >
+                            &lt;/
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="2726"
+                          >
+                            a
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="2827"
+                          >
+                            &gt;
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="3028"
+                          >
+                            &lt;/
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="3330"
+                          >
+                            div
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="3433"
+                          >
+                            &gt;
+                          </span>
+                        </code>
+                      </pre>
+                      <span
+                        className="sp-read-only sp-c-czQzXp"
+                      >
+                        Read-only
+                      </span>
+                    </ForwardRef>
+                  </div>
+                </div>
+              </ne>
+            </ForwardRef>
+          </CodeFigure>
+        </div>
+      </Ns>
+    </ClasserProvider>
+  </$s>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview CodeFigure renders css string 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="css"
+>
+  <$s
+    customSetup={
+      Object {
+        "dependencies": Object {
+          "@swedbankpay/design-guide": "10.6.1",
+        },
+        "devDependencies": Object {
+          "@babel/core": "7.2.0",
+        },
+      }
+    }
+    files={
+      Object {
+        "src/index.less": Object {
+          "active": true,
+          "code": "color: red;",
+          "hideTabs": true,
+          "readOnly": true,
+        },
+      }
+    }
+    options={
+      Object {
+        "externalResources": Array [
+          "https://design.swedbankpay.com/v/10.5.1/styles/swedbankpay.css",
+        ],
+        "showTabs": true,
+      }
+    }
+    template="vanilla"
+    theme="dark"
+  >
+    <ClasserProvider>
+      <Ns
+        theme="dark"
+      >
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <CodeFigure
+            childrenPassed="color: red;"
+          >
+            <ForwardRef
+              showInlineErrors={true}
+            >
+              <ne
+                className="sp-editor"
+              >
+                <div
+                  className="sp-stack sp-c-kLppIp sp-editor"
+                >
+                  <div
+                    className="sp-code-editor sp-c-bNbSGz"
+                  >
+                    <ForwardRef
+                      code="color: red;"
+                      editorState="pristine"
+                      filePath="/src/index.less"
+                      initMode="lazy"
+                      key="/src/index.less"
+                      onCodeUpdate={[Function]}
+                      readOnly={true}
+                      showInlineErrors={true}
+                      showLineNumbers={false}
+                      wrapContent={false}
+                    >
+                      <pre
+                        className="sp-cm sp-pristine sp-css sp-c-jOWzsE sp-c-jkvvao"
+                        translate="no"
+                      >
+                        <code
+                          className="sp-pre-placeholder sp-c-fWymNx"
+                          style={
+                            Object {
+                              "marginLeft": "var(--sp-space-4)",
+                            }
+                          }
+                        >
+                          <span
+                            className="sp-syntax-tag"
+                            key="50"
+                          >
+                            color
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="65"
+                          >
+                            :
+                          </span>
+                           red
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="1110"
+                          >
+                            ;
+                          </span>
+                        </code>
+                      </pre>
+                      <span
+                        className="sp-read-only sp-c-czQzXp"
+                      >
+                        Read-only
+                      </span>
+                    </ForwardRef>
+                  </div>
+                </div>
+              </ne>
+            </ForwardRef>
+          </CodeFigure>
+        </div>
+      </Ns>
+    </ClasserProvider>
+  </$s>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview CodeFigure renders multiple html tags 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="html"
+>
+  <$s
+    customSetup={
+      Object {
+        "dependencies": Object {
+          "@swedbankpay/design-guide": "10.6.1",
+        },
+        "devDependencies": Object {
+          "@babel/core": "7.2.0",
+        },
+      }
+    }
+    files={
+      Object {
+        "/index.html": Object {
+          "active": true,
+          "code": "<h1 class=\\"h1-class\\">test1</h1>
+<h2 class=\\"h2-class\\">test2</h2>",
+          "hidden": false,
+          "readOnly": true,
+        },
+        "src/index.js": Object {
+          "code": "import \\"./styles.css\\";
+import dg from \\"@swedbankpay/design-guide\\";
+
+// needed to set the classes from the eventual removed outerTag to the iframe body
+const body = document.querySelector('body');
+body.classList = [];
+function applyOuterElementToRemoveClassesToBody (cssClass) {
+  body.classList.add(cssClass);
+}
+
+
+dg.script.initAll();
+/* but if can adapt for each examples then the best would be to use the recommended way, i.e. importing only the specific element. But for this first iteration let's go wide with the whole bundle, as before 😬
+EXAMPLE:
+import { accordion } from \\"@swedbankpay/design-guide\\";
+accordion.init();
+*/",
+          "hidden": true,
+          "readOnly": true,
+        },
+        "src/styles.css": Object {
+          "code": "
+    body {
+        height: fit-content;
+        padding: 2rem;
+    }
+
+    /* styles fixing specific components (e.g. alternate background (loader + links) ) */
+    /* the elements inside the iframe are only styled by the design-system npm package documentations css does not affect them */
+    .loader-preview-container.dark {
+        background-color: #493c3b;
+    }  ",
+          "hidden": true,
+        },
+      }
+    }
+    options={
+      Object {
+        "externalResources": Array [
+          "https://design.swedbankpay.com/v/10.5.1/styles/swedbankpay.css",
+        ],
+        "showTabs": true,
+      }
+    }
+    template="vanilla"
+    theme="dark"
+  >
+    <ClasserProvider>
+      <Ns
+        theme="dark"
+      >
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <CodeFigure
+            childrenPassed={
+              Array [
+                <TestComponentH1 />,
+                <TestComponentH2 />,
+              ]
+            }
+          >
+            <ForwardRef
+              showInlineErrors={true}
+            >
+              <ne
+                className="sp-editor"
+              >
+                <div
+                  className="sp-stack sp-c-kLppIp sp-editor"
+                >
+                  <div
+                    className="sp-code-editor sp-c-bNbSGz"
+                  >
+                    <ForwardRef
+                      code="<h1 class=\\"h1-class\\">test1</h1>
+<h2 class=\\"h2-class\\">test2</h2>"
+                      editorState="pristine"
+                      filePath="/index.html"
+                      initMode="lazy"
+                      key="/index.html"
+                      onCodeUpdate={[Function]}
+                      readOnly={true}
+                      showInlineErrors={true}
+                      showLineNumbers={false}
+                      wrapContent={false}
+                    >
+                      <pre
+                        className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+                        translate="no"
+                      >
+                        <code
+                          className="sp-pre-placeholder sp-c-fWymNx"
+                          style={
+                            Object {
+                              "marginLeft": "var(--sp-space-4)",
+                            }
+                          }
+                        >
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="10"
+                          >
+                            &lt;
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="31"
+                          >
+                            h1
+                          </span>
+                           
+                          <span
+                            className="sp-syntax-property"
+                            key="94"
+                          >
+                            class
+                          </span>
+                          =
+                          <span
+                            className="sp-syntax-string"
+                            key="2010"
+                          >
+                            "h1-class"
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="2120"
+                          >
+                            &gt;
+                          </span>
+                          test1
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="2826"
+                          >
+                            &lt;/
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="3028"
+                          >
+                            h1
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="3130"
+                          >
+                            &gt;
+                          </span>
+                          
+
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="3332"
+                          >
+                            &lt;
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="3533"
+                          >
+                            h2
+                          </span>
+                           
+                          <span
+                            className="sp-syntax-property"
+                            key="4136"
+                          >
+                            class
+                          </span>
+                          =
+                          <span
+                            className="sp-syntax-string"
+                            key="5242"
+                          >
+                            "h2-class"
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="5352"
+                          >
+                            &gt;
+                          </span>
+                          test2
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="6058"
+                          >
+                            &lt;/
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="6260"
+                          >
+                            h2
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="6362"
+                          >
+                            &gt;
+                          </span>
+                        </code>
+                      </pre>
+                      <span
+                        className="sp-read-only sp-c-czQzXp"
+                      >
+                        Read-only
+                      </span>
+                    </ForwardRef>
+                  </div>
+                </div>
+              </ne>
+            </ForwardRef>
+          </CodeFigure>
+        </div>
+      </Ns>
+    </ClasserProvider>
+  </$s>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview CodeFigure renders multiple javascript strings 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="javascript"
+>
+  <$s
+    customSetup={
+      Object {
+        "dependencies": Object {
+          "@swedbankpay/design-guide": "10.6.1",
+        },
+        "devDependencies": Object {
+          "@babel/core": "7.2.0",
+        },
+      }
+    }
+    files={
+      Object {
+        "src/index.js": Object {
+          "code": "const a = 12;const b = 1;const c = a + b;",
+          "readOnly": true,
+        },
+      }
+    }
+    options={
+      Object {
+        "externalResources": Array [
+          "https://design.swedbankpay.com/v/10.5.1/styles/swedbankpay.css",
+        ],
+        "showTabs": true,
+      }
+    }
+    template="vanilla"
+    theme="dark"
+  >
+    <ClasserProvider>
+      <Ns
+        theme="dark"
+      >
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <CodeFigure
+            childrenPassed={
+              Array [
+                "const a = 12;",
+                "const b = 1;",
+                "const c = a + b;",
+              ]
+            }
+          >
+            <ForwardRef
+              showInlineErrors={true}
+            >
+              <ne
+                className="sp-editor"
+              >
+                <div
+                  className="sp-stack sp-c-kLppIp sp-editor"
+                >
+                  <div
+                    className="sp-code-editor sp-c-bNbSGz"
+                  >
+                    <ForwardRef
+                      code="const a = 12;const b = 1;const c = a + b;"
+                      editorState="pristine"
+                      filePath="/src/index.js"
+                      initMode="lazy"
+                      key="/src/index.js"
+                      onCodeUpdate={[Function]}
+                      readOnly={true}
+                      showInlineErrors={true}
+                      showLineNumbers={false}
+                      wrapContent={false}
+                    >
+                      <pre
+                        className="sp-cm sp-pristine sp-javascript sp-c-jOWzsE sp-c-jkvvao"
+                        translate="no"
+                      >
+                        <code
+                          className="sp-pre-placeholder sp-c-fWymNx"
+                          style={
+                            Object {
+                              "marginLeft": "var(--sp-space-4)",
+                            }
+                          }
+                        >
+                          <span
+                            className="sp-syntax-keyword"
+                            key="50"
+                          >
+                            const
+                          </span>
+                           
+                          <span
+                            className="sp-syntax-plain"
+                            key="76"
+                          >
+                            a
+                          </span>
+                           = 
+                          <span
+                            className="sp-syntax-static"
+                            key="1210"
+                          >
+                            12
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="1312"
+                          >
+                            ;
+                          </span>
+                          <span
+                            className="sp-syntax-keyword"
+                            key="1813"
+                          >
+                            const
+                          </span>
+                           
+                          <span
+                            className="sp-syntax-plain"
+                            key="2019"
+                          >
+                            b
+                          </span>
+                           = 
+                          <span
+                            className="sp-syntax-static"
+                            key="2423"
+                          >
+                            1
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="2524"
+                          >
+                            ;
+                          </span>
+                          <span
+                            className="sp-syntax-keyword"
+                            key="3025"
+                          >
+                            const
+                          </span>
+                           
+                          <span
+                            className="sp-syntax-plain"
+                            key="3231"
+                          >
+                            c
+                          </span>
+                           = 
+                          <span
+                            className="sp-syntax-plain"
+                            key="3635"
+                          >
+                            a
+                          </span>
+                           + 
+                          <span
+                            className="sp-syntax-plain"
+                            key="4039"
+                          >
+                            b
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="4140"
+                          >
+                            ;
+                          </span>
+                        </code>
+                      </pre>
+                      <span
+                        className="sp-read-only sp-c-czQzXp"
+                      >
+                        Read-only
+                      </span>
+                    </ForwardRef>
+                  </div>
+                </div>
+              </ne>
+            </ForwardRef>
+          </CodeFigure>
+        </div>
+      </Ns>
+    </ClasserProvider>
+  </$s>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview CodeFigure returns a message if no child is passed 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="html"
+  removeOuterTag={true}
+>
+  <$s
+    customSetup={
+      Object {
+        "dependencies": Object {
+          "@swedbankpay/design-guide": "10.6.1",
+        },
+        "devDependencies": Object {
+          "@babel/core": "7.2.0",
+        },
+      }
+    }
+    files={
+      Object {
+        "/index.html": Object {
+          "active": true,
+          "code": "Check ComponentPreview _removeOuterTag!",
+          "hidden": false,
+          "readOnly": true,
+        },
+        "src/index.js": Object {
+          "code": "import \\"./styles.css\\";
+import dg from \\"@swedbankpay/design-guide\\";
+
+// needed to set the classes from the eventual removed outerTag to the iframe body
+const body = document.querySelector('body');
+body.classList = [];
+function applyOuterElementToRemoveClassesToBody (cssClass) {
+  body.classList.add(cssClass);
+}
+
+
+dg.script.initAll();
+/* but if can adapt for each examples then the best would be to use the recommended way, i.e. importing only the specific element. But for this first iteration let's go wide with the whole bundle, as before 😬
+EXAMPLE:
+import { accordion } from \\"@swedbankpay/design-guide\\";
+accordion.init();
+*/",
+          "hidden": true,
+          "readOnly": true,
+        },
+        "src/styles.css": Object {
+          "code": "
+    body {
+        height: fit-content;
+        padding: 2rem;
+    }
+
+    /* styles fixing specific components (e.g. alternate background (loader + links) ) */
+    /* the elements inside the iframe are only styled by the design-system npm package documentations css does not affect them */
+    .loader-preview-container.dark {
+        background-color: #493c3b;
+    }  ",
+          "hidden": true,
+        },
+      }
+    }
+    options={
+      Object {
+        "externalResources": Array [
+          "https://design.swedbankpay.com/v/10.5.1/styles/swedbankpay.css",
+        ],
+        "showTabs": true,
+      }
+    }
+    template="vanilla"
+    theme="dark"
+  >
+    <ClasserProvider>
+      <Ns
+        theme="dark"
+      >
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <CodeFigure>
+            <ForwardRef
+              showInlineErrors={true}
+            >
+              <ne
+                className="sp-editor"
+              >
+                <div
+                  className="sp-stack sp-c-kLppIp sp-editor"
+                >
+                  <div
+                    className="sp-code-editor sp-c-bNbSGz"
+                  >
+                    <ForwardRef
+                      code="Check ComponentPreview _removeOuterTag!"
+                      editorState="pristine"
+                      filePath="/index.html"
+                      initMode="lazy"
+                      key="/index.html"
+                      onCodeUpdate={[Function]}
+                      readOnly={true}
+                      showInlineErrors={true}
+                      showLineNumbers={false}
+                      wrapContent={false}
+                    >
+                      <pre
+                        className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+                        translate="no"
+                      >
+                        <code
+                          className="sp-pre-placeholder sp-c-fWymNx"
+                          style={
+                            Object {
+                              "marginLeft": "var(--sp-space-4)",
+                            }
+                          }
+                        >
+                          
+
+
+                        </code>
+                      </pre>
+                      <span
+                        className="sp-read-only sp-c-czQzXp"
+                      >
+                        Read-only
+                      </span>
+                    </ForwardRef>
+                  </div>
+                </div>
+              </ne>
+            </ForwardRef>
+          </CodeFigure>
+        </div>
+      </Ns>
+    </ClasserProvider>
+  </$s>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview CodeFigure warns about unhandled children 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="css"
+>
+  <$s
+    customSetup={
+      Object {
+        "dependencies": Object {
+          "@swedbankpay/design-guide": "10.6.1",
+        },
+        "devDependencies": Object {
+          "@babel/core": "7.2.0",
+        },
+      }
+    }
+    files={
+      Object {
+        "src/index.less": Object {
+          "active": true,
+          "code": "",
+          "hideTabs": true,
+          "readOnly": true,
+        },
+      }
+    }
+    options={
+      Object {
+        "externalResources": Array [
+          "https://design.swedbankpay.com/v/10.5.1/styles/swedbankpay.css",
+        ],
+        "showTabs": true,
+      }
+    }
+    template="vanilla"
+    theme="dark"
+  >
+    <ClasserProvider>
+      <Ns
+        theme="dark"
+      >
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <CodeFigure
+            childrenPassed={[Function]}
+          >
+            <ForwardRef
+              showInlineErrors={true}
+            >
+              <ne
+                className="sp-editor"
+              >
+                <div
+                  className="sp-stack sp-c-kLppIp sp-editor"
+                >
+                  <div
+                    className="sp-code-editor sp-c-bNbSGz"
+                  >
+                    <ForwardRef
+                      code=""
+                      editorState="pristine"
+                      filePath="/src/index.less"
+                      initMode="lazy"
+                      key="/src/index.less"
+                      onCodeUpdate={[Function]}
+                      readOnly={true}
+                      showInlineErrors={true}
+                      showLineNumbers={false}
+                      wrapContent={false}
+                    >
+                      <pre
+                        className="sp-cm sp-pristine sp-css sp-c-jOWzsE sp-c-jkvvao"
+                        translate="no"
+                      >
+                        <code
+                          className="sp-pre-placeholder sp-c-fWymNx"
+                          style={
+                            Object {
+                              "marginLeft": "var(--sp-space-4)",
+                            }
+                          }
+                        />
+                      </pre>
+                      <span
+                        className="sp-read-only sp-c-czQzXp"
+                      >
+                        Read-only
+                      </span>
+                    </ForwardRef>
+                  </div>
+                </div>
+              </ne>
+            </ForwardRef>
+          </CodeFigure>
+        </div>
+      </Ns>
+    </ClasserProvider>
+  </$s>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview Codefigure removes list tags 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="html"
+  removeList={true}
+>
+  <$s
+    customSetup={
+      Object {
+        "dependencies": Object {
+          "@swedbankpay/design-guide": "10.6.1",
+        },
+        "devDependencies": Object {
+          "@babel/core": "7.2.0",
+        },
+      }
+    }
+    files={
+      Object {
+        "/index.html": Object {
+          "active": true,
+          "code": "This
+Is
+A
+Test",
+          "hidden": false,
+          "readOnly": true,
+        },
+        "src/index.js": Object {
+          "code": "import \\"./styles.css\\";
+import dg from \\"@swedbankpay/design-guide\\";
+
+// needed to set the classes from the eventual removed outerTag to the iframe body
+const body = document.querySelector('body');
+body.classList = [];
+function applyOuterElementToRemoveClassesToBody (cssClass) {
+  body.classList.add(cssClass);
+}
+
+
+dg.script.initAll();
+/* but if can adapt for each examples then the best would be to use the recommended way, i.e. importing only the specific element. But for this first iteration let's go wide with the whole bundle, as before 😬
+EXAMPLE:
+import { accordion } from \\"@swedbankpay/design-guide\\";
+accordion.init();
+*/",
+          "hidden": true,
+          "readOnly": true,
+        },
+        "src/styles.css": Object {
+          "code": "
+    body {
+        height: fit-content;
+        padding: 2rem;
+    }
+
+    /* styles fixing specific components (e.g. alternate background (loader + links) ) */
+    /* the elements inside the iframe are only styled by the design-system npm package documentations css does not affect them */
+    .loader-preview-container.dark {
+        background-color: #493c3b;
+    }  ",
+          "hidden": true,
+        },
+      }
+    }
+    options={
+      Object {
+        "externalResources": Array [
+          "https://design.swedbankpay.com/v/10.5.1/styles/swedbankpay.css",
+        ],
+        "showTabs": true,
+      }
+    }
+    template="vanilla"
+    theme="dark"
+  >
+    <ClasserProvider>
+      <Ns
+        theme="dark"
+      >
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <CodeFigure
+            childrenPassed={<TestComponentList />}
+          >
+            <ForwardRef
+              showInlineErrors={true}
+            >
+              <ne
+                className="sp-editor"
+              >
+                <div
+                  className="sp-stack sp-c-kLppIp sp-editor"
+                >
+                  <div
+                    className="sp-code-editor sp-c-bNbSGz"
+                  >
+                    <ForwardRef
+                      code="This
+Is
+A
+Test"
+                      editorState="pristine"
+                      filePath="/index.html"
+                      initMode="lazy"
+                      key="/index.html"
+                      onCodeUpdate={[Function]}
+                      readOnly={true}
+                      showInlineErrors={true}
+                      showLineNumbers={false}
+                      wrapContent={false}
+                    >
+                      <pre
+                        className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+                        translate="no"
+                      >
+                        <code
+                          className="sp-pre-placeholder sp-c-fWymNx"
+                          style={
+                            Object {
+                              "marginLeft": "var(--sp-space-4)",
+                            }
+                          }
+                        >
+                          
+
+
+                        </code>
+                      </pre>
+                      <span
+                        className="sp-read-only sp-c-czQzXp"
+                      >
+                        Read-only
+                      </span>
+                    </ForwardRef>
+                  </div>
+                </div>
+              </ne>
+            </ForwardRef>
+          </CodeFigure>
+        </div>
+      </Ns>
+    </ClasserProvider>
+  </$s>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview Codefigure removes list tags from multiple html tags 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="html"
+  removeList={true}
+>
+  <$s
+    customSetup={
+      Object {
+        "dependencies": Object {
+          "@swedbankpay/design-guide": "10.6.1",
+        },
+        "devDependencies": Object {
+          "@babel/core": "7.2.0",
+        },
+      }
+    }
+    files={
+      Object {
+        "/index.html": Object {
+          "active": true,
+          "code": "This
+Is
+A
+Test
+This
+Is
+A
+Test
+This
+Is
+A
+Test",
+          "hidden": false,
+          "readOnly": true,
+        },
+        "src/index.js": Object {
+          "code": "import \\"./styles.css\\";
+import dg from \\"@swedbankpay/design-guide\\";
+
+// needed to set the classes from the eventual removed outerTag to the iframe body
+const body = document.querySelector('body');
+body.classList = [];
+function applyOuterElementToRemoveClassesToBody (cssClass) {
+  body.classList.add(cssClass);
+}
+
+
+dg.script.initAll();
+/* but if can adapt for each examples then the best would be to use the recommended way, i.e. importing only the specific element. But for this first iteration let's go wide with the whole bundle, as before 😬
+EXAMPLE:
+import { accordion } from \\"@swedbankpay/design-guide\\";
+accordion.init();
+*/",
+          "hidden": true,
+          "readOnly": true,
+        },
+        "src/styles.css": Object {
+          "code": "
+    body {
+        height: fit-content;
+        padding: 2rem;
+    }
+
+    /* styles fixing specific components (e.g. alternate background (loader + links) ) */
+    /* the elements inside the iframe are only styled by the design-system npm package documentations css does not affect them */
+    .loader-preview-container.dark {
+        background-color: #493c3b;
+    }  ",
+          "hidden": true,
+        },
+      }
+    }
+    options={
+      Object {
+        "externalResources": Array [
+          "https://design.swedbankpay.com/v/10.5.1/styles/swedbankpay.css",
+        ],
+        "showTabs": true,
+      }
+    }
+    template="vanilla"
+    theme="dark"
+  >
+    <ClasserProvider>
+      <Ns
+        theme="dark"
+      >
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <CodeFigure
+            childrenPassed={
+              Array [
+                <TestComponentList />,
+                <TestComponentList />,
+                <TestComponentList />,
+              ]
+            }
+          >
+            <ForwardRef
+              showInlineErrors={true}
+            >
+              <ne
+                className="sp-editor"
+              >
+                <div
+                  className="sp-stack sp-c-kLppIp sp-editor"
+                >
+                  <div
+                    className="sp-code-editor sp-c-bNbSGz"
+                  >
+                    <ForwardRef
+                      code="This
+Is
+A
+Test
+This
+Is
+A
+Test
+This
+Is
+A
+Test"
+                      editorState="pristine"
+                      filePath="/index.html"
+                      initMode="lazy"
+                      key="/index.html"
+                      onCodeUpdate={[Function]}
+                      readOnly={true}
+                      showInlineErrors={true}
+                      showLineNumbers={false}
+                      wrapContent={false}
+                    >
+                      <pre
+                        className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+                        translate="no"
+                      >
+                        <code
+                          className="sp-pre-placeholder sp-c-fWymNx"
+                          style={
+                            Object {
+                              "marginLeft": "var(--sp-space-4)",
+                            }
+                          }
+                        >
+                          
+
+
+                        </code>
+                      </pre>
+                      <span
+                        className="sp-read-only sp-c-czQzXp"
+                      >
+                        Read-only
+                      </span>
+                    </ForwardRef>
+                  </div>
+                </div>
+              </ne>
+            </ForwardRef>
+          </CodeFigure>
+        </div>
+      </Ns>
+    </ClasserProvider>
+  </$s>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview does not render codeFigure when prop is false/not provided 1`] = `
+<ComponentPreview
+  language="html"
+  showCasePanel={true}
+>
+  <$s
+    customSetup={
+      Object {
+        "dependencies": Object {
+          "@swedbankpay/design-guide": "10.6.1",
+        },
+        "devDependencies": Object {
+          "@babel/core": "7.2.0",
+        },
+      }
+    }
+    files={
+      Object {
+        "/index.html": Object {
+          "active": true,
+          "code": "<h1 class=\\"h1-class\\">test1</h1>",
+          "hidden": false,
+          "readOnly": false,
+        },
+        "src/index.js": Object {
+          "code": "import \\"./styles.css\\";
+import dg from \\"@swedbankpay/design-guide\\";
+
+// needed to set the classes from the eventual removed outerTag to the iframe body
+const body = document.querySelector('body');
+body.classList = [];
+function applyOuterElementToRemoveClassesToBody (cssClass) {
+  body.classList.add(cssClass);
+}
+
+
+dg.script.initAll();
+/* but if can adapt for each examples then the best would be to use the recommended way, i.e. importing only the specific element. But for this first iteration let's go wide with the whole bundle, as before 😬
+EXAMPLE:
+import { accordion } from \\"@swedbankpay/design-guide\\";
+accordion.init();
+*/",
+          "hidden": true,
+          "readOnly": false,
+        },
+        "src/styles.css": Object {
+          "code": "
+    body {
+        height: fit-content;
+        padding: 2rem;
+    }
+
+    /* styles fixing specific components (e.g. alternate background (loader + links) ) */
+    /* the elements inside the iframe are only styled by the design-system npm package documentations css does not affect them */
+    .loader-preview-container.dark {
+        background-color: #493c3b;
+    }  ",
+          "hidden": true,
+        },
+      }
+    }
+    options={
+      Object {
+        "externalResources": Array [
+          "https://design.swedbankpay.com/v/10.5.1/styles/swedbankpay.css",
+        ],
+        "showTabs": true,
+      }
+    }
+    template="vanilla"
+    theme="dark"
+  >
+    <ClasserProvider>
+      <Ns
+        theme="dark"
+      >
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <ShowCasePanel
+            childrenPassed={<TestComponentH1 />}
+            previewMinHeight={false}
+            staticPreview={false}
+          >
+            <div
+              className="showcase-panel"
+              style={null}
+            >
+              <ForwardRef>
+                <ne
+                  className="sp-preview"
+                >
+                  <div
+                    className="sp-stack sp-c-kLppIp sp-preview"
+                  >
+                    <div
+                      className="sp-preview-container sp-c-bIhyHd"
+                    >
+                      <iframe
+                        className="sp-preview-iframe sp-c-fgviib"
+                        style={
+                          Object {
+                            "height": undefined,
+                          }
+                        }
+                        title="Sandpack Preview"
+                      />
+                      <kt />
+                      <div
+                        className="sp-preview-actions sp-c-eKnQtg"
+                      >
+                        <Ke>
+                          <Kt
+                            className="sp-button sp-icon-standalone sp-c-dRhJti sp-c-gMfcns sp-c-eXsQzS"
+                          >
+                            <a
+                              className="sp-button sp-icon-standalone sp-c-dRhJti sp-c-gMfcns sp-c-eXsQzS"
+                              href="https://codesandbox.io/api/v1/sandboxes/define?undefined"
+                              rel="noreferrer noopener"
+                              target="_blank"
+                              title="Open in CodeSandbox"
+                            >
+                              <Ss>
+                                <de
+                                  fill="none"
+                                  stroke="currentColor"
+                                >
+                                  <svg
+                                    fill="none"
+                                    height="16"
+                                    stroke="currentColor"
+                                    viewBox="0 0 16 16"
+                                    width="16"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <title>
+                                      Open on CodeSandbox
+                                    </title>
+                                    <path
+                                      d="M6.66665 3.33337H4.33331C3.78103 3.33337 3.33331 3.78109 3.33331 4.33337V11.6667C3.33331 12.219 3.78103 12.6667 4.33331 12.6667H11.6666C12.2189 12.6667 12.6666 12.219 12.6666 11.6667V9.33337"
+                                      strokeLinecap="round"
+                                    />
+                                    <path
+                                      d="M10 3.33337H12.5667C12.6219 3.33337 12.6667 3.37815 12.6667 3.43337V6.00004"
+                                      strokeLinecap="round"
+                                    />
+                                    <path
+                                      d="M7.33331 8.66668L12.5333 3.46667"
+                                      strokeLinecap="round"
+                                    />
+                                  </svg>
+                                </de>
+                              </Ss>
+                            </a>
+                          </Kt>
+                        </Ke>
+                      </div>
+                      <Ct
+                        clientId="2532"
+                        showOpenInCodeSandbox={true}
+                      />
+                    </div>
+                  </div>
+                </ne>
+              </ForwardRef>
+            </div>
+          </ShowCasePanel>
+        </div>
+      </Ns>
+    </ClasserProvider>
+  </$s>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview does not render showCasePanel when prop is false/not provided 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="html"
+>
+  <$s
+    customSetup={
+      Object {
+        "dependencies": Object {
+          "@swedbankpay/design-guide": "10.6.1",
+        },
+        "devDependencies": Object {
+          "@babel/core": "7.2.0",
+        },
+      }
+    }
+    files={
+      Object {
+        "/index.html": Object {
+          "active": true,
+          "code": "<h1 class=\\"h1-class\\">test1</h1>",
+          "hidden": false,
+          "readOnly": true,
+        },
+        "src/index.js": Object {
+          "code": "import \\"./styles.css\\";
+import dg from \\"@swedbankpay/design-guide\\";
+
+// needed to set the classes from the eventual removed outerTag to the iframe body
+const body = document.querySelector('body');
+body.classList = [];
+function applyOuterElementToRemoveClassesToBody (cssClass) {
+  body.classList.add(cssClass);
+}
+
+
+dg.script.initAll();
+/* but if can adapt for each examples then the best would be to use the recommended way, i.e. importing only the specific element. But for this first iteration let's go wide with the whole bundle, as before 😬
+EXAMPLE:
+import { accordion } from \\"@swedbankpay/design-guide\\";
+accordion.init();
+*/",
+          "hidden": true,
+          "readOnly": true,
+        },
+        "src/styles.css": Object {
+          "code": "
+    body {
+        height: fit-content;
+        padding: 2rem;
+    }
+
+    /* styles fixing specific components (e.g. alternate background (loader + links) ) */
+    /* the elements inside the iframe are only styled by the design-system npm package documentations css does not affect them */
+    .loader-preview-container.dark {
+        background-color: #493c3b;
+    }  ",
+          "hidden": true,
+        },
+      }
+    }
+    options={
+      Object {
+        "externalResources": Array [
+          "https://design.swedbankpay.com/v/10.5.1/styles/swedbankpay.css",
+        ],
+        "showTabs": true,
+      }
+    }
+    template="vanilla"
+    theme="dark"
+  >
+    <ClasserProvider>
+      <Ns
+        theme="dark"
+      >
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <CodeFigure
+            childrenPassed={<TestComponentH1 />}
+          >
+            <ForwardRef
+              showInlineErrors={true}
+            >
+              <ne
+                className="sp-editor"
+              >
+                <div
+                  className="sp-stack sp-c-kLppIp sp-editor"
+                >
+                  <div
+                    className="sp-code-editor sp-c-bNbSGz"
+                  >
+                    <ForwardRef
+                      code="<h1 class=\\"h1-class\\">test1</h1>"
+                      editorState="pristine"
+                      filePath="/index.html"
+                      initMode="lazy"
+                      key="/index.html"
+                      onCodeUpdate={[Function]}
+                      readOnly={true}
+                      showInlineErrors={true}
+                      showLineNumbers={false}
+                      wrapContent={false}
+                    >
+                      <pre
+                        className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+                        translate="no"
+                      >
+                        <code
+                          className="sp-pre-placeholder sp-c-fWymNx"
+                          style={
+                            Object {
+                              "marginLeft": "var(--sp-space-4)",
+                            }
+                          }
+                        >
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="10"
+                          >
+                            &lt;
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="31"
+                          >
+                            h1
+                          </span>
+                           
+                          <span
+                            className="sp-syntax-property"
+                            key="94"
+                          >
+                            class
+                          </span>
+                          =
+                          <span
+                            className="sp-syntax-string"
+                            key="2010"
+                          >
+                            "h1-class"
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="2120"
+                          >
+                            &gt;
+                          </span>
+                          test1
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="2826"
+                          >
+                            &lt;/
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="3028"
+                          >
+                            h1
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="3130"
+                          >
+                            &gt;
+                          </span>
+                        </code>
+                      </pre>
+                      <span
+                        className="sp-read-only sp-c-czQzXp"
+                      >
+                        Read-only
+                      </span>
+                    </ForwardRef>
+                  </div>
+                </div>
+              </ne>
+            </ForwardRef>
+          </CodeFigure>
+        </div>
+      </Ns>
+    </ClasserProvider>
+  </$s>
+</ComponentPreview>
+`;
+
+exports[`Utilities: ComponentPreview does not render showCasePanelAdvanced when showCasePanel or showCasePanelAdvanced is false/not provided 1`] = `
+<ComponentPreview
+  codeFigure={true}
+  language="html"
+>
+  <$s
+    customSetup={
+      Object {
+        "dependencies": Object {
+          "@swedbankpay/design-guide": "10.6.1",
+        },
+        "devDependencies": Object {
+          "@babel/core": "7.2.0",
+        },
+      }
+    }
+    files={
+      Object {
+        "/index.html": Object {
+          "active": true,
+          "code": "<h1 class=\\"h1-class\\">test1</h1>",
+          "hidden": false,
+          "readOnly": true,
+        },
+        "src/index.js": Object {
+          "code": "import \\"./styles.css\\";
+import dg from \\"@swedbankpay/design-guide\\";
+
+// needed to set the classes from the eventual removed outerTag to the iframe body
+const body = document.querySelector('body');
+body.classList = [];
+function applyOuterElementToRemoveClassesToBody (cssClass) {
+  body.classList.add(cssClass);
+}
+
+
+dg.script.initAll();
+/* but if can adapt for each examples then the best would be to use the recommended way, i.e. importing only the specific element. But for this first iteration let's go wide with the whole bundle, as before 😬
+EXAMPLE:
+import { accordion } from \\"@swedbankpay/design-guide\\";
+accordion.init();
+*/",
+          "hidden": true,
+          "readOnly": true,
+        },
+        "src/styles.css": Object {
+          "code": "
+    body {
+        height: fit-content;
+        padding: 2rem;
+    }
+
+    /* styles fixing specific components (e.g. alternate background (loader + links) ) */
+    /* the elements inside the iframe are only styled by the design-system npm package documentations css does not affect them */
+    .loader-preview-container.dark {
+        background-color: #493c3b;
+    }  ",
+          "hidden": true,
+        },
+      }
+    }
+    options={
+      Object {
+        "externalResources": Array [
+          "https://design.swedbankpay.com/v/10.5.1/styles/swedbankpay.css",
+        ],
+        "showTabs": true,
+      }
+    }
+    template="vanilla"
+    theme="dark"
+  >
+    <ClasserProvider>
+      <Ns
+        theme="dark"
+      >
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <CodeFigure
+            childrenPassed={<TestComponentH1 />}
+          >
+            <ForwardRef
+              showInlineErrors={true}
+            >
+              <ne
+                className="sp-editor"
+              >
+                <div
+                  className="sp-stack sp-c-kLppIp sp-editor"
+                >
+                  <div
+                    className="sp-code-editor sp-c-bNbSGz"
+                  >
+                    <ForwardRef
+                      code="<h1 class=\\"h1-class\\">test1</h1>"
+                      editorState="pristine"
+                      filePath="/index.html"
+                      initMode="lazy"
+                      key="/index.html"
+                      onCodeUpdate={[Function]}
+                      readOnly={true}
+                      showInlineErrors={true}
+                      showLineNumbers={false}
+                      wrapContent={false}
+                    >
+                      <pre
+                        className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+                        translate="no"
+                      >
+                        <code
+                          className="sp-pre-placeholder sp-c-fWymNx"
+                          style={
+                            Object {
+                              "marginLeft": "var(--sp-space-4)",
+                            }
+                          }
+                        >
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="10"
+                          >
+                            &lt;
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="31"
+                          >
+                            h1
+                          </span>
+                           
+                          <span
+                            className="sp-syntax-property"
+                            key="94"
+                          >
+                            class
+                          </span>
+                          =
+                          <span
+                            className="sp-syntax-string"
+                            key="2010"
+                          >
+                            "h1-class"
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="2120"
+                          >
+                            &gt;
+                          </span>
+                          test1
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="2826"
+                          >
+                            &lt;/
+                          </span>
+                          <span
+                            className="sp-syntax-tag"
+                            key="3028"
+                          >
+                            h1
+                          </span>
+                          <span
+                            className="sp-syntax-punctuation"
+                            key="3130"
+                          >
+                            &gt;
+                          </span>
+                        </code>
+                      </pre>
+                      <span
+                        className="sp-read-only sp-c-czQzXp"
+                      >
+                        Read-only
+                      </span>
+                    </ForwardRef>
+                  </div>
+                </div>
+              </ne>
+            </ForwardRef>
+          </CodeFigure>
+        </div>
+      </Ns>
+    </ClasserProvider>
+  </$s>
+</ComponentPreview>
+`;
+
+exports[`Utilities: OldComponentPreview CodeFigure removes outer tag from markup 1`] = `
+<OldComponentPreview
+  codeFigure={true}
+  language="html"
+  removeOuterTag={true}
+>
   <CodeFigure>
     <figure>
       <div
@@ -62,11 +2570,11 @@ exports[`Utilities: ComponentPreview CodeFigure removes outer tag from markup 1`
       </div>
     </figure>
   </CodeFigure>
-</ComponentPreview>
+</OldComponentPreview>
 `;
 
-exports[`Utilities: ComponentPreview CodeFigure removes outer tag from markup even if no child element exists 1`] = `
-<ComponentPreview
+exports[`Utilities: OldComponentPreview CodeFigure removes outer tag from markup even if no child element exists 1`] = `
+<OldComponentPreview
   codeFigure={true}
   language="html"
   removeOuterTag={true}
@@ -127,11 +2635,11 @@ exports[`Utilities: ComponentPreview CodeFigure removes outer tag from markup ev
       </div>
     </figure>
   </CodeFigure>
-</ComponentPreview>
+</OldComponentPreview>
 `;
 
-exports[`Utilities: ComponentPreview CodeFigure removes outer tag from multiple html tags 1`] = `
-<ComponentPreview
+exports[`Utilities: OldComponentPreview CodeFigure removes outer tag from multiple html tags 1`] = `
+<OldComponentPreview
   codeFigure={true}
   language="html"
   removeOuterTag={true}
@@ -204,11 +2712,11 @@ exports[`Utilities: ComponentPreview CodeFigure removes outer tag from multiple 
       </div>
     </figure>
   </CodeFigure>
-</ComponentPreview>
+</OldComponentPreview>
 `;
 
-exports[`Utilities: ComponentPreview CodeFigure removes value property 1`] = `
-<ComponentPreview
+exports[`Utilities: OldComponentPreview CodeFigure removes value property 1`] = `
+<OldComponentPreview
   codeFigure={true}
   hideValue={true}
   language="html"
@@ -269,11 +2777,11 @@ exports[`Utilities: ComponentPreview CodeFigure removes value property 1`] = `
       </div>
     </figure>
   </CodeFigure>
-</ComponentPreview>
+</OldComponentPreview>
 `;
 
-exports[`Utilities: ComponentPreview CodeFigure renders css string 1`] = `
-<ComponentPreview
+exports[`Utilities: OldComponentPreview CodeFigure renders css string 1`] = `
+<OldComponentPreview
   codeFigure={true}
   language="css"
 >
@@ -333,11 +2841,11 @@ exports[`Utilities: ComponentPreview CodeFigure renders css string 1`] = `
       </div>
     </figure>
   </CodeFigure>
-</ComponentPreview>
+</OldComponentPreview>
 `;
 
-exports[`Utilities: ComponentPreview CodeFigure renders multiple html tags 1`] = `
-<ComponentPreview
+exports[`Utilities: OldComponentPreview CodeFigure renders multiple html tags 1`] = `
+<OldComponentPreview
   codeFigure={true}
   language="html"
 >
@@ -403,11 +2911,11 @@ exports[`Utilities: ComponentPreview CodeFigure renders multiple html tags 1`] =
       </div>
     </figure>
   </CodeFigure>
-</ComponentPreview>
+</OldComponentPreview>
 `;
 
-exports[`Utilities: ComponentPreview CodeFigure renders multiple javascript strings 1`] = `
-<ComponentPreview
+exports[`Utilities: OldComponentPreview CodeFigure renders multiple javascript strings 1`] = `
+<OldComponentPreview
   codeFigure={true}
   language="javascript"
 >
@@ -467,11 +2975,11 @@ exports[`Utilities: ComponentPreview CodeFigure renders multiple javascript stri
       </div>
     </figure>
   </CodeFigure>
-</ComponentPreview>
+</OldComponentPreview>
 `;
 
-exports[`Utilities: ComponentPreview CodeFigure returns a message if no child is passed 1`] = `
-<ComponentPreview
+exports[`Utilities: OldComponentPreview CodeFigure returns a message if no child is passed 1`] = `
+<OldComponentPreview
   codeFigure={true}
   language="html"
   removeOuterTag={true}
@@ -532,11 +3040,11 @@ exports[`Utilities: ComponentPreview CodeFigure returns a message if no child is
       </div>
     </figure>
   </CodeFigure>
-</ComponentPreview>
+</OldComponentPreview>
 `;
 
-exports[`Utilities: ComponentPreview CodeFigure warns about unhandled children 1`] = `
-<ComponentPreview
+exports[`Utilities: OldComponentPreview CodeFigure warns about unhandled children 1`] = `
+<OldComponentPreview
   codeFigure={true}
   language="css"
 >
@@ -595,11 +3103,11 @@ exports[`Utilities: ComponentPreview CodeFigure warns about unhandled children 1
       </div>
     </figure>
   </CodeFigure>
-</ComponentPreview>
+</OldComponentPreview>
 `;
 
-exports[`Utilities: ComponentPreview Codefigure removes list tags 1`] = `
-<ComponentPreview
+exports[`Utilities: OldComponentPreview Codefigure removes list tags 1`] = `
+<OldComponentPreview
   codeFigure={true}
   language="html"
   removeList={true}
@@ -678,11 +3186,11 @@ exports[`Utilities: ComponentPreview Codefigure removes list tags 1`] = `
       </div>
     </figure>
   </CodeFigure>
-</ComponentPreview>
+</OldComponentPreview>
 `;
 
-exports[`Utilities: ComponentPreview Codefigure removes list tags from multiple html tags 1`] = `
-<ComponentPreview
+exports[`Utilities: OldComponentPreview Codefigure removes list tags from multiple html tags 1`] = `
+<OldComponentPreview
   codeFigure={true}
   language="html"
   removeList={true}
@@ -809,11 +3317,11 @@ exports[`Utilities: ComponentPreview Codefigure removes list tags from multiple 
       </div>
     </figure>
   </CodeFigure>
-</ComponentPreview>
+</OldComponentPreview>
 `;
 
-exports[`Utilities: ComponentPreview does not render codeFigure when prop is false/not provided 1`] = `
-<ComponentPreview
+exports[`Utilities: OldComponentPreview does not render codeFigure when prop is false/not provided 1`] = `
+<OldComponentPreview
   language="html"
   showCasePanel={true}
 >
@@ -830,11 +3338,11 @@ exports[`Utilities: ComponentPreview does not render codeFigure when prop is fal
       </TestComponentH1>
     </div>
   </ShowCasePanel>
-</ComponentPreview>
+</OldComponentPreview>
 `;
 
-exports[`Utilities: ComponentPreview does not render showCasePanel when prop is false/not provided 1`] = `
-<ComponentPreview
+exports[`Utilities: OldComponentPreview does not render showCasePanel when prop is false/not provided 1`] = `
+<OldComponentPreview
   codeFigure={true}
   language="html"
 >
@@ -894,11 +3402,11 @@ exports[`Utilities: ComponentPreview does not render showCasePanel when prop is 
       </div>
     </figure>
   </CodeFigure>
-</ComponentPreview>
+</OldComponentPreview>
 `;
 
-exports[`Utilities: ComponentPreview does not render showCasePanelAdvanced when showCasePanel or showCasePanelAdvanced is false/not provided 1`] = `
-<ComponentPreview
+exports[`Utilities: OldComponentPreview does not render showCasePanelAdvanced when showCasePanel or showCasePanelAdvanced is false/not provided 1`] = `
+<OldComponentPreview
   codeFigure={true}
   language="html"
 >
@@ -958,5 +3466,5 @@ exports[`Utilities: ComponentPreview does not render showCasePanelAdvanced when 
       </div>
     </figure>
   </CodeFigure>
-</ComponentPreview>
+</OldComponentPreview>
 `;

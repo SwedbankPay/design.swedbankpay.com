@@ -11,6 +11,7 @@ exports[`Documentation: Dialog Example renders 1`] = `
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    staticPreview={true}
   >
     <button
       className="btn btn-primary"

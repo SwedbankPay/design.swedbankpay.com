@@ -77,7 +77,7 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
       </Link>
        for more information on breakpoints). 
     </p>
-    <ComponentPreview
+    <OldComponentPreview
       codeFigure={true}
       language="html"
       showCasePanel={true}
@@ -114,7 +114,7 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
         />
         <main />
       </div>
-    </ComponentPreview>
+    </OldComponentPreview>
   </section>
   <section>
     <h3>
@@ -133,7 +133,7 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
       />
       . Only consider using the PNG version when there are issues with using the SVG version.
     </p>
-    <ComponentPreview
+    <OldComponentPreview
       codeFigure={true}
       language="html"
       showCasePanel={true}
@@ -166,7 +166,7 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
         }
       />
       <main />
-    </ComponentPreview>
+    </OldComponentPreview>
   </section>
   <section>
     <h3>
@@ -210,7 +210,7 @@ exports[`Components: Topbar Overview renders 1`] = `
   <p>
     The topbar component is one of the most visible and familiar ways of helping users navigate a site. It typically consist of links to the top levels in the information architecture. 
   </p>
-  <ComponentPreview
+  <OldComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}

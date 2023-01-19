@@ -159,7 +159,7 @@ exports[`Documentation: Pagination Overview renders 1`] = `
   <p>
     Pagination is commonly used for things like table listings, search results or directories. The need for pagination is influenced by the amount of data to be displayed and the aim is to not overwhelm users with information and to improve the loading performance of the system. 
   </p>
-  <ComponentPreview
+  <OldComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}

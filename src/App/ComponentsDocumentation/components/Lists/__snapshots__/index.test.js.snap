@@ -46,6 +46,7 @@ exports[`Documentation: Lists BasicList renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={250}
     showCasePanel={true}
   >
     <ul
@@ -133,6 +134,7 @@ exports[`Documentation: Lists DescriptionList renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={300}
     showCasePanel={true}
   >
     <dl
@@ -192,6 +194,7 @@ exports[`Documentation: Lists HoverItemList renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={250}
     showCasePanel={true}
   >
     <ul
@@ -304,6 +307,7 @@ exports[`Documentation: Lists ItemList renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={320}
     showCasePanel={true}
   >
     <ul
@@ -375,6 +379,7 @@ exports[`Documentation: Lists ItemListBordered renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={500}
     showCasePanel={true}
   >
     <ul
@@ -474,6 +479,7 @@ exports[`Documentation: Lists ItemListLarge renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={470}
     showCasePanel={true}
   >
     <ul
@@ -645,6 +651,7 @@ exports[`Documentation: Lists StripedItemList prevents default on anchors 1`] = 
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={350}
     showCasePanel={true}
   >
     <ul
@@ -774,6 +781,7 @@ exports[`Documentation: Lists StripedItemList renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={350}
     showCasePanel={true}
   >
     <ul

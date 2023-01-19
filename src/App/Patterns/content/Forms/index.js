@@ -34,7 +34,7 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
 
         <p>A form can include different type of user input components that can be arranged in different ways depending on your specific context and needs. You might for example design a form for a user to sign up for or log into an account, register for a service, reconfigure settings, take a survey, purchase a product or provide feedback.</p>
-        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={formsShowCase} noOptions removeOuterTag/>
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={formsShowCase} noOptions removeOuterTag previewMinHeight={650} />
     </section>
 );
 
@@ -238,7 +238,7 @@ const DeveloperDocumentation = () => (
             <b className="brand-headline">Server-side validation</b>
             <p>Server side validation can be used to control the inputs after the user submits the form. If an error has occurred, display an error alert at the top of the form after the page has reloaded as well as inline errors on the affected input components.</p>
 
-            <ComponentPreview language="html" codeFigure showCasePanel>
+            <ComponentPreview language="html" codeFigure showCasePanel previewMinHeight={600}>
                 <div className="col-sm-6 col-12 m-auto px-0 py-3">
                     <LoginForm error defaultPassword defaultEmail
                         passwordId="validation-password-example"
@@ -252,7 +252,7 @@ const DeveloperDocumentation = () => (
             <h3>Fieldset</h3>
             <p>You can use the <CodeTags type="primary" code="<fieldset>" /> to group related elements in a <CodeTags type="primary" code="form" /> and create more structure.</p>
 
-            <ComponentPreview language="html" codeFigure showCasePanel>
+            <ComponentPreview language="html" codeFigure showCasePanel previewMinHeight={620}>
                 <div className="col-12 col-sm-6 m-auto">
                     <form>
                         <fieldset className="mb-2">
@@ -277,7 +277,7 @@ const DeveloperDocumentation = () => (
             <h3>Disabled state</h3>
             <p>You can disable an entire fieldset by adding <CodeTags type="primary" code="disabled"/> to the fieldset element. </p>
 
-            <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag>
+            <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag previewMinHeight={400}>
                 <div className="col-12 col-sm-6 m-auto">
                     <fieldset disabled>
                         <InputGroup id="disabled-name-example" type="name" label="Name" />
@@ -289,7 +289,7 @@ const DeveloperDocumentation = () => (
             </ComponentPreview>
             <p>If you only wish to disable a specific form component, add the <CodeTags type="primary" code="disabled"/> attribute to the desired component.</p>
 
-            <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag>
+            <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag previewMinHeight={400}>
                 <div className="col-12 col-sm-6 m-auto">
                     <fieldset>
                         <InputGroup id="disable-specific-name-example" type="name" label="Name" disabled />

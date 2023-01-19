@@ -149,6 +149,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     <ComponentPreview
       codeFigure={true}
       language="html"
+      previewMinHeight={250}
       showCasePanel={true}
     >
       <div
@@ -174,6 +175,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     <ComponentPreview
       codeFigure={true}
       language="html"
+      previewMinHeight={600}
       showCasePanel={true}
     >
       <div

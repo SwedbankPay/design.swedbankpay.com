@@ -25,6 +25,7 @@ exports[`Components: ActionList Anchorpoints renders 1`] = `
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    staticPreview={true}
   >
     <ActionList
       classNames="anchor-top-left"
@@ -65,6 +66,7 @@ exports[`Components: ActionList Anchorpoints renders 1`] = `
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    staticPreview={true}
   >
     <ActionList
       classNames="anchor-bottom-right"
@@ -105,6 +107,7 @@ exports[`Components: ActionList Anchorpoints renders 1`] = `
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    staticPreview={true}
   >
     <ActionList
       classNames="anchor-bottom-left"
@@ -162,6 +165,7 @@ exports[`Components: ActionList Overview renders 1`] = `
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    staticPreview={true}
   >
     <ActionList
       items={

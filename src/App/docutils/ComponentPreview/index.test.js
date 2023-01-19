@@ -1,11 +1,11 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import ComponentPreview from "./index";
+import { OldComponentPreview } from "./OldComponentPreview";
 
 import { tabs } from "@src/scripts/main";
 
-describe("Utilities: ComponentPreview", () => {
+describe("Utilities: OldComponentPreview", () => {
     const TestComponentH1 = () => <h1 className="h1-class">test1</h1>;
     const TestComponentH2 = () => <h2 className="h2-class">test2</h2>;
     const TestComponentH1WithOuterTags = () => (
@@ -31,14 +31,14 @@ describe("Utilities: ComponentPreview", () => {
     tabs.init = jest.fn();
 
     it("is defined", () => {
-        expect(ComponentPreview).toBeDefined();
+        expect(OldComponentPreview).toBeDefined();
     });
 
     it("does not render codeFigure when prop is false/not provided", () => {
         const wrapper = mount(
-            <ComponentPreview language="html" showCasePanel>
+            <OldComponentPreview language="html" showCasePanel>
                 <TestComponentH1 />
-            </ComponentPreview>
+            </OldComponentPreview>
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -46,18 +46,18 @@ describe("Utilities: ComponentPreview", () => {
     });
 
     it("does not render showCasePanel when prop is false/not provided", () => {
-        const wrapper = mount(<ComponentPreview language="html" codeFigure>
+        const wrapper = mount(<OldComponentPreview language="html" codeFigure>
             <TestComponentH1 />
-        </ComponentPreview>);
+        </OldComponentPreview>);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).not.toContain("showcase-panel");
     });
 
     it("does not render showCasePanelAdvanced when showCasePanel or showCasePanelAdvanced is false/not provided", () => {
-        const wrapper = mount(<ComponentPreview language="html" codeFigure>
+        const wrapper = mount(<OldComponentPreview language="html" codeFigure>
             <TestComponentH1 />
-        </ComponentPreview>);
+        </OldComponentPreview>);
 
         expect(wrapper).toMatchSnapshot();
         expect(wrapper.html()).not.toContain("showcase-panel");
@@ -66,10 +66,10 @@ describe("Utilities: ComponentPreview", () => {
 
     it("CodeFigure renders multiple html tags", () => {
         const wrapper = mount(
-            <ComponentPreview language="html" codeFigure>
+            <OldComponentPreview language="html" codeFigure>
                 <TestComponentH1 />
                 <TestComponentH2 />
-            </ComponentPreview>
+            </OldComponentPreview>
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -77,9 +77,9 @@ describe("Utilities: ComponentPreview", () => {
 
     it("CodeFigure removes outer tag from markup", () => {
         const wrapper = mount(
-            <ComponentPreview language="html" codeFigure removeOuterTag>
+            <OldComponentPreview language="html" codeFigure removeOuterTag>
                 <TestComponentH1WithOuterTags />
-            </ComponentPreview>
+            </OldComponentPreview>
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -89,11 +89,11 @@ describe("Utilities: ComponentPreview", () => {
 
     it("CodeFigure removes outer tag from multiple html tags", () => {
         const wrapper = mount(
-            <ComponentPreview language="html" codeFigure removeOuterTag>
+            <OldComponentPreview language="html" codeFigure removeOuterTag>
                 <TestComponentH1WithOuterTags />
                 <TestComponentH1WithOuterTags />
                 <TestComponentH1WithOuterTags />
-            </ComponentPreview>
+            </OldComponentPreview>
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -103,9 +103,9 @@ describe("Utilities: ComponentPreview", () => {
 
     it("CodeFigure removes outer tag from markup even if no child element exists", () => {
         const wrapper = mount(
-            <ComponentPreview language="html" codeFigure removeOuterTag>
+            <OldComponentPreview language="html" codeFigure removeOuterTag>
                 <TestComponentNoElement />
-            </ComponentPreview>
+            </OldComponentPreview>
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -114,9 +114,9 @@ describe("Utilities: ComponentPreview", () => {
 
     it("CodeFigure removes value property", () => {
         const wrapper = mount(
-            <ComponentPreview language="html" codeFigure hideValue>
+            <OldComponentPreview language="html" codeFigure hideValue>
                 <TestComponentValue />
-            </ComponentPreview>
+            </OldComponentPreview>
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -125,7 +125,7 @@ describe("Utilities: ComponentPreview", () => {
 
     it("CodeFigure returns a message if no child is passed", () => {
         const wrapper = mount(
-            <ComponentPreview language="html" codeFigure removeOuterTag />
+            <OldComponentPreview language="html" codeFigure removeOuterTag />
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -134,9 +134,9 @@ describe("Utilities: ComponentPreview", () => {
 
     it("Codefigure removes list tags", () => {
         const wrapper = mount(
-            <ComponentPreview language="html" codeFigure removeList>
+            <OldComponentPreview language="html" codeFigure removeList>
                 <TestComponentList />
-            </ComponentPreview>
+            </OldComponentPreview>
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -146,11 +146,11 @@ describe("Utilities: ComponentPreview", () => {
 
     it("Codefigure removes list tags from multiple html tags", () => {
         const wrapper = mount(
-            <ComponentPreview language="html" codeFigure removeList>
+            <OldComponentPreview language="html" codeFigure removeList>
                 <TestComponentList />
                 <TestComponentList />
                 <TestComponentList />
-            </ComponentPreview>
+            </OldComponentPreview>
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -162,9 +162,9 @@ describe("Utilities: ComponentPreview", () => {
         console.warn = jest.fn();
 
         const wrapper = mount(
-            <ComponentPreview language="css" codeFigure>
+            <OldComponentPreview language="css" codeFigure>
                 {() => []}
-            </ComponentPreview>
+            </OldComponentPreview>
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -173,9 +173,9 @@ describe("Utilities: ComponentPreview", () => {
 
     it("CodeFigure renders css string", () => {
         const wrapper = mount(
-            <ComponentPreview language="css" codeFigure>
+            <OldComponentPreview language="css" codeFigure>
                 {"color: red;"}
-            </ComponentPreview>
+            </OldComponentPreview>
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -183,11 +183,11 @@ describe("Utilities: ComponentPreview", () => {
 
     it("CodeFigure renders multiple javascript strings", () => {
         const wrapper = mount(
-            <ComponentPreview language="javascript" codeFigure>
+            <OldComponentPreview language="javascript" codeFigure>
                 {"const a = 12;"}
                 {"const b = 1;"}
                 {"const c = a + b;"}
-            </ComponentPreview>
+            </OldComponentPreview>
         );
 
         expect(wrapper).toMatchSnapshot();

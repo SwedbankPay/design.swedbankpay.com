@@ -12,6 +12,7 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
   </h3>
   <ComponentPreview
     language="html"
+    previewMinHeight={400}
     showCasePanel={true}
   >
     <table
@@ -151,6 +152,7 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
   </h3>
   <ComponentPreview
     language="html"
+    previewMinHeight={400}
     showCasePanel={true}
   >
     <table

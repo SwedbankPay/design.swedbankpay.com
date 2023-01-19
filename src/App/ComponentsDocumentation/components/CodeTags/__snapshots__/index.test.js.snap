@@ -49,7 +49,7 @@ exports[`Documentation: CodeTags Overview renders 1`] = `
   >
     Overview
   </h2>
-  <ComponentPreview
+  <OldComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}

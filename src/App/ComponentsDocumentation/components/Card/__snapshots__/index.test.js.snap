@@ -218,6 +218,7 @@ exports[`Documentation: Card Overview renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={400}
     showCasePanel={true}
     showCasePanelAdvanced={
       Object {

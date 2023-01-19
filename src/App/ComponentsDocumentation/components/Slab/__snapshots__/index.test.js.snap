@@ -9,7 +9,7 @@ exports[`Components: Slab OverviewSlab renders 1`] = `
   >
     Overview
   </h2>
-  <ComponentPreview
+  <OldComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
@@ -155,7 +155,7 @@ exports[`Components: Slab SlabArrow renders 1`] = `
     />
      inherits the color from the slab it is appended to.
   </p>
-  <ComponentPreview
+  <OldComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
@@ -167,7 +167,7 @@ exports[`Components: Slab SlabArrow renders 1`] = `
         This slab has some connection to the content above.
       </p>
     </div>
-  </ComponentPreview>
+  </OldComponentPreview>
 </section>
 `;
 

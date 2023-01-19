@@ -192,7 +192,7 @@ exports[`Identity: Spacing EightPointSystem renders 1`] = `
     8-point spacing system
   </h2>
   <p>
-    We follow a 8-point spacing system – multiples of 8 to define the different dimensions, margins and paddings of our elements. The reason for this is to streamline the process, saving time by minimize the amount of choices and create consistent usage of space across all our product. 
+    We follow a 8-point spacing system - multiples of 8 to define the different dimensions, margins and paddings of our elements. The reason for this is to streamline the process, saving time by minimize the amount of choices and create consistent usage of space across all our product. 
   </p>
   <div
     className="d-flex flex-column align-items-center mb-4"
@@ -293,16 +293,16 @@ exports[`Identity: Spacing Examples renders 1`] = `
                 .mt-0 {
                     margin-top: 0 !important;
                 }
-                
+
                 .ml-1 {
                     margin-left: (@spacer * 0.25) !important;
                 }
-                
+
                 .px-2 {
                     padding-left: (@spacer * 0.5) !important;
                     padding-right: (@spacer * 0.5) !important;
                 }
-                
+
                 .p-3 {
                     padding: @spacer !important;
                 }
@@ -332,7 +332,6 @@ exports[`Identity: Spacing Examples renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
   >
     <div

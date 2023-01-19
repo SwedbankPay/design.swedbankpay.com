@@ -15,6 +15,7 @@ exports[`Components: Links ActionLink renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={350}
     removeOuterTag={true}
     showCasePanel={true}
     showCasePanelAdvanced={

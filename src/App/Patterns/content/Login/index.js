@@ -80,7 +80,7 @@ const DeveloperDocumentation = () => (
         <section>
             <h4>Client-side validation</h4>
             <p>Use client-side validation to validate as much data as possible inline before the user submits the form. Common inline errors include empty required fields, invalid characters or incorrect input format. </p>
-            <ComponentPreview language="html" codeFigure showCasePanel>
+            <ComponentPreview language="html" codeFigure showCasePanel previewMinHeight={250}>
                 <div className="col-sm-6 col-12 m-auto px-0 pt-3">
                     <InputGroup type="email" id="login-client-side" validationState="error" label="Email" errorMessage="Email is required" />
                 </div>
@@ -89,7 +89,7 @@ const DeveloperDocumentation = () => (
         <section>
             <h4>Server-side validation</h4>
             <p>Use server side validation when the user submits the form. Display a local error alert after the page has reloaded if an error has occurred. Incorrect email or password are the most common servers errors. </p>
-            <ComponentPreview language="html" codeFigure showCasePanel>
+            <ComponentPreview language="html" codeFigure showCasePanel previewMinHeight={600}>
                 <div className="col-sm-6 col-12 m-auto px-0 py-3">
                     <LoginForm error defaultPassword defaultEmail
                         passwordId="validation-password-example"

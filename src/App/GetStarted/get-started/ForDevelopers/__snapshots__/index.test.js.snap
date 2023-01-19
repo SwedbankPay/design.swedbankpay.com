@@ -654,7 +654,7 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
     </p>
     <ComponentPreview
       codeFigure={true}
-      language="html"
+      language="javascript"
       removeOuterTag={true}
     >
       dg.component.init();

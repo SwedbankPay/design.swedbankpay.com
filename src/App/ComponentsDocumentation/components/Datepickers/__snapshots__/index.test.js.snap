@@ -37,6 +37,7 @@ exports[`Documentation: Datepickers AllowInput renders 1`] = `
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    staticPreview={true}
   >
     <Datepicker
       allowinput={true}
@@ -73,6 +74,7 @@ exports[`Documentation: Datepickers CustomFormat renders 1`] = `
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    staticPreview={true}
   >
     <Datepicker
       format="nb"
@@ -145,6 +147,7 @@ exports[`Documentation: Datepickers DateRange renders 1`] = `
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    staticPreview={true}
   >
     <Datepicker
       format="nb"
@@ -177,6 +180,7 @@ exports[`Documentation: Datepickers HumanReadable renders 1`] = `
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    staticPreview={true}
   >
     <Datepicker
       fulldate={true}
@@ -214,6 +218,7 @@ exports[`Documentation: Datepickers IncludeTime renders 1`] = `
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    staticPreview={true}
   >
     <Datepicker
       format="nb"
@@ -246,6 +251,7 @@ exports[`Documentation: Datepickers InitialValue renders 1`] = `
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    staticPreview={true}
   >
     <Datepicker
       id="init-value-datepicker"
@@ -297,6 +303,7 @@ exports[`Documentation: Datepickers MultipleDates renders 1`] = `
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    staticPreview={true}
   >
     <Datepicker
       format="nb"
@@ -633,6 +640,7 @@ exports[`Documentation: Datepickers ShowingMultipleMonths renders 1`] = `
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    staticPreview={true}
   >
     <Datepicker
       id="multiple-months-datepicker"
@@ -669,6 +677,7 @@ exports[`Documentation: Datepickers SimpleDatepicker renders 1`] = `
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    staticPreview={true}
   >
     <Datepicker
       id="simple-datepicker"
@@ -704,6 +713,7 @@ exports[`Documentation: Datepickers ValidDates renders 1`] = `
     codeFigure={true}
     language="html"
     showCasePanel={true}
+    staticPreview={true}
   >
     <Datepicker
       format="nb"

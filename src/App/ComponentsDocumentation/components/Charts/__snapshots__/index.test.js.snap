@@ -48,7 +48,7 @@ exports[`Dashboard: Charts BarChart renders 1`] = `
     </a>
      for more information on bar charts.
   </p>
-  <ComponentPreview
+  <OldComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
@@ -108,8 +108,8 @@ exports[`Dashboard: Charts BarChart renders 1`] = `
         }
       }
     />
-  </ComponentPreview>
-  <ComponentPreview
+  </OldComponentPreview>
+  <OldComponentPreview
     codeFigure={true}
     language="javascript"
   >
@@ -136,7 +136,7 @@ exports[`Dashboard: Charts BarChart renders 1`] = `
                     }
                 });
             
-  </ComponentPreview>
+  </OldComponentPreview>
   <AccessibilityAlert />
   <h3>
     Multiple datasets
@@ -144,7 +144,7 @@ exports[`Dashboard: Charts BarChart renders 1`] = `
   <p>
     You can add multiple datasets
   </p>
-  <ComponentPreview
+  <OldComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
@@ -238,8 +238,8 @@ exports[`Dashboard: Charts BarChart renders 1`] = `
         }
       }
     />
-  </ComponentPreview>
-  <ComponentPreview
+  </OldComponentPreview>
+  <OldComponentPreview
     codeFigure={true}
     language="javascript"
   >
@@ -274,7 +274,7 @@ exports[`Dashboard: Charts BarChart renders 1`] = `
                     }
                 });
             
-  </ComponentPreview>
+  </OldComponentPreview>
   <AccessibilityAlert />
   <h3>
     Stacked bar
@@ -284,7 +284,7 @@ exports[`Dashboard: Charts BarChart renders 1`] = `
   >
     You can stack, because a stacked bar is almost as good as a stocked one
   </p>
-  <ComponentPreview
+  <OldComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
@@ -384,8 +384,8 @@ exports[`Dashboard: Charts BarChart renders 1`] = `
         }
       }
     />
-  </ComponentPreview>
-  <ComponentPreview
+  </OldComponentPreview>
+  <OldComponentPreview
     codeFigure={true}
     language="javascript"
   >
@@ -424,7 +424,7 @@ exports[`Dashboard: Charts BarChart renders 1`] = `
                     }
                 });
             
-  </ComponentPreview>
+  </OldComponentPreview>
   <AccessibilityAlert />
 </Fragment>
 `;
@@ -444,7 +444,7 @@ exports[`Dashboard: Charts CustomColors renders 1`] = `
     />
      with a last optional argument consisting of a list of RGB color codes.
   </p>
-  <ComponentPreview
+  <OldComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
@@ -491,8 +491,8 @@ exports[`Dashboard: Charts CustomColors renders 1`] = `
         }
       }
     />
-  </ComponentPreview>
-  <ComponentPreview
+  </OldComponentPreview>
+  <OldComponentPreview
     codeFigure={true}
     language="javascript"
   >
@@ -514,7 +514,7 @@ exports[`Dashboard: Charts CustomColors renders 1`] = `
                 "114, 96, 94",
                 "197, 19, 28"]);
             
-  </ComponentPreview>
+  </OldComponentPreview>
   <AccessibilityAlert />
 </Fragment>
 `;
@@ -545,7 +545,7 @@ exports[`Dashboard: Charts DoughnutAndPieCharts renders 1`] = `
     </a>
      for more information on doughnut and pie charts.
   </p>
-  <ComponentPreview
+  <OldComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
@@ -583,8 +583,8 @@ exports[`Dashboard: Charts DoughnutAndPieCharts renders 1`] = `
         }
       }
     />
-  </ComponentPreview>
-  <ComponentPreview
+  </OldComponentPreview>
+  <OldComponentPreview
     codeFigure={true}
     language="javascript"
   >
@@ -601,7 +601,7 @@ exports[`Dashboard: Charts DoughnutAndPieCharts renders 1`] = `
                     }
                 });
             
-  </ComponentPreview>
+  </OldComponentPreview>
   <AccessibilityAlert />
   <h2>
     Doughnut
@@ -617,7 +617,7 @@ exports[`Dashboard: Charts DoughnutAndPieCharts renders 1`] = `
     </code>
     ?
   </p>
-  <ComponentPreview
+  <OldComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
@@ -659,8 +659,8 @@ exports[`Dashboard: Charts DoughnutAndPieCharts renders 1`] = `
         }
       }
     />
-  </ComponentPreview>
-  <ComponentPreview
+  </OldComponentPreview>
+  <OldComponentPreview
     codeFigure={true}
     language="javascript"
   >
@@ -677,7 +677,7 @@ exports[`Dashboard: Charts DoughnutAndPieCharts renders 1`] = `
                     }
                 });
             
-  </ComponentPreview>
+  </OldComponentPreview>
   <AccessibilityAlert />
 </Fragment>
 `;
@@ -708,7 +708,7 @@ exports[`Dashboard: Charts LineChart renders 1`] = `
     </a>
      for more information on line charts.
   </p>
-  <ComponentPreview
+  <OldComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
@@ -799,8 +799,8 @@ exports[`Dashboard: Charts LineChart renders 1`] = `
         </tr>
       </tbody>
     </table>
-  </ComponentPreview>
-  <ComponentPreview
+  </OldComponentPreview>
+  <OldComponentPreview
     codeFigure={true}
     language="javascript"
   >
@@ -818,11 +818,11 @@ exports[`Dashboard: Charts LineChart renders 1`] = `
                     }
                 });
             
-  </ComponentPreview>
+  </OldComponentPreview>
   <h3>
     Stepped and dashed line
   </h3>
-  <ComponentPreview
+  <OldComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
@@ -881,8 +881,8 @@ exports[`Dashboard: Charts LineChart renders 1`] = `
         }
       }
     />
-  </ComponentPreview>
-  <ComponentPreview
+  </OldComponentPreview>
+  <OldComponentPreview
     codeFigure={true}
     language="javascript"
   >
@@ -906,12 +906,12 @@ exports[`Dashboard: Charts LineChart renders 1`] = `
                     }
                 });
             
-  </ComponentPreview>
+  </OldComponentPreview>
   <AccessibilityAlert />
   <h3>
     Advanced options
   </h3>
-  <ComponentPreview
+  <OldComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
@@ -980,8 +980,8 @@ exports[`Dashboard: Charts LineChart renders 1`] = `
         }
       }
     />
-  </ComponentPreview>
-  <ComponentPreview
+  </OldComponentPreview>
+  <OldComponentPreview
     codeFigure={true}
     language="javascript"
   >
@@ -1016,12 +1016,12 @@ exports[`Dashboard: Charts LineChart renders 1`] = `
                     }
                 });
             
-  </ComponentPreview>
+  </OldComponentPreview>
   <AccessibilityAlert />
   <h3>
     With fill
   </h3>
-  <ComponentPreview
+  <OldComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
@@ -1059,8 +1059,8 @@ exports[`Dashboard: Charts LineChart renders 1`] = `
         }
       }
     />
-  </ComponentPreview>
-  <ComponentPreview
+  </OldComponentPreview>
+  <OldComponentPreview
     codeFigure={true}
     language="javascript"
   >
@@ -1079,7 +1079,7 @@ exports[`Dashboard: Charts LineChart renders 1`] = `
                     }
                 });
             
-  </ComponentPreview>
+  </OldComponentPreview>
   <AccessibilityAlert />
 </Fragment>
 `;
@@ -1104,7 +1104,7 @@ exports[`Dashboard: Charts MixingTypes renders 1`] = `
     </a>
      that are a combination of two or more different chart types. A common example is a bar chart that also includes a line dataset.
   </p>
-  <ComponentPreview
+  <OldComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}
@@ -1161,8 +1161,8 @@ exports[`Dashboard: Charts MixingTypes renders 1`] = `
         }
       }
     />
-  </ComponentPreview>
-  <ComponentPreview
+  </OldComponentPreview>
+  <OldComponentPreview
     codeFigure={true}
     language="javascript"
   >
@@ -1194,7 +1194,7 @@ exports[`Dashboard: Charts MixingTypes renders 1`] = `
                     }
                 });
             
-  </ComponentPreview>
+  </OldComponentPreview>
   <AccessibilityAlert />
 </Fragment>
 `;

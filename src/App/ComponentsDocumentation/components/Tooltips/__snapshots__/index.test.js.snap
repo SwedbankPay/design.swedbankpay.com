@@ -10,7 +10,7 @@ exports[`Components: Tooltip Overview renders 1`] = `
   <p>
     Tooltips should be used sparingly. If you’re building something that requires a lot of tooltips, work on clarifying the design and the language in the experience.
   </p>
-  <ComponentPreview
+  <OldComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}

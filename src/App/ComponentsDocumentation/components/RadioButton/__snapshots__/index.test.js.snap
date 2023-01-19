@@ -124,6 +124,7 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
     <ComponentPreview
       codeFigure={true}
       language="html"
+      previewMinHeight={300}
       removeOuterTag={true}
       showCasePanel={true}
     >
@@ -294,6 +295,7 @@ exports[`Component: RadioButton Overview renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={250}
     showCasePanel={true}
     showCasePanelAdvanced={
       Object {

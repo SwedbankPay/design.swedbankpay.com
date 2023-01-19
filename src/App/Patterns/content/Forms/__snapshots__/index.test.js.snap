@@ -319,6 +319,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     <ComponentPreview
       codeFigure={true}
       language="html"
+      previewMinHeight={600}
       showCasePanel={true}
     >
       <div
@@ -356,6 +357,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     <ComponentPreview
       codeFigure={true}
       language="html"
+      previewMinHeight={620}
       showCasePanel={true}
     >
       <div
@@ -427,6 +429,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     <ComponentPreview
       codeFigure={true}
       language="html"
+      previewMinHeight={400}
       removeOuterTag={true}
       showCasePanel={true}
     >
@@ -472,6 +475,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     <ComponentPreview
       codeFigure={true}
       language="html"
+      previewMinHeight={400}
       removeOuterTag={true}
       showCasePanel={true}
     >
@@ -1014,6 +1018,7 @@ exports[`Forms: index Overview renders 1`] = `
   <ComponentPreview
     language="html"
     noOptions={true}
+    previewMinHeight={650}
     removeOuterTag={true}
     showCasePanel={true}
     showCasePanelAdvanced={
@@ -1023,7 +1028,9 @@ exports[`Forms: index Overview renders 1`] = `
             "component": <div
               className="col-md-10 col-12 px-0"
             >
-              <form>
+              <form
+                className="px-4"
+              >
                 <fieldset>
                   <legend>
                     <span
@@ -1093,7 +1100,9 @@ exports[`Forms: index Overview renders 1`] = `
             "component": <div
               className="col-md-10 col-12 px-0"
             >
-              <form>
+              <form
+                className="px-4"
+              >
                 <Steps
                   steps={
                     Array [

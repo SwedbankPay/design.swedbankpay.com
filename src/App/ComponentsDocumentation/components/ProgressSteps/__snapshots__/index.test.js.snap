@@ -13,6 +13,7 @@ exports[`Documentation: Progress Steps BasicSteps renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={250}
     showCasePanel={true}
   >
     <Steps
@@ -124,6 +125,7 @@ exports[`Documentation: Progress Steps VerticalSteps renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={400}
     showCasePanel={true}
   >
     <Steps

@@ -681,6 +681,7 @@ exports[`Documentation: Dropdown Overview renders 1`] = `
         "tabsId": "overviewDropdownTabs",
       }
     }
+    staticPreview={true}
   />
   <h3>
     When to consider something else

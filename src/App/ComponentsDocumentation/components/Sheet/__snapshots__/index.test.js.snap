@@ -99,7 +99,7 @@ exports[`Documentation: Sheet SheetExample renders 1`] = `
   <p>
     The sheets is used to provide users with actions and information contextual to the page. It can be used in different contexts, but common use cases are to display multiple actions that will affect the screen’s primary content such as filters or other ways to manipulate the main content.
   </p>
-  <ComponentPreview
+  <OldComponentPreview
     codeFigure={true}
     language="html"
     showCasePanel={true}

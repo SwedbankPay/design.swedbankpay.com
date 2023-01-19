@@ -18,6 +18,7 @@ exports[`Components: Expandable ExpandableGroup renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={550}
     showCasePanel={true}
   >
     <div
@@ -75,6 +76,7 @@ exports[`Components: Expandable Overview renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={500}
     showCasePanel={true}
   >
     <Expandable

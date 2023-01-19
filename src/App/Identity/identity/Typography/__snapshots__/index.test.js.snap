@@ -125,7 +125,7 @@ exports[`Core: Typography Blockquotes renders 1`] = `
 exports[`Core: Typography Blockquotes renders 2`] = `
 <Fragment>
   <h3>
-    Naming a source
+    Naming a source test
   </h3>
   <p>
     Add a 
@@ -186,6 +186,7 @@ exports[`Core: Typography Code renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={400}
     showCasePanel={true}
   >
     <h1>
@@ -223,6 +224,7 @@ exports[`Core: Typography Code renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={350}
     showCasePanel={true}
   >
     <p
@@ -270,6 +272,7 @@ exports[`Core: Typography Code renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={300}
     showCasePanel={true}
   >
     <h1
@@ -314,6 +317,7 @@ exports[`Core: Typography Code renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={500}
     showCasePanel={true}
   >
     <p>
@@ -525,6 +529,7 @@ exports[`Core: Typography Code renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
+    previewMinHeight={200}
     showCasePanel={true}
   >
     <blockquote

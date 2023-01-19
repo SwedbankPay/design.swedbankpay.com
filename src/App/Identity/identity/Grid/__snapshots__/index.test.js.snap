@@ -16,8 +16,8 @@ exports[`Core: Grid Alignment renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid showcase-vertical-space"
@@ -88,8 +88,8 @@ exports[`Core: Grid Alignment renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid showcase-vertical-space"
@@ -125,8 +125,8 @@ exports[`Core: Grid Alignment renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid"
@@ -216,8 +216,8 @@ exports[`Core: Grid Alignment renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid"
@@ -270,8 +270,8 @@ exports[`Core: Grid Alignment renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid"
@@ -321,8 +321,8 @@ exports[`Core: Grid Alignment renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid"
@@ -397,8 +397,8 @@ exports[`Core: Grid AutoLayoutColumns renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid"
@@ -451,8 +451,8 @@ exports[`Core: Grid AutoLayoutColumns renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid"
@@ -515,8 +515,8 @@ exports[`Core: Grid AutoLayoutColumns renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid"
@@ -590,8 +590,8 @@ exports[`Core: Grid AutoLayoutColumns renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid"
@@ -1075,8 +1075,8 @@ exports[`Core: Grid HowItWorks renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid"
@@ -1347,8 +1347,8 @@ exports[`Core: Grid Nesting renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid"
@@ -1467,8 +1467,8 @@ exports[`Core: Grid Reordering renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid"
@@ -1534,8 +1534,8 @@ exports[`Core: Grid Reordering renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid"
@@ -1611,8 +1611,8 @@ exports[`Core: Grid Reordering renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid"
@@ -1666,8 +1666,8 @@ exports[`Core: Grid Reordering renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid"
@@ -1720,8 +1720,8 @@ exports[`Core: Grid Reordering renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid"
@@ -1811,8 +1811,8 @@ exports[`Core: Grid ResponsiveClasses renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid"
@@ -1880,8 +1880,8 @@ exports[`Core: Grid ResponsiveClasses renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid"
@@ -1934,8 +1934,8 @@ exports[`Core: Grid ResponsiveClasses renders 1`] = `
   <ComponentPreview
     codeFigure={true}
     language="html"
-    removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="showcase-grid"
