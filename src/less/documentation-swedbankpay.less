@@ -356,7 +356,7 @@
                     &:hover,
                     &:focus {
                         background-color: transparent;
-                        outline-color: @brand-secondary; // TODO
+                        outline-color: @brand-secondary;
 
                         i {
                             color: #000000;
@@ -391,6 +391,11 @@
             margin-top: 1rem;
             margin-bottom: 1rem;
             font-family: @brand-black;
+        }
+
+        &.utilities-page {
+            max-width: 70rem;
+            padding-top: 3rem;
         }
 
         &.dg-front-page {
@@ -1767,6 +1772,8 @@
         }
 
         .topbar {
+            z-index: calc(@sidebar-z-index - 1);
+
             + main {
                 height: 10rem;
                 background-color: @light-gray;
@@ -1846,6 +1853,10 @@
                 }
             }
         }
+    }
+
+    #dropdown-doc .component-preview-content .dropdown .dropdown-menu {
+        z-index: calc(@dropdown-z-index + 3);
     }
 }
 

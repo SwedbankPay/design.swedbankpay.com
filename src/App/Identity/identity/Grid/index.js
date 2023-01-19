@@ -184,7 +184,7 @@ const HowItWorks = () => (
                 Columns have horizontal <CodeTags type="secondary" code="padding" /> to create the gutters between individual columns, however, you can remove the <CodeTags type="secondary" code="margin" /> from rows and <CodeTags type="secondary" code="padding" /> from columns with <CodeTags type="secondary" code=".no-gutters" /> on the <CodeTags type="secondary" code=".row" />.
             </li>
             <li>
-                To make the grid responsive, there are six grid breakpoints, one for each <Link to="/utilities/breakpoints">responsive breakpoint</Link>: all breakpoints (extra small), small, medium, large, extra large, and extra extra large.
+                To make the grid responsive, there are six grid breakpoints, one for each <Link to="/utilities">responsive breakpoint</Link>: all breakpoints (extra small), small, medium, large, extra large, and extra extra large.
             </li>
             <li>
                 Grid breakpoints are based on minimum width media queries, meaning they <b>apply to that one breakpoint and all those above it</b> (e.g., <CodeTags type="secondary" code=".col-sm-4" /> applies to small, medium, large, extra large and extra extra large devices, but not the first <CodeTags type="secondary" code="xs" /> breakpoint).
@@ -359,7 +359,7 @@ const AutoLayoutColumns = () => (
         </ComponentPreview>
 
         <h3>Equal-width multi-row</h3>
-        <p>Create equal-width columns that span multiple rows by inserting a <CodeTags type="secondary" code=".w-100" /> where you want the columns to break to a new line. Make the breaks responsive by mixing the <CodeTags type="secondary" code=".w-100" /> with some <Link to="/utilities/display">responsive display utilities</Link>.</p>
+        <p>Create equal-width columns that span multiple rows by inserting a <CodeTags type="secondary" code=".w-100" /> where you want the columns to break to a new line. Make the breaks responsive by mixing the <CodeTags type="secondary" code=".w-100" /> with some <Link to="/utilities">responsive display utilities</Link>.</p>
         <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
@@ -585,7 +585,7 @@ const Alignment = () => (
                 </div>
             </div>
         </ComponentPreview>
-        <p>You may also apply this break at specific breakpoints with our <Link to="/utilities/display">responsive display utilities</Link>.</p>
+        <p>You may also apply this break at specific breakpoints with our <Link to="/utilities">responsive display utilities</Link>.</p>
         <ComponentPreview language="html" showCasePanel codeFigure staticPreview >
             <div className="showcase-grid">
                 <div className="container">
@@ -646,7 +646,7 @@ const Reordering = () => (
         </ComponentPreview>
 
         <h3>Offsetting columns</h3>
-        <p>You can offset grid columns in two ways: our responsive <CodeTags type="secondary" code=".offset-" /> grid classes and our <Link to="/utilities/display">margin utilities</Link>. Grid classes are sized to match columns while margins are more useful for quick layouts where the width of the offset is variable.</p>
+        <p>You can offset grid columns in two ways: our responsive <CodeTags type="secondary" code=".offset-" /> grid classes and our <Link to="/utilities">margin utilities</Link>. Grid classes are sized to match columns while margins are more useful for quick layouts where the width of the offset is variable.</p>
 
         <h4>Offset classes</h4>
         <p>Move columns to the right using <CodeTags type="secondary" code=".offset-md-*" /> classes. These classes increase the left margin of a column by <CodeTags type="secondary" code="*" /> columns. For example, <CodeTags type="secondary" code=".offset-md-4" /> moves <CodeTags type="secondary" code=".col-md-4" /> over four columns.</p>

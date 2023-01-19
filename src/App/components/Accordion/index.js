@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Accordion = ({ items, className }) => (
 
     items.map(({ title, content, id }, i) => (
-        <div key={i} className={`accordion ${className ? className : ""}`}>{"\n"}
+        <div key={title + i} className={`accordion ${className ? className : ""}`}>{"\n"}
             <button type="button" className="accordion-header" aria-expanded="false" aria-controls={id}>{"\n"}
                 {title}
                 {"\n"}

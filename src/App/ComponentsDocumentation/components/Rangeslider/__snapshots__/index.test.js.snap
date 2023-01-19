@@ -94,11 +94,11 @@ exports[`Component: Rangeslider DeveloperDocumentation renders 1`] = `
       type="secondary"
     />
      to 
-    <a
-      href="/get-started/for-developers"
+    <Link
+      to="/get-started/for-developers"
     >
       initialize
-    </a>
+    </Link>
      all rangesliders.
   </p>
   <p>

@@ -35,7 +35,7 @@ const CenteredContent = () => (
         <h2 id="centered-content">Centered content</h2>
         <p>
             For a centered layout use <CodeTags type="secondary" code=".container"/>, it has built in breakpoints and will switch to full-width if the screen size is small
-            enough (see <Link to="/core/grid">grid</Link>). When the content is centered it will require <Link to="/utilities/borders">borders</Link> on
+            enough. When the content is centered it will require <Link to="/utilities">borders</Link> on
             the right and left side. To make your topbar fill the page horizontally you will have to wrap it in a <CodeTags type="secondary" code=".row" /> and <CodeTags type="secondary" code=".container-fluid" />.
         </p>
         <ComponentPreview language="html" codeFigure>

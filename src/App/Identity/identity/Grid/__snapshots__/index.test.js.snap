@@ -312,7 +312,7 @@ exports[`Core: Grid Alignment renders 1`] = `
   <p>
     You may also apply this break at specific breakpoints with our 
     <Link
-      to="/utilities/display"
+      to="/utilities"
     >
       responsive display utilities
     </Link>
@@ -581,7 +581,7 @@ exports[`Core: Grid AutoLayoutColumns renders 1`] = `
     />
      with some 
     <Link
-      to="/utilities/display"
+      to="/utilities"
     >
       responsive display utilities
     </Link>
@@ -1241,7 +1241,7 @@ exports[`Core: Grid HowItWorks renders 1`] = `
     <li>
       To make the grid responsive, there are six grid breakpoints, one for each 
       <Link
-        to="/utilities/breakpoints"
+        to="/utilities"
       >
         responsive breakpoint
       </Link>
@@ -1576,7 +1576,7 @@ exports[`Core: Grid Reordering renders 1`] = `
     />
      grid classes and our 
     <Link
-      to="/utilities/display"
+      to="/utilities"
     >
       margin utilities
     </Link>

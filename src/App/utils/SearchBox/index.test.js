@@ -115,7 +115,7 @@ describe("Search box results tests", () => {
 
         const liElements = wrapper.find("li");
 
-        expect(liElements.length).toBe(5);
+        expect(liElements.length).toBe(4);
         expect(wrapper).toMatchSnapshot();
     });
 

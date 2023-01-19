@@ -200,9 +200,6 @@ exports[`Main: App renders 1`] = `
                       "icon": "more",
                       "outlined": true,
                       "path": "/components/badge",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Badges",
                     },
                     Object {
@@ -217,9 +214,6 @@ exports[`Main: App renders 1`] = `
                       "icon": "touch_app",
                       "outlined": true,
                       "path": "/components/buttons",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Buttons",
                     },
                     Object {
@@ -366,7 +360,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/radio-button",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Radio button",
                     },
@@ -422,9 +415,6 @@ exports[`Main: App renders 1`] = `
                       "icon": "crop_landscape",
                       "outlined": true,
                       "path": "/components/slab",
-                      "statusBadges": Array [
-                        "updated",
-                      ],
                       "title": "Slab",
                     },
                     Object {
@@ -456,6 +446,9 @@ exports[`Main: App renders 1`] = `
                       "icon": "code",
                       "outlined": true,
                       "path": "/components/tags",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Tags",
                     },
                     Object {
@@ -482,7 +475,6 @@ exports[`Main: App renders 1`] = `
                       "path": "/components/tooltips",
                       "statusBadges": Array [
                         "javascript",
-                        "updated",
                       ],
                       "title": "Tooltips",
                     },
@@ -532,77 +524,6 @@ exports[`Main: App renders 1`] = `
                     },
                   ],
                   "title": "Patterns",
-                },
-                Object {
-                  "appFolder": "Utilities",
-                  "entryCardText": "See all available CSS classes",
-                  "icon": Object {
-                    "name": "build",
-                  },
-                  "path": "/utilities",
-                  "redirect": "/utilities/utilities",
-                  "routes": Array [
-                    Object {
-                      "componentPath": "utilities/Utilities",
-                      "path": "/utilities/utilities",
-                      "title": "Overview",
-                    },
-                    Object {
-                      "componentPath": "utilities/Borders",
-                      "path": "/utilities/borders",
-                      "text": "Set borders that suit your needs",
-                      "title": "Borders",
-                    },
-                    Object {
-                      "componentPath": "utilities/Breakpoints",
-                      "path": "/utilities/breakpoints",
-                      "text": "See our display breakpoints",
-                      "title": "Breakpoints",
-                    },
-                    Object {
-                      "componentPath": "utilities/Colors",
-                      "path": "/utilities/colors",
-                      "text": "See our color utility classes",
-                      "title": "Colors",
-                    },
-                    Object {
-                      "componentPath": "utilities/Display",
-                      "path": "/utilities/display",
-                      "text": "See our display properties",
-                      "title": "Display",
-                    },
-                    Object {
-                      "componentPath": "utilities/Flex",
-                      "path": "/utilities/flex",
-                      "text": "Layout, alignment and grid",
-                      "title": "Flex",
-                    },
-                    Object {
-                      "componentPath": "utilities/Images",
-                      "path": "/utilities/images",
-                      "text": "Modify how images are displayed",
-                      "title": "Images",
-                    },
-                    Object {
-                      "componentPath": "utilities/Sizing",
-                      "path": "/utilities/sizing",
-                      "text": "Size according to your needs",
-                      "title": "Sizing",
-                    },
-                    Object {
-                      "componentPath": "utilities/Text",
-                      "path": "/utilities/text",
-                      "text": "Control wrapping, weight and more",
-                      "title": "Text",
-                    },
-                    Object {
-                      "componentPath": "utilities/Visibility",
-                      "path": "/utilities/visibility",
-                      "text": "Control visibilities of display",
-                      "title": "Visibility",
-                    },
-                  ],
-                  "title": "Utilities",
                 },
               ]
             }
@@ -671,19 +592,6 @@ exports[`Main: App renders 1`] = `
                   }
                 }
                 path="/identity"
-              />
-              <Route
-                component={
-                  Object {
-                    "$$typeof": Symbol(react.lazy),
-                    "_init": [Function],
-                    "_payload": Object {
-                      "_result": [Function],
-                      "_status": -1,
-                    },
-                  }
-                }
-                path="/examples"
               />
               <Route
                 component={

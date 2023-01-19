@@ -13,15 +13,9 @@ exports[`Utilities: PageLayout CenteredContent renders 1`] = `
       code=".container"
       type="secondary"
     />
-    , it has built in breakpoints and will switch to full-width if the screen size is small enough (see 
+    , it has built in breakpoints and will switch to full-width if the screen size is small enough. When the content is centered it will require 
     <Link
-      to="/core/grid"
-    >
-      grid
-    </Link>
-    ). When the content is centered it will require 
-    <Link
-      to="/utilities/borders"
+      to="/utilities"
     >
       borders
     </Link>

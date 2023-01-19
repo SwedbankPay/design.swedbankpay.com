@@ -34,7 +34,7 @@ const Home = () => {
                     {routes.map(route => (
                         <React.Fragment key={route.title}>
                             <div key={route.title} className={route.wideCard ? "w-100 order-5" : "col-12 col-sm-6 col-lg-3 d-flex"}>
-                                <Link to={route.path} className={`cards cards-primary ${route.wideCard && "cards-wide m-3"}`}>
+                                <Link to={route.path} className={`cards cards-primary${route.wideCard ? " cards-wide m-3" : ""}`}>
                                     {route.wideCard
                                         ?
                                         <div className="cards-content flex-row align-items-center m-0 w-100">
@@ -48,7 +48,7 @@ const Home = () => {
                                                 <i className="material-icons-outlined" aria-hidden="true">{route.icon.name}</i>
                                             </div>
                                             <div className="cards-content">
-                                                <span className="h4">{route.title === "Utilities" ? "Utility" : route.title }</span>
+                                                <span className="h4">{route.title }</span>
                                                 <span>{route.entryCardText}</span>
                                             </div>
                                             <i className="material-icons" aria-hidden="true">arrow_forward</i>
@@ -58,6 +58,18 @@ const Home = () => {
                             </div>
                         </React.Fragment>
                     ))}
+                    <div className="col-12 col-sm-6 col-lg-3 d-flex">
+                        <Link to={"/utilities"} className="cards cards-primary">
+                            <div className="cards-icon">
+                                <i className="material-icons-outlined" aria-hidden="true">edit</i>
+                            </div>
+                            <div className="cards-content">
+                                <span className="h4">Utilities</span>
+                                <span>Utility cheat sheet</span>
+                            </div>
+                            <i className="material-icons" aria-hidden="true">arrow_forward</i>
+                        </Link>
+                    </div>
                 </div>
             </div>
             <div className="mt-auto d-none d-md-inline-flex mb-3">

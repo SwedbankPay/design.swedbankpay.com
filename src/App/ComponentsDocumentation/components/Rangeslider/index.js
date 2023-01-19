@@ -75,7 +75,7 @@ const DeveloperDocumentation = () => (
         <h2 id="developer-documentation mb-3">Developer documentation</h2>
         <DisableState/>
         <h3>Javascript methods</h3>
-        <p className="my-3">Use <CodeTags type="secondary" code="dg.rangeslider.init()"/> to <a href="/get-started/for-developers" >initialize</a> all rangesliders.</p>
+        <p className="my-3">Use <CodeTags type="secondary" code="dg.rangeslider.init()"/> to <Link to="/get-started/for-developers">initialize</Link> all rangesliders.</p>
         <p>Or <CodeTags type="secondary" code='dg.rangeslider.init("component-id")'/> to initialize one specific component.</p>
     </section>
 );

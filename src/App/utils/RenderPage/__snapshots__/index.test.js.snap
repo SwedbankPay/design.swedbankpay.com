@@ -13,7 +13,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       className="dg-current-version text-uppercase"
     >
       Design Guide – v. 
-      10.5.1
+      10.6.1
     </span>
     <Switch>
       <Route
@@ -194,9 +194,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "more",
               "outlined": true,
               "path": "/components/badge",
-              "statusBadges": Array [
-                "updated",
-              ],
               "title": "Badges",
             },
             Object {
@@ -211,9 +208,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "touch_app",
               "outlined": true,
               "path": "/components/buttons",
-              "statusBadges": Array [
-                "updated",
-              ],
               "title": "Buttons",
             },
             Object {
@@ -360,7 +354,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/radio-button",
               "statusBadges": Array [
                 "javascript",
-                "updated",
               ],
               "title": "Radio button",
             },
@@ -416,9 +409,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "crop_landscape",
               "outlined": true,
               "path": "/components/slab",
-              "statusBadges": Array [
-                "updated",
-              ],
               "title": "Slab",
             },
             Object {
@@ -450,6 +440,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "code",
               "outlined": true,
               "path": "/components/tags",
+              "statusBadges": Array [
+                "updated",
+              ],
               "title": "Tags",
             },
             Object {
@@ -476,7 +469,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/tooltips",
               "statusBadges": Array [
                 "javascript",
-                "updated",
               ],
               "title": "Tooltips",
             },
@@ -532,82 +524,6 @@ exports[`Utilities: RenderPage renders 1`] = `
           ]
         }
         title="Patterns"
-      />
-      <RenderRoutes
-        appFolder="Utilities"
-        entryCardText="See all available CSS classes"
-        icon={
-          Object {
-            "name": "build",
-          }
-        }
-        key="renderRoutes_Utilities"
-        path="/utilities"
-        redirect="/utilities/utilities"
-        routes={
-          Array [
-            Object {
-              "componentPath": "utilities/Utilities",
-              "path": "/utilities/utilities",
-              "title": "Overview",
-            },
-            Object {
-              "componentPath": "utilities/Borders",
-              "path": "/utilities/borders",
-              "text": "Set borders that suit your needs",
-              "title": "Borders",
-            },
-            Object {
-              "componentPath": "utilities/Breakpoints",
-              "path": "/utilities/breakpoints",
-              "text": "See our display breakpoints",
-              "title": "Breakpoints",
-            },
-            Object {
-              "componentPath": "utilities/Colors",
-              "path": "/utilities/colors",
-              "text": "See our color utility classes",
-              "title": "Colors",
-            },
-            Object {
-              "componentPath": "utilities/Display",
-              "path": "/utilities/display",
-              "text": "See our display properties",
-              "title": "Display",
-            },
-            Object {
-              "componentPath": "utilities/Flex",
-              "path": "/utilities/flex",
-              "text": "Layout, alignment and grid",
-              "title": "Flex",
-            },
-            Object {
-              "componentPath": "utilities/Images",
-              "path": "/utilities/images",
-              "text": "Modify how images are displayed",
-              "title": "Images",
-            },
-            Object {
-              "componentPath": "utilities/Sizing",
-              "path": "/utilities/sizing",
-              "text": "Size according to your needs",
-              "title": "Sizing",
-            },
-            Object {
-              "componentPath": "utilities/Text",
-              "path": "/utilities/text",
-              "text": "Control wrapping, weight and more",
-              "title": "Text",
-            },
-            Object {
-              "componentPath": "utilities/Visibility",
-              "path": "/utilities/visibility",
-              "text": "Control visibilities of display",
-              "title": "Visibility",
-            },
-          ]
-        }
-        title="Utilities"
       />
       <Redirect
         from="/test/*"

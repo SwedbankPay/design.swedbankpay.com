@@ -62,7 +62,7 @@ const DeveloperDocumentation = () => (
 
         <section>
             <h3>Sticky topbar options</h3>
-            <p>The topbar can be made sticky by adding the class <CodeTags type="secondary" code=".topbar-sticky" />. Use <CodeTags type="secondary" code=".topbar-min-{breakpoint}-sticky" /> to specify the minimum width the topbar should be sticky, or <CodeTags type="secondary" code=".topbar-max-{breakpoint}-sticky" /> to specify the maximum width the topbar should be sticky (see <Link to="/utilities/breakpoints">breakpoints</Link> for more information on breakpoints). </p>
+            <p>The topbar can be made sticky by adding the class <CodeTags type="secondary" code=".topbar-sticky" />. Use <CodeTags type="secondary" code=".topbar-min-{breakpoint}-sticky" /> to specify the minimum width the topbar should be sticky, or <CodeTags type="secondary" code=".topbar-max-{breakpoint}-sticky" /> to specify the maximum width the topbar should be sticky (see <Link to="/utilities">utilities</Link> for more information on breakpoints). </p>
             <OldComponentPreview language="html" showCasePanel codeFigure>
                 <div className="container-fluid">
                     <TopbarComponent id="demo-topbar-sticky" topbarContent={menu} wide="xl" sticky />

@@ -845,7 +845,9 @@ exports[`Documentation: Dropdown Overview renders 1`] = `
 
 exports[`Documentation: Dropdown renders 1`] = `
 <DocContainer>
-  <section>
+  <section
+    id="dropdown-doc"
+  >
     <p
       className="lead"
     >

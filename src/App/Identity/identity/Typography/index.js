@@ -271,7 +271,7 @@ const Code = () => (
         </p>
 
         <h3>Text utilities</h3>
-        <p>Change text color with our <Link to="/utilities/colors">color utilities</Link>.</p>
+        <p>Change text color with our <Link to="/utilities">color utilities</Link>.</p>
 
         <h3>Abbreviations</h3>
         <p>Stylized implementation of HTML’s <CodeTags type="primary" code={"<abbr>"} /> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations have a default underline and gain a help cursor to provide additional context on hover and to users of assistive technologies.</p>
@@ -385,7 +385,7 @@ const Inline = () => (
 const TextUtilities = () => (
     <>
         <h2 id="text-utilities">Text utilities</h2>
-        <p>Change text color with our <Link to="/utilities/colors">color utilities</Link>.</p>
+        <p>Change text color with our <Link to="/utilities">color utilities</Link>.</p>
     </>
 );
 
