@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { SandpackProvider, SandpackCodeEditor, SandpackPreview } from "@codesandbox/sandpack-react";
-import { ShowCasePanelAdvanced } from "./ShowCasePanelAdvanced";
-import { useCodeParser } from "./useCodeParser";
-import { resetOptions } from "./optionsUtils";
-import { useJsSandboxInitCode } from "./useSandboxInitCode";
+import { ShowCasePanelAdvanced } from "./components/ShowCasePanelAdvanced";
+import { useCodeParser } from "./hooksUtils/useCodeParser";
+import { resetOptions } from "./hooksUtils/optionsUtils";
+import { useJsSandboxInitCode } from "./hooksUtils/useSandboxInitCode";
 
 // TODO: should the preview of showCasePanel & the one of advancedShowCasePanel use the same component ?
 // in a way it is using the same SndpackPreview, so it would keep them in sync (e.g. add additional button "copy to clipboard", etc)

@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import { OldComponentPreview } from "./OldComponentPreview";
+import { OldComponentPreview } from "./components/OldComponentPreview";
 
 import { tabs } from "@src/scripts/main";
 
