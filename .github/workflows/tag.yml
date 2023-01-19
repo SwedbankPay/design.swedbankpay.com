@@ -37,6 +37,10 @@ jobs:
       - name: Build
         run: npm run ${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env release=true --env basename="v/${{ steps.variables.outputs.VERSION }}" --env semver=${{ steps.variables.outputs.VERSION }} --env info_version=${{ steps.variables.outputs.VERSION }} --env github_actions=true
 
+      - name: Create latest reference file
+        run: |
+          echo "${{ steps.variables.outputs.VERSION }}" > ./dist/latest.txt
+
       - name: Azure Login
         uses: azure/login@v1.4.6
         with:
