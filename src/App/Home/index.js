@@ -4,6 +4,7 @@ import { changeLogs } from "./constants";
 import { setTitle, RemoveVscroll } from "../utils";
 import routes from "@src/App/routes/all";
 import packageJson from "~/package";
+import Alert from "../components/Alert";
 
 const basename = process.env.basename;
 const brandTitle = process.env.brandTitle;
@@ -91,6 +92,7 @@ const Home = () => {
                     <span className="dg-changlelog-title">What’s new in the design guide
                         <div className="dg-changelog-divider my-2"></div>
                     </span>
+                    <Alert type="informative" icon="info" text={<p><b>Versioning:</b><br/>In some cases, the patch releases will only affect the website&apos;s (design.swedbankpay.com) documentation. Please read through the changelog, and you will be notified if the release <b>doesn&apos;t</b> affect our NPM package.</p>} />
                 </div>
 
                 {changeLogs.slice(0, 4).map(log => (
