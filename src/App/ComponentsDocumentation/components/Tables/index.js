@@ -19,6 +19,8 @@ const Overview = () => (
                 <li>Dividers shouldn’t yell for users’ attention, and shouldn’t distract users from the content itself. The goal behind the divider is to support and make the layout clean, not to catch the attention. </li>
                 <li>If you have a table in which you showcase mainly transactions on individual rows, perhaps vertical dividers are not helping the user’s readability.</li>
                 <li>When using sorting on multiple columns in a table, make sure the behavior is consistent no matter the data/content, i.e. if one column is sorted in ascending order first and descending order second, any other sortable column in the table should follow the same logic.</li>
+                <li>When using tables on mobile devices, you can use adaptive principles to display fewer columns of data and more or less actual information in each column, depending on the space available.</li>
+                <li>When using tables on mobile devices consider creating pages with detailed views for every column/row of the data that is not displayed on the first view.</li>
             </ul>
         </section>
         <section>
