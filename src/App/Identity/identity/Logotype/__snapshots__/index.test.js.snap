@@ -185,7 +185,7 @@ exports[`Core: Logotype Favicon renders 1`] = `
       type="image/png"
     />
     <link
-      href="/TEST//icons/manifest.json"
+      href="/TEST//icons/manifest.webmanifest"
       rel="manifest"
     />
     <link
@@ -1118,7 +1118,7 @@ exports[`Core: Logotype SpacingZone renders 1`] = `
     <tbody>
       <tr>
         <th
-          scrope="row"
+          scope="row"
         >
           Smallest
         </th>
@@ -1134,7 +1134,7 @@ exports[`Core: Logotype SpacingZone renders 1`] = `
       </tr>
       <tr>
         <th
-          scrope="row"
+          scope="row"
         >
           Small
         </th>
@@ -1150,7 +1150,7 @@ exports[`Core: Logotype SpacingZone renders 1`] = `
       </tr>
       <tr>
         <th
-          scrope="row"
+          scope="row"
         >
           Medium
         </th>

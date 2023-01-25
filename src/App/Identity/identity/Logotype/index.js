@@ -43,19 +43,19 @@ const SpacingZone = () => (
             </thead>
             <tbody>
                 <tr>
-                    <th scrope="row">Smallest</th>
+                    <th scope="row">Smallest</th>
                     <td>24 px</td>
                     <td>7.2 px</td>
                     <th>8 px</th>
                 </tr>
                 <tr>
-                    <th scrope="row">Small</th>
+                    <th scope="row">Small</th>
                     <td>32 px</td>
                     <td>9.6 px</td>
                     <th>16 px</th>
                 </tr>
                 <tr>
-                    <th scrope="row">Medium</th>
+                    <th scope="row">Medium</th>
                     <td>40 px</td>
                     <td>12 px</td>
                     <th>16 px</th>
@@ -174,7 +174,7 @@ const Favicon = () => (
             <link rel="icon" type="image/png" sizes="16x16" href={`${basename}/icons/favicon-16x16.png`} />
             <link rel="icon" type="image/png" sizes="32x32" href={`${basename}/icons/favicon-32x32.png`} />
             <link rel="icon" type="image/png" sizes="48x48" href={`${basename}/icons/favicon-48x48.png`} />
-            <link rel="manifest" href={`${basename}/icons/manifest.json`} />
+            <link rel="manifest" href={`${basename}/icons/manifest.webmanifest`} />
             <link rel="shortcut icon" href={`${basename}/icons/favicon.ico`} />
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -221,7 +221,7 @@ const Logotype = () => (
             <DocContainer>
                 <section id="logotype-doc">
                     <p className="lead">
-                    The Swedbank Pay logotype is available in a vertical and horizontal version, the vertical logo is primary and the one that will build recognition. The logotype exist in two colors – a black text logo and a white text logo. They are used depending on what colour of the background the logo is placed on.
+                    The Swedbank Pay logotype is available in a vertical and horizontal version, the vertical logo is primary and the one that will build recognition. The logotype exist in two colors – a black text logo and a white text logo. They are used depending on what color of the background the logo is placed on.
                     </p>
                     <Overview />
                     <LogoBlack />
