@@ -152,15 +152,15 @@ const Favicon = () => (
             </a>
         }
         <ComponentPreview language="html" codeFigure>
-            <link rel="apple-touch-icon" sizes="114x114" href={`${basename}/icons/apple-touch-icon-114x114.png`} />
-            <link rel="apple-touch-icon" sizes="120x120" href={`${basename}/icons/apple-touch-icon-120x120.png`} />
-            <link rel="apple-touch-icon" sizes="144x144" href={`${basename}/icons/apple-touch-icon-144x144.png`} />
-            <link rel="apple-touch-icon" sizes="152x152" href={`${basename}/icons/apple-touch-icon-152x152.png`} />
-            <link rel="apple-touch-icon" sizes="180x180" href={`${basename}/icons/apple-touch-icon-180x180.png`} />
-            <link rel="apple-touch-icon" sizes="57x57" href={`${basename}/icons/apple-touch-icon-57x57.png`} />
-            <link rel="apple-touch-icon" sizes="60x60" href={`${basename}/icons/apple-touch-icon-60x60.png`} />
-            <link rel="apple-touch-icon" sizes="72x72" href={`${basename}/icons/apple-touch-icon-72x72.png`} />
-            <link rel="apple-touch-icon" sizes="76x76" href={`${basename}/icons/apple-touch-icon-76x76.png`} />
+            <link rel="apple-touch-icon" sizes="114x114" href={`${basename}icons/apple-touch-icon-114x114.png`} />
+            <link rel="apple-touch-icon" sizes="120x120" href={`${basename}icons/apple-touch-icon-120x120.png`} />
+            <link rel="apple-touch-icon" sizes="144x144" href={`${basename}icons/apple-touch-icon-144x144.png`} />
+            <link rel="apple-touch-icon" sizes="152x152" href={`${basename}icons/apple-touch-icon-152x152.png`} />
+            <link rel="apple-touch-icon" sizes="180x180" href={`${basename}icons/apple-touch-icon-180x180.png`} />
+            <link rel="apple-touch-icon" sizes="57x57" href={`${basename}icons/apple-touch-icon-57x57.png`} />
+            <link rel="apple-touch-icon" sizes="60x60" href={`${basename}icons/apple-touch-icon-60x60.png`} />
+            <link rel="apple-touch-icon" sizes="72x72" href={`${basename}icons/apple-touch-icon-72x72.png`} />
+            <link rel="apple-touch-icon" sizes="76x76" href={`${basename}icons/apple-touch-icon-76x76.png`} />
             <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href={`${basename}/icons/apple-touch-startup-image-320x460.png`} />
             <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href={`${basename}/icons/apple-touch-startup-image-640x920.png`} />
             <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href={`${basename}/icons/apple-touch-startup-image-640x1096.png`} />
@@ -171,19 +171,19 @@ const Favicon = () => (
             <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href={`${basename}/icons/apple-touch-startup-image-1496x2048.png`} />
             <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href={`${basename}/icons/apple-touch-startup-image-768x1004.png`} />
             <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href={`${basename}/icons/apple-touch-startup-image-1536x2008.png`} />
-            <link rel="icon" type="image/png" sizes="16x16" href={`${basename}/icons/favicon-16x16.png`} />
-            <link rel="icon" type="image/png" sizes="32x32" href={`${basename}/icons/favicon-32x32.png`} />
-            <link rel="icon" type="image/png" sizes="48x48" href={`${basename}/icons/favicon-48x48.png`} />
-            <link rel="manifest" href={`${basename}/icons/manifest.webmanifest`} />
-            <link rel="shortcut icon" href={`${basename}/icons/favicon.ico`} />
+            <link rel="icon" type="image/png" sizes="16x16" href={`${basename}icons/favicon-16x16.png`} />
+            <link rel="icon" type="image/png" sizes="32x32" href={`${basename}icons/favicon-32x32.png`} />
+            <link rel="icon" type="image/png" sizes="48x48" href={`${basename}icons/favicon-48x48.png`} />
+            <link rel="manifest" href={`${basename}icons/manifest.webmanifest`} />
+            <link rel="shortcut icon" href={`${basename}icons/favicon.ico`} />
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
             <meta name="apple-mobile-web-app-title" content={`${process.env.brandTitle} App`} />
             <meta name="application-name" content={`${process.env.brandTitle} App`} />
             <meta name="mobile-web-app-capable" content="yes" />
             <meta name="msapplication-TileColor" content="#000" />
-            <meta name="msapplication-TileImage" content={`${basename}/icons/mstile-144x144.png`} />
-            <meta name="msapplication-config" content={`${basename}/icons/browserconfig.xml`} />
+            <meta name="msapplication-TileImage" content={`${basename}icons/mstile-144x144.png`} />
+            <meta name="msapplication-config" content={`${basename}icons/browserconfig.xml`} />
             <meta name="theme-color" content="#000" />
         </ComponentPreview>
     </section>
