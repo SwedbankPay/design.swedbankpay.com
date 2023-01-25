@@ -21,10 +21,10 @@ jobs:
         id: variables
         run: ./.github/scripts/variables.sh --brand ${{ matrix.brand }} --ref ${{ github.ref }}
 
-      - name: Set Node.js 12.x
+      - name: Set Node.js 16.x (remember to delete this line)
         uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: 16.x
 
       - name: Cache dependencies
         uses: actions/cache@v3
