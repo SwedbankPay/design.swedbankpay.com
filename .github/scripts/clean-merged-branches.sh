@@ -17,7 +17,7 @@ done
 if [ -z ${branch_to_delete+x} ]; then
   echo "No feature branch to clean up."
 else
-  echo "::set-output name=BRANCH_TO_DELETE::$branch_to_delete"
+  echo "BRANCH_TO_DELETE=$branch_to_delete" >> $GITHUB_OUTPUT
   echo "Deleting branch $branch_to_delete"
   git push origin --delete "$branch_to_delete"
 fi
