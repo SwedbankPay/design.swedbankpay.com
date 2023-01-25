@@ -16,7 +16,7 @@ jobs:
         id: variables
         run: ./.github/scripts/variables.sh --brand ${{ matrix.brand }} --ref ${{ github.ref }}
 
-      - name: Set Node.js 16.x (this is new)
+      - name: Set Node.js 16.x
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
