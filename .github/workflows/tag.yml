@@ -43,7 +43,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Azure Deploy
-        uses: azure/CLI@v1.0.7
+        uses: azure/CLI@v1
         with:
           inlineScript: |
             az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_PROD }} --overwrite
