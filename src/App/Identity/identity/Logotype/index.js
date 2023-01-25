@@ -76,7 +76,7 @@ const MisuseLogo = () => (
         <p>
                 The appearance of the logo should always remain consistent. It’s important that the logo isn’t misinterpreted, modified, or added to.
                 No attempt should be made to alter the logo in any way. The orientation,
-                colour and composition of the logo should remain as indicated in this designguide without exceptions.
+                color and composition of the logo should remain as indicated in this design guide without exceptions.
         </p>
 
         <div className="slab slab-plain slab-border-error">
@@ -102,7 +102,7 @@ const LogotypeBackgrounds = () => (
     <section>
         <h2 id="logotype-backgrounds">Logotype and backgrounds</h2>
         <p>
-        Different versions of the logotype is used depending on what colour of the background it is placed on. In situations where both the black and white version can be used, the recommendation is to use the white version as it gives a lighter and more friendly impression.
+        Different versions of the logotype is used depending on what color of the background it is placed on. In situations where both the black and white version can be used, the recommendation is to use the white version as it gives a lighter and more friendly impression.
         </p>
         <p>
         When placing the logotype on backgrounds, it may only be placed no an area that has low level of detail and is naturally light or dark. Only use images from the Swedbank Pay image library. Use the white text version on dark images, and the black text version on light images.
