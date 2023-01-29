@@ -52,7 +52,7 @@ export const formsShowCase = {
             tab: "Form",
             component:
             <div className="col-md-10 col-12 px-0">
-                <form>
+                <form className="px-4">
                     <fieldset>
                         <legend>
                             <span className="h2">Contact us</span>
@@ -76,7 +76,7 @@ export const formsShowCase = {
             tab: "Multi-step form",
             component:
             <div className="col-md-10 col-12 px-0">
-                <form>
+                <form className="px-4">
                     <ProgressSteps steps={steps} />
                     <fieldset>
                         <legend>
