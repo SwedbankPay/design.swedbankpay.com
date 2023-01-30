@@ -13,7 +13,7 @@ const Tooltip = ({ title, text, className, position, id, icon, isVisible }) => {
     return (
         <button aria-describedby={icon ? id : null} className={tooltipClasses}>{"\n"}
             {title}
-            {icon && <i className="material-icons-outlined">{icon}</i>}{"\n"}
+            {icon && <i className="material-icons-outlined m-0">{icon}</i>}{"\n"}
             <span role="tooltip" id={id}>
                 {text}
             </span>

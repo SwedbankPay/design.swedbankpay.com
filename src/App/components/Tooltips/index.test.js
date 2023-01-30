@@ -35,7 +35,7 @@ describe("Component: Tooltip -", () => {
         const wrapper = shallow(<Tooltip icon={icon} text={text}/>);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<i class=\"material-icons-outlined\">edit</i>");
+        expect(wrapper.html()).toContain("<i class=\"material-icons-outlined m-0\">edit</i>");
     });
 
     it("renders with title text if provided", () => {
