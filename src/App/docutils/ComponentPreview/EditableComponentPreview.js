@@ -11,8 +11,6 @@ import { resetOptions } from "./hooksUtils/optionsUtils";
 import { useJsSandboxInitCode } from "./hooksUtils/useSandboxInitCode";
 import { getExternalResources } from "./hooksUtils/getExternalResources";
 
-getExternalResources();
-
 // TODO: should the preview of showCasePanel & the one of advancedShowCasePanel use the same component ?
 // in a way it is using the same SndpackPreview, so it would keep them in sync (e.g. add additional button "copy to clipboard", etc)
 // on the other hand the whole container around is different (for some reason)
@@ -174,6 +172,8 @@ export const EditableComponentPreview = ({
         background-color: #493c3b;
     }  `;
 
+    const [isSemverProd, resourceVersion] = getExternalResources();
+
     const codeFiles = () => {
         if (language === "html") {
             return {
@@ -233,7 +233,7 @@ export const EditableComponentPreview = ({
             template="vanilla"
             customSetup={{
                 dependencies: {
-                    "@swedbankpay/design-guide": "10.6.1",
+                    "@swedbankpay/design-guide": resourceVersion,
                 },
                 devDependencies: {
                     "@babel/core": "7.2.0",
@@ -242,7 +242,7 @@ export const EditableComponentPreview = ({
             options={{
                 showTabs: true,
                 externalResources: [
-                    "https://design.swedbankpay.com/v/10.5.1/styles/swedbankpay.css",
+                    `https://design.swedbankpay.com/v/${resourceVersion}/styles/swedbankpay.css`,
                 ],
             }}
             files={codeFiles()}
