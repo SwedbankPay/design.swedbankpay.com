@@ -3,12 +3,11 @@ import packageJson from "~/package";
 
 export const getExternalResources = () => {
     const version = process.env.version;
-    const isDev = version === "LOCAL_DEV";
     const isSemverProd = temporaryIsProdChecker();
     let resourceVersion;
 
     if (isSemverProd) {
-        resourceVersion = version;
+        resourceVersion = packageJson.version;
 
         return [isSemverProd, resourceVersion];
     } else {
