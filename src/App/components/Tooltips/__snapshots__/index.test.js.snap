@@ -3,13 +3,13 @@
 exports[`Component: Tooltip - prop type is marked as defined 1`] = `
 <button
   aria-describedby={null}
-  className="tooltip"
+  className="tooltip btn btn-secondary"
 >
   
 
   
 
-  <div
+  <span
     role="tooltip"
   />
 </button>
@@ -17,7 +17,7 @@ exports[`Component: Tooltip - prop type is marked as defined 1`] = `
 
 exports[`Component: Tooltip - renders 1`] = `
 <button
-  className="tooltip"
+  className="tooltip btn btn-secondary"
 >
   
 
@@ -29,34 +29,34 @@ exports[`Component: Tooltip - renders 1`] = `
   </i>
   
 
-  <div
+  <span
     role="tooltip"
   >
     test text
-  </div>
+  </span>
 </button>
 `;
 
 exports[`Component: Tooltip - renders div with class tooltip 1`] = `
 <button
   aria-describedby={null}
-  className="tooltip"
+  className="tooltip btn btn-secondary"
 >
   
 
   
 
-  <div
+  <span
     role="tooltip"
   >
     test text
-  </div>
+  </span>
 </button>
 `;
 
 exports[`Component: Tooltip - renders with icon if icon is provided 1`] = `
 <button
-  className="tooltip"
+  className="tooltip btn btn-secondary"
 >
   
 
@@ -67,96 +67,96 @@ exports[`Component: Tooltip - renders with icon if icon is provided 1`] = `
   </i>
   
 
-  <div
+  <span
     role="tooltip"
   >
     test text
-  </div>
+  </span>
 </button>
 `;
 
 exports[`Component: Tooltip - renders with title text if provided 1`] = `
 <button
   aria-describedby={null}
-  className="tooltip"
+  className="tooltip btn btn-secondary"
 >
   
 
   test title
   
 
-  <div
+  <span
     role="tooltip"
   >
     test text
-  </div>
+  </span>
 </button>
 `;
 
 exports[`Component: Tooltip - renders with tooltip position bottom 1`] = `
 <button
   aria-describedby={null}
-  className="tooltip tooltip-bottom"
+  className="tooltip btn btn-secondary tooltip-bottom"
 >
   
 
   
 
-  <div
+  <span
     role="tooltip"
   >
     test text
-  </div>
+  </span>
 </button>
 `;
 
 exports[`Component: Tooltip - renders with tooltip position left 1`] = `
 <button
   aria-describedby={null}
-  className="tooltip tooltip-left"
+  className="tooltip btn btn-secondary tooltip-left"
 >
   
 
   
 
-  <div
+  <span
     role="tooltip"
   >
     test text
-  </div>
+  </span>
 </button>
 `;
 
 exports[`Component: Tooltip - renders with tooltip position right 1`] = `
 <button
   aria-describedby={null}
-  className="tooltip tooltip-right"
+  className="tooltip btn btn-secondary tooltip-right"
 >
   
 
   
 
-  <div
+  <span
     role="tooltip"
   >
     test text
-  </div>
+  </span>
 </button>
 `;
 
 exports[`Component: Tooltip - renders with tooltip position top 1`] = `
 <button
   aria-describedby={null}
-  className="tooltip tooltip-top"
+  className="tooltip btn btn-secondary tooltip-top"
 >
   
 
   
 
-  <div
+  <span
     role="tooltip"
   >
     test text
-  </div>
+  </span>
 </button>
 `;

@@ -42,7 +42,7 @@ describe("Component: Tooltip -", () => {
         const wrapper = shallow(<Tooltip title={title} text={text}/>);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<div role=\"tooltip\">test text</div></button>");
+        expect(wrapper.html()).toContain("<span role=\"tooltip\">test text</span></button>");
     });
 
     it("renders div with class tooltip", () => {
@@ -56,27 +56,27 @@ describe("Component: Tooltip -", () => {
         const wrapper = shallow(<Tooltip text={text} position={right} />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<button class=\"tooltip tooltip-right\">");
+        expect(wrapper.html()).toContain("<button class=\"tooltip btn btn-secondary tooltip-right\">");
     });
 
     it("renders with tooltip position left", () => {
         const wrapper = shallow(<Tooltip text={text} position={left} />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<button class=\"tooltip tooltip-left\">");
+        expect(wrapper.html()).toContain("<button class=\"tooltip btn btn-secondary tooltip-left\">");
     });
 
     it("renders with tooltip position top", () => {
         const wrapper = shallow(<Tooltip text={text} position={top} />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<button class=\"tooltip tooltip-top\">");
+        expect(wrapper.html()).toContain("<button class=\"tooltip btn btn-secondary tooltip-top\">");
     });
 
     it("renders with tooltip position bottom", () => {
         const wrapper = shallow(<Tooltip text={text} position={bottom} />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<button class=\"tooltip tooltip-bottom\">");
+        expect(wrapper.html()).toContain("<button class=\"tooltip btn btn-secondary tooltip-bottom\">");
     });
 });
