@@ -40,7 +40,7 @@
     "not dead"
   ],
   "dependencies": {
-    "@codesandbox/sandpack-react": "^1.18.4",
+    "@codesandbox/sandpack-react": "^1.20.7",
     "@sentry/browser": "^6.19.7",
     "chalk": "^4.1.2",
     "chart.js": "^2.9.4",
