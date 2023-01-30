@@ -25,8 +25,6 @@ module.exports = (env, argv) => {
     const basename = env && env.basename ? `/${env.basename}/` : "/";
     const infoVersion = env && env.info_version ? env.info_version : "LOCAL_DEV";
 
-    console.log("👀", isProd, version, isRelease, infoVersion);
-
     const config = {
         mode: argv.mode || "production",
         entry: {
@@ -105,8 +103,8 @@ module.exports = (env, argv) => {
                     ],
                 },
                 /*
-         * Fonts
-         */
+                * Fonts
+                */
                 {
                     test: /\.(woff(2)?|ttf|eot)$/,
                     type: "asset/resource",
@@ -115,8 +113,8 @@ module.exports = (env, argv) => {
                     },
                 },
                 /*
-         * Images
-         */
+                * Images
+                */
                 {
                     test: /\.(png|jpe?g|gif|svg)$/i,
                     exclude: /flags/,
@@ -126,8 +124,8 @@ module.exports = (env, argv) => {
                     },
                 },
                 /*
-         * Flags
-         */
+                * Flags
+                */
                 {
                     test: /\.svg$/i,
                     include: [path.resolve(__dirname, "src/icons/flags/1x1")],
@@ -398,8 +396,8 @@ module.exports = (env, argv) => {
                                 },
 
                                 /*
-                 * Files for node package
-                 */
+                                * Files for node package
+                                */
                                 {
                                     source: `./dist${basename}scripts/dg*.*`,
                                     destination: "./dist/designguide/scripts/",
