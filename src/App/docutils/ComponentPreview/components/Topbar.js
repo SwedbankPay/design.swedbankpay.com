@@ -41,7 +41,12 @@ const Tabs = ({
     return (
         <ul id={`${tabsId}-ul`}>
             {tabs.map((element, i) => <li key={i} className={`${activeTab?.tab === element.tab ? "active" : null}`}>
-                <a href="#" onClick={() => updateActiveTab(tabs[i]) }>{element.tab}</a>
+                <a
+                    href="#"
+                    onClick={e => {
+                        e.preventDefault();
+                        updateActiveTab(tabs[i]);
+                    } }>{element.tab}</a>
             </li>
             )}
         </ul>

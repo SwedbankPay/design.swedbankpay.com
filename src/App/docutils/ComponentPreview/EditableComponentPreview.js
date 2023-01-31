@@ -9,7 +9,7 @@ import { ShowCasePanelAdvanced } from "./components/ShowCasePanelAdvanced";
 import { useCodeParser } from "./hooksUtils/useCodeParser";
 import { resetOptions } from "./hooksUtils/optionsUtils";
 import { useJsSandboxInitCode } from "./hooksUtils/useSandboxInitCode";
-import { getExternalResources } from "./hooksUtils/getExternalResources";
+import packageJson from "~/package";
 
 // TODO: should the preview of showCasePanel & the one of advancedShowCasePanel use the same component ?
 // in a way it is using the same SndpackPreview, so it would keep them in sync (e.g. add additional button "copy to clipboard", etc)
@@ -160,10 +160,12 @@ export const EditableComponentPreview = ({
         }
     };
 
+    const resourceVersion = packageJson.version;
+
     // TODO: in the future, move the css import to `externalResources`. But for now it creates an issue since tehy do not transfer when user clicks "open in codesandbox"
     // https://github.com/codesandbox/sandpack/discussions/532
     const commonStyleInIframe = `
-    @import url('https://design.swedbankpay.com/v/10.6.1/styles/swedbankpay.css');
+    @import url('https://design.swedbankpay.com/v/${resourceVersion}/styles/swedbankpay.css');
 
     body {
         height: fit-content;
@@ -175,8 +177,6 @@ export const EditableComponentPreview = ({
     .loader-preview-container.dark {
         background-color: #493c3b;
     }  `;
-
-    const [isSemverProd, resourceVersion] = getExternalResources();
 
     const codeFiles = () => {
         if (language === "html") {
