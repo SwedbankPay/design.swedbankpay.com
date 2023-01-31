@@ -114,8 +114,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
       src="/TEST/img/documentation/patterns/login-img-collection-example.png"
     />
     <p>
-      The login form is always accompanied by a image on the right side on desktop devices, the image is hidden on smaller devices. Above are an example of some images that would be fitting to be used as login images, the most important thing to look out for is telling a story, especially when it comes to the product. “Who is this product for?” If it is an product for consumers outside of our organization, try to relate the image to that segment of the user. For more guidance on how to design with images and find our image library, refer to the
-       
+      The login form is always accompanied by a image on the right side on desktop devices, the image is hidden on smaller devices. Above are an example of some images that would be fitting to be used as login images, the most important thing to look out for is telling a story, especially when it comes to the product. “Who is this product for?” If it is an product for consumers outside of our organization, try to relate the image to that segment of the user. For more guidance on how to design with images and find our image library, refer to the 
       <Link
         to="/identity/imagery"
       >
@@ -145,13 +144,11 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       Client-side validation
     </h4>
     <p>
-      Use client-side validation to validate as much data as possible inline before the user submits the form. Common inline errors include empty required fields, invalid characters or incorrect input format.
-       
+      Use client-side validation to validate as much data as possible inline before the user submits the form. Common inline errors include empty required fields, invalid characters or incorrect input format. 
     </p>
     <EditableComponentPreview
       codeFigure={true}
       language="html"
-      previewMinHeight={250}
       showCasePanel={true}
     >
       <div
@@ -172,13 +169,11 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       Server-side validation
     </h4>
     <p>
-      Use server side validation when the user submits the form. Display a local error alert after the page has reloaded if an error has occurred. Incorrect email or password are the most common servers errors.
-       
+      Use server side validation when the user submits the form. Display a local error alert after the page has reloaded if an error has occurred. Incorrect email or password are the most common servers errors. 
     </p>
     <EditableComponentPreview
       codeFigure={true}
       language="html"
-      previewMinHeight={600}
       showCasePanel={true}
     >
       <div
