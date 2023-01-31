@@ -212,8 +212,7 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
     Spacing
   </h3>
   <p>
-    As a general rule, we recommend a vertical spacing between individual inputs of 24px and a 32px spacer before the first input, between sections and between the last input and the buttons. This may vary depending on your context, but spacing between groups should always be adjusted in relationship to spacing between individual items.
-     
+    As a general rule, we recommend a vertical spacing between individual inputs of 24px and a 32px spacer before the first input, between sections and between the last input and the buttons. This may vary depending on your context, but spacing between groups should always be adjusted in relationship to spacing between individual items. 
   </p>
 </section>
 `;
@@ -230,26 +229,22 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       Errors and validation
     </h3>
     <p>
-      To use our validation, start by adding the attribute
-       
+      To use our validation, start by adding the attribute 
       <CodeTags
         code="novalidate"
         type="secondary"
       />
-       to your
-       
+       to your 
       <CodeTags
         code="<form>"
         type="primary"
       />
-       element. If you wish to validate your entire form, add the
-       
+       element. If you wish to validate your entire form, add the 
       <CodeTags
         code="validate"
         type="secondary"
       />
-       attribute to the
-       
+       attribute to the 
       <CodeTags
         code="<form>"
         type="primary"
@@ -264,8 +259,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
         code="required"
         type="secondary"
       />
-       and
-       
+       and 
       <CodeTags
         code="pattern"
         type="secondary"
@@ -278,20 +272,17 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       Client-side validation
     </b>
     <p>
-      Use client-side validation to validate as much data as possible before the user submits the form. Common errors include empty required fields, invalid characters or incorrect input format. To give users inline validation feedback insert a error message within the
-       
+      Use client-side validation to validate as much data as possible before the user submits the form. Common errors include empty required fields, invalid characters or incorrect input format. To give users inline validation feedback insert a error message within the 
       <CodeTags
         code="form-group"
         type="primary"
       />
-       in the
-       
+       in the 
       <CodeTags
         code="help-block"
         type="primary"
       />
-       element in the attribute
-       
+       element in the attribute 
       <CodeTags
         code="data-error"
         type="primary"
@@ -428,14 +419,12 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       Disabled state
     </h3>
     <p>
-      You can disable an entire fieldset by adding
-       
+      You can disable an entire fieldset by adding 
       <CodeTags
         code="disabled"
         type="primary"
       />
-       to the fieldset element.
-       
+       to the fieldset element. 
     </p>
     <EditableComponentPreview
       codeFigure={true}
@@ -476,8 +465,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       </div>
     </EditableComponentPreview>
     <p>
-      If you only wish to disable a specific form component, add the
-       
+      If you only wish to disable a specific form component, add the 
       <CodeTags
         code="disabled"
         type="primary"
@@ -527,14 +515,12 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       Form grid
     </h3>
     <p>
-      If you need more than one column in your form, you can use the grid system to customize how forms are displayed. Wrap your form elements in a row container and remember to add
-       
+      If you need more than one column in your form, you can use the grid system to customize how forms are displayed. Wrap your form elements in a row container and remember to add 
       <CodeTags
         code=".col-{your_size}"
         type="secondary"
       />
-       to the
-       
+       to the 
       <CodeTags
         code=".form-group"
         type="secondary"
@@ -583,8 +569,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       Static text
     </h3>
     <p>
-      To display static text in a form use
-       
+      To display static text in a form use 
       <CodeTags
         code="<span>"
         type="secondary"
@@ -690,8 +675,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
       Required VS. optional
     </h3>
     <p>
-      All fields in a form can be assumed required and should not be labeled with an “*” . If you must ask an optional question, make it clear that it’s optional by adding “(optional)” to the label instead.
-       
+      All fields in a form can be assumed required and should not be labeled with an “*” . If you must ask an optional question, make it clear that it’s optional by adding “(optional)” to the label instead. 
     </p>
     <div
       className="row"
@@ -766,8 +750,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
         .
       </li>
       <li>
-        If the information is important and many users will need it, provide
-         
+        If the information is important and many users will need it, provide 
         <b>
           hint text
         </b>
@@ -956,8 +939,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
       >
         Login page
       </a>
-      , buttons can be centered and set to the same width as the input fields. On mobile, the buttons are always centered, full width and stacked vertically with the primary action on top.
-       
+      , buttons can be centered and set to the same width as the input fields. On mobile, the buttons are always centered, full width and stacked vertically with the primary action on top. 
     </p>
      
     <img
@@ -971,8 +953,7 @@ exports[`Forms: index HowToDesignForms renders 1`] = `
       Error messages
     </h3>
     <p>
-      When an input isn’t accepted, error messages should be used to help the user understand what went wrong and how to solve the problem without using technical jargong.
-       
+      When an input isn’t accepted, error messages should be used to help the user understand what went wrong and how to solve the problem without using technical jargong. 
     </p>
     <div
       className="row"
@@ -1037,7 +1018,7 @@ exports[`Forms: index Overview renders 1`] = `
   <EditableComponentPreview
     language="html"
     noOptions={true}
-    previewMinHeight={650}
+    previewMinHeight={750}
     removeOuterTag={true}
     showCasePanel={true}
     showCasePanelAdvanced={
@@ -1045,11 +1026,9 @@ exports[`Forms: index Overview renders 1`] = `
         "elements": Array [
           Object {
             "component": <div
-              className="col-md-10 col-12 px-0"
+              className="col-md-10 col-12"
             >
-              <form
-                className="px-4"
-              >
+              <form>
                 <fieldset>
                   <legend>
                     <span
@@ -1117,11 +1096,9 @@ exports[`Forms: index Overview renders 1`] = `
           },
           Object {
             "component": <div
-              className="col-md-10 col-12 px-0"
+              className="col-md-10 col-12"
             >
-              <form
-                className="px-4"
-              >
+              <form>
                 <Steps
                   steps={
                     Array [
