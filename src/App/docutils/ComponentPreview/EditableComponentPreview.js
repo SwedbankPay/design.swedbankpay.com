@@ -160,7 +160,11 @@ export const EditableComponentPreview = ({
         }
     };
 
+    // TODO: in the future, move the css import to `externalResources`. But for now it creates an issue since tehy do not transfer when user clicks "open in codesandbox"
+    // https://github.com/codesandbox/sandpack/discussions/532
     const commonStyleInIframe = `
+    @import url('https://design.swedbankpay.com/v/10.6.1/styles/swedbankpay.css');
+
     body {
         height: fit-content;
         padding: 2rem;
@@ -241,9 +245,6 @@ export const EditableComponentPreview = ({
             }}
             options={{
                 showTabs: true,
-                externalResources: [
-                    `https://design.swedbankpay.com/v/${resourceVersion}/styles/swedbankpay.css`,
-                ],
             }}
             files={codeFiles()}
         >
