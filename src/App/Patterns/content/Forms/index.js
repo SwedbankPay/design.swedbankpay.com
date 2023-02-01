@@ -9,7 +9,7 @@ import RadioButton from "@components/FormComponents/Radio";
 
 import LoginForm from "../../components/LoginForm/index";
 
-import { ComponentPreview } from "~/src/App/docutils";
+import { EditableComponentPreview } from "~/src/App/docutils";
 import { guidelinesElementsList, formsShowCase } from "./constants";
 import { hintTextExpander } from "@src/scripts/main";
 
@@ -34,7 +34,7 @@ const Overview = () => (
         <h2 id="overview">Overview</h2>
 
         <p>A form can include different type of user input components that can be arranged in different ways depending on your specific context and needs. You might for example design a form for a user to sign up for or log into an account, register for a service, reconfigure settings, take a survey, purchase a product or provide feedback.</p>
-        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={formsShowCase} noOptions removeOuterTag/>
+        <EditableComponentPreview language="html" showCasePanel showCasePanelAdvanced={formsShowCase} noOptions removeOuterTag previewMinHeight={750} />
     </section>
 );
 
@@ -229,16 +229,16 @@ const DeveloperDocumentation = () => (
             <b className="brand-headline">Client-side validation</b>
             <p>Use client-side validation to validate as much data as possible before the user submits the form. Common errors include empty required fields, invalid characters or incorrect input format. To give users inline validation feedback insert a error message within the <CodeTags type="primary" code="form-group"/> in the <CodeTags type="primary" code="help-block"/> element in the attribute <CodeTags type="primary" code="data-error"/>.</p>
 
-            <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag>
+            <EditableComponentPreview language="html" codeFigure showCasePanel removeOuterTag staticPreview>
                 <div className="col-12 col-sm-6 m-auto pt-3">
                     <InputGroup type="text" validationState="error" errorMessage='The email address must include "@"' label="Email" defaultValue="Name.com" id="input-error-client-example"/>
                 </div>
-            </ComponentPreview>
+            </EditableComponentPreview>
 
             <b className="brand-headline">Server-side validation</b>
             <p>Server side validation can be used to control the inputs after the user submits the form. If an error has occurred, display an error alert at the top of the form after the page has reloaded as well as inline errors on the affected input components.</p>
 
-            <ComponentPreview language="html" codeFigure showCasePanel>
+            <EditableComponentPreview language="html" codeFigure showCasePanel staticPreview previewMinHeight={600} >
                 <div className="col-sm-6 col-12 m-auto px-0 py-3">
                     <LoginForm error defaultPassword defaultEmail
                         passwordId="validation-password-example"
@@ -246,13 +246,13 @@ const DeveloperDocumentation = () => (
                         checkboxId="validation-checkbox-example"
                         title="h2"/>
                 </div>
-            </ComponentPreview>
+            </EditableComponentPreview>
         </section>
         <section>
             <h3>Fieldset</h3>
             <p>You can use the <CodeTags type="primary" code="<fieldset>" /> to group related elements in a <CodeTags type="primary" code="form" /> and create more structure.</p>
 
-            <ComponentPreview language="html" codeFigure showCasePanel>
+            <EditableComponentPreview language="html" codeFigure showCasePanel staticPreview previewMinHeight={620} >
                 <div className="col-12 col-sm-6 m-auto">
                     <form>
                         <fieldset className="mb-2">
@@ -271,13 +271,13 @@ const DeveloperDocumentation = () => (
                         </fieldset>
                     </form>
                 </div>
-            </ComponentPreview>
+            </EditableComponentPreview>
         </section>
         <section>
             <h3>Disabled state</h3>
             <p>You can disable an entire fieldset by adding <CodeTags type="primary" code="disabled"/> to the fieldset element. </p>
 
-            <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag>
+            <EditableComponentPreview language="html" codeFigure showCasePanel removeOuterTag staticPreview previewMinHeight={400}>
                 <div className="col-12 col-sm-6 m-auto">
                     <fieldset disabled>
                         <InputGroup id="disabled-name-example" type="name" label="Name" />
@@ -286,10 +286,10 @@ const DeveloperDocumentation = () => (
                         <Button type="primary" label="Submit" className="mt-2" />
                     </fieldset>
                 </div>
-            </ComponentPreview>
+            </EditableComponentPreview>
             <p>If you only wish to disable a specific form component, add the <CodeTags type="primary" code="disabled"/> attribute to the desired component.</p>
 
-            <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag>
+            <EditableComponentPreview language="html" codeFigure showCasePanel removeOuterTag staticPreview previewMinHeight={400}>
                 <div className="col-12 col-sm-6 m-auto">
                     <fieldset>
                         <InputGroup id="disable-specific-name-example" type="name" label="Name" disabled />
@@ -298,13 +298,13 @@ const DeveloperDocumentation = () => (
                         <Button type="primary" label="Submit" className="mt-2" />
                     </fieldset>
                 </div>
-            </ComponentPreview>
+            </EditableComponentPreview>
         </section>
         <section>
             <h3>Form grid</h3>
             <p>If you need more than one column in your form, you can use the grid system to customize how forms are displayed. Wrap your form elements in a row container and remember to add <CodeTags type="secondary" code=".col-{your_size}"/> to the <CodeTags type="secondary" code=".form-group"/>.</p>
         </section>
-        <ComponentPreview language="html" codeFigure showCasePanel removeOuterTag>
+        <EditableComponentPreview language="html" codeFigure showCasePanel removeOuterTag staticPreview>
             <div className="col-12 col-sm-10 m-auto pt-2">
                 <form>
                     <div className="row align-items-center justify-content-between">
@@ -314,7 +314,7 @@ const DeveloperDocumentation = () => (
                     </div>
                 </form>
             </div>
-        </ComponentPreview>
+        </EditableComponentPreview>
         <section>
             <h3>Static text</h3>
             <p>To display static text in a form use <CodeTags type="secondary" code="<span>" /></p>

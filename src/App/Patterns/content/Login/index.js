@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { DocContainer } from "@docutils";
-import { ComponentPreview } from "~/src/App/docutils";
+import { EditableComponentPreview } from "~/src/App/docutils";
 
 import InputGroup from "@components/InputGroup";
 import LoginForm from "../../components/LoginForm/index";
@@ -24,7 +24,7 @@ const Overview = () => (
                 The login page is customizable and components can be removed or added to fit a specific products needs.
             </div>
         </div>
-        <ComponentPreview language="html" codeFigure>
+        <EditableComponentPreview language="html" codeFigure>
             <div className="container-fluid border-top-brand">
                 <div className="row">
                     <div className="col-lg-5 col-12 d-flex p-0">
@@ -35,7 +35,7 @@ const Overview = () => (
                     <img src={`${basename}img/documentation/patterns/login-img-example.png`} alt="Image for login screen" className="d-none d-lg-block col-7 px-0" />
                 </div>
             </div>
-        </ComponentPreview>
+        </EditableComponentPreview>
     </section>
 );
 
@@ -80,16 +80,16 @@ const DeveloperDocumentation = () => (
         <section>
             <h4>Client-side validation</h4>
             <p>Use client-side validation to validate as much data as possible inline before the user submits the form. Common inline errors include empty required fields, invalid characters or incorrect input format. </p>
-            <ComponentPreview language="html" codeFigure showCasePanel>
+            <EditableComponentPreview language="html" codeFigure showCasePanel staticPreview>
                 <div className="col-sm-6 col-12 m-auto px-0 pt-3">
                     <InputGroup type="email" id="login-client-side" validationState="error" label="Email" errorMessage="Email is required" />
                 </div>
-            </ComponentPreview>
+            </EditableComponentPreview>
         </section>
         <section>
             <h4>Server-side validation</h4>
             <p>Use server side validation when the user submits the form. Display a local error alert after the page has reloaded if an error has occurred. Incorrect email or password are the most common servers errors. </p>
-            <ComponentPreview language="html" codeFigure showCasePanel>
+            <EditableComponentPreview language="html" codeFigure showCasePanel previewMinHeight={600}>
                 <div className="col-sm-6 col-12 m-auto px-0 py-3">
                     <LoginForm error defaultPassword defaultEmail
                         passwordId="validation-password-example"
@@ -97,7 +97,7 @@ const DeveloperDocumentation = () => (
                         checkboxId="checkbox-example"
                         title="h2" />
                 </div>
-            </ComponentPreview>
+            </EditableComponentPreview>
         </section>
     </section>
 );

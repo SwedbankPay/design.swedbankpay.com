@@ -289,11 +289,12 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       />
       .
     </p>
-    <ComponentPreview
+    <EditableComponentPreview
       codeFigure={true}
       language="html"
       removeOuterTag={true}
       showCasePanel={true}
+      staticPreview={true}
     >
       <div
         className="col-12 col-sm-6 m-auto pt-3"
@@ -307,7 +308,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
           validationState="error"
         />
       </div>
-    </ComponentPreview>
+    </EditableComponentPreview>
     <b
       className="brand-headline"
     >
@@ -316,10 +317,12 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     <p>
       Server side validation can be used to control the inputs after the user submits the form. If an error has occurred, display an error alert at the top of the form after the page has reloaded as well as inline errors on the affected input components.
     </p>
-    <ComponentPreview
+    <EditableComponentPreview
       codeFigure={true}
       language="html"
+      previewMinHeight={600}
       showCasePanel={true}
+      staticPreview={true}
     >
       <div
         className="col-sm-6 col-12 m-auto px-0 py-3"
@@ -334,7 +337,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
           title="h2"
         />
       </div>
-    </ComponentPreview>
+    </EditableComponentPreview>
   </section>
   <section>
     <h3>
@@ -353,10 +356,12 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       />
        and create more structure.
     </p>
-    <ComponentPreview
+    <EditableComponentPreview
       codeFigure={true}
       language="html"
+      previewMinHeight={620}
       showCasePanel={true}
+      staticPreview={true}
     >
       <div
         className="col-12 col-sm-6 m-auto"
@@ -410,7 +415,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
           </fieldset>
         </form>
       </div>
-    </ComponentPreview>
+    </EditableComponentPreview>
   </section>
   <section>
     <h3>
@@ -424,11 +429,13 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       />
        to the fieldset element. 
     </p>
-    <ComponentPreview
+    <EditableComponentPreview
       codeFigure={true}
       language="html"
+      previewMinHeight={400}
       removeOuterTag={true}
       showCasePanel={true}
+      staticPreview={true}
     >
       <div
         className="col-12 col-sm-6 m-auto"
@@ -460,7 +467,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
           />
         </fieldset>
       </div>
-    </ComponentPreview>
+    </EditableComponentPreview>
     <p>
       If you only wish to disable a specific form component, add the 
       <CodeTags
@@ -469,11 +476,13 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       />
        attribute to the desired component.
     </p>
-    <ComponentPreview
+    <EditableComponentPreview
       codeFigure={true}
       language="html"
+      previewMinHeight={400}
       removeOuterTag={true}
       showCasePanel={true}
+      staticPreview={true}
     >
       <div
         className="col-12 col-sm-6 m-auto"
@@ -504,7 +513,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
           />
         </fieldset>
       </div>
-    </ComponentPreview>
+    </EditableComponentPreview>
   </section>
   <section>
     <h3>
@@ -524,11 +533,12 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       .
     </p>
   </section>
-  <ComponentPreview
+  <EditableComponentPreview
     codeFigure={true}
     language="html"
     removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="col-12 col-sm-10 m-auto pt-2"
@@ -559,7 +569,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
         </div>
       </form>
     </div>
-  </ComponentPreview>
+  </EditableComponentPreview>
   <section>
     <h3>
       Static text
@@ -1011,9 +1021,10 @@ exports[`Forms: index Overview renders 1`] = `
   <p>
     A form can include different type of user input components that can be arranged in different ways depending on your specific context and needs. You might for example design a form for a user to sign up for or log into an account, register for a service, reconfigure settings, take a survey, purchase a product or provide feedback.
   </p>
-  <ComponentPreview
+  <EditableComponentPreview
     language="html"
     noOptions={true}
+    previewMinHeight={750}
     removeOuterTag={true}
     showCasePanel={true}
     showCasePanelAdvanced={
@@ -1021,7 +1032,7 @@ exports[`Forms: index Overview renders 1`] = `
         "elements": Array [
           Object {
             "component": <div
-              className="col-md-10 col-12 px-0"
+              className="col-md-10 col-12"
             >
               <form>
                 <fieldset>
@@ -1091,7 +1102,7 @@ exports[`Forms: index Overview renders 1`] = `
           },
           Object {
             "component": <div
-              className="col-md-10 col-12 px-0"
+              className="col-md-10 col-12"
             >
               <form>
                 <Steps
