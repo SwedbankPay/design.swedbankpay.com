@@ -16,7 +16,6 @@ export const ShowCasePanelAdvanced = ({
 }) => {
     const [sidebarDisplayed, setSidebarDisplayed] = useState(false);
 
-    // TODO: could this be done via CSS instead ?
     useEffect(() => {
         setSidebarDisplayed(window.innerWidth > 1200); // XL grid breakpoint
     }, []);

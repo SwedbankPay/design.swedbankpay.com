@@ -229,7 +229,7 @@ const DeveloperDocumentation = () => (
             <b className="brand-headline">Client-side validation</b>
             <p>Use client-side validation to validate as much data as possible before the user submits the form. Common errors include empty required fields, invalid characters or incorrect input format. To give users inline validation feedback insert a error message within the <CodeTags type="primary" code="form-group"/> in the <CodeTags type="primary" code="help-block"/> element in the attribute <CodeTags type="primary" code="data-error"/>.</p>
 
-            <EditableComponentPreview language="html" codeFigure showCasePanel removeOuterTag>
+            <EditableComponentPreview language="html" codeFigure showCasePanel removeOuterTag staticPreview>
                 <div className="col-12 col-sm-6 m-auto pt-3">
                     <InputGroup type="text" validationState="error" errorMessage='The email address must include "@"' label="Email" defaultValue="Name.com" id="input-error-client-example"/>
                 </div>
@@ -238,7 +238,7 @@ const DeveloperDocumentation = () => (
             <b className="brand-headline">Server-side validation</b>
             <p>Server side validation can be used to control the inputs after the user submits the form. If an error has occurred, display an error alert at the top of the form after the page has reloaded as well as inline errors on the affected input components.</p>
 
-            <EditableComponentPreview language="html" codeFigure showCasePanel previewMinHeight={600} >
+            <EditableComponentPreview language="html" codeFigure showCasePanel staticPreview previewMinHeight={600} >
                 <div className="col-sm-6 col-12 m-auto px-0 py-3">
                     <LoginForm error defaultPassword defaultEmail
                         passwordId="validation-password-example"
@@ -252,7 +252,7 @@ const DeveloperDocumentation = () => (
             <h3>Fieldset</h3>
             <p>You can use the <CodeTags type="primary" code="<fieldset>" /> to group related elements in a <CodeTags type="primary" code="form" /> and create more structure.</p>
 
-            <EditableComponentPreview language="html" codeFigure showCasePanel previewMinHeight={620} >
+            <EditableComponentPreview language="html" codeFigure showCasePanel staticPreview previewMinHeight={620} >
                 <div className="col-12 col-sm-6 m-auto">
                     <form>
                         <fieldset className="mb-2">
@@ -277,7 +277,7 @@ const DeveloperDocumentation = () => (
             <h3>Disabled state</h3>
             <p>You can disable an entire fieldset by adding <CodeTags type="primary" code="disabled"/> to the fieldset element. </p>
 
-            <EditableComponentPreview language="html" codeFigure showCasePanel removeOuterTag previewMinHeight={400}>
+            <EditableComponentPreview language="html" codeFigure showCasePanel removeOuterTag staticPreview previewMinHeight={400}>
                 <div className="col-12 col-sm-6 m-auto">
                     <fieldset disabled>
                         <InputGroup id="disabled-name-example" type="name" label="Name" />
@@ -289,7 +289,7 @@ const DeveloperDocumentation = () => (
             </EditableComponentPreview>
             <p>If you only wish to disable a specific form component, add the <CodeTags type="primary" code="disabled"/> attribute to the desired component.</p>
 
-            <EditableComponentPreview language="html" codeFigure showCasePanel removeOuterTag previewMinHeight={400}>
+            <EditableComponentPreview language="html" codeFigure showCasePanel removeOuterTag staticPreview previewMinHeight={400}>
                 <div className="col-12 col-sm-6 m-auto">
                     <fieldset>
                         <InputGroup id="disable-specific-name-example" type="name" label="Name" disabled />
@@ -304,7 +304,7 @@ const DeveloperDocumentation = () => (
             <h3>Form grid</h3>
             <p>If you need more than one column in your form, you can use the grid system to customize how forms are displayed. Wrap your form elements in a row container and remember to add <CodeTags type="secondary" code=".col-{your_size}"/> to the <CodeTags type="secondary" code=".form-group"/>.</p>
         </section>
-        <EditableComponentPreview language="html" codeFigure showCasePanel removeOuterTag>
+        <EditableComponentPreview language="html" codeFigure showCasePanel removeOuterTag staticPreview>
             <div className="col-12 col-sm-10 m-auto pt-2">
                 <form>
                     <div className="row align-items-center justify-content-between">

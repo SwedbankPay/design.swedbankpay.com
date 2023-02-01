@@ -294,6 +294,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       language="html"
       removeOuterTag={true}
       showCasePanel={true}
+      staticPreview={true}
     >
       <div
         className="col-12 col-sm-6 m-auto pt-3"
@@ -321,6 +322,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       language="html"
       previewMinHeight={600}
       showCasePanel={true}
+      staticPreview={true}
     >
       <div
         className="col-sm-6 col-12 m-auto px-0 py-3"
@@ -359,6 +361,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       language="html"
       previewMinHeight={620}
       showCasePanel={true}
+      staticPreview={true}
     >
       <div
         className="col-12 col-sm-6 m-auto"
@@ -432,6 +435,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       previewMinHeight={400}
       removeOuterTag={true}
       showCasePanel={true}
+      staticPreview={true}
     >
       <div
         className="col-12 col-sm-6 m-auto"
@@ -478,6 +482,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       previewMinHeight={400}
       removeOuterTag={true}
       showCasePanel={true}
+      staticPreview={true}
     >
       <div
         className="col-12 col-sm-6 m-auto"
@@ -533,6 +538,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     language="html"
     removeOuterTag={true}
     showCasePanel={true}
+    staticPreview={true}
   >
     <div
       className="col-12 col-sm-10 m-auto pt-2"

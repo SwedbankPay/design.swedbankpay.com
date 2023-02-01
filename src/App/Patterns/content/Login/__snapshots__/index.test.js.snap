@@ -150,6 +150,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       codeFigure={true}
       language="html"
       showCasePanel={true}
+      staticPreview={true}
     >
       <div
         className="col-sm-6 col-12 m-auto px-0 pt-3"
@@ -174,6 +175,7 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     <EditableComponentPreview
       codeFigure={true}
       language="html"
+      previewMinHeight={600}
       showCasePanel={true}
     >
       <div

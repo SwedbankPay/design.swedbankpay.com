@@ -11,9 +11,6 @@ import { resetOptions } from "./hooksUtils/optionsUtils";
 import { useJsSandboxInitCode } from "./hooksUtils/useSandboxInitCode";
 import packageJson from "~/package";
 
-// TODO: should the preview of showCasePanel & the one of advancedShowCasePanel use the same component ?
-// in a way it is using the same SndpackPreview, so it would keep them in sync (e.g. add additional button "copy to clipboard", etc)
-// on the other hand the whole container around is different (for some reason)
 const ShowCasePanel = ({
     showCasePanelSm,
     negative,
@@ -110,7 +107,6 @@ export const EditableComponentPreview = ({
         removeOuterTag
     );
 
-    // when only code, or only preview, or staticPreview such as toast/Sheet/etc (at least those staticpreviews at the first iterations of the new sandbox)
     const isReadOnly = staticPreview || (!showCasePanel && codeFigure);
 
     const content = () => {

@@ -26,8 +26,6 @@ export const Topbar = ({
     </div>
 );
 
-/* TODO: switch anchor links to buttons */
-// TODO: fix sometimes first click does not go through when during page load
 const Tabs = ({
     tabsId,
     tabs,
