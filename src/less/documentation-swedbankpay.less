@@ -36,6 +36,18 @@
         }
     }
 
+    // resetting the styles modified by the Sandpack sandbox
+    .sp-wrapper {
+        margin-bottom: 1rem;
+
+        & > div:not(.sp-stack) {
+            font-size: initial;
+            line-height: 1.5;
+            font-family: @brand-default;
+            color: @brand-secondary;
+        }
+    }
+
     .showcase-panel {
         .sc-highlight {
             background-color: rgba(86, 61, 124, 0.15);
@@ -62,6 +74,12 @@
                     height: 10rem;
                 }
             }
+        }
+
+        --preview-min-height: 200px;
+
+        iframe {
+            min-height: var(--preview-min-height);
         }
     }
 
@@ -982,6 +1000,11 @@
                     align-items: center;
                     justify-content: center;
 
+                    // TODO: can be removed once we convert all components previews to the new Sandpack previews and not use the OldComponentPreview component anywhere anymore
+                    &.editable-preview {
+                        padding: 0;
+                    }
+
                     &.component-preview-alt-background {
                         background-color: @brand-primary;
                     }
@@ -1544,21 +1567,15 @@
         }
     }
 
-    #loader-page-overview {
-        .component-preview-content {
-            padding: 7.5rem;
+    #loader-page-overview .component-preview-content {
+        padding: 7.5rem;
 
-            .loader-preview-container {
-                &.dark {
-                    background-color: @dark-brown;
-                }
-            }
+        .loader-preview-container.dark {
+            background-color: @dark-brown;
         }
 
-        #loaders-how-to-use {
-            .slab {
-                height: 15.375rem;
-            }
+        #loaders-how-to-use .slab {
+            height: 15.375rem;
         }
     }
 
@@ -1846,7 +1863,6 @@
     }
 }
 
-
 @media screen and (max-width: @screen-xs-max) {
     .documentation {
         .doc-circle {
@@ -1879,7 +1895,6 @@
             }
         }
     }
-
 
     .search-container {
         input {

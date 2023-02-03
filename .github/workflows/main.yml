@@ -21,10 +21,10 @@ jobs:
         id: variables
         run: ./.github/scripts/variables.sh --brand ${{ matrix.brand }} --ref ${{ github.ref }}
 
-      - name: Set Node.js 12.x
+      - name: Set Node.js 16.x
         uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: 16.x
 
       - name: Cache dependencies
         uses: actions/cache@v3
@@ -39,13 +39,18 @@ jobs:
       - name: Build
         run: npm run ${{ steps.variables.outputs.BUILD_SCRIPT }} -- --env basename=${{ steps.variables.outputs.BRANCH }} --env semver=${{ steps.variables.outputs.BRANCH }} --env info_version=${{ steps.variables.outputs.VERSION }} --env github_actions=true
 
+      - name: Create latest version reference file
+        run: |
+          echo "{ \"latestVersion\" : \"${{ steps.variables.outputs.BRANCH }}\" }" > ./dist/latestVersion.json
+
       - name: Azure Login
         uses: azure/login@v1.4.6
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS_STAGE }}
 
       - name: Azure Deploy
-        uses: azure/CLI@v1.0.6
+        uses: azure/CLI@v1
         with:
+          azcliversion: 2.43.0
           inlineScript: |
             az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_STAGE }} --overwrite

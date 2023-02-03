@@ -13,13 +13,9 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
       code=".button-group"
       type="primary"
     />
-     and make sure to use 8px spacing between the buttons, both in horizontally and vertically groupings. Strive not to use multiple buttons of the same kind – instead, use 
-    <Link
-      to="/components/links#action-link"
-    >
-      Action links
-    </Link>
-    .
+     (to ensure internal spacing).
+    <br />
+    Strive not to use multiple buttons of the same kind.
   </p>
   <ComponentPreview
     codeFigure={true}
@@ -32,7 +28,6 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
       
 
       <Button
-        className="mr-1"
         label="Activate"
         type="primary"
       />
@@ -64,15 +59,15 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           Do
         </h4>
         <div
-          className="d-flex flex-column button-group mt-4 "
+          className="flex-column button-group mt-4 "
         >
           <Button
-            className="justify-content-center mb-2"
+            className="justify-content-center"
             label="Primary action"
             type="primary"
           />
           <Button
-            className="justify-content-center mb-2"
+            className="justify-content-center"
             label="Secondary action"
             type="secondary"
           />
@@ -99,10 +94,9 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           Do
         </h4>
         <div
-          className="d-flex button-group mt-4 align-items-center"
+          className="button-group mt-4 align-items-center"
         >
           <Button
-            className="mr-2"
             label="Primary"
             type="primary"
           />
@@ -132,10 +126,10 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           Do
         </h4>
         <div
-          className="d-flex flex-column button-group mt-4"
+          className="flex-column button-group mt-4"
         >
           <Button
-            className="justify-content-center mb-2"
+            className="justify-content-center"
             label="Primary action"
             type="primary"
           />
@@ -162,10 +156,10 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           Do
         </h4>
         <div
-          className="d-flex flex-column button-group mt-4 "
+          className="flex-column button-group mt-4 "
         >
           <Button
-            className="justify-content-center mb-2"
+            className="justify-content-center"
             label="Executive destructive action"
             type="executive-destructive"
           />
@@ -199,10 +193,10 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           Don't
         </h4>
         <div
-          className="d-flex flex-column button-group mt-4 "
+          className="flex-column button-group mt-4 "
         >
           <Button
-            className="justify-content-center mb-2"
+            className="justify-content-center"
             label="Secondary action"
             type="secondary"
           />
@@ -229,10 +223,10 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           Don't
         </h4>
         <div
-          className="d-flex flex-column button-group mt-4 "
+          className="flex-column button-group mt-4 "
         >
           <Button
-            className="justify-content-center mb-2"
+            className="justify-content-center"
             label="Primary action"
             type="primary"
           />
@@ -263,15 +257,15 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           Don't
         </h4>
         <div
-          className="d-flex flex-column button-group mt-4 "
+          className="flex-column button-group mt-4 "
         >
           <Button
-            className="justify-content-center mb-2"
+            className="justify-content-center"
             label="Executive destructive action"
             type="executive-destructive"
           />
           <Button
-            className="justify-content-center mb-2"
+            className="justify-content-center"
             label="Destructive guiding action"
             type="guiding-destructive"
           />
@@ -298,16 +292,16 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
           Don't
         </h4>
         <div
-          className="d-flex flex-column button-group mt-4 "
+          className="flex-column button-group mt-4 "
         >
           <Button
-            className="justify-content-center mb-2"
+            className="justify-content-center"
             label="Primary action"
             type="primary"
           />
           <Button
             bankId="se"
-            className="justify-content-center mb-2"
+            className="justify-content-center"
             label="Primary action"
             type="primary"
           />
@@ -410,10 +404,10 @@ exports[`Documentation: Buttons Content guidelines renders 1`] = `
           Do
         </h4>
         <div
-          className="d-flex button-group flex-column align-items-center justify-content-center mt-4 mb-4"
+          className="button-group flex-column align-items-center justify-content-center mt-4 mb-4"
         >
           <Button
-            className="justify-content-center mb-2 w-50"
+            className="justify-content-center w-50"
             icon="delete"
             label="Delete"
             type="guiding-destructive"
@@ -442,7 +436,7 @@ exports[`Documentation: Buttons Content guidelines renders 1`] = `
           Do
         </h4>
         <div
-          className="d-flex button-group flex-column align-items-center justify-content-center mt-5 mb-5"
+          className="button-group flex-column align-items-center justify-content-center mt-5 mb-5"
         >
           <Dropdown
             className="pt-2"
@@ -917,7 +911,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-1 mb-2"
         disabled={true}
         label="Primary"
         type="primary"
@@ -925,7 +918,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-1 mb-2"
         disabled={true}
         label="Secondary"
         type="secondary"
@@ -933,7 +925,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-1 mb-2"
         disabled={true}
         label="Link"
         type="link"
@@ -941,7 +932,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-1 mb-2"
         disabled={true}
         label="Destructive Executive"
         type="executive-destructive"
@@ -949,7 +939,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-1"
         disabled={true}
         label="Guiding destructive"
         type="guiding-destructive"
@@ -957,7 +946,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-1"
         disabled={true}
         label="Destructive link"
         type="link-destructive"
@@ -1087,7 +1075,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-1 mb-2"
         disabled={true}
         label="Primary"
         loading={true}
@@ -1096,7 +1083,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-1 mb-2"
         disabled={true}
         label="Secondary"
         loading={true}
@@ -1105,7 +1091,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-1 mb-2"
         disabled={true}
         label="Link"
         loading={true}
@@ -1114,7 +1099,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-1 "
         disabled={true}
         label="Destructive executive"
         loading={true}
@@ -1123,7 +1107,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-1 mb-2"
         disabled={true}
         label="Destructive guiding"
         loading={true}
@@ -1132,7 +1115,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-1 mb-2"
         disabled={true}
         label="Destructive link"
         loading={true}
@@ -1193,7 +1175,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-1"
         href="#"
         label="Anchor"
         type="primary"
@@ -1201,7 +1182,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       
 
       <Button
-        className="mr-1"
         label="Button"
         type="primary"
       />
@@ -1209,7 +1189,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
 
       <Button
         btnType="button"
-        className="mr-1"
         input={true}
         type="primary"
         value="Input"
@@ -1218,7 +1197,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
 
       <Button
         btnType="submit"
-        className="mr-1"
         input={true}
         type="primary"
         value="Submit"
@@ -1227,7 +1205,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
 
       <Button
         btnType="reset"
-        className="mr-1"
         input={true}
         type="primary"
         value="Reset"

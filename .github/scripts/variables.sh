@@ -38,13 +38,13 @@ initialize() {
 generate_variables() {
     if [[ "$ref" == refs/tags/* ]]; then
         version="${ref#refs/tags/}"
-        echo "::set-output name=VERSION::$version"
+        echo "VERSION=$version" >> $GITHUB_OUTPUT
     # elif [[ "$ref" == refs/heads/release/* ]]; then
     #     version="${ref#refs/heads/release/}"
-    #     echo "::set-output name=VERSION::$version"
+    #     echo "VERSION=$version" >> $GITHUB_OUTPUT
     elif [[ "$ref" == refs/heads/* ]]; then
         branch="${ref#refs/heads/}"
-        echo "::set-output name=BRANCH::$branch"
+        echo "BRANCH=$branch" >> $GITHUB_OUTPUT
     fi
 
     echo "Ref:      $ref"
@@ -53,15 +53,15 @@ generate_variables() {
     echo "Brand:    $brand"
 
     if [ "$brand" == "payex" ]; then
-        echo ::set-output name=BRAND_NAME::PayEx
-        echo ::set-output name=AZURE_ACCOUNT_PROD::payexdesignguide
-        echo ::set-output name=AZURE_ACCOUNT_STAGE::pxdesignguidestage
-        echo ::set-output name=BUILD_SCRIPT::build:prod:payex
+        echo "BRAND_NAME=PayEx" >> $GITHUB_OUTPUT
+        echo "AZURE_ACCOUNT_PROD=payexdesignguide" >> $GITHUB_OUTPUT
+        echo "AZURE_ACCOUNT_STAGE=pxdesignguidestage" >> $GITHUB_OUTPUT
+        echo "BUILD_SCRIPT=build:prod:payex" >> $GITHUB_OUTPUT
     elif [ "$brand" == "swedbankpay" ]; then
-        echo ::set-output name=BRAND_NAME::SwedbankPay
-        echo ::set-output name=AZURE_ACCOUNT_PROD::swedbankpaydesignguide
-        echo ::set-output name=AZURE_ACCOUNT_STAGE::spdesignguidestage
-        echo ::set-output name=BUILD_SCRIPT::build:prod
+        echo "BRAND_NAME=SwedbankPay" >> $GITHUB_OUTPUT
+        echo "AZURE_ACCOUNT_PROD=swedbankpaydesignguide" >> $GITHUB_OUTPUT
+        echo "AZURE_ACCOUNT_STAGE=spdesignguidestage" >> $GITHUB_OUTPUT
+        echo "BUILD_SCRIPT=build:prod" >> $GITHUB_OUTPUT
     else
         echo "Unknown brand '$brand'!"
         return 1

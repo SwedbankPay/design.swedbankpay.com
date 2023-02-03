@@ -5,15 +5,20 @@ const basename = process.env.basename;
 
 export const changeLogs = [
     {
+        version: "10.7.0",
+        title: "Interactive playground and documentation updates",
+        text: <p>New year, new version 🚀 Regarding components we have done some minor tweaks to ensure a better user experience, this applies to Tooltip, Sidebar, Dropdown and Buttons. We have also introduced a new component preview which you can see and test out in the patterns sections <a href={`${basename}patterns/forms`}>forms</a> and <a href={`${basename}patters/login`}>login</a>. Closing in, we have upgraded a lot of our dependencies and added some documentation. Go to the complete <a href="https://github.com/SwedbankPay/design.swedbankpay.com/releases" target="_blank" rel="noopener noreferrer">changelog</a> to see the changes in detail. Enjoy!</p>,
+        latestVersion: true
+    },
+    {
         version: "10.6.1",
         title: "Minor bugfix",
-        text: "Fix dead anchor tags",
-        latestVersion: true
+        text: "Fix dead anchor tags"
     },
     {
         version: "10.6.0",
         title: "A brand new Utilities page 😱",
-        text: <p>Utilities section has been updated, now you can get direct access to your favorite utility classes! Some minor bugfixes has been fixed, updated our get-started section for our users and added a crisp shortcut to make your searches even faster (Ctrl/Cmd + K)🔥 Lastly, the navigation component is officialy ❌deprecated❌ meaning we will not be updating or prioritize maintenance for this component. As always, you can read the thorough changelog on Github!</p>
+        text: <p>Utilities section has been updated, now you can get direct access to your favorite utility classes! Some minor bugfixes has been fixed, updated our get-started section for our users and added a crisp shortcut to make your searches even faster (Ctrl/Cmd + K)🔥 Lastly, the navigation component is officially ❌deprecated❌ meaning we will not be updating or prioritize maintenance for this component. As always, you can read the thorough changelog on Github!</p>
     },
     {
         version: "10.5.1",

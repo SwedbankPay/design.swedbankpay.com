@@ -43,19 +43,19 @@ const SpacingZone = () => (
             </thead>
             <tbody>
                 <tr>
-                    <th scrope="row">Smallest</th>
+                    <th scope="row">Smallest</th>
                     <td>24 px</td>
                     <td>7.2 px</td>
                     <th>8 px</th>
                 </tr>
                 <tr>
-                    <th scrope="row">Small</th>
+                    <th scope="row">Small</th>
                     <td>32 px</td>
                     <td>9.6 px</td>
                     <th>16 px</th>
                 </tr>
                 <tr>
-                    <th scrope="row">Medium</th>
+                    <th scope="row">Medium</th>
                     <td>40 px</td>
                     <td>12 px</td>
                     <th>16 px</th>
@@ -76,7 +76,7 @@ const MisuseLogo = () => (
         <p>
                 The appearance of the logo should always remain consistent. It’s important that the logo isn’t misinterpreted, modified, or added to.
                 No attempt should be made to alter the logo in any way. The orientation,
-                colour and composition of the logo should remain as indicated in this designguide without exceptions.
+                color and composition of the logo should remain as indicated in this design guide without exceptions.
         </p>
 
         <div className="slab slab-plain slab-border-error">
@@ -102,7 +102,7 @@ const LogotypeBackgrounds = () => (
     <section>
         <h2 id="logotype-backgrounds">Logotype and backgrounds</h2>
         <p>
-        Different versions of the logotype is used depending on what colour of the background it is placed on. In situations where both the black and white version can be used, the recommendation is to use the white version as it gives a lighter and more friendly impression.
+        Different versions of the logotype is used depending on what color of the background it is placed on. In situations where both the black and white version can be used, the recommendation is to use the white version as it gives a lighter and more friendly impression.
         </p>
         <p>
         When placing the logotype on backgrounds, it may only be placed no an area that has low level of detail and is naturally light or dark. Only use images from the Swedbank Pay image library. Use the white text version on dark images, and the black text version on light images.
@@ -152,15 +152,15 @@ const Favicon = () => (
             </a>
         }
         <ComponentPreview language="html" codeFigure>
-            <link rel="apple-touch-icon" sizes="114x114" href={`${basename}/icons/apple-touch-icon-114x114.png`} />
-            <link rel="apple-touch-icon" sizes="120x120" href={`${basename}/icons/apple-touch-icon-120x120.png`} />
-            <link rel="apple-touch-icon" sizes="144x144" href={`${basename}/icons/apple-touch-icon-144x144.png`} />
-            <link rel="apple-touch-icon" sizes="152x152" href={`${basename}/icons/apple-touch-icon-152x152.png`} />
-            <link rel="apple-touch-icon" sizes="180x180" href={`${basename}/icons/apple-touch-icon-180x180.png`} />
-            <link rel="apple-touch-icon" sizes="57x57" href={`${basename}/icons/apple-touch-icon-57x57.png`} />
-            <link rel="apple-touch-icon" sizes="60x60" href={`${basename}/icons/apple-touch-icon-60x60.png`} />
-            <link rel="apple-touch-icon" sizes="72x72" href={`${basename}/icons/apple-touch-icon-72x72.png`} />
-            <link rel="apple-touch-icon" sizes="76x76" href={`${basename}/icons/apple-touch-icon-76x76.png`} />
+            <link rel="apple-touch-icon" sizes="114x114" href={`${basename}icons/apple-touch-icon-114x114.png`} />
+            <link rel="apple-touch-icon" sizes="120x120" href={`${basename}icons/apple-touch-icon-120x120.png`} />
+            <link rel="apple-touch-icon" sizes="144x144" href={`${basename}icons/apple-touch-icon-144x144.png`} />
+            <link rel="apple-touch-icon" sizes="152x152" href={`${basename}icons/apple-touch-icon-152x152.png`} />
+            <link rel="apple-touch-icon" sizes="180x180" href={`${basename}icons/apple-touch-icon-180x180.png`} />
+            <link rel="apple-touch-icon" sizes="57x57" href={`${basename}icons/apple-touch-icon-57x57.png`} />
+            <link rel="apple-touch-icon" sizes="60x60" href={`${basename}icons/apple-touch-icon-60x60.png`} />
+            <link rel="apple-touch-icon" sizes="72x72" href={`${basename}icons/apple-touch-icon-72x72.png`} />
+            <link rel="apple-touch-icon" sizes="76x76" href={`${basename}icons/apple-touch-icon-76x76.png`} />
             <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href={`${basename}/icons/apple-touch-startup-image-320x460.png`} />
             <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href={`${basename}/icons/apple-touch-startup-image-640x920.png`} />
             <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href={`${basename}/icons/apple-touch-startup-image-640x1096.png`} />
@@ -171,19 +171,19 @@ const Favicon = () => (
             <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href={`${basename}/icons/apple-touch-startup-image-1496x2048.png`} />
             <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href={`${basename}/icons/apple-touch-startup-image-768x1004.png`} />
             <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href={`${basename}/icons/apple-touch-startup-image-1536x2008.png`} />
-            <link rel="icon" type="image/png" sizes="16x16" href={`${basename}/icons/favicon-16x16.png`} />
-            <link rel="icon" type="image/png" sizes="32x32" href={`${basename}/icons/favicon-32x32.png`} />
-            <link rel="icon" type="image/png" sizes="48x48" href={`${basename}/icons/favicon-48x48.png`} />
-            <link rel="manifest" href={`${basename}/icons/manifest.json`} />
-            <link rel="shortcut icon" href={`${basename}/icons/favicon.ico`} />
+            <link rel="icon" type="image/png" sizes="16x16" href={`${basename}icons/favicon-16x16.png`} />
+            <link rel="icon" type="image/png" sizes="32x32" href={`${basename}icons/favicon-32x32.png`} />
+            <link rel="icon" type="image/png" sizes="48x48" href={`${basename}icons/favicon-48x48.png`} />
+            <link rel="manifest" href={`${basename}icons/manifest.webmanifest`} />
+            <link rel="shortcut icon" href={`${basename}icons/favicon.ico`} />
             <meta name="apple-mobile-web-app-capable" content="yes" />
             <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
             <meta name="apple-mobile-web-app-title" content={`${process.env.brandTitle} App`} />
             <meta name="application-name" content={`${process.env.brandTitle} App`} />
             <meta name="mobile-web-app-capable" content="yes" />
             <meta name="msapplication-TileColor" content="#000" />
-            <meta name="msapplication-TileImage" content={`${basename}/icons/mstile-144x144.png`} />
-            <meta name="msapplication-config" content={`${basename}/icons/browserconfig.xml`} />
+            <meta name="msapplication-TileImage" content={`${basename}icons/mstile-144x144.png`} />
+            <meta name="msapplication-config" content={`${basename}icons/browserconfig.xml`} />
             <meta name="theme-color" content="#000" />
         </ComponentPreview>
     </section>
@@ -221,7 +221,7 @@ const Logotype = () => (
             <DocContainer>
                 <section id="logotype-doc">
                     <p className="lead">
-                    The Swedbank Pay logotype is available in a vertical and horizontal version, the vertical logo is primary and the one that will build recognition. The logotype exist in two colors – a black text logo and a white text logo. They are used depending on what colour of the background the logo is placed on.
+                    The Swedbank Pay logotype is available in a vertical and horizontal version, the vertical logo is primary and the one that will build recognition. The logotype exist in two colors – a black text logo and a white text logo. They are used depending on what color of the background the logo is placed on.
                     </p>
                     <Overview />
                     <LogoBlack />
