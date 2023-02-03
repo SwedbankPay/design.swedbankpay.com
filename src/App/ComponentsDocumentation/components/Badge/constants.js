@@ -4,18 +4,24 @@ const BadgeOptions = ({ number }) => (
     <>
         {number ?
             <div className="badge-showcase">
-                <p> <span className="badge badge-yellow badge-number">1</span></p>
-                <p> <span className="badge badge-gray badge-number">2</span></p>
-                <p> <span className="badge badge-red badge-number">3</span></p>
-                <p> <span className="badge badge-blue badge-number">4</span></p>
-                <p> <span className="badge badge-pink badge-number">5</span></p>
-                <p> <span className="badge badge-green badge-number">6</span></p>
-                <p> <span className="badge badge-orange badge-number">7</span></p>
-                <p> <span className="badge badge-turqouise badge-number">8</span></p>
-                <p> <span className="badge badge-brown badge-number">9</span></p>
+                <p> <span className="badge badge-default badge-number">1</span></p>
+                <p> <span className="badge badge-inactive badge-number">2</span></p>
+                <p> <span className="badge badge-warning badge-number">3</span></p>
+                <p> <span className="badge badge-yellow badge-number">4</span></p>
+                <p> <span className="badge badge-gray badge-number">5</span></p>
+                <p> <span className="badge badge-red badge-number">6</span></p>
+                <p> <span className="badge badge-blue badge-number">7</span></p>
+                <p> <span className="badge badge-pink badge-number">8</span></p>
+                <p> <span className="badge badge-green badge-number">9</span></p>
+                <p> <span className="badge badge-orange badge-number">10</span></p>
+                <p> <span className="badge badge-turqouise badge-number">11</span></p>
+                <p> <span className="badge badge-brown badge-number">12</span></p>
             </div>
             :
             <div className="badge-showcase">
+                <p> <span className="badge badge-default">Document</span></p>
+                <p> <span className="badge badge-inactive">Document</span></p>
+                <p> <span className="badge badge-warning">Document</span></p>
                 <p> <span className="badge badge-yellow-light">Document</span></p>
                 <p> <span className="badge badge-yellow-lighter">Document</span></p>
                 <p> <span className="badge badge-gray">Document</span></p>
