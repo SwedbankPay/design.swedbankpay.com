@@ -1,5 +1,5 @@
-import React, { Component, Suspense } from "react";
-import { Router, Switch, Route, withRouter } from "react-router-dom";
+import React, { Component, Suspense, useEffect } from "react";
+import { Router, Switch, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 
 import AppHeader from "./AppHeader";
@@ -18,20 +18,6 @@ const basename = process.env.basename || "/";
 
 const history = createBrowserHistory({ basename });
 
-class ScrollToTop extends Component {
-    componentDidUpdate (prevProps) {
-        if (this.props.location !== prevProps.location) {
-            window.scrollTo(0, 0);
-        }
-    }
-
-    render () {
-        return this.props.children;
-    }
-}
-
-const ScrollToTopComponent = withRouter(ScrollToTop);
-
 const Home = React.lazy(() => import(/* webpackChunkName: "home.chunk" */ "./Home/index.js"));
 
 const GetStarted = React.lazy(() => import(/* webpackChunkName: "get-started.chunk" */ "./GetStarted/index.js"));
@@ -46,44 +32,40 @@ const ErrorPage404 = React.lazy(() => import(/* webpackChunkName: "404.chunk" */
 
 const Utilities = React.lazy(() => import(/* webpackChunkName: "utilities.chunk" */ "./Utilities/index.js"));
 
-class App extends Component {
+const App = () => {
 
-    componentDidMount () {
+    useEffect(() => {
         topbar.init();
-    }
+    }, []);
 
-    render () {
-        return (
-            <Router basename={basename} history={history}>
-                <ScrollToTopComponent>
-                    <AppHeader />
-                    <div className="documentation">
-                        <div className="d-md-flex">
-                            <SkipLink/>
-                            <div className="d-none d-lg-block">
-                                <SelectPanel id="doc-sidebar" newSidebar={true} routes={routes} />
-                            </div>
-                            <main id="doc-view" className="doc-view">
-                                <SearchBox className={"d-none d-lg-block"}/>
-                                <Suspense fallback={<LoadingComponent />}>
-                                    <Switch>
-                                        <Route exact path="/" component={Home} />
-                                        <Route path="/get-started" component={GetStarted} />
-                                        <Route path="/components" component={Components} />
-                                        <Route path="/identity" component={Identity} />
-                                        <Route path="/patterns" component={Patterns} />
-                                        <Route path="/utilities" component={Utilities} />
-                                        <Route path="/404" component={ErrorPage404} />
-                                        <Route component={ErrorPage404} />
-                                    </Switch>
-                                </Suspense>
-                            </main>
-                        </div>
+    return (
+        <Router basename={basename} history={history}>
+            <AppHeader />
+            <div className="documentation">
+                <div className="d-md-flex">
+                    <SkipLink/>
+                    <div className="d-none d-lg-block">
+                        <SelectPanel id="doc-sidebar" newSidebar={true} routes={routes} />
                     </div>
-                </ScrollToTopComponent>
-            </Router>
-        );
-    }
-}
+                    <main id="doc-view" className="doc-view">
+                        <SearchBox className={"d-none d-lg-block"}/>
+                        <Suspense fallback={<LoadingComponent />}>
+                            <Switch>
+                                <Route exact path="/" component={Home} />
+                                <Route path="/get-started" component={GetStarted} />
+                                <Route path="/components" component={Components} />
+                                <Route path="/identity" component={Identity} />
+                                <Route path="/patterns" component={Patterns} />
+                                <Route path="/utilities" component={Utilities} />
+                                <Route path="/404" component={ErrorPage404} />
+                                <Route component={ErrorPage404} />
+                            </Switch>
+                        </Suspense>
+                    </main>
+                </div>
+            </div>
+        </Router>
+    );
+};
 
 export default App;

@@ -32,7 +32,7 @@ const StatusBadge = ({ type }) => (
 );
 
 StatusBadge.propTypes = {
-    type: PropTypes.oneOf(["new", "updated", "remove", "javascript"]).isRequired
+    type: PropTypes.oneOf(["new", "updated", "remove", "javascript", "deprecated"]).isRequired
 };
 
 export default StatusBadge;
