@@ -208,6 +208,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "touch_app",
               "outlined": true,
               "path": "/components/buttons",
+              "statusBadges": Array [
+                "updated",
+              ],
               "title": "Buttons",
             },
             Object {
@@ -264,6 +267,7 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/dropdown",
               "statusBadges": Array [
                 "javascript",
+                "updated",
               ],
               "title": "Dropdown",
             },
@@ -394,6 +398,7 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/sidebar",
               "statusBadges": Array [
                 "javascript",
+                "updated",
               ],
               "title": "Sidebar",
             },
@@ -440,9 +445,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "code",
               "outlined": true,
               "path": "/components/tags",
-              "statusBadges": Array [
-                "updated",
-              ],
               "title": "Tags",
             },
             Object {
@@ -469,6 +471,7 @@ exports[`Utilities: RenderPage renders 1`] = `
               "path": "/components/tooltips",
               "statusBadges": Array [
                 "javascript",
+                "updated",
               ],
               "title": "Tooltips",
             },
@@ -509,6 +512,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               "icon": "format_align_justify",
               "outlined": true,
               "path": "/patterns/forms",
+              "statusBadges": Array [
+                "updated",
+              ],
               "title": "Forms",
             },
             Object {
@@ -517,7 +523,7 @@ exports[`Utilities: RenderPage renders 1`] = `
               "outlined": true,
               "path": "/patterns/login",
               "statusBadges": Array [
-                "new",
+                "updated",
               ],
               "title": "Login",
             },

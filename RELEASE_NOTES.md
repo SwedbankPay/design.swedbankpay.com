@@ -15,7 +15,7 @@
     -   Update z-index
 
 -   Button:
-    -   Update `button-group` css rules
+    -   Update `button-group` css rules: display flex & flex-wrap & gap style
 
 ## Design Guide documentation changes
 -   Interactive playground:
