@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { NavLink, withRouter } from "react-router-dom";
+import React, { Component, useState, useEffect } from "react";
+import { NavLink, useLocation, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import SearchBox from "../SearchBox/index";
@@ -11,49 +11,45 @@ const brand = process.env.brand;
 
 import { sidebar, topbar } from "@src/scripts/main";
 
-class NavGroup extends Component {
-    constructor (props) {
-        super(props);
-        this.state = {
-            isActive: props.location.pathname.includes(props.route.path)
-        };
-    }
+const MobileNavGroup = ({ route, index, sidebarId }) => {
 
-    componentDidMount () {
-        const activeLeaf = this.props.route.routes.map((childRoute, i) => ({ i,
-            childRoute: childRoute.path })).filter(childRouteObject => this.props.location.pathname.includes(childRouteObject.childRoute));
+    const location = useLocation();
 
-        this.state.isActive && activeLeaf[0] && sidebar.setActiveState(this.props.sidebarId, this.props.index, null, activeLeaf[0].i);
-    }
+    const [isActive, setIsActive] = useState(location.pathname.includes(route.path));
 
-    toggleActive () {
-        this.setState({ isActive: !this.state.isActive });
-    }
+    useEffect(() => {
+        const activeLeaf = route.routes
+            .map((childRoute, i) => ({
+                i,
+                childRoute: childRoute.path
+            }))
+            .filter(childRouteObject => location.pathname.includes(childRouteObject.childRoute));
 
-    shouldComponentUpdate (nextProps, nextState) {
-        return this.state !== nextState;
-    }
+        isActive && activeLeaf[0] && sidebar.setActiveState(sidebarId, index, null, activeLeaf[0].i);
+    }, []);
 
-    render () {
-        const { title, routes } = this.props.route;
+    const toggleActive = () => {
+        setIsActive(!isActive);
+    };
 
-        return (
-            <li className="nav-group">
-                <button className="nav-group-heading" onClick={() => this.toggleActive()}>
-                    <i className="material-icons" aria-hidden="true">arrow_right</i>
-                    {title}
-                </button>
-                <ul className="nav-ul">
-                    {routes.map((childRoute, i) => (
-                        <li key={`nav_leaf_${i}`} className="nav-leaf">
-                            <NavLink activeClassName="active" to={childRoute.path}>{childRoute.title}</NavLink>
-                        </li>
-                    ))}
-                </ul>
-            </li>
-        );
-    }
-}
+    const { title, routes } = route;
+
+    return (
+        <li className="nav-group">
+            <button className="nav-group-heading" onClick={() => toggleActive()}>
+                <i className="material-icons" aria-hidden="true">arrow_right</i>
+                {title}
+            </button>
+            <ul className="nav-ul">
+                {routes.map((childRoute, i) => (
+                    <li key={`nav_leaf_${i}`} className="nav-leaf">
+                        <NavLink activeClassName="active" to={childRoute.path}>{childRoute.title}</NavLink>
+                    </li>
+                ))}
+            </ul>
+        </li>
+    );
+};
 
 class SelectPanel extends Component {
 
@@ -99,7 +95,7 @@ class SelectPanel extends Component {
                         <nav className="sidebar-nav">
                             <ul className="main-nav-ul">
                                 {this.props.routes.map((route, i) => {
-                                    const NavGroupWithRouter = withRouter(NavGroup);
+                                    const NavGroupWithRouter = withRouter(MobileNavGroup);
 
                                     return <NavGroupWithRouter sidebarId={this.props.id} key={`nav_group_${i}`} route={route} index={i} />;
                                 })}
