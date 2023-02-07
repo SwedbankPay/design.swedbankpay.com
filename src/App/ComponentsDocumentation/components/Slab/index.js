@@ -76,23 +76,23 @@ const SlabColors = () => (
             <tbody>
                 <tr>
                     <td className="bg-primary">slab-primary</td>
-                    <td>bg-primary</td>
+                    <td><CodeTags code="bg-primary" type="secondary"/></td>
                 </tr>
                 <tr>
                     <td className="bg-secondary">slab-secondary</td>
-                    <td>bg-secondary</td>
+                    <td><CodeTags code="bg-secondary" type="secondary"/></td>
                 </tr>
                 <tr>
                     <td className="bg-quaternary">slab-plain</td>
-                    <td>bg-quaternary</td>
+                    <td><CodeTags code="bg-quaternary" type="secondary"/></td>
                 </tr>
                 <tr>
                     <td className="bg-tertiary">This can be used</td>
-                    <td>bg-tertiary</td>
+                    <td><CodeTags code="bg-tertiary" type="secondary"/></td>
                 </tr>
                 <tr>
                     <td className="bg-white">This can be used</td>
-                    <td>bg-white</td>
+                    <td><CodeTags code="bg-white" type="secondary"/></td>
                 </tr>
             </tbody>
         </table>
