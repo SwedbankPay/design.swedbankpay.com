@@ -40,12 +40,12 @@ const App = () => {
 
     return (
         <Router basename={basename} history={history}>
-            <AppHeader />
+            <AppHeader /> {/* mobile & tablet topbar & hamburger menu */}
             <div className="documentation">
                 <div className="d-md-flex">
                     <SkipLink/>
-                    <div className="d-none d-lg-block">
-                        <SelectPanel id="doc-sidebar" newSidebar={true} routes={routes} />
+                    <div className="d-none d-lg-block"> {/* desktop sidebar nav */}
+                        <SelectPanel id="doc-sidebar" routes={routes} />
                     </div>
                     <main id="doc-view" className="doc-view">
                         <SearchBox className={"d-none d-lg-block"}/>
