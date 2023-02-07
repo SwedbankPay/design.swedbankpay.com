@@ -3,6 +3,7 @@ import React from "react";
 import { ComponentPreview, DocContainer } from "@docutils";
 import { overviewSlabs } from "./constants";
 import CodeTags from "@components/CodeTags";
+import { Link } from "react-router-dom";
 
 const basename = process.env.basename;
 
@@ -60,6 +61,44 @@ const SlabArrow = () => (
     </section>
 );
 
+const SlabColors = () => (
+    <section id="slab-colors">
+        <h2 id="slab-colors">Slab colors</h2>
+        <p>The slab component supports several colors. You can use our background classes, presented in our <Link to="/identity/color">color</Link> section, or you can use specific slab-classnames.</p>
+        <table className="table table-plain table-condensed">
+            <caption>Color classes for the slab component</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Class name</th>
+                    <th scope="col">Background class</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td className="bg-primary">slab-primary</td>
+                    <td>bg-primary</td>
+                </tr>
+                <tr>
+                    <td className="bg-secondary">slab-secondary</td>
+                    <td>bg-secondary</td>
+                </tr>
+                <tr>
+                    <td className="bg-quaternary">slab-plain</td>
+                    <td>bg-quaternary</td>
+                </tr>
+                <tr>
+                    <td className="bg-tertiary">This can be used</td>
+                    <td>bg-tertiary</td>
+                </tr>
+                <tr>
+                    <td className="bg-white">This can be used</td>
+                    <td>bg-white</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+);
+
 const Slab = () => (
     <DocContainer>
         <p className="lead">
@@ -67,6 +106,7 @@ const Slab = () => (
         </p>
         <OverviewSlab />
         <SlabArrow />
+        <SlabColors/>
     </DocContainer>
 );
 

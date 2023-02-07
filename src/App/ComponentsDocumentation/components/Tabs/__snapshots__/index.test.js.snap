@@ -234,7 +234,7 @@ exports[`Components: Tabs Overview renders 1`] = `
         ulId="tabs-scroll-example-ul"
       />
       <div
-        className="slab slab-default p-5"
+        className="slab slab-edges flat p-5"
       />
     </div>
     <div
@@ -258,7 +258,7 @@ exports[`Components: Tabs Overview renders 1`] = `
         ulId="tabs-scroll-example-ul"
       />
       <div
-        className="slab slab-default p-5"
+        className="slab slab-edges flat p-5"
       />
     </div>
     <p>
