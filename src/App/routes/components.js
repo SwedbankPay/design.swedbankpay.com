@@ -75,7 +75,8 @@ module.exports = [
                 componentPath: "components/Charts",
                 icon: "bar_chart",
                 outlined: true,
-                statusBadges: ["javascript"]
+                statusBadges: ["javascript", "deprecated"],
+                deprecated: true
             },
             {
                 title: "Checkbox",

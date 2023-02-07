@@ -222,11 +222,13 @@ exports[`Utilities: RenderPage renders 1`] = `
             },
             Object {
               "componentPath": "components/Charts",
+              "deprecated": true,
               "icon": "bar_chart",
               "outlined": true,
               "path": "/components/charts",
               "statusBadges": Array [
                 "javascript",
+                "deprecated",
               ],
               "title": "Charts",
             },
