@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import SearchBox from "../SearchBox/index";
@@ -11,7 +11,7 @@ const brand = process.env.brand;
 
 import { sidebar } from "@src/scripts/main";
 
-const MobileNavGroup = ({ route, index, sidebarId }) => {
+const MobileNavGroup = ({ route, index, sidebarId, locationFromJestTest }) => {
 
     const location = useLocation();
 
@@ -87,7 +87,11 @@ const SelectPanel = ({ id, routes, topbarId, topbarSidebar }) => {
                 <div id={id} className="sidebar dg-sidebar">
                     <nav className="sidebar-nav">
                         <ul className="main-nav-ul">
-                            {routes.map((route, i) => <MobileNavGroup sidebarId={id} key={`nav_group_${i}`} route={route} index={i} />)}
+                            {routes.map((route, i) => {
+                                const NavGroupWithRouter = withRouter(MobileNavGroup);
+
+                                return <NavGroupWithRouter sidebarId={id} key={`nav_group_${i}`} route={route} index={i} />;
+                            })}
                         </ul>
                     </nav>
                 </div>
@@ -162,7 +166,7 @@ SelectPanel.propTypes = {
     topbarSidebar: PropTypes.bool,
 };
 
-export default SelectPanel;
+export default withRouter(SelectPanel);
 
 /* For testing */
 export { SearchBox };
