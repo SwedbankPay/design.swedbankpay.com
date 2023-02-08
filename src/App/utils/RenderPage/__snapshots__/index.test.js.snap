@@ -525,9 +525,9 @@ exports[`Utilities: RenderPage renders 1`] = `
         }
         title="Patterns"
       />
-      <Redirect
-        from="/test/*"
-        to="/404"
+      <Route
+        path="/test/*"
+        render={[Function]}
       />
     </Switch>
   </div>
