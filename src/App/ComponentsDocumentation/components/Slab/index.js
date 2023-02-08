@@ -64,35 +64,23 @@ const SlabArrow = () => (
 const SlabColors = () => (
     <section id="slab-colors">
         <h2 id="slab-colors">Slab colors</h2>
-        <p>The slab component supports several colors. You can use our background classes, presented in our <Link to="/identity/color">color</Link> section, or you can use specific slab-classnames.</p>
+        <p>The slab component supports several background colors. You can use all of our background classes, presented in our <Link to="/identity/color">color</Link> section and below.</p>
         <table className="table table-plain table-condensed">
-            <caption>Color classes for the slab component</caption>
-            <thead>
-                <tr>
-                    <th scope="col">Class name</th>
-                    <th scope="col">Background class</th>
-                </tr>
-            </thead>
             <tbody>
                 <tr>
-                    <td className="bg-primary">slab-primary</td>
-                    <td><CodeTags code="bg-primary" type="secondary"/></td>
+                    <td className="bg-primary">bg-primary</td>
                 </tr>
                 <tr>
-                    <td className="bg-secondary">slab-secondary</td>
-                    <td><CodeTags code="bg-secondary" type="secondary"/></td>
+                    <td className="bg-secondary">bg-secondary</td>
                 </tr>
                 <tr>
-                    <td className="bg-quaternary">slab-plain</td>
-                    <td><CodeTags code="bg-quaternary" type="secondary"/></td>
+                    <td className="bg-tertiary">bg-tertiary</td>
                 </tr>
                 <tr>
-                    <td className="bg-tertiary">This can be used</td>
-                    <td><CodeTags code="bg-tertiary" type="secondary"/></td>
+                    <td className="bg-quaternary">bg-quaternary</td>
                 </tr>
                 <tr>
-                    <td className="bg-white">This can be used</td>
-                    <td><CodeTags code="bg-white" type="secondary"/></td>
+                    <td className="bg-white">bg-white</td>
                 </tr>
             </tbody>
         </table>
