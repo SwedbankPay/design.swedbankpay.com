@@ -1,6 +1,5 @@
 import React, { Component, Suspense, useEffect } from "react";
-import { Router, Switch, Route } from "react-router-dom";
-import { createBrowserHistory } from "history";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import AppHeader from "./AppHeader";
 import { LoadingComponent } from "./utils";
@@ -15,8 +14,6 @@ import SearchBox from "./utils/SearchBox";
 import { topbar } from "@src/scripts/main";
 
 const basename = process.env.basename || "/";
-
-const history = createBrowserHistory({ basename });
 
 const Home = React.lazy(() => import(/* webpackChunkName: "home.chunk" */ "./Home/index.js"));
 
@@ -39,7 +36,7 @@ const App = () => {
     }, []);
 
     return (
-        <Router basename={basename} history={history}>
+        <BrowserRouter basename={basename} >
             <AppHeader /> {/* mobile & tablet topbar & hamburger menu */}
             <div className="documentation">
                 <div className="d-md-flex">
@@ -64,7 +61,7 @@ const App = () => {
                     </main>
                 </div>
             </div>
-        </Router>
+        </BrowserRouter>
     );
 };
 
