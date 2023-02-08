@@ -16,7 +16,7 @@ const RenderPage = ({ path, initPath }) => (
             <Switch>
                 <Route exact path={path} render={() => <Redirect to={initPath} />} />
                 {routes.map(route => <RenderRoutes key={`renderRoutes_${route.title}`} {...route} appFolder={route.appFolder} />)}
-                <Redirect from={`${path}/*`} to="/404" />
+                <Route path={`${path}/*`} render={() => <Redirect to="/404" /> } />{/* is this actually necessary ? on first check it seems useless. 404 redirect happens on higher level anyway. check & remove if useless */}
             </Switch>
         </div>
     </Suspense>
