@@ -1,5 +1,4 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
 
 import { SelectPanel } from "../utils";
 
@@ -31,4 +30,4 @@ const AppHeader = () => (
     </header>
 );
 
-export default withRouter(AppHeader);
+export default AppHeader;

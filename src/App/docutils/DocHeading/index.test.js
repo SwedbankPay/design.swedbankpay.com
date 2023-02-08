@@ -14,7 +14,7 @@ describe("Utilities: DocHeading", () => {
         const location = { pathname: "test" };
 
         const wrapper = mount(
-            <DocHeading.WrappedComponent locationFromJestTest={location} />
+            <DocHeading locationFromJestTest={location} />
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -26,7 +26,7 @@ describe("Utilities: DocHeading", () => {
         const location = { pathname: "test-test" };
 
         const wrapper = mount(
-            <DocHeading.WrappedComponent locationFromJestTest={location} />
+            <DocHeading locationFromJestTest={location} />
         );
 
         expect(wrapper).toMatchSnapshot();
