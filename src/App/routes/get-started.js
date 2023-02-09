@@ -6,7 +6,7 @@ module.exports = [
             rotate: true
         },
         entryCardText: "Get started by setting up the Design Guide!",
-        path: "/get-started",
+        path: "get-started",
         wideCard: true,
         redirect: "/get-started/introduction",
         appFolder: "GetStarted",

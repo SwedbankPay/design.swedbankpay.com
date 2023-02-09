@@ -43,7 +43,7 @@ const MobileNavGroup = ({ route, index, sidebarId }) => {
             <ul className="nav-ul">
                 {routes.map((childRoute, i) => (
                     <li key={`nav_leaf_${i}`} className="nav-leaf">
-                        <NavLink to={childRoute.path}>{childRoute.title}</NavLink>
+                        <NavLink to={`${route.path}/${childRoute.path}`}>{childRoute.title}</NavLink>
                     </li>
                 ))}
             </ul>
@@ -121,7 +121,7 @@ const SelectPanel = ({ id, routes, topbarId, topbarSidebar }) => {
                                             </header>
                                             <ul className="secondary-nav-ul">
                                                 {route.routes.map(secondaryRoute => <li key={secondaryRoute.title} className={`secondary-nav-li group${_activeSecondaryLi(secondaryRoute) ? " active" : ""}`}>
-                                                    <NavLink to={secondaryRoute.path}>
+                                                    <NavLink to={`${route.path}/${secondaryRoute.path}`}>
                                                         {secondaryRoute.title}
                                                     </NavLink>
                                                     <ul className="tertiary-nav-ul">

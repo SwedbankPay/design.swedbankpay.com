@@ -7,7 +7,7 @@ module.exports = [
         icon: {
             name: "palette"
         },
-        path: "/identity",
+        path: "identity",
         entryCardText: "Learn about our fundamental principles",
         redirect: "/identity/identity",
         appFolder: "Identity",
