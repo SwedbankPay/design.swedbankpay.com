@@ -14,7 +14,7 @@ const RenderPage = ({ initPath }) => (
             <span className="dg-current-version text-uppercase">Design Guide – v. {packageJson.version}</span>
             {changeLogs[0].latestVersion ? <></> : <span className="dg-current-version text-uppercase ml-3"><a href="https://design.swedbankpay.com">Go to latest version</a></span>}
             <Routes>
-                <Route exact path={"/"} element={<Navigate to={initPath} />} />
+                <Route exact path={"/"} element={<Navigate replace to={initPath} />} />
                 {routes.map(route => renderRoutes({
                     key: `renderRoutes_${route.title}`,
                     path: route.path,
@@ -23,7 +23,7 @@ const RenderPage = ({ initPath }) => (
                     appFolder: route.appFolder,
                 })
                 )}
-                <Route path={"*"} element={<Navigate to="/404" /> } />
+                <Route path={"*"} element={<Navigate replace to="/404" /> } />
             </Routes>
         </div>
     </Suspense>

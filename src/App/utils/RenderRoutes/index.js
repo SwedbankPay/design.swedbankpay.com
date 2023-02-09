@@ -6,7 +6,7 @@ import { DocHeading, StatusBadge } from "@docutils";
 
 const renderRoutes = ({ key, path, redirect, routes, appFolder }) => (
     <Fragment key={key}>
-        <Route exact path={"/"} element={<Navigate to={redirect} />}/>
+        <Route exact path={"/"} element={<Navigate replace to={redirect} />}/>
         {routes.map(route => {
             const { path, componentPath } = route;
 
@@ -23,7 +23,7 @@ const renderRoutes = ({ key, path, redirect, routes, appFolder }) => (
                 <RouteRenderComponent />
             </>} />;
         })}
-        <Route path={`${path}/*`} element={<Navigate to="/404" />} />
+        <Route path={`${path}/*`} element={<Navigate replace to="/404" />} />
     </ Fragment>
 );
 
