@@ -3,8 +3,6 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 import packageJson from "~/package";
 
-import { changeLogs } from "@src/App/Home/constants";
-
 import { RenderRoutes, LoadingComponent } from "../";
 import routes from "@src/App/routes/all";
 
@@ -12,7 +10,6 @@ const RenderPage = ({ path, initPath }) => (
     <Suspense fallback={<LoadingComponent />}>
         <div className="doc-container">
             <span className="dg-current-version text-uppercase">Design Guide – v. {packageJson.version}</span>
-            {changeLogs[0].latestVersion ? <></> : <span className="dg-current-version text-uppercase ml-3"><a href="https://design.swedbankpay.com">Go to latest version</a></span>}
             <Switch>
                 <Route exact path={path} render={() => <Redirect to={initPath} />} />
                 {routes.map(route => <RenderRoutes key={`renderRoutes_${route.title}`} {...route} appFolder={route.appFolder} />)}
