@@ -16,6 +16,8 @@ import { topbar } from "@src/scripts/main";
 
 const basename = process.env.basename || "/";
 
+const brand = process.env.brand;
+
 const history = createBrowserHistory({ basename });
 
 class ScrollToTop extends Component {
@@ -61,7 +63,7 @@ const App = () => {
         const pathname = useLocation().pathname;
 
         return (
-            <div className="text-align-center py-2 bg-version-banner text-white"><span>You are using an older version of the Design Guide. Click <a className="text-banner" href={`https://design.swedbankpay.com/v/${version}${pathname}`}>here</a> to get to the latest version ({version}).</span></div>
+            <div className="text-align-center py-2 bg-version-banner text-white"><span>You are using an older version of the Design Guide. Click <a className="text-banner" href={`https://design.${brand}.com/v/${version}${pathname}`}>here</a> to get to the latest version ({version}).</span></div>
         );
     };
 
