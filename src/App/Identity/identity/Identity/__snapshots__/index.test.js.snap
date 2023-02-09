@@ -13,7 +13,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     <Link
       className="cards cards-primary cards-wide"
       key="Accessibility"
-      to="/identity/accessibility"
+      to="../accessibility"
     >
       <div
         className="cards-content m-0"
@@ -36,7 +36,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     <Link
       className="cards cards-primary cards-wide"
       key="Color"
-      to="/identity/color"
+      to="../color"
     >
       <div
         className="cards-content m-0"
@@ -59,7 +59,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     <Link
       className="cards cards-primary cards-wide"
       key="Copywriting"
-      to="/identity/copywriting"
+      to="../copywriting"
     >
       <div
         className="cards-content m-0"
@@ -82,7 +82,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     <Link
       className="cards cards-primary cards-wide"
       key="Grid"
-      to="/identity/grid"
+      to="../grid"
     >
       <div
         className="cards-content m-0"
@@ -105,7 +105,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     <Link
       className="cards cards-primary cards-wide"
       key="Iconography"
-      to="/identity/iconography"
+      to="../iconography"
     >
       <div
         className="cards-content m-0"
@@ -128,7 +128,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     <Link
       className="cards cards-primary cards-wide"
       key="Imagery"
-      to="/identity/imagery"
+      to="../imagery"
     >
       <div
         className="cards-content m-0"
@@ -151,7 +151,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     <Link
       className="cards cards-primary cards-wide"
       key="Logotype"
-      to="/identity/logotype"
+      to="../logotype"
     >
       <div
         className="cards-content m-0"
@@ -174,7 +174,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     <Link
       className="cards cards-primary cards-wide"
       key="Page layout"
-      to="/identity/page-layout"
+      to="../page-layout"
     >
       <div
         className="cards-content m-0"
@@ -197,7 +197,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     <Link
       className="cards cards-primary cards-wide"
       key="Spacing"
-      to="/identity/spacing"
+      to="../spacing"
     >
       <div
         className="cards-content m-0"
@@ -220,7 +220,7 @@ exports[`Identity: Identity MenuOverview renders 1`] = `
     <Link
       className="cards cards-primary cards-wide"
       key="Typography"
-      to="/identity/typography"
+      to="../typography"
     >
       <div
         className="cards-content m-0"

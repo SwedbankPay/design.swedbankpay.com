@@ -7,7 +7,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Accordion"
-    to="/components/accordion"
+    to="../accordion"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -34,7 +34,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Action list"
-    to="/components/action-list"
+    to="../action-list"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -61,7 +61,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Alerts"
-    to="/components/alerts"
+    to="../alerts"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -88,7 +88,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Badges"
-    to="/components/badge"
+    to="../badge"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -115,7 +115,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Breadcrumb"
-    to="/components/breadcrumb"
+    to="../breadcrumb"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -142,7 +142,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Buttons"
-    to="/components/buttons"
+    to="../buttons"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -169,7 +169,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Cards"
-    to="/components/cards"
+    to="../cards"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -196,7 +196,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Charts"
-    to="/components/charts"
+    to="../charts"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -223,7 +223,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Checkbox"
-    to="/components/checkbox"
+    to="../checkbox"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -250,7 +250,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Datepickers"
-    to="/components/datepickers"
+    to="../datepickers"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -277,7 +277,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Dialog"
-    to="/components/dialog"
+    to="../dialog"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -304,7 +304,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Dropdown"
-    to="/components/dropdown"
+    to="../dropdown"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -331,7 +331,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Expandable"
-    to="/components/expandable"
+    to="../expandable"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -358,7 +358,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Input field"
-    to="/components/input-field"
+    to="../input-field"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -385,7 +385,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Links"
-    to="/components/links"
+    to="../links"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -412,7 +412,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Lists"
-    to="/components/lists"
+    to="../lists"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -439,7 +439,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Loader"
-    to="/components/loader"
+    to="../loader"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -466,7 +466,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Media Object"
-    to="/components/media-object"
+    to="../media-object"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -493,7 +493,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Navigation"
-    to="/components/nav"
+    to="../nav"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -525,7 +525,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Pagination"
-    to="/components/pagination"
+    to="../pagination"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -552,7 +552,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Panel"
-    to="/components/panel"
+    to="../panel"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -579,7 +579,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Progress steps"
-    to="/components/progress-steps"
+    to="../progress-steps"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -606,7 +606,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Radio button"
-    to="/components/radio-button"
+    to="../radio-button"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -633,7 +633,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Rangeslider"
-    to="/components/rangeslider"
+    to="../rangeslider"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -660,7 +660,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Sheet"
-    to="/components/sheet"
+    to="../sheet"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -687,7 +687,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Select"
-    to="/components/select"
+    to="../select"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -714,7 +714,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Sidebar"
-    to="/components/sidebar"
+    to="../sidebar"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -741,7 +741,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Skip link"
-    to="/components/skip-link"
+    to="../skip-link"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -768,7 +768,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Slab"
-    to="/components/slab"
+    to="../slab"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -795,7 +795,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Status"
-    to="/components/status"
+    to="../status"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -822,7 +822,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Tables"
-    to="/components/tables"
+    to="../tables"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -849,7 +849,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Tabs"
-    to="/components/tabs"
+    to="../tabs"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -876,7 +876,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Tags"
-    to="/components/tags"
+    to="../tags"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -903,7 +903,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Toast"
-    to="/components/toast"
+    to="../toast"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -930,7 +930,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Togglebox"
-    to="/components/togglebox"
+    to="../togglebox"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -957,7 +957,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Tooltips"
-    to="/components/tooltips"
+    to="../tooltips"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -984,7 +984,7 @@ exports[`Components: Components MenuOverview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Topbar"
-    to="/components/topbar"
+    to="../topbar"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "

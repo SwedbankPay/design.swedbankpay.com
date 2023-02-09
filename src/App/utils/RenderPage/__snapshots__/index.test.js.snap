@@ -15,521 +15,1006 @@ exports[`Utilities: RenderPage renders 1`] = `
       Design Guide – v. 
       10.6.1
     </span>
-    <Switch>
+    <Routes>
       <Route
+        element={
+          <Navigate
+            replace={true}
+            to="test/test"
+          />
+        }
         exact={true}
-        path="/test"
-        render={[Function]}
-      />
-      <RenderRoutes
-        appFolder="GetStarted"
-        entryCardText="Get started by setting up the Design Guide!"
-        icon={
-          Object {
-            "name": "wb_incandescent",
-            "rotate": true,
-          }
-        }
-        key="renderRoutes_Get started"
-        path="/get-started"
-        redirect="/get-started/introduction"
-        routes={
-          Array [
-            Object {
-              "componentPath": "get-started/Introduction",
-              "path": "/get-started/introduction",
-              "title": "Introduction",
-            },
-            Object {
-              "componentPath": "get-started/ForDevelopers",
-              "path": "/get-started/for-developers",
-              "title": "For developers",
-            },
-            Object {
-              "componentPath": "get-started/ForDesigners",
-              "path": "/get-started/for-designers",
-              "title": "For designers",
-            },
-          ]
-        }
-        title="Get started"
-        wideCard={true}
-      />
-      <RenderRoutes
-        appFolder="Identity"
-        entryCardText="Learn about our fundamental principles"
-        icon={
-          Object {
-            "name": "palette",
-          }
-        }
-        key="renderRoutes_Identity"
-        path="/identity"
-        redirect="/identity/identity"
-        routes={
-          Array [
-            Object {
-              "componentPath": "identity/Identity",
-              "path": "/identity/identity",
-              "title": "Overview",
-            },
-            Object {
-              "componentPath": "identity/Accessibility",
-              "path": "/identity/accessibility",
-              "text": "Principles & WCAG 2.1 guidelines",
-              "title": "Accessibility",
-            },
-            Object {
-              "componentPath": "identity/Color",
-              "path": "/identity/color",
-              "text": "Our color palette with HEX codes",
-              "title": "Color",
-            },
-            Object {
-              "componentPath": "identity/Copywriting",
-              "path": "/identity/copywriting",
-              "text": "Tonality & UX copy in our products",
-              "title": "Copywriting",
-            },
-            Object {
-              "componentPath": "identity/Grid",
-              "path": "/identity/grid",
-              "text": "Our grid and best practices",
-              "title": "Grid",
-            },
-            Object {
-              "componentPath": "identity/Iconography",
-              "path": "/identity/iconography",
-              "text": "Guidelines and icon library",
-              "title": "Iconography",
-            },
-            Object {
-              "componentPath": "identity/Imagery",
-              "path": "/identity/imagery",
-              "text": "Guidelines and image library",
-              "title": "Imagery",
-            },
-            Object {
-              "componentPath": "identity/Logotype",
-              "path": "/identity/logotype",
-              "statusBadges": Array [
-                "updated",
-              ],
-              "text": "The TESTBRAND logotype",
-              "title": "Logotype",
-            },
-            Object {
-              "componentPath": "identity/Page-layout",
-              "path": "/identity/page-layout",
-              "text": "See our layout structure",
-              "title": "Page layout",
-            },
-            Object {
-              "componentPath": "identity/Spacing",
-              "path": "/identity/spacing",
-              "text": "8-point spacing system",
-              "title": "Spacing",
-            },
-            Object {
-              "componentPath": "identity/Typography",
-              "path": "/identity/typography",
-              "statusBadges": Array [
-                "updated",
-              ],
-              "text": "See our fronts and sizing",
-              "title": "Typography",
-            },
-          ]
-        }
-        title="Identity"
-      />
-      <RenderRoutes
-        appFolder="ComponentsDocumentation"
-        entryCardText="Find all currently available components here"
-        icon={
-          Object {
-            "name": "category",
-          }
-        }
-        key="renderRoutes_Components"
-        path="/components"
-        redirect="/components/components"
-        routes={
-          Array [
-            Object {
-              "componentPath": "components/Components",
-              "path": "/components/components",
-              "title": "Overview",
-            },
-            Object {
-              "componentPath": "components/Accordion",
-              "icon": "calendar_view_day",
-              "outlined": true,
-              "path": "/components/accordion",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Accordion",
-            },
-            Object {
-              "componentPath": "components/ActionList",
-              "icon": "list",
-              "path": "/components/action-list",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Action list",
-            },
-            Object {
-              "componentPath": "components/Alerts",
-              "icon": "error_outline",
-              "path": "/components/alerts",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Alerts",
-            },
-            Object {
-              "componentPath": "components/Badge",
-              "icon": "more",
-              "outlined": true,
-              "path": "/components/badge",
-              "title": "Badges",
-            },
-            Object {
-              "componentPath": "components/Breadcrumb",
-              "icon": "last_page",
-              "outlined": true,
-              "path": "/components/breadcrumb",
-              "title": "Breadcrumb",
-            },
-            Object {
-              "componentPath": "components/Buttons",
-              "icon": "touch_app",
-              "outlined": true,
-              "path": "/components/buttons",
-              "title": "Buttons",
-            },
-            Object {
-              "componentPath": "components/Card",
-              "icon": "view_agenda",
-              "outlined": true,
-              "path": "/components/cards",
-              "title": "Cards",
-            },
-            Object {
-              "componentPath": "components/Charts",
-              "icon": "bar_chart",
-              "outlined": true,
-              "path": "/components/charts",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Charts",
-            },
-            Object {
-              "componentPath": "components/Checkbox",
-              "icon": "check_box",
-              "outlined": true,
-              "path": "/components/checkbox",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Checkbox",
-            },
-            Object {
-              "componentPath": "components/Datepickers",
-              "icon": "event",
-              "outlined": true,
-              "path": "/components/datepickers",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Datepickers",
-            },
-            Object {
-              "componentPath": "components/Dialog",
-              "icon": "picture_in_picture",
-              "outlined": true,
-              "path": "/components/dialog",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Dialog",
-            },
-            Object {
-              "componentPath": "components/Dropdown",
-              "icon": "expand_more",
-              "outlined": true,
-              "path": "/components/dropdown",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Dropdown",
-            },
-            Object {
-              "componentPath": "components/Expandable",
-              "icon": "expand",
-              "path": "/components/expandable",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Expandable",
-            },
-            Object {
-              "componentPath": "components/InputField",
-              "icon": "text_fields",
-              "path": "/components/input-field",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Input field",
-            },
-            Object {
-              "componentPath": "components/Links",
-              "icon": "link",
-              "outlined": true,
-              "path": "/components/links",
-              "title": "Links",
-            },
-            Object {
-              "componentPath": "components/Lists",
-              "icon": "sort",
-              "outlined": true,
-              "path": "/components/lists",
-              "title": "Lists",
-            },
-            Object {
-              "componentPath": "components/Loader",
-              "icon": "loop",
-              "outlined": true,
-              "path": "/components/loader",
-              "title": "Loader",
-            },
-            Object {
-              "componentPath": "components/MediaObject",
-              "icon": "account_circle",
-              "outlined": true,
-              "path": "/components/media-object",
-              "title": "Media Object",
-            },
-            Object {
-              "componentPath": "components/Nav",
-              "deprecated": true,
-              "icon": "explore",
-              "outlined": true,
-              "path": "/components/nav",
-              "statusBadges": Array [
-                "javascript",
-                "deprecated",
-              ],
-              "title": "Navigation",
-            },
-            Object {
-              "componentPath": "components/Pagination",
-              "icon": "power_input",
-              "outlined": true,
-              "path": "/components/pagination",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Pagination",
-            },
-            Object {
-              "componentPath": "components/Panel",
-              "icon": "table_rows",
-              "outlined": true,
-              "path": "/components/panel",
-              "title": "Panel",
-            },
-            Object {
-              "componentPath": "components/ProgressSteps",
-              "icon": "hdr_strong",
-              "path": "/components/progress-steps",
-              "title": "Progress steps",
-            },
-            Object {
-              "componentPath": "components/RadioButton",
-              "icon": "radio_button_checked",
-              "path": "/components/radio-button",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Radio button",
-            },
-            Object {
-              "componentPath": "components/Rangeslider",
-              "icon": "tune",
-              "outlined": true,
-              "path": "/components/rangeslider",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Rangeslider",
-            },
-            Object {
-              "componentPath": "components/Sheet",
-              "icon": "vertical_split",
-              "outlined": true,
-              "path": "/components/sheet",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Sheet",
-            },
-            Object {
-              "componentPath": "components/Select",
-              "icon": "arrow_drop_down_circle",
-              "outlined": true,
-              "path": "/components/select",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Select",
-            },
-            Object {
-              "componentPath": "components/Sidebar",
-              "icon": "view_sidebar",
-              "outlined": true,
-              "path": "/components/sidebar",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Sidebar",
-            },
-            Object {
-              "componentPath": "components/SkipLink",
-              "icon": "skip_next",
-              "outlined": true,
-              "path": "/components/skip-link",
-              "title": "Skip link",
-            },
-            Object {
-              "componentPath": "components/Slab",
-              "icon": "crop_landscape",
-              "outlined": true,
-              "path": "/components/slab",
-              "title": "Slab",
-            },
-            Object {
-              "componentPath": "components/Status",
-              "icon": "check_circle",
-              "outlined": true,
-              "path": "/components/status",
-              "title": "Status",
-            },
-            Object {
-              "componentPath": "components/Tables",
-              "icon": "view_list",
-              "outlined": true,
-              "path": "/components/tables",
-              "title": "Tables",
-            },
-            Object {
-              "componentPath": "components/Tabs",
-              "icon": "folder",
-              "outlined": true,
-              "path": "/components/tabs",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Tabs",
-            },
-            Object {
-              "componentPath": "components/CodeTags",
-              "icon": "code",
-              "outlined": true,
-              "path": "/components/tags",
-              "statusBadges": Array [
-                "updated",
-              ],
-              "title": "Tags",
-            },
-            Object {
-              "componentPath": "components/Toast",
-              "icon": "picture_in_picture",
-              "outlined": true,
-              "path": "/components/toast",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Toast",
-            },
-            Object {
-              "componentPath": "components/Togglebox",
-              "icon": "toggle_off",
-              "outlined": true,
-              "path": "/components/togglebox",
-              "title": "Togglebox",
-            },
-            Object {
-              "componentPath": "components/Tooltips",
-              "icon": "filter_frames",
-              "outlined": true,
-              "path": "/components/tooltips",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Tooltips",
-            },
-            Object {
-              "componentPath": "components/Topbar",
-              "icon": "call_to_action",
-              "outlined": true,
-              "path": "/components/topbar",
-              "statusBadges": Array [
-                "javascript",
-              ],
-              "title": "Topbar",
-            },
-          ]
-        }
-        title="Components"
-      />
-      <RenderRoutes
-        appFolder="Patterns"
-        entryCardText="Learn about how to we set up different structures"
-        icon={
-          Object {
-            "name": "dashboard",
-          }
-        }
-        key="renderRoutes_Patterns"
-        path="/patterns"
-        redirect="/patterns/patterns"
-        routes={
-          Array [
-            Object {
-              "componentPath": "content/Patterns",
-              "path": "/patterns/patterns",
-              "title": "Overview",
-            },
-            Object {
-              "componentPath": "content/Forms",
-              "icon": "format_align_justify",
-              "outlined": true,
-              "path": "/patterns/forms",
-              "title": "Forms",
-            },
-            Object {
-              "componentPath": "content/Login",
-              "icon": "account_circle",
-              "outlined": true,
-              "path": "/patterns/login",
-              "statusBadges": Array [
-                "new",
-              ],
-              "title": "Login",
-            },
-          ]
-        }
-        title="Patterns"
+        path="/"
       />
       <Route
-        path="/test/*"
-        render={[Function]}
+        element={
+          <Navigate
+            replace={true}
+            to="/get-started/introduction"
+          />
+        }
+        exact={true}
+        path="/"
       />
-    </Switch>
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_introduction"
+        path="introduction"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_for-developers"
+        path="for-developers"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_for-designers"
+        path="for-designers"
+      />
+      <Route
+        element={
+          <Navigate
+            replace={true}
+            to="/404"
+          />
+        }
+        path="get-started/*"
+      />
+      <Route
+        element={
+          <Navigate
+            replace={true}
+            to="/identity/identity"
+          />
+        }
+        exact={true}
+        path="/"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_identity"
+        path="identity"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_accessibility"
+        path="accessibility"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_color"
+        path="color"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_copywriting"
+        path="copywriting"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_grid"
+        path="grid"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_iconography"
+        path="iconography"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_imagery"
+        path="imagery"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="updated"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_logotype"
+        path="logotype"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_page-layout"
+        path="page-layout"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_spacing"
+        path="spacing"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="updated"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_typography"
+        path="typography"
+      />
+      <Route
+        element={
+          <Navigate
+            replace={true}
+            to="/404"
+          />
+        }
+        path="identity/*"
+      />
+      <Route
+        element={
+          <Navigate
+            replace={true}
+            to="/components/components"
+          />
+        }
+        exact={true}
+        path="/"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_components"
+        path="components"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_accordion"
+        path="accordion"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_action-list"
+        path="action-list"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_alerts"
+        path="alerts"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_badge"
+        path="badge"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_breadcrumb"
+        path="breadcrumb"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_buttons"
+        path="buttons"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_cards"
+        path="cards"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_charts"
+        path="charts"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_checkbox"
+        path="checkbox"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_datepickers"
+        path="datepickers"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_dialog"
+        path="dialog"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_dropdown"
+        path="dropdown"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_expandable"
+        path="expandable"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_input-field"
+        path="input-field"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_links"
+        path="links"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_lists"
+        path="lists"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_loader"
+        path="loader"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_media-object"
+        path="media-object"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+              <StatusBadge
+                type="deprecated"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_nav"
+        path="nav"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_pagination"
+        path="pagination"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_panel"
+        path="panel"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_progress-steps"
+        path="progress-steps"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_radio-button"
+        path="radio-button"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_rangeslider"
+        path="rangeslider"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_sheet"
+        path="sheet"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_select"
+        path="select"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_sidebar"
+        path="sidebar"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_skip-link"
+        path="skip-link"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_slab"
+        path="slab"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_status"
+        path="status"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_tables"
+        path="tables"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_tabs"
+        path="tabs"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="updated"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_tags"
+        path="tags"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_toast"
+        path="toast"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_togglebox"
+        path="togglebox"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_tooltips"
+        path="tooltips"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="javascript"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_topbar"
+        path="topbar"
+      />
+      <Route
+        element={
+          <Navigate
+            replace={true}
+            to="/404"
+          />
+        }
+        path="components/*"
+      />
+      <Route
+        element={
+          <Navigate
+            replace={true}
+            to="patterns"
+          />
+        }
+        exact={true}
+        path="/"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_patterns"
+        path="patterns"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_forms"
+        path="forms"
+      />
+      <Route
+        element={
+          <React.Fragment>
+            <div
+              className="d-flex align-items-center "
+            >
+              <DocHeading />
+              <StatusBadge
+                type="new"
+              />
+            </div>
+            <UNDEFINED />
+          </React.Fragment>
+        }
+        exact={true}
+        key="doc_route_login"
+        path="login"
+      />
+      <Route
+        element={
+          <Navigate
+            replace={true}
+            to="/404"
+          />
+        }
+        path="patterns/*"
+      />
+      <Route
+        element={
+          <Navigate
+            replace={true}
+            to="/404"
+          />
+        }
+        path="*"
+      />
+    </Routes>
   </div>
 </Suspense>
 `;

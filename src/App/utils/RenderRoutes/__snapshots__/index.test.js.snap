@@ -2,38 +2,38 @@
 
 exports[`Utilities: RenderRoutes renders a basic route structure 1`] = `
 <Router
-  history={
+  location={
+    Object {
+      "hash": "",
+      "key": "testKey",
+      "pathname": "/",
+      "search": "",
+      "state": null,
+    }
+  }
+  navigationType="POP"
+  navigator={
     Object {
       "action": "POP",
-      "block": [Function],
-      "canGo": [Function],
       "createHref": [Function],
-      "entries": Array [
-        Object {
-          "hash": "",
-          "key": "testKey",
-          "pathname": "/",
-          "search": "",
-        },
-      ],
+      "createURL": [Function],
+      "encodeLocation": [Function],
       "go": [Function],
-      "goBack": [Function],
-      "goForward": [Function],
       "index": 0,
-      "length": 1,
       "listen": [Function],
       "location": Object {
         "hash": "",
         "key": "testKey",
         "pathname": "/",
         "search": "",
+        "state": null,
       },
       "push": [Function],
       "replace": [Function],
     }
   }
 >
-  <RenderRoutes
+  <renderRoutes
     appFolder="test"
     path="test"
     redirect="test"
