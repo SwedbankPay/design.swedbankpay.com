@@ -104,47 +104,4 @@ const App = () => {
     );
 };
 
-// class App extends Component {
-
-//     componentDidMount () {
-//         topbar.init();
-//         fetch("https://design.swedbankpay.com/latestVersion.json").then(data => data.json())
-//             .then(data => setVersion(data.latestVersion))
-//             .catch(error => console.warn("Could not fetch latest version from Azure:", error));
-//     }
-
-//     render () {
-//         return (
-// <Router basename={basename} history={history}>
-//     <ScrollToTopComponent>
-//         <AppHeader />
-//         <div className="documentation">
-//             <div className="d-md-flex">
-//                 <SkipLink/>
-//                 <div className="d-none d-lg-block">
-//                     <SelectPanel id="doc-sidebar" newSidebar={true} routes={routes} />
-//                 </div>
-//                 <main id="doc-view" className="doc-view">
-//                     <SearchBox className={"d-none d-lg-block"}/>
-//                     <Suspense fallback={<LoadingComponent />}>
-//                         <Switch>
-//                             <Route exact path="/" component={Home} />
-//                             <Route path="/get-started" component={GetStarted} />
-//                             <Route path="/components" component={Components} />
-//                             <Route path="/identity" component={Identity} />
-//                             <Route path="/patterns" component={Patterns} />
-//                             <Route path="/utilities" component={Utilities} />
-//                             <Route path="/404" component={ErrorPage404} />
-//                             <Route component={ErrorPage404} />
-//                         </Switch>
-//                     </Suspense>
-//                 </main>
-//             </div>
-//         </div>
-//     </ScrollToTopComponent>
-// </Router>
-//         );
-//     }
-// }
-
 export default App;
