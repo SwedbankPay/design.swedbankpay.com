@@ -11,19 +11,19 @@ module.exports = [
         routes: [
             {
                 title: "Overview",
-                path: "/patterns/patterns",
+                path: "patterns",
                 componentPath: "content/Patterns"
             },
             {
                 title: "Forms",
-                path: "/patterns/forms",
+                path: "forms",
                 componentPath: "content/Forms",
                 icon: "format_align_justify",
                 outlined: true
             },
             {
                 title: "Login",
-                path: "/patterns/login",
+                path: "login",
                 componentPath: "content/Login",
                 icon: "account_circle",
                 outlined: true,

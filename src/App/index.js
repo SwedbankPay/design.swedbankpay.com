@@ -49,12 +49,12 @@ const App = () => {
                         <Suspense fallback={<LoadingComponent />}>
                             <Routes>
                                 <Route exact path="/" element={<Home />} />
-                                <Route path="/get-started" element={<GetStarted />} />
-                                <Route path="/components" element={<Components />} />
-                                <Route path="/identity" element={<Identity />} />
-                                <Route path="/patterns" element={<Patterns />} />
-                                <Route path="/utilities" element={<Utilities />} />
-                                <Route path="/404" element={<ErrorPage404 />} />
+                                <Route path="get-started/*" element={<GetStarted />} />
+                                <Route path="components/*" element={<Components />} />
+                                <Route path="identity/*" element={<Identity />} />
+                                <Route path="patterns/*" element={<Patterns />} />
+                                <Route path="utilities/*" element={<Utilities />} />
+                                <Route path="404/*" element={<ErrorPage404 />} />
                                 <Route element={<ErrorPage404 />} />
                             </Routes>
                         </Suspense>

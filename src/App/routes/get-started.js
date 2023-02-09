@@ -13,17 +13,17 @@ module.exports = [
         routes: [
             {
                 title: "Introduction",
-                path: "/get-started/introduction",
+                path: "introduction",
                 componentPath: "get-started/Introduction"
             },
             {
                 title: "For developers",
-                path: "/get-started/for-developers",
+                path: "for-developers",
                 componentPath: "get-started/ForDevelopers"
             },
             {
                 title: "For designers",
-                path: "/get-started/for-designers",
+                path: "for-designers",
                 componentPath: "get-started/ForDesigners"
             }
         ]

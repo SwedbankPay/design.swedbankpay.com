@@ -15,12 +15,12 @@ module.exports = [
         routes: [
             {
                 title: "Overview",
-                path: "/components/components",
+                path: "components",
                 componentPath: "components/Components"
             },
             {
                 title: "Accordion",
-                path: "/components/accordion",
+                path: "accordion",
                 componentPath: "components/Accordion",
                 icon: "calendar_view_day",
                 outlined: true,
@@ -28,49 +28,49 @@ module.exports = [
             },
             {
                 title: "Action list",
-                path: "/components/action-list",
+                path: "action-list",
                 componentPath: "components/ActionList",
                 icon: "list",
                 statusBadges: ["javascript"]
             },
             {
                 title: "Alerts",
-                path: "/components/alerts",
+                path: "alerts",
                 componentPath: "components/Alerts",
                 icon: "error_outline",
                 statusBadges: ["javascript"]
             },
             {
                 title: "Badges",
-                path: "/components/badge",
+                path: "badge",
                 componentPath: "components/Badge",
                 icon: "more",
                 outlined: true
             },
             {
                 title: "Breadcrumb",
-                path: "/components/breadcrumb",
+                path: "breadcrumb",
                 componentPath: "components/Breadcrumb",
                 icon: "last_page",
                 outlined: true
             },
             {
                 title: "Buttons",
-                path: "/components/buttons",
+                path: "buttons",
                 componentPath: "components/Buttons",
                 icon: "touch_app",
                 outlined: true
             },
             {
                 title: "Cards",
-                path: "/components/cards",
+                path: "cards",
                 componentPath: "components/Card",
                 icon: "view_agenda",
                 outlined: true
             },
             {
                 title: "Charts",
-                path: "/components/charts",
+                path: "charts",
                 componentPath: "components/Charts",
                 icon: "bar_chart",
                 outlined: true,
@@ -78,7 +78,7 @@ module.exports = [
             },
             {
                 title: "Checkbox",
-                path: "/components/checkbox",
+                path: "checkbox",
                 componentPath: "components/Checkbox",
                 icon: "check_box",
                 outlined: true,
@@ -86,7 +86,7 @@ module.exports = [
             },
             {
                 title: "Datepickers",
-                path: "/components/datepickers",
+                path: "datepickers",
                 componentPath: "components/Datepickers",
                 icon: "event",
                 outlined: true,
@@ -94,7 +94,7 @@ module.exports = [
             },
             {
                 title: "Dialog",
-                path: "/components/dialog",
+                path: "dialog",
                 componentPath: "components/Dialog",
                 icon: "picture_in_picture",
                 outlined: true,
@@ -102,7 +102,7 @@ module.exports = [
             },
             {
                 title: "Dropdown",
-                path: "/components/dropdown",
+                path: "dropdown",
                 componentPath: "components/Dropdown",
                 icon: "expand_more",
                 outlined: true,
@@ -110,49 +110,49 @@ module.exports = [
             },
             {
                 title: "Expandable",
-                path: "/components/expandable",
+                path: "expandable",
                 componentPath: "components/Expandable",
                 icon: "expand",
                 statusBadges: ["javascript"]
             },
             {
                 title: "Input field",
-                path: "/components/input-field",
+                path: "input-field",
                 componentPath: "components/InputField",
                 icon: "text_fields",
                 statusBadges: ["javascript"]
             },
             {
                 title: "Links",
-                path: "/components/links",
+                path: "links",
                 componentPath: "components/Links",
                 icon: "link",
                 outlined: true
             },
             {
                 title: "Lists",
-                path: "/components/lists",
+                path: "lists",
                 componentPath: "components/Lists",
                 icon: "sort",
                 outlined: true
             },
             {
                 title: "Loader",
-                path: "/components/loader",
+                path: "loader",
                 componentPath: "components/Loader",
                 icon: "loop",
                 outlined: true
             },
             {
                 title: "Media Object",
-                path: "/components/media-object",
+                path: "media-object",
                 componentPath: "components/MediaObject",
                 icon: "account_circle",
                 outlined: true
             },
             {
                 title: "Navigation",
-                path: "/components/nav",
+                path: "nav",
                 componentPath: "components/Nav",
                 icon: "explore",
                 outlined: true,
@@ -161,7 +161,7 @@ module.exports = [
             },
             {
                 title: "Pagination",
-                path: "/components/pagination",
+                path: "pagination",
                 componentPath: "components/Pagination",
                 icon: "power_input",
                 outlined: true,
@@ -169,27 +169,27 @@ module.exports = [
             },
             {
                 title: "Panel",
-                path: "/components/panel",
+                path: "panel",
                 componentPath: "components/Panel",
                 icon: "table_rows",
                 outlined: true
             },
             {
                 title: "Progress steps",
-                path: "/components/progress-steps",
+                path: "progress-steps",
                 componentPath: "components/ProgressSteps",
                 icon: "hdr_strong"
             },
             {
                 title: "Radio button",
-                path: "/components/radio-button",
+                path: "radio-button",
                 componentPath: "components/RadioButton",
                 icon: "radio_button_checked",
                 statusBadges: ["javascript"]
             },
             {
                 title: "Rangeslider",
-                path: "/components/rangeslider",
+                path: "rangeslider",
                 componentPath: "components/Rangeslider",
                 icon: "tune",
                 outlined: true,
@@ -197,7 +197,7 @@ module.exports = [
             },
             {
                 title: "Sheet",
-                path: "/components/sheet",
+                path: "sheet",
                 componentPath: "components/Sheet",
                 icon: "vertical_split",
                 outlined: true,
@@ -205,7 +205,7 @@ module.exports = [
             },
             {
                 title: "Select",
-                path: "/components/select",
+                path: "select",
                 componentPath: "components/Select",
                 icon: "arrow_drop_down_circle",
                 outlined: true,
@@ -213,7 +213,7 @@ module.exports = [
             },
             {
                 title: "Sidebar",
-                path: "/components/sidebar",
+                path: "sidebar",
                 componentPath: "components/Sidebar",
                 icon: "view_sidebar",
                 outlined: true,
@@ -221,35 +221,35 @@ module.exports = [
             },
             {
                 title: "Skip link",
-                path: "/components/skip-link",
+                path: "skip-link",
                 componentPath: "components/SkipLink",
                 icon: "skip_next",
                 outlined: true
             },
             {
                 title: "Slab",
-                path: "/components/slab",
+                path: "slab",
                 componentPath: "components/Slab",
                 icon: "crop_landscape",
                 outlined: true
             },
             {
                 title: "Status",
-                path: "/components/status",
+                path: "status",
                 componentPath: "components/Status",
                 icon: "check_circle",
                 outlined: true
             },
             {
                 title: "Tables",
-                path: "/components/tables",
+                path: "tables",
                 componentPath: "components/Tables",
                 icon: "view_list",
                 outlined: true
             },
             {
                 title: "Tabs",
-                path: "/components/tabs",
+                path: "tabs",
                 componentPath: "components/Tabs",
                 icon: "folder",
                 outlined: true,
@@ -257,7 +257,7 @@ module.exports = [
             },
             {
                 title: "Tags",
-                path: "/components/tags",
+                path: "tags",
                 componentPath: "components/CodeTags",
                 icon: "code",
                 statusBadges: ["updated"],
@@ -265,7 +265,7 @@ module.exports = [
             },
             {
                 title: "Toast",
-                path: "/components/toast",
+                path: "toast",
                 componentPath: "components/Toast",
                 icon: "picture_in_picture",
                 outlined: true,
@@ -273,14 +273,14 @@ module.exports = [
             },
             {
                 title: "Togglebox",
-                path: "/components/togglebox",
+                path: "togglebox",
                 componentPath: "components/Togglebox",
                 icon: "toggle_off",
                 outlined: true
             },
             {
                 title: "Tooltips",
-                path: "/components/tooltips",
+                path: "tooltips",
                 componentPath: "components/Tooltips",
                 icon: "filter_frames",
                 outlined: true,
@@ -288,7 +288,7 @@ module.exports = [
             },
             {
                 title: "Topbar",
-                path: "/components/topbar",
+                path: "topbar",
                 componentPath: "components/Topbar",
                 icon: "call_to_action",
                 outlined: true,

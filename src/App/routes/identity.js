@@ -14,67 +14,67 @@ module.exports = [
         routes: [
             {
                 title: "Overview",
-                path: "/identity/identity",
+                path: "identity",
                 componentPath: "identity/Identity"
             },
             {
                 title: "Accessibility",
-                path: "/identity/accessibility",
+                path: "accessibility",
                 componentPath: "identity/Accessibility",
                 text: "Principles & WCAG 2.1 guidelines"
             },
             {
                 title: "Color",
-                path: "/identity/color",
+                path: "color",
                 componentPath: "identity/Color",
                 text: "Our color palette with HEX codes"
             },
             {
                 title: "Copywriting",
-                path: "/identity/copywriting",
+                path: "copywriting",
                 componentPath: "identity/Copywriting",
                 text: "Tonality & UX copy in our products"
             },
             {
                 title: "Grid",
-                path: "/identity/grid",
+                path: "grid",
                 componentPath: "identity/Grid",
                 text: "Our grid and best practices"
             },
             {
                 title: "Iconography",
-                path: "/identity/iconography",
+                path: "iconography",
                 componentPath: "identity/Iconography",
                 text: "Guidelines and icon library"
             },
             {
                 title: "Imagery",
-                path: "/identity/imagery",
+                path: "imagery",
                 componentPath: "identity/Imagery",
                 text: "Guidelines and image library"
             },
             {
                 title: "Logotype",
-                path: "/identity/logotype",
+                path: "logotype",
                 componentPath: "identity/Logotype",
                 statusBadges: ["updated"],
                 text: `The ${process.env.brandTitle} logotype`
             },
             {
                 title: "Page layout",
-                path: "/identity/page-layout",
+                path: "page-layout",
                 componentPath: "identity/Page-layout",
                 text: "See our layout structure"
             },
             {
                 title: "Spacing",
-                path: "/identity/spacing",
+                path: "spacing",
                 componentPath: "identity/Spacing",
                 text: "8-point spacing system"
             },
             {
                 title: "Typography",
-                path: "/identity/typography",
+                path: "typography",
                 componentPath: "identity/Typography",
                 statusBadges: ["updated"],
                 text: "See our fronts and sizing"
