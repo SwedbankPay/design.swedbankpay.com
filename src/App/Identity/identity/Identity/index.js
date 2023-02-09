@@ -38,7 +38,7 @@ const MenuOverview = () => (
         <h2 id="read-more">Read more</h2>
         <div className="component-overview hide-arrow-icon">
             {overviewList[0].routes.slice(1).map((card, i) => (
-                <Link key={card.title} to={card.path} className="cards cards-primary cards-wide">
+                <Link key={card.title} to={`../${card.path}`} className="cards cards-primary cards-wide">
                     <div className="cards-content m-0">
                         <span className="h3">{card.title}</span>
                         <span>{card.text}</span>

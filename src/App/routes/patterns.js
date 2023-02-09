@@ -4,9 +4,9 @@ module.exports = [
         icon: {
             name: "dashboard"
         },
-        path: "/patterns",
+        path: "patterns",
         entryCardText: "Learn about how to we set up different structures",
-        redirect: "/patterns/patterns",
+        redirect: "patterns",
         appFolder: "Patterns",
         routes: [
             {

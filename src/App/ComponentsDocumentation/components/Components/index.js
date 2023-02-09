@@ -8,7 +8,7 @@ const MenuOverview = () => (
     <section className="component-overview hide-arrow-icon">
         {overviewList[0].routes.slice(1).map(card => (
             card.icon &&
-            <Link key={card.title} to={card.path} className="cards cards-primary cards-wide">
+            <Link key={card.title} to={`../${card.path}`} className="cards cards-primary cards-wide">
                 <div className="cards-content flex-row align-items-center m-0 ">
                     <i className={`material-icons${card.outlined ? " material-icons-outlined" : ""}${card.icon === "call_to_action" ? " v-flip" : ""} mr-3`} aria-hidden="true">{card.icon}</i>
                     <span className="h3 m-0">{card.title}</span>
