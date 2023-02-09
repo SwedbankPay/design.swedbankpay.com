@@ -1,5 +1,5 @@
-import React, { Component, Suspense, useEffect } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import React, { Suspense, useEffect } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import AppHeader from "./AppHeader";
 import { LoadingComponent } from "./utils";
@@ -47,16 +47,16 @@ const App = () => {
                     <main id="doc-view" className="doc-view">
                         <SearchBox className={"d-none d-lg-block"}/>
                         <Suspense fallback={<LoadingComponent />}>
-                            <Switch>
-                                <Route exact path="/" component={Home} />
-                                <Route path="/get-started" component={GetStarted} />
-                                <Route path="/components" component={Components} />
-                                <Route path="/identity" component={Identity} />
-                                <Route path="/patterns" component={Patterns} />
-                                <Route path="/utilities" component={Utilities} />
-                                <Route path="/404" component={ErrorPage404} />
-                                <Route component={ErrorPage404} />
-                            </Switch>
+                            <Routes>
+                                <Route exact path="/" element={<Home />} />
+                                <Route path="/get-started" element={<GetStarted />} />
+                                <Route path="/components" element={<Components />} />
+                                <Route path="/identity" element={<Identity />} />
+                                <Route path="/patterns" element={<Patterns />} />
+                                <Route path="/utilities" element={<Utilities />} />
+                                <Route path="/404" element={<ErrorPage404 />} />
+                                <Route element={<ErrorPage404 />} />
+                            </Routes>
                         </Suspense>
                     </main>
                 </div>

@@ -43,7 +43,7 @@ const MobileNavGroup = ({ route, index, sidebarId }) => {
             <ul className="nav-ul">
                 {routes.map((childRoute, i) => (
                     <li key={`nav_leaf_${i}`} className="nav-leaf">
-                        <NavLink activeClassName="active" to={childRoute.path}>{childRoute.title}</NavLink>
+                        <NavLink to={childRoute.path}>{childRoute.title}</NavLink>
                     </li>
                 ))}
             </ul>
@@ -102,14 +102,14 @@ const SelectPanel = ({ id, routes, topbarId, topbarSidebar }) => {
                         </div>
                         <ul className="main-nav-ul">
                             <li className={`main-nav-li${location.pathname === "/" ? " active" : ""}`}>
-                                <NavLink activeClassName="active" to={"/"}>
+                                <NavLink to={"/"}>
                                     <i className="material-icons-outlined" aria-hidden="true">home</i>
                                         Welcome
                                 </NavLink>
                             </li>
                             {routes.map(route => <li key={route.title}
                                 className={`main-nav-li${_activeSecondaryNav(route.path) ? " active" : ""}`}>
-                                <NavLink activeClassName="active" to={route.path}>
+                                <NavLink to={route.path}>
                                     <i className={`material-icons-outlined${route.icon.rotate ? " rotated" : ""}`} aria-hidden="true">{route.icon.name}</i>
                                     {route.title}
                                 </NavLink>
@@ -121,7 +121,7 @@ const SelectPanel = ({ id, routes, topbarId, topbarSidebar }) => {
                                             </header>
                                             <ul className="secondary-nav-ul">
                                                 {route.routes.map(secondaryRoute => <li key={secondaryRoute.title} className={`secondary-nav-li group${_activeSecondaryLi(secondaryRoute) ? " active" : ""}`}>
-                                                    <NavLink activeClassName="active" to={secondaryRoute.path}>
+                                                    <NavLink to={secondaryRoute.path}>
                                                         {secondaryRoute.title}
                                                     </NavLink>
                                                     <ul className="tertiary-nav-ul">
@@ -133,7 +133,7 @@ const SelectPanel = ({ id, routes, topbarId, topbarSidebar }) => {
                                 }
                             </li>)}
                             <li className={"main-nav-li"}>
-                                <NavLink activeClassName="active" to={"/utilities"}>
+                                <NavLink to={"/utilities"}>
                                     <i className="material-icons-outlined" aria-hidden="true">build</i>
                                         Utilities
                                 </NavLink>

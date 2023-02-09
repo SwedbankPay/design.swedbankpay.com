@@ -1,12 +1,12 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Route, Navigate } from "react-router-dom";
 
 import { DocHeading, StatusBadge } from "@docutils";
 
-const RenderRoutes = ({ path, redirect, routes, appFolder }) => (
-    <Switch>
-        <Route exact path={path} render={() => <Redirect to={redirect} />}/>
+const renderRoutes = ({ key, path, redirect, routes, appFolder }) => (
+    <Fragment key={key}>
+        <Route exact path={path} render={() => <Navigate to={redirect} />}/>
         {routes.map(route => {
             const { path, componentPath } = route;
 
@@ -15,7 +15,7 @@ const RenderRoutes = ({ path, redirect, routes, appFolder }) => (
             const RouteRenderComponent = React.lazy(() => import(/* webpackChunkName: "doc-route.chunk_" */"../../" + appFolder + "/" + componentPath + "/index.js"));
             // const RouteRenderComponent = React.lazy(() => import(/* webpackChunkName: "doc-route.chunk_" */`../../${appFolder}/${componentPath}/index.js`));
 
-            return <Route key={`doc_route_${path}`} exact path={path} children={() => <>
+            return <Route key={`doc_route_${path}`} exact path={path} element={() => <>
                 <div className="d-flex align-items-center ">
                     <DocHeading />
                     {route.statusBadges && route.statusBadges.map(statusBadge => <StatusBadge key={`status-badge-${statusBadge}`} type={statusBadge} />)}
@@ -23,15 +23,15 @@ const RenderRoutes = ({ path, redirect, routes, appFolder }) => (
                 <RouteRenderComponent />
             </>} />;
         })}
-        <Redirect from={`${path}/*`} to="/404" />
-    </Switch>
+        <Route path={`${path}/*`} element={<Navigate to="/404" />} />
+    </ Fragment>
 );
 
-RenderRoutes.propTypes = {
+renderRoutes.propTypes = {
     path: PropTypes.string.isRequired,
     redirect: PropTypes.string.isRequired,
     routes: PropTypes.array.isRequired,
     appFolder: PropTypes.string.isRequired
 };
 
-export default RenderRoutes;
+export default renderRoutes;
