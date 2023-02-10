@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Main: App renders 1`] = `
-<BrowserRouter
-  basename="/TEST/"
->
+<BrowserRouter>
   <AppHeader />
    
   <div
@@ -574,10 +572,9 @@ exports[`Main: App renders 1`] = `
         <Suspense
           fallback={<LoadingComponent />}
         >
-          <Component>
+          <Routes>
             <Route
               element={<UNDEFINED />}
-              exact={true}
               path="/"
             />
             <Route
@@ -607,7 +604,7 @@ exports[`Main: App renders 1`] = `
             <Route
               element={<UNDEFINED />}
             />
-          </Component>
+          </Routes>
         </Suspense>
       </main>
     </div>

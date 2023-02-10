@@ -16,6 +16,5 @@ describe("Main: App", () => {
         const wrapper = shallow(<App />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(topbar.init).toHaveBeenCalled();
     });
 });

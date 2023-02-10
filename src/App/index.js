@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import AppHeader from "./AppHeader";
 import { LoadingComponent } from "./utils";
@@ -36,7 +36,7 @@ const App = () => {
     }, []);
 
     return (
-        <Router basename={basename} >
+        <BrowserRouter>
             <AppHeader /> {/* mobile & tablet topbar & hamburger menu */}
             <div className="documentation">
                 <div className="d-md-flex">
@@ -48,7 +48,7 @@ const App = () => {
                         <SearchBox className={"d-none d-lg-block"}/>
                         <Suspense fallback={<LoadingComponent />}>
                             <Routes>
-                                <Route exact path="/" element={<Home />} />
+                                <Route path="/" element={<Home />} />
                                 <Route path="get-started/*" element={<GetStarted />} />
                                 <Route path="components/*" element={<Components />} />
                                 <Route path="identity/*" element={<Identity />} />
@@ -61,7 +61,7 @@ const App = () => {
                     </main>
                 </div>
             </div>
-        </Router>
+        </BrowserRouter>
     );
 };
 
