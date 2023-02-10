@@ -3,8 +3,8 @@
 exports[`Utilities: RenderPage renders 1`] = `
 <Suspense
   fallback={<LoadingComponent />}
-  initPath="test/test"
-  path="/test"
+  initPath="test"
+  path="test"
 >
   <div
     className="doc-container"
@@ -20,7 +20,7 @@ exports[`Utilities: RenderPage renders 1`] = `
         element={
           <Navigate
             replace={true}
-            to="test/test"
+            to="test"
           />
         }
         exact={true}
@@ -30,7 +30,7 @@ exports[`Utilities: RenderPage renders 1`] = `
         element={
           <Navigate
             replace={true}
-            to="/get-started/introduction"
+            to="introduction"
           />
         }
         exact={true}
@@ -94,7 +94,7 @@ exports[`Utilities: RenderPage renders 1`] = `
         element={
           <Navigate
             replace={true}
-            to="/identity/identity"
+            to="identity"
           />
         }
         exact={true}
@@ -284,7 +284,7 @@ exports[`Utilities: RenderPage renders 1`] = `
         element={
           <Navigate
             replace={true}
-            to="/components/components"
+            to="components"
           />
         }
         exact={true}

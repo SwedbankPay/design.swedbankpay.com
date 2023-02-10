@@ -8,23 +8,26 @@ module.exports = [
         entryCardText: "Get started by setting up the Design Guide!",
         path: "get-started",
         wideCard: true,
-        redirect: "/get-started/introduction",
+        redirect: "introduction",
         appFolder: "GetStarted",
         routes: [
             {
                 title: "Introduction",
                 path: "introduction",
-                componentPath: "get-started/Introduction"
+                rootPath: "/get-started/introduction",
+                componentPath: "get-started/Introduction",
             },
             {
                 title: "For developers",
                 path: "for-developers",
-                componentPath: "get-started/ForDevelopers"
+                rootPath: "/get-started/for-developers",
+                componentPath: "get-started/ForDevelopers",
             },
             {
                 title: "For designers",
                 path: "for-designers",
-                componentPath: "get-started/ForDesigners"
+                rootPath: "/get-started/for-designers",
+                componentPath: "get-started/ForDesigners",
             }
         ]
     }

@@ -1,7 +1,7 @@
 import patternRoutes from "./patterns";
 
 describe("Routes: patterns", () => {
-    const pathFormat = new RegExp("^(\\/[a-z]+([-a-z]+)?)+$");
+    const pathFormat = new RegExp("^([a-z]+([-a-z]+)?)+$");
 
     it("is defined", () => {
         expect(patternRoutes).toBeDefined();

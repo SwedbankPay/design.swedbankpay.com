@@ -1,7 +1,7 @@
 import identityRoutes from "./identity";
 
 describe("Routes: core", () => {
-    const pathFormat = new RegExp("^(\\/[a-z]+([-a-z]+)?)+$");
+    const pathFormat = new RegExp("^([a-z]+([-a-z]+)?)+$");
 
     it("is defined", () => {
         expect(identityRoutes).toBeDefined();

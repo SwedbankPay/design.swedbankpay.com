@@ -29,21 +29,24 @@ exports[`Main: App renders 1`] = `
                   "rotate": true,
                 },
                 "path": "get-started",
-                "redirect": "/get-started/introduction",
+                "redirect": "introduction",
                 "routes": Array [
                   Object {
                     "componentPath": "get-started/Introduction",
                     "path": "introduction",
+                    "rootPath": "/get-started/introduction",
                     "title": "Introduction",
                   },
                   Object {
                     "componentPath": "get-started/ForDevelopers",
                     "path": "for-developers",
+                    "rootPath": "/get-started/for-developers",
                     "title": "For developers",
                   },
                   Object {
                     "componentPath": "get-started/ForDesigners",
                     "path": "for-designers",
+                    "rootPath": "/get-started/for-designers",
                     "title": "For designers",
                   },
                 ],
@@ -57,52 +60,60 @@ exports[`Main: App renders 1`] = `
                   "name": "palette",
                 },
                 "path": "identity",
-                "redirect": "/identity/identity",
+                "redirect": "identity",
                 "routes": Array [
                   Object {
                     "componentPath": "identity/Identity",
                     "path": "identity",
+                    "rootPath": "/identity/identity",
                     "title": "Overview",
                   },
                   Object {
                     "componentPath": "identity/Accessibility",
                     "path": "accessibility",
+                    "rootPath": "/identity/accessibility",
                     "text": "Principles & WCAG 2.1 guidelines",
                     "title": "Accessibility",
                   },
                   Object {
                     "componentPath": "identity/Color",
                     "path": "color",
+                    "rootPath": "/identity/color",
                     "text": "Our color palette with HEX codes",
                     "title": "Color",
                   },
                   Object {
                     "componentPath": "identity/Copywriting",
                     "path": "copywriting",
+                    "rootPath": "/identity/copywriting",
                     "text": "Tonality & UX copy in our products",
                     "title": "Copywriting",
                   },
                   Object {
                     "componentPath": "identity/Grid",
                     "path": "grid",
+                    "rootPath": "/identity/grid",
                     "text": "Our grid and best practices",
                     "title": "Grid",
                   },
                   Object {
                     "componentPath": "identity/Iconography",
                     "path": "iconography",
+                    "rootPath": "/identity/iconography",
                     "text": "Guidelines and icon library",
                     "title": "Iconography",
                   },
                   Object {
                     "componentPath": "identity/Imagery",
                     "path": "imagery",
+                    "rootPath": "/identity/imagery",
                     "text": "Guidelines and image library",
                     "title": "Imagery",
                   },
                   Object {
                     "componentPath": "identity/Logotype",
                     "path": "logotype",
+                    "rootPath": "/identity/logotype",
                     "statusBadges": Array [
                       "updated",
                     ],
@@ -112,18 +123,21 @@ exports[`Main: App renders 1`] = `
                   Object {
                     "componentPath": "identity/Page-layout",
                     "path": "page-layout",
+                    "rootPath": "/identity/page-layout",
                     "text": "See our layout structure",
                     "title": "Page layout",
                   },
                   Object {
                     "componentPath": "identity/Spacing",
                     "path": "spacing",
+                    "rootPath": "/identity/spacing",
                     "text": "8-point spacing system",
                     "title": "Spacing",
                   },
                   Object {
                     "componentPath": "identity/Typography",
                     "path": "typography",
+                    "rootPath": "/identity/typography",
                     "statusBadges": Array [
                       "updated",
                     ],
@@ -140,11 +154,12 @@ exports[`Main: App renders 1`] = `
                   "name": "category",
                 },
                 "path": "components",
-                "redirect": "/components/components",
+                "redirect": "components",
                 "routes": Array [
                   Object {
                     "componentPath": "components/Components",
                     "path": "components",
+                    "rootPath": "/components/components",
                     "title": "Overview",
                   },
                   Object {
@@ -152,6 +167,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "calendar_view_day",
                     "outlined": true,
                     "path": "accordion",
+                    "rootPath": "/components/accordion",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -161,6 +177,7 @@ exports[`Main: App renders 1`] = `
                     "componentPath": "components/ActionList",
                     "icon": "list",
                     "path": "action-list",
+                    "rootPath": "/components/action-list",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -170,6 +187,7 @@ exports[`Main: App renders 1`] = `
                     "componentPath": "components/Alerts",
                     "icon": "error_outline",
                     "path": "alerts",
+                    "rootPath": "/components/alerts",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -180,6 +198,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "more",
                     "outlined": true,
                     "path": "badge",
+                    "rootPath": "/components/badge",
                     "title": "Badges",
                   },
                   Object {
@@ -187,6 +206,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "last_page",
                     "outlined": true,
                     "path": "breadcrumb",
+                    "rootPath": "/components/breadcrumb",
                     "title": "Breadcrumb",
                   },
                   Object {
@@ -194,6 +214,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "touch_app",
                     "outlined": true,
                     "path": "buttons",
+                    "rootPath": "/components/buttons",
                     "title": "Buttons",
                   },
                   Object {
@@ -201,6 +222,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "view_agenda",
                     "outlined": true,
                     "path": "cards",
+                    "rootPath": "/components/cards",
                     "title": "Cards",
                   },
                   Object {
@@ -208,6 +230,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "bar_chart",
                     "outlined": true,
                     "path": "charts",
+                    "rootPath": "/components/charts",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -218,6 +241,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "check_box",
                     "outlined": true,
                     "path": "checkbox",
+                    "rootPath": "/components/checkbox",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -228,6 +252,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "event",
                     "outlined": true,
                     "path": "datepickers",
+                    "rootPath": "/components/datepickers",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -238,6 +263,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "picture_in_picture",
                     "outlined": true,
                     "path": "dialog",
+                    "rootPath": "/components/dialog",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -248,6 +274,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "expand_more",
                     "outlined": true,
                     "path": "dropdown",
+                    "rootPath": "/components/dropdown",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -257,6 +284,7 @@ exports[`Main: App renders 1`] = `
                     "componentPath": "components/Expandable",
                     "icon": "expand",
                     "path": "expandable",
+                    "rootPath": "/components/expandable",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -266,6 +294,7 @@ exports[`Main: App renders 1`] = `
                     "componentPath": "components/InputField",
                     "icon": "text_fields",
                     "path": "input-field",
+                    "rootPath": "/components/input-field",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -276,6 +305,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "link",
                     "outlined": true,
                     "path": "links",
+                    "rootPath": "/components/links",
                     "title": "Links",
                   },
                   Object {
@@ -283,6 +313,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "sort",
                     "outlined": true,
                     "path": "lists",
+                    "rootPath": "/components/lists",
                     "title": "Lists",
                   },
                   Object {
@@ -290,6 +321,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "loop",
                     "outlined": true,
                     "path": "loader",
+                    "rootPath": "/components/loader",
                     "title": "Loader",
                   },
                   Object {
@@ -297,6 +329,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "account_circle",
                     "outlined": true,
                     "path": "media-object",
+                    "rootPath": "/components/media-object",
                     "title": "Media Object",
                   },
                   Object {
@@ -305,6 +338,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "explore",
                     "outlined": true,
                     "path": "nav",
+                    "rootPath": "/components/nav",
                     "statusBadges": Array [
                       "javascript",
                       "deprecated",
@@ -316,6 +350,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "power_input",
                     "outlined": true,
                     "path": "pagination",
+                    "rootPath": "/components/pagination",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -326,18 +361,21 @@ exports[`Main: App renders 1`] = `
                     "icon": "table_rows",
                     "outlined": true,
                     "path": "panel",
+                    "rootPath": "/components/panel",
                     "title": "Panel",
                   },
                   Object {
                     "componentPath": "components/ProgressSteps",
                     "icon": "hdr_strong",
                     "path": "progress-steps",
+                    "rootPath": "/components/progress-steps",
                     "title": "Progress steps",
                   },
                   Object {
                     "componentPath": "components/RadioButton",
                     "icon": "radio_button_checked",
                     "path": "radio-button",
+                    "rootPath": "/components/radio-button",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -348,6 +386,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "tune",
                     "outlined": true,
                     "path": "rangeslider",
+                    "rootPath": "/components/rangeslider",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -358,6 +397,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "vertical_split",
                     "outlined": true,
                     "path": "sheet",
+                    "rootPath": "/components/sheet",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -368,6 +408,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "arrow_drop_down_circle",
                     "outlined": true,
                     "path": "select",
+                    "rootPath": "/components/select",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -378,6 +419,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "view_sidebar",
                     "outlined": true,
                     "path": "sidebar",
+                    "rootPath": "/components/sidebar",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -388,6 +430,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "skip_next",
                     "outlined": true,
                     "path": "skip-link",
+                    "rootPath": "/components/skip-link",
                     "title": "Skip link",
                   },
                   Object {
@@ -395,6 +438,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "crop_landscape",
                     "outlined": true,
                     "path": "slab",
+                    "rootPath": "/components/slab",
                     "title": "Slab",
                   },
                   Object {
@@ -402,6 +446,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "check_circle",
                     "outlined": true,
                     "path": "status",
+                    "rootPath": "/components/status",
                     "title": "Status",
                   },
                   Object {
@@ -409,6 +454,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "view_list",
                     "outlined": true,
                     "path": "tables",
+                    "rootPath": "/components/tables",
                     "title": "Tables",
                   },
                   Object {
@@ -416,6 +462,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "folder",
                     "outlined": true,
                     "path": "tabs",
+                    "rootPath": "/components/tabs",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -426,6 +473,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "code",
                     "outlined": true,
                     "path": "tags",
+                    "rootPath": "/components/tags",
                     "statusBadges": Array [
                       "updated",
                     ],
@@ -436,6 +484,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "picture_in_picture",
                     "outlined": true,
                     "path": "toast",
+                    "rootPath": "/components/toast",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -446,6 +495,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "toggle_off",
                     "outlined": true,
                     "path": "togglebox",
+                    "rootPath": "/components/togglebox",
                     "title": "Togglebox",
                   },
                   Object {
@@ -453,6 +503,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "filter_frames",
                     "outlined": true,
                     "path": "tooltips",
+                    "rootPath": "/components/tooltips",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -463,6 +514,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "call_to_action",
                     "outlined": true,
                     "path": "topbar",
+                    "rootPath": "/components/topbar",
                     "statusBadges": Array [
                       "javascript",
                     ],
@@ -483,6 +535,7 @@ exports[`Main: App renders 1`] = `
                   Object {
                     "componentPath": "content/Patterns",
                     "path": "patterns",
+                    "rootPath": "/patterns/patterns",
                     "title": "Overview",
                   },
                   Object {
@@ -490,6 +543,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "format_align_justify",
                     "outlined": true,
                     "path": "forms",
+                    "rootPath": "/patterns/forms",
                     "title": "Forms",
                   },
                   Object {
@@ -497,6 +551,7 @@ exports[`Main: App renders 1`] = `
                     "icon": "account_circle",
                     "outlined": true,
                     "path": "login",
+                    "rootPath": "/patterns/login",
                     "statusBadges": Array [
                       "new",
                     ],
