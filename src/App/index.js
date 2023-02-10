@@ -1,5 +1,5 @@
 import React, { Component, Suspense, useState, useEffect } from "react";
-import { Router, Switch, Route, withRouter, Link, useLocation } from "react-router-dom";
+import { Router, Switch, Route, withRouter, useLocation } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import packageJson from "~/package";
 import AppHeader from "./AppHeader";
