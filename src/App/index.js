@@ -29,14 +29,6 @@ const ErrorPage404 = React.lazy(() => import(/* webpackChunkName: "404.chunk" */
 
 const Utilities = React.lazy(() => import(/* webpackChunkName: "utilities.chunk" */ "./Utilities/index.js"));
 
-if (!window.location.pathname.includes(basename)) {
-    window.history.replaceState(
-        "",
-        "",
-        basename + window.location.pathname
-    );
-}
-
 const App = () => {
 
     useEffect(() => {
