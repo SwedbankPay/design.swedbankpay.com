@@ -15,10 +15,10 @@ exports[`Utilities: RenderPage renders 1`] = `
       Design Guide – v. 
       10.6.1
     </span>
-    <Routes>
+    <Component>
       <Route
         element={
-          <Navigate
+          <UNDEFINED
             replace={true}
             to="test"
           />
@@ -28,7 +28,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <Route
         element={
-          <Navigate
+          <UNDEFINED
             replace={true}
             to="introduction"
           />
@@ -83,7 +83,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <Route
         element={
-          <Navigate
+          <UNDEFINED
             replace={true}
             to="/404"
           />
@@ -92,7 +92,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <Route
         element={
-          <Navigate
+          <UNDEFINED
             replace={true}
             to="identity"
           />
@@ -273,7 +273,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <Route
         element={
-          <Navigate
+          <UNDEFINED
             replace={true}
             to="/404"
           />
@@ -282,7 +282,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <Route
         element={
-          <Navigate
+          <UNDEFINED
             replace={true}
             to="components"
           />
@@ -931,7 +931,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <Route
         element={
-          <Navigate
+          <UNDEFINED
             replace={true}
             to="/404"
           />
@@ -940,7 +940,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <Route
         element={
-          <Navigate
+          <UNDEFINED
             replace={true}
             to="patterns"
           />
@@ -998,7 +998,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <Route
         element={
-          <Navigate
+          <UNDEFINED
             replace={true}
             to="/404"
           />
@@ -1007,14 +1007,14 @@ exports[`Utilities: RenderPage renders 1`] = `
       />
       <Route
         element={
-          <Navigate
+          <UNDEFINED
             replace={true}
             to="/404"
           />
         }
         path="*"
       />
-    </Routes>
+    </Component>
   </div>
 </Suspense>
 `;

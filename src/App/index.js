@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import AppHeader from "./AppHeader";
 import { LoadingComponent } from "./utils";
@@ -36,7 +36,7 @@ const App = () => {
     }, []);
 
     return (
-        <BrowserRouter basename={basename} >
+        <Router basename={basename} >
             <AppHeader /> {/* mobile & tablet topbar & hamburger menu */}
             <div className="documentation">
                 <div className="d-md-flex">
@@ -61,7 +61,7 @@ const App = () => {
                     </main>
                 </div>
             </div>
-        </BrowserRouter>
+        </Router>
     );
 };
 

@@ -198,30 +198,21 @@ exports[`Manipulating input values for input field result box is visible after i
 exports[`Search box results tests renders more than 10 li elements when search term is 'i' 1`] = `
 <BrowserRouter>
   <Router
-    location={
-      Object {
-        "hash": "",
-        "key": "default",
-        "pathname": "/",
-        "search": "",
-        "state": null,
-      }
-    }
-    navigationType="POP"
-    navigator={
+    history={
       Object {
         "action": "POP",
+        "block": [Function],
         "createHref": [Function],
-        "createURL": [Function],
-        "encodeLocation": [Function],
         "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "default",
           "pathname": "/",
           "search": "",
-          "state": null,
+          "state": undefined,
         },
         "push": [Function],
         "replace": [Function],
@@ -295,29 +286,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/get-started/introduction"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/get-started/introduction"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "<b>I</b>ntroduct<b>i</b>on",
+                <a
+                  className="res"
+                  href="/get-started/introduction"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<b>I</b>ntroduct<b>i</b>on",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Introduction
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Introduction
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -327,29 +327,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/get-started/for-designers"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/get-started/for-designers"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "For des<b>i</b>gners",
+                <a
+                  className="res"
+                  href="/get-started/for-designers"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "For des<b>i</b>gners",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    For-designers
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      For-designers
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -359,29 +368,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/identity/identity"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/identity/identity"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Overv<b>i</b>ew",
+                <a
+                  className="res"
+                  href="/identity/identity"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Overv<b>i</b>ew",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Identity
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Identity
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -391,29 +409,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/identity/accessibility"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/identity/accessibility"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Access<b>i</b>b<b>i</b>l<b>i</b>ty",
+                <a
+                  className="res"
+                  href="/identity/accessibility"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Access<b>i</b>b<b>i</b>l<b>i</b>ty",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Accessibility
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Accessibility
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -423,29 +450,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/identity/copywriting"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/identity/copywriting"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Copywr<b>i</b>t<b>i</b>ng",
+                <a
+                  className="res"
+                  href="/identity/copywriting"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Copywr<b>i</b>t<b>i</b>ng",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Copywriting
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Copywriting
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -455,29 +491,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/identity/grid"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/identity/grid"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Gr<b>i</b>d",
+                <a
+                  className="res"
+                  href="/identity/grid"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Gr<b>i</b>d",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Grid
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Grid
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -487,29 +532,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/identity/iconography"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/identity/iconography"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "<b>I</b>conography",
+                <a
+                  className="res"
+                  href="/identity/iconography"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<b>I</b>conography",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Iconography
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Iconography
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -519,29 +573,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/identity/imagery"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/identity/imagery"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "<b>I</b>magery",
+                <a
+                  className="res"
+                  href="/identity/imagery"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<b>I</b>magery",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Imagery
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Imagery
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -551,29 +614,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/identity/spacing"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/identity/spacing"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Spac<b>i</b>ng",
+                <a
+                  className="res"
+                  href="/identity/spacing"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Spac<b>i</b>ng",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Spacing
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Spacing
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -583,29 +655,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/components/components"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/components/components"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Overv<b>i</b>ew",
+                <a
+                  className="res"
+                  href="/components/components"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Overv<b>i</b>ew",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Components
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Components
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -615,29 +696,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/components/accordion"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/components/accordion"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Accord<b>i</b>on",
+                <a
+                  className="res"
+                  href="/components/accordion"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Accord<b>i</b>on",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Accordion
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Accordion
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -647,29 +737,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/components/action-list"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/components/action-list"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Act<b>i</b>on l<b>i</b>st",
+                <a
+                  className="res"
+                  href="/components/action-list"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Act<b>i</b>on l<b>i</b>st",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Action-list
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Action-list
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -679,29 +778,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/components/datepickers"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/components/datepickers"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Datep<b>i</b>ckers",
+                <a
+                  className="res"
+                  href="/components/datepickers"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Datep<b>i</b>ckers",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Datepickers
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Datepickers
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -711,29 +819,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/components/dialog"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/components/dialog"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "D<b>i</b>alog",
+                <a
+                  className="res"
+                  href="/components/dialog"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "D<b>i</b>alog",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Dialog
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Dialog
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -743,29 +860,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/components/input-field"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/components/input-field"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "<b>I</b>nput f<b>i</b>eld",
+                <a
+                  className="res"
+                  href="/components/input-field"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<b>I</b>nput f<b>i</b>eld",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Input-field
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Input-field
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -775,29 +901,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/components/links"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/components/links"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "L<b>i</b>nks",
+                <a
+                  className="res"
+                  href="/components/links"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "L<b>i</b>nks",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Links
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Links
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -807,29 +942,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/components/lists"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/components/lists"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "L<b>i</b>sts",
+                <a
+                  className="res"
+                  href="/components/lists"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "L<b>i</b>sts",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Lists
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Lists
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -839,29 +983,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/components/media-object"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/components/media-object"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Med<b>i</b>a Object",
+                <a
+                  className="res"
+                  href="/components/media-object"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Med<b>i</b>a Object",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Media-object
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Media-object
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -871,29 +1024,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/components/nav"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/components/nav"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Nav<b>i</b>gat<b>i</b>on",
+                <a
+                  className="res"
+                  href="/components/nav"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Nav<b>i</b>gat<b>i</b>on",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Nav
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Nav
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -903,29 +1065,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/components/pagination"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/components/pagination"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Pag<b>i</b>nat<b>i</b>on",
+                <a
+                  className="res"
+                  href="/components/pagination"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Pag<b>i</b>nat<b>i</b>on",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Pagination
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Pagination
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -935,29 +1106,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/components/radio-button"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/components/radio-button"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Rad<b>i</b>o button",
+                <a
+                  className="res"
+                  href="/components/radio-button"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Rad<b>i</b>o button",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Radio-button
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Radio-button
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -967,29 +1147,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/components/rangeslider"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/components/rangeslider"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Rangesl<b>i</b>der",
+                <a
+                  className="res"
+                  href="/components/rangeslider"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Rangesl<b>i</b>der",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Rangeslider
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Rangeslider
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -999,29 +1188,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/components/sidebar"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/components/sidebar"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "S<b>i</b>debar",
+                <a
+                  className="res"
+                  href="/components/sidebar"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "S<b>i</b>debar",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Sidebar
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Sidebar
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -1031,29 +1229,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/components/skip-link"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/components/skip-link"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Sk<b>i</b>p l<b>i</b>nk",
+                <a
+                  className="res"
+                  href="/components/skip-link"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Sk<b>i</b>p l<b>i</b>nk",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Skip-link
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Skip-link
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -1063,29 +1270,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/components/tooltips"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/components/tooltips"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Toolt<b>i</b>ps",
+                <a
+                  className="res"
+                  href="/components/tooltips"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Toolt<b>i</b>ps",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Tooltips
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Tooltips
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -1095,29 +1311,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/patterns/patterns"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/patterns/patterns"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Overv<b>i</b>ew",
+                <a
+                  className="res"
+                  href="/patterns/patterns"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Overv<b>i</b>ew",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Patterns
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Patterns
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -1127,29 +1352,38 @@ exports[`Search box results tests renders more than 10 li elements when search t
               tabIndex="-1"
               to="/patterns/login"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/patterns/login"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Log<b>i</b>n",
+                <a
+                  className="res"
+                  href="/patterns/login"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Log<b>i</b>n",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Login
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Login
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
           </ul>
         </div>
@@ -1162,30 +1396,21 @@ exports[`Search box results tests renders more than 10 li elements when search t
 exports[`Search box results tests renders no items if search term has no matches 1`] = `
 <BrowserRouter>
   <Router
-    location={
-      Object {
-        "hash": "",
-        "key": "default",
-        "pathname": "/",
-        "search": "",
-        "state": null,
-      }
-    }
-    navigationType="POP"
-    navigator={
+    history={
       Object {
         "action": "POP",
+        "block": [Function],
         "createHref": [Function],
-        "createURL": [Function],
-        "encodeLocation": [Function],
         "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "default",
           "pathname": "/",
           "search": "",
-          "state": null,
+          "state": undefined,
         },
         "push": [Function],
         "replace": [Function],
@@ -1261,30 +1486,21 @@ exports[`Search box results tests renders no items if search term has no matches
 exports[`Search box results tests renders several li elements when search term is 'f 1`] = `
 <BrowserRouter>
   <Router
-    location={
-      Object {
-        "hash": "",
-        "key": "default",
-        "pathname": "/",
-        "search": "",
-        "state": null,
-      }
-    }
-    navigationType="POP"
-    navigator={
+    history={
       Object {
         "action": "POP",
+        "block": [Function],
         "createHref": [Function],
-        "createURL": [Function],
-        "encodeLocation": [Function],
         "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "default",
           "pathname": "/",
           "search": "",
-          "state": null,
+          "state": undefined,
         },
         "push": [Function],
         "replace": [Function],
@@ -1358,29 +1574,38 @@ exports[`Search box results tests renders several li elements when search term i
               tabIndex="-1"
               to="/get-started/for-developers"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/get-started/for-developers"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "<b>F</b>or developers",
+                <a
+                  className="res"
+                  href="/get-started/for-developers"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<b>F</b>or developers",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    For-developers
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      For-developers
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -1390,29 +1615,38 @@ exports[`Search box results tests renders several li elements when search term i
               tabIndex="-1"
               to="/get-started/for-designers"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/get-started/for-designers"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "<b>F</b>or designers",
+                <a
+                  className="res"
+                  href="/get-started/for-designers"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<b>F</b>or designers",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    For-designers
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      For-designers
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -1422,29 +1656,38 @@ exports[`Search box results tests renders several li elements when search term i
               tabIndex="-1"
               to="/components/input-field"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/components/input-field"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "Input <b>f</b>ield",
+                <a
+                  className="res"
+                  href="/components/input-field"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "Input <b>f</b>ield",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Input-field
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Input-field
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
             <Link
               className="res"
@@ -1454,29 +1697,38 @@ exports[`Search box results tests renders several li elements when search term i
               tabIndex="-1"
               to="/patterns/forms"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/patterns/forms"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "<b>F</b>orms",
+                <a
+                  className="res"
+                  href="/patterns/forms"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "<b>F</b>orms",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Forms
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Forms
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
           </ul>
         </div>
@@ -1489,30 +1741,21 @@ exports[`Search box results tests renders several li elements when search term i
 exports[`Search box results tests renders toggelbox after searcing for 'gg' 1`] = `
 <BrowserRouter>
   <Router
-    location={
-      Object {
-        "hash": "",
-        "key": "default",
-        "pathname": "/",
-        "search": "",
-        "state": null,
-      }
-    }
-    navigationType="POP"
-    navigator={
+    history={
       Object {
         "action": "POP",
+        "block": [Function],
         "createHref": [Function],
-        "createURL": [Function],
-        "encodeLocation": [Function],
         "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "default",
           "pathname": "/",
           "search": "",
-          "state": null,
+          "state": undefined,
         },
         "push": [Function],
         "replace": [Function],
@@ -1586,29 +1829,38 @@ exports[`Search box results tests renders toggelbox after searcing for 'gg' 1`] 
               tabIndex="-1"
               to="/components/togglebox"
             >
-              <a
+              <LinkAnchor
                 className="res"
                 href="/components/togglebox"
+                navigate={[Function]}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 tabIndex="-1"
               >
-                <li>
-                  <span
-                    className="result"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "To<b>gg</b>lebox",
+                <a
+                  className="res"
+                  href="/components/togglebox"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  tabIndex="-1"
+                >
+                  <li>
+                    <span
+                      className="result"
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "To<b>gg</b>lebox",
+                        }
                       }
-                    }
-                  />
-                  <span
-                    className="directory"
-                  >
-                    Togglebox
-                  </span>
-                </li>
-              </a>
+                    />
+                    <span
+                      className="directory"
+                    >
+                      Togglebox
+                    </span>
+                  </li>
+                </a>
+              </LinkAnchor>
             </Link>
           </ul>
         </div>
