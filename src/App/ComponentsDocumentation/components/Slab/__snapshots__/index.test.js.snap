@@ -180,5 +180,6 @@ exports[`Components: Slab renders 1`] = `
   </p>
   <OverviewSlab />
   <SlabArrow />
+  <SlabColors />
 </DocContainer>
 `;

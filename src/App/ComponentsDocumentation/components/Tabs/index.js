@@ -27,12 +27,12 @@ const Overview = () => (
             <div className="slab slab-plain slab-border-success px-4">
                 <h3 className="mb-5">Do</h3>
                 <TabsComponent id="tabs-scroll-example" ulId="tabs-scroll-example-ul" items={[...tabItems.slice(0, 3)]}/>
-                <div className="slab slab-default p-5"></div>
+                <div className="slab slab-edges flat p-5"></div>
             </div>
             <div className="slab slab-plain slab-border-error px-4">
                 <h3 className="mb-5">Don&apos;t</h3>
                 <TabsComponent id="tabs-scroll-example-dont" ulId="tabs-scroll-example-ul" items={[...tabItems.slice(0, 3)]} scroll/>
-                <div className="slab slab-default p-5"></div>
+                <div className="slab slab-edges flat p-5"></div>
             </div>
             <p>The tab component should always fill the full container of the content it governs. As seen on the examples above, the length of the underline for tab isn’t determined by the amount of tabs/length of the text. But should instead indicate the content that it anchors to and contains.</p>
         </section>

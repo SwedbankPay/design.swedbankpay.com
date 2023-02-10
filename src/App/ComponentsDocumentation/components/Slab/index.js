@@ -3,6 +3,7 @@ import React from "react";
 import { ComponentPreview, DocContainer } from "@docutils";
 import { overviewSlabs } from "./constants";
 import CodeTags from "@components/CodeTags";
+import { Link } from "react-router-dom";
 
 const basename = process.env.basename;
 
@@ -60,6 +61,32 @@ const SlabArrow = () => (
     </section>
 );
 
+const SlabColors = () => (
+    <section id="slab-colors">
+        <h2 id="slab-colors">Slab colors</h2>
+        <p>The slab component supports several background colors. You can use all of our background classes, presented in our <Link to="/identity/color">color</Link> section and below.</p>
+        <table className="table table-plain table-condensed">
+            <tbody>
+                <tr>
+                    <td className="bg-primary">bg-primary</td>
+                </tr>
+                <tr>
+                    <td className="bg-secondary">bg-secondary</td>
+                </tr>
+                <tr>
+                    <td className="bg-tertiary">bg-tertiary</td>
+                </tr>
+                <tr>
+                    <td className="bg-quaternary">bg-quaternary</td>
+                </tr>
+                <tr>
+                    <td className="bg-white">bg-white</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+);
+
 const Slab = () => (
     <DocContainer>
         <p className="lead">
@@ -67,6 +94,7 @@ const Slab = () => (
         </p>
         <OverviewSlab />
         <SlabArrow />
+        <SlabColors/>
     </DocContainer>
 );
 
