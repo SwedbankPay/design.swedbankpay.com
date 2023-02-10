@@ -36,7 +36,7 @@ const App = () => {
     }, []);
 
     return (
-        <BrowserRouter basename={basename} >
+        <BrowserRouter>
             <AppHeader /> {/* mobile & tablet topbar & hamburger menu */}
             <div className="documentation">
                 <div className="d-md-flex">
