@@ -18,15 +18,6 @@ const basename = process.env.basename || "/";
 
 const brand = process.env.brand;
 
-const ScrollToTop = () => {
-    useEffect(() => {
-
-        window.scrollTo(0, 0);
-    }, [location]);
-
-    return null;
-};
-
 const Home = React.lazy(() => import(/* webpackChunkName: "home.chunk" */ "./Home/index.js"));
 
 const GetStarted = React.lazy(() => import(/* webpackChunkName: "get-started.chunk" */ "./GetStarted/index.js"));
@@ -66,33 +57,31 @@ const App = () => {
 
     return (
         <BrowserRouter basename={basename} >
-            <ScrollToTop>
-                <AppHeader /> {/* mobile & tablet topbar & hamburger menu */}
-                <div className="documentation">
-                    {packageJson.version !== version && <VersionTopBanner/>}
-                    <div className="d-md-flex">
-                        <SkipLink/>
-                        <div className="d-none d-lg-block"> {/* desktop sidebar nav */}
-                            <SelectPanel id="doc-sidebar" routes={routes} />
-                        </div>
-                        <main id="doc-view" className="doc-view">
-                            <SearchBox className={"d-none d-lg-block"}/>
-                            <Suspense fallback={<LoadingComponent />}>
-                                <Routes>
-                                    <Route exact path="/" element={<Home />} />
-                                    <Route path="get-started/*" element={<GetStarted />} />
-                                    <Route path="components/*" element={<Components />} />
-                                    <Route path="identity/*" element={<Identity />} />
-                                    <Route path="patterns/*" element={<Patterns />} />
-                                    <Route path="utilities/*" element={<Utilities />} />
-                                    <Route path="404/*" element={<ErrorPage404 />} />
-                                    <Route element={<ErrorPage404 />} />
-                                </Routes>
-                            </Suspense>
-                        </main>
+            <AppHeader /> {/* mobile & tablet topbar & hamburger menu */}
+            <div className="documentation">
+                {packageJson.version !== version && <VersionTopBanner/>}
+                <div className="d-md-flex">
+                    <SkipLink/>
+                    <div className="d-none d-lg-block"> {/* desktop sidebar nav */}
+                        <SelectPanel id="doc-sidebar" routes={routes} />
                     </div>
+                    <main id="doc-view" className="doc-view">
+                        <SearchBox className={"d-none d-lg-block"}/>
+                        <Suspense fallback={<LoadingComponent />}>
+                            <Routes>
+                                <Route exact path="/" element={<Home />} />
+                                <Route path="get-started/*" element={<GetStarted />} />
+                                <Route path="components/*" element={<Components />} />
+                                <Route path="identity/*" element={<Identity />} />
+                                <Route path="patterns/*" element={<Patterns />} />
+                                <Route path="utilities/*" element={<Utilities />} />
+                                <Route path="404/*" element={<ErrorPage404 />} />
+                                <Route element={<ErrorPage404 />} />
+                            </Routes>
+                        </Suspense>
+                    </main>
                 </div>
-            </ScrollToTop>
+            </div>
         </BrowserRouter>
     );
 };
