@@ -13,7 +13,7 @@ exports[`Utilities: RenderPage renders 1`] = `
       className="dg-current-version text-uppercase"
     >
       Design Guide – v. 
-      10.6.1
+      10.7.0
     </span>
     <Routes>
       <Route
@@ -396,6 +396,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               className="d-flex align-items-center "
             >
               <DocHeading />
+              <StatusBadge
+                type="updated"
+              />
             </div>
             <UNDEFINED />
           </React.Fragment>
@@ -428,6 +431,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               <DocHeading />
               <StatusBadge
                 type="javascript"
+              />
+              <StatusBadge
+                type="deprecated"
               />
             </div>
             <UNDEFINED />
@@ -500,6 +506,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               <DocHeading />
               <StatusBadge
                 type="javascript"
+              />
+              <StatusBadge
+                type="updated"
               />
             </div>
             <UNDEFINED />
@@ -756,6 +765,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               <StatusBadge
                 type="javascript"
               />
+              <StatusBadge
+                type="updated"
+              />
             </div>
             <UNDEFINED />
           </React.Fragment>
@@ -849,9 +861,6 @@ exports[`Utilities: RenderPage renders 1`] = `
               className="d-flex align-items-center "
             >
               <DocHeading />
-              <StatusBadge
-                type="updated"
-              />
             </div>
             <UNDEFINED />
           </React.Fragment>
@@ -902,6 +911,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               <DocHeading />
               <StatusBadge
                 type="javascript"
+              />
+              <StatusBadge
+                type="updated"
               />
             </div>
             <UNDEFINED />
@@ -970,6 +982,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               className="d-flex align-items-center "
             >
               <DocHeading />
+              <StatusBadge
+                type="updated"
+              />
             </div>
             <UNDEFINED />
           </React.Fragment>
@@ -986,7 +1001,7 @@ exports[`Utilities: RenderPage renders 1`] = `
             >
               <DocHeading />
               <StatusBadge
-                type="new"
+                type="updated"
               />
             </div>
             <UNDEFINED />

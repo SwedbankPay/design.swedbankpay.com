@@ -24,7 +24,7 @@
     .sidebar-main-nav {
         border-top: 0.375rem solid @brand-primary;
         position: relative;
-        padding: 2rem 1rem 0;
+        padding-top: 2rem;
 
         &:before {
             content: "";
@@ -44,7 +44,12 @@
 
         .main-nav-ul {
             list-style: none;
-            padding: 3rem 0 0;
+            padding: 0 1rem 10rem;
+            margin-top: 3rem;
+            max-width: 6rem;
+            text-align: center;
+            height: 100vh;
+            overflow: auto;
 
             .main-nav-li {
                 > a {

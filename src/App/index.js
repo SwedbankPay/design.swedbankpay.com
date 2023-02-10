@@ -1,5 +1,6 @@
-import React, { Suspense, useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React, { Suspense, useState, useEffect } from "react";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import packageJson from "~/package";
 
 import AppHeader from "./AppHeader";
 import { LoadingComponent } from "./utils";
@@ -14,6 +15,8 @@ import SearchBox from "./utils/SearchBox";
 import { topbar } from "@src/scripts/main";
 
 const basename = process.env.basename || "/";
+
+const brand = process.env.brand;
 
 const Home = React.lazy(() => import(/* webpackChunkName: "home.chunk" */ "./Home/index.js"));
 
@@ -31,6 +34,23 @@ const Utilities = React.lazy(() => import(/* webpackChunkName: "utilities.chunk"
 
 const App = () => {
 
+    const [version, setVersion] = useState();
+
+    const VersionTopBanner = () => {
+
+        useEffect(() => {
+            fetch("https://design.swedbankpay.com/latestVersion.json").then(data => data.json())
+                .then(data => setVersion(data.latestVersion))
+                .catch(error => console.warn("Could not fetch latest version from Azure:", error));
+        }, []);
+
+        const pathname = useLocation().pathname;
+
+        return (
+            <div className="text-align-center py-2 bg-version-banner text-white"><span>You are using an older version of the Design Guide. Click <a className="text-banner" href={`https://design.${brand}.com/v/${version}${pathname}`}>here</a> to get to the latest version ({version}).</span></div>
+        );
+    };
+
     useEffect(() => {
         topbar.init();
     }, []);
@@ -39,6 +59,7 @@ const App = () => {
         <BrowserRouter basename={basename} >
             <AppHeader /> {/* mobile & tablet topbar & hamburger menu */}
             <div className="documentation">
+                {packageJson.version !== version && <VersionTopBanner/>}
                 <div className="d-md-flex">
                     <SkipLink/>
                     <div className="d-none d-lg-block"> {/* desktop sidebar nav */}

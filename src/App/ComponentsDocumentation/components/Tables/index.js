@@ -36,13 +36,13 @@ const Overview = () => (
             </div>
             <p>By default, most column data is left aligned. There could be two exceptions which should be right aligned to help users identify number size and interactions.</p>
             <div className="row">
-                <div className="col-6">
+                <div className="col-lg-6 col-12">
                     <div className="slab slab-plain slab-border-success">
                         <h3>Do</h3>
                         <Table tableData={alignmentTable(true)} />
                     </div>
                 </div>
-                <div className="col-6">
+                <div className="col-lg-6 col-12">
                     <div className="slab slab-plain slab-border-error">
                         <h3>Don&#x27;t</h3>
                         <Table tableData={alignmentTable()} />
@@ -55,13 +55,13 @@ const Overview = () => (
             <h3>How to use buttons in tables</h3>
             <p>Buttons should generally be placed in the last column in the table and be right-aligned. </p>
             <div className="row">
-                <div className="col-6">
+                <div className="col-lg-6 col-12">
                     <div className="slab slab-plain slab-border-success">
                         <h3>Do</h3>
                         <Table tableData={buttonTypesTable("actionList")} />
                     </div>
                 </div>
-                <div className="col-6">
+                <div className="col-lg-6 col-12">
                     <div className="slab slab-plain slab-border-error">
                         <h3>Don&#x27;t</h3>
                         <Table tableData={buttonTypesTable("favBtn")} />
@@ -70,13 +70,13 @@ const Overview = () => (
             </div>
             <p>If more than two actions can be taken, consider using an action list instead of buttons to avoid making the cell too cluttered.</p>
             <div className="row">
-                <div className="col-6">
+                <div className="col-lg-6 col-12">
                     <div className="slab slab-plain slab-border-success">
                         <h3>Do</h3>
                         <Table tableData={buttonTypesTable()}/>
                     </div>
                 </div>
-                <div className="col-6 button-table-example">
+                <div className="col-lg-6 col-12 button-table-example">
                     <div className="slab slab-plain slab-border-error">
                         <h3>Don&#x27;t</h3>
                         <Table tableData={buttonTypesTable("delete")}/>
