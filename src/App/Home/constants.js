@@ -7,8 +7,7 @@ export const changeLogs = [
     {
         version: "10.7.0",
         title: "Interactive playground and documentation updates",
-        text: <p>New year, new version 🚀 Regarding components we have done some minor tweaks to ensure a better user experience, this applies to Tooltip, Sidebar, Dropdown and Buttons. We have also introduced a new component preview which you can see and test out in the patterns sections <a href={`${basename}patterns/forms`}>forms</a> and <a href={`${basename}patters/login`}>login</a>. Closing in, we have upgraded a lot of our dependencies and added some documentation. Go to the complete <a href="https://github.com/SwedbankPay/design.swedbankpay.com/releases" target="_blank" rel="noopener noreferrer">changelog</a> to see the changes in detail. Enjoy!</p>,
-        latestVersion: true
+        text: <p>New year, new version 🚀 Regarding components we have done some minor tweaks to ensure a better user experience, this applies to Tooltip, Sidebar, Dropdown and Buttons. We have also introduced a new component preview which you can see and test out in the patterns sections <a href={`${basename}patterns/forms`}>forms</a> and <a href={`${basename}patters/login`}>login</a>. Closing in, we have upgraded a lot of our dependencies and added some documentation. Go to the complete <a href="https://github.com/SwedbankPay/design.swedbankpay.com/releases" target="_blank" rel="noopener noreferrer">changelog</a> to see the changes in detail. Enjoy!</p>
     },
     {
         version: "10.6.1",
