@@ -26,6 +26,7 @@ const Home = () => {
 
                 <div className="dg-version-indicator">
                     <span>Ver. {packageJson.version}</span>
+                    {changeLogs[0].latestVersion ? <></> : <a className="new-version-link" href="https://design.swedbankpay.com"><span className="new-version">Go to latest version</span></a>}
                 </div>
 
                 <p className="front-page-lead">Here you can find components and guidelines to help you  and your team work more efficiently and create a cohesive user experience through all our products and touch points.</p>

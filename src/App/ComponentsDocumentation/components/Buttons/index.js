@@ -118,8 +118,8 @@ const ContentGuidelines = () => (
             <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4 className="mb-3 mt-0">Do</h4>
-                    <div className="button-group flex-column align-items-center justify-content-center mt-4 mb-4">
-                        <ButtonComponent className="justify-content-center w-50" type="guiding-destructive" label="Delete" icon="delete"/>
+                    <div className="d-flex button-group flex-column align-items-center justify-content-center mt-4 mb-4">
+                        <ButtonComponent className="justify-content-center mb-2 w-50" type="guiding-destructive" label="Delete" icon="delete"/>
                         <ButtonComponent className="justify-content-center w-50" type="secondary" label="Edit" icon="edit"/>
                     </div>
                 </div>
@@ -128,7 +128,7 @@ const ContentGuidelines = () => (
             <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4 className="mb-3 mt-0">Do</h4>
-                    <div className="button-group flex-column align-items-center justify-content-center mt-5 mb-5">
+                    <div className="d-flex button-group flex-column align-items-center justify-content-center mt-5 mb-5">
                         <Dropdown className="pt-2" label="Status" icon="keyboard_arrow_down" largePadding content={
                             <CheckboxComponent groupTitle="" name="dropdown-checkboxes-examples" options={[
                                 {
@@ -157,12 +157,13 @@ const CombiningButtons = () => (
     <section>
         <h2 id="combining-buttons">Combining buttons</h2>
         <p>
-            When using buttons next to each other, always wrap them in a <CodeTags type="primary" code=".button-group" /> (to ensure internal spacing).
-            <br />Strive not to use multiple buttons of the same kind.
+            When using buttons next to each other, always wrap them in a <CodeTags type="primary" code=".button-group" /> and make sure to use 8px spacing
+            between the buttons, both in horizontally and vertically groupings. Strive not to use multiple buttons of the same kind –
+            instead, use <Link to="/components/links#action-link">Action links</Link>.
         </p>
         <ComponentPreview language="html" showCasePanel codeFigure>
             <div className="button-group">{"\n"}
-                <ButtonComponent type="primary" label="Activate" />{"\n"}
+                <ButtonComponent className="mr-1" type="primary" label="Activate" />{"\n"}
                 <ButtonComponent type="secondary" label="Disable" />{"\n"}
             </div>
         </ComponentPreview>
@@ -172,9 +173,9 @@ const CombiningButtons = () => (
             <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4 className="mb-3 mt-0">Do</h4>
-                    <div className="flex-column button-group mt-4 ">
-                        <ButtonComponent className="justify-content-center" type="primary" label="Primary action"/>
-                        <ButtonComponent className="justify-content-center" type="secondary" label="Secondary action"/>
+                    <div className="d-flex flex-column button-group mt-4 ">
+                        <ButtonComponent className="justify-content-center mb-2" type="primary" label="Primary action"/>
+                        <ButtonComponent className="justify-content-center mb-2" type="secondary" label="Secondary action"/>
                         <ButtonComponent className="justify-content-center" type="link" label="Cancel"/>
                     </div>
                 </div>
@@ -183,8 +184,8 @@ const CombiningButtons = () => (
             <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-success pb-5 h-75">
                     <h4 className="mb-3 mt-0">Do</h4>
-                    <div className="button-group mt-4 align-items-center">
-                        <ButtonComponent type="primary" label="Primary"/>
+                    <div className="d-flex button-group mt-4 align-items-center">
+                        <ButtonComponent type="primary" className="mr-2" label="Primary"/>
                         <ButtonComponent type="secondary" label="Secondary"/>
                     </div>
                 </div>
@@ -195,8 +196,8 @@ const CombiningButtons = () => (
             <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-success pb-5">
                     <h4 className="mb-3 mt-0">Do</h4>
-                    <div className="flex-column button-group mt-4">
-                        <ButtonComponent className="justify-content-center" type="primary" label="Primary action"/>
+                    <div className="d-flex flex-column button-group mt-4">
+                        <ButtonComponent className="justify-content-center mb-2" type="primary" label="Primary action"/>
                         <ButtonComponent className="justify-content-center" type="link" label="Cancel"/>
                     </div>
                 </div>
@@ -205,8 +206,8 @@ const CombiningButtons = () => (
             <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-success pb-5">
                     <h4 className="mb-3 mt-0">Do</h4>
-                    <div className="flex-column button-group mt-4 ">
-                        <ButtonComponent className="justify-content-center" type="executive-destructive" label="Executive destructive action"/>
+                    <div className="d-flex flex-column button-group mt-4 ">
+                        <ButtonComponent className="justify-content-center mb-2" type="executive-destructive" label="Executive destructive action"/>
                         <ButtonComponent className="justify-content-center" type="link" label="Cancel"/>
                     </div>
                 </div>
@@ -219,8 +220,8 @@ const CombiningButtons = () => (
             <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-error pb-5">
                     <h4 className="mb-3 mt-0">Don&apos;t</h4>
-                    <div className="flex-column button-group mt-4 ">
-                        <ButtonComponent className="justify-content-center" type="secondary" label="Secondary action"/>
+                    <div className="d-flex flex-column button-group mt-4 ">
+                        <ButtonComponent className="justify-content-center mb-2" type="secondary" label="Secondary action"/>
                         <ButtonComponent className="justify-content-center" type="primary" label="Primary action"/>
                     </div>
                 </div>
@@ -229,8 +230,8 @@ const CombiningButtons = () => (
             <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-error pb-5">
                     <h4 className="mb-3 mt-0">Don&apos;t</h4>
-                    <div className="flex-column button-group mt-4 ">
-                        <ButtonComponent className="justify-content-center" type="primary" label="Primary action"/>
+                    <div className="d-flex flex-column button-group mt-4 ">
+                        <ButtonComponent className="justify-content-center mb-2" type="primary" label="Primary action"/>
                         <ButtonComponent className="justify-content-center" type="guiding-destructive" label="Destructive guiding action"/>
                     </div>
                 </div>
@@ -241,9 +242,9 @@ const CombiningButtons = () => (
             <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-error pb-5">
                     <h4 className="mb-3 mt-0">Don&apos;t</h4>
-                    <div className="flex-column button-group mt-4 ">
-                        <ButtonComponent className="justify-content-center" type="executive-destructive" label="Executive destructive action"/>
-                        <ButtonComponent className="justify-content-center" type="guiding-destructive" label="Destructive guiding action"/>
+                    <div className="d-flex flex-column button-group mt-4 ">
+                        <ButtonComponent className="justify-content-center mb-2" type="executive-destructive" label="Executive destructive action"/>
+                        <ButtonComponent className="justify-content-center mb-2" type="guiding-destructive" label="Destructive guiding action"/>
                         <ButtonComponent className="justify-content-center" type="link-destructive" label="Cancel"/>
                     </div>
                 </div>
@@ -252,9 +253,9 @@ const CombiningButtons = () => (
             <div className="col-lg-6 col-sm-12">
                 <div className="slab slab-plain slab-border-error pb-5">
                     <h4 className="mb-3 mt-0">Don&apos;t</h4>
-                    <div className="flex-column button-group mt-4 ">
-                        <ButtonComponent className="justify-content-center" type="primary" label="Primary action"/>
-                        <ButtonComponent bankId="se" className="justify-content-center" type="primary" label="Primary action"/>
+                    <div className="d-flex flex-column button-group mt-4 ">
+                        <ButtonComponent className="justify-content-center mb-2" type="primary" label="Primary action"/>
+                        <ButtonComponent bankId="se" className="justify-content-center mb-2" type="primary" label="Primary action"/>
                         <ButtonComponent className="justify-content-center" type="primary" label="Primary action"/>
                     </div>
                 </div>
@@ -271,12 +272,12 @@ const DeveloperDocumentation = () => (
         <p>Make buttons look inactive by adding the <CodeTags type="primary" code="disabled" /> boolean attribute to any <CodeTags type="primary" code={"<button>"} /> element.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent disabled type="primary" label="Primary" />{"\n"}
-                <ButtonComponent disabled type="secondary" label="Secondary" />{"\n"}
-                <ButtonComponent disabled type="link" label="Link" />{"\n"}
-                <ButtonComponent disabled type="executive-destructive" label="Destructive Executive" />{"\n"}
-                <ButtonComponent disabled type="guiding-destructive" label="Guiding destructive" />{"\n"}
-                <ButtonComponent disabled type="link-destructive" label="Destructive link" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled type="primary" label="Primary" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled type="secondary" label="Secondary" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled type="link" label="Link" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled type="executive-destructive" label="Destructive Executive" />{"\n"}
+                <ButtonComponent className="mr-1" disabled type="guiding-destructive" label="Guiding destructive" />{"\n"}
+                <ButtonComponent className="mr-1" disabled type="link-destructive" label="Destructive link" />{"\n"}
 
             </div>
         </ComponentPreview>
@@ -293,12 +294,12 @@ const DeveloperDocumentation = () => (
         <p>Use the loading state to show users their action is processing by adding the <CodeTags type="primary" code={".loading"}/> class to the <CodeTags type="primary" code={"<button>"}/> element, and the <CodeTags type="primary" code={"disabled"}/> attribute.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent disabled loading type="primary" label="Primary" />{"\n"}
-                <ButtonComponent disabled loading type="secondary" label="Secondary" />{"\n"}
-                <ButtonComponent disabled loading type="link" label="Link" />{"\n"}
-                <ButtonComponent disabled loading type="executive-destructive" label="Destructive executive" />{"\n"}
-                <ButtonComponent disabled loading type="guiding-destructive" label="Destructive guiding" />{"\n"}
-                <ButtonComponent disabled loading type="link-destructive" label="Destructive link" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled loading type="primary" label="Primary" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled loading type="secondary" label="Secondary" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled loading type="link" label="Link" />{"\n"}
+                <ButtonComponent className="mr-1 " disabled loading type="executive-destructive" label="Destructive executive" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled loading type="guiding-destructive" label="Destructive guiding" />{"\n"}
+                <ButtonComponent className="mr-1 mb-2" disabled loading type="link-destructive" label="Destructive link" />{"\n"}
 
             </div>
         </ComponentPreview>
@@ -312,11 +313,11 @@ const DeveloperDocumentation = () => (
         a <CodeTags type="secondary" code={"role=\"button\""} /> to appropriately convey their purpose to assistive technologies such as screen readers.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent type="primary" label="Anchor" href="#" />{"\n"}
-                <ButtonComponent type="primary" label="Button" />{"\n"}
-                <ButtonComponent type="primary" input value="Input" btnType="button" />{"\n"}
-                <ButtonComponent type="primary" input value="Submit" btnType="submit" />{"\n"}
-                <ButtonComponent type="primary" input value="Reset" btnType="reset" />{"\n"}
+                <ButtonComponent className="mr-1" type="primary" label="Anchor" href="#" />{"\n"}
+                <ButtonComponent className="mr-1" type="primary" label="Button" />{"\n"}
+                <ButtonComponent className="mr-1" type="primary" input value="Input" btnType="button" />{"\n"}
+                <ButtonComponent className="mr-1" type="primary" input value="Submit" btnType="submit" />{"\n"}
+                <ButtonComponent className="mr-1" type="primary" input value="Reset" btnType="reset" />{"\n"}
             </div>
         </ComponentPreview>
     </section>

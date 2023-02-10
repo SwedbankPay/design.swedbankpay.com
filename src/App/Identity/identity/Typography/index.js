@@ -439,7 +439,7 @@ const AkkuratMono = () => (
         <p>The Akkurat Mono font should be used when code is to be presented, for instance with code tags.</p>
 
         <h3>Download</h3>
-        <div className="slab slab-elevated">
+        <div className="slab slab-default slab-elevated">
             <p>Before downloading the Akkurat Mono font, make sure to understand the correct usages of Akkurat Mono.</p>
             <Button type="primary" icon="file_download" href={`${basename}release/fonts/AkkuratMono.zip`} label="Akkurat Mono" />
         </div>

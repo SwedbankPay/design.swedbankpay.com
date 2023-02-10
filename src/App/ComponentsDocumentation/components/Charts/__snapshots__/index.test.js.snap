@@ -1201,18 +1201,6 @@ exports[`Dashboard: Charts MixingTypes renders 1`] = `
 
 exports[`Dashboard: Charts renders 1`] = `
 <DocContainer>
-  <Alert
-    icon="error"
-    text={
-      <p>
-        <b>
-          Deprecated:
-        </b>
-         Be aware, this component will not be maintained anymore.
-      </p>
-    }
-    type="danger"
-  />
   <Introduction />
   <LineChart />
   <BarChart />

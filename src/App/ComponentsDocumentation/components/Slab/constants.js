@@ -1,7 +1,7 @@
 import React from "react";
 
 const Slab = ({ darkShadow, noShadow }) => (
-    <div id="slab-doc" className={`slab${darkShadow ? " dark" : ""}${noShadow ? " flat" : ""}`}/>
+    <div id="slab-doc" className={`slab slab-default${darkShadow ? " dark" : ""}${noShadow ? " flat" : ""}`}/>
 );
 
 export const overviewSlabs = {

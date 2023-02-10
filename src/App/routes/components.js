@@ -66,7 +66,6 @@ module.exports = [
                 rootPath: "/components/buttons",
                 componentPath: "components/Buttons",
                 icon: "touch_app",
-                statusBadges: ["updated"],
                 outlined: true
             },
             {
@@ -84,8 +83,7 @@ module.exports = [
                 componentPath: "components/Charts",
                 icon: "bar_chart",
                 outlined: true,
-                statusBadges: ["javascript", "deprecated"],
-                deprecated: true
+                statusBadges: ["javascript"]
             },
             {
                 title: "Checkbox",
@@ -121,7 +119,7 @@ module.exports = [
                 componentPath: "components/Dropdown",
                 icon: "expand_more",
                 outlined: true,
-                statusBadges: ["javascript", "updated"]
+                statusBadges: ["javascript"]
             },
             {
                 title: "Expandable",
@@ -247,7 +245,7 @@ module.exports = [
                 componentPath: "components/Sidebar",
                 icon: "view_sidebar",
                 outlined: true,
-                statusBadges: ["javascript", "updated"]
+                statusBadges: ["javascript"]
             },
             {
                 title: "Skip link",
@@ -296,6 +294,7 @@ module.exports = [
                 rootPath: "/components/tags",
                 componentPath: "components/CodeTags",
                 icon: "code",
+                statusBadges: ["updated"],
                 outlined: true
             },
             {
@@ -322,7 +321,7 @@ module.exports = [
                 componentPath: "components/Tooltips",
                 icon: "filter_frames",
                 outlined: true,
-                statusBadges: ["javascript", "updated"]
+                statusBadges: ["javascript"]
             },
             {
                 title: "Topbar",

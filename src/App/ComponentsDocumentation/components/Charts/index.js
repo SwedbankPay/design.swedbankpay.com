@@ -618,7 +618,6 @@ class Charts extends Component {
     render () {
         return (
             <DocContainer>
-                <Alert type="danger" icon="error" text={<p><b>Deprecated:</b> Be aware, this component will not be maintained anymore.</p>}/>
                 <Introduction />
                 <LineChart />
                 <BarChart />

@@ -1063,7 +1063,7 @@ exports[`Core: Logotype Overview renders 1`] = `
       code=".svg"
       type="secondary"
     />
-     files, it is also available in 
+     files, it is also available in 
     <CodeTags
       code=".png"
       type="secondary"

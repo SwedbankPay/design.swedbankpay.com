@@ -211,7 +211,7 @@ const Overview = () => (
             <span className="ml-2">Download Swedbank Pay logotype assets</span>
         </a>
 
-        <p>The logotype is vectorized and all versions are provided as <CodeTags type="secondary" code=".svg" /> files, it is also available in <CodeTags type="secondary" code=".png" /> for contexts that might not support vectorized files. The sizes described are recommended sizes and if there is a need to scale the logotype, make sure the coin diameter is no smaller than at least 24 px and a multiple of 8.</p>
+        <p>The logotype is vectorized and all versions are provided as <CodeTags type="secondary" code=".svg" /> files, it is also available in <CodeTags type="secondary" code=".png" /> for contexts that might not support vectorized files. The sizes described are recommended sizes and if there is a need to scale the logotype, make sure the coin diameter is no smaller than at least 24 px and a multiple of 8.</p>
     </section>
 );
 

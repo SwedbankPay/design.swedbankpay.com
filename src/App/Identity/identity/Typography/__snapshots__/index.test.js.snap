@@ -71,7 +71,7 @@ exports[`Core: Typography AkkuratMono renders 1`] = `
     Download
   </h3>
   <div
-    className="slab slab-elevated"
+    className="slab slab-default slab-elevated"
   >
     <p>
       Before downloading the Akkurat Mono font, make sure to understand the correct usages of Akkurat Mono.

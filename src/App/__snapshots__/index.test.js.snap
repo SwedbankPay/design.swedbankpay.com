@@ -9,7 +9,6 @@ exports[`Main: App renders 1`] = `
   <div
     className="documentation"
   >
-    <VersionTopBanner />
     <div
       className="d-md-flex"
     >
@@ -216,9 +215,6 @@ exports[`Main: App renders 1`] = `
                     "outlined": true,
                     "path": "buttons",
                     "rootPath": "/components/buttons",
-                    "statusBadges": Array [
-                      "updated",
-                    ],
                     "title": "Buttons",
                   },
                   Object {
@@ -231,14 +227,12 @@ exports[`Main: App renders 1`] = `
                   },
                   Object {
                     "componentPath": "components/Charts",
-                    "deprecated": true,
                     "icon": "bar_chart",
                     "outlined": true,
                     "path": "charts",
                     "rootPath": "/components/charts",
                     "statusBadges": Array [
                       "javascript",
-                      "deprecated",
                     ],
                     "title": "Charts",
                   },
@@ -283,7 +277,6 @@ exports[`Main: App renders 1`] = `
                     "rootPath": "/components/dropdown",
                     "statusBadges": Array [
                       "javascript",
-                      "updated",
                     ],
                     "title": "Dropdown",
                   },
@@ -429,7 +422,6 @@ exports[`Main: App renders 1`] = `
                     "rootPath": "/components/sidebar",
                     "statusBadges": Array [
                       "javascript",
-                      "updated",
                     ],
                     "title": "Sidebar",
                   },
@@ -482,6 +474,9 @@ exports[`Main: App renders 1`] = `
                     "outlined": true,
                     "path": "tags",
                     "rootPath": "/components/tags",
+                    "statusBadges": Array [
+                      "updated",
+                    ],
                     "title": "Tags",
                   },
                   Object {
@@ -511,7 +506,6 @@ exports[`Main: App renders 1`] = `
                     "rootPath": "/components/tooltips",
                     "statusBadges": Array [
                       "javascript",
-                      "updated",
                     ],
                     "title": "Tooltips",
                   },
@@ -550,9 +544,6 @@ exports[`Main: App renders 1`] = `
                     "outlined": true,
                     "path": "forms",
                     "rootPath": "/patterns/forms",
-                    "statusBadges": Array [
-                      "updated",
-                    ],
                     "title": "Forms",
                   },
                   Object {
@@ -562,7 +553,7 @@ exports[`Main: App renders 1`] = `
                     "path": "login",
                     "rootPath": "/patterns/login",
                     "statusBadges": Array [
-                      "updated",
+                      "new",
                     ],
                     "title": "Login",
                   },
