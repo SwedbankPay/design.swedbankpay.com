@@ -29,7 +29,6 @@ exports[`Main: App renders 1`] = `
     <div
       className="documentation"
     >
-      <VersionTopBanner />
       <div
         className="d-md-flex"
       >

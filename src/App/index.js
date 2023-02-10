@@ -50,16 +50,15 @@ const Utilities = React.lazy(() => import(/* webpackChunkName: "utilities.chunk"
 
 const App = () => {
 
-    const [version, setVersion] = useState();
+    const [version, setVersion] = useState(undefined);
+
+    useEffect(() => {
+        fetch("https://design.swedbankpay.com/latestVersion.json").then(data => data.json())
+            .then(data => setVersion(data.latestVersion))
+            .catch(error => console.warn("Could not fetch latest version from Azure:", error));
+    }, []);
 
     const VersionTopBanner = () => {
-
-        useEffect(() => {
-            fetch("https://design.swedbankpay.com/latestVersion.json").then(data => data.json())
-                .then(data => setVersion(data.latestVersion))
-                .catch(error => console.warn("Could not fetch latest version from Azure:", error));
-        }, []);
-
         const pathname = useLocation().pathname;
 
         return (
@@ -76,7 +75,7 @@ const App = () => {
             <ScrollToTopComponent>
                 <AppHeader />
                 <div className="documentation">
-                    {packageJson.version !== version && <VersionTopBanner/>}
+                    { version && packageJson.version !== version && <VersionTopBanner/>}
                     <div className="d-md-flex">
                         <SkipLink/>
                         <div className="d-none d-lg-block">
