@@ -29,6 +29,14 @@ const ErrorPage404 = React.lazy(() => import(/* webpackChunkName: "404.chunk" */
 
 const Utilities = React.lazy(() => import(/* webpackChunkName: "utilities.chunk" */ "./Utilities/index.js"));
 
+if (!window.location.pathname.includes(basename)) {
+    window.history.replaceState(
+        "",
+        "",
+        basename + window.location.pathname
+    );
+}
+
 const App = () => {
 
     useEffect(() => {
@@ -36,7 +44,7 @@ const App = () => {
     }, []);
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={basename}>
             <AppHeader /> {/* mobile & tablet topbar & hamburger menu */}
             <div className="documentation">
                 <div className="d-md-flex">
