@@ -10,7 +10,7 @@ const RenderPage = ({ initPath }) => (
         <div className="doc-container">
             <span className="dg-current-version text-uppercase">Design Guide – v. {packageJson.version}</span>
             <Routes>
-                <Route exact path={"/"} element={<Navigate replace to={initPath} />} />
+                <Route path={"/"} element={<Navigate replace to={initPath} />} />
                 {routes.map(route => renderRoutes({
                     key: `renderRoutes_${route.title}`,
                     path: route.path,

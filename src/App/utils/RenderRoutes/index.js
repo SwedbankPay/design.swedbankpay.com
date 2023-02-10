@@ -6,7 +6,7 @@ import { DocHeading, StatusBadge } from "@docutils";
 
 const renderRoutes = ({ key, path, redirect, routes, appFolder }) => (
     <Fragment key={key}>
-        <Route exact path={"/"} element={<Navigate replace to={redirect} />}/>
+        <Route path={"/"} element={<Navigate replace to={redirect} />}/>
         {routes.map(route => {
             const { path, componentPath } = route;
 
@@ -15,7 +15,7 @@ const renderRoutes = ({ key, path, redirect, routes, appFolder }) => (
             const RouteRenderComponent = React.lazy(() => import(/* webpackChunkName: "doc-route.chunk_" */"../../" + appFolder + "/" + componentPath + "/index.js"));
             // const RouteRenderComponent = React.lazy(() => import(/* webpackChunkName: "doc-route.chunk_" */`../../${appFolder}/${componentPath}/index.js`));
 
-            return <Route key={`doc_route_${path}`} exact path={path} element={<>
+            return <Route key={`doc_route_${path}`} path={path} element={<>
                 <div className="d-flex align-items-center ">
                     <DocHeading />
                     {route.statusBadges && route.statusBadges.map(statusBadge => <StatusBadge key={`status-badge-${statusBadge}`} type={statusBadge} />)}

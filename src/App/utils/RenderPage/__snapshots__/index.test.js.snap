@@ -23,7 +23,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             to="test"
           />
         }
-        exact={true}
         path="/"
       />
       <Route
@@ -33,7 +32,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             to="introduction"
           />
         }
-        exact={true}
         path="/"
       />
       <Route
@@ -47,7 +45,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_introduction"
         path="introduction"
       />
@@ -62,7 +59,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_for-developers"
         path="for-developers"
       />
@@ -77,7 +73,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_for-designers"
         path="for-designers"
       />
@@ -97,7 +92,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             to="identity"
           />
         }
-        exact={true}
         path="/"
       />
       <Route
@@ -111,7 +105,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_identity"
         path="identity"
       />
@@ -126,7 +119,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_accessibility"
         path="accessibility"
       />
@@ -141,7 +133,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_color"
         path="color"
       />
@@ -156,7 +147,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_copywriting"
         path="copywriting"
       />
@@ -171,7 +161,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_grid"
         path="grid"
       />
@@ -186,7 +175,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_iconography"
         path="iconography"
       />
@@ -201,7 +189,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_imagery"
         path="imagery"
       />
@@ -219,7 +206,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_logotype"
         path="logotype"
       />
@@ -234,7 +220,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_page-layout"
         path="page-layout"
       />
@@ -249,7 +234,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_spacing"
         path="spacing"
       />
@@ -267,7 +251,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_typography"
         path="typography"
       />
@@ -287,7 +270,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             to="components"
           />
         }
-        exact={true}
         path="/"
       />
       <Route
@@ -301,7 +283,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_components"
         path="components"
       />
@@ -319,7 +300,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_accordion"
         path="accordion"
       />
@@ -337,7 +317,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_action-list"
         path="action-list"
       />
@@ -355,7 +334,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_alerts"
         path="alerts"
       />
@@ -370,7 +348,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_badge"
         path="badge"
       />
@@ -385,7 +362,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_breadcrumb"
         path="breadcrumb"
       />
@@ -403,7 +379,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_buttons"
         path="buttons"
       />
@@ -418,7 +393,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_cards"
         path="cards"
       />
@@ -439,7 +413,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_charts"
         path="charts"
       />
@@ -457,7 +430,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_checkbox"
         path="checkbox"
       />
@@ -475,7 +447,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_datepickers"
         path="datepickers"
       />
@@ -493,7 +464,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_dialog"
         path="dialog"
       />
@@ -514,7 +484,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_dropdown"
         path="dropdown"
       />
@@ -532,7 +501,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_expandable"
         path="expandable"
       />
@@ -550,7 +518,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_input-field"
         path="input-field"
       />
@@ -565,7 +532,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_links"
         path="links"
       />
@@ -580,7 +546,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_lists"
         path="lists"
       />
@@ -595,7 +560,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_loader"
         path="loader"
       />
@@ -610,7 +574,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_media-object"
         path="media-object"
       />
@@ -631,7 +594,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_nav"
         path="nav"
       />
@@ -649,7 +611,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_pagination"
         path="pagination"
       />
@@ -664,7 +625,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_panel"
         path="panel"
       />
@@ -679,7 +639,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_progress-steps"
         path="progress-steps"
       />
@@ -697,7 +656,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_radio-button"
         path="radio-button"
       />
@@ -715,7 +673,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_rangeslider"
         path="rangeslider"
       />
@@ -733,7 +690,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_sheet"
         path="sheet"
       />
@@ -751,7 +707,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_select"
         path="select"
       />
@@ -772,7 +727,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_sidebar"
         path="sidebar"
       />
@@ -787,7 +741,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_skip-link"
         path="skip-link"
       />
@@ -802,7 +755,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_slab"
         path="slab"
       />
@@ -817,7 +769,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_status"
         path="status"
       />
@@ -832,7 +783,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_tables"
         path="tables"
       />
@@ -850,7 +800,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_tabs"
         path="tabs"
       />
@@ -865,7 +814,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_tags"
         path="tags"
       />
@@ -883,7 +831,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_toast"
         path="toast"
       />
@@ -898,7 +845,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_togglebox"
         path="togglebox"
       />
@@ -919,7 +865,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_tooltips"
         path="tooltips"
       />
@@ -937,7 +882,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_topbar"
         path="topbar"
       />
@@ -957,7 +901,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             to="patterns"
           />
         }
-        exact={true}
         path="/"
       />
       <Route
@@ -971,7 +914,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_patterns"
         path="patterns"
       />
@@ -989,7 +931,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_forms"
         path="forms"
       />
@@ -1007,7 +948,6 @@ exports[`Utilities: RenderPage renders 1`] = `
             <UNDEFINED />
           </React.Fragment>
         }
-        exact={true}
         key="doc_route_login"
         path="login"
       />
