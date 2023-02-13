@@ -63,7 +63,7 @@ export const VersionTopBanner = () => {
     return (
         <>
             {version && packageJson.version !== version &&
-            <div className="text-align-center py-2 bg-version-banner text-white"><span>You are using an older version of the Design Guide. Click <a className="text-banner" href={`https://design.${brand}.com/v/${version}${pathname}`}>here</a> to get to the latest version ({version}).</span></div>}
+            <div className="text-align-center py-2 bg-info text-white"><span>You are using an older version of the Design Guide. Click <a className="text-banner" href={`https://design.${brand}.com/v/${version}${pathname}`}>here</a> to get to the latest version ({version}).</span></div>}
         </>
     );
 };
