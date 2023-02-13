@@ -48,24 +48,27 @@ const ErrorPage404 = React.lazy(() => import(/* webpackChunkName: "404.chunk" */
 
 const Utilities = React.lazy(() => import(/* webpackChunkName: "utilities.chunk" */ "./Utilities/index.js"));
 
+export const VersionTopBanner = () => {
+
+    const pathname = useLocation().pathname;
+
+    const [version, setVersion] = useState(undefined);
+
+    useEffect(() => {
+        fetch("https://design.swedbankpay.com/latestVersion.json").then(data => data.json())
+            .then(data => setVersion(data.latestVersion))
+            .catch(error => console.warn("Could not fetch latest version from Azure:", error));
+    }, []);
+
+    return (
+        <>
+            {version && packageJson.version !== version &&
+            <div className="text-align-center py-2 bg-info text-white"><span>You are using an older version of the Design Guide. Click <a className="text-banner" href={`https://design.${brand}.com/v/${version}${pathname}`}>here</a> to get to the latest version ({version}).</span></div>}
+        </>
+    );
+};
+
 const App = () => {
-
-    const [version, setVersion] = useState();
-
-    const VersionTopBanner = () => {
-
-        useEffect(() => {
-            fetch("https://design.swedbankpay.com/latestVersion.json").then(data => data.json())
-                .then(data => setVersion(data.latestVersion))
-                .catch(error => console.warn("Could not fetch latest version from Azure:", error));
-        }, []);
-
-        const pathname = useLocation().pathname;
-
-        return (
-            <div className="text-align-center py-2 bg-version-banner text-white"><span>You are using an older version of the Design Guide. Click <a className="text-banner" href={`https://design.${brand}.com/v/${version}${pathname}`}>here</a> to get to the latest version ({version}).</span></div>
-        );
-    };
 
     useEffect(() => {
         topbar.init();
@@ -76,7 +79,7 @@ const App = () => {
             <ScrollToTopComponent>
                 <AppHeader />
                 <div className="documentation">
-                    {packageJson.version !== version && <VersionTopBanner/>}
+                    <VersionTopBanner/>
                     <div className="d-md-flex">
                         <SkipLink/>
                         <div className="d-none d-lg-block">
