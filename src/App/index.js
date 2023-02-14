@@ -2,7 +2,7 @@ import React, { Suspense, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import AppHeader from "./AppHeader";
-import { LoadingComponent } from "./utils";
+import { LoadingComponent, removeTrailingSlash } from "./utils";
 import SelectPanel from "./utils/SelectPanel";
 
 import routes from "./routes/all";
@@ -13,7 +13,7 @@ import SearchBox from "./utils/SearchBox";
 
 import { topbar } from "@src/scripts/main";
 
-const basename = process.env.basename || "/";
+const basename = removeTrailingSlash(process.env.basename) || "/";
 
 const Home = React.lazy(() => import(/* webpackChunkName: "home.chunk" */ "./Home/index.js"));
 
@@ -55,7 +55,7 @@ const App = () => {
                                 <Route path="patterns/*" element={<Patterns />} />
                                 <Route path="utilities/*" element={<Utilities />} />
                                 <Route path="404/*" element={<ErrorPage404 />} />
-                                <Route element={<ErrorPage404 />} />
+                                <Route path="*" element={<ErrorPage404 />} />
                             </Routes>
                         </Suspense>
                     </main>
