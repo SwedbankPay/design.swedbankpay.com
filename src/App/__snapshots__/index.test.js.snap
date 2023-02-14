@@ -2,7 +2,7 @@
 
 exports[`Main: App renders 1`] = `
 <BrowserRouter
-  basename="/TEST/"
+  basename="/TEST"
 >
   <AppHeader />
    
@@ -586,6 +586,7 @@ exports[`Main: App renders 1`] = `
           <Routes>
             <Route
               element={<UNDEFINED />}
+              index={true}
               path="/"
             />
             <Route
@@ -614,6 +615,7 @@ exports[`Main: App renders 1`] = `
             />
             <Route
               element={<UNDEFINED />}
+              path="*"
             />
           </Routes>
         </Suspense>

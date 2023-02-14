@@ -11,6 +11,17 @@ const setTitle = title => {
     document.title = `${title} | ${brandTitle} Design Guide`;
 };
 
+const removeTrailingSlash = str => {
+    if (str.length <= 1) {
+        return str;
+    } else if (str.endsWith("/")) {
+        return str.slice(0, -1);
+    } else {
+        return str;
+    }
+
+};
+
 export {
     setTitle,
     LoadingComponent,
@@ -18,5 +29,6 @@ export {
     SelectPanel,
     RenderPage,
     RemoveVscroll,
-    ToggleLightbox
+    ToggleLightbox,
+    removeTrailingSlash
 };

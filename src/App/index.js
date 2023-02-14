@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import packageJson from "~/package";
 
 import AppHeader from "./AppHeader";
-import { LoadingComponent } from "./utils";
+import { LoadingComponent, removeTrailingSlash } from "./utils";
 import SelectPanel from "./utils/SelectPanel";
 
 import routes from "./routes/all";
@@ -14,7 +14,7 @@ import SearchBox from "./utils/SearchBox";
 
 import { topbar } from "@src/scripts/main";
 
-const basename = process.env.basename || "/";
+const basename = removeTrailingSlash(process.env.basename) || "/";
 
 const brand = process.env.brand;
 
@@ -69,14 +69,14 @@ const App = () => {
                         <SearchBox className={"d-none d-lg-block"}/>
                         <Suspense fallback={<LoadingComponent />}>
                             <Routes>
-                                <Route path="/" element={<Home />} />
+                                <Route index path="/" element={<Home />} />
                                 <Route path="get-started/*" element={<GetStarted />} />
                                 <Route path="components/*" element={<Components />} />
                                 <Route path="identity/*" element={<Identity />} />
                                 <Route path="patterns/*" element={<Patterns />} />
                                 <Route path="utilities/*" element={<Utilities />} />
                                 <Route path="404/*" element={<ErrorPage404 />} />
-                                <Route element={<ErrorPage404 />} />
+                                <Route path="*" element={<ErrorPage404 />} />
                             </Routes>
                         </Suspense>
                     </main>
