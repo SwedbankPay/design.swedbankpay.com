@@ -16,7 +16,7 @@ const getRoutes = () => {
         // ...examplesRoutes
     ].forEach(route => {
         ROUTES.push(route.path);
-        route.routes.forEach(r => ROUTES.push(r.path));
+        route.routes.forEach(r => ROUTES.push(r.rootPath));
     });
 
     return ROUTES;
