@@ -105,6 +105,7 @@ export const colors = [
             <div className="col-12 text-default bg-warning p-1">.bg-warning</div>
             <div className="col-12 text-default bg-success p-1">.bg-success</div>
             <div className="col-12 text-default bg-neutral p-1">.bg-neutral</div>
+            <div className="col-12 text-white bg-info p-1">.bg-info</div>
         </>
     }
 ];
