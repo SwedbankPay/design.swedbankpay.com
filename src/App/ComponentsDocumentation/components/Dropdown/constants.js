@@ -10,14 +10,14 @@ import InputGroup from "@components/InputGroup";
 const tabsContent = {
     actionsListItems:
         <>
-            <a href="#" onClick={e => e.preventDefault()} key="item-overview-action-1" >
+            <button key="item-overview-action-1" >
                 <Icon type="bookmark"/>
                 Edit
-            </a>{"\n"}
-            <a href="#" onClick={e => e.preventDefault()} key="item-overview-action-2" >
+            </button>{"\n"}
+            <button key="item-overview-action-2" >
                 <Icon type="delete_outline"/>
                 Delete
-            </a>
+            </button>
         </>,
     checkboxes:
         <CheckboxComponent name="dropdown-checkboxes-examples" options={[
@@ -56,7 +56,7 @@ const tabsContent = {
                 <InputGroup type="text" label="To, in SEK" postfixValue="kr" postfix={true} id="form-group-input-2-example" />
             </div>
             <ButtonComponent type="primary" label="Apply filter" className="mr-2" />
-            <button className="btn btn-link" tyoe="button" onClick={() => clearFilters()}>Clear filters</button>
+            <button className="btn btn-link" type="button" onClick={() => clearFilters()}>Clear filters</button>
         </>
 };
 
