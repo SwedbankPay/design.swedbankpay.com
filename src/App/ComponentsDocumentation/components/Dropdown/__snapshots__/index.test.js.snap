@@ -337,6 +337,7 @@ exports[`Documentation: Dropdown Overview renders 1`] = `
               content={
                 <React.Fragment>
                   <button
+                    className="dropdown-option"
                     type="button"
                   >
                     <Icon
@@ -347,6 +348,7 @@ exports[`Documentation: Dropdown Overview renders 1`] = `
                   
 
                   <button
+                    className="dropdown-option"
                     type="button"
                   >
                     <Icon
