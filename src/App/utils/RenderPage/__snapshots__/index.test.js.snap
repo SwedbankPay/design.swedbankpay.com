@@ -313,6 +313,9 @@ exports[`Utilities: RenderPage renders 1`] = `
               <StatusBadge
                 type="javascript"
               />
+              <StatusBadge
+                type="deprecated"
+              />
             </div>
             <UNDEFINED />
           </React.Fragment>

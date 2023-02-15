@@ -34,7 +34,8 @@ module.exports = [
                 rootPath: "/components/action-list",
                 componentPath: "components/ActionList",
                 icon: "list",
-                statusBadges: ["javascript"]
+                statusBadges: ["javascript", "deprecated"],
+                deprecated: true
             },
             {
                 title: "Alerts",

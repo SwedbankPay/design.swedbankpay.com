@@ -191,6 +191,24 @@ exports[`Components: ActionList Overview renders 1`] = `
 
 exports[`Components: ActionList renders 1`] = `
 <DocContainer>
+  <Alert
+    icon="error"
+    text={
+      <p>
+        <b>
+          Deprecated:
+        </b>
+         Be aware, this component will not be maintained anymore. Please make the transition to take use of the 
+        <Link
+          to="/components/dropdown"
+        >
+          dropdown
+        </Link>
+         component.
+      </p>
+    }
+    type="danger"
+  />
   <p
     className="lead"
   >

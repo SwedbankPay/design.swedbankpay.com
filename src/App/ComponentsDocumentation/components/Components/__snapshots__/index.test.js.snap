@@ -50,6 +50,11 @@ exports[`Components: Components MenuOverview renders 1`] = `
       >
         Action list
       </span>
+      <span
+        className="badge badge-deprecated ml-3"
+      >
+        Deprecated
+      </span>
     </div>
     <i
       aria-hidden="true"

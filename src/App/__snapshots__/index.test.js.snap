@@ -177,11 +177,13 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "components/ActionList",
+                      "deprecated": true,
                       "icon": "list",
                       "path": "action-list",
                       "rootPath": "/components/action-list",
                       "statusBadges": Array [
                         "javascript",
+                        "deprecated",
                       ],
                       "title": "Action list",
                     },
