@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
 
 import DocHeading from "./index";
 
@@ -13,8 +13,8 @@ describe("Utilities: DocHeading", () => {
     it("renders heading and updates document title", () => {
         const location = { pathname: "test" };
 
-        const wrapper = shallow(
-            <DocHeading.WrappedComponent location={location} />
+        const wrapper = mount(
+            <DocHeading locationFromJestTest={location} />
         );
 
         expect(wrapper).toMatchSnapshot();
@@ -25,8 +25,8 @@ describe("Utilities: DocHeading", () => {
     it("correctly formats title", () => {
         const location = { pathname: "test-test" };
 
-        const wrapper = shallow(
-            <DocHeading.WrappedComponent location={location} />
+        const wrapper = mount(
+            <DocHeading locationFromJestTest={location} />
         );
 
         expect(wrapper).toMatchSnapshot();

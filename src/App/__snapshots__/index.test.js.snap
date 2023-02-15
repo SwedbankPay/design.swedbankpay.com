@@ -1,31 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Main: App renders 1`] = `
-<Router
-  basename="/TEST/"
-  history={
-    Object {
-      "action": "POP",
-      "block": [Function],
-      "createHref": [Function],
-      "go": [Function],
-      "goBack": [Function],
-      "goForward": [Function],
-      "length": 1,
-      "listen": [Function],
-      "location": Object {
-        "hash": "",
-        "pathname": "/",
-        "search": "",
-        "state": undefined,
-      },
-      "push": [Function],
-      "replace": [Function],
-    }
-  }
+<BrowserRouter
+  basename="/TEST"
 >
-  <withRouter(ScrollToTop)>
-    <withRouter(AppHeader) />
+  <ScrollToTop>
+    <AppHeader />
+     
     <div
       className="documentation"
     >
@@ -37,9 +18,9 @@ exports[`Main: App renders 1`] = `
         <div
           className="d-none d-lg-block"
         >
-          <withRouter(SelectPanel)
+           
+          <SelectPanel
             id="doc-sidebar"
-            newSidebar={true}
             routes={
               Array [
                 Object {
@@ -49,22 +30,25 @@ exports[`Main: App renders 1`] = `
                     "name": "wb_incandescent",
                     "rotate": true,
                   },
-                  "path": "/get-started",
-                  "redirect": "/get-started/introduction",
+                  "path": "get-started",
+                  "redirect": "introduction",
                   "routes": Array [
                     Object {
                       "componentPath": "get-started/Introduction",
-                      "path": "/get-started/introduction",
+                      "path": "introduction",
+                      "rootPath": "/get-started/introduction",
                       "title": "Introduction",
                     },
                     Object {
                       "componentPath": "get-started/ForDevelopers",
-                      "path": "/get-started/for-developers",
+                      "path": "for-developers",
+                      "rootPath": "/get-started/for-developers",
                       "title": "For developers",
                     },
                     Object {
                       "componentPath": "get-started/ForDesigners",
-                      "path": "/get-started/for-designers",
+                      "path": "for-designers",
+                      "rootPath": "/get-started/for-designers",
                       "title": "For designers",
                     },
                   ],
@@ -77,53 +61,61 @@ exports[`Main: App renders 1`] = `
                   "icon": Object {
                     "name": "palette",
                   },
-                  "path": "/identity",
-                  "redirect": "/identity/identity",
+                  "path": "identity",
+                  "redirect": "identity",
                   "routes": Array [
                     Object {
                       "componentPath": "identity/Identity",
-                      "path": "/identity/identity",
+                      "path": "identity",
+                      "rootPath": "/identity/identity",
                       "title": "Overview",
                     },
                     Object {
                       "componentPath": "identity/Accessibility",
-                      "path": "/identity/accessibility",
+                      "path": "accessibility",
+                      "rootPath": "/identity/accessibility",
                       "text": "Principles & WCAG 2.1 guidelines",
                       "title": "Accessibility",
                     },
                     Object {
                       "componentPath": "identity/Color",
-                      "path": "/identity/color",
+                      "path": "color",
+                      "rootPath": "/identity/color",
                       "text": "Our color palette with HEX codes",
                       "title": "Color",
                     },
                     Object {
                       "componentPath": "identity/Copywriting",
-                      "path": "/identity/copywriting",
+                      "path": "copywriting",
+                      "rootPath": "/identity/copywriting",
                       "text": "Tonality & UX copy in our products",
                       "title": "Copywriting",
                     },
                     Object {
                       "componentPath": "identity/Grid",
-                      "path": "/identity/grid",
+                      "path": "grid",
+                      "rootPath": "/identity/grid",
                       "text": "Our grid and best practices",
                       "title": "Grid",
                     },
                     Object {
                       "componentPath": "identity/Iconography",
-                      "path": "/identity/iconography",
+                      "path": "iconography",
+                      "rootPath": "/identity/iconography",
                       "text": "Guidelines and icon library",
                       "title": "Iconography",
                     },
                     Object {
                       "componentPath": "identity/Imagery",
-                      "path": "/identity/imagery",
+                      "path": "imagery",
+                      "rootPath": "/identity/imagery",
                       "text": "Guidelines and image library",
                       "title": "Imagery",
                     },
                     Object {
                       "componentPath": "identity/Logotype",
-                      "path": "/identity/logotype",
+                      "path": "logotype",
+                      "rootPath": "/identity/logotype",
                       "statusBadges": Array [
                         "updated",
                       ],
@@ -132,19 +124,22 @@ exports[`Main: App renders 1`] = `
                     },
                     Object {
                       "componentPath": "identity/Page-layout",
-                      "path": "/identity/page-layout",
+                      "path": "page-layout",
+                      "rootPath": "/identity/page-layout",
                       "text": "See our layout structure",
                       "title": "Page layout",
                     },
                     Object {
                       "componentPath": "identity/Spacing",
-                      "path": "/identity/spacing",
+                      "path": "spacing",
+                      "rootPath": "/identity/spacing",
                       "text": "8-point spacing system",
                       "title": "Spacing",
                     },
                     Object {
                       "componentPath": "identity/Typography",
-                      "path": "/identity/typography",
+                      "path": "typography",
+                      "rootPath": "/identity/typography",
                       "statusBadges": Array [
                         "updated",
                       ],
@@ -160,19 +155,21 @@ exports[`Main: App renders 1`] = `
                   "icon": Object {
                     "name": "category",
                   },
-                  "path": "/components",
-                  "redirect": "/components/components",
+                  "path": "components",
+                  "redirect": "components",
                   "routes": Array [
                     Object {
                       "componentPath": "components/Components",
-                      "path": "/components/components",
+                      "path": "components",
+                      "rootPath": "/components/components",
                       "title": "Overview",
                     },
                     Object {
                       "componentPath": "components/Accordion",
                       "icon": "calendar_view_day",
                       "outlined": true,
-                      "path": "/components/accordion",
+                      "path": "accordion",
+                      "rootPath": "/components/accordion",
                       "statusBadges": Array [
                         "javascript",
                       ],
@@ -182,7 +179,8 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/ActionList",
                       "deprecated": true,
                       "icon": "list",
-                      "path": "/components/action-list",
+                      "path": "action-list",
+                      "rootPath": "/components/action-list",
                       "statusBadges": Array [
                         "javascript",
                         "deprecated",
@@ -192,7 +190,8 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "components/Alerts",
                       "icon": "error_outline",
-                      "path": "/components/alerts",
+                      "path": "alerts",
+                      "rootPath": "/components/alerts",
                       "statusBadges": Array [
                         "javascript",
                       ],
@@ -202,21 +201,24 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/Badge",
                       "icon": "more",
                       "outlined": true,
-                      "path": "/components/badge",
+                      "path": "badge",
+                      "rootPath": "/components/badge",
                       "title": "Badges",
                     },
                     Object {
                       "componentPath": "components/Breadcrumb",
                       "icon": "last_page",
                       "outlined": true,
-                      "path": "/components/breadcrumb",
+                      "path": "breadcrumb",
+                      "rootPath": "/components/breadcrumb",
                       "title": "Breadcrumb",
                     },
                     Object {
                       "componentPath": "components/Buttons",
                       "icon": "touch_app",
                       "outlined": true,
-                      "path": "/components/buttons",
+                      "path": "buttons",
+                      "rootPath": "/components/buttons",
                       "statusBadges": Array [
                         "updated",
                       ],
@@ -226,7 +228,8 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/Card",
                       "icon": "view_agenda",
                       "outlined": true,
-                      "path": "/components/cards",
+                      "path": "cards",
+                      "rootPath": "/components/cards",
                       "title": "Cards",
                     },
                     Object {
@@ -234,7 +237,8 @@ exports[`Main: App renders 1`] = `
                       "deprecated": true,
                       "icon": "bar_chart",
                       "outlined": true,
-                      "path": "/components/charts",
+                      "path": "charts",
+                      "rootPath": "/components/charts",
                       "statusBadges": Array [
                         "javascript",
                         "deprecated",
@@ -245,7 +249,8 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/Checkbox",
                       "icon": "check_box",
                       "outlined": true,
-                      "path": "/components/checkbox",
+                      "path": "checkbox",
+                      "rootPath": "/components/checkbox",
                       "statusBadges": Array [
                         "javascript",
                       ],
@@ -255,7 +260,8 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/Datepickers",
                       "icon": "event",
                       "outlined": true,
-                      "path": "/components/datepickers",
+                      "path": "datepickers",
+                      "rootPath": "/components/datepickers",
                       "statusBadges": Array [
                         "javascript",
                       ],
@@ -265,7 +271,8 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/Dialog",
                       "icon": "picture_in_picture",
                       "outlined": true,
-                      "path": "/components/dialog",
+                      "path": "dialog",
+                      "rootPath": "/components/dialog",
                       "statusBadges": Array [
                         "javascript",
                       ],
@@ -275,7 +282,8 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/Dropdown",
                       "icon": "expand_more",
                       "outlined": true,
-                      "path": "/components/dropdown",
+                      "path": "dropdown",
+                      "rootPath": "/components/dropdown",
                       "statusBadges": Array [
                         "javascript",
                         "updated",
@@ -285,7 +293,8 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "components/Expandable",
                       "icon": "expand",
-                      "path": "/components/expandable",
+                      "path": "expandable",
+                      "rootPath": "/components/expandable",
                       "statusBadges": Array [
                         "javascript",
                       ],
@@ -294,7 +303,8 @@ exports[`Main: App renders 1`] = `
                     Object {
                       "componentPath": "components/InputField",
                       "icon": "text_fields",
-                      "path": "/components/input-field",
+                      "path": "input-field",
+                      "rootPath": "/components/input-field",
                       "statusBadges": Array [
                         "javascript",
                       ],
@@ -304,28 +314,32 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/Links",
                       "icon": "link",
                       "outlined": true,
-                      "path": "/components/links",
+                      "path": "links",
+                      "rootPath": "/components/links",
                       "title": "Links",
                     },
                     Object {
                       "componentPath": "components/Lists",
                       "icon": "sort",
                       "outlined": true,
-                      "path": "/components/lists",
+                      "path": "lists",
+                      "rootPath": "/components/lists",
                       "title": "Lists",
                     },
                     Object {
                       "componentPath": "components/Loader",
                       "icon": "loop",
                       "outlined": true,
-                      "path": "/components/loader",
+                      "path": "loader",
+                      "rootPath": "/components/loader",
                       "title": "Loader",
                     },
                     Object {
                       "componentPath": "components/MediaObject",
                       "icon": "account_circle",
                       "outlined": true,
-                      "path": "/components/media-object",
+                      "path": "media-object",
+                      "rootPath": "/components/media-object",
                       "title": "Media Object",
                     },
                     Object {
@@ -333,7 +347,8 @@ exports[`Main: App renders 1`] = `
                       "deprecated": true,
                       "icon": "explore",
                       "outlined": true,
-                      "path": "/components/nav",
+                      "path": "nav",
+                      "rootPath": "/components/nav",
                       "statusBadges": Array [
                         "javascript",
                         "deprecated",
@@ -344,7 +359,8 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/Pagination",
                       "icon": "power_input",
                       "outlined": true,
-                      "path": "/components/pagination",
+                      "path": "pagination",
+                      "rootPath": "/components/pagination",
                       "statusBadges": Array [
                         "javascript",
                       ],
@@ -354,19 +370,22 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/Panel",
                       "icon": "table_rows",
                       "outlined": true,
-                      "path": "/components/panel",
+                      "path": "panel",
+                      "rootPath": "/components/panel",
                       "title": "Panel",
                     },
                     Object {
                       "componentPath": "components/ProgressSteps",
                       "icon": "hdr_strong",
-                      "path": "/components/progress-steps",
+                      "path": "progress-steps",
+                      "rootPath": "/components/progress-steps",
                       "title": "Progress steps",
                     },
                     Object {
                       "componentPath": "components/RadioButton",
                       "icon": "radio_button_checked",
-                      "path": "/components/radio-button",
+                      "path": "radio-button",
+                      "rootPath": "/components/radio-button",
                       "statusBadges": Array [
                         "javascript",
                       ],
@@ -376,7 +395,8 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/Rangeslider",
                       "icon": "tune",
                       "outlined": true,
-                      "path": "/components/rangeslider",
+                      "path": "rangeslider",
+                      "rootPath": "/components/rangeslider",
                       "statusBadges": Array [
                         "javascript",
                       ],
@@ -386,7 +406,8 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/Sheet",
                       "icon": "vertical_split",
                       "outlined": true,
-                      "path": "/components/sheet",
+                      "path": "sheet",
+                      "rootPath": "/components/sheet",
                       "statusBadges": Array [
                         "javascript",
                       ],
@@ -396,7 +417,8 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/Select",
                       "icon": "arrow_drop_down_circle",
                       "outlined": true,
-                      "path": "/components/select",
+                      "path": "select",
+                      "rootPath": "/components/select",
                       "statusBadges": Array [
                         "javascript",
                       ],
@@ -406,7 +428,8 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/Sidebar",
                       "icon": "view_sidebar",
                       "outlined": true,
-                      "path": "/components/sidebar",
+                      "path": "sidebar",
+                      "rootPath": "/components/sidebar",
                       "statusBadges": Array [
                         "javascript",
                         "updated",
@@ -417,35 +440,40 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/SkipLink",
                       "icon": "skip_next",
                       "outlined": true,
-                      "path": "/components/skip-link",
+                      "path": "skip-link",
+                      "rootPath": "/components/skip-link",
                       "title": "Skip link",
                     },
                     Object {
                       "componentPath": "components/Slab",
                       "icon": "crop_landscape",
                       "outlined": true,
-                      "path": "/components/slab",
+                      "path": "slab",
+                      "rootPath": "/components/slab",
                       "title": "Slab",
                     },
                     Object {
                       "componentPath": "components/Status",
                       "icon": "check_circle",
                       "outlined": true,
-                      "path": "/components/status",
+                      "path": "status",
+                      "rootPath": "/components/status",
                       "title": "Status",
                     },
                     Object {
                       "componentPath": "components/Tables",
                       "icon": "view_list",
                       "outlined": true,
-                      "path": "/components/tables",
+                      "path": "tables",
+                      "rootPath": "/components/tables",
                       "title": "Tables",
                     },
                     Object {
                       "componentPath": "components/Tabs",
                       "icon": "folder",
                       "outlined": true,
-                      "path": "/components/tabs",
+                      "path": "tabs",
+                      "rootPath": "/components/tabs",
                       "statusBadges": Array [
                         "javascript",
                       ],
@@ -455,14 +483,16 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/CodeTags",
                       "icon": "code",
                       "outlined": true,
-                      "path": "/components/tags",
+                      "path": "tags",
+                      "rootPath": "/components/tags",
                       "title": "Tags",
                     },
                     Object {
                       "componentPath": "components/Toast",
                       "icon": "picture_in_picture",
                       "outlined": true,
-                      "path": "/components/toast",
+                      "path": "toast",
+                      "rootPath": "/components/toast",
                       "statusBadges": Array [
                         "javascript",
                       ],
@@ -472,14 +502,16 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/Togglebox",
                       "icon": "toggle_off",
                       "outlined": true,
-                      "path": "/components/togglebox",
+                      "path": "togglebox",
+                      "rootPath": "/components/togglebox",
                       "title": "Togglebox",
                     },
                     Object {
                       "componentPath": "components/Tooltips",
                       "icon": "filter_frames",
                       "outlined": true,
-                      "path": "/components/tooltips",
+                      "path": "tooltips",
+                      "rootPath": "/components/tooltips",
                       "statusBadges": Array [
                         "javascript",
                         "updated",
@@ -490,7 +522,8 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "components/Topbar",
                       "icon": "call_to_action",
                       "outlined": true,
-                      "path": "/components/topbar",
+                      "path": "topbar",
+                      "rootPath": "/components/topbar",
                       "statusBadges": Array [
                         "javascript",
                       ],
@@ -505,19 +538,21 @@ exports[`Main: App renders 1`] = `
                   "icon": Object {
                     "name": "dashboard",
                   },
-                  "path": "/patterns",
-                  "redirect": "/patterns/patterns",
+                  "path": "patterns",
+                  "redirect": "patterns",
                   "routes": Array [
                     Object {
                       "componentPath": "content/Patterns",
-                      "path": "/patterns/patterns",
+                      "path": "patterns",
+                      "rootPath": "/patterns/patterns",
                       "title": "Overview",
                     },
                     Object {
                       "componentPath": "content/Forms",
                       "icon": "format_align_justify",
                       "outlined": true,
-                      "path": "/patterns/forms",
+                      "path": "forms",
+                      "rootPath": "/patterns/forms",
                       "statusBadges": Array [
                         "updated",
                       ],
@@ -527,7 +562,8 @@ exports[`Main: App renders 1`] = `
                       "componentPath": "content/Login",
                       "icon": "account_circle",
                       "outlined": true,
-                      "path": "/patterns/login",
+                      "path": "login",
+                      "rootPath": "/patterns/login",
                       "statusBadges": Array [
                         "updated",
                       ],
@@ -550,116 +586,45 @@ exports[`Main: App renders 1`] = `
           <Suspense
             fallback={<LoadingComponent />}
           >
-            <Switch>
+            <Routes>
               <Route
-                component={
-                  Object {
-                    "$$typeof": Symbol(react.lazy),
-                    "_init": [Function],
-                    "_payload": Object {
-                      "_result": [Function],
-                      "_status": -1,
-                    },
-                  }
-                }
-                exact={true}
+                element={<UNDEFINED />}
+                index={true}
                 path="/"
               />
               <Route
-                component={
-                  Object {
-                    "$$typeof": Symbol(react.lazy),
-                    "_init": [Function],
-                    "_payload": Object {
-                      "_result": [Function],
-                      "_status": -1,
-                    },
-                  }
-                }
-                path="/get-started"
+                element={<UNDEFINED />}
+                path="get-started/*"
               />
               <Route
-                component={
-                  Object {
-                    "$$typeof": Symbol(react.lazy),
-                    "_init": [Function],
-                    "_payload": Object {
-                      "_result": [Function],
-                      "_status": -1,
-                    },
-                  }
-                }
-                path="/components"
+                element={<UNDEFINED />}
+                path="components/*"
               />
               <Route
-                component={
-                  Object {
-                    "$$typeof": Symbol(react.lazy),
-                    "_init": [Function],
-                    "_payload": Object {
-                      "_result": [Function],
-                      "_status": -1,
-                    },
-                  }
-                }
-                path="/identity"
+                element={<UNDEFINED />}
+                path="identity/*"
               />
               <Route
-                component={
-                  Object {
-                    "$$typeof": Symbol(react.lazy),
-                    "_init": [Function],
-                    "_payload": Object {
-                      "_result": [Function],
-                      "_status": -1,
-                    },
-                  }
-                }
-                path="/patterns"
+                element={<UNDEFINED />}
+                path="patterns/*"
               />
               <Route
-                component={
-                  Object {
-                    "$$typeof": Symbol(react.lazy),
-                    "_init": [Function],
-                    "_payload": Object {
-                      "_result": [Function],
-                      "_status": -1,
-                    },
-                  }
-                }
-                path="/utilities"
+                element={<UNDEFINED />}
+                path="utilities/*"
               />
               <Route
-                component={
-                  Object {
-                    "$$typeof": Symbol(react.lazy),
-                    "_init": [Function],
-                    "_payload": Object {
-                      "_result": [Function],
-                      "_status": -1,
-                    },
-                  }
-                }
-                path="/404"
+                element={<UNDEFINED />}
+                path="404/*"
               />
               <Route
-                component={
-                  Object {
-                    "$$typeof": Symbol(react.lazy),
-                    "_init": [Function],
-                    "_payload": Object {
-                      "_result": [Function],
-                      "_status": -1,
-                    },
-                  }
-                }
+                element={<UNDEFINED />}
+                path="*"
               />
-            </Switch>
+            </Routes>
           </Suspense>
         </main>
       </div>
     </div>
-  </withRouter(ScrollToTop)>
-</Router>
+  </ScrollToTop>
+</BrowserRouter>
 `;

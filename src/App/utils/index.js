@@ -1,5 +1,5 @@
 import LoadingComponent from "./LoadingComponent/index";
-import RenderRoutes from "./RenderRoutes/index";
+import renderRoutes from "./RenderRoutes/index";
 import SelectPanel from "./SelectPanel/index";
 import RenderPage from "./RenderPage/index";
 import RemoveVscroll from "./RemoveVscroll/index";
@@ -11,12 +11,24 @@ const setTitle = title => {
     document.title = `${title} | ${brandTitle} Design Guide`;
 };
 
+const removeTrailingSlash = str => {
+    if (str.length <= 1) {
+        return str;
+    } else if (str.endsWith("/")) {
+        return str.slice(0, -1);
+    } else {
+        return str;
+    }
+
+};
+
 export {
     setTitle,
     LoadingComponent,
-    RenderRoutes,
+    renderRoutes,
     SelectPanel,
     RenderPage,
     RemoveVscroll,
-    ToggleLightbox
+    ToggleLightbox,
+    removeTrailingSlash
 };

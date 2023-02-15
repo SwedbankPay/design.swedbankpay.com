@@ -10,7 +10,7 @@ describe("Utilities: RenderPage", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<RenderPage path="/test" initPath="test/test" />);
+        const wrapper = shallow(<RenderPage path="test" initPath="test" />);
 
         expect(wrapper).toMatchSnapshot();
     });

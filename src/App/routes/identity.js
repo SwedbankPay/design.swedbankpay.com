@@ -7,74 +7,85 @@ module.exports = [
         icon: {
             name: "palette"
         },
-        path: "/identity",
+        path: "identity",
         entryCardText: "Learn about our fundamental principles",
-        redirect: "/identity/identity",
+        redirect: "identity",
         appFolder: "Identity",
         routes: [
             {
                 title: "Overview",
-                path: "/identity/identity",
+                path: "identity",
+                rootPath: "/identity/identity",
                 componentPath: "identity/Identity"
             },
             {
                 title: "Accessibility",
-                path: "/identity/accessibility",
+                path: "accessibility",
+                rootPath: "/identity/accessibility",
                 componentPath: "identity/Accessibility",
                 text: "Principles & WCAG 2.1 guidelines"
             },
             {
                 title: "Color",
-                path: "/identity/color",
+                path: "color",
+                rootPath: "/identity/color",
                 componentPath: "identity/Color",
                 text: "Our color palette with HEX codes"
             },
             {
                 title: "Copywriting",
-                path: "/identity/copywriting",
+                path: "copywriting",
+                rootPath: "/identity/copywriting",
                 componentPath: "identity/Copywriting",
                 text: "Tonality & UX copy in our products"
             },
             {
                 title: "Grid",
-                path: "/identity/grid",
+                path: "grid",
+                rootPath: "/identity/grid",
                 componentPath: "identity/Grid",
                 text: "Our grid and best practices"
             },
             {
                 title: "Iconography",
-                path: "/identity/iconography",
+                path: "iconography",
+                rootPath: "/identity/iconography",
                 componentPath: "identity/Iconography",
                 text: "Guidelines and icon library"
             },
             {
                 title: "Imagery",
-                path: "/identity/imagery",
+                path: "imagery",
+                rootPath: "/identity/imagery",
                 componentPath: "identity/Imagery",
                 text: "Guidelines and image library"
             },
             {
                 title: "Logotype",
-                path: "/identity/logotype",
+                path: "logotype",
+                rootPath: "/identity/logotype",
                 componentPath: "identity/Logotype",
                 statusBadges: ["updated"],
                 text: `The ${process.env.brandTitle} logotype`
             },
             {
                 title: "Page layout",
-                path: "/identity/page-layout",
+                path: "page-layout",
+                rootPath: "/identity/page-layout",
                 componentPath: "identity/Page-layout",
                 text: "See our layout structure"
             },
             {
                 title: "Spacing",
-                path: "/identity/spacing",
+                path: "spacing",
+                rootPath: "/identity/spacing",
                 componentPath: "identity/Spacing",
                 text: "8-point spacing system"
             },
             {
                 title: "Typography",
-                path: "/identity/typography",
+                path: "typography",
+                rootPath: "/identity/typography",
                 componentPath: "identity/Typography",
                 statusBadges: ["updated"],
                 text: "See our fronts and sizing"

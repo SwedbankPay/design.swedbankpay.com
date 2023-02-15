@@ -1,7 +1,7 @@
 import allRoutes from "./all";
 
 describe("Routes: all", () => {
-    const pathFormat = new RegExp("^(\\/[a-z]+([-a-z]+)?)+$");
+    const pathFormat = new RegExp("^([a-z]+([-a-z]+)?)+$");
 
     it("is defined", () => {
         expect(allRoutes).toBeDefined();
