@@ -10,11 +10,11 @@ import InputGroup from "@components/InputGroup";
 const tabsContent = {
     actionsListItems:
         <>
-            <button type="button" key="item-overview-action-1" >
+            <button type="button" className="dropdown-option" key="item-overview-action-1" >
                 <Icon type="bookmark"/>
                 Edit
             </button>{"\n"}
-            <button type="button" key="item-overview-action-2" >
+            <button type="button" className="dropdown-option" key="item-overview-action-2" >
                 <Icon type="delete_outline"/>
                 Delete
             </button>
