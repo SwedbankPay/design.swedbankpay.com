@@ -32,6 +32,16 @@ const ErrorPage404 = React.lazy(() => import(/* webpackChunkName: "404.chunk" */
 
 const Utilities = React.lazy(() => import(/* webpackChunkName: "utilities.chunk" */ "./Utilities/index.js"));
 
+const ScrollToTop = ({ children }) => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return children;
+};
+
 export const VersionTopBanner = () => {
 
     const pathname = useLocation().pathname;
@@ -60,31 +70,33 @@ const App = () => {
 
     return (
         <BrowserRouter basename={basename} >
-            <AppHeader /> {/* mobile & tablet topbar & hamburger menu */}
-            <div className="documentation">
-                <VersionTopBanner/>
-                <div className="d-md-flex">
-                    <SkipLink/>
-                    <div className="d-none d-lg-block"> {/* desktop sidebar nav */}
-                        <SelectPanel id="doc-sidebar" routes={routes} />
+            <ScrollToTop>
+                <AppHeader /> {/* mobile & tablet topbar & hamburger menu */}
+                <div className="documentation">
+                    <VersionTopBanner/>
+                    <div className="d-md-flex">
+                        <SkipLink/>
+                        <div className="d-none d-lg-block"> {/* desktop sidebar nav */}
+                            <SelectPanel id="doc-sidebar" routes={routes} />
+                        </div>
+                        <main id="doc-view" className="doc-view">
+                            <SearchBox className={"d-none d-lg-block"}/>
+                            <Suspense fallback={<LoadingComponent />}>
+                                <Routes>
+                                    <Route index path="/" element={<Home />} />
+                                    <Route path="get-started/*" element={<GetStarted />} />
+                                    <Route path="components/*" element={<Components />} />
+                                    <Route path="identity/*" element={<Identity />} />
+                                    <Route path="patterns/*" element={<Patterns />} />
+                                    <Route path="utilities/*" element={<Utilities />} />
+                                    <Route path="404/*" element={<ErrorPage404 />} />
+                                    <Route path="*" element={<ErrorPage404 />} />
+                                </Routes>
+                            </Suspense>
+                        </main>
                     </div>
-                    <main id="doc-view" className="doc-view">
-                        <SearchBox className={"d-none d-lg-block"}/>
-                        <Suspense fallback={<LoadingComponent />}>
-                            <Routes>
-                                <Route index path="/" element={<Home />} />
-                                <Route path="get-started/*" element={<GetStarted />} />
-                                <Route path="components/*" element={<Components />} />
-                                <Route path="identity/*" element={<Identity />} />
-                                <Route path="patterns/*" element={<Patterns />} />
-                                <Route path="utilities/*" element={<Utilities />} />
-                                <Route path="404/*" element={<ErrorPage404 />} />
-                                <Route path="*" element={<ErrorPage404 />} />
-                            </Routes>
-                        </Suspense>
-                    </main>
                 </div>
-            </div>
+            </ScrollToTop>
         </BrowserRouter>
     );
 };

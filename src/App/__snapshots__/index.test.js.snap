@@ -4,623 +4,625 @@ exports[`Main: App renders 1`] = `
 <BrowserRouter
   basename="/TEST"
 >
-  <AppHeader />
-   
-  <div
-    className="documentation"
-  >
-    <VersionTopBanner />
+  <ScrollToTop>
+    <AppHeader />
+     
     <div
-      className="d-md-flex"
+      className="documentation"
     >
-      <SkipLink />
+      <VersionTopBanner />
       <div
-        className="d-none d-lg-block"
+        className="d-md-flex"
       >
-         
-        <SelectPanel
-          id="doc-sidebar"
-          routes={
-            Array [
-              Object {
-                "appFolder": "GetStarted",
-                "entryCardText": "Get started by setting up the Design Guide!",
-                "icon": Object {
-                  "name": "wb_incandescent",
-                  "rotate": true,
-                },
-                "path": "get-started",
-                "redirect": "introduction",
-                "routes": Array [
-                  Object {
-                    "componentPath": "get-started/Introduction",
-                    "path": "introduction",
-                    "rootPath": "/get-started/introduction",
-                    "title": "Introduction",
-                  },
-                  Object {
-                    "componentPath": "get-started/ForDevelopers",
-                    "path": "for-developers",
-                    "rootPath": "/get-started/for-developers",
-                    "title": "For developers",
-                  },
-                  Object {
-                    "componentPath": "get-started/ForDesigners",
-                    "path": "for-designers",
-                    "rootPath": "/get-started/for-designers",
-                    "title": "For designers",
-                  },
-                ],
-                "title": "Get started",
-                "wideCard": true,
-              },
-              Object {
-                "appFolder": "Identity",
-                "entryCardText": "Learn about our fundamental principles",
-                "icon": Object {
-                  "name": "palette",
-                },
-                "path": "identity",
-                "redirect": "identity",
-                "routes": Array [
-                  Object {
-                    "componentPath": "identity/Identity",
-                    "path": "identity",
-                    "rootPath": "/identity/identity",
-                    "title": "Overview",
-                  },
-                  Object {
-                    "componentPath": "identity/Accessibility",
-                    "path": "accessibility",
-                    "rootPath": "/identity/accessibility",
-                    "text": "Principles & WCAG 2.1 guidelines",
-                    "title": "Accessibility",
-                  },
-                  Object {
-                    "componentPath": "identity/Color",
-                    "path": "color",
-                    "rootPath": "/identity/color",
-                    "text": "Our color palette with HEX codes",
-                    "title": "Color",
-                  },
-                  Object {
-                    "componentPath": "identity/Copywriting",
-                    "path": "copywriting",
-                    "rootPath": "/identity/copywriting",
-                    "text": "Tonality & UX copy in our products",
-                    "title": "Copywriting",
-                  },
-                  Object {
-                    "componentPath": "identity/Grid",
-                    "path": "grid",
-                    "rootPath": "/identity/grid",
-                    "text": "Our grid and best practices",
-                    "title": "Grid",
-                  },
-                  Object {
-                    "componentPath": "identity/Iconography",
-                    "path": "iconography",
-                    "rootPath": "/identity/iconography",
-                    "text": "Guidelines and icon library",
-                    "title": "Iconography",
-                  },
-                  Object {
-                    "componentPath": "identity/Imagery",
-                    "path": "imagery",
-                    "rootPath": "/identity/imagery",
-                    "text": "Guidelines and image library",
-                    "title": "Imagery",
-                  },
-                  Object {
-                    "componentPath": "identity/Logotype",
-                    "path": "logotype",
-                    "rootPath": "/identity/logotype",
-                    "statusBadges": Array [
-                      "updated",
-                    ],
-                    "text": "The TESTBRAND logotype",
-                    "title": "Logotype",
-                  },
-                  Object {
-                    "componentPath": "identity/Page-layout",
-                    "path": "page-layout",
-                    "rootPath": "/identity/page-layout",
-                    "text": "See our layout structure",
-                    "title": "Page layout",
-                  },
-                  Object {
-                    "componentPath": "identity/Spacing",
-                    "path": "spacing",
-                    "rootPath": "/identity/spacing",
-                    "text": "8-point spacing system",
-                    "title": "Spacing",
-                  },
-                  Object {
-                    "componentPath": "identity/Typography",
-                    "path": "typography",
-                    "rootPath": "/identity/typography",
-                    "statusBadges": Array [
-                      "updated",
-                    ],
-                    "text": "See our fronts and sizing",
-                    "title": "Typography",
-                  },
-                ],
-                "title": "Identity",
-              },
-              Object {
-                "appFolder": "ComponentsDocumentation",
-                "entryCardText": "Find all currently available components here",
-                "icon": Object {
-                  "name": "category",
-                },
-                "path": "components",
-                "redirect": "components",
-                "routes": Array [
-                  Object {
-                    "componentPath": "components/Components",
-                    "path": "components",
-                    "rootPath": "/components/components",
-                    "title": "Overview",
-                  },
-                  Object {
-                    "componentPath": "components/Accordion",
-                    "icon": "calendar_view_day",
-                    "outlined": true,
-                    "path": "accordion",
-                    "rootPath": "/components/accordion",
-                    "statusBadges": Array [
-                      "javascript",
-                    ],
-                    "title": "Accordion",
-                  },
-                  Object {
-                    "componentPath": "components/ActionList",
-                    "icon": "list",
-                    "path": "action-list",
-                    "rootPath": "/components/action-list",
-                    "statusBadges": Array [
-                      "javascript",
-                    ],
-                    "title": "Action list",
-                  },
-                  Object {
-                    "componentPath": "components/Alerts",
-                    "icon": "error_outline",
-                    "path": "alerts",
-                    "rootPath": "/components/alerts",
-                    "statusBadges": Array [
-                      "javascript",
-                    ],
-                    "title": "Alerts",
-                  },
-                  Object {
-                    "componentPath": "components/Badge",
-                    "icon": "more",
-                    "outlined": true,
-                    "path": "badge",
-                    "rootPath": "/components/badge",
-                    "title": "Badges",
-                  },
-                  Object {
-                    "componentPath": "components/Breadcrumb",
-                    "icon": "last_page",
-                    "outlined": true,
-                    "path": "breadcrumb",
-                    "rootPath": "/components/breadcrumb",
-                    "title": "Breadcrumb",
-                  },
-                  Object {
-                    "componentPath": "components/Buttons",
-                    "icon": "touch_app",
-                    "outlined": true,
-                    "path": "buttons",
-                    "rootPath": "/components/buttons",
-                    "statusBadges": Array [
-                      "updated",
-                    ],
-                    "title": "Buttons",
-                  },
-                  Object {
-                    "componentPath": "components/Card",
-                    "icon": "view_agenda",
-                    "outlined": true,
-                    "path": "cards",
-                    "rootPath": "/components/cards",
-                    "title": "Cards",
-                  },
-                  Object {
-                    "componentPath": "components/Charts",
-                    "deprecated": true,
-                    "icon": "bar_chart",
-                    "outlined": true,
-                    "path": "charts",
-                    "rootPath": "/components/charts",
-                    "statusBadges": Array [
-                      "javascript",
-                      "deprecated",
-                    ],
-                    "title": "Charts",
-                  },
-                  Object {
-                    "componentPath": "components/Checkbox",
-                    "icon": "check_box",
-                    "outlined": true,
-                    "path": "checkbox",
-                    "rootPath": "/components/checkbox",
-                    "statusBadges": Array [
-                      "javascript",
-                    ],
-                    "title": "Checkbox",
-                  },
-                  Object {
-                    "componentPath": "components/Datepickers",
-                    "icon": "event",
-                    "outlined": true,
-                    "path": "datepickers",
-                    "rootPath": "/components/datepickers",
-                    "statusBadges": Array [
-                      "javascript",
-                    ],
-                    "title": "Datepickers",
-                  },
-                  Object {
-                    "componentPath": "components/Dialog",
-                    "icon": "picture_in_picture",
-                    "outlined": true,
-                    "path": "dialog",
-                    "rootPath": "/components/dialog",
-                    "statusBadges": Array [
-                      "javascript",
-                    ],
-                    "title": "Dialog",
-                  },
-                  Object {
-                    "componentPath": "components/Dropdown",
-                    "icon": "expand_more",
-                    "outlined": true,
-                    "path": "dropdown",
-                    "rootPath": "/components/dropdown",
-                    "statusBadges": Array [
-                      "javascript",
-                      "updated",
-                    ],
-                    "title": "Dropdown",
-                  },
-                  Object {
-                    "componentPath": "components/Expandable",
-                    "icon": "expand",
-                    "path": "expandable",
-                    "rootPath": "/components/expandable",
-                    "statusBadges": Array [
-                      "javascript",
-                    ],
-                    "title": "Expandable",
-                  },
-                  Object {
-                    "componentPath": "components/InputField",
-                    "icon": "text_fields",
-                    "path": "input-field",
-                    "rootPath": "/components/input-field",
-                    "statusBadges": Array [
-                      "javascript",
-                    ],
-                    "title": "Input field",
-                  },
-                  Object {
-                    "componentPath": "components/Links",
-                    "icon": "link",
-                    "outlined": true,
-                    "path": "links",
-                    "rootPath": "/components/links",
-                    "title": "Links",
-                  },
-                  Object {
-                    "componentPath": "components/Lists",
-                    "icon": "sort",
-                    "outlined": true,
-                    "path": "lists",
-                    "rootPath": "/components/lists",
-                    "title": "Lists",
-                  },
-                  Object {
-                    "componentPath": "components/Loader",
-                    "icon": "loop",
-                    "outlined": true,
-                    "path": "loader",
-                    "rootPath": "/components/loader",
-                    "title": "Loader",
-                  },
-                  Object {
-                    "componentPath": "components/MediaObject",
-                    "icon": "account_circle",
-                    "outlined": true,
-                    "path": "media-object",
-                    "rootPath": "/components/media-object",
-                    "title": "Media Object",
-                  },
-                  Object {
-                    "componentPath": "components/Nav",
-                    "deprecated": true,
-                    "icon": "explore",
-                    "outlined": true,
-                    "path": "nav",
-                    "rootPath": "/components/nav",
-                    "statusBadges": Array [
-                      "javascript",
-                      "deprecated",
-                    ],
-                    "title": "Navigation",
-                  },
-                  Object {
-                    "componentPath": "components/Pagination",
-                    "icon": "power_input",
-                    "outlined": true,
-                    "path": "pagination",
-                    "rootPath": "/components/pagination",
-                    "statusBadges": Array [
-                      "javascript",
-                    ],
-                    "title": "Pagination",
-                  },
-                  Object {
-                    "componentPath": "components/Panel",
-                    "icon": "table_rows",
-                    "outlined": true,
-                    "path": "panel",
-                    "rootPath": "/components/panel",
-                    "title": "Panel",
-                  },
-                  Object {
-                    "componentPath": "components/ProgressSteps",
-                    "icon": "hdr_strong",
-                    "path": "progress-steps",
-                    "rootPath": "/components/progress-steps",
-                    "title": "Progress steps",
-                  },
-                  Object {
-                    "componentPath": "components/RadioButton",
-                    "icon": "radio_button_checked",
-                    "path": "radio-button",
-                    "rootPath": "/components/radio-button",
-                    "statusBadges": Array [
-                      "javascript",
-                    ],
-                    "title": "Radio button",
-                  },
-                  Object {
-                    "componentPath": "components/Rangeslider",
-                    "icon": "tune",
-                    "outlined": true,
-                    "path": "rangeslider",
-                    "rootPath": "/components/rangeslider",
-                    "statusBadges": Array [
-                      "javascript",
-                    ],
-                    "title": "Rangeslider",
-                  },
-                  Object {
-                    "componentPath": "components/Sheet",
-                    "icon": "vertical_split",
-                    "outlined": true,
-                    "path": "sheet",
-                    "rootPath": "/components/sheet",
-                    "statusBadges": Array [
-                      "javascript",
-                    ],
-                    "title": "Sheet",
-                  },
-                  Object {
-                    "componentPath": "components/Select",
-                    "icon": "arrow_drop_down_circle",
-                    "outlined": true,
-                    "path": "select",
-                    "rootPath": "/components/select",
-                    "statusBadges": Array [
-                      "javascript",
-                    ],
-                    "title": "Select",
-                  },
-                  Object {
-                    "componentPath": "components/Sidebar",
-                    "icon": "view_sidebar",
-                    "outlined": true,
-                    "path": "sidebar",
-                    "rootPath": "/components/sidebar",
-                    "statusBadges": Array [
-                      "javascript",
-                      "updated",
-                    ],
-                    "title": "Sidebar",
-                  },
-                  Object {
-                    "componentPath": "components/SkipLink",
-                    "icon": "skip_next",
-                    "outlined": true,
-                    "path": "skip-link",
-                    "rootPath": "/components/skip-link",
-                    "title": "Skip link",
-                  },
-                  Object {
-                    "componentPath": "components/Slab",
-                    "icon": "crop_landscape",
-                    "outlined": true,
-                    "path": "slab",
-                    "rootPath": "/components/slab",
-                    "title": "Slab",
-                  },
-                  Object {
-                    "componentPath": "components/Status",
-                    "icon": "check_circle",
-                    "outlined": true,
-                    "path": "status",
-                    "rootPath": "/components/status",
-                    "title": "Status",
-                  },
-                  Object {
-                    "componentPath": "components/Tables",
-                    "icon": "view_list",
-                    "outlined": true,
-                    "path": "tables",
-                    "rootPath": "/components/tables",
-                    "title": "Tables",
-                  },
-                  Object {
-                    "componentPath": "components/Tabs",
-                    "icon": "folder",
-                    "outlined": true,
-                    "path": "tabs",
-                    "rootPath": "/components/tabs",
-                    "statusBadges": Array [
-                      "javascript",
-                    ],
-                    "title": "Tabs",
-                  },
-                  Object {
-                    "componentPath": "components/CodeTags",
-                    "icon": "code",
-                    "outlined": true,
-                    "path": "tags",
-                    "rootPath": "/components/tags",
-                    "title": "Tags",
-                  },
-                  Object {
-                    "componentPath": "components/Toast",
-                    "icon": "picture_in_picture",
-                    "outlined": true,
-                    "path": "toast",
-                    "rootPath": "/components/toast",
-                    "statusBadges": Array [
-                      "javascript",
-                    ],
-                    "title": "Toast",
-                  },
-                  Object {
-                    "componentPath": "components/Togglebox",
-                    "icon": "toggle_off",
-                    "outlined": true,
-                    "path": "togglebox",
-                    "rootPath": "/components/togglebox",
-                    "title": "Togglebox",
-                  },
-                  Object {
-                    "componentPath": "components/Tooltips",
-                    "icon": "filter_frames",
-                    "outlined": true,
-                    "path": "tooltips",
-                    "rootPath": "/components/tooltips",
-                    "statusBadges": Array [
-                      "javascript",
-                      "updated",
-                    ],
-                    "title": "Tooltips",
-                  },
-                  Object {
-                    "componentPath": "components/Topbar",
-                    "icon": "call_to_action",
-                    "outlined": true,
-                    "path": "topbar",
-                    "rootPath": "/components/topbar",
-                    "statusBadges": Array [
-                      "javascript",
-                    ],
-                    "title": "Topbar",
-                  },
-                ],
-                "title": "Components",
-              },
-              Object {
-                "appFolder": "Patterns",
-                "entryCardText": "Learn about how to we set up different structures",
-                "icon": Object {
-                  "name": "dashboard",
-                },
-                "path": "patterns",
-                "redirect": "patterns",
-                "routes": Array [
-                  Object {
-                    "componentPath": "content/Patterns",
-                    "path": "patterns",
-                    "rootPath": "/patterns/patterns",
-                    "title": "Overview",
-                  },
-                  Object {
-                    "componentPath": "content/Forms",
-                    "icon": "format_align_justify",
-                    "outlined": true,
-                    "path": "forms",
-                    "rootPath": "/patterns/forms",
-                    "statusBadges": Array [
-                      "updated",
-                    ],
-                    "title": "Forms",
-                  },
-                  Object {
-                    "componentPath": "content/Login",
-                    "icon": "account_circle",
-                    "outlined": true,
-                    "path": "login",
-                    "rootPath": "/patterns/login",
-                    "statusBadges": Array [
-                      "updated",
-                    ],
-                    "title": "Login",
-                  },
-                ],
-                "title": "Patterns",
-              },
-            ]
-          }
-        />
-      </div>
-      <main
-        className="doc-view"
-        id="doc-view"
-      >
-        <SearchBox
+        <SkipLink />
+        <div
           className="d-none d-lg-block"
-        />
-        <Suspense
-          fallback={<LoadingComponent />}
         >
-          <Routes>
-            <Route
-              element={<UNDEFINED />}
-              index={true}
-              path="/"
-            />
-            <Route
-              element={<UNDEFINED />}
-              path="get-started/*"
-            />
-            <Route
-              element={<UNDEFINED />}
-              path="components/*"
-            />
-            <Route
-              element={<UNDEFINED />}
-              path="identity/*"
-            />
-            <Route
-              element={<UNDEFINED />}
-              path="patterns/*"
-            />
-            <Route
-              element={<UNDEFINED />}
-              path="utilities/*"
-            />
-            <Route
-              element={<UNDEFINED />}
-              path="404/*"
-            />
-            <Route
-              element={<UNDEFINED />}
-              path="*"
-            />
-          </Routes>
-        </Suspense>
-      </main>
+           
+          <SelectPanel
+            id="doc-sidebar"
+            routes={
+              Array [
+                Object {
+                  "appFolder": "GetStarted",
+                  "entryCardText": "Get started by setting up the Design Guide!",
+                  "icon": Object {
+                    "name": "wb_incandescent",
+                    "rotate": true,
+                  },
+                  "path": "get-started",
+                  "redirect": "introduction",
+                  "routes": Array [
+                    Object {
+                      "componentPath": "get-started/Introduction",
+                      "path": "introduction",
+                      "rootPath": "/get-started/introduction",
+                      "title": "Introduction",
+                    },
+                    Object {
+                      "componentPath": "get-started/ForDevelopers",
+                      "path": "for-developers",
+                      "rootPath": "/get-started/for-developers",
+                      "title": "For developers",
+                    },
+                    Object {
+                      "componentPath": "get-started/ForDesigners",
+                      "path": "for-designers",
+                      "rootPath": "/get-started/for-designers",
+                      "title": "For designers",
+                    },
+                  ],
+                  "title": "Get started",
+                  "wideCard": true,
+                },
+                Object {
+                  "appFolder": "Identity",
+                  "entryCardText": "Learn about our fundamental principles",
+                  "icon": Object {
+                    "name": "palette",
+                  },
+                  "path": "identity",
+                  "redirect": "identity",
+                  "routes": Array [
+                    Object {
+                      "componentPath": "identity/Identity",
+                      "path": "identity",
+                      "rootPath": "/identity/identity",
+                      "title": "Overview",
+                    },
+                    Object {
+                      "componentPath": "identity/Accessibility",
+                      "path": "accessibility",
+                      "rootPath": "/identity/accessibility",
+                      "text": "Principles & WCAG 2.1 guidelines",
+                      "title": "Accessibility",
+                    },
+                    Object {
+                      "componentPath": "identity/Color",
+                      "path": "color",
+                      "rootPath": "/identity/color",
+                      "text": "Our color palette with HEX codes",
+                      "title": "Color",
+                    },
+                    Object {
+                      "componentPath": "identity/Copywriting",
+                      "path": "copywriting",
+                      "rootPath": "/identity/copywriting",
+                      "text": "Tonality & UX copy in our products",
+                      "title": "Copywriting",
+                    },
+                    Object {
+                      "componentPath": "identity/Grid",
+                      "path": "grid",
+                      "rootPath": "/identity/grid",
+                      "text": "Our grid and best practices",
+                      "title": "Grid",
+                    },
+                    Object {
+                      "componentPath": "identity/Iconography",
+                      "path": "iconography",
+                      "rootPath": "/identity/iconography",
+                      "text": "Guidelines and icon library",
+                      "title": "Iconography",
+                    },
+                    Object {
+                      "componentPath": "identity/Imagery",
+                      "path": "imagery",
+                      "rootPath": "/identity/imagery",
+                      "text": "Guidelines and image library",
+                      "title": "Imagery",
+                    },
+                    Object {
+                      "componentPath": "identity/Logotype",
+                      "path": "logotype",
+                      "rootPath": "/identity/logotype",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
+                      "text": "The TESTBRAND logotype",
+                      "title": "Logotype",
+                    },
+                    Object {
+                      "componentPath": "identity/Page-layout",
+                      "path": "page-layout",
+                      "rootPath": "/identity/page-layout",
+                      "text": "See our layout structure",
+                      "title": "Page layout",
+                    },
+                    Object {
+                      "componentPath": "identity/Spacing",
+                      "path": "spacing",
+                      "rootPath": "/identity/spacing",
+                      "text": "8-point spacing system",
+                      "title": "Spacing",
+                    },
+                    Object {
+                      "componentPath": "identity/Typography",
+                      "path": "typography",
+                      "rootPath": "/identity/typography",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
+                      "text": "See our fronts and sizing",
+                      "title": "Typography",
+                    },
+                  ],
+                  "title": "Identity",
+                },
+                Object {
+                  "appFolder": "ComponentsDocumentation",
+                  "entryCardText": "Find all currently available components here",
+                  "icon": Object {
+                    "name": "category",
+                  },
+                  "path": "components",
+                  "redirect": "components",
+                  "routes": Array [
+                    Object {
+                      "componentPath": "components/Components",
+                      "path": "components",
+                      "rootPath": "/components/components",
+                      "title": "Overview",
+                    },
+                    Object {
+                      "componentPath": "components/Accordion",
+                      "icon": "calendar_view_day",
+                      "outlined": true,
+                      "path": "accordion",
+                      "rootPath": "/components/accordion",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
+                      "title": "Accordion",
+                    },
+                    Object {
+                      "componentPath": "components/ActionList",
+                      "icon": "list",
+                      "path": "action-list",
+                      "rootPath": "/components/action-list",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
+                      "title": "Action list",
+                    },
+                    Object {
+                      "componentPath": "components/Alerts",
+                      "icon": "error_outline",
+                      "path": "alerts",
+                      "rootPath": "/components/alerts",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
+                      "title": "Alerts",
+                    },
+                    Object {
+                      "componentPath": "components/Badge",
+                      "icon": "more",
+                      "outlined": true,
+                      "path": "badge",
+                      "rootPath": "/components/badge",
+                      "title": "Badges",
+                    },
+                    Object {
+                      "componentPath": "components/Breadcrumb",
+                      "icon": "last_page",
+                      "outlined": true,
+                      "path": "breadcrumb",
+                      "rootPath": "/components/breadcrumb",
+                      "title": "Breadcrumb",
+                    },
+                    Object {
+                      "componentPath": "components/Buttons",
+                      "icon": "touch_app",
+                      "outlined": true,
+                      "path": "buttons",
+                      "rootPath": "/components/buttons",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
+                      "title": "Buttons",
+                    },
+                    Object {
+                      "componentPath": "components/Card",
+                      "icon": "view_agenda",
+                      "outlined": true,
+                      "path": "cards",
+                      "rootPath": "/components/cards",
+                      "title": "Cards",
+                    },
+                    Object {
+                      "componentPath": "components/Charts",
+                      "deprecated": true,
+                      "icon": "bar_chart",
+                      "outlined": true,
+                      "path": "charts",
+                      "rootPath": "/components/charts",
+                      "statusBadges": Array [
+                        "javascript",
+                        "deprecated",
+                      ],
+                      "title": "Charts",
+                    },
+                    Object {
+                      "componentPath": "components/Checkbox",
+                      "icon": "check_box",
+                      "outlined": true,
+                      "path": "checkbox",
+                      "rootPath": "/components/checkbox",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
+                      "title": "Checkbox",
+                    },
+                    Object {
+                      "componentPath": "components/Datepickers",
+                      "icon": "event",
+                      "outlined": true,
+                      "path": "datepickers",
+                      "rootPath": "/components/datepickers",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
+                      "title": "Datepickers",
+                    },
+                    Object {
+                      "componentPath": "components/Dialog",
+                      "icon": "picture_in_picture",
+                      "outlined": true,
+                      "path": "dialog",
+                      "rootPath": "/components/dialog",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
+                      "title": "Dialog",
+                    },
+                    Object {
+                      "componentPath": "components/Dropdown",
+                      "icon": "expand_more",
+                      "outlined": true,
+                      "path": "dropdown",
+                      "rootPath": "/components/dropdown",
+                      "statusBadges": Array [
+                        "javascript",
+                        "updated",
+                      ],
+                      "title": "Dropdown",
+                    },
+                    Object {
+                      "componentPath": "components/Expandable",
+                      "icon": "expand",
+                      "path": "expandable",
+                      "rootPath": "/components/expandable",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
+                      "title": "Expandable",
+                    },
+                    Object {
+                      "componentPath": "components/InputField",
+                      "icon": "text_fields",
+                      "path": "input-field",
+                      "rootPath": "/components/input-field",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
+                      "title": "Input field",
+                    },
+                    Object {
+                      "componentPath": "components/Links",
+                      "icon": "link",
+                      "outlined": true,
+                      "path": "links",
+                      "rootPath": "/components/links",
+                      "title": "Links",
+                    },
+                    Object {
+                      "componentPath": "components/Lists",
+                      "icon": "sort",
+                      "outlined": true,
+                      "path": "lists",
+                      "rootPath": "/components/lists",
+                      "title": "Lists",
+                    },
+                    Object {
+                      "componentPath": "components/Loader",
+                      "icon": "loop",
+                      "outlined": true,
+                      "path": "loader",
+                      "rootPath": "/components/loader",
+                      "title": "Loader",
+                    },
+                    Object {
+                      "componentPath": "components/MediaObject",
+                      "icon": "account_circle",
+                      "outlined": true,
+                      "path": "media-object",
+                      "rootPath": "/components/media-object",
+                      "title": "Media Object",
+                    },
+                    Object {
+                      "componentPath": "components/Nav",
+                      "deprecated": true,
+                      "icon": "explore",
+                      "outlined": true,
+                      "path": "nav",
+                      "rootPath": "/components/nav",
+                      "statusBadges": Array [
+                        "javascript",
+                        "deprecated",
+                      ],
+                      "title": "Navigation",
+                    },
+                    Object {
+                      "componentPath": "components/Pagination",
+                      "icon": "power_input",
+                      "outlined": true,
+                      "path": "pagination",
+                      "rootPath": "/components/pagination",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
+                      "title": "Pagination",
+                    },
+                    Object {
+                      "componentPath": "components/Panel",
+                      "icon": "table_rows",
+                      "outlined": true,
+                      "path": "panel",
+                      "rootPath": "/components/panel",
+                      "title": "Panel",
+                    },
+                    Object {
+                      "componentPath": "components/ProgressSteps",
+                      "icon": "hdr_strong",
+                      "path": "progress-steps",
+                      "rootPath": "/components/progress-steps",
+                      "title": "Progress steps",
+                    },
+                    Object {
+                      "componentPath": "components/RadioButton",
+                      "icon": "radio_button_checked",
+                      "path": "radio-button",
+                      "rootPath": "/components/radio-button",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
+                      "title": "Radio button",
+                    },
+                    Object {
+                      "componentPath": "components/Rangeslider",
+                      "icon": "tune",
+                      "outlined": true,
+                      "path": "rangeslider",
+                      "rootPath": "/components/rangeslider",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
+                      "title": "Rangeslider",
+                    },
+                    Object {
+                      "componentPath": "components/Sheet",
+                      "icon": "vertical_split",
+                      "outlined": true,
+                      "path": "sheet",
+                      "rootPath": "/components/sheet",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
+                      "title": "Sheet",
+                    },
+                    Object {
+                      "componentPath": "components/Select",
+                      "icon": "arrow_drop_down_circle",
+                      "outlined": true,
+                      "path": "select",
+                      "rootPath": "/components/select",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
+                      "title": "Select",
+                    },
+                    Object {
+                      "componentPath": "components/Sidebar",
+                      "icon": "view_sidebar",
+                      "outlined": true,
+                      "path": "sidebar",
+                      "rootPath": "/components/sidebar",
+                      "statusBadges": Array [
+                        "javascript",
+                        "updated",
+                      ],
+                      "title": "Sidebar",
+                    },
+                    Object {
+                      "componentPath": "components/SkipLink",
+                      "icon": "skip_next",
+                      "outlined": true,
+                      "path": "skip-link",
+                      "rootPath": "/components/skip-link",
+                      "title": "Skip link",
+                    },
+                    Object {
+                      "componentPath": "components/Slab",
+                      "icon": "crop_landscape",
+                      "outlined": true,
+                      "path": "slab",
+                      "rootPath": "/components/slab",
+                      "title": "Slab",
+                    },
+                    Object {
+                      "componentPath": "components/Status",
+                      "icon": "check_circle",
+                      "outlined": true,
+                      "path": "status",
+                      "rootPath": "/components/status",
+                      "title": "Status",
+                    },
+                    Object {
+                      "componentPath": "components/Tables",
+                      "icon": "view_list",
+                      "outlined": true,
+                      "path": "tables",
+                      "rootPath": "/components/tables",
+                      "title": "Tables",
+                    },
+                    Object {
+                      "componentPath": "components/Tabs",
+                      "icon": "folder",
+                      "outlined": true,
+                      "path": "tabs",
+                      "rootPath": "/components/tabs",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
+                      "title": "Tabs",
+                    },
+                    Object {
+                      "componentPath": "components/CodeTags",
+                      "icon": "code",
+                      "outlined": true,
+                      "path": "tags",
+                      "rootPath": "/components/tags",
+                      "title": "Tags",
+                    },
+                    Object {
+                      "componentPath": "components/Toast",
+                      "icon": "picture_in_picture",
+                      "outlined": true,
+                      "path": "toast",
+                      "rootPath": "/components/toast",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
+                      "title": "Toast",
+                    },
+                    Object {
+                      "componentPath": "components/Togglebox",
+                      "icon": "toggle_off",
+                      "outlined": true,
+                      "path": "togglebox",
+                      "rootPath": "/components/togglebox",
+                      "title": "Togglebox",
+                    },
+                    Object {
+                      "componentPath": "components/Tooltips",
+                      "icon": "filter_frames",
+                      "outlined": true,
+                      "path": "tooltips",
+                      "rootPath": "/components/tooltips",
+                      "statusBadges": Array [
+                        "javascript",
+                        "updated",
+                      ],
+                      "title": "Tooltips",
+                    },
+                    Object {
+                      "componentPath": "components/Topbar",
+                      "icon": "call_to_action",
+                      "outlined": true,
+                      "path": "topbar",
+                      "rootPath": "/components/topbar",
+                      "statusBadges": Array [
+                        "javascript",
+                      ],
+                      "title": "Topbar",
+                    },
+                  ],
+                  "title": "Components",
+                },
+                Object {
+                  "appFolder": "Patterns",
+                  "entryCardText": "Learn about how to we set up different structures",
+                  "icon": Object {
+                    "name": "dashboard",
+                  },
+                  "path": "patterns",
+                  "redirect": "patterns",
+                  "routes": Array [
+                    Object {
+                      "componentPath": "content/Patterns",
+                      "path": "patterns",
+                      "rootPath": "/patterns/patterns",
+                      "title": "Overview",
+                    },
+                    Object {
+                      "componentPath": "content/Forms",
+                      "icon": "format_align_justify",
+                      "outlined": true,
+                      "path": "forms",
+                      "rootPath": "/patterns/forms",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
+                      "title": "Forms",
+                    },
+                    Object {
+                      "componentPath": "content/Login",
+                      "icon": "account_circle",
+                      "outlined": true,
+                      "path": "login",
+                      "rootPath": "/patterns/login",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
+                      "title": "Login",
+                    },
+                  ],
+                  "title": "Patterns",
+                },
+              ]
+            }
+          />
+        </div>
+        <main
+          className="doc-view"
+          id="doc-view"
+        >
+          <SearchBox
+            className="d-none d-lg-block"
+          />
+          <Suspense
+            fallback={<LoadingComponent />}
+          >
+            <Routes>
+              <Route
+                element={<UNDEFINED />}
+                index={true}
+                path="/"
+              />
+              <Route
+                element={<UNDEFINED />}
+                path="get-started/*"
+              />
+              <Route
+                element={<UNDEFINED />}
+                path="components/*"
+              />
+              <Route
+                element={<UNDEFINED />}
+                path="identity/*"
+              />
+              <Route
+                element={<UNDEFINED />}
+                path="patterns/*"
+              />
+              <Route
+                element={<UNDEFINED />}
+                path="utilities/*"
+              />
+              <Route
+                element={<UNDEFINED />}
+                path="404/*"
+              />
+              <Route
+                element={<UNDEFINED />}
+                path="*"
+              />
+            </Routes>
+          </Suspense>
+        </main>
+      </div>
     </div>
-  </div>
+  </ScrollToTop>
 </BrowserRouter>
 `;
