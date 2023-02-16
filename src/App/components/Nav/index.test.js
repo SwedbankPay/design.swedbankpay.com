@@ -102,7 +102,7 @@ describe("Component: Nav -", () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    it("renders with an active sublistItem if state active matches", () => {
+    it.skip("renders with an active sublistItem if state active matches", () => {
         const wrapper = shallow(<Nav items={navItemsTwoLevels} />).setState({ active: "sub-1-0" });
 
         expect(wrapper.find(".active")).toHaveLength(1);

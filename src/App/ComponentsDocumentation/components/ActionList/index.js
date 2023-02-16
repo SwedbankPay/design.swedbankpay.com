@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 
 import ActionListComponent from "@components/ActionList";
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
@@ -66,26 +66,24 @@ const JavascriptMethods = () => (
     </>
 );
 
-class ActionList extends Component {
-    componentDidMount () {
+const ActionList = () => {
+    useEffect(() => {
         actionList.init();
-    }
+    }, []);
 
-    render () {
-        return (
-            <DocContainer>
-                <Alert type="danger" icon="error" text={<p><b>Deprecated:</b> Be aware, this component will not be maintained anymore. Please make the transition to take use of the <Link to="/components/dropdown">dropdown</Link> component.</p>}/>
-                <p className="lead">
+    return (
+        <DocContainer>
+            <Alert type="danger" icon="error" text={<p><b>Deprecated:</b> Be aware, this component will not be maintained anymore. Please make the transition to take use of the <Link to="/components/dropdown">dropdown</Link> component.</p>}/>
+            <p className="lead">
                     Action lists are small menus that remain hidden until clicked. In these you can put page links or anchors that trigger an action elsewhere.
-                </p>
-                <Overview />
-                <Anchorpoints />
-                <JavascriptMethods />
-                <NpmInformation componentName={"actionList"}/>
-            </DocContainer>
-        );
-    }
-}
+            </p>
+            <Overview />
+            <Anchorpoints />
+            <JavascriptMethods />
+            <NpmInformation componentName={"actionList"}/>
+        </DocContainer>
+    );
+};
 
 export default ActionList;
 

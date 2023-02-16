@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 
 import ActionListComponent from "@components/ActionList";
 import { ComponentPreview, DocContainer } from "@docutils";
@@ -319,31 +319,29 @@ const StripedItemList = () => (
     </>
 );
 
-class Lists extends Component {
-    componentDidMount () {
+const Lists = () => {
+    useEffect(() => {
         actionList.init();
-    }
+    }, []);
 
-    render () {
-        return (
-            <DocContainer>
-                <p className="lead">
+    return (
+        <DocContainer>
+            <p className="lead">
                     Use lists to give a structured view of information.
-                </p>
-                <BasicList />
-                <InlineList />
-                <BulletList />
-                <DescriptionList />
-                <SettingsList />
-                <ItemList />
-                <ItemListLarge />
-                <ItemListBordered />
-                <HoverItemList />
-                <StripedItemList />
-            </DocContainer>
-        );
-    }
-}
+            </p>
+            <BasicList />
+            <InlineList />
+            <BulletList />
+            <DescriptionList />
+            <SettingsList />
+            <ItemList />
+            <ItemListLarge />
+            <ItemListBordered />
+            <HoverItemList />
+            <StripedItemList />
+        </DocContainer>
+    );
+};
 
 export default Lists;
 
