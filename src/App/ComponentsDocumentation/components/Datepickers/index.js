@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import { NavHashLink as NavLink } from "react-router-hash-link";
 
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
@@ -390,36 +390,34 @@ const JavascriptMethods = () => (
     </>
 );
 
-class Datepickers extends Component {
-    componentDidMount () {
+const Datepickers = () => {
+    useEffect(() => {
         datepicker.init();
-    }
+    }, []);
 
-    render () {
-        return (
-            <DocContainer>
-                <p className="lead">
+    return (
+        <DocContainer>
+            <p className="lead">
                     Datepickers makes it easy to get dates from your users. With datepickers you do not have to worry about how your users
                     write the given date, alleviating the need to do format validation.
-                </p>
-                <AboutDatepickers />
-                <SimpleDatepicker />
-                <AllowInput />
-                <HumanReadable />
-                <InitialValue />
-                <CustomFormat />
-                <IncludeTime />
-                <ShowingMultipleMonths />
-                <ValidDates />
-                <DateRange />
-                <MultipleDates />
-                <Options />
-                <JavascriptMethods />
-                <NpmInformation componentName={"datepicker"}/>
-            </DocContainer>
-        );
-    }
-}
+            </p>
+            <AboutDatepickers />
+            <SimpleDatepicker />
+            <AllowInput />
+            <HumanReadable />
+            <InitialValue />
+            <CustomFormat />
+            <IncludeTime />
+            <ShowingMultipleMonths />
+            <ValidDates />
+            <DateRange />
+            <MultipleDates />
+            <Options />
+            <JavascriptMethods />
+            <NpmInformation componentName={"datepicker"}/>
+        </DocContainer>
+    );
+};
 
 export default Datepickers;
 

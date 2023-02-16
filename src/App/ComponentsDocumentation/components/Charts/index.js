@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import Chart from "@components/Chart";
@@ -614,21 +614,17 @@ const CustomColors = () => (
     </>
 );
 
-class Charts extends Component {
-    render () {
-        return (
-            <DocContainer>
-                <Alert type="danger" icon="error" text={<p><b>Deprecated:</b> Be aware, this component will not be maintained anymore.</p>}/>
-                <Introduction />
-                <LineChart />
-                <BarChart />
-                <DoughnutAndPieCharts />
-                <MixingTypes />
-                <CustomColors />
-            </DocContainer>
-        );
-    }
-}
+const Charts = () => (
+    <DocContainer>
+        <Alert type="danger" icon="error" text={<p><b>Deprecated:</b> Be aware, this component will not be maintained anymore.</p>}/>
+        <Introduction />
+        <LineChart />
+        <BarChart />
+        <DoughnutAndPieCharts />
+        <MixingTypes />
+        <CustomColors />
+    </DocContainer>
+);
 
 export default Charts;
 
