@@ -1,34 +1,27 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-class Tabs extends Component {
-    constructor (props) {
-        super(props);
+const Tabs = ({ id, scroll, items, ulId }) => {
 
-        this.state = { active: 0 };
-    }
+    const [activeIndex, setActiveIndex] = useState(0);
 
-    setActive (e, i) {
+    const setActive = (e, i) => {
         e.preventDefault();
-        this.setState({ active: i });
-    }
+        setActiveIndex(i);
+    };
 
-    render () {
-        const { id, scroll, items, ulId } = this.props;
-
-        return (
-            <div id={id} className={`tabs${scroll ? " tabs-scroll" : ""}`}>{"\n"}
-                <ul id={ulId}>
-                    {items.map((name, i) => (
-                        <li key={`tab-item-${name}-${i}`} className={this.state.active === i ? "active" : null}>{"\n"}
-                            <a href="#" onClick={e => this.setActive(e, i)}>{name}</a>{"\n"}
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        );
-    }
-}
+    return (
+        <div id={id} className={`tabs${scroll ? " tabs-scroll" : ""}`}>{"\n"}
+            <ul id={ulId}>
+                {items.map((name, i) => (
+                    <li key={`tab-item-${name}-${i}`} className={activeIndex === i ? "active" : null}>{"\n"}
+                        <a href="#" onClick={e => setActive(e, i)}>{name}</a>{"\n"}
+                    </li>
+                ))}
+            </ul>
+        </div>
+    );
+};
 
 Tabs.propTypes = {
     id: PropTypes.string,

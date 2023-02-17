@@ -336,26 +336,26 @@ exports[`Documentation: Dropdown Overview renders 1`] = `
             "component": <Dropdown
               content={
                 <React.Fragment>
-                  <a
-                    href="#"
-                    onClick={[Function]}
+                  <button
+                    className="dropdown-option"
+                    type="button"
                   >
                     <Icon
                       type="bookmark"
                     />
                     Edit
-                  </a>
+                  </button>
                   
 
-                  <a
-                    href="#"
-                    onClick={[Function]}
+                  <button
+                    className="dropdown-option"
+                    type="button"
                   >
                     <Icon
                       type="delete_outline"
                     />
                     Delete
-                  </a>
+                  </button>
                 </React.Fragment>
               }
               label="Actions"
@@ -584,7 +584,7 @@ exports[`Documentation: Dropdown Overview renders 1`] = `
                   <button
                     className="btn btn-link"
                     onClick={[Function]}
-                    tyoe="button"
+                    type="button"
                   >
                     Clear filters
                   </button>

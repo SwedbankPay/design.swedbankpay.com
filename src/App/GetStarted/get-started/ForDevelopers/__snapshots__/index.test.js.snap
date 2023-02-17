@@ -79,8 +79,8 @@ exports[`GetStarted: ForDevelopers DiscoverMore renders 1`] = `
   >
     <Link
       className="cards cards-primary cards-wide"
-      key="/components"
-      to="/components"
+      key="components"
+      to="components"
     >
       <div
         className="cards-content m-0"
@@ -102,8 +102,8 @@ exports[`GetStarted: ForDevelopers DiscoverMore renders 1`] = `
     </Link>
     <Link
       className="cards cards-primary cards-wide"
-      key="/identity/iconography"
-      to="/identity/iconography"
+      key="iconography"
+      to="iconography"
     >
       <div
         className="cards-content m-0"

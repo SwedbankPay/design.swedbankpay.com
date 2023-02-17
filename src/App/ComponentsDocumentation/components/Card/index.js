@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer, StatusBadge } from "@docutils";
@@ -160,21 +160,17 @@ const OldCard = () => (
     </>
 );
 
-class Card extends Component {
-    render () {
-        return (
-            <DocContainer>
-                <p>
+const Card = () => (
+    <DocContainer>
+        <p>
                     The card component is a flexible container that groups and informs about the content and action.
                     The information presented should be concise, to the point and easy to understand. The card
                     component should be used to direct to pages on our site and not to external sites, in that case
                     use <Link to="/components/links">Links</Link> instead.
-                </p>
-                <Overview />
-            </DocContainer>
-        );
-    }
-}
+        </p>
+        <Overview />
+    </DocContainer>
+);
 
 export default Card;
 

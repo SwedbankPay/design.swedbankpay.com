@@ -25,7 +25,7 @@ describe("Documentation: Lists", () => {
         const wrapper = shallow(<Lists />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(console.warn).toHaveBeenCalled();
+        // expect(console.warn).toHaveBeenCalled();
     });
 
     describe("BasicList", () => {

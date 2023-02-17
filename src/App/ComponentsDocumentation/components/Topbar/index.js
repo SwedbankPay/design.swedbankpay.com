@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer } from "@docutils";
@@ -94,25 +94,23 @@ const DeveloperDocumentation = () => (
     </section>
 );
 
-class Topbar extends Component {
-    componentDidMount () {
+const Topbar = () => {
+    useEffect(() => {
         topbar.init();
         sidebar.init("topbar-sidebar");
         sidebar.init("topbar-sticky-sidebar");
-    }
+    }, []);
 
-    render () {
-        return (
-            <DocContainer>
-                <section id="topbar-doc">
-                    <p className="lead">The topbar is used to give users an easily available navigational bar at the top of your web application.</p>
-                    <Overview />
-                    <DeveloperDocumentation />
-                </section>
-            </DocContainer>
-        );
-    }
-}
+    return (
+        <DocContainer>
+            <section id="topbar-doc">
+                <p className="lead">The topbar is used to give users an easily available navigational bar at the top of your web application.</p>
+                <Overview />
+                <DeveloperDocumentation />
+            </section>
+        </DocContainer>
+    );
+};
 
 export default Topbar;
 

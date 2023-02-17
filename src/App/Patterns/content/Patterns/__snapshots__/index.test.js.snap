@@ -7,7 +7,7 @@ exports[`Patterns Overview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Forms"
-    to="/patterns/forms"
+    to="../forms"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "
@@ -32,7 +32,7 @@ exports[`Patterns Overview renders 1`] = `
   <Link
     className="cards cards-primary cards-wide"
     key="Login"
-    to="/patterns/login"
+    to="../login"
   >
     <div
       className="cards-content flex-row align-items-center m-0 "

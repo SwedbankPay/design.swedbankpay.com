@@ -3,7 +3,7 @@ import { shallow, mount } from "enzyme";
 
 import SearchBox, { modify } from "./index";
 
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 describe("Utilities; SearchBox", () => {
     it("is defined", () => {
@@ -85,7 +85,7 @@ describe("Manipulating input values for input field", () => {
 });
 
 describe("Search box results tests", () => {
-    const wrapper = mount(<Router><SearchBox/></Router>);
+    const wrapper = mount(<BrowserRouter><SearchBox/></BrowserRouter>);
     const input = wrapper.find("#search-box");
 
     it("renders no items if search term has no matches", () => {

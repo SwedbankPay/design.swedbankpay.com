@@ -4,19 +4,21 @@ module.exports = [
         icon: {
             name: "dashboard"
         },
-        path: "/patterns",
+        path: "patterns",
         entryCardText: "Learn about how to we set up different structures",
-        redirect: "/patterns/patterns",
+        redirect: "patterns",
         appFolder: "Patterns",
         routes: [
             {
                 title: "Overview",
-                path: "/patterns/patterns",
+                path: "patterns",
+                rootPath: "/patterns/patterns",
                 componentPath: "content/Patterns"
             },
             {
                 title: "Forms",
-                path: "/patterns/forms",
+                path: "forms",
+                rootPath: "/patterns/forms",
                 componentPath: "content/Forms",
                 icon: "format_align_justify",
                 outlined: true,
@@ -24,7 +26,8 @@ module.exports = [
             },
             {
                 title: "Login",
-                path: "/patterns/login",
+                path: "login",
+                rootPath: "/patterns/login",
                 componentPath: "content/Login",
                 icon: "account_circle",
                 outlined: true,

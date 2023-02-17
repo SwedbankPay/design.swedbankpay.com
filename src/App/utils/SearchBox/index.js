@@ -29,8 +29,23 @@ const SearchBox = ({ className, mobile }) => {
 
         return (
             <ul className="item-list item-list-hover">
-                {tempSearchResultList.map(directory => directory.map(result => <Link tabIndex="-1" onKeyDown={e => arrowNavigation(e)} className="res" key={result.path} onClick = {() => hideResultBox()} to={result.path}><li><span className="result" dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></span><span className="directory">{result.path.split("/")[1].charAt(0).toUpperCase() + result.path.split("/")[1].slice(1)}</span></li></Link>))
-                }
+                {tempSearchResultList.map(directory => directory.map(result => (
+                    <Link
+                        tabIndex="-1"
+                        onKeyDown={e => arrowNavigation(e)}
+                        className="res"
+                        key={result.rootPath}
+                        onClick = {() => hideResultBox()} to={result.rootPath}>
+                        <li>
+                            <span
+                                className="result"
+                                dangerouslySetInnerHTML={{ __html: modify(result.title, searchTerm) }}></span>
+                            <span className="directory">
+                                {result.path.charAt(0).toUpperCase() + result.path.slice(1)}
+                            </span>
+                        </li>
+                    </Link>
+                )))}
             </ul>
         );
     };

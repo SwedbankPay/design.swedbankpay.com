@@ -1,9 +1,11 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const brandTitle = process.env.brandTitle;
 
-const DocHeading = ({ location }) => {
+const DocHeading = ({ locationFromJestTest }) => {
+
+    const location = locationFromJestTest ?? useLocation();
 
     const title = location.title ?? location.pathname.split("/").filter(str => str.length)
         .pop()
@@ -16,4 +18,4 @@ const DocHeading = ({ location }) => {
     return <h1>{title}</h1>;
 };
 
-export default withRouter(DocHeading);
+export default DocHeading;

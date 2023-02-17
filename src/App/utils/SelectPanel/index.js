@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { NavLink, withRouter } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import SearchBox from "../SearchBox/index";
@@ -9,133 +9,119 @@ import LogotypeComponent from "@components/Logotype";
 const basename = process.env.basename;
 const brand = process.env.brand;
 
-import { sidebar, topbar } from "@src/scripts/main";
+import { sidebar } from "@src/scripts/main";
 
-class NavGroup extends Component {
-    constructor (props) {
-        super(props);
-        this.state = {
-            isActive: props.location.pathname.includes(props.route.path)
-        };
-    }
+const MobileNavGroup = ({ route, index, sidebarId }) => {
 
-    componentDidMount () {
-        const activeLeaf = this.props.route.routes.map((childRoute, i) => ({ i,
-            childRoute: childRoute.path })).filter(childRouteObject => this.props.location.pathname.includes(childRouteObject.childRoute));
+    const location = useLocation();
 
-        this.state.isActive && activeLeaf[0] && sidebar.setActiveState(this.props.sidebarId, this.props.index, null, activeLeaf[0].i);
-    }
+    const [isActive, setIsActive] = useState(location.pathname.includes(route.path));
 
-    toggleActive () {
-        this.setState({ isActive: !this.state.isActive });
-    }
+    useEffect(() => {
+        const activeLeaf = route.routes
+            .map((childRoute, i) => ({
+                i,
+                childRoute: childRoute.path
+            }))
+            .filter(childRouteObject => location.pathname.includes(childRouteObject.childRoute));
 
-    shouldComponentUpdate (nextProps, nextState) {
-        return this.state !== nextState;
-    }
+        isActive && activeLeaf[0] && sidebar.setActiveState(sidebarId, index, null, activeLeaf[0].i);
+    }, []);
 
-    render () {
-        const { title, routes } = this.props.route;
+    const toggleActive = () => {
+        setIsActive(!isActive);
+    };
 
-        return (
-            <li className="nav-group">
-                <button className="nav-group-heading" onClick={() => this.toggleActive()}>
-                    <i className="material-icons" aria-hidden="true">arrow_right</i>
-                    {title}
-                </button>
-                <ul className="nav-ul">
-                    {routes.map((childRoute, i) => (
-                        <li key={`nav_leaf_${i}`} className="nav-leaf">
-                            <NavLink activeClassName="active" to={childRoute.path}>{childRoute.title}</NavLink>
-                        </li>
-                    ))}
-                </ul>
-            </li>
-        );
-    }
-}
+    const { title, routes } = route;
 
-class SelectPanel extends Component {
+    return (
+        <li className="nav-group">
+            <button className="nav-group-heading" onClick={() => toggleActive()}>
+                <i className="material-icons" aria-hidden="true">arrow_right</i>
+                {title}
+            </button>
+            <ul className="nav-ul">
+                {routes.map((childRoute, i) => (
+                    <li key={`nav_leaf_${i}`} className="nav-leaf">
+                        <NavLink to={`${route.path}/${childRoute.path}`}>{childRoute.title}</NavLink>
+                    </li>
+                ))}
+            </ul>
+        </li>
+    );
+};
 
-    componentDidMount () {
-        sidebar.init(this.props.id, this.props.topbarSidebar);
+// topbarId & topbarSidebar => only used for mobile/tablet view
+const SelectPanel = ({ id, routes, topbarId, topbarSidebar }) => {
 
-        if (this.props.location.pathname !== "/" && this.props.location.pathname !== "/utilities") {
-            const sidebarElement = document.getElementById(this.props.id);
+    let location = useLocation(); // eslint-disable-line prefer-const
+
+    useEffect(() => {
+        sidebar.init(id, topbarSidebar);
+
+        if (location.pathname !== "/" && location.pathname !== "/utilities") {
+            const sidebarElement = document.getElementById(id);
 
             sidebarElement && sidebarElement.classList.add("has-secondary-nav");
         }
-    }
+    }, []);
 
-    componentDidUpdate () {
-        sidebar.init(this.props.id);
-
-        if (this.props.topbarId) {
-            topbar.init(this.props.topbarId);
-        }
-    }
-
-    _activeSecondaryNav (path) {
-        const hasActiveSecondaryNav = this.props.location.pathname.includes(path);
+    const _activeSecondaryNav = path => {
+        const hasActiveSecondaryNav = location.pathname.includes(path);
 
         if (hasActiveSecondaryNav) {
-            const sidebarElement = document.getElementById(this.props.id);
+            const sidebarElement = document.getElementById(id);
 
             sidebarElement && sidebarElement.classList.add("has-secondary-nav");
         }
 
         return hasActiveSecondaryNav;
-    }
+    };
 
-    _activeSecondaryLi (secondaryRoute) {
-        return this.props.location.pathname.includes(secondaryRoute.path);
-    }
+    const _activeSecondaryLi = secondaryRoute => location.pathname.includes(secondaryRoute.path);
 
-    render () {
-        return (
-            <>
-                {this.props.topbarId ?
-                    <div id={this.props.id} className="sidebar dg-sidebar">
-                        <nav className="sidebar-nav">
-                            <ul className="main-nav-ul">
-                                {this.props.routes.map((route, i) => {
-                                    const NavGroupWithRouter = withRouter(NavGroup);
-
-                                    return <NavGroupWithRouter sidebarId={this.props.id} key={`nav_group_${i}`} route={route} index={i} />;
-                                })}
-                            </ul>
-                        </nav>
-                    </div>
-                    :
-                    <div id={this.props.id} className="sidebar">
-                        <nav className="sidebar-main-nav">
-                            <div className="sidebar-logo">
-                                <a href="/" aria-label="To homepage">
-                                    <LogotypeComponent src={`${basename}img/logo/${brand}-logo-v.svg`} size="md" alt={`${brand} vertical logo`} type="vertical" />
-                                </a>
-                            </div>
-                            <ul className="main-nav-ul">
-                                <li className={`main-nav-li${this.props.location.pathname === "/" ? " active" : ""}`}>
-                                    <NavLink activeClassName="active" to={"/"}>
-                                        <i className="material-icons-outlined" aria-hidden="true">home</i>
+    return (
+        <>
+            {topbarId ?
+            // mobile & tablet hamburger menu sidebar
+                <div id={id} className="sidebar dg-sidebar">
+                    <nav className="sidebar-nav">
+                        <ul className="main-nav-ul">
+                            {routes.map((route, i) => <MobileNavGroup sidebarId={id} key={`nav_group_${i}`} route={route} index={i} />)}
+                        </ul>
+                    </nav>
+                </div>
+                :
+            // desktop
+                <div id={id} className="sidebar">
+                    <nav className="sidebar-main-nav">
+                        <div className="sidebar-logo">
+                            <a href="/" aria-label="To homepage">
+                                <LogotypeComponent src={`${basename}img/logo/${brand}-logo-v.svg`} size="md" alt={`${brand} vertical logo`} type="vertical" />
+                            </a>
+                        </div>
+                        <ul className="main-nav-ul">
+                            <li className={`main-nav-li${location.pathname === "/" ? " active" : ""}`}>
+                                <NavLink to={"/"}>
+                                    <i className="material-icons-outlined" aria-hidden="true">home</i>
                                         Welcome
-                                    </NavLink>
-                                </li>
-                                {this.props.routes.map(route => <li key={route.title}
-                                    className={`main-nav-li${this._activeSecondaryNav(route.path) ? " active" : ""}`}>
-                                    <NavLink activeClassName="active" to={route.path}>
-                                        <i className={`material-icons-outlined${route.icon.rotate ? " rotated" : ""}`} aria-hidden="true">{route.icon.name}</i>
-                                        {route.title}
-                                    </NavLink>
+                                </NavLink>
+                            </li>
+                            {routes.map(route => <li key={route.title}
+                                className={`main-nav-li${_activeSecondaryNav(route.path) ? " active" : ""}`}>
+                                <NavLink to={route.path}>
+                                    <i className={`material-icons-outlined${route.icon.rotate ? " rotated" : ""}`} aria-hidden="true">{route.icon.name}</i>
+                                    {route.title}
+                                </NavLink>
 
-                                    {route.routes &&
+                                {route.routes &&
                                         <nav className="sidebar-secondary-nav">
                                             <header className="secondary-nav-header">
                                                 {route.title}
                                             </header>
                                             <ul className="secondary-nav-ul">
-                                                {route.routes.map(secondaryRoute => <li key={secondaryRoute.title} className={`secondary-nav-li group${this._activeSecondaryLi(secondaryRoute) ? " active" : ""}`}>
-                                                    <NavLink activeClassName="active" to={secondaryRoute.path}>
+                                                {route.routes.map(secondaryRoute => <li key={secondaryRoute.title} className={`secondary-nav-li group${_activeSecondaryLi(secondaryRoute) ? " active" : ""}`}>
+                                                    <NavLink to={`${route.path}/${secondaryRoute.path}`}>
                                                         {secondaryRoute.title}
                                                     </NavLink>
                                                     <ul className="tertiary-nav-ul">
@@ -144,22 +130,21 @@ class SelectPanel extends Component {
                                                 </li>)}
                                             </ul>
                                         </nav>
-                                    }
-                                </li>)}
-                                <li className={"main-nav-li"}>
-                                    <NavLink activeClassName="active" to={"/utilities"}>
-                                        <i className="material-icons-outlined" aria-hidden="true">build</i>
+                                }
+                            </li>)}
+                            <li className={"main-nav-li"}>
+                                <NavLink to={"/utilities"}>
+                                    <i className="material-icons-outlined" aria-hidden="true">build</i>
                                         Utilities
-                                    </NavLink>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                }
-            </>
-        );
-    }
-}
+                                </NavLink>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            }
+        </>
+    );
+};
 
 SelectPanel.propTypes = {
     routes: PropTypes.arrayOf(PropTypes.shape({
@@ -171,10 +156,13 @@ SelectPanel.propTypes = {
             path: PropTypes.string.isRequired,
             componentPath: PropTypes.string.isRequired
         })).isRequired
-    })).isRequired
+    })).isRequired,
+    id: PropTypes.string.isRequired,
+    topbarId: PropTypes.string,
+    topbarSidebar: PropTypes.bool,
 };
 
-export default withRouter(SelectPanel);
+export default SelectPanel;
 
 /* For testing */
 export { SearchBox };

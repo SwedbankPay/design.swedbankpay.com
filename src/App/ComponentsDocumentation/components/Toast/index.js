@@ -121,22 +121,18 @@ const DeveloperDocumentation = () => (
     </section>
 );
 
-class Toast extends Component {
-    render () {
-        return (
-            <DocContainer>
-                <section id="toast-doc">
-                    <p className="lead">
+const Toast = () => (
+    <DocContainer>
+        <section id="toast-doc">
+            <p className="lead">
                         The toast component is only displayed when the user has performed an action. The components informs the user of the status of their request, warning and potential errors.
-                    </p>
-                    <Overview />
-                    <ContentGuidelines />
-                    <DeveloperDocumentation />
-                </section>
-            </DocContainer>
-        );
-    }
-}
+            </p>
+            <Overview />
+            <ContentGuidelines />
+            <DeveloperDocumentation />
+        </section>
+    </DocContainer>
+);
 
 export default Toast;
 

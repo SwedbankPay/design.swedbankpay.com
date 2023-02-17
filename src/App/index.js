@@ -1,9 +1,9 @@
-import React, { Component, Suspense } from "react";
-import { Router, Switch, Route, withRouter } from "react-router-dom";
-import { createBrowserHistory } from "history";
+import React, { Suspense, useState, useEffect } from "react";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import packageJson from "~/package";
 
 import AppHeader from "./AppHeader";
-import { LoadingComponent } from "./utils";
+import { LoadingComponent, removeTrailingSlash } from "./utils";
 import SelectPanel from "./utils/SelectPanel";
 
 import routes from "./routes/all";
@@ -14,23 +14,9 @@ import SearchBox from "./utils/SearchBox";
 
 import { topbar } from "@src/scripts/main";
 
-const basename = process.env.basename || "/";
+const basename = removeTrailingSlash(process.env.basename) || "/";
 
-const history = createBrowserHistory({ basename });
-
-class ScrollToTop extends Component {
-    componentDidUpdate (prevProps) {
-        if (this.props.location !== prevProps.location) {
-            window.scrollTo(0, 0);
-        }
-    }
-
-    render () {
-        return this.props.children;
-    }
-}
-
-const ScrollToTopComponent = withRouter(ScrollToTop);
+const brand = process.env.brand;
 
 const Home = React.lazy(() => import(/* webpackChunkName: "home.chunk" */ "./Home/index.js"));
 
@@ -46,44 +32,73 @@ const ErrorPage404 = React.lazy(() => import(/* webpackChunkName: "404.chunk" */
 
 const Utilities = React.lazy(() => import(/* webpackChunkName: "utilities.chunk" */ "./Utilities/index.js"));
 
-class App extends Component {
+const ScrollToTop = ({ children }) => {
+    const { pathname } = useLocation();
 
-    componentDidMount () {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return children;
+};
+
+export const VersionTopBanner = () => {
+
+    const pathname = useLocation().pathname;
+
+    const [version, setVersion] = useState(undefined);
+
+    useEffect(() => {
+        fetch("https://design.swedbankpay.com/latestVersion.json").then(data => data.json())
+            .then(data => setVersion(data.latestVersion))
+            .catch(error => console.warn("Could not fetch latest version from Azure:", error));
+    }, []);
+
+    return (
+        <>
+            {version && packageJson.version !== version &&
+            <div className="text-align-center py-2 bg-info text-white"><span>You are using an older version of the Design Guide. Click <a className="text-banner" href={`https://design.${brand}.com/v/${version}${pathname}`}>here</a> to get to the latest version ({version}).</span></div>}
+        </>
+    );
+};
+
+const App = () => {
+
+    useEffect(() => {
         topbar.init();
-    }
+    }, []);
 
-    render () {
-        return (
-            <Router basename={basename} history={history}>
-                <ScrollToTopComponent>
-                    <AppHeader />
-                    <div className="documentation">
-                        <div className="d-md-flex">
-                            <SkipLink/>
-                            <div className="d-none d-lg-block">
-                                <SelectPanel id="doc-sidebar" newSidebar={true} routes={routes} />
-                            </div>
-                            <main id="doc-view" className="doc-view">
-                                <SearchBox className={"d-none d-lg-block"}/>
-                                <Suspense fallback={<LoadingComponent />}>
-                                    <Switch>
-                                        <Route exact path="/" component={Home} />
-                                        <Route path="/get-started" component={GetStarted} />
-                                        <Route path="/components" component={Components} />
-                                        <Route path="/identity" component={Identity} />
-                                        <Route path="/patterns" component={Patterns} />
-                                        <Route path="/utilities" component={Utilities} />
-                                        <Route path="/404" component={ErrorPage404} />
-                                        <Route component={ErrorPage404} />
-                                    </Switch>
-                                </Suspense>
-                            </main>
+    return (
+        <BrowserRouter basename={basename} >
+            <ScrollToTop>
+                <AppHeader /> {/* mobile & tablet topbar & hamburger menu */}
+                <div className="documentation">
+                    <VersionTopBanner/>
+                    <div className="d-md-flex">
+                        <SkipLink/>
+                        <div className="d-none d-lg-block"> {/* desktop sidebar nav */}
+                            <SelectPanel id="doc-sidebar" routes={routes} />
                         </div>
+                        <main id="doc-view" className="doc-view">
+                            <SearchBox className={"d-none d-lg-block"}/>
+                            <Suspense fallback={<LoadingComponent />}>
+                                <Routes>
+                                    <Route index path="/" element={<Home />} />
+                                    <Route path="get-started/*" element={<GetStarted />} />
+                                    <Route path="components/*" element={<Components />} />
+                                    <Route path="identity/*" element={<Identity />} />
+                                    <Route path="patterns/*" element={<Patterns />} />
+                                    <Route path="utilities/*" element={<Utilities />} />
+                                    <Route path="404/*" element={<ErrorPage404 />} />
+                                    <Route path="*" element={<ErrorPage404 />} />
+                                </Routes>
+                            </Suspense>
+                        </main>
                     </div>
-                </ScrollToTopComponent>
-            </Router>
-        );
-    }
-}
+                </div>
+            </ScrollToTop>
+        </BrowserRouter>
+    );
+};
 
 export default App;

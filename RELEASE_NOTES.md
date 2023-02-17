@@ -1,41 +1,20 @@
 # Changelog
 
-## [10.7.0] - 03.02.2023
+## [10.7.1] - 16.02.2023
 
 ## Components changes
--   Tooltip:
-    -   Remove redundant css rules
-
--   Sidebar:
-    -   Added functionality for scrolling on first level
-    -   Added max-width for correct text break
-    -   Added text-align: center
-
 -   Dropdown:
-    -   Update z-index
+    -   Style dropdown-options, to have consistent style for both anchor-links AND buttons
 
--   Button:
-    -   Update `button-group` css rules: display flex & flex-wrap & gap style
+-   Slab component
+    -   Removed redundant code
 
 ## Design Guide documentation changes
--   Interactive playground:
-    -   As part of our new component preview, we softly introduce to you the ability to directly tweak and test our components in a sandbox.
-    -   Patterns: Form and Login, has the new component preview.
-
 -   NPM dependencies upgrade
-    -   Azure/CLI
-    -   ESlint
-    -   Webpack-CLI
-    -   @Babel/core
-    -   PostCSS 
-    -   Favicons
+    -   React-router
+    -   Less-loader
 
--   Table component documentation
-    -   Added some more information regarding tables and mobile devices.
-
--   Badge component documentation
-    -   Added documentation about using classes `badge-default`, `badge-inactive` and `badge-warning`
-    -   Added correct font for PayEx brand
-
--   Redirect to newest version (ground work)
-    -   Added writing a new latestVersion.json fil in our Azure container. This is a future task for ensuring users know they are on a older version of DG while browsing.
+-   Convert class-based React component to hooks
+-   Style Table component's "Do's and Don't" on mobile
+-   Display banner redirecting to latest version if viewed documentation's version is not matching with the latest package version available
+-   Fix Lightbox z-index

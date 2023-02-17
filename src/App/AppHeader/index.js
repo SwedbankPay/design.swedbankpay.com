@@ -1,5 +1,4 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
 
 import { SelectPanel } from "../utils";
 
@@ -10,6 +9,7 @@ import SearchBox from "../utils/SearchBox";
 const basename = process.env.basename;
 const brand = process.env.brand;
 
+// mobile & tablet topbar and hamburger menu
 const AppHeader = () => (
     <header id="dg-topbar" className="topbar topbar-max-md-sticky d-md-flex d-lg-none designguide-header">
         <button type="button" className="topbar-btn" aria-label="Open menu" aria-haspopup="menu" aria-expanded="false" aria-controls="topbar-nav">
@@ -30,4 +30,4 @@ const AppHeader = () => (
     </header>
 );
 
-export default withRouter(AppHeader);
+export default AppHeader;

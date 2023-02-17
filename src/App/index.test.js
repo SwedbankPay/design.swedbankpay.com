@@ -1,9 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import App from "./index";
-
-import { topbar } from "@src/scripts/main";
+import App, { VersionTopBanner } from "./index";
 
 describe("Main: App", () => {
     it("is defined", () => {
@@ -11,11 +9,14 @@ describe("Main: App", () => {
     });
 
     it("renders", () => {
-        topbar.init = jest.fn();
-
         const wrapper = shallow(<App />);
 
         expect(wrapper).toMatchSnapshot();
-        expect(topbar.init).toHaveBeenCalled();
+    });
+});
+
+describe("VersionTopBanner:", () => {
+    it("is defined", () => {
+        expect(VersionTopBanner).toBeDefined();
     });
 });
