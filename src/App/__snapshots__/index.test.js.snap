@@ -450,6 +450,9 @@ exports[`Main: App renders 1`] = `
                       "outlined": true,
                       "path": "slab",
                       "rootPath": "/components/slab",
+                      "statusBadges": Array [
+                        "updated",
+                      ],
                       "title": "Slab",
                     },
                     Object {

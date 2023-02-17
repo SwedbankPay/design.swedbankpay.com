@@ -5,6 +5,11 @@ const basename = process.env.basename;
 
 export const changeLogs = [
     {
+        version: "10.7.1",
+        title: "The Bear release™ 🐻",
+        text: <p>This one is almost exclusively focusing on the &quot;behind the curtains&quot;. For components, the Dropdown options were styled so you can now use both anchor links and buttons, both getting styled identically. This can help for A11y (using more appropriate tags from a semantic point of view). We also removed redundant code from the Slab component 🧹.<br />In terms of documentation, some major NPM dependencies were upgraded. React-router in particular. We also converted the class-based React components to hooks. The Table component&apos;s “Do&apos;s and Don&apos;t” got its style for mobile fixed, and a banner was added to redirect users to the latest version if they&apos;re consulting an older version (thanks Mr Bear🐻 for the help 👏). And lastly, the Lightbox z-index was fixed.</p>
+    },
+    {
         version: "10.7.0",
         title: "Interactive playground and documentation updates",
         text: <p>New year, new version 🚀 Regarding components we have done some minor tweaks to ensure a better user experience, this applies to Tooltip, Sidebar, Dropdown and Buttons. We have also introduced a new component preview which you can see and test out in the patterns sections <a href={`${basename}patterns/forms`}>forms</a> and <a href={`${basename}patters/login`}>login</a>. Closing in, we have upgraded a lot of our dependencies and added some documentation. Go to the complete <a href="https://github.com/SwedbankPay/design.swedbankpay.com/releases" target="_blank" rel="noopener noreferrer">changelog</a> to see the changes in detail. Enjoy!</p>

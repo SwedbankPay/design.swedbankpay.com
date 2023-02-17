@@ -264,7 +264,8 @@ module.exports = [
                 rootPath: "/components/slab",
                 componentPath: "components/Slab",
                 icon: "crop_landscape",
-                outlined: true
+                outlined: true,
+                statusBadges: ["updated"]
             },
             {
                 title: "Status",
