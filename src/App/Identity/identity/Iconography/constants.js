@@ -91,6 +91,14 @@ export const paymentIcons = [
     {
         title: "ApplePay",
         code: "applepay"
+    },
+    {
+        title: "GooglePay",
+        code: "googlepay"
+    },
+    {
+        title: "ClickToPay",
+        code: "clicktopay"
     }
 ];
 

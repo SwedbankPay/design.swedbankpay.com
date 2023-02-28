@@ -1082,6 +1082,46 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
           />
         </td>
       </tr>
+      <tr
+        key="googlepay"
+      >
+        <td>
+          <IconPreview
+            name="googlepay"
+            size="large"
+            type="payment-icon"
+          />
+        </td>
+        <td>
+          GooglePay
+        </td>
+        <td>
+          <CodeTags
+            code="googlepay"
+            type="secondary"
+          />
+        </td>
+      </tr>
+      <tr
+        key="clicktopay"
+      >
+        <td>
+          <IconPreview
+            name="clicktopay"
+            size="large"
+            type="payment-icon"
+          />
+        </td>
+        <td>
+          ClickToPay
+        </td>
+        <td>
+          <CodeTags
+            code="clicktopay"
+            type="secondary"
+          />
+        </td>
+      </tr>
     </tbody>
   </table>
   <ComponentPreview
@@ -1127,6 +1167,18 @@ exports[`Core: Iconography PaymentIcons renders 1`] = `
     <i
       aria-hidden="true"
       className="payment-icon payment-icon-applepay"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-googlepay"
+    />
+    
+
+    <i
+      aria-hidden="true"
+      className="payment-icon payment-icon-clicktopay"
     />
     
 
