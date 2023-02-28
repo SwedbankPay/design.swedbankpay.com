@@ -230,40 +230,47 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       To use our validation, start by adding the attribute 
-      <CodeTags
-        code="novalidate"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        novalidate
+      </code>
        to your 
-      <CodeTags
-        code="<form>"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        &lt;form&gt;
+      </code>
        element. If you wish to validate your entire form, add the 
-      <CodeTags
-        code="validate"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        validate
+      </code>
        attribute to the 
-      <CodeTags
-        code="<form>"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        &lt;form&gt;
+      </code>
        tag, if not add it to the desired 
-      <CodeTags
-        code="<input>"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        &lt;input&gt;
+      </code>
        tags. This will validate against 
-      <CodeTags
-        code="required"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        required
+      </code>
        and 
-      <CodeTags
-        code="pattern"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        pattern
+      </code>
       , where pattern will override default patterns.
     </p>
     <b
@@ -273,42 +280,104 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     </b>
     <p>
       Use client-side validation to validate as much data as possible before the user submits the form. Common errors include empty required fields, invalid characters or incorrect input format. To give users inline validation feedback insert a error message within the 
-      <CodeTags
-        code="form-group"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        form-group
+      </code>
        in the 
-      <CodeTags
-        code="help-block"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        help-block
+      </code>
        element in the attribute 
-      <CodeTags
-        code="data-error"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        data-error
+      </code>
       .
     </p>
-    <EditableComponentPreview
-      codeFigure={true}
-      language="html"
-      removeOuterTag={true}
-      showCasePanel={true}
-      staticPreview={true}
+    <div
+      className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
     >
       <div
-        className="col-12 col-sm-6 m-auto pt-3"
+        className="showcase-panel"
+        style={null}
       >
-        <InputGroup
-          defaultValue="Name.com"
-          errorMessage="The email address must include \\"@\\""
-          id="input-error-client-example"
-          label="Email"
-          type="text"
-          validationState="error"
-        />
+        <div
+          className="col-12 col-sm-6 m-auto pt-3"
+        >
+          <div
+            className="form-group has-error"
+          >
+            
+
+            <label
+              htmlFor="input-error-client-example"
+            >
+              Email
+            </label>
+            
+
+            <input
+              aria-describedby={null}
+              autoComplete={null}
+              className="form-control"
+              data-validate={null}
+              defaultValue="Name.com"
+              disabled={null}
+              id="input-error-client-example"
+              pattern={null}
+              readOnly={null}
+              required={null}
+              type="text"
+            />
+            
+
+            <div
+              className="help-block"
+            >
+              <i
+                className="material-icons"
+              >
+                warning
+              </i>
+              The email address must include "@"
+            </div>
+            
+
+          </div>
+        </div>
       </div>
-    </EditableComponentPreview>
+      <div
+        className="sp-stack sp-c-euXojQ sp-editor"
+      >
+        <div
+          className="sp-code-editor sp-c-bNbSGz"
+        >
+          <pre
+            className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+            translate="no"
+          >
+            <code
+              className="sp-pre-placeholder sp-c-fWymNx"
+              style={
+                Object {
+                  "marginLeft": "var(--sp-space-4)",
+                }
+              }
+            />
+          </pre>
+          <span
+            className="sp-read-only sp-c-czQzXp"
+          >
+            Read-only
+          </span>
+        </div>
+      </div>
+    </div>
     <b
       className="brand-headline"
     >
@@ -317,27 +386,199 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     <p>
       Server side validation can be used to control the inputs after the user submits the form. If an error has occurred, display an error alert at the top of the form after the page has reloaded as well as inline errors on the affected input components.
     </p>
-    <EditableComponentPreview
-      codeFigure={true}
-      language="html"
-      previewMinHeight={600}
-      showCasePanel={true}
-      staticPreview={true}
+    <div
+      className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
     >
       <div
-        className="col-sm-6 col-12 m-auto px-0 py-3"
+        className="showcase-panel"
+        style={
+          Object {
+            "--preview-min-height": "600px",
+          }
+        }
       >
-        <LoginForm
-          checkboxId="validation-checkbox-example"
-          defaultEmail={true}
-          defaultPassword={true}
-          emailId="validation-email-example"
-          error={true}
-          passwordId="validation-password-example"
-          title="h2"
-        />
+        <div
+          className="col-sm-6 col-12 m-auto px-0 py-3"
+        >
+          
+
+          <span
+            className="h2 mb-4 mt-2 d-block"
+          >
+            Log in
+          </span>
+          
+
+          <div
+            className="alert alert-danger"
+          >
+            
+
+            <i
+              aria-hidden="true"
+              className="material-icons alert-icon"
+            >
+              cancel
+            </i>
+            <p>
+              <b>
+                Error.
+              </b>
+               Incorrect password
+            </p>
+            
+
+          </div>
+          <div
+            className="form-group"
+          >
+            
+
+            <label
+              htmlFor="validation-email-example"
+            >
+              Email
+            </label>
+            
+
+            <input
+              aria-describedby={null}
+              autoComplete={null}
+              className="form-control"
+              data-validate={null}
+              defaultValue="name@mail.com"
+              disabled={null}
+              id="validation-email-example"
+              pattern={null}
+              readOnly={null}
+              required={null}
+              type="email"
+            />
+            
+
+          </div>
+          <div
+            className="form-group has-error"
+          >
+            
+
+            <label
+              htmlFor="validation-password-example"
+            >
+              Password
+            </label>
+            
+
+            <input
+              aria-describedby={null}
+              autoComplete={null}
+              className="form-control"
+              data-validate={null}
+              defaultValue="qwerty1234"
+              disabled={null}
+              id="validation-password-example"
+              pattern={null}
+              readOnly={null}
+              required={null}
+              type="password"
+            />
+            
+
+            <div
+              className="help-block"
+            >
+              <i
+                className="material-icons"
+              >
+                warning
+              </i>
+              Incorrect password
+            </div>
+            
+
+          </div>
+          <div
+            className="d-sm-flex d-block justify-content-between mb-3"
+          >
+            <div
+              className="checkbox"
+            >
+              
+
+              <input
+                aria-describedby={null}
+                defaultChecked={null}
+                disabled={null}
+                id="validation-checkbox-example"
+                type="checkbox"
+              />
+              
+
+              <label
+                className="d-block"
+                htmlFor="validation-checkbox-example"
+              >
+                Remember me
+              </label>
+              
+
+            </div>
+            
+
+            <a
+              className="d-block mb-3"
+              href=""
+              onClick={[Function]}
+            >
+              Forgot your password?
+            </a>
+          </div>
+          
+
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-primary btn-block"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            Log in
+          </button>
+          
+
+        </div>
       </div>
-    </EditableComponentPreview>
+      <div
+        className="sp-stack sp-c-euXojQ sp-editor"
+      >
+        <div
+          className="sp-code-editor sp-c-bNbSGz"
+        >
+          <pre
+            className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+            translate="no"
+          >
+            <code
+              className="sp-pre-placeholder sp-c-fWymNx"
+              style={
+                Object {
+                  "marginLeft": "var(--sp-space-4)",
+                }
+              }
+            />
+          </pre>
+          <span
+            className="sp-read-only sp-c-czQzXp"
+          >
+            Read-only
+          </span>
+        </div>
+      </div>
+    </div>
   </section>
   <section>
     <h3>
@@ -345,77 +586,202 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       You can use the 
-      <CodeTags
-        code="<fieldset>"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        &lt;fieldset&gt;
+      </code>
        to group related elements in a 
-      <CodeTags
-        code="form"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        form
+      </code>
        and create more structure.
     </p>
-    <EditableComponentPreview
-      codeFigure={true}
-      language="html"
-      previewMinHeight={620}
-      showCasePanel={true}
-      staticPreview={true}
+    <div
+      className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
     >
       <div
-        className="col-12 col-sm-6 m-auto"
+        className="showcase-panel"
+        style={
+          Object {
+            "--preview-min-height": "620px",
+          }
+        }
       >
-        <form>
-          <fieldset
-            className="mb-2"
-          >
-            <legend>
-               
-              
+        <div
+          className="col-12 col-sm-6 m-auto"
+        >
+          <form>
+            <fieldset
+              className="mb-2"
+            >
+              <legend>
+                 
+                
 
-              <span
-                className="h3"
+                <span
+                  className="h3"
+                >
+                  Name
+                </span>
+              </legend>
+              <div
+                className="form-group"
               >
-                Name
-              </span>
-            </legend>
-            <InputGroup
-              id="fieldset-first-name-example"
-              label="First name"
-              type="name"
-            />
-            <InputGroup
-              id="fieldset-last-name-example"
-              label="Last name"
-              type="name"
-            />
-          </fieldset>
-          <fieldset>
-            <legend>
-               
-              
+                
 
-              <span
-                className="h3"
+                <label
+                  htmlFor="fieldset-first-name-example"
+                >
+                  First name
+                </label>
+                
+
+                <input
+                  aria-describedby={null}
+                  autoComplete={null}
+                  className="form-control"
+                  data-validate={null}
+                  defaultValue=""
+                  disabled={null}
+                  id="fieldset-first-name-example"
+                  pattern={null}
+                  readOnly={null}
+                  required={null}
+                  type="name"
+                />
+                
+
+              </div>
+              <div
+                className="form-group"
               >
-                Contact information
-              </span>
-            </legend>
-            <InputGroup
-              id="fieldset-email-example"
-              label="Email"
-              type="email"
-            />
-            <InputGroup
-              id="fieldset-phone-example"
-              label="Phone number"
-              type="tel"
-            />
-          </fieldset>
-        </form>
+                
+
+                <label
+                  htmlFor="fieldset-last-name-example"
+                >
+                  Last name
+                </label>
+                
+
+                <input
+                  aria-describedby={null}
+                  autoComplete={null}
+                  className="form-control"
+                  data-validate={null}
+                  defaultValue=""
+                  disabled={null}
+                  id="fieldset-last-name-example"
+                  pattern={null}
+                  readOnly={null}
+                  required={null}
+                  type="name"
+                />
+                
+
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>
+                 
+                
+
+                <span
+                  className="h3"
+                >
+                  Contact information
+                </span>
+              </legend>
+              <div
+                className="form-group"
+              >
+                
+
+                <label
+                  htmlFor="fieldset-email-example"
+                >
+                  Email
+                </label>
+                
+
+                <input
+                  aria-describedby={null}
+                  autoComplete={null}
+                  className="form-control"
+                  data-validate={null}
+                  defaultValue=""
+                  disabled={null}
+                  id="fieldset-email-example"
+                  pattern={null}
+                  readOnly={null}
+                  required={null}
+                  type="email"
+                />
+                
+
+              </div>
+              <div
+                className="form-group"
+              >
+                
+
+                <label
+                  htmlFor="fieldset-phone-example"
+                >
+                  Phone number
+                </label>
+                
+
+                <input
+                  aria-describedby={null}
+                  autoComplete={null}
+                  className="form-control"
+                  data-validate={null}
+                  defaultValue=""
+                  disabled={null}
+                  id="fieldset-phone-example"
+                  pattern={null}
+                  readOnly={null}
+                  required={null}
+                  type="tel"
+                />
+                
+
+              </div>
+            </fieldset>
+          </form>
+        </div>
       </div>
-    </EditableComponentPreview>
+      <div
+        className="sp-stack sp-c-euXojQ sp-editor"
+      >
+        <div
+          className="sp-code-editor sp-c-bNbSGz"
+        >
+          <pre
+            className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+            translate="no"
+          >
+            <code
+              className="sp-pre-placeholder sp-c-fWymNx"
+              style={
+                Object {
+                  "marginLeft": "var(--sp-space-4)",
+                }
+              }
+            />
+          </pre>
+          <span
+            className="sp-read-only sp-c-czQzXp"
+          >
+            Read-only
+          </span>
+        </div>
+      </div>
+    </div>
   </section>
   <section>
     <h3>
@@ -423,97 +789,302 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       You can disable an entire fieldset by adding 
-      <CodeTags
-        code="disabled"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        disabled
+      </code>
        to the fieldset element. 
     </p>
-    <EditableComponentPreview
-      codeFigure={true}
-      language="html"
-      previewMinHeight={400}
-      removeOuterTag={true}
-      showCasePanel={true}
-      staticPreview={true}
+    <div
+      className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
     >
       <div
-        className="col-12 col-sm-6 m-auto"
+        className="showcase-panel"
+        style={
+          Object {
+            "--preview-min-height": "400px",
+          }
+        }
       >
-        <fieldset
-          disabled={true}
+        <div
+          className="col-12 col-sm-6 m-auto"
         >
-          <InputGroup
-            id="disabled-name-example"
-            label="Name"
-            type="name"
-          />
-          <InputGroup
-            id="disabled-email-example"
-            label="Email"
-            type="email"
-          />
-          <Checkbox
-            className="mb-4"
-            id="disabled-fieldset-checkbox"
-            label="I agree to terms of use"
-          />
-          
+          <fieldset
+            disabled={true}
+          >
+            <div
+              className="form-group"
+            >
+              
 
-          <Button
-            className="mt-2"
-            label="Submit"
-            type="primary"
-          />
-        </fieldset>
+              <label
+                htmlFor="disabled-name-example"
+              >
+                Name
+              </label>
+              
+
+              <input
+                aria-describedby={null}
+                autoComplete={null}
+                className="form-control"
+                data-validate={null}
+                defaultValue=""
+                disabled={null}
+                id="disabled-name-example"
+                pattern={null}
+                readOnly={null}
+                required={null}
+                type="name"
+              />
+              
+
+            </div>
+            <div
+              className="form-group"
+            >
+              
+
+              <label
+                htmlFor="disabled-email-example"
+              >
+                Email
+              </label>
+              
+
+              <input
+                aria-describedby={null}
+                autoComplete={null}
+                className="form-control"
+                data-validate={null}
+                defaultValue=""
+                disabled={null}
+                id="disabled-email-example"
+                pattern={null}
+                readOnly={null}
+                required={null}
+                type="email"
+              />
+              
+
+            </div>
+            <div
+              className="checkbox mb-4"
+            >
+              
+
+              <input
+                aria-describedby={null}
+                defaultChecked={null}
+                disabled={null}
+                id="disabled-fieldset-checkbox"
+                type="checkbox"
+              />
+              
+
+              <label
+                className="d-block"
+                htmlFor="disabled-fieldset-checkbox"
+              >
+                I agree to terms of use
+              </label>
+              
+
+            </div>
+            
+
+            <button
+              active={null}
+              aria-disabled={null}
+              aria-label={null}
+              aria-pressed={null}
+              className="btn btn-primary mt-2"
+              role={null}
+              tabIndex={null}
+              title={null}
+              type="button"
+            >
+              Submit
+            </button>
+          </fieldset>
+        </div>
       </div>
-    </EditableComponentPreview>
+      <div
+        className="sp-stack sp-c-euXojQ sp-editor"
+      >
+        <div
+          className="sp-code-editor sp-c-bNbSGz"
+        >
+          <pre
+            className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+            translate="no"
+          >
+            <code
+              className="sp-pre-placeholder sp-c-fWymNx"
+              style={
+                Object {
+                  "marginLeft": "var(--sp-space-4)",
+                }
+              }
+            />
+          </pre>
+          <span
+            className="sp-read-only sp-c-czQzXp"
+          >
+            Read-only
+          </span>
+        </div>
+      </div>
+    </div>
     <p>
       If you only wish to disable a specific form component, add the 
-      <CodeTags
-        code="disabled"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        disabled
+      </code>
        attribute to the desired component.
     </p>
-    <EditableComponentPreview
-      codeFigure={true}
-      language="html"
-      previewMinHeight={400}
-      removeOuterTag={true}
-      showCasePanel={true}
-      staticPreview={true}
+    <div
+      className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
     >
       <div
-        className="col-12 col-sm-6 m-auto"
+        className="showcase-panel"
+        style={
+          Object {
+            "--preview-min-height": "400px",
+          }
+        }
       >
-        <fieldset>
-          <InputGroup
-            disabled={true}
-            id="disable-specific-name-example"
-            label="Name"
-            type="name"
-          />
-          <InputGroup
-            id="disable-specific-email-example"
-            label="Email"
-            type="email"
-          />
-          <Checkbox
-            className="mb-4"
-            id="disabled-input-checkbox"
-            label="I agree to terms of user"
-          />
-          
+        <div
+          className="col-12 col-sm-6 m-auto"
+        >
+          <fieldset>
+            <div
+              className="form-group disabled"
+            >
+              
 
-          <Button
-            className="mt-2"
-            label="Submit"
-            type="primary"
-          />
-        </fieldset>
+              <label
+                htmlFor="disable-specific-name-example"
+              >
+                Name
+              </label>
+              
+
+              <input
+                aria-describedby={null}
+                autoComplete={null}
+                className="form-control"
+                data-validate={null}
+                defaultValue=""
+                disabled={true}
+                id="disable-specific-name-example"
+                pattern={null}
+                readOnly={null}
+                required={null}
+                type="name"
+              />
+              
+
+            </div>
+            <div
+              className="form-group"
+            >
+              
+
+              <label
+                htmlFor="disable-specific-email-example"
+              >
+                Email
+              </label>
+              
+
+              <input
+                aria-describedby={null}
+                autoComplete={null}
+                className="form-control"
+                data-validate={null}
+                defaultValue=""
+                disabled={null}
+                id="disable-specific-email-example"
+                pattern={null}
+                readOnly={null}
+                required={null}
+                type="email"
+              />
+              
+
+            </div>
+            <div
+              className="checkbox mb-4"
+            >
+              
+
+              <input
+                aria-describedby={null}
+                defaultChecked={null}
+                disabled={null}
+                id="disabled-input-checkbox"
+                type="checkbox"
+              />
+              
+
+              <label
+                className="d-block"
+                htmlFor="disabled-input-checkbox"
+              >
+                I agree to terms of user
+              </label>
+              
+
+            </div>
+            
+
+            <button
+              active={null}
+              aria-disabled={null}
+              aria-label={null}
+              aria-pressed={null}
+              className="btn btn-primary mt-2"
+              role={null}
+              tabIndex={null}
+              title={null}
+              type="button"
+            >
+              Submit
+            </button>
+          </fieldset>
+        </div>
       </div>
-    </EditableComponentPreview>
+      <div
+        className="sp-stack sp-c-euXojQ sp-editor"
+      >
+        <div
+          className="sp-code-editor sp-c-bNbSGz"
+        >
+          <pre
+            className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+            translate="no"
+          >
+            <code
+              className="sp-pre-placeholder sp-c-fWymNx"
+              style={
+                Object {
+                  "marginLeft": "var(--sp-space-4)",
+                }
+              }
+            />
+          </pre>
+          <span
+            className="sp-read-only sp-c-czQzXp"
+          >
+            Read-only
+          </span>
+        </div>
+      </div>
+    </div>
   </section>
   <section>
     <h3>
@@ -521,65 +1092,147 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       If you need more than one column in your form, you can use the grid system to customize how forms are displayed. Wrap your form elements in a row container and remember to add 
-      <CodeTags
-        code=".col-{your_size}"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .col-{your_size}
+      </code>
        to the 
-      <CodeTags
-        code=".form-group"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .form-group
+      </code>
       .
     </p>
   </section>
-  <EditableComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-    staticPreview={true}
+  <div
+    className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
   >
     <div
-      className="col-12 col-sm-10 m-auto pt-2"
+      className="showcase-panel"
+      style={null}
     >
-      <form>
-        <div
-          className="row align-items-center justify-content-between"
-        >
-          <InputGroup
-            className="col-12 col-sm-3 px-0 mb-4"
-            id="form-grid-name-example"
-            label="Name"
-            type="name"
-          />
-          <InputGroup
-            className="col-12 col-sm-6 px-0 mb-4"
-            id="form-grid-email-example"
-            label="Email"
-            type="email"
-          />
-          
+      <div
+        className="col-12 col-sm-10 m-auto pt-2"
+      >
+        <form>
+          <div
+            className="row align-items-center justify-content-between"
+          >
+            <div
+              className="form-group col-12 col-sm-3 px-0 mb-4"
+            >
+              
 
-          <Button
-            className="mt-1"
-            label="Submit"
-            type="primary"
-          />
-        </div>
-      </form>
+              <label
+                htmlFor="form-grid-name-example"
+              >
+                Name
+              </label>
+              
+
+              <input
+                aria-describedby={null}
+                autoComplete={null}
+                className="form-control"
+                data-validate={null}
+                defaultValue=""
+                disabled={null}
+                id="form-grid-name-example"
+                pattern={null}
+                readOnly={null}
+                required={null}
+                type="name"
+              />
+              
+
+            </div>
+            <div
+              className="form-group col-12 col-sm-6 px-0 mb-4"
+            >
+              
+
+              <label
+                htmlFor="form-grid-email-example"
+              >
+                Email
+              </label>
+              
+
+              <input
+                aria-describedby={null}
+                autoComplete={null}
+                className="form-control"
+                data-validate={null}
+                defaultValue=""
+                disabled={null}
+                id="form-grid-email-example"
+                pattern={null}
+                readOnly={null}
+                required={null}
+                type="email"
+              />
+              
+
+            </div>
+            
+
+            <button
+              active={null}
+              aria-disabled={null}
+              aria-label={null}
+              aria-pressed={null}
+              className="btn btn-primary mt-1"
+              role={null}
+              tabIndex={null}
+              title={null}
+              type="button"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-  </EditableComponentPreview>
+    <div
+      className="sp-stack sp-c-euXojQ sp-editor"
+    >
+      <div
+        className="sp-code-editor sp-c-bNbSGz"
+      >
+        <pre
+          className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+          translate="no"
+        >
+          <code
+            className="sp-pre-placeholder sp-c-fWymNx"
+            style={
+              Object {
+                "marginLeft": "var(--sp-space-4)",
+              }
+            }
+          />
+        </pre>
+        <span
+          className="sp-read-only sp-c-czQzXp"
+        >
+          Read-only
+        </span>
+      </div>
+    </div>
+  </div>
   <section>
     <h3>
       Static text
     </h3>
     <p>
       To display static text in a form use 
-      <CodeTags
-        code="<span>"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        &lt;span&gt;
+      </code>
     </p>
   </section>
   <section>
@@ -587,10 +1240,11 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
       JavaScript methods
     </h3>
     <p>
-      <CodeTags
-        code="dg.validation.init()"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        dg.validation.init()
+      </code>
        can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.
     </p>
   </section>
@@ -1021,192 +1675,189 @@ exports[`Forms: index Overview renders 1`] = `
   <p>
     A form can include different type of user input components that can be arranged in different ways depending on your specific context and needs. You might for example design a form for a user to sign up for or log into an account, register for a service, reconfigure settings, take a survey, purchase a product or provide feedback.
   </p>
-  <EditableComponentPreview
-    language="html"
-    noOptions={true}
-    previewMinHeight={750}
-    removeOuterTag={true}
-    showCasePanel={true}
-    showCasePanelAdvanced={
-      Object {
-        "elements": Array [
-          Object {
-            "component": <div
-              className="col-md-10 col-12"
+  <div
+    className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+  >
+    <div
+      className="showcase-panel showcase-panel-advanced"
+      id="overview-forms"
+    >
+      <div
+        className="tabs tabs-scroll"
+        id="overview-forms-tabs"
+      >
+        <ul
+          id="overview-forms-tabs-ul"
+        >
+          <li
+            className="active"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
             >
-              <form>
-                <fieldset>
-                  <legend>
-                    <span
-                      className="h2"
-                    >
-                      Contact us
-                    </span>
-                  </legend>
-                  <div
-                    className="col-12 col-sm-9 px-0"
-                  >
-                    <InputGroup
-                      id="form-email-example"
-                      label="E-mail"
-                      type="email"
-                    />
-                    <InputGroup
-                      expandingHintContent="If you select a subject it will make it easier for our support team to handle your request which will make the processing time much faster."
-                      expandingHintId="expanding-hint-forms-example"
-                      expandingHintTitle="Why should you select subject?"
-                      id="form-select-example"
-                      label="Subject"
-                      optional={true}
-                      placeholder="Select a subject"
-                      selectOptions={
-                        Array [
-                          "Subject 1",
-                          "Subject 2",
-                          "Subject 3",
-                        ]
+              Form
+            </a>
+          </li>
+          <li
+            className="null"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              Multi-step form
+            </a>
+          </li>
+        </ul>
+        <div
+          className="options-open  d-none "
+        >
+          <button
+            aria-label="Open options menu"
+            className="open-options-menu d-flex"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons"
+            >
+              menu_open
+            </i>
+          </button>
+        </div>
+      </div>
+      <div
+        className="d-flex"
+      >
+        <div
+          className="d-flex flex-column flex-fill"
+        >
+          <div
+            className="component-preview flex-fill"
+          >
+            <div
+              className="component-preview-content editable-preview"
+              style={
+                Object {
+                  "--preview-min-height": "750px",
+                }
+              }
+            >
+              <div
+                className="sp-stack sp-c-euXojQ sp-preview"
+              >
+                <div
+                  className="sp-preview-container sp-c-bIhyHd"
+                >
+                  <iframe
+                    className="sp-preview-iframe sp-c-fgviib"
+                    style={
+                      Object {
+                        "height": undefined,
                       }
-                      type="select"
-                    />
-                  </div>
-                  <InputGroup
-                    id="form-textarea-example"
-                    label="Message"
-                    type="textarea"
-                  />
-                  <Checkbox
-                    id="forms-template-checkbox-example"
-                    label={
-                      <React.Fragment>
-                        I have read and accept Swedbank Pays's 
-                        <Link
-                          linkText="privacy policy"
-                          rightIcon="launch"
-                        />
-                      </React.Fragment>
                     }
+                    title="Sandpack Preview"
                   />
-                  
-
-                  <Button
-                    className="mt-3"
-                    label="Send message"
-                    type="primary"
-                  />
-                </fieldset>
-              </form>
-            </div>,
-            "description": "This in an example of a single page contact form using a collection of components including input fields, select list, checkbox and button.",
-            "tab": "Form",
-            "title": "Form",
-          },
-          Object {
-            "component": <div
-              className="col-md-10 col-12"
-            >
-              <form>
-                <Steps
-                  steps={
-                    Array [
-                      Object {
-                        "completed": true,
-                        "subtitle": "Authentication",
-                        "title": "Step one",
-                      },
-                      Object {
-                        "ongoing": true,
-                        "selected": true,
-                        "title": "Step two",
-                      },
-                      Object {
-                        "title": "Step three",
-                      },
-                      Object {
-                        "title": "Step four",
-                      },
-                    ]
-                  }
-                />
-                <fieldset>
-                  <legend>
-                    <span
-                      className="h2"
+                  <div
+                    className="sp-preview-actions sp-c-eKnQtg"
+                  >
+                    <a
+                      className="sp-button sp-icon-standalone sp-c-dRhJti sp-c-gMfcns sp-c-eXsQzS"
+                      href="https://codesandbox.io/api/v1/sandboxes/define?undefined"
+                      rel="noreferrer noopener"
+                      target="_blank"
+                      title="Open in CodeSandbox"
                     >
-                      Step two
-                    </span>
-                  </legend>
-                  <div
-                    className="row mb-2"
-                  >
-                    <InputGroup
-                      className="col-12 col-sm-6"
-                      id="multi-form-example-1"
-                      label="Label"
-                      type="text"
-                    />
-                    <InputGroup
-                      className="col-12 col-sm-6"
-                      id="multi-form-example-2"
-                      label="Label"
-                      type="text"
-                    />
+                      <svg
+                        fill="none"
+                        height="16"
+                        stroke="currentColor"
+                        viewBox="0 0 16 16"
+                        width="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <title>
+                          Open on CodeSandbox
+                        </title>
+                        <path
+                          d="M6.66665 3.33337H4.33331C3.78103 3.33337 3.33331 3.78109 3.33331 4.33337V11.6667C3.33331 12.219 3.78103 12.6667 4.33331 12.6667H11.6666C12.2189 12.6667 12.6666 12.219 12.6666 11.6667V9.33337"
+                          strokeLinecap="round"
+                        />
+                        <path
+                          d="M10 3.33337H12.5667C12.6219 3.33337 12.6667 3.37815 12.6667 3.43337V6.00004"
+                          strokeLinecap="round"
+                        />
+                        <path
+                          d="M7.33331 8.66668L12.5333 3.46667"
+                          strokeLinecap="round"
+                        />
+                      </svg>
+                    </a>
                   </div>
-                  <InputGroup
-                    className="mb-4"
-                    id="multi-form-example-3"
-                    label="Label"
-                    type="text"
-                  />
-                  <Radio
-                    className="mb-4"
-                    group={true}
-                    groupTitle="Input label"
-                    name="multi-step-radio-example"
-                    options={
-                      Array [
-                        Object {
-                          "checked": true,
-                          "id": "options-1",
-                          "label": "Option 1",
-                        },
-                        Object {
-                          "id": "options-2",
-                          "label": "Option 2",
-                        },
-                        Object {
-                          "id": "options-3",
-                          "label": "Option 3",
-                        },
-                      ]
-                    }
-                  />
-                  <div
-                    className="d-flex justify-content-between pt-2"
-                  >
-                    <Button
-                      icon="arrow_back"
-                      label="Back"
-                      type="secondary"
-                    />
-                    <Button
-                      label="Next step"
-                      type="primary"
-                    />
-                  </div>
-                </fieldset>
-              </form>
-            </div>,
-            "description": "This in an example of a multi-page form using a collection of components including a stepper, input fields, radio buttons and buttons.",
-            "tab": "Multi-step form",
-            "title": "Multi-step form",
-          },
-        ],
-        "hideOptions": true,
-        "id": "overview-forms",
-        "tabsId": "overview-forms-tabs",
-      }
-    }
-  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="component-description"
+          >
+            <h3>
+              Form
+            </h3>
+            This in an example of a single page contact form using a collection of components including input fields, select list, checkbox and button.
+          </div>
+        </div>
+        <div
+          className="options  d-none"
+        >
+          <div
+            className="options-header"
+          >
+            Options
+            <button
+              aria-label="Close options menu"
+              className="options-close d-flex"
+              onClick={[Function]}
+            >
+              <i
+                className="material-icons"
+              >
+                close
+              </i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sp-stack sp-c-euXojQ sp-editor"
+    >
+      <div
+        className="sp-code-editor sp-c-bNbSGz"
+      >
+        <div
+          aria-autocomplete="list"
+          aria-label="Code Editor for index.html"
+          aria-multiline="true"
+          className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+          onKeyDown={[Function]}
+          role="textbox"
+          suppressHydrationWarning={true}
+          tabIndex={0}
+          translate="no"
+        >
+          <pre
+            className="sp-pre-placeholder sp-c-fWymNx"
+            style={
+              Object {
+                "marginLeft": "var(--sp-space-5)",
+              }
+            }
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 `;
 

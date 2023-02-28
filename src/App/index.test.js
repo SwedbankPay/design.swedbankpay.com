@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import App, { VersionTopBanner } from "./index";
 
@@ -9,9 +9,9 @@ describe("Main: App", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<App />);
+        const app = renderer.create(<App />).toJSON();
 
-        expect(wrapper).toMatchSnapshot();
+        expect(app).toMatchSnapshot();
     });
 });
 

@@ -1,6 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
-
+import renderer from "react-test-renderer";
 import LoadingComponent from "./index";
 
 describe("App utils: LoadingComponent", () => {
@@ -9,8 +8,8 @@ describe("App utils: LoadingComponent", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<LoadingComponent />);
+        const loadingComponent = renderer.create(<LoadingComponent />).toJSON();
 
-        expect(wrapper).toMatchSnapshot();
+        expect(loadingComponent).toMatchSnapshot();
     });
 });
