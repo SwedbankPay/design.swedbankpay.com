@@ -9,10 +9,11 @@ exports[`Identity: Spacing BaseIncrementOfRem renders 1`] = `
   </h2>
   <p>
     In our system the base size of a  
-    <CodeTags
-      code="rem"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      rem
+    </code>
       unit is 
     <span
       className="font-weight-bold"
@@ -108,7 +109,6 @@ exports[`Identity: Spacing DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://www.justinmind.com/blog/your-guide-to-space-and-layout-in-ui-design/"
-    key="https://www.justinmind.com/blog/your-guide-to-space-and-layout-in-ui-design/"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -127,7 +127,6 @@ exports[`Identity: Spacing DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://www.w3.org/TR/mobile-accessibility-mapping/#touch-target-size-and-spacing"
-    key="https://www.w3.org/TR/mobile-accessibility-mapping/#touch-target-size-and-spacing"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -146,7 +145,6 @@ exports[`Identity: Spacing DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://lawsofux.com/laws/law-of-proximity/"
-    key="https://lawsofux.com/laws/law-of-proximity/"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -165,7 +163,6 @@ exports[`Identity: Spacing DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://uxplanet.org/white-space-in-ui-design-8647d4f685a7"
-    key="https://uxplanet.org/white-space-in-ui-design-8647d4f685a7"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -285,55 +282,176 @@ exports[`Identity: Spacing Examples renders 1`] = `
   <p>
     Here are some representative examples of these classes:
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="css"
-  >
-    
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        CSS
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+                15
+                
+
+                16
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
                 .mt-0 {
+                
+
                     margin-top: 0 !important;
+                
+
                 }
                 
+
+                
+                
+
                 .ml-1 {
+                
+
                     margin-left: (@spacer * 0.25) !important;
+                
+
                 }
                 
+
+                
+                
+
                 .px-2 {
+                
+
                     padding-left: (@spacer * 0.5) !important;
+                
+
                     padding-right: (@spacer * 0.5) !important;
+                
+
                 }
                 
+
+                
+                
+
                 .p-3 {
+                
+
                     padding: @spacer !important;
+                
+
                 }
-            
-  </ComponentPreview>
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>
   <h3>
     Horizontal centering
   </h3>
   <p>
     Additionally, DesignGuide also includes an 
-    <CodeTags
-      code=".mx-auto"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .mx-auto
+    </code>
      class for horizontally centering fixed-width block level content—that is, content that has 
-    <CodeTags
-      code="display: block"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      display: block
+    </code>
      and a 
-    <CodeTags
-      code="width"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      width
+    </code>
      set—by setting the horizontal margins to auto.
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
+  <div
+    className="showcase-panel"
   >
     <div
       className="row"
@@ -348,7 +466,73 @@ exports[`Identity: Spacing Examples renders 1`] = `
 
       </div>
     </div>
-  </ComponentPreview>
+  </div>
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="mx-auto p-2 bg-default"&gt;
+                
+
+                    Centered element
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>
 </section>
 `;
 
@@ -374,63 +558,74 @@ exports[`Identity: Spacing Notation renders 1`] = `
   </h2>
   <p>
     Spacing utilities that apply to all breakpoints, from 
-    <CodeTags
-      code="xs"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      xs
+    </code>
      to 
-    <CodeTags
-      code="xxl"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      xxl
+    </code>
     , have no breakpoint abbreviation in them. This is because those classes are applied from 
-    <CodeTags
-      code="min-width: 0"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      min-width: 0
+    </code>
      and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
   </p>
   <p>
     The classes are named using the format 
-    <CodeTags
-      code="{property}{sides}-{size}"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      {property}{sides}-{size}
+    </code>
      for 
-    <CodeTags
-      code="xs"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      xs
+    </code>
      and 
-    <CodeTags
-      code="{property}{sides}-{breakpoint}-{size}"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      {property}{sides}-{breakpoint}-{size}
+    </code>
      for 
-    <CodeTags
-      code="sm"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      sm
+    </code>
     , 
-    <CodeTags
-      code="md"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      md
+    </code>
     , 
-    <CodeTags
-      code="lg"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      lg
+    </code>
     , 
-    <CodeTags
-      code="xl"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      xl
+    </code>
     , and 
-    <CodeTags
-      code="xxl"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      xxl
+    </code>
     .
   </p>
   <p>
@@ -442,26 +637,30 @@ exports[`Identity: Spacing Notation renders 1`] = `
   </p>
   <ul>
     <li>
-      <CodeTags
-        code="m"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        m
+      </code>
        - for classes that set 
-      <CodeTags
-        code="margin"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        margin
+      </code>
     </li>
     <li>
-      <CodeTags
-        code="p"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        p
+      </code>
        - for classes that set 
-      <CodeTags
-        code="padding"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        padding
+      </code>
     </li>
   </ul>
   <p>
@@ -473,100 +672,118 @@ exports[`Identity: Spacing Notation renders 1`] = `
   </p>
   <ul>
     <li>
-      <CodeTags
-        code="t"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        t
+      </code>
        - for classes that set 
-      <CodeTags
-        code="margin-top"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        margin-top
+      </code>
        or 
-      <CodeTags
-        code="padding-top"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        padding-top
+      </code>
     </li>
     <li>
-      <CodeTags
-        code="b"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        b
+      </code>
        - for classes that set 
-      <CodeTags
-        code="margin-bottom"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        margin-bottom
+      </code>
        or 
-      <CodeTags
-        code="padding-bottom"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        padding-bottom
+      </code>
     </li>
     <li>
-      <CodeTags
-        code="l"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        l
+      </code>
        - for classes that set 
-      <CodeTags
-        code="margin-left"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        margin-left
+      </code>
        or 
-      <CodeTags
-        code="padding-left"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        padding-left
+      </code>
     </li>
     <li>
-      <CodeTags
-        code="r"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        r
+      </code>
        - for classes that set 
-      <CodeTags
-        code="margin-right"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        margin-right
+      </code>
        or 
-      <CodeTags
-        code="padding-right"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        padding-right
+      </code>
     </li>
     <li>
-      <CodeTags
-        code="x"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        x
+      </code>
        - for classes that set both 
-      <CodeTags
-        code="*-left"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        *-left
+      </code>
        or 
-      <CodeTags
-        code="*-right"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        *-right
+      </code>
     </li>
     <li>
-      <CodeTags
-        code="y"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        y
+      </code>
        - for classes that set both 
-      <CodeTags
-        code="*-top"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        *-top
+      </code>
        or 
-      <CodeTags
-        code="*-bottom"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        *-bottom
+      </code>
     </li>
   </ul>
   <p>
@@ -578,146 +795,173 @@ exports[`Identity: Spacing Notation renders 1`] = `
   </p>
   <ul>
     <li>
-      <CodeTags
-        code="0"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        0
+      </code>
        - for classes that eliminate the 
-      <CodeTags
-        code="margin"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        margin
+      </code>
        or 
-      <CodeTags
-        code="padding"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        padding
+      </code>
        by setting it to 
-      <CodeTags
-        code="0"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        0
+      </code>
     </li>
     <li>
-      <CodeTags
-        code="1"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        1
+      </code>
        - for classes that set the 
-      <CodeTags
-        code="margin"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        margin
+      </code>
        or 
-      <CodeTags
-        code="padding"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        padding
+      </code>
        to 
-      <CodeTags
-        code="@spacer * 0.25"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        @spacer * 0.25
+      </code>
     </li>
     <li>
-      <CodeTags
-        code="2"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        2
+      </code>
        - for classes that set the 
-      <CodeTags
-        code="margin"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        margin
+      </code>
        or 
-      <CodeTags
-        code="padding"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        padding
+      </code>
        to 
-      <CodeTags
-        code="@spacer * 0.5"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        @spacer * 0.5
+      </code>
     </li>
     <li>
-      <CodeTags
-        code="3"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        3
+      </code>
        - for classes that set the 
-      <CodeTags
-        code="margin"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        margin
+      </code>
        or 
-      <CodeTags
-        code="padding"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        padding
+      </code>
        to 
-      <CodeTags
-        code="@spacer"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        @spacer
+      </code>
     </li>
     <li>
-      <CodeTags
-        code="4"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        4
+      </code>
        - for classes that set the 
-      <CodeTags
-        code="margin"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        margin
+      </code>
        or 
-      <CodeTags
-        code="padding"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        padding
+      </code>
        to 
-      <CodeTags
-        code="@spacer * 1.5"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        @spacer * 1.5
+      </code>
     </li>
     <li>
-      <CodeTags
-        code="5"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        5
+      </code>
        - for classes that set the 
-      <CodeTags
-        code="margin"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        margin
+      </code>
        or 
-      <CodeTags
-        code="padding"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        padding
+      </code>
        to 
-      <CodeTags
-        code="@spacer * 3"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        @spacer * 3
+      </code>
     </li>
     <li>
-      <CodeTags
-        code="auto"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        auto
+      </code>
        - for classes that set 
-      <CodeTags
-        code="margin"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        margin
+      </code>
        to 
-      <CodeTags
-        code="auto"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        auto
+      </code>
     </li>
   </ul>
   <p>
@@ -726,105 +970,123 @@ exports[`Identity: Spacing Notation renders 1`] = `
       size
     </i>
      (excluding 
-    <CodeTags
-      code="0"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      0
+    </code>
     ):
   </p>
   <ul>
     <li>
-      <CodeTags
-        code="n1"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        n1
+      </code>
        - for classes that set the 
-      <CodeTags
-        code="margin"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        margin
+      </code>
        to 
-      <CodeTags
-        code="-@spacer * 0.25"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        -@spacer * 0.25
+      </code>
     </li>
     <li>
-      <CodeTags
-        code="n2"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        n2
+      </code>
        - for classes that set the 
-      <CodeTags
-        code="margin"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        margin
+      </code>
        to 
-      <CodeTags
-        code="-@spacer * 0.5"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        -@spacer * 0.5
+      </code>
     </li>
     <li>
-      <CodeTags
-        code="n3"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        n3
+      </code>
        - for classes that set the 
-      <CodeTags
-        code="margin"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        margin
+      </code>
        to 
-      <CodeTags
-        code="-@spacer"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        -@spacer
+      </code>
     </li>
     <li>
-      <CodeTags
-        code="n4"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        n4
+      </code>
        - for classes that set the 
-      <CodeTags
-        code="margin"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        margin
+      </code>
        to 
-      <CodeTags
-        code="-@spacer * 1.5"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        -@spacer * 1.5
+      </code>
     </li>
     <li>
-      <CodeTags
-        code="n5"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        n5
+      </code>
        - for classes that set the 
-      <CodeTags
-        code="margin"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        margin
+      </code>
        to 
-      <CodeTags
-        code="-@spacer * 3"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        -@spacer * 3
+      </code>
     </li>
   </ul>
   <p>
     (
-    <CodeTags
-      code="@spacer"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      @spacer
+    </code>
      is set to 
-    <CodeTags
-      code="1rem (16px)"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      1rem (16px)
+    </code>
     )
   </p>
 </section>
@@ -879,19 +1141,1134 @@ exports[`Identity: Spacing VerticalSpacing renders 1`] = `
 `;
 
 exports[`Identity: Spacing renders 1`] = `
-<DocContainer>
-  <p
-    className="lead"
+<div
+  className="row"
+>
+  <div
+    className="doc-body col-12"
+    id="doc-body"
   >
-    Spacing helps us to align different components both vertically and horizontally. We follow a 8-point spacing system based on simple mathematical principles in order to create visual consistency and distinction between our elements.
-  </p>
-  <EightPointSystem />
-  <VerticalSpacing />
-  <TouchTarget />
-  <BaseIncrementOfRem />
-  <DiveDeeper />
-  <HowItWorks />
-  <Notation />
-  <Examples />
-</DocContainer>
+    <p
+      className="lead"
+    >
+      Spacing helps us to align different components both vertically and horizontally. We follow a 8-point spacing system based on simple mathematical principles in order to create visual consistency and distinction between our elements.
+    </p>
+    <section>
+      <h2
+        id="eight-point-system"
+      >
+        8-point spacing system
+      </h2>
+      <p>
+        We follow a 8-point spacing system – multiples of 8 to define the different dimensions, margins and paddings of our elements. The reason for this is to streamline the process, saving time by minimize the amount of choices and create consistent usage of space across all our product. 
+      </p>
+      <div
+        className="d-flex flex-column align-items-center mb-4"
+      >
+        <img
+          alt=""
+          className="w-100"
+          src="/TEST/img/documentation/spacing/horizontal-spacing-example.svg"
+        />
+        <span
+          className="caption-text"
+        >
+          <span
+            className="font-weight-bold"
+          >
+            Figure 1.
+          </span>
+           Examples of horizontal spacing between elements using multiples of 8px. 
+        </span>
+      </div>
+      <p>
+        If you are interested in learning more about the 8-point spacing system, you can read more about it in this 
+        <a
+          className="icon-link m-0"
+          href="https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span
+            className="mr-2"
+          >
+            Introduction article
+          </span>
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            open_in_new
+          </i>
+        </a>
+        , which provides a brief explanation of the reasons why to use the 8-point spacing system. To dive even deeper into the nitty gritty, please refer to this 
+        <a
+          className="icon-link m-0"
+          href="https://spec.fm/specifics/8-pt-grid"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span
+            className="mr-2"
+          >
+            in-depth explanation
+          </span>
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            open_in_new
+          </i>
+        </a>
+         of the 8-point spacing system.
+      </p>
+      <h3>
+        What if I need something in between?
+      </h3>
+      <p>
+        Even though we try to adhere to the 8-point spacing system as much as possible, we also know that sometimes you need to use something in between. Especially when it comes to building certain components which requires smaller space in between in order to show grouping and simply produces a better result visually. In those cases, it is allowed to use values from the multiples of 4, but this should be kept to 
+        <span
+          className="font-weight-bold"
+        >
+          4 px
+        </span>
+         and 
+        <span
+          className="font-weight-bold"
+        >
+          12 px
+        </span>
+         as we try to keep the larger increments for a consistent vertical spacing alignment between sections.
+      </p>
+    </section>
+    <section>
+      <h2
+        id="vertical-spacing"
+      >
+        Vertical spacing
+      </h2>
+      <p>
+        Similar to horizontal spacing, we also use spacing vertically in order to create good vertical structure. While we don’t have strict usage definitions for each size, it is important to always evaluate what fits best in your context and what type of devices you are designing for. Make sure to group items relevant to each other close and separate sections with good amount of spacing to provide a clear separation.
+      </p>
+      <div
+        className="d-flex flex-column align-items-center"
+      >
+        <img
+          alt=""
+          className="w-100"
+          src="/TEST/img/documentation/spacing/vertical-spacing-example.svg"
+        />
+        <span
+          className="caption-text"
+        >
+          <span
+            className="font-weight-bold"
+          >
+            Figure 2.
+          </span>
+           Examples of vertical spacing between elements using multiples of 8px.
+        </span>
+      </div>
+    </section>
+    <section>
+      <h2
+        id="touch-target"
+      >
+        Touch target
+      </h2>
+      <p>
+        On mobile devices, we have to consider the size of the different components to make sure that there is enough space in between interactive components such as: Links, buttons and other input actions to avoid miss clicks and errors. 
+      </p>
+      <p>
+        A touch target area needs to be a certain size: 48*48 dp (distribution point) according to Android and 44 px minimum size according to iOS. Keep in mind this does not mean your component has to fill these area, even smaller components can work as long as the touch target area fulfills the size requirement.
+      </p>
+    </section>
+    <section>
+      <h2
+        id="base-increment-of-rem"
+      >
+        Base increment of rem
+      </h2>
+      <p>
+        In our system the base size of a  
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          rem
+        </code>
+          unit is 
+        <span
+          className="font-weight-bold"
+        >
+          16px
+        </span>
+        , this means you can easily use 0.5 rem increments to create layouts in code on a 8-point spacing system. See example below for reference: 
+      </p>
+      <table
+        className="table table-plain spacing-table"
+      >
+        <thead>
+          <tr>
+            <th
+              scope="col"
+            >
+              Pixel
+            </th>
+            <th
+              scope="col"
+            >
+              Rem
+            </th>
+            <th
+              scope="col"
+            >
+              CSS Class
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th
+              scope="row"
+            >
+              8px
+            </th>
+            <th>
+              0.5 rem
+            </th>
+            <th>
+              @spacer * 0.5
+            </th>
+          </tr>
+          <tr>
+            <th>
+              16px
+            </th>
+            <th>
+              1 rem
+            </th>
+            <th>
+              @spacer
+            </th>
+          </tr>
+          <tr>
+            <th>
+              24px
+            </th>
+            <th>
+              1.5 rem
+            </th>
+            <th>
+              @spacer * 1.5
+            </th>
+          </tr>
+          <tr>
+            <th>
+              32px
+            </th>
+            <th>
+              2 rem
+            </th>
+            <th>
+              @spacer * 2
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
+      <h2
+        id="dive-deeper"
+      >
+        Dive deeper into spacing
+      </h2>
+      <p>
+        There are a lot more to learn about best practices when it comes to spacing, it involves much more than just spacing in between elements. Even though, we can’t explain all these concepts here in our spacing section. We would like to provide you with links to learn more about what other factors should be considered when designing layouts and what to think about in order to create the best experience for our users.
+      </p>
+      <a
+        className="icon-link d-flex"
+        href="https://www.justinmind.com/blog/your-guide-to-space-and-layout-in-ui-design/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <i
+          aria-hidden="true"
+          className="material-icons mr-2"
+        >
+          open_in_new
+        </i>
+        <span
+          className="mr-2"
+        >
+          Just in mind – Your guide to space and layout in UI design
+        </span>
+      </a>
+      <a
+        className="icon-link d-flex"
+        href="https://www.w3.org/TR/mobile-accessibility-mapping/#touch-target-size-and-spacing"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <i
+          aria-hidden="true"
+          className="material-icons mr-2"
+        >
+          open_in_new
+        </i>
+        <span
+          className="mr-2"
+        >
+          WCAG 2.0 – Touch Target Size and Spacing
+        </span>
+      </a>
+      <a
+        className="icon-link d-flex"
+        href="https://lawsofux.com/laws/law-of-proximity/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <i
+          aria-hidden="true"
+          className="material-icons mr-2"
+        >
+          open_in_new
+        </i>
+        <span
+          className="mr-2"
+        >
+          Law of UX – Law of Proximity
+        </span>
+      </a>
+      <a
+        className="icon-link d-flex"
+        href="https://uxplanet.org/white-space-in-ui-design-8647d4f685a7"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <i
+          aria-hidden="true"
+          className="material-icons mr-2"
+        >
+          open_in_new
+        </i>
+        <span
+          className="mr-2"
+        >
+          UX Planet – White space in UI design
+        </span>
+      </a>
+    </section>
+    <section>
+      <h2
+        id="how-it-works"
+      >
+        How it works in code
+      </h2>
+      <p>
+        Assign responsive-friendly margin or padding values to an element or a subset of its sides with shorthand classes. Includes support for individual properties, all properties, and vertical and horizontal properties. Classes are ranging from 0.25 rem to 3 rem.
+      </p>
+    </section>
+    <section>
+      <h2
+        id="notation"
+      >
+        Notation
+      </h2>
+      <p>
+        Spacing utilities that apply to all breakpoints, from 
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          xs
+        </code>
+         to 
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          xxl
+        </code>
+        , have no breakpoint abbreviation in them. This is because those classes are applied from 
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          min-width: 0
+        </code>
+         and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
+      </p>
+      <p>
+        The classes are named using the format 
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          {property}{sides}-{size}
+        </code>
+         for 
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          xs
+        </code>
+         and 
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          {property}{sides}-{breakpoint}-{size}
+        </code>
+         for 
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          sm
+        </code>
+        , 
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          md
+        </code>
+        , 
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          lg
+        </code>
+        , 
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          xl
+        </code>
+        , and 
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          xxl
+        </code>
+        .
+      </p>
+      <p>
+        Where 
+        <i>
+          property
+        </i>
+         is one of:
+      </p>
+      <ul>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            m
+          </code>
+           - for classes that set 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            margin
+          </code>
+        </li>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            p
+          </code>
+           - for classes that set 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            padding
+          </code>
+        </li>
+      </ul>
+      <p>
+        Where 
+        <i>
+          sides
+        </i>
+         is one of:
+      </p>
+      <ul>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            t
+          </code>
+           - for classes that set 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            margin-top
+          </code>
+           or 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            padding-top
+          </code>
+        </li>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            b
+          </code>
+           - for classes that set 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            margin-bottom
+          </code>
+           or 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            padding-bottom
+          </code>
+        </li>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            l
+          </code>
+           - for classes that set 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            margin-left
+          </code>
+           or 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            padding-left
+          </code>
+        </li>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            r
+          </code>
+           - for classes that set 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            margin-right
+          </code>
+           or 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            padding-right
+          </code>
+        </li>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            x
+          </code>
+           - for classes that set both 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            *-left
+          </code>
+           or 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            *-right
+          </code>
+        </li>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            y
+          </code>
+           - for classes that set both 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            *-top
+          </code>
+           or 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            *-bottom
+          </code>
+        </li>
+      </ul>
+      <p>
+        Where 
+        <i>
+          size
+        </i>
+         is one of:
+      </p>
+      <ul>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            0
+          </code>
+           - for classes that eliminate the 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            margin
+          </code>
+           or 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            padding
+          </code>
+           by setting it to 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            0
+          </code>
+        </li>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            1
+          </code>
+           - for classes that set the 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            margin
+          </code>
+           or 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            padding
+          </code>
+           to 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            @spacer * 0.25
+          </code>
+        </li>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            2
+          </code>
+           - for classes that set the 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            margin
+          </code>
+           or 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            padding
+          </code>
+           to 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            @spacer * 0.5
+          </code>
+        </li>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            3
+          </code>
+           - for classes that set the 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            margin
+          </code>
+           or 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            padding
+          </code>
+           to 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            @spacer
+          </code>
+        </li>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            4
+          </code>
+           - for classes that set the 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            margin
+          </code>
+           or 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            padding
+          </code>
+           to 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            @spacer * 1.5
+          </code>
+        </li>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            5
+          </code>
+           - for classes that set the 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            margin
+          </code>
+           or 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            padding
+          </code>
+           to 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            @spacer * 3
+          </code>
+        </li>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            auto
+          </code>
+           - for classes that set 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            margin
+          </code>
+           to 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            auto
+          </code>
+        </li>
+      </ul>
+      <p>
+        For margin you can also set negative 
+        <i>
+          size
+        </i>
+         (excluding 
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          0
+        </code>
+        ):
+      </p>
+      <ul>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            n1
+          </code>
+           - for classes that set the 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            margin
+          </code>
+           to 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            -@spacer * 0.25
+          </code>
+        </li>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            n2
+          </code>
+           - for classes that set the 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            margin
+          </code>
+           to 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            -@spacer * 0.5
+          </code>
+        </li>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            n3
+          </code>
+           - for classes that set the 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            margin
+          </code>
+           to 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            -@spacer
+          </code>
+        </li>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            n4
+          </code>
+           - for classes that set the 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            margin
+          </code>
+           to 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            -@spacer * 1.5
+          </code>
+        </li>
+        <li>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            n5
+          </code>
+           - for classes that set the 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            margin
+          </code>
+           to 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            -@spacer * 3
+          </code>
+        </li>
+      </ul>
+      <p>
+        (
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          @spacer
+        </code>
+         is set to 
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          1rem (16px)
+        </code>
+        )
+      </p>
+    </section>
+    <section>
+      <h2
+        id="example"
+      >
+        Examples
+      </h2>
+      <p>
+        Here are some representative examples of these classes:
+      </p>
+      <figure>
+        <div
+          className="code-view"
+        >
+          <header
+            className="code-view-header"
+          >
+            CSS
+            <button
+              aria-describedby="tooltipCopy"
+              className="tooltip"
+              onClick={[Function]}
+            >
+              <i
+                className="material-icons-outlined"
+              >
+                content_copy
+              </i>
+              <div
+                id="tooltipCopy"
+                role="tooltip"
+              >
+                Copy to clipboard
+              </div>
+            </button>
+          </header>
+          <table
+            className="code-view-table"
+          >
+            <tbody>
+              <tr>
+                <td
+                  className="code-view-numbers"
+                >
+                  <pre>
+                    1
+                    
+
+                    2
+                    
+
+                    3
+                    
+
+                    4
+                    
+
+                    5
+                    
+
+                    6
+                    
+
+                    7
+                    
+
+                    8
+                    
+
+                    9
+                    
+
+                    10
+                    
+
+                    11
+                    
+
+                    12
+                    
+
+                    13
+                    
+
+                    14
+                    
+
+                    15
+                    
+
+                    16
+                    
+
+                  </pre>
+                </td>
+                <td
+                  className="code-view-code"
+                >
+                  <pre>
+                    .mt-0 {
+                    
+
+                        margin-top: 0 !important;
+                    
+
+                    }
+                    
+
+                    
+                    
+
+                    .ml-1 {
+                    
+
+                        margin-left: (@spacer * 0.25) !important;
+                    
+
+                    }
+                    
+
+                    
+                    
+
+                    .px-2 {
+                    
+
+                        padding-left: (@spacer * 0.5) !important;
+                    
+
+                        padding-right: (@spacer * 0.5) !important;
+                    
+
+                    }
+                    
+
+                    
+                    
+
+                    .p-3 {
+                    
+
+                        padding: @spacer !important;
+                    
+
+                    }
+                    
+
+                  </pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </figure>
+      <h3>
+        Horizontal centering
+      </h3>
+      <p>
+        Additionally, DesignGuide also includes an 
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          .mx-auto
+        </code>
+         class for horizontally centering fixed-width block level content—that is, content that has 
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          display: block
+        </code>
+         and a 
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          width
+        </code>
+         set—by setting the horizontal margins to auto.
+      </p>
+      <div
+        className="showcase-panel"
+      >
+        <div
+          className="row"
+        >
+          <div
+            className="mx-auto p-2 bg-default"
+          >
+            
+
+            Centered element
+            
+
+          </div>
+        </div>
+      </div>
+      <figure>
+        <div
+          className="code-view"
+        >
+          <header
+            className="code-view-header"
+          >
+            HTML
+            <button
+              aria-describedby="tooltipCopy"
+              className="tooltip"
+              onClick={[Function]}
+            >
+              <i
+                className="material-icons-outlined"
+              >
+                content_copy
+              </i>
+              <div
+                id="tooltipCopy"
+                role="tooltip"
+              >
+                Copy to clipboard
+              </div>
+            </button>
+          </header>
+          <table
+            className="code-view-table"
+          >
+            <tbody>
+              <tr>
+                <td
+                  className="code-view-numbers"
+                >
+                  <pre>
+                    1
+                    
+
+                    2
+                    
+
+                    3
+                    
+
+                  </pre>
+                </td>
+                <td
+                  className="code-view-code"
+                >
+                  <pre>
+                    &lt;div class="mx-auto p-2 bg-default"&gt;
+                    
+
+                        Centered element
+                    
+
+                    &lt;/div&gt;
+                    
+
+                  </pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </figure>
+    </section>
+  </div>
+</div>
 `;
