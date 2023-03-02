@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import ExperimentalComponentAlert from "./index";
 
@@ -9,8 +9,8 @@ describe("Utilities: ExperimentalComponentAlert", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<ExperimentalComponentAlert />);
+        const wrapper = renderer.create(<ExperimentalComponentAlert />);
 
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 });

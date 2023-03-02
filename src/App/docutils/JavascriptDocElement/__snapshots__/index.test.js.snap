@@ -1,20 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Utilities: JavascriptDocElement renders 1`] = `
-<Fragment>
-  <li>
-    <div>
-      <h3
-        scope="row"
-      >
-        test code
-      </h3>
-      <p
-        className="javascript-doc-element-description"
-      >
-        test description
-      </p>
-    </div>
-  </li>
-</Fragment>
+<li>
+  <div>
+    <h3
+      scope="row"
+    >
+      test code
+    </h3>
+    <p
+      className="javascript-doc-element-description"
+    >
+      test description
+    </p>
+  </div>
+</li>
 `;
