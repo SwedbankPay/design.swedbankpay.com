@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import Color, { Lead, ColorContrast, TextColors, BackgroundColors, BrownScaleColors, SystemColors, MainColors } from "./index";
 
@@ -9,9 +9,9 @@ describe("Core: Color", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Color />);
+        const wrapper = renderer.create(<Color />);
 
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 
     describe("Lead", () => {
@@ -20,9 +20,9 @@ describe("Core: Color", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Lead />);
+            const wrapper = renderer.create(<Lead />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -32,9 +32,9 @@ describe("Core: Color", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<ColorContrast />);
+            const wrapper = renderer.create(<ColorContrast />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -44,9 +44,9 @@ describe("Core: Color", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<TextColors />);
+            const wrapper = renderer.create(<TextColors />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -56,9 +56,9 @@ describe("Core: Color", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<BackgroundColors />);
+            const wrapper = renderer.create(<BackgroundColors />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -68,9 +68,9 @@ describe("Core: Color", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<BrownScaleColors />);
+            const wrapper = renderer.create(<BrownScaleColors />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -80,9 +80,9 @@ describe("Core: Color", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<SystemColors />);
+            const wrapper = renderer.create(<SystemColors />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -92,9 +92,9 @@ describe("Core: Color", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<MainColors />);
+            const wrapper = renderer.create(<MainColors />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
