@@ -1,8 +1,8 @@
 # Changelog
 
-## [10.7.2] - 28.02.2023
+## [10.7.3] - 07.03.2023
 
-## Design Guide documentation changes
--   Add new icons
-    -   GooglePay
-    -   ClickToPay
+## Component changes
+-   Sidebar
+    -   Webkit-scroll appearances
+    -   Bugfix done for Developer Portal

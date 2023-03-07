@@ -5,6 +5,11 @@ const basename = process.env.basename;
 
 export const changeLogs = [
     {
+        version: "10.7.3",
+        title: "Minor scrollbar changes for sidebar",
+        text: "Bugfix for Developer Portal"
+    },
+    {
         version: "10.7.2",
         title: "Special delivery!",
         text: "Added GooglePay and ClickToPay icons"
