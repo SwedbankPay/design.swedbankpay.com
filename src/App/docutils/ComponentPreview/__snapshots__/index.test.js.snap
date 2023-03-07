@@ -1,962 +1,856 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Utilities: ComponentPreview CodeFigure removes outer tag from markup 1`] = `
-<ComponentPreview
-  codeFigure={true}
-  language="html"
-  removeOuterTag={true}
->
-  <CodeFigure>
-    <figure>
-      <div
-        className="code-view"
+<figure>
+  <div
+    className="code-view"
+  >
+    <header
+      className="code-view-header"
+    >
+      HTML
+      <button
+        aria-describedby="tooltipCopy"
+        className="tooltip"
+        onClick={[Function]}
       >
-        <header
-          className="code-view-header"
+        <i
+          className="material-icons-outlined"
         >
-          HTML
-          <button
-            aria-describedby="tooltipCopy"
-            className="tooltip"
-            onClick={[Function]}
+          content_copy
+        </i>
+        <div
+          id="tooltipCopy"
+          role="tooltip"
+        >
+          Copy to clipboard
+        </div>
+      </button>
+    </header>
+    <table
+      className="code-view-table"
+    >
+      <tbody>
+        <tr>
+          <td
+            className="code-view-numbers"
           >
-            <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
-            <div
-              id="tooltipCopy"
-              role="tooltip"
-            >
-              Copy to clipboard
-            </div>
-          </button>
-        </header>
-        <table
-          className="code-view-table"
-        >
-          <tbody>
-            <tr>
-              <td
-                className="code-view-numbers"
-              >
-                <pre>
-                  1
-                  
+            <pre>
+              1
+              
 
-                </pre>
-              </td>
-              <td
-                className="code-view-code"
-              >
-                <pre>
-                  &lt;h1 class="h1-class"&gt;test1&lt;/h1&gt;
-                  
+            </pre>
+          </td>
+          <td
+            className="code-view-code"
+          >
+            <pre>
+              &lt;h1 class="h1-class"&gt;test1&lt;/h1&gt;
+              
 
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </figure>
-  </CodeFigure>
-</ComponentPreview>
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</figure>
 `;
 
 exports[`Utilities: ComponentPreview CodeFigure removes outer tag from markup even if no child element exists 1`] = `
-<ComponentPreview
-  codeFigure={true}
-  language="html"
-  removeOuterTag={true}
->
-  <CodeFigure>
-    <figure>
-      <div
-        className="code-view"
+<figure>
+  <div
+    className="code-view"
+  >
+    <header
+      className="code-view-header"
+    >
+      HTML
+      <button
+        aria-describedby="tooltipCopy"
+        className="tooltip"
+        onClick={[Function]}
       >
-        <header
-          className="code-view-header"
+        <i
+          className="material-icons-outlined"
         >
-          HTML
-          <button
-            aria-describedby="tooltipCopy"
-            className="tooltip"
-            onClick={[Function]}
+          content_copy
+        </i>
+        <div
+          id="tooltipCopy"
+          role="tooltip"
+        >
+          Copy to clipboard
+        </div>
+      </button>
+    </header>
+    <table
+      className="code-view-table"
+    >
+      <tbody>
+        <tr>
+          <td
+            className="code-view-numbers"
           >
-            <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
-            <div
-              id="tooltipCopy"
-              role="tooltip"
-            >
-              Copy to clipboard
-            </div>
-          </button>
-        </header>
-        <table
-          className="code-view-table"
-        >
-          <tbody>
-            <tr>
-              <td
-                className="code-view-numbers"
-              >
-                <pre>
-                  1
-                  
+            <pre>
+              1
+              
 
-                </pre>
-              </td>
-              <td
-                className="code-view-code"
-              >
-                <pre>
-                  test text with no wrapping element
-                  
+            </pre>
+          </td>
+          <td
+            className="code-view-code"
+          >
+            <pre>
+              test text with no wrapping element
+              
 
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </figure>
-  </CodeFigure>
-</ComponentPreview>
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</figure>
 `;
 
 exports[`Utilities: ComponentPreview CodeFigure removes outer tag from multiple html tags 1`] = `
-<ComponentPreview
-  codeFigure={true}
-  language="html"
-  removeOuterTag={true}
->
-  <CodeFigure>
-    <figure>
-      <div
-        className="code-view"
+<figure>
+  <div
+    className="code-view"
+  >
+    <header
+      className="code-view-header"
+    >
+      HTML
+      <button
+        aria-describedby="tooltipCopy"
+        className="tooltip"
+        onClick={[Function]}
       >
-        <header
-          className="code-view-header"
+        <i
+          className="material-icons-outlined"
         >
-          HTML
-          <button
-            aria-describedby="tooltipCopy"
-            className="tooltip"
-            onClick={[Function]}
+          content_copy
+        </i>
+        <div
+          id="tooltipCopy"
+          role="tooltip"
+        >
+          Copy to clipboard
+        </div>
+      </button>
+    </header>
+    <table
+      className="code-view-table"
+    >
+      <tbody>
+        <tr>
+          <td
+            className="code-view-numbers"
           >
-            <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
-            <div
-              id="tooltipCopy"
-              role="tooltip"
-            >
-              Copy to clipboard
-            </div>
-          </button>
-        </header>
-        <table
-          className="code-view-table"
-        >
-          <tbody>
-            <tr>
-              <td
-                className="code-view-numbers"
-              >
-                <pre>
-                  1
-                  
+            <pre>
+              1
+              
 
-                  2
-                  
+              2
+              
 
-                  3
-                  
+              3
+              
 
-                </pre>
-              </td>
-              <td
-                className="code-view-code"
-              >
-                <pre>
-                  &lt;h1 class="h1-class"&gt;test1&lt;/h1&gt;
-                  
+            </pre>
+          </td>
+          <td
+            className="code-view-code"
+          >
+            <pre>
+              &lt;h1 class="h1-class"&gt;test1&lt;/h1&gt;
+              
 
-                  &lt;h1 class="h1-class"&gt;test1&lt;/h1&gt;
-                  
+              &lt;h1 class="h1-class"&gt;test1&lt;/h1&gt;
+              
 
-                  &lt;h1 class="h1-class"&gt;test1&lt;/h1&gt;
-                  
+              &lt;h1 class="h1-class"&gt;test1&lt;/h1&gt;
+              
 
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </figure>
-  </CodeFigure>
-</ComponentPreview>
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</figure>
 `;
 
 exports[`Utilities: ComponentPreview CodeFigure removes value property 1`] = `
-<ComponentPreview
-  codeFigure={true}
-  hideValue={true}
-  language="html"
->
-  <CodeFigure>
-    <figure>
-      <div
-        className="code-view"
+<figure>
+  <div
+    className="code-view"
+  >
+    <header
+      className="code-view-header"
+    >
+      HTML
+      <button
+        aria-describedby="tooltipCopy"
+        className="tooltip"
+        onClick={[Function]}
       >
-        <header
-          className="code-view-header"
+        <i
+          className="material-icons-outlined"
         >
-          HTML
-          <button
-            aria-describedby="tooltipCopy"
-            className="tooltip"
-            onClick={[Function]}
+          content_copy
+        </i>
+        <div
+          id="tooltipCopy"
+          role="tooltip"
+        >
+          Copy to clipboard
+        </div>
+      </button>
+    </header>
+    <table
+      className="code-view-table"
+    >
+      <tbody>
+        <tr>
+          <td
+            className="code-view-numbers"
           >
-            <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
-            <div
-              id="tooltipCopy"
-              role="tooltip"
-            >
-              Copy to clipboard
-            </div>
-          </button>
-        </header>
-        <table
-          className="code-view-table"
-        >
-          <tbody>
-            <tr>
-              <td
-                className="code-view-numbers"
-              >
-                <pre>
-                  1
-                  
+            <pre>
+              1
+              
 
-                </pre>
-              </td>
-              <td
-                className="code-view-code"
-              >
-                <pre>
-                  &lt;div&gt;This is a test-link&lt;/a&gt;&lt;/div&gt;
-                  
+            </pre>
+          </td>
+          <td
+            className="code-view-code"
+          >
+            <pre>
+              &lt;div&gt;This is a test-link&lt;/a&gt;&lt;/div&gt;
+              
 
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </figure>
-  </CodeFigure>
-</ComponentPreview>
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</figure>
 `;
 
 exports[`Utilities: ComponentPreview CodeFigure renders css string 1`] = `
-<ComponentPreview
-  codeFigure={true}
-  language="css"
->
-  <CodeFigure>
-    <figure>
-      <div
-        className="code-view"
+<figure>
+  <div
+    className="code-view"
+  >
+    <header
+      className="code-view-header"
+    >
+      CSS
+      <button
+        aria-describedby="tooltipCopy"
+        className="tooltip"
+        onClick={[Function]}
       >
-        <header
-          className="code-view-header"
+        <i
+          className="material-icons-outlined"
         >
-          CSS
-          <button
-            aria-describedby="tooltipCopy"
-            className="tooltip"
-            onClick={[Function]}
+          content_copy
+        </i>
+        <div
+          id="tooltipCopy"
+          role="tooltip"
+        >
+          Copy to clipboard
+        </div>
+      </button>
+    </header>
+    <table
+      className="code-view-table"
+    >
+      <tbody>
+        <tr>
+          <td
+            className="code-view-numbers"
           >
-            <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
-            <div
-              id="tooltipCopy"
-              role="tooltip"
-            >
-              Copy to clipboard
-            </div>
-          </button>
-        </header>
-        <table
-          className="code-view-table"
-        >
-          <tbody>
-            <tr>
-              <td
-                className="code-view-numbers"
-              >
-                <pre>
-                  1
-                  
+            <pre>
+              1
+              
 
-                </pre>
-              </td>
-              <td
-                className="code-view-code"
-              >
-                <pre>
-                  color: red;
-                  
+            </pre>
+          </td>
+          <td
+            className="code-view-code"
+          >
+            <pre>
+              color: red;
+              
 
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </figure>
-  </CodeFigure>
-</ComponentPreview>
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</figure>
 `;
 
 exports[`Utilities: ComponentPreview CodeFigure renders multiple html tags 1`] = `
-<ComponentPreview
-  codeFigure={true}
-  language="html"
->
-  <CodeFigure>
-    <figure>
-      <div
-        className="code-view"
+<figure>
+  <div
+    className="code-view"
+  >
+    <header
+      className="code-view-header"
+    >
+      HTML
+      <button
+        aria-describedby="tooltipCopy"
+        className="tooltip"
+        onClick={[Function]}
       >
-        <header
-          className="code-view-header"
+        <i
+          className="material-icons-outlined"
         >
-          HTML
-          <button
-            aria-describedby="tooltipCopy"
-            className="tooltip"
-            onClick={[Function]}
+          content_copy
+        </i>
+        <div
+          id="tooltipCopy"
+          role="tooltip"
+        >
+          Copy to clipboard
+        </div>
+      </button>
+    </header>
+    <table
+      className="code-view-table"
+    >
+      <tbody>
+        <tr>
+          <td
+            className="code-view-numbers"
           >
-            <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
-            <div
-              id="tooltipCopy"
-              role="tooltip"
-            >
-              Copy to clipboard
-            </div>
-          </button>
-        </header>
-        <table
-          className="code-view-table"
-        >
-          <tbody>
-            <tr>
-              <td
-                className="code-view-numbers"
-              >
-                <pre>
-                  1
-                  
+            <pre>
+              1
+              
 
-                  2
-                  
+              2
+              
 
-                </pre>
-              </td>
-              <td
-                className="code-view-code"
-              >
-                <pre>
-                  &lt;h1 class="h1-class"&gt;test1&lt;/h1&gt;
-                  
+            </pre>
+          </td>
+          <td
+            className="code-view-code"
+          >
+            <pre>
+              &lt;h1 class="h1-class"&gt;test1&lt;/h1&gt;
+              
 
-                  &lt;h2 class="h2-class"&gt;test2&lt;/h2&gt;
-                  
+              &lt;h2 class="h2-class"&gt;test2&lt;/h2&gt;
+              
 
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </figure>
-  </CodeFigure>
-</ComponentPreview>
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</figure>
 `;
 
 exports[`Utilities: ComponentPreview CodeFigure renders multiple javascript strings 1`] = `
-<ComponentPreview
-  codeFigure={true}
-  language="javascript"
->
-  <CodeFigure>
-    <figure>
-      <div
-        className="code-view"
+<figure>
+  <div
+    className="code-view"
+  >
+    <header
+      className="code-view-header"
+    >
+      JAVASCRIPT
+      <button
+        aria-describedby="tooltipCopy"
+        className="tooltip"
+        onClick={[Function]}
       >
-        <header
-          className="code-view-header"
+        <i
+          className="material-icons-outlined"
         >
-          JAVASCRIPT
-          <button
-            aria-describedby="tooltipCopy"
-            className="tooltip"
-            onClick={[Function]}
+          content_copy
+        </i>
+        <div
+          id="tooltipCopy"
+          role="tooltip"
+        >
+          Copy to clipboard
+        </div>
+      </button>
+    </header>
+    <table
+      className="code-view-table"
+    >
+      <tbody>
+        <tr>
+          <td
+            className="code-view-numbers"
           >
-            <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
-            <div
-              id="tooltipCopy"
-              role="tooltip"
-            >
-              Copy to clipboard
-            </div>
-          </button>
-        </header>
-        <table
-          className="code-view-table"
-        >
-          <tbody>
-            <tr>
-              <td
-                className="code-view-numbers"
-              >
-                <pre>
-                  1
-                  
+            <pre>
+              1
+              
 
-                </pre>
-              </td>
-              <td
-                className="code-view-code"
-              >
-                <pre>
-                  const a = 12;const b = 1;const c = a + b;
-                  
+            </pre>
+          </td>
+          <td
+            className="code-view-code"
+          >
+            <pre>
+              const a = 12;const b = 1;const c = a + b;
+              
 
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </figure>
-  </CodeFigure>
-</ComponentPreview>
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</figure>
 `;
 
 exports[`Utilities: ComponentPreview CodeFigure returns a message if no child is passed 1`] = `
-<ComponentPreview
-  codeFigure={true}
-  language="html"
-  removeOuterTag={true}
->
-  <CodeFigure>
-    <figure>
-      <div
-        className="code-view"
+<figure>
+  <div
+    className="code-view"
+  >
+    <header
+      className="code-view-header"
+    >
+      HTML
+      <button
+        aria-describedby="tooltipCopy"
+        className="tooltip"
+        onClick={[Function]}
       >
-        <header
-          className="code-view-header"
+        <i
+          className="material-icons-outlined"
         >
-          HTML
-          <button
-            aria-describedby="tooltipCopy"
-            className="tooltip"
-            onClick={[Function]}
+          content_copy
+        </i>
+        <div
+          id="tooltipCopy"
+          role="tooltip"
+        >
+          Copy to clipboard
+        </div>
+      </button>
+    </header>
+    <table
+      className="code-view-table"
+    >
+      <tbody>
+        <tr>
+          <td
+            className="code-view-numbers"
           >
-            <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
-            <div
-              id="tooltipCopy"
-              role="tooltip"
-            >
-              Copy to clipboard
-            </div>
-          </button>
-        </header>
-        <table
-          className="code-view-table"
-        >
-          <tbody>
-            <tr>
-              <td
-                className="code-view-numbers"
-              >
-                <pre>
-                  1
-                  
+            <pre>
+              1
+              
 
-                </pre>
-              </td>
-              <td
-                className="code-view-code"
-              >
-                <pre>
-                  Check ComponentPreview _removeOuterTag!
-                  
+            </pre>
+          </td>
+          <td
+            className="code-view-code"
+          >
+            <pre>
+              Check ComponentPreview _removeOuterTag!
+              
 
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </figure>
-  </CodeFigure>
-</ComponentPreview>
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</figure>
 `;
 
 exports[`Utilities: ComponentPreview CodeFigure warns about unhandled children 1`] = `
-<ComponentPreview
-  codeFigure={true}
-  language="css"
->
-  <CodeFigure>
-    <figure>
-      <div
-        className="code-view"
+<figure>
+  <div
+    className="code-view"
+  >
+    <header
+      className="code-view-header"
+    >
+      CSS
+      <button
+        aria-describedby="tooltipCopy"
+        className="tooltip"
+        onClick={[Function]}
       >
-        <header
-          className="code-view-header"
+        <i
+          className="material-icons-outlined"
         >
-          CSS
-          <button
-            aria-describedby="tooltipCopy"
-            className="tooltip"
-            onClick={[Function]}
+          content_copy
+        </i>
+        <div
+          id="tooltipCopy"
+          role="tooltip"
+        >
+          Copy to clipboard
+        </div>
+      </button>
+    </header>
+    <table
+      className="code-view-table"
+    >
+      <tbody>
+        <tr>
+          <td
+            className="code-view-numbers"
           >
-            <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
-            <div
-              id="tooltipCopy"
-              role="tooltip"
-            >
-              Copy to clipboard
-            </div>
-          </button>
-        </header>
-        <table
-          className="code-view-table"
-        >
-          <tbody>
-            <tr>
-              <td
-                className="code-view-numbers"
-              >
-                <pre>
-                  1
-                  
+            <pre>
+              1
+              
 
-                </pre>
-              </td>
-              <td
-                className="code-view-code"
-              >
-                <pre>
-                  
+            </pre>
+          </td>
+          <td
+            className="code-view-code"
+          >
+            <pre>
+              
+              
 
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </figure>
-  </CodeFigure>
-</ComponentPreview>
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</figure>
 `;
 
 exports[`Utilities: ComponentPreview Codefigure removes list tags 1`] = `
-<ComponentPreview
-  codeFigure={true}
-  language="html"
-  removeList={true}
->
-  <CodeFigure>
-    <figure>
-      <div
-        className="code-view"
+<figure>
+  <div
+    className="code-view"
+  >
+    <header
+      className="code-view-header"
+    >
+      HTML
+      <button
+        aria-describedby="tooltipCopy"
+        className="tooltip"
+        onClick={[Function]}
       >
-        <header
-          className="code-view-header"
+        <i
+          className="material-icons-outlined"
         >
-          HTML
-          <button
-            aria-describedby="tooltipCopy"
-            className="tooltip"
-            onClick={[Function]}
+          content_copy
+        </i>
+        <div
+          id="tooltipCopy"
+          role="tooltip"
+        >
+          Copy to clipboard
+        </div>
+      </button>
+    </header>
+    <table
+      className="code-view-table"
+    >
+      <tbody>
+        <tr>
+          <td
+            className="code-view-numbers"
           >
-            <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
-            <div
-              id="tooltipCopy"
-              role="tooltip"
-            >
-              Copy to clipboard
-            </div>
-          </button>
-        </header>
-        <table
-          className="code-view-table"
-        >
-          <tbody>
-            <tr>
-              <td
-                className="code-view-numbers"
-              >
-                <pre>
-                  1
-                  
+            <pre>
+              1
+              
 
-                  2
-                  
+              2
+              
 
-                  3
-                  
+              3
+              
 
-                  4
-                  
+              4
+              
 
-                </pre>
-              </td>
-              <td
-                className="code-view-code"
-              >
-                <pre>
-                  This
-                  
+            </pre>
+          </td>
+          <td
+            className="code-view-code"
+          >
+            <pre>
+              This
+              
 
-                  Is
-                  
+              Is
+              
 
-                  A
-                  
+              A
+              
 
-                  Test
-                  
+              Test
+              
 
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </figure>
-  </CodeFigure>
-</ComponentPreview>
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</figure>
 `;
 
 exports[`Utilities: ComponentPreview Codefigure removes list tags from multiple html tags 1`] = `
-<ComponentPreview
-  codeFigure={true}
-  language="html"
-  removeList={true}
->
-  <CodeFigure>
-    <figure>
-      <div
-        className="code-view"
+<figure>
+  <div
+    className="code-view"
+  >
+    <header
+      className="code-view-header"
+    >
+      HTML
+      <button
+        aria-describedby="tooltipCopy"
+        className="tooltip"
+        onClick={[Function]}
       >
-        <header
-          className="code-view-header"
+        <i
+          className="material-icons-outlined"
         >
-          HTML
-          <button
-            aria-describedby="tooltipCopy"
-            className="tooltip"
-            onClick={[Function]}
+          content_copy
+        </i>
+        <div
+          id="tooltipCopy"
+          role="tooltip"
+        >
+          Copy to clipboard
+        </div>
+      </button>
+    </header>
+    <table
+      className="code-view-table"
+    >
+      <tbody>
+        <tr>
+          <td
+            className="code-view-numbers"
           >
-            <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
-            <div
-              id="tooltipCopy"
-              role="tooltip"
-            >
-              Copy to clipboard
-            </div>
-          </button>
-        </header>
-        <table
-          className="code-view-table"
-        >
-          <tbody>
-            <tr>
-              <td
-                className="code-view-numbers"
-              >
-                <pre>
-                  1
-                  
+            <pre>
+              1
+              
 
-                  2
-                  
+              2
+              
 
-                  3
-                  
+              3
+              
 
-                  4
-                  
+              4
+              
 
-                  5
-                  
+              5
+              
 
-                  6
-                  
+              6
+              
 
-                  7
-                  
+              7
+              
 
-                  8
-                  
+              8
+              
 
-                  9
-                  
+              9
+              
 
-                  10
-                  
+              10
+              
 
-                  11
-                  
+              11
+              
 
-                  12
-                  
+              12
+              
 
-                </pre>
-              </td>
-              <td
-                className="code-view-code"
-              >
-                <pre>
-                  This
-                  
+            </pre>
+          </td>
+          <td
+            className="code-view-code"
+          >
+            <pre>
+              This
+              
 
-                  Is
-                  
+              Is
+              
 
-                  A
-                  
+              A
+              
 
-                  Test
-                  
+              Test
+              
 
-                  This
-                  
+              This
+              
 
-                  Is
-                  
+              Is
+              
 
-                  A
-                  
+              A
+              
 
-                  Test
-                  
+              Test
+              
 
-                  This
-                  
+              This
+              
 
-                  Is
-                  
+              Is
+              
 
-                  A
-                  
+              A
+              
 
-                  Test
-                  
+              Test
+              
 
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </figure>
-  </CodeFigure>
-</ComponentPreview>
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</figure>
 `;
 
 exports[`Utilities: ComponentPreview does not render codeFigure when prop is false/not provided 1`] = `
-<ComponentPreview
-  language="html"
-  showCasePanel={true}
+<div
+  className="showcase-panel"
 >
-  <ShowCasePanel>
-    <div
-      className="showcase-panel"
-    >
-      <TestComponentH1>
-        <h1
-          className="h1-class"
-        >
-          test1
-        </h1>
-      </TestComponentH1>
-    </div>
-  </ShowCasePanel>
-</ComponentPreview>
+  <h1
+    className="h1-class"
+  >
+    test1
+  </h1>
+</div>
 `;
 
 exports[`Utilities: ComponentPreview does not render showCasePanel when prop is false/not provided 1`] = `
-<ComponentPreview
-  codeFigure={true}
-  language="html"
->
-  <CodeFigure>
-    <figure>
-      <div
-        className="code-view"
+<figure>
+  <div
+    className="code-view"
+  >
+    <header
+      className="code-view-header"
+    >
+      HTML
+      <button
+        aria-describedby="tooltipCopy"
+        className="tooltip"
+        onClick={[Function]}
       >
-        <header
-          className="code-view-header"
+        <i
+          className="material-icons-outlined"
         >
-          HTML
-          <button
-            aria-describedby="tooltipCopy"
-            className="tooltip"
-            onClick={[Function]}
+          content_copy
+        </i>
+        <div
+          id="tooltipCopy"
+          role="tooltip"
+        >
+          Copy to clipboard
+        </div>
+      </button>
+    </header>
+    <table
+      className="code-view-table"
+    >
+      <tbody>
+        <tr>
+          <td
+            className="code-view-numbers"
           >
-            <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
-            <div
-              id="tooltipCopy"
-              role="tooltip"
-            >
-              Copy to clipboard
-            </div>
-          </button>
-        </header>
-        <table
-          className="code-view-table"
-        >
-          <tbody>
-            <tr>
-              <td
-                className="code-view-numbers"
-              >
-                <pre>
-                  1
-                  
+            <pre>
+              1
+              
 
-                </pre>
-              </td>
-              <td
-                className="code-view-code"
-              >
-                <pre>
-                  &lt;h1 class="h1-class"&gt;test1&lt;/h1&gt;
-                  
+            </pre>
+          </td>
+          <td
+            className="code-view-code"
+          >
+            <pre>
+              &lt;h1 class="h1-class"&gt;test1&lt;/h1&gt;
+              
 
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </figure>
-  </CodeFigure>
-</ComponentPreview>
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</figure>
 `;
 
 exports[`Utilities: ComponentPreview does not render showCasePanelAdvanced when showCasePanel or showCasePanelAdvanced is false/not provided 1`] = `
-<ComponentPreview
-  codeFigure={true}
-  language="html"
->
-  <CodeFigure>
-    <figure>
-      <div
-        className="code-view"
+<figure>
+  <div
+    className="code-view"
+  >
+    <header
+      className="code-view-header"
+    >
+      HTML
+      <button
+        aria-describedby="tooltipCopy"
+        className="tooltip"
+        onClick={[Function]}
       >
-        <header
-          className="code-view-header"
+        <i
+          className="material-icons-outlined"
         >
-          HTML
-          <button
-            aria-describedby="tooltipCopy"
-            className="tooltip"
-            onClick={[Function]}
+          content_copy
+        </i>
+        <div
+          id="tooltipCopy"
+          role="tooltip"
+        >
+          Copy to clipboard
+        </div>
+      </button>
+    </header>
+    <table
+      className="code-view-table"
+    >
+      <tbody>
+        <tr>
+          <td
+            className="code-view-numbers"
           >
-            <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
-            <div
-              id="tooltipCopy"
-              role="tooltip"
-            >
-              Copy to clipboard
-            </div>
-          </button>
-        </header>
-        <table
-          className="code-view-table"
-        >
-          <tbody>
-            <tr>
-              <td
-                className="code-view-numbers"
-              >
-                <pre>
-                  1
-                  
+            <pre>
+              1
+              
 
-                </pre>
-              </td>
-              <td
-                className="code-view-code"
-              >
-                <pre>
-                  &lt;h1 class="h1-class"&gt;test1&lt;/h1&gt;
-                  
+            </pre>
+          </td>
+          <td
+            className="code-view-code"
+          >
+            <pre>
+              &lt;h1 class="h1-class"&gt;test1&lt;/h1&gt;
+              
 
-                </pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </figure>
-  </CodeFigure>
-</ComponentPreview>
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</figure>
 `;
