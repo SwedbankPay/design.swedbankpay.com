@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import Sheet from "./index";
 
@@ -9,43 +11,61 @@ describe("Component: Sheet -", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Sheet title="Test" />);
 
-        expect(wrapper).toMatchSnapshot();
+        const componentForSnap = renderer.create(<Sheet title="Test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with a close icon", () => {
-        const wrapper = shallow(<Sheet title="test"/>);
+        render(<Sheet title="test"/>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<i class=\"material-icons\">close</i>");
+        expect(screen.getByRole("button").querySelector("i")).toHaveClass("material-icons");
+        expect(screen.getByRole("button").querySelector("i")).toHaveTextContent("close");
+
+        const componentForSnap = renderer.create(<Sheet title="test"/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with an ID", () => {
-        const wrapper = shallow(<Sheet title="Test" id="demo-sheet" />);
+        const { container } = render(<Sheet title="Test" id="demo-sheet" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("demo-sheet");
+        expect(container.querySelector("div.sheet")).toHaveAttribute("id", "demo-sheet");
+
+        const componentForSnap = renderer.create(<Sheet title="Test" id="demo-sheet" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with the data-require-action attribute", () => {
-        const wrapper = shallow(<Sheet title="Test" requireAction />);
+        const { container } = render(<Sheet title="Test" requireAction />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("data-require-action");
+        expect(container.querySelector("div.sheet")).toHaveAttribute("data-require-action");
+
+        const componentForSnap = renderer.create(<Sheet title="Test" requireAction />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("does not render with data-require-action if it is set to false", () => {
-        const wrapper = shallow(<Sheet title="Test" requireAction={false} />);
+        const { container } = render(<Sheet title="Test" requireAction={false} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).not.toContain("data-require-action");
+        expect(container.querySelector("div.sheet")).not.toHaveAttribute("data-require-action");
+
+        const componentForSnap = renderer.create(<Sheet title="Test" requireAction={false} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with children", () => {
-        const wrapper = shallow(<Sheet title="Test">Test</Sheet>);
+        const { container } = render(<Sheet title="Test">Test</Sheet>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("Test");
+        expect(screen.getByRole("heading", { level: 2 })).toHaveTextContent("Test");
+        expect(container.querySelector(".sheet-content")).toHaveTextContent("Test");
+
+        const componentForSnap = renderer.create(<Sheet title="Test">Test</Sheet>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

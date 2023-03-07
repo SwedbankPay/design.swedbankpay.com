@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import Radio from "./Radio";
 
@@ -9,45 +11,56 @@ describe("Component: Radio -", () => {
     });
 
     it("renders without label", () => {
-        const wrapper = shallow(<Radio />);
+        const { container } = render(<Radio />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("radio");
-        expect(wrapper.html()).not.toContain("label");
+        expect(screen.getByRole("radio")).toBeTruthy();
+        expect(container.querySelector("label")).toBeNull();
+
+        const componentForSnap = renderer.create(<Radio />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with id and label", () => {
-        const wrapper = shallow(<Radio id="test" label="test" />);
+        const { container } = render(<Radio id="test-id" label="test label" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("radio");
-        expect(wrapper.html()).toContain("id=\"test\"");
-        expect(wrapper.html()).toContain("label");
-        expect(wrapper.html()).toContain("for=\"test\"");
+        expect(screen.getByRole("radio")).toHaveAttribute("id", "test-id");
+        expect(screen.getByLabelText("test label")).toHaveAttribute("id", "test-id");
+        expect(container.querySelector("label")).toHaveAttribute("for", "test-id");
+
+        const componentForSnap = renderer.create(<Radio id="test" label="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with name", () => {
-        const wrapper = shallow(<Radio name="test" />);
+        render(<Radio name="test" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("radio");
-        expect(wrapper.html()).toContain("name=\"test\"");
+        expect(screen.getByRole("radio")).toHaveAttribute("name", "test");
+
+        const componentForSnap = renderer.create(<Radio name="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders disabled", () => {
-        const wrapper = shallow(<Radio disabled />);
+        render(<Radio disabled />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("radio");
-        expect(wrapper.html()).toContain("disabled");
+        expect(screen.getByRole("radio")).toBeDisabled();
+
+        const componentForSnap = renderer.create(<Radio disabled />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders checked", () => {
-        const wrapper = shallow(<Radio checked />);
+        render(<Radio checked />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("radio");
-        expect(wrapper.html()).toContain("checked");
+        expect(screen.getByRole("radio")).toBeChecked();
+
+        const componentForSnap = renderer.create(<Radio checked />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders radio group", () => {
@@ -61,11 +74,15 @@ describe("Component: Radio -", () => {
                 label: "Radio label"
             }
         ];
-        const wrapper = shallow(<Radio group options={options}/>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("radio");
-        expect(wrapper.html()).toContain("radio-group");
+        render(<Radio group options={options}/>);
+
+        expect(screen.getAllByRole("radio")).toHaveLength(2);
+        expect(screen.getAllByRole("group")).toBeTruthy();
+
+        const componentForSnap = renderer.create(<Radio group options={options}/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders checkbox group with groupTitle", () => {
@@ -80,10 +97,13 @@ describe("Component: Radio -", () => {
             }
         ];
 
-        const wrapper = shallow(<Radio group groupTitle="Group title" options={options} />);
+        const { container } = render(<Radio group groupTitle="Group title" options={options} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("legend");
+        expect(container.querySelector("legend")).toBeTruthy();
+
+        const componentForSnap = renderer.create(<Radio group groupTitle="Group title" options={options} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders checkbox group with disabled state", () => {
@@ -98,9 +118,12 @@ describe("Component: Radio -", () => {
             }
         ];
 
-        const wrapper = shallow(<Radio group disabled options={options} />);
+        render(<Radio group disabled options={options} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("disabled");
+        expect(screen.getByRole("group")).toBeDisabled();
+
+        const componentForSnap = renderer.create(<Radio group disabled options={options} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

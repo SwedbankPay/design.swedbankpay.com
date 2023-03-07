@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import DisplayColor from "./index";
 
@@ -15,9 +17,11 @@ describe("DisplayColor", () => {
                 rgb: "253, 193, 41"
             };
 
-        const wrapper = shallow(<DisplayColor {...colors}/>);
+        render(<DisplayColor {...colors}/>);
 
-        expect(wrapper).toMatchSnapshot();
+        const componentForSnap = renderer.create(<DisplayColor {...colors}/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("alert if required properties is not provided", () => {
@@ -29,7 +33,7 @@ describe("DisplayColor", () => {
 
         console.error = jest.fn();
 
-        shallow(<DisplayColor {...colors}/>);
+        render(<DisplayColor {...colors}/>);
 
         expect(console.error).toHaveBeenCalled();
     });
@@ -43,8 +47,10 @@ describe("DisplayColor", () => {
                 border: "has-border"
             };
 
-        const wrapper = shallow(<DisplayColor {...colors}/>);
+        render(<DisplayColor {...colors}/>);
 
-        expect(wrapper).toMatchSnapshot();
+        const componentForSnap = renderer.create(<DisplayColor {...colors}/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

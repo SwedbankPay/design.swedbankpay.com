@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+// FIXME: is this component actually used ? why is there both Card && CardS components existing in parallel. It is at best confusing. At worst one is completely deprecated and I converted the test for nothing 😜 ahahhaha
 const Card = ({ type, titleTxt, titleMarkup, imgSrc, text, textSection, smallText, btn, btnClass, btnText, bodyClass, footerTxt, footerLink, footerLinkTxt, children }) => (
     <div className={`card${type ? ` card-${type}` : ""}`}>
         {imgSrc ? <div className="card-img">{"\n"}

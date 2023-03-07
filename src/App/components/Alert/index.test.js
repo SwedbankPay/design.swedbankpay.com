@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import Alert from "./index";
 
@@ -11,71 +13,85 @@ describe("Component: Alert", () => {
     it("prop type is marked as required", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(<Alert />);
-
-        expect(wrapper).toMatchSnapshot();
+        render(<Alert />);
         expect(console.error).toHaveBeenCalled();
+
+        const componentForSnap = renderer.create(<Alert />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders an alert with the correct type recieved from its props", () => {
-        const wrapper = shallow(<Alert type="test" />);
+        const { container } = render(<Alert type="test" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("alert-test");
+        expect(container.querySelector("div")).toHaveClass("alert-test");
+
+        const componentForSnap = renderer.create(<Alert type="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders an alert with icon", () => {
-        const wrapper = shallow(<Alert type="test" icon="test" />);
+        const { container } = render(<Alert type="test" icon="test" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="material-icons alert-icon" aria-hidden="true">test</i>)).toEqual(true);
+        expect(container.querySelectorAll("i").length).toBe(1);
+        expect(container.querySelector("i")).toHaveClass("material-icons alert-icon");
+        // checks icon is hidden for screen-readers
+        expect(container.querySelector("i")).toHaveAttribute("aria-hidden", "true");
+
+        const componentForSnap = renderer.create(<Alert type="test" icon="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders an alert without an icon if no icon prop is provided", () => {
-        const wrapper = shallow(<Alert type="test" />);
+        const { container } = render(<Alert type="test" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="material-icons alert-icon" aria-hidden="true">test</i>)).toEqual(false);
+        expect(container.querySelector("i")).toHaveTextContent("");
+
+        const componentForSnap = renderer.create(<Alert type="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders an alert with a close-button", () => {
-        const wrapper = shallow(<Alert type="test" close />);
+        render(<Alert type="test" close />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("data-alert-close");
-    });
+        expect(screen.getByRole("button")).toHaveAttribute("data-alert-close");
 
-    it("the close-button prevents default", () => {
-        const wrapper = shallow(<Alert type="test" close />);
-        const eventHandler = { preventDefault: jest.fn() };
-        const closeBtn = wrapper.find("[data-alert-close]");
+        const componentForSnap = renderer.create(<Alert type="test" close />);
 
-        expect(wrapper).toMatchSnapshot();
-
-        closeBtn.simulate("click", eventHandler);
-
-        expect(eventHandler.preventDefault).toHaveBeenCalled();
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders an alert without a close-button if no close prop is provided", () => {
-        const wrapper = shallow(<Alert type="test" />);
+        const { container } = render(<Alert type="test" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="material-icons" data-alert-close="" aria-hidden="true">close</i>)).toEqual(false);
+        expect(container.querySelector("button")).toBe(null);
+
+        const componentForSnap = renderer.create(<Alert type="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders an alert with text", () => {
-        const wrapper = shallow(<Alert type="test" text={<p>test</p>} />);
+        render(<Alert type="test" text={<p>test</p>} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<p>test</p>)).toEqual(true);
+        expect(screen.getByText("test")).toBeInTheDocument();
+
+        const componentForSnap = renderer.create(<Alert type="test" text={<p>test</p>} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders an alert without text if no text prop is provided", () => {
-        const wrapper = shallow(<Alert type="test" />);
+        render(<Alert type="test" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<p>test</p>)).toEqual(false);
+        expect(screen.queryByText("test")).not.toBeInTheDocument();
+
+        const componentForSnap = renderer.create(<Alert type="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });
 

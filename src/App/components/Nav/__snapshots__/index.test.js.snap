@@ -5,9 +5,7 @@ exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`
   className="nav nav-xxxl-vertical"
 >
   <ul>
-    <li
-      key="nav-item-Home-0"
-    >
+    <li>
       
 
       <a
@@ -34,9 +32,7 @@ exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`
       
 
     </li>
-    <li
-      key="nav-item-Transactions-1"
-    >
+    <li>
       
 
       <a
@@ -63,9 +59,7 @@ exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`
       
 
     </li>
-    <li
-      key="nav-item-Notifications-2"
-    >
+    <li>
       
 
       <a
@@ -92,9 +86,7 @@ exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`
       
 
     </li>
-    <li
-      key="nav-item-Language-3"
-    >
+    <li>
       
 
       <a
@@ -121,9 +113,7 @@ exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`
       
 
     </li>
-    <li
-      key="nav-item-Account-4"
-    >
+    <li>
       
 
       <a
@@ -150,9 +140,7 @@ exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`
       
 
     </li>
-    <li
-      key="nav-item-Authentication-5"
-    >
+    <li>
       
 
       <a
@@ -188,9 +176,7 @@ exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`
   className="nav nav-xxxl-vertical-wide"
 >
   <ul>
-    <li
-      key="nav-item-Home-0"
-    >
+    <li>
       
 
       <a
@@ -217,9 +203,7 @@ exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`
       
 
     </li>
-    <li
-      key="nav-item-Transactions-1"
-    >
+    <li>
       
 
       <a
@@ -246,9 +230,7 @@ exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`
       
 
     </li>
-    <li
-      key="nav-item-Notifications-2"
-    >
+    <li>
       
 
       <a
@@ -275,9 +257,7 @@ exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`
       
 
     </li>
-    <li
-      key="nav-item-Language-3"
-    >
+    <li>
       
 
       <a
@@ -304,9 +284,7 @@ exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`
       
 
     </li>
-    <li
-      key="nav-item-Account-4"
-    >
+    <li>
       
 
       <a
@@ -333,9 +311,7 @@ exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`
       
 
     </li>
-    <li
-      key="nav-item-Authentication-5"
-    >
+    <li>
       
 
       <a
@@ -371,9 +347,7 @@ exports[`Component: Nav - renders 1`] = `
   className="nav"
 >
   <ul>
-    <li
-      key="nav-item-Home-0"
-    >
+    <li>
       
 
       <a
@@ -400,9 +374,7 @@ exports[`Component: Nav - renders 1`] = `
       
 
     </li>
-    <li
-      key="nav-item-Transactions-1"
-    >
+    <li>
       
 
       <a
@@ -429,9 +401,7 @@ exports[`Component: Nav - renders 1`] = `
       
 
     </li>
-    <li
-      key="nav-item-Notifications-2"
-    >
+    <li>
       
 
       <a
@@ -458,9 +428,7 @@ exports[`Component: Nav - renders 1`] = `
       
 
     </li>
-    <li
-      key="nav-item-Language-3"
-    >
+    <li>
       
 
       <a
@@ -487,9 +455,7 @@ exports[`Component: Nav - renders 1`] = `
       
 
     </li>
-    <li
-      key="nav-item-Account-4"
-    >
+    <li>
       
 
       <a
@@ -516,9 +482,7 @@ exports[`Component: Nav - renders 1`] = `
       
 
     </li>
-    <li
-      key="nav-item-Authentication-5"
-    >
+    <li>
       
 
       <a
@@ -554,9 +518,7 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
   className="nav"
 >
   <ul>
-    <li
-      key="nav-item-Home-0"
-    >
+    <li>
       
 
       <a
@@ -583,9 +545,7 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
       
 
     </li>
-    <li
-      key="nav-item-Transactions-1"
-    >
+    <li>
       
 
       <a
@@ -612,9 +572,7 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
       
 
     </li>
-    <li
-      key="nav-item-Notifications-2"
-    >
+    <li>
       
 
       <a
@@ -641,9 +599,7 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
       
 
     </li>
-    <li
-      key="nav-item-Language-3"
-    >
+    <li>
       
 
       <a
@@ -670,9 +626,7 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
       
 
     </li>
-    <li
-      key="nav-item-Account-4"
-    >
+    <li>
       
 
       <a
@@ -699,9 +653,7 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
       
 
     </li>
-    <li
-      key="nav-item-Authentication-5"
-    >
+    <li>
       
 
       <a
@@ -732,243 +684,12 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
 </nav>
 `;
 
-exports[`Component: Nav - renders with an active sublistItem if state active matches 1`] = `
-<nav
-  className="nav"
->
-  <ul>
-    <li
-      key="nav-item-Home-0"
-    >
-      
-
-      <a
-        className={null}
-        href="#"
-        onClick={[Function]}
-      >
-        
-
-        <i
-          aria-hidden="true"
-          className="material-icons"
-        >
-          home
-        </i>
-        
-
-        <span>
-          Home
-        </span>
-        
-
-      </a>
-      
-
-    </li>
-    <li
-      key="nav-item-Transactions-1"
-    >
-      
-
-      <div
-        className="submenu"
-      >
-        
-
-        <a
-          href="#"
-          onClick={[Function]}
-        >
-          <i
-            aria-hidden="true"
-            className="material-icons"
-          >
-            shopping_cart
-          </i>
-          
-
-          <span>
-            Transactions
-          </span>
-          
-
-        </a>
-        <ul>
-          <li
-            className="active"
-            key="nav-subItems-Purchase history-0"
-          >
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              <span>
-                Purchase history
-              </span>
-            </a>
-          </li>
-          <li
-            className={null}
-            key="nav-subItems-Invoice-1"
-          >
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              <span>
-                Invoice
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      
-
-    </li>
-    <li
-      key="nav-item-Notifications-2"
-    >
-      
-
-      <a
-        className={null}
-        href="#"
-        onClick={[Function]}
-      >
-        
-
-        <i
-          aria-hidden="true"
-          className="material-icons"
-        >
-          notification_important
-        </i>
-        
-
-        <span>
-          Notifications
-        </span>
-        
-
-      </a>
-      
-
-    </li>
-    <li
-      key="nav-item-Language-3"
-    >
-      
-
-      <a
-        className={null}
-        href="#"
-        onClick={[Function]}
-      >
-        
-
-        <i
-          aria-hidden="true"
-          className="material-icons"
-        >
-          language
-        </i>
-        
-
-        <span>
-          Language
-        </span>
-        
-
-      </a>
-      
-
-    </li>
-    <li
-      key="nav-item-Account-4"
-    >
-      
-
-      <div
-        className="submenu"
-      >
-        
-
-        <a
-          href="#"
-          onClick={[Function]}
-        >
-          <i
-            aria-hidden="true"
-            className="material-icons"
-          >
-            account_balance
-          </i>
-          
-
-          <span>
-            Account
-          </span>
-          
-
-        </a>
-        <ul>
-          <li
-            className={null}
-            key="nav-subItems-Email-0"
-          >
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              <span>
-                Email
-              </span>
-            </a>
-          </li>
-          <li
-            className={null}
-            key="nav-subItems-Information-1"
-          >
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              <span>
-                Information
-              </span>
-            </a>
-          </li>
-          <li
-            className={null}
-            key="nav-subItems-Other things-2"
-          >
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              <span>
-                Other things
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      
-
-    </li>
-  </ul>
-</nav>
-`;
-
 exports[`Component: Nav - renders with two levels 1`] = `
 <nav
   className="nav"
 >
   <ul>
-    <li
-      key="nav-item-Home-0"
-    >
+    <li>
       
 
       <a
@@ -995,9 +716,7 @@ exports[`Component: Nav - renders with two levels 1`] = `
       
 
     </li>
-    <li
-      key="nav-item-Transactions-1"
-    >
+    <li>
       
 
       <div
@@ -1026,7 +745,6 @@ exports[`Component: Nav - renders with two levels 1`] = `
         <ul>
           <li
             className={null}
-            key="nav-subItems-Purchase history-0"
           >
             <a
               href="#"
@@ -1039,7 +757,6 @@ exports[`Component: Nav - renders with two levels 1`] = `
           </li>
           <li
             className={null}
-            key="nav-subItems-Invoice-1"
           >
             <a
               href="#"
@@ -1055,9 +772,7 @@ exports[`Component: Nav - renders with two levels 1`] = `
       
 
     </li>
-    <li
-      key="nav-item-Notifications-2"
-    >
+    <li>
       
 
       <a
@@ -1084,9 +799,7 @@ exports[`Component: Nav - renders with two levels 1`] = `
       
 
     </li>
-    <li
-      key="nav-item-Language-3"
-    >
+    <li>
       
 
       <a
@@ -1113,9 +826,7 @@ exports[`Component: Nav - renders with two levels 1`] = `
       
 
     </li>
-    <li
-      key="nav-item-Account-4"
-    >
+    <li>
       
 
       <div
@@ -1144,7 +855,6 @@ exports[`Component: Nav - renders with two levels 1`] = `
         <ul>
           <li
             className={null}
-            key="nav-subItems-Email-0"
           >
             <a
               href="#"
@@ -1157,7 +867,6 @@ exports[`Component: Nav - renders with two levels 1`] = `
           </li>
           <li
             className={null}
-            key="nav-subItems-Information-1"
           >
             <a
               href="#"
@@ -1170,7 +879,6 @@ exports[`Component: Nav - renders with two levels 1`] = `
           </li>
           <li
             className={null}
-            key="nav-subItems-Other things-2"
           >
             <a
               href="#"

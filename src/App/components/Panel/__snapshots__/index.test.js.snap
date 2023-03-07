@@ -82,19 +82,13 @@ exports[`Component: Panel - renders with panel-body when prop bodyContent is pro
   <div
     className="panel-body"
   >
-    <p
-      key="0"
-    >
+    <p>
       Your main panel content is put here.
     </p>
-    <p
-      key="1"
-    >
+    <p>
       Some more content over here.
     </p>
-    <p
-      key="2"
-    >
+    <p>
       And one more line, just to be safe.
     </p>
   </div>

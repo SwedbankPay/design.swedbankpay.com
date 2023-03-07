@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ErrorPage404: index renders 1`] = `
-<Fragment>
-  <h1>
-    This is not the page you are looking for.
-  </h1>
-</Fragment>
+<h1>
+  This is not the page you are looking for.
+</h1>
 `;

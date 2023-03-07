@@ -1,127 +1,121 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Cards - renders a child object 1`] = `
-<Fragment>
-  <div>
+<div>
+  
+
+  <a
+    className="cards cards-undefined"
+    href="#"
+    onClick={[Function]}
+  >
     
 
-    <a
-      className="cards cards-undefined"
-      href="#"
-      onClick={[Function]}
+    <div
+      className="cards-content"
     >
       
 
-      <div
-        className="cards-content"
-      >
-        
-
-        
-
-        This is child text
-      </div>
       
 
-      <i
-        aria-hidden="true"
-        className="material-icons"
-      >
-        arrow_forward
-      </i>
-      
-
-    </a>
+      This is child text
+    </div>
     
 
-  </div>
-</Fragment>
+    <i
+      aria-hidden="true"
+      className="material-icons"
+    >
+      arrow_forward
+    </i>
+    
+
+  </a>
+  
+
+</div>
 `;
 
 exports[`Component: Cards - renders a text in card-body 1`] = `
-<Fragment>
-  <div>
+<div>
+  
+
+  <a
+    className="cards cards-secondary"
+    href="#"
+    onClick={[Function]}
+  >
     
 
-    <a
-      className="cards cards-secondary"
-      href="#"
-      onClick={[Function]}
+    <div
+      className="cards-content"
     >
       
 
-      <div
-        className="cards-content"
-      >
-        
-
-        <span>
-          Text that goes in card body
-        </span>
-        
-
-      </div>
+      <span>
+        Text that goes in card body
+      </span>
       
 
-      <i
-        aria-hidden="true"
-        className="material-icons"
-      >
-        arrow_forward
-      </i>
-      
-
-    </a>
+    </div>
     
 
-  </div>
-</Fragment>
+    <i
+      aria-hidden="true"
+      className="material-icons"
+    >
+      arrow_forward
+    </i>
+    
+
+  </a>
+  
+
+</div>
 `;
 
 exports[`Component: Cards - renders a title 1`] = `
-<Fragment>
-  <div>
+<div>
+  
+
+  <a
+    className="cards cards-secondary"
+    href="#"
+    onClick={[Function]}
+  >
     
 
-    <a
-      className="cards cards-secondary"
-      href="#"
-      onClick={[Function]}
+    <div
+      className="cards-content"
     >
       
 
-      <div
-        className="cards-content"
+      <span
+        className="h4"
       >
-        
-
-        <span
-          className="h4"
-        >
-          Card title goes here
-        </span>
-        
-
-      </div>
+        Card title goes here
+      </span>
       
 
-      <i
-        aria-hidden="true"
-        className="material-icons"
-      >
-        arrow_forward
-      </i>
-      
-
-    </a>
+    </div>
     
 
-  </div>
-</Fragment>
+    <i
+      aria-hidden="true"
+      className="material-icons"
+    >
+      arrow_forward
+    </i>
+    
+
+  </a>
+  
+
+</div>
 `;
 
 exports[`Component: Cards - renders a wide card when wide is true 1`] = `
-<Fragment>
+Array [
   <a
     className="cards cards-secondary cards-wide"
     href="#"
@@ -146,168 +140,160 @@ exports[`Component: Cards - renders a wide card when wide is true 1`] = `
     </i>
     
 
-  </a>
-  
-
-</Fragment>
+  </a>,
+  "
+",
+]
 `;
 
 exports[`Component: Cards - renders an icon when icon is provided 1`] = `
-<Fragment>
-  <div>
+<div>
+  
+
+  <a
+    className="cards cards-secondary"
+    href="#"
+    onClick={[Function]}
+  >
     
 
-    <a
-      className="cards cards-secondary"
-      href="#"
-      onClick={[Function]}
+    <div
+      className="cards-icon"
     >
       
 
-      <div
-        className="cards-icon"
-      >
-        
-
-        01
-        
-
-      </div>
-      <div
-        className="cards-content"
-      >
-        
-
-        
-
-      </div>
+      01
       
 
-      <i
-        aria-hidden="true"
-        className="material-icons"
-      >
-        arrow_forward
-      </i>
+    </div>
+    <div
+      className="cards-content"
+    >
       
 
-    </a>
+      
+
+    </div>
     
 
-  </div>
-</Fragment>
+    <i
+      aria-hidden="true"
+      className="material-icons"
+    >
+      arrow_forward
+    </i>
+    
+
+  </a>
+  
+
+</div>
 `;
 
 exports[`Component: Cards - renders an image 1`] = `
-<Fragment>
-  <div>
+<div>
+  
+
+  <a
+    className="cards cards-secondary"
+    href="#"
+    onClick={[Function]}
+  >
     
 
-    <a
-      className="cards cards-secondary"
-      href="#"
-      onClick={[Function]}
+    <img
+      src="url.address"
+    />
+    <div
+      className="cards-content"
     >
       
 
-      <img
-        src="url.address"
-      />
-      <div
-        className="cards-content"
-      >
-        
-
-        
-
-      </div>
       
 
-      <i
-        aria-hidden="true"
-        className="material-icons"
-      >
-        arrow_forward
-      </i>
-      
-
-    </a>
+    </div>
     
 
-  </div>
-</Fragment>
+    <i
+      aria-hidden="true"
+      className="material-icons"
+    >
+      arrow_forward
+    </i>
+    
+
+  </a>
+  
+
+</div>
 `;
 
 exports[`Component: Cards - renders with correct type 1`] = `
-<Fragment>
-  <div>
+<div>
+  
+
+  <a
+    className="cards cards-secondary"
+    href="#"
+    onClick={[Function]}
+  >
     
 
-    <a
-      className="cards cards-secondary"
-      href="#"
-      onClick={[Function]}
+    <div
+      className="cards-content"
     >
       
 
-      <div
-        className="cards-content"
-      >
-        
-
-        
-
-      </div>
       
 
-      <i
-        aria-hidden="true"
-        className="material-icons"
-      >
-        arrow_forward
-      </i>
-      
-
-    </a>
+    </div>
     
 
-  </div>
-</Fragment>
+    <i
+      aria-hidden="true"
+      className="material-icons"
+    >
+      arrow_forward
+    </i>
+    
+
+  </a>
+  
+
+</div>
 `;
 
 exports[`Component: Cards - throws an error if type does not match proptypes 1`] = `
-<Fragment>
-  <div>
+<div>
+  
+
+  <a
+    className="cards cards-error"
+    href="#"
+    onClick={[Function]}
+  >
     
 
-    <a
-      className="cards cards-error"
-      href="#"
-      onClick={[Function]}
+    <div
+      className="cards-content"
     >
       
 
-      <div
-        className="cards-content"
-      >
-        
-
-        
-
-      </div>
       
 
-      <i
-        aria-hidden="true"
-        className="material-icons"
-      >
-        arrow_forward
-      </i>
-      
-
-    </a>
+    </div>
     
 
-  </div>
-</Fragment>
+    <i
+      aria-hidden="true"
+      className="material-icons"
+    >
+      arrow_forward
+    </i>
+    
+
+  </a>
+  
+
+</div>
 `;

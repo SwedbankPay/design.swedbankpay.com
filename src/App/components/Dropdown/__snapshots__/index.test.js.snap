@@ -1,302 +1,429 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Dropdown - renders 1`] = `
-<Fragment>
+<div
+  className="dropdown anchor-top-left"
+  data-disable-default-keyboard-nav={null}
+  id={null}
+>
+  
+
   <div
-    className="dropdown anchor-top-left"
-    data-disable-default-keyboard-nav={null}
-    id={null}
+    className="toggle-menu-container"
   >
     
 
-    <div
-      className="toggle-menu-container"
+    <button
+      aria-label="dropdown button"
+      className="dropdown-toggle"
+      type="button"
     >
       
 
-      <DropdownToggle
-        iconAfter={true}
-      />
-      <div
-        aria-labelledby="dropdownToggle"
-        className="dropdown-menu"
-      >
-        
+      <span>
+        Default label
+      </span>
+      
 
-      </div>
+      <i
+        aria-hidden="true"
+        className="material-icons"
+      >
+        keyboard_arrow_down
+      </i>
+      
+
+    </button>
+    
+
+    <div
+      aria-labelledby="dropdownToggle"
+      className="dropdown-menu"
+    >
+      
+
     </div>
   </div>
-</Fragment>
+</div>
 `;
 
 exports[`Component: Dropdown - renders children components passed as content prop inside the menu list 1`] = `
-<Fragment>
+<div
+  className="dropdown anchor-top-left"
+  data-disable-default-keyboard-nav={null}
+  id={null}
+>
+  
+
   <div
-    className="dropdown anchor-top-left"
-    data-disable-default-keyboard-nav={null}
-    id={null}
+    className="toggle-menu-container"
   >
     
 
-    <div
-      className="toggle-menu-container"
+    <button
+      aria-label="dropdown button"
+      className="dropdown-toggle dropdown-toggle-icon"
+      type="button"
     >
       
 
-      <DropdownToggle
-        icon="sort"
-        iconAfter={true}
-        isIconButton={true}
-        label="Sort"
-      />
-      <div
-        aria-labelledby="dropdownToggle"
-        className="dropdown-menu p-3"
-      >
-        
-
-        <a
-          href="#"
-        >
-          <i
-            aria-hidden="true"
-            className="material-icons"
-          >
-            bookmark
-          </i>
-          Edit
-        </a>
-      </div>
-    </div>
-  </div>
-</Fragment>
-`;
-
-exports[`Component: Dropdown - renders error state with the error icon and an error text 1`] = `
-<Fragment>
-  <div
-    className="dropdown anchor-top-left has-error"
-    data-disable-default-keyboard-nav={null}
-    id={null}
-  >
-    
-
-    <div
-      className="toggle-menu-container"
-    >
-      
-
-      <DropdownToggle
-        iconAfter={true}
-      />
-      <div
-        aria-labelledby="dropdownToggle"
-        className="dropdown-menu"
-      >
-        
-
-      </div>
-    </div>
-    <div
-      className="help-block"
-    >
       <i
         className="material-icons"
       >
-        error
+        sort
       </i>
-      test error message
-    </div>
+      
+
+    </button>
     
 
+    <div
+      aria-labelledby="dropdownToggle"
+      className="dropdown-menu p-3"
+    >
+      
+
+      <a
+        href="#"
+      >
+        <i
+          aria-hidden="true"
+          className="material-icons"
+        >
+          bookmark
+        </i>
+        Edit
+      </a>
+    </div>
   </div>
-</Fragment>
+</div>
+`;
+
+exports[`Component: Dropdown - renders error state with the error icon and an error text 1`] = `
+<div
+  className="dropdown anchor-top-left has-error"
+  data-disable-default-keyboard-nav={null}
+  id={null}
+>
+  
+
+  <div
+    className="toggle-menu-container"
+  >
+    
+
+    <button
+      aria-label="dropdown button"
+      className="dropdown-toggle"
+      type="button"
+    >
+      
+
+      <span>
+        Default label
+      </span>
+      
+
+      <i
+        aria-hidden="true"
+        className="material-icons"
+      >
+        keyboard_arrow_down
+      </i>
+      
+
+    </button>
+    
+
+    <div
+      aria-labelledby="dropdownToggle"
+      className="dropdown-menu"
+    >
+      
+
+    </div>
+  </div>
+  <div
+    className="help-block"
+  >
+    <i
+      className="material-icons"
+    >
+      error
+    </i>
+    test error message
+  </div>
+  
+
+</div>
 `;
 
 exports[`Component: Dropdown - renders the toggle button with the icon being either before or after the icon is after the text 1`] = `
-<Fragment>
+<div
+  className="dropdown anchor-top-left"
+  data-disable-default-keyboard-nav={null}
+  id={null}
+>
+  
+
   <div
-    className="dropdown anchor-top-left"
-    data-disable-default-keyboard-nav={null}
-    id={null}
+    className="toggle-menu-container"
   >
     
 
-    <div
-      className="toggle-menu-container"
+    <button
+      aria-label="dropdown button"
+      className="dropdown-toggle"
+      type="button"
     >
       
 
-      <DropdownToggle
-        icon="filter_list"
-        iconAfter={true}
-        isIconButton={false}
-        label="Filter"
-      />
-      <div
-        aria-labelledby="dropdownToggle"
-        className="dropdown-menu"
-      >
-        
+      <span>
+        Filter
+      </span>
+      
 
-      </div>
+      <i
+        aria-hidden="true"
+        className="material-icons"
+      >
+        filter_list
+      </i>
+      
+
+    </button>
+    
+
+    <div
+      aria-labelledby="dropdownToggle"
+      className="dropdown-menu"
+    >
+      
+
     </div>
   </div>
-</Fragment>
+</div>
 `;
 
 exports[`Component: Dropdown - renders the toggle button with the icon being either before or after the icon is before the text 1`] = `
-<Fragment>
+<div
+  className="dropdown anchor-top-left"
+  data-disable-default-keyboard-nav={null}
+  id={null}
+>
+  
+
   <div
-    className="dropdown anchor-top-left"
-    data-disable-default-keyboard-nav={null}
-    id={null}
+    className="toggle-menu-container"
   >
     
 
-    <div
-      className="toggle-menu-container"
+    <button
+      aria-label="dropdown button"
+      className="dropdown-toggle"
+      type="button"
     >
       
 
-      <DropdownToggle
-        icon="filter_list"
-        iconAfter={false}
-        isIconButton={false}
-        label="Filter"
-      />
-      <div
-        aria-labelledby="dropdownToggle"
-        className="dropdown-menu"
+      <i
+        aria-hidden="true"
+        className="material-icons"
       >
-        
+        filter_list
+      </i>
+      
 
-      </div>
+      <span>
+        Filter
+      </span>
+      
+
+    </button>
+    
+
+    <div
+      aria-labelledby="dropdownToggle"
+      className="dropdown-menu"
+    >
+      
+
     </div>
   </div>
-</Fragment>
+</div>
 `;
 
 exports[`Component: Dropdown - renders the toggle button, when passing with specific label and custom icon props 1`] = `
-<Fragment>
+<div
+  className="dropdown anchor-top-left"
+  data-disable-default-keyboard-nav={null}
+  id={null}
+>
+  
+
   <div
-    className="dropdown anchor-top-left"
-    data-disable-default-keyboard-nav={null}
-    id={null}
+    className="toggle-menu-container"
   >
     
 
-    <div
-      className="toggle-menu-container"
+    <button
+      aria-label="dropdown button"
+      className="dropdown-toggle"
+      type="button"
     >
       
 
-      <DropdownToggle
-        icon="filter_list"
-        iconAfter={true}
-        isIconButton={false}
-        label="Filter"
-      />
-      <div
-        aria-labelledby="dropdownToggle"
-        className="dropdown-menu"
-      >
-        
+      <span>
+        Filter
+      </span>
+      
 
-      </div>
+      <i
+        aria-hidden="true"
+        className="material-icons"
+      >
+        filter_list
+      </i>
+      
+
+    </button>
+    
+
+    <div
+      aria-labelledby="dropdownToggle"
+      className="dropdown-menu"
+    >
+      
+
     </div>
   </div>
-</Fragment>
+</div>
 `;
 
 exports[`Component: Dropdown - renders, when passing no label nor icon props, a toggle button set as secondary button with a chevron icon 1`] = `
-<Fragment>
+<div
+  className="dropdown anchor-top-left"
+  data-disable-default-keyboard-nav={null}
+  id={null}
+>
+  
+
   <div
-    className="dropdown anchor-top-left"
-    data-disable-default-keyboard-nav={null}
-    id={null}
+    className="toggle-menu-container"
   >
     
 
-    <div
-      className="toggle-menu-container"
+    <button
+      aria-label="dropdown button"
+      className="dropdown-toggle"
+      type="button"
     >
       
 
-      <DropdownToggle
-        iconAfter={true}
-      />
-      <div
-        aria-labelledby="dropdownToggle"
-        className="dropdown-menu"
-      >
-        
+      <span>
+        Default label
+      </span>
+      
 
-      </div>
+      <i
+        aria-hidden="true"
+        className="material-icons"
+      >
+        keyboard_arrow_down
+      </i>
+      
+
+    </button>
+    
+
+    <div
+      aria-labelledby="dropdownToggle"
+      className="dropdown-menu"
+    >
+      
+
     </div>
   </div>
-</Fragment>
+</div>
 `;
 
 exports[`Component: Dropdown - the toggle icon btn with and without a passed icon renders the toggle btn as icon btn with no icon passed has a default of the three vertical dots icon 1`] = `
-<Fragment>
+<div
+  className="dropdown anchor-top-left"
+  data-disable-default-keyboard-nav={null}
+  id={null}
+>
+  
+
   <div
-    className="dropdown anchor-top-left"
-    data-disable-default-keyboard-nav={null}
-    id={null}
+    className="toggle-menu-container"
   >
     
 
-    <div
-      className="toggle-menu-container"
+    <button
+      aria-label="dropdown button"
+      className="dropdown-toggle dropdown-toggle-icon"
+      type="button"
     >
       
 
-      <DropdownToggle
-        iconAfter={true}
-        isIconButton={true}
-        label="Filter"
-      />
-      <div
-        aria-labelledby="dropdownToggle"
-        className="dropdown-menu"
+      <i
+        className="material-icons"
       >
-        
+        more_vert
+      </i>
+      
 
-      </div>
+    </button>
+    
+
+    <div
+      aria-labelledby="dropdownToggle"
+      className="dropdown-menu"
+    >
+      
+
     </div>
   </div>
-</Fragment>
+</div>
 `;
 
 exports[`Component: Dropdown - the toggle icon btn with and without a passed icon renders the toggle btn as icon btn with the icon passed as props 1`] = `
-<Fragment>
+<div
+  className="dropdown anchor-top-left"
+  data-disable-default-keyboard-nav={null}
+  id={null}
+>
+  
+
   <div
-    className="dropdown anchor-top-left"
-    data-disable-default-keyboard-nav={null}
-    id={null}
+    className="toggle-menu-container"
   >
     
 
-    <div
-      className="toggle-menu-container"
+    <button
+      aria-label="dropdown button"
+      className="dropdown-toggle dropdown-toggle-icon"
+      type="button"
     >
       
 
-      <DropdownToggle
-        icon="sort"
-        iconAfter={true}
-        isIconButton={true}
-        label="Filter"
-      />
-      <div
-        aria-labelledby="dropdownToggle"
-        className="dropdown-menu"
+      <i
+        className="material-icons"
       >
-        
+        sort
+      </i>
+      
 
-      </div>
+    </button>
+    
+
+    <div
+      aria-labelledby="dropdownToggle"
+      className="dropdown-menu"
+    >
+      
+
     </div>
   </div>
-</Fragment>
+</div>
 `;

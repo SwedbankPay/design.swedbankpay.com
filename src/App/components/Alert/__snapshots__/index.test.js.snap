@@ -48,6 +48,23 @@ exports[`Component: Alert renders an alert with a close-button 1`] = `
 </div>
 `;
 
+exports[`Component: Alert renders an alert with icon (hidden for screen-readers) 1`] = `
+<div
+  className="alert alert-test"
+>
+  
+
+  <i
+    aria-hidden="true"
+    className="material-icons alert-icon"
+  >
+    test
+  </i>
+  
+
+</div>
+`;
+
 exports[`Component: Alert renders an alert with icon 1`] = `
 <div
   className="alert alert-test"

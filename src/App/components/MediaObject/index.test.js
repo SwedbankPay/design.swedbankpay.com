@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import MediaObject from "./index";
 
@@ -11,69 +13,95 @@ describe("Component: MediaObject -", () => {
     it("throws an error if heading is not defined", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(<MediaObject />);
+        const componentForSnap = renderer.create(<MediaObject />);
 
-        expect(wrapper).toMatchSnapshot();
         expect(console.error).toHaveBeenCalled();
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders", () => {
-        const wrapper = shallow(<MediaObject heading="render-test"/>);
+        render(<MediaObject heading="render-test"/>);
 
-        expect(wrapper).toMatchSnapshot();
+        const componentForSnap = renderer.create(<MediaObject heading="render-test"/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders an icon", () => {
-        const wrapper = shallow(<MediaObject heading="render-test" icon="home" />);
+        const { container } = render(<MediaObject heading="render-test" icon="home" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.find("i")).toHaveLength(1);
+        expect(container.querySelectorAll("i")).toHaveLength(1);
+
+        const componentForSnap = renderer.create(<MediaObject heading="render-test" icon="home" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders an image", () => {
-        const wrapper = shallow(<MediaObject heading="render-test" imgUrl="https://via.placeholder.com/48x48" />);
+        render(<MediaObject heading="render-test" imgUrl="https://via.placeholder.com/48x48" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.find("img")).toHaveLength(1);
+        expect(screen.getByRole("img")).toBeInTheDocument();
+
+        const componentForSnap = renderer.create(<MediaObject heading="render-test" imgUrl="https://via.placeholder.com/48x48" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders MediaObject with class media-right", () => {
-        const wrapper = shallow(<MediaObject heading="render-test" icon="home" mediaRight />);
+        render(<MediaObject heading="render-test" imgUrl="https://via.placeholder.com/48x48" mediaRight />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.hasClass("media-right")).toEqual(true);
+        expect(screen.getByRole("img").parentElement.parentElement).toHaveClass("media-right");
+
+        const componentForSnap = renderer.create(<MediaObject heading="render-test" imgUrl="https://via.placeholder.com/48x48" mediaRight />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders a <small> text", () => {
-        const wrapper = shallow(<MediaObject heading="render-test" textSmall text="small text" />);
+        const { container } = render(<MediaObject heading="render-test" textSmall text="small text" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.find("small")).toHaveLength(1);
-        expect(wrapper.html()).toContain("small text");
+        expect(container.querySelectorAll("small")).toHaveLength(1);
+        expect(container.querySelector("small")).toHaveTextContent("small text");
+
+        const componentForSnap = renderer.create(<MediaObject heading="render-test" textSmall text="small text" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders a muted MediaObject", () => {
-        const wrapper = shallow(<MediaObject heading="render-test" icon="home" muted />);
-        const mediaHeader = wrapper.find("h3");
+        const { container } = render(<MediaObject heading="render-test" icon="home" muted />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(mediaHeader.hasClass("text-muted")).toEqual(true);
-        expect(wrapper.find("i").hasClass("text-muted")).toEqual(true);
+        const mediaHeader = screen.getByRole("heading");
+
+        expect(mediaHeader.tagName).toBe("H3");
+        expect(mediaHeader).toHaveClass("text-muted");
+        expect(container.querySelector("i")).toHaveClass("text-muted");
+
+        const componentForSnap = renderer.create(<MediaObject heading="render-test" icon="home" muted />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders MediaObject with class media-sm", () => {
-        const wrapper = shallow(<MediaObject heading="render-test" size="sm" />);
+        const { container } = render(<MediaObject heading="render-test" size="sm" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("h4");
-        expect(wrapper.hasClass("media-sm")).toEqual(true);
+        expect(screen.getByRole("heading").tagName).toBe("H4");
+        expect(container.querySelector("div")).toHaveClass("media-sm");
+
+        const componentForSnap = renderer.create(<MediaObject heading="render-test" size="sm" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders MediaObject with class media-lg", () => {
-        const wrapper = shallow(<MediaObject heading="render-test" size="lg" />);
+        const { container } = render(<MediaObject heading="render-test" size="lg" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("h2");
-        expect(wrapper.hasClass("media-lg")).toEqual(true);
+        expect(screen.getByRole("heading").tagName).toBe("H2");
+        expect(container.querySelector("div")).toHaveClass("media-lg");
+
+        const componentForSnap = renderer.create(<MediaObject heading="render-test" size="lg" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

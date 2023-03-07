@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import Logotype from "./index";
 
@@ -11,33 +13,39 @@ describe("Component: Logotype", () => {
     it("throws an error if src is not defined", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(<Logotype type="vertical" />);
+        const componentForSnap = renderer.create(<Logotype type="vertical" />);
 
-        expect(wrapper).toMatchSnapshot();
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
         expect(console.error).toHaveBeenCalled();
     });
 
     it("throws an error if type is not defined", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(<Logotype src="/test/test.img" />);
+        const componentForSnap = renderer.create(<Logotype src="/test/test.img" />);
 
-        expect(wrapper).toMatchSnapshot();
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
         expect(console.error).toHaveBeenCalled();
     });
 
     it("renders image with class vertical and sm when no size is provided and type='vertical' is provided", () => {
-        const wrapper = shallow(<Logotype src="/test/test.img" type="vertical" />);
+        render(<Logotype src="/test/test.img" type="vertical" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.hasClass("logotype-vertical logotype-sm")).toBeTruthy();
+        expect(screen.getByRole("img")).toHaveClass("logotype-vertical logotype-sm");
+
+        const componentForSnap = renderer.create(<Logotype src="/test/test.img" type="vertical" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders image with class horizontal and md when size='md' and type='vertical' is provided", () => {
-        const wrapper = shallow(<Logotype src="/test/test.img" type="horizontal" size="md" />);
+        render(<Logotype src="/test/test.img" type="horizontal" size="md" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.hasClass("logotype-horizontal logotype-md")).toBeTruthy();
+        expect(screen.getByRole("img")).toHaveClass("logotype-horizontal logotype-md");
+
+        const componentForSnap = renderer.create(<Logotype src="/test/test.img" type="horizontal" size="md" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });
 

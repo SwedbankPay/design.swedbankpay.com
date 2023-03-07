@@ -9,30 +9,27 @@ exports[`Component: IconPreview - prop name is marked as required 1`] = `
 
 exports[`Component: IconPreview - prop size is an enum with specified allowed values 1`] = `
 <div>
-  <IconPreview
-    name="visa"
-    size="tiny"
-    type="material-icons"
+  <i
+    aria-hidden="true"
+    className="material-icons material-icons-tiny"
+  >
+    visa
+  </i>
+  <i
+    aria-hidden="true"
+    className="payment-icon payment-icon-small payment-icon-amex"
   />
-  <IconPreview
-    name="amex"
-    size="small"
-    type="payment-icon"
+  <i
+    aria-hidden="true"
+    className="payment-icon payment-icon-medium payment-icon-diners"
   />
-  <IconPreview
-    name="diners"
-    size="medium"
-    type="payment-icon"
+  <i
+    aria-hidden="true"
+    className="payment-icon payment-icon-large payment-icon-mastercard"
   />
-  <IconPreview
-    name="mastercard"
-    size="large"
-    type="payment-icon"
-  />
-  <IconPreview
-    name="mobilepay"
-    size="huge"
-    type="payment-icon"
+  <i
+    aria-hidden="true"
+    className="payment-icon payment-icon-huge payment-icon-mobilepay"
   />
 </div>
 `;
@@ -46,14 +43,17 @@ exports[`Component: IconPreview - prop size is an enum with specified allowed va
 
 exports[`Component: IconPreview - prop type has specific allowed values 1`] = `
 <div>
-  <IconPreview
-    type="material-icons"
+  <i
+    aria-hidden="true"
+    className="material-icons"
   />
-  <IconPreview
-    type="payment-icon"
+  <i
+    aria-hidden="true"
+    className="payment-icon payment-icon-undefined"
   />
-  <IconPreview
-    type="flag-icon"
+  <i
+    aria-hidden="true"
+    className="flag-icon flag-icon-undefined"
   />
 </div>
 `;
@@ -61,7 +61,7 @@ exports[`Component: IconPreview - prop type has specific allowed values 1`] = `
 exports[`Component: IconPreview - prop type has specific allowed values 2`] = `
 <i
   aria-hidden="true"
-  className="invalid_value invalid_value-undefined"
+  className="payment-icon payment-icon-undefined"
 />
 `;
 

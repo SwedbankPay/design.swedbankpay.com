@@ -5,9 +5,7 @@ exports[`Component: Breadcrumb renders breadcrumb with the provided items in the
   <ol
     className="breadcrumb"
   >
-    <li
-      key="0"
-    >
+    <li>
       <span>
         test
       </span>
@@ -21,9 +19,7 @@ exports[`Component: Breadcrumb renders breadcrumb with the provided items wrappe
   <ol
     className="breadcrumb"
   >
-    <li
-      key="0"
-    >
+    <li>
       <a
         href="www.example.com"
       >
@@ -39,30 +35,22 @@ exports[`Component: Breadcrumb renders multiple breadcrumbs when provided in the
   <ol
     className="breadcrumb"
   >
-    <li
-      key="0"
-    >
+    <li>
       <span>
         test #1
       </span>
     </li>
-    <li
-      key="1"
-    >
+    <li>
       <span>
         test #2
       </span>
     </li>
-    <li
-      key="2"
-    >
+    <li>
       <span>
         test #3
       </span>
     </li>
-    <li
-      key="3"
-    >
+    <li>
       <span>
         test #4
       </span>
@@ -76,7 +64,36 @@ exports[`Component: Breadcrumb renders with default items when no items is provi
   <ol
     className="breadcrumb"
   >
-    <DefaultItems />
+    <div>
+      <li>
+        <a
+          href="#"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+        >
+          Products
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+        >
+          Gadgets
+        </a>
+      </li>
+      <li>
+        <a
+          href="#"
+        >
+          Gadget #1
+        </a>
+      </li>
+    </div>
   </ol>
 </nav>
 `;

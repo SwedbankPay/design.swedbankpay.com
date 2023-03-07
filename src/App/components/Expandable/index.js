@@ -12,28 +12,25 @@ const ExpandablePlaceholder = () => (
     </div>
 );
 
-/* The expandable component acceps either an array or a single object [AW] */
+/* The expandable component accepts either an array or a single object [AW] */
 const Expandable = ({ items }) => (
-    items
-        ? (Array.isArray(items)
-            ? items.map(({ title, subtitle, content, id }, i) => (
-                <div key={title + i} className="expandable">{"\n"}
-                    <button type="button" className="expandable-header" aria-expanded="false" aria-controls={id}>{"\n"}
-                        <span className="expandable-headline">
-                            {title}
-                        </span>{"\n"}
-                        <small className="expandable-subtitle">
-                            {subtitle}
-                        </small>{"\n"}
-                    </button>
-                    <div className="expandable-body" id={id}>
-                        {content}
-                    </div>
+    items && Array.isArray(items)
+        ? items.map(({ title, subtitle, content, id }, i) => (
+            <div key={title + i} className="expandable">{"\n"}
+                <button type="button" className="expandable-header" aria-expanded="false" aria-controls={id}>{"\n"}
+                    <span className="expandable-headline">
+                        {title}
+                    </span>{"\n"}
+                    <small className="expandable-subtitle">
+                        {subtitle}
+                    </small>{"\n"}
+                </button>
+                <div className="expandable-body" id={id}>
+                    {content}
                 </div>
-            )) :
-            <ExpandablePlaceholder />
-        )
-        : <ExpandablePlaceholder />
+            </div>
+        )) :
+        <ExpandablePlaceholder />
 );
 
 export default Expandable;

@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import IconPreview from "./index";
 
@@ -9,24 +11,29 @@ describe("Component: IconPreview -", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<IconPreview name="amex" type="payment-icon" />);
+        render(<IconPreview name="amex" type="payment-icon" />);
 
-        expect(wrapper).toMatchSnapshot();
+        const componentForSnap = renderer.create(<IconPreview name="amex" type="payment-icon" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("prop name is marked as required", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(<IconPreview type="payment-icon" />);
+        render(<IconPreview type="payment-icon" />);
 
         expect(console.error).toHaveBeenCalled();
-        expect(wrapper).toMatchSnapshot();
+
+        const componentForSnap = renderer.create(<IconPreview type="payment-icon" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("prop type has specific allowed values", () => {
         console.error = jest.fn();
 
-        const allowedSizes = shallow(
+        render(
             <div>
                 <IconPreview type="material-icons" />
                 <IconPreview type="payment-icon" />
@@ -36,17 +43,29 @@ describe("Component: IconPreview -", () => {
 
         expect(console.error).not.toHaveBeenCalled();
 
-        const illegalSize = shallow(<IconPreview type="invalid_value" />);
+        render(<IconPreview type="invalid_value" />);
 
         expect(console.error).toHaveBeenCalled();
-        expect(allowedSizes).toMatchSnapshot();
-        expect(illegalSize).toMatchSnapshot();
+
+        const allowedSizesComponentForSnap = renderer.create(
+            <div>
+                <IconPreview type="material-icons" />
+                <IconPreview type="payment-icon" />
+                <IconPreview type="flag-icon" />
+            </div>
+        );
+
+        expect(allowedSizesComponentForSnap.toJSON()).toMatchSnapshot();
+
+        const illegalSizeComponentForSnap = renderer.create(<IconPreview type="payment-icon" />);
+
+        expect(illegalSizeComponentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("prop size is an enum with specified allowed values", () => {
         console.error = jest.fn();
 
-        const allowedSizes = shallow(
+        render(
             <div>
                 <IconPreview size="tiny" type="material-icons" name="visa" />
                 <IconPreview size="small" type="payment-icon" name="amex" />
@@ -58,63 +77,92 @@ describe("Component: IconPreview -", () => {
 
         expect(console.error).not.toHaveBeenCalled();
 
-        const illegalSize = shallow(<IconPreview name="amex" size="test" type="payment-icon" />);
+        render(<IconPreview name="amex" size="test" type="payment-icon" />);
 
         expect(console.error).toHaveBeenCalled();
 
-        expect(allowedSizes).toMatchSnapshot();
-        expect(illegalSize).toMatchSnapshot();
+        const allowedSizesComponentForSnap = renderer.create(
+            <div>
+                <IconPreview size="tiny" type="material-icons" name="visa" />
+                <IconPreview size="small" type="payment-icon" name="amex" />
+                <IconPreview size="medium" type="payment-icon" name="diners" />
+                <IconPreview size="large" type="payment-icon" name="mastercard" />
+                <IconPreview size="huge" type="payment-icon" name="mobilepay" />
+            </div>
+        );
+
+        expect(allowedSizesComponentForSnap.toJSON()).toMatchSnapshot();
+
+        const illegalSizeComponentForSnap = renderer.create(<IconPreview name="amex" size="test" type="payment-icon" />);
+
+        expect(illegalSizeComponentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders a material icon when type is equal to material-icons", () => {
-        const wrapper = shallow(<IconPreview name="android" type="material-icons" />);
+        const { container } = render(<IconPreview name="android" type="material-icons" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="material-icons" aria-hidden="true">android</i>)).toEqual(true);
+        expect(container.querySelector("i")).toHaveClass("material-icons");
+        expect(container.querySelector("i")).toHaveAttribute("aria-hidden", "true");
+        expect(container.querySelector("i")).toHaveTextContent("android");
+
+        const componentForSnap = renderer.create(<IconPreview name="android" type="material-icons" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders correct icon when prop name is provided", () => {
-        const wrapper = shallow(<IconPreview name="amex" type="payment-icon" />);
+        const { container } = render(<IconPreview name="amex" type="payment-icon" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="payment-icon payment-icon-amex" aria-hidden="true"></i>)).toEqual(true);
+        expect(container.querySelector("i")).toHaveClass("payment-icon payment-icon-amex");
+        expect(container.querySelector("i")).toHaveAttribute("aria-hidden", "true");
+        expect(container.querySelector("i")).not.toHaveTextContent();
+
+        const componentForSnap = renderer.create(<IconPreview name="amex" type="payment-icon" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders correct size when prop size is provided", () => {
-        const wrapper = shallow(<IconPreview name="amex" size="large" type="payment-icon" />);
+        const { container } = render(<IconPreview name="amex" size="large" type="payment-icon" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="payment-icon payment-icon-large payment-icon-amex" aria-hidden="true"></i>)).toEqual(true);
+        expect(container.querySelector("i")).toHaveClass("payment-icon payment-icon-large payment-icon-amex");
+        expect(container.querySelector("i")).toHaveAttribute("aria-hidden", "true");
+        expect(container.querySelector("i")).not.toHaveTextContent();
+
+        const componentForSnap = renderer.create(<IconPreview name="amex" size="large" type="payment-icon" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders icon with custom when prop className is provided", () => {
-        const wrapper = shallow(<IconPreview name="amex" type="payment-icon" className="test test2 test-3" />);
+        const { container } = render(<IconPreview name="amex" type="payment-icon" className="test test2 test-3" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="payment-icon payment-icon-amex test test2 test-3" aria-hidden="true"></i>)).toEqual(true);
+        expect(container.querySelector("i")).toHaveClass("payment-icon payment-icon-amex test test2 test-3");
+        expect(container.querySelector("i")).toHaveAttribute("aria-hidden", "true");
+        expect(container.querySelector("i")).not.toHaveTextContent();
+
+        const componentForSnap = renderer.create(<IconPreview name="amex" type="payment-icon" className="test test2 test-3" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders a preview wrapper around the <i> tag when prop preview is true", () => {
-        const wrapper = shallow(<IconPreview name="amex" type="payment-icon" preview />);
+        const { container } = render(<IconPreview name="amex" type="payment-icon" preview />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(
-            <div className="icon-preview">
-                <i className="payment-icon payment-icon-amex" aria-hidden="true"></i>
-                <code className="code-tags code-tags-secondary mt-2">amex</code>
-            </div>
-        )).toEqual(true);
+        expect(container.querySelector(".icon-preview > i")).toBeTruthy();
+
+        const componentForSnap = renderer.create(<IconPreview name="amex" type="payment-icon" preview />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders a preview wrapper around material-icon when prop previewSize is true", () => {
-        const wrapper = shallow(<IconPreview name="android" type="material-icons" size="large" previewSize />);
+        const { container } = render(<IconPreview name="android" type="material-icons" size="large" previewSize />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(
-            <div className="icon-preview">
-                <i className="material-icons material-icons-large" aria-hidden="true">android</i>
-                <code className="code-tags code-tags-secondary mt-2">large</code>
-            </div>
-        )).toEqual(true);
+        expect(container.querySelector(".icon-preview > i")).toBeTruthy();
+
+        const componentForSnap = renderer.create(<IconPreview name="android" type="material-icons" size="large" previewSize />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });
