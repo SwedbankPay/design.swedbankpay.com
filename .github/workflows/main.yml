@@ -47,7 +47,7 @@ jobs:
         id: landing-zone-validate-prepare-env-var
         shell: pwsh
         env:
-          AZURE_CREDENTIALS: ${{ secrets['AZ_LZ_ITOPS_CREDENTIALS'] }}
+          AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS_STAGE }}
           run: |
           # Parse Azure secret into Terraform variables
           $servicePrincipal = ($env:AZURE_CREDENTIALS | ConvertFrom-Json)
