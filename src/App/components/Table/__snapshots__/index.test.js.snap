@@ -10,42 +10,34 @@ exports[`Component: Table - renders 1`] = `
   <thead>
     <tr>
       <th
-        key="#0"
         onClick={[Function]}
       >
         #
+        
       </th>
       <th
-        key="Name1"
         onClick={[Function]}
       >
         Name
+        
       </th>
       <th
-        key="Status2"
         onClick={[Function]}
       >
         Status
+        
       </th>
     </tr>
   </thead>
   <tbody>
-    <tr
-      key="[object Object],[object Object],[object Object]0"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         1
       </th>
-      <td
-        key="1"
-      >
+      <td>
         McGregor
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-success"
         >
@@ -53,22 +45,14 @@ exports[`Component: Table - renders 1`] = `
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]1"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         2
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Sean O'Malley
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-danger"
         >
@@ -76,22 +60,14 @@ exports[`Component: Table - renders 1`] = `
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]2"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         3
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Bisping
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-neutral"
         >
@@ -99,22 +75,14 @@ exports[`Component: Table - renders 1`] = `
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]3"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         4
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Mike Perry
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-inactive"
         >
@@ -136,51 +104,127 @@ exports[`Component: Table - renders with class name sortable when sortable prop 
   <thead>
     <tr>
       <th
-        key="#0"
         onClick={[Function]}
       >
         #
-        <SortSvg
+        <button
+          className="svg-container"
           id="sortable-id-0"
-        />
+        >
+          <svg
+            aria-hidden="true"
+            className="sort-svg"
+            viewBox="0 0 100 150"
+            width="100%"
+          >
+            <rect
+              fill="none"
+              height="100%"
+              stroke="none"
+              width="100%"
+              x="0"
+              y="0"
+            />
+            <g>
+              <path
+                className="sort sort-down"
+                d="M14.532583675302659,111.38865158861287 L14.532583675302659,44.40074494634466 L82.65465743819536,111.38865158861287 L14.532583675302659,111.38865158861287 z"
+                transform="rotate(-45 48.59361267089846,77.8946990966797)"
+              />
+              <path
+                className="sort sort-up"
+                d="M14.64011075250069,82.46391938036092 L14.64011075250069,15.476012738092706 L82.76218451539339,82.46391938036092 L14.64011075250069,82.46391938036092 z"
+                transform="rotate(135.10440063476562 48.70114517211913,48.96996307373047)"
+              />
+            </g>
+          </svg>
+        </button>
       </th>
       <th
-        key="Name1"
         onClick={[Function]}
       >
         Name
-        <SortSvg
+        <button
+          className="svg-container"
           id="sortable-id-1"
-        />
+        >
+          <svg
+            aria-hidden="true"
+            className="sort-svg"
+            viewBox="0 0 100 150"
+            width="100%"
+          >
+            <rect
+              fill="none"
+              height="100%"
+              stroke="none"
+              width="100%"
+              x="0"
+              y="0"
+            />
+            <g>
+              <path
+                className="sort sort-down"
+                d="M14.532583675302659,111.38865158861287 L14.532583675302659,44.40074494634466 L82.65465743819536,111.38865158861287 L14.532583675302659,111.38865158861287 z"
+                transform="rotate(-45 48.59361267089846,77.8946990966797)"
+              />
+              <path
+                className="sort sort-up"
+                d="M14.64011075250069,82.46391938036092 L14.64011075250069,15.476012738092706 L82.76218451539339,82.46391938036092 L14.64011075250069,82.46391938036092 z"
+                transform="rotate(135.10440063476562 48.70114517211913,48.96996307373047)"
+              />
+            </g>
+          </svg>
+        </button>
       </th>
       <th
-        key="Status2"
         onClick={[Function]}
       >
         Status
-        <SortSvg
+        <button
+          className="svg-container"
           id="sortable-id-2"
-        />
+        >
+          <svg
+            aria-hidden="true"
+            className="sort-svg"
+            viewBox="0 0 100 150"
+            width="100%"
+          >
+            <rect
+              fill="none"
+              height="100%"
+              stroke="none"
+              width="100%"
+              x="0"
+              y="0"
+            />
+            <g>
+              <path
+                className="sort sort-down"
+                d="M14.532583675302659,111.38865158861287 L14.532583675302659,44.40074494634466 L82.65465743819536,111.38865158861287 L14.532583675302659,111.38865158861287 z"
+                transform="rotate(-45 48.59361267089846,77.8946990966797)"
+              />
+              <path
+                className="sort sort-up"
+                d="M14.64011075250069,82.46391938036092 L14.64011075250069,15.476012738092706 L82.76218451539339,82.46391938036092 L14.64011075250069,82.46391938036092 z"
+                transform="rotate(135.10440063476562 48.70114517211913,48.96996307373047)"
+              />
+            </g>
+          </svg>
+        </button>
       </th>
     </tr>
   </thead>
   <tbody>
-    <tr
-      key="[object Object],[object Object],[object Object]0"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         1
       </th>
-      <td
-        key="1"
-      >
+      <td>
         McGregor
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-success"
         >
@@ -188,22 +232,14 @@ exports[`Component: Table - renders with class name sortable when sortable prop 
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]1"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         2
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Sean O'Malley
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-danger"
         >
@@ -211,22 +247,14 @@ exports[`Component: Table - renders with class name sortable when sortable prop 
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]2"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         3
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Bisping
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-neutral"
         >
@@ -234,22 +262,14 @@ exports[`Component: Table - renders with class name sortable when sortable prop 
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]3"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         4
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Mike Perry
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-inactive"
         >
@@ -271,42 +291,34 @@ exports[`Component: Table - renders with class name table-condensed when condens
   <thead>
     <tr>
       <th
-        key="#0"
         onClick={[Function]}
       >
         #
+        
       </th>
       <th
-        key="Name1"
         onClick={[Function]}
       >
         Name
+        
       </th>
       <th
-        key="Status2"
         onClick={[Function]}
       >
         Status
+        
       </th>
     </tr>
   </thead>
   <tbody>
-    <tr
-      key="[object Object],[object Object],[object Object]0"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         1
       </th>
-      <td
-        key="1"
-      >
+      <td>
         McGregor
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-success"
         >
@@ -314,22 +326,14 @@ exports[`Component: Table - renders with class name table-condensed when condens
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]1"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         2
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Sean O'Malley
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-danger"
         >
@@ -337,22 +341,14 @@ exports[`Component: Table - renders with class name table-condensed when condens
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]2"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         3
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Bisping
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-neutral"
         >
@@ -360,22 +356,14 @@ exports[`Component: Table - renders with class name table-condensed when condens
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]3"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         4
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Mike Perry
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-inactive"
         >
@@ -397,42 +385,34 @@ exports[`Component: Table - renders with class name table-divided when divided p
   <thead>
     <tr>
       <th
-        key="#0"
         onClick={[Function]}
       >
         #
+        
       </th>
       <th
-        key="Name1"
         onClick={[Function]}
       >
         Name
+        
       </th>
       <th
-        key="Status2"
         onClick={[Function]}
       >
         Status
+        
       </th>
     </tr>
   </thead>
   <tbody>
-    <tr
-      key="[object Object],[object Object],[object Object]0"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         1
       </th>
-      <td
-        key="1"
-      >
+      <td>
         McGregor
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-success"
         >
@@ -440,22 +420,14 @@ exports[`Component: Table - renders with class name table-divided when divided p
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]1"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         2
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Sean O'Malley
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-danger"
         >
@@ -463,22 +435,14 @@ exports[`Component: Table - renders with class name table-divided when divided p
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]2"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         3
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Bisping
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-neutral"
         >
@@ -486,22 +450,14 @@ exports[`Component: Table - renders with class name table-divided when divided p
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]3"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         4
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Mike Perry
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-inactive"
         >
@@ -523,42 +479,34 @@ exports[`Component: Table - renders with class name table-hover when hover prop 
   <thead>
     <tr>
       <th
-        key="#0"
         onClick={[Function]}
       >
         #
+        
       </th>
       <th
-        key="Name1"
         onClick={[Function]}
       >
         Name
+        
       </th>
       <th
-        key="Status2"
         onClick={[Function]}
       >
         Status
+        
       </th>
     </tr>
   </thead>
   <tbody>
-    <tr
-      key="[object Object],[object Object],[object Object]0"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         1
       </th>
-      <td
-        key="1"
-      >
+      <td>
         McGregor
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-success"
         >
@@ -566,22 +514,14 @@ exports[`Component: Table - renders with class name table-hover when hover prop 
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]1"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         2
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Sean O'Malley
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-danger"
         >
@@ -589,22 +529,14 @@ exports[`Component: Table - renders with class name table-hover when hover prop 
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]2"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         3
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Bisping
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-neutral"
         >
@@ -612,22 +544,14 @@ exports[`Component: Table - renders with class name table-hover when hover prop 
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]3"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         4
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Mike Perry
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-inactive"
         >
@@ -649,42 +573,34 @@ exports[`Component: Table - renders with class name table-plain when plain prop 
   <thead>
     <tr>
       <th
-        key="#0"
         onClick={[Function]}
       >
         #
+        
       </th>
       <th
-        key="Name1"
         onClick={[Function]}
       >
         Name
+        
       </th>
       <th
-        key="Status2"
         onClick={[Function]}
       >
         Status
+        
       </th>
     </tr>
   </thead>
   <tbody>
-    <tr
-      key="[object Object],[object Object],[object Object]0"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         1
       </th>
-      <td
-        key="1"
-      >
+      <td>
         McGregor
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-success"
         >
@@ -692,22 +608,14 @@ exports[`Component: Table - renders with class name table-plain when plain prop 
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]1"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         2
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Sean O'Malley
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-danger"
         >
@@ -715,22 +623,14 @@ exports[`Component: Table - renders with class name table-plain when plain prop 
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]2"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         3
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Bisping
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-neutral"
         >
@@ -738,22 +638,14 @@ exports[`Component: Table - renders with class name table-plain when plain prop 
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]3"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         4
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Mike Perry
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-inactive"
         >
@@ -775,42 +667,34 @@ exports[`Component: Table - renders with no class name plain, condensed, hover, 
   <thead>
     <tr>
       <th
-        key="#0"
         onClick={[Function]}
       >
         #
+        
       </th>
       <th
-        key="Name1"
         onClick={[Function]}
       >
         Name
+        
       </th>
       <th
-        key="Status2"
         onClick={[Function]}
       >
         Status
+        
       </th>
     </tr>
   </thead>
   <tbody>
-    <tr
-      key="[object Object],[object Object],[object Object]0"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         1
       </th>
-      <td
-        key="1"
-      >
+      <td>
         McGregor
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-success"
         >
@@ -818,22 +702,14 @@ exports[`Component: Table - renders with no class name plain, condensed, hover, 
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]1"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         2
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Sean O'Malley
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-danger"
         >
@@ -841,22 +717,14 @@ exports[`Component: Table - renders with no class name plain, condensed, hover, 
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]2"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         3
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Bisping
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-neutral"
         >
@@ -864,22 +732,14 @@ exports[`Component: Table - renders with no class name plain, condensed, hover, 
         </span>
       </td>
     </tr>
-    <tr
-      key="[object Object],[object Object],[object Object]3"
-    >
-      <th
-        key="0"
-      >
+    <tr>
+      <th>
         4
       </th>
-      <td
-        key="1"
-      >
+      <td>
         Mike Perry
       </td>
-      <td
-        key="2"
-      >
+      <td>
         <span
           className="status status-inactive"
         >

@@ -9,11 +9,11 @@ exports[`Component: Tabs - renders 1`] = `
   <ul>
     <li
       className="active"
-      key="tab-item-test-0"
     >
       
 
       <a
+        className="testing-clicks"
         href="#"
         onClick={[Function]}
       >
@@ -24,11 +24,11 @@ exports[`Component: Tabs - renders 1`] = `
     </li>
     <li
       className={null}
-      key="tab-item-test 2-1"
     >
       
 
       <a
+        className="testing-clicks"
         href="#"
         onClick={[Function]}
       >
@@ -50,11 +50,11 @@ exports[`Component: Tabs - renders with class name .tabs.tabs-scroll when prop s
   <ul>
     <li
       className="active"
-      key="tab-item-test-0"
     >
       
 
       <a
+        className="testing-clicks"
         href="#"
         onClick={[Function]}
       >
@@ -65,11 +65,11 @@ exports[`Component: Tabs - renders with class name .tabs.tabs-scroll when prop s
     </li>
     <li
       className={null}
-      key="tab-item-test 2-1"
     >
       
 
       <a
+        className="testing-clicks"
         href="#"
         onClick={[Function]}
       >
@@ -91,11 +91,11 @@ exports[`Component: Tabs - renders with class name tabs when prop scroll is not 
   <ul>
     <li
       className="active"
-      key="tab-item-test-0"
     >
       
 
       <a
+        className="testing-clicks"
         href="#"
         onClick={[Function]}
       >
@@ -106,11 +106,11 @@ exports[`Component: Tabs - renders with class name tabs when prop scroll is not 
     </li>
     <li
       className={null}
-      key="tab-item-test 2-1"
     >
       
 
       <a
+        className="testing-clicks"
         href="#"
         onClick={[Function]}
       >

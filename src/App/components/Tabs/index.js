@@ -15,7 +15,7 @@ const Tabs = ({ id, scroll, items, ulId }) => {
             <ul id={ulId}>
                 {items.map((name, i) => (
                     <li key={`tab-item-${name}-${i}`} className={activeIndex === i ? "active" : null}>{"\n"}
-                        <a href="#" onClick={e => setActive(e, i)}>{name}</a>{"\n"}
+                        <a className="testing-clicks" href="#" onClick={e => setActive(e, i)}>{name}</a>{"\n"}
                     </li>
                 ))}
             </ul>
