@@ -42,21 +42,6 @@ jobs:
       - name: Create latest version reference file
         run: |
           echo "{ \"latestVersion\" : \"${{ steps.variables.outputs.BRANCH }}\" }" > ./dist/latestVersion.json
-      
-      - name: Prepare environment variables
-        id: landing-zone-validate-prepare-env-var
-        shell: pwsh
-        env:
-          AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS_STAGE }}
-        run: |
-          # Parse Azure secret into Terraform variables
-          $servicePrincipal = ($env:AZURE_CREDENTIALS | ConvertFrom-Json)
-          $env:ARM_CLIENT_ID = $servicePrincipal.clientId
-          $env:ARM_CLIENT_SECRET = $servicePrincipal.clientSecret
-          $env:ARM_SUBSCRIPTION_ID = $servicePrincipal.subscriptionId
-          $env:ARM_TENANT_ID = $servicePrincipal.tenantId
-
-          get-childitem -Path env:
 
       - name: Azure Login
         uses: azure/login@v1.4.6
