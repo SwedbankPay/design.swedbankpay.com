@@ -1,30 +1,15 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import ComponentPreview from "./index";
-import { container, screen, render, prettyDOM, within } from "@testing-library/react";
+import { screen, render } from "@testing-library/react";
 import { tabs } from "@src/scripts/main";
 import "@testing-library/jest-dom";
 
 describe("Utilities: ComponentPreview", () => {
     const TestComponentH1 = () => <h1 className="h1-class">test1</h1>;
-    const TestComponentH2 = () => <h2 className="h2-class">test2</h2>;
     const TestComponentH1WithOuterTags = () => (
         <div className="div-class">
             <h1 className="h1-class">test1</h1>
-        </div>
-    );
-    const TestComponentNoElement = () => "test text with no wrapping element";
-    const TestComponentList = () => (
-        <ul className="unordered-list">
-            <li className="listElem">This</li>
-            <li className="listElem">Is</li>
-            <li className="listElem">A</li>
-            <li className="listElem">Test</li>
-        </ul>
-    );
-    const TestComponentValue = () => (
-        <div value="test-value">
-            <a href="#">This is a test-link</a>
         </div>
     );
 
