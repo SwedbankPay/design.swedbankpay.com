@@ -101,98 +101,61 @@ describe("Utilities: ComponentPreview", () => {
         expect(td[1].firstElementChild).not.toHaveTextContent("div-class");
         expect(td[1].firstElementChild).toHaveTextContent("h1-class");
 
-        expect(wrapper.toJSON()).toMatchSnapshot(); // CONTINUE HERE ESKIL, YOU FAT BASTARD
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 
-    // it("CodeFigure removes outer tag from markup even if no child element exists", () => {
-    //     const wrapper = renderer.create(
-    //         <ComponentPreview language="html" codeFigure removeOuterTag>
-    //             <TestComponentNoElement />
-    //         </ComponentPreview>
-    //     );
+    it("CodeFigure returns a message if no child is passed", () => {
+        const wrapper = renderer.create(
+            <ComponentPreview language="html" codeFigure removeOuterTag />
+        );
 
-    //     expect(wrapper.toJSON()).toMatchSnapshot();
-    //     expect(wrapper.html()).toContain("test text with no wrapping element");
-    // });
+        render(<ComponentPreview language="html" codeFigure removeOuterTag />);
 
-    // it("CodeFigure removes value property", () => {
-    //     const wrapper = renderer.create(
-    //         <ComponentPreview language="html" codeFigure hideValue>
-    //             <TestComponentValue />
-    //         </ComponentPreview>
-    //     );
+        const td = screen.getAllByRole("cell");
 
-    //     expect(wrapper.toJSON()).toMatchSnapshot();
-    //     expect(wrapper.html()).not.toContain("test-value");
-    // });
+        expect(wrapper.toJSON()).toMatchSnapshot();
+        expect(td[1].firstElementChild).toHaveTextContent("Check ComponentPreview _removeOuterTag!");
+    });
 
-    // it("CodeFigure returns a message if no child is passed", () => {
-    //     const wrapper = renderer.create(
-    //         <ComponentPreview language="html" codeFigure removeOuterTag />
-    //     );
+    it("CodeFigure renders css string", () => {
+        const wrapper = renderer.create(
+            <ComponentPreview language="css" codeFigure>
+                {"color: red;"}
+            </ComponentPreview>
+        );
 
-    //     expect(wrapper.toJSON()).toMatchSnapshot();
-    //     expect(wrapper.html()).toContain("Check ComponentPreview _removeOuterTag!");
-    // });
+        render(<ComponentPreview language="css" codeFigure>
+            {"color: red;"}
+        </ComponentPreview>);
 
-    // it("Codefigure removes list tags", () => {
-    //     const wrapper = renderer.create(
-    //         <ComponentPreview language="html" codeFigure removeList>
-    //             <TestComponentList />
-    //         </ComponentPreview>
-    //     );
+        const td = screen.getAllByRole("cell");
 
-    //     expect(wrapper.toJSON()).toMatchSnapshot();
-    //     expect(wrapper.contains("listElem")).toEqual(false);
-    //     expect(wrapper.contains("unordered-list")).toEqual(false);
-    // });
+        expect(td[1].firstElementChild).toHaveTextContent("color: red");
 
-    // it("Codefigure removes list tags from multiple html tags", () => {
-    //     const wrapper = renderer.create(
-    //         <ComponentPreview language="html" codeFigure removeList>
-    //             <TestComponentList />
-    //             <TestComponentList />
-    //             <TestComponentList />
-    //         </ComponentPreview>
-    //     );
+        expect(wrapper.toJSON()).toMatchSnapshot();
+    });
 
-    //     expect(wrapper.toJSON()).toMatchSnapshot();
-    //     expect(wrapper.contains("listElem")).toEqual(false);
-    //     expect(wrapper.contains("unordered-list")).toEqual(false);
-    // });
+    it("CodeFigure renders multiple javascript strings", () => {
+        const wrapper = renderer.create(
+            <ComponentPreview language="javascript" codeFigure>
+                {"const a = 12;"}
+                {"const b = 1;"}
+                {"const c = a + b;"}
+            </ComponentPreview>
+        );
 
-    // it("CodeFigure warns about unhandled children", () => {
-    //     console.warn = jest.fn();
+        render(<ComponentPreview language="javascript" codeFigure>
+            {"const a = 12;"}
+            {"const b = 1;"}
+            {"const c = a + b;"}
+        </ComponentPreview>);
 
-    //     const wrapper = renderer.create(
-    //         <ComponentPreview language="css" codeFigure>
-    //             {() => []}
-    //         </ComponentPreview>
-    //     );
+        const td = screen.getAllByRole("cell");
 
-    //     expect(wrapper.toJSON()).toMatchSnapshot();
-    //     expect(console.warn).toHaveBeenCalled();
-    // });
+        expect(td[1].firstElementChild).toHaveTextContent("const a = 12;");
+        expect(td[1].firstElementChild).toHaveTextContent("const b = 1;");
+        expect(td[1].firstElementChild).toHaveTextContent("const c = a + b;");
 
-    // it("CodeFigure renders css string", () => {
-    //     const wrapper = renderer.create(
-    //         <ComponentPreview language="css" codeFigure>
-    //             {"color: red;"}
-    //         </ComponentPreview>
-    //     );
-
-    //     expect(wrapper.toJSON()).toMatchSnapshot();
-    // });
-
-    // it("CodeFigure renders multiple javascript strings", () => {
-    //     const wrapper = renderer.create(
-    //         <ComponentPreview language="javascript" codeFigure>
-    //             {"const a = 12;"}
-    //             {"const b = 1;"}
-    //             {"const c = a + b;"}
-    //         </ComponentPreview>
-    //     );
-
-    //     expect(wrapper.toJSON()).toMatchSnapshot();
-    // });
+        expect(wrapper.toJSON()).toMatchSnapshot();
+    });
 });
