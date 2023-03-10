@@ -12,21 +12,32 @@ exports[`Documentation: CodeTags ContentGuidelines renders 1`] = `
   <div
     className="slab slab-plain h-100 w-100 align-items-center d-flex justify-content-center py-5"
   >
-    <CodeTags
-      className="mr-2"
-      text="Default"
-      type="tertiary"
-    />
-    <CodeTags
-      className="mr-2"
-      removable={true}
-      text="Removable"
-      type="tertiary"
-    />
-    <CodeTags
-      code="Code"
-      type="tertiary"
-    />
+    <span
+      className="tag tag-tertiary mr-2"
+    >
+      Default
+    </span>
+    <span
+      className="tag tag-tertiary removable mr-2"
+    >
+      Removable
+      <button
+        className="close-button"
+        type="button"
+      >
+        <i
+          aria-label="remove tag"
+          className="material-icons m-auto"
+        >
+          close
+        </i>
+      </button>
+    </span>
+    <code
+      className="code-tags code-tags-tertiary"
+    >
+      Code
+    </code>
   </div>
   <ul>
     <li>
