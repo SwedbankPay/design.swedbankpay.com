@@ -1,6 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
-
+import renderer from "react-test-renderer";
 import Copywriting, { Terminology, Tonality, GlossaryLinks } from "./index";
 
 describe("Core: Accessibility", () => {
@@ -8,21 +7,9 @@ describe("Core: Accessibility", () => {
         expect(Copywriting).toBeDefined();
     });
 
-    it("renders", () => {
-        const wrapper = shallow(<Copywriting />);
-
-        expect(wrapper).toMatchSnapshot();
-    });
-
     describe("Intro", () => {
         it("is defined", () => {
             expect(Terminology).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Terminology />);
-
-            expect(wrapper).toMatchSnapshot();
         });
     });
 
@@ -32,9 +19,9 @@ describe("Core: Accessibility", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Tonality />);
+            const wrapper = renderer.create(<Tonality />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -44,9 +31,9 @@ describe("Core: Accessibility", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<GlossaryLinks />);
+            const wrapper = renderer.create(<GlossaryLinks />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 });

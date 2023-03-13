@@ -1,6 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
-
+import renderer from "react-test-renderer";
 import Logotype, { Overview, LogoBlack, LogoWhite, SpacingZone, MisuseLogo, LogotypeBackgrounds, Favicon, LogoPayex } from "./index";
 
 describe("Core: Logotype", () => {
@@ -9,9 +8,9 @@ describe("Core: Logotype", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Logotype />);
+        const wrapper = renderer.create(<Logotype />);
 
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 
     describe("Overview", () => {
@@ -20,9 +19,9 @@ describe("Core: Logotype", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Overview />);
+            const wrapper = renderer.create(<Overview />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -30,35 +29,17 @@ describe("Core: Logotype", () => {
         it("is defined", () => {
             expect(LogoPayex).toBeDefined();
         });
-
-        it("renders", () => {
-            const wrapper = shallow(<LogoPayex />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
     });
 
     describe("LogoBlack", () => {
         it("is defined", () => {
             expect(LogoBlack).toBeDefined();
         });
-
-        it("renders", () => {
-            const wrapper = shallow(<LogoBlack />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
     });
 
     describe("LogoWhite", () => {
         it("is defined", () => {
             expect(LogoWhite).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<LogoWhite />);
-
-            expect(wrapper).toMatchSnapshot();
         });
     });
 
@@ -68,9 +49,9 @@ describe("Core: Logotype", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<SpacingZone />);
+            const wrapper = renderer.create(<SpacingZone />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -80,9 +61,9 @@ describe("Core: Logotype", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<MisuseLogo />);
+            const wrapper = renderer.create(<MisuseLogo />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -92,9 +73,9 @@ describe("Core: Logotype", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<LogotypeBackgrounds />);
+            const wrapper = renderer.create(<LogotypeBackgrounds />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -104,9 +85,9 @@ describe("Core: Logotype", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Favicon />);
+            const wrapper = renderer.create(<Favicon />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 });

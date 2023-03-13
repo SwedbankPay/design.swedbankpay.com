@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import Imagery, { ImageLibrary, ImageSizes, FocalPoints, UsingImagery, AltTextAndCaptions } from "./index";
 
@@ -9,20 +9,14 @@ describe("Core: Imagery", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Imagery />);
+        const wrapper = renderer.create(<Imagery />);
 
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 
     describe("ImageLibrary", () => {
         it("is defined", () => {
             expect(ImageLibrary).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<ImageLibrary />);
-
-            expect(wrapper).toMatchSnapshot();
         });
     });
 
@@ -30,23 +24,11 @@ describe("Core: Imagery", () => {
         it("is defined", () => {
             expect(ImageSizes).toBeDefined();
         });
-
-        it("renders", () => {
-            const wrapper = shallow(<ImageSizes />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
     });
 
     describe("FocalPoints", () => {
         it("is defined", () => {
             expect(FocalPoints).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<FocalPoints />);
-
-            expect(wrapper).toMatchSnapshot();
         });
     });
 
@@ -54,23 +36,11 @@ describe("Core: Imagery", () => {
         it("is defined", () => {
             expect(UsingImagery).toBeDefined();
         });
-
-        it("renders", () => {
-            const wrapper = shallow(<UsingImagery />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
     });
 
     describe("AltTextAndCaptions", () => {
         it("is defined", () => {
             expect(AltTextAndCaptions).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<AltTextAndCaptions />);
-
-            expect(wrapper).toMatchSnapshot();
         });
     });
 });

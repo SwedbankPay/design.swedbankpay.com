@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import DocContainer from "./index";
 
@@ -14,8 +14,8 @@ describe("Utilities: DocContainer", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<DocContainer>Component</DocContainer>);
+        const wrapper = renderer.create(<DocContainer>Component</DocContainer>);
 
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 });

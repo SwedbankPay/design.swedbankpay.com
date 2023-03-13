@@ -1,12 +1,111 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: footer renders 1`] = `
-<DocContainer>
-  <p
-    className="lead"
+<div
+  className="row"
+>
+  <div
+    className="doc-body col-12"
+    id="doc-body"
   >
-    The Swedbank Pay footer.
-  </p>
-  <Overview />
-</DocContainer>
+    <p
+      className="lead"
+    >
+      The Swedbank Pay footer.
+    </p>
+    <h2
+      id="overview"
+    >
+      Overview
+    </h2>
+    <p>
+      Our footer component comes with the same brand color as our topbar. The 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        page-footer-rights
+      </code>
+       class ensures that the wrapped text is centered on mobile.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <footer
+        className="page-footer"
+      >
+        <p
+          className="page-footer-rights"
+        >
+          © Swedbank Pay
+        </p>
+      </footer>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;footer class="page-footer"&gt;
+                  
+
+                      &lt;p class="page-footer-rights"&gt;© Swedbank Pay&lt;/p&gt;
+                  
+
+                  &lt;/footer&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+  </div>
+</div>
 `;

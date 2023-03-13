@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: RadioButton ContentGuidelines renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="content-guidelines"
   >
     Content guidelines
-  </h2>
+  </h2>,
   <div
     className="slab slab-plain"
   >
@@ -14,32 +14,90 @@ exports[`Component: RadioButton ContentGuidelines renders 1`] = `
       className="d-flex flex-column align-items-center py-3"
     >
       <div>
-        <Radio
-          group={true}
-          groupTitle="Group legend"
-          hintText="Hint text"
-          name="radio-dont-example"
-          options={
-            Array [
-              Object {
-                "checked": true,
-                "id": "radio-guidelines-example-1",
-                "label": "Label",
-              },
-              Object {
-                "id": "radio-guidelines-example-2",
-                "label": "Label",
-              },
-              Object {
-                "id": "radio-guidelines-example-3",
-                "label": "Label",
-              },
-            ]
-          }
-        />
+        <form>
+          <fieldset
+            className="radio-group"
+          >
+            
+
+            <legend>
+              Group legend
+               
+            </legend>
+            
+
+            <div
+              className="radio"
+            >
+              
+
+              <input
+                aria-describedby={null}
+                defaultChecked={true}
+                disabled={null}
+                id="radio-guidelines-example-1"
+                name="radio-dont-example"
+                type="radio"
+              />
+              
+
+              <label
+                htmlFor="radio-guidelines-example-1"
+              >
+                Label
+              </label>
+              
+
+            </div>
+            <div
+              className="radio"
+            >
+              
+
+              <input
+                aria-describedby={null}
+                disabled={null}
+                id="radio-guidelines-example-2"
+                name="radio-dont-example"
+                type="radio"
+              />
+              
+
+              <label
+                htmlFor="radio-guidelines-example-2"
+              >
+                Label
+              </label>
+              
+
+            </div>
+            <div
+              className="radio"
+            >
+              
+
+              <input
+                aria-describedby={null}
+                disabled={null}
+                id="radio-guidelines-example-3"
+                name="radio-dont-example"
+                type="radio"
+              />
+              
+
+              <label
+                htmlFor="radio-guidelines-example-3"
+              >
+                Label
+              </label>
+              
+
+            </div>
+          </fieldset>
+        </form>
       </div>
     </div>
-  </div>
+  </div>,
   <ul
     className="list list-bullet"
   >
@@ -64,8 +122,8 @@ exports[`Component: RadioButton ContentGuidelines renders 1`] = `
       </b>
        can be used to complement the group legend and provide clarifying details. If the information is long or won't be needed by the majority of users, a hint expander can be used instead of a text that is visible by default. 
     </li>
-  </ul>
-</Fragment>
+  </ul>,
+]
 `;
 
 exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
@@ -79,30 +137,117 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       Disable a radio button by adding 
-      <CodeTags
-        code="disabled"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        disabled
+      </code>
        attribute to the desired radio button.
     </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="html"
-      removeOuterTag={true}
-      showCasePanel={true}
+    <div
+      className="showcase-panel"
     >
       <div
         className="d-flex justify-content-center"
       >
-        <Radio
-          checked={true}
-          disabled={true}
-          id="radio-example-10"
-          label="Radio button label"
-          name="radio-example"
-        />
+        <div
+          className="radio"
+        >
+          
+
+          <input
+            aria-describedby={null}
+            defaultChecked={true}
+            disabled={true}
+            id="radio-example-10"
+            name="radio-example"
+            type="radio"
+          />
+          
+
+          <label
+            htmlFor="radio-example-10"
+          >
+             
+            Radio button label
+          </label>
+          
+
+        </div>
       </div>
-    </ComponentPreview>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;div class="radio"&gt;
+                  
+
+                      &lt;input type="radio" id="radio-example-10" name="radio-example" disabled checked&gt;
+                  
+
+                      &lt;label for="radio-example-10"&gt; Radio button label&lt;/label&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
   </section>
   <section>
     <h3>
@@ -110,67 +255,292 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       To display the error state, add the 
-      <CodeTags
-        code=".has-error"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        .has-error
+      </code>
        class to the parent element, then add the 
-      <CodeTags
-        code="help-block"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        help-block
+      </code>
        element as the last child with the error message.
     </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="html"
-      removeOuterTag={true}
-      showCasePanel={true}
+    <div
+      className="showcase-panel"
     >
       <div
         className="d-flex justify-content-center"
       >
-        <Radio
-          errorMessage="Error message"
-          group={true}
-          groupTitle="Group legend"
-          id="radio-example-11"
-          label="Radio button label"
-          name="radio-example"
-          options={
-            Array [
-              Object {
-                "id": "radio-error-example-1",
-                "label": "Label",
-              },
-              Object {
-                "id": "radio-error-example-2",
-                "label": "Label",
-              },
-              Object {
-                "id": "radio-error-example-3",
-                "label": "Label",
-              },
-            ]
-          }
-        />
+        <form>
+          <fieldset
+            className="radio-group has-error"
+          >
+            
+
+            <legend>
+              Group legend
+               
+            </legend>
+            
+
+            <div
+              className="radio"
+            >
+              
+
+              <input
+                aria-describedby={null}
+                disabled={null}
+                id="radio-error-example-1"
+                name="radio-example"
+                type="radio"
+              />
+              
+
+              <label
+                htmlFor="radio-error-example-1"
+              >
+                Label
+              </label>
+              
+
+            </div>
+            <div
+              className="radio"
+            >
+              
+
+              <input
+                aria-describedby={null}
+                disabled={null}
+                id="radio-error-example-2"
+                name="radio-example"
+                type="radio"
+              />
+              
+
+              <label
+                htmlFor="radio-error-example-2"
+              >
+                Label
+              </label>
+              
+
+            </div>
+            <div
+              className="radio"
+            >
+              
+
+              <input
+                aria-describedby={null}
+                disabled={null}
+                id="radio-error-example-3"
+                name="radio-example"
+                type="radio"
+              />
+              
+
+              <label
+                htmlFor="radio-error-example-3"
+              >
+                Label
+              </label>
+              
+
+            </div>
+            <div
+              className="help-block"
+            >
+              <i
+                className="material-icons"
+              >
+                warning
+              </i>
+              Error message
+            </div>
+            
+
+          </fieldset>
+        </form>
       </div>
-    </ComponentPreview>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                  12
+                  
+
+                  13
+                  
+
+                  14
+                  
+
+                  15
+                  
+
+                  16
+                  
+
+                  17
+                  
+
+                  18
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;form&gt;
+                  
+
+                      &lt;fieldset class="radio-group has-error"&gt;
+                  
+
+                          &lt;legend&gt;Group legend &lt;/legend&gt;
+                  
+
+                          &lt;div class="radio"&gt;
+                  
+
+                              &lt;input type="radio" id="radio-error-example-1" name="radio-example"&gt;
+                  
+
+                              &lt;label for="radio-error-example-1"&gt;Label&lt;/label&gt;
+                  
+
+                          &lt;/div&gt;
+                  
+
+                          &lt;div class="radio"&gt;
+                  
+
+                              &lt;input type="radio" id="radio-error-example-2" name="radio-example"&gt;
+                  
+
+                              &lt;label for="radio-error-example-2"&gt;Label&lt;/label&gt;
+                  
+
+                          &lt;/div&gt;
+                  
+
+                          &lt;div class="radio"&gt;
+                  
+
+                              &lt;input type="radio" id="radio-error-example-3" name="radio-example"&gt;
+                  
+
+                              &lt;label for="radio-error-example-3"&gt;Label&lt;/label&gt;
+                  
+
+                          &lt;/div&gt;
+                  
+
+                          &lt;div class="help-block"&gt;&lt;i class="material-icons"&gt;warning&lt;/i&gt;Error message&lt;/div&gt;
+                  
+
+                      &lt;/fieldset&gt;
+                  
+
+                  &lt;/form&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
   </section>
   <section>
     <h3>
       Javascript methods
     </h3>
     <p>
-      <CodeTags
-        code="dg.hintTextExpander.init()"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        dg.hintTextExpander.init()
+      </code>
        can be used to initialize all Hint text expanders. Or 
-      <CodeTags
-        code="dg.hintTextExpander.init(<hint-text-expander-id>)"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        dg.hintTextExpander.init(&lt;hint-text-expander-id&gt;)
+      </code>
        to initialize a specific one.
     </p>
   </section>
@@ -204,28 +574,87 @@ exports[`Component: RadioButton HowTo renders 1`] = `
           <div
             className="pt-3 pb-5"
           >
-            <Radio
-              group={true}
-              groupTitle="Card type"
-              name="radio-do-example"
-              options={
-                Array [
-                  Object {
-                    "checked": true,
-                    "id": "radio-do-example-1",
-                    "label": "Debit card",
-                  },
-                  Object {
-                    "id": "radio-do-example-2",
-                    "label": "Credit card",
-                  },
-                  Object {
-                    "id": "radio-do-example-3",
-                    "label": "Gift card",
-                  },
-                ]
-              }
-            />
+            <form>
+              <fieldset
+                className="radio-group"
+              >
+                
+
+                <legend>
+                  Card type
+                   
+                </legend>
+                
+
+                <div
+                  className="radio"
+                >
+                  
+
+                  <input
+                    aria-describedby={null}
+                    defaultChecked={true}
+                    disabled={null}
+                    id="radio-do-example-1"
+                    name="radio-do-example"
+                    type="radio"
+                  />
+                  
+
+                  <label
+                    htmlFor="radio-do-example-1"
+                  >
+                    Debit card
+                  </label>
+                  
+
+                </div>
+                <div
+                  className="radio"
+                >
+                  
+
+                  <input
+                    aria-describedby={null}
+                    disabled={null}
+                    id="radio-do-example-2"
+                    name="radio-do-example"
+                    type="radio"
+                  />
+                  
+
+                  <label
+                    htmlFor="radio-do-example-2"
+                  >
+                    Credit card
+                  </label>
+                  
+
+                </div>
+                <div
+                  className="radio"
+                >
+                  
+
+                  <input
+                    aria-describedby={null}
+                    disabled={null}
+                    id="radio-do-example-3"
+                    name="radio-do-example"
+                    type="radio"
+                  />
+                  
+
+                  <label
+                    htmlFor="radio-do-example-3"
+                  >
+                    Gift card
+                  </label>
+                  
+
+                </div>
+              </fieldset>
+            </form>
           </div>
         </div>
       </div>
@@ -250,27 +679,86 @@ exports[`Component: RadioButton HowTo renders 1`] = `
           <div
             className="pt-3 w-50"
           >
-            <Radio
-              group={true}
-              groupTitle="Card type"
-              name="radio-dont-example"
-              options={
-                Array [
-                  Object {
-                    "id": "radio-dont-example-1",
-                    "label": "Choose a later date for delivery",
-                  },
-                  Object {
-                    "id": "radio-dont-example-2",
-                    "label": "Instant delivery",
-                  },
-                  Object {
-                    "id": "radio-dont-example-3",
-                    "label": "4-7days delivery",
-                  },
-                ]
-              }
-            />
+            <form>
+              <fieldset
+                className="radio-group"
+              >
+                
+
+                <legend>
+                  Card type
+                   
+                </legend>
+                
+
+                <div
+                  className="radio"
+                >
+                  
+
+                  <input
+                    aria-describedby={null}
+                    disabled={null}
+                    id="radio-dont-example-1"
+                    name="radio-dont-example"
+                    type="radio"
+                  />
+                  
+
+                  <label
+                    htmlFor="radio-dont-example-1"
+                  >
+                    Choose a later date for delivery
+                  </label>
+                  
+
+                </div>
+                <div
+                  className="radio"
+                >
+                  
+
+                  <input
+                    aria-describedby={null}
+                    disabled={null}
+                    id="radio-dont-example-2"
+                    name="radio-dont-example"
+                    type="radio"
+                  />
+                  
+
+                  <label
+                    htmlFor="radio-dont-example-2"
+                  >
+                    Instant delivery
+                  </label>
+                  
+
+                </div>
+                <div
+                  className="radio"
+                >
+                  
+
+                  <input
+                    aria-describedby={null}
+                    disabled={null}
+                    id="radio-dont-example-3"
+                    name="radio-dont-example"
+                    type="radio"
+                  />
+                  
+
+                  <label
+                    htmlFor="radio-dont-example-3"
+                  >
+                    4-7days delivery
+                  </label>
+                  
+
+                </div>
+              </fieldset>
+            </form>
           </div>
         </div>
       </div>

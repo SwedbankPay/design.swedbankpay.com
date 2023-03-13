@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import JavascriptDocElement from "./index";
 
@@ -11,8 +11,8 @@ describe("Utilities: JavascriptDocElement", () => {
     it("renders", () => {
         const mockCode = <>test code</>;
         const mockDescription = <>test description</>;
-        const wrapper = shallow(<JavascriptDocElement code={mockCode} description={mockDescription} />);
+        const wrapper = renderer.create(<JavascriptDocElement code={mockCode} description={mockDescription} />);
 
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 });

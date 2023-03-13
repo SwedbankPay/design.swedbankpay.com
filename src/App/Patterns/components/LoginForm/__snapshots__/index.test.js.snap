@@ -1,531 +1,114 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pattern: LoginForm renders 1`] = `
-<Fragment>
-  
-
-  
-
-  <InputGroup
-    defaultValue={null}
-    label="Email"
-    placeholder={null}
-    type="email"
-  />
-  <InputGroup
-    defaultValue={null}
-    errorMessage={null}
-    label="Password"
-    type="password"
-    validationState={null}
-  />
+Array [
+  "
+",
+  "
+",
   <div
-    className="d-sm-flex d-block justify-content-between mb-3"
+    className="form-group"
   >
-    <Checkbox
-      label="Remember me"
+    
+
+    <label>
+      Email
+    </label>
+    
+
+    <input
+      aria-describedby={null}
+      autoComplete={null}
+      className="form-control"
+      data-validate={null}
+      defaultValue=""
+      disabled={null}
+      id={null}
+      pattern={null}
+      readOnly={null}
+      required={null}
+      type="email"
     />
     
 
-    <Link
-      className="d-block mb-3"
-      linkText="Forgot your password?"
-    />
-  </div>
-  
-
-  <Button
-    fullWidth={true}
-    label="Log in"
-    type="primary"
-  />
-  
-
-</Fragment>
-`;
-
-exports[`Pattern: LoginForm renders checkbox input with an id 1`] = `
-<Fragment>
-  
-
-  
-
-  <InputGroup
-    defaultValue={null}
-    label="Email"
-    placeholder={null}
-    type="email"
-  />
-  <InputGroup
-    defaultValue={null}
-    errorMessage={null}
-    label="Password"
-    type="password"
-    validationState={null}
-  />
+  </div>,
   <div
-    className="d-sm-flex d-block justify-content-between mb-3"
+    className="form-group"
   >
-    <Checkbox
-      id="checkbox-test-id"
-      label="Remember me"
+    
+
+    <label>
+      Password
+    </label>
+    
+
+    <input
+      aria-describedby={null}
+      autoComplete={null}
+      className="form-control"
+      data-validate={null}
+      defaultValue=""
+      disabled={null}
+      id={null}
+      pattern={null}
+      readOnly={null}
+      required={null}
+      type="password"
     />
     
 
-    <Link
-      className="d-block mb-3"
-      linkText="Forgot your password?"
-    />
-  </div>
-  
-
-  <Button
-    fullWidth={true}
-    label="Log in"
-    type="primary"
-  />
-  
-
-</Fragment>
-`;
-
-exports[`Pattern: LoginForm renders email input with an id 1`] = `
-<Fragment>
-  
-
-  
-
-  <InputGroup
-    defaultValue={null}
-    id="email-test-id"
-    label="Email"
-    placeholder={null}
-    type="email"
-  />
-  <InputGroup
-    defaultValue={null}
-    errorMessage={null}
-    label="Password"
-    type="password"
-    validationState={null}
-  />
+  </div>,
   <div
     className="d-sm-flex d-block justify-content-between mb-3"
   >
-    <Checkbox
-      label="Remember me"
-    />
+    <div
+      className="checkbox"
+    >
+      
+
+      <input
+        aria-describedby={null}
+        defaultChecked={null}
+        disabled={null}
+        id={null}
+        type="checkbox"
+      />
+      
+
+      <label
+        className="d-block"
+      >
+        Remember me
+      </label>
+      
+
+    </div>
     
 
-    <Link
+    <a
       className="d-block mb-3"
-      linkText="Forgot your password?"
-    />
-  </div>
-  
-
-  <Button
-    fullWidth={true}
-    label="Log in"
-    type="primary"
-  />
-  
-
-</Fragment>
-`;
-
-exports[`Pattern: LoginForm renders password input with an id 1`] = `
-<Fragment>
-  
-
-  
-
-  <InputGroup
-    defaultValue={null}
-    label="Email"
-    placeholder={null}
-    type="email"
-  />
-  <InputGroup
-    defaultValue={null}
-    errorMessage={null}
-    id="password-test-id"
-    label="Password"
-    type="password"
-    validationState={null}
-  />
-  <div
-    className="d-sm-flex d-block justify-content-between mb-3"
-  >
-    <Checkbox
-      label="Remember me"
-    />
-    
-
-    <Link
-      className="d-block mb-3"
-      linkText="Forgot your password?"
-    />
-  </div>
-  
-
-  <Button
-    fullWidth={true}
-    label="Log in"
-    type="primary"
-  />
-  
-
-</Fragment>
-`;
-
-exports[`Pattern: LoginForm renders with a logo 1`] = `
-<Fragment>
-  
-
-  
-
-  <InputGroup
-    defaultValue={null}
-    label="Email"
-    placeholder={null}
-    type="email"
-  />
-  <InputGroup
-    defaultValue={null}
-    errorMessage={null}
-    label="Password"
-    type="password"
-    validationState={null}
-  />
-  <div
-    className="d-sm-flex d-block justify-content-between mb-3"
-  >
-    <Checkbox
-      label="Remember me"
-    />
-    
-
-    <Link
-      className="d-block mb-3"
-      linkText="Forgot your password?"
-    />
-  </div>
-  
-
-  <Button
-    fullWidth={true}
-    label="Log in"
-    type="primary"
-  />
-  
-
-  <Logotype
-    alt="TESTBRAND-logo"
-    size="lg"
-    src="/TEST/img/logo/TESTBRAND-logo-v.svg"
-    type="vertical d-none d-sm-block mx-auto mt-5"
-  />
-</Fragment>
-`;
-
-exports[`Pattern: LoginForm renders with a product label 1`] = `
-<Fragment>
-  <span
-    className="extra-small text-secondary-light-1"
-  >
-    Product Label
-  </span>
-  
-
-  
-
-  <InputGroup
-    defaultValue={null}
-    label="Email"
-    placeholder={null}
-    type="email"
-  />
-  <InputGroup
-    defaultValue={null}
-    errorMessage={null}
-    label="Password"
-    type="password"
-    validationState={null}
-  />
-  <div
-    className="d-sm-flex d-block justify-content-between mb-3"
-  >
-    <Checkbox
-      label="Remember me"
-    />
-    
-
-    <Link
-      className="d-block mb-3"
-      linkText="Forgot your password?"
-    />
-  </div>
-  
-
-  <Button
-    fullWidth={true}
-    label="Log in"
-    type="primary"
-  />
-  
-
-</Fragment>
-`;
-
-exports[`Pattern: LoginForm renders with a title 1`] = `
-<Fragment>
-  
-
-  <span
-    className="h1 mb-4 mt-2 d-block"
+      href=""
+      onClick={[Function]}
+    >
+      Forgot your password?
+    </a>
+  </div>,
+  "
+",
+  <button
+    active={null}
+    aria-disabled={null}
+    aria-label={null}
+    aria-pressed={null}
+    className="btn btn-primary btn-block"
+    role={null}
+    tabIndex={null}
+    title={null}
+    type="button"
   >
     Log in
-  </span>
-  
-
-  <InputGroup
-    defaultValue={null}
-    label="Email"
-    placeholder={null}
-    type="email"
-  />
-  <InputGroup
-    defaultValue={null}
-    errorMessage={null}
-    label="Password"
-    type="password"
-    validationState={null}
-  />
-  <div
-    className="d-sm-flex d-block justify-content-between mb-3"
-  >
-    <Checkbox
-      label="Remember me"
-    />
-    
-
-    <Link
-      className="d-block mb-3"
-      linkText="Forgot your password?"
-    />
-  </div>
-  
-
-  <Button
-    fullWidth={true}
-    label="Log in"
-    type="primary"
-  />
-  
-
-</Fragment>
-`;
-
-exports[`Pattern: LoginForm renders with additional text 1`] = `
-<Fragment>
-  
-
-  
-
-  <InputGroup
-    defaultValue={null}
-    label="Email"
-    placeholder={null}
-    type="email"
-  />
-  <InputGroup
-    defaultValue={null}
-    errorMessage={null}
-    label="Password"
-    type="password"
-    validationState={null}
-  />
-  <div
-    className="d-sm-flex d-block justify-content-between mb-3"
-  >
-    <Checkbox
-      label="Remember me"
-    />
-    
-
-    <Link
-      className="d-block mb-3"
-      linkText="Forgot your password?"
-    />
-  </div>
-  
-
-  <Button
-    fullWidth={true}
-    label="Log in"
-    type="primary"
-  />
-  <p
-    className="small mt-3"
-  >
-    Additional text
-  </p>
-  
-
-</Fragment>
-`;
-
-exports[`Pattern: LoginForm renders with alternative logins 1`] = `
-<Fragment>
-  
-
-  
-
-  <AlternativeLogins />
-  <InputGroup
-    defaultValue={null}
-    label="Email"
-    placeholder={null}
-    type="email"
-  />
-  <InputGroup
-    defaultValue={null}
-    errorMessage={null}
-    label="Password"
-    type="password"
-    validationState={null}
-  />
-  <div
-    className="d-sm-flex d-block justify-content-between mb-3"
-  >
-    <Checkbox
-      label="Remember me"
-    />
-    
-
-    <Link
-      className="d-block mb-3"
-      linkText="Forgot your password?"
-    />
-  </div>
-  
-
-  <Button
-    fullWidth={true}
-    label="Log in"
-    type="primary"
-  />
-  
-
-</Fragment>
-`;
-
-exports[`Pattern: LoginForm renders with an alert and error state on input 1`] = `
-<Fragment>
-  
-
-  
-
-  <Alert
-    icon="cancel"
-    text={
-      <p>
-        <b>
-          Error.
-        </b>
-         Incorrect password
-      </p>
-    }
-    type="danger"
-  />
-  <InputGroup
-    defaultValue={null}
-    label="Email"
-    placeholder={null}
-    type="email"
-  />
-  <InputGroup
-    defaultValue={null}
-    errorMessage="Incorrect password"
-    label="Password"
-    type="password"
-    validationState="error"
-  />
-  <div
-    className="d-sm-flex d-block justify-content-between mb-3"
-  >
-    <Checkbox
-      label="Remember me"
-    />
-    
-
-    <Link
-      className="d-block mb-3"
-      linkText="Forgot your password?"
-    />
-  </div>
-  
-
-  <Button
-    fullWidth={true}
-    label="Log in"
-    type="primary"
-  />
-  
-
-</Fragment>
-`;
-
-exports[`Pattern: LoginForm renders with helpDesk 1`] = `
-<Fragment>
-  
-
-  
-
-  <InputGroup
-    defaultValue={null}
-    label="Email"
-    placeholder={null}
-    type="email"
-  />
-  <InputGroup
-    defaultValue={null}
-    errorMessage={null}
-    label="Password"
-    type="password"
-    validationState={null}
-  />
-  <div
-    className="d-sm-flex d-block justify-content-between mb-3"
-  >
-    <Checkbox
-      label="Remember me"
-    />
-    
-
-    <Link
-      className="d-block mb-3"
-      linkText="Forgot your password?"
-    />
-  </div>
-  
-
-  <Button
-    fullWidth={true}
-    label="Log in"
-    type="primary"
-  />
-  <p
-    className="small mt-3"
-  >
-    <Link
-      linkText="Contact helpDesk"
-    />
-     if you are having trouble signing in.
-    <Component />
-  </p>
-  
-
-</Fragment>
+  </button>,
+  "
+",
+]
 `;

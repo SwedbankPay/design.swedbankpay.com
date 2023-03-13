@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import DeprecatedComponentAlert from "./index";
 
@@ -9,8 +9,8 @@ describe("Utilities: DeprecatedComponentAlert", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<DeprecatedComponentAlert />);
+        const wrapper = renderer.create(<DeprecatedComponentAlert />);
 
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 });

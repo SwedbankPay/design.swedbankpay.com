@@ -146,24 +146,363 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     <p>
       Use client-side validation to validate as much data as possible inline before the user submits the form. Common inline errors include empty required fields, invalid characters or incorrect input format. 
     </p>
-    <EditableComponentPreview
-      codeFigure={true}
-      language="html"
-      showCasePanel={true}
-      staticPreview={true}
+    <div
+      className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
     >
       <div
-        className="col-sm-6 col-12 m-auto px-0 pt-3"
+        className="showcase-panel"
+        style={null}
       >
-        <InputGroup
-          errorMessage="Email is required"
-          id="login-client-side"
-          label="Email"
-          type="email"
-          validationState="error"
-        />
+        <div
+          className="col-sm-6 col-12 m-auto px-0 pt-3"
+        >
+          <div
+            className="form-group has-error"
+          >
+            
+
+            <label
+              htmlFor="login-client-side"
+            >
+              Email
+            </label>
+            
+
+            <input
+              aria-describedby={null}
+              autoComplete={null}
+              className="form-control"
+              data-validate={null}
+              defaultValue=""
+              disabled={null}
+              id="login-client-side"
+              pattern={null}
+              readOnly={null}
+              required={null}
+              type="email"
+            />
+            
+
+            <div
+              className="help-block"
+            >
+              <i
+                className="material-icons"
+              >
+                warning
+              </i>
+              Email is required
+            </div>
+            
+
+          </div>
+        </div>
       </div>
-    </EditableComponentPreview>
+      <div
+        className="sp-stack sp-c-euXojQ sp-editor"
+      >
+        <div
+          className="sp-code-editor sp-c-bNbSGz"
+        >
+          <pre
+            className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+            translate="no"
+          >
+            <code
+              className="sp-pre-placeholder sp-c-fWymNx"
+              style={
+                Object {
+                  "marginLeft": "var(--sp-space-4)",
+                }
+              }
+            >
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "col-sm-6 col-12 m-auto px-0 pt-3"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+    
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "form-group has-error"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+        
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                label
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                for
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "login-client-side"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              Email
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                label
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+        
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                input
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                type
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "email"
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "form-control"
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                id
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "login-client-side"
+              </span>
+               
+              <span
+                className="sp-syntax-punctuation"
+              >
+                /&gt;
+              </span>
+              
+        
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "help-block"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                i
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "material-icons"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              warning
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                i
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              Email is required
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+    
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+            </code>
+          </pre>
+          <span
+            className="sp-read-only sp-c-czQzXp"
+          >
+            Read-only
+          </span>
+        </div>
+      </div>
+    </div>
   </section>
   <section>
     <h4>
@@ -172,26 +511,1058 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
     <p>
       Use server side validation when the user submits the form. Display a local error alert after the page has reloaded if an error has occurred. Incorrect email or password are the most common servers errors. 
     </p>
-    <EditableComponentPreview
-      codeFigure={true}
-      language="html"
-      previewMinHeight={600}
-      showCasePanel={true}
+    <div
+      className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
     >
       <div
-        className="col-sm-6 col-12 m-auto px-0 py-3"
+        className="showcase-panel"
+        style={
+          Object {
+            "--preview-min-height": "600px",
+          }
+        }
       >
-        <LoginForm
-          checkboxId="checkbox-example"
-          defaultEmail={true}
-          defaultPassword={true}
-          emailId="validation-email-example"
-          error={true}
-          passwordId="validation-password-example"
-          title="h2"
-        />
+        <div
+          className="sp-stack sp-c-euXojQ sp-preview"
+        >
+          <div
+            className="sp-preview-container sp-c-bIhyHd"
+          >
+            <iframe
+              className="sp-preview-iframe sp-c-fgviib"
+              style={
+                Object {
+                  "height": undefined,
+                }
+              }
+              title="Sandpack Preview"
+            />
+            <div
+              className="sp-preview-actions sp-c-eKnQtg"
+            >
+              <a
+                className="sp-button sp-icon-standalone sp-c-dRhJti sp-c-gMfcns sp-c-eXsQzS"
+                href="https://codesandbox.io/api/v1/sandboxes/define?undefined"
+                rel="noreferrer noopener"
+                target="_blank"
+                title="Open in CodeSandbox"
+              >
+                <svg
+                  fill="none"
+                  height="16"
+                  stroke="currentColor"
+                  viewBox="0 0 16 16"
+                  width="16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>
+                    Open on CodeSandbox
+                  </title>
+                  <path
+                    d="M6.66665 3.33337H4.33331C3.78103 3.33337 3.33331 3.78109 3.33331 4.33337V11.6667C3.33331 12.219 3.78103 12.6667 4.33331 12.6667H11.6666C12.2189 12.6667 12.6666 12.219 12.6666 11.6667V9.33337"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M10 3.33337H12.5667C12.6219 3.33337 12.6667 3.37815 12.6667 3.43337V6.00004"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M7.33331 8.66668L12.5333 3.46667"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </EditableComponentPreview>
+      <div
+        className="sp-stack sp-c-euXojQ sp-editor"
+      >
+        <div
+          className="sp-code-editor sp-c-bNbSGz"
+        >
+          <div
+            aria-autocomplete="list"
+            aria-label="Code Editor for index.html"
+            aria-multiline="true"
+            className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+            onKeyDown={[Function]}
+            role="textbox"
+            suppressHydrationWarning={true}
+            tabIndex={0}
+            translate="no"
+          >
+            <pre
+              className="sp-pre-placeholder sp-c-fWymNx"
+              style={
+                Object {
+                  "marginLeft": "var(--sp-space-5)",
+                }
+              }
+            >
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "col-sm-6 col-12 m-auto px-0 py-3"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+    
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                span
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "h2 mb-4 mt-2 d-block"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              Log in
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                span
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+    
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "alert alert-danger"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+        
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                i
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "material-icons alert-icon"
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                aria-hidden
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "true"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              cancel
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                i
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+        
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                p
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                b
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              Error.
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                b
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+               Incorrect password
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                p
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+    
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+    
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "form-group"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+        
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                label
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                for
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "validation-email-example"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              Email
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                label
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+        
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                input
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                type
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "email"
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "form-control"
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                id
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "validation-email-example"
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                value
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "name@mail.com"
+              </span>
+               
+              <span
+                className="sp-syntax-punctuation"
+              >
+                /&gt;
+              </span>
+              
+    
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+    
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "form-group has-error"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+        
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                label
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                for
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "validation-password-example"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              Password
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                label
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+        
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                input
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                type
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "password"
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "form-control"
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                id
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "validation-password-example"
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                value
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "qwerty1234"
+              </span>
+               
+              <span
+                className="sp-syntax-punctuation"
+              >
+                /&gt;
+              </span>
+              
+        
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "help-block"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                i
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "material-icons"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              warning
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                i
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              Incorrect password
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+    
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+    
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "d-sm-flex d-block justify-content-between mb-3"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+        
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "checkbox"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+            
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                input
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                type
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "checkbox"
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                id
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "checkbox-example"
+              </span>
+               
+              <span
+                className="sp-syntax-punctuation"
+              >
+                /&gt;
+              </span>
+              
+            
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                label
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                for
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "checkbox-example"
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "d-block"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              Remember me
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                label
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+        
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+        
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                a
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                href
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "d-block mb-3"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              Forgot your password?
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                a
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+    
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+    
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                button
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                class
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "btn btn-primary btn-block"
+              </span>
+               
+              <span
+                className="sp-syntax-property"
+              >
+                type
+              </span>
+              =
+              <span
+                className="sp-syntax-string"
+              >
+                "button"
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              Log in
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                button
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+              
+
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &lt;/
+              </span>
+              <span
+                className="sp-syntax-definition"
+              >
+                div
+              </span>
+              <span
+                className="sp-syntax-punctuation"
+              >
+                &gt;
+              </span>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </section>
 `;
@@ -211,16 +1582,224 @@ exports[`Forms: index Overview renders 1`] = `
   <div
     className="container-fluid d-block d-md-none border-left border-right border-bottom border-top-brand py-3"
   >
-    <LoginForm
-      additionalText={true}
-      alternativeLogins={true}
-      checkboxId="login-checkbox-example"
-      emailId="login-email-example"
-      helpDesk={true}
-      logo={true}
-      passwordId="login-password-example"
-      productLabel="Merchant Admin"
-      title="h1"
+    <span
+      className="extra-small text-secondary-light-1"
+    >
+      Merchant Admin
+    </span>
+    
+
+    <span
+      className="h1 mb-4 mt-2 d-block"
+    >
+      Log in
+    </span>
+    
+
+    <a
+      className="action-link"
+      href="#"
+      rel={null}
+      target={null}
+    >
+      
+
+      <div
+        className="d-flex flex-column"
+      >
+        
+
+        <span
+          className="action-link-content"
+        >
+          
+
+          <span
+            className="action-link-label no-badge"
+          >
+            Login with Azure
+          </span>
+          
+
+        </span>
+        
+
+      </div>
+    </a>
+    
+
+    <a
+      className="action-link"
+      href="#"
+      rel={null}
+      target={null}
+    >
+      
+
+      <div
+        className="d-flex flex-column"
+      >
+        
+
+        <span
+          className="action-link-content"
+        >
+          
+
+          <span
+            className="action-link-label no-badge"
+          >
+            Login with Curity
+          </span>
+          
+
+        </span>
+        
+
+      </div>
+    </a>
+    <div
+      className="row no-gutters align-items-center mb-3"
+    >
+      <hr
+        className="col-5 border-top"
+      />
+      
+
+      <span
+        className="col-2 text-center"
+      >
+        or
+      </span>
+      <hr
+        className="col-5 border-top"
+      />
+    </div>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="login-email-example"
+      >
+        Email
+      </label>
+      
+
+      <input
+        aria-describedby={null}
+        autoComplete={null}
+        className="form-control"
+        data-validate={null}
+        defaultValue=""
+        disabled={null}
+        id="login-email-example"
+        pattern={null}
+        readOnly={null}
+        required={null}
+        type="email"
+      />
+      
+
+    </div>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="login-password-example"
+      >
+        Password
+      </label>
+      
+
+      <input
+        aria-describedby={null}
+        autoComplete={null}
+        className="form-control"
+        data-validate={null}
+        defaultValue=""
+        disabled={null}
+        id="login-password-example"
+        pattern={null}
+        readOnly={null}
+        required={null}
+        type="password"
+      />
+      
+
+    </div>
+    <div
+      className="d-sm-flex d-block justify-content-between mb-3"
+    >
+      <div
+        className="checkbox"
+      >
+        
+
+        <input
+          aria-describedby={null}
+          defaultChecked={null}
+          disabled={null}
+          id="login-checkbox-example"
+          type="checkbox"
+        />
+        
+
+        <label
+          className="d-block"
+          htmlFor="login-checkbox-example"
+        >
+          Remember me
+        </label>
+        
+
+      </div>
+      
+
+      <a
+        className="d-block mb-3"
+        href=""
+        onClick={[Function]}
+      >
+        Forgot your password?
+      </a>
+    </div>
+    
+
+    <button
+      active={null}
+      aria-disabled={null}
+      aria-label={null}
+      aria-pressed={null}
+      className="btn btn-primary btn-block"
+      role={null}
+      tabIndex={null}
+      title={null}
+      type="button"
+    >
+      Log in
+    </button>
+    <p
+      className="small mt-3"
+    >
+      <a
+        className=""
+        href=""
+        onClick={[Function]}
+      >
+        Contact helpDesk
+      </a>
+       if you are having trouble signing in.
+    </p>
+    
+
+    <img
+      alt="TESTBRAND-logo"
+      className="logotype-vertical d-none d-sm-block mx-auto mt-5 logotype-lg"
+      src="/TEST/img/logo/TESTBRAND-logo-v.svg"
     />
   </div>
   <div
@@ -235,45 +1814,36 @@ exports[`Forms: index Overview renders 1`] = `
       The login page is customizable and components can be removed or added to fit a specific products needs.
     </div>
   </div>
-  <EditableComponentPreview
-    codeFigure={true}
-    language="html"
+  <div
+    className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
   >
     <div
-      className="container-fluid border-top-brand"
+      className="sp-stack sp-c-euXojQ sp-editor"
     >
       <div
-        className="row"
+        className="sp-code-editor sp-c-bNbSGz"
       >
-        <div
-          className="col-lg-5 col-12 d-flex p-0"
+        <pre
+          className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+          translate="no"
         >
-          <div
-            className="col-sm-9 col-12 m-auto"
-          >
-            <LoginForm
-              additionalText={true}
-              alternativeLogins={true}
-              checkboxId="checkbox-example"
-              emailId="email-input-example"
-              helpDesk={true}
-              logo={true}
-              passwordId="password-input-example"
-              productLabel="Merchant Admin"
-              title="h1"
-            />
-          </div>
-        </div>
-        
-
-        <img
-          alt="Image for login screen"
-          className="d-none d-lg-block col-7 px-0"
-          src="/TEST/img/documentation/patterns/login-img-example.png"
-        />
+          <code
+            className="sp-pre-placeholder sp-c-fWymNx"
+            style={
+              Object {
+                "marginLeft": "var(--sp-space-4)",
+              }
+            }
+          />
+        </pre>
+        <span
+          className="sp-read-only sp-c-czQzXp"
+        >
+          Read-only
+        </span>
       </div>
     </div>
-  </EditableComponentPreview>
+  </div>
 </section>
 `;
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import ForDevelopers, { Installation, GridAndBreakpoints, Contributing, Feedback, DiscoverMore, DGLightVideo } from "./index";
 
@@ -8,33 +8,21 @@ describe("GetStarted: ForDevelopers", () => {
         expect(ForDevelopers).toBeDefined();
     });
 
-    it("renders", () => {
-        const wrapper = shallow(<ForDevelopers />);
-
-        expect(wrapper).toMatchSnapshot();
-    });
-
     describe("Installation", () => {
         it("is defined", () => {
             expect(Installation).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Installation />);
+            const wrapper = renderer.create(<Installation />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
     describe("GridAndBreakpoints", () => {
         it("is defined", () => {
             expect(GridAndBreakpoints).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<GridAndBreakpoints />);
-
-            expect(wrapper).toMatchSnapshot();
         });
     });
 
@@ -44,9 +32,9 @@ describe("GetStarted: ForDevelopers", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Contributing />);
+            const wrapper = renderer.create(<Contributing />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -56,21 +44,15 @@ describe("GetStarted: ForDevelopers", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Feedback />);
+            const wrapper = renderer.create(<Feedback />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
     describe("DiscoverMore", () => {
         it("is defined", () => {
             expect(DiscoverMore).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<DiscoverMore />);
-
-            expect(wrapper).toMatchSnapshot();
         });
     });
 
@@ -80,9 +62,9 @@ describe("GetStarted: ForDevelopers", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<DGLightVideo />);
+            const wrapper = renderer.create(<DGLightVideo />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 });

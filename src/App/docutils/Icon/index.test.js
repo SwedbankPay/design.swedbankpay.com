@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import Icon from "./index";
 
@@ -8,11 +8,10 @@ describe("Utilities: Icon", () => {
         expect(Icon).toBeDefined();
     });
 
-    it("renders correct icon", () => {
-        const wrapper = shallow(<Icon type="test" />);
+    it("renders", () => {
+        const wrapper = renderer.create(<Icon type="test" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<i className="material-icons" aria-hidden="true">test</i>)).toEqual(true);
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 });
 

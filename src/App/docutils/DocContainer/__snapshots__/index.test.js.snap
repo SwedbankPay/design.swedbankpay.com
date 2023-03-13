@@ -4,6 +4,11 @@ exports[`Utilities: DocContainer renders 1`] = `
 <div
   className="row"
 >
-  <DocContent />
+  <div
+    className="doc-body col-12"
+    id="doc-body"
+  >
+    Component
+  </div>
 </div>
 `;

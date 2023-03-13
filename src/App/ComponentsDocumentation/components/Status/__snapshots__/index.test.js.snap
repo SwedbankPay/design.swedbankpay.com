@@ -1,18 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: Status ExampleUse renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="example-use"
   >
     Example of use
-  </h2>
+  </h2>,
   <h3>
     Leading example
-  </h3>
-  <ComponentPreview
-    language="html"
-    showCasePanel={true}
+  </h3>,
+  <div
+    className="showcase-panel"
   >
     <table
       className="table table-plain"
@@ -145,13 +144,12 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
         </tr>
       </tbody>
     </table>
-  </ComponentPreview>
+  </div>,
   <h3>
     Trailing example
-  </h3>
-  <ComponentPreview
-    language="html"
-    showCasePanel={true}
+  </h3>,
+  <div
+    className="showcase-panel"
   >
     <table
       className="table table-plain"
@@ -244,25 +242,22 @@ exports[`Documentation: Status ExampleUse renders 1`] = `
         </tr>
       </tbody>
     </table>
-  </ComponentPreview>
-</Fragment>
+  </div>,
+]
 `;
 
 exports[`Documentation: Status ExtendedUsage renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="extended-usage"
   >
     Extended usage
-  </h2>
+  </h2>,
   <p>
     The status component inherits the size of its direct parent.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
     <div
       className="d-flex flex-column"
@@ -293,8 +288,86 @@ exports[`Documentation: Status ExtendedUsage renders 1`] = `
         Danger
       </h5>
     </div>
-  </ComponentPreview>
-</Fragment>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;h1 class="status status-neutral"&gt;Neutral&lt;/h1&gt;
+                
+
+                &lt;h2 class="status status-success"&gt;Success&lt;/h2&gt;
+                
+
+                &lt;h3 class="status status-warning"&gt;Warning&lt;/h3&gt;
+                
+
+                &lt;h4 class="status status-inactive"&gt;Inactive&lt;/h4&gt;
+                
+
+                &lt;h5 class="status status-danger"&gt;Danger&lt;/h5&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Status Overview renders 1`] = `

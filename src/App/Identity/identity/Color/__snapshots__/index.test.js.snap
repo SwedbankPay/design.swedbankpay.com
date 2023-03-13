@@ -13,44 +13,393 @@ exports[`Core: Color BackgroundColors renders 1`] = `
   <div
     className="color-group"
   >
-    <ColorDisplay
-      border="has-border"
-      contrastBlackApproved={true}
-      hex="#FFFFFF"
-      key="0"
-      noWhiteExample={true}
-      subTitle="bg-white"
-      title="White"
-    />
-    <ColorDisplay
-      contrastBlackApproved={true}
-      hex="#FBF2EA"
-      key="1"
-      subTitle="bg-primary"
-      title="Apricot"
-    />
-    <ColorDisplay
-      contrastBlackApproved={true}
-      hex="#EBF8F2"
-      key="2"
-      subTitle="bg-secondary"
-      title="Turquoise lighter"
-    />
-    <ColorDisplay
-      contrastBlackApproved={true}
-      hex="#EBE7E2"
-      key="3"
-      subTitle="bg-tertiary"
-      title="Gray"
-    />
-    <ColorDisplay
-      border="has-border"
-      contrastBlackApproved={true}
-      hex="#F9F8F6"
-      key="4"
-      subTitle="bg-quaternary"
-      title="Gray light"
-    />
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box has-border"
+      >
+        <svg>
+          <rect
+            fill="#FFFFFF"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          White
+        </p>
+        <small
+          className="small mb-0"
+        >
+          bg-white
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #FFFFFF
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#FBF2EA"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Apricot
+        </p>
+        <small
+          className="small mb-0"
+        >
+          bg-primary
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #FBF2EA
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#FBF2EA"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#FBF2EA"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#EBF8F2"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Turquoise lighter
+        </p>
+        <small
+          className="small mb-0"
+        >
+          bg-secondary
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #EBF8F2
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#EBF8F2"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#EBF8F2"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#EBE7E2"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Gray
+        </p>
+        <small
+          className="small mb-0"
+        >
+          bg-tertiary
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #EBE7E2
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#EBE7E2"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#EBE7E2"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box has-border"
+      >
+        <svg>
+          <rect
+            fill="#F9F8F6"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Gray light
+        </p>
+        <small
+          className="small mb-0"
+        >
+          bg-quaternary
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #F9F8F6
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#F9F8F6"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#F9F8F6"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 `;
@@ -68,42 +417,416 @@ exports[`Core: Color BrownScaleColors renders 1`] = `
   <div
     className="color-group"
   >
-    <ColorDisplay
-      contrastWhiteApproved={true}
-      hex="#2F2424"
-      key="0"
-      subTitle="brown-solid"
-      title="Brown solid"
-    />
-    <ColorDisplay
-      contrastWhiteApproved={true}
-      hex="#493C3B"
-      key="1"
-      subTitle="brown-dark"
-      title="Brown dark"
-    />
-    <ColorDisplay
-      contrastWhiteApproved={true}
-      hex="#72605E"
-      key="2"
-      subTitle="brown-medium"
-      title="Brown medium"
-    />
-    <ColorDisplay
-      contrastBlackAlert={true}
-      contrastWhiteAlert={true}
-      hex="#A38B80"
-      key="3"
-      subTitle="brown-soft"
-      title="Brown soft"
-    />
-    <ColorDisplay
-      contrastBlackAlert={true}
-      hex="#D4C4BC"
-      key="4"
-      subTitle="brown-light"
-      title="Brown light"
-    />
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#2F2424"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Brown solid
+        </p>
+        <small
+          className="small mb-0"
+        >
+          brown-solid
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #2F2424
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#2F2424"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#2F2424"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#493C3B"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Brown dark
+        </p>
+        <small
+          className="small mb-0"
+        >
+          brown-dark
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #493C3B
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#493C3B"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#493C3B"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#72605E"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Brown medium
+        </p>
+        <small
+          className="small mb-0"
+        >
+          brown-medium
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #72605E
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#72605E"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#72605E"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#A38B80"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Brown soft
+        </p>
+        <small
+          className="small mb-0"
+        >
+          brown-soft
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #A38B80
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#A38B80"
+              />
+            </svg>
+            <i
+              className="material-icons warning"
+            >
+              warning
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#A38B80"
+              />
+            </svg>
+            <i
+              className="material-icons warning"
+            >
+              warning
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#D4C4BC"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Brown light
+        </p>
+        <small
+          className="small mb-0"
+        >
+          brown-light
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #D4C4BC
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#D4C4BC"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#D4C4BC"
+              />
+            </svg>
+            <i
+              className="material-icons warning"
+            >
+              warning
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 `;
@@ -201,39 +924,396 @@ exports[`Core: Color MainColors renders 1`] = `
   <div
     className="color-group flex-wrap"
   >
-    <ColorDisplay
-      hex="#2A9D3F"
-      key="0"
-      name="Primary"
-      rgb="45, 169, 68"
-    />
-    <ColorDisplay
-      fontColor="font-white"
-      hex="#3C3C3C"
-      key="1"
-      name="Secondary Dark"
-      rgb="60, 60, 60"
-    />
-    <ColorDisplay
-      hex="#C8C8C8"
-      key="2"
-      name="Light Grey"
-      rgb="200, 200, 200"
-    />
-    <ColorDisplay
-      fontColor="font-white"
-      hex="#000000"
-      key="3"
-      name="Black"
-      rgb="0, 0, 0"
-    />
-    <ColorDisplay
-      border="has-border"
-      hex="#FFFFFF"
-      key="4"
-      name="White"
-      rgb="255, 255, 255"
-    />
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#2A9D3F"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        />
+        <small
+          className="small mb-0"
+        />
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #2A9D3F
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#2A9D3F"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#2A9D3F"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#3C3C3C"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        />
+        <small
+          className="small mb-0"
+        />
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #3C3C3C
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#3C3C3C"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#3C3C3C"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#C8C8C8"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        />
+        <small
+          className="small mb-0"
+        />
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #C8C8C8
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#C8C8C8"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#C8C8C8"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#000000"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        />
+        <small
+          className="small mb-0"
+        />
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #000000
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#000000"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#000000"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box has-border"
+      >
+        <svg>
+          <rect
+            fill="#FFFFFF"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        />
+        <small
+          className="small mb-0"
+        />
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #FFFFFF
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 `;
@@ -251,69 +1331,744 @@ exports[`Core: Color SystemColors renders 1`] = `
   <div
     className="color-group"
   >
-    <ColorDisplay
-      contrastWhiteApproved={true}
-      hex="#8c0d14"
-      key="0"
-      subTitle="system-error-dark"
-      title="Error dark"
-    />
-    <ColorDisplay
-      contrastWhiteApproved={true}
-      hex="#B5111A"
-      key="1"
-      subTitle="system-error"
-      title="Error"
-    />
-    <ColorDisplay
-      contrastBlackApproved={true}
-      hex="#FCEEE9"
-      key="2"
-      subTitle="system-error-light"
-      title="Error light"
-    />
-    <ColorDisplay
-      contrastWhiteApproved={true}
-      hex="#E97423"
-      key="3"
-      subTitle="system-warning"
-      title="Warning"
-    />
-    <ColorDisplay
-      contrastBlackApproved={true}
-      hex="#FEF2E2"
-      key="4"
-      subTitle="system-warning-light"
-      title="Warning light"
-    />
-    <ColorDisplay
-      contrastWhiteApproved={true}
-      hex="#3C7213"
-      key="5"
-      subTitle="system-success"
-      title="Success"
-    />
-    <ColorDisplay
-      contrastBlackApproved={true}
-      hex="#F2F7EB"
-      key="6"
-      subTitle="system-success-light"
-      title="Success light"
-    />
-    <ColorDisplay
-      contrastWhiteApproved={true}
-      hex="#3961A7"
-      key="7"
-      subTitle="system-info"
-      title="Info"
-    />
-    <ColorDisplay
-      contrastBlackApproved={true}
-      hex="#EBF1FA"
-      key="8"
-      subTitle="system-info-light"
-      title="Info light"
-    />
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#8c0d14"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Error dark
+        </p>
+        <small
+          className="small mb-0"
+        >
+          system-error-dark
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #8c0d14
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#8c0d14"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#8c0d14"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#B5111A"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Error
+        </p>
+        <small
+          className="small mb-0"
+        >
+          system-error
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #B5111A
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#B5111A"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#B5111A"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#FCEEE9"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Error light
+        </p>
+        <small
+          className="small mb-0"
+        >
+          system-error-light
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #FCEEE9
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#FCEEE9"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#FCEEE9"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#E97423"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Warning
+        </p>
+        <small
+          className="small mb-0"
+        >
+          system-warning
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #E97423
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#E97423"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#E97423"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#FEF2E2"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Warning light
+        </p>
+        <small
+          className="small mb-0"
+        >
+          system-warning-light
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #FEF2E2
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#FEF2E2"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#FEF2E2"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#3C7213"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Success
+        </p>
+        <small
+          className="small mb-0"
+        >
+          system-success
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #3C7213
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#3C7213"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#3C7213"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#F2F7EB"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Success light
+        </p>
+        <small
+          className="small mb-0"
+        >
+          system-success-light
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #F2F7EB
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#F2F7EB"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#F2F7EB"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#3961A7"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Info
+        </p>
+        <small
+          className="small mb-0"
+        >
+          system-info
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #3961A7
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#3961A7"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#3961A7"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#EBF1FA"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Info light
+        </p>
+        <small
+          className="small mb-0"
+        >
+          system-info-light
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #EBF1FA
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#EBF1FA"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#EBF1FA"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 `;
@@ -331,40 +2086,290 @@ exports[`Core: Color TextColors renders 1`] = `
   <div
     className="color-group"
   >
-    <ColorDisplay
-      contrastWhiteApproved={true}
-      hex="#512B2B"
-      key="0"
-      noBlackExample={true}
-      subTitle="text-default"
-      title="Brown"
-    />
-    <ColorDisplay
-      contrastBlackAlert={true}
-      contrastWhiteApproved={true}
-      hex="#72605E"
-      key="1"
-      subTitle="text-muted"
-      title="Brown medium"
-    />
-    <ColorDisplay
-      contrastWhiteApproved={true}
-      hex="#257886"
-      key="2"
-      subTitle="text-link"
-      title="Turquoise dark"
-    />
-    <ColorDisplay
-      border="has-border"
-      contrastBlackApproved={true}
-      hex="#FFFFFF"
-      key="3"
-      noWhiteExample={true}
-      subTitle="text-white"
-      title="White"
-    />
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#512B2B"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Brown
+        </p>
+        <small
+          className="small mb-0"
+        >
+          text-default
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #512B2B
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#72605E"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Brown medium
+        </p>
+        <small
+          className="small mb-0"
+        >
+          text-muted
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #72605E
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#72605E"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#72605E"
+              />
+            </svg>
+            <i
+              className="material-icons warning"
+            >
+              warning
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box "
+      >
+        <svg>
+          <rect
+            fill="#257886"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          Turquoise dark
+        </p>
+        <small
+          className="small mb-0"
+        >
+          text-link
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #257886
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-white-container"
+          >
+            <svg
+              className="white-box first-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#257886"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#257886"
+              />
+            </svg>
+            <i
+              className="material-icons cancel"
+            >
+              error
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="d-flex flex-column mb-2"
+    >
+      <div
+        className="color-box has-border"
+      >
+        <svg>
+          <rect
+            fill="#FFFFFF"
+          />
+        </svg>
+      </div>
+      <div
+        className="text-box d-flex flex-column"
+      >
+        <p
+          className="font-weight-bold mb-0"
+        >
+          White
+        </p>
+        <small
+          className="small mb-0"
+        >
+          text-white
+        </small>
+        <small
+          className="small mb-0 text-uppercase"
+        >
+          #FFFFFF
+        </small>
+        <div
+          className="contrast-box"
+        >
+          <div
+            className="contrast-black-container"
+          >
+            <svg
+              className="first-svg"
+            >
+              <rect
+                fill="#512B2B"
+              />
+            </svg>
+            <svg
+              className="second-svg"
+            >
+              <rect
+                fill="#FFFFFF"
+              />
+            </svg>
+            <i
+              className="material-icons check"
+            >
+              check_circle
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 `;
 
-exports[`Core: Color renders 1`] = `<Fragment />`;
+exports[`Core: Color renders 1`] = `null`;

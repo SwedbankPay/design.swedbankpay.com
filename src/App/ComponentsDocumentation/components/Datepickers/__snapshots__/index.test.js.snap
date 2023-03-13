@@ -1,261 +1,1460 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: Datepickers AboutDatepickers renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="about-datepickers"
   >
     About
-  </h2>
+  </h2>,
   <p>
     Datepickers give a visual presentation of days, months and years. By utilizing the datepicker you can be assured the given input is in the format you expect without having to deal with too much client-side validation. Datepickers should be used for recent dates to avoid having the user click a lot of times to find the required date. If you need a date of birth or something similarly far back, an input field with proper validation will be easier to use.
-  </p>
-</Fragment>
+  </p>,
+]
 `;
 
 exports[`Documentation: Datepickers AllowInput renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="allow-input"
   >
     Allow input
-  </h2>
+  </h2>,
   <p>
     By default datepickers do not allow input but you can use 
-    <CodeTags
-      code="data-datepicker-allowinput"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      data-datepicker-allowinput
+    </code>
     . When you allow input then the given date has to match the datepicker format (
-    <CodeTags
-      code="iso8601"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      iso8601
+    </code>
      if you have not specified a format).
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <Datepicker
-      allowinput={true}
-      id="simple-datepicker"
-      label="Date"
-      prefixType="icon"
-      prefixValue="event"
-    />
-  </ComponentPreview>
-</Fragment>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="simple-datepicker"
+      >
+        Date
+      </label>
+      
+
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon "
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons material-icons-outlined"
+          >
+            event
+          </i>
+        </span>
+        
+
+        <input
+          className="form-control"
+          data-datepicker=""
+          data-datepicker-allowinput={true}
+          data-datepicker-format={null}
+          data-datepicker-fulldate={null}
+          data-datepicker-max={null}
+          data-datepicker-min={null}
+          data-datepicker-mode={null}
+          data-datepicker-months={null}
+          data-datepicker-time={null}
+          data-datepicker-value={null}
+          data-required={null}
+          id="simple-datepicker"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="form-group"&gt;
+                
+
+                    &lt;label for="simple-datepicker"&gt;Date&lt;/label&gt;
+                
+
+                    &lt;div class="input-group"&gt;
+                
+
+                        &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
+                
+
+                        &lt;input type="text" id="simple-datepicker" class="form-control" data-datepicker data-datepicker-allowinput="true" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Datepickers CustomFormat renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="custom-format"
   >
     Custom format
-  </h2>
+  </h2>,
   <p>
     To use a custom format include 
-    <CodeTags
-      code="data-datepicker-format=\\"[nb|sv|da|fi|en|iso8601(default)]\\""
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      data-datepicker-format="[nb|sv|da|fi|en|iso8601(default)]"
+    </code>
     . If no format is provided then datepicker will default to 
-    <CodeTags
-      code="iso8601"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      iso8601
+    </code>
     . Same behaviour applies if you try to set an invalid date.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <Datepicker
-      format="nb"
-      id="nb-datepicker"
-      label="nb (norwegian):"
-      prefixType="icon"
-      prefixValue="event"
-      value="28.12.1972"
-    />
-    <Datepicker
-      format="sv"
-      id="sv-datepicker"
-      label="sv (swedish):"
-      prefixType="icon"
-      prefixValue="event"
-      value="1972-12-28"
-    />
-    <Datepicker
-      format="da"
-      id="da-datepicker"
-      label="da (danish):"
-      prefixType="icon"
-      prefixValue="event"
-      value="28.12.1972"
-    />
-    <Datepicker
-      format="fi"
-      id="fi-datepicker"
-      label="fi (finnish):"
-      prefixType="icon"
-      prefixValue="event"
-      value="28.12.1972"
-    />
-    <Datepicker
-      format="en"
-      id="en-datepicker"
-      label="en (english):"
-      prefixType="icon"
-      prefixValue="event"
-      value="28/12/1972"
-    />
-    <Datepicker
-      format="iso8601"
-      id="iso8601-datepicker"
-      label="iso8601 (robotic):"
-      prefixType="icon"
-      prefixValue="event"
-      value="1972-12-28"
-    />
-  </ComponentPreview>
-</Fragment>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="nb-datepicker"
+      >
+        nb (norwegian):
+      </label>
+      
+
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon "
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons material-icons-outlined"
+          >
+            event
+          </i>
+        </span>
+        
+
+        <input
+          className="form-control"
+          data-datepicker=""
+          data-datepicker-allowinput={null}
+          data-datepicker-format="nb"
+          data-datepicker-fulldate={null}
+          data-datepicker-max={null}
+          data-datepicker-min={null}
+          data-datepicker-mode={null}
+          data-datepicker-months={null}
+          data-datepicker-time={null}
+          data-datepicker-value="28.12.1972"
+          data-required={null}
+          id="nb-datepicker"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="sv-datepicker"
+      >
+        sv (swedish):
+      </label>
+      
+
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon "
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons material-icons-outlined"
+          >
+            event
+          </i>
+        </span>
+        
+
+        <input
+          className="form-control"
+          data-datepicker=""
+          data-datepicker-allowinput={null}
+          data-datepicker-format="sv"
+          data-datepicker-fulldate={null}
+          data-datepicker-max={null}
+          data-datepicker-min={null}
+          data-datepicker-mode={null}
+          data-datepicker-months={null}
+          data-datepicker-time={null}
+          data-datepicker-value="1972-12-28"
+          data-required={null}
+          id="sv-datepicker"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="da-datepicker"
+      >
+        da (danish):
+      </label>
+      
+
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon "
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons material-icons-outlined"
+          >
+            event
+          </i>
+        </span>
+        
+
+        <input
+          className="form-control"
+          data-datepicker=""
+          data-datepicker-allowinput={null}
+          data-datepicker-format="da"
+          data-datepicker-fulldate={null}
+          data-datepicker-max={null}
+          data-datepicker-min={null}
+          data-datepicker-mode={null}
+          data-datepicker-months={null}
+          data-datepicker-time={null}
+          data-datepicker-value="28.12.1972"
+          data-required={null}
+          id="da-datepicker"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="fi-datepicker"
+      >
+        fi (finnish):
+      </label>
+      
+
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon "
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons material-icons-outlined"
+          >
+            event
+          </i>
+        </span>
+        
+
+        <input
+          className="form-control"
+          data-datepicker=""
+          data-datepicker-allowinput={null}
+          data-datepicker-format="fi"
+          data-datepicker-fulldate={null}
+          data-datepicker-max={null}
+          data-datepicker-min={null}
+          data-datepicker-mode={null}
+          data-datepicker-months={null}
+          data-datepicker-time={null}
+          data-datepicker-value="28.12.1972"
+          data-required={null}
+          id="fi-datepicker"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="en-datepicker"
+      >
+        en (english):
+      </label>
+      
+
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon "
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons material-icons-outlined"
+          >
+            event
+          </i>
+        </span>
+        
+
+        <input
+          className="form-control"
+          data-datepicker=""
+          data-datepicker-allowinput={null}
+          data-datepicker-format="en"
+          data-datepicker-fulldate={null}
+          data-datepicker-max={null}
+          data-datepicker-min={null}
+          data-datepicker-mode={null}
+          data-datepicker-months={null}
+          data-datepicker-time={null}
+          data-datepicker-value="28/12/1972"
+          data-required={null}
+          id="en-datepicker"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="iso8601-datepicker"
+      >
+        iso8601 (robotic):
+      </label>
+      
+
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon "
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons material-icons-outlined"
+          >
+            event
+          </i>
+        </span>
+        
+
+        <input
+          className="form-control"
+          data-datepicker=""
+          data-datepicker-allowinput={null}
+          data-datepicker-format="iso8601"
+          data-datepicker-fulldate={null}
+          data-datepicker-max={null}
+          data-datepicker-min={null}
+          data-datepicker-mode={null}
+          data-datepicker-months={null}
+          data-datepicker-time={null}
+          data-datepicker-value="1972-12-28"
+          data-required={null}
+          id="iso8601-datepicker"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+                15
+                
+
+                16
+                
+
+                17
+                
+
+                18
+                
+
+                19
+                
+
+                20
+                
+
+                21
+                
+
+                22
+                
+
+                23
+                
+
+                24
+                
+
+                25
+                
+
+                26
+                
+
+                27
+                
+
+                28
+                
+
+                29
+                
+
+                30
+                
+
+                31
+                
+
+                32
+                
+
+                33
+                
+
+                34
+                
+
+                35
+                
+
+                36
+                
+
+                37
+                
+
+                38
+                
+
+                39
+                
+
+                40
+                
+
+                41
+                
+
+                42
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="form-group"&gt;
+                
+
+                    &lt;label for="nb-datepicker"&gt;nb (norwegian):&lt;/label&gt;
+                
+
+                    &lt;div class="input-group"&gt;
+                
+
+                        &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
+                
+
+                        &lt;input type="text" id="nb-datepicker" class="form-control" data-datepicker data-datepicker-format="nb" data-datepicker-value="28.12.1972" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+                &lt;div class="form-group"&gt;
+                
+
+                    &lt;label for="sv-datepicker"&gt;sv (swedish):&lt;/label&gt;
+                
+
+                    &lt;div class="input-group"&gt;
+                
+
+                        &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
+                
+
+                        &lt;input type="text" id="sv-datepicker" class="form-control" data-datepicker data-datepicker-format="sv" data-datepicker-value="1972-12-28" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+                &lt;div class="form-group"&gt;
+                
+
+                    &lt;label for="da-datepicker"&gt;da (danish):&lt;/label&gt;
+                
+
+                    &lt;div class="input-group"&gt;
+                
+
+                        &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
+                
+
+                        &lt;input type="text" id="da-datepicker" class="form-control" data-datepicker data-datepicker-format="da" data-datepicker-value="28.12.1972" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+                &lt;div class="form-group"&gt;
+                
+
+                    &lt;label for="fi-datepicker"&gt;fi (finnish):&lt;/label&gt;
+                
+
+                    &lt;div class="input-group"&gt;
+                
+
+                        &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
+                
+
+                        &lt;input type="text" id="fi-datepicker" class="form-control" data-datepicker data-datepicker-format="fi" data-datepicker-value="28.12.1972" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+                &lt;div class="form-group"&gt;
+                
+
+                    &lt;label for="en-datepicker"&gt;en (english):&lt;/label&gt;
+                
+
+                    &lt;div class="input-group"&gt;
+                
+
+                        &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
+                
+
+                        &lt;input type="text" id="en-datepicker" class="form-control" data-datepicker data-datepicker-format="en" data-datepicker-value="28/12/1972" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+                &lt;div class="form-group"&gt;
+                
+
+                    &lt;label for="iso8601-datepicker"&gt;iso8601 (robotic):&lt;/label&gt;
+                
+
+                    &lt;div class="input-group"&gt;
+                
+
+                        &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
+                
+
+                        &lt;input type="text" id="iso8601-datepicker" class="form-control" data-datepicker data-datepicker-format="iso8601" data-datepicker-value="1972-12-28" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Datepickers DateRange renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="date-range"
   >
     Date range
-  </h2>
+  </h2>,
   <p>
     You can make it possible to select a range of dates with 
-    <CodeTags
-      code="data-datepicker-mode=\\"range\\""
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      data-datepicker-mode="range"
+    </code>
     .
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <Datepicker
-      format="nb"
-      id="date-range-datepicker"
-      label="date"
-      min="10.12.1972"
-      mode="range"
-      prefixType="icon"
-      prefixValue="event"
-    />
-  </ComponentPreview>
-</Fragment>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="date-range-datepicker"
+      >
+        date
+      </label>
+      
+
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon "
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons material-icons-outlined"
+          >
+            event
+          </i>
+        </span>
+        
+
+        <input
+          className="form-control"
+          data-datepicker=""
+          data-datepicker-allowinput={null}
+          data-datepicker-format="nb"
+          data-datepicker-fulldate={null}
+          data-datepicker-max={null}
+          data-datepicker-min="10.12.1972"
+          data-datepicker-mode="range"
+          data-datepicker-months={null}
+          data-datepicker-time={null}
+          data-datepicker-value={null}
+          data-required={null}
+          id="date-range-datepicker"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="form-group"&gt;
+                
+
+                    &lt;label for="date-range-datepicker"&gt;date&lt;/label&gt;
+                
+
+                    &lt;div class="input-group"&gt;
+                
+
+                        &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
+                
+
+                        &lt;input type="text" id="date-range-datepicker" class="form-control" data-datepicker data-datepicker-format="nb" data-datepicker-min="10.12.1972" data-datepicker-mode="range" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Datepickers HumanReadable renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="human-readable"
   >
     Human readable date
-  </h2>
+  </h2>,
   <p>
     If you wish to make the date more readable to humans you can add 
-    <CodeTags
-      code="data-datepicker-fulldate=\\"true\\""
-      type="secondary"
-    />
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      data-datepicker-fulldate="true"
+    </code>
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <Datepicker
-      fulldate={true}
-      id="init-value-datepicker"
-      label="Date"
-      prefixType="icon"
-      prefixValue="event"
-      value="1972-12-28"
-    />
-  </ComponentPreview>
-</Fragment>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="init-value-datepicker"
+      >
+        Date
+      </label>
+      
+
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon "
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons material-icons-outlined"
+          >
+            event
+          </i>
+        </span>
+        
+
+        <input
+          className="form-control"
+          data-datepicker=""
+          data-datepicker-allowinput={null}
+          data-datepicker-format={null}
+          data-datepicker-fulldate={true}
+          data-datepicker-max={null}
+          data-datepicker-min={null}
+          data-datepicker-mode={null}
+          data-datepicker-months={null}
+          data-datepicker-time={null}
+          data-datepicker-value="1972-12-28"
+          data-required={null}
+          id="init-value-datepicker"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="form-group"&gt;
+                
+
+                    &lt;label for="init-value-datepicker"&gt;Date&lt;/label&gt;
+                
+
+                    &lt;div class="input-group"&gt;
+                
+
+                        &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
+                
+
+                        &lt;input type="text" id="init-value-datepicker" class="form-control" data-datepicker data-datepicker-value="1972-12-28" data-datepicker-fulldate="true" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Datepickers IncludeTime renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="include-time"
   >
     Include time
-  </h2>
+  </h2>,
   <p>
     Adding time to your datepicker is as easy as using 
-    <CodeTags
-      code="data-datepicker-time=\\"true\\" "
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      data-datepicker-time="true" 
+    </code>
     . If you wish to set a default time for the time picker just include it in the 
-    <CodeTags
-      code="data-datepicker-value"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      data-datepicker-value
+    </code>
      attribute.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <Datepicker
-      format="nb"
-      id="include-time-datepicker"
-      label="Date"
-      prefixType="icon"
-      prefixValue="event"
-      time={true}
-    />
-  </ComponentPreview>
-</Fragment>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="include-time-datepicker"
+      >
+        Date
+      </label>
+      
+
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon "
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons material-icons-outlined"
+          >
+            event
+          </i>
+        </span>
+        
+
+        <input
+          className="form-control"
+          data-datepicker=""
+          data-datepicker-allowinput={null}
+          data-datepicker-format="nb"
+          data-datepicker-fulldate={null}
+          data-datepicker-max={null}
+          data-datepicker-min={null}
+          data-datepicker-mode={null}
+          data-datepicker-months={null}
+          data-datepicker-time={true}
+          data-datepicker-value={null}
+          data-required={null}
+          id="include-time-datepicker"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="form-group"&gt;
+                
+
+                    &lt;label for="include-time-datepicker"&gt;Date&lt;/label&gt;
+                
+
+                    &lt;div class="input-group"&gt;
+                
+
+                        &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
+                
+
+                        &lt;input type="text" id="include-time-datepicker" class="form-control" data-datepicker data-datepicker-format="nb" data-datepicker-time="true" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Datepickers InitialValue renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="initial-value"
   >
     Initial value
-  </h2>
+  </h2>,
   <p>
     If you want to set an initial value for your datepicker use 
-    <CodeTags
-      code="data-datepicker-value=\\"{your-date}\\""
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      data-datepicker-value="{your-date}"
+    </code>
     .
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <Datepicker
-      id="init-value-datepicker"
-      label="Date"
-      prefixType="icon"
-      prefixValue="event"
-      value="1972-12-28"
-    />
-  </ComponentPreview>
-</Fragment>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="init-value-datepicker"
+      >
+        Date
+      </label>
+      
+
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon "
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons material-icons-outlined"
+          >
+            event
+          </i>
+        </span>
+        
+
+        <input
+          className="form-control"
+          data-datepicker=""
+          data-datepicker-allowinput={null}
+          data-datepicker-format={null}
+          data-datepicker-fulldate={null}
+          data-datepicker-max={null}
+          data-datepicker-min={null}
+          data-datepicker-mode={null}
+          data-datepicker-months={null}
+          data-datepicker-time={null}
+          data-datepicker-value="1972-12-28"
+          data-required={null}
+          id="init-value-datepicker"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="form-group"&gt;
+                
+
+                    &lt;label for="init-value-datepicker"&gt;Date&lt;/label&gt;
+                
+
+                    &lt;div class="input-group"&gt;
+                
+
+                        &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
+                
+
+                        &lt;input type="text" id="init-value-datepicker" class="form-control" data-datepicker data-datepicker-value="1972-12-28" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Datepickers JavascriptMethods renders 1`] = `
@@ -335,26 +1534,28 @@ exports[`Documentation: Datepickers MultipleDates renders 1`] = `
 `;
 
 exports[`Documentation: Datepickers Options renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="available-options"
   >
     Available options
-  </h2>
+  </h2>,
   <p>
     Options available through 
-    <CodeTags
-      code="data-datepicker"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      data-datepicker
+    </code>
     ...
-  </p>
-   Keep in mind that setting any of these values will render them true, so setting an attribute to 
-  <CodeTags
-    code="false"
-    type="secondary"
-  />
-   will still render it true.
+  </p>,
+  " Keep in mind that setting any of these values will render them true, so setting an attribute to ",
+  <code
+    className="code-tags code-tags-secondary"
+  >
+    false
+  </code>,
+  " will still render it true.",
   <table
     className="table table-striped"
   >
@@ -374,16 +1575,18 @@ exports[`Documentation: Datepickers Options renders 1`] = `
     <tbody>
       <tr>
         <td>
-          <CodeTags
-            code="data-datepicker-value"
-            type="secondary"
-          />
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            data-datepicker-value
+          </code>
         </td>
         <td>
-          <CodeTags
-            code="null"
-            type="secondary"
-          />
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            null
+          </code>
         </td>
         <td>
           Value used to initialize calendar. Set this value with the same format currently set for the datepicker (including time if you have enabled that).
@@ -391,10 +1594,11 @@ exports[`Documentation: Datepickers Options renders 1`] = `
       </tr>
       <tr>
         <td>
-          <CodeTags
-            code="data-datepicker-allowinput"
-            type="secondary"
-          />
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            data-datepicker-allowinput
+          </code>
         </td>
         <td />
         <td>
@@ -403,16 +1607,18 @@ exports[`Documentation: Datepickers Options renders 1`] = `
       </tr>
       <tr>
         <td>
-          <CodeTags
-            code="data-datepicker-format"
-            type="secondary"
-          />
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            data-datepicker-format
+          </code>
         </td>
         <td>
-          <CodeTags
-            code="iso8601"
-            type="secondary"
-          />
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            iso8601
+          </code>
         </td>
         <td>
           <p>
@@ -427,55 +1633,61 @@ exports[`Documentation: Datepickers Options renders 1`] = `
             <li
               className="mb-sm"
             >
-              <CodeTags
-                code="nb"
-                type="secondary"
-              />
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                nb
+              </code>
               : DD.MM.YYYY
             </li>
             <li
               className="mb-sm"
             >
-              <CodeTags
-                code="sv"
-                type="secondary"
-              />
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                sv
+              </code>
               : YYYY-MM-DD
             </li>
             <li
               className="mb-sm"
             >
-              <CodeTags
-                code="da"
-                type="secondary"
-              />
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                da
+              </code>
               : DD.MM.YYYY
             </li>
             <li
               className="mb-sm"
             >
-              <CodeTags
-                code="fi"
-                type="secondary"
-              />
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                fi
+              </code>
               : DD.MM.YYYY
             </li>
             <li
               className="mb-sm"
             >
-              <CodeTags
-                code="en"
-                type="secondary"
-              />
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                en
+              </code>
               : DD/MM/YYYY
             </li>
             <li
               className="mb-sm"
             >
-              <CodeTags
-                code="iso8601"
-                type="secondary"
-              />
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                iso8601
+              </code>
               : YYYY-MM-DD (default)
             </li>
           </ul>
@@ -483,16 +1695,18 @@ exports[`Documentation: Datepickers Options renders 1`] = `
       </tr>
       <tr>
         <td>
-          <CodeTags
-            code="data-datepicker-time"
-            type="secondary"
-          />
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            data-datepicker-time
+          </code>
         </td>
         <td>
-          <CodeTags
-            code="false"
-            type="secondary"
-          />
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            false
+          </code>
         </td>
         <td>
           If the calendar shows the current time and allows you to change it using a dropdown.
@@ -500,16 +1714,18 @@ exports[`Documentation: Datepickers Options renders 1`] = `
       </tr>
       <tr>
         <td>
-          <CodeTags
-            code="data-datepicker-months"
-            type="secondary"
-          />
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            data-datepicker-months
+          </code>
         </td>
         <td>
-          <CodeTags
-            code="1"
-            type="secondary"
-          />
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            1
+          </code>
         </td>
         <td>
           Number of months to display in the datepicker.
@@ -517,16 +1733,18 @@ exports[`Documentation: Datepickers Options renders 1`] = `
       </tr>
       <tr>
         <td>
-          <CodeTags
-            code="data-datepicker-min"
-            type="secondary"
-          />
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            data-datepicker-min
+          </code>
         </td>
         <td>
-          <CodeTags
-            code="null"
-            type="secondary"
-          />
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            null
+          </code>
         </td>
         <td>
           Disallow dates before min.
@@ -534,16 +1752,18 @@ exports[`Documentation: Datepickers Options renders 1`] = `
       </tr>
       <tr>
         <td>
-          <CodeTags
-            code="data-datepicker-max"
-            type="secondary"
-          />
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            data-datepicker-max
+          </code>
         </td>
         <td>
-          <CodeTags
-            code="null"
-            type="secondary"
-          />
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            null
+          </code>
         </td>
         <td>
           Disallow dates past max.
@@ -551,10 +1771,11 @@ exports[`Documentation: Datepickers Options renders 1`] = `
       </tr>
       <tr>
         <td>
-          <CodeTags
-            code="data-datepicker-altinput"
-            type="secondary"
-          />
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            data-datepicker-altinput
+          </code>
         </td>
         <td />
         <td>
@@ -563,16 +1784,18 @@ exports[`Documentation: Datepickers Options renders 1`] = `
       </tr>
       <tr>
         <td>
-          <CodeTags
-            code="data-datepicker-mode"
-            type="secondary"
-          />
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            data-datepicker-mode
+          </code>
         </td>
         <td>
-          <CodeTags
-            code="single"
-            type="secondary"
-          />
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            single
+          </code>
         </td>
         <td>
           Different variations of date selection. Available options are:
@@ -582,141 +1805,537 @@ exports[`Documentation: Datepickers Options renders 1`] = `
             <li
               className="mb-sm"
             >
-              <CodeTags
-                code="single"
-                type="secondary"
-              />
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                single
+              </code>
               User can select one date
             </li>
             <li
               className="mb-sm"
             >
-              <CodeTags
-                code="multiple"
-                type="secondary"
-              />
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                multiple
+              </code>
               User can select multiple dates
             </li>
             <li
               className="mb-sm"
             >
-              <CodeTags
-                code="range"
-                type="secondary"
-              />
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                range
+              </code>
               User can select a range of continuous dates
             </li>
           </ul>
         </td>
       </tr>
     </tbody>
-  </table>
-</Fragment>
+  </table>,
+]
 `;
 
 exports[`Documentation: Datepickers ShowingMultipleMonths renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="showing-multiple-months"
   >
     Showing multiple months
-  </h2>
+  </h2>,
   <p>
     If you need to show more than one month in your date picker use the attribute 
-    <CodeTags
-      code="data-datepicker-months=\\"{number}\\""
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      data-datepicker-months="{number}"
+    </code>
     .
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <Datepicker
-      id="multiple-months-datepicker"
-      label="Date"
-      months="2"
-      prefixType="icon"
-      prefixValue="event"
-    />
-  </ComponentPreview>
-</Fragment>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="multiple-months-datepicker"
+      >
+        Date
+      </label>
+      
+
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon "
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons material-icons-outlined"
+          >
+            event
+          </i>
+        </span>
+        
+
+        <input
+          className="form-control"
+          data-datepicker=""
+          data-datepicker-allowinput={null}
+          data-datepicker-format={null}
+          data-datepicker-fulldate={null}
+          data-datepicker-max={null}
+          data-datepicker-min={null}
+          data-datepicker-mode={null}
+          data-datepicker-months="2"
+          data-datepicker-time={null}
+          data-datepicker-value={null}
+          data-required={null}
+          id="multiple-months-datepicker"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="form-group"&gt;
+                
+
+                    &lt;label for="multiple-months-datepicker"&gt;Date&lt;/label&gt;
+                
+
+                    &lt;div class="input-group"&gt;
+                
+
+                        &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
+                
+
+                        &lt;input type="text" id="multiple-months-datepicker" class="form-control" data-datepicker data-datepicker-months="2" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Datepickers SimpleDatepicker renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="simple-datepicker"
   >
     Simple datepicker
-  </h2>
+  </h2>,
   <p>
     A basic datepicker can be made by applying the attribute 
-    <CodeTags
-      code="data-datepicker"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      data-datepicker
+    </code>
      to an input element inside a 
-    <CodeTags
-      code=".form-group"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .form-group
+    </code>
     . The basic datepicker has a read-only input field.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <Datepicker
-      id="simple-datepicker"
-      label="Date"
-      prefixType="icon"
-      prefixValue="event"
-    />
-  </ComponentPreview>
-</Fragment>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="simple-datepicker"
+      >
+        Date
+      </label>
+      
+
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon "
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons material-icons-outlined"
+          >
+            event
+          </i>
+        </span>
+        
+
+        <input
+          className="form-control"
+          data-datepicker=""
+          data-datepicker-allowinput={null}
+          data-datepicker-format={null}
+          data-datepicker-fulldate={null}
+          data-datepicker-max={null}
+          data-datepicker-min={null}
+          data-datepicker-mode={null}
+          data-datepicker-months={null}
+          data-datepicker-time={null}
+          data-datepicker-value={null}
+          data-required={null}
+          id="simple-datepicker"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="form-group"&gt;
+                
+
+                    &lt;label for="simple-datepicker"&gt;Date&lt;/label&gt;
+                
+
+                    &lt;div class="input-group"&gt;
+                
+
+                        &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
+                
+
+                        &lt;input type="text" id="simple-datepicker" class="form-control" data-datepicker /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Datepickers ValidDates renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="valid-dates"
   >
     Valid dates
-  </h2>
+  </h2>,
   <p>
     You can set a range of available dates to select from by using 
-    <CodeTags
-      code="data-datepicker-min"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      data-datepicker-min
+    </code>
      and 
-    <CodeTags
-      code="data-datepicker-max"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      data-datepicker-max
+    </code>
     .
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <Datepicker
-      format="nb"
-      id="valid-dates-datepicker"
-      label="Date"
-      max="10.05.2017"
-      min="28.12.1972"
-      prefixType="icon"
-      prefixValue="event"
-      value="28.12.1972"
-    />
-  </ComponentPreview>
-</Fragment>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="valid-dates-datepicker"
+      >
+        Date
+      </label>
+      
+
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon "
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons material-icons-outlined"
+          >
+            event
+          </i>
+        </span>
+        
+
+        <input
+          className="form-control"
+          data-datepicker=""
+          data-datepicker-allowinput={null}
+          data-datepicker-format="nb"
+          data-datepicker-fulldate={null}
+          data-datepicker-max="10.05.2017"
+          data-datepicker-min="28.12.1972"
+          data-datepicker-mode={null}
+          data-datepicker-months={null}
+          data-datepicker-time={null}
+          data-datepicker-value="28.12.1972"
+          data-required={null}
+          id="valid-dates-datepicker"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="form-group"&gt;
+                
+
+                    &lt;label for="valid-dates-datepicker"&gt;Date&lt;/label&gt;
+                
+
+                    &lt;div class="input-group"&gt;
+                
+
+                        &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
+                
+
+                        &lt;input type="text" id="valid-dates-datepicker" class="form-control" data-datepicker data-datepicker-format="nb" data-datepicker-min="28.12.1972" data-datepicker-max="10.05.2017" data-datepicker-value="28.12.1972" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Datepickers renders 1`] = `
