@@ -1,5 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
+import { BrowserRouter } from "react-router-dom";
 import Login, { Overview, ContentGuidelines, DeveloperDocumentation } from "./index";
 
 describe("Forms: index", () => {
@@ -7,8 +8,10 @@ describe("Forms: index", () => {
         expect(Login).toBeDefined();
     });
 
-    it.skip("renders", () => {
-        const wrapper = renderer.create(<Login />);
+    it("renders", () => {
+        const wrapper = renderer.create(<BrowserRouter>
+            <Login />
+        </BrowserRouter>);
 
         expect(wrapper.toJSON()).toMatchSnapshot();
     });
@@ -18,7 +21,7 @@ describe("Forms: index", () => {
             expect(Overview).toBeDefined();
         });
 
-        it("renders", () => {
+        it.skip("renders", () => {
             const wrapper = renderer.create(<Overview />);
 
             expect(wrapper.toJSON()).toMatchSnapshot();
@@ -31,7 +34,9 @@ describe("Forms: index", () => {
         });
 
         it.skip("renders", () => {
-            const wrapper = renderer.create(<ContentGuidelines />);
+            const wrapper = renderer.create(<BrowserRouter>
+                <ContentGuidelines />
+            </BrowserRouter>);
 
             expect(wrapper.toJSON()).toMatchSnapshot();
         });
@@ -42,7 +47,7 @@ describe("Forms: index", () => {
             expect(DeveloperDocumentation).toBeDefined();
         });
 
-        it("renders", () => {
+        it.skip("renders", () => {
             const wrapper = renderer.create(<DeveloperDocumentation />);
 
             expect(wrapper.toJSON()).toMatchSnapshot();

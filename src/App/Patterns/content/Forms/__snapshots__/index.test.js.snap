@@ -1,323 +1,717 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Forms: index ContentGuidelines renders 1`] = `
-<section>
-  <h2
-    id="content-guidelines"
-  >
-    Content guidelines
-  </h2>
+exports[`Forms: index renders 1`] = `
+<div
+  className="row"
+>
   <div
-    className="slab slab-plain py-5 px-0"
+    className="doc-body col-12"
+    id="doc-body"
   >
-    <div
-      className="col-12 col-sm-6 m-auto"
+    <p
+      className="lead"
     >
-      <h3
-        className="mb-0"
-      >
-        Title
-      </h3>
-      <div
-        className="slab slab-funny flat slab-edges d-flex justify-content-center mb-0 py-2 extra-small"
-      >
-        32px
-      </div>
-      <InputGroup
-        className="mb-0"
-        helpBlock="Hint text"
-        hintTextId="forms-hint-text-example"
-        id="guideline-input-example"
-        label="Input label"
-        placeholder="Placeholder text"
-        type="text"
-      />
-      <div
-        className="slab slab-funny flat slab-edges d-flex justify-content-center mb-0 py-1 extra-small"
-      >
-        24px
-      </div>
-      <InputGroup
-        className="mb-0"
-        id="guideline-select-example"
-        label="Label"
-        optional={true}
-        placeholder="Select an option"
-        selectOptions={
-          Array [
-            "Option 1",
-            "Option 2",
-          ]
-        }
-        type="select"
-      />
-      <div
-        className="slab slab-funny flat slab-edges d-flex justify-content-center mb-0 py-1 extra-small"
-      >
-        24px
-      </div>
-      <Radio
-        className="mb-0 forms-radio-example"
-        expandingHintId="expanding-forms-radio-example"
-        expandingHintTitle="Expander hint text"
-        group={true}
-        groupTitle="Input label"
-        name="guidelines-radio-example"
-        options={
-          Array [
-            Object {
-              "checked": true,
-              "id": "guidelines-options-1",
-              "label": "Option 1",
-            },
-            Object {
-              "id": "guidelines-options-2",
-              "label": "Option 2",
-            },
-            Object {
-              "id": "guidelines-options-3",
-              "label": "Option 3",
-            },
-          ]
-        }
-      />
-      <div
-        className="slab slab-funny flat slab-edges d-flex justify-content-center mb-0 py-2 extra-small"
-      >
-        32px
-      </div>
-      <div
-        className="d-flex"
-      >
-        <Button
-          className="mr-3"
-          label="Submit"
-          type="primary"
-        />
-        <Button
-          label="Cancel"
-          type="link"
-        />
-      </div>
-    </div>
-  </div>
-  <p>
-    Form are comprised of some or all of the following elements:
-  </p>
-  <ul
-    className="list list-bullet"
-  >
-    <li
-      key="Headings"
-    >
-      <b>
-        Headings
-      </b>
-       
-      A title should be used to describe the form and section headings to describe sections within the form.
-    </li>
-    <li
-      key="Labels"
-    >
-      <b>
-        Labels
-      </b>
-       
-      Input labels help users understand what information to provide in the corresponding input.
-    </li>
-    <li
-      key="Input fields"
-    >
-      <b>
-        Input fields
-      </b>
-       
-      <Link
-        to="/components/input-field"
-      >
-        Input fields
-      </Link>
-       enable users to input free-form text.
-    </li>
-    <li
-      key="Data inputs"
-    >
-      <b>
-        Data inputs
-      </b>
-       
-      Information can be entered a variety of non-free form input field, 
-      <Link
-        to="/components/checkbox"
-      >
-        checkboxes
-      </Link>
-      , 
-      <Link
-        to="/components/radio-button"
-      >
-        radio button
-      </Link>
-      , 
-      <Link
-        to="/components/select"
-      >
-        select
-      </Link>
-      , 
-      <Link
-        to="/components/datepickers"
-      >
-        date pickers
-      </Link>
-      , 
-      <Link
-        to="/components/togglebox"
-      >
-        toggle-box
-      </Link>
-       and 
-      <Link
-        to="/components/rangeslider"
-      >
-        rangesliders
-      </Link>
-      .
-    </li>
-    <li
-      key="Hints"
-    >
-      <b>
-        Hints
-      </b>
-       
-      Provides in-context guidance for the user through an always visible hint text or hint expander which displays more information when expanded.
-    </li>
-    <li
-      key="Buttons"
-    >
-      <b>
-        Buttons
-      </b>
-       
-      <Link
-        to="/components/buttons"
-      >
-        Buttons
-      </Link>
-       allows users to submit or exit a form, use a primary button for the main action, secondary button for secondary actions and a link button to cancel.
-    </li>
-  </ul>
-  <h3>
-    Spacing
-  </h3>
-  <p>
-    As a general rule, we recommend a vertical spacing between individual inputs of 24px and a 32px spacer before the first input, between sections and between the last input and the buttons. This may vary depending on your context, but spacing between groups should always be adjusted in relationship to spacing between individual items. 
-  </p>
-</section>
-`;
-
-exports[`Forms: index DeveloperDocumentation renders 1`] = `
-<section>
-  <h2
-    id="developer-documentation"
-  >
-    Developer documentation
-  </h2>
-  <section>
-    <h3>
-      Errors and validation
-    </h3>
-    <p>
-      To use our validation, start by adding the attribute 
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        novalidate
-      </code>
-       to your 
-      <code
-        className="code-tags code-tags-primary"
-      >
-        &lt;form&gt;
-      </code>
-       element. If you wish to validate your entire form, add the 
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        validate
-      </code>
-       attribute to the 
-      <code
-        className="code-tags code-tags-primary"
-      >
-        &lt;form&gt;
-      </code>
-       tag, if not add it to the desired 
-      <code
-        className="code-tags code-tags-primary"
-      >
-        &lt;input&gt;
-      </code>
-       tags. This will validate against 
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        required
-      </code>
-       and 
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        pattern
-      </code>
-      , where pattern will override default patterns.
+      A form is a collection of input components that allows users to provide and submit data.
     </p>
-    <b
-      className="brand-headline"
-    >
-      Client-side validation
-    </b>
-    <p>
-      Use client-side validation to validate as much data as possible before the user submits the form. Common errors include empty required fields, invalid characters or incorrect input format. To give users inline validation feedback insert a error message within the 
-      <code
-        className="code-tags code-tags-primary"
+    <section>
+      <h2
+        id="overview"
       >
-        form-group
-      </code>
-       in the 
-      <code
-        className="code-tags code-tags-primary"
-      >
-        help-block
-      </code>
-       element in the attribute 
-      <code
-        className="code-tags code-tags-primary"
-      >
-        data-error
-      </code>
-      .
-    </p>
-    <div
-      className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
-    >
+        Overview
+      </h2>
+      <p>
+        A form can include different type of user input components that can be arranged in different ways depending on your specific context and needs. You might for example design a form for a user to sign up for or log into an account, register for a service, reconfigure settings, take a survey, purchase a product or provide feedback.
+      </p>
       <div
-        className="showcase-panel"
-        style={null}
+        className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
       >
         <div
-          className="col-12 col-sm-6 m-auto pt-3"
+          className="showcase-panel showcase-panel-advanced"
+          id="overview-forms"
         >
           <div
-            className="form-group has-error"
+            className="tabs tabs-scroll"
+            id="overview-forms-tabs"
+          >
+            <ul
+              id="overview-forms-tabs-ul"
+            >
+              <li
+                className="active"
+              >
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Form
+                </a>
+              </li>
+              <li
+                className="null"
+              >
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  Multi-step form
+                </a>
+              </li>
+            </ul>
+            <div
+              className="options-open  d-none "
+            >
+              <button
+                aria-label="Open options menu"
+                className="open-options-menu d-flex"
+                onClick={[Function]}
+              >
+                <i
+                  className="material-icons"
+                >
+                  menu_open
+                </i>
+              </button>
+            </div>
+          </div>
+          <div
+            className="d-flex"
+          >
+            <div
+              className="d-flex flex-column flex-fill"
+            >
+              <div
+                className="component-preview flex-fill"
+              >
+                <div
+                  className="component-preview-content editable-preview"
+                  style={
+                    Object {
+                      "--preview-min-height": "750px",
+                    }
+                  }
+                >
+                  <div
+                    className="sp-stack sp-c-euXojQ sp-preview"
+                  >
+                    <div
+                      className="sp-preview-container sp-c-bIhyHd"
+                    >
+                      <iframe
+                        className="sp-preview-iframe sp-c-fgviib"
+                        style={
+                          Object {
+                            "height": undefined,
+                          }
+                        }
+                        title="Sandpack Preview"
+                      />
+                      <div
+                        className="sp-preview-actions sp-c-eKnQtg"
+                      >
+                        <a
+                          className="sp-button sp-icon-standalone sp-c-dRhJti sp-c-gMfcns sp-c-eXsQzS"
+                          href="https://codesandbox.io/api/v1/sandboxes/define?undefined"
+                          rel="noreferrer noopener"
+                          target="_blank"
+                          title="Open in CodeSandbox"
+                        >
+                          <svg
+                            fill="none"
+                            height="16"
+                            stroke="currentColor"
+                            viewBox="0 0 16 16"
+                            width="16"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <title>
+                              Open on CodeSandbox
+                            </title>
+                            <path
+                              d="M6.66665 3.33337H4.33331C3.78103 3.33337 3.33331 3.78109 3.33331 4.33337V11.6667C3.33331 12.219 3.78103 12.6667 4.33331 12.6667H11.6666C12.2189 12.6667 12.6666 12.219 12.6666 11.6667V9.33337"
+                              strokeLinecap="round"
+                            />
+                            <path
+                              d="M10 3.33337H12.5667C12.6219 3.33337 12.6667 3.37815 12.6667 3.43337V6.00004"
+                              strokeLinecap="round"
+                            />
+                            <path
+                              d="M7.33331 8.66668L12.5333 3.46667"
+                              strokeLinecap="round"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="component-description"
+              >
+                <h3>
+                  Form
+                </h3>
+                This in an example of a single page contact form using a collection of components including input fields, select list, checkbox and button.
+              </div>
+            </div>
+            <div
+              className="options  d-none"
+            >
+              <div
+                className="options-header"
+              >
+                Options
+                <button
+                  aria-label="Close options menu"
+                  className="options-close d-flex"
+                  onClick={[Function]}
+                >
+                  <i
+                    className="material-icons"
+                  >
+                    close
+                  </i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="sp-stack sp-c-euXojQ sp-editor"
+        >
+          <div
+            className="sp-code-editor sp-c-bNbSGz"
+          >
+            <div
+              aria-autocomplete="list"
+              aria-label="Code Editor for index.html"
+              aria-multiline="true"
+              className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+              onKeyDown={[Function]}
+              role="textbox"
+              suppressHydrationWarning={true}
+              tabIndex={0}
+              translate="no"
+            >
+              <pre
+                className="sp-pre-placeholder sp-c-fWymNx"
+                style={
+                  Object {
+                    "marginLeft": "var(--sp-space-5)",
+                  }
+                }
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2
+        id="content-guidelines"
+      >
+        Content guidelines
+      </h2>
+      <div
+        className="slab slab-plain py-5 px-0"
+      >
+        <div
+          className="col-12 col-sm-6 m-auto"
+        >
+          <h3
+            className="mb-0"
+          >
+            Title
+          </h3>
+          <div
+            className="slab slab-funny flat slab-edges d-flex justify-content-center mb-0 py-2 extra-small"
+          >
+            32px
+          </div>
+          <div
+            className="form-group mb-0"
           >
             
 
             <label
-              htmlFor="input-error-client-example"
+              htmlFor="guideline-input-example"
             >
-              Email
+              Input label
+            </label>
+            
+
+            <input
+              aria-describedby="forms-hint-text-example"
+              autoComplete={null}
+              className="form-control"
+              data-validate={null}
+              defaultValue=""
+              disabled={null}
+              id="guideline-input-example"
+              pattern={null}
+              readOnly={null}
+              required={null}
+              type="text"
+            />
+            
+
+            <p
+              className="hint-text"
+              id="hint-text"
+            >
+              Hint text
+            </p>
+            
+
+          </div>
+          <div
+            className="slab slab-funny flat slab-edges d-flex justify-content-center mb-0 py-1 extra-small"
+          >
+            24px
+          </div>
+          <div
+            className="form-group mb-0"
+          >
+            
+
+            <label
+              htmlFor="guideline-select-example"
+            >
+              Label
+               (optional)
+            </label>
+            
+
+            <select
+              aria-describedby={null}
+              className="form-control"
+              defaultValue=""
+              disabled={null}
+              id="guideline-select-example"
+              readOnly={null}
+              required={null}
+            >
+              
+		
+              <option
+                value="Option 1"
+              >
+                Option 1
+              </option>
+              
+		
+              <option
+                value="Option 2"
+              >
+                Option 2
+              </option>
+              
+              
+	
+            </select>
+            
+
+          </div>
+          <div
+            className="slab slab-funny flat slab-edges d-flex justify-content-center mb-0 py-1 extra-small"
+          >
+            24px
+          </div>
+          <form>
+            <fieldset
+              className="radio-group mb-0 forms-radio-example"
+            >
+              
+
+              <legend>
+                Input label
+                 
+              </legend>
+              
+
+              <div
+                className="radio"
+              >
+                
+
+                <input
+                  aria-describedby=" undefined"
+                  defaultChecked={true}
+                  disabled={null}
+                  id="guidelines-options-1"
+                  name="guidelines-radio-example"
+                  type="radio"
+                />
+                
+
+                <label
+                  htmlFor="guidelines-options-1"
+                >
+                  Option 1
+                </label>
+                
+
+              </div>
+              <div
+                className="radio"
+              >
+                
+
+                <input
+                  aria-describedby=" undefined"
+                  disabled={null}
+                  id="guidelines-options-2"
+                  name="guidelines-radio-example"
+                  type="radio"
+                />
+                
+
+                <label
+                  htmlFor="guidelines-options-2"
+                >
+                  Option 2
+                </label>
+                
+
+              </div>
+              <div
+                className="radio"
+              >
+                
+
+                <input
+                  aria-describedby=" undefined"
+                  disabled={null}
+                  id="guidelines-options-3"
+                  name="guidelines-radio-example"
+                  type="radio"
+                />
+                
+
+                <label
+                  htmlFor="guidelines-options-3"
+                >
+                  Option 3
+                </label>
+                
+
+              </div>
+              <div
+                className="hint-text-expander"
+              >
+                
+
+                <button
+                  aria-expanded={false}
+                  type="button"
+                >
+                  
+
+                  <span
+                    className="material-icons arrow"
+                  >
+                    keyboard_arrow_down
+                  </span>
+                  Expander hint text
+                  
+
+                </button>
+                
+
+                <p
+                  aria-hidden={true}
+                  className="content"
+                >
+                  Additional information if text is long!
+                </p>
+                
+
+              </div>
+            </fieldset>
+          </form>
+          <div
+            className="slab slab-funny flat slab-edges d-flex justify-content-center mb-0 py-2 extra-small"
+          >
+            32px
+          </div>
+          <div
+            className="d-flex"
+          >
+            <button
+              active={null}
+              aria-disabled={null}
+              aria-label={null}
+              aria-pressed={null}
+              className="btn btn-primary mr-3"
+              role={null}
+              tabIndex={null}
+              title={null}
+              type="button"
+            >
+              Submit
+            </button>
+            <button
+              active={null}
+              aria-disabled={null}
+              aria-label={null}
+              aria-pressed={null}
+              className="btn btn-link"
+              role={null}
+              tabIndex={null}
+              title={null}
+              type="button"
+            >
+              <span>
+                Cancel
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <p>
+        Form are comprised of some or all of the following elements:
+      </p>
+      <ul
+        className="list list-bullet"
+      >
+        <li>
+          <b>
+            Headings
+          </b>
+           
+          A title should be used to describe the form and section headings to describe sections within the form.
+        </li>
+        <li>
+          <b>
+            Labels
+          </b>
+           
+          Input labels help users understand what information to provide in the corresponding input.
+        </li>
+        <li>
+          <b>
+            Input fields
+          </b>
+           
+          <a
+            href="/components/input-field"
+            onClick={[Function]}
+          >
+            Input fields
+          </a>
+           enable users to input free-form text.
+        </li>
+        <li>
+          <b>
+            Data inputs
+          </b>
+           
+          Information can be entered a variety of non-free form input field, 
+          <a
+            href="/components/checkbox"
+            onClick={[Function]}
+          >
+            checkboxes
+          </a>
+          , 
+          <a
+            href="/components/radio-button"
+            onClick={[Function]}
+          >
+            radio button
+          </a>
+          , 
+          <a
+            href="/components/select"
+            onClick={[Function]}
+          >
+            select
+          </a>
+          , 
+          <a
+            href="/components/datepickers"
+            onClick={[Function]}
+          >
+            date pickers
+          </a>
+          , 
+          <a
+            href="/components/togglebox"
+            onClick={[Function]}
+          >
+            toggle-box
+          </a>
+           and 
+          <a
+            href="/components/rangeslider"
+            onClick={[Function]}
+          >
+            rangesliders
+          </a>
+          .
+        </li>
+        <li>
+          <b>
+            Hints
+          </b>
+           
+          Provides in-context guidance for the user through an always visible hint text or hint expander which displays more information when expanded.
+        </li>
+        <li>
+          <b>
+            Buttons
+          </b>
+           
+          <a
+            href="/components/buttons"
+            onClick={[Function]}
+          >
+            Buttons
+          </a>
+           allows users to submit or exit a form, use a primary button for the main action, secondary button for secondary actions and a link button to cancel.
+        </li>
+      </ul>
+      <h3>
+        Spacing
+      </h3>
+      <p>
+        As a general rule, we recommend a vertical spacing between individual inputs of 24px and a 32px spacer before the first input, between sections and between the last input and the buttons. This may vary depending on your context, but spacing between groups should always be adjusted in relationship to spacing between individual items. 
+      </p>
+    </section>
+    <section>
+      <h2
+        id="layout"
+      >
+        How to design forms
+      </h2>
+      <section>
+        <h3>
+          Layout
+        </h3>
+        <p>
+          Forms should be designed vertically as this improves their readability. When possible, a form should be one column, but information can be presented in multiple columns if they are grouped together (e.g. address fields).
+        </p>
+        <p>
+          Do not make an input full width of a desktop viewport, use the grid to restrict the width of the inputs to no more than half of the viewport. The field widths should reflect the intended length of the content while still aligning to the grid. On mobile devices, expand the input elements and buttons to make use of the whole viewport width.
+        </p>
+        <div
+          className="slab slab-plain slab-border-success pb-4"
+        >
+          <span
+            className="h4 d-block mb-4"
+          >
+            Do
+          </span>
+          <div
+            className="col-12 col-sm-8 m-auto px-0"
+          >
+            <div
+              className="form-group"
+            >
+              
+
+              <label
+                htmlFor="layout-address-example"
+              >
+                Address
+              </label>
+              
+
+              <input
+                aria-describedby={null}
+                autoComplete={null}
+                className="form-control"
+                data-validate={null}
+                defaultValue=""
+                disabled={null}
+                id="layout-address-example"
+                pattern={null}
+                readOnly={null}
+                required={null}
+                type="text"
+              />
+              
+
+            </div>
+            <div
+              className="row"
+            >
+              <div
+                className="form-group col-12 col-sm-5"
+              >
+                
+
+                <label
+                  htmlFor="layout-postal-example"
+                >
+                  Postal code
+                </label>
+                
+
+                <input
+                  aria-describedby={null}
+                  autoComplete={null}
+                  className="form-control"
+                  data-validate={null}
+                  defaultValue=""
+                  disabled={null}
+                  id="layout-postal-example"
+                  pattern={null}
+                  readOnly={null}
+                  required={null}
+                  type="text"
+                />
+                
+
+              </div>
+              <div
+                className="form-group col-12 col-sm-7 mb-2"
+              >
+                
+
+                <label
+                  htmlFor="layout-city-example"
+                >
+                  City
+                </label>
+                
+
+                <input
+                  aria-describedby={null}
+                  autoComplete={null}
+                  className="form-control"
+                  data-validate={null}
+                  defaultValue=""
+                  disabled={null}
+                  id="layout-city-example"
+                  pattern={null}
+                  readOnly={null}
+                  required={null}
+                  type="text"
+                />
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="slab slab-plain slab-border-error"
+        >
+          <span
+            className="h4 d-block mb-4"
+          >
+            Don't
+          </span>
+          <div
+            className="form-group"
+          >
+            
+
+            <label
+              htmlFor="layout-address-dont-example"
+            >
+              Address
             </label>
             
 
@@ -326,106 +720,14 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
               autoComplete={null}
               className="form-control"
               data-validate={null}
-              defaultValue="Name.com"
+              defaultValue=""
               disabled={null}
-              id="input-error-client-example"
+              id="layout-address-dont-example"
               pattern={null}
               readOnly={null}
               required={null}
               type="text"
             />
-            
-
-            <div
-              className="help-block"
-            >
-              <i
-                className="material-icons"
-              >
-                warning
-              </i>
-              The email address must include "@"
-            </div>
-            
-
-          </div>
-        </div>
-      </div>
-      <div
-        className="sp-stack sp-c-euXojQ sp-editor"
-      >
-        <div
-          className="sp-code-editor sp-c-bNbSGz"
-        >
-          <pre
-            className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
-            translate="no"
-          >
-            <code
-              className="sp-pre-placeholder sp-c-fWymNx"
-              style={
-                Object {
-                  "marginLeft": "var(--sp-space-4)",
-                }
-              }
-            />
-          </pre>
-          <span
-            className="sp-read-only sp-c-czQzXp"
-          >
-            Read-only
-          </span>
-        </div>
-      </div>
-    </div>
-    <b
-      className="brand-headline"
-    >
-      Server-side validation
-    </b>
-    <p>
-      Server side validation can be used to control the inputs after the user submits the form. If an error has occurred, display an error alert at the top of the form after the page has reloaded as well as inline errors on the affected input components.
-    </p>
-    <div
-      className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
-    >
-      <div
-        className="showcase-panel"
-        style={
-          Object {
-            "--preview-min-height": "600px",
-          }
-        }
-      >
-        <div
-          className="col-sm-6 col-12 m-auto px-0 py-3"
-        >
-          
-
-          <span
-            className="h2 mb-4 mt-2 d-block"
-          >
-            Log in
-          </span>
-          
-
-          <div
-            className="alert alert-danger"
-          >
-            
-
-            <i
-              aria-hidden="true"
-              className="material-icons alert-icon"
-            >
-              cancel
-            </i>
-            <p>
-              <b>
-                Error.
-              </b>
-               Incorrect password
-            </p>
             
 
           </div>
@@ -435,9 +737,9 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
             
 
             <label
-              htmlFor="validation-email-example"
+              htmlFor="layout-postal code-dont-example"
             >
-              Email
+              Postal code
             </label>
             
 
@@ -446,26 +748,26 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
               autoComplete={null}
               className="form-control"
               data-validate={null}
-              defaultValue="name@mail.com"
+              defaultValue=""
               disabled={null}
-              id="validation-email-example"
+              id="layout-postal code-dont-example"
               pattern={null}
               readOnly={null}
               required={null}
-              type="email"
+              type="text"
             />
             
 
           </div>
           <div
-            className="form-group has-error"
+            className="form-group"
           >
             
 
             <label
-              htmlFor="validation-password-example"
+              htmlFor="layout-city-dont-example"
             >
-              Password
+              City
             </label>
             
 
@@ -474,168 +776,600 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
               autoComplete={null}
               className="form-control"
               data-validate={null}
-              defaultValue="qwerty1234"
+              defaultValue=""
               disabled={null}
-              id="validation-password-example"
+              id="layout-city-dont-example"
               pattern={null}
               readOnly={null}
               required={null}
-              type="password"
+              type="text"
             />
             
 
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>
+          Required VS. optional
+        </h3>
+        <p>
+          All fields in a form can be assumed required and should not be labeled with an “*” . If you must ask an optional question, make it clear that it’s optional by adding “(optional)” to the label instead. 
+        </p>
+        <div
+          className="row"
+        >
+          <div
+            className="col-lg-6 col-12"
+          >
             <div
-              className="help-block"
+              className="slab slab-plain slab-border-success"
             >
-              <i
-                className="material-icons"
+              <span
+                className="h4 d-block mb-4"
               >
-                warning
-              </i>
-              Incorrect password
-            </div>
-            
+                Do
+              </span>
+              <div
+                className="form-group"
+              >
+                
 
+                <label
+                  htmlFor="required-optional-do-email-example"
+                >
+                  E-mail
+                </label>
+                
+
+                <input
+                  aria-describedby={null}
+                  autoComplete={null}
+                  className="form-control"
+                  data-validate={null}
+                  defaultValue=""
+                  disabled={null}
+                  id="required-optional-do-email-example"
+                  pattern={null}
+                  readOnly={null}
+                  required={null}
+                  type="text"
+                />
+                
+
+              </div>
+              <div
+                className="form-group"
+              >
+                
+
+                <label
+                  htmlFor="required-optional-do-phone-example"
+                >
+                  Telephone number
+                   (optional)
+                </label>
+                
+
+                <input
+                  aria-describedby={null}
+                  autoComplete={null}
+                  className="form-control"
+                  data-validate={null}
+                  defaultValue=""
+                  disabled={null}
+                  id="required-optional-do-phone-example"
+                  pattern={null}
+                  readOnly={null}
+                  required={null}
+                  type="text"
+                />
+                
+
+              </div>
+            </div>
           </div>
           <div
-            className="d-sm-flex d-block justify-content-between mb-3"
+            className="col-lg-6 col-12"
           >
             <div
-              className="checkbox"
+              className="slab slab-plain slab-border-error"
             >
-              
-
-              <input
-                aria-describedby={null}
-                defaultChecked={null}
-                disabled={null}
-                id="validation-checkbox-example"
-                type="checkbox"
-              />
-              
-
-              <label
-                className="d-block"
-                htmlFor="validation-checkbox-example"
+              <span
+                className="h4 d-block mb-4"
               >
-                Remember me
-              </label>
-              
+                Don't
+              </span>
+              <div
+                className="form-group"
+              >
+                
 
+                <label
+                  htmlFor="required-optional-dont-email-example"
+                >
+                  E-mail*
+                </label>
+                
+
+                <input
+                  aria-describedby={null}
+                  autoComplete={null}
+                  className="form-control"
+                  data-validate={null}
+                  defaultValue=""
+                  disabled={null}
+                  id="required-optional-dont-email-example"
+                  pattern={null}
+                  readOnly={null}
+                  required={null}
+                  type="text"
+                />
+                
+
+              </div>
+              <div
+                className="form-group"
+              >
+                
+
+                <label
+                  htmlFor="required-optional-dont-phone-example"
+                >
+                  Telephone number
+                </label>
+                
+
+                <input
+                  aria-describedby={null}
+                  autoComplete={null}
+                  className="form-control"
+                  data-validate={null}
+                  defaultValue=""
+                  disabled={null}
+                  id="required-optional-dont-phone-example"
+                  pattern={null}
+                  readOnly={null}
+                  required={null}
+                  type="tel"
+                />
+                
+
+              </div>
             </div>
-            
-
-            <a
-              className="d-block mb-3"
-              href=""
-              onClick={[Function]}
-            >
-              Forgot your password?
-            </a>
           </div>
-          
-
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-primary btn-block"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            Log in
-          </button>
-          
-
         </div>
-      </div>
-      <div
-        className="sp-stack sp-c-euXojQ sp-editor"
-      >
-        <div
-          className="sp-code-editor sp-c-bNbSGz"
+      </section>
+      <section>
+        <h3>
+          Label and hints
+        </h3>
+        <p>
+          It is important to give the users the information required to fill in the form and help them be successful the first time. An input must have a label that clearly describes the type of input a field requires. The label can be complemented with a hint text or a hint expander to provide clarifying details, try do avoid using both a visible hint text and a hint expander.
+        </p>
+        <p>
+          Consider the following to decide where to place the information:
+        </p>
+        <ul
+          className="list list-bullet"
         >
-          <pre
-            className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
-            translate="no"
-          >
-            <code
-              className="sp-pre-placeholder sp-c-fWymNx"
-              style={
-                Object {
-                  "marginLeft": "var(--sp-space-4)",
-                }
-              }
-            />
-          </pre>
-          <span
-            className="sp-read-only sp-c-czQzXp"
-          >
-            Read-only
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <h3>
-      Fieldset
-    </h3>
-    <p>
-      You can use the 
-      <code
-        className="code-tags code-tags-primary"
-      >
-        &lt;fieldset&gt;
-      </code>
-       to group related elements in a 
-      <code
-        className="code-tags code-tags-primary"
-      >
-        form
-      </code>
-       and create more structure.
-    </p>
-    <div
-      className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
-    >
-      <div
-        className="showcase-panel"
-        style={
-          Object {
-            "--preview-min-height": "620px",
-          }
-        }
-      >
+          <li>
+            If the information is very important and most or all users will need it, make it part of the 
+            <b>
+              label
+            </b>
+            .
+          </li>
+          <li>
+            If the information is important and many users will need it, provide 
+            <b>
+              hint text
+            </b>
+             that is visible by default.
+          </li>
+          <li>
+            If the information is less important and only a minority of users will need it, put it in a 
+            <b>
+              hint expander
+            </b>
+            .
+          </li>
+        </ul>
         <div
-          className="col-12 col-sm-6 m-auto"
+          className="row"
         >
-          <form>
-            <fieldset
-              className="mb-2"
+          <div
+            className="col-lg-6 col-12"
+          >
+            <div
+              className="slab slab-plain slab-border-success"
             >
-              <legend>
-                 
-                
-
-                <span
-                  className="h3"
-                >
-                  Name
-                </span>
-              </legend>
+              <span
+                className="h4 d-block mb-4"
+              >
+                Do
+              </span>
               <div
                 className="form-group"
               >
                 
 
                 <label
-                  htmlFor="fieldset-first-name-example"
+                  htmlFor="personal-identification-number-example"
                 >
-                  First name
+                  Personal identification number
+                </label>
+                
+
+                <input
+                  aria-describedby="personal-id-number-example"
+                  autoComplete={null}
+                  className="form-control"
+                  data-validate={null}
+                  defaultValue=""
+                  disabled={null}
+                  id="personal-identification-number-example"
+                  pattern={null}
+                  readOnly={null}
+                  required={null}
+                  type="text"
+                />
+                
+
+                <p
+                  className="hint-text"
+                  id="hint-text"
+                >
+                  YYYYMMDDNNNN
+                </p>
+                
+
+              </div>
+            </div>
+            <p>
+              Use a hint text for important information that is secondary to the label.
+            </p>
+          </div>
+          <div
+            className="col-lg-6 col-12"
+          >
+            <div
+              className="slab slab-plain slab-border-success"
+            >
+              <span
+                className="h4 d-block mb-4"
+              >
+                Do
+              </span>
+              <div
+                className="form-group"
+              >
+                
+
+                <label
+                  htmlFor="cvc-example"
+                >
+                  Security code (CVC)
+                </label>
+                
+
+                <input
+                  aria-describedby=" expanding-where-to-find-example"
+                  autoComplete={null}
+                  className="form-control"
+                  data-validate={null}
+                  defaultValue=""
+                  disabled={null}
+                  id="cvc-example"
+                  pattern={null}
+                  readOnly={null}
+                  required={null}
+                  type="text"
+                />
+                
+
+                <div
+                  className="hint-text-expander"
+                >
+                  
+
+                  <button
+                    aria-expanded={false}
+                    type="button"
+                  >
+                    
+
+                    <span
+                      className="material-icons arrow"
+                    >
+                      keyboard_arrow_down
+                    </span>
+                    Where to find the code?
+                    
+
+                  </button>
+                  
+
+                  <p
+                    aria-hidden={true}
+                    className="content"
+                  >
+                    Three to four digits on the back or the front of your card.
+                  </p>
+                  
+
+                </div>
+              </div>
+            </div>
+            <p>
+              Use hint expander for additional information that is less important or long.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>
+          Logical flow
+        </h3>
+        <p>
+          To create a better user flow, ask questions in a logical order and group related inputs into sections or steps. Also consider using progressive disclosure to reveal additional content based on how a user answered the previous question. The flow will then better resemble a conversation and guide the user through the task.
+        </p>
+        <div
+          className="row"
+        >
+          <div
+            className="col-lg-6 col-12"
+          >
+            <div
+              className="slab slab-plain slab-border-success h-100"
+            >
+              <span
+                className="h4 d-block mb-4"
+              >
+                Do
+              </span>
+              <div
+                className="radio mb-3"
+              >
+                <input
+                  defaultChecked={true}
+                  id="logical-flow-example-email"
+                  name="logical-flow-example"
+                  onChange={[Function]}
+                  type="radio"
+                />
+                <label
+                  htmlFor="logical-flow-example-email"
+                >
+                  E-mail
+                </label>
+              </div>
+              <div
+                className="ml-2"
+              >
+                <div
+                  className="form-group ml-4 mb-4"
+                >
+                  
+
+                  <label
+                    htmlFor="logical-flow-do-email-example"
+                  >
+                    E-mail address
+                  </label>
+                  
+
+                  <input
+                    aria-describedby={null}
+                    autoComplete={null}
+                    className="form-control"
+                    data-validate={null}
+                    defaultValue=""
+                    disabled={null}
+                    id="logical-flow-do-email-example"
+                    pattern={null}
+                    readOnly={null}
+                    required={null}
+                    type="text"
+                  />
+                  
+
+                </div>
+              </div>
+              <div
+                className="radio mb-3"
+              >
+                <input
+                  id="logical-flow-example-call"
+                  name="logical-flow-example"
+                  onChange={[Function]}
+                  type="radio"
+                />
+                <label
+                  htmlFor="logical-flow-example-call"
+                >
+                  Call
+                </label>
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-lg-6 col-12"
+          >
+            <div
+              className="slab slab-plain slab-border-error"
+            >
+              <span
+                className="h4 d-block mb-4"
+              >
+                Don't
+              </span>
+              <div
+                className="radio"
+              >
+                
+
+                <input
+                  aria-describedby={null}
+                  defaultChecked={true}
+                  disabled={null}
+                  id="logical-flow-example-email-2"
+                  name="logical-flow-example-2"
+                  type="radio"
+                />
+                
+
+                <label
+                  htmlFor="logical-flow-example-email-2"
+                >
+                   
+                  E-mail
+                </label>
+                
+
+              </div>
+              <div
+                className="ml-2"
+              >
+                <div
+                  className="form-group ml-4 mb-4"
+                >
+                  
+
+                  <label
+                    htmlFor="logical-flow-dont-email-example"
+                  >
+                    E-mail address
+                  </label>
+                  
+
+                  <input
+                    aria-describedby={null}
+                    autoComplete={null}
+                    className="form-control"
+                    data-validate={null}
+                    defaultValue=""
+                    disabled={null}
+                    id="logical-flow-dont-email-example"
+                    pattern={null}
+                    readOnly={null}
+                    required={null}
+                    type="text"
+                  />
+                  
+
+                </div>
+              </div>
+              <div
+                className="radio"
+              >
+                
+
+                <input
+                  aria-describedby={null}
+                  defaultChecked={null}
+                  disabled={null}
+                  id="logical-flow-example-call-2"
+                  name="logical-flow-example-2"
+                  type="radio"
+                />
+                
+
+                <label
+                  htmlFor="logical-flow-example-call-2"
+                >
+                   
+                  Call
+                </label>
+                
+
+              </div>
+              <div
+                className="ml-2"
+              >
+                <div
+                  className="form-group ml-4"
+                >
+                  
+
+                  <label
+                    htmlFor="logical-flow-dont-phone-example"
+                  >
+                    Phone number
+                  </label>
+                  
+
+                  <input
+                    aria-describedby={null}
+                    autoComplete={null}
+                    className="form-control"
+                    data-validate={null}
+                    defaultValue=""
+                    disabled={null}
+                    id="logical-flow-dont-phone-example"
+                    pattern={null}
+                    readOnly={null}
+                    required={null}
+                    type="text"
+                  />
+                  
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>
+          Button placement
+        </h3>
+        <p>
+          The primary button should be left-aligned along with the left side of the form field. If additional actions are required, put the primary button first, then secondary buttons, then the link button. One exception is a multiple-step form where the “Back” secondary button sits at the very left, while the rest of the buttons are aligned to the right. In some cases, like on a 
+          <a
+            href=""
+          >
+            Login page
+          </a>
+          , buttons can be centered and set to the same width as the input fields. On mobile, the buttons are always centered, full width and stacked vertically with the primary action on top. 
+        </p>
+         
+        <img
+          alt="Visualization of button placement in forms."
+          className="w-100"
+          src="/TEST/img/documentation/patterns/img-button-placement.png"
+        />
+      </section>
+      <section>
+        <h3>
+          Error messages
+        </h3>
+        <p>
+          When an input isn’t accepted, error messages should be used to help the user understand what went wrong and how to solve the problem without using technical jargong. 
+        </p>
+        <div
+          className="row"
+        >
+          <div
+            className="col-lg-6 col-12"
+          >
+            <div
+              className="slab slab-plain slab-border-success"
+            >
+              <span
+                className="h4 d-block mb-4"
+              >
+                Do
+              </span>
+              <div
+                className="form-group has-error"
+              >
+                
+
+                <label
+                  htmlFor="input-error-do-example"
+                >
+                  Email address
                 </label>
                 
 
@@ -644,26 +1378,51 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
                   autoComplete={null}
                   className="form-control"
                   data-validate={null}
-                  defaultValue=""
+                  defaultValue="Name.com"
                   disabled={null}
-                  id="fieldset-first-name-example"
+                  id="input-error-do-example"
                   pattern={null}
                   readOnly={null}
                   required={null}
-                  type="name"
+                  type="text"
                 />
                 
 
+                <div
+                  className="help-block"
+                >
+                  <i
+                    className="material-icons"
+                  >
+                    warning
+                  </i>
+                  The email address must include "@"
+                </div>
+                
+
               </div>
+            </div>
+          </div>
+          <div
+            className="col-lg-6 col-12"
+          >
+            <div
+              className="slab slab-plain slab-border-error"
+            >
+              <span
+                className="h4 d-block mb-4"
+              >
+                Don't
+              </span>
               <div
-                className="form-group"
+                className="form-group has-error"
               >
                 
 
                 <label
-                  htmlFor="fieldset-last-name-example"
+                  htmlFor="input-error-dont-example"
                 >
-                  Last name
+                  Email address
                 </label>
                 
 
@@ -672,36 +1431,132 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
                   autoComplete={null}
                   className="form-control"
                   data-validate={null}
-                  defaultValue=""
+                  defaultValue="Name.com"
                   disabled={null}
-                  id="fieldset-last-name-example"
+                  id="input-error-dont-example"
                   pattern={null}
                   readOnly={null}
                   required={null}
-                  type="name"
+                  type="text"
                 />
                 
 
-              </div>
-            </fieldset>
-            <fieldset>
-              <legend>
-                 
+                <div
+                  className="help-block"
+                >
+                  <i
+                    className="material-icons"
+                  >
+                    warning
+                  </i>
+                  Invalid input
+                </div>
                 
 
-                <span
-                  className="h3"
-                >
-                  Contact information
-                </span>
-              </legend>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section>
+      <h2
+        id="developer-documentation"
+      >
+        Developer documentation
+      </h2>
+      <section>
+        <h3>
+          Errors and validation
+        </h3>
+        <p>
+          To use our validation, start by adding the attribute 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            novalidate
+          </code>
+           to your 
+          <code
+            className="code-tags code-tags-primary"
+          >
+            &lt;form&gt;
+          </code>
+           element. If you wish to validate your entire form, add the 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            validate
+          </code>
+           attribute to the 
+          <code
+            className="code-tags code-tags-primary"
+          >
+            &lt;form&gt;
+          </code>
+           tag, if not add it to the desired 
+          <code
+            className="code-tags code-tags-primary"
+          >
+            &lt;input&gt;
+          </code>
+           tags. This will validate against 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            required
+          </code>
+           and 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            pattern
+          </code>
+          , where pattern will override default patterns.
+        </p>
+        <b
+          className="brand-headline"
+        >
+          Client-side validation
+        </b>
+        <p>
+          Use client-side validation to validate as much data as possible before the user submits the form. Common errors include empty required fields, invalid characters or incorrect input format. To give users inline validation feedback insert a error message within the 
+          <code
+            className="code-tags code-tags-primary"
+          >
+            form-group
+          </code>
+           in the 
+          <code
+            className="code-tags code-tags-primary"
+          >
+            help-block
+          </code>
+           element in the attribute 
+          <code
+            className="code-tags code-tags-primary"
+          >
+            data-error
+          </code>
+          .
+        </p>
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <div
+            className="showcase-panel"
+            style={null}
+          >
+            <div
+              className="col-12 col-sm-6 m-auto pt-3"
+            >
               <div
-                className="form-group"
+                className="form-group has-error"
               >
                 
 
                 <label
-                  htmlFor="fieldset-email-example"
+                  htmlFor="input-error-client-example"
                 >
                   Email
                 </label>
@@ -712,14 +1567,106 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
                   autoComplete={null}
                   className="form-control"
                   data-validate={null}
-                  defaultValue=""
+                  defaultValue="Name.com"
                   disabled={null}
-                  id="fieldset-email-example"
+                  id="input-error-client-example"
                   pattern={null}
                   readOnly={null}
                   required={null}
-                  type="email"
+                  type="text"
                 />
+                
+
+                <div
+                  className="help-block"
+                >
+                  <i
+                    className="material-icons"
+                  >
+                    warning
+                  </i>
+                  The email address must include "@"
+                </div>
+                
+
+              </div>
+            </div>
+          </div>
+          <div
+            className="sp-stack sp-c-euXojQ sp-editor"
+          >
+            <div
+              className="sp-code-editor sp-c-bNbSGz"
+            >
+              <pre
+                className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+                translate="no"
+              >
+                <code
+                  className="sp-pre-placeholder sp-c-fWymNx"
+                  style={
+                    Object {
+                      "marginLeft": "var(--sp-space-4)",
+                    }
+                  }
+                />
+              </pre>
+              <span
+                className="sp-read-only sp-c-czQzXp"
+              >
+                Read-only
+              </span>
+            </div>
+          </div>
+        </div>
+        <b
+          className="brand-headline"
+        >
+          Server-side validation
+        </b>
+        <p>
+          Server side validation can be used to control the inputs after the user submits the form. If an error has occurred, display an error alert at the top of the form after the page has reloaded as well as inline errors on the affected input components.
+        </p>
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <div
+            className="showcase-panel"
+            style={
+              Object {
+                "--preview-min-height": "600px",
+              }
+            }
+          >
+            <div
+              className="col-sm-6 col-12 m-auto px-0 py-3"
+            >
+              
+
+              <span
+                className="h2 mb-4 mt-2 d-block"
+              >
+                Log in
+              </span>
+              
+
+              <div
+                className="alert alert-danger"
+              >
+                
+
+                <i
+                  aria-hidden="true"
+                  className="material-icons alert-icon"
+                >
+                  cancel
+                </i>
+                <p>
+                  <b>
+                    Error.
+                  </b>
+                   Incorrect password
+                </p>
                 
 
               </div>
@@ -729,9 +1676,9 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
                 
 
                 <label
-                  htmlFor="fieldset-phone-example"
+                  htmlFor="validation-email-example"
                 >
-                  Phone number
+                  Email
                 </label>
                 
 
@@ -740,1137 +1687,809 @@ exports[`Forms: index DeveloperDocumentation renders 1`] = `
                   autoComplete={null}
                   className="form-control"
                   data-validate={null}
-                  defaultValue=""
+                  defaultValue="name@mail.com"
                   disabled={null}
-                  id="fieldset-phone-example"
+                  id="validation-email-example"
                   pattern={null}
                   readOnly={null}
                   required={null}
-                  type="tel"
+                  type="email"
                 />
                 
 
               </div>
-            </fieldset>
-          </form>
-        </div>
-      </div>
-      <div
-        className="sp-stack sp-c-euXojQ sp-editor"
-      >
-        <div
-          className="sp-code-editor sp-c-bNbSGz"
-        >
-          <pre
-            className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
-            translate="no"
-          >
-            <code
-              className="sp-pre-placeholder sp-c-fWymNx"
-              style={
-                Object {
-                  "marginLeft": "var(--sp-space-4)",
-                }
-              }
-            />
-          </pre>
-          <span
-            className="sp-read-only sp-c-czQzXp"
-          >
-            Read-only
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <h3>
-      Disabled state
-    </h3>
-    <p>
-      You can disable an entire fieldset by adding 
-      <code
-        className="code-tags code-tags-primary"
-      >
-        disabled
-      </code>
-       to the fieldset element. 
-    </p>
-    <div
-      className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
-    >
-      <div
-        className="showcase-panel"
-        style={
-          Object {
-            "--preview-min-height": "400px",
-          }
-        }
-      >
-        <div
-          className="col-12 col-sm-6 m-auto"
-        >
-          <fieldset
-            disabled={true}
-          >
-            <div
-              className="form-group"
-            >
-              
-
-              <label
-                htmlFor="disabled-name-example"
-              >
-                Name
-              </label>
-              
-
-              <input
-                aria-describedby={null}
-                autoComplete={null}
-                className="form-control"
-                data-validate={null}
-                defaultValue=""
-                disabled={null}
-                id="disabled-name-example"
-                pattern={null}
-                readOnly={null}
-                required={null}
-                type="name"
-              />
-              
-
-            </div>
-            <div
-              className="form-group"
-            >
-              
-
-              <label
-                htmlFor="disabled-email-example"
-              >
-                Email
-              </label>
-              
-
-              <input
-                aria-describedby={null}
-                autoComplete={null}
-                className="form-control"
-                data-validate={null}
-                defaultValue=""
-                disabled={null}
-                id="disabled-email-example"
-                pattern={null}
-                readOnly={null}
-                required={null}
-                type="email"
-              />
-              
-
-            </div>
-            <div
-              className="checkbox mb-4"
-            >
-              
-
-              <input
-                aria-describedby={null}
-                defaultChecked={null}
-                disabled={null}
-                id="disabled-fieldset-checkbox"
-                type="checkbox"
-              />
-              
-
-              <label
-                className="d-block"
-                htmlFor="disabled-fieldset-checkbox"
-              >
-                I agree to terms of use
-              </label>
-              
-
-            </div>
-            
-
-            <button
-              active={null}
-              aria-disabled={null}
-              aria-label={null}
-              aria-pressed={null}
-              className="btn btn-primary mt-2"
-              role={null}
-              tabIndex={null}
-              title={null}
-              type="button"
-            >
-              Submit
-            </button>
-          </fieldset>
-        </div>
-      </div>
-      <div
-        className="sp-stack sp-c-euXojQ sp-editor"
-      >
-        <div
-          className="sp-code-editor sp-c-bNbSGz"
-        >
-          <pre
-            className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
-            translate="no"
-          >
-            <code
-              className="sp-pre-placeholder sp-c-fWymNx"
-              style={
-                Object {
-                  "marginLeft": "var(--sp-space-4)",
-                }
-              }
-            />
-          </pre>
-          <span
-            className="sp-read-only sp-c-czQzXp"
-          >
-            Read-only
-          </span>
-        </div>
-      </div>
-    </div>
-    <p>
-      If you only wish to disable a specific form component, add the 
-      <code
-        className="code-tags code-tags-primary"
-      >
-        disabled
-      </code>
-       attribute to the desired component.
-    </p>
-    <div
-      className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
-    >
-      <div
-        className="showcase-panel"
-        style={
-          Object {
-            "--preview-min-height": "400px",
-          }
-        }
-      >
-        <div
-          className="col-12 col-sm-6 m-auto"
-        >
-          <fieldset>
-            <div
-              className="form-group disabled"
-            >
-              
-
-              <label
-                htmlFor="disable-specific-name-example"
-              >
-                Name
-              </label>
-              
-
-              <input
-                aria-describedby={null}
-                autoComplete={null}
-                className="form-control"
-                data-validate={null}
-                defaultValue=""
-                disabled={true}
-                id="disable-specific-name-example"
-                pattern={null}
-                readOnly={null}
-                required={null}
-                type="name"
-              />
-              
-
-            </div>
-            <div
-              className="form-group"
-            >
-              
-
-              <label
-                htmlFor="disable-specific-email-example"
-              >
-                Email
-              </label>
-              
-
-              <input
-                aria-describedby={null}
-                autoComplete={null}
-                className="form-control"
-                data-validate={null}
-                defaultValue=""
-                disabled={null}
-                id="disable-specific-email-example"
-                pattern={null}
-                readOnly={null}
-                required={null}
-                type="email"
-              />
-              
-
-            </div>
-            <div
-              className="checkbox mb-4"
-            >
-              
-
-              <input
-                aria-describedby={null}
-                defaultChecked={null}
-                disabled={null}
-                id="disabled-input-checkbox"
-                type="checkbox"
-              />
-              
-
-              <label
-                className="d-block"
-                htmlFor="disabled-input-checkbox"
-              >
-                I agree to terms of user
-              </label>
-              
-
-            </div>
-            
-
-            <button
-              active={null}
-              aria-disabled={null}
-              aria-label={null}
-              aria-pressed={null}
-              className="btn btn-primary mt-2"
-              role={null}
-              tabIndex={null}
-              title={null}
-              type="button"
-            >
-              Submit
-            </button>
-          </fieldset>
-        </div>
-      </div>
-      <div
-        className="sp-stack sp-c-euXojQ sp-editor"
-      >
-        <div
-          className="sp-code-editor sp-c-bNbSGz"
-        >
-          <pre
-            className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
-            translate="no"
-          >
-            <code
-              className="sp-pre-placeholder sp-c-fWymNx"
-              style={
-                Object {
-                  "marginLeft": "var(--sp-space-4)",
-                }
-              }
-            />
-          </pre>
-          <span
-            className="sp-read-only sp-c-czQzXp"
-          >
-            Read-only
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <h3>
-      Form grid
-    </h3>
-    <p>
-      If you need more than one column in your form, you can use the grid system to customize how forms are displayed. Wrap your form elements in a row container and remember to add 
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        .col-{your_size}
-      </code>
-       to the 
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        .form-group
-      </code>
-      .
-    </p>
-  </section>
-  <div
-    className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
-  >
-    <div
-      className="showcase-panel"
-      style={null}
-    >
-      <div
-        className="col-12 col-sm-10 m-auto pt-2"
-      >
-        <form>
-          <div
-            className="row align-items-center justify-content-between"
-          >
-            <div
-              className="form-group col-12 col-sm-3 px-0 mb-4"
-            >
-              
-
-              <label
-                htmlFor="form-grid-name-example"
-              >
-                Name
-              </label>
-              
-
-              <input
-                aria-describedby={null}
-                autoComplete={null}
-                className="form-control"
-                data-validate={null}
-                defaultValue=""
-                disabled={null}
-                id="form-grid-name-example"
-                pattern={null}
-                readOnly={null}
-                required={null}
-                type="name"
-              />
-              
-
-            </div>
-            <div
-              className="form-group col-12 col-sm-6 px-0 mb-4"
-            >
-              
-
-              <label
-                htmlFor="form-grid-email-example"
-              >
-                Email
-              </label>
-              
-
-              <input
-                aria-describedby={null}
-                autoComplete={null}
-                className="form-control"
-                data-validate={null}
-                defaultValue=""
-                disabled={null}
-                id="form-grid-email-example"
-                pattern={null}
-                readOnly={null}
-                required={null}
-                type="email"
-              />
-              
-
-            </div>
-            
-
-            <button
-              active={null}
-              aria-disabled={null}
-              aria-label={null}
-              aria-pressed={null}
-              className="btn btn-primary mt-1"
-              role={null}
-              tabIndex={null}
-              title={null}
-              type="button"
-            >
-              Submit
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div
-      className="sp-stack sp-c-euXojQ sp-editor"
-    >
-      <div
-        className="sp-code-editor sp-c-bNbSGz"
-      >
-        <pre
-          className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
-          translate="no"
-        >
-          <code
-            className="sp-pre-placeholder sp-c-fWymNx"
-            style={
-              Object {
-                "marginLeft": "var(--sp-space-4)",
-              }
-            }
-          />
-        </pre>
-        <span
-          className="sp-read-only sp-c-czQzXp"
-        >
-          Read-only
-        </span>
-      </div>
-    </div>
-  </div>
-  <section>
-    <h3>
-      Static text
-    </h3>
-    <p>
-      To display static text in a form use 
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        &lt;span&gt;
-      </code>
-    </p>
-  </section>
-  <section>
-    <h3>
-      JavaScript methods
-    </h3>
-    <p>
-      <code
-        className="code-tags code-tags-primary"
-      >
-        dg.validation.init()
-      </code>
-       can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.
-    </p>
-  </section>
-</section>
-`;
-
-exports[`Forms: index HowToDesignForms renders 1`] = `
-<section>
-  <h2
-    id="layout"
-  >
-    How to design forms
-  </h2>
-  <section>
-    <h3>
-      Layout
-    </h3>
-    <p>
-      Forms should be designed vertically as this improves their readability. When possible, a form should be one column, but information can be presented in multiple columns if they are grouped together (e.g. address fields).
-    </p>
-    <p>
-      Do not make an input full width of a desktop viewport, use the grid to restrict the width of the inputs to no more than half of the viewport. The field widths should reflect the intended length of the content while still aligning to the grid. On mobile devices, expand the input elements and buttons to make use of the whole viewport width.
-    </p>
-    <div
-      className="slab slab-plain slab-border-success pb-4"
-    >
-      <span
-        className="h4 d-block mb-4"
-      >
-        Do
-      </span>
-      <div
-        className="col-12 col-sm-8 m-auto px-0"
-      >
-        <InputGroup
-          id="layout-address-example"
-          label="Address"
-          type="text"
-        />
-        <div
-          className="row"
-        >
-          <InputGroup
-            className="col-12 col-sm-5"
-            id="layout-postal-example"
-            label="Postal code"
-            type="text"
-          />
-          <InputGroup
-            className="col-12 col-sm-7 mb-2"
-            id="layout-city-example"
-            label="City"
-            type="text"
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      className="slab slab-plain slab-border-error"
-    >
-      <span
-        className="h4 d-block mb-4"
-      >
-        Don't
-      </span>
-      <InputGroup
-        id="layout-address-dont-example"
-        key="Address"
-        label="Address"
-        type="text"
-      />
-      <InputGroup
-        id="layout-postal code-dont-example"
-        key="Postal code"
-        label="Postal code"
-        type="text"
-      />
-      <InputGroup
-        id="layout-city-dont-example"
-        key="City"
-        label="City"
-        type="text"
-      />
-    </div>
-  </section>
-  <section>
-    <h3>
-      Required VS. optional
-    </h3>
-    <p>
-      All fields in a form can be assumed required and should not be labeled with an “*” . If you must ask an optional question, make it clear that it’s optional by adding “(optional)” to the label instead. 
-    </p>
-    <div
-      className="row"
-    >
-      <div
-        className="col-lg-6 col-12"
-      >
-        <div
-          className="slab slab-plain slab-border-success"
-        >
-          <span
-            className="h4 d-block mb-4"
-          >
-            Do
-          </span>
-          <InputGroup
-            id="required-optional-do-email-example"
-            label="E-mail"
-            type="text"
-          />
-          <InputGroup
-            id="required-optional-do-phone-example"
-            label="Telephone number"
-            optional={true}
-            type="text"
-          />
-        </div>
-      </div>
-      <div
-        className="col-lg-6 col-12"
-      >
-        <div
-          className="slab slab-plain slab-border-error"
-        >
-          <span
-            className="h4 d-block mb-4"
-          >
-            Don't
-          </span>
-          <InputGroup
-            id="required-optional-dont-email-example"
-            label="E-mail*"
-            type="text"
-          />
-          <InputGroup
-            id="required-optional-dont-phone-example"
-            label="Telephone number"
-            type="tel"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <h3>
-      Label and hints
-    </h3>
-    <p>
-      It is important to give the users the information required to fill in the form and help them be successful the first time. An input must have a label that clearly describes the type of input a field requires. The label can be complemented with a hint text or a hint expander to provide clarifying details, try do avoid using both a visible hint text and a hint expander.
-    </p>
-    <p>
-      Consider the following to decide where to place the information:
-    </p>
-    <ul
-      className="list list-bullet"
-    >
-      <li>
-        If the information is very important and most or all users will need it, make it part of the 
-        <b>
-          label
-        </b>
-        .
-      </li>
-      <li>
-        If the information is important and many users will need it, provide 
-        <b>
-          hint text
-        </b>
-         that is visible by default.
-      </li>
-      <li>
-        If the information is less important and only a minority of users will need it, put it in a 
-        <b>
-          hint expander
-        </b>
-        .
-      </li>
-    </ul>
-    <div
-      className="row"
-    >
-      <div
-        className="col-lg-6 col-12"
-      >
-        <div
-          className="slab slab-plain slab-border-success"
-        >
-          <span
-            className="h4 d-block mb-4"
-          >
-            Do
-          </span>
-          <InputGroup
-            helpBlock="YYYYMMDDNNNN"
-            hintTextId="personal-id-number-example"
-            id="personal-identification-number-example"
-            label="Personal identification number"
-            type="text"
-          />
-        </div>
-        <p>
-          Use a hint text for important information that is secondary to the label.
-        </p>
-      </div>
-      <div
-        className="col-lg-6 col-12"
-      >
-        <div
-          className="slab slab-plain slab-border-success"
-        >
-          <span
-            className="h4 d-block mb-4"
-          >
-            Do
-          </span>
-          <InputGroup
-            expandingHintContent="Three to four digits on the back or the front of your card."
-            expandingHintId="expanding-where-to-find-example"
-            expandingHintTitle="Where to find the code?"
-            id="cvc-example"
-            label="Security code (CVC)"
-            type="text"
-          />
-        </div>
-        <p>
-          Use hint expander for additional information that is less important or long.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section>
-    <h3>
-      Logical flow
-    </h3>
-    <p>
-      To create a better user flow, ask questions in a logical order and group related inputs into sections or steps. Also consider using progressive disclosure to reveal additional content based on how a user answered the previous question. The flow will then better resemble a conversation and guide the user through the task.
-    </p>
-    <div
-      className="row"
-    >
-      <div
-        className="col-lg-6 col-12"
-      >
-        <div
-          className="slab slab-plain slab-border-success h-100"
-        >
-          <span
-            className="h4 d-block mb-4"
-          >
-            Do
-          </span>
-          <div
-            className="radio mb-3"
-          >
-            <input
-              defaultChecked={true}
-              id="logical-flow-example-email"
-              name="logical-flow-example"
-              onChange={[Function]}
-              type="radio"
-            />
-            <label
-              htmlFor="logical-flow-example-email"
-            >
-              E-mail
-            </label>
-          </div>
-          <div
-            className="ml-2"
-          >
-            <InputGroup
-              className="ml-4 mb-4"
-              id="logical-flow-do-email-example"
-              label="E-mail address"
-              type="text"
-            />
-          </div>
-          <div
-            className="radio mb-3"
-          >
-            <input
-              id="logical-flow-example-call"
-              name="logical-flow-example"
-              onChange={[Function]}
-              type="radio"
-            />
-            <label
-              htmlFor="logical-flow-example-call"
-            >
-              Call
-            </label>
-          </div>
-        </div>
-      </div>
-      <div
-        className="col-lg-6 col-12"
-      >
-        <div
-          className="slab slab-plain slab-border-error"
-        >
-          <span
-            className="h4 d-block mb-4"
-          >
-            Don't
-          </span>
-          <Radio
-            checked={true}
-            className="mb-3"
-            id="logical-flow-example-email-2"
-            label="E-mail"
-            name="logical-flow-example-2"
-          />
-          <div
-            className="ml-2"
-          >
-            <InputGroup
-              className="ml-4 mb-4"
-              id="logical-flow-dont-email-example"
-              label="E-mail address"
-              type="text"
-            />
-          </div>
-          <Radio
-            className="mb-3"
-            id="logical-flow-example-call-2"
-            label="Call"
-            name="logical-flow-example-2"
-          />
-          <div
-            className="ml-2"
-          >
-            <InputGroup
-              className="ml-4"
-              id="logical-flow-dont-phone-example"
-              label="Phone number"
-              type="text"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <h3>
-      Button placement
-    </h3>
-    <p>
-      The primary button should be left-aligned along with the left side of the form field. If additional actions are required, put the primary button first, then secondary buttons, then the link button. One exception is a multiple-step form where the “Back” secondary button sits at the very left, while the rest of the buttons are aligned to the right. In some cases, like on a 
-      <a
-        href=""
-      >
-        Login page
-      </a>
-      , buttons can be centered and set to the same width as the input fields. On mobile, the buttons are always centered, full width and stacked vertically with the primary action on top. 
-    </p>
-     
-    <img
-      alt="Visualization of button placement in forms."
-      className="w-100"
-      src="/TEST/img/documentation/patterns/img-button-placement.png"
-    />
-  </section>
-  <section>
-    <h3>
-      Error messages
-    </h3>
-    <p>
-      When an input isn’t accepted, error messages should be used to help the user understand what went wrong and how to solve the problem without using technical jargong. 
-    </p>
-    <div
-      className="row"
-    >
-      <div
-        className="col-lg-6 col-12"
-      >
-        <div
-          className="slab slab-plain slab-border-success"
-        >
-          <span
-            className="h4 d-block mb-4"
-          >
-            Do
-          </span>
-          <InputGroup
-            defaultValue="Name.com"
-            errorMessage="The email address must include \\"@\\""
-            id="input-error-do-example"
-            label="Email address"
-            type="text"
-            validationState="error"
-          />
-        </div>
-      </div>
-      <div
-        className="col-lg-6 col-12"
-      >
-        <div
-          className="slab slab-plain slab-border-error"
-        >
-          <span
-            className="h4 d-block mb-4"
-          >
-            Don't
-          </span>
-          <InputGroup
-            defaultValue="Name.com"
-            errorMessage="Invalid input"
-            id="input-error-dont-example"
-            label="Email address"
-            type="text"
-            validationState="error"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
-</section>
-`;
-
-exports[`Forms: index Overview renders 1`] = `
-<section>
-  <h2
-    id="overview"
-  >
-    Overview
-  </h2>
-  <p>
-    A form can include different type of user input components that can be arranged in different ways depending on your specific context and needs. You might for example design a form for a user to sign up for or log into an account, register for a service, reconfigure settings, take a survey, purchase a product or provide feedback.
-  </p>
-  <div
-    className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
-  >
-    <div
-      className="showcase-panel showcase-panel-advanced"
-      id="overview-forms"
-    >
-      <div
-        className="tabs tabs-scroll"
-        id="overview-forms-tabs"
-      >
-        <ul
-          id="overview-forms-tabs-ul"
-        >
-          <li
-            className="active"
-          >
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              Form
-            </a>
-          </li>
-          <li
-            className="null"
-          >
-            <a
-              href="#"
-              onClick={[Function]}
-            >
-              Multi-step form
-            </a>
-          </li>
-        </ul>
-        <div
-          className="options-open  d-none "
-        >
-          <button
-            aria-label="Open options menu"
-            className="open-options-menu d-flex"
-            onClick={[Function]}
-          >
-            <i
-              className="material-icons"
-            >
-              menu_open
-            </i>
-          </button>
-        </div>
-      </div>
-      <div
-        className="d-flex"
-      >
-        <div
-          className="d-flex flex-column flex-fill"
-        >
-          <div
-            className="component-preview flex-fill"
-          >
-            <div
-              className="component-preview-content editable-preview"
-              style={
-                Object {
-                  "--preview-min-height": "750px",
-                }
-              }
-            >
               <div
-                className="sp-stack sp-c-euXojQ sp-preview"
+                className="form-group has-error"
+              >
+                
+
+                <label
+                  htmlFor="validation-password-example"
+                >
+                  Password
+                </label>
+                
+
+                <input
+                  aria-describedby={null}
+                  autoComplete={null}
+                  className="form-control"
+                  data-validate={null}
+                  defaultValue="qwerty1234"
+                  disabled={null}
+                  id="validation-password-example"
+                  pattern={null}
+                  readOnly={null}
+                  required={null}
+                  type="password"
+                />
+                
+
+                <div
+                  className="help-block"
+                >
+                  <i
+                    className="material-icons"
+                  >
+                    warning
+                  </i>
+                  Incorrect password
+                </div>
+                
+
+              </div>
+              <div
+                className="d-sm-flex d-block justify-content-between mb-3"
               >
                 <div
-                  className="sp-preview-container sp-c-bIhyHd"
+                  className="checkbox"
                 >
-                  <iframe
-                    className="sp-preview-iframe sp-c-fgviib"
-                    style={
-                      Object {
-                        "height": undefined,
-                      }
-                    }
-                    title="Sandpack Preview"
+                  
+
+                  <input
+                    aria-describedby={null}
+                    defaultChecked={null}
+                    disabled={null}
+                    id="validation-checkbox-example"
+                    type="checkbox"
                   />
-                  <div
-                    className="sp-preview-actions sp-c-eKnQtg"
+                  
+
+                  <label
+                    className="d-block"
+                    htmlFor="validation-checkbox-example"
                   >
-                    <a
-                      className="sp-button sp-icon-standalone sp-c-dRhJti sp-c-gMfcns sp-c-eXsQzS"
-                      href="https://codesandbox.io/api/v1/sandboxes/define?undefined"
-                      rel="noreferrer noopener"
-                      target="_blank"
-                      title="Open in CodeSandbox"
-                    >
-                      <svg
-                        fill="none"
-                        height="16"
-                        stroke="currentColor"
-                        viewBox="0 0 16 16"
-                        width="16"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <title>
-                          Open on CodeSandbox
-                        </title>
-                        <path
-                          d="M6.66665 3.33337H4.33331C3.78103 3.33337 3.33331 3.78109 3.33331 4.33337V11.6667C3.33331 12.219 3.78103 12.6667 4.33331 12.6667H11.6666C12.2189 12.6667 12.6666 12.219 12.6666 11.6667V9.33337"
-                          strokeLinecap="round"
-                        />
-                        <path
-                          d="M10 3.33337H12.5667C12.6219 3.33337 12.6667 3.37815 12.6667 3.43337V6.00004"
-                          strokeLinecap="round"
-                        />
-                        <path
-                          d="M7.33331 8.66668L12.5333 3.46667"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                    </a>
-                  </div>
+                    Remember me
+                  </label>
+                  
+
                 </div>
+                
+
+                <a
+                  className="d-block mb-3"
+                  href=""
+                  onClick={[Function]}
+                >
+                  Forgot your password?
+                </a>
               </div>
+              
+
+              <button
+                active={null}
+                aria-disabled={null}
+                aria-label={null}
+                aria-pressed={null}
+                className="btn btn-primary btn-block"
+                role={null}
+                tabIndex={null}
+                title={null}
+                type="button"
+              >
+                Log in
+              </button>
+              
+
             </div>
           </div>
           <div
-            className="component-description"
+            className="sp-stack sp-c-euXojQ sp-editor"
           >
-            <h3>
-              Form
-            </h3>
-            This in an example of a single page contact form using a collection of components including input fields, select list, checkbox and button.
+            <div
+              className="sp-code-editor sp-c-bNbSGz"
+            >
+              <pre
+                className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+                translate="no"
+              >
+                <code
+                  className="sp-pre-placeholder sp-c-fWymNx"
+                  style={
+                    Object {
+                      "marginLeft": "var(--sp-space-4)",
+                    }
+                  }
+                />
+              </pre>
+              <span
+                className="sp-read-only sp-c-czQzXp"
+              >
+                Read-only
+              </span>
+            </div>
           </div>
         </div>
+      </section>
+      <section>
+        <h3>
+          Fieldset
+        </h3>
+        <p>
+          You can use the 
+          <code
+            className="code-tags code-tags-primary"
+          >
+            &lt;fieldset&gt;
+          </code>
+           to group related elements in a 
+          <code
+            className="code-tags code-tags-primary"
+          >
+            form
+          </code>
+           and create more structure.
+        </p>
         <div
-          className="options  d-none"
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
         >
           <div
-            className="options-header"
+            className="showcase-panel"
+            style={
+              Object {
+                "--preview-min-height": "620px",
+              }
+            }
           >
-            Options
-            <button
-              aria-label="Close options menu"
-              className="options-close d-flex"
-              onClick={[Function]}
+            <div
+              className="col-12 col-sm-6 m-auto"
             >
-              <i
-                className="material-icons"
+              <form>
+                <fieldset
+                  className="mb-2"
+                >
+                  <legend>
+                     
+                    
+
+                    <span
+                      className="h3"
+                    >
+                      Name
+                    </span>
+                  </legend>
+                  <div
+                    className="form-group"
+                  >
+                    
+
+                    <label
+                      htmlFor="fieldset-first-name-example"
+                    >
+                      First name
+                    </label>
+                    
+
+                    <input
+                      aria-describedby={null}
+                      autoComplete={null}
+                      className="form-control"
+                      data-validate={null}
+                      defaultValue=""
+                      disabled={null}
+                      id="fieldset-first-name-example"
+                      pattern={null}
+                      readOnly={null}
+                      required={null}
+                      type="name"
+                    />
+                    
+
+                  </div>
+                  <div
+                    className="form-group"
+                  >
+                    
+
+                    <label
+                      htmlFor="fieldset-last-name-example"
+                    >
+                      Last name
+                    </label>
+                    
+
+                    <input
+                      aria-describedby={null}
+                      autoComplete={null}
+                      className="form-control"
+                      data-validate={null}
+                      defaultValue=""
+                      disabled={null}
+                      id="fieldset-last-name-example"
+                      pattern={null}
+                      readOnly={null}
+                      required={null}
+                      type="name"
+                    />
+                    
+
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>
+                     
+                    
+
+                    <span
+                      className="h3"
+                    >
+                      Contact information
+                    </span>
+                  </legend>
+                  <div
+                    className="form-group"
+                  >
+                    
+
+                    <label
+                      htmlFor="fieldset-email-example"
+                    >
+                      Email
+                    </label>
+                    
+
+                    <input
+                      aria-describedby={null}
+                      autoComplete={null}
+                      className="form-control"
+                      data-validate={null}
+                      defaultValue=""
+                      disabled={null}
+                      id="fieldset-email-example"
+                      pattern={null}
+                      readOnly={null}
+                      required={null}
+                      type="email"
+                    />
+                    
+
+                  </div>
+                  <div
+                    className="form-group"
+                  >
+                    
+
+                    <label
+                      htmlFor="fieldset-phone-example"
+                    >
+                      Phone number
+                    </label>
+                    
+
+                    <input
+                      aria-describedby={null}
+                      autoComplete={null}
+                      className="form-control"
+                      data-validate={null}
+                      defaultValue=""
+                      disabled={null}
+                      id="fieldset-phone-example"
+                      pattern={null}
+                      readOnly={null}
+                      required={null}
+                      type="tel"
+                    />
+                    
+
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+          <div
+            className="sp-stack sp-c-euXojQ sp-editor"
+          >
+            <div
+              className="sp-code-editor sp-c-bNbSGz"
+            >
+              <pre
+                className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+                translate="no"
               >
-                close
-              </i>
-            </button>
+                <code
+                  className="sp-pre-placeholder sp-c-fWymNx"
+                  style={
+                    Object {
+                      "marginLeft": "var(--sp-space-4)",
+                    }
+                  }
+                />
+              </pre>
+              <span
+                className="sp-read-only sp-c-czQzXp"
+              >
+                Read-only
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>
+          Disabled state
+        </h3>
+        <p>
+          You can disable an entire fieldset by adding 
+          <code
+            className="code-tags code-tags-primary"
+          >
+            disabled
+          </code>
+           to the fieldset element. 
+        </p>
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <div
+            className="showcase-panel"
+            style={
+              Object {
+                "--preview-min-height": "400px",
+              }
+            }
+          >
+            <div
+              className="col-12 col-sm-6 m-auto"
+            >
+              <fieldset
+                disabled={true}
+              >
+                <div
+                  className="form-group"
+                >
+                  
+
+                  <label
+                    htmlFor="disabled-name-example"
+                  >
+                    Name
+                  </label>
+                  
+
+                  <input
+                    aria-describedby={null}
+                    autoComplete={null}
+                    className="form-control"
+                    data-validate={null}
+                    defaultValue=""
+                    disabled={null}
+                    id="disabled-name-example"
+                    pattern={null}
+                    readOnly={null}
+                    required={null}
+                    type="name"
+                  />
+                  
+
+                </div>
+                <div
+                  className="form-group"
+                >
+                  
+
+                  <label
+                    htmlFor="disabled-email-example"
+                  >
+                    Email
+                  </label>
+                  
+
+                  <input
+                    aria-describedby={null}
+                    autoComplete={null}
+                    className="form-control"
+                    data-validate={null}
+                    defaultValue=""
+                    disabled={null}
+                    id="disabled-email-example"
+                    pattern={null}
+                    readOnly={null}
+                    required={null}
+                    type="email"
+                  />
+                  
+
+                </div>
+                <div
+                  className="checkbox mb-4"
+                >
+                  
+
+                  <input
+                    aria-describedby={null}
+                    defaultChecked={null}
+                    disabled={null}
+                    id="disabled-fieldset-checkbox"
+                    type="checkbox"
+                  />
+                  
+
+                  <label
+                    className="d-block"
+                    htmlFor="disabled-fieldset-checkbox"
+                  >
+                    I agree to terms of use
+                  </label>
+                  
+
+                </div>
+                
+
+                <button
+                  active={null}
+                  aria-disabled={null}
+                  aria-label={null}
+                  aria-pressed={null}
+                  className="btn btn-primary mt-2"
+                  role={null}
+                  tabIndex={null}
+                  title={null}
+                  type="button"
+                >
+                  Submit
+                </button>
+              </fieldset>
+            </div>
+          </div>
+          <div
+            className="sp-stack sp-c-euXojQ sp-editor"
+          >
+            <div
+              className="sp-code-editor sp-c-bNbSGz"
+            >
+              <pre
+                className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+                translate="no"
+              >
+                <code
+                  className="sp-pre-placeholder sp-c-fWymNx"
+                  style={
+                    Object {
+                      "marginLeft": "var(--sp-space-4)",
+                    }
+                  }
+                />
+              </pre>
+              <span
+                className="sp-read-only sp-c-czQzXp"
+              >
+                Read-only
+              </span>
+            </div>
+          </div>
+        </div>
+        <p>
+          If you only wish to disable a specific form component, add the 
+          <code
+            className="code-tags code-tags-primary"
+          >
+            disabled
+          </code>
+           attribute to the desired component.
+        </p>
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <div
+            className="showcase-panel"
+            style={
+              Object {
+                "--preview-min-height": "400px",
+              }
+            }
+          >
+            <div
+              className="col-12 col-sm-6 m-auto"
+            >
+              <fieldset>
+                <div
+                  className="form-group disabled"
+                >
+                  
+
+                  <label
+                    htmlFor="disable-specific-name-example"
+                  >
+                    Name
+                  </label>
+                  
+
+                  <input
+                    aria-describedby={null}
+                    autoComplete={null}
+                    className="form-control"
+                    data-validate={null}
+                    defaultValue=""
+                    disabled={true}
+                    id="disable-specific-name-example"
+                    pattern={null}
+                    readOnly={null}
+                    required={null}
+                    type="name"
+                  />
+                  
+
+                </div>
+                <div
+                  className="form-group"
+                >
+                  
+
+                  <label
+                    htmlFor="disable-specific-email-example"
+                  >
+                    Email
+                  </label>
+                  
+
+                  <input
+                    aria-describedby={null}
+                    autoComplete={null}
+                    className="form-control"
+                    data-validate={null}
+                    defaultValue=""
+                    disabled={null}
+                    id="disable-specific-email-example"
+                    pattern={null}
+                    readOnly={null}
+                    required={null}
+                    type="email"
+                  />
+                  
+
+                </div>
+                <div
+                  className="checkbox mb-4"
+                >
+                  
+
+                  <input
+                    aria-describedby={null}
+                    defaultChecked={null}
+                    disabled={null}
+                    id="disabled-input-checkbox"
+                    type="checkbox"
+                  />
+                  
+
+                  <label
+                    className="d-block"
+                    htmlFor="disabled-input-checkbox"
+                  >
+                    I agree to terms of user
+                  </label>
+                  
+
+                </div>
+                
+
+                <button
+                  active={null}
+                  aria-disabled={null}
+                  aria-label={null}
+                  aria-pressed={null}
+                  className="btn btn-primary mt-2"
+                  role={null}
+                  tabIndex={null}
+                  title={null}
+                  type="button"
+                >
+                  Submit
+                </button>
+              </fieldset>
+            </div>
+          </div>
+          <div
+            className="sp-stack sp-c-euXojQ sp-editor"
+          >
+            <div
+              className="sp-code-editor sp-c-bNbSGz"
+            >
+              <pre
+                className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+                translate="no"
+              >
+                <code
+                  className="sp-pre-placeholder sp-c-fWymNx"
+                  style={
+                    Object {
+                      "marginLeft": "var(--sp-space-4)",
+                    }
+                  }
+                />
+              </pre>
+              <span
+                className="sp-read-only sp-c-czQzXp"
+              >
+                Read-only
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h3>
+          Form grid
+        </h3>
+        <p>
+          If you need more than one column in your form, you can use the grid system to customize how forms are displayed. Wrap your form elements in a row container and remember to add 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            .col-{your_size}
+          </code>
+           to the 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            .form-group
+          </code>
+          .
+        </p>
+      </section>
+      <div
+        className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+      >
+        <div
+          className="showcase-panel"
+          style={null}
+        >
+          <div
+            className="col-12 col-sm-10 m-auto pt-2"
+          >
+            <form>
+              <div
+                className="row align-items-center justify-content-between"
+              >
+                <div
+                  className="form-group col-12 col-sm-3 px-0 mb-4"
+                >
+                  
+
+                  <label
+                    htmlFor="form-grid-name-example"
+                  >
+                    Name
+                  </label>
+                  
+
+                  <input
+                    aria-describedby={null}
+                    autoComplete={null}
+                    className="form-control"
+                    data-validate={null}
+                    defaultValue=""
+                    disabled={null}
+                    id="form-grid-name-example"
+                    pattern={null}
+                    readOnly={null}
+                    required={null}
+                    type="name"
+                  />
+                  
+
+                </div>
+                <div
+                  className="form-group col-12 col-sm-6 px-0 mb-4"
+                >
+                  
+
+                  <label
+                    htmlFor="form-grid-email-example"
+                  >
+                    Email
+                  </label>
+                  
+
+                  <input
+                    aria-describedby={null}
+                    autoComplete={null}
+                    className="form-control"
+                    data-validate={null}
+                    defaultValue=""
+                    disabled={null}
+                    id="form-grid-email-example"
+                    pattern={null}
+                    readOnly={null}
+                    required={null}
+                    type="email"
+                  />
+                  
+
+                </div>
+                
+
+                <button
+                  active={null}
+                  aria-disabled={null}
+                  aria-label={null}
+                  aria-pressed={null}
+                  className="btn btn-primary mt-1"
+                  role={null}
+                  tabIndex={null}
+                  title={null}
+                  type="button"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div
+          className="sp-stack sp-c-euXojQ sp-editor"
+        >
+          <div
+            className="sp-code-editor sp-c-bNbSGz"
+          >
+            <pre
+              className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+              translate="no"
+            >
+              <code
+                className="sp-pre-placeholder sp-c-fWymNx"
+                style={
+                  Object {
+                    "marginLeft": "var(--sp-space-4)",
+                  }
+                }
+              />
+            </pre>
+            <span
+              className="sp-read-only sp-c-czQzXp"
+            >
+              Read-only
+            </span>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      className="sp-stack sp-c-euXojQ sp-editor"
-    >
-      <div
-        className="sp-code-editor sp-c-bNbSGz"
-      >
-        <div
-          aria-autocomplete="list"
-          aria-label="Code Editor for index.html"
-          aria-multiline="true"
-          className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
-          onKeyDown={[Function]}
-          role="textbox"
-          suppressHydrationWarning={true}
-          tabIndex={0}
-          translate="no"
-        >
-          <pre
-            className="sp-pre-placeholder sp-c-fWymNx"
-            style={
-              Object {
-                "marginLeft": "var(--sp-space-5)",
-              }
-            }
-          />
-        </div>
-      </div>
-    </div>
+      <section>
+        <h3>
+          Static text
+        </h3>
+        <p>
+          To display static text in a form use 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            &lt;span&gt;
+          </code>
+        </p>
+      </section>
+      <section>
+        <h3>
+          JavaScript methods
+        </h3>
+        <p>
+          <code
+            className="code-tags code-tags-primary"
+          >
+            dg.validation.init()
+          </code>
+           can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.
+        </p>
+      </section>
+    </section>
   </div>
-</section>
-`;
-
-exports[`Forms: index renders 1`] = `
-<DocContainer>
-  <p
-    className="lead"
-  >
-    A form is a collection of input components that allows users to provide and submit data.
-  </p>
-  <Overview />
-  <ContentGuidelines />
-  <HowToDesignForms />
-  <DeveloperDocumentation />
-</DocContainer>
+</div>
 `;

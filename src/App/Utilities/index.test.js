@@ -1,5 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
+import { BrowserRouter } from "react-router-dom";
 import Utilities from "./index";
 
 describe("Utilities: index", () => {
@@ -7,8 +8,8 @@ describe("Utilities: index", () => {
         expect(Utilities).toBeDefined();
     });
 
-    it.skip("renders", () => {
-        const utilities = renderer.create(<Utilities/>);
+    it("renders", () => {
+        const utilities = renderer.create(<BrowserRouter><Utilities/></BrowserRouter>);
 
         expect(utilities.toJSON()).toMatchSnapshot();
     });

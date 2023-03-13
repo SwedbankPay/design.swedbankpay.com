@@ -1,5 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
+import { BrowserRouter } from "react-router-dom";
 
 import Forms, { Overview, ContentGuidelines, HowToDesignForms, DeveloperDocumentation } from "./index";
 
@@ -8,8 +9,10 @@ describe("Forms: index", () => {
         expect(Forms).toBeDefined();
     });
 
-    it.skip("renders", () => {
-        const wrapper = renderer.create(<Forms />);
+    it("renders", () => {
+        const wrapper = renderer.create(<BrowserRouter>
+            <Forms />
+        </BrowserRouter>);
 
         expect(wrapper.toJSON()).toMatchSnapshot();
     });
@@ -19,7 +22,7 @@ describe("Forms: index", () => {
             expect(Overview).toBeDefined();
         });
 
-        it("renders", () => {
+        it.skip("renders", () => {
             const wrapper = renderer.create(<Overview />);
 
             expect(wrapper.toJSON()).toMatchSnapshot();
@@ -32,7 +35,9 @@ describe("Forms: index", () => {
         });
 
         it.skip("renders", () => {
-            const wrapper = renderer.create(<ContentGuidelines />);
+            const wrapper = renderer.create(<BrowserRouter>
+                <ContentGuidelines />
+            </BrowserRouter>);
 
             expect(wrapper.toJSON()).toMatchSnapshot();
         });
