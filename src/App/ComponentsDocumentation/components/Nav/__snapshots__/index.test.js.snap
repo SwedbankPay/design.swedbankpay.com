@@ -16,135 +16,1094 @@ exports[`Component: Nav JavascriptMethods renders 1`] = `
 `;
 
 exports[`Component: Nav StandardNav renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="nav-standard"
   >
     Standard nav
-  </h2>
+  </h2>,
   <p>
     To use our reccommended nav add 
-    <CodeTags
-      code=".nav"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .nav
+    </code>
      and 
-    <CodeTags
-      code=".nav-<desired_size>-vertical-wide"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .nav-&lt;desired_size&gt;-vertical-wide
+    </code>
     . This gives you a nav with a breakpoint at the size set in the class name. In the example we use 
-    <CodeTags
-      code="lg"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      lg
+    </code>
     , resize this window to see it in action.
-  </p>
+  </p>,
   <p>
     When the nav is in mobile view it will hide menu elements if they total more than 5. Menu elements with a submenu will also be hidden and only viewable when the nav is expanded.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <Nav
-      items={
-        Array [
-          Object {
-            "icon": "home",
-            "name": "Home",
-          },
-          Object {
-            "icon": "shopping_cart",
-            "name": "Transactions",
-            "subItems": Array [
-              "Purchase history",
-              "Invoice",
-            ],
-          },
-          Object {
-            "icon": "notification_important",
-            "name": "Notifications",
-          },
-          Object {
-            "icon": "language",
-            "name": "Language",
-          },
-          Object {
-            "icon": "account_balance",
-            "name": "Account",
-          },
-          Object {
-            "icon": "fingerprint",
-            "name": "Authentication",
-          },
-        ]
-      }
-      widesize="lg"
-    />
-  </ComponentPreview>
-</Fragment>
+    <nav
+      className="nav nav-lg-vertical-wide"
+    >
+      <ul>
+        <li>
+          
+
+          <a
+            className="active"
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              home
+            </i>
+            
+
+            <span>
+              Home
+            </span>
+            
+
+          </a>
+          
+
+        </li>
+        <li>
+          
+
+          <div
+            className="submenu"
+          >
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <i
+                aria-hidden="true"
+                className="material-icons"
+              >
+                shopping_cart
+              </i>
+              
+
+              <span>
+                Transactions
+              </span>
+              
+
+            </a>
+            <ul>
+              <li
+                className={null}
+              >
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  <span>
+                    Purchase history
+                  </span>
+                </a>
+              </li>
+              <li
+                className={null}
+              >
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  <span>
+                    Invoice
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+
+        </li>
+        <li>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              notification_important
+            </i>
+            
+
+            <span>
+              Notifications
+            </span>
+            
+
+          </a>
+          
+
+        </li>
+        <li>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              language
+            </i>
+            
+
+            <span>
+              Language
+            </span>
+            
+
+          </a>
+          
+
+        </li>
+        <li>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              account_balance
+            </i>
+            
+
+            <span>
+              Account
+            </span>
+            
+
+          </a>
+          
+
+        </li>
+        <li>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              fingerprint
+            </i>
+            
+
+            <span>
+              Authentication
+            </span>
+            
+
+          </a>
+          
+
+        </li>
+      </ul>
+    </nav>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+                15
+                
+
+                16
+                
+
+                17
+                
+
+                18
+                
+
+                19
+                
+
+                20
+                
+
+                21
+                
+
+                22
+                
+
+                23
+                
+
+                24
+                
+
+                25
+                
+
+                26
+                
+
+                27
+                
+
+                28
+                
+
+                29
+                
+
+                30
+                
+
+                31
+                
+
+                32
+                
+
+                33
+                
+
+                34
+                
+
+                35
+                
+
+                36
+                
+
+                37
+                
+
+                38
+                
+
+                39
+                
+
+                40
+                
+
+                41
+                
+
+                42
+                
+
+                43
+                
+
+                44
+                
+
+                45
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;nav class="nav nav-lg-vertical-wide"&gt;
+                
+
+                    &lt;ul&gt;
+                
+
+                        &lt;li&gt;
+                
+
+                            &lt;a href="#" class="active"&gt;
+                
+
+                                &lt;i class="material-icons" aria-hidden="true"&gt;home&lt;/i&gt;
+                
+
+                                &lt;span&gt;Home&lt;/span&gt;
+                
+
+                            &lt;/a&gt;
+                
+
+                        &lt;/li&gt;
+                
+
+                        &lt;li&gt;
+                
+
+                            &lt;div class="submenu"&gt;
+                
+
+                                &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;shopping_cart&lt;/i&gt;
+                
+
+                                    &lt;span&gt;Transactions&lt;/span&gt;
+                
+
+                                &lt;/a&gt;
+                
+
+                                &lt;ul&gt;
+                
+
+                                    &lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;Purchase history&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                
+
+                                    &lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;Invoice&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                
+
+                                &lt;/ul&gt;
+                
+
+                            &lt;/div&gt;
+                
+
+                        &lt;/li&gt;
+                
+
+                        &lt;li&gt;
+                
+
+                            &lt;a href="#"&gt;
+                
+
+                                &lt;i class="material-icons" aria-hidden="true"&gt;notification_important&lt;/i&gt;
+                
+
+                                &lt;span&gt;Notifications&lt;/span&gt;
+                
+
+                            &lt;/a&gt;
+                
+
+                        &lt;/li&gt;
+                
+
+                        &lt;li&gt;
+                
+
+                            &lt;a href="#"&gt;
+                
+
+                                &lt;i class="material-icons" aria-hidden="true"&gt;language&lt;/i&gt;
+                
+
+                                &lt;span&gt;Language&lt;/span&gt;
+                
+
+                            &lt;/a&gt;
+                
+
+                        &lt;/li&gt;
+                
+
+                        &lt;li&gt;
+                
+
+                            &lt;a href="#"&gt;
+                
+
+                                &lt;i class="material-icons" aria-hidden="true"&gt;account_balance&lt;/i&gt;
+                
+
+                                &lt;span&gt;Account&lt;/span&gt;
+                
+
+                            &lt;/a&gt;
+                
+
+                        &lt;/li&gt;
+                
+
+                        &lt;li&gt;
+                
+
+                            &lt;a href="#"&gt;
+                
+
+                                &lt;i class="material-icons" aria-hidden="true"&gt;fingerprint&lt;/i&gt;
+                
+
+                                &lt;span&gt;Authentication&lt;/span&gt;
+                
+
+                            &lt;/a&gt;
+                
+
+                        &lt;/li&gt;
+                
+
+                    &lt;/ul&gt;
+                
+
+                &lt;/nav&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Component: Nav WithIconsOnly renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="icons-only"
   >
     Icons only
-  </h2>
+  </h2>,
   <p>
     If you want to show only icons at a certain breakpoint then include 
-    <CodeTags
-      code=".nav-<desired_size>-vertical"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .nav-&lt;desired_size&gt;-vertical
+    </code>
      with your nav component.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <Nav
-      items={
-        Array [
-          Object {
-            "icon": "home",
-            "name": "Home",
-          },
-          Object {
-            "icon": "shopping_cart",
-            "name": "Transactions",
-            "subItems": Array [
-              "Purchase history",
-              "Invoice",
-            ],
-          },
-          Object {
-            "icon": "notification_important",
-            "name": "Notifications",
-          },
-          Object {
-            "icon": "language",
-            "name": "Language",
-          },
-          Object {
-            "icon": "account_balance",
-            "name": "Account",
-          },
-          Object {
-            "icon": "fingerprint",
-            "name": "Authentication",
-          },
-        ]
-      }
-      vertsize="md"
-      widesize="lg"
-    />
-  </ComponentPreview>
-</Fragment>
+    <nav
+      className="nav nav-md-vertical nav-lg-vertical-wide"
+    >
+      <ul>
+        <li>
+          
+
+          <a
+            className="active"
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              home
+            </i>
+            
+
+            <span>
+              Home
+            </span>
+            
+
+          </a>
+          
+
+        </li>
+        <li>
+          
+
+          <div
+            className="submenu"
+          >
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <i
+                aria-hidden="true"
+                className="material-icons"
+              >
+                shopping_cart
+              </i>
+              
+
+              <span>
+                Transactions
+              </span>
+              
+
+            </a>
+            <ul>
+              <li
+                className={null}
+              >
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  <span>
+                    Purchase history
+                  </span>
+                </a>
+              </li>
+              <li
+                className={null}
+              >
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  <span>
+                    Invoice
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+
+        </li>
+        <li>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              notification_important
+            </i>
+            
+
+            <span>
+              Notifications
+            </span>
+            
+
+          </a>
+          
+
+        </li>
+        <li>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              language
+            </i>
+            
+
+            <span>
+              Language
+            </span>
+            
+
+          </a>
+          
+
+        </li>
+        <li>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              account_balance
+            </i>
+            
+
+            <span>
+              Account
+            </span>
+            
+
+          </a>
+          
+
+        </li>
+        <li>
+          
+
+          <a
+            className={null}
+            href="#"
+            onClick={[Function]}
+          >
+            
+
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              fingerprint
+            </i>
+            
+
+            <span>
+              Authentication
+            </span>
+            
+
+          </a>
+          
+
+        </li>
+      </ul>
+    </nav>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+                15
+                
+
+                16
+                
+
+                17
+                
+
+                18
+                
+
+                19
+                
+
+                20
+                
+
+                21
+                
+
+                22
+                
+
+                23
+                
+
+                24
+                
+
+                25
+                
+
+                26
+                
+
+                27
+                
+
+                28
+                
+
+                29
+                
+
+                30
+                
+
+                31
+                
+
+                32
+                
+
+                33
+                
+
+                34
+                
+
+                35
+                
+
+                36
+                
+
+                37
+                
+
+                38
+                
+
+                39
+                
+
+                40
+                
+
+                41
+                
+
+                42
+                
+
+                43
+                
+
+                44
+                
+
+                45
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;nav class="nav nav-md-vertical nav-lg-vertical-wide"&gt;
+                
+
+                    &lt;ul&gt;
+                
+
+                        &lt;li&gt;
+                
+
+                            &lt;a href="#" class="active"&gt;
+                
+
+                                &lt;i class="material-icons" aria-hidden="true"&gt;home&lt;/i&gt;
+                
+
+                                &lt;span&gt;Home&lt;/span&gt;
+                
+
+                            &lt;/a&gt;
+                
+
+                        &lt;/li&gt;
+                
+
+                        &lt;li&gt;
+                
+
+                            &lt;div class="submenu"&gt;
+                
+
+                                &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;shopping_cart&lt;/i&gt;
+                
+
+                                    &lt;span&gt;Transactions&lt;/span&gt;
+                
+
+                                &lt;/a&gt;
+                
+
+                                &lt;ul&gt;
+                
+
+                                    &lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;Purchase history&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                
+
+                                    &lt;li&gt;&lt;a href="#"&gt;&lt;span&gt;Invoice&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                
+
+                                &lt;/ul&gt;
+                
+
+                            &lt;/div&gt;
+                
+
+                        &lt;/li&gt;
+                
+
+                        &lt;li&gt;
+                
+
+                            &lt;a href="#"&gt;
+                
+
+                                &lt;i class="material-icons" aria-hidden="true"&gt;notification_important&lt;/i&gt;
+                
+
+                                &lt;span&gt;Notifications&lt;/span&gt;
+                
+
+                            &lt;/a&gt;
+                
+
+                        &lt;/li&gt;
+                
+
+                        &lt;li&gt;
+                
+
+                            &lt;a href="#"&gt;
+                
+
+                                &lt;i class="material-icons" aria-hidden="true"&gt;language&lt;/i&gt;
+                
+
+                                &lt;span&gt;Language&lt;/span&gt;
+                
+
+                            &lt;/a&gt;
+                
+
+                        &lt;/li&gt;
+                
+
+                        &lt;li&gt;
+                
+
+                            &lt;a href="#"&gt;
+                
+
+                                &lt;i class="material-icons" aria-hidden="true"&gt;account_balance&lt;/i&gt;
+                
+
+                                &lt;span&gt;Account&lt;/span&gt;
+                
+
+                            &lt;/a&gt;
+                
+
+                        &lt;/li&gt;
+                
+
+                        &lt;li&gt;
+                
+
+                            &lt;a href="#"&gt;
+                
+
+                                &lt;i class="material-icons" aria-hidden="true"&gt;fingerprint&lt;/i&gt;
+                
+
+                                &lt;span&gt;Authentication&lt;/span&gt;
+                
+
+                            &lt;/a&gt;
+                
+
+                        &lt;/li&gt;
+                
+
+                    &lt;/ul&gt;
+                
+
+                &lt;/nav&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Component: Nav renders 1`] = `

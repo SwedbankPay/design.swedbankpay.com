@@ -33,91 +33,750 @@ exports[`Documentation: Panel Overview renders 1`] = `
 `;
 
 exports[`Documentation: Panel PanelHeaders renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="panel-headers"
   >
     Panel headers
-  </h2>
+  </h2>,
   <p>
     You can pick between two different panel headers, brand color with white text and white with green text. add 
-    <CodeTags
-      code=".panel-default"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .panel-default
+    </code>
      or 
-    <CodeTags
-      code=".panel-brand"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .panel-brand
+    </code>
      to the header to use one of them.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <Panel
-      title="Default panel"
-    />
+    <section
+      className="panel panel-default"
+    >
+      <header>
+        <h2
+          className="panel-title"
+        >
+          Default panel
+        </h2>
+      </header>
+    </section>
     
 
 
-    <Panel
-      title="Panel brand"
-      type="brand"
-    />
-  </ComponentPreview>
-</Fragment>
+    <section
+      className="panel panel-brand"
+    >
+      <header>
+        <h2
+          className="panel-title"
+        >
+          Panel brand
+        </h2>
+      </header>
+    </section>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;section class="panel panel-default"&gt;
+                
+
+                    &lt;header&gt;
+                
+
+                        &lt;h2 class="panel-title"&gt;Default panel&lt;/h2&gt;
+                
+
+                    &lt;/header&gt;
+                
+
+                &lt;/section&gt;
+                
+
+                
+                
+
+                &lt;section class="panel panel-brand"&gt;
+                
+
+                    &lt;header&gt;
+                
+
+                        &lt;h2 class="panel-title"&gt;Panel brand&lt;/h2&gt;
+                
+
+                    &lt;/header&gt;
+                
+
+                &lt;/section&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Panel PanelTable renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="panel-with-table"
   >
     Displaying a full width table
-  </h2>
+  </h2>,
   <p>
     To display a full width table in a panel use 
-    <CodeTags
-      code=".panel-table"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .panel-table
+    </code>
      on a div wrapping the table. Put 
-    <CodeTags
-      code=".panel-table"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .panel-table
+    </code>
      as a direct child of 
-    <CodeTags
-      code=".panel"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .panel
+    </code>
     . Tables put in a panel are given a border bottom to separate it from the following elements.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <Panel
-      bodyContent={
-        Array [
-          "Your main panel content is put here.",
-          "Some more content over here.",
-          "And one more line, just to be safe.",
-        ]
-      }
-      footerBtnText="Footer button"
-      footerText="Footer content goes here."
-      panelTable={[Function]}
-      subTitle="Panel subtitle"
-      title="Panel title"
-      type="brand"
-    />
-  </ComponentPreview>
-</Fragment>
+    <section
+      className="panel panel-brand"
+    >
+      <header>
+        <h2
+          className="panel-title"
+        >
+          Panel title
+        </h2>
+        <p
+          className="panel-sub-title"
+        >
+          Panel subtitle
+        </p>
+      </header>
+      <div
+        className="panel-body"
+      >
+        <p>
+          Your main panel content is put here.
+        </p>
+        <p>
+          Some more content over here.
+        </p>
+        <p>
+          And one more line, just to be safe.
+        </p>
+      </div>
+      <div
+        className="panel-table"
+      >
+        <table
+          className="table"
+        >
+          <thead>
+            <tr>
+              <th
+                scope="col"
+              >
+                #
+              </th>
+              <th
+                scope="col"
+              >
+                First Name
+              </th>
+              <th
+                scope="col"
+              >
+                Last Name
+              </th>
+              <th
+                scope="col"
+              >
+                Location
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th
+                scope="row"
+              >
+                1
+              </th>
+              <td>
+                Sven
+              </td>
+              <td>
+                Svensson
+              </td>
+              <td>
+                Visby
+              </td>
+            </tr>
+            <tr>
+              <th
+                scope="row"
+              >
+                2
+              </th>
+              <td>
+                Sara
+              </td>
+              <td>
+                Svensson
+              </td>
+              <td>
+                Stockholm
+              </td>
+            </tr>
+            <tr>
+              <th
+                scope="row"
+              >
+                3
+              </th>
+              <td>
+                Ola
+              </td>
+              <td>
+                Nordmann
+              </td>
+              <td>
+                Oslo
+              </td>
+            </tr>
+            <tr>
+              <th
+                scope="row"
+              >
+                4
+              </th>
+              <td>
+                Holger
+              </td>
+              <td>
+                Danske
+              </td>
+              <td>
+                Copenhagen
+              </td>
+            </tr>
+            <tr>
+              <th
+                scope="row"
+              >
+                5
+              </th>
+              <td>
+                Matti
+              </td>
+              <td>
+                Meikäläinen
+              </td>
+              <td>
+                Lahti
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <footer>
+        <p>
+          Footer content goes here.
+        </p>
+      </footer>
+    </section>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+                15
+                
+
+                16
+                
+
+                17
+                
+
+                18
+                
+
+                19
+                
+
+                20
+                
+
+                21
+                
+
+                22
+                
+
+                23
+                
+
+                24
+                
+
+                25
+                
+
+                26
+                
+
+                27
+                
+
+                28
+                
+
+                29
+                
+
+                30
+                
+
+                31
+                
+
+                32
+                
+
+                33
+                
+
+                34
+                
+
+                35
+                
+
+                36
+                
+
+                37
+                
+
+                38
+                
+
+                39
+                
+
+                40
+                
+
+                41
+                
+
+                42
+                
+
+                43
+                
+
+                44
+                
+
+                45
+                
+
+                46
+                
+
+                47
+                
+
+                48
+                
+
+                49
+                
+
+                50
+                
+
+                51
+                
+
+                52
+                
+
+                53
+                
+
+                54
+                
+
+                55
+                
+
+                56
+                
+
+                57
+                
+
+                58
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;section class="panel panel-brand"&gt;
+                
+
+                    &lt;header&gt;
+                
+
+                        &lt;h2 class="panel-title"&gt;Panel title&lt;/h2&gt;
+                
+
+                        &lt;p class="panel-sub-title"&gt;Panel subtitle&lt;/p&gt;
+                
+
+                    &lt;/header&gt;
+                
+
+                    &lt;div class="panel-body"&gt;
+                
+
+                        &lt;p&gt;Your main panel content is put here.&lt;/p&gt;
+                
+
+                        &lt;p&gt;Some more content over here.&lt;/p&gt;
+                
+
+                        &lt;p&gt;And one more line, just to be safe.&lt;/p&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                    &lt;div class="panel-table"&gt;
+                
+
+                        &lt;table class="table"&gt;
+                
+
+                            &lt;thead&gt;
+                
+
+                                &lt;tr&gt;
+                
+
+                                    &lt;th scope="col"&gt;#&lt;/th&gt;
+                
+
+                                    &lt;th scope="col"&gt;First Name&lt;/th&gt;
+                
+
+                                    &lt;th scope="col"&gt;Last Name&lt;/th&gt;
+                
+
+                                    &lt;th scope="col"&gt;Location&lt;/th&gt;
+                
+
+                                &lt;/tr&gt;
+                
+
+                            &lt;/thead&gt;
+                
+
+                            &lt;tbody&gt;
+                
+
+                                &lt;tr&gt;
+                
+
+                                    &lt;th scope="row"&gt;1&lt;/th&gt;
+                
+
+                                    &lt;td&gt;Sven&lt;/td&gt;
+                
+
+                                    &lt;td&gt;Svensson&lt;/td&gt;
+                
+
+                                    &lt;td&gt;Visby&lt;/td&gt;
+                
+
+                                &lt;/tr&gt;
+                
+
+                                &lt;tr&gt;
+                
+
+                                    &lt;th scope="row"&gt;2&lt;/th&gt;
+                
+
+                                    &lt;td&gt;Sara&lt;/td&gt;
+                
+
+                                    &lt;td&gt;Svensson&lt;/td&gt;
+                
+
+                                    &lt;td&gt;Stockholm&lt;/td&gt;
+                
+
+                                &lt;/tr&gt;
+                
+
+                                &lt;tr&gt;
+                
+
+                                    &lt;th scope="row"&gt;3&lt;/th&gt;
+                
+
+                                    &lt;td&gt;Ola&lt;/td&gt;
+                
+
+                                    &lt;td&gt;Nordmann&lt;/td&gt;
+                
+
+                                    &lt;td&gt;Oslo&lt;/td&gt;
+                
+
+                                &lt;/tr&gt;
+                
+
+                                &lt;tr&gt;
+                
+
+                                    &lt;th scope="row"&gt;4&lt;/th&gt;
+                
+
+                                    &lt;td&gt;Holger&lt;/td&gt;
+                
+
+                                    &lt;td&gt;Danske&lt;/td&gt;
+                
+
+                                    &lt;td&gt;Copenhagen&lt;/td&gt;
+                
+
+                                &lt;/tr&gt;
+                
+
+                                &lt;tr&gt;
+                
+
+                                    &lt;th scope="row"&gt;5&lt;/th&gt;
+                
+
+                                    &lt;td&gt;Matti&lt;/td&gt;
+                
+
+                                    &lt;td&gt;Meikäläinen&lt;/td&gt;
+                
+
+                                    &lt;td&gt;Lahti&lt;/td&gt;
+                
+
+                                &lt;/tr&gt;
+                
+
+                            &lt;/tbody&gt;
+                
+
+                        &lt;/table&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                    &lt;footer&gt;
+                
+
+                        &lt;p&gt;Footer content goes here.&lt;/p&gt;
+                
+
+                    &lt;/footer&gt;
+                
+
+                &lt;/section&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Panel TableContent renders 1`] = `
@@ -234,14 +893,933 @@ exports[`Documentation: Panel TableContent renders 1`] = `
 `;
 
 exports[`Documentation: Panel renders 1`] = `
-<DocContainer>
-  <p
-    className="lead"
+<div
+  className="row"
+>
+  <div
+    className="doc-body col-12"
+    id="doc-body"
   >
-    Panels are large containers meant to be able to contain all of our other components.
-  </p>
-  <Overview />
-  <PanelHeaders />
-  <PanelTable />
-</DocContainer>
+    <p
+      className="lead"
+    >
+      Panels are large containers meant to be able to contain all of our other components.
+    </p>
+    <h2
+      id="overview"
+    >
+      Overview
+    </h2>
+    <p>
+      A panel consists of three parts: A header, a body and a footer. You can mostly put whatever you want in any of these, but try not to put too much in the header and footer as these are meant to contain short and concise information about the body content.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <section
+        className="panel panel-default"
+      >
+        <header>
+          <h2
+            className="panel-title"
+          >
+            Panel title
+          </h2>
+          <p
+            className="panel-sub-title"
+          >
+            Panel subtitle
+          </p>
+        </header>
+        <div
+          className="panel-body"
+        >
+          <p>
+            Your main panel content is put here.
+          </p>
+          <p>
+            Some more content over here.
+          </p>
+          <p>
+            And one more line, just to be safe.
+          </p>
+        </div>
+        <footer>
+          <p>
+            Footer content goes here.
+          </p>
+        </footer>
+      </section>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                  12
+                  
+
+                  13
+                  
+
+                  14
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;section class="panel panel-default"&gt;
+                  
+
+                      &lt;header&gt;
+                  
+
+                          &lt;h2 class="panel-title"&gt;Panel title&lt;/h2&gt;
+                  
+
+                          &lt;p class="panel-sub-title"&gt;Panel subtitle&lt;/p&gt;
+                  
+
+                      &lt;/header&gt;
+                  
+
+                      &lt;div class="panel-body"&gt;
+                  
+
+                          &lt;p&gt;Your main panel content is put here.&lt;/p&gt;
+                  
+
+                          &lt;p&gt;Some more content over here.&lt;/p&gt;
+                  
+
+                          &lt;p&gt;And one more line, just to be safe.&lt;/p&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                      &lt;footer&gt;
+                  
+
+                          &lt;p&gt;Footer content goes here.&lt;/p&gt;
+                  
+
+                      &lt;/footer&gt;
+                  
+
+                  &lt;/section&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h2
+      id="panel-headers"
+    >
+      Panel headers
+    </h2>
+    <p>
+      You can pick between two different panel headers, brand color with white text and white with green text. add 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .panel-default
+      </code>
+       or 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .panel-brand
+      </code>
+       to the header to use one of them.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <section
+        className="panel panel-default"
+      >
+        <header>
+          <h2
+            className="panel-title"
+          >
+            Default panel
+          </h2>
+        </header>
+      </section>
+      
+
+
+      <section
+        className="panel panel-brand"
+      >
+        <header>
+          <h2
+            className="panel-title"
+          >
+            Panel brand
+          </h2>
+        </header>
+      </section>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;section class="panel panel-default"&gt;
+                  
+
+                      &lt;header&gt;
+                  
+
+                          &lt;h2 class="panel-title"&gt;Default panel&lt;/h2&gt;
+                  
+
+                      &lt;/header&gt;
+                  
+
+                  &lt;/section&gt;
+                  
+
+                  
+                  
+
+                  &lt;section class="panel panel-brand"&gt;
+                  
+
+                      &lt;header&gt;
+                  
+
+                          &lt;h2 class="panel-title"&gt;Panel brand&lt;/h2&gt;
+                  
+
+                      &lt;/header&gt;
+                  
+
+                  &lt;/section&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h2
+      id="panel-with-table"
+    >
+      Displaying a full width table
+    </h2>
+    <p>
+      To display a full width table in a panel use 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .panel-table
+      </code>
+       on a div wrapping the table. Put 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .panel-table
+      </code>
+       as a direct child of 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .panel
+      </code>
+      . Tables put in a panel are given a border bottom to separate it from the following elements.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <section
+        className="panel panel-brand"
+      >
+        <header>
+          <h2
+            className="panel-title"
+          >
+            Panel title
+          </h2>
+          <p
+            className="panel-sub-title"
+          >
+            Panel subtitle
+          </p>
+        </header>
+        <div
+          className="panel-body"
+        >
+          <p>
+            Your main panel content is put here.
+          </p>
+          <p>
+            Some more content over here.
+          </p>
+          <p>
+            And one more line, just to be safe.
+          </p>
+        </div>
+        <div
+          className="panel-table"
+        >
+          <table
+            className="table"
+          >
+            <thead>
+              <tr>
+                <th
+                  scope="col"
+                >
+                  #
+                </th>
+                <th
+                  scope="col"
+                >
+                  First Name
+                </th>
+                <th
+                  scope="col"
+                >
+                  Last Name
+                </th>
+                <th
+                  scope="col"
+                >
+                  Location
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th
+                  scope="row"
+                >
+                  1
+                </th>
+                <td>
+                  Sven
+                </td>
+                <td>
+                  Svensson
+                </td>
+                <td>
+                  Visby
+                </td>
+              </tr>
+              <tr>
+                <th
+                  scope="row"
+                >
+                  2
+                </th>
+                <td>
+                  Sara
+                </td>
+                <td>
+                  Svensson
+                </td>
+                <td>
+                  Stockholm
+                </td>
+              </tr>
+              <tr>
+                <th
+                  scope="row"
+                >
+                  3
+                </th>
+                <td>
+                  Ola
+                </td>
+                <td>
+                  Nordmann
+                </td>
+                <td>
+                  Oslo
+                </td>
+              </tr>
+              <tr>
+                <th
+                  scope="row"
+                >
+                  4
+                </th>
+                <td>
+                  Holger
+                </td>
+                <td>
+                  Danske
+                </td>
+                <td>
+                  Copenhagen
+                </td>
+              </tr>
+              <tr>
+                <th
+                  scope="row"
+                >
+                  5
+                </th>
+                <td>
+                  Matti
+                </td>
+                <td>
+                  Meikäläinen
+                </td>
+                <td>
+                  Lahti
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <footer>
+          <p>
+            Footer content goes here.
+          </p>
+        </footer>
+      </section>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                  12
+                  
+
+                  13
+                  
+
+                  14
+                  
+
+                  15
+                  
+
+                  16
+                  
+
+                  17
+                  
+
+                  18
+                  
+
+                  19
+                  
+
+                  20
+                  
+
+                  21
+                  
+
+                  22
+                  
+
+                  23
+                  
+
+                  24
+                  
+
+                  25
+                  
+
+                  26
+                  
+
+                  27
+                  
+
+                  28
+                  
+
+                  29
+                  
+
+                  30
+                  
+
+                  31
+                  
+
+                  32
+                  
+
+                  33
+                  
+
+                  34
+                  
+
+                  35
+                  
+
+                  36
+                  
+
+                  37
+                  
+
+                  38
+                  
+
+                  39
+                  
+
+                  40
+                  
+
+                  41
+                  
+
+                  42
+                  
+
+                  43
+                  
+
+                  44
+                  
+
+                  45
+                  
+
+                  46
+                  
+
+                  47
+                  
+
+                  48
+                  
+
+                  49
+                  
+
+                  50
+                  
+
+                  51
+                  
+
+                  52
+                  
+
+                  53
+                  
+
+                  54
+                  
+
+                  55
+                  
+
+                  56
+                  
+
+                  57
+                  
+
+                  58
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;section class="panel panel-brand"&gt;
+                  
+
+                      &lt;header&gt;
+                  
+
+                          &lt;h2 class="panel-title"&gt;Panel title&lt;/h2&gt;
+                  
+
+                          &lt;p class="panel-sub-title"&gt;Panel subtitle&lt;/p&gt;
+                  
+
+                      &lt;/header&gt;
+                  
+
+                      &lt;div class="panel-body"&gt;
+                  
+
+                          &lt;p&gt;Your main panel content is put here.&lt;/p&gt;
+                  
+
+                          &lt;p&gt;Some more content over here.&lt;/p&gt;
+                  
+
+                          &lt;p&gt;And one more line, just to be safe.&lt;/p&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                      &lt;div class="panel-table"&gt;
+                  
+
+                          &lt;table class="table"&gt;
+                  
+
+                              &lt;thead&gt;
+                  
+
+                                  &lt;tr&gt;
+                  
+
+                                      &lt;th scope="col"&gt;#&lt;/th&gt;
+                  
+
+                                      &lt;th scope="col"&gt;First Name&lt;/th&gt;
+                  
+
+                                      &lt;th scope="col"&gt;Last Name&lt;/th&gt;
+                  
+
+                                      &lt;th scope="col"&gt;Location&lt;/th&gt;
+                  
+
+                                  &lt;/tr&gt;
+                  
+
+                              &lt;/thead&gt;
+                  
+
+                              &lt;tbody&gt;
+                  
+
+                                  &lt;tr&gt;
+                  
+
+                                      &lt;th scope="row"&gt;1&lt;/th&gt;
+                  
+
+                                      &lt;td&gt;Sven&lt;/td&gt;
+                  
+
+                                      &lt;td&gt;Svensson&lt;/td&gt;
+                  
+
+                                      &lt;td&gt;Visby&lt;/td&gt;
+                  
+
+                                  &lt;/tr&gt;
+                  
+
+                                  &lt;tr&gt;
+                  
+
+                                      &lt;th scope="row"&gt;2&lt;/th&gt;
+                  
+
+                                      &lt;td&gt;Sara&lt;/td&gt;
+                  
+
+                                      &lt;td&gt;Svensson&lt;/td&gt;
+                  
+
+                                      &lt;td&gt;Stockholm&lt;/td&gt;
+                  
+
+                                  &lt;/tr&gt;
+                  
+
+                                  &lt;tr&gt;
+                  
+
+                                      &lt;th scope="row"&gt;3&lt;/th&gt;
+                  
+
+                                      &lt;td&gt;Ola&lt;/td&gt;
+                  
+
+                                      &lt;td&gt;Nordmann&lt;/td&gt;
+                  
+
+                                      &lt;td&gt;Oslo&lt;/td&gt;
+                  
+
+                                  &lt;/tr&gt;
+                  
+
+                                  &lt;tr&gt;
+                  
+
+                                      &lt;th scope="row"&gt;4&lt;/th&gt;
+                  
+
+                                      &lt;td&gt;Holger&lt;/td&gt;
+                  
+
+                                      &lt;td&gt;Danske&lt;/td&gt;
+                  
+
+                                      &lt;td&gt;Copenhagen&lt;/td&gt;
+                  
+
+                                  &lt;/tr&gt;
+                  
+
+                                  &lt;tr&gt;
+                  
+
+                                      &lt;th scope="row"&gt;5&lt;/th&gt;
+                  
+
+                                      &lt;td&gt;Matti&lt;/td&gt;
+                  
+
+                                      &lt;td&gt;Meikäläinen&lt;/td&gt;
+                  
+
+                                      &lt;td&gt;Lahti&lt;/td&gt;
+                  
+
+                                  &lt;/tr&gt;
+                  
+
+                              &lt;/tbody&gt;
+                  
+
+                          &lt;/table&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                      &lt;footer&gt;
+                  
+
+                          &lt;p&gt;Footer content goes here.&lt;/p&gt;
+                  
+
+                      &lt;/footer&gt;
+                  
+
+                  &lt;/section&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+  </div>
+</div>
 `;
