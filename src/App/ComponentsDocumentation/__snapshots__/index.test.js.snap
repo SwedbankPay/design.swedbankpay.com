@@ -1,8 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ComponentsDocumentation: index renders 1`] = `
-<RenderPage
-  initPath="/components/components"
-  path="/components"
-/>
+<div
+  className="doc-container"
+>
+  <span
+    className="dg-current-version text-uppercase"
+  >
+    Design Guide – v. 
+    10.7.1
+  </span>
+</div>
 `;

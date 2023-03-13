@@ -1,224 +1,1740 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components: ActionList Anchorpoints renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="anchorpoints"
   >
     Anchorpoints
-  </h2>
+  </h2>,
   <p>
     You can change where the action list will have its anchor, by default the anchor will be top right.
-  </p>
+  </p>,
   <h3>
     Top left
-  </h3>
+  </h3>,
   <p>
     Use class 
-    <CodeTags
-      code=".anchor-top-left"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .anchor-top-left
+    </code>
      to anchor action-list button to the top left corner of the menu.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <ActionList
-      classNames="anchor-top-left"
-      items={
-        Array [
-          Object {
-            "icon": "bookmark",
-            "name": "Add bookmark",
-          },
-          Object {
-            "icon": "business_center",
-            "name": "Add client",
-          },
-          Object {
-            "icon": "add_circle",
-            "name": "Add document",
-          },
-          Object {
-            "icon": "person_add",
-            "name": "Add user",
-          },
-        ]
-      }
-    />
-  </ComponentPreview>
+    <div
+      className="action-list anchor-top-left"
+    >
+      
+
+      <button
+        aria-haspopup="true"
+        aria-label="Action list button"
+        className="action-toggle"
+        id="actionListToggle"
+        type="button"
+      >
+        
+
+        <i
+          className="material-icons"
+        >
+          more_vert
+        </i>
+        
+
+      </button>
+      
+
+      <div
+        aria-labelledby="actionListToggle"
+        className="action-menu"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            bookmark
+          </i>
+          Add bookmark
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            business_center
+          </i>
+          Add client
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            add_circle
+          </i>
+          Add document
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            person_add
+          </i>
+          Add user
+        </a>
+        
+
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="action-list anchor-top-left"&gt;
+                
+
+                    &lt;button id="actionListToggle" aria-label="Action list button" type="button" class="action-toggle" aria-haspopup="true"&gt;
+                
+
+                        &lt;i class="material-icons"&gt;more_vert&lt;/i&gt;
+                
+
+                    &lt;/button&gt;
+                
+
+                    &lt;div class="action-menu" aria-labelledby="actionListToggle"&gt;
+                
+
+                        &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;bookmark&lt;/i&gt;Add bookmark&lt;/a&gt;
+                
+
+                        &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;business_center&lt;/i&gt;Add client&lt;/a&gt;
+                
+
+                        &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;add_circle&lt;/i&gt;Add document&lt;/a&gt;
+                
+
+                        &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;person_add&lt;/i&gt;Add user&lt;/a&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
   <h3>
     Bottom right
-  </h3>
+  </h3>,
   <p>
     Use class 
-    <CodeTags
-      code=".anchor-bottom-right"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .anchor-bottom-right
+    </code>
      to anchor action-list button to the bottom right corner of the menu.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <ActionList
-      classNames="anchor-bottom-right"
-      items={
-        Array [
-          Object {
-            "icon": "bookmark",
-            "name": "Add bookmark",
-          },
-          Object {
-            "icon": "business_center",
-            "name": "Add client",
-          },
-          Object {
-            "icon": "add_circle",
-            "name": "Add document",
-          },
-          Object {
-            "icon": "person_add",
-            "name": "Add user",
-          },
-        ]
-      }
-    />
-  </ComponentPreview>
+    <div
+      className="action-list anchor-bottom-right"
+    >
+      
+
+      <button
+        aria-haspopup="true"
+        aria-label="Action list button"
+        className="action-toggle"
+        id="actionListToggle"
+        type="button"
+      >
+        
+
+        <i
+          className="material-icons"
+        >
+          more_vert
+        </i>
+        
+
+      </button>
+      
+
+      <div
+        aria-labelledby="actionListToggle"
+        className="action-menu"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            bookmark
+          </i>
+          Add bookmark
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            business_center
+          </i>
+          Add client
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            add_circle
+          </i>
+          Add document
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            person_add
+          </i>
+          Add user
+        </a>
+        
+
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="action-list anchor-bottom-right"&gt;
+                
+
+                    &lt;button id="actionListToggle" aria-label="Action list button" type="button" class="action-toggle" aria-haspopup="true"&gt;
+                
+
+                        &lt;i class="material-icons"&gt;more_vert&lt;/i&gt;
+                
+
+                    &lt;/button&gt;
+                
+
+                    &lt;div class="action-menu" aria-labelledby="actionListToggle"&gt;
+                
+
+                        &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;bookmark&lt;/i&gt;Add bookmark&lt;/a&gt;
+                
+
+                        &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;business_center&lt;/i&gt;Add client&lt;/a&gt;
+                
+
+                        &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;add_circle&lt;/i&gt;Add document&lt;/a&gt;
+                
+
+                        &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;person_add&lt;/i&gt;Add user&lt;/a&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
   <h3>
     Bottom left
-  </h3>
+  </h3>,
   <p>
     Use class 
-    <CodeTags
-      code=".anchor-bottom-left"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .anchor-bottom-left
+    </code>
      to anchor action-list button to the bottom left corner of the menu.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <ActionList
-      classNames="anchor-bottom-left"
-      items={
-        Array [
-          Object {
-            "icon": "bookmark",
-            "name": "Add bookmark",
-          },
-          Object {
-            "icon": "business_center",
-            "name": "Add client",
-          },
-          Object {
-            "icon": "add_circle",
-            "name": "Add document",
-          },
-          Object {
-            "icon": "person_add",
-            "name": "Add user",
-          },
-        ]
-      }
-    />
-  </ComponentPreview>
-</Fragment>
-`;
+    <div
+      className="action-list anchor-bottom-left"
+    >
+      
 
-exports[`Components: ActionList JavascriptMethods renders 1`] = `
-<Fragment>
-  <h2
-    id="javascript-methods"
-  >
-    JavaScript methods
-  </h2>
-  <JavascriptDocs
-    close={true}
-    componentName="actionList"
-    open={true}
-  />
-</Fragment>
-`;
+      <button
+        aria-haspopup="true"
+        aria-label="Action list button"
+        className="action-toggle"
+        id="actionListToggle"
+        type="button"
+      >
+        
 
-exports[`Components: ActionList Overview renders 1`] = `
-<Fragment>
-  <h2
-    id="overview"
-  >
-    Overview
-  </h2>
-  <p>
-    Action lists.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <ActionList
-      items={
-        Array [
-          Object {
-            "icon": "bookmark",
-            "name": "Add bookmark",
-          },
-          Object {
-            "icon": "business_center",
-            "name": "Add client",
-          },
-          Object {
-            "icon": "add_circle",
-            "name": "Add document",
-          },
-          Object {
-            "icon": "person_add",
-            "name": "Add user",
-          },
-        ]
-      }
-    />
-  </ComponentPreview>
-</Fragment>
+        <i
+          className="material-icons"
+        >
+          more_vert
+        </i>
+        
+
+      </button>
+      
+
+      <div
+        aria-labelledby="actionListToggle"
+        className="action-menu"
+      >
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            bookmark
+          </i>
+          Add bookmark
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            business_center
+          </i>
+          Add client
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            add_circle
+          </i>
+          Add document
+        </a>
+        
+
+        <a
+          href="#"
+          onClick={[Function]}
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            person_add
+          </i>
+          Add user
+        </a>
+        
+
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="action-list anchor-bottom-left"&gt;
+                
+
+                    &lt;button id="actionListToggle" aria-label="Action list button" type="button" class="action-toggle" aria-haspopup="true"&gt;
+                
+
+                        &lt;i class="material-icons"&gt;more_vert&lt;/i&gt;
+                
+
+                    &lt;/button&gt;
+                
+
+                    &lt;div class="action-menu" aria-labelledby="actionListToggle"&gt;
+                
+
+                        &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;bookmark&lt;/i&gt;Add bookmark&lt;/a&gt;
+                
+
+                        &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;business_center&lt;/i&gt;Add client&lt;/a&gt;
+                
+
+                        &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;add_circle&lt;/i&gt;Add document&lt;/a&gt;
+                
+
+                        &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;person_add&lt;/i&gt;Add user&lt;/a&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Components: ActionList renders 1`] = `
-<DocContainer>
-  <Alert
-    icon="error"
-    text={
+<div
+  className="row"
+>
+  <div
+    className="doc-body col-12"
+    id="doc-body"
+  >
+    <div
+      className="alert alert-danger"
+    >
+      
+
+      <i
+        aria-hidden="true"
+        className="material-icons alert-icon"
+      >
+        error
+      </i>
       <p>
         <b>
           Deprecated:
         </b>
          Be aware, this component will not be maintained anymore. Please make the transition to take use of the 
-        <Link
-          to="/components/dropdown"
+        <a
+          href="/components/dropdown"
+          onClick={[Function]}
         >
           dropdown
-        </Link>
+        </a>
          component.
       </p>
-    }
-    type="danger"
-  />
-  <p
-    className="lead"
-  >
-    Action lists are small menus that remain hidden until clicked. In these you can put page links or anchors that trigger an action elsewhere.
-  </p>
-  <Overview />
-  <Anchorpoints />
-  <JavascriptMethods />
-  <NpmInformation
-    componentName="actionList"
-  />
-</DocContainer>
+      
+
+    </div>
+    <p
+      className="lead"
+    >
+      Action lists are small menus that remain hidden until clicked. In these you can put page links or anchors that trigger an action elsewhere.
+    </p>
+    <h2
+      id="overview"
+    >
+      Overview
+    </h2>
+    <p>
+      Action lists.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <div
+        className="action-list"
+      >
+        
+
+        <button
+          aria-haspopup="true"
+          aria-label="Action list button"
+          className="action-toggle"
+          id="actionListToggle"
+          type="button"
+        >
+          
+
+          <i
+            className="material-icons"
+          >
+            more_vert
+          </i>
+          
+
+        </button>
+        
+
+        <div
+          aria-labelledby="actionListToggle"
+          className="action-menu"
+        >
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              bookmark
+            </i>
+            Add bookmark
+          </a>
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              business_center
+            </i>
+            Add client
+          </a>
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              add_circle
+            </i>
+            Add document
+          </a>
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              person_add
+            </i>
+            Add user
+          </a>
+          
+
+        </div>
+      </div>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;div class="action-list"&gt;
+                  
+
+                      &lt;button id="actionListToggle" aria-label="Action list button" type="button" class="action-toggle" aria-haspopup="true"&gt;
+                  
+
+                          &lt;i class="material-icons"&gt;more_vert&lt;/i&gt;
+                  
+
+                      &lt;/button&gt;
+                  
+
+                      &lt;div class="action-menu" aria-labelledby="actionListToggle"&gt;
+                  
+
+                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;bookmark&lt;/i&gt;Add bookmark&lt;/a&gt;
+                  
+
+                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;business_center&lt;/i&gt;Add client&lt;/a&gt;
+                  
+
+                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;add_circle&lt;/i&gt;Add document&lt;/a&gt;
+                  
+
+                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;person_add&lt;/i&gt;Add user&lt;/a&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h2
+      id="anchorpoints"
+    >
+      Anchorpoints
+    </h2>
+    <p>
+      You can change where the action list will have its anchor, by default the anchor will be top right.
+    </p>
+    <h3>
+      Top left
+    </h3>
+    <p>
+      Use class 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .anchor-top-left
+      </code>
+       to anchor action-list button to the top left corner of the menu.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <div
+        className="action-list anchor-top-left"
+      >
+        
+
+        <button
+          aria-haspopup="true"
+          aria-label="Action list button"
+          className="action-toggle"
+          id="actionListToggle"
+          type="button"
+        >
+          
+
+          <i
+            className="material-icons"
+          >
+            more_vert
+          </i>
+          
+
+        </button>
+        
+
+        <div
+          aria-labelledby="actionListToggle"
+          className="action-menu"
+        >
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              bookmark
+            </i>
+            Add bookmark
+          </a>
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              business_center
+            </i>
+            Add client
+          </a>
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              add_circle
+            </i>
+            Add document
+          </a>
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              person_add
+            </i>
+            Add user
+          </a>
+          
+
+        </div>
+      </div>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;div class="action-list anchor-top-left"&gt;
+                  
+
+                      &lt;button id="actionListToggle" aria-label="Action list button" type="button" class="action-toggle" aria-haspopup="true"&gt;
+                  
+
+                          &lt;i class="material-icons"&gt;more_vert&lt;/i&gt;
+                  
+
+                      &lt;/button&gt;
+                  
+
+                      &lt;div class="action-menu" aria-labelledby="actionListToggle"&gt;
+                  
+
+                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;bookmark&lt;/i&gt;Add bookmark&lt;/a&gt;
+                  
+
+                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;business_center&lt;/i&gt;Add client&lt;/a&gt;
+                  
+
+                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;add_circle&lt;/i&gt;Add document&lt;/a&gt;
+                  
+
+                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;person_add&lt;/i&gt;Add user&lt;/a&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h3>
+      Bottom right
+    </h3>
+    <p>
+      Use class 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .anchor-bottom-right
+      </code>
+       to anchor action-list button to the bottom right corner of the menu.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <div
+        className="action-list anchor-bottom-right"
+      >
+        
+
+        <button
+          aria-haspopup="true"
+          aria-label="Action list button"
+          className="action-toggle"
+          id="actionListToggle"
+          type="button"
+        >
+          
+
+          <i
+            className="material-icons"
+          >
+            more_vert
+          </i>
+          
+
+        </button>
+        
+
+        <div
+          aria-labelledby="actionListToggle"
+          className="action-menu"
+        >
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              bookmark
+            </i>
+            Add bookmark
+          </a>
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              business_center
+            </i>
+            Add client
+          </a>
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              add_circle
+            </i>
+            Add document
+          </a>
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              person_add
+            </i>
+            Add user
+          </a>
+          
+
+        </div>
+      </div>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;div class="action-list anchor-bottom-right"&gt;
+                  
+
+                      &lt;button id="actionListToggle" aria-label="Action list button" type="button" class="action-toggle" aria-haspopup="true"&gt;
+                  
+
+                          &lt;i class="material-icons"&gt;more_vert&lt;/i&gt;
+                  
+
+                      &lt;/button&gt;
+                  
+
+                      &lt;div class="action-menu" aria-labelledby="actionListToggle"&gt;
+                  
+
+                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;bookmark&lt;/i&gt;Add bookmark&lt;/a&gt;
+                  
+
+                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;business_center&lt;/i&gt;Add client&lt;/a&gt;
+                  
+
+                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;add_circle&lt;/i&gt;Add document&lt;/a&gt;
+                  
+
+                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;person_add&lt;/i&gt;Add user&lt;/a&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h3>
+      Bottom left
+    </h3>
+    <p>
+      Use class 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .anchor-bottom-left
+      </code>
+       to anchor action-list button to the bottom left corner of the menu.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <div
+        className="action-list anchor-bottom-left"
+      >
+        
+
+        <button
+          aria-haspopup="true"
+          aria-label="Action list button"
+          className="action-toggle"
+          id="actionListToggle"
+          type="button"
+        >
+          
+
+          <i
+            className="material-icons"
+          >
+            more_vert
+          </i>
+          
+
+        </button>
+        
+
+        <div
+          aria-labelledby="actionListToggle"
+          className="action-menu"
+        >
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              bookmark
+            </i>
+            Add bookmark
+          </a>
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              business_center
+            </i>
+            Add client
+          </a>
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              add_circle
+            </i>
+            Add document
+          </a>
+          
+
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              person_add
+            </i>
+            Add user
+          </a>
+          
+
+        </div>
+      </div>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;div class="action-list anchor-bottom-left"&gt;
+                  
+
+                      &lt;button id="actionListToggle" aria-label="Action list button" type="button" class="action-toggle" aria-haspopup="true"&gt;
+                  
+
+                          &lt;i class="material-icons"&gt;more_vert&lt;/i&gt;
+                  
+
+                      &lt;/button&gt;
+                  
+
+                      &lt;div class="action-menu" aria-labelledby="actionListToggle"&gt;
+                  
+
+                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;bookmark&lt;/i&gt;Add bookmark&lt;/a&gt;
+                  
+
+                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;business_center&lt;/i&gt;Add client&lt;/a&gt;
+                  
+
+                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;add_circle&lt;/i&gt;Add document&lt;/a&gt;
+                  
+
+                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;person_add&lt;/i&gt;Add user&lt;/a&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h2
+      id="javascript-methods"
+    >
+      JavaScript methods
+    </h2>
+    <ul
+      className="item-list"
+    >
+      <li>
+        <div>
+          <h3
+            scope="row"
+          >
+            <code
+              className="code-tags code-tags-secondary"
+            >
+              dg.actionList.init()
+            </code>
+          </h3>
+          <p
+            className="javascript-doc-element-description"
+          >
+            <a
+              href="/get-started/for-developers"
+              onClick={[Function]}
+            >
+              Initializes
+            </a>
+             
+            actionList
+          </p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3
+            scope="row"
+          >
+            <code
+              className="code-tags code-tags-secondary"
+            >
+              dg.actionList.open(&lt;actionList-id&gt;)
+            </code>
+          </h3>
+          <p
+            className="javascript-doc-element-description"
+          >
+            Opens the given 
+            actionlist
+          </p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3
+            scope="row"
+          >
+            <code
+              className="code-tags code-tags-secondary"
+            >
+              dg.actionList.close(&lt;actionList-id&gt;)
+            </code>
+          </h3>
+          <p
+            className="javascript-doc-element-description"
+          >
+            Closes the given 
+            actionList
+          </p>
+        </div>
+      </li>
+    </ul>
+    <section>
+      <h3>
+        Usage with NPM
+      </h3>
+      <p>
+        <a
+          href="/get-started/for-developers/"
+          onClick={[Function]}
+        >
+          Usage with NPM
+        </a>
+         will require you to import it from 
+        <code
+          className="code-tags code-tags-primary"
+        >
+          @swedbankpay/design-guide
+        </code>
+        .
+      </p>
+      <figure>
+        <div
+          className="code-view"
+        >
+          <header
+            className="code-view-header"
+          >
+            JAVASCRIPT
+            <button
+              aria-describedby="tooltipCopy"
+              className="tooltip"
+              onClick={[Function]}
+            >
+              <i
+                className="material-icons-outlined"
+              >
+                content_copy
+              </i>
+              <div
+                id="tooltipCopy"
+                role="tooltip"
+              >
+                Copy to clipboard
+              </div>
+            </button>
+          </header>
+          <table
+            className="code-view-table"
+          >
+            <tbody>
+              <tr>
+                <td
+                  className="code-view-numbers"
+                >
+                  <pre>
+                    1
+                    
+
+                    2
+                    
+
+                  </pre>
+                </td>
+                <td
+                  className="code-view-code"
+                >
+                  <pre>
+                    import { actionList } from "@swedbankpay/design-guide"; 
+                    
+
+                    actionList.init()
+                    
+
+                  </pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </figure>
+    </section>
+  </div>
+</div>
 `;

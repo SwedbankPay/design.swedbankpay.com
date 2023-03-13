@@ -1,127 +1,338 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Documentation: Breadcrumb Basic BreadCrumb renders 1`] = `
-<Fragment>
-  <h2
-    id="basic-usage"
-  >
-    Basic usage
-  </h2>
-  <p>
-    Add class 
-    <CodeTags
-      code=".breadcrumb"
-      type="secondary"
-    />
-     to a containing 
-    <CodeTags
-      code="<ol>"
-      type="primary"
-    />
-     element and nest a 
-    <CodeTags
-      code="<a>"
-      type="primary"
-    />
-     or 
-    <CodeTags
-      code="<span>"
-      type="primary"
-    />
-     element inside the 
-    <CodeTags
-      code="<li>"
-      type="primary"
-    />
-     elements.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Breadcrumb
-      items={
-        Array [
-          Object {
-            "href": "#",
-            "title": "Home",
-          },
-          Object {
-            "href": "#",
-            "title": "Products",
-          },
-          Object {
-            "href": "#",
-            "title": "Gadgets",
-          },
-          Object {
-            "title": "Gadget #1",
-          },
-        ]
-      }
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Breadcrumb Disabled BreadCrumb renders 1`] = `
-<Fragment>
-  <h2
-    id="disable-a-breadcrumb"
-  >
-    Disable a breadcrumb
-  </h2>
-  <p>
-    To disable a breadcrumb element, simply use a 
-    <CodeTags
-      code="<span>"
-      type="primary"
-    />
-     element within the 
-    <CodeTags
-      code="<li>"
-      type="primary"
-    />
-     element (will not work for last-child).
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <Breadcrumb
-      items={
-        Array [
-          Object {
-            "href": "#",
-            "title": "Home",
-          },
-          Object {
-            "title": "Products",
-          },
-          Object {
-            "href": "#",
-            "title": "Gadgets",
-          },
-          Object {
-            "title": "Gadget #1",
-          },
-        ]
-      }
-    />
-  </ComponentPreview>
-</Fragment>
-`;
-
 exports[`Documentation: Breadcrumb renders 1`] = `
-<DocContainer>
-  <p
-    className="lead"
+<div
+  className="row"
+>
+  <div
+    className="doc-body col-12"
+    id="doc-body"
   >
-    Breadcrumbs are a good way to display your current location. This is usually used when you have multiple layers of content.
-  </p>
-  <BasicBreadCrumb />
-  <DisabledBreadcrumb />
-</DocContainer>
+    <p
+      className="lead"
+    >
+      Breadcrumbs are a good way to display your current location. This is usually used when you have multiple layers of content.
+    </p>
+    <h2
+      id="basic-usage"
+    >
+      Basic usage
+    </h2>
+    <p>
+      Add class 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .breadcrumb
+      </code>
+       to a containing 
+      <code
+        className="code-tags code-tags-primary"
+      >
+        &lt;ol&gt;
+      </code>
+       element and nest a 
+      <code
+        className="code-tags code-tags-primary"
+      >
+        &lt;a&gt;
+      </code>
+       or 
+      <code
+        className="code-tags code-tags-primary"
+      >
+        &lt;span&gt;
+      </code>
+       element inside the 
+      <code
+        className="code-tags code-tags-primary"
+      >
+        &lt;li&gt;
+      </code>
+       elements.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <nav>
+        <ol
+          className="breadcrumb"
+        >
+          <li>
+            <a
+              href="#"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+            >
+              Products
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+            >
+              Gadgets
+            </a>
+          </li>
+          <li>
+            <span>
+              Gadget #1
+            </span>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;nav&gt;
+                  
+
+                      &lt;ol class="breadcrumb"&gt;
+                  
+
+                          &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                  
+
+                          &lt;li&gt;&lt;a href="#"&gt;Products&lt;/a&gt;&lt;/li&gt;
+                  
+
+                          &lt;li&gt;&lt;a href="#"&gt;Gadgets&lt;/a&gt;&lt;/li&gt;
+                  
+
+                          &lt;li&gt;&lt;span&gt;Gadget #1&lt;/span&gt;&lt;/li&gt;
+                  
+
+                      &lt;/ol&gt;
+                  
+
+                  &lt;/nav&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h2
+      id="disable-a-breadcrumb"
+    >
+      Disable a breadcrumb
+    </h2>
+    <p>
+      To disable a breadcrumb element, simply use a 
+      <code
+        className="code-tags code-tags-primary"
+      >
+        &lt;span&gt;
+      </code>
+       element within the 
+      <code
+        className="code-tags code-tags-primary"
+      >
+        &lt;li&gt;
+      </code>
+       element (will not work for last-child).
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <nav>
+        <ol
+          className="breadcrumb"
+        >
+          <li>
+            <a
+              href="#"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <span>
+              Products
+            </span>
+          </li>
+          <li>
+            <a
+              href="#"
+            >
+              Gadgets
+            </a>
+          </li>
+          <li>
+            <span>
+              Gadget #1
+            </span>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;nav&gt;
+                  
+
+                      &lt;ol class="breadcrumb"&gt;
+                  
+
+                          &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                  
+
+                          &lt;li&gt;&lt;span&gt;Products&lt;/span&gt;&lt;/li&gt;
+                  
+
+                          &lt;li&gt;&lt;a href="#"&gt;Gadgets&lt;/a&gt;&lt;/li&gt;
+                  
+
+                          &lt;li&gt;&lt;span&gt;Gadget #1&lt;/span&gt;&lt;/li&gt;
+                  
+
+                      &lt;/ol&gt;
+                  
+
+                  &lt;/nav&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+  </div>
+</div>
 `;

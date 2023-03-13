@@ -9,38 +9,127 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
   </h2>
   <p>
     When using buttons next to each other, always wrap them in a 
-    <CodeTags
-      code=".button-group"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      .button-group
+    </code>
      (to ensure internal spacing).
     <br />
     Strive not to use multiple buttons of the same kind.
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  <div
+    className="showcase-panel"
   >
     <div
       className="button-group"
     >
       
 
-      <Button
-        label="Activate"
-        type="primary"
-      />
+      <button
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-primary"
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="button"
+      >
+        Activate
+      </button>
       
 
-      <Button
-        label="Disable"
-        type="secondary"
-      />
+      <button
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-secondary"
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="button"
+      >
+        Disable
+      </button>
       
 
     </div>
-  </ComponentPreview>
+  </div>
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="button-group"&gt;
+                
+
+                    &lt;button class="btn btn-primary" type="button"&gt;Activate&lt;/button&gt;
+                
+
+                    &lt;button class="btn btn-secondary" type="button"&gt;Disable&lt;/button&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>
   <h3>
     How to combine buttons
   </h3>
@@ -61,21 +150,47 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
         <div
           className="flex-column button-group mt-4 "
         >
-          <Button
-            className="justify-content-center"
-            label="Primary action"
-            type="primary"
-          />
-          <Button
-            className="justify-content-center"
-            label="Secondary action"
-            type="secondary"
-          />
-          <Button
-            className="justify-content-center"
-            label="Cancel"
-            type="link"
-          />
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-primary justify-content-center"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            Primary action
+          </button>
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-secondary justify-content-center"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            Secondary action
+          </button>
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-link justify-content-center"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            <span>
+              Cancel
+            </span>
+          </button>
         </div>
       </div>
       <p>
@@ -96,14 +211,32 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
         <div
           className="button-group mt-4 align-items-center"
         >
-          <Button
-            label="Primary"
-            type="primary"
-          />
-          <Button
-            label="Secondary"
-            type="secondary"
-          />
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-primary"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            Primary
+          </button>
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-secondary"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            Secondary
+          </button>
         </div>
       </div>
       <p>
@@ -128,16 +261,34 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
         <div
           className="flex-column button-group mt-4"
         >
-          <Button
-            className="justify-content-center"
-            label="Primary action"
-            type="primary"
-          />
-          <Button
-            className="justify-content-center"
-            label="Cancel"
-            type="link"
-          />
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-primary justify-content-center"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            Primary action
+          </button>
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-link justify-content-center"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            <span>
+              Cancel
+            </span>
+          </button>
         </div>
       </div>
       <p>
@@ -158,16 +309,34 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
         <div
           className="flex-column button-group mt-4 "
         >
-          <Button
-            className="justify-content-center"
-            label="Executive destructive action"
-            type="executive-destructive"
-          />
-          <Button
-            className="justify-content-center"
-            label="Cancel"
-            type="link"
-          />
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-executive-destructive justify-content-center"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            Executive destructive action
+          </button>
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-link justify-content-center"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            <span>
+              Cancel
+            </span>
+          </button>
         </div>
       </div>
       <p>
@@ -195,16 +364,32 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
         <div
           className="flex-column button-group mt-4 "
         >
-          <Button
-            className="justify-content-center"
-            label="Secondary action"
-            type="secondary"
-          />
-          <Button
-            className="justify-content-center"
-            label="Primary action"
-            type="primary"
-          />
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-secondary justify-content-center"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            Secondary action
+          </button>
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-primary justify-content-center"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            Primary action
+          </button>
         </div>
       </div>
       <p>
@@ -225,16 +410,32 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
         <div
           className="flex-column button-group mt-4 "
         >
-          <Button
-            className="justify-content-center"
-            label="Primary action"
-            type="primary"
-          />
-          <Button
-            className="justify-content-center"
-            label="Destructive guiding action"
-            type="guiding-destructive"
-          />
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-primary justify-content-center"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            Primary action
+          </button>
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-guiding-destructive justify-content-center"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            Destructive guiding action
+          </button>
         </div>
       </div>
       <p>
@@ -259,21 +460,47 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
         <div
           className="flex-column button-group mt-4 "
         >
-          <Button
-            className="justify-content-center"
-            label="Executive destructive action"
-            type="executive-destructive"
-          />
-          <Button
-            className="justify-content-center"
-            label="Destructive guiding action"
-            type="guiding-destructive"
-          />
-          <Button
-            className="justify-content-center"
-            label="Cancel"
-            type="link-destructive"
-          />
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-executive-destructive justify-content-center"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            Executive destructive action
+          </button>
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-guiding-destructive justify-content-center"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            Destructive guiding action
+          </button>
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-link-destructive justify-content-center"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            <span>
+              Cancel
+            </span>
+          </button>
         </div>
       </div>
       <p>
@@ -294,22 +521,56 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
         <div
           className="flex-column button-group mt-4 "
         >
-          <Button
-            className="justify-content-center"
-            label="Primary action"
-            type="primary"
-          />
-          <Button
-            bankId="se"
-            className="justify-content-center"
-            label="Primary action"
-            type="primary"
-          />
-          <Button
-            className="justify-content-center"
-            label="Primary action"
-            type="primary"
-          />
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-primary justify-content-center"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            Primary action
+          </button>
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-primary btn-bank-id justify-content-center"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            
+
+            <span>
+              Primary action
+            </span>
+            
+
+            <i
+              className="bank-id bank-id-se"
+            />
+            
+
+          </button>
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-primary justify-content-center"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            Primary action
+          </button>
         </div>
       </div>
       <p>
@@ -406,18 +667,60 @@ exports[`Documentation: Buttons Content guidelines renders 1`] = `
         <div
           className="button-group flex-column align-items-center justify-content-center mt-4 mb-4"
         >
-          <Button
-            className="justify-content-center w-50"
-            icon="delete"
-            label="Delete"
-            type="guiding-destructive"
-          />
-          <Button
-            className="justify-content-center w-50"
-            icon="edit"
-            label="Edit"
-            type="secondary"
-          />
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-guiding-destructive justify-content-center w-50"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            
+		
+            <i
+              aria-hidden="true"
+              className="material-icons-outlined"
+            >
+              delete
+            </i>
+            
+	
+            <span>
+              Delete
+            </span>
+            
+	
+          </button>
+          <button
+            active={null}
+            aria-disabled={null}
+            aria-label={null}
+            aria-pressed={null}
+            className="btn btn-secondary justify-content-center w-50"
+            role={null}
+            tabIndex={null}
+            title={null}
+            type="button"
+          >
+            
+		
+            <i
+              aria-hidden="true"
+              className="material-icons-outlined"
+            >
+              edit
+            </i>
+            
+	
+            <span>
+              Edit
+            </span>
+            
+	
+          </button>
         </div>
       </div>
       <p>
@@ -438,438 +741,132 @@ exports[`Documentation: Buttons Content guidelines renders 1`] = `
         <div
           className="button-group flex-column align-items-center justify-content-center mt-5 mb-5"
         >
-          <Dropdown
-            className="pt-2"
-            content={
-              <Checkbox
-                group={true}
-                groupTitle=""
-                name="dropdown-checkboxes-examples"
-                options={
-                  Array [
-                    Object {
-                      "id": "dropdown-checkbox-overview-form-inputs-example-1",
-                      "label": "Successful",
-                    },
-                    Object {
-                      "id": "dropdown-checkbox-overview-form-inputs-example-2",
-                      "label": "Failed",
-                    },
-                    Object {
-                      "id": "dropdown-checkbox-overview-form-inputs-example-3",
-                      "label": "Cancelled",
-                    },
-                  ]
-                }
-              />
-            }
-            icon="keyboard_arrow_down"
-            label="Status"
-            largePadding={true}
-          />
+          <div
+            className="dropdown anchor-top-left pt-2"
+            data-disable-default-keyboard-nav={null}
+            id={null}
+          >
+            
+
+            <div
+              className="toggle-menu-container"
+            >
+              
+
+              <button
+                aria-label="dropdown button"
+                className="dropdown-toggle"
+                type="button"
+              >
+                
+
+                <span>
+                  Status
+                </span>
+                
+
+                <i
+                  aria-hidden="true"
+                  className="material-icons"
+                >
+                  keyboard_arrow_down
+                </i>
+                
+
+              </button>
+              
+
+              <div
+                aria-labelledby="dropdownToggle"
+                className="dropdown-menu p-3"
+              >
+                
+
+                <form>
+                  <fieldset
+                    className="checkbox-group"
+                  >
+                    <legend>
+                      
+                    </legend>
+                    <div
+                      className="checkbox"
+                    >
+                      
+
+                      <input
+                        aria-describedby={null}
+                        defaultChecked={null}
+                        disabled={null}
+                        id="dropdown-checkbox-overview-form-inputs-example-1"
+                        name="dropdown-checkboxes-examples"
+                        type="checkbox"
+                      />
+                      
+
+                      <label
+                        htmlFor="dropdown-checkbox-overview-form-inputs-example-1"
+                      >
+                        Successful
+                      </label>
+                      
+
+                    </div>
+                    <div
+                      className="checkbox"
+                    >
+                      
+
+                      <input
+                        aria-describedby={null}
+                        defaultChecked={null}
+                        disabled={null}
+                        id="dropdown-checkbox-overview-form-inputs-example-2"
+                        name="dropdown-checkboxes-examples"
+                        type="checkbox"
+                      />
+                      
+
+                      <label
+                        htmlFor="dropdown-checkbox-overview-form-inputs-example-2"
+                      >
+                        Failed
+                      </label>
+                      
+
+                    </div>
+                    <div
+                      className="checkbox"
+                    >
+                      
+
+                      <input
+                        aria-describedby={null}
+                        defaultChecked={null}
+                        disabled={null}
+                        id="dropdown-checkbox-overview-form-inputs-example-3"
+                        name="dropdown-checkboxes-examples"
+                        type="checkbox"
+                      />
+                      
+
+                      <label
+                        htmlFor="dropdown-checkbox-overview-form-inputs-example-3"
+                      >
+                        Cancelled
+                      </label>
+                      
+
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <p>
         Use an arrow icon to indicate that the button will trigger a dropdown menu.
-      </p>
-    </div>
-  </div>
-</section>
-`;
-
-exports[`Documentation: Buttons Destructive button renders 1`] = `
-<section>
-  <h2
-    id="destructive-button"
-  >
-    Destructive button
-  </h2>
-  <p>
-    Only use warning buttons for actions with serious destructive consequences that cannot be easily recovered or undone by a user. For example, permanently deleting an account.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-    showCasePanelAdvanced={
-      Object {
-        "elements": Array [
-          Object {
-            "component": <Button
-              label="Guiding destructive button"
-              type="guiding-destructive"
-            />,
-            "description": <React.Fragment>
-              <p>
-                Use a guiding destructive button to clearly show the user that the action is destructive. The button is designed to not take on too much visual attention from the user yet still clearly communicate a destructive action. It can therefor safely be used in most contexts.
-              </p>
-              <p>
-                When letting users carry out an action like this, it’s a good idea to include an additional step which asks them to confirm it. The guiding destructive button will therefor often occur prior to the executive destructive button in a user flow.
-              </p>
-            </React.Fragment>,
-            "options": Object {
-              "radio": Array [
-                Object {
-                  "id": "destructive_icon_radio",
-                  "title": "Icon",
-                  "values": Array [
-                    Object {
-                      "name": "None",
-                    },
-                    Object {
-                      "name": "Before",
-                      "value": Object {
-                        "icon": "cloud",
-                      },
-                    },
-                    Object {
-                      "name": "After",
-                      "value": Object {
-                        "icon": "keyboard_arrow_down",
-                        "iconAfter": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "destructive_size_radio",
-                  "title": "Sizes",
-                  "values": Array [
-                    Object {
-                      "name": "Large",
-                      "value": Object {
-                        "size": "lg",
-                      },
-                    },
-                    Object {
-                      "name": "Small",
-                      "value": Object {
-                        "size": "sm",
-                      },
-                    },
-                    Object {
-                      "name": "Extra small",
-                      "value": Object {
-                        "size": "xs",
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "destructive_state_modifiers",
-                  "title": "State modifiers",
-                  "values": Array [
-                    Object {
-                      "name": "Enabled",
-                      "value": Object {
-                        "disabled": false,
-                        "loader": false,
-                        "loading": false,
-                      },
-                    },
-                    Object {
-                      "name": "Loading",
-                      "value": Object {
-                        "disabled": true,
-                        "loader": true,
-                        "loading": true,
-                      },
-                    },
-                    Object {
-                      "name": "Disabled",
-                      "value": Object {
-                        "disabled": true,
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "Guiding",
-            "title": "Destructive button",
-          },
-          Object {
-            "component": <Button
-              label="Executive destructive button"
-              type="executive-destructive"
-            />,
-            "description": "The executive destructive button should be used sparingly and only in case of a final destructive call to action. The executive destructive button visually takes up a lot of the attention. To not distract the user from other content it is often used in simpler contexts such as dialogs, for example when confirming removal of certain information.",
-            "options": Object {
-              "radio": Array [
-                Object {
-                  "id": "destructive_icon_radio",
-                  "title": "Icon",
-                  "values": Array [
-                    Object {
-                      "name": "None",
-                    },
-                    Object {
-                      "name": "Before",
-                      "value": Object {
-                        "icon": "cloud",
-                      },
-                    },
-                    Object {
-                      "name": "After",
-                      "value": Object {
-                        "icon": "keyboard_arrow_down",
-                        "iconAfter": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "destructive_size_radio",
-                  "title": "Sizes",
-                  "values": Array [
-                    Object {
-                      "name": "Large",
-                      "value": Object {
-                        "size": "lg",
-                      },
-                    },
-                    Object {
-                      "name": "Small",
-                      "value": Object {
-                        "size": "sm",
-                      },
-                    },
-                    Object {
-                      "name": "Extra small",
-                      "value": Object {
-                        "size": "xs",
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "destructive_state_modifiers",
-                  "title": "State modifiers",
-                  "values": Array [
-                    Object {
-                      "name": "Enabled",
-                      "value": Object {
-                        "disabled": false,
-                        "loader": false,
-                        "loading": false,
-                      },
-                    },
-                    Object {
-                      "name": "Loading",
-                      "value": Object {
-                        "disabled": true,
-                        "loader": true,
-                        "loading": true,
-                      },
-                    },
-                    Object {
-                      "name": "Disabled",
-                      "value": Object {
-                        "disabled": true,
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "Executive",
-            "title": "Executive destructive button",
-          },
-          Object {
-            "component": <Button
-              label="Link destructive button"
-              type="link-destructive"
-            />,
-            "description": "The text destructive button is used as an alternative for the guiding destructive button and can be used when there is limited space, within other components or various containers.",
-            "options": Object {
-              "radio": Array [
-                Object {
-                  "id": "destructive_icon_radio",
-                  "title": "Icon",
-                  "values": Array [
-                    Object {
-                      "name": "None",
-                    },
-                    Object {
-                      "name": "Before",
-                      "value": Object {
-                        "icon": "cloud",
-                      },
-                    },
-                    Object {
-                      "name": "After",
-                      "value": Object {
-                        "icon": "keyboard_arrow_down",
-                        "iconAfter": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "destructive_size_radio",
-                  "title": "Sizes",
-                  "values": Array [
-                    Object {
-                      "name": "Large",
-                      "value": Object {
-                        "size": "lg",
-                      },
-                    },
-                    Object {
-                      "name": "Small",
-                      "value": Object {
-                        "size": "sm",
-                      },
-                    },
-                    Object {
-                      "name": "Extra small",
-                      "value": Object {
-                        "size": "xs",
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "destructive_state_modifiers",
-                  "title": "State modifiers",
-                  "values": Array [
-                    Object {
-                      "name": "Enabled",
-                      "value": Object {
-                        "disabled": false,
-                        "loader": false,
-                        "loading": false,
-                      },
-                    },
-                    Object {
-                      "name": "Loading",
-                      "value": Object {
-                        "disabled": true,
-                        "loader": true,
-                        "loading": true,
-                      },
-                    },
-                    Object {
-                      "name": "Disabled",
-                      "value": Object {
-                        "disabled": true,
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "Link",
-            "title": "Destructive button",
-          },
-        ],
-        "id": "destructiveButtons",
-        "tabsId": "destructiveButtonsTabs",
-      }
-    }
-  />
-  <h3>
-    How to use destructive buttons
-  </h3>
-  <div
-    className="row"
-  >
-    <div
-      className="col-lg-6 col-sm-12"
-    >
-      <div
-        className="slab slab-plain slab-border-success pb-4"
-      >
-        <h4
-          className="mb-3 mt-0"
-        >
-          Do
-        </h4>
-        <div
-          className="d-flex justify-content-center mt-4 mb-4"
-        >
-          <img
-            alt="A destructive button within a payment flow, with a guiding destructive button that reads Cancel payment."
-            className="img-fluid"
-            src="/TEST/img/documentation/buttons/dos-guiding.png"
-          />
-        </div>
-      </div>
-      <p>
-        Use the Guiding Destructive Buttons to initiate a destructive action.
-      </p>
-    </div>
-    <div
-      className="col-lg-6 col-sm-12"
-    >
-      <div
-        className="slab slab-plain slab-border-error pb-4"
-      >
-        <h4>
-          Don't
-        </h4>
-        <div
-          className="d-flex justify-content-center mt-4 mb-4"
-        >
-          <img
-            alt="Destructive button within a payment flow, with an executive destructive button that reads Cancel."
-            className="img-fluid"
-            src="/TEST/img/documentation/buttons/donts-executive.png"
-          />
-        </div>
-      </div>
-      <p>
-        Avoid using the Executive Destructive Buttons to initiate a destructive action.
-      </p>
-    </div>
-  </div>
-  <div
-    className="row mt-2"
-  >
-    <div
-      className="col-lg-6 col-sm-12"
-    >
-      <div
-        className="slab slab-plain slab-border-success pb-4"
-      >
-        <h4>
-          Do
-        </h4>
-        <div
-          className="d-flex justify-content-center mt-4 mb-4"
-        >
-          <img
-            alt="Multiple destructive buttons in a payment flow. The guiding destructive button reads Cancel payment and leads to a second step with an executive destructive button that reads, Yes, cancel payment process."
-            className="img-fluid"
-            src="/TEST/img/documentation/buttons/dos.png"
-          />
-        </div>
-      </div>
-      <p>
-        Use the Executive Destructive Buttons in a contained space as a final destructive call to action.
-      </p>
-    </div>
-    <div
-      className="col-lg-6 col-sm-12"
-    >
-      <div
-        className="slab slab-plain slab-border-error pb-4"
-      >
-        <h4>
-          Don't
-        </h4>
-        <div
-          className="d-flex justify-content-center mt-4 mb-4"
-        >
-          <img
-            alt="Multiple destructive buttons in a payment flow. An executive destructive button reads Cancel and leads to a second step with another executive destructive button that also reads Cancel."
-            className="img-fluid"
-            src="/TEST/img/documentation/buttons/donts.png"
-          />
-        </div>
-      </div>
-      <p>
-        Avoid using multiple Executive Destructive Buttons in the same user flow.
       </p>
     </div>
   </div>
@@ -888,789 +885,746 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
   </h3>
   <p>
     Make buttons look inactive by adding the 
-    <CodeTags
-      code="disabled"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      disabled
+    </code>
      boolean attribute to any 
-    <CodeTags
-      code="<button>"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      &lt;button&gt;
+    </code>
      element.
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
+  <div
+    className="showcase-panel"
   >
     <div
       className="button-group"
     >
       
 
-      <Button
+      <button
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-primary"
         disabled={true}
-        label="Primary"
-        type="primary"
-      />
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="button"
+      >
+        Primary
+      </button>
       
 
-      <Button
+      <button
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-secondary"
         disabled={true}
-        label="Secondary"
-        type="secondary"
-      />
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="button"
+      >
+        Secondary
+      </button>
       
 
-      <Button
+      <button
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-link"
         disabled={true}
-        label="Link"
-        type="link"
-      />
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="button"
+      >
+        <span>
+          Link
+        </span>
+      </button>
       
 
-      <Button
+      <button
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-executive-destructive"
         disabled={true}
-        label="Destructive Executive"
-        type="executive-destructive"
-      />
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="button"
+      >
+        Destructive Executive
+      </button>
       
 
-      <Button
+      <button
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-guiding-destructive"
         disabled={true}
-        label="Guiding destructive"
-        type="guiding-destructive"
-      />
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="button"
+      >
+        Guiding destructive
+      </button>
       
 
-      <Button
+      <button
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-link-destructive"
         disabled={true}
-        label="Destructive link"
-        type="link-destructive"
-      />
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="button"
+      >
+        <span>
+          Destructive link
+        </span>
+      </button>
       
 
     </div>
-  </ComponentPreview>
+  </div>
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;button class="btn btn-primary" disabled type="button"&gt;Primary&lt;/button&gt;
+                
+
+                &lt;button class="btn btn-secondary" disabled type="button"&gt;Secondary&lt;/button&gt;
+                
+
+                &lt;button class="btn btn-link" disabled type="button"&gt;&lt;span&gt;Link&lt;/span&gt;&lt;/button&gt;
+                
+
+                &lt;button class="btn btn-executive-destructive" disabled type="button"&gt;Destructive Executive&lt;/button&gt;
+                
+
+                &lt;button class="btn btn-guiding-destructive" disabled type="button"&gt;Guiding destructive&lt;/button&gt;
+                
+
+                &lt;button class="btn btn-link-destructive" disabled type="button"&gt;&lt;span&gt;Destructive link&lt;/span&gt;&lt;/button&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>
   <h4>
     Disabled with 
-    <CodeTags
-      code="<a>"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      &lt;a&gt;
+    </code>
      tag
   </h4>
   <p>
     Disabled buttons using the 
-    <CodeTags
-      code="<a>"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      &lt;a&gt;
+    </code>
      element behave a bit different:
   </p>
   <ul>
     <li>
-      <CodeTags
-        code="<a>"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        &lt;a&gt;
+      </code>
       s do not support the 
-      <CodeTags
-        code="disabled"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        disabled
+      </code>
        attribute, so you must add the 
-      <CodeTags
-        code=".disabled"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .disabled
+      </code>
        class to make it visually appear disabled.
     </li>
     <li>
       Some future-friendly styles are included to disable all 
-      <CodeTags
-        code="pointer-events"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        pointer-events
+      </code>
        on anchor buttons. In browsers which support that property, you won’t see the disabled cursor at all.
     </li>
     <li>
       Disabled buttons should include the 
-      <CodeTags
-        code="aria-disabled=\\"true\\""
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        aria-disabled="true"
+      </code>
        attribute to indicate the state of the element to assistive technologies.
     </li>
   </ul>
-  <Alert
-    icon="warning"
-    text={
-      <p>
-        <b>
-          Link functionality:
-        </b>
-         The 
-        <CodeTags
-          code=".disabled"
-          type="secondary"
-        />
-         class uses 
-        <CodeTags
-          code="pointer-events: none"
-          type="secondary"
-        />
-         to try to disable the link functionality of 
-        <CodeTags
-          code="<a>"
-          type="primary"
-        />
-        s, but that CSS property is not yet standardized. In addition, even in browsers that do support 
-        <CodeTags
-          code="pointer-events: none"
-          type="secondary"
-        />
-        , keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a 
-        <CodeTags
-          code="tabindex=\\"-1\\""
-          type="secondary"
-        />
-         attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
-      </p>
-    }
-    type="informative"
-  />
+  <div
+    className="alert alert-informative"
+  >
+    
+
+    <i
+      aria-hidden="true"
+      className="material-icons alert-icon"
+    >
+      warning
+    </i>
+    <p>
+      <b>
+        Link functionality:
+      </b>
+       The 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .disabled
+      </code>
+       class uses 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        pointer-events: none
+      </code>
+       to try to disable the link functionality of 
+      <code
+        className="code-tags code-tags-primary"
+      >
+        &lt;a&gt;
+      </code>
+      s, but that CSS property is not yet standardized. In addition, even in browsers that do support 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        pointer-events: none
+      </code>
+      , keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        tabindex="-1"
+      </code>
+       attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
+    </p>
+    
+
+  </div>
   <h3>
     Loading state
   </h3>
   <p>
     Use the loading state to show users their action is processing by adding the 
-    <CodeTags
-      code=".loading"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      .loading
+    </code>
      class to the 
-    <CodeTags
-      code="<button>"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      &lt;button&gt;
+    </code>
      element, and the 
-    <CodeTags
-      code="disabled"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      disabled
+    </code>
      attribute.
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
+  <div
+    className="showcase-panel"
   >
     <div
       className="button-group"
     >
       
 
-      <Button
+      <button
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-primary loading"
         disabled={true}
-        label="Primary"
-        loading={true}
-        type="primary"
-      />
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="button"
+      >
+        Primary
+      </button>
       
 
-      <Button
+      <button
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-secondary loading"
         disabled={true}
-        label="Secondary"
-        loading={true}
-        type="secondary"
-      />
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="button"
+      >
+        Secondary
+      </button>
       
 
-      <Button
+      <button
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-link loading"
         disabled={true}
-        label="Link"
-        loading={true}
-        type="link"
-      />
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="button"
+      >
+        <span>
+          Link
+        </span>
+      </button>
       
 
-      <Button
+      <button
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-executive-destructive loading"
         disabled={true}
-        label="Destructive executive"
-        loading={true}
-        type="executive-destructive"
-      />
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="button"
+      >
+        Destructive executive
+      </button>
       
 
-      <Button
+      <button
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-guiding-destructive loading"
         disabled={true}
-        label="Destructive guiding"
-        loading={true}
-        type="guiding-destructive"
-      />
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="button"
+      >
+        Destructive guiding
+      </button>
       
 
-      <Button
+      <button
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-link-destructive loading"
         disabled={true}
-        label="Destructive link"
-        loading={true}
-        type="link-destructive"
-      />
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="button"
+      >
+        <span>
+          Destructive link
+        </span>
+      </button>
       
 
     </div>
-  </ComponentPreview>
+  </div>
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;button class="btn btn-primary loading" disabled type="button"&gt;Primary&lt;/button&gt;
+                
+
+                &lt;button class="btn btn-secondary loading" disabled type="button"&gt;Secondary&lt;/button&gt;
+                
+
+                &lt;button class="btn btn-link loading" disabled type="button"&gt;&lt;span&gt;Link&lt;/span&gt;&lt;/button&gt;
+                
+
+                &lt;button class="btn btn-executive-destructive loading" disabled type="button"&gt;Destructive executive&lt;/button&gt;
+                
+
+                &lt;button class="btn btn-guiding-destructive loading" disabled type="button"&gt;Destructive guiding&lt;/button&gt;
+                
+
+                &lt;button class="btn btn-link-destructive loading" disabled type="button"&gt;&lt;span&gt;Destructive link&lt;/span&gt;&lt;/button&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>
   <h3>
     Usage with other tags
   </h3>
   <p>
     The 
-    <CodeTags
-      code=".btn"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .btn
+    </code>
      classes are designed to be used with the 
-    <CodeTags
-      code="<button>"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      &lt;button&gt;
+    </code>
      element. However, you can also use these classes on 
-    <CodeTags
-      code="<a>"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      &lt;a&gt;
+    </code>
      or 
-    <CodeTags
-      code="<input>"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      &lt;input&gt;
+    </code>
      elements (though some browsers may apply a slightly different rendering).
   </p>
   <p>
     When using button classes on 
-    <CodeTags
-      code="<a>"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      &lt;a&gt;
+    </code>
      elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a 
-    <CodeTags
-      code="role=\\"button\\""
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      role="button"
+    </code>
      to appropriately convey their purpose to assistive technologies such as screen readers.
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
+  <div
+    className="showcase-panel"
   >
     <div
       className="button-group"
     >
       
 
-      <Button
+      <a
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-primary"
+        disabled={null}
         href="#"
-        label="Anchor"
-        type="primary"
+        onClick={[Function]}
+        role="button"
+        tabIndex={null}
+        title={null}
+        type={null}
+      >
+        Anchor
+      </a>
+      
+
+      <button
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-primary"
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="button"
+      >
+        Button
+      </button>
+      
+
+      <input
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-primary"
+        defaultValue="Input"
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="button"
       />
       
 
-      <Button
-        label="Button"
-        type="primary"
+      <input
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-primary"
+        defaultValue="Submit"
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="submit"
       />
       
 
-      <Button
-        btnType="button"
-        input={true}
-        type="primary"
-        value="Input"
-      />
-      
-
-      <Button
-        btnType="submit"
-        input={true}
-        type="primary"
-        value="Submit"
-      />
-      
-
-      <Button
-        btnType="reset"
-        input={true}
-        type="primary"
-        value="Reset"
+      <input
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-primary"
+        defaultValue="Reset"
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="reset"
       />
       
 
     </div>
-  </ComponentPreview>
-</section>
-`;
+  </div>
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
 
-exports[`Documentation: Buttons Overview renders 1`] = `
-<section>
-  <h2
-    id="overview"
-  >
-    Button variants
-  </h2>
-  <p>
-    There are three different sizes of buttons to choose from: xsmall, small and large. Our button variants can also be customized with icons next to the label to clarify the action. 
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-    showCasePanelAdvanced={
-      Object {
-        "elements": Array [
-          Object {
-            "component": <Button
-              label="Primary button"
-              type="primary"
-            />,
-            "description": "Use a primary button as the main call to action on a page. Avoid using multiple default buttons on a single page. Having more than one main call to action reduces their impact, and makes it harder for users to know what to do next.",
-            "options": Object {
-              "radio": Array [
-                Object {
-                  "id": "icon_radio",
-                  "title": "Icon",
-                  "values": Array [
-                    Object {
-                      "name": "None",
-                    },
-                    Object {
-                      "name": "Before",
-                      "value": Object {
-                        "icon": "cloud",
-                      },
-                    },
-                    Object {
-                      "name": "After",
-                      "value": Object {
-                        "icon": "keyboard_arrow_down",
-                        "iconAfter": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "size_radio",
-                  "title": "Sizes",
-                  "values": Array [
-                    Object {
-                      "name": "Large",
-                      "value": Object {
-                        "size": "lg",
-                      },
-                    },
-                    Object {
-                      "name": "Small",
-                      "value": Object {
-                        "size": "sm",
-                      },
-                    },
-                    Object {
-                      "name": "Extra small",
-                      "value": Object {
-                        "size": "xs",
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "state_modifiers",
-                  "title": "State modifiers",
-                  "values": Array [
-                    Object {
-                      "name": "Enabled",
-                      "value": Object {
-                        "disabled": false,
-                        "loader": false,
-                        "loading": false,
-                      },
-                    },
-                    Object {
-                      "name": "Loading",
-                      "value": Object {
-                        "disabled": true,
-                        "loader": true,
-                        "loading": true,
-                      },
-                    },
-                    Object {
-                      "name": "Disabled",
-                      "value": Object {
-                        "disabled": true,
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "Primary",
-            "title": "Primary button",
-          },
-          Object {
-            "component": <Button
-              bankId="se"
-              label="BankId button"
-              type="primary"
-            />,
-            "description": <React.Fragment>
-              <p>
-                Use BankID buttons as the main call to action on a page when the following action is signing or verifying something with BankID. Currently only available for Swedish and Norwegian BankID.
-              </p>
-              <p>
-                Avoid using multiple BankID buttons on a single page. Having more than one main call to action reduces their impact, and makes it harder for users to know what to do next.
-              </p>
-            </React.Fragment>,
-            "options": Object {
-              "radio": Array [
-                Object {
-                  "id": "country_radio",
-                  "title": "Country",
-                  "values": Array [
-                    Object {
-                      "name": "Sweden",
-                      "value": Object {
-                        "bankId": "se",
-                      },
-                    },
-                    Object {
-                      "name": "Norway",
-                      "value": Object {
-                        "bankId": "no",
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "loading_icon",
-                  "title": "State modifiers",
-                  "values": Array [
-                    Object {
-                      "name": "Enabled",
-                      "value": Object {
-                        "disabled": false,
-                        "loader": false,
-                        "loading": false,
-                      },
-                    },
-                    Object {
-                      "name": "Loading",
-                      "value": Object {
-                        "disabled": true,
-                        "loader": true,
-                        "loading": true,
-                      },
-                    },
-                    Object {
-                      "name": "Disabled",
-                      "value": Object {
-                        "disabled": true,
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "BankID",
-            "title": "BankID button",
-          },
-          Object {
-            "component": <Button
-              label="Secondary button"
-              type="secondary"
-            />,
-            "description": <p>
-              Use secondary buttons for secondary call to actions on a page. Pages with too many calls to action make it hard for users to know what to do next. Before adding lots of secondary buttons, try to simplify the page or break the content down across multiple pages or consider using 
-              <Link
-                to="/components/links#action-link"
-              >
-                Action links
-              </Link>
-              .
-            </p>,
-            "options": Object {
-              "radio": Array [
-                Object {
-                  "id": "icon_radio",
-                  "title": "Icon",
-                  "values": Array [
-                    Object {
-                      "name": "None",
-                    },
-                    Object {
-                      "name": "Before",
-                      "value": Object {
-                        "icon": "cloud",
-                      },
-                    },
-                    Object {
-                      "name": "After",
-                      "value": Object {
-                        "icon": "keyboard_arrow_down",
-                        "iconAfter": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "size_radio",
-                  "title": "Sizes",
-                  "values": Array [
-                    Object {
-                      "name": "Large",
-                      "value": Object {
-                        "size": "lg",
-                      },
-                    },
-                    Object {
-                      "name": "Small",
-                      "value": Object {
-                        "size": "sm",
-                      },
-                    },
-                    Object {
-                      "name": "Extra small",
-                      "value": Object {
-                        "size": "xs",
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "state_modifiers",
-                  "title": "State modifiers",
-                  "values": Array [
-                    Object {
-                      "name": "Enabled",
-                      "value": Object {
-                        "disabled": false,
-                        "loader": false,
-                        "loading": false,
-                      },
-                    },
-                    Object {
-                      "name": "Loading",
-                      "value": Object {
-                        "disabled": true,
-                        "loader": true,
-                        "loading": true,
-                      },
-                    },
-                    Object {
-                      "name": "Disabled",
-                      "value": Object {
-                        "disabled": true,
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "Secondary",
-            "title": "Secondary button",
-          },
-          Object {
-            "component": <Button
-              label="Link button"
-              type="link"
-            />,
-            "description": <p>
-              Only use in combination with a primary or secondary button – for stand alone links see 
-              <Link
-                to="/components/links"
-              >
-                Links
-              </Link>
-              . Use for less important or less commonly used actions since they’re less prominent. Text buttons are often embedded in contained components like dialogs.
-            </p>,
-            "options": Object {
-              "radio": Array [
-                Object {
-                  "id": "icon_radio",
-                  "title": "Icon",
-                  "values": Array [
-                    Object {
-                      "name": "None",
-                    },
-                    Object {
-                      "name": "Before",
-                      "value": Object {
-                        "icon": "cloud",
-                      },
-                    },
-                    Object {
-                      "name": "After",
-                      "value": Object {
-                        "icon": "keyboard_arrow_down",
-                        "iconAfter": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "size_radio",
-                  "title": "Sizes",
-                  "values": Array [
-                    Object {
-                      "name": "Large",
-                      "value": Object {
-                        "size": "lg",
-                      },
-                    },
-                    Object {
-                      "name": "Small",
-                      "value": Object {
-                        "size": "sm",
-                      },
-                    },
-                    Object {
-                      "name": "Extra small",
-                      "value": Object {
-                        "size": "xs",
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "state_modifiers",
-                  "title": "State modifiers",
-                  "values": Array [
-                    Object {
-                      "name": "Enabled",
-                      "value": Object {
-                        "disabled": false,
-                        "loader": false,
-                        "loading": false,
-                      },
-                    },
-                    Object {
-                      "name": "Loading",
-                      "value": Object {
-                        "disabled": true,
-                        "loader": true,
-                        "loading": true,
-                      },
-                    },
-                    Object {
-                      "name": "Disabled",
-                      "value": Object {
-                        "disabled": true,
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "Link",
-            "title": "Link button",
-          },
-          Object {
-            "component": <Button
-              icon="cloud"
-              iconOnly={true}
-              size="icon-xl"
-              type="default"
-            />,
-            "description": <p>
-              Use this button in constrained places. This button is accessible for screen reader users, but remember to describe the action in aria-label. This button also comes in the following states: Enabled, hover, focus, active and disabled.
-            </p>,
-            "options": Object {
-              "radio": Array [
-                Object {
-                  "id": "type_radio",
-                  "title": "Type",
-                  "values": Array [
-                    Object {
-                      "name": "Default",
-                      "value": Object {
-                        "icon": "cloud",
-                        "type": "default",
-                      },
-                    },
-                    Object {
-                      "name": "Primary",
-                      "value": Object {
-                        "icon": "cloud",
-                        "type": "primary",
-                      },
-                    },
-                    Object {
-                      "name": "Secondary",
-                      "value": Object {
-                        "icon": "cloud",
-                        "type": "secondary",
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "size",
-                  "title": "Sizes",
-                  "values": Array [
-                    Object {
-                      "name": "Extra large",
-                      "value": Object {
-                        "size": "icon-xl",
-                      },
-                    },
-                    Object {
-                      "name": "Large",
-                      "value": Object {
-                        "size": "icon-lg",
-                      },
-                    },
-                    Object {
-                      "name": "Small",
-                      "value": Object {
-                        "size": "icon-sm",
-                      },
-                    },
-                    Object {
-                      "name": "Extra small",
-                      "value": Object {
-                        "size": "icon-xs",
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "Icon only",
-            "title": "Icon only button",
-          },
-        ],
-        "id": "overviewButtons",
-        "tabsId": "overviewButtonsTabs",
-      }
-    }
-  />
-</section>
-`;
+                2
+                
 
-exports[`Documentation: Buttons renders 1`] = `
-<DocContainer>
-  <p
-    className="lead"
-  >
-    Buttons communicate actions that users can take. Buttons are typically placed throughout your UI, in places like: Dialogs, Modals, Forms, Cards and Toolbars.
-  </p>
-  <Overview />
-  <DestructiveButton />
-  <ContentGuidelines />
-  <CombiningButtons />
-  <DeveloperDocumentation />
-</DocContainer>
+                3
+                
+
+                4
+                
+
+                5
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;a class="btn btn-primary" href="#" role="button"&gt;Anchor&lt;/a&gt;
+                
+
+                &lt;button class="btn btn-primary" type="button"&gt;Button&lt;/button&gt;
+                
+
+                &lt;input type="button" class="btn btn-primary" value="Input"&gt;
+                
+
+                &lt;input type="submit" class="btn btn-primary" value="Submit"&gt;
+                
+
+                &lt;input type="reset" class="btn btn-primary" value="Reset"&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>
+</section>
 `;
