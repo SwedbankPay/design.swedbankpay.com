@@ -48,23 +48,6 @@ exports[`Component: Alert renders an alert with a close-button 1`] = `
 </div>
 `;
 
-exports[`Component: Alert renders an alert with icon (hidden for screen-readers) 1`] = `
-<div
-  className="alert alert-test"
->
-  
-
-  <i
-    aria-hidden="true"
-    className="material-icons alert-icon"
-  >
-    test
-  </i>
-  
-
-</div>
-`;
-
 exports[`Component: Alert renders an alert with icon 1`] = `
 <div
   className="alert alert-test"
@@ -155,39 +138,6 @@ exports[`Component: Alert renders an alert without text if no text prop is provi
     aria-hidden="true"
     className="material-icons alert-icon"
   />
-  
-
-</div>
-`;
-
-exports[`Component: Alert the close-button prevents default 1`] = `
-<div
-  className="alert alert-test"
->
-  
-
-  <i
-    aria-hidden="true"
-    className="material-icons alert-icon"
-  />
-  
-
-  <button
-    aria-label="Close alert"
-    className="alert-close"
-    data-alert-close=""
-    onClick={[Function]}
-  >
-    
-		
-    <i
-      className="material-icons"
-    >
-      close
-    </i>
-    
-	
-  </button>
   
 
 </div>

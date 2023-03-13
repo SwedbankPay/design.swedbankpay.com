@@ -1,8 +1,8 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { prettyDOM, render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { userEvent } from "@testing-library/user-event";
+import userEvent from "@testing-library/user-event";
 import SearchBox from "./index";
 
 describe("Utilities; SearchBox", () => {
@@ -33,67 +33,43 @@ describe("Utilities; SearchBox", () => {
 
         const button = screen.getByRole("button");
 
-        console.debug("hello1", button);
+        console.debug("🔥", prettyDOM(button));
 
-        // expect(button).toHaveClass("btn-primary");
+        expect(button).toHaveClass("btn-primary");
 
-        userEvent.click(button);
-
-        console.debug("hello2", button);
+        userEvent.click(button); // The component does not change after click. Should be changed to btn-secondary
     });
 });
 
-// describe("Manipulating input values for input field", () => {
-//     render(<SearchBox/>);
+describe.skip("Search box results tests", () => { // We should try to make these tests work, but the same problem as above occur..
+    render(<SearchBox/>);
 
-//     const input = screen.getByRole("textbox");
-//     const button = screen.getAllByRole("button");
+    const input = screen.getAllByRole("textbox");
 
-//     it("button icon changes from search to close after input field manipulation", () => {
-//         expect(button[1].firstChild).toHaveTextContent("search");
-//         fireEvent.change(input, { target: { value: "test" } });
-//         expect(button[1].firstChild).toHaveTextContent("close");
-//     });
+    it("renders no items if search term has no matches", () => {
 
-//     it("result box is not visible before input is manipulated", () => {
-//         const resultBox = screen.getByRole("#result-box");
+        fireEvent.change(input[0], { target: { value: "xxxxx" } });
 
-//         expect(resultBox.length).toBe(0);
-//         fireEvent.change(input, { target: { value: "test" } });
-//         expect(resultBox.length).toBe(1);
+        const liElements = screen.getByRole("li");
 
-//     });
-// });
+        expect(liElements.length).toBe(0);
+    });
 
-// describe("Search box results tests", () => {
-//     render(<SearchBox/>);
+    it("renders togglebox after searching for 'gg'", () => {
 
-//     const input = screen.getAllByRole("textbox");
+        fireEvent.change(input[0], { target: { value: "gg" } });
 
-//     it("renders no items if search term has no matches", () => {
+        const liElements = screen.getByRole("li");
 
-//         fireEvent.change(input[0], { target: { value: "xxxxx" } });
+        expect(liElements.length).toBe(1);
+        expect(liElements).toHaveText("<span class=\"result\">To<b>gg</b>lebox</span>");
+    });
 
-//         const liElements = screen.getByRole("li");
+    it("renders more than 10 li elements when search term is 'i'", () => {
+        fireEvent.change(input[1], { target: { value: "i" } });
 
-//         expect(liElements.length).toBe(0);
-//     });
+        const liElements = screen.getByRole("li");
 
-//     it("renders togglebox after searching for 'gg'", () => {
-
-//         fireEvent.change(input[0], { target: { value: "gg" } });
-
-//         const liElements = screen.getByRole("li");
-
-//         expect(liElements.length).toBe(1);
-//         expect(liElements).toHaveText("<span class=\"result\">To<b>gg</b>lebox</span>");
-//     });
-
-//     it("renders more than 10 li elements when search term is 'i'", () => {
-//         fireEvent.change(input[1], { target: { value: "i" } });
-
-//         const liElements = screen.getByRole("li");
-
-//         expect(liElements.length).toBeGreaterThan(10);
-//     });
-// });
+        expect(liElements.length).toBeGreaterThan(10);
+    });
+});
