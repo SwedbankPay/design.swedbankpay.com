@@ -1,5 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
+import { BrowserRouter } from "react-router-dom";
 import Spacing, { EightPointSystem, VerticalSpacing, TouchTarget, BaseIncrementOfRem, DiveDeeper, HowItWorks, Notation, Examples } from "./index";
 
 describe("Identity: Spacing", () => {
@@ -19,7 +20,9 @@ describe("Identity: Spacing", () => {
         });
 
         it.skip("renders", () => {
-            const wrapper = renderer.create(<EightPointSystem />);
+            const wrapper = renderer.create(<BrowserRouter>
+                <EightPointSystem />
+            </BrowserRouter>);
 
             expect(wrapper.toJSON()).toMatchSnapshot();
         });
@@ -31,7 +34,8 @@ describe("Identity: Spacing", () => {
         });
 
         it.skip("renders", () => {
-            const wrapper = renderer.create(<VerticalSpacing />);
+            const wrapper = renderer.create(
+                <VerticalSpacing />);
 
             expect(wrapper.toJSON()).toMatchSnapshot();
         });
@@ -55,7 +59,9 @@ describe("Identity: Spacing", () => {
         });
 
         it.skip("renders", () => {
-            const wrapper = renderer.create(<BaseIncrementOfRem />);
+            const wrapper = renderer.create(<BrowserRouter>
+                <BaseIncrementOfRem />
+            </BrowserRouter>);
 
             expect(wrapper.toJSON()).toMatchSnapshot();
         });

@@ -1,5 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
+import { BrowserRouter } from "react-router-dom";
 import Patterns from "./index";
 
 describe("Patterns: index", () => {
@@ -7,8 +8,10 @@ describe("Patterns: index", () => {
         expect(Patterns).toBeDefined();
     });
 
-    it.skip("renders", () => {
-        const patterns = renderer.create(<Patterns />);
+    it("renders", () => {
+        const patterns = renderer.create(<BrowserRouter>
+            <Patterns />
+        </BrowserRouter>);
 
         expect(patterns.toJSON()).toMatchSnapshot();
     });

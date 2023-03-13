@@ -16,9 +16,17 @@ exports[`Utilities: index renders 1`] = `
     <h1>
       Utilities
     </h1>
-    <StatusBadge
-      type="new"
-    />
+    <span
+      className="status-badge status-badge-new"
+    >
+      <i
+        aria-hidden="true"
+        className="material-icons"
+      >
+        child_care
+      </i>
+      New
+    </span>
   </div>
   <p
     className="lead"
@@ -29,6 +37,2451 @@ exports[`Utilities: index renders 1`] = `
     </i>
      used and important classes.
   </p>
-  <UtilitiesPresentation />
+  <section
+    id="borderOverview"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-lg-6 co-sm-12 mb-4"
+      >
+        <h2>
+          Border
+        </h2>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="borders"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Border
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              Gives borders to an element.
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="borders"
+          >
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                border
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                border: 1px solid @light-brown
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                border-top
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                border-top: 1px solid @light-brown
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                border-bottom
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                border-bottom: 1px solid @light-brown
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                border-left
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                border-left: 1px solid @light-brown
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                border-right
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                border-right: 1px solid @light-brown
+              </code>
+            </div>
+          </div>
+        </div>
+        <p>
+          Border utility classes.
+        </p>
+      </div>
+      <div
+        className="col-lg-6 co-sm-12 mb-4"
+      >
+        <h2>
+          Breakpoints
+        </h2>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="breakpoints"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Breakpoints
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              Break it up
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="breakpoints"
+          >
+            <div
+              className="d-flex justify-content-between"
+            >
+              <p
+                className="font-weight-bold"
+              >
+                Infix
+              </p>
+              <p
+                className="font-weight-bold"
+              >
+                Min-width
+              </p>
+              <p
+                className="font-weight-bold"
+              >
+                Example use
+              </p>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                xs
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                0px
+              </code>
+              <code
+                className="code-tags code-tags-tertiary"
+              >
+                .col-8 .d-block
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                sm
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                576px
+              </code>
+              <code
+                className="code-tags code-tags-tertiary"
+              >
+                .col-sm-8 .d-sm-block
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                md
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                768px
+              </code>
+              <code
+                className="code-tags code-tags-tertiary"
+              >
+                .col-md-8 .d-md-block
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                lg
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                992px
+              </code>
+              <code
+                className="code-tags code-tags-tertiary"
+              >
+                .col-lg-8 .d-lg-block
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                xl
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                1200px
+              </code>
+              <code
+                className="code-tags code-tags-tertiary"
+              >
+                .col-xl-8 .d-xl-block
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                xxl
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                1600px
+              </code>
+              <code
+                className="code-tags code-tags-tertiary"
+              >
+                .col-xxl-8 .d-xxl-block
+              </code>
+            </div>
+          </div>
+        </div>
+        <p>
+          Like Bootstrap our breakpoints are ranged from 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            xs
+          </code>
+           to 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            xl
+          </code>
+          . In addition, we have added yet another breakpoint for even bigger screens called 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            xxl
+          </code>
+          .
+        </p>
+        <p>
+          Note that when targeting screensize 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            xs
+          </code>
+          , it is optional to append the infix to the classname.
+        </p>
+      </div>
+      <div
+        className="col-lg-6 co-sm-12 mb-4"
+      >
+        <h2>
+          Color
+        </h2>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="colorText"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Text
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              To alter text colors
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="colorText"
+          >
+            <p
+              className="text-default "
+            >
+              .text-default
+            </p>
+            <p
+              className="text-muted "
+            >
+              .text-muted
+            </p>
+            <p
+              className="text-white text-dark-background "
+            >
+              .text-white
+            </p>
+            <p
+              className="text-danger "
+            >
+              .text-danger
+            </p>
+            <p
+              className="text-warning "
+            >
+              .text-warning
+            </p>
+            <p
+              className="text-neutral "
+            >
+              .text-neutral
+            </p>
+            <p
+              className="text-success "
+            >
+              .text-success
+            </p>
+          </div>
+        </div>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="colorBackground"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Background colors
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              To alter background colors of an element
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="colorBackground"
+          >
+            <div
+              className="text-default bg-brand p-1"
+            >
+              .bg-brand
+            </div>
+            <div
+              className="col-12 text-default bg-primary p-1"
+            >
+              .bg-primary
+            </div>
+            <div
+              className="col-12 text-default bg-secondary p-1"
+            >
+              .bg-secondary
+            </div>
+            <div
+              className="col-12 text-default bg-tertiary p-1"
+            >
+              .bg-tertiary
+            </div>
+            <div
+              className="col-12 text-default bg-quaternary p-1"
+            >
+              .bg-quaternary
+            </div>
+            <div
+              className="col-12 text-default bg-danger p-1"
+            >
+              .bg-danger
+            </div>
+            <div
+              className="col-12 text-default bg-warning p-1"
+            >
+              .bg-warning
+            </div>
+            <div
+              className="col-12 text-default bg-success p-1"
+            >
+              .bg-success
+            </div>
+            <div
+              className="col-12 text-default bg-neutral p-1"
+            >
+              .bg-neutral
+            </div>
+            <div
+              className="col-12 text-white bg-info p-1"
+            >
+              .bg-info
+            </div>
+          </div>
+        </div>
+        <p>
+          We have a few color utility classes. For more information about our colors, refer to this 
+          <a
+            href="/identity/color"
+            onClick={[Function]}
+          >
+            color section
+          </a>
+          .
+        </p>
+      </div>
+      <div
+        className="col-lg-6 co-sm-12 mb-4"
+      >
+        <h2>
+          Display
+        </h2>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="displaynotation"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Notation
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              Quick display classes. d(isplay)-&lt;value&gt;
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="displaynotation"
+          >
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                d-none
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                display: none
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                d-inline
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                display: inline
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                d-inline-block
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                display: inline-block
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                d-block
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                display: block
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                d-table
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                display: table
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                d-table-cell
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                display: table-cell
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                d-table-row
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                display: table-row
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                d-flex
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                display: flex
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                d-inline-flex
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                display: inline-flex
+              </code>
+            </div>
+          </div>
+        </div>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="hidingElmenents"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Hiding elements
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              For faster mobile-friendly development
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="hidingElmenents"
+          >
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <span>
+                Hidden on all
+              </span>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                d-none
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <span>
+                Hidden only on xs
+              </span>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                d-none d-sm-block
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <span>
+                Hidden only on md
+              </span>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                d-md-none d-lg-block
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <span>
+                Hidden only on xl
+              </span>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                d-xl-none d-xxl-block
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <span>
+                Visible on all
+              </span>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                d-block
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <span>
+                Visible only on sm
+              </span>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                d-sm-block d-md-none
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <span>
+                Visible only on lg
+              </span>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                d-lg-block d-xl-none
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <span>
+                Visble only on xxl
+              </span>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                d-xxl-block
+              </code>
+            </div>
+          </div>
+        </div>
+        <p>
+          Display utility classes apply to all breakpoints, from 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            xs
+          </code>
+           to 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            xxl
+          </code>
+          , or you can apply them without breakpoints.
+        </p>
+      </div>
+      <div
+        className="col-lg-6 co-sm-12 mb-4"
+      >
+        <h2>
+          Flex
+        </h2>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="enableflexbahaviour"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Enable flex bahaviour
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              For creating a flexbox
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="enableflexbahaviour"
+          >
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                d-flex
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                d-inline-flex
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                d-{breakpoint}-flex
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                d-{breakpoint}-inline-flex
+              </code>
+            </div>
+          </div>
+        </div>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="flexDirection"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Direction
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              Direct the flex
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="flexDirection"
+          >
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                flex-row
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                flex-row-reverse
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                flex-column
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                flex-column-reverse
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                flex-{breakpoint}-row
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                flex-{breakpoint}-row-reverse
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                flex-{breakpoint}-column
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                flex-{breakpoint}-column-reverse
+              </code>
+            </div>
+          </div>
+        </div>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="justifyContent"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Justify content
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              Justify your flex contents
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="justifyContent"
+          >
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                justify-content-start
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                justify-content-end
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                justify-content-center
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                justify-content-between
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                justify-content-around
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                justify-content-evenly
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                justify-content-{breakpoint}-start
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                justify-content-{breakpoint}-end
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                justify-content-{breakpoint}-center
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                justify-content-{breakpoint}-between
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                justify-content-{breakpoint}-around
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                justify-content-{breakpoint}-evenly
+              </code>
+            </div>
+          </div>
+        </div>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="alignItems"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Align items
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              Align set of elements
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="alignItems"
+          >
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-items-start
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-items-end
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-items-baseline
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-items-stretch
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-items-{breakpoint}-start
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-items-{breakpoint}-end
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-items-{breakpoint}-center
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-items-{breakpoint}-baseline
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-items-{breakpoint}-stretch
+              </code>
+            </div>
+          </div>
+        </div>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="alignSelf"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Align self
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              Align element
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="alignSelf"
+          >
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-self-start
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-self-end
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-self-center
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-self-baseline
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-self-stretch
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-self-{breakpoint}-start
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-self-{breakpoint}-end
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-self-{breakpoint}-center
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-self-{breakpoint}-baseline
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-self-{breakpoint}-stretch
+              </code>
+            </div>
+          </div>
+        </div>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="fill"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Fill
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              Flex fill
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="fill"
+          >
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                flex-fill
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                flex-{breakpoint}-fill
+              </code>
+            </div>
+          </div>
+        </div>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="growAndShrink"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Grow and shrink
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              Effective use of space
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="growAndShrink"
+          >
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                flex-{grow|shrink}-0
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                flex-{grow|shrink}-1
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                flex-{breakpoint}-{grow|shrink}-0
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                flex-{breakpoint}-{grow|shrink}-1
+              </code>
+            </div>
+          </div>
+        </div>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="wrap"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Wrap
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              Nowrap is the browser's default value
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="wrap"
+          >
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                flex-wrap
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                flex-nowrap
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                flex-wrap-reverse
+              </code>
+            </div>
+          </div>
+        </div>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="order"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Order
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              Modifies the visual order
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="order"
+          >
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                order-{0-12}
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                order-{breakpoint}-{0-12}
+              </code>
+            </div>
+          </div>
+        </div>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="alignContent"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Align content
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              No effect on single rows of flex items
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="alignContent"
+          >
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-content-start
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-content-end
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-content-center
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-content-around
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-content-stretch
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-content-{breakpoint}-start
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-content-{breakpoint}-end
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-content-{breakpoint}-center
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-content-{breakpoint}-around
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                align-content-{breakpoint}-stretch
+              </code>
+            </div>
+          </div>
+        </div>
+        <p>
+          For quickly managing the layout, alignment, sizing of grid columns, navigation, components and more.
+        </p>
+      </div>
+      <div
+        className="col-lg-6 co-sm-12 mb-4"
+      >
+        <h2>
+          Image
+        </h2>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="images"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Images
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              Utility classes to your images
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="images"
+          >
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <span>
+                Scales to parent
+              </span>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                img-fluid
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <span>
+                Rounded corners
+              </span>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                img-rounded
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <span>
+                Perfect circle
+              </span>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                img-circle
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <span>
+                Adds border and padding
+              </span>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                img-thumbnail
+              </code>
+            </div>
+          </div>
+        </div>
+        <p>
+          For adding rules to your pictures quickly.
+        </p>
+      </div>
+      <div
+        className="col-lg-6 co-sm-12 mb-4"
+      >
+        <h2>
+          Sizing
+        </h2>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="sizing"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Sizing
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              Resize your elements
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="sizing"
+          >
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                {w|h}-25
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                {w|h}-50
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                {w|h}-75
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                {w|h}-100
+              </code>
+            </div>
+          </div>
+        </div>
+        <p>
+          Easily make an element as wide or tall as you like. (Relative to it's parent)
+        </p>
+      </div>
+      <div
+        className="col-lg-6 co-sm-12 mb-4"
+      >
+        <h2>
+          Spacing
+        </h2>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="margins"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Margin
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              For seperating elements.
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="margins"
+          >
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                m-0
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                0
+              </code>
+              <span>
+                 
+              </span>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                m-1
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                0.25rem
+              </code>
+              <span>
+                4px
+              </span>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                m-2
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                0.5rem
+              </code>
+              <span>
+                8px
+              </span>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                m-3
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                1rem
+              </code>
+              <span>
+                16px
+              </span>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                m-4
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                1.5rem
+              </code>
+              <span>
+                24px
+              </span>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                m-5
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                3rem
+              </code>
+              <span>
+                48px
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="paddings"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Padding
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              Give the element some space.
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="paddings"
+          >
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                p-0
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                0
+              </code>
+              <span>
+                 
+              </span>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                p-1
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                0.25rem
+              </code>
+              <span>
+                4px
+              </span>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                p-2
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                0.5rem
+              </code>
+              <span>
+                8px
+              </span>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                p-3
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                1rem
+              </code>
+              <span>
+                16px
+              </span>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                p-4
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                1.5rem
+              </code>
+              <span>
+                24px
+              </span>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                p-5
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                3rem
+              </code>
+              <span>
+                48px
+              </span>
+            </div>
+          </div>
+        </div>
+        <p>
+          One can alter only desired sides of the element. Just add the letter t(op), b(ottom), l(eft) or r(ight) after your m(argin) or p(adding).
+        </p>
+        <p>
+          For example, 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            mt-5
+          </code>
+           will give 
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            margin-top: 3rem
+          </code>
+        </p>
+        You can also approach the spacings with the x and y-axis. 
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          my-5
+        </code>
+         will give you 
+        <code
+          className="code-tags code-tags-secondary"
+        >
+          margin-top: 3rem; margin-bottom: 3rem
+        </code>
+      </div>
+      <div
+        className="col-lg-6 co-sm-12 mb-4"
+      >
+        <h2>
+          Text
+        </h2>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="text"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Text
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              Modify your text elements
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="text"
+          >
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                text-justify
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                text-left
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                text-center
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                text-right
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                text-{breakpoint}-left
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                text-nowrap
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                text-truncate
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                text-lowercase
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                text-uppercase
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                text-capitalize
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                font-weight-bold
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                font-weight-normal
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                font-weight-light
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                font-italic
+              </code>
+            </div>
+          </div>
+        </div>
+        <p>
+          For controlling alignment, wrapping, weight and more.
+        </p>
+      </div>
+      <div
+        className="col-lg-6 co-sm-12 mb-4"
+      >
+        <h2>
+          Visibility
+        </h2>
+        <div
+          className="expandable"
+        >
+          
+
+          <button
+            aria-controls="visibility"
+            aria-expanded="false"
+            className="expandable-header"
+            type="button"
+          >
+            
+
+            <span
+              className="expandable-headline"
+            >
+              Visibility
+            </span>
+            
+
+            <small
+              className="expandable-subtitle"
+            >
+              Modify the visual representation of your elements
+            </small>
+            
+
+          </button>
+          <div
+            className="expandable-body"
+            id="visibility"
+          >
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                visible
+              </code>
+            </div>
+            <div
+              className="d-flex  mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                invisible
+              </code>
+            </div>
+          </div>
+        </div>
+        <p>
+          Control the visibility without modifying the display of your elements.
+        </p>
+      </div>
+    </div>
+  </section>
 </div>
 `;

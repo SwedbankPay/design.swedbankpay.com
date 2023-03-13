@@ -16,18 +16,217 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
       <div
         className="col-sm-8 col-12 m-auto"
       >
-        <LoginForm
-          additionalText="Additional help text"
-          alternativeLogins={true}
-          checkboxId="guideline-checkbox-example"
-          emailId="guideline-email-example"
-          emailLabel="Required input field"
-          logo={true}
-          passwordId="guideline-password-example"
-          passwordLabel="Required input field"
-          placeholder="Placeholder text"
-          productLabel="Product Label"
-          title="h1"
+        <span
+          className="extra-small text-secondary-light-1"
+        >
+          Product Label
+        </span>
+        
+
+        <span
+          className="h1 mb-4 mt-2 d-block"
+        >
+          Log in
+        </span>
+        
+
+        <a
+          className="action-link"
+          href="#"
+          rel={null}
+          target={null}
+        >
+          
+
+          <div
+            className="d-flex flex-column"
+          >
+            
+
+            <span
+              className="action-link-content"
+            >
+              
+
+              <span
+                className="action-link-label no-badge"
+              >
+                Login with Azure
+              </span>
+              
+
+            </span>
+            
+
+          </div>
+        </a>
+        
+
+        <a
+          className="action-link"
+          href="#"
+          rel={null}
+          target={null}
+        >
+          
+
+          <div
+            className="d-flex flex-column"
+          >
+            
+
+            <span
+              className="action-link-content"
+            >
+              
+
+              <span
+                className="action-link-label no-badge"
+              >
+                Login with Curity
+              </span>
+              
+
+            </span>
+            
+
+          </div>
+        </a>
+        <div
+          className="row no-gutters align-items-center mb-3"
+        >
+          <hr
+            className="col-5 border-top"
+          />
+          
+
+          <span
+            className="col-2 text-center"
+          >
+            or
+          </span>
+          <hr
+            className="col-5 border-top"
+          />
+        </div>
+        <div
+          className="form-group"
+        >
+          
+
+          <label
+            htmlFor="guideline-email-example"
+          >
+            Required input field
+          </label>
+          
+
+          <input
+            aria-describedby={null}
+            autoComplete={null}
+            className="form-control"
+            data-validate={null}
+            defaultValue=""
+            disabled={null}
+            id="guideline-email-example"
+            pattern={null}
+            readOnly={null}
+            required={null}
+            type="email"
+          />
+          
+
+        </div>
+        <div
+          className="form-group"
+        >
+          
+
+          <label
+            htmlFor="guideline-password-example"
+          >
+            Required input field
+          </label>
+          
+
+          <input
+            aria-describedby={null}
+            autoComplete={null}
+            className="form-control"
+            data-validate={null}
+            defaultValue=""
+            disabled={null}
+            id="guideline-password-example"
+            pattern={null}
+            readOnly={null}
+            required={null}
+            type="password"
+          />
+          
+
+        </div>
+        <div
+          className="d-sm-flex d-block justify-content-between mb-3"
+        >
+          <div
+            className="checkbox"
+          >
+            
+
+            <input
+              aria-describedby={null}
+              defaultChecked={null}
+              disabled={null}
+              id="guideline-checkbox-example"
+              type="checkbox"
+            />
+            
+
+            <label
+              className="d-block"
+              htmlFor="guideline-checkbox-example"
+            >
+              Remember me
+            </label>
+            
+
+          </div>
+          
+
+          <a
+            className="d-block mb-3"
+            href=""
+            onClick={[Function]}
+          >
+            Forgot your password?
+          </a>
+        </div>
+        
+
+        <button
+          active={null}
+          aria-disabled={null}
+          aria-label={null}
+          aria-pressed={null}
+          className="btn btn-primary btn-block"
+          role={null}
+          tabIndex={null}
+          title={null}
+          type="button"
+        >
+          Log in
+        </button>
+        <p
+          className="small mt-3"
+        >
+          Additional help text
+        </p>
+        
+
+        <img
+          alt="TESTBRAND-logo"
+          className="logotype-vertical d-none d-sm-block mx-auto mt-5 logotype-lg"
+          src="/TEST/img/logo/TESTBRAND-logo-v.svg"
         />
       </div>
     </div>
@@ -35,68 +234,52 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
   <ul
     className="list list-bullet"
   >
-    <li
-      key="0"
-    >
+    <li>
       The 
       <b>
         Product label
       </b>
        should display the name of the product the user is about to log in to.
     </li>
-    <li
-      key="1"
-    >
+    <li>
       <b>
         Log in
       </b>
        should always be the title of the login form.
     </li>
-    <li
-      key="2"
-    >
+    <li>
       A section of links to 
       <b>
         third party logins
       </b>
        can be added. Use a divider to separate it from the standard login section. It can be placed either before or after depending on the most common or desired way to login to the specific portal. 
     </li>
-    <li
-      key="3"
-    >
+    <li>
       The 
       <b>
         required input fields
       </b>
        varies depending on the type of login. The amount of required fields  differs depending on the authentication method. 
     </li>
-    <li
-      key="4"
-    >
+    <li>
       <b>
         Remember me
       </b>
        is an optional field. When it is enabled it saves the data and present pre-filled fields the next time the user is about to log in. 
     </li>
-    <li
-      key="5"
-    >
+    <li>
       <b>
         Button
       </b>
        is used to allow the user to perform the login request.
     </li>
-    <li
-      key="6"
-    >
+    <li>
       <b>
         Additional help text
       </b>
        is optional and can be added underneath the button in order to provide the user with additional help or guidelines.
     </li>
-    <li
-      key="7"
-    >
+    <li>
       Login forms should always have the 
       <b>
         Swedbank pay logotype
@@ -115,11 +298,12 @@ exports[`Forms: index ContentGuidelines renders 1`] = `
     />
     <p>
       The login form is always accompanied by a image on the right side on desktop devices, the image is hidden on smaller devices. Above are an example of some images that would be fitting to be used as login images, the most important thing to look out for is telling a story, especially when it comes to the product. “Who is this product for?” If it is an product for consumers outside of our organization, try to relate the image to that segment of the user. For more guidance on how to design with images and find our image library, refer to the 
-      <Link
-        to="/identity/imagery"
+      <a
+        href="/identity/imagery"
+        onClick={[Function]}
       >
         Imagery section
-      </Link>
+      </a>
       .
     </p>
   </section>
@@ -1848,14 +2032,804 @@ exports[`Forms: index Overview renders 1`] = `
 `;
 
 exports[`Forms: index renders 1`] = `
-<DocContainer>
-  <p
-    className="lead"
+<div
+  className="row"
+>
+  <div
+    className="doc-body col-12"
+    id="doc-body"
   >
-    The login page allow users to gain access to an application by entering login credentials to a form.
-  </p>
-  <Overview />
-  <ContentGuidelines />
-  <DeveloperDocumentation />
-</DocContainer>
+    <p
+      className="lead"
+    >
+      The login page allow users to gain access to an application by entering login credentials to a form.
+    </p>
+    <section>
+      <h2
+        id="overview"
+      >
+        Overview
+      </h2>
+      <img
+        alt="A login screen with the login functionality to the left and an image to the right showing a woman using a laptop."
+        className="d-none d-md-block w-100 border-left border-right border-bottom"
+        src="/TEST/img/documentation/patterns/login-pattern-example.png"
+      />
+      <div
+        className="container-fluid d-block d-md-none border-left border-right border-bottom border-top-brand py-3"
+      >
+        <span
+          className="extra-small text-secondary-light-1"
+        >
+          Merchant Admin
+        </span>
+        
+
+        <span
+          className="h1 mb-4 mt-2 d-block"
+        >
+          Log in
+        </span>
+        
+
+        <a
+          className="action-link"
+          href="#"
+          rel={null}
+          target={null}
+        >
+          
+
+          <div
+            className="d-flex flex-column"
+          >
+            
+
+            <span
+              className="action-link-content"
+            >
+              
+
+              <span
+                className="action-link-label no-badge"
+              >
+                Login with Azure
+              </span>
+              
+
+            </span>
+            
+
+          </div>
+        </a>
+        
+
+        <a
+          className="action-link"
+          href="#"
+          rel={null}
+          target={null}
+        >
+          
+
+          <div
+            className="d-flex flex-column"
+          >
+            
+
+            <span
+              className="action-link-content"
+            >
+              
+
+              <span
+                className="action-link-label no-badge"
+              >
+                Login with Curity
+              </span>
+              
+
+            </span>
+            
+
+          </div>
+        </a>
+        <div
+          className="row no-gutters align-items-center mb-3"
+        >
+          <hr
+            className="col-5 border-top"
+          />
+          
+
+          <span
+            className="col-2 text-center"
+          >
+            or
+          </span>
+          <hr
+            className="col-5 border-top"
+          />
+        </div>
+        <div
+          className="form-group"
+        >
+          
+
+          <label
+            htmlFor="login-email-example"
+          >
+            Email
+          </label>
+          
+
+          <input
+            aria-describedby={null}
+            autoComplete={null}
+            className="form-control"
+            data-validate={null}
+            defaultValue=""
+            disabled={null}
+            id="login-email-example"
+            pattern={null}
+            readOnly={null}
+            required={null}
+            type="email"
+          />
+          
+
+        </div>
+        <div
+          className="form-group"
+        >
+          
+
+          <label
+            htmlFor="login-password-example"
+          >
+            Password
+          </label>
+          
+
+          <input
+            aria-describedby={null}
+            autoComplete={null}
+            className="form-control"
+            data-validate={null}
+            defaultValue=""
+            disabled={null}
+            id="login-password-example"
+            pattern={null}
+            readOnly={null}
+            required={null}
+            type="password"
+          />
+          
+
+        </div>
+        <div
+          className="d-sm-flex d-block justify-content-between mb-3"
+        >
+          <div
+            className="checkbox"
+          >
+            
+
+            <input
+              aria-describedby={null}
+              defaultChecked={null}
+              disabled={null}
+              id="login-checkbox-example"
+              type="checkbox"
+            />
+            
+
+            <label
+              className="d-block"
+              htmlFor="login-checkbox-example"
+            >
+              Remember me
+            </label>
+            
+
+          </div>
+          
+
+          <a
+            className="d-block mb-3"
+            href=""
+            onClick={[Function]}
+          >
+            Forgot your password?
+          </a>
+        </div>
+        
+
+        <button
+          active={null}
+          aria-disabled={null}
+          aria-label={null}
+          aria-pressed={null}
+          className="btn btn-primary btn-block"
+          role={null}
+          tabIndex={null}
+          title={null}
+          type="button"
+        >
+          Log in
+        </button>
+        <p
+          className="small mt-3"
+        >
+          <a
+            className=""
+            href=""
+            onClick={[Function]}
+          >
+            Contact helpDesk
+          </a>
+           if you are having trouble signing in.
+        </p>
+        
+
+        <img
+          alt="TESTBRAND-logo"
+          className="logotype-vertical d-none d-sm-block mx-auto mt-5 logotype-lg"
+          src="/TEST/img/logo/TESTBRAND-logo-v.svg"
+        />
+      </div>
+      <div
+        className="border-left border-right p-3"
+      >
+        <div
+          className="m-3"
+        >
+          <h3>
+            Login
+          </h3>
+          The login page is customizable and components can be removed or added to fit a specific products needs.
+        </div>
+      </div>
+      <div
+        className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+      >
+        <div
+          className="sp-stack sp-c-euXojQ sp-editor"
+        >
+          <div
+            className="sp-code-editor sp-c-bNbSGz"
+          >
+            <pre
+              className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+              translate="no"
+            >
+              <code
+                className="sp-pre-placeholder sp-c-fWymNx"
+                style={
+                  Object {
+                    "marginLeft": "var(--sp-space-4)",
+                  }
+                }
+              />
+            </pre>
+            <span
+              className="sp-read-only sp-c-czQzXp"
+            >
+              Read-only
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2
+        id="content-guidelines"
+      >
+        Content guidelines
+      </h2>
+      <div
+        className="showcase-panel p-0 mb-4"
+      >
+        <div
+          className="border-top-brand py-5"
+        >
+          <div
+            className="col-sm-8 col-12 m-auto"
+          >
+            <span
+              className="extra-small text-secondary-light-1"
+            >
+              Product Label
+            </span>
+            
+
+            <span
+              className="h1 mb-4 mt-2 d-block"
+            >
+              Log in
+            </span>
+            
+
+            <a
+              className="action-link"
+              href="#"
+              rel={null}
+              target={null}
+            >
+              
+
+              <div
+                className="d-flex flex-column"
+              >
+                
+
+                <span
+                  className="action-link-content"
+                >
+                  
+
+                  <span
+                    className="action-link-label no-badge"
+                  >
+                    Login with Azure
+                  </span>
+                  
+
+                </span>
+                
+
+              </div>
+            </a>
+            
+
+            <a
+              className="action-link"
+              href="#"
+              rel={null}
+              target={null}
+            >
+              
+
+              <div
+                className="d-flex flex-column"
+              >
+                
+
+                <span
+                  className="action-link-content"
+                >
+                  
+
+                  <span
+                    className="action-link-label no-badge"
+                  >
+                    Login with Curity
+                  </span>
+                  
+
+                </span>
+                
+
+              </div>
+            </a>
+            <div
+              className="row no-gutters align-items-center mb-3"
+            >
+              <hr
+                className="col-5 border-top"
+              />
+              
+
+              <span
+                className="col-2 text-center"
+              >
+                or
+              </span>
+              <hr
+                className="col-5 border-top"
+              />
+            </div>
+            <div
+              className="form-group"
+            >
+              
+
+              <label
+                htmlFor="guideline-email-example"
+              >
+                Required input field
+              </label>
+              
+
+              <input
+                aria-describedby={null}
+                autoComplete={null}
+                className="form-control"
+                data-validate={null}
+                defaultValue=""
+                disabled={null}
+                id="guideline-email-example"
+                pattern={null}
+                readOnly={null}
+                required={null}
+                type="email"
+              />
+              
+
+            </div>
+            <div
+              className="form-group"
+            >
+              
+
+              <label
+                htmlFor="guideline-password-example"
+              >
+                Required input field
+              </label>
+              
+
+              <input
+                aria-describedby={null}
+                autoComplete={null}
+                className="form-control"
+                data-validate={null}
+                defaultValue=""
+                disabled={null}
+                id="guideline-password-example"
+                pattern={null}
+                readOnly={null}
+                required={null}
+                type="password"
+              />
+              
+
+            </div>
+            <div
+              className="d-sm-flex d-block justify-content-between mb-3"
+            >
+              <div
+                className="checkbox"
+              >
+                
+
+                <input
+                  aria-describedby={null}
+                  defaultChecked={null}
+                  disabled={null}
+                  id="guideline-checkbox-example"
+                  type="checkbox"
+                />
+                
+
+                <label
+                  className="d-block"
+                  htmlFor="guideline-checkbox-example"
+                >
+                  Remember me
+                </label>
+                
+
+              </div>
+              
+
+              <a
+                className="d-block mb-3"
+                href=""
+                onClick={[Function]}
+              >
+                Forgot your password?
+              </a>
+            </div>
+            
+
+            <button
+              active={null}
+              aria-disabled={null}
+              aria-label={null}
+              aria-pressed={null}
+              className="btn btn-primary btn-block"
+              role={null}
+              tabIndex={null}
+              title={null}
+              type="button"
+            >
+              Log in
+            </button>
+            <p
+              className="small mt-3"
+            >
+              Additional help text
+            </p>
+            
+
+            <img
+              alt="TESTBRAND-logo"
+              className="logotype-vertical d-none d-sm-block mx-auto mt-5 logotype-lg"
+              src="/TEST/img/logo/TESTBRAND-logo-v.svg"
+            />
+          </div>
+        </div>
+      </div>
+      <ul
+        className="list list-bullet"
+      >
+        <li>
+          The 
+          <b>
+            Product label
+          </b>
+           should display the name of the product the user is about to log in to.
+        </li>
+        <li>
+          <b>
+            Log in
+          </b>
+           should always be the title of the login form.
+        </li>
+        <li>
+          A section of links to 
+          <b>
+            third party logins
+          </b>
+           can be added. Use a divider to separate it from the standard login section. It can be placed either before or after depending on the most common or desired way to login to the specific portal. 
+        </li>
+        <li>
+          The 
+          <b>
+            required input fields
+          </b>
+           varies depending on the type of login. The amount of required fields  differs depending on the authentication method. 
+        </li>
+        <li>
+          <b>
+            Remember me
+          </b>
+           is an optional field. When it is enabled it saves the data and present pre-filled fields the next time the user is about to log in. 
+        </li>
+        <li>
+          <b>
+            Button
+          </b>
+           is used to allow the user to perform the login request.
+        </li>
+        <li>
+          <b>
+            Additional help text
+          </b>
+           is optional and can be added underneath the button in order to provide the user with additional help or guidelines.
+        </li>
+        <li>
+          Login forms should always have the 
+          <b>
+            Swedbank pay logotype
+          </b>
+          .
+        </li>
+      </ul>
+      <section>
+        <h3>
+          Image
+        </h3>
+        <img
+          alt="Selection of images showing people in different settings using digital devices."
+          className="w-100 mb-3"
+          src="/TEST/img/documentation/patterns/login-img-collection-example.png"
+        />
+        <p>
+          The login form is always accompanied by a image on the right side on desktop devices, the image is hidden on smaller devices. Above are an example of some images that would be fitting to be used as login images, the most important thing to look out for is telling a story, especially when it comes to the product. “Who is this product for?” If it is an product for consumers outside of our organization, try to relate the image to that segment of the user. For more guidance on how to design with images and find our image library, refer to the 
+          <a
+            href="/identity/imagery"
+            onClick={[Function]}
+          >
+            Imagery section
+          </a>
+          .
+        </p>
+      </section>
+    </section>
+    <section>
+      <h2
+        id="developer-documentation"
+      >
+        Developer documentation
+      </h2>
+      <h3>
+        Errors and validation
+      </h3>
+      <p>
+        Not being able to log in to an application is very frustrating for the user, therefore error messages should be used to help the user understand what went wrong and how to solve the problem.
+      </p>
+      <section>
+        <h4>
+          Client-side validation
+        </h4>
+        <p>
+          Use client-side validation to validate as much data as possible inline before the user submits the form. Common inline errors include empty required fields, invalid characters or incorrect input format. 
+        </p>
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <div
+            className="showcase-panel"
+            style={null}
+          >
+            <div
+              className="col-sm-6 col-12 m-auto px-0 pt-3"
+            >
+              <div
+                className="form-group has-error"
+              >
+                
+
+                <label
+                  htmlFor="login-client-side"
+                >
+                  Email
+                </label>
+                
+
+                <input
+                  aria-describedby={null}
+                  autoComplete={null}
+                  className="form-control"
+                  data-validate={null}
+                  defaultValue=""
+                  disabled={null}
+                  id="login-client-side"
+                  pattern={null}
+                  readOnly={null}
+                  required={null}
+                  type="email"
+                />
+                
+
+                <div
+                  className="help-block"
+                >
+                  <i
+                    className="material-icons"
+                  >
+                    warning
+                  </i>
+                  Email is required
+                </div>
+                
+
+              </div>
+            </div>
+          </div>
+          <div
+            className="sp-stack sp-c-euXojQ sp-editor"
+          >
+            <div
+              className="sp-code-editor sp-c-bNbSGz"
+            >
+              <pre
+                className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+                translate="no"
+              >
+                <code
+                  className="sp-pre-placeholder sp-c-fWymNx"
+                  style={
+                    Object {
+                      "marginLeft": "var(--sp-space-4)",
+                    }
+                  }
+                />
+              </pre>
+              <span
+                className="sp-read-only sp-c-czQzXp"
+              >
+                Read-only
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h4>
+          Server-side validation
+        </h4>
+        <p>
+          Use server side validation when the user submits the form. Display a local error alert after the page has reloaded if an error has occurred. Incorrect email or password are the most common servers errors. 
+        </p>
+        <div
+          className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
+        >
+          <div
+            className="showcase-panel"
+            style={
+              Object {
+                "--preview-min-height": "600px",
+              }
+            }
+          >
+            <div
+              className="sp-stack sp-c-euXojQ sp-preview"
+            >
+              <div
+                className="sp-preview-container sp-c-bIhyHd"
+              >
+                <iframe
+                  className="sp-preview-iframe sp-c-fgviib"
+                  style={
+                    Object {
+                      "height": undefined,
+                    }
+                  }
+                  title="Sandpack Preview"
+                />
+                <div
+                  className="sp-preview-actions sp-c-eKnQtg"
+                >
+                  <a
+                    className="sp-button sp-icon-standalone sp-c-dRhJti sp-c-gMfcns sp-c-eXsQzS"
+                    href="https://codesandbox.io/api/v1/sandboxes/define?undefined"
+                    rel="noreferrer noopener"
+                    target="_blank"
+                    title="Open in CodeSandbox"
+                  >
+                    <svg
+                      fill="none"
+                      height="16"
+                      stroke="currentColor"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title>
+                        Open on CodeSandbox
+                      </title>
+                      <path
+                        d="M6.66665 3.33337H4.33331C3.78103 3.33337 3.33331 3.78109 3.33331 4.33337V11.6667C3.33331 12.219 3.78103 12.6667 4.33331 12.6667H11.6666C12.2189 12.6667 12.6666 12.219 12.6666 11.6667V9.33337"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M10 3.33337H12.5667C12.6219 3.33337 12.6667 3.37815 12.6667 3.43337V6.00004"
+                        strokeLinecap="round"
+                      />
+                      <path
+                        d="M7.33331 8.66668L12.5333 3.46667"
+                        strokeLinecap="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="sp-stack sp-c-euXojQ sp-editor"
+          >
+            <div
+              className="sp-code-editor sp-c-bNbSGz"
+            >
+              <div
+                aria-autocomplete="list"
+                aria-label="Code Editor for index.html"
+                aria-multiline="true"
+                className="sp-cm sp-pristine sp-html sp-c-jOWzsE sp-c-jkvvao"
+                onKeyDown={[Function]}
+                role="textbox"
+                suppressHydrationWarning={true}
+                tabIndex={0}
+                translate="no"
+              >
+                <pre
+                  className="sp-pre-placeholder sp-c-fWymNx"
+                  style={
+                    Object {
+                      "marginLeft": "var(--sp-space-5)",
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </div>
+</div>
 `;
