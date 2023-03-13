@@ -13,18 +13,59 @@ exports[`Components: Tabs ContentGuidelines renders 1`] = `
     <div
       className="m-auto"
     >
-      <Tabs
+      <div
+        className="tabs tabs-scroll"
         id="tabs-scroll-example"
-        items={
-          Array [
-            "Selected Label",
-            "Unselected Label",
-            "Unselected Label",
-          ]
-        }
-        scroll={true}
-        ulId="tabs-scroll-example-ul"
-      />
+      >
+        
+
+        <ul
+          id="tabs-scroll-example-ul"
+        >
+          <li
+            className="active"
+          >
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              Selected Label
+            </a>
+            
+
+          </li>
+          <li
+            className={null}
+          >
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              Unselected Label
+            </a>
+            
+
+          </li>
+          <li
+            className={null}
+          >
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              Unselected Label
+            </a>
+            
+
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
   <ul

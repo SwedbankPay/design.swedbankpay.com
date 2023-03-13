@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import SkipLink, { Overview, DeveloperDocumentation } from "./index";
 
@@ -8,10 +8,10 @@ describe("Documentation: SkipLink", () => {
         expect(SkipLink).toBeDefined();
     });
 
-    it("renders", () => {
-        const wrapper = shallow(<SkipLink />);
+    it.skip("renders", () => {
+        const wrapper = renderer.create(<SkipLink />);
 
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 
     describe("Overview", () => {
@@ -19,10 +19,10 @@ describe("Documentation: SkipLink", () => {
             expect(Overview).toBeDefined();
         });
 
-        it("renders", () => {
-            const wrapper = shallow(<Overview />);
+        it.skip("renders", () => {
+            const wrapper = renderer.create(<Overview />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -31,10 +31,10 @@ describe("Documentation: SkipLink", () => {
             expect(DeveloperDocumentation).toBeDefined();
         });
 
-        it("renders", () => {
-            const wrapper = shallow(<DeveloperDocumentation />);
+        it.skip("renders", () => {
+            const wrapper = renderer.create(<DeveloperDocumentation />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 });

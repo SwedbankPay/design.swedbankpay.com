@@ -149,16 +149,15 @@ exports[`Components: Slab SlabArrow renders 1`] = `
     Slab arrow
   </h2>
   <p>
-    <CodeTags
-      code=".slab-arrow"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .slab-arrow
+    </code>
      inherits the color from the slab it is appended to.
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  <div
+    className="showcase-panel"
   >
     <div
       className="slab slab-arrow"
@@ -167,7 +166,73 @@ exports[`Components: Slab SlabArrow renders 1`] = `
         This slab has some connection to the content above.
       </p>
     </div>
-  </ComponentPreview>
+  </div>
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="slab slab-arrow"&gt;
+                
+
+                    &lt;p&gt;This slab has some connection to the content above.&lt;/p&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>
 </section>
 `;
 
