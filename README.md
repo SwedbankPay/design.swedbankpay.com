@@ -156,19 +156,19 @@ Before merging to master to create a release, make sure you follow these steps:
 
 - Be in the `develop` branch.
 - Pull latest changes.
-- Create a release branch where the name is the new tag. (`release/x.x.x`) 
+- Create a release branch where the name is the new tag. (`release/x.x.x`)
 - Update the version in `~/package.json`.
 - Make sure the `RELEASE_NOTES.md` is correct (date and version) and only contains- changes for the current release.
-- Update the changelog constants on the Home page. 
-- Update statusBadges in routes. 
+- Update the changelog constants on the Home page.
+- Update statusBadges in routes.
 - Commit the changes and create a pull request from `release/x.x.x` branch to `master` and `develop`.
 - When approved, rename the merge commit to `Release x.x.x` and merge.
 - Change branch to `master`.
 - Pull latest changes.
-- Create and push a new tag with the new release commit: 
-1. `git tag -l` Make sure the tag is not in list. 
-2. `git tag x.x.x` And check if the new tag is in list. 
-3. `git push origin x.x.x` 
+- Create and push a new tag with the new release commit:
+1. `git tag -l` Make sure the tag is not in list.
+2. `git tag x.x.x` And check if the new tag is in list.
+3. `git push origin x.x.x`
 - Remember to change branch back to `develop`.
 
 AppVeyor will now create and deploy a release on both github and
@@ -202,7 +202,7 @@ GitHub Actions will also create and deploy a release on Azure for the PayEx bran
 | `.stylelintrc`      | [Stylelint][stylelint] configuration.
 | `CHANGELOG.md`      | Collection of changes made to the project. Insert your changes here.
 | `jest.config.js`    | [jest][jest] configuration.
-| `jest.setup.js`     | Script file that will run before jest executes the tests, this includes [enzyme][enzyme] setup, polyfills and other useful snippets.
+| `jest.setup.js`     | Script file that will run before jest executes the tests, polyfills and other useful snippets.
 | `webpack.config.js` | [Webpack][webpack] configuration.
 
 ## Copyright, license and credits
@@ -234,6 +234,5 @@ Inspired by [Bootstrap][bootstrap] and [Materialize][materialize].
   [sentry]:               https://sentry.io
   [stylelint]:            https://stylelint.io/
   [jest]:                 https://facebook.github.io/jest/
-  [enzyme]:               http://airbnb.io/enzyme/
   [bootstrap]:            http://getbootstrap.com/
   [materialize]:          https://materializecss.com/

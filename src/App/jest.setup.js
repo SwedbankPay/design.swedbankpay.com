@@ -1,25 +1,12 @@
-import { configure, shallow, render, mount } from "enzyme";
-import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
-// Update to official adapter when available [THN]
-// import Adapter from "enzyme-adapter-react-17";
-
 import dg from "../scripts/main";
 
 global.dg = dg;
-
-// React 17 Enzyme adapter
-configure({ adapter: new Adapter() });
 
 // Set up static testing variables
 process.env.basename = "/TEST/";
 process.env.brand = "TESTBRAND";
 process.env.brandTitle = "TESTBRAND";
 process.env.brandLink = "TESTBRANDLINK";
-
-// Make Enzyme functions available in all test files without importing
-global.shallow = shallow;
-global.render = render;
-global.mount = mount;
 
 /**
  * To prevent the following warning that comes with React 16 while running tests:
