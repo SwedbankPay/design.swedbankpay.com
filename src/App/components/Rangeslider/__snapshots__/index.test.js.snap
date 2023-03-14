@@ -1,182 +1,172 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Rangeslider - renders with a value label 1`] = `
-<Rangeslider>
-  <div
-    className="rangeslider"
-  >
+<div
+  className="rangeslider"
+>
+  
+
+  <input
+    type="range"
+  />
+  
+
+  <div>
     
 
-    <input
-      type="range"
-    />
-    
-
-    <div>
-      
-
-      <label
-        className="rangeslider-label"
-      >
-        
-
-        
-
-      </label>
-      
-
-      <output
-        className="value-label"
-      >
-        
-		
-        <span
-          data-rs-value={true}
-        />
-        
-			
-      </output>
-    </div>
-    <div
-      className="value-range"
+    <label
+      className="rangeslider-label"
     >
       
 
-      <small />
       
 
-      <small />
-      
+    </label>
+    
 
-    </div>
+    <output
+      className="value-label"
+    >
+      
+		
+      <span
+        data-rs-value={true}
+      />
+      
+			
+    </output>
   </div>
-</Rangeslider>
+  <div
+    className="value-range"
+  >
+    
+
+    <small />
+    
+
+    <small />
+    
+
+  </div>
+</div>
 `;
 
 exports[`Component: Rangeslider - renders with a value label and a value label postfix 1`] = `
-<Rangeslider
-  valueLabelPostfix="test"
+<div
+  className="rangeslider"
 >
-  <div
-    className="rangeslider"
-  >
+  
+
+  <input
+    type="range"
+  />
+  
+
+  <div>
     
 
-    <input
-      type="range"
-    />
-    
-
-    <div>
-      
-
-      <label
-        className="rangeslider-label"
-      >
-        
-
-        
-
-      </label>
-      
-
-      <output
-        className="value-label"
-      >
-        
-		
-        <span
-          data-rs-value={true}
-        />
-        
-			
-        <span>
-          test
-        </span>
-        
-		
-      </output>
-    </div>
-    <div
-      className="value-range"
+    <label
+      className="rangeslider-label"
     >
       
 
-      <small>
-        test
-      </small>
       
 
-      <small>
-        test
-      </small>
-      
+    </label>
+    
 
-    </div>
+    <output
+      className="value-label"
+    >
+      
+		
+      <span
+        data-rs-value={true}
+      />
+      
+			
+      <span>
+        test
+      </span>
+      
+		
+    </output>
   </div>
-</Rangeslider>
+  <div
+    className="value-range"
+  >
+    
+
+    <small>
+      test
+    </small>
+    
+
+    <small>
+      test
+    </small>
+    
+
+  </div>
+</div>
 `;
 
 exports[`Component: Rangeslider - renders with a value label and a value label prefix 1`] = `
-<Rangeslider
-  valueLabelPrefix="test"
+<div
+  className="rangeslider"
 >
-  <div
-    className="rangeslider"
-  >
+  
+
+  <input
+    type="range"
+  />
+  
+
+  <div>
     
 
-    <input
-      type="range"
-    />
-    
-
-    <div>
-      
-
-      <label
-        className="rangeslider-label"
-      >
-        
-
-        
-
-      </label>
-      
-
-      <output
-        className="value-label"
-      >
-        
-		
-        <span>
-          test
-        </span>
-        
-			
-        <span
-          data-rs-value={true}
-        />
-        
-			
-      </output>
-    </div>
-    <div
-      className="value-range"
+    <label
+      className="rangeslider-label"
     >
       
 
-      <small>
-        test
-      </small>
       
 
-      <small>
-        test
-      </small>
-      
+    </label>
+    
 
-    </div>
+    <output
+      className="value-label"
+    >
+      
+		
+      <span>
+        test
+      </span>
+      
+			
+      <span
+        data-rs-value={true}
+      />
+      
+			
+    </output>
   </div>
-</Rangeslider>
+  <div
+    className="value-range"
+  >
+    
+
+    <small>
+      test
+    </small>
+    
+
+    <small>
+      test
+    </small>
+    
+
+  </div>
+</div>
 `;

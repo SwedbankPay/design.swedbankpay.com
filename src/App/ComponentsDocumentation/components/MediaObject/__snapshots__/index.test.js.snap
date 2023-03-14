@@ -1,39 +1,246 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: MediaObject MediaPosition renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="media-position"
   >
     Media position
-  </h2>
+  </h2>,
   <p>
     Use the 
-    <CodeTags
-      code=".media-right"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .media-right
+    </code>
      class to align the media content to the right.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <MediaObject
-      heading="Bob Corlsan"
-      imgUrl="https://via.placeholder.com/48x48"
-      mediaRight={true}
-      text="bob.corlsan@TESTBRAND.com"
-    />
-    <MediaObject
-      heading="Bob Corlsan"
-      icon="account_circle"
-      mediaRight={true}
-      text="bob.corlsan@TESTBRAND.com"
-    />
-  </ComponentPreview>
-</Fragment>
+    <div
+      className="media media-right"
+    >
+      <div
+        className="media-img"
+      >
+        
+
+         
+        <img
+          alt=""
+          src="https://via.placeholder.com/48x48"
+        />
+         
+        
+
+         
+      </div>
+      <div
+        className="media-body"
+      >
+        <h3
+          className=""
+        >
+          Bob Corlsan
+        </h3>
+        <p>
+          bob.corlsan@TESTBRAND.com
+        </p>
+      </div>
+    </div>
+    <div
+      className="media media-right"
+    >
+      <div
+        className="media-img"
+      >
+        
+
+         
+        <i
+          aria-hidden="true"
+          className="material-icons"
+        >
+          account_circle
+        </i>
+         
+        
+
+         
+      </div>
+      <div
+        className="media-body"
+      >
+        <h3
+          className=""
+        >
+          Bob Corlsan
+        </h3>
+        <p>
+          bob.corlsan@TESTBRAND.com
+        </p>
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+                15
+                
+
+                16
+                
+
+                17
+                
+
+                18
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="media media-right"&gt;
+                
+
+                    &lt;div class="media-img"&gt;
+                
+
+                        &lt;img alt src="https://via.placeholder.com/48x48" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                    &lt;div class="media-body"&gt;
+                
+
+                        &lt;h3&gt;Bob Corlsan&lt;/h3&gt;
+                
+
+                        &lt;p&gt;bob.corlsan@TESTBRAND.com&lt;/p&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+                &lt;div class="media media-right"&gt;
+                
+
+                    &lt;div class="media-img"&gt;
+                
+
+                        &lt;i class="material-icons" aria-hidden="true"&gt;account_circle&lt;/i&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                    &lt;div class="media-body"&gt;
+                
+
+                        &lt;h3&gt;Bob Corlsan&lt;/h3&gt;
+                
+
+                        &lt;p&gt;bob.corlsan@TESTBRAND.com&lt;/p&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: MediaObject Overview renders 1`] = `
@@ -71,79 +278,1447 @@ exports[`Documentation: MediaObject Overview renders 1`] = `
 `;
 
 exports[`Documentation: MediaObject Sizes renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="sizes"
   >
     Sizes
-  </h2>
+  </h2>,
   <p>
     Use 
-    <CodeTags
-      code=".media-sm"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .media-sm
+    </code>
      or 
-    <CodeTags
-      code=".media-lg"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .media-lg
+    </code>
      to modify the size of your media objects.
-  </p>
+  </p>,
   <h3>
     Small
-  </h3>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </h3>,
+  <div
+    className="showcase-panel"
   >
-    <MediaObject
-      heading="Bob Corlsan"
-      imgUrl="https://via.placeholder.com/40x40"
-      size="sm"
-      text="bob.corlsan@TESTBRAND.com"
-    />
-    <MediaObject
-      heading="Bob Corlsan"
-      icon="account_circle"
-      size="sm"
-      text="bob.corlsan@TESTBRAND.com"
-    />
-  </ComponentPreview>
+    <div
+      className="media media-sm"
+    >
+      <div
+        className="media-img"
+      >
+        
+
+         
+        <img
+          alt=""
+          src="https://via.placeholder.com/40x40"
+        />
+         
+        
+
+         
+      </div>
+      <div
+        className="media-body"
+      >
+        <h4
+          className=""
+        >
+          Bob Corlsan
+        </h4>
+        <p>
+          bob.corlsan@TESTBRAND.com
+        </p>
+      </div>
+    </div>
+    <div
+      className="media media-sm"
+    >
+      <div
+        className="media-img"
+      >
+        
+
+         
+        <i
+          aria-hidden="true"
+          className="material-icons"
+        >
+          account_circle
+        </i>
+         
+        
+
+         
+      </div>
+      <div
+        className="media-body"
+      >
+        <h4
+          className=""
+        >
+          Bob Corlsan
+        </h4>
+        <p>
+          bob.corlsan@TESTBRAND.com
+        </p>
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+                15
+                
+
+                16
+                
+
+                17
+                
+
+                18
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="media media-sm"&gt;
+                
+
+                    &lt;div class="media-img"&gt;
+                
+
+                        &lt;img alt src="https://via.placeholder.com/40x40" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                    &lt;div class="media-body"&gt;
+                
+
+                        &lt;h4&gt;Bob Corlsan&lt;/h4&gt;
+                
+
+                        &lt;p&gt;bob.corlsan@TESTBRAND.com&lt;/p&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+                &lt;div class="media media-sm"&gt;
+                
+
+                    &lt;div class="media-img"&gt;
+                
+
+                        &lt;i class="material-icons" aria-hidden="true"&gt;account_circle&lt;/i&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                    &lt;div class="media-body"&gt;
+                
+
+                        &lt;h4&gt;Bob Corlsan&lt;/h4&gt;
+                
+
+                        &lt;p&gt;bob.corlsan@TESTBRAND.com&lt;/p&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
   <h3>
     Large
-  </h3>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </h3>,
+  <div
+    className="showcase-panel"
   >
-    <MediaObject
-      heading="Bob Corlsan"
-      imgUrl="https://via.placeholder.com/56x56"
-      size="lg"
-      text="bob.corlsan@TESTBRAND.com"
-    />
-    <MediaObject
-      heading="Bob Corlsan"
-      icon="account_circle"
-      size="lg"
-      text="bob.corlsan@TESTBRAND.com"
-    />
-  </ComponentPreview>
-</Fragment>
+    <div
+      className="media media-lg"
+    >
+      <div
+        className="media-img"
+      >
+        
+
+         
+        <img
+          alt=""
+          src="https://via.placeholder.com/56x56"
+        />
+         
+        
+
+         
+      </div>
+      <div
+        className="media-body"
+      >
+        <h2
+          className=""
+        >
+          Bob Corlsan
+        </h2>
+        <p>
+          bob.corlsan@TESTBRAND.com
+        </p>
+      </div>
+    </div>
+    <div
+      className="media media-lg"
+    >
+      <div
+        className="media-img"
+      >
+        
+
+         
+        <i
+          aria-hidden="true"
+          className="material-icons"
+        >
+          account_circle
+        </i>
+         
+        
+
+         
+      </div>
+      <div
+        className="media-body"
+      >
+        <h2
+          className=""
+        >
+          Bob Corlsan
+        </h2>
+        <p>
+          bob.corlsan@TESTBRAND.com
+        </p>
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+                15
+                
+
+                16
+                
+
+                17
+                
+
+                18
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="media media-lg"&gt;
+                
+
+                    &lt;div class="media-img"&gt;
+                
+
+                        &lt;img alt src="https://via.placeholder.com/56x56" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                    &lt;div class="media-body"&gt;
+                
+
+                        &lt;h2&gt;Bob Corlsan&lt;/h2&gt;
+                
+
+                        &lt;p&gt;bob.corlsan@TESTBRAND.com&lt;/p&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+                &lt;div class="media media-lg"&gt;
+                
+
+                    &lt;div class="media-img"&gt;
+                
+
+                        &lt;i class="material-icons" aria-hidden="true"&gt;account_circle&lt;/i&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                    &lt;div class="media-body"&gt;
+                
+
+                        &lt;h2&gt;Bob Corlsan&lt;/h2&gt;
+                
+
+                        &lt;p&gt;bob.corlsan@TESTBRAND.com&lt;/p&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: MediaObject renders 1`] = `
-<DocContainer>
-  <p
-    className="lead"
+<div
+  className="row"
+>
+  <div
+    className="doc-body col-12"
+    id="doc-body"
   >
-    Use media objects to showcase basic user information with text and a small image element or an icon.
-  </p>
-  <Overview />
-  <Sizes />
-  <MediaPosition />
-</DocContainer>
+    <p
+      className="lead"
+    >
+      Use media objects to showcase basic user information with text and a small image element or an icon.
+    </p>
+    <h2
+      id="overview"
+    >
+      Overview
+    </h2>
+    <p>
+      Use the 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .media
+      </code>
+       class on an object to style it as a small container that feature a left- or right-aligned image/icon alongside textual content.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <div
+        className="media"
+      >
+        <div
+          className="media-img"
+        >
+          
+
+           
+          <img
+            alt=""
+            src="https://via.placeholder.com/48x48"
+          />
+           
+          
+
+           
+        </div>
+        <div
+          className="media-body"
+        >
+          <h3
+            className=""
+          >
+            Bob Corlsan
+          </h3>
+          <p>
+            bob.corlsan@TESTBRAND.com
+          </p>
+        </div>
+      </div>
+      <div
+        className="media"
+      >
+        <div
+          className="media-img"
+        >
+          
+
+           
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            account_circle
+          </i>
+           
+          
+
+           
+        </div>
+        <div
+          className="media-body"
+        >
+          <h3
+            className=""
+          >
+            Bob Corlsan
+          </h3>
+          <p>
+            bob.corlsan@TESTBRAND.com
+          </p>
+        </div>
+      </div>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                  12
+                  
+
+                  13
+                  
+
+                  14
+                  
+
+                  15
+                  
+
+                  16
+                  
+
+                  17
+                  
+
+                  18
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;div class="media"&gt;
+                  
+
+                      &lt;div class="media-img"&gt;
+                  
+
+                          &lt;img alt src="https://via.placeholder.com/48x48" /&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                      &lt;div class="media-body"&gt;
+                  
+
+                          &lt;h3&gt;Bob Corlsan&lt;/h3&gt;
+                  
+
+                          &lt;p&gt;bob.corlsan@TESTBRAND.com&lt;/p&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                  &lt;div class="media"&gt;
+                  
+
+                      &lt;div class="media-img"&gt;
+                  
+
+                          &lt;i class="material-icons" aria-hidden="true"&gt;account_circle&lt;/i&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                      &lt;div class="media-body"&gt;
+                  
+
+                          &lt;h3&gt;Bob Corlsan&lt;/h3&gt;
+                  
+
+                          &lt;p&gt;bob.corlsan@TESTBRAND.com&lt;/p&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h2
+      id="sizes"
+    >
+      Sizes
+    </h2>
+    <p>
+      Use 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .media-sm
+      </code>
+       or 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .media-lg
+      </code>
+       to modify the size of your media objects.
+    </p>
+    <h3>
+      Small
+    </h3>
+    <div
+      className="showcase-panel"
+    >
+      <div
+        className="media media-sm"
+      >
+        <div
+          className="media-img"
+        >
+          
+
+           
+          <img
+            alt=""
+            src="https://via.placeholder.com/40x40"
+          />
+           
+          
+
+           
+        </div>
+        <div
+          className="media-body"
+        >
+          <h4
+            className=""
+          >
+            Bob Corlsan
+          </h4>
+          <p>
+            bob.corlsan@TESTBRAND.com
+          </p>
+        </div>
+      </div>
+      <div
+        className="media media-sm"
+      >
+        <div
+          className="media-img"
+        >
+          
+
+           
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            account_circle
+          </i>
+           
+          
+
+           
+        </div>
+        <div
+          className="media-body"
+        >
+          <h4
+            className=""
+          >
+            Bob Corlsan
+          </h4>
+          <p>
+            bob.corlsan@TESTBRAND.com
+          </p>
+        </div>
+      </div>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                  12
+                  
+
+                  13
+                  
+
+                  14
+                  
+
+                  15
+                  
+
+                  16
+                  
+
+                  17
+                  
+
+                  18
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;div class="media media-sm"&gt;
+                  
+
+                      &lt;div class="media-img"&gt;
+                  
+
+                          &lt;img alt src="https://via.placeholder.com/40x40" /&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                      &lt;div class="media-body"&gt;
+                  
+
+                          &lt;h4&gt;Bob Corlsan&lt;/h4&gt;
+                  
+
+                          &lt;p&gt;bob.corlsan@TESTBRAND.com&lt;/p&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                  &lt;div class="media media-sm"&gt;
+                  
+
+                      &lt;div class="media-img"&gt;
+                  
+
+                          &lt;i class="material-icons" aria-hidden="true"&gt;account_circle&lt;/i&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                      &lt;div class="media-body"&gt;
+                  
+
+                          &lt;h4&gt;Bob Corlsan&lt;/h4&gt;
+                  
+
+                          &lt;p&gt;bob.corlsan@TESTBRAND.com&lt;/p&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h3>
+      Large
+    </h3>
+    <div
+      className="showcase-panel"
+    >
+      <div
+        className="media media-lg"
+      >
+        <div
+          className="media-img"
+        >
+          
+
+           
+          <img
+            alt=""
+            src="https://via.placeholder.com/56x56"
+          />
+           
+          
+
+           
+        </div>
+        <div
+          className="media-body"
+        >
+          <h2
+            className=""
+          >
+            Bob Corlsan
+          </h2>
+          <p>
+            bob.corlsan@TESTBRAND.com
+          </p>
+        </div>
+      </div>
+      <div
+        className="media media-lg"
+      >
+        <div
+          className="media-img"
+        >
+          
+
+           
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            account_circle
+          </i>
+           
+          
+
+           
+        </div>
+        <div
+          className="media-body"
+        >
+          <h2
+            className=""
+          >
+            Bob Corlsan
+          </h2>
+          <p>
+            bob.corlsan@TESTBRAND.com
+          </p>
+        </div>
+      </div>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                  12
+                  
+
+                  13
+                  
+
+                  14
+                  
+
+                  15
+                  
+
+                  16
+                  
+
+                  17
+                  
+
+                  18
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;div class="media media-lg"&gt;
+                  
+
+                      &lt;div class="media-img"&gt;
+                  
+
+                          &lt;img alt src="https://via.placeholder.com/56x56" /&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                      &lt;div class="media-body"&gt;
+                  
+
+                          &lt;h2&gt;Bob Corlsan&lt;/h2&gt;
+                  
+
+                          &lt;p&gt;bob.corlsan@TESTBRAND.com&lt;/p&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                  &lt;div class="media media-lg"&gt;
+                  
+
+                      &lt;div class="media-img"&gt;
+                  
+
+                          &lt;i class="material-icons" aria-hidden="true"&gt;account_circle&lt;/i&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                      &lt;div class="media-body"&gt;
+                  
+
+                          &lt;h2&gt;Bob Corlsan&lt;/h2&gt;
+                  
+
+                          &lt;p&gt;bob.corlsan@TESTBRAND.com&lt;/p&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h2
+      id="media-position"
+    >
+      Media position
+    </h2>
+    <p>
+      Use the 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .media-right
+      </code>
+       class to align the media content to the right.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <div
+        className="media media-right"
+      >
+        <div
+          className="media-img"
+        >
+          
+
+           
+          <img
+            alt=""
+            src="https://via.placeholder.com/48x48"
+          />
+           
+          
+
+           
+        </div>
+        <div
+          className="media-body"
+        >
+          <h3
+            className=""
+          >
+            Bob Corlsan
+          </h3>
+          <p>
+            bob.corlsan@TESTBRAND.com
+          </p>
+        </div>
+      </div>
+      <div
+        className="media media-right"
+      >
+        <div
+          className="media-img"
+        >
+          
+
+           
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            account_circle
+          </i>
+           
+          
+
+           
+        </div>
+        <div
+          className="media-body"
+        >
+          <h3
+            className=""
+          >
+            Bob Corlsan
+          </h3>
+          <p>
+            bob.corlsan@TESTBRAND.com
+          </p>
+        </div>
+      </div>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                  12
+                  
+
+                  13
+                  
+
+                  14
+                  
+
+                  15
+                  
+
+                  16
+                  
+
+                  17
+                  
+
+                  18
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;div class="media media-right"&gt;
+                  
+
+                      &lt;div class="media-img"&gt;
+                  
+
+                          &lt;img alt src="https://via.placeholder.com/48x48" /&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                      &lt;div class="media-body"&gt;
+                  
+
+                          &lt;h3&gt;Bob Corlsan&lt;/h3&gt;
+                  
+
+                          &lt;p&gt;bob.corlsan@TESTBRAND.com&lt;/p&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                  &lt;div class="media media-right"&gt;
+                  
+
+                      &lt;div class="media-img"&gt;
+                  
+
+                          &lt;i class="material-icons" aria-hidden="true"&gt;account_circle&lt;/i&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                      &lt;div class="media-body"&gt;
+                  
+
+                          &lt;h3&gt;Bob Corlsan&lt;/h3&gt;
+                  
+
+                          &lt;p&gt;bob.corlsan@TESTBRAND.com&lt;/p&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+  </div>
+</div>
 `;

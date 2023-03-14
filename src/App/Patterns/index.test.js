@@ -1,6 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
-
+import renderer from "react-test-renderer";
+import { BrowserRouter } from "react-router-dom";
 import Patterns from "./index";
 
 describe("Patterns: index", () => {
@@ -9,8 +9,10 @@ describe("Patterns: index", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Patterns />);
+        const patterns = renderer.create(<BrowserRouter>
+            <Patterns />
+        </BrowserRouter>);
 
-        expect(wrapper).toMatchSnapshot();
+        expect(patterns.toJSON()).toMatchSnapshot();
     });
 });

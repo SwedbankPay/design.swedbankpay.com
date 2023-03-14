@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Utilities: Icon renders correct icon 1`] = `
+exports[`Utilities: Icon renders 1`] = `
 <i
   aria-hidden="true"
   className="material-icons"

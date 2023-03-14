@@ -13,82 +13,6 @@ exports[`GetStarted: Introduction Feedback renders 1`] = `
 </section>
 `;
 
-exports[`GetStarted: Introduction GetStarted renders 1`] = `
-<section>
-  <p>
-    Below we have compiled a list of things you need to have and know in order to get started with our design guide.
-  </p>
-  <div
-    className="component-overview"
-  >
-    <Link
-      className="cards cards-primary"
-      to="../for-developers"
-    >
-      <div
-        className="cards-icon"
-      >
-        <i
-          className="material-icons"
-        >
-          code
-        </i>
-      </div>
-      <div
-        className="cards-content"
-      >
-        <span
-          className="h4"
-        >
-          For developers
-        </span>
-        <span>
-          Learn more about how to setup and use our system.
-        </span>
-      </div>
-      <i
-        className="material-icons"
-      >
-        arrow_forward
-      </i>
-    </Link>
-    <Link
-      className="cards cards-primary"
-      to="../for-designers"
-    >
-      <div
-        className="cards-icon"
-      >
-        <i
-          className="material-icons"
-        >
-          brush
-        </i>
-      </div>
-      <div
-        className="cards-content"
-      >
-        <span
-          className="h4"
-        >
-          For designers
-        </span>
-        <span>
-          Get ready to use the Design Guide when designing in 
-          TESTBRAND
-          .
-        </span>
-      </div>
-      <i
-        className="material-icons"
-      >
-        arrow_forward
-      </i>
-    </Link>
-  </div>
-</section>
-`;
-
 exports[`GetStarted: Introduction WhatIsDG renders 1`] = `
 <section
   id="what-design-guide"
@@ -115,11 +39,23 @@ exports[`GetStarted: Introduction WhatIsDG renders 1`] = `
     <p>
       The Design Guide is an organically growing system that evolves with the products. Product teams can use the Design Guide for brand identity, components, guidelines, and documentation regarding accessibility, copywriting, and more. Product teams also contribute to the system by suggesting changes and improvements to already existing components and guidelines, as well as by adding completely new ones.
     </p>
-    <Lightbox
-      alt="Illustation of how product teams can use the design system and how to contribute."
-      className="img-fluid"
-      imgSrc="/TEST/img/documentation/introduction/working-dg.png"
-    />
+    <div>
+      <div
+        className="lightbox"
+        onClick={[Function]}
+      >
+        <img
+          alt="Illustation of how product teams can use the design system and how to contribute."
+          className="img-fluid"
+          src="/TEST/img/documentation/introduction/working-dg.png"
+        />
+      </div>
+      <img
+        alt="Illustation of how product teams can use the design system and how to contribute."
+        className="img-fluid"
+        src="/TEST/img/documentation/introduction/working-dg.png"
+      />
+    </div>
   </section>
   <section>
     <h3>
@@ -128,7 +64,16 @@ exports[`GetStarted: Introduction WhatIsDG renders 1`] = `
     <p>
       Components and assets that can be reused in other products should be added to the system for others to use. However, some components that fulfill an isolated need for a specific product will remain local for that product only. This informational video explains the design workflow and snowflake process, and how your product team can contribute to the Design Guide:
     </p>
-    <ContributionVideo />
+    <div
+      className="video"
+    >
+      <iframe
+        allowFullScreen={true}
+        className="responsive-iframe"
+        frameBorder="0"
+        src="https://player.vimeo.com/video/727671542?h=b9aa778573&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+      />
+    </div>
     <a
       className="icon-link mt-3"
       href="http://www.figma.com/proto/p1QcsYCJ3T466As9xQQGBM/Design-Guide-Mantra?page-id=11%3A4123&node-id=233%3A4515&viewport=306%2C372%2C0.1&scaling=min-zoom&starting-point-node-id=233%3A4515"
@@ -156,19 +101,4 @@ exports[`GetStarted: Introduction WhatIsDG renders 1`] = `
     </p>
   </section>
 </section>
-`;
-
-exports[`GetStarted: Introduction renders 1`] = `
-<DocContainer>
-  <p
-    className="lead"
-  >
-    We are so glad to see that you are interested in learning more about the 
-    TESTBRAND
-     Design Guide. We know that it can be daunting to start with something new and complex. But don’t worry, we have got what you need!
-  </p>
-  <GetStarted />
-  <WhatIsDG />
-  <Feedback />
-</DocContainer>
 `;

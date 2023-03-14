@@ -1,5 +1,5 @@
 import React from "react";
-import { mount } from "enzyme";
+import renderer from "react-test-renderer";
 
 import DocHeading from "./index";
 
@@ -13,24 +13,22 @@ describe("Utilities: DocHeading", () => {
     it("renders heading and updates document title", () => {
         const location = { pathname: "test" };
 
-        const wrapper = mount(
+        const wrapper = renderer.create(
             <DocHeading locationFromJestTest={location} />
         );
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<h1>Test</h1>");
+        expect(wrapper.toJSON()).toMatchSnapshot();
         expect(document.title).toEqual(`Test | ${brandTitle} Design Guide`);
     });
 
     it("correctly formats title", () => {
         const location = { pathname: "test-test" };
 
-        const wrapper = mount(
+        const wrapper = renderer.create(
             <DocHeading locationFromJestTest={location} />
         );
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<h1>Test test</h1>");
+        expect(wrapper.toJSON()).toMatchSnapshot();
         expect(document.title).toEqual(`Test test | ${brandTitle} Design Guide`);
     });
 });

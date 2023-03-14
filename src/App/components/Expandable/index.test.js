@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow, mount } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import Expandable, { ExpandablePlaceholder } from "./index";
 
@@ -24,32 +26,47 @@ describe("Component: Expandable", () => {
     });
 
     it("returns an expandable component when no items are provided", () => {
-        const wrapper = mount(<Expandable />);
+        const { container } = render(<Expandable />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<ExpandablePlaceholder />)).toEqual(true);
+        expect(screen.getByRole("button")).toHaveClass("expandable-header");
+        expect(screen.getByRole("button")).toHaveTextContent("Placeholder title");
+        expect(container.querySelector(".expandable > .expandable-body")).toHaveTextContent("Placeholder text");
+
+        const componentForSnap = renderer.create(<Expandable />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("returns a number of expandables matching the length of items", () => {
-        const wrapper = mount(<Expandable items={items}/>);
-        const expandables = wrapper.find(".expandable");
+        const { container } = render(<Expandable items={items}/>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(expandables.length).toEqual(items.length);
+        const expandables = container.querySelectorAll(".expandable");
+
+        expect(expandables.length).toBe(items.length);
+
+        const componentForSnap = renderer.create(<Expandable items={items}/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
-    it("prints an expandable component when items is provided but is invalid", () => {
-        const wrapper = mount(<Expandable items="wrong" />);
+    it("prints a default expandable component when items is provided but is invalid", () => {
+        const { container } = render(<Expandable items="wrong" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<ExpandablePlaceholder />)).toEqual(true);
+        expect(screen.getByRole("button")).toHaveTextContent("Placeholder title");
+        expect(container.querySelector(".expandable > .expandable-body")).toHaveTextContent("Placeholder text");
+
+        const componentForSnap = renderer.create(<Expandable items="wrong" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     describe("ExpandablePlaceholder", () => {
         it("renders", () => {
-            const wrapper = shallow(<ExpandablePlaceholder />);
+            render(<ExpandablePlaceholder />);
 
-            expect(wrapper).toMatchSnapshot();
+            const componentForSnap = renderer.create(<ExpandablePlaceholder />);
+
+            expect(componentForSnap.toJSON()).toMatchSnapshot();
         });
     });
 });

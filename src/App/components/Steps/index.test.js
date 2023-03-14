@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow, mount } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import Steps from "./index";
 
@@ -48,30 +50,43 @@ describe("Component: Steps", () => {
     });
 
     it("renders with default items if no props are provided", () => {
-        const wrapper = shallow(<Steps />);
+        const { container } = render(<Steps />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("steps");
+        expect(container.querySelector("div")).toHaveClass("steps");
+
+        const componentForSnap = renderer.create(<Steps />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with given items if prop Steps is given", () => {
-        const wrapper = mount(<Steps steps={simpleSteps} />);
+        render(<Steps steps={simpleSteps} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("three steps for testing");
+        expect(screen.getAllByRole("listitem").some(elmt => elmt.textContent.includes("three steps for testing"))).toBeTruthy();
+
+        const componentForSnap = renderer.create(<Steps steps={simpleSteps} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders in vertical mode if prop vertical is provided", () => {
-        const wrapper = shallow(<Steps vertical />);
+        const { container } = render(<Steps vertical />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("steps-vertical");
+        expect(container.querySelector("div")).toHaveClass("steps-vertical");
+
+        const componentForSnap = renderer.create(<Steps vertical />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
+    // FIXME: anchor tags cannot be selected because they have no href, and are therefore not considered as link. But they're not button either. What are they then? Semantically (and therefore A11y wise) it can be improved)
     it("renders clickable Steps", () => {
-        const wrapper = mount(<Steps steps={steps} />);
+        render(<Steps steps={steps} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.find(".steps a").length).toBeGreaterThan(0);
+        expect(screen.getByRole("list").querySelectorAll("a").length).toBeGreaterThan(0);
+
+        const componentForSnap = renderer.create(<Steps steps={steps} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

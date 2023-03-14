@@ -1,8 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Patterns: index renders 1`] = `
-<RenderPage
-  initPath="/patterns/patterns"
-  path="/patterns"
-/>
+<div
+  className="doc-container"
+>
+  <span
+    className="dg-current-version text-uppercase"
+  >
+    Design Guide – v. 
+    10.7.4
+  </span>
+</div>
 `;

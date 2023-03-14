@@ -10,18 +10,49 @@ exports[`Component: Select ContentGuidelines renders 1`] = `
   <div
     className="d-flex justify-content-center slab slab-plain px-5 pt-5 pb-4"
   >
-    <InputGroup
-      helpBlock="Hint text"
-      hintTextId="select-content-guidelines-example"
-      id="content-guidelines-example"
-      label="Label"
-      selectOptions={
-        Array [
-          "Related option",
-        ]
-      }
-      type="select"
-    />
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="content-guidelines-example"
+      >
+        Label
+      </label>
+      
+
+      <select
+        aria-describedby="select-content-guidelines-example"
+        className="form-control"
+        defaultValue=""
+        disabled={null}
+        id="content-guidelines-example"
+        readOnly={null}
+        required={null}
+      >
+        
+		
+        <option
+          value="Related option"
+        >
+          Related option
+        </option>
+        
+        
+	
+      </select>
+      
+
+      <p
+        className="hint-text"
+        id="hint-text"
+      >
+        Hint text
+      </p>
+      
+
+    </div>
   </div>
   <ul
     className="pl-3"
@@ -64,21 +95,21 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       If the user don’t select any option in a select that is required to be filled, an error message should be displayed. To display the error message, add the 
-      <CodeTags
-        code=".has-error"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .has-error
+      </code>
        class to the parent element, then add the 
-      <CodeTags
-        code=".help-block"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .help-block
+      </code>
        element as the last child with the error message.
     </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="html"
-      showCasePanel={true}
+    <div
+      className="showcase-panel"
     >
       <form
         className="no-pointer-events"
@@ -124,7 +155,121 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
           </div>
         </div>
       </form>
-    </ComponentPreview>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;form class="no-pointer-events"&gt;
+                  
+
+                      &lt;div class="form-group has-error"&gt;
+                  
+
+                          &lt;label for="dev-doc-example"&gt;
+                  
+
+                              Label
+                  
+
+                          &lt;/label&gt;
+                  
+
+                          &lt;select class="form-control" id="dev-doc-example" required&gt;
+                  
+
+                              &lt;option selected value="placeholder" disabled hidden&gt;Select option&lt;/option&gt;
+                  
+
+                          &lt;/select&gt;
+                  
+
+                          &lt;div class="help-block"&gt;Descriptive helpful error message&lt;/div&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                  &lt;/form&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
   </section>
   <section>
     <h3>
@@ -132,46 +277,153 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       Disable a select by adding the 
-      <CodeTags
-        code="disabled"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        disabled
+      </code>
        attribute to the desired select and the 
-      <CodeTags
-        code="form-group"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        form-group
+      </code>
        where the select resides.
     </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="html"
-      showCasePanel={true}
+    <div
+      className="showcase-panel"
     >
-      <InputGroup
-        disabled={true}
-        id="disabled-state-example"
-        label="Label"
-        placeholder="Select option"
-        selectOptions={Array []}
-        type="select"
-      />
-    </ComponentPreview>
+      <div
+        className="form-group disabled"
+      >
+        
+
+        <label
+          htmlFor="disabled-state-example"
+        >
+          Label
+        </label>
+        
+
+        <select
+          aria-describedby={null}
+          className="form-control"
+          defaultValue=""
+          disabled={true}
+          id="disabled-state-example"
+          readOnly={null}
+          required={null}
+        >
+          
+		
+          
+	
+        </select>
+        
+
+      </div>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;div class="form-group disabled"&gt;
+                  
+
+                      &lt;label for="disabled-state-example"&gt;Label&lt;/label&gt;
+                  
+
+                      &lt;select class="form-control" disabled id="disabled-state-example"&gt;
+                  
+
+                  
+                  
+
+                      &lt;/select&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
   </section>
   <section>
     <h3>
       Javascript methods
     </h3>
     <p>
-      <CodeTags
-        code="dg.hintTextExpander.init()"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        dg.hintTextExpander.init()
+      </code>
        can be used to initialize all Hint text expanders. Or 
-      <CodeTags
-        code="dg.hintTextExpander.init(<hint-text-expander-id>)"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        dg.hintTextExpander.init(&lt;hint-text-expander-id&gt;)
+      </code>
        to initialize a specific one.
     </p>
   </section>

@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import Chart from "./index";
 import { chart } from "@src/scripts/dashboard";
@@ -15,43 +17,61 @@ describe("Component: Chart -", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Chart id="test" options={{}} description="test"/>);
+        render(<Chart id="test" options={{}} description="test"/>);
 
-        expect(wrapper.contains(<canvas id="test" role="img" aria-label="test"/>)).toEqual(true);
-        expect(wrapper).toMatchSnapshot();
+        expect(screen.getByRole("img")).toHaveAttribute("id", "test");
+        expect(screen.getByRole("img")).toHaveAttribute("aria-label", "test");
+
+        const componentForSnap = renderer.create(<Chart id="test" options={{}} description="test"/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("prop id is marked as required", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(<Chart options={{}} />);
+        render(<Chart options={{}} />);
 
         expect(console.error).toHaveBeenCalled();
-        expect(wrapper).toMatchSnapshot();
+
+        const componentForSnap = renderer.create(<Chart options={{}} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("prop options is marked as required", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(<Chart id="test" />);
+        render(<Chart id="test" />);
 
         expect(console.error).toHaveBeenCalled();
-        expect(wrapper).toMatchSnapshot();
+
+        const componentForSnap = renderer.create(<Chart id="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders a canvas with correct id and calls chart.js with that id and provided options", () => {
-        const wrapper = shallow(<Chart id="test" options={{ test: "test" }} description="test"/>);
+        render(<Chart id="test" options={{ test: "test" }} description="test"/>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<canvas id="test" aria-label="test" role="img" />)).toEqual(true);
+        expect(screen.getByRole("img")).toHaveAttribute("id", "test");
+        expect(screen.getByRole("img")).toHaveAttribute("aria-label", "test");
+
         // expect(chart).toHaveBeenCalledWith("test", { test: "test" }, undefined);
+        const componentForSnap = renderer.create(<Chart id="test" options={{ test: "test" }} description="test"/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders a canvas with correct id and calls chart.js with that id, provided options and colors", () => {
-        const wrapper = shallow(<Chart id="test" description="test" options={{ test: "test" }} colorPool={["test", "test", "test"]} />);
+        render(<Chart id="test" description="test" options={{ test: "test" }} colorPool={["test", "test", "test"]} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<canvas id="test" role="img" aria-label="test"/>)).toEqual(true);
+        expect(screen.getByRole("img")).toHaveAttribute("id", "test");
+        expect(screen.getByRole("img")).toHaveAttribute("aria-label", "test");
+
         // expect(chart).toHaveBeenCalledWith("test", { test: "test" }, ["test", "test", "test"]);
+        const componentForSnap = renderer.create(<Chart id="test" description="test" options={{ test: "test" }} colorPool={["test", "test", "test"]} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

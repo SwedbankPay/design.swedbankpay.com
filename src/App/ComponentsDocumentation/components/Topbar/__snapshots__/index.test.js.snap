@@ -13,20 +13,23 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       The content within the desktop topbar, 
-      <CodeTags
-        code=".topbar-xl-wide"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .topbar-xl-wide
+      </code>
       , is by default fluid to the screen size. If you want to restrict the width of the content within the topbar to align with your page container, simply add a 
-      <CodeTags
-        code=".max-width"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .max-width
+      </code>
        to the topbar 
-      <CodeTags
-        code=".nav-container"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .nav-container
+      </code>
        to match it.
     </p>
     <div
@@ -55,66 +58,417 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       The topbar can be made sticky by adding the class 
-      <CodeTags
-        code=".topbar-sticky"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .topbar-sticky
+      </code>
       . Use 
-      <CodeTags
-        code=".topbar-min-{breakpoint}-sticky"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .topbar-min-{breakpoint}-sticky
+      </code>
        to specify the minimum width the topbar should be sticky, or 
-      <CodeTags
-        code=".topbar-max-{breakpoint}-sticky"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .topbar-max-{breakpoint}-sticky
+      </code>
        to specify the maximum width the topbar should be sticky (see 
-      <Link
-        to="/utilities"
+      <a
+        href="/utilities"
+        onClick={[Function]}
       >
         utilities
-      </Link>
+      </a>
        for more information on breakpoints). 
     </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="html"
-      showCasePanel={true}
+    <div
+      className="showcase-panel"
     >
       <div
         className="container-fluid"
       >
-        <Topbar
+        <header
+          className="topbar topbar-xl-wide topbar-sticky"
           id="demo-topbar-sticky"
-          sticky={true}
-          topbarContent={
-            Object {
-              "btn": Object {
-                "icon": "menu",
-                "name": "Menu",
-              },
-              "items": Array [
-                Object {
-                  "icon": "home",
-                  "name": "Home",
-                },
-                Object {
-                  "icon": "shopping_cart",
-                  "name": "Purchases",
-                },
-                Object {
-                  "icon": "settings",
-                  "name": "Settings",
-                },
-              ],
-            }
-          }
-          wide="xl"
-        />
+        >
+          
+
+          <div
+            className="nav-container"
+          >
+            
+
+            <button
+              aria-controls="topbar-nav"
+              aria-expanded="false"
+              aria-haspopup="menu"
+              aria-label="Open menu"
+              className="topbar-btn"
+              type="button"
+            >
+              
+		
+              <i
+                className="material-icons topbar-btn-icon"
+              >
+                menu
+              </i>
+              
+		
+            </button>
+            <button
+              aria-label="Close menu"
+              className="topbar-close"
+              type="button"
+            >
+              
+
+              <i
+                className="material-icons topbar-btn-icon"
+              >
+                close
+              </i>
+              
+		
+            </button>
+            
+
+            <a
+              aria-label="To homepage"
+              className="topbar-logo"
+              href="/"
+              onClick={[Function]}
+            >
+              
+
+              <img
+                alt="TESTBRAND logo"
+                className="logotype-vertical logotype-sm"
+                src="/TEST/img/logo/TESTBRAND-logo.svg"
+              />
+              
+
+            </a>
+            
+
+            <nav
+              className="topbar-nav"
+            >
+              <div
+                className="topbar-link-container"
+              >
+                
+
+                <a
+                  className="active"
+                  href="#"
+                  onClick={[Function]}
+                >
+                  
+
+                  <i
+                    className="material-icons"
+                  >
+                    home
+                  </i>
+                  
+
+                  <span>
+                    Home
+                  </span>
+                  
+
+                </a>
+                
+
+                <a
+                  className={null}
+                  href="#"
+                  onClick={[Function]}
+                >
+                  
+
+                  <i
+                    className="material-icons"
+                  >
+                    shopping_cart
+                  </i>
+                  
+
+                  <span>
+                    Purchases
+                  </span>
+                  
+
+                </a>
+                
+
+                <a
+                  className={null}
+                  href="#"
+                  onClick={[Function]}
+                >
+                  
+
+                  <i
+                    className="material-icons"
+                  >
+                    settings
+                  </i>
+                  
+
+                  <span>
+                    Settings
+                  </span>
+                  
+
+                </a>
+                
+
+              </div>
+            </nav>
+          </div>
+        </header>
         <main />
       </div>
-    </ComponentPreview>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                  12
+                  
+
+                  13
+                  
+
+                  14
+                  
+
+                  15
+                  
+
+                  16
+                  
+
+                  17
+                  
+
+                  18
+                  
+
+                  19
+                  
+
+                  20
+                  
+
+                  21
+                  
+
+                  22
+                  
+
+                  23
+                  
+
+                  24
+                  
+
+                  25
+                  
+
+                  26
+                  
+
+                  27
+                  
+
+                  28
+                  
+
+                  29
+                  
+
+                  30
+                  
+
+                  31
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;div class="container-fluid"&gt;
+                  
+
+                      &lt;header class="topbar topbar-xl-wide topbar-sticky" id="demo-topbar-sticky"&gt;
+                  
+
+                          &lt;div class="nav-container"&gt;
+                  
+
+                              &lt;button type="button" class="topbar-btn" aria-label="Open menu" aria-haspopup="menu" aria-expanded="false" aria-controls="topbar-nav"&gt;
+                  
+
+                                  &lt;i class="material-icons topbar-btn-icon"&gt;menu&lt;/i&gt;
+                  
+
+                              &lt;/button&gt;&lt;button type="button" class="topbar-close" aria-label="Close menu"&gt;
+                  
+
+                                  &lt;i class="material-icons topbar-btn-icon"&gt;close&lt;/i&gt;
+                  
+
+                              &lt;/button&gt;
+                  
+
+                              &lt;a class="topbar-logo" href="/" aria-label="To homepage"&gt;
+                  
+
+                                  &lt;img src="/TEST/img/logo/TESTBRAND-logo.svg" alt="TESTBRAND logo" class="logotype-vertical logotype-sm" /&gt;
+                  
+
+                              &lt;/a&gt;
+                  
+
+                              &lt;nav class="topbar-nav"&gt;
+                  
+
+                                  &lt;div class="topbar-link-container"&gt;
+                  
+
+                                      &lt;a href="#" class="active"&gt;
+                  
+
+                                          &lt;i class="material-icons"&gt;home&lt;/i&gt;
+                  
+
+                                          &lt;span&gt;Home&lt;/span&gt;
+                  
+
+                                      &lt;/a&gt;
+                  
+
+                                      &lt;a href="#"&gt;
+                  
+
+                                          &lt;i class="material-icons"&gt;shopping_cart&lt;/i&gt;
+                  
+
+                                          &lt;span&gt;Purchases&lt;/span&gt;
+                  
+
+                                      &lt;/a&gt;
+                  
+
+                                      &lt;a href="#"&gt;
+                  
+
+                                          &lt;i class="material-icons"&gt;settings&lt;/i&gt;
+                  
+
+                                          &lt;span&gt;Settings&lt;/span&gt;
+                  
+
+                                      &lt;/a&gt;
+                  
+
+                                  &lt;/div&gt;
+                  
+
+                              &lt;/nav&gt;
+                  
+
+                          &lt;/div&gt;
+                  
+
+                      &lt;/header&gt;
+                  
+
+                      &lt;main&gt;&lt;/main&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
   </section>
   <section>
     <h3>
@@ -122,181 +476,543 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       A PNG version of the logo can also be used. This is done by appending the class 
-      <CodeTags
-        code=".topbar-logo-png"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .topbar-logo-png
+      </code>
        to the anchor with class 
-      <CodeTags
-        code=".topbar-logo"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .topbar-logo
+      </code>
       . Only consider using the PNG version when there are issues with using the SVG version.
     </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="html"
-      showCasePanel={true}
+    <div
+      className="showcase-panel"
     >
-      <Topbar
+      <header
+        className="topbar"
         id="demo-topbar-png"
-        logout={true}
-        png={true}
-        topbarContent={
-          Object {
-            "btn": Object {
-              "icon": "menu",
-              "name": "Menu",
-            },
-            "items": Array [
-              Object {
-                "icon": "home",
-                "name": "Home",
-              },
-              Object {
-                "icon": "shopping_cart",
-                "name": "Purchases",
-              },
-              Object {
-                "icon": "settings",
-                "name": "Settings",
-              },
-            ],
-          }
-        }
-      />
+      >
+        
+
+        <div
+          className="nav-container"
+        >
+          
+
+          <button
+            aria-controls="topbar-nav"
+            aria-expanded="false"
+            aria-haspopup="menu"
+            aria-label="Open menu"
+            className="topbar-btn"
+            type="button"
+          >
+            
+		
+            <i
+              className="material-icons topbar-btn-icon"
+            >
+              menu
+            </i>
+            
+		
+          </button>
+          <button
+            aria-label="Close menu"
+            className="topbar-close"
+            type="button"
+          >
+            
+
+            <i
+              className="material-icons topbar-btn-icon"
+            >
+              close
+            </i>
+            
+		
+          </button>
+          
+
+          <a
+            aria-label="To homepage"
+            className="topbar-logo topbar-logo-png"
+            href="/"
+            onClick={[Function]}
+          >
+            
+
+            <img
+              alt="TESTBRAND logo"
+              className="logotype-vertical logotype-sm"
+              src="/TEST/img/logo/TESTBRAND-logo.svg"
+            />
+            
+
+          </a>
+          
+
+          <nav
+            className="topbar-nav"
+          >
+            <div
+              className="topbar-link-container"
+            >
+              
+
+              <a
+                className="active"
+                href="#"
+                onClick={[Function]}
+              >
+                
+
+                <i
+                  className="material-icons"
+                >
+                  home
+                </i>
+                
+
+                <span>
+                  Home
+                </span>
+                
+
+              </a>
+              
+
+              <a
+                className={null}
+                href="#"
+                onClick={[Function]}
+              >
+                
+
+                <i
+                  className="material-icons"
+                >
+                  shopping_cart
+                </i>
+                
+
+                <span>
+                  Purchases
+                </span>
+                
+
+              </a>
+              
+
+              <a
+                className={null}
+                href="#"
+                onClick={[Function]}
+              >
+                
+
+                <i
+                  className="material-icons"
+                >
+                  settings
+                </i>
+                
+
+                <span>
+                  Settings
+                </span>
+                
+
+              </a>
+              
+
+              <a
+                className="topbar-link-right"
+                href="#"
+                onClick={[Function]}
+              >
+                
+
+                <i
+                  className="material-icons"
+                >
+                  exit_to_app
+                </i>
+                
+
+                <span>
+                  Log out
+                </span>
+                
+
+              </a>
+              
+
+            </div>
+          </nav>
+        </div>
+      </header>
       <main />
-    </ComponentPreview>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                  12
+                  
+
+                  13
+                  
+
+                  14
+                  
+
+                  15
+                  
+
+                  16
+                  
+
+                  17
+                  
+
+                  18
+                  
+
+                  19
+                  
+
+                  20
+                  
+
+                  21
+                  
+
+                  22
+                  
+
+                  23
+                  
+
+                  24
+                  
+
+                  25
+                  
+
+                  26
+                  
+
+                  27
+                  
+
+                  28
+                  
+
+                  29
+                  
+
+                  30
+                  
+
+                  31
+                  
+
+                  32
+                  
+
+                  33
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;header class="topbar" id="demo-topbar-png"&gt;
+                  
+
+                      &lt;div class="nav-container"&gt;
+                  
+
+                          &lt;button type="button" class="topbar-btn" aria-label="Open menu" aria-haspopup="menu" aria-expanded="false" aria-controls="topbar-nav"&gt;
+                  
+
+                              &lt;i class="material-icons topbar-btn-icon"&gt;menu&lt;/i&gt;
+                  
+
+                          &lt;/button&gt;&lt;button type="button" class="topbar-close" aria-label="Close menu"&gt;
+                  
+
+                              &lt;i class="material-icons topbar-btn-icon"&gt;close&lt;/i&gt;
+                  
+
+                          &lt;/button&gt;
+                  
+
+                          &lt;a class="topbar-logo topbar-logo-png" href="/" aria-label="To homepage"&gt;
+                  
+
+                              &lt;img src="/TEST/img/logo/TESTBRAND-logo.svg" alt="TESTBRAND logo" class="logotype-vertical logotype-sm" /&gt;
+                  
+
+                          &lt;/a&gt;
+                  
+
+                          &lt;nav class="topbar-nav"&gt;
+                  
+
+                              &lt;div class="topbar-link-container"&gt;
+                  
+
+                                  &lt;a href="#" class="active"&gt;
+                  
+
+                                      &lt;i class="material-icons"&gt;home&lt;/i&gt;
+                  
+
+                                      &lt;span&gt;Home&lt;/span&gt;
+                  
+
+                                  &lt;/a&gt;
+                  
+
+                                  &lt;a href="#"&gt;
+                  
+
+                                      &lt;i class="material-icons"&gt;shopping_cart&lt;/i&gt;
+                  
+
+                                      &lt;span&gt;Purchases&lt;/span&gt;
+                  
+
+                                  &lt;/a&gt;
+                  
+
+                                  &lt;a href="#"&gt;
+                  
+
+                                      &lt;i class="material-icons"&gt;settings&lt;/i&gt;
+                  
+
+                                      &lt;span&gt;Settings&lt;/span&gt;
+                  
+
+                                  &lt;/a&gt;
+                  
+
+                                  &lt;a class="topbar-link-right" href="#"&gt;
+                  
+
+                                      &lt;i class="material-icons"&gt;exit_to_app&lt;/i&gt;
+                  
+
+                                      &lt;span&gt;Log out&lt;/span&gt;
+                  
+
+                                  &lt;/a&gt;
+                  
+
+                              &lt;/div&gt;
+                  
+
+                          &lt;/nav&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                  &lt;/header&gt;
+                  
+
+                  &lt;main&gt;&lt;/main&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
   </section>
   <section>
     <h3>
       Javascript methods
     </h3>
     <p>
-      <CodeTags
-        code="dg.topbar.init()"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        dg.topbar.init()
+      </code>
        initializes the topbar.
     </p>
     <p>
-      <CodeTags
-        code="dg.topbar.open(<topbar-id>)"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        dg.topbar.open(&lt;topbar-id&gt;)
+      </code>
        opens the given topbar.
     </p>
     <p>
-      <CodeTags
-        code="dg.topbar.close(<topbar-id>)"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        dg.topbar.close(&lt;topbar-id&gt;)
+      </code>
        closes the given topbar.
     </p>
   </section>
-  <NpmInformation
-    componentName="topbar"
-  />
-</section>
-`;
-
-exports[`Components: Topbar Overview renders 1`] = `
-<section>
-  <h2
-    id="overview"
-  >
-    Overview
-  </h2>
-  <p>
-    The topbar component is one of the most visible and familiar ways of helping users navigate a site. It typically consist of links to the top levels in the information architecture. 
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-    showCasePanelAdvanced={
-      Object {
-        "elements": Array [
-          Object {
-            "component": <Topbar
-              logout={true}
-              wide="xl"
-            />,
-            "description": <p>
-              The minimum requirement in a Topbar is to include the Swedbank Pay Logotype, common additional functionality is a list with navigation links. On desktop use 
-              <CodeTags
-                code=".topbar-xl-wide"
-                type="secondary"
-              />
-               to show the links listed horizontally in the topbar. 
-            </p>,
-            "tab": "Desktop",
-            "title": "Desktop",
-          },
-          Object {
-            "component": <Topbar
-              logout={true}
-              wide={false}
-            />,
-            "description": <React.Fragment>
-              <p>
-                The minimum requirement in a Topbar is to include the Swedbank Pay Logotype, common additional functionality is a list with navigation links. On smaller screens use a menu button to toggle a vertical navigation drawer with links when the menu button is clicked.
-              </p>
-              <p>
-                Be aware; The 
-                <CodeTags
-                  code="max-height"
-                  type="primary"
-                />
-                 attribute for element 
-                <CodeTags
-                  code=".nav-ul"
-                  type="secondary"
-                />
-                 when it is active is set to 2500px. This is to ensure animation for the transition to happen. You can easily alter this by creating custom css.
-              </p>
-            </React.Fragment>,
-            "tab": "Mobile/tablet",
-            "title": "Mobile/tablet",
-          },
-        ],
-        "hideOptions": true,
-        "id": "overviewTopbar",
-        "tabsId": "overviewTopbarTabs",
-      }
-    }
-  />
-  <h3>
-    When to consider something else
-  </h3>
-  <ul
-    className="list list-bullet"
-  >
-    <li>
-       The topbar doesn’t accommodate more then one level hierarchy or a large amount of items in the list. If you need more levels or more space, consider a 
-      <Link
-        to="/components/sidebar"
+  <section>
+    <h3>
+      Usage with NPM
+    </h3>
+    <p>
+      <a
+        href="/get-started/for-developers/"
+        onClick={[Function]}
       >
-        sidebar
-      </Link>
-       component instead. 
-    </li>
-  </ul>
-</section>
-`;
-
-exports[`Components: Topbar renders 1`] = `
-<DocContainer>
-  <section
-    id="topbar-doc"
-  >
-    <p
-      className="lead"
-    >
-      The topbar is used to give users an easily available navigational bar at the top of your web application.
+        Usage with NPM
+      </a>
+       will require you to import it from 
+      <code
+        className="code-tags code-tags-primary"
+      >
+        @swedbankpay/design-guide
+      </code>
+      .
     </p>
-    <Overview />
-    <DeveloperDocumentation />
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          JAVASCRIPT
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  import { topbar } from "@swedbankpay/design-guide"; 
+                  
+
+                  topbar.init()
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
   </section>
-</DocContainer>
+</section>
 `;

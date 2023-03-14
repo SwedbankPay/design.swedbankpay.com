@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import Tooltip from "./index";
 
@@ -17,66 +19,87 @@ describe("Component: Tooltip -", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Tooltip text={text} icon={icon} title={title}/>);
+        const componentForSnap = renderer.create(<Tooltip text={text} icon={icon} title={title}/>);
 
-        expect(wrapper).toMatchSnapshot();
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("prop type is marked as defined", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(<Tooltip />);
+        const componentForSnap = renderer.create(<Tooltip />);
 
-        expect(wrapper).toMatchSnapshot();
         expect(console.error).toHaveBeenCalled();
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with icon if icon is provided", () => {
-        const wrapper = shallow(<Tooltip icon={icon} text={text}/>);
+        render(<Tooltip icon={icon} text={text}/>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<i class=\"material-icons-outlined m-0\">edit</i>");
+        expect(screen.getByRole("button").querySelector("i")).toHaveClass("material-icons-outlined m-0");
+        expect(screen.getByRole("button").querySelector("i")).toHaveTextContent("edit");
+
+        const componentForSnap = renderer.create(<Tooltip icon={icon} text={text}/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with title text if provided", () => {
-        const wrapper = shallow(<Tooltip title={title} text={text}/>);
+        render(<Tooltip title={title} text={text}/>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<span role=\"tooltip\">test text</span></button>");
+        expect(screen.getByRole("tooltip")).toHaveTextContent("test text");
+
+        const componentForSnap = renderer.create(<Tooltip title={title} text={text}/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders div with class tooltip", () => {
-        const wrapper = shallow(<Tooltip text={text}/>);
+        render(<Tooltip text={text}/>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.hasClass("tooltip")).toBeTruthy();
+        expect(screen.getByRole("button")).toHaveClass("tooltip");
+
+        const componentForSnap = renderer.create(<Tooltip text={text}/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with tooltip position right", () => {
-        const wrapper = shallow(<Tooltip text={text} position={right} />);
+        render(<Tooltip text={text} position={right} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<button class=\"tooltip btn btn-secondary tooltip-right\">");
+        expect(screen.getByRole("button")).toHaveClass("tooltip btn btn-secondary tooltip-right");
+
+        const componentForSnap = renderer.create(<Tooltip text={text} position={right} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with tooltip position left", () => {
-        const wrapper = shallow(<Tooltip text={text} position={left} />);
+        render(<Tooltip text={text} position={left} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<button class=\"tooltip btn btn-secondary tooltip-left\">");
+        expect(screen.getByRole("button")).toHaveClass("tooltip btn btn-secondary tooltip-left");
+
+        const componentForSnap = renderer.create(<Tooltip text={text} position={left} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with tooltip position top", () => {
-        const wrapper = shallow(<Tooltip text={text} position={top} />);
+        render(<Tooltip text={text} position={top} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<button class=\"tooltip btn btn-secondary tooltip-top\">");
+        expect(screen.getByRole("button")).toHaveClass("tooltip btn btn-secondary tooltip-top");
+
+        const componentForSnap = renderer.create(<Tooltip text={text} position={top} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with tooltip position bottom", () => {
-        const wrapper = shallow(<Tooltip text={text} position={bottom} />);
+        render(<Tooltip text={text} position={bottom} />);
+        expect(screen.getByRole("button")).toHaveClass("tooltip btn btn-secondary tooltip-bottom");
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<button class=\"tooltip btn btn-secondary tooltip-bottom\">");
+        const componentForSnap = renderer.create(<Tooltip text={text} position={bottom} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

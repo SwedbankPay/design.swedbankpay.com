@@ -1,7 +1,9 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
-import Breadcrumb, { DefaultItems } from "./index";
+import Breadcrumb from "./index";
 
 describe("Component: Breadcrumb", () => {
     it("is defined", () => {
@@ -9,20 +11,31 @@ describe("Component: Breadcrumb", () => {
     });
 
     it("renders with default items when no items is provided through items prop", () => {
-        const wrapper = shallow(<Breadcrumb />);
+        const { container } = render(<Breadcrumb />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("breadcrumb");
-        expect(wrapper.contains(<DefaultItems />)).toEqual(true);
+        expect(container.querySelector("ol")).toHaveClass("breadcrumb");
+        expect(screen.getAllByRole("listitem").length).toBe(4);
+        expect(screen.getAllByRole("link").length).toBe(4);
+        expect(screen.getAllByRole("link")[0]).toHaveTextContent("Home");
+
+        const componentForSnap = renderer.create(<Breadcrumb />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders breadcrumb with the provided items in the items prop", () => {
         const items = [{ title: "test" }];
 
-        const wrapper = shallow(<Breadcrumb items={items} />);
+        const { container } = render(<Breadcrumb items={items} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<ol className="breadcrumb"><li><span>test</span></li></ol>)).toEqual(true);
+        expect(container.querySelector("ol")).toHaveClass("breadcrumb");
+        expect(screen.getAllByRole("listitem").length).toBe(1);
+        expect(screen.queryAllByRole("link").length).toBe(0);
+        expect(screen.getByRole("listitem")).toHaveTextContent(items[0].title);
+
+        const componentForSnap = renderer.create(<Breadcrumb items={items} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders breadcrumb with the provided items wrapped in anchor tags when href is provided in the items prop", () => {
@@ -33,10 +46,17 @@ describe("Component: Breadcrumb", () => {
             }
         ];
 
-        const wrapper = shallow(<Breadcrumb items={items} />);
+        const { container } = render(<Breadcrumb items={items} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<ol className="breadcrumb"><li><a href="www.example.com">test</a></li></ol>)).toEqual(true);
+        expect(container.querySelector("ol")).toHaveClass("breadcrumb");
+        expect(screen.getAllByRole("listitem").length).toBe(1);
+        expect(screen.getByRole("listitem")).toHaveTextContent(items[0].title);
+        expect(screen.getAllByRole("link").length).toBe(1);
+        expect(screen.getByRole("link")).toHaveAttribute("href", items[0].href);
+
+        const componentForSnap = renderer.create(<Breadcrumb items={items} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders multiple breadcrumbs when provided in the items prop", () => {
@@ -47,12 +67,15 @@ describe("Component: Breadcrumb", () => {
             { title: "test #4" }
         ];
 
-        const wrapper = shallow(<Breadcrumb items={items} />);
+        const { container } = render(<Breadcrumb items={items} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<span>test #1</span>)).toEqual(true);
-        expect(wrapper.contains(<span>test #2</span>)).toEqual(true);
-        expect(wrapper.contains(<span>test #3</span>)).toEqual(true);
-        expect(wrapper.contains(<span>test #4</span>)).toEqual(true);
+        expect(container.querySelector("ol")).toHaveClass("breadcrumb");
+        expect(screen.getAllByRole("listitem").length).toBe(4);
+        expect(screen.queryAllByRole("link").length).toBe(0);
+        items.map((item, i) => expect(screen.getAllByRole("listitem")[i]).toHaveTextContent(item.title));
+
+        const componentForSnap = renderer.create(<Breadcrumb items={items} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

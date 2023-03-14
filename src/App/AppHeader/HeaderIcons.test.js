@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import { GithubLogo, SlackLogo } from "./HeaderIcons";
 
@@ -10,9 +10,9 @@ describe("AppHeader: HeaderIcons", () => {
         });
 
         it("renders as expected", () => {
-            const wrapper = shallow(<GithubLogo />);
+            const tree = renderer.create(<GithubLogo />).toJSON();
 
-            expect(wrapper).toMatchSnapshot();
+            expect(tree).toMatchSnapshot();
         });
     });
 
@@ -22,9 +22,9 @@ describe("AppHeader: HeaderIcons", () => {
         });
 
         it("renders as expected", () => {
-            const wrapper = shallow(<SlackLogo />);
+            const tree = renderer.create(<SlackLogo />).toJSON();
 
-            expect(wrapper).toMatchSnapshot();
+            expect(tree).toMatchSnapshot();
         });
     });
 });

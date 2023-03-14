@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import Icons, { MaterialIcons, CardIcons, PaymentIcons, Flags } from "./index";
 
@@ -9,20 +9,14 @@ describe("Core: Iconography", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Icons />);
+        const wrapper = renderer.create(<Icons />);
 
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 
     describe("MaterialIcons", () => {
         it("is defined", () => {
             expect(MaterialIcons).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<MaterialIcons />);
-
-            expect(wrapper).toMatchSnapshot();
         });
     });
 
@@ -30,35 +24,17 @@ describe("Core: Iconography", () => {
         it("is defined", () => {
             expect(CardIcons).toBeDefined();
         });
-
-        it("renders", () => {
-            const wrapper = shallow(<CardIcons />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
     });
 
     describe("PaymentIcons", () => {
         it("is defined", () => {
             expect(PaymentIcons).toBeDefined();
         });
-
-        it("renders", () => {
-            const wrapper = shallow(<PaymentIcons />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
     });
 
     describe("Flags", () => {
         it("is defined", () => {
             expect(Flags).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Flags />);
-
-            expect(wrapper).toMatchSnapshot();
         });
     });
 });

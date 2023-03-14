@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import ErrorPage404 from "./index";
 
@@ -9,8 +9,8 @@ describe("ErrorPage404: index", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<ErrorPage404 />);
+        const componentForSnap = renderer.create(<ErrorPage404 />);
 
-        expect(wrapper).toMatchSnapshot();
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

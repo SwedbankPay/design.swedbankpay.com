@@ -1,5 +1,7 @@
 import React from "react";
-import { mount } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import Rangeslider from ".";
 
@@ -9,29 +11,39 @@ describe("Component: Rangeslider -", () => {
     });
 
     it("renders with a value label", () => {
-        const wrapper = mount(<Rangeslider />);
+        render(<Rangeslider />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="range" />)).toEqual(true);
-        expect(wrapper.html()).toContain("value-label");
-        expect(wrapper.html()).toContain("data-rs-value");
+        expect(screen.getByRole("slider")).toBeInTheDocument();
+        expect(screen.getByRole("status")).toHaveClass("value-label");
+        expect(screen.getByRole("status").querySelectorAll("[data-rs-value]")).toHaveLength(1);
+
+        const componentForSnap = renderer.create(<Rangeslider />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with a value label and a value label prefix", () => {
-        const wrapper = mount(<Rangeslider valueLabelPrefix="test" />);
+        render(<Rangeslider valueLabelPrefix="test" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="range" />)).toEqual(true);
-        expect(wrapper.contains(<span>test</span>)).toEqual(true);
-        expect(wrapper.html()).toContain("value-label");
+        expect(screen.getByRole("slider")).toBeInTheDocument();
+        expect(screen.getByRole("status").querySelector("span")).toHaveTextContent("test");
+        expect(screen.getByRole("status")).toHaveClass("value-label");
+
+        const componentForSnap = renderer.create(<Rangeslider valueLabelPrefix="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with a value label and a value label postfix", () => {
-        const wrapper = mount(<Rangeslider valueLabelPostfix="test" />);
+        render(<Rangeslider valueLabelPostfix="test" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<input type="range" />)).toEqual(true);
-        expect(wrapper.contains(<span>test</span>)).toEqual(true);
-        expect(wrapper.html()).toContain("value-label");
+        expect(screen.getByRole("slider")).toBeInTheDocument();
+        expect([...screen.getByRole("status").querySelectorAll("span")]
+            .filter(elmt => !elmt.dataset.rsValue)[0]).toHaveTextContent("test");
+        expect(screen.getByRole("status")).toHaveClass("value-label");
+
+        const componentForSnap = renderer.create(<Rangeslider valueLabelPostfix="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

@@ -1,469 +1,439 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Checkbox - renders 1`] = `
-<Fragment>
-  <div
-    className="checkbox"
-  >
-    
+<div
+  className="checkbox"
+>
+  
 
-    <input
-      aria-describedby={null}
-      defaultChecked={null}
-      disabled={null}
-      id={null}
-      type="checkbox"
-    />
-    
+  <input
+    aria-describedby={null}
+    defaultChecked={null}
+    disabled={null}
+    id={null}
+    type="checkbox"
+  />
+  
 
-    <label
-      className="d-block"
-    />
-    
+  <label
+    className="d-block"
+  />
+  
 
-  </div>
-</Fragment>
+</div>
 `;
 
 exports[`Component: Checkbox - renders checkbox group 1`] = `
-<Fragment>
-  <form>
-    <fieldset
-      className="checkbox-group"
+<form>
+  <fieldset
+    className="checkbox-group"
+  >
+    <legend />
+    <div
+      className="checkbox"
     >
-      <legend />
-      <div
-        className="checkbox"
-        key="0"
+      
+
+      <input
+        aria-describedby={null}
+        defaultChecked={null}
+        disabled={null}
+        id="radio-example-1"
+        type="checkbox"
+      />
+      
+
+      <label
+        htmlFor="radio-example-1"
       >
-        
+        Checkbox label
+      </label>
+      
 
-        <input
-          aria-describedby={null}
-          defaultChecked={null}
-          disabled={null}
-          id="radio-example-1"
-          type="checkbox"
-        />
-        
+    </div>
+    <div
+      className="checkbox"
+    >
+      
 
-        <label
-          htmlFor="radio-example-1"
-        >
-          Checkbox label
-        </label>
-        
+      <input
+        aria-describedby={null}
+        defaultChecked={null}
+        disabled={null}
+        id="radio-example-2"
+        type="checkbox"
+      />
+      
 
-      </div>
-      <div
-        className="checkbox"
-        key="1"
+      <label
+        htmlFor="radio-example-2"
       >
-        
+        Checkbox label
+      </label>
+      
 
-        <input
-          aria-describedby={null}
-          defaultChecked={null}
-          disabled={null}
-          id="radio-example-2"
-          type="checkbox"
-        />
-        
+    </div>
+    <div
+      className="checkbox"
+    >
+      
 
-        <label
-          htmlFor="radio-example-2"
-        >
-          Checkbox label
-        </label>
-        
+      <input
+        aria-describedby={null}
+        defaultChecked={null}
+        disabled={null}
+        id="radio-example-3"
+        type="checkbox"
+      />
+      
 
-      </div>
-      <div
-        className="checkbox"
-        key="2"
+      <label
+        htmlFor="radio-example-3"
       >
-        
+        Checkbox label
+      </label>
+      
 
-        <input
-          aria-describedby={null}
-          defaultChecked={null}
-          disabled={null}
-          id="radio-example-3"
-          type="checkbox"
-        />
-        
-
-        <label
-          htmlFor="radio-example-3"
-        >
-          Checkbox label
-        </label>
-        
-
-      </div>
-    </fieldset>
-  </form>
-</Fragment>
+    </div>
+  </fieldset>
+</form>
 `;
 
 exports[`Component: Checkbox - renders checkbox group with disabled state 1`] = `
-<Fragment>
-  <form>
-    <fieldset
-      className="checkbox-group"
-      disabled={true}
+<form>
+  <fieldset
+    className="checkbox-group"
+    disabled={true}
+  >
+    <legend />
+    <div
+      className="checkbox"
     >
-      <legend />
-      <div
-        className="checkbox"
-        key="0"
+      
+
+      <input
+        aria-describedby={null}
+        defaultChecked={null}
+        disabled={true}
+        id="radio-example-1"
+        type="checkbox"
+      />
+      
+
+      <label
+        htmlFor="radio-example-1"
       >
-        
+        Checkbox label
+      </label>
+      
 
-        <input
-          aria-describedby={null}
-          defaultChecked={null}
-          disabled={true}
-          id="radio-example-1"
-          type="checkbox"
-        />
-        
+    </div>
+    <div
+      className="checkbox"
+    >
+      
 
-        <label
-          htmlFor="radio-example-1"
-        >
-          Checkbox label
-        </label>
-        
+      <input
+        aria-describedby={null}
+        defaultChecked={null}
+        disabled={true}
+        id="radio-example-2"
+        type="checkbox"
+      />
+      
 
-      </div>
-      <div
-        className="checkbox"
-        key="1"
+      <label
+        htmlFor="radio-example-2"
       >
-        
+        Checkbox label
+      </label>
+      
 
-        <input
-          aria-describedby={null}
-          defaultChecked={null}
-          disabled={true}
-          id="radio-example-2"
-          type="checkbox"
-        />
-        
+    </div>
+    <div
+      className="checkbox"
+    >
+      
 
-        <label
-          htmlFor="radio-example-2"
-        >
-          Checkbox label
-        </label>
-        
+      <input
+        aria-describedby={null}
+        defaultChecked={null}
+        disabled={true}
+        id="radio-example-3"
+        type="checkbox"
+      />
+      
 
-      </div>
-      <div
-        className="checkbox"
-        key="2"
+      <label
+        htmlFor="radio-example-3"
       >
-        
+        Checkbox label
+      </label>
+      
 
-        <input
-          aria-describedby={null}
-          defaultChecked={null}
-          disabled={true}
-          id="radio-example-3"
-          type="checkbox"
-        />
-        
-
-        <label
-          htmlFor="radio-example-3"
-        >
-          Checkbox label
-        </label>
-        
-
-      </div>
-    </fieldset>
-  </form>
-</Fragment>
+    </div>
+  </fieldset>
+</form>
 `;
 
 exports[`Component: Checkbox - renders checkbox group with error 1`] = `
-<Fragment>
-  <form>
-    <fieldset
-      className="checkbox-group has-error"
+<form>
+  <fieldset
+    className="checkbox-group has-error"
+  >
+    <legend />
+    <div
+      className="checkbox"
     >
-      <legend />
-      <div
-        className="checkbox"
-        key="0"
-      >
-        
-
-        <input
-          aria-describedby={null}
-          defaultChecked={null}
-          disabled={null}
-          id="radio-example-1"
-          type="checkbox"
-        />
-        
-
-        <label
-          htmlFor="radio-example-1"
-        >
-          Checkbox label
-        </label>
-        
-
-      </div>
-      <div
-        className="checkbox"
-        key="1"
-      >
-        
-
-        <input
-          aria-describedby={null}
-          defaultChecked={null}
-          disabled={null}
-          id="radio-example-2"
-          type="checkbox"
-        />
-        
-
-        <label
-          htmlFor="radio-example-2"
-        >
-          Checkbox label
-        </label>
-        
-
-      </div>
-      <div
-        className="checkbox"
-        key="2"
-      >
-        
-
-        <input
-          aria-describedby={null}
-          defaultChecked={null}
-          disabled={null}
-          id="radio-example-3"
-          type="checkbox"
-        />
-        
-
-        <label
-          htmlFor="radio-example-3"
-        >
-          Checkbox label
-        </label>
-        
-
-      </div>
-      <div
-        className="help-block"
-      >
-        <i
-          className="material-icons"
-        >
-          warning
-        </i>
-        error
-      </div>
       
 
-    </fieldset>
-  </form>
-</Fragment>
+      <input
+        aria-describedby={null}
+        defaultChecked={null}
+        disabled={null}
+        id="radio-example-1"
+        type="checkbox"
+      />
+      
+
+      <label
+        htmlFor="radio-example-1"
+      >
+        Checkbox label
+      </label>
+      
+
+    </div>
+    <div
+      className="checkbox"
+    >
+      
+
+      <input
+        aria-describedby={null}
+        defaultChecked={null}
+        disabled={null}
+        id="radio-example-2"
+        type="checkbox"
+      />
+      
+
+      <label
+        htmlFor="radio-example-2"
+      >
+        Checkbox label
+      </label>
+      
+
+    </div>
+    <div
+      className="checkbox"
+    >
+      
+
+      <input
+        aria-describedby={null}
+        defaultChecked={null}
+        disabled={null}
+        id="radio-example-3"
+        type="checkbox"
+      />
+      
+
+      <label
+        htmlFor="radio-example-3"
+      >
+        Checkbox label
+      </label>
+      
+
+    </div>
+    <div
+      className="help-block"
+    >
+      <i
+        className="material-icons"
+      >
+        warning
+      </i>
+      error
+    </div>
+    
+
+  </fieldset>
+</form>
 `;
 
 exports[`Component: Checkbox - renders checkbox group with groupTitle 1`] = `
-<Fragment>
-  <form>
-    <fieldset
-      className="checkbox-group"
+<form>
+  <fieldset
+    className="checkbox-group"
+  >
+    <legend>
+      Group title
+    </legend>
+    <div
+      className="checkbox"
     >
-      <legend>
-        Group title
-      </legend>
-      <div
-        className="checkbox"
-        key="0"
+      
+
+      <input
+        aria-describedby={null}
+        defaultChecked={null}
+        disabled={null}
+        id="radio-example-1"
+        type="checkbox"
+      />
+      
+
+      <label
+        htmlFor="radio-example-1"
       >
-        
+        Checkbox label
+      </label>
+      
 
-        <input
-          aria-describedby={null}
-          defaultChecked={null}
-          disabled={null}
-          id="radio-example-1"
-          type="checkbox"
-        />
-        
+    </div>
+    <div
+      className="checkbox"
+    >
+      
 
-        <label
-          htmlFor="radio-example-1"
-        >
-          Checkbox label
-        </label>
-        
+      <input
+        aria-describedby={null}
+        defaultChecked={null}
+        disabled={null}
+        id="radio-example-2"
+        type="checkbox"
+      />
+      
 
-      </div>
-      <div
-        className="checkbox"
-        key="1"
+      <label
+        htmlFor="radio-example-2"
       >
-        
+        Checkbox label
+      </label>
+      
 
-        <input
-          aria-describedby={null}
-          defaultChecked={null}
-          disabled={null}
-          id="radio-example-2"
-          type="checkbox"
-        />
-        
+    </div>
+    <div
+      className="checkbox"
+    >
+      
 
-        <label
-          htmlFor="radio-example-2"
-        >
-          Checkbox label
-        </label>
-        
+      <input
+        aria-describedby={null}
+        defaultChecked={null}
+        disabled={null}
+        id="radio-example-3"
+        type="checkbox"
+      />
+      
 
-      </div>
-      <div
-        className="checkbox"
-        key="2"
+      <label
+        htmlFor="radio-example-3"
       >
-        
+        Checkbox label
+      </label>
+      
 
-        <input
-          aria-describedby={null}
-          defaultChecked={null}
-          disabled={null}
-          id="radio-example-3"
-          type="checkbox"
-        />
-        
-
-        <label
-          htmlFor="radio-example-3"
-        >
-          Checkbox label
-        </label>
-        
-
-      </div>
-    </fieldset>
-  </form>
-</Fragment>
+    </div>
+  </fieldset>
+</form>
 `;
 
 exports[`Component: Checkbox - renders with the checked attribute 1`] = `
-<Fragment>
-  <div
-    className="checkbox"
-  >
-    
+<div
+  className="checkbox"
+>
+  
 
-    <input
-      aria-describedby={null}
-      defaultChecked={true}
-      disabled={null}
-      id={null}
-      type="checkbox"
-    />
-    
+  <input
+    aria-describedby={null}
+    defaultChecked={true}
+    disabled={null}
+    id={null}
+    type="checkbox"
+  />
+  
 
-    <label
-      className="d-block"
-    />
-    
+  <label
+    className="d-block"
+  />
+  
 
-  </div>
-</Fragment>
+</div>
 `;
 
 exports[`Component: Checkbox - renders with the disabled attribute 1`] = `
-<Fragment>
-  <div
-    className="checkbox"
-  >
-    
+<div
+  className="checkbox"
+>
+  
 
-    <input
-      aria-describedby={null}
-      defaultChecked={null}
-      disabled={true}
-      id={null}
-      type="checkbox"
-    />
-    
+  <input
+    aria-describedby={null}
+    defaultChecked={null}
+    disabled={true}
+    id={null}
+    type="checkbox"
+  />
+  
 
-    <label
-      className="d-block"
-    />
-    
+  <label
+    className="d-block"
+  />
+  
 
-  </div>
-</Fragment>
+</div>
 `;
 
 exports[`Component: Checkbox - renders with the specified id 1`] = `
-<Fragment>
-  <div
-    className="checkbox"
-  >
-    
+<div
+  className="checkbox"
+>
+  
 
-    <input
-      aria-describedby={null}
-      defaultChecked={null}
-      disabled={null}
-      id="test"
-      type="checkbox"
-    />
-    
+  <input
+    aria-describedby={null}
+    defaultChecked={null}
+    disabled={null}
+    id="test"
+    type="checkbox"
+  />
+  
 
-    <label
-      className="d-block"
-      htmlFor="test"
-    />
-    
+  <label
+    className="d-block"
+    htmlFor="test"
+  />
+  
 
-  </div>
-</Fragment>
+</div>
 `;
 
 exports[`Component: Checkbox - renders with the specified id and label 1`] = `
-<Fragment>
-  <div
-    className="checkbox"
+<div
+  className="checkbox"
+>
+  
+
+  <input
+    aria-describedby={null}
+    defaultChecked={null}
+    disabled={null}
+    id="test"
+    type="checkbox"
+  />
+  
+
+  <label
+    className="d-block"
+    htmlFor="test"
   >
-    
+    test
+  </label>
+  
 
-    <input
-      aria-describedby={null}
-      defaultChecked={null}
-      disabled={null}
-      id="test"
-      type="checkbox"
-    />
-    
-
-    <label
-      className="d-block"
-      htmlFor="test"
-    >
-      test
-    </label>
-    
-
-  </div>
-</Fragment>
+</div>
 `;

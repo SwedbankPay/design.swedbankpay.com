@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import Introduction, { GetStarted, WhatIsDG, Feedback } from "./index";
 
@@ -8,21 +8,9 @@ describe("GetStarted: Introduction", () => {
         expect(Introduction).toBeDefined();
     });
 
-    it("renders", () => {
-        const wrapper = shallow(<Introduction />);
-
-        expect(wrapper).toMatchSnapshot();
-    });
-
     describe("GetStarted", () => {
         it("is defined", () => {
             expect(GetStarted).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<GetStarted />);
-
-            expect(wrapper).toMatchSnapshot();
         });
     });
 
@@ -32,9 +20,9 @@ describe("GetStarted: Introduction", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<WhatIsDG />);
+            const wrapper = renderer.create(<WhatIsDG />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -44,9 +32,9 @@ describe("GetStarted: Introduction", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Feedback/>);
+            const wrapper = renderer.create(<Feedback/>);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 });

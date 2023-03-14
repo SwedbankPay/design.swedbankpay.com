@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import Footer from "./index";
 
@@ -9,8 +9,9 @@ describe("Component: Footer -", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Footer />);
 
-        expect(wrapper).toMatchSnapshot();
+        const componentForSnap = renderer.create(<Footer />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

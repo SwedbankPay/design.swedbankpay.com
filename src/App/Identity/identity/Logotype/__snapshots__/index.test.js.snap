@@ -17,38 +17,44 @@ exports[`Core: Logotype Favicon renders 1`] = `
   </div>
   <p>
     To add a favicon to your application, download the favicon assets and extract it to the root of your build-folder. Insert the code below in the 
-    <CodeTags
-      code="<head>"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      &lt;head&gt;
+    </code>
      tag of your HTML documents and you are ready to go.
   </p>
   <p>
     You should also rename the 
-    <CodeTags
-      code="content"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      content
+    </code>
      of the 
-    <CodeTags
-      code="apple-mobile-web-app-title"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      apple-mobile-web-app-title
+    </code>
      and 
-    <CodeTags
-      code="application-name"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      application-name
+    </code>
      
-    <CodeTags
-      code="<meta>"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      &lt;meta&gt;
+    </code>
      tags to reflect the title of your project. Make sure to also do this in the 
-    <CodeTags
-      code="manifest.json"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      manifest.json
+    </code>
      file in the icons folder.
   </p>
   <a
@@ -67,597 +73,252 @@ exports[`Core: Logotype Favicon renders 1`] = `
       Download Swedbank Pay favicon assets
     </span>
   </a>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-  >
-    <link
-      href="/TEST/icons/apple-touch-icon-114x114.png"
-      rel="apple-touch-icon"
-      sizes="114x114"
-    />
-    <link
-      href="/TEST/icons/apple-touch-icon-120x120.png"
-      rel="apple-touch-icon"
-      sizes="120x120"
-    />
-    <link
-      href="/TEST/icons/apple-touch-icon-144x144.png"
-      rel="apple-touch-icon"
-      sizes="144x144"
-    />
-    <link
-      href="/TEST/icons/apple-touch-icon-152x152.png"
-      rel="apple-touch-icon"
-      sizes="152x152"
-    />
-    <link
-      href="/TEST/icons/apple-touch-icon-180x180.png"
-      rel="apple-touch-icon"
-      sizes="180x180"
-    />
-    <link
-      href="/TEST/icons/apple-touch-icon-57x57.png"
-      rel="apple-touch-icon"
-      sizes="57x57"
-    />
-    <link
-      href="/TEST/icons/apple-touch-icon-60x60.png"
-      rel="apple-touch-icon"
-      sizes="60x60"
-    />
-    <link
-      href="/TEST/icons/apple-touch-icon-72x72.png"
-      rel="apple-touch-icon"
-      sizes="72x72"
-    />
-    <link
-      href="/TEST/icons/apple-touch-icon-76x76.png"
-      rel="apple-touch-icon"
-      sizes="76x76"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-320x460.png"
-      media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-640x920.png"
-      media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-640x1096.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-750x1294.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-1182x2208.png"
-      media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-1242x2148.png"
-      media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-748x1024.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-1496x2048.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-768x1004.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST//icons/apple-touch-startup-image-1536x2008.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)"
-      rel="apple-touch-startup-image"
-    />
-    <link
-      href="/TEST/icons/favicon-16x16.png"
-      rel="icon"
-      sizes="16x16"
-      type="image/png"
-    />
-    <link
-      href="/TEST/icons/favicon-32x32.png"
-      rel="icon"
-      sizes="32x32"
-      type="image/png"
-    />
-    <link
-      href="/TEST/icons/favicon-48x48.png"
-      rel="icon"
-      sizes="48x48"
-      type="image/png"
-    />
-    <link
-      href="/TEST/icons/manifest.webmanifest"
-      rel="manifest"
-    />
-    <link
-      href="/TEST/icons/favicon.ico"
-      rel="shortcut icon"
-    />
-    <meta
-      content="yes"
-      name="apple-mobile-web-app-capable"
-    />
-    <meta
-      content="black-translucent"
-      name="apple-mobile-web-app-status-bar-style"
-    />
-    <meta
-      content="TESTBRAND App"
-      name="apple-mobile-web-app-title"
-    />
-    <meta
-      content="TESTBRAND App"
-      name="application-name"
-    />
-    <meta
-      content="yes"
-      name="mobile-web-app-capable"
-    />
-    <meta
-      content="#000"
-      name="msapplication-TileColor"
-    />
-    <meta
-      content="/TEST/icons/mstile-144x144.png"
-      name="msapplication-TileImage"
-    />
-    <meta
-      content="/TEST/icons/browserconfig.xml"
-      name="msapplication-config"
-    />
-    <meta
-      content="#000"
-      name="theme-color"
-    />
-  </ComponentPreview>
-</section>
-`;
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
 
-exports[`Core: Logotype LogoBlack renders 1`] = `
-<section>
-  <h2
-    id="logo-black"
-  >
-    Black text logotype
-  </h2>
-  <p>
-    For good visibility the black text logo should be used on all light/fair backgrounds.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-    showCasePanelAdvanced={
-      Object {
-        "elements": Array [
-          Object {
-            "component": <Logotype
-              alt="Swedbank Pay vertical logo"
-              src="/TEST/img/logo/swedbankpay-logo-v.svg"
-              type="vertical"
-            />,
-            "description": "The vertical logo with black text is primary – the one that will build recognition. Always consider the vertical logo first before before the horizontal logo.",
-            "options": Object {
-              "radio": Array [
-                Object {
-                  "id": "size_radio",
-                  "title": "Sizes",
-                  "values": Array [
-                    Object {
-                      "description": <Alert
-                        className="mb-0 mt-4"
-                        icon="warning"
-                        text={
-                          <p>
-                            <b>
-                              Important. 
-                            </b>
-                            This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
-                          </p>
-                        }
-                        type="warning"
-                      />,
-                      "name": "Extra small",
-                      "value": Object {
-                        "size": "xs",
-                      },
-                    },
-                    Object {
-                      "default": true,
-                      "name": "Small",
-                      "value": Object {
-                        "size": "sm",
-                      },
-                    },
-                    Object {
-                      "name": "Medium",
-                      "value": Object {
-                        "size": "md",
-                      },
-                    },
-                    Object {
-                      "name": "Large",
-                      "value": Object {
-                        "size": "lg",
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "Vertical",
-            "title": "Vertical logo",
-          },
-          Object {
-            "component": <Logotype
-              alt="Swedbank Pay horizontal logo"
-              src="/TEST/img/logo/swedbankpay-logo-h.svg"
-              type="horizontal"
-            />,
-            "description": <React.Fragment>
-              The horizontal logo is only used if the vertical primary logotype can not be used. Reasons for using the horizontal logo might be:
-              <ul
-                className="list list-bullet mt-3"
-              >
-                <li>
-                  The primary logo font is too similar in size to other fonts close by
-                </li>
-                <li>
-                  The primary logo is too small/wrong format compared to other logotypes in the same context
-                </li>
-              </ul>
-            </React.Fragment>,
-            "options": Object {
-              "radio": Array [
-                Object {
-                  "id": "size_radio",
-                  "title": "Sizes",
-                  "values": Array [
-                    Object {
-                      "description": <Alert
-                        className="mb-0 mt-4"
-                        icon="warning"
-                        text={
-                          <p>
-                            <b>
-                              Important. 
-                            </b>
-                            This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
-                          </p>
-                        }
-                        type="warning"
-                      />,
-                      "name": "Smallest",
-                      "value": Object {
-                        "size": "xs",
-                      },
-                    },
-                    Object {
-                      "default": true,
-                      "name": "Small",
-                      "value": Object {
-                        "size": "sm",
-                      },
-                    },
-                    Object {
-                      "name": "Medium",
-                      "value": Object {
-                        "size": "md",
-                      },
-                    },
-                    Object {
-                      "name": "Large",
-                      "value": Object {
-                        "size": "lg",
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "Horizontal",
-            "title": "Horizontal logo",
-          },
-        ],
-        "id": "logoBlack",
-        "tabsId": "logoBlackTabs",
-      }
-    }
-  />
-</section>
-`;
+                2
+                
 
-exports[`Core: Logotype LogoPayex renders 1`] = `
-<section>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-    showCasePanelAdvanced={
-      Object {
-        "elements": Array [
-          Object {
-            "component": <Logotype
-              alt="PayEx logo"
-              src="/TEST/img/logo/payex-logo.svg"
-              type="horizontal"
-            />,
-            "description": "The green logo is the primary logo and should always be considered before moving on to another version.",
-            "options": Object {
-              "radio": Array [
-                Object {
-                  "id": "size_radio",
-                  "title": "Sizes",
-                  "values": Array [
-                    Object {
-                      "description": <React.Fragment>
-                        <h4>
-                          Important
-                        </h4>
-                        <p>
-                          This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
-                        </p>
-                      </React.Fragment>,
-                      "name": "Smallest",
-                      "value": Object {
-                        "size": "xs",
-                      },
-                    },
-                    Object {
-                      "default": true,
-                      "name": "Small",
-                      "value": Object {
-                        "size": "sm",
-                      },
-                    },
-                    Object {
-                      "name": "Medium",
-                      "value": Object {
-                        "size": "md",
-                      },
-                    },
-                    Object {
-                      "name": "Large",
-                      "value": Object {
-                        "size": "lg",
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "Green",
-            "title": "Green logo",
-          },
-          Object {
-            "altBackground": true,
-            "component": <Logotype
-              alt="PayEx logo"
-              src="/TEST/img/logo/payex-logo-neg.svg"
-              type="horizontal"
-            />,
-            "description": <p>
-              Should only be used on PayEx primary color (green) and on dark backgrounds. The green logo is the primary logo and should always be considered before moving on to another version.
-            </p>,
-            "options": Object {
-              "radio": Array [
-                Object {
-                  "id": "size_radio_white",
-                  "title": "Sizes",
-                  "values": Array [
-                    Object {
-                      "description": <React.Fragment>
-                        <h4>
-                          Important
-                        </h4>
-                        <p>
-                          This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
-                        </p>
-                      </React.Fragment>,
-                      "name": "Smallest",
-                      "value": Object {
-                        "size": "xs",
-                      },
-                    },
-                    Object {
-                      "default": true,
-                      "name": "Small",
-                      "value": Object {
-                        "size": "sm",
-                      },
-                    },
-                    Object {
-                      "name": "Medium",
-                      "value": Object {
-                        "size": "md",
-                      },
-                    },
-                    Object {
-                      "name": "Large",
-                      "value": Object {
-                        "size": "lg",
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "White",
-            "title": "White logo",
-          },
-        ],
-        "id": "logoPayex",
-        "tabsId": "logoPayexTabs",
-      }
-    }
-  />
-</section>
-`;
+                3
+                
 
-exports[`Core: Logotype LogoWhite renders 1`] = `
-<section>
-  <h2
-    id="logo-white"
-  >
-    White text logotype
-  </h2>
-  <p>
-    The white text logo is used on Swedbank Pay’s primary color (#yellow) and dark backgrounds.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-    showCasePanelAdvanced={
-      Object {
-        "elements": Array [
-          Object {
-            "altBackground": true,
-            "component": <Logotype
-              alt="Swedbank Pay vertical logo"
-              src="/TEST/img/logo/swedbankpay-logo-v-neg.svg"
-              type="vertical"
-            />,
-            "description": <p>
-              The vertical logo should always be considered before the horizontal logo.
-            </p>,
-            "options": Object {
-              "radio": Array [
-                Object {
-                  "id": "size_radio_white",
-                  "title": "Sizes",
-                  "values": Array [
-                    Object {
-                      "description": <Alert
-                        className="mb-0 mt-4"
-                        icon="warning"
-                        text={
-                          <p>
-                            <b>
-                              Important. 
-                            </b>
-                            This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
-                          </p>
-                        }
-                        type="warning"
-                      />,
-                      "name": "Smallest",
-                      "value": Object {
-                        "size": "xs",
-                      },
-                    },
-                    Object {
-                      "default": true,
-                      "name": "Small",
-                      "value": Object {
-                        "size": "sm",
-                      },
-                    },
-                    Object {
-                      "name": "Medium",
-                      "value": Object {
-                        "size": "md",
-                      },
-                    },
-                    Object {
-                      "name": "Large",
-                      "value": Object {
-                        "size": "lg",
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "Vertical",
-            "title": "Vertical logo",
-          },
-          Object {
-            "altBackground": true,
-            "component": <Logotype
-              alt="Swedbank Pay horizontal logo"
-              src="/TEST/img/logo/swedbankpay-logo-h-neg.svg"
-              type="horizontal"
-            />,
-            "description": <p>
-              The horizontal logo is only used if the vertical logotype can not be used.
-            </p>,
-            "options": Object {
-              "radio": Array [
-                Object {
-                  "id": "size_radio_white",
-                  "title": "Sizes",
-                  "values": Array [
-                    Object {
-                      "description": <Alert
-                        className="mb-0 mt-4"
-                        icon="warning"
-                        text={
-                          <p>
-                            <b>
-                              Important. 
-                            </b>
-                            This is the smallest version of the logotype that can be used! Never alter this logotype to fit smaller spaces.
-                          </p>
-                        }
-                        type="warning"
-                      />,
-                      "name": "Smallest",
-                      "value": Object {
-                        "size": "xs",
-                      },
-                    },
-                    Object {
-                      "default": true,
-                      "name": "Small",
-                      "value": Object {
-                        "size": "sm",
-                      },
-                    },
-                    Object {
-                      "name": "Medium",
-                      "value": Object {
-                        "size": "md",
-                      },
-                    },
-                    Object {
-                      "name": "Large",
-                      "value": Object {
-                        "size": "lg",
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "tab": "Horizontal",
-            "title": "Horizontal logo",
-          },
-        ],
-        "id": "logoWhite",
-        "tabsId": "logoWhiteTabs",
-      }
-    }
-  />
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+                15
+                
+
+                16
+                
+
+                17
+                
+
+                18
+                
+
+                19
+                
+
+                20
+                
+
+                21
+                
+
+                22
+                
+
+                23
+                
+
+                24
+                
+
+                25
+                
+
+                26
+                
+
+                27
+                
+
+                28
+                
+
+                29
+                
+
+                30
+                
+
+                31
+                
+
+                32
+                
+
+                33
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;link rel="apple-touch-icon" sizes="114x114" href="/TEST/icons/apple-touch-icon-114x114.png" /&gt;
+                
+
+                &lt;link rel="apple-touch-icon" sizes="120x120" href="/TEST/icons/apple-touch-icon-120x120.png" /&gt;
+                
+
+                &lt;link rel="apple-touch-icon" sizes="144x144" href="/TEST/icons/apple-touch-icon-144x144.png" /&gt;
+                
+
+                &lt;link rel="apple-touch-icon" sizes="152x152" href="/TEST/icons/apple-touch-icon-152x152.png" /&gt;
+                
+
+                &lt;link rel="apple-touch-icon" sizes="180x180" href="/TEST/icons/apple-touch-icon-180x180.png" /&gt;
+                
+
+                &lt;link rel="apple-touch-icon" sizes="57x57" href="/TEST/icons/apple-touch-icon-57x57.png" /&gt;
+                
+
+                &lt;link rel="apple-touch-icon" sizes="60x60" href="/TEST/icons/apple-touch-icon-60x60.png" /&gt;
+                
+
+                &lt;link rel="apple-touch-icon" sizes="72x72" href="/TEST/icons/apple-touch-icon-72x72.png" /&gt;
+                
+
+                &lt;link rel="apple-touch-icon" sizes="76x76" href="/TEST/icons/apple-touch-icon-76x76.png" /&gt;
+                
+
+                &lt;link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="/TEST//icons/apple-touch-startup-image-320x460.png" /&gt;
+                
+
+                &lt;link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/TEST//icons/apple-touch-startup-image-640x920.png" /&gt;
+                
+
+                &lt;link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="/TEST//icons/apple-touch-startup-image-640x1096.png" /&gt;
+                
+
+                &lt;link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="/TEST//icons/apple-touch-startup-image-750x1294.png" /&gt;
+                
+
+                &lt;link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="/TEST//icons/apple-touch-startup-image-1182x2208.png" /&gt;
+                
+
+                &lt;link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="/TEST//icons/apple-touch-startup-image-1242x2148.png" /&gt;
+                
+
+                &lt;link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="/TEST//icons/apple-touch-startup-image-748x1024.png" /&gt;
+                
+
+                &lt;link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/TEST//icons/apple-touch-startup-image-1496x2048.png" /&gt;
+                
+
+                &lt;link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/TEST//icons/apple-touch-startup-image-768x1004.png" /&gt;
+                
+
+                &lt;link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/TEST//icons/apple-touch-startup-image-1536x2008.png" /&gt;
+                
+
+                &lt;link rel="icon" type="image/png" sizes="16x16" href="/TEST/icons/favicon-16x16.png" /&gt;
+                
+
+                &lt;link rel="icon" type="image/png" sizes="32x32" href="/TEST/icons/favicon-32x32.png" /&gt;
+                
+
+                &lt;link rel="icon" type="image/png" sizes="48x48" href="/TEST/icons/favicon-48x48.png" /&gt;
+                
+
+                &lt;link rel="manifest" href="/TEST/icons/manifest.webmanifest" /&gt;
+                
+
+                &lt;link rel="shortcut icon" href="/TEST/icons/favicon.ico" /&gt;
+                
+
+                &lt;meta name="apple-mobile-web-app-capable" content="yes" /&gt;
+                
+
+                &lt;meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /&gt;
+                
+
+                &lt;meta name="apple-mobile-web-app-title" content="TESTBRAND App" /&gt;
+                
+
+                &lt;meta name="application-name" content="TESTBRAND App" /&gt;
+                
+
+                &lt;meta name="mobile-web-app-capable" content="yes" /&gt;
+                
+
+                &lt;meta name="msapplication-TileColor" content="#000" /&gt;
+                
+
+                &lt;meta name="msapplication-TileImage" content="/TEST/icons/mstile-144x144.png" /&gt;
+                
+
+                &lt;meta name="msapplication-config" content="/TEST/icons/browserconfig.xml" /&gt;
+                
+
+                &lt;meta name="theme-color" content="#000" /&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>
 </section>
 `;
 
@@ -727,7 +388,6 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
     >
       <div
         className="col-lg-3 col-md-4 col-sm-6"
-        key="img/documentation/logotype/old_logo.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -753,7 +413,6 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
       </div>
       <div
         className="col-lg-3 col-md-4 col-sm-6"
-        key="img/documentation/logotype/resize_logo.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -779,7 +438,6 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
       </div>
       <div
         className="col-lg-3 col-md-4 col-sm-6"
-        key="img/documentation/logotype/pay_text.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -805,7 +463,6 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
       </div>
       <div
         className="col-lg-3 col-md-4 col-sm-6"
-        key="img/documentation/logotype/swedbank_logo.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -831,7 +488,6 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
       </div>
       <div
         className="col-lg-3 col-md-4 col-sm-6"
-        key="img/documentation/logotype/rotated_logo.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -857,7 +513,6 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
       </div>
       <div
         className="col-lg-3 col-md-4 col-sm-6"
-        key="img/documentation/logotype/green_logo.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -883,7 +538,6 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
       </div>
       <div
         className="col-lg-3 col-md-4 col-sm-6"
-        key="img/documentation/logotype/black_and_white_logo.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -909,7 +563,6 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
       </div>
       <div
         className="col-lg-3 col-md-4 col-sm-6"
-        key="img/documentation/logotype/shadowed_logo.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -935,7 +588,6 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
       </div>
       <div
         className="col-lg-3 col-md-4 col-sm-6"
-        key="img/documentation/logotype/changed_wordmark.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -961,7 +613,6 @@ exports[`Core: Logotype MisuseLogo renders 1`] = `
       </div>
       <div
         className="col-lg-3 col-md-4 col-sm-6"
-        key="img/documentation/logotype/moved_wordmark.png"
       >
         <div
           className="logotype-misuse-donts"
@@ -1003,41 +654,37 @@ exports[`Core: Logotype Overview renders 1`] = `
     <div
       className="background-light"
     >
-      <Logotype
+      <img
         alt="Swedbank Pay vertical logo with black text."
-        size="md"
+        className="logotype-vertical logotype-md"
         src="/TEST/designguide/assets/swedbankpay-logo-v.svg"
-        type="vertical"
       />
     </div>
     <div
       className="background-primary"
     >
-      <Logotype
+      <img
         alt="Swedbank Pay vertical logo with white text."
-        size="md"
+        className="logotype-vertical logotype-md"
         src="/TEST/designguide/assets/swedbankpay-logo-v-neg.svg"
-        type="vertical"
       />
     </div>
     <div
       className="background-light"
     >
-      <Logotype
+      <img
         alt="Swedbank Pay Horizontal logo with black text"
-        size="md"
+        className="logotype-horizontal logotype-md"
         src="/TEST/designguide/assets/swedbankpay-logo-h.svg"
-        type="horizontal"
       />
     </div>
     <div
       className="background-primary"
     >
-      <Logotype
+      <img
         alt="Swedbank Pay Horizontal logo with white text"
-        size="md"
+        className="logotype-horizontal logotype-md"
         src="/TEST/designguide/assets/swedbankpay-logo-h-neg.svg"
-        type="horizontal"
       />
     </div>
   </div>
@@ -1059,15 +706,17 @@ exports[`Core: Logotype Overview renders 1`] = `
   </a>
   <p>
     The logotype is vectorized and all versions are provided as 
-    <CodeTags
-      code=".svg"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .svg
+    </code>
      files, it is also available in 
-    <CodeTags
-      code=".png"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .png
+    </code>
      for contexts that might not support vectorized files. The sizes described are recommended sizes and if there is a need to scale the logotype, make sure the coin diameter is no smaller than at least 24 px and a multiple of 8.
   </p>
 </section>
@@ -1183,4 +832,4 @@ exports[`Core: Logotype SpacingZone renders 1`] = `
 </section>
 `;
 
-exports[`Core: Logotype renders 1`] = `<Fragment />`;
+exports[`Core: Logotype renders 1`] = `null`;

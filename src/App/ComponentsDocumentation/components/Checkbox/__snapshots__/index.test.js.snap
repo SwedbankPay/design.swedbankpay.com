@@ -13,28 +13,84 @@ exports[`Component: Checkbox ContentGuidelines renders 1`] = `
     <div
       className="d-flex flex-column align-items-center py-3"
     >
-      <Checkbox
-        group={true}
-        groupTitle="Group legend"
-        hintText="Hint text"
-        name="radio-guidelines"
-        options={
-          Array [
-            Object {
-              "id": "radio-guidelines-example-1",
-              "label": "Label",
-            },
-            Object {
-              "id": "radio-guidelines-example-2",
-              "label": "Label",
-            },
-            Object {
-              "id": "radio-guidelines-example-3",
-              "label": "Label",
-            },
-          ]
-        }
-      />
+      <form>
+        <fieldset
+          className="checkbox-group"
+        >
+          <legend>
+            Group legend
+          </legend>
+          <div
+            className="checkbox"
+          >
+            
+
+            <input
+              aria-describedby={null}
+              defaultChecked={null}
+              disabled={null}
+              id="radio-guidelines-example-1"
+              name="radio-guidelines"
+              type="checkbox"
+            />
+            
+
+            <label
+              htmlFor="radio-guidelines-example-1"
+            >
+              Label
+            </label>
+            
+
+          </div>
+          <div
+            className="checkbox"
+          >
+            
+
+            <input
+              aria-describedby={null}
+              defaultChecked={null}
+              disabled={null}
+              id="radio-guidelines-example-2"
+              name="radio-guidelines"
+              type="checkbox"
+            />
+            
+
+            <label
+              htmlFor="radio-guidelines-example-2"
+            >
+              Label
+            </label>
+            
+
+          </div>
+          <div
+            className="checkbox"
+          >
+            
+
+            <input
+              aria-describedby={null}
+              defaultChecked={null}
+              disabled={null}
+              id="radio-guidelines-example-3"
+              name="radio-guidelines"
+              type="checkbox"
+            />
+            
+
+            <label
+              htmlFor="radio-guidelines-example-3"
+            >
+              Label
+            </label>
+            
+
+          </div>
+        </fieldset>
+      </form>
     </div>
   </div>
   <ul
@@ -78,28 +134,116 @@ exports[`Component: Checkbox DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       Disable a checkbox by adding 
-      <CodeTags
-        code="disabled"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        disabled
+      </code>
        attribute to the desired Checkbox.
     </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="html"
-      removeOuterTag={true}
-      showCasePanel={true}
+    <div
+      className="showcase-panel"
     >
       <div
         className="d-flex justify-content-center"
       >
-        <Checkbox
-          disabled={true}
-          id="disabled-example"
-          label="Checkbox label"
-        />
+        <div
+          className="checkbox"
+        >
+          
+
+          <input
+            aria-describedby={null}
+            defaultChecked={null}
+            disabled={true}
+            id="disabled-example"
+            type="checkbox"
+          />
+          
+
+          <label
+            className="d-block"
+            htmlFor="disabled-example"
+          >
+            Checkbox label
+          </label>
+          
+
+        </div>
       </div>
-    </ComponentPreview>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;div class="checkbox"&gt;
+                  
+
+                      &lt;input type="checkbox" id="disabled-example" disabled&gt;
+                  
+
+                      &lt;label for="disabled-example" class="d-block"&gt;Checkbox label&lt;/label&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
   </section>
   <section>
     <h3>
@@ -107,65 +251,290 @@ exports[`Component: Checkbox DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       To display the error state, add the 
-      <CodeTags
-        code=".has-error"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .has-error
+      </code>
        class to the parent element, then add the 
-      <CodeTags
-        code=".help-block"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .help-block
+      </code>
        element as the last child with the error message. 
     </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="html"
-      removeOuterTag={true}
-      showCasePanel={true}
+    <div
+      className="showcase-panel"
     >
       <div
         className="m-auto pl-5 col-sm-12 error-state-container"
       >
-        <Checkbox
-          errorMessage="Descriptive helpful error message."
-          group={true}
-          groupTitle="Group legend"
-          name="checkbox-group-example"
-          options={
-            Array [
-              Object {
-                "id": "error-example-1",
-                "label": "Label",
-              },
-              Object {
-                "id": "error-example-2",
-                "label": "Label",
-              },
-              Object {
-                "id": "error-example-3",
-                "label": "Label",
-              },
-            ]
-          }
-        />
+        <form>
+          <fieldset
+            className="checkbox-group has-error"
+          >
+            <legend>
+              Group legend
+            </legend>
+            <div
+              className="checkbox"
+            >
+              
+
+              <input
+                aria-describedby={null}
+                defaultChecked={null}
+                disabled={null}
+                id="error-example-1"
+                name="checkbox-group-example"
+                type="checkbox"
+              />
+              
+
+              <label
+                htmlFor="error-example-1"
+              >
+                Label
+              </label>
+              
+
+            </div>
+            <div
+              className="checkbox"
+            >
+              
+
+              <input
+                aria-describedby={null}
+                defaultChecked={null}
+                disabled={null}
+                id="error-example-2"
+                name="checkbox-group-example"
+                type="checkbox"
+              />
+              
+
+              <label
+                htmlFor="error-example-2"
+              >
+                Label
+              </label>
+              
+
+            </div>
+            <div
+              className="checkbox"
+            >
+              
+
+              <input
+                aria-describedby={null}
+                defaultChecked={null}
+                disabled={null}
+                id="error-example-3"
+                name="checkbox-group-example"
+                type="checkbox"
+              />
+              
+
+              <label
+                htmlFor="error-example-3"
+              >
+                Label
+              </label>
+              
+
+            </div>
+            <div
+              className="help-block"
+            >
+              <i
+                className="material-icons"
+              >
+                warning
+              </i>
+              Descriptive helpful error message.
+            </div>
+            
+
+          </fieldset>
+        </form>
       </div>
-    </ComponentPreview>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                  12
+                  
+
+                  13
+                  
+
+                  14
+                  
+
+                  15
+                  
+
+                  16
+                  
+
+                  17
+                  
+
+                  18
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;form&gt;
+                  
+
+                      &lt;fieldset class="checkbox-group has-error"&gt;
+                  
+
+                          &lt;legend&gt;Group legend&lt;/legend&gt;
+                  
+
+                          &lt;div class="checkbox"&gt;
+                  
+
+                              &lt;input type="checkbox" id="error-example-1" name="checkbox-group-example"&gt;
+                  
+
+                              &lt;label for="error-example-1"&gt;Label&lt;/label&gt;
+                  
+
+                          &lt;/div&gt;
+                  
+
+                          &lt;div class="checkbox"&gt;
+                  
+
+                              &lt;input type="checkbox" id="error-example-2" name="checkbox-group-example"&gt;
+                  
+
+                              &lt;label for="error-example-2"&gt;Label&lt;/label&gt;
+                  
+
+                          &lt;/div&gt;
+                  
+
+                          &lt;div class="checkbox"&gt;
+                  
+
+                              &lt;input type="checkbox" id="error-example-3" name="checkbox-group-example"&gt;
+                  
+
+                              &lt;label for="error-example-3"&gt;Label&lt;/label&gt;
+                  
+
+                          &lt;/div&gt;
+                  
+
+                          &lt;div class="help-block"&gt;&lt;i class="material-icons"&gt;warning&lt;/i&gt;Descriptive helpful error message.&lt;/div&gt;
+                  
+
+                      &lt;/fieldset&gt;
+                  
+
+                  &lt;/form&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
   </section>
   <section>
     <h3>
       Javascript methods
     </h3>
     <p>
-      <CodeTags
-        code="dg.hintTextExpander.init()"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        dg.hintTextExpander.init()
+      </code>
        can be used to initialize all Hint text expanders. Or 
-      <CodeTags
-        code="dg.hintTextExpander.init(<hint-text-expander-id>)"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        dg.hintTextExpander.init(&lt;hint-text-expander-id&gt;)
+      </code>
        to initialize a specific one.
     </p>
   </section>
@@ -197,27 +566,84 @@ exports[`Component: Checkbox HowTo renders 1`] = `
           <div
             className="pt-3 pb-4"
           >
-            <Checkbox
-              group={true}
-              groupTitle="Button size"
-              name="radio-guidelines"
-              options={
-                Array [
-                  Object {
-                    "id": "radio-do-example-1",
-                    "label": "Small",
-                  },
-                  Object {
-                    "id": "radio-do-example-2",
-                    "label": "Medium",
-                  },
-                  Object {
-                    "id": "radio-do-example-3",
-                    "label": "Large",
-                  },
-                ]
-              }
-            />
+            <form>
+              <fieldset
+                className="checkbox-group"
+              >
+                <legend>
+                  Button size
+                </legend>
+                <div
+                  className="checkbox"
+                >
+                  
+
+                  <input
+                    aria-describedby={null}
+                    defaultChecked={null}
+                    disabled={null}
+                    id="radio-do-example-1"
+                    name="radio-guidelines"
+                    type="checkbox"
+                  />
+                  
+
+                  <label
+                    htmlFor="radio-do-example-1"
+                  >
+                    Small
+                  </label>
+                  
+
+                </div>
+                <div
+                  className="checkbox"
+                >
+                  
+
+                  <input
+                    aria-describedby={null}
+                    defaultChecked={null}
+                    disabled={null}
+                    id="radio-do-example-2"
+                    name="radio-guidelines"
+                    type="checkbox"
+                  />
+                  
+
+                  <label
+                    htmlFor="radio-do-example-2"
+                  >
+                    Medium
+                  </label>
+                  
+
+                </div>
+                <div
+                  className="checkbox"
+                >
+                  
+
+                  <input
+                    aria-describedby={null}
+                    defaultChecked={null}
+                    disabled={null}
+                    id="radio-do-example-3"
+                    name="radio-guidelines"
+                    type="checkbox"
+                  />
+                  
+
+                  <label
+                    htmlFor="radio-do-example-3"
+                  >
+                    Large
+                  </label>
+                  
+
+                </div>
+              </fieldset>
+            </form>
           </div>
         </div>
       </div>
@@ -242,27 +668,84 @@ exports[`Component: Checkbox HowTo renders 1`] = `
           <div
             className="pt-3 pb-3 w-50"
           >
-            <Checkbox
-              group={true}
-              groupTitle="Button size"
-              name="radio-guidelines"
-              options={
-                Array [
-                  Object {
-                    "id": "radio-dont-example-1",
-                    "label": "Super duper tiny small",
-                  },
-                  Object {
-                    "id": "radio-dont-example-2",
-                    "label": "Large",
-                  },
-                  Object {
-                    "id": "radio-dont-example-3",
-                    "label": "Small",
-                  },
-                ]
-              }
-            />
+            <form>
+              <fieldset
+                className="checkbox-group"
+              >
+                <legend>
+                  Button size
+                </legend>
+                <div
+                  className="checkbox"
+                >
+                  
+
+                  <input
+                    aria-describedby={null}
+                    defaultChecked={null}
+                    disabled={null}
+                    id="radio-dont-example-1"
+                    name="radio-guidelines"
+                    type="checkbox"
+                  />
+                  
+
+                  <label
+                    htmlFor="radio-dont-example-1"
+                  >
+                    Super duper tiny small
+                  </label>
+                  
+
+                </div>
+                <div
+                  className="checkbox"
+                >
+                  
+
+                  <input
+                    aria-describedby={null}
+                    defaultChecked={null}
+                    disabled={null}
+                    id="radio-dont-example-2"
+                    name="radio-guidelines"
+                    type="checkbox"
+                  />
+                  
+
+                  <label
+                    htmlFor="radio-dont-example-2"
+                  >
+                    Large
+                  </label>
+                  
+
+                </div>
+                <div
+                  className="checkbox"
+                >
+                  
+
+                  <input
+                    aria-describedby={null}
+                    defaultChecked={null}
+                    disabled={null}
+                    id="radio-dont-example-3"
+                    name="radio-guidelines"
+                    type="checkbox"
+                  />
+                  
+
+                  <label
+                    htmlFor="radio-dont-example-3"
+                  >
+                    Small
+                  </label>
+                  
+
+                </div>
+              </fieldset>
+            </form>
           </div>
         </div>
       </div>

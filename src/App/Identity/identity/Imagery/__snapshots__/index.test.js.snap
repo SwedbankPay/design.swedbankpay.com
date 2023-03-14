@@ -1,37 +1,87 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Core: Imagery AltTextAndCaptions renders 1`] = `
-<section>
-  <section>
-    <h2
-      id="alt-text-and-captions"
+exports[`Core: Imagery renders 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="doc-body col-12"
+    id="doc-body"
+  >
+    <p
+      className="lead"
     >
-      Alt text and captions
-    </h2>
-    <p>
-      When adding images to your web page, it is important to ensure that images that convey information have appropriate text alternatives or descriptions. Having a description of an image will ensure that they are accessible to everyone. Alternative text and captions are the most commonly used methods to describe images.
+      Images are commercial and should be used as decoration to make the interface eye catching and the content feel easy and uncomplicated. In imagery we use clean and simple compositions with focus on one situation or action. This creates focus, calmness and simplicity.
     </p>
-    <p>
-      <b>
-        Alt text
-      </b>
-       is not visible on the web page itself, but allows screen reader users, such as individuals with cognitive or visual disabilities, to obtain a text interpretation of an image.
-    </p>
-    <p>
-      <b>
-        Captions
-      </b>
-       are available to both sighted and non-sighted users, and can be used to ensure that everyone has equal access to the image description. Captions should describe the context of the image rather than the visual content. If the image is referenced elsewhere on the page, it should have a title, e.g "figure 2".
-    </p>
-    <p>
-      See example of caption and alt text below.
-    </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="html"
-      removeOuterTag={true}
-      showCasePanel={true}
-    >
+    <section>
+      <h2
+        id="image-library"
+      >
+        Image library
+      </h2>
+      <p>
+        All images displayed in a 
+        TESTBRAND
+         interface should be from the 
+        TESTBRAND
+         Image library. Note that the images only can be used in 
+        TESTBRAND
+         productions. If you need access to the library, contact current Head of Marketing. 
+      </p>
+      <img
+        alt="Collection of images from the Swedbank Pay image library."
+        className="w-100"
+        src="/TEST/img/documentation/imagery/image-group.svg"
+      />
+      <h3>
+        Finding the right images
+      </h3>
+      <p>
+        There are several images to choose from when working with 
+        TESTBRAND
+         products. Because 
+        TESTBRAND
+         is a payment service for all, it’s extra important to think about diversity when picking images for a product. To choose a great image, reflect over the context you’re bringing the image into and check if and where the image is used in other 
+        TESTBRAND
+         products. If an images is strongly associated with a certain page or feature, consider using another. We strive to use a variation of the library images while also giving the image a purpose. 
+      </p>
+      <p>
+        <span
+          className="font-weight-bold"
+        >
+          TIP
+        </span>
+        : Once you’ve found a picture you think might work, try it in Figma – if it doesn’t work, keep looking and try again!
+      </p>
+    </section>
+    <section>
+      <h2
+        id="image-sizes"
+      >
+        Image sizes
+      </h2>
+      <p>
+        Once you’ve found good imagery for your website, ask yourself “Are these images the right size for where I want them on my website?” Investigate what image sizes that is required for your interface, to ensure the pictures look of high quality and aren’t pixelated or stretched.
+      </p>
+      <p>
+        Avoid using extremely small images in places where a larger image is needed, e.g. the main banner on a landing page, as this can cause them to look blurry, out of focus, and may cut off a large part of the image. Also be careful when using extremely large images. Only small images where a smaller image is required, e.g. your sector images, as this will drastically affect page loading speed. The optimum size for page loading time is less than 2 MB. 
+      </p>
+      <p>
+        Finally, don’t distort or wrap the images in any way.
+      </p>
+    </section>
+    <section>
+      <h2
+        id="focal-points"
+      >
+        Focal points and angles
+      </h2>
+      <p>
+        As designers and developer we have the power and responsibility to influence users behavior. In our products we want to use images not only in a decorative way but also to guide user, pointing them directly towards particular messaging or call-to-actions. And using lines and angles, we can guide the eyes of the user.
+      </p>
+      <p>
+        Choose images with a strong focal point for the products main banner – this is the first part of your product users will see, so the imagery should be powerful and relevant to your site. The person looking to the right in this photo (see Figure 1) guides the eye towards to the content to the right of the image.
+      </p>
       <div
         className="d-flex flex-column align-items-center"
       >
@@ -51,376 +101,358 @@ exports[`Core: Imagery AltTextAndCaptions renders 1`] = `
            A woman with headphones sitting on a bus looking out through the window to the right.
         </span>
       </div>
-    </ComponentPreview>
-  </section>
-  <section>
-    <h3>
-      Image description guidelines
-    </h3>
-    <ul
-      className="list list-bullet"
-    >
-      <li>
-        <b>
-          All images must have a caption or alt text.
-        </b>
-         If an image is purely decorative it should have an empty alt text (alt=""), for example a pattern.
-      </li>
-      <li>
-        <b>
-          Image captions and alt text should not be the same to avoid repetition.
-        </b>
-         If the caption or nearby text already explains the informational image, you might usa a very brief or empty alt text (alt="").
-      </li>
-      <li>
-        <b>
-          Keep it short.
-        </b>
-         An alt text should be around one to two sentences. Remember that the entire text will be read aloud by a screen reader, so don’t overwhelm the user.
-      </li>
-      <li>
-        <b>
-          Include only the most relevant visual details.
-        </b>
-         It’s not practical to include every visual detail in a photo or illustration. 
-      </li>
-      <li>
-        <b>
-          Describe only what is in the image.
-        </b>
-         Don’t provide additional context that is not visually apparent; such context belongs in an image caption.
-      </li>
-      <li>
-        <b>
-          Use correct grammar and punctuation.
-        </b>
-         Capitalize the first word, and end alt texts with a period. Don’t use quotation marks or apostrophes as browsers can interpret these punctuation marks as the end of the alt text.
-      </li>
-      <li>
-        <b>
-          Don’t begin the alt text with "Photo of…"; or "Image of…".
-        </b>
-         Users already know that an image is being described. If it’s relevant to clarify that it’s not a photo, it is ok to write "Illustration of…", or similar.
-      </li>
-      <li>
-        <b>
-          For images of infographics, charts, and maps:
-        </b>
-         Focus on the highest informational value. Rely on surrounding text and captions to provide further information.
-      </li>
-    </ul>
-  </section>
-  <section>
-    <h3>
-      Who should write it?
-    </h3>
-    <p>
-      If you create the image or select the image for a wireframe or prototype, you should write the alt text. If you’re a developer implementing a UI with images based on something created by a designer, you should not be responsible for writing the alt text – you are responsible for the implementation of it.
-    </p>
-  </section>
-</section>
-`;
-
-exports[`Core: Imagery FocalPoints renders 1`] = `
-<section>
-  <h2
-    id="focal-points"
-  >
-    Focal points and angles
-  </h2>
-  <p>
-    As designers and developer we have the power and responsibility to influence users behavior. In our products we want to use images not only in a decorative way but also to guide user, pointing them directly towards particular messaging or call-to-actions. And using lines and angles, we can guide the eyes of the user.
-  </p>
-  <p>
-    Choose images with a strong focal point for the products main banner – this is the first part of your product users will see, so the imagery should be powerful and relevant to your site. The person looking to the right in this photo (see Figure 1) guides the eye towards to the content to the right of the image.
-  </p>
-  <div
-    className="d-flex flex-column align-items-center"
-  >
-    <img
-      alt="A woman with headphones sitting on a bus looking out through the window to the right."
-      className="w-100"
-      src="/TEST/img/documentation/imagery/women-on-bus.svg"
-    />
-    <span
-      className="caption-text"
-    >
-      <span
-        className="font-weight-bold"
+      <h3>
+        Text on images
+      </h3>
+      <p>
+        Using text on images is tricky from several point of views. First of all, the text has to be visible on the images. We recommend you to NOT use text on images if you feel the slightest insecure about if the text is readable or not. 
+      </p>
+      <div
+        className="slab slab-plain slab-border-error"
       >
-        Figure 1.
-      </span>
-       A woman with headphones sitting on a bus looking out through the window to the right.
-    </span>
+        <h3>
+          Don´t
+        </h3>
+        <div
+          className="row"
+        >
+          <div
+            className="col-12 col-sm-6"
+          >
+            <img
+              alt="Example of text over faces"
+              className="img-fluid"
+              src="/TEST/img/documentation/imagery/dont1.png"
+            />
+            <h4>
+              Cover focal point
+            </h4>
+            <p>
+              Do not change the hue of the images. 
+            </p>
+          </div>
+          <div
+            className="col-12 col-sm-6"
+          >
+            <img
+              alt="Example of text over faces"
+              className="img-fluid"
+              src="/TEST/img/documentation/imagery/dont2.png"
+            />
+            <h4>
+              Use unaccessible text colors
+            </h4>
+            <p>
+              Do not use light text colors on light backgrounds and vice versa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2
+        id="using-imagery"
+      >
+        Using imagery in creative ways
+      </h2>
+      <p>
+        We use images in many different ways. An image can be used to brighten up interfaces, break up heavy text and also to tell a story of our company, values, and/or target audience. While it’s great to break up text with imagery, don’t over do it! We don’t want the page to read disjointed or the message to be diluted – it’s a fine balance.
+      </p>
+      <div
+        className="slab slab-plain slab-border-error"
+      >
+        <h3>
+          Don´t
+        </h3>
+        <div
+          className="row"
+        >
+          <div
+            className="col-sm-6 col-12"
+          >
+            <div
+              className="imagery-misuse-donts-img"
+            >
+              <img
+                alt=""
+                className="img-fluid"
+                src="/TEST/img/documentation/imagery/dont3.png"
+              />
+            </div>
+            <h4>
+              Make black/white
+            </h4>
+            <p>
+              Do not change the hue of the images.
+            </p>
+          </div>
+          <div
+            className="col-sm-6 col-12"
+          >
+            <div
+              className="imagery-misuse-donts-img"
+            >
+              <img
+                alt=""
+                className="img-fluid"
+                src="/TEST/img/documentation/imagery/dont4.png"
+              />
+            </div>
+            <h4>
+              Add effects
+            </h4>
+            <p>
+              Do not add any shadows or other effects to the images.
+            </p>
+          </div>
+          <div
+            className="col-sm-6 col-12"
+          >
+            <div
+              className="imagery-misuse-donts-img"
+            >
+              <img
+                alt=""
+                className="img-fluid"
+                src="/TEST/img/documentation/imagery/dont7.png"
+              />
+            </div>
+            <h4>
+              Alter color
+            </h4>
+            <p>
+              Do not change the image color or tone in any way.
+            </p>
+          </div>
+          <div
+            className="col-sm-6 col-12"
+          >
+            <div
+              className="imagery-misuse-donts-img"
+            >
+              <img
+                alt=""
+                className="w-75"
+                src="/TEST/img/documentation/imagery/dont8.png"
+              />
+            </div>
+            <h4>
+              Flip
+            </h4>
+            <p>
+              Do not flip the images horizontally or vertically.
+            </p>
+          </div>
+          <div
+            className="col-sm-6 col-12"
+          >
+            <div
+              className="imagery-misuse-donts-img"
+            >
+              <img
+                alt=""
+                className="img-fluid"
+                src="/TEST/img/documentation/imagery/dont5.png"
+              />
+            </div>
+            <h4>
+              Rotate
+            </h4>
+            <p>
+              Do not rotate the images.
+            </p>
+          </div>
+          <div
+            className="col-sm-6 col-12"
+          >
+            <div
+              className="imagery-misuse-donts-img"
+            >
+              <img
+                alt=""
+                className="img-fluid"
+                src="/TEST/img/documentation/imagery/dont6.png"
+              />
+            </div>
+            <h4>
+              Resize
+            </h4>
+            <p>
+              Do not distort or wrap the images in any way.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <section>
+        <h2
+          id="alt-text-and-captions"
+        >
+          Alt text and captions
+        </h2>
+        <p>
+          When adding images to your web page, it is important to ensure that images that convey information have appropriate text alternatives or descriptions. Having a description of an image will ensure that they are accessible to everyone. Alternative text and captions are the most commonly used methods to describe images.
+        </p>
+        <p>
+          <b>
+            Alt text
+          </b>
+           is not visible on the web page itself, but allows screen reader users, such as individuals with cognitive or visual disabilities, to obtain a text interpretation of an image.
+        </p>
+        <p>
+          <b>
+            Captions
+          </b>
+           are available to both sighted and non-sighted users, and can be used to ensure that everyone has equal access to the image description. Captions should describe the context of the image rather than the visual content. If the image is referenced elsewhere on the page, it should have a title, e.g "figure 2".
+        </p>
+        <p>
+          See example of caption and alt text below.
+        </p>
+        <div
+          className="showcase-panel"
+        >
+          <div
+            className="d-flex flex-column align-items-center"
+          >
+            <img
+              alt="A woman with headphones sitting on a bus looking out through the window to the right."
+              className="w-100"
+              src="/TEST/img/documentation/imagery/women-on-bus.svg"
+            />
+            <span
+              className="caption-text"
+            >
+              <span
+                className="font-weight-bold"
+              >
+                Figure 1.
+              </span>
+               A woman with headphones sitting on a bus looking out through the window to the right.
+            </span>
+          </div>
+        </div>
+        <figure>
+          <div
+            className="code-view"
+          >
+            <header
+              className="code-view-header"
+            >
+              HTML
+              <button
+                aria-describedby="tooltipCopy"
+                className="tooltip"
+                onClick={[Function]}
+              >
+                <i
+                  className="material-icons-outlined"
+                >
+                  content_copy
+                </i>
+                <div
+                  id="tooltipCopy"
+                  role="tooltip"
+                >
+                  Copy to clipboard
+                </div>
+              </button>
+            </header>
+            <table
+              className="code-view-table"
+            >
+              <tbody>
+                <tr>
+                  <td
+                    className="code-view-numbers"
+                  >
+                    <pre>
+                      1
+                      
+
+                    </pre>
+                  </td>
+                  <td
+                    className="code-view-code"
+                  >
+                    <pre>
+                      &lt;img src="/TEST/img/documentation/imagery/women-on-bus.svg" class="w-100" alt="A woman with headphones sitting on a bus looking out through the window to the right."&gt;&lt;span class="caption-text"&gt;&lt;span class="font-weight-bold"&gt;Figure 1.&lt;/span&gt; A woman with headphones sitting on a bus looking out through the window to the right.&lt;/span&gt;
+                      
+
+                    </pre>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </figure>
+      </section>
+      <section>
+        <h3>
+          Image description guidelines
+        </h3>
+        <ul
+          className="list list-bullet"
+        >
+          <li>
+            <b>
+              All images must have a caption or alt text.
+            </b>
+             If an image is purely decorative it should have an empty alt text (alt=""), for example a pattern.
+          </li>
+          <li>
+            <b>
+              Image captions and alt text should not be the same to avoid repetition.
+            </b>
+             If the caption or nearby text already explains the informational image, you might usa a very brief or empty alt text (alt="").
+          </li>
+          <li>
+            <b>
+              Keep it short.
+            </b>
+             An alt text should be around one to two sentences. Remember that the entire text will be read aloud by a screen reader, so don’t overwhelm the user.
+          </li>
+          <li>
+            <b>
+              Include only the most relevant visual details.
+            </b>
+             It’s not practical to include every visual detail in a photo or illustration. 
+          </li>
+          <li>
+            <b>
+              Describe only what is in the image.
+            </b>
+             Don’t provide additional context that is not visually apparent; such context belongs in an image caption.
+          </li>
+          <li>
+            <b>
+              Use correct grammar and punctuation.
+            </b>
+             Capitalize the first word, and end alt texts with a period. Don’t use quotation marks or apostrophes as browsers can interpret these punctuation marks as the end of the alt text.
+          </li>
+          <li>
+            <b>
+              Don’t begin the alt text with "Photo of…"; or "Image of…".
+            </b>
+             Users already know that an image is being described. If it’s relevant to clarify that it’s not a photo, it is ok to write "Illustration of…", or similar.
+          </li>
+          <li>
+            <b>
+              For images of infographics, charts, and maps:
+            </b>
+             Focus on the highest informational value. Rely on surrounding text and captions to provide further information.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>
+          Who should write it?
+        </h3>
+        <p>
+          If you create the image or select the image for a wireframe or prototype, you should write the alt text. If you’re a developer implementing a UI with images based on something created by a designer, you should not be responsible for writing the alt text – you are responsible for the implementation of it.
+        </p>
+      </section>
+    </section>
   </div>
-  <h3>
-    Text on images
-  </h3>
-  <p>
-    Using text on images is tricky from several point of views. First of all, the text has to be visible on the images. We recommend you to NOT use text on images if you feel the slightest insecure about if the text is readable or not. 
-  </p>
-  <div
-    className="slab slab-plain slab-border-error"
-  >
-    <h3>
-      Don´t
-    </h3>
-    <div
-      className="row"
-    >
-      <div
-        className="col-12 col-sm-6"
-      >
-        <img
-          alt="Example of text over faces"
-          className="img-fluid"
-          src="/TEST/img/documentation/imagery/dont1.png"
-        />
-        <h4>
-          Cover focal point
-        </h4>
-        <p>
-          Do not change the hue of the images. 
-        </p>
-      </div>
-      <div
-        className="col-12 col-sm-6"
-      >
-        <img
-          alt="Example of text over faces"
-          className="img-fluid"
-          src="/TEST/img/documentation/imagery/dont2.png"
-        />
-        <h4>
-          Use unaccessible text colors
-        </h4>
-        <p>
-          Do not use light text colors on light backgrounds and vice versa.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-`;
-
-exports[`Core: Imagery ImageLibrary renders 1`] = `
-<section>
-  <h2
-    id="image-library"
-  >
-    Image library
-  </h2>
-  <p>
-    All images displayed in a 
-    TESTBRAND
-     interface should be from the 
-    TESTBRAND
-     Image library. Note that the images only can be used in 
-    TESTBRAND
-     productions. If you need access to the library, contact current Head of Marketing. 
-  </p>
-  <img
-    alt="Collection of images from the Swedbank Pay image library."
-    className="w-100"
-    src="/TEST/img/documentation/imagery/image-group.svg"
-  />
-  <h3>
-    Finding the right images
-  </h3>
-  <p>
-    There are several images to choose from when working with 
-    TESTBRAND
-     products. Because 
-    TESTBRAND
-     is a payment service for all, it’s extra important to think about diversity when picking images for a product. To choose a great image, reflect over the context you’re bringing the image into and check if and where the image is used in other 
-    TESTBRAND
-     products. If an images is strongly associated with a certain page or feature, consider using another. We strive to use a variation of the library images while also giving the image a purpose. 
-  </p>
-  <p>
-    <span
-      className="font-weight-bold"
-    >
-      TIP
-    </span>
-    : Once you’ve found a picture you think might work, try it in Figma – if it doesn’t work, keep looking and try again!
-  </p>
-</section>
-`;
-
-exports[`Core: Imagery ImageSizes renders 1`] = `
-<section>
-  <h2
-    id="image-sizes"
-  >
-    Image sizes
-  </h2>
-  <p>
-    Once you’ve found good imagery for your website, ask yourself “Are these images the right size for where I want them on my website?” Investigate what image sizes that is required for your interface, to ensure the pictures look of high quality and aren’t pixelated or stretched.
-  </p>
-  <p>
-    Avoid using extremely small images in places where a larger image is needed, e.g. the main banner on a landing page, as this can cause them to look blurry, out of focus, and may cut off a large part of the image. Also be careful when using extremely large images. Only small images where a smaller image is required, e.g. your sector images, as this will drastically affect page loading speed. The optimum size for page loading time is less than 2 MB. 
-  </p>
-  <p>
-    Finally, don’t distort or wrap the images in any way.
-  </p>
-</section>
-`;
-
-exports[`Core: Imagery UsingImagery renders 1`] = `
-<section>
-  <h2
-    id="using-imagery"
-  >
-    Using imagery in creative ways
-  </h2>
-  <p>
-    We use images in many different ways. An image can be used to brighten up interfaces, break up heavy text and also to tell a story of our company, values, and/or target audience. While it’s great to break up text with imagery, don’t over do it! We don’t want the page to read disjointed or the message to be diluted – it’s a fine balance.
-  </p>
-  <div
-    className="slab slab-plain slab-border-error"
-  >
-    <h3>
-      Don´t
-    </h3>
-    <div
-      className="row"
-    >
-      <div
-        className="col-sm-6 col-12"
-        key="img/documentation/imagery/dont3.png"
-      >
-        <div
-          className="imagery-misuse-donts-img"
-        >
-          <img
-            alt=""
-            className="img-fluid"
-            src="/TEST/img/documentation/imagery/dont3.png"
-          />
-        </div>
-        <h4>
-          Make black/white
-        </h4>
-        <p>
-          Do not change the hue of the images.
-        </p>
-      </div>
-      <div
-        className="col-sm-6 col-12"
-        key="img/documentation/imagery/dont4.png"
-      >
-        <div
-          className="imagery-misuse-donts-img"
-        >
-          <img
-            alt=""
-            className="img-fluid"
-            src="/TEST/img/documentation/imagery/dont4.png"
-          />
-        </div>
-        <h4>
-          Add effects
-        </h4>
-        <p>
-          Do not add any shadows or other effects to the images.
-        </p>
-      </div>
-      <div
-        className="col-sm-6 col-12"
-        key="img/documentation/imagery/dont7.png"
-      >
-        <div
-          className="imagery-misuse-donts-img"
-        >
-          <img
-            alt=""
-            className="img-fluid"
-            src="/TEST/img/documentation/imagery/dont7.png"
-          />
-        </div>
-        <h4>
-          Alter color
-        </h4>
-        <p>
-          Do not change the image color or tone in any way.
-        </p>
-      </div>
-      <div
-        className="col-sm-6 col-12"
-        key="img/documentation/imagery/dont8.png"
-      >
-        <div
-          className="imagery-misuse-donts-img"
-        >
-          <img
-            alt=""
-            className="w-75"
-            src="/TEST/img/documentation/imagery/dont8.png"
-          />
-        </div>
-        <h4>
-          Flip
-        </h4>
-        <p>
-          Do not flip the images horizontally or vertically.
-        </p>
-      </div>
-      <div
-        className="col-sm-6 col-12"
-        key="img/documentation/imagery/dont5.png"
-      >
-        <div
-          className="imagery-misuse-donts-img"
-        >
-          <img
-            alt=""
-            className="img-fluid"
-            src="/TEST/img/documentation/imagery/dont5.png"
-          />
-        </div>
-        <h4>
-          Rotate
-        </h4>
-        <p>
-          Do not rotate the images.
-        </p>
-      </div>
-      <div
-        className="col-sm-6 col-12"
-        key="img/documentation/imagery/dont6.png"
-      >
-        <div
-          className="imagery-misuse-donts-img"
-        >
-          <img
-            alt=""
-            className="img-fluid"
-            src="/TEST/img/documentation/imagery/dont6.png"
-          />
-        </div>
-        <h4>
-          Resize
-        </h4>
-        <p>
-          Do not distort or wrap the images in any way.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-`;
-
-exports[`Core: Imagery renders 1`] = `
-<DocContainer>
-  <p
-    className="lead"
-  >
-    Images are commercial and should be used as decoration to make the interface eye catching and the content feel easy and uncomplicated. In imagery we use clean and simple compositions with focus on one situation or action. This creates focus, calmness and simplicity.
-  </p>
-  <ImageLibrary />
-  <ImageSizes />
-  <FocalPoints />
-  <UsingImagery />
-  <AltTextAndCaptions />
-</DocContainer>
+</div>
 `;

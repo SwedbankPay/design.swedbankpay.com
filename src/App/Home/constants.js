@@ -5,6 +5,11 @@ const basename = process.env.basename;
 
 export const changeLogs = [
     {
+        version: "10.7.4",
+        title: "Doing the groundwork for a brighter future.",
+        text: "Purely DG page maintenance; migrated tests from using Enzyme to React Testing Library. A big step into the direction of migrating to React 18."
+    },
+    {
         version: "10.7.3",
         title: "Minor scrollbar changes for sidebar",
         text: "Bugfix for Developer Portal"

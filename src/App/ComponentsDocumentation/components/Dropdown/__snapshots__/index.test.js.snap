@@ -7,9 +7,7 @@ exports[`Documentation: Dropdown ContentGuidelines renders 1`] = `
   >
     Content guidelines
   </h2>
-  <section
-    key="section-dropdown-0"
-  >
+  <section>
     <h3>
       Content guidelines for container
     </h3>
@@ -27,9 +25,41 @@ exports[`Documentation: Dropdown ContentGuidelines renders 1`] = `
           >
             Do
           </span>
-          <Dropdown
-            content={
-              <React.Fragment>
+          <div
+            className="dropdown anchor-top-left"
+            data-disable-default-keyboard-nav={null}
+            id="guidelines-dropdown-example-1"
+          >
+            
+
+            <div
+              className="toggle-menu-container"
+            >
+              
+
+              <button
+                aria-label="dropdown button"
+                className="dropdown-toggle dropdown-toggle-icon"
+                type="button"
+              >
+                
+
+                <i
+                  className="material-icons"
+                >
+                  more_vert
+                </i>
+                
+
+              </button>
+              
+
+              <div
+                aria-labelledby="dropdownToggle"
+                className="dropdown-menu"
+              >
+                
+
                 <a
                   href="#"
                   onClick={[Function]}
@@ -42,17 +72,14 @@ exports[`Documentation: Dropdown ContentGuidelines renders 1`] = `
                 >
                   Edit HTML
                 </a>
-              </React.Fragment>
-            }
-            id="guidelines-dropdown-example-1"
-            isIconButton={true}
-          />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div
         className="col-lg-6 col-sm-12"
         data-i="If a Dropdown container contains actions, they should be action-led, menaing led by a strong verb that encourages action."
-        key="If a Dropdown container contains actions, they should be action-led, menaing led by a strong verb that encourages action."
       >
         <div
           className="slab slab-plain slab-border-error pb-5"
@@ -63,9 +90,41 @@ exports[`Documentation: Dropdown ContentGuidelines renders 1`] = `
             Do
             n't
           </span>
-          <Dropdown
-            content={
-              <React.Fragment>
+          <div
+            className="dropdown anchor-top-left"
+            data-disable-default-keyboard-nav={null}
+            id="guidelines-dropdown-example-2"
+          >
+            
+
+            <div
+              className="toggle-menu-container"
+            >
+              
+
+              <button
+                aria-label="dropdown button"
+                className="dropdown-toggle dropdown-toggle-icon"
+                type="button"
+              >
+                
+
+                <i
+                  className="material-icons"
+                >
+                  more_vert
+                </i>
+                
+
+              </button>
+              
+
+              <div
+                aria-labelledby="dropdownToggle"
+                className="dropdown-menu"
+              >
+                
+
                 <a
                   href="#"
                   onClick={[Function]}
@@ -78,11 +137,9 @@ exports[`Documentation: Dropdown ContentGuidelines renders 1`] = `
                 >
                   File name changes
                 </a>
-              </React.Fragment>
-            }
-            id="guidelines-dropdown-example-2"
-            isIconButton={true}
-          />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <p
@@ -101,9 +158,41 @@ exports[`Documentation: Dropdown ContentGuidelines renders 1`] = `
           >
             Do
           </span>
-          <Dropdown
-            content={
-              <React.Fragment>
+          <div
+            className="dropdown anchor-top-left"
+            data-disable-default-keyboard-nav={null}
+            id="guidelines-dropdown-example-3"
+          >
+            
+
+            <div
+              className="toggle-menu-container"
+            >
+              
+
+              <button
+                aria-label="dropdown button"
+                className="dropdown-toggle dropdown-toggle-icon"
+                type="button"
+              >
+                
+
+                <i
+                  className="material-icons"
+                >
+                  more_vert
+                </i>
+                
+
+              </button>
+              
+
+              <div
+                aria-labelledby="dropdownToggle"
+                className="dropdown-menu"
+              >
+                
+
                 <a
                   href="#"
                   onClick={[Function]}
@@ -116,17 +205,14 @@ exports[`Documentation: Dropdown ContentGuidelines renders 1`] = `
                 >
                   Edit list
                 </a>
-              </React.Fragment>
-            }
-            id="guidelines-dropdown-example-3"
-            isIconButton={true}
-          />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div
         className="col-lg-6 col-sm-12"
         data-i="If a Dropdown container contains list of actions or options, they should be scannable. Avoid unnecessary words such as “the”, “an”, or “a”."
-        key="If a Dropdown container contains list of actions or options, they should be scannable. Avoid unnecessary words such as “the”, “an”, or “a”."
       >
         <div
           className="slab slab-plain slab-border-error pb-5"
@@ -137,9 +223,41 @@ exports[`Documentation: Dropdown ContentGuidelines renders 1`] = `
             Do
             n't
           </span>
-          <Dropdown
-            content={
-              <React.Fragment>
+          <div
+            className="dropdown anchor-top-left"
+            data-disable-default-keyboard-nav={null}
+            id="guidelines-dropdown-example-4"
+          >
+            
+
+            <div
+              className="toggle-menu-container"
+            >
+              
+
+              <button
+                aria-label="dropdown button"
+                className="dropdown-toggle dropdown-toggle-icon"
+                type="button"
+              >
+                
+
+                <i
+                  className="material-icons"
+                >
+                  more_vert
+                </i>
+                
+
+              </button>
+              
+
+              <div
+                aria-labelledby="dropdownToggle"
+                className="dropdown-menu"
+              >
+                
+
                 <a
                   href="#"
                   onClick={[Function]}
@@ -152,11 +270,9 @@ exports[`Documentation: Dropdown ContentGuidelines renders 1`] = `
                 >
                   Edit the list
                 </a>
-              </React.Fragment>
-            }
-            id="guidelines-dropdown-example-4"
-            isIconButton={true}
-          />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <p
@@ -181,10 +297,11 @@ exports[`Documentation: Dropdown DeveloperDocumentation renders 1`] = `
   </h3>
   <p>
     Use 
-    <CodeTags
-      code="dg.dropdown.init()"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      dg.dropdown.init()
+    </code>
      to initialize all dropdowns. This will open and close the dropdowns automatically.
   </p>
   <h3>
@@ -192,10 +309,11 @@ exports[`Documentation: Dropdown DeveloperDocumentation renders 1`] = `
   </h3>
   <p>
     By default, keyboard navigation is implemented in the script. If your dropdown includes solely buttons or anchor-tags, you can use arrow naivigation between elements. If your 
-    <CodeTags
-      code=".dropdown-menu"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      .dropdown-menu
+    </code>
      consist of other components, arrow down will give focus to the first element of the menu.
   </p>
 </section>

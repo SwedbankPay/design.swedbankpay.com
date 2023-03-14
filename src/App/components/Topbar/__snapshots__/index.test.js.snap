@@ -1,1835 +1,1129 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Topbar - logo prevents default when clicked 1`] = `
-<Topbar>
-  <header
-    className="topbar"
-  >
-    
-
-    <TopbarLogo>
-      <a
-        aria-label="To homepage"
-        className="topbar-logo"
-        href="/"
-        onClick={[Function]}
-      >
-        
-
-        <img
-          alt="TESTBRAND logo"
-          className="logotype-vertical logotype-sm"
-          src="/TEST/img/logo/TESTBRAND-logo.svg"
-        />
-        
-
-      </a>
-      
-
-    </TopbarLogo>
-  </header>
-</Topbar>
-`;
-
-exports[`Component: Topbar - props logout prevents default when clicked 1`] = `
-<Topbar
-  logout={true}
->
-  <header
-    className="topbar"
-  >
-    
-
-    <TopbarLogo>
-      <a
-        aria-label="To homepage"
-        className="topbar-logo"
-        href="/"
-        onClick={[Function]}
-      >
-        
-
-        <img
-          alt="TESTBRAND logo"
-          className="logotype-vertical logotype-sm"
-          src="/TEST/img/logo/TESTBRAND-logo.svg"
-        />
-        
-
-      </a>
-      
-
-    </TopbarLogo>
-    <TopbarLogout>
-      <a
-        className="topbar-link-right"
-        href="#"
-        onClick={[Function]}
-      >
-        
-
-        <i
-          className="material-icons"
-        >
-          exit_to_app
-        </i>
-        
-
-        <span>
-          Log out
-        </span>
-        
-
-      </a>
-      
-
-    </TopbarLogout>
-  </header>
-</Topbar>
-`;
-
 exports[`Component: Topbar - props logout renders logout link and adds topbar-link-right to the logout 1`] = `
-<Topbar
-  logout={true}
+<header
+  className="topbar"
 >
-  <header
-    className="topbar"
+  
+
+  <a
+    aria-label="To homepage"
+    className="topbar-logo"
+    href="/"
+    onClick={[Function]}
   >
     
 
-    <TopbarLogo>
-      <a
-        aria-label="To homepage"
-        className="topbar-logo"
-        href="/"
-        onClick={[Function]}
-      >
-        
+    <img
+      alt="TESTBRAND logo"
+      className="logotype-vertical logotype-sm"
+      src="/TEST/img/logo/TESTBRAND-logo.svg"
+    />
+    
 
-        <img
-          alt="TESTBRAND logo"
-          className="logotype-vertical logotype-sm"
-          src="/TEST/img/logo/TESTBRAND-logo.svg"
-        />
-        
+  </a>
+  
 
-      </a>
-      
-
-    </TopbarLogo>
-    <TopbarLogout>
-      <a
-        className="topbar-link-right"
-        href="#"
-        onClick={[Function]}
-      >
-        
-
-        <i
-          className="material-icons"
-        >
-          exit_to_app
-        </i>
-        
-
-        <span>
-          Log out
-        </span>
-        
-
-      </a>
-      
-
-    </TopbarLogout>
-  </header>
-</Topbar>
-`;
-
-exports[`Component: Topbar - props topbarContent menu links prevents default when clicked 1`] = `
-<Topbar
-  topbarContent={
-    Object {
-      "items": Array [
-        Object {
-          "icon": "home",
-          "name": "Home",
-        },
-        Object {
-          "icon": "shopping_cart",
-          "name": "Purchase history",
-        },
-        Object {
-          "icon": "settings",
-          "name": "Settings",
-        },
-      ],
-    }
-  }
->
-  <header
-    className="topbar"
+  <a
+    className="topbar-link-right"
+    href="#"
+    onClick={[Function]}
   >
     
 
-    <div
-      className="nav-container"
+    <i
+      className="material-icons"
     >
-      
+      exit_to_app
+    </i>
+    
 
-      <TopbarBtn>
-        <button
-          aria-controls="topbar-nav"
-          aria-expanded="false"
-          aria-haspopup="menu"
-          aria-label="Open menu"
-          className="topbar-btn"
-          type="button"
-        >
-          
-		
-          <i
-            className="material-icons topbar-btn-icon"
-          >
-            menu
-          </i>
-          
-		
-        </button>
-        <button
-          aria-label="Close menu"
-          className="topbar-close"
-          type="button"
-        >
-          
+    <span>
+      Log out
+    </span>
+    
 
-          <i
-            className="material-icons topbar-btn-icon"
-          >
-            close
-          </i>
-          
-		
-        </button>
-      </TopbarBtn>
-      
+  </a>
+  
 
-      <TopbarLogo>
-        <a
-          aria-label="To homepage"
-          className="topbar-logo"
-          href="/"
-          onClick={[Function]}
-        >
-          
-
-          <img
-            alt="TESTBRAND logo"
-            className="logotype-vertical logotype-sm"
-            src="/TEST/img/logo/TESTBRAND-logo.svg"
-          />
-          
-
-        </a>
-        
-
-      </TopbarLogo>
-      <TopbarMenu
-        logout={false}
-        menu={
-          Object {
-            "items": Array [
-              Object {
-                "icon": "home",
-                "name": "Home",
-              },
-              Object {
-                "icon": "shopping_cart",
-                "name": "Purchase history",
-              },
-              Object {
-                "icon": "settings",
-                "name": "Settings",
-              },
-            ],
-          }
-        }
-      >
-        <nav
-          className="topbar-nav"
-        >
-          <div
-            className="topbar-link-container"
-          >
-            
-
-            <a
-              className="active"
-              href="#"
-              onClick={[Function]}
-            >
-              
-
-              <i
-                className="material-icons"
-              >
-                home
-              </i>
-              
-
-              <span>
-                Home
-              </span>
-              
-
-            </a>
-            
-
-            <a
-              className={null}
-              href="#"
-              onClick={[Function]}
-            >
-              
-
-              <i
-                className="material-icons"
-              >
-                shopping_cart
-              </i>
-              
-
-              <span>
-                Purchase history
-              </span>
-              
-
-            </a>
-            
-
-            <a
-              className={null}
-              href="#"
-              onClick={[Function]}
-            >
-              
-
-              <i
-                className="material-icons"
-              >
-                settings
-              </i>
-              
-
-              <span>
-                Settings
-              </span>
-              
-
-            </a>
-            
-
-          </div>
-        </nav>
-      </TopbarMenu>
-    </div>
-  </header>
-</Topbar>
+</header>
 `;
 
 exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-link-container when sidebar prop is true 1`] = `
-<Topbar
-  sidebar={true}
-  topbarContent={
-    Object {
-      "items": Array [
-        Object {
-          "icon": "home",
-          "name": "Home",
-        },
-        Object {
-          "icon": "shopping_cart",
-          "name": "Purchase history",
-        },
-        Object {
-          "icon": "settings",
-          "name": "Settings",
-        },
-      ],
-    }
-  }
+<header
+  className="topbar"
 >
-  <header
-    className="topbar"
+  
+
+  <div
+    className="nav-container"
   >
     
 
-    <div
-      className="nav-container"
+    <button
+      aria-controls="topbar-nav"
+      aria-expanded="false"
+      aria-haspopup="menu"
+      aria-label="Open menu"
+      className="topbar-btn"
+      type="button"
+    >
+      
+		
+      <i
+        className="material-icons topbar-btn-icon"
+      >
+        menu
+      </i>
+      
+		
+    </button>
+    <button
+      aria-label="Close menu"
+      className="topbar-close"
+      type="button"
     >
       
 
-      <TopbarBtn>
-        <button
-          aria-controls="topbar-nav"
-          aria-expanded="false"
-          aria-haspopup="menu"
-          aria-label="Open menu"
-          className="topbar-btn"
-          type="button"
-        >
-          
+      <i
+        className="material-icons topbar-btn-icon"
+      >
+        close
+      </i>
+      
 		
-          <i
-            className="material-icons topbar-btn-icon"
-          >
-            menu
-          </i>
-          
-		
-        </button>
-        <button
-          aria-label="Close menu"
-          className="topbar-close"
-          type="button"
-        >
-          
+    </button>
+    
 
-          <i
-            className="material-icons topbar-btn-icon"
-          >
-            close
-          </i>
-          
-		
-        </button>
-      </TopbarBtn>
+    <a
+      aria-label="To homepage"
+      className="topbar-logo"
+      href="/"
+      onClick={[Function]}
+    >
       
 
-      <TopbarLogo>
+      <img
+        alt="TESTBRAND logo"
+        className="logotype-vertical logotype-sm"
+        src="/TEST/img/logo/TESTBRAND-logo.svg"
+      />
+      
+
+    </a>
+    
+
+    <nav
+      className="topbar-nav"
+    >
+      <div
+        className="topbar-link-container"
+      >
+        
+
         <a
-          aria-label="To homepage"
-          className="topbar-logo"
-          href="/"
+          className="active"
+          href="#"
           onClick={[Function]}
         >
           
 
-          <img
-            alt="TESTBRAND logo"
-            className="logotype-vertical logotype-sm"
-            src="/TEST/img/logo/TESTBRAND-logo.svg"
-          />
+          <i
+            className="material-icons"
+          >
+            home
+          </i>
+          
+
+          <span>
+            Home
+          </span>
           
 
         </a>
-        
-
-      </TopbarLogo>
-      <TopbarMenu
-        logout={false}
-        menu={
-          Object {
-            "items": Array [
-              Object {
-                "icon": "home",
-                "name": "Home",
-              },
-              Object {
-                "icon": "shopping_cart",
-                "name": "Purchase history",
-              },
-              Object {
-                "icon": "settings",
-                "name": "Settings",
-              },
-            ],
-          }
-        }
-        sidebar={true}
-      >
-        <nav
-          className="topbar-nav"
+        <div
+          className="sidebar"
+          id="topbar-sidebar"
         >
-          <div
-            className="topbar-link-container"
+          <nav
+            className="sidebar-main-nav"
           >
-            
-
-            <a
-              className="active"
-              href="#"
-              onClick={[Function]}
+            <div
+              className="sidebar-logo"
             >
               
 
-              <i
-                className="material-icons"
+              <a
+                aria-label="To homepage"
+                href="/"
               >
-                home
-              </i>
-              
+                
 
-              <span>
-                Home
-              </span>
-              
+                <img
+                  alt="TESTBRAND vertical logo"
+                  className="logotype-vertical logotype-md"
+                  src="/TEST/img/logo/TESTBRAND-logo-v.svg"
+                />
+                
 
-            </a>
-            <Sidebar
-              id="topbar-sidebar"
-              navList={
-                Array [
-                  Object {
-                    "icon": <i
-                      aria-hidden="true"
-                      className="material-icons-outlined"
+              </a>
+            </div>
+            <ul
+              className="main-nav-ul"
+            >
+              <li
+                className="main-nav-li active"
+              >
+                
+
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  
+
+                  <i
+                    aria-hidden="true"
+                    className="material-icons-outlined"
+                  >
+                    home
+                  </i>
+                  
+
+                  Home Page
+                  
+
+                </a>
+              </li>
+              <li
+                className="main-nav-li"
+              >
+                
+
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  
+
+                  <i
+                    aria-hidden="true"
+                    className="material-icons-outlined rotated"
+                  >
+                    wb_incandescent
+                  </i>
+                  
+
+                  Get Started
+                  
+
+                </a>
+                <nav
+                  className="sidebar-secondary-nav"
+                >
+                  <header
+                    className="secondary-nav-header"
+                  >
+                    Get Started
+                  </header>
+                  <ul
+                    className="secondary-nav-ul"
+                  >
+                    <li
+                      className="secondary-nav-li leaf"
                     >
-                      home
-                    </i>,
-                    "title": "Home Page",
-                  },
-                  Object {
-                    "children": Array [
-                      Object {
-                        "icon": <i
+                      
+
+                      <a
+                        href="#"
+                        onClick={[Function]}
+                      >
+                        <i
                           aria-hidden="true"
                           className="material-icons-outlined rotated"
                         >
                           accessibility
-                        </i>,
-                        "title": "Accessibility",
-                      },
-                      Object {
-                        "children": Array [
-                          Object {
-                            "title": "Primary colors",
-                          },
-                          Object {
-                            "title": "Secondary colors",
-                          },
-                          Object {
-                            "title": "Tertiary colors",
-                          },
-                        ],
-                        "group": true,
-                        "icon": <i
+                        </i>
+                        Accessibility
+                      </a>
+                    </li>
+                    <li
+                      className="secondary-nav-li group"
+                    >
+                      
+
+                      <a
+                        href="#"
+                        onClick={[Function]}
+                      >
+                        <i
                           aria-hidden="true"
                           className="material-icons-outlined rotated"
                         >
                           palette
-                        </i>,
-                        "title": "Colors",
-                      },
-                      Object {
-                        "icon": <i
+                        </i>
+                        Colors
+                      </a>
+                      <ul
+                        aria-expanded={true}
+                      >
+                        
+
+                        <li
+                          className="nav-leaf"
+                        >
+                          
+
+                          <a
+                            href="#"
+                            onClick={[Function]}
+                          >
+                            Primary colors
+                          </a>
+                        </li>
+                        <li
+                          className="nav-leaf"
+                        >
+                          
+
+                          <a
+                            href="#"
+                            onClick={[Function]}
+                          >
+                            Secondary colors
+                          </a>
+                        </li>
+                        <li
+                          className="nav-leaf"
+                        >
+                          
+
+                          <a
+                            href="#"
+                            onClick={[Function]}
+                          >
+                            Tertiary colors
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li
+                      className="secondary-nav-li leaf"
+                    >
+                      
+
+                      <a
+                        href="#"
+                        onClick={[Function]}
+                      >
+                        <i
                           aria-hidden="true"
                           className="material-icons-outlined rotated"
                         >
                           grid_on
-                        </i>,
-                        "title": "Grid",
-                      },
-                      Object {
-                        "icon": <i
+                        </i>
+                        Grid
+                      </a>
+                    </li>
+                    <li
+                      className="secondary-nav-li leaf"
+                    >
+                      
+
+                      <a
+                        href="#"
+                        onClick={[Function]}
+                      >
+                        <i
                           aria-hidden="true"
                           className="material-icons-outlined rotated"
                         >
                           space_bar
-                        </i>,
-                        "title": "Spacing",
-                      },
-                    ],
-                    "icon": <i
-                      aria-hidden="true"
-                      className="material-icons-outlined rotated"
-                    >
-                      wb_incandescent
-                    </i>,
-                    "title": "Get Started",
-                  },
-                  Object {
-                    "children": Array [
-                      Object {
-                        "title": "Introduction",
-                      },
-                      Object {
-                        "children": Array [
-                          Object {
-                            "title": "Event 1",
-                          },
-                          Object {
-                            "title": "Event 2",
-                          },
-                          Object {
-                            "title": "Event 3",
-                          },
-                        ],
-                        "group": true,
-                        "title": "Events",
-                      },
-                      Object {
-                        "title": "Conclusion",
-                      },
-                    ],
-                    "icon": <i
-                      aria-hidden="true"
-                      className="material-icons-outlined"
-                    >
-                      palette
-                    </i>,
-                    "title": "Identity",
-                  },
-                ]
-              }
-            >
-              <div
-                className="sidebar"
-                id="topbar-sidebar"
-              >
-                <nav
-                  className="sidebar-main-nav"
-                >
-                  <div
-                    className="sidebar-logo"
-                  >
-                    
-
-                    <a
-                      aria-label="To homepage"
-                      href="/"
-                    >
-                      
-
-                      <Logotype
-                        alt="TESTBRAND vertical logo"
-                        size="md"
-                        src="/TEST/img/logo/TESTBRAND-logo-v.svg"
-                        type="vertical"
-                      >
-                        <img
-                          alt="TESTBRAND vertical logo"
-                          className="logotype-vertical logotype-md"
-                          src="/TEST/img/logo/TESTBRAND-logo-v.svg"
-                        />
-                      </Logotype>
-                      
-
-                    </a>
-                  </div>
-                  <ul
-                    className="main-nav-ul"
-                  >
-                    <li
-                      className="main-nav-li active"
-                      key="Home Page"
-                    >
-                      
-
-                      <a
-                        href="#"
-                        onClick={[Function]}
-                      >
-                        
-
-                        <i
-                          aria-hidden="true"
-                          className="material-icons-outlined"
-                        >
-                          home
                         </i>
-                        
-
-                        Home Page
-                        
-
+                        Spacing
                       </a>
-                    </li>
-                    <li
-                      className="main-nav-li"
-                      key="Get Started"
-                    >
-                      
-
-                      <a
-                        href="#"
-                        onClick={[Function]}
-                      >
-                        
-
-                        <i
-                          aria-hidden="true"
-                          className="material-icons-outlined rotated"
-                        >
-                          wb_incandescent
-                        </i>
-                        
-
-                        Get Started
-                        
-
-                      </a>
-                      <nav
-                        className="sidebar-secondary-nav"
-                      >
-                        <header
-                          className="secondary-nav-header"
-                        >
-                          Get Started
-                        </header>
-                        <ul
-                          className="secondary-nav-ul"
-                        >
-                          <li
-                            className="secondary-nav-li leaf"
-                            key="Accessibility0"
-                          >
-                            
-
-                            <a
-                              href="#"
-                              onClick={[Function]}
-                            >
-                              <i
-                                aria-hidden="true"
-                                className="material-icons-outlined rotated"
-                              >
-                                accessibility
-                              </i>
-                              Accessibility
-                            </a>
-                          </li>
-                          <li
-                            className="secondary-nav-li group"
-                            key="Colors1"
-                          >
-                            
-
-                            <a
-                              href="#"
-                              onClick={[Function]}
-                            >
-                              <i
-                                aria-hidden="true"
-                                className="material-icons-outlined rotated"
-                              >
-                                palette
-                              </i>
-                              Colors
-                            </a>
-                            <AddNewLevel
-                              currentNav={
-                                Object {
-                                  "children": Array [
-                                    Object {
-                                      "title": "Primary colors",
-                                    },
-                                    Object {
-                                      "title": "Secondary colors",
-                                    },
-                                    Object {
-                                      "title": "Tertiary colors",
-                                    },
-                                  ],
-                                  "group": true,
-                                  "icon": <i
-                                    aria-hidden="true"
-                                    className="material-icons-outlined rotated"
-                                  >
-                                    palette
-                                  </i>,
-                                  "title": "Colors",
-                                }
-                              }
-                              previousTitle="Get Started"
-                            >
-                              <ul
-                                aria-expanded={true}
-                              >
-                                
-
-                                <li
-                                  className="nav-leaf"
-                                  key="Primary colors0"
-                                >
-                                  
-
-                                  <a
-                                    href="#"
-                                    onClick={[Function]}
-                                  >
-                                    Primary colors
-                                  </a>
-                                </li>
-                                <li
-                                  className="nav-leaf"
-                                  key="Secondary colors1"
-                                >
-                                  
-
-                                  <a
-                                    href="#"
-                                    onClick={[Function]}
-                                  >
-                                    Secondary colors
-                                  </a>
-                                </li>
-                                <li
-                                  className="nav-leaf"
-                                  key="Tertiary colors2"
-                                >
-                                  
-
-                                  <a
-                                    href="#"
-                                    onClick={[Function]}
-                                  >
-                                    Tertiary colors
-                                  </a>
-                                </li>
-                              </ul>
-                            </AddNewLevel>
-                          </li>
-                          <li
-                            className="secondary-nav-li leaf"
-                            key="Grid2"
-                          >
-                            
-
-                            <a
-                              href="#"
-                              onClick={[Function]}
-                            >
-                              <i
-                                aria-hidden="true"
-                                className="material-icons-outlined rotated"
-                              >
-                                grid_on
-                              </i>
-                              Grid
-                            </a>
-                          </li>
-                          <li
-                            className="secondary-nav-li leaf"
-                            key="Spacing3"
-                          >
-                            
-
-                            <a
-                              href="#"
-                              onClick={[Function]}
-                            >
-                              <i
-                                aria-hidden="true"
-                                className="material-icons-outlined rotated"
-                              >
-                                space_bar
-                              </i>
-                              Spacing
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
-                    </li>
-                    <li
-                      className="main-nav-li"
-                      key="Identity"
-                    >
-                      
-
-                      <a
-                        href="#"
-                        onClick={[Function]}
-                      >
-                        
-
-                        <i
-                          aria-hidden="true"
-                          className="material-icons-outlined"
-                        >
-                          palette
-                        </i>
-                        
-
-                        Identity
-                        
-
-                      </a>
-                      <nav
-                        className="sidebar-secondary-nav"
-                      >
-                        <header
-                          className="secondary-nav-header"
-                        >
-                          Identity
-                        </header>
-                        <ul
-                          className="secondary-nav-ul"
-                        >
-                          <li
-                            className="secondary-nav-li leaf"
-                            key="Introduction0"
-                          >
-                            
-
-                            <a
-                              href="#"
-                              onClick={[Function]}
-                            >
-                              Introduction
-                            </a>
-                          </li>
-                          <li
-                            className="secondary-nav-li group"
-                            key="Events1"
-                          >
-                            
-
-                            <a
-                              href="#"
-                              onClick={[Function]}
-                            >
-                              Events
-                            </a>
-                            <AddNewLevel
-                              currentNav={
-                                Object {
-                                  "children": Array [
-                                    Object {
-                                      "title": "Event 1",
-                                    },
-                                    Object {
-                                      "title": "Event 2",
-                                    },
-                                    Object {
-                                      "title": "Event 3",
-                                    },
-                                  ],
-                                  "group": true,
-                                  "title": "Events",
-                                }
-                              }
-                              previousTitle="Identity"
-                            >
-                              <ul
-                                aria-expanded={true}
-                              >
-                                
-
-                                <li
-                                  className="nav-leaf"
-                                  key="Event 10"
-                                >
-                                  
-
-                                  <a
-                                    href="#"
-                                    onClick={[Function]}
-                                  >
-                                    Event 1
-                                  </a>
-                                </li>
-                                <li
-                                  className="nav-leaf"
-                                  key="Event 21"
-                                >
-                                  
-
-                                  <a
-                                    href="#"
-                                    onClick={[Function]}
-                                  >
-                                    Event 2
-                                  </a>
-                                </li>
-                                <li
-                                  className="nav-leaf"
-                                  key="Event 32"
-                                >
-                                  
-
-                                  <a
-                                    href="#"
-                                    onClick={[Function]}
-                                  >
-                                    Event 3
-                                  </a>
-                                </li>
-                              </ul>
-                            </AddNewLevel>
-                          </li>
-                          <li
-                            className="secondary-nav-li leaf"
-                            key="Conclusion2"
-                          >
-                            
-
-                            <a
-                              href="#"
-                              onClick={[Function]}
-                            >
-                              Conclusion
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
                     </li>
                   </ul>
                 </nav>
-              </div>
-            </Sidebar>
-            
-
-            <a
-              className={null}
-              href="#"
-              onClick={[Function]}
-            >
-              
-
-              <i
-                className="material-icons"
+              </li>
+              <li
+                className="main-nav-li"
               >
-                shopping_cart
-              </i>
-              
+                
 
-              <span>
-                Purchase history
-              </span>
-              
+                <a
+                  href="#"
+                  onClick={[Function]}
+                >
+                  
 
-            </a>
-            
+                  <i
+                    aria-hidden="true"
+                    className="material-icons-outlined"
+                  >
+                    palette
+                  </i>
+                  
 
-            <a
-              className={null}
-              href="#"
-              onClick={[Function]}
-            >
-              
+                  Identity
+                  
 
-              <i
-                className="material-icons"
-              >
-                settings
-              </i>
-              
+                </a>
+                <nav
+                  className="sidebar-secondary-nav"
+                >
+                  <header
+                    className="secondary-nav-header"
+                  >
+                    Identity
+                  </header>
+                  <ul
+                    className="secondary-nav-ul"
+                  >
+                    <li
+                      className="secondary-nav-li leaf"
+                    >
+                      
 
-              <span>
-                Settings
-              </span>
-              
+                      <a
+                        href="#"
+                        onClick={[Function]}
+                      >
+                        Introduction
+                      </a>
+                    </li>
+                    <li
+                      className="secondary-nav-li group"
+                    >
+                      
 
-            </a>
-            
+                      <a
+                        href="#"
+                        onClick={[Function]}
+                      >
+                        Events
+                      </a>
+                      <ul
+                        aria-expanded={true}
+                      >
+                        
 
-          </div>
-        </nav>
-      </TopbarMenu>
-    </div>
-  </header>
-</Topbar>
+                        <li
+                          className="nav-leaf"
+                        >
+                          
+
+                          <a
+                            href="#"
+                            onClick={[Function]}
+                          >
+                            Event 1
+                          </a>
+                        </li>
+                        <li
+                          className="nav-leaf"
+                        >
+                          
+
+                          <a
+                            href="#"
+                            onClick={[Function]}
+                          >
+                            Event 2
+                          </a>
+                        </li>
+                        <li
+                          className="nav-leaf"
+                        >
+                          
+
+                          <a
+                            href="#"
+                            onClick={[Function]}
+                          >
+                            Event 3
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li
+                      className="secondary-nav-li leaf"
+                    >
+                      
+
+                      <a
+                        href="#"
+                        onClick={[Function]}
+                      >
+                        Conclusion
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        
+
+        <a
+          className={null}
+          href="#"
+          onClick={[Function]}
+        >
+          
+
+          <i
+            className="material-icons"
+          >
+            shopping_cart
+          </i>
+          
+
+          <span>
+            Purchase history
+          </span>
+          
+
+        </a>
+        
+
+        <a
+          className={null}
+          href="#"
+          onClick={[Function]}
+        >
+          
+
+          <i
+            className="material-icons"
+          >
+            settings
+          </i>
+          
+
+          <span>
+            Settings
+          </span>
+          
+
+        </a>
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
 `;
 
 exports[`Component: Topbar - props topbarContent renders a topbar menu without menu icons 1`] = `
-<Topbar
-  topbarContent={
-    Object {
-      "items": Array [
-        Object {
-          "name": "Home",
-        },
-        Object {
-          "name": "Purchase history",
-        },
-        Object {
-          "name": "Settings",
-        },
-      ],
-    }
-  }
+<header
+  className="topbar"
 >
-  <header
-    className="topbar"
+  
+
+  <div
+    className="nav-container"
   >
     
 
-    <div
-      className="nav-container"
+    <button
+      aria-controls="topbar-nav"
+      aria-expanded="false"
+      aria-haspopup="menu"
+      aria-label="Open menu"
+      className="topbar-btn"
+      type="button"
+    >
+      
+		
+      <i
+        className="material-icons topbar-btn-icon"
+      >
+        menu
+      </i>
+      
+		
+    </button>
+    <button
+      aria-label="Close menu"
+      className="topbar-close"
+      type="button"
     >
       
 
-      <TopbarBtn>
-        <button
-          aria-controls="topbar-nav"
-          aria-expanded="false"
-          aria-haspopup="menu"
-          aria-label="Open menu"
-          className="topbar-btn"
-          type="button"
-        >
-          
+      <i
+        className="material-icons topbar-btn-icon"
+      >
+        close
+      </i>
+      
 		
-          <i
-            className="material-icons topbar-btn-icon"
-          >
-            menu
-          </i>
-          
-		
-        </button>
-        <button
-          aria-label="Close menu"
-          className="topbar-close"
-          type="button"
-        >
-          
+    </button>
+    
 
-          <i
-            className="material-icons topbar-btn-icon"
-          >
-            close
-          </i>
-          
-		
-        </button>
-      </TopbarBtn>
+    <a
+      aria-label="To homepage"
+      className="topbar-logo"
+      href="/"
+      onClick={[Function]}
+    >
       
 
-      <TopbarLogo>
+      <img
+        alt="TESTBRAND logo"
+        className="logotype-vertical logotype-sm"
+        src="/TEST/img/logo/TESTBRAND-logo.svg"
+      />
+      
+
+    </a>
+    
+
+    <nav
+      className="topbar-nav"
+    >
+      <div
+        className="topbar-link-container"
+      >
+        
+
         <a
-          aria-label="To homepage"
-          className="topbar-logo"
-          href="/"
+          className="active"
+          href="#"
           onClick={[Function]}
         >
           
 
-          <img
-            alt="TESTBRAND logo"
-            className="logotype-vertical logotype-sm"
-            src="/TEST/img/logo/TESTBRAND-logo.svg"
-          />
+          
+
+          <span>
+            Home
+          </span>
           
 
         </a>
         
 
-      </TopbarLogo>
-      <TopbarMenu
-        logout={false}
-        menu={
-          Object {
-            "items": Array [
-              Object {
-                "name": "Home",
-              },
-              Object {
-                "name": "Purchase history",
-              },
-              Object {
-                "name": "Settings",
-              },
-            ],
-          }
-        }
-      >
-        <nav
-          className="topbar-nav"
+        <a
+          className={null}
+          href="#"
+          onClick={[Function]}
         >
-          <div
-            className="topbar-link-container"
-          >
-            
+          
 
-            <a
-              className="active"
-              href="#"
-              onClick={[Function]}
-            >
-              
+          
 
-              
+          <span>
+            Purchase history
+          </span>
+          
 
-              <span>
-                Home
-              </span>
-              
+        </a>
+        
 
-            </a>
-            
+        <a
+          className={null}
+          href="#"
+          onClick={[Function]}
+        >
+          
 
-            <a
-              className={null}
-              href="#"
-              onClick={[Function]}
-            >
-              
+          
 
-              
+          <span>
+            Settings
+          </span>
+          
 
-              <span>
-                Purchase history
-              </span>
-              
+        </a>
+        
 
-            </a>
-            
-
-            <a
-              className={null}
-              href="#"
-              onClick={[Function]}
-            >
-              
-
-              
-
-              <span>
-                Settings
-              </span>
-              
-
-            </a>
-            
-
-          </div>
-        </nav>
-      </TopbarMenu>
-    </div>
-  </header>
-</Topbar>
+      </div>
+    </nav>
+  </div>
+</header>
 `;
 
-exports[`Component: Topbar - props topbarContent renders a topbar-menu-button when content is provided 1`] = `
-<Topbar
-  topbarContent={
-    Object {
-      "items": Array [
-        Object {
-          "icon": "home",
-          "name": "Home",
-        },
-        Object {
-          "icon": "shopping_cart",
-          "name": "Purchase history",
-        },
-        Object {
-          "icon": "settings",
-          "name": "Settings",
-        },
-      ],
-    }
-  }
+exports[`Component: Topbar - props topbarContent renders a topbar menuopen and close buttons when content is provided 1`] = `
+<header
+  className="topbar"
 >
-  <header
-    className="topbar"
+  
+
+  <div
+    className="nav-container"
   >
     
 
-    <div
-      className="nav-container"
+    <button
+      aria-controls="topbar-nav"
+      aria-expanded="false"
+      aria-haspopup="menu"
+      aria-label="Open menu"
+      className="topbar-btn"
+      type="button"
+    >
+      
+		
+      <i
+        className="material-icons topbar-btn-icon"
+      >
+        menu
+      </i>
+      
+		
+    </button>
+    <button
+      aria-label="Close menu"
+      className="topbar-close"
+      type="button"
     >
       
 
-      <TopbarBtn>
-        <button
-          aria-controls="topbar-nav"
-          aria-expanded="false"
-          aria-haspopup="menu"
-          aria-label="Open menu"
-          className="topbar-btn"
-          type="button"
-        >
-          
+      <i
+        className="material-icons topbar-btn-icon"
+      >
+        close
+      </i>
+      
 		
-          <i
-            className="material-icons topbar-btn-icon"
-          >
-            menu
-          </i>
-          
-		
-        </button>
-        <button
-          aria-label="Close menu"
-          className="topbar-close"
-          type="button"
-        >
-          
+    </button>
+    
 
-          <i
-            className="material-icons topbar-btn-icon"
-          >
-            close
-          </i>
-          
-		
-        </button>
-      </TopbarBtn>
+    <a
+      aria-label="To homepage"
+      className="topbar-logo"
+      href="/"
+      onClick={[Function]}
+    >
       
 
-      <TopbarLogo>
+      <img
+        alt="TESTBRAND logo"
+        className="logotype-vertical logotype-sm"
+        src="/TEST/img/logo/TESTBRAND-logo.svg"
+      />
+      
+
+    </a>
+    
+
+    <nav
+      className="topbar-nav"
+    >
+      <div
+        className="topbar-link-container"
+      >
+        
+
         <a
-          aria-label="To homepage"
-          className="topbar-logo"
-          href="/"
+          className="active"
+          href="#"
           onClick={[Function]}
         >
           
 
-          <img
-            alt="TESTBRAND logo"
-            className="logotype-vertical logotype-sm"
-            src="/TEST/img/logo/TESTBRAND-logo.svg"
-          />
+          <i
+            className="material-icons"
+          >
+            home
+          </i>
+          
+
+          <span>
+            Home
+          </span>
           
 
         </a>
         
 
-      </TopbarLogo>
-      <TopbarMenu
-        logout={false}
-        menu={
-          Object {
-            "items": Array [
-              Object {
-                "icon": "home",
-                "name": "Home",
-              },
-              Object {
-                "icon": "shopping_cart",
-                "name": "Purchase history",
-              },
-              Object {
-                "icon": "settings",
-                "name": "Settings",
-              },
-            ],
-          }
-        }
-      >
-        <nav
-          className="topbar-nav"
+        <a
+          className={null}
+          href="#"
+          onClick={[Function]}
         >
-          <div
-            className="topbar-link-container"
+          
+
+          <i
+            className="material-icons"
           >
-            
+            shopping_cart
+          </i>
+          
 
-            <a
-              className="active"
-              href="#"
-              onClick={[Function]}
-            >
-              
+          <span>
+            Purchase history
+          </span>
+          
 
-              <i
-                className="material-icons"
-              >
-                home
-              </i>
-              
+        </a>
+        
 
-              <span>
-                Home
-              </span>
-              
+        <a
+          className={null}
+          href="#"
+          onClick={[Function]}
+        >
+          
 
-            </a>
-            
+          <i
+            className="material-icons"
+          >
+            settings
+          </i>
+          
 
-            <a
-              className={null}
-              href="#"
-              onClick={[Function]}
-            >
-              
+          <span>
+            Settings
+          </span>
+          
 
-              <i
-                className="material-icons"
-              >
-                shopping_cart
-              </i>
-              
+        </a>
+        
 
-              <span>
-                Purchase history
-              </span>
-              
-
-            </a>
-            
-
-            <a
-              className={null}
-              href="#"
-              onClick={[Function]}
-            >
-              
-
-              <i
-                className="material-icons"
-              >
-                settings
-              </i>
-              
-
-              <span>
-                Settings
-              </span>
-              
-
-            </a>
-            
-
-          </div>
-        </nav>
-      </TopbarMenu>
-    </div>
-  </header>
-</Topbar>
+      </div>
+    </nav>
+  </div>
+</header>
 `;
 
 exports[`Component: Topbar - props topbarContent renders topbar-link-container and a logout link 1`] = `
-<Topbar
-  logout={true}
-  topbarContent={
-    Object {
-      "items": Array [
-        Object {
-          "icon": "home",
-          "name": "Home",
-        },
-        Object {
-          "icon": "shopping_cart",
-          "name": "Purchase history",
-        },
-        Object {
-          "icon": "settings",
-          "name": "Settings",
-        },
-      ],
-    }
-  }
+<header
+  className="topbar"
 >
-  <header
-    className="topbar"
+  
+
+  <div
+    className="nav-container"
   >
     
 
-    <div
-      className="nav-container"
+    <button
+      aria-controls="topbar-nav"
+      aria-expanded="false"
+      aria-haspopup="menu"
+      aria-label="Open menu"
+      className="topbar-btn"
+      type="button"
+    >
+      
+		
+      <i
+        className="material-icons topbar-btn-icon"
+      >
+        menu
+      </i>
+      
+		
+    </button>
+    <button
+      aria-label="Close menu"
+      className="topbar-close"
+      type="button"
     >
       
 
-      <TopbarBtn>
-        <button
-          aria-controls="topbar-nav"
-          aria-expanded="false"
-          aria-haspopup="menu"
-          aria-label="Open menu"
-          className="topbar-btn"
-          type="button"
-        >
-          
+      <i
+        className="material-icons topbar-btn-icon"
+      >
+        close
+      </i>
+      
 		
-          <i
-            className="material-icons topbar-btn-icon"
-          >
-            menu
-          </i>
-          
-		
-        </button>
-        <button
-          aria-label="Close menu"
-          className="topbar-close"
-          type="button"
-        >
-          
+    </button>
+    
 
-          <i
-            className="material-icons topbar-btn-icon"
-          >
-            close
-          </i>
-          
-		
-        </button>
-      </TopbarBtn>
+    <a
+      aria-label="To homepage"
+      className="topbar-logo"
+      href="/"
+      onClick={[Function]}
+    >
       
 
-      <TopbarLogo>
+      <img
+        alt="TESTBRAND logo"
+        className="logotype-vertical logotype-sm"
+        src="/TEST/img/logo/TESTBRAND-logo.svg"
+      />
+      
+
+    </a>
+    
+
+    <nav
+      className="topbar-nav"
+    >
+      <div
+        className="topbar-link-container"
+      >
+        
+
         <a
-          aria-label="To homepage"
-          className="topbar-logo"
-          href="/"
+          className="active"
+          href="#"
           onClick={[Function]}
         >
           
 
-          <img
-            alt="TESTBRAND logo"
-            className="logotype-vertical logotype-sm"
-            src="/TEST/img/logo/TESTBRAND-logo.svg"
-          />
+          <i
+            className="material-icons"
+          >
+            home
+          </i>
+          
+
+          <span>
+            Home
+          </span>
           
 
         </a>
         
 
-      </TopbarLogo>
-      <TopbarMenu
-        logout={true}
-        menu={
-          Object {
-            "items": Array [
-              Object {
-                "icon": "home",
-                "name": "Home",
-              },
-              Object {
-                "icon": "shopping_cart",
-                "name": "Purchase history",
-              },
-              Object {
-                "icon": "settings",
-                "name": "Settings",
-              },
-            ],
-          }
-        }
-      >
-        <nav
-          className="topbar-nav"
+        <a
+          className={null}
+          href="#"
+          onClick={[Function]}
         >
-          <div
-            className="topbar-link-container"
+          
+
+          <i
+            className="material-icons"
           >
-            
+            shopping_cart
+          </i>
+          
 
-            <a
-              className="active"
-              href="#"
-              onClick={[Function]}
-            >
-              
+          <span>
+            Purchase history
+          </span>
+          
 
-              <i
-                className="material-icons"
-              >
-                home
-              </i>
-              
+        </a>
+        
 
-              <span>
-                Home
-              </span>
-              
+        <a
+          className={null}
+          href="#"
+          onClick={[Function]}
+        >
+          
 
-            </a>
-            
+          <i
+            className="material-icons"
+          >
+            settings
+          </i>
+          
 
-            <a
-              className={null}
-              href="#"
-              onClick={[Function]}
-            >
-              
+          <span>
+            Settings
+          </span>
+          
 
-              <i
-                className="material-icons"
-              >
-                shopping_cart
-              </i>
-              
+        </a>
+        
 
-              <span>
-                Purchase history
-              </span>
-              
+        <a
+          className="topbar-link-right"
+          href="#"
+          onClick={[Function]}
+        >
+          
 
-            </a>
-            
+          <i
+            className="material-icons"
+          >
+            exit_to_app
+          </i>
+          
 
-            <a
-              className={null}
-              href="#"
-              onClick={[Function]}
-            >
-              
+          <span>
+            Log out
+          </span>
+          
 
-              <i
-                className="material-icons"
-              >
-                settings
-              </i>
-              
+        </a>
+        
 
-              <span>
-                Settings
-              </span>
-              
-
-            </a>
-            
-
-            <TopbarLogout>
-              <a
-                className="topbar-link-right"
-                href="#"
-                onClick={[Function]}
-              >
-                
-
-                <i
-                  className="material-icons"
-                >
-                  exit_to_app
-                </i>
-                
-
-                <span>
-                  Log out
-                </span>
-                
-
-              </a>
-              
-
-            </TopbarLogout>
-          </div>
-        </nav>
-      </TopbarMenu>
-    </div>
-  </header>
-</Topbar>
+      </div>
+    </nav>
+  </div>
+</header>
 `;
 
 exports[`Component: Topbar - props topbarContent renders topbar-link-container and populates it with given information without a logout link 1`] = `
-<Topbar
-  topbarContent={
-    Object {
-      "items": Array [
-        Object {
-          "icon": "home",
-          "name": "Home",
-        },
-        Object {
-          "icon": "shopping_cart",
-          "name": "Purchase history",
-        },
-        Object {
-          "icon": "settings",
-          "name": "Settings",
-        },
-      ],
-    }
-  }
+<header
+  className="topbar"
 >
-  <header
-    className="topbar"
+  
+
+  <div
+    className="nav-container"
   >
     
 
-    <div
-      className="nav-container"
+    <button
+      aria-controls="topbar-nav"
+      aria-expanded="false"
+      aria-haspopup="menu"
+      aria-label="Open menu"
+      className="topbar-btn"
+      type="button"
+    >
+      
+		
+      <i
+        className="material-icons topbar-btn-icon"
+      >
+        menu
+      </i>
+      
+		
+    </button>
+    <button
+      aria-label="Close menu"
+      className="topbar-close"
+      type="button"
     >
       
 
-      <TopbarBtn>
-        <button
-          aria-controls="topbar-nav"
-          aria-expanded="false"
-          aria-haspopup="menu"
-          aria-label="Open menu"
-          className="topbar-btn"
-          type="button"
-        >
-          
+      <i
+        className="material-icons topbar-btn-icon"
+      >
+        close
+      </i>
+      
 		
-          <i
-            className="material-icons topbar-btn-icon"
-          >
-            menu
-          </i>
-          
-		
-        </button>
-        <button
-          aria-label="Close menu"
-          className="topbar-close"
-          type="button"
-        >
-          
+    </button>
+    
 
-          <i
-            className="material-icons topbar-btn-icon"
-          >
-            close
-          </i>
-          
-		
-        </button>
-      </TopbarBtn>
+    <a
+      aria-label="To homepage"
+      className="topbar-logo"
+      href="/"
+      onClick={[Function]}
+    >
       
 
-      <TopbarLogo>
+      <img
+        alt="TESTBRAND logo"
+        className="logotype-vertical logotype-sm"
+        src="/TEST/img/logo/TESTBRAND-logo.svg"
+      />
+      
+
+    </a>
+    
+
+    <nav
+      className="topbar-nav"
+    >
+      <div
+        className="topbar-link-container"
+      >
+        
+
         <a
-          aria-label="To homepage"
-          className="topbar-logo"
-          href="/"
+          className="active"
+          href="#"
           onClick={[Function]}
         >
           
 
-          <img
-            alt="TESTBRAND logo"
-            className="logotype-vertical logotype-sm"
-            src="/TEST/img/logo/TESTBRAND-logo.svg"
-          />
+          <i
+            className="material-icons"
+          >
+            home
+          </i>
+          
+
+          <span>
+            Home
+          </span>
           
 
         </a>
         
 
-      </TopbarLogo>
-      <TopbarMenu
-        logout={false}
-        menu={
-          Object {
-            "items": Array [
-              Object {
-                "icon": "home",
-                "name": "Home",
-              },
-              Object {
-                "icon": "shopping_cart",
-                "name": "Purchase history",
-              },
-              Object {
-                "icon": "settings",
-                "name": "Settings",
-              },
-            ],
-          }
-        }
-      >
-        <nav
-          className="topbar-nav"
+        <a
+          className={null}
+          href="#"
+          onClick={[Function]}
         >
-          <div
-            className="topbar-link-container"
+          
+
+          <i
+            className="material-icons"
           >
-            
+            shopping_cart
+          </i>
+          
 
-            <a
-              className="active"
-              href="#"
-              onClick={[Function]}
-            >
-              
+          <span>
+            Purchase history
+          </span>
+          
 
-              <i
-                className="material-icons"
-              >
-                home
-              </i>
-              
+        </a>
+        
 
-              <span>
-                Home
-              </span>
-              
+        <a
+          className={null}
+          href="#"
+          onClick={[Function]}
+        >
+          
 
-            </a>
-            
+          <i
+            className="material-icons"
+          >
+            settings
+          </i>
+          
 
-            <a
-              className={null}
-              href="#"
-              onClick={[Function]}
-            >
-              
+          <span>
+            Settings
+          </span>
+          
 
-              <i
-                className="material-icons"
-              >
-                shopping_cart
-              </i>
-              
+        </a>
+        
 
-              <span>
-                Purchase history
-              </span>
-              
-
-            </a>
-            
-
-            <a
-              className={null}
-              href="#"
-              onClick={[Function]}
-            >
-              
-
-              <i
-                className="material-icons"
-              >
-                settings
-              </i>
-              
-
-              <span>
-                Settings
-              </span>
-              
-
-            </a>
-            
-
-          </div>
-        </nav>
-      </TopbarMenu>
-    </div>
-  </header>
-</Topbar>
+      </div>
+    </nav>
+  </div>
+</header>
 `;
 
 exports[`Component: Topbar - props wide renders a topbar with the given breakpoint 1`] = `
-<Topbar
-  wide="lg"
+<header
+  className="topbar topbar-lg-wide"
 >
-  <header
-    className="topbar topbar-lg-wide"
+  
+
+  <a
+    aria-label="To homepage"
+    className="topbar-logo"
+    href="/"
+    onClick={[Function]}
   >
     
 
-    <TopbarLogo>
-      <a
-        aria-label="To homepage"
-        className="topbar-logo"
-        href="/"
-        onClick={[Function]}
-      >
-        
+    <img
+      alt="TESTBRAND logo"
+      className="logotype-vertical logotype-sm"
+      src="/TEST/img/logo/TESTBRAND-logo.svg"
+    />
+    
 
-        <img
-          alt="TESTBRAND logo"
-          className="logotype-vertical logotype-sm"
-          src="/TEST/img/logo/TESTBRAND-logo.svg"
-        />
-        
+  </a>
+  
 
-      </a>
-      
-
-    </TopbarLogo>
-  </header>
-</Topbar>
+</header>
 `;
 
 exports[`Component: Topbar - renders a topbar with only a clickable logo 1`] = `
@@ -1838,6 +1132,23 @@ exports[`Component: Topbar - renders a topbar with only a clickable logo 1`] = `
 >
   
 
-  <TopbarLogo />
+  <a
+    aria-label="To homepage"
+    className="topbar-logo"
+    href="/"
+    onClick={[Function]}
+  >
+    
+
+    <img
+      alt="TESTBRAND logo"
+      className="logotype-vertical logotype-sm"
+      src="/TEST/img/logo/TESTBRAND-logo.svg"
+    />
+    
+
+  </a>
+  
+
 </header>
 `;

@@ -44,12 +44,10 @@ exports[`Component: MediaObject - renders MediaObject with class media-right 1`]
     
 
      
-    <i
-      aria-hidden="true"
-      className="material-icons"
-    >
-      home
-    </i>
+    <img
+      alt=""
+      src="https://via.placeholder.com/48x48"
+    />
      
     
 

@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import CodeTags from "./index";
 
@@ -9,39 +11,62 @@ describe("Component: CodeTags", () => {
     });
 
     it("renders with class code-tags-primary when primary is provided as type", () => {
-        const wrapper = shallow(<CodeTags type="primary" code="test" />);
+        const { container } = render(<CodeTags type="primary" code="test" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<code className="code-tags code-tags-primary">test</code>)).toBeTruthy();
+        expect(container.querySelector("code")).toHaveClass("code-tags code-tags-primary");
+        expect(container.querySelector("code")).toHaveTextContent("test");
+
+        const componentForSnap = renderer.create(<CodeTags type="primary" code="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with class code-tags-secondary when secondary is provided as type", () => {
-        const wrapper = shallow(<CodeTags type="secondary" code="test" />);
+        const { container } = render(<CodeTags type="secondary" code="test" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<code className="code-tags code-tags-secondary">test</code>)).toBeTruthy();
+        expect(container.querySelector("code")).toHaveClass("code-tags code-tags-secondary");
+        expect(container.querySelector("code")).toHaveTextContent("test");
+
+        const componentForSnap = renderer.create(<CodeTags type="secondary" code="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("prop type is marked as required", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(<CodeTags code="test" />);
+        render(<CodeTags code="test" />);
 
-        expect(wrapper).toMatchSnapshot();
         expect(console.error).toHaveBeenCalled();
+
+        const componentForSnap = renderer.create(<CodeTags code="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with class tag-primary when primary is provided as type", () => {
-        const wrapper = shallow(<CodeTags type="primary" text="test"/>);
+        const { container } = render(<CodeTags type="primary" text="test"/>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<span className="tag tag-primary">test</span>)).toBeTruthy();
+        expect(container.querySelector("span")).toHaveClass("tag tag-primary");
+        expect(container.querySelector("span")).toHaveTextContent("test");
+
+        const componentForSnap = renderer.create(<CodeTags type="primary" text="test"/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with class removable when removable is provided and renders a button", () => {
-        const wrapper = shallow(<CodeTags type="primary" text="test" removable/>);
+        const { container } = render(<CodeTags type="primary" text="test" removable/>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains(<span className="tag tag-primary removable">test<button type="button" className="close-button"><i className="material-icons m-auto" aria-label="remove tag">close</i></button></span>)).toBeTruthy();
+        expect(container.querySelector("span")).toHaveClass("tag tag-primary removable");
+        expect(container.querySelector("span")).toHaveTextContent("test");
+        expect(screen.getByRole("button")).toHaveClass("close-button");
+        expect(screen.getByRole("button").querySelector("i")).toHaveClass("material-icons m-auto");
+        expect(screen.getByRole("button").querySelector("i")).toHaveAttribute("aria-label", "remove tag");
+        expect(screen.getByRole("button").querySelector("i")).toHaveTextContent("close");
+
+        const componentForSnap = renderer.create(<CodeTags type="primary" text="test" removable/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

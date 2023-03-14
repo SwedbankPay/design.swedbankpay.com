@@ -65,7 +65,6 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://www.funka.com/design-for-alla/lagar-och-regler/"
-    key="https://www.funka.com/design-for-alla/lagar-och-regler/"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -84,7 +83,6 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://www.funka.com/en/design-for-all/accessibility/web-accessibility-directive-norway-is-facing-a-choice/"
-    key="https://www.funka.com/en/design-for-all/accessibility/web-accessibility-directive-norway-is-facing-a-choice/"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -103,7 +101,6 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://medium.com/confrere/its-illegal-to-have-an-inaccessible-website-in-norway-and-that-s-good-news-for-all-of-us-b59a9e929d54"
-    key="https://medium.com/confrere/its-illegal-to-have-an-inaccessible-website-in-norway-and-that-s-good-news-for-all-of-us-b59a9e929d54"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -125,7 +122,6 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://polaris.shopify.com/foundations/accessibility"
-    key="https://polaris.shopify.com/foundations/accessibility"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -144,7 +140,6 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://material.io/design/usability/accessibility.html"
-    key="https://material.io/design/usability/accessibility.html"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -163,7 +158,6 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="http://www.lightningdesignsystem.com/accessibility/overview/"
-    key="http://www.lightningdesignsystem.com/accessibility/overview/"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -182,7 +176,6 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   <a
     className="icon-link d-flex"
     href="https://spotify.design/article/spotify-inclusive-design-global-accessibility-awareness-day-round-up"
-    key="https://spotify.design/article/spotify-inclusive-design-global-accessibility-awareness-day-round-up"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -235,73 +228,6 @@ exports[`Core: Accessibility Inclusions renders 1`] = `
       We need to build internal competence, not solely rely on external experts such as Funka.
     </li>
   </ul>
-</section>
-`;
-
-exports[`Core: Accessibility Intro renders 1`] = `
-<section>
-  <p
-    className="lead"
-  >
-    At 
-    TESTBRAND
-     we value accessibility. Our products are meant to be used by people no matter of their abilities and therefor we strive to be WCAG (Web Content Accessibility Guidelines) compliant. We’re currently working on our accessibility awareness and meeting the terms of the  accessibility laws in Norway and Sweden. 
-  </p>
-  <h2>
-    What is accessibility
-  </h2>
-  <p>
-    Accessibility ties back to our core values 
-    <i>
-      simple
-    </i>
-     and 
-    <i>
-      caring
-    </i>
-    . About 15 percent of the world’s population is living with a disability of some kind (WHO). This translates to over 1 billion people, and includes visual, auditory, physical, speech, cognitive, and neurological disabilities. 
-  </p>
-  <p>
-    Microsoft defines it like this:
-  </p>
-  <ol>
-    <li>
-      The qualities that make an experience open to all.
-    </li>
-    <li>
-      A professional discipline aimed at achieving No. 1.
-    </li>
-  </ol>
-  <p>
-    So what do we mean when we talk about disabilities and impairments? Well, a disability is a limitation when interacting in society in accordance to how society is built. It can be permanent, temporary or situational. Permanent disabilities include persons with disabilities like having only one arm or being permanently blind. The temporary category includes disabilities that will heal or be fixed over time, like having a broken arm. Situational disability is a bit difficult to explain, and is easily overlooked, but they are when persons get into situations where they need similar accommodations as someone with a permanent or temporary disability. For example, carrying a child with one arm.
-  </p>
-  <p>
-    So, when we design for permanent impairment and disabilities we automatically include people with both temporary and situational impairments as well.
-  </p>
-  <div
-    className="d-flex flex-column align-items-center mb-4"
-  >
-    <img
-      alt=""
-      className="w-100"
-      src="/TEST/img/documentation/accessibility/impairments.png"
-    />
-    <span
-      className="caption-text"
-    >
-      <span
-        className="font-weight-bold"
-      >
-        Figure 1.
-      </span>
-      Examples of permanent, temporary and situational impairment.
-    </span>
-  </div>
-  <p>
-    At 
-    TESTBRAND
-     we strive to give all customers with disabilities and impairments (permanent, temporary and/or situational) a better chance of using our services on the same terms as others. 
-  </p>
 </section>
 `;
 
@@ -498,19 +424,4 @@ exports[`Core: Accessibility WcagStandard renders 1`] = `
     </a>
   </section>
 </section>
-`;
-
-exports[`Core: Accessibility renders 1`] = `
-<DocContainer>
-  <Intro />
-  <AccessibleService />
-  <WcagStandard />
-  <Inclusions />
-  <DiveDeeper />
-  <span
-    className="font-italic"
-  >
-    This text was last updated 2020-11-24
-  </span>
-</DocContainer>
 `;

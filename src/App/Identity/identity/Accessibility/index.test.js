@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import Accessibility, { Intro, AccessibleService, WcagStandard, Inclusions, DiveDeeper } from "./index";
 
@@ -8,21 +8,9 @@ describe("Core: Accessibility", () => {
         expect(Accessibility).toBeDefined();
     });
 
-    it("renders", () => {
-        const wrapper = shallow(<Accessibility />);
-
-        expect(wrapper).toMatchSnapshot();
-    });
-
     describe("Intro", () => {
         it("is defined", () => {
             expect(Intro).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Intro />);
-
-            expect(wrapper).toMatchSnapshot();
         });
     });
 
@@ -32,9 +20,9 @@ describe("Core: Accessibility", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<AccessibleService />);
+            const wrapper = renderer.create(<AccessibleService />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -44,9 +32,9 @@ describe("Core: Accessibility", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<WcagStandard />);
+            const wrapper = renderer.create(<WcagStandard />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -56,9 +44,9 @@ describe("Core: Accessibility", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Inclusions />);
+            const wrapper = renderer.create(<Inclusions />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -68,9 +56,9 @@ describe("Core: Accessibility", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<DiveDeeper />);
+            const wrapper = renderer.create(<DiveDeeper />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 

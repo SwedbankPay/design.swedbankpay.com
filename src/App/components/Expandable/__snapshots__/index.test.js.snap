@@ -24,58 +24,34 @@ exports[`Component: Expandable ExpandablePlaceholder renders 1`] = `
 </div>
 `;
 
-exports[`Component: Expandable prints an expandable component when items is provided but is invalid 1`] = `
-<Expandable
-  items="wrong"
+exports[`Component: Expandable prints a default expandable component when items is provided but is invalid 1`] = `
+<div
+  className="expandable"
 >
-  <ExpandablePlaceholder>
-    <div
-      className="expandable"
-    >
-      <button
-        className="expandable-header"
-      >
-        <span>
-          Placeholder title
-        </span>
-        <small>
-          Placeholder subtitle
-        </small>
-      </button>
-      <div
-        className="expandable-body"
-      >
-        <p>
-          Placeholder text
-        </p>
-      </div>
-    </div>
-  </ExpandablePlaceholder>
-</Expandable>
+  <button
+    className="expandable-header"
+  >
+    <span>
+      Placeholder title
+    </span>
+    <small>
+      Placeholder subtitle
+    </small>
+  </button>
+  <div
+    className="expandable-body"
+  >
+    <p>
+      Placeholder text
+    </p>
+  </div>
+</div>
 `;
 
 exports[`Component: Expandable returns a number of expandables matching the length of items 1`] = `
-<Expandable
-  items={
-    Array [
-      Object {
-        "content": "My accordion content",
-        "title": "Foo",
-      },
-      Object {
-        "content": "My accordion content",
-        "title": "Bar",
-      },
-      Object {
-        "content": "My accordion content",
-        "title": "Baz",
-      },
-    ]
-  }
->
+Array [
   <div
     className="expandable"
-    key="Foo0"
   >
     
 
@@ -104,10 +80,9 @@ exports[`Component: Expandable returns a number of expandables matching the leng
     >
       My accordion content
     </div>
-  </div>
+  </div>,
   <div
     className="expandable"
-    key="Bar1"
   >
     
 
@@ -136,10 +111,9 @@ exports[`Component: Expandable returns a number of expandables matching the leng
     >
       My accordion content
     </div>
-  </div>
+  </div>,
   <div
     className="expandable"
-    key="Baz2"
   >
     
 
@@ -168,34 +142,30 @@ exports[`Component: Expandable returns a number of expandables matching the leng
     >
       My accordion content
     </div>
-  </div>
-</Expandable>
+  </div>,
+]
 `;
 
 exports[`Component: Expandable returns an expandable component when no items are provided 1`] = `
-<Expandable>
-  <ExpandablePlaceholder>
-    <div
-      className="expandable"
-    >
-      <button
-        className="expandable-header"
-      >
-        <span>
-          Placeholder title
-        </span>
-        <small>
-          Placeholder subtitle
-        </small>
-      </button>
-      <div
-        className="expandable-body"
-      >
-        <p>
-          Placeholder text
-        </p>
-      </div>
-    </div>
-  </ExpandablePlaceholder>
-</Expandable>
+<div
+  className="expandable"
+>
+  <button
+    className="expandable-header"
+  >
+    <span>
+      Placeholder title
+    </span>
+    <small>
+      Placeholder subtitle
+    </small>
+  </button>
+  <div
+    className="expandable-body"
+  >
+    <p>
+      Placeholder text
+    </p>
+  </div>
+</div>
 `;

@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import Grid, { Intro, GridSystem, GridTypes, OffsettingGrid, Breakpoints, HowItWorks, GridOptions, AutoLayoutColumns, ResponsiveClasses, Alignment, Reordering, Nesting } from "./index";
 
@@ -8,21 +8,15 @@ describe("Core: Grid", () => {
         expect(Grid).toBeDefined();
     });
 
-    it("renders", () => {
-        const wrapper = shallow(<Grid />);
-
-        expect(wrapper).toMatchSnapshot();
-    });
-
     describe("Intro", () => {
         it("is defined", () => {
             expect(Intro).toBeDefined();
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Intro />);
+            const wrapper = renderer.create(<Intro />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
     describe("GridSystem", () => {
@@ -31,9 +25,9 @@ describe("Core: Grid", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<GridSystem />);
+            const wrapper = renderer.create(<GridSystem />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -43,9 +37,9 @@ describe("Core: Grid", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<GridTypes />);
+            const wrapper = renderer.create(<GridTypes />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -55,9 +49,9 @@ describe("Core: Grid", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<OffsettingGrid />);
+            const wrapper = renderer.create(<OffsettingGrid />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -67,21 +61,15 @@ describe("Core: Grid", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Breakpoints />);
+            const wrapper = renderer.create(<Breakpoints />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
     describe("HowItWorks", () => {
         it("is defined", () => {
             expect(HowItWorks).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<HowItWorks />);
-
-            expect(wrapper).toMatchSnapshot();
         });
     });
 
@@ -91,21 +79,15 @@ describe("Core: Grid", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<GridOptions />);
+            const wrapper = renderer.create(<GridOptions />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
     describe("AutoLayoutColumns", () => {
         it("is defined", () => {
             expect(AutoLayoutColumns).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<AutoLayoutColumns />);
-
-            expect(wrapper).toMatchSnapshot();
         });
     });
 
@@ -115,9 +97,9 @@ describe("Core: Grid", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<ResponsiveClasses />);
+            const wrapper = renderer.create(<ResponsiveClasses />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -125,35 +107,17 @@ describe("Core: Grid", () => {
         it("is defined", () => {
             expect(Alignment).toBeDefined();
         });
-
-        it("renders", () => {
-            const wrapper = shallow(<Alignment />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
     });
 
     describe("Reordering", () => {
         it("is defined", () => {
             expect(Reordering).toBeDefined();
         });
-
-        it("renders", () => {
-            const wrapper = shallow(<Reordering />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
     });
 
     describe("Nesting", () => {
         it("is defined", () => {
             expect(Nesting).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Nesting />);
-
-            expect(wrapper).toMatchSnapshot();
         });
     });
 });

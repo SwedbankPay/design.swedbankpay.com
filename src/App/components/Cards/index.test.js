@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import Cards from "./index";
 
@@ -11,59 +13,83 @@ describe("Component: Cards -", () => {
     it("throws an error if type does not match proptypes", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(<Cards type="error" />);
+        render(<Cards type="error" />);
 
         expect(console.error).toHaveBeenCalled();
-        expect(wrapper).toMatchSnapshot();
+
+        const componentForSnap = renderer.create(<Cards type="error" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with correct type", () => {
-        const wrapper = shallow(<Cards type="secondary"/>);
+        render(<Cards type="secondary"/>);
 
-        expect(wrapper.html()).toContain("cards-secondary");
-        expect(wrapper).toMatchSnapshot();
+        expect(screen.getByRole("link")).toHaveClass("cards-secondary");
+
+        const componentForSnap = renderer.create(<Cards type="secondary"/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders a title", () => {
-        const wrapper = shallow(<Cards type="secondary" titleTxt="Card title goes here"/>);
+        render(<Cards type="secondary" titleTxt="Card title goes here"/>);
 
-        expect(wrapper.html()).toContain("h4");
-        expect(wrapper.find(".h4").text()).toEqual("Card title goes here");
-        expect(wrapper).toMatchSnapshot();
+        expect(screen.getByRole("link").getElementsByClassName("h4").length).toBe(1);
+        expect(screen.getByRole("link").querySelector(".h4")).toHaveTextContent("Card title goes here");
+
+        const componentForSnap = renderer.create(<Cards type="secondary" titleTxt="Card title goes here"/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders an image", () => {
-        const wrapper = shallow(<Cards type="secondary" imgSrc="url.address" />);
+        render(<Cards type="secondary" imgSrc="url.address" />);
 
-        expect(wrapper.find("img").prop("src")).toEqual("url.address");
-        expect(wrapper).toMatchSnapshot();
+        expect(screen.getByRole("img")).toHaveAttribute("src", "url.address");
+
+        const componentForSnap = renderer.create(<Cards type="secondary" imgSrc="url.address" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders an icon when icon is provided", () => {
-        const wrapper = shallow(<Cards type="secondary" icon={<>01</>} />);
+        render(<Cards type="secondary" icon={<>01</>} />);
 
-        expect(wrapper.html()).toContain("cards-icon");
-        expect(wrapper).toMatchSnapshot();
+        expect(screen.getByRole("link").getElementsByClassName("cards-icon").length).toBe(1);
+
+        const componentForSnap = renderer.create(<Cards type="secondary" icon={<>01</>} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders a text in card-body", () => {
-        const wrapper = shallow(<Cards type="secondary" text="Text that goes in card body" />);
+        const { container } = render(<Cards type="secondary" text="Text that goes in card body" />);
 
-        expect(wrapper.find(".cards-content").text()).toContain("Text that goes in card body");
-        expect(wrapper).toMatchSnapshot();
+        expect(container.querySelector(".cards-content")).toHaveTextContent("Text that goes in card body");
+
+        const componentForSnap = renderer.create(<Cards type="secondary" text="Text that goes in card body" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders a child object", () => {
-        const wrapper = shallow(<Cards>This is child text</Cards>);
+        const { container } = render(<Cards>This is child text</Cards>);
 
-        expect(wrapper.html()).toContain("This is child text");
-        expect(wrapper).toMatchSnapshot();
+        expect(container).toHaveTextContent("This is child text");
+
+        const componentForSnap = renderer.create(<Cards>This is child text</Cards>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders a wide card when wide is true", () => {
-        const wrapper = shallow(<Cards type="secondary" wide/>);
+        render(<Cards type="secondary" wide/>);
 
-        expect(wrapper.html()).toContain("cards-wide");
-        expect(wrapper).toMatchSnapshot();
+        expect(screen.getByRole("link")).toHaveClass("cards-wide");
+
+        const componentForSnap = renderer.create(<Cards type="secondary" wide/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

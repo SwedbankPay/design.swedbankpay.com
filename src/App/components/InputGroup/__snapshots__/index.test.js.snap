@@ -25,40 +25,35 @@ exports[`Component: InputGroup - renders 1`] = `
 `;
 
 exports[`Component: InputGroup - renders a form-group with a help block 1`] = `
-<InputGroup
-  helpBlock="testvalue"
-  type="typetest"
+<div
+  className="form-group"
 >
-  <div
-    className="form-group"
+  
+
+  <input
+    aria-describedby="undefined"
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    readOnly={null}
+    required={null}
+    type="typetest"
+  />
+  
+
+  <p
+    className="hint-text"
+    id="hint-text"
   >
-    
+    testvalue
+  </p>
+  
 
-    <input
-      aria-describedby="undefined"
-      autoComplete={null}
-      className="form-control"
-      data-validate={null}
-      defaultValue=""
-      disabled={null}
-      id={null}
-      pattern={null}
-      readOnly={null}
-      required={null}
-      type="typetest"
-    />
-    
-
-    <p
-      className="hint-text"
-      id="hint-text"
-    >
-      testvalue
-    </p>
-    
-
-  </div>
-</InputGroup>
+</div>
 `;
 
 exports[`Component: InputGroup - renders a form-group with a label if prop label is provided 1`] = `
@@ -91,125 +86,29 @@ exports[`Component: InputGroup - renders a form-group with a label if prop label
 `;
 
 exports[`Component: InputGroup - renders a form-group with a prefix icon if prop prefixValue equals icon 1`] = `
-<InputGroup
-  addOnType="icon"
-  prefixValue="home"
-  type="typetest"
+<div
+  className="form-group"
 >
+  
+
   <div
-    className="form-group"
+    className="input-group"
   >
     
 
-    <div
-      className="input-group"
+    <span
+      className="input-group-addon "
     >
-      
-
-      <Addon
-        type="icon"
-        value="home"
+      <i
+        aria-hidden="true"
+        className="material-icons material-icons-outlined"
       >
-        <span
-          className="input-group-addon "
-        >
-          <i
-            aria-hidden="true"
-            className="material-icons material-icons-outlined"
-          >
-            home
-          </i>
-        </span>
-      </Addon>
-      
-
-      <input
-        aria-describedby={null}
-        autoComplete={null}
-        className="form-control"
-        data-validate={null}
-        defaultValue=""
-        disabled={null}
-        id={null}
-        pattern={null}
-        readOnly={null}
-        required={null}
-        type="typetest"
-      />
-      
-	
-      
-
-    </div>
-  </div>
-</InputGroup>
-`;
-
-exports[`Component: InputGroup - renders a form-group with a select field with given values if type equals select 1`] = `
-<InputGroup
-  selectOptions={
-    Array [
-      "Bounty hunter",
-      "Smuggler",
-      "Jedi",
-    ]
-  }
-  type="select"
->
-  <div
-    className="form-group"
-  >
+        home
+      </i>
+    </span>
     
 
-    <select
-      aria-describedby={null}
-      className="form-control"
-      defaultValue=""
-      disabled={null}
-      id={null}
-      readOnly={null}
-      required={null}
-    >
-      
-		
-      <option
-        value="Bounty hunter"
-      >
-        Bounty hunter
-      </option>
-      
-		
-      <option
-        value="Smuggler"
-      >
-        Smuggler
-      </option>
-      
-		
-      <option
-        value="Jedi"
-      >
-        Jedi
-      </option>
-      
-	
-    </select>
-    
-
-  </div>
-</InputGroup>
-`;
-
-exports[`Component: InputGroup - renders a form-group with a text-area if type equals textarea 1`] = `
-<InputGroup
-  type="textarea"
->
-  <div
-    className="form-group"
-  >
-    
-
-    <textarea
+    <input
       aria-describedby={null}
       autoComplete={null}
       className="form-control"
@@ -220,12 +119,83 @@ exports[`Component: InputGroup - renders a form-group with a text-area if type e
       pattern={null}
       readOnly={null}
       required={null}
-      type="textarea"
+      type="typetest"
     />
+    
+	
     
 
   </div>
-</InputGroup>
+</div>
+`;
+
+exports[`Component: InputGroup - renders a form-group with a select field with given values if type equals select 1`] = `
+<div
+  className="form-group"
+>
+  
+
+  <select
+    aria-describedby={null}
+    className="form-control"
+    defaultValue=""
+    disabled={null}
+    id={null}
+    readOnly={null}
+    required={null}
+  >
+    
+		
+    <option
+      value="Bounty hunter"
+    >
+      Bounty hunter
+    </option>
+    
+		
+    <option
+      value="Smuggler"
+    >
+      Smuggler
+    </option>
+    
+		
+    <option
+      value="Jedi"
+    >
+      Jedi
+    </option>
+    
+    
+	
+  </select>
+  
+
+</div>
+`;
+
+exports[`Component: InputGroup - renders a form-group with a text-area if type equals textarea 1`] = `
+<div
+  className="form-group"
+>
+  
+
+  <textarea
+    aria-describedby={null}
+    autoComplete={null}
+    className="form-control"
+    data-validate={null}
+    defaultValue=""
+    disabled={null}
+    id={null}
+    pattern={null}
+    readOnly={null}
+    required={null}
+    type="textarea"
+  />
+  
+
+</div>
 `;
 
 exports[`Component: InputGroup - throws an error if addOnType prop has an invalid value 1`] = `

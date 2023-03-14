@@ -68,234 +68,50 @@ exports[`Components: Accordion JavascriptMethods renders 1`] = `
   </h3>
   <p>
     Use 
-    <CodeTags
-      code="dg.accordion.init()"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      dg.accordion.init()
+    </code>
      to 
-    <Link
-      to="/get-started/for-developers"
+    <a
+      href="/get-started/for-developers"
+      onClick={[Function]}
     >
       initialize
-    </Link>
+    </a>
      all accordions. This will open and close the accordions automatically.
   </p>
   <p>
     If you want to manually open and close a specific accordion, you need to include an 
-    <CodeTags
-      code="id"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      id
+    </code>
      on the 
-    <CodeTags
-      code="accordion-body"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      accordion-body
+    </code>
      element.
   </p>
   <p>
     To open a given accordion, use 
-    <CodeTags
-      code="dg.accordion.open(<accordion-body-id>)"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      dg.accordion.open(&lt;accordion-body-id&gt;)
+    </code>
   </p>
   <p>
     To close a given accordion, use 
-    <CodeTags
-      code="dg.accordion.close(<accordion-body-id>)"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      dg.accordion.close(&lt;accordion-body-id&gt;)
+    </code>
   </p>
 </section>
-`;
-
-exports[`Components: Accordion Overview renders 1`] = `
-<section>
-  <h2
-    id="overview"
-  >
-    Overview
-  </h2>
-  <p>
-    Accordions can make information discovery more effective by using progressive disclosure, that is showing the title while hiding the detailed information. They can be used to shorten pages and reduce scrolling when content is not crucial to read in full.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-    showCasePanelAdvanced={
-      Object {
-        "elements": Array [
-          Object {
-            "component": <AccordionComponentExample
-              id="accordion-showcase"
-            />,
-            "description": <p>
-              The accordion component can be either collapsed or expanded. Accordions are by default in the collapsed state with the body content hidden. If a group of accordions are wrapped in a 
-              <CodeTags
-                code=".accordion-group"
-                type="primary"
-              />
-              , only one will be open at a time.
-            </p>,
-            "options": Object {
-              "checkbox": Array [
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "checkbox-accordions",
-                      "name": "Open one at a time",
-                      "value": Object {
-                        "accordionGroup": true,
-                      },
-                    },
-                  ],
-                  "title": "Accordion group",
-                },
-              ],
-            },
-            "title": "Accordion",
-          },
-        ],
-        "id": "no-tabs",
-      }
-    }
-  />
-  <h3>
-    How to use Accordions
-  </h3>
-  <div
-    className="row"
-  >
-    <div
-      className="col-lg-6"
-    >
-      <div
-        className="slab slab-plain slab-border-success pb-5"
-      >
-        <h3>
-          Do
-        </h3>
-        <div
-          className="mt-3"
-        >
-          <Accordion
-            className="show accordion-open"
-            id="howToUseAccordions"
-            items={
-              Array [
-                Object {
-                  "content": <React.Fragment>
-                    <small
-                      className="font-weight-bold"
-                    >
-                      Sub section title
-                    </small>
-                    <p>
-                      If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.
-                    </p>
-                    <small
-                      className="font-weight-bold"
-                    >
-                      Sub section title
-                    </small>
-                    <p>
-                      If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.
-                    </p>
-                  </React.Fragment>,
-                  "id": "exp-5",
-                  "title": "Accordion title",
-                },
-              ]
-            }
-          />
-        </div>
-      </div>
-      <p>
-        Body content inside the Accordion may be split into paragraphs and include sub-headers if needed.
-      </p>
-    </div>
-    <div
-      className="col-lg-6"
-    >
-      <div
-        className="slab slab-plain slab-border-error"
-      >
-        <h3>
-          Don't
-        </h3>
-        <div
-          className="mt-3"
-        >
-          <Accordion
-            className="show accordion-open"
-            id="howNotToUseAccordions"
-            items={
-              Array [
-                Object {
-                  "content": <React.Fragment>
-                    <Accordion
-                      className="accordion-open show"
-                      items={
-                        Array [
-                          Object {
-                            "content": <p>
-                              Do not use this method
-                            </p>,
-                            "id": "none",
-                            "title": "Sub content",
-                          },
-                        ]
-                      }
-                    />
-                    <Accordion
-                      items={
-                        Array [
-                          Object {
-                            "content": <p>
-                              Do not use this method
-                            </p>,
-                            "id": "none",
-                            "title": "Sub content",
-                          },
-                        ]
-                      }
-                    />
-                  </React.Fragment>,
-                  "id": "exp-6",
-                  "title": "Accordion title",
-                },
-              ]
-            }
-          />
-        </div>
-      </div>
-      <p>
-        Do not put an Accordion inside of another Accordion.
-      </p>
-    </div>
-  </div>
-</section>
-`;
-
-exports[`Components: Accordion renders 1`] = `
-<DocContainer>
-  <section
-    id="accordion-doc"
-  >
-    <p
-      className="lead"
-    >
-      Accordions are components that toggles between hiding and showing content
-    </p>
-    <Overview />
-    <ContentGuidelines />
-    <DeveloperDocumentation />
-    <NpmInformation
-      componentName="accordion"
-    />
-  </section>
-</DocContainer>
 `;

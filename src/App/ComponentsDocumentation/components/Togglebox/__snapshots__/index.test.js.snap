@@ -1,455 +1,382 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Togglebox ContentGuidelines renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="content-guidelines"
   >
     Content guidelines
-  </h2>
+  </h2>,
   <div
     className="slab slab-plain d-flex justify-content-center align-items-center"
   >
     <div>
-      <Togglebox
-        id="toggle-disable-example"
-        label="Label"
-        labelTop={true}
-      />
+      <div
+        className="togglebox label-top"
+      >
+        
+
+        <input
+          defaultChecked={null}
+          disabled={null}
+          id="toggle-disable-example"
+          type="checkbox"
+        />
+        
+
+        <label
+          htmlFor="toggle-disable-example"
+        >
+          
+
+          Label
+          
+
+        </label>
+        
+
+      </div>
     </div>
-  </div>
+  </div>,
   <ul
     className="list list-bullet"
   >
     <li>
       The label should be short and concise preferably three words or less. Avoid using negations such as “Notifications Off”, which would mean the user would have to turn the switch on to turn the setting off.
     </li>
-  </ul>
-</Fragment>
+  </ul>,
+]
 `;
 
 exports[`Component: Togglebox DeveloperDocumentation renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="developer-documentation"
   >
     Developer documentation
-  </h2>
+  </h2>,
   <span
     className="h3 d-inline-block mt-3"
   >
     Checked
-  </span>
+  </span>,
   <p>
     Use the 
-    <CodeTags
-      code="checked"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      checked
+    </code>
      attribute to enable a toggle.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
     <div
       className="checked-example-container m-auto"
     >
-      <Togglebox
-        checked={true}
-        id="toggle-checked-example"
-        label="Label"
-        labelTop={true}
-      />
+      <div
+        className="togglebox label-top"
+      >
+        
+
+        <input
+          defaultChecked={true}
+          disabled={null}
+          id="toggle-checked-example"
+          type="checkbox"
+        />
+        
+
+        <label
+          htmlFor="toggle-checked-example"
+        >
+          
+
+          Label
+          
+
+        </label>
+        
+
+      </div>
     </div>
-  </ComponentPreview>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="togglebox label-top"&gt;
+                
+
+                    &lt;input type="checkbox" id="toggle-checked-example" checked&gt;
+                
+
+                    &lt;label for="toggle-checked-example"&gt;
+                
+
+                        Label
+                
+
+                    &lt;/label&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
   <span
     className="h3 d-inline-block mt-3"
   >
     Disabled
-  </span>
+  </span>,
   <p>
     Disable a toggle by adding 
-    <CodeTags
-      code="disabled"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      disabled
+    </code>
      attribute to the desired toggle.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
     <div
       className="w-25 p-3 m-auto"
     >
-      <Togglebox
-        checked={true}
-        disabled={true}
-        id="toggle-disabled-example"
-        label="Label"
-      />
-      <Togglebox
-        disabled={true}
-        id="toggle-disabled-example-2"
-        label="Label"
-      />
-    </div>
-  </ComponentPreview>
-</Fragment>
-`;
+      <div
+        className="togglebox"
+      >
+        
 
-exports[`Component: Togglebox Overview renders 1`] = `
-<Fragment>
-  <h2
-    id="overview"
-  >
-    Overview
-  </h2>
-  <p>
-    Toggleboxes are used to enable or disable a mode, feature, or function. Most common toggles are used to switch between on/off in preferences or settings, in forms or for other on/off functionality. Toggles are similar to radio groups in function but optimized for toggling between two states. A togglebox can also be similar to a checkobox with the difference being that a toggle-switch will trigger a state change directly when you toggle it, while a checkbox is generally used for state marking together with a submit action.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-    showCasePanelAdvanced={
-      Object {
-        "elements": Array [
-          Object {
-            "component": <Togglebox
-              id="togglebox-example"
-              label="Label"
-            />,
-            "description": "Toggleboxes have two states: on and off. Each of these have default, hover, focus and disabled states. A togglebox must always be accompanied by a label, on the left side or on the top, that clearly conveys what option a user will turn on or off.",
-            "options": Object {
-              "radio": Array [
-                Object {
-                  "id": "label_position",
-                  "title": "Label position",
-                  "values": Array [
-                    Object {
-                      "name": "Left",
-                      "value": Object {
-                        "labelTop": false,
-                      },
-                    },
-                    Object {
-                      "name": "Top",
-                      "value": Object {
-                        "labelTop": true,
-                      },
-                    },
-                  ],
-                },
-                Object {
-                  "id": "state_radio",
-                  "title": "State modifiers",
-                  "values": Array [
-                    Object {
-                      "name": "Enabled",
-                      "value": Object {
-                        "disabled": false,
-                      },
-                    },
-                    Object {
-                      "name": "Disabled",
-                      "value": Object {
-                        "disabled": true,
-                      },
-                    },
-                  ],
-                },
-              ],
-            },
-            "title": "Togglebox",
-          },
-        ],
-        "id": "no-tabs",
-      }
-    }
-  />
-  <span
-    className="h3 d-inline-block mt-3"
-  >
-    When to consider something else
-  </span>
-  <ul
-    className="list list-bullet"
-  >
-    <li>
-      Use a 
-      <Link
-        to="/components/radio-button"
-      >
-        Radio Button
-      </Link>
-       group if users need to select one item from a list of options.
-    </li>
-    <li>
-      Use a 
-      <Link
-        to="/components/checkbox"
-      >
-        Checkbox
-      </Link>
-       group if users can select multiple items from a list of options.
-    </li>
-  </ul>
-  <span
-    className="h3 d-inline-block mb-3"
-  >
-    How to use Toggleboxes
-  </span>
-  <div
-    className="row"
-    key="0"
-  >
-    <div
-      className="col-sm-6 col-12"
-    >
-      <div
-        className="slab slab-plain slab-border-success mb-2"
-      >
-        <h3>
-          Do
-        </h3>
-        <div
-          className="slab-content p-3"
-        >
-          <span
-            className="h4 d-inline-block mb-3"
-          >
-            Do you have any credit cards
-          </span>
-          <Radio
-            checked={true}
-            id="do-example"
-            label="Yes"
-            name="do-example"
-            type="radio"
-          />
-          <Radio
-            id="do-example-1"
-            label="No"
-            name="do-example"
-            type="radio"
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      className="col-sm-6 col-12"
-    >
-      <div
-        className="slab slab-plain slab-border-error mb-2"
-      >
-        <h3>
-          Don't
-        </h3>
-        <div
-          className="slab-content p-3"
-        >
-          <p>
-            <b>
-              Do you have any credit cards
-            </b>
-          </p>
-          <Togglebox
-            id="ex2"
-            label="Yes"
-          />
-        </div>
-      </div>
-    </div>
-    <p
-      className="pl-3"
-    >
-      <p>
-        Instead of using a togglebox for answering yes/no questions it is better to use 
-        <Link
-          to="/components/radio-button"
-        >
-          radio buttons
-        </Link>
-        .
-      </p>
-    </p>
-  </div>
-  <div
-    className="row"
-    key="1"
-  >
-    <div
-      className="col-sm-6 col-12"
-    >
-      <div
-        className="slab slab-plain slab-border-success mb-2"
-      >
-        <h3>
-          Do
-        </h3>
-        <div
-          className="slab-content p-3"
-        >
-          <Checkbox
-            id="example-3"
-            label="I accept the terms and conditions"
-          />
-          <div
-            className="d-flex justify-content-end mt-4"
-          >
-            <Button
-              label="Cancel"
-              size="sm"
-              type="link"
-            />
-            <Button
-              label="Submit"
-              size="sm"
-              type="primary"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="col-sm-6 col-12"
-    >
-      <div
-        className="slab slab-plain slab-border-error mb-2"
-      >
-        <h3>
-          Don't
-        </h3>
-        <div
-          className="slab-content p-3"
-        >
-          <Togglebox
-            id="example-4"
-            label="I accept the terms and conditions"
-          />
-          <div
-            className="d-flex justify-content-end mt-4"
-          >
-            <Button
-              label="Cancel"
-              size="sm"
-              type="link"
-            />
-            <Button
-              label="Submit"
-              size="sm"
-              type="primary"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <p
-      className="pl-3"
-    >
-      <p>
-        Instead of using a togglebox for actions that won’t happen until a submit button is pressed it is better to use a 
-        <Link
-          to="/components/checkbox"
-        >
-          checkbox
-        </Link>
-        .
-      </p>
-    </p>
-  </div>
-  <div
-    className="row"
-    key="2"
-  >
-    <div
-      className="col-sm-6 col-12"
-    >
-      <div
-        className="slab slab-plain slab-border-success mb-2"
-      >
-        <h3>
-          Do
-        </h3>
-        <div
-          className="slab-content p-3"
-        >
-          <span
-            className="h4 d-inline-block mb-2"
-          >
-            Preferences
-          </span>
-          <Togglebox
-            checked={true}
-            id="example-5"
-            label="Show pending payments"
-          />
-          <Togglebox
-            id="example-6"
-            label="Show completed payments"
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      className="col-sm-6 col-12"
-    >
-      <div
-        className="slab slab-plain slab-border-error mb-2"
-      >
-        <h3>
-          Don't
-        </h3>
-        <div
-          className="slab-content p-3"
-        >
-          <span
-            className="h4 d-inline-block mb-2"
-          >
-            Preferences
-          </span>
-          <Checkbox
-            checked={true}
-            id="example-7"
-            label="Show pending payments"
-          />
-          <Checkbox
-            id="example-8"
-            label="Show completed payments"
-          />
-        </div>
-      </div>
-    </div>
-    <p
-      className="pl-3"
-    >
-      <p>
-        Do use toggleboxes for on/off preferences of features or behaviour, don’t use checkboxes.
-      </p>
-    </p>
-  </div>
-</Fragment>
-`;
+        <input
+          defaultChecked={true}
+          disabled={true}
+          id="toggle-disabled-example"
+          type="checkbox"
+        />
+        
 
-exports[`Component: Togglebox renders 1`] = `
-<DocContainer>
-  <div
-    id="togglebox-doc"
-  >
-    <p
-      className="lead"
+        <label
+          htmlFor="toggle-disabled-example"
+        >
+          
+
+          Label
+          
+
+        </label>
+        
+
+      </div>
+      <div
+        className="togglebox"
+      >
+        
+
+        <input
+          defaultChecked={null}
+          disabled={true}
+          id="toggle-disabled-example-2"
+          type="checkbox"
+        />
+        
+
+        <label
+          htmlFor="toggle-disabled-example-2"
+        >
+          
+
+          Label
+          
+
+        </label>
+        
+
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
     >
-      The togglebox is a representation of a physical switch that allows users to toggle between two states, commonly to turn something on/off.
-    </p>
-    <Overview />
-    <ContentGuidelines />
-    <DeveloperDocumentation />
-  </div>
-</DocContainer>
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="togglebox"&gt;
+                
+
+                    &lt;input type="checkbox" id="toggle-disabled-example" disabled checked&gt;
+                
+
+                    &lt;label for="toggle-disabled-example"&gt;
+                
+
+                        Label
+                
+
+                    &lt;/label&gt;
+                
+
+                &lt;/div&gt;
+                
+
+                &lt;div class="togglebox"&gt;
+                
+
+                    &lt;input type="checkbox" id="toggle-disabled-example-2" disabled&gt;
+                
+
+                    &lt;label for="toggle-disabled-example-2"&gt;
+                
+
+                        Label
+                
+
+                    &lt;/label&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;

@@ -70,24 +70,97 @@ exports[`Components: Toast Developer documentation renders 1`] = `
   </h2>
   <p>
     To use the Toast, call 
-    <CodeTags
-      code="dg.toast()"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      dg.toast()
+    </code>
      with the desired options.
   </p>
-  <ComponentPreview
-    codeFigure={true}
-    dangerousHTML={true}
-    language="html"
-  >
-    &lt;button type="button" class="btn btn-primary" onclick="dg.toast({
-	type: 'neutral' 
-	html: '&lt;p&gt;&lt;b&gt;Info header&lt;/b&gt;
-		 Input informative alert information here, provide &lt;a href="#"&gt;link&lt;/a&gt; to solution or more info when possible.
-	&lt;/p&gt;'})"&gt;Neutral toast
-&lt;/button&gt;
-  </ComponentPreview>
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;button type="button" class="btn btn-primary" onclick="dg.toast({
+                
+
+                	type: 'neutral' 
+                
+
+                	html: '&lt;p&gt;&lt;b&gt;Info header&lt;/b&gt;
+                
+
+                		 Input informative alert information here, provide &lt;a href=" #"&gt;link&lt;/a&gt; to solution or more info when possible.
+                
+
+                    &lt;/p&gt;'})"&gt;Neutral toast
+                
+
+                &lt;/button&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>
   <h4>
     Options
   </h4>
@@ -96,157 +169,116 @@ exports[`Components: Toast Developer documentation renders 1`] = `
   >
     <table
       className="table table-striped"
-      key="Name,Type,Default,Description"
     >
       <thead>
         <tr>
-          <th
-            key="Name0"
-          >
+          <th>
             Name
           </th>
-          <th
-            key="Type0"
-          >
+          <th>
             Type
           </th>
-          <th
-            key="Default0"
-          >
+          <th>
             Default
           </th>
-          <th
-            key="Description0"
-          >
+          <th>
             Description
           </th>
         </tr>
       </thead>
       <tbody>
-        <tr
-          key="0"
-        >
-          <td
-            key="html0"
-          >
+        <tr>
+          <td>
             html
           </td>
-          <td
-            key="String1"
-          >
+          <td>
             String
           </td>
-          <td
-            key="[object Object]2"
-          >
-            <CodeTags
-              code="\\"\\""
-              type="secondary"
-            />
+          <td>
+            <code
+              className="code-tags code-tags-secondary"
+            >
+              ""
+            </code>
           </td>
-          <td
-            key="The HTML content of the Toast.3"
-          >
+          <td>
             The HTML content of the Toast.
           </td>
         </tr>
-        <tr
-          key="1"
-        >
-          <td
-            key="type0"
-          >
+        <tr>
+          <td>
             type
           </td>
-          <td
-            key="String1"
-          >
+          <td>
             String
           </td>
-          <td
-            key="[object Object]2"
-          >
-            <CodeTags
-              code="\\"\\""
-              type="secondary"
-            />
+          <td>
+            <code
+              className="code-tags code-tags-secondary"
+            >
+              ""
+            </code>
           </td>
-          <td
-            key="[object Object]3"
-          >
+          <td>
             Alert types: 
-            <CodeTags
-              code="success"
-              type="secondary"
-            />
+            <code
+              className="code-tags code-tags-secondary"
+            >
+              success
+            </code>
             , 
-            <CodeTags
-              code="neutral"
-              type="secondary"
-            />
+            <code
+              className="code-tags code-tags-secondary"
+            >
+              neutral
+            </code>
             , 
-            <CodeTags
-              code="warning"
-              type="secondary"
-            />
+            <code
+              className="code-tags code-tags-secondary"
+            >
+              warning
+            </code>
             , 
-            <CodeTags
-              code="danger"
-              type="secondary"
-            />
+            <code
+              className="code-tags code-tags-secondary"
+            >
+              danger
+            </code>
           </td>
         </tr>
-        <tr
-          key="2"
-        >
-          <td
-            key="classes0"
-          >
+        <tr>
+          <td>
             classes
           </td>
-          <td
-            key="Array of strings1"
-          >
+          <td>
             Array of strings
           </td>
-          <td
-            key="[object Object]2"
-          >
-            <CodeTags
-              code="[]"
-              type="secondary"
-            />
+          <td>
+            <code
+              className="code-tags code-tags-secondary"
+            >
+              []
+            </code>
           </td>
-          <td
-            key="Classes to be added to the toast element.3"
-          >
+          <td>
             Classes to be added to the toast element.
           </td>
         </tr>
-        <tr
-          key="3"
-        >
-          <td
-            key="completeCallback0"
-          >
+        <tr>
+          <td>
             completeCallback
           </td>
-          <td
-            key="Function1"
-          >
+          <td>
             Function
           </td>
-          <td
-            key="[object Object]2"
-          >
-            <CodeTags
-              code="null"
-              type="secondary"
-            />
+          <td>
+            <code
+              className="code-tags code-tags-secondary"
+            >
+              null
+            </code>
           </td>
-          <td
-            key="Callback function called when toast is dismissed.3"
-          >
+          <td>
             Callback function called when toast is dismissed.
           </td>
         </tr>
@@ -258,281 +290,200 @@ exports[`Components: Toast Developer documentation renders 1`] = `
       Usage with NPM
     </h3>
     <p>
-      <Link
-        to="/get-started/for-developers/"
+      <a
+        href="/get-started/for-developers/"
+        onClick={[Function]}
       >
         Usage with NPM
-      </Link>
+      </a>
        will require you to import it from 
-      <CodeTags
-        code="@swedbankpay/design-guide"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        @swedbankpay/design-guide
+      </code>
        before calling it on an element.
     </p>
-    <ComponentPreview
-      codeFigure={true}
-      dangerousHTML={true}
-      language="javascript"
-    >
-      import { toast } from "@swedbankpay/design-guide"; 
-      
-
-      toast({
-      
-	type: 'neutral' 
-	html: '&lt;p&gt;
-		&lt;b&gt;Info header&lt;/b&gt;
-		 Input informative alert information here, provide &lt;a href="#"&gt;link&lt;/a&gt; to solution or more info when possible.
-	&lt;/p&gt;'
-      
-
-      })
-    </ComponentPreview>
-    <ComponentPreview
-      codeFigure={true}
-      dangerousHTML={true}
-      language="html"
-    >
-      &lt;button type="button" class="btn btn-primary" onclick="toast({
-	type: 'neutral' 
-	html: '&lt;p&gt;&lt;b&gt;Info header&lt;/b&gt;
-		 Input informative alert information here, provide &lt;a href="#"&gt;link&lt;/a&gt; to solution or more info when possible.
-		&lt;/p&gt;'})"&gt;Neutral toast
-&lt;/button&gt;
-    </ComponentPreview>
-  </section>
-</section>
-`;
-
-exports[`Components: Toast Overview renders 1`] = `
-<section>
-  <h2
-    id="overview"
-  >
-    Overview
-  </h2>
-  <ComponentPreview
-    hideCodeFigure={true}
-    language="html"
-    showCasePanel={true}
-    showCasePanelAdvanced={
-      Object {
-        "elements": Array [
-          Object {
-            "component": <Toast
-              title="Neutral"
-              type="neutral"
-            />,
-            "description": "Use this toast to inform the user about something, in some cases a link can be used to direct the user towards continued reading. For information on how to trigger a toast, read more under Developer documentation.",
-            "tab": "Neutral",
-            "title": "Neutral toast",
-          },
-          Object {
-            "component": <Toast
-              title="Success"
-              type="success"
-            />,
-            "description": <React.Fragment>
-              <p>
-                Use success toast to show that the action performed by the user was successful.
-              </p>
-              <AlertBox />
-            </React.Fragment>,
-            "tab": "Success",
-            "title": "Success toast",
-          },
-          Object {
-            "component": <Toast
-              title="Warning"
-              type="warning"
-            />,
-            "description": <React.Fragment>
-              <p>
-                The warning toast warns the user about situations that might be unfavorable. Don’t use this to present critical information.
-              </p>
-              <AlertBox />
-            </React.Fragment>,
-            "tab": "Warning",
-            "title": "Warning toast",
-          },
-          Object {
-            "component": <Toast
-              title="Danger"
-              type="danger"
-            />,
-            "description": <React.Fragment>
-              <p>
-                Danger toast informs the user of error and issues that may have occurred. They should let the user know what has happened and how the user can solve the issue.
-              </p>
-              <AlertBox />
-            </React.Fragment>,
-            "tab": "Danger",
-            "title": "Danger toast",
-          },
-        ],
-        "hideOptions": true,
-        "id": "overviewToast",
-        "tabsId": "overviewToastTabs",
-      }
-    }
-  />
-  <ComponentPreview
-    codeFigure={true}
-    dangerousHTML={true}
-    language="html"
-  >
-    &lt;button type="button" class="btn btn-primary" onclick="event =&gt; dg.toast({
-	event,
-	type: 'neutral' 
-	html: '&lt;p&gt;&lt;b&gt;Info header&lt;/b&gt; Input informative alert information here, provide &lt;a href="#"&gt;link&lt;/a&gt; to solution or more info when possible.&lt;/p&gt;'})"&gt;
-Show neutral toast
-&lt;/button&gt;
-  </ComponentPreview>
-  <section>
-    <h3>
-      When to consider something else
-    </h3>
-    <ul
-      className="list list-bullet"
-    >
-      <li>
-        Toasts are temporary notifications, therefore in cases where you want to display a more permanent message to the user, use the 
-        <Link
-          to="/components/alerts"
-        >
-          alert
-        </Link>
-         component instead which stays permanently on the screen.
-      </li>
-      <li>
-        Similarly, if you require action from the user before continuing to the next page, use a 
-        <Link
-          to="/components/dialog"
-        >
-          dialog
-        </Link>
-         component instead.
-      </li>
-    </ul>
-  </section>
-  <section>
-    <h3>
-      How to use toast
-    </h3>
-    <div
-      className="slab slab-plain slab-border-success"
-    >
-      <span
-        className="h3"
-      >
-        Do
-      </span>
+    <figure>
       <div
-        className="toast-example-container col-sm-10 col-12 p-0"
+        className="code-view"
       >
-        <div
-          className="col-12 ml-auto mt-3 p-0"
-          id="toast-container"
+        <header
+          className="code-view-header"
         >
-          <div
-            className="toast toast-neutral col-sm-11 col-12"
+          JAVASCRIPT
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
           >
             <i
-              aria-hidden="true"
-              className="material-icons"
+              className="material-icons-outlined"
             >
-              info
+              content_copy
             </i>
             <div
-              className="toast-content"
+              id="tooltipCopy"
+              role="tooltip"
             >
-              <b>
-                Short information message
-              </b>
+              Copy to clipboard
             </div>
-            <button
-              aria-label="Close button"
-              className="toast-close ml-auto"
-            >
-              <i
-                className="material-icons"
-              >
-                close
-              </i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p>
-      The positioning of the toast component should always be at the top right corner of the page on desktop and top center on mobile devices.
-    </p>
-    <div
-      className="slab slab-plain slab-border-error"
-    >
-      <span
-        className="h3"
-      >
-        Don't
-      </span>
-      <div
-        className="toast-example-container col-sm-11 col-12 my-5 mx-auto"
-      >
-        <div
-          className="toast-dont-example col-12 m-auto px-0"
-          id="toast-container"
+          </button>
+        </header>
+        <table
+          className="code-view-table"
         >
-          <div
-            className="toast toast-neutral"
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  import { toast } from "@swedbankpay/design-guide"; 
+                  
+
+                  toast({
+                  
+
+                  	type: 'neutral' 
+                  
+
+                  	html: '&lt;p&gt;
+                  
+
+                  		&lt;b&gt;Info header&lt;/b&gt;
+                  
+
+                  		 Input informative alert information here, provide &lt;a href="#"&gt;link&lt;/a&gt; to solution or more info when possible.
+                  
+
+                  	&lt;/p&gt;'
+                  
+
+                  })
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
           >
             <i
-              aria-hidden="true"
-              className="material-icons"
+              className="material-icons-outlined"
             >
-              info
+              content_copy
             </i>
             <div
-              className="toast-content"
+              id="tooltipCopy"
+              role="tooltip"
             >
-              <b>
-                Short information message
-              </b>
+              Copy to clipboard
             </div>
-            <button
-              aria-label="Close button"
-              className="toast-close ml-auto"
-            >
-              <i
-                className="material-icons"
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
               >
-                close
-              </i>
-            </button>
-          </div>
-        </div>
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;button type="button" class="btn btn-primary" onclick="toast({
+                  
+
+                  	type: 'neutral' 
+                  
+
+                  	html: '&lt;p&gt;&lt;b&gt;Info header&lt;/b&gt;
+                  
+
+                  		 Input informative alert information here, provide &lt;a href=" #"&gt;link&lt;/a&gt; to solution or more info when possible.
+                  
+
+                      &lt;/p&gt;'})"&gt;Neutral toast
+                  
+
+                  &lt;/button&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </div>
-    <p>
-      The toast component should not pop up in the middle of the screen and interrupt the user flow. 
-    </p>
+    </figure>
   </section>
 </section>
-`;
-
-exports[`Components: Toast renders 1`] = `
-<DocContainer>
-  <section
-    id="toast-doc"
-  >
-    <p
-      className="lead"
-    >
-      The toast component is only displayed when the user has performed an action. The components informs the user of the status of their request, warning and potential errors.
-    </p>
-    <Overview />
-    <ContentGuidelines />
-    <DeveloperDocumentation />
-  </section>
-</DocContainer>
 `;

@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import Checkbox from "./Checkbox";
 
@@ -9,44 +11,55 @@ describe("Component: Checkbox -", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Checkbox />);
+        render(<Checkbox />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("checkbox");
+        expect(screen.getByRole("checkbox")).toBeTruthy();
+
+        const componentForSnap = renderer.create(<Checkbox />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with the specified id", () => {
-        const wrapper = shallow(<Checkbox id="test" />);
+        render(<Checkbox id="test" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("checkbox");
-        expect(wrapper.html()).toContain("id=\"test\"");
+        expect(screen.getByRole("checkbox")).toHaveAttribute("id", "test");
+
+        const componentForSnap = renderer.create(<Checkbox id="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with the specified id and label", () => {
-        const wrapper = shallow(<Checkbox id="test" label="test" />);
+        const { container } = render(<Checkbox id="test-id" label="test label" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("checkbox");
-        expect(wrapper.html()).toContain("id=\"test\"");
-        expect(wrapper.html()).toContain("label");
-        expect(wrapper.html()).toContain("for=\"test\"");
+        expect(screen.getByRole("checkbox")).toHaveAttribute("id", "test-id");
+        expect(screen.getByLabelText("test label")).toHaveAttribute("id", "test-id");
+        expect(container.querySelector("label")).toHaveAttribute("for", "test-id");
+
+        const componentForSnap = renderer.create(<Checkbox id="test" label="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with the disabled attribute", () => {
-        const wrapper = shallow(<Checkbox disabled />);
+        render(<Checkbox disabled />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("checkbox");
-        expect(wrapper.html()).toContain("disabled");
+        expect(screen.getByRole("checkbox")).toBeDisabled();
+
+        const componentForSnap = renderer.create(<Checkbox disabled />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with the checked attribute", () => {
-        const wrapper = shallow(<Checkbox checked />);
+        render(<Checkbox checked />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("checkbox");
-        expect(wrapper.html()).toContain("checked");
+        expect(screen.getByRole("checkbox")).toBeChecked();
+
+        const componentForSnap = renderer.create(<Checkbox checked />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders checkbox group", () => {
@@ -65,10 +78,13 @@ describe("Component: Checkbox -", () => {
             }
         ];
 
-        const wrapper = shallow(<Checkbox group options={options} />);
+        render(<Checkbox group options={options} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("checkbox-group");
+        expect(screen.getAllByRole("checkbox")).toHaveLength(3);
+
+        const componentForSnap = renderer.create(<Checkbox group options={options} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders checkbox group with groupTitle", () => {
@@ -87,10 +103,13 @@ describe("Component: Checkbox -", () => {
             }
         ];
 
-        const wrapper = shallow(<Checkbox group groupTitle="Group title" options={options} />);
+        render(<Checkbox group groupTitle="Group title" options={options} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("legend");
+        expect(screen.getByRole("group")).toHaveTextContent("Group title");
+
+        const componentForSnap = renderer.create(<Checkbox group groupTitle="Group title" options={options} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders checkbox group with error", () => {
@@ -109,10 +128,13 @@ describe("Component: Checkbox -", () => {
             }
         ];
 
-        const wrapper = shallow(<Checkbox group errorMessage="error" options={options} />);
+        render(<Checkbox group errorMessage="error" options={options} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("help-block");
+        expect(screen.getByRole("group").querySelector(".help-block")).toHaveTextContent("error");
+
+        const componentForSnap = renderer.create(<Checkbox group errorMessage="error" options={options} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders checkbox group with disabled state", () => {
@@ -131,9 +153,12 @@ describe("Component: Checkbox -", () => {
             }
         ];
 
-        const wrapper = shallow(<Checkbox group disabled options={options} />);
+        render(<Checkbox group disabled options={options} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("disabled");
+        expect(screen.getByRole("group")).toBeDisabled();
+
+        const componentForSnap = renderer.create(<Checkbox group disabled options={options} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });
