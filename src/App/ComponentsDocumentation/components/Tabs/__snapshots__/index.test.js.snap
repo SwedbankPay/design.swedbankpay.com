@@ -28,7 +28,6 @@ exports[`Components: Tabs ContentGuidelines renders 1`] = `
             
 
             <a
-              className="testing-clicks"
               href="#"
               onClick={[Function]}
             >
@@ -43,7 +42,6 @@ exports[`Components: Tabs ContentGuidelines renders 1`] = `
             
 
             <a
-              className="testing-clicks"
               href="#"
               onClick={[Function]}
             >
@@ -58,7 +56,6 @@ exports[`Components: Tabs ContentGuidelines renders 1`] = `
             
 
             <a
-              className="testing-clicks"
               href="#"
               onClick={[Function]}
             >
