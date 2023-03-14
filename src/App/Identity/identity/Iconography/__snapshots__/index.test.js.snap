@@ -828,6 +828,42 @@ exports[`Core: Iconography renders 1`] = `
               </code>
             </td>
           </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="payment-icon payment-icon-large payment-icon-googlepay"
+              />
+            </td>
+            <td>
+              GooglePay
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                googlepay
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="payment-icon payment-icon-large payment-icon-clicktopay"
+              />
+            </td>
+            <td>
+              ClickToPay
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                clicktopay
+              </code>
+            </td>
+          </tr>
         </tbody>
       </table>
       <figure>
@@ -886,6 +922,12 @@ exports[`Core: Iconography renders 1`] = `
                     7
                     
 
+                    8
+                    
+
+                    9
+                    
+
                   </pre>
                 </td>
                 <td
@@ -911,6 +953,12 @@ exports[`Core: Iconography renders 1`] = `
                     
 
                     &lt;i class="payment-icon payment-icon-applepay" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="payment-icon payment-icon-googlepay" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="payment-icon payment-icon-clicktopay" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
                   </pre>
