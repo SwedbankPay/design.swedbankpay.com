@@ -254,88 +254,6 @@ exports[`Core: Accessibility AccessibleService renders 1`] = `
 </section>
 `;
 
-exports[`Core: Accessibility Intro renders 1`] = `
-<section>
-  <h2
-    id="terminology"
-  >
-    Terminology
-  </h2>
-  <p>
-    You have probably heard a few different words being used in relation to written content. Here is a breakdown of the main ones.
-  </p>
-  <h3>
-    Copy
-  </h3>
-  <p>
-    Copy is defined as written content that aims to increase brand awareness and ultimately persuade a person or group to take a particular action. Quite a lot falls under this umbrella but in the context of 
-    TESTBRAND
-    , an example of “pure” copy is the short texts you see on the website aiming to explain and “sell” the brand/product (see Figure 1).
-  </p>
-  <div
-    className="d-flex flex-column align-items-center"
-  >
-    <img
-      alt="Commercial text with a package price offering."
-      className="mb-1 w-100"
-      src="/TEST/img/documentation/copywriting/terminology-copy.png"
-    />
-    <span
-      className="caption-text"
-    >
-      <span
-        className="font-weight-bold"
-      >
-        Figure 1.
-      </span>
-      Figure 1. Example of “pure” copy text from 
-      TESTBRAND
-      .se.
-    </span>
-  </div>
-  <h3>
-    Microcopy
-  </h3>
-  <p>
-    Microcopy is all the written content you find on buttons, links, menu items, in error messages and so on. Microcopy helps the user interact with the product. It lets the user know what to do at a certain point, explains errors, builds confidence in the user when taking an action, minimizes uncertainty in hard-to-decide situations, alleviates worries and sets expectations.
-  </p>
-  <div
-    className="d-flex flex-column align-items-center"
-  >
-    <img
-      alt="Microcopy text as link labels in global navigation."
-      className="mb-1 w-100"
-      src="/TEST/img/documentation/copywriting/terminology-microcopy.png"
-    />
-    <span
-      className="caption-text"
-    >
-      <span
-        className="font-weight-bold"
-      >
-        Figure 2.
-      </span>
-      Example of microcopy text from swedbankpay.com.
-    </span>
-  </div>
-  <h3>
-    UX copy
-  </h3>
-  <p>
-    UX copy consists of all interface copy in a digital product, so basically all the text you see, including headings and paragraphs with information. Microcopy is part of UX copy, but UX copy also includes longer content relevant to the usage of a digital product.
-  </p>
-  <h3>
-    Content
-  </h3>
-  <p>
-    Content is what you call the longer format texts, for instance the detailed presentation of a product or service, the “About us” section and blog posts.
-  </p>
-  <p>
-    As you can see, there is some overlap between the various terms and people can at times use them interchangeably. However, keeping track of the differences is helpful to accurately define project needs.
-  </p>
-</section>
-`;
-
 exports[`Core: Accessibility WcagStandard renders 1`] = `
 <section>
   <h2
@@ -414,20 +332,4 @@ exports[`Core: Accessibility WcagStandard renders 1`] = `
      Most of the Brand Manager content is in English, but some is in Swedish. In the UX Design Guidelines most is in Swedish, though the Writing section is available in English as well.
   </p>
 </section>
-`;
-
-exports[`Core: Accessibility renders 1`] = `
-<DocContainer>
-  <p
-    className="lead"
-  >
-    At 
-    TESTBRAND
-     we care about how we’re interpreted by our customers and merchants. In this section you will find an overview of the different kinds of written content relevant for 
-    TESTBRAND
-    , tonality principles, a glossary, and links to further information.
-  </p>
-  <Terminology />
-  <Tonality />
-</DocContainer>
 `;

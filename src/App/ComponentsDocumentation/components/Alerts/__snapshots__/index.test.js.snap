@@ -13,23 +13,31 @@ exports[`Documentation: Alerts Content guidelines renders 1`] = `
     <div
       className="d-flex justify-content-center align-items-center pt-3"
     >
-      <Alert
-        icon="info"
-        text={
-          <p>
-            <b>
-              Error title:
-            </b>
-             Content text 
-            <a
-              href=""
-            >
-              link
-            </a>
-          </p>
-        }
-        type="danger"
-      />
+      <div
+        className="alert alert-danger"
+      >
+        
+
+        <i
+          aria-hidden="true"
+          className="material-icons alert-icon"
+        >
+          info
+        </i>
+        <p>
+          <b>
+            Error title:
+          </b>
+           Content text 
+          <a
+            href=""
+          >
+            link
+          </a>
+        </p>
+        
+
+      </div>
     </div>
   </div>
   <p>
@@ -79,227 +87,21 @@ exports[`Documentation: Alerts Developer documentation renders 1`] = `
     className="mt-2"
   >
     Use 
-    <CodeTags
-      code="dg.alert.init()"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      dg.alert.init()
+    </code>
      to initialize all alerts.
   </p>
   <p>
     Use 
-    <CodeTags
-      code="dg.alert.init(\\"component-id\\")"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      dg.alert.init("component-id")
+    </code>
      to initialize one specific component.
   </p>
 </section>
-`;
-
-exports[`Documentation: Alerts Overview renders 1`] = `
-<section>
-  <h2
-    id="local-alerts"
-  >
-    Overview
-  </h2>
-  <p>
-    Alerts are inserted within the content area near related items to notify users about potential problems or to communicate information. There are four different sub-types of alerts: error, warning, info, and success.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-    showCasePanelAdvanced={
-      Object {
-        "elements": Array [
-          Object {
-            "component": <Alert
-              icon="error"
-              text={
-                <p>
-                  <b>
-                    Danger
-                     title:
-                  </b>
-                   Input informative alert message here, provide link to solution or more info when 
-                  <a
-                    href="#"
-                  >
-                    possible
-                  </a>
-                  .
-                </p>
-              }
-              type="danger"
-            />,
-            "description": "Use this alert to let the user know that something went wrong. The message should clearly state the problem and if possible provide information on how to fix it.",
-            "options": Object {
-              "checkbox": Array [
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "close_button",
-                      "name": "Close button",
-                      "value": Object {
-                        "close": true,
-                      },
-                    },
-                  ],
-                  "title": "Options",
-                },
-              ],
-            },
-            "tab": "Danger",
-            "title": "Danger alert",
-          },
-          Object {
-            "component": <Alert
-              icon="warning"
-              text={
-                <p>
-                  <b>
-                    Warning
-                     title:
-                  </b>
-                   Input informative alert message here, provide link to solution or more info when 
-                  <a
-                    href="#"
-                  >
-                    possible
-                  </a>
-                  .
-                </p>
-              }
-              type="warning"
-            />,
-            "description": "Use this alert to help users avoid errors and warn against decisions that might have unexpected results",
-            "options": Object {
-              "checkbox": Array [
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "close_button",
-                      "name": "Close button",
-                      "value": Object {
-                        "close": true,
-                      },
-                    },
-                  ],
-                  "title": "Options",
-                },
-              ],
-            },
-            "tab": "Warning",
-            "title": "Warning error",
-          },
-          Object {
-            "component": <Alert
-              icon="info"
-              text={
-                <p>
-                  <b>
-                    Informative
-                     title:
-                  </b>
-                   Input informative alert message here, provide link to solution or more info when 
-                  <a
-                    href="#"
-                  >
-                    possible
-                  </a>
-                  .
-                </p>
-              }
-              type="informative"
-            />,
-            "description": "Use this alert to communicate additional information to the user that may not be tied to their current action or task.	",
-            "options": Object {
-              "checkbox": Array [
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "close_button",
-                      "name": "Close button",
-                      "value": Object {
-                        "close": true,
-                      },
-                    },
-                  ],
-                  "title": "Options",
-                },
-              ],
-            },
-            "tab": "Informative",
-            "title": "Informative alert",
-          },
-          Object {
-            "component": <Alert
-              icon="check_circle"
-              text={
-                <p>
-                  <b>
-                    Success
-                     title:
-                  </b>
-                   Input informative alert message here, provide link to solution or more info when 
-                  <a
-                    href="#"
-                  >
-                    possible
-                  </a>
-                  .
-                </p>
-              }
-              type="success"
-            />,
-            "description": "Use this alert to let the user know that an action or event has happened successfully. Success alerts are not a common use case for alert messages.",
-            "options": Object {
-              "checkbox": Array [
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "close_button",
-                      "name": "Close button",
-                      "value": Object {
-                        "close": true,
-                      },
-                    },
-                  ],
-                  "title": "Options",
-                },
-              ],
-            },
-            "tab": "Success",
-            "title": "Success alert",
-          },
-        ],
-        "id": "overviewAlert",
-        "tabsId": "overviewAlertTabs",
-      }
-    }
-  />
-  <WhenToConsider />
-  <HowTo />
-</section>
-`;
-
-exports[`Documentation: Alerts renders 1`] = `
-<DocContainer>
-  <section
-    id="alerts-doc"
-  >
-    <p
-      className="lead"
-    >
-      Alerts are short messages used to inform and give feedback to the user about an action or state. Icons and color indicate the type and urgency of the information within the message. 
-    </p>
-    <Overview />
-    <ContentGuidelines />
-    <DeveloperDocumentation />
-    <NpmInformation
-      componentName="alert"
-    />
-  </section>
-</DocContainer>
 `;

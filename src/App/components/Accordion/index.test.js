@@ -1,5 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render } from "@testing-library/react";
 
 import Accordion from "./index";
 
@@ -27,11 +28,16 @@ describe("Component: Accordion", () => {
         expect(Accordion).toBeDefined();
     });
 
-    it("renders with correct number of accordions", () => {
-        const wrapper = shallow(<Accordion items={items} />);
-        const accordions = wrapper.find(".accordion");
+    it("renders correctly", () => {
+        const tree = renderer.create(<Accordion items={items} />).toJSON();
 
-        expect(wrapper).toMatchSnapshot();
-        expect(accordions.length).toEqual(items.length);
+        expect(tree).toMatchSnapshot();
+    });
+
+    it("renders with correct number of accordions", () => {
+        const accordions = render(<Accordion items={items} />);
+        const buttons = accordions.getAllByRole("button");
+
+        expect(buttons.length).toEqual(items.length);
     });
 });

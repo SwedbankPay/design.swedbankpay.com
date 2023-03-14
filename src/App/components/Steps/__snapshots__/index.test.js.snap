@@ -1,250 +1,120 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Steps renders clickable Steps 1`] = `
-<Steps
-  steps={
-    Array [
-      Object {
-        "clickable": true,
-        "completed": true,
-        "title": "Step one",
-      },
-      Object {
-        "clickable": true,
-        "ongoing": true,
-        "title": "Step two",
-      },
-      Object {
-        "clickable": true,
-        "title": "Step three",
-      },
-      Object {
-        "selected": true,
-        "title": "Step four",
-      },
-      Object {
-        "title": "Step Five",
-      },
-      Object {
-        "title": "Step Six",
-      },
-    ]
-  }
+<div
+  className="steps"
 >
-  <div
-    className="steps"
-  >
-    <ol>
-      <RenderSteps
-        steps={
-          Array [
-            Object {
-              "clickable": true,
-              "completed": true,
-              "title": "Step one",
-            },
-            Object {
-              "clickable": true,
-              "ongoing": true,
-              "title": "Step two",
-            },
-            Object {
-              "clickable": true,
-              "title": "Step three",
-            },
-            Object {
-              "selected": true,
-              "title": "Step four",
-            },
-            Object {
-              "title": "Step Five",
-            },
-            Object {
-              "title": "Step Six",
-            },
-          ]
-        }
-      >
-        <li
-          className="steps-completed"
-          key="0"
+  <ol>
+    <li
+      className="steps-completed"
+    >
+      
+
+       
+      <a>
+        <div
+          className="material-icons steps-icon"
         >
-          
+          check
+        </div>
+        
 
-           
-          <a>
-            <StepsContent
-              completed={true}
-              index={0}
-              title="Step one"
-            >
-              <div
-                className="material-icons steps-icon"
-              >
-                check
-              </div>
-              
+        Step one
+      </a>
+       
+      
 
-              Step one
-            </StepsContent>
-          </a>
-           
-          
+       
+    </li>
+    <li
+      className="steps-ongoing"
+    >
+      
 
-           
-        </li>
-        <li
-          className="steps-ongoing"
-          key="1"
+       
+      <a>
+        <div
+          className="steps-number"
         >
-          
+          2
+        </div>
+        Step two
+      </a>
+       
+      
 
-           
-          <a>
-            <StepsContent
-              index={1}
-              title="Step two"
-            >
-              <div
-                className="steps-number"
-              >
-                2
-              </div>
-              Step two
-            </StepsContent>
-          </a>
-           
-          
+       
+    </li>
+    <li
+      className=""
+    >
+      
 
-           
-        </li>
-        <li
-          className=""
-          key="2"
+       
+      <a>
+        <div
+          className="steps-number"
         >
-          
+          3
+        </div>
+        Step three
+      </a>
+       
+      
 
-           
-          <a>
-            <StepsContent
-              index={2}
-              title="Step three"
-            >
-              <div
-                className="steps-number"
-              >
-                3
-              </div>
-              Step three
-            </StepsContent>
-          </a>
-           
-          
-
-           
-        </li>
-        <li
-          className="steps-selected"
-          key="3"
-        >
-          <StepsContent
-            index={3}
-            title="Step four"
-          >
-            <div
-              className="steps-number"
-            >
-              4
-            </div>
-            Step four
-          </StepsContent>
-        </li>
-        <li
-          className=""
-          key="4"
-        >
-          <StepsContent
-            index={4}
-            title="Step Five"
-          >
-            <div
-              className="steps-number"
-            >
-              5
-            </div>
-            Step Five
-          </StepsContent>
-        </li>
-        <li
-          className=""
-          key="5"
-        >
-          <StepsContent
-            index={5}
-            title="Step Six"
-          >
-            <div
-              className="steps-number"
-            >
-              6
-            </div>
-            Step Six
-          </StepsContent>
-        </li>
-      </RenderSteps>
-    </ol>
-    <RenderStepsNav
-      steps={
-        Array [
-          Object {
-            "clickable": true,
-            "completed": true,
-            "title": "Step one",
-          },
-          Object {
-            "clickable": true,
-            "ongoing": true,
-            "title": "Step two",
-          },
-          Object {
-            "clickable": true,
-            "title": "Step three",
-          },
-          Object {
-            "selected": true,
-            "title": "Step four",
-          },
-          Object {
-            "title": "Step Five",
-          },
-          Object {
-            "title": "Step Six",
-          },
-        ]
-      }
+       
+    </li>
+    <li
+      className="steps-selected"
     >
       <div
-        className="steps-responsive"
+        className="steps-number"
       >
-        <div
-          className="material-icons steps-nav-left"
-        >
-          keyboard_arrow_left
-        </div>
-        <div
-          className="steps-responsive-text"
-        >
-          Step 2
-        </div>
-        <div
-          className="material-icons steps-nav-right"
-        >
-          keyboard_arrow_right
-        </div>
+        4
       </div>
-    </RenderStepsNav>
+      Step four
+    </li>
+    <li
+      className=""
+    >
+      <div
+        className="steps-number"
+      >
+        5
+      </div>
+      Step Five
+    </li>
+    <li
+      className=""
+    >
+      <div
+        className="steps-number"
+      >
+        6
+      </div>
+      Step Six
+    </li>
+  </ol>
+  <div
+    className="steps-responsive"
+  >
+    <div
+      className="material-icons steps-nav-left"
+    >
+      keyboard_arrow_left
+    </div>
+    <div
+      className="steps-responsive-text"
+    >
+      Step 2
+    </div>
+    <div
+      className="material-icons steps-nav-right"
+    >
+      keyboard_arrow_right
+    </div>
   </div>
-</Steps>
+</div>
 `;
 
 exports[`Component: Steps renders in vertical mode if prop vertical is provided 1`] = `
@@ -252,30 +122,56 @@ exports[`Component: Steps renders in vertical mode if prop vertical is provided 
   className="steps steps-vertical"
 >
   <ol>
-    <RenderSteps
-      steps={
-        Array [
-          Object {
-            "completed": true,
-            "subtitle": "24.12.17 12:10",
-            "title": "Step one",
-          },
-          Object {
-            "ongoing": true,
-            "title": "Step two",
-          },
-          Object {
-            "selected": true,
-            "title": "Step three",
-          },
-          Object {
-            "title": "Step four",
-          },
-        ]
-      }
-    />
+    <li
+      className="steps-completed"
+    >
+      <div
+        className="material-icons steps-icon"
+      >
+        check
+      </div>
+      
+
+      Step one
+      
+
+      <div
+        className="steps-sub-title"
+      >
+        24.12.17 12:10
+      </div>
+    </li>
+    <li
+      className="steps-ongoing"
+    >
+      <div
+        className="steps-number"
+      >
+        2
+      </div>
+      Step two
+    </li>
+    <li
+      className="steps-selected"
+    >
+      <div
+        className="steps-number"
+      >
+        3
+      </div>
+      Step three
+    </li>
+    <li
+      className=""
+    >
+      <div
+        className="steps-number"
+      >
+        4
+      </div>
+      Step four
+    </li>
   </ol>
-  <RenderStepsNav />
 </div>
 `;
 
@@ -284,143 +180,103 @@ exports[`Component: Steps renders with default items if no props are provided 1`
   className="steps"
 >
   <ol>
-    <RenderSteps
-      steps={
-        Array [
-          Object {
-            "completed": true,
-            "subtitle": "24.12.17 12:10",
-            "title": "Step one",
-          },
-          Object {
-            "ongoing": true,
-            "title": "Step two",
-          },
-          Object {
-            "selected": true,
-            "title": "Step three",
-          },
-          Object {
-            "title": "Step four",
-          },
-        ]
-      }
-    />
+    <li
+      className="steps-completed"
+    >
+      <div
+        className="material-icons steps-icon"
+      >
+        check
+      </div>
+      
+
+      Step one
+      
+
+      <div
+        className="steps-sub-title"
+      >
+        24.12.17 12:10
+      </div>
+    </li>
+    <li
+      className="steps-ongoing"
+    >
+      <div
+        className="steps-number"
+      >
+        2
+      </div>
+      Step two
+    </li>
+    <li
+      className="steps-selected"
+    >
+      <div
+        className="steps-number"
+      >
+        3
+      </div>
+      Step three
+    </li>
+    <li
+      className=""
+    >
+      <div
+        className="steps-number"
+      >
+        4
+      </div>
+      Step four
+    </li>
   </ol>
-  <RenderStepsNav />
 </div>
 `;
 
 exports[`Component: Steps renders with given items if prop Steps is given 1`] = `
-<Steps
-  steps={
-    Array [
-      Object {
-        "title": "one step",
-      },
-      Object {
-        "title": "two steps",
-      },
-      Object {
-        "title": "three steps for testing",
-      },
-    ]
-  }
+<div
+  className="steps"
 >
-  <div
-    className="steps"
-  >
-    <ol>
-      <RenderSteps
-        steps={
-          Array [
-            Object {
-              "title": "one step",
-            },
-            Object {
-              "title": "two steps",
-            },
-            Object {
-              "title": "three steps for testing",
-            },
-          ]
-        }
-      >
-        <li
-          className=""
-          key="0"
-        >
-          <StepsContent
-            index={0}
-            title="one step"
-          >
-            <div
-              className="steps-number"
-            >
-              1
-            </div>
-            one step
-          </StepsContent>
-        </li>
-        <li
-          className=""
-          key="1"
-        >
-          <StepsContent
-            index={1}
-            title="two steps"
-          >
-            <div
-              className="steps-number"
-            >
-              2
-            </div>
-            two steps
-          </StepsContent>
-        </li>
-        <li
-          className=""
-          key="2"
-        >
-          <StepsContent
-            index={2}
-            title="three steps for testing"
-          >
-            <div
-              className="steps-number"
-            >
-              3
-            </div>
-            three steps for testing
-          </StepsContent>
-        </li>
-      </RenderSteps>
-    </ol>
-    <RenderStepsNav
-      steps={
-        Array [
-          Object {
-            "title": "one step",
-          },
-          Object {
-            "title": "two steps",
-          },
-          Object {
-            "title": "three steps for testing",
-          },
-        ]
-      }
+  <ol>
+    <li
+      className=""
     >
       <div
-        className="steps-responsive"
+        className="steps-number"
       >
-        <div
-          className="steps-responsive-text"
-        >
-          Step 2
-        </div>
+        1
       </div>
-    </RenderStepsNav>
+      one step
+    </li>
+    <li
+      className=""
+    >
+      <div
+        className="steps-number"
+      >
+        2
+      </div>
+      two steps
+    </li>
+    <li
+      className=""
+    >
+      <div
+        className="steps-number"
+      >
+        3
+      </div>
+      three steps for testing
+    </li>
+  </ol>
+  <div
+    className="steps-responsive"
+  >
+    <div
+      className="steps-responsive-text"
+    >
+      Step 2
+    </div>
   </div>
-</Steps>
+</div>
 `;

@@ -1,200 +1,211 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with badge if badge is provided 1`] = `
-<Fragment>
-  <div
-    className="d-flex flex-column"
+<div
+  className="d-flex flex-column"
+>
+  
+
+  <span
+    className="action-link-content"
   >
     
 
     <span
-      className="action-link-content"
+      className="action-link-label "
     >
-      
-
-      <span
-        className="action-link-label "
-      >
-        Link text
-      </span>
-      
-
-      <span
-        className="badge badge-default"
-      >
-        Badge
-      </span>
+      Link text
     </span>
     
 
-  </div>
-</Fragment>
+    <span
+      className="badge badge-default"
+    >
+      Badge
+    </span>
+  </span>
+  
+
+</div>
 `;
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with link text 1`] = `
-<Fragment>
-  <div
-    className="d-flex flex-column"
+<div
+  className="d-flex flex-column"
+>
+  
+
+  <span
+    className="action-link-content"
   >
     
 
     <span
-      className="action-link-content"
+      className="action-link-label no-badge"
     >
-      
-
-      <span
-        className="action-link-label no-badge"
-      >
-        Link text
-      </span>
-      
-
+      Link text
     </span>
     
 
-  </div>
-</Fragment>
+  </span>
+  
+
+</div>
 `;
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent with smalltext on multiline when multiline and smalltext is provided 1`] = `
-<Fragment>
-  <div
-    className="d-flex flex-column"
+<div
+  className="d-flex flex-column"
+>
+   
+  
+
+  <span
+    className="action-link-multiline"
   >
      
     
 
-    <span
-      className="action-link-multiline"
-    >
+    <span>
+      
+
+      <span
+        className="action-link-label"
+      >
+        Link text
+      </span>
+      
+
        
       
 
-      <span>
-        
-
-        <span
-          className="action-link-label"
-        >
-          Link text
-        </span>
-        
-
-         
-        
-
-      </span>
-      <span
-        className="small-text"
-      >
-        Small text
-      </span>
-      
-
     </span>
-  </div>
-</Fragment>
+    <span
+      className="small-text"
+    >
+      Small text
+    </span>
+    
+
+  </span>
+</div>
 `;
 
 exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent without badge if badge is not provided 1`] = `
-<Fragment>
-  <div
-    className="d-flex flex-column"
+<div
+  className="d-flex flex-column"
+>
+  
+
+  <span
+    className="action-link-content"
   >
     
 
     <span
-      className="action-link-content"
+      className="action-link-label no-badge"
     >
-      
-
-      <span
-        className="action-link-label no-badge"
-      >
-        Link text
-      </span>
-      
-
+      Link text
     </span>
     
 
-  </div>
-</Fragment>
-`;
+  </span>
+  
 
-exports[`Component: ActionLink ActionLinkContent renders ActionLinkContent without smalltext when not provided 1`] = `
-<Fragment>
-  <div
-    className="d-flex flex-column"
-  >
-    
-
-    <span
-      className="action-link-content"
-    >
-      
-
-      <span
-        className="action-link-label no-badge"
-      >
-        Link text
-      </span>
-      
-
-    </span>
-    
-
-  </div>
-</Fragment>
+</div>
 `;
 
 exports[`Component: ActionLink prop linkText is marked as required 1`] = `
-<Fragment>
-  <a
-    className="action-link"
-    href="#"
-    rel={null}
-    target={null}
+<a
+  className="action-link"
+  href="#"
+  rel={null}
+  target={null}
+>
+  
+
+  <div
+    className="d-flex flex-column"
   >
     
 
-    <ActionLinkContent />
-  </a>
-</Fragment>
+    <span
+      className="action-link-content"
+    >
+      
+
+      <span
+        className="action-link-label no-badge"
+      />
+      
+
+    </span>
+    
+
+  </div>
+</a>
 `;
 
 exports[`Component: ActionLink renders ActionLink with .action-link class only when not newTab 1`] = `
-<Fragment>
-  <a
-    className="action-link"
-    href="#"
-    rel={null}
-    target={null}
+<a
+  className="action-link"
+  href="#"
+  rel={null}
+  target={null}
+>
+  
+
+  <div
+    className="d-flex flex-column"
   >
     
 
-    <ActionLinkContent
-      linkText="Link text"
-    />
-  </a>
-</Fragment>
+    <span
+      className="action-link-content"
+    >
+      
+
+      <span
+        className="action-link-label no-badge"
+      />
+      
+
+    </span>
+    
+
+  </div>
+</a>
 `;
 
 exports[`Component: ActionLink renders ActionLink with .action-link-new-tab class when newTab is true 1`] = `
-<Fragment>
-  <a
-    className="action-link action-link-new-tab"
-    href="#"
-    rel="noopener noreferrer"
-    target="_blank"
+<a
+  className="action-link action-link-new-tab"
+  href="#"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  
+
+  <div
+    className="d-flex flex-column"
   >
     
 
-    <ActionLinkContent
-      linkText="Link text"
-      newTab={true}
-    />
-  </a>
-</Fragment>
+    <span
+      className="action-link-content"
+    >
+      
+
+      <span
+        className="action-link-label no-badge"
+      >
+        Link text
+      </span>
+      
+
+    </span>
+    
+
+  </div>
+</a>
 `;

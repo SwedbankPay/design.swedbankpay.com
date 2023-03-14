@@ -16,18 +16,99 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
       <div
         className="py-3"
       >
-        <InputGroup
-          defaultValue="Input text"
-          helpBlock="Hint text"
-          id="input-guidelines-example"
-          label="Label"
-          type="text"
-        />
-        <InputGroup
-          expandingHintTitle="Expander hint text"
-          label="Label"
-          type="textarea"
-        />
+        <div
+          className="form-group"
+        >
+          
+
+          <label
+            htmlFor="input-guidelines-example"
+          >
+            Label
+          </label>
+          
+
+          <input
+            aria-describedby="undefined"
+            autoComplete={null}
+            className="form-control"
+            data-validate={null}
+            defaultValue="Input text"
+            disabled={null}
+            id="input-guidelines-example"
+            pattern={null}
+            readOnly={null}
+            required={null}
+            type="text"
+          />
+          
+
+          <p
+            className="hint-text"
+            id="hint-text"
+          >
+            Hint text
+          </p>
+          
+
+        </div>
+        <div
+          className="form-group"
+        >
+          
+
+          <label>
+            Label
+          </label>
+          
+
+          <textarea
+            aria-describedby=" undefined"
+            autoComplete={null}
+            className="form-control"
+            data-validate={null}
+            defaultValue=""
+            disabled={null}
+            id={null}
+            pattern={null}
+            readOnly={null}
+            required={null}
+            type="textarea"
+          />
+          
+
+          <div
+            className="hint-text-expander"
+          >
+            
+
+            <button
+              aria-expanded={false}
+              type="button"
+            >
+              
+
+              <span
+                className="material-icons arrow"
+              >
+                keyboard_arrow_down
+              </span>
+              Expander hint text
+              
+
+            </button>
+            
+
+            <p
+              aria-hidden={true}
+              className="content"
+            >
+              This information is less important and only a minority of users will need it or the text is very long. In this case; both.
+            </p>
+            
+
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -44,9 +125,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
       When a text field is not required to be filled by the user, label it as “optional”.
     </li>
   </ul>
-  <section
-    key="[object Object]0"
-  >
+  <section>
     <h3>
       Hint text
     </h3>
@@ -74,7 +153,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
     >
       <div
         className="col-lg-6 col-sm-12"
-        key="If the information is fairly important and many users will need it, provide a hint text that is visible by default."
       >
         <div
           className="slab slab-plain slab-border-success"
@@ -84,13 +162,42 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           >
             Do
           </span>
-          <InputGroup
-            helpBlock="YYYYMMDDNNNN"
-            hintTextId="birthnumber-example"
-            id="do-example-expanding"
-            label="Personal identification number"
-            type="text"
-          />
+          <div
+            className="form-group"
+          >
+            
+
+            <label
+              htmlFor="do-example-expanding"
+            >
+              Personal identification number
+            </label>
+            
+
+            <input
+              aria-describedby="birthnumber-example"
+              autoComplete={null}
+              className="form-control"
+              data-validate={null}
+              defaultValue=""
+              disabled={null}
+              id="do-example-expanding"
+              pattern={null}
+              readOnly={null}
+              required={null}
+              type="text"
+            />
+            
+
+            <p
+              className="hint-text"
+              id="hint-text"
+            >
+              YYYYMMDDNNNN
+            </p>
+            
+
+          </div>
         </div>
         <p
           className="mb-4"
@@ -100,7 +207,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
       </div>
       <div
         className="col-lg-6 col-sm-12"
-        key="Use a hint expander if the information is long and won’t be needed by the majority of users. Write the hint expander to help users understand what they will see before they click."
       >
         <div
           className="slab slab-plain slab-border-success"
@@ -110,14 +216,65 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           >
             Do
           </span>
-          <InputGroup
-            expandingHintContent="Three to four digits on the back or the front of your card."
-            expandingHintId="where-to-find-example"
-            expandingHintTitle="Where to find the code?"
-            id="do-example-expanding"
-            label="Security code (CVC)"
-            type="text"
-          />
+          <div
+            className="form-group"
+          >
+            
+
+            <label
+              htmlFor="do-example-expanding"
+            >
+              Security code (CVC)
+            </label>
+            
+
+            <input
+              aria-describedby=" where-to-find-example"
+              autoComplete={null}
+              className="form-control"
+              data-validate={null}
+              defaultValue=""
+              disabled={null}
+              id="do-example-expanding"
+              pattern={null}
+              readOnly={null}
+              required={null}
+              type="text"
+            />
+            
+
+            <div
+              className="hint-text-expander"
+            >
+              
+
+              <button
+                aria-expanded={false}
+                type="button"
+              >
+                
+
+                <span
+                  className="material-icons arrow"
+                >
+                  keyboard_arrow_down
+                </span>
+                Where to find the code?
+                
+
+              </button>
+              
+
+              <p
+                aria-hidden={true}
+                className="content"
+              >
+                Three to four digits on the back or the front of your card.
+              </p>
+              
+
+            </div>
+          </div>
         </div>
         <p
           className="mb-4"
@@ -127,9 +284,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
       </div>
     </div>
   </section>
-  <section
-    key="[object Object]1"
-  >
+  <section>
     <h3>
       Prefix and postfix
     </h3>
@@ -141,7 +296,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
     >
       <div
         className="col-lg-6 col-sm-12"
-        key="Use a prefix icon to help convey the meaning of the label."
       >
         <div
           className="slab slab-plain slab-border-success"
@@ -151,13 +305,49 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           >
             Do
           </span>
-          <InputGroup
-            id="guidelines-input-example-1"
-            label="Username"
-            prefixType="icon"
-            prefixValue="account_circle"
-            type="text"
-          />
+          <div
+            className="form-group"
+          >
+            
+
+            <label
+              htmlFor="guidelines-input-example-1"
+            >
+              Username
+            </label>
+            
+
+            <div
+              className="input-group"
+            >
+              
+
+              <span
+                className="input-group-addon "
+              >
+                account_circle
+              </span>
+              
+
+              <input
+                aria-describedby={null}
+                autoComplete={null}
+                className="form-control"
+                data-validate={null}
+                defaultValue=""
+                disabled={null}
+                id="guidelines-input-example-1"
+                pattern={null}
+                readOnly={null}
+                required={null}
+                type="text"
+              />
+              
+	
+              
+
+            </div>
+          </div>
         </div>
         <p
           className="mb-4"
@@ -167,7 +357,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
       </div>
       <div
         className="col-lg-6 col-sm-12"
-        key="Don’t use a prefix icon that doesn’t help to convey the meaning of the label. There shouldn’t be any confusion between what type of information an icon represents."
       >
         <div
           className="slab slab-plain slab-border-error"
@@ -178,13 +367,49 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             Do
             n't
           </span>
-          <InputGroup
-            id="guidelines-input-example-2"
-            label="Username"
-            prefixType="icon"
-            prefixValue="email"
-            type="email"
-          />
+          <div
+            className="form-group"
+          >
+            
+
+            <label
+              htmlFor="guidelines-input-example-2"
+            >
+              Username
+            </label>
+            
+
+            <div
+              className="input-group"
+            >
+              
+
+              <span
+                className="input-group-addon "
+              >
+                email
+              </span>
+              
+
+              <input
+                aria-describedby={null}
+                autoComplete={null}
+                className="form-control"
+                data-validate={null}
+                defaultValue=""
+                disabled={null}
+                id="guidelines-input-example-2"
+                pattern={null}
+                readOnly={null}
+                required={null}
+                type="email"
+              />
+              
+	
+              
+
+            </div>
+          </div>
         </div>
         <p
           className="mb-4"
@@ -194,7 +419,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
       </div>
       <div
         className="col-lg-6 col-sm-12"
-        key="The label in itself should clearly indicate what type of data to enter, since prefixes and postfixes are hidden from screen readers."
       >
         <div
           className="slab slab-plain slab-border-success"
@@ -204,13 +428,49 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           >
             Do
           </span>
-          <InputGroup
-            id="guidelines-input-example-3"
-            label="Fixed transaction fee, in SEK"
-            postfix={true}
-            postfixValue="kr"
-            type="text"
-          />
+          <div
+            className="form-group"
+          >
+            
+
+            <label
+              htmlFor="guidelines-input-example-3"
+            >
+              Fixed transaction fee, in SEK
+            </label>
+            
+
+            <div
+              className="input-group"
+            >
+              
+
+              <input
+                aria-describedby={null}
+                autoComplete={null}
+                className="form-control"
+                data-validate={null}
+                defaultValue=""
+                disabled={null}
+                id="guidelines-input-example-3"
+                pattern={null}
+                readOnly={null}
+                required={null}
+                type="text"
+              />
+              
+	
+              <span
+                className="input-group-addon postfix"
+              >
+                kr
+              </span>
+              
+
+              
+
+            </div>
+          </div>
         </div>
         <p
           className="mb-4"
@@ -220,7 +480,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
       </div>
       <div
         className="col-lg-6 col-sm-12"
-        key="Use commonly understood abbreviations for text prefix or postfix, don’t use full words."
       >
         <div
           className="slab slab-plain slab-border-error"
@@ -231,13 +490,49 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             Do
             n't
           </span>
-          <InputGroup
-            id="guidelines-input-example-4"
-            label="Fixed transaction fee, in SEK"
-            postfix={true}
-            postfixValue="kronor"
-            type="text"
-          />
+          <div
+            className="form-group"
+          >
+            
+
+            <label
+              htmlFor="guidelines-input-example-4"
+            >
+              Fixed transaction fee, in SEK
+            </label>
+            
+
+            <div
+              className="input-group"
+            >
+              
+
+              <input
+                aria-describedby={null}
+                autoComplete={null}
+                className="form-control"
+                data-validate={null}
+                defaultValue=""
+                disabled={null}
+                id="guidelines-input-example-4"
+                pattern={null}
+                readOnly={null}
+                required={null}
+                type="text"
+              />
+              
+	
+              <span
+                className="input-group-addon postfix"
+              >
+                kronor
+              </span>
+              
+
+              
+
+            </div>
+          </div>
         </div>
         <p
           className="mb-4"
@@ -247,9 +542,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
       </div>
     </div>
   </section>
-  <section
-    key="[object Object]2"
-  >
+  <section>
     <h3>
       Error message
     </h3>
@@ -261,7 +554,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
     >
       <div
         className="col-lg-6 col-sm-12"
-        key="Do explain what went wrong and how to fix it."
       >
         <div
           className="slab slab-plain slab-border-success"
@@ -271,14 +563,46 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           >
             Do
           </span>
-          <InputGroup
-            defaultValue="Name.com"
-            errorMessage="The email address must include \\"@\\""
-            id="guidelines-input-example-7"
-            label="Email address"
-            type="text"
-            validationState="error"
-          />
+          <div
+            className="form-group has-error"
+          >
+            
+
+            <label
+              htmlFor="guidelines-input-example-7"
+            >
+              Email address
+            </label>
+            
+
+            <input
+              aria-describedby={null}
+              autoComplete={null}
+              className="form-control"
+              data-validate={null}
+              defaultValue="Name.com"
+              disabled={null}
+              id="guidelines-input-example-7"
+              pattern={null}
+              readOnly={null}
+              required={null}
+              type="text"
+            />
+            
+
+            <div
+              className="help-block"
+            >
+              <i
+                className="material-icons"
+              >
+                warning
+              </i>
+              The email address must include "@"
+            </div>
+            
+
+          </div>
         </div>
         <p
           className="mb-4"
@@ -288,7 +612,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
       </div>
       <div
         className="col-lg-6 col-sm-12"
-        key="Don't use technical jargon."
       >
         <div
           className="slab slab-plain slab-border-error"
@@ -299,14 +622,46 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             Do
             n't
           </span>
-          <InputGroup
-            defaultValue="Name.com"
-            errorMessage="Invalid input"
-            id="guidelines-input-example-8"
-            label="Email address"
-            type="text"
-            validationState="error"
-          />
+          <div
+            className="form-group has-error"
+          >
+            
+
+            <label
+              htmlFor="guidelines-input-example-8"
+            >
+              Email address
+            </label>
+            
+
+            <input
+              aria-describedby={null}
+              autoComplete={null}
+              className="form-control"
+              data-validate={null}
+              defaultValue="Name.com"
+              disabled={null}
+              id="guidelines-input-example-8"
+              pattern={null}
+              readOnly={null}
+              required={null}
+              type="text"
+            />
+            
+
+            <div
+              className="help-block"
+            >
+              <i
+                className="material-icons"
+              >
+                warning
+              </i>
+              Invalid input
+            </div>
+            
+
+          </div>
         </div>
         <p
           className="mb-4"
@@ -336,24 +691,117 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       Add 
-      <CodeTags
-        code="autocomplete"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        autocomplete
+      </code>
        attributes to input fields when it is possible to make a form easier for users to fill. 
     </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="html"
-      showCasePanel={true}
+    <div
+      className="showcase-panel"
     >
-      <InputGroup
-        autoComplete="name"
-        id="developer-documentation-example"
-        label="Name"
-        type="text"
-      />
-    </ComponentPreview>
+      <div
+        className="form-group"
+      >
+        
+
+        <label
+          htmlFor="developer-documentation-example"
+        >
+          Name
+        </label>
+        
+
+        <input
+          aria-describedby={null}
+          autoComplete="name"
+          className="form-control"
+          data-validate={null}
+          defaultValue=""
+          disabled={null}
+          id="developer-documentation-example"
+          pattern={null}
+          readOnly={null}
+          required={null}
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;div class="form-group"&gt;
+                  
+
+                      &lt;label for="developer-documentation-example"&gt;Name&lt;/label&gt;
+                  
+
+                      &lt;input type="text" class="form-control" id="developer-documentation-example" autoComplete="name" /&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
   </section>
   <section>
     <h3>
@@ -361,30 +809,141 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       To display the error state, add the 
-      <CodeTags
-        code=".has-error"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .has-error
+      </code>
        class to the parent element, then add the 
-      <CodeTags
-        code=".help-block"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .help-block
+      </code>
        element as the last child with the error message.
     </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="html"
-      showCasePanel={true}
+    <div
+      className="showcase-panel"
     >
-      <InputGroup
-        defaultValue="Input text"
-        errorMessage="Descriptive helpful error message."
-        id="developer-documentation-error-example"
-        label="Input label"
-        type="text"
-      />
-    </ComponentPreview>
+      <div
+        className="form-group has-error"
+      >
+        
+
+        <label
+          htmlFor="developer-documentation-error-example"
+        >
+          Input label
+        </label>
+        
+
+        <input
+          aria-describedby={null}
+          autoComplete={null}
+          className="form-control"
+          data-validate={null}
+          defaultValue="Input text"
+          disabled={null}
+          id="developer-documentation-error-example"
+          pattern={null}
+          readOnly={null}
+          required={null}
+          type="text"
+        />
+        
+
+        <div
+          className="help-block"
+        >
+          <i
+            className="material-icons"
+          >
+            warning
+          </i>
+          Descriptive helpful error message.
+        </div>
+        
+
+      </div>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;div class="form-group has-error"&gt;
+                  
+
+                      &lt;label for="developer-documentation-error-example"&gt;Input label&lt;/label&gt;
+                  
+
+                      &lt;input type="text" class="form-control" id="developer-documentation-error-example" value="Input text" /&gt;
+                  
+
+                      &lt;div class="help-block"&gt;&lt;i class="material-icons"&gt;warning&lt;/i&gt;Descriptive helpful error message.&lt;/div&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
   </section>
   <section>
     <h3>
@@ -392,50 +951,146 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
     </h3>
     <p>
       Disable a input field by adding the 
-      <CodeTags
-        code="disabled"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        disabled
+      </code>
        attribute to the desired input field and the 
-      <CodeTags
-        code="form-group"
-        type="primary"
-      />
+      <code
+        className="code-tags code-tags-primary"
+      >
+        form-group
+      </code>
        where the input field resides.
     </p>
-    <ComponentPreview
-      codeFigure={true}
-      language="html"
-      showCasePanel={true}
+    <div
+      className="showcase-panel"
     >
-      <InputGroup
-        disabled={true}
-        label="Input label"
-        type="text"
-      />
-    </ComponentPreview>
+      <div
+        className="form-group disabled"
+      >
+        
+
+        <label>
+          Input label
+        </label>
+        
+
+        <input
+          aria-describedby={null}
+          autoComplete={null}
+          className="form-control"
+          data-validate={null}
+          defaultValue=""
+          disabled={true}
+          id={null}
+          pattern={null}
+          readOnly={null}
+          required={null}
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;div class="form-group disabled"&gt;
+                  
+
+                      &lt;label&gt;Input label&lt;/label&gt;
+                  
+
+                      &lt;input type="text" class="form-control" disabled /&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
   </section>
   <section>
     <h3>
       Javascript methods
     </h3>
     <p>
-      <CodeTags
-        code="dg.validation.init()"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        dg.validation.init()
+      </code>
        can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.
     </p>
     <p>
-      <CodeTags
-        code="dg.hintTextExpander.init()"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        dg.hintTextExpander.init()
+      </code>
        can be used to initialize all Hint text expanders. Or 
-      <CodeTags
-        code="dg.hintTextExpander.init(<hint-expander-id>)"
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        dg.hintTextExpander.init(&lt;hint-expander-id&gt;)
+      </code>
        to initialize a specific one.
     </p>
   </section>

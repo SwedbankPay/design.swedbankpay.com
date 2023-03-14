@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import Panel from "./index";
 
@@ -9,42 +11,59 @@ describe("Component: Panel -", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Panel />);
 
-        expect(wrapper).toMatchSnapshot();
+        const componentForSnap = renderer.create(<Panel />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders without header when prop title is missing", () => {
-        const wrapper = shallow(<Panel />);
+        render(<Panel />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).not.toContain("header");
-        expect(wrapper.html()).not.toContain("panel-title");
+        expect(screen.queryByRole("banner")).not.toBeInTheDocument();
+        expect(screen.queryByRole("heading")).not.toBeInTheDocument();
+
+        const componentForSnap = renderer.create(<Panel />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with a header without subtitle when prop title is provided and prop subTitle is missing", () => {
-        const wrapper = shallow(<Panel title="test" />);
+        render(<Panel title="test" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("header");
-        expect(wrapper.contains(<h2 className="panel-title">test</h2>)).toEqual(true);
-        expect(wrapper.contains(<p className="panel-sub-title">test</p>)).toEqual(false);
+        expect(screen.getByRole("banner")).toBeInTheDocument();
+        expect(screen.getByRole("heading")).toBeInTheDocument();
+        expect(screen.getByRole("heading")).toHaveClass("panel-title");
+        expect(screen.getByRole("heading")).toHaveTextContent("test");
+        expect(screen.getByRole("banner").querySelectorAll("p.panel-sub-title")).toHaveLength(0);
+
+        const componentForSnap = renderer.create(<Panel title="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with a header and subtitle when prop title and subTitle is provided", () => {
-        const wrapper = shallow(<Panel title="test" subTitle="test" />);
+        render(<Panel title="test" subTitle="test" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("header");
-        expect(wrapper.contains(<h2 className="panel-title">test</h2>)).toEqual(true);
-        expect(wrapper.contains(<p className="panel-sub-title">test</p>)).toEqual(true);
+        expect(screen.getByRole("banner")).toBeInTheDocument();
+        expect(screen.getByRole("heading")).toBeInTheDocument();
+        expect(screen.getByRole("heading")).toHaveClass("panel-title");
+        expect(screen.getByRole("heading")).toHaveTextContent("test");
+        expect(screen.getByRole("banner").querySelectorAll("p.panel-sub-title")).toHaveLength(1);
+
+        const componentForSnap = renderer.create(<Panel title="test" subTitle="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders without panel-body when prop bodyContent is not provided", () => {
-        const wrapper = shallow(<Panel />);
+        const { container } = render(<Panel />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).not.toContain("panel-body");
+        expect(container.querySelectorAll("section .panel-body")).toHaveLength(0);
+
+        const componentForSnap = renderer.create(<Panel />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with panel-body when prop bodyContent is provided", () => {
@@ -53,55 +72,75 @@ describe("Component: Panel -", () => {
             "Some more content over here.",
             "And one more line, just to be safe."
         ];
-        const wrapper = shallow(<Panel bodyContent={bodyContent} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("panel-body");
-        expect(wrapper.contains(<p>Your main panel content is put here.</p>)).toEqual(true);
+        const { container } = render(<Panel bodyContent={bodyContent} />);
+
+        expect(container.querySelectorAll("section .panel-body")).toHaveLength(1);
+        expect([...container.querySelectorAll("section .panel-body p")].some(txt => txt.textContent === "Your main panel content is put here.")).toBeTruthy();
+
+        const componentForSnap = renderer.create(<Panel bodyContent={bodyContent} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders without a footer when prop footerText is not provided", () => {
-        const wrapper = shallow(<Panel />);
+        render(<Panel />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).not.toContain("footer");
+        expect(screen.queryByRole("contentinfo")).not.toBeInTheDocument();
+
+        const componentForSnap = renderer.create(<Panel />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with a footer when prop footerText is provided", () => {
-        const wrapper = shallow(<Panel footerText="test" />);
+        render(<Panel footerText="test" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("footer");
-        expect(wrapper.contains(<p>test</p>)).toEqual(true);
+        expect(screen.getByRole("contentinfo")).toBeInTheDocument();
+        expect(screen.getByRole("contentinfo").querySelector("p")).toHaveTextContent("test");
+
+        const componentForSnap = renderer.create(<Panel footerText="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with class 'panel-bottomless when prop removeBottomPadding is true", () => {
-        const wrapper = shallow(<Panel removeBottomPadding />);
+        const { container } = render(<Panel removeBottomPadding />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("panel-bottomless");
+        expect(container.querySelector("section")).toHaveClass("panel-bottomless");
+
+        const componentForSnap = renderer.create(<Panel removeBottomPadding />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with class 'panel-no-padding' when prop removeAllPadding  is true", () => {
-        const wrapper = shallow(<Panel removeAllPadding />);
+        const { container } = render(<Panel removeAllPadding />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("panel-no-padding");
+        expect(container.querySelector("section")).toHaveClass("panel-no-padding");
+
+        const componentForSnap = renderer.create(<Panel removeAllPadding />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with class 'panel-half-padding' when prop halfPadding is true", () => {
-        const wrapper = shallow(<Panel halfPadding />);
+        const { container } = render(<Panel halfPadding />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("panel-half-padding");
+        expect(container.querySelector("section")).toHaveClass("panel-half-padding");
+
+        const componentForSnap = renderer.create(<Panel halfPadding />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("prop type is an enum with set values", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(<Panel type="test" />);
+        const componentForSnap = renderer.create(<Panel type="test" />);
 
-        expect(wrapper).toMatchSnapshot();
         expect(console.error).toHaveBeenCalled();
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

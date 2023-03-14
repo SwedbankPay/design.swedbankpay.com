@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import Dialog from "./index";
 
@@ -9,29 +11,38 @@ describe("Component: Dialog -", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Dialog />);
+        const componentForSnap = renderer.create(<Dialog />);
 
-        expect(wrapper).toMatchSnapshot();
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with the passed ID", () => {
-        const wrapper = shallow(<Dialog diaId="my-id"/>);
+        render(<Dialog diaId="my-id"/>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("my-id");
+        expect(screen.getByRole("dialog")).toHaveAttribute("id", "my-id");
+
+        const componentForSnap = renderer.create(<Dialog />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with the passed header", () => {
-        const wrapper = shallow(<Dialog diaHeader="My heading"/>);
+        render(<Dialog diaHeader="My heading"/>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("My heading");
+        expect(screen.getByRole("heading")).toHaveTextContent("My heading");
+
+        const componentForSnap = renderer.create(<Dialog diaHeader="My heading"/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with the passed children", () => {
-        const wrapper = shallow(<Dialog><p>My paragraph</p></Dialog>);
+        const { container } = render(<Dialog><p>My paragraph</p></Dialog>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<p>My paragraph</p>");
+        expect(container.querySelector("p")).toHaveTextContent("My paragraph");
+
+        const componentForSnap = renderer.create(<Dialog><p>My paragraph</p></Dialog>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

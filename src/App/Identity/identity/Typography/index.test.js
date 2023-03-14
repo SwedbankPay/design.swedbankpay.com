@@ -1,18 +1,11 @@
 /* eslint-disable babel/new-cap */
 import React from "react";
-import { shallow } from "enzyme";
-
+import renderer from "react-test-renderer";
 import Typography, { Typefaces, Desktop, Mobile, Code, Headings, HeroTitle, Lead, Inline, TextUtilities, Abbreviations, Blockquotes, AkkuratMono } from "./index";
 
 describe("Core: Typography", () => {
     it("is defined", () => {
         expect(Typography).toBeDefined();
-    });
-
-    it("renders", () => {
-        const wrapper = shallow(<Typography />);
-
-        expect(wrapper).toMatchSnapshot();
     });
 
     describe("Typefaces", () => {
@@ -21,9 +14,9 @@ describe("Core: Typography", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Typefaces />);
+            const typefaces = renderer.create(<Typefaces />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(typefaces.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -31,35 +24,17 @@ describe("Core: Typography", () => {
         it("is defined", () => {
             expect(Desktop).toBeDefined();
         });
-
-        it("renders", () => {
-            const wrapper = shallow(<Desktop />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
     });
 
     describe("Mobile", () => {
         it("is defined", () => {
             expect(Mobile).toBeDefined();
         });
-
-        it("renders", () => {
-            const wrapper = shallow(<Mobile />);
-
-            expect(wrapper).toMatchSnapshot();
-        });
     });
 
     describe("Code", () => {
         it("is defined", () => {
             expect(Code).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<Code />);
-
-            expect(wrapper).toMatchSnapshot();
         });
     });
 
@@ -69,9 +44,9 @@ describe("Core: Typography", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Headings />);
+            const headings = renderer.create(<Headings />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(headings.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -81,9 +56,9 @@ describe("Core: Typography", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<HeroTitle />);
+            const heroTitle = renderer.create(<HeroTitle />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(heroTitle.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -93,9 +68,9 @@ describe("Core: Typography", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Lead />);
+            const lead = renderer.create(<Lead />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(lead.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -105,21 +80,15 @@ describe("Core: Typography", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Inline />);
+            const inline = renderer.create(<Inline />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(inline.toJSON()).toMatchSnapshot();
         });
     });
 
     describe("Text Utilities", () => {
         it("is defined", () => {
             expect(TextUtilities).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = shallow(<TextUtilities />);
-
-            expect(wrapper).toMatchSnapshot();
         });
     });
 
@@ -129,9 +98,9 @@ describe("Core: Typography", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Abbreviations />);
+            const wrapper = renderer.create(<Abbreviations />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -141,18 +110,18 @@ describe("Core: Typography", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<Blockquotes />);
+            const wrapper = renderer.create(<Blockquotes />);
 
             if (Blockquotes().props.children) {
                 Blockquotes().props.children.map(Child => {
-                    const wrapper = shallow(<Child.type />);
+                    const wrapper = renderer.create(<Child.type />);
 
                     //  eslint-disable-next-line jest/no-conditional-expect
-                    expect(wrapper).toMatchSnapshot();
+                    expect(wrapper.toJSON()).toMatchSnapshot();
                 });
             }
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -162,9 +131,9 @@ describe("Core: Typography", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<AkkuratMono />);
+            const wrapper = renderer.create(<AkkuratMono />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 });

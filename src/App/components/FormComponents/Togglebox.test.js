@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import Togglebox from "./Togglebox";
 
@@ -9,36 +11,48 @@ describe("Component: Togglebox -", () => {
     });
 
     it("renders without label", () => {
-        const wrapper = shallow(<Togglebox />);
+        const { container } = render(<Togglebox />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("togglebox");
-        expect(wrapper.html()).not.toContain("label");
+        expect(screen.getByRole("checkbox").parentElement).toHaveClass("togglebox");
+        expect(container.querySelector("label")).toBeNull();
+
+        const componentForSnap = renderer.create(<Togglebox />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with id and label", () => {
-        const wrapper = shallow(<Togglebox id="test" label="test" />);
+        const { container } = render(<Togglebox id="test-id" label="test label" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("togglebox");
-        expect(wrapper.html()).toContain("label");
-        expect(wrapper.html()).toContain("id=\"test\"");
-        expect(wrapper.html()).toContain("for=\"test\"");
+        expect(screen.getByRole("checkbox").parentElement).toHaveClass("togglebox");
+        expect(screen.getByLabelText("test label").parentElement).toHaveClass("togglebox");
+        expect(screen.getByRole("checkbox")).toHaveAttribute("id", "test-id");
+        expect(container.querySelector("label")).toHaveAttribute("for", "test-id");
+
+        const componentForSnap = renderer.create(<Togglebox id="test" label="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders disabled", () => {
-        const wrapper = shallow(<Togglebox disabled />);
+        render(<Togglebox disabled />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("togglebox");
-        expect(wrapper.html()).toContain("disabled");
+        expect(screen.getByRole("checkbox").parentElement).toHaveClass("togglebox");
+        expect(screen.getByRole("checkbox")).toBeDisabled();
+
+        const componentForSnap = renderer.create(<Togglebox disabled />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders checked", () => {
-        const wrapper = shallow(<Togglebox checked />);
+        render(<Togglebox checked />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("togglebox");
-        expect(wrapper.html()).toContain("checked");
+        expect(screen.getByRole("checkbox").parentElement).toHaveClass("togglebox");
+        expect(screen.getByRole("checkbox")).toBeChecked();
+
+        const componentForSnap = renderer.create(<Togglebox checked />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

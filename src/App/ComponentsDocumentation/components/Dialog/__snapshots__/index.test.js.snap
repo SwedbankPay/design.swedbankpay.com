@@ -1,16 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation: Dialog Example renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="overview"
   >
     Example
-  </h2>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </h2>,
+  <div
+    className="showcase-panel"
   >
     <button
       className="btn btn-primary"
@@ -23,28 +21,255 @@ exports[`Documentation: Dialog Example renders 1`] = `
       
 
     </button>
-    <Dialog
-      diaHeader="Delete item 456?"
-      diaId="demo-dialog"
+    <div
+      aria-describedby="aria-describe-dia"
+      aria-labelledby="aria-label-dia"
+      aria-modal="true"
+      className="dialog"
+      id="demo-dialog"
+      role="dialog"
     >
-      <p>
-        Are you sure you want to permanently delete the item 
-        <i>
-          German Swashbuckle (456)?
-        </i>
-      </p>
-    </Dialog>
-  </ComponentPreview>
-</Fragment>
+      <section>
+        <header
+          className="dialog-header"
+          id="aria-label-dia"
+        >
+          <h4>
+            Delete item 456?
+          </h4>
+          
+
+          <button
+            aria-label="Close dialog"
+            className="dialog-close"
+            type="button"
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              close
+            </i>
+            
+
+          </button>
+        </header>
+        <div
+          className="dialog-body"
+          id="aria-describe-dia"
+        >
+          <p>
+            Are you sure you want to permanently delete the item 
+            <i>
+              German Swashbuckle (456)?
+            </i>
+          </p>
+        </div>
+        <footer
+          className="dialog-footer"
+        >
+          
+
+          <button
+            className="btn btn-secondary"
+            data-dialog-close={true}
+            type="button"
+          >
+            Cancel
+          </button>
+          
+
+          <button
+            className="btn btn-primary"
+            type="button"
+          >
+            Delete
+          </button>
+          
+
+        </footer>
+      </section>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+                15
+                
+
+                16
+                
+
+                17
+                
+
+                18
+                
+
+                19
+                
+
+                20
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;button class="btn btn-primary" type="button" data-dialog-open="demo-dialog"&gt;
+                
+
+                    Open dialog
+                
+
+                &lt;/button&gt;
+                
+
+                &lt;div class="dialog" id="demo-dialog" role="dialog" aria-modal="true" aria-labelledby="aria-label-dia" aria-describedby="aria-describe-dia"&gt;
+                
+
+                    &lt;section&gt;
+                
+
+                        &lt;header class="dialog-header" id="aria-label-dia"&gt;
+                
+
+                            &lt;h4&gt;Delete item 456?&lt;/h4&gt;
+                
+
+                            &lt;button type="button" class="dialog-close" aria-label="Close dialog"&gt;
+                
+
+                                &lt;i class="material-icons"&gt;close&lt;/i&gt;
+                
+
+                            &lt;/button&gt;
+                
+
+                        &lt;/header&gt;
+                
+
+                        &lt;div class="dialog-body" id="aria-describe-dia"&gt;
+                
+
+                            &lt;p&gt;Are you sure you want to permanently delete the item &lt;i&gt;German Swashbuckle (456)?&lt;/i&gt;&lt;/p&gt;
+                
+
+                        &lt;/div&gt;
+                
+
+                        &lt;footer class="dialog-footer"&gt;
+                
+
+                            &lt;button class="btn btn-secondary" type="button" data-dialog-close="true"&gt;Cancel&lt;/button&gt;
+                
+
+                            &lt;button class="btn btn-primary" type="button"&gt;Delete&lt;/button&gt;
+                
+
+                        &lt;/footer&gt;
+                
+
+                    &lt;/section&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Dialog HowItWorks renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="how-it-works"
   >
     How it works
-  </h2>
+  </h2>,
   <p>
     A dialog remains hidden until it is triggered. Once it is open it overlays the website with a dark background and presents some options, usually confirming or cancelling an action. If you use a dialog it is assumed that you want to "force" the user to make a choice. Therefore the only way to close a dialog is to choose one of the presented actions or, if given, press the 
     <i
@@ -54,33 +279,43 @@ exports[`Documentation: Dialog HowItWorks renders 1`] = `
       close
     </i>
      to close the dialog.
-  </p>
+  </p>,
   <p>
     Dialog boxes consist of a header, a body and a footer. In these you can put whatever you want, but some basic functionality should be included in all dialogs. The header should contain a short descriptive text for what the dialog-box does. You can include an icon with class 
-    <CodeTags
-      code=".dialog-close"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .dialog-close
+    </code>
      if you wish to give your user a way to close the dialog box without choosing an option. The dialog body should contain the main content, usually just text confirming an action. In the footer you will find buttons to confirm or cancel the requested action.
-  </p>
-  <Alert
-    icon="warning"
-    text={
-      <p>
-        <b>
-          Initializing dialog buttons:
-        </b>
-         To make a button open the dialog box you need to include 
-        <CodeTags
-          code="data-dialog-open=\\"{#your-dialog-id}\\""
-          type="secondary"
-        />
-         as an attribute to that button.
-      </p>
-    }
-    type="warning"
-  />
-</Fragment>
+  </p>,
+  <div
+    className="alert alert-warning"
+  >
+    
+
+    <i
+      aria-hidden="true"
+      className="material-icons alert-icon"
+    >
+      warning
+    </i>
+    <p>
+      <b>
+        Initializing dialog buttons:
+      </b>
+       To make a button open the dialog box you need to include 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        data-dialog-open="{#your-dialog-id}"
+      </code>
+       as an attribute to that button.
+    </p>
+    
+
+  </div>,
+]
 `;
 
 exports[`Documentation: Dialog JavascriptMethods renders 1`] = `

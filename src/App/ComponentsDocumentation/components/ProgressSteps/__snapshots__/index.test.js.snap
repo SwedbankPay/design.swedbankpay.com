@@ -42,125 +42,1598 @@ exports[`Documentation: Progress Steps BasicSteps renders 1`] = `
 `;
 
 exports[`Documentation: Progress Steps ClickableSteps renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="clickable-steps"
   >
     Clickable steps
-  </h2>
+  </h2>,
   <p>
     Add an anchor element (
-    <CodeTags
-      code="<a>"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      &lt;a&gt;
+    </code>
     ) to the list item element ( 
-    <CodeTags
-      code="<li>"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      &lt;li&gt;
+    </code>
     ). Ensure that all content within the list element is also inside the anchor element.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <Steps
-      steps={
-        Array [
-          Object {
-            "clickable": true,
-            "completed": true,
-            "title": "Step one",
-          },
-          Object {
-            "clickable": true,
-            "ongoing": true,
-            "title": "Step two",
-          },
-          Object {
-            "clickable": true,
-            "selected": true,
-            "title": "Step three",
-          },
-          Object {
-            "clickable": true,
-            "title": "Step four",
-          },
-          Object {
-            "title": "Step Five",
-          },
-          Object {
-            "title": "Step Six",
-          },
-        ]
-      }
-    />
-  </ComponentPreview>
-</Fragment>
+    <div
+      className="steps"
+    >
+      <ol>
+        <li
+          className="steps-completed"
+        >
+          
+
+           
+          <a>
+            <div
+              className="material-icons steps-icon"
+            >
+              check
+            </div>
+            
+
+            Step one
+          </a>
+           
+          
+
+           
+        </li>
+        <li
+          className="steps-ongoing"
+        >
+          
+
+           
+          <a>
+            <div
+              className="steps-number"
+            >
+              2
+            </div>
+            Step two
+          </a>
+           
+          
+
+           
+        </li>
+        <li
+          className="steps-selected"
+        >
+          
+
+           
+          <a>
+            <div
+              className="steps-number"
+            >
+              3
+            </div>
+            Step three
+          </a>
+           
+          
+
+           
+        </li>
+        <li
+          className=""
+        >
+          
+
+           
+          <a>
+            <div
+              className="steps-number"
+            >
+              4
+            </div>
+            Step four
+          </a>
+           
+          
+
+           
+        </li>
+        <li
+          className=""
+        >
+          <div
+            className="steps-number"
+          >
+            5
+          </div>
+          Step Five
+        </li>
+        <li
+          className=""
+        >
+          <div
+            className="steps-number"
+          >
+            6
+          </div>
+          Step Six
+        </li>
+      </ol>
+      <div
+        className="steps-responsive"
+      >
+        <div
+          className="material-icons steps-nav-left"
+        >
+          keyboard_arrow_left
+        </div>
+        <div
+          className="steps-responsive-text"
+        >
+          Step 2
+        </div>
+        <div
+          className="material-icons steps-nav-right"
+        >
+          keyboard_arrow_right
+        </div>
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+                15
+                
+
+                16
+                
+
+                17
+                
+
+                18
+                
+
+                19
+                
+
+                20
+                
+
+                21
+                
+
+                22
+                
+
+                23
+                
+
+                24
+                
+
+                25
+                
+
+                26
+                
+
+                27
+                
+
+                28
+                
+
+                29
+                
+
+                30
+                
+
+                31
+                
+
+                32
+                
+
+                33
+                
+
+                34
+                
+
+                35
+                
+
+                36
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="steps"&gt;
+                
+
+                    &lt;ol&gt;
+                
+
+                        &lt;li class="steps-completed"&gt;
+                
+
+                            &lt;a&gt;
+                
+
+                                &lt;div class="material-icons steps-icon"&gt;check&lt;/div&gt;
+                
+
+                                Step one
+                
+
+                            &lt;/a&gt;
+                
+
+                        &lt;/li&gt;
+                
+
+                        &lt;li class="steps-ongoing"&gt;
+                
+
+                            &lt;a&gt;
+                
+
+                                &lt;div class="steps-number"&gt;2&lt;/div&gt;Step two
+                
+
+                            &lt;/a&gt;
+                
+
+                        &lt;/li&gt;
+                
+
+                        &lt;li class="steps-selected"&gt;
+                
+
+                            &lt;a&gt;
+                
+
+                                &lt;div class="steps-number"&gt;3&lt;/div&gt;Step three
+                
+
+                            &lt;/a&gt;
+                
+
+                        &lt;/li&gt;
+                
+
+                        &lt;li&gt;
+                
+
+                            &lt;a&gt;
+                
+
+                                &lt;div class="steps-number"&gt;4&lt;/div&gt;Step four
+                
+
+                            &lt;/a&gt;
+                
+
+                        &lt;/li&gt;
+                
+
+                        &lt;li&gt;
+                
+
+                            &lt;div class="steps-number"&gt;5&lt;/div&gt;Step Five
+                
+
+                        &lt;/li&gt;
+                
+
+                        &lt;li&gt;
+                
+
+                            &lt;div class="steps-number"&gt;6&lt;/div&gt;Step Six
+                
+
+                        &lt;/li&gt;
+                
+
+                    &lt;/ol&gt;
+                
+
+                    &lt;div class="steps-responsive"&gt;
+                
+
+                        &lt;div class="material-icons steps-nav-left"&gt;keyboard_arrow_left&lt;/div&gt;
+                
+
+                        &lt;div class="steps-responsive-text"&gt;Step 2&lt;/div&gt;
+                
+
+                        &lt;div class="material-icons steps-nav-right"&gt;keyboard_arrow_right&lt;/div&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Progress Steps VerticalSteps renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="vertical-steps"
   >
     Vertical steps
-  </h2>
+  </h2>,
   <p>
     If you wish to use steps vertically you can add 
-    <CodeTags
-      code=".steps-vertical"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .steps-vertical
+    </code>
      to the 
-    <CodeTags
-      code="<div>"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      &lt;div&gt;
+    </code>
      element.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <Steps
-      steps={
-        Array [
-          Object {
-            "completed": true,
-            "title": "Step one",
-          },
-          Object {
-            "ongoing": true,
-            "selected": true,
-            "title": "Step two",
-          },
-          Object {
-            "title": "Step three",
-          },
-          Object {
-            "title": "Step four",
-          },
-        ]
-      }
-      vertical={true}
-    />
-  </ComponentPreview>
-</Fragment>
+    <div
+      className="steps steps-vertical"
+    >
+      <ol>
+        <li
+          className="steps-completed"
+        >
+          <div
+            className="material-icons steps-icon"
+          >
+            check
+          </div>
+          
+
+          Step one
+        </li>
+        <li
+          className="steps-ongoing steps-selected"
+        >
+          <div
+            className="steps-number"
+          >
+            2
+          </div>
+          Step two
+        </li>
+        <li
+          className=""
+        >
+          <div
+            className="steps-number"
+          >
+            3
+          </div>
+          Step three
+        </li>
+        <li
+          className=""
+        >
+          <div
+            className="steps-number"
+          >
+            4
+          </div>
+          Step four
+        </li>
+      </ol>
+      <div
+        className="steps-responsive"
+      >
+        <div
+          className="steps-responsive-text"
+        >
+          Step 2
+        </div>
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+                15
+                
+
+                16
+                
+
+                17
+                
+
+                18
+                
+
+                19
+                
+
+                20
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="steps steps-vertical"&gt;
+                
+
+                    &lt;ol&gt;
+                
+
+                        &lt;li class="steps-completed"&gt;
+                
+
+                            &lt;div class="material-icons steps-icon"&gt;check&lt;/div&gt;
+                
+
+                            Step one
+                
+
+                        &lt;/li&gt;
+                
+
+                        &lt;li class="steps-ongoing steps-selected"&gt;
+                
+
+                            &lt;div class="steps-number"&gt;2&lt;/div&gt;Step two
+                
+
+                        &lt;/li&gt;
+                
+
+                        &lt;li&gt;
+                
+
+                            &lt;div class="steps-number"&gt;3&lt;/div&gt;Step three
+                
+
+                        &lt;/li&gt;
+                
+
+                        &lt;li&gt;
+                
+
+                            &lt;div class="steps-number"&gt;4&lt;/div&gt;Step four
+                
+
+                        &lt;/li&gt;
+                
+
+                    &lt;/ol&gt;
+                
+
+                    &lt;div class="steps-responsive"&gt;
+                
+
+                        &lt;div class="steps-responsive-text"&gt;Step 2&lt;/div&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Progress Steps renders 1`] = `
-<DocContainer>
-  <p
-    className="lead"
+<div
+  className="row"
+>
+  <div
+    className="doc-body col-12"
+    id="doc-body"
   >
-    Use steps to visualize the users progress through a process.
-  </p>
-  <BasicSteps />
-  <VerticalSteps />
-  <ClickableSteps />
-</DocContainer>
+    <p
+      className="lead"
+    >
+      Use steps to visualize the users progress through a process.
+    </p>
+    <h2
+      id="basic-usage"
+    >
+      Basic usage
+    </h2>
+    <p>
+      The standard steps component will render horizontally and scale according to the size of its parent.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <div
+        className="steps"
+      >
+        <ol>
+          <li
+            className="steps-completed"
+          >
+            <div
+              className="material-icons steps-icon"
+            >
+              check
+            </div>
+            
+
+            Step one
+            
+
+            <div
+              className="steps-sub-title"
+            >
+              Authentication
+            </div>
+          </li>
+          <li
+            className="steps-ongoing steps-selected"
+          >
+            <div
+              className="steps-number"
+            >
+              2
+            </div>
+            Step two
+          </li>
+          <li
+            className=""
+          >
+            <div
+              className="steps-number"
+            >
+              3
+            </div>
+            Step three
+          </li>
+          <li
+            className=""
+          >
+            <div
+              className="steps-number"
+            >
+              4
+            </div>
+            Step four
+          </li>
+        </ol>
+        <div
+          className="steps-responsive"
+        >
+          <div
+            className="steps-responsive-text"
+          >
+            Step 2
+          </div>
+        </div>
+      </div>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                  12
+                  
+
+                  13
+                  
+
+                  14
+                  
+
+                  15
+                  
+
+                  16
+                  
+
+                  17
+                  
+
+                  18
+                  
+
+                  19
+                  
+
+                  20
+                  
+
+                  21
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;div class="steps"&gt;
+                  
+
+                      &lt;ol&gt;
+                  
+
+                          &lt;li class="steps-completed"&gt;
+                  
+
+                              &lt;div class="material-icons steps-icon"&gt;check&lt;/div&gt;
+                  
+
+                              Step one
+                  
+
+                              &lt;div class="steps-sub-title"&gt;Authentication&lt;/div&gt;
+                  
+
+                          &lt;/li&gt;
+                  
+
+                          &lt;li class="steps-ongoing steps-selected"&gt;
+                  
+
+                              &lt;div class="steps-number"&gt;2&lt;/div&gt;Step two
+                  
+
+                          &lt;/li&gt;
+                  
+
+                          &lt;li&gt;
+                  
+
+                              &lt;div class="steps-number"&gt;3&lt;/div&gt;Step three
+                  
+
+                          &lt;/li&gt;
+                  
+
+                          &lt;li&gt;
+                  
+
+                              &lt;div class="steps-number"&gt;4&lt;/div&gt;Step four
+                  
+
+                          &lt;/li&gt;
+                  
+
+                      &lt;/ol&gt;
+                  
+
+                      &lt;div class="steps-responsive"&gt;
+                  
+
+                          &lt;div class="steps-responsive-text"&gt;Step 2&lt;/div&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h2
+      id="vertical-steps"
+    >
+      Vertical steps
+    </h2>
+    <p>
+      If you wish to use steps vertically you can add 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .steps-vertical
+      </code>
+       to the 
+      <code
+        className="code-tags code-tags-primary"
+      >
+        &lt;div&gt;
+      </code>
+       element.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <div
+        className="steps steps-vertical"
+      >
+        <ol>
+          <li
+            className="steps-completed"
+          >
+            <div
+              className="material-icons steps-icon"
+            >
+              check
+            </div>
+            
+
+            Step one
+          </li>
+          <li
+            className="steps-ongoing steps-selected"
+          >
+            <div
+              className="steps-number"
+            >
+              2
+            </div>
+            Step two
+          </li>
+          <li
+            className=""
+          >
+            <div
+              className="steps-number"
+            >
+              3
+            </div>
+            Step three
+          </li>
+          <li
+            className=""
+          >
+            <div
+              className="steps-number"
+            >
+              4
+            </div>
+            Step four
+          </li>
+        </ol>
+        <div
+          className="steps-responsive"
+        >
+          <div
+            className="steps-responsive-text"
+          >
+            Step 2
+          </div>
+        </div>
+      </div>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                  12
+                  
+
+                  13
+                  
+
+                  14
+                  
+
+                  15
+                  
+
+                  16
+                  
+
+                  17
+                  
+
+                  18
+                  
+
+                  19
+                  
+
+                  20
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;div class="steps steps-vertical"&gt;
+                  
+
+                      &lt;ol&gt;
+                  
+
+                          &lt;li class="steps-completed"&gt;
+                  
+
+                              &lt;div class="material-icons steps-icon"&gt;check&lt;/div&gt;
+                  
+
+                              Step one
+                  
+
+                          &lt;/li&gt;
+                  
+
+                          &lt;li class="steps-ongoing steps-selected"&gt;
+                  
+
+                              &lt;div class="steps-number"&gt;2&lt;/div&gt;Step two
+                  
+
+                          &lt;/li&gt;
+                  
+
+                          &lt;li&gt;
+                  
+
+                              &lt;div class="steps-number"&gt;3&lt;/div&gt;Step three
+                  
+
+                          &lt;/li&gt;
+                  
+
+                          &lt;li&gt;
+                  
+
+                              &lt;div class="steps-number"&gt;4&lt;/div&gt;Step four
+                  
+
+                          &lt;/li&gt;
+                  
+
+                      &lt;/ol&gt;
+                  
+
+                      &lt;div class="steps-responsive"&gt;
+                  
+
+                          &lt;div class="steps-responsive-text"&gt;Step 2&lt;/div&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h2
+      id="clickable-steps"
+    >
+      Clickable steps
+    </h2>
+    <p>
+      Add an anchor element (
+      <code
+        className="code-tags code-tags-primary"
+      >
+        &lt;a&gt;
+      </code>
+      ) to the list item element ( 
+      <code
+        className="code-tags code-tags-primary"
+      >
+        &lt;li&gt;
+      </code>
+      ). Ensure that all content within the list element is also inside the anchor element.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <div
+        className="steps"
+      >
+        <ol>
+          <li
+            className="steps-completed"
+          >
+            
+
+             
+            <a>
+              <div
+                className="material-icons steps-icon"
+              >
+                check
+              </div>
+              
+
+              Step one
+            </a>
+             
+            
+
+             
+          </li>
+          <li
+            className="steps-ongoing"
+          >
+            
+
+             
+            <a>
+              <div
+                className="steps-number"
+              >
+                2
+              </div>
+              Step two
+            </a>
+             
+            
+
+             
+          </li>
+          <li
+            className="steps-selected"
+          >
+            
+
+             
+            <a>
+              <div
+                className="steps-number"
+              >
+                3
+              </div>
+              Step three
+            </a>
+             
+            
+
+             
+          </li>
+          <li
+            className=""
+          >
+            
+
+             
+            <a>
+              <div
+                className="steps-number"
+              >
+                4
+              </div>
+              Step four
+            </a>
+             
+            
+
+             
+          </li>
+          <li
+            className=""
+          >
+            <div
+              className="steps-number"
+            >
+              5
+            </div>
+            Step Five
+          </li>
+          <li
+            className=""
+          >
+            <div
+              className="steps-number"
+            >
+              6
+            </div>
+            Step Six
+          </li>
+        </ol>
+        <div
+          className="steps-responsive"
+        >
+          <div
+            className="material-icons steps-nav-left"
+          >
+            keyboard_arrow_left
+          </div>
+          <div
+            className="steps-responsive-text"
+          >
+            Step 2
+          </div>
+          <div
+            className="material-icons steps-nav-right"
+          >
+            keyboard_arrow_right
+          </div>
+        </div>
+      </div>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                  12
+                  
+
+                  13
+                  
+
+                  14
+                  
+
+                  15
+                  
+
+                  16
+                  
+
+                  17
+                  
+
+                  18
+                  
+
+                  19
+                  
+
+                  20
+                  
+
+                  21
+                  
+
+                  22
+                  
+
+                  23
+                  
+
+                  24
+                  
+
+                  25
+                  
+
+                  26
+                  
+
+                  27
+                  
+
+                  28
+                  
+
+                  29
+                  
+
+                  30
+                  
+
+                  31
+                  
+
+                  32
+                  
+
+                  33
+                  
+
+                  34
+                  
+
+                  35
+                  
+
+                  36
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;div class="steps"&gt;
+                  
+
+                      &lt;ol&gt;
+                  
+
+                          &lt;li class="steps-completed"&gt;
+                  
+
+                              &lt;a&gt;
+                  
+
+                                  &lt;div class="material-icons steps-icon"&gt;check&lt;/div&gt;
+                  
+
+                                  Step one
+                  
+
+                              &lt;/a&gt;
+                  
+
+                          &lt;/li&gt;
+                  
+
+                          &lt;li class="steps-ongoing"&gt;
+                  
+
+                              &lt;a&gt;
+                  
+
+                                  &lt;div class="steps-number"&gt;2&lt;/div&gt;Step two
+                  
+
+                              &lt;/a&gt;
+                  
+
+                          &lt;/li&gt;
+                  
+
+                          &lt;li class="steps-selected"&gt;
+                  
+
+                              &lt;a&gt;
+                  
+
+                                  &lt;div class="steps-number"&gt;3&lt;/div&gt;Step three
+                  
+
+                              &lt;/a&gt;
+                  
+
+                          &lt;/li&gt;
+                  
+
+                          &lt;li&gt;
+                  
+
+                              &lt;a&gt;
+                  
+
+                                  &lt;div class="steps-number"&gt;4&lt;/div&gt;Step four
+                  
+
+                              &lt;/a&gt;
+                  
+
+                          &lt;/li&gt;
+                  
+
+                          &lt;li&gt;
+                  
+
+                              &lt;div class="steps-number"&gt;5&lt;/div&gt;Step Five
+                  
+
+                          &lt;/li&gt;
+                  
+
+                          &lt;li&gt;
+                  
+
+                              &lt;div class="steps-number"&gt;6&lt;/div&gt;Step Six
+                  
+
+                          &lt;/li&gt;
+                  
+
+                      &lt;/ol&gt;
+                  
+
+                      &lt;div class="steps-responsive"&gt;
+                  
+
+                          &lt;div class="material-icons steps-nav-left"&gt;keyboard_arrow_left&lt;/div&gt;
+                  
+
+                          &lt;div class="steps-responsive-text"&gt;Step 2&lt;/div&gt;
+                  
+
+                          &lt;div class="material-icons steps-nav-right"&gt;keyboard_arrow_right&lt;/div&gt;
+                  
+
+                      &lt;/div&gt;
+                  
+
+                  &lt;/div&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+  </div>
+</div>
 `;

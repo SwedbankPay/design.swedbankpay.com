@@ -1,308 +1,286 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Radio - renders checkbox group with disabled state 1`] = `
-<Fragment>
-  <form>
-    <fieldset
-      className="radio-group"
-      disabled={true}
+<form>
+  <fieldset
+    className="radio-group"
+    disabled={true}
+  >
+    
+
+    <legend>
+       
+    </legend>
+    
+
+    <div
+      className="radio"
     >
       
 
-      <legend>
-         
-      </legend>
+      <input
+        aria-describedby={null}
+        disabled={true}
+        id="radio-example-1"
+        name={null}
+        type="radio"
+      />
       
 
-      <div
-        className="radio"
-        key="0"
+      <label
+        htmlFor="radio-example-1"
       >
-        
+        Radio label
+      </label>
+      
 
-        <input
-          aria-describedby={null}
-          disabled={true}
-          id="radio-example-1"
-          name={null}
-          type="radio"
-        />
-        
+    </div>
+    <div
+      className="radio"
+    >
+      
 
-        <label
-          htmlFor="radio-example-1"
-        >
-          Radio label
-        </label>
-        
+      <input
+        aria-describedby={null}
+        disabled={true}
+        id="radio-example-2"
+        name={null}
+        type="radio"
+      />
+      
 
-      </div>
-      <div
-        className="radio"
-        key="1"
+      <label
+        htmlFor="radio-example-2"
       >
-        
+        Radio label
+      </label>
+      
 
-        <input
-          aria-describedby={null}
-          disabled={true}
-          id="radio-example-2"
-          name={null}
-          type="radio"
-        />
-        
-
-        <label
-          htmlFor="radio-example-2"
-        >
-          Radio label
-        </label>
-        
-
-      </div>
-    </fieldset>
-  </form>
-</Fragment>
+    </div>
+  </fieldset>
+</form>
 `;
 
 exports[`Component: Radio - renders checkbox group with groupTitle 1`] = `
-<Fragment>
-  <form>
-    <fieldset
-      className="radio-group"
+<form>
+  <fieldset
+    className="radio-group"
+  >
+    
+
+    <legend>
+      Group title
+       
+    </legend>
+    
+
+    <div
+      className="radio"
     >
       
 
-      <legend>
-        Group title
-         
-      </legend>
+      <input
+        aria-describedby={null}
+        disabled={null}
+        id="radio-example-1"
+        name={null}
+        type="radio"
+      />
       
 
-      <div
-        className="radio"
-        key="0"
+      <label
+        htmlFor="radio-example-1"
       >
-        
+        Radio label
+      </label>
+      
 
-        <input
-          aria-describedby={null}
-          disabled={null}
-          id="radio-example-1"
-          name={null}
-          type="radio"
-        />
-        
+    </div>
+    <div
+      className="radio"
+    >
+      
 
-        <label
-          htmlFor="radio-example-1"
-        >
-          Radio label
-        </label>
-        
+      <input
+        aria-describedby={null}
+        disabled={null}
+        id="radio-example-2"
+        name={null}
+        type="radio"
+      />
+      
 
-      </div>
-      <div
-        className="radio"
-        key="1"
+      <label
+        htmlFor="radio-example-2"
       >
-        
+        Radio label
+      </label>
+      
 
-        <input
-          aria-describedby={null}
-          disabled={null}
-          id="radio-example-2"
-          name={null}
-          type="radio"
-        />
-        
-
-        <label
-          htmlFor="radio-example-2"
-        >
-          Radio label
-        </label>
-        
-
-      </div>
-    </fieldset>
-  </form>
-</Fragment>
+    </div>
+  </fieldset>
+</form>
 `;
 
 exports[`Component: Radio - renders checked 1`] = `
-<Fragment>
-  <div
-    className="radio"
-  >
-    
+<div
+  className="radio"
+>
+  
 
-    <input
-      aria-describedby={null}
-      defaultChecked={true}
-      disabled={null}
-      id={null}
-      name={null}
-      type="radio"
-    />
-    
+  <input
+    aria-describedby={null}
+    defaultChecked={true}
+    disabled={null}
+    id={null}
+    name={null}
+    type="radio"
+  />
+  
 
-  </div>
-</Fragment>
+</div>
 `;
 
 exports[`Component: Radio - renders disabled 1`] = `
-<Fragment>
-  <div
-    className="radio"
-  >
-    
+<div
+  className="radio"
+>
+  
 
-    <input
-      aria-describedby={null}
-      defaultChecked={null}
-      disabled={true}
-      id={null}
-      name={null}
-      type="radio"
-    />
-    
+  <input
+    aria-describedby={null}
+    defaultChecked={null}
+    disabled={true}
+    id={null}
+    name={null}
+    type="radio"
+  />
+  
 
-  </div>
-</Fragment>
+</div>
 `;
 
 exports[`Component: Radio - renders radio group 1`] = `
-<Fragment>
-  <form>
-    <fieldset
-      className="radio-group"
+<form>
+  <fieldset
+    className="radio-group"
+  >
+    
+
+    <legend>
+       
+    </legend>
+    
+
+    <div
+      className="radio"
     >
       
 
-      <legend>
-         
-      </legend>
+      <input
+        aria-describedby={null}
+        disabled={null}
+        id="radio-example-1"
+        name={null}
+        type="radio"
+      />
       
 
-      <div
-        className="radio"
-        key="0"
+      <label
+        htmlFor="radio-example-1"
       >
-        
+        Radio label
+      </label>
+      
 
-        <input
-          aria-describedby={null}
-          disabled={null}
-          id="radio-example-1"
-          name={null}
-          type="radio"
-        />
-        
+    </div>
+    <div
+      className="radio"
+    >
+      
 
-        <label
-          htmlFor="radio-example-1"
-        >
-          Radio label
-        </label>
-        
+      <input
+        aria-describedby={null}
+        disabled={null}
+        id="radio-example-2"
+        name={null}
+        type="radio"
+      />
+      
 
-      </div>
-      <div
-        className="radio"
-        key="1"
+      <label
+        htmlFor="radio-example-2"
       >
-        
+        Radio label
+      </label>
+      
 
-        <input
-          aria-describedby={null}
-          disabled={null}
-          id="radio-example-2"
-          name={null}
-          type="radio"
-        />
-        
-
-        <label
-          htmlFor="radio-example-2"
-        >
-          Radio label
-        </label>
-        
-
-      </div>
-    </fieldset>
-  </form>
-</Fragment>
+    </div>
+  </fieldset>
+</form>
 `;
 
 exports[`Component: Radio - renders with id and label 1`] = `
-<Fragment>
-  <div
-    className="radio"
+<div
+  className="radio"
+>
+  
+
+  <input
+    aria-describedby={null}
+    defaultChecked={null}
+    disabled={null}
+    id="test"
+    name={null}
+    type="radio"
+  />
+  
+
+  <label
+    htmlFor="test"
   >
-    
+     
+    test
+  </label>
+  
 
-    <input
-      aria-describedby={null}
-      defaultChecked={null}
-      disabled={null}
-      id="test"
-      name={null}
-      type="radio"
-    />
-    
-
-    <label
-      htmlFor="test"
-    >
-       
-      test
-    </label>
-    
-
-  </div>
-</Fragment>
+</div>
 `;
 
 exports[`Component: Radio - renders with name 1`] = `
-<Fragment>
-  <div
-    className="radio"
-  >
-    
+<div
+  className="radio"
+>
+  
 
-    <input
-      aria-describedby={null}
-      defaultChecked={null}
-      disabled={null}
-      id={null}
-      name="test"
-      type="radio"
-    />
-    
+  <input
+    aria-describedby={null}
+    defaultChecked={null}
+    disabled={null}
+    id={null}
+    name="test"
+    type="radio"
+  />
+  
 
-  </div>
-</Fragment>
+</div>
 `;
 
 exports[`Component: Radio - renders without label 1`] = `
-<Fragment>
-  <div
-    className="radio"
-  >
-    
+<div
+  className="radio"
+>
+  
 
-    <input
-      aria-describedby={null}
-      defaultChecked={null}
-      disabled={null}
-      id={null}
-      name={null}
-      type="radio"
-    />
-    
+  <input
+    aria-describedby={null}
+    defaultChecked={null}
+    disabled={null}
+    id={null}
+    name={null}
+    type="radio"
+  />
+  
 
-  </div>
-</Fragment>
+</div>
 `;

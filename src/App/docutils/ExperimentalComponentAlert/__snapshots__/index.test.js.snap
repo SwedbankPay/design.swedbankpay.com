@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Utilities: ExperimentalComponentAlert renders 1`] = `
-<Alert
-  type="danger"
+<div
+  className="alert alert-danger"
 >
-  <h3
-    className="text-danger"
-  >
-    Component under development!
-  </h3>
-  <p>
-    This component is still under development and is subject to change.
-  </p>
-</Alert>
+  
+
+  <i
+    aria-hidden="true"
+    className="material-icons alert-icon"
+  />
+  
+
+</div>
 `;

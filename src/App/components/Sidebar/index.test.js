@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow, mount } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import Sidebar from "./index";
 
@@ -48,11 +50,14 @@ describe("Component: Sidebar", () => {
             }
         ];
 
-        const wrapper = shallow(<Sidebar id="sidebar-1" navList={navList} extendedSidebar={true} />);
+        render(<Sidebar id="sidebar-1" navList={navList} extendedSidebar={true} />);
 
-        expect(wrapper.find(".main-nav-li")).toHaveLength(2);
-        expect(wrapper.find(".secondary-nav-li")).toHaveLength(2);
-        expect(wrapper).toMatchSnapshot();
+        expect(screen.getAllByRole("listitem").filter(elmt => elmt.classList.contains("main-nav-li"))).toHaveLength(2);
+        expect(screen.getAllByRole("listitem").filter(elmt => elmt.classList.contains("secondary-nav-li"))).toHaveLength(2);
+
+        const componentForSnap = renderer.create(<Sidebar id="sidebar-1" navList={navList} extendedSidebar={true} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders one level when one level is provided", () => {
@@ -67,13 +72,17 @@ describe("Component: Sidebar", () => {
             }
         ];
 
-        const wrapper = shallow(<Sidebar id="test" navList={navList} />);
-        const mainNavUl = wrapper.find(".main-nav-ul");
+        render(<Sidebar id="test" navList={navList} />);
 
-        expect(mainNavUl.find(".main-nav-ul")).toHaveLength(1);
-        expect(mainNavUl.find(".main-nav-li")).toHaveLength(2);
-        expect(mainNavUl.find(".sidebar-secondary-nav")).toHaveLength(0);
-        expect(wrapper).toMatchSnapshot();
+        const mainNavUl = screen.getByRole("list");
+
+        expect(mainNavUl).toHaveClass("main-nav-ul");
+        expect(mainNavUl.querySelectorAll(".main-nav-li")).toHaveLength(2);
+        expect(mainNavUl.querySelectorAll(".sidebar-secondary-nav")).toHaveLength(0);
+
+        const componentForSnap = renderer.create(<Sidebar id="test" navList={navList} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders two levels when two levels is provided", () => {
@@ -94,13 +103,19 @@ describe("Component: Sidebar", () => {
             }
         ];
 
-        const wrapper = shallow(<Sidebar id="test" navList={navList} />);
-        const mainNavUl = wrapper.find(".main-nav-ul");
+        render(<Sidebar id="test" navList={navList} />);
 
-        expect(mainNavUl.find(".sidebar-secondary-nav")).toHaveLength(1);
-        expect(mainNavUl.find(".secondary-nav-ul")).toHaveLength(1);
-        expect(mainNavUl.find(".secondary-nav-li")).toHaveLength(2);
-        expect(wrapper).toMatchSnapshot();
+        expect(screen.getAllByRole("list").filter(elmt => elmt.classList.contains("main-nav-ul"))).toHaveLength(1);
+
+        const mainNavUl = screen.getAllByRole("list").filter(elmt => elmt.classList.contains("main-nav-ul"))[0];
+
+        expect(mainNavUl.querySelectorAll(".sidebar-secondary-nav")).toHaveLength(1);
+        expect(mainNavUl.querySelectorAll(".secondary-nav-ul")).toHaveLength(1);
+        expect(mainNavUl.querySelectorAll(".secondary-nav-li")).toHaveLength(2);
+
+        const componentForSnap = renderer.create(<Sidebar id="test" navList={navList} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders three levels when three levels is provided", () => {
@@ -122,13 +137,17 @@ describe("Component: Sidebar", () => {
             }
         ];
 
-        const wrapper = mount(<Sidebar id="test" navList={navList} />);
-        const mainNavUl = wrapper.find(".main-nav-ul");
+        render(<Sidebar id="test" navList={navList} />);
 
-        expect(mainNavUl.find(".secondary-nav-ul")).toHaveLength(1);
-        expect(mainNavUl.find("ul > li")).toHaveLength(3);
-        expect(mainNavUl.find(".nav-leaf")).toHaveLength(1);
-        expect(wrapper).toMatchSnapshot();
+        const mainNavUl = screen.getAllByRole("list").filter(elmt => elmt.classList.contains("main-nav-ul"))[0];
+
+        expect(mainNavUl.querySelectorAll(".secondary-nav-ul")).toHaveLength(1);
+        expect(mainNavUl.querySelectorAll("ul > li")).toHaveLength(3);
+        expect(mainNavUl.querySelectorAll(".nav-leaf")).toHaveLength(1);
+
+        const componentForSnap = renderer.create(<Sidebar id="test" navList={navList} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders four levels when four levels is provided", () => {
@@ -156,11 +175,14 @@ describe("Component: Sidebar", () => {
             }
         ];
 
-        const wrapper = mount(<Sidebar id="test" navList={navList} extendedSidebar={true}/>);
+        const { container } = render(<Sidebar id="test" navList={navList} extendedSidebar={true}/>);
 
-        expect(wrapper.find("ul > li")).toHaveLength(4);
-        expect(wrapper.find(".nav-leaf")).toHaveLength(1);
-        expect(wrapper).toMatchSnapshot();
+        expect(screen.getAllByRole("list").map(elmt => elmt.querySelectorAll(":scope > li"))).toHaveLength(4);
+        expect(container.querySelectorAll(".nav-leaf")).toHaveLength(1);
+
+        const componentForSnap = renderer.create(<Sidebar id="test" navList={navList} extendedSidebar={true}/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders five levels when four levels is provided", () => {
@@ -193,11 +215,14 @@ describe("Component: Sidebar", () => {
             }
         ];
 
-        const wrapper = mount(<Sidebar id="test" navList={navList} extendedSidebar={true}/>);
+        const { container } = render(<Sidebar id="test" navList={navList} extendedSidebar={true}/>);
 
-        expect(wrapper.find("ul > li")).toHaveLength(5);
-        expect(wrapper.find(".nav-leaf")).toHaveLength(1);
-        expect(wrapper).toMatchSnapshot();
+        expect(screen.getAllByRole("list").map(elmt => elmt.querySelectorAll(":scope > li"))).toHaveLength(5);
+        expect(container.querySelectorAll(".nav-leaf")).toHaveLength(1);
+
+        const componentForSnap = renderer.create(<Sidebar id="test" navList={navList} extendedSidebar={true}/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders 10 levels when four levels is provided", () => {
@@ -255,11 +280,14 @@ describe("Component: Sidebar", () => {
             }
         ];
 
-        const wrapper = mount(<Sidebar id="test" navList={navList} extendedSidebar={true}/>);
+        const { container } = render(<Sidebar id="test" navList={navList} extendedSidebar={true}/>);
 
-        expect(wrapper.find("ul > li")).toHaveLength(10);
-        expect(wrapper.find(".nav-leaf")).toHaveLength(1);
-        expect(wrapper).toMatchSnapshot();
+        expect(screen.getAllByRole("list").map(elmt => elmt.querySelectorAll(":scope > li"))).toHaveLength(10);
+        expect(container.querySelectorAll(".nav-leaf")).toHaveLength(1);
+
+        const componentForSnap = renderer.create(<Sidebar id="test" navList={navList} extendedSidebar={true}/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with class .sidebar-topbar-sticky when sticky is provided", () => {
@@ -299,9 +327,10 @@ describe("Component: Sidebar", () => {
                 ]
             }
         ];
-        const wrapper = shallow(<Sidebar id="sidebar" navList={navList} sticky/>);
 
-        expect(wrapper.html()).toContain("sidebar-topbar-sticky");
+        const { container } = render(<Sidebar id="sidebar" navList={navList} sticky/>);
+
+        expect(container.querySelector(".sidebar")).toHaveClass("sidebar-topbar-sticky");
     });
 });
 

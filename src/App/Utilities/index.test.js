@@ -1,6 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
-
+import renderer from "react-test-renderer";
+import { BrowserRouter } from "react-router-dom";
 import Utilities from "./index";
 
 describe("Utilities: index", () => {
@@ -9,8 +9,8 @@ describe("Utilities: index", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Utilities/>);
+        const utilities = renderer.create(<BrowserRouter><Utilities/></BrowserRouter>);
 
-        expect(wrapper).toMatchSnapshot();
+        expect(utilities.toJSON()).toMatchSnapshot();
     });
 });

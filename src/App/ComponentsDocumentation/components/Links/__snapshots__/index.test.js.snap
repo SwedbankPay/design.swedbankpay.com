@@ -191,11 +191,9 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
   </h2>
   <div
     className="row"
-    key="0"
   >
     <div
       className="col-lg-6"
-      key="0"
     >
       <div
         className="slab slab-plain slab-border-success h-100 pb-5"
@@ -206,15 +204,18 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
         <div
           className="d-flex mb-2  h-100 align-items-center"
         >
-          <Link
-            linkText="Read our terms and conditions"
-          />
+          <a
+            className=""
+            href=""
+            onClick={[Function]}
+          >
+            Read our terms and conditions
+          </a>
         </div>
       </div>
     </div>
     <div
       className="col-lg-6"
-      key="1"
     >
       <div
         className="slab slab-plain slab-border-error h-100 pb-5"
@@ -228,9 +229,13 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
           <p
             className=" mb-0 justify-content-center"
           >
-            <Link
-              linkText="Click here"
-            />
+            <a
+              className=""
+              href=""
+              onClick={[Function]}
+            >
+              Click here
+            </a>
              to read our term and conditions.
           </p>
         </div>
@@ -244,11 +249,9 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
   </div>
   <div
     className="row"
-    key="1"
   >
     <div
       className="col-lg-6"
-      key="0"
     >
       <div
         className="slab slab-plain slab-border-success h-100 pb-5"
@@ -259,15 +262,18 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
         <div
           className="d-flex mb-2  h-100 align-items-center"
         >
-          <Link
-            linkText="View our opening hours"
-          />
+          <a
+            className=""
+            href=""
+            onClick={[Function]}
+          >
+            View our opening hours
+          </a>
         </div>
       </div>
     </div>
     <div
       className="col-lg-6"
-      key="1"
     >
       <div
         className="slab slab-plain slab-border-error h-100 pb-5"
@@ -278,9 +284,13 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
         <div
           className="d-flex mb-2  h-100 align-items-center"
         >
-          <Link
-            linkText="View more"
-          />
+          <a
+            className=""
+            href=""
+            onClick={[Function]}
+          >
+            View more
+          </a>
         </div>
       </div>
     </div>
@@ -292,11 +302,9 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
   </div>
   <div
     className="row"
-    key="2"
   >
     <div
       className="col-lg-6"
-      key="0"
     >
       <div
         className="slab slab-plain slab-border-success h-100 pb-5"
@@ -311,9 +319,13 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
             className="mb-0 justify-content-center"
           >
             Here you can 
-            <Link
-              linkText="read about the browsers we recommend"
-            />
+            <a
+              className=""
+              href=""
+              onClick={[Function]}
+            >
+              read about the browsers we recommend
+            </a>
             .
           </p>
         </div>
@@ -321,7 +333,6 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
     </div>
     <div
       className="col-lg-6"
-      key="1"
     >
       <div
         className="slab slab-plain slab-border-error h-100 pb-5"
@@ -332,9 +343,13 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
         <div
           className="d-flex mb-2  h-100 align-items-center"
         >
-          <Link
-            linkText="Here you can read about the browsers we recommend"
-          />
+          <a
+            className=""
+            href=""
+            onClick={[Function]}
+          >
+            Here you can read about the browsers we recommend
+          </a>
         </div>
       </div>
     </div>

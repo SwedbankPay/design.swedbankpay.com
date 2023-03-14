@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import Introduction, { QuickStart, JavaScript } from "./index";
 
@@ -9,9 +9,9 @@ describe("Dashboard: Introduction", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Introduction />);
+        const wrapper = renderer.create(<Introduction />);
 
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.toJSON()).toMatchSnapshot();
     });
 
     describe("QuickStart", () => {
@@ -20,9 +20,9 @@ describe("Dashboard: Introduction", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<QuickStart />);
+            const wrapper = renderer.create(<QuickStart />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 
@@ -32,9 +32,9 @@ describe("Dashboard: Introduction", () => {
         });
 
         it("renders", () => {
-            const wrapper = shallow(<JavaScript />);
+            const wrapper = renderer.create(<JavaScript />);
 
-            expect(wrapper).toMatchSnapshot();
+            expect(wrapper.toJSON()).toMatchSnapshot();
         });
     });
 });

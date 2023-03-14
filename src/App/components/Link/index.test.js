@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import Link from "./index";
 
@@ -11,35 +13,50 @@ describe("Component: Link", () => {
     it("calls console.error when linkText is not provided", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(<Link />);
+        const componentForSnap = renderer.create(<Link />);
 
-        expect(wrapper).toMatchSnapshot();
         expect(console.error).toHaveBeenCalled();
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with provided linkText and no icons when only linkText is provided", () => {
-        const wrapper = shallow(<Link linkText="Link" />);
+        render(<Link linkText="Link" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.contains("Link")).toBeTruthy();
-        expect(wrapper.html()).not.toContain("<i class=\"material-icons\" aria-hidden=\"true\">");
+        expect(screen.getByRole("link")).toBeTruthy();
+        expect(screen.getByRole("link").querySelector("i")).toBeNull();
+
+        const componentForSnap = renderer.create(<Link linkText="Link" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with left icon when leftIcon is provided", () => {
         const icon = "chevron_left";
-        const wrapper = shallow(<Link linkText="Link" leftIcon={icon} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain(`<i class="material-icons" aria-hidden="true">${icon}</i>`);
-        expect(wrapper.html()).toContain("ml-2");
+        render(<Link linkText="Link" leftIcon={icon} />);
+
+        expect(screen.getByRole("link").querySelector("i")).toHaveClass("material-icons");
+        expect(screen.getByRole("link").querySelector("i")).toHaveAttribute("aria-hidden", "true");
+        expect(screen.getByRole("link").querySelector("i")).toHaveTextContent(icon);
+        expect(screen.getByRole("link").querySelector("span")).toHaveClass("ml-2");
+
+        const componentForSnap = renderer.create(<Link linkText="Link" leftIcon={icon} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with right icon when rightIcon is provided", () => {
         const icon = "chevron_right";
-        const wrapper = shallow(<Link linkText="Link" rightIcon={icon} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain(`<i class="material-icons" aria-hidden="true">${icon}</i>`);
-        expect(wrapper.html()).toContain("mr-2");
+        render(<Link linkText="Link" rightIcon={icon} />);
+
+        expect(screen.getByRole("link").querySelector("i")).toHaveClass("material-icons");
+        expect(screen.getByRole("link").querySelector("i")).toHaveAttribute("aria-hidden", "true");
+        expect(screen.getByRole("link").querySelector("i")).toHaveTextContent(icon);
+        expect(screen.getByRole("link").querySelector("span")).toHaveClass("mr-2");
+
+        const componentForSnap = renderer.create(<Link linkText="Link" rightIcon={icon} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

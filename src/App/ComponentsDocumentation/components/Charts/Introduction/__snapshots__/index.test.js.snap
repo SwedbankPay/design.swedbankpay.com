@@ -1,59 +1,110 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dashboard: Introduction JavaScript renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="javascript"
   >
     JavaScript
-  </h2>
+  </h2>,
   <p>
     To add charts to your project you need to include a dashboard script to make it run properly. Add the dashboard script below the 
-    <CodeTags
-      code="scripts"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      scripts
+    </code>
      and at the bottom of your 
-    <CodeTags
-      code="<body>"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      &lt;body&gt;
+    </code>
      tag like this: 
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-  >
-    <script
-      src="http://localhost/TEST/scripts/dg.js"
-    />
-    <script
-      src="http://localhost/TEST/scripts/dg-dashboard.js"
-    />
-  </ComponentPreview>
-</Fragment>
+  </p>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;script src="http://localhost/TEST/scripts/dg.js"&gt;&lt;/script&gt;
+                
+
+                &lt;script src="http://localhost/TEST/scripts/dg-dashboard.js"&gt;&lt;/script&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Dashboard: Introduction QuickStart renders 1`] = `
-<Fragment>
+Array [
   <h3
     id="quick-start"
   >
     Quick start
-  </h3>
+  </h3>,
   <p>
     To quickly add the dashboard theme to your project, include the snippets below in your project.
-  </p>
-</Fragment>
+  </p>,
+]
 `;
 
 exports[`Dashboard: Introduction renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="introduction"
   >
     Introduction
-  </h2>
+  </h2>,
   <p
     className="lead"
   >
@@ -66,34 +117,123 @@ exports[`Dashboard: Introduction renders 1`] = `
       chart.js
     </a>
      to generate the charts. Our script is mainly just a wrapper around that library to add the correct styling etc.
-  </p>
+  </p>,
   <p>
     Most options and settings available in the chart.js documentation will be available.
-  </p>
+  </p>,
   <p>
     For now, the following chart types are available:
-  </p>
+  </p>,
   <ul>
     <li>
-      <CodeTags
-        code="\\"line\\""
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        "line"
+      </code>
     </li>
     <li>
-      <CodeTags
-        code="\\"bar\\"/\\"horizontalBar\\""
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        "bar"/"horizontalBar"
+      </code>
     </li>
     <li>
-      <CodeTags
-        code="\\"pie\\"/\\"doughnut\\""
-        type="secondary"
-      />
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        "pie"/"doughnut"
+      </code>
     </li>
-  </ul>
-  <QuickStart />
-  <JavaScript />
-</Fragment>
+  </ul>,
+  <h3
+    id="quick-start"
+  >
+    Quick start
+  </h3>,
+  <p>
+    To quickly add the dashboard theme to your project, include the snippets below in your project.
+  </p>,
+  <h2
+    id="javascript"
+  >
+    JavaScript
+  </h2>,
+  <p>
+    To add charts to your project you need to include a dashboard script to make it run properly. Add the dashboard script below the 
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      scripts
+    </code>
+     and at the bottom of your 
+    <code
+      className="code-tags code-tags-primary"
+    >
+      &lt;body&gt;
+    </code>
+     tag like this: 
+  </p>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;script src="http://localhost/TEST/scripts/dg.js"&gt;&lt;/script&gt;
+                
+
+                &lt;script src="http://localhost/TEST/scripts/dg-dashboard.js"&gt;&lt;/script&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;

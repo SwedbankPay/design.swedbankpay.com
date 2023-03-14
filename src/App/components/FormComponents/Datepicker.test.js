@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import Datepicker from "./Datepicker";
 
@@ -9,17 +11,25 @@ describe("Component: Datepicker -", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Datepicker />);
+        render(<Datepicker />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("data-datepicker");
+        expect(screen.getByRole("textbox")).toHaveAttribute("data-datepicker");
+
+        const componentForSnap = renderer.create(<Datepicker />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with the form-group and label", () => {
-        const wrapper = shallow(<Datepicker label="test" />);
+        const { container } = render(<Datepicker label="test" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("form-group");
-        expect(wrapper.html()).toContain("<label>test</label>");
+        expect(container.querySelector(".form-group")).toBeTruthy();
+        expect(container.querySelector("label")).toHaveTextContent("test");
+        // FIXME: once we migrate to React 18, use `useId()` hook in Datepicker component, to always set an id link between label and input, evemn if no id is passed as prop
+        // expect(screen.getByLabelText("test")).toBeTruthy();
+
+        const componentForSnap = renderer.create(<Datepicker label="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

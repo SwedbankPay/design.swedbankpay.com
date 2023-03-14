@@ -1,120 +1,713 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components: Expandable ExpandableGroup renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="expandable-group"
   >
     Expandable Group
-  </h2>
+  </h2>,
   <p>
     If you use a wrapper with 
-    <CodeTags
-      code=".expandable-group"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .expandable-group
+    </code>
      then only one expandable can be open at the same time.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
     <div
       className="expandable-group"
     >
-      <Expandable
-        items={
-          Array [
-            Object {
-              "content": <p>
-                Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
-              </p>,
-              "id": "exp-1",
-              "subtitle": "My subtitle",
-              "title": "My title",
-            },
-            Object {
-              "content": <p>
-                Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
-              </p>,
-              "id": "exp-2",
-              "subtitle": "My subtitle",
-              "title": "My title",
-            },
-            Object {
-              "content": <p>
-                Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
-              </p>,
-              "id": "exp-3",
-              "subtitle": "My subtitle",
-              "title": "My title",
-            },
-          ]
-        }
-      />
+      <div
+        className="expandable"
+      >
+        
+
+        <button
+          aria-controls="exp-1"
+          aria-expanded="false"
+          className="expandable-header"
+          type="button"
+        >
+          
+
+          <span
+            className="expandable-headline"
+          >
+            My title
+          </span>
+          
+
+          <small
+            className="expandable-subtitle"
+          >
+            My subtitle
+          </small>
+          
+
+        </button>
+        <div
+          className="expandable-body"
+          id="exp-1"
+        >
+          <p>
+            Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
+          </p>
+        </div>
+      </div>
+      <div
+        className="expandable"
+      >
+        
+
+        <button
+          aria-controls="exp-2"
+          aria-expanded="false"
+          className="expandable-header"
+          type="button"
+        >
+          
+
+          <span
+            className="expandable-headline"
+          >
+            My title
+          </span>
+          
+
+          <small
+            className="expandable-subtitle"
+          >
+            My subtitle
+          </small>
+          
+
+        </button>
+        <div
+          className="expandable-body"
+          id="exp-2"
+        >
+          <p>
+            Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
+          </p>
+        </div>
+      </div>
+      <div
+        className="expandable"
+      >
+        
+
+        <button
+          aria-controls="exp-3"
+          aria-expanded="false"
+          className="expandable-header"
+          type="button"
+        >
+          
+
+          <span
+            className="expandable-headline"
+          >
+            My title
+          </span>
+          
+
+          <small
+            className="expandable-subtitle"
+          >
+            My subtitle
+          </small>
+          
+
+        </button>
+        <div
+          className="expandable-body"
+          id="exp-3"
+        >
+          <p>
+            Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
+          </p>
+        </div>
+      </div>
     </div>
-  </ComponentPreview>
-</Fragment>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+                15
+                
+
+                16
+                
+
+                17
+                
+
+                18
+                
+
+                19
+                
+
+                20
+                
+
+                21
+                
+
+                22
+                
+
+                23
+                
+
+                24
+                
+
+                25
+                
+
+                26
+                
+
+                27
+                
+
+                28
+                
+
+                29
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="expandable-group"&gt;
+                
+
+                    &lt;div class="expandable"&gt;
+                
+
+                        &lt;button type="button" class="expandable-header" aria-expanded="false" aria-controls="exp-1"&gt;
+                
+
+                            &lt;span class="expandable-headline"&gt;My title&lt;/span&gt;
+                
+
+                            &lt;small class="expandable-subtitle"&gt;My subtitle&lt;/small&gt;
+                
+
+                        &lt;/button&gt;
+                
+
+                        &lt;div class="expandable-body" id="exp-1"&gt;
+                
+
+                            &lt;p&gt;Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.&lt;/p&gt;
+                
+
+                        &lt;/div&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                    &lt;div class="expandable"&gt;
+                
+
+                        &lt;button type="button" class="expandable-header" aria-expanded="false" aria-controls="exp-2"&gt;
+                
+
+                            &lt;span class="expandable-headline"&gt;My title&lt;/span&gt;
+                
+
+                            &lt;small class="expandable-subtitle"&gt;My subtitle&lt;/small&gt;
+                
+
+                        &lt;/button&gt;
+                
+
+                        &lt;div class="expandable-body" id="exp-2"&gt;
+                
+
+                            &lt;p&gt;Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.&lt;/p&gt;
+                
+
+                        &lt;/div&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                    &lt;div class="expandable"&gt;
+                
+
+                        &lt;button type="button" class="expandable-header" aria-expanded="false" aria-controls="exp-3"&gt;
+                
+
+                            &lt;span class="expandable-headline"&gt;My title&lt;/span&gt;
+                
+
+                            &lt;small class="expandable-subtitle"&gt;My subtitle&lt;/small&gt;
+                
+
+                        &lt;/button&gt;
+                
+
+                        &lt;div class="expandable-body" id="exp-3"&gt;
+                
+
+                            &lt;p&gt;Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.&lt;/p&gt;
+                
+
+                        &lt;/div&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Components: Expandable Overview renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="overview"
   >
     Overview
-  </h2>
+  </h2>,
   <p>
     The expandable component shows only what is contained in the 
-    <CodeTags
-      code=".expandable-header"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .expandable-header
+    </code>
      when it is closed. 
-    <CodeTags
-      code=".expandable-body"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .expandable-body
+    </code>
      will be visible in its open state.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
-    <Expandable
-      items={
-        Array [
-          Object {
-            "content": <p>
-              Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
-            </p>,
-            "id": "exp-1",
-            "subtitle": "My subtitle",
-            "title": "My title",
-          },
-          Object {
-            "content": <p>
-              Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
-            </p>,
-            "id": "exp-2",
-            "subtitle": "My subtitle",
-            "title": "My title",
-          },
-          Object {
-            "content": <p>
-              Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
-            </p>,
-            "id": "exp-3",
-            "subtitle": "My subtitle",
-            "title": "My title",
-          },
-        ]
-      }
-    />
-  </ComponentPreview>
-</Fragment>
+    <div
+      className="expandable"
+    >
+      
+
+      <button
+        aria-controls="exp-1"
+        aria-expanded="false"
+        className="expandable-header"
+        type="button"
+      >
+        
+
+        <span
+          className="expandable-headline"
+        >
+          My title
+        </span>
+        
+
+        <small
+          className="expandable-subtitle"
+        >
+          My subtitle
+        </small>
+        
+
+      </button>
+      <div
+        className="expandable-body"
+        id="exp-1"
+      >
+        <p>
+          Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
+        </p>
+      </div>
+    </div>
+    <div
+      className="expandable"
+    >
+      
+
+      <button
+        aria-controls="exp-2"
+        aria-expanded="false"
+        className="expandable-header"
+        type="button"
+      >
+        
+
+        <span
+          className="expandable-headline"
+        >
+          My title
+        </span>
+        
+
+        <small
+          className="expandable-subtitle"
+        >
+          My subtitle
+        </small>
+        
+
+      </button>
+      <div
+        className="expandable-body"
+        id="exp-2"
+      >
+        <p>
+          Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
+        </p>
+      </div>
+    </div>
+    <div
+      className="expandable"
+    >
+      
+
+      <button
+        aria-controls="exp-3"
+        aria-expanded="false"
+        className="expandable-header"
+        type="button"
+      >
+        
+
+        <span
+          className="expandable-headline"
+        >
+          My title
+        </span>
+        
+
+        <small
+          className="expandable-subtitle"
+        >
+          My subtitle
+        </small>
+        
+
+      </button>
+      <div
+        className="expandable-body"
+        id="exp-3"
+      >
+        <p>
+          Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
+        </p>
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+                15
+                
+
+                16
+                
+
+                17
+                
+
+                18
+                
+
+                19
+                
+
+                20
+                
+
+                21
+                
+
+                22
+                
+
+                23
+                
+
+                24
+                
+
+                25
+                
+
+                26
+                
+
+                27
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="expandable"&gt;
+                
+
+                    &lt;button type="button" class="expandable-header" aria-expanded="false" aria-controls="exp-1"&gt;
+                
+
+                        &lt;span class="expandable-headline"&gt;My title&lt;/span&gt;
+                
+
+                        &lt;small class="expandable-subtitle"&gt;My subtitle&lt;/small&gt;
+                
+
+                    &lt;/button&gt;
+                
+
+                    &lt;div class="expandable-body" id="exp-1"&gt;
+                
+
+                        &lt;p&gt;Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.&lt;/p&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+                &lt;div class="expandable"&gt;
+                
+
+                    &lt;button type="button" class="expandable-header" aria-expanded="false" aria-controls="exp-2"&gt;
+                
+
+                        &lt;span class="expandable-headline"&gt;My title&lt;/span&gt;
+                
+
+                        &lt;small class="expandable-subtitle"&gt;My subtitle&lt;/small&gt;
+                
+
+                    &lt;/button&gt;
+                
+
+                    &lt;div class="expandable-body" id="exp-2"&gt;
+                
+
+                        &lt;p&gt;Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.&lt;/p&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+                &lt;div class="expandable"&gt;
+                
+
+                    &lt;button type="button" class="expandable-header" aria-expanded="false" aria-controls="exp-3"&gt;
+                
+
+                        &lt;span class="expandable-headline"&gt;My title&lt;/span&gt;
+                
+
+                        &lt;small class="expandable-subtitle"&gt;My subtitle&lt;/small&gt;
+                
+
+                    &lt;/button&gt;
+                
+
+                    &lt;div class="expandable-body" id="exp-3"&gt;
+                
+
+                        &lt;p&gt;Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.&lt;/p&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Components: Expandable renders 1`] = `

@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
 
 import SkipLink from "./index";
 
@@ -9,8 +9,9 @@ describe("Component: SkipLink", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<SkipLink/>);
 
-        expect(wrapper).toMatchSnapshot();
+        const componentForSnap = renderer.create(<SkipLink/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

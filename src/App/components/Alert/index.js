@@ -10,7 +10,7 @@ const Alert = ({ id, type, icon, close, text, className }) => {
     );
 
     return (
-        <div id={id} className={alertClasses}>{"\n"}
+        <div id={id} className={alertClasses} >{"\n"}
             <i className="material-icons alert-icon" aria-hidden="true">{icon}</i>
             {text}{"\n"}
             {close ? <>

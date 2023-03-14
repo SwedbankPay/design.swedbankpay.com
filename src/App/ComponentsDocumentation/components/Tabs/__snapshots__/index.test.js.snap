@@ -13,18 +13,59 @@ exports[`Components: Tabs ContentGuidelines renders 1`] = `
     <div
       className="m-auto"
     >
-      <Tabs
+      <div
+        className="tabs tabs-scroll"
         id="tabs-scroll-example"
-        items={
-          Array [
-            "Selected Label",
-            "Unselected Label",
-            "Unselected Label",
-          ]
-        }
-        scroll={true}
-        ulId="tabs-scroll-example-ul"
-      />
+      >
+        
+
+        <ul
+          id="tabs-scroll-example-ul"
+        >
+          <li
+            className="active"
+          >
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              Selected Label
+            </a>
+            
+
+          </li>
+          <li
+            className={null}
+          >
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              Unselected Label
+            </a>
+            
+
+          </li>
+          <li
+            className={null}
+          >
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              Unselected Label
+            </a>
+            
+
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
   <ul
@@ -46,244 +87,4 @@ exports[`Components: Tabs ContentGuidelines renders 1`] = `
     </li>
   </ul>
 </section>
-`;
-
-exports[`Components: Tabs DeveloperDocumentation renders 1`] = `
-<Fragment>
-  <h2
-    id="developer-documentation"
-  >
-    Developer documentation
-  </h2>
-  <span
-    className="h3"
-  >
-    Javascript methods
-  </span>
-  <p
-    className="my-3"
-  >
-    Use 
-    <CodeTags
-      code="dg.tabs.init()"
-      type="secondary"
-    />
-     to 
-    <Link
-      to="/get-started/for-developers"
-    >
-      initialize
-    </Link>
-     all rangesliders.
-  </p>
-  <p>
-    Or 
-    <CodeTags
-      code="dg.tabs.init(\\"component-id\\")"
-      type="secondary"
-    />
-     to initialize one specific component.
-  </p>
-  <h4>
-    Move scroll position
-  </h4>
-  <p>
-    Moves the scroll position of the tabs to the user specified position. The value to be passed to 
-    <CodeTags
-      code="scrollState"
-      type="secondary"
-    />
-     is the object 
-    <CodeTags
-      code="{ scrollStart, scrollTotalAmount }"
-      type="secondary"
-    />
-    . 
-    <CodeTags
-      code="scrollStart"
-      type="secondary"
-    />
-     is the current scroll position, 
-    <CodeTags
-      code="scrollTotalAmount"
-      type="secondary"
-    />
-     is the amount to be scrolled from the current scroll position (negative values for left scroll, positive values for right scroll). Note: 
-    <CodeTags
-      code="<ul>"
-      type="primary"
-    />
-     is the scrollable element.
-  </p>
-  <h4>
-    🎨 Styling support for 
-    <CodeTags
-      code=".active"
-      type="secondary"
-    />
-     class
-  </h4>
-  <p>
-    The same styling will be applied whether the 
-    <CodeTags
-      code=".active"
-      type="secondary"
-    />
-     class is applied on the 
-    <CodeTags
-      code="<li>"
-      type="secondary"
-    />
-     element or the 
-    <CodeTags
-      code="<a>"
-      type="secondary"
-    />
-     element. This way it supports out of the box Nuxt router's behavior.
-  </p>
-</Fragment>
-`;
-
-exports[`Components: Tabs Overview renders 1`] = `
-<section
-  id="tabs-overview"
->
-  <h2
-    id="overview"
-  >
-    Overview
-  </h2>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    removeOuterTag={true}
-    showCasePanel={true}
-    showCasePanelAdvanced={
-      Object {
-        "elements": Array [
-          Object {
-            "component": <TabsExample
-              id="tabs-showcase-example"
-            />,
-            "description": <React.Fragment>
-              Tabs appear in a single row, above their content. Only one tab can be selected at a time and the selected tab decides which content that is shown in the container beneath. The width of each tab is dependent on its label and the width of the row of tabs is dependent on the container. If the container can’t display all the tabs at once the tabs can be set to scrollable by adding the class 
-              <CodeTags
-                code=".tabs-scroll"
-                type="secondary"
-              />
-              , but it is not optimized for desktop usage at the moment.
-            </React.Fragment>,
-            "options": Object {
-              "checkbox": Array [
-                Object {
-                  "inputs": Array [
-                    Object {
-                      "id": "scroll",
-                      "name": "Scrollable",
-                      "value": Object {
-                        "scroll": true,
-                      },
-                    },
-                  ],
-                  "title": "Behavior",
-                },
-              ],
-            },
-            "title": "Tabs",
-          },
-        ],
-        "id": "no-tabs",
-      }
-    }
-  />
-  <section>
-    <h3>
-      When to consider something else
-    </h3>
-    <ul
-      className="list list-bullet"
-    >
-      <li>
-        It is important to consider whether or not dividing the content into sub-views is helpful for the user. Using Tabs isn’t always the best solution and can create more fragmented experience and leading to issues where the user might miss out on content. Consider presenting the content on a page with proper headlines and structure.
-      </li>
-    </ul>
-  </section>
-  <section
-    id="how-to-use-tabs"
-  >
-    <h3>
-      How to use tabs
-    </h3>
-    <div
-      className="slab slab-plain slab-border-success px-4"
-    >
-      <h3
-        className="mb-5"
-      >
-        Do
-      </h3>
-      <Tabs
-        id="tabs-scroll-example"
-        items={
-          Array [
-            "Selected",
-            "Unselected",
-            "Unselected",
-          ]
-        }
-        ulId="tabs-scroll-example-ul"
-      />
-      <div
-        className="slab slab-edges flat p-5"
-      />
-    </div>
-    <div
-      className="slab slab-plain slab-border-error px-4"
-    >
-      <h3
-        className="mb-5"
-      >
-        Don't
-      </h3>
-      <Tabs
-        id="tabs-scroll-example-dont"
-        items={
-          Array [
-            "Selected",
-            "Unselected",
-            "Unselected",
-          ]
-        }
-        scroll={true}
-        ulId="tabs-scroll-example-ul"
-      />
-      <div
-        className="slab slab-edges flat p-5"
-      />
-    </div>
-    <p>
-      The tab component should always fill the full container of the content it governs. As seen on the examples above, the length of the underline for tab isn’t determined by the amount of tabs/length of the text. But should instead indicate the content that it anchors to and contains.
-    </p>
-  </section>
-</section>
-`;
-
-exports[`Components: Tabs renders 1`] = `
-<DocContainer>
-  <section
-    id="tabs-doc"
-  >
-    <p
-      className="lead"
-    >
-      Tabs are a local navigation component that separates content into views and lets the user navigate easily between views within the same context.
-    </p>
-    <Overview />
-    <ContentGuidelines />
-    <DeveloperDocumentation />
-    <NpmInformation
-      componentName="tabs"
-    />
-  </section>
-</DocContainer>
 `;

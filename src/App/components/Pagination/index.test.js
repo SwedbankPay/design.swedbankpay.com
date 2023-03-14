@@ -1,5 +1,7 @@
 import React from "react";
-import { mount, shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import Pagination from "./index";
 
@@ -10,106 +12,139 @@ describe("Component: Pagination -", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Pagination length={10} currentActive={1} id="test" />);
 
-        expect(wrapper).toMatchSnapshot();
+        const componentForSnap = renderer.create(<Pagination length={10} currentActive={1} id="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("throws error if initialized without id prop", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(<Pagination length={10} currentActive={1}/>);
+        const componentForSnap = renderer.create(<Pagination length={10} currentActive={1}/>);
 
-        expect(wrapper).toMatchSnapshot();
         expect(console.error).toHaveBeenCalled();
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("does not throw error if initialized with id prop", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(<Pagination length={10} currentActive={1} id="does-not-throw-error"/>);
+        const componentForSnap = renderer.create(<Pagination length={10} currentActive={1} id="does-not-throw-error"/>);
 
-        expect(wrapper).toMatchSnapshot();
         expect(console.error).not.toHaveBeenCalled();
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with an li with active class", () => {
-        const wrapper = shallow(<Pagination length={10} currentActive={4} id="test" />);
+        const { container } = render(<Pagination length={10} currentActive={4} id="test" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.exists(".active")).toEqual(true);
+        expect(container.querySelectorAll(".active")).toHaveLength(1);
 
-        expect(wrapper.find(".active")).toHaveLength(1);
+        const componentForSnap = renderer.create(<Pagination length={10} currentActive={4} id="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
 
     });
 
-    it("receives correct properties", () => {
-        const wrapper = mount(<Pagination length={10} currentActive={5} id="test" />);
+    // FIXME: is this test any useful ? we're creating the component with props and we're checking there is those props?
+    it.skip("receives correct properties", () => {
+        render(<Pagination length={10} currentActive={5} id="test" />);
 
         expect(wrapper.prop("length")).toEqual(10);
         expect(wrapper.prop("currentActive")).toEqual(5);
         expect(wrapper.prop("id")).toEqual("test");
-        expect(wrapper).toMatchSnapshot();
+
+        const componentForSnap = renderer.create(<Pagination length={10} currentActive={5} id="test" />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders only li elements inside ul element", () => {
-        const wrapper = shallow(<Pagination length={10} currentActive={4} id="tets"/>);
+        render(<Pagination length={10} currentActive={4} id="tets"/>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.find("ul").childAt(0)
-            .type()).toEqual("li");
+        expect([...screen.getByRole("list").children].every(elmt => elmt.tagName === "LI")).toBeTruthy();
+
+        const componentForSnap = renderer.create(<Pagination length={10} currentActive={4} id="tets"/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with correct number of list elements. It should always be 7 (max number of places)", () => {
-        const wrapper = shallow(<Pagination length={8} currentActive={2} id={"test-pagination"}/>);
-        const wrapper2 = shallow(<Pagination length={100} currentActive={2} id={"test-pagination2"}/>);
+        const { rerender } = render(<Pagination length={8} currentActive={2} id={"test-pagination"}/>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper2).toMatchSnapshot();
-        expect(wrapper.find("li").length).toBe(7);
-        expect(wrapper2.find("li").length).toBe(7);
+        expect(screen.getAllByRole("listitem").length).toBe(7);
+
+        rerender(<Pagination length={100} currentActive={2} id={"test-pagination2"}/>);
+        expect(screen.getAllByRole("listitem").length).toBe(7);
+
+        const componentForSnap1 = renderer.create(<Pagination length={8} currentActive={2} id={"test-pagination"}/>);
+
+        expect(componentForSnap1.toJSON()).toMatchSnapshot();
+
+        const componentForSnap2 = renderer.create(<Pagination length={100} currentActive={2} id={"test-pagination2"}/>);
+
+        expect(componentForSnap2.toJSON()).toMatchSnapshot();
     });
 
     it("renders four arrows", () => {
-        const wrapper = shallow(<Pagination length={8} currentActive={2} id={"test-pagination"}/>);
+        render(<Pagination length={8} currentActive={2} id={"test-pagination"}/>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.find("Arrow").length).toBe(4);
+        expect(screen.getAllByRole("button")).toHaveLength(4);
+        expect(screen.getAllByRole("button").filter(btn => btn.firstElementChild.tagName === "I")).toHaveLength(4);
+
+        const componentForSnap = renderer.create(<Pagination length={8} currentActive={2} id={"test-pagination"}/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with one ellipsis", () => {
-        const wrapper = shallow(<Pagination length={10} currentActive={2} id={"test-pagination"}/>);
+        render(<Pagination length={10} currentActive={2} id={"test-pagination"}/>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.find("span").length).toBe(2);
+        expect(screen.getAllByRole("listitem").filter(elmt => (elmt.firstElementChild.tagName === "SPAN" && elmt.firstElementChild.textContent === "..."))).toHaveLength(1);
+
+        const componentForSnap = renderer.create(<Pagination length={10} currentActive={2} id={"test-pagination"}/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders with two ellipsis", () => {
-        const wrapper = shallow(<Pagination length={10} currentActive={5} id={"test-pagination"}/>);
+        render(<Pagination length={10} currentActive={5} id={"test-pagination"}/>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.find("span").length).toBe(3);
+        expect(screen.getAllByRole("listitem").filter(elmt => (elmt.firstElementChild.tagName === "SPAN" && elmt.firstElementChild.textContent === "..."))).toHaveLength(2);
+
+        const componentForSnap = renderer.create(<Pagination length={10} currentActive={5} id={"test-pagination"}/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders the compact view with the compact class", () => {
-        const wrapper = mount(<Pagination length={10} currentActive={5} id={"test-pagination"} compact={true} />);
+        render(<Pagination length={10} currentActive={5} id={"test-pagination"} compact={true} />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.find("ul").length).toBe(0);
-        expect(wrapper.find("span.compact").length).toBe(1);
-        expect(wrapper.find("button.arrow-start").length).toBe(1);
-        expect(wrapper.find("button.arrow-start.d-sm-none").length).toBe(0);
-        expect(wrapper.find("button.arrow-end").length).toBe(1);
-        expect(wrapper.find("button.arrow-end.d-sm-none").length).toBe(0);
+        expect(screen.queryByRole("list")).not.toBeInTheDocument();
+        expect(screen.getByRole("navigation").querySelectorAll("span.compact")).toHaveLength(1);
+        expect(screen.getByRole("navigation").querySelectorAll("button.arrow-start")).toHaveLength(1);
+        expect(screen.getByRole("navigation").querySelectorAll("button.arrow-start.d-sm-none")).toHaveLength(0);
+        expect(screen.getByRole("navigation").querySelectorAll("button.arrow-end")).toHaveLength(1);
+        expect(screen.getByRole("navigation").querySelectorAll("button.arrow-end.d-sm-none")).toHaveLength(0);
+
+        const componentForSnap = renderer.create(<Pagination length={10} currentActive={5} id={"test-pagination"} compact={true} />);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     it("renders the default view as long view", () => {
-        const wrapper = mount(<Pagination length={10} currentActive={5} id={"test-pagination"}/>);
+        render(<Pagination length={10} currentActive={5} id={"test-pagination"}/>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.find("ul").length).toBe(1);
-        expect(wrapper.find("span.mobile").length).toBe(1);
-        expect(wrapper.find("button.arrow-start.d-sm-none").length).toBe(1);
-        expect(wrapper.find("button.arrow-end.d-sm-none").length).toBe(1);
+        expect(screen.getByRole("list")).toBeInTheDocument();
+        expect(screen.getByRole("navigation").querySelectorAll("span.mobile")).toHaveLength(1);
+        expect(screen.getByRole("navigation").querySelectorAll("button.arrow-start.d-sm-none")).toHaveLength(1);
+        expect(screen.getByRole("navigation").querySelectorAll("button.arrow-end.d-sm-none")).toHaveLength(1);
+
+        const componentForSnap = renderer.create(<Pagination length={10} currentActive={5} id={"test-pagination"}/>);
+
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

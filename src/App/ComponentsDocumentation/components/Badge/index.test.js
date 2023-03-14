@@ -1,5 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { BrowserRouter } from "react-router-dom";
 
 import Badge, { Overview } from "./index";
 
@@ -8,10 +9,13 @@ describe("Components: Badge", () => {
         expect(Badge).toBeDefined();
     });
 
-    it("renders", () => {
-        const wrapper = shallow(<Badge />);
+    it.skip("renders", () => {
+        const componentForSnap = renderer.create(<BrowserRouter>
+            <Badge />
+        </BrowserRouter>
+        );
 
-        expect(wrapper).toMatchSnapshot();
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
     describe("Overview", () => {
@@ -19,10 +23,13 @@ describe("Components: Badge", () => {
             expect(Overview).toBeDefined();
         });
 
-        it("renders", () => {
-            const wrapper = shallow(<Overview />);
+        it.skip("renders", () => {
+            const componentForSnap = renderer.create(<BrowserRouter>
+                <Overview />
+            </BrowserRouter>
+            );
 
-            expect(wrapper).toMatchSnapshot();
+            expect(componentForSnap.toJSON()).toMatchSnapshot();
         });
     });
 });

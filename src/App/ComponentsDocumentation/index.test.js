@@ -1,5 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { BrowserRouter } from "react-router-dom";
 
 import ComponentsDocumentation from "./index";
 
@@ -9,8 +10,11 @@ describe("ComponentsDocumentation: index", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<ComponentsDocumentation />);
+        const componentForSnap = renderer.create(<BrowserRouter>
+            <ComponentsDocumentation />
+        </BrowserRouter>
+        );
 
-        expect(wrapper).toMatchSnapshot();
+        expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 });

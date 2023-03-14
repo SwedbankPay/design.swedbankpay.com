@@ -1,65 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Utilities: StatusBadge prints error if type is not provided 1`] = `<Fragment />`;
+exports[`Utilities: StatusBadge prints error if type is not provided 1`] = `null`;
+
+exports[`Utilities: StatusBadge renders deprecated status badge when type is 'deprecated' 1`] = `
+<span
+  className="status-badge status-badge-deprecated"
+>
+  <i
+    aria-hidden="true"
+    className="material-icons"
+  >
+    delete_forever
+  </i>
+  Deprecated
+</span>
+`;
 
 exports[`Utilities: StatusBadge renders javascript status badge when type is 'javascript' 1`] = `
-<Fragment>
-  <span
-    className="status-badge status-badge-javascript"
-  >
-    <i
-      aria-hidden="true"
-      className="javascript-icon"
-    />
-    Uses JavaScript
-  </span>
-</Fragment>
+<span
+  className="status-badge status-badge-javascript"
+>
+  <i
+    aria-hidden="true"
+    className="javascript-icon"
+  />
+  Uses JavaScript
+</span>
 `;
 
 exports[`Utilities: StatusBadge renders new status badge when type is 'new' 1`] = `
-<Fragment>
-  <span
-    className="status-badge status-badge-new"
+<span
+  className="status-badge status-badge-new"
+>
+  <i
+    aria-hidden="true"
+    className="material-icons"
   >
-    <i
-      aria-hidden="true"
-      className="material-icons"
-    >
-      child_care
-    </i>
-    New
-  </span>
-</Fragment>
+    child_care
+  </i>
+  New
+</span>
 `;
 
 exports[`Utilities: StatusBadge renders remove status badge when type is 'remove' 1`] = `
-<Fragment>
-  <span
-    className="status-badge status-badge-remove"
+<span
+  className="status-badge status-badge-remove"
+>
+  <i
+    aria-hidden="true"
+    className="material-icons"
   >
-    <i
-      aria-hidden="true"
-      className="material-icons"
-    >
-      sentiment_very_dissatisfied
-    </i>
-    Being removed
-  </span>
-</Fragment>
+    sentiment_very_dissatisfied
+  </i>
+  Being removed
+</span>
 `;
 
 exports[`Utilities: StatusBadge renders updated status badge when type is 'updated' 1`] = `
-<Fragment>
-  <span
-    className="status-badge status-badge-updated"
+<span
+  className="status-badge status-badge-updated"
+>
+  <i
+    aria-hidden="true"
+    className="material-icons"
   >
-    <i
-      aria-hidden="true"
-      className="material-icons"
-    >
-      mood
-    </i>
-    Newly updated
-  </span>
-</Fragment>
+    mood
+  </i>
+  Newly updated
+</span>
 `;

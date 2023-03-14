@@ -12,35 +12,41 @@ exports[`Documentation: Pagination DeveloperDocumentation renders 1`] = `
   </h3>
   <p>
     Consider adding 
-    <CodeTags
-      code="<link rel=\\"…\\" href=\\"…\\">"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      &lt;link rel="…" href="…"&gt;
+    </code>
      to the 
-    <CodeTags
-      code="<head>"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      &lt;head&gt;
+    </code>
      element of your HTML page. These links are used to indicate the relationships between a sequence of pages to web browsers and search engines. Link relations to consider adding are 
-    <CodeTags
-      code="first"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      first
+    </code>
     , 
-    <CodeTags
-      code="last"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      last
+    </code>
     , 
-    <CodeTags
-      code="next"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      next
+    </code>
      and 
-    <CodeTags
-      code="prev"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      prev
+    </code>
     .
   </p>
   <h3>
@@ -48,101 +54,194 @@ exports[`Documentation: Pagination DeveloperDocumentation renders 1`] = `
   </h3>
   <p>
     Our pagination component works without a script, so the styling is still working where JavaScript is prohibited. But where it is allowed, and where you do not want to spend time banging your head to figure out the algorithm, the Design Guide provides a reference implementation! 
-    <CodeTags
-      code="dg.paginate(pages, currentActive)"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      dg.paginate(pages, currentActive)
+    </code>
     . The script takes in two arguments; 
-    <CodeTags
-      code="pages"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      pages
+    </code>
      and 
-    <CodeTags
-      code="currentActive"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      currentActive
+    </code>
     , where 
-    <CodeTags
-      code="pages"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      pages
+    </code>
      is total pages and 
-    <CodeTags
-      code="currentActive"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      currentActive
+    </code>
      is the current active page.
   </p>
   <p>
     The script returns the paginated pages, an array of objects with two properties, 
-    <CodeTags
-      code="page"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      page
+    </code>
      and 
-    <CodeTags
-      code="current"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      current
+    </code>
     . 
-    <CodeTags
-      code="page"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      page
+    </code>
      shows an integer, and 
-    <CodeTags
-      code="null"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      null
+    </code>
      when it should be replaced with an ellipsis. The 
-    <CodeTags
-      code="current"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      current
+    </code>
      is a bool that indicates whether the page is active or not.
   </p>
   <section>
     <h3>
       Example
     </h3>
-    <ComponentPreview
-      codeFigure={true}
-      language="javascript"
-    >
-      import { paginate } from "@src/scripts/main";
-      
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          JAVASCRIPT
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
 
-      
+                  2
+                  
 
-      console.log(paginate(10, 5))
-      
+                  3
+                  
 
-      
+                  4
+                  
 
-      //expected output:
-      
+                  5
+                  
 
-      [ {page: 1, current: false},
-      
+                  6
+                  
 
-      {page: null, current: false},
-      
+                  7
+                  
 
-      {page: 4, current: false},
-      
+                  8
+                  
 
-      {page: 5, current: true},
-      
+                  9
+                  
 
-      {page: 6, current: false},
-      
+                  10
+                  
 
-      {page: null, current: false},
-      
+                  11
+                  
 
-      {page: 10, current: false} ]
-    </ComponentPreview>
+                  12
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  import { paginate } from "@src/scripts/main";
+                  
+
+                  
+                  
+
+                  console.log(paginate(10, 5))
+                  
+
+                  
+                  
+
+                  //expected output:
+                  
+
+                  [ {page: 1, current: false},
+                  
+
+                  {page: null, current: false},
+                  
+
+                  {page: 4, current: false},
+                  
+
+                  {page: 5, current: true},
+                  
+
+                  {page: 6, current: false},
+                  
+
+                  {page: null, current: false},
+                  
+
+                  {page: 10, current: false} ]
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
   </section>
 </section>
 `;

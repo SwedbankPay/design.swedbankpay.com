@@ -79,24 +79,23 @@ exports[`Documentation: Lists BasicList renders 1`] = `
 `;
 
 exports[`Documentation: Lists BulletList renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="bullet-list"
   >
     Bullet list
-  </h2>
+  </h2>,
   <p>
     Add 
-    <CodeTags
-      code=".list-bullet"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .list-bullet
+    </code>
      on a list to make it a bullet list.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
     <ul
       className="list list-bullet"
@@ -111,29 +110,106 @@ exports[`Documentation: Lists BulletList renders 1`] = `
         Milk
       </li>
     </ul>
-  </ComponentPreview>
-</Fragment>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;ul class="list list-bullet"&gt;
+                
+
+                    &lt;li&gt;Coffee&lt;/li&gt;
+                
+
+                    &lt;li&gt;Tea&lt;/li&gt;
+                
+
+                    &lt;li&gt;Milk&lt;/li&gt;
+                
+
+                &lt;/ul&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Lists DescriptionList renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="description-list"
   >
     Description list
-  </h2>
+  </h2>,
   <p>
     The description list lets you provide each item with a more specific description of each item. Add 
-    <CodeTags
-      code=".description-list"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .description-list
+    </code>
      to your dl.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
     <dl
       className="description-list"
@@ -165,34 +241,130 @@ exports[`Documentation: Lists DescriptionList renders 1`] = `
       
 
     </dl>
-  </ComponentPreview>
-</Fragment>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;dl class="description-list"&gt;
+                
+
+                    &lt;dt&gt;Frog&lt;/dt&gt;
+                
+
+                    &lt;dd&gt;Wet green thing that croaks.&lt;/dd&gt;
+                
+
+                    &lt;dt&gt;Rabbit&lt;/dt&gt;
+                
+
+                    &lt;dd&gt;Warm fluffy thing that jumps.&lt;/dd&gt;
+                
+
+                    &lt;dt&gt;Color&lt;/dt&gt;
+                
+
+                    &lt;dd&gt;Any hue except white or black.&lt;/dd&gt;
+                
+
+                &lt;/dl&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Lists HoverItemList renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="hover-item-list"
   >
     Hover item list 
-  </h2>
+  </h2>,
   <p>
     Include 
-    <CodeTags
-      code=".item-list-hover"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .item-list-hover
+    </code>
      to give your items a hover effect. You can use this on any variation of 
-    <CodeTags
-      code=".item-list"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .item-list
+    </code>
     .
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
     <ul
       className="item-list item-list-hover"
@@ -246,29 +418,160 @@ exports[`Documentation: Lists HoverItemList renders 1`] = `
 
       </li>
     </ul>
-  </ComponentPreview>
-</Fragment>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;ul class="item-list item-list-hover"&gt;
+                
+
+                    &lt;li&gt;
+                
+
+                        &lt;span&gt;4925*********004&lt;/span&gt;
+                
+
+                        &lt;span class="status status-success"&gt;Active&lt;/span&gt;
+                
+
+                    &lt;/li&gt;
+                
+
+                    &lt;li&gt;
+                
+
+                        &lt;span&gt;4925*********004&lt;/span&gt;
+                
+
+                        &lt;span class="status status-warning"&gt;Expires soon&lt;/span&gt;
+                
+
+                    &lt;/li&gt;
+                
+
+                    &lt;li&gt;
+                
+
+                        &lt;span&gt;4925*********004&lt;/span&gt;
+                
+
+                        &lt;span class="status status-danger"&gt;Expired&lt;/span&gt;
+                
+
+                    &lt;/li&gt;
+                
+
+                &lt;/ul&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Lists InlineList renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="inline-list"
   >
     Inline list
-  </h2>
+  </h2>,
   <p>
     Use 
-    <CodeTags
-      code=".list-inline"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .list-inline
+    </code>
      on a list to make all items appear on the same line.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
     <ul
       className="list list-inline"
@@ -283,28 +586,105 @@ exports[`Documentation: Lists InlineList renders 1`] = `
         Milk
       </li>
     </ul>
-  </ComponentPreview>
-</Fragment>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;ul class="list list-inline"&gt;
+                
+
+                    &lt;li&gt;Coffee&lt;/li&gt;
+                
+
+                    &lt;li&gt;Tea&lt;/li&gt;
+                
+
+                    &lt;li&gt;Milk&lt;/li&gt;
+                
+
+                &lt;/ul&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Lists ItemList renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="item-list"
   >
     Item list 
-  </h2>
+  </h2>,
   <p>
-    <CodeTags
-      code=".item-list"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .item-list
+    </code>
     s is a good way to offer more extensive information about each item. Each item has their own box which seperates the items more clearly than our other options.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
     <ul
       className="item-list"
@@ -361,21 +741,187 @@ exports[`Documentation: Lists ItemList renders 1`] = `
         </div>
       </li>
     </ul>
-  </ComponentPreview>
-</Fragment>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+                15
+                
+
+                16
+                
+
+                17
+                
+
+                18
+                
+
+                19
+                
+
+                20
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;ul class="item-list"&gt;
+                
+
+                    &lt;li&gt;
+                
+
+                        &lt;div&gt;
+                
+
+                            &lt;h3&gt;Foo&lt;/h3&gt;&lt;small&gt;Due date 2 days&lt;/small&gt;
+                
+
+                        &lt;/div&gt;
+                
+
+                        &lt;div&gt;&lt;span class="h3 text-highlight"&gt;2120 kr&lt;/span&gt;&lt;/div&gt;
+                
+
+                    &lt;/li&gt;
+                
+
+                    &lt;li&gt;
+                
+
+                        &lt;div&gt;
+                
+
+                            &lt;h3&gt;Bar&lt;/h3&gt;&lt;small&gt;Due date 1 day&lt;/small&gt;
+                
+
+                        &lt;/div&gt;
+                
+
+                        &lt;div&gt;&lt;span class="h3 text-highlight"&gt;1100 kr&lt;/span&gt;&lt;/div&gt;
+                
+
+                    &lt;/li&gt;
+                
+
+                    &lt;li&gt;
+                
+
+                        &lt;div&gt;
+                
+
+                            &lt;h3&gt;Baz&lt;/h3&gt;&lt;small&gt;Due date 5 days&lt;/small&gt;
+                
+
+                        &lt;/div&gt;
+                
+
+                        &lt;div&gt;&lt;span class="h3 text-highlight"&gt;200 kr&lt;/span&gt;&lt;/div&gt;
+                
+
+                    &lt;/li&gt;
+                
+
+                &lt;/ul&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Lists ItemListBordered renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="item-list-bordered"
   >
     Bordered item list 
-  </h2>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </h2>,
+  <div
+    className="showcase-panel"
   >
     <ul
       className="item-list item-list-bordered"
@@ -460,21 +1006,205 @@ exports[`Documentation: Lists ItemListBordered renders 1`] = `
         </footer>
       </li>
     </ul>
-  </ComponentPreview>
-</Fragment>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+                15
+                
+
+                16
+                
+
+                17
+                
+
+                18
+                
+
+                19
+                
+
+                20
+                
+
+                21
+                
+
+                22
+                
+
+                23
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;ul class="item-list item-list-bordered"&gt;
+                
+
+                    &lt;li&gt;
+                
+
+                        &lt;div&gt;
+                
+
+                            &lt;h3&gt;Foo&lt;/h3&gt;&lt;small&gt;Due date 2 days&lt;/small&gt;
+                
+
+                        &lt;/div&gt;
+                
+
+                        &lt;div&gt;&lt;span class="h3 text-highlight"&gt;2120 kr&lt;/span&gt;&lt;/div&gt;
+                
+
+                        &lt;footer&gt;&lt;a href="#"&gt;Se faktura&lt;/a&gt;&lt;/footer&gt;
+                
+
+                    &lt;/li&gt;
+                
+
+                    &lt;li&gt;
+                
+
+                        &lt;div&gt;
+                
+
+                            &lt;h3&gt;Bar&lt;/h3&gt;&lt;small&gt;Due date 1 day&lt;/small&gt;
+                
+
+                        &lt;/div&gt;
+                
+
+                        &lt;div&gt;&lt;span class="h3 text-highlight"&gt;1100 kr&lt;/span&gt;&lt;/div&gt;
+                
+
+                        &lt;footer class="item-list-footer"&gt;&lt;a href="#"&gt;Se faktura&lt;/a&gt;&lt;/footer&gt;
+                
+
+                    &lt;/li&gt;
+                
+
+                    &lt;li&gt;
+                
+
+                        &lt;div&gt;
+                
+
+                            &lt;h3&gt;Baz&lt;/h3&gt;&lt;small&gt;Due date 5 days&lt;/small&gt;
+                
+
+                        &lt;/div&gt;
+                
+
+                        &lt;div&gt;&lt;span class="h3 text-highlight"&gt;200 kr&lt;/span&gt;&lt;/div&gt;
+                
+
+                        &lt;footer class="item-list-footer"&gt;&lt;a href="#"&gt;Se faktura&lt;/a&gt;&lt;/footer&gt;
+                
+
+                    &lt;/li&gt;
+                
+
+                &lt;/ul&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Lists ItemListLarge renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="item-list-lg"
   >
     Large item list 
-  </h2>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </h2>,
+  <div
+    className="showcase-panel"
   >
     <ul
       className="item-list item-list-lg"
@@ -556,29 +1286,214 @@ exports[`Documentation: Lists ItemListLarge renders 1`] = `
         </footer>
       </li>
     </ul>
-  </ComponentPreview>
-</Fragment>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+                15
+                
+
+                16
+                
+
+                17
+                
+
+                18
+                
+
+                19
+                
+
+                20
+                
+
+                21
+                
+
+                22
+                
+
+                23
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;ul class="item-list item-list-lg"&gt;
+                
+
+                    &lt;li&gt;
+                
+
+                        &lt;div&gt;
+                
+
+                            &lt;h3&gt;Foo&lt;/h3&gt;&lt;small&gt;Due date 2 days&lt;/small&gt;
+                
+
+                        &lt;/div&gt;
+                
+
+                        &lt;div&gt;&lt;span class="h3 text-highlight"&gt;2120 kr&lt;/span&gt;&lt;/div&gt;
+                
+
+                        &lt;footer&gt;&lt;a href="#"&gt;Se faktura&lt;/a&gt;&lt;/footer&gt;
+                
+
+                    &lt;/li&gt;
+                
+
+                    &lt;li&gt;
+                
+
+                        &lt;div&gt;
+                
+
+                            &lt;h3&gt;Bar&lt;/h3&gt;&lt;small&gt;Due date 1 day&lt;/small&gt;
+                
+
+                        &lt;/div&gt;
+                
+
+                        &lt;div&gt;&lt;span class="h3 text-highlight"&gt;1100 kr&lt;/span&gt;&lt;/div&gt;
+                
+
+                        &lt;footer class="item-list-footer"&gt;&lt;a href="#"&gt;Se faktura&lt;/a&gt;&lt;/footer&gt;
+                
+
+                    &lt;/li&gt;
+                
+
+                    &lt;li&gt;
+                
+
+                        &lt;div&gt;
+                
+
+                            &lt;h3&gt;Baz&lt;/h3&gt;&lt;small&gt;Due date 5 days&lt;/small&gt;
+                
+
+                        &lt;/div&gt;
+                
+
+                        &lt;div&gt;&lt;span class="h3 text-highlight"&gt;200 kr&lt;/span&gt;&lt;/div&gt;
+                
+
+                        &lt;footer class="item-list-footer"&gt;&lt;a href="#"&gt;Se faktura&lt;/a&gt;&lt;/footer&gt;
+                
+
+                    &lt;/li&gt;
+                
+
+                &lt;/ul&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Lists SettingsList renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="settings-list"
   >
     Settings list
-  </h2>
+  </h2>,
   <p>
     Use 
-    <CodeTags
-      code=".settings-list"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .settings-list
+    </code>
      to visualize different settings in your web application.
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
     <ul
       className="settings-list"
@@ -623,158 +1538,142 @@ exports[`Documentation: Lists SettingsList renders 1`] = `
 
       </li>
     </ul>
-  </ComponentPreview>
-</Fragment>
-`;
-
-exports[`Documentation: Lists StripedItemList prevents default on anchors 1`] = `
-<Fragment>
-  <h2
-    id="item-list-striped"
-  >
-    Striped item list
-  </h2>
-  <p>
-    If you want more seperation between each item you can use 
-    <CodeTags
-      code=".item-list-striped"
-      type="secondary"
-    />
-    .
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
-  >
-    <ul
-      className="item-list item-list-striped"
+  </div>,
+  <figure>
+    <div
+      className="code-view"
     >
-      <li>
-        <span>
-          4925*********004
-        </span>
-        <ActionList
-          items={
-            Array [
-              Object {
-                "icon": "bookmark",
-                "name": "Add bookmark",
-              },
-              Object {
-                "icon": "business_center",
-                "name": "Add client",
-              },
-              Object {
-                "icon": "add_circle",
-                "name": "Add document",
-              },
-              Object {
-                "icon": "person_add",
-                "name": "Add user",
-              },
-            ]
-          }
-        />
-      </li>
-      <li>
-        
-
-        <span>
-          
-			
-          4925*********004
-          
-			
-          <span
-            className="badge badge-blue"
-          >
-            new
-          </span>
-          
-
-        </span>
-        
-
-        <a
-          href="https://developer.TESTBRAND.com"
-        >
-          developer.
-          TESTBRAND
-          .com
-        </a>
-        
-
-      </li>
-      <li>
-        
-
-        <span>
-          4925*********004
-        </span>
-        
-
-        <i
-          aria-hidden="true"
-          className="material-icons"
-        >
-          star
-        </i>
-        
-
-      </li>
-      <li>
-        
-
-        <span>
-          4925*********004
-        </span>
-        
-
-        <span
-          className="status status-success"
-        >
-          Active
-        </span>
-        
-
+      <header
+        className="code-view-header"
+      >
+        HTML
         <button
-          className="btn btn-danger btn-xs"
-          type="button"
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
         >
           <i
-            className="material-icons"
+            className="material-icons-outlined"
           >
-            delete
+            content_copy
           </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
         </button>
-        
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
 
-      </li>
-    </ul>
-  </ComponentPreview>
-</Fragment>
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;ul class="settings-list"&gt;
+                
+
+                    &lt;li&gt;
+                
+
+                        &lt;i class="material-icons text-success" aria-hidden="true"&gt;check&lt;/i&gt;Shovels and tapestry newsletter
+                
+
+                    &lt;/li&gt;
+                
+
+                    &lt;li&gt;
+                
+
+                        &lt;i class="material-icons text-warning" aria-hidden="true"&gt;remove&lt;/i&gt;Spoon collectors weekly newsletter
+                
+
+                    &lt;/li&gt;
+                
+
+                    &lt;li&gt;
+                
+
+                        &lt;i class="material-icons text-danger" aria-hidden="true"&gt;clear&lt;/i&gt;Energetic squirrels newsletter
+                
+
+                    &lt;/li&gt;
+                
+
+                &lt;/ul&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Lists StripedItemList renders 1`] = `
-<Fragment>
+Array [
   <h2
     id="item-list-striped"
   >
     Striped item list
-  </h2>
+  </h2>,
   <p>
     If you want more seperation between each item you can use 
-    <CodeTags
-      code=".item-list-striped"
-      type="secondary"
-    />
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .item-list-striped
+    </code>
     .
-  </p>
-  <ComponentPreview
-    codeFigure={true}
-    language="html"
-    showCasePanel={true}
+  </p>,
+  <div
+    className="showcase-panel"
   >
     <ul
       className="item-list item-list-striped"
@@ -783,28 +1682,94 @@ exports[`Documentation: Lists StripedItemList renders 1`] = `
         <span>
           4925*********004
         </span>
-        <ActionList
-          items={
-            Array [
-              Object {
-                "icon": "bookmark",
-                "name": "Add bookmark",
-              },
-              Object {
-                "icon": "business_center",
-                "name": "Add client",
-              },
-              Object {
-                "icon": "add_circle",
-                "name": "Add document",
-              },
-              Object {
-                "icon": "person_add",
-                "name": "Add user",
-              },
-            ]
-          }
-        />
+        <div
+          className="action-list"
+        >
+          
+
+          <button
+            aria-haspopup="true"
+            aria-label="Action list button"
+            className="action-toggle"
+            id="actionListToggle"
+            type="button"
+          >
+            
+
+            <i
+              className="material-icons"
+            >
+              more_vert
+            </i>
+            
+
+          </button>
+          
+
+          <div
+            aria-labelledby="actionListToggle"
+            className="action-menu"
+          >
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <i
+                aria-hidden="true"
+                className="material-icons"
+              >
+                bookmark
+              </i>
+              Add bookmark
+            </a>
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <i
+                aria-hidden="true"
+                className="material-icons"
+              >
+                business_center
+              </i>
+              Add client
+            </a>
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <i
+                aria-hidden="true"
+                className="material-icons"
+              >
+                add_circle
+              </i>
+              Add document
+            </a>
+            
+
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              <i
+                aria-hidden="true"
+                className="material-icons"
+              >
+                person_add
+              </i>
+              Add user
+            </a>
+            
+
+          </div>
+        </div>
       </li>
       <li>
         
@@ -881,26 +1846,2486 @@ exports[`Documentation: Lists StripedItemList renders 1`] = `
 
       </li>
     </ul>
-  </ComponentPreview>
-</Fragment>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            className="material-icons-outlined"
+          >
+            content_copy
+          </i>
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+                10
+                
+
+                11
+                
+
+                12
+                
+
+                13
+                
+
+                14
+                
+
+                15
+                
+
+                16
+                
+
+                17
+                
+
+                18
+                
+
+                19
+                
+
+                20
+                
+
+                21
+                
+
+                22
+                
+
+                23
+                
+
+                24
+                
+
+                25
+                
+
+                26
+                
+
+                27
+                
+
+                28
+                
+
+                29
+                
+
+                30
+                
+
+                31
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;ul class="item-list item-list-striped"&gt;
+                
+
+                    &lt;li&gt;&lt;span&gt;4925*********004&lt;/span&gt;
+                
+
+                        &lt;div class="action-list"&gt;
+                
+
+                            &lt;button id="actionListToggle" aria-label="Action list button" type="button" class="action-toggle" aria-haspopup="true"&gt;
+                
+
+                                &lt;i class="material-icons"&gt;more_vert&lt;/i&gt;
+                
+
+                            &lt;/button&gt;
+                
+
+                            &lt;div class="action-menu" aria-labelledby="actionListToggle"&gt;
+                
+
+                                &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;bookmark&lt;/i&gt;Add bookmark&lt;/a&gt;
+                
+
+                                &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;business_center&lt;/i&gt;Add client&lt;/a&gt;
+                
+
+                                &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;add_circle&lt;/i&gt;Add document&lt;/a&gt;
+                
+
+                                &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;person_add&lt;/i&gt;Add user&lt;/a&gt;
+                
+
+                            &lt;/div&gt;
+                
+
+                        &lt;/div&gt;
+                
+
+                    &lt;/li&gt;
+                
+
+                    &lt;li&gt;
+                
+
+                        &lt;span&gt;
+                
+
+                            4925*********004
+                
+
+                            &lt;span class="badge badge-blue"&gt;new&lt;/span&gt;
+                
+
+                        &lt;/span&gt;
+                
+
+                        &lt;a href="https://developer.TESTBRAND.com"&gt;developer.TESTBRAND.com&lt;/a&gt;
+                
+
+                    &lt;/li&gt;
+                
+
+                    &lt;li&gt;
+                
+
+                        &lt;span&gt;4925*********004&lt;/span&gt;
+                
+
+                        &lt;i class="material-icons" aria-hidden="true"&gt;star&lt;/i&gt;
+                
+
+                    &lt;/li&gt;
+                
+
+                    &lt;li&gt;
+                
+
+                        &lt;span&gt;4925*********004&lt;/span&gt;
+                
+
+                        &lt;span class="status status-success"&gt;Active&lt;/span&gt;
+                
+
+                        &lt;button type="button" class="btn btn-danger btn-xs"&gt;&lt;i class="material-icons"&gt;delete&lt;/i&gt;&lt;/button&gt;
+                
+
+                    &lt;/li&gt;
+                
+
+                &lt;/ul&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
 `;
 
 exports[`Documentation: Lists renders 1`] = `
-<DocContainer>
-  <p
-    className="lead"
+<div
+  className="row"
+>
+  <div
+    className="doc-body col-12"
+    id="doc-body"
   >
-    Use lists to give a structured view of information.
-  </p>
-  <BasicList />
-  <InlineList />
-  <BulletList />
-  <DescriptionList />
-  <SettingsList />
-  <ItemList />
-  <ItemListLarge />
-  <ItemListBordered />
-  <HoverItemList />
-  <StripedItemList />
-</DocContainer>
+    <p
+      className="lead"
+    >
+      Use lists to give a structured view of information.
+    </p>
+    <h2
+      id="basic-list"
+    >
+      Basic list
+    </h2>
+    <p>
+      Add 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .list
+      </code>
+       to a list to display the basic list. Our lists do not use bullet points.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <ul
+        className="list"
+      >
+        <li>
+          Bread
+        </li>
+        <li>
+          Coffee beans
+        </li>
+        <li>
+          Milk
+        </li>
+        <li>
+          Butter
+        </li>
+      </ul>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;ul class="list"&gt;
+                  
+
+                      &lt;li&gt;Bread&lt;/li&gt;
+                  
+
+                      &lt;li&gt;Coffee beans&lt;/li&gt;
+                  
+
+                      &lt;li&gt;Milk&lt;/li&gt;
+                  
+
+                      &lt;li&gt;Butter&lt;/li&gt;
+                  
+
+                  &lt;/ul&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h3>
+      Nested list
+    </h3>
+    <p>
+      Use nesting with lists to signify that some items are children of another item.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <ul
+        className="list"
+      >
+        <li>
+          Coffee
+        </li>
+        <li>
+          Tea 
+          
+
+          <ul>
+            <li>
+              Black tea
+            </li>
+            <li>
+              Green tea
+            </li>
+            <li>
+              Ice tea
+            </li>
+          </ul>
+        </li>
+        <li>
+          Milk
+        </li>
+      </ul>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;ul class="list"&gt;
+                  
+
+                      &lt;li&gt;Coffee&lt;/li&gt;
+                  
+
+                      &lt;li&gt;Tea
+                  
+
+                          &lt;ul&gt;
+                  
+
+                              &lt;li&gt;Black tea&lt;/li&gt;
+                  
+
+                              &lt;li&gt;Green tea&lt;/li&gt;
+                  
+
+                              &lt;li&gt;Ice tea&lt;/li&gt;
+                  
+
+                          &lt;/ul&gt;
+                  
+
+                      &lt;/li&gt;
+                  
+
+                      &lt;li&gt;Milk&lt;/li&gt;
+                  
+
+                  &lt;/ul&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h2
+      id="inline-list"
+    >
+      Inline list
+    </h2>
+    <p>
+      Use 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .list-inline
+      </code>
+       on a list to make all items appear on the same line.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <ul
+        className="list list-inline"
+      >
+        <li>
+          Coffee
+        </li>
+        <li>
+          Tea
+        </li>
+        <li>
+          Milk
+        </li>
+      </ul>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;ul class="list list-inline"&gt;
+                  
+
+                      &lt;li&gt;Coffee&lt;/li&gt;
+                  
+
+                      &lt;li&gt;Tea&lt;/li&gt;
+                  
+
+                      &lt;li&gt;Milk&lt;/li&gt;
+                  
+
+                  &lt;/ul&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h2
+      id="bullet-list"
+    >
+      Bullet list
+    </h2>
+    <p>
+      Add 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .list-bullet
+      </code>
+       on a list to make it a bullet list.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <ul
+        className="list list-bullet"
+      >
+        <li>
+          Coffee
+        </li>
+        <li>
+          Tea
+        </li>
+        <li>
+          Milk
+        </li>
+      </ul>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;ul class="list list-bullet"&gt;
+                  
+
+                      &lt;li&gt;Coffee&lt;/li&gt;
+                  
+
+                      &lt;li&gt;Tea&lt;/li&gt;
+                  
+
+                      &lt;li&gt;Milk&lt;/li&gt;
+                  
+
+                  &lt;/ul&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h2
+      id="description-list"
+    >
+      Description list
+    </h2>
+    <p>
+      The description list lets you provide each item with a more specific description of each item. Add 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .description-list
+      </code>
+       to your dl.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <dl
+        className="description-list"
+      >
+        
+
+        <dt>
+          Frog
+        </dt>
+        <dd>
+          Wet green thing that croaks.
+        </dd>
+        
+
+        <dt>
+          Rabbit
+        </dt>
+        <dd>
+          Warm fluffy thing that jumps.
+        </dd>
+        
+
+        <dt>
+          Color
+        </dt>
+        <dd>
+          Any hue except white or black.
+        </dd>
+        
+
+      </dl>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;dl class="description-list"&gt;
+                  
+
+                      &lt;dt&gt;Frog&lt;/dt&gt;
+                  
+
+                      &lt;dd&gt;Wet green thing that croaks.&lt;/dd&gt;
+                  
+
+                      &lt;dt&gt;Rabbit&lt;/dt&gt;
+                  
+
+                      &lt;dd&gt;Warm fluffy thing that jumps.&lt;/dd&gt;
+                  
+
+                      &lt;dt&gt;Color&lt;/dt&gt;
+                  
+
+                      &lt;dd&gt;Any hue except white or black.&lt;/dd&gt;
+                  
+
+                  &lt;/dl&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h2
+      id="settings-list"
+    >
+      Settings list
+    </h2>
+    <p>
+      Use 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .settings-list
+      </code>
+       to visualize different settings in your web application.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <ul
+        className="settings-list"
+      >
+        <li>
+          
+
+          <i
+            aria-hidden="true"
+            className="material-icons text-success"
+          >
+            check
+          </i>
+          Shovels and tapestry newsletter
+          
+
+        </li>
+        <li>
+          
+
+          <i
+            aria-hidden="true"
+            className="material-icons text-warning"
+          >
+            remove
+          </i>
+          Spoon collectors weekly newsletter
+          
+
+        </li>
+        <li>
+          
+
+          <i
+            aria-hidden="true"
+            className="material-icons text-danger"
+          >
+            clear
+          </i>
+          Energetic squirrels newsletter
+          
+
+        </li>
+      </ul>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;ul class="settings-list"&gt;
+                  
+
+                      &lt;li&gt;
+                  
+
+                          &lt;i class="material-icons text-success" aria-hidden="true"&gt;check&lt;/i&gt;Shovels and tapestry newsletter
+                  
+
+                      &lt;/li&gt;
+                  
+
+                      &lt;li&gt;
+                  
+
+                          &lt;i class="material-icons text-warning" aria-hidden="true"&gt;remove&lt;/i&gt;Spoon collectors weekly newsletter
+                  
+
+                      &lt;/li&gt;
+                  
+
+                      &lt;li&gt;
+                  
+
+                          &lt;i class="material-icons text-danger" aria-hidden="true"&gt;clear&lt;/i&gt;Energetic squirrels newsletter
+                  
+
+                      &lt;/li&gt;
+                  
+
+                  &lt;/ul&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h2
+      id="item-list"
+    >
+      Item list 
+    </h2>
+    <p>
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .item-list
+      </code>
+      s is a good way to offer more extensive information about each item. Each item has their own box which seperates the items more clearly than our other options.
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <ul
+        className="item-list"
+      >
+        <li>
+          <div>
+            <h3>
+              Foo
+            </h3>
+            <small>
+              Due date 2 days
+            </small>
+          </div>
+          <div>
+            <span
+              className="h3 text-highlight"
+            >
+              2120 kr
+            </span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>
+              Bar
+            </h3>
+            <small>
+              Due date 1 day
+            </small>
+          </div>
+          <div>
+            <span
+              className="h3 text-highlight"
+            >
+              1100 kr
+            </span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>
+              Baz
+            </h3>
+            <small>
+              Due date 5 days
+            </small>
+          </div>
+          <div>
+            <span
+              className="h3 text-highlight"
+            >
+              200 kr
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                  12
+                  
+
+                  13
+                  
+
+                  14
+                  
+
+                  15
+                  
+
+                  16
+                  
+
+                  17
+                  
+
+                  18
+                  
+
+                  19
+                  
+
+                  20
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;ul class="item-list"&gt;
+                  
+
+                      &lt;li&gt;
+                  
+
+                          &lt;div&gt;
+                  
+
+                              &lt;h3&gt;Foo&lt;/h3&gt;&lt;small&gt;Due date 2 days&lt;/small&gt;
+                  
+
+                          &lt;/div&gt;
+                  
+
+                          &lt;div&gt;&lt;span class="h3 text-highlight"&gt;2120 kr&lt;/span&gt;&lt;/div&gt;
+                  
+
+                      &lt;/li&gt;
+                  
+
+                      &lt;li&gt;
+                  
+
+                          &lt;div&gt;
+                  
+
+                              &lt;h3&gt;Bar&lt;/h3&gt;&lt;small&gt;Due date 1 day&lt;/small&gt;
+                  
+
+                          &lt;/div&gt;
+                  
+
+                          &lt;div&gt;&lt;span class="h3 text-highlight"&gt;1100 kr&lt;/span&gt;&lt;/div&gt;
+                  
+
+                      &lt;/li&gt;
+                  
+
+                      &lt;li&gt;
+                  
+
+                          &lt;div&gt;
+                  
+
+                              &lt;h3&gt;Baz&lt;/h3&gt;&lt;small&gt;Due date 5 days&lt;/small&gt;
+                  
+
+                          &lt;/div&gt;
+                  
+
+                          &lt;div&gt;&lt;span class="h3 text-highlight"&gt;200 kr&lt;/span&gt;&lt;/div&gt;
+                  
+
+                      &lt;/li&gt;
+                  
+
+                  &lt;/ul&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h2
+      id="item-list-lg"
+    >
+      Large item list 
+    </h2>
+    <div
+      className="showcase-panel"
+    >
+      <ul
+        className="item-list item-list-lg"
+      >
+        <li>
+          <div>
+            <h3>
+              Foo
+            </h3>
+            <small>
+              Due date 2 days
+            </small>
+          </div>
+          <div>
+            <span
+              className="h3 text-highlight"
+            >
+              2120 kr
+            </span>
+          </div>
+          <footer>
+            <a
+              href="#"
+            >
+              Se faktura
+            </a>
+          </footer>
+        </li>
+        <li>
+          <div>
+            <h3>
+              Bar
+            </h3>
+            <small>
+              Due date 1 day
+            </small>
+          </div>
+          <div>
+            <span
+              className="h3 text-highlight"
+            >
+              1100 kr
+            </span>
+          </div>
+          <footer
+            className="item-list-footer"
+          >
+            <a
+              href="#"
+            >
+              Se faktura
+            </a>
+          </footer>
+        </li>
+        <li>
+          <div>
+            <h3>
+              Baz
+            </h3>
+            <small>
+              Due date 5 days
+            </small>
+          </div>
+          <div>
+            <span
+              className="h3 text-highlight"
+            >
+              200 kr
+            </span>
+          </div>
+          <footer
+            className="item-list-footer"
+          >
+            <a
+              href="#"
+            >
+              Se faktura
+            </a>
+          </footer>
+        </li>
+      </ul>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                  12
+                  
+
+                  13
+                  
+
+                  14
+                  
+
+                  15
+                  
+
+                  16
+                  
+
+                  17
+                  
+
+                  18
+                  
+
+                  19
+                  
+
+                  20
+                  
+
+                  21
+                  
+
+                  22
+                  
+
+                  23
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;ul class="item-list item-list-lg"&gt;
+                  
+
+                      &lt;li&gt;
+                  
+
+                          &lt;div&gt;
+                  
+
+                              &lt;h3&gt;Foo&lt;/h3&gt;&lt;small&gt;Due date 2 days&lt;/small&gt;
+                  
+
+                          &lt;/div&gt;
+                  
+
+                          &lt;div&gt;&lt;span class="h3 text-highlight"&gt;2120 kr&lt;/span&gt;&lt;/div&gt;
+                  
+
+                          &lt;footer&gt;&lt;a href="#"&gt;Se faktura&lt;/a&gt;&lt;/footer&gt;
+                  
+
+                      &lt;/li&gt;
+                  
+
+                      &lt;li&gt;
+                  
+
+                          &lt;div&gt;
+                  
+
+                              &lt;h3&gt;Bar&lt;/h3&gt;&lt;small&gt;Due date 1 day&lt;/small&gt;
+                  
+
+                          &lt;/div&gt;
+                  
+
+                          &lt;div&gt;&lt;span class="h3 text-highlight"&gt;1100 kr&lt;/span&gt;&lt;/div&gt;
+                  
+
+                          &lt;footer class="item-list-footer"&gt;&lt;a href="#"&gt;Se faktura&lt;/a&gt;&lt;/footer&gt;
+                  
+
+                      &lt;/li&gt;
+                  
+
+                      &lt;li&gt;
+                  
+
+                          &lt;div&gt;
+                  
+
+                              &lt;h3&gt;Baz&lt;/h3&gt;&lt;small&gt;Due date 5 days&lt;/small&gt;
+                  
+
+                          &lt;/div&gt;
+                  
+
+                          &lt;div&gt;&lt;span class="h3 text-highlight"&gt;200 kr&lt;/span&gt;&lt;/div&gt;
+                  
+
+                          &lt;footer class="item-list-footer"&gt;&lt;a href="#"&gt;Se faktura&lt;/a&gt;&lt;/footer&gt;
+                  
+
+                      &lt;/li&gt;
+                  
+
+                  &lt;/ul&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h2
+      id="item-list-bordered"
+    >
+      Bordered item list 
+    </h2>
+    <div
+      className="showcase-panel"
+    >
+      <ul
+        className="item-list item-list-bordered"
+      >
+        <li>
+          <div>
+            <h3>
+              Foo
+            </h3>
+            <small>
+              Due date 2 days
+            </small>
+          </div>
+          <div>
+            <span
+              className="h3 text-highlight"
+            >
+              2120 kr
+            </span>
+          </div>
+          <footer>
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              Se faktura
+            </a>
+          </footer>
+        </li>
+        <li>
+          <div>
+            <h3>
+              Bar
+            </h3>
+            <small>
+              Due date 1 day
+            </small>
+          </div>
+          <div>
+            <span
+              className="h3 text-highlight"
+            >
+              1100 kr
+            </span>
+          </div>
+          <footer
+            className="item-list-footer"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              Se faktura
+            </a>
+          </footer>
+        </li>
+        <li>
+          <div>
+            <h3>
+              Baz
+            </h3>
+            <small>
+              Due date 5 days
+            </small>
+          </div>
+          <div>
+            <span
+              className="h3 text-highlight"
+            >
+              200 kr
+            </span>
+          </div>
+          <footer
+            className="item-list-footer"
+          >
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              Se faktura
+            </a>
+          </footer>
+        </li>
+      </ul>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                  12
+                  
+
+                  13
+                  
+
+                  14
+                  
+
+                  15
+                  
+
+                  16
+                  
+
+                  17
+                  
+
+                  18
+                  
+
+                  19
+                  
+
+                  20
+                  
+
+                  21
+                  
+
+                  22
+                  
+
+                  23
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;ul class="item-list item-list-bordered"&gt;
+                  
+
+                      &lt;li&gt;
+                  
+
+                          &lt;div&gt;
+                  
+
+                              &lt;h3&gt;Foo&lt;/h3&gt;&lt;small&gt;Due date 2 days&lt;/small&gt;
+                  
+
+                          &lt;/div&gt;
+                  
+
+                          &lt;div&gt;&lt;span class="h3 text-highlight"&gt;2120 kr&lt;/span&gt;&lt;/div&gt;
+                  
+
+                          &lt;footer&gt;&lt;a href="#"&gt;Se faktura&lt;/a&gt;&lt;/footer&gt;
+                  
+
+                      &lt;/li&gt;
+                  
+
+                      &lt;li&gt;
+                  
+
+                          &lt;div&gt;
+                  
+
+                              &lt;h3&gt;Bar&lt;/h3&gt;&lt;small&gt;Due date 1 day&lt;/small&gt;
+                  
+
+                          &lt;/div&gt;
+                  
+
+                          &lt;div&gt;&lt;span class="h3 text-highlight"&gt;1100 kr&lt;/span&gt;&lt;/div&gt;
+                  
+
+                          &lt;footer class="item-list-footer"&gt;&lt;a href="#"&gt;Se faktura&lt;/a&gt;&lt;/footer&gt;
+                  
+
+                      &lt;/li&gt;
+                  
+
+                      &lt;li&gt;
+                  
+
+                          &lt;div&gt;
+                  
+
+                              &lt;h3&gt;Baz&lt;/h3&gt;&lt;small&gt;Due date 5 days&lt;/small&gt;
+                  
+
+                          &lt;/div&gt;
+                  
+
+                          &lt;div&gt;&lt;span class="h3 text-highlight"&gt;200 kr&lt;/span&gt;&lt;/div&gt;
+                  
+
+                          &lt;footer class="item-list-footer"&gt;&lt;a href="#"&gt;Se faktura&lt;/a&gt;&lt;/footer&gt;
+                  
+
+                      &lt;/li&gt;
+                  
+
+                  &lt;/ul&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h2
+      id="hover-item-list"
+    >
+      Hover item list 
+    </h2>
+    <p>
+      Include 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .item-list-hover
+      </code>
+       to give your items a hover effect. You can use this on any variation of 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .item-list
+      </code>
+      .
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <ul
+        className="item-list item-list-hover"
+      >
+        <li>
+          
+
+          <span>
+            4925*********004
+          </span>
+          
+
+          <span
+            className="status status-success"
+          >
+            Active
+          </span>
+          
+
+        </li>
+        <li>
+          
+
+          <span>
+            4925*********004
+          </span>
+          
+
+          <span
+            className="status status-warning"
+          >
+            Expires soon
+          </span>
+          
+
+        </li>
+        <li>
+          
+
+          <span>
+            4925*********004
+          </span>
+          
+
+          <span
+            className="status status-danger"
+          >
+            Expired
+          </span>
+          
+
+        </li>
+      </ul>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                  12
+                  
+
+                  13
+                  
+
+                  14
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;ul class="item-list item-list-hover"&gt;
+                  
+
+                      &lt;li&gt;
+                  
+
+                          &lt;span&gt;4925*********004&lt;/span&gt;
+                  
+
+                          &lt;span class="status status-success"&gt;Active&lt;/span&gt;
+                  
+
+                      &lt;/li&gt;
+                  
+
+                      &lt;li&gt;
+                  
+
+                          &lt;span&gt;4925*********004&lt;/span&gt;
+                  
+
+                          &lt;span class="status status-warning"&gt;Expires soon&lt;/span&gt;
+                  
+
+                      &lt;/li&gt;
+                  
+
+                      &lt;li&gt;
+                  
+
+                          &lt;span&gt;4925*********004&lt;/span&gt;
+                  
+
+                          &lt;span class="status status-danger"&gt;Expired&lt;/span&gt;
+                  
+
+                      &lt;/li&gt;
+                  
+
+                  &lt;/ul&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+    <h2
+      id="item-list-striped"
+    >
+      Striped item list
+    </h2>
+    <p>
+      If you want more seperation between each item you can use 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .item-list-striped
+      </code>
+      .
+    </p>
+    <div
+      className="showcase-panel"
+    >
+      <ul
+        className="item-list item-list-striped"
+      >
+        <li>
+          <span>
+            4925*********004
+          </span>
+          <div
+            className="action-list"
+          >
+            
+
+            <button
+              aria-haspopup="true"
+              aria-label="Action list button"
+              className="action-toggle"
+              id="actionListToggle"
+              type="button"
+            >
+              
+
+              <i
+                className="material-icons"
+              >
+                more_vert
+              </i>
+              
+
+            </button>
+            
+
+            <div
+              aria-labelledby="actionListToggle"
+              className="action-menu"
+            >
+              
+
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <i
+                  aria-hidden="true"
+                  className="material-icons"
+                >
+                  bookmark
+                </i>
+                Add bookmark
+              </a>
+              
+
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <i
+                  aria-hidden="true"
+                  className="material-icons"
+                >
+                  business_center
+                </i>
+                Add client
+              </a>
+              
+
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <i
+                  aria-hidden="true"
+                  className="material-icons"
+                >
+                  add_circle
+                </i>
+                Add document
+              </a>
+              
+
+              <a
+                href="#"
+                onClick={[Function]}
+              >
+                <i
+                  aria-hidden="true"
+                  className="material-icons"
+                >
+                  person_add
+                </i>
+                Add user
+              </a>
+              
+
+            </div>
+          </div>
+        </li>
+        <li>
+          
+
+          <span>
+            
+			
+            4925*********004
+            
+			
+            <span
+              className="badge badge-blue"
+            >
+              new
+            </span>
+            
+
+          </span>
+          
+
+          <a
+            href="https://developer.TESTBRAND.com"
+          >
+            developer.
+            TESTBRAND
+            .com
+          </a>
+          
+
+        </li>
+        <li>
+          
+
+          <span>
+            4925*********004
+          </span>
+          
+
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            star
+          </i>
+          
+
+        </li>
+        <li>
+          
+
+          <span>
+            4925*********004
+          </span>
+          
+
+          <span
+            className="status status-success"
+          >
+            Active
+          </span>
+          
+
+          <button
+            className="btn btn-danger btn-xs"
+            type="button"
+          >
+            <i
+              className="material-icons"
+            >
+              delete
+            </i>
+          </button>
+          
+
+        </li>
+      </ul>
+    </div>
+    <figure>
+      <div
+        className="code-view"
+      >
+        <header
+          className="code-view-header"
+        >
+          HTML
+          <button
+            aria-describedby="tooltipCopy"
+            className="tooltip"
+            onClick={[Function]}
+          >
+            <i
+              className="material-icons-outlined"
+            >
+              content_copy
+            </i>
+            <div
+              id="tooltipCopy"
+              role="tooltip"
+            >
+              Copy to clipboard
+            </div>
+          </button>
+        </header>
+        <table
+          className="code-view-table"
+        >
+          <tbody>
+            <tr>
+              <td
+                className="code-view-numbers"
+              >
+                <pre>
+                  1
+                  
+
+                  2
+                  
+
+                  3
+                  
+
+                  4
+                  
+
+                  5
+                  
+
+                  6
+                  
+
+                  7
+                  
+
+                  8
+                  
+
+                  9
+                  
+
+                  10
+                  
+
+                  11
+                  
+
+                  12
+                  
+
+                  13
+                  
+
+                  14
+                  
+
+                  15
+                  
+
+                  16
+                  
+
+                  17
+                  
+
+                  18
+                  
+
+                  19
+                  
+
+                  20
+                  
+
+                  21
+                  
+
+                  22
+                  
+
+                  23
+                  
+
+                  24
+                  
+
+                  25
+                  
+
+                  26
+                  
+
+                  27
+                  
+
+                  28
+                  
+
+                  29
+                  
+
+                  30
+                  
+
+                  31
+                  
+
+                </pre>
+              </td>
+              <td
+                className="code-view-code"
+              >
+                <pre>
+                  &lt;ul class="item-list item-list-striped"&gt;
+                  
+
+                      &lt;li&gt;&lt;span&gt;4925*********004&lt;/span&gt;
+                  
+
+                          &lt;div class="action-list"&gt;
+                  
+
+                              &lt;button id="actionListToggle" aria-label="Action list button" type="button" class="action-toggle" aria-haspopup="true"&gt;
+                  
+
+                                  &lt;i class="material-icons"&gt;more_vert&lt;/i&gt;
+                  
+
+                              &lt;/button&gt;
+                  
+
+                              &lt;div class="action-menu" aria-labelledby="actionListToggle"&gt;
+                  
+
+                                  &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;bookmark&lt;/i&gt;Add bookmark&lt;/a&gt;
+                  
+
+                                  &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;business_center&lt;/i&gt;Add client&lt;/a&gt;
+                  
+
+                                  &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;add_circle&lt;/i&gt;Add document&lt;/a&gt;
+                  
+
+                                  &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;person_add&lt;/i&gt;Add user&lt;/a&gt;
+                  
+
+                              &lt;/div&gt;
+                  
+
+                          &lt;/div&gt;
+                  
+
+                      &lt;/li&gt;
+                  
+
+                      &lt;li&gt;
+                  
+
+                          &lt;span&gt;
+                  
+
+                              4925*********004
+                  
+
+                              &lt;span class="badge badge-blue"&gt;new&lt;/span&gt;
+                  
+
+                          &lt;/span&gt;
+                  
+
+                          &lt;a href="https://developer.TESTBRAND.com"&gt;developer.TESTBRAND.com&lt;/a&gt;
+                  
+
+                      &lt;/li&gt;
+                  
+
+                      &lt;li&gt;
+                  
+
+                          &lt;span&gt;4925*********004&lt;/span&gt;
+                  
+
+                          &lt;i class="material-icons" aria-hidden="true"&gt;star&lt;/i&gt;
+                  
+
+                      &lt;/li&gt;
+                  
+
+                      &lt;li&gt;
+                  
+
+                          &lt;span&gt;4925*********004&lt;/span&gt;
+                  
+
+                          &lt;span class="status status-success"&gt;Active&lt;/span&gt;
+                  
+
+                          &lt;button type="button" class="btn btn-danger btn-xs"&gt;&lt;i class="material-icons"&gt;delete&lt;/i&gt;&lt;/button&gt;
+                  
+
+                      &lt;/li&gt;
+                  
+
+                  &lt;/ul&gt;
+                  
+
+                </pre>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </figure>
+  </div>
+</div>
 `;

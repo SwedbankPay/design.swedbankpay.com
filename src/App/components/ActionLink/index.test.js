@@ -1,5 +1,7 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import ActionLink, { ActionLinkContent } from "./index";
 
@@ -11,24 +13,35 @@ describe("Component: ActionLink", () => {
     it("prop linkText is marked as required", () => {
         console.error = jest.fn();
 
-        const wrapper = shallow(<ActionLink />);
+        render(<ActionLink />);
 
-        expect(wrapper).toMatchSnapshot();
         expect(console.error).toHaveBeenCalled();
+
+        const actionLinkElmt = renderer.create(<ActionLink />).toJSON();
+
+        expect(actionLinkElmt).toMatchSnapshot();
     });
 
     it("renders ActionLink with .action-link class only when not newTab", () => {
-        const wrapper = shallow(<ActionLink linkText="Link text" />);
+        render(<ActionLink linkText="Link text" />);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<a class=\"action-link\" href=\"#\">");
+        expect(screen.getByRole("link")).toHaveClass("action-link");
+        expect(screen.getByRole("link")).not.toHaveAttribute("target", "_blank");
+
+        const actionLinkElmt = renderer.create(<ActionLink />).toJSON();
+
+        expect(actionLinkElmt).toMatchSnapshot();
     });
 
     it("renders ActionLink with .action-link-new-tab class when newTab is true", () => {
-        const wrapper = shallow(<ActionLink linkText="Link text" newTab={true} />);
+        render(<ActionLink linkText="Link text" newTab={true}/>);
 
-        expect(wrapper).toMatchSnapshot();
-        expect(wrapper.html()).toContain("<a class=\"action-link action-link-new-tab\" href=\"#\" rel=\"noopener noreferrer\" target=\"_blank\">");
+        expect(screen.getByRole("link")).toHaveClass("action-link-new-tab");
+        expect(screen.getByRole("link")).toHaveAttribute("target", "_blank");
+
+        const actionLinkElmt = renderer.create(<ActionLink linkText="Link text" newTab={true} />).toJSON();
+
+        expect(actionLinkElmt).toMatchSnapshot();
     });
 
     describe("ActionLinkContent", () => {
@@ -37,10 +50,14 @@ describe("Component: ActionLink", () => {
         });
 
         it("renders ActionLinkContent with link text", () => {
-            const wrapper = shallow(<ActionLinkContent linkText="Link text" />);
 
-            expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains("Link text")).toEqual(true);
+            render(<ActionLinkContent linkText="Link text"/>);
+
+            expect(screen.getByText("Link text")).toBeTruthy();
+
+            const actionLinkContentElmt = renderer.create(<ActionLinkContent linkText="Link text" />).toJSON();
+
+            expect(actionLinkContentElmt).toMatchSnapshot();
         });
 
         it("renders ActionLinkContent with badge if badge is provided", () => {
@@ -48,31 +65,41 @@ describe("Component: ActionLink", () => {
                 type: "badge-default",
                 text: "Badge"
             };
-            const wrapper = shallow(<ActionLinkContent linkText="Link text" badge={mockBadge} />);
 
-            expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<span className="badge badge-default" >Badge</span>)).toEqual(true);
+            render(<ActionLinkContent linkText="Link text" badge={mockBadge}/>);
+
+            expect(screen.getByText("Badge")).toHaveClass("badge badge-default");
+
+            const actionLinkContentElmt = renderer.create(<ActionLinkContent linkText="Link text" badge={mockBadge} />).toJSON();
+
+            expect(actionLinkContentElmt).toMatchSnapshot();
         });
 
         it("renders ActionLinkContent without badge if badge is not provided", () => {
-            const wrapper = shallow(<ActionLinkContent linkText="Link text" />);
+            render(<ActionLinkContent linkText="Link text" />);
 
-            expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<span className="badge badge-default" >Badge</span>)).toEqual(false);
+            expect(screen.queryByText("Badge")).toBeFalsy();
+
+            const actionLinkContentElmt = renderer.create(<ActionLinkContent linkText="Link text" />).toJSON();
+
+            expect(actionLinkContentElmt).toMatchSnapshot();
         });
 
         it("renders ActionLinkContent without smalltext when not provided", () => {
-            const wrapper = shallow(<ActionLinkContent linkText="Link text" />);
+            const { container } = render(<ActionLinkContent linkText="Link text" />);
 
-            expect(wrapper).toMatchSnapshot();
-            expect(wrapper.contains(<span className="small-text">Small text</span>)).toEqual(false);
+            expect(container.getElementsByClassName("small-text").length).toBeFalsy();
         });
 
         it("renders ActionLinkContent with smalltext on multiline when multiline and smalltext is provided", () => {
-            const wrapper = shallow(<ActionLinkContent linkText="Link text" smallText="Small text" multiline={true} />);
+            const { container } = render(<ActionLinkContent linkText="Link text" smallText="Small text" multiline={true} />);
 
-            expect(wrapper).toMatchSnapshot();
-            expect(wrapper.html()).toContain("<span class=\"action-link-multiline\">");
+            expect(container.getElementsByClassName("action-link-multiline").length).toBeTruthy();
+            expect(screen.getByText("Small text")).toBeTruthy();
+
+            const actionLinkContentElmt = renderer.create(<ActionLinkContent linkText="Link text" smallText="Small text" multiline={true} />).toJSON();
+
+            expect(actionLinkContentElmt).toMatchSnapshot();
         });
     });
 });

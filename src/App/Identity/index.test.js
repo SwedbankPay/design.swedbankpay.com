@@ -1,5 +1,6 @@
 import React from "react";
-import { shallow } from "enzyme";
+import renderer from "react-test-renderer";
+import { BrowserRouter } from "react-router-dom";
 
 import Core from "./index";
 
@@ -9,8 +10,10 @@ describe("Core: index", () => {
     });
 
     it("renders", () => {
-        const wrapper = shallow(<Core />);
+        const core = renderer.create(<BrowserRouter>
+            <Core />
+        </BrowserRouter>);
 
-        expect(wrapper).toMatchSnapshot();
+        expect(core.toJSON()).toMatchSnapshot();
     });
 });

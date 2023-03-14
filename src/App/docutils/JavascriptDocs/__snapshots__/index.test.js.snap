@@ -1,173 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Utilities: JavascriptDocs CloseDocs renders 1`] = `
-<Fragment>
-  <JavascriptDocElement
-    code={
-      <CodeTags
-        code="dg.test.close(<test-id>)"
-        params={
-          Array [
-            "<test-id>",
-          ]
-        }
-        type="secondary"
-      />
-    }
-    description={
-      <React.Fragment>
-        Closes the given 
-        test
-      </React.Fragment>
-    }
-  />
-</Fragment>
+<li>
+  <div>
+    <h3
+      scope="row"
+    >
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        dg.test.close(&lt;test-id&gt;)
+      </code>
+    </h3>
+    <p
+      className="javascript-doc-element-description"
+    >
+      Closes the given 
+      test
+    </p>
+  </div>
+</li>
 `;
 
 exports[`Utilities: JavascriptDocs OpenDocs renders 1`] = `
-<Fragment>
-  <JavascriptDocElement
-    code={
-      <CodeTags
-        code="dg.test.open(<test-id>)"
-        params={
-          Array [
-            "<test-id>",
-          ]
-        }
-        type="secondary"
-      />
-    }
-    description={
-      <React.Fragment>
-        Opens the given 
-        test
-      </React.Fragment>
-    }
-  />
-</Fragment>
-`;
-
-exports[`Utilities: JavascriptDocs renders init and close methods 1`] = `
-<Fragment>
-  <ul
-    className="item-list"
-  >
-    <JavascriptDocElement
-      code={
-        <CodeTags
-          code="dg.test.init()"
-          type="secondary"
-        />
-      }
-      description={
-        <React.Fragment>
-          <ForwardRef(Link)
-            to="/get-started/for-developers"
-          >
-            Initializes
-          </ForwardRef(Link)>
-           
-          test
-        </React.Fragment>
-      }
-    />
-    <CloseDocs
-      componentName="test"
-    />
-  </ul>
-</Fragment>
-`;
-
-exports[`Utilities: JavascriptDocs renders init and open methods 1`] = `
-<Fragment>
-  <ul
-    className="item-list"
-  >
-    <JavascriptDocElement
-      code={
-        <CodeTags
-          code="dg.test.init()"
-          type="secondary"
-        />
-      }
-      description={
-        <React.Fragment>
-          <ForwardRef(Link)
-            to="/get-started/for-developers"
-          >
-            Initializes
-          </ForwardRef(Link)>
-           
-          test
-        </React.Fragment>
-      }
-    />
-    <OpenDocs
-      componentName="test"
-    />
-  </ul>
-</Fragment>
-`;
-
-exports[`Utilities: JavascriptDocs renders init, open and close methods 1`] = `
-<Fragment>
-  <ul
-    className="item-list"
-  >
-    <JavascriptDocElement
-      code={
-        <CodeTags
-          code="dg.test.init()"
-          type="secondary"
-        />
-      }
-      description={
-        <React.Fragment>
-          <ForwardRef(Link)
-            to="/get-started/for-developers"
-          >
-            Initializes
-          </ForwardRef(Link)>
-           
-          test
-        </React.Fragment>
-      }
-    />
-    <OpenDocs
-      componentName="test"
-    />
-    <CloseDocs
-      componentName="test"
-    />
-  </ul>
-</Fragment>
-`;
-
-exports[`Utilities: JavascriptDocs renders only init method 1`] = `
-<Fragment>
-  <ul
-    className="item-list"
-  >
-    <JavascriptDocElement
-      code={
-        <CodeTags
-          code="dg.test.init()"
-          type="secondary"
-        />
-      }
-      description={
-        <React.Fragment>
-          <ForwardRef(Link)
-            to="/get-started/for-developers"
-          >
-            Initializes
-          </ForwardRef(Link)>
-           
-          test
-        </React.Fragment>
-      }
-    />
-  </ul>
-</Fragment>
+<li>
+  <div>
+    <h3
+      scope="row"
+    >
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        dg.test.open(&lt;test-id&gt;)
+      </code>
+    </h3>
+    <p
+      className="javascript-doc-element-description"
+    >
+      Opens the given 
+      test
+    </p>
+  </div>
+</li>
 `;

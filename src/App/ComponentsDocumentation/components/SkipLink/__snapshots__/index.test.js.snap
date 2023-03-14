@@ -12,10 +12,11 @@ exports[`Documentation: SkipLink DeveloperDocumentation renders 1`] = `
   </p>
   <p>
     Remember to include the correct 
-    <CodeTags
-      code="href"
-      type="primary"
-    />
+    <code
+      className="code-tags code-tags-primary"
+    >
+      href
+    </code>
      path to your skip link.
   </p>
 </section>
