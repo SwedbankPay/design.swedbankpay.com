@@ -24,7 +24,7 @@ const Alert = ({ id, type, icon, close, text, className }) => {
 
 Alert.propTypes = {
     id: PropTypes.string,
-    type: PropTypes.oneOf(["success", "warning", "danger", "informative", "test"]).isRequired,
+    type: PropTypes.oneOf(["success", "warning", "danger", "informative"]).isRequired,
     icon: PropTypes.string,
     close: PropTypes.bool,
     text: PropTypes.object,
