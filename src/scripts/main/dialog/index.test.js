@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import dialog from "./index";
 
@@ -7,6 +7,9 @@ describe("scripts: dialog", () => {
     const div = document.createElement("div");
 
     document.body.appendChild(div);
+
+    const container = document.getElementById("div");
+    const root = createRoot(container);
 
     const Dialog = ({ id, btnId }) => {
         btnId = btnId ? btnId : id;
@@ -39,7 +42,7 @@ describe("scripts: dialog", () => {
     });
 
     afterEach(() => {
-        ReactDOM.unmountComponentAtNode(div);
+        root.unmount();
     });
 
     it("is defined", () => {
@@ -53,7 +56,7 @@ describe("scripts: dialog", () => {
         });
 
         it("returns a single object when one ID is passed", () => {
-            ReactDOM.render(<Dialog id="demo-dialog" />, div);
+            root.render(<Dialog id="demo-dialog" />, div);
 
             const renderedDialog = document.querySelector(".dialog");
 
@@ -66,7 +69,7 @@ describe("scripts: dialog", () => {
         });
 
         it("returns an array of objects when more than one dialog is initialized", () => {
-            ReactDOM.render(
+            root.render(
                 <>
                     <Dialog />
                     <Dialog />
@@ -100,7 +103,7 @@ describe("scripts: dialog", () => {
     });
 
     it("button with attribute 'data-dialog-open' pointing to the correct id opens corresponding dialog", () => {
-        ReactDOM.render(<Dialog id="demo-dialog" />, div);
+        root.render(<Dialog id="demo-dialog" />, div);
 
         const openBtn = document.querySelector("[data-dialog-open]");
 
@@ -112,7 +115,7 @@ describe("scripts: dialog", () => {
     });
 
     it("button with attribute 'data-dialog-close' pointing to the correct id closes corresponding dialog", () => {
-        ReactDOM.render(<Dialog id="demo-dialog" open />, div);
+        root.render(<Dialog id="demo-dialog" open />, div);
 
         const closeBtn = document.querySelector("[data-dialog-close]");
 
@@ -123,7 +126,7 @@ describe("scripts: dialog", () => {
     });
 
     it("closes dialog when clicking the close icon", () => {
-        ReactDOM.render(<Dialog id="demo-dialog" open />, div);
+        root.render(<Dialog id="demo-dialog" open />, div);
 
         const renderedDialog = document.querySelector(".dialog");
         const closeIcon = renderedDialog.querySelector(".dialog-close");
@@ -136,19 +139,19 @@ describe("scripts: dialog", () => {
     });
 
     it("sets focus on the last focusable element when dialog is opened", () => {
-        ReactDOM.render(<Dialog id="dia-id"/>, div);
+        root.render(<Dialog id="dia-id"/>, div);
 
         const delBtn = document.querySelector(".dialog").querySelector(".btn-primary");
 
         dialog.init();
         dialog.open("dia-id");
 
-        expect(document.activeElement).toEqual(delBtn);
+        expect(delBtn).toHaveFocus();
     });
 
     // It is not possible to trigger a focus change with keyboardevents, this is due to some security issues with JS [AW].
     it("changes focus from the last focusable element to the first focusable element when focus change is induced", () => {
-        ReactDOM.render(<Dialog id="dia-id"/>, div);
+        root.render(<Dialog id="dia-id"/>, div);
 
         const dialogElem = document.querySelector(".dialog");
         const ev = new KeyboardEvent("keydown", { key: "Tab" });
@@ -158,11 +161,11 @@ describe("scripts: dialog", () => {
         diaObj.open();
         dialogElem.dispatchEvent(ev);
 
-        expect(document.activeElement).toEqual(diaObj.firstTabStop);
+        expect(diaObj.firstTabStop).toHaveFocus();
     });
 
     it("changes focus from the first focusable element to the last focusable element when focus change is induced", () => {
-        ReactDOM.render(<Dialog id="dia-id"/>, div);
+        root.render(<Dialog id="dia-id"/>, div);
 
         const dialogElem = document.querySelector(".dialog");
         const sEv = new KeyboardEvent("keydown", {
@@ -176,11 +179,11 @@ describe("scripts: dialog", () => {
         dialogElem.dispatchEvent(ev);
         dialogElem.dispatchEvent(sEv);
 
-        expect(document.activeElement).toEqual(diaObj.lastTabStop);
+        expect(diaObj.lastTabStop).toHaveFocus();
     });
 
     it("closes the dialog when escape button is pressed", () => {
-        ReactDOM.render(<Dialog id="dialog-id" />, div);
+        root.render(<Dialog id="dialog-id" />, div);
 
         const dialogElement = document.querySelector(".dialog");
         const escapeEvent = new KeyboardEvent("keydown", { key: "Escape" });
@@ -194,7 +197,7 @@ describe("scripts: dialog", () => {
 
     describe("dialog.open", () => {
         it("opens dialog when calling dialog.open", () => {
-            ReactDOM.render(<Dialog id="demo-dialog" />, div);
+            root.render(<Dialog id="demo-dialog" />, div);
 
             expect(document.body.classList).not.toContain("dialog-open");
 
@@ -208,7 +211,7 @@ describe("scripts: dialog", () => {
 
         it("does not open dialog when calling dialog.open with wrong id and prints warn to console", () => {
             console.warn = jest.fn();
-            ReactDOM.render(<Dialog id="demo-dialog" />, div);
+            root.render(<Dialog id="demo-dialog" />, div);
 
             dialog.init();
             expect(document.body.classList).not.toContain("dialog-open");
@@ -223,7 +226,7 @@ describe("scripts: dialog", () => {
 
     describe("dialog.close", () => {
         it("closes dialog when calling dialog.close", () => {
-            ReactDOM.render(<Dialog id="demo-dialog" open />, div);
+            root.render(<Dialog id="demo-dialog" open />, div);
 
             dialog.init();
 
@@ -234,7 +237,7 @@ describe("scripts: dialog", () => {
 
         it("does not close dialog when calling dialog.close with wrong id and prints warn to console", () => {
             console.warn = jest.fn();
-            ReactDOM.render(<Dialog id="demo-dialog" open />, div);
+            root.render(<Dialog id="demo-dialog" open />, div);
 
             dialog.init();
 

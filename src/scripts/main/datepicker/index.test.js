@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import datepicker from "./index";
 import Datepicker from "@components/FormComponents/Datepicker";
@@ -14,8 +14,11 @@ describe("scripts: datepicker", () => {
 
     document.body.appendChild(div);
 
+    const container = document.getElementById("div");
+    const root = createRoot(container);
+
     beforeEach(() => {
-        ReactDOM.unmountComponentAtNode(div);
+        root.unmount();
     });
 
     it("is defined", () => {
@@ -29,7 +32,7 @@ describe("scripts: datepicker", () => {
         });
 
         it("does not init if no datepickers exist", () => {
-            ReactDOM.render(<p>No datepickers here!</p>, div);
+            root.render(<p>No datepickers here!</p>, div);
 
             const datePickerSpy = jest.spyOn(datepicker, "init");
 
@@ -38,7 +41,7 @@ describe("scripts: datepicker", () => {
 
         it("inits the datepicker matching the passed ID", () => {
 
-            ReactDOM.render(<Datepicker id="foo" />, div);
+            root.render(<Datepicker id="foo" />, div);
 
             const returnVal = datepicker.init("foo");
 
@@ -46,7 +49,7 @@ describe("scripts: datepicker", () => {
         });
 
         it("returns an array of objects if more than one datepicker is initialized", () => {
-            ReactDOM.render(
+            root.render(
                 <>
                     <Datepicker />
                     <Datepicker />
@@ -71,7 +74,7 @@ describe("scripts: datepicker", () => {
         });
 
         it("destroys existing flatpickr instances on init()", () => {
-            ReactDOM.render(<Datepicker />, div);
+            root.render(<Datepicker />, div);
 
             datepicker.init();
 
@@ -83,7 +86,7 @@ describe("scripts: datepicker", () => {
         });
 
         it("destroys existing flatpickr instances on init(ID) if the given ID is already initialized", () => {
-            ReactDOM.render(
+            root.render(
                 <>
                     <Datepicker id="foo" />
                     <Datepicker id="bar" />
@@ -100,7 +103,7 @@ describe("scripts: datepicker", () => {
         });
 
         it("doesn't destroy existing flatpickr instances on init(ID) if the given ID is invalid", () => {
-            ReactDOM.render(<Datepicker id="test-1" />, div);
+            root.render(<Datepicker id="test-1" />, div);
 
             datepicker.init();
 
@@ -116,7 +119,7 @@ describe("scripts: datepicker", () => {
         console.error = jest.fn(); // To prevent error message from using non-enum for format
         console.warn = jest.fn();
 
-        ReactDOM.render(<Datepicker format="test" />, div);
+        root.render(<Datepicker format="test" />, div);
 
         datepicker.init();
         expect(console.warn).toHaveBeenCalled();
@@ -125,7 +128,7 @@ describe("scripts: datepicker", () => {
     it("defaults to iso8601 when no format is specified", () => {
         console.error = jest.fn(); // To prevent error message from using non-enum for format
 
-        ReactDOM.render(<Datepicker id="test-datepicker" />, div);
+        root.render(<Datepicker id="test-datepicker" />, div);
 
         const returnVal = datepicker.init("test-datepicker");
 
@@ -135,7 +138,7 @@ describe("scripts: datepicker", () => {
     it("sets an alternate format if datepicker-fulldate is true", () => {
         console.error = jest.fn(); // To prevent error message from using non-enum for format
 
-        ReactDOM.render(<Datepicker id="test-datepicker" fulldate="true" />, div);
+        root.render(<Datepicker id="test-datepicker" fulldate="true" />, div);
 
         const returnVal = datepicker.init("test-datepicker");
 
@@ -145,7 +148,7 @@ describe("scripts: datepicker", () => {
     it("includes time when specified", () => {
         console.error = jest.fn(); // To prevent error message from using non-enum for format
 
-        ReactDOM.render(<Datepicker id="test-datepicker" time />, div);
+        root.render(<Datepicker id="test-datepicker" time />, div);
 
         const returnVal = datepicker.init("test-datepicker");
 
@@ -153,7 +156,7 @@ describe("scripts: datepicker", () => {
     });
 
     it("sends flatpickr correct options for dateformat when specified as nb", () => {
-        ReactDOM.render(<Datepicker id="test-datepicker" format="nb" />, div);
+        root.render(<Datepicker id="test-datepicker" format="nb" />, div);
 
         const returnVal = datepicker.init("test-datepicker");
 
@@ -161,7 +164,7 @@ describe("scripts: datepicker", () => {
     });
 
     it("sends flatpickr correct options for dateformat when specified as sv", () => {
-        ReactDOM.render(<Datepicker id="test-datepicker" format="sv" />, div);
+        root.render(<Datepicker id="test-datepicker" format="sv" />, div);
 
         const returnVal = datepicker.init("test-datepicker");
 
@@ -169,7 +172,7 @@ describe("scripts: datepicker", () => {
     });
 
     it("sends flatpickr correct options for dateformat when specified as da", () => {
-        ReactDOM.render(<Datepicker id="test-datepicker" format="da" />, div);
+        root.render(<Datepicker id="test-datepicker" format="da" />, div);
 
         const returnVal = datepicker.init("test-datepicker");
 
@@ -177,7 +180,7 @@ describe("scripts: datepicker", () => {
     });
 
     it("sends flatpickr correct options for dateformat when specified as fi", () => {
-        ReactDOM.render(<Datepicker id="test-datepicker" format="fi" />, div);
+        root.render(<Datepicker id="test-datepicker" format="fi" />, div);
 
         const returnVal = datepicker.init("test-datepicker");
 
@@ -185,7 +188,7 @@ describe("scripts: datepicker", () => {
     });
 
     it("sends flatpickr correct options for dateformat when specified as en", () => {
-        ReactDOM.render(<Datepicker id="test-datepicker" format="en" />, div);
+        root.render(<Datepicker id="test-datepicker" format="en" />, div);
 
         const returnVal = datepicker.init("test-datepicker");
 
@@ -193,7 +196,7 @@ describe("scripts: datepicker", () => {
     });
 
     it("sends flatpickr correct options for dateformat when specified as iso8601", () => {
-        ReactDOM.render(<Datepicker id="test-datepicker" format="iso8601" />, div);
+        root.render(<Datepicker id="test-datepicker" format="iso8601" />, div);
 
         const returnVal = datepicker.init("test-datepicker");
 
@@ -201,7 +204,7 @@ describe("scripts: datepicker", () => {
     });
 
     it("sends flatpickr correct options for dateformat when specified as nb with attribute min", () => {
-        ReactDOM.render(<Datepicker id="test-datepicker" format="nb" min="test" />, div);
+        root.render(<Datepicker id="test-datepicker" format="nb" min="test" />, div);
 
         const returnVal = datepicker.init("test-datepicker");
 
@@ -209,7 +212,7 @@ describe("scripts: datepicker", () => {
     });
 
     it("sends flatpickr correct options for dateformat when specified as nb with attribute max", () => {
-        ReactDOM.render(<Datepicker id="test-datepicker" format="nb" max="test" />, div);
+        root.render(<Datepicker id="test-datepicker" format="nb" max="test" />, div);
 
         const returnVal = datepicker.init("test-datepicker");
 
@@ -217,7 +220,7 @@ describe("scripts: datepicker", () => {
     });
 
     it("sends flatpickr correct options for dateformat when specified as nb with attribute datepicker-value", () => {
-        ReactDOM.render(<Datepicker id="test-datepicker" format="nb" value="test" />, div);
+        root.render(<Datepicker id="test-datepicker" format="nb" value="test" />, div);
 
         const returnVal = datepicker.init("test-datepicker");
 
@@ -225,7 +228,7 @@ describe("scripts: datepicker", () => {
     });
 
     it("sends flatpickr correct options for dateformat when specified as nb with attribute months", () => {
-        ReactDOM.render(<Datepicker id="test-datepicker" format="nb" months="3" />, div);
+        root.render(<Datepicker id="test-datepicker" format="nb" months="3" />, div);
 
         const returnVal = datepicker.init("test-datepicker");
 
@@ -242,7 +245,7 @@ describe("scripts: datepicker", () => {
         });
 
         it("opens the datepicker matching the passed ID", () => {
-            ReactDOM.render(<Datepicker id="demo-datepicker" />, div);
+            root.render(<Datepicker id="demo-datepicker" />, div);
             datepicker.init();
 
             const renderedDatepicker = document.querySelector(".flatpickr-input");
@@ -266,7 +269,7 @@ describe("scripts: datepicker", () => {
         });
 
         it("closes the datepicker matching the passed ID", () => {
-            ReactDOM.render(<Datepicker id="demo-datepicker" />, div);
+            root.render(<Datepicker id="demo-datepicker" />, div);
             datepicker.init();
 
             const renderedDatepicker = document.querySelector(".flatpickr-input");

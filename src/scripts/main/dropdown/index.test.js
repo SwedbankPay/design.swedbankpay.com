@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import dropdown from "./index";
 
@@ -7,6 +7,9 @@ describe("Scripts: Dropdown", () => {
     const div = document.createElement("div");
 
     document.body.appendChild(div);
+
+    const container = document.getElementById("div");
+    const root = createRoot(container);
 
     const Dropdown = ({ id, active }) => (
         <div id={id} className={`dropdown anchor-top-left${active ? " active" : ""}`}>
@@ -24,7 +27,7 @@ describe("Scripts: Dropdown", () => {
     );
 
     afterEach(() => {
-        ReactDOM.unmountComponentAtNode(div);
+        root.unmount(div);
     });
 
     it("is defined", () => {
@@ -46,7 +49,7 @@ describe("Scripts: Dropdown", () => {
     });
 
     it("button click gives dropdown-div class of active", () => {
-        ReactDOM.render(<Dropdown id="foo"/>, div);
+        root.render(<Dropdown id="foo"/>, div);
 
         const container = document.querySelector(".dropdown");
 
@@ -63,7 +66,7 @@ describe("Scripts: Dropdown", () => {
     });
 
     it("button click removes dropdown-div class of active", () => {
-        ReactDOM.render(<Dropdown id="foo" active/>, div);
+        root.render(<Dropdown id="foo" active/>, div);
 
         const container = document.querySelector(".dropdown");
 

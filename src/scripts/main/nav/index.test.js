@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import nav from "./index";
 
@@ -8,6 +8,9 @@ describe("scripts: nav", () => {
     const submenuItems = ["Email", "Information", "Other things"];
 
     document.body.appendChild(div);
+
+    const container = document.getElementById("div");
+    const root = createRoot(container);
 
     const Nav = ({ subItems, open, subopen, id }) => (
         <nav id={id} className={`nav ${open ? "nav-open" : null}`}>
@@ -104,7 +107,7 @@ describe("scripts: nav", () => {
         </nav>
     );
 
-    beforeEach(() => ReactDOM.unmountComponentAtNode(div));
+    beforeEach(() => root.unmount());
 
     it("is defined", () => {
         expect(nav).toBeTruthy();
@@ -116,7 +119,7 @@ describe("scripts: nav", () => {
         });
 
         it("returns a single object when one ID is passed", () => {
-            ReactDOM.render(<Nav id="demo-nav" />, div);
+            root.render(<Nav id="demo-nav" />, div);
 
             const renderedNav = document.querySelector(".nav");
 
@@ -129,7 +132,7 @@ describe("scripts: nav", () => {
         });
 
         it("returns an array of objects when more than one nav is initialized", () => {
-            ReactDOM.render(
+            root.render(
                 <>
                     <Nav />
                     <Nav />
@@ -163,7 +166,7 @@ describe("scripts: nav", () => {
     });
 
     it("does not render a menu icon when there are less than four list elements", () => {
-        ReactDOM.render(<Navsm />, div);
+        root.render(<Navsm />, div);
         nav.init();
 
         const renderedNav = document.querySelector(".nav");
@@ -174,7 +177,7 @@ describe("scripts: nav", () => {
     });
 
     it("renders a menu icon when there are less than four list elements but submenus exist", () => {
-        ReactDOM.render(<Navsm subItems = {submenuItems} />, div);
+        root.render(<Navsm subItems = {submenuItems} />, div);
         nav.init();
 
         const renderedNav = document.querySelector(".nav");
@@ -185,7 +188,7 @@ describe("scripts: nav", () => {
     });
 
     it("renders a menu icon when there are more than four list elements", () => {
-        ReactDOM.render(<Nav />, div);
+        root.render(<Nav />, div);
         nav.init();
 
         const renderedNav = document.querySelector(".nav");
@@ -196,7 +199,7 @@ describe("scripts: nav", () => {
     });
 
     it("opens when clicking the menu icon", () => {
-        ReactDOM.render(<Nav />, div);
+        root.render(<Nav />, div);
         nav.init();
 
         const renderedNav = document.querySelector(".nav");
@@ -212,7 +215,7 @@ describe("scripts: nav", () => {
     });
 
     it("closes when clicking the menu icon while open", () => {
-        ReactDOM.render(<Nav open />, div);
+        root.render(<Nav open />, div);
         nav.init();
 
         const renderedNav = document.querySelector(".nav");
@@ -227,7 +230,7 @@ describe("scripts: nav", () => {
     });
 
     it("closes when clicking outside nav", () => {
-        ReactDOM.render(<Nav open />, div);
+        root.render(<Nav open />, div);
         nav.init();
 
         const renderedNav = document.querySelector(".nav");
@@ -241,7 +244,7 @@ describe("scripts: nav", () => {
     });
 
     it("closes nav on resize", () => {
-        ReactDOM.render(<Nav id="nav-test" subItems = {submenuItems} />, div);
+        root.render(<Nav id="nav-test" subItems = {submenuItems} />, div);
         nav.init();
         nav.open("nav-test");
 
@@ -255,14 +258,14 @@ describe("scripts: nav", () => {
     });
 
     it("creates a copy of the submenu anchor", () => {
-        ReactDOM.render(<Nav subItems = {submenuItems} />, div);
+        root.render(<Nav subItems = {submenuItems} />, div);
         nav.init();
 
         expect(document.querySelector(".submenu-toggle")).toBeTruthy();
     });
 
     it("opens a submenu when a submenu icon is clicked", () => {
-        ReactDOM.render(<Nav subItems = {submenuItems} />, div);
+        root.render(<Nav subItems = {submenuItems} />, div);
         nav.init();
 
         const renderedNav = document.querySelector(".nav");
@@ -280,7 +283,7 @@ describe("scripts: nav", () => {
     });
 
     it("closes a submenu when a submenu icon is clicked", () => {
-        ReactDOM.render(<Nav subItems = {submenuItems} subopen />, div);
+        root.render(<Nav subItems = {submenuItems} subopen />, div);
         nav.init();
 
         const renderedNav = document.querySelector(".nav");
@@ -298,7 +301,7 @@ describe("scripts: nav", () => {
     });
 
     it("closes a submenu when clicking outside the submenu", () => {
-        ReactDOM.render(<Nav subItems = {submenuItems} subopen />, div);
+        root.render(<Nav subItems = {submenuItems} subopen />, div);
         nav.init();
 
         const renderedNav = document.querySelector(".nav");
@@ -314,7 +317,7 @@ describe("scripts: nav", () => {
     });
 
     it("closes submenu on resize", () => {
-        ReactDOM.render(<Nav subItems = {submenuItems} />, div);
+        root.render(<Nav subItems = {submenuItems} />, div);
         nav.init();
 
         const renderedNav = document.querySelector(".nav");
@@ -337,7 +340,7 @@ describe("scripts: nav", () => {
 
     describe("nav.open", () => {
         it("opens nav when calling nav.open", () => {
-            ReactDOM.render(<Nav id="demo-nav" />, div);
+            root.render(<Nav id="demo-nav" />, div);
             nav.init();
 
             const renderedNav = document.querySelector(".nav");
@@ -351,7 +354,7 @@ describe("scripts: nav", () => {
 
         it("does not open nav when calling nav.open with wrong id and prints error to console", () => {
             console.error = jest.fn();
-            ReactDOM.render(<Nav id="demo-nav" />, div);
+            root.render(<Nav id="demo-nav" />, div);
             nav.init();
 
             const renderedNav = document.querySelector(".nav");
@@ -367,7 +370,7 @@ describe("scripts: nav", () => {
 
     describe("nav.close", () => {
         it("closes nav when calling nav.close", () => {
-            ReactDOM.render(<Nav id="demo-nav" open />, div);
+            root.render(<Nav id="demo-nav" open />, div);
 
             const renderedNav = document.querySelector(".nav");
 
@@ -381,7 +384,7 @@ describe("scripts: nav", () => {
 
         it("does not close nav when calling nav.close with wrong id and prints error to console", () => {
             console.error = jest.fn();
-            ReactDOM.render(<Nav id="demo-nav" open />, div);
+            root.render(<Nav id="demo-nav" open />, div);
             nav.init();
 
             const renderedNav = document.querySelector(".nav");
