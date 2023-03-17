@@ -1,5 +1,6 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
+import { render } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import Chart from "chart.js";
 
 import chart, { _colorPool } from "./index";
@@ -14,7 +15,6 @@ jest.mock("./line");
 
 describe("scripts - dashboard: chart index", () => {
     const div = document.createElement("div");
-    const root = createRoot(div);
 
     // Suppresses console errors regarding canvas and 2d context in jsdom
     console.error = jest.fn();
@@ -36,31 +36,26 @@ describe("scripts - dashboard: chart index", () => {
     it("warns about element with id not being of type canvas", () => {
         console.warn = jest.fn();
 
-        root.render(<div id="test" />);
+        render(<div id="test" />);
         chart("test", {});
         expect(console.warn).toHaveBeenCalledWith("Chart: Element with id \"test\" is not of type canvas.");
-
-        createRoot.unmount(div);
     });
 
     it("warns about chart type not being specified", () => {
         console.warn = jest.fn();
 
-        root.render(<canvas id="test" />);
+        render(<canvas id="test" />);
         chart("test", {});
         expect(console.warn).toHaveBeenCalledWith("Chart: You need to specify a chart type.");
 
-        createRoot.unmount(div);
     });
 
     it("warns about options.data not being provided", () => {
         console.warn = jest.fn();
 
-        root.render(<canvas id="test" />);
+        render(<canvas id="test" />);
         chart("test", { type: "bar" });
         expect(console.warn).toHaveBeenCalledWith("Chart: You need to provide options.data.");
-
-        createRoot.unmount(div);
     });
 
     it("warns about chart type not supported", () => {
@@ -73,11 +68,9 @@ describe("scripts - dashboard: chart index", () => {
 
         console.warn = jest.fn();
 
-        root.render(<canvas id="test" />);
+        render(<canvas id="test" />);
         chart("test", mockData);
         expect(console.warn).toHaveBeenCalledWith("Chart: Chart type \"test\" is not supported.");
-
-        createRoot.unmount(div);
     });
 
     it("runs initBarChart when type is 'bar'", () => {
@@ -89,14 +82,12 @@ describe("scripts - dashboard: chart index", () => {
             }
         };
 
-        root.render(<canvas id="test" />);
+        render(<canvas id="test" />);
         initBarChart.mockReturnValueOnce("test");
         chart("test", mockData);
 
         expect(initBarChart).toHaveBeenCalledWith(mockData, _colorPool);
         expect(Chart).toHaveBeenCalled();
-
-        createRoot.unmount(div);
     });
 
     it("runs initBarChart when type is 'horizontalBar'", () => {
@@ -108,14 +99,12 @@ describe("scripts - dashboard: chart index", () => {
             }
         };
 
-        root.render(<canvas id="test" />);
+        render(<canvas id="test" />);
         initBarChart.mockReturnValueOnce("test");
         chart("test", mockData);
 
         expect(initBarChart).toHaveBeenCalledWith(mockData, _colorPool);
         expect(Chart).toHaveBeenCalled();
-
-        createRoot.unmount(div);
     });
 
     it("runs initPieChart when type is 'pie'", () => {
@@ -127,14 +116,12 @@ describe("scripts - dashboard: chart index", () => {
             }
         };
 
-        root.render(<canvas id="test" />);
+        render(<canvas id="test" />);
         initPieChart.mockReturnValueOnce("test");
         chart("test", mockData);
 
         expect(initPieChart).toHaveBeenCalledWith(mockData, _colorPool);
         expect(Chart).toHaveBeenCalled();
-
-        createRoot.unmount(div);
     });
 
     it("runs initPieChart when type is 'doughnut'", () => {
@@ -146,14 +133,12 @@ describe("scripts - dashboard: chart index", () => {
             }
         };
 
-        root.render(<canvas id="test" />);
+        render(<canvas id="test" />);
         initPieChart.mockReturnValueOnce("test");
         chart("test", mockData);
 
         expect(initPieChart).toHaveBeenCalledWith(mockData, _colorPool);
         expect(Chart).toHaveBeenCalled();
-
-        createRoot.unmount(div);
     });
 
     it("runs initLineChart when type is 'line'", () => {
@@ -165,13 +150,11 @@ describe("scripts - dashboard: chart index", () => {
             }
         };
 
-        root.render(<canvas id="test" />);
+        render(<canvas id="test" />);
         initLineChart.mockReturnValueOnce("test");
         chart("test", mockData);
 
         expect(initLineChart).toHaveBeenCalledWith(mockData, _colorPool);
         expect(Chart).toHaveBeenCalled();
-
-        createRoot.unmount(div);
     });
 });
