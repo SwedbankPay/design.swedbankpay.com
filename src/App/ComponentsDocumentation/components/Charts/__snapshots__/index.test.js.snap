@@ -3024,7 +3024,6 @@ exports[`Dashboard: Charts renders 1`] = `
               >
                 <pre>
                   
-                  
 
                                   dg.chart("simple-line-chart", {
                   
@@ -3239,7 +3238,6 @@ exports[`Dashboard: Charts renders 1`] = `
                 className="code-view-code"
               >
                 <pre>
-                  
                   
 
                                   dg.chart("stepped-dashed-line-chart", {
@@ -3534,7 +3532,6 @@ exports[`Dashboard: Charts renders 1`] = `
               >
                 <pre>
                   
-                  
 
                                   dg.chart("advanced-line-chart", {
                   
@@ -3813,7 +3810,6 @@ exports[`Dashboard: Charts renders 1`] = `
               >
                 <pre>
                   
-                  
 
                                   dg.chart("line-fill-chart", {
                   
@@ -4088,7 +4084,6 @@ exports[`Dashboard: Charts renders 1`] = `
                 className="code-view-code"
               >
                 <pre>
-                  
                   
 
                                   dg.chart("simple-bar-chart", {
@@ -4394,7 +4389,6 @@ exports[`Dashboard: Charts renders 1`] = `
                 className="code-view-code"
               >
                 <pre>
-                  
                   
 
                                   dg.chart("multi-bar-chart", {
@@ -4739,7 +4733,6 @@ exports[`Dashboard: Charts renders 1`] = `
               >
                 <pre>
                   
-                  
 
                                   dg.chart("stacked-multi-bar-chart", {
                   
@@ -5045,7 +5038,6 @@ exports[`Dashboard: Charts renders 1`] = `
               >
                 <pre>
                   
-                  
 
                                   dg.chart("simple-pie-chart", {
                   
@@ -5274,7 +5266,6 @@ exports[`Dashboard: Charts renders 1`] = `
                 className="code-view-code"
               >
                 <pre>
-                  
                   
 
                                   dg.chart("doughnut-chart", {
@@ -5553,7 +5544,6 @@ exports[`Dashboard: Charts renders 1`] = `
                 className="code-view-code"
               >
                 <pre>
-                  
                   
 
                                   dg.chart("mixed-chart", {
@@ -5843,7 +5833,6 @@ exports[`Dashboard: Charts renders 1`] = `
                 className="code-view-code"
               >
                 <pre>
-                  
                   
 
                                   dg.chart("custom-color-pie", {

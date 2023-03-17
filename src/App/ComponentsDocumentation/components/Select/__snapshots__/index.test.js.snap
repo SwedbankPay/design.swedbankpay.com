@@ -39,7 +39,6 @@ exports[`Component: Select ContentGuidelines renders 1`] = `
           Related option
         </option>
         
-        
 	
       </select>
       
@@ -248,7 +247,7 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
                           &lt;select class="form-control" id="dev-doc-example" required&gt;
                   
 
-                              &lt;option selected value="placeholder" disabled hidden&gt;Select option&lt;/option&gt;
+                              &lt;option value="placeholder" disabled hidden selected&gt;Select option&lt;/option&gt;
                   
 
                           &lt;/select&gt;
@@ -391,7 +390,6 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
                       &lt;select class="form-control" disabled id="disabled-state-example"&gt;
                   
 
-                  
                   
 
                       &lt;/select&gt;

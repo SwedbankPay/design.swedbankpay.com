@@ -162,7 +162,7 @@ Array [
                         &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
                 
 
-                        &lt;input type="text" id="simple-datepicker" class="form-control" data-datepicker data-datepicker-allowinput="true" /&gt;
+                        &lt;input id="simple-datepicker" class="form-control" type="text" data-datepicker data-datepicker-allowinput="true" /&gt;
                 
 
                     &lt;/div&gt;
@@ -680,7 +680,7 @@ Array [
                         &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
                 
 
-                        &lt;input type="text" id="nb-datepicker" class="form-control" data-datepicker data-datepicker-format="nb" data-datepicker-value="28.12.1972" /&gt;
+                        &lt;input id="nb-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="nb" data-datepicker-value="28.12.1972" /&gt;
                 
 
                     &lt;/div&gt;
@@ -701,7 +701,7 @@ Array [
                         &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
                 
 
-                        &lt;input type="text" id="sv-datepicker" class="form-control" data-datepicker data-datepicker-format="sv" data-datepicker-value="1972-12-28" /&gt;
+                        &lt;input id="sv-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="sv" data-datepicker-value="1972-12-28" /&gt;
                 
 
                     &lt;/div&gt;
@@ -722,7 +722,7 @@ Array [
                         &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
                 
 
-                        &lt;input type="text" id="da-datepicker" class="form-control" data-datepicker data-datepicker-format="da" data-datepicker-value="28.12.1972" /&gt;
+                        &lt;input id="da-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="da" data-datepicker-value="28.12.1972" /&gt;
                 
 
                     &lt;/div&gt;
@@ -743,7 +743,7 @@ Array [
                         &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
                 
 
-                        &lt;input type="text" id="fi-datepicker" class="form-control" data-datepicker data-datepicker-format="fi" data-datepicker-value="28.12.1972" /&gt;
+                        &lt;input id="fi-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="fi" data-datepicker-value="28.12.1972" /&gt;
                 
 
                     &lt;/div&gt;
@@ -764,7 +764,7 @@ Array [
                         &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
                 
 
-                        &lt;input type="text" id="en-datepicker" class="form-control" data-datepicker data-datepicker-format="en" data-datepicker-value="28/12/1972" /&gt;
+                        &lt;input id="en-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="en" data-datepicker-value="28/12/1972" /&gt;
                 
 
                     &lt;/div&gt;
@@ -785,7 +785,7 @@ Array [
                         &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
                 
 
-                        &lt;input type="text" id="iso8601-datepicker" class="form-control" data-datepicker data-datepicker-format="iso8601" data-datepicker-value="1972-12-28" /&gt;
+                        &lt;input id="iso8601-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="iso8601" data-datepicker-value="1972-12-28" /&gt;
                 
 
                     &lt;/div&gt;
@@ -947,7 +947,7 @@ Array [
                         &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
                 
 
-                        &lt;input type="text" id="date-range-datepicker" class="form-control" data-datepicker data-datepicker-format="nb" data-datepicker-min="10.12.1972" data-datepicker-mode="range" /&gt;
+                        &lt;input id="date-range-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="nb" data-datepicker-min="10.12.1972" data-datepicker-mode="range" /&gt;
                 
 
                     &lt;/div&gt;
@@ -1108,7 +1108,7 @@ Array [
                         &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
                 
 
-                        &lt;input type="text" id="init-value-datepicker" class="form-control" data-datepicker data-datepicker-value="1972-12-28" data-datepicker-fulldate="true" /&gt;
+                        &lt;input id="init-value-datepicker" class="form-control" type="text" data-datepicker data-datepicker-value="1972-12-28" data-datepicker-fulldate="true" /&gt;
                 
 
                     &lt;/div&gt;
@@ -1276,7 +1276,7 @@ Array [
                         &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
                 
 
-                        &lt;input type="text" id="include-time-datepicker" class="form-control" data-datepicker data-datepicker-format="nb" data-datepicker-time="true" /&gt;
+                        &lt;input id="include-time-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="nb" data-datepicker-time="true" /&gt;
                 
 
                     &lt;/div&gt;
@@ -1438,7 +1438,7 @@ Array [
                         &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
                 
 
-                        &lt;input type="text" id="init-value-datepicker" class="form-control" data-datepicker data-datepicker-value="1972-12-28" /&gt;
+                        &lt;input id="init-value-datepicker" class="form-control" type="text" data-datepicker data-datepicker-value="1972-12-28" /&gt;
                 
 
                     &lt;/div&gt;
@@ -1983,7 +1983,7 @@ Array [
                         &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
                 
 
-                        &lt;input type="text" id="multiple-months-datepicker" class="form-control" data-datepicker data-datepicker-months="2" /&gt;
+                        &lt;input id="multiple-months-datepicker" class="form-control" type="text" data-datepicker data-datepicker-months="2" /&gt;
                 
 
                     &lt;/div&gt;
@@ -2151,7 +2151,7 @@ Array [
                         &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
                 
 
-                        &lt;input type="text" id="simple-datepicker" class="form-control" data-datepicker /&gt;
+                        &lt;input id="simple-datepicker" class="form-control" type="text" data-datepicker /&gt;
                 
 
                     &lt;/div&gt;
@@ -2319,7 +2319,7 @@ Array [
                         &lt;span class="input-group-addon "&gt;&lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;event&lt;/i&gt;&lt;/span&gt;
                 
 
-                        &lt;input type="text" id="valid-dates-datepicker" class="form-control" data-datepicker data-datepicker-format="nb" data-datepicker-min="28.12.1972" data-datepicker-max="10.05.2017" data-datepicker-value="28.12.1972" /&gt;
+                        &lt;input id="valid-dates-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="nb" data-datepicker-min="28.12.1972" data-datepicker-max="10.05.2017" data-datepicker-value="28.12.1972" /&gt;
                 
 
                     &lt;/div&gt;

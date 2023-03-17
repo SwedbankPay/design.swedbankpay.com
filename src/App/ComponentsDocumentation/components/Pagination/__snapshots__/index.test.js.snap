@@ -203,12 +203,10 @@ exports[`Documentation: Pagination DeveloperDocumentation renders 1`] = `
                   
 
                   
-                  
 
                   console.log(paginate(10, 5))
                   
 
-                  
                   
 
                   //expected output:
