@@ -1,5 +1,122 @@
 @import "../global.less";
 
+:root {
+    --btn-primary-color: var(--brown-solid);
+    --btn-primary-text-color: var(--text-white);
+    --btn-primary-hover: var(--brown-medium);
+    --btn-primary-disabled: var(--btn-bg-disabled);
+    // btn-secondary
+    --btn-secondary-color: var(--white);
+    --btn-secondary-text-color: var(--text-default);
+    --btn-secondary-border-color: var(--brown-medium);
+    --btn-secondary-hover: var(--brown-light);
+    // btn-tertiary
+    --btn-tertiary-color: var(--gray);
+    --btn-tertiary-text-color: var(--brown-solid);
+    --btn-tertiary-hover: var(--brown-light);
+    --btn-tertiary-disabled: var(--btn-bg-disabled);
+    // Shared button variables
+    --btn-disabled-text: var(--text-disabled);
+    --btn-bg-disabled: rgba(212, 196, 188, 0.3);
+}
+
+.new-btn {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    font-weight: @font-weight-normal;
+    font-family: @brand-headline;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    line-height: 23.72px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    user-select: none;
+    height: 60px;
+    border-radius: var(--border-radius);
+    font-size: 18px;
+    padding: 12px 16px 12px 16px;
+
+    &.btn-cta {
+        height: 72px;
+        font-size: 20px;
+        line-height: 24px;
+        padding: 24px;
+    }
+
+    &.btn-small {
+        height: 48px;
+        font-size: 14px;
+        line-height: 16px;
+        padding: 12px;
+    }
+
+    &.btn-xsmall {
+        height: 38px;
+        font-size: 14px;
+        line-height: 16px;
+        padding: 8px;
+    }
+
+    &.btn-primary {
+        background-color: var(--btn-primary-color);
+        color: var(--btn-primary-text-color);
+
+        &:hover {
+            background-color: var(--btn-primary-hover);
+        }
+    }
+
+    &.btn-secondary {
+        background-color: var(--btn-secondary-color);
+        color: var(--btn-secondary-text-color);
+        border: 1px solid var(--btn-secondary-border-color);
+
+        &:hover {
+            box-shadow: inset 0 0 0 3px var(--btn-secondary-hover);
+            border-color: var(--btn-secondary-hover);
+        }
+    }
+
+    &.btn-tertiary {
+        background-color: var(--btn-tertiary-color);
+        color: var(--btn-tertiary-text-color);
+
+        &:hover {
+            background-color: var(--btn-tertiary-hover);
+        }
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &[active],
+        &:active,
+        &.active {
+            color: var(--btn-disabled-text);
+            outline: none;
+            cursor: not-allowed;
+            box-shadow: none;
+
+            &.btn-secondary {
+                border-color: var(--btn-disabled-text);
+            }
+
+            &.btn-primary,
+            &.btn-tertiary {
+                background-color: var(--btn-bg-disabled);
+            }
+        }
+    }
+}
+
 .button-variant(@color, @background, @hover, @disabled-color, @disabled-bg, @focus-shadow, @active-border-color) {
     color: @color;
     background-color: @background;

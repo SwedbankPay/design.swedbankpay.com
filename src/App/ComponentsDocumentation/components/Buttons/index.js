@@ -324,6 +324,27 @@ const DeveloperDocumentation = () => (
 
 const Buttons = () => (
     <DocContainer>
+        <div className="button-group">
+            <button className="new-btn btn-cta btn-primary">Primary</button>
+            <button className="new-btn btn-primary">Primary</button>
+            <button className="new-btn btn-small btn-primary">Primary</button>
+            <button className="new-btn btn-xsmall btn-primary">Primary</button>
+            <button className="new-btn btn-secondary">Secondary</button>
+            <button className="new-btn btn-tertiary">Tertiary</button>
+            <button className="new-btn btn-primary disabled">Primary</button>
+            <button className="new-btn btn-secondary disabled">Secondary</button>
+            <button className="new-btn btn-tertiary disabled">Tertiary</button>
+            <button className="new-btn btn-cta btn-primary">Primary</button>
+            <button className="new-btn btn-cta btn-secondary">Secondary</button>
+            <button className="new-btn btn-cta btn-tertiary">Tertiary</button>
+            <button className="new-btn btn-small btn-primary">Primary</button>
+            <button className="new-btn btn-small btn-secondary">Secondary</button>
+            <button className="new-btn btn-small btn-tertiary">Tertiary</button>
+            <button className="new-btn btn-xsmall btn-primary">Primary</button>
+            <button className="new-btn btn-xsmall btn-secondary">Secondary</button>
+            <button className="new-btn btn-xsmall btn-tertiary">Tertiary</button>
+
+        </div>
         <p className="lead">
         Buttons communicate actions that users can take. Buttons are typically placed throughout your UI, in places like: Dialogs, Modals, Forms, Cards and Toolbars.
         </p>
