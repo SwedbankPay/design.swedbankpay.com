@@ -33,6 +33,13 @@
         }
     }
 
+    &.btn-large {
+        height: 60px;
+        font-size: 18px;
+        line-height: 23.72px;
+        padding: 12px 16px 12px 16px;
+    }
+
     &.btn-small {
         height: 48px;
         font-size: 14px;
@@ -65,6 +72,11 @@
 
         &:hover {
             background-color: var(--btn-primary-hover);
+        }
+
+        &:active {
+            outline: 3px solid var(--brand-turquoise-light);
+            background-color: var(--btn-primary-color);
         }
 
         &.btn-bank-id {
@@ -102,6 +114,11 @@
             box-shadow: inset 0 0 0 3px var(--btn-secondary-hover);
             border-color: var(--btn-secondary-hover);
         }
+
+        &:active {
+            box-shadow: inset 0 0 0 3px var(--brand-turquoise-light);
+            border-color: var(--brand-turquoise-light);
+        }
     }
 
     &.btn-tertiary {
@@ -110,6 +127,11 @@
 
         &:hover {
             background-color: var(--btn-tertiary-hover);
+        }
+
+        &:active {
+            box-shadow: inset 0 0 0 3px var(--brand-turquoise-light);
+            border-color: var(--brand-turquoise-light);
         }
     }
 
