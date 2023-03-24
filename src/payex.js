@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-dom";
+import { createRoot } from "react-dom/client";
 import { init } from "@sentry/browser";
 import "./scripts/main";
 import App from "./App";
@@ -24,9 +24,10 @@ if (process.env.sentry) {
     });
 }
 
-render(
-    <App />,
-    document.getElementById("designguide")
+const root = createRoot(document.getElementById("designguide"));
+
+root.render(
+    <App />
 );
 
 if (module.hot) {

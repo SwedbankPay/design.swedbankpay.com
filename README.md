@@ -159,7 +159,7 @@ Before merging to master to create a release, make sure you follow these steps:
 - Create a release branch where the name is the new tag. (`release/x.x.x`)
 - Update the version in `~/package.json`.
 - Make sure the `RELEASE_NOTES.md` is correct (date and version) and only contains- changes for the current release.
-- Update the changelog constants on the Home page.
+- Update the changelog constants on the Home page ( "src\App\Home\constants.js" ).
 - Update statusBadges in routes.
 - Commit the changes and create a pull request from `release/x.x.x` branch to `master` and `develop`.
 - When approved, rename the merge commit to `Release x.x.x` and merge.

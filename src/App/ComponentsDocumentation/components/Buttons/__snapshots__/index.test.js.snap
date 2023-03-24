@@ -786,9 +786,7 @@ exports[`Documentation: Buttons Content guidelines renders 1`] = `
                   <fieldset
                     className="checkbox-group"
                   >
-                    <legend>
-                      
-                    </legend>
+                    <legend />
                     <div
                       className="checkbox"
                     >
@@ -1610,13 +1608,13 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
                 &lt;button class="btn btn-primary" type="button"&gt;Button&lt;/button&gt;
                 
 
-                &lt;input type="button" class="btn btn-primary" value="Input"&gt;
+                &lt;input class="btn btn-primary" type="button" value="Input"&gt;
                 
 
-                &lt;input type="submit" class="btn btn-primary" value="Submit"&gt;
+                &lt;input class="btn btn-primary" type="submit" value="Submit"&gt;
                 
 
-                &lt;input type="reset" class="btn btn-primary" value="Reset"&gt;
+                &lt;input class="btn btn-primary" type="reset" value="Reset"&gt;
                 
 
               </pre>

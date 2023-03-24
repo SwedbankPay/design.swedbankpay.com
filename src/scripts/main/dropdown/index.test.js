@@ -1,12 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import userEvent from "@testing-library/user-event";
 
 import dropdown from "./index";
 
 describe("Scripts: Dropdown", () => {
-    const div = document.createElement("div");
-
-    document.body.appendChild(div);
 
     const Dropdown = ({ id, active }) => (
         <div id={id} className={`dropdown anchor-top-left${active ? " active" : ""}`}>
@@ -22,10 +21,6 @@ describe("Scripts: Dropdown", () => {
             </div>
         </div>
     );
-
-    afterEach(() => {
-        ReactDOM.unmountComponentAtNode(div);
-    });
 
     it("is defined", () => {
         expect(dropdown).toBeDefined();
@@ -46,7 +41,7 @@ describe("Scripts: Dropdown", () => {
     });
 
     it("button click gives dropdown-div class of active", () => {
-        ReactDOM.render(<Dropdown id="foo"/>, div);
+        render(<Dropdown id="foo"/>);
 
         const container = document.querySelector(".dropdown");
 
@@ -63,7 +58,7 @@ describe("Scripts: Dropdown", () => {
     });
 
     it("button click removes dropdown-div class of active", () => {
-        ReactDOM.render(<Dropdown id="foo" active/>, div);
+        render(<Dropdown id="foo" active/>);
 
         const container = document.querySelector(".dropdown");
 
