@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "@testing-library/react";
 
 import tooltips from "./index";
 
@@ -17,10 +17,6 @@ describe("scripts: tooltips", () => {
         <span className="tooltip">Payment capture is the process by which payments are secured once the payment has been authorized by the customer.</span>{"\n"}
     </button>);
 
-    document.body.appendChild(div);
-
-    afterEach(() => ReactDOM.unmountComponentAtNode(div));
-
     it("is defined", () => {
         expect(tooltips).toBeDefined();
     });
@@ -32,7 +28,7 @@ describe("scripts: tooltips", () => {
         });
 
         it("returns a single object when one element is initialized", () => {
-            ReactDOM.render(tooltipComponent("test-tooltip"), div);
+            render(tooltipComponent("test-tooltip"));
 
             const renderedTooltip = document.querySelector(".tooltip");
 
@@ -44,12 +40,11 @@ describe("scripts: tooltips", () => {
         });
 
         it("returns an array of objects when more than one element is initialized", () => {
-            ReactDOM.render(
+            render(
                 <>
                     {tooltipComponent("test-tooltip")}
                     {tooltipComponent("test-tooltip-2")}
-                </>
-                , div);
+                </>);
 
             const renderedAlert = document.querySelectorAll(".tooltip");
 

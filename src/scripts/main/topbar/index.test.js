@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "@testing-library/react";
 
 import NavMenu from "./NavMenu";
 import topbar from "./index";
@@ -9,16 +9,12 @@ jest.mock("./NavMenu");
 jest.mock("../utils");
 
 describe("scripts: topbar", () => {
-    const div = document.createElement("div");
 
     beforeEach(() => {
         NavMenu.mockClear();
         openComponent.mockClear();
         closeComponent.mockClear();
-        ReactDOM.unmountComponentAtNode(div);
     });
-
-    document.body.appendChild(div);
 
     const NoTopbar = () => (
         <header>
@@ -55,7 +51,7 @@ describe("scripts: topbar", () => {
         });
 
         it("returns one object when an ID is passed", () => {
-            ReactDOM.render(<Topbar id="demo-topbar-1" />, div);
+            render(<Topbar id="demo-topbar-1" />);
 
             const renderedTopbar = document.querySelector(".topbar");
 
@@ -70,19 +66,18 @@ describe("scripts: topbar", () => {
         it("warns the user if no topbar with the given ID exists", () => {
             console.warn = jest.fn();
 
-            ReactDOM.render(<Topbar id="demo-topbar-1" />, div);
+            render(<Topbar id="demo-topbar-1" />);
 
             expect(topbar.init("demo-topbar-2")).toBeNull();
             expect(console.warn).toHaveBeenCalledTimes(1);
         });
 
         it("returns an array of objects when more than one topbar is initialized", () => {
-            ReactDOM.render(
+            render(
                 <>
                     <Topbar />
                     <Topbar />
-                </>
-                , div);
+                </>);
 
             const renderedTopbars = document.querySelectorAll(".topbar");
 
@@ -103,7 +98,7 @@ describe("scripts: topbar", () => {
         });
 
         it("does not generate NavMenu instances if no .topbar exists", () => {
-            ReactDOM.render(<NoTopbar />, div);
+            render(<NoTopbar />);
             topbar.init();
 
             expect(NavMenu).not.toHaveBeenCalled();
@@ -111,7 +106,7 @@ describe("scripts: topbar", () => {
         });
 
         it("generates NavMenu instances if .topbar-nav exists", () => {
-            ReactDOM.render(<Topbar />, div);
+            render(<Topbar />);
 
             topbar.init();
 
@@ -121,7 +116,7 @@ describe("scripts: topbar", () => {
 
     describe("event listeners", () => {
         it("Escape closes an open navMenu", () => {
-            ReactDOM.render(<Topbar navOpen />, div);
+            render(<Topbar navOpen />);
 
             topbar.init();
             NavMenu.mock.instances[0].isOpen = true;
@@ -133,7 +128,7 @@ describe("scripts: topbar", () => {
         });
 
         it("does nothing if a key other than Escape is pressed", () => {
-            ReactDOM.render(<Topbar navOpen />, div);
+            render(<Topbar navOpen />);
 
             topbar.init();
             NavMenu.mock.instances[0].isOpen = true;
@@ -146,7 +141,7 @@ describe("scripts: topbar", () => {
 
     describe("topbar.open", () => {
         it("calls openComponent", () => {
-            ReactDOM.render(<Topbar id="test-topbar" />, div);
+            render(<Topbar id="test-topbar" />);
 
             const topbarInstance = topbar.init("test-topbar");
 
@@ -161,7 +156,7 @@ describe("scripts: topbar", () => {
 
     describe("topbar.close", () => {
         it("calls closeComponent", () => {
-            ReactDOM.render(<Topbar id="test-topbar-2" />, div);
+            render(<Topbar id="test-topbar-2" />);
 
             const topbarInstance = topbar.init("test-topbar-2");
 

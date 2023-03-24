@@ -1,5 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import nav from "./index";
 
@@ -104,8 +105,6 @@ describe("scripts: nav", () => {
         </nav>
     );
 
-    beforeEach(() => ReactDOM.unmountComponentAtNode(div));
-
     it("is defined", () => {
         expect(nav).toBeTruthy();
     });
@@ -116,11 +115,11 @@ describe("scripts: nav", () => {
         });
 
         it("returns a single object when one ID is passed", () => {
-            ReactDOM.render(<Nav id="demo-nav" />, div);
+            render(<Nav id="demo-nav" />, div);
 
-            const renderedNav = document.querySelector(".nav");
+            const renderedNav = screen.getByRole("navigation");
 
-            expect(renderedNav).toBeTruthy();
+            expect(renderedNav).toBeInTheDocument();
 
             const returnVal = nav.init("demo-nav");
 
@@ -129,16 +128,15 @@ describe("scripts: nav", () => {
         });
 
         it("returns an array of objects when more than one nav is initialized", () => {
-            ReactDOM.render(
+            render(
                 <>
                     <Nav />
                     <Nav />
                 </>
                 , div);
 
-            const renderedNavs = document.querySelectorAll(".nav");
+            const renderedNavs = screen.getAllByRole("navigation");
 
-            expect(renderedNavs).toBeTruthy();
             expect(renderedNavs.length).toEqual(2);
 
             const returnVal = nav.init();
@@ -163,113 +161,113 @@ describe("scripts: nav", () => {
     });
 
     it("does not render a menu icon when there are less than four list elements", () => {
-        ReactDOM.render(<Navsm />, div);
+        render(<Navsm />, div);
         nav.init();
 
-        const renderedNav = document.querySelector(".nav");
+        const renderedNav = screen.getByRole("navigation");
         const sidebarMenubtn = renderedNav.querySelector(".nav-openbtn");
 
-        expect(renderedNav).toBeTruthy();
+        expect(renderedNav).toBeInTheDocument();
         expect(sidebarMenubtn).toBeNull();
     });
 
     it("renders a menu icon when there are less than four list elements but submenus exist", () => {
-        ReactDOM.render(<Navsm subItems = {submenuItems} />, div);
+        render(<Navsm subItems = {submenuItems} />, div);
         nav.init();
 
-        const renderedNav = document.querySelector(".nav");
+        const renderedNav = screen.getByRole("navigation");
         const sidebarMenubtn = renderedNav.querySelector(".nav-openbtn");
 
-        expect(renderedNav).toBeTruthy();
+        expect(renderedNav).toBeInTheDocument();
         expect(sidebarMenubtn).toBeTruthy();
     });
 
     it("renders a menu icon when there are more than four list elements", () => {
-        ReactDOM.render(<Nav />, div);
+        render(<Nav />, div);
         nav.init();
 
-        const renderedNav = document.querySelector(".nav");
+        const renderedNav = screen.getByRole("navigation");
         const sidebarMenubtn = renderedNav.querySelector(".nav-openbtn");
 
-        expect(renderedNav).toBeTruthy();
+        expect(renderedNav).toBeInTheDocument();
         expect(sidebarMenubtn).toBeTruthy();
     });
 
     it("opens when clicking the menu icon", () => {
-        ReactDOM.render(<Nav />, div);
+        render(<Nav />, div);
         nav.init();
 
-        const renderedNav = document.querySelector(".nav");
+        const renderedNav = screen.getByRole("navigation");
         const sidebarMenubtn = renderedNav.querySelector(".nav-openbtn");
 
-        expect(renderedNav).toBeTruthy();
+        expect(renderedNav).toBeInTheDocument();
         expect(sidebarMenubtn).toBeTruthy();
-        expect(renderedNav.classList).not.toContain("nav-open");
+        expect(renderedNav).not.toHaveClass("nav-open");
 
         sidebarMenubtn.click();
 
-        expect(renderedNav.classList).toContain("nav-open");
+        expect(renderedNav).toHaveClass("nav-open");
     });
 
     it("closes when clicking the menu icon while open", () => {
-        ReactDOM.render(<Nav open />, div);
+        render(<Nav open />, div);
         nav.init();
 
-        const renderedNav = document.querySelector(".nav");
+        const renderedNav = screen.getByRole("navigation");
         const sidebarMenubtn = renderedNav.querySelector(".nav-openbtn");
 
-        expect(renderedNav).toBeTruthy();
+        expect(renderedNav).toBeInTheDocument();
         expect(sidebarMenubtn).toBeTruthy();
-        expect(renderedNav.classList).toContain("nav-open");
+        expect(renderedNav).toHaveClass("nav-open");
 
         sidebarMenubtn.click();
-        expect(renderedNav.classList).not.toContain("nav-open");
+        expect(renderedNav).not.toHaveClass("nav-open");
     });
 
     it("closes when clicking outside nav", () => {
-        ReactDOM.render(<Nav open />, div);
+        render(<Nav open />, div);
         nav.init();
 
-        const renderedNav = document.querySelector(".nav");
+        const renderedNav = screen.getByRole("navigation");
 
-        expect(renderedNav).toBeTruthy();
-        expect(renderedNav.classList).toContain("nav-open");
+        expect(renderedNav).toBeInTheDocument();
+        expect(renderedNav).toHaveClass("nav-open");
 
         document.querySelector("html").click();
 
-        expect(renderedNav.classList).not.toContain("nav-open");
+        expect(renderedNav).not.toHaveClass("nav-open");
     });
 
     it("closes nav on resize", () => {
-        ReactDOM.render(<Nav id="nav-test" subItems = {submenuItems} />, div);
+        render(<Nav id="nav-test" subItems = {submenuItems} />, div);
         nav.init();
         nav.open("nav-test");
 
-        const renderedNav = document.querySelector(".nav");
+        const renderedNav = screen.getByRole("navigation");
 
-        expect(renderedNav.classList).toContain("nav-open");
+        expect(renderedNav).toHaveClass("nav-open");
 
         global.dispatchEvent(new Event("resize"));
 
-        expect(renderedNav.classList).not.toContain("nav-open");
+        expect(renderedNav).not.toHaveClass("nav-open");
     });
 
     it("creates a copy of the submenu anchor", () => {
-        ReactDOM.render(<Nav subItems = {submenuItems} />, div);
+        render(<Nav subItems = {submenuItems} />, div);
         nav.init();
 
         expect(document.querySelector(".submenu-toggle")).toBeTruthy();
     });
 
     it("opens a submenu when a submenu icon is clicked", () => {
-        ReactDOM.render(<Nav subItems = {submenuItems} />, div);
+        render(<Nav subItems = {submenuItems} />, div);
         nav.init();
 
-        const renderedNav = document.querySelector(".nav");
+        const renderedNav = screen.getByRole("navigation");
         const submenu = renderedNav.querySelector(".submenu");
         const iconClickable = submenu.querySelector(".submenu-toggle");
 
-        expect(renderedNav).toBeTruthy();
+        expect(renderedNav).toBeInTheDocument();
         expect(submenu).toBeTruthy();
         expect(iconClickable).toBeTruthy();
         expect(submenu.classList).not.toContain("submenu-open");
@@ -280,14 +278,14 @@ describe("scripts: nav", () => {
     });
 
     it("closes a submenu when a submenu icon is clicked", () => {
-        ReactDOM.render(<Nav subItems = {submenuItems} subopen />, div);
+        render(<Nav subItems = {submenuItems} subopen />, div);
         nav.init();
 
-        const renderedNav = document.querySelector(".nav");
+        const renderedNav = screen.getByRole("navigation");
         const submenu = renderedNav.querySelector(".submenu");
         const iconClickable = submenu.querySelector(".submenu-toggle");
 
-        expect(renderedNav).toBeTruthy();
+        expect(renderedNav).toBeInTheDocument();
         expect(submenu).toBeTruthy();
         expect(iconClickable).toBeTruthy();
         expect(submenu.classList).toContain("submenu-open");
@@ -298,13 +296,13 @@ describe("scripts: nav", () => {
     });
 
     it("closes a submenu when clicking outside the submenu", () => {
-        ReactDOM.render(<Nav subItems = {submenuItems} subopen />, div);
+        render(<Nav subItems = {submenuItems} subopen />, div);
         nav.init();
 
-        const renderedNav = document.querySelector(".nav");
+        const renderedNav = screen.getByRole("navigation");
         const submenu = renderedNav.querySelector(".submenu");
 
-        expect(renderedNav).toBeTruthy();
+        expect(renderedNav).toBeInTheDocument();
         expect(submenu).toBeTruthy();
         expect(submenu.classList).toContain("submenu-open");
 
@@ -314,14 +312,14 @@ describe("scripts: nav", () => {
     });
 
     it("closes submenu on resize", () => {
-        ReactDOM.render(<Nav subItems = {submenuItems} />, div);
+        render(<Nav subItems = {submenuItems} />, div);
         nav.init();
 
-        const renderedNav = document.querySelector(".nav");
+        const renderedNav = screen.getByRole("navigation");
         const submenu = renderedNav.querySelector(".submenu");
         const iconClickable = submenu.querySelector(".submenu-toggle");
 
-        expect(renderedNav).toBeTruthy();
+        expect(renderedNav).toBeInTheDocument();
         expect(submenu).toBeTruthy();
         expect(iconClickable).toBeTruthy();
         expect(submenu.classList).not.toContain("submenu-open");
@@ -337,61 +335,61 @@ describe("scripts: nav", () => {
 
     describe("nav.open", () => {
         it("opens nav when calling nav.open", () => {
-            ReactDOM.render(<Nav id="demo-nav" />, div);
+            render(<Nav id="demo-nav" />, div);
             nav.init();
 
-            const renderedNav = document.querySelector(".nav");
+            const renderedNav = screen.getByRole("navigation");
 
-            expect(renderedNav.classList).not.toContain("nav-open");
+            expect(renderedNav).not.toHaveClass("nav-open");
 
             nav.open("demo-nav");
 
-            expect(renderedNav.classList).toContain("nav-open");
+            expect(renderedNav).toHaveClass("nav-open");
         });
 
         it("does not open nav when calling nav.open with wrong id and prints error to console", () => {
             console.error = jest.fn();
-            ReactDOM.render(<Nav id="demo-nav" />, div);
+            render(<Nav id="demo-nav" />, div);
             nav.init();
 
-            const renderedNav = document.querySelector(".nav");
+            const renderedNav = screen.getByRole("navigation");
 
-            expect(renderedNav.classList).not.toContain("nav-open");
+            expect(renderedNav).not.toHaveClass("nav-open");
 
             nav.open("qwerty");
 
             expect(console.error).toHaveBeenCalledWith("nav.open: No nav with id \"qwerty\" found.");
-            expect(renderedNav.classList).not.toContain("nav-open");
+            expect(renderedNav).not.toHaveClass("nav-open");
         });
     });
 
     describe("nav.close", () => {
         it("closes nav when calling nav.close", () => {
-            ReactDOM.render(<Nav id="demo-nav" open />, div);
+            render(<Nav id="demo-nav" open />, div);
 
-            const renderedNav = document.querySelector(".nav");
+            const renderedNav = screen.getByRole("navigation");
 
-            expect(renderedNav.classList).toContain("nav-open");
+            expect(renderedNav).toHaveClass("nav-open");
 
             nav.init();
             nav.close("demo-nav");
 
-            expect(renderedNav.classList).not.toContain("nav-open");
+            expect(renderedNav).not.toHaveClass("nav-open");
         });
 
         it("does not close nav when calling nav.close with wrong id and prints error to console", () => {
             console.error = jest.fn();
-            ReactDOM.render(<Nav id="demo-nav" open />, div);
+            render(<Nav id="demo-nav" open />, div);
             nav.init();
 
-            const renderedNav = document.querySelector(".nav");
+            const renderedNav = screen.getByRole("navigation");
 
-            expect(renderedNav.classList).toContain("nav-open");
+            expect(renderedNav).toHaveClass("nav-open");
 
             nav.close("qwerty");
 
             expect(console.error).toHaveBeenCalledWith("nav.close: No nav with id \"qwerty\" found.");
-            expect(renderedNav.classList).toContain("nav-open");
+            expect(renderedNav).toHaveClass("nav-open");
         });
     });
 });

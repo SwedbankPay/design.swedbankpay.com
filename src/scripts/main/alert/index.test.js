@@ -1,15 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "@testing-library/react";
 
 import alert from "./index";
 import Alert from "@components/Alert";
 
 describe("scripts: alert", () => {
-    const div = document.createElement("div");
-
-    document.body.appendChild(div);
-
-    afterEach(() => ReactDOM.unmountComponentAtNode(div));
 
     it("is defined", () => {
         expect(alert).toBeDefined();
@@ -22,7 +17,7 @@ describe("scripts: alert", () => {
         });
 
         it("returns a single object when one element is initialized", () => {
-            ReactDOM.render(<Alert type="success" id="demo-alert" />, div);
+            render(<Alert type="success" id="demo-alert" />);
 
             const renderedAlert = document.querySelector(".alert");
 
@@ -35,12 +30,11 @@ describe("scripts: alert", () => {
         });
 
         it("returns an array of objects when more than one element is initialized", () => {
-            ReactDOM.render(
+            render(
                 <>
                     <Alert type="success" />
                     <Alert type="success" />
-                </>
-                , div);
+                </>);
 
             const renderedAlert = document.querySelectorAll(".alert");
 
@@ -76,7 +70,7 @@ describe("scripts: alert", () => {
             </>
         );
 
-        ReactDOM.render(<Alerts />, div);
+        render(<Alerts />);
 
         const renderedButtons = document.querySelectorAll("[data-alert-close]");
 
@@ -102,7 +96,7 @@ describe("scripts: alert", () => {
             </>
         );
 
-        ReactDOM.render(<AlertTest />, div);
+        render(<AlertTest />);
 
         const renderedButton = document.querySelector("[data-alert-close]");
 
@@ -133,7 +127,7 @@ describe("scripts: alert", () => {
         });
 
         it("adds class .d-none when called with a valid ID", () => {
-            ReactDOM.render(<Alert id="demo-alert" type="success" />, div);
+            render(<Alert id="demo-alert" type="success" />);
 
             const renderedAlert = document.querySelector(".alert");
 
@@ -147,7 +141,7 @@ describe("scripts: alert", () => {
         it("prints a warning message to console if alert with passed id doesn't exist", () => {
             console.warn = jest.fn();
 
-            ReactDOM.render(<Alert id="demo-alert" type="success" />, div);
+            render(<Alert id="demo-alert" type="success" />);
 
             alert.close("wrong-id");
 
