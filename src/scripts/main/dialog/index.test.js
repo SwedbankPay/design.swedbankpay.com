@@ -146,7 +146,7 @@ describe("scripts: dialog", () => {
         expect(delBtn).toHaveFocus();
     });
 
-    // It is not possible to trigger a focus change with keyboardevents, this is due to some security issues with JS [AW].
+    // It is not possible to trigger a focus change with keyboardevents, this is due to some security issues with JS [AW]
     it.skip("changes focus from the last focusable element to the first focusable element when focus change is induced", () => {
         const { container } = render(<Dialog id="dia-id"/>);
 

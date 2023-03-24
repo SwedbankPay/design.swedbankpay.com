@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "@testing-library/react";
 
 import rangeslider from "./index";
 
@@ -17,12 +17,6 @@ describe("scripts: rangeslider", () => {
         </div>
     );
 
-    const div = document.createElement("div");
-
-    document.body.appendChild(div);
-
-    beforeEach(() => ReactDOM.unmountComponentAtNode(div));
-
     it("is defined", () => {
         expect(rangeslider).toBeDefined();
     });
@@ -34,7 +28,7 @@ describe("scripts: rangeslider", () => {
         });
 
         it("returns a single object when one element is initialized", () => {
-            ReactDOM.render(<TestSlider id="demo-slider" />, div);
+            render(<TestSlider id="demo-slider" />);
 
             const renderedRangeSlider = document.querySelector(".rangeslider");
 
@@ -47,12 +41,11 @@ describe("scripts: rangeslider", () => {
         });
 
         it("returns an array of objects when more than one element is initialized", () => {
-            ReactDOM.render(
+            render(
                 <>
                     <TestSlider />
                     <TestSlider />
-                </>
-                , div);
+                </>);
 
             const renderedRangeSliders = document.querySelectorAll(".rangeslider");
 
@@ -81,7 +74,7 @@ describe("scripts: rangeslider", () => {
     });
 
     it("updates displayed value span on change in rangeslider", () => {
-        ReactDOM.render(<TestSlider />, div);
+        render(<TestSlider />);
         rangeslider.init();
 
         const rangeSlider = document.querySelector(".rangeslider");
@@ -100,7 +93,7 @@ describe("scripts: rangeslider", () => {
     });
 
     it("updates displayed value span on input in rangeslider", () => {
-        ReactDOM.render(<TestSlider />, div);
+        render(<TestSlider />);
         rangeslider.init();
 
         const rangeSlider = document.querySelector(".rangeslider");

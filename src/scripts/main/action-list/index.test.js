@@ -1,15 +1,9 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
+import { render } from "@testing-library/react";
 
 import actionList from "./index";
 
 describe("scripts: action-list", () => {
-    const div = document.createElement("div");
-
-    document.body.appendChild(div);
-
-    const container = document.getElementById("div");
-    const root = createRoot(container);
 
     const ActionList = ({ active, id, noToggle }) => (
         <div className={`action-list${active ? " active" : ""}`} id={id}>
@@ -20,8 +14,6 @@ describe("scripts: action-list", () => {
             </div>
         </div>
     );
-
-    beforeEach(() => root.unmount());
 
     it("is defined", () => {
         expect(actionList).toBeDefined();
@@ -34,7 +26,7 @@ describe("scripts: action-list", () => {
         });
 
         it("returns a single object when one element is initialized", () => {
-            root.render(<ActionList id="demo-action" />, div);
+            render(<ActionList id="demo-action" />);
 
             const renderedActionList = document.querySelector(".action-list");
 
@@ -47,12 +39,11 @@ describe("scripts: action-list", () => {
         });
 
         it("returns an array of objects when more than one element is initialized", () => {
-            root.render(
+            render(
                 <>
                     <ActionList />
                     <ActionList />
-                </>
-                , div);
+                </>);
 
             const renderedActionLists = document.querySelectorAll(".action-list");
 
@@ -83,7 +74,7 @@ describe("scripts: action-list", () => {
     it("throws an error if no .toggle-btn is found", () => {
         console.warn = jest.fn();
 
-        root.render(<ActionList noToggle />, div);
+        render(<ActionList noToggle />);
 
         actionList.init();
 
@@ -92,7 +83,7 @@ describe("scripts: action-list", () => {
     });
 
     it("opens when clicking the icon", () => {
-        root.render(<ActionList />, div);
+        render(<ActionList />);
 
         const renderedActionList = document.querySelector(".action-list");
         const toggleBtn = renderedActionList.querySelector("i.material-icons");
@@ -108,7 +99,7 @@ describe("scripts: action-list", () => {
     });
 
     it("closes when clicking on icon while open", () => {
-        root.render(<ActionList active />, div);
+        render(<ActionList active />);
 
         const renderedActionList = document.querySelector(".action-list");
         const toggleBtn = renderedActionList.querySelector("i.material-icons");
@@ -124,7 +115,7 @@ describe("scripts: action-list", () => {
     });
 
     it("closes open action menu when clicking on a link", () => {
-        root.render(<ActionList active />, div);
+        render(<ActionList active />);
 
         const renderedActionList = document.querySelector(".action-list");
 
@@ -138,7 +129,7 @@ describe("scripts: action-list", () => {
     });
 
     it("closes when clicking outside menu while open", () => {
-        root.render(<ActionList active />, div);
+        render(<ActionList active />);
 
         const renderedActionList = document.querySelector(".action-list");
 
@@ -153,7 +144,7 @@ describe("scripts: action-list", () => {
 
     describe("actionList.open", () => {
         it("opens actionlist when calling actionList.open", () => {
-            root.render(<ActionList id="demo-actionlist" />, div);
+            render(<ActionList id="demo-actionlist" />);
 
             const renderedActionList = document.querySelector(".action-list");
 
@@ -169,7 +160,7 @@ describe("scripts: action-list", () => {
         it("does not open actionlist when calling actionlist.open with wrong id and prints warn to console", () => {
             console.warn = jest.fn();
 
-            root.render(<ActionList id="demo-actionlist" />, div);
+            render(<ActionList id="demo-actionlist" />);
 
             const renderedActionList = document.querySelector(".action-list");
 
@@ -185,7 +176,7 @@ describe("scripts: action-list", () => {
 
     describe("actionList.close", () => {
         it("closes an open actionlist when calling actionList.close", () => {
-            root.render(<ActionList active id="demo-actionlist" />, div);
+            render(<ActionList active id="demo-actionlist" />);
 
             const renderedActionList = document.querySelector(".action-list");
 
@@ -201,7 +192,7 @@ describe("scripts: action-list", () => {
         it("does not close actionlist when calling actionlist.close with wrong id and prints warn to console", () => {
             console.warn = jest.fn();
 
-            root.render(<ActionList id="demo-actionlist" active />, div);
+            render(<ActionList id="demo-actionlist" active />);
 
             const renderedActionList = document.querySelector(".action-list");
 

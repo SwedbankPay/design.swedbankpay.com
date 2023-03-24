@@ -1,13 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "@testing-library/react";
 
 import sheet from "./index";
 import toast from "../toast/index";
 
 describe("scripts: sheet", () => {
-    const div = document.createElement("div");
-
-    document.body.appendChild(div);
     jest.useFakeTimers();
 
     const Sheet = ({ id }) => (
@@ -37,10 +34,6 @@ describe("scripts: sheet", () => {
         document.body.classList.remove("sheet-open");
     });
 
-    afterEach(() => {
-        ReactDOM.unmountComponentAtNode(div);
-    });
-
     it("is defined", () => {
         expect(sheet).toBeDefined();
     });
@@ -52,7 +45,7 @@ describe("scripts: sheet", () => {
         });
 
         it("returns one object when an ID is passed", () => {
-            ReactDOM.render(<Sheet id="demo-sheet-1" />, div);
+            render(<Sheet id="demo-sheet-1" />);
 
             const renderedSheet = document.querySelector(".sheet");
 
@@ -65,12 +58,11 @@ describe("scripts: sheet", () => {
         });
 
         it("returns an array of objects when more than one sheet is initialized", () => {
-            ReactDOM.render(
+            render(
                 <>
                     <Sheet />
                     <Sheet />
-                </>
-                , div);
+                </>);
 
             const renderedSheets = document.querySelectorAll(".sheet");
 
@@ -99,7 +91,7 @@ describe("scripts: sheet", () => {
     });
 
     it("button with attribute 'data-sheet-open' pointing to the correct id opens corresponding sheet", () => {
-        ReactDOM.render(<Sheet id="demo-sheet" />, div);
+        render(<Sheet id="demo-sheet" />);
 
         const renderedSheet = document.querySelector(".sheet");
         const openBtn = document.querySelector("[data-sheet-open]");
@@ -114,7 +106,7 @@ describe("scripts: sheet", () => {
     });
 
     it("button with attribute 'data-sheet-close' pointing to the correct id closes corresponding sheet", () => {
-        ReactDOM.render(<OpenSheet />, div);
+        render(<OpenSheet />);
 
         const renderedSheet = document.querySelector(".sheet");
         const closeBtn = document.querySelector("[data-sheet-close]");
@@ -130,7 +122,7 @@ describe("scripts: sheet", () => {
     });
 
     it("closes sheet when clicking the close icon", () => {
-        ReactDOM.render(<OpenSheet />, div);
+        render(<OpenSheet />);
 
         const renderedSheet = document.querySelector(".sheet");
         const closeIcon = renderedSheet.querySelector(".sheet-close");
@@ -145,7 +137,7 @@ describe("scripts: sheet", () => {
     });
 
     it("closes sheet when clicking outside the sheet section", () => {
-        ReactDOM.render(<OpenSheet />, div);
+        render(<OpenSheet />);
 
         const renderedSheet = document.querySelector(".sheet");
 
@@ -159,7 +151,7 @@ describe("scripts: sheet", () => {
     });
 
     it("does not close sheet when pressing keys other than esc", () => {
-        ReactDOM.render(<OpenSheet />, div);
+        render(<OpenSheet />);
 
         const renderedSheet = document.querySelector(".sheet");
 
@@ -178,7 +170,7 @@ describe("scripts: sheet", () => {
     });
 
     it("closes sheet when pressing esc", () => {
-        ReactDOM.render(<OpenSheet />, div);
+        render(<OpenSheet />);
 
         const renderedSheet = document.querySelector(".sheet");
 
@@ -198,7 +190,7 @@ describe("scripts: sheet", () => {
 
     describe("sheet.open", () => {
         it("opens sheet when calling sheet.open", () => {
-            ReactDOM.render(<Sheet id="demo-sheet" />, div);
+            render(<Sheet id="demo-sheet" />);
 
             const renderedSheet = document.querySelector(".sheet");
 
@@ -217,7 +209,7 @@ describe("scripts: sheet", () => {
 
         it("does not open sheet when calling sheet.open with wrong id and prints warn to console", () => {
             console.warn = jest.fn();
-            ReactDOM.render(<Sheet id="demo-sheet" />, div);
+            render(<Sheet id="demo-sheet" />);
 
             const renderedSheet = document.querySelector(".sheet");
 
@@ -236,7 +228,7 @@ describe("scripts: sheet", () => {
 
         it("does not open sheet when the passed sheet is already open and prints a warning to the console", () => {
             console.warn = jest.fn();
-            ReactDOM.render(<OpenSheet id="demo-sheet" />, div);
+            render(<OpenSheet id="demo-sheet" />);
 
             const renderedSheet = document.querySelector(".sheet");
 
@@ -251,7 +243,7 @@ describe("scripts: sheet", () => {
 
     describe("sheet.close", () => {
         it("closes sheet when calling sheet.close", () => {
-            ReactDOM.render(<OpenSheet />, div);
+            render(<OpenSheet />);
 
             expect(document.body.classList).not.toContain("sheet-open");
 
@@ -265,7 +257,7 @@ describe("scripts: sheet", () => {
 
         it("does not close sheet when calling sheet.close with wrong id and prints warn to console", () => {
             console.warn = jest.fn();
-            ReactDOM.render(<OpenSheet />, div);
+            render(<OpenSheet />);
 
             const renderedSheet = document.querySelector(".sheet");
 
@@ -281,7 +273,7 @@ describe("scripts: sheet", () => {
 
         it("does not close sheet when the passed sheet is close and prints a warning to the console", () => {
             console.warn = jest.fn();
-            ReactDOM.render(<Sheet id="demo-sheet" />, div);
+            render(<Sheet id="demo-sheet" />);
 
             const renderedSheet = document.querySelector(".sheet");
 

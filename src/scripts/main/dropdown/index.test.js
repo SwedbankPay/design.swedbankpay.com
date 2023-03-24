@@ -1,15 +1,11 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import userEvent from "@testing-library/user-event";
 
 import dropdown from "./index";
 
 describe("Scripts: Dropdown", () => {
-    const div = document.createElement("div");
-
-    document.body.appendChild(div);
-
-    const container = document.getElementById("div");
-    const root = createRoot(container);
 
     const Dropdown = ({ id, active }) => (
         <div id={id} className={`dropdown anchor-top-left${active ? " active" : ""}`}>
@@ -25,10 +21,6 @@ describe("Scripts: Dropdown", () => {
             </div>
         </div>
     );
-
-    afterEach(() => {
-        root.unmount(div);
-    });
 
     it("is defined", () => {
         expect(dropdown).toBeDefined();
@@ -49,7 +41,7 @@ describe("Scripts: Dropdown", () => {
     });
 
     it("button click gives dropdown-div class of active", () => {
-        root.render(<Dropdown id="foo"/>, div);
+        render(<Dropdown id="foo"/>);
 
         const container = document.querySelector(".dropdown");
 
@@ -66,7 +58,7 @@ describe("Scripts: Dropdown", () => {
     });
 
     it("button click removes dropdown-div class of active", () => {
-        root.render(<Dropdown id="foo" active/>, div);
+        render(<Dropdown id="foo" active/>);
 
         const container = document.querySelector(".dropdown");
 

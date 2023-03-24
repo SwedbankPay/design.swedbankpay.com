@@ -1,17 +1,12 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
+import { render } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import accordion from "./index";
 
 jest.useFakeTimers();
 
 describe("scripts: accordion", () => {
-    const div = document.createElement("div");
-    const root = createRoot(div);
-
-    document.body.appendChild(div);
-
-    afterEach(() => root.unmount());
 
     const AccGrpComponent = ({ id, open, accId }) => (
         <div className="accordion-group" id={id} >
@@ -42,7 +37,7 @@ describe("scripts: accordion", () => {
 
         it("returns a single object when an accordion ID is passed", () => {
 
-            root.render(<AccordionComponent id="accordion-test"/>);
+            render(<AccordionComponent id="accordion-test"/>);
 
             const returnVal = accordion.init("accordion-test");
 
@@ -53,7 +48,7 @@ describe("scripts: accordion", () => {
 
         it("returns a single object when a accordion-group ID is passed", () => {
 
-            root.render(<AccGrpComponent id="accordion-group-test" />);
+            render(<AccGrpComponent id="accordion-group-test" />);
 
             const returnVal = accordion.init("accordion-group-test");
 
@@ -64,12 +59,11 @@ describe("scripts: accordion", () => {
 
         it("returns an array of accordion objects when more than one accordion is initialized", () => {
 
-            root(
+            render(
                 <>
                     <AccordionComponent />
                     <AccordionComponent />
-                </>
-                , div);
+                </>);
 
             const returnVal = accordion.init();
 
@@ -80,12 +74,11 @@ describe("scripts: accordion", () => {
 
         it("returns an array of accordion-group objects when more than one accordion-group is initialized", () => {
 
-            root(
+            render(
                 <>
                     <AccGrpComponent />
                     <AccGrpComponent />
-                </>
-                , div);
+                </>);
 
             const returnVal = accordion.init();
 
@@ -96,12 +89,11 @@ describe("scripts: accordion", () => {
 
         it("returns an array of both accordion-group objects and accordion objects when more than one element is initialized", () => {
 
-            root(
+            render(
                 <>
                     <AccGrpComponent />
                     <AccordionComponent />
-                </>
-                , div);
+                </>);
 
             const returnVal = accordion.init();
 
@@ -133,9 +125,7 @@ describe("scripts: accordion", () => {
             it("prints a warning if an accordion-group without accordions is initialized", () => {
                 console.warn = jest.fn();
 
-                const root = createRoot(div);
-
-                root.render(<div id="empty-accordion-group" className="accordion-group"/>);
+                render(<div id="empty-accordion-group" className="accordion-group"/>);
 
                 accordion.init("empty-accordion-group");
 
@@ -145,9 +135,7 @@ describe("scripts: accordion", () => {
             it("prints a warning when an accordion without .accordion-header is initialized", () => {
                 console.warn = jest.fn();
 
-                const root = createRoot(div);
-
-                root.render(<div id="acc-no-header" className="accordion" />);
+                render(<div id="acc-no-header" className="accordion" />);
 
                 accordion.init("acc-no-header");
 
@@ -156,11 +144,10 @@ describe("scripts: accordion", () => {
 
             it("prints a warning if an accordion-group contains accordions without accordion-header", () => {
 
-                root(
+                render(
                     <div id="accGrpNoHead" className="accordion-group">
                         <div className="accordion" />
-                    </div>
-                    , div);
+                    </div>);
 
                 accordion.init("accGrpNoHead");
 
@@ -172,7 +159,7 @@ describe("scripts: accordion", () => {
     describe("class Accordion", () => {
         it("click opens the accordion", () => {
 
-            root.render(<AccordionComponent />);
+            render(<AccordionComponent />);
 
             const accElem = document.querySelector(".accordion");
             const accHeaderElem = accElem.querySelector(".accordion-header");
@@ -188,7 +175,7 @@ describe("scripts: accordion", () => {
 
         it("click closes the accordion", () => {
 
-            root.render(<AccordionComponent open />);
+            render(<AccordionComponent open />);
 
             const accElem = document.querySelector(".accordion");
             const accHeaderElem = accElem.querySelector(".accordion-header");
@@ -207,7 +194,7 @@ describe("scripts: accordion", () => {
         it("clicking in quick succession to open an accordion will print a warning", () => {
             console.warn = jest.fn();
 
-            root.render(<AccordionComponent />);
+            render(<AccordionComponent />);
 
             const accObj = accordion.init()[0];
 
@@ -220,7 +207,7 @@ describe("scripts: accordion", () => {
         it("clicking in quick succession to close an accordion will print a warning", () => {
             console.warn = jest.fn();
 
-            root.render(<AccordionComponent open />);
+            render(<AccordionComponent open />);
 
             const accObj = accordion.init()[0];
 
@@ -234,7 +221,7 @@ describe("scripts: accordion", () => {
     describe("class Accordion-Group", () => {
         it("click opens an accordion", () => {
 
-            root.render(<AccGrpComponent />);
+            render(<AccGrpComponent />);
 
             const accGrpObj = accordion.init()[0];
 
@@ -249,7 +236,7 @@ describe("scripts: accordion", () => {
 
         it("clicking an open accordion closes it", () => {
 
-            root.render(<AccGrpComponent open />);
+            render(<AccGrpComponent open />);
 
             const accGrpObj = accordion.init()[0];
             const openAcc = accGrpObj.openAcc;
@@ -265,7 +252,7 @@ describe("scripts: accordion", () => {
 
         it("only one accordion can be open at the same time", () => {
 
-            root.render(<AccGrpComponent open />);
+            render(<AccGrpComponent open />);
 
             const accGrpObj = accordion.init()[0];
             const openAcc = accGrpObj.openAcc.elem;
@@ -285,7 +272,7 @@ describe("scripts: accordion", () => {
         it("clicking in quick succession to open an accordion wrapped by accordion-group will print a warning", () => {
             console.warn = jest.fn();
 
-            root.render(<AccGrpComponent />);
+            render(<AccGrpComponent />);
 
             const accGrp = accordion.init()[0];
 
@@ -299,7 +286,7 @@ describe("scripts: accordion", () => {
     describe("open", () => {
         it("opens the accordion matching the passed ID and returns the accordion object", () => {
 
-            root.render(<AccordionComponent id="test-open" />);
+            render(<AccordionComponent id="test-open" />);
 
             const accObj = accordion.init()[0];
 
@@ -313,7 +300,7 @@ describe("scripts: accordion", () => {
 
         it("opens the accordion matching the given ID in a accordion-group", () => {
 
-            root.render(<AccGrpComponent accId="acc-test" />);
+            render(<AccGrpComponent accId="acc-test" />);
 
             const accGrpObj = accordion.init()[0];
             const acc = document.getElementById("acc-test");
@@ -332,7 +319,7 @@ describe("scripts: accordion", () => {
 
         it("closes the open accordion in a accordion-group if open is called on another accordion", () => {
 
-            root.render(<AccGrpComponent open accId="acc-id" />);
+            render(<AccGrpComponent open accId="acc-id" />);
 
             const accGrpObj = accordion.init()[0];
             const closedAcc = document.getElementById("acc-id");
@@ -361,9 +348,7 @@ describe("scripts: accordion", () => {
 
             it("returns false and prints a warning if the accordion is open", () => {
 
-                const root = createRoot(div);
-
-                root.render(<AccordionComponent open id="is-open" />);
+                render(<AccordionComponent open id="is-open" />);
                 accordion.init();
 
                 const returnVal = accordion.open("is-open");
@@ -377,7 +362,7 @@ describe("scripts: accordion", () => {
     describe("close", () => {
         it("closes the open accordion matching the passed ID and returns the accordion object", () => {
 
-            root.render(<AccordionComponent id="acc-close" open />);
+            render(<AccordionComponent id="acc-close" open />);
 
             const accObj = accordion.init()[0];
 
@@ -392,12 +377,11 @@ describe("scripts: accordion", () => {
 
         it("closes the open accordion matching the passed ID in an accordion-group and returns the accordion object", () => {
 
-            root(
+            render(
                 <div className="accordion-group">
                     <AccordionComponent id="test-close" open/>
                     <AccordionComponent />
-                </div>
-                , div);
+                </div>);
 
             const accGrpObj = accordion.init()[0];
 
@@ -421,9 +405,7 @@ describe("scripts: accordion", () => {
 
             it("prints a warning message and returns false if the accordion is closed", () => {
 
-                const root = createRoot(div);
-
-                root.render(<AccGrpComponent accId="closed-acc" />);
+                render(<AccGrpComponent accId="closed-acc" />);
                 accordion.init();
 
                 const returnVal = accordion.close("closed-acc");

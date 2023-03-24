@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "@testing-library/react";
 
 import NavMenu from "./NavMenu";
 import utils from "../utils";
@@ -9,12 +9,6 @@ jest.useFakeTimers();
 jest.mock("../utils");
 
 describe("scripts: topbar - NavMenu", () => {
-    const div = document.createElement("div");
-
-    document.body.appendChild(div);
-
-    beforeEach(() => ReactDOM.unmountComponentAtNode(div));
-
     const Topbar = ({ id, navOpen, noBtnIcon, noCloseIcon }) => (
         <header className="topbar" id={id}>
             <button type="button" className="topbar-btn" data-toggle-nav="#topbar-nav">
@@ -42,7 +36,7 @@ describe("scripts: topbar - NavMenu", () => {
     });
 
     it("creates a new instance with sent button and connected topbar-nav", () => {
-        ReactDOM.render(<Topbar />, div);
+        render(<Topbar />);
 
         const topbar = document.querySelector(".topbar");
         const navMenu = topbar.querySelector(".topbar-nav");
@@ -56,7 +50,7 @@ describe("scripts: topbar - NavMenu", () => {
     it("prints a warning if no close icon (.close-topbar-nav) exists", () => {
         console.warn = jest.fn();
 
-        ReactDOM.render(<Topbar noCloseIcon />, div);
+        render(<Topbar noCloseIcon />);
 
         const topbar = document.querySelector(".topbar");
         const navMenu = topbar.querySelector(".topbar-nav");
@@ -67,7 +61,7 @@ describe("scripts: topbar - NavMenu", () => {
     });
 
     it("prevents default and fires open when the topbar button connected to a nav is clicked", () => {
-        ReactDOM.render(<Topbar />, div);
+        render(<Topbar />);
 
         const topbar = document.querySelector(".topbar");
         const navMenu = topbar.querySelector(".topbar-nav");
@@ -90,7 +84,7 @@ describe("scripts: topbar - NavMenu", () => {
     });
 
     it("opens the menu when the topbar button is clicked", () => {
-        ReactDOM.render(<Topbar />, div);
+        render(<Topbar />);
 
         const topbar = document.querySelector(".topbar");
         const navMenu = topbar.querySelector(".topbar-nav");
@@ -110,7 +104,7 @@ describe("scripts: topbar - NavMenu", () => {
     });
 
     it("closes the menu when an anchor is clicked.", () => {
-        ReactDOM.render(<Topbar navOpen />, div);
+        render(<Topbar navOpen />);
 
         const topbar = document.querySelector(".topbar");
         const navMenu = topbar.querySelector(".topbar-nav");
@@ -130,7 +124,7 @@ describe("scripts: topbar - NavMenu", () => {
     });
 
     it("containsPoint is defined and can be called", () => {
-        ReactDOM.render(<Topbar />, div);
+        render(<Topbar />);
 
         const topbar = document.querySelector(".topbar");
         const navMenu = topbar.querySelector(".topbar-nav");
@@ -143,7 +137,7 @@ describe("scripts: topbar - NavMenu", () => {
     });
 
     it("closes .topbar-nav-menu when a click event is fired outside of .topbar-link-container", () => {
-        ReactDOM.render(<Topbar navOpen />, div);
+        render(<Topbar navOpen />);
 
         const topbar = document.querySelector(".topbar");
         const navMenu = topbar.querySelector(".topbar-nav");
@@ -160,7 +154,7 @@ describe("scripts: topbar - NavMenu", () => {
     });
 
     it("does not close .topbar-nav-menu when a mousedown event is fired inside .topbar-link-container", () => {
-        ReactDOM.render(<Topbar navOpen />, div);
+        render(<Topbar navOpen />);
 
         const topbar = document.querySelector(".topbar");
         const navMenu = topbar.querySelector(".topbar-nav");
@@ -177,7 +171,7 @@ describe("scripts: topbar - NavMenu", () => {
     });
 
     it("closes .topbar-nav-menu if a user clicks .close-topbar-nav", () => {
-        ReactDOM.render(<Topbar navOpen />, div);
+        render(<Topbar navOpen />);
 
         const topbar = document.querySelector(".topbar");
         const navMenu = topbar.querySelector(".topbar-nav");
