@@ -232,6 +232,18 @@
         }
     }
 
+    &.btn-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    // Vertically space out multiple block buttons
+    &.btn-block + .btn-block {
+        margin-top: @base-margin-sm;
+    }
+
     // Specificity overrides
     &input[type="submit"],
     &input[type="reset"],
