@@ -16,7 +16,7 @@ exports[`Utilities; SearchBox renders with mobile prop 1`] = `
       type="text"
     />
     <button
-      className="btn btn-icon btn-small"
+      className="btn btn-icon btn-sm"
       onClick={[Function]}
       type="button"
     >
