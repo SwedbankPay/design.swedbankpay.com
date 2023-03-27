@@ -38,7 +38,7 @@ const ButtonOptions = idAddOn => (
                         }
                     },
                     {
-                        name: "Call to Action",
+                        name: "CTA (XL)",
                         value: {
                             size: "cta"
                         }
@@ -203,8 +203,7 @@ export const overviewButtons = {
                                 name: "Loading",
                                 value: {
                                     loader: true,
-                                    loading: true,
-                                    disabled: true
+                                    loading: true
                                 }
                             },
                             {
