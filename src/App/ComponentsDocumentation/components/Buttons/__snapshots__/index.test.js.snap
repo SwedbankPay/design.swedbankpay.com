@@ -181,15 +181,13 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
             aria-disabled={null}
             aria-label={null}
             aria-pressed={null}
-            className="btn btn-link justify-content-center"
+            className="btn btn-tertiary justify-content-center"
             role={null}
             tabIndex={null}
             title={null}
             type="button"
           >
-            <span>
-              Cancel
-            </span>
+            Cancel
           </button>
         </div>
       </div>
@@ -279,15 +277,13 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
             aria-disabled={null}
             aria-label={null}
             aria-pressed={null}
-            className="btn btn-link justify-content-center"
+            className="btn btn-tertiary justify-content-center"
             role={null}
             tabIndex={null}
             title={null}
             type="button"
           >
-            <span>
-              Cancel
-            </span>
+            Cancel
           </button>
         </div>
       </div>
@@ -314,7 +310,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
             aria-disabled={null}
             aria-label={null}
             aria-pressed={null}
-            className="btn btn-executive-destructive justify-content-center"
+            className="btn btn-tertiary justify-content-center"
             role={null}
             tabIndex={null}
             title={null}
@@ -327,15 +323,13 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
             aria-disabled={null}
             aria-label={null}
             aria-pressed={null}
-            className="btn btn-link justify-content-center"
+            className="btn btn-tertiary justify-content-center"
             role={null}
             tabIndex={null}
             title={null}
             type="button"
           >
-            <span>
-              Cancel
-            </span>
+            Cancel
           </button>
         </div>
       </div>
@@ -428,7 +422,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
             aria-disabled={null}
             aria-label={null}
             aria-pressed={null}
-            className="btn btn-guiding-destructive justify-content-center"
+            className="btn btn-tertiary justify-content-center"
             role={null}
             tabIndex={null}
             title={null}
@@ -465,7 +459,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
             aria-disabled={null}
             aria-label={null}
             aria-pressed={null}
-            className="btn btn-executive-destructive justify-content-center"
+            className="btn btn-tertiary justify-content-center"
             role={null}
             tabIndex={null}
             title={null}
@@ -478,7 +472,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
             aria-disabled={null}
             aria-label={null}
             aria-pressed={null}
-            className="btn btn-guiding-destructive justify-content-center"
+            className="btn btn-tertiary justify-content-center"
             role={null}
             tabIndex={null}
             title={null}
@@ -491,15 +485,13 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
             aria-disabled={null}
             aria-label={null}
             aria-pressed={null}
-            className="btn btn-link-destructive justify-content-center"
+            className="btn btn-tertiary justify-content-center"
             role={null}
             tabIndex={null}
             title={null}
             type="button"
           >
-            <span>
-              Cancel
-            </span>
+            Cancel
           </button>
         </div>
       </div>
@@ -672,7 +664,7 @@ exports[`Documentation: Buttons Content guidelines renders 1`] = `
             aria-disabled={null}
             aria-label={null}
             aria-pressed={null}
-            className="btn btn-guiding-destructive justify-content-center w-50"
+            className="btn btn-tertiary justify-content-center w-50"
             role={null}
             tabIndex={null}
             title={null}
@@ -786,9 +778,7 @@ exports[`Documentation: Buttons Content guidelines renders 1`] = `
                   <fieldset
                     className="checkbox-group"
                   >
-                    <legend>
-                      
-                    </legend>
+                    <legend />
                     <div
                       className="checkbox"
                     >
@@ -943,66 +933,14 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
         aria-disabled={null}
         aria-label={null}
         aria-pressed={null}
-        className="btn btn-link"
+        className="btn btn-tertiary"
         disabled={true}
         role={null}
         tabIndex={null}
         title={null}
         type="button"
       >
-        <span>
-          Link
-        </span>
-      </button>
-      
-
-      <button
-        active={null}
-        aria-disabled={null}
-        aria-label={null}
-        aria-pressed={null}
-        className="btn btn-executive-destructive"
-        disabled={true}
-        role={null}
-        tabIndex={null}
-        title={null}
-        type="button"
-      >
-        Destructive Executive
-      </button>
-      
-
-      <button
-        active={null}
-        aria-disabled={null}
-        aria-label={null}
-        aria-pressed={null}
-        className="btn btn-guiding-destructive"
-        disabled={true}
-        role={null}
-        tabIndex={null}
-        title={null}
-        type="button"
-      >
-        Guiding destructive
-      </button>
-      
-
-      <button
-        active={null}
-        aria-disabled={null}
-        aria-label={null}
-        aria-pressed={null}
-        className="btn btn-link-destructive"
-        disabled={true}
-        role={null}
-        tabIndex={null}
-        title={null}
-        type="button"
-      >
-        <span>
-          Destructive link
-        </span>
+        Tertiary
       </button>
       
 
@@ -1052,15 +990,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
                 3
                 
 
-                4
-                
-
-                5
-                
-
-                6
-                
-
               </pre>
             </td>
             <td
@@ -1073,16 +1002,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
                 &lt;button class="btn btn-secondary" disabled type="button"&gt;Secondary&lt;/button&gt;
                 
 
-                &lt;button class="btn btn-link" disabled type="button"&gt;&lt;span&gt;Link&lt;/span&gt;&lt;/button&gt;
-                
-
-                &lt;button class="btn btn-executive-destructive" disabled type="button"&gt;Destructive Executive&lt;/button&gt;
-                
-
-                &lt;button class="btn btn-guiding-destructive" disabled type="button"&gt;Guiding destructive&lt;/button&gt;
-                
-
-                &lt;button class="btn btn-link-destructive" disabled type="button"&gt;&lt;span&gt;Destructive link&lt;/span&gt;&lt;/button&gt;
+                &lt;button class="btn btn-tertiary" disabled type="button"&gt;Tertiary&lt;/button&gt;
                 
 
               </pre>
@@ -1238,7 +1158,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
         aria-label={null}
         aria-pressed={null}
         className="btn btn-primary loading"
-        disabled={true}
         role={null}
         tabIndex={null}
         title={null}
@@ -1254,7 +1173,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
         aria-label={null}
         aria-pressed={null}
         className="btn btn-secondary loading"
-        disabled={true}
         role={null}
         tabIndex={null}
         title={null}
@@ -1269,66 +1187,13 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
         aria-disabled={null}
         aria-label={null}
         aria-pressed={null}
-        className="btn btn-link loading"
-        disabled={true}
+        className="btn btn-tertiary loading"
         role={null}
         tabIndex={null}
         title={null}
         type="button"
       >
-        <span>
-          Link
-        </span>
-      </button>
-      
-
-      <button
-        active={null}
-        aria-disabled={null}
-        aria-label={null}
-        aria-pressed={null}
-        className="btn btn-executive-destructive loading"
-        disabled={true}
-        role={null}
-        tabIndex={null}
-        title={null}
-        type="button"
-      >
-        Destructive executive
-      </button>
-      
-
-      <button
-        active={null}
-        aria-disabled={null}
-        aria-label={null}
-        aria-pressed={null}
-        className="btn btn-guiding-destructive loading"
-        disabled={true}
-        role={null}
-        tabIndex={null}
-        title={null}
-        type="button"
-      >
-        Destructive guiding
-      </button>
-      
-
-      <button
-        active={null}
-        aria-disabled={null}
-        aria-label={null}
-        aria-pressed={null}
-        className="btn btn-link-destructive loading"
-        disabled={true}
-        role={null}
-        tabIndex={null}
-        title={null}
-        type="button"
-      >
-        <span>
-          Destructive link
-        </span>
+        Tertiary
       </button>
       
 
@@ -1378,37 +1243,19 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
                 3
                 
 
-                4
-                
-
-                5
-                
-
-                6
-                
-
               </pre>
             </td>
             <td
               className="code-view-code"
             >
               <pre>
-                &lt;button class="btn btn-primary loading" disabled type="button"&gt;Primary&lt;/button&gt;
+                &lt;button class="btn btn-primary loading" type="button"&gt;Primary&lt;/button&gt;
                 
 
-                &lt;button class="btn btn-secondary loading" disabled type="button"&gt;Secondary&lt;/button&gt;
+                &lt;button class="btn btn-secondary loading" type="button"&gt;Secondary&lt;/button&gt;
                 
 
-                &lt;button class="btn btn-link loading" disabled type="button"&gt;&lt;span&gt;Link&lt;/span&gt;&lt;/button&gt;
-                
-
-                &lt;button class="btn btn-executive-destructive loading" disabled type="button"&gt;Destructive executive&lt;/button&gt;
-                
-
-                &lt;button class="btn btn-guiding-destructive loading" disabled type="button"&gt;Destructive guiding&lt;/button&gt;
-                
-
-                &lt;button class="btn btn-link-destructive loading" disabled type="button"&gt;&lt;span&gt;Destructive link&lt;/span&gt;&lt;/button&gt;
+                &lt;button class="btn btn-tertiary loading" type="button"&gt;Tertiary&lt;/button&gt;
                 
 
               </pre>
@@ -1610,13 +1457,13 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
                 &lt;button class="btn btn-primary" type="button"&gt;Button&lt;/button&gt;
                 
 
-                &lt;input type="button" class="btn btn-primary" value="Input"&gt;
+                &lt;input class="btn btn-primary" type="button" value="Input"&gt;
                 
 
-                &lt;input type="submit" class="btn btn-primary" value="Submit"&gt;
+                &lt;input class="btn btn-primary" type="submit" value="Submit"&gt;
                 
 
-                &lt;input type="reset" class="btn btn-primary" value="Reset"&gt;
+                &lt;input class="btn btn-primary" type="reset" value="Reset"&gt;
                 
 
               </pre>
