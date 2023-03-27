@@ -137,9 +137,9 @@ const SearchBox = ({ className, mobile }) => {
                     <div className="form-group">
                         <input type="text" ref={inputFieldText} onKeyDown={e => arrowNavigation(e)} className="form-control" id="search-box-mobile" placeholder="Search" onChange={e => setSearchTerm(e.target.value)}/>
                         {expanded ?
-                            <button onClick={() => clearSearchTerm()} className="btn btn-secondary btn-xs"><i className="material-icons">close</i></button>
+                            <button onClick={() => clearSearchTerm()} className="btn btn-icon btn-small"><i className="material-icons">close</i></button>
                             :
-                            <button onClick={() => activateSearch()} className="btn btn-primary btn-xs" type="button"><i className="material-icons">search</i></button>}
+                            <button onClick={() => activateSearch()} className="btn btn-icon btn-small" type="button"><i className="material-icons">search</i></button>}
                     </div>
                     {expanded && searchTerm !== "" && <div className="result-box">
                         {results()}
@@ -164,9 +164,9 @@ const SearchBox = ({ className, mobile }) => {
                                 </button>
                             </div>
                             {searchTerm !== "" ?
-                                <button className="btn btn-link" type="button" onClick={() => clearSearchTerm()}><i className="material-icons">close</i></button>
+                                <button className="btn btn-icon" type="button" onClick={() => clearSearchTerm()}><i className="material-icons">close</i></button>
                                 :
-                                <button onClick={() => activateSearch()} className="btn btn-link" type="button"><i className="material-icons">search</i></button>}
+                                <button onClick={() => activateSearch()} className="btn btn-icon" type="button"><i className="material-icons">search</i></button>}
                         </div>
                     </div>
                     {searchTerm !== "" && <div className="result-box">
