@@ -38,9 +38,9 @@ const ButtonOptions = idAddOn => (
                         }
                     },
                     {
-                        name: "CTA (XL)",
+                        name: "Extra large",
                         value: {
-                            size: "cta"
+                            size: "xl"
                         }
                     },
                     {
