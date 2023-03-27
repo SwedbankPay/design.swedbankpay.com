@@ -227,7 +227,7 @@ export const overviewButtons = {
         },
         {
             tab: "Icon only",
-            component: <ButtonComponent type="icon" icon="cloud" size="icon-xl" iconOnly={true}/>,
+            component: <ButtonComponent type="icon" icon="cloud" size="lg" iconOnly={true}/>,
             title: "Icon only button",
             options: IconButtonOptions(),
             description: <p>
