@@ -34,7 +34,7 @@ const ButtonOptions = idAddOn => (
                     {
                         name: "Default (Large)",
                         value: {
-                            size: "large"
+                            size: "lg"
                         }
                     },
                     {
@@ -46,13 +46,13 @@ const ButtonOptions = idAddOn => (
                     {
                         name: "Small",
                         value: {
-                            size: "small"
+                            size: "sm"
                         }
                     },
                     {
                         name: "Extra small",
                         value: {
-                            size: "xsmall"
+                            size: "xs"
                         }
                     }
                 ]
@@ -98,25 +98,19 @@ const IconButtonOptions = idAddOn => (
                     {
                         name: "Default (Large)",
                         value: {
-                            size: "large"
-                        }
-                    },
-                    {
-                        name: "Call to Action",
-                        value: {
-                            size: "cta"
+                            size: "lg"
                         }
                     },
                     {
                         name: "Small",
                         value: {
-                            size: "small"
+                            size: "sm"
                         }
                     },
                     {
                         name: "Extra small",
                         value: {
-                            size: "xsmall"
+                            size: "xs"
                         }
                     }
                 ]
@@ -151,7 +145,83 @@ export const overviewButtons = {
         {
             tab: "Tertiary",
             component: <ButtonComponent type="tertiary" label="Tertiary button" />,
-            options: ButtonOptions(),
+            options: {
+                radio: [
+                    {
+                        id: "icon_radio",
+                        title: "Icon",
+                        values: [
+                            {
+                                name: "None"
+                            },
+                            {
+                                name: "Before",
+                                value: {
+                                    icon: "cloud"
+                                }
+                            },
+                            {
+                                name: "After",
+                                value: {
+                                    icon: "keyboard_arrow_down",
+                                    iconAfter: true
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        id: "size_radio",
+                        title: "Sizes",
+                        values: [
+                            {
+                                name: "Default (Large)",
+                                value: {
+                                    size: "lg"
+                                }
+                            },
+                            {
+                                name: "Small",
+                                value: {
+                                    size: "sm"
+                                }
+                            },
+                            {
+                                name: "Extra small",
+                                value: {
+                                    size: "xs"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        id: "state_modifiers",
+                        title: "State modifiers",
+                        values: [
+                            {
+                                name: "Enabled",
+                                value: {
+                                    loader: false,
+                                    loading: false,
+                                    disabled: false
+                                }
+                            },
+                            {
+                                name: "Loading",
+                                value: {
+                                    loader: true,
+                                    loading: true
+                                }
+                            },
+                            {
+                                name: "Disabled",
+                                value: {
+                                    disabled: true
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
             title: "Tertiary button",
             description: "A lot of information: Destructive, random, all other purposes"
         },
