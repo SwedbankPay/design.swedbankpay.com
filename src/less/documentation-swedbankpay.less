@@ -1852,6 +1852,22 @@
     #dropdown-doc .component-preview-content .dropdown .dropdown-menu {
         z-index: calc(@dropdown-z-index + 3);
     }
+
+    #button-utilities {
+        .button-utilities-container {
+            margin-top: 1rem;
+
+            .utility-container {
+                display: grid;
+                grid: auto-flow / 1fr 3fr;
+
+                .code-tags {
+                    height: fit-content;
+                    width: fit-content;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: @screen-xs-max) {
