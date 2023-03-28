@@ -1,15 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "@testing-library/react";
+import "@testing-library/jest-dom";
 
 import validation from "./index";
 
 describe("scripts: validation", () => {
-    const div = document.createElement("div");
-
-    document.body.appendChild(div);
-    afterEach(() => {
-        ReactDOM.unmountComponentAtNode(div);
-    });
 
     const Email = props => (
         <form>
@@ -57,7 +52,7 @@ describe("scripts: validation", () => {
         });
 
         it("returns a single object when one ID is passed", () => {
-            ReactDOM.render(<FormValidation id="demo-validation" />, div);
+            render(<FormValidation id="demo-validation" />);
 
             const returnVal = validation.init("demo-validation");
 
@@ -67,12 +62,11 @@ describe("scripts: validation", () => {
         });
 
         it("returns an array of objects when more than one dialog is initialized", () => {
-            ReactDOM.render(
+            render(
                 <>
                     <FormValidation id="demo-validation-1" />
                     <FormValidation id="demo-validation-2" />
-                </>
-                , div);
+                </>);
 
             const returnVal = validation.init();
 
@@ -86,102 +80,102 @@ describe("scripts: validation", () => {
     });
 
     it("does nothing if no value is given", () => {
-        ReactDOM.render(<Email />, div);
+        render(<Email />);
 
         const formElement = document.querySelector(".form-group");
         const inputElement = formElement.querySelector("#validation-email");
 
         expect(formElement).toBeTruthy();
         expect(inputElement).toBeTruthy();
-        expect(formElement.classList.contains("has-error")).toBeFalsy();
-        expect(formElement.classList.contains("has-success")).toBeFalsy();
+        expect(formElement).not.toHaveClass("has-error");
+        expect(formElement).not.toHaveClass("has-success");
 
         validation.init();
 
         inputElement.dispatchEvent(new Event("blur"));
 
-        expect(formElement.classList.contains("has-error")).toBeFalsy();
-        expect(formElement.classList.contains("has-success")).toBeFalsy();
+        expect(formElement).not.toHaveClass("has-error");
+        expect(formElement).not.toHaveClass("has-success");
     });
 
     it("tests given email with default email regex and adds class has-success to form-group when it succeeds", () => {
-        ReactDOM.render(<Email />, div);
+        render(<Email />);
 
         const formElement = document.querySelector(".form-group");
         const inputElement = formElement.querySelector("#validation-email");
 
         expect(formElement).toBeTruthy();
         expect(inputElement).toBeTruthy();
-        expect(formElement.classList.contains("has-error")).toBeFalsy();
-        expect(formElement.classList.contains("has-success")).toBeFalsy();
+        expect(formElement).not.toHaveClass("has-error");
+        expect(formElement).not.toHaveClass("has-success");
 
         validation.init();
 
         inputElement.value = "correct.email@address.com";
         inputElement.dispatchEvent(new Event("blur"));
 
-        expect(formElement.classList.contains("has-success")).toBeTruthy();
+        expect(formElement).toHaveClass("has-success");
     });
 
     it("tests given email with default email regex and adds class has-error to form-group when it fails", () => {
-        ReactDOM.render(<Email />, div);
+        render(<Email />);
 
         const formElement = document.querySelector(".form-group");
         const inputElement = formElement.querySelector("#validation-email");
 
         expect(formElement).toBeTruthy();
         expect(inputElement).toBeTruthy();
-        expect(formElement.classList.contains("has-error")).toBeFalsy();
-        expect(formElement.classList.contains("has-success")).toBeFalsy();
+        expect(formElement).not.toHaveClass("has-error");
+        expect(formElement).not.toHaveClass("has-success");
 
         validation.init();
 
         inputElement.value = "incorrect email address";
         inputElement.dispatchEvent(new Event("blur"));
 
-        expect(formElement.classList.contains("has-error")).toBeTruthy();
+        expect(formElement).toHaveClass("has-error");
     });
 
     it("tests given email with pattern and adds class has-success to form-group when it succeeds", () => {
-        ReactDOM.render(<Email pattern="[^@]+@[^\.]+\..+"/>, div);
+        render(<Email pattern="[^@]+@[^\.]+\..+"/>);
 
         const formElement = document.querySelector(".form-group");
         const inputElement = formElement.querySelector("#validation-email");
 
         expect(formElement).toBeTruthy();
         expect(inputElement).toBeTruthy();
-        expect(formElement.classList.contains("has-error")).toBeFalsy();
-        expect(formElement.classList.contains("has-success")).toBeFalsy();
+        expect(formElement).not.toHaveClass("has-error");
+        expect(formElement).not.toHaveClass("has-success");
 
         validation.init();
 
         inputElement.value = "correct.email@address.com";
         inputElement.dispatchEvent(new Event("blur"));
 
-        expect(formElement.classList.contains("has-success")).toBeTruthy();
+        expect(formElement).toHaveClass("has-success");
     });
 
     it("tests given email with pattern and adds class has-error to form-group when it fails", () => {
-        ReactDOM.render(<Email pattern="[^@]+@[^\.]+\..+" />, div);
+        render(<Email pattern="[^@]+@[^\.]+\..+" />);
 
         const formElement = document.querySelector(".form-group");
         const inputElement = formElement.querySelector("#validation-email");
 
         expect(formElement).toBeTruthy();
         expect(inputElement).toBeTruthy();
-        expect(formElement.classList.contains("has-error")).toBeFalsy();
-        expect(formElement.classList.contains("has-success")).toBeFalsy();
+        expect(formElement).not.toHaveClass("has-error");
+        expect(formElement).not.toHaveClass("has-success");
 
         validation.init();
 
         inputElement.value = "incorrect email address";
         inputElement.dispatchEvent(new Event("blur"));
 
-        expect(formElement.classList.contains("has-error")).toBeTruthy();
+        expect(formElement).toHaveClass("has-error");
     });
 
     it("triggers validation when input event is triggered after initial validation state is set as has-success", () => {
-        ReactDOM.render(<Email />, div);
+        render(<Email />);
 
         const formElement = document.querySelector(".form-group");
         const inputElement = formElement.querySelector("#validation-email");
@@ -193,15 +187,15 @@ describe("scripts: validation", () => {
 
         inputElement.value = "correct.email@address.com";
         inputElement.dispatchEvent(new Event("blur"));
-        expect(formElement.classList.contains("has-success")).toBeTruthy();
+        expect(formElement).toHaveClass("has-success");
 
         inputElement.dispatchEvent(new Event("input"));
 
-        expect(formElement.classList.contains("has-success")).toBeTruthy();
+        expect(formElement).toHaveClass("has-success");
     });
 
     it("triggers validation when input event is triggered after initial validation state is set as has-error", () => {
-        ReactDOM.render(<Email />, div);
+        render(<Email />);
 
         const formElement = document.querySelector(".form-group");
         const inputElement = formElement.querySelector("#validation-email");
@@ -213,15 +207,15 @@ describe("scripts: validation", () => {
 
         inputElement.value = "incorrect mail address";
         inputElement.dispatchEvent(new Event("blur"));
-        expect(formElement.classList.contains("has-error")).toBeTruthy();
+        expect(formElement).toHaveClass("has-error");
 
         inputElement.dispatchEvent(new Event("input"));
 
-        expect(formElement.classList.contains("has-error")).toBeTruthy();
+        expect(formElement).toHaveClass("has-error");
     });
 
     it("does not trigger validation when input event is triggered if parent format element does not contain has-success or has-error", () => {
-        ReactDOM.render(<Email />, div);
+        render(<Email />);
 
         const formElement = document.querySelector(".form-group");
         const inputElement = formElement.querySelector("#validation-email");
@@ -233,12 +227,12 @@ describe("scripts: validation", () => {
 
         inputElement.value = "incorrect mail address";
         inputElement.dispatchEvent(new Event("input"));
-        expect(formElement.classList.contains("has-success")).toBeFalsy();
-        expect(formElement.classList.contains("has-error")).toBeFalsy();
+        expect(formElement).not.toHaveClass("has-success");
+        expect(formElement).not.toHaveClass("has-error");
     });
 
     it("adds an asterisk to required input element labels if label exists", () => {
-        ReactDOM.render(<Email required />, div);
+        render(<Email required />);
 
         const formElement = document.querySelector(".form-group");
         const inputElement = formElement.querySelector("#validation-email");
@@ -254,7 +248,7 @@ describe("scripts: validation", () => {
     });
 
     it("disables the form button if it exists and the form contains a required field with invalid values", () => {
-        ReactDOM.render(<FormValidation submitBtn />, div);
+        render(<FormValidation submitBtn />);
 
         const form = document.querySelector("form");
         const submitButton = form.querySelector(".btn");
@@ -264,11 +258,11 @@ describe("scripts: validation", () => {
 
         validation.init();
 
-        expect(submitButton.hasAttribute("disabled")).toBeTruthy();
+        expect(submitButton).toHaveAttribute("disabled");
     });
 
     it("removes disabled attribute from button if the required fields of a form contains valid values", () => {
-        ReactDOM.render(<FormValidation submitBtn />, div);
+        render(<FormValidation submitBtn />);
 
         const form = document.querySelector("form");
         const inputElement = form.querySelector("#validation-email");
@@ -280,16 +274,16 @@ describe("scripts: validation", () => {
 
         validation.init();
 
-        expect(submitButton.hasAttribute("disabled")).toBeTruthy();
+        expect(submitButton).toHaveAttribute("disabled");
 
         inputElement.value = "valid.email@test.com";
         form.dispatchEvent(new Event("input"));
 
-        expect(submitButton.hasAttribute("disabled")).toBeFalsy();
+        expect(submitButton).toBeEnabled();
     });
 
     it("adds disabled attribute to button if a required field in a form contains invalid values", () => {
-        ReactDOM.render(<FormValidation submitBtn />, div);
+        render(<FormValidation submitBtn />);
 
         const form = document.querySelector("form");
         const inputElement = form.querySelector("#validation-email");
@@ -301,16 +295,16 @@ describe("scripts: validation", () => {
 
         validation.init();
 
-        expect(submitButton.hasAttribute("disabled")).toBeTruthy();
+        expect(submitButton).toHaveAttribute("disabled");
 
         inputElement.value = "invalid email";
         form.dispatchEvent(new Event("input"));
 
-        expect(submitButton.hasAttribute("disabled")).toBeTruthy();
+        expect(submitButton).toHaveAttribute("disabled");
     });
 
     it("checks all forms before submitting value and prevents default if one of the required fields are invalid", () => {
-        ReactDOM.render(<FormValidation submitBtn />, div);
+        render(<FormValidation submitBtn />);
         Event.prototype.preventDefault = jest.fn();
 
         const form = document.querySelector("form");
@@ -324,7 +318,7 @@ describe("scripts: validation", () => {
         validation.init();
         inputElement.value = "valid.emest.com";
 
-        expect(submitButton.hasAttribute("disabled")).toBeTruthy();
+        expect(submitButton).toHaveAttribute("disabled");
 
         form.dispatchEvent(new Event("submit"));
 
@@ -332,7 +326,7 @@ describe("scripts: validation", () => {
     });
 
     it("checks all forms before submitting value and does not prevent default if all the required fields are valid", () => {
-        ReactDOM.render(<FormValidation submitBtn />, div);
+        render(<FormValidation submitBtn />);
         Event.prototype.preventDefault = jest.fn();
 
         const form = document.querySelector("form");
@@ -346,7 +340,7 @@ describe("scripts: validation", () => {
         validation.init();
         inputElement.value = "valid.email@test.com";
 
-        expect(submitButton.hasAttribute("disabled")).toBeTruthy();
+        expect(submitButton).toHaveAttribute("disabled");
 
         form.dispatchEvent(new Event("submit"));
 

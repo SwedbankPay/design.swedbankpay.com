@@ -1,11 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "@testing-library/react";
 
 import tabs from "./index";
 import TabsComponent from "@components/Tabs";
 
 describe("scripts: tabs", () => {
-    const div = document.createElement("div");
     const items = ["item1", "item2", "item3"];
 
     const NoActiveTab = ({ id, tabsOpen }) => (
@@ -21,13 +20,6 @@ describe("scripts: tabs", () => {
         </div>
     );
 
-    document.body.appendChild(div);
-
-    beforeEach(() => {
-        jest.resetModules();
-        ReactDOM.unmountComponentAtNode(div);
-    });
-
     it("is defined", () => {
         expect(tabs).toBeTruthy();
     });
@@ -39,7 +31,7 @@ describe("scripts: tabs", () => {
         });
 
         it("returns one object when an ID is passed", () => {
-            ReactDOM.render(<NoActiveTab id="demo-tabs-1" />, div);
+            render(<NoActiveTab id="demo-tabs-1" />);
 
             const renderedTab = document.querySelector(".tabs");
 
@@ -52,12 +44,11 @@ describe("scripts: tabs", () => {
         });
 
         it("returns an array of objects when more than one tabs is initialized", () => {
-            ReactDOM.render(
+            render(
                 <>
                     <NoActiveTab />
                     <NoActiveTab />
-                </>
-                , div);
+                </>);
 
             const renderedTabs = document.querySelectorAll(".tabs");
 
@@ -79,7 +70,7 @@ describe("scripts: tabs", () => {
     });
 
     it("sets an active item if none has been provided", () => {
-        ReactDOM.render(<NoActiveTab items={items} />, div);
+        render(<NoActiveTab items={items} />);
 
         const renderedTab = document.querySelector(".tabs");
         let activeTab = renderedTab.querySelector(".active");
@@ -95,7 +86,7 @@ describe("scripts: tabs", () => {
     });
 
     it("does not reassign active item if one exists", () => {
-        ReactDOM.render(<TabsComponent items={items} />, div);
+        render(<TabsComponent items={items} />);
         tabs.init();
 
         const renderedTab = document.querySelector(".tabs");
@@ -110,7 +101,7 @@ describe("scripts: tabs", () => {
     });
 
     it("prevents default if you click an active tab", () => {
-        ReactDOM.render(<NoActiveTab items={items} />, div);
+        render(<NoActiveTab items={items} />);
         tabs.init();
         Event.prototype.preventDefault = jest.fn();
 

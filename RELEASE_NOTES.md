@@ -1,6 +1,6 @@
 # Changelog
 
-## [10.7.4] - 14.03.2023
+## [10.7.5] - 24.03.2023
 
 ## Component changes
 -   Button component
@@ -25,4 +25,3 @@
 -   Button documentation
     Removed:
     -   Destructive button documentation
-

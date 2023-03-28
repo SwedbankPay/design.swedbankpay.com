@@ -1,17 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "@testing-library/react";
 
 import sidebar from "./index";
 // import SELECTORS from "./selectors";
 
 describe("scripts: sidebar", () => {
-    const div = document.createElement("div");
-
-    beforeEach(() => {
-        ReactDOM.unmountComponentAtNode(div);
-    });
-
-    document.body.appendChild(div);
 
     const Sidebar = ({ id }) => (
         <div id={ id } className="sidebar">
@@ -116,7 +109,7 @@ describe("scripts: sidebar", () => {
         });
 
         it("returns one object when an ID is passed", () => {
-            ReactDOM.render(<Sidebar id="sidebar-1" />, div);
+            render(<Sidebar id="sidebar-1" />);
 
             const renderedSidebar = document.getElementById("sidebar-1");
 
@@ -132,7 +125,7 @@ describe("scripts: sidebar", () => {
 
             console.warn = jest.fn();
 
-            ReactDOM.render(<Sidebar id="sidebar-2" />, div);
+            render(<Sidebar id="sidebar-2" />);
 
             expect(sidebar.init(id)).toBeNull();
             expect(console.warn).toHaveBeenCalledWith(`sidebar.init: No sidebar with id ${id} found`);
@@ -140,13 +133,11 @@ describe("scripts: sidebar", () => {
 
         it("returns array of sidebars when no id is provided", () => {
 
-            ReactDOM.render(
+            render(
                 <>
                     <Sidebar id="sidebar-2" />
                     <Sidebar id="sidebar-3" />
-                </>,
-                div
-            );
+                </>);
 
             expect(sidebar.init().length).toEqual(2);
         });

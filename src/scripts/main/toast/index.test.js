@@ -1,4 +1,7 @@
-import ReactDOM from "react-dom";
+import React from "react";
+import { render } from "@testing-library/react";
+import "@testing-library/jest-dom";
+
 import toast from "./index";
 
 describe("scripts: toast", () => {
@@ -6,12 +9,7 @@ describe("scripts: toast", () => {
 
     beforeEach(() => {
         jest.runAllTimers();
-        ReactDOM.unmountComponentAtNode(div);
     });
-
-    const div = document.createElement("div");
-
-    document.body.appendChild(div);
 
     it("is defined", () => {
         expect(toast).toBeDefined();
