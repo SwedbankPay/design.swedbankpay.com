@@ -289,3 +289,34 @@ export const overviewButtons = {
         }
     ]
 };
+
+export const buttonUtilClasses = [
+    {
+        tag: "btn-group",
+        description: "Using two or more buttons combined. Adds internal spacing."
+    },
+    {
+        tag: "btn-block",
+        description: "Button will use the full width of its parent container."
+    },
+    {
+        tag: "btn-xl",
+        description: "Button size extra large"
+    },
+    {
+        tag: "btn-lg",
+        description: "Button size large"
+    },
+    {
+        tag: "btn-sm",
+        description: "Button size small"
+    },
+    {
+        tag: "btn-xs",
+        description: "Button size extra small"
+    },
+    {
+        tag: "loading",
+        description: "Button will get a spinning loader."
+    }
+];
