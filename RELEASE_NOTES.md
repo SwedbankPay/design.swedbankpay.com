@@ -25,3 +25,6 @@
 -   Button documentation
     Removed:
     -   Destructive button documentation
+
+    Added:
+    -   Button specific util class overview
