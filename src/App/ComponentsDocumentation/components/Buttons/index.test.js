@@ -33,21 +33,6 @@ describe("Documentation: Buttons", () => {
         });
     });
 
-    describe("Destructive button", () => {
-        it("is defined", () => {
-            expect(DestructiveButton).toBeDefined();
-        });
-
-        it.skip("renders", () => {
-            const componentForSnap = renderer.create(<BrowserRouter>
-                <DestructiveButton />
-            </BrowserRouter>
-            );
-
-            expect(componentForSnap.toJSON()).toMatchSnapshot();
-        });
-    });
-
     describe("Content guidelines", () => {
         it("is defined", () => {
             expect(ContentGuidelines).toBeDefined();

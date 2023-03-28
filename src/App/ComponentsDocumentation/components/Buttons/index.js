@@ -7,8 +7,7 @@ import CodeTags from "@components/CodeTags";
 import Dropdown from "@components/Dropdown";
 import CheckboxComponent from "@components/FormComponents/Checkbox";
 
-import { overviewButtons, destructiveButtons } from "./constants";
-import { Link } from "react-router-dom";
+import { overviewButtons } from "./constants";
 
 const basename = process.env.basename;
 
@@ -17,61 +16,6 @@ const Overview = () => (
         <h2 id="overview">Button variants</h2>
         <p>There are three different sizes of buttons to choose from: xsmall, small and large. Our button variants can also be customized with icons next to the label to clarify the action. </p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewButtons} codeFigure />
-    </section>
-);
-
-const DestructiveButton = () => (
-    <section>
-        <h2 id="destructive-button">Destructive button</h2>
-        <p>
-            Only use warning buttons for actions with serious destructive consequences that cannot be easily recovered or undone by a user.
-            For example, permanently deleting an account.
-        </p>
-        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={destructiveButtons} codeFigure />
-
-        <h3>How to use destructive buttons</h3>
-
-        <div className="row">
-            <div className="col-lg-6 col-sm-12">
-                <div className="slab slab-plain slab-border-success pb-4">
-                    <h4 className="mb-3 mt-0">Do</h4>
-                    <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" src={`${basename}img/documentation/buttons/dos-guiding.png`} alt="A destructive button within a payment flow, with a guiding destructive button that reads Cancel payment."/>
-                    </div>
-                </div>
-                <p>Use the Guiding Destructive Buttons to initiate a destructive action.</p>
-            </div>
-            <div className="col-lg-6 col-sm-12">
-                <div className="slab slab-plain slab-border-error pb-4">
-                    <h4>{"Don't"}</h4>
-                    <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" src={`${basename}img/documentation/buttons/donts-executive.png`} alt="Destructive button within a payment flow, with an executive destructive button that reads Cancel."/>
-                    </div>
-                </div>
-                <p>Avoid using the Executive Destructive Buttons to initiate a destructive action.</p>
-            </div>
-        </div>
-
-        <div className="row mt-2">
-            <div className="col-lg-6 col-sm-12">
-                <div className="slab slab-plain slab-border-success pb-4">
-                    <h4>Do</h4>
-                    <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" src={`${basename}img/documentation/buttons/dos.png`} alt="Multiple destructive buttons in a payment flow. The guiding destructive button reads Cancel payment and leads to a second step with an executive destructive button that reads, Yes, cancel payment process." />
-                    </div>
-                </div>
-                <p>Use the Executive Destructive Buttons in a contained space as a final destructive call to action.</p>
-            </div>
-            <div className="col-lg-6 col-sm-12">
-                <div className="slab slab-plain slab-border-error pb-4">
-                    <h4>Don&apos;t</h4>
-                    <div className="d-flex justify-content-center mt-4 mb-4">
-                        <img className="img-fluid" src={`${basename}img/documentation/buttons/donts.png`} alt="Multiple destructive buttons in a payment flow. An executive destructive button reads Cancel and leads to a second step with another executive destructive button that also reads Cancel." />
-                    </div>
-                </div>
-                <p>Avoid using multiple Executive Destructive Buttons in the same user flow.</p>
-            </div>
-        </div>
     </section>
 );
 
@@ -119,7 +63,7 @@ const ContentGuidelines = () => (
                 <div className="slab slab-plain slab-border-success pb-4">
                     <h4 className="mb-3 mt-0">Do</h4>
                     <div className="button-group flex-column align-items-center justify-content-center mt-4 mb-4">
-                        <ButtonComponent className="justify-content-center w-50" type="guiding-destructive" label="Delete" icon="delete"/>
+                        <ButtonComponent className="justify-content-center w-50" type="tertiary" label="Delete" icon="delete"/>
                         <ButtonComponent className="justify-content-center w-50" type="secondary" label="Edit" icon="edit"/>
                     </div>
                 </div>
@@ -175,7 +119,7 @@ const CombiningButtons = () => (
                     <div className="flex-column button-group mt-4 ">
                         <ButtonComponent className="justify-content-center" type="primary" label="Primary action"/>
                         <ButtonComponent className="justify-content-center" type="secondary" label="Secondary action"/>
-                        <ButtonComponent className="justify-content-center" type="link" label="Cancel"/>
+                        <ButtonComponent className="justify-content-center" type="tertiary" label="Cancel"/>
                     </div>
                 </div>
                 <p>Place buttons in hierarchal correct order and combine different kinds of buttons.</p>
@@ -197,7 +141,7 @@ const CombiningButtons = () => (
                     <h4 className="mb-3 mt-0">Do</h4>
                     <div className="flex-column button-group mt-4">
                         <ButtonComponent className="justify-content-center" type="primary" label="Primary action"/>
-                        <ButtonComponent className="justify-content-center" type="link" label="Cancel"/>
+                        <ButtonComponent className="justify-content-center" type="tertiary" label="Cancel"/>
                     </div>
                 </div>
                 <p>Use the Link button as a discrete option to cancel.</p>
@@ -206,8 +150,8 @@ const CombiningButtons = () => (
                 <div className="slab slab-plain slab-border-success pb-5">
                     <h4 className="mb-3 mt-0">Do</h4>
                     <div className="flex-column button-group mt-4 ">
-                        <ButtonComponent className="justify-content-center" type="executive-destructive" label="Executive destructive action"/>
-                        <ButtonComponent className="justify-content-center" type="link" label="Cancel"/>
+                        <ButtonComponent className="justify-content-center" type="tertiary" label="Executive destructive action"/>
+                        <ButtonComponent className="justify-content-center" type="tertiary" label="Cancel"/>
                     </div>
                 </div>
                 <p>Combine Executive destructive buttons with normal Link buttons.</p>
@@ -231,7 +175,7 @@ const CombiningButtons = () => (
                     <h4 className="mb-3 mt-0">Don&apos;t</h4>
                     <div className="flex-column button-group mt-4 ">
                         <ButtonComponent className="justify-content-center" type="primary" label="Primary action"/>
-                        <ButtonComponent className="justify-content-center" type="guiding-destructive" label="Destructive guiding action"/>
+                        <ButtonComponent className="justify-content-center" type="tertiary" label="Destructive guiding action"/>
                     </div>
                 </div>
                 <p>Don&apos;t combine Primary buttons with Destructive buttons.</p>
@@ -242,9 +186,9 @@ const CombiningButtons = () => (
                 <div className="slab slab-plain slab-border-error pb-5">
                     <h4 className="mb-3 mt-0">Don&apos;t</h4>
                     <div className="flex-column button-group mt-4 ">
-                        <ButtonComponent className="justify-content-center" type="executive-destructive" label="Executive destructive action"/>
-                        <ButtonComponent className="justify-content-center" type="guiding-destructive" label="Destructive guiding action"/>
-                        <ButtonComponent className="justify-content-center" type="link-destructive" label="Cancel"/>
+                        <ButtonComponent className="justify-content-center" type="tertiary" label="Executive destructive action"/>
+                        <ButtonComponent className="justify-content-center" type="tertiary" label="Destructive guiding action"/>
+                        <ButtonComponent className="justify-content-center" type="tertiary" label="Cancel"/>
                     </div>
                 </div>
                 <p>Don&apos;t use and combine Destructive buttons the same way as normal buttons.</p>
@@ -273,11 +217,7 @@ const DeveloperDocumentation = () => (
             <div className="button-group">{"\n"}
                 <ButtonComponent disabled type="primary" label="Primary" />{"\n"}
                 <ButtonComponent disabled type="secondary" label="Secondary" />{"\n"}
-                <ButtonComponent disabled type="link" label="Link" />{"\n"}
-                <ButtonComponent disabled type="executive-destructive" label="Destructive Executive" />{"\n"}
-                <ButtonComponent disabled type="guiding-destructive" label="Guiding destructive" />{"\n"}
-                <ButtonComponent disabled type="link-destructive" label="Destructive link" />{"\n"}
-
+                <ButtonComponent disabled type="tertiary" label="Tertiary" />{"\n"}
             </div>
         </ComponentPreview>
         <h4>Disabled with <CodeTags type="primary" code={"<a>"}/> tag</h4>
@@ -293,13 +233,9 @@ const DeveloperDocumentation = () => (
         <p>Use the loading state to show users their action is processing by adding the <CodeTags type="primary" code={".loading"}/> class to the <CodeTags type="primary" code={"<button>"}/> element, and the <CodeTags type="primary" code={"disabled"}/> attribute.</p>
         <ComponentPreview language="html" showCasePanel codeFigure removeOuterTag>
             <div className="button-group">{"\n"}
-                <ButtonComponent disabled loading type="primary" label="Primary" />{"\n"}
-                <ButtonComponent disabled loading type="secondary" label="Secondary" />{"\n"}
-                <ButtonComponent disabled loading type="link" label="Link" />{"\n"}
-                <ButtonComponent disabled loading type="executive-destructive" label="Destructive executive" />{"\n"}
-                <ButtonComponent disabled loading type="guiding-destructive" label="Destructive guiding" />{"\n"}
-                <ButtonComponent disabled loading type="link-destructive" label="Destructive link" />{"\n"}
-
+                <ButtonComponent loading type="primary" label="Primary" />{"\n"}
+                <ButtonComponent loading type="secondary" label="Secondary" />{"\n"}
+                <ButtonComponent loading type="tertiary" label="Tertiary" />{"\n"}
             </div>
         </ComponentPreview>
 
@@ -328,7 +264,6 @@ const Buttons = () => (
         Buttons communicate actions that users can take. Buttons are typically placed throughout your UI, in places like: Dialogs, Modals, Forms, Cards and Toolbars.
         </p>
         <Overview />
-        <DestructiveButton />
         <ContentGuidelines />
         <CombiningButtons />
         <DeveloperDocumentation />
@@ -338,4 +273,4 @@ const Buttons = () => (
 export default Buttons;
 
 /* for testing */
-export { Overview, DestructiveButton, ContentGuidelines, CombiningButtons, DeveloperDocumentation };
+export { Overview, ContentGuidelines, CombiningButtons, DeveloperDocumentation };
