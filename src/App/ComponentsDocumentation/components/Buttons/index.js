@@ -2,10 +2,9 @@ import React from "react";
 
 import { ComponentPreview, DocContainer } from "@docutils";
 import ButtonComponent from "@components/Button";
-import Alert from "@components/Alert";
 import CodeTags from "@components/CodeTags";
 
-import { overviewButtons } from "./constants";
+import { overviewButtons, buttonUtilClasses } from "./constants";
 
 const Overview = () => (
     <section>
@@ -58,12 +57,16 @@ const DeveloperDocumentation = () => (
     </section>
 );
 
-const Properties = () => (
-    <section>
-        <h2 id="developer-documentation">Component properties</h2>
-        <div className="col-12">
-            <span>Some thing</span>
-            <span>Some explaination</span>
+const UtilityClasses = () => (
+    <section id="button-utilities">
+        <h2 id="utility-classes">Utility classes</h2>
+        <p>Button specific utility classes</p>
+        <div className="col-12 button-utilities-container">
+            {buttonUtilClasses.map(({ tag, description }, i) => <div key={i} className="utility-container">
+                <CodeTags type="primary" code={tag}/>
+                <p>{description}</p>
+            </div>
+            )}
         </div>
     </section>
 );
@@ -76,7 +79,7 @@ const Buttons = () => (
         <Overview />
         <CombiningButtons />
         <DeveloperDocumentation />
-        <Properties/>
+        <UtilityClasses/>
     </DocContainer>
 );
 
