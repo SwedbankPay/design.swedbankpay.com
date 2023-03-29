@@ -41,3 +41,6 @@
     -   Destructive button documentation
 -   Identity Color documentation
 -   Typography - headers  & font-sizes & line-height
+
+    Added:
+    -   Button specific util class overview
