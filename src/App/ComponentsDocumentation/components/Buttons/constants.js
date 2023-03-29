@@ -1,6 +1,5 @@
 import React from "react";
 import ButtonComponent from "@components/Button";
-import { Link } from "react-router-dom";
 
 const ButtonOptions = idAddOn => (
     {
