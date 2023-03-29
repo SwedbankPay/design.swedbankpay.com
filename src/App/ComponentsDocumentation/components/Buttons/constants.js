@@ -32,15 +32,15 @@ const ButtonOptions = idAddOn => (
                 title: "Sizes",
                 values: [
                     {
-                        name: "Default (Large)",
-                        value: {
-                            size: "lg"
-                        }
-                    },
-                    {
                         name: "Extra large",
                         value: {
                             size: "xl"
+                        }
+                    },
+                    {
+                        name: "Large (Default)",
+                        value: {
+                            size: "lg"
                         }
                     },
                     {
@@ -125,14 +125,14 @@ export const overviewButtons = {
     elements: [
         {
             tab: "Primary",
-            component: <ButtonComponent type="primary" label="Primary button" />,
+            component: <ButtonComponent size="xl" type="primary" label="Primary button" />,
             options: ButtonOptions(),
             title: "Primary button",
             description: "Use a primary button as the main call to action on a page. We strongly advice you to not use more than one primary button on each page."
         },
         {
             tab: "Secondary",
-            component: <ButtonComponent type="secondary" label="Secondary button" />,
+            component: <ButtonComponent size="xl" type="secondary" label="Secondary button" />,
             options: ButtonOptions(),
             title: "Secondary button",
             description: "Secondary buttons are used for offering non-primary actions to users i.e. Cancel, Reset, Next section, etc."
