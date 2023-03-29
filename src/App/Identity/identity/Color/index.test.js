@@ -62,18 +62,6 @@ describe("Core: Color", () => {
         });
     });
 
-    describe("BrownScaleColors", () => {
-        it("is defined", () => {
-            expect(BrownScaleColors).toBeDefined();
-        });
-
-        it("renders", () => {
-            const wrapper = renderer.create(<BrownScaleColors />);
-
-            expect(wrapper.toJSON()).toMatchSnapshot();
-        });
-    });
-
     describe("SystemColors", () => {
         it("is defined", () => {
             expect(SystemColors).toBeDefined();

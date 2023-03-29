@@ -72,7 +72,7 @@
 
                     a {
                         color: @brand-secondary-dark-2;
-                        font-size: (@base-font-size * 0.85);
+                        font-size: calc(var(--base-font-size) * 0.85);
 
                         &:hover {
                             color: darken(@brand-secondary-dark-2, 10%);
@@ -191,7 +191,7 @@
                         li {
                             a {
                                 display: flex;
-                                font-size: @base-font-size;
+                                font-size: var(--base-font-size);
                                 color: @brand-secondary;
                                 padding: 0.5rem 1rem 0.5rem 0.75rem;
 
@@ -242,7 +242,7 @@
 
             i {
                 margin-right: 0;
-                font-size: (@base-font-size * 2.25);
+                font-size: calc(var(--base-font-size) * 2.25);
                 line-height: 1.1;
             }
         }

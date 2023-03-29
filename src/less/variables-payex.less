@@ -61,14 +61,6 @@
 @brand-info:                                #3E6AB6;
 @brand-info-light:                          #E8EFF9;
 
-/* Brand fonts */
-@brand-headline:                            "Futura PT W08 Demi", sans-serif;
-@brand-black:                               "Futura PT W08 Medium", sans-serif;
-@brand-default:                             "Futura PT W08 Book", sans-serif;
-@brand-monofont:                            monospace;
-
-@payex-material-icons:                      "Material Icons Outlined";
-
 /* Checkbox */
 @checkbox-checked-color:                    @brand-secondary;
 
@@ -126,18 +118,18 @@
 
 html,
 body {
-    font-family: @brand-default;
+    font-family: var(--brand-default);
 
     p {
         &.lead {
-            font-family: @brand-black;
-            font-weight: 500;
+            font-family: var(--brand-default);
+            font-weight: var(--font-weight-bold);
         }
     }
 }
 
 .material-icons {
-    font-family: @payex-material-icons;
+    font-family: var(--payex-material-icons);
 
     &.alert-icon {
         font-family: "Material icons";
@@ -181,4 +173,11 @@ body {
     --btn-disabled-text: var(--text-disabled);
     --btn-bg-disabled: rgba(212, 196, 188, 0.3);
     --btn-active-color: var(--payex-light-blue);
+
+    // Typographie
+
+    /* Brand fonts */
+    --brand-default: "Futura PT W08 Book", sans-serif;
+    --brand-monofont: monospace;
+    --payex-material-icons: "Material Icons Outlined";
 }

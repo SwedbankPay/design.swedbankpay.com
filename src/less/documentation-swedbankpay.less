@@ -43,7 +43,6 @@
         & > div:not(.sp-stack) {
             font-size: initial;
             line-height: 1.5;
-            font-family: @brand-default;
             color: @brand-secondary;
         }
     }
@@ -390,7 +389,6 @@
         h1:first-of-type {
             margin-top: 1rem;
             margin-bottom: 1rem;
-            font-family: @brand-black;
         }
 
         &.utilities-page {
@@ -419,13 +417,14 @@
 
                     .dg-title-small {
                         font-size: 2.5rem;
-                        font-family: @brand-headline;
-                        font-weight: bold;
+                        font-family: var(--brand-headline);
+                        font-weight: var(--font-weight-bold);
                     }
 
                     .dg-title-big {
                         font-size: 3.5rem;
-                        font-family: @brand-black;
+                        font-family: var(--brand-headline);
+                        font-weight: var(--font-weight-bold);
                     }
                 }
 
@@ -437,14 +436,14 @@
                         padding: 0.5rem;
                         background-color: #fff3d5;
                         font-size: 1.25rem;
-                        font-family: @brand-headline;
+                        font-family: var(--brand-headline);
                     }
                 }
 
                 .front-page-lead {
                     max-width: 38.75rem;
                     font-size: 1.25rem;
-                    font-family: @font-stack;
+                    font-family: var(--font-stack);
                     line-height: 1.75rem;
                 }
 
@@ -498,7 +497,7 @@
 
                     .dg-changlelog-title {
                         font-size: 1.5rem;
-                        font-family: @brand-headline;
+                        font-family: var(--brand-headline);
 
                         .dg-changelog-divider {
                             width: 3.75rem;
@@ -694,7 +693,7 @@
         h1 {
             color: @text-color;
             margin: 0;
-            font-weight: @font-weight-normal;
+            font-weight: var(--font-weight-normal);
             line-height: 80px;
         }
     }
@@ -723,7 +722,7 @@
                 text-decoration: none;
 
                 &.active {
-                    font-weight: @font-weight-bold;
+                    font-weight: var(--font-weight-bold);
                 }
             }
 
@@ -778,7 +777,7 @@
             &.active {
                 .nav-heading {
                     > span {
-                        font-weight: @font-weight-bold;
+                        font-weight: var(--font-weight-bold);
                     }
 
                     i {
@@ -812,7 +811,7 @@
             color: @text-color;
             padding-left: @base-padding-xl;
             margin: 0;
-            font-weight: @font-weight-normal;
+            font-weight: var(--font-weight-normal);
             line-height: 80px;
         }
     }
@@ -848,7 +847,7 @@
 
                 &.active {
                     border-left: 2px solid @brand-primary;
-                    font-weight: @font-weight-bold;
+                    font-weight: var(--font-weight-bold);
                     padding-left: calc(@base-padding - 1px);
                 }
 
@@ -1160,47 +1159,20 @@
         }
 
         .swedbank-headline {
-            font-family: @brand-headline;
+            font-family: var(--brand-headline);
         }
 
         .arial {
-            font-family: @brand-default;
+            font-family: var(--brand-default);
         }
 
         .akkurat-mono {
-            font-family: @brand-monofont;
+            font-family: var(--brand-monofont);
         }
     }
 
-    .typography-table {
-        &.mobile {
-            h1,
-            .h1 {
-                font-size: 1.75rem;
-                line-height: 2rem;
-            }
-
-            h2,
-            .h2 {
-                font-size: 1.25rem;
-                line-height: 1.5rem;
-            }
-
-            h3,
-            .h3 {
-                font-size: 1.125rem;
-                line-height: 1.5rem;
-            }
-
-            .hero {
-                font-size: 2.5rem;
-                line-height: 3rem;
-            }
-        }
-
-        td {
-            height: 6.125rem;
-        }
+    .typography-table td {
+        height: 6.125rem;
     }
 
     .color-contrast-section {
