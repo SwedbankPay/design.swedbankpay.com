@@ -76,20 +76,6 @@ fieldset {
             resize: none;
         }
 
-        select,
-        .form-group,
-        input + input,
-        .hint-text-expander > button,
-        .hint-text-expander > p {
-            color: @brand-secondary-light-3;
-        }
-
-        .hint-text-expander {
-            button {
-                pointer-events: none;
-            }
-        }
-
         .checkbox input[type="checkbox"] {
             + label:after {
                 background-color: @input-bg-disabled;
@@ -168,7 +154,7 @@ legend {
 .form-control {
     display: block;
     width: 100%;
-    font-size: @base-font-size;
+    //font-size: @base-font-size;
     line-height: @input-line-height;
     color: @input-color;
 
@@ -211,24 +197,16 @@ legend {
 }
 
 .form-control {
-    height: @input-form-control-height;
-    padding: 0 0.75rem;
-    background-color: @input-bg;
-    background-clip: padding-box;
-    border: solid @input-border-color;
-    border-width: @input-border-width;
-    border-bottom-color: @medium-brown;
-    border-radius: 2px 2px 0 0;
-    box-shadow: none;
+    height: 56px;
+    padding: 12px 16px;
+    background-color: var(--white);
+    border: 1px solid var(--input-border-color);
+    border-radius: 8px;
 
-    .form-control-focus(@brand-secondary);
-    .placeholder(@brand-secondary-light-2);
-
-    &::placeholder {
-        color: @brand-secondary-light-2; /* Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526. */
-        font-weight: @font-weight-normal;
-        letter-spacing: -0.1px;
+    input::placeholder {
+        color: var(--text-muted);
     }
+
 
     /* HTML5 says that controls under a fieldset > legend:first-child wont be
      * disabled if the fieldset is disabled. Due to implementation difficulty, we
@@ -293,16 +271,8 @@ legend {
 
     .input-group .form-control:not(:last-child) {
         border-right: none;
-    }
-
-    .form-control:focus-within {
-        outline: 2px auto @brand-secondary;
-        border-color: transparent;
-    }
-
-    .form-control:focus-visible {
-        outline: 2px solid @brand-secondary;
-        border-radius: 2px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
     }
 
     &.disabled,
@@ -310,11 +280,11 @@ legend {
         color: @brand-secondary-light-3;
 
         .input-group-addon {
-            border-color: @brand-secondary-light-3;
-            color: @brand-secondary-light-3;
+            border-color: var(--text-disabled);
+            color: var(--text-disabled);
 
             i {
-                color: @brand-secondary-light-3;
+                color: var(--text-disabled);
             }
         }
 
@@ -323,16 +293,48 @@ legend {
             pointer-events: none;
         }
 
-        .hint-text,
-        .hint-text-expander > button,
-        .hint-text-expander > p {
-            color: @brand-secondary-light-3;
+        input::placeholder {
+            color: var(--text-disabled);
         }
 
-        .hint-text-expander {
-            button {
-                pointer-events: none;
-            }
+        &.form-control {
+            border-color: var(--text-disabled);
+        }
+
+        label {
+            color: var(--text-disabled);
+        }
+    }
+
+    &.has-error {
+        .form-control {
+            border: 2px solid var(--brand-error);
+        }
+
+        .postfix {
+            border: 2px solid var(--brand-error);
+        }
+
+        i {
+            color: var(--brand-error);
+        }
+
+        .help-block {
+            color: var(--brand-error);
+        }
+    }
+
+    &.has-success {
+        .form-control {
+            border: 2px solid var(--brand-turquoise);
+        }
+
+        .postfix {
+            border: 2px solid var(--brand-turquoise);
+        }
+
+        i {
+            color: var(--brand-turquoise);
         }
     }
 }

@@ -25,14 +25,10 @@ const InputGroup = ({
     postfixValue,
     helpBlock,
     errorMessage,
-    expandingHintTitle,
-    expandingHintContent,
-    expanderId,
-    optional,
     postfix,
     boxSize,
-    hintTextId,
-    expandingHintId
+    placeholder,
+    success
 }) => {
     const attrs = {
         type: type || null,
@@ -45,7 +41,7 @@ const InputGroup = ({
         required: required || null,
         pattern: pattern ? "" : null,
         "data-validate": validate ? "" : null,
-        "aria-describedby": helpBlock || expandingHintTitle ? `${helpBlock ? hintTextId : ""}${expandingHintTitle ? ` ${expandingHintId}` : ""}` : null
+        placeholder: placeholder || null
     };
 
     const inputGrpClasses = classnames(
@@ -59,8 +55,7 @@ const InputGroup = ({
         disabled: disabled || null,
         readOnly: readOnly || null,
         required: required || null,
-        id: id || null,
-        "aria-describedby": helpBlock || expandingHintTitle ? `${helpBlock ? hintTextId : ""}${expandingHintTitle ? ` ${expandingHintId}` : ""}` : null
+        id: id || null
     };
 
     const formGroupClasses = classnames(
@@ -68,13 +63,13 @@ const InputGroup = ({
         disabled ? "disabled" : null,
         boxSize ? boxSize : null,
         errorMessage ? "has-error" : null,
+        success ? "has-success" : null,
         className ? className : null
     );
 
     return (
         <div className={formGroupClasses}>{"\n"}
-            {label ? <label htmlFor={id}>{label}{optional && " (optional)"}
-            </label> : null}{label ? "\n" : null}
+            {label ? <label className="h3" htmlFor={id}>{label}</label> : null}{label ? "\n" : null}
             {prefixValue || postfixValue ?
                 <div className={inputGrpClasses}>{"\n"}
                     {prefixValue ? <Addon type={addOnType} value={prefixValue} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
@@ -113,15 +108,6 @@ const InputGroup = ({
             }
             {errorMessage && <><div className="help-block"><i className="material-icons">warning</i>{errorMessage}</div>{"\n"}</>}
             {helpBlock && <><p id="hint-text" className="hint-text">{helpBlock}</p>{"\n"}</>}
-            {expandingHintTitle &&
-            <div id={expanderId && "hint-text-expander"} className="hint-text-expander">{"\n"}
-                <button type="button" aria-controls={expanderId} aria-expanded={false}>{"\n"}
-                    <span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}{"\n"}
-                </button>{"\n"}
-                <p id={expanderId} className="content" aria-hidden={true}>{expandingHintContent
-                    ? expandingHintContent
-                    : "This information is less important and only a minority of users will need it or the text is very long. In this case; both."}</p>{"\n"}
-            </div>}
         </div>
     );
 };

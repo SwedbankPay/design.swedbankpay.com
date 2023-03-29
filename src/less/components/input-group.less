@@ -64,7 +64,7 @@
     .input-group-addon {
         display: flex;
         align-items: center;
-        padding: @input-padding-y @input-padding-x;
+        padding: 12px 16px;
         margin-bottom: 0;
         font-size: @base-font-size;
         font-weight: @font-weight-normal;
@@ -73,15 +73,14 @@
         background-color: @white;
         text-align: center;
         white-space: nowrap;
-        border: solid @input-border-color;
-        border-width: @input-border-width;
-        border-bottom-color: @input-addon-color;
-        border-radius: 2px 2px 0 0;
+        border: 1px solid var(--input-border-color);
+        border-radius: 8px 0 0 8px;
         border-top-right-radius: 0;
         border-right: none;
 
         + input {
             border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
             border-left: none;
         }
 
@@ -92,8 +91,8 @@
 
         &.postfix {
             border-left: transparent;
-            border-right: 1px solid @input-border-color;
-            border-radius: 0 2px 2px 0;
+            border-right: 1px solid var(--input-border-color);
+            border-radius: 0 8px 8px 0;
             pointer-events: none;
         }
     }
