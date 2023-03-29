@@ -86,4 +86,4 @@ const Buttons = () => (
 export default Buttons;
 
 /* for testing */
-export { Overview, CombiningButtons, DeveloperDocumentation };
+export { Overview, UtilityClasses, CombiningButtons, DeveloperDocumentation };
