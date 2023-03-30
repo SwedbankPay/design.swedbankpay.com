@@ -16,6 +16,7 @@ exports[`Component: Select ContentGuidelines renders 1`] = `
       
 
       <label
+        className="h3"
         htmlFor="content-guidelines-example"
       >
         Label
@@ -23,7 +24,6 @@ exports[`Component: Select ContentGuidelines renders 1`] = `
       
 
       <select
-        aria-describedby="select-content-guidelines-example"
         className="form-control"
         defaultValue=""
         disabled={null}
@@ -298,6 +298,7 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
         
 
         <label
+          className="h3"
           htmlFor="disabled-state-example"
         >
           Label
@@ -305,7 +306,6 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
         
 
         <select
-          aria-describedby={null}
           className="form-control"
           defaultValue=""
           disabled={true}
@@ -384,7 +384,7 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
                   &lt;div class="form-group disabled"&gt;
                   
 
-                      &lt;label for="disabled-state-example"&gt;Label&lt;/label&gt;
+                      &lt;label class="h3" for="disabled-state-example"&gt;Label&lt;/label&gt;
                   
 
                       &lt;select class="form-control" disabled id="disabled-state-example"&gt;

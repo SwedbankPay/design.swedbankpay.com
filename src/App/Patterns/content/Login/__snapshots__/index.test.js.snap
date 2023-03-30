@@ -2157,6 +2157,7 @@ exports[`Forms: index renders 1`] = `
           
 
           <label
+            className="h3"
             htmlFor="login-email-example"
           >
             Email
@@ -2164,7 +2165,6 @@ exports[`Forms: index renders 1`] = `
           
 
           <input
-            aria-describedby={null}
             autoComplete={null}
             className="form-control"
             data-validate={null}
@@ -2172,6 +2172,7 @@ exports[`Forms: index renders 1`] = `
             disabled={null}
             id="login-email-example"
             pattern={null}
+            placeholder={null}
             readOnly={null}
             required={null}
             type="email"
@@ -2185,6 +2186,7 @@ exports[`Forms: index renders 1`] = `
           
 
           <label
+            className="h3"
             htmlFor="login-password-example"
           >
             Password
@@ -2192,7 +2194,6 @@ exports[`Forms: index renders 1`] = `
           
 
           <input
-            aria-describedby={null}
             autoComplete={null}
             className="form-control"
             data-validate={null}
@@ -2200,6 +2201,7 @@ exports[`Forms: index renders 1`] = `
             disabled={null}
             id="login-password-example"
             pattern={null}
+            placeholder={null}
             readOnly={null}
             required={null}
             type="password"
@@ -2435,6 +2437,7 @@ exports[`Forms: index renders 1`] = `
               
 
               <label
+                className="h3"
                 htmlFor="guideline-email-example"
               >
                 Required input field
@@ -2442,7 +2445,6 @@ exports[`Forms: index renders 1`] = `
               
 
               <input
-                aria-describedby={null}
                 autoComplete={null}
                 className="form-control"
                 data-validate={null}
@@ -2450,6 +2452,7 @@ exports[`Forms: index renders 1`] = `
                 disabled={null}
                 id="guideline-email-example"
                 pattern={null}
+                placeholder="Placeholder text"
                 readOnly={null}
                 required={null}
                 type="email"
@@ -2463,6 +2466,7 @@ exports[`Forms: index renders 1`] = `
               
 
               <label
+                className="h3"
                 htmlFor="guideline-password-example"
               >
                 Required input field
@@ -2470,7 +2474,6 @@ exports[`Forms: index renders 1`] = `
               
 
               <input
-                aria-describedby={null}
                 autoComplete={null}
                 className="form-control"
                 data-validate={null}
@@ -2478,6 +2481,7 @@ exports[`Forms: index renders 1`] = `
                 disabled={null}
                 id="guideline-password-example"
                 pattern={null}
+                placeholder={null}
                 readOnly={null}
                 required={null}
                 type="password"
@@ -2663,6 +2667,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <label
+                  className="h3"
                   htmlFor="login-client-side"
                 >
                   Email
@@ -2670,7 +2675,6 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby={null}
                   autoComplete={null}
                   className="form-control"
                   data-validate={null}
@@ -2678,6 +2682,7 @@ exports[`Forms: index renders 1`] = `
                   disabled={null}
                   id="login-client-side"
                   pattern={null}
+                  placeholder={null}
                   readOnly={null}
                   required={null}
                   type="email"
@@ -2687,11 +2692,6 @@ exports[`Forms: index renders 1`] = `
                 <div
                   className="help-block"
                 >
-                  <i
-                    className="material-icons"
-                  >
-                    warning
-                  </i>
                   Email is required
                 </div>
                 
