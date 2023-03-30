@@ -12,29 +12,6 @@
     width: 100%;
     min-height: 2rem;
 
-    &:focus-visible {
-        outline: 2px solid @brand-secondary;
-        border-radius: 2px;
-    }
-
-    &:focus-within {
-        outline: 2px solid @brand-secondary;
-
-        .input-group-addon,
-        .form-control {
-            outline: none;
-            border-width: 1px 1px 2px;
-            border-color: transparent;
-            transition: none;
-        }
-
-        .postfix {
-            border-right: 2px solid @black;
-            border-left: transparent;
-            border-top-left-radius: 0;
-        }
-    }
-
     > .btn {
         border-radius: 0;
 
@@ -58,6 +35,18 @@
 
         + .form-control {
             margin-left: -1px;
+        }
+    }
+
+    &:focus-within {
+        .input-group-addon {
+            border-width: 2px;
+            border-color: var(--input-border-focus-color);
+
+            &.postfix {
+                border-right-width: 2px;
+                border-color: var(--input-border-focus-color);
+            }
         }
     }
 
@@ -91,7 +80,9 @@
 
         &.postfix {
             border-left: transparent;
-            border-right: 1px solid var(--input-border-color);
+            border-right-color: var(--input-border-color);
+            border-right-width: 1px;
+            border-right-style: solid;
             border-radius: 0 8px 8px 0;
             pointer-events: none;
         }

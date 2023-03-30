@@ -173,18 +173,6 @@ legend {
     padding: @input-padding-y 0;
 }
 
-.form-control-focus(@color: @input-border-focus) {
-    @color-rgba: rgba(red(@color), green(@color), blue(@color), 1);
-
-    &:focus {
-        // outline: 0;
-        color: @text-color;
-        outline-color: @color-rgba;
-        box-shadow: none;
-        background-color: @white;
-    }
-}
-
 .placeholder(@color) {
     // Firefox
     &::-moz-placeholder {
@@ -205,6 +193,12 @@ legend {
 
     input::placeholder {
         color: var(--text-muted);
+    }
+
+    &:focus-within {
+        outline: none;
+        border-width: 2px;
+        border-color: var(--input-border-focus-color);
     }
 
 
@@ -308,11 +302,11 @@ legend {
 
     &.has-error {
         .form-control {
-            border: 2px solid var(--brand-error);
+            border-color: var(--brand-error);
         }
 
         .postfix {
-            border: 2px solid var(--brand-error);
+            border-color: var(--brand-error);
         }
 
         i {
@@ -322,19 +316,31 @@ legend {
         .help-block {
             color: var(--brand-error);
         }
+
+        &:focus-within {
+            .form-control {
+                border-color: var(--input-border-focus-color);
+            }
+        }
     }
 
     &.has-success {
         .form-control {
-            border: 2px solid var(--brand-turquoise);
+            border-color: var(--input-border-color-success);
         }
 
         .postfix {
-            border: 2px solid var(--brand-turquoise);
+            border-color: var(--input-border-color-success);
         }
 
         i {
-            color: var(--brand-turquoise);
+            color: var(--input-border-color-success);
+        }
+
+        &:focus-within {
+            .form-control {
+                border-color: var(--input-border-focus-color);
+            }
         }
     }
 }
@@ -374,59 +380,6 @@ legend {
 
 .hint-text {
     color: @medium-brown;
-}
-
-.hint-text-expander {
-    display: block;
-    margin-top: 0.25rem;
-
-    button {
-        all: unset;
-        display: flex;
-        color: @brand-accent-links;
-        padding-right: 0.25rem;
-        border: 1px solid transparent;
-        cursor: pointer;
-        font-size: 0.875rem;
-        line-height: 1rem;
-
-        .arrow {
-            margin-right: 0.5rem;
-            font-size: 0.875rem;
-            align-self: center;
-            transition: transform 0.5s ease;
-        }
-
-        &:focus {
-            border-radius: 0.125rem;
-        }
-
-        &:focus-visible {
-            outline: 2px solid @brand-secondary;
-            border-radius: 2px;
-        }
-
-        &.content-expanded {
-            .arrow {
-                transform: rotate(180deg);
-                transition: transform 0.3s ease;
-            }
-
-            ~ .content {
-                visibility: visible;
-                height: auto;
-            }
-        }
-    }
-
-    .content {
-        visibility: hidden;
-        height: 0;
-        margin: 0;
-        padding: 0;
-        color: @medium-brown;
-        font-size: 0.875rem;
-    }
 }
 
 textarea {
