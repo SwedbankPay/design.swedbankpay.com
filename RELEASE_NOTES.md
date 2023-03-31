@@ -3,7 +3,7 @@
 ## [10.7.5] - 24.03.2023
 
 ## Component changes
--   we are using CSS Custom Properties (aka CSS variables)
+-   We are progressively migrating to CSS Custom Properties (aka CSS variables)
 -   Button component
     Removed: (Breaking changes in form of deleting code)
     -   less-functions for creating diff buttons; button-variant, button-default-variant, button-outline-variant, button-link-variant, button-ghost, button-active-state, button-size, button-icon-size, btn-loader-variant
