@@ -6,7 +6,7 @@ export const Addon = ({ type, value, postfix, success, error }) => (
     <>
         { success || error ?
             <>
-                {(success) && <><span className="input-group-addon postfix"><i className="material-icons material-icons-outlined" aria-hidden="true">check_circle</i></span></>}
+                {(success) && <><span className="input-group-addon postfix"><i className="material-icons" aria-hidden="true">check_circle</i></span></>}
                 {(error) && <span className="input-group-addon postfix"><i className="material-icons material-icons-outlined" aria-hidden="true">warning</i></span>}
             </>
             :
