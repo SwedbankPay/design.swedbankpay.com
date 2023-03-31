@@ -79,7 +79,7 @@ const InputGroup = ({
 
     return (
         <div className={formGroupClasses}>{"\n"}
-            {label ? <label className="h3" htmlFor={id}>{label}</label> : null}{label ? "\n" : null}
+            {label ? <label htmlFor={id}>{label}</label> : null}{label ? "\n" : null}
             {prefixValue || postfixValue || error || success ?
                 <div className={inputGrpClasses}>{"\n"}
                     {prefixValue ? <Addon type={addOnType} value={prefixValue} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
