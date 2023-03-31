@@ -11,7 +11,6 @@ import LoginForm from "../../components/LoginForm/index";
 
 import { EditableComponentPreview } from "~/src/App/docutils";
 import { guidelinesElementsList, formsShowCase } from "./constants";
-import { hintTextExpander } from "@src/scripts/main";
 
 const radioOptions = [
     {
@@ -326,22 +325,16 @@ const DeveloperDocumentation = () => (
     </section>
 );
 
-const Forms = () => {
-    useEffect(() => {
-        hintTextExpander.init();
-    });
+const Forms = () => (
 
-    return (
-
-        <DocContainer>
-            <p className="lead">A form is a collection of input components that allows users to provide and submit data.</p>
-            <Overview />
-            <ContentGuidelines />
-            <HowToDesignForms />
-            <DeveloperDocumentation />
-        </DocContainer>
-    );
-};
+    <DocContainer>
+        <p className="lead">A form is a collection of input components that allows users to provide and submit data.</p>
+        <Overview />
+        <ContentGuidelines />
+        <HowToDesignForms />
+        <DeveloperDocumentation />
+    </DocContainer>
+);
 
 export default Forms;
 

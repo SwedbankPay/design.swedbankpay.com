@@ -8,13 +8,6 @@ const InputOptions = () => (
                 title: "Label add on",
                 inputs: [
                     {
-                        id: "optional",
-                        name: "Is optional",
-                        value: {
-                            optional: true
-                        }
-                    },
-                    {
                         id: "hint_text",
                         name: "Hint text",
                         value: {
@@ -22,14 +15,6 @@ const InputOptions = () => (
                             hintTextId: "hint-text-example-id"
                         }
                     },
-                    {
-                        id: "hint_expander",
-                        name: "Hint expander",
-                        value: {
-                            expandingHintTitle: "Expanding hint text",
-                            expanderId: "expander-showcase"
-                        }
-                    }
                 ]
             }
         ],
@@ -73,9 +58,16 @@ const InputOptions = () => (
                         }
                     },
                     {
+                        name: "Success",
+                        value: {
+                            success: true
+                        }
+                    },
+                    {
                         name: "Error",
                         value: {
-                            errorMessage: "Descriptive helpful error message."
+                            errorMessage: "Descriptive helpful error message.",
+                            error: true
                         }
                     },
                     {
@@ -96,44 +88,29 @@ export const inputShowCase = {
     elements: [
         {
             tab: "Input field",
-            component: <InputGroup type="text" label="Label" id="input-showcase-example" hintExpander={true} />,
+            component: <InputGroup placeholder="Placeholder text" type="text" label="Label" id="input-showcase-example" />,
             options: InputOptions(),
             title: "Input field",
             description: <>
-                <p>Use an input field when the expected user input is a single line of text. The default input type is text but it can also be specified as for example Email which will make it automatically validated when submitted or Password which will mask the characters submitted.</p>
-                <p>Input fields can have prefixes or suffixes which can help the user more quickly understand what kind of information that is requested. These can be icons as well as text symbols or currency abbreviations like %, € or kr.</p>
+                <p>Use an input field when the expected user input is a single line of text like name, email or credit card number.</p>
+                <p>Prefix/postfix can be used for faster communication.</p>
 
             </>
         },
         {
             tab: "Text area",
-            component: <InputGroup type="textarea" label="Label" hintExpander={true} />,
+            component: <InputGroup type="textarea" placeholder="Placeholder text" label="Label" />,
             options: {
                 checkbox: [
                     {
                         title: "Label add on",
                         inputs: [
                             {
-                                id: "optional_textarea",
-                                name: "Is optional",
-                                value: {
-                                    optional: true
-                                }
-                            },
-                            {
                                 id: "hint_text_textarea",
                                 name: "Hint text",
                                 value: {
                                     helpBlock: "Hint text",
                                     hintTextId: "hint-text-text-area-example"
-                                }
-                            },
-                            {
-                                id: "hint_expander_textarea",
-                                name: "Hint expander",
-                                value: {
-                                    expandingHintTitle: "Expanding hint text",
-                                    expanderId: "expander-showcase"
                                 }
                             }
                         ]
@@ -151,9 +128,16 @@ export const inputShowCase = {
                                 }
                             },
                             {
+                                name: "Success",
+                                value: {
+                                    success: true
+                                }
+                            },
+                            {
                                 name: "Error",
                                 value: {
-                                    errorMessage: "Descriptive helpful error message."
+                                    errorMessage: "Descriptive helpful error message.",
+                                    error: true
                                 }
                             },
                             {
