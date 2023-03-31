@@ -511,7 +511,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             Do
           </span>
           <div
-            className="form-group has-error"
+            className="form-group"
           >
             
 
@@ -566,7 +566,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             n't
           </span>
           <div
-            className="form-group has-error"
+            className="form-group"
           >
             
 
@@ -766,7 +766,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
       className="showcase-panel"
     >
       <div
-        className="form-group has-error"
+        className="form-group"
       >
         
 
@@ -858,7 +858,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
                 className="code-view-code"
               >
                 <pre>
-                  &lt;div class="form-group has-error"&gt;
+                  &lt;div class="form-group"&gt;
                   
 
                       &lt;label class="h3" for="developer-documentation-error-example"&gt;Input label&lt;/label&gt;

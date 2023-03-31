@@ -1344,7 +1344,7 @@ exports[`Forms: index renders 1`] = `
                 Do
               </span>
               <div
-                className="form-group has-error"
+                className="form-group"
               >
                 
 
@@ -1393,7 +1393,7 @@ exports[`Forms: index renders 1`] = `
                 Don't
               </span>
               <div
-                className="form-group has-error"
+                className="form-group"
               >
                 
 
@@ -1525,7 +1525,7 @@ exports[`Forms: index renders 1`] = `
               className="col-12 col-sm-6 m-auto pt-3"
             >
               <div
-                className="form-group has-error"
+                className="form-group"
               >
                 
 
@@ -1670,7 +1670,7 @@ exports[`Forms: index renders 1`] = `
 
               </div>
               <div
-                className="form-group has-error"
+                className="form-group"
               >
                 
 

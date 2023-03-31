@@ -2662,7 +2662,7 @@ exports[`Forms: index renders 1`] = `
               className="col-sm-6 col-12 m-auto px-0 pt-3"
             >
               <div
-                className="form-group has-error"
+                className="form-group"
               >
                 
 
