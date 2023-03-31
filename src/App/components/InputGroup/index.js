@@ -2,8 +2,17 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-export const Addon = ({ type, value, postfix }) => (
-    <span className={`input-group-addon ${postfix ? "postfix" : ""}`}>{(type === "icon") ? <i className="material-icons material-icons-outlined" aria-hidden="true">{value}</i> : value}</span>
+export const Addon = ({ type, value, postfix, success, error }) => (
+    <>
+        { success || error ?
+            <>
+                {(success) && <><span className="input-group-addon postfix"><i className="material-icons material-icons-outlined" aria-hidden="true">check_circle</i></span></>}
+                {(error) && <span className="input-group-addon postfix"><i className="material-icons material-icons-outlined" aria-hidden="true">warning</i></span>}
+            </>
+            :
+            <span className={`input-group-addon ${postfix ? "postfix" : ""}`}>{(type === "icon") ? <i className="material-icons material-icons-outlined" aria-hidden="true">{value}</i> : value}</span>
+        }
+    </>
 );
 
 const InputGroup = ({
@@ -28,7 +37,8 @@ const InputGroup = ({
     postfix,
     boxSize,
     placeholder,
-    success
+    success,
+    error
 }) => {
     const attrs = {
         type: type || null,
@@ -62,7 +72,7 @@ const InputGroup = ({
         "form-group",
         disabled ? "disabled" : null,
         boxSize ? boxSize : null,
-        errorMessage ? "has-error" : null,
+        error ? "has-error" : null,
         success ? "has-success" : null,
         className ? className : null
     );
@@ -70,7 +80,7 @@ const InputGroup = ({
     return (
         <div className={formGroupClasses}>{"\n"}
             {label ? <label className="h3" htmlFor={id}>{label}</label> : null}{label ? "\n" : null}
-            {prefixValue || postfixValue ?
+            {prefixValue || postfixValue || error || success ?
                 <div className={inputGrpClasses}>{"\n"}
                     {prefixValue ? <Addon type={addOnType} value={prefixValue} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
                     {type === "textarea" ?
@@ -86,7 +96,7 @@ const InputGroup = ({
                             :
                             <>
                                 <input {...attrs} />{"\n\t"}
-                                {postfix ? <Addon type={addOnType} value={postfixValue} disabled={disabled} postfix={postfix} /> : null }{postfix ? "\n" : null}
+                                {postfix || error || success ? <Addon error={error} success={success} type={addOnType} value={postfixValue} disabled={disabled} postfix={postfix} /> : null }{postfix ? "\n" : null}
                             </>}
                     {"\n"}
                 </div>
@@ -123,7 +133,6 @@ InputGroup.propTypes = {
     disabled: PropTypes.bool,
     readOnly: PropTypes.bool,
     label: PropTypes.string,
-    validationState: PropTypes.oneOf(["error", ""]),
     selectOptions: PropTypes.array,
     prefixValue: PropTypes.string,
     addOnType: PropTypes.oneOf(["text", "icon", ""]),
