@@ -28,9 +28,10 @@
         -   this enables new background colors now having enough color contrast with brown-solid text (Turquoise, brown-soft, brown-light, orange)
 -   Typography
     -   h3 font-size increased
-    -   fixed incorrect header font-sizes
+    -   fixed incorrect header font-size
+    -   fixed incorrect header font-weight
     -   removed h6 (code/UI Breaking-change)
-    - converted all .less Typography variables to CSS custom properties (font-families, font-sizes, line-height, weight, ...)
+    - converted all .less Typography variables to CSS custom properties (font-families, font-sizes, line-height, weight, ...) + continue migration of colors to CSS variables
 
 -   normalize.less -> import as first import so every import after that takes precedence
     -   fixes headers font-size, and possible many more things ?
