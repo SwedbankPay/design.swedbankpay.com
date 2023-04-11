@@ -36,3 +36,7 @@
 -   Button documentation
     Removed:
     -   Destructive button documentation
+
+-   Input field documentation
+    Removed:
+    -   Do and donts examples
