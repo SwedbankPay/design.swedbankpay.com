@@ -1,10 +1,9 @@
-import React, { forwardRef, useRef, useEffect } from "react";
+import React, { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
 import InputGroup from "@components/InputGroup";
-import { inputShowCase, contentGuidelines } from "./constants";
-import { hintTextExpander } from "@src/scripts/main";
+import { inputShowCase } from "./constants";
 
 const Overview = () => (
     <section id="input-field-overview">
@@ -13,7 +12,7 @@ const Overview = () => (
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={inputShowCase} codeFigure />
         <h3>When to consider something else</h3>
         <ul className="list list-bullet">
-            <li>If you want users to choose from a list of responses, instead consider <Link to="/components/radio-button">radio buttons</Link>, <Link to="/components/checkbox">checkboxes</Link> or a <Link to="/components/select">select</Link>.</li>
+            <li>If you want users to choose from a list of responses, instead consider <Link to="/components/radio-button">radio buttons</Link>, <Link to="/components/checkbox">checkboxes</Link>, <Link to="/components/dropdown">dropdown</Link> or a <Link to="/components/select">select</Link>.</li>
         </ul>
     </section>
 );
@@ -21,38 +20,47 @@ const Overview = () => (
 const ContentGuidelines = forwardRef((props, ref) => <section ref={ref}>
     <h2 id="content-guidelines">Content guidelines</h2>
 
-    <div className="slab slab-plain h-100 mb-2">
-        <div className="d-flex flex-column align-items-center">
-            <div className="py-3">
-                <InputGroup type="text" label="Label" defaultValue="Input text" helpBlock="Hint text" id="input-guidelines-example"/>
-                <InputGroup type="textarea" label="Label" expandingHintTitle="Expander hint text"/>
+    <section>
+        <ul className="list list-bullet">
+            <li>Clearly label the input field so users know what information they are expected to enter.</li>
+            <li>Use placeholder text sparingly and <b>only</b> if it helps to clarify the purpose of the input field.</li>
+            <li>Provide clear and concise instructions or hints if necessary, either within the input field or nearby by using the hint text.</li>
+            <li>Validate user input in real-time if possible and provide clear feedback if there are errors.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Hint text</h3>
+        <p>Use hint text if information is important and should be permanent even if users are interacting with the component.</p>
+        <div className="slab col-12 justify-content-center d-flex bg-quaternary">
+            <InputGroup label="Personal identification number" helpBlock="YYYYMMDDNNNNN" />
+        </div>
+    </section>
+
+    <section>
+        <h3>Prefix/postfix</h3>
+        <p>Use prefix/postfix for even more effective communication with the user.</p>
+        <div className="slab col-12 justify-content-center d-flex bg-quaternary">
+            <div className="form-group">
+                <InputGroup label="Username" prefixValue="account_circle" addOnType="icon"/>
+                <InputGroup label="Fixed transaction fee" postfixValue="kr" postfix addOnType="text"/>
             </div>
         </div>
-    </div>
+    </section>
 
-    <h3>Label</h3>
-    <p>An input field must have a label that clearly describes the type of input a field requires. </p>
-    <ul className="list list-bullet">
-        <li>When a text field is not required to be filled by the user, label it as “optional”.</li>
-    </ul>
+    <section>
+        <h3>Error message</h3>
+        <p>Strive to have clear communication with the user. Describe the error precise.</p>
+        <div className="slab col-12 justify-content-center d-flex bg-quaternary">
+            <InputGroup label="Email address" error errorMessage="The email address must include '@'" defaultValue="example.email.com" />
+        </div>
 
-    {contentGuidelines.map((section, i) => (
-        <section key={section.lead + i}>
-            <h3>{section.heading}</h3>
-            {section.lead}
-            <div className="row placeholder-guideline">
-                {section.examples.map(({ slabType, description, content },) => (
-                    <div key={description} className="col-lg-6 col-sm-12">
-                        <div className={`slab slab-plain slab-border-${slabType}`}>
-                            <span className="h3 d-block mb-3">Do{slabType === "error" && "n't" }</span>
-                            {content}
-                        </div>
-                        <p className="mb-4">{description}</p>
-                    </div>
-                ))}
-            </div>
-        </section>
-    ))}
+        <h3>Success message</h3>
+        <p>One can also add a successful variant in those cases the users are correctly placing their input.</p>
+        <div className="slab col-12 justify-content-center d-flex bg-quaternary">
+            <InputGroup label="Email address" success defaultValue="example.email@company.com" />
+        </div>
+    </section>
 </section>);
 
 const DeveloperDocumentation = () => (
@@ -61,8 +69,15 @@ const DeveloperDocumentation = () => (
         <section>
             <h3 className="mt-3">Autocomplete</h3>
             <p>Add <CodeTags type="primary" code="autocomplete"/> attributes to input fields when it is possible to make a form easier for users to fill. </p>
+            <p>Please check out <Link to="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete">this site</Link> for full autocomplete specs.</p>
             <ComponentPreview language="html" showCasePanel codeFigure>
-                <InputGroup type="text" label="Name" autoComplete="name" id="developer-documentation-example" />
+                <form>
+                    <fieldset>
+                        <InputGroup type="text" label="Name" id="developer-doc-given-name-example" className="mb-3" autoComplete="name"/>
+                        <InputGroup type="text" label="E-mail" id="developer-doc-given-name-example" className="mb-3" autoComplete="email"/>
+                        <InputGroup type="number" label="Phone number" id="developer-doc-given-name-example" autoComplete="phone"/>
+                    </fieldset>
+                </form>
             </ComponentPreview>
         </section>
 
@@ -70,7 +85,7 @@ const DeveloperDocumentation = () => (
             <h3>Error message</h3>
             <p>To display the error state, add the <CodeTags type="secondary" code={".has-error"} /> class to the parent element, then add the <CodeTags type="secondary" code={".help-block"} /> element as the last child with the error message.</p>
             <ComponentPreview language="html" showCasePanel codeFigure>
-                <InputGroup type="text" label="Input label" defaultValue="Input text" errorMessage="Descriptive helpful error message." id="developer-documentation-error-example"/>
+                <InputGroup label="Input label" defaultValue="Input text" error errorMessage="Descriptive helpful error message." id="developer-documentation-error-example"/>
             </ComponentPreview>
         </section>
 
@@ -85,28 +100,21 @@ const DeveloperDocumentation = () => (
         <section>
             <h3>Javascript methods</h3>
             <p><CodeTags type="secondary" code="dg.validation.init()"/> can be used on a form tag to initialize all fields contained in the form, or you can pass a single field to initialize just that one.</p>
-            <p><CodeTags type="secondary" code="dg.hintTextExpander.init()"/> can be used to initialize all Hint text expanders. Or <CodeTags type="secondary" code="dg.hintTextExpander.init(<hint-expander-id>)"/> to initialize a specific one.</p>
         </section>
     </section>
 );
 
-const InputField = () => {
-    useEffect(() => {
-        hintTextExpander.init();
-    });
+const InputField = () => (
 
-    return (
-
-        <DocContainer>
-            <section id="input-field-doc">
-                <p className="lead">Input fields typically reside in forms and enable the user to interact with and input words, characters or numbers.</p>
-                <Overview/>
-                <ContentGuidelines/>
-                <DeveloperDocumentation />
-            </section>
-        </DocContainer>
-    );
-};
+    <DocContainer>
+        <section id="input-field-doc">
+            <p className="lead">Make it easy for the user to enter the information you want. If they mess up, make sure they know it.</p>
+            <Overview/>
+            <ContentGuidelines/>
+            <DeveloperDocumentation />
+        </section>
+    </DocContainer>
+);
 
 ContentGuidelines.displayName = "ContentGuidelines";
 
