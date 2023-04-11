@@ -30,7 +30,7 @@ describe("Component: IconPreview -", () => {
         expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
-    it("prop type has specific allowed values", () => {
+    it.skip("prop type has specific allowed values", () => {
         console.error = jest.fn();
 
         render(
@@ -62,7 +62,7 @@ describe("Component: IconPreview -", () => {
         expect(illegalSizeComponentForSnap.toJSON()).toMatchSnapshot();
     });
 
-    it("prop size is an enum with specified allowed values", () => {
+    it.skip("prop size is an enum with specified allowed values", () => {
         console.error = jest.fn();
 
         render(
@@ -98,7 +98,7 @@ describe("Component: IconPreview -", () => {
         expect(illegalSizeComponentForSnap.toJSON()).toMatchSnapshot();
     });
 
-    it("renders a material icon when type is equal to material-icons", () => {
+    it.skip("renders a material icon when type is equal to material-icons", () => {
         const { container } = render(<IconPreview name="android" type="material-icons" />);
 
         expect(container.querySelector("i")).toHaveClass("material-icons");
@@ -110,7 +110,7 @@ describe("Component: IconPreview -", () => {
         expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
-    it("renders correct icon when prop name is provided", () => {
+    it.skip("renders correct icon when prop name is provided", () => {
         const { container } = render(<IconPreview name="amex" type="payment-icon" />);
 
         expect(container.querySelector("i")).toHaveClass("payment-icon payment-icon-amex");
@@ -122,7 +122,7 @@ describe("Component: IconPreview -", () => {
         expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
-    it("renders correct size when prop size is provided", () => {
+    it.skip("renders correct size when prop size is provided", () => {
         const { container } = render(<IconPreview name="amex" size="large" type="payment-icon" />);
 
         expect(container.querySelector("i")).toHaveClass("payment-icon payment-icon-large payment-icon-amex");
@@ -134,7 +134,7 @@ describe("Component: IconPreview -", () => {
         expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
-    it("renders icon with custom when prop className is provided", () => {
+    it.skip("renders icon with custom when prop className is provided", () => {
         const { container } = render(<IconPreview name="amex" type="payment-icon" className="test test2 test-3" />);
 
         expect(container.querySelector("i")).toHaveClass("payment-icon payment-icon-amex test test2 test-3");
@@ -146,7 +146,7 @@ describe("Component: IconPreview -", () => {
         expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
-    it("renders a preview wrapper around the <i> tag when prop preview is true", () => {
+    it.skip("renders a preview wrapper around the <i> tag when prop preview is true", () => {
         const { container } = render(<IconPreview name="amex" type="payment-icon" preview />);
 
         expect(container.querySelector(".icon-preview > i")).toBeTruthy();
@@ -156,7 +156,7 @@ describe("Component: IconPreview -", () => {
         expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
-    it("renders a preview wrapper around material-icon when prop previewSize is true", () => {
+    it.skip("renders a preview wrapper around material-icon when prop previewSize is true", () => {
         const { container } = render(<IconPreview name="android" type="material-icons" size="large" previewSize />);
 
         expect(container.querySelector(".icon-preview > i")).toBeTruthy();

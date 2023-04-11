@@ -11,15 +11,13 @@ Array [
   >
     
 
-    <label
-      className="h3"
-    >
+    <label>
       Email
     </label>
     
 
     <input
-      autoComplete={null}
+      autocomplete={null}
       className="form-control"
       data-validate={null}
       defaultValue=""
@@ -39,15 +37,13 @@ Array [
   >
     
 
-    <label
-      className="h3"
-    >
+    <label>
       Password
     </label>
     
 
     <input
-      autoComplete={null}
+      autocomplete={null}
       className="form-control"
       data-validate={null}
       defaultValue=""

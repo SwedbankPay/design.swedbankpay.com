@@ -7,485 +7,174 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
   >
     Content guidelines
   </h2>
-  <div
-    className="slab slab-plain h-100 mb-2"
-  >
-    <div
-      className="d-flex flex-column align-items-center"
+  <section>
+    <ul
+      className="list list-bullet"
     >
-      <div
-        className="py-3"
-      >
-        <div
-          className="form-group"
-        >
-          
-
-          <label
-            className="h3"
-            htmlFor="input-guidelines-example"
-          >
-            Label
-          </label>
-          
-
-          <input
-            autoComplete={null}
-            className="form-control"
-            data-validate={null}
-            defaultValue="Input text"
-            disabled={null}
-            id="input-guidelines-example"
-            pattern={null}
-            placeholder={null}
-            readOnly={null}
-            required={null}
-            type="text"
-          />
-          
-
-          <p
-            className="hint-text"
-            id="hint-text"
-          >
-            Hint text
-          </p>
-          
-
-        </div>
-        <div
-          className="form-group"
-        >
-          
-
-          <label
-            className="h3"
-          >
-            Label
-          </label>
-          
-
-          <textarea
-            autoComplete={null}
-            className="form-control"
-            data-validate={null}
-            defaultValue=""
-            disabled={null}
-            id={null}
-            pattern={null}
-            placeholder={null}
-            readOnly={null}
-            required={null}
-            type="textarea"
-          />
-          
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <h3>
-    Label
-  </h3>
-  <p>
-    An input field must have a label that clearly describes the type of input a field requires. 
-  </p>
-  <ul
-    className="list list-bullet"
-  >
-    <li>
-      When a text field is not required to be filled by the user, label it as “optional”.
-    </li>
-  </ul>
+      <li>
+        Clearly label the input field so users know what information they are expected to enter.
+      </li>
+      <li>
+        Use placeholder text sparingly and 
+        <b>
+          only
+        </b>
+         if it helps to clarify the purpose of the input field.
+      </li>
+      <li>
+        Provide clear and concise instructions or hints if necessary, either within the input field or nearby by using the hint text.
+      </li>
+      <li>
+        Validate user input in real-time if possible and provide clear feedback if there are errors.
+      </li>
+    </ul>
+  </section>
   <section>
     <h3>
       Hint text
     </h3>
     <p>
-      A hint text should complement the label and provide clarifying details. It can be used to:
-    </p>
-    <ul
-      className="list list-bullet"
-    >
-      <li>
-        Provide an example of what to enter
-      </li>
-      <li>
-        Explain why you are asking a certain question
-      </li>
-      <li>
-        Inform the user about where to find the requested information
-      </li>
-    </ul>
-    <p>
-      Primarily use the visible by default hint text and secondarily a hint expander. Try to avoid using both a visible hint text and expander.
+      Use hint text if information is important and should be permanent even if users are interacting with the component.
     </p>
     <div
-      className="row placeholder-guideline"
+      className="slab col-12 justify-content-center d-flex bg-quaternary"
     >
       <div
-        className="col-lg-6 col-sm-12"
+        className="form-group"
       >
-        <div
-          className="slab slab-plain slab-border-success"
-        >
-          <span
-            className="h3 d-block mb-3"
-          >
-            Do
-          </span>
-          <div
-            className="form-group"
-          >
-            
+        
 
-            <label
-              className="h3"
-              htmlFor="do-example-expanding"
-            >
-              Personal identification number
-            </label>
-            
+        <label>
+          Personal identification number
+        </label>
+        
 
-            <input
-              autoComplete={null}
-              className="form-control"
-              data-validate={null}
-              defaultValue=""
-              disabled={null}
-              id="do-example-expanding"
-              pattern={null}
-              placeholder={null}
-              readOnly={null}
-              required={null}
-              type="text"
-            />
-            
+        <input
+          autocomplete={null}
+          className="form-control"
+          data-validate={null}
+          defaultValue=""
+          disabled={null}
+          id={null}
+          pattern={null}
+          placeholder={null}
+          readOnly={null}
+          required={null}
+          type={null}
+        />
+        
 
-            <p
-              className="hint-text"
-              id="hint-text"
-            >
-              YYYYMMDDNNNN
-            </p>
-            
-
-          </div>
-        </div>
         <p
-          className="mb-4"
+          className="hint-text"
+          id="hint-text"
         >
-          If the information is fairly important and many users will need it, provide a hint text that is visible by default.
+          YYYYMMDDNNNNN
         </p>
-      </div>
-      <div
-        className="col-lg-6 col-sm-12"
-      >
-        <div
-          className="slab slab-plain slab-border-success"
-        >
-          <span
-            className="h3 d-block mb-3"
-          >
-            Do
-          </span>
-          <div
-            className="form-group"
-          >
-            
+        
 
-            <label
-              className="h3"
-              htmlFor="do-example-expanding"
-            >
-              Security code (CVC)
-            </label>
-            
-
-            <input
-              autoComplete={null}
-              className="form-control"
-              data-validate={null}
-              defaultValue=""
-              disabled={null}
-              id="do-example-expanding"
-              pattern={null}
-              placeholder={null}
-              readOnly={null}
-              required={null}
-              type="text"
-            />
-            
-
-          </div>
-        </div>
-        <p
-          className="mb-4"
-        >
-          Use a hint expander if the information is long and won’t be needed by the majority of users. Write the hint expander to help users understand what they will see before they click.
-        </p>
       </div>
     </div>
   </section>
   <section>
     <h3>
-      Prefix and postfix
+      Prefix/postfix
     </h3>
     <p>
-      Prefixes and postfixes are useful when there’s a commonly understood icon, symbol or abbreviation for the type of information the user needs to enter since it can reduce mental load.
+      Use prefix/postfix for even more effective communication with the user.
     </p>
     <div
-      className="row placeholder-guideline"
+      className="slab col-12 justify-content-center d-flex bg-quaternary"
     >
       <div
-        className="col-lg-6 col-sm-12"
+        className="form-group"
       >
         <div
-          className="slab slab-plain slab-border-success"
+          className="form-group"
         >
-          <span
-            className="h3 d-block mb-3"
-          >
-            Do
-          </span>
+          
+
+          <label>
+            Username
+          </label>
+          
+
           <div
-            className="form-group"
+            className="input-group"
           >
             
 
-            <label
-              className="h3"
-              htmlFor="guidelines-input-example-1"
+            <span
+              className="input-group-addon "
             >
-              Username
-            </label>
-            
-
-            <div
-              className="input-group"
-            >
-              
-
-              <span
-                className="input-group-addon "
+              <i
+                aria-hidden="true"
+                className="material-icons material-icons-outlined"
               >
                 account_circle
-              </span>
-              
+              </i>
+            </span>
+            
 
-              <input
-                autoComplete={null}
-                className="form-control"
-                data-validate={null}
-                defaultValue=""
-                disabled={null}
-                id="guidelines-input-example-1"
-                pattern={null}
-                placeholder={null}
-                readOnly={null}
-                required={null}
-                type="text"
-              />
-              
+            <input
+              autocomplete={null}
+              className="form-control"
+              data-validate={null}
+              defaultValue=""
+              disabled={null}
+              id={null}
+              pattern={null}
+              placeholder={null}
+              readOnly={null}
+              required={null}
+              type={null}
+            />
+            
 	
-              
+            
 
-            </div>
           </div>
         </div>
-        <p
-          className="mb-4"
-        >
-          Use a prefix icon to help convey the meaning of the label.
-        </p>
-      </div>
-      <div
-        className="col-lg-6 col-sm-12"
-      >
         <div
-          className="slab slab-plain slab-border-error"
+          className="form-group"
         >
-          <span
-            className="h3 d-block mb-3"
-          >
-            Do
-            n't
-          </span>
+          
+
+          <label>
+            Fixed transaction fee
+          </label>
+          
+
           <div
-            className="form-group"
+            className="input-group"
           >
             
 
-            <label
-              className="h3"
-              htmlFor="guidelines-input-example-2"
+            <input
+              autocomplete={null}
+              className="form-control"
+              data-validate={null}
+              defaultValue=""
+              disabled={null}
+              id={null}
+              pattern={null}
+              placeholder={null}
+              readOnly={null}
+              required={null}
+              type={null}
+            />
+            
+	
+            <span
+              className="input-group-addon postfix"
             >
-              Username
-            </label>
+              kr
+            </span>
             
 
-            <div
-              className="input-group"
-            >
-              
+            
 
-              <span
-                className="input-group-addon "
-              >
-                email
-              </span>
-              
-
-              <input
-                autoComplete={null}
-                className="form-control"
-                data-validate={null}
-                defaultValue=""
-                disabled={null}
-                id="guidelines-input-example-2"
-                pattern={null}
-                placeholder={null}
-                readOnly={null}
-                required={null}
-                type="email"
-              />
-              
-	
-              
-
-            </div>
           </div>
         </div>
-        <p
-          className="mb-4"
-        >
-          Don’t use a prefix icon that doesn’t help to convey the meaning of the label. There shouldn’t be any confusion between what type of information an icon represents.
-        </p>
-      </div>
-      <div
-        className="col-lg-6 col-sm-12"
-      >
-        <div
-          className="slab slab-plain slab-border-success"
-        >
-          <span
-            className="h3 d-block mb-3"
-          >
-            Do
-          </span>
-          <div
-            className="form-group"
-          >
-            
-
-            <label
-              className="h3"
-              htmlFor="guidelines-input-example-3"
-            >
-              Fixed transaction fee, in SEK
-            </label>
-            
-
-            <div
-              className="input-group"
-            >
-              
-
-              <input
-                autoComplete={null}
-                className="form-control"
-                data-validate={null}
-                defaultValue=""
-                disabled={null}
-                id="guidelines-input-example-3"
-                pattern={null}
-                placeholder={null}
-                readOnly={null}
-                required={null}
-                type="text"
-              />
-              
-	
-              <span
-                className="input-group-addon postfix"
-              >
-                kr
-              </span>
-              
-
-              
-
-            </div>
-          </div>
-        </div>
-        <p
-          className="mb-4"
-        >
-          The label in itself should clearly indicate what type of data to enter, since prefixes and postfixes are hidden from screen readers.
-        </p>
-      </div>
-      <div
-        className="col-lg-6 col-sm-12"
-      >
-        <div
-          className="slab slab-plain slab-border-error"
-        >
-          <span
-            className="h3 d-block mb-3"
-          >
-            Do
-            n't
-          </span>
-          <div
-            className="form-group"
-          >
-            
-
-            <label
-              className="h3"
-              htmlFor="guidelines-input-example-4"
-            >
-              Fixed transaction fee, in SEK
-            </label>
-            
-
-            <div
-              className="input-group"
-            >
-              
-
-              <input
-                autoComplete={null}
-                className="form-control"
-                data-validate={null}
-                defaultValue=""
-                disabled={null}
-                id="guidelines-input-example-4"
-                pattern={null}
-                placeholder={null}
-                readOnly={null}
-                required={null}
-                type="text"
-              />
-              
-	
-              <span
-                className="input-group-addon postfix"
-              >
-                kronor
-              </span>
-              
-
-              
-
-            </div>
-          </div>
-        </div>
-        <p
-          className="mb-4"
-        >
-          Use commonly understood abbreviations for text prefix or postfix, don’t use full words.
-        </p>
       </div>
     </div>
   </section>
@@ -494,119 +183,115 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
       Error message
     </h3>
     <p>
-      When input isn’t accepted, input fields should display a short and concise error message, it should be no more than a single sentence.
+      Strive to have clear communication with the user. Describe the error precise.
     </p>
     <div
-      className="row placeholder-guideline"
+      className="slab col-12 justify-content-center d-flex bg-quaternary"
     >
       <div
-        className="col-lg-6 col-sm-12"
+        className="form-group has-error"
       >
+        
+
+        <label>
+          Email address
+        </label>
+        
+
         <div
-          className="slab slab-plain slab-border-success"
+          className="input-group"
         >
+          
+
+          <input
+            autocomplete={null}
+            className="form-control"
+            data-validate={null}
+            defaultValue="example.email.com"
+            disabled={null}
+            id={null}
+            pattern={null}
+            placeholder={null}
+            readOnly={null}
+            required={null}
+            type={null}
+          />
+          
+	
           <span
-            className="h3 d-block mb-3"
+            className="input-group-addon postfix"
           >
-            Do
+            <i
+              aria-hidden="true"
+              className="material-icons material-icons-outlined"
+            >
+              warning
+            </i>
           </span>
-          <div
-            className="form-group"
-          >
-            
+          
 
-            <label
-              className="h3"
-              htmlFor="guidelines-input-example-7"
-            >
-              Email address
-            </label>
-            
-
-            <input
-              autoComplete={null}
-              className="form-control"
-              data-validate={null}
-              defaultValue="Name.com"
-              disabled={null}
-              id="guidelines-input-example-7"
-              pattern={null}
-              placeholder={null}
-              readOnly={null}
-              required={null}
-              type="text"
-            />
-            
-
-            <div
-              className="help-block"
-            >
-              The email address must include "@"
-            </div>
-            
-
-          </div>
         </div>
-        <p
-          className="mb-4"
+        <div
+          className="help-block"
         >
-          Do explain what went wrong and how to fix it.
-        </p>
+          The email address must include '@'
+        </div>
+        
+
       </div>
+    </div>
+    <h3>
+      Success message
+    </h3>
+    <p>
+      One can also add a successful variant in those cases the users are correctly placing their input.
+    </p>
+    <div
+      className="slab col-12 justify-content-center d-flex bg-quaternary"
+    >
       <div
-        className="col-lg-6 col-sm-12"
+        className="form-group has-success"
       >
+        
+
+        <label>
+          Email address
+        </label>
+        
+
         <div
-          className="slab slab-plain slab-border-error"
+          className="input-group"
         >
+          
+
+          <input
+            autocomplete={null}
+            className="form-control"
+            data-validate={null}
+            defaultValue="example.email@company.com"
+            disabled={null}
+            id={null}
+            pattern={null}
+            placeholder={null}
+            readOnly={null}
+            required={null}
+            type={null}
+          />
+          
+	
           <span
-            className="h3 d-block mb-3"
+            className="input-group-addon postfix"
           >
-            Do
-            n't
+            <i
+              aria-hidden="true"
+              className="material-icons"
+            >
+              check_circle
+            </i>
           </span>
-          <div
-            className="form-group"
-          >
-            
+          
 
-            <label
-              className="h3"
-              htmlFor="guidelines-input-example-8"
-            >
-              Email address
-            </label>
-            
-
-            <input
-              autoComplete={null}
-              className="form-control"
-              data-validate={null}
-              defaultValue="Name.com"
-              disabled={null}
-              id="guidelines-input-example-8"
-              pattern={null}
-              placeholder={null}
-              readOnly={null}
-              required={null}
-              type="text"
-            />
-            
-
-            <div
-              className="help-block"
-            >
-              Invalid input
-            </div>
-            
-
-          </div>
         </div>
-        <p
-          className="mb-4"
-        >
-          Don't use technical jargon.
-        </p>
       </div>
     </div>
   </section>

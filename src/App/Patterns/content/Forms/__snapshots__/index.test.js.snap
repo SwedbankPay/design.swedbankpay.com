@@ -234,7 +234,6 @@ exports[`Forms: index renders 1`] = `
             
 
             <label
-              className="h3"
               htmlFor="guideline-input-example"
             >
               Input label
@@ -242,7 +241,7 @@ exports[`Forms: index renders 1`] = `
             
 
             <input
-              autoComplete={null}
+              autocomplete={null}
               className="form-control"
               data-validate={null}
               defaultValue=""
@@ -276,7 +275,6 @@ exports[`Forms: index renders 1`] = `
             
 
             <label
-              className="h3"
               htmlFor="guideline-select-example"
             >
               Label
@@ -610,7 +608,6 @@ exports[`Forms: index renders 1`] = `
               
 
               <label
-                className="h3"
                 htmlFor="layout-address-example"
               >
                 Address
@@ -618,7 +615,7 @@ exports[`Forms: index renders 1`] = `
               
 
               <input
-                autoComplete={null}
+                autocomplete={null}
                 className="form-control"
                 data-validate={null}
                 defaultValue=""
@@ -642,7 +639,6 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <label
-                  className="h3"
                   htmlFor="layout-postal-example"
                 >
                   Postal code
@@ -650,7 +646,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
@@ -671,7 +667,6 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <label
-                  className="h3"
                   htmlFor="layout-city-example"
                 >
                   City
@@ -679,7 +674,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
@@ -711,7 +706,6 @@ exports[`Forms: index renders 1`] = `
             
 
             <label
-              className="h3"
               htmlFor="layout-address-dont-example"
             >
               Address
@@ -719,7 +713,7 @@ exports[`Forms: index renders 1`] = `
             
 
             <input
-              autoComplete={null}
+              autocomplete={null}
               className="form-control"
               data-validate={null}
               defaultValue=""
@@ -740,7 +734,6 @@ exports[`Forms: index renders 1`] = `
             
 
             <label
-              className="h3"
               htmlFor="layout-postal code-dont-example"
             >
               Postal code
@@ -748,7 +741,7 @@ exports[`Forms: index renders 1`] = `
             
 
             <input
-              autoComplete={null}
+              autocomplete={null}
               className="form-control"
               data-validate={null}
               defaultValue=""
@@ -769,7 +762,6 @@ exports[`Forms: index renders 1`] = `
             
 
             <label
-              className="h3"
               htmlFor="layout-city-dont-example"
             >
               City
@@ -777,7 +769,7 @@ exports[`Forms: index renders 1`] = `
             
 
             <input
-              autoComplete={null}
+              autocomplete={null}
               className="form-control"
               data-validate={null}
               defaultValue=""
@@ -821,7 +813,6 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <label
-                  className="h3"
                   htmlFor="required-optional-do-email-example"
                 >
                   E-mail
@@ -829,7 +820,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
@@ -850,7 +841,6 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <label
-                  className="h3"
                   htmlFor="required-optional-do-phone-example"
                 >
                   Telephone number
@@ -858,7 +848,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
@@ -892,7 +882,6 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <label
-                  className="h3"
                   htmlFor="required-optional-dont-email-example"
                 >
                   E-mail*
@@ -900,7 +889,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
@@ -921,7 +910,6 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <label
-                  className="h3"
                   htmlFor="required-optional-dont-phone-example"
                 >
                   Telephone number
@@ -929,7 +917,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
@@ -1003,7 +991,6 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <label
-                  className="h3"
                   htmlFor="personal-identification-number-example"
                 >
                   Personal identification number
@@ -1011,7 +998,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
@@ -1056,7 +1043,6 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <label
-                  className="h3"
                   htmlFor="cvc-example"
                 >
                   Security code (CVC)
@@ -1064,7 +1050,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
@@ -1132,7 +1118,6 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <label
-                    className="h3"
                     htmlFor="logical-flow-do-email-example"
                   >
                     E-mail address
@@ -1140,7 +1125,7 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    autoComplete={null}
+                    autocomplete={null}
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
@@ -1217,7 +1202,6 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <label
-                    className="h3"
                     htmlFor="logical-flow-dont-email-example"
                   >
                     E-mail address
@@ -1225,7 +1209,7 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    autoComplete={null}
+                    autocomplete={null}
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
@@ -1274,7 +1258,6 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <label
-                    className="h3"
                     htmlFor="logical-flow-dont-phone-example"
                   >
                     Phone number
@@ -1282,7 +1265,7 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    autoComplete={null}
+                    autocomplete={null}
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
@@ -1349,7 +1332,6 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <label
-                  className="h3"
                   htmlFor="input-error-do-example"
                 >
                   Email address
@@ -1357,7 +1339,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue="Name.com"
@@ -1398,7 +1380,6 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <label
-                  className="h3"
                   htmlFor="input-error-dont-example"
                 >
                   Email address
@@ -1406,7 +1387,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue="Name.com"
@@ -1530,7 +1511,6 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <label
-                  className="h3"
                   htmlFor="input-error-client-example"
                 >
                   Email
@@ -1538,7 +1518,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue="Name.com"
@@ -1646,7 +1626,6 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <label
-                  className="h3"
                   htmlFor="validation-email-example"
                 >
                   Email
@@ -1654,7 +1633,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue="name@mail.com"
@@ -1675,7 +1654,6 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <label
-                  className="h3"
                   htmlFor="validation-password-example"
                 >
                   Password
@@ -1683,7 +1661,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue="qwerty1234"
@@ -1841,7 +1819,6 @@ exports[`Forms: index renders 1`] = `
                     
 
                     <label
-                      className="h3"
                       htmlFor="fieldset-first-name-example"
                     >
                       First name
@@ -1849,7 +1826,7 @@ exports[`Forms: index renders 1`] = `
                     
 
                     <input
-                      autoComplete={null}
+                      autocomplete={null}
                       className="form-control"
                       data-validate={null}
                       defaultValue=""
@@ -1870,7 +1847,6 @@ exports[`Forms: index renders 1`] = `
                     
 
                     <label
-                      className="h3"
                       htmlFor="fieldset-last-name-example"
                     >
                       Last name
@@ -1878,7 +1854,7 @@ exports[`Forms: index renders 1`] = `
                     
 
                     <input
-                      autoComplete={null}
+                      autocomplete={null}
                       className="form-control"
                       data-validate={null}
                       defaultValue=""
@@ -1911,7 +1887,6 @@ exports[`Forms: index renders 1`] = `
                     
 
                     <label
-                      className="h3"
                       htmlFor="fieldset-email-example"
                     >
                       Email
@@ -1919,7 +1894,7 @@ exports[`Forms: index renders 1`] = `
                     
 
                     <input
-                      autoComplete={null}
+                      autocomplete={null}
                       className="form-control"
                       data-validate={null}
                       defaultValue=""
@@ -1940,7 +1915,6 @@ exports[`Forms: index renders 1`] = `
                     
 
                     <label
-                      className="h3"
                       htmlFor="fieldset-phone-example"
                     >
                       Phone number
@@ -1948,7 +1922,7 @@ exports[`Forms: index renders 1`] = `
                     
 
                     <input
-                      autoComplete={null}
+                      autocomplete={null}
                       className="form-control"
                       data-validate={null}
                       defaultValue=""
@@ -2031,7 +2005,6 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <label
-                    className="h3"
                     htmlFor="disabled-name-example"
                   >
                     Name
@@ -2039,7 +2012,7 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    autoComplete={null}
+                    autocomplete={null}
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
@@ -2060,7 +2033,6 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <label
-                    className="h3"
                     htmlFor="disabled-email-example"
                   >
                     Email
@@ -2068,7 +2040,7 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    autoComplete={null}
+                    autocomplete={null}
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
@@ -2181,7 +2153,6 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <label
-                    className="h3"
                     htmlFor="disable-specific-name-example"
                   >
                     Name
@@ -2189,7 +2160,7 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    autoComplete={null}
+                    autocomplete={null}
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
@@ -2210,7 +2181,6 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <label
-                    className="h3"
                     htmlFor="disable-specific-email-example"
                   >
                     Email
@@ -2218,7 +2188,7 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    autoComplete={null}
+                    autocomplete={null}
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
@@ -2342,7 +2312,6 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <label
-                    className="h3"
                     htmlFor="form-grid-name-example"
                   >
                     Name
@@ -2350,7 +2319,7 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    autoComplete={null}
+                    autocomplete={null}
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
@@ -2371,7 +2340,6 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <label
-                    className="h3"
                     htmlFor="form-grid-email-example"
                   >
                     Email
@@ -2379,7 +2347,7 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    autoComplete={null}
+                    autocomplete={null}
                     className="form-control"
                     data-validate={null}
                     defaultValue=""

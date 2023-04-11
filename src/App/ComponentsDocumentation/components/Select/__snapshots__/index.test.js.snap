@@ -16,7 +16,6 @@ exports[`Component: Select ContentGuidelines renders 1`] = `
       
 
       <label
-        className="h3"
         htmlFor="content-guidelines-example"
       >
         Label
@@ -298,7 +297,6 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
         
 
         <label
-          className="h3"
           htmlFor="disabled-state-example"
         >
           Label
@@ -384,7 +382,7 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
                   &lt;div class="form-group disabled"&gt;
                   
 
-                      &lt;label class="h3" for="disabled-state-example"&gt;Label&lt;/label&gt;
+                      &lt;label for="disabled-state-example"&gt;Label&lt;/label&gt;
                   
 
                       &lt;select class="form-control" disabled id="disabled-state-example"&gt;
@@ -405,25 +403,6 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
         </table>
       </div>
     </figure>
-  </section>
-  <section>
-    <h3>
-      Javascript methods
-    </h3>
-    <p>
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        dg.hintTextExpander.init()
-      </code>
-       can be used to initialize all Hint text expanders. Or 
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        dg.hintTextExpander.init(&lt;hint-text-expander-id&gt;)
-      </code>
-       to initialize a specific one.
-    </p>
   </section>
 </section>
 `;

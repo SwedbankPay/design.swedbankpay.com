@@ -7,7 +7,7 @@ exports[`Component: InputGroup - renders 1`] = `
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -31,7 +31,7 @@ exports[`Component: InputGroup - renders a form-group with a help block 1`] = `
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -62,15 +62,13 @@ exports[`Component: InputGroup - renders a form-group with a label if prop label
 >
   
 
-  <label
-    className="h3"
-  >
+  <label>
     this is a text in a label
   </label>
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -111,7 +109,7 @@ exports[`Component: InputGroup - renders a form-group with a prefix icon if prop
     
 
     <input
-      autoComplete={null}
+      autocomplete={null}
       className="form-control"
       data-validate={null}
       defaultValue=""
@@ -181,7 +179,7 @@ exports[`Component: InputGroup - renders a form-group with a text-area if type e
   
 
   <textarea
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -205,7 +203,7 @@ exports[`Component: InputGroup - throws an error if addOnType prop has an invali
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -229,7 +227,7 @@ exports[`Component: InputGroup - throws an error if addOnType prop has an invali
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -253,7 +251,7 @@ exports[`Component: InputGroup - throws an error if addOnType prop has an invali
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -277,7 +275,7 @@ exports[`Component: InputGroup - throws an error if addOnType prop has an invali
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -301,7 +299,7 @@ exports[`Component: InputGroup - throws an error if addOnType prop has an invali
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -325,7 +323,7 @@ exports[`Component: InputGroup - throws an error if addOnType prop has an invali
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -349,7 +347,7 @@ exports[`Component: InputGroup - throws an error if type prop is not provided 1`
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -360,126 +358,6 @@ exports[`Component: InputGroup - throws an error if type prop is not provided 1`
     readOnly={null}
     required={null}
     type={null}
-  />
-  
-
-</div>
-`;
-
-exports[`Component: InputGroup - throws an error if validationState prop has an invalid value 1`] = `
-<div
-  className="form-group"
->
-  
-
-  <input
-    autoComplete={null}
-    className="form-control"
-    data-validate={null}
-    defaultValue=""
-    disabled={null}
-    id={null}
-    pattern={null}
-    placeholder={null}
-    readOnly={null}
-    required={null}
-    type="typetest"
-  />
-  
-
-</div>
-`;
-
-exports[`Component: InputGroup - throws an error if validationState prop has an invalid value 2`] = `
-<div
-  className="form-group"
->
-  
-
-  <input
-    autoComplete={null}
-    className="form-control"
-    data-validate={null}
-    defaultValue=""
-    disabled={null}
-    id={null}
-    pattern={null}
-    placeholder={null}
-    readOnly={null}
-    required={null}
-    type="typetest"
-  />
-  
-
-</div>
-`;
-
-exports[`Component: InputGroup - throws an error if validationState prop has an invalid value 3`] = `
-<div
-  className="form-group"
->
-  
-
-  <input
-    autoComplete={null}
-    className="form-control"
-    data-validate={null}
-    defaultValue=""
-    disabled={null}
-    id={null}
-    pattern={null}
-    placeholder={null}
-    readOnly={null}
-    required={null}
-    type="typetest"
-  />
-  
-
-</div>
-`;
-
-exports[`Component: InputGroup - throws an error if validationState prop has an invalid value 4`] = `
-<div
-  className="form-group"
->
-  
-
-  <input
-    autoComplete={null}
-    className="form-control"
-    data-validate={null}
-    defaultValue=""
-    disabled={null}
-    id={null}
-    pattern={null}
-    placeholder={null}
-    readOnly={null}
-    required={null}
-    type="typetest"
-  />
-  
-
-</div>
-`;
-
-exports[`Component: InputGroup - throws an error if validationState prop has an invalid value 5`] = `
-<div
-  className="form-group"
->
-  
-
-  <input
-    autoComplete={null}
-    className="form-control"
-    data-validate={null}
-    defaultValue=""
-    disabled={null}
-    id={null}
-    pattern={null}
-    placeholder={null}
-    readOnly={null}
-    required={null}
-    type="typetest"
   />
   
 
