@@ -10,11 +10,12 @@
     -   specific focus states
     -   btn-guiding-destructive, btn-executive-destructive, btn-link-destructive
     -   btn-icon-<size>
-    
+
     Changed: (UI breaking changes)
     -   btn-primary (new design)
     -   btn-secondary (new design)
     -   button sizes: btn-lg, btn-sm, btn-xs
+    -   dropdown toggle
 
     Added: (new features)
     -   btn-tertiary (new button)
