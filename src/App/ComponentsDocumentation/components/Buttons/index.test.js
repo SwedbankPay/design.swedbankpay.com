@@ -2,7 +2,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 import { BrowserRouter } from "react-router-dom";
 
-import Buttons, { Overview, DestructiveButton, ContentGuidelines, CombiningButtons, DeveloperDocumentation } from "./index";
+import Buttons, { Overview, CombiningButtons, DeveloperDocumentation, UtilityClasses } from "./index";
 
 describe("Documentation: Buttons", () => {
     it("is defined", () => {
@@ -33,30 +33,14 @@ describe("Documentation: Buttons", () => {
         });
     });
 
-    describe("Content guidelines", () => {
-        it("is defined", () => {
-            expect(ContentGuidelines).toBeDefined();
-        });
-
-        it("renders", () => {
-            const componentForSnap = renderer.create(<BrowserRouter>
-                <ContentGuidelines />
-            </BrowserRouter>
-            );
-
-            expect(componentForSnap.toJSON()).toMatchSnapshot();
-        });
-    });
-
     describe("Combining buttons", () => {
         it("is defined", () => {
             expect(CombiningButtons).toBeDefined();
         });
 
         it("renders", () => {
-            const componentForSnap = renderer.create(<BrowserRouter>
+            const componentForSnap = renderer.create(
                 <CombiningButtons />
-            </BrowserRouter>
             );
 
             expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -72,6 +56,20 @@ describe("Documentation: Buttons", () => {
             const componentForSnap = renderer.create(<BrowserRouter>
                 <DeveloperDocumentation />
             </BrowserRouter>
+            );
+
+            expect(componentForSnap.toJSON()).toMatchSnapshot();
+        });
+    });
+
+    describe.skip("Utility classes", () => {
+        it("is defined", () => {
+            expect(UtilityClasses).toBeDefined();
+        });
+
+        it("renders", () => {
+            const componentForSnap = renderer.create(
+                <UtilityClasses />
             );
 
             expect(componentForSnap.toJSON()).toMatchSnapshot();

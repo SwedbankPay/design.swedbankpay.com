@@ -25,14 +25,14 @@ export const complementaryColors = [
         subTitle: "brand-orange",
         hex: "#EE7023",
         contrastWhiteAlert: true,
-        contrastBlackAlert: true
+        contrastBlackApproved: true
     },
     {
         title: "Turquoise",
         subTitle: "brand-turquoise",
         hex: "#31A3AE",
         contrastWhiteAlert: true,
-        contrastBlackAlert: true
+        contrastBlackApproved: true
     },
     {
         title: "Turquoise light",
@@ -45,55 +45,14 @@ export const complementaryColors = [
         subTitle: "brand-pink",
         hex: "#EFB7B6",
         contrastBlackApproved: true
-    },
-    {
-        title: "Brown",
-        subTitle: "brand-brown",
-        hex: "#512B2B",
-        contrastWhiteApproved: true,
-        noBlackExample: true
-    }
-];
-
-export const brownScaleColors = [
-    {
-        title: "Brown solid",
-        subTitle: "brown-solid",
-        hex: "#2F2424",
-        contrastWhiteApproved: true
-    },
-    {
-        title: "Brown dark",
-        subTitle: "brown-dark",
-        hex: "#493C3B",
-        contrastWhiteApproved: true
-    },
-    {
-        title: "Brown medium",
-        subTitle: "brown-medium",
-        hex: "#72605E",
-        contrastWhiteApproved: true
-    },
-    {
-        title: "Brown soft",
-        subTitle: "brown-soft",
-        hex: "#A38B80",
-        contrastWhiteAlert: true,
-        contrastBlackAlert: true
-    },
-    {
-        title: "Brown light",
-        subTitle: "brown-light",
-        hex: "#D4C4BC",
-        contrastBlackAlert: true
     }
 ];
 
 export const textColors = [
     {
-        title: "Brown",
-        subTitle: "text-default",
-        hex: "#512B2B",
+        title: "Brown solid",
+        subTitle: "brown-solid",
+        hex: "#2F2424",
         contrastWhiteApproved: true,
         noBlackExample: true
     },
@@ -102,7 +61,6 @@ export const textColors = [
         subTitle: "text-muted",
         hex: "#72605E",
         contrastWhiteApproved: true,
-        contrastBlackAlert: true
     },
     {
         title: "Turquoise dark",
@@ -178,8 +136,9 @@ export const systemColors = [
     {
         title: "Warning",
         subTitle: "system-warning",
-        hex: "#E97423",
-        contrastWhiteApproved: true
+        hex: "#EE7023",
+        contrastWhiteApproved: true,
+        contrastBlackApproved: true
     },
     {
         title: "Warning light",
@@ -213,3 +172,37 @@ export const systemColors = [
     }
 ];
 
+export const functionalColors = [
+    {
+        title: "Brown solid",
+        subTitle: "brown-solid",
+        hex: "#2F2424",
+        contrastWhiteApproved: true,
+        noBlackExample: true
+    },
+    {
+        title: "Brown medium",
+        subTitle: "brown-medium",
+        hex: "#72605E",
+        contrastWhiteApproved: true
+    },
+    {
+        title: "Brown soft",
+        subTitle: "brown-soft",
+        hex: "#A38B80",
+        contrastWhiteAlert: true,
+        contrastBlackApproved: true
+    },
+    {
+        title: "Brown light",
+        subTitle: "brown-light",
+        hex: "#D4C4BC",
+        contrastBlackApproved: true
+    },
+    {
+        title: "Gray",
+        subTitle: "bg-tertiary",
+        hex: "#EBE7E2",
+        contrastBlackApproved: true
+    },
+];

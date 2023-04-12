@@ -49,7 +49,7 @@
     min-width: 1.375rem;
     height: 1.375rem;
     text-align: center;
-    font-family: @font-stack;
+    font-family: var(--font-stack);
     line-height: 1.5;
 
     each(@badge-list, .(@color, @name) {
@@ -90,7 +90,7 @@
     }
 
     &.badge-number {
-        font-family: @brand-headline;
+        font-family: var(--brand-headline);
         font-weight: 400;
     }
 }

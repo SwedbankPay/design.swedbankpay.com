@@ -1,6 +1,5 @@
 import React from "react";
 import ButtonComponent from "@components/Button";
-import { Link } from "react-router-dom";
 
 const ButtonOptions = idAddOn => (
     {
@@ -32,15 +31,15 @@ const ButtonOptions = idAddOn => (
                 title: "Sizes",
                 values: [
                     {
-                        name: "Default (Large)",
-                        value: {
-                            size: "lg"
-                        }
-                    },
-                    {
                         name: "Extra large",
                         value: {
                             size: "xl"
+                        }
+                    },
+                    {
+                        name: "Large (Default)",
+                        value: {
+                            size: "lg"
                         }
                     },
                     {
@@ -125,22 +124,17 @@ export const overviewButtons = {
     elements: [
         {
             tab: "Primary",
-            component: <ButtonComponent type="primary" label="Primary button" />,
+            component: <ButtonComponent size="xl" type="primary" label="Primary button" />,
             options: ButtonOptions(),
             title: "Primary button",
-            description: "Use a primary button as the main call to action on a page. Avoid using multiple default buttons on a single page. Having more than one main call to action reduces their impact, and makes it harder for users to know what to do next."
+            description: "Use a primary button as the main call to action on a page. We strongly advice you to not use more than one primary button on each page."
         },
         {
             tab: "Secondary",
-            component: <ButtonComponent type="secondary" label="Secondary button" />,
+            component: <ButtonComponent size="xl" type="secondary" label="Secondary button" />,
             options: ButtonOptions(),
             title: "Secondary button",
-            description: <p>
-                Use secondary buttons for secondary call to actions on a page.
-                Pages with too many calls to action make it hard for users to know what to do next.
-                Before adding lots of secondary buttons, try to simplify the page or break the content down across multiple pages or
-                consider using <Link to="/components/links#action-link">Action links</Link>.
-            </p>
+            description: "Secondary buttons are used for offering non-primary actions to users i.e. Cancel, Reset, Next section, etc."
         },
         {
             tab: "Tertiary",
@@ -223,7 +217,7 @@ export const overviewButtons = {
                 ]
             },
             title: "Tertiary button",
-            description: "A lot of information: Destructive, random, all other purposes"
+            description: "Tertiary actions are additional actions that the user may need to access. They are often smaller then primary and secondary buttons."
         },
         {
             tab: "Icon only",
@@ -231,7 +225,7 @@ export const overviewButtons = {
             title: "Icon only button",
             options: IconButtonOptions(),
             description: <p>
-                Use this button in constrained places. This button is accessible for screen reader users, but remember to describe the action in aria-label. This button also comes in the following states: Enabled, hover, focus, active and disabled.
+                Use this button in constrained places. This button is accessible for screen reader users, but remember to describe the action in aria-label.
             </p>
         },
         {
@@ -287,16 +281,41 @@ export const overviewButtons = {
                 ]
             },
             title: "BankID button",
-            description: <>
-                <p>
+            description: <p>
                     Use BankID buttons as the main call to action on a page when the following action is signing or verifying something with BankID.
-                    Currently only available for Swedish and Norwegian BankID.
-                </p>
-                <p>
-                    Avoid using multiple BankID buttons on a single page. Having more than one main call to action reduces their impact,
-                    and makes it harder for users to know what to do next.
-                </p>
-            </>
+                    Currently only available for Swedish and Norwegian BankID. Avoid using multiple BankID buttons on a single page.
+            </p>
         }
     ]
 };
+
+export const buttonUtilClasses = [
+    {
+        tag: "btn-group",
+        description: "Using two or more buttons combined. Adds internal spacing."
+    },
+    {
+        tag: "btn-block",
+        description: "Button will use the full width of its parent container."
+    },
+    {
+        tag: "btn-xl",
+        description: "Button size extra large"
+    },
+    {
+        tag: "btn-lg",
+        description: "Button size large"
+    },
+    {
+        tag: "btn-sm",
+        description: "Button size small"
+    },
+    {
+        tag: "btn-xs",
+        description: "Button size extra small"
+    },
+    {
+        tag: "loading",
+        description: "Button will get a spinning loader."
+    }
+];

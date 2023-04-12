@@ -39,8 +39,8 @@ label {
     align-items: center;
     max-width: 100%;
     margin-bottom: @base-margin-xs;
-    font-weight: @font-weight-light;
-    font-size: @base-font-size;
+    font-weight: var(--font-weight-light);
+    font-size: var(--base-font-size);
     line-height: 1.5;
 
     .required-asterisk {
@@ -145,7 +145,7 @@ legend {
     display: block;
     width: 100%;
     margin-bottom: @base-margin;
-    line-height: (@base-font-size * 2.8);
+    line-height: 2.8rem;
     color: @brand-secondary;
     border: 0;
 }
@@ -154,6 +154,7 @@ legend {
 .form-control {
     display: block;
     width: 100%;
+    font-size: var(--base-font-size);
     line-height: @input-line-height;
     color: @input-color;
 
@@ -189,6 +190,24 @@ legend {
         border-color: var(--input-border-focus-color);
     }
 
+.form-control {
+    height: @input-form-control-height;
+    padding: 0 0.75rem;
+    background-color: @input-bg;
+    background-clip: padding-box;
+    border: solid @input-border-color;
+    border-width: @input-border-width;
+    border-bottom-color: @medium-brown;
+    border-radius: 2px 2px 0 0;
+    box-shadow: none;
+
+    .form-control-focus(@brand-secondary);
+
+    &::placeholder {
+        color: @brand-secondary-light-2; /* Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526. */
+        font-weight: var(--font-weight-normal);
+        letter-spacing: -0.1px;
+    }
 
     /* HTML5 says that controls under a fieldset > legend:first-child wont be
      * disabled if the fieldset is disabled. Due to implementation difficulty, we
