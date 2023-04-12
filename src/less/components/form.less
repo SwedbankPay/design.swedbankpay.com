@@ -190,25 +190,6 @@ legend {
         border-color: var(--input-border-focus-color);
     }
 
-.form-control {
-    height: @input-form-control-height;
-    padding: 0 0.75rem;
-    background-color: @input-bg;
-    background-clip: padding-box;
-    border: solid @input-border-color;
-    border-width: @input-border-width;
-    border-bottom-color: @medium-brown;
-    border-radius: 2px 2px 0 0;
-    box-shadow: none;
-
-    .form-control-focus(@brand-secondary);
-
-    &::placeholder {
-        color: @brand-secondary-light-2; /* Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526. */
-        font-weight: var(--font-weight-normal);
-        letter-spacing: -0.1px;
-    }
-
     /* HTML5 says that controls under a fieldset > legend:first-child wont be
      * disabled if the fieldset is disabled. Due to implementation difficulty, we
      * dont honor that edge case; we style them as disabled anyway.
@@ -241,6 +222,20 @@ legend {
 }
 
 .form-group {
+    label {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--brand-secondary);
+        font-family: var(--brand-headline);
+        font-weight: var(--font-weight-header, 400);
+
+        @media screen and (min-width: @screen-sm-min) {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+        }
+    }
+
     &.small {
         .form-control,
         .input-group {
