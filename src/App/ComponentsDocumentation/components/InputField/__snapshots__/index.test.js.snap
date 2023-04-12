@@ -42,7 +42,18 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
       <div
         className="form-group"
       >
-        
+
+        <div
+          className="form-group"
+        >
+          
+
+          <label
+            htmlFor="input-guidelines-example"
+          >
+            Label
+          </label>
+          
 
         <label>
           Personal identification number
@@ -67,10 +78,27 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
         <p
           className="hint-text"
           id="hint-text"
-        >
-          YYYYMMDDNNNNN
-        </p>
-        
+        > 
+
+          <label>
+            Label
+          </label>
+          
+
+          <textarea
+            autoComplete={null}
+            className="form-control"
+            data-validate={null}
+            defaultValue=""
+            disabled={null}
+            id={null}
+            pattern={null}
+            placeholder={null}
+            readOnly={null}
+            required={null}
+            type="textarea"
+          />
+          
 
       </div>
     </div>
@@ -102,9 +130,8 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             className="input-group"
           >
             
-
-            <span
-              className="input-group-addon "
+            <label
+              htmlFor="do-example-expanding"
             >
               <i
                 aria-hidden="true"
@@ -147,6 +174,12 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           <div
             className="input-group"
           >
+            
+            <label
+              htmlFor="do-example-expanding"
+            >
+              Security code (CVC)
+            </label>
             
 
             <input
@@ -191,7 +224,37 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
       <div
         className="form-group has-error"
       >
-        
+        <div
+          className="slab slab-plain slab-border-success"
+        >
+          <span
+            className="h3 d-block mb-3"
+          >
+            Do
+          </span>
+          <div
+            className="form-group"
+          >
+            
+
+            <label
+              htmlFor="guidelines-input-example-1"
+            >
+              Username
+            </label>
+            
+
+            <div
+              className="input-group"
+            >
+              
+
+              <span
+                className="input-group-addon "
+              >
+                account_circle
+              </span>
+              
 
         <label>
           Email address
@@ -201,7 +264,36 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
         <div
           className="input-group"
         >
-          
+          <span
+            className="h3 d-block mb-3"
+          >
+            Do
+            n't
+          </span>
+          <div
+            className="form-group"
+          >
+            
+
+            <label
+              htmlFor="guidelines-input-example-2"
+            >
+              Username
+            </label>
+            
+
+            <div
+              className="input-group"
+            >
+              
+
+              <span
+                className="input-group-addon "
+              >
+                email
+              </span>
+              
+
 
           <input
             autocomplete={null}
@@ -221,9 +313,26 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           <span
             className="input-group-addon postfix"
           >
+
             <i
               aria-hidden="true"
               className="material-icons material-icons-outlined"
+            Do
+          </span>
+          <div
+            className="form-group"
+          >
+            
+
+            <label
+              htmlFor="guidelines-input-example-3"
+            >
+              Fixed transaction fee, in SEK
+            </label>
+            
+
+            <div
+              className="input-group"
             >
               warning
             </i>
@@ -235,6 +344,55 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           className="help-block"
         >
           The email address must include '@'
+          <span
+            className="h3 d-block mb-3"
+          >
+            Do
+            n't
+          </span>
+          <div
+            className="form-group"
+          >
+            
+
+            <label
+              htmlFor="guidelines-input-example-4"
+            >
+              Fixed transaction fee, in SEK
+            </label>
+            
+
+            <div
+              className="input-group"
+            >
+              
+
+              <input
+                autoComplete={null}
+                className="form-control"
+                data-validate={null}
+                defaultValue=""
+                disabled={null}
+                id="guidelines-input-example-4"
+                pattern={null}
+                placeholder={null}
+                readOnly={null}
+                required={null}
+                type="text"
+              />
+              
+	
+              <span
+                className="input-group-addon postfix"
+              >
+                kronor
+              </span>
+              
+
+              
+
+            </div>
+          </div>
         </div>
         
 
@@ -252,7 +410,40 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
       <div
         className="form-group has-success"
       >
-        
+        <div
+          className="slab slab-plain slab-border-success"
+        >
+          <span
+            className="h3 d-block mb-3"
+          >
+            Do
+          </span>
+          <div
+            className="form-group"
+          >
+            
+
+            <label
+              htmlFor="guidelines-input-example-7"
+            >
+              Email address
+            </label>
+            
+
+            <input
+              autoComplete={null}
+              className="form-control"
+              data-validate={null}
+              defaultValue="Name.com"
+              disabled={null}
+              id="guidelines-input-example-7"
+              pattern={null}
+              placeholder={null}
+              readOnly={null}
+              required={null}
+              type="text"
+            />
+            
 
         <label>
           Email address
@@ -285,6 +476,32 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             <i
               aria-hidden="true"
               className="material-icons"
+            
+
+            <label
+              htmlFor="guidelines-input-example-8"
+            >
+              Email address
+            </label>
+            
+
+            <input
+              autoComplete={null}
+              className="form-control"
+              data-validate={null}
+              defaultValue="Name.com"
+              disabled={null}
+              id="guidelines-input-example-8"
+              pattern={null}
+              placeholder={null}
+              readOnly={null}
+              required={null}
+              type="text"
+            />
+            
+
+            <div
+              className="help-block"
             >
               check_circle
             </i>
@@ -331,7 +548,6 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
         
 
         <label
-          className="h3"
           htmlFor="developer-documentation-example"
         >
           Name
@@ -411,7 +627,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
                   &lt;div class="form-group"&gt;
                   
 
-                      &lt;label class="h3" for="developer-documentation-example"&gt;Name&lt;/label&gt;
+                      &lt;label for="developer-documentation-example"&gt;Name&lt;/label&gt;
                   
 
                       &lt;input type="text" class="form-control" id="developer-documentation-example" autoComplete="name" /&gt;
@@ -456,7 +672,6 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
         
 
         <label
-          className="h3"
           htmlFor="developer-documentation-error-example"
         >
           Input label
@@ -546,7 +761,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
                   &lt;div class="form-group"&gt;
                   
 
-                      &lt;label class="h3" for="developer-documentation-error-example"&gt;Input label&lt;/label&gt;
+                      &lt;label for="developer-documentation-error-example"&gt;Input label&lt;/label&gt;
                   
 
                       &lt;input type="text" class="form-control" id="developer-documentation-error-example" value="Input text" /&gt;
@@ -593,9 +808,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
       >
         
 
-        <label
-          className="h3"
-        >
+        <label>
           Input label
         </label>
         
@@ -673,7 +886,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
                   &lt;div class="form-group disabled"&gt;
                   
 
-                      &lt;label class="h3"&gt;Input label&lt;/label&gt;
+                      &lt;label&gt;Input label&lt;/label&gt;
                   
 
                       &lt;input type="text" class="form-control" disabled /&gt;

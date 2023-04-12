@@ -39,8 +39,8 @@ label {
     align-items: center;
     max-width: 100%;
     margin-bottom: @base-margin-xs;
-    font-weight: @font-weight-light;
-    font-size: @base-font-size;
+    font-weight: var(--font-weight-light);
+    font-size: var(--base-font-size);
     line-height: 1.5;
 
     .required-asterisk {
@@ -145,7 +145,7 @@ legend {
     display: block;
     width: 100%;
     margin-bottom: @base-margin;
-    line-height: (@base-font-size * 2.8);
+    line-height: 2.8rem;
     color: @brand-secondary;
     border: 0;
 }
@@ -154,7 +154,7 @@ legend {
 .form-control {
     display: block;
     width: 100%;
-    //font-size: @base-font-size;
+    font-size: var(--base-font-size);
     line-height: @input-line-height;
     color: @input-color;
 
@@ -173,23 +173,12 @@ legend {
     padding: @input-padding-y 0;
 }
 
-.placeholder(@color) {
-    // Firefox
-    &::-moz-placeholder {
-        color: @color;
-        opacity: 1; /* Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526 */
-    }
-
-    &:-ms-input-placeholder { color: @color; } /* Internet Explorer 10+ */
-    &::-webkit-input-placeholder { color: @color; } /* Safari and Chrome */
-}
-
 .form-control {
     height: 56px;
     padding: 12px 16px;
     background-color: var(--white);
     border: 1px solid var(--input-border-color);
-    border-radius: 8px;
+    border-radius: var(--border-radius, 8px);
 
     input::placeholder {
         color: var(--text-muted);
@@ -201,7 +190,6 @@ legend {
         border-color: var(--input-border-focus-color);
     }
 
-
     /* HTML5 says that controls under a fieldset > legend:first-child wont be
      * disabled if the fieldset is disabled. Due to implementation difficulty, we
      * dont honor that edge case; we style them as disabled anyway.
@@ -211,7 +199,6 @@ legend {
     fieldset[disabled] & {
         &:not(.flatpickr-input) {
             opacity: 1; /* iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655 */
-            .placeholder(@brand-secondary-light-3);
 
             &::placeholder {
                 color: @brand-secondary-light-3;
@@ -235,6 +222,20 @@ legend {
 }
 
 .form-group {
+    label {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--brand-secondary);
+        font-family: var(--brand-headline);
+        font-weight: var(--font-weight-header, 400);
+
+        @media screen and (min-width: @screen-sm-min) {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+        }
+    }
+
     &.small {
         .form-control,
         .input-group {
@@ -305,6 +306,7 @@ legend {
             border-color: var(--brand-error);
         }
 
+        .input-group-addon,
         .input-group-addon.postfix {
             border-color: var(--brand-error);
         }
@@ -326,15 +328,15 @@ legend {
 
     &.has-success {
         .form-control {
-            border-color: var(--input-border-color-success);
+            border-color: var(--input-border-success-color);
         }
 
         .input-group-addon.postfix {
-            border-color: var(--input-border-color-success);
+            border-color: var(--input-border-success-color);
         }
 
         i {
-            color: var(--input-border-color-success);
+            color: var(--input-border-success-color);
         }
 
         &:focus-within {
@@ -391,7 +393,7 @@ textarea[disabled] {
 }
 
 select {
-    background: url(../../icons/shapes/expand-more.svg); // TODO:
+    background: url(../../icons/shapes/expand-more.svg);
     background-repeat: no-repeat;
     background-position: right 0.5rem center;
     -moz-appearance: none;

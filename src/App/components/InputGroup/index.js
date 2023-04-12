@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-export const Addon = ({ type, value, postfix, success, error }) => (
+export const Addon = ({ type, value, postfix, success = false, error = false }) => (
     <>
         { success || error ?
             <>
@@ -145,9 +145,9 @@ InputGroup.propTypes = {
     errorMessage: PropTypes.string,
     className: PropTypes.string,
     boxSize: PropTypes.oneOf(["medium", "small", ""]),
-    expandingHintTitle: PropTypes.string,
-    expandingHintContent: PropTypes.string,
-    expanderId: PropTypes.string
+    placeholder: PropTypes.string,
+    success: PropTypes.bool,
+    error: PropTypes.bool,
 };
 
 export default InputGroup;

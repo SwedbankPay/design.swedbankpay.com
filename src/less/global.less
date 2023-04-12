@@ -74,30 +74,7 @@
 @screen-lg-max:                             @grid-breakpoints-max[lg];
 @screen-xl-max:                             @grid-breakpoints-max[xl];
 
-/*
- * Typography
- * ==========================================================================
- */
-
-/* fonts */
-
-@font-stack:                                "Arial", sans-serif;
-
-/* Font Size */
-@base-font-size:                            1rem;
-@font-size-large:                           (@base-font-size * 1.25);
-@font-size-small:                           (@base-font-size * 0.875);
-
-/* Font Weight */
-@font-weight-light:                         300;
-@font-weight-normal:                        400;
-@font-weight-bold:                          700;
-
-@font-weight-base:                          @font-weight-normal;
-
 @line-height-base:                          1.5;
-@line-height-large:                         1.5;
-@line-height-small:                         1.5;
 
 /* Btn-radius base, shared between buttons and input-group */
 @border-radius-base:                        2px;
@@ -172,6 +149,38 @@
 @tabs-z-index:                            100;
 @skip-link-z-index:                      -100;
 
+
+//
+// CSS Variables (custom properties)
+//
+
+// all .less variables have been converted over to CSS variables then we can delete them
+
+:root {
+    /*
+    * Typography
+    * ==========================================================================
+    */
+
+    /* fonts */
+    --font-stack: "Arial", sans-serif;
+
+    /* Font Size */
+    --base-font-size: 1rem;
+    --font-size-large: calc(var(--base-font-size) * 1.25);
+    --font-size-small: calc(var(--base-font-size) * 0.875);
+
+    /* Font Weight */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --font-weight-base: var(--font-weight-normal);
+
+    // line heights
+    --line-height-base: 1.5;
+}
+
+
 //
 // Scaffolding
 // --------------------------------------------------
@@ -198,10 +207,10 @@ html {
 }
 
 body {
-    font-family: @font-stack;
-    font-size: @base-font-size;
+    font-family: var(--font-stack);
+    font-size: var(--base-font-size);
     line-height: 1.5;
-    color: @brand-secondary;
+    color: var(--brand-secondary);
     background-color: @white;
     height: 100%;
     margin: 0;
@@ -320,7 +329,7 @@ ol {
     }
 }
 
-.material-icons-styling(@color: @brand-secondary-dark-2, @margin: 0 0.5rem, @font-size: 1.25rem) {
+.material-icons-styling(@color: @brand-secondary, @margin: 0 0.5rem, @font-size: 1.25rem) {
     color: @color;
     margin: @margin;
     font-family: "Material Icons";
