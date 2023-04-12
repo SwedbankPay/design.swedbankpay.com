@@ -30,9 +30,7 @@
 @brand-primary-light-2:                     #ffdf88;
 @brand-primary-light-3:                     #fff3d5;
 @brand-primary-faded:                       fade(@brand-primary, 60%);
-@brand-secondary-dark-1:                    @dark-brown;
-@brand-secondary-dark-2:                    @solid-brown;
-@brand-secondary:                           #512b2b;
+@brand-secondary:                           @solid-brown;
 @brand-secondary-light-1:                   @medium-brown;
 @brand-secondary-light-2:                   @soft-brown;
 @brand-secondary-light-3:                   @light-brown;
@@ -104,12 +102,6 @@
 @system-info:                               @brand-info;
 @system-info-light:                         @brand-info-light;
 
-/* Brand fonts */
-@brand-headline:                            "Swedbank Headline", "Arial", sans-serif;
-@brand-black:                               "Swedbank Headline Black", "Arial", sans-serif;
-@brand-monofont:                            "Akkurat Mono", monospace;
-@brand-default:                             "Arial", sans-serif;
-
 /* Checkbox */
 @checkbox-checked-color:                    @brand-secondary;
 
@@ -166,9 +158,11 @@
 :root {
     // Communication colors
     --brand-primary: #fdc129;
+    --brand-secondary: var(--brown-solid);
 
     // Functional colors
     --brown-solid: #2f2424;
+    --dark-brown: #493c3b;
     --brown-medium: #72605e;
     --brown-soft: #a38b80;
     --brown-light: #d4c4bc;
@@ -215,4 +209,13 @@
     --btn-disabled-text: var(--text-disabled);
     --btn-bg-disabled: rgba(212, 196, 188, 0.3);
     --btn-active-color: var(--brand-turquoise-light);
+
+    /* Brand fonts */
+    --brand-headline: "Swedbank Headline", "Arial", sans-serif;
+    --brand-black: "Swedbank Headline Black", "Arial", sans-serif;
+    --brand-monofont: "Akkurat Mono", monospace;
+    --brand-default: "Arial", sans-serif;
+
+    /* Font weights */
+    --font-weight-header: 400;
 }

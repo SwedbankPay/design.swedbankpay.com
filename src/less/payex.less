@@ -24,12 +24,12 @@
 
 html,
 body {
-    font-family: @brand-default;
+    font-family: var(--brand-default);
 
     p {
         &.lead {
-            font-family: @brand-black;
-            font-weight: 500;
+            font-family: var(--brand-headline);
+            font-weight: var(--font-weight-header, 500);
         }
     }
 }

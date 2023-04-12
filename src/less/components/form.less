@@ -39,8 +39,8 @@ label {
     align-items: center;
     max-width: 100%;
     margin-bottom: @base-margin-xs;
-    font-weight: @font-weight-light;
-    font-size: @base-font-size;
+    font-weight: var(--font-weight-light);
+    font-size: var(--base-font-size);
     line-height: 1.5;
 
     .required-asterisk {
@@ -159,7 +159,7 @@ legend {
     display: block;
     width: 100%;
     margin-bottom: @base-margin;
-    line-height: (@base-font-size * 2.8);
+    line-height: 2.8rem;
     color: @brand-secondary;
     border: 0;
 }
@@ -168,7 +168,7 @@ legend {
 .form-control {
     display: block;
     width: 100%;
-    font-size: @base-font-size;
+    font-size: var(--base-font-size);
     line-height: @input-line-height;
     color: @input-color;
 
@@ -226,7 +226,7 @@ legend {
 
     &::placeholder {
         color: @brand-secondary-light-2; /* Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526. */
-        font-weight: @font-weight-normal;
+        font-weight: var(--font-weight-normal);
         letter-spacing: -0.1px;
     }
 

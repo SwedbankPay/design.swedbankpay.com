@@ -29,7 +29,7 @@ const ColorDisplay = ({ title, subTitle, hex, border, contrastWhiteApproved, con
                 {noBlackExample ? <></> :
                     <div className="contrast-black-container">
                         <svg className="first-svg">
-                            <rect fill={"#512B2B"}/>
+                            <rect fill={"#2F2424"}/>
                         </svg>
                         <svg className="second-svg">
                             <rect fill={hex}/>

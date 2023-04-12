@@ -87,26 +87,32 @@ const Desktop = () => (
                 <tr>
                     <td><h3>Title 3</h3></td>
                     <td>Swedbank Headline Bold</td>
+                    <td>24 px</td>
+                    <td>28 px</td>
+                </tr>
+                <tr>
+                    <td><h4>Title 4</h4></td>
+                    <td>Swedbank Headline Bold</td>
                     <td>20 px</td>
                     <td>24 px</td>
                 </tr>
                 <tr>
-                    <td><h4>Title 4</h4></td>
+                    <td><h5>Title 5</h5></td>
                     <td>Swedbank Headline Bold</td>
                     <td>16 px</td>
                     <td>20 px</td>
                 </tr>
                 <tr>
-                    <td><h5>Title 5</h5></td>
+                    <td><h6>Title 6</h6></td>
                     <td>Arial bold</td>
                     <td>14 px</td>
                     <td>20 px</td>
                 </tr>
                 <tr>
-                    <td><h6>TITLE 6</h6></td>
+                    <td><p>Body</p></td>
                     <td>Arial regular</td>
-                    <td>12 px</td>
                     <td>16 px</td>
+                    <td>24 px</td>
                 </tr>
                 <tr>
                     <td><small>Small text</small></td>
@@ -158,31 +164,31 @@ const Mobile = () => (
                 <tr>
                     <td><h2>Title 2</h2></td>
                     <td>Swedbank Headline Bold</td>
-                    <td>20 px</td>
                     <td>24 px</td>
+                    <td>28 px</td>
                 </tr>
                 <tr>
                     <td><h3>Title 3</h3></td>
                     <td>Swedbank Headline Bold</td>
-                    <td>18 px</td>
+                    <td>20 px</td>
                     <td>24 px</td>
                 </tr>
                 <tr>
                     <td><h4>Title 4</h4></td>
                     <td>Swedbank Headline Bold</td>
+                    <td>18 px</td>
+                    <td>24 px</td>
+                </tr>
+                <tr>
+                    <td><h5>Title 5</h5></td>
+                    <td>Swedbank Headline Bold</td>
                     <td>16 px</td>
                     <td>20 px</td>
                 </tr>
                 <tr>
-                    <td><h5>Title 5</h5></td>
+                    <td><h6>Title 6</h6></td>
                     <td>Arial bold</td>
                     <td>14 px</td>
-                    <td>20 px</td>
-                </tr>
-                <tr>
-                    <td><h6>TITLE 6</h6></td>
-                    <td>Arial regular</td>
-                    <td>12 px</td>
                     <td>16 px</td>
                 </tr>
                 <tr>

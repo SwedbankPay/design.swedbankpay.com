@@ -60,7 +60,7 @@ exports[`DisplayColor renders with optional props 1`] = `
           className="first-svg"
         >
           <rect
-            fill="#512B2B"
+            fill="#2F2424"
           />
         </svg>
         <svg
@@ -141,7 +141,7 @@ exports[`DisplayColor renders with required props 1`] = `
           className="first-svg"
         >
           <rect
-            fill="#512B2B"
+            fill="#2F2424"
           />
         </svg>
         <svg
