@@ -26,19 +26,6 @@ describe("Component: InputGroup -", () => {
         expect(componentForSnap.toJSON()).toMatchSnapshot();
     });
 
-    it.skip("throws an error if validationState prop has an invalid value", () => {
-        const testValues = ["success", "error", "", "invalid", "test"];
-
-        console.error = jest.fn();
-        testValues.forEach(testValue => {
-
-            const componentForSnap = renderer.create(<InputGroup type="typetest" validationState={testValue} />);
-
-            expect(componentForSnap.toJSON()).toMatchSnapshot();
-        });
-        expect(console.error).toHaveBeenCalledTimes(3);
-    });
-
     it("throws an error if addOnType prop has an invalid value", () => {
         const testValues = ["button", "icon", "", "invalid", "test", "text"];
 
