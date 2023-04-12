@@ -11,9 +11,7 @@ Array [
   >
     
 
-    <label
-      className="h3"
-    >
+    <label>
       Email
     </label>
     
@@ -39,9 +37,7 @@ Array [
   >
     
 
-    <label
-      className="h3"
-    >
+    <label>
       Password
     </label>
     

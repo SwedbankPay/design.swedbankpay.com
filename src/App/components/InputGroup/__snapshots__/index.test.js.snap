@@ -62,9 +62,7 @@ exports[`Component: InputGroup - renders a form-group with a label if prop label
 >
   
 
-  <label
-    className="h3"
-  >
+  <label>
     this is a text in a label
   </label>
   

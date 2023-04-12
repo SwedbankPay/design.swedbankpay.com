@@ -2157,7 +2157,6 @@ exports[`Forms: index renders 1`] = `
           
 
           <label
-            className="h3"
             htmlFor="login-email-example"
           >
             Email
@@ -2186,7 +2185,6 @@ exports[`Forms: index renders 1`] = `
           
 
           <label
-            className="h3"
             htmlFor="login-password-example"
           >
             Password
@@ -2437,7 +2435,6 @@ exports[`Forms: index renders 1`] = `
               
 
               <label
-                className="h3"
                 htmlFor="guideline-email-example"
               >
                 Required input field
@@ -2466,7 +2463,6 @@ exports[`Forms: index renders 1`] = `
               
 
               <label
-                className="h3"
                 htmlFor="guideline-password-example"
               >
                 Required input field
@@ -2667,7 +2663,6 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <label
-                  className="h3"
                   htmlFor="login-client-side"
                 >
                   Email

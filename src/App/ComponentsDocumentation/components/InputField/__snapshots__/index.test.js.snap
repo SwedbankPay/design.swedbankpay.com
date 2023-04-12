@@ -22,7 +22,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           
 
           <label
-            className="h3"
             htmlFor="input-guidelines-example"
           >
             Label
@@ -58,9 +57,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
         >
           
 
-          <label
-            className="h3"
-          >
+          <label>
             Label
           </label>
           
@@ -140,7 +137,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             
 
             <label
-              className="h3"
               htmlFor="do-example-expanding"
             >
               Personal identification number
@@ -195,7 +191,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             
 
             <label
-              className="h3"
               htmlFor="do-example-expanding"
             >
               Security code (CVC)
@@ -254,7 +249,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             
 
             <label
-              className="h3"
               htmlFor="guidelines-input-example-1"
             >
               Username
@@ -317,7 +311,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             
 
             <label
-              className="h3"
               htmlFor="guidelines-input-example-2"
             >
               Username
@@ -379,7 +372,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             
 
             <label
-              className="h3"
               htmlFor="guidelines-input-example-3"
             >
               Fixed transaction fee, in SEK
@@ -442,7 +434,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             
 
             <label
-              className="h3"
               htmlFor="guidelines-input-example-4"
             >
               Fixed transaction fee, in SEK
@@ -516,7 +507,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             
 
             <label
-              className="h3"
               htmlFor="guidelines-input-example-7"
             >
               Email address
@@ -571,7 +561,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             
 
             <label
-              className="h3"
               htmlFor="guidelines-input-example-8"
             >
               Email address
@@ -646,7 +635,6 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
         
 
         <label
-          className="h3"
           htmlFor="developer-documentation-example"
         >
           Name
@@ -726,7 +714,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
                   &lt;div class="form-group"&gt;
                   
 
-                      &lt;label class="h3" for="developer-documentation-example"&gt;Name&lt;/label&gt;
+                      &lt;label for="developer-documentation-example"&gt;Name&lt;/label&gt;
                   
 
                       &lt;input type="text" class="form-control" id="developer-documentation-example" autoComplete="name" /&gt;
@@ -771,7 +759,6 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
         
 
         <label
-          className="h3"
           htmlFor="developer-documentation-error-example"
         >
           Input label
@@ -861,7 +848,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
                   &lt;div class="form-group"&gt;
                   
 
-                      &lt;label class="h3" for="developer-documentation-error-example"&gt;Input label&lt;/label&gt;
+                      &lt;label for="developer-documentation-error-example"&gt;Input label&lt;/label&gt;
                   
 
                       &lt;input type="text" class="form-control" id="developer-documentation-error-example" value="Input text" /&gt;
@@ -908,9 +895,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
       >
         
 
-        <label
-          className="h3"
-        >
+        <label>
           Input label
         </label>
         
@@ -988,7 +973,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
                   &lt;div class="form-group disabled"&gt;
                   
 
-                      &lt;label class="h3"&gt;Input label&lt;/label&gt;
+                      &lt;label&gt;Input label&lt;/label&gt;
                   
 
                       &lt;input type="text" class="form-control" disabled /&gt;
