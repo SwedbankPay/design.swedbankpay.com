@@ -24,6 +24,17 @@
     -   btn-xl (size class)
     -   btn-icon class (can be combined with btn-<size> classes)
 
+-   Input field
+    Removed:
+    -   less functions for error validation from validation.less
+    -   less function for focus state
+
+    Added/Updated:
+    -   CSS variables for input fields Both SwedBP and PayEx variables
+    -   Error message/icon
+    -   Success message/icon
+    -   Simplified error/success prop and correct presentation of component with belonging icons/colors
+
 -   Colors (Swedbankpay only):
     -   text color defaults to Brown-solid (instead of Brown previously)
         -   this enables new background colors now having enough color contrast with brown-solid text (Turquoise, brown-soft, brown-light, orange)

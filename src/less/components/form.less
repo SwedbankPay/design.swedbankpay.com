@@ -76,20 +76,6 @@ fieldset {
             resize: none;
         }
 
-        select,
-        .form-group,
-        input + input,
-        .hint-text-expander > button,
-        .hint-text-expander > p {
-            color: @brand-secondary-light-3;
-        }
-
-        .hint-text-expander {
-            button {
-                pointer-events: none;
-            }
-        }
-
         .checkbox input[type="checkbox"] {
             + label:after {
                 background-color: @input-bg-disabled;
@@ -187,47 +173,21 @@ legend {
     padding: @input-padding-y 0;
 }
 
-.form-control-focus(@color: @input-border-focus) {
-    @color-rgba: rgba(red(@color), green(@color), blue(@color), 1);
-
-    &:focus {
-        // outline: 0;
-        color: @text-color;
-        outline-color: @color-rgba;
-        box-shadow: none;
-        background-color: @white;
-    }
-}
-
-.placeholder(@color) {
-    // Firefox
-    &::-moz-placeholder {
-        color: @color;
-        opacity: 1; /* Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526 */
-    }
-
-    &:-ms-input-placeholder { color: @color; } /* Internet Explorer 10+ */
-    &::-webkit-input-placeholder { color: @color; } /* Safari and Chrome */
-}
-
 .form-control {
-    height: @input-form-control-height;
-    padding: 0 0.75rem;
-    background-color: @input-bg;
-    background-clip: padding-box;
-    border: solid @input-border-color;
-    border-width: @input-border-width;
-    border-bottom-color: @medium-brown;
-    border-radius: 2px 2px 0 0;
-    box-shadow: none;
+    height: 56px;
+    padding: 12px 16px;
+    background-color: var(--white);
+    border: 1px solid var(--input-border-color);
+    border-radius: var(--border-radius, 8px);
 
-    .form-control-focus(@brand-secondary);
-    .placeholder(@brand-secondary-light-2);
+    input::placeholder {
+        color: var(--text-muted);
+    }
 
-    &::placeholder {
-        color: @brand-secondary-light-2; /* Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526. */
-        font-weight: var(--font-weight-normal);
-        letter-spacing: -0.1px;
+    &:focus-within {
+        outline: none;
+        border-width: 2px;
+        border-color: var(--input-border-focus-color);
     }
 
     /* HTML5 says that controls under a fieldset > legend:first-child wont be
@@ -239,7 +199,6 @@ legend {
     fieldset[disabled] & {
         &:not(.flatpickr-input) {
             opacity: 1; /* iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655 */
-            .placeholder(@brand-secondary-light-3);
 
             &::placeholder {
                 color: @brand-secondary-light-3;
@@ -263,6 +222,20 @@ legend {
 }
 
 .form-group {
+    label {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--brand-secondary);
+        font-family: var(--brand-headline);
+        font-weight: var(--font-weight-header, 400);
+
+        @media screen and (min-width: @screen-sm-min) {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+        }
+    }
+
     &.small {
         .form-control,
         .input-group {
@@ -293,16 +266,8 @@ legend {
 
     .input-group .form-control:not(:last-child) {
         border-right: none;
-    }
-
-    .form-control:focus-within {
-        outline: 2px auto @brand-secondary;
-        border-color: transparent;
-    }
-
-    .form-control:focus-visible {
-        outline: 2px solid @brand-secondary;
-        border-radius: 2px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
     }
 
     &.disabled,
@@ -310,11 +275,11 @@ legend {
         color: @brand-secondary-light-3;
 
         .input-group-addon {
-            border-color: @brand-secondary-light-3;
-            color: @brand-secondary-light-3;
+            border-color: var(--text-disabled);
+            color: var(--text-disabled);
 
             i {
-                color: @brand-secondary-light-3;
+                color: var(--text-disabled);
             }
         }
 
@@ -323,15 +288,60 @@ legend {
             pointer-events: none;
         }
 
-        .hint-text,
-        .hint-text-expander > button,
-        .hint-text-expander > p {
-            color: @brand-secondary-light-3;
+        input::placeholder {
+            color: var(--text-disabled);
         }
 
-        .hint-text-expander {
-            button {
-                pointer-events: none;
+        &.form-control {
+            border-color: var(--text-disabled);
+        }
+
+        label {
+            color: var(--text-disabled);
+        }
+    }
+
+    &.has-error {
+        .form-control {
+            border-color: var(--brand-error);
+        }
+
+        .input-group-addon,
+        .input-group-addon.postfix {
+            border-color: var(--brand-error);
+        }
+
+        i {
+            color: var(--brand-error);
+        }
+
+        .help-block {
+            color: var(--brand-error);
+        }
+
+        &:focus-within {
+            .form-control {
+                border-color: var(--input-border-focus-color);
+            }
+        }
+    }
+
+    &.has-success {
+        .form-control {
+            border-color: var(--input-border-success-color);
+        }
+
+        .input-group-addon.postfix {
+            border-color: var(--input-border-success-color);
+        }
+
+        i {
+            color: var(--input-border-success-color);
+        }
+
+        &:focus-within {
+            .form-control {
+                border-color: var(--input-border-focus-color);
             }
         }
     }
@@ -374,59 +384,6 @@ legend {
     color: @medium-brown;
 }
 
-.hint-text-expander {
-    display: block;
-    margin-top: 0.25rem;
-
-    button {
-        all: unset;
-        display: flex;
-        color: @brand-accent-links;
-        padding-right: 0.25rem;
-        border: 1px solid transparent;
-        cursor: pointer;
-        font-size: 0.875rem;
-        line-height: 1rem;
-
-        .arrow {
-            margin-right: 0.5rem;
-            font-size: 0.875rem;
-            align-self: center;
-            transition: transform 0.5s ease;
-        }
-
-        &:focus {
-            border-radius: 0.125rem;
-        }
-
-        &:focus-visible {
-            outline: 2px solid @brand-secondary;
-            border-radius: 2px;
-        }
-
-        &.content-expanded {
-            .arrow {
-                transform: rotate(180deg);
-                transition: transform 0.3s ease;
-            }
-
-            ~ .content {
-                visibility: visible;
-                height: auto;
-            }
-        }
-    }
-
-    .content {
-        visibility: hidden;
-        height: 0;
-        margin: 0;
-        padding: 0;
-        color: @medium-brown;
-        font-size: 0.875rem;
-    }
-}
-
 textarea {
     resize: vertical;
 }
@@ -436,7 +393,7 @@ textarea[disabled] {
 }
 
 select {
-    background: url(../../icons/shapes/expand-more.svg); // TODO:
+    background: url(../../icons/shapes/expand-more.svg);
     background-repeat: no-repeat;
     background-position: right 0.5rem center;
     -moz-appearance: none;

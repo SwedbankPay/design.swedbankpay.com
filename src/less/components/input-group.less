@@ -12,38 +12,15 @@
     width: 100%;
     min-height: 2rem;
 
-    &:focus-visible {
-        outline: 2px solid @brand-secondary;
-        border-radius: 2px;
-    }
-
-    &:focus-within {
-        outline: 2px solid @brand-secondary;
-
-        .input-group-addon,
-        .form-control {
-            outline: none;
-            border-width: 1px 1px 2px;
-            border-color: transparent;
-            transition: none;
-        }
-
-        .postfix {
-            border-right: 2px solid @black;
-            border-left: transparent;
-            border-top-left-radius: 0;
-        }
-    }
-
     > .btn {
         border-radius: 0;
 
         &:first-child {
-            border-radius: @btn-border-radius-base 0 0 @btn-border-radius-base;
+            border-radius: var(--border-radius, 8px) 0 0 var(--border-radius, 8px);
         }
 
         &:last-child {
-            border-radius: 0 @btn-border-radius-base @btn-border-radius-base 0;
+            border-radius: 0 var(--border-radius, 8px) var(--border-radius, 8px) 0;
         }
     }
 
@@ -61,10 +38,22 @@
         }
     }
 
+    &:focus-within {
+        .input-group-addon {
+            border-width: 2px;
+            border-color: var(--input-border-focus-color);
+
+            &.postfix {
+                border-right-width: 2px;
+                border-color: var(--input-border-focus-color);
+            }
+        }
+    }
+
     .input-group-addon {
         display: flex;
         align-items: center;
-        padding: @input-padding-y @input-padding-x;
+        padding: 12px 16px;
         margin-bottom: 0;
         font-size: var(--base-font-size);
         font-weight: var(--font-weight-normal);
@@ -73,15 +62,14 @@
         background-color: @white;
         text-align: center;
         white-space: nowrap;
-        border: solid @input-border-color;
-        border-width: @input-border-width;
-        border-bottom-color: @input-addon-color;
-        border-radius: 2px 2px 0 0;
+        border: 1px solid var(--input-border-color);
+        border-radius: var(--border-radius, 8px) 0 0 var(--border-radius, 8px);
         border-top-right-radius: 0;
         border-right: none;
 
         + input {
             border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
             border-left: none;
         }
 
@@ -92,8 +80,10 @@
 
         &.postfix {
             border-left: transparent;
-            border-right: 1px solid @input-border-color;
-            border-radius: 0 2px 2px 0;
+            border-right-color: var(--input-border-color);
+            border-right-width: 1px;
+            border-right-style: solid;
+            border-radius: 0 var(--border-radius, 8px) var(--border-radius, 8px) 0;
             pointer-events: none;
         }
     }

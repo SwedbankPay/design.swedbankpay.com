@@ -59,19 +59,6 @@
     }
 }
 
-.form-group {
-    &.has-error {
-        .form-control-validation(@brand-error, "error");
-
-        &:focus-within:not("hint-text-expander") {
-            .form-control,
-            .input-group-addon {
-                border-color: transparent;
-            }
-        }
-    }
-}
-
 .input-group {
     &.has-error {
         .form-control-validation(@brand-error, "error");

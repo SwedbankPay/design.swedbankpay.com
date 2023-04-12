@@ -2,8 +2,17 @@ import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-export const Addon = ({ type, value, postfix }) => (
-    <span className={`input-group-addon ${postfix ? "postfix" : ""}`}>{(type === "icon") ? <i className="material-icons material-icons-outlined" aria-hidden="true">{value}</i> : value}</span>
+export const Addon = ({ type, value, postfix, success = false, error = false }) => (
+    <>
+        { success || error ?
+            <>
+                {(success) && <><span className="input-group-addon postfix"><i className="material-icons" aria-hidden="true">check_circle</i></span></>}
+                {(error) && <span className="input-group-addon postfix"><i className="material-icons material-icons-outlined" aria-hidden="true">warning</i></span>}
+            </>
+            :
+            <span className={`input-group-addon ${postfix ? "postfix" : ""}`}>{(type === "icon") ? <i className="material-icons material-icons-outlined" aria-hidden="true">{value}</i> : value}</span>
+        }
+    </>
 );
 
 const InputGroup = ({
@@ -25,14 +34,11 @@ const InputGroup = ({
     postfixValue,
     helpBlock,
     errorMessage,
-    expandingHintTitle,
-    expandingHintContent,
-    expanderId,
-    optional,
     postfix,
     boxSize,
-    hintTextId,
-    expandingHintId
+    placeholder,
+    success,
+    error
 }) => {
     const attrs = {
         type: type || null,
@@ -45,7 +51,7 @@ const InputGroup = ({
         required: required || null,
         pattern: pattern ? "" : null,
         "data-validate": validate ? "" : null,
-        "aria-describedby": helpBlock || expandingHintTitle ? `${helpBlock ? hintTextId : ""}${expandingHintTitle ? ` ${expandingHintId}` : ""}` : null
+        placeholder: placeholder || null
     };
 
     const inputGrpClasses = classnames(
@@ -59,23 +65,22 @@ const InputGroup = ({
         disabled: disabled || null,
         readOnly: readOnly || null,
         required: required || null,
-        id: id || null,
-        "aria-describedby": helpBlock || expandingHintTitle ? `${helpBlock ? hintTextId : ""}${expandingHintTitle ? ` ${expandingHintId}` : ""}` : null
+        id: id || null
     };
 
     const formGroupClasses = classnames(
         "form-group",
         disabled ? "disabled" : null,
         boxSize ? boxSize : null,
-        errorMessage ? "has-error" : null,
+        error ? "has-error" : null,
+        success ? "has-success" : null,
         className ? className : null
     );
 
     return (
         <div className={formGroupClasses}>{"\n"}
-            {label ? <label htmlFor={id}>{label}{optional && " (optional)"}
-            </label> : null}{label ? "\n" : null}
-            {prefixValue || postfixValue ?
+            {label ? <label htmlFor={id}>{label}</label> : null}{label ? "\n" : null}
+            {prefixValue || postfixValue || error || success ?
                 <div className={inputGrpClasses}>{"\n"}
                     {prefixValue ? <Addon type={addOnType} value={prefixValue} disabled={disabled} /> : null }{prefixValue ? "\n" : null}
                     {type === "textarea" ?
@@ -91,7 +96,7 @@ const InputGroup = ({
                             :
                             <>
                                 <input {...attrs} />{"\n\t"}
-                                {postfix ? <Addon type={addOnType} value={postfixValue} disabled={disabled} postfix={postfix} /> : null }{postfix ? "\n" : null}
+                                {postfix || error || success ? <Addon error={error} success={success} type={addOnType} value={postfixValue} disabled={disabled} postfix={postfix} /> : null }{postfix ? "\n" : null}
                             </>}
                     {"\n"}
                 </div>
@@ -111,17 +116,8 @@ const InputGroup = ({
                             <input {...attrs} />}{"\n"}
                 </>
             }
-            {errorMessage && <><div className="help-block"><i className="material-icons">warning</i>{errorMessage}</div>{"\n"}</>}
+            {errorMessage && <><div className="help-block">{errorMessage}</div>{"\n"}</>}
             {helpBlock && <><p id="hint-text" className="hint-text">{helpBlock}</p>{"\n"}</>}
-            {expandingHintTitle &&
-            <div id={expanderId && "hint-text-expander"} className="hint-text-expander">{"\n"}
-                <button type="button" aria-controls={expanderId} aria-expanded={false}>{"\n"}
-                    <span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}{"\n"}
-                </button>{"\n"}
-                <p id={expanderId} className="content" aria-hidden={true}>{expandingHintContent
-                    ? expandingHintContent
-                    : "This information is less important and only a minority of users will need it or the text is very long. In this case; both."}</p>{"\n"}
-            </div>}
         </div>
     );
 };
@@ -137,7 +133,6 @@ InputGroup.propTypes = {
     disabled: PropTypes.bool,
     readOnly: PropTypes.bool,
     label: PropTypes.string,
-    validationState: PropTypes.oneOf(["error", ""]),
     selectOptions: PropTypes.array,
     prefixValue: PropTypes.string,
     addOnType: PropTypes.oneOf(["text", "icon", ""]),
@@ -150,9 +145,9 @@ InputGroup.propTypes = {
     errorMessage: PropTypes.string,
     className: PropTypes.string,
     boxSize: PropTypes.oneOf(["medium", "small", ""]),
-    expandingHintTitle: PropTypes.string,
-    expandingHintContent: PropTypes.string,
-    expanderId: PropTypes.string
+    placeholder: PropTypes.string,
+    success: PropTypes.bool,
+    error: PropTypes.bool,
 };
 
 export default InputGroup;

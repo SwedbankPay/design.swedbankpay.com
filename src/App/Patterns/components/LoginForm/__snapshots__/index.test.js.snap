@@ -17,7 +17,6 @@ Array [
     
 
     <input
-      aria-describedby={null}
       autoComplete={null}
       className="form-control"
       data-validate={null}
@@ -25,6 +24,7 @@ Array [
       disabled={null}
       id={null}
       pattern={null}
+      placeholder={null}
       readOnly={null}
       required={null}
       type="email"
@@ -43,7 +43,6 @@ Array [
     
 
     <input
-      aria-describedby={null}
       autoComplete={null}
       className="form-control"
       data-validate={null}
@@ -51,6 +50,7 @@ Array [
       disabled={null}
       id={null}
       pattern={null}
+      placeholder={null}
       readOnly={null}
       required={null}
       type="password"

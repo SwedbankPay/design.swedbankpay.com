@@ -29,7 +29,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           
 
           <input
-            aria-describedby="undefined"
             autoComplete={null}
             className="form-control"
             data-validate={null}
@@ -37,6 +36,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             disabled={null}
             id="input-guidelines-example"
             pattern={null}
+            placeholder={null}
             readOnly={null}
             required={null}
             type="text"
@@ -63,7 +63,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           
 
           <textarea
-            aria-describedby=" undefined"
             autoComplete={null}
             className="form-control"
             data-validate={null}
@@ -71,43 +70,13 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             disabled={null}
             id={null}
             pattern={null}
+            placeholder={null}
             readOnly={null}
             required={null}
             type="textarea"
           />
           
 
-          <div
-            className="hint-text-expander"
-          >
-            
-
-            <button
-              aria-expanded={false}
-              type="button"
-            >
-              
-
-              <span
-                className="material-icons arrow"
-              >
-                keyboard_arrow_down
-              </span>
-              Expander hint text
-              
-
-            </button>
-            
-
-            <p
-              aria-hidden={true}
-              className="content"
-            >
-              This information is less important and only a minority of users will need it or the text is very long. In this case; both.
-            </p>
-            
-
-          </div>
         </div>
       </div>
     </div>
@@ -175,7 +144,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             
 
             <input
-              aria-describedby="birthnumber-example"
               autoComplete={null}
               className="form-control"
               data-validate={null}
@@ -183,6 +151,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
               disabled={null}
               id="do-example-expanding"
               pattern={null}
+              placeholder={null}
               readOnly={null}
               required={null}
               type="text"
@@ -229,7 +198,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             
 
             <input
-              aria-describedby=" where-to-find-example"
               autoComplete={null}
               className="form-control"
               data-validate={null}
@@ -237,43 +205,13 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
               disabled={null}
               id="do-example-expanding"
               pattern={null}
+              placeholder={null}
               readOnly={null}
               required={null}
               type="text"
             />
             
 
-            <div
-              className="hint-text-expander"
-            >
-              
-
-              <button
-                aria-expanded={false}
-                type="button"
-              >
-                
-
-                <span
-                  className="material-icons arrow"
-                >
-                  keyboard_arrow_down
-                </span>
-                Where to find the code?
-                
-
-              </button>
-              
-
-              <p
-                aria-hidden={true}
-                className="content"
-              >
-                Three to four digits on the back or the front of your card.
-              </p>
-              
-
-            </div>
           </div>
         </div>
         <p
@@ -330,7 +268,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
               
 
               <input
-                aria-describedby={null}
                 autoComplete={null}
                 className="form-control"
                 data-validate={null}
@@ -338,6 +275,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
                 disabled={null}
                 id="guidelines-input-example-1"
                 pattern={null}
+                placeholder={null}
                 readOnly={null}
                 required={null}
                 type="text"
@@ -392,7 +330,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
               
 
               <input
-                aria-describedby={null}
                 autoComplete={null}
                 className="form-control"
                 data-validate={null}
@@ -400,6 +337,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
                 disabled={null}
                 id="guidelines-input-example-2"
                 pattern={null}
+                placeholder={null}
                 readOnly={null}
                 required={null}
                 type="email"
@@ -446,7 +384,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
               
 
               <input
-                aria-describedby={null}
                 autoComplete={null}
                 className="form-control"
                 data-validate={null}
@@ -454,6 +391,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
                 disabled={null}
                 id="guidelines-input-example-3"
                 pattern={null}
+                placeholder={null}
                 readOnly={null}
                 required={null}
                 type="text"
@@ -508,7 +446,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
               
 
               <input
-                aria-describedby={null}
                 autoComplete={null}
                 className="form-control"
                 data-validate={null}
@@ -516,6 +453,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
                 disabled={null}
                 id="guidelines-input-example-4"
                 pattern={null}
+                placeholder={null}
                 readOnly={null}
                 required={null}
                 type="text"
@@ -564,7 +502,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             Do
           </span>
           <div
-            className="form-group has-error"
+            className="form-group"
           >
             
 
@@ -576,7 +514,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             
 
             <input
-              aria-describedby={null}
               autoComplete={null}
               className="form-control"
               data-validate={null}
@@ -584,6 +521,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
               disabled={null}
               id="guidelines-input-example-7"
               pattern={null}
+              placeholder={null}
               readOnly={null}
               required={null}
               type="text"
@@ -593,11 +531,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             <div
               className="help-block"
             >
-              <i
-                className="material-icons"
-              >
-                warning
-              </i>
               The email address must include "@"
             </div>
             
@@ -623,7 +556,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             n't
           </span>
           <div
-            className="form-group has-error"
+            className="form-group"
           >
             
 
@@ -635,7 +568,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             
 
             <input
-              aria-describedby={null}
               autoComplete={null}
               className="form-control"
               data-validate={null}
@@ -643,6 +575,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
               disabled={null}
               id="guidelines-input-example-8"
               pattern={null}
+              placeholder={null}
               readOnly={null}
               required={null}
               type="text"
@@ -652,11 +585,6 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             <div
               className="help-block"
             >
-              <i
-                className="material-icons"
-              >
-                warning
-              </i>
               Invalid input
             </div>
             
@@ -714,7 +642,6 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
         
 
         <input
-          aria-describedby={null}
           autoComplete="name"
           className="form-control"
           data-validate={null}
@@ -722,6 +649,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
           disabled={null}
           id="developer-documentation-example"
           pattern={null}
+          placeholder={null}
           readOnly={null}
           required={null}
           type="text"
@@ -826,7 +754,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
       className="showcase-panel"
     >
       <div
-        className="form-group has-error"
+        className="form-group"
       >
         
 
@@ -838,7 +766,6 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
         
 
         <input
-          aria-describedby={null}
           autoComplete={null}
           className="form-control"
           data-validate={null}
@@ -846,6 +773,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
           disabled={null}
           id="developer-documentation-error-example"
           pattern={null}
+          placeholder={null}
           readOnly={null}
           required={null}
           type="text"
@@ -855,11 +783,6 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
         <div
           className="help-block"
         >
-          <i
-            className="material-icons"
-          >
-            warning
-          </i>
           Descriptive helpful error message.
         </div>
         
@@ -922,7 +845,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
                 className="code-view-code"
               >
                 <pre>
-                  &lt;div class="form-group has-error"&gt;
+                  &lt;div class="form-group"&gt;
                   
 
                       &lt;label for="developer-documentation-error-example"&gt;Input label&lt;/label&gt;
@@ -931,7 +854,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
                       &lt;input type="text" class="form-control" id="developer-documentation-error-example" value="Input text" /&gt;
                   
 
-                      &lt;div class="help-block"&gt;&lt;i class="material-icons"&gt;warning&lt;/i&gt;Descriptive helpful error message.&lt;/div&gt;
+                      &lt;div class="help-block"&gt;Descriptive helpful error message.&lt;/div&gt;
                   
 
                   &lt;/div&gt;
@@ -978,7 +901,6 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
         
 
         <input
-          aria-describedby={null}
           autoComplete={null}
           className="form-control"
           data-validate={null}
@@ -986,6 +908,7 @@ exports[`Component: InputField DeveloperDocumentation renders 1`] = `
           disabled={true}
           id={null}
           pattern={null}
+          placeholder={null}
           readOnly={null}
           required={null}
           type="text"
