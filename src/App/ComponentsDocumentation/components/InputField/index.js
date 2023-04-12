@@ -50,7 +50,7 @@ const ContentGuidelines = forwardRef((props, ref) => <section ref={ref}>
 
     <section>
         <h3>Error message</h3>
-        <p>Strive to have clear communication with the user. Describe the error precise.</p>
+        <p>Strive to have clear communication with the user. Make sure your error message is clear and informational.</p>
         <div className="slab col-12 justify-content-center d-flex bg-quaternary">
             <InputGroup label="Email address" error errorMessage="The email address must include '@'" defaultValue="example.email.com" />
         </div>
@@ -69,13 +69,13 @@ const DeveloperDocumentation = () => (
         <section>
             <h3 className="mt-3">Autocomplete</h3>
             <p>Add <CodeTags type="primary" code="autocomplete"/> attributes to input fields when it is possible to make a form easier for users to fill. </p>
-            <p>Please check out <Link to="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete">this site</Link> for full autocomplete specs.</p>
+            <p>Please check out <Link to="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete">MDNs documentation</Link> for full autocomplete specs.</p>
             <ComponentPreview language="html" showCasePanel codeFigure>
                 <form>
                     <fieldset>
-                        <InputGroup type="text" label="Name" id="developer-doc-given-name-example" className="mb-3" autoComplete="name"/>
-                        <InputGroup type="text" label="E-mail" id="developer-doc-given-name-example" className="mb-3" autoComplete="email"/>
-                        <InputGroup type="number" label="Phone number" id="developer-doc-given-name-example" autoComplete="phone"/>
+                        <InputGroup type="text" label="Name" id="developer-doc-name-example" className="mb-3" autoComplete="name"/>
+                        <InputGroup type="text" label="E-mail" id="developer-doc-email-name-example" className="mb-3" autoComplete="email"/>
+                        <InputGroup type="tel" label="Phone number" id="developer-doc-phone-example" autoComplete="phone"/>
                     </fieldset>
                 </form>
             </ComponentPreview>

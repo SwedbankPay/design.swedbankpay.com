@@ -183,7 +183,7 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
       Error message
     </h3>
     <p>
-      Strive to have clear communication with the user. Describe the error precise.
+      Strive to have clear communication with the user. Make sure your error message is clear and informational.
     </p>
     <div
       className="slab col-12 justify-content-center d-flex bg-quaternary"
