@@ -53,6 +53,11 @@
 -   Button documentation
     Removed:
     -   Destructive button documentation
+
+-   Input field documentation
+    Removed:
+    -   Do and donts examples
+    
 -   Identity Color documentation
 
 -   Typography - headers  & font-sizes & line-height

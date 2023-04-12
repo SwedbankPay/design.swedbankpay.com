@@ -101,11 +101,6 @@ const DeveloperDocumentation = () => (
                 <InputGroup type="select" id="disabled-state-example" label="Label" placeholder="Select option" selectOptions={[]} disabled />
             </ComponentPreview>
         </section>
-
-        <section>
-            <h3>Javascript methods</h3>
-            <p><CodeTags type="secondary" code="dg.hintTextExpander.init()"/> can be used to initialize all Hint text expanders. Or <CodeTags type="secondary" code="dg.hintTextExpander.init(<hint-text-expander-id>)"/> to initialize a specific one.</p>
-        </section>
     </section>
 );
 

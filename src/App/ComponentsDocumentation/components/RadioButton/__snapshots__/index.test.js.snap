@@ -525,25 +525,6 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
       </div>
     </figure>
   </section>
-  <section>
-    <h3>
-      Javascript methods
-    </h3>
-    <p>
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        dg.hintTextExpander.init()
-      </code>
-       can be used to initialize all Hint text expanders. Or 
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        dg.hintTextExpander.init(&lt;hint-text-expander-id&gt;)
-      </code>
-       to initialize a specific one.
-    </p>
-  </section>
 </section>
 `;
 

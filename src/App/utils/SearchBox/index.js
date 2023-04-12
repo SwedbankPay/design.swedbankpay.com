@@ -149,24 +149,18 @@ const SearchBox = ({ className, mobile }) => {
                 <div className={`search-container${className ? ` ${className}` : ""}${expanded ? " expanded" : ""}`}>
                     <div className="form-group">
                         <div className="input-group">
-                            <div className="input-container" style={{
-                                position: "relative"
-                            }}>
-                                <input ref={inputFieldText} onKeyDown={e => arrowNavigation(e)} type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} />
-                                <button
-                                    onClick={searchFocus}
-                                    type="button"
-                                    tabIndex={"-1"}
-                                    className="hint-shortcuts"
-                                >
-                                    <kbd>Ctrl</kbd>
-                                    <kbd>K</kbd>
-                                </button>
-                            </div>
-                            {searchTerm !== "" ?
-                                <button className="btn btn-icon" type="button" onClick={() => clearSearchTerm()}><i className="material-icons">close</i></button>
-                                :
-                                <button onClick={() => activateSearch()} className="btn btn-icon" type="button"><i className="material-icons">search</i></button>}
+
+                            <input ref={inputFieldText} onKeyDown={e => arrowNavigation(e)} type="text" className="form-control" id="search-box" placeholder="Search" onChange={e => setSearchTerm(e.target.value)} />
+                            <button
+                                onClick={searchFocus}
+                                type="button"
+                                tabIndex={"-1"}
+                                className="hint-shortcuts"
+                            >
+                                <kbd>Ctrl</kbd>
+                                <kbd>K</kbd>
+                            </button>
+                            <span className="input-group-addon postfix"><i className="material-icons-outlined">search</i></span>
                         </div>
                     </div>
                     {searchTerm !== "" && <div className="result-box">

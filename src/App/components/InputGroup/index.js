@@ -47,7 +47,7 @@ const InputGroup = ({
         defaultValue: defaultValue || "",
         disabled: disabled || null,
         readOnly: readOnly || null,
-        autoComplete: autoComplete || null,
+        autocomplete: autoComplete || null,
         required: required || null,
         pattern: pattern ? "" : null,
         "data-validate": validate ? "" : null,

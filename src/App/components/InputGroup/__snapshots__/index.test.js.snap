@@ -7,7 +7,7 @@ exports[`Component: InputGroup - renders 1`] = `
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -31,7 +31,7 @@ exports[`Component: InputGroup - renders a form-group with a help block 1`] = `
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -68,7 +68,7 @@ exports[`Component: InputGroup - renders a form-group with a label if prop label
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -109,7 +109,7 @@ exports[`Component: InputGroup - renders a form-group with a prefix icon if prop
     
 
     <input
-      autoComplete={null}
+      autocomplete={null}
       className="form-control"
       data-validate={null}
       defaultValue=""
@@ -179,7 +179,7 @@ exports[`Component: InputGroup - renders a form-group with a text-area if type e
   
 
   <textarea
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -203,7 +203,7 @@ exports[`Component: InputGroup - throws an error if addOnType prop has an invali
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -227,7 +227,7 @@ exports[`Component: InputGroup - throws an error if addOnType prop has an invali
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -251,7 +251,7 @@ exports[`Component: InputGroup - throws an error if addOnType prop has an invali
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -275,7 +275,7 @@ exports[`Component: InputGroup - throws an error if addOnType prop has an invali
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -299,7 +299,7 @@ exports[`Component: InputGroup - throws an error if addOnType prop has an invali
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -323,7 +323,7 @@ exports[`Component: InputGroup - throws an error if addOnType prop has an invali
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""
@@ -347,7 +347,7 @@ exports[`Component: InputGroup - throws an error if type prop is not provided 1`
   
 
   <input
-    autoComplete={null}
+    autocomplete={null}
     className="form-control"
     data-validate={null}
     defaultValue=""

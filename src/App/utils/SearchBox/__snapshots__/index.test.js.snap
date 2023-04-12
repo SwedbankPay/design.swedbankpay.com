@@ -40,47 +40,36 @@ exports[`Utilities; SearchBox renders with no props 1`] = `
     <div
       className="input-group"
     >
-      <div
-        className="input-container"
-        style={
-          Object {
-            "position": "relative",
-          }
-        }
-      >
-        <input
-          className="form-control"
-          id="search-box"
-          onChange={[Function]}
-          onKeyDown={[Function]}
-          placeholder="Search"
-          type="text"
-        />
-        <button
-          className="hint-shortcuts"
-          onClick={[Function]}
-          tabIndex="-1"
-          type="button"
-        >
-          <kbd>
-            Ctrl
-          </kbd>
-          <kbd>
-            K
-          </kbd>
-        </button>
-      </div>
+      <input
+        className="form-control"
+        id="search-box"
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Search"
+        type="text"
+      />
       <button
-        className="btn btn-icon"
+        className="hint-shortcuts"
         onClick={[Function]}
+        tabIndex="-1"
         type="button"
       >
+        <kbd>
+          Ctrl
+        </kbd>
+        <kbd>
+          K
+        </kbd>
+      </button>
+      <span
+        className="input-group-addon postfix"
+      >
         <i
-          className="material-icons"
+          className="material-icons-outlined"
         >
           search
         </i>
-      </button>
+      </span>
     </div>
   </div>
 </div>
