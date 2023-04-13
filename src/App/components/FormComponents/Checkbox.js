@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, helpBlock, optional, required, group, options, className }) => {
+const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage, helpBlock, required, group, options, className }) => {
     const attrs = {
         type: "checkbox",
         id: id || null,
@@ -18,9 +18,6 @@ const Checkbox = ({ id, checked, name, disabled, groupTitle, label, errorMessage
                 <fieldset className={`checkbox-group${errorMessage ? " has-error" : ""}`} disabled={disabled}>
                     <legend>
                         {groupTitle}
-                        {optional && <>{"\n"}
-                            <span>(optional)</span>
-                        </>}
                     </legend>
                     {options.map(({ label, id }, i) => <div className="checkbox" key={i}>{"\n"}
                         <input {...attrs} id={id} />{"\n"}
@@ -55,7 +52,6 @@ Checkbox.propTypes = {
     group: PropTypes.bool,
     groupTitle: PropTypes.string,
     options: PropTypes.array,
-    optional: PropTypes.bool,
     helpBlock: PropTypes.string,
 };
 
