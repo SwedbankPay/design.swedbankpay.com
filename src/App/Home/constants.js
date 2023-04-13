@@ -5,6 +5,11 @@ const basename = process.env.basename;
 
 export const changeLogs = [
     {
+        version: "10.8.0",
+        title: "A new beginning 🌅",
+        text: <p>We are currently in the process of revamping our components to give them a fresh new look and improved functionality. As part of this effort, we have started with our <a href={`${basename}components/buttons`}>Button</a> and <a href={`${basename}components/input-field`}>Input field</a> components dropped in this release. From a holistic view, things will look a bit funky in the beginning during this migration, but fear not, everything will look smashing once it is finished! In addition we are using a new color for textual representation, moving away from the old brown and turning darker.</p>
+    },
+    {
         version: "10.7.5",
         title: "We're stepping React up to 18, it's officially an adult now ✨",
         text: "Purely DG page maintenance again; upgraded React to v18. This was the last step of our maintenance sequence. It's been one long step for devs, and one tiny leap for mankind. 👩‍🚀"
