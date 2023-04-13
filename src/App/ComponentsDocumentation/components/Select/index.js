@@ -6,6 +6,7 @@ import { selectOverview, whenToUse } from "./constants";
 import CodeTags from "@components/CodeTags";
 import { datepicker } from "@src/scripts/main";
 import AlertComponent from "@components/Alert";
+import { Link } from "react-router-dom";
 
 const WhenToUse = () => (
     <>
@@ -38,6 +39,7 @@ const WhenToUse = () => (
 const Overview = () => (
     <section>
         <h2 id="overview">Overview</h2>
+        <p>If you want the select functionality, but designed as a button, consider using the <Link to="/components/dropdown">dropdown</Link> component.</p>
         <ComponentPreview language="html" codeFigure showCasePanel showCasePanelAdvanced={selectOverview} />
 
         <AlertComponent id="input-group-info" type="informative" text={<p><b>Styling: </b>The Select component is part of the input group. Therefore, be sure to import the input-group style file to give your Select the appropriate styling.</p>} icon="info"/>
