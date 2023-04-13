@@ -9,7 +9,7 @@ import { overviewButtons, buttonUtilClasses } from "./constants";
 const Overview = () => (
     <section>
         <h2 id="overview">Button variants</h2>
-        <p>There are three different sizes of buttons to choose from: xsmall, small and large. Our button variants can also be customized with icons next to the label to clarify the action. </p>
+        <p>There are four different sizes of buttons to choose from: xsmall, small, large (default) and extra large. Our button variants can also be customized with icons next to the label to clarify the action. </p>
         <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={overviewButtons} codeFigure />
     </section>
 );
