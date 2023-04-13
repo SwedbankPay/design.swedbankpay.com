@@ -16,33 +16,17 @@ export const checkboxShowCase = {
     id: "no-tabs",
     elements: [
         {
-            component: <Checkbox groupTitle="Group legend" name="checkbox-group-example" options={options} group hintExpander={true} />,
+            component: <Checkbox groupTitle="Group legend" name="checkbox-group-example" options={options} group />,
             options: {
                 checkbox: [
                     {
                         title: "Label add on",
                         inputs: [
                             {
-                                id: "checkbox_labels",
-                                name: "Is optional",
-                                value: {
-                                    optional: true
-                                }
-                            },
-                            {
                                 id: "hint_text",
                                 name: "Hint text",
                                 value: {
                                     helpBlock: "Hint text",
-                                    hintTextId: "hint-text-checkbox-example"
-                                }
-                            },
-                            {
-                                id: "hint_expander",
-                                name: "Hint expander",
-                                value: {
-                                    expandingHintTitle: "Expanding hint text",
-                                    expanderId: "expander-showcase"
                                 }
                             }
                         ]

@@ -7,6 +7,7 @@ import CodeTags from "@components/CodeTags";
 const Overview = () => (
     <section>
         <h2 id="overview">Overview</h2>
+        <p>Consider using the <Link to="/components/select">select</Link> component if you are creating a form.</p>
         <ComponentPreview language="html" showCasePanel codeFigure showCasePanelAdvanced={overviewDropdown} />
         <h3>When to consider something else</h3>
         <ul className="list list-bullet">

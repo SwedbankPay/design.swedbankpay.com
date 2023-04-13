@@ -49,6 +49,9 @@
 -   normalize.less -> import as first import so every import after that takes precedence
     -   fixes headers font-size, and possible many more things ?
 
+-   Expanding hint text
+    -   Delete the functionality, we are not supporting it anymore.
+
 ## Design Guide documentation changes
 -   Button documentation
     Removed:

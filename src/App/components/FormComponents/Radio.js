@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optional, name, required, className, style, helpBlock, expanderId, expandingHintTitle, errorMessage }) => {
+const Radio = ({ id, checked, disabled, label, group, groupTitle, options, name, required, className, style, helpBlock, errorMessage }) => {
     const attrs = {
         type: "radio",
         id: id || null,
@@ -9,7 +9,7 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
         disabled: disabled || null,
         defaultChecked: checked || null,
         required,
-        "aria-describedby": helpBlock || expandingHintTitle ? `${helpBlock ? helpBlock : ""}${expandingHintTitle ? ` ${expanderId}` : ""}` : null
+        "aria-describedby": helpBlock || null
     };
 
     return (
@@ -18,7 +18,7 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
                 <form>
                     <fieldset className={`radio-group${errorMessage ? " has-error" : ""}${className ? ` ${className}` : ""}`} disabled={disabled}>{"\n"}
                         <legend>
-                            {groupTitle} {optional && <span>(optional)</span>}
+                            {groupTitle}
                         </legend>{"\n"}
                         {style === "checkmark" ?
                             <div className="radio-row">
@@ -37,14 +37,6 @@ const Radio = ({ id, checked, disabled, label, group, groupTitle, options, optio
 
                         {errorMessage && <><div className="help-block"><i className="material-icons">warning</i>{errorMessage}</div>{"\n"}</>}
                         {helpBlock && <><p id="hint-text" className="hint-text">{helpBlock}</p>{"\n"}</>}
-                        {expandingHintTitle &&
-                        <div id={expanderId && "hint-text-expander"} className="hint-text-expander">{"\n"}
-                            <button type="button" aria-controls={expanderId} aria-expanded={false}>{"\n"}
-                                <span className="material-icons arrow">keyboard_arrow_down</span>{expandingHintTitle}{"\n"}
-                            </button>{"\n"}
-                            <p id={expanderId} className="content" aria-hidden={true}>Additional information if text is long!</p>{"\n"}
-                        </div>
-                        }
                     </fieldset>
                 </form>
                 : <>
@@ -70,9 +62,7 @@ Radio.propTypes = {
     require: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.string,
-    helpBlock: PropTypes.string,
-    expandingHintTitle: PropTypes.string,
-    optional: PropTypes.bool
+    helpBlock: PropTypes.string
 };
 
 export default Radio;

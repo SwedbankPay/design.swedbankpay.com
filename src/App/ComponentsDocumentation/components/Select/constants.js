@@ -8,33 +8,18 @@ export const selectOverview = {
     id: "no-tabs",
     elements: [
         {
-            component: <InputGroup id="select-showcase-example" type="select" label="Label" placeholder="Select option" selectOptions={["Blueberry", "Blackberry", "Berryberry"]} hintExpander={true} />,
+            component: <InputGroup id="select-showcase-example" type="select" label="Label" placeholder="Select option" selectOptions={["Blueberry", "Blackberry", "Berryberry"]} />,
             options: {
                 checkbox: [
                     {
                         title: "Label add on",
                         inputs: [
                             {
-                                id: "optional",
-                                name: "Is optional",
-                                value: {
-                                    optional: true
-                                }
-                            },
-                            {
                                 id: "hint_text_select",
                                 name: "Hint text",
                                 value: {
                                     helpBlock: "Hint text",
                                     hintTextId: "select-hint-text-example"
-                                }
-                            },
-                            {
-                                id: "hint_expander",
-                                name: "Expander hint",
-                                value: {
-                                    expandingHintTitle: "Expanding hint text",
-                                    expanderId: "expander-showcase"
                                 }
                             }
                         ]
@@ -55,6 +40,7 @@ export const selectOverview = {
                                 name: "Error",
                                 value: {
                                     errorMessage: "Descriptive helpful error message.",
+                                    error: true,
                                     required: true
                                 }
                             },

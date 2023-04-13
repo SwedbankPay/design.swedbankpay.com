@@ -19,33 +19,18 @@ export const radiobuttonShowCase = {
     elements: [
         {
             tab: "Primary",
-            component: <Radio groupTitle="Group legend" name="radio-group-example" options={options} group hintExpander={true} />,
+            component: <Radio groupTitle="Group legend" name="radio-group-example" options={options} group />,
             options: {
                 checkbox: [
                     {
                         title: "Label add on",
                         inputs: [
                             {
-                                id: "is_optional",
-                                name: "Is optional",
-                                value: {
-                                    optional: true
-                                }
-                            },
-                            {
                                 id: "hint_text",
                                 name: "Hint text",
                                 value: {
                                     helpBlock: "Hint text",
                                     hintTextId: "hint-text-radio-example"
-                                }
-                            },
-                            {
-                                id: "hint_expander",
-                                name: "Hint expander",
-                                value: {
-                                    expandingHintTitle: "Expander hint text",
-                                    expanderId: "expander-showcase"
                                 }
                             }
                         ]
@@ -83,33 +68,18 @@ export const radiobuttonShowCase = {
         },
         {
             tab: "Checkmark",
-            component: <Radio groupTitle="Group legend" name="radio-group-example" options={options} group hintExpander={true} style="checkmark" />,
+            component: <Radio groupTitle="Group legend" name="radio-group-example" options={options} group style="checkmark" />,
             options: {
                 checkbox: [
                     {
                         title: "Label add on",
                         inputs: [
                             {
-                                id: "is_optional",
-                                name: "Is optional",
-                                value: {
-                                    optional: true
-                                }
-                            },
-                            {
                                 id: "hint_text",
                                 name: "Hint text",
                                 value: {
                                     helpBlock: "Hint text",
                                     hintTextId: "hint-text-radio-example"
-                                }
-                            },
-                            {
-                                id: "hint_expander",
-                                name: "Hint expander",
-                                value: {
-                                    expandingHintTitle: "Expander hint text",
-                                    expanderId: "expander-showcase"
                                 }
                             }
                         ]
