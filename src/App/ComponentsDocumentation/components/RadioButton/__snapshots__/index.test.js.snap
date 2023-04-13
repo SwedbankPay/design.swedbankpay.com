@@ -22,7 +22,6 @@ Array [
 
             <legend>
               Group legend
-               
             </legend>
             
 
@@ -282,7 +281,6 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
 
             <legend>
               Group legend
-               
             </legend>
             
 
@@ -469,7 +467,7 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
                       &lt;fieldset class="radio-group has-error"&gt;
                   
 
-                          &lt;legend&gt;Group legend &lt;/legend&gt;
+                          &lt;legend&gt;Group legend&lt;/legend&gt;
                   
 
                           &lt;div class="radio"&gt;
@@ -563,7 +561,6 @@ exports[`Component: RadioButton HowTo renders 1`] = `
 
                 <legend>
                   Card type
-                   
                 </legend>
                 
 
@@ -668,7 +665,6 @@ exports[`Component: RadioButton HowTo renders 1`] = `
 
                 <legend>
                   Card type
-                   
                 </legend>
                 
 

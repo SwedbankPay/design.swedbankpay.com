@@ -322,7 +322,6 @@ exports[`Forms: index renders 1`] = `
 
               <legend>
                 Input label
-                 
               </legend>
               
 
@@ -332,7 +331,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby=" undefined"
+                  aria-describedby={null}
                   defaultChecked={true}
                   disabled={null}
                   id="guidelines-options-1"
@@ -355,7 +354,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby=" undefined"
+                  aria-describedby={null}
                   disabled={null}
                   id="guidelines-options-2"
                   name="guidelines-radio-example"
@@ -377,7 +376,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby=" undefined"
+                  aria-describedby={null}
                   disabled={null}
                   id="guidelines-options-3"
                   name="guidelines-radio-example"
@@ -390,37 +389,6 @@ exports[`Forms: index renders 1`] = `
                 >
                   Option 3
                 </label>
-                
-
-              </div>
-              <div
-                className="hint-text-expander"
-              >
-                
-
-                <button
-                  aria-expanded={false}
-                  type="button"
-                >
-                  
-
-                  <span
-                    className="material-icons arrow"
-                  >
-                    keyboard_arrow_down
-                  </span>
-                  Expander hint text
-                  
-
-                </button>
-                
-
-                <p
-                  aria-hidden={true}
-                  className="content"
-                >
-                  Additional information if text is long!
-                </p>
                 
 
               </div>
