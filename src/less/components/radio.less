@@ -108,7 +108,7 @@
 
     label {
         outline: 1px solid @black;
-        border-radius: 8px;
+        border-radius: var(--border-radius, 8px);
         margin: auto;
         height: 100%;
         width: 100%;
@@ -128,14 +128,14 @@
     input[type="radio"]:hover:not(:disabled) + label {
         background-color: @light-gray;
         color: @medium-brown;
-        border-radius: 8px;
+        border-radius: var(--border-radius, 8px);
         border: 0 solid transparent;
         outline: 1px solid @medium-brown;
     }
 
     input[type="radio"]:checked + label {
         background-color: @brand-secondary;
-        border-radius: 8px;
+        border-radius: var(--border-radius, 8px);
         color: @white;
         padding-left: 1.875rem;
     }

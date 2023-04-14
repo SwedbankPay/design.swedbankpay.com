@@ -30,7 +30,8 @@ module.exports = [
                 path: "color",
                 rootPath: "/identity/color",
                 componentPath: "identity/Color",
-                text: "Our color palette with HEX codes"
+                text: "Our color palette with HEX codes",
+                statusBadges: ["updated"]
             },
             {
                 title: "Copywriting",
@@ -65,7 +66,6 @@ module.exports = [
                 path: "logotype",
                 rootPath: "/identity/logotype",
                 componentPath: "identity/Logotype",
-                statusBadges: ["updated"],
                 text: `The ${process.env.brandTitle} logotype`
             },
             {

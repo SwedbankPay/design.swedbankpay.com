@@ -5,6 +5,16 @@ const basename = process.env.basename;
 
 export const changeLogs = [
     {
+        version: "10.8.0",
+        title: "A new beginning 🌅",
+        text: <p>This one is a bittersweet release.
+            <br/>On one hand Spring is coming, sun is warming, smiles are popping, and our Design System is like the Paris Fashion Week: it&apos;s getting a new style 🎊
+            <br/>We are currently in the process of revamping our components to give them a fresh new look and improved functionality. As part of this effort, we have started with our <a href={`${basename}components/buttons`}>Button</a> and <a href={`${basename}components/input-field`}>Input field</a> components dropped in this release. From a holistic view, things will look a bit funky in the beginning during this migration, but fear not, everything will look smashing once it is finished! In addition we are using a new color for textual representation, moving away from the old brown and turning darker.
+            <br/>There are some minor breaking changes, therefore we recommend giving a look at the <a href="https://github.com/SwedbankPay/design.swedbankpay.com/releases">detailed changelog</a>
+            <br/>On the other hand, we are loosing Eskil. He&apos;s moving away to new adventures, becoming a professional diapers changer (a.k.a. Papa-perm 👶). We&apos;re hoping the best for him and we are grateful for all the hard work and big smiles he has brought with him. Those are big shoes left to fill, but we&apos;ll make it work 💪
+        </p>
+    },
+    {
         version: "10.7.5",
         title: "We're stepping React up to 18, it's officially an adult now ✨",
         text: "Purely DG page maintenance again; upgraded React to v18. This was the last step of our maintenance sequence. It's been one long step for devs, and one tiny leap for mankind. 👩‍🚀"
