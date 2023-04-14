@@ -47,7 +47,7 @@
     -   Converted all .less Typography variables to CSS custom properties (font-families, font-sizes, line-height, weight, ...) + continue migration of colors to CSS variables
 
 -   Normalize.less -> import as first import so every import after that takes precedence
-    -   Fixes headers font-size, and possible many more things ?
+    -   Fixes headers font-size, and possible many more things.
 
 -   Expanding hint text
     -   Delete the functionality and style; we are not supporting it anymore.
@@ -62,7 +62,7 @@
     
 -   Identity Color documentation
 
--   Typography
+-   Identity Typography documentation
     -   Headers, Font-sizes and Line-height
 
 ## Deleted features
