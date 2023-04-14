@@ -63,3 +63,11 @@
 
 -   Typography
     -   Headers, Font-sizes and Line-height
+
+## Deleted features
+-   Button component
+    -   btn-guiding-destructive, btn-executive-destructive, btn-link-destructive classes (you are now supposed to use the new btn-tertiary for those edge cases) (this does not apply for the payex brand)
+    -   btn-icon-<size> classes (we are now using a combination of btn-icon and btn-<size>)
+
+-   Expanding hint text
+    -   All styling has been removed, also the script. (We recommend thoroughly thinking through the use case, and rather add more explanation in the label/legend or hint-text)
