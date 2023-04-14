@@ -122,6 +122,17 @@
     margin: 1rem 0;
     .slider-color(@brand-secondary);
 
+    label {
+        position: relative;
+        border: none;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--brand-secondary);
+        font-family: var(--brand-headline);
+        font-weight: var(--font-weight-header, 400);
+    }
+
     input + div {
         display: flex;
         justify-content: space-between;
@@ -138,7 +149,7 @@
         padding: 0.125rem;
         justify-content: center;
         color: @white;
-        font-family: @brand-headline;
+        font-family: var(--brand-headline);
         font-size: 0.875rem;
         text-align: center;
         white-space: nowrap;
@@ -178,6 +189,10 @@
 
                 .value-label {
                     background: @input-checked-bg-disabled;
+                }
+
+                label {
+                    color: var(--text-disabled);
                 }
             }
         }

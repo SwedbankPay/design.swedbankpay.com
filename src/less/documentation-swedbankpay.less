@@ -43,7 +43,6 @@
         & > div:not(.sp-stack) {
             font-size: initial;
             line-height: 1.5;
-            font-family: @brand-default;
             color: @brand-secondary;
         }
     }
@@ -188,16 +187,12 @@
 
         input {
             width: 21rem;
-            height: 2.5rem;
-            border: 1px solid @soft-brown;
-            border-right: none;
-            border-radius: 2px 0 0 0;
         }
 
         button.hint-shortcuts {
             position: absolute;
-            top: 0;
-            right: 0;
+            top: 0.8rem;
+            right: 2.5rem;
             border-color: transparent;
             background: none;
 
@@ -215,10 +210,6 @@
         }
 
         button {
-            height: 2.5rem;
-            border: 1px solid @soft-brown;
-            border-left: none;
-
             i {
                 color: @brown-soft;
             }
@@ -251,7 +242,7 @@
         position: absolute;
         z-index: 103;
         background-color: @white;
-        border-radius: 2px;
+        border-radius: var(--border-radius, 8px);
         max-height: 50vh;
         overflow: auto;
         box-shadow: 1px 2px 20px rgb(0 0 0 / 25%);
@@ -314,6 +305,7 @@
     &.search-expander {
         top: unset;
         left: 1rem;
+        margin-top: 0;
 
         .form-group {
             display: flex;
@@ -327,11 +319,8 @@
                 right: 0;
                 top: -1.4rem;
                 height: 2.5rem;
-                border-left: 1px solid @soft-brown;
-
-                &:focus {
-                    border-left: 2px solid transparent;
-                }
+                border-left: 1px solid;
+                border-color: var(--brown-solid);
 
                 i {
                     font-size: 1.25rem;
@@ -345,13 +334,15 @@
         }
 
         &.expanded {
+            display: grid;
+
             .form-group {
                 button {
                     position: unset;
                     right: unset;
-                    top: unset;
                     height: 2.5rem;
                     border: 1px solid @soft-brown;
+                    align-self: center;
 
                     &:hover,
                     &:focus {
@@ -370,7 +361,6 @@
                     font-size: 0.875rem;
                     margin-right: 0.5rem;
                     width: 100%;
-                    border-right: 1px solid @soft-brown;
                 }
             }
         }
@@ -390,7 +380,6 @@
         h1:first-of-type {
             margin-top: 1rem;
             margin-bottom: 1rem;
-            font-family: @brand-black;
         }
 
         &.utilities-page {
@@ -419,13 +408,14 @@
 
                     .dg-title-small {
                         font-size: 2.5rem;
-                        font-family: @brand-headline;
-                        font-weight: bold;
+                        font-family: var(--brand-headline);
+                        font-weight: var(--font-weight-bold);
                     }
 
                     .dg-title-big {
                         font-size: 3.5rem;
-                        font-family: @brand-black;
+                        font-family: var(--brand-headline);
+                        font-weight: var(--font-weight-bold);
                     }
                 }
 
@@ -437,14 +427,14 @@
                         padding: 0.5rem;
                         background-color: #fff3d5;
                         font-size: 1.25rem;
-                        font-family: @brand-headline;
+                        font-family: var(--brand-headline);
                     }
                 }
 
                 .front-page-lead {
                     max-width: 38.75rem;
                     font-size: 1.25rem;
-                    font-family: @font-stack;
+                    font-family: var(--font-stack);
                     line-height: 1.75rem;
                 }
 
@@ -498,7 +488,7 @@
 
                     .dg-changlelog-title {
                         font-size: 1.5rem;
-                        font-family: @brand-headline;
+                        font-family: var(--brand-headline);
 
                         .dg-changelog-divider {
                             width: 3.75rem;
@@ -694,7 +684,7 @@
         h1 {
             color: @text-color;
             margin: 0;
-            font-weight: @font-weight-normal;
+            font-weight: var(--font-weight-normal);
             line-height: 80px;
         }
     }
@@ -723,7 +713,7 @@
                 text-decoration: none;
 
                 &.active {
-                    font-weight: @font-weight-bold;
+                    font-weight: var(--font-weight-bold);
                 }
             }
 
@@ -778,7 +768,7 @@
             &.active {
                 .nav-heading {
                     > span {
-                        font-weight: @font-weight-bold;
+                        font-weight: var(--font-weight-bold);
                     }
 
                     i {
@@ -812,7 +802,7 @@
             color: @text-color;
             padding-left: @base-padding-xl;
             margin: 0;
-            font-weight: @font-weight-normal;
+            font-weight: var(--font-weight-normal);
             line-height: 80px;
         }
     }
@@ -848,7 +838,7 @@
 
                 &.active {
                     border-left: 2px solid @brand-primary;
-                    font-weight: @font-weight-bold;
+                    font-weight: var(--font-weight-bold);
                     padding-left: calc(@base-padding - 1px);
                 }
 
@@ -1160,47 +1150,20 @@
         }
 
         .swedbank-headline {
-            font-family: @brand-headline;
+            font-family: var(--brand-headline);
         }
 
         .arial {
-            font-family: @brand-default;
+            font-family: var(--brand-default);
         }
 
         .akkurat-mono {
-            font-family: @brand-monofont;
+            font-family: var(--brand-monofont);
         }
     }
 
-    .typography-table {
-        &.mobile {
-            h1,
-            .h1 {
-                font-size: 1.75rem;
-                line-height: 2rem;
-            }
-
-            h2,
-            .h2 {
-                font-size: 1.25rem;
-                line-height: 1.5rem;
-            }
-
-            h3,
-            .h3 {
-                font-size: 1.125rem;
-                line-height: 1.5rem;
-            }
-
-            .hero {
-                font-size: 2.5rem;
-                line-height: 3rem;
-            }
-        }
-
-        td {
-            height: 6.125rem;
-        }
+    .typography-table td {
+        height: 6.125rem;
     }
 
     .color-contrast-section {
@@ -1231,7 +1194,7 @@
             width: 7.875rem;
             margin-right: 0.5rem;
             overflow: hidden;
-            border-radius: 5px;
+            border-radius: var(--border-radius, 8px);
 
             &.has-border {
                 border: 1px solid @brand-secondary;
@@ -1346,12 +1309,8 @@
         }
 
         .form-group {
-            min-width: 19rem;
+            min-width: 20rem;
             max-width: 21.25rem;
-
-            .hint-text-expander {
-                max-width: 19rem;
-            }
         }
 
         .component-description {
@@ -1577,7 +1536,7 @@
     #link-doc {
         .link-dark-background {
             background-color: @brand-secondary;
-            border-radius: 8px;
+            border-radius: var(--border-radius, 8px);
 
             a:focus-visible {
                 outline: 2px solid @brand-primary;
@@ -1851,6 +1810,22 @@
 
     #dropdown-doc .component-preview-content .dropdown .dropdown-menu {
         z-index: calc(@dropdown-z-index + 3);
+    }
+
+    #button-utilities {
+        .button-utilities-container {
+            margin-top: 1rem;
+
+            .utility-container {
+                display: grid;
+                grid: auto-flow / 1fr 3fr;
+
+                .code-tags {
+                    height: fit-content;
+                    width: fit-content;
+                }
+            }
+        }
     }
 }
 

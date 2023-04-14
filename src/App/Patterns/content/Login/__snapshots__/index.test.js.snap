@@ -2164,14 +2164,14 @@ exports[`Forms: index renders 1`] = `
           
 
           <input
-            aria-describedby={null}
-            autoComplete={null}
+            autocomplete={null}
             className="form-control"
             data-validate={null}
             defaultValue=""
             disabled={null}
             id="login-email-example"
             pattern={null}
+            placeholder={null}
             readOnly={null}
             required={null}
             type="email"
@@ -2192,14 +2192,14 @@ exports[`Forms: index renders 1`] = `
           
 
           <input
-            aria-describedby={null}
-            autoComplete={null}
+            autocomplete={null}
             className="form-control"
             data-validate={null}
             defaultValue=""
             disabled={null}
             id="login-password-example"
             pattern={null}
+            placeholder={null}
             readOnly={null}
             required={null}
             type="password"
@@ -2442,14 +2442,14 @@ exports[`Forms: index renders 1`] = `
               
 
               <input
-                aria-describedby={null}
-                autoComplete={null}
+                autocomplete={null}
                 className="form-control"
                 data-validate={null}
                 defaultValue=""
                 disabled={null}
                 id="guideline-email-example"
                 pattern={null}
+                placeholder="Placeholder text"
                 readOnly={null}
                 required={null}
                 type="email"
@@ -2470,14 +2470,14 @@ exports[`Forms: index renders 1`] = `
               
 
               <input
-                aria-describedby={null}
-                autoComplete={null}
+                autocomplete={null}
                 className="form-control"
                 data-validate={null}
                 defaultValue=""
                 disabled={null}
                 id="guideline-password-example"
                 pattern={null}
+                placeholder={null}
                 readOnly={null}
                 required={null}
                 type="password"
@@ -2658,7 +2658,7 @@ exports[`Forms: index renders 1`] = `
               className="col-sm-6 col-12 m-auto px-0 pt-3"
             >
               <div
-                className="form-group has-error"
+                className="form-group"
               >
                 
 
@@ -2670,14 +2670,14 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby={null}
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
                   disabled={null}
                   id="login-client-side"
                   pattern={null}
+                  placeholder={null}
                   readOnly={null}
                   required={null}
                   type="email"
@@ -2687,11 +2687,6 @@ exports[`Forms: index renders 1`] = `
                 <div
                   className="help-block"
                 >
-                  <i
-                    className="material-icons"
-                  >
-                    warning
-                  </i>
                   Email is required
                 </div>
                 

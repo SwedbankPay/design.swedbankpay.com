@@ -23,7 +23,6 @@ exports[`Component: Select ContentGuidelines renders 1`] = `
       
 
       <select
-        aria-describedby="select-content-guidelines-example"
         className="form-control"
         defaultValue=""
         disabled={null}
@@ -305,7 +304,6 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
         
 
         <select
-          aria-describedby={null}
           className="form-control"
           defaultValue=""
           disabled={true}
@@ -405,25 +403,6 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
         </table>
       </div>
     </figure>
-  </section>
-  <section>
-    <h3>
-      Javascript methods
-    </h3>
-    <p>
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        dg.hintTextExpander.init()
-      </code>
-       can be used to initialize all Hint text expanders. Or 
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        dg.hintTextExpander.init(&lt;hint-text-expander-id&gt;)
-      </code>
-       to initialize a specific one.
-    </p>
   </section>
 </section>
 `;

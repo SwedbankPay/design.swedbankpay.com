@@ -8,7 +8,7 @@ const Sheet = ({ id, requireAction, title, footer, children }) => (
         <section>{"\n"}
             <div className="sheet-header">
                 <h2 className="mb-0">{title}</h2>
-                <button id="sheetClose" className="sheet-close" aria-label="Close sheet">{"\n\t\t\t"}
+                <button id="sheetClose" className="sheet-close btn btn-icon btn-small" aria-label="Close sheet">{"\n\t\t\t"}
                     <i className="material-icons">close</i>{"\n\t\t"}
                 </button>
             </div>

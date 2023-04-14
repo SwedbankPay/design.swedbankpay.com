@@ -1,7 +1,7 @@
 @import "../button.less";
 
 &.btn {
-    font-family: @brand-default;
+    font-family: var(--brand-default);
 
     &.btn-primary {
         &:active {
@@ -38,6 +38,15 @@
     }
 
     &.btn-guiding-destructive {
+        background: var(--btn-destructive-color);
+        border-color: var(--btn-destructive-bg);
+        color: var(--btn-destructive-bg);
+
+        &:hover {
+            background: var(--btn-destructive-bg);
+            color: var(--btn-destructive-color);
+        }
+
         &:active {
             border: 2px solid @btn-destructive-hover;
             box-shadow: none;
@@ -45,6 +54,23 @@
 
         &:focus {
             border: 2px solid @brand-secondary;
+        }
+
+        &.disabled,
+        &[disabled],
+        fieldset[disabled] & {
+            &,
+            &:hover,
+            &:focus,
+            &.focus,
+            &[active],
+            &:active,
+            &.active {
+                background: var(--btn-destructive-disabled-color);
+                color: var(--btn-destructive-disabled-bg);
+                outline: none;
+                border: 1px solid var(--btn-destructive-disabled-bg);
+            }
         }
     }
 
@@ -60,9 +86,33 @@
             border: 1px solid @btn-destructive-hover;
             box-shadow: 0 0 0 0.1rem @btn-destructive-hover;
         }
+
+        &.disabled,
+        &[disabled],
+        fieldset[disabled] & {
+            &,
+            &:hover,
+            &:focus,
+            &.focus,
+            &[active],
+            &:active,
+            &.active {
+                background: var(--btn-destructive-disabled-color);
+                color: var(--btn-destructive-disabled-bg);
+                border: none;
+            }
+        }
     }
 
     &.btn-executive-destructive {
+        background: var(--btn-destructive-bg);
+        color: var(--btn-destructive-color);
+
+        &:hover {
+            background: var(--btn-destructive-hover);
+            color: var(--btn-destructive-color);
+        }
+
         &:active {
             border: 2px solid @btn-destructive-hover;
             box-shadow: none;
@@ -70,6 +120,22 @@
 
         &:focus {
             background-color: @btn-destructive-hover;
+        }
+
+        &.disabled,
+        &[disabled],
+        fieldset[disabled] & {
+            &,
+            &:hover,
+            &:focus,
+            &.focus,
+            &[active],
+            &:active,
+            &.active {
+                background: var(--btn-destructive-disabled-bg);
+                color: var(--btn-destructive-disabled-color);
+                outline: none;
+            }
         }
     }
 }

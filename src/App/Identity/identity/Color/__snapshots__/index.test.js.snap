@@ -53,7 +53,7 @@ exports[`Core: Color BackgroundColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -135,7 +135,7 @@ exports[`Core: Color BackgroundColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -217,7 +217,7 @@ exports[`Core: Color BackgroundColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -299,7 +299,7 @@ exports[`Core: Color BackgroundColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -381,7 +381,7 @@ exports[`Core: Color BackgroundColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -404,435 +404,13 @@ exports[`Core: Color BackgroundColors renders 1`] = `
 </section>
 `;
 
-exports[`Core: Color BrownScaleColors renders 1`] = `
-<section>
-  <h2
-    id="brown-scale-colors"
-  >
-    Brown scale colors
-  </h2>
-  <p>
-    Brown scale colors are used for both typography, borders and interface details to maintain a warm and welcoming expression.
-  </p>
-  <div
-    className="color-group"
-  >
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box "
-      >
-        <svg>
-          <rect
-            fill="#2F2424"
-          />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Brown solid
-        </p>
-        <small
-          className="small mb-0"
-        >
-          brown-solid
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #2F2424
-        </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#512B2B"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box "
-      >
-        <svg>
-          <rect
-            fill="#493C3B"
-          />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Brown dark
-        </p>
-        <small
-          className="small mb-0"
-        >
-          brown-dark
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #493C3B
-        </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#493C3B"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#512B2B"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#493C3B"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box "
-      >
-        <svg>
-          <rect
-            fill="#72605E"
-          />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Brown medium
-        </p>
-        <small
-          className="small mb-0"
-        >
-          brown-medium
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #72605E
-        </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#72605E"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#512B2B"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#72605E"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box "
-      >
-        <svg>
-          <rect
-            fill="#A38B80"
-          />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Brown soft
-        </p>
-        <small
-          className="small mb-0"
-        >
-          brown-soft
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #A38B80
-        </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#A38B80"
-              />
-            </svg>
-            <i
-              className="material-icons warning"
-            >
-              warning
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#512B2B"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#A38B80"
-              />
-            </svg>
-            <i
-              className="material-icons warning"
-            >
-              warning
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box "
-      >
-        <svg>
-          <rect
-            fill="#D4C4BC"
-          />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Brown light
-        </p>
-        <small
-          className="small mb-0"
-        >
-          brown-light
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #D4C4BC
-        </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#D4C4BC"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#512B2B"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#D4C4BC"
-              />
-            </svg>
-            <i
-              className="material-icons warning"
-            >
-              warning
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-`;
-
 exports[`Core: Color CommunicationColors renders 1`] = `
 <section>
+  <h2
+    id="color-contrast"
+  >
+    Color contrast
+  </h2>
   <p>
     It is important to maintain sufficient color contrast in our products to meet accessability requirements. For normal text content this means a 4.5:1 ratio against background and for graphics and large text (18 px, or bold 14 px) a 3:1 ratio against background. To help you to make informed color decisions, we showcase the contrast ratio of each color to our default text (brown) and background (white) color here. 
   </p>
@@ -983,7 +561,7 @@ exports[`Core: Color MainColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -1061,7 +639,7 @@ exports[`Core: Color MainColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -1139,7 +717,7 @@ exports[`Core: Color MainColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -1217,7 +795,7 @@ exports[`Core: Color MainColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -1295,7 +873,7 @@ exports[`Core: Color MainColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -1326,7 +904,7 @@ exports[`Core: Color SystemColors renders 1`] = `
     System colors
   </h2>
   <p>
-    We have four primary system colors (red, blue, green, and yellow) which all have a lighter complementary version as well. 
+    Our system colors include error, warning, success and info. These are used on different types of system messages that needs the users attention.
   </p>
   <div
     className="color-group"
@@ -1394,7 +972,7 @@ exports[`Core: Color SystemColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -1476,7 +1054,7 @@ exports[`Core: Color SystemColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -1558,7 +1136,7 @@ exports[`Core: Color SystemColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -1585,7 +1163,7 @@ exports[`Core: Color SystemColors renders 1`] = `
       >
         <svg>
           <rect
-            fill="#E97423"
+            fill="#EE7023"
           />
         </svg>
       </div>
@@ -1605,7 +1183,7 @@ exports[`Core: Color SystemColors renders 1`] = `
         <small
           className="small mb-0 text-uppercase"
         >
-          #E97423
+          #EE7023
         </small>
         <div
           className="contrast-box"
@@ -1624,7 +1202,7 @@ exports[`Core: Color SystemColors renders 1`] = `
               className="second-svg"
             >
               <rect
-                fill="#E97423"
+                fill="#EE7023"
               />
             </svg>
             <i
@@ -1640,20 +1218,20 @@ exports[`Core: Color SystemColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
               className="second-svg"
             >
               <rect
-                fill="#E97423"
+                fill="#EE7023"
               />
             </svg>
             <i
-              className="material-icons cancel"
+              className="material-icons check"
             >
-              error
+              check_circle
             </i>
           </div>
         </div>
@@ -1722,7 +1300,7 @@ exports[`Core: Color SystemColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -1804,7 +1382,7 @@ exports[`Core: Color SystemColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -1886,7 +1464,7 @@ exports[`Core: Color SystemColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -1968,7 +1546,7 @@ exports[`Core: Color SystemColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -2050,7 +1628,7 @@ exports[`Core: Color SystemColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -2075,13 +1653,13 @@ exports[`Core: Color SystemColors renders 1`] = `
 
 exports[`Core: Color TextColors renders 1`] = `
 <section>
-  <h2
+  <h3
     id="text-colors"
   >
     Text colors
-  </h2>
+  </h3>
   <p>
-    Brown is our default text color that should be used for all normal text besides links and text on dark backgrounds or images. For links, use turquoise and for text on dark backgrounds or images use white. A lighter brown is used as a muted text color for smaller or less important text that shouldn’t be the primary focus.
+    Brown-solid is our default text color that should be used for all normal text besides links and text on dark backgrounds or images. For links, use turquoise and for text on dark backgrounds or images use white. A lighter brown is used as a muted text color for smaller or less important text that shouldn"t be the primary focus.
   </p>
   <div
     className="color-group"
@@ -2094,7 +1672,7 @@ exports[`Core: Color TextColors renders 1`] = `
       >
         <svg>
           <rect
-            fill="#512B2B"
+            fill="#2F2424"
           />
         </svg>
       </div>
@@ -2104,17 +1682,17 @@ exports[`Core: Color TextColors renders 1`] = `
         <p
           className="font-weight-bold mb-0"
         >
-          Brown
+          Brown solid
         </p>
         <small
           className="small mb-0"
         >
-          text-default
+          brown-solid
         </small>
         <small
           className="small mb-0 text-uppercase"
         >
-          #512B2B
+          #2F2424
         </small>
         <div
           className="contrast-box"
@@ -2133,7 +1711,7 @@ exports[`Core: Color TextColors renders 1`] = `
               className="second-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <i
@@ -2208,7 +1786,7 @@ exports[`Core: Color TextColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -2219,9 +1797,9 @@ exports[`Core: Color TextColors renders 1`] = `
               />
             </svg>
             <i
-              className="material-icons warning"
+              className="material-icons cancel"
             >
-              warning
+              error
             </i>
           </div>
         </div>
@@ -2290,7 +1868,7 @@ exports[`Core: Color TextColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg
@@ -2349,7 +1927,7 @@ exports[`Core: Color TextColors renders 1`] = `
               className="first-svg"
             >
               <rect
-                fill="#512B2B"
+                fill="#2F2424"
               />
             </svg>
             <svg

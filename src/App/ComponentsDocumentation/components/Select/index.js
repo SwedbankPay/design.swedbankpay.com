@@ -6,6 +6,7 @@ import { selectOverview, whenToUse } from "./constants";
 import CodeTags from "@components/CodeTags";
 import { datepicker } from "@src/scripts/main";
 import AlertComponent from "@components/Alert";
+import { Link } from "react-router-dom";
 
 const WhenToUse = () => (
     <>
@@ -38,6 +39,7 @@ const WhenToUse = () => (
 const Overview = () => (
     <section>
         <h2 id="overview">Overview</h2>
+        <p>If you want the select functionality, but designed as a button, consider using the <Link to="/components/dropdown">dropdown</Link> component.</p>
         <ComponentPreview language="html" codeFigure showCasePanel showCasePanelAdvanced={selectOverview} />
 
         <AlertComponent id="input-group-info" type="informative" text={<p><b>Styling: </b>The Select component is part of the input group. Therefore, be sure to import the input-group style file to give your Select the appropriate styling.</p>} icon="info"/>
@@ -100,11 +102,6 @@ const DeveloperDocumentation = () => (
             <ComponentPreview language="html" codeFigure showCasePanel>
                 <InputGroup type="select" id="disabled-state-example" label="Label" placeholder="Select option" selectOptions={[]} disabled />
             </ComponentPreview>
-        </section>
-
-        <section>
-            <h3>Javascript methods</h3>
-            <p><CodeTags type="secondary" code="dg.hintTextExpander.init()"/> can be used to initialize all Hint text expanders. Or <CodeTags type="secondary" code="dg.hintTextExpander.init(<hint-text-expander-id>)"/> to initialize a specific one.</p>
         </section>
     </section>
 );

@@ -95,7 +95,7 @@ module.exports = [
                 componentPath: "components/Checkbox",
                 icon: "check_box",
                 outlined: true,
-                statusBadges: ["javascript"]
+                statusBadges: ["updated"]
             },
             {
                 title: "Datepickers",
@@ -104,7 +104,7 @@ module.exports = [
                 componentPath: "components/Datepickers",
                 icon: "event",
                 outlined: true,
-                statusBadges: ["javascript"]
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Dialog",
@@ -138,7 +138,7 @@ module.exports = [
                 rootPath: "/components/input-field",
                 componentPath: "components/InputField",
                 icon: "text_fields",
-                statusBadges: ["javascript"]
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Links",
@@ -212,7 +212,7 @@ module.exports = [
                 rootPath: "/components/radio-button",
                 componentPath: "components/RadioButton",
                 icon: "radio_button_checked",
-                statusBadges: ["javascript"]
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Rangeslider",
@@ -221,7 +221,7 @@ module.exports = [
                 componentPath: "components/Rangeslider",
                 icon: "tune",
                 outlined: true,
-                statusBadges: ["javascript"]
+                statusBadges: ["javascript", "updated"]
             },
             {
                 title: "Sheet",
@@ -239,7 +239,7 @@ module.exports = [
                 componentPath: "components/Select",
                 icon: "arrow_drop_down_circle",
                 outlined: true,
-                statusBadges: ["javascript"]
+                statusBadges: ["updated"]
             },
             {
                 title: "Sidebar",
@@ -248,7 +248,7 @@ module.exports = [
                 componentPath: "components/Sidebar",
                 icon: "view_sidebar",
                 outlined: true,
-                statusBadges: ["javascript", "updated"]
+                statusBadges: ["javascript"]
             },
             {
                 title: "Skip link",
@@ -264,8 +264,7 @@ module.exports = [
                 rootPath: "/components/slab",
                 componentPath: "components/Slab",
                 icon: "crop_landscape",
-                outlined: true,
-                statusBadges: ["updated"]
+                outlined: true
             },
             {
                 title: "Status",
@@ -324,7 +323,7 @@ module.exports = [
                 componentPath: "components/Tooltips",
                 icon: "filter_frames",
                 outlined: true,
-                statusBadges: ["javascript", "updated"]
+                statusBadges: ["javascript"]
             },
             {
                 title: "Topbar",

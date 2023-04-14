@@ -17,14 +17,14 @@ Array [
     
 
     <input
-      aria-describedby={null}
-      autoComplete={null}
+      autocomplete={null}
       className="form-control"
       data-validate={null}
       defaultValue=""
       disabled={null}
       id={null}
       pattern={null}
+      placeholder={null}
       readOnly={null}
       required={null}
       type="email"
@@ -43,14 +43,14 @@ Array [
     
 
     <input
-      aria-describedby={null}
-      autoComplete={null}
+      autocomplete={null}
       className="form-control"
       data-validate={null}
       defaultValue=""
       disabled={null}
       id={null}
       pattern={null}
+      placeholder={null}
       readOnly={null}
       required={null}
       type="password"

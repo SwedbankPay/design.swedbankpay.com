@@ -241,14 +241,14 @@ exports[`Forms: index renders 1`] = `
             
 
             <input
-              aria-describedby="forms-hint-text-example"
-              autoComplete={null}
+              autocomplete={null}
               className="form-control"
               data-validate={null}
               defaultValue=""
               disabled={null}
               id="guideline-input-example"
               pattern={null}
+              placeholder="Placeholder text"
               readOnly={null}
               required={null}
               type="text"
@@ -278,12 +278,10 @@ exports[`Forms: index renders 1`] = `
               htmlFor="guideline-select-example"
             >
               Label
-               (optional)
             </label>
             
 
             <select
-              aria-describedby={null}
               className="form-control"
               defaultValue=""
               disabled={null}
@@ -324,7 +322,6 @@ exports[`Forms: index renders 1`] = `
 
               <legend>
                 Input label
-                 
               </legend>
               
 
@@ -334,7 +331,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby=" undefined"
+                  aria-describedby={null}
                   defaultChecked={true}
                   disabled={null}
                   id="guidelines-options-1"
@@ -357,7 +354,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby=" undefined"
+                  aria-describedby={null}
                   disabled={null}
                   id="guidelines-options-2"
                   name="guidelines-radio-example"
@@ -379,7 +376,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby=" undefined"
+                  aria-describedby={null}
                   disabled={null}
                   id="guidelines-options-3"
                   name="guidelines-radio-example"
@@ -392,37 +389,6 @@ exports[`Forms: index renders 1`] = `
                 >
                   Option 3
                 </label>
-                
-
-              </div>
-              <div
-                className="hint-text-expander"
-              >
-                
-
-                <button
-                  aria-expanded={false}
-                  type="button"
-                >
-                  
-
-                  <span
-                    className="material-icons arrow"
-                  >
-                    keyboard_arrow_down
-                  </span>
-                  Expander hint text
-                  
-
-                </button>
-                
-
-                <p
-                  aria-hidden={true}
-                  className="content"
-                >
-                  Additional information if text is long!
-                </p>
                 
 
               </div>
@@ -617,14 +583,14 @@ exports[`Forms: index renders 1`] = `
               
 
               <input
-                aria-describedby={null}
-                autoComplete={null}
+                autocomplete={null}
                 className="form-control"
                 data-validate={null}
                 defaultValue=""
                 disabled={null}
                 id="layout-address-example"
                 pattern={null}
+                placeholder={null}
                 readOnly={null}
                 required={null}
                 type="text"
@@ -648,14 +614,14 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby={null}
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
                   disabled={null}
                   id="layout-postal-example"
                   pattern={null}
+                  placeholder={null}
                   readOnly={null}
                   required={null}
                   type="text"
@@ -676,14 +642,14 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby={null}
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
                   disabled={null}
                   id="layout-city-example"
                   pattern={null}
+                  placeholder={null}
                   readOnly={null}
                   required={null}
                   type="text"
@@ -715,14 +681,14 @@ exports[`Forms: index renders 1`] = `
             
 
             <input
-              aria-describedby={null}
-              autoComplete={null}
+              autocomplete={null}
               className="form-control"
               data-validate={null}
               defaultValue=""
               disabled={null}
               id="layout-address-dont-example"
               pattern={null}
+              placeholder={null}
               readOnly={null}
               required={null}
               type="text"
@@ -743,14 +709,14 @@ exports[`Forms: index renders 1`] = `
             
 
             <input
-              aria-describedby={null}
-              autoComplete={null}
+              autocomplete={null}
               className="form-control"
               data-validate={null}
               defaultValue=""
               disabled={null}
               id="layout-postal code-dont-example"
               pattern={null}
+              placeholder={null}
               readOnly={null}
               required={null}
               type="text"
@@ -771,14 +737,14 @@ exports[`Forms: index renders 1`] = `
             
 
             <input
-              aria-describedby={null}
-              autoComplete={null}
+              autocomplete={null}
               className="form-control"
               data-validate={null}
               defaultValue=""
               disabled={null}
               id="layout-city-dont-example"
               pattern={null}
+              placeholder={null}
               readOnly={null}
               required={null}
               type="text"
@@ -822,14 +788,14 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby={null}
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
                   disabled={null}
                   id="required-optional-do-email-example"
                   pattern={null}
+                  placeholder={null}
                   readOnly={null}
                   required={null}
                   type="text"
@@ -846,19 +812,18 @@ exports[`Forms: index renders 1`] = `
                   htmlFor="required-optional-do-phone-example"
                 >
                   Telephone number
-                   (optional)
                 </label>
                 
 
                 <input
-                  aria-describedby={null}
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
                   disabled={null}
                   id="required-optional-do-phone-example"
                   pattern={null}
+                  placeholder={null}
                   readOnly={null}
                   required={null}
                   type="text"
@@ -892,14 +857,14 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby={null}
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
                   disabled={null}
                   id="required-optional-dont-email-example"
                   pattern={null}
+                  placeholder={null}
                   readOnly={null}
                   required={null}
                   type="text"
@@ -920,14 +885,14 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby={null}
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
                   disabled={null}
                   id="required-optional-dont-phone-example"
                   pattern={null}
+                  placeholder={null}
                   readOnly={null}
                   required={null}
                   type="tel"
@@ -1001,14 +966,14 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby="personal-id-number-example"
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
                   disabled={null}
                   id="personal-identification-number-example"
                   pattern={null}
+                  placeholder={null}
                   readOnly={null}
                   required={null}
                   type="text"
@@ -1053,51 +1018,20 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby=" expanding-where-to-find-example"
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
                   disabled={null}
                   id="cvc-example"
                   pattern={null}
+                  placeholder={null}
                   readOnly={null}
                   required={null}
                   type="text"
                 />
                 
 
-                <div
-                  className="hint-text-expander"
-                >
-                  
-
-                  <button
-                    aria-expanded={false}
-                    type="button"
-                  >
-                    
-
-                    <span
-                      className="material-icons arrow"
-                    >
-                      keyboard_arrow_down
-                    </span>
-                    Where to find the code?
-                    
-
-                  </button>
-                  
-
-                  <p
-                    aria-hidden={true}
-                    className="content"
-                  >
-                    Three to four digits on the back or the front of your card.
-                  </p>
-                  
-
-                </div>
               </div>
             </div>
             <p>
@@ -1159,14 +1093,14 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    aria-describedby={null}
-                    autoComplete={null}
+                    autocomplete={null}
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
                     disabled={null}
                     id="logical-flow-do-email-example"
                     pattern={null}
+                    placeholder={null}
                     readOnly={null}
                     required={null}
                     type="text"
@@ -1243,14 +1177,14 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    aria-describedby={null}
-                    autoComplete={null}
+                    autocomplete={null}
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
                     disabled={null}
                     id="logical-flow-dont-email-example"
                     pattern={null}
+                    placeholder={null}
                     readOnly={null}
                     required={null}
                     type="text"
@@ -1299,14 +1233,14 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    aria-describedby={null}
-                    autoComplete={null}
+                    autocomplete={null}
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
                     disabled={null}
                     id="logical-flow-dont-phone-example"
                     pattern={null}
+                    placeholder={null}
                     readOnly={null}
                     required={null}
                     type="text"
@@ -1361,7 +1295,7 @@ exports[`Forms: index renders 1`] = `
                 Do
               </span>
               <div
-                className="form-group has-error"
+                className="form-group"
               >
                 
 
@@ -1373,14 +1307,14 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby={null}
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue="Name.com"
                   disabled={null}
                   id="input-error-do-example"
                   pattern={null}
+                  placeholder={null}
                   readOnly={null}
                   required={null}
                   type="text"
@@ -1390,11 +1324,6 @@ exports[`Forms: index renders 1`] = `
                 <div
                   className="help-block"
                 >
-                  <i
-                    className="material-icons"
-                  >
-                    warning
-                  </i>
                   The email address must include "@"
                 </div>
                 
@@ -1414,7 +1343,7 @@ exports[`Forms: index renders 1`] = `
                 Don't
               </span>
               <div
-                className="form-group has-error"
+                className="form-group"
               >
                 
 
@@ -1426,14 +1355,14 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby={null}
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue="Name.com"
                   disabled={null}
                   id="input-error-dont-example"
                   pattern={null}
+                  placeholder={null}
                   readOnly={null}
                   required={null}
                   type="text"
@@ -1443,11 +1372,6 @@ exports[`Forms: index renders 1`] = `
                 <div
                   className="help-block"
                 >
-                  <i
-                    className="material-icons"
-                  >
-                    warning
-                  </i>
                   Invalid input
                 </div>
                 
@@ -1550,7 +1474,7 @@ exports[`Forms: index renders 1`] = `
               className="col-12 col-sm-6 m-auto pt-3"
             >
               <div
-                className="form-group has-error"
+                className="form-group"
               >
                 
 
@@ -1562,14 +1486,14 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby={null}
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue="Name.com"
                   disabled={null}
                   id="input-error-client-example"
                   pattern={null}
+                  placeholder={null}
                   readOnly={null}
                   required={null}
                   type="text"
@@ -1579,11 +1503,6 @@ exports[`Forms: index renders 1`] = `
                 <div
                   className="help-block"
                 >
-                  <i
-                    className="material-icons"
-                  >
-                    warning
-                  </i>
                   The email address must include "@"
                 </div>
                 
@@ -1682,14 +1601,14 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby={null}
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue="name@mail.com"
                   disabled={null}
                   id="validation-email-example"
                   pattern={null}
+                  placeholder={null}
                   readOnly={null}
                   required={null}
                   type="email"
@@ -1698,7 +1617,7 @@ exports[`Forms: index renders 1`] = `
 
               </div>
               <div
-                className="form-group has-error"
+                className="form-group"
               >
                 
 
@@ -1710,14 +1629,14 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  aria-describedby={null}
-                  autoComplete={null}
+                  autocomplete={null}
                   className="form-control"
                   data-validate={null}
                   defaultValue="qwerty1234"
                   disabled={null}
                   id="validation-password-example"
                   pattern={null}
+                  placeholder={null}
                   readOnly={null}
                   required={null}
                   type="password"
@@ -1727,11 +1646,6 @@ exports[`Forms: index renders 1`] = `
                 <div
                   className="help-block"
                 >
-                  <i
-                    className="material-icons"
-                  >
-                    warning
-                  </i>
                   Incorrect password
                 </div>
                 
@@ -1880,14 +1794,14 @@ exports[`Forms: index renders 1`] = `
                     
 
                     <input
-                      aria-describedby={null}
-                      autoComplete={null}
+                      autocomplete={null}
                       className="form-control"
                       data-validate={null}
                       defaultValue=""
                       disabled={null}
                       id="fieldset-first-name-example"
                       pattern={null}
+                      placeholder={null}
                       readOnly={null}
                       required={null}
                       type="name"
@@ -1908,14 +1822,14 @@ exports[`Forms: index renders 1`] = `
                     
 
                     <input
-                      aria-describedby={null}
-                      autoComplete={null}
+                      autocomplete={null}
                       className="form-control"
                       data-validate={null}
                       defaultValue=""
                       disabled={null}
                       id="fieldset-last-name-example"
                       pattern={null}
+                      placeholder={null}
                       readOnly={null}
                       required={null}
                       type="name"
@@ -1948,14 +1862,14 @@ exports[`Forms: index renders 1`] = `
                     
 
                     <input
-                      aria-describedby={null}
-                      autoComplete={null}
+                      autocomplete={null}
                       className="form-control"
                       data-validate={null}
                       defaultValue=""
                       disabled={null}
                       id="fieldset-email-example"
                       pattern={null}
+                      placeholder={null}
                       readOnly={null}
                       required={null}
                       type="email"
@@ -1976,14 +1890,14 @@ exports[`Forms: index renders 1`] = `
                     
 
                     <input
-                      aria-describedby={null}
-                      autoComplete={null}
+                      autocomplete={null}
                       className="form-control"
                       data-validate={null}
                       defaultValue=""
                       disabled={null}
                       id="fieldset-phone-example"
                       pattern={null}
+                      placeholder={null}
                       readOnly={null}
                       required={null}
                       type="tel"
@@ -2066,14 +1980,14 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    aria-describedby={null}
-                    autoComplete={null}
+                    autocomplete={null}
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
                     disabled={null}
                     id="disabled-name-example"
                     pattern={null}
+                    placeholder={null}
                     readOnly={null}
                     required={null}
                     type="name"
@@ -2094,14 +2008,14 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    aria-describedby={null}
-                    autoComplete={null}
+                    autocomplete={null}
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
                     disabled={null}
                     id="disabled-email-example"
                     pattern={null}
+                    placeholder={null}
                     readOnly={null}
                     required={null}
                     type="email"
@@ -2214,14 +2128,14 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    aria-describedby={null}
-                    autoComplete={null}
+                    autocomplete={null}
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
                     disabled={true}
                     id="disable-specific-name-example"
                     pattern={null}
+                    placeholder={null}
                     readOnly={null}
                     required={null}
                     type="name"
@@ -2242,14 +2156,14 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    aria-describedby={null}
-                    autoComplete={null}
+                    autocomplete={null}
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
                     disabled={null}
                     id="disable-specific-email-example"
                     pattern={null}
+                    placeholder={null}
                     readOnly={null}
                     required={null}
                     type="email"
@@ -2373,14 +2287,14 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    aria-describedby={null}
-                    autoComplete={null}
+                    autocomplete={null}
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
                     disabled={null}
                     id="form-grid-name-example"
                     pattern={null}
+                    placeholder={null}
                     readOnly={null}
                     required={null}
                     type="name"
@@ -2401,14 +2315,14 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    aria-describedby={null}
-                    autoComplete={null}
+                    autocomplete={null}
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
                     disabled={null}
                     id="form-grid-email-example"
                     pattern={null}
+                    placeholder={null}
                     readOnly={null}
                     required={null}
                     type="email"

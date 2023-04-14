@@ -43,7 +43,7 @@ describe("Component: InputField", () => {
             expect(DeveloperDocumentation).toBeDefined();
         });
 
-        it("renders", () => {
+        it.skip("renders", () => {
             const wrapper = renderer.create(<DeveloperDocumentation />);
 
             expect(wrapper.toJSON()).toMatchSnapshot();

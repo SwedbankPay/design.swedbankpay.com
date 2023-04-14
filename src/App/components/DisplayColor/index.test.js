@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 import DisplayColor from "./index";
@@ -27,7 +27,7 @@ describe("DisplayColor", () => {
     it("alert if required properties is not provided", () => {
         const colors =
             {
-                fontColor: "512B2B",
+                fontColor: "2F2424",
                 border: "has-border"
             };
 
@@ -43,7 +43,7 @@ describe("DisplayColor", () => {
             {
                 hex: "#FDC129",
                 rgb: "253, 193, 41",
-                fontColor: "512B2B",
+                fontColor: "2F2424",
                 border: "has-border"
             };
 

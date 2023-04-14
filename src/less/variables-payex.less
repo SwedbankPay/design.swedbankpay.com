@@ -23,8 +23,6 @@
 @brand-primary-faded:                         fade(@brand-primary, 60%);
 
 @brand-secondary:                           #3c3c3c;
-@brand-secondary-dark-1:                    @brand-secondary;
-@brand-secondary-dark-2:                    @brand-secondary;
 @brand-secondary-light-1:                   @brand-secondary;
 @brand-secondary-light-2:                   #C8C8C8;
 @brand-secondary-light-3:                   @brand-secondary-light-2;
@@ -60,14 +58,6 @@
 @brand-error-light:                         #FFEBE3;
 @brand-info:                                #3E6AB6;
 @brand-info-light:                          #E8EFF9;
-
-/* Brand fonts */
-@brand-headline:                            "Futura PT W08 Demi", sans-serif;
-@brand-black:                               "Futura PT W08 Medium", sans-serif;
-@brand-default:                             "Futura PT W08 Book", sans-serif;
-@brand-monofont:                            monospace;
-
-@payex-material-icons:                      "Material Icons Outlined";
 
 /* Checkbox */
 @checkbox-checked-color:                    @brand-secondary;
@@ -126,20 +116,89 @@
 
 html,
 body {
-    font-family: @brand-default;
+    font-family: var(--brand-default);
 
     p {
         &.lead {
-            font-family: @brand-black;
-            font-weight: 500;
+            font-family: var(--brand-default);
+            font-weight: var(--font-weight-bold);
         }
     }
 }
 
 .material-icons {
-    font-family: @payex-material-icons;
+    font-family: var(--payex-material-icons);
 
     &.alert-icon {
         font-family: "Material icons";
     }
+}
+
+
+/* ==================================CSS VARIABLES========================================
+*
+* NEW CSS VARIABLES - work in progress
+*
+*/
+:root {
+    --white: #ffffff;
+    --brand-primary: #2a9d3f;
+    --brand-success: #238635;
+    --brand-tertiary: var(--brand-primary);
+    --brand-secondary-light-2: #c8c8c8;
+    --button-bg-disabled: var(--brand-secondary-light-2);
+    --brand-secondary: #3c3c3c;
+    --brand-secondary-hover: #5f5f5f;
+    --brand-orange: #f35b1c;
+    --payex-light-blue: #32b2dd;
+    --brand-error: #c5131c;
+    --dark-brown: var(--brand-secondary);
+
+    // destructive colors
+    --btn-destructive-color: var(--white);
+    --btn-destructive-bg: var(--brand-error);
+    --btn-destructive-hover: #ee4e56;
+    --btn-destructive-disabled-color: var(--white);
+    --btn-destructive-disabled-bg: var(--destructive-disabled-bg);
+
+    // Universal utilities
+    --border-radius: 8px;
+
+    // BUTTON VALUES
+    --btn-primary-color: var(--brand-success);
+    --btn-primary-text-color: var(--white);
+    --btn-primary-hover: var(--brand-tertiary);
+    --btn-primary-disabled: var(--btn-bg-disabled);
+    // btn-secondary
+    --btn-secondary-color: var(--white);
+    --btn-secondary-text-color: var(--brand-secondary);
+    --btn-secondary-border-color: var(--brand-secondary);
+    --btn-secondary-hover: var(--brand-secondary);
+    // btn-tertiary
+    --btn-tertiary-color: var(--brand-secondary);
+    --btn-tertiary-text-color: var(--white);
+    --btn-tertiary-hover: var(--brand-secondary-hover);
+    --btn-tertiary-disabled: var(--btn-bg-disabled);
+    // Shared button variables
+    --btn-disabled-text: var(--text-disabled);
+    --btn-bg-disabled: rgba(212, 196, 188, 0.3);
+    --btn-active-color: var(--payex-light-blue);
+
+    //INPUT VALUES
+    --input-border-color: var(--brand-secondary-hover);
+    --input-border-focus-color: var(--brand-secondary);
+    --input-border-success-color: var(--payex-light-blue);
+
+    // Typography
+
+    /* Brand fonts */
+    --brand-black: "Futura PT W08 Medium", sans-serif;
+    --brand-default: "Futura PT W08 Book", sans-serif;
+    --brand-monofont: monospace;
+    --payex-material-icons: "Material Icons Outlined";
+    --brand-headline: "Futura PT W08 Demi", sans-serif;
+    --brand-font-default: "Futura PT W08 Book", sans-serif;
+
+    /* Font weights */
+    --font-weight-header: 400;
 }

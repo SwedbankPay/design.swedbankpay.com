@@ -14,9 +14,19 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
     >
       .button-group
     </code>
-     (to ensure internal spacing).
-    <br />
-    Strive not to use multiple buttons of the same kind.
+     to ensure internal spacing. Never use multiple buttons of type primary, and preferably only one secondary.
+  </p>
+  <p>
+    In the example below, primary button is using 
+    <code
+      className="code-tags code-tags-primary"
+    >
+      .btn-block
+    </code>
+    , using the whole width of its container.
+  </p>
+  <p>
+    The tertiary button are often smaller than the other buttons. We are not recommending the example below in terms of UI - we just want to visualize the grouping.
   </p>
   <div
     className="showcase-panel"
@@ -31,7 +41,7 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
         aria-disabled={null}
         aria-label={null}
         aria-pressed={null}
-        className="btn btn-primary"
+        className="btn btn-primary btn-xl btn-block"
         role={null}
         tabIndex={null}
         title={null}
@@ -53,6 +63,21 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
         type="button"
       >
         Disable
+      </button>
+      
+
+      <button
+        active={null}
+        aria-disabled={null}
+        aria-label={null}
+        aria-pressed={null}
+        className="btn btn-tertiary btn-sm"
+        role={null}
+        tabIndex={null}
+        title={null}
+        type="button"
+      >
+        Back
       </button>
       
 
@@ -105,6 +130,9 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
                 4
                 
 
+                5
+                
+
               </pre>
             </td>
             <td
@@ -114,10 +142,13 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
                 &lt;div class="button-group"&gt;
                 
 
-                    &lt;button class="btn btn-primary" type="button"&gt;Activate&lt;/button&gt;
+                    &lt;button class="btn btn-primary btn-xl btn-block" type="button"&gt;Activate&lt;/button&gt;
                 
 
                     &lt;button class="btn btn-secondary" type="button"&gt;Disable&lt;/button&gt;
+                
+
+                    &lt;button class="btn btn-tertiary btn-sm" type="button"&gt;Back&lt;/button&gt;
                 
 
                 &lt;/div&gt;
@@ -130,744 +161,6 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
       </table>
     </div>
   </figure>
-  <h3>
-    How to combine buttons
-  </h3>
-  <div
-    className="row"
-  >
-    <div
-      className="col-lg-6 col-sm-12"
-    >
-      <div
-        className="slab slab-plain slab-border-success pb-4"
-      >
-        <h4
-          className="mb-3 mt-0"
-        >
-          Do
-        </h4>
-        <div
-          className="flex-column button-group mt-4 "
-        >
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-primary justify-content-center"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            Primary action
-          </button>
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-secondary justify-content-center"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            Secondary action
-          </button>
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-link justify-content-center"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            <span>
-              Cancel
-            </span>
-          </button>
-        </div>
-      </div>
-      <p>
-        Place buttons in hierarchal correct order and combine different kinds of buttons.
-      </p>
-    </div>
-    <div
-      className="col-lg-6 col-sm-12"
-    >
-      <div
-        className="slab slab-plain slab-border-success pb-5 h-75"
-      >
-        <h4
-          className="mb-3 mt-0"
-        >
-          Do
-        </h4>
-        <div
-          className="button-group mt-4 align-items-center"
-        >
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-primary"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            Primary
-          </button>
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-secondary"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            Secondary
-          </button>
-        </div>
-      </div>
-      <p>
-        Place buttons side by side in desktop view.
-      </p>
-    </div>
-  </div>
-  <div
-    className="row mt-2"
-  >
-    <div
-      className="col-lg-6 col-sm-12"
-    >
-      <div
-        className="slab slab-plain slab-border-success pb-5"
-      >
-        <h4
-          className="mb-3 mt-0"
-        >
-          Do
-        </h4>
-        <div
-          className="flex-column button-group mt-4"
-        >
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-primary justify-content-center"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            Primary action
-          </button>
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-link justify-content-center"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            <span>
-              Cancel
-            </span>
-          </button>
-        </div>
-      </div>
-      <p>
-        Use the Link button as a discrete option to cancel.
-      </p>
-    </div>
-    <div
-      className="col-lg-6 col-sm-12"
-    >
-      <div
-        className="slab slab-plain slab-border-success pb-5"
-      >
-        <h4
-          className="mb-3 mt-0"
-        >
-          Do
-        </h4>
-        <div
-          className="flex-column button-group mt-4 "
-        >
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-executive-destructive justify-content-center"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            Executive destructive action
-          </button>
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-link justify-content-center"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            <span>
-              Cancel
-            </span>
-          </button>
-        </div>
-      </div>
-      <p>
-        Combine Executive destructive buttons with normal Link buttons.
-      </p>
-    </div>
-  </div>
-  <h3>
-    How not to combine buttons
-  </h3>
-  <div
-    className="row"
-  >
-    <div
-      className="col-lg-6 col-sm-12"
-    >
-      <div
-        className="slab slab-plain slab-border-error pb-5"
-      >
-        <h4
-          className="mb-3 mt-0"
-        >
-          Don't
-        </h4>
-        <div
-          className="flex-column button-group mt-4 "
-        >
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-secondary justify-content-center"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            Secondary action
-          </button>
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-primary justify-content-center"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            Primary action
-          </button>
-        </div>
-      </div>
-      <p>
-        Don't use the Secondary button and/or the Link button above the Primary button.
-      </p>
-    </div>
-    <div
-      className="col-lg-6 col-sm-12"
-    >
-      <div
-        className="slab slab-plain slab-border-error pb-5"
-      >
-        <h4
-          className="mb-3 mt-0"
-        >
-          Don't
-        </h4>
-        <div
-          className="flex-column button-group mt-4 "
-        >
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-primary justify-content-center"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            Primary action
-          </button>
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-guiding-destructive justify-content-center"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            Destructive guiding action
-          </button>
-        </div>
-      </div>
-      <p>
-        Don't combine Primary buttons with Destructive buttons.
-      </p>
-    </div>
-  </div>
-  <div
-    className="row mt-2"
-  >
-    <div
-      className="col-lg-6 col-sm-12"
-    >
-      <div
-        className="slab slab-plain slab-border-error pb-5"
-      >
-        <h4
-          className="mb-3 mt-0"
-        >
-          Don't
-        </h4>
-        <div
-          className="flex-column button-group mt-4 "
-        >
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-executive-destructive justify-content-center"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            Executive destructive action
-          </button>
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-guiding-destructive justify-content-center"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            Destructive guiding action
-          </button>
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-link-destructive justify-content-center"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            <span>
-              Cancel
-            </span>
-          </button>
-        </div>
-      </div>
-      <p>
-        Don't use and combine Destructive buttons the same way as normal buttons.
-      </p>
-    </div>
-    <div
-      className="col-lg-6 col-sm-12"
-    >
-      <div
-        className="slab slab-plain slab-border-error pb-5"
-      >
-        <h4
-          className="mb-3 mt-0"
-        >
-          Don't
-        </h4>
-        <div
-          className="flex-column button-group mt-4 "
-        >
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-primary justify-content-center"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            Primary action
-          </button>
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-primary btn-bank-id justify-content-center"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            
-
-            <span>
-              Primary action
-            </span>
-            
-
-            <i
-              className="bank-id bank-id-se"
-            />
-            
-
-          </button>
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-primary justify-content-center"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            Primary action
-          </button>
-        </div>
-      </div>
-      <p>
-        Don't use multiple Primary buttons or combine with BankID button.
-      </p>
-    </div>
-  </div>
-</section>
-`;
-
-exports[`Documentation: Buttons Content guidelines renders 1`] = `
-<section>
-  <h2
-    id="content-guidelines"
-  >
-    Content guidelines
-  </h2>
-  <p>
-    The intention of a button should be clear and predictable. Users should be able to anticipate what will happen when they click on a button. Buttons should always lead with a strong verb that encourages action. Provide enough context for users by using the {verb} + {noun} content formula instead of using “Yes”, “Confirm”, “Cancel” – except when it comes to the Text Button, which commonly uses “Cancel”. To avoid buttons breaking in smaller interfaces due to long names, always check that the button looks OK in a mobile view. Generally, try to keep the number of characters fairly low to provide more clarity.
-  </p>
-  <h3>
-    Unique naming
-  </h3>
-  <p>
-    Avoid using the same name for multiple buttons in the same user flow. It’s particularly hard for users using a screen reader to tell four “Next” buttons one                after another apart.                 When combining an "Executive Destructive Button" with a "Text Button" be careful to not name both buttons “Cancel”.                Try to separate the text as much as you can to improve the user experience, providing the user from accidentally making the wrong choice.
-  </p>
-  <div
-    className="row"
-  >
-    <div
-      className="col-lg-6 col-sm-12"
-    >
-      <div
-        className="slab slab-plain slab-border-success pb-4"
-      >
-        <h4>
-          Do
-        </h4>
-        <div
-          className="d-flex justify-content-center mt-4 mb-4"
-        >
-          <img
-            alt="An executive destructive button reads Yes, cancel payment process with a text destructive button that reads No, take me back."
-            className="img-fluid"
-            src="/TEST/img/documentation/buttons/dos-naming.png"
-          />
-        </div>
-      </div>
-      <p>
-        Make sure to differentiate the naming so that the user understands the difference between the actions the user can take.
-      </p>
-    </div>
-    <div
-      className="col-lg-6 col-sm-12"
-    >
-      <div
-        className="slab slab-plain slab-border-error pb-4"
-      >
-        <h4>
-          Don't
-        </h4>
-        <div
-          className="d-flex justify-content-center mt-4 mb-4"
-        >
-          <img
-            alt="An executive destructive button that reads Cancel to cancel payment, and a link button that also reads Cancel."
-            className="img-fluid"
-            src="/TEST/img/documentation/buttons/donts-naming.png"
-          />
-        </div>
-      </div>
-      <p>
-        Avoid naming an Executive Destructive Button poorly – the button cancels the payment of the invoice and not the invoice, which isn’t clear at all.
-      </p>
-    </div>
-  </div>
-  <h3>
-    How to use icons
-  </h3>
-  <div
-    className="row"
-  >
-    <div
-      className="col-lg-6 col-sm-12"
-    >
-      <div
-        className="slab slab-plain slab-border-success pb-4"
-      >
-        <h4
-          className="mb-3 mt-0"
-        >
-          Do
-        </h4>
-        <div
-          className="button-group flex-column align-items-center justify-content-center mt-4 mb-4"
-        >
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-guiding-destructive justify-content-center w-50"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            
-		
-            <i
-              aria-hidden="true"
-              className="material-icons-outlined"
-            >
-              delete
-            </i>
-            
-	
-            <span>
-              Delete
-            </span>
-            
-	
-          </button>
-          <button
-            active={null}
-            aria-disabled={null}
-            aria-label={null}
-            aria-pressed={null}
-            className="btn btn-secondary justify-content-center w-50"
-            role={null}
-            tabIndex={null}
-            title={null}
-            type="button"
-          >
-            
-		
-            <i
-              aria-hidden="true"
-              className="material-icons-outlined"
-            >
-              edit
-            </i>
-            
-	
-            <span>
-              Edit
-            </span>
-            
-	
-          </button>
-        </div>
-      </div>
-      <p>
-        Use an icon to further convey the action, e.g. a trashcan icon for a delete button.
-      </p>
-    </div>
-    <div
-      className="col-lg-6 col-sm-12"
-    >
-      <div
-        className="slab slab-plain slab-border-success pb-4"
-      >
-        <h4
-          className="mb-3 mt-0"
-        >
-          Do
-        </h4>
-        <div
-          className="button-group flex-column align-items-center justify-content-center mt-5 mb-5"
-        >
-          <div
-            className="dropdown anchor-top-left pt-2"
-            data-disable-default-keyboard-nav={null}
-            id={null}
-          >
-            
-
-            <div
-              className="toggle-menu-container"
-            >
-              
-
-              <button
-                aria-label="dropdown button"
-                className="dropdown-toggle"
-                type="button"
-              >
-                
-
-                <span>
-                  Status
-                </span>
-                
-
-                <i
-                  aria-hidden="true"
-                  className="material-icons"
-                >
-                  keyboard_arrow_down
-                </i>
-                
-
-              </button>
-              
-
-              <div
-                aria-labelledby="dropdownToggle"
-                className="dropdown-menu p-3"
-              >
-                
-
-                <form>
-                  <fieldset
-                    className="checkbox-group"
-                  >
-                    <legend />
-                    <div
-                      className="checkbox"
-                    >
-                      
-
-                      <input
-                        aria-describedby={null}
-                        defaultChecked={null}
-                        disabled={null}
-                        id="dropdown-checkbox-overview-form-inputs-example-1"
-                        name="dropdown-checkboxes-examples"
-                        type="checkbox"
-                      />
-                      
-
-                      <label
-                        htmlFor="dropdown-checkbox-overview-form-inputs-example-1"
-                      >
-                        Successful
-                      </label>
-                      
-
-                    </div>
-                    <div
-                      className="checkbox"
-                    >
-                      
-
-                      <input
-                        aria-describedby={null}
-                        defaultChecked={null}
-                        disabled={null}
-                        id="dropdown-checkbox-overview-form-inputs-example-2"
-                        name="dropdown-checkboxes-examples"
-                        type="checkbox"
-                      />
-                      
-
-                      <label
-                        htmlFor="dropdown-checkbox-overview-form-inputs-example-2"
-                      >
-                        Failed
-                      </label>
-                      
-
-                    </div>
-                    <div
-                      className="checkbox"
-                    >
-                      
-
-                      <input
-                        aria-describedby={null}
-                        defaultChecked={null}
-                        disabled={null}
-                        id="dropdown-checkbox-overview-form-inputs-example-3"
-                        name="dropdown-checkboxes-examples"
-                        type="checkbox"
-                      />
-                      
-
-                      <label
-                        htmlFor="dropdown-checkbox-overview-form-inputs-example-3"
-                      >
-                        Cancelled
-                      </label>
-                      
-
-                    </div>
-                  </fieldset>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <p>
-        Use an arrow icon to indicate that the button will trigger a dropdown menu.
-      </p>
-    </div>
-  </div>
 </section>
 `;
 
@@ -894,7 +187,28 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
     >
       &lt;button&gt;
     </code>
-     element.
+     element. Disabling buttons are rarely recommended, so please think twice before implementing them. They should only be used in settings where an action is required before you can continue, or similar cases.
+  </p>
+  <p>
+    In cases where 
+    <code
+      className="code-tags code-tags-primary"
+    >
+      &lt;a&gt;
+    </code>
+     tags are styled as buttons (NOT RECOMMENDED), adding the disabled attribute is not sufficient, therefore you need to add the 
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .disabled
+    </code>
+     class and make sure 
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      aria-disabled="true"
+    </code>
+     attribute is present.
   </p>
   <div
     className="showcase-panel"
@@ -941,66 +255,14 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
         aria-disabled={null}
         aria-label={null}
         aria-pressed={null}
-        className="btn btn-link"
+        className="btn btn-tertiary"
         disabled={true}
         role={null}
         tabIndex={null}
         title={null}
         type="button"
       >
-        <span>
-          Link
-        </span>
-      </button>
-      
-
-      <button
-        active={null}
-        aria-disabled={null}
-        aria-label={null}
-        aria-pressed={null}
-        className="btn btn-executive-destructive"
-        disabled={true}
-        role={null}
-        tabIndex={null}
-        title={null}
-        type="button"
-      >
-        Destructive Executive
-      </button>
-      
-
-      <button
-        active={null}
-        aria-disabled={null}
-        aria-label={null}
-        aria-pressed={null}
-        className="btn btn-guiding-destructive"
-        disabled={true}
-        role={null}
-        tabIndex={null}
-        title={null}
-        type="button"
-      >
-        Guiding destructive
-      </button>
-      
-
-      <button
-        active={null}
-        aria-disabled={null}
-        aria-label={null}
-        aria-pressed={null}
-        className="btn btn-link-destructive"
-        disabled={true}
-        role={null}
-        tabIndex={null}
-        title={null}
-        type="button"
-      >
-        <span>
-          Destructive link
-        </span>
+        Tertiary
       </button>
       
 
@@ -1050,15 +312,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
                 3
                 
 
-                4
-                
-
-                5
-                
-
-                6
-                
-
               </pre>
             </td>
             <td
@@ -1071,16 +324,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
                 &lt;button class="btn btn-secondary" disabled type="button"&gt;Secondary&lt;/button&gt;
                 
 
-                &lt;button class="btn btn-link" disabled type="button"&gt;&lt;span&gt;Link&lt;/span&gt;&lt;/button&gt;
-                
-
-                &lt;button class="btn btn-executive-destructive" disabled type="button"&gt;Destructive Executive&lt;/button&gt;
-                
-
-                &lt;button class="btn btn-guiding-destructive" disabled type="button"&gt;Guiding destructive&lt;/button&gt;
-                
-
-                &lt;button class="btn btn-link-destructive" disabled type="button"&gt;&lt;span&gt;Destructive link&lt;/span&gt;&lt;/button&gt;
+                &lt;button class="btn btn-tertiary" disabled type="button"&gt;Tertiary&lt;/button&gt;
                 
 
               </pre>
@@ -1090,114 +334,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
       </table>
     </div>
   </figure>
-  <h4>
-    Disabled with 
-    <code
-      className="code-tags code-tags-primary"
-    >
-      &lt;a&gt;
-    </code>
-     tag
-  </h4>
-  <p>
-    Disabled buttons using the 
-    <code
-      className="code-tags code-tags-primary"
-    >
-      &lt;a&gt;
-    </code>
-     element behave a bit different:
-  </p>
-  <ul>
-    <li>
-      <code
-        className="code-tags code-tags-primary"
-      >
-        &lt;a&gt;
-      </code>
-      s do not support the 
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        disabled
-      </code>
-       attribute, so you must add the 
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        .disabled
-      </code>
-       class to make it visually appear disabled.
-    </li>
-    <li>
-      Some future-friendly styles are included to disable all 
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        pointer-events
-      </code>
-       on anchor buttons. In browsers which support that property, you won’t see the disabled cursor at all.
-    </li>
-    <li>
-      Disabled buttons should include the 
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        aria-disabled="true"
-      </code>
-       attribute to indicate the state of the element to assistive technologies.
-    </li>
-  </ul>
-  <div
-    className="alert alert-informative"
-  >
-    
-
-    <i
-      aria-hidden="true"
-      className="material-icons alert-icon"
-    >
-      warning
-    </i>
-    <p>
-      <b>
-        Link functionality:
-      </b>
-       The 
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        .disabled
-      </code>
-       class uses 
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        pointer-events: none
-      </code>
-       to try to disable the link functionality of 
-      <code
-        className="code-tags code-tags-primary"
-      >
-        &lt;a&gt;
-      </code>
-      s, but that CSS property is not yet standardized. In addition, even in browsers that do support 
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        pointer-events: none
-      </code>
-      , keyboard navigation remains unaffected, meaning that sighted keyboard users and users of assistive technologies will still be able to activate these links. So to be safe, add a 
-      <code
-        className="code-tags code-tags-secondary"
-      >
-        tabindex="-1"
-      </code>
-       attribute on these links (to prevent them from receiving keyboard focus) and use custom JavaScript to disable their functionality.
-    </p>
-    
-
-  </div>
   <h3>
     Loading state
   </h3>
@@ -1214,13 +350,7 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
     >
       &lt;button&gt;
     </code>
-     element, and the 
-    <code
-      className="code-tags code-tags-primary"
-    >
-      disabled
-    </code>
-     attribute.
+     element.
   </p>
   <div
     className="showcase-panel"
@@ -1236,7 +366,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
         aria-label={null}
         aria-pressed={null}
         className="btn btn-primary loading"
-        disabled={true}
         role={null}
         tabIndex={null}
         title={null}
@@ -1252,7 +381,6 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
         aria-label={null}
         aria-pressed={null}
         className="btn btn-secondary loading"
-        disabled={true}
         role={null}
         tabIndex={null}
         title={null}
@@ -1267,66 +395,13 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
         aria-disabled={null}
         aria-label={null}
         aria-pressed={null}
-        className="btn btn-link loading"
-        disabled={true}
+        className="btn btn-tertiary loading"
         role={null}
         tabIndex={null}
         title={null}
         type="button"
       >
-        <span>
-          Link
-        </span>
-      </button>
-      
-
-      <button
-        active={null}
-        aria-disabled={null}
-        aria-label={null}
-        aria-pressed={null}
-        className="btn btn-executive-destructive loading"
-        disabled={true}
-        role={null}
-        tabIndex={null}
-        title={null}
-        type="button"
-      >
-        Destructive executive
-      </button>
-      
-
-      <button
-        active={null}
-        aria-disabled={null}
-        aria-label={null}
-        aria-pressed={null}
-        className="btn btn-guiding-destructive loading"
-        disabled={true}
-        role={null}
-        tabIndex={null}
-        title={null}
-        type="button"
-      >
-        Destructive guiding
-      </button>
-      
-
-      <button
-        active={null}
-        aria-disabled={null}
-        aria-label={null}
-        aria-pressed={null}
-        className="btn btn-link-destructive loading"
-        disabled={true}
-        role={null}
-        tabIndex={null}
-        title={null}
-        type="button"
-      >
-        <span>
-          Destructive link
-        </span>
+        Tertiary
       </button>
       
 
@@ -1376,245 +451,19 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
                 3
                 
 
-                4
-                
-
-                5
-                
-
-                6
-                
-
               </pre>
             </td>
             <td
               className="code-view-code"
             >
               <pre>
-                &lt;button class="btn btn-primary loading" disabled type="button"&gt;Primary&lt;/button&gt;
+                &lt;button class="btn btn-primary loading" type="button"&gt;Primary&lt;/button&gt;
                 
 
-                &lt;button class="btn btn-secondary loading" disabled type="button"&gt;Secondary&lt;/button&gt;
+                &lt;button class="btn btn-secondary loading" type="button"&gt;Secondary&lt;/button&gt;
                 
 
-                &lt;button class="btn btn-link loading" disabled type="button"&gt;&lt;span&gt;Link&lt;/span&gt;&lt;/button&gt;
-                
-
-                &lt;button class="btn btn-executive-destructive loading" disabled type="button"&gt;Destructive executive&lt;/button&gt;
-                
-
-                &lt;button class="btn btn-guiding-destructive loading" disabled type="button"&gt;Destructive guiding&lt;/button&gt;
-                
-
-                &lt;button class="btn btn-link-destructive loading" disabled type="button"&gt;&lt;span&gt;Destructive link&lt;/span&gt;&lt;/button&gt;
-                
-
-              </pre>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </figure>
-  <h3>
-    Usage with other tags
-  </h3>
-  <p>
-    The 
-    <code
-      className="code-tags code-tags-secondary"
-    >
-      .btn
-    </code>
-     classes are designed to be used with the 
-    <code
-      className="code-tags code-tags-primary"
-    >
-      &lt;button&gt;
-    </code>
-     element. However, you can also use these classes on 
-    <code
-      className="code-tags code-tags-primary"
-    >
-      &lt;a&gt;
-    </code>
-     or 
-    <code
-      className="code-tags code-tags-primary"
-    >
-      &lt;input&gt;
-    </code>
-     elements (though some browsers may apply a slightly different rendering).
-  </p>
-  <p>
-    When using button classes on 
-    <code
-      className="code-tags code-tags-primary"
-    >
-      &lt;a&gt;
-    </code>
-     elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a 
-    <code
-      className="code-tags code-tags-secondary"
-    >
-      role="button"
-    </code>
-     to appropriately convey their purpose to assistive technologies such as screen readers.
-  </p>
-  <div
-    className="showcase-panel"
-  >
-    <div
-      className="button-group"
-    >
-      
-
-      <a
-        active={null}
-        aria-disabled={null}
-        aria-label={null}
-        aria-pressed={null}
-        className="btn btn-primary"
-        disabled={null}
-        href="#"
-        onClick={[Function]}
-        role="button"
-        tabIndex={null}
-        title={null}
-        type={null}
-      >
-        Anchor
-      </a>
-      
-
-      <button
-        active={null}
-        aria-disabled={null}
-        aria-label={null}
-        aria-pressed={null}
-        className="btn btn-primary"
-        role={null}
-        tabIndex={null}
-        title={null}
-        type="button"
-      >
-        Button
-      </button>
-      
-
-      <input
-        active={null}
-        aria-disabled={null}
-        aria-label={null}
-        aria-pressed={null}
-        className="btn btn-primary"
-        defaultValue="Input"
-        role={null}
-        tabIndex={null}
-        title={null}
-        type="button"
-      />
-      
-
-      <input
-        active={null}
-        aria-disabled={null}
-        aria-label={null}
-        aria-pressed={null}
-        className="btn btn-primary"
-        defaultValue="Submit"
-        role={null}
-        tabIndex={null}
-        title={null}
-        type="submit"
-      />
-      
-
-      <input
-        active={null}
-        aria-disabled={null}
-        aria-label={null}
-        aria-pressed={null}
-        className="btn btn-primary"
-        defaultValue="Reset"
-        role={null}
-        tabIndex={null}
-        title={null}
-        type="reset"
-      />
-      
-
-    </div>
-  </div>
-  <figure>
-    <div
-      className="code-view"
-    >
-      <header
-        className="code-view-header"
-      >
-        HTML
-        <button
-          aria-describedby="tooltipCopy"
-          className="tooltip"
-          onClick={[Function]}
-        >
-          <i
-            className="material-icons-outlined"
-          >
-            content_copy
-          </i>
-          <div
-            id="tooltipCopy"
-            role="tooltip"
-          >
-            Copy to clipboard
-          </div>
-        </button>
-      </header>
-      <table
-        className="code-view-table"
-      >
-        <tbody>
-          <tr>
-            <td
-              className="code-view-numbers"
-            >
-              <pre>
-                1
-                
-
-                2
-                
-
-                3
-                
-
-                4
-                
-
-                5
-                
-
-              </pre>
-            </td>
-            <td
-              className="code-view-code"
-            >
-              <pre>
-                &lt;a class="btn btn-primary" href="#" role="button"&gt;Anchor&lt;/a&gt;
-                
-
-                &lt;button class="btn btn-primary" type="button"&gt;Button&lt;/button&gt;
-                
-
-                &lt;input class="btn btn-primary" type="button" value="Input"&gt;
-                
-
-                &lt;input class="btn btn-primary" type="submit" value="Submit"&gt;
-                
-
-                &lt;input class="btn btn-primary" type="reset" value="Reset"&gt;
+                &lt;button class="btn btn-tertiary loading" type="button"&gt;Tertiary&lt;/button&gt;
                 
 
               </pre>
