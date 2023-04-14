@@ -11,7 +11,8 @@
     -   specific less variables
     -   specific focus states
     -   btn-guiding-destructive, btn-executive-destructive, btn-link-destructive
-    -   btn-icon-<size>
+    -   btn-icon-"\<"size>
+    -   btn-link
 
     Changed: (UI breaking changes)
     -   btn-primary (new design)
@@ -22,7 +23,7 @@
     Added: (new features)
     -   btn-tertiary (new button)
     -   btn-xl (size class)
-    -   btn-icon class (can be combined with btn-<size> classes)
+    -   btn-icon class (can be combined with btn-"\<"size> classes)
 
 -   Input field
     Removed:
@@ -67,7 +68,8 @@
 ## Deleted features
 -   Button component
     -   btn-guiding-destructive, btn-executive-destructive, btn-link-destructive classes (you are now supposed to use the new btn-tertiary for those edge cases) (this does not apply for the payex brand)
-    -   btn-icon-<size> classes (we are now using a combination of btn-icon and btn-<size>)
+    -   btn-icon-"\<"size> classes (we are now using a combination of btn-icon and btn-"\<"size>)
+    -   btn-link is fully removed, also replaced by btn-tertiary
 
 -   Expanding hint text
     -   All styling has been removed, also the script. (We recommend thoroughly thinking through the use case, and rather add more explanation in the label/legend or hint-text)
