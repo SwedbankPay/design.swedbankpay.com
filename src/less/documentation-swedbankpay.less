@@ -242,7 +242,7 @@
         position: absolute;
         z-index: 103;
         background-color: @white;
-        border-radius: var(--border-radius);
+        border-radius: var(--border-radius, 8px);
         max-height: 50vh;
         overflow: auto;
         box-shadow: 1px 2px 20px rgb(0 0 0 / 25%);
@@ -1194,7 +1194,7 @@
             width: 7.875rem;
             margin-right: 0.5rem;
             overflow: hidden;
-            border-radius: 8px;
+            border-radius: var(--border-radius, 8px);
 
             &.has-border {
                 border: 1px solid @brand-secondary;
@@ -1536,7 +1536,7 @@
     #link-doc {
         .link-dark-background {
             background-color: @brand-secondary;
-            border-radius: 8px;
+            border-radius: var(--border-radius, 8px);
 
             a:focus-visible {
                 outline: 2px solid @brand-primary;
