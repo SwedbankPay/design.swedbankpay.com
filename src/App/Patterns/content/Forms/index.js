@@ -85,10 +85,10 @@ const HowToDesignForms = () => {
                 <div className="slab slab-plain slab-border-success pb-4">
                     <span className="h4 d-block mb-4">Do</span>
                     <div className="col-12 col-sm-8 m-auto px-0">
-                        <InputGroup id="layout-address-example" type="text" label="Address"/>
+                        <InputGroup id="layout-address-example" type="text" label="Address" autoComplete="street-address"/>
                         <div className="row">
-                            <InputGroup id="layout-postal-example" type="text" label="Postal code" className="col-12 col-sm-5"/>
-                            <InputGroup id="layout-city-example" type="text" label="City" className="col-12 col-sm-7 mb-2"/>
+                            <InputGroup id="layout-postal-example" type="text" label="Postal code" autoComplete="postal-code" className="col-12 col-sm-5"/>
+                            <InputGroup id="layout-city-example" type="text" label="City" autoComplete="address-level2" className="col-12 col-sm-7 mb-2"/>
                         </div>
                     </div>
                 </div>
@@ -107,15 +107,15 @@ const HowToDesignForms = () => {
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-success">
                             <span className="h4 d-block mb-4">Do</span>
-                            <InputGroup id="required-optional-do-email-example" type="text" label="E-mail"/>
-                            <InputGroup id="required-optional-do-phone-example" type="text" label="Telephone number" optional/>
+                            <InputGroup id="required-optional-do-email-example" type="text" label="E-mail" autoComplete="email"/>
+                            <InputGroup id="required-optional-do-phone-example" type="text" label="Telephone number" autoComplete="tel" />
                         </div>
                     </div>
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-error">
                             <span className="h4 d-block mb-4">Don&apos;t</span>
-                            <InputGroup id="required-optional-dont-email-example" type="text" label="E-mail*"/>
-                            <InputGroup id="required-optional-dont-phone-example" type="tel" label="Telephone number"/>
+                            <InputGroup id="required-optional-dont-email-example" type="text" label="E-mail*" autoComplete="email"/>
+                            <InputGroup id="required-optional-dont-phone-example" type="tel" label="Telephone number" autoComplete="tel"/>
                         </div>
                     </div>
                 </div>
@@ -154,7 +154,7 @@ const HowToDesignForms = () => {
                             </div>
                             {showInput === "email" &&
                                 <div className="ml-2">
-                                    <InputGroup id="logical-flow-do-email-example" type="text" label="E-mail address" className="ml-4 mb-4"/>
+                                    <InputGroup id="logical-flow-do-email-example" type="text" label="E-mail address" className="ml-4 mb-4" autoComplete="email" />
                                 </div>
                             }
                             <div className="radio mb-3">
@@ -163,7 +163,7 @@ const HowToDesignForms = () => {
                             </div>
                             {showInput === "phone" &&
                                 <div className="ml-2">
-                                    <InputGroup id="logical-flow-do-phone-example" type="text" label="Telephone number" className="ml-4"/>
+                                    <InputGroup id="logical-flow-do-phone-example" type="text" label="Telephone number" className="ml-4" autoComplete="tel" />
                                 </div>
                             }
                         </div>
@@ -173,11 +173,11 @@ const HowToDesignForms = () => {
                             <span className="h4 d-block mb-4">Don&apos;t</span>
                             <RadioButton label="E-mail" name="logical-flow-example-2" id="logical-flow-example-email-2" checked className="mb-3"/>
                             <div className="ml-2">
-                                <InputGroup id="logical-flow-dont-email-example" type="text" label="E-mail address" className="ml-4 mb-4"/>
+                                <InputGroup id="logical-flow-dont-email-example" type="text" label="E-mail address" className="ml-4 mb-4" autoComplete="email" />
                             </div>
                             <RadioButton label="Call" name="logical-flow-example-2" id="logical-flow-example-call-2" className="mb-3"/>
                             <div className="ml-2">
-                                <InputGroup id="logical-flow-dont-phone-example" type="text" label="Phone number" className="ml-4"/>
+                                <InputGroup id="logical-flow-dont-phone-example" type="text" label="Phone number" className="ml-4" autoComplete="tel" />
                             </div>
                         </div>
                     </div>
@@ -195,13 +195,13 @@ const HowToDesignForms = () => {
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-success">
                             <span className="h4 d-block mb-4">Do</span>
-                            <InputGroup type="text" validationState="error" errorMessage='The email address must include "@"' label="Email address" defaultValue="Name.com" id="input-error-do-example"/>
+                            <InputGroup type="text" validationState="error" errorMessage='The email address must include "@"' label="Email address" defaultValue="Name.com" id="input-error-do-example" autoComplete="email" />
                         </div>
                     </div>
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-error">
                             <span className="h4 d-block mb-4">Don&apos;t</span>
-                            <InputGroup type="text" validationState="error" errorMessage="Invalid input" label="Email address" defaultValue="Name.com" id="input-error-dont-example"/>
+                            <InputGroup type="text" validationState="error" errorMessage="Invalid input" label="Email address" defaultValue="Name.com" id="input-error-dont-example" autoComplete="email" />
                         </div>
                     </div>
                 </div>
@@ -224,7 +224,7 @@ const DeveloperDocumentation = () => (
 
             <EditableComponentPreview language="html" codeFigure showCasePanel removeOuterTag staticPreview>
                 <div className="col-12 col-sm-6 m-auto pt-3">
-                    <InputGroup type="text" validationState="error" errorMessage='The email address must include "@"' label="Email" defaultValue="Name.com" id="input-error-client-example"/>
+                    <InputGroup type="text" validationState="error" errorMessage='The email address must include "@"' label="Email" defaultValue="Name.com" id="input-error-client-example" autoComplete="email" />
                 </div>
             </EditableComponentPreview>
 
@@ -252,15 +252,15 @@ const DeveloperDocumentation = () => (
                             <legend> {"\n"}
                                 <span className="h3">Name</span>
                             </legend>
-                            <InputGroup id="fieldset-first-name-example" type="name" label="First name" />
-                            <InputGroup id="fieldset-last-name-example" type="name" label="Last name" />
+                            <InputGroup id="fieldset-first-name-example" type="name" label="First name" autoComplete="given-name" />
+                            <InputGroup id="fieldset-last-name-example" type="name" label="Last name" autoComplete="family-name" />
                         </fieldset>
                         <fieldset>
                             <legend> {"\n"}
                                 <span className="h3">Contact information</span>
                             </legend>
-                            <InputGroup id="fieldset-email-example" type="email" label="Email" />
-                            <InputGroup id="fieldset-phone-example" type="tel" label="Phone number" />
+                            <InputGroup id="fieldset-email-example" type="email" label="Email" autoComplete="email" />
+                            <InputGroup id="fieldset-phone-example" type="tel" label="Phone number" autoComplete="tel" />
                         </fieldset>
                     </form>
                 </div>
@@ -273,8 +273,8 @@ const DeveloperDocumentation = () => (
             <EditableComponentPreview language="html" codeFigure showCasePanel removeOuterTag staticPreview previewMinHeight={400}>
                 <div className="col-12 col-sm-6 m-auto">
                     <fieldset disabled>
-                        <InputGroup id="disabled-name-example" type="name" label="Name" />
-                        <InputGroup id="disabled-email-example" type="email" label="Email" />
+                        <InputGroup id="disabled-name-example" type="name" label="Name" autoComplete="name" />
+                        <InputGroup id="disabled-email-example" type="email" label="Email" autoComplete="email" />
                         <Checkbox id="disabled-fieldset-checkbox" label="I agree to terms of use" className="mb-4"/>{"\n"}
                         <Button type="primary" label="Submit" className="mt-2" />
                     </fieldset>
@@ -285,8 +285,8 @@ const DeveloperDocumentation = () => (
             <EditableComponentPreview language="html" codeFigure showCasePanel removeOuterTag staticPreview previewMinHeight={400}>
                 <div className="col-12 col-sm-6 m-auto">
                     <fieldset>
-                        <InputGroup id="disable-specific-name-example" type="name" label="Name" disabled />
-                        <InputGroup id="disable-specific-email-example" type="email" label="Email" />
+                        <InputGroup id="disable-specific-name-example" type="name" label="Name" disabled autoComplete="name" />
+                        <InputGroup id="disable-specific-email-example" type="email" label="Email" autoComplete="email" />
                         <Checkbox id="disabled-input-checkbox" label="I agree to terms of user" className="mb-4"/>{"\n"}
                         <Button type="primary" label="Submit" className="mt-2" />
                     </fieldset>
@@ -301,8 +301,8 @@ const DeveloperDocumentation = () => (
             <div className="col-12 col-sm-10 m-auto pt-2">
                 <form>
                     <div className="row align-items-center justify-content-between">
-                        <InputGroup id="form-grid-name-example" type="name" label="Name" className="col-12 col-sm-3 px-0 mb-4"/>
-                        <InputGroup id="form-grid-email-example" type="email" label="Email" className="col-12 col-sm-6 px-0 mb-4"/>{"\n"}
+                        <InputGroup id="form-grid-name-example" type="name" label="Name" autoComplete="name" className="col-12 col-sm-3 px-0 mb-4"/>
+                        <InputGroup id="form-grid-email-example" type="email" label="Email" autoComplete="email" className="col-12 col-sm-6 px-0 mb-4"/>{"\n"}
                         <Button type="primary" label="Submit" className="mt-1"/>
                     </div>
                 </form>

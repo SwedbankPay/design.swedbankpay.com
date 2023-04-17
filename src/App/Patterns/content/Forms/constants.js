@@ -58,7 +58,7 @@ export const formsShowCase = {
                             <span className="h2">Contact us</span>
                         </legend>
                         <div className="col-12 col-sm-9 px-0">
-                            <InputGroup id="form-email-example" type="email" label="E-mail"/>
+                            <InputGroup id="form-email-example" type="email" label="E-mail" autoComplete="email"/>
                             <InputGroup type="select" id="form-select-example" label="Subject" placeholder="Select a subject" selectOptions={["Subject 1", "Subject 2", "Subject 3"]} />
                         </div>
                         <InputGroup id="form-textarea-example" type="textarea" label="Message" />
