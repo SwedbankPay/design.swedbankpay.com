@@ -2164,7 +2164,7 @@ exports[`Forms: index renders 1`] = `
           
 
           <input
-            autocomplete={null}
+            autocomplete="email"
             className="form-control"
             data-validate={null}
             defaultValue=""
@@ -2192,7 +2192,7 @@ exports[`Forms: index renders 1`] = `
           
 
           <input
-            autocomplete={null}
+            autocomplete="current-password"
             className="form-control"
             data-validate={null}
             defaultValue=""
@@ -2442,7 +2442,7 @@ exports[`Forms: index renders 1`] = `
               
 
               <input
-                autocomplete={null}
+                autocomplete="email"
                 className="form-control"
                 data-validate={null}
                 defaultValue=""
@@ -2470,7 +2470,7 @@ exports[`Forms: index renders 1`] = `
               
 
               <input
-                autocomplete={null}
+                autocomplete="current-password"
                 className="form-control"
                 data-validate={null}
                 defaultValue=""
@@ -2670,7 +2670,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autocomplete={null}
+                  autocomplete="email"
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
