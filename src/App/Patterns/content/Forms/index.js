@@ -52,7 +52,7 @@ const ContentGuidelines = () => (
                 <div className="slab slab-funny flat slab-edges d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
                 <div className="d-flex">
                     <Button type="primary" label="Submit" className="mr-3"/>
-                    <Button type="link" label="Cancel"/>
+                    <Button type="tertiary" label="Cancel"/>
                 </div>
             </div>
         </div>
@@ -123,27 +123,21 @@ const HowToDesignForms = () => {
 
             <section>
                 <h3>Label and hints</h3>
-                <p>It is important to give the users the information required to fill in the form and help them be successful the first time. An input must have a label that clearly describes the type of input a field requires. The label can be complemented with a hint text or a hint expander to provide clarifying details, try do avoid using both a visible hint text and a hint expander.</p>
+                <p>It is important to give the users the information required to fill in the form and help them be successful the first time. An input must have a label that clearly describes the type of input a field requires. The label can be complemented with a hint text.</p>
                 <p>Consider the following to decide where to place the information:</p>
                 <ul className="list list-bullet">
                     <li>If the information is very important and most or all users will need it, make it part of the <b>label</b>.</li>
-                    <li>If the information is important and many users will need it, provide <b>hint text</b> that is visible by default.</li>
-                    <li>If the information is less important and only a minority of users will need it, put it in a <b>hint expander</b>.</li>
+                    <li>Else provide <b>hint text</b> that is visible by default.</li>
                 </ul>
                 <div className="row">
-                    <div className="col-lg-6 col-12">
+                    <div className="col-12">
                         <div className="slab slab-plain slab-border-success">
                             <span className="h4 d-block mb-4">Do</span>
-                            <InputGroup id="personal-identification-number-example" type="text" label="Personal identification number" helpBlock="YYYYMMDDNNNN" hintTextId="personal-id-number-example"/>
+                            <div className="col-12 col-sm-6 m-auto px-0">
+                                <InputGroup id="personal-identification-number-example" type="text" label="Personal identification number" helpBlock="YYYYMMDDNNNN" hintTextId="personal-id-number-example"/>
+                            </div>
                         </div>
                         <p>Use a hint text for important information that is secondary to the label.</p>
-                    </div>
-                    <div className="col-lg-6 col-12">
-                        <div className="slab slab-plain slab-border-success">
-                            <span className="h4 d-block mb-4">Do</span>
-                            <InputGroup id="cvc-example" type="text" label="Security code (CVC)"/>
-                        </div>
-                        <p>Use hint expander for additional information that is less important or long.</p>
                     </div>
                 </div>
             </section>
@@ -191,7 +185,7 @@ const HowToDesignForms = () => {
             </section>
             <section>
                 <h3>Button placement</h3>
-                <p>The primary button should be left-aligned along with the left side of the form field. If additional actions are required, put the primary button first, then secondary buttons, then the link button. One exception is a multiple-step form where the “Back” secondary button sits at the very left, while the rest of the buttons are aligned to the right. In some cases, like on a <a href="">Login page</a>, buttons can be centered and set to the same width as the input fields. On mobile, the buttons are always centered, full width and stacked vertically with the primary action on top. </p> {/* TODO: Add link to Login template */}
+                <p>The primary button should be left-aligned along with the left side of the form field. If additional actions are required, put the primary button first, then secondary buttons, then the tertiary button. One exception is a multiple-step form where the “Back” secondary button sits at the very left, while the rest of the buttons are aligned to the right. In some cases, like on a <a href="">Login page</a>, buttons can be centered and set to the same width as the input fields. On mobile, the buttons are always centered, full width and stacked vertically with the primary action on top. </p>
                 <img src={`${process.env.basename}img/documentation/patterns/img-button-placement.png`} className="w-100" alt="Visualization of button placement in forms."/>
             </section>
             <section>

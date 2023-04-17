@@ -120,10 +120,10 @@ export const guidelinesElementsList = [
     },
     {
         element: "Hints",
-        text: "Provides in-context guidance for the user through an always visible hint text or hint expander which displays more information when expanded."
+        text: "Provides in-context guidance for the user through an always visible hint text."
     },
     {
         element: "Buttons",
-        text: <><Link to="/components/buttons">Buttons</Link> allows users to submit or exit a form, use a primary button for the main action, secondary button for secondary actions and a link button to cancel.</>
+        text: <><Link to="/components/buttons">Buttons</Link> allows users to submit or exit a form, use a primary button for the main action, secondary button for secondary actions and a tertiary button to cancel.</>
     }
 ];
