@@ -6,7 +6,7 @@
 /* BRAND MANAGER COLORS (NOT SHOWCASED ACORN, BUT SOME ARE USED) */
 
 /* Main Colors */
-@orange-headline:                           #f35b1c; // WCAG
+@orange-headline:                           #f35b1c; /* WCAG */
 
 /* END BRAND MANAGER COLORS */
 
@@ -49,7 +49,6 @@
                                             lg: (@grid-breakpoints[xl] - 0.02);
                                             xl: (@grid-breakpoints[xxl] - 0.02);
 }
-
 
 /* stylelint-enable */
 
@@ -149,15 +148,13 @@
 @tabs-z-index:                            100;
 @skip-link-z-index:                      -100;
 
+/*
+*   CSS Variables (custom properties)
+*/
 
-//
-// CSS Variables (custom properties)
-//
-
-// all .less variables have been converted over to CSS variables then we can delete them
+/* all .less variables have been converted over to CSS variables then we can delete them */
 
 :root {
-
     /* COLORS */
     --border-color: var(--brand-secondary-light-3);
 
@@ -180,7 +177,7 @@
     --font-weight-bold: 700;
     --font-weight-base: var(--font-weight-normal);
 
-    // line heights
+    /* line heights */
     --line-height-base: 1.5;
 
     /*
@@ -215,19 +212,17 @@
     --border-width-diff-focus: calc(var(--border-width-focus, 2px) - var(--border-width, 1px));
 }
 
+/*
+* Scaffolding
+* -------------------------------------------------- */
 
-//
-// Scaffolding
-// --------------------------------------------------
+/* Reset the box-sizing
+*
+* Heads up! This reset may cause conflicts with some third-party widgets.
+* For recommendations on resolving such conflicts, see
+* http://getbootstrap.com/getting-started/#third-box-sizing*/
 
-
-// Reset the box-sizing
-//
-// Heads up! This reset may cause conflicts with some third-party widgets.
-// For recommendations on resolving such conflicts, see
-// http://getbootstrap.com/getting-started/#third-box-sizing
-
-// Body reset
+/* Body reset */
 
 html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -281,7 +276,7 @@ body {
     }
 }
 
-// Reset fonts for relevant elements
+/* Reset fonts for relevant elements */
 input,
 button,
 select,
@@ -291,7 +286,7 @@ textarea {
     line-height: inherit;
 }
 
-// Unordered and Ordered lists
+/* Unordered and Ordered lists */
 ul,
 ol {
     margin-top: 0;
@@ -303,9 +298,9 @@ ol {
     }
 }
 
-// Only display content to screen readers
-//
-// See: http://a11yproject.com/posts/how-to-hide-content/
+/* Only display content to screen readers
+*
+* See: http://a11yproject.com/posts/how-to-hide-content/ */
 
 .sr-only {
     position: absolute;
@@ -318,9 +313,9 @@ ol {
     border: 0;
 }
 
-// Use in conjunction with .sr-only to only display content when it's focused.
-// Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
-// Credit: HTML5 Boilerplate
+/* Use in conjunction with .sr-only to only display content when it's focused.
+* Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+* Credit: HTML5 Boilerplate */
 
 .sr-only-focusable {
     &:active,
@@ -335,12 +330,13 @@ ol {
 }
 
 
-// iOS "clickable elements" fix for role="button"
-//
-// Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
-// for traditionally non-focusable elements with role="button"
-// see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
-// Upstream patch for normalize.css submitted: https://github.com/necolas/normalize.css/pull/379 - remove this fix once that is merged
+/* iOS "clickable elements" fix for role="button"
+*
+* Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
+* for traditionally non-focusable elements with role="button"
+* see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+* Upstream patch for normalize.css submitted: https://github.com/necolas/normalize.css/pull/379 - remove this fix once that is merged
+*/
 
 [role="button"] {
     cursor: pointer;
