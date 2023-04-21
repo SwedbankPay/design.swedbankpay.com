@@ -63,6 +63,15 @@
         "selector-attribute-quotes": "always",
         "selector-pseudo-element-colon-notation": "single",
         "unit-allowed-list": ["%", "px", "rem", "vh", "vw", "s", "deg", "ch", "fr"],
-        "value-keyword-case": "lower"
+        "value-keyword-case": "lower",
+        "function-no-unknown": [
+            true,
+            {
+              "ignoreFunctions": [
+                "fade",
+                "darken"
+              ]
+            }
+          ]
     }
 }

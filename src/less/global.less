@@ -346,6 +346,7 @@ ol {
     MIXINS
 */
 
+/* stylelint-disable less/color-no-invalid-hex, less/no-duplicate-variables */
 .media-breakpoint-up(@size, @abbr, @ruleset) {
     & when (@size > 0) {
         @infix: ~"-@{abbr}";
@@ -359,6 +360,7 @@ ol {
         @ruleset();
     }
 }
+/* stylelint-enable */
 
 .material-icons-styling(@color: @brand-secondary, @margin: 0 0.5rem, @font-size: 1.25rem) {
     color: @color;
