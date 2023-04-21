@@ -1,5 +1,5 @@
-@import "variables-swedbankpay.less";
-@import "global.less";
+@import url("variables-swedbankpay.less");
+@import url("global.less");
 
 #designguide {
     display: flex;
@@ -49,8 +49,8 @@
 
     .showcase-panel {
         .sc-highlight {
-            background-color: rgba(86, 61, 124, 0.15);
-            border: 1px solid rgba(86, 61, 124, 0.15);
+            background-color: rgb(86 61 124 / 15%);
+            border: 1px solid rgb(86 61 124 / 15%);
         }
 
         .showcase-grid {
@@ -202,7 +202,7 @@
 
             & kbd {
                 border-radius: 3px;
-                background: rgba(@brand-primary-lighter, 0.8);
+                background: rgb(@brand-primary-lighter 0.8);
                 padding: 2px 6px;
                 margin: 2px;
                 color: @brand-secondary-light-1;
@@ -374,7 +374,7 @@
         width: 100%;
         margin-right: auto;
         margin-left: auto;
-        padding: 2rem 2rem;
+        padding: 2rem;
         max-width: 46.375rem;
 
         h1:first-of-type {
@@ -700,11 +700,11 @@
 
         .nav-group {
             margin-bottom: @base-margin;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+            border-bottom: 1px solid rgb(0 0 0 / 7.5%);
 
             &:first-child {
                 padding-top: 1rem;
-                border-top: 1px solid rgba(0, 0, 0, 0.075);
+                border-top: 1px solid rgb(0 0 0 / 7.5%);
             }
 
             a {
@@ -833,7 +833,7 @@
             padding-left: 0;
 
             li {
-                border-left: 1px solid rgba(0, 0, 0, 0.1);
+                border-left: 1px solid rgb(0 0 0 / 10%);
                 padding: 0.5rem 0 0.5rem 1rem;
 
                 &.active {
@@ -1352,7 +1352,7 @@
             }
 
             p {
-                margin: 0 0.5rem 0;
+                margin: 0 0.5rem;
             }
         }
     }
@@ -1388,7 +1388,7 @@
             width: 100%;
             top: 0;
             left: 0;
-            background-color: rgba(58, 58, 58, 0.904);
+            background-color: rgb(58 58 58 / 90.4%);
             z-index: 450;
 
             img {
@@ -1777,10 +1777,7 @@
 
         .responsive-iframe {
             position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
+            inset: 0;
             width: 100%;
             height: 100%;
         }
