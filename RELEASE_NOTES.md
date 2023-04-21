@@ -23,6 +23,6 @@
 
 ## Packages maintenance
 
--   bump Stylelint from 3 to 5
+-   bump Stylelint from 13 to 15
 -   bump Codecov-action from 3.1.2 to 3.1.3
 -   bump npm-publish from 1 to 2
