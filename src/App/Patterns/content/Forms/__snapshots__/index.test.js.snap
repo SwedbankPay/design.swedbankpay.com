@@ -420,15 +420,13 @@ exports[`Forms: index renders 1`] = `
               aria-disabled={null}
               aria-label={null}
               aria-pressed={null}
-              className="btn btn-link"
+              className="btn btn-tertiary"
               role={null}
               tabIndex={null}
               title={null}
               type="button"
             >
-              <span>
-                Cancel
-              </span>
+              Cancel
             </button>
           </div>
         </div>
@@ -520,7 +518,7 @@ exports[`Forms: index renders 1`] = `
             Hints
           </b>
            
-          Provides in-context guidance for the user through an always visible hint text or hint expander which displays more information when expanded.
+          Provides in-context guidance for the user through an always visible hint text.
         </li>
         <li>
           <b>
@@ -533,7 +531,7 @@ exports[`Forms: index renders 1`] = `
           >
             Buttons
           </a>
-           allows users to submit or exit a form, use a primary button for the main action, secondary button for secondary actions and a link button to cancel.
+           allows users to submit or exit a form, use a primary button for the main action, secondary button for secondary actions and a tertiary button to cancel.
         </li>
       </ul>
       <h3>
@@ -583,7 +581,7 @@ exports[`Forms: index renders 1`] = `
               
 
               <input
-                autocomplete={null}
+                autocomplete="street-address"
                 className="form-control"
                 data-validate={null}
                 defaultValue=""
@@ -614,7 +612,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autocomplete={null}
+                  autocomplete="postal-code"
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
@@ -642,7 +640,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autocomplete={null}
+                  autocomplete="address-level2"
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
@@ -788,7 +786,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autocomplete={null}
+                  autocomplete="email"
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
@@ -816,7 +814,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autocomplete={null}
+                  autocomplete="tel"
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
@@ -857,7 +855,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autocomplete={null}
+                  autocomplete="email"
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
@@ -885,7 +883,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autocomplete={null}
+                  autocomplete="tel"
                   className="form-control"
                   data-validate={null}
                   defaultValue=""
@@ -909,7 +907,7 @@ exports[`Forms: index renders 1`] = `
           Label and hints
         </h3>
         <p>
-          It is important to give the users the information required to fill in the form and help them be successful the first time. An input must have a label that clearly describes the type of input a field requires. The label can be complemented with a hint text or a hint expander to provide clarifying details, try do avoid using both a visible hint text and a hint expander.
+          It is important to give the users the information required to fill in the form and help them be successful the first time. An input must have a label that clearly describes the type of input a field requires. The label can be complemented with a hint text.
         </p>
         <p>
           Consider the following to decide where to place the information:
@@ -925,25 +923,18 @@ exports[`Forms: index renders 1`] = `
             .
           </li>
           <li>
-            If the information is important and many users will need it, provide 
+            Else provide 
             <b>
               hint text
             </b>
              that is visible by default.
-          </li>
-          <li>
-            If the information is less important and only a minority of users will need it, put it in a 
-            <b>
-              hint expander
-            </b>
-            .
           </li>
         </ul>
         <div
           className="row"
         >
           <div
-            className="col-lg-6 col-12"
+            className="col-12"
           >
             <div
               className="slab slab-plain slab-border-success"
@@ -954,88 +945,48 @@ exports[`Forms: index renders 1`] = `
                 Do
               </span>
               <div
-                className="form-group"
+                className="col-12 col-sm-6 m-auto px-0"
               >
-                
-
-                <label
-                  htmlFor="personal-identification-number-example"
+                <div
+                  className="form-group"
                 >
-                  Personal identification number
-                </label>
-                
+                  
 
-                <input
-                  autocomplete={null}
-                  className="form-control"
-                  data-validate={null}
-                  defaultValue=""
-                  disabled={null}
-                  id="personal-identification-number-example"
-                  pattern={null}
-                  placeholder={null}
-                  readOnly={null}
-                  required={null}
-                  type="text"
-                />
-                
+                  <label
+                    htmlFor="personal-identification-number-example"
+                  >
+                    Personal identification number
+                  </label>
+                  
 
-                <p
-                  className="hint-text"
-                  id="hint-text"
-                >
-                  YYYYMMDDNNNN
-                </p>
-                
+                  <input
+                    autocomplete={null}
+                    className="form-control"
+                    data-validate={null}
+                    defaultValue=""
+                    disabled={null}
+                    id="personal-identification-number-example"
+                    pattern={null}
+                    placeholder={null}
+                    readOnly={null}
+                    required={null}
+                    type="text"
+                  />
+                  
 
+                  <p
+                    className="hint-text"
+                    id="hint-text"
+                  >
+                    YYYYMMDDNNNN
+                  </p>
+                  
+
+                </div>
               </div>
             </div>
             <p>
               Use a hint text for important information that is secondary to the label.
-            </p>
-          </div>
-          <div
-            className="col-lg-6 col-12"
-          >
-            <div
-              className="slab slab-plain slab-border-success"
-            >
-              <span
-                className="h4 d-block mb-4"
-              >
-                Do
-              </span>
-              <div
-                className="form-group"
-              >
-                
-
-                <label
-                  htmlFor="cvc-example"
-                >
-                  Security code (CVC)
-                </label>
-                
-
-                <input
-                  autocomplete={null}
-                  className="form-control"
-                  data-validate={null}
-                  defaultValue=""
-                  disabled={null}
-                  id="cvc-example"
-                  pattern={null}
-                  placeholder={null}
-                  readOnly={null}
-                  required={null}
-                  type="text"
-                />
-                
-
-              </div>
-            </div>
-            <p>
-              Use hint expander for additional information that is less important or long.
             </p>
           </div>
         </div>
@@ -1093,7 +1044,7 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    autocomplete={null}
+                    autocomplete="email"
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
@@ -1177,7 +1128,7 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    autocomplete={null}
+                    autocomplete="email"
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
@@ -1233,7 +1184,7 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    autocomplete={null}
+                    autocomplete="tel"
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
@@ -1258,7 +1209,7 @@ exports[`Forms: index renders 1`] = `
           Button placement
         </h3>
         <p>
-          The primary button should be left-aligned along with the left side of the form field. If additional actions are required, put the primary button first, then secondary buttons, then the link button. One exception is a multiple-step form where the “Back” secondary button sits at the very left, while the rest of the buttons are aligned to the right. In some cases, like on a 
+          The primary button should be left-aligned along with the left side of the form field. If additional actions are required, put the primary button first, then secondary buttons, then the tertiary button. One exception is a multiple-step form where the “Back” secondary button sits at the very left, while the rest of the buttons are aligned to the right. In some cases, like on a 
           <a
             href=""
           >
@@ -1266,7 +1217,6 @@ exports[`Forms: index renders 1`] = `
           </a>
           , buttons can be centered and set to the same width as the input fields. On mobile, the buttons are always centered, full width and stacked vertically with the primary action on top. 
         </p>
-         
         <img
           alt="Visualization of button placement in forms."
           className="w-100"
@@ -1307,7 +1257,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autocomplete={null}
+                  autocomplete="email"
                   className="form-control"
                   data-validate={null}
                   defaultValue="Name.com"
@@ -1355,7 +1305,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autocomplete={null}
+                  autocomplete="email"
                   className="form-control"
                   data-validate={null}
                   defaultValue="Name.com"
@@ -1486,7 +1436,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autocomplete={null}
+                  autocomplete="email"
                   className="form-control"
                   data-validate={null}
                   defaultValue="Name.com"
@@ -1601,7 +1551,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autocomplete={null}
+                  autocomplete="email"
                   className="form-control"
                   data-validate={null}
                   defaultValue="name@mail.com"
@@ -1629,7 +1579,7 @@ exports[`Forms: index renders 1`] = `
                 
 
                 <input
-                  autocomplete={null}
+                  autocomplete="current-password"
                   className="form-control"
                   data-validate={null}
                   defaultValue="qwerty1234"
@@ -1794,7 +1744,7 @@ exports[`Forms: index renders 1`] = `
                     
 
                     <input
-                      autocomplete={null}
+                      autocomplete="given-name"
                       className="form-control"
                       data-validate={null}
                       defaultValue=""
@@ -1822,7 +1772,7 @@ exports[`Forms: index renders 1`] = `
                     
 
                     <input
-                      autocomplete={null}
+                      autocomplete="family-name"
                       className="form-control"
                       data-validate={null}
                       defaultValue=""
@@ -1862,7 +1812,7 @@ exports[`Forms: index renders 1`] = `
                     
 
                     <input
-                      autocomplete={null}
+                      autocomplete="email"
                       className="form-control"
                       data-validate={null}
                       defaultValue=""
@@ -1890,7 +1840,7 @@ exports[`Forms: index renders 1`] = `
                     
 
                     <input
-                      autocomplete={null}
+                      autocomplete="tel"
                       className="form-control"
                       data-validate={null}
                       defaultValue=""
@@ -1980,7 +1930,7 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    autocomplete={null}
+                    autocomplete="name"
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
@@ -2008,7 +1958,7 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    autocomplete={null}
+                    autocomplete="email"
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
@@ -2128,7 +2078,7 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    autocomplete={null}
+                    autocomplete="name"
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
@@ -2156,7 +2106,7 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    autocomplete={null}
+                    autocomplete="email"
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
@@ -2287,7 +2237,7 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    autocomplete={null}
+                    autocomplete="name"
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
@@ -2315,7 +2265,7 @@ exports[`Forms: index renders 1`] = `
                   
 
                   <input
-                    autocomplete={null}
+                    autocomplete="email"
                     className="form-control"
                     data-validate={null}
                     defaultValue=""
