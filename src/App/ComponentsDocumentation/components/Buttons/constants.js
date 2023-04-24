@@ -319,3 +319,40 @@ export const buttonUtilClasses = [
         description: "Button will get a spinning loader."
     }
 ];
+
+export const destructiveButtons = {
+    id: "destructiveButtons",
+    tabsId: "destructiveButtonsTabs",
+    elements: [
+        {
+            tab: "Guiding",
+            component: <ButtonComponent type="guiding-destructive" label="Guiding destructive button" />,
+            options: ButtonOptions("destructive_"),
+            title: "Destructive button",
+            description: <>
+                <p>
+                    Use a guiding destructive button to clearly show the user that the action is destructive. The button is designed to not take on too much visual
+                    attention from the user yet still clearly communicate a destructive action. It can therefor safely be used in most contexts.
+                </p>
+                <p>
+                    When letting users carry out an action like this, it’s a good idea to include an additional step which asks them to confirm it.
+                    The guiding destructive button will therefor often occur prior to the executive destructive button in a user flow.
+                </p>
+            </>
+        },
+        {
+            tab: "Executive",
+            component: <ButtonComponent type="executive-destructive" label="Executive destructive button" />,
+            title: "Executive destructive button",
+            options: ButtonOptions("destructive_"),
+            description: "The executive destructive button should be used sparingly and only in case of a final destructive call to action. The executive destructive button visually takes up a lot of the attention. To not distract the user from other content it is often used in simpler contexts such as dialogs, for example when confirming removal of certain information."
+        },
+        {
+            tab: "Link",
+            component: <ButtonComponent type="link-destructive" label="Link destructive button" />,
+            options: ButtonOptions("destructive_"),
+            title: "Destructive button",
+            description: "The text destructive button is used as an alternative for the guiding destructive button and can be used when there is limited space, within other components or various containers."
+        }
+    ]
+};
