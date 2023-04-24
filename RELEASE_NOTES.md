@@ -1,6 +1,6 @@
 # Changelog
 
-## [10.8.1] - 20.04.2023
+## [10.8.1] - 24.04.2023
 
 ## Component changes
 
@@ -17,6 +17,9 @@
     -   Removed all references to button-link (now users should use tertiary)
     -   Removed all references to input textx "hint text expander"
     -   PayEx restore destructive buttons Preview block in docs (but beware, this chunk will probably not be updated in the future)
+
+-   Sheet
+    -   Close button size class got fixed
 
 -   Forms (in Patterns & Login)
     -   Add autocomplete attributes to all relevant inputs code snippets to enforce good practices

@@ -5,6 +5,15 @@ const basename = process.env.basename;
 
 export const changeLogs = [
     {
+        version: "10.8.1",
+        title: "Iteration patch, minor fixes",
+        text: <p>Spring has arrived, and it&apos;s time to tidy up the small mess we left behind in our previous release 🧹.
+            <br/>We&apos;ve made a few minor UI fixes in the text inputs 🩹 and addressed some obsolete content that had slipped our minds while updating the documentation 🚮.
+            <br/>We&apos;ve revived the documentation about the destructive buttons for our PayEx comrades 📝 (style was silently suppported, but silent is not our thing 🥳).
+            <br/>To add some extra pizzazz, we&apos;ve also included autocomplete functionality in our forms examples by utilizing the autocomplete attributes. Let&apos;s make our final user&apos;s experience as enjoyable as possible by removing all possible friction 🚀🌟.
+            <br/>Lastly, we&apos;ve carried out some routine maintenance by updating some of our packages. 📦</p>
+    },
+    {
         version: "10.8.0",
         title: "A new beginning 🌅",
         text: <p>This one is a bittersweet release.
