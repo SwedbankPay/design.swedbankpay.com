@@ -226,11 +226,11 @@
 // Body reset
 
 html {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
     height: 100%;
     scroll-behavior: smooth;
     line-height: 1.15; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
+    text-size-adjust: 100%; /* 2 */
 
     @media (min-width: @screen-lg-max) {
         scroll-snap-type: y mandatory;
@@ -346,6 +346,7 @@ ol {
     MIXINS
 */
 
+/* stylelint-disable less/color-no-invalid-hex, less/no-duplicate-variables */
 .media-breakpoint-up(@size, @abbr, @ruleset) {
     & when (@size > 0) {
         @infix: ~"-@{abbr}";
@@ -359,6 +360,7 @@ ol {
         @ruleset();
     }
 }
+/* stylelint-enable */
 
 .material-icons-styling(@color: @brand-secondary, @margin: 0 0.5rem, @font-size: 1.25rem) {
     color: @color;
@@ -396,7 +398,7 @@ ol {
     &:hover {
         opacity: 1;
         cursor: pointer;
-        background-color: rgba(73, 60, 59, 0.1);
+        background-color: rgb(73 60 59 / 10%);
     }
 
     &:focus {
