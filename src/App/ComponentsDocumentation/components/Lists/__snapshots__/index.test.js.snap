@@ -2589,7 +2589,8 @@ exports[`Documentation: Lists renders 1`] = `
       Description list
     </h2>
     <p>
-      The description list lets you provide each item with a more specific description of each item. Add 
+      The description list lets you provide each item with a more specific description of each item. Add
+       
       <code
         className="code-tags code-tags-secondary"
       >
@@ -3707,7 +3708,8 @@ exports[`Documentation: Lists renders 1`] = `
       >
         .item-list-hover
       </code>
-       to give your items a hover effect. You can use this on any variation of 
+       to give your items a hover effect. You can use this on any variation of
+       
       <code
         className="code-tags code-tags-secondary"
       >
@@ -3909,7 +3911,8 @@ exports[`Documentation: Lists renders 1`] = `
       Striped item list
     </h2>
     <p>
-      If you want more seperation between each item you can use 
+      If you want more seperation between each item you can use
+       
       <code
         className="code-tags code-tags-secondary"
       >

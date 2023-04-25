@@ -8,7 +8,8 @@ Array [
     Abbreviations
   </h2>,
   <p>
-    Stylized implementation of HTML’s 
+    Stylized implementation of HTML’s
+     
     <code
       className="code-tags code-tags-primary"
     >
@@ -112,7 +113,8 @@ Array [
     >
       Read more
     </a>
-     about abbreviations.
+     
+    about abbreviations.
   </p>,
 ]
 `;
@@ -178,7 +180,8 @@ Array [
     >
       &lt;blockquote&gt;
     </code>
-     or 
+     or
+     
     <code
       className="code-tags code-tags-secondary"
     >
@@ -278,7 +281,8 @@ Array [
     >
       &lt;footer&gt;
     </code>
-     for identifying the source. Wrap the name of the source work in 
+     for identifying the source. Wrap the name of the source work in
+     
     <code
       className="code-tags code-tags-primary"
     >
@@ -393,7 +397,8 @@ Array [
     >
       &lt;blockquote&gt;
     </code>
-     or 
+     or
+     
     <code
       className="code-tags code-tags-secondary"
     >
@@ -488,7 +493,8 @@ Array [
     >
       &lt;footer&gt;
     </code>
-     for identifying the source. Wrap the name of the source work in 
+     for identifying the source. Wrap the name of the source work in
+     
     <code
       className="code-tags code-tags-primary"
     >
@@ -713,7 +719,8 @@ Array [
     >
       .h1
     </code>
-     through 
+     through
+     
     <code
       className="code-tags code-tags-secondary"
     >
@@ -1116,7 +1123,8 @@ Array [
     >
       .mark
     </code>
-     and 
+     and
+     
     <code
       className="code-tags code-tags-secondary"
     >
@@ -1128,7 +1136,8 @@ Array [
     >
       &lt;mark&gt;
     </code>
-     and 
+     and
+     
     <code
       className="code-tags code-tags-primary"
     >
@@ -1137,25 +1146,29 @@ Array [
      while avoiding any unwanted semantic implications that the tags would bring.
   </p>,
   <p>
-    While not shown above, feel free to use 
+    While not shown above, feel free to use
+     
     <code
       className="code-tags code-tags-primary"
     >
       &lt;b&gt;
     </code>
-     and 
+     and
+     
     <code
       className="code-tags code-tags-primary"
     >
       &lt;i&gt;
     </code>
-     in HTML5. 
+     in HTML5.
+     
     <code
       className="code-tags code-tags-primary"
     >
       &lt;b&gt;
     </code>
-     is meant to highlight words or phrases without conveying additional importance while 
+     is meant to highlight words or phrases without conveying additional importance while
+     
     <code
       className="code-tags code-tags-primary"
     >
@@ -1174,7 +1187,8 @@ Array [
     Lead
   </h2>,
   <p>
-    Make a paragraph stand out by using 
+    Make a paragraph stand out by using
+     
     <code
       className="code-tags code-tags-secondary"
     >

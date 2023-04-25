@@ -1089,13 +1089,15 @@ exports[`Documentation: Panel renders 1`] = `
       Panel headers
     </h2>
     <p>
-      You can pick between two different panel headers, brand color with white text and white with green text. add 
+      You can pick between two different panel headers, brand color with white text and white with green text. add
+       
       <code
         className="code-tags code-tags-secondary"
       >
         .panel-default
       </code>
-       or 
+       or
+       
       <code
         className="code-tags code-tags-secondary"
       >
@@ -1251,7 +1253,8 @@ exports[`Documentation: Panel renders 1`] = `
       Displaying a full width table
     </h2>
     <p>
-      To display a full width table in a panel use 
+      To display a full width table in a panel use
+       
       <code
         className="code-tags code-tags-secondary"
       >

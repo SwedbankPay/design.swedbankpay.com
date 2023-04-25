@@ -690,7 +690,8 @@ exports[`Components: ActionList renders 1`] = `
         <b>
           Deprecated:
         </b>
-         Be aware, this component will not be maintained anymore. Please make the transition to take use of the 
+         Be aware, this component will not be maintained anymore. Please make the transition to take use of the
+         
         <a
           href="/components/dropdown"
           onClick={[Function]}
@@ -1666,7 +1667,8 @@ exports[`Components: ActionList renders 1`] = `
         >
           Usage with NPM
         </a>
-         will require you to import it from 
+         will require you to import it from
+         
         <code
           className="code-tags code-tags-primary"
         >

@@ -186,7 +186,8 @@ Array [
     Card with grid
   </h3>,
   <p>
-    Use our grid along with cards to control their size and how they are displayed on different screen resolutions. Make sure to add 
+    Use our grid along with cards to control their size and how they are displayed on different screen resolutions. Make sure to add
+     
     <code
       className="code-tags code-tags-secondary"
     >
@@ -754,19 +755,22 @@ Array [
     Card Types
   </h3>,
   <p>
-    We offer three different card types; 
+    We offer three different card types;
+     
     <code
       className="code-tags code-tags-secondary"
     >
       .card-primary
     </code>
-    , 
+    ,
+     
     <code
       className="code-tags code-tags-secondary"
     >
       .card-secondary
     </code>
-     and 
+     and
+     
     <code
       className="code-tags code-tags-secondary"
     >
@@ -825,7 +829,8 @@ Array [
                 >
                   Balance:
                 </span>
-                 2500,- 
+                 2500,-
+                 
               </li>
             </ul>
             <p>

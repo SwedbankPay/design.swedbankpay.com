@@ -331,19 +331,22 @@ exports[`Utilities: index renders 1`] = `
           </div>
         </div>
         <p>
-          Like Bootstrap our breakpoints are ranged from 
+          Like Bootstrap our breakpoints are ranged from
+           
           <code
             className="code-tags code-tags-secondary"
           >
             xs
           </code>
-           to 
+           to
+           
           <code
             className="code-tags code-tags-secondary"
           >
             xl
           </code>
-          . In addition, we have added yet another breakpoint for even bigger screens called 
+          . In addition, we have added yet another breakpoint for even bigger screens called
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -352,7 +355,8 @@ exports[`Utilities: index renders 1`] = `
           .
         </p>
         <p>
-          Note that when targeting screensize 
+          Note that when targeting screensize
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -828,13 +832,15 @@ exports[`Utilities: index renders 1`] = `
           </div>
         </div>
         <p>
-          Display utility classes apply to all breakpoints, from 
+          Display utility classes apply to all breakpoints, from
+           
           <code
             className="code-tags code-tags-secondary"
           >
             xs
           </code>
-           to 
+           to
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -2236,13 +2242,15 @@ exports[`Utilities: index renders 1`] = `
             margin-top: 3rem
           </code>
         </p>
-        You can also approach the spacings with the x and y-axis. 
+        You can also approach the spacings with the x and y-axis.
+         
         <code
           className="code-tags code-tags-secondary"
         >
           my-5
         </code>
-         will give you 
+         will give you
+         
         <code
           className="code-tags code-tags-secondary"
         >

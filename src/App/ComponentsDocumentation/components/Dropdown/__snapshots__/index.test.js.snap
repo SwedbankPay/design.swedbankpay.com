@@ -308,7 +308,8 @@ exports[`Documentation: Dropdown DeveloperDocumentation renders 1`] = `
     Accessibility considerations
   </h3>
   <p>
-    By default, keyboard navigation is implemented in the script. If your dropdown includes solely buttons or anchor-tags, you can use arrow naivigation between elements. If your 
+    By default, keyboard navigation is implemented in the script. If your dropdown includes solely buttons or anchor-tags, you can use arrow naivigation between elements. If your
+     
     <code
       className="code-tags code-tags-primary"
     >

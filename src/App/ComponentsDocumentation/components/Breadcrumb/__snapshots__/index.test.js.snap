@@ -31,19 +31,22 @@ exports[`Documentation: Breadcrumb renders 1`] = `
       >
         &lt;ol&gt;
       </code>
-       element and nest a 
+       element and nest a
+       
       <code
         className="code-tags code-tags-primary"
       >
         &lt;a&gt;
       </code>
-       or 
+       or
+       
       <code
         className="code-tags code-tags-primary"
       >
         &lt;span&gt;
       </code>
-       element inside the 
+       element inside the
+       
       <code
         className="code-tags code-tags-primary"
       >
@@ -189,13 +192,15 @@ exports[`Documentation: Breadcrumb renders 1`] = `
       Disable a breadcrumb
     </h2>
     <p>
-      To disable a breadcrumb element, simply use a 
+      To disable a breadcrumb element, simply use a
+       
       <code
         className="code-tags code-tags-primary"
       >
         &lt;span&gt;
       </code>
-       element within the 
+       element within the
+       
       <code
         className="code-tags code-tags-primary"
       >

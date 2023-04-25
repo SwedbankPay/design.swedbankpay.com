@@ -17,7 +17,8 @@ exports[`Core: Accessibility AccessibleService renders 1`] = `
     Brand tonality in UX writing
   </h3>
   <p>
-    The brand tonality goes hand in hand with the UX Writing principles. By following the principles for UX Writing we also stay on brand. And vice versa. They are very similar. Open, simple and caring is the basis for 
+    The brand tonality goes hand in hand with the UX Writing principles. By following the principles for UX Writing we also stay on brand. And vice versa. They are very similar. Open, simple and caring is the basis for
+     
     TESTBRAND
     ’s communication.
   </p>
@@ -35,7 +36,9 @@ exports[`Core: Accessibility AccessibleService renders 1`] = `
       >
         using a conversational language
       </span>
-       – avoiding jargon, complex words and expressions. 
+       
+      – avoiding jargon, complex words and expressions.
+       
     </li>
     <li>
       <span

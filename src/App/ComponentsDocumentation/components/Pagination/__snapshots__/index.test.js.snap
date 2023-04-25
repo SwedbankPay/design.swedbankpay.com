@@ -11,13 +11,15 @@ exports[`Documentation: Pagination DeveloperDocumentation renders 1`] = `
     Link relations
   </h3>
   <p>
-    Consider adding 
+    Consider adding
+     
     <code
       className="code-tags code-tags-primary"
     >
       &lt;link rel="…" href="…"&gt;
     </code>
-     to the 
+     to the
+     
     <code
       className="code-tags code-tags-primary"
     >
@@ -29,19 +31,22 @@ exports[`Documentation: Pagination DeveloperDocumentation renders 1`] = `
     >
       first
     </code>
-    , 
+    ,
+     
     <code
       className="code-tags code-tags-primary"
     >
       last
     </code>
-    , 
+    ,
+     
     <code
       className="code-tags code-tags-primary"
     >
       next
     </code>
-     and 
+     and
+     
     <code
       className="code-tags code-tags-primary"
     >
@@ -53,31 +58,36 @@ exports[`Documentation: Pagination DeveloperDocumentation renders 1`] = `
     Javascript methods
   </h3>
   <p>
-    Our pagination component works without a script, so the styling is still working where JavaScript is prohibited. But where it is allowed, and where you do not want to spend time banging your head to figure out the algorithm, the Design Guide provides a reference implementation! 
+    Our pagination component works without a script, so the styling is still working where JavaScript is prohibited. But where it is allowed, and where you do not want to spend time banging your head to figure out the algorithm, the Design Guide provides a reference implementation!
+     
     <code
       className="code-tags code-tags-secondary"
     >
       dg.paginate(pages, currentActive)
     </code>
-    . The script takes in two arguments; 
+    . The script takes in two arguments;
+     
     <code
       className="code-tags code-tags-primary"
     >
       pages
     </code>
-     and 
+     and
+     
     <code
       className="code-tags code-tags-primary"
     >
       currentActive
     </code>
-    , where 
+    , where
+     
     <code
       className="code-tags code-tags-primary"
     >
       pages
     </code>
-     is total pages and 
+     is total pages and
+     
     <code
       className="code-tags code-tags-primary"
     >
@@ -92,19 +102,22 @@ exports[`Documentation: Pagination DeveloperDocumentation renders 1`] = `
     >
       page
     </code>
-     and 
+     and
+     
     <code
       className="code-tags code-tags-primary"
     >
       current
     </code>
-    . 
+    .
+     
     <code
       className="code-tags code-tags-primary"
     >
       page
     </code>
-     shows an integer, and 
+     shows an integer, and
+     
     <code
       className="code-tags code-tags-primary"
     >
