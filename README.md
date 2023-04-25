@@ -63,8 +63,8 @@ Design Guide requires [Node.js][nodejs] (includes npm).
 
 ### Set up Git Hooks
 
-- Open a terminal and navigate to repo root
-- Run `git config core.hooksPath .githooks`
+-   Open a terminal and navigate to repo root
+-   Run `git config core.hooksPath .githooks`
 
 ## Developing
 
@@ -77,18 +77,18 @@ it, **PayEx**. Check out the `package.json` file for additional scripts.
 
 ### Built with
 
-- [React][react]
-- [Less][less]
+-   [React][react]
+-   [Less][less]
 
 ### Setting up Dev
 
-- Running the command `npm start` starts the Webpack dev server, (which is
-  configured in `~/webpack.config.js`). If any changes is made to this file, or
-  any files directly influencing this file (i.e. any loaders or plugins) you
-  need to restart the server.
-- The script `npm start` will start the dev server in development mode. If you
-  wish to run the dev server in production-like environment run the command
-  `npm run start:prod`.
+-   Running the command `npm start` starts the Webpack dev server, (which is
+    configured in `~/webpack.config.js`). If any changes is made to this file, or
+    any files directly influencing this file (i.e. any loaders or plugins) you
+    need to restart the server.
+-   The script `npm start` will start the dev server in development mode. If you
+    wish to run the dev server in production-like environment run the command
+    `npm run start:prod`.
 
 #### Importing components
 
@@ -129,11 +129,11 @@ released, a new version of the JavaScript will be as well.
 
 1. Open a terminal and navigate to repo root
 2. Run the command `npm test`
-   - Many of the tests are snapshot based, and runs against already created
-     snapshots. If you need to update the snapshots due to changes run the
-     command `npm run test:update`.
-   - A test coverage report is generated after running the tests. This can be
-     found in `~/coverage`.
+    - Many of the tests are snapshot based, and runs against already created
+      snapshots. If you need to update the snapshots due to changes run the
+      command `npm run test:update`.
+    - A test coverage report is generated after running the tests. This can be
+      found in `~/coverage`.
 
 > Note: Snapshot testing is pretty unforgiving, so if you make **ANY** changes
 > to how a component, which already has a snapshot, is rendered, the tests
@@ -147,40 +147,40 @@ Coding style rules are set in ```~/.eslintrc` & `~/.stylelintrc`.
 
 ## Contributing
 
-- Bug reports: File bugs as Github [issues][issues].
-- Feature suggestions: File as Github issue or discuss the feature on Slack
-  ([`#design-guide-general`][slack]).
-- Code contributions: Code contributions are highly encouraged, but discuss
-  the feature/bugfix in an issue or on Slack before you start coding.
+-   Bug reports: File bugs as Github [issues][issues].
+-   Feature suggestions: File as Github issue or discuss the feature on Slack
+    ([`#design-guide-general`][slack]).
+-   Code contributions: Code contributions are highly encouraged, but discuss
+    the feature/bugfix in an issue or on Slack before you start coding.
 
 ## Creating a release
 
 Before merging to master to create a release, make sure you follow these steps:
 
-- Be in the `develop` branch.
-- Pull latest changes.
-- Create a release branch where the name is the new tag. (`release/x.x.x`)
-- Update the version in `~/package.json`.
-  - then run `npm i` to also update package-lock
-  - run `npx browserslist@latest --update-db` to update browserslist
-- Make sure the `RELEASE_NOTES.md` is correct (date and version) and only contains- changes for the current release.
-- Update the changelog constants on the Home page ( "src\App\Home\constants.js" ).
-- Update statusBadges in routes.
-- Commit the changes and create a pull request from `release/x.x.x` branch to `master` and `develop`.
-  - use the release-notes as PR description
-- When approved, rename the merge commit to `Release x.x.x` and merge.
-- Change branch to `master`.
-- Pull latest changes.
-- Create and push a new tag with the new release commit:
+-   Be in the `develop` branch.
+-   Pull latest changes.
+-   Create a release branch where the name is the new tag. (`release/x.x.x`)
+-   Update the version in `~/package.json`.
+    -   then run `npm i` to also update package-lock
+    -   run `npx browserslist@latest --update-db` to update browserslist
+-   Make sure the `RELEASE_NOTES.md` is correct (date and version) and only contains- changes for the current release.
+-   Update the changelog constants on the Home page ( "src\App\Home\constants.js" ).
+-   Update statusBadges in routes.
+-   Commit the changes and create a pull request from `release/x.x.x` branch to `master` and `develop`.
+    -   use the release-notes as PR description
+-   When approved, rename the merge commit to `Release x.x.x` and merge.
+-   Change branch to `master`.
+-   Pull latest changes.
+-   Create and push a new tag with the new release commit:
 
 1. `git tag -l` Make sure the tag is not in list.
 2. `git tag x.x.x` And check if the new tag is in list.
 3. `git push origin x.x.x`
 
-- Remember to change branch back to `develop`.
+-   Remember to change branch back to `develop`.
 
-- In Jira trigger release
-- In GH publish Release
+-   In Jira trigger release
+-   In GH publish Release
 
 AppVeyor will now create and deploy a release on both github and
 [`design.swedbankpay.com`][swpdg].
@@ -189,8 +189,8 @@ GitHub Actions will also create and deploy a release on Azure for the PayEx bran
 
 ## Core development team
 
-- [Raphaël Ferrand][goldenraphti]
-- [Stephan Andersen][stepandersen]
+-   [Raphaël Ferrand][goldenraphti]
+-   [Stephan Andersen][stepandersen]
 
 ## Contents of this project
 

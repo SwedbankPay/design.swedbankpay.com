@@ -2,16 +2,16 @@
 
 ## TL;DR
 
-- clone/fork project.
-- follow the setup guidelines found in readme.md.
-- start on your feature/fix/etc.
-- follow the linting rules set for eslint and stylelint.
-- make sure it runs properly.
-- create tests for your contribution.
-- run all tests.
-- run build scripts.
-- add changes to changelog.
-- if everything works, create a pull request.
+-   clone/fork project.
+-   follow the setup guidelines found in readme.md.
+-   start on your feature/fix/etc.
+-   follow the linting rules set for eslint and stylelint.
+-   make sure it runs properly.
+-   create tests for your contribution.
+-   run all tests.
+-   run build scripts.
+-   add changes to changelog.
+-   if everything works, create a pull request.
 
 ## Creating a new component
 
@@ -57,10 +57,16 @@ import MyExampleComponent from "@components/MyExampleComponent";
 
 const MyExampleDocumentationComponent = () => (
 	<DocContainer>
-		<p className="lead">This is the documentation for My Example Component.</p>
+		<p className="lead">
+			This is the documentation for My Example Component.
+		</p>
 		<h2 id="example-usage">Example usage</h2>
 		<ComponentPreview language="html" showCasePanel codeFigure>
-			<MyExampleComponent type="lg" title="My Example Component" separator />
+			<MyExampleComponent
+				type="lg"
+				title="My Example Component"
+				separator
+			/>
 		</ComponentPreview>
 	</DocContainer>
 );

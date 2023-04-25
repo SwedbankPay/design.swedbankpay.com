@@ -1,1 +1,10 @@
-{}
+{
+	"overrides": [
+		{
+			"files": ["*.html", "*.md"],
+			"options": {
+				"tabWidth": 4
+			}
+		}
+	]
+}

@@ -16,10 +16,13 @@
 					<div class="panel panel-default">
 						<div class="panel-body">
 							<h2>
-								Welcome to the <%= htmlWebpackPlugin.options.title %> Design
-								Guide
+								Welcome to the <%=
+								htmlWebpackPlugin.options.title %> Design Guide
 							</h2>
-							<p>You need to <b>enable javascript</b> to use this site</p>
+							<p>
+								You need to <b>enable javascript</b> to use this
+								site
+							</p>
 						</div>
 					</div>
 				</div>
@@ -27,7 +30,8 @@
 		</noscript>
 		<script>
 			(function () {
-				window.location = "<%= htmlWebpackPlugin.options.basename %>" + "404";
+				window.location =
+					"<%= htmlWebpackPlugin.options.basename %>" + "404";
 			})();
 		</script>
 	</body>

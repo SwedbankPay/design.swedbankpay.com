@@ -10,4 +10,10 @@
 
 ## Packages maintenance
 
-- install Prettier &amp; move all stylistic rules to it, keeping linters focused on linting
+-   add Prettier &amp; move all stylistic rules to it, keeping linters focusing on linting
+
+## Contributors info
+
+-   add VSCode recommended extensions
+-   add editor config
+-   ran all Prettier auto-fixable over all codebase's files
