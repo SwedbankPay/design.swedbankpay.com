@@ -1,7 +1,7 @@
 {
 	"overrides": [
 		{
-			"files": ["*.html", "*.md"],
+			"files": ["*.html"],
 			"options": {
 				"tabWidth": 4
 			}
