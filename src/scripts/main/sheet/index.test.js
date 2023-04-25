@@ -5,286 +5,303 @@ import sheet from "./index";
 import toast from "../toast/index";
 
 describe("scripts: sheet", () => {
-    jest.useFakeTimers();
-
-    const Sheet = ({ id }) => (
-        <>
-            <div className="sheet" id={id}>
-                <section><a id="sheetClose" href="#" ></a></section>
-            </div>
-            <button className="btn btn-primary" type="button" data-sheet-open="demo-sheet">Open sheet</button>
-        </>
-    );
+	jest.useFakeTimers();
+
+	const Sheet = ({ id }) => (
+		<>
+			<div className="sheet" id={id}>
+				<section>
+					<a id="sheetClose" href="#"></a>
+				</section>
+			</div>
+			<button
+				className="btn btn-primary"
+				type="button"
+				data-sheet-open="demo-sheet"
+			>
+				Open sheet
+			</button>
+		</>
+	);
+
+	const OpenSheet = () => (
+		<>
+			<div className="sheet sheet-open" id="demo-sheet">
+				<section>
+					<a href="#" className="sheet-close" id="sheetClose">
+						<i className="material-icons" aria-hidden="true">
+							close
+						</i>
+					</a>
+				</section>
+			</div>
+			<button
+				className="btn btn-primary"
+				type="button"
+				data-sheet-close="demo-sheet"
+			>
+				Close sheet
+			</button>
+		</>
+	);
+
+	beforeEach(() => {
+		jest.runAllTimers();
+		document.body.classList.remove("sheet-open");
+	});
+
+	it("is defined", () => {
+		expect(sheet).toBeDefined();
+	});
+
+	describe("sheet.init", () => {
+		it("has an init method", () => {
+			expect(sheet.init).toBeDefined();
+			expect(sheet.init).toBeInstanceOf(Function);
+		});
+
+		it("returns one object when an ID is passed", () => {
+			render(<Sheet id="demo-sheet-1" />);
+
+			const renderedSheet = document.querySelector(".sheet");
+
+			expect(renderedSheet).toBeTruthy();
+
+			const returnVal = sheet.init("demo-sheet-1");
+
+			expect(Array.isArray(returnVal)).toBeFalsy();
+			expect(typeof returnVal).toEqual("object");
+		});
+
+		it("returns an array of objects when more than one sheet is initialized", () => {
+			render(
+				<>
+					<Sheet />
+					<Sheet />
+				</>
+			);
 
-    const OpenSheet = () => (
-        <>
-            <div className="sheet sheet-open" id="demo-sheet">
-                <section>
-                    <a href="#" className="sheet-close" id="sheetClose">
-                        <i className="material-icons" aria-hidden="true">close</i>
-                    </a>
-                </section>
-            </div>
-            <button className="btn btn-primary" type="button" data-sheet-close="demo-sheet">Close sheet</button>
-        </>
-    );
+			const renderedSheets = document.querySelectorAll(".sheet");
 
-    beforeEach(() => {
-        jest.runAllTimers();
-        document.body.classList.remove("sheet-open");
-    });
+			expect(renderedSheets).toBeTruthy();
+			expect(renderedSheets.length).toEqual(2);
 
-    it("is defined", () => {
-        expect(sheet).toBeDefined();
-    });
+			const returnVal = sheet.init();
 
-    describe("sheet.init", () => {
-        it("has an init method", () => {
-            expect(sheet.init).toBeDefined();
-            expect(sheet.init).toBeInstanceOf(Function);
-        });
+			expect(Array.isArray(returnVal)).toBeTruthy();
+			expect(returnVal.length).toEqual(2);
+		});
 
-        it("returns one object when an ID is passed", () => {
-            render(<Sheet id="demo-sheet-1" />);
+		it("returns null if no sheet is found and prints a warning", () => {
+			console.warn = jest.fn();
 
-            const renderedSheet = document.querySelector(".sheet");
+			expect(sheet.init()).toBeNull();
+			expect(console.warn).toHaveBeenCalled();
+		});
 
-            expect(renderedSheet).toBeTruthy();
+		it("returns null if the passed id is not found and prints a warning", () => {
+			console.warn = jest.fn();
 
-            const returnVal = sheet.init("demo-sheet-1");
+			expect(sheet.init("invalid-id")).toBeNull();
+			expect(console.warn).toHaveBeenCalled();
+		});
+	});
 
-            expect(Array.isArray(returnVal)).toBeFalsy();
-            expect(typeof returnVal).toEqual("object");
-        });
+	it("button with attribute 'data-sheet-open' pointing to the correct id opens corresponding sheet", () => {
+		render(<Sheet id="demo-sheet" />);
 
-        it("returns an array of objects when more than one sheet is initialized", () => {
-            render(
-                <>
-                    <Sheet />
-                    <Sheet />
-                </>);
+		const renderedSheet = document.querySelector(".sheet");
+		const openBtn = document.querySelector("[data-sheet-open]");
 
-            const renderedSheets = document.querySelectorAll(".sheet");
+		sheet.init();
+		expect(document.body.classList).not.toContain("sheet-open");
 
-            expect(renderedSheets).toBeTruthy();
-            expect(renderedSheets.length).toEqual(2);
+		openBtn.click();
+		jest.runAllTimers();
+		expect(document.body.classList).toContain("sheet-open");
+		expect(renderedSheet.classList).toContain("sheet-open");
+	});
 
-            const returnVal = sheet.init();
+	it("button with attribute 'data-sheet-close' pointing to the correct id closes corresponding sheet", () => {
+		render(<OpenSheet />);
 
-            expect(Array.isArray(returnVal)).toBeTruthy();
-            expect(returnVal.length).toEqual(2);
-        });
+		const renderedSheet = document.querySelector(".sheet");
+		const closeBtn = document.querySelector("[data-sheet-close]");
 
-        it("returns null if no sheet is found and prints a warning", () => {
-            console.warn = jest.fn();
+		expect(renderedSheet.classList).toContain("sheet-open");
 
-            expect(sheet.init()).toBeNull();
-            expect(console.warn).toHaveBeenCalled();
-        });
+		sheet.init();
 
-        it("returns null if the passed id is not found and prints a warning", () => {
-            console.warn = jest.fn();
+		closeBtn.click();
+		jest.runAllTimers();
+		expect(renderedSheet.classList).not.toContain("sheet-open");
+		expect(document.body.classList).not.toContain("sheet-open");
+	});
 
-            expect(sheet.init("invalid-id")).toBeNull();
-            expect(console.warn).toHaveBeenCalled();
-        });
-    });
+	it("closes sheet when clicking the close icon", () => {
+		render(<OpenSheet />);
 
-    it("button with attribute 'data-sheet-open' pointing to the correct id opens corresponding sheet", () => {
-        render(<Sheet id="demo-sheet" />);
+		const renderedSheet = document.querySelector(".sheet");
+		const closeIcon = renderedSheet.querySelector(".sheet-close");
 
-        const renderedSheet = document.querySelector(".sheet");
-        const openBtn = document.querySelector("[data-sheet-open]");
+		expect(renderedSheet.classList).toContain("sheet-open");
 
-        sheet.init();
-        expect(document.body.classList).not.toContain("sheet-open");
+		sheet.init();
 
-        openBtn.click();
-        jest.runAllTimers();
-        expect(document.body.classList).toContain("sheet-open");
-        expect(renderedSheet.classList).toContain("sheet-open");
-    });
+		closeIcon.click();
+		jest.runAllTimers();
+		expect(renderedSheet.classList).not.toContain("sheet-open");
+	});
 
-    it("button with attribute 'data-sheet-close' pointing to the correct id closes corresponding sheet", () => {
-        render(<OpenSheet />);
+	it("closes sheet when clicking outside the sheet section", () => {
+		render(<OpenSheet />);
 
-        const renderedSheet = document.querySelector(".sheet");
-        const closeBtn = document.querySelector("[data-sheet-close]");
+		const renderedSheet = document.querySelector(".sheet");
 
-        expect(renderedSheet.classList).toContain("sheet-open");
+		expect(renderedSheet.classList).toContain("sheet-open");
 
-        sheet.init();
+		sheet.init();
 
-        closeBtn.click();
-        jest.runAllTimers();
-        expect(renderedSheet.classList).not.toContain("sheet-open");
-        expect(document.body.classList).not.toContain("sheet-open");
-    });
+		renderedSheet.click();
+		jest.runAllTimers();
+		expect(renderedSheet.classList).not.toContain("sheet-open");
+	});
 
-    it("closes sheet when clicking the close icon", () => {
-        render(<OpenSheet />);
+	it("does not close sheet when pressing keys other than esc", () => {
+		render(<OpenSheet />);
 
-        const renderedSheet = document.querySelector(".sheet");
-        const closeIcon = renderedSheet.querySelector(".sheet-close");
+		const renderedSheet = document.querySelector(".sheet");
 
-        expect(renderedSheet.classList).toContain("sheet-open");
+		expect(renderedSheet.classList).toContain("sheet-open");
 
-        sheet.init();
+		sheet.init();
 
-        closeIcon.click();
-        jest.runAllTimers();
-        expect(renderedSheet.classList).not.toContain("sheet-open");
-    });
+		// Simulate keypress
+		const e = new Event("keydown");
 
-    it("closes sheet when clicking outside the sheet section", () => {
-        render(<OpenSheet />);
+		e.keyCode = 13; // Enter
+		document.dispatchEvent(e);
 
-        const renderedSheet = document.querySelector(".sheet");
+		jest.runAllTimers();
+		expect(renderedSheet.classList).toContain("sheet-open");
+	});
 
-        expect(renderedSheet.classList).toContain("sheet-open");
+	it("closes sheet when pressing esc", () => {
+		render(<OpenSheet />);
 
-        sheet.init();
+		const renderedSheet = document.querySelector(".sheet");
 
-        renderedSheet.click();
-        jest.runAllTimers();
-        expect(renderedSheet.classList).not.toContain("sheet-open");
-    });
+		expect(renderedSheet.classList).toContain("sheet-open");
 
-    it("does not close sheet when pressing keys other than esc", () => {
-        render(<OpenSheet />);
+		sheet.init();
 
-        const renderedSheet = document.querySelector(".sheet");
+		// Simulate keypress
+		const e = new Event("keydown");
 
-        expect(renderedSheet.classList).toContain("sheet-open");
+		e.keyCode = 27; // Esc
+		document.dispatchEvent(e);
 
-        sheet.init();
+		jest.runAllTimers();
+		expect(document.body.classList).not.toContain("sheet-open");
+	});
 
-        // Simulate keypress
-        const e = new Event("keydown");
+	describe("sheet.open", () => {
+		it("opens sheet when calling sheet.open", () => {
+			render(<Sheet id="demo-sheet" />);
 
-        e.keyCode = 13; // Enter
-        document.dispatchEvent(e);
+			const renderedSheet = document.querySelector(".sheet");
 
-        jest.runAllTimers();
-        expect(renderedSheet.classList).toContain("sheet-open");
-    });
+			expect(renderedSheet.classList).not.toContain("sheet-open");
+			expect(document.body.classList).not.toContain("sheet-open");
 
-    it("closes sheet when pressing esc", () => {
-        render(<OpenSheet />);
+			sheet.init();
+			expect(document.body.classList).not.toContain("sheet-open");
 
-        const renderedSheet = document.querySelector(".sheet");
+			sheet.open("demo-sheet");
+			jest.runAllTimers();
 
-        expect(renderedSheet.classList).toContain("sheet-open");
+			expect(renderedSheet.classList).toContain("sheet-open");
+			expect(document.body.classList).toContain("sheet-open");
+		});
 
-        sheet.init();
+		it("does not open sheet when calling sheet.open with wrong id and prints warn to console", () => {
+			console.warn = jest.fn();
+			render(<Sheet id="demo-sheet" />);
 
-        // Simulate keypress
-        const e = new Event("keydown");
+			const renderedSheet = document.querySelector(".sheet");
 
-        e.keyCode = 27; // Esc
-        document.dispatchEvent(e);
+			expect(renderedSheet.classList).not.toContain("sheet-open");
+			expect(document.body.classList).not.toContain("sheet-open");
 
-        jest.runAllTimers();
-        expect(document.body.classList).not.toContain("sheet-open");
-    });
+			sheet.init();
+			expect(renderedSheet.classList).not.toContain("sheet-open");
+			expect(document.body.classList).not.toContain("sheet-open");
 
-    describe("sheet.open", () => {
-        it("opens sheet when calling sheet.open", () => {
-            render(<Sheet id="demo-sheet" />);
+			sheet.open("qwerty");
 
-            const renderedSheet = document.querySelector(".sheet");
+			expect(renderedSheet.classList).not.toContain("sheet-open");
+			expect(document.body.classList).not.toContain("sheet-open");
+		});
 
-            expect(renderedSheet.classList).not.toContain("sheet-open");
-            expect(document.body.classList).not.toContain("sheet-open");
+		it("does not open sheet when the passed sheet is already open and prints a warning to the console", () => {
+			console.warn = jest.fn();
+			render(<OpenSheet id="demo-sheet" />);
 
-            sheet.init();
-            expect(document.body.classList).not.toContain("sheet-open");
+			const renderedSheet = document.querySelector(".sheet");
 
-            sheet.open("demo-sheet");
-            jest.runAllTimers();
+			sheet.init();
+			expect(renderedSheet.classList).toContain("sheet-open");
 
-            expect(renderedSheet.classList).toContain("sheet-open");
-            expect(document.body.classList).toContain("sheet-open");
-        });
+			sheet.open("demo-sheet");
 
-        it("does not open sheet when calling sheet.open with wrong id and prints warn to console", () => {
-            console.warn = jest.fn();
-            render(<Sheet id="demo-sheet" />);
+			expect(renderedSheet.classList).toContain("sheet-open");
+		});
+	});
 
-            const renderedSheet = document.querySelector(".sheet");
+	describe("sheet.close", () => {
+		it("closes sheet when calling sheet.close", () => {
+			render(<OpenSheet />);
 
-            expect(renderedSheet.classList).not.toContain("sheet-open");
-            expect(document.body.classList).not.toContain("sheet-open");
+			expect(document.body.classList).not.toContain("sheet-open");
 
-            sheet.init();
-            expect(renderedSheet.classList).not.toContain("sheet-open");
-            expect(document.body.classList).not.toContain("sheet-open");
+			sheet.init();
 
-            sheet.open("qwerty");
+			sheet.close("demo-sheet");
+			jest.runAllTimers();
 
-            expect(renderedSheet.classList).not.toContain("sheet-open");
-            expect(document.body.classList).not.toContain("sheet-open");
-        });
+			expect(document.body.classList).not.toContain("sheet-open");
+		});
 
-        it("does not open sheet when the passed sheet is already open and prints a warning to the console", () => {
-            console.warn = jest.fn();
-            render(<OpenSheet id="demo-sheet" />);
+		it("does not close sheet when calling sheet.close with wrong id and prints warn to console", () => {
+			console.warn = jest.fn();
+			render(<OpenSheet />);
 
-            const renderedSheet = document.querySelector(".sheet");
+			const renderedSheet = document.querySelector(".sheet");
 
-            sheet.init();
-            expect(renderedSheet.classList).toContain("sheet-open");
+			expect(document.body.classList).not.toContain("sheet-open");
 
-            sheet.open("demo-sheet");
+			sheet.init();
 
-            expect(renderedSheet.classList).toContain("sheet-open");
-        });
-    });
+			sheet.close("qwerty");
+			jest.runAllTimers();
 
-    describe("sheet.close", () => {
-        it("closes sheet when calling sheet.close", () => {
-            render(<OpenSheet />);
+			expect(renderedSheet.classList).toContain("sheet-open");
+		});
 
-            expect(document.body.classList).not.toContain("sheet-open");
+		it("does not close sheet when the passed sheet is close and prints a warning to the console", () => {
+			console.warn = jest.fn();
+			render(<Sheet id="demo-sheet" />);
 
-            sheet.init();
+			const renderedSheet = document.querySelector(".sheet");
 
-            sheet.close("demo-sheet");
-            jest.runAllTimers();
+			sheet.init();
+			expect(renderedSheet.classList).not.toContain("sheet-open");
+			expect(document.body.classList).not.toContain("sheet-open");
 
-            expect(document.body.classList).not.toContain("sheet-open");
-        });
+			sheet.close("demo-sheet");
 
-        it("does not close sheet when calling sheet.close with wrong id and prints warn to console", () => {
-            console.warn = jest.fn();
-            render(<OpenSheet />);
-
-            const renderedSheet = document.querySelector(".sheet");
-
-            expect(document.body.classList).not.toContain("sheet-open");
-
-            sheet.init();
-
-            sheet.close("qwerty");
-            jest.runAllTimers();
-
-            expect(renderedSheet.classList).toContain("sheet-open");
-        });
-
-        it("does not close sheet when the passed sheet is close and prints a warning to the console", () => {
-            console.warn = jest.fn();
-            render(<Sheet id="demo-sheet" />);
-
-            const renderedSheet = document.querySelector(".sheet");
-
-            sheet.init();
-            expect(renderedSheet.classList).not.toContain("sheet-open");
-            expect(document.body.classList).not.toContain("sheet-open");
-
-            sheet.close("demo-sheet");
-
-            expect(renderedSheet.classList).not.toContain("sheet-open");
-            expect(document.body.classList).not.toContain("sheet-open");
-        });
-    });
+			expect(renderedSheet.classList).not.toContain("sheet-open");
+			expect(document.body.classList).not.toContain("sheet-open");
+		});
+	});
 });

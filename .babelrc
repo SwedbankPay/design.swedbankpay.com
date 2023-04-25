@@ -1,45 +1,39 @@
 {
-    "presets": [
-        "@babel/preset-env",
-        "@babel/preset-react"
-    ],
-    "plugins": [
-        "@babel/plugin-syntax-dynamic-import",
-        ["babel-plugin-root-import", {
-            "paths": [
-                {
-                    "rootPathPrefix": "~",
-                    "rootPathSuffix": "./"
-                },
-                {
-                    "rootPathPrefix": "@src",
-                    "rootPathSuffix": "./src"
-                },
-                {
-                    "rootPathPrefix": "@components",
-                    "rootPathSuffix": "./src/App/components"
-                },
-                {
-                    "rootPathPrefix": "@docutils",
-                    "rootPathSuffix": "./src/App/docutils"
-
-                },
-                {
-                    "rootPathPrefix": "@constants",
-                    "rootPathSuffix": "./src/constants"
-                }
-            ]
-        }]
-    ],
-    "env": {
-        "test": {
-            "presets": [
-                "@babel/preset-env",
-                "@babel/preset-react"
-            ],
-            "plugins": [
-                "transform-dynamic-import"
-            ]
-        }
-    }
+	"presets": ["@babel/preset-env", "@babel/preset-react"],
+	"plugins": [
+		"@babel/plugin-syntax-dynamic-import",
+		[
+			"babel-plugin-root-import",
+			{
+				"paths": [
+					{
+						"rootPathPrefix": "~",
+						"rootPathSuffix": "./"
+					},
+					{
+						"rootPathPrefix": "@src",
+						"rootPathSuffix": "./src"
+					},
+					{
+						"rootPathPrefix": "@components",
+						"rootPathSuffix": "./src/App/components"
+					},
+					{
+						"rootPathPrefix": "@docutils",
+						"rootPathSuffix": "./src/App/docutils"
+					},
+					{
+						"rootPathPrefix": "@constants",
+						"rootPathSuffix": "./src/constants"
+					}
+				]
+			}
+		]
+	],
+	"env": {
+		"test": {
+			"presets": ["@babel/preset-env", "@babel/preset-react"],
+			"plugins": ["transform-dynamic-import"]
+		}
+	}
 }

@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-</head>
-<body>
-    <noscript>
-        <div class="container">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <h2>Welcome to the <%= htmlWebpackPlugin.options.title %></h2>
-                        <p>You need to <b>enable javascript</b> to use this site</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </noscript>
-    <div id="designguide"></div>
-    <script>window.stopDg=true</script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title><%= htmlWebpackPlugin.options.title %></title>
+	</head>
+	<body>
+		<noscript>
+			<div class="container">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<h2>Welcome to the <%= htmlWebpackPlugin.options.title %></h2>
+							<p>You need to <b>enable javascript</b> to use this site</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</noscript>
+		<div id="designguide"></div>
+		<script>
+			window.stopDg = true;
+		</script>
+	</body>
 </html>

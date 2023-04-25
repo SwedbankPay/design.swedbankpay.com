@@ -1,7 +1,7 @@
 import Home from "./index";
 
 describe("Home: index", () => {
-    it("is defined", () => {
-        expect(Home).toBeDefined();
-    });
+	it("is defined", () => {
+		expect(Home).toBeDefined();
+	});
 });

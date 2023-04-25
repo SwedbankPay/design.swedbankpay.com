@@ -4,153 +4,163 @@
 
 // List keeps list items block level, just removes default browser padding and list-style
 .list {
-    padding-left: 0;
-    list-style: none;
+	padding-left: 0;
+	list-style: none;
 
-    ul,
-    ol {
-        padding-left: 1.5rem;
-        list-style: none;
-    }
+	ul,
+	ol {
+		padding-left: 1.5rem;
+		list-style: none;
+	}
 }
 
 // Inline turns list items into inline-block
 .list-inline {
-    margin-left: (-0.25rem);
+	margin-left: (-0.25rem);
 
-    > li {
-        display: inline-block;
-        padding-left: 0.25rem;
-        padding-right: 0.25rem;
-    }
+	> li {
+		display: inline-block;
+		padding-left: 0.25rem;
+		padding-right: 0.25rem;
+	}
 }
 
 .list-bullet {
-    li {
-        position: relative;
-        padding-left: 1rem;
-        margin-bottom: 0.5rem;
+	li {
+		position: relative;
+		padding-left: 1rem;
+		margin-bottom: 0.5rem;
 
-        &:before {
-            position: absolute;
-            left: 0;
-            content: "\2022";
-            color: @brand-secondary;
-            width: 0.875rem;
-        }
-    }
+		&:before {
+			position: absolute;
+			left: 0;
+			content: "\2022";
+			color: @brand-secondary;
+			width: 0.875rem;
+		}
+	}
 }
 
 .description-list {
-    dt {
-        text-transform: uppercase;
-        font-weight: 300;
-        font-size: 1rem * 0.9;
-        line-height: 1.7rem;
-        margin-top: 1rem;
-    }
+	dt {
+		text-transform: uppercase;
+		font-weight: 300;
+		font-size: 1rem * 0.9;
+		line-height: 1.7rem;
+		margin-top: 1rem;
+	}
 
-    dd {
-        margin-left: 0;
-        line-height: 1.5rem;
-    }
+	dd {
+		margin-left: 0;
+		line-height: 1.5rem;
+	}
 }
 
 .settings-list {
-    list-style: none;
-    padding-left: 0;
+	list-style: none;
+	padding-left: 0;
 
-    li {
-        display: flex;
+	li {
+		display: flex;
 
-        .material-icons {
-            margin-right: 0.5rem;
-        }
-    }
+		.material-icons {
+			margin-right: 0.5rem;
+		}
+	}
 }
 
 .item-list {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding-left: 0;
-    line-height: 1;
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	padding-left: 0;
+	line-height: 1;
 
-    li {
-        display: flex;
-        flex-flow: wrap;
-        padding: 1rem;
-        border-bottom: 1px solid @brand-bg-gray;
+	li {
+		display: flex;
+		flex-flow: wrap;
+		padding: 1rem;
+		border-bottom: 1px solid @brand-bg-gray;
 
-        /* stylelint-disable selector-list-comma-newline-after */
-        h1, h2, h3, h4, h5, h6,
-        .h1, .h2, .h3, .h4, .h5, .h6 {
-            margin: 0;
-        }
-        /* stylelint-enable selector-list-comma-newline-after */
+		/* stylelint-disable selector-list-comma-newline-after */
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		.h1,
+		.h2,
+		.h3,
+		.h4,
+		.h5,
+		.h6 {
+			margin: 0;
+		}
+		/* stylelint-enable selector-list-comma-newline-after */
 
-        > :first-child {
-            flex: 1 1 auto;
-            align-self: center;
-        }
+		> :first-child {
+			flex: 1 1 auto;
+			align-self: center;
+		}
 
-        &:last-child {
-            margin-bottom: 0;
-            border-bottom: 0;
-        }
+		&:last-child {
+			margin-bottom: 0;
+			border-bottom: 0;
+		}
 
-        > footer,
-        .item-list-footer {
-            padding: 0.5rem 0;
-            flex: 1 100%;
-        }
-    }
+		> footer,
+		.item-list-footer {
+			padding: 0.5rem 0;
+			flex: 1 100%;
+		}
+	}
 
-    &.item-list-bordered {
-        li {
-            border: 1px solid @brand-secondary-light-3;
-            border-bottom: 2px solid @brand-secondary-light-3;
-            border-radius: 2px;
-            padding: 1rem 1rem;
-            margin-bottom: 1rem;
-        }
-    }
+	&.item-list-bordered {
+		li {
+			border: 1px solid @brand-secondary-light-3;
+			border-bottom: 2px solid @brand-secondary-light-3;
+			border-radius: 2px;
+			padding: 1rem 1rem;
+			margin-bottom: 1rem;
+		}
+	}
 
-    &.item-list-lg {
-        li {
-            line-height: 1.75rem;
+	&.item-list-lg {
+		li {
+			line-height: 1.75rem;
 
-            > footer,
-            .item-list-footer {
-                padding: 0.5rem 0;
-            }
-        }
-    }
+			> footer,
+			.item-list-footer {
+				padding: 0.5rem 0;
+			}
+		}
+	}
 
-    &.item-list-striped {
-        li {
-            &:nth-child(odd) {
-                background-color: @light-gray;
-            }
-        }
-    }
+	&.item-list-striped {
+		li {
+			&:nth-child(odd) {
+				background-color: @light-gray;
+			}
+		}
+	}
 
-    &.item-list-hover {
-        li {
-            // position: relative;
+	&.item-list-hover {
+		li {
+			// position: relative;
 
-            // &:hover:before {
-            //     content: "";
-            //     top: -1px;
-            //     left: 0;
-            //     bottom: -1px;
-            //     position: absolute;
-            //     width: 6px;
-            //     background-color: @brand-primary;
-            // }
-            &:hover {
-                background-color: @brand-bg-gray;
-            }
-        }
-    }
+			// &:hover:before {
+			//     content: "";
+			//     top: -1px;
+			//     left: 0;
+			//     bottom: -1px;
+			//     position: absolute;
+			//     width: 6px;
+			//     background-color: @brand-primary;
+			// }
+			&:hover {
+				background-color: @brand-bg-gray;
+			}
+		}
+	}
 }

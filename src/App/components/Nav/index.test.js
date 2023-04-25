@@ -8,55 +8,55 @@ import userEvent from "@testing-library/user-event";
 import Nav from "./index";
 
 const navItems = [
-    {
-        name: "Home",
-        icon: "home"
-    },
-    {
-        name: "Transactions",
-        icon: "shopping_cart"
-    },
-    {
-        name: "Notifications",
-        icon: "notification_important"
-    },
-    {
-        name: "Language",
-        icon: "language"
-    },
-    {
-        name: "Account",
-        icon: "account_balance"
-    },
-    {
-        name: "Authentication",
-        icon: "fingerprint"
-    }
+	{
+		name: "Home",
+		icon: "home",
+	},
+	{
+		name: "Transactions",
+		icon: "shopping_cart",
+	},
+	{
+		name: "Notifications",
+		icon: "notification_important",
+	},
+	{
+		name: "Language",
+		icon: "language",
+	},
+	{
+		name: "Account",
+		icon: "account_balance",
+	},
+	{
+		name: "Authentication",
+		icon: "fingerprint",
+	},
 ];
 
 const navItemsTwoLevels = [
-    {
-        name: "Home",
-        icon: "home"
-    },
-    {
-        name: "Transactions",
-        icon: "shopping_cart",
-        subItems: ["Purchase history", "Invoice"]
-    },
-    {
-        name: "Notifications",
-        icon: "notification_important"
-    },
-    {
-        name: "Language",
-        icon: "language"
-    },
-    {
-        name: "Account",
-        icon: "account_balance",
-        subItems: ["Email", "Information", "Other things"]
-    }
+	{
+		name: "Home",
+		icon: "home",
+	},
+	{
+		name: "Transactions",
+		icon: "shopping_cart",
+		subItems: ["Purchase history", "Invoice"],
+	},
+	{
+		name: "Notifications",
+		icon: "notification_important",
+	},
+	{
+		name: "Language",
+		icon: "language",
+	},
+	{
+		name: "Account",
+		icon: "account_balance",
+		subItems: ["Email", "Information", "Other things"],
+	},
 ];
 
 const div = document.createElement("div");
@@ -64,142 +64,156 @@ const div = document.createElement("div");
 document.body.appendChild(div);
 
 describe("Component: Nav -", () => {
-    it("is defined", () => {
-        expect(Nav).toBeDefined();
-    });
+	it("is defined", () => {
+		expect(Nav).toBeDefined();
+	});
 
-    it("Throws an error when proptype for vertsize is wrong", () => {
-        console.error = jest.fn();
+	it("Throws an error when proptype for vertsize is wrong", () => {
+		console.error = jest.fn();
 
-        const componentForSnap = renderer.create(<Nav items={navItems} vertsize="xxxl" />);
+		const componentForSnap = renderer.create(
+			<Nav items={navItems} vertsize="xxxl" />
+		);
 
-        expect(console.error).toHaveBeenCalled();
+		expect(console.error).toHaveBeenCalled();
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-    it("Throws an error when proptype for widesize is wrong", () => {
-        console.error = jest.fn();
+	it("Throws an error when proptype for widesize is wrong", () => {
+		console.error = jest.fn();
 
-        const componentForSnap = renderer.create(<Nav items={navItems} widesize="xxxl" />);
+		const componentForSnap = renderer.create(
+			<Nav items={navItems} widesize="xxxl" />
+		);
 
-        expect(console.error).toHaveBeenCalled();
+		expect(console.error).toHaveBeenCalled();
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-    it("renders", () => {
+	it("renders", () => {
+		const componentForSnap = renderer.create(<Nav items={navItems} />);
 
-        const componentForSnap = renderer.create(<Nav items={navItems} />);
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+	it("renders with two levels", () => {
+		const componentForSnap = renderer.create(<Nav items={navItemsTwoLevels} />);
 
-    it("renders with two levels", () => {
-        const componentForSnap = renderer.create(<Nav items={navItemsTwoLevels} />);
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+	it("renders with an active list if state active matches", () => {
+		render(<Nav items={navItems} />);
 
-    it("renders with an active list if state active matches", () => {
-        render(<Nav items={navItems} />);
+		expect(
+			screen
+				.getAllByRole("link")
+				.filter((elmt) => elmt.classList.contains("active"))
+		).toHaveLength(1);
 
-        expect(screen.getAllByRole("link").filter(elmt => elmt.classList.contains("active"))).toHaveLength(1);
+		const componentForSnap = renderer.create(<Nav items={navItems} />);
 
-        const componentForSnap = renderer.create(<Nav items={navItems} />);
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+	it("does nothing when clicking on an active listitem", () => {
+		render(<Nav items={navItems} />);
 
-    it("does nothing when clicking on an active listitem", () => {
-        render(<Nav items={navItems} />);
+		const renderedNav = screen.getByRole("navigation");
+		const activeAnchor = screen
+			.getAllByRole("link")
+			.filter((elmt) => elmt.classList.contains("active"))[0];
 
-        const renderedNav = screen.getByRole("navigation");
-        const activeAnchor = screen.getAllByRole("link").filter(elmt => elmt.classList.contains("active"))[0];
+		expect(renderedNav).toBeInTheDocument();
+		expect(activeAnchor).toBeInTheDocument();
+		expect(activeAnchor).toHaveClass("active");
 
-        expect(renderedNav).toBeInTheDocument();
-        expect(activeAnchor).toBeInTheDocument();
-        expect(activeAnchor).toHaveClass("active");
+		userEvent.click(activeAnchor);
 
-        userEvent.click(activeAnchor);
+		expect(activeAnchor).toHaveClass("active");
+	});
 
-        expect(activeAnchor).toHaveClass("active");
-    });
+	it.skip("changes active item", () => {
+		render(<Nav items={navItems} />);
 
-    it.skip("changes active item", () => {
-        render(<Nav items={navItems} />);
+		const renderedNav = screen.getByRole("navigation");
 
-        const renderedNav = screen.getByRole("navigation");
+		const inactiveAnchor = screen
+			.getAllByRole("link")
+			.filter(
+				(elmt) =>
+					!elmt.classList.contains("active") &&
+					!elmt.parentElement.classList.contains("active")
+			)[0];
 
-        const inactiveAnchor = screen.getAllByRole("link").filter(elmt => !elmt.classList.contains("active") && !elmt.parentElement.classList.contains("active"))[0];
+		expect(renderedNav).toBeInTheDocument();
+		expect(inactiveAnchor).toBeInTheDocument();
+		expect(inactiveAnchor.childElementCount).toBe(2);
+		expect(inactiveAnchor.parentElement).not.toHaveClass("active");
+		expect(inactiveAnchor).toHaveAttribute("data-level", "2");
 
-        expect(renderedNav).toBeInTheDocument();
-        expect(inactiveAnchor).toBeInTheDocument();
-        expect(inactiveAnchor.childElementCount).toBe(2);
-        expect(inactiveAnchor.parentElement).not.toHaveClass("active");
-        expect(inactiveAnchor).toHaveAttribute("data-level", "2");
+		userEvent.click(inactiveAnchor);
 
-        userEvent.click(inactiveAnchor);
+		expect(inactiveAnchor.parentElement).toHaveClass("active");
+	});
 
-        expect(inactiveAnchor.parentElement).toHaveClass("active");
+	it.skip("sets subitems parent to active aswell as subitem when clicked", () => {
+		render(<Nav items={navItemsTwoLevels} />);
 
-    });
+		const renderedNav = document.querySelector(".nav");
+		const submenu = renderedNav.querySelector(".submenu");
+		const subitemList = submenu.querySelector("li");
+		const subitemAnchor = submenu.querySelector("a");
 
-    it.skip("sets subitems parent to active aswell as subitem when clicked", () => {
-        render(<Nav items={navItemsTwoLevels} />);
+		expect(renderedNav).toBeTruthy();
+		expect(submenu).toBeTruthy();
+		expect(subitemAnchor).toBeTruthy();
+		expect(submenu.classList).not.toContain("submenu-active-parent");
+		expect(subitemList.classList).not.toContain("active");
 
-        const renderedNav = document.querySelector(".nav");
-        const submenu = renderedNav.querySelector(".submenu");
-        const subitemList = submenu.querySelector("li");
-        const subitemAnchor = submenu.querySelector("a");
+		subitemAnchor.click();
 
-        expect(renderedNav).toBeTruthy();
-        expect(submenu).toBeTruthy();
-        expect(subitemAnchor).toBeTruthy();
-        expect(submenu.classList).not.toContain("submenu-active-parent");
-        expect(subitemList.classList).not.toContain("active");
+		expect(submenu.classList).toContain("submenu-active-parent");
+		expect(subitemList.classList).toContain("active");
 
-        subitemAnchor.click();
+		// Not unmounting to keep state for following test [AW]
+	});
 
-        expect(submenu.classList).toContain("submenu-active-parent");
-        expect(subitemList.classList).toContain("active");
+	// NB! Do not put new tests between these two [AW]
 
-        // Not unmounting to keep state for following test [AW]
-    });
+	it.skip("changes active parent and active item when another subitem is clicked", () => {
+		const renderedNav = document.querySelector(".nav");
+		const submenu = renderedNav.querySelector("div:not(.submenu-active-parent");
+		const subitemList = submenu.querySelector("li");
+		const subitemAnchor = submenu.querySelector("a");
 
-    // NB! Do not put new tests between these two [AW]
+		expect(subitemList).toBeTruthy();
+		expect(subitemAnchor).toBeTruthy();
+		expect(submenu.classList).not.toContain("submenu-active-parent");
+		expect(subitemList.classList).not.toContain("active");
 
-    it.skip("changes active parent and active item when another subitem is clicked", () => {
-        const renderedNav = document.querySelector(".nav");
-        const submenu = renderedNav.querySelector("div:not(.submenu-active-parent");
-        const subitemList = submenu.querySelector("li");
-        const subitemAnchor = submenu.querySelector("a");
+		subitemAnchor.click();
 
-        expect(subitemList).toBeTruthy();
-        expect(subitemAnchor).toBeTruthy();
-        expect(submenu.classList).not.toContain("submenu-active-parent");
-        expect(subitemList.classList).not.toContain("active");
+		expect(submenu.classList).toContain("submenu-active-parent");
+		expect(subitemList.classList).toContain("active");
 
-        subitemAnchor.click();
+		// Not unmounting to keep state for following test [AW]
+	});
 
-        expect(submenu.classList).toContain("submenu-active-parent");
-        expect(subitemList.classList).toContain("active");
+	// NB! Do not put new tests between these two [AW]
 
-        // Not unmounting to keep state for following test [AW]
-    });
+	it.skip("removes active parent if top level item is clicked", () => {
+		const renderedNav = document.querySelector(".nav");
+		const anchor = renderedNav.querySelector("a");
 
-    // NB! Do not put new tests between these two [AW]
+		expect(renderedNav).toBeTruthy();
+		expect(anchor).toBeTruthy();
+		expect(anchor.classList).not.toContain("active");
 
-    it.skip("removes active parent if top level item is clicked", () => {
-        const renderedNav = document.querySelector(".nav");
-        const anchor = renderedNav.querySelector("a");
+		anchor.click();
 
-        expect(renderedNav).toBeTruthy();
-        expect(anchor).toBeTruthy();
-        expect(anchor.classList).not.toContain("active");
-
-        anchor.click();
-
-        expect(anchor.classList).toContain("active");
-    });
+		expect(anchor.classList).toContain("active");
+	});
 });

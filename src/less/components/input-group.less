@@ -2,103 +2,106 @@
 @import "./validation.less";
 @import "../global.less";
 
-@input-padding-x:                           0.75rem;
+@input-padding-x: 0.75rem;
 
 .input-group {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    width: 100%;
-    min-height: 2rem;
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	width: 100%;
+	min-height: 2rem;
 
-    > .btn {
-        border-radius: 0;
+	> .btn {
+		border-radius: 0;
 
-        &:first-child {
-            border-radius: var(--border-radius, 8px) 0 0 var(--border-radius, 8px);
-        }
+		&:first-child {
+			border-radius: var(--border-radius, 8px) 0 0 var(--border-radius, 8px);
+		}
 
-        &:last-child {
-            border-radius: 0 var(--border-radius, 8px) var(--border-radius, 8px) 0;
-        }
-    }
+		&:last-child {
+			border-radius: 0 var(--border-radius, 8px) var(--border-radius, 8px) 0;
+		}
+	}
 
-    > .form-control {
-        position: relative;
-        flex: 1 1 auto;
-        margin-bottom: 0;
+	> .form-control {
+		position: relative;
+		flex: 1 1 auto;
+		margin-bottom: 0;
 
-        /* Add width 1% and flex-basis auto to ensure that button will not wrap out
+		/* Add width 1% and flex-basis auto to ensure that button will not wrap out
          * the column. Applies to IE Edge+ and Firefox. Chrome does not require this. */
-        width: 1%;
+		width: 1%;
 
-        + .form-control {
-            margin-left: -1px;
-        }
-    }
+		+ .form-control {
+			margin-left: -1px;
+		}
+	}
 
-    &:focus-within {
-        .input-group-addon {
-            border-width: var(--border-width-focus, 2px);
-            border-color: var(--input-border-focus-color);
-            padding: calc(var(--input-padding-y, 12px) - var(border-width-diff-focus, 1px)) calc(var(--input-padding-x, 12px) - var(border-width-diff-focus, 1px));
+	&:focus-within {
+		.input-group-addon {
+			border-width: var(--border-width-focus, 2px);
+			border-color: var(--input-border-focus-color);
+			padding: calc(
+					var(--input-padding-y, 12px) - var(border-width-diff-focus, 1px)
+				)
+				calc(var(--input-padding-x, 12px) - var(border-width-diff-focus, 1px));
 
-            &:not(.postfix) {
-                padding-right: var(--input-padding-x, 16px);
-            }
+			&:not(.postfix) {
+				padding-right: var(--input-padding-x, 16px);
+			}
 
-            &.postfix {
-                border-right-width: var(--border-width-focus, 2px);
-                padding-left: var(--input-padding-x);
-                border-color: var(--input-border-focus-color);
-            }
-        }
-    }
+			&.postfix {
+				border-right-width: var(--border-width-focus, 2px);
+				padding-left: var(--input-padding-x);
+				border-color: var(--input-border-focus-color);
+			}
+		}
+	}
 
-    .input-group-addon {
-        display: flex;
-        align-items: center;
-        padding: var(--input-padding-y, 12px) var(--input-padding-x, 16px);
-        margin-bottom: 0;
-        font-size: var(--base-font-size);
-        font-weight: var(--font-weight-normal);
-        line-height: @input-line-height;
-        color: @input-addon-color;
-        background-color: @white;
-        text-align: center;
-        white-space: nowrap;
-        border: var(--border-width, 1px) solid var(--input-border-color);
-        border-radius: var(--border-radius, 8px) 0 0 var(--border-radius, 8px);
-        border-top-right-radius: 0;
-        border-right: none;
+	.input-group-addon {
+		display: flex;
+		align-items: center;
+		padding: var(--input-padding-y, 12px) var(--input-padding-x, 16px);
+		margin-bottom: 0;
+		font-size: var(--base-font-size);
+		font-weight: var(--font-weight-normal);
+		line-height: @input-line-height;
+		color: @input-addon-color;
+		background-color: @white;
+		text-align: center;
+		white-space: nowrap;
+		border: var(--border-width, 1px) solid var(--input-border-color);
+		border-radius: var(--border-radius, 8px) 0 0 var(--border-radius, 8px);
+		border-top-right-radius: 0;
+		border-right: none;
 
-        + input {
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-            border-left: none;
-            padding-left: var(--input-padding-x, 16px);
-        }
+		+ input {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			border-left: none;
+			padding-left: var(--input-padding-x, 16px);
+		}
 
-        input[type="radio"],
-        input[type="checkbox"] {
-            margin-top: 0;
-        }
+		input[type="radio"],
+		input[type="checkbox"] {
+			margin-top: 0;
+		}
 
-        &.postfix {
-            border-left: transparent;
-            border-right-color: var(--input-border-color);
-            border-right-width: var(--border-width, 1px);
-            border-right-style: solid;
-            border-radius: 0 var(--border-radius, 8px) var(--border-radius, 8px) 0;
-            pointer-events: none;
-        }
-    }
+		&.postfix {
+			border-left: transparent;
+			border-right-color: var(--input-border-color);
+			border-right-width: var(--border-width, 1px);
+			border-right-style: solid;
+			border-radius: 0 var(--border-radius, 8px) var(--border-radius, 8px) 0;
+			pointer-events: none;
+		}
+	}
 }
 
 // Focus for file, radio, and checkbox
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-    .tab-focus();
+	.tab-focus();
 }

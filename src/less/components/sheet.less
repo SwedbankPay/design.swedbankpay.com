@@ -1,266 +1,266 @@
 @import "../global.less";
 
-@sheet-backdrop-bg:                         fade(@black, 50%);
-@sheet-section-bg:                          @white;
+@sheet-backdrop-bg: fade(@black, 50%);
+@sheet-section-bg: @white;
 
-@sheet-width-xs:                            95%;
-@sheet-width:                               580px;
+@sheet-width-xs: 95%;
+@sheet-width: 580px;
 
 .sheet {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: @sheet-z-index;
-    background: transparent;
-    display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: @sheet-z-index;
+	background: transparent;
+	display: none;
 
-    &.sheet-open {
-        animation: fade-in-sheet 0.5s forwards;
+	&.sheet-open {
+		animation: fade-in-sheet 0.5s forwards;
 
-        > section {
-            right: 0;
-            animation: slide-in-sheet 0.5s ease forwards;
-        }
-    }
+		> section {
+			right: 0;
+			animation: slide-in-sheet 0.5s ease forwards;
+		}
+	}
 
-    &.sheet-closing {
-        animation: fade-out-sheet 0.3s forwards;
+	&.sheet-closing {
+		animation: fade-out-sheet 0.3s forwards;
 
-        > section {
-            animation: slide-out-sheet 0.3s ease alternate;
-        }
-    }
+		> section {
+			animation: slide-out-sheet 0.3s ease alternate;
+		}
+	}
 
-    > section {
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        right: -@sheet-width-xs;
-        width: @sheet-width-xs;
-        height: 100%;
-        background: @sheet-section-bg;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
-        transform: translateX(100%);
+	> section {
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		right: -@sheet-width-xs;
+		width: @sheet-width-xs;
+		height: 100%;
+		background: @sheet-section-bg;
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
+		transform: translateX(100%);
 
-        .sheet-header {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            position: sticky;
-            top: 0;
-            background-color: @white;
-            padding: 3rem 3rem 2rem;
-            z-index: 1000;
+		.sheet-header {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			position: sticky;
+			top: 0;
+			background-color: @white;
+			padding: 3rem 3rem 2rem;
+			z-index: 1000;
 
-            .sheet-close:hover {
-                background-color: @brand-bg-gray;
-                cursor: pointer;
-            }
+			.sheet-close:hover {
+				background-color: @brand-bg-gray;
+				cursor: pointer;
+			}
 
-            .sheet-close:focus {
-                border: none;
-                border-radius: 0.125rem;
-                box-shadow: 0 0 0 2px @black;
-                outline: none;
-            }
-        }
+			.sheet-close:focus {
+				border: none;
+				border-radius: 0.125rem;
+				box-shadow: 0 0 0 2px @black;
+				outline: none;
+			}
+		}
 
-        .sheet-content {
-            padding: 0 3rem 3rem;
+		.sheet-content {
+			padding: 0 3rem 3rem;
 
-            &.has-footer {
-                padding-bottom: 0;
-            }
-        }
+			&.has-footer {
+				padding-bottom: 0;
+			}
+		}
 
-        .sheet-footer {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            position: sticky;
-            position: -webkit-sticky;
-            bottom: 0;
-            margin-top: auto;
-            padding: 2rem 3rem;
-            background-color: @white;
+		.sheet-footer {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			position: sticky;
+			position: -webkit-sticky;
+			bottom: 0;
+			margin-top: auto;
+			padding: 2rem 3rem;
+			background-color: @white;
 
-            button {
-                width: 14.625rem;
-                justify-content: center;
-            }
-        }
+			button {
+				width: 14.625rem;
+				justify-content: center;
+			}
+		}
 
-        @media screen and (min-width: @screen-sm-min) {
-            right: -@sheet-width;
-            width: @sheet-width;
-        }
-    }
+		@media screen and (min-width: @screen-sm-min) {
+			right: -@sheet-width;
+			width: @sheet-width;
+		}
+	}
 
-    @media screen and (min-width: @screen-xs-min) and  (max-width: @screen-sm-max) {
-        padding-top: 2rem;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: @sheet-z-index;
-        background: transparent;
-        display: none;
+	@media screen and (min-width: @screen-xs-min) and (max-width: @screen-sm-max) {
+		padding-top: 2rem;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: @sheet-z-index;
+		background: transparent;
+		display: none;
 
-        @keyframes slide-up-sheet {
-            to {
-                top: 0;
-            }
-        }
+		@keyframes slide-up-sheet {
+			to {
+				top: 0;
+			}
+		}
 
-        @keyframes slide-down-sheet {
-            from {
-                top: 2rem;
-            }
+		@keyframes slide-down-sheet {
+			from {
+				top: 2rem;
+			}
 
-            to {
-                top: 95%;
-            }
-        }
+			to {
+				top: 95%;
+			}
+		}
 
-        &.sheet-open {
-            > section {
-                animation: slide-up-sheet 0.5s ease forwards;
-                position: relative;
-                width: 100%;
-                right: 100%;
-                top: 100%;
+		&.sheet-open {
+			> section {
+				animation: slide-up-sheet 0.5s ease forwards;
+				position: relative;
+				width: 100%;
+				right: 100%;
+				top: 100%;
 
-                .sheet-header {
-                    padding-left: 1.5rem;
-                    padding-right: 1.5rem;
-                }
+				.sheet-header {
+					padding-left: 1.5rem;
+					padding-right: 1.5rem;
+				}
 
-                .sheet-content {
-                    padding-left: 1.5rem;
-                    padding-right: 1.5rem;
-                }
+				.sheet-content {
+					padding-left: 1.5rem;
+					padding-right: 1.5rem;
+				}
 
-                .sheet-footer {
-                    padding-left: 1.5rem;
-                    padding-right: 1.5rem;
-                }
-            }
-        }
+				.sheet-footer {
+					padding-left: 1.5rem;
+					padding-right: 1.5rem;
+				}
+			}
+		}
 
-        &.sheet-closing {
-            animation: fade-out-sheet 1s forwards;
-            padding-top: 2rem;
+		&.sheet-closing {
+			animation: fade-out-sheet 1s forwards;
+			padding-top: 2rem;
 
-            > section {
-                animation: slide-down-sheet 0.5s ease forwards;
-                width: 100%;
-                right: 100%;
+			> section {
+				animation: slide-down-sheet 0.5s ease forwards;
+				width: 100%;
+				right: 100%;
 
-                .sheet-header {
-                    padding-left: 1.5rem;
-                    padding-right: 1.5rem;
-                }
+				.sheet-header {
+					padding-left: 1.5rem;
+					padding-right: 1.5rem;
+				}
 
-                .sheet-content {
-                    padding-left: 1.5rem;
-                    padding-right: 1.5rem;
-                }
+				.sheet-content {
+					padding-left: 1.5rem;
+					padding-right: 1.5rem;
+				}
 
-                .sheet-footer {
-                    position: relative;
-                    padding-left: 1.5rem;
-                    padding-right: 1.5rem;
-                }
-            }
-        }
-    }
+				.sheet-footer {
+					position: relative;
+					padding-left: 1.5rem;
+					padding-right: 1.5rem;
+				}
+			}
+		}
+	}
 }
 
 body.sheet-open {
-    overflow: hidden;
+	overflow: hidden;
 
-    .sheet {
-        > section {
-            overflow-x: hidden;
-            overflow-y: auto;
-        }
-    }
+	.sheet {
+		> section {
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+	}
 
-    .flatpickr-calendar {
-        z-index: @sheet-z-index;
-    }
+	.flatpickr-calendar {
+		z-index: @sheet-z-index;
+	}
 }
 
 // Keyframe animations
 
 @keyframes slide-in-sheet {
-    100% {
-        transform: translateX(0%);
-    }
+	100% {
+		transform: translateX(0%);
+	}
 }
 
 @keyframes slide-out-sheet {
-    0% {
-        transform: translateX(-100%);
-    }
+	0% {
+		transform: translateX(-100%);
+	}
 
-    100% {
-        transform: translateX(0%);
-    }
+	100% {
+		transform: translateX(0%);
+	}
 }
 
 @keyframes fade-in-sheet {
-    0% {
-        background: transparent;
-    }
+	0% {
+		background: transparent;
+	}
 
-    100% {
-        background: @sheet-backdrop-bg;
-    }
+	100% {
+		background: @sheet-backdrop-bg;
+	}
 }
 
 @keyframes fade-out-sheet {
-    0% {
-        background: @sheet-backdrop-bg;
-    }
+	0% {
+		background: @sheet-backdrop-bg;
+	}
 
-    100% {
-        background: transparent;
-    }
+	100% {
+		background: transparent;
+	}
 }
 
 @media (prefers-reduced-motion) {
-    .sheet {
-        &.sheet-open {
-            animation: fade-in-sheet 0s forwards;
+	.sheet {
+		&.sheet-open {
+			animation: fade-in-sheet 0s forwards;
 
-            > section {
-                animation: slide-in-sheet 0s ease forwards;
-            }
-        }
+			> section {
+				animation: slide-in-sheet 0s ease forwards;
+			}
+		}
 
-        &.sheet-closing {
-            animation: fade-out-sheet 0s forwards;
+		&.sheet-closing {
+			animation: fade-out-sheet 0s forwards;
 
-            > section {
-                animation: slide-out-sheet 0s ease alternate;
-            }
-        }
-    }
+			> section {
+				animation: slide-out-sheet 0s ease alternate;
+			}
+		}
+	}
 }
 
 @media (forced-colors: active) {
-    .sheet {
-        > section {
-            border: 10px solid;
+	.sheet {
+		> section {
+			border: 10px solid;
 
-            .sheet-header {
-                .sheet-close:focus {
-                    outline: 4px solid transparent;
-                }
-            }
-        }
-    }
+			.sheet-header {
+				.sheet-close:focus {
+					outline: 4px solid transparent;
+				}
+			}
+		}
+	}
 }

@@ -1,176 +1,190 @@
 const SELECTORS = {
-    VALIDATE: "[data-validate]",
-    FIELDS: "input, select, textarea",
-    VALIDATIONCONTAINER: ".form-group",
-    SUBMITBUTTON: "[data-disable-invalid]"
+	VALIDATE: "[data-validate]",
+	FIELDS: "input, select, textarea",
+	VALIDATIONCONTAINER: ".form-group",
+	SUBMITBUTTON: "[data-disable-invalid]",
 };
-const EMAILREGEX = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const EMAILREGEX =
+	/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-const validateField = field => {
-    if (field.type === "email" && field.pattern && field.value.match(field.pattern)) {
-        return true;
-    } else if (field.type === "email" && field.value.match(EMAILREGEX)) {
-        return true;
-    } else if (field.type === "email") {
-        return false;
-    }
+const validateField = (field) => {
+	if (
+		field.type === "email" &&
+		field.pattern &&
+		field.value.match(field.pattern)
+	) {
+		return true;
+	} else if (field.type === "email" && field.value.match(EMAILREGEX)) {
+		return true;
+	} else if (field.type === "email") {
+		return false;
+	}
 
-    return field.checkValidity();
-};
-
-const validateForm = form => {
-    if (form.tagName === "FORM") {
-        const fieldsToValidate = form.querySelectorAll(SELECTORS.FIELDS);
-        let formValid = true;
-
-        fieldsToValidate.forEach(field => {
-            const state = _checkFieldState(field);
-
-            if (state === "ERROR") {
-                formValid = false;
-            }
-        });
-
-        return formValid;
-    } else {
-        try {
-            throw new Error("dg.validation.validateForm: Argument not HTMLElement with tagName form.");
-        } catch (e) {
-            console.error(`${e.name} ${e.message}`);
-
-            return false;
-        }
-    }
+	return field.checkValidity();
 };
 
-const _checkFieldState = field => {
-    if (!field.required && !field.value) {
-        return "NEUTRAL";
-    }
+const validateForm = (form) => {
+	if (form.tagName === "FORM") {
+		const fieldsToValidate = form.querySelectorAll(SELECTORS.FIELDS);
+		let formValid = true;
 
-    return validateField(field) ? "SUCCESS" : "ERROR";
+		fieldsToValidate.forEach((field) => {
+			const state = _checkFieldState(field);
+
+			if (state === "ERROR") {
+				formValid = false;
+			}
+		});
+
+		return formValid;
+	} else {
+		try {
+			throw new Error(
+				"dg.validation.validateForm: Argument not HTMLElement with tagName form."
+			);
+		} catch (e) {
+			console.error(`${e.name} ${e.message}`);
+
+			return false;
+		}
+	}
 };
 
-const _addFieldState = field => {
-    const validationContainer = field.closest(SELECTORS.VALIDATIONCONTAINER);
-    const state = _checkFieldState(field);
+const _checkFieldState = (field) => {
+	if (!field.required && !field.value) {
+		return "NEUTRAL";
+	}
 
-    switch (state) {
-        case "SUCCESS":
-            validationContainer.classList.add("has-success");
-            validationContainer.classList.remove("has-error");
-
-            break;
-        case "ERROR":
-            validationContainer.classList.add("has-error");
-            validationContainer.classList.remove("has-success");
-
-            break;
-        default:
-            validationContainer.classList.remove("has-error");
-            validationContainer.classList.remove("has-success");
-    }
-
-    return state;
+	return validateField(field) ? "SUCCESS" : "ERROR";
 };
 
-const _addFieldValidation = field => {
-    const validationContainer = field.closest(SELECTORS.VALIDATIONCONTAINER);
-    const reqLabel = validationContainer.querySelector("label");
+const _addFieldState = (field) => {
+	const validationContainer = field.closest(SELECTORS.VALIDATIONCONTAINER);
+	const state = _checkFieldState(field);
 
-    if (field.required && reqLabel) {
-        const asterisk = document.createElement("span");
+	switch (state) {
+		case "SUCCESS":
+			validationContainer.classList.add("has-success");
+			validationContainer.classList.remove("has-error");
 
-        asterisk.classList.add("required-asterisk");
-        asterisk.innerHTML = "*";
-        reqLabel.appendChild(asterisk);
-    }
+			break;
+		case "ERROR":
+			validationContainer.classList.add("has-error");
+			validationContainer.classList.remove("has-success");
 
-    field.addEventListener("input", () => {
-        if (validationContainer.classList.contains("has-success") || validationContainer.classList.contains("has-error")) {
-            _addFieldState(field);
-        }
-    });
+			break;
+		default:
+			validationContainer.classList.remove("has-error");
+			validationContainer.classList.remove("has-success");
+	}
 
-    field.addEventListener("blur", () => {
-        _addFieldState(field);
-    });
+	return state;
 };
 
-const _addFormValidation = form => {
-    const fields = form.querySelectorAll(SELECTORS.FIELDS);
-    const submitBtn = form.querySelector(SELECTORS.SUBMITBUTTON);
+const _addFieldValidation = (field) => {
+	const validationContainer = field.closest(SELECTORS.VALIDATIONCONTAINER);
+	const reqLabel = validationContainer.querySelector("label");
 
-    if (submitBtn && !validateForm(form)) {
-        submitBtn.disabled = true;
-    }
+	if (field.required && reqLabel) {
+		const asterisk = document.createElement("span");
 
-    fields.forEach(field => _addFieldValidation(field));
+		asterisk.classList.add("required-asterisk");
+		asterisk.innerHTML = "*";
+		reqLabel.appendChild(asterisk);
+	}
 
-    if (submitBtn) {
-        form.addEventListener("input", () => {
-            if (validateForm(form)) {
-                submitBtn.disabled = false;
-            } else {
-                submitBtn.disabled = true;
-            }
-        });
-    }
+	field.addEventListener("input", () => {
+		if (
+			validationContainer.classList.contains("has-success") ||
+			validationContainer.classList.contains("has-error")
+		) {
+			_addFieldState(field);
+		}
+	});
 
-    form.addEventListener("submit", e => {
-        const formFields = form.querySelectorAll(SELECTORS.FIELDS);
-        let formValid = true;
-
-        formFields.forEach(field => {
-            _addFieldState(field) === "ERROR" ? formValid = false : null;
-        });
-
-        if (!formValid) {
-            e.preventDefault();
-        }
-    });
+	field.addEventListener("blur", () => {
+		_addFieldState(field);
+	});
 };
 
-const _addValidation = element => {
-    const { tagName } = element;
+const _addFormValidation = (form) => {
+	const fields = form.querySelectorAll(SELECTORS.FIELDS);
+	const submitBtn = form.querySelector(SELECTORS.SUBMITBUTTON);
 
-    if (tagName === "FORM") {
-        _addFormValidation(element);
-    } else if (tagName === "INPUT" || tagName === "TEXTAREA" || tagName === "SELECT") {
-        _addFieldValidation(element);
-    }
+	if (submitBtn && !validateForm(form)) {
+		submitBtn.disabled = true;
+	}
 
-    return { container: element };
+	fields.forEach((field) => _addFieldValidation(field));
+
+	if (submitBtn) {
+		form.addEventListener("input", () => {
+			if (validateForm(form)) {
+				submitBtn.disabled = false;
+			} else {
+				submitBtn.disabled = true;
+			}
+		});
+	}
+
+	form.addEventListener("submit", (e) => {
+		const formFields = form.querySelectorAll(SELECTORS.FIELDS);
+		let formValid = true;
+
+		formFields.forEach((field) => {
+			_addFieldState(field) === "ERROR" ? (formValid = false) : null;
+		});
+
+		if (!formValid) {
+			e.preventDefault();
+		}
+	});
 };
 
-const init = id => {
-    if (id) {
-        const element = document.getElementById(id);
+const _addValidation = (element) => {
+	const { tagName } = element;
 
-        if (!element) {
-            console.warn(`No validation with id ${id} found`);
+	if (tagName === "FORM") {
+		_addFormValidation(element);
+	} else if (
+		tagName === "INPUT" ||
+		tagName === "TEXTAREA" ||
+		tagName === "SELECT"
+	) {
+		_addFieldValidation(element);
+	}
 
-            return null;
-        }
+	return { container: element };
+};
 
-        return _addValidation(element);
-    } else {
-        const elements = document.querySelectorAll(SELECTORS.VALIDATE);
+const init = (id) => {
+	if (id) {
+		const element = document.getElementById(id);
 
-        if (!elements.length) {
-            console.warn("No forms with validation found");
+		if (!element) {
+			console.warn(`No validation with id ${id} found`);
 
-            return null;
-        }
+			return null;
+		}
 
-        return [...elements].map(element => _addValidation(element));
-    }
+		return _addValidation(element);
+	} else {
+		const elements = document.querySelectorAll(SELECTORS.VALIDATE);
+
+		if (!elements.length) {
+			console.warn("No forms with validation found");
+
+			return null;
+		}
+
+		return [...elements].map((element) => _addValidation(element));
+	}
 };
 
 export default {
-    init,
-    validateField,
-    validateForm
+	init,
+	validateField,
+	validateForm,
 };
 
 // TODO: SET UP TEMP FORM VALIDATION IN DOCUMENTATION

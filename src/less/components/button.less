@@ -1,287 +1,287 @@
 @import url("../global.less");
 
 .btn {
-    display: inline-flex;
-    align-items: center;
-    position: relative;
-    font-weight: var(--font-weight-normal);
-    font-family: var(--brand-headline);
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    touch-action: manipulation;
-    cursor: pointer;
-    line-height: 23.72px;
-    border: 1px solid transparent;
-    white-space: nowrap;
-    user-select: none;
-    height: 60px;
-    border-radius: var(--border-radius);
-    font-size: 18px;
-    padding: 12px 16px;
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+	font-weight: var(--font-weight-normal);
+	font-family: var(--brand-headline);
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	line-height: 23.72px;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	user-select: none;
+	height: 60px;
+	border-radius: var(--border-radius);
+	font-size: 18px;
+	padding: 12px 16px;
 
-    &.btn-xl {
-        height: 72px;
-        font-size: 20px;
-        line-height: 24px;
-        padding: 24px;
-    }
+	&.btn-xl {
+		height: 72px;
+		font-size: 20px;
+		line-height: 24px;
+		padding: 24px;
+	}
 
-    &.btn-lg {
-        height: 60px;
-        font-size: 18px;
-        line-height: 23.72px;
-        padding: 12px 16px;
+	&.btn-lg {
+		height: 60px;
+		font-size: 18px;
+		line-height: 23.72px;
+		padding: 12px 16px;
 
-        &.btn-icon {
-            i {
-                font-size: 24px;
-            }
-        }
-    }
+		&.btn-icon {
+			i {
+				font-size: 24px;
+			}
+		}
+	}
 
-    &.btn-sm {
-        height: 48px;
-        font-size: 14px;
-        line-height: 16px;
-        padding: 16px;
+	&.btn-sm {
+		height: 48px;
+		font-size: 14px;
+		line-height: 16px;
+		padding: 16px;
 
-        &.btn-icon {
-            i {
-                font-size: 20px;
-            }
-        }
-    }
+		&.btn-icon {
+			i {
+				font-size: 20px;
+			}
+		}
+	}
 
-    &.btn-xs {
-        height: 38px;
-        font-size: 14px;
-        line-height: 16px;
-        padding: 12px;
+	&.btn-xs {
+		height: 38px;
+		font-size: 14px;
+		line-height: 16px;
+		padding: 12px;
 
-        &.btn-icon {
-            border-radius: 6px;
-            aspect-ratio: 1;
-            display: inline-grid;
-            place-content: center;
-            place-items: center;
+		&.btn-icon {
+			border-radius: 6px;
+			aspect-ratio: 1;
+			display: inline-grid;
+			place-content: center;
+			place-items: center;
 
-            i {
-                font-size: 18px;
-            }
-        }
-    }
+			i {
+				font-size: 18px;
+			}
+		}
+	}
 
-    &.btn-primary {
-        background-color: var(--btn-primary-color);
-        color: var(--btn-primary-text-color);
+	&.btn-primary {
+		background-color: var(--btn-primary-color);
+		color: var(--btn-primary-text-color);
 
-        &:not(.loading, [disabled], .disabled):hover {
-            background-color: var(--btn-primary-hover);
-        }
+		&:not(.loading, [disabled], .disabled):hover {
+			background-color: var(--btn-primary-hover);
+		}
 
-        &:not(.loading, [disabled], .disabled):active {
-            outline: 3px solid var(--btn-active-color);
-            background-color: var(--btn-primary-color);
-        }
+		&:not(.loading, [disabled], .disabled):active {
+			outline: 3px solid var(--btn-active-color);
+			background-color: var(--btn-primary-color);
+		}
 
-        &.btn-bank-id {
-            display: flex;
-            justify-content: center;
+		&.btn-bank-id {
+			display: flex;
+			justify-content: center;
 
-            i.bank-id {
-                height: 1.5rem;
-                width: 1.5rem;
-                display: inline-flex;
-                background-image: none;
-                margin-left: 0.5rem;
-                background-color: var(--btn-primary-text-color);
+			i.bank-id {
+				height: 1.5rem;
+				width: 1.5rem;
+				display: inline-flex;
+				background-image: none;
+				margin-left: 0.5rem;
+				background-color: var(--btn-primary-text-color);
 
-                &-no,
-                &.no {
-                    mask-image: url("../../icons/bank-id/bankid_no.svg");
-                }
+				&-no,
+				&.no {
+					mask-image: url("../../icons/bank-id/bankid_no.svg");
+				}
 
-                &-se,
-                &.se {
-                    mask-image: url("../../icons/bank-id/bankid_se.svg");
-                }
-            }
-        }
-    }
+				&-se,
+				&.se {
+					mask-image: url("../../icons/bank-id/bankid_se.svg");
+				}
+			}
+		}
+	}
 
-    &.btn-secondary,
-    &.btn-icon {
-        background-color: var(--btn-secondary-color);
-        color: var(--btn-secondary-text-color);
-        border: 1px solid var(--btn-secondary-border-color);
+	&.btn-secondary,
+	&.btn-icon {
+		background-color: var(--btn-secondary-color);
+		color: var(--btn-secondary-text-color);
+		border: 1px solid var(--btn-secondary-border-color);
 
-        &:not(.loading, [disabled], .disabled):hover {
-            box-shadow: inset 0 0 0 3px var(--btn-secondary-hover);
-            border-color: var(--btn-secondary-hover);
-        }
+		&:not(.loading, [disabled], .disabled):hover {
+			box-shadow: inset 0 0 0 3px var(--btn-secondary-hover);
+			border-color: var(--btn-secondary-hover);
+		}
 
-        &:not(.loading, [disabled], .disabled):active {
-            box-shadow: inset 0 0 0 3px var(--btn-active-color);
-            border-color: var(--btn-active-color);
-        }
-    }
+		&:not(.loading, [disabled], .disabled):active {
+			box-shadow: inset 0 0 0 3px var(--btn-active-color);
+			border-color: var(--btn-active-color);
+		}
+	}
 
-    &.btn-tertiary {
-        background-color: var(--btn-tertiary-color);
-        color: var(--btn-tertiary-text-color);
+	&.btn-tertiary {
+		background-color: var(--btn-tertiary-color);
+		color: var(--btn-tertiary-text-color);
 
-        &:not(.loading, [disabled], .disabled):hover {
-            background-color: var(--btn-tertiary-hover);
-        }
+		&:not(.loading, [disabled], .disabled):hover {
+			background-color: var(--btn-tertiary-hover);
+		}
 
-        &:not(.loading, [disabled], .disabled):active {
-            box-shadow: inset 0 0 0 3px var(--btn-active-color);
-            border-color: var(--btn-active-color);
-        }
-    }
+		&:not(.loading, [disabled], .disabled):active {
+			box-shadow: inset 0 0 0 3px var(--btn-active-color);
+			border-color: var(--btn-active-color);
+		}
+	}
 
-    &.disabled:not(.loading),
-    &[disabled]:not(.loading),
-    fieldset[disabled] & {
-        &,
-        &:hover,
-        &:focus,
-        &.focus,
-        &[active],
-        &:active,
-        &.active {
-            color: var(--btn-disabled-text);
-            outline: none;
-            cursor: not-allowed;
-            box-shadow: none;
+	&.disabled:not(.loading),
+	&[disabled]:not(.loading),
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&[active],
+		&:active,
+		&.active {
+			color: var(--btn-disabled-text);
+			outline: none;
+			cursor: not-allowed;
+			box-shadow: none;
 
-            &.btn-secondary {
-                border-color: var(--btn-disabled-text);
-            }
+			&.btn-secondary {
+				border-color: var(--btn-disabled-text);
+			}
 
-            &.btn-primary,
-            &.btn-tertiary {
-                background-color: var(--btn-bg-disabled);
-            }
+			&.btn-primary,
+			&.btn-tertiary {
+				background-color: var(--btn-bg-disabled);
+			}
 
-            &.btn-bank-id {
-                i.bank-id {
-                    background-color: var(--btn-disabled-text);
-                }
-            }
-        }
-    }
+			&.btn-bank-id {
+				i.bank-id {
+					background-color: var(--btn-disabled-text);
+				}
+			}
+		}
+	}
 
-    &[disabled],
-    &.disabled {
-        cursor: not-allowed;
-    }
+	&[disabled],
+	&.disabled {
+		cursor: not-allowed;
+	}
 
-    .material-icons,
-    .material-icons-outlined {
-        font-size: 1.25rem;
-        position: relative;
-        display: inline-block;
-        line-height: 1;
+	.material-icons,
+	.material-icons-outlined {
+		font-size: 1.25rem;
+		position: relative;
+		display: inline-block;
+		line-height: 1;
 
-        &:not(:last-child) {
-            margin-right: 0.5rem;
-        }
-    }
+		&:not(:last-child) {
+			margin-right: 0.5rem;
+		}
+	}
 
-    &.loading {
-        &:after {
-            content: "";
-            border-radius: 50%;
-            margin-left: 0.5rem;
-            border: 0.15rem solid;
-            width: 1rem;
-            height: 1rem;
-            animation: loader-spin 0.8s linear infinite;
-        }
+	&.loading {
+		&:after {
+			content: "";
+			border-radius: 50%;
+			margin-left: 0.5rem;
+			border: 0.15rem solid;
+			width: 1rem;
+			height: 1rem;
+			animation: loader-spin 0.8s linear infinite;
+		}
 
-        &.btn-primary {
-            &:after {
-                border-color: var(--btn-primary-hover);
-                border-left-color: var(--btn-primary-text-color);
-            }
-        }
+		&.btn-primary {
+			&:after {
+				border-color: var(--btn-primary-hover);
+				border-left-color: var(--btn-primary-text-color);
+			}
+		}
 
-        &.btn-secondary {
-            &:after {
-                border-color: var(--gray);
-                border-left-color: var(--btn-secondary-text-color);
-            }
-        }
+		&.btn-secondary {
+			&:after {
+				border-color: var(--gray);
+				border-left-color: var(--btn-secondary-text-color);
+			}
+		}
 
-        &.btn-tertiary {
-            &:after {
-                border-color: var(--btn-tertiary-hover);
-                border-left-color: var(--btn-secondary-text-color);
-            }
-        }
+		&.btn-tertiary {
+			&:after {
+				border-color: var(--btn-tertiary-hover);
+				border-left-color: var(--btn-secondary-text-color);
+			}
+		}
 
-        &.btn-sm,
-        &.btn-xs {
-            &:after {
-                width: 0.75rem;
-                height: $width;
-            }
-        }
+		&.btn-sm,
+		&.btn-xs {
+			&:after {
+				width: 0.75rem;
+				height: $width;
+			}
+		}
 
-        &.btn-bank-id {
-            i.bank-id {
-                display: none;
-            }
-        }
-    }
+		&.btn-bank-id {
+			i.bank-id {
+				display: none;
+			}
+		}
+	}
 
-    &.btn-block {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
+	&.btn-block {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
 
-    /* Vertically space out multiple block buttons */
-    &.btn-block + .btn-block {
-        margin-top: @base-margin-sm;
-    }
+	/* Vertically space out multiple block buttons */
+	&.btn-block + .btn-block {
+		margin-top: @base-margin-sm;
+	}
 
-    /* Specificity overrides */
-    &input[type="submit"],
-    &input[type="reset"],
-    &input[type="button"] {
-        &.btn-block {
-            width: 100%;
-        }
-    }
+	/* Specificity overrides */
+	&input[type="submit"],
+	&input[type="reset"],
+	&input[type="button"] {
+		&.btn-block {
+			width: 100%;
+		}
+	}
 }
 
 .button-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
 }
 
 @keyframes loader-spin {
-    0% {
-        transform: rotate(0deg);
-    }
+	0% {
+		transform: rotate(0deg);
+	}
 
-    100% {
-        transform: rotate(360deg);
-    }
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 @media (forced-colors: active) {
-    .btn {
-        border: 3px solid;
+	.btn {
+		border: 3px solid;
 
-        &:focus,
-        &.focus {
-            outline: 2px solid;
-        }
-    }
+		&:focus,
+		&.focus {
+			outline: 2px solid;
+		}
+	}
 }

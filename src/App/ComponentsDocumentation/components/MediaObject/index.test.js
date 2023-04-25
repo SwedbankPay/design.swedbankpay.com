@@ -4,49 +4,49 @@ import renderer from "react-test-renderer";
 import MediaObject, { Overview, Sizes, MediaPosition } from "./index";
 
 describe("Documentation: MediaObject", () => {
-    it("is defined", () => {
-        expect(MediaObject).toBeDefined();
-    });
+	it("is defined", () => {
+		expect(MediaObject).toBeDefined();
+	});
 
-    it("renders", () => {
-        const wrapper = renderer.create(<MediaObject />);
+	it("renders", () => {
+		const wrapper = renderer.create(<MediaObject />);
 
-        expect(wrapper.toJSON()).toMatchSnapshot();
-    });
+		expect(wrapper.toJSON()).toMatchSnapshot();
+	});
 
-    describe("Overview", () => {
-        it("is defined", () => {
-            expect(Overview).toBeDefined();
-        });
+	describe("Overview", () => {
+		it("is defined", () => {
+			expect(Overview).toBeDefined();
+		});
 
-        it.skip("renders", () => {
-            const wrapper = renderer.create(<Overview />);
+		it.skip("renders", () => {
+			const wrapper = renderer.create(<Overview />);
 
-            expect(wrapper.toJSON()).toMatchSnapshot();
-        });
-    });
+			expect(wrapper.toJSON()).toMatchSnapshot();
+		});
+	});
 
-    describe("Sizes", () => {
-        it("is defined", () => {
-            expect(Sizes).toBeDefined();
-        });
+	describe("Sizes", () => {
+		it("is defined", () => {
+			expect(Sizes).toBeDefined();
+		});
 
-        it.skip("renders", () => {
-            const wrapper = renderer.create(<Sizes />);
+		it.skip("renders", () => {
+			const wrapper = renderer.create(<Sizes />);
 
-            expect(wrapper.toJSON()).toMatchSnapshot();
-        });
-    });
+			expect(wrapper.toJSON()).toMatchSnapshot();
+		});
+	});
 
-    describe("MediaPosition", () => {
-        it("is defined", () => {
-            expect(MediaPosition).toBeDefined();
-        });
+	describe("MediaPosition", () => {
+		it("is defined", () => {
+			expect(MediaPosition).toBeDefined();
+		});
 
-        it.skip("renders", () => {
-            const wrapper = renderer.create(<MediaPosition />);
+		it.skip("renders", () => {
+			const wrapper = renderer.create(<MediaPosition />);
 
-            expect(wrapper.toJSON()).toMatchSnapshot();
-        });
-    });
+			expect(wrapper.toJSON()).toMatchSnapshot();
+		});
+	});
 });

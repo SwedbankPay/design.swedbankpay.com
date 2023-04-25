@@ -7,234 +7,292 @@ import userEvent from "@testing-library/user-event";
 import Topbar from "./index";
 
 describe("Component: Topbar -", () => {
-    const div = document.createElement("div");
+	const div = document.createElement("div");
+
+	document.body.appendChild(div);
+
+	const menu = {
+		items: [
+			{
+				name: "Home",
+				icon: "home",
+			},
+			{
+				name: "Purchase history",
+				icon: "shopping_cart",
+			},
+			{
+				name: "Settings",
+				icon: "settings",
+			},
+		],
+	};
 
-    document.body.appendChild(div);
+	const menuNoIcons = {
+		items: [
+			{
+				name: "Home",
+			},
+			{
+				name: "Purchase history",
+			},
+			{
+				name: "Settings",
+			},
+		],
+	};
 
-    const menu = {
-        items: [
-            {
-                name: "Home",
-                icon: "home"
-            },
-            {
-                name: "Purchase history",
-                icon: "shopping_cart"
-            },
-            {
-                name: "Settings",
-                icon: "settings"
-            }
-        ]
-    };
+	it("is defined", () => {
+		expect(Topbar).toBeDefined();
+	});
 
-    const menuNoIcons = {
-        items: [
-            {
-                name: "Home"
-            },
-            {
-                name: "Purchase history"
-            },
-            {
-                name: "Settings"
-            }
-        ]
-    };
+	it("renders a topbar with only a clickable logo", () => {
+		render(<Topbar />);
 
-    it("is defined", () => {
-        expect(Topbar).toBeDefined();
-    });
+		expect(screen.getByRole("link")).toHaveClass("topbar-logo");
+		expect(screen.getByRole("link")).not.toHaveClass("topbar-nav");
 
-    it("renders a topbar with only a clickable logo", () => {
-        render(<Topbar />);
+		const componentForSnap = renderer.create(<Topbar />);
 
-        expect(screen.getByRole("link")).toHaveClass("topbar-logo");
-        expect(screen.getByRole("link")).not.toHaveClass("topbar-nav");
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-        const componentForSnap = renderer.create(<Topbar />);
+	describe("props", () => {
+		describe("wide", () => {
+			it("renders a topbar with the given breakpoint", () => {
+				render(<Topbar wide="lg" />);
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+				expect(screen.getByRole("banner")).toHaveClass("topbar-lg-wide");
 
-    describe("props", () => {
-        describe("wide", () => {
-            it("renders a topbar with the given breakpoint", () => {
-                render(<Topbar wide="lg" />);
+				const componentForSnap = renderer.create(<Topbar wide="lg" />);
 
-                expect(screen.getByRole("banner")).toHaveClass("topbar-lg-wide");
+				expect(componentForSnap.toJSON()).toMatchSnapshot();
+			});
+		});
 
-                const componentForSnap = renderer.create(<Topbar wide="lg" />);
+		describe("topbarContent", () => {
+			it("renders a topbar menu without menu icons", () => {
+				render(<Topbar topbarContent={menuNoIcons} />);
 
-                expect(componentForSnap.toJSON()).toMatchSnapshot();
-            });
-        });
+				const menuContainer = screen
+					.getByRole("navigation")
+					.querySelector(".topbar-link-container");
+				const menuIcons = menuContainer.querySelectorAll("i.material-icons");
 
-        describe("topbarContent", () => {
-            it("renders a topbar menu without menu icons", () => {
-                render(<Topbar topbarContent={menuNoIcons} />);
+				expect(menuIcons.length).toEqual(0);
 
-                const menuContainer = screen.getByRole("navigation").querySelector(".topbar-link-container");
-                const menuIcons = menuContainer.querySelectorAll("i.material-icons");
+				const componentForSnap = renderer.create(
+					<Topbar topbarContent={menuNoIcons} />
+				);
 
-                expect(menuIcons.length).toEqual(0);
+				expect(componentForSnap.toJSON()).toMatchSnapshot();
+			});
 
-                const componentForSnap = renderer.create(<Topbar topbarContent={menuNoIcons} />);
+			it("renders topbar-link-container and populates it with given information without a logout link", () => {
+				render(<Topbar topbarContent={menu} />);
 
-                expect(componentForSnap.toJSON()).toMatchSnapshot();
-            });
+				const renderedTopbar = screen.getByRole("banner");
 
-            it("renders topbar-link-container and populates it with given information without a logout link", () => {
-                render(<Topbar topbarContent={menu} />);
+				expect(renderedTopbar).toHaveClass("topbar");
 
-                const renderedTopbar = screen.getByRole("banner");
+				const renderedNav = screen.getByRole("navigation");
 
-                expect(renderedTopbar).toHaveClass("topbar");
+				expect(renderedNav).toHaveClass("topbar-nav");
 
-                const renderedNav = screen.getByRole("navigation");
+				expect(
+					menu.items.every((item) =>
+						[...renderedNav.querySelectorAll("a span")].some(
+							(elmt) => elmt.textContent === item.name
+						)
+					)
+				).toBeTruthy();
 
-                expect(renderedNav).toHaveClass("topbar-nav");
+				expect(
+					[...renderedNav.querySelectorAll("a span")].some(
+						(elmt) => elmt.textContent === "Log out"
+					)
+				).not.toBeTruthy();
 
-                expect(menu.items.every(item => [...renderedNav.querySelectorAll("a span")].some(elmt => elmt.textContent === item.name))).toBeTruthy();
+				const componentForSnap = renderer.create(
+					<Topbar topbarContent={menu} />
+				);
 
-                expect([...renderedNav.querySelectorAll("a span")].some(elmt => elmt.textContent === "Log out")).not.toBeTruthy();
+				expect(componentForSnap.toJSON()).toMatchSnapshot();
+			});
 
-                const componentForSnap = renderer.create(<Topbar topbarContent={menu} />);
+			it("renders topbar-link-container and a logout link", () => {
+				render(<Topbar topbarContent={menu} logout />);
 
-                expect(componentForSnap.toJSON()).toMatchSnapshot();
-            });
+				const renderedTopbar = screen.getByRole("banner");
 
-            it("renders topbar-link-container and a logout link", () => {
-                render(<Topbar topbarContent={menu} logout />);
+				expect(renderedTopbar).toHaveClass("topbar");
 
-                const renderedTopbar = screen.getByRole("banner");
+				const renderedNav = screen.getByRole("navigation");
 
-                expect(renderedTopbar).toHaveClass("topbar");
+				expect(renderedNav).toHaveClass("topbar-nav");
 
-                const renderedNav = screen.getByRole("navigation");
+				expect(
+					renderedNav.querySelector(".topbar-link-right .material-icons")
+				).toHaveTextContent("exit_to_app");
 
-                expect(renderedNav).toHaveClass("topbar-nav");
+				const componentForSnap = renderer.create(
+					<Topbar topbarContent={menu} logout />
+				);
 
-                expect(renderedNav.querySelector(".topbar-link-right .material-icons")).toHaveTextContent("exit_to_app");
+				expect(componentForSnap.toJSON()).toMatchSnapshot();
+			});
 
-                const componentForSnap = renderer.create(<Topbar topbarContent={menu} logout />);
+			it("renders a topbar menuopen and close buttons when content is provided", () => {
+				render(<Topbar topbarContent={menu} />);
 
-                expect(componentForSnap.toJSON()).toMatchSnapshot();
-            });
+				const renderedTopbar = screen.getByRole("banner");
 
-            it("renders a topbar menuopen and close buttons when content is provided", () => {
-                render(<Topbar topbarContent={menu} />);
+				expect(renderedTopbar).toBeInTheDocument();
 
-                const renderedTopbar = screen.getByRole("banner");
+				expect(
+					screen
+						.getAllByRole("button")
+						.filter((elmt) => elmt.classList.contains("topbar-btn"))
+				).toHaveLength(1);
 
-                expect(renderedTopbar).toBeInTheDocument();
+				expect(
+					screen
+						.getAllByRole("button")
+						.filter((elmt) => elmt.classList.contains("topbar-close"))
+				).toHaveLength(1);
 
-                expect(screen.getAllByRole("button").filter(elmt => elmt.classList.contains("topbar-btn"))).toHaveLength(1);
+				const componentForSnap = renderer.create(
+					<Topbar topbarContent={menu} />
+				);
 
-                expect(screen.getAllByRole("button").filter(elmt => elmt.classList.contains("topbar-close"))).toHaveLength(1);
+				expect(componentForSnap.toJSON()).toMatchSnapshot();
+			});
 
-                const componentForSnap = renderer.create(<Topbar topbarContent={menu} />);
+			// FIXME: what are we testing, the fact that when I click a link the link is clicked but we do not want the effect behind? what is th epoint?
+			it.skip("menu links prevents default when clicked", () => {
+				const eventHandler = { preventDefault: jest.fn() };
 
-                expect(componentForSnap.toJSON()).toMatchSnapshot();
-            });
+				render(<Topbar topbarContent={menu} />);
 
-            // FIXME: what are we testing, the fact that when I click a link the link is clicked but we do not want the effect behind? what is th epoint?
-            it.skip("menu links prevents default when clicked", () => {
-                const eventHandler = { preventDefault: jest.fn() };
+				const menuLinks = screen
+					.getByRole("navigation")
+					.querySelectorAll("a[href]");
 
-                render(<Topbar topbarContent={menu} />);
+				menuLinks.forEach((anchor) => {
+					userEvent.click(anchor);
+				});
 
-                const menuLinks = screen.getByRole("navigation").querySelectorAll("a[href]");
+				expect(eventHandler.preventDefault).toHaveBeenCalled();
 
-                menuLinks.forEach(anchor => {
-                    userEvent.click(anchor);
-                });
+				const componentForSnap = renderer.create(
+					<Topbar topbarContent={menu} />
+				);
 
-                expect(eventHandler.preventDefault).toHaveBeenCalled();
+				expect(componentForSnap.toJSON()).toMatchSnapshot();
+			});
 
-                const componentForSnap = renderer.create(<Topbar topbarContent={menu} />);
+			it("renders a sidebar in topbar-link-container when sidebar prop is true", () => {
+				render(<Topbar topbarContent={menu} sidebar />);
 
-                expect(componentForSnap.toJSON()).toMatchSnapshot();
-            });
+				const renderedSidebar = screen
+					.getAllByRole("banner")
+					.find((elmt) => elmt.classList.contains("topbar"))
+					.querySelector("nav.topbar-nav .sidebar");
 
-            it("renders a sidebar in topbar-link-container when sidebar prop is true", () => {
-                render(<Topbar topbarContent={menu} sidebar />);
+				expect(renderedSidebar).toBeTruthy();
 
-                const renderedSidebar = screen.getAllByRole("banner").find(elmt => elmt.classList.contains("topbar"))
-                    .querySelector("nav.topbar-nav .sidebar");
+				const componentForSnap = renderer.create(
+					<Topbar topbarContent={menu} sidebar />
+				);
 
-                expect(renderedSidebar).toBeTruthy();
+				expect(componentForSnap.toJSON()).toMatchSnapshot();
+			});
+		});
 
-                const componentForSnap = renderer.create(<Topbar topbarContent={menu} sidebar />);
+		describe("logout", () => {
+			it("renders logout link and adds topbar-link-right to the logout", () => {
+				render(<Topbar logout />);
 
-                expect(componentForSnap.toJSON()).toMatchSnapshot();
-            });
-        });
+				expect(
+					screen
+						.getAllByRole("link")
+						.filter((elmt) =>
+							[...elmt.children].some(
+								(childElmt) => childElmt.textContent === "Log out"
+							)
+						)
+				).toBeTruthy();
+				expect(
+					screen
+						.queryAllByRole("navigation")
+						?.some((elmt) => elmt.classList.contains("topbar-nav"))
+				).toBeFalsy();
+				expect(
+					screen
+						.getAllByRole("link")
+						.find((elmt) => elmt.classList.contains("topbar-link-right"))
+						.querySelector("span")
+				).toHaveTextContent("Log out");
 
-        describe("logout", () => {
-            it("renders logout link and adds topbar-link-right to the logout", () => {
-                render(<Topbar logout/>);
+				const componentForSnap = renderer.create(<Topbar logout />);
 
-                expect(screen.getAllByRole("link").filter(elmt => [...elmt.children].some(childElmt => childElmt.textContent === "Log out"))).toBeTruthy();
-                expect(screen.queryAllByRole("navigation")?.some(elmt => elmt.classList.contains("topbar-nav"))).toBeFalsy();
-                expect(screen.getAllByRole("link").find(elmt => elmt.classList.contains("topbar-link-right"))
-                    .querySelector("span")).toHaveTextContent("Log out");
+				expect(componentForSnap.toJSON()).toMatchSnapshot();
+			});
 
-                const componentForSnap = renderer.create(<Topbar logout/>);
+			// FIXME: what are we testing, the fact that when I click a link the link is clicked but we do not want the effect behind? what is th epoint?
+			it.skip("prevents default when clicked", () => {
+				const eventHandler = { preventDefault: jest.fn() };
 
-                expect(componentForSnap.toJSON()).toMatchSnapshot();
-            });
+				render(<Topbar logout />);
 
-            // FIXME: what are we testing, the fact that when I click a link the link is clicked but we do not want the effect behind? what is th epoint?
-            it.skip("prevents default when clicked", () => {
-                const eventHandler = { preventDefault: jest.fn() };
+				const logout = screen
+					.getAllByRole("link")
+					.find((elmt) => elmt.classList.contains("topbar-link-right"));
 
-                render(<Topbar logout />);
+				userEvent.click(logout);
 
-                const logout = screen.getAllByRole("link").find(elmt => elmt.classList.contains("topbar-link-right"));
+				expect(eventHandler.preventDefault).toHaveBeenCalled();
 
-                userEvent.click(logout);
+				const componentForSnap = renderer.create(<Topbar logout />);
 
-                expect(eventHandler.preventDefault).toHaveBeenCalled();
+				expect(componentForSnap.toJSON()).toMatchSnapshot();
+			});
+		});
 
-                const componentForSnap = renderer.create(<Topbar logout />);
+		describe("png", () => {
+			it("renders a topbar with anchor with class .topbar-logo-png", () => {
+				render(<Topbar png />);
 
-                expect(componentForSnap.toJSON()).toMatchSnapshot();
-            });
-        });
+				expect(screen.getByLabelText("To homepage").tagName).toBe("A");
+				expect(screen.getByLabelText("To homepage")).toHaveClass(
+					"topbar-logo topbar-logo-png"
+				);
+			});
+		});
 
-        describe("png", () => {
-            it("renders a topbar with anchor with class .topbar-logo-png", () => {
-                render(<Topbar png />);
+		describe("sticky", () => {
+			it("renders a topbar with class .topbar-sticky", () => {
+				render(<Topbar sticky />);
 
-                expect(screen.getByLabelText("To homepage").tagName).toBe("A");
-                expect(screen.getByLabelText("To homepage")).toHaveClass("topbar-logo topbar-logo-png");
-            });
-        });
+				expect(screen.getByRole("banner")).toHaveClass("topbar-sticky");
+			});
+		});
+	});
 
-        describe("sticky", () => {
-            it("renders a topbar with class .topbar-sticky", () => {
-                render(<Topbar sticky />);
+	// FIXME: what are we testing, the fact that when I click a link the link is clicked but we do not want the effect behind? what is th epoint?
+	it.skip("logo prevents default when clicked", () => {
+		const eventHandler = { preventDefault: jest.fn() };
 
-                expect(screen.getByRole("banner")).toHaveClass("topbar-sticky");
-            });
-        });
-    });
+		render(<Topbar />);
 
-    // FIXME: what are we testing, the fact that when I click a link the link is clicked but we do not want the effect behind? what is th epoint?
-    it.skip("logo prevents default when clicked", () => {
-        const eventHandler = { preventDefault: jest.fn() };
+		const logo = wrapper.find(".topbar-logo");
 
-        render(<Topbar />);
+		logo.simulate("click", eventHandler);
 
-        const logo = wrapper.find(".topbar-logo");
+		expect(eventHandler.preventDefault).toHaveBeenCalled();
 
-        logo.simulate("click", eventHandler);
+		const componentForSnap = renderer.create(<Topbar />);
 
-        expect(eventHandler.preventDefault).toHaveBeenCalled();
-
-        const componentForSnap = renderer.create(<Topbar />);
-
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 });

@@ -14,8 +14,8 @@ process.env.brandLink = "TESTBRANDLINK";
  * https://github.com/facebook/jest/issues/4545
  */
 
-global.requestAnimationFrame = callback => {
-    setTimeout(callback, 0);
+global.requestAnimationFrame = (callback) => {
+	setTimeout(callback, 0);
 };
 
 /**
@@ -23,20 +23,28 @@ global.requestAnimationFrame = callback => {
  * https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
  */
 
-if (!Element.prototype.matches) { Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector; }
+if (!Element.prototype.matches) {
+	Element.prototype.matches =
+		Element.prototype.msMatchesSelector ||
+		Element.prototype.webkitMatchesSelector;
+}
 
 if (!Element.prototype.closest) {
-    Element.prototype.closest = function (s) {
-        let el = this;
+	Element.prototype.closest = function (s) {
+		let el = this;
 
-        if (!document.documentElement.contains(el)) { return null; }
+		if (!document.documentElement.contains(el)) {
+			return null;
+		}
 
-        do {
-            if (el.matches(s)) { return el; }
+		do {
+			if (el.matches(s)) {
+				return el;
+			}
 
-            el = el.parentElement || el.parentNode;
-        } while (el !== null && el.nodeType === 1);
+			el = el.parentElement || el.parentNode;
+		} while (el !== null && el.nodeType === 1);
 
-        return null;
-    };
+		return null;
+	};
 }

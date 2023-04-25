@@ -8,8 +8,8 @@ Design Guide is hosted on Azure Storage with Locally-redundant storage (LRS). Th
 
 The deploy procedure is set up to run with GitHub Actions. All workflows can be accessed within this folder.
 
--   **GitHub repository** needs to be specified (`SwedbankPay/design.swedbankpay.com`).
--   **Default branch** needs to be set to `master`.
+- **GitHub repository** needs to be specified (`SwedbankPay/design.swedbankpay.com`).
+- **Default branch** needs to be set to `master`.
 
 The current configuration is set to make sure a pushed tag will deploy the project.
 
@@ -17,13 +17,13 @@ The current configuration is set to make sure a pushed tag will deploy the proje
 
 Setting the following GitHub secrets variables:
 
--   `AZURE_CREDENTIALS` - Azure credentials used to authenticate with our azure containers.
--   `AZURE_CREDENTIALS_STAGE` - Azure credentials used to authenticate with our azure stage containers.
--   `SENTRY_TOKEN` - API key to sentry. Used by the `sentry.sh` script during release workflow.
+- `AZURE_CREDENTIALS` - Azure credentials used to authenticate with our azure containers.
+- `AZURE_CREDENTIALS_STAGE` - Azure credentials used to authenticate with our azure stage containers.
+- `SENTRY_TOKEN` - API key to sentry. Used by the `sentry.sh` script during release workflow.
 
 ## Workflows
 
-Each workflow executes twice through the use of matrix. One for the Swedbank Pay brand, and one for the PayEx brand. 
+Each workflow executes twice through the use of matrix. One for the Swedbank Pay brand, and one for the PayEx brand.
 The matrix brand variable is sent to the `variables.sh` script which creates certain variables that are accessible through the `variables` step output and then later used within workflows.
 
 ### `main.yml`

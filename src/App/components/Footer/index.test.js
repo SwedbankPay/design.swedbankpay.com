@@ -4,14 +4,13 @@ import renderer from "react-test-renderer";
 import Footer from "./index";
 
 describe("Component: Footer -", () => {
-    it("is defined", () => {
-        expect(Footer).toBeDefined();
-    });
+	it("is defined", () => {
+		expect(Footer).toBeDefined();
+	});
 
-    it("renders", () => {
+	it("renders", () => {
+		const componentForSnap = renderer.create(<Footer />);
 
-        const componentForSnap = renderer.create(<Footer />);
-
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 });

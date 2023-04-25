@@ -22,34 +22,42 @@ const codeExample = `{
 }`;
 
 const CodeView = () => (
-    <DocContainer>
-        <p className="lead">To present code</p>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <figure>
-                <div className="code-view">
-                    <header className="code-view-header">
-                        HTTP Request
-                    </header>
-                    <table className="code-view-table">
-                        <tbody>
-                            <tr>
-                                <td className="code-view-numbers">
-                                    <pre>
-                                        {(codeExample).split("\n").map((line, i) => <React.Fragment key={i}>{i + 1}{"\n"}</React.Fragment>)}
-                                    </pre>
-                                </td>
-                                <td className="code-view-code">
-                                    <pre>
-                                        {(codeExample).split("\n").map((line, i) => <React.Fragment key={i}>{line}{"\n"}</React.Fragment>)}
-                                    </pre>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </figure>
-        </ComponentPreview>
-    </DocContainer>
+	<DocContainer>
+		<p className="lead">To present code</p>
+		<ComponentPreview language="html" showCasePanel codeFigure>
+			<figure>
+				<div className="code-view">
+					<header className="code-view-header">HTTP Request</header>
+					<table className="code-view-table">
+						<tbody>
+							<tr>
+								<td className="code-view-numbers">
+									<pre>
+										{codeExample.split("\n").map((line, i) => (
+											<React.Fragment key={i}>
+												{i + 1}
+												{"\n"}
+											</React.Fragment>
+										))}
+									</pre>
+								</td>
+								<td className="code-view-code">
+									<pre>
+										{codeExample.split("\n").map((line, i) => (
+											<React.Fragment key={i}>
+												{line}
+												{"\n"}
+											</React.Fragment>
+										))}
+									</pre>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</figure>
+		</ComponentPreview>
+	</DocContainer>
 );
 
 export default CodeView;

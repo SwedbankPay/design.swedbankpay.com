@@ -5,59 +5,62 @@ import { Sidebar } from "./Sidebar";
 import { Preview } from "./Preview";
 
 export const ShowCasePanelAdvanced = ({
-    showCasePanelAdvanced,
-    children,
-    activeTab,
-    updateActiveTab,
-    activeOptions,
-    updateActiveOptions,
-    staticPreview,
-    previewMinHeight
+	showCasePanelAdvanced,
+	children,
+	activeTab,
+	updateActiveTab,
+	activeOptions,
+	updateActiveOptions,
+	staticPreview,
+	previewMinHeight,
 }) => {
-    const [sidebarDisplayed, setSidebarDisplayed] = useState(false);
+	const [sidebarDisplayed, setSidebarDisplayed] = useState(false);
 
-    useEffect(() => {
-        setSidebarDisplayed(window.innerWidth > 1200); // XL grid breakpoint
-    }, []);
+	useEffect(() => {
+		setSidebarDisplayed(window.innerWidth > 1200); // XL grid breakpoint
+	}, []);
 
-    return (
-        <>
-            <div id={showCasePanelAdvanced.id} className={"showcase-panel showcase-panel-advanced"}>
-                <Topbar
-                    tabs={showCasePanelAdvanced?.elements}
-                    tabsId={showCasePanelAdvanced.tabsId}
-                    hideOptions={showCasePanelAdvanced.hideOptions}
-                    sidebarDisplayed={sidebarDisplayed}
-                    setSidebarDisplayed={setSidebarDisplayed}
-                    activeTab={activeTab}
-                    updateActiveTab={updateActiveTab}
-                />
-                <div className="d-flex">
-                    <div className="d-flex flex-column flex-fill">
-                        <Preview
-                            alternativeBackground={activeTab.alternativeBackground}
-                            activeTab={activeTab}
-                            staticPreview={staticPreview}
-                            activeOptions={activeOptions}
-                            previewMinHeight={previewMinHeight}
-                        />
-                        <ComponentDescription
-                            title={activeTab.title}
-                            description={activeTab.description}
-                            activeOptions={activeOptions}
-                        />
-                    </div>
-                    <Sidebar
-                        hideOptions={showCasePanelAdvanced.hideOptions}
-                        sidebarDisplayed={sidebarDisplayed}
-                        setSidebarDisplayed={setSidebarDisplayed}
-                        activeTab={activeTab}
-                        activeOptions={activeOptions}
-                        updateActiveOptions={updateActiveOptions}
-                    />
-                </div>
-            </div>
-            {children}
-        </>
-    );
+	return (
+		<>
+			<div
+				id={showCasePanelAdvanced.id}
+				className={"showcase-panel showcase-panel-advanced"}
+			>
+				<Topbar
+					tabs={showCasePanelAdvanced?.elements}
+					tabsId={showCasePanelAdvanced.tabsId}
+					hideOptions={showCasePanelAdvanced.hideOptions}
+					sidebarDisplayed={sidebarDisplayed}
+					setSidebarDisplayed={setSidebarDisplayed}
+					activeTab={activeTab}
+					updateActiveTab={updateActiveTab}
+				/>
+				<div className="d-flex">
+					<div className="d-flex flex-column flex-fill">
+						<Preview
+							alternativeBackground={activeTab.alternativeBackground}
+							activeTab={activeTab}
+							staticPreview={staticPreview}
+							activeOptions={activeOptions}
+							previewMinHeight={previewMinHeight}
+						/>
+						<ComponentDescription
+							title={activeTab.title}
+							description={activeTab.description}
+							activeOptions={activeOptions}
+						/>
+					</div>
+					<Sidebar
+						hideOptions={showCasePanelAdvanced.hideOptions}
+						sidebarDisplayed={sidebarDisplayed}
+						setSidebarDisplayed={setSidebarDisplayed}
+						activeTab={activeTab}
+						activeOptions={activeOptions}
+						updateActiveOptions={updateActiveOptions}
+					/>
+				</div>
+			</div>
+			{children}
+		</>
+	);
 };

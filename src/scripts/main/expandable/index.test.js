@@ -7,392 +7,430 @@ import expandable from "./index";
 jest.useFakeTimers();
 
 describe("scripts: expandable", () => {
+	const ExpGrpComponent = ({ id, open, expId }) => (
+		<div className="expandable-group" id={id}>
+			<ExpandableComponent id={expId} />
+			<ExpandableComponent open={open} />
+		</div>
+	);
+
+	const ExpandableComponent = ({ id, open }) => (
+		<div className={`expandable${open ? " show expandable-open" : ""}`} id={id}>
+			<div className="expandable-header">
+				<h5>Foo</h5>
+			</div>
+			<div className="expandable-body">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			</div>
+		</div>
+	);
+
+	it("is defined", () => {
+		expect(expandable).toBeDefined();
+	});
+
+	describe("init()", () => {
+		it("is defined", () => {
+			expect(expandable.init).toBeDefined();
+		});
+
+		it("returns a single object when an expandable ID is passed", () => {
+			render(<ExpandableComponent id="expandable-test" />);
+
+			const returnVal = expandable.init("expandable-test");
+
+			expect(returnVal).not.toBeNull();
+			expect(Array.isArray(returnVal)).toBeFalsy();
+			expect(typeof returnVal).toEqual("object");
+		});
+
+		it("returns a single object when a expandable-group ID is passed", () => {
+			render(<ExpGrpComponent id="expandable-group-test" />);
+
+			const returnVal = expandable.init("expandable-group-test");
+
+			expect(returnVal).not.toBeNull();
+			expect(Array.isArray(returnVal)).toBeFalsy();
+			expect(typeof returnVal).toEqual("object");
+		});
+
+		it("returns an array of expandable objects when more than one expandable is initialized", () => {
+			render(
+				<>
+					<ExpandableComponent />
+					<ExpandableComponent />
+				</>
+			);
+
+			const returnVal = expandable.init();
+
+			expect(Array.isArray(returnVal)).toBeTruthy();
+			expect(returnVal.length).toEqual(2);
+			expect(
+				returnVal.every((instance) =>
+					instance.elem.classList.contains("expandable")
+				)
+			).toBeTruthy();
+		});
+
+		it("returns an array of expandable-group objects when more than one expandable-group is initialized", () => {
+			render(
+				<>
+					<ExpGrpComponent />
+					<ExpGrpComponent />
+				</>
+			);
+
+			const returnVal = expandable.init();
+
+			expect(Array.isArray(returnVal)).toBeTruthy();
+			expect(returnVal.length).toEqual(2);
+			expect(
+				returnVal.every((instance) =>
+					instance.elem.classList.contains("expandable-group")
+				)
+			).toBeTruthy();
+		});
+
+		it("returns an array of both expandable-group objects and expandable objects when more than one element is initialized", () => {
+			render(
+				<>
+					<ExpGrpComponent />
+					<ExpandableComponent />
+				</>
+			);
+
+			const returnVal = expandable.init();
+
+			expect(Array.isArray(returnVal)).toBeTruthy();
+			expect(returnVal.length).toEqual(2);
+			expect(returnVal[0].elem).toHaveClass("expandable-group");
+			expect(returnVal[1].elem).toHaveClass("expandable");
+		});
 
-    const ExpGrpComponent = ({ id, open, expId }) => (
-        <div className="expandable-group" id={id} >
-            <ExpandableComponent id={expId} />
-            <ExpandableComponent open={open} />
-        </div>
-    );
-
-    const ExpandableComponent = ({ id, open }) => (
-        <div className={`expandable${open ? " show expandable-open" : ""}`} id={id} >
-            <div className="expandable-header">
-                <h5>Foo</h5>
-            </div>
-            <div className="expandable-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-    );
-
-    it("is defined", () => {
-        expect(expandable).toBeDefined();
-    });
-
-    describe("init()", () => {
-        it("is defined", () => {
-            expect(expandable.init).toBeDefined();
-        });
+		describe("warning messages", () => {
+			beforeEach(() => (console.warn = jest.fn()));
 
-        it("returns a single object when an expandable ID is passed", () => {
-            render(<ExpandableComponent id="expandable-test"/>);
+			it("prints a warning message if no expandable-group or expandable exist", () => {
+				console.warn = jest.fn();
 
-            const returnVal = expandable.init("expandable-test");
+				expandable.init();
 
-            expect(returnVal).not.toBeNull();
-            expect(Array.isArray(returnVal)).toBeFalsy();
-            expect(typeof returnVal).toEqual("object");
-        });
+				expect(console.warn).toHaveBeenCalled();
+			});
 
-        it("returns a single object when a expandable-group ID is passed", () => {
-            render(<ExpGrpComponent id="expandable-group-test" />);
+			it("prints a warning message if no  matching the passed ID exist", () => {
+				console.warn = jest.fn();
 
-            const returnVal = expandable.init("expandable-group-test");
+				expandable.init("invalid-id");
 
-            expect(returnVal).not.toBeNull();
-            expect(Array.isArray(returnVal)).toBeFalsy();
-            expect(typeof returnVal).toEqual("object");
-        });
+				expect(console.warn).toHaveBeenCalled();
+			});
 
-        it("returns an array of expandable objects when more than one expandable is initialized", () => {
-            render(
-                <>
-                    <ExpandableComponent />
-                    <ExpandableComponent />
-                </>);
+			it("prints a warning if an expandable-group without expandables is initialized", () => {
+				console.warn = jest.fn();
+				render(
+					<div id="empty-expandable-group" className="expandable-group" />
+				);
 
-            const returnVal = expandable.init();
+				expandable.init("empty-expandable-group");
 
-            expect(Array.isArray(returnVal)).toBeTruthy();
-            expect(returnVal.length).toEqual(2);
-            expect(returnVal.every(instance => instance.elem.classList.contains("expandable"))).toBeTruthy();
-        });
+				expect(console.warn).toHaveBeenCalledWith(
+					"expandable-group: No expandable children found"
+				);
+			});
 
-        it("returns an array of expandable-group objects when more than one expandable-group is initialized", () => {
-            render(
-                <>
-                    <ExpGrpComponent />
-                    <ExpGrpComponent />
-                </>);
+			it("prints a warning when an expandable without .expandable-header is initialized", () => {
+				console.warn = jest.fn();
+				render(<div id="exp-no-header" className="expandable" />);
 
-            const returnVal = expandable.init();
+				expandable.init("exp-no-header");
 
-            expect(Array.isArray(returnVal)).toBeTruthy();
-            expect(returnVal.length).toEqual(2);
-            expect(returnVal.every(instance => instance.elem.classList.contains("expandable-group"))).toBeTruthy();
-        });
+				expect(console.warn).toHaveBeenCalledWith(
+					"expandable: No .expandable-header found"
+				);
+			});
 
-        it("returns an array of both expandable-group objects and expandable objects when more than one element is initialized", () => {
-            render(
-                <>
-                    <ExpGrpComponent />
-                    <ExpandableComponent />
-                </>);
+			it("prints a warning if an expandable-group contains expandables without expandable-header", () => {
+				render(
+					<div id="expGrpNoHead" className="expandable-group">
+						<div className="expandable" />
+					</div>
+				);
 
-            const returnVal = expandable.init();
+				expandable.init("expGrpNoHead");
 
-            expect(Array.isArray(returnVal)).toBeTruthy();
-            expect(returnVal.length).toEqual(2);
-            expect(returnVal[0].elem).toHaveClass("expandable-group");
-            expect(returnVal[1].elem).toHaveClass("expandable");
-        });
+				expect(console.warn).toHaveBeenCalledWith(
+					"expandable-group: An expandable is missing a header"
+				);
+			});
+		});
+	});
 
-        describe("warning messages", () => {
-            beforeEach(() => console.warn = jest.fn());
+	describe("class Expandable", () => {
+		it("click opens the expandable", () => {
+			render(<ExpandableComponent />);
 
-            it("prints a warning message if no expandable-group or expandable exist", () => {
-                console.warn = jest.fn();
+			const expElem = document.querySelector(".expandable");
+			const expHeaderElem = expElem.querySelector(".expandable-header");
 
-                expandable.init();
+			expandable.init();
 
-                expect(console.warn).toHaveBeenCalled();
-            });
+			expect(expElem).not.toHaveClass("expandable-open");
 
-            it("prints a warning message if no  matching the passed ID exist", () => {
-                console.warn = jest.fn();
+			expHeaderElem.dispatchEvent(new Event("click"));
 
-                expandable.init("invalid-id");
+			expect(expElem).toHaveClass("expandable-open");
+		});
 
-                expect(console.warn).toHaveBeenCalled();
-            });
+		it("click closes the expandable", () => {
+			render(<ExpandableComponent open />);
 
-            it("prints a warning if an expandable-group without expandables is initialized", () => {
-                console.warn = jest.fn();
-                render(<div id="empty-expandable-group" className="expandable-group"/>);
+			const expElem = document.querySelector(".expandable");
+			const expHeaderElem = expElem.querySelector(".expandable-header");
 
-                expandable.init("empty-expandable-group");
+			expandable.init();
 
-                expect(console.warn).toHaveBeenCalledWith("expandable-group: No expandable children found");
-            });
+			expect(expElem).toHaveClass("expandable-open");
 
-            it("prints a warning when an expandable without .expandable-header is initialized", () => {
-                console.warn = jest.fn();
-                render(<div id="exp-no-header" className="expandable" />);
+			expHeaderElem.dispatchEvent(new Event("click"));
 
-                expandable.init("exp-no-header");
+			jest.runAllTimers();
 
-                expect(console.warn).toHaveBeenCalledWith("expandable: No .expandable-header found");
-            });
+			expect(expElem).not.toHaveClass("expandable-open");
+		});
 
-            it("prints a warning if an expandable-group contains expandables without expandable-header", () => {
-                render(
-                    <div id="expGrpNoHead" className="expandable-group">
-                        <div className="expandable" />
-                    </div>);
+		it("clicking in quick succession to open an expandable will print a warning", () => {
+			console.warn = jest.fn();
 
-                expandable.init("expGrpNoHead");
+			render(<ExpandableComponent />);
 
-                expect(console.warn).toHaveBeenCalledWith("expandable-group: An expandable is missing a header");
-            });
-        });
-    });
+			const expObj = expandable.init()[0];
 
-    describe("class Expandable", () => {
-        it("click opens the expandable", () => {
-            render(<ExpandableComponent />);
+			expObj.header.dispatchEvent(new Event("click"));
+			expObj.header.dispatchEvent(new Event("click"));
 
-            const expElem = document.querySelector(".expandable");
-            const expHeaderElem = expElem.querySelector(".expandable-header");
+			expect(console.warn).toHaveBeenCalledWith(
+				"expandable: The given expandable is expanding"
+			);
+		});
 
-            expandable.init();
+		it("clicking in quick succession to close an expandable will print a warning", () => {
+			console.warn = jest.fn();
 
-            expect(expElem).not.toHaveClass("expandable-open");
+			render(<ExpandableComponent open />);
 
-            expHeaderElem.dispatchEvent(new Event("click"));
+			const expObj = expandable.init()[0];
 
-            expect(expElem).toHaveClass("expandable-open");
-        });
+			expObj.header.dispatchEvent(new Event("click"));
+			expObj.header.dispatchEvent(new Event("click"));
 
-        it("click closes the expandable", () => {
-            render(<ExpandableComponent open />);
+			expect(console.warn).toHaveBeenCalledWith(
+				"expandable: The given expandable is collapsing"
+			);
+		});
+	});
 
-            const expElem = document.querySelector(".expandable");
-            const expHeaderElem = expElem.querySelector(".expandable-header");
+	describe("class Expandable-Group", () => {
+		it("click opens an expandable", () => {
+			render(<ExpGrpComponent />);
 
-            expandable.init();
+			const expGrpObj = expandable.init()[0];
 
-            expect(expElem).toHaveClass("expandable-open");
+			expect(expGrpObj.openExp).toBeFalsy();
 
-            expHeaderElem.dispatchEvent(new Event("click"));
+			expGrpObj.expandables[0].header.dispatchEvent(new Event("click"));
 
-            jest.runAllTimers();
+			jest.runAllTimers();
 
-            expect(expElem).not.toHaveClass("expandable-open");
-        });
+			expect(expGrpObj.openExp).toBeTruthy();
+		});
 
-        it("clicking in quick succession to open an expandable will print a warning", () => {
-            console.warn = jest.fn();
+		it("clicking an open expandable closes it", () => {
+			render(<ExpGrpComponent open />);
 
-            render(<ExpandableComponent />);
+			const expGrpObj = expandable.init()[0];
+			const openExp = expGrpObj.openExp;
 
-            const expObj = expandable.init()[0];
+			expect(openExp.elem).toHaveClass("expandable-open");
 
-            expObj.header.dispatchEvent(new Event("click"));
-            expObj.header.dispatchEvent(new Event("click"));
+			openExp.header.dispatchEvent(new Event("click"));
 
-            expect(console.warn).toHaveBeenCalledWith("expandable: The given expandable is expanding");
-        });
+			jest.runAllTimers();
 
-        it("clicking in quick succession to close an expandable will print a warning", () => {
-            console.warn = jest.fn();
+			expect(openExp.elem).not.toHaveClass("expandable-open");
+		});
 
-            render(<ExpandableComponent open />);
+		it("only one expandable can be open at the same time", () => {
+			render(<ExpGrpComponent open />);
 
-            const expObj = expandable.init()[0];
+			const expGrpObj = expandable.init()[0];
+			const openExp = expGrpObj.openExp.elem;
+			const closedExp = document.querySelector(
+				".expandable:not(.expandable-open)"
+			);
 
-            expObj.header.dispatchEvent(new Event("click"));
-            expObj.header.dispatchEvent(new Event("click"));
+			expect(openExp).toHaveClass("expandable-open");
+			expect(closedExp).not.toHaveClass("expandable-open");
 
-            expect(console.warn).toHaveBeenCalledWith("expandable: The given expandable is collapsing");
-        });
-    });
+			closedExp
+				.querySelector(".expandable-header")
+				.dispatchEvent(new Event("click"));
 
-    describe("class Expandable-Group", () => {
-        it("click opens an expandable", () => {
-            render(<ExpGrpComponent />);
+			jest.runAllTimers();
 
-            const expGrpObj = expandable.init()[0];
+			expect(openExp).not.toHaveClass("expandable-open");
+			expect(closedExp).toHaveClass("expandable-open");
+		});
 
-            expect(expGrpObj.openExp).toBeFalsy();
+		it("clicking in quick succession to open an expandable wrapped by expandable-group will print a warning", () => {
+			console.warn = jest.fn();
 
-            expGrpObj.expandables[0].header.dispatchEvent(new Event("click"));
+			render(<ExpGrpComponent />);
 
-            jest.runAllTimers();
+			const expGrp = expandable.init()[0];
 
-            expect(expGrpObj.openExp).toBeTruthy();
-        });
+			expGrp.expandables[0].header.dispatchEvent(new Event("click"));
+			expGrp.expandables[0].header.dispatchEvent(new Event("click"));
 
-        it("clicking an open expandable closes it", () => {
-            render(<ExpGrpComponent open />);
+			expect(console.warn).toHaveBeenCalledWith(
+				"expandable-group: The expandable-group contains an expanding element"
+			);
+		});
+	});
 
-            const expGrpObj = expandable.init()[0];
-            const openExp = expGrpObj.openExp;
+	describe("open", () => {
+		it("opens the expandable matching the passed ID and returns the expandable object", () => {
+			render(<ExpandableComponent id="test-open" />);
 
-            expect(openExp.elem).toHaveClass("expandable-open");
+			const expObj = expandable.init()[0];
 
-            openExp.header.dispatchEvent(new Event("click"));
+			expect(expObj.elem.classList).not.toContain("expandable-open");
 
-            jest.runAllTimers();
+			const returnVal = expandable.open("test-open");
 
-            expect(openExp.elem).not.toHaveClass("expandable-open");
-        });
+			expect(expObj.elem.classList).toContain("expandable-open");
+			expect(returnVal).toEqual(expObj);
+		});
 
-        it("only one expandable can be open at the same time", () => {
-            render(<ExpGrpComponent open />);
+		it("opens the expandable matching the given ID in a expandable-group", () => {
+			render(<ExpGrpComponent expId="exp-test" />);
 
-            const expGrpObj = expandable.init()[0];
-            const openExp = expGrpObj.openExp.elem;
-            const closedExp = document.querySelector(".expandable:not(.expandable-open)");
+			const expGrpObj = expandable.init()[0];
+			const exp = document.getElementById("exp-test");
 
-            expect(openExp).toHaveClass("expandable-open");
-            expect(closedExp).not.toHaveClass("expandable-open");
+			expect(expGrpObj.openExp).toBeFalsy();
+			expect(exp.classList).not.toContain("expandable-open");
 
-            closedExp.querySelector(".expandable-header").dispatchEvent(new Event("click"));
+			const returnVal = expandable.open("exp-test");
 
-            jest.runAllTimers();
+			jest.runAllTimers();
 
-            expect(openExp).not.toHaveClass("expandable-open");
-            expect(closedExp).toHaveClass("expandable-open");
-        });
+			expect(expGrpObj.openExp).toBeTruthy();
+			expect(exp.classList).toContain("expandable-open");
+			expect(returnVal).toEqual(expGrpObj.openExp);
+		});
 
-        it("clicking in quick succession to open an expandable wrapped by expandable-group will print a warning", () => {
-            console.warn = jest.fn();
+		it("closes the open expandable in a expandable-group if open is called on another expandable", () => {
+			render(<ExpGrpComponent open expId="exp-id" />);
 
-            render(<ExpGrpComponent />);
+			const expGrpObj = expandable.init()[0];
+			const closedExp = document.getElementById("exp-id");
 
-            const expGrp = expandable.init()[0];
+			expect(expGrpObj.openExp).toBeTruthy();
 
-            expGrp.expandables[0].header.dispatchEvent(new Event("click"));
-            expGrp.expandables[0].header.dispatchEvent(new Event("click"));
+			expandable.open("exp-id");
 
-            expect(console.warn).toHaveBeenCalledWith("expandable-group: The expandable-group contains an expanding element");
-        });
-    });
+			jest.runAllTimers();
 
-    describe("open", () => {
-        it("opens the expandable matching the passed ID and returns the expandable object", () => {
-            render(<ExpandableComponent id="test-open" />);
+			expect(expGrpObj.openExp.elem).toEqual(closedExp);
+			expect(document.querySelectorAll(".expandable-open").length).toEqual(1);
+		});
 
-            const expObj = expandable.init()[0];
+		describe("warning messages", () => {
+			beforeEach(() => (console.warn = jest.fn()));
 
-            expect(expObj.elem.classList).not.toContain("expandable-open");
+			it("returns false and prints a warning if no expandable matching the ID was found", () => {
+				expandable.init();
 
-            const returnVal = expandable.open("test-open");
+				const returnVal = expandable.open("test");
 
-            expect(expObj.elem.classList).toContain("expandable-open");
-            expect(returnVal).toEqual(expObj);
-        });
+				expect(console.warn).toHaveBeenCalledWith(
+					"expandable.open: expandable with id test was not found"
+				);
+				expect(returnVal).toBeFalsy();
+			});
 
-        it("opens the expandable matching the given ID in a expandable-group", () => {
-            render(<ExpGrpComponent expId="exp-test" />);
+			it("returns false and prints a warning if the expandable is open", () => {
+				render(<ExpandableComponent open id="is-open" />);
+				expandable.init();
 
-            const expGrpObj = expandable.init()[0];
-            const exp = document.getElementById("exp-test");
+				const returnVal = expandable.open("is-open");
 
-            expect(expGrpObj.openExp).toBeFalsy();
-            expect(exp.classList).not.toContain("expandable-open");
+				expect(console.warn).toHaveBeenCalledWith(
+					"expandable.open: expandable with id is-open is open"
+				);
+				expect(returnVal).toBeFalsy();
+			});
+		});
+	});
 
-            const returnVal = expandable.open("exp-test");
+	describe("close", () => {
+		it("closes the open expandable matching the passed ID and returns the expandable object", () => {
+			render(<ExpandableComponent id="exp-close" open />);
 
-            jest.runAllTimers();
+			const expObj = expandable.init()[0];
 
-            expect(expGrpObj.openExp).toBeTruthy();
-            expect(exp.classList).toContain("expandable-open");
-            expect(returnVal).toEqual(expGrpObj.openExp);
-        });
+			expect(expObj.isOpen).toBeTruthy();
 
-        it("closes the open expandable in a expandable-group if open is called on another expandable", () => {
-            render(<ExpGrpComponent open expId="exp-id" />);
+			const returnVal = expandable.close("exp-close");
 
-            const expGrpObj = expandable.init()[0];
-            const closedExp = document.getElementById("exp-id");
+			expect(expObj.isOpen).toBeFalsy();
+			expect(returnVal).toBeTruthy();
+			expect(returnVal).toEqual(expObj);
+		});
 
-            expect(expGrpObj.openExp).toBeTruthy();
+		it("closes the open expandable matching the passed ID in an expandable-group and returns the expandable object", () => {
+			render(
+				<div className="expandable-group">
+					<ExpandableComponent id="test-close" open />
+					<ExpandableComponent />
+				</div>
+			);
 
-            expandable.open("exp-id");
+			const expGrpObj = expandable.init()[0];
 
-            jest.runAllTimers();
+			expect(expGrpObj.openExp).toBeTruthy();
 
-            expect(expGrpObj.openExp.elem).toEqual(closedExp);
-            expect(document.querySelectorAll(".expandable-open").length).toEqual(1);
-        });
+			const returnVal = expandable.close("test-close");
 
-        describe("warning messages", () => {
-            beforeEach(() => console.warn = jest.fn());
+			expect(expGrpObj.openExp).toBeFalsy();
+			expect(returnVal.elem).toEqual(document.getElementById("test-close"));
+		});
 
-            it("returns false and prints a warning if no expandable matching the ID was found", () => {
-                expandable.init();
+		describe("warninge messages", () => {
+			beforeEach(() => (console.warn = jest.fn()));
 
-                const returnVal = expandable.open("test");
+			it("prints a warning message and returns false if the passed ID doesn't match an existing expandable", () => {
+				const returnVal = expandable.close("testing");
 
-                expect(console.warn).toHaveBeenCalledWith("expandable.open: expandable with id test was not found");
-                expect(returnVal).toBeFalsy();
-            });
+				expect(console.warn).toHaveBeenCalledWith(
+					"expandable.close: expandable with id testing was not found"
+				);
+				expect(returnVal).toBeFalsy();
+			});
 
-            it("returns false and prints a warning if the expandable is open", () => {
-                render(<ExpandableComponent open id="is-open" />);
-                expandable.init();
+			it("prints a warning message and returns false if the expandable is closed", () => {
+				render(<ExpGrpComponent expId="closed-exp" />);
+				expandable.init();
 
-                const returnVal = expandable.open("is-open");
+				const returnVal = expandable.close("closed-exp");
 
-                expect(console.warn).toHaveBeenCalledWith("expandable.open: expandable with id is-open is open");
-                expect(returnVal).toBeFalsy();
-            });
-        });
-    });
-
-    describe("close", () => {
-        it("closes the open expandable matching the passed ID and returns the expandable object", () => {
-            render(<ExpandableComponent id="exp-close" open />);
-
-            const expObj = expandable.init()[0];
-
-            expect(expObj.isOpen).toBeTruthy();
-
-            const returnVal = expandable.close("exp-close");
-
-            expect(expObj.isOpen).toBeFalsy();
-            expect(returnVal).toBeTruthy();
-            expect(returnVal).toEqual(expObj);
-        });
-
-        it("closes the open expandable matching the passed ID in an expandable-group and returns the expandable object", () => {
-            render(
-                <div className="expandable-group">
-                    <ExpandableComponent id="test-close" open/>
-                    <ExpandableComponent />
-                </div>);
-
-            const expGrpObj = expandable.init()[0];
-
-            expect(expGrpObj.openExp).toBeTruthy();
-
-            const returnVal = expandable.close("test-close");
-
-            expect(expGrpObj.openExp).toBeFalsy();
-            expect(returnVal.elem).toEqual(document.getElementById("test-close"));
-        });
-
-        describe("warninge messages", () => {
-            beforeEach(() => console.warn = jest.fn());
-
-            it("prints a warning message and returns false if the passed ID doesn't match an existing expandable", () => {
-                const returnVal = expandable.close("testing");
-
-                expect(console.warn).toHaveBeenCalledWith("expandable.close: expandable with id testing was not found");
-                expect(returnVal).toBeFalsy();
-            });
-
-            it("prints a warning message and returns false if the expandable is closed", () => {
-                render(<ExpGrpComponent expId="closed-exp" />);
-                expandable.init();
-
-                const returnVal = expandable.close("closed-exp");
-
-                expect(console.warn).toHaveBeenCalledWith("expandable.close: expandable with id closed-exp is closed");
-                expect(returnVal).toBeFalsy();
-            });
-        });
-    });
+				expect(console.warn).toHaveBeenCalledWith(
+					"expandable.close: expandable with id closed-exp is closed"
+				);
+				expect(returnVal).toBeFalsy();
+			});
+		});
+	});
 });

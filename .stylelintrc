@@ -1,77 +1,75 @@
 {
-    "extends": ["stylelint-config-standard", "stylelint-config-recommended-less"],
-    "ignoreFiles": ["**/*.md", "**/*.js", "**/*.js.snap", "**/*.css"],
-    "plugins": [
-        "stylelint-declaration-block-no-ignored-properties"
-    ],
-    "customSyntax": "postcss-less",
-    "rules": {
-        "at-rule-empty-line-before": null,
-        "at-rule-no-unknown": null,
-        "color-named": "never",
-        "declaration-no-important": true,
-        "color-hex-length": "long",
-        "font-family-no-missing-generic-family-keyword": null,
-        "font-family-name-quotes": "always-where-recommended",
-        "length-zero-no-unit": true,
-        "media-feature-name-no-vendor-prefix": true,
-        "no-descending-specificity": null,
-        "no-duplicate-selectors": true,
-        "number-max-precision": 4,
-        "plugin/declaration-block-no-ignored-properties": true,
-        "property-no-unknown": [true, {
-            "ignoreProperties": [
-                "xs",
-                "sm",
-                "md",
-                "lg",
-                "xl",
-                "xxl",
-                "default",
-                "green",
-                "teal",
-                "lilac",
-                "blue",
-                "yellow",
-                "red",
-                "black",
-                "white",
-                "brand",
-                "success",
-                "neutral",
-                "warning",
-                "danger",
-                "muted",
-                "variant-1",
-                "variant-2",
-                "variant-3",
-                "variant-4",
-                "gray",
-                "0",
-                "1",
-                "2",
-                "3",
-                "4",
-                "5",
-                "25",
-                "50",
-                "75",
-                "100",
-                "auto"
-            ]
-        }],
-        "selector-attribute-quotes": "always",
-        "selector-pseudo-element-colon-notation": "single",
-        "unit-allowed-list": ["%", "px", "rem", "vh", "vw", "s", "deg", "ch", "fr"],
-        "value-keyword-case": "lower",
-        "function-no-unknown": [
-            true,
-            {
-              "ignoreFunctions": [
-                "fade",
-                "darken"
-              ]
-            }
-          ]
-    }
+	"extends": ["stylelint-config-standard", "stylelint-config-recommended-less"],
+	"ignoreFiles": ["**/*.md", "**/*.js", "**/*.js.snap", "**/*.css"],
+	"plugins": ["stylelint-declaration-block-no-ignored-properties"],
+	"customSyntax": "postcss-less",
+	"rules": {
+		"at-rule-empty-line-before": null,
+		"at-rule-no-unknown": null,
+		"color-named": "never",
+		"declaration-no-important": true,
+		"color-hex-length": "long",
+		"font-family-no-missing-generic-family-keyword": null,
+		"font-family-name-quotes": "always-where-recommended",
+		"length-zero-no-unit": true,
+		"media-feature-name-no-vendor-prefix": true,
+		"no-descending-specificity": null,
+		"no-duplicate-selectors": true,
+		"number-max-precision": 4,
+		"plugin/declaration-block-no-ignored-properties": true,
+		"property-no-unknown": [
+			true,
+			{
+				"ignoreProperties": [
+					"xs",
+					"sm",
+					"md",
+					"lg",
+					"xl",
+					"xxl",
+					"default",
+					"green",
+					"teal",
+					"lilac",
+					"blue",
+					"yellow",
+					"red",
+					"black",
+					"white",
+					"brand",
+					"success",
+					"neutral",
+					"warning",
+					"danger",
+					"muted",
+					"variant-1",
+					"variant-2",
+					"variant-3",
+					"variant-4",
+					"gray",
+					"0",
+					"1",
+					"2",
+					"3",
+					"4",
+					"5",
+					"25",
+					"50",
+					"75",
+					"100",
+					"auto"
+				]
+			}
+		],
+		"selector-attribute-quotes": "always",
+		"selector-pseudo-element-colon-notation": "single",
+		"unit-allowed-list": ["%", "px", "rem", "vh", "vw", "s", "deg", "ch", "fr"],
+		"value-keyword-case": "lower",
+		"function-no-unknown": [
+			true,
+			{
+				"ignoreFunctions": ["fade", "darken"]
+			}
+		]
+	}
 }

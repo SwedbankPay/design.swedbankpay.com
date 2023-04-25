@@ -7,156 +7,194 @@ import userEvent from "@testing-library/user-event";
 import ActionList from "./index";
 
 const items = [
-    {
-        name: "Add bookmark",
-        icon: "bookmark"
-    },
-    {
-        name: "Add client",
-        icon: "business_center"
-    },
-    {
-        name: "Add document",
-        icon: "add_circle"
-    },
-    {
-        name: "Add user",
-        icon: "person_add"
-    }
+	{
+		name: "Add bookmark",
+		icon: "bookmark",
+	},
+	{
+		name: "Add client",
+		icon: "business_center",
+	},
+	{
+		name: "Add document",
+		icon: "add_circle",
+	},
+	{
+		name: "Add user",
+		icon: "person_add",
+	},
 ];
 
 describe("Component: ActionList", () => {
-    it("is defined", () => {
-        expect(ActionList).toBeDefined();
-    });
+	it("is defined", () => {
+		expect(ActionList).toBeDefined();
+	});
 
-    describe("prop types", () => {
-        describe("items", () => {
-            it.skip("prints an error if it is not provided", () => {
-                console.error = jest.fn();
+	describe("prop types", () => {
+		describe("items", () => {
+			it.skip("prints an error if it is not provided", () => {
+				console.error = jest.fn();
 
-                render(
-                    <>
-                        <ActionList />
-                        <ActionList items={items} />
-                    </>
-                );
+				render(
+					<>
+						<ActionList />
+						<ActionList items={items} />
+					</>
+				);
 
-                expect(console.error).toHaveBeenCalledTimes(1);
+				expect(console.error).toHaveBeenCalledTimes(1);
 
-                const componentForSnap = renderer.create(<>
-                    <ActionList />
-                    <ActionList items={items} />
-                </>).toJSON();
+				const componentForSnap = renderer
+					.create(
+						<>
+							<ActionList />
+							<ActionList items={items} />
+						</>
+					)
+					.toJSON();
 
-                expect(componentForSnap).toMatchSnapshot();
-            });
+				expect(componentForSnap).toMatchSnapshot();
+			});
 
-            it.skip("prints an error if it does not contain objects", () => {
-                console.error = jest.fn();
+			it.skip("prints an error if it does not contain objects", () => {
+				console.error = jest.fn();
 
-                render(<ActionList items={["Array"]}/>);
-                expect(console.error).toHaveBeenCalled();
+				render(<ActionList items={["Array"]} />);
+				expect(console.error).toHaveBeenCalled();
 
-                const componentForSnap = renderer.create(<ActionList items={["Array"]}/>).toJSON();
+				const componentForSnap = renderer
+					.create(<ActionList items={["Array"]} />)
+					.toJSON();
 
-                expect(componentForSnap).toMatchSnapshot();
-            });
-        });
+				expect(componentForSnap).toMatchSnapshot();
+			});
+		});
 
-        it.skip("prints a warning if prop items !== array", () => {
-            console.error = jest.fn();
+		it.skip("prints a warning if prop items !== array", () => {
+			console.error = jest.fn();
 
-            render(
-                <>
-                    <ActionList items={"test"} />
-                    <ActionList items={items} />
-                </>
-            );
+			render(
+				<>
+					<ActionList items={"test"} />
+					<ActionList items={items} />
+				</>
+			);
 
-            expect(console.error).toHaveBeenCalledTimes(1);
+			expect(console.error).toHaveBeenCalledTimes(1);
 
-            const componentForSnap = renderer.create(
-                <>
-                    <ActionList items={"test"} />
-                    <ActionList items={items} />
-                </>).toJSON();
+			const componentForSnap = renderer
+				.create(
+					<>
+						<ActionList items={"test"} />
+						<ActionList items={items} />
+					</>
+				)
+				.toJSON();
 
-            expect(componentForSnap).toMatchSnapshot();
-        });
+			expect(componentForSnap).toMatchSnapshot();
+		});
 
-        it.skip("prints a warning if prop id !== string", () => {
-            console.error = jest.fn();
+		it.skip("prints a warning if prop id !== string", () => {
+			console.error = jest.fn();
 
-            render(
-                <>
-                    <ActionList items={items} id={1} />
-                    <ActionList items={items} id={"test-id"} />
-                </>
-            );
+			render(
+				<>
+					<ActionList items={items} id={1} />
+					<ActionList items={items} id={"test-id"} />
+				</>
+			);
 
-            expect(console.error).toHaveBeenCalledTimes(1);
+			expect(console.error).toHaveBeenCalledTimes(1);
 
-            const componentForSnap = renderer.create(
-                <>
-                    <ActionList items={items} id={1} />
-                    <ActionList items={items} id={"test-id"} />
-                </>).toJSON();
+			const componentForSnap = renderer
+				.create(
+					<>
+						<ActionList items={items} id={1} />
+						<ActionList items={items} id={"test-id"} />
+					</>
+				)
+				.toJSON();
 
-            expect(componentForSnap).toMatchSnapshot();
-        });
+			expect(componentForSnap).toMatchSnapshot();
+		});
 
-        it.skip("prints a warning if prop classnames !== string", () => {
-            console.error = jest.fn();
+		it.skip("prints a warning if prop classnames !== string", () => {
+			console.error = jest.fn();
 
-            render(
-                <>
-                    <ActionList items={items} classNames={2} />
-                    <ActionList items={items} classNames={"test-class"} />
-                </>
-            );
+			render(
+				<>
+					<ActionList items={items} classNames={2} />
+					<ActionList items={items} classNames={"test-class"} />
+				</>
+			);
 
-            expect(console.error).toHaveBeenCalledTimes(1);
+			expect(console.error).toHaveBeenCalledTimes(1);
 
-            const componentForSnap = renderer.create(
-                <>
-                    <ActionList items={items} classNames={2} />
-                    <ActionList items={items} classNames={"test-class"} />
-                </>).toJSON();
+			const componentForSnap = renderer
+				.create(
+					<>
+						<ActionList items={items} classNames={2} />
+						<ActionList items={items} classNames={"test-class"} />
+					</>
+				)
+				.toJSON();
 
-            expect(componentForSnap).toMatchSnapshot();
-        });
-    });
+			expect(componentForSnap).toMatchSnapshot();
+		});
+	});
 
-    it("renders with a custom .action-toggle if it is provided", () => {
-        render(<ActionList items={items} toggleBtn={<a className="action-toggle" href="#">Custom action-toggle</a>} />);
+	it("renders with a custom .action-toggle if it is provided", () => {
+		render(
+			<ActionList
+				items={items}
+				toggleBtn={
+					<a className="action-toggle" href="#">
+						Custom action-toggle
+					</a>
+				}
+			/>
+		);
 
-        expect(screen.getAllByRole("link")[0]).toHaveTextContent("Custom action-toggle");
+		expect(screen.getAllByRole("link")[0]).toHaveTextContent(
+			"Custom action-toggle"
+		);
 
-        const componentForSnap = renderer.create(
-            <ActionList items={items} toggleBtn={<a className="action-toggle" href="#">Custom action-toggle</a>} />).toJSON();
+		const componentForSnap = renderer
+			.create(
+				<ActionList
+					items={items}
+					toggleBtn={
+						<a className="action-toggle" href="#">
+							Custom action-toggle
+						</a>
+					}
+				/>
+			)
+			.toJSON();
 
-        expect(componentForSnap).toMatchSnapshot();
-    });
+		expect(componentForSnap).toMatchSnapshot();
+	});
 
-    describe(".action-menu", () => {
-        it("prevents default when an item is clicked", () => {
-            const eventHandler = { preventDefault: jest.fn() };
+	describe(".action-menu", () => {
+		it("prevents default when an item is clicked", () => {
+			const eventHandler = { preventDefault: jest.fn() };
 
-            render(<ActionList items={items} />);
+			render(<ActionList items={items} />);
 
-            userEvent.click(screen.getByRole("button"));
+			userEvent.click(screen.getByRole("button"));
 
-            const itemsRendered = screen.getAllByRole("link");
+			const itemsRendered = screen.getAllByRole("link");
 
-            itemsRendered.forEach(item => userEvent.click(item));
-            expect(itemsRendered.length).toEqual(items.length);
+			itemsRendered.forEach((item) => userEvent.click(item));
+			expect(itemsRendered.length).toEqual(items.length);
 
-            // expect(eventHandler.preventDefault).toHaveBeenCalledTimes(items.length);
+			// expect(eventHandler.preventDefault).toHaveBeenCalledTimes(items.length);
 
-            const componentForSnap = renderer.create(<ActionList items={items} />).toJSON();
+			const componentForSnap = renderer
+				.create(<ActionList items={items} />)
+				.toJSON();
 
-            expect(componentForSnap).toMatchSnapshot();
-        });
-    });
+			expect(componentForSnap).toMatchSnapshot();
+		});
+	});
 });

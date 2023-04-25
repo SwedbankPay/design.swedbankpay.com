@@ -1,182 +1,182 @@
 @import "../global.less";
 
 .pagination {
-    display: flex;
-    justify-content: center;
-    padding-left: 0;
-    margin: 1rem 0;
-    font-family: var(--brand-headline);
+	display: flex;
+	justify-content: center;
+	padding-left: 0;
+	margin: 1rem 0;
+	font-family: var(--brand-headline);
 
-    .compact {
-        margin: 0 1rem;
-        display: block;
-        align-self: center;
-        font-weight: var(--font-weight-bold);
-        font-size: 1rem;
-    }
+	.compact {
+		margin: 0 1rem;
+		display: block;
+		align-self: center;
+		font-weight: var(--font-weight-bold);
+		font-size: 1rem;
+	}
 
-    .mobile {
-        display: none;
+	.mobile {
+		display: none;
 
-        @media screen and (max-width: (@screen-sm-min - 1)) {
-            .compact();
-        }
-    }
+		@media screen and (max-width: (@screen-sm-min - 1)) {
+			.compact();
+		}
+	}
 
-    button,
-    > a {
-        all: unset;
-        margin: 0.5rem;
-        max-height: 1.75rem;
-        display: flex;
-        align-items: center;
-        align-self: center;
-        cursor: pointer;
+	button,
+	> a {
+		all: unset;
+		margin: 0.5rem;
+		max-height: 1.75rem;
+		display: flex;
+		align-items: center;
+		align-self: center;
+		cursor: pointer;
 
-        &.disabled {
-            pointer-events: none;
+		&.disabled {
+			pointer-events: none;
 
-            i {
-                &:before {
-                    color: @light-brown;
-                }
-            }
-        }
+			i {
+				&:before {
+					color: @light-brown;
+				}
+			}
+		}
 
-        &:focus,
-        &:hover {
-            i {
-                border: 2px solid @brand-secondary;
-                border-radius: 0.125rem;
-            }
-        }
+		&:focus,
+		&:hover {
+			i {
+				border: 2px solid @brand-secondary;
+				border-radius: 0.125rem;
+			}
+		}
 
-        i {
-            border: 2px solid transparent;
+		i {
+			border: 2px solid transparent;
 
-            &:before {
-                .material-icons-styling(@color: @brand-secondary, @margin: 0, @font-size: 1.75rem);
-            }
-        }
+			&:before {
+				.material-icons-styling(@color: @brand-secondary, @margin: 0, @font-size: 1.75rem);
+			}
+		}
 
-        &.arrow-start {
-            i {
-                display: unset;
+		&.arrow-start {
+			i {
+				display: unset;
 
-                &:before {
-                    content: "first_page";
-                }
-            }
-        }
+				&:before {
+					content: "first_page";
+				}
+			}
+		}
 
-        &.arrow-back {
-            i {
-                &:before {
-                    content: "chevron_left";
-                }
-            }
-        }
+		&.arrow-back {
+			i {
+				&:before {
+					content: "chevron_left";
+				}
+			}
+		}
 
-        &.arrow-forward {
-            i {
-                &:before {
-                    content: "chevron_right";
-                }
-            }
-        }
+		&.arrow-forward {
+			i {
+				&:before {
+					content: "chevron_right";
+				}
+			}
+		}
 
-        &.arrow-end {
-            i {
-                display: unset;
+		&.arrow-end {
+			i {
+				display: unset;
 
-                &:before {
-                    content: "last_page";
-                }
-            }
-        }
-    }
+				&:before {
+					content: "last_page";
+				}
+			}
+		}
+	}
 
-    ul {
-        display: none;
-        padding-left: 0;
-        margin-bottom: 0;
+	ul {
+		display: none;
+		padding-left: 0;
+		margin-bottom: 0;
 
-        li {
-            display: flex;
-            margin: 0.5rem;
-            border-radius: 0.125rem;
+		li {
+			display: flex;
+			margin: 0.5rem;
+			border-radius: 0.125rem;
 
-            a,
-            span {
-                min-width: 1.75rem;
-                color: @brand-secondary;
-                border: 2px solid transparent;
-                text-align: center;
-                cursor: pointer;
-                text-decoration: none;
-                padding-top: 0.1rem;
-            }
+			a,
+			span {
+				min-width: 1.75rem;
+				color: @brand-secondary;
+				border: 2px solid transparent;
+				text-align: center;
+				cursor: pointer;
+				text-decoration: none;
+				padding-top: 0.1rem;
+			}
 
-            span {
-                cursor: default;
-            }
+			span {
+				cursor: default;
+			}
 
-            a {
-                &:hover,
-                &:focus {
-                    border: 2px solid @brand-secondary;
-                    border-radius: 0.125rem;
-                }
+			a {
+				&:hover,
+				&:focus {
+					border: 2px solid @brand-secondary;
+					border-radius: 0.125rem;
+				}
 
-                &:focus {
-                    outline: none;
-                }
-            }
+				&:focus {
+					outline: none;
+				}
+			}
 
-            &.active {
-                background-color: @brand-secondary;
+			&.active {
+				background-color: @brand-secondary;
 
-                a {
-                    cursor: default;
-                    color: @white;
-                }
-            }
-        }
-        @media screen and (min-width: @screen-sm-min) {
-            display: flex;
-        }
-    }
+				a {
+					cursor: default;
+					color: @white;
+				}
+			}
+		}
+		@media screen and (min-width: @screen-sm-min) {
+			display: flex;
+		}
+	}
 }
 
 @media (forced-colors: active) {
-    .pagination {
-        border: 2px solid;
-        fill: currentColor;
+	.pagination {
+		border: 2px solid;
+		fill: currentColor;
 
-        ul {
-            li {
-                a {
-                    &:hover,
-                    &:focus {
-                        border: 2px dashed;
-                    }
-                }
+		ul {
+			li {
+				a {
+					&:hover,
+					&:focus {
+						border: 2px dashed;
+					}
+				}
 
-                &.active {
-                    outline: 3px dashed ButtonBorder;
-                    filter: contrast(100%);
-                }
-            }
-        }
+				&.active {
+					outline: 3px dashed ButtonBorder;
+					filter: contrast(100%);
+				}
+			}
+		}
 
-        button,
-        > a {
-            &:focus,
-            &:hover {
-                i {
-                    border: 4px dashed;
-                }
-            }
-        }
-    }
+		button,
+		> a {
+			&:focus,
+			&:hover {
+				i {
+					border: 4px dashed;
+				}
+			}
+		}
+	}
 }

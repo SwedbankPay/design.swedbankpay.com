@@ -3,100 +3,102 @@ import NavMenu from "./NavMenu";
 import { openComponent, closeComponent } from "../utils";
 
 const SELECTORS = {
-    TOPBAR: ".topbar",
-    TOPBARNAV: ".topbar-nav"
+	TOPBAR: ".topbar",
+	TOPBARNAV: ".topbar-nav",
 };
 
 const _navMenus = [];
 
-const _closeOnNavMenus = () => (_navMenus.some(menu => menu.isOpen ? menu.close() : false));
+const _closeOnNavMenus = () =>
+	_navMenus.some((menu) => (menu.isOpen ? menu.close() : false));
 
-const _addEscListenerHandler = e => {
-    if (e.key === "Escape") {
-        _closeOnNavMenus();
-    }
+const _addEscListenerHandler = (e) => {
+	if (e.key === "Escape") {
+		_closeOnNavMenus();
+	}
 };
 
 const _addEscListener = () => {
-    document.addEventListener("keydown", _addEscListenerHandler);
+	document.addEventListener("keydown", _addEscListenerHandler);
 };
 
-const _addSidebarClickCloseHandler = e => {
-    if (e.target.tagName === "A") {
-        _closeOnNavMenus();
-    }
+const _addSidebarClickCloseHandler = (e) => {
+	if (e.target.tagName === "A") {
+		_closeOnNavMenus();
+	}
 };
 
-const _addSidebarClickClose = topbar => {
-    const sidebar = topbar.querySelector(".sidebar");
+const _addSidebarClickClose = (topbar) => {
+	const sidebar = topbar.querySelector(".sidebar");
 
-    if (sidebar) {
-        sidebar.addEventListener("click", _addSidebarClickCloseHandler);
-    }
+	if (sidebar) {
+		sidebar.addEventListener("click", _addSidebarClickCloseHandler);
+	}
 };
 
 const _createTopbar = (topbar, navMenu) => {
+	if (_navMenus.filter((navMenu) => navMenu.id === topbar.id).length > 0) {
+		const updatedNavMenuObject = _navMenus.filter(
+			(navMenu) => navMenu.id === topbar.id
+		)[0];
 
-    if (_navMenus.filter(navMenu => navMenu.id === topbar.id).length > 0) {
-        const updatedNavMenuObject = _navMenus.filter(navMenu => navMenu.id === topbar.id)[0];
+		updatedNavMenuObject.constructNavMenu(topbar, navMenu);
 
-        updatedNavMenuObject.constructNavMenu(topbar, navMenu);
+		return updatedNavMenuObject;
+	}
 
-        return updatedNavMenuObject;
-    }
+	const navMenuObject = new NavMenu(topbar, navMenu);
 
-    const navMenuObject = new NavMenu(topbar, navMenu);
+	_navMenus.push(navMenuObject);
 
-    _navMenus.push(navMenuObject);
-
-    return navMenuObject;
+	return navMenuObject;
 };
 
-const open = id => openComponent(id, "topbar", _navMenus);
+const open = (id) => openComponent(id, "topbar", _navMenus);
 
-const close = id => closeComponent(id, "topbar", _navMenus);
+const close = (id) => closeComponent(id, "topbar", _navMenus);
 
-const init = id => {
-    if (id) {
-        const topbar = document.getElementById(id);
+const init = (id) => {
+	if (id) {
+		const topbar = document.getElementById(id);
 
-        if (!topbar) {
-            console.warn(`No topbar with id ${id} found`);
+		if (!topbar) {
+			console.warn(`No topbar with id ${id} found`);
 
-            return null;
-        }
+			return null;
+		}
 
-        const navMenuQuery = topbar.querySelector(SELECTORS.TOPBARNAV);
+		const navMenuQuery = topbar.querySelector(SELECTORS.TOPBARNAV);
 
-        _addEscListener();
-        _addSidebarClickClose(topbar);
+		_addEscListener();
+		_addSidebarClickClose(topbar);
 
-        return navMenuQuery ? _createTopbar(topbar, navMenuQuery) : null;
-    } else {
-        const topbars = document.querySelectorAll(SELECTORS.TOPBAR);
+		return navMenuQuery ? _createTopbar(topbar, navMenuQuery) : null;
+	} else {
+		const topbars = document.querySelectorAll(SELECTORS.TOPBAR);
 
-        if (!topbars.length) {
-            console.warn("No topbars found");
+		if (!topbars.length) {
+			console.warn("No topbars found");
 
-            return null;
-        }
+			return null;
+		}
 
-        const navMenuObjects = [...topbars].map(topbar => {
-            const navMenuQuery = topbar.querySelector(SELECTORS.TOPBARNAV);
+		const navMenuObjects = [...topbars].map((topbar) => {
+			const navMenuQuery = topbar.querySelector(SELECTORS.TOPBARNAV);
 
-            _addSidebarClickClose(topbar);
+			_addSidebarClickClose(topbar);
 
-            return navMenuQuery ? _createTopbar(topbar, navMenuQuery) : null;
-        });
+			return navMenuQuery ? _createTopbar(topbar, navMenuQuery) : null;
+		});
 
-        _addEscListener();
+		_addEscListener();
 
-        return navMenuObjects;
-    }
+		return navMenuObjects;
+	}
 };
 
 export default {
-    init,
-    open,
-    close
+	init,
+	open,
+	close,
 };

@@ -4,71 +4,78 @@ import { render } from "@testing-library/react";
 import tooltips from "./index";
 
 describe("scripts: tooltips", () => {
-    const div = document.createElement("div");
+	const div = document.createElement("div");
 
-    const tooltipComponent = id => (<button
-        id={id}
-        className="btn btn-primary"
-        type="button"
-        data-tooltip=""
-        data-tooltip-position="bottom"
-    >
-        Tooltip on bottom{"\n"}
-        <span className="tooltip">Payment capture is the process by which payments are secured once the payment has been authorized by the customer.</span>{"\n"}
-    </button>);
+	const tooltipComponent = (id) => (
+		<button
+			id={id}
+			className="btn btn-primary"
+			type="button"
+			data-tooltip=""
+			data-tooltip-position="bottom"
+		>
+			Tooltip on bottom{"\n"}
+			<span className="tooltip">
+				Payment capture is the process by which payments are secured once the
+				payment has been authorized by the customer.
+			</span>
+			{"\n"}
+		</button>
+	);
 
-    it("is defined", () => {
-        expect(tooltips).toBeDefined();
-    });
+	it("is defined", () => {
+		expect(tooltips).toBeDefined();
+	});
 
-    describe("tooltips.init", () => {
-        it("is defined", () => {
-            expect(tooltips.init).toBeDefined();
-            expect(tooltips.init).toBeInstanceOf(Function);
-        });
+	describe("tooltips.init", () => {
+		it("is defined", () => {
+			expect(tooltips.init).toBeDefined();
+			expect(tooltips.init).toBeInstanceOf(Function);
+		});
 
-        it("returns a single object when one element is initialized", () => {
-            render(tooltipComponent("test-tooltip"));
+		it("returns a single object when one element is initialized", () => {
+			render(tooltipComponent("test-tooltip"));
 
-            const renderedTooltip = document.querySelector(".tooltip");
+			const renderedTooltip = document.querySelector(".tooltip");
 
-            expect(renderedTooltip).toBeTruthy();
+			expect(renderedTooltip).toBeTruthy();
 
-            const returnVal = tooltips.init("test-tooltip");
+			const returnVal = tooltips.init("test-tooltip");
 
-            expect(Array.isArray(returnVal)).toBeFalsy();
-        });
+			expect(Array.isArray(returnVal)).toBeFalsy();
+		});
 
-        it("returns an array of objects when more than one element is initialized", () => {
-            render(
-                <>
-                    {tooltipComponent("test-tooltip")}
-                    {tooltipComponent("test-tooltip-2")}
-                </>);
+		it("returns an array of objects when more than one element is initialized", () => {
+			render(
+				<>
+					{tooltipComponent("test-tooltip")}
+					{tooltipComponent("test-tooltip-2")}
+				</>
+			);
 
-            const renderedAlert = document.querySelectorAll(".tooltip");
+			const renderedAlert = document.querySelectorAll(".tooltip");
 
-            expect(renderedAlert).toBeTruthy();
-            expect(renderedAlert.length).toEqual(2);
+			expect(renderedAlert).toBeTruthy();
+			expect(renderedAlert.length).toEqual(2);
 
-            const returnVal = tooltips.init();
+			const returnVal = tooltips.init();
 
-            expect(Array.isArray(returnVal)).toBeTruthy();
-            expect(returnVal.length).toEqual(2);
-        });
+			expect(Array.isArray(returnVal)).toBeTruthy();
+			expect(returnVal.length).toEqual(2);
+		});
 
-        it("returns null if no tooltip is found and prints a warning message", () => {
-            console.warn = jest.fn();
+		it("returns null if no tooltip is found and prints a warning message", () => {
+			console.warn = jest.fn();
 
-            expect(tooltips.init()).toBeNull();
-            expect(console.warn).toHaveBeenCalled();
-        });
+			expect(tooltips.init()).toBeNull();
+			expect(console.warn).toHaveBeenCalled();
+		});
 
-        it("returns null if an invalid ID is passed and prints a warning message", () => {
-            console.warn = jest.fn();
+		it("returns null if an invalid ID is passed and prints a warning message", () => {
+			console.warn = jest.fn();
 
-            expect(tooltips.init("test")).toBeNull();
-            expect(console.warn).toHaveBeenCalled();
-        });
-    });
+			expect(tooltips.init("test")).toBeNull();
+			expect(console.warn).toHaveBeenCalled();
+		});
+	});
 });

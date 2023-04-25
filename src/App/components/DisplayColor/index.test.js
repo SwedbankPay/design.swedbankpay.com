@@ -6,51 +6,48 @@ import "@testing-library/jest-dom";
 import DisplayColor from "./index";
 
 describe("DisplayColor", () => {
-    it("is defined", () => {
-        expect(DisplayColor).toBeDefined();
-    });
+	it("is defined", () => {
+		expect(DisplayColor).toBeDefined();
+	});
 
-    it("renders with required props", () => {
-        const colors =
-            {
-                hex: "#FDC129",
-                rgb: "253, 193, 41"
-            };
+	it("renders with required props", () => {
+		const colors = {
+			hex: "#FDC129",
+			rgb: "253, 193, 41",
+		};
 
-        render(<DisplayColor {...colors}/>);
+		render(<DisplayColor {...colors} />);
 
-        const componentForSnap = renderer.create(<DisplayColor {...colors}/>);
+		const componentForSnap = renderer.create(<DisplayColor {...colors} />);
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-    it("alert if required properties is not provided", () => {
-        const colors =
-            {
-                fontColor: "2F2424",
-                border: "has-border"
-            };
+	it("alert if required properties is not provided", () => {
+		const colors = {
+			fontColor: "2F2424",
+			border: "has-border",
+		};
 
-        console.error = jest.fn();
+		console.error = jest.fn();
 
-        render(<DisplayColor {...colors}/>);
+		render(<DisplayColor {...colors} />);
 
-        expect(console.error).toHaveBeenCalled();
-    });
+		expect(console.error).toHaveBeenCalled();
+	});
 
-    it("renders with optional props", () => {
-        const colors =
-            {
-                hex: "#FDC129",
-                rgb: "253, 193, 41",
-                fontColor: "2F2424",
-                border: "has-border"
-            };
+	it("renders with optional props", () => {
+		const colors = {
+			hex: "#FDC129",
+			rgb: "253, 193, 41",
+			fontColor: "2F2424",
+			border: "has-border",
+		};
 
-        render(<DisplayColor {...colors}/>);
+		render(<DisplayColor {...colors} />);
 
-        const componentForSnap = renderer.create(<DisplayColor {...colors}/>);
+		const componentForSnap = renderer.create(<DisplayColor {...colors} />);
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 });

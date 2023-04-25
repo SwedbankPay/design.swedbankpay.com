@@ -6,115 +6,133 @@ import "@testing-library/jest-dom";
 import Table from "./index";
 
 const createTestTable = () => {
-    const tableData = {
-        thead: [
-            { content: "#" },
-            { content: "Name" },
-            { content: "Status" }
-        ],
-        tbody: []
-    };
+	const tableData = {
+		thead: [{ content: "#" }, { content: "Name" }, { content: "Status" }],
+		tbody: [],
+	};
 
-    const array = ["McGregor", "Sean O'Malley", "Bisping", "Mike Perry"];
-    const status = ["success", "danger", "neutral", "inactive"];
+	const array = ["McGregor", "Sean O'Malley", "Bisping", "Mike Perry"];
+	const status = ["success", "danger", "neutral", "inactive"];
 
-    array.map((name, i) => {
-        tableData.tbody.push({ tr: [
-            { content: i + 1,
-                th: true },
-            { content: name },
-            { content: <span className={`status status-${status[i]}`}>{status[i].charAt(0).toUpperCase() + status[i].slice(1)}</span> }
-        ] });
-    });
+	array.map((name, i) => {
+		tableData.tbody.push({
+			tr: [
+				{ content: i + 1, th: true },
+				{ content: name },
+				{
+					content: (
+						<span className={`status status-${status[i]}`}>
+							{status[i].charAt(0).toUpperCase() + status[i].slice(1)}
+						</span>
+					),
+				},
+			],
+		});
+	});
 
-    return tableData;
+	return tableData;
 };
 
 describe("Component: Table -", () => {
-    it("is defined", () => {
-        expect(Table).toBeDefined();
-    });
+	it("is defined", () => {
+		expect(Table).toBeDefined();
+	});
 
-    it("renders", () => {
+	it("renders", () => {
+		const componentForSnap = renderer.create(
+			<Table tableData={createTestTable()} caption="Test" />
+		);
 
-        const componentForSnap = renderer.create(<Table tableData={createTestTable()} caption="Test" />);
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+	it("renders with caption = Test", () => {
+		render(<Table tableData={createTestTable()} caption="Test" />);
 
-    it("renders with caption = Test", () => {
-        render(<Table tableData={createTestTable()} caption="Test"/>);
+		expect(
+			screen.getByRole("table").querySelector("caption")
+		).toHaveTextContent("Test");
+	});
 
-        expect(screen.getByRole("table").querySelector("caption")).toHaveTextContent("Test");
-    });
+	it("renders with no class name plain, condensed, hover, divided or sortable when props are not included", () => {
+		render(<Table tableData={createTestTable()} caption="Test" />);
 
-    it("renders with no class name plain, condensed, hover, divided or sortable when props are not included", () => {
-        render(<Table tableData={createTestTable()} caption="Test"/>);
+		expect(screen.getByRole("table")).not.toHaveClass("table-plain");
+		expect(screen.getByRole("table")).not.toHaveClass("table-condensed");
+		expect(screen.getByRole("table")).not.toHaveClass("table-hover");
+		expect(screen.getByRole("table")).not.toHaveClass("table-divided");
+		expect(screen.getByRole("table")).not.toHaveClass("sortable");
+		expect(screen.getByRole("table")).toHaveClass("table");
 
-        expect(screen.getByRole("table")).not.toHaveClass("table-plain");
-        expect(screen.getByRole("table")).not.toHaveClass("table-condensed");
-        expect(screen.getByRole("table")).not.toHaveClass("table-hover");
-        expect(screen.getByRole("table")).not.toHaveClass("table-divided");
-        expect(screen.getByRole("table")).not.toHaveClass("sortable");
-        expect(screen.getByRole("table")).toHaveClass("table");
+		const componentForSnap = renderer.create(
+			<Table tableData={createTestTable()} caption="Test" />
+		);
 
-        const componentForSnap = renderer.create(<Table tableData={createTestTable()} caption="Test"/>);
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+	it("renders with class name table-plain when plain prop is included", () => {
+		render(<Table tableData={createTestTable()} caption="Test" plain />);
 
-    it("renders with class name table-plain when plain prop is included", () => {
-        render(<Table tableData={createTestTable()} caption="Test" plain/>);
+		expect(screen.getByRole("table")).toHaveClass("table");
+		expect(screen.getByRole("table")).toHaveClass("table-plain");
 
-        expect(screen.getByRole("table")).toHaveClass("table");
-        expect(screen.getByRole("table")).toHaveClass("table-plain");
+		const componentForSnap = renderer.create(
+			<Table tableData={createTestTable()} caption="Test" plain />
+		);
 
-        const componentForSnap = renderer.create(<Table tableData={createTestTable()} caption="Test" plain/>);
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+	it("renders with class name table-condensed when condensed prop is included", () => {
+		render(<Table tableData={createTestTable()} caption="Test" condensed />);
 
-    it("renders with class name table-condensed when condensed prop is included", () => {
-        render(<Table tableData={createTestTable()} caption="Test" condensed/>);
+		expect(screen.getByRole("table")).toHaveClass("table");
+		expect(screen.getByRole("table")).toHaveClass("table-condensed");
 
-        expect(screen.getByRole("table")).toHaveClass("table");
-        expect(screen.getByRole("table")).toHaveClass("table-condensed");
+		const componentForSnap = renderer.create(
+			<Table tableData={createTestTable()} caption="Test" condensed />
+		);
 
-        const componentForSnap = renderer.create(<Table tableData={createTestTable()} caption="Test" condensed/>);
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+	it("renders with class name table-hover when hover prop is included", () => {
+		render(<Table tableData={createTestTable()} caption="Test" hover />);
 
-    it("renders with class name table-hover when hover prop is included", () => {
-        render(<Table tableData={createTestTable()} caption="Test" hover/>);
+		expect(screen.getByRole("table")).toHaveClass("table");
+		expect(screen.getByRole("table")).toHaveClass("table-hover");
 
-        expect(screen.getByRole("table")).toHaveClass("table");
-        expect(screen.getByRole("table")).toHaveClass("table-hover");
+		const componentForSnap = renderer.create(
+			<Table tableData={createTestTable()} caption="Test" hover />
+		);
 
-        const componentForSnap = renderer.create(<Table tableData={createTestTable()} caption="Test" hover/>);
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+	it("renders with class name table-divided when divided prop is included", () => {
+		render(<Table tableData={createTestTable()} caption="Test" divided />);
 
-    it("renders with class name table-divided when divided prop is included", () => {
-        render(<Table tableData={createTestTable()} caption="Test" divided/>);
+		expect(screen.getByRole("table")).toHaveClass("table");
+		expect(screen.getByRole("table")).toHaveClass("table-divided");
 
-        expect(screen.getByRole("table")).toHaveClass("table");
-        expect(screen.getByRole("table")).toHaveClass("table-divided");
+		const componentForSnap = renderer.create(
+			<Table tableData={createTestTable()} caption="Test" divided />
+		);
 
-        const componentForSnap = renderer.create(<Table tableData={createTestTable()} caption="Test" divided/>);
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+	it("renders with class name sortable when sortable prop is included", () => {
+		render(<Table tableData={createTestTable()} caption="Test" sortable />);
 
-    it("renders with class name sortable when sortable prop is included", () => {
-        render(<Table tableData={createTestTable()} caption="Test" sortable/>);
+		expect(screen.getByRole("table")).toHaveClass("table");
+		expect(screen.getByRole("table")).toHaveClass("sortable");
 
-        expect(screen.getByRole("table")).toHaveClass("table");
-        expect(screen.getByRole("table")).toHaveClass("sortable");
+		const componentForSnap = renderer.create(
+			<Table tableData={createTestTable()} caption="Test" sortable />
+		);
 
-        const componentForSnap = renderer.create(<Table tableData={createTestTable()} caption="Test" sortable/>);
-
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 });

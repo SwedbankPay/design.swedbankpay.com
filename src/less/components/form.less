@@ -1,10 +1,10 @@
 @import "../global.less";
 @import "../core/normalize.less";
 
-@input-padding-y:                           0.375rem;
-@input-line-height:                         @line-height-base;
-@input-form-control-height:                 3rem;
-@input-border-width:                        1px 1px 2px;
+@input-padding-y: 0.375rem;
+@input-line-height: @line-height-base;
+@input-form-control-height: 3rem;
+@input-border-width: 1px 1px 2px;
 
 // Form control sizing
 //
@@ -17,411 +17,414 @@
 @font-size;
 @line-height;
 @border-radius) {
-    height: @input-height;
-    padding: @padding-vertical @padding-horizontal;
-    font-size: @font-size;
-    line-height: @line-height;
-    border-radius: @border-radius;
+	height: @input-height;
+	padding: @padding-vertical @padding-horizontal;
+	font-size: @font-size;
+	line-height: @line-height;
+	border-radius: @border-radius;
 
-    select& {
-        height: @input-height;
-        line-height: @input-height;
-    }
+	select& {
+		height: @input-height;
+		line-height: @input-height;
+	}
 
-    textarea&,
-    select[multiple]& {
-        height: auto;
-    }
+	textarea&,
+	select[multiple]& {
+		height: auto;
+	}
 }
 
 label {
-    display: inline-flex;
-    align-items: center;
-    max-width: 100%;
-    margin-bottom: @base-margin-xs;
-    font-weight: var(--font-weight-light);
-    font-size: var(--base-font-size);
-    line-height: 1.5;
+	display: inline-flex;
+	align-items: center;
+	max-width: 100%;
+	margin-bottom: @base-margin-xs;
+	font-weight: var(--font-weight-light);
+	font-size: var(--base-font-size);
+	line-height: 1.5;
 
-    .required-asterisk {
-        color: @brand-error;
-        margin-left: 0.25rem;
-        font-weight: normal;
-        font-size: 1rem;
-        line-height: 1;
+	.required-asterisk {
+		color: @brand-error;
+		margin-left: 0.25rem;
+		font-weight: normal;
+		font-size: 1rem;
+		line-height: 1;
 
-        .has-success & {
-            color: @brand-success;
-        }
-    }
+		.has-success & {
+			color: @brand-success;
+		}
+	}
 
-    .material-icons {
-        color: @brand-accent-links;
-    }
+	.material-icons {
+		color: @brand-accent-links;
+	}
 }
 
 fieldset {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    margin-bottom: @base-margin;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	margin-bottom: @base-margin;
 
-    /* Chrome and Firefox set a `min-width: min-content;` on fieldsets,
+	/* Chrome and Firefox set a `min-width: min-content;` on fieldsets,
      * so we reset that to ensure it behaves more like a standard block element.
      * See https://github.com/twbs/bootstrap/issues/12359. */
-    min-width: 0;
+	min-width: 0;
 
-    &:disabled {
-        textarea {
-            resize: none;
-        }
+	&:disabled {
+		textarea {
+			resize: none;
+		}
 
-        .checkbox input[type="checkbox"] {
-            + label:after {
-                background-color: @input-bg-disabled;
-                border-color: @input-checked-bg-disabled;
-                cursor: not-allowed;
-            }
+		.checkbox input[type="checkbox"] {
+			+ label:after {
+				background-color: @input-bg-disabled;
+				border-color: @input-checked-bg-disabled;
+				cursor: not-allowed;
+			}
 
-            + label:before {
-                content: none;
-            }
+			+ label:before {
+				content: none;
+			}
 
-            &:checked + label:after {
-                background-color: @input-checked-bg-disabled;
-            }
+			&:checked + label:after {
+				background-color: @input-checked-bg-disabled;
+			}
 
-            &:not(:checked) {
-                &:hover + label:after {
-                    border-color: @brand-secondary-light-3;
-                }
-            }
+			&:not(:checked) {
+				&:hover + label:after {
+					border-color: @brand-secondary-light-3;
+				}
+			}
 
-            + label,
-            + label:before,
-            &:after,
-            &:checked + label:before {
-                cursor: not-allowed;
-            }
-        }
+			+ label,
+			+ label:before,
+			&:after,
+			&:checked + label:before {
+				cursor: not-allowed;
+			}
+		}
 
-        .radio input[type="radio"] {
-            + label:before {
-                background-color: @input-bg-disabled;
-                border-color: @input-checked-bg-disabled;
-                box-shadow: none;
-            }
+		.radio input[type="radio"] {
+			+ label:before {
+				background-color: @input-bg-disabled;
+				border-color: @input-checked-bg-disabled;
+				box-shadow: none;
+			}
 
-            + label,
-            + label:before,
-            &:checked + label:before {
-                cursor: not-allowed;
-            }
-        }
+			+ label,
+			+ label:before,
+			&:checked + label:before {
+				cursor: not-allowed;
+			}
+		}
 
-        .togglebox input[type="checkbox"] {
-            + label:before,
-            + label:after {
-                background-color: @input-bg-disabled;
-                border-color: @input-checked-bg-disabled;
-            }
+		.togglebox input[type="checkbox"] {
+			+ label:before,
+			+ label:after {
+				background-color: @input-bg-disabled;
+				border-color: @input-checked-bg-disabled;
+			}
 
-            &:checked + label:before {
-                background-color: @input-checked-bg-disabled;
-            }
+			&:checked + label:before {
+				background-color: @input-checked-bg-disabled;
+			}
 
-            + label,
-            + label:before,
-            + label:after,
-            &:checked + label:before,
-            &:checked + label:after {
-                cursor: not-allowed;
-            }
-        }
-    }
+			+ label,
+			+ label:before,
+			+ label:after,
+			&:checked + label:before,
+			&:checked + label:after {
+				cursor: not-allowed;
+			}
+		}
+	}
 }
 
 legend {
-    display: block;
-    width: 100%;
-    margin-bottom: @base-margin;
-    line-height: 2.8rem;
-    color: @brand-secondary;
-    border: 0;
+	display: block;
+	width: 100%;
+	margin-bottom: @base-margin;
+	line-height: 2.8rem;
+	color: @brand-secondary;
+	border: 0;
 }
 
 .form-control-text,
 .form-control {
-    display: block;
-    width: 100%;
-    font-size: var(--base-font-size);
-    line-height: @input-line-height;
-    color: @input-color;
+	display: block;
+	width: 100%;
+	font-size: var(--base-font-size);
+	line-height: @input-line-height;
+	color: @input-color;
 
-    &.medium {
-        height: 2.5rem;
-        font-size: 0.875rem;
-    }
+	&.medium {
+		height: 2.5rem;
+		font-size: 0.875rem;
+	}
 
-    &.small {
-        height: 2rem;
-        font-size: 0.875rem;
-    }
+	&.small {
+		height: 2rem;
+		font-size: 0.875rem;
+	}
 }
 
 .form-control-text {
-    padding: @input-padding-y 0;
+	padding: @input-padding-y 0;
 }
 
 .form-control {
-    height: 56px;
-    padding: var(--input-padding-y, 12px) var(--input-padding-x, 16px);
-    background-color: var(--white);
-    border: var(--border-width, 1px) solid var(--input-border-color);
-    border-radius: var(--border-radius, 8px);
+	height: 56px;
+	padding: var(--input-padding-y, 12px) var(--input-padding-x, 16px);
+	background-color: var(--white);
+	border: var(--border-width, 1px) solid var(--input-border-color);
+	border-radius: var(--border-radius, 8px);
 
-    input::placeholder {
-        color: var(--text-muted);
-    }
+	input::placeholder {
+		color: var(--text-muted);
+	}
 
-    &:focus-within {
-        outline: none;
-        border-width: var(--border-width-focus, 2px);
-        padding: calc(var(--input-padding-y, 12px) - var(border-width-diff-focus, 1px)) calc(var(--input-padding-x, 12px) - var(border-width-diff-focus, 1px));
-        border-color: var(--input-border-focus-color);
-    }
+	&:focus-within {
+		outline: none;
+		border-width: var(--border-width-focus, 2px);
+		padding: calc(
+				var(--input-padding-y, 12px) - var(border-width-diff-focus, 1px)
+			)
+			calc(var(--input-padding-x, 12px) - var(border-width-diff-focus, 1px));
+		border-color: var(--input-border-focus-color);
+	}
 
-    /* HTML5 says that controls under a fieldset > legend:first-child wont be
+	/* HTML5 says that controls under a fieldset > legend:first-child wont be
      * disabled if the fieldset is disabled. Due to implementation difficulty, we
      * dont honor that edge case; we style them as disabled anyway.
      */
-    &[disabled],
-    &[readonly],
-    fieldset[disabled] & {
-        &:not(.flatpickr-input) {
-            opacity: 1; /* iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655 */
+	&[disabled],
+	&[readonly],
+	fieldset[disabled] & {
+		&:not(.flatpickr-input) {
+			opacity: 1; /* iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655 */
 
-            &::placeholder {
-                color: @brand-secondary-light-3;
-            }
+			&::placeholder {
+				color: @brand-secondary-light-3;
+			}
 
-            color: @brand-secondary-light-3;
-            border-bottom-color: @brand-secondary-light-3;
-        }
-    }
+			color: @brand-secondary-light-3;
+			border-bottom-color: @brand-secondary-light-3;
+		}
+	}
 
-    &[disabled],
-    fieldset[disabled] & {
-        cursor: not-allowed;
-    }
+	&[disabled],
+	fieldset[disabled] & {
+		cursor: not-allowed;
+	}
 
-    // Reset height for `textarea`s
-    textarea& {
-        height: auto;
-        padding: var(--input-width-y, 12px) var(--input-width-x, 16px);
-    }
+	// Reset height for `textarea`s
+	textarea& {
+		height: auto;
+		padding: var(--input-width-y, 12px) var(--input-width-x, 16px);
+	}
 }
 
 .form-group {
-    label {
-        font-size: 1.25rem;
-        line-height: 1.5rem;
-        margin-bottom: 0.5rem;
-        color: var(--brand-secondary);
-        font-family: var(--brand-headline);
-        font-weight: var(--font-weight-header, 400);
-    }
+	label {
+		font-size: 1.25rem;
+		line-height: 1.5rem;
+		margin-bottom: 0.5rem;
+		color: var(--brand-secondary);
+		font-family: var(--brand-headline);
+		font-weight: var(--font-weight-header, 400);
+	}
 
-    &.small {
-        .form-control,
-        .input-group {
-            height: 2rem;
-            font-size: 0.875rem;
+	&.small {
+		.form-control,
+		.input-group {
+			height: 2rem;
+			font-size: 0.875rem;
 
-            .input-group-addon {
-                height: 2rem;
-                font-size: 0.875rem;
-            }
-        }
-    }
+			.input-group-addon {
+				height: 2rem;
+				font-size: 0.875rem;
+			}
+		}
+	}
 
-    &.medium {
-        .form-control,
-        .input-group {
-            height: 2.5rem;
-            font-size: 0.875rem;
+	&.medium {
+		.form-control,
+		.input-group {
+			height: 2.5rem;
+			font-size: 0.875rem;
 
-            .input-group-addon {
-                height: 2.5rem;
-                font-size: 0.875rem;
-            }
-        }
-    }
+			.input-group-addon {
+				height: 2.5rem;
+				font-size: 0.875rem;
+			}
+		}
+	}
 
-    margin-bottom: @base-margin-lg;
+	margin-bottom: @base-margin-lg;
 
-    .input-group .form-control:not(:last-child) {
-        border-right: none;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-    }
+	.input-group .form-control:not(:last-child) {
+		border-right: none;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
 
-    &.disabled,
-    [disabled] {
-        color: @brand-secondary-light-3;
+	&.disabled,
+	[disabled] {
+		color: @brand-secondary-light-3;
 
-        .input-group-addon {
-            border-color: var(--text-disabled);
-            color: var(--text-disabled);
+		.input-group-addon {
+			border-color: var(--text-disabled);
+			color: var(--text-disabled);
 
-            i {
-                color: var(--text-disabled);
-            }
-        }
+			i {
+				color: var(--text-disabled);
+			}
+		}
 
-        i[data-tooltip] {
-            color: @brand-secondary-light-3;
-            pointer-events: none;
-        }
+		i[data-tooltip] {
+			color: @brand-secondary-light-3;
+			pointer-events: none;
+		}
 
-        input::placeholder {
-            color: var(--text-disabled);
-        }
+		input::placeholder {
+			color: var(--text-disabled);
+		}
 
-        &.form-control {
-            border-color: var(--text-disabled);
-        }
+		&.form-control {
+			border-color: var(--text-disabled);
+		}
 
-        label {
-            color: var(--text-disabled);
-        }
-    }
+		label {
+			color: var(--text-disabled);
+		}
+	}
 
-    &.has-error {
-        .form-control {
-            border-color: var(--brand-error);
-        }
+	&.has-error {
+		.form-control {
+			border-color: var(--brand-error);
+		}
 
-        .input-group-addon,
-        .input-group-addon.postfix {
-            border-color: var(--brand-error);
-        }
+		.input-group-addon,
+		.input-group-addon.postfix {
+			border-color: var(--brand-error);
+		}
 
-        i {
-            color: var(--brand-error);
-        }
+		i {
+			color: var(--brand-error);
+		}
 
-        .help-block {
-            color: var(--brand-error);
-        }
+		.help-block {
+			color: var(--brand-error);
+		}
 
-        &:focus-within {
-            .form-control {
-                border-color: var(--input-border-focus-color);
-            }
-        }
-    }
+		&:focus-within {
+			.form-control {
+				border-color: var(--input-border-focus-color);
+			}
+		}
+	}
 
-    &.has-success {
-        .form-control {
-            border-color: var(--input-border-success-color);
-        }
+	&.has-success {
+		.form-control {
+			border-color: var(--input-border-success-color);
+		}
 
-        .input-group-addon,
-        .input-group-addon.postfix {
-            border-color: var(--input-border-success-color);
-        }
+		.input-group-addon,
+		.input-group-addon.postfix {
+			border-color: var(--input-border-success-color);
+		}
 
-        i {
-            color: var(--input-border-success-color);
-        }
+		i {
+			color: var(--input-border-success-color);
+		}
 
-        &:focus-within {
-            .form-control {
-                border-color: var(--input-border-focus-color);
-            }
-        }
-    }
+		&:focus-within {
+			.form-control {
+				border-color: var(--input-border-focus-color);
+			}
+		}
+	}
 }
 
 .checkbox,
 .radio,
 .togglebox {
-    label {
-        cursor: pointer;
-        text-transform: none;
-    }
+	label {
+		cursor: pointer;
+		text-transform: none;
+	}
 
-    input[disabled] + label {
-        color: @brand-secondary-light-3;
-    }
+	input[disabled] + label {
+		color: @brand-secondary-light-3;
+	}
 }
 
 .help-block,
 .hint-text {
-    position: relative;
-    display: block;
-    margin: (@base-margin * 0.5) 0;
-    font-size: 0.875rem;
-    line-height: 1rem;
-    min-height: 1rem;
+	position: relative;
+	display: block;
+	margin: (@base-margin * 0.5) 0;
+	font-size: 0.875rem;
+	line-height: 1rem;
+	min-height: 1rem;
 }
 
 .help-block {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 
-    i {
-        font-size: 20px;
-        margin-right: 0.5rem;
-    }
+	i {
+		font-size: 20px;
+		margin-right: 0.5rem;
+	}
 }
 
 .hint-text {
-    color: @medium-brown;
+	color: @medium-brown;
 }
 
 textarea {
-    resize: vertical;
+	resize: vertical;
 }
 
 textarea[disabled] {
-    resize: none;
+	resize: none;
 }
 
 select {
-    background: url(../../icons/shapes/expand-more.svg);
-    background-repeat: no-repeat;
-    background-position: right 0.5rem center;
-    -moz-appearance: none;
-    -webkit-appearance: none;
+	background: url(../../icons/shapes/expand-more.svg);
+	background-repeat: no-repeat;
+	background-position: right 0.5rem center;
+	-moz-appearance: none;
+	-webkit-appearance: none;
 
-    &.form-control {
-        padding-right: 2.5rem;
-    }
+	&.form-control {
+		padding-right: 2.5rem;
+	}
 }
 
 select::-ms-expand {
-    display: none;
+	display: none;
 }
 
 select[multiple] {
-    height: auto;
-    padding: 0;
+	height: auto;
+	padding: 0;
 
-    option {
-        padding: (@base-margin * 0.187) (@base-margin * 0.375);
-    }
+	option {
+		padding: (@base-margin * 0.187) (@base-margin * 0.375);
+	}
 }
 
 @media (forced-colors: active) {
-    select {
-        filter: saturate(1000%);
-    }
+	select {
+		filter: saturate(1000%);
+	}
 
-    button {
-        &:focus {
-            outline: 2px solid transparent;
-        }
-    }
+	button {
+		&:focus {
+			outline: 2px solid transparent;
+		}
+	}
 }

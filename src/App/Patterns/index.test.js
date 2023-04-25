@@ -4,15 +4,17 @@ import { BrowserRouter } from "react-router-dom";
 import Patterns from "./index";
 
 describe("Patterns: index", () => {
-    it("is defined", () => {
-        expect(Patterns).toBeDefined();
-    });
+	it("is defined", () => {
+		expect(Patterns).toBeDefined();
+	});
 
-    it("renders", () => {
-        const patterns = renderer.create(<BrowserRouter>
-            <Patterns />
-        </BrowserRouter>);
+	it("renders", () => {
+		const patterns = renderer.create(
+			<BrowserRouter>
+				<Patterns />
+			</BrowserRouter>
+		);
 
-        expect(patterns.toJSON()).toMatchSnapshot();
-    });
+		expect(patterns.toJSON()).toMatchSnapshot();
+	});
 });
