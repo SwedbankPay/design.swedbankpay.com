@@ -175,9 +175,9 @@ legend {
 
 .form-control {
     height: 56px;
-    padding: 12px 16px;
+    padding: var(--input-padding-y, 12px) var(--input-padding-x, 16px);
     background-color: var(--white);
-    border: 1px solid var(--input-border-color);
+    border: var(--border-width, 1px) solid var(--input-border-color);
     border-radius: var(--border-radius, 8px);
 
     input::placeholder {
@@ -186,7 +186,8 @@ legend {
 
     &:focus-within {
         outline: none;
-        border-width: 2px;
+        border-width: var(--border-width-focus, 2px);
+        padding: calc(var(--input-padding-y, 12px) - var(border-width-diff-focus, 1px)) calc(var(--input-padding-x, 12px) - var(border-width-diff-focus, 1px));
         border-color: var(--input-border-focus-color);
     }
 
@@ -217,7 +218,7 @@ legend {
     // Reset height for `textarea`s
     textarea& {
         height: auto;
-        padding: 1rem 0.75rem;
+        padding: var(--input-width-y, 12px) var(--input-width-x, 16px);
     }
 }
 
@@ -326,6 +327,7 @@ legend {
             border-color: var(--input-border-success-color);
         }
 
+        .input-group-addon,
         .input-group-addon.postfix {
             border-color: var(--input-border-success-color);
         }

@@ -18,9 +18,11 @@ exports[`Component: Sheet - does not render with data-require-action if it is se
       >
         Test
       </h2>
+      
+
       <button
         aria-label="Close sheet"
-        className="sheet-close btn btn-icon btn-small"
+        className="sheet-close btn btn-icon btn-xs"
         id="sheetClose"
       >
         
@@ -59,9 +61,11 @@ exports[`Component: Sheet - renders 1`] = `
       >
         Test
       </h2>
+      
+
       <button
         aria-label="Close sheet"
-        className="sheet-close btn btn-icon btn-small"
+        className="sheet-close btn btn-icon btn-xs"
         id="sheetClose"
       >
         
@@ -100,9 +104,11 @@ exports[`Component: Sheet - renders with a close icon 1`] = `
       >
         test
       </h2>
+      
+
       <button
         aria-label="Close sheet"
-        className="sheet-close btn btn-icon btn-small"
+        className="sheet-close btn btn-icon btn-xs"
         id="sheetClose"
       >
         
@@ -142,9 +148,11 @@ exports[`Component: Sheet - renders with an ID 1`] = `
       >
         Test
       </h2>
+      
+
       <button
         aria-label="Close sheet"
-        className="sheet-close btn btn-icon btn-small"
+        className="sheet-close btn btn-icon btn-xs"
         id="sheetClose"
       >
         
@@ -183,9 +191,11 @@ exports[`Component: Sheet - renders with children 1`] = `
       >
         Test
       </h2>
+      
+
       <button
         aria-label="Close sheet"
-        className="sheet-close btn btn-icon btn-small"
+        className="sheet-close btn btn-icon btn-xs"
         id="sheetClose"
       >
         
@@ -226,9 +236,11 @@ exports[`Component: Sheet - renders with the data-require-action attribute 1`] =
       >
         Test
       </h2>
+      
+
       <button
         aria-label="Close sheet"
-        className="sheet-close btn btn-icon btn-small"
+        className="sheet-close btn btn-icon btn-xs"
         id="sheetClose"
       >
         

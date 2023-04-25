@@ -4,7 +4,9 @@ import { ComponentPreview, DocContainer } from "@docutils";
 import ButtonComponent from "@components/Button";
 import CodeTags from "@components/CodeTags";
 
-import { overviewButtons, buttonUtilClasses } from "./constants";
+import { overviewButtons, buttonUtilClasses, destructiveButtons } from "./constants";
+
+const brand = process.env.brand;
 
 const Overview = () => (
     <section>
@@ -28,6 +30,17 @@ const CombiningButtons = () => (
                 <ButtonComponent type="tertiary" size="sm" label="Back" />{"\n"}
             </div>
         </ComponentPreview>
+    </section>
+);
+
+const DestructiveButton = () => (
+    <section>
+        <h2 id="destructive-button">Destructive button</h2>
+        <p>
+            Only use warning buttons for actions with serious destructive consequences that cannot be easily recovered or undone by a user.
+            For example, permanently deleting an account.
+        </p>
+        <ComponentPreview language="html" showCasePanel showCasePanelAdvanced={destructiveButtons} codeFigure />
     </section>
 );
 
@@ -77,6 +90,7 @@ const Buttons = () => (
         Buttons communicate actions that users can take. Buttons are typically placed throughout your UI, in places like: Dialogs, Modals, Forms, Cards and Toolbars.
         </p>
         <Overview />
+        {brand === "payex" && <DestructiveButton />}
         <CombiningButtons />
         <DeveloperDocumentation />
         <UtilityClasses/>

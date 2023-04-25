@@ -1,75 +1,34 @@
 # Changelog
 
-## [10.8.0] - 13.04.2023
+## [10.8.1] - 24.04.2023
 
 ## Component changes
--   We are progressively migrating to CSS Custom Properties (aka CSS variables)
 
--   Button component
-    Removed: (Breaking changes in form of deleting code)
-    -   less-functions for creating diff buttons; button-variant, button-default-variant, button-outline-variant, button-link-variant, button-ghost, button-active-state, button-size, button-icon-size, btn-loader-variant
-    -   specific less variables
-    -   specific focus states
-    -   btn-guiding-destructive, btn-executive-destructive, btn-link-destructive
-    -   btn-icon-\<size>
-    -   btn-link
+-   Input text &amp; textarea fields
+    -   fix Layout shift when focus-within
+    -   fix border color around prefix on success state
+-   Buttons
+    -   fix colors PayEx destructive buttons when disabled
 
-    Changed: (UI breaking changes)
-    -   btn-primary (new design)
-    -   btn-secondary (new design)
-    -   button sizes: btn-lg, btn-sm, btn-xs
-    -   dropdown toggle
-
-    Added: (new features)
-    -   btn-tertiary (new button)
-    -   btn-xl (size class)
-    -   btn-icon class (can be combined with btn-\<size> classes)
-
--   Input field
-    Removed:
-    -   less functions for error validation from validation.less
-    -   less function for focus state
-
-    Added/Updated:
-    -   CSS variables for input fields Both SwedBP and PayEx variables
-    -   Error message/icon
-    -   Success message/icon
-    -   Simplified error/success prop and correct presentation of component with belonging icons/colors
-
--   Colors (Swedbankpay only):
-    -   Text color defaults to Brown-solid (instead of Brown previously). This enables new background colors now having enough color contrast with brown-solid text (Turquoise, brown-soft, brown-light, orange)
-
--   Typography
-    -   H3 font-size increased
-    -   Fixed incorrect header font-size
-    -   Fixed incorrect header font-weight
-    -   Removed h6 (code/UI Breaking-change)
-    -   Converted all .less Typography variables to CSS custom properties (font-families, font-sizes, line-height, weight, ...) + continue migration of colors to CSS variables
-
--   Normalize.less -> import as first import so every import after that takes precedence
-    -   Fixes headers font-size, and possible many more things.
-
--   Expanding hint text
-    -   Delete the functionality and style; we are not supporting it anymore.
+-   We continue on our migration to CSS Custom Properties
 
 ## Design Guide documentation changes
--   Button documentation
-    -   Removed Destructive button documentation
-    -   Added button specific util classes overview
+-   Button documentation &amp; Input field documentation
+    -   Removed all references to button-link (now users should use tertiary)
+    -   Removed all references to input textx "hint text expander"
+    -   PayEx restore destructive buttons Preview block in docs (but beware, this chunk will probably not be updated in the future)
 
--   Input field documentation
-    -   Removed "Do and donts" examples
+-   Sheet
+    -   Close button size class got fixed
 
--   Identity Color documentation
-
--   Identity Typography documentation
-    -   Headers, Font-sizes and Line-height
+-   Forms (in Patterns & Login)
+    -   Add autocomplete attributes to all relevant inputs code snippets to enforce good practices
 
 ## Deleted features
--   Button component
-    -   btn-guiding-destructive, btn-executive-destructive, btn-link-destructive classes (you are now supposed to use the new btn-tertiary for those edge cases) (this does not apply for the payex brand)
-    -   btn-icon-\<size> classes (we are now using a combination of btn-icon and btn-\<size> )
-    -   btn-link is fully removed, also replaced by btn-tertiary
+-   Expanding hint text script is removed
 
--   Expanding hint text
-    -   All styling has been removed, also the script. (We recommend thoroughly thinking through the use case, and rather add more explanation in the label/legend or hint-text)
+## Packages maintenance
+
+-   bump Stylelint from 13 to 15
+-   bump Codecov-action from 3.1.2 to 3.1.3
+-   bump npm-publish from 1 to 2

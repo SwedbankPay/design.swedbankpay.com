@@ -96,7 +96,6 @@
 @input-bg-disabled:                         @white;
 @input-checked-bg-disabled:                 @brand-secondary-light-3;
 @input-addon-color:                         @brand-secondary;
-@input-border-color:                        @border-color;
 
 /* Panel */
 @panel-default-border-color: @brand-secondary-light-3;
@@ -112,7 +111,6 @@
 @help-block-text:                           #707070;
 @tab-link:                                  @help-block-text;
 @radiobutton-border:                        @help-block-text;
-@checkbox-checked-color:                    @brand-secondary-light-2;
 
 html,
 body {
@@ -141,55 +139,137 @@ body {
 *
 */
 :root {
+    /* Grayscale */
+    --black: #000000;
+    --text-gray: var(--brand-secondary, #3c3c3c);
+    --list-gray: #999999;
+    --light-gray: #f4f4f4;
     --white: #ffffff;
+    --soft-brown: #707070;
+    --medium-brown: #72605e;
+
+    /* Main Brand Color Variants */
     --brand-primary: #2a9d3f;
-    --brand-success: #238635;
-    --brand-tertiary: var(--brand-primary);
-    --brand-secondary-light-2: #c8c8c8;
-    --button-bg-disabled: var(--brand-secondary-light-2);
+    --brand-primary-light: var(--brand-primary, #2a9d3f);
+    --brand-primary-light-2: var(--brand-primary, #2a9d3f);
+    --brand-primary-light-3: var(--brand-primary, #2a9d3f);
+
+    /* below, faded LESS function, not possible in CSS yet, keep LESS equivalent until possible conversion */
+
+    /* TODO: to be converted: --brand-primary-faded:  fade(var(--brand-primary, #2A9D3F), 60%); */
+
     --brand-secondary: #3c3c3c;
     --brand-secondary-hover: #5f5f5f;
-    --brand-orange: #f35b1c;
+    --brand-secondary-light-1: var(--brand-secondary, #3c3c3c);
+    --brand-secondary-light-2: #c8c8c8;
+    --brand-secondary-light-3: var(--brand-secondary-light-2, #c8c8c8);
+    --brand-secondary-light-4: var(--brand-secondary, #3c3c3c);
+    --brand-secondary-info-1: var(--brand-secondary-light-3, #c8c8c8);
+    --brand-secondary-info-2: #efb7b6;
+    --brand-tertiary: var(--brand-primary, #2a9d3f);
+    --brand-accent: var(--brand-secondary, #3c3c3c);
+    --blue-bright: var(--brand-secondary-light-2, #c8c8c8);
+    --brand-accent-links: var(--brand-primary, #2a9d3f);
     --payex-light-blue: #32b2dd;
+    --payex-dark-blue: #1e3a6e;
+
+    /* Background Colors */
+    --brand-bg-1: #e8f3e6;
+    --brand-bg-2: #e8f3e6;
+    --brand-bg-3: #fbedf4;
+    --brand-bg-4: #eaf8fc;
+    --brand-bg-gray: var(--brand-secondary-light-2, #c8c8c8);
+    --brand-bg-white: #ffffff;
+    --bg-quaternary: var(--list-gray, #999999);
+
+    /* State colors */
+    --brand-success: #238635;
+    --brand-success-light: #e8f3e6;
+    --brand-success-light-2: var(--brand-success, #238635);
+    --brand-warning: #f35b1c;
+    --brand-warning-light: #ffecd5;
+    --brand-warning-2: #f35b1c;
+    --brand-error-border: #f1bbb9;
     --brand-error: #c5131c;
-    --dark-brown: var(--brand-secondary);
+    --brand-error-light: #ffebe3;
+    --brand-info: #3e6ab6;
+    --brand-info-light: #e8eff9;
 
-    // destructive colors
-    --btn-destructive-color: var(--white);
-    --btn-destructive-bg: var(--brand-error);
+    /* Checkbox */
+    --checkbox-checked-color: var(--brand-secondary, #3c3c3c);
+
+    /* BUTTONS COLORS */
+    --primary-disabled-bg: #f5b895;
+    --secondary-disabled-bg: #98d0d6;
+    --btn-primary-color: var(--brand-success, #238635);
+    --btn-primary-text-color: var(--white, #ffffff);
+    --btn-primary-bg: var(--brand-success, #238635);
+    --btn-primary-hover: var(--brand-tertiary, #2a9d3f);
+    --btn-primary-disabled-color: var(--white, #ffffff);
+    --btn-primary-disabled-bg: var(--brand-secondary-light-2, #c8c8c8);
+
+    /* btn-secondary */
+    --btn-secondary-color: var(--white, #ffffff);
+    --btn-secondary-bg: var(--brand-secondary, #3c3c3c);
+    --btn-secondary-text-color: var(--brand-secondary, #3c3c3c);
+    --btn-secondary-border-color: var(--brand-secondary, #3c3c3c);
+    --btn-secondary-hover: var(--brand-secondary, #3c3c3c);
+    --btn-secondary-disabled-color: var(--white, #ffffff);
+    --btn-secondary-disabled-bg: var(--brand-secondary-light-2, #c8c8c8);
+
+
+    /* btn-tertiary */
+    --btn-tertiary-color: var(--brand-secondary, #3c3c3c);
+    --btn-tertiary-text-color: var(--white, #ffffff);
+    --btn-tertiary-hover: var(--brand-secondary-hover, #5f5f5f);
+    --btn-tertiary-disabled: var(--btn-bg-disabled, rgb(212 196 188 / 30%));
+
+    /* btn-destructive */
+    --destructive-disabled-bg: #f9ded3;
+    --btn-destructive-color: var(--white, #ffffff);
+    --btn-destructive-bg: var(--brand-error, #c5131c);
     --btn-destructive-hover: #ee4e56;
-    --btn-destructive-disabled-color: var(--white);
-    --btn-destructive-disabled-bg: var(--destructive-disabled-bg);
+    --btn-destructive-disabled-color: var(--white, #ffffff);
+    --btn-destructive-disabled-bg: var(--destructive-disabled-bg, #f9ded3);
+    --btn-link-color: var(--brand-secondary, #3c3c3c);
+    --btn-link-disabled-color: var(--list-gray, #999999);
+    --link-hover-color: var(--brand-primary, #2a9d3f);
+    --link-color: var(--btn-primary-bg, #238635);
 
-    // Universal utilities
-    --border-radius: 8px;
-
-    // BUTTON VALUES
-    --btn-primary-color: var(--brand-success);
-    --btn-primary-text-color: var(--white);
-    --btn-primary-hover: var(--brand-tertiary);
-    --btn-primary-disabled: var(--btn-bg-disabled);
-    // btn-secondary
-    --btn-secondary-color: var(--white);
-    --btn-secondary-text-color: var(--brand-secondary);
-    --btn-secondary-border-color: var(--brand-secondary);
-    --btn-secondary-hover: var(--brand-secondary);
-    // btn-tertiary
-    --btn-tertiary-color: var(--brand-secondary);
-    --btn-tertiary-text-color: var(--white);
-    --btn-tertiary-hover: var(--brand-secondary-hover);
-    --btn-tertiary-disabled: var(--btn-bg-disabled);
-    // Shared button variables
+    /* Shared button variables */
     --btn-disabled-text: var(--text-disabled);
-    --btn-bg-disabled: rgba(212, 196, 188, 0.3);
+    --btn-bg-disabled: rgb(212 196 188 / 30%);
     --btn-active-color: var(--payex-light-blue);
 
-    //INPUT VALUES
-    --input-border-color: var(--brand-secondary-hover);
-    --input-border-focus-color: var(--brand-secondary);
+    /* INPUTS COLORS */
+    --input-color: var(--brand-secondary, #3c3c3c);
+    --input-bg: var(--white, #ffffff);
+    --input-bg-disabled: var(--white, #ffffff);
+    --input-checked-bg-disabled: var(--brand-secondary-light-3, #c8c8c8);
+    --input-addon-color: var(--brand-secondary, #3c3c3c);
+    --input-border-color: var(--brand-secondary-hover, #5f5f5f);
+    --input-border-focus-color: var(--brand-secondary, #3c3c3c);
     --input-border-success-color: var(--payex-light-blue);
 
-    // Typography
+    /* Panel */
+    --panel-default-border-color: var(--brand-secondary-light-3, #c8c8c8);
+
+    /* Other colors */
+    --yellow-faded: #fbdd91;
+    --green-syntax-highlight: #99cc66;
+    --blue-syntax-highlight: #43d0dd;
+    --yellow-syntax-highlight: #fff3d5;
+    --pink-cards-details: #c5569a;
+    --dark-brown: var(--brand-secondary, #3c3c3c);
+    --light-brown: var(--brand-secondary-light-3, #c8c8c8);
+    --help-block-text: #707070;
+    --tab-link: var(--help-block-text, #707070);
+    --radiobutton-border: var(--help-block-text, #707070);
+
+    /* UNIVERSAL UTILITIES */
+    --border-radius: 8px;
+
+    /* TYPOGRAPHY */
 
     /* Brand fonts */
     --brand-black: "Futura PT W08 Medium", sans-serif;

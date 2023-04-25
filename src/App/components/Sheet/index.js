@@ -7,8 +7,8 @@ const Sheet = ({ id, requireAction, title, footer, children }) => (
     <div className="sheet" id={id} data-require-action={requireAction ? true : null}>{"\n"}
         <section>{"\n"}
             <div className="sheet-header">
-                <h2 className="mb-0">{title}</h2>
-                <button id="sheetClose" className="sheet-close btn btn-icon btn-small" aria-label="Close sheet">{"\n\t\t\t"}
+                <h2 className="mb-0">{title}</h2>{"\n"}
+                <button id="sheetClose" className="sheet-close btn btn-icon btn-xs" aria-label="Close sheet">{"\n\t\t\t"}
                     <i className="material-icons">close</i>{"\n\t\t"}
                 </button>
             </div>

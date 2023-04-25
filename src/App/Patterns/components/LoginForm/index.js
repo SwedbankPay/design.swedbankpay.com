@@ -33,7 +33,8 @@ const LoginForm = ({ additionalText,
         id: emailId,
         label: emailLabel ? emailLabel : "Email",
         placeholder: placeholder ? placeholder : null,
-        type: "email"
+        type: "email",
+        autoComplete: "email"
     };
 
     const passwordProps = {
@@ -42,7 +43,8 @@ const LoginForm = ({ additionalText,
         id: passwordId,
         label: passwordLabel ? passwordLabel : "Password",
         type: "password",
-        validationState: error ? "error" : null
+        validationState: error ? "error" : null,
+        autoComplete: "current-password"
     };
 
     const AlternativeLogins = () => (

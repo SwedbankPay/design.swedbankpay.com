@@ -17,7 +17,7 @@ Array [
     
 
     <input
-      autocomplete={null}
+      autocomplete="email"
       className="form-control"
       data-validate={null}
       defaultValue=""
@@ -43,7 +43,7 @@ Array [
     
 
     <input
-      autocomplete={null}
+      autocomplete="current-password"
       className="form-control"
       data-validate={null}
       defaultValue=""

@@ -52,7 +52,7 @@ const ContentGuidelines = () => (
                 <div className="slab slab-funny flat slab-edges d-flex justify-content-center mb-0 py-2 extra-small">32px</div>
                 <div className="d-flex">
                     <Button type="primary" label="Submit" className="mr-3"/>
-                    <Button type="link" label="Cancel"/>
+                    <Button type="tertiary" label="Cancel"/>
                 </div>
             </div>
         </div>
@@ -85,10 +85,10 @@ const HowToDesignForms = () => {
                 <div className="slab slab-plain slab-border-success pb-4">
                     <span className="h4 d-block mb-4">Do</span>
                     <div className="col-12 col-sm-8 m-auto px-0">
-                        <InputGroup id="layout-address-example" type="text" label="Address"/>
+                        <InputGroup id="layout-address-example" type="text" label="Address" autoComplete="street-address"/>
                         <div className="row">
-                            <InputGroup id="layout-postal-example" type="text" label="Postal code" className="col-12 col-sm-5"/>
-                            <InputGroup id="layout-city-example" type="text" label="City" className="col-12 col-sm-7 mb-2"/>
+                            <InputGroup id="layout-postal-example" type="text" label="Postal code" autoComplete="postal-code" className="col-12 col-sm-5"/>
+                            <InputGroup id="layout-city-example" type="text" label="City" autoComplete="address-level2" className="col-12 col-sm-7 mb-2"/>
                         </div>
                     </div>
                 </div>
@@ -107,15 +107,15 @@ const HowToDesignForms = () => {
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-success">
                             <span className="h4 d-block mb-4">Do</span>
-                            <InputGroup id="required-optional-do-email-example" type="text" label="E-mail"/>
-                            <InputGroup id="required-optional-do-phone-example" type="text" label="Telephone number" optional/>
+                            <InputGroup id="required-optional-do-email-example" type="text" label="E-mail" autoComplete="email"/>
+                            <InputGroup id="required-optional-do-phone-example" type="text" label="Telephone number" autoComplete="tel" />
                         </div>
                     </div>
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-error">
                             <span className="h4 d-block mb-4">Don&apos;t</span>
-                            <InputGroup id="required-optional-dont-email-example" type="text" label="E-mail*"/>
-                            <InputGroup id="required-optional-dont-phone-example" type="tel" label="Telephone number"/>
+                            <InputGroup id="required-optional-dont-email-example" type="text" label="E-mail*" autoComplete="email"/>
+                            <InputGroup id="required-optional-dont-phone-example" type="tel" label="Telephone number" autoComplete="tel"/>
                         </div>
                     </div>
                 </div>
@@ -123,27 +123,21 @@ const HowToDesignForms = () => {
 
             <section>
                 <h3>Label and hints</h3>
-                <p>It is important to give the users the information required to fill in the form and help them be successful the first time. An input must have a label that clearly describes the type of input a field requires. The label can be complemented with a hint text or a hint expander to provide clarifying details, try do avoid using both a visible hint text and a hint expander.</p>
+                <p>It is important to give the users the information required to fill in the form and help them be successful the first time. An input must have a label that clearly describes the type of input a field requires. The label can be complemented with a hint text.</p>
                 <p>Consider the following to decide where to place the information:</p>
                 <ul className="list list-bullet">
                     <li>If the information is very important and most or all users will need it, make it part of the <b>label</b>.</li>
-                    <li>If the information is important and many users will need it, provide <b>hint text</b> that is visible by default.</li>
-                    <li>If the information is less important and only a minority of users will need it, put it in a <b>hint expander</b>.</li>
+                    <li>Else provide <b>hint text</b> that is visible by default.</li>
                 </ul>
                 <div className="row">
-                    <div className="col-lg-6 col-12">
+                    <div className="col-12">
                         <div className="slab slab-plain slab-border-success">
                             <span className="h4 d-block mb-4">Do</span>
-                            <InputGroup id="personal-identification-number-example" type="text" label="Personal identification number" helpBlock="YYYYMMDDNNNN" hintTextId="personal-id-number-example"/>
+                            <div className="col-12 col-sm-6 m-auto px-0">
+                                <InputGroup id="personal-identification-number-example" type="text" label="Personal identification number" helpBlock="YYYYMMDDNNNN" hintTextId="personal-id-number-example"/>
+                            </div>
                         </div>
                         <p>Use a hint text for important information that is secondary to the label.</p>
-                    </div>
-                    <div className="col-lg-6 col-12">
-                        <div className="slab slab-plain slab-border-success">
-                            <span className="h4 d-block mb-4">Do</span>
-                            <InputGroup id="cvc-example" type="text" label="Security code (CVC)"/>
-                        </div>
-                        <p>Use hint expander for additional information that is less important or long.</p>
                     </div>
                 </div>
             </section>
@@ -160,7 +154,7 @@ const HowToDesignForms = () => {
                             </div>
                             {showInput === "email" &&
                                 <div className="ml-2">
-                                    <InputGroup id="logical-flow-do-email-example" type="text" label="E-mail address" className="ml-4 mb-4"/>
+                                    <InputGroup id="logical-flow-do-email-example" type="text" label="E-mail address" className="ml-4 mb-4" autoComplete="email" />
                                 </div>
                             }
                             <div className="radio mb-3">
@@ -169,7 +163,7 @@ const HowToDesignForms = () => {
                             </div>
                             {showInput === "phone" &&
                                 <div className="ml-2">
-                                    <InputGroup id="logical-flow-do-phone-example" type="text" label="Telephone number" className="ml-4"/>
+                                    <InputGroup id="logical-flow-do-phone-example" type="text" label="Telephone number" className="ml-4" autoComplete="tel" />
                                 </div>
                             }
                         </div>
@@ -179,11 +173,11 @@ const HowToDesignForms = () => {
                             <span className="h4 d-block mb-4">Don&apos;t</span>
                             <RadioButton label="E-mail" name="logical-flow-example-2" id="logical-flow-example-email-2" checked className="mb-3"/>
                             <div className="ml-2">
-                                <InputGroup id="logical-flow-dont-email-example" type="text" label="E-mail address" className="ml-4 mb-4"/>
+                                <InputGroup id="logical-flow-dont-email-example" type="text" label="E-mail address" className="ml-4 mb-4" autoComplete="email" />
                             </div>
                             <RadioButton label="Call" name="logical-flow-example-2" id="logical-flow-example-call-2" className="mb-3"/>
                             <div className="ml-2">
-                                <InputGroup id="logical-flow-dont-phone-example" type="text" label="Phone number" className="ml-4"/>
+                                <InputGroup id="logical-flow-dont-phone-example" type="text" label="Phone number" className="ml-4" autoComplete="tel" />
                             </div>
                         </div>
                     </div>
@@ -191,7 +185,7 @@ const HowToDesignForms = () => {
             </section>
             <section>
                 <h3>Button placement</h3>
-                <p>The primary button should be left-aligned along with the left side of the form field. If additional actions are required, put the primary button first, then secondary buttons, then the link button. One exception is a multiple-step form where the “Back” secondary button sits at the very left, while the rest of the buttons are aligned to the right. In some cases, like on a <a href="">Login page</a>, buttons can be centered and set to the same width as the input fields. On mobile, the buttons are always centered, full width and stacked vertically with the primary action on top. </p> {/* TODO: Add link to Login template */}
+                <p>The primary button should be left-aligned along with the left side of the form field. If additional actions are required, put the primary button first, then secondary buttons, then the tertiary button. One exception is a multiple-step form where the “Back” secondary button sits at the very left, while the rest of the buttons are aligned to the right. In some cases, like on a <a href="">Login page</a>, buttons can be centered and set to the same width as the input fields. On mobile, the buttons are always centered, full width and stacked vertically with the primary action on top. </p>
                 <img src={`${process.env.basename}img/documentation/patterns/img-button-placement.png`} className="w-100" alt="Visualization of button placement in forms."/>
             </section>
             <section>
@@ -201,13 +195,13 @@ const HowToDesignForms = () => {
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-success">
                             <span className="h4 d-block mb-4">Do</span>
-                            <InputGroup type="text" validationState="error" errorMessage='The email address must include "@"' label="Email address" defaultValue="Name.com" id="input-error-do-example"/>
+                            <InputGroup type="text" validationState="error" errorMessage='The email address must include "@"' label="Email address" defaultValue="Name.com" id="input-error-do-example" autoComplete="email" />
                         </div>
                     </div>
                     <div className="col-lg-6 col-12">
                         <div className="slab slab-plain slab-border-error">
                             <span className="h4 d-block mb-4">Don&apos;t</span>
-                            <InputGroup type="text" validationState="error" errorMessage="Invalid input" label="Email address" defaultValue="Name.com" id="input-error-dont-example"/>
+                            <InputGroup type="text" validationState="error" errorMessage="Invalid input" label="Email address" defaultValue="Name.com" id="input-error-dont-example" autoComplete="email" />
                         </div>
                     </div>
                 </div>
@@ -230,7 +224,7 @@ const DeveloperDocumentation = () => (
 
             <EditableComponentPreview language="html" codeFigure showCasePanel removeOuterTag staticPreview>
                 <div className="col-12 col-sm-6 m-auto pt-3">
-                    <InputGroup type="text" validationState="error" errorMessage='The email address must include "@"' label="Email" defaultValue="Name.com" id="input-error-client-example"/>
+                    <InputGroup type="text" validationState="error" errorMessage='The email address must include "@"' label="Email" defaultValue="Name.com" id="input-error-client-example" autoComplete="email" />
                 </div>
             </EditableComponentPreview>
 
@@ -258,15 +252,15 @@ const DeveloperDocumentation = () => (
                             <legend> {"\n"}
                                 <span className="h3">Name</span>
                             </legend>
-                            <InputGroup id="fieldset-first-name-example" type="name" label="First name" />
-                            <InputGroup id="fieldset-last-name-example" type="name" label="Last name" />
+                            <InputGroup id="fieldset-first-name-example" type="name" label="First name" autoComplete="given-name" />
+                            <InputGroup id="fieldset-last-name-example" type="name" label="Last name" autoComplete="family-name" />
                         </fieldset>
                         <fieldset>
                             <legend> {"\n"}
                                 <span className="h3">Contact information</span>
                             </legend>
-                            <InputGroup id="fieldset-email-example" type="email" label="Email" />
-                            <InputGroup id="fieldset-phone-example" type="tel" label="Phone number" />
+                            <InputGroup id="fieldset-email-example" type="email" label="Email" autoComplete="email" />
+                            <InputGroup id="fieldset-phone-example" type="tel" label="Phone number" autoComplete="tel" />
                         </fieldset>
                     </form>
                 </div>
@@ -279,8 +273,8 @@ const DeveloperDocumentation = () => (
             <EditableComponentPreview language="html" codeFigure showCasePanel removeOuterTag staticPreview previewMinHeight={400}>
                 <div className="col-12 col-sm-6 m-auto">
                     <fieldset disabled>
-                        <InputGroup id="disabled-name-example" type="name" label="Name" />
-                        <InputGroup id="disabled-email-example" type="email" label="Email" />
+                        <InputGroup id="disabled-name-example" type="name" label="Name" autoComplete="name" />
+                        <InputGroup id="disabled-email-example" type="email" label="Email" autoComplete="email" />
                         <Checkbox id="disabled-fieldset-checkbox" label="I agree to terms of use" className="mb-4"/>{"\n"}
                         <Button type="primary" label="Submit" className="mt-2" />
                     </fieldset>
@@ -291,8 +285,8 @@ const DeveloperDocumentation = () => (
             <EditableComponentPreview language="html" codeFigure showCasePanel removeOuterTag staticPreview previewMinHeight={400}>
                 <div className="col-12 col-sm-6 m-auto">
                     <fieldset>
-                        <InputGroup id="disable-specific-name-example" type="name" label="Name" disabled />
-                        <InputGroup id="disable-specific-email-example" type="email" label="Email" />
+                        <InputGroup id="disable-specific-name-example" type="name" label="Name" disabled autoComplete="name" />
+                        <InputGroup id="disable-specific-email-example" type="email" label="Email" autoComplete="email" />
                         <Checkbox id="disabled-input-checkbox" label="I agree to terms of user" className="mb-4"/>{"\n"}
                         <Button type="primary" label="Submit" className="mt-2" />
                     </fieldset>
@@ -307,8 +301,8 @@ const DeveloperDocumentation = () => (
             <div className="col-12 col-sm-10 m-auto pt-2">
                 <form>
                     <div className="row align-items-center justify-content-between">
-                        <InputGroup id="form-grid-name-example" type="name" label="Name" className="col-12 col-sm-3 px-0 mb-4"/>
-                        <InputGroup id="form-grid-email-example" type="email" label="Email" className="col-12 col-sm-6 px-0 mb-4"/>{"\n"}
+                        <InputGroup id="form-grid-name-example" type="name" label="Name" autoComplete="name" className="col-12 col-sm-3 px-0 mb-4"/>
+                        <InputGroup id="form-grid-email-example" type="email" label="Email" autoComplete="email" className="col-12 col-sm-6 px-0 mb-4"/>{"\n"}
                         <Button type="primary" label="Submit" className="mt-1"/>
                     </div>
                 </form>
