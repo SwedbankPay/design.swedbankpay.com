@@ -199,6 +199,7 @@ Before merging to master to create a release, make sure you follow these steps:
 - Remember to change branch back to `develop`.
 
 - In Jira trigger release
+
 - In GH publish Release
 
 AppVeyor will now create and deploy a release on both github and
