@@ -172,7 +172,7 @@ Before merging to master to create a release, make sure you follow these steps:
 
   - then run `npm i` to also update package-lock
 
-    - run `npx browserslist@latest --update-db` to update browserslist
+  - run `npx browserslist@latest --update-db` to update browserslist
 
 - Make sure the `RELEASE_NOTES.md` is correct (date and version) and only contains changes for the current release
 
@@ -192,9 +192,9 @@ Before merging to master to create a release, make sure you follow these steps:
 
 - Create and push a new tag with the new release commit:
 
-1. `git tag -l` Make sure the tag is not in list.
-2. `git tag x.x.x` And check if the new tag is in list.
-3. `git push origin x.x.x`
+  1.  `git tag -l` Make sure the tag is not in list.
+  2.  `git tag x.x.x` And check if the new tag is in list.
+  3.  `git push origin x.x.x`
 
 - Remember to change branch back to `develop`.
 
@@ -267,3 +267,4 @@ Inspired by [Bootstrap][bootstrap] and [Materialize][materialize].
 [jest]: https://facebook.github.io/jest/
 [bootstrap]: http://getbootstrap.com/
 [materialize]: https://materializecss.com/
+[appveyor]: https://www.appveyor.com/
