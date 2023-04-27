@@ -19,7 +19,8 @@ exports[`Component: footer renders 1`] = `
       Overview
     </h2>
     <p>
-      Our footer component comes with the same brand color as our topbar. The 
+      Our footer component comes with the same brand color as our topbar. The
+       
       <code
         className="code-tags code-tags-secondary"
       >

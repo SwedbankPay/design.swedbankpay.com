@@ -3,34 +3,34 @@
 
 /* Background color list */
 @bg-color-list: {
-    white: @white;
-    primary: @brand-bg-1;
-    secondary: @brand-bg-2;
-    tertiary: @brand-bg-gray;
-    quaternary: @light-gray;
-    success: @brand-success-light;
-    neutral: @brand-info-light;
-    warning: @brand-warning-light;
-    danger: @brand-error-light;
-    variant-1: @brand-bg-1;
-    variant-2: @brand-bg-2;
-    variant-3: @brand-bg-3;
-    variant-4: @brand-bg-4;
-    gray: @brand-bg-gray;
-    info: @system-info;
-}
+	white: @white;
+	primary: @brand-bg-1;
+	secondary: @brand-bg-2;
+	tertiary: @brand-bg-gray;
+	quaternary: @light-gray;
+	success: @brand-success-light;
+	neutral: @brand-info-light;
+	warning: @brand-warning-light;
+	danger: @brand-error-light;
+	variant-1: @brand-bg-1;
+	variant-2: @brand-bg-2;
+	variant-3: @brand-bg-3;
+	variant-4: @brand-bg-4;
+	gray: @brand-bg-gray;
+	info: @system-info;
+};
 /* stylelint-enable */
 
 /* stylelint-disable declaration-no-important */
 
 .background-variant(@parent, @color) {
-    .@{parent} {
-        background-color: @color !important;
+	.@{parent} {
+		background-color: @color !important;
 
-        a&:hover {
-            background-color: darken(@color, 10%) !important;
-        }
-    }
+		a&:hover {
+			background-color: darken(@color, 10%) !important;
+		}
+	}
 }
 
 // Background color classes

@@ -10,14 +10,14 @@ import { EditableComponentPreview } from "./ComponentPreview/EditableComponentPr
 import StatusBadge from "./StatusBadge";
 
 export {
-    ComponentPreview,
-    DocContainer,
-    DocHeading,
-    DeprecatedComponentAlert,
-    ExperimentalComponentAlert,
-    Icon,
-    JavascriptDocs,
-    JavascriptDocElement,
-    EditableComponentPreview,
-    StatusBadge,
+	ComponentPreview,
+	DocContainer,
+	DocHeading,
+	DeprecatedComponentAlert,
+	ExperimentalComponentAlert,
+	Icon,
+	JavascriptDocs,
+	JavascriptDocElement,
+	EditableComponentPreview,
+	StatusBadge,
 };

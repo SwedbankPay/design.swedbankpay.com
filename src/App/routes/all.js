@@ -4,8 +4,8 @@ const getStartedRoutes = require("./get-started");
 const patternsRoutes = require("./patterns");
 
 module.exports = [
-    ...getStartedRoutes,
-    ...identityRoutes,
-    ...componentsRoutes,
-    ...patternsRoutes
+	...getStartedRoutes,
+	...identityRoutes,
+	...componentsRoutes,
+	...patternsRoutes,
 ];

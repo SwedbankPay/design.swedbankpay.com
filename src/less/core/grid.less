@@ -1,26 +1,22 @@
 /* stylelint-disable indentation */
 
-@grid-columns:                              12;
-@grid-gutter-width:                         32px;
+@grid-columns: 12;
+@grid-gutter-width: 32px;
 
-@container-max-widths:                      540px,
-                                            720px,
-                                            960px,
-                                            1140px,
-                                            1460px;
+@container-max-widths: 540px, 720px, 960px, 1140px, 1460px;
 
 /* stylelint-enable */
 
 .make-container() {
-    width: 100%;
-    padding-right: (@grid-gutter-width / 2);
-    padding-left: (@grid-gutter-width / 2);
-    margin-right: auto;
-    margin-left: auto;
+	width: 100%;
+	padding-right: (@grid-gutter-width / 2);
+	padding-left: (@grid-gutter-width / 2);
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .make-container-max-widths(@max-widths: @container-max-widths, @breakpoints: @grid-breakpoints) {
-    each(@breakpoints, .(@width, @key, @i) {
+	each(@breakpoints, .(@width, @key, @i) {
         & when (@width > 0) {
             @media (min-width: @width) {
                 max-width: extract(@max-widths, @i - 1);
@@ -30,45 +26,45 @@
 }
 
 .make-row() {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: (@grid-gutter-width / -2);
-    margin-left: (@grid-gutter-width / -2);
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: (@grid-gutter-width / -2);
+	margin-left: (@grid-gutter-width / -2);
 }
 
 .make-col(@size, @columns: @grid-columns) {
-    flex: 0 0 percentage((@size / @columns));
-    max-width: percentage((@size / @columns));
+	flex: 0 0 percentage((@size / @columns));
+	max-width: percentage((@size / @columns));
 }
 
 .make-col-offset(@size, @columns: @grid-columns) {
-    @num: (@size / @columns);
+	@num: (@size / @columns);
 
-    margin-left: percentage(@num);
+	margin-left: percentage(@num);
 }
 
 .infix-ruleset(@size, @abbr, @ruleset) {
-    & when (@size > 0) {
-        @infix: ~"-@{abbr}";
-        @ruleset();
-    }
+	& when (@size > 0) {
+		@infix: ~"-@{abbr}";
+		@ruleset();
+	}
 
-    & when (@size = 0) {
-        @infix: ~"";
-        @ruleset();
-    }
+	& when (@size = 0) {
+		@infix: ~"";
+		@ruleset();
+	}
 }
 
 .make-grid-columns(@columns: @grid-columns, @gutter: @grid-gutter-width, @breakpoints: @grid-breakpoints) {
-    @grid-column: {
-        position: relative;
-        width: 100%;
-        min-height: 1px;
-        padding-right: (@gutter / 2);
-        padding-left: (@gutter / 2);
-    }
+	@grid-column: {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		padding-right: (@gutter / 2);
+		padding-left: (@gutter / 2);
+	};
 
-    each(@grid-breakpoints, .(@size, @abbr) {
+	each(@grid-breakpoints, .(@size, @abbr) {
         @ruleset_1: {
             .generate-columns(@n, @i: 1) when (@i =< @n) {
                 .col@{infix}-@{i} {
@@ -138,75 +134,75 @@
 .make-grid-columns();
 
 .container-sm {
-    .make-container();
+	.make-container();
 
-    > .topbar {
-        padding: 0;
-    }
+	> .topbar {
+		padding: 0;
+	}
 
-    max-width: 992px;
+	max-width: 992px;
 }
 
 .container {
-    .make-container();
+	.make-container();
 
-    > .topbar {
-        padding: 0;
-    }
+	> .topbar {
+		padding: 0;
+	}
 
-    max-width: 1200px;
+	max-width: 1200px;
 }
 
 .container-lg {
-    .make-container();
+	.make-container();
 
-    > .topbar {
-        padding: 0;
-    }
+	> .topbar {
+		padding: 0;
+	}
 
-    max-width: 1600px;
+	max-width: 1600px;
 }
 
 .container-fluid {
-    .make-container();
+	.make-container();
 
-    > .topbar {
-        padding: 0;
-    }
+	> .topbar {
+		padding: 0;
+	}
 }
 
 .grid-guide {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 
-    article {
-        max-width: 21rem;
+	article {
+		max-width: 21rem;
 
-        h3 {
-            margin-top: 1rem;
-        }
-    }
+		h3 {
+			margin-top: 1rem;
+		}
+	}
 }
 @media (max-width: @screen-sm-max) {
-    .grid-guide {
-        article {
-            max-width: 100%;
-        }
-    }
+	.grid-guide {
+		article {
+			max-width: 100%;
+		}
+	}
 }
 
 .row {
-    .make-row();
+	.make-row();
 
-    &.no-gutters {
-        margin-right: 0;
-        margin-left: 0;
+	&.no-gutters {
+		margin-right: 0;
+		margin-left: 0;
 
-        > .col,
-        > [class*="col-"] {
-            padding-right: 0;
-            padding-left: 0;
-        }
-    }
+		> .col,
+		> [class*="col-"] {
+			padding-right: 0;
+			padding-left: 0;
+		}
+	}
 }

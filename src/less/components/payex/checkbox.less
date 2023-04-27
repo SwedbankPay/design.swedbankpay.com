@@ -2,20 +2,20 @@
 @import "./form.less";
 
 .checkbox {
-    input[type="checkbox"] {
-        + label {
-            &:after {
-                border: 2px solid @brand-secondary;
-            }
-        }
+	input[type="checkbox"] {
+		+ label {
+			&:after {
+				border: 2px solid @brand-secondary;
+			}
+		}
 
-        &:checked {
-            + label {
-                &:after {
-                    background-color: @brand-secondary;
-                    border-color: @brand-secondary;
-                }
-            }
-        }
-    }
+		&:checked {
+			+ label {
+				&:after {
+					background-color: @brand-secondary;
+					border-color: @brand-secondary;
+				}
+			}
+		}
+	}
 }

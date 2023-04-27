@@ -7,52 +7,55 @@ import Topbar, { Overview, DeveloperDocumentation } from "./index";
 import { topbar } from "@src/scripts/main";
 
 describe("Components: Topbar", () => {
-    it("is defined", () => {
-        expect(Topbar).toBeDefined();
-    });
+	it("is defined", () => {
+		expect(Topbar).toBeDefined();
+	});
 
-    it.skip("renders", () => {
-        /*
+	it.skip("renders", () => {
+		/*
             The Topbar component calls dg.topbar.init("demo-topbar") on componentDidMount. Mocking the topbarscript
             to avoid a warning message. [AW]
         */
-        topbar.init = jest.fn();
+		topbar.init = jest.fn();
 
-        const componentForSnap = renderer.create(<BrowserRouter>
-            <Topbar />
-        </BrowserRouter>
-        );
+		const componentForSnap = renderer.create(
+			<BrowserRouter>
+				<Topbar />
+			</BrowserRouter>
+		);
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-    describe("Overview", () => {
-        it("is defined", () => {
-            expect(Overview).toBeDefined();
-        });
+	describe("Overview", () => {
+		it("is defined", () => {
+			expect(Overview).toBeDefined();
+		});
 
-        it.skip("renders", () => {
-            const componentForSnap = renderer.create(<BrowserRouter>
-                <Overview />
-            </BrowserRouter>
-            );
+		it.skip("renders", () => {
+			const componentForSnap = renderer.create(
+				<BrowserRouter>
+					<Overview />
+				</BrowserRouter>
+			);
 
-            expect(componentForSnap.toJSON()).toMatchSnapshot();
-        });
-    });
+			expect(componentForSnap.toJSON()).toMatchSnapshot();
+		});
+	});
 
-    describe("DeveloperDocumentation", () => {
-        it("is defined", () => {
-            expect(DeveloperDocumentation).toBeDefined();
-        });
+	describe("DeveloperDocumentation", () => {
+		it("is defined", () => {
+			expect(DeveloperDocumentation).toBeDefined();
+		});
 
-        it("renders", () => {
-            const componentForSnap = renderer.create(<BrowserRouter>
-                <DeveloperDocumentation />
-            </BrowserRouter>
-            );
+		it("renders", () => {
+			const componentForSnap = renderer.create(
+				<BrowserRouter>
+					<DeveloperDocumentation />
+				</BrowserRouter>
+			);
 
-            expect(componentForSnap.toJSON()).toMatchSnapshot();
-        });
-    });
+			expect(componentForSnap.toJSON()).toMatchSnapshot();
+		});
+	});
 });

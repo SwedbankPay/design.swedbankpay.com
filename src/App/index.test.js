@@ -4,19 +4,19 @@ import renderer from "react-test-renderer";
 import App, { VersionTopBanner } from "./index";
 
 describe("Main: App", () => {
-    it("is defined", () => {
-        expect(App).toBeDefined();
-    });
+	it("is defined", () => {
+		expect(App).toBeDefined();
+	});
 
-    it("renders", () => {
-        const app = renderer.create(<App />).toJSON();
+	it("renders", () => {
+		const app = renderer.create(<App />).toJSON();
 
-        expect(app).toMatchSnapshot();
-    });
+		expect(app).toMatchSnapshot();
+	});
 });
 
 describe("VersionTopBanner:", () => {
-    it("is defined", () => {
-        expect(VersionTopBanner).toBeDefined();
-    });
+	it("is defined", () => {
+		expect(VersionTopBanner).toBeDefined();
+	});
 });

@@ -7,412 +7,428 @@ import accordion from "./index";
 jest.useFakeTimers();
 
 describe("scripts: accordion", () => {
+	const AccGrpComponent = ({ id, open, accId }) => (
+		<div className="accordion-group" id={id}>
+			<AccordionComponent id={accId} />
+			<AccordionComponent open={open} />
+		</div>
+	);
+
+	const AccordionComponent = ({ id, open }) => (
+		<div className={`accordion${open ? " show accordion-open" : ""}`} id={id}>
+			<div className="accordion-header">Foo</div>
+			<div className="accordion-body">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+			</div>
+		</div>
+	);
+
+	it("is defined", () => {
+		expect(accordion).toBeDefined();
+	});
+
+	describe("init()", () => {
+		it("is defined", () => {
+			expect(accordion.init).toBeDefined();
+		});
+
+		it("returns a single object when an accordion ID is passed", () => {
+			render(<AccordionComponent id="accordion-test" />);
+
+			const returnVal = accordion.init("accordion-test");
+
+			expect(returnVal).not.toBeNull();
+			expect(Array.isArray(returnVal)).toBeFalsy();
+			expect(typeof returnVal).toEqual("object");
+		});
+
+		it("returns a single object when a accordion-group ID is passed", () => {
+			render(<AccGrpComponent id="accordion-group-test" />);
+
+			const returnVal = accordion.init("accordion-group-test");
+
+			expect(returnVal).not.toBeNull();
+			expect(Array.isArray(returnVal)).toBeFalsy();
+			expect(typeof returnVal).toEqual("object");
+		});
+
+		it("returns an array of accordion objects when more than one accordion is initialized", () => {
+			render(
+				<>
+					<AccordionComponent />
+					<AccordionComponent />
+				</>
+			);
+
+			const returnVal = accordion.init();
+
+			expect(Array.isArray(returnVal)).toBeTruthy();
+			expect(returnVal.length).toEqual(2);
+			expect(
+				returnVal.every((instance) =>
+					instance.elem.classList.contains("accordion")
+				)
+			).toBeTruthy();
+		});
+
+		it("returns an array of accordion-group objects when more than one accordion-group is initialized", () => {
+			render(
+				<>
+					<AccGrpComponent />
+					<AccGrpComponent />
+				</>
+			);
+
+			const returnVal = accordion.init();
+
+			expect(Array.isArray(returnVal)).toBeTruthy();
+			expect(returnVal.length).toEqual(2);
+			expect(
+				returnVal.every((instance) =>
+					instance.elem.classList.contains("accordion-group")
+				)
+			).toBeTruthy();
+		});
 
-    const AccGrpComponent = ({ id, open, accId }) => (
-        <div className="accordion-group" id={id} >
-            <AccordionComponent id={accId} />
-            <AccordionComponent open={open} />
-        </div>
-    );
+		it("returns an array of both accordion-group objects and accordion objects when more than one element is initialized", () => {
+			render(
+				<>
+					<AccGrpComponent />
+					<AccordionComponent />
+				</>
+			);
 
-    const AccordionComponent = ({ id, open }) => (
-        <div className={`accordion${open ? " show accordion-open" : ""}`} id={id} >
-            <div className="accordion-header">
-                Foo
-            </div>
-            <div className="accordion-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-    );
+			const returnVal = accordion.init();
 
-    it("is defined", () => {
-        expect(accordion).toBeDefined();
-    });
+			expect(Array.isArray(returnVal)).toBeTruthy();
+			expect(returnVal.length).toEqual(2);
+			expect(returnVal[0].elem).toHaveClass("accordion-group");
+			expect(returnVal[1].elem).toHaveClass("accordion");
+		});
 
-    describe("init()", () => {
-        it("is defined", () => {
-            expect(accordion.init).toBeDefined();
-        });
+		describe("warning messages", () => {
+			beforeEach(() => (console.warn = jest.fn()));
 
-        it("returns a single object when an accordion ID is passed", () => {
+			it("prints a warning message if no accordion-group or accordion exist", () => {
+				console.warn = jest.fn();
 
-            render(<AccordionComponent id="accordion-test"/>);
+				accordion.init();
 
-            const returnVal = accordion.init("accordion-test");
+				expect(console.warn).toHaveBeenCalled();
+			});
 
-            expect(returnVal).not.toBeNull();
-            expect(Array.isArray(returnVal)).toBeFalsy();
-            expect(typeof returnVal).toEqual("object");
-        });
+			it("prints a warning message if no  matching the passed ID exist", () => {
+				console.warn = jest.fn();
 
-        it("returns a single object when a accordion-group ID is passed", () => {
+				accordion.init("invalid-id");
 
-            render(<AccGrpComponent id="accordion-group-test" />);
+				expect(console.warn).toHaveBeenCalled();
+			});
 
-            const returnVal = accordion.init("accordion-group-test");
+			it("prints a warning if an accordion-group without accordions is initialized", () => {
+				console.warn = jest.fn();
 
-            expect(returnVal).not.toBeNull();
-            expect(Array.isArray(returnVal)).toBeFalsy();
-            expect(typeof returnVal).toEqual("object");
-        });
+				render(<div id="empty-accordion-group" className="accordion-group" />);
 
-        it("returns an array of accordion objects when more than one accordion is initialized", () => {
+				accordion.init("empty-accordion-group");
 
-            render(
-                <>
-                    <AccordionComponent />
-                    <AccordionComponent />
-                </>);
+				expect(console.warn).toHaveBeenCalledWith(
+					"accordion-group: No accordion children found"
+				);
+			});
 
-            const returnVal = accordion.init();
+			it("prints a warning when an accordion without .accordion-header is initialized", () => {
+				console.warn = jest.fn();
 
-            expect(Array.isArray(returnVal)).toBeTruthy();
-            expect(returnVal.length).toEqual(2);
-            expect(returnVal.every(instance => instance.elem.classList.contains("accordion"))).toBeTruthy();
-        });
+				render(<div id="acc-no-header" className="accordion" />);
 
-        it("returns an array of accordion-group objects when more than one accordion-group is initialized", () => {
+				accordion.init("acc-no-header");
 
-            render(
-                <>
-                    <AccGrpComponent />
-                    <AccGrpComponent />
-                </>);
+				expect(console.warn).toHaveBeenCalledWith(
+					"accordion: No .accordion-header found"
+				);
+			});
 
-            const returnVal = accordion.init();
+			it("prints a warning if an accordion-group contains accordions without accordion-header", () => {
+				render(
+					<div id="accGrpNoHead" className="accordion-group">
+						<div className="accordion" />
+					</div>
+				);
 
-            expect(Array.isArray(returnVal)).toBeTruthy();
-            expect(returnVal.length).toEqual(2);
-            expect(returnVal.every(instance => instance.elem.classList.contains("accordion-group"))).toBeTruthy();
-        });
+				accordion.init("accGrpNoHead");
 
-        it("returns an array of both accordion-group objects and accordion objects when more than one element is initialized", () => {
+				expect(console.warn).toHaveBeenCalledWith(
+					"accordion-group: An accordion is missing a header"
+				);
+			});
+		});
+	});
 
-            render(
-                <>
-                    <AccGrpComponent />
-                    <AccordionComponent />
-                </>);
+	describe("class Accordion", () => {
+		it("click opens the accordion", () => {
+			render(<AccordionComponent />);
 
-            const returnVal = accordion.init();
+			const accElem = document.querySelector(".accordion");
+			const accHeaderElem = accElem.querySelector(".accordion-header");
 
-            expect(Array.isArray(returnVal)).toBeTruthy();
-            expect(returnVal.length).toEqual(2);
-            expect(returnVal[0].elem).toHaveClass("accordion-group");
-            expect(returnVal[1].elem).toHaveClass("accordion");
-        });
+			accordion.init();
 
-        describe("warning messages", () => {
-            beforeEach(() => console.warn = jest.fn());
+			expect(accElem).not.toHaveClass("accordion-open");
 
-            it("prints a warning message if no accordion-group or accordion exist", () => {
-                console.warn = jest.fn();
+			accHeaderElem.dispatchEvent(new Event("click"));
 
-                accordion.init();
+			expect(accElem).toHaveClass("accordion-open");
+		});
 
-                expect(console.warn).toHaveBeenCalled();
-            });
+		it("click closes the accordion", () => {
+			render(<AccordionComponent open />);
 
-            it("prints a warning message if no  matching the passed ID exist", () => {
-                console.warn = jest.fn();
+			const accElem = document.querySelector(".accordion");
+			const accHeaderElem = accElem.querySelector(".accordion-header");
 
-                accordion.init("invalid-id");
+			accordion.init();
 
-                expect(console.warn).toHaveBeenCalled();
-            });
+			expect(accElem).toHaveClass("accordion-open");
 
-            it("prints a warning if an accordion-group without accordions is initialized", () => {
-                console.warn = jest.fn();
+			accHeaderElem.dispatchEvent(new Event("click"));
 
-                render(<div id="empty-accordion-group" className="accordion-group"/>);
+			jest.runAllTimers();
 
-                accordion.init("empty-accordion-group");
+			expect(accElem).not.toHaveClass("accordion-open");
+		});
 
-                expect(console.warn).toHaveBeenCalledWith("accordion-group: No accordion children found");
-            });
+		it("clicking in quick succession to open an accordion will print a warning", () => {
+			console.warn = jest.fn();
 
-            it("prints a warning when an accordion without .accordion-header is initialized", () => {
-                console.warn = jest.fn();
+			render(<AccordionComponent />);
 
-                render(<div id="acc-no-header" className="accordion" />);
+			const accObj = accordion.init()[0];
 
-                accordion.init("acc-no-header");
+			accObj.header.dispatchEvent(new Event("click"));
+			accObj.header.dispatchEvent(new Event("click"));
 
-                expect(console.warn).toHaveBeenCalledWith("accordion: No .accordion-header found");
-            });
+			expect(console.warn).toHaveBeenCalledWith(
+				"accordion: The given accordion is expanding"
+			);
+		});
 
-            it("prints a warning if an accordion-group contains accordions without accordion-header", () => {
+		it("clicking in quick succession to close an accordion will print a warning", () => {
+			console.warn = jest.fn();
 
-                render(
-                    <div id="accGrpNoHead" className="accordion-group">
-                        <div className="accordion" />
-                    </div>);
+			render(<AccordionComponent open />);
 
-                accordion.init("accGrpNoHead");
+			const accObj = accordion.init()[0];
 
-                expect(console.warn).toHaveBeenCalledWith("accordion-group: An accordion is missing a header");
-            });
-        });
-    });
+			accObj.header.dispatchEvent(new Event("click"));
+			accObj.header.dispatchEvent(new Event("click"));
 
-    describe("class Accordion", () => {
-        it("click opens the accordion", () => {
+			expect(console.warn).toHaveBeenCalledWith(
+				"accordion: The given accordion is collapsing"
+			);
+		});
+	});
 
-            render(<AccordionComponent />);
+	describe("class Accordion-Group", () => {
+		it("click opens an accordion", () => {
+			render(<AccGrpComponent />);
 
-            const accElem = document.querySelector(".accordion");
-            const accHeaderElem = accElem.querySelector(".accordion-header");
+			const accGrpObj = accordion.init()[0];
 
-            accordion.init();
+			expect(accGrpObj.openAcc).toBeFalsy();
 
-            expect(accElem).not.toHaveClass("accordion-open");
+			accGrpObj.accordions[0].header.dispatchEvent(new Event("click"));
 
-            accHeaderElem.dispatchEvent(new Event("click"));
+			jest.runAllTimers();
 
-            expect(accElem).toHaveClass("accordion-open");
-        });
+			expect(accGrpObj.openAcc).toBeTruthy();
+		});
 
-        it("click closes the accordion", () => {
+		it("clicking an open accordion closes it", () => {
+			render(<AccGrpComponent open />);
 
-            render(<AccordionComponent open />);
+			const accGrpObj = accordion.init()[0];
+			const openAcc = accGrpObj.openAcc;
 
-            const accElem = document.querySelector(".accordion");
-            const accHeaderElem = accElem.querySelector(".accordion-header");
+			expect(openAcc.elem).toHaveClass("accordion-open");
 
-            accordion.init();
+			openAcc.header.dispatchEvent(new Event("click"));
 
-            expect(accElem).toHaveClass("accordion-open");
+			jest.runAllTimers();
 
-            accHeaderElem.dispatchEvent(new Event("click"));
+			expect(openAcc.elem).not.toHaveClass("accordion-open");
+		});
 
-            jest.runAllTimers();
+		it("only one accordion can be open at the same time", () => {
+			render(<AccGrpComponent open />);
 
-            expect(accElem).not.toHaveClass("accordion-open");
-        });
+			const accGrpObj = accordion.init()[0];
+			const openAcc = accGrpObj.openAcc.elem;
+			const closedAcc = document.querySelector(
+				".accordion:not(.accordion-open)"
+			);
 
-        it("clicking in quick succession to open an accordion will print a warning", () => {
-            console.warn = jest.fn();
+			expect(openAcc).toHaveClass("accordion-open");
+			expect(closedAcc).not.toHaveClass("accordion-open");
 
-            render(<AccordionComponent />);
+			closedAcc
+				.querySelector(".accordion-header")
+				.dispatchEvent(new Event("click"));
 
-            const accObj = accordion.init()[0];
+			jest.runAllTimers();
 
-            accObj.header.dispatchEvent(new Event("click"));
-            accObj.header.dispatchEvent(new Event("click"));
+			expect(openAcc).not.toHaveClass("accordion-open");
+			expect(closedAcc).toHaveClass("accordion-open");
+		});
 
-            expect(console.warn).toHaveBeenCalledWith("accordion: The given accordion is expanding");
-        });
+		it("clicking in quick succession to open an accordion wrapped by accordion-group will print a warning", () => {
+			console.warn = jest.fn();
 
-        it("clicking in quick succession to close an accordion will print a warning", () => {
-            console.warn = jest.fn();
+			render(<AccGrpComponent />);
 
-            render(<AccordionComponent open />);
+			const accGrp = accordion.init()[0];
 
-            const accObj = accordion.init()[0];
+			accGrp.accordions[0].header.dispatchEvent(new Event("click"));
+			accGrp.accordions[0].header.dispatchEvent(new Event("click"));
 
-            accObj.header.dispatchEvent(new Event("click"));
-            accObj.header.dispatchEvent(new Event("click"));
+			expect(console.warn).toHaveBeenCalledWith(
+				"accordion-group: The accordion-group contains an expanding element"
+			);
+		});
+	});
 
-            expect(console.warn).toHaveBeenCalledWith("accordion: The given accordion is collapsing");
-        });
-    });
+	describe("open", () => {
+		it("opens the accordion matching the passed ID and returns the accordion object", () => {
+			render(<AccordionComponent id="test-open" />);
 
-    describe("class Accordion-Group", () => {
-        it("click opens an accordion", () => {
+			const accObj = accordion.init()[0];
 
-            render(<AccGrpComponent />);
+			expect(accObj.elem.classList).not.toContain("accordion-open");
 
-            const accGrpObj = accordion.init()[0];
+			const returnVal = accordion.open("test-open");
 
-            expect(accGrpObj.openAcc).toBeFalsy();
+			expect(accObj.elem.classList).toContain("accordion-open");
+			expect(returnVal).toEqual(accObj);
+		});
 
-            accGrpObj.accordions[0].header.dispatchEvent(new Event("click"));
+		it("opens the accordion matching the given ID in a accordion-group", () => {
+			render(<AccGrpComponent accId="acc-test" />);
 
-            jest.runAllTimers();
+			const accGrpObj = accordion.init()[0];
+			const acc = document.getElementById("acc-test");
 
-            expect(accGrpObj.openAcc).toBeTruthy();
-        });
+			expect(accGrpObj.openAcc).toBeFalsy();
+			expect(acc.classList).not.toContain("accordion-open");
 
-        it("clicking an open accordion closes it", () => {
+			const returnVal = accordion.open("acc-test");
 
-            render(<AccGrpComponent open />);
+			jest.runAllTimers();
 
-            const accGrpObj = accordion.init()[0];
-            const openAcc = accGrpObj.openAcc;
+			expect(accGrpObj.openAcc).toBeTruthy();
+			expect(acc.classList).toContain("accordion-open");
+			expect(returnVal).toEqual(accGrpObj.openAcc);
+		});
 
-            expect(openAcc.elem).toHaveClass("accordion-open");
+		it("closes the open accordion in a accordion-group if open is called on another accordion", () => {
+			render(<AccGrpComponent open accId="acc-id" />);
 
-            openAcc.header.dispatchEvent(new Event("click"));
+			const accGrpObj = accordion.init()[0];
+			const closedAcc = document.getElementById("acc-id");
 
-            jest.runAllTimers();
+			expect(accGrpObj.openAcc).toBeTruthy();
 
-            expect(openAcc.elem).not.toHaveClass("accordion-open");
-        });
+			accordion.open("acc-id");
 
-        it("only one accordion can be open at the same time", () => {
+			jest.runAllTimers();
 
-            render(<AccGrpComponent open />);
+			expect(accGrpObj.openAcc.elem).toEqual(closedAcc);
+			expect(document.querySelectorAll(".accordion-open").length).toEqual(1);
+		});
 
-            const accGrpObj = accordion.init()[0];
-            const openAcc = accGrpObj.openAcc.elem;
-            const closedAcc = document.querySelector(".accordion:not(.accordion-open)");
+		describe("warning messages", () => {
+			beforeEach(() => (console.warn = jest.fn()));
 
-            expect(openAcc).toHaveClass("accordion-open");
-            expect(closedAcc).not.toHaveClass("accordion-open");
+			it("returns false and prints a warning if no accordion matching the ID was found", () => {
+				accordion.init();
 
-            closedAcc.querySelector(".accordion-header").dispatchEvent(new Event("click"));
+				const returnVal = accordion.open("test");
 
-            jest.runAllTimers();
+				expect(console.warn).toHaveBeenCalledWith(
+					"accordion.open: accordion with id test was not found"
+				);
+				expect(returnVal).toBeFalsy();
+			});
 
-            expect(openAcc).not.toHaveClass("accordion-open");
-            expect(closedAcc).toHaveClass("accordion-open");
-        });
+			it("returns false and prints a warning if the accordion is open", () => {
+				render(<AccordionComponent open id="is-open" />);
+				accordion.init();
 
-        it("clicking in quick succession to open an accordion wrapped by accordion-group will print a warning", () => {
-            console.warn = jest.fn();
+				const returnVal = accordion.open("is-open");
 
-            render(<AccGrpComponent />);
+				expect(console.warn).toHaveBeenCalledWith(
+					"accordion.open: accordion with id is-open is open"
+				);
+				expect(returnVal).toBeFalsy();
+			});
+		});
+	});
 
-            const accGrp = accordion.init()[0];
+	describe("close", () => {
+		it("closes the open accordion matching the passed ID and returns the accordion object", () => {
+			render(<AccordionComponent id="acc-close" open />);
 
-            accGrp.accordions[0].header.dispatchEvent(new Event("click"));
-            accGrp.accordions[0].header.dispatchEvent(new Event("click"));
+			const accObj = accordion.init()[0];
 
-            expect(console.warn).toHaveBeenCalledWith("accordion-group: The accordion-group contains an expanding element");
-        });
-    });
+			expect(accObj.isOpen).toBeTruthy();
 
-    describe("open", () => {
-        it("opens the accordion matching the passed ID and returns the accordion object", () => {
+			const returnVal = accordion.close("acc-close");
 
-            render(<AccordionComponent id="test-open" />);
+			expect(accObj.isOpen).toBeFalsy();
+			expect(returnVal).toBeTruthy();
+			expect(returnVal).toEqual(accObj);
+		});
 
-            const accObj = accordion.init()[0];
+		it("closes the open accordion matching the passed ID in an accordion-group and returns the accordion object", () => {
+			render(
+				<div className="accordion-group">
+					<AccordionComponent id="test-close" open />
+					<AccordionComponent />
+				</div>
+			);
 
-            expect(accObj.elem.classList).not.toContain("accordion-open");
+			const accGrpObj = accordion.init()[0];
 
-            const returnVal = accordion.open("test-open");
+			expect(accGrpObj.openAcc).toBeTruthy();
 
-            expect(accObj.elem.classList).toContain("accordion-open");
-            expect(returnVal).toEqual(accObj);
-        });
+			const returnVal = accordion.close("test-close");
 
-        it("opens the accordion matching the given ID in a accordion-group", () => {
+			expect(accGrpObj.openAcc).toBeFalsy();
+			expect(returnVal.elem).toEqual(document.getElementById("test-close"));
+		});
 
-            render(<AccGrpComponent accId="acc-test" />);
+		describe("warninge messages", () => {
+			beforeEach(() => (console.warn = jest.fn()));
 
-            const accGrpObj = accordion.init()[0];
-            const acc = document.getElementById("acc-test");
+			it("prints a warning message and returns false if the passed ID doesn't match an existing accordion", () => {
+				const returnVal = accordion.close("testing");
 
-            expect(accGrpObj.openAcc).toBeFalsy();
-            expect(acc.classList).not.toContain("accordion-open");
+				expect(console.warn).toHaveBeenCalledWith(
+					"accordion.close: accordion with id testing was not found"
+				);
+				expect(returnVal).toBeFalsy();
+			});
 
-            const returnVal = accordion.open("acc-test");
+			it("prints a warning message and returns false if the accordion is closed", () => {
+				render(<AccGrpComponent accId="closed-acc" />);
+				accordion.init();
 
-            jest.runAllTimers();
+				const returnVal = accordion.close("closed-acc");
 
-            expect(accGrpObj.openAcc).toBeTruthy();
-            expect(acc.classList).toContain("accordion-open");
-            expect(returnVal).toEqual(accGrpObj.openAcc);
-        });
-
-        it("closes the open accordion in a accordion-group if open is called on another accordion", () => {
-
-            render(<AccGrpComponent open accId="acc-id" />);
-
-            const accGrpObj = accordion.init()[0];
-            const closedAcc = document.getElementById("acc-id");
-
-            expect(accGrpObj.openAcc).toBeTruthy();
-
-            accordion.open("acc-id");
-
-            jest.runAllTimers();
-
-            expect(accGrpObj.openAcc.elem).toEqual(closedAcc);
-            expect(document.querySelectorAll(".accordion-open").length).toEqual(1);
-        });
-
-        describe("warning messages", () => {
-            beforeEach(() => console.warn = jest.fn());
-
-            it("returns false and prints a warning if no accordion matching the ID was found", () => {
-                accordion.init();
-
-                const returnVal = accordion.open("test");
-
-                expect(console.warn).toHaveBeenCalledWith("accordion.open: accordion with id test was not found");
-                expect(returnVal).toBeFalsy();
-            });
-
-            it("returns false and prints a warning if the accordion is open", () => {
-
-                render(<AccordionComponent open id="is-open" />);
-                accordion.init();
-
-                const returnVal = accordion.open("is-open");
-
-                expect(console.warn).toHaveBeenCalledWith("accordion.open: accordion with id is-open is open");
-                expect(returnVal).toBeFalsy();
-            });
-        });
-    });
-
-    describe("close", () => {
-        it("closes the open accordion matching the passed ID and returns the accordion object", () => {
-
-            render(<AccordionComponent id="acc-close" open />);
-
-            const accObj = accordion.init()[0];
-
-            expect(accObj.isOpen).toBeTruthy();
-
-            const returnVal = accordion.close("acc-close");
-
-            expect(accObj.isOpen).toBeFalsy();
-            expect(returnVal).toBeTruthy();
-            expect(returnVal).toEqual(accObj);
-        });
-
-        it("closes the open accordion matching the passed ID in an accordion-group and returns the accordion object", () => {
-
-            render(
-                <div className="accordion-group">
-                    <AccordionComponent id="test-close" open/>
-                    <AccordionComponent />
-                </div>);
-
-            const accGrpObj = accordion.init()[0];
-
-            expect(accGrpObj.openAcc).toBeTruthy();
-
-            const returnVal = accordion.close("test-close");
-
-            expect(accGrpObj.openAcc).toBeFalsy();
-            expect(returnVal.elem).toEqual(document.getElementById("test-close"));
-        });
-
-        describe("warninge messages", () => {
-            beforeEach(() => console.warn = jest.fn());
-
-            it("prints a warning message and returns false if the passed ID doesn't match an existing accordion", () => {
-                const returnVal = accordion.close("testing");
-
-                expect(console.warn).toHaveBeenCalledWith("accordion.close: accordion with id testing was not found");
-                expect(returnVal).toBeFalsy();
-            });
-
-            it("prints a warning message and returns false if the accordion is closed", () => {
-
-                render(<AccGrpComponent accId="closed-acc" />);
-                accordion.init();
-
-                const returnVal = accordion.close("closed-acc");
-
-                expect(console.warn).toHaveBeenCalledWith("accordion.close: accordion with id closed-acc is closed");
-                expect(returnVal).toBeFalsy();
-            });
-        });
-    });
+				expect(console.warn).toHaveBeenCalledWith(
+					"accordion.close: accordion with id closed-acc is closed"
+				);
+				expect(returnVal).toBeFalsy();
+			});
+		});
+	});
 });

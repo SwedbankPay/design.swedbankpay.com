@@ -23,7 +23,7 @@ Setting the following GitHub secrets variables:
 
 ## Workflows
 
-Each workflow executes twice through the use of matrix. One for the Swedbank Pay brand, and one for the PayEx brand. 
+Each workflow executes twice through the use of matrix. One for the Swedbank Pay brand, and one for the PayEx brand.
 The matrix brand variable is sent to the `variables.sh` script which creates certain variables that are accessible through the `variables` step output and then later used within workflows.
 
 ### `main.yml`

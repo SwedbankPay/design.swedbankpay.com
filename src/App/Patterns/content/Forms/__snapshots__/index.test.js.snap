@@ -469,42 +469,48 @@ exports[`Forms: index renders 1`] = `
             Data inputs
           </b>
            
-          Information can be entered a variety of non-free form input field, 
+          Information can be entered a variety of non-free form input field,
+           
           <a
             href="/components/checkbox"
             onClick={[Function]}
           >
             checkboxes
           </a>
-          , 
+          ,
+           
           <a
             href="/components/radio-button"
             onClick={[Function]}
           >
             radio button
           </a>
-          , 
+          ,
+           
           <a
             href="/components/select"
             onClick={[Function]}
           >
             select
           </a>
-          , 
+          ,
+           
           <a
             href="/components/datepickers"
             onClick={[Function]}
           >
             date pickers
           </a>
-          , 
+          ,
+           
           <a
             href="/components/togglebox"
             onClick={[Function]}
           >
             toggle-box
           </a>
-           and 
+           and
+           
           <a
             href="/components/rangeslider"
             onClick={[Function]}
@@ -538,7 +544,8 @@ exports[`Forms: index renders 1`] = `
         Spacing
       </h3>
       <p>
-        As a general rule, we recommend a vertical spacing between individual inputs of 24px and a 32px spacer before the first input, between sections and between the last input and the buttons. This may vary depending on your context, but spacing between groups should always be adjusted in relationship to spacing between individual items. 
+        As a general rule, we recommend a vertical spacing between individual inputs of 24px and a 32px spacer before the first input, between sections and between the last input and the buttons. This may vary depending on your context, but spacing between groups should always be adjusted in relationship to spacing between individual items.
+         
       </p>
     </section>
     <section>
@@ -757,7 +764,8 @@ exports[`Forms: index renders 1`] = `
           Required VS. optional
         </h3>
         <p>
-          All fields in a form can be assumed required and should not be labeled with an “*” . If you must ask an optional question, make it clear that it’s optional by adding “(optional)” to the label instead. 
+          All fields in a form can be assumed required and should not be labeled with an “*” . If you must ask an optional question, make it clear that it’s optional by adding “(optional)” to the label instead.
+           
         </p>
         <div
           className="row"
@@ -1215,7 +1223,8 @@ exports[`Forms: index renders 1`] = `
           >
             Login page
           </a>
-          , buttons can be centered and set to the same width as the input fields. On mobile, the buttons are always centered, full width and stacked vertically with the primary action on top. 
+          , buttons can be centered and set to the same width as the input fields. On mobile, the buttons are always centered, full width and stacked vertically with the primary action on top.
+           
         </p>
         <img
           alt="Visualization of button placement in forms."
@@ -1228,7 +1237,8 @@ exports[`Forms: index renders 1`] = `
           Error messages
         </h3>
         <p>
-          When an input isn’t accepted, error messages should be used to help the user understand what went wrong and how to solve the problem without using technical jargong. 
+          When an input isn’t accepted, error messages should be used to help the user understand what went wrong and how to solve the problem without using technical jargong.
+           
         </p>
         <div
           className="row"
@@ -1343,25 +1353,29 @@ exports[`Forms: index renders 1`] = `
           Errors and validation
         </h3>
         <p>
-          To use our validation, start by adding the attribute 
+          To use our validation, start by adding the attribute
+           
           <code
             className="code-tags code-tags-secondary"
           >
             novalidate
           </code>
-           to your 
+           to your
+           
           <code
             className="code-tags code-tags-primary"
           >
             &lt;form&gt;
           </code>
-           element. If you wish to validate your entire form, add the 
+           element. If you wish to validate your entire form, add the
+           
           <code
             className="code-tags code-tags-secondary"
           >
             validate
           </code>
-           attribute to the 
+           attribute to the
+           
           <code
             className="code-tags code-tags-primary"
           >
@@ -1379,7 +1393,8 @@ exports[`Forms: index renders 1`] = `
           >
             required
           </code>
-           and 
+           and
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1393,19 +1408,22 @@ exports[`Forms: index renders 1`] = `
           Client-side validation
         </b>
         <p>
-          Use client-side validation to validate as much data as possible before the user submits the form. Common errors include empty required fields, invalid characters or incorrect input format. To give users inline validation feedback insert a error message within the 
+          Use client-side validation to validate as much data as possible before the user submits the form. Common errors include empty required fields, invalid characters or incorrect input format. To give users inline validation feedback insert a error message within the
+           
           <code
             className="code-tags code-tags-primary"
           >
             form-group
           </code>
-           in the 
+           in the
+           
           <code
             className="code-tags code-tags-primary"
           >
             help-block
           </code>
-           element in the attribute 
+           element in the attribute
+           
           <code
             className="code-tags code-tags-primary"
           >
@@ -1892,13 +1910,15 @@ exports[`Forms: index renders 1`] = `
           Disabled state
         </h3>
         <p>
-          You can disable an entire fieldset by adding 
+          You can disable an entire fieldset by adding
+           
           <code
             className="code-tags code-tags-primary"
           >
             disabled
           </code>
-           to the fieldset element. 
+           to the fieldset element.
+           
         </p>
         <div
           className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
@@ -2042,7 +2062,8 @@ exports[`Forms: index renders 1`] = `
           </div>
         </div>
         <p>
-          If you only wish to disable a specific form component, add the 
+          If you only wish to disable a specific form component, add the
+           
           <code
             className="code-tags code-tags-primary"
           >
@@ -2195,13 +2216,15 @@ exports[`Forms: index renders 1`] = `
           Form grid
         </h3>
         <p>
-          If you need more than one column in your form, you can use the grid system to customize how forms are displayed. Wrap your form elements in a row container and remember to add 
+          If you need more than one column in your form, you can use the grid system to customize how forms are displayed. Wrap your form elements in a row container and remember to add
+           
           <code
             className="code-tags code-tags-secondary"
           >
             .col-{your_size}
           </code>
-           to the 
+           to the
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -2331,7 +2354,8 @@ exports[`Forms: index renders 1`] = `
           Static text
         </h3>
         <p>
-          To display static text in a form use 
+          To display static text in a form use
+           
           <code
             className="code-tags code-tags-secondary"
           >

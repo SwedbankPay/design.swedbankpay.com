@@ -2572,20 +2572,23 @@ exports[`Forms: index renders 1`] = `
           <b>
             third party logins
           </b>
-           can be added. Use a divider to separate it from the standard login section. It can be placed either before or after depending on the most common or desired way to login to the specific portal. 
+           can be added. Use a divider to separate it from the standard login section. It can be placed either before or after depending on the most common or desired way to login to the specific portal.
+           
         </li>
         <li>
           The 
           <b>
             required input fields
           </b>
-           varies depending on the type of login. The amount of required fields  differs depending on the authentication method. 
+           varies depending on the type of login. The amount of required fields differs depending on the authentication method.
+           
         </li>
         <li>
           <b>
             Remember me
           </b>
-           is an optional field. When it is enabled it saves the data and present pre-filled fields the next time the user is about to log in. 
+           is an optional field. When it is enabled it saves the data and present pre-filled fields the next time the user is about to log in.
+           
         </li>
         <li>
           <b>
@@ -2617,7 +2620,8 @@ exports[`Forms: index renders 1`] = `
           src="/TEST/img/documentation/patterns/login-img-collection-example.png"
         />
         <p>
-          The login form is always accompanied by a image on the right side on desktop devices, the image is hidden on smaller devices. Above are an example of some images that would be fitting to be used as login images, the most important thing to look out for is telling a story, especially when it comes to the product. “Who is this product for?” If it is an product for consumers outside of our organization, try to relate the image to that segment of the user. For more guidance on how to design with images and find our image library, refer to the 
+          The login form is always accompanied by a image on the right side on desktop devices, the image is hidden on smaller devices. Above are an example of some images that would be fitting to be used as login images, the most important thing to look out for is telling a story, especially when it comes to the product. “Who is this product for?” If it is an product for consumers outside of our organization, try to relate the image to that segment of the user. For more guidance on how to design with images and find our image library, refer to the
+           
           <a
             href="/identity/imagery"
             onClick={[Function]}
@@ -2645,7 +2649,8 @@ exports[`Forms: index renders 1`] = `
           Client-side validation
         </h4>
         <p>
-          Use client-side validation to validate as much data as possible inline before the user submits the form. Common inline errors include empty required fields, invalid characters or incorrect input format. 
+          Use client-side validation to validate as much data as possible inline before the user submits the form. Common inline errors include empty required fields, invalid characters or incorrect input format.
+           
         </p>
         <div
           className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"
@@ -2727,7 +2732,8 @@ exports[`Forms: index renders 1`] = `
           Server-side validation
         </h4>
         <p>
-          Use server side validation when the user submits the form. Display a local error alert after the page has reloaded if an error has occurred. Incorrect email or password are the most common servers errors. 
+          Use server side validation when the user submits the form. Display a local error alert after the page has reloaded if an error has occurred. Incorrect email or password are the most common servers errors.
+           
         </p>
         <div
           className="sp-wrapper dark sp-c-fVPbOs sp-c-fVPbOs-gMQIch-variant-light"

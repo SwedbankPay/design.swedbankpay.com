@@ -16,7 +16,8 @@ exports[`Core: Logotype Favicon renders 1`] = `
     />
   </div>
   <p>
-    To add a favicon to your application, download the favicon assets and extract it to the root of your build-folder. Insert the code below in the 
+    To add a favicon to your application, download the favicon assets and extract it to the root of your build-folder. Insert the code below in the
+     
     <code
       className="code-tags code-tags-primary"
     >
@@ -37,7 +38,8 @@ exports[`Core: Logotype Favicon renders 1`] = `
     >
       apple-mobile-web-app-title
     </code>
-     and 
+     and
+     
     <code
       className="code-tags code-tags-secondary"
     >
@@ -49,7 +51,8 @@ exports[`Core: Logotype Favicon renders 1`] = `
     >
       &lt;meta&gt;
     </code>
-     tags to reflect the title of your project. Make sure to also do this in the 
+     tags to reflect the title of your project. Make sure to also do this in the
+     
     <code
       className="code-tags code-tags-secondary"
     >
@@ -705,13 +708,15 @@ exports[`Core: Logotype Overview renders 1`] = `
     </span>
   </a>
   <p>
-    The logotype is vectorized and all versions are provided as 
+    The logotype is vectorized and all versions are provided as
+     
     <code
       className="code-tags code-tags-secondary"
     >
       .svg
     </code>
-     files, it is also available in 
+     files, it is also available in
+     
     <code
       className="code-tags code-tags-secondary"
     >

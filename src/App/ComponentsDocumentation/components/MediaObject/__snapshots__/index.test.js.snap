@@ -1019,7 +1019,8 @@ exports[`Documentation: MediaObject renders 1`] = `
       >
         .media-sm
       </code>
-       or 
+       or
+       
       <code
         className="code-tags code-tags-secondary"
       >

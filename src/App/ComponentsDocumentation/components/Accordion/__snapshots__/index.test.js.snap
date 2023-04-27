@@ -73,7 +73,8 @@ exports[`Components: Accordion JavascriptMethods renders 1`] = `
     >
       dg.accordion.init()
     </code>
-     to 
+     to
+     
     <a
       href="/get-started/for-developers"
       onClick={[Function]}
@@ -89,7 +90,8 @@ exports[`Components: Accordion JavascriptMethods renders 1`] = `
     >
       id
     </code>
-     on the 
+     on the
+     
     <code
       className="code-tags code-tags-primary"
     >
@@ -98,7 +100,8 @@ exports[`Components: Accordion JavascriptMethods renders 1`] = `
      element.
   </p>
   <p>
-    To open a given accordion, use 
+    To open a given accordion, use
+     
     <code
       className="code-tags code-tags-secondary"
     >
@@ -106,7 +109,8 @@ exports[`Components: Accordion JavascriptMethods renders 1`] = `
     </code>
   </p>
   <p>
-    To close a given accordion, use 
+    To close a given accordion, use
+     
     <code
       className="code-tags code-tags-secondary"
     >

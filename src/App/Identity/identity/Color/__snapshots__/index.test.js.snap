@@ -8,7 +8,8 @@ exports[`Core: Color BackgroundColors renders 1`] = `
     Background colors
   </h2>
   <p>
-    To maintain an open and welcoming experience we mostly use no background color, that is white. Our background colors have a functional role and are used to organize, structure or highlight a section. Apricot is our primary background color, gray and light turquoise are complementary. 
+    To maintain an open and welcoming experience we mostly use no background color, that is white. Our background colors have a functional role and are used to organize, structure or highlight a section. Apricot is our primary background color, gray and light turquoise are complementary.
+     
   </p>
   <div
     className="color-group"
@@ -412,7 +413,8 @@ exports[`Core: Color CommunicationColors renders 1`] = `
     Color contrast
   </h2>
   <p>
-    It is important to maintain sufficient color contrast in our products to meet accessability requirements. For normal text content this means a 4.5:1 ratio against background and for graphics and large text (18 px, or bold 14 px) a 3:1 ratio against background. To help you to make informed color decisions, we showcase the contrast ratio of each color to our default text (brown) and background (white) color here. 
+    It is important to maintain sufficient color contrast in our products to meet accessability requirements. For normal text content this means a 4.5:1 ratio against background and for graphics and large text (18 px, or bold 14 px) a 3:1 ratio against background. To help you to make informed color decisions, we showcase the contrast ratio of each color to our default text (brown) and background (white) color here.
+     
   </p>
   <div
     className="d-flex flex-row justify-content-around color-contrast-section"

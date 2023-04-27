@@ -101,7 +101,8 @@ exports[`Component: Checkbox ContentGuidelines renders 1`] = `
       <b>
         group legend
       </b>
-       should be descriptive, explaining the context of the options to choose from. 
+       should be descriptive, explaining the context of the options to choose from.
+       
     </li>
     <li>
       The 
@@ -115,7 +116,8 @@ exports[`Component: Checkbox ContentGuidelines renders 1`] = `
       <b>
         hint text
       </b>
-       can be used to complement the group legend and provide clarifying details. If the information is long or won't be needed by the majority of users, a hint expander can be used instead of a text that is visible by default. 
+       can be used to complement the group legend and provide clarifying details. If the information is long or won't be needed by the majority of users, a hint expander can be used instead of a text that is visible by default.
+       
     </li>
   </ul>
 </section>
@@ -133,7 +135,8 @@ exports[`Component: Checkbox DeveloperDocumentation renders 1`] = `
       Disabled state
     </h3>
     <p>
-      Disable a checkbox by adding 
+      Disable a checkbox by adding
+       
       <code
         className="code-tags code-tags-primary"
       >
@@ -250,7 +253,8 @@ exports[`Component: Checkbox DeveloperDocumentation renders 1`] = `
       Error state
     </h3>
     <p>
-      To display the error state, add the 
+      To display the error state, add the
+       
       <code
         className="code-tags code-tags-secondary"
       >
@@ -262,7 +266,9 @@ exports[`Component: Checkbox DeveloperDocumentation renders 1`] = `
       >
         .help-block
       </code>
-       element as the last child with the error message. 
+       
+      element as the last child with the error message.
+       
     </p>
     <div
       className="showcase-panel"

@@ -6,57 +6,71 @@ import "@testing-library/jest-dom";
 import Link from "./index";
 
 describe("Component: Link", () => {
-    it("is defined", () => {
-        expect(Link).toBeDefined();
-    });
+	it("is defined", () => {
+		expect(Link).toBeDefined();
+	});
 
-    it("calls console.error when linkText is not provided", () => {
-        console.error = jest.fn();
+	it("calls console.error when linkText is not provided", () => {
+		console.error = jest.fn();
 
-        const componentForSnap = renderer.create(<Link />);
+		const componentForSnap = renderer.create(<Link />);
 
-        expect(console.error).toHaveBeenCalled();
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+		expect(console.error).toHaveBeenCalled();
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-    it("renders with provided linkText and no icons when only linkText is provided", () => {
-        render(<Link linkText="Link" />);
+	it("renders with provided linkText and no icons when only linkText is provided", () => {
+		render(<Link linkText="Link" />);
 
-        expect(screen.getByRole("link")).toBeTruthy();
-        expect(screen.getByRole("link").querySelector("i")).toBeNull();
+		expect(screen.getByRole("link")).toBeTruthy();
+		expect(screen.getByRole("link").querySelector("i")).toBeNull();
 
-        const componentForSnap = renderer.create(<Link linkText="Link" />);
+		const componentForSnap = renderer.create(<Link linkText="Link" />);
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-    it("renders with left icon when leftIcon is provided", () => {
-        const icon = "chevron_left";
+	it("renders with left icon when leftIcon is provided", () => {
+		const icon = "chevron_left";
 
-        render(<Link linkText="Link" leftIcon={icon} />);
+		render(<Link linkText="Link" leftIcon={icon} />);
 
-        expect(screen.getByRole("link").querySelector("i")).toHaveClass("material-icons");
-        expect(screen.getByRole("link").querySelector("i")).toHaveAttribute("aria-hidden", "true");
-        expect(screen.getByRole("link").querySelector("i")).toHaveTextContent(icon);
-        expect(screen.getByRole("link").querySelector("span")).toHaveClass("ml-2");
+		expect(screen.getByRole("link").querySelector("i")).toHaveClass(
+			"material-icons"
+		);
+		expect(screen.getByRole("link").querySelector("i")).toHaveAttribute(
+			"aria-hidden",
+			"true"
+		);
+		expect(screen.getByRole("link").querySelector("i")).toHaveTextContent(icon);
+		expect(screen.getByRole("link").querySelector("span")).toHaveClass("ml-2");
 
-        const componentForSnap = renderer.create(<Link linkText="Link" leftIcon={icon} />);
+		const componentForSnap = renderer.create(
+			<Link linkText="Link" leftIcon={icon} />
+		);
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-    it("renders with right icon when rightIcon is provided", () => {
-        const icon = "chevron_right";
+	it("renders with right icon when rightIcon is provided", () => {
+		const icon = "chevron_right";
 
-        render(<Link linkText="Link" rightIcon={icon} />);
+		render(<Link linkText="Link" rightIcon={icon} />);
 
-        expect(screen.getByRole("link").querySelector("i")).toHaveClass("material-icons");
-        expect(screen.getByRole("link").querySelector("i")).toHaveAttribute("aria-hidden", "true");
-        expect(screen.getByRole("link").querySelector("i")).toHaveTextContent(icon);
-        expect(screen.getByRole("link").querySelector("span")).toHaveClass("mr-2");
+		expect(screen.getByRole("link").querySelector("i")).toHaveClass(
+			"material-icons"
+		);
+		expect(screen.getByRole("link").querySelector("i")).toHaveAttribute(
+			"aria-hidden",
+			"true"
+		);
+		expect(screen.getByRole("link").querySelector("i")).toHaveTextContent(icon);
+		expect(screen.getByRole("link").querySelector("span")).toHaveClass("mr-2");
 
-        const componentForSnap = renderer.create(<Link linkText="Link" rightIcon={icon} />);
+		const componentForSnap = renderer.create(
+			<Link linkText="Link" rightIcon={icon} />
+		);
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 });

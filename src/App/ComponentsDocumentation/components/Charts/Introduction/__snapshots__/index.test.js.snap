@@ -8,19 +8,22 @@ Array [
     JavaScript
   </h2>,
   <p>
-    To add charts to your project you need to include a dashboard script to make it run properly. Add the dashboard script below the 
+    To add charts to your project you need to include a dashboard script to make it run properly. Add the dashboard script below the
+     
     <code
       className="code-tags code-tags-secondary"
     >
       scripts
     </code>
-     and at the bottom of your 
+     and at the bottom of your
+     
     <code
       className="code-tags code-tags-primary"
     >
       &lt;body&gt;
     </code>
-     tag like this: 
+     tag like this:
+     
   </p>,
   <figure>
     <div
@@ -108,7 +111,8 @@ Array [
   <p
     className="lead"
   >
-    We are using 
+    We are using
+     
     <a
       href="https://www.chartjs.org/"
       rel="noopener noreferrer"
@@ -116,7 +120,8 @@ Array [
     >
       chart.js
     </a>
-     to generate the charts. Our script is mainly just a wrapper around that library to add the correct styling etc.
+     
+    to generate the charts. Our script is mainly just a wrapper around that library to add the correct styling etc.
   </p>,
   <p>
     Most options and settings available in the chart.js documentation will be available.
@@ -161,19 +166,22 @@ Array [
     JavaScript
   </h2>,
   <p>
-    To add charts to your project you need to include a dashboard script to make it run properly. Add the dashboard script below the 
+    To add charts to your project you need to include a dashboard script to make it run properly. Add the dashboard script below the
+     
     <code
       className="code-tags code-tags-secondary"
     >
       scripts
     </code>
-     and at the bottom of your 
+     and at the bottom of your
+     
     <code
       className="code-tags code-tags-primary"
     >
       &lt;body&gt;
     </code>
-     tag like this: 
+     tag like this:
+     
   </p>,
   <figure>
     <div

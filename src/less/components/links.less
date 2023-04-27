@@ -1,174 +1,174 @@
 @import "../global.less";
 @import "./badge.less";
 
-@action-link-height:                        3rem;
-@action-link-new-tab-height:                3rem;
-@action-link-arrow-font-size:               1.5rem;
+@action-link-height: 3rem;
+@action-link-new-tab-height: 3rem;
+@action-link-arrow-font-size: 1.5rem;
 
 a {
-    color: @brand-accent-links;
+	color: @brand-accent-links;
 
-    &:hover,
-    &:focus {
-        color: darken(@brand-accent-links, 10%);
-        text-decoration: none;
-    }
+	&:hover,
+	&:focus {
+		color: darken(@brand-accent-links, 10%);
+		text-decoration: none;
+	}
 
-    &:active,
-    &:hover {
-        outline: 0;
-    }
+	&:active,
+	&:hover {
+		outline: 0;
+	}
 
-    &:focus {
-        .tab-focus();
-    }
+	&:focus {
+		.tab-focus();
+	}
 
-    &.bright {
-        color: @blue-syntax-highlight;
+	&.bright {
+		color: @blue-syntax-highlight;
 
-        &:focus-visible {
-            outline: 2px solid @brand-primary;
-            border-radius: 2px;
-        }
-    }
+		&:focus-visible {
+			outline: 2px solid @brand-primary;
+			border-radius: 2px;
+		}
+	}
 
-    &.icon-link {
-        text-decoration: none;
-        display: inline-flex;
-        align-items: baseline;
+	&.icon-link {
+		text-decoration: none;
+		display: inline-flex;
+		align-items: baseline;
 
-        &:hover,
-        :focus {
-            span {
-                text-decoration: underline;
-            }
-        }
+		&:hover,
+		:focus {
+			span {
+				text-decoration: underline;
+			}
+		}
 
-        i {
-            font-size: 1rem;
-            line-height: 1.5;
-            align-self: flex-end;
-        }
+		i {
+			font-size: 1rem;
+			line-height: 1.5;
+			align-self: flex-end;
+		}
 
-        &.small {
-            i {
-                font-size: 0.875rem;
-            }
-        }
-    }
+		&.small {
+			i {
+				font-size: 0.875rem;
+			}
+		}
+	}
 
-    &.action-link {
-        position: relative;
-        display: flex;
-        align-items: center;
-        min-height: @action-link-height;
-        padding-left: 1rem;
-        border: 1px solid transparent;
-        text-decoration: none;
-        background-color: @brand-bg-1;
-        color: @brand-secondary;
-        margin-bottom: 1rem;
-        border-radius: 4px;
-        padding-top: 0.75rem;
-        padding-bottom: 0.75rem;
+	&.action-link {
+		position: relative;
+		display: flex;
+		align-items: center;
+		min-height: @action-link-height;
+		padding-left: 1rem;
+		border: 1px solid transparent;
+		text-decoration: none;
+		background-color: @brand-bg-1;
+		color: @brand-secondary;
+		margin-bottom: 1rem;
+		border-radius: 4px;
+		padding-top: 0.75rem;
+		padding-bottom: 0.75rem;
 
-        .action-link-content {
-            margin-right: 2rem;
-        }
+		.action-link-content {
+			margin-right: 2rem;
+		}
 
-        .action-link-label {
-            font-size: 1.125rem;
-            font-family: var(--brand-headline);
-            margin-right: 0.25rem;
-        }
+		.action-link-label {
+			font-size: 1.125rem;
+			font-family: var(--brand-headline);
+			margin-right: 0.25rem;
+		}
 
-        &:focus,
-        &:hover {
-            h4 {
-                text-decoration: underline;
-            }
-        }
+		&:focus,
+		&:hover {
+			h4 {
+				text-decoration: underline;
+			}
+		}
 
-        &:focus-visible {
-            outline: 2px solid @brand-secondary;
-            outline-offset: 0;
-            border-radius: 2px;
-        }
+		&:focus-visible {
+			outline: 2px solid @brand-secondary;
+			outline-offset: 0;
+			border-radius: 2px;
+		}
 
-        h4 {
-            font-family: var(--brand-headline);
-        }
+		h4 {
+			font-family: var(--brand-headline);
+		}
 
-        &.badge {
-            margin-left: 0.25rem;
-        }
+		&.badge {
+			margin-left: 0.25rem;
+		}
 
-        &.multiline {
-            .small-text {
-                text-decoration: none;
-            }
-        }
+		&.multiline {
+			.small-text {
+				text-decoration: none;
+			}
+		}
 
-        &:before {
-            content: "";
-            position: absolute;
-            height: 100%;
-            width: 0.25rem;
-            left: 0;
-            top: 0;
-            background-color: @brand-primary;
-            border-radius: 0.25rem 0 0 0.25rem;
-        }
+		&:before {
+			content: "";
+			position: absolute;
+			height: 100%;
+			width: 0.25rem;
+			left: 0;
+			top: 0;
+			background-color: @brand-primary;
+			border-radius: 0.25rem 0 0 0.25rem;
+		}
 
-        &:after {
-            content: "arrow_forward";
-            .material-icons-styling();
+		&:after {
+			content: "arrow_forward";
+			.material-icons-styling();
 
-            position: absolute;
-            right: 0;
-            top: calc(50% - @action-link-arrow-font-size / 2);
-            font-size: @action-link-arrow-font-size;
-            color: @brand-secondary;
-        }
+			position: absolute;
+			right: 0;
+			top: calc(50% - @action-link-arrow-font-size / 2);
+			font-size: @action-link-arrow-font-size;
+			color: @brand-secondary;
+		}
 
-        &.action-link-new-tab {
-            &:after {
-                content: "launch";
-            }
-        }
-    }
+		&.action-link-new-tab {
+			&:after {
+				content: "launch";
+			}
+		}
+	}
 
-    .action-link-multiline {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        margin-right: 1.5rem;
+	.action-link-multiline {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		margin-right: 1.5rem;
 
-        .small-text {
-            padding-left: 0;
-        }
-    }
+		.small-text {
+			padding-left: 0;
+		}
+	}
 
-    .small-text {
-        font-size: 0.75rem;
-        color: @brand-secondary;
-        padding-left: 0.5rem;
-    }
+	.small-text {
+		font-size: 0.75rem;
+		color: @brand-secondary;
+		padding-left: 0.5rem;
+	}
 }
 
 @media (forced-colors: active) {
-    .a {
-        border: 3px solid;
-    }
+	.a {
+		border: 3px solid;
+	}
 
-    &.action-link {
-        &:before {
-            border: 2px solid;
-        }
+	&.action-link {
+		&:before {
+			border: 2px solid;
+		}
 
-        &:focus-visible {
-            outline: 2px solid transparent;
-        }
-    }
+		&:focus-visible {
+			outline: 2px solid transparent;
+		}
+	}
 }

@@ -1,164 +1,164 @@
 @import "./form.less";
 
-@checkbox-height:                           1.375rem;
-@checkbox-width:                            @checkbox-height;
-@checkbox-label-padding:                    (1rem / 5);
-@checkbox-checkmark-height:                 2px;
-@checkbox-checkmark-width:                  2px;
+@checkbox-height: 1.375rem;
+@checkbox-width: @checkbox-height;
+@checkbox-label-padding: (1rem / 5);
+@checkbox-checkmark-height: 2px;
+@checkbox-checkmark-width: 2px;
 
 .checkbox {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+	position: relative;
+	display: flex;
+	flex-direction: column;
 
-    &:not(:last-child) {
-        margin-bottom: 1rem;
-    }
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+	}
 
-    label {
-        position: relative;
-        align-items: center;
-        margin: 0;
-        margin-left: 1.75rem;
-        padding-left: @checkbox-label-padding;
-        min-height: 1.5rem;
-    }
+	label {
+		position: relative;
+		align-items: center;
+		margin: 0;
+		margin-left: 1.75rem;
+		padding-left: @checkbox-label-padding;
+		min-height: 1.5rem;
+	}
 
-    input[type="checkbox"] {
-        position: absolute;
-        margin-right: 1rem;
-        opacity: 0;
+	input[type="checkbox"] {
+		position: absolute;
+		margin-right: 1rem;
+		opacity: 0;
 
-        + label:after {
-            content: "";
-            display: block;
-            position: absolute;
-            visibility: visible;
-            left: -1.5rem;
-            top: 1px;
-            height: @checkbox-height;
-            width: @checkbox-width;
-            background-color: @white;
-            border: 2px solid @brand-secondary-light-2;
-            border-radius: 2px;
-        }
+		+ label:after {
+			content: "";
+			display: block;
+			position: absolute;
+			visibility: visible;
+			left: -1.5rem;
+			top: 1px;
+			height: @checkbox-height;
+			width: @checkbox-width;
+			background-color: @white;
+			border: 2px solid @brand-secondary-light-2;
+			border-radius: 2px;
+		}
 
-        + label:before {
-            content: "";
-            display: block;
-            position: absolute;
-            visibility: visible;
-            left: -1.5rem;
-            top: 1px;
-            height: @checkbox-height;
-            width: @checkbox-width;
-            background-color: @white;
-            border-radius: 50%;
-        }
+		+ label:before {
+			content: "";
+			display: block;
+			position: absolute;
+			visibility: visible;
+			left: -1.5rem;
+			top: 1px;
+			height: @checkbox-height;
+			width: @checkbox-width;
+			background-color: @white;
+			border-radius: 50%;
+		}
 
-        &:checked + label:after {
-            background-color: @checkbox-checked-color;
-            border-color: @checkbox-checked-color;
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            background-image: url("../../icons/shapes/check-mark.svg");
-        }
+		&:checked + label:after {
+			background-color: @checkbox-checked-color;
+			border-color: @checkbox-checked-color;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			background-image: url("../../icons/shapes/check-mark.svg");
+		}
 
-        &:focus + label:before {
-            box-shadow: 0 0 0 0.375rem @brand-secondary-light-3;
-            border-color: @brand-secondary;
-            outline: 4px solid transparent;
-        }
+		&:focus + label:before {
+			box-shadow: 0 0 0 0.375rem @brand-secondary-light-3;
+			border-color: @brand-secondary;
+			outline: 4px solid transparent;
+		}
 
-        &:focus + label:after {
-            border-color: @brand-secondary;
-            outline: 4px solid transparent;
-        }
+		&:focus + label:after {
+			border-color: @brand-secondary;
+			outline: 4px solid transparent;
+		}
 
-        &:hover + label:before {
-            top: 1px;
-            box-shadow: 0 0 0 0.375rem @brand-secondary-light-3;
-        }
+		&:hover + label:before {
+			top: 1px;
+			box-shadow: 0 0 0 0.375rem @brand-secondary-light-3;
+		}
 
-        &:hover + label:after {
-            border-color: @brand-secondary;
-        }
+		&:hover + label:after {
+			border-color: @brand-secondary;
+		}
 
-        &[disabled] {
-            + label:after {
-                background-color: @input-bg-disabled;
-                border-color: @input-checked-bg-disabled;
-            }
+		&[disabled] {
+			+ label:after {
+				background-color: @input-bg-disabled;
+				border-color: @input-checked-bg-disabled;
+			}
 
-            + label:before {
-                content: none;
-            }
+			+ label:before {
+				content: none;
+			}
 
-            &:checked + label:after {
-                background-color: @input-checked-bg-disabled;
-            }
+			&:checked + label:after {
+				background-color: @input-checked-bg-disabled;
+			}
 
-            + label,
-            &:after,
-            &:checked + label:after {
-                cursor: not-allowed;
-            }
-        }
-    }
+			+ label,
+			&:after,
+			&:checked + label:after {
+				cursor: not-allowed;
+			}
+		}
+	}
 
-    &.has-error {
-        .help-block[data-error] {
-            color: @brand-error;
+	&.has-error {
+		.help-block[data-error] {
+			color: @brand-error;
 
-            input[type="checkbox"] {
-                + label:after {
-                    border-color: @brand-error;
-                }
-            }
-        }
-    }
+			input[type="checkbox"] {
+				+ label:after {
+					border-color: @brand-error;
+				}
+			}
+		}
+	}
 }
 
 fieldset {
-    &.checkbox-group {
-        legend {
-            position: relative;
-            border: none;
-            font-size: 1.25rem;
-            line-height: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--brand-secondary);
-            font-family: var(--brand-headline);
-            font-weight: var(--font-weight-header, 400);
-        }
+	&.checkbox-group {
+		legend {
+			position: relative;
+			border: none;
+			font-size: 1.25rem;
+			line-height: 1.5rem;
+			margin-bottom: 0.5rem;
+			color: var(--brand-secondary);
+			font-family: var(--brand-headline);
+			font-weight: var(--font-weight-header, 400);
+		}
 
-        span {
-            font-weight: normal;
-            margin-left: 0.2rem;
-        }
+		span {
+			font-weight: normal;
+			margin-left: 0.2rem;
+		}
 
-        &.has-error {
-            input[type="checkbox"] + label:after {
-                border-color: @brand-error;
-            }
-        }
-    }
+		&.has-error {
+			input[type="checkbox"] + label:after {
+				border-color: @brand-error;
+			}
+		}
+	}
 
-    &[disabled] {
-        legend {
-            color: @light-brown;
-        }
-    }
+	&[disabled] {
+		legend {
+			color: @light-brown;
+		}
+	}
 
-    &.has-error {
-        .help-block {
-            color: @brand-error;
-        }
+	&.has-error {
+		.help-block {
+			color: @brand-error;
+		}
 
-        input[type="checkbox"] {
-            + label:before {
-                border-color: @brand-error;
-            }
-        }
-    }
+		input[type="checkbox"] {
+			+ label:before {
+				border-color: @brand-error;
+			}
+		}
+	}
 }

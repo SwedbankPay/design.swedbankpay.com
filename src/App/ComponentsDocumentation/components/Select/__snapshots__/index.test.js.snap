@@ -74,7 +74,8 @@ exports[`Component: Select ContentGuidelines renders 1`] = `
       <b>
         hint text
       </b>
-       can be used to complement the label and provide clarifying details. If the information is long or won't be needed by the majority of users, a hint expander can be used instead of a text that is visible by default. 
+       can be used to complement the label and provide clarifying details. If the information is long or won't be needed by the majority of users, a hint expander can be used instead of a text that is visible by default.
+       
     </li>
   </ul>
 </section>
@@ -98,7 +99,8 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
       >
         .has-error
       </code>
-       class to the parent element, then add the 
+       class to the parent element, then add the
+       
       <code
         className="code-tags code-tags-secondary"
       >
@@ -274,7 +276,8 @@ exports[`Component: Select DeveloperDocumentation renders 1`] = `
       Disabled state
     </h3>
     <p>
-      Disable a select by adding the 
+      Disable a select by adding the
+       
       <code
         className="code-tags code-tags-primary"
       >

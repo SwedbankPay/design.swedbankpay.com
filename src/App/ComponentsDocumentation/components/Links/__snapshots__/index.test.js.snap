@@ -318,7 +318,8 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
           <p
             className="mb-0 justify-content-center"
           >
-            Here you can 
+            Here you can
+             
             <a
               className=""
               href=""

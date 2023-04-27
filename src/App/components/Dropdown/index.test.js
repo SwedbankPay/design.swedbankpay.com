@@ -6,118 +6,206 @@ import "@testing-library/jest-dom";
 import Dropdown from "./index";
 
 describe("Component: Dropdown -", () => {
-    it("is defined", () => {
-        expect(Dropdown).toBeDefined();
-    });
+	it("is defined", () => {
+		expect(Dropdown).toBeDefined();
+	});
 
-    it("renders", () => {
-        render(<Dropdown title="Test" />);
+	it("renders", () => {
+		render(<Dropdown title="Test" />);
 
-        const componentForSnap = renderer.create(<Dropdown title="Test" />);
+		const componentForSnap = renderer.create(<Dropdown title="Test" />);
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-    it("renders error state with the error icon and an error text", () => {
-        const { container } = render(<Dropdown errorMessage="test error message" />);
+	it("renders error state with the error icon and an error text", () => {
+		const { container } = render(
+			<Dropdown errorMessage="test error message" />
+		);
 
-        expect(container.querySelector(".help-block")).toHaveTextContent("test error message");
-        expect(container.querySelector(".help-block i")).toHaveClass("material-icons");
-        expect(container.querySelector(".help-block i")).toHaveTextContent("error");
+		expect(container.querySelector(".help-block")).toHaveTextContent(
+			"test error message"
+		);
+		expect(container.querySelector(".help-block i")).toHaveClass(
+			"material-icons"
+		);
+		expect(container.querySelector(".help-block i")).toHaveTextContent("error");
 
-        const componentForSnap = renderer.create(<Dropdown errorMessage="test error message" />);
+		const componentForSnap = renderer.create(
+			<Dropdown errorMessage="test error message" />
+		);
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-    it("renders, when passing no label nor icon props, a toggle button set as secondary button with a chevron icon", () => {
-        render(<Dropdown/>);
+	it("renders, when passing no label nor icon props, a toggle button set as secondary button with a chevron icon", () => {
+		render(<Dropdown />);
 
-        expect(screen.getByRole("button")).toHaveClass("dropdown-toggle");
-        expect(screen.getByLabelText("dropdown button")).toHaveClass("dropdown-toggle");
-        expect(screen.getByRole("button")).toHaveTextContent("Default label");
-        expect(screen.getByRole("button").querySelector("i")).toHaveTextContent("keyboard_arrow_down");
-        expect(screen.getByRole("button").querySelector("i")).toHaveAttribute("aria-hidden", "true");
-        expect(screen.getByRole("button").querySelector("i")).toHaveClass("material-icons");
+		expect(screen.getByRole("button")).toHaveClass("dropdown-toggle");
+		expect(screen.getByLabelText("dropdown button")).toHaveClass(
+			"dropdown-toggle"
+		);
+		expect(screen.getByRole("button")).toHaveTextContent("Default label");
+		expect(screen.getByRole("button").querySelector("i")).toHaveTextContent(
+			"keyboard_arrow_down"
+		);
+		expect(screen.getByRole("button").querySelector("i")).toHaveAttribute(
+			"aria-hidden",
+			"true"
+		);
+		expect(screen.getByRole("button").querySelector("i")).toHaveClass(
+			"material-icons"
+		);
 
-        const componentForSnap = renderer.create(<Dropdown/>);
+		const componentForSnap = renderer.create(<Dropdown />);
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-    it("renders the toggle button, when passing with specific label and custom icon props", () => {
-        render(<Dropdown label="Filter" isIconButton={false} icon="filter_list" />);
+	it("renders the toggle button, when passing with specific label and custom icon props", () => {
+		render(<Dropdown label="Filter" isIconButton={false} icon="filter_list" />);
 
-        expect(screen.getByRole("button")).toHaveClass("dropdown-toggle");
-        expect(screen.getByLabelText("dropdown button")).toHaveClass("dropdown-toggle");
-        expect(screen.getByRole("button")).toHaveTextContent("Filter");
-        expect(screen.getByRole("button").querySelector("i")).toHaveTextContent("filter_list");
-        expect(screen.getByRole("button").querySelector("i")).toHaveAttribute("aria-hidden", "true");
-        expect(screen.getByRole("button").querySelector("i")).toHaveClass("material-icons");
+		expect(screen.getByRole("button")).toHaveClass("dropdown-toggle");
+		expect(screen.getByLabelText("dropdown button")).toHaveClass(
+			"dropdown-toggle"
+		);
+		expect(screen.getByRole("button")).toHaveTextContent("Filter");
+		expect(screen.getByRole("button").querySelector("i")).toHaveTextContent(
+			"filter_list"
+		);
+		expect(screen.getByRole("button").querySelector("i")).toHaveAttribute(
+			"aria-hidden",
+			"true"
+		);
+		expect(screen.getByRole("button").querySelector("i")).toHaveClass(
+			"material-icons"
+		);
 
-        const componentForSnap = renderer.create(<Dropdown label="Filter" isIconButton={false} icon="filter_list" />);
+		const componentForSnap = renderer.create(
+			<Dropdown label="Filter" isIconButton={false} icon="filter_list" />
+		);
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-    describe("renders the toggle button with the icon being either before or after", () => {
-        it("the icon is after the text", () => {
-            render(<Dropdown label="Filter" isIconButton={false} icon="filter_list" />);
+	describe("renders the toggle button with the icon being either before or after", () => {
+		it("the icon is after the text", () => {
+			render(
+				<Dropdown label="Filter" isIconButton={false} icon="filter_list" />
+			);
 
-            expect(screen.getByRole("button").children[0].tagName.toLowerCase()).not.toBe("i");
+			expect(
+				screen.getByRole("button").children[0].tagName.toLowerCase()
+			).not.toBe("i");
 
-            const componentForSnap = renderer.create(<Dropdown label="Filter" isIconButton={false} icon="filter_list" />);
+			const componentForSnap = renderer.create(
+				<Dropdown label="Filter" isIconButton={false} icon="filter_list" />
+			);
 
-            expect(componentForSnap.toJSON()).toMatchSnapshot();
-        });
-        it("the icon is before the text", () => {
-            render(<Dropdown label="Filter" isIconButton={false} icon="filter_list" iconAfter={false} />);
-            expect(screen.getByRole("button").children[0].tagName.toLowerCase()).toBe("i");
+			expect(componentForSnap.toJSON()).toMatchSnapshot();
+		});
+		it("the icon is before the text", () => {
+			render(
+				<Dropdown
+					label="Filter"
+					isIconButton={false}
+					icon="filter_list"
+					iconAfter={false}
+				/>
+			);
+			expect(screen.getByRole("button").children[0].tagName.toLowerCase()).toBe(
+				"i"
+			);
 
-            const componentForSnap = renderer.create(<Dropdown label="Filter" isIconButton={false} icon="filter_list" iconAfter={false} />);
+			const componentForSnap = renderer.create(
+				<Dropdown
+					label="Filter"
+					isIconButton={false}
+					icon="filter_list"
+					iconAfter={false}
+				/>
+			);
 
-            expect(componentForSnap.toJSON()).toMatchSnapshot();
-        });
-    });
+			expect(componentForSnap.toJSON()).toMatchSnapshot();
+		});
+	});
 
-    describe("the toggle icon btn with and without a passed icon", () => {
+	describe("the toggle icon btn with and without a passed icon", () => {
+		it("renders the toggle btn as icon btn with no icon passed has a default of the three vertical dots icon", () => {
+			render(<Dropdown label="Filter" isIconButton={true} />);
 
-        it("renders the toggle btn as icon btn with no icon passed has a default of the three vertical dots icon", () => {
-            render(<Dropdown label="Filter" isIconButton={true} />);
+			expect(screen.getByRole("button").querySelector("i")).toHaveClass(
+				"material-icons"
+			);
+			expect(screen.getByRole("button").querySelector("i")).toHaveTextContent(
+				"more_vert"
+			);
 
-            expect(screen.getByRole("button").querySelector("i")).toHaveClass("material-icons");
-            expect(screen.getByRole("button").querySelector("i")).toHaveTextContent("more_vert");
+			const componentForSnap = renderer.create(
+				<Dropdown label="Filter" isIconButton={true} />
+			);
 
-            const componentForSnap = renderer.create(<Dropdown label="Filter" isIconButton={true} />);
+			expect(componentForSnap.toJSON()).toMatchSnapshot();
+		});
 
-            expect(componentForSnap.toJSON()).toMatchSnapshot();
-        });
+		it("renders the toggle btn as icon btn with the icon passed as props", () => {
+			render(<Dropdown label="Filter" isIconButton={true} icon="sort" />);
 
-        it("renders the toggle btn as icon btn with the icon passed as props", () => {
-            render(<Dropdown label="Filter" isIconButton={true} icon="sort" />);
+			expect(screen.getByRole("button").querySelector("i")).toHaveClass(
+				"material-icons"
+			);
+			expect(screen.getByRole("button").querySelector("i")).toHaveTextContent(
+				"sort"
+			);
 
-            expect(screen.getByRole("button").querySelector("i")).toHaveClass("material-icons");
-            expect(screen.getByRole("button").querySelector("i")).toHaveTextContent("sort");
+			const componentForSnap = renderer.create(
+				<Dropdown label="Filter" isIconButton={true} icon="sort" />
+			);
 
-            const componentForSnap = renderer.create(<Dropdown label="Filter" isIconButton={true} icon="sort" />);
+			expect(componentForSnap.toJSON()).toMatchSnapshot();
+		});
+	});
 
-            expect(componentForSnap.toJSON()).toMatchSnapshot();
-        });
+	it("renders children components passed as content prop inside the menu list", () => {
+		const checkboxListContent = (
+			<a href="#">
+				<i className="material-icons" aria-hidden="true">
+					bookmark
+				</i>
+				Edit
+			</a>
+		);
 
-    });
+		const { container } = render(
+			<Dropdown
+				label="Sort"
+				isIconButton={true}
+				icon="sort"
+				content={checkboxListContent}
+				largePadding={true}
+			/>
+		);
 
-    it("renders children components passed as content prop inside the menu list", () => {
+		expect(container.querySelector(".dropdown-menu a")).toHaveTextContent(
+			"Edit"
+		);
+		expect(container.querySelector(".dropdown-menu a i")).toHaveClass(
+			"material-icons"
+		);
+		expect(container.querySelector(".dropdown-menu a i")).toHaveTextContent(
+			"bookmark"
+		);
 
-        const checkboxListContent = <a href="#"><i className="material-icons" aria-hidden="true">bookmark</i>Edit</a>;
+		const componentForSnap = renderer.create(
+			<Dropdown
+				label="Sort"
+				isIconButton={true}
+				icon="sort"
+				content={checkboxListContent}
+				largePadding={true}
+			/>
+		);
 
-        const { container } = render(<Dropdown label="Sort" isIconButton={true} icon="sort" content={checkboxListContent} largePadding={true} />);
-
-        expect(container.querySelector(".dropdown-menu a")).toHaveTextContent("Edit");
-        expect(container.querySelector(".dropdown-menu a i")).toHaveClass("material-icons");
-        expect(container.querySelector(".dropdown-menu a i")).toHaveTextContent("bookmark");
-
-        const componentForSnap = renderer.create(<Dropdown label="Sort" isIconButton={true} icon="sort" content={checkboxListContent} largePadding={true} />);
-
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 });

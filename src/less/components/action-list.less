@@ -1,122 +1,122 @@
 @import "../global.less";
 
 .action-list {
-    position: relative;
-    display: inline-flex;
+	position: relative;
+	display: inline-flex;
 
-    .action-menu {
-        position: absolute;
-        top: 2.7rem;
-        right: 0;
-        z-index: @action-list-z-index;
-        overflow: hidden;
-        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
-        background-color: @white;
-        display: none;
+	.action-menu {
+		position: absolute;
+		top: 2.7rem;
+		right: 0;
+		z-index: @action-list-z-index;
+		overflow: hidden;
+		box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+		background-color: @white;
+		display: none;
 
-        > a {
-            display: flex;
-            padding: 0.5rem 1rem 0.3rem 0.5rem;
-            visibility: hidden;
-            position: relative;
-            text-decoration: none;
-            white-space: nowrap;
-            align-items: center;
-            color: var(--brand-secondary);
+		> a {
+			display: flex;
+			padding: 0.5rem 1rem 0.3rem 0.5rem;
+			visibility: hidden;
+			position: relative;
+			text-decoration: none;
+			white-space: nowrap;
+			align-items: center;
+			color: var(--brand-secondary);
 
-            > .material-icons {
-                margin-right: 0.5rem;
-            }
+			> .material-icons {
+				margin-right: 0.5rem;
+			}
 
-            &:hover,
-            &:focus {
-                text-decoration: none;
-                background-color: @light-gray;
-            }
+			&:hover,
+			&:focus {
+				text-decoration: none;
+				background-color: @light-gray;
+			}
 
-            &:not(:last-child) {
-                border-bottom: 1px solid @light-gray;
-            }
-        }
-    }
+			&:not(:last-child) {
+				border-bottom: 1px solid @light-gray;
+			}
+		}
+	}
 
-    .action-toggle {
-        position: relative;
-        line-height: 1.1;
-        user-select: none;
-        border-radius: 2px;
-        background-color: transparent;
-        color: var(--brand-secondary);
-        display: flex;
-        padding: 0;
-        border: 0;
-        outline: 0;
+	.action-toggle {
+		position: relative;
+		line-height: 1.1;
+		user-select: none;
+		border-radius: 2px;
+		background-color: transparent;
+		color: var(--brand-secondary);
+		display: flex;
+		padding: 0;
+		border: 0;
+		outline: 0;
 
-        &:not(.material-icons) {
-            padding: 0.7rem;
-        }
+		&:not(.material-icons) {
+			padding: 0.7rem;
+		}
 
-        &:hover,
-        &:focus {
-            cursor: pointer;
-            background-color: @light-gray;
-        }
+		&:hover,
+		&:focus {
+			cursor: pointer;
+			background-color: @light-gray;
+		}
 
-        &:focus-visible {
-            outline: 2px solid @brand-secondary;
-            border-radius: 2px;
-        }
-    }
+		&:focus-visible {
+			outline: 2px solid @brand-secondary;
+			border-radius: 2px;
+		}
+	}
 
-    &.active {
-        .action-toggle {
-            background-color: @light-gray;
-        }
+	&.active {
+		.action-toggle {
+			background-color: @light-gray;
+		}
 
-        .action-menu {
-            display: table;
+		.action-menu {
+			display: table;
 
-            > a {
-                visibility: visible;
-            }
-        }
-    }
+			> a {
+				visibility: visible;
+			}
+		}
+	}
 
-    &.anchor-top-left {
-        .action-menu {
-            left: 0;
-        }
-    }
+	&.anchor-top-left {
+		.action-menu {
+			left: 0;
+		}
+	}
 
-    &.anchor-bottom-right {
-        .action-menu {
-            top: auto;
-            bottom: 2.7rem;
-        }
-    }
+	&.anchor-bottom-right {
+		.action-menu {
+			top: auto;
+			bottom: 2.7rem;
+		}
+	}
 
-    &.anchor-bottom-left {
-        .action-menu {
-            top: auto;
-            left: 0;
-            bottom: 2.7rem;
-        }
-    }
+	&.anchor-bottom-left {
+		.action-menu {
+			top: auto;
+			left: 0;
+			bottom: 2.7rem;
+		}
+	}
 }
 
 @media (forced-colors: active) {
-    .action-list {
-        &.active {
-            .action-menu {
-                outline: 10px solid;
+	.action-list {
+		&.active {
+			.action-menu {
+				outline: 10px solid;
 
-                > a {
-                    &:hover,
-                    &:focus {
-                        outline: 2px solid;
-                    }
-                }
-            }
-        }
-    }
+				> a {
+					&:hover,
+					&:focus {
+						outline: 2px solid;
+					}
+				}
+			}
+		}
+	}
 }

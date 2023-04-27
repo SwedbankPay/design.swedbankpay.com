@@ -198,7 +198,8 @@ Array [
     >
       disabled
     </code>
-     attribute to the desired toggle.
+     
+    attribute to the desired toggle.
   </p>,
   <div
     className="showcase-panel"
