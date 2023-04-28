@@ -7,7 +7,7 @@
 	margin: 1rem auto;
 	height: 40px;
 	display: flex;
-	z-index: @tabs-z-index;
+	z-index: var(--tabs-z-index, 100);
 	border-bottom: 1px solid @brand-secondary-light-3;
 
 	@media screen and (max-width: @screen-sm-max) {
@@ -59,7 +59,7 @@
 			background-position: 100%;
 			background-size: auto 1rem;
 			pointer-events: none;
-			z-index: @tabs-z-index;
+			z-index: var(--tabs-z-index, 100);
 		}
 
 		&.tabs-fade-right {
