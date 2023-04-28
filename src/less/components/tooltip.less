@@ -76,14 +76,14 @@
 	&.tooltip-bottom {
 		&:before {
 			top: 100%;
-			margin-top: calc(@base-margin-sm + 2px);
+			margin-top: calc(var(--base-margin-sm) + 2px);
 			transform: translateX(-50%) translateY(-100%) rotate(-180deg);
 		}
 
 		[role="tooltip"] {
 			left: 50%;
 			top: 100%;
-			margin-top: calc(@base-margin-sm + 2px);
+			margin-top: calc(var(--base-margin-sm) + 2px);
 			transform: translateX(-50%) translateY(0%);
 		}
 	}

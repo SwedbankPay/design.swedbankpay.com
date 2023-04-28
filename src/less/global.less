@@ -9,13 +9,6 @@
 /* Spacer */
 @spacer: 1rem; /* Default */
 
-/* Margin */
-@base-margin: @spacer;
-@base-margin-sm: (@base-margin / 2);
-@base-margin-xs: (@base-margin / 4);
-@base-margin-lg: (@base-margin * 1.5);
-@base-margin-xl: (@base-margin * 2);
-
 /* Padding */
 @base-padding: @spacer;
 @base-padding-sm: (@base-padding / 2);
@@ -185,8 +178,8 @@
 
 	/* Margin */
 	--base-margin: var(--spacer);
-	--base-margin-sm: calc(var(--base-margin) / 2);
 	--base-margin-xs: calc(var(--base-margin) / 4);
+	--base-margin-sm: calc(var(--base-margin) / 2);
 	--base-margin-lg: calc(var(--base-margin) * 1.5);
 	--base-margin-xl: calc(var(--base-margin) * 2);
 	--base-margin-xxl: calc(var(--base-margin) * 4);
@@ -288,7 +281,7 @@ textarea {
 ul,
 ol {
 	margin-top: 0;
-	margin-bottom: @base-margin;
+	margin-bottom: var(--base-margin);
 
 	ul,
 	ol {
