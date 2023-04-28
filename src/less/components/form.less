@@ -1,10 +1,10 @@
 @import "../global.less";
 @import "../core/normalize.less";
 
-@input-padding-y: 0.375rem;
-@input-line-height: @line-height-base;
-@input-form-control-height: 3rem;
-@input-border-width: 1px 1px 2px;
+:root {
+	--input-padding-y: 0.375rem;
+	--input-line-height: var(--line-height-base, 1.5);
+}
 
 // Form control sizing
 //
@@ -155,7 +155,7 @@ legend {
 	display: block;
 	width: 100%;
 	font-size: var(--base-font-size);
-	line-height: @input-line-height;
+	line-height: var(--input-line-height, 1.5);
 	color: @input-color;
 
 	&.medium {
@@ -170,7 +170,7 @@ legend {
 }
 
 .form-control-text {
-	padding: @input-padding-y 0;
+	padding: var(--input-padding-y, 0.375rem) 0;
 }
 
 .form-control {

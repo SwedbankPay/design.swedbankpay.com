@@ -1,16 +1,6 @@
 @import (css)
 	url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
 
-/* Colors */
-@blue-bright: #d7e6e9;
-
-/* BRAND MANAGER COLORS (NOT SHOWCASED ACORN, BUT SOME ARE USED) */
-
-/* Main Colors */
-@orange-headline: #f35b1c; /* WCAG */
-
-/* END BRAND MANAGER COLORS */
-
 /* Other colors */
 @text-muted: fade(@text-color, 75%);
 @text-color: @brand-secondary;
@@ -75,8 +65,6 @@
 @screen-md-max: @grid-breakpoints-max[md];
 @screen-lg-max: @grid-breakpoints-max[lg];
 @screen-xl-max: @grid-breakpoints-max[xl];
-
-@line-height-base: 1.5;
 
 /* Btn-radius base, shared between buttons and input-group */
 @border-radius-base: 2px;
@@ -162,6 +150,7 @@
 
 :root {
 	/* COLORS */
+	--text-color: var(--brand-secondary);
 	--border-color: var(--brand-secondary-light-3);
 
 	/*
@@ -398,7 +387,7 @@ ol {
 }
 
 .close-button() {
-	color: @text-color;
+	color: var(--text-color);
 	opacity: 0.8;
 	line-height: 0.7;
 	transition: opacity 0.3s ease-in-out;
