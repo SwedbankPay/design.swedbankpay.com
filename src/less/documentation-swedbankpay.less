@@ -609,8 +609,8 @@
 		}
 
 		@media (max-width: @screen-md-max) {
-			padding-left: @base-padding;
-			padding-right: @base-padding;
+			padding-left: var(--base-padding);
+			padding-right: var(--base-padding);
 		}
 
 		.dg-current-version {
@@ -698,7 +698,7 @@
 	}
 
 	.documentation-nav {
-		padding: @base-padding;
+		padding: var(--base-padding);
 		max-height: calc(100vh - 226px);
 		overflow-y: hidden;
 
@@ -808,7 +808,7 @@
 
 		h2 {
 			color: var(--text-color);
-			padding-left: @base-padding-xl;
+			padding-left: var(--base-padding-xl);
 			margin: 0;
 			font-weight: var(--font-weight-normal);
 			line-height: 80px;
@@ -847,7 +847,7 @@
 				&.active {
 					border-left: 2px solid @brand-primary;
 					font-weight: var(--font-weight-bold);
-					padding-left: calc(@base-padding - 1px);
+					padding-left: calc(var(--base-padding) - 1px);
 				}
 
 				a {
@@ -866,7 +866,7 @@
 	.showcase-panel {
 		position: relative;
 		background-color: @white;
-		padding: @base-padding-lg;
+		padding: var(--base-padding-lg);
 		margin: var(--base-margin-sm) 0 0 0;
 		border-radius: 2px 0;
 		border: 1px solid @brand-secondary-light-3;

@@ -9,13 +9,6 @@
 /* Spacer */
 @spacer: 1rem; /* Default */
 
-/* Padding */
-@base-padding: @spacer;
-@base-padding-sm: (@base-padding / 2);
-@base-padding-xs: (@base-padding / 4);
-@base-padding-lg: (@base-padding * 1.5);
-@base-padding-xl: (@base-padding * 2);
-
 /* stylelint-disable indentation */
 // prettier-ignore
 @grid-breakpoints: {
@@ -186,8 +179,8 @@
 
 	/* Padding */
 	--base-padding: var(--spacer);
-	--base-padding-sm: calc(var(--base-padding) / 2);
 	--base-padding-xs: calc(var(--base-padding) / 4);
+	--base-padding-sm: calc(var(--base-padding) / 2);
 	--base-padding-lg: calc(var(--base-padding) * 1.5);
 	--base-padding-xl: calc(var(--base-padding) * 2);
 	--base-padding-xxl: calc(var(--base-padding) * 4);

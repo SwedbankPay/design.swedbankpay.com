@@ -6,6 +6,7 @@
 
 - conversion of LESS variables
   - margins
+  - paddings
   - diverse from global
 
 ## Design Guide documentation changes
