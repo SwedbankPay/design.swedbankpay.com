@@ -29,7 +29,7 @@
 		border-color: rgba(255, 255, 255, 1) transparent transparent transparent;
 		opacity: 0;
 		transition: opacity 0.3s ease-in-out;
-		z-index: calc(@tooltip-z-index + 1);
+		z-index: calc(var(--tooltip-z-index, 1100) + 1);
 	}
 
 	[role="tooltip"] {
@@ -50,7 +50,7 @@
 		border-radius: 5px;
 		pointer-events: none;
 		padding: 0.75rem 1rem;
-		z-index: @tooltip-z-index;
+		z-index: var(--tooltip-z-index, 1100);
 		opacity: 0;
 		transition: opacity 0.3s ease-in-out;
 		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);

@@ -5,7 +5,7 @@
 	position: absolute;
 	top: auto;
 	overflow: hidden;
-	z-index: @skip-link-z-index;
+	z-index: var(--skip-link-z-index, -100);
 	padding: 0.75rem;
 	background-color: @white;
 	font-family: var(--font-stack);
@@ -14,7 +14,7 @@
 	&:active {
 		left: auto;
 		height: auto;
-		z-index: @skip-link-active-z-index;
+		z-index: var(--skip-link-active-z-index, 1000);
 		outline: none;
 		border: 2px solid @brand-secondary;
 		border-radius: 2px;

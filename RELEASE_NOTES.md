@@ -8,6 +8,7 @@
   - margins
   - paddings
   - diverse from global
+  - z-index variables
 
 ## Design Guide documentation changes
 

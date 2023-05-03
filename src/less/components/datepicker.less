@@ -798,7 +798,7 @@ span.flatpickr-weekday {
 
 .flatpickr-calendar {
 	&.open {
-		z-index: @datepicker-z-index;
+		z-index: var(--datepicker-z-index, 150);
 	}
 
 	&.hasTime {
