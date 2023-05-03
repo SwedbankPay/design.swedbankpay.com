@@ -54,7 +54,7 @@
 	display: flex;
 	justify-content: space-between;
 	position: relative;
-	z-index: @progress-steps-z-index;
+	z-index: var(--progress-steps-z-index, 100);
 
 	li {
 		flex: 0 1 100%;

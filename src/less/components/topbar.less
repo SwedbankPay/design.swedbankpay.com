@@ -12,7 +12,7 @@
 	margin: 0 auto;
 	height: @topbar-height;
 	width: 100%;
-	z-index: @topbar-z-index;
+	z-index: var(--topbar-z-index, 400);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -418,7 +418,7 @@
 			background-color: @white;
 			overflow-x: hidden;
 			overflow-y: auto;
-			z-index: @topbar-z-index;
+			z-index: var(--topbar-z-index, 400);
 			padding: 0;
 			align-items: center;
 			transform: translateX(-100%);
