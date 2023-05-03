@@ -28,10 +28,8 @@ module.exports = (env, argv) => {
 	const config = {
 		mode: argv.mode || "production",
 		entry: {
-			// @babel/polyfill is here to support IE (it actually DOUBLES the dg.js size).
-			// Looking forward to removing this when we don't support IE anymore [THN]
 			dg: {
-				import: ["@babel/polyfill", "./src/scripts/main/index.js"],
+				import: ["./src/scripts/main/index.js"],
 			},
 			"dg-dashboard": "./src/scripts/dashboard/index.js",
 			swedbankpay: "./src/swedbankpay.js",

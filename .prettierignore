@@ -70,6 +70,3 @@ typings/
 
 # Local test file
 /index.html
-
-# Polyfills
-src/polyfills/

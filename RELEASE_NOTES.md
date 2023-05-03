@@ -10,6 +10,8 @@
 
 - remove IE support
   - remove polyfills
+  - remove Babel/polyfill
+  - add "not dead" to browserlist (i.e. remove IE from supported browsers)
 
 ## Design Guide documentation changes
 
