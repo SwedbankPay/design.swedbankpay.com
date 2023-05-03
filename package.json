@@ -120,7 +120,6 @@
 		"src/less/variables-payex.less",
 		"src/less/swedbankpay.less",
 		"src/less/variables-swedbankpay.less",
-		"src/polyfills/",
 		"src/scripts/main/",
 		"src/scripts/dashboard/",
 		"dist/designguide/",

@@ -5,7 +5,11 @@
 ## Component changes
 
 - continue migration from LESS variables to CSS custom properties
+
   - z-index variables
+
+- remove IE support
+  - remove polyfills
 
 ## Design Guide documentation changes
 
