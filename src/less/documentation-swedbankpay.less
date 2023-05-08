@@ -609,8 +609,8 @@
 		}
 
 		@media (max-width: @screen-md-max) {
-			padding-left: @base-padding;
-			padding-right: @base-padding;
+			padding-left: var(--base-padding);
+			padding-right: var(--base-padding);
 		}
 
 		.dg-current-version {
@@ -690,7 +690,7 @@
 		height: 80px;
 
 		h1 {
-			color: @text-color;
+			color: var(--text-color);
 			margin: 0;
 			font-weight: var(--font-weight-normal);
 			line-height: 80px;
@@ -698,7 +698,7 @@
 	}
 
 	.documentation-nav {
-		padding: @base-padding;
+		padding: var(--base-padding);
 		max-height: calc(100vh - 226px);
 		overflow-y: hidden;
 
@@ -707,7 +707,7 @@
 		}
 
 		.nav-group {
-			margin-bottom: @base-margin;
+			margin-bottom: var(--base-margin);
 			border-bottom: 1px solid rgb(0 0 0 / 7.5%);
 
 			&:first-child {
@@ -807,8 +807,8 @@
 		border-left: 1px solid darken(@brand-primary, 5%);
 
 		h2 {
-			color: @text-color;
-			padding-left: @base-padding-xl;
+			color: var(--text-color);
+			padding-left: var(--base-padding-xl);
 			margin: 0;
 			font-weight: var(--font-weight-normal);
 			line-height: 80px;
@@ -847,7 +847,7 @@
 				&.active {
 					border-left: 2px solid @brand-primary;
 					font-weight: var(--font-weight-bold);
-					padding-left: calc(@base-padding - 1px);
+					padding-left: calc(var(--base-padding) - 1px);
 				}
 
 				a {
@@ -866,8 +866,8 @@
 	.showcase-panel {
 		position: relative;
 		background-color: @white;
-		padding: @base-padding-lg;
-		margin: @base-margin-sm 0 0 0;
+		padding: var(--base-padding-lg);
+		margin: var(--base-margin-sm) 0 0 0;
 		border-radius: 2px 0;
 		border: 1px solid @brand-secondary-light-3;
 

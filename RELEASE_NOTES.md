@@ -4,7 +4,10 @@
 
 ## Component changes
 
-- continue migration from LESS variables to CSS custom properties
+- conversion of LESS variables
+  - margins
+  - paddings
+  - diverse from global
   - z-index variables
 
 ## Design Guide documentation changes
