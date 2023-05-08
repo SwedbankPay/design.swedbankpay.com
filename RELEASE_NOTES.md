@@ -6,6 +6,9 @@
 
 - continue migration from LESS variables to CSS custom properties
 
+  - margins
+  - paddings
+  - diverse from global
   - z-index variables
 
 - remove IE support

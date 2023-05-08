@@ -2,7 +2,7 @@
 
 @toast-height: 3.5rem;
 @toast-color: @white;
-@toast-text-color: @text-color;
+@toast-text-color: var(--text-color);
 @toast-action-color: @brand-secondary;
 
 #toast-container {
@@ -24,7 +24,7 @@
 		position: relative;
 		display: flex;
 		min-height: @toast-height;
-		padding: 1rem @base-padding-lg;
+		padding: 1rem var(--base-padding-lg);
 		background-color: @toast-color;
 		color: @toast-text-color;
 		border-radius: 0.25rem;
@@ -100,8 +100,8 @@
 
 		.material-icons {
 			user-select: none;
-			margin-right: (@base-margin-sm * 2);
-			margin-left: (-@base-margin-sm);
+			margin-right: calc(var(--base-margin-sm) * 2);
+			margin-left: calc(0 - var(--base-margin-sm));
 		}
 
 		.toast-close {
@@ -118,7 +118,7 @@
 				width: 1.5rem;
 				height: 1.5rem;
 				margin-left: 0.5rem;
-				margin-right: (-@base-margin-sm);
+				margin-right: calc(0 - var(--base-margin-sm));
 				color: @medium-brown;
 				border: 2px solid transparent;
 				border-radius: 0.175rem;

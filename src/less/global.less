@@ -1,16 +1,6 @@
 @import (css)
 	url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
 
-/* Colors */
-@blue-bright: #d7e6e9;
-
-/* BRAND MANAGER COLORS (NOT SHOWCASED ACORN, BUT SOME ARE USED) */
-
-/* Main Colors */
-@orange-headline: #f35b1c; /* WCAG */
-
-/* END BRAND MANAGER COLORS */
-
 /* Other colors */
 @text-muted: fade(@text-color, 75%);
 @text-color: @brand-secondary;
@@ -18,20 +8,6 @@
 
 /* Spacer */
 @spacer: 1rem; /* Default */
-
-/* Margin */
-@base-margin: @spacer;
-@base-margin-sm: (@base-margin / 2);
-@base-margin-xs: (@base-margin / 4);
-@base-margin-lg: (@base-margin * 1.5);
-@base-margin-xl: (@base-margin * 2);
-
-/* Padding */
-@base-padding: @spacer;
-@base-padding-sm: (@base-padding / 2);
-@base-padding-xs: (@base-padding / 4);
-@base-padding-lg: (@base-padding * 1.5);
-@base-padding-xl: (@base-padding * 2);
 
 /* stylelint-disable indentation */
 // prettier-ignore
@@ -75,14 +51,6 @@
 @screen-md-max: @grid-breakpoints-max[md];
 @screen-lg-max: @grid-breakpoints-max[lg];
 @screen-xl-max: @grid-breakpoints-max[xl];
-
-@line-height-base: 1.5;
-
-/* Btn-radius base, shared between buttons and input-group */
-@border-radius-base: 2px;
-@btn-border-radius-base: @border-radius-base;
-@btn-border-radius-large: @border-radius-base;
-@btn-border-radius-small: @border-radius-base;
 
 /* Fonts */
 
@@ -144,6 +112,7 @@
 
 :root {
 	/* COLORS */
+	--text-color: var(--brand-secondary);
 	--border-color: var(--brand-secondary-light-3);
 
 	/*
@@ -178,16 +147,16 @@
 
 	/* Margin */
 	--base-margin: var(--spacer);
-	--base-margin-sm: calc(var(--base-margin) / 2);
 	--base-margin-xs: calc(var(--base-margin) / 4);
+	--base-margin-sm: calc(var(--base-margin) / 2);
 	--base-margin-lg: calc(var(--base-margin) * 1.5);
 	--base-margin-xl: calc(var(--base-margin) * 2);
 	--base-margin-xxl: calc(var(--base-margin) * 4);
 
 	/* Padding */
 	--base-padding: var(--spacer);
-	--base-padding-sm: calc(var(--base-padding) / 2);
 	--base-padding-xs: calc(var(--base-padding) / 4);
+	--base-padding-sm: calc(var(--base-padding) / 2);
 	--base-padding-lg: calc(var(--base-padding) * 1.5);
 	--base-padding-xl: calc(var(--base-padding) * 2);
 	--base-padding-xxl: calc(var(--base-padding) * 4);
@@ -299,7 +268,7 @@ textarea {
 ul,
 ol {
 	margin-top: 0;
-	margin-bottom: @base-margin;
+	margin-bottom: var(--base-margin);
 
 	ul,
 	ol {
@@ -398,7 +367,7 @@ ol {
 }
 
 .close-button() {
-	color: @text-color;
+	color: var(--text-color);
 	opacity: 0.8;
 	line-height: 0.7;
 	transition: opacity 0.3s ease-in-out;
