@@ -155,6 +155,124 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
     </figure>
     <section>
       <h3>
+        Import methods comparisons
+      </h3>
+      <p>
+        The Design-System NPM package offers 2 possibilities:
+        <ul>
+          <li>
+            original unprocessed source files
+            <ul>
+              <li>
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  @swedbankpay/design-guide/src/...
+                </code>
+              </li>
+              <li>
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  .js
+                </code>
+                 &
+                 
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  .less
+                </code>
+              </li>
+              <li>
+                individual components files + globals, utils & variables
+              </li>
+              <li>
+                unprocessed for browser support, each project is responsible for ensuring the browser support they need & processing the style files from 
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  .less
+                </code>
+                 to
+                 
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  .css
+                </code>
+              </li>
+              <li>
+                e.g.
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  @swedbankpay/design-guide/src/less/components/topbar.less
+                </code>
+                 
+                or
+                 
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  @swedbankpay/design-guide/src/scripts/main/topbar.js
+                </code>
+              </li>
+            </ul>
+          </li>
+          <li>
+            bundled prefixed transpiled files
+            <ul>
+              <li>
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  @swedbankpay/design-guide/dist/...
+                </code>
+              </li>
+              <li>
+                bundled
+              </li>
+              <li>
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  .js
+                </code>
+                 &
+                 
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  .css
+                </code>
+              </li>
+              <li>
+                processed for browser support (CSS is auto-prefixed, JS is transpiled)
+              </li>
+              <li>
+                e.g.
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  @swedbankpay/design-guide/dist/designguide/styles/swedbankpay.css
+                </code>
+                 
+                or
+                 
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  @swedbankpay/design-guide/dist/designguide/scripts/dg.js
+                </code>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+    </section>
+    <section>
+      <h3>
         JavaScript
       </h3>
       <p>
@@ -354,7 +472,8 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
         >
           js
         </code>
-         file if your bundler supports it, 
+         file if your bundler supports it,
+         
         <em>
           or
         </em>
@@ -606,12 +725,12 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
           <b>
             Import only once:
           </b>
-           Either import from the style file
-           
+           Either import from the style file 
           <em>
             OR
           </em>
-           from the build tool. If you import through both you will end up loading twice the styles on the client, which has a negative impact on the web-performance.
+           
+          from the build tool. If you import through both you will end up loading twice the styles on the client, which has a negative impact on the web-performance.
         </p>
       </div>
     </section>
@@ -626,8 +745,7 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
         >
           variables-TESTBRAND.less
         </code>
-         
-        and the desired component, i.e. Expandable:
+         and the desired component, i.e. Expandable:
       </p>
       <figure>
         <div
@@ -903,22 +1021,21 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
       How to initialize our JavaScript components
     </h3>
     <p>
-      Our script runs
-       
+      Our script runs 
       <code
         className="code-tags code-tags-secondary"
       >
         dg.script.initAll();
       </code>
-       on DOMContentLoaded making it so you have to run
+       
+      on DOMContentLoaded making it so you have to run
        
       <code
         className="code-tags code-tags-secondary"
       >
         dg.&lt;component_name&gt;.init();
       </code>
-       
-      manually when a component is rendered after the event has fired.
+       manually when a component is rendered after the event has fired.
     </p>
     <p>
       To initialize components use
@@ -1001,11 +1118,19 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
     </figure>
   </section>
   <section>
-    <h3>
+    <h2
+      id="browser-support"
+    >
       Browser Support
-    </h3>
+    </h2>
     <p>
-      The design guide is tested and currently supported by these browsers.
+      The design guide is tested and currently supported by these browsers on the bundled files ( i.e. when importing from
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        @swedbankpay/design-guide/dist/...
+      </code>
+       ).
     </p>
     <div
       className="browser-support"
