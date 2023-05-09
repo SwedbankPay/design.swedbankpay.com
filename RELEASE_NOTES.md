@@ -4,11 +4,18 @@
 
 ## Component changes
 
-- conversion of LESS variables
+- continue migration from LESS variables to CSS custom properties
+
   - margins
   - paddings
   - diverse from global
   - z-index variables
+
+- remove IE support
+  - remove polyfills
+  - remove Babel/polyfill
+  - add "not dead" to browserlist (i.e. remove IE from supported browsers)
+  - remove IE-prefixed CSS declarations
 
 ## Design Guide documentation changes
 

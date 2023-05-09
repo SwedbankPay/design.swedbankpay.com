@@ -1,5 +1,3 @@
-import "../../polyfills";
-
 import accordion from "./accordion";
 import actionList from "./action-list";
 import alert from "./alert";

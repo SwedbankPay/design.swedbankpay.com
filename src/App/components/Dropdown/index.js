@@ -73,7 +73,7 @@ const DropdownToggle = ({
 	disabled,
 	isIconButton = false,
 	label = "Default label",
-	icon = isIconButton && !icon ? "more_vert" : "keyboard_arrow_down",
+	icon = isIconButton ? "more_vert" : "keyboard_arrow_down",
 	iconAfter,
 }) => {
 	useEffect(() => {
