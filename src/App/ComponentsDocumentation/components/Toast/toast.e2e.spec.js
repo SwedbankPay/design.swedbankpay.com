@@ -43,17 +43,18 @@ test.describe("toast variants are styled and named accordingly", () => {
 			await page
 				.getByRole("button", { name: `Show ${variant.linkName} toast` })
 				.click();
+			const toast = page.locator("#overviewToast");
 			await expect(
-				page.locator("#overviewToast").getByText(variant.icon, { exact: true })
+				toast.getByText(variant.icon, { exact: true })
 			).toBeVisible();
-			await expect(
-				page.locator("#overviewToast").getByText(`${variant.linkName}  title`)
-			).toBeVisible();
+			await expect(toast.getByText(`${variant.linkName}  title`)).toBeVisible();
+			await expect(toast.locator("css=.toast")).toHaveScreenshot(
+				`${variant.name}-toast.png`
+			);
 			await page.locator("#toast-close-button").click();
 			await expect(page.locator("#toast-close-button")).not.toBeVisible();
 		});
 	});
 });
 
-// TODO: in Toast component (not doc, not script) assert the visual regression
 // TODO: if the Jest becomes obsolete, replace it by this one and delete it
