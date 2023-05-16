@@ -1,53 +1,32 @@
-@import (css) url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
-
-/* Colors */
-@blue-bright:                               #d7e6e9;
-
-/* BRAND MANAGER COLORS (NOT SHOWCASED ACORN, BUT SOME ARE USED) */
-
-/* Main Colors */
-@orange-headline:                           #f35b1c; /* WCAG */
-
-/* END BRAND MANAGER COLORS */
+@import (css)
+	url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
 
 /* Other colors */
-@text-muted:                                fade(@text-color, 75%);
-@text-color:                                @brand-secondary;
-@border-color:                              @brand-secondary-light-3;
+@text-muted: fade(@text-color, 75%);
+@text-color: @brand-secondary;
+@border-color: @brand-secondary-light-3;
 
 /* Spacer */
-@spacer:                                    1rem; /* Default */
-
-/* Margin */
-@base-margin:                               @spacer;
-@base-margin-sm:                            (@base-margin / 2);
-@base-margin-xs:                            (@base-margin / 4);
-@base-margin-lg:                            (@base-margin * 1.5);
-@base-margin-xl:                            (@base-margin * 2);
-
-/* Padding */
-@base-padding:                              @spacer;
-@base-padding-sm:                           (@base-padding / 2);
-@base-padding-xs:                           (@base-padding / 4);
-@base-padding-lg:                           (@base-padding * 1.5);
-@base-padding-xl:                           (@base-padding * 2);
+@spacer: 1rem; /* Default */
 
 /* stylelint-disable indentation */
+// prettier-ignore
 @grid-breakpoints: {
-                                            xs: 0;
-                                            sm: 576px;
-                                            md: 768px;
-                                            lg: 992px;
-                                            xl: 1200px;
-                                            xxl: 1600px;
+	xs: 0;
+	sm: 576px;
+	md: 768px;
+	lg: 992px;
+	xl: 1200px;
+	xxl: 1600px;
 }
 
+// prettier-ignore
 @grid-breakpoints-max: {
-                                            xs: (@grid-breakpoints[sm] - 0.02);
-                                            sm: (@grid-breakpoints[md] - 0.02);
-                                            md: (@grid-breakpoints[lg] - 0.02);
-                                            lg: (@grid-breakpoints[xl] - 0.02);
-                                            xl: (@grid-breakpoints[xxl] - 0.02);
+	xs: (@grid-breakpoints[sm] - 0.02);
+	sm: (@grid-breakpoints[md] - 0.02);
+	md: (@grid-breakpoints[lg] - 0.02);
+	lg: (@grid-breakpoints[xl] - 0.02);
+	xl: (@grid-breakpoints[xxl] - 0.02);
 }
 
 /* stylelint-enable */
@@ -60,93 +39,70 @@
 * See https://bugs.webkit.org/show_bug.cgi?id=178261
 */
 
-@screen-xs-min:                             @grid-breakpoints[xs];
-@screen-sm-min:                             @grid-breakpoints[sm];
-@screen-md-min:                             @grid-breakpoints[md];
-@screen-lg-min:                             @grid-breakpoints[lg];
-@screen-xl-min:                             @grid-breakpoints[xl];
-@screen-xxl-min:                            @grid-breakpoints[xxl];
+@screen-xs-min: @grid-breakpoints[xs];
+@screen-sm-min: @grid-breakpoints[sm];
+@screen-md-min: @grid-breakpoints[md];
+@screen-lg-min: @grid-breakpoints[lg];
+@screen-xl-min: @grid-breakpoints[xl];
+@screen-xxl-min: @grid-breakpoints[xxl];
 
-@screen-xs-max:                             @grid-breakpoints-max[xs];
-@screen-sm-max:                             @grid-breakpoints-max[sm];
-@screen-md-max:                             @grid-breakpoints-max[md];
-@screen-lg-max:                             @grid-breakpoints-max[lg];
-@screen-xl-max:                             @grid-breakpoints-max[xl];
-
-@line-height-base:                          1.5;
-
-/* Btn-radius base, shared between buttons and input-group */
-@border-radius-base:                        2px;
-@btn-border-radius-base:                    @border-radius-base;
-@btn-border-radius-large:                   @border-radius-base;
-@btn-border-radius-small:                   @border-radius-base;
+@screen-xs-max: @grid-breakpoints-max[xs];
+@screen-sm-max: @grid-breakpoints-max[sm];
+@screen-md-max: @grid-breakpoints-max[md];
+@screen-lg-max: @grid-breakpoints-max[lg];
+@screen-xl-max: @grid-breakpoints-max[xl];
 
 /* Fonts */
 
 @font-face {
-    font-family: "Swedbank Headline";
-    src: url("../fonts/SwedbankHeadline-Bold.woff") format("woff");
+	font-family: "Swedbank Headline";
+	src: url("../fonts/SwedbankHeadline-Bold.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Swedbank Headline Black";
-    src: url("../fonts/SwedbankHeadline-Black.woff") format("woff");
+	font-family: "Swedbank Headline Black";
+	src: url("../fonts/SwedbankHeadline-Black.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Akkurat Mono";
-    src: url("../fonts/AkkuratMonoLLWeb-Regular.woff") format("woff");
+	font-family: "Akkurat Mono";
+	src: url("../fonts/AkkuratMonoLLWeb-Regular.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Akkurat Mono";
-    src: url("../fonts/AkkuratMonoLLWeb-Bold.woff") format("woff");
-    font-weight: bold;
+	font-family: "Akkurat Mono";
+	src: url("../fonts/AkkuratMonoLLWeb-Bold.woff") format("woff");
+	font-weight: bold;
 }
 
 @font-face {
-    font-family: "Akkurat Mono";
-    src: url("../fonts/AkkuratMonoLLWeb-Italic.woff") format("woff");
-    font-style: italic;
+	font-family: "Akkurat Mono";
+	src: url("../fonts/AkkuratMonoLLWeb-Italic.woff") format("woff");
+	font-style: italic;
 }
 
 @font-face {
-    font-family: "Akkurat Mono";
-    src: url("../fonts/AkkuratMonoLLWeb-BoldItalic.woff") format("woff");
-    font-weight: bold;
-    font-style: italic;
+	font-family: "Akkurat Mono";
+	src: url("../fonts/AkkuratMonoLLWeb-BoldItalic.woff") format("woff");
+	font-weight: bold;
+	font-style: italic;
 }
 
 @font-face {
-    font-family: "Futura PT W08 Book";
-    src: url("../fonts/FuturaBook.woff2") format("woff2"), url("../fonts/FuturaBook.woff") format("woff");
+	font-family: "Futura PT W08 Book";
+	src: url("../fonts/FuturaBook.woff2") format("woff2"),
+		url("../fonts/FuturaBook.woff") format("woff");
 }
 @font-face {
-    font-family: "Futura PT W08 Medium";
-    src: url("../fonts/FuturaMedium.woff2") format("woff2"), url("../fonts/FuturaMedium.woff") format("woff");
+	font-family: "Futura PT W08 Medium";
+	src: url("../fonts/FuturaMedium.woff2") format("woff2"),
+		url("../fonts/FuturaMedium.woff") format("woff");
 }
 @font-face {
-    font-family: "Futura PT W08 Demi";
-    src: url("../fonts/FuturaDemi.woff2") format("woff2"), url("../fonts/FuturaDemi.woff") format("woff");
+	font-family: "Futura PT W08 Demi";
+	src: url("../fonts/FuturaDemi.woff2") format("woff2"),
+		url("../fonts/FuturaDemi.woff") format("woff");
 }
-
-/**
-*Z-indexes
-*/
-@tooltip-z-index:                        1100;
-@skip-link-active-z-index:               1000;
-@toast-z-index:                           700;
-@dialog-z-index:                          600;
-@sheet-z-index:                           500;
-@topbar-z-index:                          400;
-@sidebar-z-index:                         400;
-@action-list-z-index:                     450;
-@datepicker-z-index:                      150;
-@dropdown-z-index:                        150;
-@navigation-z-index:                      100;
-@progress-steps-z-index:                  100;
-@tabs-z-index:                            100;
-@skip-link-z-index:                      -100;
 
 /*
 *   CSS Variables (custom properties)
@@ -155,61 +111,82 @@
 /* all .less variables have been converted over to CSS variables then we can delete them */
 
 :root {
-    /* COLORS */
-    --border-color: var(--brand-secondary-light-3);
+	/* COLORS */
+	--text-color: var(--brand-secondary);
+	--border-color: var(--brand-secondary-light-3);
 
-    /*
+	/*
     * TYPOGRAPHY
     * ==========================================================================
     */
 
-    /* fonts */
-    --font-stack: "Arial", sans-serif;
+	/* fonts */
+	--font-stack: "Arial", sans-serif;
 
-    /* Font Size */
-    --base-font-size: 1rem;
-    --font-size-large: calc(var(--base-font-size) * 1.25);
-    --font-size-small: calc(var(--base-font-size) * 0.875);
+	/* Font Size */
+	--base-font-size: 1rem;
+	--font-size-large: calc(var(--base-font-size) * 1.25);
+	--font-size-small: calc(var(--base-font-size) * 0.875);
 
-    /* Font Weight */
-    --font-weight-light: 300;
-    --font-weight-normal: 400;
-    --font-weight-bold: 700;
-    --font-weight-base: var(--font-weight-normal);
+	/* Font Weight */
+	--font-weight-light: 300;
+	--font-weight-normal: 400;
+	--font-weight-bold: 700;
+	--font-weight-base: var(--font-weight-normal);
 
-    /* line heights */
-    --line-height-base: 1.5;
+	/* line heights */
+	--line-height-base: 1.5;
 
-    /*
+	/*
     * Spacing
     * ===========================================================================
     */
 
-    /* Spacer */
-    --spacer: 1rem; /* Default */
+	/* Spacer */
+	--spacer: 1rem; /* Default */
 
-    /* Margin */
-    --base-margin: var(--spacer);
-    --base-margin-sm: calc(var(--base-margin) / 2);
-    --base-margin-xs: calc(var(--base-margin) / 4);
-    --base-margin-lg: calc(var(--base-margin) * 1.5);
-    --base-margin-xl: calc(var(--base-margin) * 2);
-    --base-margin-xxl: calc(var(--base-margin) * 4);
+	/* Margin */
+	--base-margin: var(--spacer);
+	--base-margin-xs: calc(var(--base-margin) / 4);
+	--base-margin-sm: calc(var(--base-margin) / 2);
+	--base-margin-lg: calc(var(--base-margin) * 1.5);
+	--base-margin-xl: calc(var(--base-margin) * 2);
+	--base-margin-xxl: calc(var(--base-margin) * 4);
 
-    /* Padding */
-    --base-padding: var(--spacer);
-    --base-padding-sm: calc(var(--base-padding) / 2);
-    --base-padding-xs: calc(var(--base-padding) / 4);
-    --base-padding-lg: calc(var(--base-padding) * 1.5);
-    --base-padding-xl: calc(var(--base-padding) * 2);
-    --base-padding-xxl: calc(var(--base-padding) * 4);
+	/* Padding */
+	--base-padding: var(--spacer);
+	--base-padding-xs: calc(var(--base-padding) / 4);
+	--base-padding-sm: calc(var(--base-padding) / 2);
+	--base-padding-lg: calc(var(--base-padding) * 1.5);
+	--base-padding-xl: calc(var(--base-padding) * 2);
+	--base-padding-xxl: calc(var(--base-padding) * 4);
 
-    /* Forms spacing */
-    --input-padding-x: 16px;
-    --input-padding-y: 12px;
-    --border-width: 1px;
-    --border-width-focus: 2px;
-    --border-width-diff-focus: calc(var(--border-width-focus, 2px) - var(--border-width, 1px));
+	/* Forms spacing */
+	--input-padding-x: 16px;
+	--input-padding-y: 12px;
+	--border-width: 1px;
+	--border-width-focus: 2px;
+	--border-width-diff-focus: calc(
+		var(--border-width-focus, 2px) - var(--border-width, 1px)
+	);
+
+	/**
+	*Z-indexes
+	*/
+	--tooltip-z-index: 1100;
+	--skip-link-active-z-index: 1000;
+	--toast-z-index: 700;
+	--dialog-z-index: 600;
+	--sheet-z-index: 500;
+	--action-list-z-index: 450;
+	--topbar-z-index: 400;
+	--sidebar-z-index: 400;
+	--datepicker-z-index: 150;
+	--dropdown-z-index: 150;
+	--navigation-z-index: 100;
+	--progress-steps-z-index: 100;
+	--tabs-z-index: 100;
+	--skip-link-z-index: -100;
 }
 
 /*
@@ -226,55 +203,55 @@
 /* Body reset */
 
 html {
-    -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
-    height: 100%;
-    scroll-behavior: smooth;
-    line-height: 1.15; /* 1 */
-    text-size-adjust: 100%; /* 2 */
+	-webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+	height: 100%;
+	scroll-behavior: smooth;
+	line-height: 1.15; /* 1 */
+	text-size-adjust: 100%; /* 2 */
 
-    @media (min-width: @screen-lg-max) {
-        scroll-snap-type: y mandatory;
-    }
+	@media (min-width: @screen-lg-max) {
+		scroll-snap-type: y mandatory;
+	}
 }
 
 body {
-    font-family: var(--font-stack);
-    font-size: var(--base-font-size);
-    line-height: 1.5;
-    color: var(--brand-secondary);
-    background-color: @white;
-    height: 100%;
-    margin: 0;
+	font-family: var(--font-stack);
+	font-size: var(--base-font-size);
+	line-height: 1.5;
+	color: var(--brand-secondary);
+	background-color: @white;
+	height: 100%;
+	margin: 0;
 
-    &.no-vscroll {
-        overflow-x: hidden;
-    }
+	&.no-vscroll {
+		overflow-x: hidden;
+	}
 
-    &.no-scroll {
-        overflow: hidden;
-    }
+	&.no-scroll {
+		overflow: hidden;
+	}
 
-    &.has-vscroll {
-        overflow: hidden;
+	&.has-vscroll {
+		overflow: hidden;
 
-        @media screen and (min-width: @screen-sm-min) {
-            padding-right: 17px;
+		@media screen and (min-width: @screen-sm-min) {
+			padding-right: 17px;
 
-            .dialog {
-                padding-right: 17px;
-            }
+			.dialog {
+				padding-right: 17px;
+			}
 
-            .topbar {
-                padding: 0 20px;
-            }
-        }
-    }
+			.topbar {
+				padding: 0 20px;
+			}
+		}
+	}
 
-    &.intent-mouse {
-        :focus {
-            outline: 4px solid transparent;
-        }
-    }
+	&.intent-mouse {
+		:focus {
+			outline: 4px solid transparent;
+		}
+	}
 }
 
 /* Reset fonts for relevant elements */
@@ -282,21 +259,21 @@ input,
 button,
 select,
 textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
 }
 
 /* Unordered and Ordered lists */
 ul,
 ol {
-    margin-top: 0;
-    margin-bottom: @base-margin;
+	margin-top: 0;
+	margin-bottom: var(--base-margin);
 
-    ul,
-    ol {
-        margin-bottom: 0;
-    }
+	ul,
+	ol {
+		margin-bottom: 0;
+	}
 }
 
 /* Only display content to screen readers
@@ -304,14 +281,14 @@ ol {
 * See: http://a11yproject.com/posts/how-to-hide-content/ */
 
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
 }
 
 /* Use in conjunction with .sr-only to only display content when it's focused.
@@ -320,17 +297,16 @@ ol {
 */
 
 .sr-only-focusable {
-    &:active,
-    &:focus {
-        position: static;
-        width: auto;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-        clip: auto;
-    }
+	&:active,
+	&:focus {
+		position: static;
+		width: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		clip: auto;
+	}
 }
-
 
 /* iOS "clickable elements" fix for role="button"
 *
@@ -341,7 +317,7 @@ ol {
 */
 
 [role="button"] {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 /*
@@ -350,70 +326,70 @@ ol {
 
 /* stylelint-disable less/color-no-invalid-hex, less/no-duplicate-variables */
 .media-breakpoint-up(@size, @abbr, @ruleset) {
-    & when (@size > 0) {
-        @infix: ~"-@{abbr}";
-        @media (min-width: @size) {
-            @ruleset();
-        }
-    }
+	& when (@size > 0) {
+		@infix: ~"-@{abbr}";
+		@media (min-width: @size) {
+			@ruleset();
+		}
+	}
 
-    & when (@size = 0) {
-        @infix: ~"";
-        @ruleset();
-    }
+	& when (@size = 0) {
+		@infix: ~"";
+		@ruleset();
+	}
 }
 /* stylelint-enable */
 
 .material-icons-styling(@color: @brand-secondary, @margin: 0 0.5rem, @font-size: 1.25rem) {
-    color: @color;
-    margin: @margin;
-    font-family: "Material Icons";
-    font-weight: normal;
-    font-style: normal;
-    font-size: @font-size;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    font-feature-settings: "liga";
+	color: @color;
+	margin: @margin;
+	font-family: "Material Icons";
+	font-weight: normal;
+	font-style: normal;
+	font-size: @font-size;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	font-feature-settings: "liga";
 }
 
 .tab-focus(@color: @brand-secondary) {
-    /* Default */
-    outline: 2px solid @color;
+	/* Default */
+	outline: 2px solid @color;
 
-    /* Webkit */
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
+	/* Webkit */
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
 }
 
 .close-button() {
-    color: @text-color;
-    opacity: 0.8;
-    line-height: 0.7;
-    transition: opacity 0.3s ease-in-out;
-    border: none;
+	color: var(--text-color);
+	opacity: 0.8;
+	line-height: 0.7;
+	transition: opacity 0.3s ease-in-out;
+	border: none;
 
-    &:hover {
-        opacity: 1;
-        cursor: pointer;
-        background-color: rgb(73 60 59 / 10%);
-    }
+	&:hover {
+		opacity: 1;
+		cursor: pointer;
+		background-color: rgb(73 60 59 / 10%);
+	}
 
-    &:focus {
-        .tab-focus();
-    }
+	&:focus {
+		.tab-focus();
+	}
 }
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 @media (forced-colors: active) {
-    .close-button() {
-        outline: 2px solid transparent;
-    }
+	.close-button() {
+		outline: 2px solid transparent;
+	}
 }

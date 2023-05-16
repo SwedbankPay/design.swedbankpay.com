@@ -8,7 +8,8 @@ Array [
     Expandable Group
   </h2>,
   <p>
-    If you use a wrapper with 
+    If you use a wrapper with
+     
     <code
       className="code-tags code-tags-secondary"
     >
@@ -368,13 +369,15 @@ Array [
     Overview
   </h2>,
   <p>
-    The expandable component shows only what is contained in the 
+    The expandable component shows only what is contained in the
+     
     <code
       className="code-tags code-tags-secondary"
     >
       .expandable-header
     </code>
-     when it is closed. 
+     when it is closed.
+     
     <code
       className="code-tags code-tags-secondary"
     >

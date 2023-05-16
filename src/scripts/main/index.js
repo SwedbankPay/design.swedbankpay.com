@@ -1,5 +1,3 @@
-import "../../polyfills";
-
 import accordion from "./accordion";
 import actionList from "./action-list";
 import alert from "./alert";
@@ -20,70 +18,79 @@ import topbar from "./topbar";
 import utils from "./utils";
 import validation from "./validation";
 
-document.addEventListener("mousedown", () => { document.body.classList.add("intent-mouse"); });
-document.addEventListener("keydown", () => { document.body.classList.remove("intent-mouse"); });
+document.addEventListener("mousedown", () => {
+	document.body.classList.add("intent-mouse");
+});
+document.addEventListener("keydown", () => {
+	document.body.classList.remove("intent-mouse");
+});
 
 window.addEventListener("popstate", () => {
-    if (document.body.className.includes("has-vscroll")) { document.body.classList.remove("has-vscroll"); }
+	if (document.body.className.includes("has-vscroll")) {
+		document.body.classList.remove("has-vscroll");
+	}
 });
 
 const dg = {
-    accordion,
-    actionList,
-    alert,
-    dropdown,
-    datepicker,
-    dialog,
-    expandable,
-    nav,
-    paginate,
-    rangeslider,
-    sheet,
-    sidebar,
-    script,
-    tabs,
-    toast,
-    tooltips,
-    topbar,
-    utils,
-    validation
+	accordion,
+	actionList,
+	alert,
+	dropdown,
+	datepicker,
+	dialog,
+	expandable,
+	nav,
+	paginate,
+	rangeslider,
+	sheet,
+	sidebar,
+	script,
+	tabs,
+	toast,
+	tooltips,
+	topbar,
+	utils,
+	validation,
 };
 
 const CDNSetup = () => {
-    const currentScript = document.querySelector("script[src$='dg.js']");
+	const currentScript = document.querySelector("script[src$='dg.js']");
 
-    if (currentScript) {
+	if (currentScript) {
+		if (currentScript.getAttribute("global")) {
+			window.dg = window.dg ? Object.assign(dg, window.dg) : dg;
+		}
 
-        if (currentScript.getAttribute("global")) { window.dg = window.dg ? Object.assign(dg, window.dg) : dg; }
-
-        if (currentScript.getAttribute("autoload")) {
-            dg.script.initAll();
-        }
-    }
+		if (currentScript.getAttribute("autoload")) {
+			dg.script.initAll();
+		}
+	}
 };
 
-document.readyState !== "loading" ? CDNSetup() : document.addEventListener("DOMContentLoaded", CDNSetup());
+document.readyState !== "loading"
+	? CDNSetup()
+	: document.addEventListener("DOMContentLoaded", CDNSetup());
 
 export default dg;
 
 export {
-    accordion,
-    actionList,
-    alert,
-    dropdown,
-    datepicker,
-    dialog,
-    expandable,
-    nav,
-    paginate,
-    rangeslider,
-    sheet,
-    sidebar,
-    script,
-    tabs,
-    toast,
-    tooltips,
-    topbar,
-    utils,
-    validation
+	accordion,
+	actionList,
+	alert,
+	dropdown,
+	datepicker,
+	dialog,
+	expandable,
+	nav,
+	paginate,
+	rangeslider,
+	sheet,
+	sidebar,
+	script,
+	tabs,
+	toast,
+	tooltips,
+	topbar,
+	utils,
+	validation,
 };

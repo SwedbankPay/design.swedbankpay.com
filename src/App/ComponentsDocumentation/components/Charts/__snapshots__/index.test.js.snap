@@ -2528,7 +2528,8 @@ exports[`Dashboard: Charts renders 1`] = `
     <p
       className="lead"
     >
-      We are using 
+      We are using
+       
       <a
         href="https://www.chartjs.org/"
         rel="noopener noreferrer"
@@ -2536,7 +2537,8 @@ exports[`Dashboard: Charts renders 1`] = `
       >
         chart.js
       </a>
-       to generate the charts. Our script is mainly just a wrapper around that library to add the correct styling etc.
+       
+      to generate the charts. Our script is mainly just a wrapper around that library to add the correct styling etc.
     </p>
     <p>
       Most options and settings available in the chart.js documentation will be available.
@@ -2581,19 +2583,22 @@ exports[`Dashboard: Charts renders 1`] = `
       JavaScript
     </h2>
     <p>
-      To add charts to your project you need to include a dashboard script to make it run properly. Add the dashboard script below the 
+      To add charts to your project you need to include a dashboard script to make it run properly. Add the dashboard script below the
+       
       <code
         className="code-tags code-tags-secondary"
       >
         scripts
       </code>
-       and at the bottom of your 
+       and at the bottom of your
+       
       <code
         className="code-tags code-tags-primary"
       >
         &lt;body&gt;
       </code>
-       tag like this: 
+       tag like this:
+       
     </p>
     <figure>
       <div
@@ -2669,7 +2674,8 @@ exports[`Dashboard: Charts renders 1`] = `
       A line chart is a way of plotting data points on a line. Often, it is used to show trend data, or the comparison of two data sets.
     </p>
     <p>
-      See 
+      See
+       
       <a
         href="https://www.chartjs.org/docs/latest/charts/line.html"
         rel="noopener noreferrer"
@@ -2677,7 +2683,8 @@ exports[`Dashboard: Charts renders 1`] = `
       >
         chart.js
       </a>
-       for more information on line charts.
+       
+      for more information on line charts.
     </p>
     <div
       className="showcase-panel"
@@ -3901,7 +3908,8 @@ exports[`Dashboard: Charts renders 1`] = `
       A bar chart provides a way of showing data values represented as vertical bars. It is sometimes used to show trend data, and the comparison of multiple data sets side by side.
     </p>
     <p>
-      See 
+      See
+       
       <a
         href="https://www.chartjs.org/docs/latest/charts/bar.html"
         rel="noopener noreferrer"
@@ -3909,7 +3917,8 @@ exports[`Dashboard: Charts renders 1`] = `
       >
         chart.js
       </a>
-       for more information on bar charts.
+       
+      for more information on bar charts.
     </p>
     <div
       className="showcase-panel"
@@ -4884,7 +4893,8 @@ exports[`Dashboard: Charts renders 1`] = `
       Pie and doughnut charts are probably the most commonly used charts. They are divided into segments, the arc of each segment shows the proportional value of each piece of data.
     </p>
     <p>
-      See 
+      See
+       
       <a
         href="https://www.chartjs.org/docs/latest/charts/doughnut.html"
         rel="noopener noreferrer"
@@ -4892,7 +4902,8 @@ exports[`Dashboard: Charts renders 1`] = `
       >
         chart.js
       </a>
-       for more information on doughnut and pie charts.
+       
+      for more information on doughnut and pie charts.
     </p>
     <div
       className="showcase-panel"
@@ -5346,7 +5357,8 @@ exports[`Dashboard: Charts renders 1`] = `
     <p
       className="lead"
     >
-      With Chart.js, it is possible to create 
+      With Chart.js, it is possible to create
+       
       <a
         href="https://www.chartjs.org/docs/latest/charts/mixed.html"
         rel="noopener noreferrer"
@@ -5354,7 +5366,8 @@ exports[`Dashboard: Charts renders 1`] = `
       >
         mixed charts
       </a>
-       that are a combination of two or more different chart types. A common example is a bar chart that also includes a line dataset.
+       
+      that are a combination of two or more different chart types. A common example is a bar chart that also includes a line dataset.
     </p>
     <div
       className="showcase-panel"

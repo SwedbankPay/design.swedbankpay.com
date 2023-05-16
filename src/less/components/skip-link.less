@@ -1,23 +1,23 @@
 @import "../global.less";
 
 .skip-link {
-    left: -120rem;
-    position: absolute;
-    top: auto;
-    overflow: hidden;
-    z-index: @skip-link-z-index;
-    padding: 0.75rem;
-    background-color: @white;
-    font-family: var(--font-stack);
+	left: -120rem;
+	position: absolute;
+	top: auto;
+	overflow: hidden;
+	z-index: var(--skip-link-z-index, -100);
+	padding: 0.75rem;
+	background-color: @white;
+	font-family: var(--font-stack);
 
-    &:focus,
-    &:active {
-        left: auto;
-        height: auto;
-        z-index: @skip-link-active-z-index;
-        outline: none;
-        border: 2px solid @brand-secondary;
-        border-radius: 2px;
-        color: @brand-secondary;
-    }
+	&:focus,
+	&:active {
+		left: auto;
+		height: auto;
+		z-index: var(--skip-link-active-z-index, 1000);
+		outline: none;
+		border: 2px solid @brand-secondary;
+		border-radius: 2px;
+		color: @brand-secondary;
+	}
 }

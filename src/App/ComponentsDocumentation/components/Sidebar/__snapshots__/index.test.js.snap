@@ -241,25 +241,29 @@ exports[`Components: Sidebar InitScrollListener renders 1`] = `
         <br />
         <br />
         Makes the 
-         with id 
+         with id
+         
         <code
           className="code-tags code-tags-secondary"
         >
           &lt;sidebar-id&gt;
         </code>
-         listen to scroll events on the element with id 
+         listen to scroll events on the element with id
+         
         <code
           className="code-tags code-tags-secondary"
         >
           content-id
         </code>
-        , and matches a leaf with the corresponding header of 
+        , and matches a leaf with the corresponding header of
+         
         <code
           className="code-tags code-tags-secondary"
         >
           header-type
         </code>
-         to visualize active leaf depending on scroll position of element with id 
+         to visualize active leaf depending on scroll position of element with id
+         
         <code
           className="code-tags code-tags-secondary"
         >
@@ -453,25 +457,29 @@ exports[`Components: Sidebar RemoveActiveState renders 1`] = `
         <br />
         <br />
         Remove group, subgroup and leaf of the 
-         active state depending on the parameters passed. The paramater 
+         active state depending on the parameters passed. The paramater
+         
         <code
           className="code-tags code-tags-secondary"
         >
           group-index
         </code>
-         is the index of the group to have the active state removed, the paramater 
+         is the index of the group to have the active state removed, the paramater
+         
         <code
           className="code-tags code-tags-secondary"
         >
           subgroup-index
         </code>
-         is the index of the subgroup beneath the group selected by 
+         is the index of the subgroup beneath the group selected by
+         
         <code
           className="code-tags code-tags-secondary"
         >
           group-index
         </code>
-        , and the paramater 
+        , and the paramater
+         
         <code
           className="code-tags code-tags-secondary"
         >
@@ -483,7 +491,8 @@ exports[`Components: Sidebar RemoveActiveState renders 1`] = `
         >
           group-index
         </code>
-         and 
+         and
+         
         <code
           className="code-tags code-tags-secondary"
         >
@@ -495,13 +504,15 @@ exports[`Components: Sidebar RemoveActiveState renders 1`] = `
         >
           group-index
         </code>
-         and 
+         
+        and 
         <code
           className="code-tags code-tags-secondary"
         >
           leaf-index
         </code>
-         is needed. Since group always is present, 
+         is needed. Since group always is present,
+         
         <code
           className="code-tags code-tags-secondary"
         >
@@ -513,13 +524,15 @@ exports[`Components: Sidebar RemoveActiveState renders 1`] = `
         >
           null
         </code>
-         as a paramater in cases where the parameter needs to be empty, such as when 
+         as a paramater in cases where the parameter needs to be empty, such as when
+         
         <code
           className="code-tags code-tags-secondary"
         >
           subgroup-index
         </code>
-         is the only one needed, use 
+         is the only one needed, use
+         
         <code
           className="code-tags code-tags-secondary"
         >
@@ -557,7 +570,8 @@ exports[`Components: Sidebar RemoveScrollListener renders 1`] = `
         Note: This method is optional
         <br />
         <br />
-        Removes scroll listener on the element with id 
+        Removes scroll listener on the element with id
+         
         <code
           className="code-tags code-tags-secondary"
         >
@@ -590,25 +604,29 @@ exports[`Components: Sidebar SetActiveState renders 1`] = `
         <br />
         <br />
         Sets group, subgroup and leaf of the 
-         to active depending on the parameters passed. The paramater 
+         to active depending on the parameters passed. The paramater
+         
         <code
           className="code-tags code-tags-secondary"
         >
           group-index
         </code>
-         is the index of the group to be set active, the paramater 
+         is the index of the group to be set active, the paramater
+         
         <code
           className="code-tags code-tags-secondary"
         >
           subgroup-index
         </code>
-         is the index of the subgroup beneath the group selected by 
+         is the index of the subgroup beneath the group selected by
+         
         <code
           className="code-tags code-tags-secondary"
         >
           group-index
         </code>
-        , and the paramater 
+        , and the paramater
+         
         <code
           className="code-tags code-tags-secondary"
         >
@@ -620,7 +638,8 @@ exports[`Components: Sidebar SetActiveState renders 1`] = `
         >
           group-index
         </code>
-         and 
+         and
+         
         <code
           className="code-tags code-tags-secondary"
         >
@@ -632,13 +651,15 @@ exports[`Components: Sidebar SetActiveState renders 1`] = `
         >
           group-index
         </code>
-         and 
+         
+        and 
         <code
           className="code-tags code-tags-secondary"
         >
           leaf-index
         </code>
-         is needed. Since group always is present, 
+         is needed. Since group always is present,
+         
         <code
           className="code-tags code-tags-secondary"
         >
@@ -650,13 +671,15 @@ exports[`Components: Sidebar SetActiveState renders 1`] = `
         >
           null
         </code>
-         as a paramater in cases where the parameter needs to be empty, such as when 
+         as a paramater in cases where the parameter needs to be empty, such as when
+         
         <code
           className="code-tags code-tags-secondary"
         >
           subgroup-index
         </code>
-         is the only one needed, use 
+         is the only one needed, use
+         
         <code
           className="code-tags code-tags-secondary"
         >

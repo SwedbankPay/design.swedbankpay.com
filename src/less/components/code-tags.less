@@ -2,85 +2,85 @@
 @code-tags-border-radius: 3px;
 
 code {
-    padding: @code-tags-padding;
-    border-radius: @code-tags-border-radius;
-    font-family: "Akkurat Mono", monospace;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    white-space: nowrap;
-    background-color: @brand-bg-2;
+	padding: @code-tags-padding;
+	border-radius: @code-tags-border-radius;
+	font-family: "Akkurat Mono", monospace;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	white-space: nowrap;
+	background-color: @brand-bg-2;
 }
 
 .code-tags {
-    padding: @code-tags-padding;
-    border-radius: @code-tags-border-radius;
-    font-family: "Akkurat Mono", monospace;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    white-space: nowrap;
+	padding: @code-tags-padding;
+	border-radius: @code-tags-border-radius;
+	font-family: "Akkurat Mono", monospace;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	white-space: nowrap;
 
-    &.code-tags-primary {
-        background-color: @brand-bg-2;
-    }
+	&.code-tags-primary {
+		background-color: @brand-bg-2;
+	}
 
-    &.code-tags-secondary {
-        background-color: @brand-bg-1;
-    }
+	&.code-tags-secondary {
+		background-color: @brand-bg-1;
+	}
 
-    &.code-tags-tertiary {
-        background-color: @brand-bg-gray;
-    }
+	&.code-tags-tertiary {
+		background-color: @brand-bg-gray;
+	}
 }
 
 .tag {
-    display: inline-flex;
-    padding: @code-tags-padding;
-    font-size: 1rem;
-    border-radius: @code-tags-border-radius;
-    background-color: @brand-bg-2;
-    margin-right: 0.5rem;
+	display: inline-flex;
+	padding: @code-tags-padding;
+	font-size: 1rem;
+	border-radius: @code-tags-border-radius;
+	background-color: @brand-bg-2;
+	margin-right: 0.5rem;
 
-    &.tag-secondary {
-        background-color: @brand-bg-1;
-    }
+	&.tag-secondary {
+		background-color: @brand-bg-1;
+	}
 
-    &.tag-tertiary {
-        background-color: @brand-bg-gray;
-    }
+	&.tag-tertiary {
+		background-color: @brand-bg-gray;
+	}
 
-    &.removable {
-        padding-right: 0;
-    }
+	&.removable {
+		padding-right: 0;
+	}
 
-    button {
-        background-color: transparent;
-        border: none;
-        display: flex;
-        cursor: pointer;
-        width: 1.5rem;
-        padding: 0;
-        margin-left: 0.125rem;
+	button {
+		background-color: transparent;
+		border: none;
+		display: flex;
+		cursor: pointer;
+		width: 1.5rem;
+		padding: 0;
+		margin-left: 0.125rem;
 
-        i {
-            font-size: 1rem;
-        }
+		i {
+			font-size: 1rem;
+		}
 
-        &:hover {
-            background-color: rgba(0, 0, 0 / 10%);
-            border-radius: 0.125rem;
-        }
+		&:hover {
+			background-color: rgba(0, 0, 0 / 10%);
+			border-radius: 0.125rem;
+		}
 
-        &:focus {
-            border: 2px solid transparent;
-            border-radius: 0.125rem;
-            box-shadow: 0 0 0 0.125rem @black;
-            outline: none;
-        }
-    }
+		&:focus {
+			border: 2px solid transparent;
+			border-radius: 0.125rem;
+			box-shadow: 0 0 0 0.125rem @black;
+			outline: none;
+		}
+	}
 }
 
 @media (forced-colors: active) {
-    .tag {
-        border: 1px solid;
-    }
+	.tag {
+		border: 1px solid;
+	}
 }

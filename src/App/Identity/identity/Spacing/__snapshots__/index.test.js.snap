@@ -1160,7 +1160,8 @@ exports[`Identity: Spacing renders 1`] = `
         8-point spacing system
       </h2>
       <p>
-        We follow a 8-point spacing system – multiples of 8 to define the different dimensions, margins and paddings of our elements. The reason for this is to streamline the process, saving time by minimize the amount of choices and create consistent usage of space across all our product. 
+        We follow a 8-point spacing system – multiples of 8 to define the different dimensions, margins and paddings of our elements. The reason for this is to streamline the process, saving time by minimize the amount of choices and create consistent usage of space across all our product.
+         
       </p>
       <div
         className="d-flex flex-column align-items-center mb-4"
@@ -1178,11 +1179,13 @@ exports[`Identity: Spacing renders 1`] = `
           >
             Figure 1.
           </span>
-           Examples of horizontal spacing between elements using multiples of 8px. 
+           Examples of horizontal spacing between elements using multiples of 8px.
+           
         </span>
       </div>
       <p>
-        If you are interested in learning more about the 8-point spacing system, you can read more about it in this 
+        If you are interested in learning more about the 8-point spacing system, you can read more about it in this
+         
         <a
           className="icon-link m-0"
           href="https://builttoadapt.io/intro-to-the-8-point-grid-system-d2573cde8632"
@@ -1201,7 +1204,8 @@ exports[`Identity: Spacing renders 1`] = `
             open_in_new
           </i>
         </a>
-        , which provides a brief explanation of the reasons why to use the 8-point spacing system. To dive even deeper into the nitty gritty, please refer to this 
+        , which provides a brief explanation of the reasons why to use the 8-point spacing system. To dive even deeper into the nitty gritty, please refer to this
+         
         <a
           className="icon-link m-0"
           href="https://spec.fm/specifics/8-pt-grid"
@@ -1220,19 +1224,22 @@ exports[`Identity: Spacing renders 1`] = `
             open_in_new
           </i>
         </a>
-         of the 8-point spacing system.
+         
+        of the 8-point spacing system.
       </p>
       <h3>
         What if I need something in between?
       </h3>
       <p>
-        Even though we try to adhere to the 8-point spacing system as much as possible, we also know that sometimes you need to use something in between. Especially when it comes to building certain components which requires smaller space in between in order to show grouping and simply produces a better result visually. In those cases, it is allowed to use values from the multiples of 4, but this should be kept to 
+        Even though we try to adhere to the 8-point spacing system as much as possible, we also know that sometimes you need to use something in between. Especially when it comes to building certain components which requires smaller space in between in order to show grouping and simply produces a better result visually. In those cases, it is allowed to use values from the multiples of 4, but this should be kept to
+         
         <span
           className="font-weight-bold"
         >
           4 px
         </span>
-         and 
+         and
+         
         <span
           className="font-weight-bold"
         >
@@ -1277,7 +1284,8 @@ exports[`Identity: Spacing renders 1`] = `
         Touch target
       </h2>
       <p>
-        On mobile devices, we have to consider the size of the different components to make sure that there is enough space in between interactive components such as: Links, buttons and other input actions to avoid miss clicks and errors. 
+        On mobile devices, we have to consider the size of the different components to make sure that there is enough space in between interactive components such as: Links, buttons and other input actions to avoid miss clicks and errors.
+         
       </p>
       <p>
         A touch target area needs to be a certain size: 48*48 dp (distribution point) according to Android and 44 px minimum size according to iOS. Keep in mind this does not mean your component has to fill these area, even smaller components can work as long as the touch target area fulfills the size requirement.
@@ -1290,19 +1298,21 @@ exports[`Identity: Spacing renders 1`] = `
         Base increment of rem
       </h2>
       <p>
-        In our system the base size of a  
+        In our system the base size of a 
         <code
           className="code-tags code-tags-secondary"
         >
           rem
         </code>
-          unit is 
+         
+        unit is 
         <span
           className="font-weight-bold"
         >
           16px
         </span>
-        , this means you can easily use 0.5 rem increments to create layouts in code on a 8-point spacing system. See example below for reference: 
+        , this means you can easily use 0.5 rem increments to create layouts in code on a 8-point spacing system. See example below for reference:
+         
       </p>
       <table
         className="table table-plain spacing-table"
@@ -1475,19 +1485,22 @@ exports[`Identity: Spacing renders 1`] = `
         Notation
       </h2>
       <p>
-        Spacing utilities that apply to all breakpoints, from 
+        Spacing utilities that apply to all breakpoints, from
+         
         <code
           className="code-tags code-tags-secondary"
         >
           xs
         </code>
-         to 
+         to
+         
         <code
           className="code-tags code-tags-secondary"
         >
           xxl
         </code>
-        , have no breakpoint abbreviation in them. This is because those classes are applied from 
+        , have no breakpoint abbreviation in them. This is because those classes are applied from
+         
         <code
           className="code-tags code-tags-secondary"
         >
@@ -1496,49 +1509,57 @@ exports[`Identity: Spacing renders 1`] = `
          and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
       </p>
       <p>
-        The classes are named using the format 
+        The classes are named using the format
+         
         <code
           className="code-tags code-tags-secondary"
         >
           {property}{sides}-{size}
         </code>
-         for 
+         for
+         
         <code
           className="code-tags code-tags-secondary"
         >
           xs
         </code>
-         and 
+         and
+         
         <code
           className="code-tags code-tags-secondary"
         >
           {property}{sides}-{breakpoint}-{size}
         </code>
-         for 
+         
+        for 
         <code
           className="code-tags code-tags-secondary"
         >
           sm
         </code>
-        , 
+        ,
+         
         <code
           className="code-tags code-tags-secondary"
         >
           md
         </code>
-        , 
+        ,
+         
         <code
           className="code-tags code-tags-secondary"
         >
           lg
         </code>
-        , 
+        ,
+         
         <code
           className="code-tags code-tags-secondary"
         >
           xl
         </code>
-        , and 
+        , and
+         
         <code
           className="code-tags code-tags-secondary"
         >
@@ -1560,7 +1581,8 @@ exports[`Identity: Spacing renders 1`] = `
           >
             m
           </code>
-           - for classes that set 
+           - for classes that set
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1573,7 +1595,8 @@ exports[`Identity: Spacing renders 1`] = `
           >
             p
           </code>
-           - for classes that set 
+           - for classes that set
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1595,13 +1618,15 @@ exports[`Identity: Spacing renders 1`] = `
           >
             t
           </code>
-           - for classes that set 
+           - for classes that set
+           
           <code
             className="code-tags code-tags-secondary"
           >
             margin-top
           </code>
-           or 
+           or
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1614,13 +1639,15 @@ exports[`Identity: Spacing renders 1`] = `
           >
             b
           </code>
-           - for classes that set 
+           - for classes that set
+           
           <code
             className="code-tags code-tags-secondary"
           >
             margin-bottom
           </code>
-           or 
+           or
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1633,13 +1660,15 @@ exports[`Identity: Spacing renders 1`] = `
           >
             l
           </code>
-           - for classes that set 
+           - for classes that set
+           
           <code
             className="code-tags code-tags-secondary"
           >
             margin-left
           </code>
-           or 
+           or
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1652,13 +1681,15 @@ exports[`Identity: Spacing renders 1`] = `
           >
             r
           </code>
-           - for classes that set 
+           - for classes that set
+           
           <code
             className="code-tags code-tags-secondary"
           >
             margin-right
           </code>
-           or 
+           or
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1671,13 +1702,15 @@ exports[`Identity: Spacing renders 1`] = `
           >
             x
           </code>
-           - for classes that set both 
+           - for classes that set both
+           
           <code
             className="code-tags code-tags-secondary"
           >
             *-left
           </code>
-           or 
+           or
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1690,13 +1723,15 @@ exports[`Identity: Spacing renders 1`] = `
           >
             y
           </code>
-           - for classes that set both 
+           - for classes that set both
+           
           <code
             className="code-tags code-tags-secondary"
           >
             *-top
           </code>
-           or 
+           or
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1718,19 +1753,22 @@ exports[`Identity: Spacing renders 1`] = `
           >
             0
           </code>
-           - for classes that eliminate the 
+           - for classes that eliminate the
+           
           <code
             className="code-tags code-tags-secondary"
           >
             margin
           </code>
-           or 
+           or
+           
           <code
             className="code-tags code-tags-secondary"
           >
             padding
           </code>
-           by setting it to 
+           by setting it to
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1743,19 +1781,22 @@ exports[`Identity: Spacing renders 1`] = `
           >
             1
           </code>
-           - for classes that set the 
+           - for classes that set the
+           
           <code
             className="code-tags code-tags-secondary"
           >
             margin
           </code>
-           or 
+           or
+           
           <code
             className="code-tags code-tags-secondary"
           >
             padding
           </code>
-           to 
+           to
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1768,19 +1809,22 @@ exports[`Identity: Spacing renders 1`] = `
           >
             2
           </code>
-           - for classes that set the 
+           - for classes that set the
+           
           <code
             className="code-tags code-tags-secondary"
           >
             margin
           </code>
-           or 
+           or
+           
           <code
             className="code-tags code-tags-secondary"
           >
             padding
           </code>
-           to 
+           to
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1793,19 +1837,22 @@ exports[`Identity: Spacing renders 1`] = `
           >
             3
           </code>
-           - for classes that set the 
+           - for classes that set the
+           
           <code
             className="code-tags code-tags-secondary"
           >
             margin
           </code>
-           or 
+           or
+           
           <code
             className="code-tags code-tags-secondary"
           >
             padding
           </code>
-           to 
+           to
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1818,19 +1865,22 @@ exports[`Identity: Spacing renders 1`] = `
           >
             4
           </code>
-           - for classes that set the 
+           - for classes that set the
+           
           <code
             className="code-tags code-tags-secondary"
           >
             margin
           </code>
-           or 
+           or
+           
           <code
             className="code-tags code-tags-secondary"
           >
             padding
           </code>
-           to 
+           to
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1843,19 +1893,22 @@ exports[`Identity: Spacing renders 1`] = `
           >
             5
           </code>
-           - for classes that set the 
+           - for classes that set the
+           
           <code
             className="code-tags code-tags-secondary"
           >
             margin
           </code>
-           or 
+           or
+           
           <code
             className="code-tags code-tags-secondary"
           >
             padding
           </code>
-           to 
+           to
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1868,13 +1921,15 @@ exports[`Identity: Spacing renders 1`] = `
           >
             auto
           </code>
-           - for classes that set 
+           - for classes that set
+           
           <code
             className="code-tags code-tags-secondary"
           >
             margin
           </code>
-           to 
+           to
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1887,7 +1942,8 @@ exports[`Identity: Spacing renders 1`] = `
         <i>
           size
         </i>
-         (excluding 
+         (excluding
+         
         <code
           className="code-tags code-tags-secondary"
         >
@@ -1902,13 +1958,15 @@ exports[`Identity: Spacing renders 1`] = `
           >
             n1
           </code>
-           - for classes that set the 
+           - for classes that set the
+           
           <code
             className="code-tags code-tags-secondary"
           >
             margin
           </code>
-           to 
+           to
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1921,13 +1979,15 @@ exports[`Identity: Spacing renders 1`] = `
           >
             n2
           </code>
-           - for classes that set the 
+           - for classes that set the
+           
           <code
             className="code-tags code-tags-secondary"
           >
             margin
           </code>
-           to 
+           to
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1940,13 +2000,15 @@ exports[`Identity: Spacing renders 1`] = `
           >
             n3
           </code>
-           - for classes that set the 
+           - for classes that set the
+           
           <code
             className="code-tags code-tags-secondary"
           >
             margin
           </code>
-           to 
+           to
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1959,13 +2021,15 @@ exports[`Identity: Spacing renders 1`] = `
           >
             n4
           </code>
-           - for classes that set the 
+           - for classes that set the
+           
           <code
             className="code-tags code-tags-secondary"
           >
             margin
           </code>
-           to 
+           to
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1978,13 +2042,15 @@ exports[`Identity: Spacing renders 1`] = `
           >
             n5
           </code>
-           - for classes that set the 
+           - for classes that set the
+           
           <code
             className="code-tags code-tags-secondary"
           >
             margin
           </code>
-           to 
+           to
+           
           <code
             className="code-tags code-tags-secondary"
           >
@@ -1999,7 +2065,8 @@ exports[`Identity: Spacing renders 1`] = `
         >
           @spacer
         </code>
-         is set to 
+         is set to
+         
         <code
           className="code-tags code-tags-secondary"
         >
@@ -2162,19 +2229,22 @@ exports[`Identity: Spacing renders 1`] = `
         Horizontal centering
       </h3>
       <p>
-        Additionally, DesignGuide also includes an 
+        Additionally, DesignGuide also includes an
+         
         <code
           className="code-tags code-tags-secondary"
         >
           .mx-auto
         </code>
-         class for horizontally centering fixed-width block level content—that is, content that has 
+         class for horizontally centering fixed-width block level content—that is, content that has
+         
         <code
           className="code-tags code-tags-secondary"
         >
           display: block
         </code>
-         and a 
+         and a
+         
         <code
           className="code-tags code-tags-secondary"
         >

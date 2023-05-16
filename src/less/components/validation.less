@@ -4,84 +4,84 @@
 // and successes.
 
 .form-control-validation(@color, @state) {
-    @help-block-selector: ~".help-block[data-@{state}]";
-    @content-attr-data: ~"attr(data-@{state})";
+	@help-block-selector: ~".help-block[data-@{state}]";
+	@content-attr-data: ~"attr(data-@{state})";
 
-    // Color the label and help text
-    .help-block,
-    .radio,
-    .checkbox,
-    .radio-inline,
-    .checkbox-inline,
-    &.radio label,
-    &.checkbox label,
-    &.radio-inline label,
-    &.checkbox-inline label {
-        color: @color;
-        border-color: @color;
-    }
+	// Color the label and help text
+	.help-block,
+	.radio,
+	.checkbox,
+	.radio-inline,
+	.checkbox-inline,
+	&.radio label,
+	&.checkbox label,
+	&.radio-inline label,
+	&.checkbox-inline label {
+		color: @color;
+		border-color: @color;
+	}
 
-    // Set the border and box shadow on specific inputs to match
-    .form-control {
-        border-color: @color;
+	// Set the border and box shadow on specific inputs to match
+	.form-control {
+		border-color: @color;
 
-        &:focus {
-            border-color: darken(@color, 10%);
-        }
-    }
+		&:focus {
+			border-color: darken(@color, 10%);
+		}
+	}
 
-    // Set validation states also for addons
-    .input-group-addon {
-        border-color: @color;
-    }
+	// Set validation states also for addons
+	.input-group-addon {
+		border-color: @color;
+	}
 
-    // Optional feedback icon
-    .form-control-feedback {
-        color: @color;
-    }
+	// Optional feedback icon
+	.form-control-feedback {
+		color: @color;
+	}
 
-    + .help-block,
-    .help-block {
-        &:after {
-            color: @color;
-        }
-    }
+	+ .help-block,
+	.help-block {
+		&:after {
+			color: @color;
+		}
+	}
 
-    + .help-block,
-    @{help-block-selector} {
-        color: transparent;
-        user-select: none;
-        pointer-events: none;
+	+ .help-block,
+	@{help-block-selector} {
+		color: transparent;
+		user-select: none;
+		pointer-events: none;
 
-        &:after {
-            content: @content-attr-data;
-        }
-    }
+		&:after {
+			content: @content-attr-data;
+		}
+	}
 }
 
 .input-group {
-    &.has-error {
-        .form-control-validation(@brand-error, "error");
+	&.has-error {
+		.form-control-validation(@brand-error, "error");
 
-        .postfix {
-            display: none;
-        }
+		.postfix {
+			display: none;
+		}
 
-        input {
-            &:not(:focus) {
-                padding-right: 2.5rem;
-                background-image: url("../../icons/shapes/warning.svg");
-                background-size: 24px 24px;
-                background-repeat: no-repeat;
-                background-position: calc(100% - 0.5rem) 50%;
-            }
-        }
+		input {
+			&:not(:focus) {
+				padding-right: 2.5rem;
+				background-image: url("../../icons/shapes/warning.svg");
+				background-size: 24px 24px;
+				background-repeat: no-repeat;
+				background-position: calc(100% - 0.5rem) 50%;
+			}
+		}
 
-        &:focus-within {
-            .form-control,
-            .input-group-addon {
-                border-color: transparent;
-            }
-        }
-    }
+		&:focus-within {
+			.form-control,
+			.input-group-addon {
+				border-color: transparent;
+			}
+		}
+	}
 }

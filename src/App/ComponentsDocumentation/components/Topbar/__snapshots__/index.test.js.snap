@@ -12,7 +12,8 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
       Align with page content
     </h3>
     <p>
-      The content within the desktop topbar, 
+      The content within the desktop topbar,
+       
       <code
         className="code-tags code-tags-secondary"
       >
@@ -24,7 +25,8 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
       >
         .max-width
       </code>
-       to the topbar 
+       to the topbar
+       
       <code
         className="code-tags code-tags-secondary"
       >
@@ -57,32 +59,37 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
       Sticky topbar options
     </h3>
     <p>
-      The topbar can be made sticky by adding the class 
+      The topbar can be made sticky by adding the class
+       
       <code
         className="code-tags code-tags-secondary"
       >
         .topbar-sticky
       </code>
-      . Use 
+      . Use
+       
       <code
         className="code-tags code-tags-secondary"
       >
         .topbar-min-{breakpoint}-sticky
       </code>
-       to specify the minimum width the topbar should be sticky, or 
+       to specify the minimum width the topbar should be sticky, or
+       
       <code
         className="code-tags code-tags-secondary"
       >
         .topbar-max-{breakpoint}-sticky
       </code>
-       to specify the maximum width the topbar should be sticky (see 
+       to specify the maximum width the topbar should be sticky (see
+       
       <a
         href="/utilities"
         onClick={[Function]}
       >
         utilities
       </a>
-       for more information on breakpoints). 
+       for more information on breakpoints).
+       
     </p>
     <div
       className="showcase-panel"
@@ -945,7 +952,8 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
       >
         Usage with NPM
       </a>
-       will require you to import it from 
+       will require you to import it from
+       
       <code
         className="code-tags code-tags-primary"
       >

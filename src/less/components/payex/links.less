@@ -1,50 +1,50 @@
 @import "../links.less";
 
 a {
-    color: @link-color;
+	color: @link-color;
 
-    &:hover {
-        color: @link-hover-color;
-    }
+	&:hover {
+		color: @link-hover-color;
+	}
 
-    &:focus {
-        color: @brand-primary;
-    }
+	&:focus {
+		color: @brand-primary;
+	}
 
-    &.icon-link {
-        &:hover {
-            color: @brand-primary;
+	&.icon-link {
+		&:hover {
+			color: @brand-primary;
 
-            span {
-                text-decoration: none;
-            }
-        }
+			span {
+				text-decoration: none;
+			}
+		}
 
-        :focus {
-            span {
-                color: @link-hover-color;
-                text-decoration: none;
-            }
-        }
-    }
+		:focus {
+			span {
+				color: @link-hover-color;
+				text-decoration: none;
+			}
+		}
+	}
 
-    &.action-link {
-        &:after {
-            color: @brand-secondary;
-            content: "arrow_forward";
-            font-family: var(--payex-material-icons);
-            font-size: 1.5rem;
-            top: calc(50% - 1.5rem / 2);
-        }
+	&.action-link {
+		&:after {
+			color: @brand-secondary;
+			content: "arrow_forward";
+			font-family: var(--payex-material-icons);
+			font-size: 1.5rem;
+			top: calc(50% - 1.5rem / 2);
+		}
 
-        &:hover {
-            color: @brand-secondary;
-        }
+		&:hover {
+			color: @brand-secondary;
+		}
 
-        &.action-link-new-tab {
-            &:before {
-                background-color: @brand-primary;
-            }
-        }
-    }
+		&.action-link-new-tab {
+			&:before {
+				background-color: @brand-primary;
+			}
+		}
+	}
 }

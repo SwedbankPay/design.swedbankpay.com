@@ -1,25 +1,31 @@
 import { useState, useEffect } from "react";
 
-export const useJsSandboxInitCode = (outerElementCssClasses, removeOuterTag) => {
-    const [jsInitCode, setJsInitCode] = useState("");
+export const useJsSandboxInitCode = (
+	outerElementCssClasses,
+	removeOuterTag
+) => {
+	const [jsInitCode, setJsInitCode] = useState("");
 
-    useEffect(() => {
-        const needBodyClassesFromOuterTagRemoved = removeOuterTag && outerElementCssClasses.length;
-        let bodyClassesFnCalls = "";
+	useEffect(() => {
+		const needBodyClassesFromOuterTagRemoved =
+			removeOuterTag && outerElementCssClasses.length;
+		let bodyClassesFnCalls = "";
 
-        const createBodyClasses = cssClass => {
-            if (!needBodyClassesFromOuterTagRemoved) {
-                return "";
-            }
+		const createBodyClasses = (cssClass) => {
+			if (!needBodyClassesFromOuterTagRemoved) {
+				return "";
+			}
 
-            return `
+			return `
 applyOuterElementToRemoveClassesToBody('${cssClass}');`;
-        };
+		};
 
-        outerElementCssClasses.map(cssClass => bodyClassesFnCalls += createBodyClasses(cssClass));
+		outerElementCssClasses.map(
+			(cssClass) => (bodyClassesFnCalls += createBodyClasses(cssClass))
+		);
 
-        setJsInitCode(
-            `import "./styles.css";
+		setJsInitCode(
+			`import "./styles.css";
 import dg from "@swedbankpay/design-guide";
 
 // needed to set the classes from the eventual removed outerTag to the iframe body
@@ -35,8 +41,9 @@ dg.script.initAll();
 EXAMPLE:
 import { accordion } from "@swedbankpay/design-guide";
 accordion.init();
-*/`);
-    }, [outerElementCssClasses, removeOuterTag]);
+*/`
+		);
+	}, [outerElementCssClasses, removeOuterTag]);
 
-    return jsInitCode;
+	return jsInitCode;
 };

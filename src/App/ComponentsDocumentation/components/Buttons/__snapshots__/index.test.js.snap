@@ -8,7 +8,8 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
     Combining buttons
   </h2>
   <p>
-    When using buttons next to each other, always wrap them in a 
+    When using buttons next to each other, always wrap them in a
+     
     <code
       className="code-tags code-tags-primary"
     >
@@ -17,7 +18,8 @@ exports[`Documentation: Buttons Combining buttons renders 1`] = `
      to ensure internal spacing. Never use multiple buttons of type primary, and preferably only one secondary.
   </p>
   <p>
-    In the example below, primary button is using 
+    In the example below, primary button is using
+     
     <code
       className="code-tags code-tags-primary"
     >
@@ -175,13 +177,15 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
     Disabled state
   </h3>
   <p>
-    Make buttons look inactive by adding the 
+    Make buttons look inactive by adding the
+     
     <code
       className="code-tags code-tags-primary"
     >
       disabled
     </code>
-     boolean attribute to any 
+     boolean attribute to any
+     
     <code
       className="code-tags code-tags-primary"
     >
@@ -196,13 +200,15 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
     >
       &lt;a&gt;
     </code>
-     tags are styled as buttons (NOT RECOMMENDED), adding the disabled attribute is not sufficient, therefore you need to add the 
+     tags are styled as buttons (NOT RECOMMENDED), adding the disabled attribute is not sufficient, therefore you need to add the
+     
     <code
       className="code-tags code-tags-secondary"
     >
       .disabled
     </code>
-     class and make sure 
+     class and make sure
+     
     <code
       className="code-tags code-tags-secondary"
     >
@@ -344,7 +350,8 @@ exports[`Documentation: Buttons Developer documentation renders 1`] = `
     >
       .loading
     </code>
-     class to the 
+     class to the
+     
     <code
       className="code-tags code-tags-primary"
     >

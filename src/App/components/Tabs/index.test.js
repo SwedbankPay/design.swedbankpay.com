@@ -12,85 +12,96 @@ const div = document.createElement("div");
 document.body.appendChild(div);
 
 describe("Component: Tabs -", () => {
-    it("is defined", () => {
-        expect(Tabs).toBeDefined();
-    });
+	it("is defined", () => {
+		expect(Tabs).toBeDefined();
+	});
 
-    it("renders", () => {
+	it("renders", () => {
+		const componentForSnap = renderer.create(<Tabs items={items} />);
 
-        const componentForSnap = renderer.create(<Tabs items={items} />);
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+	it("renders with class name tabs when prop scroll is not specified", () => {
+		const { container } = render(<Tabs items={items} />);
 
-    it("renders with class name tabs when prop scroll is not specified", () => {
-        const { container } = render(<Tabs items={items} />);
+		expect(container.querySelector(".tabs")).not.toHaveClass("tabs-scroll");
 
-        expect(container.querySelector(".tabs")).not.toHaveClass("tabs-scroll");
+		const componentForSnap = renderer.create(<Tabs items={items} />);
 
-        const componentForSnap = renderer.create(<Tabs items={items} />);
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+	it("renders with class name .tabs.tabs-scroll when prop scroll is specified", () => {
+		const { container } = render(<Tabs items={items} scroll />);
 
-    it("renders with class name .tabs.tabs-scroll when prop scroll is specified", () => {
-        const { container } = render(<Tabs items={items} scroll/>);
+		expect(container.querySelector(".tabs")).toHaveClass("tabs-scroll");
 
-        expect(container.querySelector(".tabs")).toHaveClass("tabs-scroll");
+		const componentForSnap = renderer.create(<Tabs items={items} scroll />);
 
-        const componentForSnap = renderer.create(<Tabs items={items} scroll/>);
+		expect(componentForSnap.toJSON()).toMatchSnapshot();
+	});
 
-        expect(componentForSnap.toJSON()).toMatchSnapshot();
-    });
+	it("renders with id when id is provided", () => {
+		const { container } = render(<Tabs id="test" items={items} />);
 
-    it("renders with id when id is provided", () => {
-        const { container } = render(<Tabs id="test" items={items} />);
+		expect(container.querySelector(".tabs")).toHaveAttribute("id", "test");
+	});
 
-        expect(container.querySelector(".tabs")).toHaveAttribute("id", "test");
-    });
+	it("renders with ulId when ulId is provided", () => {
+		render(<Tabs ulId="test" items={items} />);
 
-    it("renders with ulId when ulId is provided", () => {
-        render(<Tabs ulId="test" items={items} />);
+		expect(screen.getByRole("list")).toHaveAttribute("id", "test");
+	});
 
-        expect(screen.getByRole("list")).toHaveAttribute("id", "test");
-    });
+	it("sets a tab to active", () => {
+		render(<Tabs items={items} />);
 
-    it("sets a tab to active", () => {
-        render(<Tabs items={items} />);
+		expect(
+			screen
+				.getAllByRole("listitem")
+				.some((elmt) => elmt.classList.contains("active"))
+		).toBeTruthy();
+	});
 
-        expect(screen.getAllByRole("listitem").some(elmt => elmt.classList.contains("active"))).toBeTruthy();
-    });
+	// FIXME: click is not working yet. Anyway, it is only testing the React component and its functionality, here we are NOT testing the actual `tabs` script
+	it("doesn't remove active when clicking an active tab", () => {
+		render(<Tabs items={items} />);
 
-    // FIXME: click is not working yet. Anyway, it is only testing the React component and its functionality, here we are NOT testing the actual `tabs` script
-    it("doesn't remove active when clicking an active tab", () => {
-        render(<Tabs items={items} />);
+		expect(
+			screen
+				.getAllByRole("listitem")
+				.filter((elmt) => elmt.classList.contains("active"))
+		).toHaveLength(1);
 
-        expect(screen.getAllByRole("listitem").filter(elmt => elmt.classList.contains("active"))).toHaveLength(1);
+		const activeTab = screen
+			.getAllByRole("listitem")
+			.filter((elmt) => elmt.classList.contains("active"))[0];
 
-        const activeTab = screen.getAllByRole("listitem").filter(elmt => elmt.classList.contains("active"))[0];
+		expect(activeTab).toBeTruthy();
 
-        expect(activeTab).toBeTruthy();
+		userEvent.click(activeTab);
 
-        userEvent.click(activeTab);
+		// expect(activeTab.classList).toContain("active");
+	});
 
-        // expect(activeTab.classList).toContain("active");
-    });
+	// FIXME: click is not working yet. Anyway, it is only testing the React component and its functionality, here we are NOT testing the actual `tabs` script.
+	it("changes active tab when unactive tab is clicked", () => {
+		render(<Tabs items={items} />);
 
-    // FIXME: click is not working yet. Anyway, it is only testing the React component and its functionality, here we are NOT testing the actual `tabs` script.
-    it("changes active tab when unactive tab is clicked", () => {
-        render(<Tabs items={items} />);
+		const inactiveTabs = screen
+			.getAllByRole("listitem")
+			.filter((elmt) => !elmt.classList.contains("active"));
+		const inactiveTab = inactiveTabs[0];
 
-        const inactiveTabs = screen.getAllByRole("listitem").filter(elmt => !elmt.classList.contains("active"));
-        const inactiveTab = inactiveTabs[0];
+		expect(inactiveTabs.length).toBeGreaterThan(0);
 
-        expect(inactiveTabs.length).toBeGreaterThan(0);
+		const tabAnchor = inactiveTab.querySelector("a");
 
-        const tabAnchor = inactiveTab.querySelector("a");
+		expect(tabAnchor).toBeTruthy();
 
-        expect(tabAnchor).toBeTruthy();
+		userEvent.click(tabAnchor);
 
-        userEvent.click(tabAnchor);
-
-        // expect(inactiveTab).toHaveClass("active");
-    });
+		// expect(inactiveTab).toHaveClass("active");
+	});
 });

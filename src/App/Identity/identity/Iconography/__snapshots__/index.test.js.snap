@@ -24,7 +24,8 @@ exports[`Core: Iconography renders 1`] = `
       <p
         className="mb-0"
       >
-        We primarily use the version called Outlined in the Material icons to avoid a to heavy look. For a full overview of the available icons, please, visit the Material.io. 
+        We primarily use the version called Outlined in the Material icons to avoid a to heavy look. For a full overview of the available icons, please, visit the Material.io.
+         
       </p>
       <a
         className="icon-link"
@@ -48,7 +49,8 @@ exports[`Core: Iconography renders 1`] = `
         Example of how to implement icons
       </h3>
       <p>
-        To use an icon, provide the following markup: 
+        To use an icon, provide the following markup:
+         
         <code
           className="code-tags code-tags-primary"
         >
@@ -220,13 +222,15 @@ exports[`Core: Iconography renders 1`] = `
         Card icons
       </h2>
       <p>
-        Card icons are typically used to show users which card providers that are available. The payment-card icon can be used as a placeholder and/or when the card is not recognized. 
+        Card icons are typically used to show users which card providers that are available. The payment-card icon can be used as a placeholder and/or when the card is not recognized.
+         
       </p>
       <h3>
         Example of how to implement card icons
       </h3>
       <p>
-        To use an icon, provide the following markup: 
+        To use an icon, provide the following markup:
+         
         <code
           className="code-tags code-tags-primary"
         >
@@ -678,7 +682,8 @@ exports[`Core: Iconography renders 1`] = `
         Example of how to implement payment icons
       </h3>
       <p>
-        To use an icon, provide the following markup: 
+        To use an icon, provide the following markup:
+         
         <code
           className="code-tags code-tags-primary"
         >
@@ -982,19 +987,22 @@ exports[`Core: Iconography renders 1`] = `
         >
           .flag-icon
         </code>
-         and  
+         and
+         
         <code
           className="code-tags code-tags-secondary"
         >
           .flag-icon-xx
         </code>
-          (where xx is the 
+         (where xx is the
+         
         <a
           href="https://www.iso.org/obp/ui/#search"
         >
           ISO_3166-1-alpha-2-code
         </a>
-         of a country) to an empty 
+         
+        of a country) to an empty 
         <code
           className="code-tags code-tags-secondary"
         >
@@ -1192,7 +1200,8 @@ exports[`Core: Iconography renders 1`] = `
         Sizes
       </h3>
       <p>
-        All size available for the flags are pre-defined and are shown below. Tiny is the default size and for example is used input fields. 
+        All size available for the flags are pre-defined and are shown below. Tiny is the default size and for example is used input fields.
+         
       </p>
       <div
         className="d-flex justify-content-between align-items-end p-4"
@@ -1361,7 +1370,8 @@ exports[`Core: Iconography renders 1`] = `
         >
           .flag-icon-squared
         </code>
-        . 
+        .
+         
       </p>
       <div
         className="d-flex justify-content-between align-items-end p-4"

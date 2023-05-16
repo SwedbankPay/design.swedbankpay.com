@@ -29,7 +29,8 @@ Array [
     >
       .nav
     </code>
-     and 
+     
+    and 
     <code
       className="code-tags code-tags-secondary"
     >
@@ -576,7 +577,8 @@ Array [
     Icons only
   </h2>,
   <p>
-    If you want to show only icons at a certain breakpoint then include 
+    If you want to show only icons at a certain breakpoint then include
+     
     <code
       className="code-tags code-tags-secondary"
     >

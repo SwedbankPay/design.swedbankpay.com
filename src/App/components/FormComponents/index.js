@@ -4,10 +4,10 @@ import Radio from "./Radio";
 import Togglebox from "./Togglebox";
 
 export default {
-    Checkbox,
-    Datepicker,
-    Radio,
-    Togglebox
+	Checkbox,
+	Datepicker,
+	Radio,
+	Togglebox,
 };
 
 export { Checkbox, Datepicker, Radio, Togglebox };

@@ -4,13 +4,17 @@ import { BrowserRouter } from "react-router-dom";
 import Utilities from "./index";
 
 describe("Utilities: index", () => {
-    it("is defined", () => {
-        expect(Utilities).toBeDefined();
-    });
+	it("is defined", () => {
+		expect(Utilities).toBeDefined();
+	});
 
-    it("renders", () => {
-        const utilities = renderer.create(<BrowserRouter><Utilities/></BrowserRouter>);
+	it("renders", () => {
+		const utilities = renderer.create(
+			<BrowserRouter>
+				<Utilities />
+			</BrowserRouter>
+		);
 
-        expect(utilities.toJSON()).toMatchSnapshot();
-    });
+		expect(utilities.toJSON()).toMatchSnapshot();
+	});
 });

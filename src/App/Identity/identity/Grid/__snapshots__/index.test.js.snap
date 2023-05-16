@@ -101,7 +101,8 @@ Array [
   <p>
     Most sizes in the 
     TESTBRAND
-     Design Guide is defined using 
+     Design Guide is defined using
+     
     <code
       className="code-tags code-tags-secondary"
     >
@@ -347,13 +348,15 @@ exports[`Core: Grid GridSystem renders 1`] = `
         Column spans
       </h3>
       <p>
-        Within the 12 column grid system, there are also 
+        Within the 12 column grid system, there are also
+         
         <span
           className="font-weight-bold"
         >
           6 tiers
         </span>
-         of responsive column spans. 
+         of responsive column spans.
+         
       </p>
     </article>
     <article>
@@ -372,7 +375,8 @@ exports[`Core: Grid GridSystem renders 1`] = `
         >
           fixed
         </span>
-         and depends on our breakpoints. 
+         and depends on our breakpoints.
+         
       </p>
     </article>
     <article>
@@ -385,7 +389,8 @@ exports[`Core: Grid GridSystem renders 1`] = `
         Margins
       </h3>
       <p>
-        Margins are the outer space between the columns and the edge of the grid. The values can be 
+        Margins are the outer space between the columns and the edge of the grid. The values can be
+         
         <span
           className="font-weight-bold"
         >
@@ -446,7 +451,8 @@ exports[`Core: Grid Intro renders 1`] = `
     Use our Bootstrap-inspired grid to build layouts of all shapes and sizes. Our twelve column system has six default responsive tiers, and dozens of predefined classes.
   </p>
   <p>
-    Our grid system is a modified version of the Bootstrap grid-system, learn more about how it works in the 
+    Our grid system is a modified version of the Bootstrap grid-system, learn more about how it works in the
+     
     <a
       className="icon-link m-0"
       href="https://getbootstrap.com/docs/4.1/layout/grid/"
@@ -465,7 +471,8 @@ exports[`Core: Grid Intro renders 1`] = `
         open_in_new
       </i>
     </a>
-    . If you are curious about how the grid is being used in design, head over to the 
+    . If you are curious about how the grid is being used in design, head over to the
+     
     <a
       className="icon-link m-0"
       href="https://www.figma.com/file/GkRbjhReTaX3vr2wwKCsGx/?node-id=493%3A3"
@@ -546,7 +553,8 @@ Array [
     >
       .col
     </code>
-     and 
+     and
+     
     <code
       className="code-tags code-tags-secondary"
     >
@@ -740,7 +748,8 @@ Array [
     >
       .col-sm-*
     </code>
-     classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (
+     
+    classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (
     <code
       className="code-tags code-tags-secondary"
     >

@@ -8,7 +8,8 @@ exports[`Identity: Identity OurBrand renders 1`] = `
     Our brand
   </h2>
   <p>
-    Open, simple and caring. These are our values that we always strive to come back to when we design both internal and external experiences. 
+    Open, simple and caring. These are our values that we always strive to come back to when we design both internal and external experiences.
+     
   </p>
   <blockquote
     className="blockquote"

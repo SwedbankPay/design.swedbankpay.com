@@ -35,7 +35,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 2
-       # Set brand specific variables
+        # Set brand specific variables
       - name: Environment variables
         id: variables
         run: ./.github/scripts/variables.sh --brand ${{ matrix.brand }} --ref ${{ github.ref }}

@@ -68,7 +68,8 @@ exports[`Patterns renders 1`] = `
     <p
       className="lead"
     >
-      Patterns are best practice solutions for common product features built up by combinations of various components. 
+      Patterns are best practice solutions for common product features built up by combinations of various components.
+       
     </p>
     <section
       className="component-overview hide-arrow-icon"

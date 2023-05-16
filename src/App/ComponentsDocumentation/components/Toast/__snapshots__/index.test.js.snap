@@ -55,7 +55,8 @@ exports[`Components: Toast Content guidelines renders 1`] = `
       <b>
         message
       </b>
-       reflect the toast type, e.g if it is an error toast, it should clearly state the issue and if possible explain how to solve the problem. 
+       reflect the toast type, e.g if it is an error toast, it should clearly state the issue and if possible explain how to solve the problem.
+       
     </li>
   </ul>
 </section>
@@ -75,7 +76,8 @@ exports[`Components: Toast Developer documentation renders 1`] = `
     >
       dg.toast()
     </code>
-     with the desired options.
+     
+    with the desired options.
   </p>
   <figure>
     <div
@@ -226,19 +228,22 @@ exports[`Components: Toast Developer documentation renders 1`] = `
             >
               success
             </code>
-            , 
+            ,
+             
             <code
               className="code-tags code-tags-secondary"
             >
               neutral
             </code>
-            , 
+            ,
+             
             <code
               className="code-tags code-tags-secondary"
             >
               warning
             </code>
-            , 
+            ,
+             
             <code
               className="code-tags code-tags-secondary"
             >
@@ -296,7 +301,8 @@ exports[`Components: Toast Developer documentation renders 1`] = `
       >
         Usage with NPM
       </a>
-       will require you to import it from 
+       will require you to import it from
+       
       <code
         className="code-tags code-tags-primary"
       >

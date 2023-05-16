@@ -1,184 +1,187 @@
 {
-    "parser": "@babel/eslint-parser",
-    "parserOptions": {
-        "sourceType": "module",
-        "ecmaFeatures": {
-            "jsx": true,
-            "modules": true
-        },
-        "requireConfigFile": false,
-        "babelOptions": {
-            "presets": ["@babel/preset-react"]
-        }
-    },
-    "env": {
-        "browser": true,
-        "node": true,
-        "es6": true,
-        "mocha": true,
-        "jest/globals": true
-    },
-    "globals": {
-        "dg": true
-    },
-    "plugins": [
-        "babel",
-        "react",
-        "node",
-        "jest",
-        "security",
-        "testing-library",
-        "jest-dom"
-    ],
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:jest/recommended",
-        "plugin:security/recommended",
-        "plugin:testing-library/react",
-        "plugin:jest-dom/recommended",
-    ],
-    "settings": {
-        "react": {
-            "version": "16.6"
-        }
-    },
-    "rules": {
-        "arrow-body-style":                     ["error", "as-needed"],
-        "array-bracket-spacing":                ["warn"],
-        "arrow-parens":                         ["error", "as-needed"],
-        "arrow-spacing":                        ["error"],
-        "babel/new-cap":                        0,
-        "babel/no-invalid-this":                1,
-        "babel/object-curly-spacing":           ["warn", "always"],
-        "babel/quotes":                         ["error", "double"],
-        "babel/semi":                           ["error"],
-        "block-spacing":                        ["error", "always"],
-        "block-scoped-var":                     ["warn"],
-        "brace-style":                          ["error", "1tbs", { "allowSingleLine": true }],
-        "camelcase":                            ["warn"],
-        "comma-spacing":                        ["warn"],
-        "comma-style":                          ["warn"],
-        "computed-property-spacing":            ["warn"],
-        "constructor-super":                    ["error"],
-        "curly":                                ["error", "all"],
-        "default-case":                         ["error"],
-        "dot-notation":                         ["error"],
-        "eol-last":                             ["error"],
-        "eqeqeq":                               ["error"],
-        "func-call-spacing":                    ["warn"],
-        "func-style":                           ["error", "expression"],
-        "implicit-arrow-linebreak":             ["error", "beside"],
-        "indent":                               ["error", 4, { "SwitchCase": 1 }],
-        "jsx-quotes":                           ["error", "prefer-double"],
-        "key-spacing":                          ["warn"],
-        "keyword-spacing":                      ["warn"],
-        "linebreak-style":                      0,
-        "lines-between-class-members":          ["error"],
-        "new-cap":                              0,
-        "new-parens":                           ["error"],
-        "newline-before-return":                ["error"],
-        "newline-per-chained-call":             ["warn"],
-        "no-alert":                             ["error"],
-        "no-console":                           ["warn", { "allow": ["warn", "error"] }],
-        "no-const-assign":                      ["error"],
-        "no-dupe-class-members":                ["error"],
-        "no-duplicate-imports":                 ["error"],
-        "no-empty-function":                    ["error"],
-        "no-eval":                              ["error"],
-        "no-extra-semi":                        ["error"],
-        "no-floating-decimal":                  ["error"],
-        "no-inner-declarations":                0,
-        "no-invalid-regexp":                    ["error"],
-        "no-irregular-whitespace":              ["error"],
-        "no-lonely-if":                         ["error"],
-        "no-mixed-spaces-and-tabs":             ["error"],
-        "no-multi-spaces":                      ["warn"],
-        "no-multiple-empty-lines":              ["error", { "max": 1 }],
-        "no-redeclare":                         ["warn"],
-        "no-this-before-super":                 ["warn"],
-        "no-trailing-spaces":                   ["error"],
-        "no-undef":                             ["error"],
-        "no-undef-init":                        ["error"],
-        "no-unneeded-ternary":                  ["error"],
-        "no-unreachable":                       ["error"],
-        "no-unused-vars":                       ["warn"],
-        "no-useless-constructor":               ["error"],
-        "no-useless-rename":                    ["error"],
-        "no-useless-return":                    ["error"],
-        "no-var":                               ["error"],
-        "no-whitespace-before-property":        ["warn"],
-        "node/exports-style":                   ["error", "module.exports"],
-        "object-curly-newline":                 ["warn"],
-        "object-curly-spacing":                 ["warn", "always"],
-        "object-property-newline":              ["warn"],
-        "object-shorthand":                     ["error", "always", { "avoidExplicitReturnArrows": true }],
-        "one-var":                              ["error", "never"],
-        "padding-line-between-statements":      ["error",
-            {
-                "blankLine": "always",
-                "prev": "*",
-                "next": ["class", "const", "block", "block-like", "break", "export", "expression", "do", "for", "function", "if", "import", "let", "return", "switch", "try", "while"]
-            },
-            {
-                "blankLine": "always",
-                "prev": ["class", "const", "block", "block-like", "break", "export", "expression", "do", "for", "function", "if", "import", "let", "return", "switch", "try", "while"],
-                "next": "*"
-            },
-            {
-                "blankLine": "any",
-                "prev": "expression",
-                "next": "expression"
-            },
-            {
-                "blankLine": "any",
-                "prev": "import",
-                "next": "import"
-            },
-            {
-                "blankLine": "any",
-                "prev": ["let", "const"],
-                "next": ["let", "const"]
-            }
-        ],
-        "prefer-arrow-callback":                ["error"],
-        "prefer-const":                         ["error"],
-        "prefer-destructuring":                 ["error", { "array": false }],
-        "prefer-object-spread":                 ["error"],
-        "prefer-spread":                        ["warn"],
-        "prefer-template":                      ["error"],
-        "quote-props":                          ["error", "as-needed"],
-        "quotes":                               0,
-        "react/prop-types":                     0,
-        "rest-spread-spacing":                  ["error", "never"],
-        "security/detect-non-literal-regexp":   0,
-        "security/detect-object-injection":     0,
-        "security/detect-unsafe-regex":         0,
-        "semi":                                 0,
-        "semi-spacing":                         ["warn"],
-        "semi-style":                           ["error"],
-        "space-before-blocks":                  ["error"],
-        "space-before-function-paren":          ["error"],
-        "space-in-parens":                      ["warn"],
-        "space-infix-ops":                      ["warn"],
-        "spaced-comment":                       ["error"],
-        "switch-colon-spacing":                 ["error"],
-        "template-curly-spacing":               ["error", "never"],
-        "wrap-regex":                           ["error"],
-        "testing-library/await-async-query": "error",
+	"parser": "@babel/eslint-parser",
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true,
+			"modules": true
+		},
+		"requireConfigFile": false,
+		"babelOptions": {
+			"presets": ["@babel/preset-react"]
+		}
+	},
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true,
+		"mocha": true,
+		"jest/globals": true
+	},
+	"globals": {
+		"dg": true
+	},
+	"plugins": [
+		"babel",
+		"react",
+		"node",
+		"jest",
+		"security",
+		"testing-library",
+		"jest-dom"
+	],
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:jest/recommended",
+		"plugin:security/recommended",
+		"plugin:testing-library/react",
+		"plugin:jest-dom/recommended",
+		"prettier" // Prettier must be last the item of the array
+	],
+	"settings": {
+		"react": {
+			"version": "16.6"
+		}
+	},
+	"rules": {
+		"babel/new-cap": 0,
+		"babel/no-invalid-this": 1,
+		"block-scoped-var": ["warn"],
+		"camelcase": ["warn"],
+		"constructor-super": ["error"],
+		"curly": ["error", "all"],
+		"default-case": ["error"],
+		"dot-notation": ["error"],
+		"eqeqeq": ["error"],
+		"func-style": ["error", "expression"],
+		"linebreak-style": 0,
+		"lines-between-class-members": ["error"],
+		"new-cap": 0,
+		"newline-before-return": ["error"],
+		"no-alert": ["error"],
+		"no-console": ["warn", { "allow": ["warn", "error"] }],
+		"no-const-assign": ["error"],
+		"no-dupe-class-members": ["error"],
+		"no-duplicate-imports": ["error"],
+		"no-empty-function": ["error"],
+		"no-eval": ["error"],
+		"no-inner-declarations": 0,
+		"no-invalid-regexp": ["error"],
+		"no-irregular-whitespace": ["error"],
+		"no-lonely-if": ["error"],
+		"no-redeclare": ["warn"],
+		"no-this-before-super": ["warn"],
+		"no-undef": ["error"],
+		"no-undef-init": ["error"],
+		"no-unneeded-ternary": ["error"],
+		"no-unreachable": ["error"],
+		"no-unused-vars": ["warn"],
+		"no-useless-constructor": ["error"],
+		"no-useless-rename": ["error"],
+		"no-useless-return": ["error"],
+		"no-var": ["error"],
+		"node/exports-style": ["error", "module.exports"],
+		"object-shorthand": [
+			"error",
+			"always",
+			{ "avoidExplicitReturnArrows": true }
+		],
+		"one-var": ["error", "never"],
+		"padding-line-between-statements": [
+			"error",
+			{
+				"blankLine": "always",
+				"prev": "*",
+				"next": [
+					"class",
+					"const",
+					"block",
+					"block-like",
+					"break",
+					"export",
+					"expression",
+					"do",
+					"for",
+					"function",
+					"if",
+					"import",
+					"let",
+					"return",
+					"switch",
+					"try",
+					"while"
+				]
+			},
+			{
+				"blankLine": "always",
+				"prev": [
+					"class",
+					"const",
+					"block",
+					"block-like",
+					"break",
+					"export",
+					"expression",
+					"do",
+					"for",
+					"function",
+					"if",
+					"import",
+					"let",
+					"return",
+					"switch",
+					"try",
+					"while"
+				],
+				"next": "*"
+			},
+			{
+				"blankLine": "any",
+				"prev": "expression",
+				"next": "expression"
+			},
+			{
+				"blankLine": "any",
+				"prev": "import",
+				"next": "import"
+			},
+			{
+				"blankLine": "any",
+				"prev": ["let", "const"],
+				"next": ["let", "const"]
+			}
+		],
+		"prefer-arrow-callback": ["error"],
+		"prefer-const": ["error"],
+		"prefer-destructuring": ["error", { "array": false }],
+		"prefer-object-spread": ["error"],
+		"prefer-spread": ["warn"],
+		"prefer-template": ["error"],
+		"quotes": 0,
+		"react/prop-types": 0,
+		"security/detect-non-literal-regexp": 0,
+		"security/detect-object-injection": 0,
+		"security/detect-unsafe-regex": 0,
+		"semi": 0,
+		"spaced-comment": ["error"],
+		"testing-library/await-async-query": "error",
 		"testing-library/no-await-sync-query": "error",
 		"testing-library/no-debugging-utils": "warn",
 		"testing-library/no-dom-import": "off",
-        "jest-dom/prefer-checked": "error",
-        "jest-dom/prefer-enabled-disabled": "error",
-        "jest-dom/prefer-required": "error",
-        "jest-dom/prefer-to-have-attribute": "error",
-    },
-    "overrides": [
+		"jest-dom/prefer-checked": "error",
+		"jest-dom/prefer-enabled-disabled": "error",
+		"jest-dom/prefer-required": "error",
+		"jest-dom/prefer-to-have-attribute": "error"
+	},
+	"overrides": [
 		{
 			// 3) Now we enable eslint-plugin-testing-library rules or preset only for matching testing files!
-			"files": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
-			"extends": ["plugin:testing-library/react"],
-		},
-	],
+			"files": [
+				"**/__tests__/**/*.[jt]s?(x)",
+				"**/?(*.)+(spec|test).[jt]s?(x)"
+			],
+			"extends": ["plugin:testing-library/react"]
+		}
+	]
 }

@@ -60,7 +60,8 @@ Array [
           id="aria-describe-dia"
         >
           <p>
-            Are you sure you want to permanently delete the item 
+            Are you sure you want to permanently delete the item
+             
             <i>
               German Swashbuckle (456)?
             </i>
@@ -271,17 +272,20 @@ Array [
     How it works
   </h2>,
   <p>
-    A dialog remains hidden until it is triggered. Once it is open it overlays the website with a dark background and presents some options, usually confirming or cancelling an action. If you use a dialog it is assumed that you want to "force" the user to make a choice. Therefore the only way to close a dialog is to choose one of the presented actions or, if given, press the 
+    A dialog remains hidden until it is triggered. Once it is open it overlays the website with a dark background and presents some options, usually confirming or cancelling an action. If you use a dialog it is assumed that you want to "force" the user to make a choice. Therefore the only way to close a dialog is to choose one of the presented actions or, if given, press the
+     
     <i
       aria-label="close button"
       className="material-icons d-inline-flex"
     >
       close
     </i>
-     to close the dialog.
+     
+    to close the dialog.
   </p>,
   <p>
-    Dialog boxes consist of a header, a body and a footer. In these you can put whatever you want, but some basic functionality should be included in all dialogs. The header should contain a short descriptive text for what the dialog-box does. You can include an icon with class 
+    Dialog boxes consist of a header, a body and a footer. In these you can put whatever you want, but some basic functionality should be included in all dialogs. The header should contain a short descriptive text for what the dialog-box does. You can include an icon with class
+     
     <code
       className="code-tags code-tags-secondary"
     >
@@ -304,13 +308,15 @@ Array [
       <b>
         Initializing dialog buttons:
       </b>
-       To make a button open the dialog box you need to include 
+       To make a button open the dialog box you need to include
+       
       <code
         className="code-tags code-tags-secondary"
       >
         data-dialog-open="{#your-dialog-id}"
       </code>
-       as an attribute to that button.
+       
+      as an attribute to that button.
     </p>
     
 

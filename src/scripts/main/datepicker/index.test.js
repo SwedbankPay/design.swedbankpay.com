@@ -10,266 +10,278 @@ import formats from "./formats";
 */
 
 describe("scripts: datepicker", () => {
+	it("is defined", () => {
+		expect(datepicker).toBeDefined();
+	});
 
-    it("is defined", () => {
-        expect(datepicker).toBeDefined();
-    });
+	describe("datepicker.init", () => {
+		it("has an init method", () => {
+			expect(datepicker.init).toBeDefined();
+			expect(datepicker.init).toBeInstanceOf(Function);
+		});
 
-    describe("datepicker.init", () => {
-        it("has an init method", () => {
-            expect(datepicker.init).toBeDefined();
-            expect(datepicker.init).toBeInstanceOf(Function);
-        });
+		it("does not init if no datepickers exist", () => {
+			render(<p>No datepickers here!</p>);
 
-        it("does not init if no datepickers exist", () => {
-            render(<p>No datepickers here!</p>);
+			const datePickerSpy = jest.spyOn(datepicker, "init");
 
-            const datePickerSpy = jest.spyOn(datepicker, "init");
+			expect(datePickerSpy).not.toHaveBeenCalled();
+		});
 
-            expect(datePickerSpy).not.toHaveBeenCalled();
-        });
+		it("inits the datepicker matching the passed ID", () => {
+			render(<Datepicker id="foo" />);
 
-        it("inits the datepicker matching the passed ID", () => {
+			const returnVal = datepicker.init("foo");
 
-            render(<Datepicker id="foo" />);
+			expect(returnVal.input.id).toEqual("foo");
+		});
 
-            const returnVal = datepicker.init("foo");
+		it("returns an array of objects if more than one datepicker is initialized", () => {
+			render(
+				<>
+					<Datepicker />
+					<Datepicker />
+				</>
+			);
 
-            expect(returnVal.input.id).toEqual("foo");
-        });
+			expect(datepicker.init().length).toEqual(2);
+		});
 
-        it("returns an array of objects if more than one datepicker is initialized", () => {
-            render(
-                <>
-                    <Datepicker />
-                    <Datepicker />
-                </>
-            );
+		it("returns null if no datepickers exist and prints a warning message", () => {
+			console.warn = jest.fn();
 
-            expect(datepicker.init().length).toEqual(2);
-        });
+			expect(datepicker.init()).toBeNull();
+			expect(console.warn).toHaveBeenCalled();
+		});
 
-        it("returns null if no datepickers exist and prints a warning message", () => {
-            console.warn = jest.fn();
+		it("returns null if an invalid ID is passed and prints a warning message", () => {
+			console.warn = jest.fn();
 
-            expect(datepicker.init()).toBeNull();
-            expect(console.warn).toHaveBeenCalled();
-        });
+			expect(datepicker.init("test")).toBeNull();
+			expect(console.warn).toHaveBeenCalled();
+		});
 
-        it("returns null if an invalid ID is passed and prints a warning message", () => {
-            console.warn = jest.fn();
+		it("destroys existing flatpickr instances on init()", () => {
+			render(<Datepicker />);
 
-            expect(datepicker.init("test")).toBeNull();
-            expect(console.warn).toHaveBeenCalled();
-        });
+			datepicker.init();
 
-        it("destroys existing flatpickr instances on init()", () => {
-            render(<Datepicker />);
+			expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(
+				1
+			);
 
-            datepicker.init();
+			datepicker.init();
 
-            expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(1);
+			expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(
+				1
+			);
+		});
 
-            datepicker.init();
+		it("destroys existing flatpickr instances on init(ID) if the given ID is already initialized", () => {
+			render(
+				<>
+					<Datepicker id="foo" />
+					<Datepicker id="bar" />
+				</>
+			);
 
-            expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(1);
-        });
+			datepicker.init();
 
-        it("destroys existing flatpickr instances on init(ID) if the given ID is already initialized", () => {
-            render(
-                <>
-                    <Datepicker id="foo" />
-                    <Datepicker id="bar" />
-                </>
-            );
+			expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(
+				2
+			);
 
-            datepicker.init();
+			datepicker.init("bar");
 
-            expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(2);
+			expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(
+				2
+			);
+		});
 
-            datepicker.init("bar");
+		it("doesn't destroy existing flatpickr instances on init(ID) if the given ID is invalid", () => {
+			render(<Datepicker id="test-1" />);
 
-            expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(2);
-        });
+			datepicker.init();
 
-        it("doesn't destroy existing flatpickr instances on init(ID) if the given ID is invalid", () => {
-            render(<Datepicker id="test-1" />);
+			expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(
+				1
+			);
 
-            datepicker.init();
+			datepicker.init("invalid-id");
 
-            expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(1);
+			expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(
+				1
+			);
+		});
+	});
 
-            datepicker.init("invalid-id");
+	it("warns about non-existing formats", () => {
+		console.error = jest.fn(); // To prevent error message from using non-enum for format
+		console.warn = jest.fn();
 
-            expect(document.querySelectorAll(".flatpickr-calendar").length).toEqual(1);
-        });
-    });
+		render(<Datepicker format="test" />);
 
-    it("warns about non-existing formats", () => {
-        console.error = jest.fn(); // To prevent error message from using non-enum for format
-        console.warn = jest.fn();
+		datepicker.init();
+		expect(console.warn).toHaveBeenCalled();
+	});
 
-        render(<Datepicker format="test" />);
+	it("defaults to iso8601 when no format is specified", () => {
+		console.error = jest.fn(); // To prevent error message from using non-enum for format
 
-        datepicker.init();
-        expect(console.warn).toHaveBeenCalled();
-    });
+		render(<Datepicker id="test-datepicker" />);
 
-    it("defaults to iso8601 when no format is specified", () => {
-        console.error = jest.fn(); // To prevent error message from using non-enum for format
+		const returnVal = datepicker.init("test-datepicker");
 
-        render(<Datepicker id="test-datepicker" />);
+		expect(returnVal.config.dateFormat).toEqual(formats.iso8601.dateFormat);
+	});
 
-        const returnVal = datepicker.init("test-datepicker");
+	it("sets an alternate format if datepicker-fulldate is true", () => {
+		console.error = jest.fn(); // To prevent error message from using non-enum for format
 
-        expect(returnVal.config.dateFormat).toEqual(formats.iso8601.dateFormat);
-    });
+		render(<Datepicker id="test-datepicker" fulldate="true" />);
 
-    it("sets an alternate format if datepicker-fulldate is true", () => {
-        console.error = jest.fn(); // To prevent error message from using non-enum for format
+		const returnVal = datepicker.init("test-datepicker");
 
-        render(<Datepicker id="test-datepicker" fulldate="true" />);
+		expect(returnVal.config.locale.fulldate).toEqual(formats.iso8601.fulldate);
+	});
 
-        const returnVal = datepicker.init("test-datepicker");
+	it("includes time when specified", () => {
+		console.error = jest.fn(); // To prevent error message from using non-enum for format
 
-        expect(returnVal.config.locale.fulldate).toEqual(formats.iso8601.fulldate);
-    });
+		render(<Datepicker id="test-datepicker" time />);
 
-    it("includes time when specified", () => {
-        console.error = jest.fn(); // To prevent error message from using non-enum for format
+		const returnVal = datepicker.init("test-datepicker");
 
-        render(<Datepicker id="test-datepicker" time />);
+		expect(returnVal.config.enableTime).toBeTruthy();
+	});
 
-        const returnVal = datepicker.init("test-datepicker");
+	it("sends flatpickr correct options for dateformat when specified as nb", () => {
+		render(<Datepicker id="test-datepicker" format="nb" />);
 
-        expect(returnVal.config.enableTime).toBeTruthy();
-    });
+		const returnVal = datepicker.init("test-datepicker");
 
-    it("sends flatpickr correct options for dateformat when specified as nb", () => {
-        render(<Datepicker id="test-datepicker" format="nb" />);
+		expect(returnVal.config.locale.dateFormat).toEqual(formats.nb.dateFormat);
+	});
 
-        const returnVal = datepicker.init("test-datepicker");
+	it("sends flatpickr correct options for dateformat when specified as sv", () => {
+		render(<Datepicker id="test-datepicker" format="sv" />);
 
-        expect(returnVal.config.locale.dateFormat).toEqual(formats.nb.dateFormat);
-    });
+		const returnVal = datepicker.init("test-datepicker");
 
-    it("sends flatpickr correct options for dateformat when specified as sv", () => {
-        render(<Datepicker id="test-datepicker" format="sv" />);
+		expect(returnVal.config.locale.dateFormat).toEqual(formats.sv.dateFormat);
+	});
 
-        const returnVal = datepicker.init("test-datepicker");
+	it("sends flatpickr correct options for dateformat when specified as da", () => {
+		render(<Datepicker id="test-datepicker" format="da" />);
 
-        expect(returnVal.config.locale.dateFormat).toEqual(formats.sv.dateFormat);
-    });
+		const returnVal = datepicker.init("test-datepicker");
 
-    it("sends flatpickr correct options for dateformat when specified as da", () => {
-        render(<Datepicker id="test-datepicker" format="da" />);
+		expect(returnVal.config.locale.dateFormat).toEqual(formats.da.dateFormat);
+	});
 
-        const returnVal = datepicker.init("test-datepicker");
+	it("sends flatpickr correct options for dateformat when specified as fi", () => {
+		render(<Datepicker id="test-datepicker" format="fi" />);
 
-        expect(returnVal.config.locale.dateFormat).toEqual(formats.da.dateFormat);
-    });
+		const returnVal = datepicker.init("test-datepicker");
 
-    it("sends flatpickr correct options for dateformat when specified as fi", () => {
-        render(<Datepicker id="test-datepicker" format="fi" />);
+		expect(returnVal.config.locale.dateFormat).toEqual(formats.fi.dateFormat);
+	});
 
-        const returnVal = datepicker.init("test-datepicker");
+	it("sends flatpickr correct options for dateformat when specified as en", () => {
+		render(<Datepicker id="test-datepicker" format="en" />);
 
-        expect(returnVal.config.locale.dateFormat).toEqual(formats.fi.dateFormat);
-    });
+		const returnVal = datepicker.init("test-datepicker");
 
-    it("sends flatpickr correct options for dateformat when specified as en", () => {
-        render(<Datepicker id="test-datepicker" format="en" />);
+		expect(returnVal.config.locale.dateFormat).toEqual(formats.en.dateFormat);
+	});
 
-        const returnVal = datepicker.init("test-datepicker");
+	it("sends flatpickr correct options for dateformat when specified as iso8601", () => {
+		render(<Datepicker id="test-datepicker" format="iso8601" />);
 
-        expect(returnVal.config.locale.dateFormat).toEqual(formats.en.dateFormat);
-    });
+		const returnVal = datepicker.init("test-datepicker");
 
-    it("sends flatpickr correct options for dateformat when specified as iso8601", () => {
-        render(<Datepicker id="test-datepicker" format="iso8601" />);
+		expect(returnVal.config.locale.dateFormat).toEqual(
+			formats.iso8601.dateFormat
+		);
+	});
 
-        const returnVal = datepicker.init("test-datepicker");
+	it("sends flatpickr correct options for dateformat when specified as nb with attribute min", () => {
+		render(<Datepicker id="test-datepicker" format="nb" min="test" />);
 
-        expect(returnVal.config.locale.dateFormat).toEqual(formats.iso8601.dateFormat);
-    });
+		const returnVal = datepicker.init("test-datepicker");
 
-    it("sends flatpickr correct options for dateformat when specified as nb with attribute min", () => {
-        render(<Datepicker id="test-datepicker" format="nb" min="test" />);
+		expect(returnVal.config.datepickerMin).toEqual("test");
+	});
 
-        const returnVal = datepicker.init("test-datepicker");
+	it("sends flatpickr correct options for dateformat when specified as nb with attribute max", () => {
+		render(<Datepicker id="test-datepicker" format="nb" max="test" />);
 
-        expect(returnVal.config.datepickerMin).toEqual("test");
-    });
+		const returnVal = datepicker.init("test-datepicker");
 
-    it("sends flatpickr correct options for dateformat when specified as nb with attribute max", () => {
-        render(<Datepicker id="test-datepicker" format="nb" max="test" />);
+		expect(returnVal.config.datepickerMax).toEqual("test");
+	});
 
-        const returnVal = datepicker.init("test-datepicker");
+	it("sends flatpickr correct options for dateformat when specified as nb with attribute datepicker-value", () => {
+		render(<Datepicker id="test-datepicker" format="nb" value="test" />);
 
-        expect(returnVal.config.datepickerMax).toEqual("test");
-    });
+		const returnVal = datepicker.init("test-datepicker");
 
-    it("sends flatpickr correct options for dateformat when specified as nb with attribute datepicker-value", () => {
-        render(<Datepicker id="test-datepicker" format="nb" value="test" />);
+		expect(returnVal.config.datepickerValue).toEqual("test");
+	});
 
-        const returnVal = datepicker.init("test-datepicker");
+	it("sends flatpickr correct options for dateformat when specified as nb with attribute months", () => {
+		render(<Datepicker id="test-datepicker" format="nb" months="3" />);
 
-        expect(returnVal.config.datepickerValue).toEqual("test");
-    });
+		const returnVal = datepicker.init("test-datepicker");
 
-    it("sends flatpickr correct options for dateformat when specified as nb with attribute months", () => {
-        render(<Datepicker id="test-datepicker" format="nb" months="3" />);
+		expect(returnVal.config.datepickerMonths).toEqual("3");
+	});
 
-        const returnVal = datepicker.init("test-datepicker");
+	describe("datepicker.open", () => {
+		it("prints an error message if a datepicker with the given ID is not found", () => {
+			console.error = jest.fn();
 
-        expect(returnVal.config.datepickerMonths).toEqual("3");
-    });
+			datepicker.open("invalid-id");
 
-    describe("datepicker.open", () => {
-        it("prints an error message if a datepicker with the given ID is not found", () => {
-            console.error = jest.fn();
+			expect(console.error).toHaveBeenCalled();
+		});
 
-            datepicker.open("invalid-id");
+		it("opens the datepicker matching the passed ID", () => {
+			render(<Datepicker id="demo-datepicker" />);
+			datepicker.init();
 
-            expect(console.error).toHaveBeenCalled();
-        });
+			const renderedDatepicker = document.querySelector(".flatpickr-input");
 
-        it("opens the datepicker matching the passed ID", () => {
-            render(<Datepicker id="demo-datepicker" />);
-            datepicker.init();
+			expect(renderedDatepicker).toBeTruthy();
+			expect(renderedDatepicker.classList).not.toContain("active");
 
-            const renderedDatepicker = document.querySelector(".flatpickr-input");
+			datepicker.open("demo-datepicker");
 
-            expect(renderedDatepicker).toBeTruthy();
-            expect(renderedDatepicker.classList).not.toContain("active");
+			expect(renderedDatepicker.classList).toContain("active");
+		});
+	});
 
-            datepicker.open("demo-datepicker");
+	describe("datepicker.close", () => {
+		it("prints an error message if a datepicker with the given ID is not found", () => {
+			console.error = jest.fn();
 
-            expect(renderedDatepicker.classList).toContain("active");
-        });
-    });
+			datepicker.close("invalid-id");
 
-    describe("datepicker.close", () => {
-        it("prints an error message if a datepicker with the given ID is not found", () => {
-            console.error = jest.fn();
+			expect(console.error).toHaveBeenCalled();
+		});
 
-            datepicker.close("invalid-id");
+		it("closes the datepicker matching the passed ID", () => {
+			render(<Datepicker id="demo-datepicker" />);
+			datepicker.init();
 
-            expect(console.error).toHaveBeenCalled();
-        });
+			const renderedDatepicker = document.querySelector(".flatpickr-input");
 
-        it("closes the datepicker matching the passed ID", () => {
-            render(<Datepicker id="demo-datepicker" />);
-            datepicker.init();
+			expect(renderedDatepicker).toBeTruthy();
+			datepicker.open("demo-datepicker");
+			expect(renderedDatepicker.classList).toContain("active");
 
-            const renderedDatepicker = document.querySelector(".flatpickr-input");
-
-            expect(renderedDatepicker).toBeTruthy();
-            datepicker.open("demo-datepicker");
-            expect(renderedDatepicker.classList).toContain("active");
-
-            datepicker.close("demo-datepicker");
-            expect(renderedDatepicker.classList).not.toContain("active");
-        });
-    });
+			datepicker.close("demo-datepicker");
+			expect(renderedDatepicker.classList).not.toContain("active");
+		});
+	});
 });

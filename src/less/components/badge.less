@@ -2,156 +2,156 @@
 
 /* stylelint-disable */
 @badge-list: {
-    default: @brand-primary;
-    inactive: @list-gray;
-    warning: @brand-error;
-    yellow: @brand-primary;
-    yellow-light: @brand-primary-light;
-    yellow-lighter: @brand-primary-lighter;
-    red: @brand-error;
-    red-dark: @brand-error-dark;
-    red-light: @brand-error-light;
-    white: @brand-bg-white;
-    pink: @brand-pink;
-    brown: @brand-brown;
-    brown-medium: @brown-medium;
-    brown-solid: @solid-brown;
-    brown-soft: @brown-soft;
-    brown-dark: @dark-brown;
-    brown-light: @brown-light;
-    turqouise: @brand-turquoise;
-    turqouise-dark: @brand-turqouise-dark;
-    turqouise-darker: @brand-turqouise-darker;
-    turqouise-light: @brand-turquoise-light;
-    turqouise-lighter: @brand-turqouise-lighter;
-    apricot: @brand-apricot;
-    gray: @list-gray;
-    gray-dark: @brand-bg-gray;
-    gray-light: @brand-bg-gray;
-    orange: @brand-orange;
-    orange-light: @brand-warning-light;
-    green: @brand-green;
-    green-light: @brand-green-light;
-    blue: @brand-blue;
-    blue-light: @brand-blue-light;
+	default: @brand-primary;
+	inactive: @list-gray;
+	warning: @brand-error;
+	yellow: @brand-primary;
+	yellow-light: @brand-primary-light;
+	yellow-lighter: @brand-primary-lighter;
+	red: @brand-error;
+	red-dark: @brand-error-dark;
+	red-light: @brand-error-light;
+	white: @brand-bg-white;
+	pink: @brand-pink;
+	brown: @brand-brown;
+	brown-medium: @brown-medium;
+	brown-solid: @solid-brown;
+	brown-soft: @brown-soft;
+	brown-dark: @dark-brown;
+	brown-light: @brown-light;
+	turqouise: @brand-turquoise;
+	turqouise-dark: @brand-turqouise-dark;
+	turqouise-darker: @brand-turqouise-darker;
+	turqouise-light: @brand-turquoise-light;
+	turqouise-lighter: @brand-turqouise-lighter;
+	apricot: @brand-apricot;
+	gray: @list-gray;
+	gray-dark: @brand-bg-gray;
+	gray-light: @brand-bg-gray;
+	orange: @brand-orange;
+	orange-light: @brand-warning-light;
+	green: @brand-green;
+	green-light: @brand-green-light;
+	blue: @brand-blue;
+	blue-light: @brand-blue-light;
 
-    // Contrast checker -> https://webaim.org/resources/contrastchecker/
-}
+	// Contrast checker -> https://webaim.org/resources/contrastchecker/
+};
 
 /* stylelint-enable */
 
 .badge {
-    display: inline-block;
-    color: @white;
-    padding: 0 0.4em; /* stylelint-disable-line */ /* Using em for variable padding based on font-size of badge [AW] */
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    min-width: 1.375rem;
-    height: 1.375rem;
-    text-align: center;
-    font-family: var(--font-stack);
-    line-height: 1.5;
+	display: inline-block;
+	color: @white;
+	padding: 0 0.4em; /* stylelint-disable-line */ /* Using em for variable padding based on font-size of badge [AW] */
+	border-radius: 2rem;
+	font-size: 0.875rem;
+	min-width: 1.375rem;
+	height: 1.375rem;
+	text-align: center;
+	font-family: var(--font-stack);
+	line-height: 1.5;
 
-    each(@badge-list, .(@color, @name) {
+	each(@badge-list, .(@color, @name) {
         &.badge-@{name} {
             background-color: @color;
             border: 1px solid @color;
         }
     });
 
-    .material-icons {
-        font-size: 1rem;
-        vertical-align: text-top;
-    }
+	.material-icons {
+		font-size: 1rem;
+		vertical-align: text-top;
+	}
 
-    // set text color
-    &.badge-yellow,
-    &.badge-yellow-light,
-    &.badge-yellow-lighter,
-    &.badge-white,
-    &.badge-turqouise-light,
-    &.badge-turqouise-lighter,
-    &.badge-pink,
-    &.badge-brown-light,
-    &.badge-apricot,
-    &.badge-gray-light,
-    &.badge-red-light,
-    &.badge-orange-light,
-    &.badge-green-light,
-    &.badge-blue-light,
-    &.badge-default {
-        color: @brand-secondary;
-    }
+	// set text color
+	&.badge-yellow,
+	&.badge-yellow-light,
+	&.badge-yellow-lighter,
+	&.badge-white,
+	&.badge-turqouise-light,
+	&.badge-turqouise-lighter,
+	&.badge-pink,
+	&.badge-brown-light,
+	&.badge-apricot,
+	&.badge-gray-light,
+	&.badge-red-light,
+	&.badge-orange-light,
+	&.badge-green-light,
+	&.badge-blue-light,
+	&.badge-default {
+		color: @brand-secondary;
+	}
 
-    &.badge-deprecated {
-        font-weight: 700;
-        background-color: @system-error;
-        color: @white;
-    }
+	&.badge-deprecated {
+		font-weight: 700;
+		background-color: @system-error;
+		color: @white;
+	}
 
-    &.badge-number {
-        font-family: var(--brand-headline);
-        font-weight: 400;
-    }
+	&.badge-number {
+		font-family: var(--brand-headline);
+		font-weight: 400;
+	}
 }
 
 .status-badge {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 0.75rem;
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 700;
-    min-width: 1.375rem;
-    height: 1.75rem;
-    margin: 1rem;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 0.75rem;
+	border-radius: 2rem;
+	font-size: 0.875rem;
+	font-weight: 700;
+	min-width: 1.375rem;
+	height: 1.75rem;
+	margin: 1rem;
 
-    &.status-badge-new {
-        background-color: @brand-success-light;
-        color: @brand-success;
-    }
+	&.status-badge-new {
+		background-color: @brand-success-light;
+		color: @brand-success;
+	}
 
-    &.status-badge-updated {
-        background-color: @brand-info-light;
-        color: @brand-info;
-    }
+	&.status-badge-updated {
+		background-color: @brand-info-light;
+		color: @brand-info;
+	}
 
-    &.status-badge-remove {
-        background-color: @brand-error-light;
-        color: @brand-error;
-    }
+	&.status-badge-remove {
+		background-color: @brand-error-light;
+		color: @brand-error;
+	}
 
-    &.status-badge-deprecated {
-        background-color: @system-error;
-        color: @white;
-    }
+	&.status-badge-deprecated {
+		background-color: @system-error;
+		color: @white;
+	}
 
-    &.status-badge-javascript {
-        background-color: @brand-primary-light-3;
-        color: @brand-secondary;
+	&.status-badge-javascript {
+		background-color: @brand-primary-light-3;
+		color: @brand-secondary;
 
-        .javascript-icon {
-            height: 1.25rem;
-            width: 1.25rem;
-            display: inline-flex;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            margin-right: 0.5rem;
-            background-image: url("../../icons/javascript.svg");
-        }
-    }
+		.javascript-icon {
+			height: 1.25rem;
+			width: 1.25rem;
+			display: inline-flex;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			margin-right: 0.5rem;
+			background-image: url("../../icons/javascript.svg");
+		}
+	}
 
-    .material-icons {
-        font-size: 1.25rem;
-        margin-right: 0.5rem;
-    }
+	.material-icons {
+		font-size: 1.25rem;
+		margin-right: 0.5rem;
+	}
 }
 
 .badge-showcase {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	column-gap: 1rem;
 }

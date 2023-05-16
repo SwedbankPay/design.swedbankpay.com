@@ -22,11 +22,14 @@ exports[`Core: Imagery renders 1`] = `
       <p>
         All images displayed in a 
         TESTBRAND
-         interface should be from the 
+         interface should be from the
+         
         TESTBRAND
-         Image library. Note that the images only can be used in 
+         Image library. Note that the images only can be used in
+         
         TESTBRAND
-         productions. If you need access to the library, contact current Head of Marketing. 
+         productions. If you need access to the library, contact current Head of Marketing.
+         
       </p>
       <img
         alt="Collection of images from the Swedbank Pay image library."
@@ -39,11 +42,14 @@ exports[`Core: Imagery renders 1`] = `
       <p>
         There are several images to choose from when working with 
         TESTBRAND
-         products. Because 
+         
+        products. Because 
         TESTBRAND
          is a payment service for all, it’s extra important to think about diversity when picking images for a product. To choose a great image, reflect over the context you’re bringing the image into and check if and where the image is used in other 
         TESTBRAND
-         products. If an images is strongly associated with a certain page or feature, consider using another. We strive to use a variation of the library images while also giving the image a purpose. 
+         
+        products. If an images is strongly associated with a certain page or feature, consider using another. We strive to use a variation of the library images while also giving the image a purpose.
+         
       </p>
       <p>
         <span
@@ -64,7 +70,8 @@ exports[`Core: Imagery renders 1`] = `
         Once you’ve found good imagery for your website, ask yourself “Are these images the right size for where I want them on my website?” Investigate what image sizes that is required for your interface, to ensure the pictures look of high quality and aren’t pixelated or stretched.
       </p>
       <p>
-        Avoid using extremely small images in places where a larger image is needed, e.g. the main banner on a landing page, as this can cause them to look blurry, out of focus, and may cut off a large part of the image. Also be careful when using extremely large images. Only small images where a smaller image is required, e.g. your sector images, as this will drastically affect page loading speed. The optimum size for page loading time is less than 2 MB. 
+        Avoid using extremely small images in places where a larger image is needed, e.g. the main banner on a landing page, as this can cause them to look blurry, out of focus, and may cut off a large part of the image. Also be careful when using extremely large images. Only small images where a smaller image is required, e.g. your sector images, as this will drastically affect page loading speed. The optimum size for page loading time is less than 2 MB.
+         
       </p>
       <p>
         Finally, don’t distort or wrap the images in any way.
@@ -105,7 +112,8 @@ exports[`Core: Imagery renders 1`] = `
         Text on images
       </h3>
       <p>
-        Using text on images is tricky from several point of views. First of all, the text has to be visible on the images. We recommend you to NOT use text on images if you feel the slightest insecure about if the text is readable or not. 
+        Using text on images is tricky from several point of views. First of all, the text has to be visible on the images. We recommend you to NOT use text on images if you feel the slightest insecure about if the text is readable or not.
+         
       </p>
       <div
         className="slab slab-plain slab-border-error"
@@ -404,7 +412,8 @@ exports[`Core: Imagery renders 1`] = `
             <b>
               Image captions and alt text should not be the same to avoid repetition.
             </b>
-             If the caption or nearby text already explains the informational image, you might usa a very brief or empty alt text (alt="").
+             
+            If the caption or nearby text already explains the informational image, you might usa a very brief or empty alt text (alt="").
           </li>
           <li>
             <b>
@@ -416,7 +425,8 @@ exports[`Core: Imagery renders 1`] = `
             <b>
               Include only the most relevant visual details.
             </b>
-             It’s not practical to include every visual detail in a photo or illustration. 
+             It’s not practical to include every visual detail in a photo or illustration.
+             
           </li>
           <li>
             <b>
@@ -434,7 +444,8 @@ exports[`Core: Imagery renders 1`] = `
             <b>
               Don’t begin the alt text with "Photo of…"; or "Image of…".
             </b>
-             Users already know that an image is being described. If it’s relevant to clarify that it’s not a photo, it is ok to write "Illustration of…", or similar.
+             
+            Users already know that an image is being described. If it’s relevant to clarify that it’s not a photo, it is ok to write "Illustration of…", or similar.
           </li>
           <li>
             <b>

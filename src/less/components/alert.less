@@ -1,71 +1,71 @@
 @import "../global.less";
 
 .alert-variant(@color, @bg-color) {
-    background-color: @bg-color;
+	background-color: @bg-color;
 
-    .alert-icon {
-        color: @color;
-        margin-right: 1rem;
-    }
+	.alert-icon {
+		color: @color;
+		margin-right: 1rem;
+	}
 }
 
 .alert {
-    padding: 1rem;
-    position: relative;
-    margin-top: 0;
-    margin-bottom: 1rem;
-    display: flex;
-    color: @black;
-    border-radius: 0.25rem;
+	padding: 1rem;
+	position: relative;
+	margin-top: 0;
+	margin-bottom: 1rem;
+	display: flex;
+	color: @black;
+	border-radius: 0.25rem;
 
-    &.alert-success {
-        .alert-variant(@brand-success, @brand-success-light);
-    }
+	&.alert-success {
+		.alert-variant(@brand-success, @brand-success-light);
+	}
 
-    &.alert-warning {
-        .alert-variant(@brand-warning, @brand-warning-light);
-    }
+	&.alert-warning {
+		.alert-variant(@brand-warning, @brand-warning-light);
+	}
 
-    &.alert-danger {
-        .alert-variant(@brand-error, @brand-error-light);
-    }
+	&.alert-danger {
+		.alert-variant(@brand-error, @brand-error-light);
+	}
 
-    &.alert-informative {
-        .alert-variant(@brand-info, @brand-info-light);
-    }
+	&.alert-informative {
+		.alert-variant(@brand-info, @brand-info-light);
+	}
 
-    > p {
-        margin-bottom: 0;
-        margin-top: 0;
-    }
+	> p {
+		margin-bottom: 0;
+		margin-top: 0;
+	}
 
-    .alert-close {
-        all: unset;
-        align-self: baseline;
-        margin-left: 0.5rem;
+	.alert-close {
+		all: unset;
+		align-self: baseline;
+		margin-left: 0.5rem;
 
-        &:hover {
-            background-color: @brand-bg-gray;
-        }
-        .close-button();
+		&:hover {
+			background-color: @brand-bg-gray;
+		}
+		.close-button();
 
-        &:focus {
-            border: none;
-            border-radius: 0.125rem;
-            box-shadow: 0 0 0 2px @black;
-            outline: 2px solid;
-        }
-    }
+		&:focus {
+			border: none;
+			border-radius: 0.125rem;
+			box-shadow: 0 0 0 2px @black;
+			outline: 2px solid;
+		}
+	}
 }
 
 @media (forced-colors: active) {
-    .alert {
-        border: 10px solid;
+	.alert {
+		border: 10px solid;
 
-        .alert-close {
-            &:focus {
-                outline: 2px solid;
-            }
-        }
-    }
+		.alert-close {
+			&:focus {
+				outline: 2px solid;
+			}
+		}
+	}
 }

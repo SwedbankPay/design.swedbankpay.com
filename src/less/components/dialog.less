@@ -1,133 +1,143 @@
 @import "../global.less";
 
-@dialog-border:                             1px solid @light-gray;
+@dialog-border: 1px solid @light-gray;
 
 .dialog {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: @dialog-z-index;
-    background: fade(@black, 50%);
-    display: none;
-    justify-content: center;
-    align-items: center;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: var(--dialog-z-index, 600);
+	background: fade(@black, 50%);
+	display: none;
+	justify-content: center;
+	align-items: center;
 
-    > section {
-        position: relative;
-        max-width: 500px;
+	> section {
+		position: relative;
+		max-width: 500px;
 
-        .dialog-header,
-        header {
-            display: flex;
-            padding: 1rem 1.5rem;
-            align-items: center;
-            background: @white;
-            border-bottom: @dialog-border;
+		.dialog-header,
+		header {
+			display: flex;
+			padding: 1rem 1.5rem;
+			align-items: center;
+			background: @white;
+			border-bottom: @dialog-border;
 
-            /* stylelint-disable selector-list-comma-newline-after */
-            h1, h2, h3, h4, h5, h6,
-            .h1, .h2, .h3, .h4, .h5, .h6 {
-                margin-top: 0;
-                margin-bottom: 0;
-                flex-grow: 1;
-            }
-            /* stylelint-enable selector-list-comma-newline-after */
+			/* stylelint-disable selector-list-comma-newline-after */
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			.h1,
+			.h2,
+			.h3,
+			.h4,
+			.h5,
+			.h6 {
+				margin-top: 0;
+				margin-bottom: 0;
+				flex-grow: 1;
+			}
+			/* stylelint-enable selector-list-comma-newline-after */
 
-            .dialog-close {
-                display: inline-flex;
-                touch-action: manipulation;
-                cursor: pointer;
-                user-select: none;
-                background-color: transparent;
-                border: none;
-                padding: 0;
-                margin-right: -0.5rem;
+			.dialog-close {
+				display: inline-flex;
+				touch-action: manipulation;
+				cursor: pointer;
+				user-select: none;
+				background-color: transparent;
+				border: none;
+				padding: 0;
+				margin-right: -0.5rem;
 
-                &:hover,
-                &.hover {
-                    color: var(--brand-secondary);
-                    text-decoration: none;
-                    background-color: @brand-bg-gray;
-                }
+				&:hover,
+				&.hover {
+					color: var(--brand-secondary);
+					text-decoration: none;
+					background-color: @brand-bg-gray;
+				}
 
-                &:focus {
-                    border: none;
-                    border-radius: 0.125rem;
-                    box-shadow: 0 0 0 2px @black;
-                    outline: none;
-                }
+				&:focus {
+					border: none;
+					border-radius: 0.125rem;
+					box-shadow: 0 0 0 2px @black;
+					outline: none;
+				}
 
-                &[active],
-                &:active,
-                &.active {
-                    outline: 0;
-                    background-image: none;
-                    box-shadow: none;
+				&[active],
+				&:active,
+				&.active {
+					outline: 0;
+					background-image: none;
+					box-shadow: none;
 
-                    &:focus,
-                    &.focus {
-                        box-shadow: none;
-                    }
-                }
-            }
-        }
+					&:focus,
+					&.focus {
+						box-shadow: none;
+					}
+				}
+			}
+		}
 
-        .dialog-body {
-            background: @white;
-            padding: 2rem 1.5rem;
-        }
+		.dialog-body {
+			background: @white;
+			padding: 2rem 1.5rem;
+		}
 
-        .dialog-footer,
-        footer {
-            background: @white;
-            border-top: @dialog-border;
-            padding: 1rem 1.5rem;
-            margin: 0;
-            display: flex;
-            justify-content: flex-end;
+		.dialog-footer,
+		footer {
+			background: @white;
+			border-top: @dialog-border;
+			padding: 1rem 1.5rem;
+			margin: 0;
+			display: flex;
+			justify-content: flex-end;
 
-            > * {
-                margin: 0 0.25rem;
-            }
-        }
-    }
+			> * {
+				margin: 0 0.25rem;
+			}
+		}
+	}
 }
 
 .dialog-open {
-    overflow: hidden;
+	overflow: hidden;
 
-    .dialog {
-        overflow-x: hidden;
-        overflow-y: auto;
-    }
+	.dialog {
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
 }
 
 @media (forced-colors: active) {
-    .dialog {
-        border: 10px solid;
+	.dialog {
+		border: 10px solid;
 
-        > section {
-            outline: 10px solid;
+		> section {
+			outline: 10px solid;
 
-            .dialog-header,
-            .header {
-                .dialog-close {
-                    &:focus {
-                        outline: 2px solid;
-                    }
+			.dialog-header,
+			.header {
+				.dialog-close {
+					&:focus {
+						outline: 2px solid;
+					}
 
-                    &[active],
-                    &:active,
-                    &.active {
-                        &:focus,
-                        &.focus {
-                            outline: 2px solid;
-                        }
-                    }
-                }
-            }
-        }
-    }
+					&[active],
+					&:active,
+					&.active {
+						&:focus,
+						&.focus {
+							outline: 2px solid;
+						}
+					}
+				}
+			}
+		}
+	}
 }

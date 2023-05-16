@@ -5,20 +5,19 @@ const getStartedRoutes = require("../src/App/routes/get-started");
 const patternsRoutes = require("../src/App/routes/patterns");
 
 const getRoutes = () => {
-    const ROUTES = [...ROOTROUTES];
+	const ROUTES = [...ROOTROUTES];
 
-    [
-        ...componentsRoutes,
-        ...identityRoutes,
-        ...getStartedRoutes,
-        ...patternsRoutes
-    ].forEach(route => {
-        ROUTES.push(route.path);
-        route.routes.forEach(r => ROUTES.push(r.rootPath));
-    });
+	[
+		...componentsRoutes,
+		...identityRoutes,
+		...getStartedRoutes,
+		...patternsRoutes,
+	].forEach((route) => {
+		ROUTES.push(route.path);
+		route.routes.forEach((r) => ROUTES.push(r.rootPath));
+	});
 
-    return ROUTES;
+	return ROUTES;
 };
 
 module.exports = getRoutes();
-

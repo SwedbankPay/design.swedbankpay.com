@@ -3,37 +3,37 @@ import renderer from "react-test-renderer";
 import Copywriting, { Terminology, Tonality, GlossaryLinks } from "./index";
 
 describe("Core: Accessibility", () => {
-    it("is defined", () => {
-        expect(Copywriting).toBeDefined();
-    });
+	it("is defined", () => {
+		expect(Copywriting).toBeDefined();
+	});
 
-    describe("Intro", () => {
-        it("is defined", () => {
-            expect(Terminology).toBeDefined();
-        });
-    });
+	describe("Intro", () => {
+		it("is defined", () => {
+			expect(Terminology).toBeDefined();
+		});
+	});
 
-    describe("AccessibleService", () => {
-        it("is defined", () => {
-            expect(Tonality).toBeDefined();
-        });
+	describe("AccessibleService", () => {
+		it("is defined", () => {
+			expect(Tonality).toBeDefined();
+		});
 
-        it("renders", () => {
-            const wrapper = renderer.create(<Tonality />);
+		it("renders", () => {
+			const wrapper = renderer.create(<Tonality />);
 
-            expect(wrapper.toJSON()).toMatchSnapshot();
-        });
-    });
+			expect(wrapper.toJSON()).toMatchSnapshot();
+		});
+	});
 
-    describe("WcagStandard", () => {
-        it("is defined", () => {
-            expect(GlossaryLinks).toBeDefined();
-        });
+	describe("WcagStandard", () => {
+		it("is defined", () => {
+			expect(GlossaryLinks).toBeDefined();
+		});
 
-        it("renders", () => {
-            const wrapper = renderer.create(<GlossaryLinks />);
+		it("renders", () => {
+			const wrapper = renderer.create(<GlossaryLinks />);
 
-            expect(wrapper.toJSON()).toMatchSnapshot();
-        });
-    });
+			expect(wrapper.toJSON()).toMatchSnapshot();
+		});
+	});
 });

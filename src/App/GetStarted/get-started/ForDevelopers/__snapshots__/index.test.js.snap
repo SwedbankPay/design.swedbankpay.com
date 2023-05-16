@@ -8,7 +8,8 @@ exports[`GetStarted: ForDevelopers Contributing renders 1`] = `
     Contributing
   </h2>
   <p>
-    Our project is fully open source and we would love to have you contribute to make the design guide better! You can create a ticket directly in 
+    Our project is fully open source and we would love to have you contribute to make the design guide better! You can create a ticket directly in
+     
     <a
       className="icon-link m-0"
       href="https://github.com/SwedbankPay/design.swedbankpay.com"
@@ -27,10 +28,12 @@ exports[`GetStarted: ForDevelopers Contributing renders 1`] = `
         open_in_new
       </i>
     </a>
-     or create a feature request here.
+     
+    or create a feature request here.
   </p>
   <p>
-    Please make sure to check out our 
+    Please make sure to check out our
+     
     <a
       className="icon-link m-0"
       href="https://github.com/SwedbankPay/design.swedbankpay.com#contributing"
@@ -75,7 +78,8 @@ exports[`GetStarted: ForDevelopers Feedback renders 1`] = `
     Feedback
   </h2>
   <p>
-    We want to do our best to provide top quality components for you to use, but this is only possible with the help from you! If you have any suggestions for how we could potentially improve a component, please don’t hesitate to reach out, you can find us in the 
+    We want to do our best to provide top quality components for you to use, but this is only possible with the help from you! If you have any suggestions for how we could potentially improve a component, please don’t hesitate to reach out, you can find us in the
+     
     <strong>
       #design-guide-feedback
     </strong>
@@ -149,6 +153,124 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
         </table>
       </div>
     </figure>
+    <section>
+      <h3>
+        Import methods comparisons
+      </h3>
+      <p>
+        The Design-System NPM package offers 2 possibilities:
+        <ul>
+          <li>
+            original unprocessed source files
+            <ul>
+              <li>
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  @swedbankpay/design-guide/src/...
+                </code>
+              </li>
+              <li>
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  .js
+                </code>
+                 &
+                 
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  .less
+                </code>
+              </li>
+              <li>
+                individual components files + globals, utils & variables
+              </li>
+              <li>
+                unprocessed for browser support, each project is responsible for ensuring the browser support they need & processing the style files from 
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  .less
+                </code>
+                 to
+                 
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  .css
+                </code>
+              </li>
+              <li>
+                e.g.
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  @swedbankpay/design-guide/src/less/components/topbar.less
+                </code>
+                 
+                or
+                 
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  @swedbankpay/design-guide/src/scripts/main/topbar.js
+                </code>
+              </li>
+            </ul>
+          </li>
+          <li>
+            bundled prefixed transpiled files
+            <ul>
+              <li>
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  @swedbankpay/design-guide/dist/...
+                </code>
+              </li>
+              <li>
+                bundled
+              </li>
+              <li>
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  .js
+                </code>
+                 &
+                 
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  .css
+                </code>
+              </li>
+              <li>
+                processed for browser support (CSS is auto-prefixed, JS is transpiled)
+              </li>
+              <li>
+                e.g.
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  @swedbankpay/design-guide/dist/designguide/styles/swedbankpay.css
+                </code>
+                 
+                or
+                 
+                <code
+                  className="code-tags code-tags-secondary"
+                >
+                  @swedbankpay/design-guide/dist/designguide/scripts/dg.js
+                </code>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+    </section>
     <section>
       <h3>
         JavaScript
@@ -233,7 +355,7 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
                   className="code-view-code"
                 >
                   <pre>
-                    import { expandable, sheet  } from "@swedbankpay/design-guide";  
+                    import { expandable, sheet } from "@swedbankpay/design-guide"; 
                     
 
                     expandable.init(); 
@@ -336,26 +458,30 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
         CSS/Less
       </h3>
       <p>
-        For our CSS you can choose to import it from a 
+        For our CSS you can choose to import it from a
+         
         <code
           className="code-tags code-tags-secondary"
         >
           css/less/scss
         </code>
-         file, from a 
+         file, from a
+         
         <code
           className="code-tags code-tags-secondary"
         >
           js
         </code>
-         file if your bundler supports it, 
+         file if your bundler supports it,
+         
         <em>
           or
         </em>
          point to the file directly from your bundler.
       </p>
       <p>
-        We do not have a recommended way so far. This being said, importing from the style file might be easier and can leverage the CSS layers ( 
+        We do not have a recommended way so far. This being said, importing from the style file might be easier and can leverage the CSS layers (
+         
         <code
           className="code-tags code-tags-secondary"
         >
@@ -603,7 +729,8 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
           <em>
             OR
           </em>
-           from the build tool. If you import through both you will end up loading twice the styles on the client, which has a negative impact on the web-performance.
+           
+          from the build tool. If you import through both you will end up loading twice the styles on the client, which has a negative impact on the web-performance.
         </p>
       </div>
     </section>
@@ -732,7 +859,8 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
         Include in the header
       </h3>
       <p>
-        Copy-paste the following CSS code into 
+        Copy-paste the following CSS code into
+         
         <code
           className="code-tags code-tags-secondary"
         >
@@ -800,13 +928,15 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
         Include at the bottom
       </h3>
       <p>
-        Many of our components requires the use of JavaScript in order to function. Place the following 
+        Many of our components requires the use of JavaScript in order to function. Place the following
+         
         <code
           className="code-tags code-tags-secondary"
         >
           &lt;Script&gt;
         </code>
-         tag near the end of your pages, right before the closing 
+         tag near the end of your pages, right before the closing
+         
         <code
           className="code-tags code-tags-secondary"
         >
@@ -875,7 +1005,8 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
         >
           global
         </code>
-         attribute adds the script to the global scope. The 
+         attribute adds the script to the global scope. The
+         
         <code
           className="code-tags code-tags-secondary"
         >
@@ -896,7 +1027,9 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
       >
         dg.script.initAll();
       </code>
-       on DOMContentLoaded making it so you have to run 
+       
+      on DOMContentLoaded making it so you have to run
+       
       <code
         className="code-tags code-tags-secondary"
       >
@@ -905,7 +1038,8 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
        manually when a component is rendered after the event has fired.
     </p>
     <p>
-      To initialize components use 
+      To initialize components use
+       
       <code
         className="code-tags code-tags-secondary"
       >
@@ -984,11 +1118,19 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
     </figure>
   </section>
   <section>
-    <h3>
+    <h2
+      id="browser-support"
+    >
       Browser Support
-    </h3>
+    </h2>
     <p>
-      The design guide is tested and currently supported by these browsers.
+      The design guide is tested and currently supported by these browsers on the bundled files ( i.e. when importing from
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        @swedbankpay/design-guide/dist/...
+      </code>
+       ).
     </p>
     <div
       className="browser-support"
@@ -1059,7 +1201,8 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
       Browser support for products using the Design Guide
     </h4>
     <p>
-      It is up to every Project manager and development team to decide which browsers their product should support. If you want to support other browsers than the ones supported by the Design Guide you need to maintain and test the component code in in your project. 
+      It is up to every Project manager and development team to decide which browsers their product should support. If you want to support other browsers than the ones supported by the Design Guide you need to maintain and test the component code in in your project.
+       
     </p>
   </section>
 </section>

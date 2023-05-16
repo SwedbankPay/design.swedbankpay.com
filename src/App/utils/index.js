@@ -7,28 +7,27 @@ import ToggleLightbox from "./ToggleLightbox/index";
 
 const brandTitle = process.env.brandTitle;
 
-const setTitle = title => {
-    document.title = `${title} | ${brandTitle} Design Guide`;
+const setTitle = (title) => {
+	document.title = `${title} | ${brandTitle} Design Guide`;
 };
 
-const removeTrailingSlash = str => {
-    if (str.length <= 1) {
-        return str;
-    } else if (str.endsWith("/")) {
-        return str.slice(0, -1);
-    } else {
-        return str;
-    }
-
+const removeTrailingSlash = (str) => {
+	if (str.length <= 1) {
+		return str;
+	} else if (str.endsWith("/")) {
+		return str.slice(0, -1);
+	} else {
+		return str;
+	}
 };
 
 export {
-    setTitle,
-    LoadingComponent,
-    renderRoutes,
-    SelectPanel,
-    RenderPage,
-    RemoveVscroll,
-    ToggleLightbox,
-    removeTrailingSlash
+	setTitle,
+	LoadingComponent,
+	renderRoutes,
+	SelectPanel,
+	RenderPage,
+	RemoveVscroll,
+	ToggleLightbox,
+	removeTrailingSlash,
 };

@@ -119,7 +119,8 @@ Array [
       <b>
         hint text
       </b>
-       can be used to complement the group legend and provide clarifying details. If the information is long or won't be needed by the majority of users, a hint expander can be used instead of a text that is visible by default. 
+       can be used to complement the group legend and provide clarifying details. If the information is long or won't be needed by the majority of users, a hint expander can be used instead of a text that is visible by default.
+       
     </li>
   </ul>,
 ]
@@ -135,7 +136,8 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
       Disabled state
     </h3>
     <p>
-      Disable a radio button by adding 
+      Disable a radio button by adding
+       
       <code
         className="code-tags code-tags-primary"
       >
@@ -253,7 +255,8 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
       Error state
     </h3>
     <p>
-      To display the error state, add the 
+      To display the error state, add the
+       
       <code
         className="code-tags code-tags-primary"
       >
@@ -265,7 +268,8 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
       >
         help-block
       </code>
-       element as the last child with the error message.
+       
+      element as the last child with the error message.
     </p>
     <div
       className="showcase-panel"

@@ -2,16 +2,16 @@
 
 ## TL;DR
 
-* clone/fork project.
-* follow the setup guidelines found in readme.md.
-* start on your feature/fix/etc.
-* follow the linting rules set for eslint and stylelint.
-* make sure it runs properly.
-* create tests for your contribution.
-* run all tests.
-* run build scripts.
-* add changes to changelog.
-* if everything works, create a pull request.
+-   clone/fork project.
+-   follow the setup guidelines found in readme.md.
+-   start on your feature/fix/etc.
+-   follow the linting rules set for eslint and stylelint.
+-   make sure it runs properly.
+-   create tests for your contribution.
+-   run all tests.
+-   run build scripts.
+-   add changes to changelog.
+-   if everything works, create a pull request.
 
 ## Creating a new component
 
@@ -26,17 +26,17 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const MyExampleComponent = ({ type, title, separator }) => (
-    <div className={`slab slab-${type}`}>
-        <h3>{title}</h3>
-        {separator ? <hr /> : null}
-        This is my example component on a slab.
-    </div>
+	<div className={`slab slab-${type}`}>
+		<h3>{title}</h3>
+		{separator ? <hr /> : null}
+		This is my example component on a slab.
+	</div>
 );
 
 MyExampleComponent.propTypes = {
-    type: PropTypes.oneOf(["sm", "lg"]).isRequired,
-    title: PropTypes.string.isRequired,
-    separator: PropTypes.bool
+	type: PropTypes.oneOf(["sm", "lg"]).isRequired,
+	title: PropTypes.string.isRequired,
+	separator: PropTypes.bool,
 };
 
 export default MyExampleComponent;
@@ -56,13 +56,19 @@ import { ComponentPreview, DocContainer } from "@docutils";
 import MyExampleComponent from "@components/MyExampleComponent";
 
 const MyExampleDocumentationComponent = () => (
-    <DocContainer>
-        <p className="lead">This is the documentation for My Example Component.</p>
-        <h2 id="example-usage">Example usage</h2>
-        <ComponentPreview language="html" showCasePanel codeFigure>
-            <MyExampleComponent type="lg" title="My Example Component" separator />
-        </ComponentPreview>
-    </DocContainer>
+	<DocContainer>
+		<p className="lead">
+			This is the documentation for My Example Component.
+		</p>
+		<h2 id="example-usage">Example usage</h2>
+		<ComponentPreview language="html" showCasePanel codeFigure>
+			<MyExampleComponent
+				type="lg"
+				title="My Example Component"
+				separator
+			/>
+		</ComponentPreview>
+	</DocContainer>
 );
 
 export default MyExampleDocumentationComponent;
@@ -135,7 +141,6 @@ Adding a section should look like this:
 ```less
 // _variables.less
 
-
 // [number]. My Example Component
 // ==========================================================================
 
@@ -143,7 +148,6 @@ Adding a section should look like this:
 @my-example-component-background: @gray-8;
 @my-example-component-padding: 1rem;
 @my-example-component-font-family: "Arial";
-
 ```
 
 Your the styles for `MyExampleComponent` should now be included properly, and you should see changes immediatly while running dev.
@@ -159,15 +163,15 @@ If your component needs javascript to run, you will need to add the javascript t
 Create a new file under `./src/scripts/main/[MyExampleComponent]/` for your component, name it `index.js`:
 
 ```javascript
-    const init = () => {
-        alert("MyExampleComponent was initialized");
-    };
+const init = () => {
+	alert("MyExampleComponent was initialized");
+};
 
-    const MyExampleComponent = {
-        init
-    };
+const MyExampleComponent = {
+	init,
+};
 
-    export default MyExampleComponent;
+export default MyExampleComponent;
 ```
 
 Note: All essential functionality for your component needs to be called within the `init` method.
