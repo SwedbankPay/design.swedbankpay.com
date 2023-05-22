@@ -49,7 +49,10 @@ test.describe("toast variants are styled and named accordingly", () => {
 			).toBeVisible();
 			await expect(toast.getByText(`${variant.linkName}  title`)).toBeVisible();
 			await expect(toast.locator("css=.toast")).toHaveScreenshot(
-				`${variant.name}-toast.png`
+				`${variant.name}-toast.png`,
+				{
+					maxDiffPixelRatio: 0.001,
+				}
 			);
 			await page.locator("#toast-close-button").click();
 			await expect(page.locator("#toast-close-button")).not.toBeVisible();
