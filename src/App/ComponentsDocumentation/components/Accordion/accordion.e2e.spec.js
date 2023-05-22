@@ -19,9 +19,9 @@ test("visual regresion accordions", async ({ page }) => {
 		.getByRole("button", { name: "keyboard_arrow_down My title" })
 		.first()
 		.click();
-	await expect(page.locator(".component-preview-content")).toHaveScreenshot(
-		`accordions.png`
-	);
+	await expect(
+		page.locator(".component-preview-content > div")
+	).toHaveScreenshot(`accordions.png`);
 });
 
 test.describe(`accordions options behave correctly`, () => {
