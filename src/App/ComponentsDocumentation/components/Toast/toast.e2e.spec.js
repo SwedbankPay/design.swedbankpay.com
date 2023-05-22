@@ -48,8 +48,11 @@ test.describe("toast variants are styled and named accordingly", () => {
 				toast.getByText(variant.icon, { exact: true })
 			).toBeVisible();
 			await expect(toast.getByText(`${variant.linkName}  title`)).toBeVisible();
+			const brand = (await page.title()).includes("Swedbank")
+				? "SwedbankPay"
+				: "PayEx";
 			await expect(toast.locator("css=.toast")).toHaveScreenshot(
-				`${variant.name}-toast.png`,
+				`${brand}-${variant.name}-toast.png`,
 				{
 					maxDiffPixelRatio: 0.001,
 				}

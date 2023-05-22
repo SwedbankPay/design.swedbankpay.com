@@ -12,16 +12,18 @@ test("Accordion page exist", async ({ page }) => {
 	await page.getByText("calendar_view_dayAccordionarrow_forward").click();
 });
 
-// TODO: try to scope snreenshot to the accordion group, not the whole component-preview
 test("visual regresion accordions", async ({ page }) => {
 	await page.goto("http://localhost:3000/components/accordion");
 	await page
 		.getByRole("button", { name: "keyboard_arrow_down My title" })
 		.first()
 		.click();
+	const brand = (await page.title()).includes("Swedbank")
+		? "SwedbankPay"
+		: "PayEx";
 	await expect(
 		page.locator(".component-preview-content > div")
-	).toHaveScreenshot(`accordions.png`);
+	).toHaveScreenshot(`${brand}-accordions.png`);
 });
 
 test.describe(`accordions options behave correctly`, () => {
