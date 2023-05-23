@@ -4,8 +4,12 @@
 
 ## Component changes
 
+### Non breaking UI changes
+
 - Typography
   - increase font-sizes & line-height of headers
+- Dialog
+  - add border-radius to the Dialog component
 
 ## Design Guide documentation changes
 
