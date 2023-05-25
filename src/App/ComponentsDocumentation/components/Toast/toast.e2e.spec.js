@@ -10,6 +10,10 @@ test("toast page exist", async ({ page }) => {
 		.click();
 	await expect(page.getByRole("link", { name: "Toast" })).toHaveCount(2);
 	await page.getByText("picture_in_pictureToastarrow_forward").click();
+	await expect(page).toHaveTitle(/Toast/);
+	await expect(
+		page.getByRole("heading", { name: "Toast", exact: true })
+	).toBeVisible();
 });
 
 test.describe("toast variants are styled and named accordingly", () => {

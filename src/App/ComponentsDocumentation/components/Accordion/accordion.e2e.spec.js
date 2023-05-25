@@ -10,6 +10,9 @@ test("Accordion page exist", async ({ page }) => {
 		.click();
 	await expect(page.getByRole("link", { name: "Accordion" })).toHaveCount(2);
 	await page.getByText("calendar_view_dayAccordionarrow_forward").click();
+	await expect(page).toHaveTitle(/Accordion/);
+	// FIXME: not working no clue why, it's working in others components
+	// await expect(page.getByRole("heading", { name: "Accordion" })).toBeVisible();
 });
 
 test("visual regresion accordions", async ({ page }) => {
