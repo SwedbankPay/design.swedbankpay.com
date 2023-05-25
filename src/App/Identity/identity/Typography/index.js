@@ -239,10 +239,12 @@ const Mobile = () => (
 					</td>
 					<td>Arial bold</td>
 					<td>14 px</td>
-					<td>16 px</td>
+					<td>20 px</td>
 				</tr>
 				<tr>
-					<td>Body</td>
+					<td>
+						<p>Body</p>
+					</td>
 					<td>Arial regular</td>
 					<td>16 px</td>
 					<td>24 px</td>
