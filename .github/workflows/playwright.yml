@@ -1,6 +1,8 @@
 name: Playwright Tests
 on:
   push:
+    # once playwright works smoothly, disable push for features & release
+    # once work move this to be part of the be part of the main.yml GH action (just liek Jest, ESLint, etc)
     branches: [main, master, develop, "feature/**", "release/**"]
   pull_request:
     branches: [main, master, develop]
