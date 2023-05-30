@@ -5,6 +5,39 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.8.2",
+		title: "IE has bid farewell to our codebase. Hurray, hurray, hurray 🥂",
+		text: (
+			<>
+				<p>
+					Weeks have passed, and our cherished Design System grows even more
+					delightful.
+					<br /> Though this time, you must delve beneath the surface
+					<br />
+					for the changes are solely technical maintenance
+					<br />
+					yet no less beautiful for those with appreciative eyes.
+				</p>
+				<p>
+					The crowned hero of the occasion: Internet Explorer&apos;s legacy is
+					banished forever from our codebase. It was worth a patch release just
+					for this. Pop the champagne et let it flow! 🍾
+					<br />
+					And our tireless endeavor continues, migrating all LESS variables to
+					CSS custom properties. This task is long, arduous, and unrelenting.
+				</p>
+				<p>
+					For the code contributors part now, we introduced Prettier (and editor
+					config) in our tooling, to enforce automatic code aesthetic.
+					<br /> We also added a list of recommended VS code extension, so new
+					contributors automatically get a prompt to install them when they
+					embark on this project 🤖
+				</p>
+				<p>Long story short: no noticeable change for our users 😘</p>
+			</>
+		),
+	},
+	{
 		version: "10.8.1",
 		title: "Iteration patch, minor fixes",
 		text: (

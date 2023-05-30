@@ -80,7 +80,7 @@ const InstallJS = () => (
 			</i>
 			<p>
 				<b>Standards:</b> Our JS uses modern features such as optional-chaining.
-				If you're experiencing issues you might want to look at our browser
+				If you&apos;re experiencing issues you might want to look at our browser
 				support. In the case our browser support is not enough for your project
 				you might want to use polyfills and/or Babel transpiling to fix it.
 				<br></br>Also, some build tools such as Webpack 4 do not support some of
@@ -360,7 +360,7 @@ const BrowserSupport = () => (
 				info
 			</i>
 			<p>
-				<b>Target Browser:</b> "Last 3 versions, > 1%, not dead"
+				<b>Target Browser:</b> &quot;Last 3 versions, &gt; 1%, not dead&quot;
 			</p>
 		</div>
 		<h4>Browser support for products using the Design Guide</h4>

@@ -180,6 +180,8 @@ Before merging to master to create a release, make sure you follow these steps:
 
 - Update statusBadges in routes
 
+- Run tests
+
 - Commit the changes and create a pull request from `release/x.x.x` branch to `master` and `develop`
 
   - use the release-notes as PR description
