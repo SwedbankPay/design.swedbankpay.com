@@ -20,7 +20,7 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps chromium
       - name: Run Playwright tests
-        run: npx playwright test --ignore-snapshots chromium
+        run: npx playwright test --ignore-snapshots --browser=chromium
       - uses: actions/upload-artifact@v3
         if: failure()
         with:
