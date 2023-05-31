@@ -75,18 +75,15 @@ viewportsVariants.forEach((viewportVariant) => {
 				await expect(row.getByRole("cell")).toHaveCount(4);
 
 				const cells = await row.getByRole("cell").all();
-				const fontSize = (await cells[2].textContent()).replace(/\D/g, "");
+				const fontSize = (await cells[2].textContent()).replace(/\s/g, "");
 
-				await expect(cells[0].locator("> *")).toHaveCSS(
-					"font-size",
-					`${fontSize}px`
-				);
+				await expect(cells[0].locator("> *")).toHaveCSS("font-size", fontSize);
 
-				const lineHeight = (await cells[3].textContent()).replace(/\D/g, "");
+				const lineHeight = (await cells[3].textContent()).replace(/\s/g, "");
 
 				await expect(cells[0].locator("> *")).toHaveCSS(
 					"line-height",
-					`${lineHeight}px`
+					lineHeight
 				);
 			}
 		});

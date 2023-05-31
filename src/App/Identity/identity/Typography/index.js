@@ -207,7 +207,7 @@ const Mobile = () => (
 					</td>
 					<td>Swedbank Headline Bold</td>
 					<td>24 px</td>
-					<td>34 px</td>
+					<td>33.6 px</td>
 				</tr>
 				<tr>
 					<td>
