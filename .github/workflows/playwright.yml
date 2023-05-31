@@ -22,7 +22,7 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test --ignore-snapshots --project=chromium
       - uses: actions/upload-artifact@v3
-        if: always()
+        if: failure()
         with:
           name: playwright-report
           path: playwright-report/
