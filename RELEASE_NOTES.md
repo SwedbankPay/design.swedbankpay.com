@@ -17,4 +17,11 @@
 
 ## Packages maintenance
 
+- add E2E testing (Playwright)
+  - functional testing
+  - visual regression testing
+  - navigation testing
+  - test library scripts
+  - progressive implementation (Dialog, Accordion, Toast, Typography)
+
 ## Contributors info
