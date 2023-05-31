@@ -38,9 +38,11 @@ viewportsVariants.forEach((viewportVariant) => {
 			page,
 		}) => {
 			await page.goto("http://localhost:3000/identity/typography");
+
 			const brand = (await page.title()).includes("Swedbank")
 				? "SwedbankPay"
 				: "PayEx";
+
 			await expect(
 				page.getByRole("table").filter({
 					hasText: `${viewportVariant.viewport} text preview`,
@@ -57,24 +59,31 @@ viewportsVariants.forEach((viewportVariant) => {
 			const typographyTable = page.getByRole("table").filter({
 				hasText: `${viewportVariant.viewport} text preview`,
 			});
+
 			await page.goto("http://localhost:3000/identity/typography");
 			// iterate over each row of the table
 			// in each row, use the text value of the 3rd column to assert font-size of the first
 			// in each row, use the text value of the 4th column to assert line-height of the first
 			await expect(typographyTable.getByRole("row")).toHaveCount(11);
+
 			const typographyTableRows = await typographyTable
 				.getByRole("row")
 				.filter({ hasNotText: "text preview" })
 				.all();
+
 			for (const row of typographyTableRows) {
 				await expect(row.getByRole("cell")).toHaveCount(4);
+
 				const cells = await row.getByRole("cell").all();
 				const fontSize = (await cells[2].textContent()).replace(/\D/g, "");
+
 				await expect(cells[0].locator("> *")).toHaveCSS(
 					"font-size",
 					`${fontSize}px`
 				);
+
 				const lineHeight = (await cells[3].textContent()).replace(/\D/g, "");
+
 				await expect(cells[0].locator("> *")).toHaveCSS(
 					"line-height",
 					`${lineHeight}px`
