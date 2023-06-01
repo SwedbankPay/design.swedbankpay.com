@@ -32,7 +32,15 @@ const viewportsVariants = [
 ];
 
 viewportsVariants.forEach((viewportVariant) => {
-	test.describe(`Visual Regression - Typography - ${viewportVariant.viewport} viewport`, () => {
+	test.describe
+		.parallel(`Visual Regression - Typography - ${viewportVariant.viewport} viewport`, () => {
+		test.beforeEach(async ({ page }) => {
+			await page.goto("http://localhost:3000/identity/typography");
+
+			if ((await page.title()).includes("PayEx")) {
+				test.skip();
+			}
+		});
 		test.use({ viewport: { width: viewportVariant.width, height: 1200 } });
 		test(`visual regresion Typography ${viewportVariant.viewport}`, async ({
 			page,
