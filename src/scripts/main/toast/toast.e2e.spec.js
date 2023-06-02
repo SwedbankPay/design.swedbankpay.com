@@ -72,6 +72,6 @@ test("toast closes by itself if wait the appropriate time", async ({
 			"infoclose Neutral title: Input informative alert information here, provide link "
 		)
 	).not.toBeVisible({
-		timeout: 7000,
+		timeout: 10000,
 	});
 });

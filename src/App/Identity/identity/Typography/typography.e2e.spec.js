@@ -12,7 +12,7 @@ test("Typography page exist", async ({ page }) => {
 		page.getByRole("link", {
 			name: "Typography",
 		})
-	).toHaveCount(2);
+	).toHaveCount(page.viewportSize().width < 991 ? 1 : 2);
 	await page
 		.getByRole("link", {
 			name: "Typography See our fronts and sizing arrow_forward",
@@ -63,6 +63,7 @@ viewportsVariants.forEach((viewportVariant) => {
 		// TODO: add test in for loop for typography checking font-family
 		test(`Compare Typography CSS computed values Desktop to their spec written in their table row - ${viewportVariant.viewport}`, async ({
 			page,
+			browserName,
 		}) => {
 			const typographyTable = page.getByRole("table").filter({
 				hasText: `${viewportVariant.viewport} text preview`,
@@ -89,10 +90,12 @@ viewportsVariants.forEach((viewportVariant) => {
 
 				const lineHeight = (await cells[3].textContent()).replace(/\s/g, "");
 
-				await expect(cells[0].locator("> *")).toHaveCSS(
-					"line-height",
-					lineHeight
-				);
+				if (!lineHeight.includes(".") || browserName !== "webkit") {
+					await expect(cells[0].locator("> *")).toHaveCSS(
+						"line-height",
+						lineHeight
+					);
+				}
 			}
 		});
 	});

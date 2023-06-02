@@ -8,7 +8,9 @@ test("Dialog page exist", async ({ page }) => {
 			name: "Components Find all currently available components here",
 		})
 		.click();
-	await expect(page.getByRole("link", { name: "Dialog" })).toHaveCount(2);
+	await expect(page.getByRole("link", { name: "Dialog" })).toHaveCount(
+		page.viewportSize().width < 991 ? 1 : 2
+	);
 	await page.getByText("picture_in_pictureDialogarrow_forward").click();
 	await expect(page).toHaveTitle(/Dialog/);
 	await expect(
@@ -16,12 +18,14 @@ test("Dialog page exist", async ({ page }) => {
 	).toBeVisible();
 });
 
-test("visual regresion accordions", async ({ page }) => {
+test("visual regresion accordions", async ({ page, browserName }) => {
 	await page.goto("http://localhost:3000/components/dialog");
+
 	const brand = (await page.title()).includes("Swedbank")
 		? "SwedbankPay"
 		: "PayEx";
 	const dialogButton = page.getByRole("button", { name: "Open dialog" });
+
 	await expect(dialogButton).toHaveScreenshot(`${brand}-dialog-button.png`);
 	await dialogButton.click();
 	await expect(page.getByRole("dialog").locator("section")).toHaveScreenshot(

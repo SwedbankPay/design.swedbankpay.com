@@ -8,7 +8,9 @@ test("toast page exist", async ({ page }) => {
 			name: "Components Find all currently available components here",
 		})
 		.click();
-	await expect(page.getByRole("link", { name: "Toast" })).toHaveCount(2);
+	await expect(page.getByRole("link", { name: "Toast" })).toHaveCount(
+		page.viewportSize().width < 991 ? 1 : 2
+	);
 	await page.getByText("picture_in_pictureToastarrow_forward").click();
 	await expect(page).toHaveTitle(/Toast/);
 	await expect(
@@ -47,14 +49,18 @@ test.describe("toast variants are styled and named accordingly", () => {
 			await page
 				.getByRole("button", { name: `Show ${variant.linkName} toast` })
 				.click();
+
 			const toast = page.locator("#overviewToast");
+
 			await expect(
 				toast.getByText(variant.icon, { exact: true })
 			).toBeVisible();
 			await expect(toast.getByText(`${variant.linkName}  title`)).toBeVisible();
+
 			const brand = (await page.title()).includes("Swedbank")
 				? "SwedbankPay"
 				: "PayEx";
+
 			await expect(toast.locator("css=.toast")).toHaveScreenshot(
 				`${brand}-${variant.name}-toast.png`,
 				{

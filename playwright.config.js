@@ -52,11 +52,11 @@ module.exports = defineConfig({
 		/* Test against mobile viewports. */
 		{
 			name: "Mobile Chrome",
-			use: { ...devices["Pixel 5"] },
+			use: { ...devices["Pixel 5"], viewport: { width: 397, height: 733 } },
 		},
 		{
 			name: "Mobile Safari",
-			use: { ...devices["iPhone 12"] },
+			use: { ...devices["iPhone 12"], viewport: { width: 390, height: 664 } },
 		},
 
 		/* Test against branded browsers. */
