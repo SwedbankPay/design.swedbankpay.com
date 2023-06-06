@@ -1,4 +1,5 @@
 import React from "react";
+import { Icon } from "@docutils";
 
 const ExpandablePlaceholder = () => (
 	<div className="expandable">
@@ -20,10 +21,12 @@ const Expandable = ({ items }) =>
 				{"\n"}
 				<button
 					type="button"
-					className="expandable-header"
+					className="expandable-header icon"
 					aria-expanded="false"
 					aria-controls={id}
 				>
+					{"\n"}
+					<Icon type="credit_card" />
 					{"\n"}
 					<span className="expandable-headline">{title}</span>
 					{"\n"}

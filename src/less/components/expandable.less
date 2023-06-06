@@ -1,11 +1,10 @@
 @import "../global.less";
 
 .expandable {
-	border: 1px solid @brand-secondary-light-3;
-	border-bottom: 2px solid @brand-secondary-light-3;
-	border-radius: 2px;
+	border: 2px solid var(--brand-secondary-light-3);
+	border-radius: var(--border-radius-expandable);
 	margin-bottom: 1rem;
-	background-color: @white;
+	background-color: var(--white);
 	display: flex;
 	position: relative;
 	flex-direction: column;
@@ -33,19 +32,16 @@
 	}
 
 	&.expandable-open {
-		border-top: 1px solid transparent;
-
-		&:after {
-			background-color: @brand-primary;
-			border-top-left-radius: 2px;
-			border-top-right-radius: 2px;
-		}
-
 		.expandable-header {
 			&:before {
 				transform: rotate(180deg);
 			}
 		}
+	}
+
+	&:focus-within {
+		border: 2px solid @brand-secondary;
+		border-radius: var(--border-radius-expandable);
 	}
 
 	.expandable-header {
@@ -63,13 +59,22 @@
 		align-items: flex-start;
 		user-select: none;
 		color: @brand-secondary;
-		background-color: @white;
 		padding: 1rem;
 		text-align: start;
+		background-color: var(--white);
+		border-radius: var(--border-radius-expandable);
 
-		&:focus-visible {
-			outline: 2px solid @brand-secondary;
-			border-radius: 2px;
+		&.icon {
+			display: grid;
+			grid-template-columns: max-content auto;
+			grid-template-areas:
+				"icon headline"
+				"icon subtitle";
+			gap: 0 1rem;
+		}
+
+		.material-icons {
+			grid-area: icon;
 		}
 
 		.expandable-headline {
@@ -77,12 +82,7 @@
 			font-family: var(--brand-headline);
 			line-height: 1.5rem;
 			font-weight: var(--font-weight-normal);
-
-			.material-icons {
-				font-size: 1rem;
-				line-height: 1.5rem;
-			}
-
+			grid-area: headline;
 			margin: 0;
 		}
 
@@ -91,11 +91,13 @@
 			font-size: 0.875rem;
 			font-weight: var(--font-weight-normal);
 			line-height: 1rem;
+			grid-area: subtitle;
 		}
 
 		&:before {
 			.material-icons-styling(@margin: 0 1rem);
 
+			color: var(--brand-secondary-light-2);
 			content: "keyboard_arrow_down";
 			position: absolute;
 			right: 0;
