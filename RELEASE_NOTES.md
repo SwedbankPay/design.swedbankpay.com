@@ -1,6 +1,6 @@
 # Changelog
 
-## [10.8.2] - 01.01.1900
+## [10.8.3] - 05.06.2023
 
 ## Component changes
 
@@ -17,11 +17,12 @@
 
 ## Packages maintenance
 
-- add E2E testing (Playwright)
+- implement E2E testing (Playwright)
   - functional testing
   - visual regression testing
   - navigation testing
   - test library scripts
   - progressive implementation (Dialog, Accordion, Toast, Typography)
+- update CodeCov
 
 ## Contributors info
