@@ -70,3 +70,6 @@ typings/
 
 # Local test file
 /index.html
+/test-results/
+/playwright-report/
+/playwright/.cache/

@@ -86,8 +86,8 @@ const Desktop = () => (
 						<span className="hero">Hero</span>
 					</td>
 					<td>Swedbank Headline Bold</td>
-					<td>56 px</td>
-					<td>72 px</td>
+					<td>80 px</td>
+					<td>103 px</td>
 				</tr>
 				<tr>
 					<td>
@@ -95,15 +95,15 @@ const Desktop = () => (
 					</td>
 					<td>Swedbank Headline Bold</td>
 					<td>40 px</td>
-					<td>48 px</td>
+					<td>56 px</td>
 				</tr>
 				<tr>
 					<td>
 						<h2>Title 2</h2>
 					</td>
 					<td>Swedbank Headline Bold</td>
-					<td>28 px</td>
 					<td>32 px</td>
+					<td>45 px</td>
 				</tr>
 				<tr>
 					<td>
@@ -111,7 +111,7 @@ const Desktop = () => (
 					</td>
 					<td>Swedbank Headline Bold</td>
 					<td>24 px</td>
-					<td>28 px</td>
+					<td>34 px</td>
 				</tr>
 				<tr>
 					<td>
@@ -119,7 +119,7 @@ const Desktop = () => (
 					</td>
 					<td>Swedbank Headline Bold</td>
 					<td>20 px</td>
-					<td>24 px</td>
+					<td>28 px</td>
 				</tr>
 				<tr>
 					<td>
@@ -190,16 +190,16 @@ const Mobile = () => (
 						<span className="hero">Hero</span>
 					</td>
 					<td>Swedbank Headline Bold</td>
-					<td>40 px</td>
-					<td>48 px</td>
+					<td>56 px</td>
+					<td>72 px</td>
 				</tr>
 				<tr>
 					<td>
 						<h1 className="m-0">Title 1</h1>
 					</td>
 					<td>Swedbank Headline Bold</td>
-					<td>28 px</td>
 					<td>32 px</td>
+					<td>45 px</td>
 				</tr>
 				<tr>
 					<td>
@@ -207,7 +207,7 @@ const Mobile = () => (
 					</td>
 					<td>Swedbank Headline Bold</td>
 					<td>24 px</td>
-					<td>28 px</td>
+					<td>33.6 px</td>
 				</tr>
 				<tr>
 					<td>
@@ -215,7 +215,7 @@ const Mobile = () => (
 					</td>
 					<td>Swedbank Headline Bold</td>
 					<td>20 px</td>
-					<td>24 px</td>
+					<td>28 px</td>
 				</tr>
 				<tr>
 					<td>
@@ -223,7 +223,7 @@ const Mobile = () => (
 					</td>
 					<td>Swedbank Headline Bold</td>
 					<td>18 px</td>
-					<td>24 px</td>
+					<td>25 px</td>
 				</tr>
 				<tr>
 					<td>
@@ -239,10 +239,12 @@ const Mobile = () => (
 					</td>
 					<td>Arial bold</td>
 					<td>14 px</td>
-					<td>16 px</td>
+					<td>20 px</td>
 				</tr>
 				<tr>
-					<td>Body</td>
+					<td>
+						<p>Body</p>
+					</td>
 					<td>Arial regular</td>
 					<td>16 px</td>
 					<td>24 px</td>

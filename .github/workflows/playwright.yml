@@ -1,0 +1,29 @@
+name: Playwright Tests
+on:
+  push:
+    # once playwright works smoothly, disable push for features & release
+    # once work move this to be part of the be part of the main.yml GH action (just liek Jest, ESLint, etc)
+    branches: [main, master, develop"]
+  pull_request:
+    branches: [main, master, develop]
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium
+      - name: Run Playwright tests
+        run: npx playwright test --ignore-snapshots --project=chromium
+      - uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30

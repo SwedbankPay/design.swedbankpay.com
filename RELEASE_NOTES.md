@@ -1,21 +1,15 @@
 # Changelog
 
-## [10.8.2] - 15.05.2023
+## [10.8.3] - 05.06.2023
 
 ## Component changes
 
-- continue migration from LESS variables to CSS custom properties
+### Non breaking UI changes
 
-  - margins
-  - paddings
-  - diverse from global
-  - z-index variables
-
-- remove IE support
-  - remove polyfills
-  - remove Babel/polyfill
-  - add "not dead" to browserlist (i.e. remove IE from supported browsers)
-  - remove IE-prefixed CSS declarations
+- Typography
+  - increase font-sizes & line-height of headers
+- Dialog
+  - add border-radius to the Dialog component
 
 ## Design Guide documentation changes
 
@@ -23,10 +17,12 @@
 
 ## Packages maintenance
 
-- add Prettier &amp; move all stylistic rules to it, keeping linters focusing on linting
+- implement E2E testing (Playwright)
+  - functional testing
+  - visual regression testing
+  - navigation testing
+  - test library scripts
+  - progressive implementation (Dialog, Accordion, Toast, Typography)
+- update CodeCov
 
 ## Contributors info
-
-- add VSCode recommended extensions
-- add editor config
-- ran all Prettier auto-fixable over all codebase's files
