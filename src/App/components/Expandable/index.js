@@ -14,7 +14,7 @@ const ExpandablePlaceholder = () => (
 );
 
 /* The expandable component accepts either an array or a single object [AW] */
-const Expandable = ({ items }) =>
+const Expandable = ({ icon, items }) =>
 	items && Array.isArray(items) ? (
 		items.map(({ title, subtitle, content, id }, i) => (
 			<div key={title + i} className="expandable">
@@ -25,8 +25,12 @@ const Expandable = ({ items }) =>
 					aria-expanded="false"
 					aria-controls={id}
 				>
-					{"\n"}
-					<Icon type="credit_card" />
+					{icon && (
+						<>
+							{"\n"}
+							<Icon type={icon} />
+						</>
+					)}
 					{"\n"}
 					<span className="expandable-headline">{title}</span>
 					{"\n"}
