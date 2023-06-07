@@ -21,7 +21,7 @@ const Expandable = ({ icon, items }) =>
 				{"\n"}
 				<button
 					type="button"
-					className="expandable-header icon"
+					className={`expandable-header ${icon && "icon"}`}
 					aria-expanded="false"
 					aria-controls={id}
 				>

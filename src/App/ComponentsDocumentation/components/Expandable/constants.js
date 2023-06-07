@@ -51,7 +51,6 @@ export const expandableSidebarOptions = {
 			options: {
 				checkbox: [
 					{
-						title: "Icon",
 						inputs: [
 							{
 								id: "icon",
