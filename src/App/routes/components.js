@@ -112,7 +112,7 @@ module.exports = [
 				componentPath: "components/Dialog",
 				icon: "picture_in_picture",
 				outlined: true,
-				statusBadges: ["javascript"],
+				statusBadges: ["javascript", "updated"],
 			},
 			{
 				title: "Dropdown",

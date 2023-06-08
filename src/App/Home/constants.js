@@ -5,6 +5,23 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.8.3",
+		title: "Harder, Bigger, Rounder, Stronger 🤖",
+		text: (
+			<>
+				<p>
+					Font enthusiasts and old people have this in common they love big
+					font. So do we. Get some popping headers, and some rounded dialog.
+				</p>
+				<p>
+					This release also bring some hidden work. We&apos;re implementing
+					End-to-end testing. For this we settled on Playwright, and we&apos;re
+					loving it (so far). Who said testing wasn&apos;t fun?
+				</p>
+			</>
+		),
+	},
+	{
 		version: "10.8.2",
 		title: "IE has bid farewell to our codebase. Hurray, hurray, hurray 🥂",
 		text: (
