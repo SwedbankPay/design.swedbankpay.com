@@ -3,60 +3,10 @@ import React, { useEffect } from "react";
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import ExpandableComponent from "@components/Expandable";
 import CodeTags from "@components/CodeTags";
+import { expandableSidebarOptions, items } from "./constants";
 
 import { expandable } from "@src/scripts/main";
 import NpmInformation from "@docutils/NpmInformation";
-
-const items = [
-	{
-		id: "exp-1",
-		title: "My title",
-		subtitle: "My subtitle",
-		content: (
-			<p>
-				Proident cupidatat irure excepteur id minim dolore mollit amet
-				reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor
-				ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem.
-				Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi
-				incididunt proident enim reprehenderit fugiat fugiat magna sit
-				reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet
-				eiusmod do tempor incididunt anim.
-			</p>
-		),
-	},
-	{
-		id: "exp-2",
-		title: "My title",
-		subtitle: "My subtitle",
-		content: (
-			<p>
-				Proident cupidatat irure excepteur id minim dolore mollit amet
-				reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor
-				ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem.
-				Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi
-				incididunt proident enim reprehenderit fugiat fugiat magna sit
-				reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet
-				eiusmod do tempor incididunt anim.
-			</p>
-		),
-	},
-	{
-		id: "exp-3",
-		title: "My title",
-		subtitle: "My subtitle",
-		content: (
-			<p>
-				Proident cupidatat irure excepteur id minim dolore mollit amet
-				reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor
-				ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem.
-				Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi
-				incididunt proident enim reprehenderit fugiat fugiat magna sit
-				reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet
-				eiusmod do tempor incididunt anim.
-			</p>
-		),
-	},
-];
 
 const Overview = () => (
 	<>
@@ -67,9 +17,13 @@ const Overview = () => (
 			<CodeTags type="secondary" code=".expandable-body" /> will be visible in
 			its open state.
 		</p>
-		<ComponentPreview language="html" showCasePanel codeFigure>
-			<ExpandableComponent items={items} />
-		</ComponentPreview>
+		<ComponentPreview
+			language="html"
+			showCasePanel
+			codeFigure
+			showCasePanelAdvanced={expandableSidebarOptions}
+			removeOuterTag
+		/>
 	</>
 );
 

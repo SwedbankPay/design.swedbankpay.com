@@ -6,10 +6,8 @@
 
 ### Non breaking UI changes
 
-- Typography
-  - increase font-sizes & line-height of headers
-- Dialog
-  - add border-radius to the Dialog component
+- Expandable
+  - style new UI
 
 ## Design Guide documentation changes
 
@@ -17,12 +15,9 @@
 
 ## Packages maintenance
 
-- implement E2E testing (Playwright)
-  - functional testing
-  - visual regression testing
-  - navigation testing
-  - test library scripts
-  - progressive implementation (Dialog, Accordion, Toast, Typography)
-- update CodeCov
+## Testing
+
+- continue expand E2E tests to new components
+  - expandable
 
 ## Contributors info

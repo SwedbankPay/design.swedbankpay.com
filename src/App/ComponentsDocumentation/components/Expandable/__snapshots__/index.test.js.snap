@@ -56,7 +56,7 @@ Array [
           id="exp-1"
         >
           <p>
-            Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
+            If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.
           </p>
         </div>
       </div>
@@ -93,7 +93,7 @@ Array [
           id="exp-2"
         >
           <p>
-            Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
+            If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.
           </p>
         </div>
       </div>
@@ -130,7 +130,7 @@ Array [
           id="exp-3"
         >
           <p>
-            Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.
+            If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.
           </p>
         </div>
       </div>
@@ -285,7 +285,7 @@ Array [
                         &lt;div class="expandable-body" id="exp-1"&gt;
                 
 
-                            &lt;p&gt;Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.&lt;/p&gt;
+                            &lt;p&gt;If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.&lt;/p&gt;
                 
 
                         &lt;/div&gt;
@@ -312,7 +312,7 @@ Array [
                         &lt;div class="expandable-body" id="exp-2"&gt;
                 
 
-                            &lt;p&gt;Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.&lt;/p&gt;
+                            &lt;p&gt;If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.&lt;/p&gt;
                 
 
                         &lt;/div&gt;
@@ -339,7 +339,7 @@ Array [
                         &lt;div class="expandable-body" id="exp-3"&gt;
                 
 
-                            &lt;p&gt;Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit consectetur aliqua officia Lorem elit. Cupidatat ea tempor ut esse. Aliquip exercitation in nisi reprehenderit anim Lorem. Excepteur nostrud officia irure tempor aute ipsum. Voluptate nisi incididunt proident enim reprehenderit fugiat fugiat magna sit reprehenderit Lorem anim. Aute commodo cillum nisi consectetur amet eiusmod do tempor incididunt anim.&lt;/p&gt;
+                            &lt;p&gt;If you want to, you can replace this text component with a local component to create a table or similar within the Accordion.&lt;/p&gt;
                 
 
                         &lt;/div&gt;

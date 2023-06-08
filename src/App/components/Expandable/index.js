@@ -1,4 +1,5 @@
 import React from "react";
+import { Icon } from "@docutils";
 
 const ExpandablePlaceholder = () => (
 	<div className="expandable">
@@ -13,17 +14,23 @@ const ExpandablePlaceholder = () => (
 );
 
 /* The expandable component accepts either an array or a single object [AW] */
-const Expandable = ({ items }) =>
+const Expandable = ({ icon, items }) =>
 	items && Array.isArray(items) ? (
 		items.map(({ title, subtitle, content, id }, i) => (
 			<div key={title + i} className="expandable">
 				{"\n"}
 				<button
 					type="button"
-					className="expandable-header"
+					className={`expandable-header${icon ? " icon" : ""}`}
 					aria-expanded="false"
 					aria-controls={id}
 				>
+					{icon && (
+						<>
+							{"\n"}
+							<Icon type={icon} />
+						</>
+					)}
 					{"\n"}
 					<span className="expandable-headline">{title}</span>
 					{"\n"}
