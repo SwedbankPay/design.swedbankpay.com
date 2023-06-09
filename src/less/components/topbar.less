@@ -1,16 +1,18 @@
-@import "../global.less";
-
-@topbar-height: 80px;
-@topbar-border-width: 0.5rem;
-@topbar-header-height: calc(@topbar-height + @topbar-border-width);
-@topbar-border-top: @topbar-border-width solid @brand-primary;
-@topbar-link-container-width: 288px;
+@import url("../global.less");
 
 .topbar {
-	border-top: @topbar-border-top;
+	--topbar-height: 80px;
+	--topbar-border-width: 0.5rem;
+	--topbar-header-height: calc(
+		var(--topbar-height) + var(--topbar-border-width)
+	);
+	--topbar-border-top: var(--topbar-border-width) solid var(--brand-primary);
+	--topbar-link-container-width: 288px;
+
+	border-top: var(--topbar-border-top);
 	background-color: @white;
 	margin: 0 auto;
-	height: @topbar-height;
+	height: var(--topbar-height);
 	width: 100%;
 	z-index: var(--topbar-z-index, 400);
 	display: flex;
@@ -28,7 +30,7 @@
 	&.topbar-sticky {
 		position: sticky;
 		top: 0;
-		box-shadow: 0 4px 4px rgba(227, 209, 195, 0.25);
+		box-shadow: 0 4px 4px rgb(227 209 195 / 25%);
 	}
 
 	each(@grid-breakpoints, .(@min-width, @infix) {
@@ -142,11 +144,14 @@
 	.topbar-nav {
 		position: absolute;
 		top: calc(
-			(@topbar-height + @topbar-border-width) - 16px
+			(var(--topbar-height) + var(--topbar-border-width)) - 16px
 		); // - 16px is due to the drop shadow of the sticky topbar
+
 		right: 0;
 		width: 100%;
-		height: calc(100vh - (@topbar-height + @topbar-border-width - 8px));
+		height: calc(
+			100vh - (var(--topbar-height) + var(--topbar-border-width) - 8px)
+		);
 		background: transparent;
 		display: none;
 
@@ -163,10 +168,10 @@
 			}
 
 			&.sidebar-topbar-sticky {
-				top: @topbar-height;
+				top: var(--topbar-height);
 
 				.sidebar-nav {
-					max-height: calc((100vh - @topbar-height));
+					max-height: calc((100vh - var(--topbar-height)));
 				}
 			}
 
@@ -299,13 +304,15 @@
 		.topbar-nav-header {
 			position: relative;
 			display: none;
-			height: @topbar-header-height;
+			height: var(--topbar-header-height);
 			justify-content: center;
 			align-items: center;
 			background-color: @white;
 
 			.topbar-close {
-				top: calc((@topbar-header-height / 2) - (var(--font-size-large) / 2));
+				top: calc(
+					(var(--topbar-header-height) / 2) - (var(--font-size-large) / 2)
+				);
 				left: 1rem;
 			}
 		}
@@ -411,7 +418,7 @@
 		}
 
 		.topbar-link-container {
-			width: @topbar-link-container-width;
+			width: var(--topbar-link-container-width);
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -580,7 +587,7 @@
 				}
 			}
 
-			> *:not(.close-topbar-nav):not(.topbar-link-right) {
+			> *:not(.close-topbar-nav, .topbar-link-right) {
 				text-decoration: none;
 				margin-left: 1rem;
 				margin-right: 1rem;
