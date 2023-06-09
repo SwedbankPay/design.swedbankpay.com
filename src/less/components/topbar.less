@@ -3,34 +3,32 @@
 .topbar {
 	--topbar-height: 80px;
 	--topbar-border-width: 0.5rem;
-	--topbar-header-height: calc(
-		var(--topbar-height) + var(--topbar-border-width)
-	);
-	--topbar-border-top: var(--topbar-border-width) solid var(--brand-primary);
 	--topbar-link-container-width: 288px;
 
-	border-top: var(--topbar-border-top);
-	background-color: @white;
+	// TODO: once color-mix get enough support we can replace this by CSS var. Postcss does not parse a color-mix fallback if css-var (since cannot predict ahead of time the dynamic aspect of it)
+	background-color: color-mix(in srgb, @brand-bg-gray, transparent 35%);
+	backdrop-filter: blur(10px) brightness(1.1);
 	margin: 0 auto;
 	height: var(--topbar-height);
-	width: 100%;
+	width: calc(100% - 2 * 32px);
+	max-width: 960px;
 	z-index: var(--topbar-z-index, 400);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0 1.25rem;
+	padding: 0 1.5rem;
 	position: relative;
+	border-radius: 0 0 24px 24px;
 
 	.nav-container {
 		display: flex;
 		width: 100%;
-		justify-content: center;
+		justify-content: space-between;
 	}
 
 	&.topbar-sticky {
 		position: sticky;
 		top: 0;
-		box-shadow: 0 4px 4px rgb(227 209 195 / 25%);
 	}
 
 	each(@grid-breakpoints, .(@min-width, @infix) {
@@ -65,26 +63,27 @@
 		}
 	}
 
-	.topbar-btn {
+	& :is(.topbar-btn, .topbar-close) {
 		user-select: none;
 		background: none;
-		font-weight: bold;
-		display: flex;
-		position: absolute;
-		left: 1rem;
 		padding: 0;
 		border: 0;
-		outline: 1px solid transparent;
 		align-self: center;
-
-		&:hover {
-			cursor: pointer;
-		}
+		font-weight: bold;
 
 		&:focus {
 			border-radius: 0.125rem;
 			box-shadow: 0 0 0 2px @black;
 			outline: none;
+		}
+	}
+
+	.topbar-btn {
+		display: flex;
+		outline: 1px solid transparent;
+
+		&:hover {
+			cursor: pointer;
 		}
 
 		&:last-child {
@@ -96,27 +95,12 @@
 
 	.topbar-close {
 		display: none;
-		user-select: none;
-		background: none;
-		font-weight: bold;
-		position: absolute;
-		left: 1.25rem;
-		padding: 0;
-		border: 0;
 		outline: 0;
 		cursor: pointer;
-		align-self: center;
 
 		&:hover {
 			color: var(--brand-secondary);
 			text-decoration: none;
-		}
-
-		&:focus,
-		&.focus {
-			border-radius: 0.125rem;
-			box-shadow: 0 0 0 2px @black;
-			outline: none;
 		}
 
 		&[active],
@@ -304,15 +288,13 @@
 		.topbar-nav-header {
 			position: relative;
 			display: none;
-			height: var(--topbar-header-height);
+			height: var(--topbar-height);
 			justify-content: center;
 			align-items: center;
 			background-color: @white;
 
 			.topbar-close {
-				top: calc(
-					(var(--topbar-header-height) / 2) - (var(--font-size-large) / 2)
-				);
+				top: calc((var(--topbar-height) / 2) - (var(--font-size-large) / 2));
 				left: 1rem;
 			}
 		}

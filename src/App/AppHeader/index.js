@@ -6,8 +6,14 @@ import routes from "../routes/all";
 
 import SearchBox from "../utils/SearchBox";
 
-const basename = process.env.basename;
+import swedbankpayLogo from "@src/img/swedbankpay/logo/swedbankpay-logo-h.svg";
+import payexLogo from "@src/img/payex/logo/payex-logo.svg";
+
 const brand = process.env.brand;
+const devLogo = brand === "swedbankpay" ? swedbankpayLogo : payexLogo;
+const isDev = process.env.version === "LOCAL_DEV";
+
+const basename = process.env.basename;
 
 // mobile & tablet topbar and hamburger menu
 const AppHeader = () => (
@@ -15,39 +21,46 @@ const AppHeader = () => (
 		id="dg-topbar"
 		className="topbar topbar-max-md-sticky d-md-flex d-lg-none designguide-header"
 	>
-		<button
-			type="button"
-			className="topbar-btn"
-			aria-label="Open menu"
-			aria-haspopup="menu"
-			aria-expanded="false"
-			aria-controls="topbar-nav"
-		>
-			<i className="material-icons topbar-btn-icon">menu</i>
-		</button>
-		<button type="button" className="topbar-close" aria-label="Close menu">
-			<i className="material-icons topbar-btn-icon">close</i>
-		</button>
-		<a href="/" className="topbar-logo">
-			{"\n"}
-			<img
-				src={`${basename}img/logo/${brand}-logo-v.svg`}
-				alt={`${brand}-logo`}
-				className="logotype-vertical logotype-xs"
-			/>{" "}
-			{"\n"}
-		</a>
-		<SearchBox mobile className={"search-expander"} />
-		<nav className="topbar-nav">
-			<div className="topbar-link-container">
-				<SelectPanel
-					id="doc-topbar-sidebar"
-					topbarId="dg-topbar"
-					topbarSidebar={true}
-					routes={routes}
-				/>
-			</div>
-		</nav>
+		<div className="nav-container">
+			<a href="/" className="topbar-logo">
+				{"\n"}
+				<img
+					src={
+						isDev
+							? devLogo
+							: `${process.env.basename}img/logo/${brand}-logo${
+									brand === "swedbankpay" ? "-h" : ""
+							  }.svg`
+					}
+					alt={`${brand}-logo`}
+					className="logotype-horizontal logotype-xs"
+				/>{" "}
+				{"\n"}
+			</a>
+			<button
+				type="button"
+				className="topbar-btn"
+				aria-label="Open menu"
+				aria-haspopup="menu"
+				aria-expanded="false"
+				aria-controls="topbar-nav"
+			>
+				<i className="material-icons topbar-btn-icon">menu</i>
+			</button>
+			<button type="button" className="topbar-close" aria-label="Close menu">
+				<i className="material-icons topbar-btn-icon">close</i>
+			</button>
+			<nav className="topbar-nav">
+				<div className="topbar-link-container">
+					<SelectPanel
+						id="doc-topbar-sidebar"
+						topbarId="dg-topbar"
+						topbarSidebar={true}
+						routes={routes}
+					/>
+				</div>
+			</nav>
+		</div>
 	</header>
 );
 

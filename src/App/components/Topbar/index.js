@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import swedbankpayLogo from "@src/img/swedbankpay/logo/swedbankpay-logo-v.svg";
+import swedbankpayLogo from "@src/img/swedbankpay/logo/swedbankpay-logo-h.svg";
 import payexLogo from "@src/img/payex/logo/payex-logo.svg";
 
 import SidebarComponent from "@components/Sidebar";
@@ -95,10 +95,10 @@ const TopbarLogo = ({ png }) => (
 			{brand === "swedbankpay" && png ? (
 				<img
 					src={`${process.env.basename}img/logo/${brand}-logo${
-						brand === "swedbankpay" ? "-v" : ""
+						brand === "swedbankpay" ? "-h" : ""
 					}.png`}
 					alt={`${brand} logo`}
-					className="logotype-vertical logotype-sm"
+					className="logotype-horizontal logotype-xs"
 				/>
 			) : (
 				<img
@@ -106,11 +106,11 @@ const TopbarLogo = ({ png }) => (
 						isDev
 							? devLogo
 							: `${process.env.basename}img/logo/${brand}-logo${
-									brand === "swedbankpay" ? "-v" : ""
+									brand === "swedbankpay" ? "-h" : ""
 							  }.svg`
 					}
 					alt={`${brand} logo`}
-					className="logotype-vertical logotype-sm"
+					className="logotype-horizontal logotype-xs"
 				/>
 			)}
 			{"\n"}
@@ -130,9 +130,9 @@ const Topbar = ({ topbarContent, wide, logout, id, png, sticky, sidebar }) => (
 		{topbarContent ? (
 			<div className="nav-container">
 				{"\n"}
-				<TopbarBtn />
-				{"\n"}
 				<TopbarLogo png={png} />
+				{"\n"}
+				<TopbarBtn />
 				<TopbarMenu menu={topbarContent} logout={!!logout} sidebar={sidebar} />
 			</div>
 		) : (
