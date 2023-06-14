@@ -120,7 +120,6 @@ export default class NavMenu {
 		this.resizeEvent = this._resizeListener.bind(this);
 		window.addEventListener("resize", this.resizeEvent, { passive: true });
 		this.navMenuElement.classList.add("topbar-nav-open");
-		this.navMenuElement.style.display = "block";
 		this.btnElement.style.display = "none";
 		this.closeNavIcon.style.display = "flex";
 
@@ -141,7 +140,6 @@ export default class NavMenu {
 			this.focusedElementBeforeNav ? this.focusedElemBeforeNav.focus() : null;
 
 			this.navMenuElement.classList.remove("topbar-nav-closing");
-			this.navMenuElement.style.display = "none";
 			this.btnElement.style.display = "flex";
 			this.closeNavIcon.style.display = "none";
 		}, 300);

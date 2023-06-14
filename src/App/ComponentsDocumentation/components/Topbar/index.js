@@ -4,32 +4,11 @@ import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer } from "@docutils";
 import TopbarComponent from "@components/Topbar";
 import CodeTags from "@components/CodeTags";
-import { topbarShowcase } from "./constants";
+import { menu, topbarShowcase } from "./constants";
 import { topbar, sidebar } from "@src/scripts/main";
 import NpmInformation from "@docutils/NpmInformation";
 
 const basename = process.env.basename;
-
-const menu = {
-	btn: {
-		name: "Menu",
-		icon: "menu",
-	},
-	items: [
-		{
-			name: "Home",
-			icon: "home",
-		},
-		{
-			name: "Purchases",
-			icon: "shopping_cart",
-		},
-		{
-			name: "Settings",
-			icon: "settings",
-		},
-	],
-};
 
 const Overview = () => (
 	<section>

@@ -3,23 +3,40 @@ import TopbarComponent from "@components/Topbar";
 
 import CodeTags from "@components/CodeTags";
 
-const menu = {
-	btn: {
-		name: "Menu",
-		icon: "menu",
-	},
+export const menu = {
 	items: [
 		{
 			name: "Home",
-			icon: "home",
 		},
 		{
-			name: "Purchases",
-			icon: "shopping_cart",
+			name: "Merchant details",
+			selected: true,
 		},
 		{
-			name: "Settings",
-			icon: "settings",
+			name: "Transactions",
+		},
+		{
+			name: "User profile",
+		},
+		{
+			name: "Statistics",
+		},
+		{
+			name: "Users",
+		},
+		{
+			name: "Access tokens",
+		},
+		{
+			name: "Contact us",
+		},
+		{
+			name: "Switch to acquiring",
+			icon: "sync_alt",
+		},
+		{
+			name: "Change company",
+			icon: "arrow_forward",
 		},
 	],
 };

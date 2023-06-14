@@ -5,6 +5,7 @@ import payexLogo from "@src/img/payex/logo/payex-logo.svg";
 
 import SidebarComponent from "@components/Sidebar";
 import { SidebarNavList } from "../../ComponentsDocumentation/components/Sidebar/constants";
+import ButtonComponent from "@components/Button";
 
 const brand = process.env.brand;
 
@@ -49,9 +50,9 @@ const TopbarMenu = ({ menu, logout, sidebar }) => {
 							onClick={(e) => e.preventDefault()}
 						>
 							{"\n"}
-							{item.icon ? <i className="material-icons">{item.icon}</i> : null}
-							{"\n"}
 							<span>{item.name}</span>
+							{"\n"}
+							{item.icon ? <i className="material-icons">{item.icon}</i> : null}
 							{"\n"}
 						</a>
 						{i === 0 && sidebar && (
@@ -67,20 +68,7 @@ const TopbarMenu = ({ menu, logout, sidebar }) => {
 };
 
 const TopbarLogout = () => (
-	<>
-		<a
-			className="topbar-link-right"
-			href="#"
-			onClick={(e) => e.preventDefault()}
-		>
-			{"\n"}
-			<i className="material-icons">exit_to_app</i>
-			{"\n"}
-			<span>Log out</span>
-			{"\n"}
-		</a>
-		{"\n"}
-	</>
+	<ButtonComponent type="tertiary" label="Log out" icon="exit_to_app" />
 );
 
 const TopbarLogo = ({ png }) => (

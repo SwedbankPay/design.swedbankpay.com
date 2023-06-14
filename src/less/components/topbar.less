@@ -3,14 +3,14 @@
 .topbar {
 	--topbar-height: 80px;
 	--topbar-border-width: 0.5rem;
-	--topbar-link-container-width: 288px;
+	--topbar-spacing-horizontal: 32px;
 
 	// TODO: once color-mix get enough support we can replace this by CSS var. Postcss does not parse a color-mix fallback if css-var (since cannot predict ahead of time the dynamic aspect of it)
 	background-color: color-mix(in srgb, @brand-bg-gray, transparent 35%);
 	backdrop-filter: blur(10px) brightness(1.1);
 	margin: 0 auto;
 	height: var(--topbar-height);
-	width: calc(100% - 2 * 32px);
+	width: calc(100% - 2 * var(--topbar-spacing-horizontal, 32px));
 	max-width: 960px;
 	z-index: var(--topbar-z-index, 400);
 	display: flex;
@@ -18,7 +18,8 @@
 	align-items: center;
 	padding: 0 1.5rem;
 	position: relative;
-	border-radius: 0 0 24px 24px;
+	border-radius: 0 0 var(--border-radius-topbar, 24px)
+		var(--border-radius-topbar, 24px);
 
 	.nav-container {
 		display: flex;
@@ -29,6 +30,11 @@
 	&.topbar-sticky {
 		position: sticky;
 		top: 0;
+	}
+
+	// necessary for Chromium browsers, otherwise the backdrop-filter will only be applied all the way to the topbar but not beyond
+	&:has(.topbar-nav-open) {
+		backdrop-filter: none;
 	}
 
 	each(@grid-breakpoints, .(@min-width, @infix) {
@@ -126,18 +132,13 @@
 	}
 
 	.topbar-nav {
-		position: absolute;
-		top: calc(
-			(var(--topbar-height) + var(--topbar-border-width)) - 16px
-		); // - 16px is due to the drop shadow of the sticky topbar
-
-		right: 0;
-		width: 100%;
-		height: calc(
-			100vh - (var(--topbar-height) + var(--topbar-border-width) - 8px)
-		);
+		position: fixed;
+		inset: 0;
+		width: 100vw;
+		height: 100vh;
 		background: transparent;
 		display: none;
+		margin-left: calc(0px - var(--topbar-spacing-horizontal, 32px));
 
 		.sidebar {
 			display: none;
@@ -345,11 +346,15 @@
 		}
 
 		&.topbar-nav-open {
-			animation: fade-in 0.5s forwards;
+			position: absolute;
 			border-top: solid 1px @brand-bg-gray;
+			display: flex;
+			justify-content: flex-end;
+			backdrop-filter: blur(20px);
+			background-color: color-mix(in srgb, @brand-primary, transparent 60%);
 
 			.topbar-link-container {
-				animation: slide-in 0.5s ease forwards;
+				animation: slide-in 0.5s ease-out forwards;
 
 				.sidebar {
 					display: block;
@@ -360,21 +365,8 @@
 					display: flex;
 				}
 
-				> a:first-of-type {
-					margin-top: 1rem;
-				}
-
 				> a {
 					color: @brand-secondary;
-					padding-left: 1rem;
-
-					span {
-						margin-left: 1rem;
-					}
-
-					.material-icons + span {
-						margin-left: 0;
-					}
 				}
 
 				.topbar-link-right {
@@ -391,16 +383,16 @@
 			animation: fade-out 0.3s forwards;
 
 			.topbar-link-container {
-				animation: slide-out 0.3s ease alternate;
-
-				> a:first-of-type {
-					margin-top: 1rem;
-				}
+				animation: slide-out 0.3s ease-in alternate;
 			}
 		}
 
 		.topbar-link-container {
-			width: var(--topbar-link-container-width);
+			width: calc(100% - 60px);
+			display: grid;
+			grid-auto-flow: row;
+			grid-auto-rows: 60px;
+			justify-items: center start;
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -408,30 +400,28 @@
 			overflow-x: hidden;
 			overflow-y: auto;
 			z-index: var(--topbar-z-index, 400);
-			padding: 0;
+			padding: var(--topbar-spacing-horizontal);
 			align-items: center;
-			transform: translateX(-100%);
+			border-radius: var(--border-radius-topbar-nav, 24px) 0 0
+				var(--border-radius-topbar-nav, 24px);
 
 			.sidebar:not(:first-child) {
 				margin-left: 1.5rem;
 			}
 
 			> a {
-				font-family: var(--brand-headline);
-				font-weight: var(--font-weight-normal);
 				font-size: 1.125rem;
 				color: @text-gray;
 				cursor: pointer;
 				text-decoration: none;
 				display: flex;
+				gap: 0.5rem;
 				padding: 0.75rem 0;
 				line-height: 1;
 				align-items: center;
-
-				.material-icons {
-					padding: 0 0.5rem 0 0;
-					user-select: none;
-				}
+				border-bottom: 1px solid
+					color-mix(in srgb, @brand-secondary, transparent 60%);
+				height: 100%;
 
 				&:hover {
 					> span {
@@ -445,9 +435,21 @@
 
 				&.active {
 					> span {
-						text-decoration: underline;
+						font-family: var(--brand-headline);
+						font-weight: var(--font-weight-normal);
 					}
 				}
+
+				&:last-of-type {
+					border-bottom: none;
+				}
+			}
+
+			> button:last-child {
+				position: absolute;
+				bottom: var(--topbar-spacing-horizontal);
+				width: calc(100% - var(--topbar-spacing-horizontal) * 2);
+				left: var(--topbar-spacing-horizontal);
 			}
 
 			.topbar-link-right {
@@ -516,7 +518,6 @@
 			display: flex;
 			padding: 0;
 			overflow: visible;
-			transform: translateX(0%);
 
 			> a:not(.close-topbar-nav) {
 				margin-top: 8px;
@@ -590,74 +591,29 @@ each(@grid-breakpoints, .(@min-width, @infix) {
     }
 });
 
-// Keyframe animations
-@keyframes slide-in {
-	100% {
-		transform: translateX(0%);
-	}
-}
-
-@keyframes slide-out {
-	0% {
-		transform: translateX(0%);
-	}
-
-	100% {
-		transform: translateX(-100%);
-	}
-}
-
-@keyframes fade-in {
-	0% {
-		background: transparent;
-	}
-
-	100% {
-		background: fade(@black, 50%);
-	}
-}
-
-@keyframes fade-out {
-	0% {
-		background: fade(@black, 50%);
-	}
-
-	100% {
-		background: transparent;
-	}
-}
-
 @media (prefers-reduced-motion) {
-	.topbar {
-		.topbar-nav {
-			.sidebar {
-				.sidebar-nav {
-					.main-nav-ul {
-						.nav-group {
-							.nav-ul-active() {
-								> .nav-ul {
-									transition: max-height 0s ease-in-out;
-								}
-							}
-						}
-					}
+	.topbar .topbar-nav {
+		.sidebar .sidebar-nav .main-nav-ul .nav-group {
+			.nav-ul-active() {
+				> .nav-ul {
+					transition: max-height 0s ease-in-out;
 				}
 			}
+		}
 
-			&.topbar-nav-open {
-				animation: fade-in 0s forwards;
+		&.topbar-nav-open {
+			animation: fade-in 0s forwards;
 
-				.topbar-link-container {
-					animation: slide-in 0s ease forwards;
-				}
+			.topbar-link-container {
+				animation: slide-in 0s ease forwards;
 			}
+		}
 
-			&.topbar-nav-closing {
-				animation: fade-out 0s forwards;
+		&.topbar-nav-closing {
+			animation: fade-out 0s forwards;
 
-				.topbar-link-container {
-					animation: slide-out 0s ease alternate;
-				}
+			.topbar-link-container {
+				animation: slide-out 0s ease alternate;
 			}
 		}
 	}
@@ -672,39 +628,35 @@ each(@grid-breakpoints, .(@min-width, @infix) {
 		border: 10px solid;
 	}
 
-	.topbar {
-		.topbar-close {
+	.topbar .topbar-close {
+		outline: 2px solid;
+
+		&:hover,
+		&:focus,
+		&.focus {
 			outline: 2px solid;
+		}
 
-			&:hover,
-			&:focus,
-			&.focus {
-				outline: 2px solid;
-			}
+		&[active],
+		&:active,
+		&.active {
+			outline: 2px solid;
+		}
 
-			&[active],
-			&:active,
-			&.active {
-				outline: 2px solid;
-			}
-
-			&:focus,
-			&.focus {
-				outline: 2px solid;
-			}
+		&:focus,
+		&.focus {
+			outline: 2px solid;
 		}
 	}
 
-	.nav-group {
-		.nav-leaf {
-			a {
-				border-bottom: 1px solid;
+	.nav-group .nav-leaf {
+		a {
+			border-bottom: 1px solid;
 
-				&:focus,
-				&:hover,
-				&.active {
-					border-bottom: 4px solid;
-				}
+			&:focus,
+			&:hover,
+			&.active {
+				border-bottom: 4px solid;
 			}
 		}
 	}
