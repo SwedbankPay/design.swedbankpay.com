@@ -7,13 +7,16 @@ export const menu = {
 	items: [
 		{
 			name: "Home",
+			pinned: true,
 		},
 		{
 			name: "Merchant details",
 			selected: true,
+			pinned: true,
 		},
 		{
 			name: "Transactions",
+			pinned: true,
 		},
 		{
 			name: "User profile",
@@ -23,6 +26,7 @@ export const menu = {
 		},
 		{
 			name: "Users",
+			pinned: true,
 		},
 		{
 			name: "Access tokens",
@@ -33,6 +37,7 @@ export const menu = {
 		{
 			name: "Switch to acquiring",
 			icon: "sync_alt",
+			pinned: true,
 		},
 		{
 			name: "Change company",

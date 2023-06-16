@@ -161,6 +161,9 @@
 	--base-padding-xl: calc(var(--base-padding) * 2);
 	--base-padding-xxl: calc(var(--base-padding) * 4);
 
+	// misc paddings
+	--vscroll-padding-right: 17px;
+
 	/* Forms spacing */
 	--input-padding-x: 16px;
 	--input-padding-y: 12px;
@@ -173,6 +176,7 @@
 	// Border radius
 	--border-radius-topbar: 24px;
 	--border-radius-topbar-nav: 32px;
+	--border-radius-topbar-nav-xl: 48px;
 	--border-radius-modal: 20px;
 	--border-radius-expandable: 16px;
 
@@ -241,10 +245,10 @@ body {
 		overflow: hidden;
 
 		@media screen and (min-width: @screen-sm-min) {
-			padding-right: 17px;
+			padding-right: var(--vscroll-padding-right, 17px);
 
 			.dialog {
-				padding-right: 17px;
+				padding-right: var(--vscroll-padding-right, 17px);
 			}
 		}
 	}

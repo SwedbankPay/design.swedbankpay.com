@@ -4,14 +4,16 @@
 	--topbar-height: 80px;
 	--topbar-border-width: 0.5rem;
 	--topbar-spacing-horizontal: 32px;
+	--topbar-links-container-spacing: 60px;
+	--topbar-max-width: 960px;
+	--border-radius-topbar-nav-wide: 48px;
 
 	// TODO: once color-mix get enough support we can replace this by CSS var. Postcss does not parse a color-mix fallback if css-var (since cannot predict ahead of time the dynamic aspect of it)
 	background-color: color-mix(in srgb, @brand-bg-gray, transparent 35%);
 	backdrop-filter: blur(10px) brightness(1.1);
-	margin: 0 auto;
 	height: var(--topbar-height);
 	width: calc(100% - 2 * var(--topbar-spacing-horizontal, 32px));
-	max-width: 960px;
+	max-width: var(--topbar-max-width, 960px);
 	z-index: var(--topbar-z-index, 400);
 	display: flex;
 	justify-content: center;
@@ -20,11 +22,13 @@
 	position: relative;
 	border-radius: 0 0 var(--border-radius-topbar, 24px)
 		var(--border-radius-topbar, 24px);
+	margin: 0 auto;
 
 	.nav-container {
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
+		align-items: center;
 	}
 
 	&.topbar-sticky {
@@ -138,7 +142,6 @@
 		height: 100vh;
 		background: transparent;
 		display: none;
-		margin-left: calc(0px - var(--topbar-spacing-horizontal, 32px));
 
 		.sidebar {
 			display: none;
@@ -346,15 +349,19 @@
 		}
 
 		&.topbar-nav-open {
-			position: absolute;
-			border-top: solid 1px @brand-bg-gray;
+			position: fixed;
 			display: flex;
 			justify-content: flex-end;
 			backdrop-filter: blur(20px);
 			background-color: color-mix(in srgb, @brand-primary, transparent 60%);
+			// margin-left: calc(0px - var(--topbar-spacing-horizontal, 32px));
 
 			.topbar-link-container {
 				animation: slide-in 0.5s ease-out forwards;
+				background-color: var(--white);
+				position: relative;
+				flex-direction: column;
+				align-items: stretch;
 
 				.sidebar {
 					display: block;
@@ -365,15 +372,24 @@
 					display: flex;
 				}
 
-				> a {
-					color: @brand-secondary;
-				}
-
 				.topbar-link-right {
 					margin: initial;
 
 					.material-icons {
 						margin: 0;
+					}
+				}
+
+				> a {
+					border-bottom: 1px solid
+						color-mix(in srgb, @brand-secondary, transparent 60%);
+				}
+
+				> button {
+					margin-top: 0.75rem;
+
+					&:first-of-type {
+						margin-top: auto;
 					}
 				}
 			}
@@ -388,10 +404,8 @@
 		}
 
 		.topbar-link-container {
-			width: calc(100% - 60px);
-			display: grid;
-			grid-auto-flow: row;
-			grid-auto-rows: 60px;
+			width: calc(100% - var(--topbar-links-container-spacing, 60px));
+			display: flex;
 			justify-items: center start;
 			position: absolute;
 			top: 0;
@@ -411,7 +425,7 @@
 
 			> a {
 				font-size: 1.125rem;
-				color: @text-gray;
+				color: @brand-secondary;
 				cursor: pointer;
 				text-decoration: none;
 				display: flex;
@@ -419,9 +433,7 @@
 				padding: 0.75rem 0;
 				line-height: 1;
 				align-items: center;
-				border-bottom: 1px solid
-					color-mix(in srgb, @brand-secondary, transparent 60%);
-				height: 100%;
+				height: 60px;
 
 				&:hover {
 					> span {
@@ -443,13 +455,6 @@
 				&:last-of-type {
 					border-bottom: none;
 				}
-			}
-
-			> button:last-child {
-				position: absolute;
-				bottom: var(--topbar-spacing-horizontal);
-				width: calc(100% - var(--topbar-spacing-horizontal) * 2);
-				left: var(--topbar-spacing-horizontal);
 			}
 
 			.topbar-link-right {
@@ -480,32 +485,51 @@
 }
 
 .topbar-wide {
-	.topbar-btn {
-		display: none;
-	}
-
-	.topbar-logo {
-		margin-top: 0;
-		margin-right: 2rem;
-	}
-
-	.topbar-link-right {
-		margin-left: auto;
-		padding: 0;
-		align-items: center;
-		font-family: var(--brand-headline);
-		font-weight: var(--font-weight-normal);
-		color: var(--brand-secondary);
-		cursor: pointer;
-		text-decoration: none;
-		display: flex;
-	}
-
 	.topbar-nav {
 		display: flex;
 		position: static;
 		flex-grow: 1;
 		height: 100%;
+
+		&.topbar-nav-open {
+			width: 100vw;
+			height: 100vh;
+			position: fixed;
+			justify-content: center;
+			align-items: center;
+			// FIXME: only a problem because Firefox bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1437761
+			@-moz-document url-prefix() {
+				margin-left: calc(
+					0px -
+						(
+							(
+									100vw - var(--topbar-max-width, 960px) -
+										var(--vscroll-padding-right, 17px)
+								) / 2
+						)
+				);
+			}
+
+			.topbar-link-container {
+				width: 480px;
+				height: max-content;
+				margin: var(--topbar-links-container-spacing, 60px);
+				border-radius: var(--border-radius-topbar-nav-wide, 48px);
+				padding: var(--border-radius-topbar-nav-wide, 48px);
+
+				> a,
+				> a:not(.pinned) {
+					display: flex;
+				}
+
+				> a:not(.close-topbar-nav),
+				> a:not(.close-topbar-nav):hover {
+					> span:before {
+						display: none;
+					}
+				}
+			}
+		}
 
 		.topbar-close {
 			display: none;
@@ -519,9 +543,22 @@
 			padding: 0;
 			overflow: visible;
 
-			> a:not(.close-topbar-nav) {
-				margin-top: 8px;
+			> a:not(.pinned) {
+				display: none;
+			}
+			// FIXME: this could be a solution to automatically display all non pinned links in the situation where there is equal or less than 5 links in the .topbar-nav WHEN .topbar-wide AND where not .topbar-nav-open
+			/* 			@supports not selector(:has(a)) {
+				> a:not(.pinned):nth-child(n + 6) {
+					display: none;
+				}
+			}
+			@supports selector(:has(a)) {
+				:has(a:nth-child(6)) > a:not(.pinned) {
+					display: none;
+				}
+			} */
 
+			> a:not(.close-topbar-nav) {
 				&:hover {
 					> span {
 						&:before {
@@ -538,6 +575,7 @@
 					> span {
 						&:before {
 							width: 100%;
+							background-color: @brand-primary;
 						}
 
 						text-decoration: none;
@@ -551,8 +589,8 @@
 					&:before {
 						content: "";
 						position: absolute;
-						background-color: @brand-primary;
-						height: 4px;
+						background-color: currentColor;
+						height: 2px;
 						bottom: -4px;
 						left: 0;
 						right: 0;
@@ -573,6 +611,11 @@
 			> *:not(.close-topbar-nav, .topbar-link-right) {
 				text-decoration: none;
 				margin-left: 1rem;
+				margin-right: 1rem;
+			}
+
+			> .topbar-link-right {
+				margin-left: auto !important;
 				margin-right: 1rem;
 			}
 

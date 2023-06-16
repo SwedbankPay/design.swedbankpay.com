@@ -46,7 +46,9 @@ const TopbarMenu = ({ menu, logout, sidebar }) => {
 						{"\n"}
 						<a
 							href="#"
-							className={item.name === "Home" ? "active" : null}
+							className={`${item.name === "Home" ? "active" : ""}${
+								item.pinned ? " pinned" : ""
+							}`}
 							onClick={(e) => e.preventDefault()}
 						>
 							{"\n"}
@@ -68,7 +70,7 @@ const TopbarMenu = ({ menu, logout, sidebar }) => {
 };
 
 const TopbarLogout = () => (
-	<ButtonComponent type="tertiary" label="Log out" icon="exit_to_app" />
+	<ButtonComponent type="secondary" label="Log out" icon="exit_to_app" />
 );
 
 const TopbarLogo = ({ png }) => (
@@ -120,8 +122,9 @@ const Topbar = ({ topbarContent, wide, logout, id, png, sticky, sidebar }) => (
 				{"\n"}
 				<TopbarLogo png={png} />
 				{"\n"}
-				<TopbarBtn />
 				<TopbarMenu menu={topbarContent} logout={!!logout} sidebar={sidebar} />
+				{"\n"}
+				<TopbarBtn />
 			</div>
 		) : (
 			<>

@@ -105,11 +105,11 @@ const App = () => {
 					<VersionTopBanner />
 					<div className="d-md-flex">
 						<SkipLink />
-						<div className="d-none d-lg-block">
+						{/* TODO: revert back to life before deploying topbar, this is just for topbar dev */}
+						{/* <div className="d-none d-lg-block">
 							{" "}
-							{/* desktop sidebar nav */}
 							<SelectPanel id="doc-sidebar" routes={routes} />
-						</div>
+						</div> */}
 						<main id="doc-view" className="doc-view">
 							<SearchBox className={"d-none d-lg-block"} />
 							<Suspense fallback={<LoadingComponent />}>
