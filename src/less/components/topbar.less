@@ -354,7 +354,10 @@
 			justify-content: flex-end;
 			backdrop-filter: blur(20px);
 			background-color: color-mix(in srgb, @brand-primary, transparent 60%);
-			// margin-left: calc(0px - var(--topbar-spacing-horizontal, 32px));
+			// FIXME: only a problem because Firefox bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1437761
+			@-moz-document url-prefix() {
+				margin-left: calc(0px - var(--topbar-spacing-horizontal, 32px));
+			}
 
 			.topbar-link-container {
 				animation: slide-in 0.5s ease-out forwards;
@@ -434,6 +437,7 @@
 				line-height: 1;
 				align-items: center;
 				height: 60px;
+				min-height: 60px;
 
 				&:hover {
 					> span {
@@ -513,9 +517,11 @@
 			.topbar-link-container {
 				width: 480px;
 				height: max-content;
+				max-height: calc(100% - 2 * 60px);
 				margin: var(--topbar-links-container-spacing, 60px);
 				border-radius: var(--border-radius-topbar-nav-wide, 48px);
 				padding: var(--border-radius-topbar-nav-wide, 48px);
+				overflow-y: auto;
 
 				> a,
 				> a:not(.pinned) {
@@ -535,28 +541,19 @@
 			display: none;
 		}
 
-		.topbar-link-container {
+		&:not(.topbar-nav-open) .topbar-link-container {
 			position: static;
 			background-color: transparent;
 			width: 100%;
 			display: flex;
-			padding: 0;
+			justify-content: flex-start;
+			gap: 2rem;
+			padding: 0 2rem 0 3rem;
 			overflow: visible;
 
 			> a:not(.pinned) {
 				display: none;
 			}
-			// FIXME: this could be a solution to automatically display all non pinned links in the situation where there is equal or less than 5 links in the .topbar-nav WHEN .topbar-wide AND where not .topbar-nav-open
-			/* 			@supports not selector(:has(a)) {
-				> a:not(.pinned):nth-child(n + 6) {
-					display: none;
-				}
-			}
-			@supports selector(:has(a)) {
-				:has(a:nth-child(6)) > a:not(.pinned) {
-					display: none;
-				}
-			} */
 
 			> a:not(.close-topbar-nav) {
 				&:hover {
@@ -599,24 +596,19 @@
 						width: 0;
 					}
 				}
+			}
 
-				&:not(.topbar-link-right) {
-					.material-icons,
-					&.material-icons {
-						display: none;
-					}
+			@supports not selector(:has(a)) {
+				> .first-push-right {
+					margin-left: auto;
 				}
 			}
 
-			> *:not(.close-topbar-nav, .topbar-link-right) {
-				text-decoration: none;
-				margin-left: 1rem;
-				margin-right: 1rem;
-			}
-
-			> .topbar-link-right {
-				margin-left: auto !important;
-				margin-right: 1rem;
+			@supports selector(:has(a)) {
+				> .first-push-right,
+				&:not(&:has(.first-push-right)) button:first-of-type {
+					margin-left: auto;
+				}
 			}
 
 			.close-topbar-nav {

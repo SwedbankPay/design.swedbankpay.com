@@ -16,7 +16,6 @@ export const menu = {
 		},
 		{
 			name: "Transactions",
-			pinned: true,
 		},
 		{
 			name: "User profile",
@@ -38,6 +37,7 @@ export const menu = {
 			name: "Switch to acquiring",
 			icon: "sync_alt",
 			pinned: true,
+			firstPushRight: true,
 		},
 		{
 			name: "Change company",

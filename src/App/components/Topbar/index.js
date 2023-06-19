@@ -48,7 +48,7 @@ const TopbarMenu = ({ menu, logout, sidebar }) => {
 							href="#"
 							className={`${item.name === "Home" ? "active" : ""}${
 								item.pinned ? " pinned" : ""
-							}`}
+							}${item.firstPushRight ? " first-push-right" : ""}`}
 							onClick={(e) => e.preventDefault()}
 						>
 							{"\n"}
