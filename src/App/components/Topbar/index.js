@@ -70,7 +70,7 @@ const TopbarMenu = ({ menu, logout, sidebar }) => {
 };
 
 const TopbarLogout = () => (
-	<ButtonComponent type="secondary" label="Log out" icon="exit_to_app" />
+	<ButtonComponent type="primary" label="Log out" icon="exit_to_app" />
 );
 
 const TopbarLogo = ({ png }) => (

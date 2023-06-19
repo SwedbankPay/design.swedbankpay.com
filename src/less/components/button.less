@@ -128,7 +128,9 @@
 		}
 	}
 
-	&.btn-tertiary {
+	&.btn-tertiary,
+	.topbar-nav.topbar-nav-open
+		&:is(.btn-primary, .btn-secondary, .btn-tertiary) {
 		background-color: var(--btn-tertiary-color);
 		color: var(--btn-tertiary-text-color);
 
