@@ -62,6 +62,11 @@
 		border: none;
 		display: flex;
 
+		& img {
+			height: 32px;
+			width: 67px;
+		}
+
 		&.topbar-logo-png {
 			justify-content: center;
 		}
@@ -395,6 +400,42 @@
 						margin-top: auto;
 					}
 				}
+
+				@supports not selector(:has(a)) {
+					> a:last-of-type {
+						margin-bottom: 48px;
+					}
+				}
+				@supports selector(:has(a)) {
+					&:has(.anchored) > a:nth-last-child(1 of :not(.anchored)) {
+						margin-bottom: 48px;
+					}
+				}
+
+				> button.anchored {
+					position: sticky;
+					bottom: 0;
+					outline: var(--white) solid 20px;
+
+					&:before {
+						content: " ";
+						position: absolute;
+						height: 70%;
+						width: 110%;
+						transform: translateY(-48px);
+						background-color: var(--white);
+						filter: blur(6px);
+					}
+
+					&:after {
+						content: " ";
+						position: absolute;
+						height: 32px;
+						width: 100%;
+						bottom: -32px;
+						background-color: var(--white);
+					}
+				}
 			}
 		}
 
@@ -421,6 +462,7 @@
 			align-items: center;
 			border-radius: var(--border-radius-topbar-nav, 24px) 0 0
 				var(--border-radius-topbar-nav, 24px);
+			overscroll-behavior: contain;
 
 			.sidebar:not(:first-child) {
 				margin-left: 1.5rem;
@@ -489,6 +531,11 @@
 }
 
 .topbar-wide {
+	.topbar-logo img {
+		height: 48px;
+		width: 100px;
+	}
+
 	.topbar-nav {
 		display: flex;
 		position: static;
@@ -522,6 +569,17 @@
 				border-radius: var(--border-radius-topbar-nav-wide, 48px);
 				padding: var(--border-radius-topbar-nav-wide, 48px);
 				overflow-y: auto;
+				scrollbar-width: thin;
+				scrollbar-color: var(--brand-primary) transparent;
+
+				&::-webkit-scrollbar {
+					background-color: transparent;
+				}
+
+				&::-webkit-scrollbar-thumb {
+					background: color-mix(in srgb, @brand-primary, transparent 35%);
+					border-radius: 5rem;
+				}
 
 				> a,
 				> a:not(.pinned) {
@@ -533,6 +591,11 @@
 					> span:before {
 						display: none;
 					}
+				}
+
+				> button.anchored:after {
+					height: 48px;
+					bottom: -48px;
 				}
 			}
 		}

@@ -70,7 +70,13 @@ const TopbarMenu = ({ menu, logout, sidebar }) => {
 };
 
 const TopbarLogout = () => (
-	<ButtonComponent type="primary" label="Log out" icon="exit_to_app" />
+	<ButtonComponent
+		type="primary"
+		label="Log out"
+		icon="exit_to_app"
+		size="sm"
+		className="anchored"
+	/>
 );
 
 const TopbarLogo = ({ png }) => (
@@ -88,7 +94,7 @@ const TopbarLogo = ({ png }) => (
 						brand === "swedbankpay" ? "-h" : ""
 					}.png`}
 					alt={`${brand} logo`}
-					className="logotype-horizontal logotype-xs"
+					className="logotype-horizontal logotype-sm"
 				/>
 			) : (
 				<img
@@ -100,7 +106,7 @@ const TopbarLogo = ({ png }) => (
 							  }.svg`
 					}
 					alt={`${brand} logo`}
-					className="logotype-horizontal logotype-xs"
+					className="logotype-horizontal logotype-sm"
 				/>
 			)}
 			{"\n"}

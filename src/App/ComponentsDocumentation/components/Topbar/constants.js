@@ -24,6 +24,24 @@ export const menu = {
 			name: "Statistics",
 		},
 		{
+			name: "Transactions",
+		},
+		{
+			name: "User profile",
+		},
+		{
+			name: "Statistics",
+		},
+		{
+			name: "Transactions",
+		},
+		{
+			name: "User profile",
+		},
+		{
+			name: "Statistics",
+		},
+		{
 			name: "Users",
 			pinned: true,
 		},
