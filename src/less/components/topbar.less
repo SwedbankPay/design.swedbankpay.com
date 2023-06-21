@@ -1,7 +1,7 @@
 @import url("../global.less");
 
 .topbar {
-	--topbar-height: 80px;
+	--topbar-height: 60px;
 	--topbar-border-width: 0.5rem;
 	--topbar-spacing-horizontal: 32px;
 	--topbar-links-container-spacing: 60px;
@@ -358,7 +358,7 @@
 			display: flex;
 			justify-content: flex-end;
 			backdrop-filter: blur(20px);
-			background-color: color-mix(in srgb, @brand-primary, transparent 60%);
+			background-color: color-mix(in srgb, @brand-primary, transparent 40%);
 			// FIXME: only a problem because Firefox bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1437761
 			@-moz-document url-prefix() {
 				margin-left: calc(0px - var(--topbar-spacing-horizontal, 32px));
@@ -389,8 +389,14 @@
 				}
 
 				> a {
+					font-size: 1.25rem;
+					padding: 1rem 0;
 					border-bottom: 1px solid
 						color-mix(in srgb, @brand-secondary, transparent 60%);
+
+					&:first-of-type {
+						padding-top: 0;
+					}
 				}
 
 				> button {
@@ -469,17 +475,14 @@
 			}
 
 			> a {
-				font-size: 1.125rem;
+				font-size: 1rem;
 				color: @brand-secondary;
 				cursor: pointer;
 				text-decoration: none;
 				display: flex;
 				gap: 0.5rem;
-				padding: 0.75rem 0;
 				line-height: 1;
 				align-items: center;
-				height: 60px;
-				min-height: 60px;
 
 				&:hover {
 					> span {
@@ -531,6 +534,10 @@
 }
 
 .topbar-wide {
+	--topbar-height: 96px;
+
+	padding: 0 3rem;
+
 	.topbar-logo img {
 		height: 48px;
 		width: 100px;
@@ -543,6 +550,8 @@
 		height: 100%;
 
 		&.topbar-nav-open {
+			--modal-nav-width: 480px;
+
 			width: 100vw;
 			height: 100vh;
 			position: fixed;
@@ -562,7 +571,7 @@
 			}
 
 			.topbar-link-container {
-				width: 480px;
+				width: var(--modal-nav-width, 480px);
 				height: max-content;
 				max-height: calc(100% - 2 * 60px);
 				margin: var(--topbar-links-container-spacing, 60px);
@@ -574,16 +583,19 @@
 
 				&::-webkit-scrollbar {
 					background-color: transparent;
+					width: 10px;
 				}
 
 				&::-webkit-scrollbar-thumb {
-					background: color-mix(in srgb, @brand-primary, transparent 35%);
+					background: color-mix(in srgb, var(--brown-soft), transparent 35%);
 					border-radius: 5rem;
 				}
 
 				> a,
 				> a:not(.pinned) {
 					display: flex;
+					font-size: 1.5rem;
+					padding: 1.5rem 0;
 				}
 
 				> a:not(.close-topbar-nav),
@@ -594,8 +606,55 @@
 				}
 
 				> button.anchored:after {
-					height: 48px;
-					bottom: -48px;
+					height: var(--border-radius-topbar-nav-wide, 48px);
+					width: calc(100% + 5px);
+					bottom: -49px;
+				}
+			}
+
+			// TODO: merge it in normal if works fine -> it should not need to require additional work adding class for devs. If good then merge
+			&.hack-radius {
+				&:before,
+				&:after {
+					content: " ";
+					background: var(--white);
+					width: var(--modal-nav-width, 480px);
+					height: var(--border-radius-topbar-nav-wide, 48px);
+					position: absolute;
+					z-index: 9999999999999;
+				}
+
+				&:before {
+					top: 60px;
+					border-radius: var(--border-radius-topbar-nav-wide, 48px)
+						var(--border-radius-topbar-nav-wide, 48px) 0 0;
+				}
+
+				&:after {
+					bottom: 60px;
+					border-radius: 0 0 var(--border-radius-topbar-nav-wide, 48px)
+						var(--border-radius-topbar-nav-wide, 48px);
+				}
+
+				.topbar-link-container {
+					border-radius: 0;
+					max-height: calc(
+						100% - 2 * 60px - 2 * var(--border-radius-topbar-nav-wide, 48px)
+					);
+					margin: calc(
+						2 *
+							(
+								var(--topbar-links-container-spacing, 60px) +
+									var(--border-radius-topbar-nav-wide, 48px)
+							)
+					);
+					padding: 0 var(--border-radius-topbar-nav-wide, 48px);
+
+					& > button.anchored {
+						&:after {
+							display: none;
+						}
+					}
 				}
 			}
 		}
@@ -614,7 +673,8 @@
 			padding: 0 2rem 0 3rem;
 			overflow: visible;
 
-			> a:not(.pinned) {
+			> a:not(.pinned),
+			> button:not(.pinned) {
 				display: none;
 			}
 

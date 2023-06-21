@@ -39,7 +39,7 @@ const TopbarMenu = ({ menu, logout, sidebar }) => {
 	const { items } = menu;
 
 	return (
-		<nav className="topbar-nav">
+		<nav className="topbar-nav hack-radius">
 			<div className="topbar-link-container">
 				{items.map((item, i) => (
 					<Fragment key={i}>
