@@ -9,6 +9,9 @@ const SELECTORS = {
 const FOCUSELEMENTS =
 	'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
 
+const isLegacyMenu = () =>
+	document.querySelector(".topbar").classList.contains("legacy");
+
 export default class NavMenu {
 	constructor(topbarComponent, navMenu) {
 		this._openHandler = this._openHandler.bind(this);
@@ -120,8 +123,11 @@ export default class NavMenu {
 		this.resizeEvent = this._resizeListener.bind(this);
 		window.addEventListener("resize", this.resizeEvent, { passive: true });
 		this.navMenuElement.classList.add("topbar-nav-open");
-		this.btnElement.style.display = "none";
-		this.closeNavIcon.style.display = "flex";
+
+		if (isLegacyMenu()) {
+			this.btnElement.style.display = "none";
+			this.closeNavIcon.style.display = "flex";
+		}
 
 		this.btnElement.setAttribute("aria-expanded", "true");
 
@@ -140,8 +146,11 @@ export default class NavMenu {
 			this.focusedElementBeforeNav ? this.focusedElemBeforeNav.focus() : null;
 
 			this.navMenuElement.classList.remove("topbar-nav-closing");
-			this.btnElement.style.display = "flex";
-			this.closeNavIcon.style.display = "none";
+
+			if (isLegacyMenu()) {
+				this.btnElement.style.display = "flex";
+				this.closeNavIcon.style.display = "none";
+			}
 		}, 300);
 
 		this.btnElement.setAttribute("aria-expanded", "false");
