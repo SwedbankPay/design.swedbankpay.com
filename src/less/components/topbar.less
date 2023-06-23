@@ -1,4 +1,5 @@
 @import url("../global.less");
+// @import url("./topbar-legacy.less");
 
 .topbar {
 	--topbar-height: 60px;
@@ -6,7 +7,8 @@
 	--topbar-spacing-horizontal: 32px;
 	--topbar-links-container-spacing: 60px;
 	--topbar-max-width: 960px;
-	--border-radius-topbar-nav-wide: 48px;
+	--border-radius-topbar: 24px;
+	--border-radius-topbar-nav: 32px;
 
 	// TODO: once color-mix get enough support we can replace this by CSS var. Postcss does not parse a color-mix fallback if css-var (since cannot predict ahead of time the dynamic aspect of it)
 	background-color: color-mix(in srgb, @brand-bg-gray, transparent 35%);
@@ -41,6 +43,7 @@
 		backdrop-filter: none;
 	}
 
+	// LESS func to generate classes for triggering sticky starting from a breakpoints
 	each(@grid-breakpoints, .(@min-width, @infix) {
 			&.topbar-min-@{infix}-sticky {
 					@media screen and (min-width: @min-width) {
@@ -49,6 +52,7 @@
 			}
 	});
 
+	// LESS func to generate classes for triggering sticky ending at a breakpoint
 	each(@grid-breakpoints-max, .(@max-width, @infix) {
 			&.topbar-max-@{infix}-sticky {
 					@media screen and (max-width: @max-width) {
@@ -66,19 +70,9 @@
 			height: 32px;
 			width: 67px;
 		}
-
-		&.topbar-logo-png {
-			justify-content: center;
-		}
-
-		.logotype-vertical {
-			@media (max-width: @screen-xs-max) {
-				width: 1.5rem;
-			}
-		}
 	}
 
-	& :is(.topbar-btn, .topbar-close) {
+	& :is(.topbar-btn) {
 		user-select: none;
 		background: none;
 		padding: 0;
@@ -93,6 +87,7 @@
 		}
 	}
 
+	// hamburger menu btn to open the topbar-nav dialog
 	.topbar-btn {
 		display: flex;
 		outline: 1px solid transparent;
@@ -100,46 +95,14 @@
 		&:hover {
 			cursor: pointer;
 		}
-
-		&:last-child {
-			span {
-				margin-right: 0.2rem;
-			}
-		}
 	}
 
-	.topbar-close {
-		display: none;
-		outline: 0;
-		cursor: pointer;
-
-		&:hover {
-			color: var(--brand-secondary);
-			text-decoration: none;
-		}
-
-		&[active],
-		&:active,
-		&.active {
-			outline: 0;
-			background-image: none;
-			box-shadow: none;
-
-			&:focus,
-			&.focus {
-				box-shadow: none;
-			}
-		}
-
-		.material-icons {
-			margin: 0;
-		}
-	}
-
+	// topbar-link-right is the class for the first link aligned on the right side
 	> .topbar-link-right {
 		display: none;
 	}
 
+	// topbar-nav is the container for links in both topbar up top and when dialog opened
 	.topbar-nav {
 		position: fixed;
 		inset: 0;
@@ -148,211 +111,7 @@
 		background: transparent;
 		display: none;
 
-		.sidebar {
-			display: none;
-			position: relative;
-			height: 100%;
-			margin-top: 0;
-			top: 0;
-			padding-left: 1rem;
-
-			&.has-secondary-nav {
-				padding-right: 0;
-			}
-
-			&.sidebar-topbar-sticky {
-				top: var(--topbar-height);
-
-				.sidebar-nav {
-					max-height: calc((100vh - var(--topbar-height)));
-				}
-			}
-
-			each(@grid-breakpoints, .(@min-width, @infix) {
-                &.sidebar-topbar-min-@{infix}-sticky {
-                    @media screen and (min-width: @min-width) {
-                        .sidebar-topbar-sticky();
-                    }
-                }
-            });
-
-			each(@grid-breakpoints-max, .(@max-width, @infix) {
-                &.sidebar-topbar-max-@{infix}-sticky {
-                    @media screen and (max-width: @max-width) {
-                        .sidebar-topbar-sticky();
-                    }
-                }
-            });
-
-			.sidebar-nav {
-				max-height: none;
-				overflow-y: auto;
-				display: flex;
-				flex-direction: column;
-
-				.main-nav-ul {
-					list-style: none;
-					padding: 0;
-
-					.nav-group {
-						.nav-ul-active() {
-							> .nav-ul {
-								max-height: 2500px;
-								transition: max-height 1.5s ease-in-out;
-								visibility: visible;
-							}
-						}
-
-						.nav-heading-active() {
-							color: @brand-secondary;
-
-							i {
-								transform: rotate(90deg);
-								transition: transform 0.3s;
-							}
-						}
-
-						&.active {
-							.nav-ul-active();
-
-							> .nav-group-heading {
-								.nav-heading-active();
-							}
-						}
-
-						.nav-group-heading {
-							all: unset;
-							display: flex;
-							padding: 0.5rem;
-							padding-left: 0;
-							border: 2px solid transparent;
-							font-weight: var(--font-weight-bold);
-							line-height: 1.5rem;
-
-							i {
-								margin-right: 0.5rem;
-							}
-
-							&:hover,
-							&:focus {
-								cursor: pointer;
-
-								span {
-									text-decoration: underline;
-								}
-							}
-
-							&:focus {
-								border: 2px solid @brand-secondary;
-								border-radius: 2px;
-							}
-						}
-
-						.nav-ul {
-							list-style: none;
-							padding-left: 0.75rem;
-							max-height: 0;
-							overflow: hidden;
-							visibility: hidden;
-
-							.nav-leaf {
-								position: relative;
-								display: flex;
-								align-items: center;
-								min-height: 2.5rem;
-
-								&.active,
-								&:hover {
-									&:before {
-										background-color: @brand-secondary;
-									}
-								}
-
-								&:before {
-									content: "";
-									position: absolute;
-									height: 100%;
-									width: 0.125rem;
-									left: 0;
-									top: 0;
-									background-color: @brand-bg-gray;
-								}
-
-								a {
-									font-size: 0.875rem;
-									line-height: 1.25rem;
-									color: @brand-secondary;
-									text-decoration: none;
-									padding: 0.625rem 1.75rem;
-									width: 100%;
-									height: 100%;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-
-		.topbar-nav-header {
-			position: relative;
-			display: none;
-			height: var(--topbar-height);
-			justify-content: center;
-			align-items: center;
-			background-color: @white;
-
-			.topbar-close {
-				top: calc((var(--topbar-height) / 2) - (var(--font-size-large) / 2));
-				left: 1rem;
-			}
-		}
-
-		.topbar-close {
-			top: 1rem;
-			right: 2rem;
-			left: auto;
-			display: inline-flex;
-			align-items: center;
-			position: absolute;
-			font-weight: var(--font-weight-normal);
-			font-family: var(--brand-headline);
-			text-align: center;
-			text-decoration: none;
-			touch-action: manipulation;
-			cursor: pointer;
-			line-height: 1rem;
-			border: 1px solid transparent;
-			white-space: nowrap;
-			user-select: none;
-			background-color: transparent;
-			margin-right: -0.5rem;
-
-			&:hover,
-			&:focus,
-			&.focus {
-				color: var(--brand-secondary);
-				text-decoration: none;
-			}
-
-			&[active],
-			&:active,
-			&.active {
-				outline: 0;
-				background-image: none;
-				box-shadow: none;
-
-				&:focus,
-				&.focus {
-					box-shadow: none;
-				}
-			}
-
-			.material-icons {
-				margin: 0;
-			}
-		}
-
+		// topbar when dialog is opened
 		&.topbar-nav-open {
 			position: fixed;
 			display: flex;
@@ -360,6 +119,7 @@
 			backdrop-filter: blur(20px);
 			background-color: color-mix(in srgb, @brand-primary, transparent 40%);
 			// FIXME: only a problem because Firefox bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1437761
+			// can be removed once Firefox fixes this (but it's been opened for several years already, so don't expect to be fixed any time soon)
 			@-moz-document url-prefix() {
 				margin-left: calc(0px - var(--topbar-spacing-horizontal, 32px));
 			}
@@ -372,15 +132,6 @@
 				align-items: stretch;
 				border: var(--white) solid var(--topbar-spacing-horizontal);
 				padding: 0;
-
-				.sidebar {
-					display: block;
-					box-shadow: none;
-				}
-
-				.topbar-nav-header {
-					display: flex;
-				}
 
 				.topbar-link-right {
 					margin: initial;
@@ -415,7 +166,7 @@
 					}
 				}
 				@supports selector(:has(a)) {
-					&:has(.anchored) > a:nth-last-child(1 of :not(.anchored)) {
+					&:has(.anchored) > a:nth-last-child(1 of a:not(.anchored)) {
 						margin-bottom: 48px;
 					}
 				}
@@ -424,10 +175,7 @@
 					position: sticky;
 					bottom: 0;
 
-					&:not(&:is(:focus, :focus-visible, :focus-within)) {
-						outline: 5px solid var(--white);
-					}
-
+					// white gradient hiding links scrolling below
 					&:before {
 						content: " ";
 						position: absolute;
@@ -441,10 +189,15 @@
 							transparent
 						);
 					}
+					// white ring to hide the links scrolling that would be visible between the button & its :before pseudo element
+					&:not(&:is(:focus, :focus-visible, :focus-within)) {
+						outline: 5px solid var(--white);
+					}
 				}
 			}
 		}
 
+		// TODO: topbar animation when dialog is closing
 		&.topbar-nav-closing {
 			animation: fade-out 0.3s forwards;
 
@@ -460,7 +213,7 @@
 			position: absolute;
 			top: 0;
 			bottom: 0;
-			background-color: @white;
+			background-color: var(--white);
 			overflow-x: hidden;
 			overflow-y: auto;
 			z-index: var(--topbar-z-index, 400);
@@ -469,10 +222,6 @@
 			border-radius: var(--border-radius-topbar-nav, 24px) 0 0
 				var(--border-radius-topbar-nav, 24px);
 			overscroll-behavior: contain;
-
-			.sidebar:not(:first-child) {
-				margin-left: 1.5rem;
-			}
 
 			> a {
 				font-size: 1rem;
@@ -484,6 +233,7 @@
 				line-height: 1;
 				align-items: center;
 
+				// replace the customized underline hover effect (start from center and expand) by the native underline
 				&:hover {
 					> span {
 						&:before {
@@ -506,31 +256,43 @@
 				}
 			}
 
-			.topbar-link-right {
-				margin-left: auto;
-				color: @black;
-
-				.material-icons {
-					margin: 0;
+			@supports not selector(:has(a)) {
+				> .topbar-link-right {
+					margin-left: auto;
 				}
 			}
 
-			.close-topbar-nav {
-				position: absolute;
-				user-select: none;
-				top: 1.5rem;
-				right: 2rem;
-
-				&:hover {
-					cursor: pointer;
+			@supports selector(:has(a)) {
+				> .topbar-link-right,
+				&:not(&:has(.topbar-link-right)) button:first-of-type {
+					margin-left: auto;
 				}
 			}
 		}
 	}
 }
 
+/*
+LESS mixin function scoped for the topbar on wider viewport, generated by the topbar mixin
+1. Create a mixin called .topbar-@{infix}-wide
+2. For each breakpoint in @grid-breakpoints, create a selector called .topbar-@{infix}-wide
+3. For each selector, create a media query for the breakpoint
+4. Inside each media query, call the mixin .topbar-wide()
+*/
+// TODO: try to refactor it to make it more readable and not use LESS mixin, but native CSS
+
+each(@grid-breakpoints, .(@min-width, @infix) {
+	.topbar-@{infix}-wide {
+			@media screen and (min-width: @min-width) {
+					.topbar-wide();
+			}
+	}
+});
+
 .topbar-wide {
 	--topbar-height: 96px;
+	--border-radius-topbar-nav: 48px;
+	--modal-nav-width: 480px;
 
 	padding: 0 3rem;
 
@@ -546,8 +308,6 @@
 		height: 100%;
 
 		&.topbar-nav-open {
-			--modal-nav-width: 480px;
-
 			width: 100vw;
 			height: 100vh;
 			position: fixed;
@@ -569,10 +329,12 @@
 			.topbar-link-container {
 				width: var(--modal-nav-width, 480px);
 				height: max-content;
-				max-height: calc(100% - 2 * 60px);
+				max-height: calc(
+					100% - 2 * var(--topbar-links-container-spacing, 60px)
+				);
 				margin: var(--topbar-links-container-spacing, 60px);
-				border-radius: var(--border-radius-topbar-nav-wide, 48px);
-				border: solid var(--white) var(--border-radius-topbar-nav-wide, 48px);
+				border-radius: var(--border-radius-topbar-nav, 48px);
+				border: solid var(--white) var(--border-radius-topbar-nav, 48px);
 				padding: 0;
 				overflow-y: auto;
 				scrollbar-width: thin;
@@ -584,7 +346,7 @@
 				}
 
 				&::-webkit-scrollbar-thumb {
-					background: color-mix(in srgb, var(--brown-soft), transparent 35%);
+					background: var(--brand-primary);
 					border-radius: 5rem;
 				}
 
@@ -594,20 +356,10 @@
 					font-size: 1.5rem;
 					padding: 1.5rem 0;
 				}
-
-				> a:not(.close-topbar-nav),
-				> a:not(.close-topbar-nav):hover {
-					> span:before {
-						display: none;
-					}
-				}
 			}
 		}
 
-		.topbar-close {
-			display: none;
-		}
-
+		// links container when in topbar only, not opened in dialog
 		&:not(.topbar-nav-open) .topbar-link-container {
 			position: static;
 			background-color: transparent;
@@ -618,12 +370,12 @@
 			padding: 0 2rem 0 3rem;
 			overflow: visible;
 
-			> a:not(.pinned),
-			> button:not(.pinned) {
+			> :is(a, button):not(.pinned) {
 				display: none;
 			}
 
-			> a:not(.close-topbar-nav) {
+			// :hover underline expand width effects in non-opened topbar links
+			> a {
 				&:hover {
 					> span {
 						&:before {
@@ -640,7 +392,7 @@
 					> span {
 						&:before {
 							width: 100%;
-							background-color: @brand-primary;
+							background-color: var(--brand-primary);
 						}
 
 						text-decoration: none;
@@ -654,7 +406,7 @@
 					&:before {
 						content: "";
 						position: absolute;
-						background-color: currentColor;
+						background-color: currentcolor;
 						height: 2px;
 						bottom: -4px;
 						left: 0;
@@ -665,102 +417,22 @@
 					}
 				}
 			}
-
-			@supports not selector(:has(a)) {
-				> .first-push-right {
-					margin-left: auto;
-				}
-			}
-
-			@supports selector(:has(a)) {
-				> .first-push-right,
-				&:not(&:has(.first-push-right)) button:first-of-type {
-					margin-left: auto;
-				}
-			}
-
-			.close-topbar-nav {
-				display: none;
-			}
 		}
 	}
 }
 
-each(@grid-breakpoints, .(@min-width, @infix) {
-    .topbar-@{infix}-wide {
-        @media screen and (min-width: @min-width) {
-            .topbar-wide();
-        }
-    }
-});
-
 @media (prefers-reduced-motion) {
-	.topbar .topbar-nav {
-		.sidebar .sidebar-nav .main-nav-ul .nav-group {
-			.nav-ul-active() {
-				> .nav-ul {
-					transition: max-height 0s ease-in-out;
-				}
-			}
-		}
-
-		&.topbar-nav-open {
-			animation: fade-in 0s forwards;
-
-			.topbar-link-container {
-				animation: slide-in 0s ease forwards;
-			}
-		}
-
-		&.topbar-nav-closing {
-			animation: fade-out 0s forwards;
-
-			.topbar-link-container {
-				animation: slide-out 0s ease alternate;
-			}
-		}
-	}
+	// TODO: once finish animatiosn / transition -> go through each & disable any animation/transition here
 }
 
 @media (forced-colors: active) {
-	#dg-topbar {
-		border-bottom: 3px solid;
-	}
+	a {
+		border-bottom: 1px solid;
 
-	.topbar-link-container {
-		border: 10px solid;
-	}
-
-	.topbar .topbar-close {
-		outline: 2px solid;
-
+		&:focus,
 		&:hover,
-		&:focus,
-		&.focus {
-			outline: 2px solid;
-		}
-
-		&[active],
-		&:active,
 		&.active {
-			outline: 2px solid;
-		}
-
-		&:focus,
-		&.focus {
-			outline: 2px solid;
-		}
-	}
-
-	.nav-group .nav-leaf {
-		a {
-			border-bottom: 1px solid;
-
-			&:focus,
-			&:hover,
-			&.active {
-				border-bottom: 4px solid;
-			}
+			border-bottom: 4px solid;
 		}
 	}
 }

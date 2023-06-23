@@ -27,11 +27,6 @@ const TopbarBtn = () => (
 			<i className="material-icons topbar-btn-icon">menu</i>
 			{"\n\t\t"}
 		</button>
-		<button type="button" className="topbar-close" aria-label="Close menu">
-			{"\n"}
-			<i className="material-icons topbar-btn-icon">close</i>
-			{"\n\t\t"}
-		</button>
 	</>
 );
 
@@ -48,7 +43,7 @@ const TopbarMenu = ({ menu, logout, sidebar }) => {
 							href="#"
 							className={`${item.name === "Home" ? "active" : ""}${
 								item.pinned ? " pinned" : ""
-							}${item.firstPushRight ? " first-push-right" : ""}`}
+							}${item.firstPushRight ? " topbar-link-right" : ""}`}
 							onClick={(e) => e.preventDefault()}
 						>
 							{"\n"}
