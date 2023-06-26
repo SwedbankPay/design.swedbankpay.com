@@ -118,11 +118,10 @@
 
 		// topbar when dialog is opened
 		&.topbar-nav-open {
+			animation: fade-in ease-in-out 0.3s forwards;
 			position: fixed;
 			display: flex;
 			justify-content: flex-end;
-			backdrop-filter: blur(20px);
-			background-color: color-mix(in srgb, @brand-primary, transparent 40%);
 			// FIXME: only a problem because Firefox bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1437761
 			// can be removed once Firefox fixes this (but it's been opened for several years already, so don't expect to be fixed any time soon)
 			@-moz-document url-prefix() {
@@ -130,6 +129,11 @@
 			}
 
 			.topbar-link-container {
+				animation-name: slide-in-from-right;
+				animation-duration: 0.2s;
+				animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
 				background-color: var(--white);
 				position: relative;
 				flex-direction: column;
@@ -198,12 +202,6 @@
 						outline: 5px solid var(--white);
 					}
 				}
-			}
-		}
-
-		// TODO: topbar animation when dialog is closing
-		&.topbar-nav-closing {
-			.topbar-link-container {
 			}
 		}
 
@@ -422,8 +420,38 @@ each(@grid-breakpoints, .(@min-width, @infix) {
 	}
 }
 
+@keyframes fade-in {
+	from {
+		backdrop-filter: blur(0);
+		background-color: transparent;
+	}
+
+	to {
+		backdrop-filter: blur(20px);
+		background-color: color-mix(in srgb, @brand-primary, transparent 40%);
+	}
+}
+
+@keyframes slide-in-from-right {
+	from {
+		transform: translateX(100%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
 @media (prefers-reduced-motion) {
-	// TODO: once finish animatiosn / transition -> go through each & disable any animation/transition here
+	// TODO: once finish animations / transition -> go through each & disable any animation/transition here
+	.topbar:not(.legacy)
+		nav.topbar-nav:is(.topbar-nav-open, .topbar-nav-closing) {
+		animation-duration: 0ms;
+
+		& > .topbar-link-container {
+			animation-duration: 0ms;
+		}
+	}
 }
 
 @media (forced-colors: active) {
