@@ -8,6 +8,7 @@
 
 - Expandable
   - style new UI
+- Material-icons style includes .material-icons-outlined now
 
 ## Design Guide documentation changes
 
