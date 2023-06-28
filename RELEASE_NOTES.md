@@ -8,7 +8,8 @@
 
 - Expandable
   - style new UI
-- Material-icons style includes .material-icons-outlined now
+- Expand scoping of css for icons to include `.material-icons-outlined` where it was missing
+- New payment-card icon
 
 ## Design Guide documentation changes
 
