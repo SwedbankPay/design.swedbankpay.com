@@ -129,7 +129,7 @@ module.exports = [
 				rootPath: "/components/expandable",
 				componentPath: "components/Expandable",
 				icon: "expand",
-				statusBadges: ["javascript"],
+				statusBadges: ["javascript", "updated"],
 			},
 			{
 				title: "Input field",
