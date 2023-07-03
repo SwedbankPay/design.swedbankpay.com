@@ -5,6 +5,25 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.8.4",
+		title: "New expandable UI before summer break 🏖️",
+		text: (
+			<>
+				<p>
+					We&apos;re getting ready for summer break, and we&apos;re bringing you
+					a new UI for the expandable to play with during the holidays when
+					you're on the beach 🎾🏄‍♂️🌊🌞.
+				</p>
+				<p>
+					Some small things are also tagging along for the ride. Consistent
+					styling for{" "}
+					<CodeTags type="secondary" code=".material-icons-outlined" /> 🎨, and
+					increasing our E2E testing coverage 🤖.
+				</p>
+			</>
+		),
+	},
+	{
 		version: "10.8.3",
 		title: "Harder, Bigger, Rounder, Stronger 🤖",
 		text: (
