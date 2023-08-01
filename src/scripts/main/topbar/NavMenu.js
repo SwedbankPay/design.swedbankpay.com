@@ -105,9 +105,12 @@ export default class NavMenu {
 
 		window.removeEventListener("resize", this.resizeEvent, { passive: true });
 		this.navMenuElement.classList.remove("topbar-nav-open");
-		this.navMenuElement.style.display = "none";
-		this.btnElement.style.display = "flex";
-		this.closeNavIcon.style.display = "none";
+
+		if (isLegacyMenu()) {
+			this.navMenuElement.style.display = "none";
+			this.btnElement.style.display = "flex";
+			this.closeNavIcon.style.display = "none";
+		}
 	}
 
 	_setFirstTabStop(index) {
