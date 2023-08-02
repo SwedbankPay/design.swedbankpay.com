@@ -11,8 +11,6 @@
 	--border-radius-topbar-nav: 32px;
 
 	// TODO: once color-mix get enough support we can replace this by CSS var. Postcss does not parse a color-mix fallback if css-var (since cannot predict ahead of time the dynamic aspect of it)
-	background-color: color-mix(in srgb, @brand-bg-gray, transparent 35%);
-	backdrop-filter: blur(10px) brightness(1.1);
 	height: var(--topbar-height);
 	width: calc(100% - 2 * var(--topbar-spacing-horizontal, 32px));
 	max-width: var(--topbar-max-width, 960px);
@@ -26,6 +24,18 @@
 		var(--border-radius-topbar, 24px);
 	margin: 0 auto;
 
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		backdrop-filter: blur(10px) brightness(1.1);
+		z-index: -1;
+		background-color: color-mix(in srgb, @brand-bg-gray, transparent 35%);
+		border-radius: 0 0 var(--border-radius-topbar, 24px)
+			var(--border-radius-topbar, 24px);
+	}
+
 	.nav-container {
 		display: flex;
 		width: 100%;
@@ -38,9 +48,8 @@
 		top: 0;
 	}
 
-	// necessary for Chromium browsers, otherwise the backdrop-filter will only be applied all the way to the topbar but not beyond
-	&:has(.topbar-nav-open) {
-		backdrop-filter: none;
+	.topbar-nav-closing .topbar-link-container {
+		visibility: hidden;
 	}
 
 	// LESS func to generate classes for triggering sticky starting from a breakpoints
@@ -116,17 +125,16 @@
 		background: transparent;
 		display: none;
 
+		&:not(.topbar-nav-open) {
+			animation: fade-out ease-in-out 0.3s forwards;
+		}
+
 		// topbar when dialog is opened
 		&.topbar-nav-open {
 			animation: fade-in ease-in-out 0.3s forwards;
 			position: fixed;
 			display: flex;
 			justify-content: flex-end;
-			// FIXME: only a problem because Firefox bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1437761
-			// can be removed once Firefox fixes this (but it's been opened for several years already, so don't expect to be fixed any time soon)
-			@-moz-document url-prefix() {
-				margin-left: calc(0px - var(--topbar-spacing-horizontal, 32px));
-			}
 
 			.topbar-link-container {
 				animation-name: slide-in-from-right;
@@ -312,18 +320,6 @@ each(@grid-breakpoints, .(@min-width, @infix) {
 			position: fixed;
 			justify-content: center;
 			align-items: center;
-			// FIXME: only a problem because Firefox bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1437761
-			@-moz-document url-prefix() {
-				margin-left: calc(
-					0px -
-						(
-							(
-									100vw - var(--topbar-max-width, 960px) -
-										var(--vscroll-padding-right, 17px)
-								) / 2
-						)
-				);
-			}
 
 			.topbar-link-container {
 				width: var(--modal-nav-width, 480px);
@@ -421,14 +417,51 @@ each(@grid-breakpoints, .(@min-width, @infix) {
 }
 
 @keyframes fade-in {
-	from {
+	0% {
 		backdrop-filter: blur(0);
 		background-color: transparent;
 	}
 
-	to {
+	33% {
+		background-color: color-mix(in srgb, @brand-primary, transparent 40%);
+	}
+
+	100% {
 		backdrop-filter: blur(20px);
 		background-color: color-mix(in srgb, @brand-primary, transparent 40%);
+	}
+}
+
+@keyframes fade-out {
+	0% {
+		backdrop-filter: blur(20px);
+		background-color: color-mix(in srgb, @brand-primary, transparent 40%);
+		position: fixed;
+		inset: 0;
+		width: 100vw;
+		height: 100vh;
+	}
+
+	1% {
+		backdrop-filter: blur(20px);
+	}
+
+	33% {
+		backdrop-filter: blur(20px);
+		background-color: color-mix(in srgb, @brand-primary, transparent 40%);
+	}
+
+	99% {
+		position: fixed;
+		inset: 0;
+		width: 100vw;
+		height: 100vh;
+		background: transparent;
+	}
+
+	100% {
+		backdrop-filter: blur(0);
+		background-color: transparent;
 	}
 }
 

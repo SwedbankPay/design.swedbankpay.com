@@ -143,8 +143,8 @@ export default class NavMenu {
 		this.isOpen = false;
 
 		window.removeEventListener("resize", this.resizeEvent, { passive: true });
-		this.navMenuElement.classList.remove("topbar-nav-open");
 		this.navMenuElement.classList.add("topbar-nav-closing");
+		this.navMenuElement.classList.remove("topbar-nav-open");
 		setTimeout(() => {
 			this.focusedElementBeforeNav ? this.focusedElemBeforeNav.focus() : null;
 
