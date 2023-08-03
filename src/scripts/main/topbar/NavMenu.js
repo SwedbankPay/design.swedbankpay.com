@@ -4,6 +4,7 @@ const SELECTORS = {
 	BTN: ".topbar-btn",
 	ICON: ".topbar-btn-icon",
 	OPEN: "topbar-nav-open",
+	CLOSING: "topbar-nav-closing",
 };
 
 const FOCUSELEMENTS =
@@ -19,6 +20,9 @@ export default class NavMenu {
 		this._closeHandlerNavMenuElement =
 			this._closeHandlerNavMenuElement.bind(this);
 		this.close = this.close.bind(this);
+		this._removesNavClosing = this._removesNavClosing.bind(this);
+		this._safetyClosingCleanIfDidNotReachEnd =
+			this._safetyClosingCleanIfDidNotReachEnd.bind(this);
 
 		this.constructNavMenu(topbarComponent, navMenu);
 	}
@@ -145,16 +149,12 @@ export default class NavMenu {
 		window.removeEventListener("resize", this.resizeEvent, { passive: true });
 		this.navMenuElement.classList.add("topbar-nav-closing");
 		this.navMenuElement.classList.remove("topbar-nav-open");
-		setTimeout(() => {
-			this.focusedElementBeforeNav ? this.focusedElemBeforeNav.focus() : null;
 
-			this.navMenuElement.classList.remove("topbar-nav-closing");
-
-			if (isLegacyMenu()) {
-				this.btnElement.style.display = "flex";
-				this.closeNavIcon.style.display = "none";
-			}
-		}, 300);
+		this.navMenuElement.addEventListener(
+			"animationend",
+			this._removesNavClosing
+		);
+		this._safetyClosingCleanIfDidNotReachEnd();
 
 		this.btnElement.setAttribute("aria-expanded", "false");
 
@@ -163,5 +163,29 @@ export default class NavMenu {
 
 	_containsPoint(x, y) {
 		return isWithinBoundingBox(x, y, this.linkContainer);
+	}
+
+	_removesNavClosing() {
+		this.focusedElementBeforeNav ? this.focusedElemBeforeNav.focus() : null;
+
+		this.navMenuElement.classList.remove("topbar-nav-closing");
+
+		if (isLegacyMenu()) {
+			this.btnElement.style.display = "flex";
+			this.closeNavIcon.style.display = "none";
+		}
+
+		this.navMenuElement.removeEventListener(
+			"animationend",
+			this._removesNavClosing
+		);
+	}
+
+	_safetyClosingCleanIfDidNotReachEnd() {
+		setTimeout(() => {
+			this.navMenuElement.classList.contains(SELECTORS.CLOSING)
+				? this._removesNavClosing()
+				: null;
+		}, 600);
 	}
 }

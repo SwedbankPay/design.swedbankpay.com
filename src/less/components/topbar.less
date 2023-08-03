@@ -125,7 +125,7 @@
 		background: transparent;
 		display: none;
 
-		&:not(.topbar-nav-open) {
+		&.topbar-nav-closing {
 			animation: fade-out ease-in-out 0.3s forwards;
 		}
 
@@ -140,8 +140,6 @@
 				animation-name: slide-in-from-right;
 				animation-duration: 0.4s;
 				animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
-				animation-iteration-count: 1;
-				animation-fill-mode: forwards;
 				background-color: var(--white);
 				position: relative;
 				flex-direction: column;
