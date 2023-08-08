@@ -72,7 +72,7 @@ const AppHeader = () => (
 			wide="xl"
 			logout
 			id="demo-topbar"
-			sticky={true}
+			sticky={false}
 		/>
 		<main className="topbar-content"></main>
 	</>
