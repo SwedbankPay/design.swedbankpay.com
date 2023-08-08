@@ -295,15 +295,15 @@ each(@grid-breakpoints, .(@min-width, @infix) {
 });
 
 .topbar-wide {
-	--topbar-height: 96px;
+	--topbar-height: 88px;
 	--border-radius-topbar-nav: 48px;
 	--modal-nav-width: 480px;
 
-	padding: 0 3rem;
+	padding: 0 var(--topbar-spacing-horizontal);
 
 	.topbar-logo img {
-		height: 48px;
-		width: 100px;
+		height: var(--topbar-spacing-horizontal);
+		width: auto;
 	}
 
 	.topbar-nav {
