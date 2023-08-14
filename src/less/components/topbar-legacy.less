@@ -356,11 +356,11 @@
 		}
 
 		&.topbar-nav-open {
-			animation: fade-in 0.5s forwards;
+			animation: fade-in-legacy 0.5s forwards;
 			border-top: solid 1px @brand-bg-gray;
 
 			.topbar-link-container {
-				animation: slide-in 0.5s ease forwards;
+				animation: slide-in-legacy 0.5s ease forwards;
 
 				.sidebar {
 					display: block;
@@ -399,10 +399,10 @@
 		}
 
 		&.topbar-nav-closing {
-			animation: fade-out 0.3s forwards;
+			animation: fade-out-legacy 0.3s forwards;
 
 			.topbar-link-container {
-				animation: slide-out 0.3s ease alternate;
+				animation: slide-out-legacy 0.3s ease alternate;
 
 				> a:first-of-type {
 					margin-top: 1rem;
@@ -592,21 +592,21 @@
 	}
 
 	each(@grid-breakpoints, .(@min-width, @infix) {
-			.topbar-@{infix}-wide {
-					@media screen and (min-width: @min-width) {
-							.topbar-wide();
-					}
-			}
+		&.topbar-@{infix}-wide {
+				@media screen and (min-width: @min-width) {
+						.topbar-wide();
+				}
+		}
 	});
 
 	// Keyframe animations
-	@keyframes slide-in {
+	@keyframes slide-in-legacy {
 		100% {
 			transform: translateX(0%);
 		}
 	}
 
-	@keyframes slide-out {
+	@keyframes slide-out-legacy {
 		0% {
 			transform: translateX(0%);
 		}
@@ -616,7 +616,7 @@
 		}
 	}
 
-	@keyframes fade-in {
+	@keyframes fade-in-legacy {
 		0% {
 			background: transparent;
 		}
@@ -626,7 +626,7 @@
 		}
 	}
 
-	@keyframes fade-out {
+	@keyframes fade-out-legacy {
 		0% {
 			background: fade(@black, 50%);
 		}
@@ -654,18 +654,18 @@
 				}
 
 				&.topbar-nav-open {
-					animation: fade-in 0s forwards;
+					animation: fade-in-legacy 0s forwards;
 
 					.topbar-link-container {
-						animation: slide-in 0s ease forwards;
+						animation: slide-in-legacy 0s ease forwards;
 					}
 				}
 
 				&.topbar-nav-closing {
-					animation: fade-out 0s forwards;
+					animation: fade-out-legacy 0s forwards;
 
 					.topbar-link-container {
-						animation: slide-out 0s ease alternate;
+						animation: slide-out-legacy 0s ease alternate;
 					}
 				}
 			}

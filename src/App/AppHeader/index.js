@@ -71,7 +71,7 @@ const AppHeader = () => (
 			topbarContent={menu}
 			wide="xl"
 			logout
-			id="demo-topbar"
+			id="app-topbar"
 			sticky={false}
 		/>
 		<main className="topbar-content"></main>

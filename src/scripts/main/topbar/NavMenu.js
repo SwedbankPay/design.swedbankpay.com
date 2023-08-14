@@ -10,9 +10,6 @@ const SELECTORS = {
 const FOCUSELEMENTS =
 	'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
 
-const isLegacyMenu = () =>
-	document.querySelector(".topbar").classList.contains("legacy");
-
 export default class NavMenu {
 	constructor(topbarComponent, navMenu) {
 		this._openHandler = this._openHandler.bind(this);
@@ -32,7 +29,7 @@ export default class NavMenu {
 		this.isOpen = navMenu.classList.contains(SELECTORS.OPEN);
 		this.navMenuElement = navMenu;
 		this.linkContainer = this.navMenuElement.querySelector(
-			".topbar-link-container"
+			".topbar-link-container",
 		);
 		this.closeNavIcon = topbarComponent.querySelector(".topbar-close");
 		this.btnElement = topbarComponent.querySelector(SELECTORS.BTN);
@@ -58,7 +55,7 @@ export default class NavMenu {
 		if (this.navMenuElement) {
 			this.navMenuElement.addEventListener(
 				"mousedown",
-				this._closeHandlerNavMenuElement
+				this._closeHandlerNavMenuElement,
 			);
 
 			try {
@@ -93,7 +90,7 @@ export default class NavMenu {
 		this.navMenuElement
 			.querySelectorAll("a")
 			.forEach((anchor) =>
-				anchor.addEventListener("click", this._closeHandler)
+				anchor.addEventListener("click", this._closeHandler),
 			);
 	}
 
@@ -110,10 +107,10 @@ export default class NavMenu {
 		window.removeEventListener("resize", this.resizeEvent, { passive: true });
 		this.navMenuElement.classList.remove("topbar-nav-open");
 
-		if (isLegacyMenu()) {
+		if (this._isLegacyMenu(this.navMenuElement)) {
 			this.navMenuElement.style.display = "none";
-			this.btnElement.style.display = "flex";
 			this.closeNavIcon.style.display = "none";
+			this.btnElement.style.display = "flex";
 		}
 	}
 
@@ -131,7 +128,8 @@ export default class NavMenu {
 		window.addEventListener("resize", this.resizeEvent, { passive: true });
 		this.navMenuElement.classList.add("topbar-nav-open");
 
-		if (isLegacyMenu()) {
+		if (this._isLegacyMenu(this.navMenuElement)) {
+			this.navMenuElement.style.display = "block";
 			this.btnElement.style.display = "none";
 			this.closeNavIcon.style.display = "flex";
 		}
@@ -152,8 +150,9 @@ export default class NavMenu {
 
 		this.navMenuElement.addEventListener(
 			"animationend",
-			this._removesNavClosing
+			this._removesNavClosing,
 		);
+
 		this._safetyClosingCleanIfDidNotReachEnd();
 
 		this.btnElement.setAttribute("aria-expanded", "false");
@@ -170,14 +169,15 @@ export default class NavMenu {
 
 		this.navMenuElement.classList.remove("topbar-nav-closing");
 
-		if (isLegacyMenu()) {
+		if (this._isLegacyMenu(this.navMenuElement)) {
+			this.navMenuElement.style.display = "none";
 			this.btnElement.style.display = "flex";
 			this.closeNavIcon.style.display = "none";
 		}
 
 		this.navMenuElement.removeEventListener(
 			"animationend",
-			this._removesNavClosing
+			this._removesNavClosing,
 		);
 	}
 
@@ -187,5 +187,9 @@ export default class NavMenu {
 				? this._removesNavClosing()
 				: null;
 		}, 600);
+	}
+
+	_isLegacyMenu(navMenu) {
+		return Boolean(navMenu?.closest(".topbar")?.classList.contains("legacy"));
 	}
 }
