@@ -25,6 +25,7 @@ const topbarTabs = [
 		desktopTopbar: true,
 		isModalUnexpandedFullScreen: true,
 		hasModal: true,
+		isLegacy: false,
 	},
 	{
 		name: "mobile",
@@ -32,6 +33,7 @@ const topbarTabs = [
 		desktopTopbar: false,
 		isModalUnexpandedFullScreen: true,
 		hasModal: true,
+		isLegacy: false,
 	},
 	{
 		name: "legacy desktop",
@@ -39,6 +41,7 @@ const topbarTabs = [
 		desktopTopbar: true,
 		isModalUnexpandedFullScreen: false,
 		hasModal: false,
+		isLegacy: true,
 	},
 	{
 		name: "legacy mobile",
@@ -46,25 +49,30 @@ const topbarTabs = [
 		desktopTopbar: false,
 		isModalUnexpandedFullScreen: false,
 		hasModal: true,
+		isLegacy: true,
 	},
 ];
 let brand;
+
+/**
+ *
+ * @param {import("@playwright/test").Page} page Playwright page object
+ * @param {string} tabBtnText text of the doc preview container tab
+ */
+const clickDocPreviewTab = async (page, tabBtnText) => {
+	await page.getByRole("link", { name: tabBtnText, exact: true }).click();
+};
 
 test.describe("visual regressions topbar", () => {
 	test.beforeEach(async ({ page }) => {
 		await page.goto("http://localhost:3000/components/topbar");
 
 		brand = (await page.title()).includes("Swedbank") ? "SwedbankPay" : "PayEx";
-		// await page
-		// 	.getByRole("link", { name: topbarTab.btnText, exact: true })
-		// 	.click();
 	});
 
 	test(`general UI closed`, async ({ page }) => {
 		for (const topbarTab of topbarTabs) {
-			await page
-				.getByRole("link", { name: topbarTab.btnText, exact: true })
-				.click();
+			clickDocPreviewTab(page, topbarTab.btnText);
 
 			await expect(
 				page.locator(".component-preview-content > div"),
@@ -74,9 +82,7 @@ test.describe("visual regressions topbar", () => {
 
 	test(`hover & active & normal links`, async ({ page }) => {
 		for (const topbarTab of topbarTabs.filter((tab) => tab.desktopTopbar)) {
-			await page
-				.getByRole("link", { name: topbarTab.btnText, exact: true })
-				.click();
+			clickDocPreviewTab(page, topbarTab.btnText);
 
 			await page.locator("#demo-topbar").getByRole("link").nth(2).hover();
 			await expect(
@@ -89,9 +95,8 @@ test.describe("visual regressions topbar", () => {
 
 	test(`general UI modal opened`, async ({ page }) => {
 		for (const topbarTab of topbarTabs.filter((tab) => tab.hasModal)) {
-			await page
-				.getByRole("link", { name: topbarTab.btnText, exact: true })
-				.click();
+			await page.reload();
+			clickDocPreviewTab(page, topbarTab.btnText);
 
 			await page.locator("#demo-topbar").getByLabel("Open menu").click();
 
@@ -102,36 +107,44 @@ test.describe("visual regressions topbar", () => {
 			await expect(modalContainer).toHaveScreenshot(
 				`${brand}-topbar-${topbarTab.name}-opened.png`,
 			);
-
-			await page.keyboard.press("Escape");
 		}
 	});
 
 	test(`only pinned links are visible on non-expanded view`, async ({
 		page,
 	}) => {
-		for (const topbarTab of topbarTabs.filter((tab) => tab.desktopTopbar)) {
-			await page
-				.getByRole("link", { name: topbarTab.btnText, exact: true })
-				.click();
+		for (const topbarTab of topbarTabs.filter(
+			(tab) => tab.desktopTopbar && !tab.isLegacy,
+		)) {
+			clickDocPreviewTab(page, topbarTab.btnText);
 
 			// screenshot hover & active & normal links
-			await expect(
-				page
-					.locator("#demo-topbar")
-					.getByRole("navigation")
-					.locator("a.pinned"),
-			).toBeVisible();
-			await expect(
-				page
-					.locator("#demo-topbar")
-					.getByRole("navigation")
-					.locator("a:not(.pinned)"),
-			).not.toBeVisible();
+			const pinnedLinks = page
+				.locator("#demo-topbar")
+				.getByRole("navigation")
+				.locator("a.pinned");
+			const pinnedLinksAmount = await pinnedLinks.count();
+
+			for (let linkIndex = 0; linkIndex < pinnedLinksAmount; linkIndex++) {
+				const loopedLink = pinnedLinks.nth(linkIndex);
+
+				await expect(loopedLink).toBeVisible();
+			}
+
+			const nonPinnedLinks = page
+				.locator("#demo-topbar")
+				.getByRole("navigation")
+				.locator("a:not(.pinned)");
+			const nonPinnedLinksAmount = await nonPinnedLinks.count();
+
+			for (let linkIndex = 0; linkIndex < nonPinnedLinksAmount; linkIndex++) {
+				const loopedLink = nonPinnedLinks.nth(linkIndex);
+
+				await expect(loopedLink).not.toBeVisible();
+			}
 		}
 	});
 
 	// TODO: test align right is only 1 link
-	// TODO: create a utility function to refactor `await page.getByRole("link", { name: topbarTab.btnText, exact: true }).click();`
 	// TODO: on new: test scroll inside modal works and last item is visible
 });
