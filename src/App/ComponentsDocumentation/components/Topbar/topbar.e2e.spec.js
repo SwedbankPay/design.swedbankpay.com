@@ -55,6 +55,10 @@ test.describe("visual regressions topbar", () => {
 	});
 
 	test(`general UI closed`, async ({ page }) => {
+		await page
+			.getByRole("heading", { name: "Topbar", exact: true })
+			.isVisible();
+
 		for (const topbarTab of topbarTabs) {
 			clickDocPreviewTab(page, topbarTab.btnText);
 
