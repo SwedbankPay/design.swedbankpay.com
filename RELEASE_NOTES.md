@@ -12,6 +12,8 @@
 
 ## Testing
 
+- E2E tests for topbar
+
 ## Design System website
 
 - fix a homepage UI bug (section's height)
