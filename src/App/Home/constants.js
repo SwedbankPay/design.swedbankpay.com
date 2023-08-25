@@ -5,6 +5,18 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.8.5",
+		title: "The CSS url / Import Patch 🐛🔨",
+		text: (
+			<>
+				<p>
+					The bug introduced in 10.8.1 breaking CSS URL paths is getting its
+					patch 🩹🚀.
+				</p>
+			</>
+		),
+	},
+	{
 		version: "10.8.4",
 		title: "New expandable UI before summer break 🏖️",
 		text: (
