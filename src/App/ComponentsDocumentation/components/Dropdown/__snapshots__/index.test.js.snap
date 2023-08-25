@@ -293,6 +293,18 @@ exports[`Documentation: Dropdown DeveloperDocumentation renders 1`] = `
     Developer Documentation
   </h2>
   <h3>
+    Style
+  </h3>
+  <p>
+    Add 
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      .no-rotation
+    </code>
+     CSS class on the dropdown toggle to disable the icon rotation.
+  </p>
+  <h3>
     JavaScript methods
   </h3>
   <p>
