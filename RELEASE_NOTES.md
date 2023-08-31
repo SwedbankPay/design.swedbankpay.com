@@ -4,16 +4,14 @@
 
 ## Bug Fixes
 
-- We reverted back the way CSS stylesheets were imported internally. It caused a regression bug, svg files would not load when imported from CSS properties (e.g. checkbox, ...). Paths resolution were failing. (not an issue for projects importing CSS via CDN, only for the ones importing styles via the local npm package)
-
 ## Component changes
 
 ### Non breaking UI changes
 
+- add possibility to disable rotation of the dropdown toggle icon on active state
+
 ## Testing
 
-- E2E tests for topbar
+- E2E tests for dropdown component
 
 ## Design System website
-
-- fix a homepage UI bug (section's height)
