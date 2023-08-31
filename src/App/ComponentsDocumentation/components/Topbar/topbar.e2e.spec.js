@@ -11,7 +11,7 @@ test("Topbar page exist", async ({ page }) => {
 	await expect(page.getByRole("link", { name: "Topbar" })).toHaveCount(
 		page.viewportSize().width < 991 ? 1 : 2,
 	);
-	await page.getByText("calendar_view_dayAccordionarrow_forward").click();
+	await page.getByText("call_to_actionTopbararrow_forward").click();
 	await expect(page).toHaveTitle(/Topbar/);
 	await expect(
 		page.getByRole("heading", { name: "Topbar", exact: true, level: 1 }),
@@ -20,24 +20,8 @@ test("Topbar page exist", async ({ page }) => {
 
 const topbarTabs = [
 	{
-		name: "desktop",
-		btnText: "Desktop",
-		desktopTopbar: true,
-		isModalUnexpandedFullScreen: true,
-		hasModal: true,
-		isLegacy: false,
-	},
-	{
-		name: "mobile",
-		btnText: "Mobile/tablet",
-		desktopTopbar: false,
-		isModalUnexpandedFullScreen: true,
-		hasModal: true,
-		isLegacy: false,
-	},
-	{
 		name: "legacy desktop",
-		btnText: "⚠️ Legacy Desktop",
+		btnText: "Desktop",
 		desktopTopbar: true,
 		isModalUnexpandedFullScreen: false,
 		hasModal: false,
@@ -45,7 +29,7 @@ const topbarTabs = [
 	},
 	{
 		name: "legacy mobile",
-		btnText: "⚠️ Legacy Mobile/tablet",
+		btnText: "Mobile/tablet",
 		desktopTopbar: false,
 		isModalUnexpandedFullScreen: false,
 		hasModal: true,
@@ -71,6 +55,10 @@ test.describe("visual regressions topbar", () => {
 	});
 
 	test(`general UI closed`, async ({ page }) => {
+		await expect(
+			page.getByRole("heading", { name: "Topbar", exact: true }),
+		).toBeVisible();
+
 		for (const topbarTab of topbarTabs) {
 			clickDocPreviewTab(page, topbarTab.btnText);
 
@@ -80,7 +68,10 @@ test.describe("visual regressions topbar", () => {
 		}
 	});
 
+	// for legacy topbar, on mobile we skip since no links are displayed, no nav displayed in topbar, only in modal
 	test(`hover & active & normal links`, async ({ page }) => {
+		test.skip((await page.viewportSize().width) < 1200);
+
 		for (const topbarTab of topbarTabs.filter((tab) => tab.desktopTopbar)) {
 			clickDocPreviewTab(page, topbarTab.btnText);
 
@@ -144,7 +135,4 @@ test.describe("visual regressions topbar", () => {
 			}
 		}
 	});
-
-	// TODO: test align right is only 1 link
-	// TODO: on new: test scroll inside modal works and last item is visible
 });

@@ -147,7 +147,7 @@ const dropdownSidebarOptions = () => ({
 			],
 		},
 		{
-			id: "preffered_position",
+			id: "preferred_position",
 			title: "Position",
 			values: [
 				{
@@ -181,6 +181,19 @@ const dropdownSidebarOptions = () => ({
 					name: "Disabled",
 					value: {
 						disabled: true,
+					},
+				},
+			],
+		},
+	],
+	checkbox: [
+		{
+			inputs: [
+				{
+					id: "toggle-icon-rotation",
+					name: "Disable toggle icon rotation",
+					value: {
+						noRotation: true,
 					},
 				},
 			],
@@ -237,7 +250,7 @@ export const overviewDropdown = {
 						],
 					},
 					{
-						id: "preffered_position",
+						id: "preferred_position",
 						title: "Position",
 						values: [
 							{
@@ -271,6 +284,19 @@ export const overviewDropdown = {
 								name: "Disabled",
 								value: {
 									disabled: true,
+								},
+							},
+						],
+					},
+				],
+				checkbox: [
+					{
+						inputs: [
+							{
+								id: "toggle-icon-rotation",
+								name: "Disable toggle icon rotation",
+								value: {
+									noRotation: true,
 								},
 							},
 						],
@@ -485,6 +511,7 @@ export const howToUse = [
 							icon="filter_list"
 							iconAfter={false}
 							largePadding={true}
+							noRotation={true}
 						/>
 						<ButtonComponent
 							type="secondary"

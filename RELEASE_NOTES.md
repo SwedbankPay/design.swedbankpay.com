@@ -1,13 +1,17 @@
 # Changelog
 
-## [10.8.5] - 03.07.2023
+## [10.8.5] - 25.08.2023
+
+## Bug Fixes
 
 ## Component changes
 
 ### Non breaking UI changes
 
+- add possibility to disable rotation of the dropdown toggle icon on active state
+
 ## Testing
 
-## Design System website
+- E2E tests for dropdown component
 
-- fix a homepage UI bug (section's height)
+## Design System website

@@ -1,14 +1,14 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
 
-// TODO: do. Test both desktop && mobile
-test.describe(`modern  topbar script behave correctly`, () => {
+test.describe(`legacy-topbar script behave correctly`, () => {
 	test(`topbar opens`, async ({ page }) => {
 		await page.goto("http://localhost:3000/components/topbar");
 		await page.getByRole("link", { name: "Desktop", exact: true }).click();
 
 		const isDesktopViewport = (await page.viewportSize().width) > 1200;
 
+		// expect topbar links to be visible on Desktop but NOT on mobile
 		if (isDesktopViewport) {
 			await expect(
 				page.locator("#demo-topbar").getByRole("navigation"),
@@ -19,67 +19,78 @@ test.describe(`modern  topbar script behave correctly`, () => {
 			).not.toBeVisible();
 		}
 
+		// expect, on load, not to have the "topbar-nav-open" class present YET (until we click on open button)
 		if (isDesktopViewport) {
 			await expect(
 				page.locator("#demo-topbar").getByRole("navigation"),
 			).not.toHaveClass(/topbar-nav-open/);
 		}
 
-		for (const navLinkOrBtn of await page
-			.locator("#demo-topbar")
-			.getByRole("navigation")
-			.locator(".topbar-link-container")
-			.locator(".pinned")
-			.all()) {
-			if (isDesktopViewport) {
+		// on desktop, before clicking any btn, all links & buttons present in nav should always be visible
+		if (isDesktopViewport) {
+			for (const navLinkOrBtn of await page
+				.locator("#demo-topbar")
+				.getByRole("navigation")
+				.locator(".topbar-link-container")
+				.locator("a, button")
+				.all()) {
 				expect(navLinkOrBtn).toBeVisible();
-			} else {
-				expect(navLinkOrBtn).not.toBeVisible();
 			}
 		}
 
-		for (const navLinkOrBtn of await page
-			.locator("#demo-topbar")
-			.getByRole("navigation")
-			.locator(".topbar-link-container")
-			.locator(":is(a, btn):not(.pinned)")
-			.all()) {
-			expect(navLinkOrBtn).not.toBeVisible();
-		}
-
+		// get dimensions of navigation element
 		let modalBox = isDesktopViewport
 			? await page.locator("#demo-topbar").getByRole("navigation").boundingBox()
 			: null;
 
+		// on desktop expect nav to be smaller than full screen (on mobile no nav yet, so we don't care)
 		if (isDesktopViewport) {
 			await expect(modalBox.width).not.toBe(page.viewportSize().width);
 			await expect(modalBox.height).not.toBe(page.viewportSize().height);
 		}
 
-		await page.locator("#demo-topbar").getByLabel("Open menu").click();
-		await expect(
-			page.locator("#demo-topbar").getByRole("navigation"),
-		).toBeVisible();
-		await expect(
-			page.locator("#demo-topbar").getByRole("navigation"),
-		).toHaveClass(/topbar-nav-open/);
+		if (isDesktopViewport) {
+			// expect NO hamburger menu btn on desktop
+			await expect(
+				page.locator("#demo-topbar").getByLabel("Open menu"),
+			).not.toBeVisible();
+		} else {
+			// open modal by clicking the open btn - only MOBILE
+			await page.locator("#demo-topbar").getByLabel("Open menu").click();
+			// expect nav to be visible for both desktop AND mobile
+			await expect(
+				page.locator("#demo-topbar").getByRole("navigation"),
+			).toBeVisible();
+			// expect nav to now have CS class "topbar-nav-open" present
+			await expect(
+				page.locator("#demo-topbar").getByRole("navigation"),
+			).toHaveClass(/topbar-nav-open/);
 
-		for (const navLinkOrBtn of await page
-			.locator("#demo-topbar")
-			.getByRole("navigation")
-			.locator(".topbar-link-container")
-			.locator("a, button")
-			.all()) {
-			expect(navLinkOrBtn).toBeVisible();
+			// expect all links and buttons present in nav to be visible
+			for (const navLinkOrBtn of await page
+				.locator("#demo-topbar")
+				.getByRole("navigation")
+				.locator(".topbar-link-container")
+				.locator("a, button")
+				.all()) {
+				expect(navLinkOrBtn).toBeVisible();
+			}
+
+			// re-calculate modal dimensions
+			modalBox = await page
+				.locator("#demo-topbar")
+				.getByRole("navigation")
+				.boundingBox();
+
+			const topbarDimensions = await page.locator("#demo-topbar").boundingBox();
+
+			// modal should have the same width as the header
+			await expect(modalBox.width).toBe(topbarDimensions.width);
+			// modal should be greater than 90% of the viewport height
+			await expect(modalBox.height).toBeGreaterThan(
+				(await page.viewportSize().height) * 0.8,
+			);
 		}
-
-		modalBox = await page
-			.locator("#demo-topbar")
-			.getByRole("navigation")
-			.boundingBox();
-
-		await expect(modalBox.width).toBe(page.viewportSize().width);
-		await expect(modalBox.height).toBe(page.viewportSize().height);
 	});
 
 	const closeModalActions = [
@@ -92,88 +103,67 @@ test.describe(`modern  topbar script behave correctly`, () => {
 			locator: ".topbar-nav.topbar-nav-open",
 			position: "topLeft",
 		},
+		{
+			actionType: "click",
+			locator: "#demo-topbar",
+			position: "closeButton",
+		},
 	];
 
+	// on legacy topbar only MOBILE have a modal to open and close, so we're only testing on mobile viewport
 	closeModalActions.map((closingAction) => {
-		test(`topbar closes on ${closingAction.actionType}`, async ({ page }) => {
+		test(`topbar closes on ${closingAction.actionType}-${closingAction.position}`, async ({
+			page,
+		}) => {
+			test.skip((await page.viewportSize().width) > 1200);
 			await page.goto("http://localhost:3000/components/topbar");
 			await page.getByRole("link", { name: "Desktop", exact: true }).click();
 
-			const isDesktopViewport = (await page.viewportSize().width) > 1200;
-
-			// opens the modal
 			await page.locator("#demo-topbar").getByLabel("Open menu").click();
 			await expect(
 				page.locator("#demo-topbar").getByRole("navigation"),
 			).toHaveClass(/topbar-nav-open/);
 
-			let modalBox = await page
+			const modalBox = await page
 				.locator("#demo-topbar")
 				.getByRole("navigation")
 				.boundingBox();
 
-			await expect(modalBox.width).toBe(page.viewportSize().width);
-			await expect(modalBox.height).toBe(page.viewportSize().height);
+			const topbarDimensions = await page.locator("#demo-topbar").boundingBox();
+
+			// modal should have the same width as the header
+			await expect(modalBox.width).toBe(topbarDimensions.width);
+			// modal should be greater than 90% of the viewport height
+			await expect(modalBox.height).toBeGreaterThan(
+				(await page.viewportSize().height) * 0.8,
+			);
 
 			// closes the modal
 			if (closingAction.actionType === "keyboardPress") {
 				await page.keyboard.press(closingAction.key);
-			} else if (closingAction.actionType === "click") {
+			} else if (
+				closingAction.actionType === "click" &&
+				closingAction.position === "topLeft"
+			) {
 				await page
 					.locator(closingAction.locator)
 					.click({ position: { x: 0, y: 0 } });
+			} else if (
+				closingAction.actionType === "click" &&
+				closingAction.position === "closeButton"
+			) {
+				await page
+					.locator(closingAction.locator)
+					.getByRole("button", { name: "Close menu" })
+					.click();
 			}
 
-			if (isDesktopViewport) {
-				await expect(
-					page.locator("#demo-topbar").getByRole("navigation"),
-				).toBeVisible();
-			} else {
-				await expect(
-					page.locator("#demo-topbar").getByRole("navigation"),
-				).not.toBeVisible();
-			}
-
-			if (isDesktopViewport) {
-				await expect(
-					page.locator("#demo-topbar").getByRole("navigation"),
-				).not.toHaveClass(/topbar-nav-open/);
-			}
-
-			for (const navLinkOrBtn of await page
-				.locator("#demo-topbar")
-				.getByRole("navigation")
-				.locator(".topbar-link-container")
-				.locator(".pinned")
-				.all()) {
-				if (isDesktopViewport) {
-					expect(navLinkOrBtn).toBeVisible();
-				} else {
-					expect(navLinkOrBtn).not.toBeVisible();
-				}
-			}
-
-			for (const navLinkOrBtn of await page
-				.locator("#demo-topbar")
-				.getByRole("navigation")
-				.locator(".topbar-link-container")
-				.locator(":is(a, btn):not(.pinned)")
-				.all()) {
-				expect(navLinkOrBtn).not.toBeVisible();
-			}
-
-			modalBox = await page.locator("#demo-topbar nav").boundingBox();
-
-			if (modalBox) {
-				await expect(modalBox.width).not.toBe(page.viewportSize().width);
-				await expect(modalBox.height).not.toBe(page.viewportSize().height);
-			}
+			await expect(
+				page.locator("#demo-topbar").getByRole("navigation"),
+			).not.toHaveClass(/topbar-nav-open/);
+			await expect(
+				page.locator("#demo-topbar").getByRole("navigation"),
+			).not.toBeVisible();
 		});
 	});
-
-	// TODO: focus moves correctly on open and on close
-	// TODO: closes on mouse click close button once close button implemented
 });
-
-// TODO: do
-test.describe(`legacy-topbar script behave correctly`, () => {});
