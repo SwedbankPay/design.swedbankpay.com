@@ -23,6 +23,7 @@ const Overview = () => (
 			showCasePanel
 			codeFigure
 			showCasePanelAdvanced={topbarShowcase}
+			showExpandPreview={true}
 		/>
 		<h3>When to consider something else</h3>
 		<ul className="list list-bullet">
