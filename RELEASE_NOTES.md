@@ -15,3 +15,5 @@
 - E2E tests for dropdown component
 
 ## Design System website
+
+- expand components preview containers to full screen
