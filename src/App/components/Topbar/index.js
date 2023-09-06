@@ -47,33 +47,62 @@ const TopbarBtn = ({ legacy = false }) => {
 	);
 };
 
+const ConditionalWrapper = ({ condition, wrapper, children }) =>
+	condition ? wrapper(children) : children;
+
 const TopbarMenu = ({ menu, logout, sidebar, legacy }) => {
 	const { items } = menu;
 
 	return (
 		<nav className="topbar-nav">
 			<div className="topbar-link-container">
-				{items.map((item, i) => (
-					<Fragment key={i}>
-						{"\n"}
-						<a
-							href="#"
-							className={`${item.name === "Home" ? "active" : ""}${
-								item.pinned ? " pinned" : ""
-							}${item.firstPushRight ? " topbar-link-right" : ""}`}
-							onClick={(e) => e.preventDefault()}
+				{!legacy && (
+					<div className="topbar-modal-header">
+						<button
+							type="button"
+							className="topbar-close btn btn-icon btn-xs"
+							aria-label="Close menu"
+							title="Close menu"
 						>
+							<i className="material-icons-outlined" aria-hidden="true">
+								close
+							</i>
+						</button>
+					</div>
+				)}
+				<ConditionalWrapper
+					condition={!legacy}
+					wrapper={(children) => (
+						<div className="topbar-modal-body">{children}</div>
+					)}
+				>
+					{items.map((item, i) => (
+						<Fragment key={i}>
 							{"\n"}
-							<span>{item.name}</span>
-							{"\n"}
-							{item.icon ? <i className="material-icons">{item.icon}</i> : null}
-							{"\n"}
-						</a>
-						{i === 0 && sidebar && (
-							<SidebarComponent id="topbar-sidebar" navList={SidebarNavList} />
-						)}
-					</Fragment>
-				))}
+							<a
+								href="#"
+								className={`${item.name === "Home" ? "active" : ""}${
+									item.pinned ? " pinned" : ""
+								}${item.firstPushRight ? " topbar-link-right" : ""}`}
+								onClick={(e) => e.preventDefault()}
+							>
+								{"\n"}
+								<span>{item.name}</span>
+								{"\n"}
+								{item.icon ? (
+									<i className="material-icons">{item.icon}</i>
+								) : null}
+								{"\n"}
+							</a>
+							{i === 0 && sidebar && (
+								<SidebarComponent
+									id="topbar-sidebar"
+									navList={SidebarNavList}
+								/>
+							)}
+						</Fragment>
+					))}
+				</ConditionalWrapper>
 				{"\n"}
 				{logout ? legacy ? <TopbarLogoutLegacy /> : <TopbarLogout /> : null}
 			</div>
@@ -82,13 +111,14 @@ const TopbarMenu = ({ menu, logout, sidebar, legacy }) => {
 };
 
 const TopbarLogout = () => (
-	<ButtonComponent
-		type="primary"
-		label="Log out"
-		icon="exit_to_app"
-		size="sm"
-		className="anchored"
-	/>
+	<div className="topbar-modal-footer">
+		<ButtonComponent
+			type="secondary"
+			label="Log out"
+			icon="exit_to_app"
+			size="sm"
+		/>
+	</div>
 );
 
 const TopbarLogoutLegacy = () => (
