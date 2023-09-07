@@ -355,9 +355,12 @@ const ComponentPreview = ({
 
 		setExpandedPreview(state) {
 			this.setState({ previewExpanded: state });
-			state
-				? document.body.classList.add("has-vscroll")
-				: document.body.classList.remove("has-vscroll");
+
+			if (state) {
+				document.body.dataset.previewExpandedHasVscroll = "true";
+			} else {
+				delete document.body.dataset.previewExpandedHasVscroll;
+			}
 		}
 
 		render() {
@@ -378,7 +381,7 @@ const ComponentPreview = ({
 								{this.props.showExpandPreview &&
 									(!this.state.previewExpanded ? (
 										<button
-											className="btn btn-icon btn-xs"
+											className="btn btn-icon btn-xs glow-on-hover"
 											type="button"
 											aria-label="Expand the preview container to full screen"
 											onClick={() => this.setExpandedPreview(true)}
@@ -392,7 +395,7 @@ const ComponentPreview = ({
 										</button>
 									) : (
 										<button
-											className="btn btn-icon btn-xs"
+											className="btn btn-icon btn-xs glow-on-hover"
 											type="button"
 											aria-label="Zoom out"
 											onClick={() => this.setExpandedPreview(false)}
