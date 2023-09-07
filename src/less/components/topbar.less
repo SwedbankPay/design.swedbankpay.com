@@ -156,6 +156,8 @@
 					flex-direction: column;
 					align-items: stretch;
 					padding: var(--topbar-opened-padding, 24px)
+						calc(var(--topbar-opened-padding-body, 30px) - 10px)
+						var(--topbar-opened-padding, 24px)
 						var(--topbar-opened-padding-body, 30px);
 					flex: 1;
 					border-top: 1px solid var(--gray);
@@ -205,6 +207,10 @@
 						width: var(--topbar-spacing-horizontal, 32px);
 						background-color: var(--gray);
 						border: transparent;
+
+						> i {
+							font-size: 24px;
+						}
 					}
 				}
 
@@ -255,7 +261,7 @@
 							content: "";
 							position: absolute;
 							background-color: currentcolor;
-							height: 2px;
+							height: 3px;
 							bottom: -4px;
 							left: 0;
 							right: 0;
@@ -361,21 +367,23 @@
 					);
 					margin: var(--topbar-links-container-spacing, 60px);
 					padding: 0;
-					overflow-y: auto;
-					scrollbar-width: thin;
-					scrollbar-color: var(--brown-soft) transparent;
-
-					&::-webkit-scrollbar {
-						background-color: transparent;
-						width: 10px;
-					}
-
-					&::-webkit-scrollbar-thumb {
-						background: var(--brown-soft);
-						border-radius: 5rem;
-					}
 
 					.topbar-modal-body {
+						overflow-y: auto;
+						scrollbar-width: thin;
+						scrollbar-color: var(--brown-soft) transparent;
+						scrollbar-gutter: stable;
+
+						&::-webkit-scrollbar {
+							background-color: transparent;
+							width: 10px;
+						}
+
+						&::-webkit-scrollbar-thumb {
+							background: var(--brown-soft);
+							border-radius: 5rem;
+						}
+
 						> a,
 						> a:not(.pinned) {
 							display: flex;

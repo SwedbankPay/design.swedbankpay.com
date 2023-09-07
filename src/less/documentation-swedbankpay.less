@@ -1052,6 +1052,17 @@
 						}
 					}
 				}
+
+				@supports not selector(:has(a, b)) {
+					+ div.d-flex > div.d-flex {
+						max-width: 100%;
+					}
+				}
+				@supports selector(:has(a, b)) {
+					+ div > div:has(> .component-preview) {
+						max-width: 100%;
+					}
+				}
 			}
 
 			.component-preview {
@@ -1827,7 +1838,7 @@
 		.topbar {
 			z-index: calc(var(--sidebar-z-index, 400) - 1);
 
-			+ main {
+			&.legacy + main {
 				height: 10rem;
 				background-color: @light-gray;
 			}
