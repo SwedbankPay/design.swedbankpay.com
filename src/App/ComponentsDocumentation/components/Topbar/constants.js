@@ -151,7 +151,7 @@ export const topbarShowcase = {
 		},
 		{
 			tab: "🧪 experimental Desktop",
-			component: <Topbar wide="xl" logout />,
+			component: <Topbar wide="xl" logout legacy={false} />,
 			title: "Desktop",
 			description: (
 				<p>
@@ -165,7 +165,7 @@ export const topbarShowcase = {
 		},
 		{
 			tab: "🧪 experimental Mobile/tablet",
-			component: <Topbar logout wide={false} />,
+			component: <Topbar logout wide={false} legacy={false} />,
 			title: "Mobile/tablet",
 			description: (
 				<>
