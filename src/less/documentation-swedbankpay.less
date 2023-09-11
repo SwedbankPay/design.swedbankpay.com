@@ -993,11 +993,16 @@
 							right: 56px; // width of options-open icon
 							height: 39px;
 						}
+
+						&:has(.options-open.d-none):after {
+							right: 0; // no need to shift left when options sidebar button is not displayed
+						}
 					}
 
 					&.tabs-fade-left {
 						&:before {
 							height: 39px;
+							left: 0;
 						}
 					}
 
