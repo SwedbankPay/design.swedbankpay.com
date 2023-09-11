@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer } from "@docutils";
 import TopbarComponent from "@components/Topbar";
 import CodeTags from "@components/CodeTags";
-import { menu, topbarShowcase } from "./constants";
+import { menu, menuLegacy, topbarShowcase } from "./constants";
 import { topbar, sidebar } from "@src/scripts/main";
 import NpmInformation from "@docutils/NpmInformation";
 
@@ -83,7 +83,7 @@ const DeveloperDocumentation = () => (
 				<div className="container-fluid">
 					<TopbarComponent
 						id="demo-topbar-sticky"
-						topbarContent={menu}
+						topbarContent={menuLegacy}
 						wide="xl"
 						sticky
 					/>

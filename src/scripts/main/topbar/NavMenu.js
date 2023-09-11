@@ -29,7 +29,7 @@ export default class NavMenu {
 		this.isOpen = navMenu.classList.contains(SELECTORS.OPEN);
 		this.navMenuElement = navMenu;
 		this.linkContainer = this.navMenuElement.querySelector(
-			".topbar-link-container",
+			".topbar-link-container"
 		);
 		this.closeNavIcon = topbarComponent.querySelector(".topbar-close");
 		this.btnElement = topbarComponent.querySelector(SELECTORS.BTN);
@@ -55,7 +55,7 @@ export default class NavMenu {
 		if (this.navMenuElement) {
 			this.navMenuElement.addEventListener(
 				"mousedown",
-				this._closeHandlerNavMenuElement,
+				this._closeHandlerNavMenuElement
 			);
 
 			try {
@@ -90,7 +90,7 @@ export default class NavMenu {
 		this.navMenuElement
 			.querySelectorAll("a")
 			.forEach((anchor) =>
-				anchor.addEventListener("click", this._closeHandler),
+				anchor.addEventListener("click", this._closeHandler)
 			);
 	}
 
@@ -150,7 +150,7 @@ export default class NavMenu {
 
 		this.navMenuElement.addEventListener(
 			"animationend",
-			this._removesNavClosing,
+			this._removesNavClosing
 		);
 
 		this._safetyClosingCleanIfDidNotReachEnd();
@@ -177,7 +177,7 @@ export default class NavMenu {
 
 		this.navMenuElement.removeEventListener(
 			"animationend",
-			this._removesNavClosing,
+			this._removesNavClosing
 		);
 	}
 
@@ -190,6 +190,8 @@ export default class NavMenu {
 	}
 
 	_isLegacyMenu(navMenu) {
-		return Boolean(navMenu?.closest(".topbar")?.classList.contains("legacy"));
+		return Boolean(
+			!navMenu?.closest(".topbar")?.classList.contains("experimental")
+		);
 	}
 }

@@ -1838,7 +1838,7 @@
 		.topbar {
 			z-index: calc(var(--sidebar-z-index, 400) - 1);
 
-			&.legacy + main {
+			&:not(.experimental) + main {
 				height: 10rem;
 				background-color: @light-gray;
 			}

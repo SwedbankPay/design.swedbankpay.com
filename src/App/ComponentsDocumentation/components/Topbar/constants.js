@@ -65,7 +65,7 @@ export const menu = {
 	],
 };
 
-const menuLegacy = {
+export const menuLegacy = {
 	btn: {
 		name: "Menu",
 		icon: "menu",
@@ -113,10 +113,11 @@ export const topbarShowcase = {
 	elements: [
 		{
 			tab: "Desktop",
-			component: <Topbar wide="xl" logout />,
+			component: <Topbar wide="xl" logout legacy={true} />,
 			title: "Desktop",
 			description: (
 				<p>
+					{/* TODO: mention it's legacy topbar and it all involve to use this in terms of breaking changes */}
 					The minimum requirement in a Topbar is to include the Swedbank Pay
 					Logotype, common additional functionality is a list with navigation
 					links. On desktop use{" "}
@@ -127,11 +128,12 @@ export const topbarShowcase = {
 		},
 		{
 			tab: "Mobile/tablet",
-			component: <Topbar logout wide={false} />,
+			component: <Topbar logout wide={false} legacy={true} />,
 			title: "Mobile/tablet",
 			description: (
 				<>
 					<p>
+						{/* TODO: mention it's legacy topbar and it all involve to use this in terms of breaking changes */}
 						The minimum requirement in a Topbar is to include the Swedbank Pay
 						Logotype, common additional functionality is a list with navigation
 						links. On smaller screens use a menu button to toggle a vertical
@@ -148,12 +150,11 @@ export const topbarShowcase = {
 			),
 		},
 		{
-			tab: "⚠️ Legacy Desktop",
-			component: <Topbar wide="xl" logout legacy={true} />,
+			tab: "🧪 experimental Desktop",
+			component: <Topbar wide="xl" logout />,
 			title: "Desktop",
 			description: (
 				<p>
-					{/* TODO: mention it's legacy topbar and it all involve to use this in terms of breaking changes */}
 					The minimum requirement in a Topbar is to include the Swedbank Pay
 					Logotype, common additional functionality is a list with navigation
 					links. On desktop use{" "}
@@ -163,13 +164,12 @@ export const topbarShowcase = {
 			),
 		},
 		{
-			tab: "⚠️ Legacy Mobile/tablet",
-			component: <Topbar logout wide={false} legacy={true} />,
+			tab: "🧪 experimental Mobile/tablet",
+			component: <Topbar logout wide={false} />,
 			title: "Mobile/tablet",
 			description: (
 				<>
 					<p>
-						{/* TODO: mention it's legacy topbar and it all involve to use this in terms of breaking changes */}
 						The minimum requirement in a Topbar is to include the Swedbank Pay
 						Logotype, common additional functionality is a list with navigation
 						links. On smaller screens use a menu button to toggle a vertical

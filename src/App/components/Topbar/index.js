@@ -21,7 +21,7 @@ const getDevLogo = (legacy) => {
 	}
 };
 
-const TopbarBtn = ({ legacy = false }) => {
+const TopbarBtn = ({ legacy = true }) => {
 	return (
 		<>
 			<button
@@ -190,12 +190,12 @@ const Topbar = ({
 	png,
 	sticky,
 	sidebar,
-	legacy = false,
+	legacy = true,
 }) => (
 	<header
 		className={`topbar${wide ? ` topbar-${wide}-wide` : ""}${
 			sticky ? " topbar-sticky" : ""
-		}${legacy ? " legacy" : ""}`}
+		}${legacy ? "" : " experimental"}`}
 		id={id}
 	>
 		{"\n"}
