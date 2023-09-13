@@ -93,20 +93,14 @@ const SelectPanel = ({ id, routes, topbarId, topbarSidebar }) => {
 		<>
 			{topbarId ? (
 				// mobile & tablet hamburger menu sidebar
-				<div id={id} className="sidebar dg-sidebar">
-					<nav className="sidebar-nav">
-						<ul className="main-nav-ul">
-							{routes.map((route, i) => (
-								<MobileNavGroup
-									sidebarId={id}
-									key={`nav_group_${i}`}
-									route={route}
-									index={i}
-								/>
-							))}
-						</ul>
-					</nav>
-				</div>
+				routes.map((route, i) => (
+					<MobileNavGroup
+						sidebarId={id}
+						key={`nav_group_${i}`}
+						route={route}
+						index={i}
+					/>
+				))
 			) : (
 				// desktop
 				<div id={id} className="sidebar">
