@@ -1841,11 +1841,15 @@
 		}
 
 		.topbar {
-			z-index: calc(var(--sidebar-z-index, 400) - 1);
+			z-index: calc(var(--sidebar-z-index, 400));
 
-			&:not(.experimental) + main {
-				height: 10rem;
-				background-color: @light-gray;
+			&:not(.experimental) {
+				z-index: calc(var(--sidebar-z-index, 400) - 1);
+
+				& + main {
+					height: 10rem;
+					background-color: @light-gray;
+				}
 			}
 		}
 	}
