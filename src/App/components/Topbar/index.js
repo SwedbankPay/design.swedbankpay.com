@@ -92,8 +92,12 @@ const TopbarMenu = ({ menu, logout, sidebar, legacy }) => {
 								}${item.firstPushRight ? " topbar-link-right" : ""}`}
 								onClick={(e) => e.preventDefault()}
 							>
-								{"\n"}
-								<span>{item.name}</span>
+								{!legacy && (
+									<>
+										{"\n"}
+										<span>{item.name}</span>
+									</>
+								)}
 								{"\n"}
 								{item.icon ? (
 									<>
@@ -101,6 +105,12 @@ const TopbarMenu = ({ menu, logout, sidebar, legacy }) => {
 										{"\n"}
 									</>
 								) : null}
+								{legacy && (
+									<>
+										{"\n"}
+										<span>{item.name}</span>
+									</>
+								)}
 							</a>
 							{i === 0 && sidebar && (
 								<SidebarComponent
