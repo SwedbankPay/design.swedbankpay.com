@@ -58,16 +58,22 @@ const TopbarMenu = ({ menu, logout, sidebar, legacy }) => {
 			<div className="topbar-link-container">
 				{!legacy && (
 					<div className="topbar-modal-header">
+						{"\n"}
 						<button
 							type="button"
 							className="topbar-close btn btn-icon btn-xs"
 							aria-label="Close menu"
 							title="Close menu"
 						>
+							{"\n"}
 							<i className="material-icons-outlined" aria-hidden="true">
+								{"\n"}
 								close
+								{"\n"}
 							</i>
+							{"\n"}
 						</button>
+						{"\n"}
 					</div>
 				)}
 				<ConditionalWrapper
@@ -90,9 +96,11 @@ const TopbarMenu = ({ menu, logout, sidebar, legacy }) => {
 								<span>{item.name}</span>
 								{"\n"}
 								{item.icon ? (
-									<i className="material-icons">{item.icon}</i>
+									<>
+										<i className="material-icons">{item.icon}</i>
+										{"\n"}
+									</>
 								) : null}
-								{"\n"}
 							</a>
 							{i === 0 && sidebar && (
 								<SidebarComponent
@@ -105,6 +113,7 @@ const TopbarMenu = ({ menu, logout, sidebar, legacy }) => {
 				</ConditionalWrapper>
 				{"\n"}
 				{logout ? legacy ? <TopbarLogoutLegacy /> : <TopbarLogout /> : null}
+				{"\n"}
 			</div>
 		</nav>
 	);
@@ -112,12 +121,14 @@ const TopbarMenu = ({ menu, logout, sidebar, legacy }) => {
 
 const TopbarLogout = () => (
 	<div className="topbar-modal-footer">
+		{"\n"}
 		<ButtonComponent
 			type="secondary"
 			label="Log out"
 			icon="exit_to_app"
 			size="sm"
 		/>
+		{"\n"}
 	</div>
 );
 
