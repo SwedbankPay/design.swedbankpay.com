@@ -19,33 +19,33 @@ const basename = removeTrailingSlash(process.env.basename) || "/";
 const brand = process.env.brand;
 
 const Home = React.lazy(() =>
-	import(/* webpackChunkName: "home.chunk" */ "./Home/index.js")
+	import(/* webpackChunkName: "home.chunk" */ "./Home/index.js"),
 );
 
 const GetStarted = React.lazy(() =>
-	import(/* webpackChunkName: "get-started.chunk" */ "./GetStarted/index.js")
+	import(/* webpackChunkName: "get-started.chunk" */ "./GetStarted/index.js"),
 );
 
 const Components = React.lazy(() =>
 	import(
 		/* webpackChunkName: "components.chunk" */ "./ComponentsDocumentation/index.js"
-	)
+	),
 );
 
 const Identity = React.lazy(() =>
-	import(/* webpackChunkName: "core.chunk" */ "./Identity/index.js")
+	import(/* webpackChunkName: "core.chunk" */ "./Identity/index.js"),
 );
 
 const Patterns = React.lazy(() =>
-	import(/* webpackChunkName: "patterns.chunk" */ "./Patterns/index.js")
+	import(/* webpackChunkName: "patterns.chunk" */ "./Patterns/index.js"),
 );
 
 const ErrorPage404 = React.lazy(() =>
-	import(/* webpackChunkName: "404.chunk" */ "./ErrorPage404/index.js")
+	import(/* webpackChunkName: "404.chunk" */ "./ErrorPage404/index.js"),
 );
 
 const Utilities = React.lazy(() =>
-	import(/* webpackChunkName: "utilities.chunk" */ "./Utilities/index.js")
+	import(/* webpackChunkName: "utilities.chunk" */ "./Utilities/index.js"),
 );
 
 const ScrollToTop = ({ children }) => {
@@ -68,7 +68,7 @@ export const VersionTopBanner = () => {
 			.then((data) => data.json())
 			.then((data) => setVersion(data.latestVersion))
 			.catch((error) =>
-				console.warn("Could not fetch latest version from Azure:", error)
+				console.warn("Could not fetch latest version from Azure:", error),
 			);
 	}, []);
 
