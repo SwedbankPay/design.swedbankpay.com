@@ -175,10 +175,8 @@ const TopbarLogo = ({ png, legacy }) => (
 					}.png`}
 					alt={`${brand} logo`}
 					className={`${
-						legacy
-							? "logotype-vertical logotype-xs"
-							: "logotype-horizontal logotype-sm"
-					}`}
+						legacy ? "logotype-vertical" : "logotype-horizontal"
+					} logotype-sm`}
 				/>
 			) : (
 				<img
@@ -191,10 +189,8 @@ const TopbarLogo = ({ png, legacy }) => (
 					}
 					alt={`${brand} logo`}
 					className={`${
-						legacy
-							? "logotype-vertical logotype-xs"
-							: "logotype-horizontal logotype-sm"
-					}`}
+						legacy ? "logotype-vertical" : "logotype-horizontal"
+					} logotype-sm`}
 				/>
 			)}
 			{"\n"}
