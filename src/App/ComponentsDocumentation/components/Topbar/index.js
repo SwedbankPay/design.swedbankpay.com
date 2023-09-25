@@ -108,6 +108,37 @@ const DeveloperDocumentation = () => (
 		</section>
 
 		<section>
+			<h3>Migrating to the new Topbar ( ⚠️experimental🧪 )</h3>
+			<p>
+				A future version of the topbar can be used. It is in experimental state.
+				Things can be modified and depending of your use some features might
+				still be missing.
+				<br />
+				This is done by appending the class{" "}
+				<CodeTags type="secondary" code=".experimental" /> to the element with
+				class <CodeTags type="secondary" code=".topbar" />.
+			</p>
+			<p>
+				There is several breaking changes (details are following lower down)
+			</p>
+			<ul>
+				<li>order of elements in the topbar</li>
+				<li>
+					container links content is modified (added a header & footer to the
+					topbar, and links are grouped in a specific container)
+				</li>
+				<li>logo used in the topbar is different</li>
+				<li>
+					links need to have a `.pinned` class to be visible in the topbar
+				</li>
+			</ul>
+			<p>
+				To do the migration please follow instructions on{" "}
+				<Link to="/components/topbar-migrating-to-v2">the migration page</Link>.
+			</p>
+		</section>
+
+		<section>
 			<h3>Javascript methods</h3>
 			<p>
 				<CodeTags type="secondary" code="dg.topbar.init()" /> initializes the
