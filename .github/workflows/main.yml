@@ -18,7 +18,7 @@ jobs:
 
       - name: Get info
         run: |
-          appid=${{ secrets.AZURE_CREDENTIALS_STAGE }}
+          export appid="${{ secrets.AZURE_CREDENTIALS_STAGE }}"
           echo $appid | jq -r '.appId'
           echo $appid | jq -r '.name'
 
