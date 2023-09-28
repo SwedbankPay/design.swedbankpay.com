@@ -16,12 +16,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Get info
-        run: |
-          appid=$(echo ${{ secrets.AZURE_CREDENTIALS_STAGE }} | jq -r '.appId')
-          echo $appid | jq -r '.appId'
-          echo $appid | jq -r '.name'
-
       # Set brand specific variables
       - name: Environment variables
         id: variables
