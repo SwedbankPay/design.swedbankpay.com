@@ -48,8 +48,7 @@ const VisionBoard = () => (
 
 		<div className="d-flex flex-column align-items-center">
 			<img
-				// src={`${basename}img/documentation/playbook/playbook-design-vision-vision-board.png`}
-				src={`${basename}designguide/assets/playbook/playbook-design-vision-vision-board.png`}
+				src={`${basename}img/documentation/playbook/playbook-design-vision-vision-board.png`}
 				className="w-100"
 				alt="Playbook illustration"
 			/>
@@ -71,24 +70,21 @@ const ChunkyFriendly = () => (
 			<div className="row">
 				<div className="col-sm">
 					<img
-						// src={`${basename}img/documentation/playbook/playbook-design-vision-chunky-friendly-1.png`}
-						src={`${basename}designguide/assets/playbook/playbook-design-vision-chunky-friendly-1.png`}
+						src={`${basename}img/documentation/playbook/playbook-design-vision-chunky-friendly-1.png`}
 						className=""
 						alt="Playbook illustration"
 					/>
 				</div>
 				<div className="col-sm">
 					<img
-						// src={`${basename}img/documentation/playbook/playbook-design-vision-chunky-friendly-2.png`}
-						src={`${basename}designguide/assets/playbook/playbook-design-vision-chunky-friendly-2.png`}
+						src={`${basename}img/documentation/playbook/playbook-design-vision-chunky-friendly-2.png`}
 						className=""
 						alt="Playbook illustration"
 					/>
 				</div>
 				<div className="col-sm">
 					<img
-						// src={`${basename}img/documentation/playbook/playbook-design-vision-chunky-friendly-3.png`}
-						src={`${basename}designguide/assets/playbook/playbook-design-vision-chunky-friendly-3.png`}
+						src={`${basename}img/documentation/playbook/playbook-design-vision-chunky-friendly-3.png`}
 						className=""
 						alt="Playbook illustration"
 					/>
@@ -113,26 +109,22 @@ const BoldTypography = () => (
 		<div className="container px-0 playbook-bold-typo-img-container">
 			<div className="row justify-content-between">
 				<img
-					// src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-1.png`}
-					src={`${basename}designguide/assets/playbook/playbook-design-vision-bold-typo-1.png`}
+					src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-1.png`}
 					className=""
 					alt="Playbook illustration"
 				/>
 				<img
-					// src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-2.png`}
-					src={`${basename}designguide/assets/playbook/playbook-design-vision-bold-typo-2.png`}
+					src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-2.png`}
 					className=""
 					alt="Playbook illustration"
 				/>
 				<img
-					// src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-3.png`}
-					src={`${basename}designguide/assets/playbook/playbook-design-vision-bold-typo-3.png`}
+					src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-3.png`}
 					className=""
 					alt="Playbook illustration"
 				/>
 				<img
-					// src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-4.png`}
-					src={`${basename}designguide/assets/playbook/playbook-design-vision-bold-typo-4.png`}
+					src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-4.png`}
 					className=""
 					alt="Playbook illustration"
 				/>
@@ -192,50 +184,21 @@ const Colors = () => (
 				<div className="col-sm px-0">
 					<img
 						className="w-100 shift-right-1"
-						// src={`${basename}img/documentation/playbook/playbook-design-vision-colors-1.png`}
-						src={`${basename}designguide/assets/playbook/playbook-design-vision-colors-1.png`}
+						src={`${basename}img/documentation/playbook/playbook-design-vision-colors-1.png`}
 						alt="illustration swedbankpay playbook colors"
 					/>
 				</div>
 				<div className="col-sm px-0">
 					<img
 						className="w-100"
-						// src={`${basename}img/documentation/playbook/playbook-design-vision-colors-2.png`}
-						src={`${basename}designguide/assets/playbook/playbook-design-vision-colors-2.png`}
+						src={`${basename}img/documentation/playbook/playbook-design-vision-colors-2.png`}
 						alt="illustration swedbankpay playbook colors"
 					/>
 				</div>
 				<div className="col-sm px-0">
 					<img
 						className="w-100"
-						// src={`${basename}img/documentation/playbook/playbook-design-vision-colors-3.png`}
-						src={`${basename}designguide/assets/playbook/playbook-design-vision-colors-3.png`}
-						alt="illustration swedbankpay playbook colors"
-					/>
-				</div>
-			</div>
-			<div className="row">
-				<div className="col-sm px-0">
-					<img
-						className="w-100"
-						// src={`${basename}img/documentation/playbook/playbook-design-vision-colors-4.png`}
-						src={`${basename}designguide/assets/playbook/playbook-design-vision-colors-4.png`}
-						alt="illustration swedbankpay playbook colors"
-					/>
-				</div>
-				<div className="col-sm px-0">
-					<img
-						className="w-100"
-						// src={`${basename}img/documentation/playbook/playbook-design-vision-colors-5.png`}
-						src={`${basename}designguide/assets/playbook/playbook-design-vision-colors-5.png`}
-						alt="illustration swedbankpay playbook colors"
-					/>
-				</div>
-				<div className="col-sm px-0">
-					<img
-						className="w-100"
-						// src={`${basename}img/documentation/playbook/playbook-design-vision-colors-6.png`}
-						src={`${basename}designguide/assets/playbook/playbook-design-vision-colors-6.png`}
+						src={`${basename}img/documentation/playbook/playbook-design-vision-colors-3.png`}
 						alt="illustration swedbankpay playbook colors"
 					/>
 				</div>
@@ -244,24 +207,44 @@ const Colors = () => (
 				<div className="col-sm px-0">
 					<img
 						className="w-100"
-						// src={`${basename}img/documentation/playbook/playbook-design-vision-colors-7.png`}
-						src={`${basename}designguide/assets/playbook/playbook-design-vision-colors-7.png`}
+						src={`${basename}img/documentation/playbook/playbook-design-vision-colors-4.png`}
 						alt="illustration swedbankpay playbook colors"
 					/>
 				</div>
 				<div className="col-sm px-0">
 					<img
 						className="w-100"
-						// src={`${basename}img/documentation/playbook/playbook-design-vision-colors-8.png`}
-						src={`${basename}designguide/assets/playbook/playbook-design-vision-colors-8.png`}
+						src={`${basename}img/documentation/playbook/playbook-design-vision-colors-5.png`}
 						alt="illustration swedbankpay playbook colors"
 					/>
 				</div>
 				<div className="col-sm px-0">
 					<img
 						className="w-100"
-						// src={`${basename}img/documentation/playbook/playbook-design-vision-colors-9.png`}
-						src={`${basename}designguide/assets/playbook/playbook-design-vision-colors-9.png`}
+						src={`${basename}img/documentation/playbook/playbook-design-vision-colors-6.png`}
+						alt="illustration swedbankpay playbook colors"
+					/>
+				</div>
+			</div>
+			<div className="row">
+				<div className="col-sm px-0">
+					<img
+						className="w-100"
+						src={`${basename}img/documentation/playbook/playbook-design-vision-colors-7.png`}
+						alt="illustration swedbankpay playbook colors"
+					/>
+				</div>
+				<div className="col-sm px-0">
+					<img
+						className="w-100"
+						src={`${basename}img/documentation/playbook/playbook-design-vision-colors-8.png`}
+						alt="illustration swedbankpay playbook colors"
+					/>
+				</div>
+				<div className="col-sm px-0">
+					<img
+						className="w-100"
+						src={`${basename}img/documentation/playbook/playbook-design-vision-colors-9.png`}
 						alt="illustration swedbankpay playbook colors"
 					/>
 				</div>
@@ -283,7 +266,7 @@ const DesignVision = () => (
 		<VisionBoard />
 		<ChunkyFriendly />
 		<BoldTypography />
-		{/* <DelicateLines /> */}
+		<DelicateLines />
 		<Rounded />
 		<Colors />
 	</DocContainer>

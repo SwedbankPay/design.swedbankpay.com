@@ -52,24 +52,21 @@ const DesignProfiles = () => (
 				<div className="col">
 					<img
 						className="w-100"
-						// src={`${basename}img/documentation/playbook/playbook-profiles-profile-1.png`}
-						src={`${basename}designguide/assets/playbook/playbook-profiles-profile-1.png`}
+						src={`${basename}img/documentation/playbook/playbook-profiles-profile-1.png`}
 						alt="content"
 					/>
 				</div>
 				<div className="col">
 					<img
 						className="w-100"
-						// src={`${basename}img/documentation/playbook/playbook-profiles-profile-2.png`}
-						src={`${basename}designguide/assets/playbook/playbook-profiles-profile-2.png`}
+						src={`${basename}img/documentation/playbook/playbook-profiles-profile-2.png`}
 						alt="Light UI"
 					/>
 				</div>
 				<div className="col">
 					<img
 						className="w-100"
-						// src={`${basename}img/documentation/playbook/playbook-profiles-profile-3.png`}
-						src={`${basename}designguide/assets/playbook/playbook-profiles-profile-3.png`}
+						src={`${basename}img/documentation/playbook/playbook-profiles-profile-3.png`}
 						alt="Expert UI"
 					/>
 				</div>
@@ -102,16 +99,14 @@ const Content = () => (
 					<div className="col-sm px-0">
 						<img
 							className="w-100 shift-right-1"
-							// src={`${basename}img/documentation/playbook/playbook-profiles-content-1.png`}
-							src={`${basename}designguide/assets/playbook/playbook-profiles-content-1.png`}
+							src={`${basename}img/documentation/playbook/playbook-profiles-content-1.png`}
 							alt="illustration swedbankpay playbook profiles"
 						/>
 					</div>
 					<div className="col-sm px-0 d-flex flex-column">
 						<img
 							className="w-100 shift-left-1"
-							// src={`${basename}img/documentation/playbook/playbook-profiles-content-2.png`}
-							src={`${basename}designguide/assets/playbook/playbook-profiles-content-2.png`}
+							src={`${basename}img/documentation/playbook/playbook-profiles-content-2.png`}
 							alt="illustration swedbankpay playbook profiles"
 						/>
 					</div>
@@ -125,16 +120,14 @@ const Content = () => (
 					<div className="col-sm-8 pl-0">
 						<img
 							className="w-100"
-							// src={`${basename}img/documentation/playbook/playbook-profiles-content-3.png`}
-							src={`${basename}designguide/assets/playbook/playbook-profiles-content-3.png`}
+							src={`${basename}img/documentation/playbook/playbook-profiles-content-3.png`}
 							alt="illustration swedbankpay playbook profiles"
 						/>
 					</div>
 					<div className="col-sm-3 pr-0">
 						<img
 							className="w-100"
-							// src={`${basename}img/documentation/playbook/playbook-profiles-content-4.png`}
-							src={`${basename}designguide/assets/playbook/playbook-profiles-content-4.png`}
+							src={`${basename}img/documentation/playbook/playbook-profiles-content-4.png`}
 							alt="illustration swedbankpay playbook profiles"
 						/>
 					</div>
@@ -171,8 +164,7 @@ const LightUI = () => (
 					<div className="col-sm-3 px-0">
 						<img
 							className=""
-							// src={`${basename}img/documentation/playbook/playbook-profiles-lightui-1.png`}
-							src={`${basename}designguide/assets/playbook/playbook-profiles-lightui-1.png`}
+							src={`${basename}img/documentation/playbook/playbook-profiles-lightui-1.png`}
 							alt="illustration swedbankpay playbook profiles"
 						/>
 					</div>
@@ -186,32 +178,28 @@ const LightUI = () => (
 					<div className="col-sm-3">
 						<img
 							className="w-100"
-							// src={`${basename}img/documentation/playbook/playbook-profiles-lightui-2.png`}
-							src={`${basename}designguide/assets/playbook/playbook-profiles-lightui-2.png`}
+							src={`${basename}img/documentation/playbook/playbook-profiles-lightui-2.png`}
 							alt="illustration swedbankpay playbook profiles"
 						/>
 					</div>
 					<div className="col-sm-3">
 						<img
 							className="w-100"
-							// src={`${basename}img/documentation/playbook/playbook-profiles-lightui-3.png`}
-							src={`${basename}designguide/assets/playbook/playbook-profiles-lightui-3.png`}
+							src={`${basename}img/documentation/playbook/playbook-profiles-lightui-3.png`}
 							alt="illustration swedbankpay playbook profiles"
 						/>
 					</div>
 					<div className="col-sm-3">
 						<img
 							className="w-100"
-							// src={`${basename}img/documentation/playbook/playbook-profiles-lightui-4.png`}
-							src={`${basename}designguide/assets/playbook/playbook-profiles-lightui-4.png`}
+							src={`${basename}img/documentation/playbook/playbook-profiles-lightui-4.png`}
 							alt="illustration swedbankpay playbook profiles"
 						/>
 					</div>
 					<div className="col-sm-3">
 						<img
 							className="w-100"
-							// src={`${basename}img/documentation/playbook/playbook-profiles-lightui-5.png`}
-							src={`${basename}designguide/assets/playbook/playbook-profiles-lightui-5.png`}
+							src={`${basename}img/documentation/playbook/playbook-profiles-lightui-5.png`}
 							alt="illustration swedbankpay playbook profiles"
 						/>
 					</div>
@@ -248,8 +236,7 @@ const ExpertUI = () => (
 					<div className="col d-flex justify-content-center">
 						<img
 							className="w-100"
-							// src={`${basename}img/documentation/playbook/playbook-profiles-expert-1.png`}
-							src={`${basename}designguide/assets/playbook/playbook-profiles-expert-1.png`}
+							src={`${basename}img/documentation/playbook/playbook-profiles-expert-1.png`}
 							alt="illustration swedbankpay playbook profiles"
 						/>
 					</div>
@@ -272,8 +259,7 @@ const Profiles = () => (
 		</p>
 		<img
 			className=""
-			// src={`${basename}img/documentation/playbook/playbook-profiles-intro.png`}
-			src={`${basename}designguide/assets/playbook/playbook-profiles-intro.png`}
+			src={`${basename}img/documentation/playbook/playbook-profiles-intro.png`}
 			alt="illustration swedbankpay playbook profiles"
 		/>
 		<HowToUse />

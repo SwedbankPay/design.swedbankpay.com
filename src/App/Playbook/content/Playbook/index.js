@@ -90,8 +90,7 @@ const Playbook = () => (
 		</p>
 		<div className="d-flex flex-column align-items-center my-5">
 			<img
-				// src={`${basename}img/documentation/playbook/playbook-illustration-intro-swedbankpay.jpg`}
-				src={`${basename}designguide/assets/playbook/playbook-illustration-intro-swedbankpay.jpg`}
+				src={`${basename}img/documentation/playbook/playbook-illustration-intro-swedbankpay.jpg`}
 				className="w-100"
 				alt="Playbook illustration with the Swedbankpay branding"
 			/>
