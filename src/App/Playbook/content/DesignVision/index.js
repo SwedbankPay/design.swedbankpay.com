@@ -71,21 +71,18 @@ const ChunkyFriendly = () => (
 				<div className="col-sm">
 					<img
 						src={`${basename}img/documentation/playbook/playbook-design-vision-chunky-friendly-1.png`}
-						className=""
 						alt="Playbook illustration"
 					/>
 				</div>
 				<div className="col-sm">
 					<img
 						src={`${basename}img/documentation/playbook/playbook-design-vision-chunky-friendly-2.png`}
-						className=""
 						alt="Playbook illustration"
 					/>
 				</div>
 				<div className="col-sm">
 					<img
 						src={`${basename}img/documentation/playbook/playbook-design-vision-chunky-friendly-3.png`}
-						className=""
 						alt="Playbook illustration"
 					/>
 				</div>
@@ -106,28 +103,39 @@ const BoldTypography = () => (
 			and highly contrasting title.
 		</p>
 
-		<div className="container px-0 playbook-bold-typo-img-container">
-			<div className="row justify-content-between">
-				<img
-					src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-1.png`}
-					className=""
-					alt="Playbook illustration"
-				/>
-				<img
-					src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-2.png`}
-					className=""
-					alt="Playbook illustration"
-				/>
-				<img
-					src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-3.png`}
-					className=""
-					alt="Playbook illustration"
-				/>
-				<img
-					src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-4.png`}
-					className=""
-					alt="Playbook illustration"
-				/>
+		<div className="container px-0">
+			<div
+				className="row ratio-responsive-row d-flex justify-content-between mx-0"
+				style={{ "--row-height": 163, "--row-width": 702 }}
+			>
+				<div className="col-sm">
+					<img
+						src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-1.png`}
+						className="w-100"
+						alt="Playbook illustration"
+					/>
+				</div>
+				<div className="col-sm">
+					<img
+						src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-2.png`}
+						className="w-100"
+						alt="Playbook illustration"
+					/>
+				</div>
+				<div className="col-sm">
+					<img
+						src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-3.png`}
+						className="w-100"
+						alt="Playbook illustration"
+					/>
+				</div>
+				<div className="col-sm">
+					<img
+						src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-4.png`}
+						className="w-100"
+						alt="Playbook illustration"
+					/>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -142,7 +150,34 @@ const DelicateLines = () => (
 			and not be in focus, we only use the thin lines. When we want it to stand
 			out, we combine it with larger solid shapes or type.
 		</p>
-		{/* TODO: add illustrations */}
+		<div className="container px-0">
+			<div className="grid-row delicate-lines">
+				<img
+					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-1.png`}
+					alt="Playbook illustration"
+				/>
+				<img
+					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-2.png`}
+					alt="Playbook illustration"
+				/>
+				<img
+					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-3.png`}
+					alt="Playbook illustration"
+				/>
+				<img
+					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-4.png`}
+					alt="Playbook illustration"
+				/>
+				<img
+					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-5.png`}
+					alt="Playbook illustration"
+				/>
+				<img
+					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-6.png`}
+					alt="Playbook illustration"
+				/>
+			</div>
+		</div>
 	</section>
 );
 
@@ -154,7 +189,41 @@ const Rounded = () => (
 			information and serving you what you need. The UI should reflect this
 			friendliness, and does so with rounded corners and soft shapes.
 		</p>
-		{/* TODO: add illustrations */}
+		<div className="container px-0">
+			<div
+				className="row ratio-responsive-row d-flex justify-content-between mx-0"
+				style={{ "--row-height": 174, "--row-width": 710 }}
+			>
+				<div className="col-sm">
+					<img
+						className="w-100"
+						src={`${basename}img/documentation/playbook/playbook-design-vision-rounded-1.png`}
+						alt="illustration swedbankpay playbook rounded"
+					/>
+				</div>
+				<div className="col-sm">
+					<img
+						className="w-100"
+						src={`${basename}img/documentation/playbook/playbook-design-vision-rounded-2.png`}
+						alt="illustration swedbankpay playbook rounded"
+					/>
+				</div>
+				<div className="col-sm">
+					<img
+						className="w-100"
+						src={`${basename}img/documentation/playbook/playbook-design-vision-rounded-3.png`}
+						alt="illustration swedbankpay playbook rounded"
+					/>
+				</div>
+				<div className="col-sm">
+					<img
+						className="w-100"
+						src={`${basename}img/documentation/playbook/playbook-design-vision-rounded-4.png`}
+						alt="illustration swedbankpay playbook rounded"
+					/>
+				</div>
+			</div>
+		</div>
 	</section>
 );
 
@@ -271,7 +340,5 @@ const DesignVision = () => (
 		<Colors />
 	</DocContainer>
 );
-
-// TODO: STYLE illustrations width
 
 export default DesignVision;

@@ -743,24 +743,86 @@
 			}
 		}
 
-		.playbook-bold-typo-img-container {
-			@media (max-width: @screen-sm-min) {
-				.row {
-					height: auto;
+		.ratio-responsive-row {
+			@media (min-width: @screen-sm-min) {
+				aspect-ratio: var(--row-width) / var(--row-height);
+				height: calc(678px * var(--row-height) / var(--row-width));
 
-					img {
-						width: 100%;
-						height: auto;
+				> div.col-sm {
+					height: 100%;
+
+					> img {
+						max-height: 100%;
+					}
+				}
+
+				.col-sm {
+					flex-basis: initial;
+					flex-grow: initial;
+					max-width: initial;
+					position: static;
+					width: unset;
+					min-height: unset;
+					padding-right: unset;
+					padding-left: unset;
+
+					.w-100 {
+						width: auto;
 					}
 				}
 			}
-			@media (min-width: @screen-sm-min) {
-				.row {
-					height: 162px;
+		}
 
-					img {
-						height: 100%;
-					}
+		.grid-row {
+			&.delicate-lines {
+				display: grid;
+				grid-template-areas:
+					"one three four five"
+					"two three four six";
+				grid-template-columns: repeat(4, 1fr);
+				grid-template-rows: 1fr 2fr;
+				gap: 10px;
+
+				@media (max-width: @screen-sm-min) {
+					grid-template-areas:
+						"one one"
+						"two two"
+						"three four"
+						"five five"
+						"six six";
+					grid-template-columns: 1fr 1fr;
+					grid-template-rows: repeat(5, auto);
+				}
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					border-radius: 3px;
+				}
+
+				img:nth-child(1) {
+					grid-area: one;
+				}
+
+				img:nth-child(2) {
+					grid-area: two;
+				}
+
+				img:nth-child(3) {
+					grid-area: three;
+				}
+
+				img:nth-child(4) {
+					grid-area: four;
+				}
+
+				img:nth-child(5) {
+					grid-area: five;
+				}
+
+				img:nth-child(6) {
+					grid-area: six;
 				}
 			}
 		}
