@@ -358,6 +358,10 @@ module.exports = (env, argv) => {
 									destination: `./dist${basename}img/documentation/topbar`,
 								},
 								{
+									source: `./src/img/${brand}/documentation/playbook/*.png`,
+									destination: `./dist${basename}img/documentation/playbook`,
+								},
+								{
 									source: "./src/img/background/*.svg",
 									destination: `./dist${basename}img/background/`,
 								},
