@@ -289,6 +289,24 @@ export const overviewButtons = {
 							},
 						],
 					},
+					{
+						id: "button-type",
+						title: "Button type",
+						values: [
+							{
+								name: "Primary",
+								value: {
+									type: "primary",
+								},
+							},
+							{
+								name: "Secondary",
+								value: {
+									type: "secondary",
+								},
+							},
+						],
+					},
 				],
 			},
 			title: "BankID button",
