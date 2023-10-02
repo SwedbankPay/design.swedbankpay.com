@@ -720,6 +720,16 @@
 			}
 		}
 
+		.container.playbook {
+			.row {
+				gap: 8px;
+
+				img {
+					border-radius: 2px;
+				}
+			}
+		}
+
 		.playbook-overview {
 			a.cards-secondary i {
 				color: var(--brand-turquoise);
@@ -739,6 +749,23 @@
 
 				img {
 					margin: -2px;
+				}
+			}
+		}
+
+		#bold-typo .playbook .row {
+			@media (max-width: @screen-sm-min) {
+				& > div:nth-child(1) {
+					flex: 1;
+
+					img {
+						height: 100%;
+						object-fit: fill;
+					}
+				}
+
+				& > div:nth-child(2) {
+					width: 35.5%;
 				}
 			}
 		}

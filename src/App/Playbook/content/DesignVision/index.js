@@ -66,7 +66,7 @@ const ChunkyFriendly = () => (
 			design, enhancing usability and readability.
 		</p>
 
-		<div className="container px-0 playbook-mozaic">
+		<div className="container px-0 playbook playbook-mozaic">
 			<div className="row">
 				<div className="col-sm">
 					<img
@@ -92,7 +92,7 @@ const ChunkyFriendly = () => (
 );
 
 const BoldTypography = () => (
-	<section>
+	<section id="bold-typography">
 		<h2 id="bold-typography-with-personality">
 			Bold typography with personality
 		</h2>
@@ -103,33 +103,33 @@ const BoldTypography = () => (
 			and highly contrasting title.
 		</p>
 
-		<div className="container px-0">
+		<div className="container px-0 playbook">
 			<div
 				className="row ratio-responsive-row d-flex justify-content-between mx-0"
 				style={{ "--row-height": 163, "--row-width": 702 }}
 			>
-				<div className="col-sm">
+				<div className="col-sm px-0">
 					<img
 						src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-1.png`}
 						className="w-100"
 						alt="Playbook illustration"
 					/>
 				</div>
-				<div className="col-sm">
+				<div className="col-sm px-0">
 					<img
 						src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-2.png`}
 						className="w-100"
 						alt="Playbook illustration"
 					/>
 				</div>
-				<div className="col-sm">
+				<div className="col-sm px-0">
 					<img
 						src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-3.png`}
 						className="w-100"
 						alt="Playbook illustration"
 					/>
 				</div>
-				<div className="col-sm">
+				<div className="col-sm px-0">
 					<img
 						src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-4.png`}
 						className="w-100"
@@ -150,7 +150,7 @@ const DelicateLines = () => (
 			and not be in focus, we only use the thin lines. When we want it to stand
 			out, we combine it with larger solid shapes or type.
 		</p>
-		<div className="container px-0">
+		<div className="container px-0 playbook">
 			<div className="grid-row delicate-lines">
 				<img
 					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-1.png`}
@@ -189,7 +189,7 @@ const Rounded = () => (
 			information and serving you what you need. The UI should reflect this
 			friendliness, and does so with rounded corners and soft shapes.
 		</p>
-		<div className="container px-0">
+		<div className="container px-0 playbook">
 			<div
 				className="row ratio-responsive-row d-flex justify-content-between mx-0"
 				style={{ "--row-height": 174, "--row-width": 710 }}
@@ -248,7 +248,7 @@ const Colors = () => (
 			<strong>Color pool:</strong> Pick from this pool when more colors are
 			needed, rather than making up new ones.
 		</p>
-		<div className="container playbook-mozaic playbook-glued-grid">
+		<div className="container playbook-mozaic playbook-glued-grid playbook">
 			<div className="row">
 				<div className="col-sm px-0">
 					<img
