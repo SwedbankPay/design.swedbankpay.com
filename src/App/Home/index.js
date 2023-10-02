@@ -8,6 +8,7 @@ import Alert from "../components/Alert";
 
 const basename = process.env.basename;
 const brandTitle = process.env.brandTitle;
+const isSwedbankPay = process.env.isSwedbankPay;
 
 const Home = () => {
 	useEffect(() => {
@@ -40,7 +41,11 @@ const Home = () => {
 
 				<div className="row dg-cards-container mt-4">
 					{routes
-						.filter((route) => !route.title.toLowerCase().includes("patterns"))
+						.filter((route) =>
+							isSwedbankPay
+								? !route.title.toLowerCase().includes("patterns")
+								: !route.title.toLowerCase().includes("playbook")
+						)
 						.map((route) => (
 							<React.Fragment key={route.title}>
 								<div

@@ -4,10 +4,18 @@ const getStartedRoutes = require("./get-started");
 const patternsRoutes = require("./patterns");
 const playbookRoutes = require("./playbook");
 
-module.exports = [
-	...getStartedRoutes,
-	...playbookRoutes,
-	...identityRoutes,
-	...componentsRoutes,
-	...patternsRoutes,
-];
+// remove Playbook routes if PayEx side
+module.exports = process.env.isSwedbankPay
+	? [
+			...getStartedRoutes,
+			...playbookRoutes,
+			...identityRoutes,
+			...componentsRoutes,
+			...patternsRoutes,
+	  ]
+	: [
+			...getStartedRoutes,
+			...identityRoutes,
+			...componentsRoutes,
+			...patternsRoutes,
+	  ];

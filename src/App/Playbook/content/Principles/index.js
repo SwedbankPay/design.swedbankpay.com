@@ -3,8 +3,6 @@ import { DocContainer } from "@docutils";
 
 const basename = process.env.basename;
 
-// TODO: remove images from dist and uncomment "prod images src"
-
 const Simplicity = () => (
 	<section className="mt-5">
 		<h2 id="simplicity">Always strive for simplicity</h2>
