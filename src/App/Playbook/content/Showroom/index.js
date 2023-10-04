@@ -34,7 +34,7 @@ const Showroom = () => (
 					<picture>
 						<source
 							type="image/avif"
-							media="(max-width: 576px)"
+							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-2.avif`}
 						/>
 						<img
@@ -49,7 +49,7 @@ const Showroom = () => (
 					<picture>
 						<source
 							type="image/avif"
-							media="(max-width: 576px)"
+							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-3.avif`}
 						/>
 						<img
@@ -64,7 +64,7 @@ const Showroom = () => (
 					<picture>
 						<source
 							type="image/avif"
-							media="(max-width: 576px)"
+							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-4.avif`}
 						/>
 						<img
@@ -81,7 +81,7 @@ const Showroom = () => (
 					<picture>
 						<source
 							type="image/avif"
-							media="(max-width: 576px)"
+							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-5.avif`}
 						/>
 						<img
@@ -202,7 +202,7 @@ const Showroom = () => (
 					<picture>
 						<source
 							type="image/avif"
-							media="(max-width: 576px)"
+							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-11.avif`}
 						/>
 						<img
@@ -217,7 +217,7 @@ const Showroom = () => (
 					<picture>
 						<source
 							type="image/avif"
-							media="(max-width: 576px)"
+							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-12.avif`}
 						/>
 						<img
@@ -234,7 +234,7 @@ const Showroom = () => (
 					<picture>
 						<source
 							type="image/avif"
-							media="(max-width: 576px)"
+							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-13.avif`}
 						/>
 						<img
@@ -250,7 +250,7 @@ const Showroom = () => (
 					<picture>
 						<source
 							type="image/avif"
-							media="(max-width: 576px)"
+							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-14.avif`}
 						/>
 						<img
@@ -266,7 +266,7 @@ const Showroom = () => (
 					<picture>
 						<source
 							type="image/avif"
-							media="(max-width: 576px)"
+							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-15.avif`}
 						/>
 						<img
@@ -306,7 +306,7 @@ const Showroom = () => (
 					<picture>
 						<source
 							type="image/avif"
-							media="(max-width: 576px)"
+							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-17.avif`}
 						/>
 						<img
@@ -317,17 +317,16 @@ const Showroom = () => (
 						/>
 					</picture>
 				</div>
-				<div className="col-sm-8">
+				<div className="col-sm">
 					<picture>
 						<source
 							type="image/avif"
-							media="(max-width: 576px)"
+							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-18.avif`}
 						/>
 						<img
 							src={`${basename}img/documentation/playbook/playbook-showroom-18.png`}
 							alt="illustration swedbankpay playbook showroom"
-							className="col-sm"
 							loading="lazy"
 						/>
 					</picture>
@@ -338,7 +337,7 @@ const Showroom = () => (
 					<picture>
 						<source
 							type="image/avif"
-							media="(max-width: 576px)"
+							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-19.avif`}
 						/>
 						<img
@@ -356,7 +355,7 @@ const Showroom = () => (
 					<picture>
 						<source
 							type="image/avif"
-							media="(max-width: 576px)"
+							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-20.avif`}
 						/>
 						<img
@@ -395,7 +394,7 @@ const Showroom = () => (
 					<picture>
 						<source
 							type="image/avif"
-							media="(max-width: 576px)"
+							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-22.avif`}
 						/>
 						<img
@@ -411,7 +410,7 @@ const Showroom = () => (
 					<picture>
 						<source
 							type="image/avif"
-							media="(max-width: 576px)"
+							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-23.avif`}
 						/>
 						<img
