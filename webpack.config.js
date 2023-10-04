@@ -364,7 +364,7 @@ module.exports = (env, argv) => {
 									destination: `./dist${basename}img/documentation/topbar`,
 								},
 								{
-									source: `./src/img/${brand}/documentation/playbook/*.{png,jpg}`,
+									source: `./src/img/${brand}/documentation/playbook/*.{png,jpg,avif,mp4,av1}`,
 									destination: `./dist${basename}img/documentation/playbook`,
 								},
 								{
