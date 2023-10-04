@@ -14,7 +14,7 @@ const Showroom = () => (
 						muted
 						loop
 						style={{ aspectRatio: "16 / 9" }}
-												height={399}
+						height={399}
 						width={710}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-1.avif`}
 					>
@@ -24,68 +24,6 @@ const Showroom = () => (
 						/>
 						<source
 							src={`${basename}img/documentation/playbook/playbook-showroom-1.mp4`}
-							type="video/mp4"
-						/>
-					</video>
-				</div>
-			</div>
-			<div className="row mt-4">
-				<div className="col-sm">
-					<video
-						playsInline
-						autoPlay
-						muted
-						loop
-						height={149}
-						width={230}
-						poster={`${basename}img/documentation/playbook/playbook-showroom-2.avif`}
-					>
-						<source
-							src={`${basename}img/documentation/playbook/playbook-showroom-2.av1`}
-							type="video/av1"
-						/>
-						<source
-							src={`${basename}img/documentation/playbook/playbook-showroom-2.mp4`}
-							type="video/mp4"
-						/>
-					</video>
-				</div>
-				<div className="col-sm">
-					<video
-						playsInline
-						autoPlay
-						muted
-						loop
-						height={149}
-						width={230}
-						poster={`${basename}img/documentation/playbook/playbook-showroom-3.avif`}
-					>
-						<source
-							src={`${basename}img/documentation/playbook/playbook-showroom-3.av1`}
-							type="video/av1"
-						/>
-						<source
-							src={`${basename}img/documentation/playbook/playbook-showroom-3.mp4`}
-							type="video/mp4"
-						/>
-					</video>
-				</div>
-				<div className="col-sm">
-					<video
-						playsInline
-						autoPlay
-						muted
-						loop
-						height={149}
-						width={230}
-						poster={`${basename}img/documentation/playbook/playbook-showroom-4.avif`}
-					>
-						<source
-							src={`${basename}img/documentation/playbook/playbook-showroom-4.av1`}
-							type="video/av1"
-						/>
-						<source
-							src={`${basename}img/documentation/playbook/playbook-showroom-4.mp4`}
 							type="video/mp4"
 						/>
 					</video>
@@ -103,6 +41,50 @@ const Showroom = () => (
 							src={`${basename}img/documentation/playbook/playbook-showroom-5.png`}
 							alt="illustration swedbankpay playbook showroom"
 							style={{ "aspect-ratio": "710 / 351" }}
+						/>
+					</picture>
+				</div>
+				<div className="col-sm">
+					<picture>
+						<source
+							type="image/avif"
+							srcSet={`${basename}img/documentation/playbook/playbook-showroom-2.avif`}
+						/>
+						<img
+							className=""
+							src={`${basename}img/documentation/playbook/playbook-showroom-2.png`}
+							alt="illustration swedbankpay playbook showroom"
+							style={{ "aspect-ratio": "230 / 149" }}
+						/>
+					</picture>
+				</div>
+				<div className="col-sm">
+					<picture>
+						<source
+							type="image/avif"
+							srcSet={`${basename}img/documentation/playbook/playbook-showroom-3.avif`}
+						/>
+						<img
+							className=""
+							src={`${basename}img/documentation/playbook/playbook-showroom-3.png`}
+							alt="illustration swedbankpay playbook showroom"
+							style={{ "aspect-ratio": "230 / 149" }}
+						/>
+					</picture>
+				</div>
+			</div>
+			<div className="row mt-4">
+				<div className="col-sm">
+					<picture>
+						<source
+							type="image/avif"
+							srcSet={`${basename}img/documentation/playbook/playbook-showroom-4.avif`}
+						/>
+						<img
+							className=""
+							src={`${basename}img/documentation/playbook/playbook-showroom-4.png`}
+							alt="illustration swedbankpay playbook showroom"
+							style={{ "aspect-ratio": "230 / 149" }}
 						/>
 					</picture>
 				</div>
@@ -353,7 +335,7 @@ const Showroom = () => (
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-20.avif`}
 						/>
 						<img
-							className=""
+							className="h-auto"
 							src={`${basename}img/documentation/playbook/playbook-showroom-20.png`}
 							alt="illustration swedbankpay playbook showroom"
 							style={{ "aspect-ratio": "350 / 196" }}
