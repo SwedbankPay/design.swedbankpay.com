@@ -14,7 +14,7 @@ const Showroom = () => (
 						muted
 						loop
 						style={{ aspectRatio: "16 / 9" }}
-						height={399}
+												height={399}
 						width={710}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-1.avif`}
 					>
@@ -36,7 +36,6 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
-						style={{ aspectRatio: "16 / 9" }}
 						height={149}
 						width={230}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-2.avif`}
@@ -57,7 +56,6 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
-						style={{ aspectRatio: "16 / 9" }}
 						height={149}
 						width={230}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-3.avif`}
@@ -78,7 +76,6 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
-						style={{ aspectRatio: "16 / 9" }}
 						height={149}
 						width={230}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-4.avif`}
@@ -105,7 +102,7 @@ const Showroom = () => (
 							className=""
 							src={`${basename}img/documentation/playbook/playbook-showroom-5.png`}
 							alt="illustration swedbankpay playbook showroom"
-							style={{ "aspect-ratio": "16 / 9" }}
+							style={{ "aspect-ratio": "710 / 351" }}
 						/>
 					</picture>
 				</div>
@@ -117,7 +114,6 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
-						style={{ aspectRatio: "16 / 9" }}
 						height={399}
 						width={710}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-6.avif`}
@@ -140,7 +136,6 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
-						style={{ aspectRatio: "16 / 9" }}
 						height={196}
 						width={350}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-7.avif`}
@@ -161,7 +156,6 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
-						style={{ aspectRatio: "16 / 9" }}
 						height={196}
 						width={350}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-8.avif`}
@@ -289,7 +283,6 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
-						style={{ aspectRatio: "16 / 9" }}
 						height={399}
 						width={710}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-16.avif`}
@@ -346,7 +339,7 @@ const Showroom = () => (
 							className=""
 							src={`${basename}img/documentation/playbook/playbook-showroom-19.png`}
 							alt="illustration swedbankpay playbook showroom"
-							style={{ "aspect-ratio": "16 / 9" }}
+							style={{ "aspect-ratio": "710 / 351" }}
 							loading="lazy"
 						/>
 					</picture>
@@ -363,7 +356,7 @@ const Showroom = () => (
 							className=""
 							src={`${basename}img/documentation/playbook/playbook-showroom-20.png`}
 							alt="illustration swedbankpay playbook showroom"
-							style={{ "aspect-ratio": "16 / 9" }}
+							style={{ "aspect-ratio": "350 / 196" }}
 							loading="lazy"
 						/>
 					</picture>
@@ -374,9 +367,9 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
-						style={{ aspectRatio: "16 / 9" }}
-						height={149}
-						width={230}
+						height={196}
+						width={350}
+						style={{ "aspect-ratio": "350 / 196" }}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-21.avif`}
 					>
 						<source
@@ -402,7 +395,7 @@ const Showroom = () => (
 							src={`${basename}img/documentation/playbook/playbook-showroom-22.png`}
 							alt="illustration swedbankpay playbook showroom"
 							loading="lazy"
-							style={{ "aspect-ratio": "16 / 9" }}
+							style={{ "aspect-ratio": "350 / 196" }}
 						/>
 					</picture>
 				</div>
@@ -417,7 +410,7 @@ const Showroom = () => (
 							src={`${basename}img/documentation/playbook/playbook-showroom-23.png`}
 							alt="illustration swedbankpay playbook showroom"
 							loading="lazy"
-							style={{ "aspect-ratio": "16 / 9" }}
+							style={{ "aspect-ratio": "350 / 196" }}
 						/>
 					</picture>
 				</div>
