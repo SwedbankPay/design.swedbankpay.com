@@ -62,6 +62,7 @@ const Showroom = () => (
 						className=""
 						src={`${basename}img/documentation/playbook/playbook-showroom-7.png`}
 						alt="illustration swedbankpay playbook showroom"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm">
@@ -69,6 +70,7 @@ const Showroom = () => (
 						className=""
 						src={`${basename}img/documentation/playbook/playbook-showroom-8.png`}
 						alt="illustration swedbankpay playbook showroom"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -78,6 +80,7 @@ const Showroom = () => (
 						className=""
 						src={`${basename}img/documentation/playbook/playbook-showroom-9.png`}
 						alt="illustration swedbankpay playbook showroom"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm">
@@ -85,6 +88,7 @@ const Showroom = () => (
 						className=""
 						src={`${basename}img/documentation/playbook/playbook-showroom-10.png`}
 						alt="illustration swedbankpay playbook showroom"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm">
@@ -92,6 +96,7 @@ const Showroom = () => (
 						className=""
 						src={`${basename}img/documentation/playbook/playbook-showroom-11.png`}
 						alt="illustration swedbankpay playbook showroom"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm">
@@ -99,6 +104,7 @@ const Showroom = () => (
 						className=""
 						src={`${basename}img/documentation/playbook/playbook-showroom-12.png`}
 						alt="illustration swedbankpay playbook showroom"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -108,6 +114,7 @@ const Showroom = () => (
 						className=""
 						src={`${basename}img/documentation/playbook/playbook-showroom-13.png`}
 						alt="illustration swedbankpay playbook showroom"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm">
@@ -115,6 +122,7 @@ const Showroom = () => (
 						className=""
 						src={`${basename}img/documentation/playbook/playbook-showroom-14.png`}
 						alt="illustration swedbankpay playbook showroom"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm">
@@ -122,6 +130,7 @@ const Showroom = () => (
 						className=""
 						src={`${basename}img/documentation/playbook/playbook-showroom-15.png`}
 						alt="illustration swedbankpay playbook showroom"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -131,6 +140,7 @@ const Showroom = () => (
 						className=""
 						src={`${basename}img/documentation/playbook/playbook-showroom-16.png`}
 						alt="illustration swedbankpay playbook showroom"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -140,6 +150,7 @@ const Showroom = () => (
 						className=""
 						src={`${basename}img/documentation/playbook/playbook-showroom-17.png`}
 						alt="illustration swedbankpay playbook showroom"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm-8">
@@ -147,6 +158,7 @@ const Showroom = () => (
 						className=""
 						src={`${basename}img/documentation/playbook/playbook-showroom-18.png`}
 						alt="illustration swedbankpay playbook showroom"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -156,6 +168,7 @@ const Showroom = () => (
 						className=""
 						src={`${basename}img/documentation/playbook/playbook-showroom-19.png`}
 						alt="illustration swedbankpay playbook showroom"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -165,6 +178,7 @@ const Showroom = () => (
 						className=""
 						src={`${basename}img/documentation/playbook/playbook-showroom-20.png`}
 						alt="illustration swedbankpay playbook showroom"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm">
@@ -172,6 +186,7 @@ const Showroom = () => (
 						className=""
 						src={`${basename}img/documentation/playbook/playbook-showroom-21.png`}
 						alt="illustration swedbankpay playbook showroom"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -181,6 +196,7 @@ const Showroom = () => (
 						className=""
 						src={`${basename}img/documentation/playbook/playbook-showroom-22.png`}
 						alt="illustration swedbankpay playbook showroom"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm">
@@ -188,6 +204,7 @@ const Showroom = () => (
 						className=""
 						src={`${basename}img/documentation/playbook/playbook-showroom-23.png`}
 						alt="illustration swedbankpay playbook showroom"
+						loading="lazy"
 					/>
 				</div>
 			</div>

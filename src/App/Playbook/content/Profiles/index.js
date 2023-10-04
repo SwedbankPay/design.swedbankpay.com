@@ -54,6 +54,7 @@ const DesignProfiles = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-profiles-profile-1.png`}
 						alt="content"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col">
@@ -61,6 +62,7 @@ const DesignProfiles = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-profiles-profile-2.png`}
 						alt="Light UI"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col">
@@ -68,6 +70,7 @@ const DesignProfiles = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-profiles-profile-3.png`}
 						alt="Expert UI"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -101,6 +104,7 @@ const Content = () => (
 							className="w-100 shift-right-1"
 							src={`${basename}img/documentation/playbook/playbook-profiles-content-1.png`}
 							alt="illustration swedbankpay playbook profiles"
+							loading="lazy"
 						/>
 					</div>
 					<div className="col-sm px-0 d-flex flex-column">
@@ -108,6 +112,7 @@ const Content = () => (
 							className="w-100 shift-left-1"
 							src={`${basename}img/documentation/playbook/playbook-profiles-content-2.png`}
 							alt="illustration swedbankpay playbook profiles"
+							loading="lazy"
 						/>
 					</div>
 				</div>
@@ -122,6 +127,7 @@ const Content = () => (
 							className="w-100"
 							src={`${basename}img/documentation/playbook/playbook-profiles-content-3.png`}
 							alt="illustration swedbankpay playbook profiles"
+							loading="lazy"
 						/>
 					</div>
 					<div className="col-sm-3 pr-0">
@@ -129,6 +135,7 @@ const Content = () => (
 							className="w-100"
 							src={`${basename}img/documentation/playbook/playbook-profiles-content-4.png`}
 							alt="illustration swedbankpay playbook profiles"
+							loading="lazy"
 						/>
 					</div>
 				</div>
@@ -166,6 +173,7 @@ const LightUI = () => (
 							className=""
 							src={`${basename}img/documentation/playbook/playbook-profiles-lightui-1.png`}
 							alt="illustration swedbankpay playbook profiles"
+							loading="lazy"
 						/>
 					</div>
 				</div>
@@ -180,6 +188,7 @@ const LightUI = () => (
 							className="w-100"
 							src={`${basename}img/documentation/playbook/playbook-profiles-lightui-2.png`}
 							alt="illustration swedbankpay playbook profiles"
+							loading="lazy"
 						/>
 					</div>
 					<div className="col-sm-3">
@@ -187,6 +196,7 @@ const LightUI = () => (
 							className="w-100"
 							src={`${basename}img/documentation/playbook/playbook-profiles-lightui-3.png`}
 							alt="illustration swedbankpay playbook profiles"
+							loading="lazy"
 						/>
 					</div>
 					<div className="col-sm-3">
@@ -194,6 +204,7 @@ const LightUI = () => (
 							className="w-100"
 							src={`${basename}img/documentation/playbook/playbook-profiles-lightui-4.png`}
 							alt="illustration swedbankpay playbook profiles"
+							loading="lazy"
 						/>
 					</div>
 					<div className="col-sm-3">
@@ -201,6 +212,7 @@ const LightUI = () => (
 							className="w-100"
 							src={`${basename}img/documentation/playbook/playbook-profiles-lightui-5.png`}
 							alt="illustration swedbankpay playbook profiles"
+							loading="lazy"
 						/>
 					</div>
 				</div>
@@ -238,6 +250,7 @@ const ExpertUI = () => (
 							className="w-100"
 							src={`${basename}img/documentation/playbook/playbook-profiles-expert-1.png`}
 							alt="illustration swedbankpay playbook profiles"
+							loading="lazy"
 						/>
 					</div>
 				</div>

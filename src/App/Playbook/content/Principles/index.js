@@ -107,6 +107,7 @@ const FriendlyGuide = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-principles-friendly-order.png`}
 						alt="illustration swedbankpay playbook principles"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -129,6 +130,7 @@ const FriendlyGuide = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-principles-friendly-hierarchy.png`}
 						alt="illustration swedbankpay playbook principles"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -150,6 +152,7 @@ const FriendlyGuide = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-principles-friendly-reveal.png`}
 						alt="illustration swedbankpay playbook principles"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -182,6 +185,7 @@ const DelightUnexpected = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-principles-unexpected-surprise.png`}
 						alt="illustration swedbankpay playbook principles"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -202,6 +206,7 @@ const DelightUnexpected = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-principles-unexpected-unified.png`}
 						alt="illustration swedbankpay playbook principles"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -221,6 +226,7 @@ const DelightUnexpected = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-principles-unexpected-motion.png`}
 						alt="illustration swedbankpay playbook principles"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -253,6 +259,7 @@ const Inclusive = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-principles-inclusive-simplicity.png`}
 						alt="illustration swedbankpay playbook principles"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -274,6 +281,7 @@ const Inclusive = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-principles-inclusive-contrast.png`}
 						alt="illustration swedbankpay playbook principles"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -295,6 +303,7 @@ const Inclusive = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-principles-inclusive-assistive.png`}
 						alt="illustration swedbankpay playbook principles"
+						loading="lazy"
 					/>
 				</div>
 			</div>

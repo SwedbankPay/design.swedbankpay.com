@@ -73,18 +73,21 @@ const ChunkyFriendly = () => (
 						src={`${basename}img/documentation/playbook/playbook-design-vision-chunky-friendly-1.png`}
 						alt="Playbook illustration"
 					/>
+					loading="lazy"
 				</div>
 				<div className="col-sm">
 					<img
 						src={`${basename}img/documentation/playbook/playbook-design-vision-chunky-friendly-2.png`}
 						alt="Playbook illustration"
 					/>
+					loading="lazy"
 				</div>
 				<div className="col-sm">
 					<img
 						src={`${basename}img/documentation/playbook/playbook-design-vision-chunky-friendly-3.png`}
 						alt="Playbook illustration"
 					/>
+					loading="lazy"
 				</div>
 			</div>
 		</div>
@@ -113,6 +116,7 @@ const BoldTypography = () => (
 						src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-1.png`}
 						className="w-100"
 						alt="Playbook illustration"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm px-0">
@@ -120,6 +124,7 @@ const BoldTypography = () => (
 						src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-2.png`}
 						className="w-100"
 						alt="Playbook illustration"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm px-0">
@@ -127,6 +132,7 @@ const BoldTypography = () => (
 						src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-3.png`}
 						className="w-100"
 						alt="Playbook illustration"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm px-0">
@@ -134,6 +140,7 @@ const BoldTypography = () => (
 						src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-4.png`}
 						className="w-100"
 						alt="Playbook illustration"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -156,26 +163,32 @@ const DelicateLines = () => (
 					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-1.png`}
 					alt="Playbook illustration"
 				/>
+				loading="lazy"
 				<img
 					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-2.png`}
 					alt="Playbook illustration"
 				/>
+				loading="lazy"
 				<img
 					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-3.png`}
 					alt="Playbook illustration"
 				/>
+				loading="lazy"
 				<img
 					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-4.png`}
 					alt="Playbook illustration"
 				/>
+				loading="lazy"
 				<img
 					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-5.png`}
 					alt="Playbook illustration"
 				/>
+				loading="lazy"
 				<img
 					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-6.png`}
 					alt="Playbook illustration"
 				/>
+				loading="lazy"
 			</div>
 		</div>
 	</section>
@@ -199,6 +212,7 @@ const Rounded = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-design-vision-rounded-1.png`}
 						alt="illustration swedbankpay playbook rounded"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm">
@@ -206,6 +220,7 @@ const Rounded = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-design-vision-rounded-2.png`}
 						alt="illustration swedbankpay playbook rounded"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm">
@@ -213,6 +228,7 @@ const Rounded = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-design-vision-rounded-3.png`}
 						alt="illustration swedbankpay playbook rounded"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm">
@@ -220,6 +236,7 @@ const Rounded = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-design-vision-rounded-4.png`}
 						alt="illustration swedbankpay playbook rounded"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -255,6 +272,7 @@ const Colors = () => (
 						className="w-100 shift-right-1"
 						src={`${basename}img/documentation/playbook/playbook-design-vision-colors-1.png`}
 						alt="illustration swedbankpay playbook colors"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm px-0">
@@ -262,6 +280,7 @@ const Colors = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-design-vision-colors-2.png`}
 						alt="illustration swedbankpay playbook colors"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm px-0">
@@ -269,6 +288,7 @@ const Colors = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-design-vision-colors-3.png`}
 						alt="illustration swedbankpay playbook colors"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -278,6 +298,7 @@ const Colors = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-design-vision-colors-4.png`}
 						alt="illustration swedbankpay playbook colors"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm px-0">
@@ -285,6 +306,7 @@ const Colors = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-design-vision-colors-5.png`}
 						alt="illustration swedbankpay playbook colors"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm px-0">
@@ -292,6 +314,7 @@ const Colors = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-design-vision-colors-6.png`}
 						alt="illustration swedbankpay playbook colors"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -301,6 +324,7 @@ const Colors = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-design-vision-colors-7.png`}
 						alt="illustration swedbankpay playbook colors"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm px-0">
@@ -308,6 +332,7 @@ const Colors = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-design-vision-colors-8.png`}
 						alt="illustration swedbankpay playbook colors"
+						loading="lazy"
 					/>
 				</div>
 				<div className="col-sm px-0">
@@ -315,6 +340,7 @@ const Colors = () => (
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-design-vision-colors-9.png`}
 						alt="illustration swedbankpay playbook colors"
+						loading="lazy"
 					/>
 				</div>
 			</div>
