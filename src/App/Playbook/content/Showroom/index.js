@@ -34,13 +34,13 @@ const Showroom = () => (
 					<picture>
 						<source
 							type="image/avif"
-							srcSet={`${basename}img/documentation/playbook/playbook-showroom-5.avif`}
+							srcSet={`${basename}img/documentation/playbook/playbook-showroom-4.avif`}
 						/>
 						<img
 							className=""
-							src={`${basename}img/documentation/playbook/playbook-showroom-5.png`}
+							src={`${basename}img/documentation/playbook/playbook-showroom-4.png`}
 							alt="illustration swedbankpay playbook showroom"
-							style={{ "aspect-ratio": "710 / 351" }}
+							style={{ "aspect-ratio": "230 / 149" }}
 						/>
 					</picture>
 				</div>
@@ -78,13 +78,13 @@ const Showroom = () => (
 					<picture>
 						<source
 							type="image/avif"
-							srcSet={`${basename}img/documentation/playbook/playbook-showroom-4.avif`}
+							srcSet={`${basename}img/documentation/playbook/playbook-showroom-5.avif`}
 						/>
 						<img
 							className=""
-							src={`${basename}img/documentation/playbook/playbook-showroom-4.png`}
+							src={`${basename}img/documentation/playbook/playbook-showroom-5.png`}
 							alt="illustration swedbankpay playbook showroom"
-							style={{ "aspect-ratio": "230 / 149" }}
+							style={{ "aspect-ratio": "710 / 351" }}
 						/>
 					</picture>
 				</div>
@@ -155,32 +155,42 @@ const Showroom = () => (
 			</div>
 			<div className="row mt-4">
 				<div className="col-sm">
-					<picture>
+					<video
+						playsInline
+						autoPlay
+						muted
+						loop
+						style={{ "aspect-ratio": "178 / 318" }}
+						poster={`${basename}img/documentation/playbook/playbook-showroom-9.avif`}
+					>
 						<source
-							type="image/avif"
-							srcSet={`${basename}img/documentation/playbook/playbook-showroom-9.avif`}
+							src={`${basename}img/documentation/playbook/playbook-showroom-9.av1`}
+							type="video/av1"
 						/>
-						<img
-							className=""
-							src={`${basename}img/documentation/playbook/playbook-showroom-9.png`}
-							alt="illustration swedbankpay playbook showroom"
-							loading="lazy"
+						<source
+							src={`${basename}img/documentation/playbook/playbook-showroom-9.mp4`}
+							type="video/mp4"
 						/>
-					</picture>
+					</video>
 				</div>
 				<div className="col-sm">
-					<picture>
+					<video
+						playsInline
+						autoPlay
+						muted
+						loop
+						style={{ "aspect-ratio": "145 / 318" }}
+						poster={`${basename}img/documentation/playbook/playbook-showroom-10.avif`}
+					>
 						<source
-							type="image/avif"
-							srcSet={`${basename}img/documentation/playbook/playbook-showroom-10.avif`}
+							src={`${basename}img/documentation/playbook/playbook-showroom-10.av1`}
+							type="video/av1"
 						/>
-						<img
-							className=""
-							src={`${basename}img/documentation/playbook/playbook-showroom-10.png`}
-							alt="illustration swedbankpay playbook showroom"
-							loading="lazy"
+						<source
+							src={`${basename}img/documentation/playbook/playbook-showroom-10.mp4`}
+							type="video/mp4"
 						/>
-					</picture>
+					</video>
 				</div>
 				<div className="col-sm">
 					<picture>
