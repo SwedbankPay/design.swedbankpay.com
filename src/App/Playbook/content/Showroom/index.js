@@ -19,8 +19,8 @@ const Showroom = () => (
 						poster={`${basename}img/documentation/playbook/playbook-showroom-1.avif`}
 					>
 						<source
-							src={`${basename}img/documentation/playbook/playbook-showroom-1.av1`}
-							type="video/av1"
+							src={`${basename}img/documentation/playbook/playbook-showroom-1-av1.mp4`}
+							type="video/mp4; codecs=av01.0.05M.08,opus"
 						/>
 						<source
 							src={`${basename}img/documentation/playbook/playbook-showroom-1.mp4`}
@@ -105,8 +105,8 @@ const Showroom = () => (
 						poster={`${basename}img/documentation/playbook/playbook-showroom-6.avif`}
 					>
 						<source
-							src={`${basename}img/documentation/playbook/playbook-showroom-6.av1`}
-							type="video/av1"
+							src={`${basename}img/documentation/playbook/playbook-showroom-6-av1.mp4`}
+							type="video/mp4; codecs=av01.0.05M.08,opus"
 						/>
 						<source
 							src={`${basename}img/documentation/playbook/playbook-showroom-6.mp4`}
@@ -127,8 +127,8 @@ const Showroom = () => (
 						poster={`${basename}img/documentation/playbook/playbook-showroom-7.avif`}
 					>
 						<source
-							src={`${basename}img/documentation/playbook/playbook-showroom-7.av1`}
-							type="video/av1"
+							src={`${basename}img/documentation/playbook/playbook-showroom-7-av1.mp4`}
+							type="video/mp4; codecs=av01.0.05M.08,opus"
 						/>
 						<source
 							src={`${basename}img/documentation/playbook/playbook-showroom-7.mp4`}
@@ -147,8 +147,8 @@ const Showroom = () => (
 						poster={`${basename}img/documentation/playbook/playbook-showroom-8.avif`}
 					>
 						<source
-							src={`${basename}img/documentation/playbook/playbook-showroom-8.av1`}
-							type="video/av1"
+							src={`${basename}img/documentation/playbook/playbook-showroom-8-av1.mp4`}
+							type="video/mp4; codecs=av01.0.05M.08,opus"
 						/>
 						<source
 							src={`${basename}img/documentation/playbook/playbook-showroom-8.mp4`}
@@ -169,8 +169,8 @@ const Showroom = () => (
 						className="h-100"
 					>
 						<source
-							src={`${basename}img/documentation/playbook/playbook-showroom-9.av1`}
-							type="video/av1"
+							src={`${basename}img/documentation/playbook/playbook-showroom-9-av1.mp4`}
+							type="video/mp4; codecs=av01.0.05M.08,opus"
 						/>
 						<source
 							src={`${basename}img/documentation/playbook/playbook-showroom-9.mp4`}
@@ -189,8 +189,8 @@ const Showroom = () => (
 						className="h-100"
 					>
 						<source
-							src={`${basename}img/documentation/playbook/playbook-showroom-10.av1`}
-							type="video/av1"
+							src={`${basename}img/documentation/playbook/playbook-showroom-10-av1.mp4`}
+							type="video/mp4; codecs=av01.0.05M.08,opus"
 						/>
 						<source
 							src={`${basename}img/documentation/playbook/playbook-showroom-10.mp4`}
@@ -291,8 +291,8 @@ const Showroom = () => (
 						poster={`${basename}img/documentation/playbook/playbook-showroom-16.avif`}
 					>
 						<source
-							src={`${basename}img/documentation/playbook/playbook-showroom-16.av1`}
-							type="video/av1"
+							src={`${basename}img/documentation/playbook/playbook-showroom-16-av1.mp4`}
+							type="video/mp4; codecs=av01.0.05M.08,opus"
 						/>
 						<source
 							src={`${basename}img/documentation/playbook/playbook-showroom-16.mp4`}
@@ -379,8 +379,8 @@ const Showroom = () => (
 						poster={`${basename}img/documentation/playbook/playbook-showroom-21.avif`}
 					>
 						<source
-							src={`${basename}img/documentation/playbook/playbook-showroom-21.av1`}
-							type="video/av1"
+							src={`${basename}img/documentation/playbook/playbook-showroom-21-av1.mp4`}
+							type="video/mp4; codecs=av01.0.05M.08,opus"
 						/>
 						<source
 							src={`${basename}img/documentation/playbook/playbook-showroom-21.mp4`}
