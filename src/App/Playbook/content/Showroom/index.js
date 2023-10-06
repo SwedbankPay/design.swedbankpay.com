@@ -160,7 +160,7 @@ const Showroom = () => (
 					</video>
 				</div>
 			</div>
-			<div className="row mt-3 justify-content-evenly">
+			<div className="row mt-3 justify-content-evenly" style={{ "--gap": "0" }}>
 				<div className="col-5 col-sm-3">
 					<video
 						playsInline

@@ -322,7 +322,7 @@ const Colors = () => (
 		</p>
 		<div
 			className="container playbook-mozaic playbook-glued-grid"
-			style={{ gap: "0" }}
+			style={{ "--gap": "0" }}
 		>
 			<div className="row">
 				<div className="col-sm px-0">
