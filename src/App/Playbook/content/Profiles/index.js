@@ -183,28 +183,26 @@ const LightUI = () => (
 		</p>
 		<div className="container px-5">
 			<figure>
-				<div className="row">
-					<div className="col-sm">
-						<video
-							playsInline
-							autoPlay
-							muted
-							loop
-							style={{ aspectRatio: "16 / 9" }}
-							height={399}
-							width={710}
-							poster={`${basename}img/documentation/playbook/playbook-showroom-1.avif`}
-						>
-							<source
-								src={`${basename}img/documentation/playbook/playbook-showroom-1-av1.mp4`}
-								type="video/mp4; codecs=av01.0.05M.08,opus"
-							/>
-							<source
-								src={`${basename}img/documentation/playbook/playbook-showroom-1.mp4`}
-								type="video/mp4"
-							/>
-						</video>
-					</div>
+				<div className="row justify-content-center align-items-center">
+					<video
+						playsInline
+						autoPlay
+						muted
+						loop
+						style={{ aspectRatio: "16 / 9" }}
+						height={399}
+						width={710}
+						poster={`${basename}img/documentation/playbook/playbook-showroom-1.avif`}
+					>
+						<source
+							src={`${basename}img/documentation/playbook/playbook-showroom-1-av1.mp4`}
+							type="video/mp4; codecs=av01.0.05M.08,opus"
+						/>
+						<source
+							src={`${basename}img/documentation/playbook/playbook-showroom-1.mp4`}
+							type="video/mp4"
+						/>
+					</video>
 				</div>
 				<figcaption className="text-center mt-2">
 					The terminal design should be easy and quick to use.
@@ -212,37 +210,61 @@ const LightUI = () => (
 			</figure>
 			<figure>
 				<div className="row mt-5">
-					<div className="col-sm-3">
-						<img
-							className="w-100"
-							src={`${basename}img/documentation/playbook/playbook-profiles-lightui-2.png`}
-							alt="illustration swedbankpay playbook profiles"
-							loading="lazy"
-						/>
+					<div className="col-6 col-sm-3">
+						<picture>
+							<source
+								type="image/avif"
+								srcSet={`${basename}img/documentation/playbook/playbook-profiles-lightui-1.avif`}
+							/>
+							<img
+								className="w-100"
+								src={`${basename}img/documentation/playbook/playbook-profiles-lightui-1.png`}
+								alt="illustration swedbankpay playbook profiles"
+								loading="lazy"
+							/>
+						</picture>
 					</div>
-					<div className="col-sm-3">
-						<img
-							className="w-100"
-							src={`${basename}img/documentation/playbook/playbook-profiles-lightui-3.png`}
-							alt="illustration swedbankpay playbook profiles"
-							loading="lazy"
-						/>
+					<div className="col-6 col-sm-3">
+						<picture>
+							<source
+								type="image/avif"
+								srcSet={`${basename}img/documentation/playbook/playbook-profiles-lightui-2.avif`}
+							/>
+							<img
+								className="w-100"
+								src={`${basename}img/documentation/playbook/playbook-profiles-lightui-2.png`}
+								alt="illustration swedbankpay playbook profiles"
+								loading="lazy"
+							/>
+						</picture>
 					</div>
-					<div className="col-sm-3">
-						<img
-							className="w-100"
-							src={`${basename}img/documentation/playbook/playbook-profiles-lightui-4.png`}
-							alt="illustration swedbankpay playbook profiles"
-							loading="lazy"
-						/>
+					<div className="col-6 col-sm-3 mt-4 mt-sm-0">
+						<picture>
+							<source
+								type="image/avif"
+								srcSet={`${basename}img/documentation/playbook/playbook-profiles-lightui-3.avif`}
+							/>
+							<img
+								className="w-100"
+								src={`${basename}img/documentation/playbook/playbook-profiles-lightui-3.png`}
+								alt="illustration swedbankpay playbook profiles"
+								loading="lazy"
+							/>
+						</picture>
 					</div>
-					<div className="col-sm-3">
-						<img
-							className="w-100"
-							src={`${basename}img/documentation/playbook/playbook-profiles-lightui-5.png`}
-							alt="illustration swedbankpay playbook profiles"
-							loading="lazy"
-						/>
+					<div className="col-6 col-sm-3 mt-4 mt-sm-0">
+						<picture>
+							<source
+								type="image/avif"
+								srcSet={`${basename}img/documentation/playbook/playbook-profiles-lightui-4.avif`}
+							/>
+							<img
+								className="w-100"
+								src={`${basename}img/documentation/playbook/playbook-profiles-lightui-4.png`}
+								alt="illustration swedbankpay playbook profiles"
+								loading="lazy"
+							/>
+						</picture>
 					</div>
 				</div>
 				<figcaption className="text-center mt-2">
