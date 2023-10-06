@@ -320,7 +320,10 @@ const Colors = () => (
 			<strong>Color pool:</strong> Pick from this pool when more colors are
 			needed, rather than making up new ones.
 		</p>
-		<div className="container playbook-mozaic playbook-glued-grid">
+		<div
+			className="container playbook-mozaic playbook-glued-grid"
+			style={{ gap: "0" }}
+		>
 			<div className="row">
 				<div className="col-sm px-0">
 					<img
