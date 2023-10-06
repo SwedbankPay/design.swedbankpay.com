@@ -5,7 +5,10 @@ const basename = process.env.basename;
 
 const Showroom = () => (
 	<section>
-		<div className="container px-0 playbook-mozaic">
+		<div
+			className="container px-sm-0 playbook-mozaic"
+			style={{ radius: "2px" }}
+		>
 			<div className="row">
 				<div className="col-sm">
 					<video
@@ -100,8 +103,8 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
-						height={399}
 						width={710}
+						height={399}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-6.avif`}
 					>
 						<source
@@ -122,8 +125,8 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
-						height={196}
 						width={350}
+						height={196}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-7.avif`}
 					>
 						<source
@@ -142,8 +145,8 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
-						height={196}
 						width={350}
+						height={196}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-8.avif`}
 					>
 						<source
@@ -157,8 +160,8 @@ const Showroom = () => (
 					</video>
 				</div>
 			</div>
-			<div className="row mt-3">
-				<div className="col-sm">
+			<div className="row mt-3 justify-content-evenly">
+				<div className="col-5 col-sm-3">
 					<video
 						playsInline
 						autoPlay
@@ -178,7 +181,7 @@ const Showroom = () => (
 						/>
 					</video>
 				</div>
-				<div className="col-sm">
+				<div className="col-5 col-sm-3">
 					<video
 						playsInline
 						autoPlay
@@ -198,7 +201,7 @@ const Showroom = () => (
 						/>
 					</video>
 				</div>
-				<div className="col-sm">
+				<div className="col-5 col-sm-3 mt-4 mt-sm-0">
 					<picture>
 						<source
 							type="image/avif"
@@ -213,7 +216,7 @@ const Showroom = () => (
 						/>
 					</picture>
 				</div>
-				<div className="col-sm">
+				<div className="col-5 col-sm-3 mt-4 mt-sm-0">
 					<picture>
 						<source
 							type="image/avif"
@@ -286,8 +289,8 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
-						height={399}
 						width={710}
+						height={399}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-16.avif`}
 					>
 						<source
@@ -332,19 +335,73 @@ const Showroom = () => (
 					</picture>
 				</div>
 			</div>
-			<div className="row mt-3">
-				<div className="col-sm">
+			<div className="row mt-3 playbook-showroom-portrait-phones-19 p-4 justify-content-evenly">
+				<div className="col-5 col-sm-2">
 					<picture>
 						<source
 							type="image/avif"
 							media="(min-width: 576px)"
-							srcSet={`${basename}img/documentation/playbook/playbook-showroom-19.avif`}
+							srcSet={`${basename}img/documentation/playbook/playbook-showroom-19-1.avif`}
 						/>
 						<img
 							className=""
-							src={`${basename}img/documentation/playbook/playbook-showroom-19.png`}
+							src={`${basename}img/documentation/playbook/playbook-showroom-19-1.png`}
 							alt="illustration swedbankpay playbook showroom"
-							style={{ "aspect-ratio": "710 / 351" }}
+							style={{ "aspect-ratio": "138 / 300" }}
+							loading="lazy"
+						/>
+					</picture>
+				</div>
+				<div className="col-5 col-sm-2">
+					<video
+						playsInline
+						autoPlay
+						muted
+						loop
+						width={138}
+						height={300}
+						style={{ "aspect-ratio": "138 / 300", "border-radius": "10px" }}
+						poster={`${basename}img/documentation/playbook/playbook-showroom-19-2.avif`}
+						className="h-100"
+					>
+						<source
+							src={`${basename}img/documentation/playbook/playbook-showroom-19-2-av1.mp4`}
+							type="video/mp4; codecs=av01.0.05M.08,opus"
+						/>
+						<source
+							src={`${basename}img/documentation/playbook/playbook-showroom-19-2.mp4`}
+							type="video/mp4"
+						/>
+					</video>
+				</div>
+				<div className="col-5 mt-4 mt-sm-0 col-sm-2">
+					<picture>
+						<source
+							type="image/avif"
+							media="(min-width: 576px)"
+							srcSet={`${basename}img/documentation/playbook/playbook-showroom-19-3.avif`}
+						/>
+						<img
+							className=""
+							src={`${basename}img/documentation/playbook/playbook-showroom-19-3.png`}
+							alt="illustration swedbankpay playbook showroom"
+							style={{ "aspect-ratio": "138 / 300" }}
+							loading="lazy"
+						/>
+					</picture>
+				</div>
+				<div className="col-5 mt-4 mt-sm-0 col-sm-2">
+					<picture>
+						<source
+							type="image/avif"
+							media="(min-width: 576px)"
+							srcSet={`${basename}img/documentation/playbook/playbook-showroom-19-4.avif`}
+						/>
+						<img
+							className=""
+							src={`${basename}img/documentation/playbook/playbook-showroom-19-4.png`}
+							alt="illustration swedbankpay playbook showroom"
+							style={{ "aspect-ratio": "138 / 300" }}
 							loading="lazy"
 						/>
 					</picture>
@@ -373,10 +430,11 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
-						height={196}
 						width={350}
+						height={196}
 						style={{ "aspect-ratio": "350 / 196" }}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-21.avif`}
+						className="h-auto"
 					>
 						<source
 							src={`${basename}img/documentation/playbook/playbook-showroom-21-av1.mp4`}

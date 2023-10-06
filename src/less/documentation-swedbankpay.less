@@ -737,12 +737,9 @@
 		}
 
 		.playbook-mozaic {
-			--gap: 10px;
+			--radius: 0;
 
 			.row {
-				gap: var(--gap);
-				justify-content: space-between;
-
 				> div {
 					padding-left: 0;
 					padding-right: 0;
@@ -752,7 +749,7 @@
 				video {
 					width: 100%;
 					object-fit: cover;
-					border-radius: 2px;
+					border-radius: var(--radius, 0);
 				}
 
 				img {
@@ -769,6 +766,10 @@
 					}
 				}
 			}
+		}
+
+		.playbook-showroom-portrait-phones-19 {
+			background-color: var(--brand-primary-light-3);
 		}
 
 		.playbook-glued-grid {

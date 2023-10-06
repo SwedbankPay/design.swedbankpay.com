@@ -47,7 +47,7 @@ const HowToUse = () => (
 const DesignProfiles = () => (
 	<section className="mt-5">
 		<h2 id="design-profiles">The design profiles:</h2>
-		<div className="container px-0">
+		<div className="container px-sm-0">
 			<div className="row">
 				<div className="col">
 					<img
@@ -98,22 +98,38 @@ const Content = () => (
 		</p>
 		<div className="container px-5">
 			<figure>
-				<div className="row mt-5 playbook-mozaic">
-					<div className="col-sm px-0">
+				<div
+					className="row mt-5 playbook-mozaic align-items-stretch"
+					style={{ radius: "2px" }}
+				>
+					<div className="col-sm-6 px-0">
 						<img
-							className="w-100 shift-right-1"
+							className="w-100 shift-right-1 h-100 object-fit-cover"
 							src={`${basename}img/documentation/playbook/playbook-profiles-content-1.png`}
 							alt="illustration swedbankpay playbook profiles"
 							loading="lazy"
 						/>
 					</div>
-					<div className="col-sm px-0 d-flex flex-column">
-						<img
-							className="w-100 shift-left-1"
-							src={`${basename}img/documentation/playbook/playbook-profiles-content-2.png`}
-							alt="illustration swedbankpay playbook profiles"
-							loading="lazy"
-						/>
+					<div className="col-sm-6 px-0 d-flex flex-column">
+						<video
+							playsInline
+							autoPlay
+							muted
+							loop
+							width={278}
+							height={152}
+							poster={`${basename}img/documentation/playbook/playbook-profiles-content-2.avif`}
+							className="w-100 h-100 object-fit-cover"
+						>
+							<source
+								src={`${basename}img/documentation/playbook/playbook-profiles-content-2-av1.mp4`}
+								type="video/mp4; codecs=av01.0.05M.08,opus"
+							/>
+							<source
+								src={`${basename}img/documentation/playbook/playbook-profiles-content-2.mp4`}
+								type="video/mp4"
+							/>
+						</video>
 					</div>
 				</div>
 				<figcaption className="text-center mt-2">
@@ -122,7 +138,7 @@ const Content = () => (
 			</figure>
 			<figure>
 				<div className="row mt-5 justify-content-between">
-					<div className="col-sm-8 pl-0">
+					<div className="col-8 pl-0">
 						<img
 							className="w-100"
 							src={`${basename}img/documentation/playbook/playbook-profiles-content-3.png`}
@@ -130,7 +146,7 @@ const Content = () => (
 							loading="lazy"
 						/>
 					</div>
-					<div className="col-sm-3 pr-0">
+					<div className="col-3 pr-0">
 						<img
 							className="w-100"
 							src={`${basename}img/documentation/playbook/playbook-profiles-content-4.png`}
@@ -167,14 +183,27 @@ const LightUI = () => (
 		</p>
 		<div className="container px-5">
 			<figure>
-				<div className="row mt-5 justify-content-center">
-					<div className="col-sm-3 px-0">
-						<img
-							className=""
-							src={`${basename}img/documentation/playbook/playbook-profiles-lightui-1.png`}
-							alt="illustration swedbankpay playbook profiles"
-							loading="lazy"
-						/>
+				<div className="row">
+					<div className="col-sm">
+						<video
+							playsInline
+							autoPlay
+							muted
+							loop
+							style={{ aspectRatio: "16 / 9" }}
+							height={399}
+							width={710}
+							poster={`${basename}img/documentation/playbook/playbook-showroom-1.avif`}
+						>
+							<source
+								src={`${basename}img/documentation/playbook/playbook-showroom-1-av1.mp4`}
+								type="video/mp4; codecs=av01.0.05M.08,opus"
+							/>
+							<source
+								src={`${basename}img/documentation/playbook/playbook-showroom-1.mp4`}
+								type="video/mp4"
+							/>
+						</video>
 					</div>
 				</div>
 				<figcaption className="text-center mt-2">
@@ -255,6 +284,48 @@ const ExpertUI = () => (
 					</div>
 				</div>
 				<figcaption className="text-center mt-2">Merchant portal</figcaption>
+			</figure>
+		</div>
+		<div className="container px-5">
+			<figure>
+				<div
+					className="row mt-5 justify-content-center"
+					style={{ "--row": "10px" }}
+				>
+					<div className="col-6 col-sm-3">
+						<img
+							className="w-100"
+							src={`${basename}img/documentation/playbook/playbook-profiles-paybylink-1.png`}
+							alt="illustration swedbankpay playbook profiles"
+							loading="lazy"
+						/>
+					</div>
+					<div className="col-6 col-sm-3">
+						<img
+							className="w-100"
+							src={`${basename}img/documentation/playbook/playbook-profiles-paybylink-2.png`}
+							alt="illustration swedbankpay playbook profiles"
+							loading="lazy"
+						/>
+					</div>
+					<div className="col-6 col-sm-3 mt-4 mt-sm-0">
+						<img
+							className="w-100"
+							src={`${basename}img/documentation/playbook/playbook-profiles-paybylink-3.png`}
+							alt="illustration swedbankpay playbook profiles"
+							loading="lazy"
+						/>
+					</div>
+					<div className="col-6 col-sm-3 mt-4 mt-sm-0">
+						<img
+							className="w-100"
+							src={`${basename}img/documentation/playbook/playbook-profiles-paybylink-4.png`}
+							alt="illustration swedbankpay playbook profiles"
+							loading="lazy"
+						/>
+					</div>
+				</div>
+				<figcaption className="text-center mt-2">PaybyLink</figcaption>
 			</figure>
 		</div>
 	</section>
