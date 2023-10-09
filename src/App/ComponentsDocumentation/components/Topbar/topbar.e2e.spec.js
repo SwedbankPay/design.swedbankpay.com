@@ -9,12 +9,12 @@ test("Topbar page exist", async ({ page }) => {
 		})
 		.click();
 	await expect(page.getByRole("link", { name: "Topbar" })).toHaveCount(
-		page.viewportSize().width < 991 ? 1 : 2,
+		page.viewportSize().width < 991 ? 1 : 2
 	);
 	await page.getByText("call_to_actionTopbararrow_forward").click();
 	await expect(page).toHaveTitle(/Topbar/);
 	await expect(
-		page.getByRole("heading", { name: "Topbar", exact: true, level: 1 }),
+		page.getByRole("heading", { name: "Topbar", exact: true, level: 1 })
 	).toBeVisible();
 });
 
@@ -44,7 +44,9 @@ let brand;
  * @param {string} tabBtnText text of the doc preview container tab
  */
 const clickDocPreviewTab = async (page, tabBtnText) => {
-	await page.getByRole("link", { name: tabBtnText, exact: true }).click();
+	await page
+		.getByRole("link", { name: tabBtnText, exact: true })
+		.click({ force: true });
 };
 
 test.describe("visual regressions topbar", () => {
@@ -56,14 +58,14 @@ test.describe("visual regressions topbar", () => {
 
 	test(`general UI closed`, async ({ page }) => {
 		await expect(
-			page.getByRole("heading", { name: "Topbar", exact: true }),
+			page.getByRole("heading", { name: "Topbar", exact: true })
 		).toBeVisible();
 
 		for (const topbarTab of topbarTabs) {
 			clickDocPreviewTab(page, topbarTab.btnText);
 
 			await expect(
-				page.locator(".component-preview-content > div"),
+				page.locator(".component-preview-content > div")
 			).toHaveScreenshot(`${brand}-topbar-${topbarTab.name}-closed.png`);
 		}
 	});
@@ -77,9 +79,9 @@ test.describe("visual regressions topbar", () => {
 
 			await page.locator("#demo-topbar").getByRole("link").nth(2).hover();
 			await expect(
-				page.locator("#demo-topbar").getByRole("navigation"),
+				page.locator("#demo-topbar").getByRole("navigation")
 			).toHaveScreenshot(
-				`${brand}-topbar-${topbarTab.name}-links-ui-feedbacks.png`,
+				`${brand}-topbar-${topbarTab.name}-links-ui-feedbacks.png`
 			);
 		}
 	});
@@ -96,7 +98,7 @@ test.describe("visual regressions topbar", () => {
 				: page.locator(".component-preview-content > div");
 
 			await expect(modalContainer).toHaveScreenshot(
-				`${brand}-topbar-${topbarTab.name}-opened.png`,
+				`${brand}-topbar-${topbarTab.name}-opened.png`
 			);
 		}
 	});
@@ -105,7 +107,7 @@ test.describe("visual regressions topbar", () => {
 		page,
 	}) => {
 		for (const topbarTab of topbarTabs.filter(
-			(tab) => tab.desktopTopbar && !tab.isLegacy,
+			(tab) => tab.desktopTopbar && !tab.isLegacy
 		)) {
 			clickDocPreviewTab(page, topbarTab.btnText);
 
