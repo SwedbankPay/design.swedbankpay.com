@@ -6,6 +6,8 @@
 
 ## Component changes
 
+- Topbar - v2 experimental stage - disabled by default (migration involves breaking changes)
+
 ### Non breaking UI changes
 
 - add possibility to disable rotation of the dropdown toggle icon on active state

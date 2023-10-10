@@ -242,8 +242,8 @@ const Topbar = ({
 			</div>
 		) : (
 			<>
-				<TopbarLogo png={png} />
-				{logout ? <TopbarLogout /> : null}
+				<TopbarLogo png={png} legacy={legacy} />
+				{logout ? legacy ? <TopbarLogoutLegacy /> : <TopbarLogout /> : null}
 			</>
 		)}
 	</header>
