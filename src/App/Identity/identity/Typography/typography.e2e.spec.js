@@ -8,16 +8,30 @@ test("Typography page exist", async ({ page }) => {
 			name: "Identity Learn about our fundamental principles",
 		})
 		.click();
-	await expect(
-		page.getByRole("link", {
-			name: "Typography",
-		})
-	).toHaveCount(page.viewportSize().width < 991 ? 1 : 2);
-	await page
-		.getByRole("link", {
-			name: "Typography See our fronts and sizing arrow_forward",
-		})
-		.click();
+
+	if (page.viewportSize().width > 991) {
+		await expect(
+			page.getByRole("link", {
+				name: "Typography",
+			})
+		).toHaveCount(1);
+		await page.getByRole("link", { name: "Typography" }).click();
+	} else {
+		await expect(
+			page.getByRole("link", {
+				name: "Typography",
+			})
+		).toHaveCount(0);
+		await page.getByLabel("Open menu").click();
+		await page.getByRole("button", { name: "Identity" }).click();
+
+		await expect(
+			page.getByRole("link", {
+				name: "Typography",
+			})
+		).toHaveCount(1);
+		await page.getByRole("link", { name: "Typography" }).click();
+	}
 });
 
 const viewportsVariants = [
