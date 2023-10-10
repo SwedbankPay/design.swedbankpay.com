@@ -17,8 +17,8 @@ const Showroom = () => (
 						muted
 						loop
 						style={{ aspectRatio: "16 / 9" }}
-						height={399}
 						width={710}
+						height={399}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-1.avif`}
 					>
 						<source
@@ -110,6 +110,7 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
+						loading="lazy"
 						width={710}
 						height={399}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-6.avif`}
@@ -132,6 +133,7 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
+						loading="lazy"
 						width={350}
 						height={196}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-7.avif`}
@@ -152,6 +154,7 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
+						loading="lazy"
 						width={350}
 						height={196}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-8.avif`}
@@ -174,6 +177,7 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
+						loading="lazy"
 						style={{ "aspect-ratio": "178 / 318" }}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-9.avif`}
 						className="h-100"
@@ -194,6 +198,7 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
+						loading="lazy"
 						style={{ "aspect-ratio": "145 / 318" }}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-10.avif`}
 						className="h-100"
@@ -214,6 +219,7 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
+						loading="lazy"
 						style={{ "aspect-ratio": "145 / 318" }}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-11.avif`}
 						className="h-100"
@@ -234,6 +240,7 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
+						loading="lazy"
 						style={{ "aspect-ratio": "145 / 318" }}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-12.avif`}
 						className="h-100"
@@ -256,6 +263,7 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
+						loading="lazy"
 						width={230}
 						height={149}
 						style={{ "aspect-ratio": "230 / 149" }}
@@ -312,6 +320,7 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
+						loading="lazy"
 						width={710}
 						height={399}
 						poster={`${basename}img/documentation/playbook/playbook-showroom-16.avif`}
@@ -381,6 +390,7 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
+						loading="lazy"
 						width={138}
 						height={300}
 						style={{ "aspect-ratio": "138 / 300", "border-radius": "10px" }}
@@ -453,6 +463,7 @@ const Showroom = () => (
 						autoPlay
 						muted
 						loop
+						loading="lazy"
 						width={350}
 						height={196}
 						style={{ "aspect-ratio": "350 / 196" }}
