@@ -8,7 +8,7 @@ module.exports = [
 			name: "casino",
 		},
 		path: "playbook",
-		entryCardText: "TODO: entry text for Playbook card in homepage",
+		entryCardText: "Discover our visual language and principles",
 		redirect: "playbook",
 		appFolder: "Playbook",
 		routes: [
@@ -44,7 +44,7 @@ module.exports = [
 				path: "showroom",
 				rootPath: "/playbook/showroom",
 				componentPath: "content/Showroom",
-				text: "TODO: add entry text for showroom page",
+				text: "See examples from our visual language.",
 			},
 		],
 	},

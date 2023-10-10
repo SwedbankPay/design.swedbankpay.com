@@ -16,4 +16,5 @@
 
 ## Design System website
 
+- Add the Playbook section
 - expand components preview containers to full screen

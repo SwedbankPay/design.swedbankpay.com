@@ -35,11 +35,11 @@ const Showroom = () => (
 			<div className="row mt-3">
 				<div className="col-sm">
 					<picture>
-						<source
+						{/* <source
 							type="image/avif"
 							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-2.avif`}
-						/>
+						/> */}
 						<img
 							className=""
 							src={`${basename}img/documentation/playbook/playbook-showroom-2.png`}
@@ -49,27 +49,34 @@ const Showroom = () => (
 					</picture>
 				</div>
 				<div className="col-sm">
-					<picture>
+					<video
+						playsInline
+						autoPlay
+						muted
+						loop
+						width={230}
+						height={149}
+						style={{ "aspect-ratio": "230 / 149" }}
+						poster={`${basename}img/documentation/playbook/playbook-showroom-3.avif`}
+						className="h-100"
+					>
 						<source
-							type="image/avif"
-							media="(min-width: 576px)"
-							srcSet={`${basename}img/documentation/playbook/playbook-showroom-3.avif`}
+							src={`${basename}img/documentation/playbook/playbook-showroom-3.av1.mp4`}
+							type="video/mp4; codecs=av01.0.05M.08,opus"
 						/>
-						<img
-							className=""
-							src={`${basename}img/documentation/playbook/playbook-showroom-3.png`}
-							alt="illustration swedbankpay playbook showroom"
-							style={{ "aspect-ratio": "230 / 149" }}
+						<source
+							src={`${basename}img/documentation/playbook/playbook-showroom-3.mp4`}
+							type="video/mp4"
 						/>
-					</picture>
+					</video>
 				</div>
 				<div className="col-sm">
 					<picture>
-						<source
+						{/* <source
 							type="image/avif"
 							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-4.avif`}
-						/>
+						/> */}
 						<img
 							className=""
 							src={`${basename}img/documentation/playbook/playbook-showroom-4.png`}
@@ -82,11 +89,11 @@ const Showroom = () => (
 			<div className="row mt-3">
 				<div className="col-sm">
 					<picture>
-						<source
+						{/* <source
 							type="image/avif"
 							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-5.avif`}
-						/>
+						/> */}
 						<img
 							className=""
 							src={`${basename}img/documentation/playbook/playbook-showroom-5.png`}
@@ -202,60 +209,76 @@ const Showroom = () => (
 					</video>
 				</div>
 				<div className="col-5 col-sm-3 mt-4 mt-sm-0">
-					<picture>
+					<video
+						playsInline
+						autoPlay
+						muted
+						loop
+						style={{ "aspect-ratio": "145 / 318" }}
+						poster={`${basename}img/documentation/playbook/playbook-showroom-11.avif`}
+						className="h-100"
+					>
 						<source
-							type="image/avif"
-							media="(min-width: 576px)"
-							srcSet={`${basename}img/documentation/playbook/playbook-showroom-11.avif`}
+							src={`${basename}img/documentation/playbook/playbook-showroom-11-av1.mp4`}
+							type="video/mp4; codecs=av01.0.05M.08,opus"
 						/>
-						<img
-							className=""
-							src={`${basename}img/documentation/playbook/playbook-showroom-11.png`}
-							alt="illustration swedbankpay playbook showroom"
-							loading="lazy"
+						<source
+							src={`${basename}img/documentation/playbook/playbook-showroom-11.mp4`}
+							type="video/mp4"
 						/>
-					</picture>
+					</video>
 				</div>
 				<div className="col-5 col-sm-3 mt-4 mt-sm-0">
-					<picture>
+					<video
+						playsInline
+						autoPlay
+						muted
+						loop
+						style={{ "aspect-ratio": "145 / 318" }}
+						poster={`${basename}img/documentation/playbook/playbook-showroom-12.avif`}
+						className="h-100"
+					>
 						<source
-							type="image/avif"
-							media="(min-width: 576px)"
-							srcSet={`${basename}img/documentation/playbook/playbook-showroom-12.avif`}
+							src={`${basename}img/documentation/playbook/playbook-showroom-12-av1.mp4`}
+							type="video/mp4; codecs=av01.0.05M.08,opus"
 						/>
-						<img
-							className=""
-							src={`${basename}img/documentation/playbook/playbook-showroom-12.png`}
-							alt="illustration swedbankpay playbook showroom"
-							loading="lazy"
+						<source
+							src={`${basename}img/documentation/playbook/playbook-showroom-12.mp4`}
+							type="video/mp4"
 						/>
-					</picture>
+					</video>
 				</div>
 			</div>
 			<div className="row mt-3">
 				<div className="col-sm">
-					<picture>
+					<video
+						playsInline
+						autoPlay
+						muted
+						loop
+						width={230}
+						height={149}
+						style={{ "aspect-ratio": "230 / 149" }}
+						poster={`${basename}img/documentation/playbook/playbook-showroom-13.avif`}
+						className="h-100"
+					>
 						<source
-							type="image/avif"
-							media="(min-width: 576px)"
-							srcSet={`${basename}img/documentation/playbook/playbook-showroom-13.avif`}
+							src={`${basename}img/documentation/playbook/playbook-showroom-13.av1.mp4`}
+							type="video/mp4; codecs=av01.0.05M.08,opus"
 						/>
-						<img
-							className=""
-							src={`${basename}img/documentation/playbook/playbook-showroom-13.png`}
-							alt="illustration swedbankpay playbook showroom"
-							loading="lazy"
-							style={{ "aspect-ratio": "16 / 9" }}
+						<source
+							src={`${basename}img/documentation/playbook/playbook-showroom-13.mp4`}
+							type="video/mp4"
 						/>
-					</picture>
+					</video>
 				</div>
 				<div className="col-sm">
 					<picture>
-						<source
+						{/* <source
 							type="image/avif"
 							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-14.avif`}
-						/>
+						/> */}
 						<img
 							className=""
 							src={`${basename}img/documentation/playbook/playbook-showroom-14.png`}
@@ -267,11 +290,11 @@ const Showroom = () => (
 				</div>
 				<div className="col-sm">
 					<picture>
-						<source
+						{/* <source
 							type="image/avif"
 							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-15.avif`}
-						/>
+						/> */}
 						<img
 							className=""
 							src={`${basename}img/documentation/playbook/playbook-showroom-15.png`}
@@ -307,11 +330,11 @@ const Showroom = () => (
 			<div className="row mt-3">
 				<div className="col-sm-4">
 					<picture>
-						<source
+						{/* <source
 							type="image/avif"
 							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-17.avif`}
-						/>
+						/> */}
 						<img
 							className=""
 							src={`${basename}img/documentation/playbook/playbook-showroom-17.png`}
@@ -322,11 +345,11 @@ const Showroom = () => (
 				</div>
 				<div className="col-sm">
 					<picture>
-						<source
+						{/* <source
 							type="image/avif"
 							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-18.avif`}
-						/>
+						/> */}
 						<img
 							src={`${basename}img/documentation/playbook/playbook-showroom-18.png`}
 							alt="illustration swedbankpay playbook showroom"
@@ -338,11 +361,11 @@ const Showroom = () => (
 			<div className="row mt-3 playbook-showroom-portrait-phones-19 p-4 justify-content-evenly">
 				<div className="col-5 col-sm-2">
 					<picture>
-						<source
+						{/* <source
 							type="image/avif"
 							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-19-1.avif`}
-						/>
+						/> */}
 						<img
 							className=""
 							src={`${basename}img/documentation/playbook/playbook-showroom-19-1.png`}
@@ -376,11 +399,11 @@ const Showroom = () => (
 				</div>
 				<div className="col-5 mt-4 mt-sm-0 col-sm-2">
 					<picture>
-						<source
+						{/* <source
 							type="image/avif"
 							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-19-3.avif`}
-						/>
+						/> */}
 						<img
 							className=""
 							src={`${basename}img/documentation/playbook/playbook-showroom-19-3.png`}
@@ -392,11 +415,11 @@ const Showroom = () => (
 				</div>
 				<div className="col-5 mt-4 mt-sm-0 col-sm-2">
 					<picture>
-						<source
+						{/* <source
 							type="image/avif"
 							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-19-4.avif`}
-						/>
+						/> */}
 						<img
 							className=""
 							src={`${basename}img/documentation/playbook/playbook-showroom-19-4.png`}
@@ -410,11 +433,11 @@ const Showroom = () => (
 			<div className="row mt-3">
 				<div className="col-sm">
 					<picture>
-						<source
+						{/* <source
 							type="image/avif"
 							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-20.avif`}
-						/>
+						/> */}
 						<img
 							className="h-auto"
 							src={`${basename}img/documentation/playbook/playbook-showroom-20.png`}
@@ -450,11 +473,11 @@ const Showroom = () => (
 			<div className="row mt-3">
 				<div className="col-sm">
 					<picture>
-						<source
+						{/* <source
 							type="image/avif"
 							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-22.avif`}
-						/>
+						/> */}
 						<img
 							className=""
 							src={`${basename}img/documentation/playbook/playbook-showroom-22.png`}
@@ -466,11 +489,11 @@ const Showroom = () => (
 				</div>
 				<div className="col-sm">
 					<picture>
-						<source
+						{/* <source
 							type="image/avif"
 							media="(min-width: 576px)"
 							srcSet={`${basename}img/documentation/playbook/playbook-showroom-23.avif`}
-						/>
+						/> */}
 						<img
 							className=""
 							src={`${basename}img/documentation/playbook/playbook-showroom-23.png`}

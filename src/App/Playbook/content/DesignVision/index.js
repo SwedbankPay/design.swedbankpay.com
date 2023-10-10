@@ -47,11 +47,26 @@ const VisionBoard = () => (
 		<p>Scalable Growing the product portfolio of Swedbank Pay.</p>
 
 		<div className="d-flex flex-column align-items-center">
-			<img
-				src={`${basename}img/documentation/playbook/playbook-design-vision-vision-board.png`}
-				className="w-100"
-				alt="Playbook illustration"
-			/>
+			<video
+				playsInline
+				autoPlay
+				muted
+				loop
+				style={{ aspectRatio: "710 / 437" }}
+				width={710}
+				height={437}
+				poster={`${basename}img/documentation/playbook/playbook-design-vision-vision-board.avif`}
+				className="px-3"
+			>
+				<source
+					src={`${basename}img/documentation/playbook/playbook-design-vision-vision-board-av1.mp4`}
+					type="video/mp4; codecs=av01.0.05M.08,opus"
+				/>
+				<source
+					src={`${basename}img/documentation/playbook/playbook-design-vision-vision-board.mp4`}
+					type="video/mp4"
+				/>
+			</video>
 		</div>
 	</section>
 );
