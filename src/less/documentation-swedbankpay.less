@@ -836,11 +836,10 @@
 		.grid-row {
 			&.delicate-lines {
 				display: grid;
-				grid-template-areas:
-					"one three four five"
-					"two three four six";
-				grid-template-columns: repeat(4, 1fr);
-				grid-template-rows: 1fr 2fr;
+				grid-template:
+					"one three four five" 1fr
+					"two three four six" 2fr
+					repeat(4, 1fr);
 				gap: 10px;
 
 				@media (max-width: @screen-sm-min) {
@@ -849,8 +848,8 @@
 						"two two"
 						"three four"
 						"five five"
-						"six six";
-					grid-template-columns: 1fr 1fr;
+						"six six"
+						1fr 1fr;
 					grid-template-rows: repeat(5, auto);
 				}
 
