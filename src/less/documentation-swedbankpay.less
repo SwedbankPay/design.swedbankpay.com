@@ -839,18 +839,17 @@
 				grid-template:
 					"one three four five" 1fr
 					"two three four six" 2fr
-					repeat(4, 1fr);
+					/ 1fr 1fr 1fr 1fr;
 				gap: 10px;
 
 				@media (max-width: @screen-sm-min) {
-					grid-template-areas:
-						"one one"
-						"two two"
-						"three four"
-						"five five"
-						"six six"
-						1fr 1fr;
-					grid-template-rows: repeat(5, auto);
+					grid-template:
+						"one one" auto
+						"two two" auto
+						"three four" auto
+						"five five" auto
+						"six six" auto
+						/ 1fr 1fr;
 				}
 
 				img {
