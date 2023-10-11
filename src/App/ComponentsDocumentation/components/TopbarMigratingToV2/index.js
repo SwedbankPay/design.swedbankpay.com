@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 
 import { EditableComponentPreview, DocContainer } from "@docutils";
 import CodeTags from "@components/CodeTags";
@@ -80,7 +79,8 @@ export const Migration = () => (
 						{"\n"}
 						<div class="nav-container">
 							{"\n"}
-							{/* <!-- open/close menu button --> */}
+							{"// open/close menu button "}
+							{"\n"}
 							<button
 								type="button"
 								class="topbar-btn"
@@ -104,8 +104,8 @@ export const Migration = () => (
 								{"\n"}
 							</button>
 							{"\n"}
-
-							{/* <!-- logo link to homepage  --> */}
+							{"// logo link to homepage  "}
+							{"\n"}
 							<a class="topbar-logo" href="/" aria-label="To homepage">
 								{"\n"}
 								<img
@@ -116,13 +116,14 @@ export const Migration = () => (
 								{"\n"}
 							</a>
 							{"\n"}
-
-							{/* <!-- topbar/modal content --> */}
+							{"// topbar/modal content "}
+							{"\n"}
 							<nav class="topbar-nav">
 								{"\n"}
 								<div class="topbar-link-container">
 									{"\n"}
-									{/* <!-- content --> */}
+									{"// content "}
+									{"\n"}
 								</div>
 								{"\n"}
 							</nav>
@@ -142,7 +143,8 @@ export const Migration = () => (
 						{"\n"}
 						<div class="nav-container">
 							{"\n"}
-							{/* <!-- logo link to homepage  --> */}
+							{"// logo link to homepage  "}
+							{"\n"}
 							<a class="topbar-logo" href="/" aria-label="To homepage">
 								{"\n"}
 								<img
@@ -154,18 +156,21 @@ export const Migration = () => (
 							</a>
 							{"\n"}
 
-							{/* <!-- topbar/modal content --> */}
+							{"// topbar/modal content "}
+							{"\n"}
 							<nav class="topbar-nav">
 								{"\n"}
 								<div class="topbar-link-container">
 									{"\n"}
-									{/* <!-- links content --> */}
+									{"// links content "}
+									{"\n"}
 								</div>
 								{"\n"}
 							</nav>
 							{"\n"}
 
-							{/* <!-- open menu button --> */}
+							{"// open menu button "}
+							{"\n"}
 							<button
 								type="button"
 								class="topbar-btn"

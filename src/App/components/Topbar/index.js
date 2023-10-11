@@ -21,31 +21,29 @@ const getDevLogo = (legacy) => {
 	}
 };
 
-const TopbarBtn = ({ legacy = true }) => {
-	return (
-		<>
-			<button
-				type="button"
-				className="topbar-btn"
-				aria-label="Open menu"
-				aria-haspopup="menu"
-				aria-expanded="false"
-				aria-controls="topbar-nav"
-			>
-				{"\n\t\t"}
-				<i className="material-icons topbar-btn-icon">menu</i>
+const TopbarBtn = ({ legacy = true }) => (
+	<>
+		<button
+			type="button"
+			className="topbar-btn"
+			aria-label="Open menu"
+			aria-haspopup="menu"
+			aria-expanded="false"
+			aria-controls="topbar-nav"
+		>
+			{"\n\t\t"}
+			<i className="material-icons topbar-btn-icon">menu</i>
+			{"\n\t\t"}
+		</button>
+		{legacy && (
+			<button type="button" className="topbar-close" aria-label="Close menu">
+				{"\n"}
+				<i className="material-icons topbar-btn-icon">close</i>
 				{"\n\t\t"}
 			</button>
-			{legacy && (
-				<button type="button" className="topbar-close" aria-label="Close menu">
-					{"\n"}
-					<i className="material-icons topbar-btn-icon">close</i>
-					{"\n\t\t"}
-				</button>
-			)}
-		</>
-	);
-};
+		)}
+	</>
+);
 
 const ConditionalWrapper = ({ condition, wrapper, children }) =>
 	condition ? wrapper(children) : children;

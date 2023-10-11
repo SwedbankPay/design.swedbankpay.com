@@ -340,7 +340,7 @@ module.exports = [
 				componentPath: "components/TopbarMigratingToV2",
 				icon: "call_to_action",
 				outlined: true,
-				statusBadges: ["javascript"],
+				statusBadges: ["javascript", "new"],
 			},
 		],
 	},

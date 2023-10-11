@@ -117,7 +117,6 @@ export const topbarShowcase = {
 			title: "Desktop",
 			description: (
 				<p>
-					{/* TODO: mention it's legacy topbar and it all involve to use this in terms of breaking changes */}
 					The minimum requirement in a Topbar is to include the Swedbank Pay
 					Logotype, common additional functionality is a list with navigation
 					links. On desktop use{" "}
@@ -133,7 +132,6 @@ export const topbarShowcase = {
 			description: (
 				<>
 					<p>
-						{/* TODO: mention it's legacy topbar and it all involve to use this in terms of breaking changes */}
 						The minimum requirement in a Topbar is to include the Swedbank Pay
 						Logotype, common additional functionality is a list with navigation
 						links. On smaller screens use a menu button to toggle a vertical
@@ -155,11 +153,8 @@ export const topbarShowcase = {
 			title: "Desktop",
 			description: (
 				<p>
-					The minimum requirement in a Topbar is to include the Swedbank Pay
-					Logotype, common additional functionality is a list with navigation
-					links. On desktop use{" "}
-					<CodeTags type="secondary" code=".topbar-xl-wide" /> to show the links
-					listed horizontally in the topbar.{" "}
+					The experimental desktop topbar involves breaking changes. Make sure
+					to check them out before switching.
 				</p>
 			),
 		},
@@ -169,19 +164,8 @@ export const topbarShowcase = {
 			title: "Mobile/tablet",
 			description: (
 				<>
-					<p>
-						The minimum requirement in a Topbar is to include the Swedbank Pay
-						Logotype, common additional functionality is a list with navigation
-						links. On smaller screens use a menu button to toggle a vertical
-						navigation drawer with links when the menu button is clicked.
-					</p>
-					<p>
-						Be aware; The <CodeTags code="max-height" type="primary" />{" "}
-						attribute for element <CodeTags type="secondary" code=".nav-ul" />{" "}
-						when it is active is set to 2500px. This is to ensure animation for
-						the transition to happen. You can easily alter this by creating
-						custom css.
-					</p>
+					The experimental desktop topbar involves breaking changes. Make sure
+					to check them out before switching.
 				</>
 			),
 		},

@@ -6,15 +6,11 @@ import routes from "../routes/all";
 
 import SearchBox from "../utils/SearchBox";
 
-import swedbankpayLogo from "@src/img/swedbankpay/logo/swedbankpay-logo-h.svg";
-import payexLogo from "@src/img/payex/logo/payex-logo.svg";
-
-const brand = process.env.brand;
-const devLogo = brand === "swedbankpay" ? swedbankpayLogo : payexLogo;
-const isDev = process.env.version === "LOCAL_DEV";
-
 const basename = process.env.basename;
+const brand = process.env.brand;
 
+// feature toggle. Switch once we switch default to topbar v2 (and update rest of docs and code)
+// other corresponding feature toggle for topbar at "src/App/utils/SelectPanel/index.js"
 const useTopbarLegacy = true;
 
 // mobile & tablet topbar and hamburger menu

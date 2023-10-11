@@ -8,9 +8,9 @@ test("Topbar page exist", async ({ page }) => {
 			name: "Components Find all currently available components here",
 		})
 		.click();
-	await expect(page.getByRole("link", { name: "Topbar" })).toHaveCount(
-		page.viewportSize().width < 991 ? 1 : 2
-	);
+	await expect(
+		page.getByRole("link", { name: "Topbar", exact: true })
+	).toHaveCount(page.viewportSize().width < 991 ? 1 : 2);
 	await page.getByText("call_to_actionTopbararrow_forward").click();
 	await expect(page).toHaveTitle(/Topbar/);
 	await expect(

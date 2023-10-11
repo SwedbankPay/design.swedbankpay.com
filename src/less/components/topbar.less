@@ -1,277 +1,536 @@
-@import url("../global.less");
-@import url("./topbar-legacy.less");
+@import "../global.less";
+@import "./topbar-experimental.less";
 
-.topbar.experimental {
-	--topbar-height: 60px;
-	--topbar-border-width: 0.5rem;
-	--topbar-opened-padding: 24px;
-	--topbar-opened-padding-body: 30px;
-	--topbar-spacing-horizontal: 32px;
-	--topbar-links-container-spacing: 60px;
-	--topbar-max-width: 960px;
-	--border-radius-topbar: 24px;
-	--border-radius-topbar-nav: 32px;
+@topbar-height: 80px;
+@topbar-border-width: 0.5rem;
+@topbar-header-height: calc(@topbar-height + @topbar-border-width);
+@topbar-border-top: @topbar-border-width solid @brand-primary;
+@topbar-link-container-width: 288px;
 
-	// TODO: once color-mix get enough support we can replace this by CSS var. Postcss does not parse a color-mix fallback if css-var (since cannot predict ahead of time the dynamic aspect of it)
-	height: var(--topbar-height);
-	width: calc(100% - 2 * var(--topbar-spacing-horizontal, 32px));
-	max-width: var(--topbar-max-width, 960px);
-	z-index: calc(var(--topbar-z-index, 400) - 1);
+.topbar:not(.experimental) {
+	border-top: @topbar-border-top;
+	background-color: @white;
+	margin: 0 auto;
+	height: @topbar-height;
+	width: 100%;
+	z-index: var(--topbar-z-index, 400);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 0 1.5rem;
+	padding: 0 1.25rem;
 	position: relative;
-	border-radius: 0 0 var(--border-radius-topbar, 24px)
-		var(--border-radius-topbar, 24px);
-	margin: 0 auto;
-
-	&::before {
-		content: "";
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		backdrop-filter: blur(10px) brightness(1.1);
-		z-index: -1;
-		background-color: color-mix(in srgb, @brand-bg-gray, transparent 35%);
-		border-radius: 0 0 var(--border-radius-topbar, 24px)
-			var(--border-radius-topbar, 24px);
-	}
 
 	.nav-container {
 		display: flex;
 		width: 100%;
-		justify-content: space-between;
-		align-items: center;
+		justify-content: center;
 	}
 
 	&.topbar-sticky {
 		position: sticky;
 		top: 0;
+		box-shadow: 0 4px 4px rgba(227, 209, 195, 0.25);
 	}
 
-	.topbar-nav-closing
-		:is(.topbar-modal-header, .topbar-link-container, .topbar-modal-footer) {
-		visibility: hidden;
-	}
-
-	// LESS func to generate classes for triggering sticky starting from a breakpoints
 	each(@grid-breakpoints, .(@min-width, @infix) {
-			&.topbar-min-@{infix}-sticky {
-					@media screen and (min-width: @min-width) {
-							.topbar-sticky();
-					}
-			}
-	});
+        &.topbar-min-@{infix}-sticky {
+            @media screen and (min-width: @min-width) {
+                .topbar-sticky();
+            }
+        }
+    });
 
-	// LESS func to generate classes for triggering sticky ending at a breakpoint
 	each(@grid-breakpoints-max, .(@max-width, @infix) {
-			&.topbar-max-@{infix}-sticky {
-					@media screen and (max-width: @max-width) {
-							.topbar-sticky();
-					}
-			}
-	});
+        &.topbar-max-@{infix}-sticky {
+            @media screen and (max-width: @max-width) {
+                .topbar-sticky();
+            }
+        }
+    });
 
 	.topbar-logo {
 		background-size: cover;
 		border: none;
 		display: flex;
 
-		& img {
-			height: 32px;
-			width: 67px;
+		&.topbar-logo-png {
+			justify-content: center;
+		}
+
+		.logotype-vertical {
+			@media (max-width: @screen-xs-max) {
+				width: 1.5rem;
+			}
 		}
 	}
 
-	& .topbar-btn {
+	.topbar-btn {
 		user-select: none;
 		background: none;
+		font-weight: bold;
+		display: flex;
+		position: absolute;
+		left: 1rem;
 		padding: 0;
 		border: 0;
+		outline: 1px solid transparent;
 		align-self: center;
-		font-weight: bold;
+
+		&:hover {
+			cursor: pointer;
+		}
 
 		&:focus {
 			border-radius: 0.125rem;
 			box-shadow: 0 0 0 2px @black;
 			outline: none;
 		}
-	}
 
-	// once :has() is supported, we can remove the script that add inline-style display: none/flex to .topbar-btn when open & close
-	&:has(.topbar-nav-open) .topbar-btn {
-		display: none;
-	}
-
-	// hamburger menu btn to open the topbar-nav dialog
-	.topbar-btn {
-		display: flex;
-		outline: 1px solid transparent;
-
-		&:hover {
-			cursor: pointer;
+		&:last-child {
+			span {
+				margin-right: 0.2rem;
+			}
 		}
 	}
 
-	// topbar-link-right is the class for the first link aligned on the right side
+	.topbar-close {
+		display: none;
+		user-select: none;
+		background: none;
+		font-weight: bold;
+		position: absolute;
+		left: 1.25rem;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		cursor: pointer;
+		align-self: center;
+
+		&:hover {
+			color: var(--brand-secondary);
+			text-decoration: none;
+		}
+
+		&:focus,
+		&.focus {
+			border-radius: 0.125rem;
+			box-shadow: 0 0 0 2px @black;
+			outline: none;
+		}
+
+		&[active],
+		&:active,
+		&.active {
+			outline: 0;
+			background-image: none;
+			box-shadow: none;
+
+			&:focus,
+			&.focus {
+				box-shadow: none;
+			}
+		}
+
+		.material-icons {
+			margin: 0;
+		}
+	}
+
 	> .topbar-link-right {
 		display: none;
 	}
 
-	// topbar-nav is the container for links in both topbar up top and when dialog opened
 	.topbar-nav {
-		position: fixed;
-		inset: 0;
-		width: 100vw;
-		height: 100vh;
+		position: absolute;
+		top: calc(
+			(@topbar-height + @topbar-border-width) - 16px
+		); // - 16px is due to the drop shadow of the sticky topbar
+		right: 0;
+		width: 100%;
+		height: calc(100vh - (@topbar-height + @topbar-border-width - 8px));
 		background: transparent;
 		display: none;
 
-		&.topbar-nav-closing {
-			animation: fade-out ease-in-out 0.3s forwards;
-		}
+		.sidebar {
+			display: none;
+			position: relative;
+			height: 100%;
+			margin-top: 0;
+			top: 0;
+			padding-left: 1rem;
 
-		// topbar when dialog is opened
-		&.topbar-nav-open {
-			animation: fade-in ease-in-out 0.3s forwards;
-			position: fixed;
-			display: flex;
-			justify-content: flex-end;
+			&.has-secondary-nav {
+				padding-right: 0;
+			}
 
-			.topbar-link-container {
-				animation-name: slide-in-from-right;
-				animation-duration: 0.4s;
-				animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
-				position: relative;
-				padding: 0;
-				border-width: 0;
+			&.sidebar-topbar-sticky {
+				top: @topbar-height;
+
+				.sidebar-nav {
+					max-height: calc((100vh - @topbar-height));
+				}
+			}
+
+			each(@grid-breakpoints, .(@min-width, @infix) {
+                &.sidebar-topbar-min-@{infix}-sticky {
+                    @media screen and (min-width: @min-width) {
+                        .sidebar-topbar-sticky();
+                    }
+                }
+            });
+
+			each(@grid-breakpoints-max, .(@max-width, @infix) {
+                &.sidebar-topbar-max-@{infix}-sticky {
+                    @media screen and (max-width: @max-width) {
+                        .sidebar-topbar-sticky();
+                    }
+                }
+            });
+
+			.sidebar-nav {
+				max-height: none;
+				overflow-y: auto;
 				display: flex;
 				flex-direction: column;
-				align-items: stretch;
-				width: calc(100% - var(--topbar-links-container-spacing, 60px));
 
-				> .topbar-modal-body {
-					background-color: var(--white, #ffffff);
-					flex-direction: column;
-					align-items: stretch;
-					padding: var(--topbar-opened-padding, 24px)
-						calc(var(--topbar-opened-padding-body, 30px) - 10px)
-						var(--topbar-opened-padding, 24px)
-						var(--topbar-opened-padding-body, 30px);
-					flex: 1;
-					border-top: 1px solid var(--gray);
-					border-bottom: 1px solid var(--gray);
+				.main-nav-ul {
+					list-style: none;
+					padding: 0;
 
-					.topbar-link-right {
-						margin: initial;
-
-						.material-icons {
-							margin: 0;
+					.nav-group {
+						.nav-ul-active() {
+							> .nav-ul {
+								max-height: 2500px;
+								transition: max-height 1.5s ease-in-out;
+								visibility: visible;
+							}
 						}
-					}
 
-					// links in open modal
-					> a {
-						font-size: 1.125rem;
-						padding: 1rem 0;
-						border-bottom: 1px solid
-							color-mix(in srgb, @brand-secondary, transparent 60%);
+						.nav-heading-active() {
+							color: @brand-secondary;
 
-						&:first-of-type {
-							padding-top: 0;
+							i {
+								transform: rotate(90deg);
+								transition: transform 0.3s;
+							}
 						}
-					}
 
-					> button {
-						margin-top: 0.75rem;
+						&.active {
+							.nav-ul-active();
 
-						&:first-of-type {
-							margin-top: auto;
+							> .nav-group-heading {
+								.nav-heading-active();
+							}
 						}
-					}
-				}
 
-				> :is(.topbar-modal-header, .topbar-modal-footer) {
-					display: flex;
-					background-color: var(--white, #ffffff);
-					padding: var(--topbar-opened-padding, 24px);
-				}
+						.nav-group-heading {
+							all: unset;
+							display: flex;
+							padding: 0.5rem;
+							padding-left: 0;
+							border: 2px solid transparent;
+							font-weight: var(--font-weight-bold);
+							line-height: 1.5rem;
 
-				.topbar-modal-header {
-					justify-content: flex-end;
-					border-radius: var(--border-radius-topbar-nav, 32px) 0 0 0;
+							i {
+								margin-right: 0.5rem;
+							}
 
-					& > button.topbar-close {
-						height: var(--topbar-spacing-horizontal, 32px);
-						width: var(--topbar-spacing-horizontal, 32px);
-						background-color: var(--gray);
-						border: transparent;
+							&:hover,
+							&:focus {
+								cursor: pointer;
 
-						> i {
-							font-size: 24px;
+								span {
+									text-decoration: underline;
+								}
+							}
+
+							&:focus {
+								border: 2px solid @brand-secondary;
+								border-radius: 2px;
+							}
 						}
-					}
-				}
 
-				.topbar-modal-footer {
-					justify-content: center;
-					border-radius: 0 0 0 var(--border-radius-topbar-nav, 32px);
+						.nav-ul {
+							list-style: none;
+							padding-left: 0.75rem;
+							max-height: 0;
+							overflow: hidden;
+							visibility: hidden;
 
-					> button {
-						width: 220px;
+							.nav-leaf {
+								position: relative;
+								display: flex;
+								align-items: center;
+								min-height: 2.5rem;
+
+								&.active,
+								&:hover {
+									&:before {
+										background-color: @brand-secondary;
+									}
+								}
+
+								&:before {
+									content: "";
+									position: absolute;
+									height: 100%;
+									width: 0.125rem;
+									left: 0;
+									top: 0;
+									background-color: @brand-bg-gray;
+								}
+
+								a {
+									font-size: 0.875rem;
+									line-height: 1.25rem;
+									color: @brand-secondary;
+									text-decoration: none;
+									padding: 0.625rem 1.75rem;
+									width: 100%;
+									height: 100%;
+								}
+							}
+						}
 					}
 				}
 			}
 		}
 
-		.topbar-link-container {
-			z-index: var(--topbar-z-index, 400);
-			width: 100%;
+		.topbar-nav-header {
+			position: relative;
+			display: none;
+			height: @topbar-header-height;
+			justify-content: center;
+			align-items: center;
+			background-color: @white;
 
-			.topbar-modal-body {
-				display: flex;
-				justify-items: center start;
-				top: 0;
-				bottom: 0;
-				background-color: var(--white);
-				overflow-x: hidden;
-				overflow-y: auto;
-				overscroll-behavior: contain;
+			.topbar-close {
+				top: calc((@topbar-header-height / 2) - (var(--font-size-large) / 2));
+				left: 1rem;
+			}
+		}
+
+		.topbar-close {
+			top: 1rem;
+			right: 2rem;
+			left: auto;
+			display: inline-flex;
+			align-items: center;
+			position: absolute;
+			font-weight: var(--font-weight-normal);
+			font-family: var(--brand-headline);
+			text-align: center;
+			text-decoration: none;
+			touch-action: manipulation;
+			cursor: pointer;
+			line-height: 1rem;
+			border: 1px solid transparent;
+			white-space: nowrap;
+			user-select: none;
+			background-color: transparent;
+			margin-right: -0.5rem;
+
+			&:hover,
+			&:focus,
+			&.focus {
+				color: var(--brand-secondary);
+				text-decoration: none;
+			}
+
+			&[active],
+			&:active,
+			&.active {
+				outline: 0;
+				background-image: none;
+				box-shadow: none;
+
+				&:focus,
+				&.focus {
+					box-shadow: none;
+				}
+			}
+
+			.material-icons {
+				margin: 0;
+			}
+		}
+
+		&.topbar-nav-open {
+			animation: fade-in-legacy 0.5s forwards;
+			border-top: solid 1px @brand-bg-gray;
+
+			.topbar-link-container {
+				animation: slide-in-legacy 0.5s ease forwards;
+
+				.sidebar {
+					display: block;
+					box-shadow: none;
+				}
+
+				.topbar-nav-header {
+					display: flex;
+				}
+
+				> a:first-of-type {
+					margin-top: 1rem;
+				}
 
 				> a {
-					font-size: 1rem;
 					color: @brand-secondary;
-					cursor: pointer;
-					text-decoration: none;
-					display: flex;
-					gap: 0.5rem;
-					line-height: 1;
-					align-items: center;
+					padding-left: 1rem;
 
-					> span {
-						font-family: var(--brand-headline);
-						font-weight: var(--font-weight-normal);
-
-						// for :before underline effect
-						position: relative;
-
-						// :before underline effect
-						&:before {
-							content: "";
-							position: absolute;
-							background-color: currentcolor;
-							height: 3px;
-							bottom: -4px;
-							left: 0;
-							right: 0;
-							margin-left: auto;
-							margin-right: auto;
-							width: 0;
-						}
+					span {
+						margin-left: 1rem;
 					}
 
-					// :hover underline expand width effects in non-opened topbar links
+					.material-icons + span {
+						margin-left: 0;
+					}
+				}
+
+				.topbar-link-right {
+					margin: initial;
+
+					.material-icons {
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		&.topbar-nav-closing {
+			animation: fade-out-legacy 0.3s forwards;
+
+			.topbar-link-container {
+				animation: slide-out-legacy 0.3s ease alternate;
+
+				> a:first-of-type {
+					margin-top: 1rem;
+				}
+			}
+		}
+
+		.topbar-link-container {
+			width: @topbar-link-container-width;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			background-color: @white;
+			overflow-x: hidden;
+			overflow-y: auto;
+			z-index: var(--topbar-z-index, 400);
+			padding: 0;
+			align-items: center;
+			transform: translateX(-100%);
+
+			.sidebar:not(:first-child) {
+				margin-left: 1.5rem;
+			}
+
+			> a {
+				font-family: var(--brand-headline);
+				font-weight: var(--font-weight-normal);
+				font-size: 1.125rem;
+				color: @text-gray;
+				cursor: pointer;
+				text-decoration: none;
+				display: flex;
+				padding: 0.75rem 0;
+				line-height: 1;
+				align-items: center;
+
+				.material-icons {
+					padding: 0 0.5rem 0 0;
+					user-select: none;
+				}
+
+				&:hover {
+					> span {
+						&:before {
+							display: none;
+						}
+
+						text-decoration: underline;
+					}
+				}
+
+				&.active {
+					> span {
+						text-decoration: underline;
+					}
+				}
+			}
+
+			.topbar-link-right {
+				margin-left: auto;
+				color: @black;
+
+				.material-icons {
+					margin: 0;
+				}
+			}
+
+			.close-topbar-nav {
+				position: absolute;
+				user-select: none;
+				top: 1.5rem;
+				right: 2rem;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	&.topbar-xl-wide {
+		padding: 0 1.5rem;
+	}
+	.topbar-wide {
+		.topbar-btn {
+			display: none;
+		}
+
+		.topbar-logo {
+			margin-top: 0;
+			margin-right: 2rem;
+		}
+
+		.topbar-link-right {
+			margin-left: auto;
+			padding: 0;
+			align-items: center;
+			font-family: var(--brand-headline);
+			font-weight: var(--font-weight-normal);
+			color: var(--brand-secondary);
+			cursor: pointer;
+			text-decoration: none;
+			display: flex;
+		}
+
+		.topbar-nav {
+			display: flex;
+			position: static;
+			flex-grow: 1;
+			height: 100%;
+
+			.topbar-close {
+				display: none;
+			}
+
+			.topbar-link-container {
+				position: static;
+				background-color: transparent;
+				width: 100%;
+				display: flex;
+				padding: 0;
+				overflow: visible;
+				transform: translateX(0%);
+
+				> a:not(.close-topbar-nav) {
+					margin-top: 8px;
+
 					&:hover {
 						> span {
 							&:before {
@@ -284,12 +543,10 @@
 						}
 					}
 
-					// :active underline permanently displayed primary color
 					&.active {
 						> span {
 							&:before {
 								width: 100%;
-								background-color: var(--brand-primary);
 							}
 
 							text-decoration: none;
@@ -297,226 +554,168 @@
 						}
 					}
 
-					&:last-of-type {
-						border-bottom: none;
-					}
-				}
+					> span {
+						position: relative;
 
-				@supports not selector(:has(a)) {
-					> .topbar-link-right {
-						margin-left: auto;
-					}
-				}
-
-				@supports selector(:has(a)) {
-					> .topbar-link-right,
-					&:not(&:has(.topbar-link-right)) button:first-of-type {
-						margin-left: auto;
-					}
-				}
-			}
-		}
-	}
-
-	/*
-	LESS mixin function scoped for the topbar on wider viewport, generated by the topbar mixin
-	1. Create a mixin called .topbar-@{infix}-wide
-	2. For each breakpoint in @grid-breakpoints, create a selector called .topbar-@{infix}-wide
-	3. For each selector, create a media query for the breakpoint
-	4. Inside each media query, call the mixin .topbar-wide()
-	*/
-	// TODO: try to refactor it to make it more readable and not use LESS mixin, but native CSS
-
-	each(@grid-breakpoints, .(@min-width, @infix) {
-		&.topbar-@{infix}-wide:not(.legacy) {
-				@media screen and (min-width: @min-width) {
-						.topbar-wide();
-				}
-		}
-	});
-
-	.topbar-wide {
-		--topbar-height: 88px;
-		--modal-nav-width: 480px;
-
-		padding: 0 var(--topbar-spacing-horizontal);
-
-		.topbar-logo img {
-			height: var(--topbar-spacing-horizontal);
-			width: auto;
-		}
-
-		.topbar-nav {
-			display: flex;
-			position: static;
-			flex-grow: 1;
-			height: 100%;
-
-			&.topbar-nav-open {
-				width: 100vw;
-				height: 100vh;
-				position: fixed;
-				justify-content: center;
-				align-items: center;
-
-				.topbar-link-container {
-					width: var(--modal-nav-width, 480px);
-					height: max-content;
-					max-height: calc(
-						100% - 2 * var(--topbar-links-container-spacing, 60px)
-					);
-					margin: var(--topbar-links-container-spacing, 60px);
-					padding: 0;
-
-					.topbar-modal-body {
-						overflow-y: auto;
-						scrollbar-width: thin;
-						scrollbar-color: var(--brown-soft) transparent;
-						scrollbar-gutter: stable;
-
-						&::-webkit-scrollbar {
-							background-color: transparent;
-							width: 10px;
-						}
-
-						&::-webkit-scrollbar-thumb {
-							background: var(--brown-soft);
-							border-radius: 5rem;
-						}
-
-						> a,
-						> a:not(.pinned) {
-							display: flex;
-							font-size: 1.25rem;
-							padding: 1.5rem 0;
-
-							&:first-of-type {
-								padding-top: 0;
-							}
-							&:last-of-type {
-								padding-bottom: 0;
-							}
+						&:before {
+							content: "";
+							position: absolute;
+							background-color: @brand-primary;
+							height: 4px;
+							bottom: -4px;
+							left: 0;
+							right: 0;
+							margin-left: auto;
+							margin-right: auto;
+							width: 0;
 						}
 					}
 
-					:is(.topbar-modal-header, .topbar-modal-footer) {
-					}
-
-					.topbar-modal-header {
-						border-radius: var(--border-radius-topbar-nav, 32)
-							var(--border-radius-topbar-nav, 32) 0 0;
-					}
-
-					.topbar-modal-footer {
-						border-radius: 0 0 var(--border-radius-topbar-nav, 32)
-							var(--border-radius-topbar-nav, 32);
-					}
-				}
-			}
-
-			// links container when in topbar only, not opened in dialog
-			&:not(.topbar-nav-open) .topbar-link-container {
-				.topbar-modal-body {
-					position: static;
-					background-color: transparent;
-					width: 100%;
-					display: flex;
-					justify-content: flex-start;
-					gap: 2rem;
-					padding: 0 2rem 0 3rem;
-					overflow: visible;
-
-					:is(a, button):not(.pinned) {
-						display: none;
+					&:not(.topbar-link-right) {
+						.material-icons,
+						&.material-icons {
+							display: none;
+						}
 					}
 				}
 
-				:is(.topbar-modal-header, .topbar-modal-footer) {
+				> *:not(.close-topbar-nav):not(.topbar-link-right) {
+					text-decoration: none;
+					margin-left: 1rem;
+					margin-right: 1rem;
+				}
+
+				.close-topbar-nav {
 					display: none;
 				}
 			}
 		}
 	}
 
-	@keyframes fade-in {
-		0% {
-			backdrop-filter: blur(0);
-			background-color: transparent;
+	each(@grid-breakpoints, .(@min-width, @infix) {
+		&.topbar-@{infix}-wide {
+				@media screen and (min-width: @min-width) {
+						.topbar-wide();
+				}
 		}
+	});
 
-		33% {
-			background-color: color-mix(in srgb, @brand-primary, transparent 40%);
-		}
-
+	// Keyframe animations
+	@keyframes slide-in-legacy {
 		100% {
-			backdrop-filter: blur(20px);
-			background-color: color-mix(in srgb, @brand-primary, transparent 40%);
+			transform: translateX(0%);
 		}
 	}
 
-	@keyframes fade-out {
+	@keyframes slide-out-legacy {
 		0% {
-			backdrop-filter: blur(20px);
-			background-color: color-mix(in srgb, @brand-primary, transparent 40%);
-			position: fixed;
-			inset: 0;
-			width: 100vw;
-			height: 100vh;
+			transform: translateX(0%);
 		}
 
-		1% {
-			backdrop-filter: blur(20px);
+		100% {
+			transform: translateX(-100%);
 		}
+	}
 
-		33% {
-			backdrop-filter: blur(20px);
-			background-color: color-mix(in srgb, @brand-primary, transparent 40%);
-		}
-
-		99% {
-			position: fixed;
-			inset: 0;
-			width: 100vw;
-			height: 100vh;
+	@keyframes fade-in-legacy {
+		0% {
 			background: transparent;
 		}
 
 		100% {
-			backdrop-filter: blur(0);
-			background-color: transparent;
+			background: fade(@black, 50%);
 		}
 	}
 
-	@keyframes slide-in-from-right {
-		from {
-			transform: translateX(100%);
+	@keyframes fade-out-legacy {
+		0% {
+			background: fade(@black, 50%);
 		}
 
-		to {
-			transform: translateX(0);
+		100% {
+			background: transparent;
 		}
 	}
 
 	@media (prefers-reduced-motion) {
-		// TODO: once finish animations / transition -> go through each & disable any animation/transition here
-		.topbar:not(.legacy)
-			nav.topbar-nav:is(.topbar-nav-open, .topbar-nav-closing) {
-			animation-duration: 0ms;
+		.topbar {
+			.topbar-nav {
+				.sidebar {
+					.sidebar-nav {
+						.main-nav-ul {
+							.nav-group {
+								.nav-ul-active() {
+									> .nav-ul {
+										transition: max-height 0s ease-in-out;
+									}
+								}
+							}
+						}
+					}
+				}
 
-			& > .topbar-link-container {
-				animation-duration: 0ms;
+				&.topbar-nav-open {
+					animation: fade-in-legacy 0s forwards;
+
+					.topbar-link-container {
+						animation: slide-in-legacy 0s ease forwards;
+					}
+				}
+
+				&.topbar-nav-closing {
+					animation: fade-out-legacy 0s forwards;
+
+					.topbar-link-container {
+						animation: slide-out-legacy 0s ease alternate;
+					}
+				}
 			}
 		}
 	}
 
 	@media (forced-colors: active) {
-		a {
-			border-bottom: 1px solid;
+		#dg-topbar {
+			border-bottom: 3px solid;
+		}
 
-			&:focus,
-			&:hover,
-			&.active {
-				border-bottom: 4px solid;
+		.topbar-link-container {
+			border: 10px solid;
+		}
+
+		.topbar {
+			.topbar-close {
+				outline: 2px solid;
+
+				&:hover,
+				&:focus,
+				&.focus {
+					outline: 2px solid;
+				}
+
+				&[active],
+				&:active,
+				&.active {
+					outline: 2px solid;
+				}
+
+				&:focus,
+				&.focus {
+					outline: 2px solid;
+				}
+			}
+		}
+
+		.nav-group {
+			.nav-leaf {
+				a {
+					border-bottom: 1px solid;
+
+					&:focus,
+					&:hover,
+					&.active {
+						border-bottom: 4px solid;
+					}
+				}
 			}
 		}
 	}
