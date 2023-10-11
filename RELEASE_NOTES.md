@@ -11,6 +11,7 @@
 ### Non breaking UI changes
 
 - add possibility to disable rotation of the dropdown toggle icon on active state
+- add possibility to style bank-id button as secondary
 
 ## Testing
 

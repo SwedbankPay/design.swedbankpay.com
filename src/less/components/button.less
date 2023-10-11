@@ -86,28 +86,8 @@
 			background-color: var(--btn-primary-color);
 		}
 
-		&.btn-bank-id {
-			display: flex;
-			justify-content: center;
-
-			i.bank-id {
-				height: 1.5rem;
-				width: 1.5rem;
-				display: inline-flex;
-				background-image: none;
-				margin-left: 0.5rem;
-				background-color: var(--btn-primary-text-color);
-
-				&-no,
-				&.no {
-					mask-image: url("../../icons/bank-id/bankid_no.svg");
-				}
-
-				&-se,
-				&.se {
-					mask-image: url("../../icons/bank-id/bankid_se.svg");
-				}
-			}
+		&.btn-bank-id i.bank-id {
+			background-color: var(--btn-primary-text-color);
 		}
 	}
 
@@ -125,6 +105,33 @@
 		&:not(.loading, [disabled], .disabled):active {
 			box-shadow: inset 0 0 0 3px var(--btn-active-color);
 			border-color: var(--btn-active-color);
+		}
+
+		&.btn-bank-id i.bank-id {
+			background-color: var(--btn-secondary-text-color);
+		}
+	}
+
+	&:is(.btn-primary, .btn-secondary).btn-bank-id {
+		display: flex;
+		justify-content: center;
+
+		i.bank-id {
+			height: 1.5rem;
+			width: 1.5rem;
+			display: inline-flex;
+			background-image: none;
+			margin-left: 0.5rem;
+
+			&-no,
+			&.no {
+				mask-image: url("../../icons/bank-id/bankid_no.svg");
+			}
+
+			&-se,
+			&.se {
+				mask-image: url("../../icons/bank-id/bankid_se.svg");
+			}
 		}
 	}
 
