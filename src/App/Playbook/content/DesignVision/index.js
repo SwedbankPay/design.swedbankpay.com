@@ -46,7 +46,7 @@ const VisionBoard = () => (
 		<h2 id="vision-board">Vision board</h2>
 		<p>Scalable Growing the product portfolio of Swedbank Pay.</p>
 
-		<div className="d-flex flex-column align-items-center">
+		<div className="d-flex">
 			<video
 				playsInline
 				autoPlay
@@ -56,7 +56,7 @@ const VisionBoard = () => (
 				width={710}
 				height={437}
 				poster={`${basename}img/documentation/playbook/playbook-design-vision-vision-board.avif`}
-				className="px-3"
+				className="w-100 h-auto"
 			>
 				<source
 					src={`${basename}img/documentation/playbook/playbook-design-vision-vision-board-av1.mp4`}
@@ -142,7 +142,7 @@ const BoldTypography = () => (
 
 		<div className="container px-sm-0 playbook">
 			<div
-				className="row ratio-responsive-row d-flex justify-content-between mx-0"
+				className="row ratio-responsive-row justify-content-between mx-0"
 				style={{ "--row-height": 163, "--row-width": 702 }}
 			>
 				<div className="col-sm px-0">

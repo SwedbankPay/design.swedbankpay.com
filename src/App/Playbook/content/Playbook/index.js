@@ -11,7 +11,7 @@ const WhyNeedPlaybook = () => (
 		<h2 id="why-need-playbook">Why do we need a Playbook?</h2>
 		<p>
 			We’ve created this playbook so that every interface and element will tell
-			a part of our story. Whether you're designing a new interface or crafting
+			a part of our story. Whether you’re designing a new interface or crafting
 			a digital campaign, let it be your guide to creating experiences that
 			resonate.
 		</p>
