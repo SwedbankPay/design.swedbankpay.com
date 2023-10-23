@@ -1266,117 +1266,150 @@
 		}
 	}
 
-	.color-contrast-section {
-		i {
-			font-size: 1rem;
-			align-self: center;
+	.identity-colors {
+		.color-page-introduction .color-circle {
+			width: clamp(30px, 7vw, 55px);
+			height: clamp(30px, 7vw, 55px);
+			margin: clamp(0.2rem, 3vw, 1rem);
+			aspect-ratio: 1;
 
-			&.check {
-				color: @brand-success;
+			&.brown-solid {
+				background-color: var(--brown-solid);
 			}
 
-			&.cancel {
-				color: @brand-error;
+			&.brand-yellow {
+				background-color: var(--brand-yellow);
 			}
 
-			&.warning {
-				color: @brand-warning;
+			&.brand-orange {
+				background-color: var(--brand-orange);
+			}
+
+			&.brand-pink {
+				background-color: var(--brand-pink);
+			}
+
+			&.brand-turquoise-light {
+				background-color: var(--brand-turquoise-light);
+			}
+
+			&.brand-turquoise {
+				background-color: var(--brand-turquoise);
+			}
+
+			&:nth-child(1) {
+				transform: translateY(10px);
+			}
+
+			&:nth-child(2) {
+				transform: translateY(-15px);
+			}
+
+			&:nth-child(3) {
+				transform: translateY(-25px);
+			}
+
+			&:nth-child(4) {
+				transform: translateY(-10px);
+			}
+
+			&:nth-child(5) {
+				transform: translateY(15px);
+			}
+
+			&:nth-child(6) {
+				transform: translateY(-10px);
 			}
 		}
-	}
 
-	.color-group {
-		display: flex;
-		flex-wrap: wrap;
+		.color-contrast-section {
+			border-radius: 10px;
 
-		.color-box {
-			height: 7.875rem;
-			width: 7.875rem;
-			margin-right: 0.5rem;
-			overflow: hidden;
-			border-radius: var(--border-radius, 8px);
+			i {
+				font-size: 1rem;
+				align-self: center;
 
-			&.has-border {
-				border: 1px solid @brand-secondary;
+				&.check {
+					color: @brand-success;
+				}
+
+				&.cancel {
+					color: @brand-error;
+				}
+
+				&.warning {
+					color: @brand-warning;
+				}
+			}
+		}
+
+		.color-group {
+			display: flex;
+			flex-wrap: wrap;
+
+			&.color-group-table {
+				display: grid;
+				grid-template-columns: repeat(4, auto);
+				grid-gap: 1rem;
+				grid-template-rows: repeat(8, auto);
+
+				.table-header-row {
+					grid-column: 1 / span 4;
+					display: grid;
+					grid-template-columns: subgrid;
+					color: var(--text-muted-light);
+				}
+
+				.table-row {
+					display: grid;
+					grid-template-columns: subgrid;
+					grid-column: span 4;
+					grid-row: span 1;
+				}
 			}
 
-			svg {
-				width: 100%;
-				height: 100%;
+			&.color-grid {
+				display: grid;
+				gap: 5px 30px;
+				grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			}
 
-				rect {
-					rx: 5;
+			.color-box {
+				height: 7.1875rem;
+				width: 7.1875rem;
+				margin-right: 1rem;
+				border-radius: 2.1875rem;
+				aspect-ratio: 1;
+				overflow: hidden;
+			}
+
+			.color-box-small {
+				height: 3.0625rem;
+				width: 3.0625rem;
+				margin-right: 1rem;
+				border-radius: 0.875rem;
+				background: var(--bg-color);
+				aspect-ratio: 1;
+			}
+
+			div:is(.color-box, .color-box-small) {
+				svg {
 					width: 100%;
 					height: 100%;
-				}
-			}
-		}
 
-		.text-box {
-			margin-top: 4px;
-
-			small {
-				color: @medium-brown;
-			}
-
-			.contrast-box {
-				display: flex;
-				flex-direction: column;
-
-				.contrast-white-container {
-					margin-bottom: 0.25rem;
-
-					.white-box {
-						border: 1px solid @medium-brown;
+					rect {
+						rx: 5;
+						width: 100%;
+						height: 100%;
 					}
 				}
+			}
 
-				.contrast-white-container,
-				.contrast-black-container {
-					position: relative;
-					display: flex;
+			.text-box {
+				margin-top: 4px;
 
-					svg {
-						height: 1rem;
-						width: 1rem;
-						border-radius: 2px;
-						position: relative;
-
-						&.white-box {
-							border: 1px solid @medium-brown;
-						}
-
-						rect {
-							width: 100%;
-							height: 100%;
-						}
-					}
-
-					.second-svg {
-						position: relative;
-						left: -8px;
-					}
-
-					.first-svg {
-						z-index: 100;
-					}
-
-					i {
-						font-size: 14px;
-						align-self: center;
-
-						&.check {
-							color: @brand-success;
-						}
-
-						&.cancel {
-							color: @brand-error;
-						}
-
-						&.warning {
-							color: @brand-warning;
-						}
-					}
+				small {
+					color: @medium-brown;
 				}
 			}
 		}

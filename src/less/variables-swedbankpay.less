@@ -153,8 +153,7 @@
 *
 */
 :root {
-	// Communication colors
-	--brand-primary: #fdc129;
+	--brand-primary: var(--brand-yellow, #fdc129);
 	--brand-secondary: var(--brown-solid, #2f2424);
 
 	// Functional colors
@@ -165,11 +164,6 @@
 	--brown-light: #d4c4bc;
 	--gray: #ebe7e2;
 	--white: #ffffff;
-
-	// Complementary colors
-	--brand-orange: #ee7023;
-	--brand-turquoise: #31a3ae;
-	--brand-turquoise-light: #8acdc3;
 
 	/* Main Brand Color Variants */
 	--brand-secondary-light-1: var(--brown-medium, #72605e);
@@ -184,15 +178,73 @@
 	// Text colors
 	--text-default: var(--brown-solid);
 	--text-muted: var(--brown-medium);
+	--text-muted-light: var(--brown-soft);
 	--text-link: #257886;
-	--text-white: var(--white);
-	--text-disabled: #c0bebe;
+	--text-white: var(--white, #ffffff);
+	--text-disabled: var(--brown-light, #d4c4bc);
+
+	// Communication colors
+	--brand-yellow: #fdc129;
+	--brand-yellow-light: #fbdd91;
+	--brand-yellow-lighter: #fce4a1;
+	--brand-orange: #ee7023;
+	--brand-turquoise: #31a3ae;
+	--brand-turquoise-light: #8acdc3;
+	--brand-pink: #efb7b6;
+
+	// Color pool
+	--brand-turquoise-lighter: #ebf8f2;
+	--brand-purple: #642f93;
+	--brand-purple-light: #c58af9;
+	--brand-purple-lighter: #f1e0ff;
+	--brand-orange-light: #ffba69;
+	--brand-orange-lighter: #fbeadb;
+	--brand-green: #497125;
+	--brand-green-light: #70b63a;
+	--brand-green-lighter: #e7f8d2;
+	--brand-mahogany: #4c2d2c;
+	--brand-mahogany-light: #965e5c;
+	--brand-mahogany-lighter: #eec4c4;
+	--brand-red: #a62825;
+	--brand-red-light: #efb7b6;
+	--brand-red-lighter: #ffe9e9;
+	--brand-blue: #335bb1;
+	--brand-blue-light: #65a0e4;
+	--brand-blue-lighter: #e0eaf9;
+	--brand-fuchsia: #b9297f;
+	--brand-fuchsia-light: #fbbbe1;
+	--brand-fuchsia-lighter: #ffeefc;
+
+	// Functional colors
+	--base-1: var(--text-default);
+	--base-2: var(--text-muted);
+	--base-3: var(--text-muted-light);
+	--base-4: var(--text-disabled);
+	--base-5: var(--bg-brown);
+	--base-6: var(--bg-grey);
+	--base-7: var(--bg-white);
 
 	// Background colors
+	--bg-brown: var(--gray, #ebe7e2);
+	--bg-grey: var(--light-gray, #f9f8f6);
+	--bg-orange: #fff1e4;
+	--bg-white: var(--white, #ffffff);
+	--bg-turquoise: var(--brand-turquoise-lighter, #ebf8f2);
+	// TODO: update bg colors in LESS variables and in component
 
 	// System colors
-	--brand-error: #b5111a;
-	--brand-error-light: #fceee9;
+	--system-success: #4d9c0f;
+	--system-success-light: var(--brand-green-lighter, #e7f8d2);
+	--system-warning: var(--brand-orange, #ee7023);
+	--system-warning-light: var(--brand-orange-lighter, #fbeadb);
+	--system-info: var(--brand-blue, #335bb1);
+	--system-info-light: var(--brand-blue-lighter, #e0eaf9);
+	--system-error: #d82e2a;
+	--system-error-light: var(--brand-red-lighter, #ffe9e9);
+	// TODO: update system colors in LESS variables and in component
+
+	--brand-error: var(--system-error);
+	--brand-error-light: var(--system-error-light);
 
 	// Button colors
 	--secondary-disabled-bg: #e3d1c3;

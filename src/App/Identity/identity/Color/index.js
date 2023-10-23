@@ -9,7 +9,7 @@ const brand = process.env.brand;
 const basename = process.env.basename;
 
 const Lead = () => (
-	<section>
+	<section className="mb-5">
 		<p className="lead">
 			The primary color of Swedbank Pay is yellow, it is used to give a unified
 			appearance and create visual recognition. Yellow is an energetic and
@@ -17,22 +17,19 @@ const Lead = () => (
 			this, Swedbank Pay uses a selection of colors from Swedbank´s color
 			palette.
 		</p>
-		<div className="d-flex flex-column align-items-center mt-5">
-			<img
-				src={`${basename}img/documentation/colors/color-palette.png`}
-				className="w-100"
-				alt=""
-			/>
-			<span className="caption-text">
-				<span className="font-weight-bold">Figure 1.</span>A selection of colors
-				from the Swedbank Pay color palette.
-			</span>
+		<div className="d-flex justify-content-center align-items-center mt-5 color-page-introduction">
+			<div className="color-circle brown-solid img-circle"></div>
+			<div className="color-circle brand-yellow img-circle"></div>
+			<div className="color-circle brand-orange img-circle"></div>
+			<div className="color-circle brand-pink img-circle"></div>
+			<div className="color-circle brand-turquoise-light img-circle"></div>
+			<div className="color-circle brand-turquoise img-circle"></div>
 		</div>
 	</section>
 );
 
 const ColorContrast = () => (
-	<section>
+	<section className="color-contrast-section my-5 border py-3 px-4">
 		<h2 id="color-contrast">Color contrast</h2>
 		<p>
 			It is important to maintain sufficient color contrast in our products to
@@ -42,7 +39,7 @@ const ColorContrast = () => (
 			color decisions, we showcase the contrast ratio of each color to our
 			default text (brown) and background (white) color here.{" "}
 		</p>
-		<div className="d-flex flex-row justify-content-around color-contrast-section">
+		<div className="d-flex flex-row justify-content-between ">
 			<span className="d-flex">
 				<i className="material-icons check mr-1" aria-hidden="true">
 					check_circle
@@ -65,35 +62,280 @@ const ColorContrast = () => (
 	</section>
 );
 
-const BrandColors = () => (
-	<section>
-		<h2 id="brand-colors">Brand colors</h2>
-		<FunctionalColors />
-		<SBTextColors />
-		<SBCommunicationColors />
-	</section>
-);
-
-const SBTextColors = () => (
-	<section>
-		<h3 id="text-colors">Text colors</h3>
-		<p>
-			Brown-solid is our default text color that should be used for all normal
-			text besides links and text on dark backgrounds or images. For links, use
-			turquoise and for text on dark backgrounds or images use white. A lighter
-			brown is used as a muted text color for smaller or less important text
-			that shouldn&quot;t be the primary focus.
-		</p>
-		<div className="color-group">
-			{sbColors.textColors.map((color, i) => (
+const SBPrimaryColors = () => (
+	<section className="my-5 py-2">
+		<h2 id="color-contrast">Primary colors</h2>
+		{brand === "swedbankpay" && (
+			<p>
+				The primary color of Swedbank Pay is yellow, it is used to give a
+				unified appearance and create visual recognition.
+			</p>
+		)}
+		<div className="color-group pt-3">
+			{sbColors.primaryBrandColors.map((color, i) => (
 				<DisplayColor key={i} {...color} />
 			))}
+		</div>
+		<div className="container mt-5">
+			<div className="row">
+				<div className="col-sm col-sm-4 px-sm-0">
+					<picture>
+						<source
+							type="image/avif"
+							// srcSet={`${basename}img/documentation/colors/identity-color-primary-1.avif`}
+							srcSet={`${basename}designguide/assets/colors/identity-color-primary-1.avif`}
+						/>
+						<img
+							className="w-100"
+							// src={`${basename}img/documentation/colors/identity-color-primary-1.png`}
+							src={`${basename}designguide/assets/colors/identity-color-primary-1.png`}
+							alt=""
+						/>
+					</picture>
+				</div>
+				<div className="col-sm col-sm-4 px-sm-0">
+					<picture>
+						<source
+							type="image/avif"
+							// srcSet={`${basename}img/documentation/colors/identity-color-primary-2.avif`}
+							srcSet={`${basename}designguide/assets/colors/identity-color-primary-2.avif`}
+						/>
+						<img
+							className="w-100"
+							// src={`${basename}img/documentation/colors/identity-color-primary-2.png`}
+							src={`${basename}designguide/assets/colors/identity-color-primary-2.png`}
+							alt=""
+						/>
+					</picture>
+				</div>
+				<div className="col-sm col-sm-4 px-sm-0">
+					<picture>
+						<source
+							type="image/avif"
+							// srcSet={`${basename}img/documentation/colors/identity-color-primary-3.avif`}
+							srcSet={`${basename}designguide/assets/colors/identity-color-primary-3.avif`}
+						/>
+						<img
+							className="w-100"
+							// src={`${basename}img/documentation/colors/identity-color-primary-3.png`}
+							src={`${basename}designguide/assets/colors/identity-color-primary-3.png`}
+							alt=""
+						/>
+					</picture>
+				</div>
+			</div>
 		</div>
 	</section>
 );
 
-const BackgroundColors = () => (
-	<section>
+const SBBrandAccentColors = () => (
+	<section className="my-5 py-2">
+		<h2 id="brand-accent-colors">Brand accent colors</h2>
+		<p>
+			These accent colors are supplementary colors that contrast or complement
+			the primary colors. We aim to stay monochromatic when using colors,
+			keeping a view within one hue. But on occasion we combine the hues by
+			bringing in a yellow or orange item as a hint to the Swedbank Pay brand.
+		</p>
+		<div className="color-group">
+			{sbColors.accentBrandColors.map((color, i) => (
+				<DisplayColor key={i} {...color} />
+			))}
+		</div>
+		<div className="container mt-5">
+			<div className="row">
+				<div className="col-sm col-sm-4 px-sm-0">
+					<picture>
+						<source
+							type="image/avif"
+							// srcSet={`${basename}img/documentation/colors/identity-color-accent-1.avif`}
+							srcSet={`${basename}designguide/assets/colors/identity-color-accent-1.avif`}
+						/>
+						<img
+							className="w-100"
+							// src={`${basename}img/documentation/colors/identity-color-accent-1.png`}
+							src={`${basename}designguide/assets/colors/identity-color-accent-1.png`}
+							alt=""
+						/>
+					</picture>
+				</div>
+				<div className="col-sm col-sm-4 px-sm-0">
+					<picture>
+						<source
+							type="image/avif"
+							// srcSet={`${basename}img/documentation/colors/identity-color-accent-2.avif`}
+							srcSet={`${basename}designguide/assets/colors/identity-color-accent-2.avif`}
+						/>
+						<img
+							className="w-100"
+							// src={`${basename}img/documentation/colors/identity-color-accent-2.png`}
+							src={`${basename}designguide/assets/colors/identity-color-accent-2.png`}
+							alt=""
+						/>
+					</picture>
+				</div>
+				<div className="col-sm col-sm-4 px-sm-0">
+					<picture>
+						<img
+							className="w-100"
+							// src={`${basename}img/documentation/colors/identity-color-accent-3.png`}
+							src={`${basename}designguide/assets/colors/identity-color-accent-3.png`}
+							alt=""
+						/>
+					</picture>
+				</div>
+			</div>
+			<div className="row">
+				<div className="col-sm col-sm-4 px-sm-0">
+					<picture>
+						<img
+							className="w-100"
+							// src={`${basename}img/documentation/colors/identity-color-accent-4.png`}
+							src={`${basename}designguide/assets/colors/identity-color-accent-4.png`}
+							alt=""
+						/>
+					</picture>
+				</div>
+				<div className="col-sm col-sm-4 px-sm-0">
+					<picture>
+						<source
+							type="image/avif"
+							// srcSet={`${basename}img/documentation/colors/identity-color-accent-5.avif`}
+							srcSet={`${basename}designguide/assets/colors/identity-color-accent-5.avif`}
+						/>
+						<img
+							className="w-100"
+							// src={`${basename}img/documentation/colors/identity-color-accent-5.png`}
+							src={`${basename}designguide/assets/colors/identity-color-accent-5.png`}
+							alt=""
+						/>
+					</picture>
+				</div>
+				<div className="col-sm col-sm-4 px-sm-0">
+					<picture>
+						<source type="image/avif" />
+						<img
+							className="w-100"
+							// src={`${basename}img/documentation/colors/identity-color-accent-6.png`}
+							src={`${basename}designguide/assets/colors/identity-color-accent-6.png`}
+							alt=""
+						/>
+					</picture>
+				</div>
+			</div>
+		</div>
+	</section>
+);
+
+const SBTextColors = () => (
+	<section className="my-5 py-2">
+		<h2 id="text-colors">Text colors</h2>
+		<div className="container mt-4">
+			<div className="row">
+				<div className="col-sm-8 pl-sm-0">
+					<h3 className="h4">Default mode</h3>
+					<p className="mb-3">
+						<span className="font-weight-bold text-underline">
+							Text Default
+						</span>{" "}
+						is our default text color on light backgrounds.{" "}
+						<span className="font-weight-bold text-underline">Text Muted</span>{" "}
+						is used as a muted text color for smaller or less important text
+						that shouldn’t be the primary focus.{" "}
+					</p>
+					<ul className="color-group d-flex flex-column pl-0">
+						{sbColors.textColors
+							.filter((color) => color.textCategory.includes("default"))
+							.map((color, i) => (
+								<DisplayColor
+									key={i}
+									isSizeLarge={false}
+									isVertical={false}
+									{...color}
+								/>
+							))}
+					</ul>
+				</div>
+				<div className="col-sm-4 pr-sm-0">
+					<img
+						className="w-100"
+						// src={`${basename}img/documentation/colors/identity-color-text-default.png`}
+						src={`${basename}designguide/assets/colors/identity-color-text-default.png`}
+						alt=""
+					/>
+				</div>
+			</div>
+			<div className="row">
+				<div className="col-sm-8 pl-sm-0">
+					<h3 className="h4">For dark backgrounds</h3>
+					<p className="mb-3">
+						<span className="font-weight-bold text-underline">White</span> is
+						default color for text on backgrounds, and{" "}
+						<span className="font-weight-bold text-underline">
+							Text Muted light
+						</span>{" "}
+						is used for secondary text.
+					</p>
+					<ul className="color-group d-flex flex-column pl-0">
+						{sbColors.textColors
+							.filter((color) => color.textCategory.includes("dark-background"))
+							.map((color, i) => (
+								<DisplayColor
+									key={i}
+									isSizeLarge={false}
+									isVertical={false}
+									{...color}
+								/>
+							))}
+					</ul>
+				</div>
+				<div className="col-sm-4 pr-sm-0">
+					<img
+						className="w-100"
+						// src={`${basename}img/documentation/colors/identity-color-text-dark.png`}
+						src={`${basename}designguide/assets/colors/identity-color-text-dark.png`}
+						alt=""
+					/>
+				</div>
+			</div>
+			<div className="row">
+				<div className="col-sm-8 pl-sm-0">
+					<h3 className="h4">Disabled</h3>
+					<p className="mb-3">
+						For disabled black buttons and text we use{" "}
+						<span className="font-weight-bold text-underline">
+							Text Disabled
+						</span>
+						.
+					</p>
+					<ul className="color-group d-flex flex-column pl-0">
+						{sbColors.textColors
+							.filter((color) => color.textCategory.includes("disabled"))
+							.map((color, i) => (
+								<DisplayColor
+									key={i}
+									isSizeLarge={false}
+									isVertical={false}
+									{...color}
+								/>
+							))}
+					</ul>
+				</div>
+				<div className="col-sm-4 pr-sm-0">
+					<img
+						className="w-100"
+						// src={`${basename}img/documentation/colors/identity-color-text-disabled.png`}
+						src={`${basename}designguide/assets/colors/identity-color-text-disabled.png`}
+						alt=""
+					/>
+				</div>
+			</div>
+		</div>
+	</section>
+);
+
+const SBBackgroundColors = () => (
+	<section className="my-5 py-2">
 		<h2 id="background-colors">Background colors</h2>
 		<p>
 			To maintain an open and welcoming experience we mostly use no background
@@ -101,25 +343,124 @@ const BackgroundColors = () => (
 			used to organize, structure or highlight a section. Apricot is our primary
 			background color, gray and light turquoise are complementary.{" "}
 		</p>
-		<div className="color-group">
+		<div className="color-group color-grid">
 			{sbColors.backgroundColors.map((color, i) => (
-				<DisplayColor key={i} {...color} />
+				<DisplayColor
+					key={i}
+					{...color}
+					isSizeLarge={false}
+					isVertical={false}
+				/>
 			))}
 		</div>
 	</section>
 );
 
-const SystemColors = () => (
-	<section>
+const SBSystemColors = () => (
+	<section className="my-5 py-2">
 		<h2 id="system-colors">System colors</h2>
 		<p>
 			Our system colors include error, warning, success and info. These are used
 			on different types of system messages that needs the users attention.
 		</p>
-		<div className="color-group">
-			{sbColors.systemColors.map((color, i) => (
-				<DisplayColor key={i} {...color} />
-			))}
+		<div className="container color-group">
+			<div className="row w-100">
+				<div className="col-sm pl-0">
+					{sbColors.systemColors
+						.slice(0, Math.ceil(sbColors.systemColors.length / 2))
+						.map((color, i) => (
+							<DisplayColor
+								key={i}
+								{...color}
+								isSizeLarge={false}
+								isVertical={false}
+							/>
+						))}
+				</div>
+				<div className="col-sm pl-0">
+					{sbColors.systemColors
+						.slice(Math.ceil(sbColors.systemColors.length / 2))
+						.map((color, i) => (
+							<DisplayColor
+								key={i}
+								{...color}
+								isSizeLarge={false}
+								isVertical={false}
+							/>
+						))}
+				</div>
+			</div>
+			<div className="row pt-4">
+				<div className="col-sm pl-sm-0">
+					<img
+						className="w-100"
+						// src={`${basename}img/documentation/colors/identity-color-system-1.png`}
+						src={`${basename}designguide/assets/colors/identity-color-system-1.png`}
+						alt=""
+					/>
+				</div>
+				<div className="col-sm pr-sm-0 pt-3 pt-sm-0">
+					<img
+						className="w-100"
+						// src={`${basename}img/documentation/colors/identity-color-system-2.png`}
+						src={`${basename}designguide/assets/colors/identity-color-system-2.png`}
+						alt=""
+					/>
+				</div>
+			</div>
+		</div>
+	</section>
+);
+
+const SBColorPool = () => (
+	<section className="my-5 py-2">
+		<h2 id="color-pool">Color pool</h2>
+		<p>
+			This pool of colors can be picked from when more colors are needed, rather
+			than making up new ones.
+		</p>
+		<div className="container color-group">
+			<div className="row w-100">
+				<div className="col-sm pl-0">
+					{sbColors.colorPool
+						.slice(0, Math.ceil(sbColors.colorPool.length / 3))
+						.map((color, i) => (
+							<DisplayColor
+								key={i}
+								{...color}
+								isSizeLarge={false}
+								isVertical={false}
+							/>
+						))}
+				</div>
+				<div className="col-sm pl-0">
+					{sbColors.colorPool
+						.slice(
+							Math.ceil(sbColors.colorPool.length / 3),
+							Math.ceil((2 * sbColors.colorPool.length) / 3)
+						)
+						.map((color, i) => (
+							<DisplayColor
+								key={i}
+								{...color}
+								isSizeLarge={false}
+								isVertical={false}
+							/>
+						))}
+				</div>
+				<div className="col-sm pl-0">
+					{sbColors.colorPool
+						.slice(Math.ceil((2 * sbColors.colorPool.length) / 3))
+						.map((color, i) => (
+							<DisplayColor
+								key={i}
+								{...color}
+								isSizeLarge={false}
+								isVertical={false}
+							/>
+						))}
+				</div>
+			</div>
 		</div>
 	</section>
 );
@@ -202,59 +543,97 @@ const PayexSystemColors = () => (
 	</section>
 );
 
-const FunctionalColors = () => (
+const SBFunctionalColors = () => (
 	<>
-		<h3 id="functional-colors">Functional colors</h3>
+		<h2 id="functional-colors">Functional colors</h2>
 		<p>
 			Our functional brand colors can be used in graphical elements to separate
 			and emphasise multiple interactions. E.g. primary, secondary and tertiary
 			buttons.
 		</p>
-		<div className="color-group">
+		<div className="color-group color-group-table">
+			<div className="table-header-row border-top pt-3">
+				<small>Color</small>
+				<small>Base tokens</small>
+				<small>Specific tokens</small>
+				<small>Description</small>
+			</div>
 			{sbColors.functionalColors.map((color, i) => (
-				<DisplayColor key={i} {...color} />
+				<li
+					className="table-row border-top pt-3"
+					key={`functional-color-${color.baseTokenTitle}`}
+				>
+					<div
+						className={`color-swatch color-box-small ${
+							color.hasBorderOverWhiteBG ? "border" : ""
+						}`}
+						style={{ "--bg-color": `var(--${color.baseTokenSubTitle})` }}
+					></div>
+					<div className="d-flex flex-column">
+						<small>
+							<span className="font-weight-bold">{color.baseTokenTitle}</span>
+						</small>
+						<small>
+							<span className="text-muted">{color.specificTokenTitle}</span>
+						</small>
+						<small>
+							<span className="text-muted">{color.hex}</span>
+						</small>
+					</div>
+					<div className="d-flex flex-column">
+						<small>
+							<span className="font-weight-bold">
+								{color.specificTokenTitle}
+							</span>
+						</small>
+						<small>
+							<span className="text-muted">{color.specificTokenSubTitle}</span>
+						</small>
+						<small>
+							<span className="text-muted">{color.hex}</span>
+						</small>
+						{color.amountSpecificToken > 1 && (
+							<>
+								<small className="mt-3">
+									<span className="font-weight-bold">
+										{color.specificTokenTitle2}
+									</span>
+								</small>
+								<small>
+									<span className="text-muted">
+										{color.specificTokenSubTitle2}
+									</span>
+								</small>
+								<small>
+									<span className="text-muted">{color.hex}</span>
+								</small>
+							</>
+						)}
+					</div>
+					<div>{color.description}</div>
+				</li>
 			))}
 		</div>
 	</>
-);
-
-const SBCommunicationColors = () => (
-	<>
-		<h3>Communication colors</h3>
-		<p>
-			Our complemntary brand colors can be used in graphical elements to
-			separate and emphasize different messages.
-		</p>
-		<div className="color-group">
-			{sbColors.brandColors.map((color, i) => (
-				<DisplayColor key={i} {...color} />
-			))}
-		</div>
-		<SBComplementaryColors />
-	</>
-);
-
-const SBComplementaryColors = () => (
-	<div className="color-group">
-		{sbColors.complementaryColors.map((color, i) => (
-			<DisplayColor key={i} {...color} />
-		))}
-	</div>
 );
 
 const Color = () => (
 	<>
 		{brand === "swedbankpay" && (
-			<DocContainer>
+			<DocContainer classes="identity-colors">
 				<Lead />
 				<ColorContrast />
-				<BrandColors />
-				<BackgroundColors />
-				<SystemColors />
+				<SBPrimaryColors />
+				<SBBrandAccentColors />
+				<SBFunctionalColors />
+				<SBTextColors />
+				<SBBackgroundColors />
+				<SBSystemColors />
+				<SBColorPool />
 			</DocContainer>
 		)}
 		{brand === "payex" && (
-			<DocContainer>
+			<DocContainer classes="identity-colors">
 				<MainColors />
 				<PayexComplementaryColors />
 				<PayexButtonColors />
@@ -270,9 +649,8 @@ export default Color;
 export {
 	Lead,
 	ColorContrast,
-	BrandColors,
-	SBTextColors as TextColors,
-	BackgroundColors,
-	SystemColors,
+	SBTextColors,
+	SBBackgroundColors,
+	SBSystemColors,
 	MainColors,
 };
