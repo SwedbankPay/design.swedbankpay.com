@@ -8,6 +8,7 @@ const DisplayColor = ({
 	hasBorderOverWhiteBG = false,
 	isSizeLarge = true,
 	isVertical = true,
+	setColorViaSubtitle = false,
 }) => {
 	if (isSizeLarge) {
 		return (
@@ -34,7 +35,9 @@ const DisplayColor = ({
 					className={`color-swatch color-box-small ${
 						hasBorderOverWhiteBG ? "border" : ""
 					}`}
-					style={{ "--bg-color": `var(--${subTitle})` }}
+					style={{
+						"--bg-color": setColorViaSubtitle ? `var(--${subTitle})` : hex,
+					}}
 				></div>
 				<div className="d-flex flex-column">
 					<small>

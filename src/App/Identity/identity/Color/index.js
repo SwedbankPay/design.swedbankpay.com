@@ -73,7 +73,7 @@ const SBPrimaryColors = () => (
 		)}
 		<div className="color-group pt-3">
 			{sbColors.primaryBrandColors.map((color, i) => (
-				<DisplayColor key={i} {...color} />
+				<DisplayColor key={i} {...color} setColorViaSubtitle={false} />
 			))}
 		</div>
 		<div className="container mt-5">
@@ -139,7 +139,7 @@ const SBBrandAccentColors = () => (
 		</p>
 		<div className="color-group">
 			{sbColors.accentBrandColors.map((color, i) => (
-				<DisplayColor key={i} {...color} />
+				<DisplayColor key={i} {...color} setColorViaSubtitle={false} />
 			))}
 		</div>
 		<div className="container mt-5">
@@ -251,6 +251,7 @@ const SBTextColors = () => (
 									key={i}
 									isSizeLarge={false}
 									isVertical={false}
+									setColorViaSubtitle={true}
 									{...color}
 								/>
 							))}
@@ -285,6 +286,7 @@ const SBTextColors = () => (
 									isSizeLarge={false}
 									isVertical={false}
 									{...color}
+									setColorViaSubtitle={true}
 								/>
 							))}
 					</ul>
@@ -316,6 +318,7 @@ const SBTextColors = () => (
 									key={i}
 									isSizeLarge={false}
 									isVertical={false}
+									setColorViaSubtitle={true}
 									{...color}
 								/>
 							))}
@@ -350,6 +353,7 @@ const SBBackgroundColors = () => (
 					{...color}
 					isSizeLarge={false}
 					isVertical={false}
+					setColorViaSubtitle={true}
 				/>
 			))}
 		</div>
@@ -374,6 +378,7 @@ const SBSystemColors = () => (
 								{...color}
 								isSizeLarge={false}
 								isVertical={false}
+								setColorViaSubtitle={true}
 							/>
 						))}
 				</div>
@@ -386,26 +391,9 @@ const SBSystemColors = () => (
 								{...color}
 								isSizeLarge={false}
 								isVertical={false}
+								setColorViaSubtitle={true}
 							/>
 						))}
-				</div>
-			</div>
-			<div className="row pt-4">
-				<div className="col-sm pl-sm-0">
-					<img
-						className="w-100"
-						// src={`${basename}img/documentation/colors/identity-color-system-1.png`}
-						src={`${basename}designguide/assets/colors/identity-color-system-1.png`}
-						alt=""
-					/>
-				</div>
-				<div className="col-sm pr-sm-0 pt-3 pt-sm-0">
-					<img
-						className="w-100"
-						// src={`${basename}img/documentation/colors/identity-color-system-2.png`}
-						src={`${basename}designguide/assets/colors/identity-color-system-2.png`}
-						alt=""
-					/>
 				</div>
 			</div>
 		</div>
@@ -419,47 +407,17 @@ const SBColorPool = () => (
 			This pool of colors can be picked from when more colors are needed, rather
 			than making up new ones.
 		</p>
-		<div className="container color-group">
-			<div className="row w-100">
-				<div className="col-sm pl-0">
-					{sbColors.colorPool
-						.slice(0, Math.ceil(sbColors.colorPool.length / 3))
-						.map((color, i) => (
-							<DisplayColor
-								key={i}
-								{...color}
-								isSizeLarge={false}
-								isVertical={false}
-							/>
-						))}
-				</div>
-				<div className="col-sm pl-0">
-					{sbColors.colorPool
-						.slice(
-							Math.ceil(sbColors.colorPool.length / 3),
-							Math.ceil((2 * sbColors.colorPool.length) / 3)
-						)
-						.map((color, i) => (
-							<DisplayColor
-								key={i}
-								{...color}
-								isSizeLarge={false}
-								isVertical={false}
-							/>
-						))}
-				</div>
-				<div className="col-sm pl-0">
-					{sbColors.colorPool
-						.slice(Math.ceil((2 * sbColors.colorPool.length) / 3))
-						.map((color, i) => (
-							<DisplayColor
-								key={i}
-								{...color}
-								isSizeLarge={false}
-								isVertical={false}
-							/>
-						))}
-				</div>
+		<div className="container px-0 color-group color-grid grid-columns">
+			<div className="containerized-grid">
+				{sbColors.colorPool.map((color, i) => (
+					<DisplayColor
+						key={i}
+						{...color}
+						isSizeLarge={false}
+						isVertical={false}
+						setColorViaSubtitle={false}
+					/>
+				))}
 			</div>
 		</div>
 	</section>
@@ -474,7 +432,7 @@ const MainColors = () => (
 		</p>
 		<div className="color-group flex-wrap">
 			{pxColors.mainText.map((color, i) => (
-				<DisplayColor key={i} {...color} />
+				<DisplayColor key={i} {...color} setColorViaSubtitle={false} />
 			))}
 		</div>
 	</section>
@@ -491,7 +449,7 @@ const PayexComplementaryColors = () => (
 		</p>
 		<div className="color-group">
 			{pxColors.complementaryColors.map((color, i) => (
-				<DisplayColor key={i} {...color} />
+				<DisplayColor key={i} {...color} setColorViaSubtitle={false} />
 			))}
 		</div>
 	</section>
@@ -506,7 +464,7 @@ const PayexButtonColors = () => (
 		</p>
 		<div className="color-group">
 			{pxColors.buttonColors.map((color, i) => (
-				<DisplayColor key={i} {...color} />
+				<DisplayColor key={i} {...color} setColorViaSubtitle={false} />
 			))}
 		</div>
 	</section>
@@ -522,7 +480,7 @@ const PayexBackgroundColors = () => (
 		</p>
 		<div className="color-group">
 			{pxColors.backgroundColors.map((color, i) => (
-				<DisplayColor key={i} {...color} />
+				<DisplayColor key={i} {...color} setColorViaSubtitle={false} />
 			))}
 		</div>
 	</section>
@@ -537,7 +495,7 @@ const PayexSystemColors = () => (
 		</p>
 		<div className="color-group">
 			{pxColors.systemColors.map((color, i) => (
-				<DisplayColor key={i} {...color} />
+				<DisplayColor key={i} {...color} setColorViaSubtitle={false} />
 			))}
 		</div>
 	</section>
