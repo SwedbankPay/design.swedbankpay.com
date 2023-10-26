@@ -222,37 +222,37 @@ export const functionalColors = [
 export const colorPool = [
 	{
 		title: "Primary",
-		subTitle: "yellow-primary",
+		subTitle: "brand-yellow",
 		hex: "#FDC129",
 	},
 	{
 		title: "Yellow light",
-		subTitle: "yellow-light",
+		subTitle: "brand-yellow-light",
 		hex: "#FCE4A1",
 	},
 	{
 		title: "Yellow lighter",
-		subTitle: "yellow-lighter",
+		subTitle: "brand-yellow-lighter",
 		hex: "#FFF3D5",
 	},
 	{
 		title: "Turquoise",
-		subTitle: "turquoise",
+		subTitle: "brand-turquoise",
 		hex: "#31A3AE",
 	},
 	{
 		title: "Turquoise light",
-		subTitle: "turquoise-light",
+		subTitle: "brand-turquoise-light",
 		hex: "#8ACDC3",
 	},
 	{
 		title: "Turquoise lighter",
-		subTitle: "turquoise-lighter",
+		subTitle: "brand-turquoise-lighter",
 		hex: "#EBF8F2",
 	},
 	{
 		title: "Purple",
-		subTitle: "brand-purple",
+		subTitle: "purple",
 		hex: "#642f93",
 	},
 	{
@@ -267,7 +267,7 @@ export const colorPool = [
 	},
 	{
 		title: "Orange",
-		subTitle: "orange",
+		subTitle: "brand-orange",
 		hex: "#EE7023",
 	},
 	{
@@ -277,7 +277,7 @@ export const colorPool = [
 	},
 	{
 		title: "Orange lighter",
-		subTitle: "orange-lighter",
+		subTitle: "brand-orange-lighter",
 		hex: "#FBEADB",
 	},
 	{
@@ -292,7 +292,7 @@ export const colorPool = [
 	},
 	{
 		title: "Green lighter",
-		subTitle: "green-lighter",
+		subTitle: "brand-green-lighter",
 		hex: "#E7F8D2",
 	},
 	{
@@ -322,12 +322,12 @@ export const colorPool = [
 	},
 	{
 		title: "Red lighter",
-		subTitle: "red-lighter",
+		subTitle: "brand-red-lighter",
 		hex: "#FFE9E9",
 	},
 	{
 		title: "Blue",
-		subTitle: "blue",
+		subTitle: "brand-blue",
 		hex: "#335BB1",
 	},
 	{
@@ -337,7 +337,7 @@ export const colorPool = [
 	},
 	{
 		title: "Blue lighter",
-		subTitle: "blue-lighter",
+		subTitle: "brand-blue-lighter",
 		hex: "#E0EAF9",
 	},
 	{

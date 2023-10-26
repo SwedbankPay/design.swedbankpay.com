@@ -73,7 +73,7 @@ const SBPrimaryColors = () => (
 		)}
 		<div className="color-group pt-3">
 			{sbColors.primaryBrandColors.map((color, i) => (
-				<DisplayColor key={i} {...color} setColorViaSubtitle={false} />
+				<DisplayColor key={i} {...color} />
 			))}
 		</div>
 		<div className="container mt-5">
@@ -139,7 +139,7 @@ const SBBrandAccentColors = () => (
 		</p>
 		<div className="color-group">
 			{sbColors.accentBrandColors.map((color, i) => (
-				<DisplayColor key={i} {...color} setColorViaSubtitle={false} />
+				<DisplayColor key={i} {...color} />
 			))}
 		</div>
 		<div className="container mt-5">
@@ -251,7 +251,6 @@ const SBTextColors = () => (
 									key={i}
 									isSizeLarge={false}
 									isVertical={false}
-									setColorViaSubtitle={true}
 									{...color}
 								/>
 							))}
@@ -286,7 +285,6 @@ const SBTextColors = () => (
 									isSizeLarge={false}
 									isVertical={false}
 									{...color}
-									setColorViaSubtitle={true}
 								/>
 							))}
 					</ul>
@@ -318,7 +316,6 @@ const SBTextColors = () => (
 									key={i}
 									isSizeLarge={false}
 									isVertical={false}
-									setColorViaSubtitle={true}
 									{...color}
 								/>
 							))}
@@ -353,7 +350,6 @@ const SBBackgroundColors = () => (
 					{...color}
 					isSizeLarge={false}
 					isVertical={false}
-					setColorViaSubtitle={true}
 				/>
 			))}
 		</div>
@@ -378,7 +374,6 @@ const SBSystemColors = () => (
 								{...color}
 								isSizeLarge={false}
 								isVertical={false}
-								setColorViaSubtitle={true}
 							/>
 						))}
 				</div>
@@ -391,7 +386,6 @@ const SBSystemColors = () => (
 								{...color}
 								isSizeLarge={false}
 								isVertical={false}
-								setColorViaSubtitle={true}
 							/>
 						))}
 				</div>
@@ -415,7 +409,6 @@ const SBColorPool = () => (
 						{...color}
 						isSizeLarge={false}
 						isVertical={false}
-						setColorViaSubtitle={false}
 					/>
 				))}
 			</div>
@@ -432,7 +425,7 @@ const MainColors = () => (
 		</p>
 		<div className="color-group flex-wrap">
 			{pxColors.mainText.map((color, i) => (
-				<DisplayColor key={i} {...color} setColorViaSubtitle={false} />
+				<DisplayColor key={i} {...color} />
 			))}
 		</div>
 	</section>
@@ -449,7 +442,7 @@ const PayexComplementaryColors = () => (
 		</p>
 		<div className="color-group">
 			{pxColors.complementaryColors.map((color, i) => (
-				<DisplayColor key={i} {...color} setColorViaSubtitle={false} />
+				<DisplayColor key={i} {...color} />
 			))}
 		</div>
 	</section>
@@ -464,7 +457,7 @@ const PayexButtonColors = () => (
 		</p>
 		<div className="color-group">
 			{pxColors.buttonColors.map((color, i) => (
-				<DisplayColor key={i} {...color} setColorViaSubtitle={false} />
+				<DisplayColor key={i} {...color} />
 			))}
 		</div>
 	</section>
@@ -480,7 +473,7 @@ const PayexBackgroundColors = () => (
 		</p>
 		<div className="color-group">
 			{pxColors.backgroundColors.map((color, i) => (
-				<DisplayColor key={i} {...color} setColorViaSubtitle={false} />
+				<DisplayColor key={i} {...color} />
 			))}
 		</div>
 	</section>
@@ -495,7 +488,7 @@ const PayexSystemColors = () => (
 		</p>
 		<div className="color-group">
 			{pxColors.systemColors.map((color, i) => (
-				<DisplayColor key={i} {...color} setColorViaSubtitle={false} />
+				<DisplayColor key={i} {...color} />
 			))}
 		</div>
 	</section>
