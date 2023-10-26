@@ -201,17 +201,17 @@ fieldset {
 
 	&.has-error {
 		input[type="radio"] + label:before {
-			border-color: @brand-error;
+			border-color: var(--brand-error);
 		}
 
 		.checkmark {
 			input[type="radio"]:not(:checked) + label {
-				outline: 2px solid @brand-error;
+				outline: 2px solid var(--brand-error);
 			}
 		}
 
 		.help-block {
-			color: @brand-error;
+			color: var(--brand-error);
 		}
 	}
 
