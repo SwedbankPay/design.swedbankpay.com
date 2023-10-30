@@ -93,6 +93,11 @@ const ContentGuidelines = () => (
 const DeveloperDocumentation = () => (
 	<section>
 		<h2 id="developer-documentation">Developer Documentation</h2>
+		<h3>Style</h3>
+		<p>
+			Add <CodeTags type="secondary" code=".no-rotation" /> CSS class on the
+			dropdown toggle to disable the icon rotation.
+		</p>
 		<h3>JavaScript methods</h3>
 		<p>
 			Use <CodeTags type="secondary" code="dg.dropdown.init()" /> to initialize

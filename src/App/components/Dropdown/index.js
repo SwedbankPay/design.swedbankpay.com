@@ -2,7 +2,13 @@ import React, { useEffect, useState, Fragment } from "react";
 import PropTypes from "prop-types";
 import { dropdown } from "@src/scripts/main";
 
-const DropdownSelect = ({ disabled, errorMessage, fullWidth, position }) => {
+const DropdownSelect = ({
+	disabled,
+	errorMessage,
+	fullWidth,
+	position,
+	noRotation = false,
+}) => {
 	const [buttonLabel, setButtonLabel] = useState("Card type");
 	const cardTypes = [
 		"VISA",
@@ -28,7 +34,7 @@ const DropdownSelect = ({ disabled, errorMessage, fullWidth, position }) => {
 				<div className="toggle-menu-container">
 					{"\n"}
 					<button
-						className="dropdown-toggle"
+						className={`dropdown-toggle${noRotation ? " no-rotation" : ""}`}
 						id="dropdownSelect"
 						type="button"
 						aria-label="dropdown button"
@@ -75,6 +81,7 @@ const DropdownToggle = ({
 	label = "Default label",
 	icon = isIconButton ? "more_vert" : "keyboard_arrow_down",
 	iconAfter,
+	noRotation = false,
 }) => {
 	useEffect(() => {
 		dropdown.init();
@@ -85,7 +92,7 @@ const DropdownToggle = ({
 			<button
 				className={`dropdown-toggle${
 					isIconButton ? " dropdown-toggle-icon" : ""
-				}`}
+				}${noRotation ? " no-rotation" : ""}`}
 				type="button"
 				aria-label="dropdown button"
 				disabled={disabled}
@@ -139,6 +146,7 @@ const Dropdown = ({
 	disabled,
 	dropdownSelect,
 	disableDefaultKeyboardNavigation = false,
+	noRotation = false,
 }) => (
 	<>
 		{dropdownSelect ? (
@@ -147,6 +155,7 @@ const Dropdown = ({
 				errorMessage={errorMessage}
 				fullWidth={fullWidth}
 				position={position}
+				noRotation={noRotation}
 			/>
 		) : (
 			<div
@@ -167,6 +176,7 @@ const Dropdown = ({
 						label={label}
 						icon={icon}
 						iconAfter={iconAfter}
+						noRotation={noRotation}
 					/>
 					<div
 						className={`dropdown-menu${fullWidth ? " full-width" : ""}${
@@ -204,6 +214,7 @@ Dropdown.propTypes = {
 	largePadding: PropTypes.bool,
 	dropdownSelect: PropTypes.bool,
 	disableDefaultKeyboardNavigation: PropTypes.bool,
+	noRotation: PropTypes.bool,
 };
 
 export default Dropdown;

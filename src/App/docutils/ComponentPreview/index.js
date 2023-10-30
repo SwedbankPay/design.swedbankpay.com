@@ -19,6 +19,7 @@ const ComponentPreview = ({
 	codeFigure,
 	dangerousHTML,
 	negative,
+	showExpandPreview = false,
 }) => {
 	const _removeOuterTag = (element) => {
 		const div = document.createElement("div");
@@ -214,6 +215,7 @@ const ComponentPreview = ({
 					.activeOptions
 					? [...this.props.showCasePanelAdvanced.elements[0].activeOptions]
 					: [],
+				previewExpanded: false,
 			};
 		}
 
@@ -351,6 +353,16 @@ const ComponentPreview = ({
 			}
 		}
 
+		setExpandedPreview(state) {
+			this.setState({ previewExpanded: state });
+
+			if (state) {
+				document.body.dataset.previewExpandedHasVscroll = "true";
+			} else {
+				delete document.body.dataset.previewExpandedHasVscroll;
+			}
+		}
+
 		render() {
 			return (
 				<>
@@ -358,13 +370,44 @@ const ComponentPreview = ({
 						id={this.props.showCasePanelAdvanced.id}
 						className={`showcase-panel showcase-panel-advanced${
 							this.state.optionsOpen ? " options-active" : ""
-						}${this.state.hideOptions ? " hide-options" : ""}`}
+						}${this.state.hideOptions ? " hide-options" : ""}
+						${this.state.previewExpanded ? " preview-expanded" : ""}`}
 					>
 						<div
 							id={this.props.showCasePanelAdvanced.tabsId}
 							className="tabs tabs-scroll"
 						>
 							<ul id={`${this.props.showCasePanelAdvanced.tabsId}-ul`}>
+								{this.props.showExpandPreview &&
+									(!this.state.previewExpanded ? (
+										<button
+											className="btn btn-icon btn-xs glow-on-hover"
+											type="button"
+											aria-label="Expand the preview container to full screen"
+											onClick={() => this.setExpandedPreview(true)}
+										>
+											<i
+												className="material-icons material-icons-outlined"
+												aria-hidden="true"
+											>
+												open_in_full
+											</i>
+										</button>
+									) : (
+										<button
+											className="btn btn-icon btn-xs glow-on-hover"
+											type="button"
+											aria-label="Zoom out"
+											onClick={() => this.setExpandedPreview(false)}
+										>
+											<i
+												className="material-icons material-icons-outlined"
+												aria-hidden="true"
+											>
+												close_fullscreen
+											</i>
+										</button>
+									))}
 								{this.props.showCasePanelAdvanced.elements.map((element, i) => (
 									<li
 										key={i}
@@ -583,6 +626,7 @@ const ComponentPreview = ({
 				showCasePanelAdvanced ? (
 					<ShowCasePanelAdvanced
 						showCasePanelAdvanced={showCasePanelAdvanced}
+						showExpandPreview={showExpandPreview}
 					/>
 				) : (
 					<ShowCasePanel />
@@ -608,6 +652,7 @@ ComponentPreview.propTypes = {
 	codeFigure: PropTypes.bool,
 	dangerousHTML: PropTypes.bool,
 	negative: PropTypes.bool,
+	showExpandPreview: PropTypes.bool,
 };
 
 export default ComponentPreview;
