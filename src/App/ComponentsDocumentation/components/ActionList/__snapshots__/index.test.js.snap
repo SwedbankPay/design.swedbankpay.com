@@ -672,7 +672,7 @@ exports[`Components: ActionList renders 1`] = `
   className="row"
 >
   <div
-    className="doc-body col-12"
+    className="doc-body col-12 "
     id="doc-body"
   >
     <div

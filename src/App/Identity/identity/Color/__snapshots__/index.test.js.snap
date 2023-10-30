@@ -406,7 +406,9 @@ exports[`Core: Color BackgroundColors renders 1`] = `
 `;
 
 exports[`Core: Color CommunicationColors renders 1`] = `
-<section>
+<section
+  className="color-contrast-section my-5 border py-3 px-4"
+>
   <h2
     id="color-contrast"
   >
@@ -417,7 +419,7 @@ exports[`Core: Color CommunicationColors renders 1`] = `
      
   </p>
   <div
-    className="d-flex flex-row justify-content-around color-contrast-section"
+    className="d-flex flex-row justify-content-between "
   >
     <span
       className="d-flex"
@@ -463,30 +465,35 @@ exports[`Core: Color CommunicationColors renders 1`] = `
 `;
 
 exports[`Core: Color Lead renders 1`] = `
-<section>
+<section
+  className="mb-5"
+>
   <p
     className="lead"
   >
     The primary color of Swedbank Pay is yellow, it is used to give a unified appearance and create visual recognition. Yellow is an energetic and vibrant color that matches the brand of Swedbank Pay. In complement to this, Swedbank Pay uses a selection of colors from Swedbank´s color palette.
   </p>
   <div
-    className="d-flex flex-column align-items-center mt-5"
+    className="d-flex justify-content-center align-items-center mt-5 color-page-introduction"
   >
-    <img
-      alt=""
-      className="w-100"
-      src="/TEST/img/documentation/colors/color-palette.png"
+    <div
+      className="color-circle brown-solid img-circle"
     />
-    <span
-      className="caption-text"
-    >
-      <span
-        className="font-weight-bold"
-      >
-        Figure 1.
-      </span>
-      A selection of colors from the Swedbank Pay color palette.
-    </span>
+    <div
+      className="color-circle brand-yellow img-circle"
+    />
+    <div
+      className="color-circle brand-orange img-circle"
+    />
+    <div
+      className="color-circle brand-pink img-circle"
+    />
+    <div
+      className="color-circle brand-turquoise-light img-circle"
+    />
+    <div
+      className="color-circle brand-turquoise img-circle"
+    />
   </div>
 </section>
 `;
@@ -530,56 +537,6 @@ exports[`Core: Color MainColors renders 1`] = `
         >
           #2A9D3F
         </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#2A9D3F"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#2A9D3F"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
       </div>
     </div>
     <div
@@ -608,56 +565,6 @@ exports[`Core: Color MainColors renders 1`] = `
         >
           #3C3C3C
         </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#3C3C3C"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#3C3C3C"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
       </div>
     </div>
     <div
@@ -686,56 +593,6 @@ exports[`Core: Color MainColors renders 1`] = `
         >
           #C8C8C8
         </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#C8C8C8"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#C8C8C8"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
       </div>
     </div>
     <div
@@ -764,63 +621,13 @@ exports[`Core: Color MainColors renders 1`] = `
         >
           #000000
         </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#000000"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#000000"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
       </div>
     </div>
     <div
       className="d-flex flex-column mb-2"
     >
       <div
-        className="color-box has-border"
+        className="color-box "
       >
         <svg>
           <rect
@@ -842,56 +649,6 @@ exports[`Core: Color MainColors renders 1`] = `
         >
           #FFFFFF
         </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
       </div>
     </div>
   </div>

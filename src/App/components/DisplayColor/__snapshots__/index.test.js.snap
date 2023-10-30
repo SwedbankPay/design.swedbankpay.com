@@ -5,7 +5,7 @@ exports[`DisplayColor renders with optional props 1`] = `
   className="d-flex flex-column mb-2"
 >
   <div
-    className="color-box has-border"
+    className="color-box "
   >
     <svg>
       <rect
@@ -27,56 +27,6 @@ exports[`DisplayColor renders with optional props 1`] = `
     >
       #FDC129
     </small>
-    <div
-      className="contrast-box"
-    >
-      <div
-        className="contrast-white-container"
-      >
-        <svg
-          className="white-box first-svg"
-        >
-          <rect
-            fill="#FFFFFF"
-          />
-        </svg>
-        <svg
-          className="second-svg"
-        >
-          <rect
-            fill="#FDC129"
-          />
-        </svg>
-        <i
-          className="material-icons cancel"
-        >
-          error
-        </i>
-      </div>
-      <div
-        className="contrast-black-container"
-      >
-        <svg
-          className="first-svg"
-        >
-          <rect
-            fill="#2F2424"
-          />
-        </svg>
-        <svg
-          className="second-svg"
-        >
-          <rect
-            fill="#FDC129"
-          />
-        </svg>
-        <i
-          className="material-icons cancel"
-        >
-          error
-        </i>
-      </div>
-    </div>
   </div>
 </div>
 `;
@@ -108,56 +58,6 @@ exports[`DisplayColor renders with required props 1`] = `
     >
       #FDC129
     </small>
-    <div
-      className="contrast-box"
-    >
-      <div
-        className="contrast-white-container"
-      >
-        <svg
-          className="white-box first-svg"
-        >
-          <rect
-            fill="#FFFFFF"
-          />
-        </svg>
-        <svg
-          className="second-svg"
-        >
-          <rect
-            fill="#FDC129"
-          />
-        </svg>
-        <i
-          className="material-icons cancel"
-        >
-          error
-        </i>
-      </div>
-      <div
-        className="contrast-black-container"
-      >
-        <svg
-          className="first-svg"
-        >
-          <rect
-            fill="#2F2424"
-          />
-        </svg>
-        <svg
-          className="second-svg"
-        >
-          <rect
-            fill="#FDC129"
-          />
-        </svg>
-        <i
-          className="material-icons cancel"
-        >
-          error
-        </i>
-      </div>
-    </div>
   </div>
 </div>
 `;
