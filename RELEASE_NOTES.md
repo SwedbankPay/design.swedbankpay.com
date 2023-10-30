@@ -1,6 +1,6 @@
 # Changelog
 
-## [10.8.5] - 25.08.2023
+## \[10.8.6\] - 13.09.2023
 
 ## Bug Fixes
 
@@ -17,4 +17,4 @@
 
 ## Design System website
 
-- expand components preview containers to full screen
+- expand components preview containers to full screen (only in Topbar component for now)

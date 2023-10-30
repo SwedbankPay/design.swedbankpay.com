@@ -5,6 +5,37 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.8.6",
+		title: "The one with little handy UI helpers",
+		text: (
+			<>
+				<p>We&apos;re back in action, armed with nifty UI helpers 🧰🚀🎁.</p>
+				<p>
+					Ever find yourself awake at night, sweating, pondering how life would
+					be better if there were a way to disable the icon rotation in the
+					dropdown toggle button when you open it? I know, right?
+				</p>
+				<p>
+					And what if I told you you could now style those bank-ID buttons as
+					secondary buttons? Isn&apos;t that something you&apos;ve been
+					daydreaming about for years?
+				</p>
+				<p>
+					But wait, there&apos;s more! How about a magical button that
+					transforms your component&apos;s preview container into a full-screen
+					extravaganza, delivering the ultimate home-cinema experience for your
+					components? It&apos;s like fulfilling a lifelong dream you didn&apos;t
+					even know you had since you were a little kid! 👶🎁
+					<br />
+					<span className="font-italic">
+						(for now only enabled for the Topbar component, but if YOU public
+						like it then we&apos;ll expand it to the rest 🎤)
+					</span>
+				</p>
+			</>
+		),
+	},
+	{
 		version: "10.8.5",
 		title: "The CSS url / Import Patch 🐛🔨",
 		text: (
