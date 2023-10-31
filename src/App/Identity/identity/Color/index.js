@@ -82,13 +82,11 @@ const SBPrimaryColors = () => (
 					<picture>
 						<source
 							type="image/avif"
-							// srcSet={`${basename}img/documentation/colors/identity-color-primary-1.avif`}
-							srcSet={`${basename}designguide/assets/colors/identity-color-primary-1.avif`}
+							srcSet={`${basename}img/documentation/colors/identity-color-primary-1.avif`}
 						/>
 						<img
 							className="w-100"
-							// src={`${basename}img/documentation/colors/identity-color-primary-1.png`}
-							src={`${basename}designguide/assets/colors/identity-color-primary-1.png`}
+							src={`${basename}img/documentation/colors/identity-color-primary-1.png`}
 							alt=""
 						/>
 					</picture>
@@ -97,13 +95,11 @@ const SBPrimaryColors = () => (
 					<picture>
 						<source
 							type="image/avif"
-							// srcSet={`${basename}img/documentation/colors/identity-color-primary-2.avif`}
-							srcSet={`${basename}designguide/assets/colors/identity-color-primary-2.avif`}
+							srcSet={`${basename}img/documentation/colors/identity-color-primary-2.avif`}
 						/>
 						<img
 							className="w-100"
-							// src={`${basename}img/documentation/colors/identity-color-primary-2.png`}
-							src={`${basename}designguide/assets/colors/identity-color-primary-2.png`}
+							src={`${basename}img/documentation/colors/identity-color-primary-2.png`}
 							alt=""
 						/>
 					</picture>
@@ -112,13 +108,11 @@ const SBPrimaryColors = () => (
 					<picture>
 						<source
 							type="image/avif"
-							// srcSet={`${basename}img/documentation/colors/identity-color-primary-3.avif`}
-							srcSet={`${basename}designguide/assets/colors/identity-color-primary-3.avif`}
+							srcSet={`${basename}img/documentation/colors/identity-color-primary-3.avif`}
 						/>
 						<img
 							className="w-100"
-							// src={`${basename}img/documentation/colors/identity-color-primary-3.png`}
-							src={`${basename}designguide/assets/colors/identity-color-primary-3.png`}
+							src={`${basename}img/documentation/colors/identity-color-primary-3.png`}
 							alt=""
 						/>
 					</picture>
@@ -148,13 +142,11 @@ const SBBrandAccentColors = () => (
 					<picture>
 						<source
 							type="image/avif"
-							// srcSet={`${basename}img/documentation/colors/identity-color-accent-1.avif`}
-							srcSet={`${basename}designguide/assets/colors/identity-color-accent-1.avif`}
+							srcSet={`${basename}img/documentation/colors/identity-color-accent-1.avif`}
 						/>
 						<img
 							className="w-100"
-							// src={`${basename}img/documentation/colors/identity-color-accent-1.png`}
-							src={`${basename}designguide/assets/colors/identity-color-accent-1.png`}
+							src={`${basename}img/documentation/colors/identity-color-accent-1.png`}
 							alt=""
 						/>
 					</picture>
@@ -163,13 +155,11 @@ const SBBrandAccentColors = () => (
 					<picture>
 						<source
 							type="image/avif"
-							// srcSet={`${basename}img/documentation/colors/identity-color-accent-2.avif`}
-							srcSet={`${basename}designguide/assets/colors/identity-color-accent-2.avif`}
+							srcSet={`${basename}img/documentation/colors/identity-color-accent-2.avif`}
 						/>
 						<img
 							className="w-100"
-							// src={`${basename}img/documentation/colors/identity-color-accent-2.png`}
-							src={`${basename}designguide/assets/colors/identity-color-accent-2.png`}
+							src={`${basename}img/documentation/colors/identity-color-accent-2.png`}
 							alt=""
 						/>
 					</picture>
@@ -178,8 +168,7 @@ const SBBrandAccentColors = () => (
 					<picture>
 						<img
 							className="w-100"
-							// src={`${basename}img/documentation/colors/identity-color-accent-3.png`}
-							src={`${basename}designguide/assets/colors/identity-color-accent-3.png`}
+							src={`${basename}img/documentation/colors/identity-color-accent-3.png`}
 							alt=""
 						/>
 					</picture>
@@ -190,8 +179,7 @@ const SBBrandAccentColors = () => (
 					<picture>
 						<img
 							className="w-100"
-							// src={`${basename}img/documentation/colors/identity-color-accent-4.png`}
-							src={`${basename}designguide/assets/colors/identity-color-accent-4.png`}
+							src={`${basename}img/documentation/colors/identity-color-accent-4.png`}
 							alt=""
 						/>
 					</picture>
@@ -200,13 +188,11 @@ const SBBrandAccentColors = () => (
 					<picture>
 						<source
 							type="image/avif"
-							// srcSet={`${basename}img/documentation/colors/identity-color-accent-5.avif`}
-							srcSet={`${basename}designguide/assets/colors/identity-color-accent-5.avif`}
+							srcSet={`${basename}img/documentation/colors/identity-color-accent-5.avif`}
 						/>
 						<img
 							className="w-100"
-							// src={`${basename}img/documentation/colors/identity-color-accent-5.png`}
-							src={`${basename}designguide/assets/colors/identity-color-accent-5.png`}
+							src={`${basename}img/documentation/colors/identity-color-accent-5.png`}
 							alt=""
 						/>
 					</picture>
@@ -216,8 +202,7 @@ const SBBrandAccentColors = () => (
 						<source type="image/avif" />
 						<img
 							className="w-100"
-							// src={`${basename}img/documentation/colors/identity-color-accent-6.png`}
-							src={`${basename}designguide/assets/colors/identity-color-accent-6.png`}
+							src={`${basename}img/documentation/colors/identity-color-accent-6.png`}
 							alt=""
 						/>
 					</picture>
@@ -259,8 +244,7 @@ const SBTextColors = () => (
 				<div className="col-sm-4 pr-sm-0">
 					<img
 						className="w-100"
-						// src={`${basename}img/documentation/colors/identity-color-text-default.png`}
-						src={`${basename}designguide/assets/colors/identity-color-text-default.png`}
+						src={`${basename}img/documentation/colors/identity-color-text-default.png`}
 						alt=""
 					/>
 				</div>
@@ -292,8 +276,7 @@ const SBTextColors = () => (
 				<div className="col-sm-4 pr-sm-0">
 					<img
 						className="w-100"
-						// src={`${basename}img/documentation/colors/identity-color-text-dark.png`}
-						src={`${basename}designguide/assets/colors/identity-color-text-dark.png`}
+						src={`${basename}img/documentation/colors/identity-color-text-dark.png`}
 						alt=""
 					/>
 				</div>
@@ -324,8 +307,7 @@ const SBTextColors = () => (
 				<div className="col-sm-4 pr-sm-0">
 					<img
 						className="w-100"
-						// src={`${basename}img/documentation/colors/identity-color-text-disabled.png`}
-						src={`${basename}designguide/assets/colors/identity-color-text-disabled.png`}
+						src={`${basename}img/documentation/colors/identity-color-text-disabled.png`}
 						alt=""
 					/>
 				</div>
