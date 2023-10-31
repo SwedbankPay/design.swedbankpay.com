@@ -720,6 +720,183 @@
 			}
 		}
 
+		.container.playbook {
+			.row {
+				gap: 8px;
+
+				img {
+					border-radius: 2px;
+				}
+			}
+		}
+
+		.playbook-overview {
+			a.cards-secondary i {
+				color: var(--brand-turquoise);
+			}
+		}
+
+		.playbook-mozaic {
+			--gap: 10px;
+			--radius: 0;
+
+			.row {
+				gap: var(--gap);
+
+				> div {
+					padding-left: 0;
+					padding-right: 0;
+				}
+
+				img,
+				video {
+					width: 100%;
+					object-fit: cover;
+					border-radius: var(--radius, 0);
+				}
+
+				img {
+					height: 100%;
+				}
+
+				video {
+					max-width: 100%;
+					max-height: 100%;
+
+					@media (max-width: @screen-sm-min) {
+						height: auto;
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		.playbook-showroom-portrait-phones-19 {
+			background-color: var(--brand-primary-light-3);
+		}
+
+		.playbook-glued-grid {
+			.row {
+				padding-left: 1px;
+				padding-right: 1px;
+
+				img {
+					margin: -2px;
+				}
+			}
+		}
+
+		#bold-typography .playbook .row {
+			@media (max-width: @screen-sm-min) {
+				& > div:nth-child(1) {
+					flex: 1;
+
+					img {
+						height: 100%;
+						object-fit: fill;
+					}
+				}
+
+				& > div:nth-child(2) {
+					width: 35.5%;
+				}
+			}
+		}
+
+		.ratio-responsive-row {
+			@media (min-width: @screen-sm-min) {
+				aspect-ratio: var(--row-width) / var(--row-height);
+				height: calc(678px * var(--row-height) / var(--row-width));
+
+				> div.col-sm {
+					height: 100%;
+
+					> img {
+						max-height: 100%;
+					}
+				}
+
+				.col-sm {
+					flex-basis: initial;
+					flex-grow: initial;
+					max-width: initial;
+					position: static;
+					width: unset;
+					min-height: unset;
+					padding-right: unset;
+					padding-left: unset;
+
+					.w-100 {
+						width: auto;
+					}
+				}
+			}
+		}
+
+		.grid-row {
+			&.delicate-lines {
+				display: grid;
+				grid-template:
+					"one three four five" 1fr
+					"two three four six" 2fr
+					/ 1fr 1fr 1fr 1fr;
+				gap: 10px;
+
+				@media (max-width: @screen-sm-min) {
+					grid-template:
+						"one one" auto
+						"two two" auto
+						"three four" auto
+						"five five" auto
+						"six six" auto
+						/ 1fr 1fr;
+				}
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					border-radius: 3px;
+				}
+
+				img:nth-child(1) {
+					grid-area: one;
+				}
+
+				img:nth-child(2) {
+					grid-area: two;
+				}
+
+				img:nth-child(3) {
+					grid-area: three;
+				}
+
+				img:nth-child(4) {
+					grid-area: four;
+				}
+
+				img:nth-child(5) {
+					grid-area: five;
+				}
+
+				img:nth-child(6) {
+					grid-area: six;
+				}
+			}
+		}
+
+		figure figcaption {
+			color: var(--text-muted);
+		}
+
+		.shift-right-1 {
+			margin-right: -1px;
+		}
+
+		.shift-left-1 {
+			margin-left: -1px;
+		}
+
 		section {
 			margin-bottom: 2rem;
 

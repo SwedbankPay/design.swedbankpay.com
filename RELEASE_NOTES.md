@@ -18,3 +18,4 @@
 ## Design System website
 
 - Update the Colors page for SwedbankPay side
+- Add the Playbook section in Identity

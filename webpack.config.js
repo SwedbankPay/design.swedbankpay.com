@@ -16,6 +16,11 @@ const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 module.exports = (env, argv) => {
 	const brand = argv.env.brand || "swedbankpay";
 	const brandTitle = brand === "swedbankpay" ? "Swedbank Pay" : "PayEx"; // <-- Used with the HTML plugin for titles etc...
+	/**
+	 * Checks if the brand is Swedbank Pay
+	 * @type {boolean}
+	 */
+	const isSwedbankPay = Boolean(brand.toLowerCase().includes("swedbank"));
 	const isProd = argv.mode === "production";
 	const isDevServer = !!argv.env.WEBPACK_SERVE;
 	const isAnalyze = !!argv.env.analyze;
@@ -194,6 +199,7 @@ module.exports = (env, argv) => {
 					google: isRelease,
 					brand: JSON.stringify(brand),
 					brandTitle: JSON.stringify(brandTitle),
+					isSwedbankPay: JSON.stringify(isSwedbankPay),
 				},
 			}),
 			// Ignores moments locale folder which doubles the size of the package, moment is a dependency of chart.js [EH]
@@ -356,6 +362,10 @@ module.exports = (env, argv) => {
 								{
 									source: `./src/img/${brand}/documentation/topbar/*.png`,
 									destination: `./dist${basename}img/documentation/topbar`,
+								},
+								{
+									source: `./src/img/${brand}/documentation/playbook/*.{png,jpg,avif,mp4}`,
+									destination: `./dist${basename}img/documentation/playbook`,
 								},
 								{
 									source: "./src/img/background/*.svg",
