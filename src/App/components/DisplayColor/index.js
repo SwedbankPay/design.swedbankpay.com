@@ -11,7 +11,7 @@ const DisplayColor = ({
 }) => {
 	if (isSizeLarge) {
 		return (
-			<div className={`d-flex ${isVertical ? "flex-column" : ""} mb-2`}>
+			<div className={`d-flex ${isVertical ? "flex-column" : ""} mb-4`}>
 				<div className={`color-box ${hasBorderOverWhiteBG ? "border" : ""}`}>
 					<svg>
 						<rect fill={hex} />

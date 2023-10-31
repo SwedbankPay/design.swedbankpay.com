@@ -655,6 +655,867 @@ exports[`Core: Color MainColors renders 1`] = `
 </section>
 `;
 
+exports[`Core: Color SwedbankPay BackgroundColors renders 1`] = `
+<section
+  className="my-5 py-2"
+>
+  <h2
+    id="background-colors"
+  >
+    Background colors
+  </h2>
+  <p>
+    To maintain an open and welcoming experience we mostly use no background color, that is white. Our background colors have a functional role and are used to organize, structure or highlight a section. Apricot is our primary background color, gray and light turquoise are complementary.
+     
+  </p>
+  <div
+    className="color-group color-grid"
+  >
+    <li
+      className="d-flex  py-1 px-0"
+    >
+      <div
+        className="color-swatch color-box-small "
+        style={
+          Object {
+            "--bg-color": "var(--bg-orange, #FFF1E4)",
+          }
+        }
+      />
+      <div
+        className="d-flex flex-column"
+      >
+        <small>
+          <span
+            className="font-weight-bold"
+          >
+            BG Orange
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            bg-orange
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            #FFF1E4
+          </span>
+        </small>
+      </div>
+    </li>
+    <li
+      className="d-flex  py-1 px-0"
+    >
+      <div
+        className="color-swatch color-box-small "
+        style={
+          Object {
+            "--bg-color": "var(--bg-brown, #EBE7E2)",
+          }
+        }
+      />
+      <div
+        className="d-flex flex-column"
+      >
+        <small>
+          <span
+            className="font-weight-bold"
+          >
+            BG Brown
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            bg-brown
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            #EBE7E2
+          </span>
+        </small>
+      </div>
+    </li>
+    <li
+      className="d-flex  py-1 px-0"
+    >
+      <div
+        className="color-swatch color-box-small border"
+        style={
+          Object {
+            "--bg-color": "var(--bg-white, #FFFFFF)",
+          }
+        }
+      />
+      <div
+        className="d-flex flex-column"
+      >
+        <small>
+          <span
+            className="font-weight-bold"
+          >
+            BG White
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            bg-white
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            #FFFFFF
+          </span>
+        </small>
+      </div>
+    </li>
+    <li
+      className="d-flex  py-1 px-0"
+    >
+      <div
+        className="color-swatch color-box-small "
+        style={
+          Object {
+            "--bg-color": "var(--bg-turquoise, #EBF8F2)",
+          }
+        }
+      />
+      <div
+        className="d-flex flex-column"
+      >
+        <small>
+          <span
+            className="font-weight-bold"
+          >
+            BG Turquoise
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            bg-turquoise
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            #EBF8F2
+          </span>
+        </small>
+      </div>
+    </li>
+    <li
+      className="d-flex  py-1 px-0"
+    >
+      <div
+        className="color-swatch color-box-small border"
+        style={
+          Object {
+            "--bg-color": "var(--bg-grey, #F9F8F6)",
+          }
+        }
+      />
+      <div
+        className="d-flex flex-column"
+      >
+        <small>
+          <span
+            className="font-weight-bold"
+          >
+            BG Gray
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            bg-grey
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            #F9F8F6
+          </span>
+        </small>
+      </div>
+    </li>
+  </div>
+</section>
+`;
+
+exports[`Core: Color SwedbankPay SystemColors renders 1`] = `
+<section
+  className="my-5 py-2"
+>
+  <h2
+    id="system-colors"
+  >
+    System colors
+  </h2>
+  <p>
+    Our system colors include error, warning, success and info. These are used on different types of system messages that needs the users attention.
+  </p>
+  <div
+    className="container color-group"
+  >
+    <div
+      className="row w-100"
+    >
+      <div
+        className="col-sm pl-0"
+      >
+        <li
+          className="d-flex  py-1 px-0"
+        >
+          <div
+            className="color-swatch color-box-small "
+            style={
+              Object {
+                "--bg-color": "var(--system-success, #4D9C0F)",
+              }
+            }
+          />
+          <div
+            className="d-flex flex-column"
+          >
+            <small>
+              <span
+                className="font-weight-bold"
+              >
+                Success
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                system-success
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                #4D9C0F
+              </span>
+            </small>
+          </div>
+        </li>
+        <li
+          className="d-flex  py-1 px-0"
+        >
+          <div
+            className="color-swatch color-box-small "
+            style={
+              Object {
+                "--bg-color": "var(--system-success-light, #EFF8D2)",
+              }
+            }
+          />
+          <div
+            className="d-flex flex-column"
+          >
+            <small>
+              <span
+                className="font-weight-bold"
+              >
+                Success light
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                system-success-light
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                #EFF8D2
+              </span>
+            </small>
+          </div>
+        </li>
+        <li
+          className="d-flex  py-1 px-0"
+        >
+          <div
+            className="color-swatch color-box-small "
+            style={
+              Object {
+                "--bg-color": "var(--system-warning, #EE7023)",
+              }
+            }
+          />
+          <div
+            className="d-flex flex-column"
+          >
+            <small>
+              <span
+                className="font-weight-bold"
+              >
+                Warning
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                system-warning
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                #EE7023
+              </span>
+            </small>
+          </div>
+        </li>
+        <li
+          className="d-flex  py-1 px-0"
+        >
+          <div
+            className="color-swatch color-box-small "
+            style={
+              Object {
+                "--bg-color": "var(--system-warning-light, #FBEADB)",
+              }
+            }
+          />
+          <div
+            className="d-flex flex-column"
+          >
+            <small>
+              <span
+                className="font-weight-bold"
+              >
+                Warning light
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                system-warning-light
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                #FBEADB
+              </span>
+            </small>
+          </div>
+        </li>
+      </div>
+      <div
+        className="col-sm pl-0"
+      >
+        <li
+          className="d-flex  py-1 px-0"
+        >
+          <div
+            className="color-swatch color-box-small "
+            style={
+              Object {
+                "--bg-color": "var(--system-info, #335BB1)",
+              }
+            }
+          />
+          <div
+            className="d-flex flex-column"
+          >
+            <small>
+              <span
+                className="font-weight-bold"
+              >
+                Info
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                system-info
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                #335BB1
+              </span>
+            </small>
+          </div>
+        </li>
+        <li
+          className="d-flex  py-1 px-0"
+        >
+          <div
+            className="color-swatch color-box-small "
+            style={
+              Object {
+                "--bg-color": "var(--system-info-light, #E0EAF9)",
+              }
+            }
+          />
+          <div
+            className="d-flex flex-column"
+          >
+            <small>
+              <span
+                className="font-weight-bold"
+              >
+                Info light
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                system-info-light
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                #E0EAF9
+              </span>
+            </small>
+          </div>
+        </li>
+        <li
+          className="d-flex  py-1 px-0"
+        >
+          <div
+            className="color-swatch color-box-small "
+            style={
+              Object {
+                "--bg-color": "var(--system-error, #D82E2A)",
+              }
+            }
+          />
+          <div
+            className="d-flex flex-column"
+          >
+            <small>
+              <span
+                className="font-weight-bold"
+              >
+                Error
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                system-error
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                #D82E2A
+              </span>
+            </small>
+          </div>
+        </li>
+        <li
+          className="d-flex  py-1 px-0"
+        >
+          <div
+            className="color-swatch color-box-small "
+            style={
+              Object {
+                "--bg-color": "var(--system-error-light, #FFE9E9)",
+              }
+            }
+          />
+          <div
+            className="d-flex flex-column"
+          >
+            <small>
+              <span
+                className="font-weight-bold"
+              >
+                Error light
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                system-error-light
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                #FFE9E9
+              </span>
+            </small>
+          </div>
+        </li>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Core: Color SwedbankPay TextColors renders 1`] = `
+<section
+  className="my-5 py-2"
+>
+  <h2
+    id="text-colors"
+  >
+    Text colors
+  </h2>
+  <div
+    className="container mt-4"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-8 pl-sm-0"
+      >
+        <h3
+          className="h4"
+        >
+          Default mode
+        </h3>
+        <p
+          className="mb-3"
+        >
+          <span
+            className="font-weight-bold text-underline"
+          >
+            Text Default
+          </span>
+           
+          is our default text color on light backgrounds.
+           
+          <span
+            className="font-weight-bold text-underline"
+          >
+            Text Muted
+          </span>
+           
+          is used as a muted text color for smaller or less important text that shouldn’t be the primary focus.
+           
+        </p>
+        <ul
+          className="color-group d-flex flex-column pl-0"
+        >
+          <li
+            className="d-flex  py-1 px-0"
+          >
+            <div
+              className="color-swatch color-box-small "
+              style={
+                Object {
+                  "--bg-color": "var(--text-default, #2F2424)",
+                }
+              }
+            />
+            <div
+              className="d-flex flex-column"
+            >
+              <small>
+                <span
+                  className="font-weight-bold"
+                >
+                  Text default
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  text-default
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  #2F2424
+                </span>
+              </small>
+            </div>
+          </li>
+          <li
+            className="d-flex  py-1 px-0"
+          >
+            <div
+              className="color-swatch color-box-small "
+              style={
+                Object {
+                  "--bg-color": "var(--text-muted, #72605E)",
+                }
+              }
+            />
+            <div
+              className="d-flex flex-column"
+            >
+              <small>
+                <span
+                  className="font-weight-bold"
+                >
+                  Text muted
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  text-muted
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  #72605E
+                </span>
+              </small>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="col-sm-4 pr-sm-0"
+      >
+        <img
+          alt=""
+          className="w-100"
+          src="/TEST/designguide/assets/colors/identity-color-text-default.png"
+        />
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-8 pl-sm-0"
+      >
+        <h3
+          className="h4"
+        >
+          For dark backgrounds
+        </h3>
+        <p
+          className="mb-3"
+        >
+          <span
+            className="font-weight-bold text-underline"
+          >
+            White
+          </span>
+           is default color for text on backgrounds, and
+           
+          <span
+            className="font-weight-bold text-underline"
+          >
+            Text Muted light
+          </span>
+           
+          is used for secondary text.
+        </p>
+        <ul
+          className="color-group d-flex flex-column pl-0"
+        >
+          <li
+            className="d-flex  py-1 px-0"
+          >
+            <div
+              className="color-swatch color-box-small border"
+              style={
+                Object {
+                  "--bg-color": "var(--text-white, #FFFFFF)",
+                }
+              }
+            />
+            <div
+              className="d-flex flex-column"
+            >
+              <small>
+                <span
+                  className="font-weight-bold"
+                >
+                  Text White
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  text-white
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  #FFFFFF
+                </span>
+              </small>
+            </div>
+          </li>
+          <li
+            className="d-flex  py-1 px-0"
+          >
+            <div
+              className="color-swatch color-box-small "
+              style={
+                Object {
+                  "--bg-color": "var(--text-muted-light, ##A38B80)",
+                }
+              }
+            />
+            <div
+              className="d-flex flex-column"
+            >
+              <small>
+                <span
+                  className="font-weight-bold"
+                >
+                  Text Muted White
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  text-muted-light
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  ##A38B80
+                </span>
+              </small>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="col-sm-4 pr-sm-0"
+      >
+        <img
+          alt=""
+          className="w-100"
+          src="/TEST/designguide/assets/colors/identity-color-text-dark.png"
+        />
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-8 pl-sm-0"
+      >
+        <h3
+          className="h4"
+        >
+          Disabled
+        </h3>
+        <p
+          className="mb-3"
+        >
+          For disabled black buttons and text we use
+           
+          <span
+            className="font-weight-bold text-underline"
+          >
+            Text Disabled
+          </span>
+          .
+        </p>
+        <ul
+          className="color-group d-flex flex-column pl-0"
+        >
+          <li
+            className="d-flex  py-1 px-0"
+          >
+            <div
+              className="color-swatch color-box-small "
+              style={
+                Object {
+                  "--bg-color": "var(--text-disabled, #D4C4BC)",
+                }
+              }
+            />
+            <div
+              className="d-flex flex-column"
+            >
+              <small>
+                <span
+                  className="font-weight-bold"
+                >
+                  Text Disabled
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  text-disabled
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  #D4C4BC
+                </span>
+              </small>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div
+        className="col-sm-4 pr-sm-0"
+      >
+        <img
+          alt=""
+          className="w-100"
+          src="/TEST/designguide/assets/colors/identity-color-text-disabled.png"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
 exports[`Core: Color SystemColors renders 1`] = `
 <section>
   <h2
