@@ -67,7 +67,7 @@ export const textColors = [
 	{
 		title: "Text Muted White",
 		subTitle: "text-muted-light",
-		hex: "##A38B80",
+		hex: "#A38B80",
 		textCategory: "dark-backgrounds",
 	},
 	{
@@ -117,7 +117,7 @@ export const systemColors = [
 	{
 		title: "Success light",
 		subTitle: "system-success-light",
-		hex: "#EFF8D2",
+		hex: "#E7F8D2",
 	},
 	{
 		title: "Warning",
@@ -227,7 +227,7 @@ export const colorPool = [
 	},
 	{
 		title: "Yellow light",
-		subTitle: "brand-yellow-light",
+		subTitle: "yellow-light",
 		hex: "#FCE4A1",
 	},
 	{

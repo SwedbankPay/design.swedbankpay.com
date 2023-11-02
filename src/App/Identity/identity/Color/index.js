@@ -383,7 +383,7 @@ const SBColorPool = () => (
 			This pool of colors can be picked from when more colors are needed, rather
 			than making up new ones.
 		</p>
-		<div className="container px-0 color-group color-grid grid-columns">
+		<div className="container px-0 color-group grid-columns">
 			<div className="containerized-grid">
 				{sbColors.colorPool.map((color, i) => (
 					<DisplayColor
