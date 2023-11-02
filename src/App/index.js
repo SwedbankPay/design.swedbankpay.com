@@ -40,6 +40,10 @@ const Patterns = React.lazy(() =>
 	import(/* webpackChunkName: "patterns.chunk" */ "./Patterns/index.js"),
 );
 
+const Playbook = React.lazy(() =>
+	import(/* webpackChunkName: "patterns.chunk" */ "./Playbook/index.js"),
+);
+
 const ErrorPage404 = React.lazy(() =>
 	import(/* webpackChunkName: "404.chunk" */ "./ErrorPage404/index.js"),
 );
@@ -116,6 +120,7 @@ const App = () => {
 									<Route index path="/" element={<Home />} />
 									<Route path="get-started/*" element={<GetStarted />} />
 									<Route path="components/*" element={<Components />} />
+									<Route path="playbook/*" element={<Playbook />} />
 									<Route path="identity/*" element={<Identity />} />
 									<Route path="patterns/*" element={<Patterns />} />
 									<Route path="utilities/*" element={<Utilities />} />
