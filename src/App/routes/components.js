@@ -333,6 +333,15 @@ module.exports = [
 				outlined: true,
 				statusBadges: ["javascript"],
 			},
+			{
+				title: "Topbar Migrating to v2",
+				path: "topbar-migrating-to-v2",
+				rootPath: "/components/TopbarMigratingToV2",
+				componentPath: "components/TopbarMigratingToV2",
+				icon: "call_to_action",
+				outlined: true,
+				statusBadges: ["javascript", "new"],
+			},
 		],
 	},
 ];

@@ -1,7 +1,7 @@
 import componentRoutes from "./components";
 
 describe("Routes: components", () => {
-	const pathFormat = new RegExp("^([a-z]+([-a-z]+)?)+$");
+	const pathFormat = new RegExp("^[a-z][a-z0-9]*([-a-z0-9]+)?$");
 
 	it("is defined", () => {
 		expect(componentRoutes).toBeDefined();

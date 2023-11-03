@@ -1170,11 +1170,16 @@
 							right: 56px; // width of options-open icon
 							height: 39px;
 						}
+
+						&:has(.options-open.d-none):after {
+							right: 0; // no need to shift left when options sidebar button is not displayed
+						}
 					}
 
 					&.tabs-fade-left {
 						&:before {
 							height: 39px;
+							left: 0;
 						}
 					}
 
@@ -1227,6 +1232,21 @@
 								outline: 2px solid transparent;
 							}
 						}
+					}
+				}
+
+				// TODO: delete once support for has() is good enough
+				// which means probably around mid-January 2024 for FF support on FF v.120 (Nov 2023) + 2 versions
+				@supports not selector(:has(a, b)) {
+					+ div.d-flex > div.d-flex {
+						max-width: 100%;
+					}
+				}
+
+				// prevents components inside doc component preview to overflow outside the component-preview container
+				@supports selector(:has(a, b)) {
+					+ div > div:has(> .component-preview) {
+						max-width: 100%;
 					}
 				}
 			}
@@ -2002,11 +2022,15 @@
 		}
 
 		.topbar {
-			z-index: calc(var(--sidebar-z-index, 400) - 1);
+			z-index: calc(var(--sidebar-z-index, 400));
 
-			+ main {
-				height: 10rem;
-				background-color: @light-gray;
+			&:not(.experimental) {
+				z-index: calc(var(--sidebar-z-index, 400) - 1);
+
+				& + main {
+					height: 10rem;
+					background-color: @light-gray;
+				}
 			}
 		}
 	}

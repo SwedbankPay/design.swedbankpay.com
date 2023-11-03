@@ -165,6 +165,9 @@
 	--base-padding-xl: calc(var(--base-padding) * 2);
 	--base-padding-xxl: calc(var(--base-padding) * 4);
 
+	// misc paddings
+	--vscroll-padding-right: 17px;
+
 	/* Forms spacing */
 	--input-padding-x: 16px;
 	--input-padding-y: 12px;
@@ -243,14 +246,10 @@ body {
 		overflow: hidden;
 
 		@media screen and (min-width: @screen-sm-min) {
-			padding-right: 17px;
+			padding-right: var(--vscroll-padding-right, 17px);
 
 			.dialog {
-				padding-right: 17px;
-			}
-
-			.topbar {
-				padding: 0 20px;
+				padding-right: var(--vscroll-padding-right, 17px);
 			}
 		}
 	}

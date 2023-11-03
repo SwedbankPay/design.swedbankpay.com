@@ -113,6 +113,8 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
     </a>
     
 
+    
+
     <nav
       className="topbar-nav"
     >
@@ -135,11 +137,11 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
           </i>
           
 
+          
+
           <span>
             Home
           </span>
-          
-
         </a>
         <div
           className="sidebar"
@@ -467,7 +469,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
         
 
         <a
-          className={null}
+          className=""
           href="#"
           onClick={[Function]}
         >
@@ -480,16 +482,16 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
           </i>
           
 
+          
+
           <span>
             Purchase history
           </span>
-          
-
         </a>
         
 
         <a
-          className={null}
+          className=""
           href="#"
           onClick={[Function]}
         >
@@ -502,12 +504,14 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
           </i>
           
 
+          
+
           <span>
             Settings
           </span>
-          
-
         </a>
+        
+
         
 
       </div>
@@ -580,6 +584,8 @@ exports[`Component: Topbar - props topbarContent renders a topbar menu without m
     </a>
     
 
+    
+
     <nav
       className="topbar-nav"
     >
@@ -600,13 +606,11 @@ exports[`Component: Topbar - props topbarContent renders a topbar menu without m
           <span>
             Home
           </span>
-          
-
         </a>
         
 
         <a
-          className={null}
+          className=""
           href="#"
           onClick={[Function]}
         >
@@ -617,13 +621,11 @@ exports[`Component: Topbar - props topbarContent renders a topbar menu without m
           <span>
             Purchase history
           </span>
-          
-
         </a>
         
 
         <a
-          className={null}
+          className=""
           href="#"
           onClick={[Function]}
         >
@@ -634,9 +636,9 @@ exports[`Component: Topbar - props topbarContent renders a topbar menu without m
           <span>
             Settings
           </span>
-          
-
         </a>
+        
+
         
 
       </div>
@@ -709,6 +711,8 @@ exports[`Component: Topbar - props topbarContent renders a topbar menuopen and c
     </a>
     
 
+    
+
     <nav
       className="topbar-nav"
     >
@@ -731,16 +735,16 @@ exports[`Component: Topbar - props topbarContent renders a topbar menuopen and c
           </i>
           
 
+          
+
           <span>
             Home
           </span>
-          
-
         </a>
         
 
         <a
-          className={null}
+          className=""
           href="#"
           onClick={[Function]}
         >
@@ -753,16 +757,16 @@ exports[`Component: Topbar - props topbarContent renders a topbar menuopen and c
           </i>
           
 
+          
+
           <span>
             Purchase history
           </span>
-          
-
         </a>
         
 
         <a
-          className={null}
+          className=""
           href="#"
           onClick={[Function]}
         >
@@ -775,12 +779,14 @@ exports[`Component: Topbar - props topbarContent renders a topbar menuopen and c
           </i>
           
 
+          
+
           <span>
             Settings
           </span>
-          
-
         </a>
+        
+
         
 
       </div>
@@ -853,6 +859,8 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
     </a>
     
 
+    
+
     <nav
       className="topbar-nav"
     >
@@ -875,16 +883,16 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
           </i>
           
 
+          
+
           <span>
             Home
           </span>
-          
-
         </a>
         
 
         <a
-          className={null}
+          className=""
           href="#"
           onClick={[Function]}
         >
@@ -897,16 +905,16 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
           </i>
           
 
+          
+
           <span>
             Purchase history
           </span>
-          
-
         </a>
         
 
         <a
-          className={null}
+          className=""
           href="#"
           onClick={[Function]}
         >
@@ -919,11 +927,11 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
           </i>
           
 
+          
+
           <span>
             Settings
           </span>
-          
-
         </a>
         
 
@@ -947,6 +955,8 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
           
 
         </a>
+        
+
         
 
       </div>
@@ -1019,6 +1029,8 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
     </a>
     
 
+    
+
     <nav
       className="topbar-nav"
     >
@@ -1041,16 +1053,16 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
           </i>
           
 
+          
+
           <span>
             Home
           </span>
-          
-
         </a>
         
 
         <a
-          className={null}
+          className=""
           href="#"
           onClick={[Function]}
         >
@@ -1063,16 +1075,16 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
           </i>
           
 
+          
+
           <span>
             Purchase history
           </span>
-          
-
         </a>
         
 
         <a
-          className={null}
+          className=""
           href="#"
           onClick={[Function]}
         >
@@ -1085,12 +1097,14 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
           </i>
           
 
+          
+
           <span>
             Settings
           </span>
-          
-
         </a>
+        
+
         
 
       </div>

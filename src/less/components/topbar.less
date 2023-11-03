@@ -1,4 +1,5 @@
 @import "../global.less";
+@import "./topbar-experimental.less";
 
 @topbar-height: 80px;
 @topbar-border-width: 0.5rem;
@@ -6,7 +7,7 @@
 @topbar-border-top: @topbar-border-width solid @brand-primary;
 @topbar-link-container-width: 288px;
 
-.topbar {
+.topbar:not(.experimental) {
 	border-top: @topbar-border-top;
 	background-color: @white;
 	margin: 0 auto;
@@ -356,11 +357,11 @@
 		}
 
 		&.topbar-nav-open {
-			animation: fade-in 0.5s forwards;
+			animation: fade-in-legacy 0.5s forwards;
 			border-top: solid 1px @brand-bg-gray;
 
 			.topbar-link-container {
-				animation: slide-in 0.5s ease forwards;
+				animation: slide-in-legacy 0.5s ease forwards;
 
 				.sidebar {
 					display: block;
@@ -399,10 +400,10 @@
 		}
 
 		&.topbar-nav-closing {
-			animation: fade-out 0.3s forwards;
+			animation: fade-out-legacy 0.3s forwards;
 
 			.topbar-link-container {
-				animation: slide-out 0.3s ease alternate;
+				animation: slide-out-legacy 0.3s ease alternate;
 
 				> a:first-of-type {
 					margin-top: 1rem;
@@ -486,235 +487,234 @@
 	&.topbar-xl-wide {
 		padding: 0 1.5rem;
 	}
-}
-
-.topbar-wide {
-	.topbar-btn {
-		display: none;
-	}
-
-	.topbar-logo {
-		margin-top: 0;
-		margin-right: 2rem;
-	}
-
-	.topbar-link-right {
-		margin-left: auto;
-		padding: 0;
-		align-items: center;
-		font-family: var(--brand-headline);
-		font-weight: var(--font-weight-normal);
-		color: var(--brand-secondary);
-		cursor: pointer;
-		text-decoration: none;
-		display: flex;
-	}
-
-	.topbar-nav {
-		display: flex;
-		position: static;
-		flex-grow: 1;
-		height: 100%;
-
-		.topbar-close {
+	.topbar-wide {
+		.topbar-btn {
 			display: none;
 		}
 
-		.topbar-link-container {
-			position: static;
-			background-color: transparent;
-			width: 100%;
-			display: flex;
+		.topbar-logo {
+			margin-top: 0;
+			margin-right: 2rem;
+		}
+
+		.topbar-link-right {
+			margin-left: auto;
 			padding: 0;
-			overflow: visible;
-			transform: translateX(0%);
+			align-items: center;
+			font-family: var(--brand-headline);
+			font-weight: var(--font-weight-normal);
+			color: var(--brand-secondary);
+			cursor: pointer;
+			text-decoration: none;
+			display: flex;
+		}
 
-			> a:not(.close-topbar-nav) {
-				margin-top: 8px;
+		.topbar-nav {
+			display: flex;
+			position: static;
+			flex-grow: 1;
+			height: 100%;
 
-				&:hover {
-					> span {
-						&:before {
-							display: block;
-							width: 100%;
-							transition: width 0.4s;
-						}
-
-						text-decoration: none;
-					}
-				}
-
-				&.active {
-					> span {
-						&:before {
-							width: 100%;
-						}
-
-						text-decoration: none;
-						color: @black;
-					}
-				}
-
-				> span {
-					position: relative;
-
-					&:before {
-						content: "";
-						position: absolute;
-						background-color: @brand-primary;
-						height: 4px;
-						bottom: -4px;
-						left: 0;
-						right: 0;
-						margin-left: auto;
-						margin-right: auto;
-						width: 0;
-					}
-				}
-
-				&:not(.topbar-link-right) {
-					.material-icons,
-					&.material-icons {
-						display: none;
-					}
-				}
-			}
-
-			> *:not(.close-topbar-nav):not(.topbar-link-right) {
-				text-decoration: none;
-				margin-left: 1rem;
-				margin-right: 1rem;
-			}
-
-			.close-topbar-nav {
+			.topbar-close {
 				display: none;
+			}
+
+			.topbar-link-container {
+				position: static;
+				background-color: transparent;
+				width: 100%;
+				display: flex;
+				padding: 0;
+				overflow: visible;
+				transform: translateX(0%);
+
+				> a:not(.close-topbar-nav) {
+					margin-top: 8px;
+
+					&:hover {
+						> span {
+							&:before {
+								display: block;
+								width: 100%;
+								transition: width 0.4s;
+							}
+
+							text-decoration: none;
+						}
+					}
+
+					&.active {
+						> span {
+							&:before {
+								width: 100%;
+							}
+
+							text-decoration: none;
+							color: @black;
+						}
+					}
+
+					> span {
+						position: relative;
+
+						&:before {
+							content: "";
+							position: absolute;
+							background-color: @brand-primary;
+							height: 4px;
+							bottom: -4px;
+							left: 0;
+							right: 0;
+							margin-left: auto;
+							margin-right: auto;
+							width: 0;
+						}
+					}
+
+					&:not(.topbar-link-right) {
+						.material-icons,
+						&.material-icons {
+							display: none;
+						}
+					}
+				}
+
+				> *:not(.close-topbar-nav):not(.topbar-link-right) {
+					text-decoration: none;
+					margin-left: 1rem;
+					margin-right: 1rem;
+				}
+
+				.close-topbar-nav {
+					display: none;
+				}
 			}
 		}
 	}
-}
 
-each(@grid-breakpoints, .(@min-width, @infix) {
-    .topbar-@{infix}-wide {
-        @media screen and (min-width: @min-width) {
-            .topbar-wide();
-        }
-    }
-});
+	each(@grid-breakpoints, .(@min-width, @infix) {
+		&.topbar-@{infix}-wide {
+				@media screen and (min-width: @min-width) {
+						.topbar-wide();
+				}
+		}
+	});
 
-// Keyframe animations
-@keyframes slide-in {
-	100% {
-		transform: translateX(0%);
-	}
-}
-
-@keyframes slide-out {
-	0% {
-		transform: translateX(0%);
+	// Keyframe animations
+	@keyframes slide-in-legacy {
+		100% {
+			transform: translateX(0%);
+		}
 	}
 
-	100% {
-		transform: translateX(-100%);
-	}
-}
+	@keyframes slide-out-legacy {
+		0% {
+			transform: translateX(0%);
+		}
 
-@keyframes fade-in {
-	0% {
-		background: transparent;
-	}
-
-	100% {
-		background: fade(@black, 50%);
-	}
-}
-
-@keyframes fade-out {
-	0% {
-		background: fade(@black, 50%);
+		100% {
+			transform: translateX(-100%);
+		}
 	}
 
-	100% {
-		background: transparent;
-	}
-}
+	@keyframes fade-in-legacy {
+		0% {
+			background: transparent;
+		}
 
-@media (prefers-reduced-motion) {
-	.topbar {
-		.topbar-nav {
-			.sidebar {
-				.sidebar-nav {
-					.main-nav-ul {
-						.nav-group {
-							.nav-ul-active() {
-								> .nav-ul {
-									transition: max-height 0s ease-in-out;
+		100% {
+			background: fade(@black, 50%);
+		}
+	}
+
+	@keyframes fade-out-legacy {
+		0% {
+			background: fade(@black, 50%);
+		}
+
+		100% {
+			background: transparent;
+		}
+	}
+
+	@media (prefers-reduced-motion) {
+		.topbar {
+			.topbar-nav {
+				.sidebar {
+					.sidebar-nav {
+						.main-nav-ul {
+							.nav-group {
+								.nav-ul-active() {
+									> .nav-ul {
+										transition: max-height 0s ease-in-out;
+									}
 								}
 							}
 						}
 					}
 				}
-			}
 
-			&.topbar-nav-open {
-				animation: fade-in 0s forwards;
+				&.topbar-nav-open {
+					animation: fade-in-legacy 0s forwards;
 
-				.topbar-link-container {
-					animation: slide-in 0s ease forwards;
+					.topbar-link-container {
+						animation: slide-in-legacy 0s ease forwards;
+					}
 				}
-			}
 
-			&.topbar-nav-closing {
-				animation: fade-out 0s forwards;
+				&.topbar-nav-closing {
+					animation: fade-out-legacy 0s forwards;
 
-				.topbar-link-container {
-					animation: slide-out 0s ease alternate;
+					.topbar-link-container {
+						animation: slide-out-legacy 0s ease alternate;
+					}
 				}
 			}
 		}
 	}
-}
 
-@media (forced-colors: active) {
-	#dg-topbar {
-		border-bottom: 3px solid;
-	}
-
-	.topbar-link-container {
-		border: 10px solid;
-	}
-
-	.topbar {
-		.topbar-close {
-			outline: 2px solid;
-
-			&:hover,
-			&:focus,
-			&.focus {
-				outline: 2px solid;
-			}
-
-			&[active],
-			&:active,
-			&.active {
-				outline: 2px solid;
-			}
-
-			&:focus,
-			&.focus {
-				outline: 2px solid;
-			}
+	@media (forced-colors: active) {
+		#dg-topbar {
+			border-bottom: 3px solid;
 		}
-	}
 
-	.nav-group {
-		.nav-leaf {
-			a {
-				border-bottom: 1px solid;
+		.topbar-link-container {
+			border: 10px solid;
+		}
+
+		.topbar {
+			.topbar-close {
+				outline: 2px solid;
+
+				&:hover,
+				&:focus,
+				&.focus {
+					outline: 2px solid;
+				}
+
+				&[active],
+				&:active,
+				&.active {
+					outline: 2px solid;
+				}
 
 				&:focus,
-				&:hover,
-				&.active {
-					border-bottom: 4px solid;
+				&.focus {
+					outline: 2px solid;
+				}
+			}
+		}
+
+		.nav-group {
+			.nav-leaf {
+				a {
+					border-bottom: 1px solid;
+
+					&:focus,
+					&:hover,
+					&.active {
+						border-bottom: 4px solid;
+					}
 				}
 			}
 		}
