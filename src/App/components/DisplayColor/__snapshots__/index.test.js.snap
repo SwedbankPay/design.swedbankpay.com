@@ -2,7 +2,7 @@
 
 exports[`DisplayColor renders with optional props 1`] = `
 <div
-  className="d-flex flex-column mb-2"
+  className="d-flex flex-column mb-4"
 >
   <div
     className="color-box "
@@ -33,7 +33,7 @@ exports[`DisplayColor renders with optional props 1`] = `
 
 exports[`DisplayColor renders with required props 1`] = `
 <div
-  className="d-flex flex-column mb-2"
+  className="d-flex flex-column mb-4"
 >
   <div
     className="color-box "

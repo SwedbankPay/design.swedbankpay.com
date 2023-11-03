@@ -7,6 +7,7 @@
 ## Component changes
 
 - new Colors
+
 - Colors utilities:
   - removed the possibility to combine text-color utility classes WITH `.text-muted` to decrease their opacity
   - `.text-muted` class still exist, but it will always mean a full opacity color
