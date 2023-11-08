@@ -15,7 +15,7 @@ const MobileNavGroup = ({ route, index, sidebarId }) => {
 	const location = useLocation();
 
 	const [isActive, setIsActive] = useState(
-		location.pathname.includes(route.path)
+		location.pathname.includes(route.path),
 	);
 
 	useEffect(() => {
@@ -25,7 +25,7 @@ const MobileNavGroup = ({ route, index, sidebarId }) => {
 				childRoute: childRoute.path,
 			}))
 			.filter((childRouteObject) =>
-				location.pathname.includes(childRouteObject.childRoute)
+				location.pathname.includes(childRouteObject.childRoute),
 			);
 
 		isActive &&
@@ -89,24 +89,37 @@ const SelectPanel = ({ id, routes, topbarId, topbarSidebar }) => {
 	const _activeSecondaryLi = (secondaryRoute) =>
 		location.pathname.includes(secondaryRoute.path);
 
+	const useLegacyTopbar = true;
+
 	return (
 		<>
 			{topbarId ? (
-				// mobile & tablet hamburger menu sidebar
-				<div id={id} className="sidebar dg-sidebar">
-					<nav className="sidebar-nav">
-						<ul className="main-nav-ul">
-							{routes.map((route, i) => (
-								<MobileNavGroup
-									sidebarId={id}
-									key={`nav_group_${i}`}
-									route={route}
-									index={i}
-								/>
-							))}
-						</ul>
-					</nav>
-				</div>
+				!useLegacyTopbar ? (
+					// mobile & tablet hamburger menu sidebar
+					routes.map((route, i) => (
+						<MobileNavGroup
+							sidebarId={id}
+							key={`nav_group_${i}`}
+							route={route}
+							index={i}
+						/>
+					))
+				) : (
+					<div id={id} className="sidebar dg-sidebar">
+						<nav className="sidebar-nav">
+							<ul className="main-nav-ul">
+								{routes.map((route, i) => (
+									<MobileNavGroup
+										sidebarId={id}
+										key={`nav_group_${i}`}
+										route={route}
+										index={i}
+									/>
+								))}
+							</ul>
+						</nav>
+					</div>
+				)
 			) : (
 				// desktop
 				<div id={id} className="sidebar">
@@ -208,9 +221,9 @@ SelectPanel.propTypes = {
 					title: PropTypes.string.isRequired,
 					path: PropTypes.string.isRequired,
 					componentPath: PropTypes.string.isRequired,
-				})
+				}),
 			).isRequired,
-		})
+		}),
 	).isRequired,
 	id: PropTypes.string.isRequired,
 	topbarId: PropTypes.string,

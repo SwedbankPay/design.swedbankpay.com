@@ -1,6 +1,6 @@
 {
 	"name": "@swedbankpay/design-guide",
-	"version": "10.8.6",
+	"version": "10.8.7",
 	"description": "Swedbank Pay Design Guide",
 	"main": "src/scripts/main/index.js",
 	"scripts": {
@@ -92,11 +92,11 @@
 		"node-fetch": "^3.3.0",
 		"postcss-less": "^6.0.0",
 		"postcss-loader": "^7.0.2",
-		"postcss-preset-env": "^8.0.1",
-		"prettier": "2.8.8",
+		"postcss-preset-env": "^8.5.1",
+		"prettier": "^3.0.1",
 		"react-test-renderer": "^18.2.0",
 		"style-loader": "^3.3.1",
-		"stylelint": "^15.5.0",
+		"stylelint": "^15.9.0",
 		"stylelint-config-recommended-less": "^1.0.4",
 		"stylelint-config-standard": "^33.0.0",
 		"stylelint-declaration-block-no-ignored-properties": "^2.6.0",

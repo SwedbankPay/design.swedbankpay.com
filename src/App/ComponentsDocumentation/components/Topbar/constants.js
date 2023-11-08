@@ -1,9 +1,71 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TopbarComponent from "@components/Topbar";
+import { topbar } from "@src/scripts/main";
 
 import CodeTags from "@components/CodeTags";
 
-const menu = {
+export const menu = {
+	items: [
+		{
+			name: "Home",
+			pinned: true,
+		},
+		{
+			name: "Merchant details",
+			selected: true,
+			pinned: true,
+		},
+		{
+			name: "Transactions",
+		},
+		{
+			name: "User profile",
+		},
+		{
+			name: "Statistics",
+		},
+		{
+			name: "Transactions",
+		},
+		{
+			name: "User profile",
+		},
+		{
+			name: "Statistics",
+		},
+		{
+			name: "Transactions",
+		},
+		{
+			name: "User profile",
+		},
+		{
+			name: "Statistics",
+		},
+		{
+			name: "Users",
+			pinned: true,
+		},
+		{
+			name: "Access tokens",
+		},
+		{
+			name: "Contact us",
+		},
+		{
+			name: "Switch to acquiring",
+			icon: "sync_alt",
+			pinned: true,
+			firstPushRight: true,
+		},
+		{
+			name: "Change company",
+			icon: "arrow_forward",
+		},
+	],
+};
+
+export const menuLegacy = {
 	btn: {
 		name: "Menu",
 		icon: "menu",
@@ -24,18 +86,25 @@ const menu = {
 	],
 };
 
-const Topbar = ({ sticky, wide, logout }) => (
-	<div className="container-fluid">
-		<TopbarComponent
-			topbarContent={menu}
-			wide={wide}
-			sticky={sticky}
-			logout={logout}
-			id="demo-topbar"
-		/>
-		<main className="topbar-content"></main>
-	</div>
-);
+const Topbar = ({ sticky, wide, logout, legacy }) => {
+	useEffect(() => {
+		topbar.init();
+	}, [legacy]);
+
+	return (
+		<div className="container-fluid">
+			<TopbarComponent
+				topbarContent={!legacy ? menu : menuLegacy}
+				wide={wide}
+				sticky={sticky}
+				logout={logout}
+				id="demo-topbar"
+				legacy={legacy}
+			/>
+			<main className="topbar-content"></main>
+		</div>
+	);
+};
 
 export const topbarShowcase = {
 	id: "overviewTopbar",
@@ -44,7 +113,7 @@ export const topbarShowcase = {
 	elements: [
 		{
 			tab: "Desktop",
-			component: <Topbar wide="xl" logout />,
+			component: <Topbar wide="xl" logout legacy={true} />,
 			title: "Desktop",
 			description: (
 				<p>
@@ -58,7 +127,7 @@ export const topbarShowcase = {
 		},
 		{
 			tab: "Mobile/tablet",
-			component: <Topbar logout wide={false} />,
+			component: <Topbar logout wide={false} legacy={true} />,
 			title: "Mobile/tablet",
 			description: (
 				<>
@@ -75,6 +144,28 @@ export const topbarShowcase = {
 						the transition to happen. You can easily alter this by creating
 						custom css.
 					</p>
+				</>
+			),
+		},
+		{
+			tab: "🧪 experimental Desktop",
+			component: <Topbar wide="xl" logout legacy={false} />,
+			title: "Desktop",
+			description: (
+				<p>
+					The experimental desktop topbar involves breaking changes. Make sure
+					to check them out before switching.
+				</p>
+			),
+		},
+		{
+			tab: "🧪 experimental Mobile/tablet",
+			component: <Topbar logout wide={false} legacy={false} />,
+			title: "Mobile/tablet",
+			description: (
+				<>
+					The experimental desktop topbar involves breaking changes. Make sure
+					to check them out before switching.
 				</>
 			),
 		},

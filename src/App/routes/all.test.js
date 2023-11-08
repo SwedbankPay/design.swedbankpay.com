@@ -1,7 +1,10 @@
 import allRoutes from "./all";
 
 describe("Routes: all", () => {
-	const pathFormat = new RegExp("^([a-z]+([-a-z]+)?)+$");
+	// match any string that starts with a lowercase letter,
+	// followed by zero or more lowercase letters or digits,
+	// followed by an optional hyphen and one or more lowercase letters or digits
+	const pathFormat = new RegExp("^[a-z][a-z0-9]*([-a-z0-9]+)?$");
 
 	it("is defined", () => {
 		expect(allRoutes).toBeDefined();

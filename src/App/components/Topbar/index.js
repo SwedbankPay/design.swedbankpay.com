@@ -1,18 +1,27 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import swedbankpayLogo from "@src/img/swedbankpay/logo/swedbankpay-logo-v.svg";
+import swedbankpayLogoHorizontal from "@src/img/swedbankpay/logo/swedbankpay-logo-h.svg";
+import swedbankpayLogoVertical from "@src/img/swedbankpay/logo/swedbankpay-logo-v.svg";
 import payexLogo from "@src/img/payex/logo/payex-logo.svg";
 
 import SidebarComponent from "@components/Sidebar";
 import { SidebarNavList } from "../../ComponentsDocumentation/components/Sidebar/constants";
+import ButtonComponent from "@components/Button";
 
 const brand = process.env.brand;
 
-const devLogo = brand === "swedbankpay" ? swedbankpayLogo : payexLogo;
-
 const isDev = process.env.version === "LOCAL_DEV";
+const getDevLogo = (legacy) => {
+	if (brand === "swedbankpay" && !legacy) {
+		return swedbankpayLogoHorizontal;
+	} else if (brand === "swedbankpay" && legacy) {
+		return swedbankpayLogoVertical;
+	} else {
+		return payexLogo;
+	}
+};
 
-const TopbarBtn = () => (
+const TopbarBtn = ({ legacy = true }) => (
 	<>
 		<button
 			type="button"
@@ -26,47 +35,112 @@ const TopbarBtn = () => (
 			<i className="material-icons topbar-btn-icon">menu</i>
 			{"\n\t\t"}
 		</button>
-		<button type="button" className="topbar-close" aria-label="Close menu">
-			{"\n"}
-			<i className="material-icons topbar-btn-icon">close</i>
-			{"\n\t\t"}
-		</button>
+		{legacy && (
+			<button type="button" className="topbar-close" aria-label="Close menu">
+				{"\n"}
+				<i className="material-icons topbar-btn-icon">close</i>
+				{"\n\t\t"}
+			</button>
+		)}
 	</>
 );
 
-const TopbarMenu = ({ menu, logout, sidebar }) => {
+const ConditionalWrapper = ({ condition, wrapper, children }) =>
+	condition ? wrapper(children) : children;
+
+const TopbarMenu = ({ menu, logout, sidebar, legacy }) => {
 	const { items } = menu;
 
 	return (
 		<nav className="topbar-nav">
 			<div className="topbar-link-container">
-				{items.map((item, i) => (
-					<Fragment key={i}>
+				{!legacy && (
+					<div className="topbar-modal-header">
 						{"\n"}
-						<a
-							href="#"
-							className={item.name === "Home" ? "active" : null}
-							onClick={(e) => e.preventDefault()}
+						<button
+							type="button"
+							className="topbar-close btn btn-icon btn-xs"
+							aria-label="Close menu"
+							title="Close menu"
 						>
 							{"\n"}
-							{item.icon ? <i className="material-icons">{item.icon}</i> : null}
+							<i className="material-icons-outlined" aria-hidden="true">
+								{"\n"}
+								close
+								{"\n"}
+							</i>
 							{"\n"}
-							<span>{item.name}</span>
+						</button>
+						{"\n"}
+					</div>
+				)}
+				<ConditionalWrapper
+					condition={!legacy}
+					wrapper={(children) => (
+						<div className="topbar-modal-body">{children}</div>
+					)}
+				>
+					{items.map((item, i) => (
+						<Fragment key={i}>
 							{"\n"}
-						</a>
-						{i === 0 && sidebar && (
-							<SidebarComponent id="topbar-sidebar" navList={SidebarNavList} />
-						)}
-					</Fragment>
-				))}
+							<a
+								href="#"
+								className={`${item.name === "Home" ? "active" : ""}${
+									item.pinned ? " pinned" : ""
+								}${item.firstPushRight ? " topbar-link-right" : ""}`}
+								onClick={(e) => e.preventDefault()}
+							>
+								{!legacy && (
+									<>
+										{"\n"}
+										<span>{item.name}</span>
+									</>
+								)}
+								{"\n"}
+								{item.icon ? (
+									<>
+										<i className="material-icons">{item.icon}</i>
+										{"\n"}
+									</>
+								) : null}
+								{legacy && (
+									<>
+										{"\n"}
+										<span>{item.name}</span>
+									</>
+								)}
+							</a>
+							{i === 0 && sidebar && (
+								<SidebarComponent
+									id="topbar-sidebar"
+									navList={SidebarNavList}
+								/>
+							)}
+						</Fragment>
+					))}
+				</ConditionalWrapper>
 				{"\n"}
-				{logout ? <TopbarLogout /> : null}
+				{logout ? legacy ? <TopbarLogoutLegacy /> : <TopbarLogout /> : null}
+				{"\n"}
 			</div>
 		</nav>
 	);
 };
 
 const TopbarLogout = () => (
+	<div className="topbar-modal-footer">
+		{"\n"}
+		<ButtonComponent
+			type="secondary"
+			label="Log out"
+			icon="exit_to_app"
+			size="sm"
+		/>
+		{"\n"}
+	</div>
+);
+
+const TopbarLogoutLegacy = () => (
 	<>
 		<a
 			className="topbar-link-right"
@@ -83,7 +157,7 @@ const TopbarLogout = () => (
 	</>
 );
 
-const TopbarLogo = ({ png }) => (
+const TopbarLogo = ({ png, legacy }) => (
 	<>
 		<a
 			className={`topbar-logo${png ? " topbar-logo-png" : ""}`}
@@ -95,22 +169,26 @@ const TopbarLogo = ({ png }) => (
 			{brand === "swedbankpay" && png ? (
 				<img
 					src={`${process.env.basename}img/logo/${brand}-logo${
-						brand === "swedbankpay" ? "-v" : ""
+						brand === "swedbankpay" ? (legacy ? "-v" : "-h") : ""
 					}.png`}
 					alt={`${brand} logo`}
-					className="logotype-vertical logotype-sm"
+					className={`${
+						legacy ? "logotype-vertical" : "logotype-horizontal"
+					} logotype-sm`}
 				/>
 			) : (
 				<img
 					src={
 						isDev
-							? devLogo
+							? getDevLogo(legacy)
 							: `${process.env.basename}img/logo/${brand}-logo${
-									brand === "swedbankpay" ? "-v" : ""
+									brand === "swedbankpay" ? (legacy ? "-v" : "-h") : ""
 							  }.svg`
 					}
 					alt={`${brand} logo`}
-					className="logotype-vertical logotype-sm"
+					className={`${
+						legacy ? "logotype-vertical" : "logotype-horizontal"
+					} logotype-sm`}
 				/>
 			)}
 			{"\n"}
@@ -119,26 +197,51 @@ const TopbarLogo = ({ png }) => (
 	</>
 );
 
-const Topbar = ({ topbarContent, wide, logout, id, png, sticky, sidebar }) => (
+const Topbar = ({
+	topbarContent,
+	wide,
+	logout,
+	id,
+	png,
+	sticky,
+	sidebar,
+	legacy = true,
+}) => (
 	<header
 		className={`topbar${wide ? ` topbar-${wide}-wide` : ""}${
 			sticky ? " topbar-sticky" : ""
-		}`}
+		}${legacy ? "" : " experimental"}`}
 		id={id}
 	>
 		{"\n"}
 		{topbarContent ? (
 			<div className="nav-container">
+				{legacy && (
+					<>
+						{"\n"}
+						<TopbarBtn legacy={legacy} />
+					</>
+				)}
 				{"\n"}
-				<TopbarBtn />
+				<TopbarLogo png={png} legacy={legacy} />
 				{"\n"}
-				<TopbarLogo png={png} />
-				<TopbarMenu menu={topbarContent} logout={!!logout} sidebar={sidebar} />
+				<TopbarMenu
+					menu={topbarContent}
+					logout={!!logout}
+					sidebar={sidebar}
+					legacy={legacy}
+				/>
+				{!legacy && (
+					<>
+						{"\n"}
+						<TopbarBtn legacy={legacy} />
+					</>
+				)}
 			</div>
 		) : (
 			<>
-				<TopbarLogo png={png} />
-				{logout ? <TopbarLogout /> : null}
+				<TopbarLogo png={png} legacy={legacy} />
+				{logout ? legacy ? <TopbarLogoutLegacy /> : <TopbarLogout /> : null}
 			</>
 		)}
 	</header>
@@ -151,6 +254,7 @@ Topbar.propTypes = {
 	png: PropTypes.bool,
 	sticky: PropTypes.bool,
 	sidebar: PropTypes.bool,
+	legacy: PropTypes.bool,
 };
 
 export default Topbar;

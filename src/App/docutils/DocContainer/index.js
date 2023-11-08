@@ -10,11 +10,13 @@ const DocContainer = ({ children }) => {
 	);
 
 	useEffect(() => {
-		sidebar.populateSidebarTertiary(
-			"doc-sidebar",
-			document.querySelector(".doc-body").querySelectorAll("h2[id]")
-		);
-		sidebar.initScrollListener("doc-sidebar", "doc-body", "h2");
+		if (document?.querySelector(".doc-body")) {
+			sidebar.populateSidebarTertiary(
+				"doc-sidebar",
+				document.querySelector(".doc-body").querySelectorAll("h2[id]"),
+			);
+			sidebar.initScrollListener("doc-sidebar", "doc-body", "h2");
+		}
 	}, []);
 
 	return (
