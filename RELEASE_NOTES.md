@@ -1,6 +1,6 @@
 # Changelog
 
-## \[10.8.6\] - 13.09.2023
+## \[10.8.7\] - 07.11.2023
 
 ## Bug Fixes
 
@@ -14,4 +14,4 @@
 
 ## Design System website
 
-- Add the Playbook section in Identity
+- Add the new Playbook section in Identity
