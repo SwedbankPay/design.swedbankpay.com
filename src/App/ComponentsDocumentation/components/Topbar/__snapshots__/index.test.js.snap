@@ -161,6 +161,8 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
             </a>
             
 
+            
+
             <nav
               className="topbar-nav"
             >
@@ -183,16 +185,16 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                   </i>
                   
 
+                  
+
                   <span>
                     Home
                   </span>
-                  
-
                 </a>
                 
 
                 <a
-                  className={null}
+                  className=""
                   href="#"
                   onClick={[Function]}
                 >
@@ -205,16 +207,16 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                   </i>
                   
 
+                  
+
                   <span>
                     Purchases
                   </span>
-                  
-
                 </a>
                 
 
                 <a
-                  className={null}
+                  className=""
                   href="#"
                   onClick={[Function]}
                 >
@@ -227,12 +229,14 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                   </i>
                   
 
+                  
+
                   <span>
                     Settings
                   </span>
-                  
-
                 </a>
+                
+
                 
 
               </div>
@@ -370,6 +374,12 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                   31
                   
 
+                  32
+                  
+
+                  33
+                  
+
                 </pre>
               </td>
               <td
@@ -409,6 +419,8 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                               &lt;/a&gt;
                   
 
+                  
+
                               &lt;nav class="topbar-nav"&gt;
                   
 
@@ -421,10 +433,9 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                                           &lt;i class="material-icons"&gt;home&lt;/i&gt;
                   
 
-                                          &lt;span&gt;Home&lt;/span&gt;
                   
 
-                                      &lt;/a&gt;
+                                          &lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;
                   
 
                                       &lt;a href="#"&gt;
@@ -433,10 +444,9 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                                           &lt;i class="material-icons"&gt;shopping_cart&lt;/i&gt;
                   
 
-                                          &lt;span&gt;Purchases&lt;/span&gt;
                   
 
-                                      &lt;/a&gt;
+                                          &lt;span&gt;Purchases&lt;/span&gt;&lt;/a&gt;
                   
 
                                       &lt;a href="#"&gt;
@@ -445,10 +455,11 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                                           &lt;i class="material-icons"&gt;settings&lt;/i&gt;
                   
 
-                                          &lt;span&gt;Settings&lt;/span&gt;
                   
 
-                                      &lt;/a&gt;
+                                          &lt;span&gt;Settings&lt;/span&gt;&lt;/a&gt;
+                  
+
                   
 
                                   &lt;/div&gt;
@@ -563,6 +574,8 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
           </a>
           
 
+          
+
           <nav
             className="topbar-nav"
           >
@@ -572,29 +585,217 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
               
 
               <a
-                className="active"
+                className="active pinned"
                 href="#"
                 onClick={[Function]}
               >
                 
 
-                <i
-                  className="material-icons"
-                >
-                  home
-                </i>
                 
 
                 <span>
                   Home
                 </span>
-                
-
               </a>
               
 
               <a
-                className={null}
+                className=" pinned"
+                href="#"
+                onClick={[Function]}
+              >
+                
+
+                
+
+                <span>
+                  Merchant details
+                </span>
+              </a>
+              
+
+              <a
+                className=""
+                href="#"
+                onClick={[Function]}
+              >
+                
+
+                
+
+                <span>
+                  Transactions
+                </span>
+              </a>
+              
+
+              <a
+                className=""
+                href="#"
+                onClick={[Function]}
+              >
+                
+
+                
+
+                <span>
+                  User profile
+                </span>
+              </a>
+              
+
+              <a
+                className=""
+                href="#"
+                onClick={[Function]}
+              >
+                
+
+                
+
+                <span>
+                  Statistics
+                </span>
+              </a>
+              
+
+              <a
+                className=""
+                href="#"
+                onClick={[Function]}
+              >
+                
+
+                
+
+                <span>
+                  Transactions
+                </span>
+              </a>
+              
+
+              <a
+                className=""
+                href="#"
+                onClick={[Function]}
+              >
+                
+
+                
+
+                <span>
+                  User profile
+                </span>
+              </a>
+              
+
+              <a
+                className=""
+                href="#"
+                onClick={[Function]}
+              >
+                
+
+                
+
+                <span>
+                  Statistics
+                </span>
+              </a>
+              
+
+              <a
+                className=""
+                href="#"
+                onClick={[Function]}
+              >
+                
+
+                
+
+                <span>
+                  Transactions
+                </span>
+              </a>
+              
+
+              <a
+                className=""
+                href="#"
+                onClick={[Function]}
+              >
+                
+
+                
+
+                <span>
+                  User profile
+                </span>
+              </a>
+              
+
+              <a
+                className=""
+                href="#"
+                onClick={[Function]}
+              >
+                
+
+                
+
+                <span>
+                  Statistics
+                </span>
+              </a>
+              
+
+              <a
+                className=" pinned"
+                href="#"
+                onClick={[Function]}
+              >
+                
+
+                
+
+                <span>
+                  Users
+                </span>
+              </a>
+              
+
+              <a
+                className=""
+                href="#"
+                onClick={[Function]}
+              >
+                
+
+                
+
+                <span>
+                  Access tokens
+                </span>
+              </a>
+              
+
+              <a
+                className=""
+                href="#"
+                onClick={[Function]}
+              >
+                
+
+                
+
+                <span>
+                  Contact us
+                </span>
+              </a>
+              
+
+              <a
+                className=" pinned topbar-link-right"
                 href="#"
                 onClick={[Function]}
               >
@@ -603,20 +804,20 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                 <i
                   className="material-icons"
                 >
-                  shopping_cart
+                  sync_alt
                 </i>
                 
 
-                <span>
-                  Purchases
-                </span>
                 
 
+                <span>
+                  Switch to acquiring
+                </span>
               </a>
               
 
               <a
-                className={null}
+                className=""
                 href="#"
                 onClick={[Function]}
               >
@@ -625,15 +826,15 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                 <i
                   className="material-icons"
                 >
-                  settings
+                  arrow_forward
                 </i>
                 
 
-                <span>
-                  Settings
-                </span>
                 
 
+                <span>
+                  Change company
+                </span>
               </a>
               
 
@@ -657,6 +858,8 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                 
 
               </a>
+              
+
               
 
             </div>
@@ -799,6 +1002,126 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                   33
                   
 
+                  34
+                  
+
+                  35
+                  
+
+                  36
+                  
+
+                  37
+                  
+
+                  38
+                  
+
+                  39
+                  
+
+                  40
+                  
+
+                  41
+                  
+
+                  42
+                  
+
+                  43
+                  
+
+                  44
+                  
+
+                  45
+                  
+
+                  46
+                  
+
+                  47
+                  
+
+                  48
+                  
+
+                  49
+                  
+
+                  50
+                  
+
+                  51
+                  
+
+                  52
+                  
+
+                  53
+                  
+
+                  54
+                  
+
+                  55
+                  
+
+                  56
+                  
+
+                  57
+                  
+
+                  58
+                  
+
+                  59
+                  
+
+                  60
+                  
+
+                  61
+                  
+
+                  62
+                  
+
+                  63
+                  
+
+                  64
+                  
+
+                  65
+                  
+
+                  66
+                  
+
+                  67
+                  
+
+                  68
+                  
+
+                  69
+                  
+
+                  70
+                  
+
+                  71
+                  
+
+                  72
+                  
+
+                  73
+                  
+
                 </pre>
               </td>
               <td
@@ -835,46 +1158,146 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                           &lt;/a&gt;
                   
 
+                  
+
                           &lt;nav class="topbar-nav"&gt;
                   
 
                               &lt;div class="topbar-link-container"&gt;
                   
 
-                                  &lt;a href="#" class="active"&gt;
+                                  &lt;a href="#" class="active pinned"&gt;
                   
 
-                                      &lt;i class="material-icons"&gt;home&lt;/i&gt;
                   
 
-                                      &lt;span&gt;Home&lt;/span&gt;
+                                      &lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;
                   
 
-                                  &lt;/a&gt;
+                                  &lt;a href="#" class=" pinned"&gt;
                   
 
-                                  &lt;a href="#"&gt;
                   
 
-                                      &lt;i class="material-icons"&gt;shopping_cart&lt;/i&gt;
-                  
-
-                                      &lt;span&gt;Purchases&lt;/span&gt;
-                  
-
-                                  &lt;/a&gt;
+                                      &lt;span&gt;Merchant details&lt;/span&gt;&lt;/a&gt;
                   
 
                                   &lt;a href="#"&gt;
                   
 
-                                      &lt;i class="material-icons"&gt;settings&lt;/i&gt;
                   
 
-                                      &lt;span&gt;Settings&lt;/span&gt;
+                                      &lt;span&gt;Transactions&lt;/span&gt;&lt;/a&gt;
                   
 
-                                  &lt;/a&gt;
+                                  &lt;a href="#"&gt;
+                  
+
+                  
+
+                                      &lt;span&gt;User profile&lt;/span&gt;&lt;/a&gt;
+                  
+
+                                  &lt;a href="#"&gt;
+                  
+
+                  
+
+                                      &lt;span&gt;Statistics&lt;/span&gt;&lt;/a&gt;
+                  
+
+                                  &lt;a href="#"&gt;
+                  
+
+                  
+
+                                      &lt;span&gt;Transactions&lt;/span&gt;&lt;/a&gt;
+                  
+
+                                  &lt;a href="#"&gt;
+                  
+
+                  
+
+                                      &lt;span&gt;User profile&lt;/span&gt;&lt;/a&gt;
+                  
+
+                                  &lt;a href="#"&gt;
+                  
+
+                  
+
+                                      &lt;span&gt;Statistics&lt;/span&gt;&lt;/a&gt;
+                  
+
+                                  &lt;a href="#"&gt;
+                  
+
+                  
+
+                                      &lt;span&gt;Transactions&lt;/span&gt;&lt;/a&gt;
+                  
+
+                                  &lt;a href="#"&gt;
+                  
+
+                  
+
+                                      &lt;span&gt;User profile&lt;/span&gt;&lt;/a&gt;
+                  
+
+                                  &lt;a href="#"&gt;
+                  
+
+                  
+
+                                      &lt;span&gt;Statistics&lt;/span&gt;&lt;/a&gt;
+                  
+
+                                  &lt;a href="#" class=" pinned"&gt;
+                  
+
+                  
+
+                                      &lt;span&gt;Users&lt;/span&gt;&lt;/a&gt;
+                  
+
+                                  &lt;a href="#"&gt;
+                  
+
+                  
+
+                                      &lt;span&gt;Access tokens&lt;/span&gt;&lt;/a&gt;
+                  
+
+                                  &lt;a href="#"&gt;
+                  
+
+                  
+
+                                      &lt;span&gt;Contact us&lt;/span&gt;&lt;/a&gt;
+                  
+
+                                  &lt;a href="#" class=" pinned topbar-link-right"&gt;
+                  
+
+                                      &lt;i class="material-icons"&gt;sync_alt&lt;/i&gt;
+                  
+
+                  
+
+                                      &lt;span&gt;Switch to acquiring&lt;/span&gt;&lt;/a&gt;
+                  
+
+                                  &lt;a href="#"&gt;
+                  
+
+                                      &lt;i class="material-icons"&gt;arrow_forward&lt;/i&gt;
+                  
+
+                  
+
+                                      &lt;span&gt;Change company&lt;/span&gt;&lt;/a&gt;
                   
 
                                   &lt;a class="topbar-link-right" href="#"&gt;
@@ -887,6 +1310,8 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                   
 
                                   &lt;/a&gt;
+                  
+
                   
 
                               &lt;/div&gt;
@@ -911,6 +1336,57 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
         </table>
       </div>
     </figure>
+  </section>
+  <section>
+    <h3>
+      Migrating to the new Topbar ( ⚠️experimental🧪 )
+    </h3>
+    <p>
+      A future version of the topbar can be used. It is in experimental state. Things can be modified and depending of your use some features might still be missing.
+      <br />
+      This is done by appending the class
+       
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .experimental
+      </code>
+       to the element with class 
+      <code
+        className="code-tags code-tags-secondary"
+      >
+        .topbar
+      </code>
+      .
+    </p>
+    <p>
+      There is several breaking changes (details are following lower down)
+    </p>
+    <ul>
+      <li>
+        order of elements in the topbar
+      </li>
+      <li>
+        container links content is modified (added a header & footer to the topbar, and links are grouped in a specific container)
+      </li>
+      <li>
+        logo used in the topbar is different
+      </li>
+      <li>
+        links need to have a \`.pinned\` class to be visible in the topbar
+      </li>
+    </ul>
+    <p>
+      To do the migration please follow instructions on
+       
+      <a
+        href="/components/topbar-migrating-to-v2"
+        onClick={[Function]}
+      >
+        the migration page
+      </a>
+      .
+    </p>
   </section>
   <section>
     <h3>

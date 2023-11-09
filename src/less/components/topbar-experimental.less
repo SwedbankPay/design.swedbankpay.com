@@ -1,0 +1,522 @@
+@import "../global.less";
+
+.topbar.experimental {
+	--topbar-height: 60px;
+	--topbar-border-width: 0.5rem;
+	--topbar-opened-padding: 24px;
+	--topbar-opened-padding-body: 30px;
+	--topbar-spacing-horizontal: 32px;
+	--topbar-links-container-spacing: 60px;
+	--topbar-max-width: 960px;
+	--border-radius-topbar: 24px;
+	--border-radius-topbar-nav: 32px;
+
+	// TODO: once color-mix get enough support we can replace this by CSS var. Postcss does not parse a color-mix fallback if css-var (since cannot predict ahead of time the dynamic aspect of it)
+	height: var(--topbar-height);
+	width: calc(100% - 2 * var(--topbar-spacing-horizontal, 32px));
+	max-width: var(--topbar-max-width, 960px);
+	z-index: calc(var(--topbar-z-index, 400) - 1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 1.5rem;
+	position: relative;
+	border-radius: 0 0 var(--border-radius-topbar, 24px)
+		var(--border-radius-topbar, 24px);
+	margin: 0 auto;
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		backdrop-filter: blur(10px) brightness(1.1);
+		z-index: -1;
+		background-color: color-mix(in srgb, @brand-bg-gray, transparent 35%);
+		border-radius: 0 0 var(--border-radius-topbar, 24px)
+			var(--border-radius-topbar, 24px);
+	}
+
+	.nav-container {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&.topbar-sticky {
+		position: sticky;
+		top: 0;
+	}
+
+	.topbar-nav-closing
+		:is(.topbar-modal-header, .topbar-link-container, .topbar-modal-footer) {
+		visibility: hidden;
+	}
+
+	// LESS func to generate classes for triggering sticky starting from a breakpoints
+	each(@grid-breakpoints, .(@min-width, @infix) {
+			&.topbar-min-@{infix}-sticky {
+					@media screen and (min-width: @min-width) {
+							.topbar-sticky();
+					}
+			}
+	});
+
+	// LESS func to generate classes for triggering sticky ending at a breakpoint
+	each(@grid-breakpoints-max, .(@max-width, @infix) {
+			&.topbar-max-@{infix}-sticky {
+					@media screen and (max-width: @max-width) {
+							.topbar-sticky();
+					}
+			}
+	});
+
+	.topbar-logo {
+		background-size: cover;
+		border: none;
+		display: flex;
+
+		& img {
+			height: 32px;
+			width: 67px;
+		}
+	}
+
+	& .topbar-btn {
+		user-select: none;
+		background: none;
+		padding: 0;
+		border: 0;
+		align-self: center;
+		font-weight: bold;
+
+		&:focus {
+			border-radius: 0.125rem;
+			box-shadow: 0 0 0 2px @black;
+			outline: none;
+		}
+	}
+
+	// once :has() is supported, we can remove the script that add inline-style display: none/flex to .topbar-btn when open & close
+	&:has(.topbar-nav-open) .topbar-btn {
+		display: none;
+	}
+
+	// hamburger menu btn to open the topbar-nav dialog
+	.topbar-btn {
+		display: flex;
+		outline: 1px solid transparent;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	// topbar-link-right is the class for the first link aligned on the right side
+	> .topbar-link-right {
+		display: none;
+	}
+
+	// topbar-nav is the container for links in both topbar up top and when dialog opened
+	.topbar-nav {
+		position: fixed;
+		inset: 0;
+		width: 100vw;
+		height: 100vh;
+		background: transparent;
+		display: none;
+
+		&.topbar-nav-closing {
+			animation: fade-out ease-in-out 0.3s forwards;
+		}
+
+		// topbar when dialog is opened
+		&.topbar-nav-open {
+			animation: fade-in ease-in-out 0.3s forwards;
+			position: fixed;
+			display: flex;
+			justify-content: flex-end;
+
+			.topbar-link-container {
+				animation-name: slide-in-from-right;
+				animation-duration: 0.4s;
+				animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+				position: relative;
+				padding: 0;
+				border-width: 0;
+				display: flex;
+				flex-direction: column;
+				align-items: stretch;
+				width: calc(100% - var(--topbar-links-container-spacing, 60px));
+
+				> .topbar-modal-body {
+					background-color: var(--white, #ffffff);
+					flex-direction: column;
+					align-items: stretch;
+					padding: var(--topbar-opened-padding, 24px)
+						calc(var(--topbar-opened-padding-body, 30px) - 10px)
+						var(--topbar-opened-padding, 24px)
+						var(--topbar-opened-padding-body, 30px);
+					flex: 1;
+					border-top: 1px solid var(--gray);
+					border-bottom: 1px solid var(--gray);
+
+					.topbar-link-right {
+						margin: initial;
+
+						.material-icons {
+							margin: 0;
+						}
+					}
+
+					// links in open modal
+					> a {
+						font-size: 1.125rem;
+						padding: 1rem 0;
+						border-bottom: 1px solid
+							color-mix(in srgb, @brand-secondary, transparent 60%);
+
+						&:first-of-type {
+							padding-top: 0;
+						}
+					}
+
+					> button {
+						margin-top: 0.75rem;
+
+						&:first-of-type {
+							margin-top: auto;
+						}
+					}
+				}
+
+				> :is(.topbar-modal-header, .topbar-modal-footer) {
+					display: flex;
+					background-color: var(--white, #ffffff);
+					padding: var(--topbar-opened-padding, 24px);
+				}
+
+				.topbar-modal-header {
+					justify-content: flex-end;
+					border-radius: var(--border-radius-topbar-nav, 32px) 0 0 0;
+
+					& > button.topbar-close {
+						height: var(--topbar-spacing-horizontal, 32px);
+						width: var(--topbar-spacing-horizontal, 32px);
+						background-color: var(--gray);
+						border: transparent;
+
+						> i {
+							font-size: 24px;
+						}
+					}
+				}
+
+				.topbar-modal-footer {
+					justify-content: center;
+					border-radius: 0 0 0 var(--border-radius-topbar-nav, 32px);
+
+					> button {
+						width: 220px;
+					}
+				}
+			}
+		}
+
+		.topbar-link-container {
+			z-index: var(--topbar-z-index, 400);
+			width: 100%;
+
+			.topbar-modal-body {
+				display: flex;
+				justify-items: center start;
+				top: 0;
+				bottom: 0;
+				background-color: var(--white);
+				overflow-x: hidden;
+				overflow-y: auto;
+				overscroll-behavior: contain;
+
+				> a {
+					font-size: 1rem;
+					color: @brand-secondary;
+					cursor: pointer;
+					text-decoration: none;
+					display: flex;
+					gap: 0.5rem;
+					line-height: 1;
+					align-items: center;
+
+					> span {
+						font-family: var(--brand-headline);
+						font-weight: var(--font-weight-normal);
+
+						// for :before underline effect
+						position: relative;
+
+						// :before underline effect
+						&:before {
+							content: "";
+							position: absolute;
+							background-color: currentcolor;
+							height: 3px;
+							bottom: -4px;
+							left: 0;
+							right: 0;
+							margin-left: auto;
+							margin-right: auto;
+							width: 0;
+						}
+					}
+
+					// :hover underline expand width effects in non-opened topbar links
+					&:hover {
+						> span {
+							&:before {
+								display: block;
+								width: 100%;
+								transition: width 0.4s;
+							}
+
+							text-decoration: none;
+						}
+					}
+
+					// :active underline permanently displayed primary color
+					&.active {
+						> span {
+							&:before {
+								width: 100%;
+								background-color: var(--brand-primary);
+							}
+
+							text-decoration: none;
+							color: @black;
+						}
+					}
+
+					&:last-of-type {
+						border-bottom: none;
+					}
+				}
+
+				@supports not selector(:has(a)) {
+					> .topbar-link-right {
+						margin-left: auto;
+					}
+				}
+
+				@supports selector(:has(a)) {
+					> .topbar-link-right,
+					&:not(&:has(.topbar-link-right)) button:first-of-type {
+						margin-left: auto;
+					}
+				}
+			}
+		}
+	}
+
+	/*
+	LESS mixin function scoped for the topbar on wider viewport, generated by the topbar mixin
+	1. Create a mixin called .topbar-@{infix}-wide
+	2. For each breakpoint in @grid-breakpoints, create a selector called .topbar-@{infix}-wide
+	3. For each selector, create a media query for the breakpoint
+	4. Inside each media query, call the mixin .topbar-wide()
+	*/
+	// TODO: try to refactor it to make it more readable and not use LESS mixin, but native CSS
+
+	each(@grid-breakpoints, .(@min-width, @infix) {
+		&.topbar-@{infix}-wide:not(.legacy) {
+				@media screen and (min-width: @min-width) {
+						.topbar-wide();
+				}
+		}
+	});
+
+	.topbar-wide {
+		--topbar-height: 88px;
+		--modal-nav-width: 480px;
+
+		padding: 0 var(--topbar-spacing-horizontal);
+
+		.topbar-logo img {
+			height: var(--topbar-spacing-horizontal);
+			width: auto;
+		}
+
+		.topbar-nav {
+			display: flex;
+			position: static;
+			flex-grow: 1;
+			height: 100%;
+
+			&.topbar-nav-open {
+				width: 100vw;
+				height: 100vh;
+				position: fixed;
+				justify-content: center;
+				align-items: center;
+
+				.topbar-link-container {
+					width: var(--modal-nav-width, 480px);
+					height: max-content;
+					max-height: calc(
+						100% - 2 * var(--topbar-links-container-spacing, 60px)
+					);
+					margin: var(--topbar-links-container-spacing, 60px);
+					padding: 0;
+
+					.topbar-modal-body {
+						overflow-y: auto;
+						scrollbar-width: thin;
+						scrollbar-color: var(--brown-soft) transparent;
+						scrollbar-gutter: stable;
+
+						&::-webkit-scrollbar {
+							background-color: transparent;
+							width: 10px;
+						}
+
+						&::-webkit-scrollbar-thumb {
+							background: var(--brown-soft);
+							border-radius: 5rem;
+						}
+
+						> a,
+						> a:not(.pinned) {
+							display: flex;
+							font-size: 1.25rem;
+							padding: 1.5rem 0;
+
+							&:first-of-type {
+								padding-top: 0;
+							}
+							&:last-of-type {
+								padding-bottom: 0;
+							}
+						}
+					}
+
+					:is(.topbar-modal-header, .topbar-modal-footer) {
+					}
+
+					.topbar-modal-header {
+						border-radius: var(--border-radius-topbar-nav, 32)
+							var(--border-radius-topbar-nav, 32) 0 0;
+					}
+
+					.topbar-modal-footer {
+						border-radius: 0 0 var(--border-radius-topbar-nav, 32)
+							var(--border-radius-topbar-nav, 32);
+					}
+				}
+			}
+
+			// links container when in topbar only, not opened in dialog
+			&:not(.topbar-nav-open) .topbar-link-container {
+				.topbar-modal-body {
+					position: static;
+					background-color: transparent;
+					width: 100%;
+					display: flex;
+					justify-content: flex-start;
+					gap: 2rem;
+					padding: 0 2rem 0 3rem;
+					overflow: visible;
+
+					:is(a, button):not(.pinned) {
+						display: none;
+					}
+				}
+
+				:is(.topbar-modal-header, .topbar-modal-footer) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	@keyframes fade-in {
+		0% {
+			backdrop-filter: blur(0);
+			background-color: transparent;
+		}
+
+		33% {
+			background-color: color-mix(in srgb, @brand-primary, transparent 40%);
+		}
+
+		100% {
+			backdrop-filter: blur(20px);
+			background-color: color-mix(in srgb, @brand-primary, transparent 40%);
+		}
+	}
+
+	@keyframes fade-out {
+		0% {
+			backdrop-filter: blur(20px);
+			background-color: color-mix(in srgb, @brand-primary, transparent 40%);
+			position: fixed;
+			inset: 0;
+			width: 100vw;
+			height: 100vh;
+		}
+
+		1% {
+			backdrop-filter: blur(20px);
+		}
+
+		33% {
+			backdrop-filter: blur(20px);
+			background-color: color-mix(in srgb, @brand-primary, transparent 40%);
+		}
+
+		99% {
+			position: fixed;
+			inset: 0;
+			width: 100vw;
+			height: 100vh;
+			background: transparent;
+		}
+
+		100% {
+			backdrop-filter: blur(0);
+			background-color: transparent;
+		}
+	}
+
+	@keyframes slide-in-from-right {
+		from {
+			transform: translateX(100%);
+		}
+
+		to {
+			transform: translateX(0);
+		}
+	}
+
+	@media (prefers-reduced-motion) {
+		// TODO: once finish animations / transition -> go through each & disable any animation/transition here
+		.topbar:not(.legacy)
+			nav.topbar-nav:is(.topbar-nav-open, .topbar-nav-closing) {
+			animation-duration: 0ms;
+
+			& > .topbar-link-container {
+				animation-duration: 0ms;
+			}
+		}
+	}
+
+	@media (forced-colors: active) {
+		a {
+			border-bottom: 1px solid;
+
+			&:focus,
+			&:hover,
+			&.active {
+				border-bottom: 4px solid;
+			}
+		}
+	}
+}

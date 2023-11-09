@@ -4,6 +4,7 @@ const SELECTORS = {
 	BTN: ".topbar-btn",
 	ICON: ".topbar-btn-icon",
 	OPEN: "topbar-nav-open",
+	CLOSING: "topbar-nav-closing",
 };
 
 const FOCUSELEMENTS =
@@ -16,6 +17,9 @@ export default class NavMenu {
 		this._closeHandlerNavMenuElement =
 			this._closeHandlerNavMenuElement.bind(this);
 		this.close = this.close.bind(this);
+		this._removesNavClosing = this._removesNavClosing.bind(this);
+		this._safetyClosingCleanIfDidNotReachEnd =
+			this._safetyClosingCleanIfDidNotReachEnd.bind(this);
 
 		this.constructNavMenu(topbarComponent, navMenu);
 	}
@@ -102,9 +106,12 @@ export default class NavMenu {
 
 		window.removeEventListener("resize", this.resizeEvent, { passive: true });
 		this.navMenuElement.classList.remove("topbar-nav-open");
-		this.navMenuElement.style.display = "none";
-		this.btnElement.style.display = "flex";
-		this.closeNavIcon.style.display = "none";
+
+		if (this._isLegacyMenu(this.navMenuElement)) {
+			this.navMenuElement.style.display = "none";
+			this.closeNavIcon.style.display = "none";
+			this.btnElement.style.display = "flex";
+		}
 	}
 
 	_setFirstTabStop(index) {
@@ -120,9 +127,12 @@ export default class NavMenu {
 		this.resizeEvent = this._resizeListener.bind(this);
 		window.addEventListener("resize", this.resizeEvent, { passive: true });
 		this.navMenuElement.classList.add("topbar-nav-open");
-		this.navMenuElement.style.display = "block";
-		this.btnElement.style.display = "none";
-		this.closeNavIcon.style.display = "flex";
+
+		if (this._isLegacyMenu(this.navMenuElement)) {
+			this.navMenuElement.style.display = "block";
+			this.btnElement.style.display = "none";
+			this.closeNavIcon.style.display = "flex";
+		}
 
 		this.btnElement.setAttribute("aria-expanded", "true");
 
@@ -135,16 +145,15 @@ export default class NavMenu {
 		this.isOpen = false;
 
 		window.removeEventListener("resize", this.resizeEvent, { passive: true });
-		this.navMenuElement.classList.remove("topbar-nav-open");
 		this.navMenuElement.classList.add("topbar-nav-closing");
-		setTimeout(() => {
-			this.focusedElementBeforeNav ? this.focusedElemBeforeNav.focus() : null;
+		this.navMenuElement.classList.remove("topbar-nav-open");
 
-			this.navMenuElement.classList.remove("topbar-nav-closing");
-			this.navMenuElement.style.display = "none";
-			this.btnElement.style.display = "flex";
-			this.closeNavIcon.style.display = "none";
-		}, 300);
+		this.navMenuElement.addEventListener(
+			"animationend",
+			this._removesNavClosing
+		);
+
+		this._safetyClosingCleanIfDidNotReachEnd();
 
 		this.btnElement.setAttribute("aria-expanded", "false");
 
@@ -153,5 +162,36 @@ export default class NavMenu {
 
 	_containsPoint(x, y) {
 		return isWithinBoundingBox(x, y, this.linkContainer);
+	}
+
+	_removesNavClosing() {
+		this.focusedElementBeforeNav ? this.focusedElemBeforeNav.focus() : null;
+
+		this.navMenuElement.classList.remove("topbar-nav-closing");
+
+		if (this._isLegacyMenu(this.navMenuElement)) {
+			this.navMenuElement.style.display = "none";
+			this.btnElement.style.display = "flex";
+			this.closeNavIcon.style.display = "none";
+		}
+
+		this.navMenuElement.removeEventListener(
+			"animationend",
+			this._removesNavClosing
+		);
+	}
+
+	_safetyClosingCleanIfDidNotReachEnd() {
+		setTimeout(() => {
+			this.navMenuElement.classList.contains(SELECTORS.CLOSING)
+				? this._removesNavClosing()
+				: null;
+		}, 600);
+	}
+
+	_isLegacyMenu(navMenu) {
+		return Boolean(
+			!navMenu?.closest(".topbar")?.classList.contains("experimental")
+		);
 	}
 }

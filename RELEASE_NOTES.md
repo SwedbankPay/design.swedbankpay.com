@@ -1,6 +1,6 @@
 # Changelog
 
-## \[10.8.6\] - 13.09.2023
+## \[10.8.7\] - 07.11.2023
 
 ## Bug Fixes
 
@@ -19,4 +19,3 @@
 ## Design System website
 
 - Update the Colors page for SwedbankPay side
-- Add the Playbook section in Identity

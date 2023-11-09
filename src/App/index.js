@@ -111,7 +111,6 @@ const App = () => {
 						<SkipLink />
 						<div className="d-none d-lg-block">
 							{" "}
-							{/* desktop sidebar nav */}
 							<SelectPanel id="doc-sidebar" routes={routes} />
 						</div>
 						<main id="doc-view" className="doc-view">

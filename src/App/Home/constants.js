@@ -5,6 +5,22 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.8.7",
+		title: "The one with the Playbook 📕 & a new experimental Topbar 🧪",
+		text: (
+			<>
+					<p>
+				<span className="font-italic">
+						Get ready for a release that&apos;s as charming as a storybook!
+				</span>
+						</p>
+				<p><strong>📖 Introducing the Playbook:</strong> We&apos;re thrilled to unveil our new Playbook section, designed to present our comprehensive Design System. It&apos;s your ultimate guide to demystify the world of design and UI. <a href={`${basename}playbook`}>Explore it here</a></p>
+				<p><strong>🏗️ The New Topbar (Experimental Release):</strong> We&apos;re rolling out the first partial release of the new Topbar version, currently in its experimental phase. By default, there won&apos;t be any changes, but you have the opportunity to opt-in and join the experimental Topbar experience. We&apos;ve also set up a dedicated page to guide you through the migration process: <a href={`${basename}components/topbar-migrating-to-v2`}>Topbar Migration to v2</a>.
+				<br />We encourage you to report any bugs you encounter. The Topbar is a complex component, and your unique use cases provide invaluable feedback. Your input is greatly appreciated! 😉</p>
+			</>
+		),
+	}
+	,{
 		version: "10.8.6",
 		title: "The one with little handy UI helpers",
 		text: (
@@ -55,7 +71,7 @@ export const changeLogs = [
 				<p>
 					We&apos;re getting ready for summer break, and we&apos;re bringing you
 					a new UI for the expandable to play with during the holidays when
-					you're on the beach 🎾🏄‍♂️🌊🌞.
+					you&apos;re on the beach 🎾🏄‍♂️🌊🌞.
 				</p>
 				<p>
 					Some small things are also tagging along for the ride. Consistent

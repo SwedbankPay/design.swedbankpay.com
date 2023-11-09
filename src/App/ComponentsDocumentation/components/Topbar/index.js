@@ -4,32 +4,11 @@ import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer } from "@docutils";
 import TopbarComponent from "@components/Topbar";
 import CodeTags from "@components/CodeTags";
-import { topbarShowcase } from "./constants";
+import { menu, menuLegacy, topbarShowcase } from "./constants";
 import { topbar, sidebar } from "@src/scripts/main";
 import NpmInformation from "@docutils/NpmInformation";
 
 const basename = process.env.basename;
-
-const menu = {
-	btn: {
-		name: "Menu",
-		icon: "menu",
-	},
-	items: [
-		{
-			name: "Home",
-			icon: "home",
-		},
-		{
-			name: "Purchases",
-			icon: "shopping_cart",
-		},
-		{
-			name: "Settings",
-			icon: "settings",
-		},
-	],
-};
 
 const Overview = () => (
 	<section>
@@ -104,7 +83,7 @@ const DeveloperDocumentation = () => (
 				<div className="container-fluid">
 					<TopbarComponent
 						id="demo-topbar-sticky"
-						topbarContent={menu}
+						topbarContent={menuLegacy}
 						wide="xl"
 						sticky
 					/>
@@ -126,6 +105,37 @@ const DeveloperDocumentation = () => (
 				<TopbarComponent topbarContent={menu} logout id="demo-topbar-png" png />
 				<main></main>
 			</ComponentPreview>
+		</section>
+
+		<section>
+			<h3>Migrating to the new Topbar ( ⚠️experimental🧪 )</h3>
+			<p>
+				A future version of the topbar can be used. It is in experimental state.
+				Things can be modified and depending of your use some features might
+				still be missing.
+				<br />
+				This is done by appending the class{" "}
+				<CodeTags type="secondary" code=".experimental" /> to the element with
+				class <CodeTags type="secondary" code=".topbar" />.
+			</p>
+			<p>
+				There is several breaking changes (details are following lower down)
+			</p>
+			<ul>
+				<li>order of elements in the topbar</li>
+				<li>
+					container links content is modified (added a header & footer to the
+					topbar, and links are grouped in a specific container)
+				</li>
+				<li>logo used in the topbar is different</li>
+				<li>
+					links need to have a `.pinned` class to be visible in the topbar
+				</li>
+			</ul>
+			<p>
+				To do the migration please follow instructions on{" "}
+				<Link to="/components/topbar-migrating-to-v2">the migration page</Link>.
+			</p>
 		</section>
 
 		<section>
