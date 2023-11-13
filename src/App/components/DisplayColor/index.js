@@ -8,6 +8,7 @@ const DisplayColor = ({
 	hasBorderOverWhiteBG = false,
 	isSizeLarge = true,
 	isVertical = true,
+	isCSSVariable = false,
 }) => {
 	if (isSizeLarge) {
 		return (
@@ -35,7 +36,7 @@ const DisplayColor = ({
 						hasBorderOverWhiteBG ? "border" : ""
 					}`}
 					style={{
-						"--bg-color": `var(--${subTitle}, ${hex})`,
+						"--bg-color": isCSSVariable ? `var(--${subTitle}, ${hex})` : hex,
 					}}
 				></div>
 				<div className="d-flex flex-column">
@@ -61,6 +62,7 @@ DisplayColor.propTypes = {
 	hasBorderOverWhiteBG: PropTypes.bool,
 	isSizeLarge: PropTypes.bool,
 	isVertical: PropTypes.bool,
+	isCSSVariable: PropTypes.false,
 };
 
 export default DisplayColor;
