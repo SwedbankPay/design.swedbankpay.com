@@ -149,16 +149,6 @@ test(`Compare Color CSS computed values Desktop to their spec written in their s
 					"background-color",
 					expectedColorRGBValue
 				);
-
-				// TODO: check each color gets its value from the CSS custom-property (CSS variable) and they match the computed CSS value
-				console.log(
-					"🤓checking custom properties presence, that they're valid (defined), that they have the name of the subtitle, and that they correspond to the expected HEX value"
-				);
-				// TODO: check on the color-swatch the presence of custom properties presence
-
-				// TODO: check that they're valid (defined)
-				// TODO: check that they have the name of the subtitle
-				// TODO: and check that they correspond to the expected HEX value
 			}
 		});
 });
