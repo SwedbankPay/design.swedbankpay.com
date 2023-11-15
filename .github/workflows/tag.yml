@@ -25,10 +25,10 @@ jobs:
         env:
           TOKEN: ${{ secrets.SENTRY_TOKEN }}
 
-      - name: Set Node.js 16.x
+      - name: Set Node.js 18.x
         uses: actions/setup-node@v4
         with:
-          node-version: 16.x
+          node-version: 18.x
           cache: npm
 
       - name: Install
@@ -70,7 +70,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 18
           cache: npm
 
       - name: Install
