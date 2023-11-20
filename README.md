@@ -172,7 +172,7 @@ Before merging to master to create a release, make sure you follow these steps:
 
   - then run `npm i` to also update package-lock
 
-  - run `npx browserslist@latest --update-db` to update browserslist
+  - run `npx update-browserslist-db@latest` to update browserslist
 
 - Make sure the `RELEASE_NOTES.md` is correct (date and version) and only contains changes for the current release
 
