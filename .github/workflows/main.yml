@@ -44,7 +44,7 @@ jobs:
           echo "{ \"latestVersion\" : \"${{ steps.variables.outputs.BRANCH }}\" }" > ./dist/latestVersion.json
 
       - name: Azure Login
-        uses: azure/login@v1.4.7
+        uses: azure/login@v1.5.0
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS_STAGE }}
 
