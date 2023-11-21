@@ -4,10 +4,9 @@ import renderer from "react-test-renderer";
 import Color, {
 	Lead,
 	ColorContrast,
-	TextColors,
-	BackgroundColors,
-	BrownScaleColors,
-	SystemColors,
+	SBTextColors,
+	SBBackgroundColors,
+	SBSystemColors,
 	MainColors,
 } from "./index";
 
@@ -46,37 +45,37 @@ describe("Core: Color", () => {
 		});
 	});
 
-	describe("TextColors", () => {
+	describe("SwedbankPay TextColors", () => {
 		it("is defined", () => {
-			expect(TextColors).toBeDefined();
+			expect(SBTextColors).toBeDefined();
 		});
 
 		it("renders", () => {
-			const wrapper = renderer.create(<TextColors />);
+			const wrapper = renderer.create(<SBTextColors />);
 
 			expect(wrapper.toJSON()).toMatchSnapshot();
 		});
 	});
 
-	describe("BackgroundColors", () => {
+	describe("SwedbankPay BackgroundColors", () => {
 		it("is defined", () => {
-			expect(BackgroundColors).toBeDefined();
+			expect(SBBackgroundColors).toBeDefined();
 		});
 
 		it("renders", () => {
-			const wrapper = renderer.create(<BackgroundColors />);
+			const wrapper = renderer.create(<SBBackgroundColors />);
 
 			expect(wrapper.toJSON()).toMatchSnapshot();
 		});
 	});
 
-	describe("SystemColors", () => {
+	describe("SwedbankPay SystemColors", () => {
 		it("is defined", () => {
-			expect(SystemColors).toBeDefined();
+			expect(SBSystemColors).toBeDefined();
 		});
 
 		it("renders", () => {
-			const wrapper = renderer.create(<SystemColors />);
+			const wrapper = renderer.create(<SBSystemColors />);
 
 			expect(wrapper.toJSON()).toMatchSnapshot();
 		});

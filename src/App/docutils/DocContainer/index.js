@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 
 import { sidebar } from "@src/scripts/main";
 
-const DocContainer = ({ children }) => {
+const DocContainer = ({ classes = "", children }) => {
 	const DocContent = () => (
-		<div id="doc-body" className="doc-body col-12">
+		<div id="doc-body" className={`doc-body col-12 ${classes}`}>
 			{children}
 		</div>
 	);

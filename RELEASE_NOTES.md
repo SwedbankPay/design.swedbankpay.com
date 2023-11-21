@@ -6,7 +6,11 @@
 
 ## Component changes
 
-- Topbar - v2 experimental stage - disabled by default (migration involves breaking changes)
+- new Colors
+
+- Colors utilities:
+  - removed the possibility to combine text-color utility classes WITH `.text-muted` to decrease their opacity
+  - `.text-muted` class still exist, but it will always mean a full opacity color
 
 ### Non breaking UI changes
 
@@ -14,4 +18,4 @@
 
 ## Design System website
 
-- Add the new Playbook section in Identity
+- Update the Colors page for SwedbankPay side

@@ -1,412 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Core: Color BackgroundColors renders 1`] = `
-<section>
-  <h2
-    id="background-colors"
-  >
-    Background colors
-  </h2>
-  <p>
-    To maintain an open and welcoming experience we mostly use no background color, that is white. Our background colors have a functional role and are used to organize, structure or highlight a section. Apricot is our primary background color, gray and light turquoise are complementary.
-     
-  </p>
-  <div
-    className="color-group"
-  >
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box has-border"
-      >
-        <svg>
-          <rect
-            fill="#FFFFFF"
-          />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          White
-        </p>
-        <small
-          className="small mb-0"
-        >
-          bg-white
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #FFFFFF
-        </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box "
-      >
-        <svg>
-          <rect
-            fill="#FBF2EA"
-          />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Apricot
-        </p>
-        <small
-          className="small mb-0"
-        >
-          bg-primary
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #FBF2EA
-        </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#FBF2EA"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#FBF2EA"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box "
-      >
-        <svg>
-          <rect
-            fill="#EBF8F2"
-          />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Turquoise lighter
-        </p>
-        <small
-          className="small mb-0"
-        >
-          bg-secondary
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #EBF8F2
-        </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#EBF8F2"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#EBF8F2"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box "
-      >
-        <svg>
-          <rect
-            fill="#EBE7E2"
-          />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Gray
-        </p>
-        <small
-          className="small mb-0"
-        >
-          bg-tertiary
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #EBE7E2
-        </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#EBE7E2"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#EBE7E2"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box has-border"
-      >
-        <svg>
-          <rect
-            fill="#F9F8F6"
-          />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Gray light
-        </p>
-        <small
-          className="small mb-0"
-        >
-          bg-quaternary
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #F9F8F6
-        </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#F9F8F6"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#F9F8F6"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-`;
-
 exports[`Core: Color CommunicationColors renders 1`] = `
-<section>
+<section
+  className="color-contrast-section my-5 border py-3 px-4"
+>
   <h2
     id="color-contrast"
   >
@@ -417,7 +14,7 @@ exports[`Core: Color CommunicationColors renders 1`] = `
      
   </p>
   <div
-    className="d-flex flex-row justify-content-around color-contrast-section"
+    className="d-flex flex-row justify-content-between "
   >
     <span
       className="d-flex"
@@ -463,30 +60,35 @@ exports[`Core: Color CommunicationColors renders 1`] = `
 `;
 
 exports[`Core: Color Lead renders 1`] = `
-<section>
+<section
+  className="mb-5"
+>
   <p
     className="lead"
   >
     The primary color of Swedbank Pay is yellow, it is used to give a unified appearance and create visual recognition. Yellow is an energetic and vibrant color that matches the brand of Swedbank Pay. In complement to this, Swedbank Pay uses a selection of colors from Swedbank´s color palette.
   </p>
   <div
-    className="d-flex flex-column align-items-center mt-5"
+    className="d-flex justify-content-center align-items-center mt-5 color-page-introduction"
   >
-    <img
-      alt=""
-      className="w-100"
-      src="/TEST/img/documentation/colors/color-palette.png"
+    <div
+      className="color-circle brown-solid img-circle"
     />
-    <span
-      className="caption-text"
-    >
-      <span
-        className="font-weight-bold"
-      >
-        Figure 1.
-      </span>
-      A selection of colors from the Swedbank Pay color palette.
-    </span>
+    <div
+      className="color-circle brand-yellow img-circle"
+    />
+    <div
+      className="color-circle brand-orange img-circle"
+    />
+    <div
+      className="color-circle brand-pink img-circle"
+    />
+    <div
+      className="color-circle brand-turquoise-light img-circle"
+    />
+    <div
+      className="color-circle brand-turquoise img-circle"
+    />
   </div>
 </section>
 `;
@@ -505,7 +107,7 @@ exports[`Core: Color MainColors renders 1`] = `
     className="color-group flex-wrap"
   >
     <div
-      className="d-flex flex-column mb-2"
+      className="d-flex flex-column mb-4"
     >
       <div
         className="color-box "
@@ -530,60 +132,10 @@ exports[`Core: Color MainColors renders 1`] = `
         >
           #2A9D3F
         </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#2A9D3F"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#2A9D3F"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
       </div>
     </div>
     <div
-      className="d-flex flex-column mb-2"
+      className="d-flex flex-column mb-4"
     >
       <div
         className="color-box "
@@ -608,60 +160,10 @@ exports[`Core: Color MainColors renders 1`] = `
         >
           #3C3C3C
         </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#3C3C3C"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#3C3C3C"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
       </div>
     </div>
     <div
-      className="d-flex flex-column mb-2"
+      className="d-flex flex-column mb-4"
     >
       <div
         className="color-box "
@@ -686,60 +188,10 @@ exports[`Core: Color MainColors renders 1`] = `
         >
           #C8C8C8
         </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#C8C8C8"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#C8C8C8"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
       </div>
     </div>
     <div
-      className="d-flex flex-column mb-2"
+      className="d-flex flex-column mb-4"
     >
       <div
         className="color-box "
@@ -764,63 +216,13 @@ exports[`Core: Color MainColors renders 1`] = `
         >
           #000000
         </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#000000"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#000000"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
       </div>
     </div>
     <div
-      className="d-flex flex-column mb-2"
+      className="d-flex flex-column mb-4"
     >
       <div
-        className="color-box has-border"
+        className="color-box border"
       >
         <svg>
           <rect
@@ -842,64 +244,221 @@ exports[`Core: Color MainColors renders 1`] = `
         >
           #FFFFFF
         </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
       </div>
     </div>
   </div>
 </section>
 `;
 
-exports[`Core: Color SystemColors renders 1`] = `
-<section>
+exports[`Core: Color SwedbankPay BackgroundColors renders 1`] = `
+<section
+  className="my-5 py-2"
+>
+  <h2
+    id="background-colors"
+  >
+    Background colors
+  </h2>
+  <p>
+    To maintain an open and welcoming experience we mostly use no background color, that is white. Our background colors have a functional role and are used to organize, structure or highlight a section. Apricot is our primary background color, gray and light turquoise are complementary.
+     
+  </p>
+  <div
+    className="color-group color-grid"
+  >
+    <li
+      className="d-flex  py-1 px-0"
+    >
+      <div
+        className="color-swatch color-box-small "
+        style={
+          Object {
+            "--bg-color": "var(--bg-orange, #FFF1E4)",
+          }
+        }
+      />
+      <div
+        className="d-flex flex-column"
+      >
+        <small>
+          <span
+            className="font-weight-bold"
+          >
+            BG Orange
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            bg-orange
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            #FFF1E4
+          </span>
+        </small>
+      </div>
+    </li>
+    <li
+      className="d-flex  py-1 px-0"
+    >
+      <div
+        className="color-swatch color-box-small "
+        style={
+          Object {
+            "--bg-color": "var(--bg-brown, #EBE7E2)",
+          }
+        }
+      />
+      <div
+        className="d-flex flex-column"
+      >
+        <small>
+          <span
+            className="font-weight-bold"
+          >
+            BG Brown
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            bg-brown
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            #EBE7E2
+          </span>
+        </small>
+      </div>
+    </li>
+    <li
+      className="d-flex  py-1 px-0"
+    >
+      <div
+        className="color-swatch color-box-small border"
+        style={
+          Object {
+            "--bg-color": "var(--bg-white, #FFFFFF)",
+          }
+        }
+      />
+      <div
+        className="d-flex flex-column"
+      >
+        <small>
+          <span
+            className="font-weight-bold"
+          >
+            BG White
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            bg-white
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            #FFFFFF
+          </span>
+        </small>
+      </div>
+    </li>
+    <li
+      className="d-flex  py-1 px-0"
+    >
+      <div
+        className="color-swatch color-box-small "
+        style={
+          Object {
+            "--bg-color": "var(--bg-turquoise, #EBF8F2)",
+          }
+        }
+      />
+      <div
+        className="d-flex flex-column"
+      >
+        <small>
+          <span
+            className="font-weight-bold"
+          >
+            BG Turquoise
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            bg-turquoise
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            #EBF8F2
+          </span>
+        </small>
+      </div>
+    </li>
+    <li
+      className="d-flex  py-1 px-0"
+    >
+      <div
+        className="color-swatch color-box-small border"
+        style={
+          Object {
+            "--bg-color": "var(--bg-grey, #F9F8F6)",
+          }
+        }
+      />
+      <div
+        className="d-flex flex-column"
+      >
+        <small>
+          <span
+            className="font-weight-bold"
+          >
+            BG Gray
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            bg-grey
+          </span>
+        </small>
+        <small>
+          <span
+            className="text-muted"
+          >
+            #F9F8F6
+          </span>
+        </small>
+      </div>
+    </li>
+  </div>
+</section>
+`;
+
+exports[`Core: Color SwedbankPay SystemColors renders 1`] = `
+<section
+  className="my-5 py-2"
+>
   <h2
     id="system-colors"
   >
@@ -909,1043 +468,643 @@ exports[`Core: Color SystemColors renders 1`] = `
     Our system colors include error, warning, success and info. These are used on different types of system messages that needs the users attention.
   </p>
   <div
-    className="color-group"
+    className="container color-group"
   >
     <div
-      className="d-flex flex-column mb-2"
+      className="row w-100"
     >
       <div
-        className="color-box "
+        className="col-sm pl-0"
       >
-        <svg>
-          <rect
-            fill="#8c0d14"
+        <li
+          className="d-flex  py-1 px-0"
+        >
+          <div
+            className="color-swatch color-box-small "
+            style={
+              Object {
+                "--bg-color": "var(--system-success, #4D9C0F)",
+              }
+            }
           />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Error dark
-        </p>
-        <small
-          className="small mb-0"
-        >
-          system-error-dark
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #8c0d14
-        </small>
-        <div
-          className="contrast-box"
+          <div
+            className="d-flex flex-column"
+          >
+            <small>
+              <span
+                className="font-weight-bold"
+              >
+                Success
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                system-success
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                #4D9C0F
+              </span>
+            </small>
+          </div>
+        </li>
+        <li
+          className="d-flex  py-1 px-0"
         >
           <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#8c0d14"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#8c0d14"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box "
-      >
-        <svg>
-          <rect
-            fill="#B5111A"
+            className="color-swatch color-box-small "
+            style={
+              Object {
+                "--bg-color": "var(--system-success-light, #E7F8D2)",
+              }
+            }
           />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Error
-        </p>
-        <small
-          className="small mb-0"
-        >
-          system-error
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #B5111A
-        </small>
-        <div
-          className="contrast-box"
+          <div
+            className="d-flex flex-column"
+          >
+            <small>
+              <span
+                className="font-weight-bold"
+              >
+                Success light
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                system-success-light
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                #E7F8D2
+              </span>
+            </small>
+          </div>
+        </li>
+        <li
+          className="d-flex  py-1 px-0"
         >
           <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#B5111A"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#B5111A"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box "
-      >
-        <svg>
-          <rect
-            fill="#FCEEE9"
+            className="color-swatch color-box-small "
+            style={
+              Object {
+                "--bg-color": "var(--system-warning, #EE7023)",
+              }
+            }
           />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Error light
-        </p>
-        <small
-          className="small mb-0"
-        >
-          system-error-light
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #FCEEE9
-        </small>
-        <div
-          className="contrast-box"
+          <div
+            className="d-flex flex-column"
+          >
+            <small>
+              <span
+                className="font-weight-bold"
+              >
+                Warning
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                system-warning
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                #EE7023
+              </span>
+            </small>
+          </div>
+        </li>
+        <li
+          className="d-flex  py-1 px-0"
         >
           <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#FCEEE9"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#FCEEE9"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box "
-      >
-        <svg>
-          <rect
-            fill="#EE7023"
+            className="color-swatch color-box-small "
+            style={
+              Object {
+                "--bg-color": "var(--system-warning-light, #FBEADB)",
+              }
+            }
           />
-        </svg>
+          <div
+            className="d-flex flex-column"
+          >
+            <small>
+              <span
+                className="font-weight-bold"
+              >
+                Warning light
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                system-warning-light
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                #FBEADB
+              </span>
+            </small>
+          </div>
+        </li>
       </div>
       <div
-        className="text-box d-flex flex-column"
+        className="col-sm pl-0"
       >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Warning
-        </p>
-        <small
-          className="small mb-0"
-        >
-          system-warning
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #EE7023
-        </small>
-        <div
-          className="contrast-box"
+        <li
+          className="d-flex  py-1 px-0"
         >
           <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#EE7023"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#EE7023"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box "
-      >
-        <svg>
-          <rect
-            fill="#FEF2E2"
+            className="color-swatch color-box-small "
+            style={
+              Object {
+                "--bg-color": "var(--system-info, #335BB1)",
+              }
+            }
           />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Warning light
-        </p>
-        <small
-          className="small mb-0"
-        >
-          system-warning-light
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #FEF2E2
-        </small>
-        <div
-          className="contrast-box"
+          <div
+            className="d-flex flex-column"
+          >
+            <small>
+              <span
+                className="font-weight-bold"
+              >
+                Info
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                system-info
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                #335BB1
+              </span>
+            </small>
+          </div>
+        </li>
+        <li
+          className="d-flex  py-1 px-0"
         >
           <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#FEF2E2"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#FEF2E2"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box "
-      >
-        <svg>
-          <rect
-            fill="#3C7213"
+            className="color-swatch color-box-small "
+            style={
+              Object {
+                "--bg-color": "var(--system-info-light, #E0EAF9)",
+              }
+            }
           />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Success
-        </p>
-        <small
-          className="small mb-0"
-        >
-          system-success
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #3C7213
-        </small>
-        <div
-          className="contrast-box"
+          <div
+            className="d-flex flex-column"
+          >
+            <small>
+              <span
+                className="font-weight-bold"
+              >
+                Info light
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                system-info-light
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                #E0EAF9
+              </span>
+            </small>
+          </div>
+        </li>
+        <li
+          className="d-flex  py-1 px-0"
         >
           <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#3C7213"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#3C7213"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box "
-      >
-        <svg>
-          <rect
-            fill="#F2F7EB"
+            className="color-swatch color-box-small "
+            style={
+              Object {
+                "--bg-color": "var(--system-error, #D82E2A)",
+              }
+            }
           />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Success light
-        </p>
-        <small
-          className="small mb-0"
-        >
-          system-success-light
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #F2F7EB
-        </small>
-        <div
-          className="contrast-box"
+          <div
+            className="d-flex flex-column"
+          >
+            <small>
+              <span
+                className="font-weight-bold"
+              >
+                Error
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                system-error
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                #D82E2A
+              </span>
+            </small>
+          </div>
+        </li>
+        <li
+          className="d-flex  py-1 px-0"
         >
           <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#F2F7EB"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#F2F7EB"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box "
-      >
-        <svg>
-          <rect
-            fill="#3961A7"
+            className="color-swatch color-box-small "
+            style={
+              Object {
+                "--bg-color": "var(--system-error-light, #FFE9E9)",
+              }
+            }
           />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Info
-        </p>
-        <small
-          className="small mb-0"
-        >
-          system-info
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #3961A7
-        </small>
-        <div
-          className="contrast-box"
-        >
           <div
-            className="contrast-white-container"
+            className="d-flex flex-column"
           >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#3961A7"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
+            <small>
+              <span
+                className="font-weight-bold"
+              >
+                Error light
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                system-error-light
+              </span>
+            </small>
+            <small>
+              <span
+                className="text-muted"
+              >
+                #FFE9E9
+              </span>
+            </small>
           </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#3961A7"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box "
-      >
-        <svg>
-          <rect
-            fill="#EBF1FA"
-          />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Info light
-        </p>
-        <small
-          className="small mb-0"
-        >
-          system-info-light
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #EBF1FA
-        </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#EBF1FA"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#EBF1FA"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-        </div>
+        </li>
       </div>
     </div>
   </div>
 </section>
 `;
 
-exports[`Core: Color TextColors renders 1`] = `
-<section>
-  <h3
+exports[`Core: Color SwedbankPay TextColors renders 1`] = `
+<section
+  className="my-5 py-2"
+>
+  <h2
     id="text-colors"
   >
     Text colors
-  </h3>
-  <p>
-    Brown-solid is our default text color that should be used for all normal text besides links and text on dark backgrounds or images. For links, use turquoise and for text on dark backgrounds or images use white. A lighter brown is used as a muted text color for smaller or less important text that shouldn"t be the primary focus.
-  </p>
+  </h2>
   <div
-    className="color-group"
+    className="container mt-4"
   >
     <div
-      className="d-flex flex-column mb-2"
+      className="row"
     >
       <div
-        className="color-box "
+        className="col-sm-8 pl-sm-0"
       >
-        <svg>
-          <rect
-            fill="#2F2424"
-          />
-        </svg>
+        <h3
+          className="h4"
+        >
+          Default mode
+        </h3>
+        <p
+          className="mb-3"
+        >
+          <span
+            className="font-weight-bold text-underline"
+          >
+            Text Default
+          </span>
+           
+          is our default text color on light backgrounds.
+           
+          <span
+            className="font-weight-bold text-underline"
+          >
+            Text Muted
+          </span>
+           
+          is used as a muted text color for smaller or less important text that shouldn’t be the primary focus.
+           
+        </p>
+        <ul
+          className="color-group d-flex flex-column pl-0"
+        >
+          <li
+            className="d-flex  py-1 px-0"
+          >
+            <div
+              className="color-swatch color-box-small "
+              style={
+                Object {
+                  "--bg-color": "var(--text-default, #2F2424)",
+                }
+              }
+            />
+            <div
+              className="d-flex flex-column"
+            >
+              <small>
+                <span
+                  className="font-weight-bold"
+                >
+                  Text default
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  text-default
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  #2F2424
+                </span>
+              </small>
+            </div>
+          </li>
+          <li
+            className="d-flex  py-1 px-0"
+          >
+            <div
+              className="color-swatch color-box-small "
+              style={
+                Object {
+                  "--bg-color": "var(--text-muted, #72605E)",
+                }
+              }
+            />
+            <div
+              className="d-flex flex-column"
+            >
+              <small>
+                <span
+                  className="font-weight-bold"
+                >
+                  Text muted
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  text-muted
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  #72605E
+                </span>
+              </small>
+            </div>
+          </li>
+        </ul>
       </div>
       <div
-        className="text-box d-flex flex-column"
+        className="col-sm-4 pr-sm-0"
       >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Brown solid
-        </p>
-        <small
-          className="small mb-0"
-        >
-          brown-solid
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #2F2424
-        </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-        </div>
+        <img
+          alt=""
+          className="w-100"
+          src="/TEST/img/documentation/colors/identity-color-text-default.png"
+        />
       </div>
     </div>
     <div
-      className="d-flex flex-column mb-2"
+      className="row"
     >
       <div
-        className="color-box "
+        className="col-sm-8 pl-sm-0"
       >
-        <svg>
-          <rect
-            fill="#72605E"
-          />
-        </svg>
+        <h3
+          className="h4"
+        >
+          For dark backgrounds
+        </h3>
+        <p
+          className="mb-3"
+        >
+          <span
+            className="font-weight-bold text-underline"
+          >
+            White
+          </span>
+           is default color for text on backgrounds, and
+           
+          <span
+            className="font-weight-bold text-underline"
+          >
+            Text Muted light
+          </span>
+           
+          is used for secondary text.
+        </p>
+        <ul
+          className="color-group d-flex flex-column pl-0"
+        >
+          <li
+            className="d-flex  py-1 px-0"
+          >
+            <div
+              className="color-swatch color-box-small border"
+              style={
+                Object {
+                  "--bg-color": "var(--text-white, #FFFFFF)",
+                }
+              }
+            />
+            <div
+              className="d-flex flex-column"
+            >
+              <small>
+                <span
+                  className="font-weight-bold"
+                >
+                  Text White
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  text-white
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  #FFFFFF
+                </span>
+              </small>
+            </div>
+          </li>
+          <li
+            className="d-flex  py-1 px-0"
+          >
+            <div
+              className="color-swatch color-box-small "
+              style={
+                Object {
+                  "--bg-color": "var(--text-muted-light, #A38B80)",
+                }
+              }
+            />
+            <div
+              className="d-flex flex-column"
+            >
+              <small>
+                <span
+                  className="font-weight-bold"
+                >
+                  Text Muted White
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  text-muted-light
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  #A38B80
+                </span>
+              </small>
+            </div>
+          </li>
+        </ul>
       </div>
       <div
-        className="text-box d-flex flex-column"
+        className="col-sm-4 pr-sm-0"
       >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          Brown medium
-        </p>
-        <small
-          className="small mb-0"
-        >
-          text-muted
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #72605E
-        </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
-          >
-            <svg
-              className="white-box first-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#72605E"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#72605E"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
+        <img
+          alt=""
+          className="w-100"
+          src="/TEST/img/documentation/colors/identity-color-text-dark.png"
+        />
       </div>
     </div>
     <div
-      className="d-flex flex-column mb-2"
+      className="row"
     >
       <div
-        className="color-box "
+        className="col-sm-8 pl-sm-0"
       >
-        <svg>
-          <rect
-            fill="#257886"
-          />
-        </svg>
-      </div>
-      <div
-        className="text-box d-flex flex-column"
-      >
+        <h3
+          className="h4"
+        >
+          Disabled
+        </h3>
         <p
-          className="font-weight-bold mb-0"
+          className="mb-3"
         >
-          Turquoise dark
+          For disabled black buttons and text we use
+           
+          <span
+            className="font-weight-bold text-underline"
+          >
+            Text Disabled
+          </span>
+          .
         </p>
-        <small
-          className="small mb-0"
+        <ul
+          className="color-group d-flex flex-column pl-0"
         >
-          text-link
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #257886
-        </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-white-container"
+          <li
+            className="d-flex  py-1 px-0"
           >
-            <svg
-              className="white-box first-svg"
+            <div
+              className="color-swatch color-box-small "
+              style={
+                Object {
+                  "--bg-color": "var(--text-disabled, #D4C4BC)",
+                }
+              }
+            />
+            <div
+              className="d-flex flex-column"
             >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#257886"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#257886"
-              />
-            </svg>
-            <i
-              className="material-icons cancel"
-            >
-              error
-            </i>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="d-flex flex-column mb-2"
-    >
-      <div
-        className="color-box has-border"
-      >
-        <svg>
-          <rect
-            fill="#FFFFFF"
-          />
-        </svg>
+              <small>
+                <span
+                  className="font-weight-bold"
+                >
+                  Text Disabled
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  text-disabled
+                </span>
+              </small>
+              <small>
+                <span
+                  className="text-muted"
+                >
+                  #D4C4BC
+                </span>
+              </small>
+            </div>
+          </li>
+        </ul>
       </div>
       <div
-        className="text-box d-flex flex-column"
+        className="col-sm-4 pr-sm-0"
       >
-        <p
-          className="font-weight-bold mb-0"
-        >
-          White
-        </p>
-        <small
-          className="small mb-0"
-        >
-          text-white
-        </small>
-        <small
-          className="small mb-0 text-uppercase"
-        >
-          #FFFFFF
-        </small>
-        <div
-          className="contrast-box"
-        >
-          <div
-            className="contrast-black-container"
-          >
-            <svg
-              className="first-svg"
-            >
-              <rect
-                fill="#2F2424"
-              />
-            </svg>
-            <svg
-              className="second-svg"
-            >
-              <rect
-                fill="#FFFFFF"
-              />
-            </svg>
-            <i
-              className="material-icons check"
-            >
-              check_circle
-            </i>
-          </div>
-        </div>
+        <img
+          alt=""
+          className="w-100"
+          src="/TEST/img/documentation/colors/identity-color-text-disabled.png"
+        />
       </div>
     </div>
   </div>
