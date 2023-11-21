@@ -25,6 +25,7 @@ h6,
 	margin-top: 2rem;
 	margin-bottom: 0.5rem;
 	color: var(--brand-secondary);
+	text-wrap: balance;
 
 	&:first-child {
 		margin-top: 0;
@@ -38,13 +39,13 @@ h6,
 
 .hero {
 	font-size: 3.5rem;
-	line-height: 4.5rem;
+	line-height: 4.25rem;
 	font-family: var(--brand-headline);
 	font-weight: var(--font-weight-header, 400);
 
 	.material-icons {
 		font-size: 3.5rem;
-		line-height: 4.5rem;
+		line-height: 4.25rem;
 	}
 }
 
@@ -52,12 +53,12 @@ h1,
 .h1 {
 	font-size: 2rem;
 	font-family: var(--brand-headline);
-	line-height: 2.8125rem;
+	line-height: 2.875rem;
 	font-weight: var(--font-weight-header, 400);
 
 	.material-icons {
 		font-size: 2rem;
-		line-height: 2.8125rem;
+		line-height: 2.875rem;
 	}
 }
 
@@ -65,12 +66,12 @@ h2,
 .h2 {
 	font-size: 1.5rem;
 	font-family: var(--brand-headline);
-	line-height: 2.1rem;
+	line-height: 2.125rem;
 	font-weight: var(--font-weight-header, 400);
 
 	.material-icons {
 		font-size: 1.5rem;
-		line-height: 2.1rem;
+		line-height: 2.125rem;
 	}
 }
 
@@ -92,35 +93,35 @@ h4,
 	font-family: var(--brand-headline);
 	font-weight: var(--font-weight-header, 400);
 	font-size: 1.125rem;
-	line-height: 1.5625rem;
+	line-height: 1.625rem;
 
 	.material-icons {
 		font-size: 1.125rem;
-		line-height: 1.5625rem;
+		line-height: 1.625rem;
 	}
 }
 
 h5,
 .h5 {
 	font-size: 1rem;
-	line-height: 1.25;
+	line-height: 1.5rem;
 	font-weight: var(--font-weight-header, 400);
 
 	.material-icons {
 		font-size: 1rem;
-		line-height: 1.25;
+		line-height: 1.5rem;
 	}
 }
 
 h6,
 .h6 {
 	font-size: 0.875rem;
-	line-height: 1.25rem;
+	line-height: 1.375rem;
 	font-weight: var(--font-weight-header, 400);
 
 	.material-icons {
 		font-size: 0.875rem;
-		line-height: 1.25rem;
+		line-height: 1.375rem;
 	}
 }
 
@@ -139,6 +140,7 @@ h6,
 p {
 	margin-top: 0;
 	margin-bottom: var(--base-margin);
+	text-wrap: balance;
 }
 
 //
@@ -154,7 +156,7 @@ small,
 
 .extra-small {
 	font-size: 0.75rem;
-	line-height: 1rem;
+	line-height: 1.125rem;
 }
 
 mark,
@@ -214,7 +216,7 @@ blockquote,
 @media screen and (min-width: @screen-sm-min) {
 	.hero {
 		font-size: 5rem;
-		line-height: 6.4375rem;
+		line-height: 6rem;
 	}
 
 	h1,
@@ -231,11 +233,11 @@ blockquote,
 	h2,
 	.h2 {
 		font-size: 2rem;
-		line-height: 2.8125rem;
+		line-height: 2.75rem;
 
 		.material-icons {
 			font-size: 2rem;
-			line-height: 2.8125rem;
+			line-height: 2.75rem;
 		}
 	}
 
@@ -253,16 +255,27 @@ blockquote,
 	h4,
 	.h4 {
 		font-size: 1.25rem;
-		line-height: 1.75rem;
+		line-height: 1.875rem;
 
 		.material-icons {
 			font-size: 1.25rem;
-			line-height: 1.75rem;
+			line-height: 1.875rem;
 		}
 	}
 
 	h5,
 	.h5 {
 		font-size: 1rem;
+	}
+
+	h6,
+	.h6 {
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+
+		.material-icons {
+			font-size: 0.875rem;
+			line-height: 1.25rem;
+		}
 	}
 }
