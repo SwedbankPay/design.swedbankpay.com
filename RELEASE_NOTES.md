@@ -6,6 +6,11 @@
 
 ## Component changes
 
+- Typography
+
+  - update typography values (line-heights)
+  - add text-wrap balance for headings & pretty for paragraphs (progressive enhancement)
+
 - new Colors
 
 - Colors utilities:
