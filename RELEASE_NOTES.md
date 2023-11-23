@@ -6,11 +6,19 @@
 
 ## Component changes
 
+- Typography
+
+  - update typography values (line-heights)
+  - add text-wrap balance for headings & pretty for paragraphs (progressive enhancement)
+
 - new Colors
 
 - Colors utilities:
+
   - removed the possibility to combine text-color utility classes WITH `.text-muted` to decrease their opacity
   - `.text-muted` class still exist, but it will always mean a full opacity color
+
+- npm packages dependencies upgrades
 
 ### Non breaking UI changes
 

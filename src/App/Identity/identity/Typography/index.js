@@ -87,7 +87,7 @@ const Desktop = () => (
 					</td>
 					<td>Swedbank Headline Bold</td>
 					<td>80 px</td>
-					<td>103 px</td>
+					<td>96 px</td>
 				</tr>
 				<tr>
 					<td>
@@ -103,7 +103,7 @@ const Desktop = () => (
 					</td>
 					<td>Swedbank Headline Bold</td>
 					<td>32 px</td>
-					<td>45 px</td>
+					<td>44 px</td>
 				</tr>
 				<tr>
 					<td>
@@ -119,7 +119,7 @@ const Desktop = () => (
 					</td>
 					<td>Swedbank Headline Bold</td>
 					<td>20 px</td>
-					<td>28 px</td>
+					<td>30 px</td>
 				</tr>
 				<tr>
 					<td>
@@ -127,7 +127,7 @@ const Desktop = () => (
 					</td>
 					<td>Swedbank Headline Bold</td>
 					<td>16 px</td>
-					<td>20 px</td>
+					<td>24 px</td>
 				</tr>
 				<tr>
 					<td>
@@ -159,7 +159,7 @@ const Desktop = () => (
 					</td>
 					<td>Arial regular</td>
 					<td>12 px</td>
-					<td>16 px</td>
+					<td>18 px</td>
 				</tr>
 			</tbody>
 		</table>
@@ -191,7 +191,7 @@ const Mobile = () => (
 					</td>
 					<td>Swedbank Headline Bold</td>
 					<td>56 px</td>
-					<td>72 px</td>
+					<td>68 px</td>
 				</tr>
 				<tr>
 					<td>
@@ -199,7 +199,7 @@ const Mobile = () => (
 					</td>
 					<td>Swedbank Headline Bold</td>
 					<td>32 px</td>
-					<td>45 px</td>
+					<td>46 px</td>
 				</tr>
 				<tr>
 					<td>
@@ -207,7 +207,7 @@ const Mobile = () => (
 					</td>
 					<td>Swedbank Headline Bold</td>
 					<td>24 px</td>
-					<td>33.6 px</td>
+					<td>34 px</td>
 				</tr>
 				<tr>
 					<td>
@@ -223,7 +223,7 @@ const Mobile = () => (
 					</td>
 					<td>Swedbank Headline Bold</td>
 					<td>18 px</td>
-					<td>25 px</td>
+					<td>26 px</td>
 				</tr>
 				<tr>
 					<td>
@@ -231,7 +231,7 @@ const Mobile = () => (
 					</td>
 					<td>Swedbank Headline Bold</td>
 					<td>16 px</td>
-					<td>20 px</td>
+					<td>24 px</td>
 				</tr>
 				<tr>
 					<td>
@@ -239,7 +239,7 @@ const Mobile = () => (
 					</td>
 					<td>Arial bold</td>
 					<td>14 px</td>
-					<td>20 px</td>
+					<td>22 px</td>
 				</tr>
 				<tr>
 					<td>
@@ -263,7 +263,7 @@ const Mobile = () => (
 					</td>
 					<td>Arial regular</td>
 					<td>12 px</td>
-					<td>16 px</td>
+					<td>18 px</td>
 				</tr>
 			</tbody>
 		</table>
