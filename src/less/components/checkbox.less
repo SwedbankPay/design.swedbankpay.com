@@ -108,11 +108,11 @@
 
 	&.has-error {
 		.help-block[data-error] {
-			color: @brand-error;
+			color: var(--brand-error);
 
 			input[type="checkbox"] {
 				+ label:after {
-					border-color: @brand-error;
+					border-color: var(--brand-error);
 				}
 			}
 		}
@@ -139,7 +139,7 @@ fieldset {
 
 		&.has-error {
 			input[type="checkbox"] + label:after {
-				border-color: @brand-error;
+				border-color: var(--brand-error);
 			}
 		}
 	}
@@ -152,12 +152,12 @@ fieldset {
 
 	&.has-error {
 		.help-block {
-			color: @brand-error;
+			color: var(--brand-error);
 		}
 
 		input[type="checkbox"] {
 			+ label:before {
-				border-color: @brand-error;
+				border-color: var(--brand-error);
 			}
 		}
 	}

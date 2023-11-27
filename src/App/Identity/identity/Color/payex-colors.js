@@ -27,7 +27,7 @@ export const mainText = [
 		name: "White",
 		hex: "#FFFFFF",
 		rgb: "255, 255, 255",
-		border: "has-border",
+		hasBorderOverWhiteBG: true,
 	},
 ];
 
@@ -84,6 +84,7 @@ export const backgroundColors = [
 		name: "Light Grey",
 		hex: "#F4F4F4",
 		rgb: "244, 244, 244",
+		hasBorderOverWhiteBG: true,
 	},
 	{
 		name: "Light Blue",

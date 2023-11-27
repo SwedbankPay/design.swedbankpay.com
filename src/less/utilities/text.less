@@ -7,6 +7,7 @@
 .text-justify {
 	text-align: justify !important;
 }
+
 .text-nowrap {
 	white-space: nowrap !important;
 }
@@ -41,23 +42,32 @@ each(@grid-breakpoints, .(@size, @abbr) {
 .text-lowercase {
 	text-transform: lowercase !important;
 }
+
 .text-uppercase {
 	text-transform: uppercase !important;
 }
+
 .text-capitalize {
 	text-transform: capitalize !important;
+}
+
+.text-underline {
+	text-decoration: underline !important;
 }
 
 // Weight and italics
 .font-weight-light {
 	font-weight: var(--font-weight-light) !important;
 }
+
 .font-weight-normal {
 	font-weight: var(--font-weight-normal) !important;
 }
+
 .font-weight-bold {
 	font-weight: var(--font-weight-bold) !important;
 }
+
 .font-italic {
 	font-style: italic !important;
 }
@@ -73,7 +83,6 @@ each(@grid-breakpoints, .(@size, @abbr) {
 	neutral: @brand-info;
 	warning: @brand-warning;
 	danger: @brand-error;
-	muted: fade(@text-color, 75%);
 	banner: @brand-primary-light;
 };
 
@@ -83,11 +92,6 @@ each(@grid-breakpoints, .(@size, @abbr) {
 
 		a&:hover {
 			color: darken(@color, 10%) !important;
-		}
-
-		&.text-muted,
-		.text-muted {
-			color: fade(@color, 75%) !important;
 		}
 
 		&.text-white,
@@ -103,12 +107,13 @@ each(@color-list, .(@color, @name) {
 });
 
 .text-muted {
-	color: @text-muted !important;
+	color: var(--text-muted) !important;
 }
 
 .text-black-50 {
 	color: fade(@black, 50%) !important;
 }
+
 .text-white-50 {
 	color: fade(@white, 50%) !important;
 }

@@ -11,7 +11,7 @@ jobs:
     outputs:
       branchname: ${{ steps.branch.outputs.BRANCH_TO_DELETE }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -32,7 +32,7 @@ jobs:
       matrix:
         brand: ["payex", "swedbankpay"]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 2
         # Set brand specific variables

@@ -5,22 +5,64 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.9.0",
+		title: "Colors and Typography refresher 🎨",
+		text: (
+			<>
+				<p>The Design system never sleeps.</p>
+				<p>
+					🖋️ We&apos;ve been updating the typography values (font-sizes,
+					line-heights).
+					<br />
+					We&apos;re also leveraging the new{" "}
+					<CodeTags type="secondary" code="text-wrap" /> CSS property (
+					<CodeTags type="secondary" code="balance" /> for headers, and{" "}
+					<CodeTags type="secondary" code="pretty" /> for paragraphs).
+				</p>
+				<p>
+					🎨 Colors gor refreshed too. Some colors variables got updated, and
+					we&apos;ve rewritten the Identity Color documentation page (for the
+					SwedbankPay side).
+				</p>
+			</>
+		),
+	},
+	{
 		version: "10.8.7",
 		title: "The one with the Playbook 📕 & a new experimental Topbar 🧪",
 		text: (
 			<>
-					<p>
-				<span className="font-italic">
+				<p>
+					<span className="font-italic">
 						Get ready for a release that&apos;s as charming as a storybook!
-				</span>
-						</p>
-				<p><strong>📖 Introducing the Playbook:</strong> We&apos;re thrilled to unveil our new Playbook section, designed to present our comprehensive Design System. It&apos;s your ultimate guide to demystify the world of design and UI. <a href={`${basename}playbook`}>Explore it here</a></p>
-				<p><strong>🏗️ The New Topbar (Experimental Release):</strong> We&apos;re rolling out the first partial release of the new Topbar version, currently in its experimental phase. By default, there won&apos;t be any changes, but you have the opportunity to opt-in and join the experimental Topbar experience. We&apos;ve also set up a dedicated page to guide you through the migration process: <a href={`${basename}components/topbar-migrating-to-v2`}>Topbar Migration to v2</a>.
-				<br />We encourage you to report any bugs you encounter. The Topbar is a complex component, and your unique use cases provide invaluable feedback. Your input is greatly appreciated! 😉</p>
+					</span>
+				</p>
+				<p>
+					<strong>📖 Introducing the Playbook:</strong> We&apos;re thrilled to
+					unveil our new Playbook section, designed to present our comprehensive
+					Design System. It&apos;s your ultimate guide to demystify the world of
+					design and UI. <a href={`${basename}playbook`}>Explore it here</a>
+				</p>
+				<p>
+					<strong>🏗️ The New Topbar (Experimental Release):</strong> We&apos;re
+					rolling out the first partial release of the new Topbar version,
+					currently in its experimental phase. By default, there won&apos;t be
+					any changes, but you have the opportunity to opt-in and join the
+					experimental Topbar experience. We&apos;ve also set up a dedicated
+					page to guide you through the migration process:{" "}
+					<a href={`${basename}components/topbar-migrating-to-v2`}>
+						Topbar Migration to v2
+					</a>
+					.
+					<br />
+					We encourage you to report any bugs you encounter. The Topbar is a
+					complex component, and your unique use cases provide invaluable
+					feedback. Your input is greatly appreciated! 😉
+				</p>
 			</>
 		),
-	}
-	,{
+	},
+	{
 		version: "10.8.6",
 		title: "The one with little handy UI helpers",
 		text: (

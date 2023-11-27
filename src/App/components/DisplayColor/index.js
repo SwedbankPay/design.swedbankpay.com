@@ -1,92 +1,68 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const ColorDisplay = ({
+const DisplayColor = ({
 	title,
 	subTitle,
 	hex,
-	border,
-	contrastWhiteApproved,
-	contrastBlackApproved,
-	contrastWhiteAlert,
-	contrastBlackAlert,
-	noWhiteExample,
-	noBlackExample,
-}) => (
-	<div className="d-flex flex-column mb-2">
-		<div className={`color-box ${border ? border : ""}`}>
-			<svg>
-				<rect fill={hex} />
-			</svg>
-		</div>
-		<div className="text-box d-flex flex-column">
-			<p className="font-weight-bold mb-0">{title}</p>
-			<small className="small mb-0">{subTitle}</small>
-			<small className="small mb-0 text-uppercase">{hex}</small>
-			<div className="contrast-box">
-				{noWhiteExample ? (
-					<></>
-				) : (
-					<div className="contrast-white-container">
-						<svg className="white-box first-svg">
-							<rect fill={"#FFFFFF"} />
-						</svg>
-						<svg className="second-svg">
-							<rect fill={hex} />
-						</svg>
-						{contrastWhiteApproved ? (
-							<i className="material-icons check">check_circle</i>
-						) : (
-							<>
-								{contrastWhiteAlert ? (
-									<i className="material-icons warning">warning</i>
-								) : (
-									<i className="material-icons cancel">error</i>
-								)}
-							</>
-						)}
-					</div>
-				)}
-
-				{noBlackExample ? (
-					<></>
-				) : (
-					<div className="contrast-black-container">
-						<svg className="first-svg">
-							<rect fill={"#2F2424"} />
-						</svg>
-						<svg className="second-svg">
-							<rect fill={hex} />
-						</svg>
-						{contrastBlackApproved ? (
-							<i className="material-icons check">check_circle</i>
-						) : (
-							<>
-								{contrastBlackAlert ? (
-									<i className="material-icons warning">warning</i>
-								) : (
-									<i className="material-icons cancel">error</i>
-								)}
-							</>
-						)}
-					</div>
-				)}
+	hasBorderOverWhiteBG = false,
+	isSizeLarge = true,
+	isVertical = true,
+	isCSSVariable = false,
+}) => {
+	if (isSizeLarge) {
+		return (
+			<div className={`d-flex ${isVertical ? "flex-column" : ""} mb-4`}>
+				<div className={`color-box ${hasBorderOverWhiteBG ? "border" : ""}`}>
+					<svg>
+						<rect fill={hex} />
+					</svg>
+				</div>
+				<div className="text-box d-flex flex-column">
+					<p className="font-weight-bold mb-0">{title}</p>
+					<small className="small mb-0">{subTitle}</small>
+					<small className="small mb-0 text-uppercase">{hex}</small>
+				</div>
 			</div>
-		</div>
-	</div>
-);
+		);
+	} else if (!isSizeLarge) {
+		return (
+			<li
+				className={`d-flex ${isVertical ? "flex-column" : ""} py-1 px-0`}
+				key={`functional-color-${title}`}
+			>
+				<div
+					className={`color-swatch color-box-small ${
+						hasBorderOverWhiteBG ? "border" : ""
+					}`}
+					style={{
+						"--bg-color": isCSSVariable ? `var(--${subTitle}, ${hex})` : hex,
+					}}
+				></div>
+				<div className="d-flex flex-column">
+					<small>
+						<span className="font-weight-bold">{title}</span>
+					</small>
+					<small>
+						<span className="text-muted">{subTitle}</span>
+					</small>
+					<small>
+						<span className="text-muted">{hex}</span>
+					</small>
+				</div>
+			</li>
+		);
+	}
+};
 
-ColorDisplay.propTypes = {
+DisplayColor.propTypes = {
 	title: PropTypes.string.isRequired,
 	subTitle: PropTypes.string,
 	hex: PropTypes.string.isRequired,
-	border: PropTypes.string,
-	contrastWhiteApproved: PropTypes.string,
-	contrastBlackApproved: PropTypes.string,
-	contrastWhiteAlert: PropTypes.string,
-	contrastBlackAlert: PropTypes.string,
-	noWhiteExample: PropTypes.string,
-	noBlackExample: PropTypes.string,
+	hasBorderOverWhiteBG: PropTypes.bool,
+	isSizeLarge: PropTypes.bool,
+	isVertical: PropTypes.bool,
+	isCSSVariable: PropTypes.false,
 };
 
-export default ColorDisplay;
+export default DisplayColor;

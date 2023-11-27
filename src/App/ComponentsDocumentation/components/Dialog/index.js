@@ -64,10 +64,9 @@ const Example = () => (
 			>
 				{"\n"}Open dialog{"\n"}
 			</button>
-			<DialogComponent diaHeader="Delete item 456?" diaId="demo-dialog">
+			<DialogComponent diaHeader="Delete" diaId="demo-dialog">
 				<p>
-					Are you sure you want to permanently delete the item{" "}
-					<i>German Swashbuckle (456)?</i>
+					You’re about to permanently delete <i>German Swashbuckle (456)?</i>
 				</p>
 			</DialogComponent>
 		</ComponentPreview>

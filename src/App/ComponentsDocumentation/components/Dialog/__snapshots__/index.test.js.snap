@@ -35,7 +35,7 @@ Array [
           id="aria-label-dia"
         >
           <h4>
-            Delete item 456?
+            Delete
           </h4>
           
 
@@ -60,8 +60,7 @@ Array [
           id="aria-describe-dia"
         >
           <p>
-            Are you sure you want to permanently delete the item
-             
+            You’re about to permanently delete 
             <i>
               German Swashbuckle (456)?
             </i>
@@ -212,7 +211,7 @@ Array [
                         &lt;header class="dialog-header" id="aria-label-dia"&gt;
                 
 
-                            &lt;h4&gt;Delete item 456?&lt;/h4&gt;
+                            &lt;h4&gt;Delete&lt;/h4&gt;
                 
 
                             &lt;button type="button" class="dialog-close" aria-label="Close dialog"&gt;
@@ -230,7 +229,7 @@ Array [
                         &lt;div class="dialog-body" id="aria-describe-dia"&gt;
                 
 
-                            &lt;p&gt;Are you sure you want to permanently delete the item &lt;i&gt;German Swashbuckle (456)?&lt;/i&gt;&lt;/p&gt;
+                            &lt;p&gt;You’re about to permanently delete &lt;i&gt;German Swashbuckle (456)?&lt;/i&gt;&lt;/p&gt;
                 
 
                         &lt;/div&gt;
