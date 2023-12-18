@@ -16,10 +16,9 @@ exports[`Component: ActionList .action-menu prevents default when an item is cli
     
 
     <i
-      className="material-icons"
-    >
-      more_vert
-    </i>
+      aria-hidden={true}
+      className="at-dots-vertical small"
+    />
     
 
   </button>

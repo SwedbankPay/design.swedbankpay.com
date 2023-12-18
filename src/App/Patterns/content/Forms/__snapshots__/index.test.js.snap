@@ -1543,10 +1543,8 @@ exports[`Forms: index renders 1`] = `
 
                 <i
                   aria-hidden="true"
-                  className="material-icons alert-icon"
-                >
-                  cancel
-                </i>
+                  className="at-cancel alert-icon"
+                />
                 <p>
                   <b>
                     Error.
