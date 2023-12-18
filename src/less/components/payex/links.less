@@ -8,12 +8,12 @@ a {
 	}
 
 	&:focus {
-		color: @brand-primary;
+		color: var(--brand-primary);
 	}
 
 	&.icon-link {
 		&:hover {
-			color: @brand-primary;
+			color: var(--brand-primary);
 
 			span {
 				text-decoration: none;
@@ -29,21 +29,22 @@ a {
 	}
 
 	&.action-link {
+		// TODO: replace by local svg
 		&:after {
-			color: @brand-secondary;
+			color: var(--brand-secondary);
 			content: "arrow_forward";
-			font-family: var(--payex-material-icons);
+			font-family: var(--icons-font-material-default);
 			font-size: 1.5rem;
 			top: calc(50% - 1.5rem / 2);
 		}
 
 		&:hover {
-			color: @brand-secondary;
+			color: var(--brand-secondary);
 		}
 
 		&.action-link-new-tab {
 			&:before {
-				background-color: @brand-primary;
+				background-color: var(--brand-primary;);
 			}
 		}
 	}

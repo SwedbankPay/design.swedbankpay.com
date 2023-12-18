@@ -2,12 +2,14 @@
 
 .accordion {
 	border: 1px solid transparent;
-	border-bottom: 1px solid @brand-secondary-light-3;
+	border-bottom: 1px solid var(--brand-secondary-light-3);
 	border-radius: 2px;
 	background-color: transparent;
 	display: flex;
 	flex-direction: column;
-	transition: all 0.3s ease-in-out, height 0.3s ease;
+	transition:
+		all 0.3s ease-in-out,
+		height 0.3s ease;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -20,10 +22,10 @@
 	}
 
 	&.accordion-open {
-		background-color: @white;
+		background-color: var(--white);
 
 		&:first-child {
-			border-top: 1px solid @brand-secondary-light-3;
+			border-top: 1px solid var(--brand-secondary-light-3);
 		}
 
 		> .accordion-header {
@@ -44,18 +46,23 @@
 		flex-direction: column;
 		align-items: flex-start;
 		user-select: none;
-		color: @brand-secondary;
-		background-color: @white;
+		color: var(--brand-secondary);
+		background-color: var(--white);
 		padding: 1rem;
 		text-align: start;
 		font-weight: var(--font-weight-bold);
 		font-family: var(--brand-headline);
 		font-size: 1rem;
 
+		// TODO: is this still necessary? if looks fine on chrome + ff + safari then only keep for material-icons
+		// it seems that it's adding automatically the desired icon via :before trigering content to set the icon. Maybe hard to replace with Atlas?
+		// eventually can keep it silently, and move away from it during next major release when bring new accordion
+		// it doesn't require anything from users anyway since the icon is set on our side. So can change relaxed since the icon is not exposed but set on our side via CSS via :before
+		// a possibility: replace by :before & :after with pure CSS
 		&:before {
 			.material-icons-styling();
 
-			color: @brand-secondary;
+			color: var(--brand-secondary);
 			content: "keyboard_arrow_down";
 			position: absolute;
 			right: 0;

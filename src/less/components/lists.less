@@ -63,7 +63,8 @@
 	li {
 		display: flex;
 
-		.material-icons {
+		.material-icons,
+		:is(i[class^="at-"], i[class*=" at-"]) {
 			margin-right: 0.5rem;
 		}
 	}

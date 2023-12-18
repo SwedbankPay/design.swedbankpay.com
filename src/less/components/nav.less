@@ -112,7 +112,8 @@
 		}
 	}
 
-	.material-icons {
+	.material-icons,
+	:is(i[class^="at-"], i[class*=" at-"]) {
 		color: @brand-secondary;
 		user-select: none;
 	}
@@ -382,7 +383,8 @@
 			}
 		}
 
-		.material-icons {
+		.material-icons,
+		:is(i[class^="at-"], i[class*=" at-"]) {
 			margin-right: var(--base-margin);
 			font-size: 24px;
 		}

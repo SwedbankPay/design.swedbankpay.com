@@ -8,7 +8,13 @@
 	.media-img {
 		display: flex;
 
-		> :is(img, .material-icons, .material-icons-outlined) {
+		> :is(
+				img,
+				.material-icons,
+				.material-icons-outlined,
+				i[class^="at-"],
+				i[class*=" at-"]
+			) {
 			width: 48px;
 			height: 48px;
 			font-size: 3rem;
@@ -17,7 +23,13 @@
 
 	&.media-sm {
 		.media-img {
-			> :is(img, .material-icons, .material-icons-outlined) {
+			> :is(
+					img,
+					.material-icons,
+					.material-icons-outlined,
+					i[class^="at-"],
+					i[class*=" at-"]
+				) {
 				width: 40px;
 				height: 40px;
 				font-size: 2.5rem;
@@ -27,7 +39,13 @@
 
 	&.media-lg {
 		.media-img {
-			> :is(img, .material-icons, .material-icons-outlined) {
+			> :is(
+					img,
+					.material-icons,
+					.material-icons-outlined,
+					i[class^="at-"],
+					i[class*=" at-"]
+				) {
 				width: 56px;
 				height: 56px;
 				font-size: 3.5rem;

@@ -55,7 +55,8 @@ label {
 		}
 	}
 
-	.material-icons {
+	.material-icons,
+	:is(i[class^="at-"], i[class*=" at-"]) {
 		color: @brand-accent-links;
 	}
 }

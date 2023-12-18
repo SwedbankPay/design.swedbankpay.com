@@ -42,7 +42,7 @@
 
 .badge {
 	display: inline-block;
-	color: @white;
+	color: var(--white);
 	padding: 0 0.4em; /* stylelint-disable-line */ /* Using em for variable padding based on font-size of badge [AW] */
 	border-radius: 2rem;
 	font-size: 0.875rem;
@@ -59,7 +59,10 @@
         }
     });
 
-	.material-icons {
+	// TODO: ask designers: should we keep this? should people use icons in badge?
+	// If not then remove it and communicate it as breaking change
+	.material-icons,
+	:is(i[class^="at-"], i[class*=" at-"]) {
 		font-size: 1rem;
 		vertical-align: text-top;
 	}
@@ -80,13 +83,13 @@
 	&.badge-green-light,
 	&.badge-blue-light,
 	&.badge-default {
-		color: @brand-secondary;
+		color: var(--brand-secondary);
 	}
 
 	&.badge-deprecated {
 		font-weight: 700;
 		background-color: @system-error;
-		color: @white;
+		color: var(--white);
 	}
 
 	&.badge-number {
@@ -143,7 +146,8 @@
 		}
 	}
 
-	.material-icons {
+	.material-icons,
+	&:is([class^="at-"], [class*=" at-"]) {
 		font-size: 1.25rem;
 		margin-right: 0.5rem;
 	}

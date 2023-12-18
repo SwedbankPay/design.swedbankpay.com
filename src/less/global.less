@@ -1,6 +1,9 @@
 /* stylelint-disable-next-line import-notation */
+// TODO: Google Material icons font should be removed during next release after > 10.x
 @import (css)
 	url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+
+@import url("https://unpkg.com/@vectopus/atlas-icons/style.css");
 
 /* Other colors */
 @text-muted: fade(@text-color, 75%);
@@ -346,23 +349,6 @@ ol {
 	}
 }
 /* stylelint-enable */
-
-.material-icons-styling(@color: @brand-secondary, @margin: 0 0.5rem, @font-size: 1.25rem) {
-	color: @color;
-	margin: @margin;
-	font-family: "Material Icons";
-	font-weight: normal;
-	font-style: normal;
-	font-size: @font-size;
-	line-height: 1;
-	letter-spacing: normal;
-	text-transform: none;
-	display: inline-block;
-	white-space: nowrap;
-	word-wrap: normal;
-	direction: ltr;
-	font-feature-settings: "liga";
-}
 
 .tab-focus(@color: @brand-secondary) {
 	/* Default */

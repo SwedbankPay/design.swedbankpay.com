@@ -39,9 +39,7 @@ const AppHeader = () =>
 								aria-label="Close menu"
 								title="Close menu"
 							>
-								<i className="material-icons-outlined" aria-hidden="true">
-									close
-								</i>
+								<i className="at-xmark-circle" aria-hidden="true"></i>
 							</button>
 						</div>
 						<div className="topbar-modal-body">
@@ -54,9 +52,7 @@ const AppHeader = () =>
 						</div>
 						<div className="topbar-modal-footer">
 							<button className="btn btn-secondary btn-sm" type="button">
-								<i className="material-icons-outlined" aria-hidden="true">
-									exit_to_app
-								</i>
+								<i className="at-exit" aria-hidden="true"></i>
 								<span>Log out</span>
 							</button>
 						</div>
@@ -70,7 +66,7 @@ const AppHeader = () =>
 					aria-expanded="false"
 					aria-controls="topbar-nav"
 				>
-					<i className="material-icons topbar-btn-icon">menu</i>
+					<i className="at-justify topbar-btn-icon"></i>
 				</button>
 			</div>
 		</header>
@@ -87,10 +83,10 @@ const AppHeader = () =>
 				aria-expanded="false"
 				aria-controls="topbar-nav"
 			>
-				<i className="material-icons topbar-btn-icon">menu</i>
+				<i className="at-justify topbar-btn-icon"></i>
 			</button>
 			<button type="button" className="topbar-close" aria-label="Close menu">
-				<i className="material-icons topbar-btn-icon">close</i>
+				<i className="at-xmark-circle topbar-btn-icon"></i>
 			</button>
 			<a href="/" className="topbar-logo">
 				{"\n"}

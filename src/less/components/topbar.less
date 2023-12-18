@@ -131,7 +131,8 @@
 			}
 		}
 
-		.material-icons {
+		.material-icons,
+		:is(i[class^="at-"], i[class*=" at-"]) {
 			margin: 0;
 		}
 	}
@@ -351,7 +352,8 @@
 				}
 			}
 
-			.material-icons {
+			.material-icons,
+			:is(i[class^="at-"], i[class*=" at-"]) {
 				margin: 0;
 			}
 		}
@@ -384,7 +386,7 @@
 						margin-left: 1rem;
 					}
 
-					.material-icons + span {
+					:is(i[class^="at-"], i[class*=" at-"], .material-icons) + span {
 						margin-left: 0;
 					}
 				}
@@ -392,7 +394,8 @@
 				.topbar-link-right {
 					margin: initial;
 
-					.material-icons {
+					.material-icons,
+					:is(i[class^="at-"], i[class*=" at-"]) {
 						margin: 0;
 					}
 				}
@@ -440,7 +443,8 @@
 				line-height: 1;
 				align-items: center;
 
-				.material-icons {
+				.material-icons,
+				:is(i[class^="at-"], i[class*=" at-"]) {
 					padding: 0 0.5rem 0 0;
 					user-select: none;
 				}
@@ -466,7 +470,8 @@
 				margin-left: auto;
 				color: @black;
 
-				.material-icons {
+				.material-icons,
+				:is(i[class^="at-"], i[class*=" at-"]) {
 					margin: 0;
 				}
 			}
@@ -572,8 +577,10 @@
 					}
 
 					&:not(.topbar-link-right) {
-						.material-icons,
-						&.material-icons {
+						& .material-icons,
+						& :is(i[class^="at-"], i[class*=" at-"]),
+						&.material-icons,
+						&:is([class^="at-"], [class*=" at-"]) {
 							display: none;
 						}
 					}

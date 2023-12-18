@@ -38,7 +38,7 @@
 			top: 1px;
 			height: @checkbox-height;
 			width: @checkbox-width;
-			background-color: @white;
+			background-color: var(--white);
 			border: 2px solid @brand-secondary-light-2;
 			border-radius: 2px;
 		}
@@ -52,7 +52,7 @@
 			top: 1px;
 			height: @checkbox-height;
 			width: @checkbox-width;
-			background-color: @white;
+			background-color: var(--white);
 			border-radius: 50%;
 		}
 
@@ -66,12 +66,12 @@
 
 		&:focus + label:before {
 			box-shadow: 0 0 0 0.375rem @brand-secondary-light-3;
-			border-color: @brand-secondary;
+			border-color: var(--brand-secondary);
 			outline: 4px solid transparent;
 		}
 
 		&:focus + label:after {
-			border-color: @brand-secondary;
+			border-color: var(--brand-secondary);
 			outline: 4px solid transparent;
 		}
 
@@ -81,7 +81,7 @@
 		}
 
 		&:hover + label:after {
-			border-color: @brand-secondary;
+			border-color: var(--brand-secondary);
 		}
 
 		&[disabled] {

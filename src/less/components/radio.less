@@ -38,14 +38,14 @@
 			left: -1.5rem;
 			height: @radio-height;
 			width: @radio-width;
-			background-color: @white;
+			background-color: var(--white);
 			border: 2px solid @brand-secondary-light-2;
 			cursor: pointer;
 			border-radius: 50%;
 		}
 
 		&:checked + label:before {
-			background-color: @white;
+			background-color: var(--white);
 			background-repeat: no-repeat;
 			background-image: url("../../icons/shapes/circle.svg");
 			border-color: @brand-secondary;
@@ -66,7 +66,7 @@
 			}
 
 			&:checked + label:before {
-				background-color: @white;
+				background-color: var(--white);
 				background-image: url("../../icons/shapes/circle-disabled.svg");
 			}
 
@@ -107,7 +107,7 @@
 	}
 
 	label {
-		outline: 1px solid @black;
+		outline: 1px solid var(--black);
 		border-radius: var(--border-radius, 8px);
 		margin: auto;
 		height: 100%;
@@ -120,8 +120,8 @@
 		display: none;
 	}
 
-	label .material-icons {
-		color: @white;
+	label :is(i[class^="at-"], i[class*=" at-"], .material-icons) {
+		color: var(--white);
 		margin-left: -10px;
 	}
 
@@ -136,13 +136,13 @@
 	input[type="radio"]:checked + label {
 		background-color: @brand-secondary;
 		border-radius: var(--border-radius, 8px);
-		color: @white;
+		color: var(--white);
 		padding-left: 1.875rem;
 	}
 
 	input[type="radio"]:checked:hover + label {
 		background-color: @medium-brown;
-		color: @white;
+		color: var(--white);
 	}
 
 	input[type="radio"]:disabled + label {
@@ -152,7 +152,7 @@
 
 	input[type="radio"]:checked:disabled + label {
 		background-color: @light-brown;
-		color: @white;
+		color: var(--white);
 		outline: 0;
 		padding-left: 1.25rem;
 

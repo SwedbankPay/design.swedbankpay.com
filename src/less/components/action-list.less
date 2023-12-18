@@ -24,7 +24,8 @@
 			align-items: center;
 			color: var(--brand-secondary);
 
-			> .material-icons {
+			> .material-icons,
+			> :is(i[class^="at-"], i[class*=" at-"]) {
 				margin-right: 0.5rem;
 			}
 
@@ -52,7 +53,7 @@
 		border: 0;
 		outline: 0;
 
-		&:not(.material-icons) {
+		&:not(.material-icons, i[class^="at-"], i[class*=" at-"]) {
 			padding: 0.7rem;
 		}
 
