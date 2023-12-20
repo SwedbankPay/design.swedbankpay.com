@@ -9,18 +9,12 @@
 	margin-top: 0;
 	margin-bottom: 1rem;
 	display: flex;
-	// TODO: check if gap instead or margin breaks design. For both the icon ANF the optional close button on the right side.
-	// - does it display same gap?
-	// - does it display a spacing when no icon and no close button?
-	// IF all good then only keep gap and remove margin-right of icon & margin-left of close button
-	gap: 1rem;
 	color: var(--black);
 	border-radius: 0.25rem;
 	background-color: var(--color-bg);
 
-	& i {
+	& > i {
 		color: var(--color-icon);
-		// TODO: remove if gap is enough ? but since gap different for close button then probably not
 		margin-right: 1rem;
 	}
 
