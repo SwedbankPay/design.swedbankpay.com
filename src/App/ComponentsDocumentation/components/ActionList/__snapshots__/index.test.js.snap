@@ -682,7 +682,7 @@ exports[`Components: ActionList renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="at-error alert-icon"
+        className="at-exclamation-triangle alert-icon"
       />
       <p>
         <b>

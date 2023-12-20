@@ -27,8 +27,6 @@ const Home = () => {
 				<header>
 					<span className="dg-title-small d-block m-0">Welcome to the</span>
 					<span className="dg-title-big my-0">{brandTitle} Design Guide</span>
-					<i class="at-home" aria-hidden="true"></i>
-					<i class="at-soccer-football-field" aria-hidden="true"></i>
 				</header>
 
 				<div className="dg-version-indicator">
@@ -150,7 +148,7 @@ const Home = () => {
 					</span>
 					<Alert
 						type="informative"
-						icon="info"
+						icon="info-circle"
 						text={
 							<p>
 								<b>Versioning:</b>

@@ -2507,7 +2507,7 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="at-error alert-icon"
+        className="at-exclamation-triangle alert-icon"
       />
       <p>
         <b>
@@ -3316,7 +3316,7 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="at-info alert-icon"
+        className="at-info-circle alert-icon"
       />
       <p>
         <b>
@@ -3640,7 +3640,7 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="at-info alert-icon"
+        className="at-info-circle alert-icon"
       />
       <p>
         <b>
@@ -3868,7 +3868,7 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="at-info alert-icon"
+        className="at-info-circle alert-icon"
       />
       <p>
         <b>
@@ -4167,7 +4167,7 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="at-info alert-icon"
+        className="at-info-circle alert-icon"
       />
       <p>
         <b>
@@ -4494,7 +4494,7 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="at-info alert-icon"
+        className="at-info-circle alert-icon"
       />
       <p>
         <b>
@@ -4847,7 +4847,7 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="at-info alert-icon"
+        className="at-info-circle alert-icon"
       />
       <p>
         <b>
@@ -5086,7 +5086,7 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="at-info alert-icon"
+        className="at-info-circle alert-icon"
       />
       <p>
         <b>
@@ -5313,7 +5313,7 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="at-info alert-icon"
+        className="at-info-circle alert-icon"
       />
       <p>
         <b>
@@ -5636,7 +5636,7 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="at-info alert-icon"
+        className="at-info-circle alert-icon"
       />
       <p>
         <b>
@@ -5893,7 +5893,7 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="at-info alert-icon"
+        className="at-info-circle alert-icon"
       />
       <p>
         <b>

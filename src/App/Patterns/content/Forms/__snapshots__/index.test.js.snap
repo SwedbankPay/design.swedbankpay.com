@@ -1543,7 +1543,7 @@ exports[`Forms: index renders 1`] = `
 
                 <i
                   aria-hidden="true"
-                  className="at-cancel alert-icon"
+                  className="at-xmark-circle alert-icon"
                 />
                 <p>
                   <b>

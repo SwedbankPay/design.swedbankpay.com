@@ -75,7 +75,7 @@ const LoginForm = ({
 			{alternativeLogins && <AlternativeLogins />}
 			{error && (
 				<Alert
-					icon="cancel"
+					icon="xmark-circle"
 					type="danger"
 					text={
 						<p>
