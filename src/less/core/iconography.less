@@ -56,7 +56,7 @@ i {
 	font-feature-settings: "liga";
 }
 
-// custom icons start
+// custom payment icons start
 
 i.payment-icon {
 	height: 2rem;
@@ -601,3 +601,69 @@ each(@flag-list, .(@country-code) {
 });
 
 // flag icons sizing end
+
+// shape (basic UI) custom icons start
+i[class^="swepay-icon-"],
+i[class*=" swepay-icon-"] {
+	display: inline-block;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: var(--icon-size, 24px);
+	width: var(--icon-size, 24px);
+	stroke: currentColor;
+	fill: currentColor;
+
+	&.swepay-icon-chevron-down {
+		background-image: url("../../icons/shapes/chevron_down.svg");
+	}
+
+	&.swepay-icon-chevron-up {
+		background-image: url("../../icons/shapes/chevron_down.svg");
+		transform: rotate(180deg);
+	}
+
+	&.swepay-icon-chevron-left {
+		background-image: url("../../icons/shapes/chevron_down.svg");
+		transform: rotate(270deg);
+	}
+
+	&.swepay-icon-chevron-right {
+		background-image: url("../../icons/shapes/chevron_down.svg");
+		transform: rotate(90deg);
+	}
+
+	&.swepay-icon-check-circle-filled {
+		background-image: url("../../icons/shapes/check_circle_filled.svg");
+	}
+
+	&.swepay-icon-close {
+		background-image: url("../../icons/shapes/close.svg");
+	}
+
+	&.swepay-icon-error-circle-filled {
+		background-image: url("../../icons/shapes/error_circle_filled.svg");
+	}
+
+	&.swepay-icon-error-triangle-filled {
+		background-image: url("../../icons/shapes/error_triangle_filled.svg");
+	}
+
+	&.swepay-icon-warning-triangle-filled {
+		background-image: url("../../icons/shapes/warning_triangle_filled.svg");
+	}
+
+	&.swepay-icon-info-circle-filled {
+		background-image: url("../../icons/shapes/info_circle_filled.svg");
+	}
+
+	&.swepay-icon-minus-substract {
+		background-image: url("../../icons/shapes/minus_substract.svg");
+	}
+
+	&.swepay-icon-plus-add {
+		background-image: url("../../icons/shapes/plus_add.svg");
+	}
+}
+
+// shape (basic UI) custom icons end
