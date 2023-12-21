@@ -54,22 +54,19 @@
 		font-family: var(--brand-headline);
 		font-size: 1rem;
 
-		// TODO: is this still necessary? if looks fine on chrome + ff + safari then only keep for material-icons
-		// it seems that it's adding automatically the desired icon via :before trigering content to set the icon. Maybe hard to replace with Atlas?
-		// eventually can keep it silently, and move away from it during next major release when bring new accordion
-		// it doesn't require anything from users anyway since the icon is set on our side. So can change relaxed since the icon is not exposed but set on our side via CSS via :before
-		// a possibility: replace by :before & :after with pure CSS
 		&:before {
-			.material-icons-styling();
-
 			color: var(--brand-secondary);
-			content: "keyboard_arrow_down";
+			content: "";
 			position: absolute;
 			right: 0;
 			top: 0;
-			bottom: $top;
+			bottom: 0;
 			display: flex;
 			align-items: center;
+			background-image: url(../../icons/shapes/chevron_down.svg);
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 20px;
 		}
 	}
 
