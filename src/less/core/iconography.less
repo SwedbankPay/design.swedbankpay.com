@@ -606,7 +606,6 @@ each(@flag-list, .(@country-code) {
 i[class^="swepay-icon-"],
 i[class*=" swepay-icon-"] {
 	display: inline-block;
-	// TODO: check if autoprefixed by autoprefixer, so work on Edge for example
 	mask-position: center;
 	mask-repeat: no-repeat;
 	background-position: center;
@@ -617,8 +616,6 @@ i[class*=" swepay-icon-"] {
 	background-color: currentColor;
 
 	&.swepay-icon-chevron-down {
-		// TODO: check if autoprefixed by autoprefixer, so work on Edge for example
-		// -webkit-mask: url("../../icons/shapes/chevron_down.svg") no-repeat 50% 50%;
 		mask: url("../../icons/shapes/chevron_down.svg");
 	}
 

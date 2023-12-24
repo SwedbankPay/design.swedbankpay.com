@@ -9,28 +9,25 @@ test("Accordion page exist", async ({ page }) => {
 		})
 		.click();
 	await expect(page.getByRole("link", { name: "Accordion" })).toHaveCount(
-		page.viewportSize().width < 991 ? 1 : 2
+		page.viewportSize().width < 991 ? 1 : 2,
 	);
 	await page.getByText("calendar_view_dayAccordionarrow_forward").click();
 	await expect(page).toHaveTitle(/Accordion/);
 	await expect(
-		page.getByRole("heading", { name: "Accordion", exact: true, level: 1 })
+		page.getByRole("heading", { name: "Accordion", exact: true, level: 1 }),
 	).toBeVisible();
 });
 
 test("visual regresion accordions", async ({ page }) => {
 	await page.goto("http://localhost:3000/components/accordion");
-	await page
-		.getByRole("button", { name: "keyboard_arrow_down My title" })
-		.first()
-		.click();
+	await page.getByRole("button", { name: "My title" }).first().click();
 
 	const brand = (await page.title()).includes("Swedbank")
 		? "SwedbankPay"
 		: "PayEx";
 
 	await expect(
-		page.locator(".component-preview-content > div")
+		page.locator(".component-preview-content > div"),
 	).toHaveScreenshot(`${brand}-accordions.png`);
 });
 
@@ -40,41 +37,35 @@ test.describe(`accordions options behave correctly`, () => {
 	}) => {
 		await page.goto("http://localhost:3000/components/accordion");
 
-		await page
-			.getByRole("button", { name: "keyboard_arrow_down My title" })
-			.first()
-			.click();
+		await page.getByRole("button", { name: "My title" }).first().click();
 		await expect(
 			page
 				.locator("#exp-1")
 				.getByText(
-					"Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit con"
-				)
+					"Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit con",
+				),
 		).toBeVisible();
 		await expect(
 			page
 				.locator("#exp-3")
 				.getByText(
-					"Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit con"
-				)
+					"Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit con",
+				),
 		).not.toBeVisible();
-		await page
-			.getByRole("button", { name: "keyboard_arrow_down My title" })
-			.nth(2)
-			.click();
+		await page.getByRole("button", { name: "My title" }).nth(2).click();
 		await expect(
 			page
 				.locator("#exp-1")
 				.getByText(
-					"Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit con"
-				)
+					"Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit con",
+				),
 		).toBeVisible();
 		await expect(
 			page
 				.locator("#exp-3")
 				.getByText(
-					"Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit con"
-				)
+					"Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit con",
+				),
 		).toBeVisible();
 	});
 	test(`accordions option "Open one at a time" can be clicked and works`, async ({
@@ -94,44 +85,38 @@ test.describe(`accordions options behave correctly`, () => {
 			await page.getByRole("button", { name: "Close options menu" }).click();
 		}
 
-		await page
-			.getByRole("button", { name: "keyboard_arrow_down My title" })
-			.first()
-			.click();
+		await page.getByRole("button", { name: "My title" }).first().click();
 		await expect(
 			page
 				.locator("#exp-1")
 				.getByText(
-					"Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit con"
-				)
+					"Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit con",
+				),
 		).toBeVisible();
 		await expect(
 			page
 				.locator("#exp-3")
 				.getByText(
-					"Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit con"
-				)
+					"Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit con",
+				),
 		).not.toBeVisible();
 
 		// FIXME: this part fails on Mobile Chrome, not sure why. Therefore skipping for now, but should be fixed
 		if (page.viewportSize().width >= 991 || browserName !== "chromium") {
-			await page
-				.getByRole("button", { name: "keyboard_arrow_down My title" })
-				.nth(2)
-				.click();
+			await page.getByRole("button", { name: "My title" }).nth(2).click();
 			await expect(
 				page
 					.locator("#exp-1")
 					.getByText(
-						"Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit con"
-					)
+						"Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit con",
+					),
 			).not.toBeVisible();
 			await expect(
 				page
 					.locator("#exp-3")
 					.getByText(
-						"Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit con"
-					)
+						"Proident cupidatat irure excepteur id minim dolore mollit amet reprehenderit con",
+					),
 			).toBeVisible();
 		}
 	});

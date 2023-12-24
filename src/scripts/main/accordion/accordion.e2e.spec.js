@@ -8,7 +8,7 @@ test.describe(`accordion script behave correctly`, () => {
 		await page.goto("http://localhost:3000/components/accordion");
 
 		await page
-			.getByRole("button", { name: "keyboard_arrow_down My title" })
+			.getByRole("button", { name: "My title" })
 			.first()
 			.click();
 		await expect(
@@ -26,7 +26,7 @@ test.describe(`accordion script behave correctly`, () => {
 				)
 		).not.toBeVisible();
 		await page
-			.getByRole("button", { name: "keyboard_arrow_down My title" })
+			.getByRole("button", { name: "My title" })
 			.nth(2)
 			.click();
 		await expect(
@@ -63,7 +63,7 @@ test.describe(`accordion script behave correctly`, () => {
 		}
 
 		await page
-			.getByRole("button", { name: "keyboard_arrow_down My title" })
+			.getByRole("button", { name: "My title" })
 			.first()
 			.click();
 		await expect(
@@ -84,7 +84,7 @@ test.describe(`accordion script behave correctly`, () => {
 		// FIXME: this part fails on Mobile Chrome, not sure why. Therefore skipping for now, but should be fixed
 		if (page.viewportSize().width >= 991 || browserName !== "chromium") {
 			await page
-				.getByRole("button", { name: "keyboard_arrow_down My title" })
+				.getByRole("button", { name: "My title" })
 				.nth(2)
 				.click();
 			await expect(
