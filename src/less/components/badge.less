@@ -62,7 +62,12 @@
 	// TODO: ask designers: should we keep this? should people use icons in badge?
 	// If not then remove it and communicate it as breaking change
 	.material-icons,
-	:is(i[class^="at-"], i[class*=" at-"]) {
+	:is(
+			i[class^="at-"],
+			i[class*=" at-"],
+			i[class^="swepay-icon-"],
+			i[class*=" swepay-icon-"]
+		) {
 		font-size: 1rem;
 		vertical-align: text-top;
 	}
@@ -147,7 +152,12 @@
 	}
 
 	.material-icons,
-	&:is([class^="at-"], [class*=" at-"]) {
+	&:is(
+			[class^="at-"],
+			[class*=" at-"],
+			i[class^="swepay-icon-"],
+			i[class*=" swepay-icon-"]
+		) {
 		font-size: 1.25rem;
 		margin-right: 0.5rem;
 	}

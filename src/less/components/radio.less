@@ -120,7 +120,14 @@
 		display: none;
 	}
 
-	label :is(i[class^="at-"], i[class*=" at-"], .material-icons) {
+	label
+		:is(
+			i[class^="at-"],
+			i[class*=" at-"],
+			i[class^="swepay-icon-"],
+			i[class*=" swepay-icon-"],
+			.material-icons
+		) {
 		color: var(--white);
 		margin-left: -10px;
 	}

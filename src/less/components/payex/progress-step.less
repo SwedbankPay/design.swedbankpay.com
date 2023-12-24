@@ -3,6 +3,13 @@
 .steps
 	ol
 	li.steps-completed
-	.steps-icon:is(i, [class^="at-"], [class*=" at-"], .material-icons) {
+	.steps-icon:is(
+		i,
+		[class^="at-"],
+		[class*=" at-"],
+		[class^="swepay-icon-"],
+		[class*=" swepay-icon-"],
+		.material-icons
+	) {
 	color: var(--white);
 }

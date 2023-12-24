@@ -132,7 +132,12 @@
 		}
 
 		.material-icons,
-		:is(i[class^="at-"], i[class*=" at-"]) {
+		:is(
+				i[class^="at-"],
+				i[class*=" at-"],
+				i[class^="swepay-icon-"],
+				i[class*=" swepay-icon-"]
+			) {
 			margin: 0;
 		}
 	}
@@ -353,7 +358,12 @@
 			}
 
 			.material-icons,
-			:is(i[class^="at-"], i[class*=" at-"]) {
+			:is(
+					i[class^="at-"],
+					i[class*=" at-"],
+					i[class^="swepay-icon-"],
+					i[class*=" swepay-icon-"]
+				) {
 				margin: 0;
 			}
 		}
@@ -386,7 +396,14 @@
 						margin-left: 1rem;
 					}
 
-					:is(i[class^="at-"], i[class*=" at-"], .material-icons) + span {
+					:is(
+							i[class^="at-"],
+							i[class*=" at-"],
+							i[class^="swepay-icon-"],
+							i[class*=" swepay-icon-"],
+							.material-icons
+						)
+						+ span {
 						margin-left: 0;
 					}
 				}
@@ -395,7 +412,12 @@
 					margin: initial;
 
 					.material-icons,
-					:is(i[class^="at-"], i[class*=" at-"]) {
+					:is(
+							i[class^="at-"],
+							i[class*=" at-"],
+							i[class^="swepay-icon-"],
+							i[class*=" swepay-icon-"]
+						) {
 						margin: 0;
 					}
 				}
@@ -444,7 +466,12 @@
 				align-items: center;
 
 				.material-icons,
-				:is(i[class^="at-"], i[class*=" at-"]) {
+				:is(
+						i[class^="at-"],
+						i[class*=" at-"],
+						i[class^="swepay-icon-"],
+						i[class*=" swepay-icon-"]
+					) {
 					padding: 0 0.5rem 0 0;
 					user-select: none;
 				}
@@ -471,7 +498,12 @@
 				color: @black;
 
 				.material-icons,
-				:is(i[class^="at-"], i[class*=" at-"]) {
+				:is(
+						i[class^="at-"],
+						i[class*=" at-"],
+						i[class^="swepay-icon-"],
+						i[class*=" swepay-icon-"]
+					) {
 					margin: 0;
 				}
 			}
@@ -578,9 +610,20 @@
 
 					&:not(.topbar-link-right) {
 						& .material-icons,
-						& :is(i[class^="at-"], i[class*=" at-"]),
+						&
+							:is(
+								i[class^="at-"],
+								i[class*=" at-"],
+								i[class^="swepay-icon-"],
+								i[class*=" swepay-icon-"]
+							),
 						&.material-icons,
-						&:is([class^="at-"], [class*=" at-"]) {
+						&:is(
+								[class^="at-"],
+								[class*=" at-"],
+								i[class^="swepay-icon-"],
+								i[class*=" swepay-icon-"]
+							) {
 							display: none;
 						}
 					}

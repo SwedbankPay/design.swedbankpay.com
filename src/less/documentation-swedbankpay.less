@@ -145,18 +145,6 @@
 		}
 	}
 
-	/* Only used for showing border-utility [AW] */
-	.demo-square {
-		height: 5rem;
-		width: 5rem;
-		background-color: @light-gray;
-		display: inline-block;
-
-		&:not(:last-child) {
-			margin-right: 1rem;
-		}
-	}
-
 	.glow-on-hover {
 		cursor: pointer;
 		position: relative;
@@ -908,22 +896,6 @@
 	.doc-card {
 		border-bottom: 2px solid @border-color;
 		border-radius: 2px;
-	}
-
-	.doc-circle {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: auto;
-		height: 150px;
-		width: $height;
-		background-color: @brand-primary;
-		border-radius: 50%;
-
-		.material-icons,
-		i:is([class^="at-"], [class*=" at-"]) {
-			font-size: 6rem;
-		}
 	}
 
 	.doc-sidebar {
@@ -2184,20 +2156,6 @@
 					height: fit-content;
 					width: fit-content;
 				}
-			}
-		}
-	}
-}
-
-@media screen and (max-width: @screen-xs-max) {
-	.documentation {
-		.doc-circle {
-			height: 120px;
-			width: $height;
-
-			.material-icons,
-			i[class^="at-"] {
-				font-size: 4rem;
 			}
 		}
 	}

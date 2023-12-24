@@ -159,12 +159,20 @@ export const shapes = [
 		code: "chevron-right",
 	},
 	{
-		title: "Check circle filled",
-		code: "check-circle-filled",
-	},
-	{
 		title: "Close",
 		code: "close",
+	},
+	{
+		title: "Minus substract",
+		code: "minus-substract",
+	},
+	{
+		title: "Plus add",
+		code: "plus-add",
+	},
+	{
+		title: "Check circle filled",
+		code: "check-circle-filled",
 	},
 	{
 		title: "Error circle filled",
@@ -181,14 +189,6 @@ export const shapes = [
 	{
 		title: "Info circle filled",
 		code: "info-circle-filled",
-	},
-	{
-		title: "Minus substract",
-		code: "minus-substract",
-	},
-	{
-		title: "Plus add",
-		code: "plus-add",
 	},
 ];
 

@@ -1263,21 +1263,6 @@ exports[`Core: Iconography renders 1`] = `
             <td>
               <i
                 aria-hidden="true"
-                className="swepay-icon-check-circle-filled"
-              />
-            </td>
-            <td>
-              <code
-                className="code-tags code-tags-secondary"
-              >
-                check-circle-filled
-              </code>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <i
-                aria-hidden="true"
                 className="swepay-icon-close"
               />
             </td>
@@ -1286,6 +1271,51 @@ exports[`Core: Iconography renders 1`] = `
                 className="code-tags code-tags-secondary"
               >
                 close
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-minus-substract"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                minus-substract
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-plus-add"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                plus-add
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-check-circle-filled"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                check-circle-filled
               </code>
             </td>
           </tr>
@@ -1346,36 +1376,6 @@ exports[`Core: Iconography renders 1`] = `
                 className="code-tags code-tags-secondary"
               >
                 info-circle-filled
-              </code>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <i
-                aria-hidden="true"
-                className="swepay-icon-minus-substract"
-              />
-            </td>
-            <td>
-              <code
-                className="code-tags code-tags-secondary"
-              >
-                minus-substract
-              </code>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <i
-                aria-hidden="true"
-                className="swepay-icon-plus-add"
-              />
-            </td>
-            <td>
-              <code
-                className="code-tags code-tags-secondary"
-              >
-                plus-add
               </code>
             </td>
           </tr>
@@ -1470,10 +1470,16 @@ exports[`Core: Iconography renders 1`] = `
                     &lt;i class="swepay-icon-chevron-right" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
-                    &lt;i class="swepay-icon-check-circle-filled" aria-hidden="true"&gt;&lt;/i&gt;
+                    &lt;i class="swepay-icon-close" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
-                    &lt;i class="swepay-icon-close" aria-hidden="true"&gt;&lt;/i&gt;
+                    &lt;i class="swepay-icon-minus-substract" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-plus-add" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-check-circle-filled" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
                     &lt;i class="swepay-icon-error-circle-filled" aria-hidden="true"&gt;&lt;/i&gt;
@@ -1486,12 +1492,6 @@ exports[`Core: Iconography renders 1`] = `
                     
 
                     &lt;i class="swepay-icon-info-circle-filled" aria-hidden="true"&gt;&lt;/i&gt;
-                    
-
-                    &lt;i class="swepay-icon-minus-substract" aria-hidden="true"&gt;&lt;/i&gt;
-                    
-
-                    &lt;i class="swepay-icon-plus-add" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
                   </pre>

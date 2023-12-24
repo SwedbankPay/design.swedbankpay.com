@@ -606,63 +606,75 @@ each(@flag-list, .(@country-code) {
 i[class^="swepay-icon-"],
 i[class*=" swepay-icon-"] {
 	display: inline-block;
-	background-size: contain;
-	background-repeat: no-repeat;
+	// TODO: check if autoprefixed by autoprefixer, so work on Edge for example
+	mask-position: center;
+	mask-repeat: no-repeat;
 	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
 	height: var(--icon-size, 24px);
 	width: var(--icon-size, 24px);
-	stroke: currentColor;
-	fill: currentColor;
+	background-color: currentColor;
 
 	&.swepay-icon-chevron-down {
-		background-image: url("../../icons/shapes/chevron_down.svg");
+		// TODO: check if autoprefixed by autoprefixer, so work on Edge for example
+		// -webkit-mask: url("../../icons/shapes/chevron_down.svg") no-repeat 50% 50%;
+		mask: url("../../icons/shapes/chevron_down.svg");
 	}
 
 	&.swepay-icon-chevron-up {
-		background-image: url("../../icons/shapes/chevron_down.svg");
+		mask: url("../../icons/shapes/chevron_down.svg");
 		transform: rotate(180deg);
 	}
 
 	&.swepay-icon-chevron-left {
-		background-image: url("../../icons/shapes/chevron_down.svg");
+		mask: url("../../icons/shapes/chevron_down.svg");
 		transform: rotate(270deg);
 	}
 
 	&.swepay-icon-chevron-right {
-		background-image: url("../../icons/shapes/chevron_down.svg");
+		mask: url("../../icons/shapes/chevron_down.svg");
 		transform: rotate(90deg);
 	}
 
-	&.swepay-icon-check-circle-filled {
-		background-image: url("../../icons/shapes/check_circle_filled.svg");
+	&.swepay-icon-close {
+		mask: url("../../icons/shapes/close.svg");
 	}
 
-	&.swepay-icon-close {
-		background-image: url("../../icons/shapes/close.svg");
+	&.swepay-icon-minus-substract {
+		mask: url("../../icons/shapes/minus_substract.svg");
+	}
+
+	&.swepay-icon-plus-add {
+		mask: url("../../icons/shapes/plus_add.svg");
+	}
+
+	// ICONS styled differently since their color should never be modified.
+	// Therefore it uses background-image instead of mask
+
+	&.swepay-icon-check-circle-filled {
+		background-image: url("../../icons/shapes/check_circle_filled.svg");
+		background-color: initial;
 	}
 
 	&.swepay-icon-error-circle-filled {
 		background-image: url("../../icons/shapes/error_circle_filled.svg");
+		background-color: initial;
 	}
 
 	&.swepay-icon-error-triangle-filled {
 		background-image: url("../../icons/shapes/error_triangle_filled.svg");
+		background-color: initial;
 	}
 
 	&.swepay-icon-warning-triangle-filled {
 		background-image: url("../../icons/shapes/warning_triangle_filled.svg");
+		background-color: initial;
 	}
 
 	&.swepay-icon-info-circle-filled {
 		background-image: url("../../icons/shapes/info_circle_filled.svg");
-	}
-
-	&.swepay-icon-minus-substract {
-		background-image: url("../../icons/shapes/minus_substract.svg");
-	}
-
-	&.swepay-icon-plus-add {
-		background-image: url("../../icons/shapes/plus_add.svg");
+		background-color: initial;
 	}
 }
 

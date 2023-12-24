@@ -25,7 +25,12 @@
 			color: var(--brand-secondary);
 
 			> .material-icons,
-			> :is(i[class^="at-"], i[class*=" at-"]) {
+			> :is(
+					i[class^="at-"],
+					i[class*=" at-"],
+					i[class^="swepay-icon-"],
+					i[class*=" swepay-icon-"]
+				) {
 				margin-right: 0.5rem;
 			}
 
@@ -53,7 +58,13 @@
 		border: 0;
 		outline: 0;
 
-		&:not(.material-icons, i[class^="at-"], i[class*=" at-"]) {
+		&:not(
+				.material-icons,
+				i[class^="at-"],
+				i[class*=" at-"],
+				i[class^="swepay-icon-"],
+				i[class*=" swepay-icon-"]
+			) {
 			padding: 0.7rem;
 		}
 
