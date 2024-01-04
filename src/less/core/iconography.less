@@ -1,3 +1,18 @@
+// revert style of <i> tag whennot used as icon element
+i:not(
+		[class^="at-"],
+		[class*=" at-"],
+		[class^="swepay-icon-"],
+		[class*=" swepay-icon-"],
+		.flag-icon,
+		.payment-icon,
+		.material-icons,
+		.material-icons-outlined
+	) {
+	font-style: italic !important;
+	font-family: revert !important;
+}
+
 // ICONS
 
 i {

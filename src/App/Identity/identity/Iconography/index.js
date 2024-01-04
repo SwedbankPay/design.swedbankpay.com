@@ -24,7 +24,7 @@ const AtlasIcons = () => (
 			<i className="material-icons" aria-hidden="true">
 				open_in_new
 			</i>
-			<span className="ml-2">Material Icons Overview</span>
+			<span className="ml-2">Atlas Icons Overview</span>
 		</a>
 
 		<h3>Example of how to implement icons</h3>
@@ -256,7 +256,12 @@ const BasicUI = () => (
 				</React.Fragment>
 			))}
 		</ComponentPreview>
-		<h3>Sizes</h3>
+	</section>
+);
+
+const Sizes = () => (
+	<section>
+		<h2 id="sizes">Sizes</h2>
 		<p>
 			Icons comes with 3 sizes. Basic is a 24px box. "small" is 18px, and
 			"large" 32px.{" "}
@@ -398,16 +403,18 @@ const Flags = () => (
 const Iconography = () => (
 	<DocContainer>
 		<p className="lead">
-			At {brandTitle} we use Material icons from Material Design, but we also
-			include icons for well-known payment providers, and flags for most nations
-			in the world. All icons are integrated and are available in HTML and CSS.
+			At {brandTitle} we use Atlas icons, but we also include custom icons when
+			they are missing, plus for well-known payment providers, and flags for
+			most nations in the world. All icons are integrated and are available in
+			HTML and CSS.
 		</p>
 		<AtlasIcons />
-		<MaterialIcons />
+		<BasicUI />
+		<Sizes />
 		<CardIcons />
 		<PaymentIcons />
-		<BasicUI />
 		<Flags />
+		<MaterialIcons />
 	</DocContainer>
 );
 
