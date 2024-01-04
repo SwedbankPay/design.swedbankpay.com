@@ -39,7 +39,7 @@ const AppHeader = () =>
 								aria-label="Close menu"
 								title="Close menu"
 							>
-								<i className="at-xmark-circle" aria-hidden="true"></i>
+								<i className="swepay-icon-close" aria-hidden="true"></i>
 							</button>
 						</div>
 						<div className="topbar-modal-body">
@@ -86,7 +86,7 @@ const AppHeader = () =>
 				<i className="at-justify topbar-btn-icon"></i>
 			</button>
 			<button type="button" className="topbar-close" aria-label="Close menu">
-				<i className="at-xmark-circle topbar-btn-icon"></i>
+				<i className="swepay-icon-close topbar-btn-icon"></i>
 			</button>
 			<a href="/" className="topbar-logo">
 				{"\n"}

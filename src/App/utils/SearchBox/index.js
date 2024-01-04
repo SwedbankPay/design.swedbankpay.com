@@ -164,7 +164,7 @@ const SearchBox = ({ className, mobile }) => {
 								onClick={() => clearSearchTerm()}
 								className="btn btn-icon btn-sm"
 							>
-								<i className="at-xmark-circle"></i>
+								<i className="swepay-icon-close"></i>
 							</button>
 						) : (
 							<button
