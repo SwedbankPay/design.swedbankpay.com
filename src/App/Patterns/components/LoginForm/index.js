@@ -75,7 +75,7 @@ const LoginForm = ({
 			{alternativeLogins && <AlternativeLogins />}
 			{error && (
 				<Alert
-					icon="xmark-circle"
+					icon="exclamation-triangle"
 					type="danger"
 					text={
 						<p>
