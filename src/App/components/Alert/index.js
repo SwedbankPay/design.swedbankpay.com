@@ -12,7 +12,7 @@ const Alert = ({ id, type, icon = "", close, text, className }) => {
 	return (
 		<div id={id} className={alertClasses}>
 			{"\n"}
-			<i className={`at-${icon} alert-icon`} aria-hidden="true"></i>
+			<i className={`at-${icon}`} aria-hidden="true"></i>
 			{text}
 			{"\n"}
 			{close ? (

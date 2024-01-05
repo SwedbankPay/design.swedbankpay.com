@@ -299,7 +299,7 @@ Array [
 
     <i
       aria-hidden="true"
-      className="at-warning alert-icon"
+      className="at-warning"
     />
     <p>
       <b>
