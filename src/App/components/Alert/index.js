@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Alert = ({ id, type, icon, close, text, className }) => {
+const Alert = ({ id, type, icon = "", close, text, className }) => {
 	const alertClasses = classnames(
 		"alert",
 		`alert-${type}`,
