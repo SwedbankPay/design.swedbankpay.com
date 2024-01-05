@@ -5,20 +5,20 @@
 	inactive: @brand-secondary-light-2;
 	warning: @brand-error;
 	yellow-light: @brand-success-light;
-	yellow-lighter: @light-gray;
+	yellow-lighter: @brand-warning-light;
 	gray: @brand-secondary;
 	gray-light: @light-gray;
 	brown: @brand-bg-4;
 	brown-soft: @payex-dark-blue;
-	pink: @brand-error-light;
-	red-light: @brand-error;
+	pink: @brand-info-light;
+	red-light: @brand-error-light;
 	blue: @payex-dark-blue;
-	red: @brand-error;
+	red: @brand-error-light;
 	green: @brand-success-light;
 	turqouise: @brand-bg-4;
 	orange: @light-gray;	
-	yellow: @brand-success; 
-	
+	yellow: @brand-warning-light; 
+
 	red-dark: @brand-error-dark;
 	white: @brand-bg-white;
 	brown-medium: @brown-medium;
@@ -40,24 +40,20 @@
 	font-family: var(--brand-default);
 
 	&.badge-default,
-	&.badge-red-light,
-	&.badge-yellow {
+	&.badge-red-light {
 		color: @white;
 	}
 
 	&.badge-brown,
 	&.badge-inactive,
 	&.badge-turqouise,
-	&.badge-orange {
+	&.badge-yellow,
+	&.badge-orange,
+	&.badge-pink,
+	&.badge-green,
+	&.badge-red,
+	&.badge-red-light {
 		color: @brand-secondary;
-	}
-	
-	&.badge-number {
-		&.badge-turqouise,
-		&.badge-green {
-			color: @brand-secondary;
-		}
-		
 	}
 }
 
