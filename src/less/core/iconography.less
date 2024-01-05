@@ -14,8 +14,16 @@ i:not(
 }
 
 // ICONS
-
-i {
+i:is(
+		[class^="at-"],
+		[class*=" at-"],
+		[class^="swepay-icon-"],
+		[class*=" swepay-icon-"],
+		.payment-icon,
+		.flag-icon,
+		.material-icons,
+		.material-icons-outlined
+	) {
 	--icon-size: 24px;
 
 	&.small {
@@ -26,15 +34,8 @@ i {
 		--icon-size: 32px;
 	}
 
+	// TODO: add some cached icon for booster load (e.g. hamburger, close, magnifier, ...) max 5-10 (anc che how heavy each are to actually be sure it's worth it or if CSS becomes too big
 	&:is([class^="at-"], [class*=" at-"]) {
-		font-family: var(--icons-font-default);
-		--ratio-font-adjust-ratio-material-atlas: 0.75;
-		// TODO: set the other font-size by text font-size around only as fallback, maybe requires some additional class
-		// TODO: try to make it so look for at- even if it's in the middle of some other CSS classes ? (maybe don't need this actually)
-		// TODO: add the custom icon (e.g. chevron)
-		// TODO: add some cached icon for booster load (e.g. hamburger, close, magnifier, ...) max 5-10 (anc che how heavy each are to actually be sure it's worth it or if CSS becomes too big
-		font-size: calc(1em * var(--ratio-font-adjust-ratio-material-atlas));
-
 		display: inline-grid;
 		grid-template: var(--icon-size, 24px) / var(--icon-size, 24px);
 		font-size: var(--icon-size, 24px);
