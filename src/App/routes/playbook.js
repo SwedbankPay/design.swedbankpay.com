@@ -5,7 +5,7 @@ module.exports = [
 	{
 		title: "Playbook",
 		icon: {
-			name: "casino",
+			name: "at-chess-piece",
 		},
 		path: "playbook",
 		entryCardText: "Discover our visual language and principles",

@@ -5,7 +5,7 @@ module.exports = [
 	{
 		title: "Identity",
 		icon: {
-			name: "palette",
+			name: "at-color",
 		},
 		path: "identity",
 		entryCardText: "Learn about our fundamental principles",

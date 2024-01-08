@@ -5,7 +5,7 @@ module.exports = [
 	{
 		title: "Components",
 		icon: {
-			name: "category",
+			name: "at-puzzle",
 		},
 		entryCardText: "Find all currently available components here",
 		path: "components",

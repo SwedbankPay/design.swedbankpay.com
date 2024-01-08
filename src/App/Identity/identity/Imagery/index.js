@@ -25,9 +25,10 @@ const ImageLibrary = () => (
 				rel="noopener noreferrer"
 				className="icon-link d-block d-flex"
 			>
-				<i className="material-icons mr-2" aria-hidden="true">
-					open_in_new
-				</i>
+				<i
+					className="at-arrow-up-from-square small align-self-baseline mr-2"
+					aria-hidden="true"
+				></i>
 				<span className="mr-2">Visit the Swedbank Pay Image Library</span>
 			</a>
 		)}

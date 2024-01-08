@@ -14,20 +14,12 @@ const Overview = () => (
 						className="cards cards-primary cards-wide"
 					>
 						<div className="cards-content flex-row align-items-center m-0 ">
-							<i
-								className={`material-icons${
-									card.outlined ? " material-icons-outlined" : ""
-								} mr-3`}
-							>
-								{card.icon}
-							</i>
+							<i className={`${card.icon} small mr-3`}></i>
 							<span className="h3 m-0">{card.title}</span>
 						</div>
-						<i className="material-icons material-icons-outlined">
-							arrow_forward
-						</i>
+						<i className="at-arrow-right small" aria-hidden="true"></i>
 					</Link>
-				)
+				),
 		)}
 	</section>
 );

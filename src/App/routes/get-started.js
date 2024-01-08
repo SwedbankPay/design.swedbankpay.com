@@ -2,8 +2,7 @@ module.exports = [
 	{
 		title: "Get started",
 		icon: {
-			name: "wb_incandescent",
-			rotate: true,
+			name: "at-electric-lightbulb",
 		},
 		entryCardText: "Get started by setting up the Design Guide!",
 		path: "get-started",

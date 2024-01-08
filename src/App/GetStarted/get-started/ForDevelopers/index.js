@@ -415,9 +415,6 @@ const Contributing = () => (
 				rel="noopener noreferrer"
 			>
 				<span className="mr-2">our Git Repository</span>
-				<i className="material-icons" aria-hidden="true">
-					open_in_new
-				</i>
 			</a>{" "}
 			or create a feature request here.
 		</p>
@@ -430,9 +427,10 @@ const Contributing = () => (
 				rel="noopener noreferrer"
 			>
 				<span className="mr-2">Contribution Guide</span>
-				<i className="material-icons" aria-hidden="true">
-					open_in_new
-				</i>
+				<i
+					className="at-arrow-up-from-square small align-self-baseline"
+					aria-hidden="true"
+				></i>
 			</a>
 			, it includes guidelines for how to contribute with new components and
 			develop for the project.
@@ -465,7 +463,7 @@ const DiscoverMore = () => (
 						<span className="h3">{card.title}</span>
 						<span>{card.text}</span>
 					</div>
-					<i className="material-icons">arrow_forward</i>
+					<i className="at-arrow-right small" aria-hidden="true"></i>
 				</Link>
 			))}
 		</div>

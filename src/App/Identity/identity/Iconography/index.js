@@ -21,9 +21,10 @@ const AtlasIcons = () => (
 			target="_blank"
 			rel="noopener noreferrer"
 		>
-			<i className="material-icons" aria-hidden="true">
-				open_in_new
-			</i>
+			<i
+				className="at-arrow-up-from-square small align-self-baseline"
+				aria-hidden="true"
+			></i>
 			<span className="ml-2">Atlas Icons Overview</span>
 		</a>
 
@@ -66,9 +67,10 @@ const MaterialIcons = () => (
 			target="_blank"
 			rel="noopener noreferrer"
 		>
-			<i className="material-icons" aria-hidden="true">
-				open_in_new
-			</i>
+			<i
+				className="at-arrow-up-from-square small align-self-baseline"
+				aria-hidden="true"
+			></i>
 			<span className="ml-2">Material Icons Overview</span>
 		</a>
 

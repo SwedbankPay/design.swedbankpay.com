@@ -38,9 +38,10 @@ const EightPointSystem = () => (
 				className="icon-link m-0"
 			>
 				<span className="mr-2">Introduction article</span>
-				<i className="material-icons" aria-hidden="true">
-					open_in_new
-				</i>
+				<i
+					className="at-arrow-up-from-square small align-self-baseline"
+					aria-hidden="true"
+				></i>
 			</a>
 			, which provides a brief explanation of the reasons why to use the 8-point
 			spacing system. To dive even deeper into the nitty gritty, please refer to
@@ -52,9 +53,10 @@ const EightPointSystem = () => (
 				className="icon-link m-0"
 			>
 				<span className="mr-2">in-depth explanation</span>
-				<i className="material-icons" aria-hidden="true">
-					open_in_new
-				</i>
+				<i
+					className="at-arrow-up-from-square small align-self-baseline"
+					aria-hidden="true"
+				></i>
 			</a>{" "}
 			of the 8-point spacing system.
 		</p>
@@ -183,9 +185,10 @@ const DiveDeeper = () => (
 				rel="noopener noreferrer"
 				className="icon-link d-flex"
 			>
-				<i className="material-icons mr-2" aria-hidden="true">
-					open_in_new
-				</i>
+				<i
+					className="at-arrow-up-from-square small align-self-baseline mr-2"
+					aria-hidden="true"
+				></i>
 				<span className="mr-2">{link.text}</span>
 			</a>
 		))}
@@ -374,16 +377,16 @@ const Examples = () => (
                 .mt-0 {
                     margin-top: 0 !important;
                 }
-                
+
                 .ml-1 {
                     margin-left: (@spacer * 0.25) !important;
                 }
-                
+
                 .px-2 {
                     padding-left: (@spacer * 0.5) !important;
                     padding-right: (@spacer * 0.5) !important;
                 }
-                
+
                 .p-3 {
                     padding: @spacer !important;
                 }
