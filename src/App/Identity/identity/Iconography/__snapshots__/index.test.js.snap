@@ -35,10 +35,8 @@ exports[`Core: Iconography renders 1`] = `
       >
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          open_in_new
-        </i>
+          className="at-arrow-up-from-square small align-self-baseline"
+        />
         <span
           className="ml-2"
         >
@@ -1995,10 +1993,8 @@ exports[`Core: Iconography renders 1`] = `
       >
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          open_in_new
-        </i>
+          className="at-arrow-up-from-square small align-self-baseline"
+        />
         <span
           className="ml-2"
         >

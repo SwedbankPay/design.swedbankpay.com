@@ -12,10 +12,8 @@ Array [
   >
     <i
       aria-hidden="true"
-      className="material-icons"
-    >
-      sentiment_very_dissatisfied
-    </i>
+      className="at-axe"
+    />
     Being removed
   </span>,
   <p>

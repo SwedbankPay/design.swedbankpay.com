@@ -21,10 +21,8 @@ exports[`Core: Color CommunicationColors renders 1`] = `
     >
       <i
         aria-hidden="true"
-        className="material-icons check mr-1"
-      >
-        check_circle
-      </i>
+        className="swepay-icon-check-circle-filled small mr-1"
+      />
       <b>
         Pass (≥ 4.5:1)
       </b>
@@ -34,10 +32,8 @@ exports[`Core: Color CommunicationColors renders 1`] = `
     >
       <i
         aria-hidden="true"
-        className="material-icons warning mr-1"
-      >
-        warning
-      </i>
+        className="swepay-icon-warning-triangle-filled small mr-1"
+      />
       <b>
         OK for graphics or large text (≥ 3:1)
       </b>
@@ -47,10 +43,8 @@ exports[`Core: Color CommunicationColors renders 1`] = `
     >
       <i
         aria-hidden="true"
-        className="material-icons cancel mr-1"
-      >
-        error
-      </i>
+        className="swepay-icon-error-circle-filled small mr-1"
+      />
       <b>
         Fail
       </b>

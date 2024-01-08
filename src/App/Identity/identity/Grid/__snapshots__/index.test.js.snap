@@ -466,10 +466,8 @@ exports[`Core: Grid Intro renders 1`] = `
       </span>
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        open_in_new
-      </i>
+        className="at-arrow-up-from-square small align-self-baseline"
+      />
     </a>
     . If you are curious about how the grid is being used in design, head over to the
      
@@ -486,10 +484,8 @@ exports[`Core: Grid Intro renders 1`] = `
       </span>
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        open_in_new
-      </i>
+        className="at-arrow-up-from-square small align-self-baseline"
+      />
     </a>
     .
   </p>

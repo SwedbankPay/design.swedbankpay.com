@@ -21,12 +21,6 @@ exports[`GetStarted: ForDevelopers Contributing renders 1`] = `
       >
         our Git Repository
       </span>
-      <i
-        aria-hidden="true"
-        className="material-icons"
-      >
-        open_in_new
-      </i>
     </a>
      
     or create a feature request here.
@@ -47,10 +41,8 @@ exports[`GetStarted: ForDevelopers Contributing renders 1`] = `
       </span>
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        open_in_new
-      </i>
+        className="at-arrow-up-from-square small align-self-baseline"
+      />
     </a>
     , it includes guidelines for how to contribute with new components and develop for the project.
   </p>

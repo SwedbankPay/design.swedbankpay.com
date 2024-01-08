@@ -32,10 +32,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   >
     <i
       aria-hidden="true"
-      className="material-icons mr-2"
-    >
-      open_in_new
-    </i>
+      className="at-arrow-up-from-square small align-self-baseline mr-2"
+    />
     <span
       className="mr-2"
     >
@@ -50,10 +48,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   >
     <i
       aria-hidden="true"
-      className="material-icons mr-2"
-    >
-      open_in_new
-    </i>
+      className="at-arrow-up-from-square small align-self-baseline mr-2"
+    />
     <span
       className="mr-2"
     >
@@ -71,10 +67,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   >
     <i
       aria-hidden="true"
-      className="material-icons mr-2"
-    >
-      open_in_new
-    </i>
+      className="at-arrow-up-from-square small align-self-baseline mr-2"
+    />
     <span
       className="mr-2"
     >
@@ -89,10 +83,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   >
     <i
       aria-hidden="true"
-      className="material-icons mr-2"
-    >
-      open_in_new
-    </i>
+      className="at-arrow-up-from-square small align-self-baseline mr-2"
+    />
     <span
       className="mr-2"
     >
@@ -107,10 +99,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   >
     <i
       aria-hidden="true"
-      className="material-icons mr-2"
-    >
-      open_in_new
-    </i>
+      className="at-arrow-up-from-square small align-self-baseline mr-2"
+    />
     <span
       className="mr-2"
     >
@@ -128,10 +118,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   >
     <i
       aria-hidden="true"
-      className="material-icons mr-2"
-    >
-      open_in_new
-    </i>
+      className="at-arrow-up-from-square small align-self-baseline mr-2"
+    />
     <span
       className="mr-2"
     >
@@ -146,10 +134,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   >
     <i
       aria-hidden="true"
-      className="material-icons mr-2"
-    >
-      open_in_new
-    </i>
+      className="at-arrow-up-from-square small align-self-baseline mr-2"
+    />
     <span
       className="mr-2"
     >
@@ -164,10 +150,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   >
     <i
       aria-hidden="true"
-      className="material-icons mr-2"
-    >
-      open_in_new
-    </i>
+      className="at-arrow-up-from-square small align-self-baseline mr-2"
+    />
     <span
       className="mr-2"
     >
@@ -182,10 +166,8 @@ exports[`Core: Accessibility DiveDeeper renders 1`] = `
   >
     <i
       aria-hidden="true"
-      className="material-icons mr-2"
-    >
-      open_in_new
-    </i>
+      className="at-arrow-up-from-square small align-self-baseline mr-2"
+    />
     <span
       className="mr-2"
     >
@@ -400,10 +382,8 @@ exports[`Core: Accessibility WcagStandard renders 1`] = `
     >
       <i
         aria-hidden="true"
-        className="material-icons mr-2"
-      >
-        open_in_new
-      </i>
+        className="at-arrow-up-from-square small align-self-baseline mr-2"
+      />
       <span
         className="mr-2"
       >
@@ -418,10 +398,8 @@ exports[`Core: Accessibility WcagStandard renders 1`] = `
     >
       <i
         aria-hidden="true"
-        className="material-icons mr-2"
-      >
-        open_in_new
-      </i>
+        className="at-arrow-up-from-square small align-self-baseline mr-2"
+      />
       <span
         className="mr-2"
       >

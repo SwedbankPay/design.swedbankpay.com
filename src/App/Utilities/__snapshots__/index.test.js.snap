@@ -21,10 +21,8 @@ exports[`Utilities: index renders 1`] = `
     >
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        child_care
-      </i>
+        className="at-hand-holding-seedling small mr-2"
+      />
       New
     </span>
   </div>

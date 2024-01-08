@@ -66,10 +66,8 @@ exports[`Core: Logotype Favicon renders 1`] = `
   >
     <i
       aria-hidden="true"
-      className="material-icons"
-    >
-      download
-    </i>
+      className="at-download-arrow-down small align-self-baseline"
+    />
     <span
       className="ml-2"
     >
@@ -697,10 +695,8 @@ exports[`Core: Logotype Overview renders 1`] = `
   >
     <i
       aria-hidden="true"
-      className="material-icons"
-    >
-      download
-    </i>
+      className="at-download-arrow-down small align-self-baseline"
+    />
     <span
       className="ml-2"
     >

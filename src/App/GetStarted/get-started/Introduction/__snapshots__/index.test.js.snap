@@ -82,10 +82,8 @@ exports[`GetStarted: Introduction WhatIsDG renders 1`] = `
     >
       <i
         aria-hidden="true"
-        className="material-icons mr-2"
-      >
-        launch
-      </i>
+        className="at-arrow-up-from-square small mr-2 align-self-baseline"
+      />
       View the contribution process prototype
     </a>
   </section>
