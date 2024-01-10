@@ -2,7 +2,7 @@ module.exports = [
 	{
 		title: "Patterns",
 		icon: {
-			name: "at-pattern-security",
+			name: "at-puzzle",
 		},
 		path: "patterns",
 		entryCardText: "Learn about how to we set up different structures",
@@ -28,7 +28,7 @@ module.exports = [
 				path: "login",
 				rootPath: "/patterns/login",
 				componentPath: "content/Login",
-				icon: "at-account",
+				icon: "at-user-key",
 			},
 		],
 	},

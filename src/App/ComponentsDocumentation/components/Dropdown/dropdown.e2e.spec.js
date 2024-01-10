@@ -37,7 +37,10 @@ test("Dropdown page exist", async ({ page }) => {
 	await expect(page.getByRole("link", { name: "Dropdown" })).toHaveCount(
 		page.viewportSize().width < 991 ? 1 : 2,
 	);
-	await page.getByText("expand_moreDropdownarrow_forward").click();
+	await page
+		.getByLabel("components overview")
+		.getByRole("link", { name: "Dropdown" })
+		.click();
 	await expect(page).toHaveTitle(/Dropdown/);
 	await expect(
 		page.getByRole("heading", { name: "Dropdown", exact: true, level: 1 }),

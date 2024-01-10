@@ -11,7 +11,10 @@ test("Expandable page exist", async ({ page }) => {
 	await expect(page.getByRole("link", { name: "Expandable" })).toHaveCount(
 		page.viewportSize().width < 991 ? 1 : 2,
 	);
-	await page.getByText("expandExpandablearrow_forward").click();
+	await page
+		.getByLabel("components overview")
+		.getByRole("link", { name: "Expandable" })
+		.click();
 	await expect(page).toHaveTitle(/Expandable/);
 	await expect(
 		page.getByRole("heading", { name: "Expandable", exact: true, level: 1 }),

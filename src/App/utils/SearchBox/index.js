@@ -172,7 +172,7 @@ const SearchBox = ({ className, mobile }) => {
 								className="btn btn-icon btn-sm"
 								type="button"
 							>
-								<i className="at-magnifying-glass"></i>
+								<i className="at-magnifying-glass small" aria-hidden="true"></i>
 							</button>
 						)}
 					</div>
@@ -207,7 +207,7 @@ const SearchBox = ({ className, mobile }) => {
 								<kbd>K</kbd>
 							</button>
 							<span className="input-group-addon postfix">
-								<i className="at-magnifying-glass"></i>
+								<i className="at-magnifying-glass small" aria-hidden="true"></i>
 							</span>
 						</div>
 					</div>

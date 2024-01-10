@@ -105,7 +105,7 @@ exports[`Patterns renders 1`] = `
           className="cards-content flex-row align-items-center m-0 "
         >
           <i
-            className="at-account small mr-3"
+            className="at-user-key small mr-3"
           />
           <span
             className="h3 m-0"

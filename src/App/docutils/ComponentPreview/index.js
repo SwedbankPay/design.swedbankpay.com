@@ -156,7 +156,7 @@ const ComponentPreview = ({
 							className="tooltip"
 							onClick={(e) => copyToClipboard(e)}
 						>
-							<i className="material-icons-outlined">content_copy</i>
+							<i className="at-clipboard small" aria-hidden="true"></i>
 							<div role="tooltip" id="tooltipCopy">
 								Copy to clipboard
 							</div>

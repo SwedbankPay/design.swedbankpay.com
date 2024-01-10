@@ -191,10 +191,9 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -384,10 +383,9 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
