@@ -1,28 +1,46 @@
 @import "../links.less";
 
 a {
-	color: @link-color;
 
 	&:hover {
 		color: @link-hover-color;
+		text-decoration: none;
 	}
 
 	&:focus {
 		color: @brand-primary;
 	}
 
+	&.bright {
+		color: @payex-light-blue;
+
+		i {
+			color: @payex-light-blue;
+		}
+
+		&:focus-visible {
+			outline: 2px solid @white;
+			border-radius: 2px;
+		}
+	}
+
 	&.icon-link {
+
+		&.bright {
+
+			span {
+				color: @payex-light-blue;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
 		&:hover {
 			color: @brand-primary;
 
 			span {
-				text-decoration: none;
-			}
-		}
-
-		:focus {
-			span {
-				color: @link-hover-color;
 				text-decoration: none;
 			}
 		}
@@ -39,6 +57,7 @@ a {
 
 		&:hover {
 			color: @brand-secondary;
+			text-decoration: none;
 		}
 
 		&.action-link-new-tab {
