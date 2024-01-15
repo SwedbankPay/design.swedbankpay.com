@@ -216,7 +216,7 @@ export const overviewLinks = {
 							{
 								name: "Back",
 								value: {
-									leftIcon: "swepay-icon-chevron-left small",
+									leftIcon: "swepay-icon-chevron-left",
 								},
 							},
 							{

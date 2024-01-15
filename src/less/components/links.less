@@ -20,7 +20,7 @@ a {
 	}
 
 	&.bright {
-		color: @blue-syntax-highlight;
+		color: var(--blue-syntax-highlight);
 
 		&:focus-visible {
 			outline: 2px solid var(--brand-primary);
@@ -65,7 +65,7 @@ a {
 		padding-left: 1rem;
 		border: 1px solid transparent;
 		text-decoration: none;
-		background-color: @brand-bg-1;
+		background-color: var(--bg-primary);
 		color: var(--brand-secondary);
 		margin-bottom: 1rem;
 		border-radius: 4px;
@@ -130,11 +130,11 @@ a {
 			display: flex;
 			align-items: center;
 			background-image: url("../../icons/shapes/chevron_down.svg");
-			transform: rotate(90deg);
+			transform: rotate(-90deg);
 			background-repeat: no-repeat;
 			background-position: center;
 			background-size: contain;
-			width: 18px;
+			width: 24px;
 			height: auto;
 			margin: 0 0.5rem;
 		}
