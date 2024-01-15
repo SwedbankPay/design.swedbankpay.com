@@ -11,19 +11,19 @@ import NpmInformation from "@docutils/NpmInformation";
 const items = [
 	{
 		name: "Add bookmark",
-		icon: "bookmark",
+		icon: "at-bookmark-star",
 	},
 	{
 		name: "Add client",
-		icon: "business_center",
+		icon: "at-business-suitcase",
 	},
 	{
 		name: "Add document",
-		icon: "add_circle",
+		icon: "at-plus-circle",
 	},
 	{
 		name: "Add user",
-		icon: "person_add",
+		icon: "at-user-plus",
 	},
 ];
 

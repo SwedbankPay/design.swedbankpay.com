@@ -14,7 +14,7 @@ const Link = ({
 		leftIcon || rightIcon ? "icon-link" : null,
 		smallFont ? "small" : null,
 		bright ? "bright" : null,
-		className ? className : null
+		className ? className : null,
 	);
 
 	return (
@@ -23,9 +23,7 @@ const Link = ({
 				{leftIcon && (
 					<>
 						{"\n"}
-						<i className="material-icons" aria-hidden="true">
-							{leftIcon}
-						</i>
+						<i className={leftIcon} aria-hidden="true"></i>
 					</>
 				)}
 				{leftIcon || rightIcon ? (
@@ -45,9 +43,7 @@ const Link = ({
 				)}
 				{rightIcon && (
 					<>
-						<i className="material-icons" aria-hidden="true">
-							{rightIcon}
-						</i>
+						<i className={rightIcon} aria-hidden="true"></i>
 						{"\n"}
 					</>
 				)}

@@ -47,7 +47,7 @@
 			/* stylelint-enable selector-list-comma-newline-after */
 
 			.dialog-close {
-				display: inline-flex;
+				display: inline-grid;
 				touch-action: manipulation;
 				cursor: pointer;
 				user-select: none;
@@ -55,6 +55,8 @@
 				border: none;
 				padding: 0;
 				margin-right: -0.5rem;
+				height: 24px;
+				width: 24px;
 
 				&:hover,
 				&.hover {
@@ -81,6 +83,24 @@
 					&.focus {
 						box-shadow: none;
 					}
+				}
+
+				&:before,
+				&:after {
+					content: "";
+					width: 18px;
+					height: 2px;
+					background-color: var(--black);
+					place-self: center;
+					position: absolute;
+				}
+
+				&:before {
+					transform: rotate(45deg);
+				}
+
+				&:after {
+					transform: rotate(-45deg);
 				}
 			}
 		}

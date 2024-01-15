@@ -33,7 +33,7 @@ const InputOptions = () => ({
 					value: {
 						type: "email",
 						addOnType: "icon",
-						prefixValue: "email",
+						prefixValue: "at-envelope small",
 					},
 				},
 				{

@@ -55,12 +55,31 @@ code {
 	button {
 		background-color: transparent;
 		border: none;
-		display: flex;
+		display: grid;
 		cursor: pointer;
 		width: 1.5rem;
 		padding: 0;
 		margin-left: 0.125rem;
 
+		&:before,
+		&:after {
+			content: "";
+			width: 12px;
+			height: 1.5px;
+			background-color: var(--black);
+			place-self: center;
+			position: absolute;
+		}
+
+		&:before {
+			transform: rotate(45deg);
+		}
+
+		&:after {
+			transform: rotate(-45deg);
+		}
+
+		// TODO: Remove this for next major release 11.0.0 - we'll now be using before & after pseudo elements, no need for close icon anymore
 		i {
 			font-size: 1rem;
 		}

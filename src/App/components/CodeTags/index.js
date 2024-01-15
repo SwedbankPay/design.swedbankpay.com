@@ -13,11 +13,11 @@ const CodeTags = ({ className, type, code, text, removable }) => (
 			>
 				{text}
 				{removable && (
-					<button type="button" className="close-button">
-						<i className="material-icons m-auto" aria-label="remove tag">
-							close
-						</i>
-					</button>
+					<button
+						type="button"
+						className="close-button"
+						aria-label="remove tag"
+					></button>
 				)}
 			</span>
 		)}

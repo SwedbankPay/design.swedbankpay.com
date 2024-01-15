@@ -31,7 +31,7 @@ const Button = ({
 		active && href ? "active" : null,
 		disabled && href ? "disabled" : null,
 		bankId ? "btn-bank-id" : null,
-		className ? className : null
+		className ? className : null,
 	);
 
 	const attrs = {
@@ -53,11 +53,7 @@ const Button = ({
 	if (href) {
 		return (
 			<a className={btnClasses} {...attrs} onClick={(e) => e.preventDefault()}>
-				{icon ? (
-					<i className="material-icons" aria-hidden="true">
-						{icon}
-					</i>
-				) : null}
+				{icon ? <i className={icon} aria-hidden="true"></i> : null}
 				{icon && label ? <span>{label}</span> : label}
 			</a>
 		);
@@ -72,9 +68,7 @@ const Button = ({
 			{icon ? "\n\t\t" : null}
 			{icon && !iconAfter ? (
 				<>
-					<i className="material-icons-outlined" aria-hidden="true">
-						{icon}
-					</i>
+					<i className={icon} aria-hidden="true"></i>
 					{"\n\t"}
 				</>
 			) : null}
@@ -103,9 +97,7 @@ const Button = ({
 				<>
 					{icon && iconAfter ? (
 						<>
-							<i className="material-icons ml-2" aria-hidden="true">
-								{icon}
-							</i>
+							<i className={`${icon} ml-2`} aria-hidden="true"></i>
 							{"\n\t\t"}
 						</>
 					) : null}

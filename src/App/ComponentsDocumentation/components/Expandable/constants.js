@@ -56,7 +56,7 @@ export const expandableSidebarOptions = {
 								id: "icon",
 								name: "Icon",
 								value: {
-									icon: "credit_card",
+									icon: "at-credit-card",
 								},
 							},
 						],
