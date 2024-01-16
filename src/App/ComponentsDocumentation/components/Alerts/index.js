@@ -58,7 +58,7 @@ const HowTo = () => (
 			<span className="h3">Do</span>
 			<Alert
 				type="informative"
-				icon="info-circle"
+				icon="swepay-icon-info-circle-filled"
 				text={
 					<p>
 						<b>Best practices:</b> To minimize the risk for a challenge request,
@@ -69,7 +69,7 @@ const HowTo = () => (
 			/>
 			<Alert
 				type="warning"
-				icon="warning"
+				icon="swepay-icon-warning-triangle-filled"
 				text={
 					<p>
 						<b>GDPR sensitive data:</b> If it is necessary to use GDPR sensitive
@@ -90,7 +90,7 @@ const HowTo = () => (
 				<div className="flex-fill mr-1">
 					<Alert
 						type="informative"
-						icon="info-circle"
+						icon="swepay-icon-info-circle-filled"
 						text={
 							<p>
 								<b>Best practices:</b> To minimize the risk for a challenge
@@ -103,7 +103,7 @@ const HowTo = () => (
 				<div className="flex-fill ml-1">
 					<Alert
 						type="warning"
-						icon="warning"
+						icon="swepay-icon-warning-triangle-filled"
 						text={
 							<p>
 								<b>GDPR sensitive data:</b> If it is necessary to use GDPR
@@ -137,7 +137,7 @@ const ContentGuidelines = () => (
 			<div className="d-flex justify-content-center align-items-center pt-3">
 				<Alert
 					type="danger"
-					icon="info-circle"
+					icon="swepay-icon-info-circle-filled"
 					text={
 						<p>
 							<b>Error title:</b> Content text <a href="">link</a>

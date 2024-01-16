@@ -37,7 +37,7 @@ const HowItWorks = () => (
 		</p>
 		<Alert
 			type="warning"
-			icon="warning"
+			icon="swepay-icon-warning-triangle-filled"
 			text={
 				<p>
 					<b>Initializing dialog buttons:</b> To make a button open the dialog

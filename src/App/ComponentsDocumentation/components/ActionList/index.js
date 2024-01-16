@@ -87,7 +87,7 @@ const ActionList = () => {
 		<DocContainer>
 			<Alert
 				type="danger"
-				icon="exclamation-triangle"
+				icon="swepay-icon-error-triangle-filled"
 				text={
 					<p>
 						<b>Deprecated:</b> Be aware, this component will not be maintained

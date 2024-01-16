@@ -32,7 +32,7 @@ export const logoBlack = {
 								description: (
 									<Alert
 										type="warning"
-										icon="warning"
+										icon="swepay-icon-warning-triangle-filled"
 										className="mb-0 mt-4"
 										text={
 											<p>
@@ -94,7 +94,7 @@ export const logoBlack = {
 								description: (
 									<Alert
 										type="warning"
-										icon="warning"
+										icon="swepay-icon-warning-triangle-filled"
 										className="mb-0 mt-4"
 										text={
 											<p>
@@ -178,7 +178,7 @@ export const logoWhite = {
 								description: (
 									<Alert
 										type="warning"
-										icon="warning"
+										icon="swepay-icon-warning-triangle-filled"
 										className="mb-0 mt-4"
 										text={
 											<p>
@@ -245,7 +245,7 @@ export const logoWhite = {
 								description: (
 									<Alert
 										type="warning"
-										icon="warning"
+										icon="swepay-icon-warning-triangle-filled"
 										className="mb-0 mt-4"
 										text={
 											<p>

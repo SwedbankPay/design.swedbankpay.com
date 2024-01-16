@@ -26,7 +26,8 @@ class Nav {
 
 			menu.setAttribute("href", "#");
 			menu.classList.add("nav-openbtn");
-			menu.innerHTML = "<i class='material-icons' aria-hidden='true'>menu</i>";
+			// TODO: replace with a better hamburger menu when provided by designers
+			menu.innerHTML = "<i class='at-justify' aria-hidden='true'></i>";
 
 			this._el.appendChild(menu);
 
@@ -81,7 +82,7 @@ class Nav {
 			passive: true,
 		});
 		this.submenus.forEach((submenu) =>
-			submenu.classList.remove("submenu-open")
+			submenu.classList.remove("submenu-open"),
 		);
 		this.submenuOpen = false;
 	}
@@ -89,7 +90,7 @@ class Nav {
 	/* Removes hidden class from list items */
 	_showItems() {
 		this.listItems.forEach((listItem) =>
-			listItem.classList.remove("responsive-hidden")
+			listItem.classList.remove("responsive-hidden"),
 		);
 	}
 
@@ -99,7 +100,7 @@ class Nav {
 			(notHidden) =>
 				!notHidden.classList.contains("responsive-hidden") &&
 				notHidden.querySelector(SELECTORS.SUB) === null &&
-				this._el.querySelector("UL") === notHidden.parentElement
+				this._el.querySelector("UL") === notHidden.parentElement,
 		);
 
 		if (this.submenus.length > 0) {

@@ -17,7 +17,7 @@ export const alertsShowCase = {
 			component: (
 				<Alert
 					type="danger"
-					icon="exclamation-triangle"
+					icon="swepay-icon-error-triangle-filled"
 					text={titleBuilder("Danger")}
 				/>
 			),
@@ -44,7 +44,11 @@ export const alertsShowCase = {
 		{
 			tab: "Warning",
 			component: (
-				<Alert type="warning" icon="warning" text={titleBuilder("Warning")} />
+				<Alert
+					type="warning"
+					icon="swepay-icon-warning-triangle-filled"
+					text={titleBuilder("Warning")}
+				/>
 			),
 			options: {
 				checkbox: [
@@ -71,7 +75,7 @@ export const alertsShowCase = {
 			component: (
 				<Alert
 					type="informative"
-					icon="info-circle"
+					icon="swepay-icon-info-circle-filled"
 					text={titleBuilder("Informative")}
 				/>
 			),
@@ -100,7 +104,7 @@ export const alertsShowCase = {
 			component: (
 				<Alert
 					type="success"
-					icon="check-circle"
+					icon="swepay-icon-check-circle-filled"
 					text={titleBuilder("Success")}
 				/>
 			),

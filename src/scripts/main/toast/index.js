@@ -68,7 +68,7 @@ class Toast {
 			const button = document.createElement("button");
 			const icon = document.createElement("i");
 
-			if (iconType === "close") {
+			if (iconType === "swepay-icon-close") {
 				button.setAttribute("class", "toast-close");
 				button.setAttribute("id", "toast-close-button");
 				button.setAttribute("aria-label", "Close button");
@@ -77,8 +77,7 @@ class Toast {
 				icon.setAttribute("aria-hidden", "true");
 			}
 
-			icon.classList.add("material-icons");
-			icon.innerHTML = iconType;
+			icon.classList.add(iconType);
 
 			if (dismiss) {
 				button.addEventListener("click", () => {
@@ -86,29 +85,29 @@ class Toast {
 				});
 			}
 
-			return iconType === "close" ? button : icon;
+			return iconType === "swepay-icon-close" ? button : icon;
 		};
 
 		// Set toast type
 		switch (this.options.type) {
 			case "success":
 				toast.classList.add("toast-success");
-				toast.appendChild(_createIcon("check_circle"));
+				toast.appendChild(_createIcon("swepay-icon-check-circle-filled"));
 
 				break;
 			case "neutral":
 				toast.classList.add("toast-neutral");
-				toast.appendChild(_createIcon("info"));
+				toast.appendChild(_createIcon("swepay-icon-info-circle-filled"));
 
 				break;
 			case "warning":
 				toast.classList.add("toast-warning");
-				toast.appendChild(_createIcon("warning"));
+				toast.appendChild(_createIcon("swepay-icon-warning-triangle-filled"));
 
 				break;
 			case "danger":
 				toast.classList.add("toast-danger");
-				toast.appendChild(_createIcon("error"));
+				toast.appendChild(_createIcon("swepay-icon-error-triangle-filled"));
 
 				break;
 			default:
@@ -116,7 +115,7 @@ class Toast {
 		}
 
 		if (this.options.dismissable) {
-			toast.appendChild(_createIcon("close", true));
+			toast.appendChild(_createIcon("swepay-icon-close", true));
 		}
 
 		// Set content

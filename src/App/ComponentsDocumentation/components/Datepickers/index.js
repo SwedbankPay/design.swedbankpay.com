@@ -278,7 +278,7 @@ const MultipleDates = () => (
 		</ComponentPreview>
 		<Alert
 			type="warning"
-			icon="warning"
+			icon="swepay-icon-warning-triangle-filled"
 			text={
 				<p>
 					<b>Max number of dates:</b> The{" "}

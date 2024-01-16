@@ -81,7 +81,7 @@ const AlertBox = () => (
 	<Alert
 		id="toast-overview-alert"
 		type="informative"
-		icon={"info-circle"}
+		icon="swepay-icon-info-circle-filled"
 		text={
 			<p>
 				<b>Static code example</b> The code viewer shows an example on how to
