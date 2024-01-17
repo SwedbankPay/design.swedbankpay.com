@@ -561,6 +561,55 @@ exports[`Core: Iconography renders 1`] = `
         >
           <i
             aria-hidden="true"
+            className="small swepay-icon-chevron-right"
+          />
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            small
+          </code>
+        </div>
+        
+
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
+            className="swepay-icon-chevron-right"
+          />
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            "" (default)
+          </code>
+        </div>
+        
+
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
+            className="large swepay-icon-chevron-right"
+          />
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            large
+          </code>
+        </div>
+        
+
+      </div>
+      <div
+        className="d-flex justify-content-between align-items-end p-4"
+      >
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
             className="small swepay-icon-info-circle-filled"
           />
           <code
