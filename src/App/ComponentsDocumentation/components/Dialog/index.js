@@ -19,9 +19,10 @@ const HowItWorks = () => (
 			you want to &quot;force&quot; the user to make a choice. Therefore the
 			only way to close a dialog is to choose one of the presented actions or,
 			if given, press the{" "}
-			<i className="material-icons d-inline-flex" aria-label="close button">
-				close
-			</i>{" "}
+			<i
+				className="swepay-icon-close d-inline-flex"
+				aria-label="close button"
+			></i>{" "}
 			to close the dialog.
 		</p>
 		<p>

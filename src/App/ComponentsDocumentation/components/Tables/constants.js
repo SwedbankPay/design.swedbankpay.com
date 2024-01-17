@@ -10,20 +10,18 @@ const Buttons = ({ actionList, favBtn, deleteBtn }) => (
 		) : (
 			<>
 				<button className="table-button">
-					<i className="material-icons material-icons-outlined">edit</i>
+					<i className="at-pencil small" aria-hidden="true"></i>
 				</button>
 				{deleteBtn ? (
 					<button className="btn btn-secondary">Delete</button>
 				) : (
 					<button className="table-button">
-						<i className="material-icons material-icons-outlined">delete</i>
+						<i className="at-trash small" aria-hidden="true"></i>
 					</button>
 				)}
 				{favBtn && (
 					<button className="table-button">
-						<i className="material-icons material-icons-outlined">
-							favorite_border
-						</i>
+						<i className="at-plus-heart small" aria-hidden="true"></i>
 					</button>
 				)}
 			</>
@@ -214,8 +212,9 @@ export const consistencyTable = (chaos) => {
 		tableData.tbody.map((obj) =>
 			obj.tr.map(
 				(obj) =>
-					(obj.classname = classArray[Math.floor(Math.random() * 3).toString()])
-			)
+					(obj.classname =
+						classArray[Math.floor(Math.random() * 3).toString()]),
+			),
 		);
 	}
 
