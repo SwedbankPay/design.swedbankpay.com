@@ -101,10 +101,8 @@ exports[`Component: InputGroup - renders a form-group with a prefix icon if prop
     >
       <i
         aria-hidden="true"
-        className="material-icons material-icons-outlined"
-      >
-        home
-      </i>
+        className="home"
+      />
     </span>
     
 

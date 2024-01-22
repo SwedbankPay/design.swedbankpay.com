@@ -48,7 +48,10 @@ const Radio = ({
 										{"\n"}
 										<label htmlFor={id}>
 											{style === "checkmark" && (
-												<i className="at-check-circle" aria-hidden="true"></i>
+												<i
+													className="swepay-icon-check-circle-filled-customizable bg-blend-exclusion small"
+													aria-hidden="true"
+												></i>
 											)}{" "}
 											{label}
 										</label>
@@ -100,7 +103,9 @@ const Radio = ({
 						{"\n"}
 						{label ? (
 							<label htmlFor={id}>
-								{style === "checkmark" && <i className="at-check-circle"></i>}{" "}
+								{style === "checkmark" && (
+									<i className="swepay-icon-check-circle-filled-customizable bg-blend-exclusion small"></i>
+								)}{" "}
 								{label}
 							</label>
 						) : null}

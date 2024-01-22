@@ -30,16 +30,10 @@ exports[`Component: CodeTags renders with class removable when removable is prov
 >
   test
   <button
+    aria-label="remove tag"
     className="close-button"
     type="button"
-  >
-    <i
-      aria-label="remove tag"
-      className="material-icons m-auto"
-    >
-      close
-    </i>
-  </button>
+  />
 </span>
 `;
 

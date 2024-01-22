@@ -23,10 +23,8 @@ exports[`Component: Tooltip - renders 1`] = `
 
   test title
   <i
-    className="material-icons-outlined m-0"
-  >
-    edit
-  </i>
+    className="at-pencil m-0"
+  />
   
 
   <span
@@ -61,10 +59,8 @@ exports[`Component: Tooltip - renders with icon if icon is provided 1`] = `
   
 
   <i
-    className="material-icons-outlined m-0"
-  >
-    edit
-  </i>
+    className="at-pencil m-0"
+  />
   
 
   <span

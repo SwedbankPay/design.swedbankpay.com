@@ -28,17 +28,17 @@ const Overview = () => (
 				aria-label="Pagination Navigation"
 			>
 				<button className="arrow-start d-block disabled">
-					<i className="material-icons" aria-label="start"></i>
+					<i className="at-arrow-right-line" aria-label="start"></i>
 				</button>
 				<button className="arrow-back disabled">
-					<i className="material-icons" aria-label="back"></i>
+					<i className="swepay-icon-chevron-left" aria-label="back"></i>
 				</button>
 				<span className="mobile d-block font-weight-bold">Page 1 of 10</span>
 				<button className="arrow-forward">
-					<i className="material-icons" aria-label="forward"></i>
+					<i className="swepay-icon-chevron-right" aria-label="forward"></i>
 				</button>
 				<button className="arrow-end d-block">
-					<i className="material-icons" aria-label="end"></i>
+					<i className="at-arrow-left-line" aria-label="end"></i>
 				</button>
 			</nav>
 		</div>
@@ -89,13 +89,13 @@ const Overview = () => (
 						<nav className="pagination example">
 							<button className="arrow-back">
 								{"\n"}
-								<i className="material-icons"></i>
+								<i className="swepay-icon-chevron-left"></i>
 								{"\n"}
 							</button>
 							<div className="example-box my-auto"></div>
 							<button className="arrow-forward">
 								{"\n"}
-								<i className="material-icons"></i>
+								<i className="swepay-icon-chevron-right"></i>
 								{"\n"}
 							</button>
 						</nav>

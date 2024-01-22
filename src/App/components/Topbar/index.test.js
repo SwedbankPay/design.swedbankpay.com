@@ -77,12 +77,12 @@ describe("Component: Topbar -", () => {
 				const menuContainer = screen
 					.getByRole("navigation")
 					.querySelector(".topbar-link-container");
-				const menuIcons = menuContainer.querySelectorAll("i.material-icons");
+				const menuIcons = menuContainer.querySelectorAll("i");
 
 				expect(menuIcons.length).toEqual(0);
 
 				const componentForSnap = renderer.create(
-					<Topbar topbarContent={menuNoIcons} />
+					<Topbar topbarContent={menuNoIcons} />,
 				);
 
 				expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -102,19 +102,19 @@ describe("Component: Topbar -", () => {
 				expect(
 					menu.items.every((item) =>
 						[...renderedNav.querySelectorAll("a span")].some(
-							(elmt) => elmt.textContent === item.name
-						)
-					)
+							(elmt) => elmt.textContent === item.name,
+						),
+					),
 				).toBeTruthy();
 
 				expect(
 					[...renderedNav.querySelectorAll("a span")].some(
-						(elmt) => elmt.textContent === "Log out"
-					)
+						(elmt) => elmt.textContent === "Log out",
+					),
 				).not.toBeTruthy();
 
 				const componentForSnap = renderer.create(
-					<Topbar topbarContent={menu} />
+					<Topbar topbarContent={menu} />,
 				);
 
 				expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -131,12 +131,12 @@ describe("Component: Topbar -", () => {
 
 				expect(renderedNav).toHaveClass("topbar-nav");
 
-				expect(
-					renderedNav.querySelector(".topbar-link-right .material-icons")
-				).toHaveTextContent("exit_to_app");
+				expect(renderedNav.querySelector(".topbar-link-right i")).toHaveClass(
+					"at-exit small",
+				);
 
 				const componentForSnap = renderer.create(
-					<Topbar topbarContent={menu} logout />
+					<Topbar topbarContent={menu} logout />,
 				);
 
 				expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -152,17 +152,17 @@ describe("Component: Topbar -", () => {
 				expect(
 					screen
 						.getAllByRole("button")
-						.filter((elmt) => elmt.classList.contains("topbar-btn"))
+						.filter((elmt) => elmt.classList.contains("topbar-btn")),
 				).toHaveLength(1);
 
 				expect(
 					screen
 						.getAllByRole("button")
-						.filter((elmt) => elmt.classList.contains("topbar-close"))
+						.filter((elmt) => elmt.classList.contains("topbar-close")),
 				).toHaveLength(1);
 
 				const componentForSnap = renderer.create(
-					<Topbar topbarContent={menu} />
+					<Topbar topbarContent={menu} />,
 				);
 
 				expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -185,7 +185,7 @@ describe("Component: Topbar -", () => {
 				expect(eventHandler.preventDefault).toHaveBeenCalled();
 
 				const componentForSnap = renderer.create(
-					<Topbar topbarContent={menu} />
+					<Topbar topbarContent={menu} />,
 				);
 
 				expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -202,7 +202,7 @@ describe("Component: Topbar -", () => {
 				expect(renderedSidebar).toBeTruthy();
 
 				const componentForSnap = renderer.create(
-					<Topbar topbarContent={menu} sidebar />
+					<Topbar topbarContent={menu} sidebar />,
 				);
 
 				expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -218,20 +218,20 @@ describe("Component: Topbar -", () => {
 						.getAllByRole("link")
 						.filter((elmt) =>
 							[...elmt.children].some(
-								(childElmt) => childElmt.textContent === "Log out"
-							)
-						)
+								(childElmt) => childElmt.textContent === "Log out",
+							),
+						),
 				).toBeTruthy();
 				expect(
 					screen
 						.queryAllByRole("navigation")
-						?.some((elmt) => elmt.classList.contains("topbar-nav"))
+						?.some((elmt) => elmt.classList.contains("topbar-nav")),
 				).toBeFalsy();
 				expect(
 					screen
 						.getAllByRole("link")
 						.find((elmt) => elmt.classList.contains("topbar-link-right"))
-						.querySelector("span")
+						.querySelector("span"),
 				).toHaveTextContent("Log out");
 
 				const componentForSnap = renderer.create(<Topbar logout />);
@@ -265,7 +265,7 @@ describe("Component: Topbar -", () => {
 
 				expect(screen.getByLabelText("To homepage").tagName).toBe("A");
 				expect(screen.getByLabelText("To homepage")).toHaveClass(
-					"topbar-logo topbar-logo-png"
+					"topbar-logo topbar-logo-png",
 				);
 			});
 		});

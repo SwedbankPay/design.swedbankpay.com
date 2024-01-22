@@ -90,7 +90,10 @@ export const Migration = () => (
 								aria-controls="topbar-nav"
 							>
 								{"\n"}
-								<i class="at-justify topbar-btn-icon" aria-hidden="true"></i>
+								<i
+									class="swepay-icon-menu-hamburger topbar-btn-icon"
+									aria-hidden="true"
+								></i>
 								{"\n"}
 							</button>
 							{"\n"}
@@ -183,7 +186,10 @@ export const Migration = () => (
 								aria-controls="topbar-nav"
 							>
 								{"\n"}
-								<i class="at-justify topbar-btn-icon" aria-hidden="true"></i>
+								<i
+									class="swepay-icon-menu-hamburger topbar-btn-icon"
+									aria-hidden="true"
+								></i>
 								{"\n"}
 							</button>
 							{"\n"}
@@ -254,7 +260,10 @@ export const Migration = () => (
 							aria-controls="topbar-nav"
 						>
 							{"\n"}
-							<i class="at-justify topbar-btn-icon" aria-hidden="true"></i>
+							<i
+								class="swepay-icon-menu-hamburger topbar-btn-icon"
+								aria-hidden="true"
+							></i>
 							{"\n"}
 						</button>
 						{"\n"}
@@ -284,7 +293,10 @@ export const Migration = () => (
 							aria-controls="topbar-nav"
 						>
 							{"\n"}
-							<i class="at-justify topbar-btn-icon" aria-hidden="true"></i>
+							<i
+								class="swepay-icon-menu-hamburger topbar-btn-icon"
+								aria-hidden="true"
+							></i>
 							{"\n"}
 						</button>
 					</EditableComponentPreview>

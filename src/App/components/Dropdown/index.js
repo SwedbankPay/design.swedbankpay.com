@@ -40,8 +40,11 @@ const DropdownSelect = ({
 						aria-label="dropdown button"
 						disabled={disabled}
 					>
+						{"\n"}
 						{buttonLabel}
+						{"\n"}
 						<i className="swepay-icon-chevron-down ml-2" aria-hidden="true"></i>
+						{"\n"}
 					</button>
 					{"\n"}
 					<div className={`dropdown-menu ${fullWidth ? "full-width" : ""}`}>

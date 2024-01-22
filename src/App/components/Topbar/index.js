@@ -32,7 +32,10 @@ const TopbarBtn = ({ legacy = true }) => (
 			aria-controls="topbar-nav"
 		>
 			{"\n\t\t"}
-			<i className="at-justify topbar-btn-icon" aria-hidden="true"></i>
+			<i
+				className="swepay-icon-menu-hamburger topbar-btn-icon"
+				aria-hidden="true"
+			></i>
 			{"\n\t\t"}
 		</button>
 		{legacy && (

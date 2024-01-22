@@ -22,16 +22,10 @@ exports[`Documentation: CodeTags ContentGuidelines renders 1`] = `
     >
       Removable
       <button
+        aria-label="remove tag"
         className="close-button"
         type="button"
-      >
-        <i
-          aria-label="remove tag"
-          className="material-icons m-auto"
-        >
-          close
-        </i>
-      </button>
+      />
     </span>
     <code
       className="code-tags code-tags-tertiary"

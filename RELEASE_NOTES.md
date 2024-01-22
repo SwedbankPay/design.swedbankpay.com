@@ -1,21 +1,13 @@
 # Changelog
 
-## \[10.9.0\] - 24.11.2023
+## \[11.0.0\] - 24.11.2023
 
 ## Component changes
 
 ### Non breaking UI changes
 
-- Typography
-
-  - update typography values (line-heights)
-  - add text-wrap balance for headings & pretty for paragraphs (progressive enhancement)
-
-- Colors ( & colors utilities):
-
-  - some colors variables got updated
-  - removed the possibility to combine text-color utility classes WITH `.text-muted` to decrease their opacity
-  - `.text-muted` class still exist, but it will always mean a full opacity color
+- Tags
+  - the close icon is now a cross set via CSS only, no need to add an `<i>` element
 
 ## Maintenance
 
@@ -23,4 +15,4 @@
 
 ## Design System website
 
-- Update the Identity/Colors page for SwedbankPay side
+- Migrate icons used on the DS documentation website from Material-icons to Atlas + Swepay-icon custom icons

@@ -225,10 +225,8 @@ Array [
                  
                 <i
                   aria-hidden="true"
-                  className="material-icons text-muted"
-                >
-                  verified_user
-                </i>
+                  className="verified_user text-muted"
+                />
                  
                 
 
@@ -599,7 +597,7 @@ Array [
                                     &lt;div class="media-img"&gt;
                 
 
-                                        &lt;i class="material-icons text-muted" aria-hidden="true"&gt;verified_user&lt;/i&gt;
+                                        &lt;i class="verified_user text-muted" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                     &lt;/div&gt;
@@ -864,10 +862,8 @@ Array [
                  
                 <i
                   aria-hidden="true"
-                  className="material-icons text-muted"
-                >
-                  account_balance
-                </i>
+                  className="account_balance text-muted"
+                />
                  
                 
 
@@ -948,10 +944,8 @@ Array [
                  
                 <i
                   aria-hidden="true"
-                  className="material-icons text-muted"
-                >
-                  verified_user
-                </i>
+                  className="verified_user text-muted"
+                />
                  
                 
 
@@ -1311,7 +1305,7 @@ Array [
                                     &lt;div class="media-img"&gt;
                 
 
-                                        &lt;i class="material-icons text-muted" aria-hidden="true"&gt;account_balance&lt;/i&gt;
+                                        &lt;i class="account_balance text-muted" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                     &lt;/div&gt;
@@ -1386,7 +1380,7 @@ Array [
                                     &lt;div class="media-img"&gt;
                 
 
-                                        &lt;i class="material-icons text-muted" aria-hidden="true"&gt;verified_user&lt;/i&gt;
+                                        &lt;i class="verified_user text-muted" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                     &lt;/div&gt;

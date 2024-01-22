@@ -45,10 +45,9 @@ exports[`Documentation: Dropdown ContentGuidelines renders 1`] = `
                 
 
                 <i
-                  className="material-icons"
-                >
-                  more_vert
-                </i>
+                  aria-hidden="true"
+                  className="at-dots-vertical"
+                />
                 
 
               </button>
@@ -110,10 +109,9 @@ exports[`Documentation: Dropdown ContentGuidelines renders 1`] = `
                 
 
                 <i
-                  className="material-icons"
-                >
-                  more_vert
-                </i>
+                  aria-hidden="true"
+                  className="at-dots-vertical"
+                />
                 
 
               </button>
@@ -178,10 +176,9 @@ exports[`Documentation: Dropdown ContentGuidelines renders 1`] = `
                 
 
                 <i
-                  className="material-icons"
-                >
-                  more_vert
-                </i>
+                  aria-hidden="true"
+                  className="at-dots-vertical"
+                />
                 
 
               </button>
@@ -243,10 +240,9 @@ exports[`Documentation: Dropdown ContentGuidelines renders 1`] = `
                 
 
                 <i
-                  className="material-icons"
-                >
-                  more_vert
-                </i>
+                  aria-hidden="true"
+                  className="at-dots-vertical"
+                />
                 
 
               </button>

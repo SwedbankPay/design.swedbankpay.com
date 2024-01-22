@@ -134,10 +134,8 @@ exports[`Component: Sidebar renders 1`] = `
 
                   <i
                     aria-expanded="false"
-                    className="material-icons"
-                  >
-                    arrow_back_ios
-                  </i>
+                    className="swepay-icon-chevron-left"
+                  />
                   
 
                   <span>
@@ -313,10 +311,8 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
 
                   <i
                     aria-expanded="false"
-                    className="material-icons"
-                  >
-                    arrow_back_ios
-                  </i>
+                    className="swepay-icon-chevron-left"
+                  />
                   
 
                   <span>
@@ -359,10 +355,8 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
 
                       <i
                         aria-expanded="false"
-                        className="material-icons"
-                      >
-                        arrow_back_ios
-                      </i>
+                        className="swepay-icon-chevron-left"
+                      />
                       
 
                       <span>
@@ -400,10 +394,8 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
 
                           <i
                             aria-expanded="false"
-                            className="material-icons"
-                          >
-                            arrow_back_ios
-                          </i>
+                            className="swepay-icon-chevron-left"
+                          />
                           
 
                           <span>
@@ -441,10 +433,8 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
 
                               <i
                                 aria-expanded="false"
-                                className="material-icons"
-                              >
-                                arrow_back_ios
-                              </i>
+                                className="swepay-icon-chevron-left"
+                              />
                               
 
                               <span>
@@ -482,10 +472,8 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
 
                                   <i
                                     aria-expanded="false"
-                                    className="material-icons"
-                                  >
-                                    arrow_back_ios
-                                  </i>
+                                    className="swepay-icon-chevron-left"
+                                  />
                                   
 
                                   <span>
@@ -523,10 +511,8 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
 
                                       <i
                                         aria-expanded="false"
-                                        className="material-icons"
-                                      >
-                                        arrow_back_ios
-                                      </i>
+                                        className="swepay-icon-chevron-left"
+                                      />
                                       
 
                                       <span>
@@ -564,10 +550,8 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
 
                                           <i
                                             aria-expanded="false"
-                                            className="material-icons"
-                                          >
-                                            arrow_back_ios
-                                          </i>
+                                            className="swepay-icon-chevron-left"
+                                          />
                                           
 
                                           <span>
@@ -726,10 +710,8 @@ exports[`Component: Sidebar renders five levels when four levels is provided 1`]
 
                   <i
                     aria-expanded="false"
-                    className="material-icons"
-                  >
-                    arrow_back_ios
-                  </i>
+                    className="swepay-icon-chevron-left"
+                  />
                   
 
                   <span>
@@ -772,10 +754,8 @@ exports[`Component: Sidebar renders five levels when four levels is provided 1`]
 
                       <i
                         aria-expanded="false"
-                        className="material-icons"
-                      >
-                        arrow_back_ios
-                      </i>
+                        className="swepay-icon-chevron-left"
+                      />
                       
 
                       <span>
@@ -924,10 +904,8 @@ exports[`Component: Sidebar renders four levels when four levels is provided 1`]
 
                   <i
                     aria-expanded="false"
-                    className="material-icons"
-                  >
-                    arrow_back_ios
-                  </i>
+                    className="swepay-icon-chevron-left"
+                  />
                   
 
                   <span>

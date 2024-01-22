@@ -171,6 +171,14 @@ export const shapes = [
 		code: "plus-add",
 	},
 	{
+		title: "Hamburger menu",
+		code: "menu-hamburger",
+	},
+	{
+		title: "Check circle filled customizable",
+		code: "check-circle-filled-customizable",
+	},
+	{
 		title: "Check circle filled",
 		code: "check-circle-filled",
 	},

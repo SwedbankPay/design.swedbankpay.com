@@ -66,7 +66,7 @@ const AppHeader = () =>
 					aria-expanded="false"
 					aria-controls="topbar-nav"
 				>
-					<i className="at-justify topbar-btn-icon"></i>
+					<i className="swepay-icon-menu-hamburger topbar-btn-icon"></i>
 				</button>
 			</div>
 		</header>
@@ -83,7 +83,7 @@ const AppHeader = () =>
 				aria-expanded="false"
 				aria-controls="topbar-nav"
 			>
-				<i className="at-justify topbar-btn-icon"></i>
+				<i className="swepay-icon-menu-hamburger topbar-btn-icon"></i>
 			</button>
 			<button type="button" className="topbar-close" aria-label="Close menu">
 				<i className="swepay-icon-close topbar-btn-icon"></i>

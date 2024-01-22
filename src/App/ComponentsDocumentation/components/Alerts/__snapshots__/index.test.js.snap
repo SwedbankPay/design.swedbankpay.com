@@ -20,7 +20,7 @@ exports[`Documentation: Alerts Content guidelines renders 1`] = `
 
         <i
           aria-hidden="true"
-          className="at-info-circle"
+          className="swepay-icon-info-circle-filled"
         />
         <p>
           <b>

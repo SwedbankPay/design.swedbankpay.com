@@ -18,10 +18,8 @@ exports[`Component: Link renders with left icon when leftIcon is provided 1`] = 
 
   <i
     aria-hidden="true"
-    className="material-icons"
-  >
-    chevron_left
-  </i>
+    className="swepay-icon-chevron-left"
+  />
   
 
   <span
@@ -61,10 +59,8 @@ exports[`Component: Link renders with right icon when rightIcon is provided 1`] 
 
   <i
     aria-hidden="true"
-    className="material-icons"
-  >
-    chevron_right
-  </i>
+    className="swepay-icon-chevron-right"
+  />
   
 
 </a>

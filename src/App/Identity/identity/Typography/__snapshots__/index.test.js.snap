@@ -153,10 +153,8 @@ Array [
     >
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        file_download
-      </i>
+        className="file_download"
+      />
       <span>
         Akkurat Mono
       </span>
