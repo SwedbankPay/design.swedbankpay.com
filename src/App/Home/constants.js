@@ -5,6 +5,32 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.9.1",
+		title: "PayEx Open Source contributors are on fire 🔥🚀💚",
+		text: (
+			<>
+				<p>The Green side of the force is strengthening 💚</p>
+				<p>
+					A patch release full of UI updates from the Visby folks (hey guys 👋),
+					to bring some love to the green side of the Design System, and iterate
+					over the components to update the colors and their UI in general. Much
+					needed, and very much appreciated 🌟💚
+				</p>
+				<p>
+					Which means: You, yes, you 🫵, Front-End dev using the design system,
+					but who see some things could be improved ... get inspired by our
+					Visby stars and push some PR to fix this issue bothering you. Our dev
+					team is limited (well, it&apos;s only me really 😅) so we rely on all
+					of you to keep it great 🎸, robust 💪, and shiny ✨
+				</p>
+				<p>
+					Also some minor bugfix for the tooltip component, and some dependency
+					updates. But this is not as important 😉
+				</p>
+			</>
+		),
+	},
+	{
 		version: "10.9.0",
 		title: "Colors and Typography refresher 🎨",
 		text: (

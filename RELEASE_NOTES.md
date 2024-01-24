@@ -1,26 +1,29 @@
 # Changelog
 
-## \[10.9.0\] - 24.11.2023
+## \[10.9.1\] - 24.01.2024
 
 ## Component changes
 
 ### Non breaking UI changes
 
-- Typography
+- PayEx - non-breaking UI updates
+  - color variables updates (brand-secondary hover, btn-secondary-hover, disabled, ...)
+  - input fields colors (for states disabled & success)
+  - badge colors
+  - skip-link font
+  - link
+    - hover state colors on bright mode
+    - hover state for inline links
+  - code tags secondary & tertiary background colors
+  -
 
-  - update typography values (line-heights)
-  - add text-wrap balance for headings & pretty for paragraphs (progressive enhancement)
+### Bugfix
 
-- Colors ( & colors utilities):
-
-  - some colors variables got updated
-  - removed the possibility to combine text-color utility classes WITH `.text-muted` to decrease their opacity
-  - `.text-muted` class still exist, but it will always mean a full opacity color
+- Tooltip
+  - fix position tooltip (it got detached from its parent element a few versions back)
 
 ## Maintenance
 
 - npm packages dependencies upgrades
 
 ## Design System website
-
-- Update the Identity/Colors page for SwedbankPay side
