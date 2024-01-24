@@ -1,11 +1,14 @@
 .tooltip {
+	position: relative;
+	cursor: pointer;
+
 	&:hover {
-		border-color: @brand-secondary;
+		border-color: var(--brand-secondary);
 	}
 
 	&:focus-visible,
 	&:active {
-		outline: 2px solid @brand-secondary;
+		outline: 2px solid var(--brand-secondary);
 	}
 
 	&.isVisible {
@@ -41,8 +44,8 @@
 		max-width: 250px;
 		top: -8px;
 		transform: translateX(-50%) translateY(-100%);
-		background: @white;
-		color: @brand-secondary;
+		background: var(--white);
+		color: var(--brand-secondary);
 		text-align: center;
 		font-size: 0.875rem;
 		line-height: 1.5;
