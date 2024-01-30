@@ -28,9 +28,12 @@ const Cards = ({ type, titleTxt, imgSrc, icon, text, children, wide }) => (
 						{children && children}
 					</div>
 					{"\n"}
-					<i className="material-icons" aria-hidden="true">
-						arrow_forward
-					</i>
+					<div className="action-cta">
+						<span>Continue</span>
+						<i className="material-icons" aria-hidden="true">
+							arrow_forward
+						</i>
+					</div>
 					{"\n"}
 				</a>
 				{"\n"}

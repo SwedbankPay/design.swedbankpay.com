@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// FIXME: is this component actually used ? why is there both Card && CardS components existing in parallel. It is at best confusing. At worst one is completely deprecated and I converted the test for nothing 😜 ahahhaha
+// TODO: remove during next major release, not offered for a long time now
 const Card = ({
 	type,
 	titleTxt,

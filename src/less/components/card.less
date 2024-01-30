@@ -1,95 +1,53 @@
 @import "../global.less";
 
 .cards {
+	--border-radius: 16px;
+	--cards-light-gray: var(--base-5);
+	--cards-dark-gray: var(--base-2);
+	--min-width: 240px;
+	--max-width: 700px;
+	--transition-duration: 0.1s;
+
 	display: flex;
 	flex-grow: 1;
 	flex-direction: column;
 	position: relative;
-	padding: 2.25rem 1.5rem 1.5rem;
+	min-width: var(--min-width);
+	max-width: var(--max-width);
+	padding: 1.5rem;
 	margin: 2rem 0 1rem;
-	border-radius: 4px;
-	box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
-	color: @brand-secondary;
+	border-radius: var(--border-radius);
+	color: var(--brand-secondary);
 	text-decoration: none;
-	background-color: @white;
+	background-color: var(--cards-light-gray);
 	cursor: pointer;
-	transition: 0.5s;
-
-	&:after {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		content: "";
-		width: 100%;
-		border-bottom-left-radius: 4px;
-		border-bottom-right-radius: 4px;
-		opacity: 0;
-		transition: opacity 0.5s ease-in-out;
-	}
+	transition: var(--transition-duration);
 
 	&:hover {
-		box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.15);
-		color: @brand-secondary;
+		background-color: var(--cards-dark-gray);
+		color: var(--white);
+		transition: all var(--transition-duration) cubic-bezier(1, 0, 0, 1);
 
-		&:after {
-			opacity: 1;
+		.h4 {
+			color: var(--white);
+			transition: all var(--transition-duration) cubic-bezier(1, 0, 0, 1);
 		}
 	}
 
 	&:focus {
-		box-shadow: 0 0 0 2px @brand-secondary;
+		box-shadow: 0 0 0 2px var(--brand-secondary);
 		outline: 2px solid transparent;
-		color: @brand-secondary;
-
-		&:after {
-			opacity: 1;
-		}
+		color: var(--brand-secondary);
 	}
 
-	&.cards-primary {
-		&:after {
-			border-bottom: 4px solid @brand-primary;
-		}
+	&.cards-dark {
+		background-color: var(--cards-dark-gray);
+		color: var(--white);
+		transition: all var(--transition-duration) cubic-bezier(1, 0, 0, 1);
 
-		> i {
-			color: @brand-secondary;
-		}
-
-		.cards-icon {
-			color: @brand-secondary;
-			background-color: @brand-primary;
-
-			svg {
-				fill: @brand-secondary;
-			}
-		}
-	}
-
-	&.cards-secondary {
-		&:after {
-			border-bottom: 4px solid @brand-secondary-info-1;
-		}
-
-		.cards-icon {
-			background-color: @brand-secondary-info-1;
-
-			svg {
-				fill: @white;
-			}
-		}
-	}
-
-	&.cards-tertiary {
-		&:after {
-			border-bottom: 4px solid @brand-secondary-info-2;
-		}
-
-		.cards-icon {
-			background-color: @brand-secondary-info-2;
-
-			svg {
-				fill: @white;
-			}
+		.h4 {
+			color: var(--white);
+			transition: all var(--transition-duration) cubic-bezier(1, 0, 0, 1);
 		}
 	}
 
@@ -106,8 +64,6 @@
 
 		.cards-icon {
 			font-family: var(--brand-monofont);
-			height: 2rem;
-			top: -1rem;
 		}
 
 		.cards-content {
@@ -121,8 +77,22 @@
 		}
 	}
 
-	> i {
-		margin-top: auto;
+	// forward arrow icon at the bottom of the card
+	> i,
+	.action-cta i {
+		width: 18px;
+		height: 18px;
+
+		&.material-icons {
+			font-size: 18px;
+			margin-top: 3px;
+		}
+	}
+
+	// so far NOT set as mandatory parent of i (arrow at bottom of card) so don't break existing cards
+	.action-cta {
+		display: flex;
+		gap: 0.5rem;
 	}
 
 	> img {
@@ -134,17 +104,8 @@
 	}
 
 	.cards-icon {
-		display: flex;
-		position: absolute;
-		top: -1.25rem;
-		left: 1.5rem;
-		width: 2.5rem;
-		height: 2.5rem;
-		border-radius: 4px;
-		align-items: center;
-		justify-content: center;
-		color: @brand-secondary;
-		background-color: @brand-primary;
+		color: currentColor;
+		margin-bottom: 0.5rem;
 
 		svg {
 			max-width: 24px;
@@ -159,10 +120,13 @@
 		.h4 {
 			font-family: var(--brand-headline);
 			margin-top: 0;
+			margin-bottom: 0.5rem;
+			transition: all var(--transition-duration) cubic-bezier(1, 0, 0, 1);
 		}
 	}
 }
 
+// TODO: remove during next major release, not offered for a long time now
 .card {
 	display: flex;
 	flex-direction: column;
@@ -202,7 +166,7 @@
 			border-top: 7px solid @brand-primary-light;
 
 			* {
-				color: @brand-secondary;
+				color: var(--brand-secondary);
 			}
 
 			&:after {
@@ -232,7 +196,7 @@
 			border-top: 7px solid @brand-accent;
 
 			* {
-				color: @brand-secondary;
+				color: var(--brand-secondary);
 			}
 
 			&:after {
@@ -253,7 +217,7 @@
 
 		.card-header {
 			* {
-				color: @brand-secondary;
+				color: var(--brand-secondary);
 			}
 		}
 	}
@@ -279,7 +243,7 @@
 
 			& a {
 				text-decoration: none;
-				color: @brand-secondary;
+				color: var(--brand-secondary);
 			}
 		}
 		/* stylelint-enable selector-list-comma-newline-after */
@@ -287,7 +251,7 @@
 
 	.card-footer {
 		padding: 1rem 1.5rem;
-		background: rgba(0, 0, 0, 0.03);
+		background: rgb(0 0 0 / 3%);
 
 		.footer-text {
 			p {

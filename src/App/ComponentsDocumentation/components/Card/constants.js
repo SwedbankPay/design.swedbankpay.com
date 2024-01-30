@@ -61,24 +61,18 @@ export const overviewCards = {
 					},
 					{
 						id: "color_radio",
-						title: "Accent color",
+						title: "Color theme",
 						values: [
 							{
-								name: "Example 1",
+								name: "Default",
 								value: {
-									type: "primary",
+									type: "",
 								},
 							},
 							{
-								name: "Example 2",
+								name: "Dark",
 								value: {
-									type: "secondary",
-								},
-							},
-							{
-								name: "Example 3",
-								value: {
-									type: "tertiary",
+									type: "dark",
 								},
 							},
 						],
