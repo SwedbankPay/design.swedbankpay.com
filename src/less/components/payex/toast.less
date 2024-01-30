@@ -1,21 +1,13 @@
 @import "../toast.less";
 
-#toast-container {
-	.toast {
-		box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.15);
-		border-radius: 4px;
+#toast-container .toast {
+	box-shadow: 1px 2px 10px rgb(0 0 0 / 15%);
+	border-radius: 4px;
 
-		&.toast-neutral,
-		&.toast-success,
-		&.toast-warning,
-		&.toast-danger {
-			border: none;
-		}
-	}
-
-	// TODO: is it actually needed ? why ? is it to make sure it's material icons normal and NOT material icons OUTLINED ?
-	// maybe we can remove it
-	i.material-icons {
-		font-family: "Material Icons";
+	&.toast-neutral,
+	&.toast-success,
+	&.toast-warning,
+	&.toast-danger {
+		border: none;
 	}
 }
