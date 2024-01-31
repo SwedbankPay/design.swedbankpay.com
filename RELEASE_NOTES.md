@@ -1,29 +1,26 @@
 # Changelog
 
-## \[10.9.1\] - 24.01.2024
+## \[11.0.0\] - 05.02.2024
 
 ## Component changes
 
 ### Non breaking UI changes
 
-- PayEx - non-breaking UI updates
-  - color variables updates (brand-secondary hover, btn-secondary-hover, disabled, ...)
-  - input fields colors (for states disabled & success)
-  - badge colors
-  - skip-link font
-  - link
-    - hover state colors on bright mode
-    - hover state for inline links
-  - code tags secondary & tertiary background colors
-  -
-
-### Bugfix
-
-- Tooltip
-  - fix position tooltip (it got detached from its parent element a few versions back)
+- Icons migration step 1 (NON BREAKING ... for now and until next major release. But we're moving away from Google's material-icons)
+  - Import Atlas icons (via CDN via CSS) for Atlas icons
+  - Add custom icons "Swepay-icons": a few svg icons saved locally to complement where missing from Atlas icons set (called Swepay-icons but supported for both Swedbankpay AND PayEx sides)
+  - Add support in the components styles for the Atlas icons and our new custom made "Swepay-icons"
 
 ## Maintenance
 
 - npm packages dependencies upgrades
 
 ## Design System website
+
+- Update iconography page
+
+  - Add sections about new Atlas and custom icons
+  - Improve sections about sizes
+  - Update status of material-icons
+
+- Deadlink fix (thanks Yvonne for the heads-up)

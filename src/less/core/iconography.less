@@ -634,7 +634,8 @@ i[class*=" swepay-icon-"] {
 	&.swepay-icon-chevron-right,
 	&.swepay-icon-close,
 	&.swepay-icon-minus-substract,
-	&.swepay-icon-plus-add {
+	&.swepay-icon-plus-add,
+	&.swepay-icon-menu-hamburger {
 		mask: var(--mask-path) 0 0 / var(--icon-size) var(--icon-size) no-repeat;
 	}
 
@@ -643,18 +644,15 @@ i[class*=" swepay-icon-"] {
 	}
 
 	&.swepay-icon-chevron-up {
-		--mask-path: url("../../icons/shapes/chevron_down.svg");
-		transform: rotate(180deg);
+		--mask-path: url("../../icons/shapes/chevron-up.svg");
 	}
 
 	&.swepay-icon-chevron-left {
-		--mask-path: url("../../icons/shapes/chevron_down.svg");
-		transform: rotate(90deg);
+		--mask-path: url("../../icons/shapes/chevron-left.svg");
 	}
 
 	&.swepay-icon-chevron-right {
-		--mask-path: url("../../icons/shapes/chevron_down.svg");
-		transform: rotate(-90deg);
+		--mask-path: url("../../icons/shapes/chevron-right.svg");
 	}
 
 	&.swepay-icon-close {
@@ -667,6 +665,10 @@ i[class*=" swepay-icon-"] {
 
 	&.swepay-icon-plus-add {
 		--mask-path: url("../../icons/shapes/plus_add.svg");
+	}
+
+	&.swepay-icon-menu-hamburger {
+		--mask-path: url("../../icons/shapes/menu_hamburger.svg");
 	}
 
 	// ICONS styled differently since their color should never be modified.
@@ -702,6 +704,17 @@ i[class*=" swepay-icon-"] {
 
 	&.swepay-icon-info-circle-filled {
 		background-image: url("../../icons/shapes/info_circle_filled.svg");
+	}
+
+	// Icons using a mixed approach (mask + background-image) to allow for color customization of the icon itself and the background separately
+	// (would use the mask approach if I could, but so far the strokes/shapes inside are disappearing)
+	&.swepay-icon-check-circle-filled-customizable {
+		background-color: currentColor; /* Color of the circle */
+		background-image: url("../../icons/shapes/checkmark.svg");
+		background-repeat: no-repeat;
+		background-position: 47% 53%;
+		background-size: 55%;
+		border-radius: 100%;
 	}
 }
 

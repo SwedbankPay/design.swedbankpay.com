@@ -349,6 +349,36 @@ exports[`Core: Iconography renders 1`] = `
             <td>
               <i
                 aria-hidden="true"
+                className="swepay-icon-menu-hamburger"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                menu-hamburger
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-check-circle-filled-customizable"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                check-circle-filled-customizable
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
                 className="swepay-icon-check-circle-filled"
               />
             </td>
@@ -493,6 +523,12 @@ exports[`Core: Iconography renders 1`] = `
                     12
                     
 
+                    13
+                    
+
+                    14
+                    
+
                   </pre>
                 </td>
                 <td
@@ -518,6 +554,12 @@ exports[`Core: Iconography renders 1`] = `
                     
 
                     &lt;i class="swepay-icon-plus-add" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-menu-hamburger" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-check-circle-filled-customizable" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
                     &lt;i class="swepay-icon-check-circle-filled" aria-hidden="true"&gt;&lt;/i&gt;
