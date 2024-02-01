@@ -2,19 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-const Alert = ({ id, type, icon, close, text, className }) => {
+const Alert = ({ id, type, icon = "", close, text, className }) => {
 	const alertClasses = classnames(
 		"alert",
 		`alert-${type}`,
-		className ? className : null
+		className ? className : null,
 	);
 
 	return (
 		<div id={id} className={alertClasses}>
 			{"\n"}
-			<i className="material-icons alert-icon" aria-hidden="true">
-				{icon}
-			</i>
+			<i className={`at-${icon}`} aria-hidden="true"></i>
 			{text}
 			{"\n"}
 			{close ? (

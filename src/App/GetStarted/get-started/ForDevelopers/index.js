@@ -52,9 +52,7 @@ const InstallJS = () => (
 			</ul>
 		</p>
 		<div className="alert alert-informative">
-			<i className="material-icons alert-icon" aria-hidden="true">
-				info
-			</i>
+			<i className="at-info-circle" aria-hidden="true"></i>
 			<p>
 				<b>Recommended way:</b> Importing component per component means you do
 				not end up importing the javascript for components you are not using.
@@ -75,9 +73,7 @@ const InstallJS = () => (
 			dg.script.initAll();
 		</ComponentPreview>
 		<div className="alert alert-informative">
-			<i className="material-icons alert-icon" aria-hidden="true">
-				info
-			</i>
+			<i className="at-info-circle" aria-hidden="true"></i>
 			<p>
 				<b>Standards:</b> Our JS uses modern features such as optional-chaining.
 				If you&apos;re experiencing issues you might want to look at our browser
@@ -134,9 +130,7 @@ const InstallCSSLESS = () => (
 			],
 		</ComponentPreview>
 		<div className="alert alert-informative">
-			<i className="material-icons alert-icon" aria-hidden="true">
-				info
-			</i>
+			<i className="at-info-circle" aria-hidden="true"></i>
 			<p>
 				<b>Import only once:</b> Either import from the style file <em>OR</em>{" "}
 				from the build tool. If you import through both you will end up loading
@@ -161,9 +155,7 @@ const InstallIndividualComponents = () => (
 			url(&quot;@swedbankpay/design-guide/src/less/components/expandable.less&quot;);
 		</ComponentPreview>
 		<div className="alert alert-informative">
-			<i className="material-icons alert-icon" aria-hidden="true">
-				info
-			</i>
+			<i className="at-info-circle" aria-hidden="true"></i>
 			<p>
 				<b>Web-perf:</b> Importing the style of individual components means
 				fewer css imported, hence smaller file size. If you do not want to
@@ -356,9 +348,7 @@ const BrowserSupport = () => (
 			))}
 		</div>
 		<div className="alert alert-informative mt-4">
-			<i className="material-icons alert-icon" aria-hidden="true">
-				info
-			</i>
+			<i className="at-info-circle" aria-hidden="true"></i>
 			<p>
 				<b>Target Browser:</b> &quot;Last 3 versions, &gt; 1%, not dead&quot;
 			</p>

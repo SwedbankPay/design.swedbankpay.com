@@ -2507,10 +2507,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        error
-      </i>
+        className="at-exclamation-triangle"
+      />
       <p>
         <b>
           Deprecated:
@@ -3318,10 +3316,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="at-info-circle"
+      />
       <p>
         <b>
           Accessibility considerations:
@@ -3644,10 +3640,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="at-info-circle"
+      />
       <p>
         <b>
           Accessibility considerations:
@@ -3874,10 +3868,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="at-info-circle"
+      />
       <p>
         <b>
           Accessibility considerations:
@@ -4175,10 +4167,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="at-info-circle"
+      />
       <p>
         <b>
           Accessibility considerations:
@@ -4504,10 +4494,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="at-info-circle"
+      />
       <p>
         <b>
           Accessibility considerations:
@@ -4859,10 +4847,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="at-info-circle"
+      />
       <p>
         <b>
           Accessibility considerations:
@@ -5100,10 +5086,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="at-info-circle"
+      />
       <p>
         <b>
           Accessibility considerations:
@@ -5329,10 +5313,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="at-info-circle"
+      />
       <p>
         <b>
           Accessibility considerations:
@@ -5654,10 +5636,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="at-info-circle"
+      />
       <p>
         <b>
           Accessibility considerations:
@@ -5913,10 +5893,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="at-info-circle"
+      />
       <p>
         <b>
           Accessibility considerations:

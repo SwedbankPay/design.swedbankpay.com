@@ -13,7 +13,7 @@ const ActionListToggle = () => (
 			aria-haspopup="true"
 		>
 			{"\n"}
-			<i className="material-icons">more_vert</i>
+			<i className="at-dots-vertical small" aria-hidden></i>
 			{"\n"}
 		</button>
 		{"\n"}
@@ -57,7 +57,7 @@ ActionList.propTypes = {
 		PropTypes.shape({
 			name: PropTypes.string.isRequired,
 			icon: PropTypes.string,
-		})
+		}),
 	).isRequired,
 };
 

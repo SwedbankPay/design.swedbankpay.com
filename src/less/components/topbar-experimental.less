@@ -165,7 +165,13 @@
 					.topbar-link-right {
 						margin: initial;
 
-						.material-icons {
+						.material-icons,
+						:is(
+								i[class^="at-"],
+								i[class*=" at-"],
+								i[class^="swepay-icon-"],
+								i[class*=" swepay-icon-"]
+							) {
 							margin: 0;
 						}
 					}

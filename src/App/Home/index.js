@@ -44,7 +44,7 @@ const Home = () => {
 						.filter((route) =>
 							isSwedbankPay
 								? !route.title.toLowerCase().includes("patterns")
-								: !route.title.toLowerCase().includes("playbook")
+								: !route.title.toLowerCase().includes("playbook"),
 						)
 						.map((route) => (
 							<React.Fragment key={route.title}>
@@ -148,7 +148,7 @@ const Home = () => {
 					</span>
 					<Alert
 						type="informative"
-						icon="info"
+						icon="info-circle"
 						text={
 							<p>
 								<b>Versioning:</b>

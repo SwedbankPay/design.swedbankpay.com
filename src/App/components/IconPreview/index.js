@@ -13,11 +13,12 @@ const IconPreview = ({
 }) => {
 	const classNames = className ? className.split(" ") : [];
 	const iconClasses = classnames(
-		type,
-		size ? `${type}-${size}` : "",
+		type !== "swepay-icon" ? type : "",
+		size && type !== "swepay-icon" ? `${type}-${size}` : "",
+		size && type === "swepay-icon" ? size?.code : "",
 		type === "material-icons" ? "" : `${type}-${name}`,
 		squaredFlag ? "flag-icon-squared" : "",
-		...classNames
+		...classNames,
 	);
 
 	return preview || previewSize ? (
@@ -26,7 +27,7 @@ const IconPreview = ({
 				{iconClasses.includes("material-icons") ? name : null}
 			</i>
 			<code className="code-tags code-tags-secondary mt-2">
-				{previewSize ? size : name}
+				{previewSize ? size?.title ?? size : name}
 			</code>
 		</div>
 	) : (

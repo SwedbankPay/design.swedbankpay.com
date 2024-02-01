@@ -1,15 +1,15 @@
 @import "../progress-steps.less";
 
-.steps {
-	ol {
-		li {
-			&.steps-completed {
-				.material-icons {
-					&.steps-icon {
-						color: @white;
-					}
-				}
-			}
-		}
-	}
+.steps
+	ol
+	li.steps-completed
+	.steps-icon:is(
+		i,
+		[class^="at-"],
+		[class*=" at-"],
+		[class^="swepay-icon-"],
+		[class*=" swepay-icon-"],
+		.material-icons
+	) {
+	color: var(--white);
 }

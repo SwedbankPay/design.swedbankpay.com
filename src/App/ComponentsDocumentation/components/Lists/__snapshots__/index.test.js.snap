@@ -3945,10 +3945,9 @@ exports[`Documentation: Lists renders 1`] = `
               
 
               <i
-                className="material-icons"
-              >
-                more_vert
-              </i>
+                aria-hidden={true}
+                className="at-dots-vertical small"
+              />
               
 
             </button>
@@ -4241,7 +4240,7 @@ exports[`Documentation: Lists renders 1`] = `
                               &lt;button id="actionListToggle" aria-label="Action list button" type="button" class="action-toggle" aria-haspopup="true"&gt;
                   
 
-                                  &lt;i class="material-icons"&gt;more_vert&lt;/i&gt;
+                                  &lt;i class="at-dots-vertical small" aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                               &lt;/button&gt;

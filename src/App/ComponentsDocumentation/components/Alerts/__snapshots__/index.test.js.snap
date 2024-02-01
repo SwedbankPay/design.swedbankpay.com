@@ -20,10 +20,8 @@ exports[`Documentation: Alerts Content guidelines renders 1`] = `
 
         <i
           aria-hidden="true"
-          className="material-icons alert-icon"
-        >
-          info
-        </i>
+          className="at-info-circle"
+        />
         <p>
           <b>
             Error title:

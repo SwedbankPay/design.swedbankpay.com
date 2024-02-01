@@ -8,7 +8,7 @@ exports[`Utilities: DeprecatedComponentAlert renders 1`] = `
 
   <i
     aria-hidden="true"
-    className="material-icons alert-icon"
+    className="at-exclamation-triangle"
   />
   
 

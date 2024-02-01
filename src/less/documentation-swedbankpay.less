@@ -44,7 +44,7 @@
 		& > div:not(.sp-stack) {
 			font-size: initial;
 			line-height: 1.5;
-			color: @brand-secondary;
+			color: var(--brand-secondary);
 		}
 	}
 
@@ -145,18 +145,6 @@
 		}
 	}
 
-	/* Only used for showing border-utility [AW] */
-	.demo-square {
-		height: 5rem;
-		width: 5rem;
-		background-color: @light-gray;
-		display: inline-block;
-
-		&:not(:last-child) {
-			margin-right: 1rem;
-		}
-	}
-
 	.glow-on-hover {
 		cursor: pointer;
 		position: relative;
@@ -239,7 +227,7 @@
 	z-index: 103;
 
 	&:focus-visible {
-		outline: 2px solid @brand-secondary;
+		outline: 2px solid var(--brand-secondary);
 		border-radius: 2px;
 	}
 
@@ -251,7 +239,7 @@
 		}
 
 		&:focus-visible {
-			outline: 2px solid @brand-secondary;
+			outline: 2px solid var(--brand-secondary);
 			border-radius: 2px;
 		}
 
@@ -275,7 +263,7 @@
 				background: rgb(@brand-primary-lighter 0.8);
 				padding: 2px 6px;
 				margin: 2px;
-				color: @brand-secondary-light-1;
+				color: var(--brand-secondary-light-1);
 			}
 		}
 
@@ -297,7 +285,7 @@
 			&:focus,
 			&:hover {
 				i {
-					color: @brand-secondary;
+					color: var(--brand-secondary);
 					transform: scale(1.2);
 				}
 			}
@@ -311,7 +299,7 @@
 		height: auto;
 		position: absolute;
 		z-index: 103;
-		background-color: @white;
+		background-color: var(--white);
 		border-radius: var(--border-radius, 8px);
 		max-height: 50vh;
 		overflow: auto;
@@ -319,7 +307,7 @@
 		padding-top: 0.5rem;
 
 		&:focus-visible {
-			outline: 2px solid @brand-secondary;
+			outline: 2px solid var(--brand-secondary);
 			border-radius: 2px;
 		}
 
@@ -332,7 +320,7 @@
 				text-decoration: none;
 
 				&:focus-visible {
-					outline: 2px solid @brand-secondary;
+					outline: 2px solid var(--brand-secondary);
 					outline-offset: -2px;
 					border-radius: 2px;
 				}
@@ -356,7 +344,7 @@
 					}
 
 					span {
-						color: @brand-secondary;
+						color: var(--brand-secondary);
 						display: inline-block;
 						position: relative;
 						z-index: 1;
@@ -394,7 +382,7 @@
 
 				i {
 					font-size: 1.25rem;
-					color: @brand-secondary;
+					color: var(--brand-secondary);
 				}
 			}
 
@@ -417,7 +405,7 @@
 					&:hover,
 					&:focus {
 						background-color: transparent;
-						outline-color: @brand-secondary;
+						outline-color: var(--brand-secondary);
 
 						i {
 							color: #000000;
@@ -910,21 +898,6 @@
 		border-radius: 2px;
 	}
 
-	.doc-circle {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: auto;
-		height: 150px;
-		width: $height;
-		background-color: @brand-primary;
-		border-radius: 50%;
-
-		.material-icons {
-			font-size: 6rem;
-		}
-	}
-
 	.doc-sidebar {
 		height: auto;
 		position: sticky;
@@ -1123,7 +1096,7 @@
 		}
 
 		&.showcase-panel-negative {
-			background-color: @brand-secondary;
+			background-color: var(--brand-secondary);
 		}
 
 		&.showcase-panel-advanced {
@@ -1282,7 +1255,7 @@
 						width: 100%;
 
 						&.dark {
-							background-color: @brand-secondary;
+							background-color: var(--brand-secondary);
 						}
 					}
 				}
@@ -1729,7 +1702,7 @@
 			border: 1px solid transparent;
 
 			&:hover {
-				border: 1px solid @brand-secondary;
+				border: 1px solid var(--brand-secondary);
 			}
 		}
 
@@ -1766,7 +1739,7 @@
 		&.help-icon {
 			width: 1.25rem;
 			height: 1.25rem;
-			color: @brand-secondary;
+			color: var(--brand-secondary);
 		}
 	}
 
@@ -1893,7 +1866,7 @@
 
 	#link-doc {
 		.link-dark-background {
-			background-color: @brand-secondary;
+			background-color: var(--brand-secondary);
 			border-radius: var(--border-radius, 8px);
 
 			a:focus-visible {
@@ -2040,7 +2013,7 @@
 
 		.accordion {
 			:focus-visible {
-				outline: 2px solid @brand-secondary;
+				outline: 2px solid var(--brand-secondary);
 				border-radius: 2px;
 			}
 
@@ -2064,7 +2037,7 @@
 				.example-box {
 					width: 6rem;
 					height: 0.625rem;
-					background-color: @brand-secondary;
+					background-color: var(--brand-secondary);
 					border-radius: 0.125rem;
 				}
 			}
@@ -2160,7 +2133,7 @@
 				padding: 0 0.75rem;
 
 				&:focus {
-					outline: 2px solid @brand-secondary;
+					outline: 2px solid var(--brand-secondary);
 					border-radius: 2px;
 				}
 			}
@@ -2183,19 +2156,6 @@
 					height: fit-content;
 					width: fit-content;
 				}
-			}
-		}
-	}
-}
-
-@media screen and (max-width: @screen-xs-max) {
-	.documentation {
-		.doc-circle {
-			height: 120px;
-			width: $height;
-
-			.material-icons {
-				font-size: 4rem;
 			}
 		}
 	}
