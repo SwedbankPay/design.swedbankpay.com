@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { browsers, gridAndBreakpoints, discoverMore } from "./constants";
 
 import { ComponentPreview, DocContainer } from "@docutils";
@@ -456,7 +456,7 @@ const DiscoverMore = () => (
 		<h2 id="discover-more">Discover more</h2>
 		<div className="component-overview hide-arrow-icon">
 			{discoverMore.map((card) => (
-				<Link
+				<NavLink
 					key={card.url}
 					to={card.url}
 					className="cards cards-primary cards-wide"
@@ -466,7 +466,7 @@ const DiscoverMore = () => (
 						<span>{card.text}</span>
 					</div>
 					<i className="material-icons">arrow_forward</i>
-				</Link>
+				</NavLink>
 			))}
 		</div>
 	</section>
