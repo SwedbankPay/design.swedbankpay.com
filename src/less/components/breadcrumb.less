@@ -32,6 +32,7 @@ ol.breadcrumb {
 			}
 		}
 
+		// TODO: not by issue since not exposed, but replace by pure CSS lines
 		&:after {
 			content: "chevron_right";
 
@@ -39,7 +40,13 @@ ol.breadcrumb {
 		}
 	}
 
-	.material-icons {
+	.material-icons,
+	:is(
+			i[class^="at-"],
+			i[class*=" at-"],
+			i[class^="swepay-icon-"],
+			i[class*=" swepay-icon-"]
+		) {
 		font-size: 1rem;
 		vertical-align: text-top;
 	}

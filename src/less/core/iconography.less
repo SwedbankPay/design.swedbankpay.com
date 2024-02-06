@@ -1,3 +1,79 @@
+// revert style of <i> tag whennot used as icon element
+i:not(
+		[class^="at-"],
+		[class*=" at-"],
+		[class^="swepay-icon-"],
+		[class*=" swepay-icon-"],
+		.flag-icon,
+		.payment-icon,
+		.material-icons,
+		.material-icons-outlined
+	) {
+	font-style: italic !important;
+	font-family: revert !important;
+}
+
+// ICONS
+i:is(
+		[class^="at-"],
+		[class*=" at-"],
+		[class^="swepay-icon-"],
+		[class*=" swepay-icon-"],
+		.payment-icon,
+		.flag-icon,
+		.material-icons,
+		.material-icons-outlined
+	) {
+	--icon-size: 24px;
+
+	&.small {
+		--icon-size: 18px;
+	}
+
+	&.large {
+		--icon-size: 32px;
+	}
+
+	// TODO: add some cached icon for booster load (e.g. hamburger, close, magnifier, ...) max 5-10 (anc che how heavy each are to actually be sure it's worth it or if CSS becomes too big
+	&:is([class^="at-"], [class*=" at-"]) {
+		display: inline-grid;
+		grid-template: var(--icon-size, 24px) / var(--icon-size, 24px);
+		font-size: var(--icon-size, 24px);
+
+		&:before {
+			place-self: center;
+			transform: translateY(-2%);
+		}
+	}
+
+	&.material-icons {
+		font-family: var(--icons-font-material-default) !important;
+	}
+
+	&:is(.material-icons-outlined, .material-icons.material-icons-outlined) {
+		font-family: var(--icons-font-material-outlined) !important;
+	}
+}
+
+.material-icons-styling(@color: @brand-secondary, @margin: 0 0.5rem, @font-size: 1.25rem) {
+	color: @color;
+	margin: @margin;
+	font-family: "Material Icons";
+	font-weight: normal;
+	font-style: normal;
+	font-size: @font-size;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	font-feature-settings: "liga";
+}
+
+// custom payment icons start
+
 i.payment-icon {
 	height: 2rem;
 	width: 3rem;
@@ -166,6 +242,9 @@ i.payment-icon {
 	}
 }
 
+// custom icons end
+
+// material-icons sizing start
 i.material-icons {
 	&-tiny,
 	&.tiny {
@@ -189,6 +268,10 @@ i.material-icons {
 		font-size: 6rem;
 	}
 }
+
+// material-icons sizing end
+
+// flag icons sizing start
 
 i.flag-icon {
 	position: relative;
@@ -265,30 +348,264 @@ i.flag-icon {
 	}
 }
 
-@flag-list: ~"ad", ~"ae", ~"af", ~"ag", ~"ai", ~"al", ~"am", ~"ao", ~"aq", ~"ar",
-	~"as", ~"at", ~"au", ~"aw", ~"ax", ~"az", ~"ba", ~"bb", ~"bd", ~"be", ~"bf",
-	~"bg", ~"bh", ~"bi", ~"bj", ~"bl", ~"bm", ~"bn", ~"bo", ~"bq", ~"br", ~"bs",
-	~"bt", ~"bv", ~"bw", ~"by", ~"bz", ~"ca", ~"cc", ~"cd", ~"cf", ~"cg", ~"ch",
-	~"ci", ~"ck", ~"cl", ~"cm", ~"cn", ~"co", ~"cr", ~"cu", ~"cv", ~"cw", ~"cx",
-	~"cy", ~"cz", ~"de", ~"dj", ~"dk", ~"dm", ~"do", ~"dz", ~"ec", ~"ee", ~"eg",
-	~"eh", ~"er", ~"es-ct", ~"es", ~"et", ~"eu", ~"fi", ~"fj", ~"fk", ~"fm", ~"fo",
-	~"fr", ~"ga", ~"gb-eng", ~"gb-nir", ~"gb-sct", ~"gb-wls", ~"gb", ~"gd", ~"ge",
-	~"gf", ~"gg", ~"gh", ~"gi", ~"gl", ~"gm", ~"gn", ~"gp", ~"gq", ~"gr", ~"gs",
-	~"gt", ~"gu", ~"gw", ~"gy", ~"hk", ~"hm", ~"hn", ~"hr", ~"ht", ~"hu", ~"id",
-	~"ie", ~"il", ~"im", ~"in", ~"io", ~"iq", ~"ir", ~"is", ~"it", ~"je", ~"jm",
-	~"jo", ~"jp", ~"ke", ~"kg", ~"kh", ~"ki", ~"km", ~"kn", ~"kp", ~"kr", ~"kw",
-	~"ky", ~"kz", ~"la", ~"lb", ~"lc", ~"li", ~"lk", ~"lr", ~"ls", ~"lt", ~"lu",
-	~"lv", ~"ly", ~"ma", ~"mc", ~"md", ~"me", ~"mf", ~"mg", ~"mh", ~"mk", ~"ml",
-	~"mm", ~"mn", ~"mo", ~"mp", ~"mq", ~"mr", ~"ms", ~"mt", ~"mu", ~"mv", ~"mw",
-	~"mx", ~"my", ~"mz", ~"na", ~"nc", ~"ne", ~"nf", ~"ng", ~"ni", ~"nl", ~"no",
-	~"np", ~"nr", ~"nu", ~"nz", ~"om", ~"pa", ~"pe", ~"pf", ~"pg", ~"ph", ~"pk",
-	~"pl", ~"pm", ~"pn", ~"pr", ~"ps", ~"pt", ~"pw", ~"py", ~"qa", ~"re", ~"ro",
-	~"rs", ~"ru", ~"rw", ~"sa", ~"sb", ~"sc", ~"sd", ~"se", ~"sg", ~"sh", ~"si",
-	~"sj", ~"sk", ~"sl", ~"sm", ~"sn", ~"so", ~"sr", ~"ss", ~"st", ~"sv", ~"sx",
-	~"sy", ~"sz", ~"tc", ~"td", ~"tf", ~"tg", ~"th", ~"tj", ~"tk", ~"tl", ~"tm",
-	~"tn", ~"to", ~"tr", ~"tt", ~"tv", ~"tw", ~"tz", ~"ua", ~"ug", ~"um", ~"un",
-	~"us", ~"uy", ~"uz", ~"va", ~"vc", ~"ve", ~"vg", ~"vi", ~"vn", ~"vu", ~"wf",
-	~"ws", ~"xk", ~"ye", ~"yt", ~"za", ~"zm", ~"zw";
+@flag-list:
+	~"ad",
+	~"ae",
+	~"af",
+	~"ag",
+	~"ai",
+	~"al",
+	~"am",
+	~"ao",
+	~"aq",
+	~"ar",
+	~"as",
+	~"at",
+	~"au",
+	~"aw",
+	~"ax",
+	~"az",
+	~"ba",
+	~"bb",
+	~"bd",
+	~"be",
+	~"bf",
+	~"bg",
+	~"bh",
+	~"bi",
+	~"bj",
+	~"bl",
+	~"bm",
+	~"bn",
+	~"bo",
+	~"bq",
+	~"br",
+	~"bs",
+	~"bt",
+	~"bv",
+	~"bw",
+	~"by",
+	~"bz",
+	~"ca",
+	~"cc",
+	~"cd",
+	~"cf",
+	~"cg",
+	~"ch",
+	~"ci",
+	~"ck",
+	~"cl",
+	~"cm",
+	~"cn",
+	~"co",
+	~"cr",
+	~"cu",
+	~"cv",
+	~"cw",
+	~"cx",
+	~"cy",
+	~"cz",
+	~"de",
+	~"dj",
+	~"dk",
+	~"dm",
+	~"do",
+	~"dz",
+	~"ec",
+	~"ee",
+	~"eg",
+	~"eh",
+	~"er",
+	~"es-ct",
+	~"es",
+	~"et",
+	~"eu",
+	~"fi",
+	~"fj",
+	~"fk",
+	~"fm",
+	~"fo",
+	~"fr",
+	~"ga",
+	~"gb-eng",
+	~"gb-nir",
+	~"gb-sct",
+	~"gb-wls",
+	~"gb",
+	~"gd",
+	~"ge",
+	~"gf",
+	~"gg",
+	~"gh",
+	~"gi",
+	~"gl",
+	~"gm",
+	~"gn",
+	~"gp",
+	~"gq",
+	~"gr",
+	~"gs",
+	~"gt",
+	~"gu",
+	~"gw",
+	~"gy",
+	~"hk",
+	~"hm",
+	~"hn",
+	~"hr",
+	~"ht",
+	~"hu",
+	~"id",
+	~"ie",
+	~"il",
+	~"im",
+	~"in",
+	~"io",
+	~"iq",
+	~"ir",
+	~"is",
+	~"it",
+	~"je",
+	~"jm",
+	~"jo",
+	~"jp",
+	~"ke",
+	~"kg",
+	~"kh",
+	~"ki",
+	~"km",
+	~"kn",
+	~"kp",
+	~"kr",
+	~"kw",
+	~"ky",
+	~"kz",
+	~"la",
+	~"lb",
+	~"lc",
+	~"li",
+	~"lk",
+	~"lr",
+	~"ls",
+	~"lt",
+	~"lu",
+	~"lv",
+	~"ly",
+	~"ma",
+	~"mc",
+	~"md",
+	~"me",
+	~"mf",
+	~"mg",
+	~"mh",
+	~"mk",
+	~"ml",
+	~"mm",
+	~"mn",
+	~"mo",
+	~"mp",
+	~"mq",
+	~"mr",
+	~"ms",
+	~"mt",
+	~"mu",
+	~"mv",
+	~"mw",
+	~"mx",
+	~"my",
+	~"mz",
+	~"na",
+	~"nc",
+	~"ne",
+	~"nf",
+	~"ng",
+	~"ni",
+	~"nl",
+	~"no",
+	~"np",
+	~"nr",
+	~"nu",
+	~"nz",
+	~"om",
+	~"pa",
+	~"pe",
+	~"pf",
+	~"pg",
+	~"ph",
+	~"pk",
+	~"pl",
+	~"pm",
+	~"pn",
+	~"pr",
+	~"ps",
+	~"pt",
+	~"pw",
+	~"py",
+	~"qa",
+	~"re",
+	~"ro",
+	~"rs",
+	~"ru",
+	~"rw",
+	~"sa",
+	~"sb",
+	~"sc",
+	~"sd",
+	~"se",
+	~"sg",
+	~"sh",
+	~"si",
+	~"sj",
+	~"sk",
+	~"sl",
+	~"sm",
+	~"sn",
+	~"so",
+	~"sr",
+	~"ss",
+	~"st",
+	~"sv",
+	~"sx",
+	~"sy",
+	~"sz",
+	~"tc",
+	~"td",
+	~"tf",
+	~"tg",
+	~"th",
+	~"tj",
+	~"tk",
+	~"tl",
+	~"tm",
+	~"tn",
+	~"to",
+	~"tr",
+	~"tt",
+	~"tv",
+	~"tw",
+	~"tz",
+	~"ua",
+	~"ug",
+	~"um",
+	~"un",
+	~"us",
+	~"uy",
+	~"uz",
+	~"va",
+	~"vc",
+	~"ve",
+	~"vg",
+	~"vi",
+	~"vn",
+	~"vu",
+	~"wf",
+	~"ws",
+	~"xk",
+	~"ye",
+	~"yt",
+	~"za",
+	~"zm",
+	~"zw";
 
 each(@flag-list, .(@country-code) {
     i.flag-icon-@{country-code} {
@@ -298,3 +615,107 @@ each(@flag-list, .(@country-code) {
         }
     }
 });
+
+// flag icons sizing end
+
+// shape (basic UI) custom icons start
+i[class^="swepay-icon-"],
+i[class*=" swepay-icon-"] {
+	display: inline-block;
+	height: var(--icon-size, 24px);
+	width: var(--icon-size, 24px);
+	background-color: currentColor;
+	aspect-ratio: 1 / 1;
+
+	// use mask so their color can be customized via CSS dynamically
+	&.swepay-icon-chevron-up,
+	&.swepay-icon-chevron-down,
+	&.swepay-icon-chevron-left,
+	&.swepay-icon-chevron-right,
+	&.swepay-icon-close,
+	&.swepay-icon-minus-substract,
+	&.swepay-icon-plus-add,
+	&.swepay-icon-menu-hamburger {
+		mask: var(--mask-path) 0 0 / var(--icon-size) var(--icon-size) no-repeat;
+	}
+
+	&.swepay-icon-chevron-down {
+		--mask-path: url("../../icons/shapes/chevron_down.svg");
+	}
+
+	&.swepay-icon-chevron-up {
+		--mask-path: url("../../icons/shapes/chevron-up.svg");
+	}
+
+	&.swepay-icon-chevron-left {
+		--mask-path: url("../../icons/shapes/chevron-left.svg");
+	}
+
+	&.swepay-icon-chevron-right {
+		--mask-path: url("../../icons/shapes/chevron-right.svg");
+	}
+
+	&.swepay-icon-close {
+		--mask-path: url("../../icons/shapes/close.svg");
+	}
+
+	&.swepay-icon-minus-substract {
+		--mask-path: url("../../icons/shapes/minus_substract.svg");
+	}
+
+	&.swepay-icon-plus-add {
+		--mask-path: url("../../icons/shapes/plus_add.svg");
+	}
+
+	&.swepay-icon-menu-hamburger {
+		--mask-path: url("../../icons/shapes/menu_hamburger.svg");
+	}
+
+	// ICONS styled differently since their color should never be modified.
+	// Therefore it uses background-image instead of mask
+
+	&.swepay-icon-check-circle-filled,
+	&.swepay-icon-error-circle-filled,
+	&.swepay-icon-error-triangle-filled,
+	&.swepay-icon-warning-triangle-filled,
+	&.swepay-icon-info-circle-filled {
+		mask: none;
+		background-color: initial;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	&.swepay-icon-check-circle-filled {
+		background-image: url("../../icons/shapes/check_circle_filled.svg");
+	}
+
+	&.swepay-icon-error-circle-filled {
+		background-image: url("../../icons/shapes/error_circle_filled.svg");
+	}
+
+	&.swepay-icon-error-triangle-filled {
+		background-image: url("../../icons/shapes/error_triangle_filled.svg");
+	}
+
+	&.swepay-icon-warning-triangle-filled {
+		background-image: url("../../icons/shapes/warning_triangle_filled.svg");
+	}
+
+	&.swepay-icon-info-circle-filled {
+		background-image: url("../../icons/shapes/info_circle_filled.svg");
+	}
+
+	// Icons using a mixed approach (mask + background-image) to allow for color customization of the icon itself and the background separately
+	// (would use the mask approach if I could, but so far the strokes/shapes inside are disappearing)
+	&.swepay-icon-check-circle-filled-customizable {
+		background-color: currentColor; /* Color of the circle */
+		background-image: url("../../icons/shapes/checkmark.svg");
+		background-repeat: no-repeat;
+		background-position: 47% 53%;
+		background-size: 55%;
+		border-radius: 100%;
+	}
+}
+
+// shape (basic UI) custom icons end

@@ -58,7 +58,7 @@ const HowTo = () => (
 			<span className="h3">Do</span>
 			<Alert
 				type="informative"
-				icon="info"
+				icon="info-circle"
 				text={
 					<p>
 						<b>Best practices:</b> To minimize the risk for a challenge request,
@@ -90,7 +90,7 @@ const HowTo = () => (
 				<div className="flex-fill mr-1">
 					<Alert
 						type="informative"
-						icon="info"
+						icon="info-circle"
 						text={
 							<p>
 								<b>Best practices:</b> To minimize the risk for a challenge
@@ -137,7 +137,7 @@ const ContentGuidelines = () => (
 			<div className="d-flex justify-content-center align-items-center pt-3">
 				<Alert
 					type="danger"
-					icon="info"
+					icon="info-circle"
 					text={
 						<p>
 							<b>Error title:</b> Content text <a href="">link</a>

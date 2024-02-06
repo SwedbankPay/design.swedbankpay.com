@@ -291,10 +291,8 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
       >
         <i
           aria-hidden="true"
-          className="material-icons alert-icon"
-        >
-          info
-        </i>
+          className="at-info-circle"
+        />
         <p>
           <b>
             Recommended way:
@@ -439,10 +437,8 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
       >
         <i
           aria-hidden="true"
-          className="material-icons alert-icon"
-        >
-          info
-        </i>
+          className="at-info-circle"
+        />
         <p>
           <b>
             Standards:
@@ -717,10 +713,8 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
       >
         <i
           aria-hidden="true"
-          className="material-icons alert-icon"
-        >
-          info
-        </i>
+          className="at-info-circle"
+        />
         <p>
           <b>
             Import only once:
@@ -812,10 +806,8 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
       >
         <i
           aria-hidden="true"
-          className="material-icons alert-icon"
-        >
-          info
-        </i>
+          className="at-info-circle"
+        />
         <p>
           <b>
             Web-perf:
@@ -1186,10 +1178,8 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
     >
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="at-info-circle"
+      />
       <p>
         <b>
           Target Browser:

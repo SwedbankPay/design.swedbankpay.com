@@ -299,10 +299,8 @@ Array [
 
     <i
       aria-hidden="true"
-      className="material-icons alert-icon"
-    >
-      warning
-    </i>
+      className="at-warning"
+    />
     <p>
       <b>
         Initializing dialog buttons:

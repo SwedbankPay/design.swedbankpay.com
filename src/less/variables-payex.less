@@ -147,14 +147,6 @@ body {
 	}
 }
 
-.material-icons {
-	font-family: var(--payex-material-icons);
-
-	&.alert-icon {
-		font-family: "Material icons";
-	}
-}
-
 /* ==================================CSS VARIABLES========================================
 *
 * NEW CSS VARIABLES - work in progress
@@ -201,21 +193,34 @@ body {
 	--brand-bg-3: #fbedf4;
 	--brand-bg-4: #eaf8fc;
 	--brand-bg-gray: var(--brand-secondary-light-2, #c8c8c8);
+	--bg-grey: var(--brand-secondary-light-2, #c8c8c8);
 	--brand-bg-white: #ffffff;
 	--bg-quaternary: var(--list-gray, #999999);
 
 	/* State colors */
-	--brand-success: #238635;
-	--brand-success-light: #e8f3e6;
-	--brand-success-light-2: var(--brand-success, #238635);
-	--brand-warning: #f35b1c;
-	--brand-warning-light: #ffecd5;
-	--brand-warning-2: #f35b1c;
-	--brand-error-border: #f1bbb9;
-	--brand-error: #c5131c;
-	--brand-error-light: #ffebe3;
-	--brand-info: #3e6ab6;
-	--brand-info-light: #e8eff9;
+
+	--system-success: #238635;
+	--brand-success: var(--system-success);
+	--system-success-light: #e8f3e6;
+	--brand-success-light: var(--system-success-light);
+	--system-success-light-2: var(--system-success, #238635);
+	--brand-success-light-2: var(--system-success-light-2);
+	--system-warning: #f35b1c;
+	--brand-warning: var(--system-warning);
+	--system-warning-light: #ffecd5;
+	--brand-warning-light: var(--system-warning-light);
+	--system-warning-2: #f35b1c;
+	--brand-warning-2: var(--system-warning-2);
+	--system-error-border: #f1bbb9;
+	--brand-error-border: var(--system-error-border);
+	--system-error: #c5131c;
+	--brand-error: var(--system-error);
+	--system-error-light: #ffebe3;
+	--brand-error-light: var(--system-error-light);
+	--system-info: #3e6ab6;
+	--brand-info: var(--system-info);
+	--system-info-light: #e8eff9;
+	--brand-info-light: var(--system-info-light);
 
 	// text colors
 	--text-color: var(--brand-secondary);
@@ -302,9 +307,15 @@ body {
 	--brand-black: "Futura PT W08 Medium", sans-serif;
 	--brand-default: "Futura PT W08 Book", sans-serif;
 	--brand-monofont: monospace;
-	--payex-material-icons: "Material Icons Outlined";
 	--brand-headline: "Futura PT W08 Demi", sans-serif;
 	--brand-font-default: "Futura PT W08 Book", sans-serif;
+
+	// icon fonts
+	--icons-font-material: "Material Icons";
+	--icons-font-material-outlined: "Material Icons Outlined";
+	--icons-font-material-default: var(--icons-font-material-outlined);
+	--icons-font-atlas: initial;
+	--icons-font-default: var(--icons-font-atlas);
 
 	/* Font weights */
 	--font-weight-header: 400;
