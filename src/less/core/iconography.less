@@ -622,72 +622,99 @@ each(@flag-list, .(@country-code) {
 i[class^="swepay-icon-"],
 i[class*=" swepay-icon-"] {
 	display: inline-block;
-	mask-position: center;
-	mask-repeat: no-repeat;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
 	height: var(--icon-size, 24px);
 	width: var(--icon-size, 24px);
 	background-color: currentColor;
+	aspect-ratio: 1 / 1;
+
+	// use mask so their color can be customized via CSS dynamically
+	&.swepay-icon-chevron-up,
+	&.swepay-icon-chevron-down,
+	&.swepay-icon-chevron-left,
+	&.swepay-icon-chevron-right,
+	&.swepay-icon-close,
+	&.swepay-icon-minus-substract,
+	&.swepay-icon-plus-add,
+	&.swepay-icon-menu-hamburger {
+		mask: var(--mask-path) 0 0 / var(--icon-size) var(--icon-size) no-repeat;
+	}
 
 	&.swepay-icon-chevron-down {
-		mask: url("../../icons/shapes/chevron_down.svg");
+		--mask-path: url("../../icons/shapes/chevron_down.svg");
 	}
 
 	&.swepay-icon-chevron-up {
-		mask: url("../../icons/shapes/chevron_down.svg");
-		transform: rotate(180deg);
+		--mask-path: url("../../icons/shapes/chevron-up.svg");
 	}
 
 	&.swepay-icon-chevron-left {
-		mask: url("../../icons/shapes/chevron_down.svg");
-		transform: rotate(270deg);
+		--mask-path: url("../../icons/shapes/chevron-left.svg");
 	}
 
 	&.swepay-icon-chevron-right {
-		mask: url("../../icons/shapes/chevron_down.svg");
-		transform: rotate(90deg);
+		--mask-path: url("../../icons/shapes/chevron-right.svg");
 	}
 
 	&.swepay-icon-close {
-		mask: url("../../icons/shapes/close.svg");
+		--mask-path: url("../../icons/shapes/close.svg");
 	}
 
 	&.swepay-icon-minus-substract {
-		mask: url("../../icons/shapes/minus_substract.svg");
+		--mask-path: url("../../icons/shapes/minus_substract.svg");
 	}
 
 	&.swepay-icon-plus-add {
-		mask: url("../../icons/shapes/plus_add.svg");
+		--mask-path: url("../../icons/shapes/plus_add.svg");
+	}
+
+	&.swepay-icon-menu-hamburger {
+		--mask-path: url("../../icons/shapes/menu_hamburger.svg");
 	}
 
 	// ICONS styled differently since their color should never be modified.
 	// Therefore it uses background-image instead of mask
 
+	&.swepay-icon-check-circle-filled,
+	&.swepay-icon-error-circle-filled,
+	&.swepay-icon-error-triangle-filled,
+	&.swepay-icon-warning-triangle-filled,
+	&.swepay-icon-info-circle-filled {
+		mask: none;
+		background-color: initial;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
 	&.swepay-icon-check-circle-filled {
 		background-image: url("../../icons/shapes/check_circle_filled.svg");
-		background-color: initial;
 	}
 
 	&.swepay-icon-error-circle-filled {
 		background-image: url("../../icons/shapes/error_circle_filled.svg");
-		background-color: initial;
 	}
 
 	&.swepay-icon-error-triangle-filled {
 		background-image: url("../../icons/shapes/error_triangle_filled.svg");
-		background-color: initial;
 	}
 
 	&.swepay-icon-warning-triangle-filled {
 		background-image: url("../../icons/shapes/warning_triangle_filled.svg");
-		background-color: initial;
 	}
 
 	&.swepay-icon-info-circle-filled {
 		background-image: url("../../icons/shapes/info_circle_filled.svg");
-		background-color: initial;
+	}
+
+	// Icons using a mixed approach (mask + background-image) to allow for color customization of the icon itself and the background separately
+	// (would use the mask approach if I could, but so far the strokes/shapes inside are disappearing)
+	&.swepay-icon-check-circle-filled-customizable {
+		background-color: currentColor; /* Color of the circle */
+		background-image: url("../../icons/shapes/checkmark.svg");
+		background-repeat: no-repeat;
+		background-position: 47% 53%;
+		background-size: 55%;
+		border-radius: 100%;
 	}
 }
 

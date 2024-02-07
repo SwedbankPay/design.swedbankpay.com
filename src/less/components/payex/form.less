@@ -3,3 +3,53 @@
 .help-block {
 	color: @help-block-text;
 }
+
+
+.form-group {
+	&.disabled,
+	[disabled] {
+		color: var(--brand-secondary-light-3);
+
+		.input-group-addon {
+			border-color: var(--input-border-disabled-color);
+			color: var(--text-disabled);
+
+			i {
+				color: var(--text-disabled);
+			}
+		}
+
+		input::placeholder {
+			color: var(--text-disabled);
+		}
+
+		&.form-control {
+			border-color: var(--input-border-disabled-color);
+		}
+
+		label {
+			color: var(--text-disabled);
+		}
+	}
+
+	&.has-success {
+		.form-control {
+			border-color: var(--input-border-success-color);
+		}
+
+		.input-group-addon,
+		.input-group-addon.postfix {
+			border-color: var(--input-border-success-color);
+		}
+
+		i {
+			color: var(--input-border-success-color);
+		}
+
+		&:focus-within {
+			.form-control {
+				border-color: var(--input-border-focus-color);
+			}
+		}
+	}
+}

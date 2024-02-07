@@ -144,7 +144,7 @@ released, a new version of the JavaScript will be as well.
 
 ## Code style
 
-Coding style rules are set in ```~/.eslintrc` & `~/.stylelintrc`.
+Coding style rules are set in `~/.eslintrc` & `~/.stylelintrc`.
 
 **_Make sure to follow the syntax rules enforced by ESLint & Stylelint._**
 

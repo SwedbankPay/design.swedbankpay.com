@@ -36,6 +36,7 @@
 @brand-accent-links: @brand-primary;
 @payex-light-blue: #32b2dd;
 @payex-dark-blue: #1e3a6e;
+@brand-complementary-3: #EF5434;
 
 /* Background Colors */
 @brand-bg-1: #e8f3e6;
@@ -56,6 +57,7 @@
 @brand-error-border: #f1bbb9;
 @brand-error: #c5131c;
 @brand-error-light: #ffebe3;
+@brand-error-dark: #c5131c;
 @brand-info: #3e6ab6;
 @brand-info-light: #e8eff9;
 
@@ -64,7 +66,7 @@
 
 /* Button colors */
 @primary-disabled-bg: #f5b895;
-@secondary-disabled-bg: #98d0d6;
+@secondary-disabled-bg: @brand-secondary-light-2;
 @destructive-disabled-bg: #f9ded3;
 
 @btn-primary-color: @white;
@@ -75,7 +77,7 @@
 
 @btn-secondary-color: @white;
 @btn-secondary-bg: @brand-secondary;
-@btn-secondary-hover: @brand-primary;
+@btn-secondary-hover: @soft-brown;
 @btn-secondary-disabled-color: @white;
 @btn-secondary-disabled-bg: @brand-secondary-light-2;
 
@@ -110,6 +112,28 @@
 @help-block-text: #707070;
 @tab-link: @help-block-text;
 @radiobutton-border: @help-block-text;
+
+/* Unused Bagde variables */
+@brand-primary-lighter: @brand-primary-light;
+@system-error: @brand-error;
+@system-info: @brand-info;
+@brand-apricot: @yellow-faded;
+@brand-blue: @payex-dark-blue;
+@brand-blue-light: @payex-light-blue;
+@brand-brown: @brand-secondary;
+@brown-medium: @brand-secondary-light-3;
+@brown-soft: @brand-secondary-light-2;
+@brown-light: @brand-secondary-light-3;
+@solid-brown: @brand-secondary-light-2;
+@brand-green: @brand-primary;
+@brand-green-light: @brand-success-light;
+@brand-orange: @brand-warning;
+@brand-turquoise: @brand-bg-4;
+@brand-turqouise-dark: @brand-bg-4;
+@brand-turqouise-darker: @brand-bg-4;
+@brand-turquoise-light: @brand-bg-4;
+@brand-turqouise-lighter: @brand-bg-4;
+@brand-pink: @brand-error-light;
 
 html,
 body {
@@ -149,7 +173,7 @@ body {
 	/* TODO: to be converted: --brand-primary-faded:  fade(var(--brand-primary, #2A9D3F), 60%); */
 
 	--brand-secondary: #3c3c3c;
-	--brand-secondary-hover: #5f5f5f;
+	--brand-secondary-hover: var(--soft-brown, #707070);
 	--brand-secondary-light-1: var(--brand-secondary, #3c3c3c);
 	--brand-secondary-light-2: #c8c8c8;
 	--brand-secondary-light-3: var(--brand-secondary-light-2, #c8c8c8);
@@ -201,13 +225,15 @@ body {
 	// text colors
 	--text-color: var(--brand-secondary);
 	--text-muted: color-mix(in srgb, var(--text-color), var(--white) 75%);
+	--text-link: #1C7D2E;
+	--text-hover: var(--brand-primary);
 
 	/* Checkbox */
 	--checkbox-checked-color: var(--brand-secondary, #3c3c3c);
 
 	/* BUTTONS COLORS */
 	--primary-disabled-bg: #f5b895;
-	--secondary-disabled-bg: #98d0d6;
+	--secondary-disabled-bg: var(--brand-secondary-light-2);
 	--btn-primary-color: var(--brand-success, #238635);
 	--btn-primary-text-color: var(--white, #ffffff);
 	--btn-primary-bg: var(--brand-success, #238635);
@@ -220,7 +246,7 @@ body {
 	--btn-secondary-bg: var(--brand-secondary, #3c3c3c);
 	--btn-secondary-text-color: var(--brand-secondary, #3c3c3c);
 	--btn-secondary-border-color: var(--brand-secondary, #3c3c3c);
-	--btn-secondary-hover: var(--brand-secondary, #3c3c3c);
+	--btn-secondary-hover: var(--brand-secondary-hover, #707070);
 	--btn-secondary-disabled-color: var(--white, #ffffff);
 	--btn-secondary-disabled-bg: var(--brand-secondary-light-2, #c8c8c8);
 
@@ -245,7 +271,7 @@ body {
 	/* Shared button variables */
 	--btn-disabled-text: var(--text-disabled);
 	--btn-bg-disabled: rgb(212 196 188 / 30%);
-	--btn-active-color: var(--payex-light-blue);
+	--btn-active-color: var(--brand-secondary, #3c3c3c);
 
 	/* INPUTS COLORS */
 	--input-color: var(--brand-secondary, #3c3c3c);
@@ -255,7 +281,8 @@ body {
 	--input-addon-color: var(--brand-secondary, #3c3c3c);
 	--input-border-color: var(--brand-secondary-hover, #5f5f5f);
 	--input-border-focus-color: var(--brand-secondary, #3c3c3c);
-	--input-border-success-color: var(--payex-light-blue);
+	--input-border-success-color: var(--brand-success);
+	--input-border-disabled-color: var(--brand-secondary-light-3, #c8c8c8);
 
 	/* Panel */
 	--panel-default-border-color: var(--brand-secondary-light-3, #c8c8c8);

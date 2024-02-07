@@ -274,6 +274,19 @@ const Sizes = () => (
 					<IconPreview
 						previewSize
 						type="swepay-icon"
+						name={"chevron-right"}
+						size={size}
+					/>
+					{"\n"}
+				</React.Fragment>
+			))}
+		</div>
+		<div className="d-flex justify-content-between align-items-end p-4">
+			{tableData.commonIconSizes.map((size, i) => (
+				<React.Fragment key={size.code}>
+					<IconPreview
+						previewSize
+						type="swepay-icon"
 						name={"info-circle-filled"}
 						size={size}
 					/>

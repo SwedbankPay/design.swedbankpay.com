@@ -1,21 +1,12 @@
 # Changelog
 
-## \[10.9.0\] - 24.11.2023
+## \[10.10.1\] - 06.02.2024
 
 ## Component changes
 
 ### Non breaking UI changes
 
-- Typography
-
-  - update typography values (line-heights)
-  - add text-wrap balance for headings & pretty for paragraphs (progressive enhancement)
-
-- Colors ( & colors utilities):
-
-  - some colors variables got updated
-  - removed the possibility to combine text-color utility classes WITH `.text-muted` to decrease their opacity
-  - `.text-muted` class still exist, but it will always mean a full opacity color
+- Icons migration step 2 (still non-breaking. But the migrations is decided and is happening, so move when you can. Silent support of Material-icons until next major version release).
 
 ## Maintenance
 
@@ -23,4 +14,4 @@
 
 ## Design System website
 
-- Update the Identity/Colors page for SwedbankPay side
+- Migrated the icons used on the documentation website from Material-icons to a combination of Atlas and our own custom swepay-icons

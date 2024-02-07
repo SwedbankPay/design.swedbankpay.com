@@ -5,6 +5,88 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.10.0",
+		title: "Icons migrations - step 1",
+		text: (
+			<>
+				<p>
+					Goodbye, Google, and farewell to your Material Design icons. It’s not
+					you, it’s us. Or no, actually it’s you. We became too cool for school.
+					Takk for i dag, and take care.
+				</p>
+				<p>
+					Our designers, equipped with their bionic eyes, have meticulously
+					examined all open-source icon sets out there, scrutinizing even the
+					tiniest details. They've found their grail:{" "}
+					<a href="https://atlasicons.vectopus.com/">Atlas icons</a>.
+				</p>
+				<p>
+					This marks the initial step in transitioning our icons from Material
+					Icons to Atlas icons, along with some custom icons when needed. Check
+					out the{" "}
+					<a href={`${basename}identity/iconography/`}>
+						iconography documentation page
+					</a>{" "}
+					to kick off the migration.
+				</p>
+				<p>
+					This first release imports Atlas icons as a font icon (via CDN). Some
+					critical icons were missing from their set, so our very own
+					Michelangelo and DaVinci have crafted their own versions.
+					Consequently, we now have custom icons for basic UI needs (no longer
+					limited to just payment cards and flags). Chevron, hamburger-menu,
+					plus, minus, and more will come from custom icons.
+				</p>
+				<p>
+					For any unanswered questions, use Slack instead of the iconography
+					page.
+				</p>
+				<p>
+					Over the next few weeks, we'll be going through all our components to
+					migrate their examples. We'll also ensure that all icon systems
+					(Material vs. Atlas vs. our custom swepay-icons) display
+					'identically.'
+				</p>
+				<p>
+					We'll continue to support the old Material Icons 🧓 for a while, until
+					the next major release. However, all new work will use the new icons
+					(Atlas or our custom swepay-icons).
+				</p>
+				<p>
+					We strongly recommend you to hop on board with the migration whenever
+					you find the time. It's happening. You'll probably need help from the
+					designers at some point, so feel free to reach out 😉.
+				</p>
+			</>
+		),
+	},
+	{
+		version: "10.9.1",
+		title: "PayEx Open Source contributors are on fire 🔥🚀💚",
+		text: (
+			<>
+				<p>The Green side of the force is strengthening 💚</p>
+				<p>
+					A patch release full of UI updates from the Visby folks (hey guys 👋),
+					to bring some love to the green side of the Design System, and iterate
+					over the components to update the colors and their UI in general. Much
+					needed, and very much appreciated 🌟💚
+				</p>
+				<p>
+					Which means: You, yes, you 🫵, Front-End dev using the design system,
+					but who see some things could be improved ... get inspired by our
+					Visby stars and push some PR to fix this issue bothering you. Our dev
+					team is limited (well, it&apos;s only me really 😅) so we rely on all
+					of you to keep it great 🎸, robust 💪, and shiny ✨
+				</p>
+				<p>
+					Also some minor bugfix for the tooltip component, and some dependency
+					updates. But this is not as important 😉
+				</p>
+			</>
+		),
+	},
+	{
 		version: "10.9.0",
 		title: "Colors and Typography refresher 🎨",
 		text: (
