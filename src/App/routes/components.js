@@ -70,7 +70,7 @@ module.exports = [
 				path: "cards",
 				rootPath: "/components/cards",
 				componentPath: "components/Card",
-				icon: "at-caller-id",
+				icon: "at-square-mirror",
 			},
 			{
 				title: "Charts",
@@ -86,7 +86,7 @@ module.exports = [
 				path: "checkbox",
 				rootPath: "/components/checkbox",
 				componentPath: "components/Checkbox",
-				icon: "at-ticket-check",
+				icon: "at-check-clipboard",
 				statusBadges: ["updated"],
 			},
 			{
@@ -110,7 +110,7 @@ module.exports = [
 				path: "dropdown",
 				rootPath: "/components/dropdown",
 				componentPath: "components/Dropdown",
-				icon: "at-multiple-arrows-up v-flip",
+				icon: "at-list-folder",
 				statusBadges: ["javascript", "updated"],
 			},
 			{
@@ -209,7 +209,7 @@ module.exports = [
 				path: "sheet",
 				rootPath: "/components/sheet",
 				componentPath: "components/Sheet",
-				icon: "at-import-arrow-left",
+				icon: "at-toilet-paper",
 				statusBadges: ["javascript"],
 			},
 			{
@@ -240,7 +240,7 @@ module.exports = [
 				path: "slab",
 				rootPath: "/components/slab",
 				componentPath: "components/Slab",
-				icon: "at-papers-lines",
+				icon: "at-comment-blank",
 			},
 			{
 				title: "Status",
@@ -269,7 +269,7 @@ module.exports = [
 				path: "tags",
 				rootPath: "/components/tags",
 				componentPath: "components/CodeTags",
-				icon: "at-comment-captions",
+				icon: "at-electricity-square",
 			},
 			{
 				title: "Toast",

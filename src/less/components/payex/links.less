@@ -1,30 +1,50 @@
 @import "../links.less";
 
 a {
-	color: @link-color;
+	color: var(--text-link);
 
 	&:hover {
-		color: @link-hover-color;
+		color: var(--text-hover);
+		text-decoration: none;
+	}
+
+	span {
+		&:hover {
+			color: var(--text-hover);
+			text-decoration: underline;
+		}
 	}
 
 	&:focus {
 		color: var(--brand-primary);
 	}
 
-	&.icon-link {
-		&:hover {
-			color: var(--brand-primary);
+	&.bright {
+		color: var(--payex-light-blue);
 
+		i {
+			color: var(--payex-light-blue);
+		}
+
+		&:focus-visible {
+			outline: 2px solid var(--white);
+			border-radius: 2px;
+		}
+	}
+
+	&.icon-link {
+		&.bright {
 			span {
-				text-decoration: none;
+				color: var(--payex-light-blue);
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 
-		:focus {
-			span {
-				color: @link-hover-color;
-				text-decoration: none;
-			}
+		&:hover {
+			color: var(--brand-primary);
 		}
 	}
 
@@ -40,11 +60,12 @@ a {
 
 		&:hover {
 			color: var(--brand-secondary);
+			text-decoration: none;
 		}
 
 		&.action-link-new-tab {
 			&:before {
-				background-color: var(--brand-primary;);
+				background-color: var(--brand-primary);
 			}
 		}
 	}

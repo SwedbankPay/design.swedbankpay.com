@@ -26,7 +26,6 @@ class Nav {
 
 			menu.setAttribute("href", "#");
 			menu.classList.add("nav-openbtn");
-			// TODO: replace with a better hamburger menu when provided by designers
 			menu.innerHTML =
 				"<i class='swepay-icon-menu-hamburger' aria-hidden='true'></i>";
 

@@ -21,6 +21,10 @@ exports[`GetStarted: ForDevelopers Contributing renders 1`] = `
       >
         our Git Repository
       </span>
+      <i
+        aria-hidden="true"
+        className="at-arrow-up-from-square small align-self-baseline"
+      />
     </a>
      
     or create a feature request here.

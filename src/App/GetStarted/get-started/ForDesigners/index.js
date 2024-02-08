@@ -112,7 +112,7 @@ const DiscoverMore = () => (
 	<section>
 		<h2 id="discover-more">Discover more</h2>
 		<div className="component-overview hide-arrow-icon">
-			<Link to="/identity/identity" className="cards cards-primary cards-wide">
+			<Link to="/identity/" className="cards cards-primary cards-wide">
 				<div className="cards-content m-0">
 					<span className="h3">Identity</span>
 					<span>The philosophy behind our designs </span>

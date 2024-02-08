@@ -46,6 +46,7 @@ module.exports = [
 				path: "iconography",
 				rootPath: "/identity/iconography",
 				componentPath: "identity/Iconography",
+				statusBadges: ["updated"],
 				text: "Guidelines and icon library",
 			},
 			{

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { browsers, gridAndBreakpoints, discoverMore } from "./constants";
 
 import { ComponentPreview, DocContainer } from "@docutils";
@@ -415,6 +415,10 @@ const Contributing = () => (
 				rel="noopener noreferrer"
 			>
 				<span className="mr-2">our Git Repository</span>
+				<i
+					className="at-arrow-up-from-square small align-self-baseline"
+					aria-hidden="true"
+				></i>
 			</a>{" "}
 			or create a feature request here.
 		</p>
@@ -454,7 +458,7 @@ const DiscoverMore = () => (
 		<h2 id="discover-more">Discover more</h2>
 		<div className="component-overview hide-arrow-icon">
 			{discoverMore.map((card) => (
-				<Link
+				<NavLink
 					key={card.url}
 					to={card.url}
 					className="cards cards-primary cards-wide"
@@ -464,7 +468,7 @@ const DiscoverMore = () => (
 						<span>{card.text}</span>
 					</div>
 					<i className="at-arrow-right small" aria-hidden="true"></i>
-				</Link>
+				</NavLink>
 			))}
 		</div>
 	</section>
