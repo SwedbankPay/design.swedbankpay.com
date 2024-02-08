@@ -59,10 +59,14 @@ Array [
         <span
           className="input-group-addon "
         >
+          
+
           <i
             aria-hidden="true"
-            className="event"
+            className="at-calendar-dots small"
           />
+          
+
         </span>
         
 
@@ -142,6 +146,12 @@ Array [
                 7
                 
 
+                8
+                
+
+                9
+                
+
               </pre>
             </td>
             <td
@@ -157,7 +167,13 @@ Array [
                     &lt;div class="input-group"&gt;
                 
 
-                        &lt;span class="input-group-addon "&gt;&lt;i class="event" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                        &lt;span class="input-group-addon "&gt;
+                
+
+                            &lt;i class="at-calendar-dots small" aria-hidden="true"&gt;&lt;/i&gt;
+                
+
+                        &lt;/span&gt;
                 
 
                         &lt;input id="simple-datepicker" class="form-control" type="text" data-datepicker data-datepicker-allowinput="true" /&gt;
@@ -226,10 +242,14 @@ Array [
         <span
           className="input-group-addon "
         >
+          
+
           <i
             aria-hidden="true"
-            className="event"
+            className="at-calendar-dots small"
           />
+          
+
         </span>
         
 
@@ -273,10 +293,14 @@ Array [
         <span
           className="input-group-addon "
         >
+          
+
           <i
             aria-hidden="true"
-            className="event"
+            className="at-calendar-dots small"
           />
+          
+
         </span>
         
 
@@ -320,10 +344,14 @@ Array [
         <span
           className="input-group-addon "
         >
+          
+
           <i
             aria-hidden="true"
-            className="event"
+            className="at-calendar-dots small"
           />
+          
+
         </span>
         
 
@@ -367,10 +395,14 @@ Array [
         <span
           className="input-group-addon "
         >
+          
+
           <i
             aria-hidden="true"
-            className="event"
+            className="at-calendar-dots small"
           />
+          
+
         </span>
         
 
@@ -414,10 +446,14 @@ Array [
         <span
           className="input-group-addon "
         >
+          
+
           <i
             aria-hidden="true"
-            className="event"
+            className="at-calendar-dots small"
           />
+          
+
         </span>
         
 
@@ -461,10 +497,14 @@ Array [
         <span
           className="input-group-addon "
         >
+          
+
           <i
             aria-hidden="true"
-            className="event"
+            className="at-calendar-dots small"
           />
+          
+
         </span>
         
 
@@ -649,6 +689,42 @@ Array [
                 42
                 
 
+                43
+                
+
+                44
+                
+
+                45
+                
+
+                46
+                
+
+                47
+                
+
+                48
+                
+
+                49
+                
+
+                50
+                
+
+                51
+                
+
+                52
+                
+
+                53
+                
+
+                54
+                
+
               </pre>
             </td>
             <td
@@ -664,7 +740,13 @@ Array [
                     &lt;div class="input-group"&gt;
                 
 
-                        &lt;span class="input-group-addon "&gt;&lt;i class="event" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                        &lt;span class="input-group-addon "&gt;
+                
+
+                            &lt;i class="at-calendar-dots small" aria-hidden="true"&gt;&lt;/i&gt;
+                
+
+                        &lt;/span&gt;
                 
 
                         &lt;input id="nb-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="nb" data-datepicker-value="28.12.1972" /&gt;
@@ -685,7 +767,13 @@ Array [
                     &lt;div class="input-group"&gt;
                 
 
-                        &lt;span class="input-group-addon "&gt;&lt;i class="event" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                        &lt;span class="input-group-addon "&gt;
+                
+
+                            &lt;i class="at-calendar-dots small" aria-hidden="true"&gt;&lt;/i&gt;
+                
+
+                        &lt;/span&gt;
                 
 
                         &lt;input id="sv-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="sv" data-datepicker-value="1972-12-28" /&gt;
@@ -706,7 +794,13 @@ Array [
                     &lt;div class="input-group"&gt;
                 
 
-                        &lt;span class="input-group-addon "&gt;&lt;i class="event" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                        &lt;span class="input-group-addon "&gt;
+                
+
+                            &lt;i class="at-calendar-dots small" aria-hidden="true"&gt;&lt;/i&gt;
+                
+
+                        &lt;/span&gt;
                 
 
                         &lt;input id="da-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="da" data-datepicker-value="28.12.1972" /&gt;
@@ -727,7 +821,13 @@ Array [
                     &lt;div class="input-group"&gt;
                 
 
-                        &lt;span class="input-group-addon "&gt;&lt;i class="event" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                        &lt;span class="input-group-addon "&gt;
+                
+
+                            &lt;i class="at-calendar-dots small" aria-hidden="true"&gt;&lt;/i&gt;
+                
+
+                        &lt;/span&gt;
                 
 
                         &lt;input id="fi-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="fi" data-datepicker-value="28.12.1972" /&gt;
@@ -748,7 +848,13 @@ Array [
                     &lt;div class="input-group"&gt;
                 
 
-                        &lt;span class="input-group-addon "&gt;&lt;i class="event" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                        &lt;span class="input-group-addon "&gt;
+                
+
+                            &lt;i class="at-calendar-dots small" aria-hidden="true"&gt;&lt;/i&gt;
+                
+
+                        &lt;/span&gt;
                 
 
                         &lt;input id="en-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="en" data-datepicker-value="28/12/1972" /&gt;
@@ -769,7 +875,13 @@ Array [
                     &lt;div class="input-group"&gt;
                 
 
-                        &lt;span class="input-group-addon "&gt;&lt;i class="event" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                        &lt;span class="input-group-addon "&gt;
+                
+
+                            &lt;i class="at-calendar-dots small" aria-hidden="true"&gt;&lt;/i&gt;
+                
+
+                        &lt;/span&gt;
                 
 
                         &lt;input id="iso8601-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="iso8601" data-datepicker-value="1972-12-28" /&gt;
@@ -831,10 +943,14 @@ Array [
         <span
           className="input-group-addon "
         >
+          
+
           <i
             aria-hidden="true"
-            className="event"
+            className="at-calendar-dots small"
           />
+          
+
         </span>
         
 
@@ -914,6 +1030,12 @@ Array [
                 7
                 
 
+                8
+                
+
+                9
+                
+
               </pre>
             </td>
             <td
@@ -929,7 +1051,13 @@ Array [
                     &lt;div class="input-group"&gt;
                 
 
-                        &lt;span class="input-group-addon "&gt;&lt;i class="event" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                        &lt;span class="input-group-addon "&gt;
+                
+
+                            &lt;i class="at-calendar-dots small" aria-hidden="true"&gt;&lt;/i&gt;
+                
+
+                        &lt;/span&gt;
                 
 
                         &lt;input id="date-range-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="nb" data-datepicker-min="10.12.1972" data-datepicker-mode="range" /&gt;
@@ -990,10 +1118,14 @@ Array [
         <span
           className="input-group-addon "
         >
+          
+
           <i
             aria-hidden="true"
-            className="event"
+            className="at-calendar-dots small"
           />
+          
+
         </span>
         
 
@@ -1073,6 +1205,12 @@ Array [
                 7
                 
 
+                8
+                
+
+                9
+                
+
               </pre>
             </td>
             <td
@@ -1088,7 +1226,13 @@ Array [
                     &lt;div class="input-group"&gt;
                 
 
-                        &lt;span class="input-group-addon "&gt;&lt;i class="event" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                        &lt;span class="input-group-addon "&gt;
+                
+
+                            &lt;i class="at-calendar-dots small" aria-hidden="true"&gt;&lt;/i&gt;
+                
+
+                        &lt;/span&gt;
                 
 
                         &lt;input id="init-value-datepicker" class="form-control" type="text" data-datepicker data-datepicker-value="1972-12-28" data-datepicker-fulldate="true" /&gt;
@@ -1157,10 +1301,14 @@ Array [
         <span
           className="input-group-addon "
         >
+          
+
           <i
             aria-hidden="true"
-            className="event"
+            className="at-calendar-dots small"
           />
+          
+
         </span>
         
 
@@ -1240,6 +1388,12 @@ Array [
                 7
                 
 
+                8
+                
+
+                9
+                
+
               </pre>
             </td>
             <td
@@ -1255,7 +1409,13 @@ Array [
                     &lt;div class="input-group"&gt;
                 
 
-                        &lt;span class="input-group-addon "&gt;&lt;i class="event" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                        &lt;span class="input-group-addon "&gt;
+                
+
+                            &lt;i class="at-calendar-dots small" aria-hidden="true"&gt;&lt;/i&gt;
+                
+
+                        &lt;/span&gt;
                 
 
                         &lt;input id="include-time-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="nb" data-datepicker-time="true" /&gt;
@@ -1317,10 +1477,14 @@ Array [
         <span
           className="input-group-addon "
         >
+          
+
           <i
             aria-hidden="true"
-            className="event"
+            className="at-calendar-dots small"
           />
+          
+
         </span>
         
 
@@ -1400,6 +1564,12 @@ Array [
                 7
                 
 
+                8
+                
+
+                9
+                
+
               </pre>
             </td>
             <td
@@ -1415,7 +1585,13 @@ Array [
                     &lt;div class="input-group"&gt;
                 
 
-                        &lt;span class="input-group-addon "&gt;&lt;i class="event" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                        &lt;span class="input-group-addon "&gt;
+                
+
+                            &lt;i class="at-calendar-dots small" aria-hidden="true"&gt;&lt;/i&gt;
+                
+
+                        &lt;/span&gt;
                 
 
                         &lt;input id="init-value-datepicker" class="form-control" type="text" data-datepicker data-datepicker-value="1972-12-28" /&gt;
@@ -1862,10 +2038,14 @@ Array [
         <span
           className="input-group-addon "
         >
+          
+
           <i
             aria-hidden="true"
-            className="event"
+            className="at-calendar-dots small"
           />
+          
+
         </span>
         
 
@@ -1945,6 +2125,12 @@ Array [
                 7
                 
 
+                8
+                
+
+                9
+                
+
               </pre>
             </td>
             <td
@@ -1960,7 +2146,13 @@ Array [
                     &lt;div class="input-group"&gt;
                 
 
-                        &lt;span class="input-group-addon "&gt;&lt;i class="event" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                        &lt;span class="input-group-addon "&gt;
+                
+
+                            &lt;i class="at-calendar-dots small" aria-hidden="true"&gt;&lt;/i&gt;
+                
+
+                        &lt;/span&gt;
                 
 
                         &lt;input id="multiple-months-datepicker" class="form-control" type="text" data-datepicker data-datepicker-months="2" /&gt;
@@ -2028,10 +2220,14 @@ Array [
         <span
           className="input-group-addon "
         >
+          
+
           <i
             aria-hidden="true"
-            className="event"
+            className="at-calendar-dots small"
           />
+          
+
         </span>
         
 
@@ -2111,6 +2307,12 @@ Array [
                 7
                 
 
+                8
+                
+
+                9
+                
+
               </pre>
             </td>
             <td
@@ -2126,7 +2328,13 @@ Array [
                     &lt;div class="input-group"&gt;
                 
 
-                        &lt;span class="input-group-addon "&gt;&lt;i class="event" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                        &lt;span class="input-group-addon "&gt;
+                
+
+                            &lt;i class="at-calendar-dots small" aria-hidden="true"&gt;&lt;/i&gt;
+                
+
+                        &lt;/span&gt;
                 
 
                         &lt;input id="simple-datepicker" class="form-control" type="text" data-datepicker /&gt;
@@ -2195,10 +2403,14 @@ Array [
         <span
           className="input-group-addon "
         >
+          
+
           <i
             aria-hidden="true"
-            className="event"
+            className="at-calendar-dots small"
           />
+          
+
         </span>
         
 
@@ -2278,6 +2490,12 @@ Array [
                 7
                 
 
+                8
+                
+
+                9
+                
+
               </pre>
             </td>
             <td
@@ -2293,7 +2511,13 @@ Array [
                     &lt;div class="input-group"&gt;
                 
 
-                        &lt;span class="input-group-addon "&gt;&lt;i class="event" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+                        &lt;span class="input-group-addon "&gt;
+                
+
+                            &lt;i class="at-calendar-dots small" aria-hidden="true"&gt;&lt;/i&gt;
+                
+
+                        &lt;/span&gt;
                 
 
                         &lt;input id="valid-dates-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="nb" data-datepicker-min="28.12.1972" data-datepicker-max="10.05.2017" data-datepicker-value="28.12.1972" /&gt;

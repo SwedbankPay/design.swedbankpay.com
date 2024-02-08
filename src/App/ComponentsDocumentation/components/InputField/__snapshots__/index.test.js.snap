@@ -106,10 +106,14 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
             <span
               className="input-group-addon "
             >
+              
+
               <i
                 aria-hidden="true"
                 className="at-account small"
               />
+              
+
             </span>
             
 
@@ -219,10 +223,14 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           <span
             className="input-group-addon postfix"
           >
+            
+
             <i
               aria-hidden="true"
               className="swepay-icon-error-triangle-filled small"
             />
+            
+
           </span>
           
 
@@ -278,10 +286,14 @@ exports[`Component: InputField ContentGuidelines renders 1`] = `
           <span
             className="input-group-addon postfix"
           >
+            
+
             <i
               aria-hidden="true"
               className="swepay-icon-check-circle-filled small"
             />
+            
+
           </span>
           
 

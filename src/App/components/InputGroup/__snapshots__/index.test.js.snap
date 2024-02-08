@@ -99,10 +99,14 @@ exports[`Component: InputGroup - renders a form-group with a prefix icon if prop
     <span
       className="input-group-addon "
     >
+      
+
       <i
         aria-hidden="true"
         className="home"
       />
+      
+
     </span>
     
 

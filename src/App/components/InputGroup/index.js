@@ -15,25 +15,37 @@ export const Addon = ({
 				{success && (
 					<>
 						<span className="input-group-addon postfix">
+							{"\n"}
 							<i
 								className="swepay-icon-check-circle-filled small"
 								aria-hidden="true"
 							></i>
+							{"\n"}
 						</span>
 					</>
 				)}
 				{error && (
 					<span className="input-group-addon postfix">
+						{"\n"}
 						<i
 							className="swepay-icon-error-triangle-filled small"
 							aria-hidden="true"
 						></i>
+						{"\n"}
 					</span>
 				)}
 			</>
 		) : (
 			<span className={`input-group-addon ${postfix ? "postfix" : ""}`}>
-				{type === "icon" ? <i className={value} aria-hidden="true"></i> : value}
+				{type === "icon" ? (
+					<>
+						{"\n"}
+						<i className={value} aria-hidden="true"></i>
+						{"\n"}
+					</>
+				) : (
+					value
+				)}
 			</span>
 		)}
 	</>
