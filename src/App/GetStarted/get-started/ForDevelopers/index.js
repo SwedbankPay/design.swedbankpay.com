@@ -415,6 +415,10 @@ const Contributing = () => (
 				rel="noopener noreferrer"
 			>
 				<span className="mr-2">our Git Repository</span>
+				<i
+					className="at-arrow-up-from-square small align-self-baseline"
+					aria-hidden="true"
+				></i>
 			</a>{" "}
 			or create a feature request here.
 		</p>

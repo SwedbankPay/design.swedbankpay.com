@@ -99,7 +99,7 @@ const Home = () => {
 					<div className="col-12 col-sm-6 col-lg-3 d-flex">
 						<Link to={"/utilities"} className="cards cards-primary">
 							<div className="cards-icon">
-								<i className="at-lit-match small" aria-hidden="true"></i>
+								<i className="at-build-wall small" aria-hidden="true"></i>
 							</div>
 							<div className="cards-content">
 								<span className="h4">Utilities</span>
