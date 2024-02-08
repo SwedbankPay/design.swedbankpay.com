@@ -73,9 +73,9 @@ class Toast {
 				button.setAttribute("id", "toast-close-button");
 				button.setAttribute("aria-label", "Close button");
 				button.appendChild(icon);
-			} else {
-				icon.setAttribute("aria-hidden", "true");
 			}
+
+			icon.setAttribute("aria-hidden", "true");
 
 			icon.classList.add(iconType);
 
