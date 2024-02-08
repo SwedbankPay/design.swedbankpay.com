@@ -28,12 +28,18 @@ exports[`Component: CodeTags renders with class removable when removable is prov
 <span
   className="tag tag-primary removable"
 >
+  
+
   test
+  
+
   <button
     aria-label="remove tag"
     className="close-button"
     type="button"
   />
+  
+
 </span>
 `;
 

@@ -11,7 +11,9 @@
 ### NON Breaking UI changes BUT CAN & SHOULD modify code when have time
 
 - Tags
-  - the close icon is now a cross set via CSS only, no need to add an `<i>` element
+  - the close icon is now a cross set via CSS only, no need to add an `<i>` element anymore
+- Dialog
+  - the close icon is now a cross set via CSS only, no need to add an `<i>` element anymore
 
 ## Maintenance
 
