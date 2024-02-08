@@ -156,7 +156,7 @@ const ComponentPreview = ({
 							className="tooltip"
 							onClick={(e) => copyToClipboard(e)}
 						>
-							<i className="material-icons-outlined">content_copy</i>
+							<i className="at-clipboard small" aria-hidden="true"></i>
 							<div role="tooltip" id="tooltipCopy">
 								Copy to clipboard
 							</div>
@@ -221,7 +221,7 @@ const ComponentPreview = ({
 
 		_resetOptions() {
 			const showcasePanel = document.getElementById(
-				this.props.showCasePanelAdvanced.id
+				this.props.showCasePanelAdvanced.id,
 			);
 			const optionsPanel = showcasePanel.querySelector(".options");
 
@@ -236,28 +236,28 @@ const ComponentPreview = ({
 				.forEach((radio) => (radio.querySelector("input").checked = false));
 
 			const defaultRadios = [...optionsPanel.querySelectorAll(".radio")].filter(
-				(radio) => radio.querySelector("input").id.includes("default")
+				(radio) => radio.querySelector("input").id.includes("default"),
 			);
 
 			if (defaultRadios.length > 0) {
 				const defaultRadiosGroups = defaultRadios.map(
-					(radio) => radio.querySelector("input").name
+					(radio) => radio.querySelector("input").name,
 				);
 
 				defaultRadios.map(
-					(radio) => (radio.querySelector("input").checked = true)
+					(radio) => (radio.querySelector("input").checked = true),
 				);
 
 				// Reset radio groups that do not have default specified (set to top radio). Needs to be done when one or more radio button is specified as default
 				[...optionsPanel.querySelectorAll(".radio")]
 					.filter(
 						(radio) =>
-							!defaultRadiosGroups.includes(radio.querySelector("input").name)
+							!defaultRadiosGroups.includes(radio.querySelector("input").name),
 					)
 					.map(
 						(radio) =>
 							(radio.querySelector("input").checked =
-								radio.querySelector("input").value === "0")
+								radio.querySelector("input").value === "0"),
 					);
 			} else {
 				optionsPanel
@@ -265,7 +265,7 @@ const ComponentPreview = ({
 					.forEach(
 						(radio) =>
 							(radio.querySelector("input").checked =
-								radio.querySelector("input").value === "0")
+								radio.querySelector("input").value === "0"),
 					);
 			}
 		}
@@ -316,7 +316,7 @@ const ComponentPreview = ({
 					this.setState((prevState) => ({
 						...prevState,
 						activeOptions: this.state.activeOptions.filter(
-							(option) => id !== option.id
+							(option) => id !== option.id,
 						),
 					}));
 				} else {
@@ -387,11 +387,9 @@ const ComponentPreview = ({
 											onClick={() => this.setExpandedPreview(true)}
 										>
 											<i
-												className="material-icons material-icons-outlined"
+												className="at-arrows-up-right-down-left"
 												aria-hidden="true"
-											>
-												open_in_full
-											</i>
+											></i>
 										</button>
 									) : (
 										<button
@@ -400,12 +398,7 @@ const ComponentPreview = ({
 											aria-label="Zoom out"
 											onClick={() => this.setExpandedPreview(false)}
 										>
-											<i
-												className="material-icons material-icons-outlined"
-												aria-hidden="true"
-											>
-												close_fullscreen
-											</i>
+											<i className="at-zoom-out-arrows" aria-hidden="true"></i>
 										</button>
 									))}
 								{this.props.showCasePanelAdvanced.elements.map((element, i) => (
@@ -432,7 +425,7 @@ const ComponentPreview = ({
 									onKeyDown={(e) => this.setOptionsMenuState(e, true)}
 									onClick={() => this.setState({ optionsOpen: true })}
 								>
-									<i className="material-icons">menu_open</i>
+									<i className="at-arrow-right-line" aria-hidden="true"></i>
 								</button>
 							</div>
 						</div>
@@ -453,8 +446,8 @@ const ComponentPreview = ({
 													...acc,
 													...currentOption.value,
 												}),
-												{}
-											)
+												{},
+											),
 										)}
 									</div>
 								</div>
@@ -470,7 +463,7 @@ const ComponentPreview = ({
 												...acc,
 												currentOption.description,
 											],
-											[]
+											[],
 										)
 										.map((currentOptionDescription, i) => (
 											<React.Fragment key={i}>
@@ -493,7 +486,7 @@ const ComponentPreview = ({
 											onKeyDown={(e) => this.setOptionsMenuState(e, false)}
 											onClick={() => this.setState({ optionsOpen: false })}
 										>
-											<i className="material-icons">close</i>
+											<i className="at-arrow-left-line" aria-hidden="true"></i>
 										</button>
 									</div>
 									{this.state.activeTab.options && (
@@ -514,7 +507,7 @@ const ComponentPreview = ({
 																			input.id,
 																			input.value,
 																			input.description,
-																			true
+																			true,
 																		)
 																	}
 																>
@@ -523,7 +516,7 @@ const ComponentPreview = ({
 																</div>
 															))}
 														</fieldset>
-													)
+													),
 												)}
 											{this.state.activeTab.options.dropdown &&
 												this.state.activeTab.options.dropdown.map(
@@ -537,7 +530,7 @@ const ComponentPreview = ({
 																	this.setActiveOptions(
 																		dropdown.id,
 																		dropdown.values[e.target.value].value,
-																		dropdown.values[e.target.value].description
+																		dropdown.values[e.target.value].description,
 																	)
 																}
 															>
@@ -548,7 +541,7 @@ const ComponentPreview = ({
 																))}
 															</select>
 														</fieldset>
-													)
+													),
 												)}
 											{this.state.activeTab.options.radio &&
 												this.state.activeTab.options.radio.map((radio, i) => (
@@ -564,7 +557,7 @@ const ComponentPreview = ({
 																	this.setActiveOptions(
 																		radio.id,
 																		radio.values[e.target.value].value,
-																		radio.values[e.target.value].description
+																		radio.values[e.target.value].description,
 																	)
 																}
 															>
@@ -610,8 +603,8 @@ const ComponentPreview = ({
 										...acc,
 										...currentOption.value,
 									}),
-									{}
-								)
+									{},
+								),
 							)}
 						</CodeFigure>
 					)}

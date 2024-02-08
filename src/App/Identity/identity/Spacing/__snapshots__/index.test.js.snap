@@ -1199,10 +1199,8 @@ exports[`Identity: Spacing renders 1`] = `
           </span>
           <i
             aria-hidden="true"
-            className="material-icons"
-          >
-            open_in_new
-          </i>
+            className="at-arrow-up-from-square small align-self-baseline"
+          />
         </a>
         , which provides a brief explanation of the reasons why to use the 8-point spacing system. To dive even deeper into the nitty gritty, please refer to this
          
@@ -1219,10 +1217,8 @@ exports[`Identity: Spacing renders 1`] = `
           </span>
           <i
             aria-hidden="true"
-            className="material-icons"
-          >
-            open_in_new
-          </i>
+            className="at-arrow-up-from-square small align-self-baseline"
+          />
         </a>
          
         of the 8-point spacing system.
@@ -1403,10 +1399,8 @@ exports[`Identity: Spacing renders 1`] = `
       >
         <i
           aria-hidden="true"
-          className="material-icons mr-2"
-        >
-          open_in_new
-        </i>
+          className="at-arrow-up-from-square small align-self-baseline mr-2"
+        />
         <span
           className="mr-2"
         >
@@ -1421,10 +1415,8 @@ exports[`Identity: Spacing renders 1`] = `
       >
         <i
           aria-hidden="true"
-          className="material-icons mr-2"
-        >
-          open_in_new
-        </i>
+          className="at-arrow-up-from-square small align-self-baseline mr-2"
+        />
         <span
           className="mr-2"
         >
@@ -1439,10 +1431,8 @@ exports[`Identity: Spacing renders 1`] = `
       >
         <i
           aria-hidden="true"
-          className="material-icons mr-2"
-        >
-          open_in_new
-        </i>
+          className="at-arrow-up-from-square small align-self-baseline mr-2"
+        />
         <span
           className="mr-2"
         >
@@ -1457,10 +1447,8 @@ exports[`Identity: Spacing renders 1`] = `
       >
         <i
           aria-hidden="true"
-          className="material-icons mr-2"
-        >
-          open_in_new
-        </i>
+          className="at-arrow-up-from-square small align-self-baseline mr-2"
+        />
         <span
           className="mr-2"
         >
@@ -2098,10 +2086,9 @@ exports[`Identity: Spacing renders 1`] = `
               onClick={[Function]}
             >
               <i
-                className="material-icons-outlined"
-              >
-                content_copy
-              </i>
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
               <div
                 id="tooltipCopy"
                 role="tooltip"
@@ -2283,10 +2270,9 @@ exports[`Identity: Spacing renders 1`] = `
               onClick={[Function]}
             >
               <i
-                className="material-icons-outlined"
-              >
-                content_copy
-              </i>
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
               <div
                 id="tooltipCopy"
                 role="tooltip"

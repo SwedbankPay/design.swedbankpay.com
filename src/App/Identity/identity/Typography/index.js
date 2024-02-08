@@ -29,9 +29,10 @@ const Typefaces = () => (
 		</div>
 
 		<a href={`${basename}release/fonts/Fonts.zip`} className="icon-link">
-			<i className="material-icons" aria-hidden="true">
-				download
-			</i>
+			<i
+				className="at-download-arrow-down small align-self-baseline"
+				aria-hidden="true"
+			></i>
 			<span className="ml-2">Download all Swedbank Pay typefaces</span>
 		</a>
 

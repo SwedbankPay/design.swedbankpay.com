@@ -5,7 +5,10 @@ import overviewList from "@src/App/routes/components";
 import { DocContainer } from "@docutils";
 
 const MenuOverview = () => (
-	<section className="component-overview hide-arrow-icon">
+	<section
+		className="component-overview hide-arrow-icon"
+		aria-label="components overview"
+	>
 		{overviewList[0].routes.slice(1).map(
 			(card) =>
 				card.icon && (
@@ -15,27 +18,15 @@ const MenuOverview = () => (
 						className="cards cards-primary cards-wide"
 					>
 						<div className="cards-content flex-row align-items-center m-0 ">
-							<i
-								className={`material-icons${
-									card.outlined ? " material-icons-outlined" : ""
-								}${card.icon === "call_to_action" ? " v-flip" : ""} mr-3`}
-								aria-hidden="true"
-							>
-								{card.icon}
-							</i>
+							<i className={`${card.icon} mr-3`} aria-hidden="true"></i>
 							<span className="h3 m-0">{card.title}</span>
 							{card.deprecated && (
 								<span className="badge badge-deprecated ml-3">Deprecated</span>
 							)}
 						</div>
-						<i
-							className="material-icons material-icons-outlined"
-							aria-hidden="true"
-						>
-							arrow_forward
-						</i>
+						<i className="at-arrow-right small" aria-hidden="true"></i>
 					</Link>
-				)
+				),
 		)}
 	</section>
 );

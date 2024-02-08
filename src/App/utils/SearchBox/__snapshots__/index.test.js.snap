@@ -21,7 +21,8 @@ exports[`Utilities; SearchBox renders with mobile prop 1`] = `
       type="button"
     >
       <i
-        className="at-magnifying-glass"
+        aria-hidden="true"
+        className="at-magnifying-glass small"
       />
     </button>
   </div>
@@ -63,7 +64,8 @@ exports[`Utilities; SearchBox renders with no props 1`] = `
         className="input-group-addon postfix"
       >
         <i
-          className="at-magnifying-glass"
+          aria-hidden="true"
+          className="at-magnifying-glass small"
         />
       </span>
     </div>

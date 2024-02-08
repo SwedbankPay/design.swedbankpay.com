@@ -69,7 +69,7 @@ const CloseOptionsButton = ({
 			aria-label="Open options menu"
 			onClick={() => setSidebarDisplayed(true)}
 		>
-			<i className="material-icons">menu_open</i>
+			<i className="at-arrow-right-line" aria-hidden="true"></i>
 		</button>
 	</div>
 );

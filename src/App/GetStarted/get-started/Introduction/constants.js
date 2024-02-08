@@ -1,42 +1,42 @@
 export const designGuideUsers = [
 	{
 		name: "Checkout",
-		icon: "close",
+		icon: "swepay-icon-error-circle-filled",
 		text: "No, but are following the Design Guide",
 	},
 	{
 		name: "Swedbankpay.se",
-		icon: "close",
+		icon: "swepay-icon-error-circle-filled",
 		text: "No",
 	},
 	{
 		name: "Consumer Portal",
-		icon: "check",
+		icon: "swepay-icon-check-circle-filled",
 		text: "Yes",
 	},
 	{
 		name: "Developer Portal",
-		icon: "check",
+		icon: "swepay-icon-check-circle-filled",
 		text: "Yes",
 	},
 	{
 		name: "Merchant Portal",
-		icon: "check",
+		icon: "swepay-icon-check-circle-filled",
 		text: "Yes",
 	},
 	{
 		name: "Card terminals",
-		icon: "close",
+		icon: "swepay-icon-error-circle-filled",
 		text: "No, but are following the Design Guide",
 	},
 	{
 		name: "Onboarding Portals",
-		icon: "check",
+		icon: "swepay-icon-check-circle-filled",
 		text: "Yes",
 	},
 	{
 		name: "Terminal Management Systems",
-		icon: "check",
+		icon: "swepay-icon-check-circle-filled",
 		text: "Yes",
 	},
 ];

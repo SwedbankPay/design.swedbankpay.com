@@ -220,16 +220,18 @@ const Favicon = () => (
 
 		{brand === "payex" ? (
 			<a className="btn btn-primary" href={`${basename}release/icons.zip`}>
-				<i className="material-icons" aria-hidden="true">
-					file_download
-				</i>
+				<i
+					className="at-download-arrow-down small align-self-baseline"
+					aria-hidden="true"
+				></i>
 				<span>Download Favicons</span>
 			</a>
 		) : (
 			<a href={`${basename}release/icons.zip`} className="icon-link">
-				<i className="material-icons" aria-hidden="true">
-					download
-				</i>
+				<i
+					className="at-download-arrow-down small align-self-baseline"
+					aria-hidden="true"
+				></i>
 				<span className="ml-2">Download Swedbank Pay favicon assets</span>
 			</a>
 		)}
@@ -415,9 +417,10 @@ const Overview = () => (
 			href={`${basename}release/logos/Swedbank_Pay_Logotype.zip`}
 			className="icon-link mb-4"
 		>
-			<i className="material-icons" aria-hidden="true">
-				download
-			</i>
+			<i
+				className="at-download-arrow-down small align-self-baseline"
+				aria-hidden="true"
+			></i>
 			<span className="ml-2">Download Swedbank Pay logotype assets</span>
 		</a>
 

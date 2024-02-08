@@ -74,7 +74,7 @@ const Index = () => (
 						<span className="h3">{card.title}</span>
 						<span>{card.text}</span>
 					</div>
-					<i className="material-icons">arrow_forward</i>
+					<i className="at-arrow-right small" aria-hidden="true"></i>
 				</Link>
 			))}
 		</div>

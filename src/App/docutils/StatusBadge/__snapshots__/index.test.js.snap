@@ -8,10 +8,8 @@ exports[`Utilities: StatusBadge renders deprecated status badge when type is 'de
 >
   <i
     aria-hidden="true"
-    className="material-icons"
-  >
-    delete_forever
-  </i>
+    className="at-trash small mr-2"
+  />
   Deprecated
 </span>
 `;
@@ -34,10 +32,8 @@ exports[`Utilities: StatusBadge renders new status badge when type is 'new' 1`] 
 >
   <i
     aria-hidden="true"
-    className="material-icons"
-  >
-    child_care
-  </i>
+    className="at-hand-holding-seedling small mr-2"
+  />
   New
 </span>
 `;
@@ -48,10 +44,8 @@ exports[`Utilities: StatusBadge renders remove status badge when type is 'remove
 >
   <i
     aria-hidden="true"
-    className="material-icons"
-  >
-    sentiment_very_dissatisfied
-  </i>
+    className="at-axe"
+  />
   Being removed
 </span>
 `;
@@ -62,10 +56,8 @@ exports[`Utilities: StatusBadge renders updated status badge when type is 'updat
 >
   <i
     aria-hidden="true"
-    className="material-icons"
-  >
-    mood
-  </i>
+    className="at-click-select small mr-2"
+  />
   Newly updated
 </span>
 `;

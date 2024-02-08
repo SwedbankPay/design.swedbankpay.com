@@ -11,7 +11,10 @@ test("Accordion page exist", async ({ page }) => {
 	await expect(page.getByRole("link", { name: "Accordion" })).toHaveCount(
 		page.viewportSize().width < 991 ? 1 : 2,
 	);
-	await page.getByText("calendar_view_dayAccordionarrow_forward").click();
+	await page
+		.getByLabel("components overview")
+		.getByRole("link", { name: "Accordion" })
+		.click();
 	await expect(page).toHaveTitle(/Accordion/);
 	await expect(
 		page.getByRole("heading", { name: "Accordion", exact: true, level: 1 }),

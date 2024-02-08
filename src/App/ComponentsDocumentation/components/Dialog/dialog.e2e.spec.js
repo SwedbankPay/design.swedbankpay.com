@@ -9,12 +9,15 @@ test("Dialog page exist", async ({ page }) => {
 		})
 		.click();
 	await expect(page.getByRole("link", { name: "Dialog" })).toHaveCount(
-		page.viewportSize().width < 991 ? 1 : 2
+		page.viewportSize().width < 991 ? 1 : 2,
 	);
-	await page.getByText("picture_in_pictureDialogarrow_forward").click();
+	await page
+		.getByLabel("components overview")
+		.getByRole("link", { name: "Dialog" })
+		.click();
 	await expect(page).toHaveTitle(/Dialog/);
 	await expect(
-		page.getByRole("heading", { name: "Dialog", exact: true })
+		page.getByRole("heading", { name: "Dialog", exact: true }),
 	).toBeVisible();
 });
 
@@ -29,9 +32,9 @@ test("visual regresion accordions", async ({ page, browserName }) => {
 	await expect(dialogButton).toHaveScreenshot(`${brand}-dialog-button.png`);
 	await dialogButton.click();
 	await expect(page.getByRole("dialog").locator("section")).toHaveScreenshot(
-		`${brand}-dialog-modal.png`
+		`${brand}-dialog-modal.png`,
 	);
 	await expect(page.getByRole("dialog")).toHaveScreenshot(
-		`${brand}-dialog-modal-screen.png`
+		`${brand}-dialog-modal-screen.png`,
 	);
 });

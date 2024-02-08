@@ -9,12 +9,15 @@ test("toast page exist", async ({ page }) => {
 		})
 		.click();
 	await expect(page.getByRole("link", { name: "Toast" })).toHaveCount(
-		page.viewportSize().width < 991 ? 1 : 2
+		page.viewportSize().width < 991 ? 1 : 2,
 	);
-	await page.getByText("picture_in_pictureToastarrow_forward").click();
+	await page
+		.getByLabel("components overview")
+		.getByRole("link", { name: "Toast" })
+		.click();
 	await expect(page).toHaveTitle(/Toast/);
 	await expect(
-		page.getByRole("heading", { name: "Toast", exact: true })
+		page.getByRole("heading", { name: "Toast", exact: true }),
 	).toBeVisible();
 });
 
@@ -53,7 +56,7 @@ test.describe("toast variants are styled and named accordingly", () => {
 			const toast = page.locator("#overviewToast");
 
 			await expect(
-				toast.getByText(variant.icon, { exact: true })
+				toast.getByText(variant.icon, { exact: true }),
 			).toBeVisible();
 			await expect(toast.getByText(`${variant.linkName}  title`)).toBeVisible();
 
@@ -65,7 +68,7 @@ test.describe("toast variants are styled and named accordingly", () => {
 				`${brand}-${variant.name}-toast.png`,
 				{
 					maxDiffPixelRatio: 0.001,
-				}
+				},
 			);
 			await page.locator("#toast-close-button").click();
 			await expect(page.locator("#toast-close-button")).not.toBeVisible();

@@ -275,13 +275,9 @@ exports[`Core: Accessibility WcagStandard renders 1`] = `
   >
     <i
       aria-hidden="true"
-      className="material-icons"
-    >
-      open_in_new
-    </i>
-    <span
-      className="ml-2"
-    >
+      className="at-arrow-up-from-square small align-self-baseline mr-2"
+    />
+    <span>
       Swedbank Pay Definitions – Glossary and other resources
     </span>
   </a>
@@ -299,13 +295,9 @@ exports[`Core: Accessibility WcagStandard renders 1`] = `
     >
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        open_in_new
-      </i>
-      <span
-        className="ml-2"
-      >
+        className="at-arrow-up-from-square small align-self-baseline mr-2"
+      />
+      <span>
         UX writing at Swedbank
       </span>
     </a>
@@ -317,13 +309,9 @@ exports[`Core: Accessibility WcagStandard renders 1`] = `
     >
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        open_in_new
-      </i>
-      <span
-        className="ml-2"
-      >
+        className="at-arrow-up-from-square small align-self-baseline mr-2"
+      />
+      <span>
         Swedbank Brand Manager – Tonality
       </span>
     </a>

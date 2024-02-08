@@ -1,15 +1,12 @@
 # Changelog
 
-## \[10.10.0\] - 06.02.2024
+## \[10.10.1\] - 06.02.2024
 
 ## Component changes
 
 ### Non breaking UI changes
 
-- Icons migration step 1 (NON BREAKING ... for now and until next major release. But we're moving away from Google's material-icons)
-  - Import Atlas icons (via CDN via CSS) for Atlas icons
-  - Add custom icons "Swepay-icons": svg icons saved locally to complement the ones missing from Atlas icons set (called Swepay-icons but supported for both Swedbankpay AND PayEx sides)
-  - Add support in the components styles for the Atlas icons and our new custom made "Swepay-icons"
+- Icons migration step 2 (still non-breaking. But the migrations is decided and is happening, so move when you can. Silent support of Material-icons until next major version release).
 
 ## Maintenance
 
@@ -17,10 +14,4 @@
 
 ## Design System website
 
-- Update iconography page
-
-  - Add sections about new Atlas and custom icons
-  - Improve sections about sizes
-  - Update status of material-icons
-
-- Deadlink fix (thanks Yvonne for the heads-up)
+- Migrated the icons used on the documentation website from Material-icons to a combination of Atlas and our own custom swepay-icons

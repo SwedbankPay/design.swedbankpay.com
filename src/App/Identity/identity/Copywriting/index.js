@@ -268,12 +268,11 @@ const GlossaryLinks = () => (
 			target="_blank"
 			className="icon-link"
 		>
-			<i className="material-icons" aria-hidden="true">
-				open_in_new
-			</i>
-			<span className="ml-2">
-				Swedbank Pay Definitions – Glossary and other resources
-			</span>
+			<i
+				className="at-arrow-up-from-square small align-self-baseline mr-2"
+				aria-hidden="true"
+			></i>
+			<span>Swedbank Pay Definitions – Glossary and other resources</span>
 		</a>
 		<p>
 			This set of guidelines leans heavily on material provided by Swedbank’s UX
@@ -288,10 +287,11 @@ const GlossaryLinks = () => (
 				target="_blank"
 				className="icon-link"
 			>
-				<i className="material-icons" aria-hidden="true">
-					open_in_new
-				</i>
-				<span className="ml-2">UX writing at Swedbank</span>
+				<i
+					className="at-arrow-up-from-square small align-self-baseline mr-2"
+					aria-hidden="true"
+				></i>
+				<span>UX writing at Swedbank</span>
 			</a>
 			<a
 				href="https://ux-design.swedbank.com/content/sites/swedbank/ux-design/en/home/start/ux-writing.html"
@@ -299,10 +299,11 @@ const GlossaryLinks = () => (
 				target="_blank"
 				className="icon-link"
 			>
-				<i className="material-icons" aria-hidden="true">
-					open_in_new
-				</i>
-				<span className="ml-2">Swedbank Brand Manager – Tonality</span>
+				<i
+					className="at-arrow-up-from-square small align-self-baseline mr-2"
+					aria-hidden="true"
+				></i>
+				<span>Swedbank Brand Manager – Tonality</span>
 			</a>
 		</div>
 		<p>

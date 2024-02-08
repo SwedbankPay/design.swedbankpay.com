@@ -12,10 +12,8 @@ Array [
   >
     <i
       aria-hidden="true"
-      className="material-icons"
-    >
-      sentiment_very_dissatisfied
-    </i>
+      className="at-axe"
+    />
     Being removed
   </span>,
   <p>
@@ -76,10 +74,9 @@ Array [
           onClick={[Function]}
         >
           <i
-            className="material-icons-outlined"
-          >
-            content_copy
-          </i>
+            aria-hidden="true"
+            className="at-clipboard small"
+          />
           <div
             id="tooltipCopy"
             role="tooltip"
@@ -381,10 +378,9 @@ Array [
           onClick={[Function]}
         >
           <i
-            className="material-icons-outlined"
-          >
-            content_copy
-          </i>
+            aria-hidden="true"
+            className="at-clipboard small"
+          />
           <div
             id="tooltipCopy"
             role="tooltip"
@@ -1013,10 +1009,9 @@ Array [
           onClick={[Function]}
         >
           <i
-            className="material-icons-outlined"
-          >
-            content_copy
-          </i>
+            aria-hidden="true"
+            className="at-clipboard small"
+          />
           <div
             id="tooltipCopy"
             role="tooltip"
