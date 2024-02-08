@@ -225,7 +225,7 @@ Array [
                  
                 <i
                   aria-hidden="true"
-                  className="verified_user text-muted"
+                  className="at-check-shield text-muted"
                 />
                  
                 
@@ -597,7 +597,7 @@ Array [
                                     &lt;div class="media-img"&gt;
                 
 
-                                        &lt;i class="verified_user text-muted" aria-hidden="true"&gt;&lt;/i&gt;
+                                        &lt;i class="at-check-shield text-muted" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                     &lt;/div&gt;
@@ -862,7 +862,7 @@ Array [
                  
                 <i
                   aria-hidden="true"
-                  className="account_balance text-muted"
+                  className="at-building-column text-muted"
                 />
                  
                 
@@ -944,7 +944,7 @@ Array [
                  
                 <i
                   aria-hidden="true"
-                  className="verified_user text-muted"
+                  className="at-check-shield text-muted"
                 />
                  
                 
@@ -1305,7 +1305,7 @@ Array [
                                     &lt;div class="media-img"&gt;
                 
 
-                                        &lt;i class="account_balance text-muted" aria-hidden="true"&gt;&lt;/i&gt;
+                                        &lt;i class="at-building-column text-muted" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                     &lt;/div&gt;
@@ -1380,7 +1380,7 @@ Array [
                                     &lt;div class="media-img"&gt;
                 
 
-                                        &lt;i class="verified_user text-muted" aria-hidden="true"&gt;&lt;/i&gt;
+                                        &lt;i class="at-check-shield text-muted" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                     &lt;/div&gt;
