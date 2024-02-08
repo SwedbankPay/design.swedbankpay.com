@@ -9,19 +9,19 @@ import { actionList } from "@src/scripts/main";
 const items = [
 	{
 		name: "Add bookmark",
-		icon: "bookmark",
+		icon: "at-bookmark-star",
 	},
 	{
 		name: "Add client",
-		icon: "business_center",
+		icon: "at-business-suitcase",
 	},
 	{
 		name: "Add document",
-		icon: "add_circle",
+		icon: "at-plus-circle",
 	},
 	{
 		name: "Add user",
-		icon: "person_add",
+		icon: "at-user-plus",
 	},
 ];
 
@@ -132,7 +132,7 @@ const SettingsList = () => (
 				<li>
 					{"\n"}
 					<i
-						className="swepay-icon-check-circle-filled small"
+						className="swepay-icon-check-circle-filled small align-self-center"
 						aria-hidden="true"
 					></i>
 					Shovels and tapestry newsletter{"\n"}
@@ -140,7 +140,7 @@ const SettingsList = () => (
 				<li>
 					{"\n"}
 					<i
-						className="swepay-icon-warning-triangle-filled small"
+						className="swepay-icon-warning-triangle-filled small align-self-center"
 						aria-hidden="true"
 					></i>
 					Spoon collectors weekly newsletter{"\n"}
@@ -148,7 +148,7 @@ const SettingsList = () => (
 				<li>
 					{"\n"}
 					<i
-						className="swepay-icon-error-circle-filled small"
+						className="swepay-icon-error-circle-filled small align-self-center"
 						aria-hidden="true"
 					></i>
 					Energetic squirrels newsletter{"\n"}

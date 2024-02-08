@@ -2748,7 +2748,7 @@ exports[`Documentation: Lists renders 1`] = `
 
           <i
             aria-hidden="true"
-            className="swepay-icon-check-circle-filled small"
+            className="swepay-icon-check-circle-filled small align-self-center"
           />
           Shovels and tapestry newsletter
           
@@ -2759,7 +2759,7 @@ exports[`Documentation: Lists renders 1`] = `
 
           <i
             aria-hidden="true"
-            className="swepay-icon-warning-triangle-filled small"
+            className="swepay-icon-warning-triangle-filled small align-self-center"
           />
           Spoon collectors weekly newsletter
           
@@ -2770,7 +2770,7 @@ exports[`Documentation: Lists renders 1`] = `
 
           <i
             aria-hidden="true"
-            className="swepay-icon-error-circle-filled small"
+            className="swepay-icon-error-circle-filled small align-self-center"
           />
           Energetic squirrels newsletter
           
@@ -2857,7 +2857,7 @@ exports[`Documentation: Lists renders 1`] = `
                       &lt;li&gt;
                   
 
-                          &lt;i class="swepay-icon-check-circle-filled small" aria-hidden="true"&gt;&lt;/i&gt;Shovels and tapestry newsletter
+                          &lt;i class="swepay-icon-check-circle-filled small align-self-center" aria-hidden="true"&gt;&lt;/i&gt;Shovels and tapestry newsletter
                   
 
                       &lt;/li&gt;
@@ -2866,7 +2866,7 @@ exports[`Documentation: Lists renders 1`] = `
                       &lt;li&gt;
                   
 
-                          &lt;i class="swepay-icon-warning-triangle-filled small" aria-hidden="true"&gt;&lt;/i&gt;Spoon collectors weekly newsletter
+                          &lt;i class="swepay-icon-warning-triangle-filled small align-self-center" aria-hidden="true"&gt;&lt;/i&gt;Spoon collectors weekly newsletter
                   
 
                       &lt;/li&gt;
@@ -2875,7 +2875,7 @@ exports[`Documentation: Lists renders 1`] = `
                       &lt;li&gt;
                   
 
-                          &lt;i class="swepay-icon-error-circle-filled small" aria-hidden="true"&gt;&lt;/i&gt;Energetic squirrels newsletter
+                          &lt;i class="swepay-icon-error-circle-filled small align-self-center" aria-hidden="true"&gt;&lt;/i&gt;Energetic squirrels newsletter
                   
 
                       &lt;/li&gt;
@@ -3949,7 +3949,7 @@ exports[`Documentation: Lists renders 1`] = `
               >
                 <i
                   aria-hidden="true"
-                  className="bookmark small"
+                  className="at-bookmark-star small"
                 />
                 Add bookmark
               </a>
@@ -3961,7 +3961,7 @@ exports[`Documentation: Lists renders 1`] = `
               >
                 <i
                   aria-hidden="true"
-                  className="business_center small"
+                  className="at-business-suitcase small"
                 />
                 Add client
               </a>
@@ -3973,7 +3973,7 @@ exports[`Documentation: Lists renders 1`] = `
               >
                 <i
                   aria-hidden="true"
-                  className="add_circle small"
+                  className="at-plus-circle small"
                 />
                 Add document
               </a>
@@ -3985,7 +3985,7 @@ exports[`Documentation: Lists renders 1`] = `
               >
                 <i
                   aria-hidden="true"
-                  className="person_add small"
+                  className="at-user-plus small"
                 />
                 Add user
               </a>
@@ -4221,16 +4221,16 @@ exports[`Documentation: Lists renders 1`] = `
                               &lt;div class="action-menu" aria-labelledby="actionListToggle"&gt;
                   
 
-                                  &lt;a href="#"&gt;&lt;i class="bookmark small" aria-hidden="true"&gt;&lt;/i&gt;Add bookmark&lt;/a&gt;
+                                  &lt;a href="#"&gt;&lt;i class="at-bookmark-star small" aria-hidden="true"&gt;&lt;/i&gt;Add bookmark&lt;/a&gt;
                   
 
-                                  &lt;a href="#"&gt;&lt;i class="business_center small" aria-hidden="true"&gt;&lt;/i&gt;Add client&lt;/a&gt;
+                                  &lt;a href="#"&gt;&lt;i class="at-business-suitcase small" aria-hidden="true"&gt;&lt;/i&gt;Add client&lt;/a&gt;
                   
 
-                                  &lt;a href="#"&gt;&lt;i class="add_circle small" aria-hidden="true"&gt;&lt;/i&gt;Add document&lt;/a&gt;
+                                  &lt;a href="#"&gt;&lt;i class="at-plus-circle small" aria-hidden="true"&gt;&lt;/i&gt;Add document&lt;/a&gt;
                   
 
-                                  &lt;a href="#"&gt;&lt;i class="person_add small" aria-hidden="true"&gt;&lt;/i&gt;Add user&lt;/a&gt;
+                                  &lt;a href="#"&gt;&lt;i class="at-user-plus small" aria-hidden="true"&gt;&lt;/i&gt;Add user&lt;/a&gt;
                   
 
                               &lt;/div&gt;
