@@ -685,7 +685,7 @@ const AkkuratMono = () => (
 			</p>
 			<Button
 				type="primary"
-				icon="file_download"
+				icon="at-download-arrow-down small"
 				href={`${basename}release/fonts/AkkuratMono.zip`}
 				label="Akkurat Mono"
 			/>

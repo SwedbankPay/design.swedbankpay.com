@@ -7,6 +7,7 @@
 ### Non breaking UI changes
 
 - Icons migration step 2 (still non-breaking. But the migrations is decided and is happening, so move when you can. Silent support of Material-icons until next major version release).
+  - Toast icons are modified. Since Toast is created entirely via a script shipped in the package, nothing is requiring from devs consuming the package. But expect a change in the icon used by the Toast component.
 
 ### NON Breaking UI changes BUT CAN & SHOULD modify code when have time
 
