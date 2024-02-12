@@ -1541,7 +1541,7 @@ exports[`Forms: index renders 1`] = `
 
                 <i
                   aria-hidden="true"
-                  className="at-exclamation-triangle"
+                  className="swepay-icon-error-triangle-filled"
                 />
                 <p>
                   <b>

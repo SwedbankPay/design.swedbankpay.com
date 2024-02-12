@@ -6,7 +6,7 @@ import "@testing-library/jest-dom";
 import Tooltip from "./index";
 
 const text = "test text";
-const icon = "edit";
+const icon = "at-pencil";
 const title = "test title";
 const top = "top";
 const bottom = "bottom";
@@ -20,7 +20,7 @@ describe("Component: Tooltip -", () => {
 
 	it("renders", () => {
 		const componentForSnap = renderer.create(
-			<Tooltip text={text} icon={icon} title={title} />
+			<Tooltip text={text} icon={icon} title={title} />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -39,14 +39,12 @@ describe("Component: Tooltip -", () => {
 		render(<Tooltip icon={icon} text={text} />);
 
 		expect(screen.getByRole("button").querySelector("i")).toHaveClass(
-			"material-icons-outlined m-0"
+			"at-pencil m-0",
 		);
-		expect(screen.getByRole("button").querySelector("i")).toHaveTextContent(
-			"edit"
-		);
+		expect(screen.getByRole("button").querySelector("i")).toHaveTextContent("");
 
 		const componentForSnap = renderer.create(
-			<Tooltip icon={icon} text={text} />
+			<Tooltip icon={icon} text={text} />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -58,7 +56,7 @@ describe("Component: Tooltip -", () => {
 		expect(screen.getByRole("tooltip")).toHaveTextContent("test text");
 
 		const componentForSnap = renderer.create(
-			<Tooltip title={title} text={text} />
+			<Tooltip title={title} text={text} />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -78,11 +76,11 @@ describe("Component: Tooltip -", () => {
 		render(<Tooltip text={text} position={right} />);
 
 		expect(screen.getByRole("button")).toHaveClass(
-			"tooltip btn btn-secondary tooltip-right"
+			"tooltip btn btn-secondary tooltip-right",
 		);
 
 		const componentForSnap = renderer.create(
-			<Tooltip text={text} position={right} />
+			<Tooltip text={text} position={right} />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -92,11 +90,11 @@ describe("Component: Tooltip -", () => {
 		render(<Tooltip text={text} position={left} />);
 
 		expect(screen.getByRole("button")).toHaveClass(
-			"tooltip btn btn-secondary tooltip-left"
+			"tooltip btn btn-secondary tooltip-left",
 		);
 
 		const componentForSnap = renderer.create(
-			<Tooltip text={text} position={left} />
+			<Tooltip text={text} position={left} />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -106,11 +104,11 @@ describe("Component: Tooltip -", () => {
 		render(<Tooltip text={text} position={top} />);
 
 		expect(screen.getByRole("button")).toHaveClass(
-			"tooltip btn btn-secondary tooltip-top"
+			"tooltip btn btn-secondary tooltip-top",
 		);
 
 		const componentForSnap = renderer.create(
-			<Tooltip text={text} position={top} />
+			<Tooltip text={text} position={top} />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -119,11 +117,11 @@ describe("Component: Tooltip -", () => {
 	it("renders with tooltip position bottom", () => {
 		render(<Tooltip text={text} position={bottom} />);
 		expect(screen.getByRole("button")).toHaveClass(
-			"tooltip btn btn-secondary tooltip-bottom"
+			"tooltip btn btn-secondary tooltip-bottom",
 		);
 
 		const componentForSnap = renderer.create(
-			<Tooltip text={text} position={bottom} />
+			<Tooltip text={text} position={bottom} />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();

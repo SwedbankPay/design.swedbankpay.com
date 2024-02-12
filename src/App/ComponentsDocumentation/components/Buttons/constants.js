@@ -13,13 +13,13 @@ const ButtonOptions = (idAddOn) => ({
 				{
 					name: "Before",
 					value: {
-						icon: "cloud",
+						icon: "at-cloud-database",
 					},
 				},
 				{
 					name: "After",
 					value: {
-						icon: "keyboard_arrow_down",
+						icon: "swepay-icon-chevron-down",
 						iconAfter: true,
 					},
 				},
@@ -153,13 +153,13 @@ export const overviewButtons = {
 							{
 								name: "Before",
 								value: {
-									icon: "cloud",
+									icon: "at-cloud-database",
 								},
 							},
 							{
 								name: "After",
 								value: {
-									icon: "keyboard_arrow_down",
+									icon: "swepay-icon-chevron-down",
 									iconAfter: true,
 								},
 							},
@@ -225,7 +225,12 @@ export const overviewButtons = {
 		{
 			tab: "Icon only",
 			component: (
-				<ButtonComponent type="icon" icon="cloud" size="lg" iconOnly={true} />
+				<ButtonComponent
+					type="icon"
+					icon="at-cloud-database"
+					size="lg"
+					iconOnly={true}
+				/>
 			),
 			title: "Icon only button",
 			options: IconButtonOptions(),

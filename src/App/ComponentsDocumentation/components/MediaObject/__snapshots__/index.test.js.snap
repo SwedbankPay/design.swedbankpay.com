@@ -828,10 +828,8 @@ exports[`Documentation: MediaObject renders 1`] = `
            
           <i
             aria-hidden="true"
-            className="material-icons"
-          >
-            account_circle
-          </i>
+            className="at-customer-service-agent "
+          />
            
           
 
@@ -978,7 +976,7 @@ exports[`Documentation: MediaObject renders 1`] = `
                       &lt;div class="media-img"&gt;
                   
 
-                          &lt;i class="material-icons" aria-hidden="true"&gt;account_circle&lt;/i&gt;
+                          &lt;i class="at-customer-service-agent " aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                       &lt;/div&gt;
@@ -1075,10 +1073,8 @@ exports[`Documentation: MediaObject renders 1`] = `
            
           <i
             aria-hidden="true"
-            className="material-icons"
-          >
-            account_circle
-          </i>
+            className="at-customer-service-agent "
+          />
            
           
 
@@ -1225,7 +1221,7 @@ exports[`Documentation: MediaObject renders 1`] = `
                       &lt;div class="media-img"&gt;
                   
 
-                          &lt;i class="material-icons" aria-hidden="true"&gt;account_circle&lt;/i&gt;
+                          &lt;i class="at-customer-service-agent " aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                       &lt;/div&gt;
@@ -1301,10 +1297,8 @@ exports[`Documentation: MediaObject renders 1`] = `
            
           <i
             aria-hidden="true"
-            className="material-icons"
-          >
-            account_circle
-          </i>
+            className="at-customer-service-agent "
+          />
            
           
 
@@ -1451,7 +1445,7 @@ exports[`Documentation: MediaObject renders 1`] = `
                       &lt;div class="media-img"&gt;
                   
 
-                          &lt;i class="material-icons" aria-hidden="true"&gt;account_circle&lt;/i&gt;
+                          &lt;i class="at-customer-service-agent " aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                       &lt;/div&gt;
@@ -1538,10 +1532,8 @@ exports[`Documentation: MediaObject renders 1`] = `
            
           <i
             aria-hidden="true"
-            className="material-icons"
-          >
-            account_circle
-          </i>
+            className="at-customer-service-agent "
+          />
            
           
 
@@ -1688,7 +1680,7 @@ exports[`Documentation: MediaObject renders 1`] = `
                       &lt;div class="media-img"&gt;
                   
 
-                          &lt;i class="material-icons" aria-hidden="true"&gt;account_circle&lt;/i&gt;
+                          &lt;i class="at-customer-service-agent " aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                       &lt;/div&gt;

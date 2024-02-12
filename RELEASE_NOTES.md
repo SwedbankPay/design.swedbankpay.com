@@ -1,12 +1,20 @@
 # Changelog
 
-## \[10.10.1\] - 06.02.2024
+## \[10.10.1\] - xx.02.2024
 
 ## Component changes
 
 ### Non breaking UI changes
 
 - Icons migration step 2 (still non-breaking. But the migrations is decided and is happening, so move when you can. Silent support of Material-icons until next major version release).
+  - Toast icons are modified. Since Toast is created entirely via a script shipped in the package, nothing is requiring from devs consuming the package. But expect a change in the icon used by the Toast component.
+
+### NON Breaking UI changes BUT CAN & SHOULD modify code when have time
+
+- Tags
+  - the close icon is now a cross set via CSS only, no need to add an `<i>` element anymore
+- Dialog
+  - the close icon is now a cross set via CSS only, no need to add an `<i>` element anymore
 
 ## Maintenance
 
@@ -14,4 +22,4 @@
 
 ## Design System website
 
-- Migrated the icons used on the documentation website from Material-icons to a combination of Atlas and our own custom swepay-icons
+- Migrate icons used on the DS documentation website from Material-icons to Atlas + Swepay-icon custom icons

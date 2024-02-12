@@ -137,7 +137,7 @@ const Home = () => {
 					</span>
 					<Alert
 						type="informative"
-						icon="info-circle"
+						icon="swepay-icon-info-circle-filled"
 						text={
 							<p>
 								<b>Versioning:</b>

@@ -37,7 +37,11 @@ const Overview = () => (
 								id="tag-dropdown-example"
 								className="btn btn-secondary btn-xs"
 							>
-								Color <i className="material-icons ml-1">keyboard_arrow_down</i>
+								Color{" "}
+								<i
+									className="swepay-icon-chevron-down small ml-1"
+									aria-hidden="true"
+								></i>
 							</button>
 							<div className="d-flex  flex-row">
 								<CodeTagsComponent

@@ -37,6 +37,8 @@
 			pointer-events: none;
 
 			i {
+				color: @light-brown;
+
 				&:before {
 					color: @light-brown;
 				}
@@ -45,22 +47,18 @@
 
 		&:focus,
 		&:hover {
-			i {
-				border: 2px solid @brand-secondary;
-				border-radius: 0.125rem;
-			}
+			outline: 2px solid var(--brand-secondary);
+			border-radius: 0.125rem;
 		}
 
-		i {
-			border: 2px solid transparent;
-
-			&:before {
-				.material-icons-styling(@color: @brand-secondary, @margin: 0, @font-size: 1.75rem);
-			}
+		// TODO: in next major release, remove material icons way of adding icons (material-icons-styling() + :before content: "")
+		i.material-icons:before {
+			.material-icons-styling(@color: @brand-secondary, @margin: 0, @font-size: 1.75rem);
 		}
 
+		// TODO: in next major release, remove material icons way of adding icons (material-icons-styling() + :before content: "")
 		&.arrow-start {
-			i {
+			i.material-icons {
 				display: unset;
 
 				&:before {
@@ -70,7 +68,7 @@
 		}
 
 		&.arrow-back {
-			i {
+			i.material-icons {
 				&:before {
 					content: "chevron_left";
 				}
@@ -78,7 +76,7 @@
 		}
 
 		&.arrow-forward {
-			i {
+			i.material-icons {
 				&:before {
 					content: "chevron_right";
 				}
@@ -86,7 +84,7 @@
 		}
 
 		&.arrow-end {
-			i {
+			i.material-icons {
 				display: unset;
 
 				&:before {
@@ -109,7 +107,7 @@
 			a,
 			span {
 				min-width: 1.75rem;
-				color: @brand-secondary;
+				color: var(--brand-secondary);
 				border: 2px solid transparent;
 				text-align: center;
 				cursor: pointer;
@@ -124,7 +122,7 @@
 			a {
 				&:hover,
 				&:focus {
-					border: 2px solid @brand-secondary;
+					border: 2px solid var(--brand-secondary);
 					border-radius: 0.125rem;
 				}
 
@@ -134,7 +132,7 @@
 			}
 
 			&.active {
-				background-color: @brand-secondary;
+				background-color: var(--brand-secondary);
 
 				a {
 					cursor: default;

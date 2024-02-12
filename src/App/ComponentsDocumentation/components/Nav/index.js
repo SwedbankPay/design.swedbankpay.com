@@ -11,28 +11,28 @@ import NpmInformation from "@docutils/NpmInformation";
 const navItems = [
 	{
 		name: "Home",
-		icon: "home",
+		icon: "at-home small",
 	},
 	{
 		name: "Transactions",
-		icon: "shopping_cart",
+		icon: "at-shop-cart small",
 		subItems: ["Purchase history", "Invoice"],
 	},
 	{
 		name: "Notifications",
-		icon: "notification_important",
+		icon: "at-bell-reminder small",
 	},
 	{
 		name: "Language",
-		icon: "language",
+		icon: "at-language-translation small",
 	},
 	{
 		name: "Account",
-		icon: "account_balance",
+		icon: "at-building-column small",
 	},
 	{
 		name: "Authentication",
-		icon: "fingerprint",
+		icon: "at-fingerprint small",
 	},
 ];
 
@@ -87,7 +87,7 @@ const Nav = () => {
 		<DocContainer>
 			<Alert
 				type="danger"
-				icon="exclamation-triangle"
+				icon="swepay-icon-error-triangle-filled"
 				text={
 					<p>
 						<b>Deprecated:</b> Be aware, this component will not be maintained

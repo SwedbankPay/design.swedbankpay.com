@@ -54,13 +54,13 @@ export const menu = {
 		},
 		{
 			name: "Switch to acquiring",
-			icon: "sync_alt",
+			icon: "at-movement-arrows-left-right small",
 			pinned: true,
 			firstPushRight: true,
 		},
 		{
 			name: "Change company",
-			icon: "arrow_forward",
+			icon: "at-arrow-right small",
 		},
 	],
 };
@@ -68,20 +68,20 @@ export const menu = {
 export const menuLegacy = {
 	btn: {
 		name: "Menu",
-		icon: "menu",
+		icon: "menu small",
 	},
 	items: [
 		{
 			name: "Home",
-			icon: "home",
+			icon: "at-home small",
 		},
 		{
 			name: "Purchases",
-			icon: "shopping_cart",
+			icon: "at-shop-cart small",
 		},
 		{
 			name: "Settings",
-			icon: "settings",
+			icon: "at-gear small",
 		},
 	],
 };

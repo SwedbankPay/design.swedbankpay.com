@@ -32,13 +32,16 @@ const TopbarBtn = ({ legacy = true }) => (
 			aria-controls="topbar-nav"
 		>
 			{"\n\t\t"}
-			<i className="material-icons topbar-btn-icon">menu</i>
+			<i
+				className="swepay-icon-menu-hamburger topbar-btn-icon"
+				aria-hidden="true"
+			></i>
 			{"\n\t\t"}
 		</button>
 		{legacy && (
 			<button type="button" className="topbar-close" aria-label="Close menu">
 				{"\n"}
-				<i className="material-icons topbar-btn-icon">close</i>
+				<i className="swepay-icon-close topbar-btn-icon" aria-hidden="true"></i>
 				{"\n\t\t"}
 			</button>
 		)}
@@ -64,11 +67,7 @@ const TopbarMenu = ({ menu, logout, sidebar, legacy }) => {
 							title="Close menu"
 						>
 							{"\n"}
-							<i className="material-icons-outlined" aria-hidden="true">
-								{"\n"}
-								close
-								{"\n"}
-							</i>
+							<i className="swepay-icon-close" aria-hidden="true"></i>
 							{"\n"}
 						</button>
 						{"\n"}
@@ -99,7 +98,7 @@ const TopbarMenu = ({ menu, logout, sidebar, legacy }) => {
 								{"\n"}
 								{item.icon ? (
 									<>
-										<i className="material-icons">{item.icon}</i>
+										<i className={item.icon} aria-hidden="true"></i>
 										{"\n"}
 									</>
 								) : null}
@@ -148,7 +147,7 @@ const TopbarLogoutLegacy = () => (
 			onClick={(e) => e.preventDefault()}
 		>
 			{"\n"}
-			<i className="material-icons">exit_to_app</i>
+			<i className="at-exit small" aria-hidden="true"></i>
 			{"\n"}
 			<span>Log out</span>
 			{"\n"}

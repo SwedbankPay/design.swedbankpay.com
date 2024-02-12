@@ -54,7 +54,9 @@ describe("scripts: toast", () => {
 		toast({ html: "Test" });
 
 		const renderedToast = document.querySelector(".toast");
-		const closeIcon = renderedToast.querySelector("i.material-icons");
+		const closeIcon = renderedToast.querySelector(
+			"button[aria-label='Close button'] i.swepay-icon-close",
+		);
 
 		expect(renderedToast).toBeDefined();
 		expect(closeIcon).toBeDefined();
@@ -74,7 +76,9 @@ describe("scripts: toast", () => {
 		});
 
 		const renderedToast = document.querySelector(".toast");
-		const closeIcon = renderedToast.querySelector("i.material-icons");
+		const closeIcon = renderedToast.querySelector(
+			"button[aria-label='Close button'] i.swepay-icon-close",
+		);
 
 		expect(renderedToast).toBeDefined();
 		expect(closeIcon).toBeNull();
@@ -87,11 +91,13 @@ describe("scripts: toast", () => {
 		});
 
 		const renderedToast = document.querySelector(".toast.toast-success");
-		const icon = renderedToast.querySelector("i.material-icons");
+		const icon = renderedToast.querySelector(
+			"i.swepay-icon-check-circle-filled",
+		);
 
 		expect(renderedToast).toBeDefined();
 		expect(icon).toBeDefined();
-		expect(icon.innerHTML).toEqual("check_circle");
+		expect(icon.innerHTML).toEqual("");
 	});
 
 	it("creates correct toast when type is set to neutral", () => {
@@ -101,11 +107,13 @@ describe("scripts: toast", () => {
 		});
 
 		const renderedToast = document.querySelector(".toast.toast-neutral");
-		const icon = renderedToast.querySelector("i.material-icons");
+		const icon = renderedToast.querySelector(
+			"i.swepay-icon-info-circle-filled",
+		);
 
 		expect(renderedToast).toBeDefined();
 		expect(icon).toBeDefined();
-		expect(icon.innerHTML).toEqual("info");
+		expect(icon.innerHTML).toEqual("");
 	});
 
 	it("creates correct toast when type is set to warning", () => {
@@ -115,11 +123,13 @@ describe("scripts: toast", () => {
 		});
 
 		const renderedToast = document.querySelector(".toast.toast-warning");
-		const icon = renderedToast.querySelector("i.material-icons");
+		const icon = renderedToast.querySelector(
+			"i.swepay-icon-warning-triangle-filled",
+		);
 
 		expect(renderedToast).toBeDefined();
 		expect(icon).toBeDefined();
-		expect(icon.innerHTML).toEqual("warning");
+		expect(icon.innerHTML).toEqual("");
 	});
 
 	it("creates correct toast when type is set to danger", () => {
@@ -129,11 +139,13 @@ describe("scripts: toast", () => {
 		});
 
 		const renderedToast = document.querySelector(".toast.toast-danger");
-		const icon = renderedToast.querySelector("i.material-icons");
+		const icon = renderedToast.querySelector(
+			"i.swepay-icon-error-triangle-filled",
+		);
 
 		expect(renderedToast).toBeDefined();
 		expect(icon).toBeDefined();
-		expect(icon.innerHTML).toEqual("error");
+		expect(icon.innerHTML).toEqual("");
 	});
 
 	it("does not add a custom icon when type is not set", () => {
@@ -144,11 +156,13 @@ describe("scripts: toast", () => {
 		});
 
 		const renderedToast = document.querySelector(".toast.toast-neutral");
-		const icon = renderedToast.querySelector("i.material-icons");
+		const icon = renderedToast.querySelector(
+			"i.swepay-icon-info-circle-filled",
+		);
 
 		expect(renderedToast).toBeDefined();
 		expect(icon).toBeDefined();
-		expect(icon.innerHTML).toEqual("info");
+		expect(icon.innerHTML).toEqual("");
 	});
 
 	it("does not disappear on mouseover", () => {

@@ -90,7 +90,10 @@ export const Migration = () => (
 								aria-controls="topbar-nav"
 							>
 								{"\n"}
-								<i class="material-icons topbar-btn-icon">menu</i>
+								<i
+									class="swepay-icon-menu-hamburger topbar-btn-icon"
+									aria-hidden="true"
+								></i>
 								{"\n"}
 							</button>
 							{"\n"}
@@ -100,7 +103,10 @@ export const Migration = () => (
 								aria-label="Close menu"
 							>
 								{"\n"}
-								<i class="material-icons topbar-btn-icon">close</i>
+								<i
+									class="swepay-icon-close topbar-btn-icon"
+									aria-hidden="true"
+								></i>
 								{"\n"}
 							</button>
 							{"\n"}
@@ -180,7 +186,10 @@ export const Migration = () => (
 								aria-controls="topbar-nav"
 							>
 								{"\n"}
-								<i class="material-icons topbar-btn-icon">menu</i>
+								<i
+									class="swepay-icon-menu-hamburger topbar-btn-icon"
+									aria-hidden="true"
+								></i>
 								{"\n"}
 							</button>
 							{"\n"}
@@ -251,13 +260,19 @@ export const Migration = () => (
 							aria-controls="topbar-nav"
 						>
 							{"\n"}
-							<i class="material-icons topbar-btn-icon">menu</i>
+							<i
+								class="swepay-icon-menu-hamburger topbar-btn-icon"
+								aria-hidden="true"
+							></i>
 							{"\n"}
 						</button>
 						{"\n"}
 						<button type="button" class="topbar-close" aria-label="Close menu">
 							{"\n"}
-							<i class="material-icons topbar-btn-icon">close</i>
+							<i
+								class="swepay-icon-close topbar-btn-icon"
+								aria-hidden="true"
+							></i>
 							{"\n"}
 						</button>
 						{"\n"}
@@ -278,7 +293,10 @@ export const Migration = () => (
 							aria-controls="topbar-nav"
 						>
 							{"\n"}
-							<i class="material-icons topbar-btn-icon">menu</i>
+							<i
+								class="swepay-icon-menu-hamburger topbar-btn-icon"
+								aria-hidden="true"
+							></i>
 							{"\n"}
 						</button>
 					</EditableComponentPreview>
@@ -376,11 +394,7 @@ export const Migration = () => (
 						title="Close menu"
 					>
 						{"\n"}
-						<i class="material-icons-outlined" aria-hidden="true">
-							{"\n"}
-							close
-							{"\n"}
-						</i>
+						<i class="swepay-icon-close" aria-hidden="true"></i>
 						{"\n"}
 					</button>
 					{"\n"}
@@ -404,11 +418,7 @@ export const Migration = () => (
 					{"\n"}
 					<button class="btn btn-secondary btn-sm" type="button">
 						{"\n"}
-						<i class="material-icons-outlined" aria-hidden="true">
-							{"\n"}
-							exit_to_app
-							{"\n"}
-						</i>
+						<i class="at-exit small" aria-hidden="true"></i>
 						{"\n"}
 						<span>Log out</span>
 						{"\n"}

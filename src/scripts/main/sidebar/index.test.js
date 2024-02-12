@@ -33,9 +33,10 @@ describe("scripts: sidebar", () => {
 									<a href="#">Group - Level 3</a>
 									<ul className="tertiary-nav-ul">
 										<a href="#" className="previous-nav">
-											<i className="material-icons" aria-hidden="true">
-												arrow_back_ios
-											</i>
+											<i
+												className="swepay-icon-chevron-left"
+												aria-hidden="true"
+											></i>
 											<span>Back to previous nav</span>
 										</a>
 										<header className="tertiary-nav-header">
@@ -102,7 +103,7 @@ describe("scripts: sidebar", () => {
 
 			expect(sidebar.init(id)).toBeNull();
 			expect(console.warn).toHaveBeenCalledWith(
-				`sidebar.init: No sidebar with id ${id} found`
+				`sidebar.init: No sidebar with id ${id} found`,
 			);
 		});
 
@@ -111,7 +112,7 @@ describe("scripts: sidebar", () => {
 				<>
 					<Sidebar id="sidebar-2" />
 					<Sidebar id="sidebar-3" />
-				</>
+				</>,
 			);
 
 			expect(sidebar.init().length).toEqual(2);
@@ -122,7 +123,7 @@ describe("scripts: sidebar", () => {
 
 			expect(sidebar.init()).toBeNull();
 			expect(console.warn).toHaveBeenCalledWith(
-				"sidebar.init: No sidebars found"
+				"sidebar.init: No sidebars found",
 			);
 		});
 	});
@@ -160,7 +161,7 @@ describe("scripts: sidebar", () => {
 			sidebar.initScrollListener(id, contentId);
 
 			expect(console.warn).toHaveBeenCalledWith(
-				`sidebar.initScrollListener: Cannot find main content with id ${contentId}`
+				`sidebar.initScrollListener: Cannot find main content with id ${contentId}`,
 			);
 		});
 	});

@@ -14,22 +14,18 @@ describe("Component: Sidebar", () => {
 		const navList = [
 			{
 				title: "Home Page",
-				icon: <i className="material-icons-outlined">home</i>,
+				icon: <i className="at-home" aria-hidden="true"></i>,
 			},
 			{
 				title: "Get Started",
-				icon: (
-					<i className="material-icons-outlined rotated">wb_incandescent</i>
-				),
+				icon: <i className="at-electric-lightbulb" aria-hidden="true"></i>,
 				children: [
 					{
-						icon: (
-							<i className="material-icons-outlined rotated">accessibility</i>
-						),
+						icon: <i className="at-wheelchair" aria-hidden="true"></i>,
 						title: "Accessibility",
 					},
 					{
-						icon: <i className="material-icons-outlined rotated">palette</i>,
+						icon: <i className="at-colors" aria-hidden="true"></i>,
 						title: "Colors",
 						children: [
 							{
@@ -58,16 +54,16 @@ describe("Component: Sidebar", () => {
 		expect(
 			screen
 				.getAllByRole("listitem")
-				.filter((elmt) => elmt.classList.contains("main-nav-li"))
+				.filter((elmt) => elmt.classList.contains("main-nav-li")),
 		).toHaveLength(2);
 		expect(
 			screen
 				.getAllByRole("listitem")
-				.filter((elmt) => elmt.classList.contains("secondary-nav-li"))
+				.filter((elmt) => elmt.classList.contains("secondary-nav-li")),
 		).toHaveLength(2);
 
 		const componentForSnap = renderer.create(
-			<Sidebar id="sidebar-1" navList={navList} extendedSidebar={true} />
+			<Sidebar id="sidebar-1" navList={navList} extendedSidebar={true} />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -77,13 +73,11 @@ describe("Component: Sidebar", () => {
 		const navList = [
 			{
 				title: "Home Page",
-				icon: <i className="material-icons-outlined">home</i>,
+				icon: <i className="at-home" aria-hidden="true"></i>,
 			},
 			{
 				title: "Get Started",
-				icon: (
-					<i className="material-icons-outlined rotated">wb_incandescent</i>
-				),
+				icon: <i className="at-electric-lightbulb" aria-hidden="true"></i>,
 			},
 		];
 
@@ -94,11 +88,11 @@ describe("Component: Sidebar", () => {
 		expect(mainNavUl).toHaveClass("main-nav-ul");
 		expect(mainNavUl.querySelectorAll(".main-nav-li")).toHaveLength(2);
 		expect(mainNavUl.querySelectorAll(".sidebar-secondary-nav")).toHaveLength(
-			0
+			0,
 		);
 
 		const componentForSnap = renderer.create(
-			<Sidebar id="test" navList={navList} />
+			<Sidebar id="test" navList={navList} />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -108,18 +102,14 @@ describe("Component: Sidebar", () => {
 		const navList = [
 			{
 				title: "Get Started",
-				icon: (
-					<i className="material-icons-outlined rotated">wb_incandescent</i>
-				),
+				icon: <i className="at-electric-lightbulb" aria-hidden="true"></i>,
 				children: [
 					{
-						icon: (
-							<i className="material-icons-outlined rotated">accessibility</i>
-						),
+						icon: <i className="at-wheelchair" aria-hidden="true"></i>,
 						title: "Accessibility",
 					},
 					{
-						icon: <i className="material-icons-outlined rotated">palette</i>,
+						icon: <i className="at-colors" aria-hidden="true"></i>,
 						title: "Colors",
 					},
 				],
@@ -131,7 +121,7 @@ describe("Component: Sidebar", () => {
 		expect(
 			screen
 				.getAllByRole("list")
-				.filter((elmt) => elmt.classList.contains("main-nav-ul"))
+				.filter((elmt) => elmt.classList.contains("main-nav-ul")),
 		).toHaveLength(1);
 
 		const mainNavUl = screen
@@ -139,13 +129,13 @@ describe("Component: Sidebar", () => {
 			.filter((elmt) => elmt.classList.contains("main-nav-ul"))[0];
 
 		expect(mainNavUl.querySelectorAll(".sidebar-secondary-nav")).toHaveLength(
-			1
+			1,
 		);
 		expect(mainNavUl.querySelectorAll(".secondary-nav-ul")).toHaveLength(1);
 		expect(mainNavUl.querySelectorAll(".secondary-nav-li")).toHaveLength(2);
 
 		const componentForSnap = renderer.create(
-			<Sidebar id="test" navList={navList} />
+			<Sidebar id="test" navList={navList} />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -155,9 +145,7 @@ describe("Component: Sidebar", () => {
 		const navList = [
 			{
 				title: "Get Started",
-				icon: (
-					<i className="material-icons-outlined rotated">wb_incandescent</i>
-				),
+				icon: <i className="at-electric-lightbulb" aria-hidden="true"></i>,
 				children: [
 					{
 						title: "Accessibility",
@@ -183,7 +171,7 @@ describe("Component: Sidebar", () => {
 		expect(mainNavUl.querySelectorAll(".nav-leaf")).toHaveLength(1);
 
 		const componentForSnap = renderer.create(
-			<Sidebar id="test" navList={navList} />
+			<Sidebar id="test" navList={navList} />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -193,14 +181,10 @@ describe("Component: Sidebar", () => {
 		const navList = [
 			{
 				title: "Get Started",
-				icon: (
-					<i className="material-icons-outlined rotated">wb_incandescent</i>
-				),
+				icon: <i className="at-electric-lightbulb" aria-hidden="true"></i>,
 				children: [
 					{
-						icon: (
-							<i className="material-icons-outlined rotated">accessibility</i>
-						),
+						icon: <i className="at-wheelchair" aria-hidden="true"></i>,
 						title: "Accessibility",
 						children: [
 							{
@@ -219,18 +203,18 @@ describe("Component: Sidebar", () => {
 		];
 
 		const { container } = render(
-			<Sidebar id="test" navList={navList} extendedSidebar={true} />
+			<Sidebar id="test" navList={navList} extendedSidebar={true} />,
 		);
 
 		expect(
 			screen
 				.getAllByRole("list")
-				.map((elmt) => elmt.querySelectorAll(":scope > li"))
+				.map((elmt) => elmt.querySelectorAll(":scope > li")),
 		).toHaveLength(4);
 		expect(container.querySelectorAll(".nav-leaf")).toHaveLength(1);
 
 		const componentForSnap = renderer.create(
-			<Sidebar id="test" navList={navList} extendedSidebar={true} />
+			<Sidebar id="test" navList={navList} extendedSidebar={true} />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -240,14 +224,10 @@ describe("Component: Sidebar", () => {
 		const navList = [
 			{
 				title: "Get Started",
-				icon: (
-					<i className="material-icons-outlined rotated">wb_incandescent</i>
-				),
+				icon: <i className="at-electric-lightbulb" aria-hidden="true"></i>,
 				children: [
 					{
-						icon: (
-							<i className="material-icons-outlined rotated">accessibility</i>
-						),
+						icon: <i className="at-wheelchair" aria-hidden="true"></i>,
 						title: "Accessibility",
 						children: [
 							{
@@ -271,18 +251,18 @@ describe("Component: Sidebar", () => {
 		];
 
 		const { container } = render(
-			<Sidebar id="test" navList={navList} extendedSidebar={true} />
+			<Sidebar id="test" navList={navList} extendedSidebar={true} />,
 		);
 
 		expect(
 			screen
 				.getAllByRole("list")
-				.map((elmt) => elmt.querySelectorAll(":scope > li"))
+				.map((elmt) => elmt.querySelectorAll(":scope > li")),
 		).toHaveLength(5);
 		expect(container.querySelectorAll(".nav-leaf")).toHaveLength(1);
 
 		const componentForSnap = renderer.create(
-			<Sidebar id="test" navList={navList} extendedSidebar={true} />
+			<Sidebar id="test" navList={navList} extendedSidebar={true} />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -292,14 +272,10 @@ describe("Component: Sidebar", () => {
 		const navList = [
 			{
 				title: "Level 1",
-				icon: (
-					<i className="material-icons-outlined rotated">wb_incandescent</i>
-				),
+				icon: <i className="at-electric-lightbulb" aria-hidden="true"></i>,
 				children: [
 					{
-						icon: (
-							<i className="material-icons-outlined rotated">accessibility</i>
-						),
+						icon: <i className="at-wheelchair" aria-hidden="true"></i>,
 						title: "Level 2",
 						children: [
 							{
@@ -348,18 +324,18 @@ describe("Component: Sidebar", () => {
 		];
 
 		const { container } = render(
-			<Sidebar id="test" navList={navList} extendedSidebar={true} />
+			<Sidebar id="test" navList={navList} extendedSidebar={true} />,
 		);
 
 		expect(
 			screen
 				.getAllByRole("list")
-				.map((elmt) => elmt.querySelectorAll(":scope > li"))
+				.map((elmt) => elmt.querySelectorAll(":scope > li")),
 		).toHaveLength(10);
 		expect(container.querySelectorAll(".nav-leaf")).toHaveLength(1);
 
 		const componentForSnap = renderer.create(
-			<Sidebar id="test" navList={navList} extendedSidebar={true} />
+			<Sidebar id="test" navList={navList} extendedSidebar={true} />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -369,22 +345,18 @@ describe("Component: Sidebar", () => {
 		const navList = [
 			{
 				title: "Home page",
-				icon: <i className="material-icons-outlined">home</i>,
+				icon: <i className="at-wheelchair" aria-hidden="true"></i>,
 			},
 			{
 				title: "Get Started",
-				icon: (
-					<i className="material-icons-outlined rotated">wb_incandescent</i>
-				),
+				icon: <i className="at-electric-lightbulb" aria-hidden="true"></i>,
 				children: [
 					{
-						icon: (
-							<i className="material-icons-outlined rotated">accessibility</i>
-						),
+						icon: <i className="at-wheelchair" aria-hidden="true"></i>,
 						title: "Accessibility",
 					},
 					{
-						icon: <i className="material-icons-outlined rotated">palette</i>,
+						icon: <i className="at-colors" aria-hidden="true"></i>,
 						title: "Colors",
 						children: [
 							{
@@ -408,11 +380,11 @@ describe("Component: Sidebar", () => {
 		];
 
 		const { container } = render(
-			<Sidebar id="sidebar" navList={navList} sticky />
+			<Sidebar id="sidebar" navList={navList} sticky />,
 		);
 
 		expect(container.querySelector(".sidebar")).toHaveClass(
-			"sidebar-topbar-sticky"
+			"sidebar-topbar-sticky",
 		);
 	});
 });

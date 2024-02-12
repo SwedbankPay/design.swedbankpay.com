@@ -9,19 +9,19 @@ import ActionList from "./index";
 const items = [
 	{
 		name: "Add bookmark",
-		icon: "bookmark",
+		icon: "at-bookmark-star",
 	},
 	{
 		name: "Add client",
-		icon: "business_center",
+		icon: "at-business-suitcase",
 	},
 	{
 		name: "Add document",
-		icon: "add_circle",
+		icon: "at-plus-circle",
 	},
 	{
 		name: "Add user",
-		icon: "person_add",
+		icon: "at-user-plus",
 	},
 ];
 
@@ -39,7 +39,7 @@ describe("Component: ActionList", () => {
 					<>
 						<ActionList />
 						<ActionList items={items} />
-					</>
+					</>,
 				);
 
 				expect(console.error).toHaveBeenCalledTimes(1);
@@ -49,7 +49,7 @@ describe("Component: ActionList", () => {
 						<>
 							<ActionList />
 							<ActionList items={items} />
-						</>
+						</>,
 					)
 					.toJSON();
 
@@ -77,7 +77,7 @@ describe("Component: ActionList", () => {
 				<>
 					<ActionList items={"test"} />
 					<ActionList items={items} />
-				</>
+				</>,
 			);
 
 			expect(console.error).toHaveBeenCalledTimes(1);
@@ -87,7 +87,7 @@ describe("Component: ActionList", () => {
 					<>
 						<ActionList items={"test"} />
 						<ActionList items={items} />
-					</>
+					</>,
 				)
 				.toJSON();
 
@@ -101,7 +101,7 @@ describe("Component: ActionList", () => {
 				<>
 					<ActionList items={items} id={1} />
 					<ActionList items={items} id={"test-id"} />
-				</>
+				</>,
 			);
 
 			expect(console.error).toHaveBeenCalledTimes(1);
@@ -111,7 +111,7 @@ describe("Component: ActionList", () => {
 					<>
 						<ActionList items={items} id={1} />
 						<ActionList items={items} id={"test-id"} />
-					</>
+					</>,
 				)
 				.toJSON();
 
@@ -125,7 +125,7 @@ describe("Component: ActionList", () => {
 				<>
 					<ActionList items={items} classNames={2} />
 					<ActionList items={items} classNames={"test-class"} />
-				</>
+				</>,
 			);
 
 			expect(console.error).toHaveBeenCalledTimes(1);
@@ -135,7 +135,7 @@ describe("Component: ActionList", () => {
 					<>
 						<ActionList items={items} classNames={2} />
 						<ActionList items={items} classNames={"test-class"} />
-					</>
+					</>,
 				)
 				.toJSON();
 
@@ -152,11 +152,11 @@ describe("Component: ActionList", () => {
 						Custom action-toggle
 					</a>
 				}
-			/>
+			/>,
 		);
 
 		expect(screen.getAllByRole("link")[0]).toHaveTextContent(
-			"Custom action-toggle"
+			"Custom action-toggle",
 		);
 
 		const componentForSnap = renderer
@@ -168,7 +168,7 @@ describe("Component: ActionList", () => {
 							Custom action-toggle
 						</a>
 					}
-				/>
+				/>,
 			)
 			.toJSON();
 

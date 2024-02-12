@@ -10,14 +10,14 @@ test("toast displays & closes by mouse", async ({ page }) => {
 	await page.getByRole("button", { name: "Show Neutral toast" }).click();
 	await expect(
 		page.getByText(
-			"infoclose Neutral title: Input informative alert information here, provide link "
-		)
+			"Neutral title: Input informative alert information here, provide link ",
+		),
 	).toBeVisible();
 	await page.locator("#toast-close-button").click();
 	await expect(
 		page.getByText(
-			"infoclose Neutral title: Input informative alert information here, provide link "
-		)
+			"Neutral title: Input informative alert information here, provide link ",
+		),
 	).not.toBeVisible();
 });
 
@@ -26,14 +26,14 @@ test("toast displays & closes by keyboard navigation", async ({ page }) => {
 	await page.getByRole("button", { name: "Show Neutral toast" }).press("Enter");
 	await expect(
 		page.getByText(
-			"infoclose Neutral title: Input informative alert information here, provide link "
-		)
+			"Neutral title: Input informative alert information here, provide link ",
+		),
 	).toBeVisible();
 	await page.locator("#toast-close-button").press("Enter");
 	await expect(
 		page.getByText(
-			"infoclose Neutral title: Input informative alert information here, provide link "
-		)
+			"Neutral title: Input informative alert information here, provide link ",
+		),
 	).not.toBeVisible();
 });
 
@@ -45,14 +45,14 @@ test("toast does not closes when mouse click outside its zone nor when hit escap
 	await page.keyboard.press("Escape");
 	await expect(
 		page.getByText(
-			"infoclose Neutral title: Input informative alert information here, provide link "
-		)
+			"Neutral title: Input informative alert information here, provide link ",
+		),
 	).toBeVisible();
 	await page.getByRole("heading", { name: "Toast", exact: true }).click();
 	await expect(
 		page.getByText(
-			"infoclose Neutral title: Input informative alert information here, provide link "
-		)
+			"Neutral title: Input informative alert information here, provide link ",
+		),
 	).toBeVisible();
 });
 
@@ -62,15 +62,15 @@ test("toast closes by itself if wait the appropriate time", async ({
 	await page.getByRole("button", { name: "Show Neutral toast" }).press("Enter");
 	await expect(
 		page.getByText(
-			"infoclose Neutral title: Input informative alert information here, provide link "
-		)
+			"Neutral title: Input informative alert information here, provide link ",
+		),
 	).toBeVisible({
 		timeout: 2000,
 	});
 	await expect(
 		page.getByText(
-			"infoclose Neutral title: Input informative alert information here, provide link "
-		)
+			"Neutral title: Input informative alert information here, provide link ",
+		),
 	).not.toBeVisible({
 		timeout: 10000,
 	});

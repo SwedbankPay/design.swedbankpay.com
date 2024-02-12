@@ -46,7 +46,10 @@ const Checkbox = ({
 						{errorMessage && (
 							<>
 								<div className="help-block">
-									<i className="material-icons">warning</i>
+									<i
+										className="swepay-icon-error-triangle-filled small"
+										aria-hidden="true"
+									></i>
 									{errorMessage}
 								</div>
 								{"\n"}

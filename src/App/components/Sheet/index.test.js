@@ -20,11 +20,9 @@ describe("Component: Sheet -", () => {
 		render(<Sheet title="test" />);
 
 		expect(screen.getByRole("button").querySelector("i")).toHaveClass(
-			"material-icons"
+			"swepay-icon-close",
 		);
-		expect(screen.getByRole("button").querySelector("i")).toHaveTextContent(
-			"close"
-		);
+		expect(screen.getByRole("button").querySelector("i")).toHaveTextContent("");
 
 		const componentForSnap = renderer.create(<Sheet title="test" />);
 
@@ -36,11 +34,11 @@ describe("Component: Sheet -", () => {
 
 		expect(container.querySelector("div.sheet")).toHaveAttribute(
 			"id",
-			"demo-sheet"
+			"demo-sheet",
 		);
 
 		const componentForSnap = renderer.create(
-			<Sheet title="Test" id="demo-sheet" />
+			<Sheet title="Test" id="demo-sheet" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -50,11 +48,11 @@ describe("Component: Sheet -", () => {
 		const { container } = render(<Sheet title="Test" requireAction />);
 
 		expect(container.querySelector("div.sheet")).toHaveAttribute(
-			"data-require-action"
+			"data-require-action",
 		);
 
 		const componentForSnap = renderer.create(
-			<Sheet title="Test" requireAction />
+			<Sheet title="Test" requireAction />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -64,11 +62,11 @@ describe("Component: Sheet -", () => {
 		const { container } = render(<Sheet title="Test" requireAction={false} />);
 
 		expect(container.querySelector("div.sheet")).not.toHaveAttribute(
-			"data-require-action"
+			"data-require-action",
 		);
 
 		const componentForSnap = renderer.create(
-			<Sheet title="Test" requireAction={false} />
+			<Sheet title="Test" requireAction={false} />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();

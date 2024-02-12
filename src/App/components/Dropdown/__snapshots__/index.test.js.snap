@@ -27,10 +27,8 @@ exports[`Component: Dropdown - renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        keyboard_arrow_down
-      </i>
+        className="swepay-icon-chevron-down"
+      />
       
 
     </button>
@@ -68,10 +66,9 @@ exports[`Component: Dropdown - renders children components passed as content pro
       
 
       <i
-        className="material-icons"
-      >
-        sort
-      </i>
+        aria-hidden="true"
+        className="sort"
+      />
       
 
     </button>
@@ -88,10 +85,8 @@ exports[`Component: Dropdown - renders children components passed as content pro
       >
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          bookmark
-        </i>
+          className="at-bookmark-star"
+        />
         Edit
       </a>
     </div>
@@ -126,10 +121,8 @@ exports[`Component: Dropdown - renders error state with the error icon and an er
 
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        keyboard_arrow_down
-      </i>
+        className="swepay-icon-chevron-down"
+      />
       
 
     </button>
@@ -147,10 +140,9 @@ exports[`Component: Dropdown - renders error state with the error icon and an er
     className="help-block"
   >
     <i
-      className="material-icons"
-    >
-      error
-    </i>
+      aria-hidden="true"
+      className="swepay-icon-error-triangle-filled small"
+    />
     test error message
   </div>
   
@@ -185,10 +177,8 @@ exports[`Component: Dropdown - renders the toggle button with the icon being eit
 
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        filter_list
-      </i>
+        className="icon-test"
+      />
       
 
     </button>
@@ -227,10 +217,8 @@ exports[`Component: Dropdown - renders the toggle button with the icon being eit
 
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        filter_list
-      </i>
+        className="icon-test"
+      />
       
 
       <span>
@@ -279,10 +267,8 @@ exports[`Component: Dropdown - renders the toggle button, when passing with spec
 
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        filter_list
-      </i>
+        className="icon-test"
+      />
       
 
     </button>
@@ -326,10 +312,8 @@ exports[`Component: Dropdown - renders, when passing no label nor icon props, a 
 
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        keyboard_arrow_down
-      </i>
+        className="swepay-icon-chevron-down"
+      />
       
 
     </button>
@@ -367,10 +351,9 @@ exports[`Component: Dropdown - the toggle icon btn with and without a passed ico
       
 
       <i
-        className="material-icons"
-      >
-        more_vert
-      </i>
+        aria-hidden="true"
+        className="at-dots-vertical"
+      />
       
 
     </button>
@@ -408,10 +391,9 @@ exports[`Component: Dropdown - the toggle icon btn with and without a passed ico
       
 
       <i
-        className="material-icons"
-      >
-        sort
-      </i>
+        aria-hidden="true"
+        className="sort"
+      />
       
 
     </button>

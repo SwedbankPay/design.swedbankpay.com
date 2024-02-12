@@ -36,10 +36,8 @@ exports[`Component: ActionList .action-menu prevents default when an item is cli
     >
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        bookmark
-      </i>
+        className="at-bookmark-star small"
+      />
       Add bookmark
     </a>
     
@@ -50,10 +48,8 @@ exports[`Component: ActionList .action-menu prevents default when an item is cli
     >
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        business_center
-      </i>
+        className="at-business-suitcase small"
+      />
       Add client
     </a>
     
@@ -64,10 +60,8 @@ exports[`Component: ActionList .action-menu prevents default when an item is cli
     >
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        add_circle
-      </i>
+        className="at-plus-circle small"
+      />
       Add document
     </a>
     
@@ -78,10 +72,8 @@ exports[`Component: ActionList .action-menu prevents default when an item is cli
     >
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        person_add
-      </i>
+        className="at-user-plus small"
+      />
       Add user
     </a>
     
@@ -771,10 +763,8 @@ exports[`Component: ActionList renders with a custom .action-toggle if it is pro
     >
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        bookmark
-      </i>
+        className="at-bookmark-star small"
+      />
       Add bookmark
     </a>
     
@@ -785,10 +775,8 @@ exports[`Component: ActionList renders with a custom .action-toggle if it is pro
     >
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        business_center
-      </i>
+        className="at-business-suitcase small"
+      />
       Add client
     </a>
     
@@ -799,10 +787,8 @@ exports[`Component: ActionList renders with a custom .action-toggle if it is pro
     >
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        add_circle
-      </i>
+        className="at-plus-circle small"
+      />
       Add document
     </a>
     
@@ -813,10 +799,8 @@ exports[`Component: ActionList renders with a custom .action-toggle if it is pro
     >
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        person_add
-      </i>
+        className="at-user-plus small"
+      />
       Add user
     </a>
     

@@ -17,10 +17,8 @@ exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          home
-        </i>
+          className="at-home small"
+        />
         
 
         <span>
@@ -44,10 +42,8 @@ exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          shopping_cart
-        </i>
+          className="at-shop-cart small"
+        />
         
 
         <span>
@@ -71,10 +67,8 @@ exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          notification_important
-        </i>
+          className="at-bell-reminder small"
+        />
         
 
         <span>
@@ -98,10 +92,8 @@ exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          language
-        </i>
+          className="at-language-translation small"
+        />
         
 
         <span>
@@ -125,10 +117,8 @@ exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          account_balance
-        </i>
+          className="at-building-column small"
+        />
         
 
         <span>
@@ -152,10 +142,8 @@ exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          fingerprint
-        </i>
+          className="at-fingerprint small"
+        />
         
 
         <span>
@@ -188,10 +176,8 @@ exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          home
-        </i>
+          className="at-home small"
+        />
         
 
         <span>
@@ -215,10 +201,8 @@ exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          shopping_cart
-        </i>
+          className="at-shop-cart small"
+        />
         
 
         <span>
@@ -242,10 +226,8 @@ exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          notification_important
-        </i>
+          className="at-bell-reminder small"
+        />
         
 
         <span>
@@ -269,10 +251,8 @@ exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          language
-        </i>
+          className="at-language-translation small"
+        />
         
 
         <span>
@@ -296,10 +276,8 @@ exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          account_balance
-        </i>
+          className="at-building-column small"
+        />
         
 
         <span>
@@ -323,10 +301,8 @@ exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          fingerprint
-        </i>
+          className="at-fingerprint small"
+        />
         
 
         <span>
@@ -359,10 +335,8 @@ exports[`Component: Nav - renders 1`] = `
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          home
-        </i>
+          className="at-home small"
+        />
         
 
         <span>
@@ -386,10 +360,8 @@ exports[`Component: Nav - renders 1`] = `
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          shopping_cart
-        </i>
+          className="at-shop-cart small"
+        />
         
 
         <span>
@@ -413,10 +385,8 @@ exports[`Component: Nav - renders 1`] = `
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          notification_important
-        </i>
+          className="at-bell-reminder small"
+        />
         
 
         <span>
@@ -440,10 +410,8 @@ exports[`Component: Nav - renders 1`] = `
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          language
-        </i>
+          className="at-language-translation small"
+        />
         
 
         <span>
@@ -467,10 +435,8 @@ exports[`Component: Nav - renders 1`] = `
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          account_balance
-        </i>
+          className="at-building-column small"
+        />
         
 
         <span>
@@ -494,10 +460,8 @@ exports[`Component: Nav - renders 1`] = `
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          fingerprint
-        </i>
+          className="at-fingerprint small"
+        />
         
 
         <span>
@@ -530,10 +494,8 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          home
-        </i>
+          className="at-home small"
+        />
         
 
         <span>
@@ -557,10 +519,8 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          shopping_cart
-        </i>
+          className="at-shop-cart small"
+        />
         
 
         <span>
@@ -584,10 +544,8 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          notification_important
-        </i>
+          className="at-bell-reminder small"
+        />
         
 
         <span>
@@ -611,10 +569,8 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          language
-        </i>
+          className="at-language-translation small"
+        />
         
 
         <span>
@@ -638,10 +594,8 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          account_balance
-        </i>
+          className="at-building-column small"
+        />
         
 
         <span>
@@ -665,10 +619,8 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          fingerprint
-        </i>
+          className="at-fingerprint small"
+        />
         
 
         <span>
@@ -701,10 +653,8 @@ exports[`Component: Nav - renders with two levels 1`] = `
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          home
-        </i>
+          className="at-home small"
+        />
         
 
         <span>
@@ -730,10 +680,8 @@ exports[`Component: Nav - renders with two levels 1`] = `
         >
           <i
             aria-hidden="true"
-            className="material-icons"
-          >
-            shopping_cart
-          </i>
+            className="at-shop-cart small"
+          />
           
 
           <span>
@@ -784,10 +732,8 @@ exports[`Component: Nav - renders with two levels 1`] = `
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          notification_important
-        </i>
+          className="at-bell-reminder small"
+        />
         
 
         <span>
@@ -811,14 +757,37 @@ exports[`Component: Nav - renders with two levels 1`] = `
 
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          language
-        </i>
+          className="at-language-translation small"
+        />
         
 
         <span>
           Language
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+    <li>
+      
+
+      <a
+        className={null}
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          aria-hidden="true"
+          className="at-building-column small"
+        />
+        
+
+        <span>
+          Account
         </span>
         
 
@@ -840,14 +809,12 @@ exports[`Component: Nav - renders with two levels 1`] = `
         >
           <i
             aria-hidden="true"
-            className="material-icons"
-          >
-            account_balance
-          </i>
+            className="at-fingerprint small"
+          />
           
 
           <span>
-            Account
+            Authentication
           </span>
           
 

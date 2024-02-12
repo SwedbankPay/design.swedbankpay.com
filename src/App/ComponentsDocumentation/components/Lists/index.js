@@ -9,19 +9,19 @@ import { actionList } from "@src/scripts/main";
 const items = [
 	{
 		name: "Add bookmark",
-		icon: "bookmark",
+		icon: "at-bookmark-star",
 	},
 	{
 		name: "Add client",
-		icon: "business_center",
+		icon: "at-business-suitcase",
 	},
 	{
 		name: "Add document",
-		icon: "add_circle",
+		icon: "at-plus-circle",
 	},
 	{
 		name: "Add user",
-		icon: "person_add",
+		icon: "at-user-plus",
 	},
 ];
 
@@ -131,23 +131,26 @@ const SettingsList = () => (
 			<ul className="settings-list">
 				<li>
 					{"\n"}
-					<i className="material-icons text-success" aria-hidden="true">
-						check
-					</i>
+					<i
+						className="swepay-icon-check-circle-filled small align-self-center"
+						aria-hidden="true"
+					></i>
 					Shovels and tapestry newsletter{"\n"}
 				</li>
 				<li>
 					{"\n"}
-					<i className="material-icons text-warning" aria-hidden="true">
-						remove
-					</i>
+					<i
+						className="swepay-icon-warning-triangle-filled small align-self-center"
+						aria-hidden="true"
+					></i>
 					Spoon collectors weekly newsletter{"\n"}
 				</li>
 				<li>
 					{"\n"}
-					<i className="material-icons text-danger" aria-hidden="true">
-						clear
-					</i>
+					<i
+						className="swepay-icon-error-circle-filled small align-self-center"
+						aria-hidden="true"
+					></i>
 					Energetic squirrels newsletter{"\n"}
 				</li>
 			</ul>
@@ -361,9 +364,7 @@ const StripedItemList = () => (
 					{"\n"}
 					<span>4925*********004</span>
 					{"\n"}
-					<i className="material-icons" aria-hidden="true">
-						star
-					</i>
+					<i className="at-bookmark-star" aria-hidden="true"></i>
 					{"\n"}
 				</li>
 				<li>
@@ -373,7 +374,7 @@ const StripedItemList = () => (
 					<span className="status status-success">Active</span>
 					{"\n"}
 					<button type="button" className="btn btn-danger btn-xs">
-						<i className="material-icons">delete</i>
+						<i className="at-trash" aria-hidden="true"></i>
 					</button>
 					{"\n"}
 				</li>

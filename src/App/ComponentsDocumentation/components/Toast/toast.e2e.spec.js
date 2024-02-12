@@ -26,22 +26,22 @@ test.describe("toast variants are styled and named accordingly", () => {
 		{
 			name: "neutral",
 			linkName: "Neutral",
-			icon: "info",
+			icon: "swepay-icon-info-circle-filled",
 		},
 		{
 			name: "success",
 			linkName: "Success",
-			icon: "check_circle",
+			icon: "swepay-icon-check-circle-filled",
 		},
 		{
 			name: "warning",
 			linkName: "Warning",
-			icon: "warning",
+			icon: "swepay-icon-warning-triangle-filled",
 		},
 		{
 			name: "danger",
 			linkName: "Danger",
-			icon: "error",
+			icon: "swepay-icon-error-triangle-filled",
 		},
 	];
 
@@ -53,18 +53,17 @@ test.describe("toast variants are styled and named accordingly", () => {
 				.getByRole("button", { name: `Show ${variant.linkName} toast` })
 				.click();
 
-			const toast = page.locator("#overviewToast");
+			const componentPreviewContainer = page.locator("#overviewToast");
+			const toast = componentPreviewContainer.locator("#toast-container");
 
-			await expect(
-				toast.getByText(variant.icon, { exact: true }),
-			).toBeVisible();
+			await expect(toast.locator(".toast > i")).toHaveClass(variant.icon);
 			await expect(toast.getByText(`${variant.linkName}  title`)).toBeVisible();
 
 			const brand = (await page.title()).includes("Swedbank")
 				? "SwedbankPay"
 				: "PayEx";
 
-			await expect(toast.locator("css=.toast")).toHaveScreenshot(
+			await expect(toast).toHaveScreenshot(
 				`${brand}-${variant.name}-toast.png`,
 				{
 					maxDiffPixelRatio: 0.001,

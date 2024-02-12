@@ -119,10 +119,9 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
               
 		
               <i
-                className="material-icons topbar-btn-icon"
-              >
-                menu
-              </i>
+                aria-hidden="true"
+                className="swepay-icon-menu-hamburger topbar-btn-icon"
+              />
               
 		
             </button>
@@ -134,10 +133,9 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
               
 
               <i
-                className="material-icons topbar-btn-icon"
-              >
-                close
-              </i>
+                aria-hidden="true"
+                className="swepay-icon-close topbar-btn-icon"
+              />
               
 		
             </button>
@@ -179,10 +177,9 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                   
 
                   <i
-                    className="material-icons"
-                  >
-                    home
-                  </i>
+                    aria-hidden="true"
+                    className="at-home small"
+                  />
                   
 
                   
@@ -201,10 +198,9 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                   
 
                   <i
-                    className="material-icons"
-                  >
-                    shopping_cart
-                  </i>
+                    aria-hidden="true"
+                    className="at-shop-cart small"
+                  />
                   
 
                   
@@ -223,10 +219,9 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                   
 
                   <i
-                    className="material-icons"
-                  >
-                    settings
-                  </i>
+                    aria-hidden="true"
+                    className="at-gear small"
+                  />
                   
 
                   
@@ -397,13 +392,13 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                               &lt;button type="button" class="topbar-btn" aria-label="Open menu" aria-haspopup="menu" aria-expanded="false" aria-controls="topbar-nav"&gt;
                   
 
-                                  &lt;i class="material-icons topbar-btn-icon"&gt;menu&lt;/i&gt;
+                                  &lt;i class="swepay-icon-menu-hamburger topbar-btn-icon" aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                               &lt;/button&gt;&lt;button type="button" class="topbar-close" aria-label="Close menu"&gt;
                   
 
-                                  &lt;i class="material-icons topbar-btn-icon"&gt;close&lt;/i&gt;
+                                  &lt;i class="swepay-icon-close topbar-btn-icon" aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                               &lt;/button&gt;
@@ -429,7 +424,7 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                                       &lt;a href="#" class="active"&gt;
                   
 
-                                          &lt;i class="material-icons"&gt;home&lt;/i&gt;
+                                          &lt;i class="at-home small" aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                   
@@ -440,7 +435,7 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                                       &lt;a href="#"&gt;
                   
 
-                                          &lt;i class="material-icons"&gt;shopping_cart&lt;/i&gt;
+                                          &lt;i class="at-shop-cart small" aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                   
@@ -451,7 +446,7 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                                       &lt;a href="#"&gt;
                   
 
-                                          &lt;i class="material-icons"&gt;settings&lt;/i&gt;
+                                          &lt;i class="at-gear small" aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                   
@@ -531,10 +526,9 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
             
 		
             <i
-              className="material-icons topbar-btn-icon"
-            >
-              menu
-            </i>
+              aria-hidden="true"
+              className="swepay-icon-menu-hamburger topbar-btn-icon"
+            />
             
 		
           </button>
@@ -546,10 +540,9 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
             
 
             <i
-              className="material-icons topbar-btn-icon"
-            >
-              close
-            </i>
+              aria-hidden="true"
+              className="swepay-icon-close topbar-btn-icon"
+            />
             
 		
           </button>
@@ -801,10 +794,9 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                 
 
                 <i
-                  className="material-icons"
-                >
-                  sync_alt
-                </i>
+                  aria-hidden="true"
+                  className="at-movement-arrows-left-right small"
+                />
                 
 
                 
@@ -823,10 +815,9 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                 
 
                 <i
-                  className="material-icons"
-                >
-                  arrow_forward
-                </i>
+                  aria-hidden="true"
+                  className="at-arrow-right small"
+                />
                 
 
                 
@@ -845,10 +836,9 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                 
 
                 <i
-                  className="material-icons"
-                >
-                  exit_to_app
-                </i>
+                  aria-hidden="true"
+                  className="at-exit small"
+                />
                 
 
                 <span>
@@ -1135,13 +1125,13 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                           &lt;button type="button" class="topbar-btn" aria-label="Open menu" aria-haspopup="menu" aria-expanded="false" aria-controls="topbar-nav"&gt;
                   
 
-                              &lt;i class="material-icons topbar-btn-icon"&gt;menu&lt;/i&gt;
+                              &lt;i class="swepay-icon-menu-hamburger topbar-btn-icon" aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                           &lt;/button&gt;&lt;button type="button" class="topbar-close" aria-label="Close menu"&gt;
                   
 
-                              &lt;i class="material-icons topbar-btn-icon"&gt;close&lt;/i&gt;
+                              &lt;i class="swepay-icon-close topbar-btn-icon" aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                           &lt;/button&gt;
@@ -1279,7 +1269,7 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                                   &lt;a href="#" class=" pinned topbar-link-right"&gt;
                   
 
-                                      &lt;i class="material-icons"&gt;sync_alt&lt;/i&gt;
+                                      &lt;i class="at-movement-arrows-left-right small" aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                   
@@ -1290,7 +1280,7 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                                   &lt;a href="#"&gt;
                   
 
-                                      &lt;i class="material-icons"&gt;arrow_forward&lt;/i&gt;
+                                      &lt;i class="at-arrow-right small" aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                   
@@ -1301,7 +1291,7 @@ exports[`Components: Topbar DeveloperDocumentation renders 1`] = `
                                   &lt;a class="topbar-link-right" href="#"&gt;
                   
 
-                                      &lt;i class="material-icons"&gt;exit_to_app&lt;/i&gt;
+                                      &lt;i class="at-exit small" aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                                       &lt;span&gt;Log out&lt;/span&gt;

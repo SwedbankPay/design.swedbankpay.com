@@ -189,9 +189,10 @@ const DeveloperDocumentation = () => (
 							{"\n"}
 							<a href="#" className="previous-nav">
 								{"\n"}
-								<i className="material-icons" aria-hidden="true">
-									arrow_back_ios
-								</i>
+								<i
+									className="swepay-icon-chevron-left"
+									aria-expanded="false"
+								></i>
 								{"\n"}
 								<span>Back to Previous</span>
 								{"\n"}

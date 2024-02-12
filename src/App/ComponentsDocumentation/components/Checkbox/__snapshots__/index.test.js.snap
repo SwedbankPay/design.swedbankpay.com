@@ -355,10 +355,9 @@ exports[`Component: Checkbox DeveloperDocumentation renders 1`] = `
               className="help-block"
             >
               <i
-                className="material-icons"
-              >
-                warning
-              </i>
+                aria-hidden="true"
+                className="swepay-icon-error-triangle-filled small"
+              />
               Descriptive helpful error message.
             </div>
             
@@ -506,7 +505,7 @@ exports[`Component: Checkbox DeveloperDocumentation renders 1`] = `
                           &lt;/div&gt;
                   
 
-                          &lt;div class="help-block"&gt;&lt;i class="material-icons"&gt;warning&lt;/i&gt;Descriptive helpful error message.&lt;/div&gt;
+                          &lt;div class="help-block"&gt;&lt;i class="swepay-icon-error-triangle-filled small" aria-hidden="true"&gt;&lt;/i&gt;Descriptive helpful error message.&lt;/div&gt;
                   
 
                       &lt;/fieldset&gt;

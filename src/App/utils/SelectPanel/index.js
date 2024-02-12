@@ -42,7 +42,7 @@ const MobileNavGroup = ({ route, index, sidebarId }) => {
 	return (
 		<li className="nav-group">
 			<button className="nav-group-heading" onClick={() => toggleActive()}>
-				<i className="at-arrow-right small" aria-hidden="true"></i>
+				<i className="swepay-icon-chevron-right" aria-hidden="true"></i>
 				{title}
 			</button>
 			<ul className="nav-ul">

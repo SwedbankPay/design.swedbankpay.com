@@ -17,7 +17,7 @@ exports[`Component: Pagination - does not throw error if initialized with id pro
 
     <i
       aria-label="start"
-      className="material-icons"
+      className="at-arrow-right-line"
     />
     
 
@@ -32,7 +32,7 @@ exports[`Component: Pagination - does not throw error if initialized with id pro
 
     <i
       aria-label="back"
-      className="material-icons"
+      className="swepay-icon-chevron-left"
     />
     
 
@@ -149,7 +149,7 @@ exports[`Component: Pagination - does not throw error if initialized with id pro
 
     <i
       aria-label="forward"
-      className="material-icons"
+      className="swepay-icon-chevron-right"
     />
     
 
@@ -164,7 +164,7 @@ exports[`Component: Pagination - does not throw error if initialized with id pro
 
     <i
       aria-label="end"
-      className="material-icons"
+      className="at-arrow-left-line"
     />
     
 
@@ -189,7 +189,7 @@ exports[`Component: Pagination - renders 1`] = `
 
     <i
       aria-label="start"
-      className="material-icons"
+      className="at-arrow-right-line"
     />
     
 
@@ -204,7 +204,7 @@ exports[`Component: Pagination - renders 1`] = `
 
     <i
       aria-label="back"
-      className="material-icons"
+      className="swepay-icon-chevron-left"
     />
     
 
@@ -321,7 +321,7 @@ exports[`Component: Pagination - renders 1`] = `
 
     <i
       aria-label="forward"
-      className="material-icons"
+      className="swepay-icon-chevron-right"
     />
     
 
@@ -336,7 +336,7 @@ exports[`Component: Pagination - renders 1`] = `
 
     <i
       aria-label="end"
-      className="material-icons"
+      className="at-arrow-left-line"
     />
     
 
@@ -361,7 +361,7 @@ exports[`Component: Pagination - renders four arrows 1`] = `
 
     <i
       aria-label="start"
-      className="material-icons"
+      className="at-arrow-right-line"
     />
     
 
@@ -376,7 +376,7 @@ exports[`Component: Pagination - renders four arrows 1`] = `
 
     <i
       aria-label="back"
-      className="material-icons"
+      className="swepay-icon-chevron-left"
     />
     
 
@@ -493,7 +493,7 @@ exports[`Component: Pagination - renders four arrows 1`] = `
 
     <i
       aria-label="forward"
-      className="material-icons"
+      className="swepay-icon-chevron-right"
     />
     
 
@@ -508,7 +508,7 @@ exports[`Component: Pagination - renders four arrows 1`] = `
 
     <i
       aria-label="end"
-      className="material-icons"
+      className="at-arrow-left-line"
     />
     
 
@@ -533,7 +533,7 @@ exports[`Component: Pagination - renders only li elements inside ul element 1`] 
 
     <i
       aria-label="start"
-      className="material-icons"
+      className="at-arrow-right-line"
     />
     
 
@@ -548,7 +548,7 @@ exports[`Component: Pagination - renders only li elements inside ul element 1`] 
 
     <i
       aria-label="back"
-      className="material-icons"
+      className="swepay-icon-chevron-left"
     />
     
 
@@ -665,7 +665,7 @@ exports[`Component: Pagination - renders only li elements inside ul element 1`] 
 
     <i
       aria-label="forward"
-      className="material-icons"
+      className="swepay-icon-chevron-right"
     />
     
 
@@ -680,7 +680,7 @@ exports[`Component: Pagination - renders only li elements inside ul element 1`] 
 
     <i
       aria-label="end"
-      className="material-icons"
+      className="at-arrow-left-line"
     />
     
 
@@ -705,7 +705,7 @@ exports[`Component: Pagination - renders the compact view with the compact class
 
     <i
       aria-label="start"
-      className="material-icons"
+      className="at-arrow-right-line"
     />
     
 
@@ -720,7 +720,7 @@ exports[`Component: Pagination - renders the compact view with the compact class
 
     <i
       aria-label="back"
-      className="material-icons"
+      className="swepay-icon-chevron-left"
     />
     
 
@@ -745,7 +745,7 @@ exports[`Component: Pagination - renders the compact view with the compact class
 
     <i
       aria-label="forward"
-      className="material-icons"
+      className="swepay-icon-chevron-right"
     />
     
 
@@ -760,7 +760,7 @@ exports[`Component: Pagination - renders the compact view with the compact class
 
     <i
       aria-label="end"
-      className="material-icons"
+      className="at-arrow-left-line"
     />
     
 
@@ -785,7 +785,7 @@ exports[`Component: Pagination - renders the default view as long view 1`] = `
 
     <i
       aria-label="start"
-      className="material-icons"
+      className="at-arrow-right-line"
     />
     
 
@@ -800,7 +800,7 @@ exports[`Component: Pagination - renders the default view as long view 1`] = `
 
     <i
       aria-label="back"
-      className="material-icons"
+      className="swepay-icon-chevron-left"
     />
     
 
@@ -914,7 +914,7 @@ exports[`Component: Pagination - renders the default view as long view 1`] = `
 
     <i
       aria-label="forward"
-      className="material-icons"
+      className="swepay-icon-chevron-right"
     />
     
 
@@ -929,7 +929,7 @@ exports[`Component: Pagination - renders the default view as long view 1`] = `
 
     <i
       aria-label="end"
-      className="material-icons"
+      className="at-arrow-left-line"
     />
     
 
@@ -954,7 +954,7 @@ exports[`Component: Pagination - renders with an li with active class 1`] = `
 
     <i
       aria-label="start"
-      className="material-icons"
+      className="at-arrow-right-line"
     />
     
 
@@ -969,7 +969,7 @@ exports[`Component: Pagination - renders with an li with active class 1`] = `
 
     <i
       aria-label="back"
-      className="material-icons"
+      className="swepay-icon-chevron-left"
     />
     
 
@@ -1086,7 +1086,7 @@ exports[`Component: Pagination - renders with an li with active class 1`] = `
 
     <i
       aria-label="forward"
-      className="material-icons"
+      className="swepay-icon-chevron-right"
     />
     
 
@@ -1101,7 +1101,7 @@ exports[`Component: Pagination - renders with an li with active class 1`] = `
 
     <i
       aria-label="end"
-      className="material-icons"
+      className="at-arrow-left-line"
     />
     
 
@@ -1126,7 +1126,7 @@ exports[`Component: Pagination - renders with correct number of list elements. I
 
     <i
       aria-label="start"
-      className="material-icons"
+      className="at-arrow-right-line"
     />
     
 
@@ -1141,7 +1141,7 @@ exports[`Component: Pagination - renders with correct number of list elements. I
 
     <i
       aria-label="back"
-      className="material-icons"
+      className="swepay-icon-chevron-left"
     />
     
 
@@ -1258,7 +1258,7 @@ exports[`Component: Pagination - renders with correct number of list elements. I
 
     <i
       aria-label="forward"
-      className="material-icons"
+      className="swepay-icon-chevron-right"
     />
     
 
@@ -1273,7 +1273,7 @@ exports[`Component: Pagination - renders with correct number of list elements. I
 
     <i
       aria-label="end"
-      className="material-icons"
+      className="at-arrow-left-line"
     />
     
 
@@ -1298,7 +1298,7 @@ exports[`Component: Pagination - renders with correct number of list elements. I
 
     <i
       aria-label="start"
-      className="material-icons"
+      className="at-arrow-right-line"
     />
     
 
@@ -1313,7 +1313,7 @@ exports[`Component: Pagination - renders with correct number of list elements. I
 
     <i
       aria-label="back"
-      className="material-icons"
+      className="swepay-icon-chevron-left"
     />
     
 
@@ -1430,7 +1430,7 @@ exports[`Component: Pagination - renders with correct number of list elements. I
 
     <i
       aria-label="forward"
-      className="material-icons"
+      className="swepay-icon-chevron-right"
     />
     
 
@@ -1445,7 +1445,7 @@ exports[`Component: Pagination - renders with correct number of list elements. I
 
     <i
       aria-label="end"
-      className="material-icons"
+      className="at-arrow-left-line"
     />
     
 
@@ -1470,7 +1470,7 @@ exports[`Component: Pagination - renders with one ellipsis 1`] = `
 
     <i
       aria-label="start"
-      className="material-icons"
+      className="at-arrow-right-line"
     />
     
 
@@ -1485,7 +1485,7 @@ exports[`Component: Pagination - renders with one ellipsis 1`] = `
 
     <i
       aria-label="back"
-      className="material-icons"
+      className="swepay-icon-chevron-left"
     />
     
 
@@ -1602,7 +1602,7 @@ exports[`Component: Pagination - renders with one ellipsis 1`] = `
 
     <i
       aria-label="forward"
-      className="material-icons"
+      className="swepay-icon-chevron-right"
     />
     
 
@@ -1617,7 +1617,7 @@ exports[`Component: Pagination - renders with one ellipsis 1`] = `
 
     <i
       aria-label="end"
-      className="material-icons"
+      className="at-arrow-left-line"
     />
     
 
@@ -1642,7 +1642,7 @@ exports[`Component: Pagination - renders with two ellipsis 1`] = `
 
     <i
       aria-label="start"
-      className="material-icons"
+      className="at-arrow-right-line"
     />
     
 
@@ -1657,7 +1657,7 @@ exports[`Component: Pagination - renders with two ellipsis 1`] = `
 
     <i
       aria-label="back"
-      className="material-icons"
+      className="swepay-icon-chevron-left"
     />
     
 
@@ -1771,7 +1771,7 @@ exports[`Component: Pagination - renders with two ellipsis 1`] = `
 
     <i
       aria-label="forward"
-      className="material-icons"
+      className="swepay-icon-chevron-right"
     />
     
 
@@ -1786,7 +1786,7 @@ exports[`Component: Pagination - renders with two ellipsis 1`] = `
 
     <i
       aria-label="end"
-      className="material-icons"
+      className="at-arrow-left-line"
     />
     
 
@@ -1810,7 +1810,7 @@ exports[`Component: Pagination - throws error if initialized without id prop 1`]
 
     <i
       aria-label="start"
-      className="material-icons"
+      className="at-arrow-right-line"
     />
     
 
@@ -1825,7 +1825,7 @@ exports[`Component: Pagination - throws error if initialized without id prop 1`]
 
     <i
       aria-label="back"
-      className="material-icons"
+      className="swepay-icon-chevron-left"
     />
     
 
@@ -1942,7 +1942,7 @@ exports[`Component: Pagination - throws error if initialized without id prop 1`]
 
     <i
       aria-label="forward"
-      className="material-icons"
+      className="swepay-icon-chevron-right"
     />
     
 
@@ -1957,7 +1957,7 @@ exports[`Component: Pagination - throws error if initialized without id prop 1`]
 
     <i
       aria-label="end"
-      className="material-icons"
+      className="at-arrow-left-line"
     />
     
 

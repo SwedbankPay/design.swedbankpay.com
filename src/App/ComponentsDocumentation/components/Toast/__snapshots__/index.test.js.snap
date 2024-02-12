@@ -22,10 +22,8 @@ exports[`Components: Toast Content guidelines renders 1`] = `
         >
           <i
             aria-hidden="true"
-            className="material-icons"
-          >
-            info
-          </i>
+            className="swepay-icon-info-circle-filled"
+          />
           <div
             className="toast-content"
           >
@@ -38,10 +36,9 @@ exports[`Components: Toast Content guidelines renders 1`] = `
             className="toast-close ml-auto"
           >
             <i
-              className="material-icons"
-            >
-              close
-            </i>
+              aria-hidden="true"
+              className="swepay-icon-close"
+            />
           </button>
         </div>
       </div>

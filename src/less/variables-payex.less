@@ -33,7 +33,6 @@
 @brand-tertiary: @brand-primary;
 @brand-accent: @brand-secondary;
 @blue-bright: @brand-secondary-light-2;
-@brand-accent-links: @brand-primary;
 @payex-light-blue: #32b2dd;
 @payex-dark-blue: #1e3a6e;
 @brand-complementary-3: #EF5434;
@@ -105,7 +104,6 @@
 /* Other colors */
 @yellow-faded: #fbdd91;
 @green-syntax-highlight: #99cc66;
-@blue-syntax-highlight: #43d0dd;
 @yellow-syntax-highlight: #fff3d5;
 @dark-brown: @brand-secondary;
 @light-brown: @brand-secondary-light-3;
@@ -188,7 +186,8 @@ body {
 	--payex-dark-blue: #1e3a6e;
 
 	/* Background Colors */
-	--brand-bg-1: #e8f3e6;
+	--bg-primary: #e8f3e6;
+	--brand-bg-1: var(--bg-primary);
 	--brand-bg-2: #e8f3e6;
 	--brand-bg-3: #fbedf4;
 	--brand-bg-4: #eaf8fc;

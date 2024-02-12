@@ -15,47 +15,37 @@ describe("scripts: nav", () => {
 			<ul>
 				<li>
 					<a href="#">
-						<i className="material-icons" aria-hidden="true">
-							home
-						</i>
+						<i className="at-home small" aria-hidden="true"></i>
 						<span>Home</span>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<i className="material-icons" aria-hidden="true">
-							account_balance
-						</i>
+						<i className="at-building-column small" aria-hidden="true"></i>
 						<span>Account</span>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<i className="material-icons" aria-hidden="true">
-							fingerprint
-						</i>
+						<i className="at-fingerprint small" aria-hidden="true"></i>
 						<span>Authentication</span>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<i className="material-icons" aria-hidden="true">
-							notification_important
-						</i>
+						<i className="at-bell-reminder small" aria-hidden="true"></i>
 						<span>Notifications</span>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<i className="material-icons" aria-hidden="true">
-							shopping_cart
-						</i>
+						<i className="at-shop-cart small" aria-hidden="true"></i>
 						<span>Transactions</span>
 					</a>
 				</li>
 				<li>
 					<a href="#">
-						<i className="material-icons">language</i>
+						<i className="at-language-translation small"></i>
 						<span>Language</span>
 					</a>
 				</li>
@@ -64,9 +54,7 @@ describe("scripts: nav", () => {
 						<div className={subopen ? "submenu submenu-open" : "submenu"}>
 							{"\n"}
 							<a href="#">
-								<i className="material-icons" aria-hidden="true">
-									language
-								</i>
+								<i className="at-language-translation small"></i>
 								{"\n"}
 								<span>{name}</span>
 							</a>
@@ -82,9 +70,7 @@ describe("scripts: nav", () => {
 						</div>
 					) : (
 						<a href="#">
-							<i className="material-icons" aria-hidden="true">
-								shopping_cart
-							</i>
+							<i className="at-shop-cart small" aria-hidden="true"></i>
 							<span>Shop</span>
 						</a>
 					)}
@@ -97,9 +83,7 @@ describe("scripts: nav", () => {
 		<nav className="nav">
 			<ul>
 				<li>
-					<i className="material-icons" aria-hidden="true">
-						home
-					</i>
+					<i className="at-home small" aria-hidden="true"></i>
 					<span>Home</span>
 				</li>
 				<li>
@@ -107,9 +91,7 @@ describe("scripts: nav", () => {
 						<div className="submenu">
 							{"\n"}
 							<a href="#">
-								<i className="material-icons" aria-hidden="true">
-									language
-								</i>
+								<i className="at-language-translation small"></i>
 								{"\n"}
 								<span>{name}</span>
 							</a>
@@ -125,9 +107,7 @@ describe("scripts: nav", () => {
 						</div>
 					) : (
 						<a href="#">
-							<i className="material-icons" aria-hidden="true">
-								account_balance
-							</i>
+							<i className="at-building-column small" aria-hidden="true"></i>
 							<span>Account</span>
 						</a>
 					)}
@@ -164,7 +144,7 @@ describe("scripts: nav", () => {
 					<Nav />
 					<Nav />
 				</>,
-				div
+				div,
 			);
 
 			const renderedNavs = screen.getAllByRole("navigation");
@@ -391,7 +371,7 @@ describe("scripts: nav", () => {
 			nav.open("qwerty");
 
 			expect(console.error).toHaveBeenCalledWith(
-				'nav.open: No nav with id "qwerty" found.'
+				'nav.open: No nav with id "qwerty" found.',
 			);
 			expect(renderedNav).not.toHaveClass("nav-open");
 		});
@@ -423,7 +403,7 @@ describe("scripts: nav", () => {
 			nav.close("qwerty");
 
 			expect(console.error).toHaveBeenCalledWith(
-				'nav.close: No nav with id "qwerty" found.'
+				'nav.close: No nav with id "qwerty" found.',
 			);
 			expect(renderedNav).toHaveClass("nav-open");
 		});
