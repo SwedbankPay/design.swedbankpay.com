@@ -15,15 +15,15 @@ describe("Component: Topbar -", () => {
 		items: [
 			{
 				name: "Home",
-				icon: "home",
+				icon: "at-home small",
 			},
 			{
-				name: "Purchase history",
-				icon: "shopping_cart",
+				name: "Purchases",
+				icon: "at-shop-cart small",
 			},
 			{
 				name: "Settings",
-				icon: "settings",
+				icon: "at-gear small",
 			},
 		],
 	};

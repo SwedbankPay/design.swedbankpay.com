@@ -97,7 +97,7 @@ describe("Component: InputGroup -", () => {
 		expect(icon).toHaveTextContent("");
 
 		const componentForSnap = renderer.create(
-			<InputGroup type="typetest" addOnType="icon" prefixValue="home" />,
+			<InputGroup type="typetest" addOnType="icon" prefixValue="at-home" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();

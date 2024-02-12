@@ -103,7 +103,7 @@ exports[`Component: InputGroup - renders a form-group with a prefix icon if prop
 
       <i
         aria-hidden="true"
-        className="home"
+        className="at-home"
       />
       
 

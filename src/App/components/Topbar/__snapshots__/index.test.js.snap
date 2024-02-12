@@ -129,7 +129,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
 
           <i
             aria-hidden="true"
-            className="home"
+            className="at-home small"
           />
           
 
@@ -459,14 +459,14 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
 
           <i
             aria-hidden="true"
-            className="shopping_cart"
+            className="at-shop-cart small"
           />
           
 
           
 
           <span>
-            Purchase history
+            Purchases
           </span>
         </a>
         
@@ -480,7 +480,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
 
           <i
             aria-hidden="true"
-            className="settings"
+            className="at-gear small"
           />
           
 
@@ -706,7 +706,7 @@ exports[`Component: Topbar - props topbarContent renders a topbar menuopen and c
 
           <i
             aria-hidden="true"
-            className="home"
+            className="at-home small"
           />
           
 
@@ -727,14 +727,14 @@ exports[`Component: Topbar - props topbarContent renders a topbar menuopen and c
 
           <i
             aria-hidden="true"
-            className="shopping_cart"
+            className="at-shop-cart small"
           />
           
 
           
 
           <span>
-            Purchase history
+            Purchases
           </span>
         </a>
         
@@ -748,7 +748,7 @@ exports[`Component: Topbar - props topbarContent renders a topbar menuopen and c
 
           <i
             aria-hidden="true"
-            className="settings"
+            className="at-gear small"
           />
           
 
@@ -849,7 +849,7 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 
           <i
             aria-hidden="true"
-            className="home"
+            className="at-home small"
           />
           
 
@@ -870,14 +870,14 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 
           <i
             aria-hidden="true"
-            className="shopping_cart"
+            className="at-shop-cart small"
           />
           
 
           
 
           <span>
-            Purchase history
+            Purchases
           </span>
         </a>
         
@@ -891,7 +891,7 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 
           <i
             aria-hidden="true"
-            className="settings"
+            className="at-gear small"
           />
           
 
@@ -1013,7 +1013,7 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 
           <i
             aria-hidden="true"
-            className="home"
+            className="at-home small"
           />
           
 
@@ -1034,14 +1034,14 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 
           <i
             aria-hidden="true"
-            className="shopping_cart"
+            className="at-shop-cart small"
           />
           
 
           
 
           <span>
-            Purchase history
+            Purchases
           </span>
         </a>
         
@@ -1055,7 +1055,7 @@ exports[`Component: Topbar - props topbarContent renders topbar-link-container a
 
           <i
             aria-hidden="true"
-            className="settings"
+            className="at-gear small"
           />
           
 

@@ -17,7 +17,7 @@ exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="home"
+          className="at-home small"
         />
         
 
@@ -42,7 +42,7 @@ exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="shopping_cart"
+          className="at-shop-cart small"
         />
         
 
@@ -67,7 +67,7 @@ exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="notification_important"
+          className="at-bell-reminder small"
         />
         
 
@@ -92,7 +92,7 @@ exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="language"
+          className="at-language-translation small"
         />
         
 
@@ -117,7 +117,7 @@ exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="account_balance"
+          className="at-building-column small"
         />
         
 
@@ -142,7 +142,7 @@ exports[`Component: Nav - Throws an error when proptype for vertsize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="fingerprint"
+          className="at-fingerprint small"
         />
         
 
@@ -176,7 +176,7 @@ exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="home"
+          className="at-home small"
         />
         
 
@@ -201,7 +201,7 @@ exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="shopping_cart"
+          className="at-shop-cart small"
         />
         
 
@@ -226,7 +226,7 @@ exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="notification_important"
+          className="at-bell-reminder small"
         />
         
 
@@ -251,7 +251,7 @@ exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="language"
+          className="at-language-translation small"
         />
         
 
@@ -276,7 +276,7 @@ exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="account_balance"
+          className="at-building-column small"
         />
         
 
@@ -301,7 +301,7 @@ exports[`Component: Nav - Throws an error when proptype for widesize is wrong 1`
 
         <i
           aria-hidden="true"
-          className="fingerprint"
+          className="at-fingerprint small"
         />
         
 
@@ -335,7 +335,7 @@ exports[`Component: Nav - renders 1`] = `
 
         <i
           aria-hidden="true"
-          className="home"
+          className="at-home small"
         />
         
 
@@ -360,7 +360,7 @@ exports[`Component: Nav - renders 1`] = `
 
         <i
           aria-hidden="true"
-          className="shopping_cart"
+          className="at-shop-cart small"
         />
         
 
@@ -385,7 +385,7 @@ exports[`Component: Nav - renders 1`] = `
 
         <i
           aria-hidden="true"
-          className="notification_important"
+          className="at-bell-reminder small"
         />
         
 
@@ -410,7 +410,7 @@ exports[`Component: Nav - renders 1`] = `
 
         <i
           aria-hidden="true"
-          className="language"
+          className="at-language-translation small"
         />
         
 
@@ -435,7 +435,7 @@ exports[`Component: Nav - renders 1`] = `
 
         <i
           aria-hidden="true"
-          className="account_balance"
+          className="at-building-column small"
         />
         
 
@@ -460,7 +460,7 @@ exports[`Component: Nav - renders 1`] = `
 
         <i
           aria-hidden="true"
-          className="fingerprint"
+          className="at-fingerprint small"
         />
         
 
@@ -494,7 +494,7 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
 
         <i
           aria-hidden="true"
-          className="home"
+          className="at-home small"
         />
         
 
@@ -519,7 +519,7 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
 
         <i
           aria-hidden="true"
-          className="shopping_cart"
+          className="at-shop-cart small"
         />
         
 
@@ -544,7 +544,7 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
 
         <i
           aria-hidden="true"
-          className="notification_important"
+          className="at-bell-reminder small"
         />
         
 
@@ -569,7 +569,7 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
 
         <i
           aria-hidden="true"
-          className="language"
+          className="at-language-translation small"
         />
         
 
@@ -594,7 +594,7 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
 
         <i
           aria-hidden="true"
-          className="account_balance"
+          className="at-building-column small"
         />
         
 
@@ -619,7 +619,7 @@ exports[`Component: Nav - renders with an active list if state active matches 1`
 
         <i
           aria-hidden="true"
-          className="fingerprint"
+          className="at-fingerprint small"
         />
         
 
@@ -653,7 +653,7 @@ exports[`Component: Nav - renders with two levels 1`] = `
 
         <i
           aria-hidden="true"
-          className="home"
+          className="at-home small"
         />
         
 
@@ -680,7 +680,7 @@ exports[`Component: Nav - renders with two levels 1`] = `
         >
           <i
             aria-hidden="true"
-            className="shopping_cart"
+            className="at-shop-cart small"
           />
           
 
@@ -732,7 +732,7 @@ exports[`Component: Nav - renders with two levels 1`] = `
 
         <i
           aria-hidden="true"
-          className="notification_important"
+          className="at-bell-reminder small"
         />
         
 
@@ -757,12 +757,37 @@ exports[`Component: Nav - renders with two levels 1`] = `
 
         <i
           aria-hidden="true"
-          className="language"
+          className="at-language-translation small"
         />
         
 
         <span>
           Language
+        </span>
+        
+
+      </a>
+      
+
+    </li>
+    <li>
+      
+
+      <a
+        className={null}
+        href="#"
+        onClick={[Function]}
+      >
+        
+
+        <i
+          aria-hidden="true"
+          className="at-building-column small"
+        />
+        
+
+        <span>
+          Account
         </span>
         
 
@@ -784,12 +809,12 @@ exports[`Component: Nav - renders with two levels 1`] = `
         >
           <i
             aria-hidden="true"
-            className="account_balance"
+            className="at-fingerprint small"
           />
           
 
           <span>
-            Account
+            Authentication
           </span>
           
 
