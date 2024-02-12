@@ -18,21 +18,15 @@ describe("Scripts: Dropdown", () => {
 					aria-label="dropdown button"
 				>
 					Actions
-					<i className="material-icons ml-2" aria-hidden="true">
-						keyboard_arrow_down
-					</i>
+					<i className="swepay-icon-chevron-down ml-2" aria-hidden="true"></i>
 				</button>
 				<div className="dropdown-menu   " aria-labelledby="dropdownToggle">
 					<a id="firstElem" href="#">
-						<i className="material-icons" aria-hidden="true">
-							bookmark
-						</i>
+						<i className="at-bookmark-star" aria-hidden="true"></i>
 						Edit
 					</a>
 					<a href="#">
-						<i className="material-icons" aria-hidden="true">
-							delete_outline
-						</i>
+						<i className="at-trash" aria-hidden="true"></i>
 						Delete
 					</a>
 				</div>

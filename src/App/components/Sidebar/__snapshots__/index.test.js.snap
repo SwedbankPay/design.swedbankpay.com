@@ -43,10 +43,9 @@ exports[`Component: Sidebar renders 1`] = `
           
 
           <i
-            className="material-icons-outlined"
-          >
-            home
-          </i>
+            aria-hidden="true"
+            className="at-home"
+          />
           
 
           Home Page
@@ -66,10 +65,9 @@ exports[`Component: Sidebar renders 1`] = `
           
 
           <i
-            className="material-icons-outlined rotated"
-          >
-            wb_incandescent
-          </i>
+            aria-hidden="true"
+            className="at-electric-lightbulb"
+          />
           
 
           Get Started
@@ -97,10 +95,9 @@ exports[`Component: Sidebar renders 1`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="material-icons-outlined rotated"
-                >
-                  accessibility
-                </i>
+                  aria-hidden="true"
+                  className="at-wheelchair"
+                />
                 Accessibility
               </a>
             </li>
@@ -114,10 +111,9 @@ exports[`Component: Sidebar renders 1`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="material-icons-outlined rotated"
-                >
-                  palette
-                </i>
+                  aria-hidden="true"
+                  className="at-colors"
+                />
                 Colors
               </a>
               <ul
@@ -147,10 +143,9 @@ exports[`Component: Sidebar renders 1`] = `
                 </a>
                 <header>
                   <i
-                    className="material-icons-outlined rotated"
-                  >
-                    palette
-                  </i>
+                    aria-hidden="true"
+                    className="at-colors"
+                  />
                   Colors
                 </header>
                 <li
@@ -260,10 +255,9 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
           
 
           <i
-            className="material-icons-outlined rotated"
-          >
-            wb_incandescent
-          </i>
+            aria-hidden="true"
+            className="at-electric-lightbulb"
+          />
           
 
           Level 1
@@ -291,10 +285,9 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
                 onClick={[Function]}
               >
                 <i
-                  className="material-icons-outlined rotated"
-                >
-                  accessibility
-                </i>
+                  aria-hidden="true"
+                  className="at-wheelchair"
+                />
                 Level 2
               </a>
               <ul
@@ -324,10 +317,9 @@ exports[`Component: Sidebar renders 10 levels when four levels is provided 1`] =
                 </a>
                 <header>
                   <i
-                    className="material-icons-outlined rotated"
-                  >
-                    accessibility
-                  </i>
+                    aria-hidden="true"
+                    className="at-wheelchair"
+                  />
                   Level 2
                 </header>
                 <li
@@ -659,10 +651,9 @@ exports[`Component: Sidebar renders five levels when four levels is provided 1`]
           
 
           <i
-            className="material-icons-outlined rotated"
-          >
-            wb_incandescent
-          </i>
+            aria-hidden="true"
+            className="at-electric-lightbulb"
+          />
           
 
           Get Started
@@ -690,10 +681,9 @@ exports[`Component: Sidebar renders five levels when four levels is provided 1`]
                 onClick={[Function]}
               >
                 <i
-                  className="material-icons-outlined rotated"
-                >
-                  accessibility
-                </i>
+                  aria-hidden="true"
+                  className="at-wheelchair"
+                />
                 Accessibility
               </a>
               <ul
@@ -723,10 +713,9 @@ exports[`Component: Sidebar renders five levels when four levels is provided 1`]
                 </a>
                 <header>
                   <i
-                    className="material-icons-outlined rotated"
-                  >
-                    accessibility
-                  </i>
+                    aria-hidden="true"
+                    className="at-wheelchair"
+                  />
                   Accessibility
                 </header>
                 <li
@@ -853,10 +842,9 @@ exports[`Component: Sidebar renders four levels when four levels is provided 1`]
           
 
           <i
-            className="material-icons-outlined rotated"
-          >
-            wb_incandescent
-          </i>
+            aria-hidden="true"
+            className="at-electric-lightbulb"
+          />
           
 
           Get Started
@@ -884,10 +872,9 @@ exports[`Component: Sidebar renders four levels when four levels is provided 1`]
                 onClick={[Function]}
               >
                 <i
-                  className="material-icons-outlined rotated"
-                >
-                  accessibility
-                </i>
+                  aria-hidden="true"
+                  className="at-wheelchair"
+                />
                 Accessibility
               </a>
               <ul
@@ -917,10 +904,9 @@ exports[`Component: Sidebar renders four levels when four levels is provided 1`]
                 </a>
                 <header>
                   <i
-                    className="material-icons-outlined rotated"
-                  >
-                    accessibility
-                  </i>
+                    aria-hidden="true"
+                    className="at-wheelchair"
+                  />
                   Accessibility
                 </header>
                 <li
@@ -1006,10 +992,9 @@ exports[`Component: Sidebar renders one level when one level is provided 1`] = `
           
 
           <i
-            className="material-icons-outlined"
-          >
-            home
-          </i>
+            aria-hidden="true"
+            className="at-home"
+          />
           
 
           Home Page
@@ -1029,10 +1014,9 @@ exports[`Component: Sidebar renders one level when one level is provided 1`] = `
           
 
           <i
-            className="material-icons-outlined rotated"
-          >
-            wb_incandescent
-          </i>
+            aria-hidden="true"
+            className="at-electric-lightbulb"
+          />
           
 
           Get Started
@@ -1088,10 +1072,9 @@ exports[`Component: Sidebar renders three levels when three levels is provided 1
           
 
           <i
-            className="material-icons-outlined rotated"
-          >
-            wb_incandescent
-          </i>
+            aria-hidden="true"
+            className="at-electric-lightbulb"
+          />
           
 
           Get Started
@@ -1190,10 +1173,9 @@ exports[`Component: Sidebar renders two levels when two levels is provided 1`] =
           
 
           <i
-            className="material-icons-outlined rotated"
-          >
-            wb_incandescent
-          </i>
+            aria-hidden="true"
+            className="at-electric-lightbulb"
+          />
           
 
           Get Started
@@ -1221,10 +1203,9 @@ exports[`Component: Sidebar renders two levels when two levels is provided 1`] =
                 onClick={[Function]}
               >
                 <i
-                  className="material-icons-outlined rotated"
-                >
-                  accessibility
-                </i>
+                  aria-hidden="true"
+                  className="at-wheelchair"
+                />
                 Accessibility
               </a>
             </li>
@@ -1238,10 +1219,9 @@ exports[`Component: Sidebar renders two levels when two levels is provided 1`] =
                 onClick={[Function]}
               >
                 <i
-                  className="material-icons-outlined rotated"
-                >
-                  palette
-                </i>
+                  aria-hidden="true"
+                  className="at-colors"
+                />
                 Colors
               </a>
             </li>

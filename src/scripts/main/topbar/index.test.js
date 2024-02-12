@@ -28,15 +28,14 @@ describe("scripts: topbar", () => {
 				className="topbar-btn"
 				data-toggle-nav="#topbar-nav"
 			>
-				<i className="material-icons topbar-btn-icon" aria-hidden="true">
-					menu
-				</i>
+				<i className="swepay-icon-menu topbar-btn-icon" aria-hidden="true"></i>
 				<span className="topbar-btn-text">Menu</span>
 			</button>
 			<nav className={`topbar-nav${navOpen ? " topbar-nav-open" : ""}`}>
-				<i className="material-icons close-topbar-nav" aria-hidden="true">
-					close
-				</i>
+				<i
+					className="swepay-icon-close close-topbar-nav"
+					aria-hidden="true"
+				></i>
 				<div className="topbar-link-container">
 					<a href="#">Link 1</a>
 					<a href="#">Link 2</a>
@@ -84,7 +83,7 @@ describe("scripts: topbar", () => {
 				<>
 					<Topbar />
 					<Topbar />
-				</>
+				</>,
 			);
 
 			const renderedTopbars = document.querySelectorAll(".topbar");
