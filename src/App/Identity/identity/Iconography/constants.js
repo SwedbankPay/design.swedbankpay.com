@@ -175,6 +175,10 @@ export const shapes = [
 		code: "menu-hamburger",
 	},
 	{
+		title: "Export arrow up-right",
+		code: "export-arrow-up-right",
+	},
+	{
 		title: "Check circle filled customizable",
 		code: "check-circle-filled-customizable",
 	},

@@ -85,8 +85,8 @@ fieldset {
 
 		.checkbox input[type="checkbox"] {
 			+ label:after {
-				background-color: @input-bg-disabled;
-				border-color: @input-checked-bg-disabled;
+				background-color: var(--input-bg-disabled);
+				border-color: var(--input-checked-bg-disabled);
 				cursor: not-allowed;
 			}
 
@@ -95,12 +95,12 @@ fieldset {
 			}
 
 			&:checked + label:after {
-				background-color: @input-checked-bg-disabled;
+				background-color: var(--input-checked-bg-disabled);
 			}
 
 			&:not(:checked) {
 				&:hover + label:after {
-					border-color: @brand-secondary-light-3;
+					border-color: var(--brand-secondary-light-3);
 				}
 			}
 
@@ -114,8 +114,8 @@ fieldset {
 
 		.radio input[type="radio"] {
 			+ label:before {
-				background-color: @input-bg-disabled;
-				border-color: @input-checked-bg-disabled;
+				background-color: var(--input-bg-disabled);
+				border-color: var(--input-checked-bg-disabled);
 				box-shadow: none;
 			}
 
@@ -129,12 +129,12 @@ fieldset {
 		.togglebox input[type="checkbox"] {
 			+ label:before,
 			+ label:after {
-				background-color: @input-bg-disabled;
-				border-color: @input-checked-bg-disabled;
+				background-color: var(--input-bg-disabled);
+				border-color: var(--input-checked-bg-disabled);
 			}
 
 			&:checked + label:before {
-				background-color: @input-checked-bg-disabled;
+				background-color: var(--input-checked-bg-disabled);
 			}
 
 			+ label,
@@ -153,7 +153,7 @@ legend {
 	width: 100%;
 	margin-bottom: var(--base-margin);
 	line-height: 2.8rem;
-	color: @brand-secondary;
+	color: var(--brand-secondary);
 	border: 0;
 }
 
@@ -163,7 +163,7 @@ legend {
 	width: 100%;
 	font-size: var(--base-font-size);
 	line-height: var(--input-line-height, 1.5);
-	color: @input-color;
+	color: var(--input-color);
 
 	&.medium {
 		height: 2.5rem;
@@ -212,11 +212,11 @@ legend {
 			opacity: 1; /* iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655 */
 
 			&::placeholder {
-				color: @brand-secondary-light-3;
+				color: var(--brand-secondary-light-3);
 			}
 
-			color: @brand-secondary-light-3;
-			border-bottom-color: @brand-secondary-light-3;
+			color: var(--brand-secondary-light-3);
+			border-bottom-color: var(--brand-secondary-light-3);
 		}
 	}
 
@@ -277,8 +277,9 @@ legend {
 	}
 
 	&.disabled,
-	[disabled] {
-		color: @brand-secondary-light-3;
+	[disabled],
+	&:has(input[disabled]) {
+		color: var(--brand-secondary-light-3);
 
 		.input-group-addon {
 			border-color: var(--text-disabled);
@@ -290,7 +291,7 @@ legend {
 		}
 
 		i[data-tooltip] {
-			color: @brand-secondary-light-3;
+			color: var(--brand-secondary-light-3);
 			pointer-events: none;
 		}
 
@@ -363,7 +364,7 @@ legend {
 	}
 
 	input[disabled] + label {
-		color: @brand-secondary-light-3;
+		color: var(--brand-secondary-light-3);
 	}
 }
 
@@ -388,7 +389,7 @@ legend {
 }
 
 .hint-text {
-	color: @medium-brown;
+	color: var(--brown-medium);
 }
 
 textarea {
