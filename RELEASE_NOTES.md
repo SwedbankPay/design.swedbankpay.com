@@ -15,6 +15,8 @@
   - the close icon is now a cross set via CSS only, no need to add an `<i>` element anymore
 - Dialog
   - the close icon is now a cross set via CSS only, no need to add an `<i>` element anymore
+- Progress steps
+  - the "check" icon for steps completed should be converted to `<i class="completed steps-icon"></i>`
 
 ### UI bugfixes
 

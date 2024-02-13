@@ -26,6 +26,11 @@ export const changeLogs = [
 							shipped in the package nothing is needed from the devs consuming
 							it.
 						</li>
+						<li>
+							Progress steps: the "check" icon for steps completed should be
+							converted from `<div class="material-icons steps-icon">check</div>
+							`to `<i class="completed steps-icon"></i>`
+						</li>
 					</ul>
 				</p>
 				<p>
