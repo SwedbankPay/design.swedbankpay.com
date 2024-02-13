@@ -16,6 +16,10 @@
 - Dialog
   - the close icon is now a cross set via CSS only, no need to add an `<i>` element anymore
 
+### UI bugfixes
+
+- Input addon (pre or post input) color when input is disabled
+
 ## Maintenance
 
 - npm packages dependencies upgrades
