@@ -1,6 +1,6 @@
 # Changelog
 
-## \[10.10.1\] - xx.02.2024
+## \[10.10.1\] - 14.02.2024
 
 ## Component changes
 
@@ -19,10 +19,6 @@
 ### UI bugfixes
 
 - Input addon (pre or post input) color when input is disabled
-
-## Maintenance
-
-- npm packages dependencies upgrades
 
 ## Design System website
 

@@ -5,6 +5,37 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.10.1",
+		title: "Icons migration - step 2/2",
+		text: (
+			<>
+				<p>
+					We're back with the second step of our icons migration. This time, we
+					are replacing the components snippets.
+				</p>
+				<p>
+					We've also taken this opportunity to simplify a few things:
+					<ul>
+						<li>
+							Now you don't need to add the close icon element on the Tag &
+							Dialog components. We're taking care of it ourselves behind the
+							curtain using pseudo-elements.
+						</li>
+						<li>
+							Toast is also modified, but since it's composed via the script
+							shipped in the package nothing is needed from the devs consuming
+							it.
+						</li>
+					</ul>
+				</p>
+				<p>
+					And we've migrated all our icons used on the documentation website to
+					the new ones 🚀 Let's go ! 🤩{" "}
+				</p>
+			</>
+		),
+	},
+	{
 		version: "10.10.0",
 		title: "Icons migrations - step 1",
 		text: (
