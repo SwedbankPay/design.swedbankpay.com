@@ -35,7 +35,7 @@ export const SidebarNavList = [
 				title: "Grid",
 			},
 			{
-				icon: <i className="move-arrow-left-right" aria-hidden="true"></i>,
+				icon: <i className="at-move-arrow-left-right" aria-hidden="true"></i>,
 				title: "Spacing",
 			},
 		],

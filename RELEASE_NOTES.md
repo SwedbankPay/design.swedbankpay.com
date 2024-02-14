@@ -1,6 +1,6 @@
 # Changelog
 
-## \[10.10.1\] - xx.02.2024
+## \[10.10.1\] - 14.02.2024
 
 ## Component changes
 
@@ -15,14 +15,12 @@
   - the close icon is now a cross set via CSS only, no need to add an `<i>` element anymore
 - Dialog
   - the close icon is now a cross set via CSS only, no need to add an `<i>` element anymore
+- Progress steps
+  - the "check" icon for steps completed should be converted to `<i class="completed steps-icon"></i>`
 
 ### UI bugfixes
 
 - Input addon (pre or post input) color when input is disabled
-
-## Maintenance
-
-- npm packages dependencies upgrades
 
 ## Design System website
 

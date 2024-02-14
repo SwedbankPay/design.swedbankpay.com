@@ -324,7 +324,7 @@ exports[`Component: Topbar - props topbarContent renders a sidebar in topbar-lin
                       >
                         <i
                           aria-hidden="true"
-                          className="move-arrow-left-right"
+                          className="at-move-arrow-left-right"
                         />
                         Spacing
                       </a>
