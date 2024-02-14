@@ -66,10 +66,9 @@ exports[`Forms: index renders 1`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="material-icons"
-                >
-                  menu_open
-                </i>
+                  aria-hidden="true"
+                  className="at-arrow-right-line"
+                />
               </button>
             </div>
           </div>
@@ -167,10 +166,9 @@ exports[`Forms: index renders 1`] = `
                   onClick={[Function]}
                 >
                   <i
-                    className="material-icons"
-                  >
-                    close
-                  </i>
+                    aria-hidden="true"
+                    className="at-arrow-left-line"
+                  />
                 </button>
               </div>
             </div>
@@ -1543,7 +1541,7 @@ exports[`Forms: index renders 1`] = `
 
                 <i
                   aria-hidden="true"
-                  className="at-exclamation-triangle"
+                  className="swepay-icon-error-triangle-filled"
                 />
                 <p>
                   <b>

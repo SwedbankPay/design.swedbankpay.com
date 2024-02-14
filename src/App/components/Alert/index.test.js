@@ -35,7 +35,7 @@ describe("Component: Alert", () => {
 		const { container } = render(<Alert type="test" icon="test" />);
 
 		expect(container.querySelectorAll("i").length).toBe(1);
-		expect(container.querySelector("i")).toHaveClass("at-test");
+		expect(container.querySelector("i")).toHaveClass("test");
 		// checks icon is hidden for screen-readers
 		expect(container.querySelector("i")).toHaveAttribute("aria-hidden", "true");
 

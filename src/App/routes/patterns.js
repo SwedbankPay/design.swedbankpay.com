@@ -2,7 +2,7 @@ module.exports = [
 	{
 		title: "Patterns",
 		icon: {
-			name: "dashboard",
+			name: "at-puzzle",
 		},
 		path: "patterns",
 		entryCardText: "Learn about how to we set up different structures",
@@ -20,8 +20,7 @@ module.exports = [
 				path: "forms",
 				rootPath: "/patterns/forms",
 				componentPath: "content/Forms",
-				icon: "format_align_justify",
-				outlined: true,
+				icon: "at-newspaper-newsletter",
 				statusBadges: ["updated"],
 			},
 			{
@@ -29,8 +28,7 @@ module.exports = [
 				path: "login",
 				rootPath: "/patterns/login",
 				componentPath: "content/Login",
-				icon: "account_circle",
-				outlined: true,
+				icon: "at-user-key",
 			},
 		],
 	},

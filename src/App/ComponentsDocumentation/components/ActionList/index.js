@@ -11,19 +11,19 @@ import NpmInformation from "@docutils/NpmInformation";
 const items = [
 	{
 		name: "Add bookmark",
-		icon: "bookmark",
+		icon: "at-bookmark-star",
 	},
 	{
 		name: "Add client",
-		icon: "business_center",
+		icon: "at-business-suitcase",
 	},
 	{
 		name: "Add document",
-		icon: "add_circle",
+		icon: "at-plus-circle",
 	},
 	{
 		name: "Add user",
-		icon: "person_add",
+		icon: "at-user-plus",
 	},
 ];
 
@@ -87,7 +87,7 @@ const ActionList = () => {
 		<DocContainer>
 			<Alert
 				type="danger"
-				icon="exclamation-triangle"
+				icon="swepay-icon-error-triangle-filled"
 				text={
 					<p>
 						<b>Deprecated:</b> Be aware, this component will not be maintained

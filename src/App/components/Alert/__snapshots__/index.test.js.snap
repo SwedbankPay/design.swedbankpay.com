@@ -8,7 +8,7 @@ exports[`Component: Alert prop type is marked as required 1`] = `
 
   <i
     aria-hidden="true"
-    className="at-"
+    className=""
   />
   
 
@@ -23,7 +23,7 @@ exports[`Component: Alert renders an alert with a close-button 1`] = `
 
   <i
     aria-hidden="true"
-    className="at-"
+    className=""
   />
   
 
@@ -36,10 +36,9 @@ exports[`Component: Alert renders an alert with a close-button 1`] = `
     
 		
     <i
-      className="material-icons"
-    >
-      close
-    </i>
+      aria-hidden="true"
+      className="swepay-icon-close"
+    />
     
 	
   </button>
@@ -56,7 +55,7 @@ exports[`Component: Alert renders an alert with icon 1`] = `
 
   <i
     aria-hidden="true"
-    className="at-test"
+    className="test"
   />
   
 
@@ -71,7 +70,7 @@ exports[`Component: Alert renders an alert with text 1`] = `
 
   <i
     aria-hidden="true"
-    className="at-"
+    className=""
   />
   <p>
     test
@@ -89,7 +88,7 @@ exports[`Component: Alert renders an alert with the correct type recieved from i
 
   <i
     aria-hidden="true"
-    className="at-"
+    className=""
   />
   
 
@@ -104,7 +103,7 @@ exports[`Component: Alert renders an alert without a close-button if no close pr
 
   <i
     aria-hidden="true"
-    className="at-"
+    className=""
   />
   
 
@@ -119,7 +118,7 @@ exports[`Component: Alert renders an alert without an icon if no icon prop is pr
 
   <i
     aria-hidden="true"
-    className="at-"
+    className=""
   />
   
 
@@ -134,7 +133,7 @@ exports[`Component: Alert renders an alert without text if no text prop is provi
 
   <i
     aria-hidden="true"
-    className="at-"
+    className=""
   />
   
 

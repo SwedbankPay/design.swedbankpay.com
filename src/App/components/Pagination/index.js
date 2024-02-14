@@ -14,6 +14,7 @@ const Pagination = ({
 
 	const Arrow = ({ type, mobile }) => {
 		let disabled = false;
+		let icon;
 
 		if (type === "back" || type === "start") {
 			disabled = current === 1;
@@ -23,10 +24,22 @@ const Pagination = ({
 			disabled = current === length;
 		}
 
+		if (type === "back") {
+			icon = "swepay-icon-chevron-left";
+		} else if (type === "forward") {
+			icon = "swepay-icon-chevron-right";
+		} else if (type === "start") {
+			icon = "at-arrow-right-line";
+		} else if (type === "end") {
+			icon = "at-arrow-left-line";
+		} else {
+			icon = "";
+		}
+
 		const arrowClasses = classnames(
 			`arrow-${type}`,
 			mobile ? "d-sm-none" : null,
-			disabled ? "disabled" : null
+			disabled ? "disabled" : null,
 		);
 
 		const navigate = (e) => {
@@ -54,13 +67,13 @@ const Pagination = ({
 				{anchorArrows ? (
 					<a className={arrowClasses} href="#" onClick={(e) => navigate(e)}>
 						{"\n"}
-						<i className="material-icons" aria-label={type}></i>
+						<i className={icon} aria-label={type}></i>
 						{"\n"}
 					</a>
 				) : (
 					<button className={arrowClasses} onClick={(e) => navigate(e)}>
 						{"\n"}
-						<i className="material-icons" aria-label={type}></i>
+						<i className={icon} aria-label={type}></i>
 						{"\n"}
 					</button>
 				)}

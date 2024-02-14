@@ -75,8 +75,8 @@ const LoginForm = ({
 			{alternativeLogins && <AlternativeLogins />}
 			{error && (
 				<Alert
-					icon="exclamation-triangle"
 					type="danger"
+					icon="swepay-icon-error-triangle-filled"
 					text={
 						<p>
 							<b>Error.</b> Incorrect password

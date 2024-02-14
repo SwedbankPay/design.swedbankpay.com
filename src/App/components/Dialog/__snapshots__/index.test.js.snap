@@ -20,17 +20,7 @@ exports[`Component: Dialog - renders 1`] = `
         aria-label="Close dialog"
         className="dialog-close"
         type="button"
-      >
-        
-
-        <i
-          className="material-icons"
-        >
-          close
-        </i>
-        
-
-      </button>
+      />
     </header>
     <div
       className="dialog-body"
@@ -83,17 +73,7 @@ exports[`Component: Dialog - renders with the passed ID 1`] = `
         aria-label="Close dialog"
         className="dialog-close"
         type="button"
-      >
-        
-
-        <i
-          className="material-icons"
-        >
-          close
-        </i>
-        
-
-      </button>
+      />
     </header>
     <div
       className="dialog-body"
@@ -146,17 +126,7 @@ exports[`Component: Dialog - renders with the passed children 1`] = `
         aria-label="Close dialog"
         className="dialog-close"
         type="button"
-      >
-        
-
-        <i
-          className="material-icons"
-        >
-          close
-        </i>
-        
-
-      </button>
+      />
     </header>
     <div
       className="dialog-body"
@@ -215,17 +185,7 @@ exports[`Component: Dialog - renders with the passed header 1`] = `
         aria-label="Close dialog"
         className="dialog-close"
         type="button"
-      >
-        
-
-        <i
-          className="material-icons"
-        >
-          close
-        </i>
-        
-
-      </button>
+      />
     </header>
     <div
       className="dialog-body"

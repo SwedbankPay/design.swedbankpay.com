@@ -40,7 +40,6 @@
 
 @brand-tertiary: #ee7023;
 @brand-accent: #31a3ae;
-@brand-accent-links: #257886;
 @brand-accent-disabled: #98d0d6;
 
 @brand-orange: @brand-tertiary;
@@ -60,7 +59,6 @@
 /* Text colors */
 @text-default: @brand-secondary;
 @text-muted: @brown-medium;
-@text-link: @brand-accent-links;
 @text-white: @brand-bg-white;
 
 /* Background Colors */
@@ -143,7 +141,6 @@
 /* Other colors */
 @yellow-faded: #fbdd91;
 @green-syntax-highlight: #99cc66;
-@blue-syntax-highlight: #43d0dd;
 @yellow-syntax-highlight: @brand-primary-light-3;
 
 /* ==================================CSS VARIABLES========================================
@@ -182,9 +179,9 @@
 	--text-default: var(--brown-solid);
 	--text-muted: var(--brown-medium);
 	--text-muted-light: var(--brown-soft);
-	--text-link: #257886;
 	--text-white: var(--white, #ffffff);
 	--text-disabled: var(--brown-light, #d4c4bc);
+	--brand-accent-links: var(--brand-turquoise-dark, #257886);
 
 	// Communication colors
 	--brand-yellow: #fdc129;
@@ -192,6 +189,7 @@
 	--brand-orange: #ee7023;
 	--brand-turquoise: #31a3ae;
 	--brand-turquoise-light: #8acdc3;
+	--brand-turquoise-dark: #257886;
 	--brand-pink: #efb7b6;
 
 	// Color pool
@@ -235,6 +233,10 @@
 	// Button colors
 	--secondary-disabled-bg: #e3d1c3;
 
+	// Other colors
+	--blue-syntax-highlight: #43d0dd;
+	--bg-primary: #fbf2ea;
+
 	// Universal utilities
 	--border-radius: 8px;
 
@@ -261,6 +263,9 @@
 	--input-border-color: var(--brown-soft);
 	--input-border-focus-color: var(--brown-solid);
 	--input-border-success-color: var(--brand-turquoise);
+	--input-checked-bg-disabled: var(--brand-secondary-light-3);
+	--input-bg-disabled: var(--white);
+	--input-color: var(--brand-secondary);
 
 	/* Brand fonts */
 	--brand-headline: "Swedbank Headline", "Arial", sans-serif;

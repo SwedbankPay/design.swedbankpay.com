@@ -40,10 +40,11 @@ const DropdownSelect = ({
 						aria-label="dropdown button"
 						disabled={disabled}
 					>
+						{"\n"}
 						{buttonLabel}
-						<i className="material-icons ml-2" aria-hidden="true">
-							keyboard_arrow_down
-						</i>
+						{"\n"}
+						<i className="swepay-icon-chevron-down ml-2" aria-hidden="true"></i>
+						{"\n"}
 					</button>
 					{"\n"}
 					<div className={`dropdown-menu ${fullWidth ? "full-width" : ""}`}>
@@ -64,7 +65,10 @@ const DropdownSelect = ({
 				{errorMessage && (
 					<>
 						<div className="help-block">
-							<i className="material-icons">error</i>
+							<i
+								className="swepay-icon-error-triangle-filled small"
+								aria-hidden="true"
+							></i>
 							{errorMessage}
 						</div>
 						{"\n"}
@@ -79,7 +83,7 @@ const DropdownToggle = ({
 	disabled,
 	isIconButton = false,
 	label = "Default label",
-	icon = isIconButton ? "more_vert" : "keyboard_arrow_down",
+	icon = isIconButton ? "at-dots-vertical" : "swepay-icon-chevron-down",
 	iconAfter,
 	noRotation = false,
 }) => {
@@ -100,16 +104,14 @@ const DropdownToggle = ({
 				{"\n"}
 				{isIconButton ? (
 					<>
-						<i className="material-icons">{icon}</i>
+						<i className={icon} aria-hidden="true"></i>
 						{"\n"}
 					</>
 				) : (
 					<>
 						{!iconAfter && (
 							<>
-								<i className="material-icons" aria-hidden="true">
-									{icon}
-								</i>
+								<i className={icon} aria-hidden="true"></i>
 								{"\n"}
 							</>
 						)}
@@ -117,9 +119,7 @@ const DropdownToggle = ({
 						{"\n"}
 						{iconAfter && (
 							<>
-								<i className="material-icons" aria-hidden="true">
-									{icon}
-								</i>
+								<i className={icon} aria-hidden="true"></i>
 								{"\n"}
 							</>
 						)}
@@ -191,7 +191,10 @@ const Dropdown = ({
 				{errorMessage && (
 					<>
 						<div className="help-block">
-							<i className="material-icons">error</i>
+							<i
+								className="swepay-icon-error-triangle-filled small"
+								aria-hidden="true"
+							></i>
 							{errorMessage}
 						</div>
 						{"\n"}

@@ -41,7 +41,7 @@ const Overview = () => (
 							type="link"
 							label="Contact us"
 							id="do-example-tooltip"
-							icon="chat_bubble_outline"
+							icon="at-comment-dots"
 						/>
 					</div>
 				</div>
@@ -53,7 +53,7 @@ const Overview = () => (
 						<TooltipComponent
 							isVisible
 							text="Contact us"
-							icon="chat_bubble_outline"
+							icon="at-comment-dots"
 						/>
 					</div>
 				</div>

@@ -25,7 +25,7 @@ const StepsContent = ({ completed, subtitle, title, index }) => (
 	<>
 		{completed ? (
 			<>
-				<div className="material-icons steps-icon">check</div>
+				<i className="completed steps-icon" />
 				{"\n"}
 			</>
 		) : (
@@ -50,7 +50,7 @@ const RenderSteps = ({ steps }) => (
 					className={classnames(
 						completed ? "steps-completed" : null,
 						ongoing ? "steps-ongoing" : null,
-						selected ? "steps-selected" : null
+						selected ? "steps-selected" : null,
 					)}
 				>
 					{clickable ? (
@@ -75,7 +75,7 @@ const RenderSteps = ({ steps }) => (
 						/>
 					)}
 				</li>
-			)
+			),
 		)}
 	</>
 );
@@ -88,10 +88,10 @@ const RenderStepsNav = ({ steps }) => {
 	const clickableItem = steps.some((item) => item.clickable);
 
 	const arrowLeft = clickableItem ? (
-		<div className="material-icons steps-nav-left">keyboard_arrow_left</div>
+		<i className="swepay-icon-chevron-left steps-nav-left"></i>
 	) : null;
 	const arrowRight = clickableItem ? (
-		<div className="material-icons steps-nav-right">keyboard_arrow_right</div>
+		<i className="swepay-icon-chevron-right steps-nav-right"></i>
 	) : null;
 
 	return (

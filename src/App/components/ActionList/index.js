@@ -1,8 +1,6 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 
-import { Icon } from "@docutils";
-
 const ActionListToggle = () => (
 	<>
 		<button
@@ -38,7 +36,9 @@ const ActionList = ({ id, classNames, toggleBtn, items }) => (
 					? items.map(({ name, icon }, i) => (
 							<Fragment key={i}>
 								<a href="#" onClick={(e) => e.preventDefault()}>
-									{icon ? <Icon type={icon} /> : null}
+									{icon ? (
+										<i className={`${icon} small`} aria-hidden="true" />
+									) : null}
 									{name}
 								</a>
 								{"\n"}

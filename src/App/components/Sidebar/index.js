@@ -16,9 +16,7 @@ const AddNewLevel = ({ currentNav, previousTitle }) => (
 					className="previous-nav"
 				>
 					{"\n"}
-					<i className="material-icons" aria-expanded="false">
-						arrow_back_ios
-					</i>
+					<i className="swepay-icon-chevron-left" aria-expanded="false"></i>
 					{"\n"}
 					<span>Back to {previousTitle}</span>
 					{"\n"}
@@ -123,7 +121,7 @@ Sidebar.prototype = {
 			title: PropTypes.string.isRequired,
 			icon: PropTypes.instanceOf(Element),
 			children: PropTypes.Array,
-		})
+		}),
 	),
 };
 

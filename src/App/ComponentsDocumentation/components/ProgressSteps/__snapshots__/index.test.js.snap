@@ -742,11 +742,9 @@ exports[`Documentation: Progress Steps renders 1`] = `
           <li
             className="steps-completed"
           >
-            <div
-              className="material-icons steps-icon"
-            >
-              check
-            </div>
+            <i
+              className="completed steps-icon"
+            />
             
 
             Step one
@@ -814,10 +812,9 @@ exports[`Documentation: Progress Steps renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -895,9 +892,6 @@ exports[`Documentation: Progress Steps renders 1`] = `
                   20
                   
 
-                  21
-                  
-
                 </pre>
               </td>
               <td
@@ -910,10 +904,7 @@ exports[`Documentation: Progress Steps renders 1`] = `
                       &lt;ol&gt;
                   
 
-                          &lt;li class="steps-completed"&gt;
-                  
-
-                              &lt;div class="material-icons steps-icon"&gt;check&lt;/div&gt;
+                          &lt;li class="steps-completed"&gt;&lt;i class="completed steps-icon"&gt;&lt;/i&gt;
                   
 
                               Step one
@@ -1006,11 +997,9 @@ exports[`Documentation: Progress Steps renders 1`] = `
           <li
             className="steps-completed"
           >
-            <div
-              className="material-icons steps-icon"
-            >
-              check
-            </div>
+            <i
+              className="completed steps-icon"
+            />
             
 
             Step one
@@ -1071,10 +1060,9 @@ exports[`Documentation: Progress Steps renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -1146,12 +1134,6 @@ exports[`Documentation: Progress Steps renders 1`] = `
                   18
                   
 
-                  19
-                  
-
-                  20
-                  
-
                 </pre>
               </td>
               <td
@@ -1164,16 +1146,10 @@ exports[`Documentation: Progress Steps renders 1`] = `
                       &lt;ol&gt;
                   
 
-                          &lt;li class="steps-completed"&gt;
+                          &lt;li class="steps-completed"&gt;&lt;i class="completed steps-icon"&gt;&lt;/i&gt;
                   
 
-                              &lt;div class="material-icons steps-icon"&gt;check&lt;/div&gt;
-                  
-
-                              Step one
-                  
-
-                          &lt;/li&gt;
+                              Step one&lt;/li&gt;
                   
 
                           &lt;li class="steps-ongoing steps-selected"&gt;
@@ -1259,11 +1235,9 @@ exports[`Documentation: Progress Steps renders 1`] = `
 
              
             <a>
-              <div
-                className="material-icons steps-icon"
-              >
-                check
-              </div>
+              <i
+                className="completed steps-icon"
+              />
               
 
               Step one
@@ -1354,21 +1328,17 @@ exports[`Documentation: Progress Steps renders 1`] = `
         <div
           className="steps-responsive"
         >
-          <div
-            className="material-icons steps-nav-left"
-          >
-            keyboard_arrow_left
-          </div>
+          <i
+            className="swepay-icon-chevron-left steps-nav-left"
+          />
           <div
             className="steps-responsive-text"
           >
             Step 2
           </div>
-          <div
-            className="material-icons steps-nav-right"
-          >
-            keyboard_arrow_right
-          </div>
+          <i
+            className="swepay-icon-chevron-right steps-nav-right"
+          />
         </div>
       </div>
     </div>
@@ -1386,10 +1356,9 @@ exports[`Documentation: Progress Steps renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -1503,18 +1472,6 @@ exports[`Documentation: Progress Steps renders 1`] = `
                   32
                   
 
-                  33
-                  
-
-                  34
-                  
-
-                  35
-                  
-
-                  36
-                  
-
                 </pre>
               </td>
               <td
@@ -1530,16 +1487,10 @@ exports[`Documentation: Progress Steps renders 1`] = `
                           &lt;li class="steps-completed"&gt;
                   
 
-                              &lt;a&gt;
+                              &lt;a&gt;&lt;i class="completed steps-icon"&gt;&lt;/i&gt;
                   
 
-                                  &lt;div class="material-icons steps-icon"&gt;check&lt;/div&gt;
-                  
-
-                                  Step one
-                  
-
-                              &lt;/a&gt;
+                                  Step one&lt;/a&gt;
                   
 
                           &lt;/li&gt;
@@ -1611,16 +1562,10 @@ exports[`Documentation: Progress Steps renders 1`] = `
                       &lt;/ol&gt;
                   
 
-                      &lt;div class="steps-responsive"&gt;
+                      &lt;div class="steps-responsive"&gt;&lt;i class="swepay-icon-chevron-left steps-nav-left"&gt;&lt;/i&gt;
                   
 
-                          &lt;div class="material-icons steps-nav-left"&gt;keyboard_arrow_left&lt;/div&gt;
-                  
-
-                          &lt;div class="steps-responsive-text"&gt;Step 2&lt;/div&gt;
-                  
-
-                          &lt;div class="material-icons steps-nav-right"&gt;keyboard_arrow_right&lt;/div&gt;
+                          &lt;div class="steps-responsive-text"&gt;Step 2&lt;/div&gt;&lt;i class="swepay-icon-chevron-right steps-nav-right"&gt;&lt;/i&gt;
                   
 
                       &lt;/div&gt;

@@ -28,10 +28,8 @@ const MediaObject = ({
 	const mediaClasses = classnames(
 		"media",
 		mediaRight ? "media-right" : null,
-		size ? `media-${size}` : null
+		size ? `media-${size}` : null,
 	);
-
-	const iconClasses = classnames("material-icons", muted ? "text-muted" : null);
 
 	return (
 		<div className={mediaClasses}>
@@ -47,9 +45,10 @@ const MediaObject = ({
 					{icon ? (
 						<>
 							{" "}
-							<i className={iconClasses} aria-hidden="true">
-								{icon}
-							</i>{" "}
+							<i
+								className={`${icon} ${muted ? "text-muted" : ""}`}
+								aria-hidden="true"
+							/>{" "}
 							{"\n"}{" "}
 						</>
 					) : null}

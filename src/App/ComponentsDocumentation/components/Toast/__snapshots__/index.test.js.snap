@@ -22,10 +22,8 @@ exports[`Components: Toast Content guidelines renders 1`] = `
         >
           <i
             aria-hidden="true"
-            className="material-icons"
-          >
-            info
-          </i>
+            className="swepay-icon-info-circle-filled"
+          />
           <div
             className="toast-content"
           >
@@ -38,10 +36,9 @@ exports[`Components: Toast Content guidelines renders 1`] = `
             className="toast-close ml-auto"
           >
             <i
-              className="material-icons"
-            >
-              close
-            </i>
+              aria-hidden="true"
+              className="swepay-icon-close"
+            />
           </button>
         </div>
       </div>
@@ -93,10 +90,9 @@ exports[`Components: Toast Developer documentation renders 1`] = `
           onClick={[Function]}
         >
           <i
-            className="material-icons-outlined"
-          >
-            content_copy
-          </i>
+            aria-hidden="true"
+            className="at-clipboard small"
+          />
           <div
             id="tooltipCopy"
             role="tooltip"
@@ -324,10 +320,9 @@ exports[`Components: Toast Developer documentation renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -420,10 +415,9 @@ exports[`Components: Toast Developer documentation renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"

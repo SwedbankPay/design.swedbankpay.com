@@ -7,21 +7,26 @@ describe("scripts: action-list", () => {
 	const ActionList = ({ active, id, noToggle }) => (
 		<div className={`action-list${active ? " active" : ""}`} id={id}>
 			{noToggle ? null : (
-				<i className="material-icons action-toggle" aria-hidden="true">
-					more_vert
-				</i>
+				<button
+					id="actionListToggle"
+					aria-label="Action list button"
+					type="button"
+					class="action-toggle"
+					aria-haspopup="true"
+				>
+					<i
+						className="at-dots-vertical snall action-toggle"
+						aria-hidden="true"
+					></i>
+				</button>
 			)}
-			<div className="action-menu">
+			<div className="action-menu" aria-labelledby="actionListToggle">
 				<a href="#">
-					<i className="material-icons" aria-hidden="true">
-						bookmark
-					</i>
+					<i className="at-bookmark-star small" aria-hidden="true"></i>
 					Add bookmark
 				</a>
 				<a href="#">
-					<i className="material-icons" aria-hidden="true">
-						business_center
-					</i>
+					<i className="at-business-suitcase small" aria-hidden="true"></i>
 					Add client
 				</a>
 			</div>
@@ -56,7 +61,7 @@ describe("scripts: action-list", () => {
 				<>
 					<ActionList />
 					<ActionList />
-				</>
+				</>,
 			);
 
 			const renderedActionLists = document.querySelectorAll(".action-list");
@@ -94,7 +99,7 @@ describe("scripts: action-list", () => {
 
 		expect(console.warn).toHaveBeenCalled();
 		expect(console.warn).toHaveBeenCalledWith(
-			"No toggle element exist, add an element with the class .action-toggle"
+			"No toggle element exist, add an element with the class .action-toggle",
 		);
 	});
 
@@ -102,7 +107,9 @@ describe("scripts: action-list", () => {
 		render(<ActionList />);
 
 		const renderedActionList = document.querySelector(".action-list");
-		const toggleBtn = renderedActionList.querySelector("i.material-icons");
+		const toggleBtn = renderedActionList.querySelector(
+			"button#actionListToggle",
+		);
 
 		expect(renderedActionList).toBeDefined();
 		expect(toggleBtn).toBeDefined();
@@ -118,7 +125,9 @@ describe("scripts: action-list", () => {
 		render(<ActionList active />);
 
 		const renderedActionList = document.querySelector(".action-list");
-		const toggleBtn = renderedActionList.querySelector("i.material-icons");
+		const toggleBtn = renderedActionList.querySelector(
+			"button#actionListToggle",
+		);
 
 		expect(renderedActionList).toBeDefined();
 		expect(toggleBtn).toBeDefined();

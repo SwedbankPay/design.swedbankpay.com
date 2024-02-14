@@ -17,18 +17,17 @@ describe("scripts: topbar - NavMenu", () => {
 				data-toggle-nav="#topbar-nav"
 			>
 				{noBtnIcon ? null : (
-					<i className="material-icons topbar-btn-icon" aria-hidden="true">
-						menu
-					</i>
+					<i
+						className="swepay-icon-menu topbar-btn-icon"
+						aria-hidden="true"
+					></i>
 				)}
 				<span className="topbar-btn-text">Menu</span>
 			</button>
 			<nav className={`topbar-nav${navOpen ? " topbar-nav-open" : ""}`}>
 				{noCloseIcon ? null : (
 					<button type="button" className="topbar-close">
-						<i className="material-icons" aria-hidden="true">
-							close
-						</i>
+						<i className="swepay-icon-close" aria-hidden="true"></i>
 					</button>
 				)}
 				<div className="topbar-link-container">

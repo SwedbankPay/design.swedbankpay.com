@@ -2,7 +2,7 @@ import React from "react";
 import TooltipComponent from "@components/Tooltips";
 
 const Tooltip = ({ position }) => (
-	<TooltipComponent position={position} icon="edit" text="Edit" />
+	<TooltipComponent position={position} icon="at-pencil" text="Edit" />
 );
 
 export const tooltipShowCase = {

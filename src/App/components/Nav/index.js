@@ -28,7 +28,7 @@ const Nav = ({ items, vertsize, widesize }) => {
 	const sidebarClassname = classnames(
 		"nav",
 		vertsize ? `nav-${vertsize}-vertical` : "",
-		widesize ? `nav-${widesize}-vertical-wide` : ""
+		widesize ? `nav-${widesize}-vertical-wide` : "",
 	);
 
 	return (
@@ -41,9 +41,7 @@ const Nav = ({ items, vertsize, widesize }) => {
 							<div className="submenu">
 								{"\n"}
 								<a href="#" onClick={(e) => setActive(e, `sub-${i}-0`)}>
-									<i className="material-icons" aria-hidden="true">
-										{icon}
-									</i>
+									<i className={icon} aria-hidden="true"></i>
 									{"\n"}
 									<span>{name}</span>
 									{"\n"}
@@ -73,9 +71,7 @@ const Nav = ({ items, vertsize, widesize }) => {
 								className={activeClassname === `main-${i}` ? "active" : null}
 							>
 								{"\n"}
-								<i className="material-icons" aria-hidden="true">
-									{icon}
-								</i>
+								<i className={icon} aria-hidden="true"></i>
 								{"\n"}
 								<span>{name}</span>
 								{"\n"}

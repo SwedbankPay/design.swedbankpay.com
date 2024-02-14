@@ -19,17 +19,17 @@ const GetStarted = () => (
 		<div className="component-overview">
 			<Link to="../for-developers" className="cards cards-primary">
 				<div className="cards-icon">
-					<i className="material-icons">code</i>
+					<i className="at-programming" aria-hidden="true"></i>
 				</div>
 				<div className="cards-content">
 					<span className="h4">For developers</span>
 					<span>Learn more about how to setup and use our system.</span>
 				</div>
-				<i className="material-icons">arrow_forward</i>
+				<i className="at-arrow-right small" aria-hidden="true"></i>
 			</Link>
 			<Link to="../for-designers" className="cards cards-primary">
 				<div className="cards-icon">
-					<i className="material-icons">brush</i>
+					<i className="at-paintbrush" aria-hidden="true"></i>
 				</div>
 				<div className="cards-content">
 					<span className="h4">For designers</span>
@@ -37,7 +37,7 @@ const GetStarted = () => (
 						Get ready to use the Design Guide when designing in {brandTitle}.
 					</span>
 				</div>
-				<i className="material-icons">arrow_forward</i>
+				<i className="at-arrow-right small" aria-hidden="true"></i>
 			</Link>
 		</div>
 	</section>
@@ -93,9 +93,10 @@ const WhatIsDG = () => (
 					"http://www.figma.com/proto/p1QcsYCJ3T466As9xQQGBM/Design-Guide-Mantra?page-id=11%3A4123&node-id=233%3A4515&viewport=306%2C372%2C0.1&scaling=min-zoom&starting-point-node-id=233%3A4515"
 				}
 			>
-				<i className="material-icons mr-2" aria-hidden="true">
-					launch
-				</i>
+				<i
+					className="at-arrow-up-from-square small mr-2 align-self-baseline"
+					aria-hidden="true"
+				></i>
 				View the contribution process prototype
 			</a>
 		</section>
@@ -135,7 +136,10 @@ const WhatIsDG = () => (
 								<tr key={product.name}>
 									<td>{product.name}</td>
 									<td>
-										<i className="material-icons mr-3">{product.icon}</i>
+										<i
+											className={`${product.icon} mr-3`}
+											aria-hidden="true"
+										></i>
 										{product.text}
 									</td>
 								</tr>

@@ -31,44 +31,44 @@ describe("Component: Link", () => {
 	});
 
 	it("renders with left icon when leftIcon is provided", () => {
-		const icon = "chevron_left";
+		const icon = "swepay-icon-chevron-left";
 
 		render(<Link linkText="Link" leftIcon={icon} />);
 
 		expect(screen.getByRole("link").querySelector("i")).toHaveClass(
-			"material-icons"
+			"swepay-icon-chevron-left",
 		);
 		expect(screen.getByRole("link").querySelector("i")).toHaveAttribute(
 			"aria-hidden",
-			"true"
+			"true",
 		);
-		expect(screen.getByRole("link").querySelector("i")).toHaveTextContent(icon);
+		expect(screen.getByRole("link").querySelector("i")).toHaveTextContent("");
 		expect(screen.getByRole("link").querySelector("span")).toHaveClass("ml-2");
 
 		const componentForSnap = renderer.create(
-			<Link linkText="Link" leftIcon={icon} />
+			<Link linkText="Link" leftIcon={icon} />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
 	});
 
 	it("renders with right icon when rightIcon is provided", () => {
-		const icon = "chevron_right";
+		const icon = "swepay-icon-chevron-right";
 
 		render(<Link linkText="Link" rightIcon={icon} />);
 
 		expect(screen.getByRole("link").querySelector("i")).toHaveClass(
-			"material-icons"
+			"swepay-icon-chevron-right",
 		);
 		expect(screen.getByRole("link").querySelector("i")).toHaveAttribute(
 			"aria-hidden",
-			"true"
+			"true",
 		);
-		expect(screen.getByRole("link").querySelector("i")).toHaveTextContent(icon);
+		expect(screen.getByRole("link").querySelector("i")).toHaveTextContent("");
 		expect(screen.getByRole("link").querySelector("span")).toHaveClass("mr-2");
 
 		const componentForSnap = renderer.create(
-			<Link linkText="Link" rightIcon={icon} />
+			<Link linkText="Link" rightIcon={icon} />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();

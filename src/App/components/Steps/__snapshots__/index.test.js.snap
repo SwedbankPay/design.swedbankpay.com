@@ -12,11 +12,9 @@ exports[`Component: Steps renders clickable Steps 1`] = `
 
        
       <a>
-        <div
-          className="material-icons steps-icon"
-        >
-          check
-        </div>
+        <i
+          className="completed steps-icon"
+        />
         
 
         Step one
@@ -98,21 +96,17 @@ exports[`Component: Steps renders clickable Steps 1`] = `
   <div
     className="steps-responsive"
   >
-    <div
-      className="material-icons steps-nav-left"
-    >
-      keyboard_arrow_left
-    </div>
+    <i
+      className="swepay-icon-chevron-left steps-nav-left"
+    />
     <div
       className="steps-responsive-text"
     >
       Step 2
     </div>
-    <div
-      className="material-icons steps-nav-right"
-    >
-      keyboard_arrow_right
-    </div>
+    <i
+      className="swepay-icon-chevron-right steps-nav-right"
+    />
   </div>
 </div>
 `;
@@ -125,11 +119,9 @@ exports[`Component: Steps renders in vertical mode if prop vertical is provided 
     <li
       className="steps-completed"
     >
-      <div
-        className="material-icons steps-icon"
-      >
-        check
-      </div>
+      <i
+        className="completed steps-icon"
+      />
       
 
       Step one
@@ -183,11 +175,9 @@ exports[`Component: Steps renders with default items if no props are provided 1`
     <li
       className="steps-completed"
     >
-      <div
-        className="material-icons steps-icon"
-      >
-        check
-      </div>
+      <i
+        className="completed steps-icon"
+      />
       
 
       Step one

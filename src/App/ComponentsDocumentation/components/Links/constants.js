@@ -137,7 +137,7 @@ export const overviewLinks = {
 								id: "external_link",
 								name: "External link",
 								value: {
-									rightIcon: "launch",
+									rightIcon: "at-export-arrow-up-right small",
 								},
 							},
 							{
@@ -210,19 +210,19 @@ export const overviewLinks = {
 							{
 								name: "External link",
 								value: {
-									leftIcon: "launch",
+									leftIcon: "at-export-arrow-up-right small",
 								},
 							},
 							{
 								name: "Back",
 								value: {
-									leftIcon: "arrow_back_ios",
+									leftIcon: "swepay-icon-chevron-left",
 								},
 							},
 							{
 								name: "Other type",
 								value: {
-									leftIcon: "edit",
+									leftIcon: "at-pencil small",
 								},
 							},
 						],

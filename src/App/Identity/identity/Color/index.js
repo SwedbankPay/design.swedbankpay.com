@@ -41,21 +41,24 @@ const ColorContrast = () => (
 		</p>
 		<div className="d-flex flex-row justify-content-between ">
 			<span className="d-flex">
-				<i className="material-icons check mr-1" aria-hidden="true">
-					check_circle
-				</i>
+				<i
+					className="swepay-icon-check-circle-filled small mr-1"
+					aria-hidden="true"
+				></i>
 				<b>Pass (&ge; 4.5:1)</b>
 			</span>
 			<span className="d-flex">
-				<i className="material-icons warning mr-1" aria-hidden="true">
-					warning
-				</i>
+				<i
+					className="swepay-icon-warning-triangle-filled small mr-1"
+					aria-hidden="true"
+				></i>
 				<b>OK for graphics or large text (&ge; 3:1)</b>
 			</span>
 			<span className="d-flex">
-				<i className="material-icons cancel mr-1" aria-hidden="true">
-					error
-				</i>
+				<i
+					className="swepay-icon-error-circle-filled small mr-1"
+					aria-hidden="true"
+				></i>
 				<b>Fail</b>
 			</span>
 		</div>

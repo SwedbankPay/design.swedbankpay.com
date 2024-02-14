@@ -4,34 +4,18 @@ import Sidebar from "@components/Sidebar";
 export const SidebarNavList = [
 	{
 		title: "Home Page",
-		icon: (
-			<i className="material-icons-outlined" aria-hidden="true">
-				home
-			</i>
-		),
+		icon: <i className="at-home" aria-hidden="true"></i>,
 	},
 	{
 		title: "Get Started",
-		icon: (
-			<i className="material-icons-outlined rotated" aria-hidden="true">
-				wb_incandescent
-			</i>
-		),
+		icon: <i className="at-rocket-launch" aria-hidden="true"></i>,
 		children: [
 			{
-				icon: (
-					<i className="material-icons-outlined rotated" aria-hidden="true">
-						accessibility
-					</i>
-				),
+				icon: <i className="at-vision" aria-hidden="true"></i>,
 				title: "Accessibility",
 			},
 			{
-				icon: (
-					<i className="material-icons-outlined rotated" aria-hidden="true">
-						palette
-					</i>
-				),
+				icon: <i className="at-paintbrush-paint-tool" aria-hidden="true"></i>,
 				title: "Colors",
 				group: true,
 				children: [
@@ -47,30 +31,18 @@ export const SidebarNavList = [
 				],
 			},
 			{
-				icon: (
-					<i className="material-icons-outlined rotated" aria-hidden="true">
-						grid_on
-					</i>
-				),
+				icon: <i className="at-grid" aria-hidden="true"></i>,
 				title: "Grid",
 			},
 			{
-				icon: (
-					<i className="material-icons-outlined rotated" aria-hidden="true">
-						space_bar
-					</i>
-				),
+				icon: <i className="at-move-arrow-left-right" aria-hidden="true"></i>,
 				title: "Spacing",
 			},
 		],
 	},
 	{
 		title: "Identity",
-		icon: (
-			<i className="material-icons-outlined" aria-hidden="true">
-				palette
-			</i>
-		),
+		icon: <i className="at-dna-science" aria-hidden="true"></i>,
 		children: [
 			{
 				title: "Introduction",
@@ -100,19 +72,11 @@ export const SidebarNavList = [
 export const SidebarNavListExtended = [
 	{
 		title: "Home Page",
-		icon: (
-			<i className="material-icons-outlined" aria-hidden="true">
-				home
-			</i>
-		),
+		icon: <i className="at-home" aria-hidden="true"></i>,
 	},
 	{
 		title: "Get started",
-		icon: (
-			<i className="material-icons-outlined" aria-hidden="true">
-				play_circle_outline
-			</i>
-		),
+		icon: <i className="at-launch-rocket" aria-hidden="true"></i>,
 		children: [
 			{
 				title: "Second level (li.group)",
@@ -169,11 +133,7 @@ export const SidebarNavListExtended = [
 	},
 	{
 		title: "Group",
-		icon: (
-			<i className="material-icons-outlined" aria-hidden="true">
-				expand_circle_down
-			</i>
-		),
+		icon: <i className="at-coins" aria-hidden="true"></i>,
 		children: [
 			{
 				title: "li.group",

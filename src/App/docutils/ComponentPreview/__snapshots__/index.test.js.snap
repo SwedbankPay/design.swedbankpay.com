@@ -15,10 +15,9 @@ exports[`Utilities: ComponentPreview CodeFigure removes outer tag from markup 1`
         onClick={[Function]}
       >
         <i
-          className="material-icons-outlined"
-        >
-          content_copy
-        </i>
+          aria-hidden="true"
+          className="at-clipboard small"
+        />
         <div
           id="tooltipCopy"
           role="tooltip"
@@ -72,10 +71,9 @@ exports[`Utilities: ComponentPreview CodeFigure removes outer tag from multiple 
         onClick={[Function]}
       >
         <i
-          className="material-icons-outlined"
-        >
-          content_copy
-        </i>
+          aria-hidden="true"
+          className="at-clipboard small"
+        />
         <div
           id="tooltipCopy"
           role="tooltip"
@@ -141,10 +139,9 @@ exports[`Utilities: ComponentPreview CodeFigure renders css string 1`] = `
         onClick={[Function]}
       >
         <i
-          className="material-icons-outlined"
-        >
-          content_copy
-        </i>
+          aria-hidden="true"
+          className="at-clipboard small"
+        />
         <div
           id="tooltipCopy"
           role="tooltip"
@@ -198,10 +195,9 @@ exports[`Utilities: ComponentPreview CodeFigure renders multiple javascript stri
         onClick={[Function]}
       >
         <i
-          className="material-icons-outlined"
-        >
-          content_copy
-        </i>
+          aria-hidden="true"
+          className="at-clipboard small"
+        />
         <div
           id="tooltipCopy"
           role="tooltip"
@@ -255,10 +251,9 @@ exports[`Utilities: ComponentPreview CodeFigure returns a message if no child is
         onClick={[Function]}
       >
         <i
-          className="material-icons-outlined"
-        >
-          content_copy
-        </i>
+          aria-hidden="true"
+          className="at-clipboard small"
+        />
         <div
           id="tooltipCopy"
           role="tooltip"
@@ -312,10 +307,9 @@ exports[`Utilities: ComponentPreview does not render showCasePanelAdvanced when 
         onClick={[Function]}
       >
         <i
-          className="material-icons-outlined"
-        >
-          content_copy
-        </i>
+          aria-hidden="true"
+          className="at-clipboard small"
+        />
         <div
           id="tooltipCopy"
           role="tooltip"

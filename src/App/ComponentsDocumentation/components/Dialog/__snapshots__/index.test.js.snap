@@ -43,17 +43,7 @@ Array [
             aria-label="Close dialog"
             className="dialog-close"
             type="button"
-          >
-            
-
-            <i
-              className="material-icons"
-            >
-              close
-            </i>
-            
-
-          </button>
+          />
         </header>
         <div
           className="dialog-body"
@@ -106,10 +96,9 @@ Array [
           onClick={[Function]}
         >
           <i
-            className="material-icons-outlined"
-          >
-            content_copy
-          </i>
+            aria-hidden="true"
+            className="at-clipboard small"
+          />
           <div
             id="tooltipCopy"
             role="tooltip"
@@ -181,12 +170,6 @@ Array [
                 18
                 
 
-                19
-                
-
-                20
-                
-
               </pre>
             </td>
             <td
@@ -214,13 +197,7 @@ Array [
                             &lt;h4&gt;Delete&lt;/h4&gt;
                 
 
-                            &lt;button type="button" class="dialog-close" aria-label="Close dialog"&gt;
-                
-
-                                &lt;i class="material-icons"&gt;close&lt;/i&gt;
-                
-
-                            &lt;/button&gt;
+                            &lt;button type="button" class="dialog-close" aria-label="Close dialog"&gt;&lt;/button&gt;
                 
 
                         &lt;/header&gt;
@@ -275,10 +252,8 @@ Array [
      
     <i
       aria-label="close button"
-      className="material-icons d-inline-flex"
-    >
-      close
-    </i>
+      className="swepay-icon-close d-inline-flex"
+    />
      
     to close the dialog.
   </p>,
@@ -299,7 +274,7 @@ Array [
 
     <i
       aria-hidden="true"
-      className="at-warning"
+      className="swepay-icon-warning-triangle-filled"
     />
     <p>
       <b>

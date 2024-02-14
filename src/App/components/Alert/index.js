@@ -12,7 +12,7 @@ const Alert = ({ id, type, icon = "", close, text, className }) => {
 	return (
 		<div id={id} className={alertClasses}>
 			{"\n"}
-			<i className={`at-${icon}`} aria-hidden="true"></i>
+			<i className={icon} aria-hidden="true"></i>
 			{text}
 			{"\n"}
 			{close ? (
@@ -24,7 +24,7 @@ const Alert = ({ id, type, icon = "", close, text, className }) => {
 						onClick={(e) => e.preventDefault()}
 					>
 						{"\n\t\t"}
-						<i className="material-icons">close</i>
+						<i className="swepay-icon-close" aria-hidden="true"></i>
 						{"\n\t"}
 					</button>
 					{"\n"}
