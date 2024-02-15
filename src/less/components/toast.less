@@ -1,11 +1,13 @@
 @import "../global.less";
 
-@toast-height: 3.5rem;
-@toast-color: @white;
-@toast-text-color: var(--text-color);
-@toast-action-color: @brand-secondary;
-
+// So far the Toast container is set entirely via our script we ship.
+// This means we can introduce breaking changes inside the toast as we please. As long as it is not breaking event listeners for example.
 #toast-container {
+	--toast-height: 3.5rem;
+	--toast-color: var(--white);
+	--toast-text-color: var(--text-color);
+	--toast-action-color: var(--brand-secondary);
+
 	display: block;
 	position: fixed;
 	z-index: var(--toast-z-index, 700);
@@ -21,36 +23,40 @@
 	}
 
 	.toast {
+		--color-icon: var(--black);
+
 		position: relative;
 		display: flex;
-		min-height: @toast-height;
+		min-height: var(--toast-height);
 		padding: 1rem var(--base-padding-lg);
-		background-color: @toast-color;
-		color: @toast-text-color;
+		background-color: var(--toast-color);
+		color: var(--toast-text-color);
 		border-radius: 0.25rem;
 		font-weight: 300;
 		line-height: 1.5;
 		cursor: default;
-		box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.15);
+		box-shadow: 1px 2px 10px rgb(0 0 0 / 15%);
 		opacity: 1;
-		animation: slideInFromTopRight 0.5s forwards;
+		animation: slide-in-from-top-right 0.5s forwards;
 
-		@keyframes slideInFromTopRight {
+		@keyframes slide-in-from-top-right {
 			from {
 				right: -1000px;
 			}
+
 			to {
 				right: 0;
 			}
 		}
 
 		@media screen and (max-width: @screen-sm-min) {
-			animation: slideInFromTop 0.5s forwards;
+			animation: slide-in-from-top 0.5s forwards;
 
-			@keyframes slideInFromTop {
+			@keyframes slide-in-from-top {
 				from {
 					top: -1000px;
 				}
+
 				to {
 					top: 0;
 				}
@@ -66,30 +72,26 @@
 			margin-top: 10px;
 		}
 
+		> i {
+			color: var(--color-icon);
+		}
+
 		&.toast-success {
-			.material-icons {
-				color: @brand-success;
-			}
+			--color-icon: var(--system-success);
 		}
 
 		&.toast-neutral {
-			.material-icons {
-				color: @brand-info;
-			}
+			--color-icon: var(--system-info);
 		}
 
 		&.toast-warning {
-			.material-icons {
-				color: @brand-warning;
-			}
+			--color-icon: var(--system-warning);
 		}
 
 		&.toast-danger {
-			color: var(--brand-error);
+			--color-icon: var(--system-error);
 
-			.material-icons {
-				color: var(--brand-error);
-			}
+			color: var(--brand-error);
 		}
 
 		.toast-content {
@@ -98,8 +100,11 @@
 			}
 		}
 
-		.material-icons {
-			user-select: none;
+		> i:first-child:is(
+				.material-icons,
+				[class^="swepay-icon-"],
+				[class*=" swepay-icon-"]
+			) {
 			margin-right: calc(var(--base-margin-sm) * 2);
 			margin-left: calc(0 - var(--base-margin-sm));
 		}
@@ -107,41 +112,41 @@
 		.toast-close {
 			all: unset;
 			display: inline-flex;
-			height: 1.75rem;
+			height: fit-content;
 			order: 1;
+			margin-left: 0.5rem;
+			border-radius: 0.175rem;
 
-			.material-icons {
+			&:hover {
+				background-color: @brand-bg-gray;
+
+				& i {
+					color: @dark-brown;
+				}
+			}
+
+			&:focus {
+				outline: 2px solid var(--brand-secondary);
+			}
+
+			i {
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				cursor: pointer;
 				width: 1.5rem;
 				height: 1.5rem;
-				margin-left: 0.5rem;
 				margin-right: calc(0 - var(--base-margin-sm));
 				color: @medium-brown;
-				border: 2px solid transparent;
-				border-radius: 0.175rem;
-
-				&:hover {
-					color: @dark-brown;
-					background-color: @brand-bg-gray;
-				}
-			}
-
-			&:focus {
-				.material-icons {
-					border: 2px solid @brand-secondary;
-				}
 			}
 		}
 
 		.toast-action {
-			color: @toast-action-color;
+			color: var(--toast-action-color);
 			font-weight: 500;
 
 			&.btn {
-				background-color: @toast-color;
+				background-color: var(--toast-color);
 				margin-bottom: 0;
 				padding: 0;
 			}
@@ -161,7 +166,7 @@
 
 			.toast-close {
 				&:focus {
-					.material-icons {
+					i {
 						outline: 2px solid;
 
 						&:hover {

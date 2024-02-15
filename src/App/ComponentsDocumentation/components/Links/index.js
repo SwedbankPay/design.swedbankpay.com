@@ -55,7 +55,11 @@ const Overview = ({ scrollToRef }) => (
 					<div className="loader-preview-container d-flex justify-content-center align-items-center mt-3 pt-3">
 						<p>
 							Paragraph text with a{" "}
-							<LinkComponent linkText="Inline link" leftIcon="edit" />.
+							<LinkComponent
+								linkText="Inline link"
+								leftIcon="at-pencil small"
+							/>
+							.
 						</p>
 					</div>
 				</div>

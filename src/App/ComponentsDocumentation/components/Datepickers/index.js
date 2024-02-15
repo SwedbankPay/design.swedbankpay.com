@@ -37,7 +37,7 @@ const SimpleDatepicker = () => (
 			<DatepickerComponent
 				label="Date"
 				prefixType="icon"
-				prefixValue="event"
+				prefixValue="at-calendar-dots small"
 				id="simple-datepicker"
 			/>
 		</ComponentPreview>
@@ -58,7 +58,7 @@ const AllowInput = () => (
 			<DatepickerComponent
 				label="Date"
 				prefixType="icon"
-				prefixValue="event"
+				prefixValue="at-calendar-dots small"
 				id="simple-datepicker"
 				allowinput
 			/>
@@ -79,7 +79,7 @@ const InitialValue = () => (
 				value="1972-12-28"
 				label="Date"
 				prefixType="icon"
-				prefixValue="event"
+				prefixValue="at-calendar-dots small"
 				id="init-value-datepicker"
 			/>
 		</ComponentPreview>
@@ -98,7 +98,7 @@ const HumanReadable = () => (
 				value="1972-12-28"
 				label="Date"
 				prefixType="icon"
-				prefixValue="event"
+				prefixValue="at-calendar-dots small"
 				fulldate
 				id="init-value-datepicker"
 			/>
@@ -125,7 +125,7 @@ const CustomFormat = () => (
 				value="28.12.1972"
 				format="nb"
 				prefixType="icon"
-				prefixValue="event"
+				prefixValue="at-calendar-dots small"
 				id="nb-datepicker"
 			/>
 			<DatepickerComponent
@@ -133,7 +133,7 @@ const CustomFormat = () => (
 				value="1972-12-28"
 				format="sv"
 				prefixType="icon"
-				prefixValue="event"
+				prefixValue="at-calendar-dots small"
 				id="sv-datepicker"
 			/>
 			<DatepickerComponent
@@ -141,7 +141,7 @@ const CustomFormat = () => (
 				value="28.12.1972"
 				format="da"
 				prefixType="icon"
-				prefixValue="event"
+				prefixValue="at-calendar-dots small"
 				id="da-datepicker"
 			/>
 			<DatepickerComponent
@@ -149,7 +149,7 @@ const CustomFormat = () => (
 				value="28.12.1972"
 				format="fi"
 				prefixType="icon"
-				prefixValue="event"
+				prefixValue="at-calendar-dots small"
 				id="fi-datepicker"
 			/>
 			<DatepickerComponent
@@ -157,7 +157,7 @@ const CustomFormat = () => (
 				value="28/12/1972"
 				format="en"
 				prefixType="icon"
-				prefixValue="event"
+				prefixValue="at-calendar-dots small"
 				id="en-datepicker"
 			/>
 			<DatepickerComponent
@@ -165,7 +165,7 @@ const CustomFormat = () => (
 				value="1972-12-28"
 				format="iso8601"
 				prefixType="icon"
-				prefixValue="event"
+				prefixValue="at-calendar-dots small"
 				id="iso8601-datepicker"
 			/>
 		</ComponentPreview>
@@ -187,7 +187,7 @@ const IncludeTime = () => (
 				format="nb"
 				label="Date"
 				prefixType="icon"
-				prefixValue="event"
+				prefixValue="at-calendar-dots small"
 				id="include-time-datepicker"
 			/>
 		</ComponentPreview>
@@ -207,7 +207,7 @@ const ShowingMultipleMonths = () => (
 				months="2"
 				label="Date"
 				prefixType="icon"
-				prefixValue="event"
+				prefixValue="at-calendar-dots small"
 				id="multiple-months-datepicker"
 			/>
 		</ComponentPreview>
@@ -230,7 +230,7 @@ const ValidDates = () => (
 				format="nb"
 				label="Date"
 				prefixType="icon"
-				prefixValue="event"
+				prefixValue="at-calendar-dots small"
 				id="valid-dates-datepicker"
 			/>
 		</ComponentPreview>
@@ -249,7 +249,7 @@ const DateRange = () => (
 				min="10.12.1972"
 				label="date"
 				prefixType="icon"
-				prefixValue="event"
+				prefixValue="at-calendar-dots small"
 				id="date-range-datepicker"
 				mode="range"
 				format="nb"
@@ -270,7 +270,7 @@ const MultipleDates = () => (
 				min="10.12.1972"
 				label="date"
 				prefixType="icon"
-				prefixValue="event"
+				prefixValue="at-calendar-dots small"
 				id="date-range-datepicker"
 				mode="multiple"
 				format="nb"
@@ -278,7 +278,7 @@ const MultipleDates = () => (
 		</ComponentPreview>
 		<Alert
 			type="warning"
-			icon="warning"
+			icon="swepay-icon-warning-triangle-filled"
 			text={
 				<p>
 					<b>Max number of dates:</b> The{" "}

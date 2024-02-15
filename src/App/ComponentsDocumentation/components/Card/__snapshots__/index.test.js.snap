@@ -12,10 +12,8 @@ Array [
   >
     <i
       aria-hidden="true"
-      className="material-icons"
-    >
-      sentiment_very_dissatisfied
-    </i>
+      className="at-axe"
+    />
     Being removed
   </span>,
   <p>
@@ -76,10 +74,9 @@ Array [
           onClick={[Function]}
         >
           <i
-            className="material-icons-outlined"
-          >
-            content_copy
-          </i>
+            aria-hidden="true"
+            className="at-clipboard small"
+          />
           <div
             id="tooltipCopy"
             role="tooltip"
@@ -228,10 +225,8 @@ Array [
                  
                 <i
                   aria-hidden="true"
-                  className="material-icons text-muted"
-                >
-                  verified_user
-                </i>
+                  className="at-check-shield text-muted"
+                />
                  
                 
 
@@ -381,10 +376,9 @@ Array [
           onClick={[Function]}
         >
           <i
-            className="material-icons-outlined"
-          >
-            content_copy
-          </i>
+            aria-hidden="true"
+            className="at-clipboard small"
+          />
           <div
             id="tooltipCopy"
             role="tooltip"
@@ -603,7 +597,7 @@ Array [
                                     &lt;div class="media-img"&gt;
                 
 
-                                        &lt;i class="material-icons text-muted" aria-hidden="true"&gt;verified_user&lt;/i&gt;
+                                        &lt;i class="at-check-shield text-muted" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                     &lt;/div&gt;
@@ -868,10 +862,8 @@ Array [
                  
                 <i
                   aria-hidden="true"
-                  className="material-icons text-muted"
-                >
-                  account_balance
-                </i>
+                  className="at-building-column text-muted"
+                />
                  
                 
 
@@ -952,10 +944,8 @@ Array [
                  
                 <i
                   aria-hidden="true"
-                  className="material-icons text-muted"
-                >
-                  verified_user
-                </i>
+                  className="at-check-shield text-muted"
+                />
                  
                 
 
@@ -1013,10 +1003,9 @@ Array [
           onClick={[Function]}
         >
           <i
-            className="material-icons-outlined"
-          >
-            content_copy
-          </i>
+            aria-hidden="true"
+            className="at-clipboard small"
+          />
           <div
             id="tooltipCopy"
             role="tooltip"
@@ -1316,7 +1305,7 @@ Array [
                                     &lt;div class="media-img"&gt;
                 
 
-                                        &lt;i class="material-icons text-muted" aria-hidden="true"&gt;account_balance&lt;/i&gt;
+                                        &lt;i class="at-building-column text-muted" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                     &lt;/div&gt;
@@ -1391,7 +1380,7 @@ Array [
                                     &lt;div class="media-img"&gt;
                 
 
-                                        &lt;i class="material-icons text-muted" aria-hidden="true"&gt;verified_user&lt;/i&gt;
+                                        &lt;i class="at-check-shield text-muted" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                     &lt;/div&gt;

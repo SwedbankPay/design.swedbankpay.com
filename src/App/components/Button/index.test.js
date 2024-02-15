@@ -30,7 +30,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveAttribute("href", "test");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" href="test" />
+				<Button type="primary" href="test" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -44,7 +44,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveClass("btn btn-primary");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" href="test" label="test" />
+				<Button type="primary" href="test" label="test" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -56,7 +56,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveClass("btn-size-test");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" href="test" size="size-test" />
+				<Button type="primary" href="test" size="size-test" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -69,7 +69,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveClass("loading");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" href="test" loading />
+				<Button type="primary" href="test" loading />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -81,7 +81,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveClass("btn-block");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" href="test" fullWidth />
+				<Button type="primary" href="test" fullWidth />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -93,7 +93,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveClass("active");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" href="test" active />
+				<Button type="primary" href="test" active />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -106,7 +106,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveAttribute("id", "test");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" href="test" id="test" />
+				<Button type="primary" href="test" id="test" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -118,7 +118,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveAttribute("name", "test");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" href="test" name="test" />
+				<Button type="primary" href="test" name="test" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -132,7 +132,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toBeDisabled();
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" href="test" disabled />
+				<Button type="primary" href="test" disabled />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -140,18 +140,17 @@ describe("Component: Button -", () => {
 
 		it("renders a button with icon inside an anchor tag when prop href and icon is provided", () => {
 			const { container } = render(
-				<Button type="primary" href="test" icon="test" />
+				<Button type="primary" href="test" icon="test-icon" />,
 			);
 
-			expect(container.querySelector("i")).toHaveClass("material-icons");
-			expect(container.querySelector("i")).toHaveTextContent("test");
+			expect(container.querySelector("i")).toHaveClass("test-icon");
 			expect(container.querySelector("i")).toHaveAttribute(
 				"aria-hidden",
-				"true"
+				"true",
 			);
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" href="test" icon="test" />
+				<Button type="primary" href="test" icon="test-icon" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -159,21 +158,20 @@ describe("Component: Button -", () => {
 
 		it("renders a button with icon and label inside a span inside an anchor tag when prop href, label and icon is provided", () => {
 			const { container } = render(
-				<Button type="primary" href="test" icon="test" label="test" />
+				<Button type="primary" href="test" icon="test-icon" label="test" />,
 			);
 
-			expect(container.querySelector("i")).toHaveClass("material-icons");
-			expect(container.querySelector("i")).toHaveTextContent("test");
+			expect(container.querySelector("i")).toHaveClass("test-icon");
 			expect(container.querySelector("i")).toHaveAttribute(
 				"aria-hidden",
-				"true"
+				"true",
 			);
 			expect(
-				screen.getByRole("button").querySelector("span")
+				screen.getByRole("button").querySelector("span"),
 			).toHaveTextContent("test");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" href="test" icon="test" label="test" />
+				<Button type="primary" href="test" icon="test" label="test" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -198,7 +196,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveClass("btn-size-test");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" input size="size-test" />
+				<Button type="primary" input size="size-test" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -210,7 +208,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveClass("loading");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" input loading />
+				<Button type="primary" input loading />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -222,7 +220,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveClass("btn-block");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" input fullWidth />
+				<Button type="primary" input fullWidth />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -235,7 +233,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveClass("active");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" input active />
+				<Button type="primary" input active />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -248,7 +246,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("textbox")).toHaveAttribute("type", "test");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" input btnType="test" />
+				<Button type="primary" input btnType="test" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -261,7 +259,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveAttribute("id", "test");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" input id="test" />
+				<Button type="primary" input id="test" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -273,7 +271,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveAttribute("name", "test");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" input name="test" />
+				<Button type="primary" input name="test" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -285,7 +283,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toBeDisabled();
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" input disabled />
+				<Button type="primary" input disabled />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -297,7 +295,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveAttribute("value", "test");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" input value="test" />
+				<Button type="primary" input value="test" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -321,7 +319,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveTextContent("test");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" label="test" />
+				<Button type="primary" label="test" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -335,7 +333,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveClass("btn-size-test");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" size="size-test" />
+				<Button type="primary" size="size-test" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -347,7 +345,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveClass("loading");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" loading />
+				<Button type="primary" loading />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -359,7 +357,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveClass("btn-block");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" fullWidth />
+				<Button type="primary" fullWidth />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -372,7 +370,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveClass("active");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" active />
+				<Button type="primary" active />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -384,7 +382,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveAttribute("type", "test");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" btnType="test" />
+				<Button type="primary" btnType="test" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -396,7 +394,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveAttribute("id", "test");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" id="test" />
+				<Button type="primary" id="test" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -408,7 +406,7 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toHaveAttribute("name", "test");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" name="test" />
+				<Button type="primary" name="test" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -420,52 +418,43 @@ describe("Component: Button -", () => {
 			expect(screen.getByRole("button")).toBeDisabled();
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" disabled />
+				<Button type="primary" disabled />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
 		});
 
 		it("renders a button with an icon when prop icon is provided", () => {
-			render(<Button type="primary" icon="test" />);
+			render(<Button type="primary" icon="test-icon" />);
 
 			expect(screen.getByRole("button").querySelector("i")).toHaveClass(
-				"material-icons-outlined"
-			);
-			expect(screen.getByRole("button").querySelector("i")).toHaveTextContent(
-				"test"
+				"test-icon",
 			);
 			expect(screen.getByRole("button").querySelector("i")).toHaveAttribute(
 				"aria-hidden",
-				"true"
+				"true",
 			);
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" icon="test" />
+				<Button type="primary" icon="test" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();
 		});
 
 		it("renders a button with icon and label when prop icon and label is provided", () => {
-			render(<Button type="primary" icon="icon" label="test" />);
+			render(<Button type="primary" icon="test-icon" label="test" />);
 
 			expect(screen.getByRole("button").querySelector("i")).toHaveClass(
-				"material-icons-outlined"
-			);
-			expect(screen.getByRole("button").querySelector("i")).toHaveTextContent(
-				"icon"
+				"test-icon",
 			);
 			expect(screen.getByRole("button").querySelector("i")).toHaveAttribute(
 				"aria-hidden",
-				"true"
+				"true",
 			);
-			expect(
-				screen.getByRole("button").querySelector("span")
-			).toHaveTextContent("test");
 
 			const componentForSnap = renderer.create(
-				<Button type="primary" icon="icon" label="test" />
+				<Button type="primary" icon="icon" label="test" />,
 			);
 
 			expect(componentForSnap.toJSON()).toMatchSnapshot();

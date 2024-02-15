@@ -23,9 +23,10 @@ const Intro = () => (
 				className="icon-link m-0"
 			>
 				<span className="mr-2">Bootstrap documentation</span>
-				<i className="material-icons" aria-hidden="true">
-					open_in_new
-				</i>
+				<i
+					className="at-arrow-up-from-square small align-self-baseline"
+					aria-hidden="true"
+				></i>
 			</a>
 			. If you are curious about how the grid is being used in design, head over
 			to the{" "}
@@ -36,9 +37,10 @@ const Intro = () => (
 				className="icon-link m-0"
 			>
 				<span className="mr-2">Grid file in Figma</span>
-				<i className="material-icons" aria-hidden="true">
-					open_in_new
-				</i>
+				<i
+					className="at-arrow-up-from-square small align-self-baseline"
+					aria-hidden="true"
+				></i>
 			</a>
 			.
 		</p>

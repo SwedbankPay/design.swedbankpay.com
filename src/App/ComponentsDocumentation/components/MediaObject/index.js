@@ -21,7 +21,7 @@ const Overview = () => (
 				text={`bob.corlsan@${brand}.com`}
 			/>
 			<MediaObjectComponent
-				icon="account_circle"
+				icon="at-customer-service-agent"
 				heading="Bob Corlsan"
 				text={`bob.corlsan@${brand}.com`}
 			/>
@@ -47,7 +47,7 @@ const Sizes = () => (
 			/>
 			<MediaObjectComponent
 				size="sm"
-				icon="account_circle"
+				icon="at-customer-service-agent"
 				heading="Bob Corlsan"
 				text={`bob.corlsan@${brand}.com`}
 			/>
@@ -62,7 +62,7 @@ const Sizes = () => (
 			/>
 			<MediaObjectComponent
 				size="lg"
-				icon="account_circle"
+				icon="at-customer-service-agent"
 				heading="Bob Corlsan"
 				text={`bob.corlsan@${brand}.com`}
 			/>
@@ -86,7 +86,7 @@ const MediaPosition = () => (
 			/>
 			<MediaObjectComponent
 				mediaRight
-				icon="account_circle"
+				icon="at-customer-service-agent"
 				heading="Bob Corlsan"
 				text={`bob.corlsan@${brand}.com`}
 			/>

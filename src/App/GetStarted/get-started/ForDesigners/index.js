@@ -32,20 +32,16 @@ const NeedToHave = () => (
 			target="_blank"
 			rel="noopener noreferrer"
 		>
-			<i className="material-icons" aria-hidden="true">
-				launch
-			</i>
+			<i className="at-arrow-up-from-square small" aria-hidden="true"></i>
 			<span className="ml-2">Download the Figma application</span>
 		</a>
 		<a
 			href="https://www.figma.com/"
-			className="icon-link"
+			className="icon-link d-block"
 			target="_blank"
 			rel="noopener noreferrer"
 		>
-			<i className="material-icons" aria-hidden="true">
-				launch
-			</i>
+			<i className="at-arrow-up-from-square small" aria-hidden="true"></i>
 			<span className="ml-2">Read more about Figma</span>
 		</a>
 
@@ -79,13 +75,11 @@ const NeedToKnow = () => (
 		{brandTitle === "Swedbank Pay" && (
 			<a
 				href="https://brand-manager.swedbank.com/start/guidelines/swedbank-pay.html"
-				className="icon-link"
+				className="icon-link d-block"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				<i className="material-icons" aria-hidden="true">
-					launch
-				</i>
+				<i className="at-arrow-up-from-square small" aria-hidden="true"></i>
 				<span className="ml-2">
 					Read more about the Swedbank Pay Brand (Swedbank Brand Manager){" "}
 				</span>
@@ -118,12 +112,12 @@ const DiscoverMore = () => (
 	<section>
 		<h2 id="discover-more">Discover more</h2>
 		<div className="component-overview hide-arrow-icon">
-			<Link to="/identity/identity" className="cards cards-primary cards-wide">
+			<Link to="/identity/" className="cards cards-primary cards-wide">
 				<div className="cards-content m-0">
 					<span className="h3">Identity</span>
 					<span>The philosophy behind our designs </span>
 				</div>
-				<i className="material-icons">arrow_forward</i>
+				<i className="at-arrow-right small" aria-hidden="true"></i>
 			</Link>
 			<Link
 				to="/components/components"
@@ -133,7 +127,7 @@ const DiscoverMore = () => (
 					<span className="h3">Component</span>
 					<span>See all available components</span>
 				</div>
-				<i className="material-icons">arrow_forward</i>
+				<i className="at-arrow-right small" aria-hidden="true"></i>
 			</Link>
 		</div>
 	</section>

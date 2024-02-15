@@ -15,7 +15,11 @@ export const alertsShowCase = {
 		{
 			tab: "Danger",
 			component: (
-				<Alert type="danger" icon="error" text={titleBuilder("Danger")} />
+				<Alert
+					type="danger"
+					icon="swepay-icon-error-triangle-filled"
+					text={titleBuilder("Danger")}
+				/>
 			),
 			options: {
 				checkbox: [
@@ -40,7 +44,11 @@ export const alertsShowCase = {
 		{
 			tab: "Warning",
 			component: (
-				<Alert type="warning" icon="warning" text={titleBuilder("Warning")} />
+				<Alert
+					type="warning"
+					icon="swepay-icon-warning-triangle-filled"
+					text={titleBuilder("Warning")}
+				/>
 			),
 			options: {
 				checkbox: [
@@ -67,7 +75,7 @@ export const alertsShowCase = {
 			component: (
 				<Alert
 					type="informative"
-					icon="info"
+					icon="swepay-icon-info-circle-filled"
 					text={titleBuilder("Informative")}
 				/>
 			),
@@ -96,7 +104,7 @@ export const alertsShowCase = {
 			component: (
 				<Alert
 					type="success"
-					icon="check_circle"
+					icon="swepay-icon-check-circle-filled"
 					text={titleBuilder("Success")}
 				/>
 			),
@@ -122,38 +130,3 @@ export const alertsShowCase = {
 		},
 	],
 };
-// Will be restored at a later stage
-
-// export const alertsGlobalShowCase = {
-//     id: "overviewAlertGlobal",
-//     hideOptions: true,
-//     tabsId: "overviewAlertGlobalTabs",
-//     elements: [
-//         {
-//             tab: "Warning",
-//             component: <Alert type="warning" global icon="warning" text={<p><b>Login problems:</b> We are currently experiencing high numbers of login failures. We are working on solving the problem as quick as possible.</p>} />,
-//             options: {
-//                 checkbox: [
-//                     {
-//                         inputs: []
-//                     }
-//                 ]
-//             },
-//             title: "Global warning alert",
-//             description: "Use this alert to broadcast a problem concerning the the entire system."
-//         },
-//         {
-//             tab: "Informative",
-//             component: <Alert type="informative" global icon="info" text={<p><b>Planned maintenance:</b> Friday 16:00 - 18:00 you will not be able to log into our service. We apologize form the inconvenience in advance.</p>}/>,
-//             options: {
-//                 checkbox: [
-//                     {
-//                         inputs: []
-//                     }
-//                 ]
-//             },
-//             title: "Global informative alert",
-//             description: "Use this alert to broadcast information concerning the entire system."
-//         }
-//     ]
-// };

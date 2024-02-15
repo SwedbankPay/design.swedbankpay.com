@@ -10,51 +10,55 @@ import Nav from "./index";
 const navItems = [
 	{
 		name: "Home",
-		icon: "home",
+		icon: "at-home small",
 	},
 	{
 		name: "Transactions",
-		icon: "shopping_cart",
+		icon: "at-shop-cart small",
 	},
 	{
 		name: "Notifications",
-		icon: "notification_important",
+		icon: "at-bell-reminder small",
 	},
 	{
 		name: "Language",
-		icon: "language",
+		icon: "at-language-translation small",
 	},
 	{
 		name: "Account",
-		icon: "account_balance",
+		icon: "at-building-column small",
 	},
 	{
 		name: "Authentication",
-		icon: "fingerprint",
+		icon: "at-fingerprint small",
 	},
 ];
 
 const navItemsTwoLevels = [
 	{
 		name: "Home",
-		icon: "home",
+		icon: "at-home small",
 	},
 	{
 		name: "Transactions",
-		icon: "shopping_cart",
+		icon: "at-shop-cart small",
 		subItems: ["Purchase history", "Invoice"],
 	},
 	{
 		name: "Notifications",
-		icon: "notification_important",
+		icon: "at-bell-reminder small",
 	},
 	{
 		name: "Language",
-		icon: "language",
+		icon: "at-language-translation small",
 	},
 	{
 		name: "Account",
-		icon: "account_balance",
+		icon: "at-building-column small",
+	},
+	{
+		name: "Authentication",
+		icon: "at-fingerprint small",
 		subItems: ["Email", "Information", "Other things"],
 	},
 ];
@@ -72,7 +76,7 @@ describe("Component: Nav -", () => {
 		console.error = jest.fn();
 
 		const componentForSnap = renderer.create(
-			<Nav items={navItems} vertsize="xxxl" />
+			<Nav items={navItems} vertsize="xxxl" />,
 		);
 
 		expect(console.error).toHaveBeenCalled();
@@ -84,7 +88,7 @@ describe("Component: Nav -", () => {
 		console.error = jest.fn();
 
 		const componentForSnap = renderer.create(
-			<Nav items={navItems} widesize="xxxl" />
+			<Nav items={navItems} widesize="xxxl" />,
 		);
 
 		expect(console.error).toHaveBeenCalled();
@@ -110,7 +114,7 @@ describe("Component: Nav -", () => {
 		expect(
 			screen
 				.getAllByRole("link")
-				.filter((elmt) => elmt.classList.contains("active"))
+				.filter((elmt) => elmt.classList.contains("active")),
 		).toHaveLength(1);
 
 		const componentForSnap = renderer.create(<Nav items={navItems} />);
@@ -145,7 +149,7 @@ describe("Component: Nav -", () => {
 			.filter(
 				(elmt) =>
 					!elmt.classList.contains("active") &&
-					!elmt.parentElement.classList.contains("active")
+					!elmt.parentElement.classList.contains("active"),
 			)[0];
 
 		expect(renderedNav).toBeInTheDocument();

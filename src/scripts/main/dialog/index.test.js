@@ -30,9 +30,7 @@ describe("scripts: dialog", () => {
 						<header className="dialog-header">
 							<h4>Delete item 456?</h4>
 							<button type="button" className="dialog-close">
-								<i className="material-icons" aria-hidden="true">
-									close
-								</i>
+								<i className="swepay-icon-close" aria-hidden="true"></i>
 							</button>
 						</header>
 						<div className="dialog-body">
@@ -91,7 +89,7 @@ describe("scripts: dialog", () => {
 				<>
 					<Dialog />
 					<Dialog />
-				</>
+				</>,
 			);
 
 			const renderedDialog = container.querySelectorAll(".dialog");
@@ -238,7 +236,7 @@ describe("scripts: dialog", () => {
 			dialog.open("qwerty");
 
 			expect(console.warn).toHaveBeenCalledWith(
-				'dialog.open: No dialog with id "qwerty" found.'
+				'dialog.open: No dialog with id "qwerty" found.',
 			);
 
 			expect(document.body.classList).not.toContain("dialog-open");
@@ -265,7 +263,7 @@ describe("scripts: dialog", () => {
 			dialog.close("qwerty");
 
 			expect(console.warn).toHaveBeenCalledWith(
-				'dialog.close: No dialog with id "qwerty" found.'
+				'dialog.close: No dialog with id "qwerty" found.',
 			);
 		});
 	});

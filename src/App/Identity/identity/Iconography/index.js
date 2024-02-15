@@ -7,9 +7,54 @@ import CodeTags from "@components/CodeTags";
 
 const brandTitle = process.env.brandTitle;
 
+const AtlasIcons = () => (
+	<section>
+		<h2 id="atlas-icons">Atlas Icons</h2>
+		<p className="mb-0">
+			For a full overview of the available icons, please, visit the
+			https://atlasicons.vectopus.com .{" "}
+		</p>
+
+		<a
+			href="https://atlasicons.vectopus.com"
+			className="icon-link"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<i
+				className="at-arrow-up-from-square small align-self-baseline"
+				aria-hidden="true"
+			></i>
+			<span className="ml-2">Atlas Icons Overview</span>
+		</a>
+
+		<h3>Example of how to implement icons</h3>
+		<p>
+			To use an icon, provide the following markup:{" "}
+			<CodeTags
+				type="primary"
+				code={'<i class="at-{icon_name}" aria-hidden="true"></i>'}
+			/>
+		</p>
+		<div className="d-flex justify-content-between p-4">
+			{tableData.atlasIcons.map((icon) => (
+				<IconPreview key={icon} preview type="at" name={icon} />
+			))}
+		</div>
+		<ComponentPreview language="html" codeFigure>
+			{tableData.atlasIcons.map((icon) => (
+				<React.Fragment key={icon}>
+					<i className={`at-${icon}`} aria-hidden="true"></i>
+					{"\n"}
+				</React.Fragment>
+			))}
+		</ComponentPreview>
+	</section>
+);
+
 const MaterialIcons = () => (
 	<section>
-		<h2 id="material-rounded-icons">Material Outlined Icons</h2>
+		<h2 id="material-rounded-icons">Material Outlined Icons (Deprecated)</h2>
 		<p className="mb-0">
 			We primarily use the version called Outlined in the Material icons to
 			avoid a to heavy look. For a full overview of the available icons, please,
@@ -22,9 +67,10 @@ const MaterialIcons = () => (
 			target="_blank"
 			rel="noopener noreferrer"
 		>
-			<i className="material-icons" aria-hidden="true">
-				open_in_new
-			</i>
+			<i
+				className="at-arrow-up-from-square small align-self-baseline"
+				aria-hidden="true"
+			></i>
 			<span className="ml-2">Material Icons Overview</span>
 		</a>
 
@@ -170,6 +216,98 @@ const PaymentIcons = () => (
 	</section>
 );
 
+const BasicUI = () => (
+	<section>
+		<h2 id="basic-ui">Basic UI</h2>
+		<p>Below is a list of basic UI custom icons.</p>
+
+		<h3>Example of how to implement basic UI custom icons</h3>
+		<p>
+			To use an icon, provide the following markup:{" "}
+			<CodeTags
+				type="primary"
+				code={'<i class="swepay-icon-{icon-name}" aria-hidden="true" /i>'}
+			/>
+		</p>
+
+		<table className="table table-plain">
+			<thead>
+				<tr>
+					<th>Icon</th>
+					<th>Code</th>
+				</tr>
+			</thead>
+			<tbody>
+				{tableData.shapes.map((icon) => (
+					<tr key={icon.code}>
+						<td>
+							<IconPreview type="swepay-icon" name={icon.code} />
+						</td>
+						<td>
+							<CodeTags type="secondary" code={icon.code} />
+						</td>
+					</tr>
+				))}
+			</tbody>
+		</table>
+		<ComponentPreview language="html" codeFigure>
+			{tableData.shapes.map((icon) => (
+				<React.Fragment key={icon.code}>
+					<i className={`swepay-icon-${icon.code}`} aria-hidden="true" />
+					{"\n"}
+				</React.Fragment>
+			))}
+		</ComponentPreview>
+	</section>
+);
+
+const Sizes = () => (
+	<section>
+		<h2 id="sizes">Sizes</h2>
+		<p>
+			Icons comes with 3 sizes. Basic is a 24px box. "small" is 18px, and
+			"large" 32px.{" "}
+		</p>
+		<div className="d-flex justify-content-between align-items-end p-4">
+			{tableData.commonIconSizes.map((size, i) => (
+				<React.Fragment key={size.code}>
+					<IconPreview
+						previewSize
+						type="swepay-icon"
+						name={"chevron-right"}
+						size={size}
+					/>
+					{"\n"}
+				</React.Fragment>
+			))}
+		</div>
+		<div className="d-flex justify-content-between align-items-end p-4">
+			{tableData.commonIconSizes.map((size, i) => (
+				<React.Fragment key={size.code}>
+					<IconPreview
+						previewSize
+						type="swepay-icon"
+						name={"info-circle-filled"}
+						size={size}
+					/>
+					{"\n"}
+				</React.Fragment>
+			))}
+		</div>
+		<ComponentPreview language="html" codeFigure>
+			{tableData.commonIconSizes.map((size, i) => (
+				<React.Fragment key={size.code}>
+					<i
+						className={`swepay-icon-info-circle-filled ${size.code}`}
+						aria-hidden="true"
+					/>
+					{"\n"}
+				</React.Fragment>
+			))}
+		</ComponentPreview>
+	</section>
+);
+
 const Flags = () => (
 	<section>
 		<h2 id="flags">Flags</h2>
@@ -280,14 +418,18 @@ const Flags = () => (
 const Iconography = () => (
 	<DocContainer>
 		<p className="lead">
-			At {brandTitle} we use Material icons from Material Design, but we also
-			include icons for well-known payment providers, and flags for most nations
-			in the world. All icons are integrated and are available in HTML and CSS.
+			At {brandTitle} we use Atlas icons, but we also include custom icons when
+			they are missing, plus for well-known payment providers, and flags for
+			most nations in the world. All icons are integrated and are available in
+			HTML and CSS.
 		</p>
-		<MaterialIcons />
+		<AtlasIcons />
+		<BasicUI />
+		<Sizes />
 		<CardIcons />
 		<PaymentIcons />
 		<Flags />
+		<MaterialIcons />
 	</DocContainer>
 );
 

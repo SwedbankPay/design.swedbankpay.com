@@ -21,7 +21,7 @@ const Sheet = ({ id, requireAction, title, footer, children }) => (
 					aria-label="Close sheet"
 				>
 					{"\n\t\t\t"}
-					<i className="material-icons">close</i>
+					<i className="swepay-icon-close" aria-hidden="true"></i>
 					{"\n\t\t"}
 				</button>
 			</div>

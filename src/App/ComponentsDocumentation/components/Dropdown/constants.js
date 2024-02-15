@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import DropdownComponent from "@components/Dropdown";
 import ButtonComponent from "@components/Button";
-import { Icon } from "@docutils";
 import CheckboxComponent from "@components/FormComponents/Checkbox";
 import Radio from "@components/FormComponents/Radio";
 import InputGroup from "@components/InputGroup";
@@ -15,7 +14,7 @@ const tabsContent = {
 				className="dropdown-option"
 				key="item-overview-action-1"
 			>
-				<Icon type="bookmark" />
+				<i className="at-pencil small" aria-hidden="true" />
 				Edit
 			</button>
 			{"\n"}
@@ -24,7 +23,7 @@ const tabsContent = {
 				className="dropdown-option"
 				key="item-overview-action-2"
 			>
-				<Icon type="delete_outline" />
+				<i className="at-trash small" aria-hidden="true" />
 				Delete
 			</button>
 		</>
@@ -508,7 +507,7 @@ export const howToUse = [
 							label="Filter"
 							content={dropdownExamples.howToUseExamples.example1}
 							isIconButton={false}
-							icon="filter_list"
+							icon="at-funnel-sort small"
 							iconAfter={false}
 							largePadding={true}
 							noRotation={true}
@@ -517,7 +516,7 @@ export const howToUse = [
 							type="secondary"
 							label="Edit"
 							className="ml-2"
-							icon="edit"
+							icon="at-pencil small"
 						/>
 					</>
 				),

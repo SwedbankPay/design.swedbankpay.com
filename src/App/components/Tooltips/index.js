@@ -7,14 +7,14 @@ const Tooltip = ({ title, text, className, position, id, icon, isVisible }) => {
 		"tooltip btn btn-secondary",
 		position && `tooltip-${position}`,
 		className && `${className}`,
-		isVisible && "isVisible"
+		isVisible && "isVisible",
 	);
 
 	return (
 		<button aria-describedby={icon ? id : null} className={tooltipClasses}>
 			{"\n"}
 			{title}
-			{icon && <i className="material-icons-outlined m-0">{icon}</i>}
+			{icon && <i className={`${icon} m-0`}></i>}
 			{"\n"}
 			<span role="tooltip" id={id}>
 				{text}

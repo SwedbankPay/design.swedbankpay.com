@@ -24,7 +24,7 @@ code {
 	}
 
 	&.code-tags-secondary {
-		background-color: @brand-bg-1;
+		background-color: var(--bg-primary);
 	}
 
 	&.code-tags-tertiary {
@@ -41,7 +41,7 @@ code {
 	margin-right: 0.5rem;
 
 	&.tag-secondary {
-		background-color: @brand-bg-1;
+		background-color: var(--bg-primary);
 	}
 
 	&.tag-tertiary {
@@ -52,15 +52,38 @@ code {
 		padding-right: 0;
 	}
 
-	button {
+	button.close-button {
 		background-color: transparent;
 		border: none;
-		display: flex;
+		display: grid;
 		cursor: pointer;
 		width: 1.5rem;
 		padding: 0;
 		margin-left: 0.125rem;
 
+		// conditional check to ensure no duplicate close cross if not done migration from close icon element to no icon element needed
+		// maybe can remove it in next major release or better next real rewrite with breaking changes
+		&:not(:has(i)) {
+			&:before,
+			&:after {
+				content: "";
+				width: 12px;
+				height: 1.5px;
+				background-color: var(--black);
+				place-self: center;
+				position: absolute;
+			}
+
+			&:before {
+				transform: rotate(45deg);
+			}
+
+			&:after {
+				transform: rotate(-45deg);
+			}
+		}
+
+		// TODO: Remove this for next major release 11.0.0 - we'll now be using before & after pseudo elements, no need for close icon anymore. Or keep until introduction of necessary breaking changes, since no big deal anyway
 		i {
 			font-size: 1rem;
 		}

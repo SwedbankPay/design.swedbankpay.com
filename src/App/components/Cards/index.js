@@ -30,9 +30,7 @@ const Cards = ({ type, titleTxt, imgSrc, icon, text, children, wide }) => (
 					{"\n"}
 					<div className="action-cta">
 						<span>Continue</span>
-						<i className="material-icons" aria-hidden="true">
-							arrow_forward
-						</i>
+						<i className="at-arrow-right small" aria-hidden="true"></i>
 					</div>
 					{"\n"}
 				</a>
@@ -57,9 +55,7 @@ const Cards = ({ type, titleTxt, imgSrc, icon, text, children, wide }) => (
 						{children && children}
 					</div>
 					{"\n"}
-					<i className="material-icons" aria-hidden="true">
-						arrow_forward
-					</i>
+					<i className="at-arrow-right small" aria-hidden="true"></i>
 					{"\n"}
 				</a>
 				{"\n"}

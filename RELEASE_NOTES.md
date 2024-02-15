@@ -1,29 +1,27 @@
 # Changelog
 
-## \[10.9.1\] - 24.01.2024
+## \[10.10.1\] - 14.02.2024
 
 ## Component changes
 
 ### Non breaking UI changes
 
-- PayEx - non-breaking UI updates
-  - color variables updates (brand-secondary hover, btn-secondary-hover, disabled, ...)
-  - input fields colors (for states disabled & success)
-  - badge colors
-  - skip-link font
-  - link
-    - hover state colors on bright mode
-    - hover state for inline links
-  - code tags secondary & tertiary background colors
-  -
+- Icons migration step 2 (still non-breaking. But the migrations is decided and is happening, so move when you can. Silent support of Material-icons until next major version release).
+  - Toast icons are modified. Since Toast is created entirely via a script shipped in the package, nothing is requiring from devs consuming the package. But expect a change in the icon used by the Toast component.
 
-### Bugfix
+### NON Breaking UI changes BUT CAN & SHOULD modify code when have time
 
-- Tooltip
-  - fix position tooltip (it got detached from its parent element a few versions back)
+- Tags
+  - the close icon is now a cross set via CSS only, no need to add an `<i>` element anymore
+- Dialog
+  - the close icon is now a cross set via CSS only, no need to add an `<i>` element anymore
+- Progress steps
+  - the "check" icon for steps completed should be converted to `<i class="completed steps-icon"></i>`
 
-## Maintenance
+### UI bugfixes
 
-- npm packages dependencies upgrades
+- Input addon (pre or post input) color when input is disabled
 
 ## Design System website
+
+- Migrate icons used on the DS documentation website from Material-icons to Atlas + Swepay-icon custom icons

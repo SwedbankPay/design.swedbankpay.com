@@ -14,12 +14,12 @@ describe("Component: CodeTags", () => {
 		const { container } = render(<CodeTags type="primary" code="test" />);
 
 		expect(container.querySelector("code")).toHaveClass(
-			"code-tags code-tags-primary"
+			"code-tags code-tags-primary",
 		);
 		expect(container.querySelector("code")).toHaveTextContent("test");
 
 		const componentForSnap = renderer.create(
-			<CodeTags type="primary" code="test" />
+			<CodeTags type="primary" code="test" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -29,12 +29,12 @@ describe("Component: CodeTags", () => {
 		const { container } = render(<CodeTags type="secondary" code="test" />);
 
 		expect(container.querySelector("code")).toHaveClass(
-			"code-tags code-tags-secondary"
+			"code-tags code-tags-secondary",
 		);
 		expect(container.querySelector("code")).toHaveTextContent("test");
 
 		const componentForSnap = renderer.create(
-			<CodeTags type="secondary" code="test" />
+			<CodeTags type="secondary" code="test" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -59,7 +59,7 @@ describe("Component: CodeTags", () => {
 		expect(container.querySelector("span")).toHaveTextContent("test");
 
 		const componentForSnap = renderer.create(
-			<CodeTags type="primary" text="test" />
+			<CodeTags type="primary" text="test" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -67,27 +67,17 @@ describe("Component: CodeTags", () => {
 
 	it("renders with class removable when removable is provided and renders a button", () => {
 		const { container } = render(
-			<CodeTags type="primary" text="test" removable />
+			<CodeTags type="primary" text="test" removable />,
 		);
 
 		expect(container.querySelector("span")).toHaveClass(
-			"tag tag-primary removable"
+			"tag tag-primary removable",
 		);
 		expect(container.querySelector("span")).toHaveTextContent("test");
 		expect(screen.getByRole("button")).toHaveClass("close-button");
-		expect(screen.getByRole("button").querySelector("i")).toHaveClass(
-			"material-icons m-auto"
-		);
-		expect(screen.getByRole("button").querySelector("i")).toHaveAttribute(
-			"aria-label",
-			"remove tag"
-		);
-		expect(screen.getByRole("button").querySelector("i")).toHaveTextContent(
-			"close"
-		);
 
 		const componentForSnap = renderer.create(
-			<CodeTags type="primary" text="test" removable />
+			<CodeTags type="primary" text="test" removable />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();

@@ -37,3 +37,7 @@
 each(@bg-color-list, .(@color, @name) {
     .background-variant(~"bg-@{name}", @color);
 });
+
+.bg-blend-exclusion {
+	background-blend-mode: exclusion;
+}

@@ -35,9 +35,10 @@ const OurBrand = () => (
 				rel="noopener noreferrer"
 				className="icon-link"
 			>
-				<i className="material-icons" aria-hidden="true">
-					open_in_new
-				</i>
+				<i
+					className="at-arrow-up-from-square small align-self-baseline"
+					aria-hidden="true"
+				></i>
 				<span className="ml-2">
 					Swedbank Brand Manager – read more about our brand
 				</span>
@@ -85,7 +86,7 @@ const MenuOverview = () => (
 						<span className="h3">{card.title}</span>
 						<span>{card.text}</span>
 					</div>
-					<i className="material-icons">arrow_forward</i>
+					<i className="at-arrow-right" aria-hidden="true"></i>
 				</Link>
 			))}
 		</div>

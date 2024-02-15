@@ -252,10 +252,9 @@ exports[`Component: Checkbox - renders checkbox group with error 1`] = `
       className="help-block"
     >
       <i
-        className="material-icons"
-      >
-        warning
-      </i>
+        aria-hidden="true"
+        className="swepay-icon-error-triangle-filled small"
+      />
       error
     </div>
     

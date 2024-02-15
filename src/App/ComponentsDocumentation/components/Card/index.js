@@ -132,7 +132,7 @@ const OldCard = () => (
 					>
 						<MediaObject
 							size="sm"
-							icon="verified_user"
+							icon="at-check-shield"
 							heading="75%"
 							text="Complete"
 							textSmall
@@ -201,7 +201,7 @@ const OldCard = () => (
 					>
 						<MediaObject
 							size="sm"
-							icon="account_balance"
+							icon="at-building-column"
 							heading="725 NOK"
 							text="Outstanding balance"
 							textSmall
@@ -219,7 +219,7 @@ const OldCard = () => (
 					>
 						<MediaObject
 							size="sm"
-							icon="verified_user"
+							icon="at-check-shield"
 							heading="75%"
 							text="Complete"
 							textSmall

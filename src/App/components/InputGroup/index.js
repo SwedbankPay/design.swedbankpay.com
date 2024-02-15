@@ -15,32 +15,34 @@ export const Addon = ({
 				{success && (
 					<>
 						<span className="input-group-addon postfix">
-							<i className="material-icons" aria-hidden="true">
-								check_circle
-							</i>
+							{"\n"}
+							<i
+								className="swepay-icon-check-circle-filled small"
+								aria-hidden="true"
+							></i>
+							{"\n"}
 						</span>
 					</>
 				)}
 				{error && (
 					<span className="input-group-addon postfix">
+						{"\n"}
 						<i
-							className="material-icons material-icons-outlined"
+							className="swepay-icon-error-triangle-filled small"
 							aria-hidden="true"
-						>
-							warning
-						</i>
+						></i>
+						{"\n"}
 					</span>
 				)}
 			</>
 		) : (
 			<span className={`input-group-addon ${postfix ? "postfix" : ""}`}>
 				{type === "icon" ? (
-					<i
-						className="material-icons material-icons-outlined"
-						aria-hidden="true"
-					>
-						{value}
-					</i>
+					<>
+						{"\n"}
+						<i className={value} aria-hidden="true"></i>
+						{"\n"}
+					</>
 				) : (
 					value
 				)}
@@ -90,7 +92,7 @@ const InputGroup = ({
 
 	const inputGrpClasses = classnames(
 		"input-group",
-		validationState ? `has-${validationState}` : null
+		validationState ? `has-${validationState}` : null,
 	);
 
 	const selectAttrs = {
@@ -108,7 +110,7 @@ const InputGroup = ({
 		boxSize ? boxSize : null,
 		error ? "has-error" : null,
 		success ? "has-success" : null,
-		className ? className : null
+		className ? className : null,
 	);
 
 	return (

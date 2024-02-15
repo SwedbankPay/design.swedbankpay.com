@@ -190,9 +190,10 @@ const WcagStandard = () => (
 				rel="noopener noreferrer"
 				className="icon-link d-flex"
 			>
-				<i className="material-icons mr-2" aria-hidden="true">
-					open_in_new
-				</i>
+				<i
+					className="at-arrow-up-from-square small align-self-baseline mr-2"
+					aria-hidden="true"
+				></i>
 				<span className="mr-2">What is WCAG?</span>
 			</a>
 
@@ -202,9 +203,10 @@ const WcagStandard = () => (
 				rel="noopener noreferrer"
 				className="icon-link"
 			>
-				<i className="material-icons mr-2" aria-hidden="true">
-					open_in_new
-				</i>
+				<i
+					className="at-arrow-up-from-square small align-self-baseline mr-2"
+					aria-hidden="true"
+				></i>
 				<span className="mr-2">W3C – WCAG 2.1 Recommendations </span>
 			</a>
 		</section>
@@ -269,9 +271,10 @@ const DiveDeeper = () => (
 			rel="noopener noreferrer"
 			className="icon-link d-flex"
 		>
-			<i className="material-icons mr-2" aria-hidden="true">
-				open_in_new
-			</i>
+			<i
+				className="at-arrow-up-from-square small align-self-baseline mr-2"
+				aria-hidden="true"
+			></i>
 			<span className="mr-2">Material.io – Understanding Accessibility </span>
 		</a>
 		<a
@@ -280,9 +283,10 @@ const DiveDeeper = () => (
 			rel="noopener noreferrer"
 			className="icon-link d-flex"
 		>
-			<i className="material-icons mr-2" aria-hidden="true">
-				open_in_new
-			</i>
+			<i
+				className="at-arrow-up-from-square small align-self-baseline mr-2"
+				aria-hidden="true"
+			></i>
 			<span className="mr-2">W3C – WCAG 2.1 Recommendations</span>
 		</a>
 
@@ -295,9 +299,10 @@ const DiveDeeper = () => (
 				rel="noopener noreferrer"
 				className="icon-link d-flex"
 			>
-				<i className="material-icons mr-2" aria-hidden="true">
-					open_in_new
-				</i>
+				<i
+					className="at-arrow-up-from-square small align-self-baseline mr-2"
+					aria-hidden="true"
+				></i>
 				<span className="mr-2">{links.text}</span>
 			</a>
 		))}
@@ -311,9 +316,10 @@ const DiveDeeper = () => (
 				rel="noopener noreferrer"
 				className="icon-link d-flex"
 			>
-				<i className="material-icons mr-2" aria-hidden="true">
-					open_in_new
-				</i>
+				<i
+					className="at-arrow-up-from-square small align-self-baseline mr-2"
+					aria-hidden="true"
+				></i>
 				<span className="mr-2">{links.text}</span>
 			</a>
 		))}

@@ -20,7 +20,7 @@ export const Sidebar = ({
 				aria-label="Close options menu"
 				onClick={() => setSidebarDisplayed(false)}
 			>
-				<i className="material-icons">close</i>
+				<i className="at-arrow-left-line" aria-hidden="true"></i>
 			</button>
 		</div>
 		{activeTab.options && (

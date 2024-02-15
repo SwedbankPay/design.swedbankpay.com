@@ -72,7 +72,13 @@
 			gap: 0 1rem;
 		}
 
-		.material-icons {
+		.material-icons,
+		:is(
+				i[class^="at-"],
+				i[class*=" at-"],
+				i[class^="swepay-icon-"],
+				i[class*=" swepay-icon-"]
+			) {
 			grid-area: icon;
 		}
 
@@ -86,18 +92,16 @@
 			position: relative;
 
 			&:before {
-				.material-icons-styling(@margin: 0 1rem);
-
 				color: var(--brand-secondary-light-2);
-				content: "keyboard_arrow_down";
+				content: "";
 				position: absolute;
 				right: 0;
-				top: 0;
-				bottom: $top;
-				display: flex;
-				align-items: center;
 				font-size: 1.75rem;
-				margin-right: 0;
+				height: 1.75rem;
+				width: 1.75rem;
+				background-color: currentColor;
+				mask: url("../../icons/shapes/chevron_down.svg") center no-repeat;
+				margin: 0 0 0 1rem;
 			}
 		}
 

@@ -8,7 +8,7 @@ exports[`Utilities: ExperimentalComponentAlert renders 1`] = `
 
   <i
     aria-hidden="true"
-    className="material-icons alert-icon"
+    className="swepay-icon-error-triangle-filled"
   />
   
 

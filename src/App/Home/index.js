@@ -44,7 +44,7 @@ const Home = () => {
 						.filter((route) =>
 							isSwedbankPay
 								? !route.title.toLowerCase().includes("patterns")
-								: !route.title.toLowerCase().includes("playbook")
+								: !route.title.toLowerCase().includes("playbook"),
 						)
 						.map((route) => (
 							<React.Fragment key={route.title}>
@@ -65,36 +65,31 @@ const Home = () => {
 										{route.wideCard ? (
 											<div className="cards-content flex-row align-items-center m-0 w-100">
 												<i
-													className="material-icons material-icons-outlined mr-3 v-flip"
+													className={`${route.icon.name} small mr-3`}
 													aria-hidden="true"
-												>
-													{route.icon.name}
-												</i>
+												></i>
 												<span className="h4 mb-0">{route.entryCardText}</span>
 												<i
-													className="material-icons material-icons-outlined ml-auto"
+													className="at-arrow-right small ml-auto"
 													aria-hidden="true"
-												>
-													arrow_forward
-												</i>
+												></i>
 											</div>
 										) : (
 											<div>
 												<div className="cards-icon">
 													<i
-														className="material-icons-outlined"
+														className={`${route.icon.name} small`}
 														aria-hidden="true"
-													>
-														{route.icon.name}
-													</i>
+													></i>
 												</div>
 												<div className="cards-content">
 													<span className="h4">{route.title}</span>
 													<span>{route.entryCardText}</span>
 												</div>
-												<i className="material-icons" aria-hidden="true">
-													arrow_forward
-												</i>
+												<i
+													className="at-arrow-right small"
+													aria-hidden="true"
+												></i>
 											</div>
 										)}
 									</Link>
@@ -104,17 +99,13 @@ const Home = () => {
 					<div className="col-12 col-sm-6 col-lg-3 d-flex">
 						<Link to={"/utilities"} className="cards cards-primary">
 							<div className="cards-icon">
-								<i className="material-icons-outlined" aria-hidden="true">
-									edit
-								</i>
+								<i className="at-build-wall small" aria-hidden="true"></i>
 							</div>
 							<div className="cards-content">
 								<span className="h4">Utilities</span>
 								<span>Utility cheat sheet</span>
 							</div>
-							<i className="material-icons" aria-hidden="true">
-								arrow_forward
-							</i>
+							<i className="at-arrow-right small" aria-hidden="true"></i>
 						</Link>
 					</div>
 				</div>
@@ -125,9 +116,7 @@ const Home = () => {
 					onClick={() => window.scrollTo(0, document.body.scrollHeight)}
 				>
 					<span>Click here to see changelog</span>
-					<i className="material-icons" aria-hidden="true">
-						expand_more
-					</i>
+					<i className="swepay-icon-chevron-down small" aria-hidden="true"></i>
 				</a>
 			</div>
 			<img
@@ -148,7 +137,7 @@ const Home = () => {
 					</span>
 					<Alert
 						type="informative"
-						icon="info"
+						icon="swepay-icon-info-circle-filled"
 						text={
 							<p>
 								<b>Versioning:</b>
@@ -179,9 +168,10 @@ const Home = () => {
 						rel="noopener noreferrer"
 						className="icon-link mt-4 px-0"
 					>
-						<i className="material-icons mr-2" aria-hidden="true">
-							open_in_new
-						</i>
+						<i
+							className="at-arrow-up-from-square small align-self-baseline mr-2"
+							aria-hidden="true"
+						></i>
 						<span>Github - Detailed changelog</span>
 					</a>
 				</div>

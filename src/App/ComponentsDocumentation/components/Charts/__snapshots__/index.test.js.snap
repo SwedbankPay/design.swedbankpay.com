@@ -2507,10 +2507,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        error
-      </i>
+        className="swepay-icon-error-triangle-filled"
+      />
       <p>
         <b>
           Deprecated:
@@ -2614,10 +2612,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -2763,10 +2760,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -2961,10 +2957,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -3104,10 +3099,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -3158,10 +3152,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -3318,10 +3311,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="swepay-icon-info-circle-filled"
+      />
       <p>
         <b>
           Accessibility considerations:
@@ -3364,10 +3355,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -3418,10 +3408,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -3644,10 +3633,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="swepay-icon-info-circle-filled"
+      />
       <p>
         <b>
           Accessibility considerations:
@@ -3690,10 +3677,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -3744,10 +3730,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -3874,10 +3859,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="swepay-icon-info-circle-filled"
+      />
       <p>
         <b>
           Accessibility considerations:
@@ -3943,10 +3926,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -3997,10 +3979,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -4175,10 +4156,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="swepay-icon-info-circle-filled"
+      />
       <p>
         <b>
           Accessibility considerations:
@@ -4224,10 +4203,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -4278,10 +4256,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -4504,10 +4481,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="swepay-icon-info-circle-filled"
+      />
       <p>
         <b>
           Accessibility considerations:
@@ -4555,10 +4530,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -4609,10 +4583,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -4859,10 +4832,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="swepay-icon-info-circle-filled"
+      />
       <p>
         <b>
           Accessibility considerations:
@@ -4928,10 +4899,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -4982,10 +4952,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -5100,10 +5069,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="swepay-icon-info-circle-filled"
+      />
       <p>
         <b>
           Accessibility considerations:
@@ -5157,10 +5124,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -5211,10 +5177,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -5329,10 +5294,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="swepay-icon-info-circle-filled"
+      />
       <p>
         <b>
           Accessibility considerations:
@@ -5392,10 +5355,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -5446,10 +5408,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -5654,10 +5615,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="swepay-icon-info-circle-filled"
+      />
       <p>
         <b>
           Accessibility considerations:
@@ -5711,10 +5670,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -5765,10 +5723,9 @@ exports[`Dashboard: Charts renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -5913,10 +5870,8 @@ exports[`Dashboard: Charts renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="swepay-icon-info-circle-filled"
+      />
       <p>
         <b>
           Accessibility considerations:

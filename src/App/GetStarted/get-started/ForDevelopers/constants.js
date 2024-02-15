@@ -2,7 +2,7 @@ import identityRoute from "@src/App/routes/identity";
 import componentRoute from "@src/App/routes/components";
 
 const iconography = identityRoute[0].routes.find(
-	(component) => component.title === "Iconography"
+	(component) => component.title === "Iconography",
 );
 
 export const browsers = [
@@ -63,12 +63,12 @@ export const gridAndBreakpoints = [
 export const discoverMore = [
 	{
 		title: componentRoute[0].title,
-		url: componentRoute[0].path,
+		url: componentRoute[0].routes[0].rootPath,
 		text: "See all available components",
 	},
 	{
 		title: iconography.title,
-		url: iconography.path,
+		url: iconography.rootPath,
 		text: "Our icon library and how to use it",
 	},
 ];

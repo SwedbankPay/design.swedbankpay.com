@@ -5,7 +5,7 @@ module.exports = [
 	{
 		title: "Identity",
 		icon: {
-			name: "palette",
+			name: "at-color",
 		},
 		path: "identity",
 		entryCardText: "Learn about our fundamental principles",
@@ -46,6 +46,7 @@ module.exports = [
 				path: "iconography",
 				rootPath: "/identity/iconography",
 				componentPath: "identity/Iconography",
+				statusBadges: ["updated"],
 				text: "Guidelines and icon library",
 			},
 			{

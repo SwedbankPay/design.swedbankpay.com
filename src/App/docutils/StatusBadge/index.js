@@ -4,26 +4,16 @@ import PropTypes from "prop-types";
 const statusBadgeContent = {
 	new: {
 		icon: (
-			<i className="material-icons" aria-hidden="true">
-				child_care
-			</i>
+			<i className="at-hand-holding-seedling small mr-2" aria-hidden="true"></i>
 		),
 		text: "New",
 	},
 	updated: {
-		icon: (
-			<i className="material-icons" aria-hidden="true">
-				mood
-			</i>
-		),
+		icon: <i className="at-click-select small mr-2" aria-hidden="true"></i>,
 		text: "Newly updated",
 	},
 	remove: {
-		icon: (
-			<i className="material-icons" aria-hidden="true">
-				sentiment_very_dissatisfied
-			</i>
-		),
+		icon: <i className="at-axe" aria-hidden="true"></i>,
 		text: "Being removed",
 	},
 	javascript: {
@@ -31,11 +21,7 @@ const statusBadgeContent = {
 		text: "Uses JavaScript",
 	},
 	deprecated: {
-		icon: (
-			<i className="material-icons" aria-hidden="true">
-				delete_forever
-			</i>
-		),
+		icon: <i className="at-trash small mr-2" aria-hidden="true"></i>,
 		text: "Deprecated",
 	},
 };

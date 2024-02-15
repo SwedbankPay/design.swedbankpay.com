@@ -9,7 +9,7 @@ const modify = (result, searchTerm) => {
 			.split("")
 			.map((x) => x.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&"))
 			.join("[.\\s.]*"),
-		"ig"
+		"ig",
 	);
 
 	return result.replace(re, "<b>$&</b>");
@@ -28,7 +28,7 @@ const SearchBox = ({ className, mobile }) => {
 				} else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
 					return val;
 				}
-			})
+			}),
 		);
 
 		return (
@@ -55,7 +55,7 @@ const SearchBox = ({ className, mobile }) => {
 								</span>
 							</li>
 						</Link>
-					))
+					)),
 				)}
 			</ul>
 		);
@@ -164,7 +164,7 @@ const SearchBox = ({ className, mobile }) => {
 								onClick={() => clearSearchTerm()}
 								className="btn btn-icon btn-sm"
 							>
-								<i className="material-icons">close</i>
+								<i className="swepay-icon-close"></i>
 							</button>
 						) : (
 							<button
@@ -172,7 +172,7 @@ const SearchBox = ({ className, mobile }) => {
 								className="btn btn-icon btn-sm"
 								type="button"
 							>
-								<i className="material-icons">search</i>
+								<i className="at-magnifying-glass small" aria-hidden="true"></i>
 							</button>
 						)}
 					</div>
@@ -207,7 +207,7 @@ const SearchBox = ({ className, mobile }) => {
 								<kbd>K</kbd>
 							</button>
 							<span className="input-group-addon postfix">
-								<i className="material-icons-outlined">search</i>
+								<i className="at-magnifying-glass small" aria-hidden="true"></i>
 							</span>
 						</div>
 					</div>

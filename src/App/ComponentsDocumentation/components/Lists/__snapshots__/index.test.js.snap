@@ -2145,10 +2145,9 @@ exports[`Documentation: Lists renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -2265,10 +2264,9 @@ exports[`Documentation: Lists renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -2410,10 +2408,9 @@ exports[`Documentation: Lists renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -2519,10 +2516,9 @@ exports[`Documentation: Lists renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -2646,10 +2642,9 @@ exports[`Documentation: Lists renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -2753,10 +2748,8 @@ exports[`Documentation: Lists renders 1`] = `
 
           <i
             aria-hidden="true"
-            className="material-icons text-success"
-          >
-            check
-          </i>
+            className="swepay-icon-check-circle-filled small align-self-center"
+          />
           Shovels and tapestry newsletter
           
 
@@ -2766,10 +2759,8 @@ exports[`Documentation: Lists renders 1`] = `
 
           <i
             aria-hidden="true"
-            className="material-icons text-warning"
-          >
-            remove
-          </i>
+            className="swepay-icon-warning-triangle-filled small align-self-center"
+          />
           Spoon collectors weekly newsletter
           
 
@@ -2779,10 +2770,8 @@ exports[`Documentation: Lists renders 1`] = `
 
           <i
             aria-hidden="true"
-            className="material-icons text-danger"
-          >
-            clear
-          </i>
+            className="swepay-icon-error-circle-filled small align-self-center"
+          />
           Energetic squirrels newsletter
           
 
@@ -2803,10 +2792,9 @@ exports[`Documentation: Lists renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -2869,7 +2857,7 @@ exports[`Documentation: Lists renders 1`] = `
                       &lt;li&gt;
                   
 
-                          &lt;i class="material-icons text-success" aria-hidden="true"&gt;check&lt;/i&gt;Shovels and tapestry newsletter
+                          &lt;i class="swepay-icon-check-circle-filled small align-self-center" aria-hidden="true"&gt;&lt;/i&gt;Shovels and tapestry newsletter
                   
 
                       &lt;/li&gt;
@@ -2878,7 +2866,7 @@ exports[`Documentation: Lists renders 1`] = `
                       &lt;li&gt;
                   
 
-                          &lt;i class="material-icons text-warning" aria-hidden="true"&gt;remove&lt;/i&gt;Spoon collectors weekly newsletter
+                          &lt;i class="swepay-icon-warning-triangle-filled small align-self-center" aria-hidden="true"&gt;&lt;/i&gt;Spoon collectors weekly newsletter
                   
 
                       &lt;/li&gt;
@@ -2887,7 +2875,7 @@ exports[`Documentation: Lists renders 1`] = `
                       &lt;li&gt;
                   
 
-                          &lt;i class="material-icons text-danger" aria-hidden="true"&gt;clear&lt;/i&gt;Energetic squirrels newsletter
+                          &lt;i class="swepay-icon-error-circle-filled small align-self-center" aria-hidden="true"&gt;&lt;/i&gt;Energetic squirrels newsletter
                   
 
                       &lt;/li&gt;
@@ -2989,10 +2977,9 @@ exports[`Documentation: Lists renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -3246,10 +3233,9 @@ exports[`Documentation: Lists renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -3524,10 +3510,9 @@ exports[`Documentation: Lists renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -3787,10 +3772,9 @@ exports[`Documentation: Lists renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -3945,10 +3929,9 @@ exports[`Documentation: Lists renders 1`] = `
               
 
               <i
-                className="material-icons"
-              >
-                more_vert
-              </i>
+                aria-hidden={true}
+                className="at-dots-vertical small"
+              />
               
 
             </button>
@@ -3966,10 +3949,8 @@ exports[`Documentation: Lists renders 1`] = `
               >
                 <i
                   aria-hidden="true"
-                  className="material-icons"
-                >
-                  bookmark
-                </i>
+                  className="at-bookmark-star small"
+                />
                 Add bookmark
               </a>
               
@@ -3980,10 +3961,8 @@ exports[`Documentation: Lists renders 1`] = `
               >
                 <i
                   aria-hidden="true"
-                  className="material-icons"
-                >
-                  business_center
-                </i>
+                  className="at-business-suitcase small"
+                />
                 Add client
               </a>
               
@@ -3994,10 +3973,8 @@ exports[`Documentation: Lists renders 1`] = `
               >
                 <i
                   aria-hidden="true"
-                  className="material-icons"
-                >
-                  add_circle
-                </i>
+                  className="at-plus-circle small"
+                />
                 Add document
               </a>
               
@@ -4008,10 +3985,8 @@ exports[`Documentation: Lists renders 1`] = `
               >
                 <i
                   aria-hidden="true"
-                  className="material-icons"
-                >
-                  person_add
-                </i>
+                  className="at-user-plus small"
+                />
                 Add user
               </a>
               
@@ -4058,10 +4033,8 @@ exports[`Documentation: Lists renders 1`] = `
 
           <i
             aria-hidden="true"
-            className="material-icons"
-          >
-            star
-          </i>
+            className="at-bookmark-star"
+          />
           
 
         </li>
@@ -4085,10 +4058,9 @@ exports[`Documentation: Lists renders 1`] = `
             type="button"
           >
             <i
-              className="material-icons"
-            >
-              delete
-            </i>
+              aria-hidden="true"
+              className="at-trash"
+            />
           </button>
           
 
@@ -4109,10 +4081,9 @@ exports[`Documentation: Lists renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -4241,7 +4212,7 @@ exports[`Documentation: Lists renders 1`] = `
                               &lt;button id="actionListToggle" aria-label="Action list button" type="button" class="action-toggle" aria-haspopup="true"&gt;
                   
 
-                                  &lt;i class="material-icons"&gt;more_vert&lt;/i&gt;
+                                  &lt;i class="at-dots-vertical small" aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                               &lt;/button&gt;
@@ -4250,16 +4221,16 @@ exports[`Documentation: Lists renders 1`] = `
                               &lt;div class="action-menu" aria-labelledby="actionListToggle"&gt;
                   
 
-                                  &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;bookmark&lt;/i&gt;Add bookmark&lt;/a&gt;
+                                  &lt;a href="#"&gt;&lt;i class="at-bookmark-star small" aria-hidden="true"&gt;&lt;/i&gt;Add bookmark&lt;/a&gt;
                   
 
-                                  &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;business_center&lt;/i&gt;Add client&lt;/a&gt;
+                                  &lt;a href="#"&gt;&lt;i class="at-business-suitcase small" aria-hidden="true"&gt;&lt;/i&gt;Add client&lt;/a&gt;
                   
 
-                                  &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;add_circle&lt;/i&gt;Add document&lt;/a&gt;
+                                  &lt;a href="#"&gt;&lt;i class="at-plus-circle small" aria-hidden="true"&gt;&lt;/i&gt;Add document&lt;/a&gt;
                   
 
-                                  &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;person_add&lt;/i&gt;Add user&lt;/a&gt;
+                                  &lt;a href="#"&gt;&lt;i class="at-user-plus small" aria-hidden="true"&gt;&lt;/i&gt;Add user&lt;/a&gt;
                   
 
                               &lt;/div&gt;
@@ -4298,7 +4269,7 @@ exports[`Documentation: Lists renders 1`] = `
                           &lt;span&gt;4925*********004&lt;/span&gt;
                   
 
-                          &lt;i class="material-icons" aria-hidden="true"&gt;star&lt;/i&gt;
+                          &lt;i class="at-bookmark-star" aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                       &lt;/li&gt;
@@ -4313,7 +4284,7 @@ exports[`Documentation: Lists renders 1`] = `
                           &lt;span class="status status-success"&gt;Active&lt;/span&gt;
                   
 
-                          &lt;button type="button" class="btn btn-danger btn-xs"&gt;&lt;i class="material-icons"&gt;delete&lt;/i&gt;&lt;/button&gt;
+                          &lt;button type="button" class="btn btn-danger btn-xs"&gt;&lt;i class="at-trash" aria-hidden="true"&gt;&lt;/i&gt;&lt;/button&gt;
                   
 
                       &lt;/li&gt;

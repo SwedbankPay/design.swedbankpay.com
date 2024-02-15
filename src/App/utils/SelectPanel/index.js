@@ -42,9 +42,7 @@ const MobileNavGroup = ({ route, index, sidebarId }) => {
 	return (
 		<li className="nav-group">
 			<button className="nav-group-heading" onClick={() => toggleActive()}>
-				<i className="material-icons" aria-hidden="true">
-					arrow_right
-				</i>
+				<i className="swepay-icon-chevron-right" aria-hidden="true"></i>
 				{title}
 			</button>
 			<ul className="nav-ul">
@@ -141,9 +139,7 @@ const SelectPanel = ({ id, routes, topbarId, topbarSidebar }) => {
 								}`}
 							>
 								<NavLink to={"/"}>
-									<i className="material-icons-outlined" aria-hidden="true">
-										home
-									</i>
+									<i className="at-home" aria-hidden="true"></i>
 									Welcome
 								</NavLink>
 							</li>
@@ -156,13 +152,11 @@ const SelectPanel = ({ id, routes, topbarId, topbarSidebar }) => {
 								>
 									<NavLink to={route.path}>
 										<i
-											className={`material-icons-outlined${
+											className={`${route.icon.name} ${
 												route.icon.rotate ? " rotated" : ""
 											}`}
 											aria-hidden="true"
-										>
-											{route.icon.name}
-										</i>
+										></i>
 										{route.title}
 									</NavLink>
 
@@ -196,9 +190,7 @@ const SelectPanel = ({ id, routes, topbarId, topbarSidebar }) => {
 							))}
 							<li className={"main-nav-li"}>
 								<NavLink to={"/utilities"}>
-									<i className="material-icons-outlined" aria-hidden="true">
-										build
-									</i>
+									<i className="at-build-wall" aria-hidden="true"></i>
 									Utilities
 								</NavLink>
 							</li>

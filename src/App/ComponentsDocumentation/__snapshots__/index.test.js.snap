@@ -8,7 +8,7 @@ exports[`ComponentsDocumentation: index renders 1`] = `
     className="dg-current-version text-uppercase"
   >
     Design Guide – v. 
-    10.9.1
+    10.10.1
   </span>
 </div>
 `;

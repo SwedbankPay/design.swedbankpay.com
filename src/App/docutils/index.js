@@ -3,7 +3,6 @@ import DocContainer from "./DocContainer";
 import DocHeading from "./DocHeading";
 import DeprecatedComponentAlert from "./DeprecatedComponentAlert";
 import ExperimentalComponentAlert from "./ExperimentalComponentAlert";
-import Icon from "./Icon";
 import JavascriptDocs from "./JavascriptDocs";
 import JavascriptDocElement from "./JavascriptDocElement";
 import { EditableComponentPreview } from "./ComponentPreview/EditableComponentPreview";
@@ -15,7 +14,6 @@ export {
 	DocHeading,
 	DeprecatedComponentAlert,
 	ExperimentalComponentAlert,
-	Icon,
 	JavascriptDocs,
 	JavascriptDocElement,
 	EditableComponentPreview,

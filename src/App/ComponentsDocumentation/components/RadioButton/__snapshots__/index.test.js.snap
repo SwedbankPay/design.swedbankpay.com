@@ -191,10 +191,9 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -358,10 +357,9 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
               className="help-block"
             >
               <i
-                className="material-icons"
-              >
-                warning
-              </i>
+                aria-hidden="true"
+                className="swepay-icon-error-triangle-filled small"
+              />
               Error message
             </div>
             
@@ -384,10 +382,9 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -510,7 +507,7 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
                           &lt;/div&gt;
                   
 
-                          &lt;div class="help-block"&gt;&lt;i class="material-icons"&gt;warning&lt;/i&gt;Error message&lt;/div&gt;
+                          &lt;div class="help-block"&gt;&lt;i class="swepay-icon-error-triangle-filled small" aria-hidden="true"&gt;&lt;/i&gt;Error message&lt;/div&gt;
                   
 
                       &lt;/fieldset&gt;

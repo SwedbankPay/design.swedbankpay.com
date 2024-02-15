@@ -79,7 +79,7 @@ const ContentGuidelines = forwardRef((props, ref) => (
 				<div className="form-group">
 					<InputGroup
 						label="Username"
-						prefixValue="account_circle"
+						prefixValue="at-account small"
 						addOnType="icon"
 					/>
 					<InputGroup

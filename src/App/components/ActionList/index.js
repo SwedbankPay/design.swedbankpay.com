@@ -1,8 +1,6 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 
-import { Icon } from "@docutils";
-
 const ActionListToggle = () => (
 	<>
 		<button
@@ -13,7 +11,7 @@ const ActionListToggle = () => (
 			aria-haspopup="true"
 		>
 			{"\n"}
-			<i className="material-icons">more_vert</i>
+			<i className="at-dots-vertical small" aria-hidden></i>
 			{"\n"}
 		</button>
 		{"\n"}
@@ -38,7 +36,9 @@ const ActionList = ({ id, classNames, toggleBtn, items }) => (
 					? items.map(({ name, icon }, i) => (
 							<Fragment key={i}>
 								<a href="#" onClick={(e) => e.preventDefault()}>
-									{icon ? <Icon type={icon} /> : null}
+									{icon ? (
+										<i className={`${icon} small`} aria-hidden="true" />
+									) : null}
 									{name}
 								</a>
 								{"\n"}
@@ -57,7 +57,7 @@ ActionList.propTypes = {
 		PropTypes.shape({
 			name: PropTypes.string.isRequired,
 			icon: PropTypes.string,
-		})
+		}),
 	).isRequired,
 };
 

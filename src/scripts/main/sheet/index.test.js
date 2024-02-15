@@ -29,9 +29,7 @@ describe("scripts: sheet", () => {
 			<div className="sheet sheet-open" id="demo-sheet">
 				<section>
 					<a href="#" className="sheet-close" id="sheetClose">
-						<i className="material-icons" aria-hidden="true">
-							close
-						</i>
+						<i className="swepay-icon-close" aria-hidden="true"></i>
 					</a>
 				</section>
 			</div>
@@ -78,7 +76,7 @@ describe("scripts: sheet", () => {
 				<>
 					<Sheet />
 					<Sheet />
-				</>
+				</>,
 			);
 
 			const renderedSheets = document.querySelectorAll(".sheet");

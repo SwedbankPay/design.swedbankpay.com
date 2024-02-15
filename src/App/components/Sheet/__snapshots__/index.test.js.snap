@@ -28,10 +28,9 @@ exports[`Component: Sheet - does not render with data-require-action if it is se
         
 			
         <i
-          className="material-icons"
-        >
-          close
-        </i>
+          aria-hidden="true"
+          className="swepay-icon-close"
+        />
         
 		
       </button>
@@ -71,10 +70,9 @@ exports[`Component: Sheet - renders 1`] = `
         
 			
         <i
-          className="material-icons"
-        >
-          close
-        </i>
+          aria-hidden="true"
+          className="swepay-icon-close"
+        />
         
 		
       </button>
@@ -114,10 +112,9 @@ exports[`Component: Sheet - renders with a close icon 1`] = `
         
 			
         <i
-          className="material-icons"
-        >
-          close
-        </i>
+          aria-hidden="true"
+          className="swepay-icon-close"
+        />
         
 		
       </button>
@@ -158,10 +155,9 @@ exports[`Component: Sheet - renders with an ID 1`] = `
         
 			
         <i
-          className="material-icons"
-        >
-          close
-        </i>
+          aria-hidden="true"
+          className="swepay-icon-close"
+        />
         
 		
       </button>
@@ -201,10 +197,9 @@ exports[`Component: Sheet - renders with children 1`] = `
         
 			
         <i
-          className="material-icons"
-        >
-          close
-        </i>
+          aria-hidden="true"
+          className="swepay-icon-close"
+        />
         
 		
       </button>
@@ -246,10 +241,9 @@ exports[`Component: Sheet - renders with the data-require-action attribute 1`] =
         
 			
         <i
-          className="material-icons"
-        >
-          close
-        </i>
+          aria-hidden="true"
+          className="swepay-icon-close"
+        />
         
 		
       </button>

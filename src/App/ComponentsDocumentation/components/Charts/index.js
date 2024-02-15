@@ -9,7 +9,7 @@ import Alert from "@components/Alert";
 const AccessibilityAlert = () => (
 	<Alert
 		type="informative"
-		icon="info"
+		icon="swepay-icon-info-circle-filled"
 		className="mt-3"
 		text={
 			<p>
@@ -838,7 +838,7 @@ const Charts = () => (
 	<DocContainer>
 		<Alert
 			type="danger"
-			icon="error"
+			icon="swepay-icon-error-triangle-filled"
 			text={
 				<p>
 					<b>Deprecated:</b> Be aware, this component will not be maintained

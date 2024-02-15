@@ -1,37 +1,41 @@
 @import "../global.less";
 
-.alert-variant(@color, @bg-color) {
-	background-color: @bg-color;
-
-	.alert-icon {
-		color: @color;
-		margin-right: 1rem;
-	}
-}
-
 .alert {
+	--color-icon: var(--brand-info);
+	--color-bg: var(--brand-info-light);
+
 	padding: 1rem;
 	position: relative;
 	margin-top: 0;
 	margin-bottom: 1rem;
 	display: flex;
-	color: @black;
+	color: var(--black);
 	border-radius: 0.25rem;
+	background-color: var(--color-bg);
+
+	& > i[aria-hidden="true"]:first-child {
+		color: var(--color-icon);
+		margin-right: 1rem;
+	}
 
 	&.alert-success {
-		.alert-variant(@brand-success, @brand-success-light);
+		--color-icon: var(--system-success);
+		--color-bg: var(--system-success-light);
 	}
 
 	&.alert-warning {
-		.alert-variant(@brand-warning, @brand-warning-light);
+		--color-icon: var(--system-warning);
+		--color-bg: var(--system-warning-light);
 	}
 
 	&.alert-danger {
-		.alert-variant(@brand-error, @brand-error-light);
+		--color-icon: var(--system-error);
+		--color-bg: var(--system-error-light);
 	}
 
 	&.alert-informative {
-		.alert-variant(@brand-info, @brand-info-light);
+		--color-icon: var(--system-info);
+		--color-bg: var(--system-info-light);
 	}
 
 	> p {
@@ -45,14 +49,14 @@
 		margin-left: 0.5rem;
 
 		&:hover {
-			background-color: @brand-bg-gray;
+			background-color: var(--bg-grey);
 		}
 		.close-button();
 
 		&:focus {
 			border: none;
 			border-radius: 0.125rem;
-			box-shadow: 0 0 0 2px @black;
+			box-shadow: 0 0 0 2px var(--black);
 			outline: 2px solid;
 		}
 	}

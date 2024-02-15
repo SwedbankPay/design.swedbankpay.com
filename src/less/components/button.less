@@ -187,7 +187,13 @@
 	}
 
 	.material-icons,
-	.material-icons-outlined {
+	.material-icons-outlined,
+	:is(
+			i[class^="at-"],
+			i[class*=" at-"],
+			i[class^="swepay-icon-"],
+			i[class*=" swepay-icon-"]
+		) {
 		font-size: 1.25rem;
 		position: relative;
 		display: inline-block;

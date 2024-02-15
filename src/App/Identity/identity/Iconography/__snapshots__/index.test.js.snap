@@ -13,36 +13,34 @@ exports[`Core: Iconography renders 1`] = `
     >
       At 
       TESTBRAND
-       we use Material icons from Material Design, but we also include icons for well-known payment providers, and flags for most nations in the world. All icons are integrated and are available in HTML and CSS.
+       we use Atlas icons, but we also include custom icons when they are missing, plus for well-known payment providers, and flags for most nations in the world. All icons are integrated and are available in HTML and CSS.
     </p>
     <section>
       <h2
-        id="material-rounded-icons"
+        id="atlas-icons"
       >
-        Material Outlined Icons
+        Atlas Icons
       </h2>
       <p
         className="mb-0"
       >
-        We primarily use the version called Outlined in the Material icons to avoid a to heavy look. For a full overview of the available icons, please, visit the Material.io.
+        For a full overview of the available icons, please, visit the https://atlasicons.vectopus.com .
          
       </p>
       <a
         className="icon-link"
-        href="https://fonts.google.com/icons?selected=Material+Icons+Outlined"
+        href="https://atlasicons.vectopus.com"
         rel="noopener noreferrer"
         target="_blank"
       >
         <i
           aria-hidden="true"
-          className="material-icons"
-        >
-          open_in_new
-        </i>
+          className="at-arrow-up-from-square small align-self-baseline"
+        />
         <span
           className="ml-2"
         >
-          Material Icons Overview
+          Atlas Icons Overview
         </span>
       </a>
       <h3>
@@ -54,7 +52,7 @@ exports[`Core: Iconography renders 1`] = `
         <code
           className="code-tags code-tags-primary"
         >
-          &lt;i class="material-icons" aria-hidden="true"&gt;{icon_name}&lt;/i&gt;
+          &lt;i class="at-{icon_name}" aria-hidden="true"&gt;&lt;/i&gt;
         </code>
       </p>
       <div
@@ -65,14 +63,12 @@ exports[`Core: Iconography renders 1`] = `
         >
           <i
             aria-hidden="true"
-            className="material-icons"
-          >
-            insert_invitation
-          </i>
+            className="at at-calendar-dots"
+          />
           <code
             className="code-tags code-tags-secondary mt-2"
           >
-            insert_invitation
+            calendar-dots
           </code>
         </div>
         <div
@@ -80,14 +76,12 @@ exports[`Core: Iconography renders 1`] = `
         >
           <i
             aria-hidden="true"
-            className="material-icons"
-          >
-            cake
-          </i>
+            className="at at-image-gallery"
+          />
           <code
             className="code-tags code-tags-secondary mt-2"
           >
-            cake
+            image-gallery
           </code>
         </div>
         <div
@@ -95,14 +89,12 @@ exports[`Core: Iconography renders 1`] = `
         >
           <i
             aria-hidden="true"
-            className="material-icons"
-          >
-            mood
-          </i>
+            className="at at-home"
+          />
           <code
             className="code-tags code-tags-secondary mt-2"
           >
-            mood
+            home
           </code>
         </div>
         <div
@@ -110,14 +102,12 @@ exports[`Core: Iconography renders 1`] = `
         >
           <i
             aria-hidden="true"
-            className="material-icons"
-          >
-            thumb_up_alt
-          </i>
+            className="at at-shopping-cart"
+          />
           <code
             className="code-tags code-tags-secondary mt-2"
           >
-            thumb_up_alt
+            shopping-cart
           </code>
         </div>
         <div
@@ -125,14 +115,12 @@ exports[`Core: Iconography renders 1`] = `
         >
           <i
             aria-hidden="true"
-            className="material-icons"
-          >
-            whatshot
-          </i>
+            className="at at-trash"
+          />
           <code
             className="code-tags code-tags-secondary mt-2"
           >
-            whatshot
+            trash
           </code>
         </div>
       </div>
@@ -150,10 +138,9 @@ exports[`Core: Iconography renders 1`] = `
               onClick={[Function]}
             >
               <i
-                className="material-icons-outlined"
-              >
-                content_copy
-              </i>
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
               <div
                 id="tooltipCopy"
                 role="tooltip"
@@ -192,19 +179,593 @@ exports[`Core: Iconography renders 1`] = `
                   className="code-view-code"
                 >
                   <pre>
-                    &lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;insert_invitation&lt;/i&gt;
+                    &lt;i class="at-calendar-dots" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
-                    &lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;cake&lt;/i&gt;
+                    &lt;i class="at-image-gallery" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
-                    &lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;mood&lt;/i&gt;
+                    &lt;i class="at-home" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
-                    &lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;thumb_up_alt&lt;/i&gt;
+                    &lt;i class="at-shopping-cart" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
-                    &lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;whatshot&lt;/i&gt;
+                    &lt;i class="at-trash" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                  </pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </figure>
+    </section>
+    <section>
+      <h2
+        id="basic-ui"
+      >
+        Basic UI
+      </h2>
+      <p>
+        Below is a list of basic UI custom icons.
+      </p>
+      <h3>
+        Example of how to implement basic UI custom icons
+      </h3>
+      <p>
+        To use an icon, provide the following markup:
+         
+        <code
+          className="code-tags code-tags-primary"
+        >
+          &lt;i class="swepay-icon-{icon-name}" aria-hidden="true" /i&gt;
+        </code>
+      </p>
+      <table
+        className="table table-plain"
+      >
+        <thead>
+          <tr>
+            <th>
+              Icon
+            </th>
+            <th>
+              Code
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-chevron-down"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                chevron-down
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-chevron-up"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                chevron-up
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-chevron-left"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                chevron-left
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-chevron-right"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                chevron-right
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-close"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                close
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-minus-substract"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                minus-substract
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-plus-add"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                plus-add
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-menu-hamburger"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                menu-hamburger
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-export-arrow-up-right"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                export-arrow-up-right
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-check-circle-filled-customizable"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                check-circle-filled-customizable
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-check-circle-filled"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                check-circle-filled
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-error-circle-filled"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                error-circle-filled
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-error-triangle-filled"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                error-triangle-filled
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-warning-triangle-filled"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                warning-triangle-filled
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="swepay-icon-info-circle-filled"
+              />
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                info-circle-filled
+              </code>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <figure>
+        <div
+          className="code-view"
+        >
+          <header
+            className="code-view-header"
+          >
+            HTML
+            <button
+              aria-describedby="tooltipCopy"
+              className="tooltip"
+              onClick={[Function]}
+            >
+              <i
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
+              <div
+                id="tooltipCopy"
+                role="tooltip"
+              >
+                Copy to clipboard
+              </div>
+            </button>
+          </header>
+          <table
+            className="code-view-table"
+          >
+            <tbody>
+              <tr>
+                <td
+                  className="code-view-numbers"
+                >
+                  <pre>
+                    1
+                    
+
+                    2
+                    
+
+                    3
+                    
+
+                    4
+                    
+
+                    5
+                    
+
+                    6
+                    
+
+                    7
+                    
+
+                    8
+                    
+
+                    9
+                    
+
+                    10
+                    
+
+                    11
+                    
+
+                    12
+                    
+
+                    13
+                    
+
+                    14
+                    
+
+                    15
+                    
+
+                  </pre>
+                </td>
+                <td
+                  className="code-view-code"
+                >
+                  <pre>
+                    &lt;i class="swepay-icon-chevron-down" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-chevron-up" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-chevron-left" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-chevron-right" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-close" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-minus-substract" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-plus-add" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-menu-hamburger" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-export-arrow-up-right" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-check-circle-filled-customizable" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-check-circle-filled" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-error-circle-filled" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-error-triangle-filled" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-warning-triangle-filled" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-info-circle-filled" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                  </pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </figure>
+    </section>
+    <section>
+      <h2
+        id="sizes"
+      >
+        Sizes
+      </h2>
+      <p>
+        Icons comes with 3 sizes. Basic is a 24px box. "small" is 18px, and "large" 32px.
+         
+      </p>
+      <div
+        className="d-flex justify-content-between align-items-end p-4"
+      >
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
+            className="small swepay-icon-chevron-right"
+          />
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            small
+          </code>
+        </div>
+        
+
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
+            className="swepay-icon-chevron-right"
+          />
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            "" (default)
+          </code>
+        </div>
+        
+
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
+            className="large swepay-icon-chevron-right"
+          />
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            large
+          </code>
+        </div>
+        
+
+      </div>
+      <div
+        className="d-flex justify-content-between align-items-end p-4"
+      >
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
+            className="small swepay-icon-info-circle-filled"
+          />
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            small
+          </code>
+        </div>
+        
+
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
+            className="swepay-icon-info-circle-filled"
+          />
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            "" (default)
+          </code>
+        </div>
+        
+
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
+            className="large swepay-icon-info-circle-filled"
+          />
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            large
+          </code>
+        </div>
+        
+
+      </div>
+      <figure>
+        <div
+          className="code-view"
+        >
+          <header
+            className="code-view-header"
+          >
+            HTML
+            <button
+              aria-describedby="tooltipCopy"
+              className="tooltip"
+              onClick={[Function]}
+            >
+              <i
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
+              <div
+                id="tooltipCopy"
+                role="tooltip"
+              >
+                Copy to clipboard
+              </div>
+            </button>
+          </header>
+          <table
+            className="code-view-table"
+          >
+            <tbody>
+              <tr>
+                <td
+                  className="code-view-numbers"
+                >
+                  <pre>
+                    1
+                    
+
+                    2
+                    
+
+                    3
+                    
+
+                  </pre>
+                </td>
+                <td
+                  className="code-view-code"
+                >
+                  <pre>
+                    &lt;i class="swepay-icon-info-circle-filled small" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-info-circle-filled " aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="swepay-icon-info-circle-filled large" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
                   </pre>
@@ -540,10 +1101,9 @@ exports[`Core: Iconography renders 1`] = `
               onClick={[Function]}
             >
               <i
-                className="material-icons-outlined"
-              >
-                content_copy
-              </i>
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
               <div
                 id="tooltipCopy"
                 role="tooltip"
@@ -885,10 +1445,9 @@ exports[`Core: Iconography renders 1`] = `
               onClick={[Function]}
             >
               <i
-                className="material-icons-outlined"
-              >
-                content_copy
-              </i>
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
               <div
                 id="tooltipCopy"
                 role="tooltip"
@@ -1132,10 +1691,9 @@ exports[`Core: Iconography renders 1`] = `
               onClick={[Function]}
             >
               <i
-                className="material-icons-outlined"
-              >
-                content_copy
-              </i>
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
               <div
                 id="tooltipCopy"
                 role="tooltip"
@@ -1296,10 +1854,9 @@ exports[`Core: Iconography renders 1`] = `
               onClick={[Function]}
             >
               <i
-                className="material-icons-outlined"
-              >
-                content_copy
-              </i>
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
               <div
                 id="tooltipCopy"
                 role="tooltip"
@@ -1456,10 +2013,9 @@ exports[`Core: Iconography renders 1`] = `
               onClick={[Function]}
             >
               <i
-                className="material-icons-outlined"
-              >
-                content_copy
-              </i>
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
               <div
                 id="tooltipCopy"
                 role="tooltip"
@@ -1511,6 +2067,203 @@ exports[`Core: Iconography renders 1`] = `
                     
 
                     &lt;i class="flag-icon flag-icon-squared flag-icon-eu flag-icon-huge" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                  </pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </figure>
+    </section>
+    <section>
+      <h2
+        id="material-rounded-icons"
+      >
+        Material Outlined Icons (Deprecated)
+      </h2>
+      <p
+        className="mb-0"
+      >
+        We primarily use the version called Outlined in the Material icons to avoid a to heavy look. For a full overview of the available icons, please, visit the Material.io.
+         
+      </p>
+      <a
+        className="icon-link"
+        href="https://fonts.google.com/icons?selected=Material+Icons+Outlined"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <i
+          aria-hidden="true"
+          className="at-arrow-up-from-square small align-self-baseline"
+        />
+        <span
+          className="ml-2"
+        >
+          Material Icons Overview
+        </span>
+      </a>
+      <h3>
+        Example of how to implement icons
+      </h3>
+      <p>
+        To use an icon, provide the following markup:
+         
+        <code
+          className="code-tags code-tags-primary"
+        >
+          &lt;i class="material-icons" aria-hidden="true"&gt;{icon_name}&lt;/i&gt;
+        </code>
+      </p>
+      <div
+        className="d-flex justify-content-between p-4"
+      >
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            insert_invitation
+          </i>
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            insert_invitation
+          </code>
+        </div>
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            cake
+          </i>
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            cake
+          </code>
+        </div>
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            mood
+          </i>
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            mood
+          </code>
+        </div>
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            thumb_up_alt
+          </i>
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            thumb_up_alt
+          </code>
+        </div>
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
+            className="material-icons"
+          >
+            whatshot
+          </i>
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            whatshot
+          </code>
+        </div>
+      </div>
+      <figure>
+        <div
+          className="code-view"
+        >
+          <header
+            className="code-view-header"
+          >
+            HTML
+            <button
+              aria-describedby="tooltipCopy"
+              className="tooltip"
+              onClick={[Function]}
+            >
+              <i
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
+              <div
+                id="tooltipCopy"
+                role="tooltip"
+              >
+                Copy to clipboard
+              </div>
+            </button>
+          </header>
+          <table
+            className="code-view-table"
+          >
+            <tbody>
+              <tr>
+                <td
+                  className="code-view-numbers"
+                >
+                  <pre>
+                    1
+                    
+
+                    2
+                    
+
+                    3
+                    
+
+                    4
+                    
+
+                    5
+                    
+
+                  </pre>
+                </td>
+                <td
+                  className="code-view-code"
+                >
+                  <pre>
+                    &lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;insert_invitation&lt;/i&gt;
+                    
+
+                    &lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;cake&lt;/i&gt;
+                    
+
+                    &lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;mood&lt;/i&gt;
+                    
+
+                    &lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;thumb_up_alt&lt;/i&gt;
+                    
+
+                    &lt;i class="material-icons material-icons-outlined" aria-hidden="true"&gt;whatshot&lt;/i&gt;
                     
 
                   </pre>

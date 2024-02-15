@@ -24,7 +24,7 @@ describe("Component: MediaObject -", () => {
 		render(<MediaObject heading="render-test" />);
 
 		const componentForSnap = renderer.create(
-			<MediaObject heading="render-test" />
+			<MediaObject heading="render-test" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -32,13 +32,13 @@ describe("Component: MediaObject -", () => {
 
 	it("renders an icon", () => {
 		const { container } = render(
-			<MediaObject heading="render-test" icon="home" />
+			<MediaObject heading="render-test" icon="at-home" />,
 		);
 
 		expect(container.querySelectorAll("i")).toHaveLength(1);
 
 		const componentForSnap = renderer.create(
-			<MediaObject heading="render-test" icon="home" />
+			<MediaObject heading="render-test" icon="at-home" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -49,7 +49,7 @@ describe("Component: MediaObject -", () => {
 			<MediaObject
 				heading="render-test"
 				imgUrl="https://via.placeholder.com/48x48"
-			/>
+			/>,
 		);
 
 		expect(screen.getByRole("img")).toBeInTheDocument();
@@ -58,7 +58,7 @@ describe("Component: MediaObject -", () => {
 			<MediaObject
 				heading="render-test"
 				imgUrl="https://via.placeholder.com/48x48"
-			/>
+			/>,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -70,11 +70,11 @@ describe("Component: MediaObject -", () => {
 				heading="render-test"
 				imgUrl="https://via.placeholder.com/48x48"
 				mediaRight
-			/>
+			/>,
 		);
 
 		expect(screen.getByRole("img").parentElement.parentElement).toHaveClass(
-			"media-right"
+			"media-right",
 		);
 
 		const componentForSnap = renderer.create(
@@ -82,7 +82,7 @@ describe("Component: MediaObject -", () => {
 				heading="render-test"
 				imgUrl="https://via.placeholder.com/48x48"
 				mediaRight
-			/>
+			/>,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -90,14 +90,14 @@ describe("Component: MediaObject -", () => {
 
 	it("renders a <small> text", () => {
 		const { container } = render(
-			<MediaObject heading="render-test" textSmall text="small text" />
+			<MediaObject heading="render-test" textSmall text="small text" />,
 		);
 
 		expect(container.querySelectorAll("small")).toHaveLength(1);
 		expect(container.querySelector("small")).toHaveTextContent("small text");
 
 		const componentForSnap = renderer.create(
-			<MediaObject heading="render-test" textSmall text="small text" />
+			<MediaObject heading="render-test" textSmall text="small text" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -105,7 +105,7 @@ describe("Component: MediaObject -", () => {
 
 	it("renders a muted MediaObject", () => {
 		const { container } = render(
-			<MediaObject heading="render-test" icon="home" muted />
+			<MediaObject heading="render-test" icon="at-home" muted />,
 		);
 
 		const mediaHeader = screen.getByRole("heading");
@@ -115,7 +115,7 @@ describe("Component: MediaObject -", () => {
 		expect(container.querySelector("i")).toHaveClass("text-muted");
 
 		const componentForSnap = renderer.create(
-			<MediaObject heading="render-test" icon="home" muted />
+			<MediaObject heading="render-test" icon="at-home" muted />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -123,14 +123,14 @@ describe("Component: MediaObject -", () => {
 
 	it("renders MediaObject with class media-sm", () => {
 		const { container } = render(
-			<MediaObject heading="render-test" size="sm" />
+			<MediaObject heading="render-test" size="sm" />,
 		);
 
 		expect(screen.getByRole("heading").tagName).toBe("H4");
 		expect(container.querySelector("div")).toHaveClass("media-sm");
 
 		const componentForSnap = renderer.create(
-			<MediaObject heading="render-test" size="sm" />
+			<MediaObject heading="render-test" size="sm" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -138,14 +138,14 @@ describe("Component: MediaObject -", () => {
 
 	it("renders MediaObject with class media-lg", () => {
 		const { container } = render(
-			<MediaObject heading="render-test" size="lg" />
+			<MediaObject heading="render-test" size="lg" />,
 		);
 
 		expect(screen.getByRole("heading").tagName).toBe("H2");
 		expect(container.querySelector("div")).toHaveClass("media-lg");
 
 		const componentForSnap = renderer.create(
-			<MediaObject heading="render-test" size="lg" />
+			<MediaObject heading="render-test" size="lg" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();

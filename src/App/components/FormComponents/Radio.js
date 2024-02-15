@@ -48,7 +48,10 @@ const Radio = ({
 										{"\n"}
 										<label htmlFor={id}>
 											{style === "checkmark" && (
-												<i className="material-icons">check_circle</i>
+												<i
+													className="swepay-icon-check-circle-filled-customizable bg-blend-exclusion small"
+													aria-hidden="true"
+												></i>
 											)}{" "}
 											{label}
 										</label>
@@ -73,7 +76,10 @@ const Radio = ({
 						{errorMessage && (
 							<>
 								<div className="help-block">
-									<i className="material-icons">warning</i>
+									<i
+										className="swepay-icon-error-triangle-filled small"
+										aria-hidden="true"
+									></i>
 									{errorMessage}
 								</div>
 								{"\n"}
@@ -98,7 +104,7 @@ const Radio = ({
 						{label ? (
 							<label htmlFor={id}>
 								{style === "checkmark" && (
-									<i className="material-icons">check_circle</i>
+									<i className="swepay-icon-check-circle-filled-customizable bg-blend-exclusion small"></i>
 								)}{" "}
 								{label}
 							</label>

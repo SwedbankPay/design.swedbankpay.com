@@ -23,10 +23,8 @@ exports[`GetStarted: ForDevelopers Contributing renders 1`] = `
       </span>
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        open_in_new
-      </i>
+        className="at-arrow-up-from-square small align-self-baseline"
+      />
     </a>
      
     or create a feature request here.
@@ -47,10 +45,8 @@ exports[`GetStarted: ForDevelopers Contributing renders 1`] = `
       </span>
       <i
         aria-hidden="true"
-        className="material-icons"
-      >
-        open_in_new
-      </i>
+        className="at-arrow-up-from-square small align-self-baseline"
+      />
     </a>
     , it includes guidelines for how to contribute with new components and develop for the project.
   </p>
@@ -113,10 +109,9 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -291,10 +286,8 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
       >
         <i
           aria-hidden="true"
-          className="material-icons alert-icon"
-        >
-          info
-        </i>
+          className="at-info-circle"
+        />
         <p>
           <b>
             Recommended way:
@@ -319,10 +312,9 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
               onClick={[Function]}
             >
               <i
-                className="material-icons-outlined"
-              >
-                content_copy
-              </i>
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
               <div
                 id="tooltipCopy"
                 role="tooltip"
@@ -388,10 +380,9 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
               onClick={[Function]}
             >
               <i
-                className="material-icons-outlined"
-              >
-                content_copy
-              </i>
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
               <div
                 id="tooltipCopy"
                 role="tooltip"
@@ -439,10 +430,8 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
       >
         <i
           aria-hidden="true"
-          className="material-icons alert-icon"
-        >
-          info
-        </i>
+          className="at-info-circle"
+        />
         <p>
           <b>
             Standards:
@@ -515,10 +504,9 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
               onClick={[Function]}
             >
               <i
-                className="material-icons-outlined"
-              >
-                content_copy
-              </i>
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
               <div
                 id="tooltipCopy"
                 role="tooltip"
@@ -580,10 +568,9 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
               onClick={[Function]}
             >
               <i
-                className="material-icons-outlined"
-              >
-                content_copy
-              </i>
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
               <div
                 id="tooltipCopy"
                 role="tooltip"
@@ -660,10 +647,9 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
               onClick={[Function]}
             >
               <i
-                className="material-icons-outlined"
-              >
-                content_copy
-              </i>
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
               <div
                 id="tooltipCopy"
                 role="tooltip"
@@ -717,10 +703,8 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
       >
         <i
           aria-hidden="true"
-          className="material-icons alert-icon"
-        >
-          info
-        </i>
+          className="at-info-circle"
+        />
         <p>
           <b>
             Import only once:
@@ -761,10 +745,9 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
               onClick={[Function]}
             >
               <i
-                className="material-icons-outlined"
-              >
-                content_copy
-              </i>
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
               <div
                 id="tooltipCopy"
                 role="tooltip"
@@ -812,10 +795,8 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
       >
         <i
           aria-hidden="true"
-          className="material-icons alert-icon"
-        >
-          info
-        </i>
+          className="at-info-circle"
+        />
         <p>
           <b>
             Web-perf:
@@ -882,10 +863,9 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
               onClick={[Function]}
             >
               <i
-                className="material-icons-outlined"
-              >
-                content_copy
-              </i>
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
               <div
                 id="tooltipCopy"
                 role="tooltip"
@@ -958,10 +938,9 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
               onClick={[Function]}
             >
               <i
-                className="material-icons-outlined"
-              >
-                content_copy
-              </i>
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
               <div
                 id="tooltipCopy"
                 role="tooltip"
@@ -1070,10 +1049,9 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -1186,10 +1164,8 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
     >
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        info
-      </i>
+        className="at-info-circle"
+      />
       <p>
         <b>
           Target Browser:

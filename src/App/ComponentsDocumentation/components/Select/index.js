@@ -38,7 +38,7 @@ const WhenToUse = () => (
 					</div>
 					{text}
 				</React.Fragment>
-			)
+			),
 		)}
 	</>
 );
@@ -67,7 +67,7 @@ const Overview = () => (
 					Select the appropriate styling.
 				</p>
 			}
-			icon="info"
+			icon="info-circle"
 		/>
 
 		{/*

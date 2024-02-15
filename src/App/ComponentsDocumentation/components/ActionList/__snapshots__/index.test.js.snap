@@ -682,10 +682,8 @@ exports[`Components: ActionList renders 1`] = `
 
       <i
         aria-hidden="true"
-        className="material-icons alert-icon"
-      >
-        error
-      </i>
+        className="swepay-icon-error-triangle-filled"
+      />
       <p>
         <b>
           Deprecated:
@@ -734,10 +732,9 @@ exports[`Components: ActionList renders 1`] = `
           
 
           <i
-            className="material-icons"
-          >
-            more_vert
-          </i>
+            aria-hidden={true}
+            className="at-dots-vertical small"
+          />
           
 
         </button>
@@ -755,10 +752,8 @@ exports[`Components: ActionList renders 1`] = `
           >
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              bookmark
-            </i>
+              className="at-bookmark-star small"
+            />
             Add bookmark
           </a>
           
@@ -769,10 +764,8 @@ exports[`Components: ActionList renders 1`] = `
           >
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              business_center
-            </i>
+              className="at-business-suitcase small"
+            />
             Add client
           </a>
           
@@ -783,10 +776,8 @@ exports[`Components: ActionList renders 1`] = `
           >
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              add_circle
-            </i>
+              className="at-plus-circle small"
+            />
             Add document
           </a>
           
@@ -797,10 +788,8 @@ exports[`Components: ActionList renders 1`] = `
           >
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              person_add
-            </i>
+              className="at-user-plus small"
+            />
             Add user
           </a>
           
@@ -822,10 +811,9 @@ exports[`Components: ActionList renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -888,7 +876,7 @@ exports[`Components: ActionList renders 1`] = `
                       &lt;button id="actionListToggle" aria-label="Action list button" type="button" class="action-toggle" aria-haspopup="true"&gt;
                   
 
-                          &lt;i class="material-icons"&gt;more_vert&lt;/i&gt;
+                          &lt;i class="at-dots-vertical small" aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                       &lt;/button&gt;
@@ -897,16 +885,16 @@ exports[`Components: ActionList renders 1`] = `
                       &lt;div class="action-menu" aria-labelledby="actionListToggle"&gt;
                   
 
-                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;bookmark&lt;/i&gt;Add bookmark&lt;/a&gt;
+                          &lt;a href="#"&gt;&lt;i class="at-bookmark-star small" aria-hidden="true"&gt;&lt;/i&gt;Add bookmark&lt;/a&gt;
                   
 
-                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;business_center&lt;/i&gt;Add client&lt;/a&gt;
+                          &lt;a href="#"&gt;&lt;i class="at-business-suitcase small" aria-hidden="true"&gt;&lt;/i&gt;Add client&lt;/a&gt;
                   
 
-                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;add_circle&lt;/i&gt;Add document&lt;/a&gt;
+                          &lt;a href="#"&gt;&lt;i class="at-plus-circle small" aria-hidden="true"&gt;&lt;/i&gt;Add document&lt;/a&gt;
                   
 
-                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;person_add&lt;/i&gt;Add user&lt;/a&gt;
+                          &lt;a href="#"&gt;&lt;i class="at-user-plus small" aria-hidden="true"&gt;&lt;/i&gt;Add user&lt;/a&gt;
                   
 
                       &lt;/div&gt;
@@ -960,10 +948,9 @@ exports[`Components: ActionList renders 1`] = `
           
 
           <i
-            className="material-icons"
-          >
-            more_vert
-          </i>
+            aria-hidden={true}
+            className="at-dots-vertical small"
+          />
           
 
         </button>
@@ -981,10 +968,8 @@ exports[`Components: ActionList renders 1`] = `
           >
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              bookmark
-            </i>
+              className="at-bookmark-star small"
+            />
             Add bookmark
           </a>
           
@@ -995,10 +980,8 @@ exports[`Components: ActionList renders 1`] = `
           >
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              business_center
-            </i>
+              className="at-business-suitcase small"
+            />
             Add client
           </a>
           
@@ -1009,10 +992,8 @@ exports[`Components: ActionList renders 1`] = `
           >
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              add_circle
-            </i>
+              className="at-plus-circle small"
+            />
             Add document
           </a>
           
@@ -1023,10 +1004,8 @@ exports[`Components: ActionList renders 1`] = `
           >
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              person_add
-            </i>
+              className="at-user-plus small"
+            />
             Add user
           </a>
           
@@ -1048,10 +1027,9 @@ exports[`Components: ActionList renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -1114,7 +1092,7 @@ exports[`Components: ActionList renders 1`] = `
                       &lt;button id="actionListToggle" aria-label="Action list button" type="button" class="action-toggle" aria-haspopup="true"&gt;
                   
 
-                          &lt;i class="material-icons"&gt;more_vert&lt;/i&gt;
+                          &lt;i class="at-dots-vertical small" aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                       &lt;/button&gt;
@@ -1123,16 +1101,16 @@ exports[`Components: ActionList renders 1`] = `
                       &lt;div class="action-menu" aria-labelledby="actionListToggle"&gt;
                   
 
-                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;bookmark&lt;/i&gt;Add bookmark&lt;/a&gt;
+                          &lt;a href="#"&gt;&lt;i class="at-bookmark-star small" aria-hidden="true"&gt;&lt;/i&gt;Add bookmark&lt;/a&gt;
                   
 
-                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;business_center&lt;/i&gt;Add client&lt;/a&gt;
+                          &lt;a href="#"&gt;&lt;i class="at-business-suitcase small" aria-hidden="true"&gt;&lt;/i&gt;Add client&lt;/a&gt;
                   
 
-                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;add_circle&lt;/i&gt;Add document&lt;/a&gt;
+                          &lt;a href="#"&gt;&lt;i class="at-plus-circle small" aria-hidden="true"&gt;&lt;/i&gt;Add document&lt;/a&gt;
                   
 
-                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;person_add&lt;/i&gt;Add user&lt;/a&gt;
+                          &lt;a href="#"&gt;&lt;i class="at-user-plus small" aria-hidden="true"&gt;&lt;/i&gt;Add user&lt;/a&gt;
                   
 
                       &lt;/div&gt;
@@ -1178,10 +1156,9 @@ exports[`Components: ActionList renders 1`] = `
           
 
           <i
-            className="material-icons"
-          >
-            more_vert
-          </i>
+            aria-hidden={true}
+            className="at-dots-vertical small"
+          />
           
 
         </button>
@@ -1199,10 +1176,8 @@ exports[`Components: ActionList renders 1`] = `
           >
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              bookmark
-            </i>
+              className="at-bookmark-star small"
+            />
             Add bookmark
           </a>
           
@@ -1213,10 +1188,8 @@ exports[`Components: ActionList renders 1`] = `
           >
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              business_center
-            </i>
+              className="at-business-suitcase small"
+            />
             Add client
           </a>
           
@@ -1227,10 +1200,8 @@ exports[`Components: ActionList renders 1`] = `
           >
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              add_circle
-            </i>
+              className="at-plus-circle small"
+            />
             Add document
           </a>
           
@@ -1241,10 +1212,8 @@ exports[`Components: ActionList renders 1`] = `
           >
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              person_add
-            </i>
+              className="at-user-plus small"
+            />
             Add user
           </a>
           
@@ -1266,10 +1235,9 @@ exports[`Components: ActionList renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -1332,7 +1300,7 @@ exports[`Components: ActionList renders 1`] = `
                       &lt;button id="actionListToggle" aria-label="Action list button" type="button" class="action-toggle" aria-haspopup="true"&gt;
                   
 
-                          &lt;i class="material-icons"&gt;more_vert&lt;/i&gt;
+                          &lt;i class="at-dots-vertical small" aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                       &lt;/button&gt;
@@ -1341,16 +1309,16 @@ exports[`Components: ActionList renders 1`] = `
                       &lt;div class="action-menu" aria-labelledby="actionListToggle"&gt;
                   
 
-                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;bookmark&lt;/i&gt;Add bookmark&lt;/a&gt;
+                          &lt;a href="#"&gt;&lt;i class="at-bookmark-star small" aria-hidden="true"&gt;&lt;/i&gt;Add bookmark&lt;/a&gt;
                   
 
-                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;business_center&lt;/i&gt;Add client&lt;/a&gt;
+                          &lt;a href="#"&gt;&lt;i class="at-business-suitcase small" aria-hidden="true"&gt;&lt;/i&gt;Add client&lt;/a&gt;
                   
 
-                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;add_circle&lt;/i&gt;Add document&lt;/a&gt;
+                          &lt;a href="#"&gt;&lt;i class="at-plus-circle small" aria-hidden="true"&gt;&lt;/i&gt;Add document&lt;/a&gt;
                   
 
-                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;person_add&lt;/i&gt;Add user&lt;/a&gt;
+                          &lt;a href="#"&gt;&lt;i class="at-user-plus small" aria-hidden="true"&gt;&lt;/i&gt;Add user&lt;/a&gt;
                   
 
                       &lt;/div&gt;
@@ -1396,10 +1364,9 @@ exports[`Components: ActionList renders 1`] = `
           
 
           <i
-            className="material-icons"
-          >
-            more_vert
-          </i>
+            aria-hidden={true}
+            className="at-dots-vertical small"
+          />
           
 
         </button>
@@ -1417,10 +1384,8 @@ exports[`Components: ActionList renders 1`] = `
           >
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              bookmark
-            </i>
+              className="at-bookmark-star small"
+            />
             Add bookmark
           </a>
           
@@ -1431,10 +1396,8 @@ exports[`Components: ActionList renders 1`] = `
           >
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              business_center
-            </i>
+              className="at-business-suitcase small"
+            />
             Add client
           </a>
           
@@ -1445,10 +1408,8 @@ exports[`Components: ActionList renders 1`] = `
           >
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              add_circle
-            </i>
+              className="at-plus-circle small"
+            />
             Add document
           </a>
           
@@ -1459,10 +1420,8 @@ exports[`Components: ActionList renders 1`] = `
           >
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              person_add
-            </i>
+              className="at-user-plus small"
+            />
             Add user
           </a>
           
@@ -1484,10 +1443,9 @@ exports[`Components: ActionList renders 1`] = `
             onClick={[Function]}
           >
             <i
-              className="material-icons-outlined"
-            >
-              content_copy
-            </i>
+              aria-hidden="true"
+              className="at-clipboard small"
+            />
             <div
               id="tooltipCopy"
               role="tooltip"
@@ -1550,7 +1508,7 @@ exports[`Components: ActionList renders 1`] = `
                       &lt;button id="actionListToggle" aria-label="Action list button" type="button" class="action-toggle" aria-haspopup="true"&gt;
                   
 
-                          &lt;i class="material-icons"&gt;more_vert&lt;/i&gt;
+                          &lt;i class="at-dots-vertical small" aria-hidden="true"&gt;&lt;/i&gt;
                   
 
                       &lt;/button&gt;
@@ -1559,16 +1517,16 @@ exports[`Components: ActionList renders 1`] = `
                       &lt;div class="action-menu" aria-labelledby="actionListToggle"&gt;
                   
 
-                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;bookmark&lt;/i&gt;Add bookmark&lt;/a&gt;
+                          &lt;a href="#"&gt;&lt;i class="at-bookmark-star small" aria-hidden="true"&gt;&lt;/i&gt;Add bookmark&lt;/a&gt;
                   
 
-                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;business_center&lt;/i&gt;Add client&lt;/a&gt;
+                          &lt;a href="#"&gt;&lt;i class="at-business-suitcase small" aria-hidden="true"&gt;&lt;/i&gt;Add client&lt;/a&gt;
                   
 
-                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;add_circle&lt;/i&gt;Add document&lt;/a&gt;
+                          &lt;a href="#"&gt;&lt;i class="at-plus-circle small" aria-hidden="true"&gt;&lt;/i&gt;Add document&lt;/a&gt;
                   
 
-                          &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;person_add&lt;/i&gt;Add user&lt;/a&gt;
+                          &lt;a href="#"&gt;&lt;i class="at-user-plus small" aria-hidden="true"&gt;&lt;/i&gt;Add user&lt;/a&gt;
                   
 
                       &lt;/div&gt;
@@ -1690,10 +1648,9 @@ exports[`Components: ActionList renders 1`] = `
               onClick={[Function]}
             >
               <i
-                className="material-icons-outlined"
-              >
-                content_copy
-              </i>
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
               <div
                 id="tooltipCopy"
                 role="tooltip"

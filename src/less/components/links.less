@@ -1,16 +1,12 @@
 @import "../global.less";
 @import "./badge.less";
 
-@action-link-height: 3rem;
-@action-link-new-tab-height: 3rem;
-@action-link-arrow-font-size: 1.5rem;
-
 a {
-	color: @brand-accent-links;
+	color: var(--brand-accent-links);
 
 	&:hover,
 	&:focus {
-		color: darken(@brand-accent-links, 10%);
+		color: color-mix(in srgb, var(--brand-accent-links), #000000 25%);
 		text-decoration: none;
 	}
 
@@ -24,10 +20,10 @@ a {
 	}
 
 	&.bright {
-		color: @blue-syntax-highlight;
+		color: var(--blue-syntax-highlight);
 
 		&:focus-visible {
-			outline: 2px solid @brand-primary;
+			outline: 2px solid var(--brand-primary);
 			border-radius: 2px;
 		}
 	}
@@ -47,7 +43,11 @@ a {
 		i {
 			font-size: 1rem;
 			line-height: 1.5;
-			align-self: flex-end;
+			align-self: center;
+
+			&.material-icons {
+				align-self: flex-end;
+			}
 		}
 
 		&.small {
@@ -61,12 +61,12 @@ a {
 		position: relative;
 		display: flex;
 		align-items: center;
-		min-height: @action-link-height;
+		min-height: 3rem;
 		padding-left: 1rem;
 		border: 1px solid transparent;
 		text-decoration: none;
-		background-color: @brand-bg-1;
-		color: @brand-secondary;
+		background-color: var(--bg-primary);
+		color: var(--brand-secondary);
 		margin-bottom: 1rem;
 		border-radius: 4px;
 		padding-top: 0.75rem;
@@ -90,7 +90,7 @@ a {
 		}
 
 		&:focus-visible {
-			outline: 2px solid @brand-secondary;
+			outline: 2px solid var(--brand-secondary);
 			outline-offset: 0;
 			border-radius: 2px;
 		}
@@ -116,24 +116,33 @@ a {
 			width: 0.25rem;
 			left: 0;
 			top: 0;
-			background-color: @brand-primary;
+			background-color: var(--brand-primary);
 			border-radius: 0.25rem 0 0 0.25rem;
 		}
 
 		&:after {
-			content: "arrow_forward";
-			.material-icons-styling();
-
+			color: var(--brand-secondary);
+			content: "";
 			position: absolute;
+			top: 0;
+			bottom: 0;
 			right: 0;
-			top: calc(50% - @action-link-arrow-font-size / 2);
-			font-size: @action-link-arrow-font-size;
-			color: @brand-secondary;
+			display: flex;
+			align-items: center;
+			background-image: url("../../icons/shapes/chevron_down.svg");
+			transform: rotate(-90deg);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			width: 24px;
+			height: auto;
+			margin: 0 0.5rem;
 		}
 
 		&.action-link-new-tab {
 			&:after {
-				content: "launch";
+				background-image: url("../../icons/shapes/export_arrow_up_right.svg");
+				transform: none;
 			}
 		}
 	}
@@ -152,7 +161,7 @@ a {
 
 	.small-text {
 		font-size: 0.75rem;
-		color: @brand-secondary;
+		color: var(--brand-secondary);
 		padding-left: 0.5rem;
 	}
 }

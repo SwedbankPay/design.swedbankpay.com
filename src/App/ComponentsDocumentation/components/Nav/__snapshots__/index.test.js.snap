@@ -66,10 +66,8 @@ Array [
 
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              home
-            </i>
+              className="at-home small"
+            />
             
 
             <span>
@@ -95,10 +93,8 @@ Array [
             >
               <i
                 aria-hidden="true"
-                className="material-icons"
-              >
-                shopping_cart
-              </i>
+                className="at-shop-cart small"
+              />
               
 
               <span>
@@ -149,10 +145,8 @@ Array [
 
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              notification_important
-            </i>
+              className="at-bell-reminder small"
+            />
             
 
             <span>
@@ -176,10 +170,8 @@ Array [
 
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              language
-            </i>
+              className="at-language-translation small"
+            />
             
 
             <span>
@@ -203,10 +195,8 @@ Array [
 
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              account_balance
-            </i>
+              className="at-building-column small"
+            />
             
 
             <span>
@@ -230,10 +220,8 @@ Array [
 
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              fingerprint
-            </i>
+              className="at-fingerprint small"
+            />
             
 
             <span>
@@ -262,10 +250,9 @@ Array [
           onClick={[Function]}
         >
           <i
-            className="material-icons-outlined"
-          >
-            content_copy
-          </i>
+            aria-hidden="true"
+            className="at-clipboard small"
+          />
           <div
             id="tooltipCopy"
             role="tooltip"
@@ -436,7 +423,7 @@ Array [
                             &lt;a href="#" class="active"&gt;
                 
 
-                                &lt;i class="material-icons" aria-hidden="true"&gt;home&lt;/i&gt;
+                                &lt;i class="at-home small" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                 &lt;span&gt;Home&lt;/span&gt;
@@ -454,7 +441,7 @@ Array [
                             &lt;div class="submenu"&gt;
                 
 
-                                &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;shopping_cart&lt;/i&gt;
+                                &lt;a href="#"&gt;&lt;i class="at-shop-cart small" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                     &lt;span&gt;Transactions&lt;/span&gt;
@@ -487,7 +474,7 @@ Array [
                             &lt;a href="#"&gt;
                 
 
-                                &lt;i class="material-icons" aria-hidden="true"&gt;notification_important&lt;/i&gt;
+                                &lt;i class="at-bell-reminder small" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                 &lt;span&gt;Notifications&lt;/span&gt;
@@ -505,7 +492,7 @@ Array [
                             &lt;a href="#"&gt;
                 
 
-                                &lt;i class="material-icons" aria-hidden="true"&gt;language&lt;/i&gt;
+                                &lt;i class="at-language-translation small" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                 &lt;span&gt;Language&lt;/span&gt;
@@ -523,7 +510,7 @@ Array [
                             &lt;a href="#"&gt;
                 
 
-                                &lt;i class="material-icons" aria-hidden="true"&gt;account_balance&lt;/i&gt;
+                                &lt;i class="at-building-column small" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                 &lt;span&gt;Account&lt;/span&gt;
@@ -541,7 +528,7 @@ Array [
                             &lt;a href="#"&gt;
                 
 
-                                &lt;i class="material-icons" aria-hidden="true"&gt;fingerprint&lt;/i&gt;
+                                &lt;i class="at-fingerprint small" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                 &lt;span&gt;Authentication&lt;/span&gt;
@@ -605,10 +592,8 @@ Array [
 
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              home
-            </i>
+              className="at-home small"
+            />
             
 
             <span>
@@ -634,10 +619,8 @@ Array [
             >
               <i
                 aria-hidden="true"
-                className="material-icons"
-              >
-                shopping_cart
-              </i>
+                className="at-shop-cart small"
+              />
               
 
               <span>
@@ -688,10 +671,8 @@ Array [
 
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              notification_important
-            </i>
+              className="at-bell-reminder small"
+            />
             
 
             <span>
@@ -715,10 +696,8 @@ Array [
 
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              language
-            </i>
+              className="at-language-translation small"
+            />
             
 
             <span>
@@ -742,10 +721,8 @@ Array [
 
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              account_balance
-            </i>
+              className="at-building-column small"
+            />
             
 
             <span>
@@ -769,10 +746,8 @@ Array [
 
             <i
               aria-hidden="true"
-              className="material-icons"
-            >
-              fingerprint
-            </i>
+              className="at-fingerprint small"
+            />
             
 
             <span>
@@ -801,10 +776,9 @@ Array [
           onClick={[Function]}
         >
           <i
-            className="material-icons-outlined"
-          >
-            content_copy
-          </i>
+            aria-hidden="true"
+            className="at-clipboard small"
+          />
           <div
             id="tooltipCopy"
             role="tooltip"
@@ -975,7 +949,7 @@ Array [
                             &lt;a href="#" class="active"&gt;
                 
 
-                                &lt;i class="material-icons" aria-hidden="true"&gt;home&lt;/i&gt;
+                                &lt;i class="at-home small" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                 &lt;span&gt;Home&lt;/span&gt;
@@ -993,7 +967,7 @@ Array [
                             &lt;div class="submenu"&gt;
                 
 
-                                &lt;a href="#"&gt;&lt;i class="material-icons" aria-hidden="true"&gt;shopping_cart&lt;/i&gt;
+                                &lt;a href="#"&gt;&lt;i class="at-shop-cart small" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                     &lt;span&gt;Transactions&lt;/span&gt;
@@ -1026,7 +1000,7 @@ Array [
                             &lt;a href="#"&gt;
                 
 
-                                &lt;i class="material-icons" aria-hidden="true"&gt;notification_important&lt;/i&gt;
+                                &lt;i class="at-bell-reminder small" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                 &lt;span&gt;Notifications&lt;/span&gt;
@@ -1044,7 +1018,7 @@ Array [
                             &lt;a href="#"&gt;
                 
 
-                                &lt;i class="material-icons" aria-hidden="true"&gt;language&lt;/i&gt;
+                                &lt;i class="at-language-translation small" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                 &lt;span&gt;Language&lt;/span&gt;
@@ -1062,7 +1036,7 @@ Array [
                             &lt;a href="#"&gt;
                 
 
-                                &lt;i class="material-icons" aria-hidden="true"&gt;account_balance&lt;/i&gt;
+                                &lt;i class="at-building-column small" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                 &lt;span&gt;Account&lt;/span&gt;
@@ -1080,7 +1054,7 @@ Array [
                             &lt;a href="#"&gt;
                 
 
-                                &lt;i class="material-icons" aria-hidden="true"&gt;fingerprint&lt;/i&gt;
+                                &lt;i class="at-fingerprint small" aria-hidden="true"&gt;&lt;/i&gt;
                 
 
                                 &lt;span&gt;Authentication&lt;/span&gt;

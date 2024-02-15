@@ -1,5 +1,4 @@
 import React from "react";
-import { Icon } from "@docutils";
 
 const ExpandablePlaceholder = () => (
 	<div className="expandable">
@@ -28,7 +27,7 @@ const Expandable = ({ icon, items }) =>
 					{icon && (
 						<>
 							{"\n"}
-							<Icon type={icon} />
+							<i className={`${icon} small`} aria-hidden="true" />
 						</>
 					)}
 					{"\n"}

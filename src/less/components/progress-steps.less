@@ -73,7 +73,7 @@
 
 			/* Take full parent size, ignoring parents padding, and stil growing the parent with text from this element */
 			padding: @list-item-padding;
-			color: @brand-secondary;
+			color: var(--brand-secondary);
 			border: 0;
 			cursor: pointer;
 			.negative-margin(@list-item-padding);
@@ -81,7 +81,7 @@
 			&:hover {
 				.steps-number {
 					border-radius: 50%;
-					background-color: @brand-primary;
+					background-color: var(--brand-primary);
 				}
 			}
 
@@ -92,7 +92,7 @@
 				box-sizing: border-box;
 				z-index: 10;
 				border-radius: 50%;
-				border: 2px solid @brand-primary;
+				border: 2px solid var(--brand-primary);
 			}
 		}
 
@@ -121,7 +121,7 @@
 		.steps-icon {
 			.circle-base();
 
-			color: @brand-secondary;
+			color: var(--brand-secondary);
 			z-index: 15;
 			line-height: @circle-size;
 			text-align: center;
@@ -169,27 +169,42 @@
 	}
 
 	.steps-completed {
-		color: @brand-secondary;
+		color: var(--brand-secondary);
 
 		&:before {
-			border-color: @brand-primary;
-			background-color: @brand-primary;
+			border-color: var(--brand-primary);
+			background-color: var(--brand-primary);
 		}
 
 		&:after {
-			background-color: @brand-primary;
+			background-color: var(--brand-primary);
 		}
 
 		a {
-			color: @brand-secondary;
+			color: var(--brand-secondary);
+		}
+
+		i.completed {
+			display: grid;
+
+			&:before {
+				content: "";
+				position: absolute;
+				place-self: center;
+				width: clamp(7px 25% 10px);
+				height: clamp(13px 48% 19px);
+				border: solid currentColor;
+				border-width: 0 2px 2px 0;
+				transform: rotate(45deg) translate(-12%, -12%);
+			}
 		}
 	}
 
 	.steps-ongoing {
-		color: @brand-secondary;
+		color: var(--brand-secondary);
 
 		&:before {
-			border-color: @brand-primary;
+			border-color: var(--brand-primary);
 		}
 
 		&:after {
@@ -203,25 +218,25 @@
 		&:first-child,
 		&:last-child {
 			&:after {
-				background: linear-gradient(to right, @brand-primary 100%);
+				background: linear-gradient(to right, var(--brand-primary) 100%);
 			}
 		}
 
 		a {
-			color: @brand-secondary;
+			color: var(--brand-secondary);
 		}
 	}
 
 	.steps-selected {
-		color: @brand-secondary;
+		color: var(--brand-secondary);
 		font-weight: var(--font-weight-bold);
 
 		.steps-number {
-			color: @brand-secondary;
+			color: var(--brand-secondary);
 		}
 
 		a {
-			color: @brand-secondary;
+			color: var(--brand-secondary);
 		}
 	}
 
@@ -370,7 +385,7 @@
 		}
 
 		.steps-ongoing:after {
-			background: linear-gradient(@brand-primary 50%, @brand-bg-gray 50%);
+			background: linear-gradient(var(--brand-primary) 50%, @brand-bg-gray 50%);
 		}
 	}
 }
