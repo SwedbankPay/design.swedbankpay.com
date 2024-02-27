@@ -1,5 +1,8 @@
 @import "../global.less";
 
+// TODO: sera que el card title TIENE que llevar la clase .h4 ? or ponemos un title mas abstracto?
+// provide fallback style pa support a los que no han hecho la migracion, chequeando si llevas unas de las nuevas clases (e.g. .card-cta) -> pa ellos provide un fallback style as close as possible, until next Major release
+
 .cards {
 	--border-radius: 16px;
 	--cards-light-gray: var(--base-5);
@@ -7,21 +10,153 @@
 	--min-width: 240px;
 	--max-width: 700px;
 	--transition-duration: 0.1s;
+	--padding-outer: 1.5rem;
+	--grid-min-gap: 0.5rem;
 
-	display: flex;
-	flex-grow: 1;
-	flex-direction: column;
+	display: grid;
+	grid-template-areas:
+		"icon title"
+		"text-content text-content"
+		"cta cta";
+	grid-template-columns: 24px 1fr;
+	grid-template-rows: min-content auto min-content;
+	grid-gap: var(--grid-min-gap);
 	position: relative;
 	min-width: var(--min-width);
 	max-width: var(--max-width);
-	padding: 1.5rem;
+	min-height: 200px;
+	padding: var(--padding-outer);
 	margin: 2rem 0 1rem;
+	border: none;
 	border-radius: var(--border-radius);
 	color: var(--brand-secondary);
 	text-decoration: none;
 	background-color: var(--cards-light-gray);
 	cursor: pointer;
 	transition: var(--transition-duration);
+	overflow: clip;
+
+	&:has(> img:first-child) {
+		grid-template-areas:
+			"image"
+			"title"
+			"text-content"
+			"cta";
+		grid-template-columns: 1fr;
+
+		&:is(button) img {
+			max-width: 100%;
+		}
+
+		&:before {
+			content: "";
+			aspect-ratio: 16 / 9;
+			width: calc(100% + 2 * var(--padding-outer));
+			margin: calc(0px - var(--padding-outer)) calc(0px - var(--padding-outer))
+				calc(1.5rem - var(--grid-min-gap));
+			grid-area: image;
+		}
+
+		&:has(> img:first-child.ratio-1-1):before {
+			aspect-ratio: 1 / 1;
+		}
+
+		&:has(> img:first-child.ratio-4-3):before {
+			aspect-ratio: 4 / 3;
+		}
+
+		& > img:first-child {
+			width: calc(100% + 2 * var(--padding-outer));
+			aspect-ratio: 16 / 9;
+			grid-area: image;
+			object-fit: cover;
+			margin: calc(0px - var(--padding-outer)) calc(0px - var(--padding-outer))
+				0;
+
+			position: absolute;
+
+			&.ratio-1-1 {
+				aspect-ratio: 1 / 1;
+			}
+
+			&.ratio-4-3 {
+				aspect-ratio: 4 / 3;
+			}
+		}
+	}
+
+	&:not(:has(.title-icon)) {
+		grid-template-areas:
+			"title title"
+			"text-content text-content"
+			"cta cta";
+	}
+
+	&:not(:has(.h4)) {
+		grid-template-areas:
+			"icon icon"
+			"text-content text-content"
+			"cta cta";
+	}
+
+	&.cards-wide {
+		grid-template-areas:
+			"icon title cta"
+			"text-content text-content cta";
+		grid-template-columns: min-content 1fr auto;
+		min-height: unset;
+		min-width: 450px;
+
+		&:not(:has(.title-icon)) {
+			grid-template-areas:
+				"title cta"
+				"text-content cta";
+		}
+
+		&:not(:has(.card-content)) {
+			grid-template-areas: "icon title cta";
+			grid-template-rows: min-content;
+
+			&:not(:has(.title-icon)) {
+				grid-template-areas: "title cta";
+			}
+		}
+
+		// TODO: is it supposed to be displayed or hidden ?
+		// not sure why I added this, now when looking in Figma it seems displayed
+		// .title-icon {
+		// 	display: none;
+		// }
+
+		.card-cta {
+			margin-block-start: 0;
+			height: 100%;
+			justify-self: end;
+
+			& :not(.arrow) {
+				display: none;
+			}
+
+			// TODO: add images to .cards-wide, and style grid-areas for each of its variants (icon / title / text-content / ... or not)
+			// if images then no icon
+		}
+
+		&:has(> img:first-child) {
+			grid-template-areas:
+				"image title cta"
+				"image text-content cta";
+			grid-template-columns: auto 1fr auto;
+
+			&:before {
+				content: "";
+				aspect-ratio: 1 / 1;
+				height: calc(100% + 2 * var(--padding-outer));
+				margin: calc(0px - var(--padding-outer))
+					calc(0px - var(--padding-outer)) 0;
+				grid-area: image;
+			}
+		}
+	}
 
 	&:hover {
 		background-color: var(--cards-dark-gray);
@@ -40,48 +175,12 @@
 		color: var(--brand-secondary);
 	}
 
-	&.cards-dark {
-		background-color: var(--cards-dark-gray);
-		color: var(--white);
-		transition: all var(--transition-duration) cubic-bezier(1, 0, 0, 1);
-
-		.h4 {
-			color: var(--white);
-			transition: all var(--transition-duration) cubic-bezier(1, 0, 0, 1);
-		}
-	}
-
-	&.cards-wide {
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		padding-top: 1.5rem;
-		margin-top: 2.25rem;
-
-		> i {
-			margin-top: initial;
-		}
-
-		.cards-icon {
-			font-family: var(--brand-monofont);
-		}
-
-		.cards-content {
-			margin-bottom: 0;
-			margin-top: 0.75rem;
-
-			.h3 {
-				margin-top: 0;
-				margin-bottom: 0.25rem;
-			}
-		}
-	}
-
 	// forward arrow icon at the bottom of the card
 	> i,
-	.action-cta i {
-		width: 18px;
-		height: 18px;
+	.card-cta i {
+		width: 24px;
+		height: 24px;
+		margin-inline-end: 0.5rem;
 
 		&.material-icons {
 			font-size: 18px;
@@ -90,39 +189,31 @@
 	}
 
 	// so far NOT set as mandatory parent of i (arrow at bottom of card) so don't break existing cards
-	.action-cta {
+	.card-cta {
+		align-self: end;
 		display: flex;
 		gap: 0.5rem;
+		margin-block-start: calc(2rem - var(--grid-min-gap));
 	}
 
-	> img {
-		margin: -2.25rem -1.5rem 1rem;
-		object-fit: cover;
-		max-height: 130px;
-		border-top-left-radius: 4px;
-		border-top-right-radius: 4px;
-	}
+	// > img {
+	// 	margin: -2.25rem -1.5rem 1rem;
+	// 	object-fit: cover;
+	// 	max-height: 130px;
+	// 	border-top-left-radius: 4px;
+	// 	border-top-right-radius: 4px;
+	// }
 
 	.cards-icon {
 		color: currentColor;
-		margin-bottom: 0.5rem;
-
-		svg {
-			max-width: 24px;
-		}
+		max-width: 24px;
 	}
 
-	.cards-content {
-		display: flex;
-		flex-direction: column;
-		margin-bottom: 1.25rem;
-
-		.h4 {
-			font-family: var(--brand-headline);
-			margin-top: 0;
-			margin-bottom: 0.5rem;
-			transition: all var(--transition-duration) cubic-bezier(1, 0, 0, 1);
-		}
+	.h4 {
+		font-family: var(--brand-headline);
+		text-align: start;
+		margin-block: 0;
+		transition: all var(--transition-duration) cubic-bezier(1, 0, 0, 1);
 	}
 }
 
@@ -286,4 +377,76 @@
 			outline: 5px solid;
 		}
 	}
+}
+
+// TESTS for arrow animations
+// display icon chevron-right.svg and on .cards hover animate from left near the text to the right side stuck to the right padding
+#designguide .cards {
+	.card-cta span.arrow {
+		width: 40px;
+		transition: all 0.5s ease;
+		display: grid;
+		overflow: clip;
+
+		&:before {
+			place-self: center;
+			content: "";
+			width: 18px;
+			height: 18px;
+			display: block;
+			mask: url("../../icons/shapes/arrow-right.svg") 0 0 / 18px 18px no-repeat;
+			background-color: currentColor;
+		}
+	}
+
+	&:hover {
+		.card-cta span.arrow:before {
+			animation: scroll 0.5s ease-in-out;
+		}
+	}
+
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+			opacity: 1;
+		}
+
+		49.9% {
+			transform: translateX(150%);
+			opacity: 1;
+		}
+
+		49.91% {
+			opacity: 0;
+		}
+
+		50.09% {
+			opacity: 1;
+		}
+
+		50.1% {
+			transform: translateX(-150%);
+		}
+
+		100% {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+}
+
+span.h4 {
+	grid-area: title;
+}
+
+.title-icon {
+	grid-area: icon;
+}
+
+.card-content {
+	grid-area: text-content;
+}
+
+.card-cta {
+	grid-area: cta;
 }

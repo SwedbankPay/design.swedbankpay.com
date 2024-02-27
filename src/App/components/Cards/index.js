@@ -1,77 +1,85 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Cards = ({ type, titleTxt, imgSrc, icon, text, children, wide }) => (
+const OuterTagElement = ({ isButton = false, isWide = false, children }) => {
+	return isButton ? (
+		<button className={`cards ${isWide ? "cards-wide" : ""}`}>
+			{children}
+		</button>
+	) : (
+		<a href="#" className={`cards ${isWide ? "cards-wide" : ""}`}>
+			{children}
+		</a>
+	);
+};
+
+const Cards = ({
+	titleTxt,
+	imgSrc,
+	iconClasses,
+	hasTextContent,
+	textContent,
+	children,
+	isWide,
+	isButton,
+	hasTitle,
+	hasCTAText,
+	imgRatio,
+}) => (
 	<>
-		{!wide ? (
-			<div>
-				{"\n"}
-				<a
-					href="#"
-					onClick={(e) => e.preventDefault()}
-					className={`cards cards-${type}`}
-				>
+		{/* TODO: set conditional <a> || <button> */}
+		<OuterTagElement isButton={isButton} isWide={isWide}>
+			{imgSrc && (
+				<>
 					{"\n"}
-					{icon && (
-						<div className="cards-icon">
-							{"\n"}
-							{icon}
-							{"\n"}
-						</div>
-					)}
-					{imgSrc && <img src={imgSrc} />}
-					<div className="cards-content">
-						{"\n"}
-						{titleTxt && <span className="h4">{titleTxt}</span>}
-						{text && <span>{text}</span>}
-						{"\n"}
+					<img
+						className={imgRatio ?? ""}
+						src={imgSrc}
+						alt="alt text to be set"
+					/>
+				</>
+			)}
+			{/* no icon displayed if an image used as illustration */}
+			{iconClasses && !imgSrc && (
+				<>
+					{"\n"}
+					<i className={`title-icon ${iconClasses}`} aria-hidden="true"></i>
+				</>
+			)}
+			{hasTitle && (
+				<>
+					{"\n"}
+					<span className="h4">{titleTxt}</span>
+				</>
+			)}
+			{(hasTextContent || children) && (
+				<>
+					{"\n"}
+					<div className="card-content">
+						{textContent}
 						{children && children}
 					</div>
-					{"\n"}
-					<div className="action-cta">
-						<span>Continue</span>
-						<i className="at-arrow-right small" aria-hidden="true"></i>
-					</div>
-					{"\n"}
-				</a>
+				</>
+			)}
+			{"\n"}
+			<div className="card-cta">
 				{"\n"}
+				{hasCTAText && <span>Continue</span>}
+				<span className="arrow"></span>
 			</div>
-		) : (
-			<>
-				<a href="#" className={`cards cards-${type} cards-wide`}>
-					{"\n"}
-					{icon && (
-						<div className="cards-icon">
-							{"\n"}
-							{icon}
-							{"\n"}
-						</div>
-					)}
-					<div className="cards-content">
-						{"\n"}
-						{titleTxt && <span className="h4">{titleTxt}</span>}
-						{text && <span>{text}</span>}
-						{"\n"}
-						{children && children}
-					</div>
-					{"\n"}
-					<i className="at-arrow-right small" aria-hidden="true"></i>
-					{"\n"}
-				</a>
-				{"\n"}
-			</>
-		)}
+		</OuterTagElement>
 	</>
 );
 
 Cards.propTypes = {
-	type: PropTypes.oneOf(["primary", "secondary", "tertiary"]).isRequired,
 	titleTxt: PropTypes.string,
+	hasTitle: PropTypes.bool,
 	imgSrc: PropTypes.string,
-	icon: PropTypes.object,
-	text: PropTypes.string,
+	iconClasses: PropTypes.string,
+	textContent: PropTypes.string,
 	children: PropTypes.object,
 	wide: PropTypes.bool,
+	imgRatio: PropTypes.string,
 };
 
 export default Cards;

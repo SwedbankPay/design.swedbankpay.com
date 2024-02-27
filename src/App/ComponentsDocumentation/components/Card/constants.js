@@ -1,7 +1,16 @@
 import React from "react";
 import CardsComponent from "@components/Cards";
 
-const basename = process.env.basename;
+const defaultOptionsValues = {
+	isButton: false,
+	isWide: false,
+	iconClasses: "at-document",
+	hasTitle: true,
+	imgSrc: null,
+	imgRatio: null,
+	hasTextContent: true,
+	hasCTAText: true,
+};
 
 export const overviewCards = {
 	id: "overviewCards",
@@ -12,53 +21,159 @@ export const overviewCards = {
 			component: (
 				<CardsComponent
 					titleTxt="Title"
-					type="primary"
-					text="Write the supportive paragraph here."
-					icon={<i className="at-shop-cart" aria-hidden="true"></i>}
+					textContent="Write the supportive paragraph here."
+					hasCTAText={defaultOptionsValues.hasCTAText}
+					isButton={defaultOptionsValues.isButton}
+					isWide={defaultOptionsValues.isWide}
+					hasTitle={defaultOptionsValues.hasTitle}
+					imgSrc={defaultOptionsValues.imgSrc}
+					iconClasses={defaultOptionsValues.iconClasses}
+					hasTextContent={defaultOptionsValues.hasTextContent}
+					imgRatio={defaultOptionsValues.imgRatio}
 				/>
 			),
 			options: {
 				radio: [
 					{
-						id: "addons_radio",
-						title: "Addons",
+						id: "title",
+						title: "Title",
 						values: [
 							{
-								name: "Plain",
+								name: "Text only",
 								value: {
-									icon: null,
+									iconClasses: null,
+									hasTitle: true,
 								},
 							},
 							{
-								name: "With icon",
+								name: "Text + icon",
 								default: true,
 								value: {
-									icon: <i className="at-shop-cart" aria-hidden="true"></i>,
+									iconClasses: "at-shop-cart",
+									hasTitle: true,
 								},
 							},
 							{
-								name: "With image",
+								name: "Icon only",
 								value: {
-									imgSrc: `${basename}img/documentation/cards/img-example.png`,
-									icon: null,
+									iconClasses: "at-shop-cart",
+									hasTitle: false,
 								},
 							},
 						],
 					},
 					{
-						id: "color_radio",
-						title: "Color theme",
+						id: "has_image",
+						title: "Image illustration",
 						values: [
 							{
-								name: "Default",
+								name: "No image",
+								default: true,
 								value: {
-									type: "",
+									imgSrc: null,
 								},
 							},
 							{
-								name: "Dark",
+								name: "With image - 16/9 ratio",
 								value: {
-									type: "dark",
+									imgSrc:
+										"https://design.swedbankpay.com/v/10.10.1/img/documentation/imagery/women-on-bus.svg",
+									icon: null,
+									imgRatio: "ratio-16-9",
+								},
+							},
+							{
+								name: "With image - 4/3 ratio",
+								value: {
+									imgSrc:
+										"https://design.swedbankpay.com/v/10.10.1/img/documentation/imagery/women-on-bus.svg",
+									icon: null,
+									imgRatio: "ratio-4-3",
+								},
+							},
+							{
+								name: "With image - 1/1 ratio",
+								value: {
+									imgSrc:
+										"https://design.swedbankpay.com/v/10.10.1/img/documentation/imagery/women-on-bus.svg",
+									icon: null,
+									imgRatio: "ratio-1-1",
+								},
+							},
+						],
+					},
+					{
+						id: "text_content",
+						title: "Text content",
+						values: [
+							{
+								name: "With text content",
+								default: true,
+								value: {
+									hasTextContent: true,
+								},
+							},
+							{
+								name: "No text content",
+								value: {
+									hasTextContent: false,
+								},
+							},
+						],
+					},
+					{
+						id: "has_cta_text",
+						title: "CTA text",
+						values: [
+							{
+								name: "With CTA text",
+								default: true,
+								value: {
+									hasCTAText: true,
+								},
+							},
+							{
+								name: "Only arrow",
+								value: {
+									hasCTAText: false,
+								},
+							},
+						],
+					},
+					{
+						id: "card_element_tag",
+						title: "Card purpose",
+						values: [
+							{
+								name: "action <button>",
+								value: {
+									isButton: true,
+								},
+							},
+							{
+								name: "navigation link <a>",
+								default: true,
+								value: {
+									isButton: false,
+								},
+							},
+						],
+					},
+					{
+						id: "is_wide",
+						title: "Wide variant",
+						values: [
+							{
+								name: "standard",
+								default: true,
+								value: {
+									isWide: false,
+								},
+							},
+							{
+								name: "wide",
+								value: {
+									isWide: true,
 								},
 							},
 						],
@@ -68,68 +183,6 @@ export const overviewCards = {
 			title: "Standard cards",
 			description:
 				"The standard card component can be customized either icon or picture in order to make it easier for users to scan the content. Mixing simple card without icon should mostly be done when seperating the cards functionality such as when there are more cards to be displayed or when approperiate icons can not be found.",
-		},
-		{
-			tab: "Wide",
-			component: (
-				<CardsComponent
-					titleTxt="Title"
-					type="primary"
-					text="Write the supportive paragraph here."
-					wide
-					icon={<>01</>}
-				/>
-			),
-			options: {
-				radio: [
-					{
-						id: "addons_radio",
-						title: "Addons",
-						values: [
-							{
-								name: "Plain",
-								value: {
-									icon: null,
-								},
-							},
-							{
-								name: "With icon",
-								default: true,
-								value: {
-									icon: <>01</>,
-								},
-							},
-						],
-					},
-					{
-						id: "color_radio",
-						title: "Accent color",
-						values: [
-							{
-								name: "Primary",
-								value: {
-									type: "primary",
-								},
-							},
-							{
-								name: "Complementary 1",
-								value: {
-									type: "secondary",
-								},
-							},
-							{
-								name: "Complementary 2",
-								value: {
-									type: "tertiary",
-								},
-							},
-						],
-					},
-				],
-			},
-			title: "Wide cards",
-			description:
-				"The wide card component can be used with and without numbering. Try to avoid mixing different card setups with each other as it could be confusing for the users to understand. Try to keep the title concise and to the point, to make it simple to understand and the design aligned with the cards as a group.",
 		},
 	],
 };
