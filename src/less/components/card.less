@@ -209,6 +209,36 @@
 		// 	}
 		// }
 
+		&:not(:has(> .card-image)) {
+			grid-template-rows: auto auto;
+
+			& .card-cta {
+				padding-block-end: 0;
+			}
+		}
+
+		&:not(:has(> .card-image)):not(:has(.h4)) {
+			grid-template-areas: "icon text-content cta";
+			grid-template-columns: auto 1fr min-content;
+			grid-template-rows: auto;
+			padding: var(--padding-outer);
+
+			& :is(.title-icon, .card-content, .card-cta) {
+				padding: 0;
+			}
+		}
+
+		&:not(:has(> .card-image)):not(:has(.title-icon)):not(:has(.card-content)) {
+			grid-template-areas: "title cta";
+			grid-template-columns: 1fr min-content;
+			grid-template-rows: auto;
+			padding: var(--padding-outer);
+
+			& :is(.h4, .card-cta) {
+				padding: 0;
+			}
+		}
+
 		&:has(> .card-image) {
 			grid-template-areas:
 				"image title"
