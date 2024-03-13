@@ -214,6 +214,17 @@
 			}
 		}
 
+		&:not(:has(> img:first-child)):not(:has(.cards-content)) {
+			grid-template-areas: "icon title cta";
+			grid-template-columns: auto 1fr min-content;
+			grid-template-rows: auto;
+			padding: var(--padding-outer);
+
+			& :is(.cards-icon, .h4, .cards-cta) {
+				padding: 0;
+			}
+		}
+
 		&:not(:has(> img:first-child)):not(:has(.cards-icon)):not(
 				:has(.cards-content)
 			) {
