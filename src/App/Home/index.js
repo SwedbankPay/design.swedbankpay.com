@@ -58,54 +58,41 @@ const Home = () => {
 								>
 									<Link
 										to={route.path}
-										className={`cards cards-primary${
-											route.wideCard ? " cards-wide m-3" : ""
+										className={`cards ${
+											route.wideCard
+												? " cards-wide w-100 max-w-initial m-3"
+												: ""
 										}`}
 									>
-										{route.wideCard ? (
-											<div className="cards-content flex-row align-items-center m-0 w-100">
-												<i
-													className={`${route.icon.name} small mr-3`}
-													aria-hidden="true"
-												></i>
-												<span className="h4 mb-0">{route.entryCardText}</span>
-												<i
-													className="at-arrow-right small ml-auto"
-													aria-hidden="true"
-												></i>
-											</div>
-										) : (
-											<div>
-												<div className="cards-icon">
-													<i
-														className={`${route.icon.name} small`}
-														aria-hidden="true"
-													></i>
-												</div>
-												<div className="cards-content">
-													<span className="h4">{route.title}</span>
-													<span>{route.entryCardText}</span>
-												</div>
-												<i
-													className="at-arrow-right small"
-													aria-hidden="true"
-												></i>
-											</div>
-										)}
+										<div className="cards-icon">
+											<i
+												className={`${route.icon.name} small mr-3`}
+												aria-hidden="true"
+											></i>
+										</div>
+										<span className="h4">{route.entryCardText}</span>
+										<div className="cards-content">
+											<span>{route.entryCardText}</span>
+										</div>
+										<div className="cards-cta">
+											<span className="arrow"></span>
+										</div>
 									</Link>
 								</div>
 							</React.Fragment>
 						))}
 					<div className="col-12 col-sm-6 col-lg-3 d-flex">
-						<Link to={"/utilities"} className="cards cards-primary">
+						<Link to={"/utilities"} className="cards">
 							<div className="cards-icon">
 								<i className="at-build-wall small" aria-hidden="true"></i>
 							</div>
+							<span className="h4">Utilities</span>
 							<div className="cards-content">
-								<span className="h4">Utilities</span>
 								<span>Utility cheat sheet</span>
 							</div>
-							<i className="at-arrow-right small" aria-hidden="true"></i>
+							<div className="cards-cta">
+								<span className="arrow"></span>
+							</div>
 						</Link>
 					</div>
 				</div>
