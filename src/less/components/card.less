@@ -3,7 +3,7 @@
 // TODO: sera que el card title TIENE que llevar la clase .h4 ? or ponemos un title mas abstracto?
 // provide fallback style pa support a los que no han hecho la migracion, chequeando si llevas unas de las nuevas clases (e.g. .cards-cta) -> pa ellos provide un fallback style as close as possible, until next Major release
 
-.cards {
+.cards:has(.cards-cta) {
 	--border-radius: 16px;
 	--cards-light-gray: var(--base-5);
 	--cards-dark-gray: var(--base-2);
@@ -35,6 +35,12 @@
 	cursor: pointer;
 	transition: var(--transition-duration);
 	overflow: clip;
+
+	&:hover {
+		.cards-cta span.arrow:before {
+			animation: scroll 0.5s ease-in-out;
+		}
+	}
 
 	// start padding
 
@@ -85,6 +91,14 @@
 		line-height: inherit;
 	}
 	// end button specific styling
+
+	.title-icon {
+		grid-area: icon;
+		padding-block-end: 1.25lh; // this is meant to ensure the same gap below title-icon and title-text, since at of now text-box-trim does not exist, so we cannot enforce a consistant spacing between the title part and the text-content part. Once text-box-trim is widely supported remove it and add text-box-trim to the title-text
+		width: 24px;
+		height: 24px;
+		margin-inline-end: 0.5rem;
+	}
 
 	&:has(> img:first-child) {
 		grid-template-areas:
@@ -278,25 +292,36 @@
 		color: var(--brand-secondary);
 	}
 
-	// forward arrow icon at the bottom of the card
-	> i,
-	.cards-cta i {
-		width: 24px;
-		height: 24px;
-		margin-inline-end: 0.5rem;
-
-		&.material-icons {
-			font-size: 18px;
-			margin-top: 3px;
-		}
+	.cards-content {
+		text-align: start;
+		grid-area: text-content;
 	}
 
 	// so far NOT set as mandatory parent of i (arrow at bottom of card) so don't break existing cards
 	.cards-cta {
+		grid-area: cta;
 		align-self: end;
 		display: flex;
 		gap: 0.5rem;
 		margin-block-start: calc(2rem - var(--grid-min-gap));
+
+		& span.arrow {
+			width: 40px;
+			transition: all 0.5s ease;
+			display: grid;
+			overflow: clip;
+
+			&:before {
+				place-self: center;
+				content: "";
+				width: 18px;
+				height: 18px;
+				display: block;
+				mask: url("../../icons/shapes/arrow-right.svg") 0 0 / 18px 18px
+					no-repeat;
+				background-color: currentColor;
+			}
+		}
 	}
 
 	.cards-icon {
@@ -305,10 +330,204 @@
 	}
 
 	.h4 {
+		grid-area: title;
 		font-family: var(--brand-headline);
 		text-align: start;
 		margin-block: 0;
 		transition: all var(--transition-duration) cubic-bezier(1, 0, 0, 1);
+	}
+
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+			opacity: 1;
+		}
+
+		49.9% {
+			transform: translateX(150%);
+			opacity: 1;
+		}
+
+		49.91% {
+			opacity: 0;
+		}
+
+		50.09% {
+			opacity: 1;
+		}
+
+		50.1% {
+			transform: translateX(-150%);
+		}
+
+		100% {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+}
+
+// TODO: silent support for non-migrated cards. Remove during next major release
+.cards:not(:has(.cards-cta)) {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	position: relative;
+	padding: 2.25rem 1.5rem 1.5rem;
+	margin: 2rem 0 1rem;
+	border-radius: 4px;
+	box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+	color: @brand-secondary;
+	text-decoration: none;
+	background-color: @white;
+	cursor: pointer;
+	transition: 0.5s;
+
+	&:after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		content: "";
+		width: 100%;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+	&:hover {
+		box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.15);
+		color: @brand-secondary;
+
+		&:after {
+			opacity: 1;
+		}
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 2px @brand-secondary;
+		outline: 2px solid transparent;
+		color: @brand-secondary;
+
+		&:after {
+			opacity: 1;
+		}
+	}
+
+	&.cards-primary {
+		&:after {
+			border-bottom: 4px solid @brand-primary;
+		}
+
+		> i {
+			color: @brand-secondary;
+		}
+
+		.cards-icon {
+			color: @brand-secondary;
+			background-color: @brand-primary;
+
+			svg {
+				fill: @brand-secondary;
+			}
+		}
+	}
+
+	&.cards-secondary {
+		&:after {
+			border-bottom: 4px solid @brand-secondary-info-1;
+		}
+
+		.cards-icon {
+			background-color: @brand-secondary-info-1;
+
+			svg {
+				fill: @white;
+			}
+		}
+	}
+
+	&.cards-tertiary {
+		&:after {
+			border-bottom: 4px solid @brand-secondary-info-2;
+		}
+
+		.cards-icon {
+			background-color: @brand-secondary-info-2;
+
+			svg {
+				fill: @white;
+			}
+		}
+	}
+
+	&.cards-wide {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 1.5rem;
+		margin-top: 2.25rem;
+
+		> i {
+			margin-top: initial;
+		}
+
+		.cards-icon {
+			font-family: var(--brand-monofont);
+			height: 2rem;
+			top: -1rem;
+		}
+
+		.cards-content {
+			margin-bottom: 0;
+			margin-top: 0.75rem;
+
+			.h3 {
+				margin-top: 0;
+				margin-bottom: 0.25rem;
+			}
+		}
+	}
+
+	> i {
+		margin-top: auto;
+	}
+
+	> img {
+		margin: -2.25rem -1.5rem 1rem;
+		object-fit: cover;
+		max-height: 130px;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+	}
+
+	.cards-icon {
+		display: flex;
+		position: absolute;
+		top: -1.25rem;
+		left: 1.5rem;
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 4px;
+		align-items: center;
+		justify-content: center;
+		color: @brand-secondary;
+		background-color: @brand-primary;
+
+		svg {
+			max-width: 24px;
+		}
+	}
+
+	.cards-content {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1.25rem;
+
+		.h4 {
+			font-family: var(--brand-headline);
+			margin-top: 0;
+		}
 	}
 }
 
@@ -472,78 +691,4 @@
 			outline: 5px solid;
 		}
 	}
-}
-
-// TESTS for arrow animations
-// display icon chevron-right.svg and on .cards hover animate from left near the text to the right side stuck to the right padding
-#designguide .cards {
-	.cards-cta span.arrow {
-		width: 40px;
-		transition: all 0.5s ease;
-		display: grid;
-		overflow: clip;
-
-		&:before {
-			place-self: center;
-			content: "";
-			width: 18px;
-			height: 18px;
-			display: block;
-			mask: url("../../icons/shapes/arrow-right.svg") 0 0 / 18px 18px no-repeat;
-			background-color: currentColor;
-		}
-	}
-
-	&:hover {
-		.cards-cta span.arrow:before {
-			animation: scroll 0.5s ease-in-out;
-		}
-	}
-
-	@keyframes scroll {
-		0% {
-			transform: translateX(0);
-			opacity: 1;
-		}
-
-		49.9% {
-			transform: translateX(150%);
-			opacity: 1;
-		}
-
-		49.91% {
-			opacity: 0;
-		}
-
-		50.09% {
-			opacity: 1;
-		}
-
-		50.1% {
-			transform: translateX(-150%);
-		}
-
-		100% {
-			transform: translateX(0);
-			opacity: 1;
-		}
-	}
-}
-
-span.h4 {
-	grid-area: title;
-}
-
-.title-icon {
-	grid-area: icon;
-	padding-block-end: 1.25lh; // this is meant to ensure the same gap below title-icon and title-text, since at of now text-box-trim does not exist, so we cannot enforce a consistant spacing between the title part and the text-content part. Once text-box-trim is widely supported remove it and add text-box-trim to the title-text
-}
-
-.cards-content {
-	text-align: start;
-	grid-area: text-content;
-}
-
-.cards-cta {
-	grid-area: cta;
 }
