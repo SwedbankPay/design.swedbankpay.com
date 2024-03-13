@@ -29,26 +29,16 @@ const Cards = ({
 	<>
 		{/* TODO: set conditional <a> || <button> */}
 		<OuterTagElement isButton={isButton} isWide={isWide}>
-			{imgSrc &&
-				(isWide ? (
-					<div className="card-image">
-						{"\n"}
-						<img
-							className={imgRatio ?? ""}
-							src={imgSrc}
-							alt="alt text to be set"
-						/>
-					</div>
-				) : (
-					<>
-						{"\n"}
-						<img
-							className={imgRatio ?? ""}
-							src={imgSrc}
-							alt="alt text to be set"
-						/>
-					</>
-				))}
+			{imgSrc && (
+				<>
+					{"\n"}
+					<img
+						className={imgRatio ?? ""}
+						src={imgSrc}
+						alt="alt text to be set"
+					/>
+				</>
+			)}
 			{/* no icon displayed if an image used as illustration */}
 			{iconClasses && !imgSrc && (
 				<>
@@ -65,14 +55,14 @@ const Cards = ({
 			{(hasTextContent || children) && (
 				<>
 					{"\n"}
-					<div className="card-content">
+					<div className="cards-content">
 						{textContent}
 						{children && children}
 					</div>
 				</>
 			)}
 			{"\n"}
-			<div className="card-cta">
+			<div className="cards-cta">
 				{"\n"}
 				{hasCTAText && (!isWide || imgSrc) && <span>Continue</span>}
 				<span className="arrow"></span>

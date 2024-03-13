@@ -1,7 +1,7 @@
 @import "../global.less";
 
 // TODO: sera que el card title TIENE que llevar la clase .h4 ? or ponemos un title mas abstracto?
-// provide fallback style pa support a los que no han hecho la migracion, chequeando si llevas unas de las nuevas clases (e.g. .card-cta) -> pa ellos provide un fallback style as close as possible, until next Major release
+// provide fallback style pa support a los que no han hecho la migracion, chequeando si llevas unas de las nuevas clases (e.g. .cards-cta) -> pa ellos provide un fallback style as close as possible, until next Major release
 
 .cards {
 	--border-radius: 16px;
@@ -25,7 +25,6 @@
 	min-width: var(--min-width);
 	max-width: var(--max-width);
 	min-height: 200px;
-	// padding: var(--padding-outer);
 	padding: 0;
 	margin: 2rem 0 1rem;
 	border: none;
@@ -44,7 +43,7 @@
 		padding-inline-end: var(--padding-outer);
 	}
 
-	&:not(.cards-wide):has(.card-image, > img:first-child) .h4 {
+	&:not(.cards-wide):has(> img:first-child) .h4 {
 		padding-block-start: 0;
 	}
 
@@ -56,24 +55,24 @@
 		padding-inline-start: var(--padding-outer);
 	}
 
-	.card-content {
+	.cards-content {
 		padding-inline: var(--padding-outer);
 	}
 
-	.card-cta {
+	.cards-cta {
 		padding-block-end: var(--padding-outer);
 		padding-inline: var(--padding-outer);
 	}
 
-	&.cards-wide .card-content {
+	&.cards-wide .cards-content {
 		padding-block-end: var(--padding-outer);
 	}
 
-	&.cards-wide:has(.card-image)
-		:is(.h4, .title-icon, .card-content, .card-cta) {
+	&.cards-wide:has(> img:first-child)
+		:is(.h4, .title-icon, .cards-content, .cards-cta) {
 		padding-inline-start: 0;
 
-		&:is(.card-content) {
+		&:is(.cards-content) {
 			padding-block-end: 0;
 		}
 	}
@@ -121,7 +120,6 @@
 			grid-area: image;
 			object-fit: cover;
 			margin: 0;
-
 			position: absolute;
 
 			&.ratio-1-1 {
@@ -164,7 +162,7 @@
 			grid-template-rows: auto auto;
 		}
 
-		&:not(:has(.card-content)) {
+		&:not(:has(.cards-content)) {
 			grid-template-areas: "icon title cta";
 			grid-template-rows: min-content;
 
@@ -173,7 +171,7 @@
 			}
 		}
 
-		.card-cta {
+		.cards-cta {
 			margin-block-start: 0;
 			height: 100%;
 			justify-self: end;
@@ -181,65 +179,41 @@
 			& :not(.arrow) {
 				display: none;
 			}
-
-			// TODO: add images to .cards-wide, and style grid-areas for each of its variants (icon / title / text-content / ... or not)
-			// if images then no icon
 		}
 
-		// &:has(> img:first-child) {
-		// 	grid-template-areas:
-		// 		"image title cta"
-		// 		"image text-content cta";
-		// 	grid-template-columns: auto 1fr auto;
-
-		// 	&:before {
-		// 		content: "";
-		// 		aspect-ratio: 1;
-		// 		height: calc(100% + 2 * var(--padding-outer) + var(--grid-min-gap));
-		// 		width: auto;
-		// 		margin: calc(0px - var(--padding-outer))
-		// 			calc(0px - var(--padding-outer)) 0;
-		// 		grid-area: image;
-		// 	}
-
-		// 	& img {
-		// 		width: auto;
-		// 		aspect-ratio: 1;
-		// 		height: calc(100% + 2 * var(--padding-outer) + var(--grid-min-gap));
-		// 	}
-		// }
-
-		&:not(:has(> .card-image)) {
+		&:not(:has(> img:first-child)) {
 			grid-template-rows: auto auto;
 
-			& .card-cta {
+			& .cards-cta {
 				padding-block-end: 0;
 			}
 		}
 
-		&:not(:has(> .card-image)):not(:has(.h4)) {
+		&:not(:has(> img:first-child)):not(:has(.h4)) {
 			grid-template-areas: "icon text-content cta";
 			grid-template-columns: auto 1fr min-content;
 			grid-template-rows: auto;
 			padding: var(--padding-outer);
 
-			& :is(.title-icon, .card-content, .card-cta) {
+			& :is(.title-icon, .cards-content, .cards-cta) {
 				padding: 0;
 			}
 		}
 
-		&:not(:has(> .card-image)):not(:has(.title-icon)):not(:has(.card-content)) {
+		&:not(:has(> img:first-child)):not(:has(.title-icon)):not(
+				:has(.cards-content)
+			) {
 			grid-template-areas: "title cta";
 			grid-template-columns: 1fr min-content;
 			grid-template-rows: auto;
 			padding: var(--padding-outer);
 
-			& :is(.h4, .card-cta) {
+			& :is(.h4, .cards-cta) {
 				padding: 0;
 			}
 		}
 
-		&:has(> .card-image) {
+		&:has(> img:first-child) {
 			grid-template-areas:
 				"image title"
 				"image text-content"
@@ -250,7 +224,7 @@
 			min-width: 600px;
 			grid-column-gap: var(--padding-outer);
 
-			& .card-cta {
+			& .cards-cta {
 				justify-self: start;
 				height: min-content;
 
@@ -259,27 +233,26 @@
 				}
 			}
 
-			.card-image {
-				// width: 100%;
+			&:before {
 				grid-area: image;
 				object-fit: cover;
 				position: relative;
 				margin: 0;
 				height: 224px;
 				aspect-ratio: 1;
-
-				& img {
-					max-width: 100%;
-					object-fit: cover;
-					width: 100%;
-					height: 100%;
-					max-height: 100%;
-					position: absolute;
-					left: 0;
-				}
 			}
 
-			&:not(:has(.card-content)) {
+			& img:first-child {
+				max-width: 100%;
+				object-fit: cover;
+				width: auto;
+				height: 100%;
+				max-height: 100%;
+				position: absolute;
+				left: 0;
+			}
+
+			&:not(:has(.cards-content)) {
 				grid-template-areas:
 					"image title"
 					"image cta";
@@ -307,7 +280,7 @@
 
 	// forward arrow icon at the bottom of the card
 	> i,
-	.card-cta i {
+	.cards-cta i {
 		width: 24px;
 		height: 24px;
 		margin-inline-end: 0.5rem;
@@ -319,20 +292,12 @@
 	}
 
 	// so far NOT set as mandatory parent of i (arrow at bottom of card) so don't break existing cards
-	.card-cta {
+	.cards-cta {
 		align-self: end;
 		display: flex;
 		gap: 0.5rem;
 		margin-block-start: calc(2rem - var(--grid-min-gap));
 	}
-
-	// > img {
-	// 	margin: -2.25rem -1.5rem 1rem;
-	// 	object-fit: cover;
-	// 	max-height: 130px;
-	// 	border-top-left-radius: 4px;
-	// 	border-top-right-radius: 4px;
-	// }
 
 	.cards-icon {
 		color: currentColor;
@@ -512,7 +477,7 @@
 // TESTS for arrow animations
 // display icon chevron-right.svg and on .cards hover animate from left near the text to the right side stuck to the right padding
 #designguide .cards {
-	.card-cta span.arrow {
+	.cards-cta span.arrow {
 		width: 40px;
 		transition: all 0.5s ease;
 		display: grid;
@@ -530,7 +495,7 @@
 	}
 
 	&:hover {
-		.card-cta span.arrow:before {
+		.cards-cta span.arrow:before {
 			animation: scroll 0.5s ease-in-out;
 		}
 	}
@@ -574,11 +539,11 @@ span.h4 {
 	padding-block-end: 1.25lh; // this is meant to ensure the same gap below title-icon and title-text, since at of now text-box-trim does not exist, so we cannot enforce a consistant spacing between the title part and the text-content part. Once text-box-trim is widely supported remove it and add text-box-trim to the title-text
 }
 
-.card-content {
+.cards-content {
 	text-align: start;
 	grid-area: text-content;
 }
 
-.card-cta {
+.cards-cta {
 	grid-area: cta;
 }
