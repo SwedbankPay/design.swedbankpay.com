@@ -43,7 +43,7 @@ const Cards = ({
 			{iconClasses && !imgSrc && (
 				<>
 					{"\n"}
-					<i className={`title-icon ${iconClasses}`} aria-hidden="true"></i>
+					<i className={`cards-icon ${iconClasses}`} aria-hidden="true"></i>
 				</>
 			)}
 			{hasTitle && (

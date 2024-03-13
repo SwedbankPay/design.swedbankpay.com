@@ -53,11 +53,11 @@
 		padding-block-start: 0;
 	}
 
-	.title-icon {
+	.cards-icon {
 		padding-block-start: var(--padding-outer);
 	}
 
-	:is(.h4, .title-icon) {
+	:is(.h4, .cards-icon) {
 		padding-inline-start: var(--padding-outer);
 	}
 
@@ -75,7 +75,7 @@
 	}
 
 	&.cards-wide:has(> img:first-child)
-		:is(.h4, .title-icon, .cards-content, .cards-cta) {
+		:is(.h4, .cards-icon, .cards-content, .cards-cta) {
 		padding-inline-start: 0;
 
 		&:is(.cards-content) {
@@ -92,7 +92,7 @@
 	}
 	// end button specific styling
 
-	.title-icon {
+	.cards-icon {
 		grid-area: icon;
 		padding-block-end: 1.25lh; // this is meant to ensure the same gap below title-icon and title-text, since at of now text-box-trim does not exist, so we cannot enforce a consistant spacing between the title part and the text-content part. Once text-box-trim is widely supported remove it and add text-box-trim to the title-text
 		width: 24px;
@@ -146,7 +146,7 @@
 		}
 	}
 
-	&:not(:has(.title-icon)) {
+	&:not(:has(.cards-icon)) {
 		grid-template-areas:
 			"title title"
 			"text-content text-content"
@@ -168,7 +168,7 @@
 		min-height: unset;
 		min-width: 450px;
 
-		&:not(:has(.title-icon)) {
+		&:not(:has(.cards-icon)) {
 			grid-template-areas:
 				"title cta"
 				"text-content cta";
@@ -180,7 +180,7 @@
 			grid-template-areas: "icon title cta";
 			grid-template-rows: min-content;
 
-			&:not(:has(.title-icon)) {
+			&:not(:has(.cards-icon)) {
 				grid-template-areas: "title cta";
 			}
 		}
@@ -209,12 +209,12 @@
 			grid-template-rows: auto;
 			padding: var(--padding-outer);
 
-			& :is(.title-icon, .cards-content, .cards-cta) {
+			& :is(.cards-icon, .cards-content, .cards-cta) {
 				padding: 0;
 			}
 		}
 
-		&:not(:has(> img:first-child)):not(:has(.title-icon)):not(
+		&:not(:has(> img:first-child)):not(:has(.cards-icon)):not(
 				:has(.cards-content)
 			) {
 			grid-template-areas: "title cta";
