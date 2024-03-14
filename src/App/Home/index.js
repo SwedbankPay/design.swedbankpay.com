@@ -59,21 +59,23 @@ const Home = () => {
 									<Link
 										to={route.path}
 										className={`cards ${
-											route.wideCard
-												? " cards-wide w-100 max-w-initial m-3"
-												: ""
+											route.wideCard ? " cards-wide max-w-initial m-3" : "w-100"
 										}`}
 									>
 										<div className="cards-icon">
 											<i
-												className={`${route.icon.name} small mr-3`}
+												className={`${route.icon.name} mr-3`}
 												aria-hidden="true"
 											></i>
 										</div>
-										<span className="h4">{route.entryCardText}</span>
-										<div className="cards-content">
-											<span>{route.entryCardText}</span>
-										</div>
+										<span className="h4">
+											{!route.wideCard ? route.title : route.entryCardText}
+										</span>
+										{!route.wideCard && (
+											<div className="cards-content">
+												<span>{route.entryCardText}</span>
+											</div>
+										)}
 										<div className="cards-cta">
 											<span className="arrow"></span>
 										</div>
@@ -82,9 +84,9 @@ const Home = () => {
 							</React.Fragment>
 						))}
 					<div className="col-12 col-sm-6 col-lg-3 d-flex">
-						<Link to={"/utilities"} className="cards">
+						<Link to={"/utilities"} className="cards w-100">
 							<div className="cards-icon">
-								<i className="at-build-wall small" aria-hidden="true"></i>
+								<i className="at-build-wall" aria-hidden="true"></i>
 							</div>
 							<span className="h4">Utilities</span>
 							<div className="cards-content">
