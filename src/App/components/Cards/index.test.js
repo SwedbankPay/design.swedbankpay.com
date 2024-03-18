@@ -43,7 +43,7 @@ describe("Component: Cards -", () => {
 		render(<Cards iconClasses="at-home" />);
 
 		expect(
-			screen.getByRole("link").querySelectorAll("i.title-icon").length,
+			screen.getByRole("link").querySelectorAll("i.cards-icon").length,
 		).toBe(1);
 
 		const componentForSnap = renderer.create(<Cards iconClasses="at-home" />);
@@ -56,7 +56,7 @@ describe("Component: Cards -", () => {
 			<Cards hasTextContent={true} textContent="Text that goes in card body" />,
 		);
 
-		expect(container.querySelector(".card-content")).toHaveTextContent(
+		expect(container.querySelector(".cards-content")).toHaveTextContent(
 			"Text that goes in card body",
 		);
 

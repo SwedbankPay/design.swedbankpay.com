@@ -8,14 +8,14 @@ exports[`Component: Cards - renders a child object 1`] = `
   
 
   <div
-    className="card-content"
+    className="cards-content"
   >
     This is child text
   </div>
   
 
   <div
-    className="card-cta"
+    className="cards-cta"
   >
     
 
@@ -34,14 +34,14 @@ exports[`Component: Cards - renders a text in card-body 1`] = `
   
 
   <div
-    className="card-content"
+    className="cards-content"
   >
     Text that goes in card body
   </div>
   
 
   <div
-    className="card-cta"
+    className="cards-cta"
   >
     
 
@@ -67,7 +67,7 @@ exports[`Component: Cards - renders a title 1`] = `
   
 
   <div
-    className="card-cta"
+    className="cards-cta"
   >
     
 
@@ -86,7 +86,7 @@ exports[`Component: Cards - renders a wide card when wide is true 1`] = `
   
 
   <div
-    className="card-cta"
+    className="cards-cta"
   >
     
 
@@ -106,12 +106,12 @@ exports[`Component: Cards - renders an icon when icon is provided 1`] = `
 
   <i
     aria-hidden="true"
-    className="title-icon at-home"
+    className="cards-icon at-home"
   />
   
 
   <div
-    className="card-cta"
+    className="cards-cta"
   >
     
 
@@ -137,7 +137,7 @@ exports[`Component: Cards - renders an image 1`] = `
   
 
   <div
-    className="card-cta"
+    className="cards-cta"
   >
     
 
