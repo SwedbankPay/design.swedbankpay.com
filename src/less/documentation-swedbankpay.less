@@ -723,6 +723,27 @@
 			}
 		}
 
+		// in Playbook > Profiles > Design profiles
+		section:has(#design-profiles) .container .col {
+			padding: 2rem;
+			margin: 1rem;
+			border: 1px solid var(--brand-secondary-light-2);
+			text-align: center;
+			min-inline-size: 10rem;
+
+			&:nth-child(1) {
+				border-radius: 50px;
+			}
+
+			&:nth-child(2) {
+				border-radius: 20px;
+			}
+
+			&:nth-child(3) {
+				border-radius: 0;
+			}
+		}
+
 		.playbook-mozaic {
 			--gap: 10px;
 			--radius: 0;
