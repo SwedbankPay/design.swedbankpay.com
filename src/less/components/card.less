@@ -1,7 +1,5 @@
 @import "../global.less";
 
-// TODO: sera que el card title TIENE que llevar la clase .h4 ? or ponemos un title mas abstracto?
-
 .cards:has(.cards-cta) {
 	--border-radius: 16px;
 	--cards-light-gray: var(--base-5);
@@ -264,7 +262,7 @@
 				aspect-ratio: 1;
 			}
 
-			& img:first-child {
+			& > img:first-child {
 				max-width: 100%;
 				object-fit: cover;
 				width: auto;
@@ -272,6 +270,7 @@
 				max-height: 100%;
 				position: absolute;
 				left: 0;
+				aspect-ratio: 1;
 			}
 
 			&:not(:has(.cards-content)) {
@@ -303,7 +302,6 @@
 		grid-area: text-content;
 	}
 
-	// so far NOT set as mandatory parent of i (arrow at bottom of card) so don't break existing cards
 	.cards-cta {
 		grid-area: cta;
 		align-self: end;

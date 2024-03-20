@@ -5,8 +5,6 @@ import "@testing-library/jest-dom";
 
 import Cards from "./index";
 
-// TODO: go through each change made to evaluate if necessary (both internal changes to the React component && especially externally to classes made etc), and if necessary then document it
-
 describe("Component: Cards -", () => {
 	it("is defined", () => {
 		expect(Cards).toBeDefined();

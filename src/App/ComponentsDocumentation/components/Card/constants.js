@@ -225,12 +225,12 @@ export const overviewCards = {
 								},
 							},
 							{
-								name: "With image - 1/1 ratio",
+								name: "With image",
 								value: {
 									imgSrc:
 										"https://design.swedbankpay.com/v/10.10.1/img/documentation/imagery/women-on-bus.svg",
 									icon: null,
-									imgRatio: "ratio-1-1",
+									imgRatio: null,
 								},
 							},
 						],

@@ -27,7 +27,6 @@ const Cards = ({
 	imgRatio,
 }) => (
 	<>
-		{/* TODO: set conditional <a> || <button> */}
 		<OuterTagElement isButton={isButton} isWide={isWide}>
 			{imgSrc && (
 				<>
@@ -78,8 +77,11 @@ Cards.propTypes = {
 	iconClasses: PropTypes.string,
 	textContent: PropTypes.string,
 	children: PropTypes.object,
-	wide: PropTypes.bool,
 	imgRatio: PropTypes.string,
+	hasTextContent: PropTypes.bool,
+	isWide: PropTypes.bool,
+	isButton: PropTypes.bool,
+	hasCTAText: PropTypes.bool,
 };
 
 export default Cards;
