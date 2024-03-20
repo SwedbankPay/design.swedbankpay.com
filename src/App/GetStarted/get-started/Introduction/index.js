@@ -17,27 +17,31 @@ const GetStarted = () => (
 		</p>
 
 		<div className="component-overview">
-			<Link to="../for-developers" className="cards cards-primary">
+			<Link to="../for-developers" className="cards">
 				<div className="cards-icon">
 					<i className="at-programming" aria-hidden="true"></i>
 				</div>
+				<span className="h4">For developers</span>
 				<div className="cards-content">
-					<span className="h4">For developers</span>
 					<span>Learn more about how to setup and use our system.</span>
 				</div>
-				<i className="at-arrow-right small" aria-hidden="true"></i>
+				<div className="cards-cta">
+					<span className="arrow"></span>
+				</div>
 			</Link>
-			<Link to="../for-designers" className="cards cards-primary">
+			<Link to="../for-designers" className="cards">
 				<div className="cards-icon">
 					<i className="at-paintbrush" aria-hidden="true"></i>
 				</div>
+				<span className="h4">For designers</span>
 				<div className="cards-content">
-					<span className="h4">For designers</span>
 					<span>
 						Get ready to use the Design Guide when designing in {brandTitle}.
 					</span>
 				</div>
-				<i className="at-arrow-right small" aria-hidden="true"></i>
+				<div className="cards-cta">
+					<span className="arrow"></span>
+				</div>
 			</Link>
 		</div>
 	</section>

@@ -15,16 +15,25 @@ const MenuOverview = () => (
 					<Link
 						key={card.title}
 						to={`../${card.path}`}
-						className="cards cards-primary cards-wide"
+						className="cards cards-wide min-w-initial"
 					>
-						<div className="cards-content flex-row align-items-center m-0 ">
-							<i className={`${card.icon} mr-3`} aria-hidden="true"></i>
-							<span className="h3 m-0">{card.title}</span>
+						<i
+							className={`${card.icon} cards-icon align-self-center mb-1`}
+							aria-hidden="true"
+						></i>
+						<span
+							className={`h4 align-self-center ${card.deprecated ? "d-flex align-items-center" : ""}`}
+						>
+							{card.title}
 							{card.deprecated && (
-								<span className="badge badge-deprecated ml-3">Deprecated</span>
+								<span className="badge badge-deprecated ml-auto">
+									Deprecated
+								</span>
 							)}
+						</span>
+						<div className="cards-cta">
+							<span className="arrow"></span>
 						</div>
-						<i className="at-arrow-right small" aria-hidden="true"></i>
 					</Link>
 				),
 		)}

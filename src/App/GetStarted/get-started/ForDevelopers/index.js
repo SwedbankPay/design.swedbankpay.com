@@ -461,13 +461,15 @@ const DiscoverMore = () => (
 				<NavLink
 					key={card.url}
 					to={card.url}
-					className="cards cards-primary cards-wide"
+					className="cards cards-wide min-w-initial"
 				>
-					<div className="cards-content m-0">
-						<span className="h3">{card.title}</span>
+					<span className="h4">{card.title}</span>
+					<div className="cards-content">
 						<span>{card.text}</span>
 					</div>
-					<i className="at-arrow-right small" aria-hidden="true"></i>
+					<div className="cards-cta">
+						<span className="arrow"></span>
+					</div>
 				</NavLink>
 			))}
 		</div>
