@@ -4,24 +4,12 @@
 
 ## Component changes
 
-### Non breaking UI changes
+- Cards
 
-- Icons migration step 2 (still non-breaking. But the migrations is decided and is happening, so move when you can. Silent support of Material-icons until next major version release).
-  - Toast icons are modified. Since Toast is created entirely via a script shipped in the package, nothing is requiring from devs consuming the package. But expect a change in the icon used by the Toast component.
+## Technical changes
 
-### NON Breaking UI changes BUT CAN & SHOULD modify code when have time
-
-- Tags
-  - the close icon is now a cross set via CSS only, no need to add an `<i>` element anymore
-- Dialog
-  - the close icon is now a cross set via CSS only, no need to add an `<i>` element anymore
-- Progress steps
-  - the "check" icon for steps completed should be converted to `<i class="completed steps-icon"></i>`
-
-### UI bugfixes
-
-- Input addon (pre or post input) color when input is disabled
+- Dependencies updates (finished all Node -> 20 update for pipeline)
 
 ## Design System website
 
-- Migrate icons used on the DS documentation website from Material-icons to Atlas + Swepay-icon custom icons
+- update Playbook Profiles content
