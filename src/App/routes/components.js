@@ -71,6 +71,7 @@ module.exports = [
 				rootPath: "/components/cards",
 				componentPath: "components/Card",
 				icon: "at-square-mirror",
+				statusBadges: ["updated"],
 			},
 			{
 				title: "Charts",
