@@ -5,6 +5,35 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.11.0",
+		title: "Cards UI update",
+		text: (
+			<>
+				<p>
+					Cards are receiving a major revamp. Not one of those cheap Hollywood
+					actor revamps they undergo when they sense their days are numbered.
+					No. A kind of revamp like when you return from living and studying
+					abroad and feel like a new person. That kind of revamp.
+				</p>
+				<p>
+					The new card component is more flexible. It's getting a fresh look and
+					additional combinations (img, icon, cta text and arrow, etc).
+				</p>
+				<p>
+					You still have the option for wide cards or not. But then you can
+					basically mix and match whatever you want. Or almost. Some
+					combinations are forbidden. Because that's life. Some things you can
+					do, and some you cannot. We decide; we make the rules. Too bad.
+				</p>
+				<p>
+					That being said, in cards-content, there, you can definitely add
+					anything you want. Now, we recommend following your <s>doctor</s>{" "}
+					designer's advice anyway.
+				</p>
+			</>
+		),
+	},
+	{
 		version: "10.10.1",
 		title: "Icons migration - step 2/2",
 		text: (

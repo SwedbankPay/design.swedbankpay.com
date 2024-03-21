@@ -112,22 +112,26 @@ const DiscoverMore = () => (
 	<section>
 		<h2 id="discover-more">Discover more</h2>
 		<div className="component-overview hide-arrow-icon">
-			<Link to="/identity/" className="cards cards-primary cards-wide">
-				<div className="cards-content m-0">
-					<span className="h3">Identity</span>
+			<Link to="/identity/" className="cards cards-wide min-w-initial">
+				<span className="h4">Identity</span>
+				<div className="cards-content">
 					<span>The philosophy behind our designs </span>
 				</div>
-				<i className="at-arrow-right small" aria-hidden="true"></i>
+				<div className="cards-cta">
+					<span className="arrow"></span>
+				</div>
 			</Link>
 			<Link
 				to="/components/components"
-				className="cards cards-primary cards-wide"
+				className="cards cards-wide min-w-initial"
 			>
-				<div className="cards-content m-0">
-					<span className="h3">Component</span>
+				<span className="h4">Component</span>
+				<div className="cards-content">
 					<span>See all available components</span>
 				</div>
-				<i className="at-arrow-right small" aria-hidden="true"></i>
+				<div className="cards-cta">
+					<span className="arrow"></span>
+				</div>
 			</Link>
 		</div>
 	</section>

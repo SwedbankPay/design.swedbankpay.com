@@ -44,12 +44,12 @@ jobs:
           echo "{ \"latestVersion\" : \"${{ steps.variables.outputs.BRANCH }}\" }" > ./dist/latestVersion.json
 
       - name: Azure Login
-        uses: azure/login@v1.6.1
+        uses: azure/login@v2.0.0
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS_STAGE }}
 
       - name: Azure Deploy
-        uses: azure/CLI@v1
+        uses: azure/CLI@v2
         with:
           azcliversion: 2.43.0
           inlineScript: |

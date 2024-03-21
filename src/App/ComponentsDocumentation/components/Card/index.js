@@ -2,7 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { ComponentPreview, DocContainer, StatusBadge } from "@docutils";
+
+// TODO: remove this Card import during next major release, not offered for a long time now
 import CardComponent from "@components/Card";
+
 import MediaObject from "@components/MediaObject";
 import CodeTags from "@components/CodeTags";
 import { overviewCards } from "./constants";
@@ -88,6 +91,7 @@ const Overview = () => (
 	</>
 );
 
+// TODO: remove during next major release, not offered for a long time now
 const OldCard = () => (
 	<>
 		<h2 id="old-card">Old card</h2>

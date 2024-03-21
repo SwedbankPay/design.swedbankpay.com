@@ -42,12 +42,12 @@ jobs:
           echo "{ \"latestVersion\" : \"${{ steps.variables.outputs.VERSION }}\" }" > ./dist/latestVersion.json
 
       - name: Azure Login
-        uses: azure/login@v1.6.1
+        uses: azure/login@v2.0.0
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Azure Deploy
-        uses: azure/CLI@v1
+        uses: azure/CLI@v2
         with:
           azcliversion: 2.43.0
           inlineScript: |
@@ -56,7 +56,7 @@ jobs:
       - name: Create Release
         # Only create a release on one brand to avoid duplicate error
         if: contains(matrix.brand, 'swedbankpay')
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           name: Design Guide v${{ steps.variables.outputs.VERSION }}

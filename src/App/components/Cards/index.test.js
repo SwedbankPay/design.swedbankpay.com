@@ -10,82 +10,56 @@ describe("Component: Cards -", () => {
 		expect(Cards).toBeDefined();
 	});
 
-	it("throws an error if type does not match proptypes", () => {
-		console.error = jest.fn();
-
-		render(<Cards type="error" />);
-
-		expect(console.error).toHaveBeenCalled();
-
-		const componentForSnap = renderer.create(<Cards type="error" />);
-
-		expect(componentForSnap.toJSON()).toMatchSnapshot();
-	});
-
-	it("renders with correct type", () => {
-		render(<Cards type="secondary" />);
-
-		expect(screen.getByRole("link")).toHaveClass("cards-secondary");
-
-		const componentForSnap = renderer.create(<Cards type="secondary" />);
-
-		expect(componentForSnap.toJSON()).toMatchSnapshot();
-	});
-
 	it("renders a title", () => {
-		render(<Cards type="secondary" titleTxt="Card title goes here" />);
+		render(<Cards hasTitle={true} titleTxt="Card title goes here" />);
 
 		expect(screen.getByRole("link").getElementsByClassName("h4").length).toBe(
-			1
+			1,
 		);
 		expect(screen.getByRole("link").querySelector(".h4")).toHaveTextContent(
-			"Card title goes here"
+			"Card title goes here",
 		);
 
 		const componentForSnap = renderer.create(
-			<Cards type="secondary" titleTxt="Card title goes here" />
+			<Cards hasTitle={true} titleTxt="Card title goes here" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
 	});
 
 	it("renders an image", () => {
-		render(<Cards type="secondary" imgSrc="url.address" />);
+		render(<Cards imgSrc="url.address" />);
 
 		expect(screen.getByRole("img")).toHaveAttribute("src", "url.address");
 
-		const componentForSnap = renderer.create(
-			<Cards type="secondary" imgSrc="url.address" />
-		);
+		const componentForSnap = renderer.create(<Cards imgSrc="url.address" />);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
 	});
 
 	it("renders an icon when icon is provided", () => {
-		render(<Cards type="secondary" icon={<>01</>} />);
+		render(<Cards iconClasses="at-home" />);
 
 		expect(
-			screen.getByRole("link").getElementsByClassName("cards-icon").length
+			screen.getByRole("link").querySelectorAll("i.cards-icon").length,
 		).toBe(1);
 
-		const componentForSnap = renderer.create(
-			<Cards type="secondary" icon={<>01</>} />
-		);
+		const componentForSnap = renderer.create(<Cards iconClasses="at-home" />);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
 	});
 
 	it("renders a text in card-body", () => {
 		const { container } = render(
-			<Cards type="secondary" text="Text that goes in card body" />
+			<Cards hasTextContent={true} textContent="Text that goes in card body" />,
 		);
 
 		expect(container.querySelector(".cards-content")).toHaveTextContent(
-			"Text that goes in card body"
+			"Text that goes in card body",
 		);
 
 		const componentForSnap = renderer.create(
-			<Cards type="secondary" text="Text that goes in card body" />
+			<Cards hasTextContent={true} textContent="Text that goes in card body" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -102,11 +76,11 @@ describe("Component: Cards -", () => {
 	});
 
 	it("renders a wide card when wide is true", () => {
-		render(<Cards type="secondary" wide />);
+		render(<Cards isWide={true} />);
 
 		expect(screen.getByRole("link")).toHaveClass("cards-wide");
 
-		const componentForSnap = renderer.create(<Cards type="secondary" wide />);
+		const componentForSnap = renderer.create(<Cards isWide={true} />);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
 	});

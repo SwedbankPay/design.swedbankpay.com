@@ -75,48 +75,48 @@ exports[`Patterns renders 1`] = `
       className="component-overview hide-arrow-icon"
     >
       <a
-        className="cards cards-primary cards-wide"
+        className="cards cards-wide min-w-initial"
         href="/forms"
         onClick={[Function]}
       >
-        <div
-          className="cards-content flex-row align-items-center m-0 "
-        >
-          <i
-            className="at-newspaper-newsletter small mr-3"
-          />
-          <span
-            className="h3 m-0"
-          >
-            Forms
-          </span>
-        </div>
         <i
           aria-hidden="true"
-          className="at-arrow-right small"
+          className="at-newspaper-newsletter cards-icon"
         />
+        <span
+          className="h4"
+        >
+          Forms
+        </span>
+        <div
+          className="cards-cta"
+        >
+          <span
+            className="arrow"
+          />
+        </div>
       </a>
       <a
-        className="cards cards-primary cards-wide"
+        className="cards cards-wide min-w-initial"
         href="/login"
         onClick={[Function]}
       >
-        <div
-          className="cards-content flex-row align-items-center m-0 "
-        >
-          <i
-            className="at-user-key small mr-3"
-          />
-          <span
-            className="h3 m-0"
-          >
-            Login
-          </span>
-        </div>
         <i
           aria-hidden="true"
-          className="at-arrow-right small"
+          className="at-user-key cards-icon"
         />
+        <span
+          className="h4"
+        >
+          Login
+        </span>
+        <div
+          className="cards-cta"
+        >
+          <span
+            className="arrow"
+          />
+        </div>
       </a>
     </section>
   </div>

@@ -46,41 +46,20 @@ const HowToUse = () => (
 
 const DesignProfiles = () => (
 	<section className="mt-5">
-		<h2 id="design-profiles">The design profiles:</h2>
+		<h2 id="design-profiles">The design profiles</h2>
 		<div className="container px-sm-0">
 			<div className="row">
-				<div className="col">
-					<img
-						className="w-100"
-						src={`${basename}img/documentation/playbook/playbook-profiles-profile-1.png`}
-						alt="content"
-						loading="lazy"
-					/>
-				</div>
-				<div className="col">
-					<img
-						className="w-100"
-						src={`${basename}img/documentation/playbook/playbook-profiles-profile-2.png`}
-						alt="Light UI"
-						loading="lazy"
-					/>
-				</div>
-				<div className="col">
-					<img
-						className="w-100"
-						src={`${basename}img/documentation/playbook/playbook-profiles-profile-3.png`}
-						alt="Expert UI"
-						loading="lazy"
-					/>
-				</div>
+				<div className="col">Inspiration</div>
+				<div className="col">Light UI</div>
+				<div className="col">Expert UI</div>
 			</div>
 		</div>
 	</section>
 );
 
-const Content = () => (
+const Inspiration = () => (
 	<section className="mt-5">
-		<h2 id="content">Content</h2>
+		<h2 id="inspiration">Inspiration</h2>
 		<p>
 			Here, our focus is on sparking curiosity and engagement. We aim to inspire
 			users to explore and discover through communication jam-packed with
@@ -370,7 +349,7 @@ const Profiles = () => (
 		/>
 		<HowToUse />
 		<DesignProfiles />
-		<Content />
+		<Inspiration />
 		<LightUI />
 		<ExpertUI />
 	</DocContainer>
