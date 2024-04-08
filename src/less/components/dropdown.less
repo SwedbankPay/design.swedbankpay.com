@@ -150,8 +150,14 @@
 		color: var(--brand-secondary);
 
 		&:hover {
-			box-shadow: inset 0 0 0 3px var(--btn-secondary-hover);
-			border-color: var(--btn-secondary-hover);
+			background-color: var(--btn-hover);
+			color: var(--white);
+			border-color: transparent;
+		}
+
+		&:not(.disabled):active {
+			outline: 3px solid var(--btn-active-color);
+			background-color: var(--btn-primary-color);
 		}
 
 		& i {
