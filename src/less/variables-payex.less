@@ -227,6 +227,7 @@ body {
 	--text-muted: color-mix(in srgb, var(--text-color), var(--white) 75%);
 	--text-link: #1c7d2e;
 	--text-hover: var(--brand-primary);
+	--text-disabled: var(--brand-secondary-light-2);
 
 	/* Checkbox */
 	--checkbox-checked-color: var(--brand-secondary, #3c3c3c);
@@ -268,7 +269,11 @@ body {
 
 	/* Shared button variables */
 	--btn-disabled-text: var(--text-disabled);
-	--btn-bg-disabled: rgb(212 196 188 / 30%);
+	--btn-bg-disabled: color-mix(
+		in oklch,
+		var(--text-disabled),
+		var(--white) 70%
+	);
 	--btn-active-color: var(--brand-secondary, #3c3c3c);
 
 	/* INPUTS COLORS */

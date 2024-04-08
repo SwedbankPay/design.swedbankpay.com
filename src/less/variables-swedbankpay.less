@@ -254,7 +254,11 @@
 	--btn-tertiary-disabled: var(--btn-bg-disabled);
 	// Shared button variables
 	--btn-disabled-text: var(--text-disabled);
-	--btn-bg-disabled: rgb(212 196 188 / 30%);
+	--btn-bg-disabled: color-mix(
+		in oklch,
+		var(--text-disabled),
+		var(--white) 70%
+	);
 	--btn-active-color: var(--brand-turquoise-light);
 
 	//FORM VALUES
