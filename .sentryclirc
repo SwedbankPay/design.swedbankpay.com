@@ -1,7 +1,0 @@
-[defaults]
-project=spay-designguide-dev
-org=payex
-url=https://sentry.io/
-
-[auth]
-token=<token>
