@@ -9,6 +9,8 @@
 
 ## Technical changes
 
-- chore deps (update deps packages)
+- chore deps (update deps packages minor versions)
+
+- remove Sentry from codebase
 
 ## Design System website

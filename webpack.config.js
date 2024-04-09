@@ -4,7 +4,6 @@ const webpack = require("webpack");
 const appRoutes = require("./tools/generate-routes-copy-array");
 const levelsToRoot = require("./tools/levels-to-root");
 const TerserPlugin = require("terser-webpack-plugin");
-const SentryCliPlugin = require("@sentry/webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
@@ -194,7 +193,6 @@ module.exports = (env, argv) => {
 				"process.env": {
 					basename: JSON.stringify(basename),
 					version: JSON.stringify(version),
-					sentry: isRelease,
 					isGitHubActions,
 					google: isRelease,
 					brand: JSON.stringify(brand),
@@ -233,19 +231,8 @@ module.exports = (env, argv) => {
 				title: `${brandTitle} Design Guide`,
 				basename,
 				chunks: ["dg", "dg-dashboard", brand],
-			})
+			}),
 		);
-
-		// Don't create new sentry release on GitHub Actions while we're using AppVeyor [THN]
-		if (!isGitHubActions) {
-			config.plugins.push(
-				new SentryCliPlugin({
-					release: version,
-					include: ".",
-					ignore: ["node_modules", "webpack.config.js"],
-				})
-			);
-		}
 	}
 
 	if (isProd && !isDevServer) {
@@ -436,7 +423,7 @@ module.exports = (env, argv) => {
 						},
 					],
 				},
-			})
+			}),
 		);
 	}
 
