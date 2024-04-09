@@ -15,6 +15,7 @@ const Radio = ({
 	style,
 	helpBlock,
 	errorMessage,
+	size = "small",
 }) => {
 	const attrs = {
 		type: "radio",
@@ -42,7 +43,10 @@ const Radio = ({
 						{style === "checkmark" ? (
 							<div className="radio-row">
 								{options.map(({ label, id, checked }, i) => (
-									<div className={`radio${style ? ` ${style}` : ""}`} key={i}>
+									<div
+										className={`radio${style ? ` ${style}` : ""} ${size === "large" ? "large" : ""}`}
+										key={i}
+									>
 										{"\n"}
 										<input {...attrs} id={id} defaultChecked={checked} />
 										{"\n"}
@@ -97,7 +101,9 @@ const Radio = ({
 				</form>
 			) : (
 				<>
-					<div className={`radio${style ? ` ${style}` : ""}`}>
+					<div
+						className={`radio${style ? ` ${style}` : ""} ${size === "large" ? "large" : ""}`}
+					>
 						{"\n"}
 						<input {...attrs} />
 						{"\n"}
@@ -130,6 +136,7 @@ Radio.propTypes = {
 	className: PropTypes.string,
 	style: PropTypes.string,
 	helpBlock: PropTypes.string,
+	size: PropTypes.oneOf(["small", "large"]),
 };
 
 export default Radio;

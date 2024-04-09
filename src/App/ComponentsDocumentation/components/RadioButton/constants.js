@@ -126,6 +126,24 @@ export const radiobuttonShowCase = {
 							},
 						],
 					},
+					{
+						id: "size_radio",
+						title: "Size modifiers",
+						values: [
+							{
+								name: "Small",
+								value: {
+									size: "small",
+								},
+							},
+							{
+								name: "Large",
+								value: {
+									size: "large",
+								},
+							},
+						],
+					},
 				],
 			},
 			title: "Checkmark buttons",
