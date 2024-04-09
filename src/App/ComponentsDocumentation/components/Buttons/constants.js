@@ -265,6 +265,12 @@ export const overviewButtons = {
 									bankId: "no",
 								},
 							},
+							{
+								name: "Denmark",
+								value: {
+									bankId: "dk",
+								},
+							},
 						],
 					},
 					{
@@ -319,8 +325,8 @@ export const overviewButtons = {
 				<p>
 					Use BankID buttons as the main call to action on a page when the
 					following action is signing or verifying something with BankID.
-					Currently only available for Swedish and Norwegian BankID. Avoid using
-					multiple BankID buttons on a single page.
+					Currently available for Swedish and Norwegian BankID as well as for
+					Danish MitId. Avoid using multiple BankID buttons on a single page.
 				</p>
 			),
 		},

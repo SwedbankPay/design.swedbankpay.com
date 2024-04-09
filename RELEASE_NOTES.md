@@ -4,9 +4,13 @@
 
 ## Component changes
 
+- Buttons
+  - add Danish MitId button style (you can use either `i.bank-id-dk` OR `i.mitid-dk`, both are supported)
+
 ## Technical changes
 
-- chore update deps minor versions
+- chore deps (update deps packages minor versions)
+
 - remove Sentry from codebase
 
 ## Design System website
