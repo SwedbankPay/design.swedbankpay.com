@@ -92,13 +92,7 @@ const IconButtonOptions = (idAddOn) => ({
 			title: "Sizes",
 			values: [
 				{
-					name: "Extra large",
-					value: {
-						size: "xl",
-					},
-				},
-				{
-					name: "Default (Large)",
+					name: "Large (default)",
 					value: {
 						size: "lg",
 					},
@@ -130,6 +124,7 @@ const IconButtonOptions = (idAddOn) => ({
 				},
 				{
 					name: "Secondary",
+					default: true,
 					value: {
 						variant: "secondary",
 					},

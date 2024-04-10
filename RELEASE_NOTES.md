@@ -9,7 +9,7 @@
   - labels line-height increased & mobile values adjusted, so values are in sync with `h4` typography style
 
 - Buttons
-  - minor non-breaking UI updates (height for size large, unify hover state)
+  - minor non-breaking UI updates (height for size large, unify hover state, modify active & focus-visible UI, and more)
   - add Danish MitId button style (you can use either `i.bank-id-dk` OR `i.mitid-dk`, both are supported)
 
 ## Technical changes
