@@ -18,13 +18,6 @@ import topbar from "./topbar";
 import utils from "./utils";
 import validation from "./validation";
 
-document.addEventListener("mousedown", () => {
-	document.body.classList.add("intent-mouse");
-});
-document.addEventListener("keydown", () => {
-	document.body.classList.remove("intent-mouse");
-});
-
 window.addEventListener("popstate", () => {
 	if (document.body.className.includes("has-vscroll")) {
 		document.body.classList.remove("has-vscroll");

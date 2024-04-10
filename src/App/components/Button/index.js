@@ -21,6 +21,7 @@ const Button = ({
 	bankId,
 	iconAfter,
 	iconOnly,
+	variant,
 }) => {
 	const btnClasses = classnames(
 		"btn",
@@ -32,6 +33,7 @@ const Button = ({
 		disabled && href ? "disabled" : null,
 		bankId ? "btn-bank-id" : null,
 		className ? className : null,
+		type === "icon" && variant ? `btn-${variant}` : null,
 	);
 
 	const attrs = {
@@ -112,6 +114,8 @@ Button.propTypes = {
 		"default",
 		"primary",
 		"secondary",
+		"tertiary",
+		"icon",
 		"link",
 		"guiding-destructive",
 		"executive-destructive",
@@ -131,6 +135,7 @@ Button.propTypes = {
 	input: PropTypes.bool,
 	active: PropTypes.bool,
 	size: PropTypes.oneOf([
+		"xl",
 		"lg",
 		"sm",
 		"xs",
@@ -143,6 +148,7 @@ Button.propTypes = {
 	className: PropTypes.string,
 	iconAfter: PropTypes.bool,
 	iconOnly: PropTypes.bool,
+	variant: PropTypes.oneOf(["primary", "secondary", "tertiary"]),
 };
 
 export default Button;

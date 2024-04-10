@@ -92,7 +92,7 @@ const IconButtonOptions = (idAddOn) => ({
 			title: "Sizes",
 			values: [
 				{
-					name: "Default (Large)",
+					name: "Large (default)",
 					value: {
 						size: "lg",
 					},
@@ -107,6 +107,32 @@ const IconButtonOptions = (idAddOn) => ({
 					name: "Extra small",
 					value: {
 						size: "xs",
+					},
+				},
+			],
+		},
+		{
+			// button variant primary secondary tertiary
+			id: `${idAddOn ? idAddOn : ""}button-variant`,
+			title: "Button variant",
+			values: [
+				{
+					name: "Primary",
+					value: {
+						variant: "primary",
+					},
+				},
+				{
+					name: "Secondary",
+					default: true,
+					value: {
+						variant: "secondary",
+					},
+				},
+				{
+					name: "Tertiary",
+					value: {
+						variant: "tertiary",
 					},
 				},
 			],
@@ -230,6 +256,7 @@ export const overviewButtons = {
 					icon="at-cloud-database"
 					size="lg"
 					iconOnly={true}
+					variant="secondary"
 				/>
 			),
 			title: "Icon only button",
@@ -263,6 +290,12 @@ export const overviewButtons = {
 								name: "Norway",
 								value: {
 									bankId: "no",
+								},
+							},
+							{
+								name: "Denmark",
+								value: {
+									bankId: "dk",
 								},
 							},
 						],
@@ -319,8 +352,8 @@ export const overviewButtons = {
 				<p>
 					Use BankID buttons as the main call to action on a page when the
 					following action is signing or verifying something with BankID.
-					Currently only available for Swedish and Norwegian BankID. Avoid using
-					multiple BankID buttons on a single page.
+					Currently available for Swedish and Norwegian BankID as well as for
+					Danish MitId. Avoid using multiple BankID buttons on a single page.
 				</p>
 			),
 		},
