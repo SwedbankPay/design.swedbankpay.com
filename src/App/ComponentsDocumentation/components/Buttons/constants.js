@@ -92,7 +92,7 @@ const IconButtonOptions = (idAddOn) => ({
 			title: "Sizes",
 			values: [
 				{
-					name: "Default (Large)",
+					name: "Large (default)",
 					value: {
 						size: "lg",
 					},
@@ -107,6 +107,32 @@ const IconButtonOptions = (idAddOn) => ({
 					name: "Extra small",
 					value: {
 						size: "xs",
+					},
+				},
+			],
+		},
+		{
+			// button variant primary secondary tertiary
+			id: `${idAddOn ? idAddOn : ""}button-variant`,
+			title: "Button variant",
+			values: [
+				{
+					name: "Primary",
+					value: {
+						variant: "primary",
+					},
+				},
+				{
+					name: "Secondary",
+					default: true,
+					value: {
+						variant: "secondary",
+					},
+				},
+				{
+					name: "Tertiary",
+					value: {
+						variant: "tertiary",
 					},
 				},
 			],
@@ -230,6 +256,7 @@ export const overviewButtons = {
 					icon="at-cloud-database"
 					size="lg"
 					iconOnly={true}
+					variant="secondary"
 				/>
 			),
 			title: "Icon only button",
