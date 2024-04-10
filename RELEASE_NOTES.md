@@ -6,7 +6,7 @@
 
 - Input fields
 
-  - labels line-height increased
+  - labels line-height increased & mobile values adjusted, so values are in sync with `h4` typography style
 
 - Buttons
   - add Danish MitId button style (you can use either `i.bank-id-dk` OR `i.mitid-dk`, both are supported)
