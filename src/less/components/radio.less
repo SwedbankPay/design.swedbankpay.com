@@ -79,7 +79,7 @@
 	}
 }
 
-.checkmark {
+.radio.checkmark {
 	border: 2px solid transparent;
 	pointer-events: none;
 	width: var(--checkmark-width);
@@ -139,22 +139,28 @@
 	}
 
 	input[type="radio"]:hover:not(:disabled) + label {
-		background-color: var(--light-gray);
-		color: var(--brown-medium);
+		background-color: var(--brown-medium);
+		color: var(--white);
 		border-radius: var(--border-radius, 8px);
 		border: 0 solid transparent;
 		outline: 1px solid var(--brown-medium);
+		box-shadow: none !important;
+
+		// we're migrating from i to a pure CSS span.checkmark-icon. Keep <i> for now until next major release
+		i {
+			color: #f0f0f0;
+		}
 	}
 
 	input[type="radio"]:checked + label {
 		border-radius: var(--border-radius, 8px);
 		padding-inline-end: 1.875rem;
 		outline-width: 3px;
-	}
 
-	input[type="radio"]:checked:hover + label {
-		background-color: var(--brown-medium);
-		color: var(--white);
+		// we're migrating from i to a pure CSS span.checkmark-icon. Keep <i> for now until next major release
+		i {
+			color: #000000;
+		}
 	}
 
 	input[type="radio"]:disabled + label {
@@ -168,14 +174,14 @@
 		outline: 0;
 		padding-inline-end: 1.25rem;
 
+		// we're migrating from i to a pure CSS span.checkmark-icon. Keep <i> for now until next major release
 		i {
 			visibility: hidden;
 		}
 	}
 
 	input[type="radio"] {
-		&:focus + label,
-		&:hover:not(:disabled) + label {
+		&:focus-visible + label {
 			box-shadow: 0 0 0 0.3rem var(--brand-secondary-light-3);
 			border-color: var(--brand-secondary);
 		}
@@ -186,6 +192,85 @@
 			i {
 				visibility: hidden;
 				display: none;
+			}
+		}
+	}
+
+	&:has(.subtext) {
+		width: 248px;
+		height: auto;
+
+		input[type="radio"] + label {
+			display: grid;
+			width: 100%;
+			height: fit-content;
+			padding: 1rem;
+			grid-template-areas:
+				"label-title checkmark"
+				"label-subtext checkmark";
+			grid-template-columns: 176px 1fr;
+			grid-template-rows: auto auto;
+
+			span:not(.subtext, .checkmark-icon) {
+				grid-area: label-title;
+				font-weight: var(--font-weight-bold);
+			}
+
+			.subtext {
+				grid-area: label-subtext;
+				font-weight: var(--font-weight-normal);
+			}
+
+			.checkmark-icon {
+				grid-area: checkmark;
+				width: 24px;
+				height: 24px;
+				background-color: var(--brown-solid);
+				border-radius: 50%;
+				position: relative;
+
+				// display a tickbox icon in pure CSS
+				&::before {
+					content: "";
+					position: absolute;
+					width: 0.42rem;
+					height: 0.7rem;
+					border: solid var(--white);
+					border-width: 0 2px 2px 0;
+					transform: rotate(45deg) translate(145%, -25%);
+				}
+			}
+		}
+
+		input[type="radio"]:not(:checked) + label {
+			.checkmark-icon {
+				display: none;
+			}
+		}
+
+		input[type="radio"]:checked:disabled + label {
+			background-color: var(--gray);
+			color: var(--brown-light);
+
+			.checkmark-icon {
+				background-color: var(--brown-light);
+
+				&::before {
+					border-color: var(--gray);
+				}
+			}
+		}
+
+		input[type="radio"]:checked:not(:disabled):hover + label {
+			background-color: var(--brown-medium);
+			color: var(--white);
+
+			.checkmark-icon {
+				background-color: var(--white);
+
+				&::before {
+					border-color: var(--brown-medium);
+				}
 			}
 		}
 	}

@@ -16,6 +16,7 @@ const Radio = ({
 	helpBlock,
 	errorMessage,
 	size = "small",
+	hasLabelSubtext = false,
 }) => {
 	const attrs = {
 		type: "radio",
@@ -51,13 +52,21 @@ const Radio = ({
 										<input {...attrs} id={id} defaultChecked={checked} />
 										{"\n"}
 										<label htmlFor={id}>
-											{style === "checkmark" && (
-												<i
-													className="swepay-icon-check-circle-filled-customizable bg-blend-exclusion small"
-													aria-hidden="true"
-												></i>
-											)}{" "}
-											{label}
+											{!hasLabelSubtext ? (
+												<>
+													{"\n"}
+													{label}
+												</>
+											) : (
+												<>
+													<span>{label}</span>
+													{"\n"}
+													<span className="subtext">100 kr extra/mån</span>
+												</>
+											)}
+											{"\n"}
+											<span className="checkmark-icon"></span>
+											{"\n"}
 										</label>
 										{"\n"}
 									</div>
@@ -137,6 +146,7 @@ Radio.propTypes = {
 	style: PropTypes.string,
 	helpBlock: PropTypes.string,
 	size: PropTypes.oneOf(["small", "large"]),
+	hasLabelSubtext: PropTypes.bool,
 };
 
 export default Radio;

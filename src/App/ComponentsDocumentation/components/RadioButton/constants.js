@@ -18,7 +18,7 @@ export const radiobuttonShowCase = {
 	tabsId: "radioShowcaseTabs",
 	elements: [
 		{
-			tab: "Primary",
+			tab: "Default",
 			component: (
 				<Radio
 					groupTitle="Group legend"
@@ -98,6 +98,14 @@ export const radiobuttonShowCase = {
 									hintTextId: "hint-text-radio-example",
 								},
 							},
+							{
+								id: "label_subtext",
+								name: "Label subtext",
+								value: {
+									hasLabelSubtext: true,
+									size: "large",
+								},
+							},
 						],
 					},
 				],
@@ -144,6 +152,24 @@ export const radiobuttonShowCase = {
 							},
 						],
 					},
+					// {
+					// 	id: "radio_group_type",
+					// 	title: "Group type",
+					// 	values: [
+					// 		{
+					// 			name: "Group",
+					// 			value: {
+					// 				group: true,
+					// 			},
+					// 		},
+					// 		{
+					// 			name: "Single",
+					// 			value: {
+					// 				group: false,
+					// 			},
+					// 		},
+					// 	],
+					// },
 				],
 			},
 			title: "Checkmark buttons",
