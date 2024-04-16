@@ -117,9 +117,7 @@
 		height: 100%;
 		width: 100%;
 		gap: 5px;
-		padding-inline-end: 1.25rem;
 		justify-content: center;
-		flex-direction: row-reverse;
 
 		&:before {
 			display: none;
@@ -135,6 +133,26 @@
 			) {
 			color: inherit;
 			margin-inline-end: -10px;
+		}
+
+		.checkmark-icon {
+			order: 2;
+			width: 24px;
+			height: 24px;
+			background-color: var(--brown-solid);
+			border-radius: 50%;
+			position: relative;
+
+			// display a checkmark icon in pure CSS
+			&::before {
+				content: "";
+				position: absolute;
+				width: 0.42rem;
+				height: 0.7rem;
+				border: solid var(--white);
+				border-width: 0 2px 2px 0;
+				transform: rotate(45deg) translate(145%, -25%);
+			}
 		}
 	}
 
@@ -152,9 +170,28 @@
 		}
 	}
 
+	input[type="radio"]:not(:checked) + label {
+		.checkmark-icon,
+		i {
+			display: none;
+		}
+	}
+
+	input[type="radio"]:checked:hover:not(:disabled) + label {
+		background-color: var(--brown-medium);
+		color: var(--white);
+
+		.checkmark-icon {
+			background-color: var(--white);
+
+			&::before {
+				border-color: var(--brown-medium);
+			}
+		}
+	}
+
 	input[type="radio"]:checked + label {
 		border-radius: var(--border-radius, 8px);
-		padding-inline-end: 1.875rem;
 		outline-width: 3px;
 
 		// we're migrating from i to a pure CSS span.checkmark-icon. Keep <i> for now until next major release
@@ -169,12 +206,20 @@
 	}
 
 	input[type="radio"]:checked:disabled + label {
-		background-color: var(--brown-light);
-		color: var(--white);
 		outline: 0;
-		padding-inline-end: 1.25rem;
+		background-color: var(--gray);
+		color: var(--brown-light);
+
+		.checkmark-icon {
+			background-color: var(--brown-light);
+
+			&::before {
+				border-color: var(--gray);
+			}
+		}
 
 		// we're migrating from i to a pure CSS span.checkmark-icon. Keep <i> for now until next major release
+		// FIXME: NOT TO BE HIDDEN. it should be displayed, but correctly styled
 		i {
 			visibility: hidden;
 		}
@@ -196,6 +241,10 @@
 		}
 	}
 
+	&:not(.large) .checkmark-icon {
+		transform: scale(0.67);
+	}
+
 	&:has(.subtext) {
 		width: 248px;
 		height: auto;
@@ -208,8 +257,13 @@
 			grid-template-areas:
 				"label-title checkmark"
 				"label-subtext checkmark";
-			grid-template-columns: 176px 1fr;
+			grid-template-columns: 1fr auto;
+			gap: 0 1rem;
 			grid-template-rows: auto auto;
+
+			span {
+				margin: 0;
+			}
 
 			span:not(.subtext, .checkmark-icon) {
 				grid-area: label-title;
@@ -222,56 +276,14 @@
 			}
 
 			.checkmark-icon {
-				grid-area: checkmark;
-				width: 24px;
-				height: 24px;
-				background-color: var(--brown-solid);
-				border-radius: 50%;
-				position: relative;
-
-				// display a tickbox icon in pure CSS
-				&::before {
-					content: "";
-					position: absolute;
-					width: 0.42rem;
-					height: 0.7rem;
-					border: solid var(--white);
-					border-width: 0 2px 2px 0;
-					transform: rotate(45deg) translate(145%, -25%);
-				}
+				grid-area: checkmark-icon;
+				grid-row: 1 / -1;
+				transform: none;
 			}
 		}
 
-		input[type="radio"]:not(:checked) + label {
-			.checkmark-icon {
-				display: none;
-			}
-		}
-
-		input[type="radio"]:checked:disabled + label {
-			background-color: var(--gray);
-			color: var(--brown-light);
-
-			.checkmark-icon {
-				background-color: var(--brown-light);
-
-				&::before {
-					border-color: var(--gray);
-				}
-			}
-		}
-
-		input[type="radio"]:checked:not(:disabled):hover + label {
-			background-color: var(--brown-medium);
-			color: var(--white);
-
-			.checkmark-icon {
-				background-color: var(--white);
-
-				&::before {
-					border-color: var(--brown-medium);
-				}
-			}
+		input[type="radio"]:not(:checked) + label :is(.checkmark-icon, i) {
+			visibility: hidden;
 		}
 	}
 }
