@@ -1,6 +1,9 @@
 @import "./form.less";
 @import "../global.less";
 
+// TODO: make sure checkmark still works if use <i> instead of span.checkmark-icon
+// TODO: refactor it all, so it makes more sense
+
 .radio {
 	--radio-height: 1.375rem;
 	--radio-width: var(--radio-height);
@@ -82,15 +85,12 @@
 .radio.checkmark {
 	border: 2px solid transparent;
 	pointer-events: none;
-	width: var(--checkmark-width);
-	height: var(--checkmark-heigth);
+	width: auto;
+	height: auto;
+	margin: 0;
 
 	&.large {
 		height: 3.5rem;
-	}
-
-	&:not(:last-child) {
-		margin-inline-end: 8px;
 	}
 
 	&:active {
@@ -113,10 +113,10 @@
 	label {
 		outline: 1px solid var(--black);
 		border-radius: var(--border-radius, 8px);
-		margin: auto;
+		padding: 7px 1rem;
 		height: 100%;
-		width: 100%;
-		gap: 5px;
+		margin: 0;
+		gap: 1rem;
 		justify-content: center;
 
 		&:before {
@@ -193,6 +193,7 @@
 	input[type="radio"]:checked + label {
 		border-radius: var(--border-radius, 8px);
 		outline-width: 3px;
+		outline-offset: -2px;
 
 		// we're migrating from i to a pure CSS span.checkmark-icon. Keep <i> for now until next major release
 		i {
@@ -219,7 +220,6 @@
 		}
 
 		// we're migrating from i to a pure CSS span.checkmark-icon. Keep <i> for now until next major release
-		// FIXME: NOT TO BE HIDDEN. it should be displayed, but correctly styled
 		i {
 			visibility: hidden;
 		}
@@ -232,8 +232,6 @@
 		}
 
 		&:not(:checked) + label {
-			padding: 0;
-
 			i {
 				visibility: hidden;
 				display: none;
@@ -307,7 +305,6 @@ fieldset {
 
 		span {
 			font-weight: normal;
-			margin-inline-start: 0.2rem;
 		}
 	}
 
