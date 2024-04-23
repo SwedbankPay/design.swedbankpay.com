@@ -9,7 +9,7 @@ const options = [
 	},
 	{
 		id: "radio-example-2",
-		label: "Label",
+		label: "Longer label",
 	},
 ];
 

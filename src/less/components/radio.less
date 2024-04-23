@@ -86,6 +86,8 @@
 	border: 2px solid transparent;
 	pointer-events: none;
 	width: auto;
+	min-width: fit-content;
+	flex: 1;
 	height: auto;
 	margin: 0;
 
@@ -115,9 +117,10 @@
 		border-radius: var(--border-radius, 8px);
 		padding: 7px 1rem;
 		height: 100%;
+		width: 100%;
 		margin: 0;
 		gap: 1rem;
-		justify-content: center;
+		justify-content: space-between;
 
 		&:before {
 			display: none;
@@ -142,6 +145,7 @@
 			background-color: var(--brown-solid);
 			border-radius: 50%;
 			position: relative;
+			aspect-ratio: 1;
 
 			// display a checkmark icon in pure CSS
 			&::before {
@@ -173,7 +177,7 @@
 	input[type="radio"]:not(:checked) + label {
 		.checkmark-icon,
 		i {
-			display: none;
+			visibility: hidden;
 		}
 	}
 
@@ -234,13 +238,16 @@
 		&:not(:checked) + label {
 			i {
 				visibility: hidden;
-				display: none;
 			}
 		}
 	}
 
-	&:not(.large) .checkmark-icon {
-		transform: scale(0.67);
+	&:not(.large) label {
+		gap: calc(1rem - (24px - 16px));
+
+		& .checkmark-icon {
+			transform: scale(0.67);
+		}
 	}
 
 	&:has(.subtext) {
@@ -289,7 +296,10 @@
 fieldset {
 	&.radio-group {
 		.radio-row {
-			display: inline-flex;
+			display: inline-grid;
+			gap: 1rem;
+			grid-auto-flow: column;
+			grid-auto-columns: 1fr;
 		}
 
 		legend {
