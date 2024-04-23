@@ -138,7 +138,8 @@
 			margin-inline-end: -10px;
 		}
 
-		.checkmark-icon {
+		.checkmark-icon,
+		& > i {
 			order: 2;
 			width: 24px;
 			height: 24px;
@@ -185,7 +186,8 @@
 		background-color: var(--brown-medium);
 		color: var(--white);
 
-		.checkmark-icon {
+		.checkmark-icon,
+		> i {
 			background-color: var(--white);
 
 			&::before {
@@ -199,7 +201,7 @@
 		outline-width: 3px;
 		outline-offset: -2px;
 
-		// we're migrating from i to a pure CSS span.checkmark-icon. Keep <i> for now until next major release
+		// we're migrating from i to a pure CSS span.checkmark-icon. Keep <i > for now until next major release i {
 		i {
 			color: #000000;
 		}
@@ -215,7 +217,8 @@
 		background-color: var(--gray);
 		color: var(--brown-light);
 
-		.checkmark-icon {
+		.checkmark-icon,
+		& > i {
 			background-color: var(--brown-light);
 
 			&::before {
@@ -245,7 +248,8 @@
 	&:not(.large) label {
 		gap: calc(1rem - (24px - 16px));
 
-		& .checkmark-icon {
+		& .checkmark-icon,
+		& > i {
 			transform: scale(0.67);
 		}
 	}
