@@ -1,8 +1,7 @@
 @import "./form.less";
 @import "../global.less";
 
-// TODO: make sure checkmark still works if use <i> instead of span.checkmark-icon
-// TODO: refactor it all, so it makes more sense
+// TODO: next major release: remove support for `.radio.checkmark label i` and replace with `.radio.checkmark label .checkmark-icon` officially
 
 .radio {
 	--radio-height: 1.375rem;
@@ -103,11 +102,6 @@
 		background-color: transparent;
 	}
 
-	&:disabled {
-		border: 2px solid transparent;
-		margin: auto;
-	}
-
 	* {
 		pointer-events: all;
 	}
@@ -161,7 +155,75 @@
 		}
 	}
 
-	input[type="radio"]:hover:not(:disabled) + label {
+	// checked state
+	input[type="radio"]:checked {
+		& + label {
+			border-radius: var(--border-radius, 8px);
+			outline-width: 3px;
+			outline-offset: -2px;
+
+			// we're migrating from i to a pure CSS span.checkmark-icon. Keep <i > for now until next major release i {
+			i {
+				color: #000000;
+			}
+		}
+
+		&:hover:not(:disabled) + label {
+			background-color: var(--brown-medium);
+			color: var(--white);
+
+			.checkmark-icon,
+			> i {
+				background-color: var(--white);
+
+				&::before {
+					border-color: var(--brown-medium);
+				}
+			}
+		}
+	}
+
+	// not checked state
+	input[type="radio"]:not(:checked) + label {
+		.checkmark-icon,
+		i {
+			visibility: hidden;
+		}
+	}
+
+	// disabled state
+	input[type="radio"]:disabled {
+		border: 2px solid transparent;
+		margin: auto;
+
+		& + label {
+			color: var(--brown-light);
+			outline: 1px solid var(--brown-light);
+		}
+
+		&:checked + label {
+			outline: 0;
+			background-color: var(--gray);
+			color: var(--brown-light);
+
+			.checkmark-icon,
+			& > i {
+				background-color: var(--brown-light);
+
+				&::before {
+					border-color: var(--gray);
+				}
+			}
+
+			// we're migrating from i to a pure CSS span.checkmark-icon. Keep <i> for now until next major release
+			i {
+				visibility: hidden;
+			}
+		}
+	}
+
+	// not disabled state
+	input[type="radio"]:not(:disabled):hover + label {
 		background-color: var(--brown-medium);
 		color: var(--white);
 		border-radius: var(--border-radius, 8px);
@@ -172,63 +234,6 @@
 		// we're migrating from i to a pure CSS span.checkmark-icon. Keep <i> for now until next major release
 		i {
 			color: #f0f0f0;
-		}
-	}
-
-	input[type="radio"]:not(:checked) + label {
-		.checkmark-icon,
-		i {
-			visibility: hidden;
-		}
-	}
-
-	input[type="radio"]:checked:hover:not(:disabled) + label {
-		background-color: var(--brown-medium);
-		color: var(--white);
-
-		.checkmark-icon,
-		> i {
-			background-color: var(--white);
-
-			&::before {
-				border-color: var(--brown-medium);
-			}
-		}
-	}
-
-	input[type="radio"]:checked + label {
-		border-radius: var(--border-radius, 8px);
-		outline-width: 3px;
-		outline-offset: -2px;
-
-		// we're migrating from i to a pure CSS span.checkmark-icon. Keep <i > for now until next major release i {
-		i {
-			color: #000000;
-		}
-	}
-
-	input[type="radio"]:disabled + label {
-		color: var(--brown-light);
-		outline: 1px solid var(--brown-light);
-	}
-
-	input[type="radio"]:checked:disabled + label {
-		outline: 0;
-		background-color: var(--gray);
-		color: var(--brown-light);
-
-		.checkmark-icon,
-		& > i {
-			background-color: var(--brown-light);
-
-			&::before {
-				border-color: var(--gray);
-			}
-		}
-
-		// we're migrating from i to a pure CSS span.checkmark-icon. Keep <i> for now until next major release
-		i {
-			visibility: hidden;
 		}
 	}
 
