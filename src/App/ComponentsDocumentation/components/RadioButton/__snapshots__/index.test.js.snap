@@ -152,7 +152,7 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
         className="d-flex justify-content-center"
       >
         <div
-          className="radio"
+          className="radio "
         >
           
 
@@ -229,7 +229,7 @@ exports[`Component: RadioButton DeveloperDocumentation renders 1`] = `
                 className="code-view-code"
               >
                 <pre>
-                  &lt;div class="radio"&gt;
+                  &lt;div class="radio "&gt;
                   
 
                       &lt;input type="radio" id="radio-example-10" name="radio-example" disabled checked&gt;
