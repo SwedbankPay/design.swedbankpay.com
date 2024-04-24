@@ -15,6 +15,8 @@ const Radio = ({
 	style,
 	helpBlock,
 	errorMessage,
+	size = "small",
+	hasLabelSubtext = false,
 }) => {
 	const attrs = {
 		type: "radio",
@@ -42,18 +44,29 @@ const Radio = ({
 						{style === "checkmark" ? (
 							<div className="radio-row">
 								{options.map(({ label, id, checked }, i) => (
-									<div className={`radio${style ? ` ${style}` : ""}`} key={i}>
+									<div
+										className={`radio${style ? ` ${style}` : ""} ${size === "large" ? "large" : ""}`}
+										key={i}
+									>
 										{"\n"}
 										<input {...attrs} id={id} defaultChecked={checked} />
 										{"\n"}
 										<label htmlFor={id}>
-											{style === "checkmark" && (
-												<i
-													className="swepay-icon-check-circle-filled-customizable bg-blend-exclusion small"
-													aria-hidden="true"
-												></i>
-											)}{" "}
-											{label}
+											{!hasLabelSubtext ? (
+												<>
+													{"\n"}
+													{label}
+												</>
+											) : (
+												<>
+													<span>{label}</span>
+													{"\n"}
+													<span className="subtext">100 kr extra/mån</span>
+												</>
+											)}
+											{"\n"}
+											<span className="checkmark-icon"></span>
+											{"\n"}
 										</label>
 										{"\n"}
 									</div>
@@ -97,7 +110,9 @@ const Radio = ({
 				</form>
 			) : (
 				<>
-					<div className={`radio${style ? ` ${style}` : ""}`}>
+					<div
+						className={`radio${style ? ` ${style}` : ""} ${size === "large" ? "large" : ""}`}
+					>
 						{"\n"}
 						<input {...attrs} />
 						{"\n"}
@@ -130,6 +145,8 @@ Radio.propTypes = {
 	className: PropTypes.string,
 	style: PropTypes.string,
 	helpBlock: PropTypes.string,
+	size: PropTypes.oneOf(["small", "large"]),
+	hasLabelSubtext: PropTypes.bool,
 };
 
 export default Radio;

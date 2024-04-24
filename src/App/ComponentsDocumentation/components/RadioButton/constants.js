@@ -9,7 +9,7 @@ const options = [
 	},
 	{
 		id: "radio-example-2",
-		label: "Label",
+		label: "Longer label",
 	},
 ];
 
@@ -18,7 +18,7 @@ export const radiobuttonShowCase = {
 	tabsId: "radioShowcaseTabs",
 	elements: [
 		{
-			tab: "Primary",
+			tab: "Default",
 			component: (
 				<Radio
 					groupTitle="Group legend"
@@ -98,6 +98,14 @@ export const radiobuttonShowCase = {
 									hintTextId: "hint-text-radio-example",
 								},
 							},
+							{
+								id: "label_subtext",
+								name: "Label subtext",
+								value: {
+									hasLabelSubtext: true,
+									size: "large",
+								},
+							},
 						],
 					},
 				],
@@ -122,6 +130,24 @@ export const radiobuttonShowCase = {
 								name: "Error",
 								value: {
 									errorMessage: "Descriptive helpful error message.",
+								},
+							},
+						],
+					},
+					{
+						id: "size_radio",
+						title: "Size modifiers",
+						values: [
+							{
+								name: "Small",
+								value: {
+									size: "small",
+								},
+							},
+							{
+								name: "Large",
+								value: {
+									size: "large",
 								},
 							},
 						],
