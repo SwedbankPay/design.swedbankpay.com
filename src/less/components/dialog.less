@@ -1,18 +1,27 @@
 @import "../global.less";
 
-@dialog-border: 1px solid @light-gray;
-
+// TODO: modify documentation for bg color variants & for sizes variants
+// TODO: add sizes variants
+// TODO: keep this for for silent support but add animations for dialog elements + add scripts if dialog element
 .dialog {
+	--dialog-border: 1px solid var(--gray);
+	--bg-color: var(--white; #ffffff);
+
 	position: fixed;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
 	z-index: var(--dialog-z-index, 600);
-	background: fade(@black, 50%);
+	background: color-mix(in oklab, var(--brand-primary), transparent 40%);
+	backdrop-filter: blur(20px);
 	display: none;
 	justify-content: center;
 	align-items: center;
+
+	&.gray {
+		--bg-color: var(--bg-grey);
+	}
 
 	> section {
 		position: relative;
@@ -23,28 +32,15 @@
 			display: flex;
 			padding: 1rem 1.5rem;
 			align-items: center;
-			background: @white;
-			border-bottom: @dialog-border;
+			background: var(--bg-color);
+			border-bottom: var(--dialog-border);
 			border-radius: 20px 20px 0 0;
 
-			/* stylelint-disable selector-list-comma-newline-after */
-			h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6,
-			.h1,
-			.h2,
-			.h3,
-			.h4,
-			.h5,
-			.h6 {
+			:is(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6) {
 				margin-top: 0;
 				margin-bottom: 0;
 				flex-grow: 1;
 			}
-			/* stylelint-enable selector-list-comma-newline-after */
 
 			.dialog-close {
 				display: inline-grid;
@@ -63,13 +59,13 @@
 				&.hover {
 					color: var(--brand-secondary);
 					text-decoration: none;
-					background-color: @brand-bg-gray;
+					background-color: var(--gray);
 				}
 
 				&:focus {
 					border: none;
 					border-radius: 0.125rem;
-					box-shadow: 0 0 0 2px @black;
+					box-shadow: 0 0 0 2px var(--black);
 					outline: none;
 				}
 
@@ -111,19 +107,24 @@
 		}
 
 		.dialog-body {
-			background: @white;
+			background: var(--bg-color);
 			padding: 2rem 1.5rem;
 		}
 
 		.dialog-footer,
 		footer {
-			background: @white;
-			border-top: @dialog-border;
+			background: var(--bg-color);
+			border-top: var(--dialog-border);
 			padding: 1rem 1.5rem;
 			margin: 0;
 			display: flex;
 			justify-content: flex-end;
 			border-radius: 0 0 20px 20px;
+
+			// TODO: should it be fixed in cards level or directly in buttons styleheet, btn-secondary should it always be bg-color transparent ?
+			button.btn-secondary {
+				background-color: transparent;
+			}
 
 			> * {
 				margin: 0 0.25rem;

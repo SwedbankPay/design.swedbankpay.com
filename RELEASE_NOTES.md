@@ -17,8 +17,15 @@
     - It is now possible to add a subtext inside the checkmark variant (use span.subtext)
 
 - Buttons
+
   - minor non-breaking UI updates (height for size large, unify hover state, modify active & focus-visible UI, and more)
   - add Danish MitId button style (you can use either `i.bank-id-dk` OR `i.mitid-dk`, both are supported)
+
+- Cards
+
+  - fix style .cards-wide on mobile
+
+- ## Dialog
 
 ## Technical changes
 
