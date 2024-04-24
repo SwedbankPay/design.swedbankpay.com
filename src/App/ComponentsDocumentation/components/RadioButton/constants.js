@@ -152,24 +152,6 @@ export const radiobuttonShowCase = {
 							},
 						],
 					},
-					// {
-					// 	id: "radio_group_type",
-					// 	title: "Group type",
-					// 	values: [
-					// 		{
-					// 			name: "Group",
-					// 			value: {
-					// 				group: true,
-					// 			},
-					// 		},
-					// 		{
-					// 			name: "Single",
-					// 			value: {
-					// 				group: false,
-					// 			},
-					// 		},
-					// 	],
-					// },
 				],
 			},
 			title: "Checkmark buttons",
