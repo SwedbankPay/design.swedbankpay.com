@@ -129,11 +129,6 @@ dialog {
 			justify-content: flex-end;
 			border-radius: 0 0 20px 20px;
 
-			// TODO: should it be fixed in cards level or directly in buttons styleheet, btn-secondary should it always be bg-color transparent ?
-			button.btn-secondary {
-				background-color: transparent;
-			}
-
 			> * {
 				margin: 0 0.25rem;
 			}
@@ -141,6 +136,7 @@ dialog {
 	}
 }
 
+// TODO: can be removed during next major release, once dialog is migrated to <dialog> only
 .dialog-open {
 	overflow: hidden;
 
@@ -254,9 +250,10 @@ dialog {
 		margin: 0;
 		display: flex;
 		justify-content: flex-end;
+		gap: 0.5rem;
 
 		> * {
-			margin: 0 0.25rem;
+			margin: 0;
 		}
 	}
 
@@ -273,9 +270,13 @@ dialog {
 	/*   Closed state of the dialog   */
 	&:not([open]) {
 		opacity: 0;
-		transform: translateY(100px);
+		translate: 0 -100px;
 		transition: all var(--transition-duration-modal)
 			cubic-bezier(0.22, 0.61, 0.36, 1) allow-discrete;
+
+		&.slide-from-right {
+			translate: -100px 0;
+		}
 	}
 
 	/* Transition the :backdrop when the dialog modal is promoted to the top layer */
@@ -335,8 +336,18 @@ dialog {
 		opacity: 0;
 		translate: 0 100px;
 
+		&.slide-from-right {
+			translate: 100px 0;
+		}
+
 		&::backdrop {
 			background-color: transparent;
 		}
 	}
+}
+
+// prevent background scrolling when dialog is opened
+html:has(dialog[open]:modal) {
+	overflow: hidden;
+	scrollbar-gutter: stable;
 }
