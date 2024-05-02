@@ -98,7 +98,6 @@ class Dialog {
 		this.focusedElemBeforeDialog = document.activeElement;
 		handleScrollbar();
 		this.isOpen = true;
-		this._el.style.display = "flex";
 		document.body.classList.add("dialog-open");
 		this.lastTabStop.focus();
 
@@ -108,8 +107,6 @@ class Dialog {
 	close() {
 		handleScrollbar();
 		this.isOpen = false;
-		this._el.style.display = "none";
-		this._el.classList.remove("d-flex");
 		document.body.classList.remove("dialog-open");
 		this.focusedElemBeforeDialog ? this.focusedElemBeforeDialog.focus() : null;
 
@@ -125,6 +122,29 @@ const _createDialog = (dialogQuery) => {
 	return dialogObject;
 };
 
+// MARK: script for <dialog> element
+
+const _activateDialogElement = (dialog) => {
+	const dialogInvoker = document.querySelector(
+		`button[data-dialog-open="${dialog.id}"]`,
+	);
+	const closeDialogButtons = dialog.querySelectorAll(
+		"button[data-dialog-close]",
+	);
+
+	// add event listener on dialogInvoker, it should call dialog.showModal()
+	dialogInvoker.addEventListener("click", () => {
+		dialog.showModal();
+	});
+
+	// add event listener on dialogs close button, it should call dialog.close()
+	[...closeDialogButtons].map((closeBtn) =>
+		closeBtn.addEventListener("click", () => {
+			dialog.close();
+		}),
+	);
+};
+
 const init = (id) => {
 	if (id) {
 		const dialog = document.getElementById(id);
@@ -135,17 +155,24 @@ const init = (id) => {
 			return null;
 		}
 
-		return _createDialog(dialog);
+		if (dialog?.tagName === "dialog") {
+			return _activateDialogElement(dialog);
+		} else {
+			return _createDialog(dialog);
+		}
 	} else {
-		const dialogs = document.querySelectorAll(SELECTORS.DIALOG);
+		const dialogsLegacy = document.querySelectorAll(SELECTORS.DIALOG);
+		const modernDialogs = document.querySelectorAll("dialog");
 
-		if (!dialogs.length) {
+		if (![...dialogsLegacy, ...modernDialogs].length) {
 			console.warn("No dialogs found");
 
 			return null;
 		}
 
-		return [...dialogs].map((dialog) => _createDialog(dialog));
+		[...dialogsLegacy].map((dialog) => _createDialog(dialog));
+
+		[...modernDialogs].map((dialog) => _activateDialogElement(dialog));
 	}
 };
 

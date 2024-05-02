@@ -25,7 +25,15 @@
 
   - fix style .cards-wide on mobile
 
-- ## Dialog
+- Dialog
+
+  - UI update
+  - new syntax, leveraging the standard <dialog> tag
+  - silent support for the old syntax until the next major release
+  - add transitions
+
+- Buttons
+  - secondary buttons get a transparent background-color
 
 ## Technical changes
 
