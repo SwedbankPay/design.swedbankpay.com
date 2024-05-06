@@ -29,7 +29,6 @@ dialog {
 	display: none;
 	justify-content: center;
 	align-items: center;
-	transition: all var(--transition-duration-enter) allow-discrete;
 
 	> section {
 		position: relative;
@@ -145,7 +144,6 @@ dialog {
 		overflow-y: auto;
 		display: flex;
 		opacity: 1;
-		transition: all var(--transition-duration-enter) allow-discrete;
 	}
 }
 
@@ -270,7 +268,7 @@ dialog {
 	/*   Closed state of the dialog   */
 	&:not([open]) {
 		opacity: 0;
-		translate: 0 -100px;
+		translate: 17px -100px;
 		transition: all var(--transition-duration-modal)
 			cubic-bezier(0.22, 0.61, 0.36, 1) allow-discrete;
 
@@ -331,8 +329,7 @@ dialog {
 // TODO: for some reason, for now (may 2024) nesting @starting-style inside a rule breaks it. There is no reason why. It will most likely be fixed by tooling later and will then be able to be moved inside its corresponding rules, which will make it more clear. Until then we have to keep it this way. Sorry. Yours truly, Raphaël  <3
 /*   Entry transition starts with these styles  */
 @starting-style {
-	dialog[open],
-	.dialog {
+	dialog[open] {
 		opacity: 0;
 		translate: 0 100px;
 
@@ -347,7 +344,7 @@ dialog {
 }
 
 // prevent background scrolling when dialog is opened
-html:has(dialog[open]:modal) {
+// hopefully in the future the dialog API add a native scroll-blocking function and make this obsolete so we can remove it
+html:has(dialog[open]:modal, body.dialog-open) {
 	overflow: hidden;
-	scrollbar-gutter: stable;
 }

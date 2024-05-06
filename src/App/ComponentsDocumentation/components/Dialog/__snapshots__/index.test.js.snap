@@ -21,66 +21,70 @@ Array [
       
 
     </button>
-    <div
+    <dialog
       aria-describedby="aria-describe-dia"
       aria-labelledby="aria-label-dia"
       aria-modal="true"
-      className="dialog"
       id="demo-dialog"
-      role="dialog"
+      open={false}
     >
-      <section>
-        <header
-          className="dialog-header"
-          id="aria-label-dia"
+      
+
+      <header>
+        
+
+        <h4>
+          Delete
+        </h4>
+        
+
+        <button
+          aria-label="Close dialog"
+          className="dialog-close"
+          data-dialog-close={true}
+          type="button"
+        />
+        
+
+      </header>
+      
+
+      <div
+        className="dialog-body"
+      >
+        <p>
+          You’re about to permanently delete 
+          <i>
+            German Swashbuckle (456)?
+          </i>
+        </p>
+      </div>
+      
+
+      <footer>
+        
+
+        <button
+          className="btn btn-secondary"
+          data-dialog-close={true}
+          type="button"
         >
-          <h4>
-            Delete
-          </h4>
-          
+          Cancel
+        </button>
+        
 
-          <button
-            aria-label="Close dialog"
-            className="dialog-close"
-            type="button"
-          />
-        </header>
-        <div
-          className="dialog-body"
-          id="aria-describe-dia"
+        <button
+          className="btn btn-primary"
+          type="button"
         >
-          <p>
-            You’re about to permanently delete 
-            <i>
-              German Swashbuckle (456)?
-            </i>
-          </p>
-        </div>
-        <footer
-          className="dialog-footer"
-        >
-          
+          Delete
+        </button>
+        
 
-          <button
-            className="btn btn-secondary"
-            data-dialog-close={true}
-            type="button"
-          >
-            Cancel
-          </button>
-          
+      </footer>
+      
 
-          <button
-            className="btn btn-primary"
-            type="button"
-          >
-            Delete
-          </button>
-          
-
-        </footer>
-      </section>
-    </div>
+    </dialog>
   </div>,
   <figure>
     <div
@@ -164,12 +168,6 @@ Array [
                 16
                 
 
-                17
-                
-
-                18
-                
-
               </pre>
             </td>
             <td
@@ -185,49 +183,43 @@ Array [
                 &lt;/button&gt;
                 
 
-                &lt;div class="dialog" id="demo-dialog" role="dialog" aria-modal="true" aria-labelledby="aria-label-dia" aria-describedby="aria-describe-dia"&gt;
+                &lt;dialog id="demo-dialog" aria-modal="true" aria-labelledby="aria-label-dia" aria-describedby="aria-describe-dia"&gt;
                 
 
-                    &lt;section&gt;
+                    &lt;header&gt;
                 
 
-                        &lt;header class="dialog-header" id="aria-label-dia"&gt;
+                        &lt;h4&gt;Delete&lt;/h4&gt;
                 
 
-                            &lt;h4&gt;Delete&lt;/h4&gt;
+                        &lt;button type="button" class="dialog-close" aria-label="Close dialog" data-dialog-close="true"&gt;&lt;/button&gt;
                 
 
-                            &lt;button type="button" class="dialog-close" aria-label="Close dialog"&gt;&lt;/button&gt;
+                    &lt;/header&gt;
                 
 
-                        &lt;/header&gt;
+                    &lt;div class="dialog-body"&gt;
                 
 
-                        &lt;div class="dialog-body" id="aria-describe-dia"&gt;
+                        &lt;p&gt;You’re about to permanently delete &lt;i&gt;German Swashbuckle (456)?&lt;/i&gt;&lt;/p&gt;
                 
 
-                            &lt;p&gt;You’re about to permanently delete &lt;i&gt;German Swashbuckle (456)?&lt;/i&gt;&lt;/p&gt;
+                    &lt;/div&gt;
                 
 
-                        &lt;/div&gt;
+                    &lt;footer&gt;
                 
 
-                        &lt;footer class="dialog-footer"&gt;
+                        &lt;button class="btn btn-secondary" type="button" data-dialog-close="true"&gt;Cancel&lt;/button&gt;
                 
 
-                            &lt;button class="btn btn-secondary" type="button" data-dialog-close="true"&gt;Cancel&lt;/button&gt;
+                        &lt;button class="btn btn-primary" type="button"&gt;Delete&lt;/button&gt;
                 
 
-                            &lt;button class="btn btn-primary" type="button"&gt;Delete&lt;/button&gt;
+                    &lt;/footer&gt;
                 
 
-                        &lt;/footer&gt;
-                
-
-                    &lt;/section&gt;
-                
-
-                &lt;/div&gt;
+                &lt;/dialog&gt;
                 
 
               </pre>

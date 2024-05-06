@@ -1,4 +1,4 @@
-import { handleScrollbar, openComponent, closeComponent } from "../utils";
+import { openComponent, closeComponent } from "../utils";
 
 const SELECTORS = {
 	DIALOG: ".dialog",
@@ -96,7 +96,7 @@ class Dialog {
 
 	open() {
 		this.focusedElemBeforeDialog = document.activeElement;
-		handleScrollbar();
+
 		this.isOpen = true;
 		document.body.classList.add("dialog-open");
 		this.lastTabStop.focus();
@@ -105,7 +105,6 @@ class Dialog {
 	}
 
 	close() {
-		handleScrollbar();
 		this.isOpen = false;
 		document.body.classList.remove("dialog-open");
 		this.focusedElemBeforeDialog ? this.focusedElemBeforeDialog.focus() : null;
@@ -143,6 +142,8 @@ const _activateDialogElement = (dialog) => {
 			dialog.close();
 		}),
 	);
+
+	return dialog;
 };
 
 const init = (id) => {
@@ -170,9 +171,10 @@ const init = (id) => {
 			return null;
 		}
 
-		[...dialogsLegacy].map((dialog) => _createDialog(dialog));
-
-		[...modernDialogs].map((dialog) => _activateDialogElement(dialog));
+		return [
+			...[...dialogsLegacy].map((dialog) => _createDialog(dialog)),
+			...[...modernDialogs].map((dialog) => _activateDialogElement(dialog)),
+		];
 	}
 };
 

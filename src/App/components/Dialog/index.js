@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Dialog = ({ diaId, diaHeader, children }) => (
+const Dialog = ({ diaId, diaHeader, children, isOpen = false }) => (
 	<>
-	{/* TODO: legacy code for div.dialog should be removed when merge the code. So far keep it so it's easier to test the CSS & JS for silent support of the old div.dialog */}
-		{/* <div
+		{/* TODO: legacy code for div.dialog should be removed when merge the code. So far keep it so it's easier to test the CSS & JS for silent support of the old div.dialog */}
+		<div
 			className="dialog"
 			id={diaId}
 			role="dialog"
@@ -37,13 +37,14 @@ const Dialog = ({ diaId, diaHeader, children }) => (
 					{"\n"}
 				</footer>
 			</section>
-		</div> */}
+		</div>
 
-		<dialog
+		{/* <dialog
 			id={diaId}
 			aria-modal="true"
 			aria-labelledby="aria-label-dia"
 			aria-describedby="aria-describe-dia"
+			open={isOpen}
 		>
 			{"\n"}
 			<header>
@@ -73,7 +74,7 @@ const Dialog = ({ diaId, diaHeader, children }) => (
 				{"\n"}
 			</footer>
 			{"\n"}
-		</dialog>
+		</dialog> */}
 	</>
 );
 

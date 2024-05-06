@@ -17,7 +17,7 @@ describe("Component: Dialog -", () => {
 	});
 
 	it("renders with the passed ID", () => {
-		render(<Dialog diaId="my-id" />);
+		render(<Dialog diaId="my-id" isOpen />);
 
 		expect(screen.getByRole("dialog")).toHaveAttribute("id", "my-id");
 
@@ -27,7 +27,7 @@ describe("Component: Dialog -", () => {
 	});
 
 	it("renders with the passed header", () => {
-		render(<Dialog diaHeader="My heading" />);
+		render(<Dialog diaHeader="My heading" isOpen />);
 
 		expect(screen.getByRole("heading")).toHaveTextContent("My heading");
 
@@ -40,7 +40,7 @@ describe("Component: Dialog -", () => {
 		const { container } = render(
 			<Dialog>
 				<p>My paragraph</p>
-			</Dialog>
+			</Dialog>,
 		);
 
 		expect(container.querySelector("p")).toHaveTextContent("My paragraph");
@@ -48,7 +48,7 @@ describe("Component: Dialog -", () => {
 		const componentForSnap = renderer.create(
 			<Dialog>
 				<p>My paragraph</p>
-			</Dialog>
+			</Dialog>,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();

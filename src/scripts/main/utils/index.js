@@ -20,13 +20,21 @@ export const isWithinBoundingBox = (x, y, element) => {
 	return xMin < x && xMax > x && yMin < y && yMax > y;
 };
 
-export const handleScrollbar = () => {
-	const hasVScroll =
-		window.innerWidth - document.documentElement.clientWidth > 0;
+// check if page has already a scrollbar displayed
+export const hasVscroll = () => {
+	return window.innerWidth - document.documentElement.clientWidth > 0;
+};
 
-	if (hasVScroll && !document.body.classList.contains("has-vscroll")) {
+// add/remove .has-vscroll
+// it is meant block scrolling on the body when a modal is open. But this should only happen if a scrolling of teh page would be necessary (hence teh checking if there was a scrollbar before)
+export const handleScrollbar = () => {
+	const hasVScrollVal = hasVscroll();
+
+	// if has scrollbar AND <body> do not have .has-vscroll yet then add it
+	if (hasVScrollVal && !document.body.classList.contains("has-vscroll")) {
 		document.body.classList.add("has-vscroll");
 	} else {
+		// if has no scrollbar OR <body> already has .has-vscroll then remove it
 		document.body.classList.remove("has-vscroll");
 	}
 };
@@ -39,7 +47,7 @@ export const openComponent = (id, componentType, componentList) => {
 	try {
 		if (component.isOpen) {
 			console.warn(
-				`${componentType}.open: ${componentType} with id "${id}" is open`
+				`${componentType}.open: ${componentType} with id "${id}" is open`,
 			);
 
 			return false;
@@ -48,7 +56,7 @@ export const openComponent = (id, componentType, componentList) => {
 		component.open();
 	} catch (e) {
 		console.warn(
-			`${componentType}.open: No ${componentType} with id "${id}" found.`
+			`${componentType}.open: No ${componentType} with id "${id}" found.`,
 		);
 
 		return false;
@@ -65,7 +73,7 @@ export const closeComponent = (id, componentType, componentList) => {
 	try {
 		if (!component.isOpen) {
 			console.warn(
-				`${componentType}.close: ${componentType} with id "${id}" is not open`
+				`${componentType}.close: ${componentType} with id "${id}" is not open`,
 			);
 
 			return false;
@@ -74,7 +82,7 @@ export const closeComponent = (id, componentType, componentList) => {
 		component.close();
 	} catch (e) {
 		console.warn(
-			`${componentType}.close: No ${componentType} with id "${id}" found.`
+			`${componentType}.close: No ${componentType} with id "${id}" found.`,
 		);
 
 		return false;
