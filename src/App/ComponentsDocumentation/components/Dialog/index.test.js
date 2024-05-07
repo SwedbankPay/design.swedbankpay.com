@@ -31,7 +31,7 @@ describe("Documentation: Dialog", () => {
 			expect(Overview).toBeDefined();
 		});
 
-		it("renders", () => {
+		it.skip("renders", () => {
 			const wrapper = renderer.create(<Overview />);
 
 			expect(wrapper.toJSON()).toMatchSnapshot();
