@@ -1,7 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Dialog = ({ diaId, diaHeader, children, isOpen = false }) => (
+const Dialog = ({
+	diaId,
+	diaHeader,
+	children,
+	isOpen = false,
+	size = "medium",
+	hasDividers = false,
+	slidesFromBottom = true,
+	hasGrayBg = false,
+}) => (
 	<>
 		<dialog
 			id={diaId}
@@ -9,6 +18,7 @@ const Dialog = ({ diaId, diaHeader, children, isOpen = false }) => (
 			aria-labelledby="aria-label-dia"
 			aria-describedby="aria-describe-dia"
 			open={isOpen}
+			className={`${size === "large" ? "large " : ""}${hasDividers ? "dividers " : ""}${slidesFromBottom ? "" : "slide-from-right "}${hasGrayBg ? "gray" : ""}`}
 		>
 			{"\n"}
 			<header>
@@ -28,11 +38,18 @@ const Dialog = ({ diaId, diaHeader, children, isOpen = false }) => (
 			{"\n"}
 			<footer>
 				{"\n"}
-				<button className="btn btn-secondary" type="button" data-dialog-close>
+				<button
+					className={`btn btn-secondary ${size === "medium" ? "btn-sm" : "btn-lg"}`}
+					type="button"
+					data-dialog-close
+				>
 					Cancel
 				</button>
 				{"\n"}
-				<button className="btn btn-primary" type="button">
+				<button
+					className={`btn btn-primary ${size === "medium" ? "btn-sm" : "btn-lg"}`}
+					type="button"
+				>
 					Delete
 				</button>
 				{"\n"}
@@ -42,7 +59,15 @@ const Dialog = ({ diaId, diaHeader, children, isOpen = false }) => (
 	</>
 );
 
-export const DialogOld = ({ diaId, diaHeader, children, isOpen = false }) => (
+export const DialogOld = ({
+	diaId,
+	diaHeader,
+	children,
+	isOpen = false,
+	size = "medium",
+	hasDividers = false,
+	slidesFromBottom = true,
+}) => (
 	<>
 		<div
 			className="dialog"
@@ -67,11 +92,18 @@ export const DialogOld = ({ diaId, diaHeader, children, isOpen = false }) => (
 				</div>
 				<footer className="dialog-footer">
 					{"\n"}
-					<button className="btn btn-secondary" type="button" data-dialog-close>
+					<button
+						className={`btn btn-secondary ${size === "medium" ? "btn-sm" : "btn-lg"}`}
+						type="button"
+						data-dialog-close
+					>
 						Cancel
 					</button>
 					{"\n"}
-					<button className="btn btn-primary" type="button">
+					<button
+						className={`btn btn-primary ${size === "medium" ? "btn-sm" : "btn-lg"}`}
+						type="button"
+					>
 						Delete
 					</button>
 					{"\n"}

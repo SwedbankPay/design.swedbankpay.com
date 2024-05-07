@@ -181,7 +181,7 @@ dialog {
 		display: flex;
 		padding: var(--padding-x);
 		align-items: center;
-		border-bottom: var(--dialog-divider);
+		border-block-end: var(--dialog-divider);
 		border-radius: 20px 20px 0 0;
 
 		:is(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6) {
@@ -207,7 +207,7 @@ dialog {
 			background-color: transparent;
 			border: none;
 			padding: 0;
-			margin-right: -0.5rem;
+			margin-inline-end: -0.5rem;
 			height: 24px;
 			width: 24px;
 
@@ -264,7 +264,7 @@ dialog {
 
 	footer {
 		background: var(--bg-color);
-		border-top: var(--dialog-divider);
+		border-block-start: var(--dialog-divider);
 		padding: var(--padding-x);
 		margin: 0;
 		display: flex;

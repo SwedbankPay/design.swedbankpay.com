@@ -1,10 +1,17 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
+import {
+	ComponentPreview,
+	DocContainer,
+	JavascriptDocs,
+	EditableComponentPreview,
+} from "@docutils";
 import Alert from "@components/Alert";
-import DialogComponent from "@components/Dialog";
-import { DialogOld as DialogOldComponent } from "@components/Dialog";
+import DialogComponent, {
+	DialogOld as DialogOldComponent,
+} from "@components/Dialog";
+import { dialogShowcase } from "./constants";
 import CodeTags from "@components/CodeTags";
 
 import { dialog } from "@src/scripts/main";
@@ -55,23 +62,15 @@ const HowItWorks = () => (
 	</>
 );
 
-const Example = () => (
+const Overview = () => (
 	<>
-		<h2 id="overview">Example</h2>
-		<ComponentPreview language="html" showCasePanel codeFigure>
-			<button
-				className="btn btn-primary"
-				type="button"
-				data-dialog-open="demo-dialog"
-			>
-				{"\n"}Open dialog{"\n"}
-			</button>
-			<DialogComponent diaHeader="Delete" diaId="demo-dialog">
-				<p>
-					You’re about to permanently delete <i>German Swashbuckle (456)?</i>
-				</p>
-			</DialogComponent>
-		</ComponentPreview>
+		<h2 id="overview">Dialog (the modern way 🌟)</h2>
+		<ComponentPreview
+			language="html"
+			showCasePanel
+			showCasePanelAdvanced={dialogShowcase}
+			removeOuterTag={false}
+		/>
 	</>
 );
 
@@ -118,7 +117,7 @@ const Dialog = () => {
 				from the user or display a large chunk of information.
 			</p>
 			<HowItWorks />
-			<Example />
+			<Overview />
 			<ExampleOldSyntax />
 			<JavascriptMethods />
 			<NpmInformation componentName={"dialog"} />
@@ -129,4 +128,4 @@ const Dialog = () => {
 export default Dialog;
 
 /* For testing */
-export { HowItWorks, Example, JavascriptMethods };
+export { HowItWorks, Overview, JavascriptMethods };

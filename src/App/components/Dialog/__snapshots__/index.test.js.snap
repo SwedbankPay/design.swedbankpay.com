@@ -5,6 +5,7 @@ exports[`Component: Dialog - renders 1`] = `
   aria-describedby="aria-describe-dia"
   aria-labelledby="aria-label-dia"
   aria-modal="true"
+  className=""
   open={false}
 >
   
@@ -35,7 +36,7 @@ exports[`Component: Dialog - renders 1`] = `
     
 
     <button
-      className="btn btn-secondary"
+      className="btn btn-secondary btn-sm"
       data-dialog-close={true}
       type="button"
     >
@@ -44,7 +45,7 @@ exports[`Component: Dialog - renders 1`] = `
     
 
     <button
-      className="btn btn-primary"
+      className="btn btn-primary btn-sm"
       type="button"
     >
       Delete
@@ -62,6 +63,7 @@ exports[`Component: Dialog - renders with the passed ID 1`] = `
   aria-describedby="aria-describe-dia"
   aria-labelledby="aria-label-dia"
   aria-modal="true"
+  className=""
   open={false}
 >
   
@@ -92,7 +94,7 @@ exports[`Component: Dialog - renders with the passed ID 1`] = `
     
 
     <button
-      className="btn btn-secondary"
+      className="btn btn-secondary btn-sm"
       data-dialog-close={true}
       type="button"
     >
@@ -101,7 +103,7 @@ exports[`Component: Dialog - renders with the passed ID 1`] = `
     
 
     <button
-      className="btn btn-primary"
+      className="btn btn-primary btn-sm"
       type="button"
     >
       Delete
@@ -119,6 +121,7 @@ exports[`Component: Dialog - renders with the passed children 1`] = `
   aria-describedby="aria-describe-dia"
   aria-labelledby="aria-label-dia"
   aria-modal="true"
+  className=""
   open={false}
 >
   
@@ -153,7 +156,7 @@ exports[`Component: Dialog - renders with the passed children 1`] = `
     
 
     <button
-      className="btn btn-secondary"
+      className="btn btn-secondary btn-sm"
       data-dialog-close={true}
       type="button"
     >
@@ -162,7 +165,7 @@ exports[`Component: Dialog - renders with the passed children 1`] = `
     
 
     <button
-      className="btn btn-primary"
+      className="btn btn-primary btn-sm"
       type="button"
     >
       Delete
@@ -180,6 +183,7 @@ exports[`Component: Dialog - renders with the passed header 1`] = `
   aria-describedby="aria-describe-dia"
   aria-labelledby="aria-label-dia"
   aria-modal="true"
+  className=""
   open={false}
 >
   
@@ -212,7 +216,7 @@ exports[`Component: Dialog - renders with the passed header 1`] = `
     
 
     <button
-      className="btn btn-secondary"
+      className="btn btn-secondary btn-sm"
       data-dialog-close={true}
       type="button"
     >
@@ -221,7 +225,7 @@ exports[`Component: Dialog - renders with the passed header 1`] = `
     
 
     <button
-      className="btn btn-primary"
+      className="btn btn-primary btn-sm"
       type="button"
     >
       Delete
