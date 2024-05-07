@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
 import Alert from "@components/Alert";
 import DialogComponent from "@components/Dialog";
+import { DialogOld as DialogOldComponent } from "@components/Dialog";
 import CodeTags from "@components/CodeTags";
 
 import { dialog } from "@src/scripts/main";
@@ -74,6 +75,28 @@ const Example = () => (
 	</>
 );
 
+const ExampleOldSyntax = () => (
+	<>
+		<h2 id="overview">
+			Example Old Dialog component - silent support until next major release
+		</h2>
+		<ComponentPreview language="html" showCasePanel codeFigure>
+			<button
+				className="btn btn-primary"
+				type="button"
+				data-dialog-open="demo-dialog-old-syntax"
+			>
+				{"\n"}Open dialog{"\n"}
+			</button>
+			<DialogOldComponent diaHeader="Delete" diaId="demo-dialog-old-syntax">
+				<p>
+					You’re about to permanently delete <i>German Swashbuckle (456)?</i>
+				</p>
+			</DialogOldComponent>
+		</ComponentPreview>
+	</>
+);
+
 const JavascriptMethods = () => (
 	<>
 		<h2 id="javascript-methods">JavaScript methods</h2>
@@ -96,6 +119,7 @@ const Dialog = () => {
 			</p>
 			<HowItWorks />
 			<Example />
+			<ExampleOldSyntax />
 			<JavascriptMethods />
 			<NpmInformation componentName={"dialog"} />
 		</DocContainer>
