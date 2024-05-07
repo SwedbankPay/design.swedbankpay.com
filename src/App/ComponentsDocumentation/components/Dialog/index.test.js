@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import Dialog, { HowItWorks, Example, JavascriptMethods } from "./index";
+import Dialog, { HowItWorks, Overview, JavascriptMethods } from "./index";
 
 describe("Documentation: Dialog", () => {
 	it("is defined", () => {
@@ -26,13 +26,13 @@ describe("Documentation: Dialog", () => {
 		});
 	});
 
-	describe("Example", () => {
+	describe("Overview", () => {
 		it("is defined", () => {
-			expect(Example).toBeDefined();
+			expect(Overview).toBeDefined();
 		});
 
 		it("renders", () => {
-			const wrapper = renderer.create(<Example />);
+			const wrapper = renderer.create(<Overview />);
 
 			expect(wrapper.toJSON()).toMatchSnapshot();
 		});
