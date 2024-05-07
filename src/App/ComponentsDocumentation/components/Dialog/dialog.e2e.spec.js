@@ -17,7 +17,7 @@ test("Dialog page exist", async ({ page }) => {
 		.click();
 	await expect(page).toHaveTitle(/Dialog/);
 	await expect(
-		page.getByRole("heading", { name: "Dialog", exact: true }),
+		page.getByRole("heading", { name: "Dialog", exact: true, level: 1 }),
 	).toBeVisible();
 });
 
@@ -27,11 +27,14 @@ test("visual regresion accordions", async ({ page, browserName }) => {
 	const brand = (await page.title()).includes("Swedbank")
 		? "SwedbankPay"
 		: "PayEx";
-	const dialogButton = page.getByRole("button", { name: "Open dialog" });
+	const dialogButton = page
+		.locator("#overview-dialog")
+		.getByRole("button", { name: "Open dialog" });
 
+	await expect(dialogButton).toBeVisible();
 	await expect(dialogButton).toHaveScreenshot(`${brand}-dialog-button.png`);
 	await dialogButton.click();
-	await expect(page.getByRole("dialog").locator("section")).toHaveScreenshot(
+	await expect(page.getByRole("dialog")).toHaveScreenshot(
 		`${brand}-dialog-modal.png`,
 	);
 	await expect(page.getByRole("dialog")).toHaveScreenshot(

@@ -23,7 +23,7 @@ const DialogExample = ({
 			slidesFromBottom={slidesFromBottom}
 			hasGrayBgColor={hasGrayBgColor}
 		>
-			<p>
+			<p className="mb-0">
 				You’re about to permanently delete <i>German Swashbuckle (456)?</i>
 			</p>
 		</DialogComponent>
