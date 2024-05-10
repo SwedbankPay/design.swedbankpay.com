@@ -1,12 +1,7 @@
 import React from "react";
 import DialogComponent from "@components/Dialog";
 
-const DialogExample = ({
-	size,
-	hasDividers,
-	hasGrayBgColor,
-	slidesFromBottom,
-}) => (
+const DialogExample = ({ size, hasDividers, hasGrayBg, slidesFromBottom }) => (
 	<>
 		<button
 			className="btn btn-primary"
@@ -21,7 +16,7 @@ const DialogExample = ({
 			size={size}
 			hasDividers={hasDividers}
 			slidesFromBottom={slidesFromBottom}
-			hasGrayBgColor={hasGrayBgColor}
+			hasGrayBg={hasGrayBg}
 		>
 			<p className="mb-0">
 				You’re about to permanently delete <i>German Swashbuckle (456)?</i>

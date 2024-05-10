@@ -159,6 +159,7 @@ dialog {
 	@media screen and (max-width: 768px) {
 		width: 100%;
 		max-width: 100vw;
+		max-height: 88vh;
 		margin-inline: 0;
 		margin-block-end: 0;
 		border-radius: var(--dialog-radius) var(--dialog-radius) 0 0;
@@ -187,17 +188,22 @@ dialog {
 		align-items: center;
 		border-block-end: var(--dialog-divider);
 		border-radius: 20px 20px 0 0;
+		font-size: 1.5rem;
+		line-height: 1.875rem;
 
-		:is(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6) {
-			margin-block: 0;
+		@media screen and (min-width: 768px) {
+			font-size: 2rem;
+		}
+
+		& > *:first-child {
 			flex-grow: 1;
+			font-family: var(--brand-headline);
+			font-weight: var(--font-weight-header, 400);
+			text-wrap: balance;
+			color: var(--brand-secondary);
 
-			&:is(h4) {
-				font-size: 1.5rem;
-
-				@media screen and (min-width: 768px) {
-					font-size: 2rem;
-				}
+			&:is(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p) {
+				margin-block: 0;
 			}
 		}
 
@@ -273,7 +279,7 @@ dialog {
 		margin: 0;
 		display: flex;
 		justify-content: flex-end;
-		gap: 0.5rem;
+		gap: 1rem;
 
 		> * {
 			margin: 0;

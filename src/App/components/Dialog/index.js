@@ -23,7 +23,7 @@ const Dialog = ({
 			{"\n"}
 			<header>
 				{"\n"}
-				<h4>{diaHeader}</h4>
+				<div role="heading">{diaHeader}</div>
 				{"\n"}
 				<button
 					type="button"

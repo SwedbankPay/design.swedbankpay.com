@@ -13,7 +13,9 @@ exports[`Component: Dialog - renders 1`] = `
   <header>
     
 
-    <h4 />
+    <div
+      role="heading"
+    />
     
 
     <button
@@ -71,7 +73,9 @@ exports[`Component: Dialog - renders with the passed ID 1`] = `
   <header>
     
 
-    <h4 />
+    <div
+      role="heading"
+    />
     
 
     <button
@@ -129,7 +133,9 @@ exports[`Component: Dialog - renders with the passed children 1`] = `
   <header>
     
 
-    <h4 />
+    <div
+      role="heading"
+    />
     
 
     <button
@@ -191,9 +197,11 @@ exports[`Component: Dialog - renders with the passed header 1`] = `
   <header>
     
 
-    <h4>
+    <div
+      role="heading"
+    >
       My heading
-    </h4>
+    </div>
     
 
     <button
