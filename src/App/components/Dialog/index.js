@@ -13,7 +13,7 @@ const Dialog = ({
 }) => (
 	<>
 		<dialog
-			className={`${size === "large" ? "large " : ""}${hasDividers ? "dividers " : ""}${slidesFromBottom ? "" : "slide-from-right "}${hasGrayBg ? "gray" : ""}`}
+			className={`${size === "large" ? "large " : ""}${hasDividers ? "dividers " : ""}${slidesFromBottom ? "" : "slide-from-right "}${hasGrayBg ? "gray " : ""}`}
 			id={diaId}
 			open={isOpen}
 		>

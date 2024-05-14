@@ -1,8 +1,5 @@
 @import "../global.less";
 
-// TODO: modify documentation for bg color variants & for sizes variants
-// TODO: add sizes variants
-// TODO: keep this for for silent support but add animations for dialog elements + add scripts if dialog element
 .dialog,
 dialog {
 	--dialog-divider: 1px solid var(--gray);
@@ -17,6 +14,7 @@ dialog {
 	}
 }
 
+// TODO: can be removed in next major release when silent support for div.dialog is over
 .dialog {
 	position: fixed;
 	top: 0;
@@ -137,11 +135,15 @@ dialog {
 }
 
 // TODO: can be removed during next major release, once dialog is migrated to <dialog> only
-body.dialog-open .dialog {
-	overflow-x: hidden;
-	overflow-y: auto;
-	display: flex;
-	opacity: 1;
+body.dialog-open {
+	overflow: hidden;
+
+	.dialog {
+		overflow-x: hidden;
+		overflow-y: auto;
+		display: flex;
+		opacity: 1;
+	}
 }
 
 // MARK: new <dialog> element
@@ -167,7 +169,6 @@ dialog {
 	}
 
 	&:not(.dividers) {
-		// style with gray dividers
 		--dialog-divider: none;
 
 		.dialog-body {
@@ -231,18 +232,11 @@ dialog {
 			&:focus-visible {
 				border: none;
 				border-radius: 0.125rem;
-				box-shadow: 0 0 0 2px var(--black);
-				outline: none;
+				outline: 2px solid var(--black);
 			}
 
 			&:active {
 				outline: 0;
-				background-image: none;
-				box-shadow: none;
-
-				&:focus-visible {
-					box-shadow: none;
-				}
 			}
 
 			&:before,
@@ -272,7 +266,6 @@ dialog {
 	}
 
 	// MARK: <dialog> footer
-
 	footer {
 		background: var(--bg-color);
 		border-block-start: var(--dialog-divider);
@@ -332,7 +325,6 @@ dialog {
 }
 
 // MARK: A11y reduced motion
-
 @media (forced-colors: active) {
 	.dialog {
 		border: 10px solid;

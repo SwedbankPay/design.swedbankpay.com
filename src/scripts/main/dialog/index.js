@@ -156,7 +156,7 @@ const init = (id) => {
 			return null;
 		}
 
-		if (dialog?.tagName === "dialog") {
+		if (dialog?.tagName.toLowerCase() === "dialog") {
 			return _activateDialogElement(dialog);
 		} else {
 			return _createDialog(dialog);

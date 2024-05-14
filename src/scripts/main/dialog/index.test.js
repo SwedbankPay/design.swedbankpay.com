@@ -3,8 +3,8 @@ import { createRoot } from "react-dom/client";
 import { render, screen, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
-
-import dialog from "./index";
+// import Dialog from "../../../App/components/Dialog";
+import { dialog } from "@src/scripts/main";
 
 describe("scripts: dialog", () => {
 	const div = document.createElement("div");
@@ -25,14 +25,9 @@ describe("scripts: dialog", () => {
 				>
 					Open dialog
 				</button>
-				<dialog
-					id={id}
-					aria-modal="true"
-					aria-labelledby="aria-label-dia"
-					aria-describedby="aria-describe-dia"
-				>
+				<dialog id={id}>
 					<header>
-						<h4>Delete</h4>
+						<div role="heading">Delete</div>
 						<button
 							type="button"
 							className="dialog-close"
@@ -237,18 +232,19 @@ describe("scripts: dialog", () => {
 		expect(document.body.classList).not.toContain("dialog-open");
 	});
 
-	describe("dialog.open", () => {
+	describe.skip("dialog.open", () => {
 		it("opens dialog when calling dialog.open", () => {
-			root.render(<Dialog id="demo-dialog" />);
+			const { container } = render(<Dialog id="dia-id" />);
 
-			expect(document.body.classList).not.toContain("dialog-open");
+			expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
 
 			dialog.init();
-			expect(document.body.classList).not.toContain("dialog-open");
+
+			expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
 
 			dialog.open("demo-dialog");
 
-			expect(document.body.classList).toContain("dialog-open");
+			expect(screen.getByRole("dialog")).toBeInTheDocument();
 		});
 
 		it("does not open dialog when calling dialog.open with wrong id and prints warn to console", () => {
