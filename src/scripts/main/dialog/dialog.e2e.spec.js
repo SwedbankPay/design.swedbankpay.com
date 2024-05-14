@@ -8,7 +8,10 @@ test.beforeEach(async ({ page }) => {
 test("dialog displays & closes by mouse on close (cross) button ", async ({
 	page,
 }) => {
-	const dialogOpenButton = page.getByRole("button", { name: "Open dialog" });
+	const dialogOpenButton = page
+		.locator("#overview-dialog")
+		.getByRole("button", { name: "Open dialog" });
+
 	await dialogOpenButton.click();
 	await expect(page.getByRole("dialog")).toBeVisible();
 	await page
@@ -19,7 +22,10 @@ test("dialog displays & closes by mouse on close (cross) button ", async ({
 });
 
 test("dialog closes by mouse on Cancel button ", async ({ page }) => {
-	const dialogOpenButton = page.getByRole("button", { name: "Open dialog" });
+	const dialogOpenButton = page
+		.locator("#overview-dialog")
+		.getByRole("button", { name: "Open dialog" });
+
 	await dialogOpenButton.click();
 	await expect(page.getByRole("dialog")).toBeVisible();
 	await page
@@ -32,7 +38,10 @@ test("dialog closes by mouse on Cancel button ", async ({ page }) => {
 test("dialog does NOT close when click outside the modal or on another buttons than the cancel OR close buttons ", async ({
 	page,
 }) => {
-	const dialogOpenButton = page.getByRole("button", { name: "Open dialog" });
+	const dialogOpenButton = page
+		.locator("#overview-dialog")
+		.getByRole("button", { name: "Open dialog" });
+
 	await dialogOpenButton.click();
 	await expect(page.getByRole("dialog")).toBeVisible();
 	await page.getByRole("dialog").click();
@@ -42,7 +51,10 @@ test("dialog does NOT close when click outside the modal or on another buttons t
 });
 
 test("dialog displays & closes by keyboard navigation", async ({ page }) => {
-	const dialogOpenButton = page.getByRole("button", { name: "Open dialog" });
+	const dialogOpenButton = page
+		.locator("#overview-dialog")
+		.getByRole("button", { name: "Open dialog" });
+
 	await dialogOpenButton.press("Enter");
 	await expect(page.getByRole("dialog")).toBeVisible();
 	await page.getByRole("button", { name: "Delete" }).press("Enter");
