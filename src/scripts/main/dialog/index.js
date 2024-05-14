@@ -178,9 +178,15 @@ const init = (id) => {
 	}
 };
 
-const open = (id) => openComponent(id, "dialog", _dialogs);
+const open = (id) =>
+	document.getElementById(id).tagName.toLowerCase() === "dialog"
+		? document.getElementById(id).showModal()
+		: openComponent(id, "dialog", _dialogs);
 
-const close = (id) => closeComponent(id, "dialog", _dialogs);
+const close = (id) =>
+	document.getElementById(id).tagName.toLowerCase() === "dialog"
+		? document.getElementById(id).close()
+		: closeComponent(id, "dialog", _dialogs);
 
 export default {
 	init,
