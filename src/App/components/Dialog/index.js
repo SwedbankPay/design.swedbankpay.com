@@ -13,12 +13,9 @@ const Dialog = ({
 }) => (
 	<>
 		<dialog
-			id={diaId}
-			aria-modal="true"
-			aria-labelledby="aria-label-dia"
-			aria-describedby="aria-describe-dia"
-			open={isOpen}
 			className={`${size === "large" ? "large " : ""}${hasDividers ? "dividers " : ""}${slidesFromBottom ? "" : "slide-from-right "}${hasGrayBg ? "gray" : ""}`}
+			id={diaId}
+			open={isOpen}
 		>
 			{"\n"}
 			<header>

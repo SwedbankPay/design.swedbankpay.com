@@ -2,9 +2,6 @@
 
 exports[`Component: Dialog - renders 1`] = `
 <dialog
-  aria-describedby="aria-describe-dia"
-  aria-labelledby="aria-label-dia"
-  aria-modal="true"
   className=""
   open={false}
 >
@@ -62,9 +59,6 @@ exports[`Component: Dialog - renders 1`] = `
 
 exports[`Component: Dialog - renders with the passed ID 1`] = `
 <dialog
-  aria-describedby="aria-describe-dia"
-  aria-labelledby="aria-label-dia"
-  aria-modal="true"
   className=""
   open={false}
 >
@@ -122,9 +116,6 @@ exports[`Component: Dialog - renders with the passed ID 1`] = `
 
 exports[`Component: Dialog - renders with the passed children 1`] = `
 <dialog
-  aria-describedby="aria-describe-dia"
-  aria-labelledby="aria-label-dia"
-  aria-modal="true"
   className=""
   open={false}
 >
@@ -186,9 +177,6 @@ exports[`Component: Dialog - renders with the passed children 1`] = `
 
 exports[`Component: Dialog - renders with the passed header 1`] = `
 <dialog
-  aria-describedby="aria-describe-dia"
-  aria-labelledby="aria-label-dia"
-  aria-modal="true"
   className=""
   open={false}
 >

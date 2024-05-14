@@ -39,7 +39,7 @@ export const dialogShowcase = {
 						inputs: [
 							{
 								id: "checkbox-dialog",
-								name: "has dividers",
+								name: "Has dividers",
 								value: {
 									hasDividers: true,
 								},
@@ -74,14 +74,14 @@ export const dialogShowcase = {
 						values: [
 							{
 								id: "radio-slide-bottom",
-								name: "from the bottom (default)",
+								name: "From the bottom (default)",
 								value: {
 									slidesFromBottom: true,
 								},
 							},
 							{
 								id: "radio-slides-right",
-								name: "from the right",
+								name: "From the right",
 								value: {
 									slidesFromBottom: false,
 								},
@@ -101,7 +101,7 @@ export const dialogShowcase = {
 							},
 							{
 								id: "radio-bg-gray",
-								name: "gray bg",
+								name: "Gray bg",
 								value: {
 									hasGrayBg: true,
 								},

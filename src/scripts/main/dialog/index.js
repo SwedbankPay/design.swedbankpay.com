@@ -179,12 +179,12 @@ const init = (id) => {
 };
 
 const open = (id) =>
-	document.getElementById(id).tagName.toLowerCase() === "dialog"
+	document.getElementById(id)?.tagName.toLowerCase() === "dialog"
 		? document.getElementById(id).showModal()
 		: openComponent(id, "dialog", _dialogs);
 
 const close = (id) =>
-	document.getElementById(id).tagName.toLowerCase() === "dialog"
+	document.getElementById(id)?.tagName.toLowerCase() === "dialog"
 		? document.getElementById(id).close()
 		: closeComponent(id, "dialog", _dialogs);
 
