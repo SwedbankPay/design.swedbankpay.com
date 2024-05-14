@@ -34,10 +34,13 @@ test("visual regresion accordions", async ({ page, browserName }) => {
 	await expect(dialogButton).toBeVisible();
 	await expect(dialogButton).toHaveScreenshot(`${brand}-dialog-button.png`);
 	await dialogButton.click();
+	// wait for transition to end before taking screenshots
+	await page.waitForTimeout(500);
 	await expect(page.getByRole("dialog")).toHaveScreenshot(
 		`${brand}-dialog-modal.png`,
+		{ animations: "disabled" },
 	);
-	await expect(page.getByRole("dialog")).toHaveScreenshot(
-		`${brand}-dialog-modal-screen.png`,
-	);
+	await expect(page).toHaveScreenshot(`${brand}-dialog-backdrop.png`, {
+		animations: "disabled",
+	});
 });
