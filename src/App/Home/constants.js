@@ -5,6 +5,93 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.12.0",
+		title: "UI Bonanza",
+		text: (
+			<>
+				<p>
+					We're back with a new release, and it's a big one! Buckle up, because
+					you're about to get <s>slapped</s> <em>spoiled</em> with a bunch of UI
+					updates and new variants.
+				</p>
+				<p>
+					Some people believe Spring is about Mari Kondo-ing. Losers*. We think
+					it's Christmas all year round. That's right 🎁 🎉.
+				</p>
+				<p>
+					We recommend going through the release notes for a more detailed
+					overview, but the main things are as follow.
+				</p>
+				<p>
+					<strong>Buttons</strong>
+					<ul>
+						<li>icon button for Danish MitId</li>
+						<li>minor non-breaking UI updates (e.g. hover color, ...)</li>
+					</ul>
+				</p>
+				<p>
+					<strong>Radio inputs</strong> - checkmark variant
+					<ul>
+						<li>
+							<em>BEFORE</em>: checkmark svg. <em>NOW</em>:{" "}
+							<CodeTags type="secondary" code="span.checkmark-icon" />. It will
+							make life easier. We take care of you in the background. Sit back
+							and relax 🍹
+						</li>
+						<li>new large option</li>
+						<li>new subtitle option</li>
+					</ul>
+					Plus several minor non-breaking UI updates (e.g. hover color, etc)
+				</p>
+				<p>
+					<strong>Dialog</strong>.
+					<br className="pt-2" />
+					We now use the standard <CodeTags
+						type="secondary"
+						code="<dialog>"
+					/>{" "}
+					element. Simpler syntax, built-in A11y, less script. In one word:
+					better 🚀. Move to it as soon as you can. Life shines brighter on the
+					other side 🌻
+					<br />
+					We keep silent support for the old dialog syntax (until next major
+					release).
+					<br />
+					The new dialog gets all those UI freebies & options:
+					<ul>
+						<li>option for gray background (white is the default BG)</li>
+						<li>option for dividers</li>
+						<li>
+							transitions on open & close (+ options to decide if it comes from
+							bottom (default) or from the right)
+						</li>
+						<li>new backdrop color (brand-primary + blur)</li>
+						<li>2 modal sizes</li>
+					</ul>
+				</p>
+				<p>
+					And many more small changes, both some UI updates/fixes & some
+					dependency chores.
+					<br />
+					We hope you'll like it
+				</p>
+				<p className="small">
+					<span className="font-italic">
+						*Just to be clear. I hate the word "losers". There are no losers in
+						life, or maybe only the people who think life is a competition. I
+						just wanted it to be clear
+					</span>{" "}
+					😉
+					<span className="font-italic">
+						{" "}
+						Big love to all my fellow losers, we rock
+					</span>{" "}
+					😘.
+				</p>
+			</>
+		),
+	},
+	{
 		version: "10.11.0",
 		title: "Cards UI update",
 		text: (
