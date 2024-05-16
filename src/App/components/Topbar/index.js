@@ -182,7 +182,7 @@ const TopbarLogo = ({ png, legacy }) => (
 							? getDevLogo(legacy)
 							: `${process.env.basename}img/logo/${brand}-logo${
 									brand === "swedbankpay" ? (legacy ? "-v" : "-h") : ""
-							  }.svg`
+								}.svg`
 					}
 					alt={`${brand} logo`}
 					className={`${

@@ -1095,7 +1095,7 @@ exports[`Forms: index renders 1`] = `
                 Don't
               </span>
               <div
-                className="radio"
+                className="radio "
               >
                 
 
@@ -1151,7 +1151,7 @@ exports[`Forms: index renders 1`] = `
                 </div>
               </div>
               <div
-                className="radio"
+                className="radio "
               >
                 
 

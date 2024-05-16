@@ -1,9 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import { ComponentPreview, DocContainer, JavascriptDocs } from "@docutils";
+import {
+	ComponentPreview,
+	DocContainer,
+	JavascriptDocs,
+	EditableComponentPreview,
+} from "@docutils";
 import Alert from "@components/Alert";
-import DialogComponent from "@components/Dialog";
+import DialogComponent, {
+	DialogOld as DialogOldComponent,
+} from "@components/Dialog";
+import { dialogShowcase } from "./constants";
 import CodeTags from "@components/CodeTags";
 
 import { dialog } from "@src/scripts/main";
@@ -54,22 +62,50 @@ const HowItWorks = () => (
 	</>
 );
 
-const Example = () => (
+const Overview = () => (
 	<>
-		<h2 id="overview">Example</h2>
+		<h2 id="overview">Dialog (the modern way 🌟)</h2>
+		<ComponentPreview
+			language="html"
+			showCasePanel
+			showCasePanelAdvanced={dialogShowcase}
+			removeOuterTag={false}
+		/>
+	</>
+);
+
+const ExampleOldSyntax = () => (
+	<>
+		<h2 id="overview">
+			Example Old Dialog component - silent support until next major release
+		</h2>
+		<p>
+			We're keeping a silent support for the "now old" Dialog component syntax.
+		</p>
+		<p>
+			We decided to move away in order to use the standard{" "}
+			<CodeTags type="secondary" code="<dialog>" /> element, and the benefits
+			its brings along (less scripts needed, better accessibility, etc.).
+		</p>
+		<p>
+			Some updates might be ported to the old syntax, but we recommend migrating
+			as soon as you can to enjoy all the new shiny updates (e.g. transition on
+			open/close, etc). Plus, the new syntax is <em>much</em> easier to use. The
+			support for it will be removed during the next major release.
+		</p>
 		<ComponentPreview language="html" showCasePanel codeFigure>
 			<button
 				className="btn btn-primary"
 				type="button"
-				data-dialog-open="demo-dialog"
+				data-dialog-open="demo-dialog-old-syntax"
 			>
 				{"\n"}Open dialog{"\n"}
 			</button>
-			<DialogComponent diaHeader="Delete" diaId="demo-dialog">
+			<DialogOldComponent diaHeader="Delete" diaId="demo-dialog-old-syntax">
 				<p>
 					You’re about to permanently delete <i>German Swashbuckle (456)?</i>
 				</p>
-			</DialogComponent>
+			</DialogOldComponent>
 		</ComponentPreview>
 	</>
 );
@@ -95,7 +131,8 @@ const Dialog = () => {
 				from the user or display a large chunk of information.
 			</p>
 			<HowItWorks />
-			<Example />
+			<Overview />
+			<ExampleOldSyntax />
 			<JavascriptMethods />
 			<NpmInformation componentName={"dialog"} />
 		</DocContainer>
@@ -105,4 +142,4 @@ const Dialog = () => {
 export default Dialog;
 
 /* For testing */
-export { HowItWorks, Example, JavascriptMethods };
+export { HowItWorks, Overview, JavascriptMethods };

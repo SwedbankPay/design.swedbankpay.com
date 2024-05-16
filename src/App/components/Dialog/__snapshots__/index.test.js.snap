@@ -1,219 +1,235 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component: Dialog - renders 1`] = `
-<div
-  aria-describedby="aria-describe-dia"
-  aria-labelledby="aria-label-dia"
-  aria-modal="true"
-  className="dialog"
-  role="dialog"
+<dialog
+  className=""
+  open={false}
 >
-  <section>
-    <header
-      className="dialog-header"
-      id="aria-label-dia"
-    >
-      <h4 />
-      
+  
 
-      <button
-        aria-label="Close dialog"
-        className="dialog-close"
-        type="button"
-      />
-    </header>
+  <header>
+    
+
     <div
-      className="dialog-body"
-      id="aria-describe-dia"
+      role="heading"
     />
-    <footer
-      className="dialog-footer"
+    
+
+    <button
+      aria-label="Close dialog"
+      className="dialog-close"
+      data-dialog-close={true}
+      type="button"
+    />
+    
+
+  </header>
+  
+
+  <div
+    className="dialog-body"
+  />
+  
+
+  <footer>
+    
+
+    <button
+      className="btn btn-secondary btn-sm"
+      data-dialog-close={true}
+      type="button"
     >
-      
+      Cancel
+    </button>
+    
 
-      <button
-        className="btn btn-secondary"
-        data-dialog-close={true}
-        type="button"
-      >
-        Cancel
-      </button>
-      
+    <button
+      className="btn btn-primary btn-sm"
+      type="button"
+    >
+      Delete
+    </button>
+    
 
-      <button
-        className="btn btn-primary"
-        type="button"
-      >
-        Delete
-      </button>
-      
+  </footer>
+  
 
-    </footer>
-  </section>
-</div>
+</dialog>
 `;
 
 exports[`Component: Dialog - renders with the passed ID 1`] = `
-<div
-  aria-describedby="aria-describe-dia"
-  aria-labelledby="aria-label-dia"
-  aria-modal="true"
-  className="dialog"
-  role="dialog"
+<dialog
+  className=""
+  open={false}
 >
-  <section>
-    <header
-      className="dialog-header"
-      id="aria-label-dia"
-    >
-      <h4 />
-      
+  
 
-      <button
-        aria-label="Close dialog"
-        className="dialog-close"
-        type="button"
-      />
-    </header>
+  <header>
+    
+
     <div
-      className="dialog-body"
-      id="aria-describe-dia"
+      role="heading"
     />
-    <footer
-      className="dialog-footer"
+    
+
+    <button
+      aria-label="Close dialog"
+      className="dialog-close"
+      data-dialog-close={true}
+      type="button"
+    />
+    
+
+  </header>
+  
+
+  <div
+    className="dialog-body"
+  />
+  
+
+  <footer>
+    
+
+    <button
+      className="btn btn-secondary btn-sm"
+      data-dialog-close={true}
+      type="button"
     >
-      
+      Cancel
+    </button>
+    
 
-      <button
-        className="btn btn-secondary"
-        data-dialog-close={true}
-        type="button"
-      >
-        Cancel
-      </button>
-      
+    <button
+      className="btn btn-primary btn-sm"
+      type="button"
+    >
+      Delete
+    </button>
+    
 
-      <button
-        className="btn btn-primary"
-        type="button"
-      >
-        Delete
-      </button>
-      
+  </footer>
+  
 
-    </footer>
-  </section>
-</div>
+</dialog>
 `;
 
 exports[`Component: Dialog - renders with the passed children 1`] = `
-<div
-  aria-describedby="aria-describe-dia"
-  aria-labelledby="aria-label-dia"
-  aria-modal="true"
-  className="dialog"
-  role="dialog"
+<dialog
+  className=""
+  open={false}
 >
-  <section>
-    <header
-      className="dialog-header"
-      id="aria-label-dia"
-    >
-      <h4 />
-      
+  
 
-      <button
-        aria-label="Close dialog"
-        className="dialog-close"
-        type="button"
-      />
-    </header>
+  <header>
+    
+
     <div
-      className="dialog-body"
-      id="aria-describe-dia"
+      role="heading"
+    />
+    
+
+    <button
+      aria-label="Close dialog"
+      className="dialog-close"
+      data-dialog-close={true}
+      type="button"
+    />
+    
+
+  </header>
+  
+
+  <div
+    className="dialog-body"
+  >
+    <p>
+      My paragraph
+    </p>
+  </div>
+  
+
+  <footer>
+    
+
+    <button
+      className="btn btn-secondary btn-sm"
+      data-dialog-close={true}
+      type="button"
     >
-      <p>
-        My paragraph
-      </p>
-    </div>
-    <footer
-      className="dialog-footer"
+      Cancel
+    </button>
+    
+
+    <button
+      className="btn btn-primary btn-sm"
+      type="button"
     >
-      
+      Delete
+    </button>
+    
 
-      <button
-        className="btn btn-secondary"
-        data-dialog-close={true}
-        type="button"
-      >
-        Cancel
-      </button>
-      
+  </footer>
+  
 
-      <button
-        className="btn btn-primary"
-        type="button"
-      >
-        Delete
-      </button>
-      
-
-    </footer>
-  </section>
-</div>
+</dialog>
 `;
 
 exports[`Component: Dialog - renders with the passed header 1`] = `
-<div
-  aria-describedby="aria-describe-dia"
-  aria-labelledby="aria-label-dia"
-  aria-modal="true"
-  className="dialog"
-  role="dialog"
+<dialog
+  className=""
+  open={false}
 >
-  <section>
-    <header
-      className="dialog-header"
-      id="aria-label-dia"
-    >
-      <h4>
-        My heading
-      </h4>
-      
+  
 
-      <button
-        aria-label="Close dialog"
-        className="dialog-close"
-        type="button"
-      />
-    </header>
+  <header>
+    
+
     <div
-      className="dialog-body"
-      id="aria-describe-dia"
-    />
-    <footer
-      className="dialog-footer"
+      role="heading"
     >
-      
+      My heading
+    </div>
+    
 
-      <button
-        className="btn btn-secondary"
-        data-dialog-close={true}
-        type="button"
-      >
-        Cancel
-      </button>
-      
+    <button
+      aria-label="Close dialog"
+      className="dialog-close"
+      data-dialog-close={true}
+      type="button"
+    />
+    
 
-      <button
-        className="btn btn-primary"
-        type="button"
-      >
-        Delete
-      </button>
-      
+  </header>
+  
 
-    </footer>
-  </section>
-</div>
+  <div
+    className="dialog-body"
+  />
+  
+
+  <footer>
+    
+
+    <button
+      className="btn btn-secondary btn-sm"
+      data-dialog-close={true}
+      type="button"
+    >
+      Cancel
+    </button>
+    
+
+    <button
+      className="btn btn-primary btn-sm"
+      type="button"
+    >
+      Delete
+    </button>
+    
+
+  </footer>
+  
+
+</dialog>
 `;

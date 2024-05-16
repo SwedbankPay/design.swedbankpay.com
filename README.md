@@ -226,19 +226,18 @@ GitHub Actions will also create and deploy a release on Azure for the PayEx bran
 
 ## Notable files
 
-|  File               | Description                                                                                                                                                                                                  |
-| :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `.babelrc`          | [Babel][babel] configuration.                                                                                                                                                                                |
-| `.eslintignore`     | List of files/directories ESLint will ignore (similar to `.gitignore`)                                                                                                                                       |
-| `.eslintrc`         | [Eslint][eslint] configuration.                                                                                                                                                                              |
-| `.prettierignore`   | List of files/directories ESLint will ignore (similar to `.gitignore`)                                                                                                                                       |
-| `.prettierrc.json`  | [Prettier][prettier] configuration.                                                                                                                                                                          |
-| `.sentryclirc`      | [Sentry][sentry] configuration used by Webpack to configure a new release on sentry. _(Do **not** change the line `token = <token>`, as this placeholder is used by AppVeyor to insert the sentry api key.)_ |
-| `.stylelintrc`      | [Stylelint][stylelint] configuration.                                                                                                                                                                        |
-| `CHANGELOG.md`      | Collection of changes made to the project. Insert your changes here.                                                                                                                                         |
-| `jest.config.js`    | [jest][jest] configuration.                                                                                                                                                                                  |
-| `jest.setup.js`     | Script file that will run before jest executes the tests, polyfills and other useful snippets.                                                                                                               |
-| `webpack.config.js` | [Webpack][webpack] configuration.                                                                                                                                                                            |
+|  File               | Description                                                                                    |
+| :------------------ | :--------------------------------------------------------------------------------------------- |
+| `.babelrc`          | [Babel][babel] configuration.                                                                  |
+| `.eslintignore`     | List of files/directories ESLint will ignore (similar to `.gitignore`)                         |
+| `.eslintrc`         | [Eslint][eslint] configuration.                                                                |
+| `.prettierignore`   | List of files/directories ESLint will ignore (similar to `.gitignore`)                         |
+| `.prettierrc.json`  | [Prettier][prettier] configuration.                                                            |
+| `.stylelintrc`      | [Stylelint][stylelint] configuration.                                                          |
+| `CHANGELOG.md`      | Collection of changes made to the project. Insert your changes here.                           |
+| `jest.config.js`    | [jest][jest] configuration.                                                                    |
+| `jest.setup.js`     | Script file that will run before jest executes the tests, polyfills and other useful snippets. |
+| `webpack.config.js` | [Webpack][webpack] configuration.                                                              |
 
 ## Copyright, license and credits
 
@@ -265,7 +264,6 @@ Inspired by [Bootstrap][bootstrap] and [Materialize][materialize].
 [babel]: https://babeljs.io/
 [eslint]: https://eslint.org/
 [prettier]: https://prettier.io/
-[sentry]: https://sentry.io
 [stylelint]: https://stylelint.io/
 [jest]: https://facebook.github.io/jest/
 [bootstrap]: http://getbootstrap.com/

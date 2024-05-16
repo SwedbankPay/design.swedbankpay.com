@@ -163,6 +163,10 @@
 		min-height: unset;
 		min-width: 450px;
 
+		@media screen and (max-width: 600px) {
+			min-width: unset;
+		}
+
 		&:not(:has(.cards-icon)) {
 			grid-template-areas:
 				"title cta"

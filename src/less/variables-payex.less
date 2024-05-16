@@ -156,6 +156,7 @@ body {
 	--text-gray: var(--brand-secondary, #3c3c3c);
 	--list-gray: #999999;
 	--light-gray: #f4f4f4;
+	--gray: #c8c8c8;
 	--white: #ffffff;
 	--soft-brown: #707070;
 	--medium-brown: #72605e;
@@ -227,33 +228,32 @@ body {
 	--text-muted: color-mix(in srgb, var(--text-color), var(--white) 75%);
 	--text-link: #1c7d2e;
 	--text-hover: var(--brand-primary);
+	--text-disabled: var(--brand-secondary-light-2);
 
 	/* Checkbox */
 	--checkbox-checked-color: var(--brand-secondary, #3c3c3c);
 
 	/* BUTTONS COLORS */
+	--btn-hover: var(--brand-tertiary, #2a9d3f);
 	--primary-disabled-bg: #f5b895;
 	--secondary-disabled-bg: var(--brand-secondary-light-2);
 	--btn-primary-color: var(--brand-success, #238635);
 	--btn-primary-text-color: var(--white, #ffffff);
 	--btn-primary-bg: var(--brand-success, #238635);
-	--btn-primary-hover: var(--brand-tertiary, #2a9d3f);
 	--btn-primary-disabled-color: var(--white, #ffffff);
 	--btn-primary-disabled-bg: var(--brand-secondary-light-2, #c8c8c8);
 
 	/* btn-secondary */
-	--btn-secondary-color: var(--white, #ffffff);
+	--btn-secondary-color: transparent;
 	--btn-secondary-bg: var(--brand-secondary, #3c3c3c);
 	--btn-secondary-text-color: var(--brand-secondary, #3c3c3c);
 	--btn-secondary-border-color: var(--brand-secondary, #3c3c3c);
-	--btn-secondary-hover: var(--brand-secondary-hover, #707070);
 	--btn-secondary-disabled-color: var(--white, #ffffff);
 	--btn-secondary-disabled-bg: var(--brand-secondary-light-2, #c8c8c8);
 
 	/* btn-tertiary */
 	--btn-tertiary-color: var(--brand-secondary, #3c3c3c);
 	--btn-tertiary-text-color: var(--white, #ffffff);
-	--btn-tertiary-hover: var(--brand-secondary-hover, #5f5f5f);
 	--btn-tertiary-disabled: var(--btn-bg-disabled, rgb(212 196 188 / 30%));
 
 	/* btn-destructive */
@@ -270,7 +270,11 @@ body {
 
 	/* Shared button variables */
 	--btn-disabled-text: var(--text-disabled);
-	--btn-bg-disabled: rgb(212 196 188 / 30%);
+	--btn-bg-disabled: color-mix(
+		in oklch,
+		var(--text-disabled),
+		var(--white) 70%
+	);
 	--btn-active-color: var(--brand-secondary, #3c3c3c);
 
 	/* INPUTS COLORS */
@@ -293,7 +297,8 @@ body {
 	--blue-syntax-highlight: #43d0dd;
 	--yellow-syntax-highlight: #fff3d5;
 	--dark-brown: var(--brand-secondary, #3c3c3c);
-	--light-brown: var(--brand-secondary-light-3, #c8c8c8);
+	--brown-light: var(--brand-secondary-light-3, #c8c8c8);
+	--light-brown: var(--brown-light);
 	--help-block-text: #707070;
 	--tab-link: var(--help-block-text, #707070);
 	--radiobutton-border: var(--help-block-text, #707070);

@@ -1,13 +1,15 @@
 @import "./form.less";
 @import "../global.less";
 
-@radio-height: 1.375rem;
-@radio-width: @radio-height;
-
-@checkmark-width: 7.5rem;
-@checkmark-heigth: 2rem;
+// TODO: next major release: remove support for `.radio.checkmark label i` and replace with `.radio.checkmark label .checkmark-icon` officially
 
 .radio {
+	--radio-height: 1.375rem;
+	--radio-width: var(--radio-height);
+
+	--checkmark-width: 7.5rem;
+	--checkmark-heigth: 2rem;
+
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -22,8 +24,8 @@
 		position: relative;
 		align-items: center;
 		margin: 0;
-		margin-left: 1.75rem;
-		padding-left: (1rem / 5);
+		margin-inline-start: 1.75rem;
+		padding-inline-start: calc(1rem / 5);
 		min-height: 1.5rem;
 	}
 
@@ -36,10 +38,10 @@
 			position: absolute;
 			visibility: visible;
 			left: -1.5rem;
-			height: @radio-height;
-			width: @radio-width;
+			height: var(--radio-height);
+			width: var(--radio-width);
 			background-color: var(--white);
-			border: 2px solid @brand-secondary-light-2;
+			border: 2px solid var(--brand-secondary-light-2);
 			cursor: pointer;
 			border-radius: 50%;
 		}
@@ -48,20 +50,19 @@
 			background-color: var(--white);
 			background-repeat: no-repeat;
 			background-image: url("../../icons/shapes/circle.svg");
-			border-color: @brand-secondary;
+			border-color: var(--brand-secondary);
 		}
 
-		&:focus + label:before,
-		&:hover + label:before {
-			box-shadow: 0 0 0 0.375rem @brand-secondary-light-3;
-			border-color: @brand-secondary;
+		&:is(:hover, :focus-visible) + label:before {
+			box-shadow: 0 0 0 0.375rem var(--brand-primary-light);
+			border-color: var(--brand-secondary);
 			outline: 4px solid transparent;
 		}
 
 		&[disabled] {
 			+ label:before {
-				background-color: @input-bg-disabled;
-				border-color: @input-checked-bg-disabled;
+				background-color: var(--input-bg-disabled);
+				border-color: var(--input-checked-bg-disabled);
 				box-shadow: none;
 			}
 
@@ -79,14 +80,16 @@
 	}
 }
 
-.checkmark {
+.radio.checkmark {
 	border: 2px solid transparent;
 	pointer-events: none;
-	width: @checkmark-width;
-	height: @checkmark-heigth;
+	width: auto;
+	min-width: fit-content;
+	height: auto;
+	margin: 0;
 
-	&:not(:last-child) {
-		margin-right: 8px;
+	&.large {
+		height: 3.5rem;
 	}
 
 	&:active {
@@ -97,11 +100,6 @@
 		background-color: transparent;
 	}
 
-	&:disabled {
-		border: 2px solid transparent;
-		margin: auto;
-	}
-
 	* {
 		pointer-events: all;
 	}
@@ -109,70 +107,138 @@
 	label {
 		outline: 1px solid var(--black);
 		border-radius: var(--border-radius, 8px);
-		margin: auto;
+		padding: 7px 1rem;
 		height: 100%;
 		width: 100%;
-		gap: 5px;
-		padding-left: 1.25rem;
+		margin: 0;
+		gap: 1rem;
+		justify-content: space-between;
+
+		&:before {
+			display: none;
+		}
+
+		&
+			:is(
+				i[class^="at-"],
+				i[class*=" at-"],
+				i[class^="swepay-icon-"],
+				i[class*=" swepay-icon-"],
+				.material-icons
+			) {
+			color: inherit;
+			margin-inline-end: -10px;
+		}
+
+		.checkmark-icon,
+		& > i {
+			order: 2;
+			width: 24px;
+			height: 24px;
+			background-color: var(--brown-solid);
+			border-radius: 50%;
+			position: relative;
+			aspect-ratio: 1;
+
+			// display a checkmark icon in pure CSS
+			&::before {
+				content: "";
+				position: absolute;
+				width: 0.42rem;
+				height: 0.7rem;
+				border: solid var(--white);
+				border-width: 0 2px 2px 0;
+				transform: rotate(45deg) translate(145%, -25%);
+			}
+		}
 	}
 
-	label:before {
-		display: none;
+	// checked state
+	input[type="radio"]:checked {
+		& + label {
+			border-radius: var(--border-radius, 8px);
+			outline-width: 3px;
+			outline-offset: -2px;
+
+			// we're migrating from i to a pure CSS span.checkmark-icon. Keep <i > for now until next major release i {
+			i {
+				color: #000000;
+			}
+		}
+
+		&:hover:not(:disabled) + label {
+			background-color: var(--brown-medium);
+			color: var(--white);
+
+			.checkmark-icon,
+			> i {
+				background-color: var(--white);
+
+				&::before {
+					border-color: var(--brown-medium);
+				}
+			}
+		}
 	}
 
-	label
-		:is(
-			i[class^="at-"],
-			i[class*=" at-"],
-			i[class^="swepay-icon-"],
-			i[class*=" swepay-icon-"],
-			.material-icons
-		) {
-		color: var(--white);
-		margin-left: -10px;
-	}
-
-	input[type="radio"]:hover:not(:disabled) + label {
-		background-color: @light-gray;
-		color: @medium-brown;
-		border-radius: var(--border-radius, 8px);
-		border: 0 solid transparent;
-		outline: 1px solid @medium-brown;
-	}
-
-	input[type="radio"]:checked + label {
-		background-color: @brand-secondary;
-		border-radius: var(--border-radius, 8px);
-		color: var(--white);
-		padding-left: 1.875rem;
-	}
-
-	input[type="radio"]:checked:hover + label {
-		background-color: @medium-brown;
-		color: var(--white);
-	}
-
-	input[type="radio"]:disabled + label {
-		color: @light-brown;
-		outline: 1px solid @light-brown;
-	}
-
-	input[type="radio"]:checked:disabled + label {
-		background-color: @light-brown;
-		color: var(--white);
-		outline: 0;
-		padding-left: 1.25rem;
-
+	// not checked state
+	input[type="radio"]:not(:checked) + label {
+		.checkmark-icon,
 		i {
 			visibility: hidden;
 		}
 	}
 
+	// disabled state
+	input[type="radio"]:disabled {
+		border: 2px solid transparent;
+		margin: auto;
+
+		& + label {
+			color: var(--brown-light);
+			outline: 1px solid var(--brown-light);
+		}
+
+		&:checked + label {
+			outline: 0;
+			background-color: var(--gray);
+			color: var(--brown-light);
+
+			.checkmark-icon,
+			& > i {
+				background-color: var(--brown-light);
+
+				&::before {
+					border-color: var(--gray);
+				}
+			}
+
+			// we're migrating from i to a pure CSS span.checkmark-icon. Keep <i> for now until next major release
+			i {
+				visibility: hidden;
+			}
+		}
+	}
+
+	// not disabled state
+	input[type="radio"]:not(:disabled):hover + label {
+		background-color: var(--brown-medium);
+		color: var(--white);
+		border-radius: var(--border-radius, 8px);
+		border: 0 solid transparent;
+		outline: 1px solid var(--brown-medium);
+		box-shadow: none !important;
+
+		// we're migrating from i to a pure CSS span.checkmark-icon. Keep <i> for now until next major release
+		i {
+			color: #f0f0f0;
+		}
+	}
+
 	input[type="radio"] {
-		&:focus + label,
-		&:hover:not(:disabled) + label {
-			box-shadow: 0 0 0 0.3rem @brand-secondary-light-3;
-			border-color: @brand-secondary;
+		&:focus-visible + label {
+			box-shadow: 0 0 0 0.3rem var(--brand-secondary-light-3);
+			border-color: var(--brand-secondary);
 		}
 
 		&:not(:checked) + label {
@@ -181,12 +247,66 @@
 			}
 		}
 	}
+
+	&:not(.large) label {
+		gap: calc(1rem - (24px - 16px));
+
+		& .checkmark-icon,
+		& > i {
+			transform: scale(0.67);
+		}
+	}
+
+	&:has(.subtext) {
+		width: 248px;
+		height: auto;
+
+		input[type="radio"] + label {
+			display: grid;
+			width: 100%;
+			height: fit-content;
+			padding: 1rem;
+			grid-template-areas:
+				"label-title checkmark"
+				"label-subtext checkmark";
+			grid-template-columns: 1fr auto;
+			gap: 0 1rem;
+			grid-template-rows: auto auto;
+
+			span {
+				margin: 0;
+			}
+
+			span:not(.subtext, .checkmark-icon) {
+				grid-area: label-title;
+				font-weight: var(--font-weight-bold);
+			}
+
+			.subtext {
+				grid-area: label-subtext;
+				font-weight: var(--font-weight-normal);
+			}
+
+			.checkmark-icon {
+				grid-area: checkmark-icon;
+				grid-row: 1 / -1;
+				transform: none;
+			}
+		}
+
+		input[type="radio"]:not(:checked) + label :is(.checkmark-icon, i) {
+			visibility: hidden;
+		}
+	}
 }
 
 fieldset {
 	&.radio-group {
 		.radio-row {
-			display: inline-flex;
+			display: inline-grid;
+			gap: 1rem;
+			grid-auto-flow: column;
+			grid-auto-columns: 1fr;
 		}
 
 		legend {
@@ -202,7 +322,6 @@ fieldset {
 
 		span {
 			font-weight: normal;
-			margin-left: 0.2rem;
 		}
 	}
 
@@ -226,7 +345,7 @@ fieldset {
 		label,
 		legend,
 		.hint-text {
-			color: @light-brown;
+			color: var(--brown-light);
 		}
 	}
 }

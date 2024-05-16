@@ -149,9 +149,16 @@
 		background-color: var(--white);
 		color: var(--brand-secondary);
 
-		&:hover {
-			box-shadow: inset 0 0 0 3px var(--btn-secondary-hover);
-			border-color: var(--btn-secondary-hover);
+		&:hover:not(:active) {
+			background-color: var(--btn-hover);
+			color: var(--white);
+			border-color: transparent;
+		}
+
+		&:not(.disabled):focus-visible {
+			outline: 3px solid var(--btn-active-color);
+			outline-offset: 0.25rem;
+			border-radius: 0.125rem;
 		}
 
 		& i {

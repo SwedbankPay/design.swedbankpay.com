@@ -232,14 +232,20 @@ legend {
 	}
 }
 
+// typography here comes from typography `h4, .h4` (in typography.less)
 .form-group {
 	label {
-		font-size: 1.25rem;
-		line-height: 1.5rem;
+		font-size: 1.125rem;
+		line-height: 1.625rem;
 		margin-bottom: 0.5rem;
 		color: var(--brand-secondary);
 		font-family: var(--brand-headline);
 		font-weight: var(--font-weight-header, 400);
+
+		@media screen and (min-width: @screen-sm-min) {
+			font-size: 1.25rem;
+			line-height: 1.875rem;
+		}
 	}
 
 	&.small {

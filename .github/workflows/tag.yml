@@ -19,12 +19,6 @@ jobs:
         id: variables
         run: ./.github/scripts/variables.sh --brand ${{ matrix.brand }} --ref ${{ github.ref }}
 
-      # Add sentry token
-      - name: Sentry token
-        run: ./.github/scripts/sentry.sh
-        env:
-          TOKEN: ${{ secrets.SENTRY_TOKEN }}
-
       - name: Set Node.js 18.x
         uses: actions/setup-node@v4
         with:
@@ -42,7 +36,7 @@ jobs:
           echo "{ \"latestVersion\" : \"${{ steps.variables.outputs.VERSION }}\" }" > ./dist/latestVersion.json
 
       - name: Azure Login
-        uses: azure/login@v2.0.0
+        uses: azure/login@v2.1.0
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 

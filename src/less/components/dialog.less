@@ -1,7 +1,20 @@
 @import "../global.less";
 
-@dialog-border: 1px solid @light-gray;
+.dialog,
+dialog {
+	--dialog-divider: 1px solid var(--gray);
+	--bg-color: var(--white; #ffffff);
+	--dialog-radius: 20px;
+	--transition-duration-enter: 0.6s;
+	--transition-duration-backdrop: 0.5s;
+	--transition-duration-modal: 0.7s;
 
+	&.gray {
+		--bg-color: var(--bg-grey);
+	}
+}
+
+// TODO: can be removed in next major release when silent support for div.dialog is over
 .dialog {
 	position: fixed;
 	top: 0;
@@ -9,7 +22,8 @@
 	bottom: 0;
 	left: 0;
 	z-index: var(--dialog-z-index, 600);
-	background: fade(@black, 50%);
+	background: color-mix(in oklab, var(--brand-primary), transparent 40%);
+	backdrop-filter: blur(20px);
 	display: none;
 	justify-content: center;
 	align-items: center;
@@ -23,28 +37,15 @@
 			display: flex;
 			padding: 1rem 1.5rem;
 			align-items: center;
-			background: @white;
-			border-bottom: @dialog-border;
+			background: var(--bg-color);
+			border-bottom: var(--dialog-divider);
 			border-radius: 20px 20px 0 0;
 
-			/* stylelint-disable selector-list-comma-newline-after */
-			h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6,
-			.h1,
-			.h2,
-			.h3,
-			.h4,
-			.h5,
-			.h6 {
+			:is(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6) {
 				margin-top: 0;
 				margin-bottom: 0;
 				flex-grow: 1;
 			}
-			/* stylelint-enable selector-list-comma-newline-after */
 
 			.dialog-close {
 				display: inline-grid;
@@ -63,13 +64,13 @@
 				&.hover {
 					color: var(--brand-secondary);
 					text-decoration: none;
-					background-color: @brand-bg-gray;
+					background-color: var(--gray);
 				}
 
 				&:focus {
 					border: none;
 					border-radius: 0.125rem;
-					box-shadow: 0 0 0 2px @black;
+					box-shadow: 0 0 0 2px var(--black);
 					outline: none;
 				}
 
@@ -111,17 +112,18 @@
 		}
 
 		.dialog-body {
-			background: @white;
+			background: var(--bg-color);
 			padding: 2rem 1.5rem;
 		}
 
 		.dialog-footer,
 		footer {
-			background: @white;
-			border-top: @dialog-border;
+			background: var(--bg-color);
+			border-top: var(--dialog-divider);
 			padding: 1rem 1.5rem;
 			margin: 0;
 			display: flex;
+			gap: 1rem;
 			justify-content: flex-end;
 			border-radius: 0 0 20px 20px;
 
@@ -132,15 +134,197 @@
 	}
 }
 
-.dialog-open {
+// TODO: can be removed during next major release, once dialog is migrated to <dialog> only
+body.dialog-open {
 	overflow: hidden;
 
 	.dialog {
 		overflow-x: hidden;
 		overflow-y: auto;
+		display: flex;
+		opacity: 1;
 	}
 }
 
+// MARK: new <dialog> element
+
+dialog {
+	--padding-x: 2rem;
+	--padding-y: 1.5rem;
+
+	width: auto;
+	max-width: min(500px, 90vw);
+	border-radius: var(--dialog-radius);
+	background-color: var(--bg-color);
+	border: none;
+	padding: 0;
+
+	@media screen and (max-width: 768px) {
+		width: 100%;
+		max-width: 100vw;
+		max-height: 88vh;
+		margin-inline: 0;
+		margin-block-end: 0;
+		border-radius: var(--dialog-radius) var(--dialog-radius) 0 0;
+	}
+
+	&:not(.dividers) {
+		--dialog-divider: none;
+
+		.dialog-body {
+			padding-block: 0;
+		}
+	}
+
+	@media screen and (min-width: 768px) {
+		&.large {
+			--padding-x: 3rem;
+			max-width: min(960px, 90vw);
+		}
+	}
+
+	// MARK: <dialog> header
+	header {
+		display: flex;
+		padding: var(--padding-x);
+		align-items: center;
+		border-block-end: var(--dialog-divider);
+		border-radius: 20px 20px 0 0;
+		font-size: 1.5rem;
+		line-height: 1.875rem;
+
+		@media screen and (min-width: 768px) {
+			font-size: 2rem;
+		}
+
+		& > *:first-child {
+			flex-grow: 1;
+			font-family: var(--brand-headline);
+			font-weight: var(--font-weight-header, 400);
+			text-wrap: balance;
+			color: var(--brand-secondary);
+
+			&:is(h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p) {
+				margin-block: 0;
+			}
+		}
+
+		// MARK: close button
+		button.dialog-close {
+			position: relative;
+			display: inline-grid;
+			touch-action: manipulation;
+			cursor: pointer;
+			user-select: none;
+			background-color: transparent;
+			border: none;
+			padding: 0;
+			margin-inline-end: -0.5rem;
+			height: 24px;
+			width: 24px;
+
+			&:hover {
+				color: var(--brand-secondary);
+				text-decoration: none;
+				background-color: var(--gray);
+			}
+
+			&:focus-visible {
+				border: none;
+				border-radius: 0.125rem;
+				outline: 2px solid var(--black);
+			}
+
+			&:active {
+				outline: 0;
+			}
+
+			&:before,
+			&:after {
+				content: "";
+				width: 18px;
+				height: 2px;
+				background-color: var(--black);
+				place-self: center;
+				position: absolute;
+			}
+
+			&:before {
+				transform: rotate(45deg);
+			}
+
+			&:after {
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+	// MARK: <dialog> body
+	.dialog-body {
+		background: var(--bg-color);
+		padding: var(--padding-y) var(--padding-x);
+	}
+
+	// MARK: <dialog> footer
+	footer {
+		background: var(--bg-color);
+		border-block-start: var(--dialog-divider);
+		padding: var(--padding-x);
+		margin: 0;
+		display: flex;
+		justify-content: flex-end;
+		gap: 1rem;
+
+		> * {
+			margin: 0;
+		}
+	}
+
+	// MARK: dialog transitions
+
+	/*   Open state of the dialog  */
+	&[open] {
+		opacity: 1;
+		translate: 0;
+		transition: all var(--transition-duration-modal)
+			cubic-bezier(0.22, 0.61, 0.36, 1) allow-discrete;
+	}
+
+	/*   Closed state of the dialog   */
+	&:not([open]) {
+		opacity: 0;
+		translate: 17px 100px;
+		@media screen and (min-width: 768px) {
+			translate: 17px -100px;
+		}
+		transition: all var(--transition-duration-modal)
+			cubic-bezier(0.22, 0.61, 0.36, 1) allow-discrete;
+
+		@media screen and (min-width: 768px) {
+			&.slide-from-right {
+				translate: -100px 0;
+			}
+		}
+	}
+
+	/* Transition the :backdrop when the dialog modal is promoted to the top layer */
+	&::backdrop {
+		background-color: rgb(0 0 0 / 0%);
+		transition: all var(--transition-duration-backdrop)
+			cubic-bezier(0.22, 0.61, 0.36, 1) allow-discrete;
+	}
+
+	&[open]::backdrop {
+		background-color: color-mix(
+			in oklab,
+			var(--brand-primary),
+			transparent 40%
+		);
+		backdrop-filter: blur(20px);
+	}
+}
+
+// MARK: A11y reduced motion
 @media (forced-colors: active) {
 	.dialog {
 		border: 10px solid;
@@ -167,4 +351,31 @@
 			}
 		}
 	}
+}
+
+// MARK: @starting-style
+
+// TODO: for some reason, for now (may 2024) nesting @starting-style inside a rule breaks it. There is no reason why. It will most likely be fixed by tooling later and will then be able to be moved inside its corresponding rules, which will make it more clear. Until then we have to keep it this way. Sorry. Yours truly, Raphaël  <3
+/*   Entry transition starts with these styles  */
+@starting-style {
+	dialog[open] {
+		opacity: 0;
+		translate: 0 100px;
+
+		@media screen and (min-width: 768px) {
+			&.slide-from-right {
+				translate: 100px 0;
+			}
+		}
+
+		&::backdrop {
+			background-color: transparent;
+		}
+	}
+}
+
+// prevent background scrolling when dialog is opened
+// hopefully in the future the dialog API add a native scroll-blocking function and make this obsolete so we can remove it
+html:has(dialog[open]:modal, body.dialog-open) {
+	overflow: hidden;
 }

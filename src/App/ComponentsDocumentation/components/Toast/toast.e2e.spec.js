@@ -65,9 +65,6 @@ test.describe("toast variants are styled and named accordingly", () => {
 
 			await expect(toast).toHaveScreenshot(
 				`${brand}-${variant.name}-toast.png`,
-				{
-					maxDiffPixelRatio: 0.001,
-				},
 			);
 			await page.locator("#toast-close-button").click();
 			await expect(page.locator("#toast-close-button")).not.toBeVisible();

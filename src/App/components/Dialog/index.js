@@ -1,7 +1,70 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Dialog = ({ diaId, diaHeader, children }) => (
+const Dialog = ({
+	diaId,
+	diaHeader,
+	children,
+	isOpen = false,
+	size = "medium",
+	hasDividers = false,
+	slidesFromBottom = true,
+	hasGrayBg = false,
+}) => (
+	<>
+		<dialog
+			className={`${size === "large" ? "large " : ""}${hasDividers ? "dividers " : ""}${slidesFromBottom ? "" : "slide-from-right "}${hasGrayBg ? "gray " : ""}`}
+			id={diaId}
+			open={isOpen}
+		>
+			{"\n"}
+			<header>
+				{"\n"}
+				<div role="heading">{diaHeader}</div>
+				{"\n"}
+				<button
+					type="button"
+					className="dialog-close"
+					aria-label="Close dialog"
+					data-dialog-close
+				></button>
+				{"\n"}
+			</header>
+			{"\n"}
+			<div className="dialog-body">{children}</div>
+			{"\n"}
+			<footer>
+				{"\n"}
+				<button
+					className={`btn btn-secondary ${size === "medium" ? "btn-sm" : "btn-lg"}`}
+					type="button"
+					data-dialog-close
+				>
+					Cancel
+				</button>
+				{"\n"}
+				<button
+					className={`btn btn-primary ${size === "medium" ? "btn-sm" : "btn-lg"}`}
+					type="button"
+				>
+					Delete
+				</button>
+				{"\n"}
+			</footer>
+			{"\n"}
+		</dialog>
+	</>
+);
+
+export const DialogOld = ({
+	diaId,
+	diaHeader,
+	children,
+	isOpen = false,
+	size = "medium",
+	hasDividers = false,
+	slidesFromBottom = true,
+}) => (
 	<>
 		<div
 			className="dialog"
@@ -26,11 +89,18 @@ const Dialog = ({ diaId, diaHeader, children }) => (
 				</div>
 				<footer className="dialog-footer">
 					{"\n"}
-					<button className="btn btn-secondary" type="button" data-dialog-close>
+					<button
+						className={`btn btn-secondary ${size === "medium" ? "btn-sm" : "btn-lg"}`}
+						type="button"
+						data-dialog-close
+					>
 						Cancel
 					</button>
 					{"\n"}
-					<button className="btn btn-primary" type="button">
+					<button
+						className={`btn btn-primary ${size === "medium" ? "btn-sm" : "btn-lg"}`}
+						type="button"
+					>
 						Delete
 					</button>
 					{"\n"}

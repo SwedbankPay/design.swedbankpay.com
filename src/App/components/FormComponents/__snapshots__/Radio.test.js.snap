@@ -121,7 +121,7 @@ exports[`Component: Radio - renders checkbox group with groupTitle 1`] = `
 
 exports[`Component: Radio - renders checked 1`] = `
 <div
-  className="radio"
+  className="radio "
 >
   
 
@@ -140,7 +140,7 @@ exports[`Component: Radio - renders checked 1`] = `
 
 exports[`Component: Radio - renders disabled 1`] = `
 <div
-  className="radio"
+  className="radio "
 >
   
 
@@ -217,7 +217,7 @@ exports[`Component: Radio - renders radio group 1`] = `
 
 exports[`Component: Radio - renders with id and label 1`] = `
 <div
-  className="radio"
+  className="radio "
 >
   
 
@@ -244,7 +244,7 @@ exports[`Component: Radio - renders with id and label 1`] = `
 
 exports[`Component: Radio - renders with name 1`] = `
 <div
-  className="radio"
+  className="radio "
 >
   
 
@@ -263,7 +263,7 @@ exports[`Component: Radio - renders with name 1`] = `
 
 exports[`Component: Radio - renders without label 1`] = `
 <div
-  className="radio"
+  className="radio "
 >
   
 
