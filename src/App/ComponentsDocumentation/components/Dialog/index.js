@@ -79,6 +79,20 @@ const ExampleOldSyntax = () => (
 		<h2 id="overview">
 			Example Old Dialog component - silent support until next major release
 		</h2>
+		<p>
+			We're keeping a silent support for the "now old" Dialog component syntax.
+		</p>
+		<p>
+			We decided to move away in order to use the standard{" "}
+			<CodeTags type="secondary" code="<dialog>" /> element, and the benefits
+			its brings along (less scripts needed, better accessibility, etc.).
+		</p>
+		<p>
+			Some updates might be ported to the old syntax, but we recommend migrating
+			as soon as you can to enjoy all the new shiny updates (e.g. transition on
+			open/close, etc). Plus, the new syntax is <em>much</em> easier to use. The
+			support for it will be removed during the next major release.
+		</p>
 		<ComponentPreview language="html" showCasePanel codeFigure>
 			<button
 				className="btn btn-primary"

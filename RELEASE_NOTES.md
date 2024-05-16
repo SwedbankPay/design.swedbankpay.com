@@ -39,5 +39,3 @@
 - chore deps (update deps packages minor versions)
 
 - remove Sentry from codebase
-
-## Design System website

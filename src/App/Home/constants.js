@@ -25,7 +25,7 @@ export const changeLogs = [
 				<p>
 					<strong>Buttons</strong>
 					<ul>
-						<li>icon button for Danish MitId</li>
+						<li>new icon button for Danish MitId 🇩🇰 🔐</li>
 						<li>minor non-breaking UI updates (e.g. hover color, ...)</li>
 					</ul>
 				</p>
@@ -54,8 +54,8 @@ export const changeLogs = [
 					better 🚀. Move to it as soon as you can. Life shines brighter on the
 					other side 🌻
 					<br />
-					We keep silent support for the old dialog syntax (until next major
-					release).
+					We keep a silent support for the old dialog syntax until the next
+					major release.
 					<br />
 					The new dialog gets all those UI freebies & options:
 					<ul>
@@ -77,7 +77,7 @@ export const changeLogs = [
 				</p>
 				<p className="small">
 					<span className="font-italic">
-						*Just to be clear. I hate the word "losers". There are no losers in
+						*Just to be clear, I hate the word "losers". There are no losers in
 						life, or maybe only the people who think life is a competition. I
 						just wanted it to be clear
 					</span>{" "}
