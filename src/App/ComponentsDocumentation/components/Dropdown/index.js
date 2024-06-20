@@ -103,6 +103,10 @@ const DeveloperDocumentation = () => (
 			Use <CodeTags type="secondary" code="dg.dropdown.init()" /> to initialize
 			all dropdowns. This will open and close the dropdowns automatically.
 		</p>
+		<p>
+			To initialize a given dropdown, use{" "}
+			<CodeTags type="secondary" code="dg.dropdown.init({id})" />.
+		</p>
 		<h3>Accessibility considerations</h3>
 		<p>
 			By default, keyboard navigation is implemented in the script. If your
