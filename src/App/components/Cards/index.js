@@ -36,6 +36,18 @@ const Cards = ({
 						src={imgSrc}
 						alt="alt text to be set"
 					/>
+
+					{/* TODO: in documentation show use with div.illustration */}
+					{/* <div className={`illustration bg-info ${imgRatio ?? ""}`}></div> */}
+
+					{/* TODO: in documentation show use with picture element */}
+					{/* <picture className={imgRatio ?? ""}>
+						<source
+							srcset="https://interactive-examples.mdn.mozilla.net/media/cc0-images/surfer-240-200.jpg"
+							media="(min-width: 768px)"
+						/>
+						<img src={imgSrc} alt="" />
+					</picture> */}
 				</>
 			)}
 			{/* no icon displayed if an image used as illustration */}

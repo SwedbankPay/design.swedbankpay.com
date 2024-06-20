@@ -44,7 +44,7 @@
 		padding-inline-end: var(--padding-outer);
 	}
 
-	&:not(.cards-wide):has(> img:first-child) .h4 {
+	&:not(.cards-wide):has(> :is(img, picture, .illustration):first-child) .h4 {
 		padding-block-start: 0;
 	}
 
@@ -69,7 +69,7 @@
 		padding-block-end: var(--padding-outer);
 	}
 
-	&.cards-wide:has(> img:first-child)
+	&.cards-wide:has(> :is(img, picture, .illustration):first-child)
 		:is(.h4, .cards-icon, .cards-content, .cards-cta) {
 		padding-inline-start: 0;
 
@@ -95,7 +95,7 @@
 		margin-inline-end: 0.5rem;
 	}
 
-	&:has(> img:first-child) {
+	&:has(> :is(img, picture, .illustration):first-child) {
 		grid-template-areas:
 			"image"
 			"title"
@@ -103,7 +103,7 @@
 			"cta";
 		grid-template-columns: 1fr;
 
-		&:is(button) img {
+		&:is(button) :is(img, picture, .illustration) {
 			max-width: 100%;
 		}
 
@@ -115,21 +115,27 @@
 			grid-area: image;
 		}
 
-		&:has(> img:first-child.ratio-1-1):before {
+		&:has(> :is(img, picture, .illustration):first-child.ratio-1-1):before {
 			aspect-ratio: 1 / 1;
 		}
 
-		&:has(> img:first-child.ratio-4-3):before {
+		&:has(> :is(img, picture, .illustration):first-child.ratio-4-3):before {
 			aspect-ratio: 4 / 3;
 		}
 
-		& > img:first-child {
+		& > :is(img, picture, .illustration):first-child {
 			width: 100%;
 			aspect-ratio: 16 / 9;
 			grid-area: image;
 			object-fit: cover;
 			margin: 0;
 			position: absolute;
+
+			> img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 
 			&.ratio-1-1 {
 				aspect-ratio: 1 / 1;
@@ -194,7 +200,7 @@
 			}
 		}
 
-		&:not(:has(> img:first-child)) {
+		&:not(:has(> :is(img, picture, .illustration):first-child)) {
 			grid-template-rows: auto auto;
 
 			& .cards-cta {
@@ -202,7 +208,7 @@
 			}
 		}
 
-		&:not(:has(> img:first-child)):not(:has(.h4)) {
+		&:not(:has(> :is(img, picture, .illustration):first-child)):not(:has(.h4)) {
 			grid-template-areas: "icon text-content cta";
 			grid-template-columns: auto 1fr min-content;
 			grid-template-rows: auto;
@@ -213,7 +219,9 @@
 			}
 		}
 
-		&:not(:has(> img:first-child)):not(:has(.cards-content)) {
+		&:not(:has(> :is(img, picture, .illustration):first-child)):not(
+				:has(.cards-content)
+			) {
 			grid-template-areas: "icon title cta";
 			grid-template-columns: auto 1fr min-content;
 			grid-template-rows: auto;
@@ -224,9 +232,9 @@
 			}
 		}
 
-		&:not(:has(> img:first-child)):not(:has(.cards-icon)):not(
-				:has(.cards-content)
-			) {
+		&:not(:has(> :is(img, picture, .illustration):first-child)):not(
+				:has(.cards-icon)
+			):not(:has(.cards-content)) {
 			grid-template-areas: "title cta";
 			grid-template-columns: 1fr min-content;
 			grid-template-rows: auto;
@@ -237,7 +245,7 @@
 			}
 		}
 
-		&:has(> img:first-child) {
+		&:has(> :is(img, picture, .illustration):first-child) {
 			grid-template-areas:
 				"image title"
 				"image text-content"
@@ -266,7 +274,7 @@
 				aspect-ratio: 1;
 			}
 
-			& > img:first-child {
+			& > :is(img, picture, .illustration):first-child {
 				max-width: 100%;
 				object-fit: cover;
 				width: auto;
