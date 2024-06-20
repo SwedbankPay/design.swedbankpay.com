@@ -24,7 +24,7 @@ const listenToToggleBtn = (toggleBtn) => {
 		toggleBtn.addEventListener("click", toggleBtnListener);
 	} catch (e) {
 		console.warn(
-			"No toggle element exist, add an element with the class .dropdown-toggle"
+			"No toggle element exist, add an element with the class .dropdown-toggle",
 		);
 	}
 };
@@ -46,18 +46,37 @@ const closesOnLinkOrBtnClick = (dropdownMenu) => {
 	dropdownMenu
 		.querySelectorAll("a, button")
 		?.forEach((link) =>
-			link.addEventListener("click", closeContainerFromEvent)
+			link.addEventListener("click", closeContainerFromEvent),
 		);
 };
 
-const init = () => {
-	const dropdownContainers = document.querySelectorAll(SELECTORS.DROPDOWNLIST);
-	const dropdownToggles = document.querySelectorAll(
-		`${SELECTORS.DROPDOWNLIST} ${SELECTORS.TOGGLE}`
-	);
-	const dropdownMenu = document.querySelectorAll(
-		`${SELECTORS.DROPDOWNLIST} ${SELECTORS.DROPDOWNMENU}`
-	);
+const init = (id) => {
+	let dropdownContainers;
+	let dropdownToggles;
+	let dropdownMenu;
+
+	if (id) {
+		dropdownContainers = document?.getElementById(id);
+
+		if (!dropdownContainers) {
+			console.error(
+				`No dropdown found corresponding with the id provided in dropdown.init() passing this id value: "${id}"`,
+			);
+
+			return null;
+		}
+		dropdownToggles = dropdownContainers.querySelector(SELECTORS.TOGGLE);
+		dropdownMenu = dropdownContainers.querySelector(SELECTORS.DROPDOWNMENU);
+	} else {
+		dropdownContainers = document.querySelectorAll(SELECTORS.DROPDOWNLIST);
+		dropdownToggles = document.querySelectorAll(
+			`${SELECTORS.DROPDOWNLIST} ${SELECTORS.TOGGLE}`,
+		);
+		dropdownMenu = document.querySelectorAll(
+			`${SELECTORS.DROPDOWNLIST} ${SELECTORS.DROPDOWNMENU}
+    `,
+		);
+	}
 
 	if (!dropdownContainers.length) {
 		console.warn("No dropdown container found");
@@ -81,11 +100,11 @@ const init = () => {
 		listenToToggleBtn(dropdownContainer.querySelector(SELECTORS.TOGGLE));
 		listenToClickOutsideDropdown(dropdownContainer);
 		closesOnLinkOrBtnClick(
-			dropdownContainer.querySelector(SELECTORS.DROPDOWNMENU)
+			dropdownContainer.querySelector(SELECTORS.DROPDOWNMENU),
 		);
 		checkAndAddMenuKeyboardNavigation(
 			dropdownContainer,
-			dropdownContainer.querySelector(SELECTORS.DROPDOWNMENU)
+			dropdownContainer.querySelector(SELECTORS.DROPDOWNMENU),
 		);
 	});
 };
