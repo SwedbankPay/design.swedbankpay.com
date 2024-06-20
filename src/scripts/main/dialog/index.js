@@ -124,21 +124,42 @@ const _createDialog = (dialogQuery) => {
 // MARK: script for <dialog> element
 
 const _activateDialogElement = (dialog) => {
-	const dialogInvoker = document.querySelector(
+	const dialogInvokers = document.querySelectorAll(
 		`button[data-dialog-open="${dialog.id}"]`,
 	);
 	const closeDialogButtons = dialog.querySelectorAll(
 		"button[data-dialog-close]",
 	);
 
-	// add event listener on dialogInvoker, it should call dialog.showModal()
-	dialogInvoker.addEventListener("click", () => {
-		dialog.showModal();
-	});
+	// TODO: fails gracefully, don't THROW
+	// TODO: improve DX feedback (for non-existing open & close buttons)
+
+	if (!dialogInvokers.length) {
+		console.error(
+			"There was no open button implemented for the dialog. Please make sure you add at least 1 button with the correct attributes to your HTML for the script to work (or do not call this script and use the JS methods on your side)",
+		);
+
+		return;
+	}
+
+	if (!closeDialogButtons.length) {
+		console.error(
+			"There was no close button implemented for the dialog. Please make sure you add at least 1 button with the correct attributes to your HTML for the script to work (or do not call this script and use the JS methods on your side)",
+		);
+
+		return;
+	}
+
+	// add event listener on dialogInvokers, it should call dialog.showModal()
+	[...dialogInvokers]?.map((invokerBtn) =>
+		invokerBtn?.addEventListener("click", () => {
+			dialog.showModal();
+		}),
+	);
 
 	// add event listener on dialogs close button, it should call dialog.close()
-	[...closeDialogButtons].map((closeBtn) =>
-		closeBtn.addEventListener("click", () => {
+	[...closeDialogButtons]?.map((closeBtn) =>
+		closeBtn?.addEventListener("click", () => {
 			dialog.close();
 		}),
 	);
