@@ -41,7 +41,7 @@ jobs:
         run: ./.github/scripts/variables.sh --brand ${{ matrix.brand }} --ref ${{ github.ref }}
 
       - name: Azure Login
-        uses: azure/login@v2.1.0
+        uses: azure/login@v2.1.1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS_STAGE }}
 
