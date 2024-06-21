@@ -195,6 +195,14 @@ export const hidingElementClasses = {
 			value: "d-inline-flex",
 			css: "display: inline-flex",
 		},
+		{
+			value: "d-grid",
+			css: "display: grid",
+		},
+		{
+			value: "d-inline-grid",
+			css: "display: inline-grid",
+		},
 	],
 };
 
