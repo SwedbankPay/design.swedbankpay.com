@@ -1,6 +1,8 @@
 // @ts-check
 const { test, expect } = require("@playwright/test");
 
+// TODO: add tests dialogs for situations where multiple invokers are present, and for no invoker or no close button (no script but JS should not throw entirely, just gracefully fail)
+
 test.beforeEach(async ({ page }) => {
 	await page.goto("http://localhost:3000/components/dialog");
 });
