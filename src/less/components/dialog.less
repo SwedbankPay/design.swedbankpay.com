@@ -15,7 +15,7 @@ dialog {
 }
 
 // TODO: can be removed in next major release when silent support for div.dialog is over
-.dialog {
+.dialog:not(dialog) {
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -138,7 +138,7 @@ dialog {
 body.dialog-open {
 	overflow: hidden;
 
-	.dialog {
+	.dialog:not(dialog) {
 		overflow-x: hidden;
 		overflow-y: auto;
 		display: flex;
@@ -326,7 +326,7 @@ dialog {
 
 // MARK: A11y reduced motion
 @media (forced-colors: active) {
-	.dialog {
+	.dialog:not(dialog) {
 		border: 10px solid;
 
 		> section {
