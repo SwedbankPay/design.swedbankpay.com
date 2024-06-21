@@ -44,8 +44,7 @@
 		padding-inline-end: var(--padding-outer);
 	}
 
-	&:not(.cards-wide):has(> :where(img, picture, .illustration):first-child)
-		.h4 {
+	&:not(.cards-wide):has(> :is(img, picture, .illustration):first-child) .h4 {
 		padding-block-start: 0;
 	}
 
@@ -70,7 +69,7 @@
 		padding-block-end: var(--padding-outer);
 	}
 
-	&.cards-wide:has(> :where(img, picture, .illustration):first-child)
+	&.cards-wide:has(> :is(img, picture, .illustration):first-child)
 		:is(.h4, .cards-icon, .cards-content, .cards-cta) {
 		padding-inline-start: 0;
 
@@ -96,7 +95,7 @@
 		margin-inline-end: 0.5rem;
 	}
 
-	&:has(> :where(img, picture, .illustration):first-child) {
+	&:has(> :is(img, picture, .illustration):first-child) {
 		grid-template-areas:
 			"image"
 			"title"
@@ -104,7 +103,7 @@
 			"cta";
 		grid-template-columns: 1fr;
 
-		&:is(button) :where(img, picture, .illustration) {
+		&:is(button) :ishere(img, picture, .illustration) {
 			max-width: 100%;
 		}
 
@@ -116,15 +115,15 @@
 			grid-area: image;
 		}
 
-		&:has(> :where(img, picture, .illustration):first-child.ratio-1-1):before {
+		&:has(> :is(img, picture, .illustration):first-child.ratio-1-1):before {
 			aspect-ratio: 1 / 1;
 		}
 
-		&:has(> :where(img, picture, .illustration):first-child.ratio-4-3):before {
+		&:has(> :is(img, picture, .illustration):first-child.ratio-4-3):before {
 			aspect-ratio: 4 / 3;
 		}
 
-		& > :where(img, picture, .illustration):first-child {
+		& > :is(img, picture, .illustration):first-child {
 			width: 100%;
 			aspect-ratio: 16 / 9;
 			grid-area: image;
@@ -201,7 +200,7 @@
 			}
 		}
 
-		&:not(:has(> :where(img, picture, .illustration):first-child)) {
+		&:not(:has(> :is(img, picture, .illustration):first-child)) {
 			grid-template-rows: auto auto;
 
 			& .cards-cta {
@@ -209,9 +208,7 @@
 			}
 		}
 
-		&:not(:has(> :where(img, picture, .illustration):first-child)):not(
-				:has(.h4)
-			) {
+		&:not(:has(> :is(img, picture, .illustration):first-child)):not(:has(.h4)) {
 			grid-template-areas: "icon text-content cta";
 			grid-template-columns: auto 1fr min-content;
 			grid-template-rows: auto;
@@ -222,7 +219,7 @@
 			}
 		}
 
-		&:not(:has(> :where(img, picture, .illustration):first-child)):not(
+		&:not(:has(> :is(img, picture, .illustration):first-child)):not(
 				:has(.cards-content)
 			) {
 			grid-template-areas: "icon title cta";
@@ -236,7 +233,7 @@
 			}
 		}
 
-		&:not(:has(> :where(img, picture, .illustration):first-child)):not(
+		&:not(:has(> :is(img, picture, .illustration):first-child)):not(
 				:has(.cards-icon)
 			):not(:has(.cards-content)) {
 			grid-template-areas: "title cta";
@@ -249,7 +246,7 @@
 			}
 		}
 
-		&:has(> :where(img, picture, .illustration):first-child) {
+		&:has(> :is(img, picture, .illustration):first-child) {
 			grid-template-areas:
 				"image title"
 				"image text-content"
@@ -278,7 +275,7 @@
 				aspect-ratio: 1;
 			}
 
-			& > :where(img, picture, .illustration):first-child {
+			& > :is(img, picture, .illustration):first-child {
 				max-width: 100%;
 				object-fit: cover;
 				width: auto;
