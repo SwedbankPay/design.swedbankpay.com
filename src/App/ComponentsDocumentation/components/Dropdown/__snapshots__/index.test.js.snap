@@ -312,6 +312,16 @@ exports[`Documentation: Dropdown DeveloperDocumentation renders 1`] = `
     </code>
      to initialize all dropdowns. This will open and close the dropdowns automatically.
   </p>
+  <p>
+    To initialize a given dropdown, use
+     
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      dg.dropdown.init({id})
+    </code>
+    .
+  </p>
   <h3>
     Accessibility considerations
   </h3>
