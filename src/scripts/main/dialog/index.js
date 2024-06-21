@@ -131,9 +131,6 @@ const _activateDialogElement = (dialog) => {
 		"button[data-dialog-close]",
 	);
 
-	// TODO: fails gracefully, don't THROW
-	// TODO: improve DX feedback (for non-existing open & close buttons)
-
 	if (!dialogInvokers.length) {
 		console.error(
 			"There was no open button implemented for the dialog. Please make sure you add at least 1 button with the correct attributes to your HTML for the script to work (or do not call this script and use the JS methods on your side)",
