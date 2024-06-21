@@ -5,6 +5,67 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.12.1",
+		title: "Minor Bug Fixes & Supports Increase",
+		text: (
+			<>
+				<p>
+					Just like Ulysses, your dedicated developer has been sent on exciting
+					new adventures. But embarking on these new journeys does not mean he
+					will ever forget or stop longing to come back home and taking care of
+					everything he left behind.
+				</p>
+				<p>
+					That's why I could not leave for summer holidays without coming back
+					by the design system and fixing some things I owe our brillant users.
+				</p>
+				<p>
+					<strong>Dialog</strong>
+					<br />
+					Dialog now fails gracefully if no invoker is found (thnx Karoline for
+					the heads up)
+					<br />
+					It can also get multiple invokers attached to it (thanks Martina for
+					the feature request)
+					<br />
+					The styling is also more resilient through the migration from the old
+					dialog syntax
+				</p>
+				<p>
+					<strong>Cards</strong>
+					<br />
+					Cards can now use <CodeTags type="secondary" code="picture" />{" "}
+					elements & <CodeTags type="secondary" code="div.illustration" /> class
+					in lieu of the <CodeTags type="secondary" code="img" /> element. They
+					will be styled just the same.
+				</p>
+				<p>
+					<strong>Dropdown</strong>
+					<br />
+					Thanks to the help of our dear colleague Ludvik Lund, the dropdown
+					initialization script can now receive a specific{" "}
+					<CodeTags type="secondary" code="id" />. So you can now call the init
+					script for a given dropdown and not all of the dropdowns present in
+					the DOM.
+				</p>
+				<p>
+					<strong>Utility classes</strong>
+					<br />
+					Some new utility classes have been added to the list.{" "}
+					<CodeTags type="secondary" code="d-{breakpoint}-grid" /> &{" "}
+					<CodeTags type="secondary" code="d-{breakpoint}-inline-grid" />.
+				</p>
+				<p>
+					<strong>Button</strong>
+					<br />
+					The loading spinner of the button loading will never be squashed when
+					the button gets its width shrinked. No more spinners looking like a
+					rice bean.
+				</p>
+			</>
+		),
+	},
+	{
 		version: "10.12.0",
 		title: "UI Bonanza",
 		text: (

@@ -98,8 +98,8 @@
 		"stylelint-config-standard": "^34.0.0",
 		"stylelint-declaration-block-no-ignored-properties": "^2.8.0",
 		"terser-webpack-plugin": "^5.3.9",
-		"webpack": "^5.91.0",
-		"webpack-bundle-analyzer": "^4.10.1",
+		"webpack": "^5.92.1",
+		"webpack-bundle-analyzer": "^4.10.2",
 		"webpack-cli": "^5.1.4",
 		"webpack-dev-server": "^4.15.2"
 	},

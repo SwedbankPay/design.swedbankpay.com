@@ -697,6 +697,34 @@ exports[`Utilities: index renders 1`] = `
                 display: inline-flex
               </code>
             </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                d-grid
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                display: grid
+              </code>
+            </div>
+            <div
+              className="d-flex justify-content-between mb-2"
+            >
+              <code
+                className="code-tags code-tags-primary"
+              >
+                d-inline-grid
+              </code>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                display: inline-grid
+              </code>
+            </div>
           </div>
         </div>
         <div
