@@ -134,7 +134,7 @@ const Desktop = () => (
 					<td>
 						<h6>Title 6</h6>
 					</td>
-					<td>Arial bold</td>
+					<td>Swedbank Headline Bold</td>
 					<td>14 px</td>
 					<td>20 px</td>
 				</tr>
@@ -238,7 +238,7 @@ const Mobile = () => (
 					<td>
 						<h6>Title 6</h6>
 					</td>
-					<td>Arial bold</td>
+					<td>Swedbank Headline Bold</td>
 					<td>14 px</td>
 					<td>22 px</td>
 				</tr>
