@@ -56,17 +56,21 @@ const init = (id) => {
 	let dropdownMenu;
 
 	if (id) {
-		dropdownContainers = document?.getElementById(id);
+		/* Find the dropdown container by id, and wrap it in a NodeList like structure to 
+		avoid friction in the rest of the code */
+		const element = document.getElementById(id);
+		dropdownContainers = element ? [element] : [];
 
-		if (!dropdownContainers) {
+		if (!dropdownContainers.length) {
 			console.error(
 				`No dropdown found corresponding with the id provided in dropdown.init() passing this id value: "${id}"`,
 			);
 
 			return null;
 		}
-		dropdownToggles = dropdownContainers.querySelector(SELECTORS.TOGGLE);
-		dropdownMenu = dropdownContainers.querySelector(SELECTORS.DROPDOWNMENU);
+
+		dropdownToggles = element.querySelectorAll(SELECTORS.TOGGLE);
+		dropdownMenu = element.querySelectorAll(SELECTORS.DROPDOWNMENU);
 	} else {
 		dropdownContainers = document.querySelectorAll(SELECTORS.DROPDOWNLIST);
 		dropdownToggles = document.querySelectorAll(
