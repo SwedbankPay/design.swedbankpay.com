@@ -6,7 +6,7 @@
 
 - Typography
 
-  - change font family of "title 6"/h6 from Arial to the brand's headline font (e.g. "SwedbankPay Headline" or "Futura PT W08 Demi" depending on brand)
+  - change font family of "title 6"/h6 from Arial to the brand's headline font (e.g. "SwedbankPay Headline Bold" or "Futura PT W08 Demi" depending on brand)
 
 - Progress-steps
 

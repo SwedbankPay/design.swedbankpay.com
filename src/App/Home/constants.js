@@ -18,7 +18,7 @@ export const changeLogs = [
 					<strong>Typography</strong>
 					<br />
 					"Title 6" font-family switches from Arial to the brand's headline font
-					(e.g. Swedbank Headline)
+					(e.g. Swedbank Headline Bold)
 				</p>
 				<p>
 					<strong>Progress bar</strong>
