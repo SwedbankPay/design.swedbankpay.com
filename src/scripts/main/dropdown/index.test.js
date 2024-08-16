@@ -1,7 +1,6 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import userEvent from "@testing-library/user-event";
 
 import dropdown from "./index";
 
@@ -49,6 +48,24 @@ describe("Scripts: Dropdown", () => {
 
 			expect(dropdown.init()).toBeNull();
 			expect(console.warn).toHaveBeenCalled();
+		});
+
+		it("initializes with ID", () => {
+			render(<Dropdown id="foo" />);
+
+			console.warn = jest.fn();
+
+			expect(dropdown.init("foo")).not.toBeNull();
+			expect(console.warn).not.toHaveBeenCalled();
+		});
+
+		it("init returns null if no dropdown with ID is found and prints a warning message", () => {
+			render(<Dropdown id="foo" />);
+
+			console.error = jest.fn();
+
+			expect(dropdown.init("bar")).toBeNull();
+			expect(console.error).toHaveBeenCalled();
 		});
 	});
 

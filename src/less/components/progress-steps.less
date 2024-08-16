@@ -1,18 +1,32 @@
 @import "../global.less";
 
+.steps {
+	--progress-steps-list-item-padding: 4.25rem 0 0 0;
+	--progress-steps-list-item-padding-desktop-top: 4.25rem;
+	--progress-steps-list-item-padding-desktop: var(
+			--progress-steps-list-item-padding-desktop-top
+		)
+		0 1.2rem 0;
+	--progress-steps-list-item-padding-desktop-vertical: 2rem 1.5rem 2rem 5.25rem;
+
+	--progress-steps-circle-size: 30px;
+	--progress-steps-circle-size-desktop: 40px;
+
+	--progress-steps-vertical-left: 1.7rem;
+	--progress-steps-vertical-margin: calc(
+		(var(--progress-steps-circle-size-desktop) / 2) -
+			(var(--progress-steps-line-width-desktop) / 2)
+	);
+
+	--progress-steps-line-width: 2px;
+	--progress-steps-line-width-desktop: 2px;
+}
+
+// LESS vars still needed because used in LESS function .negative-margin()
 @list-item-padding: 4.25rem 0 0 0;
 @list-item-padding-desktop-top: 4.25rem;
 @list-item-padding-desktop: @list-item-padding-desktop-top 0 1.2rem 0;
 @list-item-padding-desktop-vertical: 2rem 1.5rem 2rem 5.25rem;
-
-@circle-size: 30px;
-@circle-size-desktop: 40px;
-
-@vertical-left: 1.7rem;
-@vertical-margin: ((@circle-size-desktop / 2) - (@line-width-desktop / 2));
-
-@line-width: 2px;
-@line-width-desktop: 2px;
 
 .negative-margin (@margin-list) {
 	@length: length(@margin-list);
@@ -50,7 +64,7 @@
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	background-color: @brand-bg-white;
+	background-color: var(--bg-white);
 	display: flex;
 	justify-content: space-between;
 	position: relative;
@@ -60,19 +74,19 @@
 		flex: 0 1 100%;
 		flex-grow: 1;
 		position: relative;
-		padding: @list-item-padding;
+		padding: var(--progress-steps-list-item-padding);
 		text-align: center;
 		line-height: 1rem;
 		overflow: hidden;
 		height: 0;
-		color: @text-gray;
+		color: var(--text-gray);
 
 		> a {
 			display: block;
 			width: 100%;
 
 			/* Take full parent size, ignoring parents padding, and stil growing the parent with text from this element */
-			padding: @list-item-padding;
+			padding: var(--progress-steps-list-item-padding);
 			color: var(--brand-secondary);
 			border: 0;
 			cursor: pointer;
@@ -98,12 +112,12 @@
 
 		.circle-base() {
 			position: absolute;
-			width: @circle-size;
-			height: @circle-size;
+			width: var(--progress-steps-circle-size);
+			height: var(--progress-steps-circle-size);
 			top: 50%;
-			margin-top: (-@circle-size / 2);
+			margin-top: calc(0px - var(--progress-steps-circle-size) / 2);
 			left: 50%;
-			margin-left: (-@circle-size / 2);
+			margin-left: calc(0px - var(--progress-steps-circle-size) / 2);
 		}
 
 		/* Circle */
@@ -114,8 +128,8 @@
 			box-sizing: border-box;
 			z-index: 10;
 			border-radius: 50%;
-			border: 2px solid @brand-bg-gray;
-			background-color: @brand-bg-white;
+			border: 2px solid var(--gray);
+			background-color: var(--bg-white);
 		}
 
 		.steps-icon {
@@ -123,7 +137,7 @@
 
 			color: var(--brand-secondary);
 			z-index: 15;
-			line-height: @circle-size;
+			line-height: var(--progress-steps-circle-size);
 			text-align: center;
 			font-size: 1.1rem;
 		}
@@ -133,7 +147,7 @@
 
 			font-family: var(--brand-headline);
 			z-index: 15;
-			line-height: @circle-size;
+			line-height: var(--progress-steps-circle-size);
 			text-align: center;
 			font-size: 1rem;
 		}
@@ -142,15 +156,15 @@
 		&:after {
 			content: "";
 			position: absolute;
-			background-color: @brand-bg-gray;
+			background-color: var(--gray);
 			z-index: 5;
-			height: @line-width;
+			height: var(--progress-steps-line-width);
 
 			/* Prevents small render gaps on certain resolutions */
 			width: 102%;
 			left: 0;
 			top: 50%;
-			margin-top: (-@line-width / 2);
+			margin-top: calc(0px - var(--progress-steps-line-width) / 2);
 		}
 
 		&:first-child {
@@ -210,15 +224,15 @@
 		&:after {
 			background: linear-gradient(
 				to right,
-				@brand-primary 50%,
-				@brand-bg-gray 50%
+				var(--brand-primary) 50%,
+				var(--gray) 50%
 			);
 		}
 
 		&:first-child,
 		&:last-child {
 			&:after {
-				background: linear-gradient(to right, var(--brand-primary) 100%);
+				background: var(--brand-primary);
 			}
 		}
 
@@ -244,7 +258,7 @@
 		line-height: 1rem;
 		margin-top: var(--base-margin-xs);
 		font-size: var(--font-size-small);
-		color: @text-gray;
+		color: var(--text-gray);
 	}
 }
 
@@ -271,20 +285,22 @@
 		font-size: 1.1rem;
 
 		li {
-			padding: @list-item-padding-desktop;
+			padding: var(--progress-steps-list-item-padding-desktop);
 			height: auto;
 
 			> a {
-				padding: @list-item-padding-desktop;
+				padding: var(--progress-steps-list-item-padding-desktop);
 				.negative-margin(@list-item-padding-desktop);
 
 				&:before {
-					width: @circle-size-desktop;
-					height: @circle-size-desktop;
-					line-height: @circle-size-desktop;
-					margin-left: (-@circle-size-desktop / 2);
-					top: (@list-item-padding-desktop-top / 2);
-					margin-top: (-@circle-size-desktop / 2);
+					width: var(--progress-steps-circle-size-desktop);
+					height: var(--progress-steps-circle-size-desktop);
+					line-height: var(--progress-steps-circle-size-desktop);
+					margin-left: calc(
+						0px - var(--progress-steps-circle-size-desktop) / 2
+					);
+					top: calc(var(--progress-steps-list-item-padding-desktop-top) / 2);
+					margin-top: calc(0px - var(--progress-steps-circle-size-desktop) / 2);
 					border-width: 2px;
 				}
 			}
@@ -293,12 +309,12 @@
 			.steps-icon,
 			.steps-number,
 			&:before {
-				width: @circle-size-desktop;
-				height: @circle-size-desktop;
-				line-height: @circle-size-desktop;
-				margin-left: (-@circle-size-desktop / 2);
-				top: (@list-item-padding-desktop-top / 2);
-				margin-top: (-@circle-size-desktop / 2);
+				width: var(--progress-steps-circle-size-desktop);
+				height: var(--progress-steps-circle-size-desktop);
+				line-height: var(--progress-steps-circle-size-desktop);
+				margin-left: calc(0px - var(--progress-steps-circle-size-desktop) / 2);
+				top: calc(var(--progress-steps-list-item-padding-desktop-top) / 2);
+				margin-top: calc(0px - var(--progress-steps-circle-size-desktop) / 2);
 				border-width: 2px;
 			}
 
@@ -313,9 +329,9 @@
 
 			/* Line */
 			&:after {
-				top: (@list-item-padding-desktop-top / 2);
-				margin-top: (-@line-width-desktop / 2);
-				height: @line-width-desktop;
+				top: calc(var(--progress-steps-list-item-padding-desktop-top) / 2);
+				margin-top: calc(0px - var(--progress-steps-line-width-desktop) / 2);
+				height: var(--progress-steps-line-width-desktop);
 			}
 		}
 
@@ -330,16 +346,16 @@
 		li {
 			display: block;
 			text-align: left;
-			padding: @list-item-padding-desktop-vertical;
+			padding: var(--progress-steps-list-item-padding-desktop-vertical);
 
 			> a {
-				padding: @list-item-padding-desktop-vertical;
+				padding: var(--progress-steps-list-item-padding-desktop-vertical);
 				width: auto;
 				.negative-margin(@list-item-padding-desktop-vertical);
 
 				&:before {
 					margin-left: 0;
-					left: @vertical-left;
+					left: var(--progress-steps-vertical-left);
 					top: 50%;
 				}
 			}
@@ -349,15 +365,15 @@
 			.steps-icon,
 			.steps-number {
 				margin-left: 0;
-				left: @vertical-left;
+				left: var(--progress-steps-vertical-left);
 				top: 50%;
 			}
 
 			/* Line */
 			&:after {
-				width: @line-width-desktop;
-				left: @vertical-left;
-				margin-left: @vertical-margin;
+				width: var(--progress-steps-line-width-desktop);
+				left: var(--progress-steps-vertical-left);
+				margin-left: var(--progress-steps-vertical-margin);
 				top: 0;
 				bottom: 0;
 				height: auto;
@@ -367,9 +383,9 @@
 			&:first-child {
 				&:after {
 					height: 50%;
-					width: @line-width-desktop;
-					left: @vertical-left;
-					margin-left: @vertical-margin;
+					width: var(--progress-steps-line-width-desktop);
+					left: var(--progress-steps-vertical-left);
+					margin-left: var(--progress-steps-vertical-margin);
 					top: auto;
 				}
 			}
@@ -377,15 +393,15 @@
 			&:last-child {
 				&:after {
 					height: 50%;
-					width: @line-width-desktop;
-					left: @vertical-left;
-					margin-left: @vertical-margin;
+					width: var(--progress-steps-line-width-desktop);
+					left: var(--progress-steps-vertical-left);
+					margin-left: var(--progress-steps-vertical-margin);
 				}
 			}
 		}
 
 		.steps-ongoing:after {
-			background: linear-gradient(var(--brand-primary) 50%, @brand-bg-gray 50%);
+			background: linear-gradient(var(--brand-primary) 50%, var(--gray) 50%);
 		}
 	}
 }
