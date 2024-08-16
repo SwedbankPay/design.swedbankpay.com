@@ -5,6 +5,40 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.12.2",
+		title: "We're back, fresh and tanned with a summer breeze",
+		text: (
+			<>
+				<p>
+					How are you lovely people? Us in the design-system galaxy we&apos;re
+					doing great, thanks for asking. And we&apos;re bringing with us some
+					nice patches.
+				</p>
+				<p>
+					<strong>Typography</strong>
+					<br />
+					"Title 6" font-family switches from Arial to the brand's headline font
+					(e.g. Swedbank Headline Bold)
+				</p>
+				<p>
+					<strong>Progress bar</strong>
+					<br />
+					We're fixing a UI bug spotted by our beloved Martina, namely the
+					horizontal lines for the 1st and last steps when they are in selected
+					state.
+				</p>
+				<p>
+					<strong>Dropdown</strong>
+					<br />A big thank you to Ludvik Lund for his contribution, fixing a
+					bug in the dropdown script when initiating a specific dropdown (using
+					the dropdown element id as param for the init function). It should
+					work fine now
+				</p>
+				<p>Enjoy 💫</p>
+			</>
+		),
+	},
+	{
 		version: "10.12.1",
 		title: "Minor Bug Fixes & Supports Increase",
 		text: (
