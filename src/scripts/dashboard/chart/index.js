@@ -18,7 +18,7 @@ import initLineChart from "./line";
 import initLineFillChart from "./line-fill";
 
 const _colorPool = [
-	"253, 193, 41", // brand primary
+	"253, 201, 42", // brand primary
 	"238, 112, 35", // brand tertiary
 	"49, 163, 174", // brand accent
 	"138, 205, 195", // info turquoise
