@@ -1,11 +1,14 @@
 @import "../button.less";
 
-&.btn {
-	font-family: var(--brand-default);
+.btn {
+	font-family: var(--brand-default-buttons);
 
+	&:active {
+		border: 3px solid var(--brand-secondary);
+	}
+	
 	&.btn-primary {
 		&:active {
-			border: @brand-primary;
 			box-shadow: none;
 		}
 
@@ -27,15 +30,28 @@
 	}
 
 	&.btn-secondary {
+		border: 1px solid var(--brand-secondary-light-3);
+
 		&:focus {
-			border: 2px solid @brand-primary;
 			box-shadow: none;
 		}
 
 		&:active {
-			border: 1px solid var(--brand-primary);
+			border: 3px solid var(--brand-secondary);
+		}  
+		
+		&:hover {
+			background-color: var(--light-gray) !important;
+			color: var(--brand-secondary) !important;
 		}
 	}
+
+ 	&.btn-tertiary {
+		&:hover {
+			background-color: var(--soft-brown) !important;
+			border: 3px solid var(--soft-brown);
+		}
+	} 
 
 	&.btn-guiding-destructive {
 		background: var(--btn-destructive-color);
