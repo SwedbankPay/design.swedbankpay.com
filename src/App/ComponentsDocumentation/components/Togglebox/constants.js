@@ -48,6 +48,24 @@ export const toggleboxShowCase = {
 							},
 						],
 					},
+					{
+						id: "color-theme",
+						title: "Color theme",
+						values: [
+							{
+								name: "Grey",
+								value: {
+									colorTheme: "grey",
+								},
+							},
+							{
+								name: "White",
+								value: {
+									colorTheme: "white",
+								},
+							},
+						],
+					},
 				],
 			},
 			title: "Togglebox",
