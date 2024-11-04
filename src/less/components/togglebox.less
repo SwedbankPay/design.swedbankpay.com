@@ -2,19 +2,19 @@
 @import "./form.less";
 
 .togglebox {
-	--checked-nod-color: var(--brand-green);
-	--checked-bg-color: var(--brand-green-light);
-	--unchecked-nod-color: var(--brown-soft);
+	--checked-thumb-color: var(--brand-green);
+	--checked-track-color: var(--brand-green-light);
+	--unchecked-thumb-color: var(--brown-soft);
 	// this one depends of the theme-color
-	--unchecked-bg-color: var(--bg-brown);
+	--unchecked-track-color: var(--bg-brown);
 
-	--height-bg: 2.25rem;
-	--width-bg: 3.75rem;
-	--height-nod: 1.75rem;
-	--spacing-nod: calc((var(--height-bg) - var(--height-nod)) / 2);
+	--height-track: 2.25rem;
+	--width-track: 3.75rem;
+	--height-thumb: 1.75rem;
+	--spacing-thumb: calc((var(--height-track) - var(--height-thumb)) / 2);
 
 	&:has(input.theme-white) {
-		--unchecked-bg-color: var(--white);
+		--unchecked-track-color: var(--white);
 	}
 
 	position: relative;
@@ -45,48 +45,48 @@
 			}
 		}
 
-		// BG of the toggle
+		// Track of the toggle
 		+ label:before {
-			background-color: var(--unchecked-bg-color);
+			background-color: var(--unchecked-track-color);
 			transition: background-color 0.2s ease;
 			content: "";
 			position: absolute;
 			top: 0;
 			right: 0;
-			height: var(--height-bg);
-			width: var(--width-bg);
-			border-radius: var(--height-bg);
+			height: var(--height-track);
+			width: var(--width-track);
+			border-radius: var(--height-track);
 			cursor: pointer;
 		}
 
-		// nod of the toggle
+		// thumb of the toggle
 		+ label:after {
 			transition: right 0.2s;
 			content: "";
 			position: absolute;
 			visibility: visible;
-			background-color: var(--unchecked-nod-color);
-			margin: var(--spacing-nod);
+			background-color: var(--unchecked-thumb-color);
+			margin: var(--spacing-thumb);
 			top: 0;
 			right: calc(
-				var(--width-bg) - var(--height-nod) -(var(--spacing-nod) * 2)
+				var(--width-track) - var(--height-thumb) -(var(--spacing-thumb) * 2)
 			);
 			aspect-ratio: 1;
-			height: var(--height-nod);
+			height: var(--height-thumb);
 			border-radius: 50%;
 			cursor: pointer;
 		}
 
 		&:checked + label:before {
 			transition: background-color 0.2s ease;
-			background-color: var(--checked-bg-color);
+			background-color: var(--checked-track-color);
 			border: none;
 		}
 
 		&:checked + label:after {
 			transition: right 0.2s ease;
 			right: 0;
-			background-color: var(--checked-nod-color);
+			background-color: var(--checked-thumb-color);
 		}
 
 		&[disabled] {
@@ -141,7 +141,8 @@
 
 				+ label:after {
 					left: calc(
-						var(--width-bg) - var(--height-nod) - (var(--spacing-nod) * 2)
+						var(--width-track) - var(--height-thumb) -
+							(var(--spacing-thumb) * 2)
 					);
 					transition: left 0.2s ease;
 				}
