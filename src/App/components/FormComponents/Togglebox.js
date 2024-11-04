@@ -1,7 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Togglebox = ({ id, checked, disabled, label, labelTop }) => {
+const Togglebox = ({
+	id,
+	checked,
+	disabled,
+	label,
+	labelTop,
+	colorTheme = "grey",
+}) => {
 	const attrs = {
 		type: "checkbox",
 		id: id || null,
@@ -12,7 +19,10 @@ const Togglebox = ({ id, checked, disabled, label, labelTop }) => {
 	return (
 		<div className={`togglebox${labelTop ? " label-top" : ""}`}>
 			{"\n"}
-			<input {...attrs} />
+			<input
+				{...attrs}
+				className={colorTheme === "white" ? "theme-white" : "theme-grey"}
+			/>
 			{"\n"}
 			{label ? (
 				<label htmlFor={id}>

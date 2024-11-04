@@ -1110,7 +1110,7 @@
 		padding: var(--base-padding-lg);
 		margin: var(--base-margin-sm) 0 0 0;
 		border-radius: 2px 0;
-		border: 1px solid @brand-secondary-light-3;
+		border: 1px solid var(--brand-secondary-light-3);
 
 		&.showcasepanel-sm {
 			max-width: 20rem;
@@ -1185,7 +1185,7 @@
 							position: absolute;
 							bottom: 2px;
 							width: 100%;
-							border-bottom: 1px solid @brand-secondary-light-3;
+							border-bottom: 1px solid var(--brand-secondary-light-3);
 						}
 
 						&#undefined-ul {
@@ -1207,7 +1207,7 @@
 						align-items: center;
 						cursor: pointer;
 						height: 40px;
-						border-bottom: 1px solid @brand-secondary-light-3;
+						border-bottom: 1px solid var(--brand-secondary-light-3);
 						padding: 0 1rem;
 
 						&.hidden {
@@ -1221,7 +1221,7 @@
 
 							&:focus {
 								border-radius: 0.125rem;
-								box-shadow: 0 0 0 2px @black;
+								box-shadow: 0 0 0 2px var(--black);
 								outline: 2px solid transparent;
 							}
 						}
@@ -1246,7 +1246,7 @@
 
 			.component-preview {
 				margin-top: 2.5rem;
-				border-bottom: 1px solid @brand-secondary-light-3;
+				border-bottom: 1px solid var(--brand-secondary-light-3);
 
 				.component-preview-content {
 					position: relative;
@@ -1263,7 +1263,7 @@
 					}
 
 					&.component-preview-alt-background {
-						background-color: @brand-primary;
+						background-color: var(--brand-primary);
 					}
 
 					form {
@@ -1278,6 +1278,10 @@
 						&.dark {
 							background-color: var(--brand-secondary);
 						}
+					}
+
+					&:has(input[type="checkbox"].theme-white) {
+						background: var(--gray);
 					}
 				}
 			}
@@ -1301,7 +1305,7 @@
 				background-color: @white;
 				display: none;
 				min-width: 0;
-				border-left: 1px solid @brand-secondary-light-3;
+				border-left: 1px solid var(--brand-secondary-light-3);
 				transition: min-width 1s ease-in-out;
 				z-index: calc(100 + 2);
 
@@ -1316,7 +1320,7 @@
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
-					border-bottom: 1px solid @brand-secondary-light-3;
+					border-bottom: 1px solid var(--brand-secondary-light-3);
 					height: 2.5rem;
 
 					.options-close {
@@ -1326,7 +1330,7 @@
 						&:focus {
 							border: none;
 							border-radius: 0.125rem;
-							box-shadow: 0 0 0 2px @black;
+							box-shadow: 0 0 0 2px var(--black);
 						}
 					}
 				}
@@ -1395,7 +1399,7 @@
 			justify-content: center;
 			width: 100%;
 			height: 9.75rem;
-			background-color: @white;
+			background-color: var(--white);
 			padding: 2rem;
 		}
 	}
