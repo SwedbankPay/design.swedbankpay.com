@@ -1,6 +1,10 @@
 import React from "react";
 
-import { ComponentPreview, DocContainer } from "@docutils";
+import {
+	ComponentPreview,
+	DocContainer,
+	EditableComponentPreview,
+} from "@docutils";
 import CodeTags from "@components/CodeTags";
 import LogotypeComponent from "@components/Logotype";
 import { logoBlack, logoWhite, logoPayex, logotypeMisuses } from "./constants";
@@ -435,6 +439,51 @@ const Overview = () => (
 	</section>
 );
 
+const ImgSrcExamples = ({ isNPM }) => {
+	let imgSrc;
+
+	if (isNPM) {
+		imgSrc = `@swedbankpay/design-guide/src/img/${brand}/logo/${brand}-logo-h.svg`;
+	} else {
+		imgSrc = `https://design.${brand}.com/v/10.12.2/img/logo/${brand}-logo-h.svg`;
+	}
+
+	return (
+		<img
+			src={imgSrc}
+			alt={`${brand} horizontal logo`}
+			className="logotype-horizontal logotype-lg"
+		/>
+	);
+};
+
+const LogoSrc = () => (
+	<section>
+		<h2 id="logotype-pathname">Logo src pathname</h2>
+		<h3>Recommended way - load from the NPM package</h3>
+		<p>
+			Use the logo assets shipped with the npm package. This way it always stay
+			current and can be used at built time.
+		</p>
+		<EditableComponentPreview language="html" codeFigure={true}>
+			<ImgSrcExamples isNPM={true} />
+		</EditableComponentPreview>
+		<h3>Option #2 - Use the image from the website (the CDNish way)</h3>
+		<p>
+			Honestly, it's not recommended. For 2 reasons: it's slow (unless used at
+			build time in a SSG way, but most of the time it will be implemented in a
+			way that it gets called on client side) and on top of that it will become
+			potentially obsolete the second you wrote it since the image src path
+			leads to a hardcoded version of the design-guide. Therefore, if (when) we
+			will we change the logo in the future in the design system your version
+			will not get updated automatically.
+		</p>
+		<EditableComponentPreview language="html" codeFigure={true}>
+			<ImgSrcExamples isNPM={false} />
+		</EditableComponentPreview>
+	</section>
+);
+
 const Logotype = () => (
 	<>
 		{brand === "swedbankpay" && (
@@ -450,6 +499,7 @@ const Logotype = () => (
 					<Overview />
 					<LogoBlack />
 					<LogoWhite />
+					<LogoSrc />
 					<SpacingZone />
 					<MisuseLogo />
 					<LogotypeBackgrounds />
@@ -460,6 +510,7 @@ const Logotype = () => (
 		{brand === "payex" && (
 			<DocContainer>
 				<LogoPayex />
+				<LogoSrc />
 				<Favicon />
 			</DocContainer>
 		)}
