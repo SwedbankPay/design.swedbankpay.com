@@ -17,6 +17,7 @@ Array [
         
 
         <input
+          className="theme-grey"
           defaultChecked={null}
           disabled={null}
           id="toggle-disable-example"
@@ -81,6 +82,7 @@ Array [
         
 
         <input
+          className="theme-grey"
           defaultChecked={true}
           disabled={null}
           id="toggle-checked-example"
@@ -163,7 +165,7 @@ Array [
                 &lt;div class="togglebox label-top"&gt;
                 
 
-                    &lt;input type="checkbox" id="toggle-checked-example" checked&gt;
+                    &lt;input type="checkbox" id="toggle-checked-example" class="theme-grey" checked&gt;
                 
 
                     &lt;label for="toggle-checked-example"&gt;
@@ -212,6 +214,7 @@ Array [
         
 
         <input
+          className="theme-grey"
           defaultChecked={true}
           disabled={true}
           id="toggle-disabled-example"
@@ -237,6 +240,7 @@ Array [
         
 
         <input
+          className="theme-grey"
           defaultChecked={null}
           disabled={true}
           id="toggle-disabled-example-2"
@@ -337,7 +341,7 @@ Array [
                 &lt;div class="togglebox"&gt;
                 
 
-                    &lt;input type="checkbox" id="toggle-disabled-example" disabled checked&gt;
+                    &lt;input type="checkbox" id="toggle-disabled-example" disabled class="theme-grey" checked&gt;
                 
 
                     &lt;label for="toggle-disabled-example"&gt;
@@ -355,7 +359,7 @@ Array [
                 &lt;div class="togglebox"&gt;
                 
 
-                    &lt;input type="checkbox" id="toggle-disabled-example-2" disabled&gt;
+                    &lt;input type="checkbox" id="toggle-disabled-example-2" disabled class="theme-grey"&gt;
                 
 
                     &lt;label for="toggle-disabled-example-2"&gt;
