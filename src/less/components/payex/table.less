@@ -5,31 +5,15 @@
 		tr {
 			&:nth-child(odd) {
 				background-color: var(--bg-primary);
-			}
-
-		 	&:hover {
-				background-color: var(--light-gray);
-			}  
+			} 
 		}
 	}
 }
 
-.table.table-plain {
-	tbody {
-		tr {
-			background-color: var(--white);
-
-			&:hover {
-				background-color: var(--light-gray);
-			}
-
-			th, td {
-				background-color: transparent;
-			}
-		}
-	}
+.table.table-hover tbody > tr:hover td, 
+.table.table-hover tbody > tr:hover th {
+	background-color: var(--light-gray);
 }
-
 
 
 
