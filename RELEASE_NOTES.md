@@ -1,6 +1,6 @@
 # Changelog
 
-## \[10.12.2\] - 14.08.2024
+## \[10.13.0\] - 11.11.2024
 
 ## Identity
 
@@ -24,3 +24,8 @@
   - colors updated
 - Table PayEx (contribution from Johanna Prinz 💫)
   - colors updated
+  - hover color fixed
+
+## Technical changes
+
+- updated dependencies

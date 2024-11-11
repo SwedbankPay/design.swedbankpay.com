@@ -234,7 +234,7 @@ GitHub Actions will also create and deploy a release on Azure for the PayEx bran
 | `.prettierignore`   | List of files/directories ESLint will ignore (similar to `.gitignore`)                         |
 | `.prettierrc.json`  | [Prettier][prettier] configuration.                                                            |
 | `.stylelintrc`      | [Stylelint][stylelint] configuration.                                                          |
-| `CHANGELOG.md`      | Collection of changes made to the project. Insert your changes here.                           |
+| `RELEASE_NOTES.md`  | Collection of changes made to the project. Insert your changes here.                           |
 | `jest.config.js`    | [jest][jest] configuration.                                                                    |
 | `jest.setup.js`     | Script file that will run before jest executes the tests, polyfills and other useful snippets. |
 | `webpack.config.js` | [Webpack][webpack] configuration.                                                              |

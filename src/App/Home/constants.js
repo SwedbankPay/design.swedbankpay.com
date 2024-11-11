@@ -5,6 +5,58 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.13.0",
+		title: "Not Ghosting You: New Updates Inside",
+		text: (
+			<>
+				<p>
+					It's been a while, but here it is. A New Release (Minor Version).
+					Which means there's a bit of everything. In there. But let's start
+					from the beginning, shall we?
+				</p>
+				<p>
+					<strong>Togglebox (aka Toggle, or Switch)</strong>
+					<br />
+					The Toggle UI has been revamped and now includes a second theme
+					designed for darker backgrounds.
+				</p>
+				<p>
+					<strong>Logo</strong>
+					<br />
+					The SwedbankPay logo got fixed. It might loo like minor changes for
+					our myopic neanderthal developer eyes, but they're actually
+					significant improvements for people equipped with eagle eyes like our
+					brilliant designers 🤩.
+					<br />
+					We’ve also clarified the documentation: the recommended usage is
+					through the npm package rather than linking to a hardcoded URL.
+					Otherwise, changes (like this one) might leave your project out of
+					date.
+				</p>
+				<p>
+					<strong>Green side UI updates</strong>
+					<br />
+					Big shoutout to our Visby team! With the awesome addition of Johanna
+					Prinz (welcome, Johanna! 👋), we’ve added a series of enhancements on
+					the “green side of the force”:
+					<ul>
+						<li>Tables</li>
+						<li>Expandables</li>
+						<li>Buttons</li>
+					</ul>
+				</p>
+				<p>And as usual, we’ve included several dependency updates.</p>
+				<p>
+					And remember: it's not because we're not shipping as often that the DS
+					is abandoned in an old catsle dungeon. We're still here, with less
+					time prioritized to deliver frequent big work, but our eyes and brains
+					are still looking at it, with plenty of ideas to keep it and make it a
+					great thing
+				</p>
+			</>
+		),
+	},
+	{
 		version: "10.12.2",
 		title: "We're back, fresh and tanned with a summer breeze",
 		text: (
