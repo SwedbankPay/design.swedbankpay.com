@@ -6,6 +6,7 @@
 
 	input[type="radio"] {
 		+ label {
+			
 			&:before {
 				border: 2px solid @radiobutton-border;
 			}
@@ -14,55 +15,110 @@
 		&:is(:hover, :focus-visible) + label:before {
 			box-shadow: 0 0 0 0.375rem var(--gray);
 		}
+
+		&:checked + label:before {
+			background-position: center;
+			background-image: url("../../../icons/payex/circlepx.svg");
+		}
 	}
 }
 
-.checkmark {
-    label {
+.radio input[type=radio][disabled]:checked+label:before {
+	background-image: url("../../../icons/payex/circlepx_disabled.svg");
+}
 
+.checkmark {
+	
+    label {
         border: 1px solid var(--gray);
-        outline: none !important; 
+        outline: none !important;
+		color: var(--light-black);
 
 		.radio.checkmark label .checkmark-icon {
 			background-color: var(--brand-secondary);
 		}
 
         &:hover {
-            background-color: var(--gray) !important;
-            color: var(--white);
-            border: 1px solid var(--gray) !important; 
-            outline: none !important; 
-	
+			border: 1px solid var(--gray) !important;
+			background-color: var(--light-gray) !important;
+			color: var(--brand-secondary) !important;
+
 			.checkmark-icon,
 			> i {
-				background-color: var(--white);
+				background-color: var(--brand-secondary) !important;
 			}
 			
 			.checkmark-icon::before, .checkmark label:hover > i::before {
-				border-color: var(--gray) !important;
-			}
+				border-color: var(--light-gray) !important;
+			} 
+
+			.checkmark-icon::before,
+            .checkmark label:hover > i::before {
+                border-color: var(--light-gray) !important;
+            }
         }
-
-        &:active {
-            border: 3px solid var(--brand-secondary) !important; 
-            outline: none; 
-        }
-
-        &:disabled {
-            color: var(--white) !important;
-            border: 1px solid var(--gray) !important; 
-            background-color: var(--light-gray) !important; 
-            outline: none; 
-        }
-
-		&:focus {
-			border: 1px solid var(--gray);
-			background-color: var(--light-gray);
-
-			.checkmark-icon::before, .checkmark label:focus > i::before {
-				border-color: var(--light-gray);
-			}
-		}
-	 
     }
+}
+
+.radio.checkmark input[type="radio"]:checked + label:hover {
+    border: 1px solid var(--brand-secondary);
+    outline: none !important;
+}
+
+.radio.checkmark input[type="radio"]:checked + label {
+    border: 1px solid var(--brand-secondary);
+    outline: 3px solid var(--brand-secondary) !important;
+}
+
+.radio.checkmark input[type="radio"]:disabled:checked + label {
+	color: var(--white);
+    border: 1px solid var(--gray) !important; 
+    outline: none !important;
+
+	.checkmark-icon,
+	> i {
+		background-color: var(--white);
+	}
+	.checkmark-icon::before, .checkmark label:disabled > i::before {
+		border-color: var(--gray) !important;
+	}
+}
+
+.radio.checkmark input[type="radio"]:disabled + label:hover {
+    color: var(--white) !important;               
+    border: 1px solid var(--gray) !important;     
+    outline: none !important;                     
+    background-color: var(--gray) !important;     
+    box-shadow: none !important;                  
+    cursor: not-allowed !important;               
+
+	.checkmark-icon,
+	> i {
+		background-color: var(--white) !important;
+	}
+	.checkmark-icon::before, .checkmark label:disabled > i::before {
+		border-color: var(--gray) !important;
+	}
+}
+
+.radio.checkmark input[type="radio"]:disabled:checked:hover + label {
+	color: var(--white);
+    border: 1px solid var(--gray) !important; 
+    outline: none !important;
+	box-shadow: none;
+
+	.checkmark-icon,
+	> i {
+		background-color: var(--white);
+	}
+	.checkmark-icon::before, .checkmark label:disabled > i::before {
+		border-color: var(--gray) !important;
+	}
+}
+	
+.radio.checkmark input[type="radio"]:disabled + label {
+	color: var(--white);
+	border: 1px solid var(--gray) !important; 
+	outline: none !important;
+	background-color: var(--gray) !important;
 }
