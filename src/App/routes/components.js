@@ -286,6 +286,7 @@ module.exports = [
 				rootPath: "/components/togglebox",
 				componentPath: "components/Togglebox",
 				icon: "at-movement-arrows-left-right",
+				statusBadges: ["updated"],
 			},
 			{
 				title: "Tooltips",

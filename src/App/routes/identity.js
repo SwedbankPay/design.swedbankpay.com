@@ -62,6 +62,7 @@ module.exports = [
 				rootPath: "/identity/logotype",
 				componentPath: "identity/Logotype",
 				text: `The ${process.env.brandTitle} logotype`,
+				statusBadges: ["updated"],
 			},
 			{
 				title: "Page layout",
