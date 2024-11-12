@@ -12,8 +12,8 @@ describe("DisplayColor", () => {
 
 	it("renders with required props", () => {
 		const colors = {
-			hex: "#FDC129",
-			rgb: "253, 193, 41",
+			hex: "#fdc92a",
+			rgb: "253, 201, 42",
 		};
 
 		render(<DisplayColor {...colors} />);
@@ -38,8 +38,8 @@ describe("DisplayColor", () => {
 
 	it("renders with optional props", () => {
 		const colors = {
-			hex: "#FDC129",
-			rgb: "253, 193, 41",
+			hex: "#fdc92a",
+			rgb: "253, 201, 42",
 			fontColor: "2F2424",
 			border: "has-border",
 		};

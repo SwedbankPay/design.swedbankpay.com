@@ -3,7 +3,7 @@ export const primaryBrandColors = [
 		title: "Primary",
 		subTitle: "brand-primary",
 		isCSSVariable: true,
-		hex: "#FDC129",
+		hex: "#fdc92a",
 	},
 	{
 		title: "Primary light",
@@ -257,7 +257,7 @@ export const colorPool = [
 		title: "Primary",
 		subTitle: "brand-yellow",
 		isCSSVariable: true,
-		hex: "#FDC129",
+		hex: "#fdc92a",
 	},
 	{
 		title: "Yellow light",

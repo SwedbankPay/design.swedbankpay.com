@@ -4,8 +4,22 @@
 	tbody {
 		tr {
 			&:nth-child(odd) {
-				background-color: @light-gray;
-			}
+				background-color: var(--bg-primary);
+			} 
 		}
 	}
 }
+
+.table.table-hover tbody > tr:hover td, 
+.table.table-hover tbody > tr:hover th {
+	background-color: var(--light-gray);
+}
+
+
+
+
+
+
+
+
+
