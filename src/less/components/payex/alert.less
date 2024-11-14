@@ -1,7 +1,11 @@
 @import "../alert.less";
 
 .alert {
-	&.alert-success,
+	&.alert-success {
+		i[class^="swepay-icon-"].swepay-icon-check-circle-filled, i[class*=" swepay-icon-"].swepay-icon-check-circle-filled {
+			background-image: url(../../../icons/payex/check_circle_24px.svg);
+		}	
+	}
 	&.alert-warning,
 	&.alert-danger,
 	&.alert-informative {
