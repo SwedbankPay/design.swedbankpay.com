@@ -27,11 +27,10 @@
 	background-image: url("../../../icons/payex/circlepx_disabled.svg");
 }
 
-.checkmark {
+.radio.checkmark {
 	
     label {
-        border: 1px solid var(--gray);
-        outline: none !important;
+        outline: 1px solid var(--gray) !important;
 		color: var(--light-black);
 
 		.radio.checkmark label .checkmark-icon {
@@ -39,7 +38,7 @@
 		}
 
         &:hover {
-			border: 1px solid var(--gray) !important;
+			outline-color: var(--gray);
 			background-color: var(--light-gray) !important;
 			color: var(--brand-secondary) !important;
 
@@ -60,20 +59,12 @@
     }
 }
 
-.radio.checkmark input[type="radio"]:checked + label:hover {
-    border: 1px solid var(--brand-secondary);
-    outline: none !important;
-}
-
 .radio.checkmark input[type="radio"]:checked + label {
-    border: 1px solid var(--brand-secondary);
     outline: 3px solid var(--brand-secondary) !important;
 }
 
 .radio.checkmark input[type="radio"]:disabled:checked + label {
 	color: var(--white);
-    border: 1px solid var(--gray) !important; 
-    outline: none !important;
 
 	.checkmark-icon,
 	> i {
@@ -86,8 +77,6 @@
 
 .radio.checkmark input[type="radio"]:disabled + label:hover {
     color: var(--white) !important;
-    border: 1px solid var(--gray) !important;
-    outline: none !important;
     background-color: var(--gray) !important;
     cursor: not-allowed !important;
 
@@ -102,8 +91,6 @@
 
 .radio.checkmark input[type="radio"]:disabled:checked:hover + label {
 	color: var(--white);
-    border: 1px solid var(--gray) !important;
-    outline: none !important;
 
 	.checkmark-icon,
 	> i {
@@ -116,7 +103,6 @@
 	
 .radio.checkmark input[type="radio"]:disabled + label {
 	color: var(--white);
-	border: 1px solid var(--gray) !important;
 	outline: none !important;
 	background-color: var(--gray) !important;
 }
