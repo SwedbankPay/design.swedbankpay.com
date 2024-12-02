@@ -116,7 +116,7 @@ const Overview = () => {
 							to present a clean view
 							<img
 								alt="Three cards in a horizontal line that have different icon colors and text lengths."
-								src={`${basename}img/payex/documentation/cards/dont-cards.png`}
+								src={`${basename}img/documentation/cards/Dont-Cards.png`}
 								className="w-100 mt-4 mb-4"
 							/>
 						</div>
@@ -129,7 +129,7 @@ const Overview = () => {
 								keeping it the same text length and to one row when possible.
 								<img
 									alt="Three wide cards in a vertical line that have the same icon color and text length."
-									src={`${basename}img/payex/documentation/cards/do-wide-cards.png`}
+									src={`${basename}img/documentation/cards/Do-wide-cards.png`}
 									className="w-100 mt-4 mb-4"
 								/>
 							</div>
@@ -142,7 +142,7 @@ const Overview = () => {
 								sequenced and follows the correct order.
 								<img
 									alt="Three wide cards in a vertical line that have inconsistent iconography, different colors and varied text lengths."
-									src={`${basename}img/payex/documentation/cards/dont-wide-cards.png`}
+									src={`${basename}img/documentation/cards/Dont-wide-cards.png`}
 									className="w-100 mt-4 mb-4"
 								/>
 							</div>
