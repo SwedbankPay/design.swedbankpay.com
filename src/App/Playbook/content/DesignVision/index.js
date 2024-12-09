@@ -41,32 +41,17 @@ const VisionStatement = () => (
 	</section>
 );
 
-const VisionBoard = () => (
+const Snapshot = () => (
 	<section>
-		<h2 id="vision-board">Vision board</h2>
+		<h2 id="snapshot">Snapshot</h2>
 		<p>Scalable Growing the product portfolio of Swedbank Pay.</p>
 
 		<div className="d-flex">
-			<video
-				playsInline
-				autoPlay
-				muted
-				loop
-				style={{ aspectRatio: "710 / 437" }}
-				width={710}
-				height={437}
-				poster={`${basename}img/documentation/playbook/playbook-design-vision-vision-board.avif`}
-				className="w-100 h-auto"
-			>
-				<source
-					src={`${basename}img/documentation/playbook/playbook-design-vision-vision-board-av1.mp4`}
-					type="video/mp4; codecs=av01.0.05M.08,opus"
-				/>
-				<source
-					src={`${basename}img/documentation/playbook/playbook-design-vision-vision-board.mp4`}
-					type="video/mp4"
-				/>
-			</video>
+			<img
+				className="w-100"
+				src={`${basename}img/documentation/playbook/playbook-design-vision-vision-board.png`}
+				alt="illustration swedbankpay playbook principles"
+			/>
 		</div>
 	</section>
 );
@@ -85,7 +70,7 @@ const ChunkyFriendly = () => (
 			className="container px-sm-0 playbook playbook-mozaic"
 			style={{ radius: "2px" }}
 		>
-			<div className="row d-none d-sm-flex">
+			<div className="row d-flex">
 				<div className="col-sm">
 					<img
 						src={`${basename}img/documentation/playbook/playbook-design-vision-chunky-friendly-1.png`}
@@ -108,22 +93,6 @@ const ChunkyFriendly = () => (
 					/>
 				</div>
 			</div>
-			<div className="row d-sm-none">
-				<div className="col-sm">
-					<img
-						src={`${basename}img/documentation/playbook/playbook-design-vision-chunky-friendly-mobile-1.png`}
-						alt="Playbook illustration"
-						loading="lazy"
-					/>
-				</div>
-				<div className="col-sm">
-					<img
-						src={`${basename}img/documentation/playbook/playbook-design-vision-chunky-friendly-mobile-2.png`}
-						alt="Playbook illustration"
-						loading="lazy"
-					/>
-				</div>
-			</div>
 		</div>
 	</section>
 );
@@ -140,12 +109,12 @@ const BoldTypography = () => (
 			and highly contrasting title.
 		</p>
 
-		<div className="container px-sm-0 playbook">
-			<div
-				className="row ratio-responsive-row justify-content-between mx-0"
-				style={{ "--row-height": 163, "--row-width": 702 }}
-			>
-				<div className="col-sm px-0">
+		<div
+			className="container px-sm-0 playbook playbook-mozaic"
+			style={{ radius: "2px" }}
+		>
+			<div className="row d-flex">
+				<div className="col-sm-6">
 					<img
 						src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-1.png`}
 						className="w-100"
@@ -153,7 +122,7 @@ const BoldTypography = () => (
 						loading="lazy"
 					/>
 				</div>
-				<div className="col-sm px-0">
+				<div className="col-sm-6">
 					<img
 						src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-2.png`}
 						className="w-100"
@@ -161,68 +130,6 @@ const BoldTypography = () => (
 						loading="lazy"
 					/>
 				</div>
-				<div className="col-sm px-0">
-					<img
-						src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-3.png`}
-						className="w-100"
-						alt="Playbook illustration"
-						loading="lazy"
-					/>
-				</div>
-				<div className="col-sm px-0">
-					<img
-						src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-4.png`}
-						className="w-100"
-						alt="Playbook illustration"
-						loading="lazy"
-					/>
-				</div>
-			</div>
-		</div>
-	</section>
-);
-
-const DelicateLines = () => (
-	<section>
-		<h2 id="delicate-lines">Delicate lines</h2>
-		<p>
-			Together with the bold typography and solid colors, we use thin lines for
-			illustrations. When we want the illustration to blend into the background
-			and not be in focus, we only use the thin lines. When we want it to stand
-			out, we combine it with larger solid shapes or type.
-		</p>
-		<div className="container px-sm-0 playbook">
-			<div className="grid-row delicate-lines">
-				<img
-					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-1.png`}
-					alt="Playbook illustration"
-					loading="lazy"
-				/>
-				<img
-					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-2.png`}
-					alt="Playbook illustration"
-					loading="lazy"
-				/>
-				<img
-					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-3.png`}
-					alt="Playbook illustration"
-					loading="lazy"
-				/>
-				<img
-					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-4.png`}
-					alt="Playbook illustration"
-					loading="lazy"
-				/>
-				<img
-					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-5.png`}
-					alt="Playbook illustration"
-					loading="lazy"
-				/>
-				<img
-					src={`${basename}img/documentation/playbook/playbook-design-vision-delicate-lines-6.png`}
-					alt="Playbook illustration"
-					loading="lazy"
-				/>
 			</div>
 		</div>
 	</section>
@@ -236,12 +143,13 @@ const Rounded = () => (
 			information and serving you what you need. The UI should reflect this
 			friendliness, and does so with rounded corners and soft shapes.
 		</p>
-		<div className="container px-sm-0 playbook d-none d-sm-flex">
-			<div
-				className="row ratio-responsive-row d-flex justify-content-between mx-0"
-				style={{ "--row-height": 174, "--row-width": 710 }}
-			>
-				<div className="col-sm">
+
+		<div
+			className="container px-sm-0 playbook playbook-mozaic"
+			style={{ radius: "2px" }}
+		>
+			<div className="row d-flex">
+				<div className="col-sm-6">
 					<img
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-design-vision-rounded-1.png`}
@@ -249,62 +157,10 @@ const Rounded = () => (
 						loading="lazy"
 					/>
 				</div>
-				<div className="col-sm">
+				<div className="col-sm-6">
 					<img
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-design-vision-rounded-2.png`}
-						alt="illustration swedbankpay playbook rounded"
-						loading="lazy"
-					/>
-				</div>
-				<div className="col-sm">
-					<img
-						className="w-100"
-						src={`${basename}img/documentation/playbook/playbook-design-vision-rounded-3.png`}
-						alt="illustration swedbankpay playbook rounded"
-						loading="lazy"
-					/>
-				</div>
-				<div className="col-sm">
-					<img
-						className="w-100"
-						src={`${basename}img/documentation/playbook/playbook-design-vision-rounded-4.png`}
-						alt="illustration swedbankpay playbook rounded"
-						loading="lazy"
-					/>
-				</div>
-			</div>
-		</div>
-		<div className="container px-0 playbook d-sm-none">
-			<div className="row ratio-responsive-row d-flex justify-content-between mx-0">
-				<div className="col-12 px-0">
-					<img
-						className="w-100"
-						src={`${basename}img/documentation/playbook/playbook-design-vision-rounded-mobile-1.png`}
-						alt="illustration swedbankpay playbook rounded"
-						loading="lazy"
-					/>
-				</div>
-				<div className="col-5 object-fit-cover px-0">
-					<img
-						className="w-100"
-						src={`${basename}img/documentation/playbook/playbook-design-vision-rounded-mobile-2.png`}
-						alt="illustration swedbankpay playbook rounded"
-						loading="lazy"
-					/>
-				</div>
-				<div className="col-5 object-fit-cover px-0">
-					<img
-						className="w-100"
-						src={`${basename}img/documentation/playbook/playbook-design-vision-rounded-mobile-3.png`}
-						alt="illustration swedbankpay playbook rounded"
-						loading="lazy"
-					/>
-				</div>
-				<div className="col-12 px-0">
-					<img
-						className="w-100"
-						src={`${basename}img/documentation/playbook/playbook-design-vision-rounded-mobile-4.png`}
 						alt="illustration swedbankpay playbook rounded"
 						loading="lazy"
 					/>
@@ -431,10 +287,9 @@ const DesignVision = () => (
 			contribute to a unified and standout product journey.
 		</p>
 		<VisionStatement />
-		<VisionBoard />
+		<Snapshot />
 		<ChunkyFriendly />
 		<BoldTypography />
-		<DelicateLines />
 		<Rounded />
 		<Colors />
 	</DocContainer>
