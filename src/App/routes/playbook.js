@@ -39,13 +39,6 @@ module.exports = [
 				componentPath: "content/Profiles",
 				text: "The profiles are UI/UX styles that speak to different products, contexts and user groups",
 			},
-			{
-				title: "Showroom",
-				path: "showroom",
-				rootPath: "/playbook/showroom",
-				componentPath: "content/Showroom",
-				text: "See examples from our visual language",
-			},
 		],
 	},
 ];

@@ -70,7 +70,7 @@ const ChunkyFriendly = () => (
 			className="container px-sm-0 playbook playbook-mozaic"
 			style={{ radius: "2px" }}
 		>
-			<div className="row d-flex">
+			<div className="row d-flex px-3">
 				<div className="col-sm">
 					<img
 						src={`${basename}img/documentation/playbook/playbook-design-vision-chunky-friendly-1.png`}
@@ -113,8 +113,8 @@ const BoldTypography = () => (
 			className="container px-sm-0 playbook playbook-mozaic"
 			style={{ radius: "2px" }}
 		>
-			<div className="row d-flex">
-				<div className="col-sm-6">
+			<div className="row d-flex px-3">
+				<div className="col-sm">
 					<img
 						src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-1.png`}
 						className="w-100"
@@ -122,7 +122,7 @@ const BoldTypography = () => (
 						loading="lazy"
 					/>
 				</div>
-				<div className="col-sm-6">
+				<div className="col-sm">
 					<img
 						src={`${basename}img/documentation/playbook/playbook-design-vision-bold-typo-2.png`}
 						className="w-100"
@@ -148,8 +148,8 @@ const Rounded = () => (
 			className="container px-sm-0 playbook playbook-mozaic"
 			style={{ radius: "2px" }}
 		>
-			<div className="row d-flex">
-				<div className="col-sm-6">
+			<div className="row d-flex px-3">
+				<div className="col-sm">
 					<img
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-design-vision-rounded-1.png`}
@@ -157,7 +157,7 @@ const Rounded = () => (
 						loading="lazy"
 					/>
 				</div>
-				<div className="col-sm-6">
+				<div className="col-sm">
 					<img
 						className="w-100"
 						src={`${basename}img/documentation/playbook/playbook-design-vision-rounded-2.png`}
