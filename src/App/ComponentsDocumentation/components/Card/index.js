@@ -21,8 +21,6 @@ const basename = process.env.basename;
 const brand = process.env.brand;
 
 const Overview = () => {
-	console.log("Brand:", brand); // Log the brand variable
-
 	return (
 		<>
 			<h2 id="overview">Overview</h2>
