@@ -132,7 +132,7 @@ const _activateDialogElement = (dialog) => {
 	);
 
 	if (!dialogInvokers.length) {
-		console.error(
+		console.warn(
 			"There was no open button implemented for the dialog. Please make sure you add at least 1 button with the correct attributes to your HTML for the script to work (or do not call this script and use the JS methods on your side)",
 		);
 
@@ -140,7 +140,7 @@ const _activateDialogElement = (dialog) => {
 	}
 
 	if (!closeDialogButtons.length) {
-		console.error(
+		console.warn(
 			"There was no close button implemented for the dialog. Please make sure you add at least 1 button with the correct attributes to your HTML for the script to work (or do not call this script and use the JS methods on your side)",
 		);
 
