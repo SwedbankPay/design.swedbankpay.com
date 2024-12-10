@@ -35,7 +35,9 @@
 	"homepage": "https://github.com/swedbankpay/design.swedbankpay.com#readme",
 	"browserslist": [
 		"last 3 versions",
-		"> 1%",
+		"last 2 major versions",
+		"> 0.5%",
+		"Firefox ESR",
 		"not dead"
 	],
 	"dependencies": {
