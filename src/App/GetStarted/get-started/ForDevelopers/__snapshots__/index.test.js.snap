@@ -1170,7 +1170,7 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
         <b>
           Target Browser:
         </b>
-         "Last 3 versions, &gt; 1%, not dead"
+         "Last 3 versions, Last 2 major versions, &gt; 0.5%, not dead"
       </p>
     </div>
     <h4>
@@ -1179,6 +1179,9 @@ exports[`GetStarted: ForDevelopers Installation renders 1`] = `
     <p>
       It is up to every Project manager and development team to decide which browsers their product should support. If you want to support other browsers than the ones supported by the Design Guide you need to maintain and test the component code in in your project.
        
+    </p>
+    <p>
+      We of course encourage to use PostCSS to do that in your build pipeline.
     </p>
   </section>
 </section>
