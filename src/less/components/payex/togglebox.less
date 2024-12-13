@@ -1,0 +1,44 @@
+@import "../togglebox.less";
+
+/* For theme-white */
+.togglebox:has(input.theme-white) input[type="checkbox"]:not(:disabled) + label:after {
+    background-color: var(--brand-secondary);
+}
+
+.togglebox:has(input.theme-white) input[type="checkbox"]:not(:disabled) + label:before {
+    background-color: var(--white);
+}
+
+.togglebox:has(input.theme-white) input[type="checkbox"]:not(:disabled):checked + label:before {
+    background-color: var(--brand-success);
+}
+
+.togglebox:has(input.theme-white) input[type="checkbox"]:not(:disabled):checked + label:after {
+    background-color: var(--white);
+}
+
+/* Theme-white background */
+.documentation 
+.showcase-panel.showcase-panel-advanced 
+.component-preview 
+.component-preview-content:has(input[type="checkbox"].theme-white) {
+    background-color: var(--bg-togglebox-theme-white) !important;
+}
+
+
+/* For theme-grey */
+.togglebox:has(input.theme-grey) input[type="checkbox"]:not(:disabled):checked + label:after {
+    background-color: var(--white);
+}
+
+.togglebox:has(input.theme-grey) input[type="checkbox"]:not(:disabled) + label:after {
+    background-color: var(--white);
+}
+
+.togglebox:has(input.theme-grey) input[type="checkbox"]:not(:disabled):checked + label:before {
+    background-color: var(--brand-success);
+}
+
+.togglebox:has(input.theme-grey) input[type="checkbox"]:not(:disabled) + label:before {
+    background-color: var(--brand-secondary);
+}
