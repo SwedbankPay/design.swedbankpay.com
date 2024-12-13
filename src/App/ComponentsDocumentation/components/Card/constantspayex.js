@@ -14,6 +14,13 @@ const defaultOptionsValues = {
 
 // Happy Woman image
 
+const brand = process.env.brand;
+
+const imgSrcURL =
+	brand === "payex"
+		? "https://design.payex.com/v/10.10.1/img/payex/documentation/cards/happy-woman.png"
+		: "https://design.swedbankpay.com/v/10.10.1/img/documentation/imagery/women-on-bus.svg";
+
 export const overviewCards = {
 	id: "overviewCards",
 	tabsId: "overviewButtonsTabs",
