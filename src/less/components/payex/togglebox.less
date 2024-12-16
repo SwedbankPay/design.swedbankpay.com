@@ -1,40 +1,41 @@
 @import "../togglebox.less";
 
-/* For theme-white */
-.togglebox:has(input.theme-white) input[type="checkbox"]:not(:disabled) + label:after {
-    background-color: var(--brand-secondary);
+.togglebox {
+
+    &:has(input.theme-grey) {
+        --unchecked-thumb-color: var(--brand-secondary);
+        --unchecked-track-color: var(--white);
+        --checked-thumb-color: var(--brand-success);
+        --checked-track-color: var(--white);
+    }
+    
+    &:has(input.theme-white) {
+        --unchecked-thumb-color: var(--white);
+        --unchecked-track-color: var(--brand-secondary);
+        --checked-thumb-color: var(--brand-success);
+        --checked-track-color: var(--white);
+    }
+
+    input[type="checkbox"]:not(:disabled) + label:after {
+        background-color: var(--unchecked-track-color);
+    }
+
+    input[type="checkbox"]:not(:disabled) + label:before {
+        background-color: var(--unchecked-thumb-color);
+    }
+
+    input[type="checkbox"]:not(:disabled):checked + label:before {
+        background-color: var(--checked-thumb-color);
+    }
+
+    input[type="checkbox"]:not(:disabled):checked + label:after {
+        background-color: var(--checked-track-color);
+    }
 }
 
-.togglebox:has(input.theme-white) input[type="checkbox"]:not(:disabled) + label:before {
-    background-color: var(--white);
-}
-
-.togglebox:has(input.theme-white) input[type="checkbox"]:not(:disabled):checked + label:before {
-    background-color: var(--brand-success);
-}
-
-.togglebox:has(input.theme-white) input[type="checkbox"]:not(:disabled):checked + label:after {
-    background-color: var(--white);
-}
-
-/* Theme-white background */
+/* Background for theme-white */
 .documentation .showcase-panel.showcase-panel-advanced .component-preview .component-preview-content:has(input[type="checkbox"].theme-white) {
     background-color: var(--bg-togglebox-theme-white) !important;
 }
 
-/* For theme-grey */
-.togglebox:has(input.theme-grey) input[type="checkbox"]:not(:disabled):checked + label:after {
-    background-color: var(--white);
-}
-
-.togglebox:has(input.theme-grey) input[type="checkbox"]:not(:disabled) + label:after {
-    background-color: var(--white);
-}
-
-.togglebox:has(input.theme-grey) input[type="checkbox"]:not(:disabled):checked + label:before {
-    background-color: var(--brand-success);
-}
-
-.togglebox:has(input.theme-grey) input[type="checkbox"]:not(:disabled) + label:before {
-    background-color: var(--brand-secondary);
-}
+ 
