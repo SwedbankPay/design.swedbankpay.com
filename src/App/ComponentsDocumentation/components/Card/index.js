@@ -21,6 +21,20 @@ const basename = process.env.basename;
 const brand = process.env.brand;
 
 const Overview = () => {
+    
+
+    const [overviewCards, setOverviewCards] = useState(null);
+
+    useEffect(() => {
+      const loadOverviewCards = async () => {
+        const constants = await import(`./${brand === "payex" ? "constantspayex" : "constants"}`);
+        setOverviewCards(constants.overviewCards); 
+      };
+    
+      loadOverviewCards(); 
+    }, [brand]);
+
+
 	return (
 		<>
 			<h2 id="overview">Overview</h2>
