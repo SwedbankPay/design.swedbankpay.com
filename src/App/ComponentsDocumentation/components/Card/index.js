@@ -8,7 +8,7 @@ import CardComponent from "@components/Card";
 
 import MediaObject from "@components/MediaObject";
 import CodeTags from "@components/CodeTags";
-//import { overviewCards } from "./constants";
+import { overviewCards } from "./constants";
 
 const textArr = [
     "This is a lot of text",
@@ -19,12 +19,6 @@ const textArr = [
 ];
 const basename = process.env.basename;
 const brand = process.env.brand;
-
-const constants = brand === "payex"
-    ? require("./constantspayex") // Hämtar payex-konstanten
-    : require("./constants"); // Hämtar swedbankpay-konstanten
-
-export const { overviewCards } = constants;
 
 const Overview = () => {
 	return (
