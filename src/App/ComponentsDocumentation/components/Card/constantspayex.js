@@ -35,7 +35,7 @@ export const overviewCards = {
 					isButton={defaultOptionsValues.isButton}
 					isWide={false}
 					hasTitle={defaultOptionsValues.hasTitle}
-					imgSrc={defaultOptionsValues.imgSrc}
+					imgSrc={imgSrcURL}
 					iconClasses={defaultOptionsValues.iconClasses}
 					hasTextContent={defaultOptionsValues.hasTextContent}
 					imgRatio={defaultOptionsValues.imgRatio}
@@ -85,8 +85,7 @@ export const overviewCards = {
 							{
 								name: "With image - 16/9 ratio",
 								value: {
-									imgSrc:
-										"https://design.swedbankpay.com/v/10.10.1/img/documentation/imagery/women-on-bus.svg",
+									imgSrc: imgSrcURL,
 									icon: null,
 									imgRatio: "ratio-16-9",
 								},
@@ -94,8 +93,7 @@ export const overviewCards = {
 							{
 								name: "With image - 4/3 ratio",
 								value: {
-									imgSrc:
-										"https://design.swedbankpay.com/v/10.10.1/img/documentation/imagery/women-on-bus.svg",
+									imgSrc: imgSrcURL,
 									icon: null,
 									imgRatio: "ratio-4-3",
 								},
@@ -103,8 +101,7 @@ export const overviewCards = {
 							{
 								name: "With image - 1/1 ratio",
 								value: {
-									imgSrc:
-										"https://design.swedbankpay.com/v/10.10.1/img/documentation/imagery/women-on-bus.svg",
+									imgSrc: imgSrcURL,
 									icon: null,
 									imgRatio: "ratio-1-1",
 								},
@@ -185,7 +182,7 @@ export const overviewCards = {
 					isButton={defaultOptionsValues.isButton}
 					isWide={true}
 					hasTitle={defaultOptionsValues.hasTitle}
-					imgSrc={defaultOptionsValues.imgSrc}
+					imgSrc={imgSrcURL}
 					iconClasses={defaultOptionsValues.iconClasses}
 					hasTextContent={defaultOptionsValues.hasTextContent}
 					imgRatio={defaultOptionsValues.imgRatio}
@@ -236,8 +233,7 @@ export const overviewCards = {
 							{
 								name: "With image",
 								value: {
-									imgSrc:
-										"https://design.swedbankpay.com/v/10.10.1/img/documentation/imagery/women-on-bus.svg",
+									imgSrc: imgSrcURL,
 									icon: null,
 									imgRatio: null,
 								},
