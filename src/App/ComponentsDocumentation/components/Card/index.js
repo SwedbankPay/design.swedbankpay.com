@@ -8,7 +8,7 @@ import CardComponent from "@components/Card";
 
 import MediaObject from "@components/MediaObject";
 import CodeTags from "@components/CodeTags";
-import { overviewCards } from "./constants";
+//import { overviewCards } from "./constants";
 
 const textArr = [
     "This is a lot of text",
@@ -19,6 +19,11 @@ const textArr = [
 ];
 const basename = process.env.basename;
 const brand = process.env.brand;
+
+// Här definieras overviewCards beroende på brand
+const overviewCards = brand === "payex"
+  ? require("./constantspayex").overviewCards
+  : require("./constants").overviewCards;
 
 const Overview = () => {
 	return (
