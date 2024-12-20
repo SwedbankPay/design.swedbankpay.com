@@ -10,7 +10,6 @@ import MediaObject from "@components/MediaObject";
 import CodeTags from "@components/CodeTags";
 import { overviewCards } from "./constants";
 
-
 const textArr = [
     "This is a lot of text",
     "With some more text",
