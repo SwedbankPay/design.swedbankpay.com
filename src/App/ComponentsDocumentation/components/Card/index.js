@@ -8,10 +8,8 @@ import CardComponent from "@components/Card";
 
 import MediaObject from "@components/MediaObject";
 import CodeTags from "@components/CodeTags";
-//import { overviewCards } from "./constants";
+import { overviewCards } from "./constants";
 
-import { overviewCards as swedbankCards } from "./constants";
-import { overviewCards as payexCards } from "./constantspayex";
 
 const textArr = [
     "This is a lot of text",
@@ -24,11 +22,6 @@ const basename = process.env.basename;
 const brand = process.env.brand;
 
 const Overview = () => {
-
-    // Välj rätt constants baserat på brand
-    const overviewCards = brand === "payex" ? payexCards : swedbankCards;
-
-
 	return (
 		<>
 			<h2 id="overview">Overview</h2>
