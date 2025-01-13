@@ -1,31 +1,24 @@
 # Changelog
 
-## \[10.13.0\] - 11.11.2024
+## \[10.13.1\] - 10.01.2025
+
+## Playbook
+
+- Updates to the playbook:
 
 ## Identity
 
-- Colors
+- Updates the zip file containing the SwedbankPay logos with the new fixed versions
 
-  - updated primary color from current value `#FDC129` to actual Brand guideline's `#FDC92A`
+## PayEx side UI changes
 
-- Logotypes
-  - updated logotype to the new fixed version
-  - update Documentation to enforce recommended pathname use
-
-## Component changes
-
-- Toggle
-  - updated colors
-  - added new theme colors (white and gray)
-- Expandable PayEx (contribution from Simon Wahlstrom 💫)
-  - font family change for PayEx expandables
-- Button PayEx (contribution from Johanna Prinz 💫)
-  - font family change
-  - colors updated
-- Table PayEx (contribution from Johanna Prinz 💫)
-  - colors updated
-  - hover color fixed
+- checkmark circle green color on success alerts is updated
 
 ## Technical changes
+
+- Browser support got significantly increased (now last 2 major versions, Firefox ESR, > 0,5% instead of 1%).
+  - This is only impacting projects consuming the CSS & JS straight from the CDN. If you're pulling the source files then the polyfilling/transpilling will only be done by your own build pipeline anyways.
+
+## Chores
 
 - updated dependencies

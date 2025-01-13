@@ -5,6 +5,45 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.13.1",
+		title: "Mostly docs & identity updates",
+		text: (
+			<>
+				<p>Happy New Year 🎉</p>
+				<p>
+					We're starting the year with some mostly documentation & identity
+					updates.
+				</p>
+				<p>
+					Biggest one first: We've updated the Playbook. For the ones paying
+					attention to it you'll like it.
+				</p>
+				<p>
+					Next on the list: the zip file containing the SwedbankPay logos is
+					updated with the logos fixed we've shipped in the previous minor
+					release.
+				</p>
+				<p>
+					We've also increased the browser support. We've decided to align with
+					the standard used by the JS frameworks (now last 2 major versions,
+					Firefox ESR, > 0,5% instead of 1%).
+					<br />
+					This being said, we recommend checking and adapting your support based
+					on your own users stats. This change is only impacting projects
+					consuming the CSS & JS straight from the CDN. If you're pulling the
+					source files then the polyfilling/transpilling will only be done by
+					your own build pipeline anyways.
+				</p>
+				<p>
+					Green side UI change: checkmark circle green color on success alerts
+					is updated
+				</p>
+				<p>And as usual, we've included several dependency updates.</p>
+				<p>Enjoy and see ya later alligator 🐊</p>
+			</>
+		),
+	},
+	{
 		version: "10.13.0",
 		title: "Not Ghosting You: New Updates Inside",
 		text: (
@@ -292,8 +331,9 @@ export const changeLogs = [
 						</li>
 						<li>
 							Progress steps: the "check" icon for steps completed should be
-							converted from `<div class="material-icons steps-icon">check</div>
-							`to `<i class="completed steps-icon"></i>`
+							converted from `
+							<div className="material-icons steps-icon">check</div>
+							`to `<i className="completed steps-icon"></i>`
 						</li>
 					</ul>
 				</p>

@@ -350,7 +350,8 @@ const BrowserSupport = () => (
 		<div className="alert alert-informative mt-4">
 			<i className="at-info-circle" aria-hidden="true"></i>
 			<p>
-				<b>Target Browser:</b> &quot;Last 3 versions, &gt; 1%, not dead&quot;
+				<b>Target Browser:</b> &quot;Last 3 versions, Last 2 major versions,
+				&gt; 0.5%, not dead&quot;
 			</p>
 		</div>
 		<h4>Browser support for products using the Design Guide</h4>
@@ -359,6 +360,9 @@ const BrowserSupport = () => (
 			browsers their product should support. If you want to support other
 			browsers than the ones supported by the Design Guide you need to maintain
 			and test the component code in in your project.{" "}
+		</p>
+		<p>
+			We of course encourage to use PostCSS to do that in your build pipeline.
 		</p>
 	</section>
 );

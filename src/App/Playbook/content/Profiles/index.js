@@ -34,9 +34,8 @@ const HowToUse = () => (
 				<h3>Become inspired:</h3>
 				<ul>
 					<li>
-						Look at the examples provided below and in our{" "}
-						<Link to={`./showroom}`}>showroom</Link> and become inspired. Think
-						of the profiles like moodboards if you like.
+						Look at the examples provided below and become inspired. Think of
+						the profiles like moodboards if you like.
 					</li>
 				</ul>
 			</li>
@@ -61,60 +60,18 @@ const Inspiration = () => (
 	<section className="mt-5">
 		<h2 id="inspiration">Inspiration</h2>
 		<p>
-			Here, our focus is on sparking curiosity and engagement. We aim to inspire
-			users to explore and discover through communication jam-packed with
-			expressive design and delightful motion, making every interaction an
-			adventure.
-			<br />
-			<strong>User persona:</strong> Curious explorers, seeking inspiration.
-			<br />
-			<strong>UI objective:</strong> Spark curiosity, engage users, and invite
-			exploration.
-			<br />
-			<strong>Design approach:</strong> Expressive and visually engaging UI with
-			a focus on personality. Utilize delightful motion design elements to
-			surprise and captivate users.
+			We want to spark curiosity and engagement. We aim to inspire users to
+			explore and discover with expressive design and delightful motion, making
+			every interaction an adventure.
+		</p>
+		<p>
+			Conceptual work is important for multiple reasons: it can serve as
+			inspiration and as a guiding star for future projects. The concept work
+			shown below was done as an exercise to explore what the ultimate merchant
+			experience could look like if we didn’t have any restrictions. Much of the
+			design was later reused for the new Omni Portal.
 		</p>
 		<div className="container px-5">
-			<figure>
-				<div
-					className="row mt-5 playbook-mozaic align-items-stretch"
-					style={{ radius: "2px" }}
-				>
-					<div className="col-sm-6 px-0">
-						<img
-							className="w-100 shift-right-1 h-100 object-fit-cover"
-							src={`${basename}img/documentation/playbook/playbook-profiles-content-1.png`}
-							alt="illustration swedbankpay playbook profiles"
-							loading="lazy"
-						/>
-					</div>
-					<div className="col-sm-6 px-0 d-flex flex-column">
-						<video
-							playsInline
-							autoPlay
-							muted
-							loop
-							width={278}
-							height={152}
-							poster={`${basename}img/documentation/playbook/playbook-profiles-content-2.avif`}
-							className="w-100 h-100 object-fit-cover"
-						>
-							<source
-								src={`${basename}img/documentation/playbook/playbook-profiles-content-2-av1.mp4`}
-								type="video/mp4; codecs=av01.0.05M.08,opus"
-							/>
-							<source
-								src={`${basename}img/documentation/playbook/playbook-profiles-content-2.mp4`}
-								type="video/mp4"
-							/>
-						</video>
-					</div>
-				</div>
-				<figcaption className="text-center mt-2">
-					An exploration of marketing material for the terminal, summer 2023.
-				</figcaption>
-			</figure>
 			<figure>
 				<div className="row mt-5 justify-content-between">
 					<div className="col-8 pl-0">
@@ -187,70 +144,6 @@ const LightUI = () => (
 					The terminal design should be easy and quick to use.
 				</figcaption>
 			</figure>
-			<figure>
-				<div className="row mt-5">
-					<div className="col-6 col-sm-3">
-						<picture>
-							<source
-								type="image/avif"
-								srcSet={`${basename}img/documentation/playbook/playbook-profiles-lightui-1.avif`}
-							/>
-							<img
-								className="w-100"
-								src={`${basename}img/documentation/playbook/playbook-profiles-lightui-1.png`}
-								alt="illustration swedbankpay playbook profiles"
-								loading="lazy"
-							/>
-						</picture>
-					</div>
-					<div className="col-6 col-sm-3">
-						<picture>
-							<source
-								type="image/avif"
-								srcSet={`${basename}img/documentation/playbook/playbook-profiles-lightui-2.avif`}
-							/>
-							<img
-								className="w-100"
-								src={`${basename}img/documentation/playbook/playbook-profiles-lightui-2.png`}
-								alt="illustration swedbankpay playbook profiles"
-								loading="lazy"
-							/>
-						</picture>
-					</div>
-					<div className="col-6 col-sm-3 mt-4 mt-sm-0">
-						<picture>
-							<source
-								type="image/avif"
-								srcSet={`${basename}img/documentation/playbook/playbook-profiles-lightui-3.avif`}
-							/>
-							<img
-								className="w-100"
-								src={`${basename}img/documentation/playbook/playbook-profiles-lightui-3.png`}
-								alt="illustration swedbankpay playbook profiles"
-								loading="lazy"
-							/>
-						</picture>
-					</div>
-					<div className="col-6 col-sm-3 mt-4 mt-sm-0">
-						<picture>
-							<source
-								type="image/avif"
-								srcSet={`${basename}img/documentation/playbook/playbook-profiles-lightui-4.avif`}
-							/>
-							<img
-								className="w-100"
-								src={`${basename}img/documentation/playbook/playbook-profiles-lightui-4.png`}
-								alt="illustration swedbankpay playbook profiles"
-								loading="lazy"
-							/>
-						</picture>
-					</div>
-				</div>
-				<figcaption className="text-center mt-2">
-					A new day is a ‘pocket app’ for business owners on-the-go, providing
-					glanceable data and insights.
-				</figcaption>
-			</figure>
 		</div>
 	</section>
 );
@@ -287,48 +180,6 @@ const ExpertUI = () => (
 				<figcaption className="text-center mt-2">Merchant portal</figcaption>
 			</figure>
 		</div>
-		<div className="container px-5">
-			<figure>
-				<div
-					className="row mt-5 justify-content-center"
-					style={{ "--row": "10px" }}
-				>
-					<div className="col-6 col-sm-3">
-						<img
-							className="w-100"
-							src={`${basename}img/documentation/playbook/playbook-profiles-paybylink-1.png`}
-							alt="illustration swedbankpay playbook profiles"
-							loading="lazy"
-						/>
-					</div>
-					<div className="col-6 col-sm-3">
-						<img
-							className="w-100"
-							src={`${basename}img/documentation/playbook/playbook-profiles-paybylink-2.png`}
-							alt="illustration swedbankpay playbook profiles"
-							loading="lazy"
-						/>
-					</div>
-					<div className="col-6 col-sm-3 mt-4 mt-sm-0">
-						<img
-							className="w-100"
-							src={`${basename}img/documentation/playbook/playbook-profiles-paybylink-3.png`}
-							alt="illustration swedbankpay playbook profiles"
-							loading="lazy"
-						/>
-					</div>
-					<div className="col-6 col-sm-3 mt-4 mt-sm-0">
-						<img
-							className="w-100"
-							src={`${basename}img/documentation/playbook/playbook-profiles-paybylink-4.png`}
-							alt="illustration swedbankpay playbook profiles"
-							loading="lazy"
-						/>
-					</div>
-				</div>
-				<figcaption className="text-center mt-2">PaybyLink</figcaption>
-			</figure>
-		</div>
 	</section>
 );
 
@@ -342,11 +193,31 @@ const Profiles = () => (
 			product speaks the language of its users while still keeping with the
 			Swedbank Pay identity.
 		</p>
-		<img
-			className=""
-			src={`${basename}img/documentation/playbook/playbook-profiles-intro.png`}
-			alt="illustration swedbankpay playbook profiles"
-		/>
+		<div
+			className="container px-sm-0 playbook playbook-mozaic"
+			style={{ radius: "2px" }}
+		>
+			<div className="row d-flex px-3">
+				<div className="col-sm">
+					<img
+						src={`${basename}img/documentation/playbook/playbook-profiles-intro-1.jpg`}
+						alt="Playbook illustration"
+					/>
+				</div>
+				<div className="col-sm">
+					<img
+						src={`${basename}img/documentation/playbook/playbook-profiles-intro-2.jpg`}
+						alt="Playbook illustration"
+					/>
+				</div>
+				<div className="col-sm">
+					<img
+						src={`${basename}img/documentation/playbook/playbook-profiles-intro-3.jpg`}
+						alt="Playbook illustration"
+					/>
+				</div>
+			</div>
+		</div>
 		<HowToUse />
 		<DesignProfiles />
 		<Inspiration />

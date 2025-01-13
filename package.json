@@ -1,6 +1,6 @@
 {
 	"name": "@swedbankpay/design-guide",
-	"version": "10.13.0",
+	"version": "10.13.1",
 	"description": "Swedbank Pay Design Guide",
 	"main": "src/scripts/main/index.js",
 	"scripts": {
@@ -35,7 +35,9 @@
 	"homepage": "https://github.com/swedbankpay/design.swedbankpay.com#readme",
 	"browserslist": [
 		"last 3 versions",
-		"> 1%",
+		"last 2 major versions",
+		"> 0.5%",
+		"Firefox ESR",
 		"not dead"
 	],
 	"dependencies": {
@@ -59,7 +61,7 @@
 		"@babel/eslint-parser": "^7.25.9",
 		"@babel/preset-env": "^7.26.0",
 		"@babel/preset-react": "^7.25.9",
-		"@playwright/test": "^1.48.2",
+		"@playwright/test": "^1.49.1",
 		"@testing-library/jest-dom": "^5.16.5",
 		"@testing-library/react": "^14.2.2",
 		"@testing-library/user-event": "^14.5.2",
