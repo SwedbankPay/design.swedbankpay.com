@@ -1,12 +1,28 @@
 import React from "react";
 import Alert from "@components/Alert";
 
-const titleBuilder = (type) => (
-	<p>
-		<b>{type} title:</b> Input informative alert message here, provide link to
-		solution or more info when <a href="#">possible</a>.
-	</p>
-);
+const titleBuilder = (type, titleOnOwnLine = false) => {
+	const title = type === "feedback" ? "Done!" : `${type} title:`;
+
+	if (!titleOnOwnLine) {
+		return (
+			<p>
+				<b>{title}</b> Input informative alert message here, provide link to
+				solution or more info when <a href="#">possible</a>.
+			</p>
+		);
+	} else {
+		return (
+			<>
+				<p>
+					<b>{title}</b>
+					<br />
+					Form was sent! Great job!
+				</p>
+			</>
+		);
+	}
+};
 
 export const alertsShowCase = {
 	id: "overviewAlert",
@@ -18,7 +34,7 @@ export const alertsShowCase = {
 				<Alert
 					type="danger"
 					icon="swepay-icon-error-triangle-filled"
-					text={titleBuilder("Danger")}
+					text={titleBuilder("Danger", false)}
 				/>
 			),
 			options: {
@@ -47,7 +63,7 @@ export const alertsShowCase = {
 				<Alert
 					type="warning"
 					icon="swepay-icon-warning-triangle-filled"
-					text={titleBuilder("Warning")}
+					text={titleBuilder("Warning", false)}
 				/>
 			),
 			options: {
@@ -76,7 +92,7 @@ export const alertsShowCase = {
 				<Alert
 					type="informative"
 					icon="swepay-icon-info-circle-filled"
-					text={titleBuilder("Informative")}
+					text={titleBuilder("Informative", false)}
 				/>
 			),
 			options: {
@@ -104,10 +120,33 @@ export const alertsShowCase = {
 			component: (
 				<Alert
 					type="success"
-					icon="swepay-icon-check-circle-filled"
-					text={titleBuilder("Success")}
+					icon="swepay-icon-check-circle-filled-customizable"
+					text={titleBuilder("Success", false)}
 				/>
 			),
+			options: {
+				checkbox: [
+					{
+						title: "Options",
+						inputs: [
+							{
+								id: "close_button",
+								name: "Close button",
+								value: {
+									close: true,
+								},
+							},
+						],
+					},
+				],
+			},
+			title: "Success alert",
+			description:
+				"Use this alert to let the user know that an action or event has happened successfully. Success alerts are not a common use case for alert messages.",
+		},
+		{
+			tab: "Feedback",
+			component: <Alert type="feedback" text={titleBuilder("Done", true)} />,
 			options: {
 				checkbox: [
 					{
