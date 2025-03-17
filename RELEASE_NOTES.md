@@ -2,22 +2,18 @@
 
 ## \[10.13.1\] - 10.01.2025
 
-## Playbook
+## Components
 
-- Updates to the playbook:
+- Alerts
+  - UI update
+  - Success alert icon update breaking change: the icon name has changed, now using `class="swepay-icon-check-circle-filled-customizable"`
+  - new alert variant (!) : Feedback variant
 
 ## Identity
 
-- Updates the zip file containing the SwedbankPay logos with the new fixed versions
-
 ## PayEx side UI changes
 
-- checkmark circle green color on success alerts is updated
-
 ## Technical changes
-
-- Browser support got significantly increased (now last 2 major versions, Firefox ESR, > 0,5% instead of 1%).
-  - This is only impacting projects consuming the CSS & JS straight from the CDN. If you're pulling the source files then the polyfilling/transpilling will only be done by your own build pipeline anyways.
 
 ## Chores
 
