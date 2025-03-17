@@ -163,9 +163,9 @@ export const alertsShowCase = {
 					},
 				],
 			},
-			title: "Success alert",
+			title: "Feedback message",
 			description:
-				"Use this alert to let the user know that an action or event has happened successfully. Success alerts are not a common use case for alert messages.",
+				"Use this variant to provide quick, light feedback to users after completing a task, sharing helpful tips, instructions, or other non-critical information. It offers a more relaxed communication style, distinct from traditional alert types like success, warning, info, or danger.",
 		},
 	],
 };
