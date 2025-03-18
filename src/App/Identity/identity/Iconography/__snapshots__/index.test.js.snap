@@ -2076,6 +2076,238 @@ exports[`Core: Iconography renders 1`] = `
           </table>
         </div>
       </figure>
+      <h3>
+        Short list VS extended list
+      </h3>
+      <p>
+        We are not automatically loading all flags via the CSS anymore. For web performance reasons (usually only the same 10 flags are used, instead of the whole 257 list of flags ( multiplying each by 2 aspect-ratio variants)). If you need a flag that is not in the short list, you can do it importing them via your own custom CSS:
+      </p>
+      <div
+        className="d-flex justify-content-between align-items-end p-4"
+      >
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
+            className="flag-icon flag-icon-medium flag-icon-ps flag-icon-squared"
+          />
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            medium
+          </code>
+        </div>
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
+            className="flag-icon flag-icon-medium flag-icon-ug flag-icon-squared"
+          />
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            medium
+          </code>
+        </div>
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
+            className="flag-icon flag-icon-medium flag-icon-ca flag-icon-squared"
+          />
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            medium
+          </code>
+        </div>
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
+            className="flag-icon flag-icon-medium flag-icon-pa flag-icon-squared"
+          />
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            medium
+          </code>
+        </div>
+        <div
+          className="icon-preview"
+        >
+          <i
+            aria-hidden="true"
+            className="flag-icon flag-icon-medium flag-icon-co flag-icon-squared"
+          />
+          <code
+            className="code-tags code-tags-secondary mt-2"
+          >
+            medium
+          </code>
+        </div>
+      </div>
+      <figure>
+        <div
+          className="code-view"
+        >
+          <header
+            className="code-view-header"
+          >
+            CSS
+            <button
+              aria-describedby="tooltipCopy"
+              className="tooltip"
+              onClick={[Function]}
+            >
+              <i
+                aria-hidden="true"
+                className="at-clipboard small"
+              />
+              <div
+                id="tooltipCopy"
+                role="tooltip"
+              >
+                Copy to clipboard
+              </div>
+            </button>
+          </header>
+          <table
+            className="code-view-table"
+          >
+            <tbody>
+              <tr>
+                <td
+                  className="code-view-numbers"
+                >
+                  <pre>
+                    1
+                    
+
+                    2
+                    
+
+                    3
+                    
+
+                    4
+                    
+
+                    5
+                    
+
+                    6
+                    
+
+                    7
+                    
+
+                    8
+                    
+
+                    9
+                    
+
+                    10
+                    
+
+                    11
+                    
+
+                    12
+                    
+
+                    13
+                    
+
+                    14
+                    
+
+                    15
+                    
+
+                    16
+                    
+
+                    17
+                    
+
+                    18
+                    
+
+                    19
+                    
+
+                  </pre>
+                </td>
+                <td
+                  className="code-view-code"
+                >
+                  <pre>
+                    .flag-icon-ps {
+                    
+
+                        background-image: url("@swedbankpay/design-guide/src/icons/flags/4x3/ps.svg");
+                    
+
+                    }
+                    
+
+                    
+
+                    .flag-icon-ug {
+                    
+
+                        background-image: url("@swedbankpay/design-guide/src/icons/flags/4x3/ug.svg");
+                    
+
+                    }
+                    
+
+                    
+
+                    .flag-icon-ca {
+                    
+
+                        background-image: url("@swedbankpay/design-guide/src/icons/flags/4x3/ca.svg");
+                    
+
+                    }
+                    
+
+                    
+
+                    .flag-icon-pa {
+                    
+
+                        background-image: url("@swedbankpay/design-guide/src/icons/flags/4x3/pa.svg");
+                    
+
+                    }
+                    
+
+                    
+
+                    .flag-icon-co {
+                    
+
+                        background-image: url("@swedbankpay/design-guide/src/icons/flags/4x3/co.svg");
+                    
+
+                    }
+                    
+
+                  </pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </figure>
     </section>
     <section>
       <h2
