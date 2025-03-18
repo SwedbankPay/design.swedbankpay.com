@@ -412,6 +412,41 @@ const Flags = () => (
 				</React.Fragment>
 			))}
 		</ComponentPreview>
+
+		<h3>Short list VS extended list</h3>
+		<p>
+			We are not automatically loading all flags via the CSS anymore. For web
+			performance reasons (usually only the same 10 flags are used, instead of
+			the whole 257 list of flags ( multiplying each by 2 aspect-ratio
+			variants)). If you need a flag that is not in the short list, you can do
+			it importing them via your own custom CSS:
+		</p>
+		<div className="d-flex justify-content-between align-items-end p-4">
+			{["ps", "ug", "ca", "pa", "co"].map((flagCode) => (
+				<React.Fragment key={flagCode}>
+					<IconPreview
+						previewSize
+						type="flag-icon"
+						squaredFlag
+						name={flagCode}
+						size={"medium"}
+					/>
+				</React.Fragment>
+			))}
+		</div>
+		<ComponentPreview language="css" codeFigure>
+			.flag-icon-ps &#123; background-image&#58;
+			url&#40;&quot;&#64;swedbankpay&#47;design-guide&#47;src&#47;icons&#47;flags&#47;4x3&#47;ps&#46;svg&quot;&#41;&#59;
+			&#125; .flag-icon-ug &#123; background-image&#58;
+			url&#40;&quot;&#64;swedbankpay&#47;design-guide&#47;src&#47;icons&#47;flags&#47;4x3&#47;ug&#46;svg&quot;&#41;&#59;
+			&#125; .flag-icon-ca &#123; background-image&#58;
+			url&#40;&quot;&#64;swedbankpay&#47;design-guide&#47;src&#47;icons&#47;flags&#47;4x3&#47;ca&#46;svg&quot;&#41;&#59;
+			&#125; .flag-icon-pa &#123; background-image&#58;
+			url&#40;&quot;&#64;swedbankpay&#47;design-guide&#47;src&#47;icons&#47;flags&#47;4x3&#47;pa&#46;svg&quot;&#41;&#59;
+			&#125; .flag-icon-co &#123; background-image&#58;
+			url&#40;&quot;&#64;swedbankpay&#47;design-guide&#47;src&#47;icons&#47;flags&#47;4x3&#47;co&#46;svg&quot;&#41;&#59;
+			&#125;
+		</ComponentPreview>
 	</section>
 );
 
