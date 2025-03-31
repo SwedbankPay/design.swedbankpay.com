@@ -11,8 +11,12 @@ const Alert = ({ id, type, icon = "", close, text, className }) => {
 
 	return (
 		<div id={id} className={alertClasses}>
-			{"\n"}
-			<i className={icon} aria-hidden="true"></i>
+			{icon && (
+				<>
+					{"\n"}
+					<i className={icon} aria-hidden="true"></i>
+				</>
+			)}
 			{text}
 			{"\n"}
 			{close ? (
@@ -36,8 +40,13 @@ const Alert = ({ id, type, icon = "", close, text, className }) => {
 
 Alert.propTypes = {
 	id: PropTypes.string,
-	type: PropTypes.oneOf(["success", "warning", "danger", "informative"])
-		.isRequired,
+	type: PropTypes.oneOf([
+		"success",
+		"warning",
+		"danger",
+		"informative",
+		"feedback",
+	]).isRequired,
 	icon: PropTypes.string,
 	close: PropTypes.bool,
 	text: PropTypes.object,

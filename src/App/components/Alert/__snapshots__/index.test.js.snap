@@ -6,12 +6,6 @@ exports[`Component: Alert prop type is marked as required 1`] = `
 >
   
 
-  <i
-    aria-hidden="true"
-    className=""
-  />
-  
-
 </div>
 `;
 
@@ -19,12 +13,6 @@ exports[`Component: Alert renders an alert with a close-button 1`] = `
 <div
   className="alert alert-test"
 >
-  
-
-  <i
-    aria-hidden="true"
-    className=""
-  />
   
 
   <button
@@ -66,12 +54,6 @@ exports[`Component: Alert renders an alert with text 1`] = `
 <div
   className="alert alert-test"
 >
-  
-
-  <i
-    aria-hidden="true"
-    className=""
-  />
   <p>
     test
   </p>
@@ -86,12 +68,6 @@ exports[`Component: Alert renders an alert with the correct type recieved from i
 >
   
 
-  <i
-    aria-hidden="true"
-    className=""
-  />
-  
-
 </div>
 `;
 
@@ -99,12 +75,6 @@ exports[`Component: Alert renders an alert without a close-button if no close pr
 <div
   className="alert alert-test"
 >
-  
-
-  <i
-    aria-hidden="true"
-    className=""
-  />
   
 
 </div>
@@ -116,12 +86,6 @@ exports[`Component: Alert renders an alert without an icon if no icon prop is pr
 >
   
 
-  <i
-    aria-hidden="true"
-    className=""
-  />
-  
-
 </div>
 `;
 
@@ -129,12 +93,6 @@ exports[`Component: Alert renders an alert without text if no text prop is provi
 <div
   className="alert alert-test"
 >
-  
-
-  <i
-    aria-hidden="true"
-    className=""
-  />
   
 
 </div>
