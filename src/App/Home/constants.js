@@ -5,6 +5,60 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.14.0",
+		title: "new alert variant & faster flags",
+		text: (
+			<>
+				<p>
+					Here's a small release, focusing on some small hopefully useful couple
+					of things.
+				</p>
+				<p>
+					<strong>New alert variant</strong>
+					<br />
+					Alerts are getting a new sibling. The "feedback" variant. We're also
+					updating the icon for the success variant. This is almost a breaking
+					change since you need to update it manually (although if you keep
+					using the old one nothing will break yet).
+					<br />
+					Some minor UI updates are shipped too, like the borders are getting
+					rounder.
+				</p>
+				<p>
+					Next up is about <strong>the flags</strong>
+					<br />
+					We used to import by default all flags provided in the assets via the
+					CSS, as an easy to use way (just by adding the corresponding CSS
+					class). And although this was a very convenient method to display any
+					possible flag, it was also coming with a cost: each flag was loaded in
+					both aspect-ratio. This taking a toll on load time (although flags are
+					tiny svg).
+					<br />
+					Since we realize projects actually use only a few flags, we decided to
+					change the default behavior. We've asked in the channel which flags
+					were actually used, and we've added them to a shortlist. Those flags
+					will still be available as simply as adding the correct CSS class. If
+					you need one of the rarely used flags, you will then need to import
+					the flags from the npm package assets. Still very easy, but not as CSS
+					as a CSS class.
+					<br /> This should make the loading time faster 🚀.
+				</p>
+				<p>
+					We should also mention we've shipped a <strong>patch release</strong>{" "}
+					just a couple of days ago. Atlas icon are now shipped with the npm
+					package, we do not load them from their CDN anymore (this would make
+					it more resilient to CDN outages, such as the unpkg CDN outage on
+					Monday).
+				</p>
+				<p>
+					This release also comes with its set of{" "}
+					<strong>chores, dependency updates</strong>.
+				</p>
+				<p>Yours truly</p>
+			</>
+		),
+	},
+	{
 		version: "10.13.1",
 		title: "Mostly docs & identity updates",
 		text: (
@@ -724,11 +778,7 @@ export const changeLogs = [
 			</p>
 		),
 	},
-	{
-		version: "10.6.1",
-		title: "Minor bugfix",
-		text: "Fix dead anchor tags",
-	},
+	{ version: "10.6.1", title: "Minor bugfix", text: "Fix dead anchor tags" },
 	{
 		version: "10.6.0",
 		title: "A brand new Utilities page 😱",

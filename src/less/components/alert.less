@@ -4,18 +4,20 @@
 	--color-icon: var(--brand-info);
 	--color-bg: var(--brand-info-light);
 
-	padding: 1rem;
+	padding: 1.5rem;
 	position: relative;
 	margin-top: 0;
 	margin-bottom: 1rem;
 	display: flex;
 	color: var(--black);
-	border-radius: 0.25rem;
+	border-radius: 1rem;
 	background-color: var(--color-bg);
 
 	& > i[aria-hidden="true"]:first-child {
 		color: var(--color-icon);
 		margin-right: 1rem;
+		min-width: 2rem;
+		min-height: 2rem;
 	}
 
 	&.alert-success {
@@ -36,6 +38,15 @@
 	&.alert-informative {
 		--color-icon: var(--system-info);
 		--color-bg: var(--system-info-light);
+	}
+
+	&.alert-feedback {
+		--color-bg: var(--brand-secondary, #2f2424);
+		color: var(--white);
+
+		& .alert-close {
+			color: var(--white);
+		}
 	}
 
 	> p {

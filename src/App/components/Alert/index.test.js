@@ -47,7 +47,7 @@ describe("Component: Alert", () => {
 	it("renders an alert without an icon if no icon prop is provided", () => {
 		const { container } = render(<Alert type="test" />);
 
-		expect(container.querySelector("i")).toHaveTextContent("");
+		expect(container.querySelector("i")).toBeNull();
 
 		const componentForSnap = renderer.create(<Alert type="test" />);
 
