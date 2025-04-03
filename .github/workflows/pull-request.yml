@@ -47,3 +47,16 @@ jobs:
           pattern: "{dist/**/*.js,dist/**/*.css}"
           # a file with a delta of less than 100 bytes will be reported as unchanged. [THN]
           minimum-change-threshold: 100
+
+      - name: Prepare environment variables
+        id: landing-zone-validate-prepare-env-var
+        shell: pwsh
+        env:
+          AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS_STAGE }}
+        run: |
+          # Parse Azure secret into Terraform variables
+          $servicePrincipal = ($env:AZURE_CREDENTIALS | ConvertFrom-Json)
+          $env:ARM_CLIENT_ID = $servicePrincipal.clientId
+          $env:ARM_SUBSCRIPTION_ID = $servicePrincipal.subscriptionId
+          $env:ARM_TENANT_ID = $servicePrincipal.tenantId
+          get-childitem -Path env:
