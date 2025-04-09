@@ -5,13 +5,31 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.14.1",
+		title: "Patching the togglebox",
+		text: (
+			<>
+				<p>
+					You&apos;ve got a release. It&apos;s a patch for the togglebox.
+					<br />
+					It came to our attention that in some situations our chrome users
+					would see the nod of the togglebox being pushed out of its track when
+					unchecked. Well say no more! We&apos;ve jumped on our patch-mobile and
+					got this fixed.
+					<br />
+					You can now enjoy a well-aligned toggle. Courtesy of the house.
+				</p>
+			</>
+		),
+	},
+	{
 		version: "10.14.0",
 		title: "new alert variant & faster flags",
 		text: (
 			<>
 				<p>
-					Here's a small release, focusing on some small hopefully useful couple
-					of things.
+					Here&apos;s a small release, focusing on some small hopefully useful
+					couple of things.
 				</p>
 				<p>
 					<strong>New alert variant</strong>
