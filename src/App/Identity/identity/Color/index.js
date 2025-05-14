@@ -169,6 +169,10 @@ const SBBrandAccentColors = () => (
 				</div>
 				<div className="col-sm col-sm-4 px-sm-0">
 					<picture>
+						<source
+							type="image/avif"
+							srcSet={`${basename}img/documentation/colors/identity-color-accent-3.avif`}
+						/>
 						<img
 							className="w-100"
 							src={`${basename}img/documentation/colors/identity-color-accent-3.png`}
@@ -180,6 +184,10 @@ const SBBrandAccentColors = () => (
 			<div className="row">
 				<div className="col-sm col-sm-4 px-sm-0">
 					<picture>
+						<source
+							type="image/avif"
+							srcSet={`${basename}img/documentation/colors/identity-color-accent-4.avif`}
+						/>
 						<img
 							className="w-100"
 							src={`${basename}img/documentation/colors/identity-color-accent-4.png`}
@@ -202,7 +210,10 @@ const SBBrandAccentColors = () => (
 				</div>
 				<div className="col-sm col-sm-4 px-sm-0">
 					<picture>
-						<source type="image/avif" />
+						<source
+							type="image/avif"
+							srcSet={`${basename}img/documentation/colors/identity-color-accent-6.avif`}
+						/>
 						<img
 							className="w-100"
 							src={`${basename}img/documentation/colors/identity-color-accent-6.png`}
