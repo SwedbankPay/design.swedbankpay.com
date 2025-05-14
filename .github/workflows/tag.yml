@@ -41,11 +41,13 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Azure Deploy
-        uses: azure/CLI@v2.71.0
+        uses: azure/CLI@v2
         with:
           azcliversion: 2.43.0
           inlineScript: |
             az storage blob upload-batch -s dist -d \$web --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_PROD }} --overwrite
+        env:
+          AZURE_CORE_USE_MSAL_HTTP_CACHE: false
 
       - name: Create Release
         # Only create a release on one brand to avoid duplicate error
