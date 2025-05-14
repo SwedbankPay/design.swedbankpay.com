@@ -2,10 +2,11 @@
 
 ## \[10.14.1\] - 09.04.2025
 
-## Bugfix
+## Identity
 
-- Togglebox
-  - Fixed a bug where the togglebox thumb was not aligned properly on unchecked, on Chrome & Safari browsers.
+- Colors
+
+  - updated images illustrating Primary colours and Brand accent colours
 
 ## Chores
 
