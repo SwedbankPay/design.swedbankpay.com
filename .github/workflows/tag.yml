@@ -41,7 +41,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Azure Deploy
-        uses: azure/CLI@v2
+        uses: azure/CLI@v2.71.0
         with:
           azcliversion: 2.43.0
           inlineScript: |
