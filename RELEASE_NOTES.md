@@ -1,12 +1,16 @@
 # Changelog
 
-## \[10.14.1\] - 09.04.2025
+## \[10.14.2\] - 24.09.2025
 
 ## Identity
 
-- Colors
+- Images
+  - updated image library URL
 
-  - updated images illustrating Primary colours and Brand accent colours
+## Components
+
+- PayEx - Radio checkmarks
+  - style radio checkmarks for PayEx theme
 
 ## Chores
 
