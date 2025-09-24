@@ -6,6 +6,7 @@
 
 - Images
   - updated image library URL
+  - update illustrations for color identity
 
 ## Components
 

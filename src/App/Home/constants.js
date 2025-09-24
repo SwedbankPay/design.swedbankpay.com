@@ -5,6 +5,20 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.14.2",
+		title: "Small patch",
+		text: (
+			<>
+				<p>We've got a small patch release for you.</p>
+				<p>
+					Beside the regular update of dependencies, we're also updating the URL
+					for the swedbankpay image library, and we're merging a patch styling
+					radio checkbox for PayEx theme.
+				</p>
+			</>
+		),
+	},
+	{
 		version: "10.14.1",
 		title: "Patching the togglebox",
 		text: (
