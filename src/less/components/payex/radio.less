@@ -6,9 +6,103 @@
 
 	input[type="radio"] {
 		+ label {
+
 			&:before {
 				border: 2px solid @radiobutton-border;
 			}
 		}
+
+		&:is(:hover, :focus-visible) + label:before {
+			box-shadow: 0 0 0 0.375rem var(--gray);
+		}
+
+		&:checked + label:before {
+			background-position: center;
+			background-image: url("../../../icons/payex/circlepx.svg");
+		}
+
+	 	&[disabled]:checked+label:before {  
+            background-image: url("../../../icons/payex/circlepx_disabled.svg");  
+        } 
 	}
+}
+
+.radio.checkmark {
+	
+    label {
+        outline: 1px solid var(--gray) !important;
+		color: var(--light-black);
+
+		.radio.checkmark label .checkmark-icon {
+			background-color: var(--brand-secondary);
+		}
+
+        &:hover {
+			outline-color: var(--gray);
+			background-color: var(--light-gray);
+			color: var(--brand-secondary);
+
+			.checkmark-icon,
+			> i {
+				background-color: var(--brand-secondary) !important;
+			}
+			
+			.checkmark-icon::before, .checkmark label:hover > i::before {
+				border-color: var(--light-gray) !important;
+			} 
+
+			.checkmark-icon::before,
+            .checkmark label:hover > i::before {
+                border-color: var(--light-gray) !important;
+            }
+        }
+    }
+}
+
+.radio.checkmark input[type="radio"]:checked + label {
+    outline: 3px solid var(--brand-secondary) !important;
+}
+
+.radio.checkmark input[type="radio"]:disabled:checked + label {
+	color: var(--white);
+
+	.checkmark-icon,
+	> i {
+		background-color: var(--white);
+	}
+	.checkmark-icon::before, .checkmark label:disabled > i::before {
+		border-color: var(--gray) !important;
+	}
+}
+
+.radio.checkmark input[type="radio"]:disabled + label:hover {
+    color: var(--white) !important;
+    background-color: var(--gray) !important;
+    cursor: not-allowed !important;
+
+	.checkmark-icon,
+	> i {
+		background-color: var(--white) !important;
+	}
+	.checkmark-icon::before, .checkmark label:disabled > i::before {
+		border-color: var(--gray) !important;
+	}
+}
+
+.radio.checkmark input[type="radio"]:disabled:checked:hover + label {
+	color: var(--white);
+
+	.checkmark-icon,
+	> i {
+		background-color: var(--white);
+	}
+	.checkmark-icon::before, .checkmark label:disabled > i::before {
+		border-color: var(--gray) !important;
+	}
+}
+	
+.radio.checkmark input[type="radio"]:disabled + label {
+	color: var(--white);
+	outline: none !important;
+	background-color: var(--gray) !important;
 }

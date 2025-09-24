@@ -20,7 +20,7 @@ const ImageLibrary = () => (
 
 		{brandTitle === "Swedbank Pay" && (
 			<a
-				href="https://payex.pickit.com/"
+				href="https://app.pickit.com/"
 				target="_blank"
 				rel="noopener noreferrer"
 				className="icon-link d-block d-flex"
@@ -234,7 +234,8 @@ const AltTextAndCaptions = () => (
 				</li>
 				<li>
 					<b>Include only the most relevant visual details.</b> It’s not
-					practical to include every visual detail in a photo or illustration.{" "}
+					practical to include every visual detail in a photo or
+					illustration.{" "}
 				</li>
 				<li>
 					<b>Describe only what is in the image.</b> Don’t provide additional

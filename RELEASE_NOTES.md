@@ -1,11 +1,17 @@
 # Changelog
 
-## \[10.14.1\] - 09.04.2025
+## \[10.14.2\] - 24.09.2025
 
-## Bugfix
+## Identity
 
-- Togglebox
-  - Fixed a bug where the togglebox thumb was not aligned properly on unchecked, on Chrome & Safari browsers.
+- Images
+  - updated image library URL
+  - update illustrations for color identity
+
+## Components
+
+- PayEx - Radio checkmarks
+  - style radio checkmarks for PayEx theme
 
 ## Chores
 
