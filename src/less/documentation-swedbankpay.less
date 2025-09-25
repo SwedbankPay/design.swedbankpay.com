@@ -103,13 +103,13 @@
 
 		td {
 			&:focus-visible {
-				outline: 2px solid @brand-primary;
+				outline: 2px solid var(--brand-primary);
 				border-radius: 2px;
 			}
 		}
 
 		button:focus-visible {
-			outline: 2px solid @brand-primary;
+			outline: 2px solid var(--brand-primary);
 			border-radius: 2px;
 		}
 
@@ -127,7 +127,7 @@
 
 						&:hover {
 							color: @white;
-							background: @brand-primary;
+							background: var(--brand-primary);
 						}
 					}
 				}
@@ -260,7 +260,11 @@
 
 			& kbd {
 				border-radius: 3px;
-				background: rgb(@brand-primary-lighter 0.8);
+				background: color-mix(
+					in oklab,
+					var(--brand-primary-lighter),
+					transparent 80%
+				);
 				padding: 2px 6px;
 				margin: 2px;
 				color: var(--brand-secondary-light-1);
@@ -269,11 +273,11 @@
 
 		button {
 			i {
-				color: @brown-soft;
+				color: var(--brown-soft);
 			}
 
 			&:hover {
-				border-color: @soft-brown;
+				border-color: var(--brown-soft);
 			}
 
 			&:active,
@@ -352,7 +356,7 @@
 					}
 
 					.directory {
-						color: @brown-soft;
+						color: var(--brown-soft);
 						font-size: 0.875rem;
 					}
 				}
@@ -369,7 +373,7 @@
 			display: flex;
 
 			#search-box:focus + button {
-				border-color: @soft-brown;
+				border-color: var(--brown-soft);
 			}
 
 			button {
@@ -399,7 +403,7 @@
 					position: unset;
 					right: unset;
 					height: 2.5rem;
-					border: 1px solid @soft-brown;
+					border: 1px solid var(--brown-soft);
 					align-self: center;
 
 					&:hover,
@@ -559,7 +563,7 @@
 						.dg-changelog-divider {
 							width: 3.75rem;
 							height: 0.25rem;
-							background-color: @brand-warning;
+							background-color: var(--system-warning);
 							border-radius: 1.6rem;
 						}
 					}
@@ -910,11 +914,6 @@
 		}
 	}
 
-	.doc-card {
-		border-bottom: 2px solid @border-color;
-		border-radius: 2px;
-	}
-
 	.doc-sidebar {
 		height: auto;
 		position: sticky;
@@ -1039,7 +1038,7 @@
 	}
 
 	.view-heading {
-		background: @brand-primary;
+		background: var(--brand-primary);
 		height: 80px;
 		border-left: 1px solid darken(@brand-primary, 5%);
 
@@ -1082,7 +1081,7 @@
 				padding: 0.5rem 0 0.5rem 1rem;
 
 				&.active {
-					border-left: 2px solid @brand-primary;
+					border-left: 2px solid var(--brand-primary);
 					font-weight: var(--font-weight-bold);
 					padding-left: calc(var(--base-padding) - 1px);
 				}
@@ -1137,7 +1136,7 @@
 
 			//Hides the top bar when there is only one tab
 			#undefined-ul {
-				border-bottom: 1px solid @light-brown;
+				border-bottom: 1px solid var(--brown-light);
 
 				.active {
 					a {
@@ -1520,7 +1519,7 @@
 				align-self: center;
 
 				&.check {
-					color: @brand-success;
+					color: var(--system-success);
 				}
 
 				&.cancel {
@@ -1528,7 +1527,7 @@
 				}
 
 				&.warning {
-					color: @brand-warning;
+					color: var(--system-warning);
 				}
 			}
 		}
@@ -1541,7 +1540,7 @@
 			&.color-group-table {
 				display: grid;
 				grid-template-columns: repeat(4, auto);
-				grid-gap: 1rem;
+				gap: 1rem;
 				grid-template-rows: repeat(8, auto);
 
 				.table-header-row {
@@ -1617,7 +1616,7 @@
 					height: 100%;
 
 					rect {
-						rx: 5;
+						rx: 5px;
 						width: 100%;
 						height: 100%;
 					}
@@ -1680,7 +1679,7 @@
 		.placeholder-guideline {
 			.form-group {
 				width: 100%;
-				min-width: none;
+				min-width: unset;
 			}
 		}
 
@@ -1891,7 +1890,7 @@
 			border-radius: var(--border-radius, 8px);
 
 			a:focus-visible {
-				outline: 2px solid @brand-primary;
+				outline: 2px solid var(--brand-primary);
 				border-radius: 2px;
 			}
 		}
@@ -1998,7 +1997,7 @@
 				}
 
 				&.background-primary {
-					background-color: @brand-primary;
+					background-color: var(--brand-primary);
 				}
 			}
 		}
@@ -2040,7 +2039,7 @@
 
 			.accordion-body {
 				.example-accordion {
-					border: 2px dotted @light-brown;
+					border: 2px dotted var(--brown-light);
 				}
 			}
 		}
@@ -2066,7 +2065,7 @@
 
 		.pagination-content-box-example {
 			height: 2.5rem;
-			background-color: @brand-bg-gray;
+			background-color: var(--bg-brown);
 			border-radius: 0.125rem;
 		}
 	}

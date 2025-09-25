@@ -5,4 +5,4 @@
 ## Chores
 
 - updated dependencies
-- update ESlint to major version v9 with flat config
+- upgrade all linting tools to latest major versions (ESlint, stylelint, ...)

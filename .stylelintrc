@@ -65,10 +65,12 @@
 		"selector-pseudo-element-colon-notation": "single",
 		"unit-allowed-list": ["%", "px", "rem", "vh", "vw", "s", "deg", "ch", "fr"],
 		"value-keyword-case": "lower",
-		"function-no-unknown": [
+		"declaration-property-value-no-unknown": [
 			true,
 			{
-				"ignoreFunctions": ["fade", "darken"]
+				"ignoreProperties": {
+					"/^.*/": ["/fade(.*)/", "/darken(.*)/"]
+				}
 			}
 		],
 		"import-notation": "string"
