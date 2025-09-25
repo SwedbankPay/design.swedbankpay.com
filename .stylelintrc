@@ -68,7 +68,9 @@
 		"declaration-property-value-no-unknown": [
 			true,
 			{
-				"ignoreFunctions": ["fade", "darken"]
+				"ignoreProperties": {
+					"/^.*/": ["/fade(.*)/", "/darken(.*)/"]
+				}
 			}
 		],
 		"import-notation": "string"
