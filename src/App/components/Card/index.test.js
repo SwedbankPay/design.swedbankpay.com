@@ -63,11 +63,11 @@ describe("Component: Card -", () => {
 
 		expect(screen.getByRole("banner")).toBeInTheDocument();
 		expect(screen.getByRole("heading")).toHaveTextContent(
-			"Card title goes here"
+			"Card title goes here",
 		);
 
 		const componentForSnap = renderer.create(
-			<Card titleTxt="Card title goes here" />
+			<Card titleTxt="Card title goes here" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -90,11 +90,11 @@ describe("Component: Card -", () => {
 		expect(container.querySelectorAll("p")).toBeTruthy();
 		expect(container.querySelectorAll("p")).toHaveLength(1);
 		expect(container.querySelector("p")).toHaveTextContent(
-			"Text that goes in card body"
+			"Text that goes in card body",
 		);
 
 		const componentForSnap = renderer.create(
-			<Card text="Text that goes in card body" />
+			<Card text="Text that goes in card body" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -105,7 +105,7 @@ describe("Component: Card -", () => {
 
 		expect(container.querySelector(".card-body")).toBeInTheDocument();
 		expect(container.querySelector(".card-body")).toHaveTextContent(
-			"This is child text"
+			"This is child text",
 		);
 
 		const componentForSnap = renderer.create(<Card>This is child text</Card>);
@@ -130,11 +130,11 @@ describe("Component: Card -", () => {
 		expect(screen.getByRole("contentinfo")).toHaveClass("card-footer");
 		expect(container.querySelectorAll(".card-footer").length).toBe(1);
 		expect(screen.getByRole("contentinfo")).toHaveTextContent(
-			"Footer information"
+			"Footer information",
 		);
 
 		const componentForSnap = renderer.create(
-			<Card footerTxt="Footer information" />
+			<Card footerTxt="Footer information" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -142,17 +142,17 @@ describe("Component: Card -", () => {
 
 	it("renders footer link text", () => {
 		const { container } = render(
-			<Card footerLinkTxt="Click this footer link" />
+			<Card footerLinkTxt="Click this footer link" />,
 		);
 
 		expect(container.querySelectorAll(".footer-link").length).toBe(1);
 		expect(container.querySelector(".footer-link a")).toBeInTheDocument();
 		expect(screen.getByRole("link")).toHaveTextContent(
-			"Click this footer link"
+			"Click this footer link",
 		);
 
 		const componentForSnap = renderer.create(
-			<Card footerLinkTxt="Click this footer link" />
+			<Card footerLinkTxt="Click this footer link" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();

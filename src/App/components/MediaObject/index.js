@@ -39,7 +39,8 @@ const MediaObject = ({
 					{imgUrl ? (
 						<>
 							{" "}
-							<img alt="" src={imgUrl} /> {"\n"}{" "}
+							<img alt="remember to add relevant alt text" src={imgUrl} />{" "}
+							{"\n"}{" "}
 						</>
 					) : null}
 					{icon ? (

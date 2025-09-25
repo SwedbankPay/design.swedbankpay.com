@@ -45,7 +45,7 @@ exports[`Component: MediaObject - renders MediaObject with class media-right 1`]
 
      
     <img
-      alt=""
+      alt="remember to add relevant alt text"
       src="https://via.placeholder.com/48x48"
     />
      
@@ -179,7 +179,7 @@ exports[`Component: MediaObject - renders an image 1`] = `
 
      
     <img
-      alt=""
+      alt="remember to add relevant alt text"
       src="https://via.placeholder.com/48x48"
     />
      

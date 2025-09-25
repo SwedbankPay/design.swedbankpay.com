@@ -1645,7 +1645,7 @@ exports[`Forms: index renders 1`] = `
 
                 <a
                   className="d-block mb-3"
-                  href=""
+                  href="https://eff.org"
                   onClick={[Function]}
                 >
                   Forgot your password?

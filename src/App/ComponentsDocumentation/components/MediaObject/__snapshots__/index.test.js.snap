@@ -796,7 +796,7 @@ exports[`Documentation: MediaObject renders 1`] = `
 
            
           <img
-            alt=""
+            alt="remember to add relevant alt text"
             src="https://via.placeholder.com/48x48"
           />
            
@@ -949,7 +949,7 @@ exports[`Documentation: MediaObject renders 1`] = `
                       &lt;div class="media-img"&gt;
                   
 
-                          &lt;img alt src="https://via.placeholder.com/48x48" /&gt;
+                          &lt;img alt="remember to add relevant alt text" src="https://via.placeholder.com/48x48" /&gt;
                   
 
                       &lt;/div&gt;
@@ -1041,7 +1041,7 @@ exports[`Documentation: MediaObject renders 1`] = `
 
            
           <img
-            alt=""
+            alt="remember to add relevant alt text"
             src="https://via.placeholder.com/40x40"
           />
            
@@ -1194,7 +1194,7 @@ exports[`Documentation: MediaObject renders 1`] = `
                       &lt;div class="media-img"&gt;
                   
 
-                          &lt;img alt src="https://via.placeholder.com/40x40" /&gt;
+                          &lt;img alt="remember to add relevant alt text" src="https://via.placeholder.com/40x40" /&gt;
                   
 
                       &lt;/div&gt;
@@ -1265,7 +1265,7 @@ exports[`Documentation: MediaObject renders 1`] = `
 
            
           <img
-            alt=""
+            alt="remember to add relevant alt text"
             src="https://via.placeholder.com/56x56"
           />
            
@@ -1418,7 +1418,7 @@ exports[`Documentation: MediaObject renders 1`] = `
                       &lt;div class="media-img"&gt;
                   
 
-                          &lt;img alt src="https://via.placeholder.com/56x56" /&gt;
+                          &lt;img alt="remember to add relevant alt text" src="https://via.placeholder.com/56x56" /&gt;
                   
 
                       &lt;/div&gt;
@@ -1500,7 +1500,7 @@ exports[`Documentation: MediaObject renders 1`] = `
 
            
           <img
-            alt=""
+            alt="remember to add relevant alt text"
             src="https://via.placeholder.com/48x48"
           />
            
@@ -1653,7 +1653,7 @@ exports[`Documentation: MediaObject renders 1`] = `
                       &lt;div class="media-img"&gt;
                   
 
-                          &lt;img alt src="https://via.placeholder.com/48x48" /&gt;
+                          &lt;img alt="remember to add relevant alt text" src="https://via.placeholder.com/48x48" /&gt;
                   
 
                       &lt;/div&gt;

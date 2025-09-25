@@ -23,7 +23,7 @@ const Card = ({
 		{imgSrc ? (
 			<div className="card-img">
 				{"\n"}
-				<img src={imgSrc} alt="" />
+				<img src={imgSrc} alt="remember to set an alt text" />
 				{"\n"}
 			</div>
 		) : null}
