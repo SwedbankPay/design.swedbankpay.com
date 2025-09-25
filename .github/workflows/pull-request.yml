@@ -38,7 +38,7 @@ jobs:
       - name: Test coverage
         run: npm run test:coverage
 
-      - uses: codecov/codecov-action@v5.4.0
+      - uses: codecov/codecov-action@v5.5.1
         # with:
         #   files: ./coverage/lcov.info
         # fail_ci_if_error: true
