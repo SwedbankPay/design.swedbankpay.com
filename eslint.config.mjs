@@ -34,7 +34,6 @@ export default defineConfig([
 			},
 
 			parser: babelParser,
-			ecmaVersion: 5,
 			sourceType: "module",
 
 			parserOptions: {
