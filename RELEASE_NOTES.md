@@ -1,18 +1,8 @@
 # Changelog
 
-## \[10.14.2\] - 24.09.2025
-
-## Identity
-
-- Images
-  - updated image library URL
-  - update illustrations for color identity
-
-## Components
-
-- PayEx - Radio checkmarks
-  - style radio checkmarks for PayEx theme
+## \[10.14.3\] - 24.09.2025
 
 ## Chores
 
 - updated dependencies
+- update ESlint to major version v9 with flat config

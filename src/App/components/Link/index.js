@@ -19,7 +19,11 @@ const Link = ({
 
 	return (
 		<>
-			<a href="" className={linkClasses} onClick={(e) => e.preventDefault()}>
+			<a
+				href="https://eff.org"
+				className={linkClasses}
+				onClick={(e) => e.preventDefault()}
+			>
 				{leftIcon && (
 					<>
 						{"\n"}

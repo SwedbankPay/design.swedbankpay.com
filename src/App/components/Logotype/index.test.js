@@ -32,11 +32,11 @@ describe("Component: Logotype", () => {
 		render(<Logotype src="/test/test.img" type="vertical" />);
 
 		expect(screen.getByRole("img")).toHaveClass(
-			"logotype-vertical logotype-sm"
+			"logotype-vertical logotype-sm",
 		);
 
 		const componentForSnap = renderer.create(
-			<Logotype src="/test/test.img" type="vertical" />
+			<Logotype src="/test/test.img" type="vertical" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -46,11 +46,11 @@ describe("Component: Logotype", () => {
 		render(<Logotype src="/test/test.img" type="horizontal" size="md" />);
 
 		expect(screen.getByRole("img")).toHaveClass(
-			"logotype-horizontal logotype-md"
+			"logotype-horizontal logotype-md",
 		);
 
 		const componentForSnap = renderer.create(
-			<Logotype src="/test/test.img" type="horizontal" size="md" />
+			<Logotype src="/test/test.img" type="horizontal" size="md" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
