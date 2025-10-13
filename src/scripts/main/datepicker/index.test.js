@@ -145,6 +145,26 @@ describe("scripts: datepicker", () => {
 		expect(returnVal.config.locale.fulldate).toEqual(formats.iso8601.fulldate);
 	});
 
+	it("change default hour when specified", () => {
+		console.error = jest.fn(); // To prevent error message from using non-enum for format
+
+		render(<Datepicker id="test-datepicker" defaulthour="00" />);
+
+		const returnVal = datepicker.init("test-datepicker");
+
+		expect(returnVal.config.defaultHour).toBe("00");
+	});
+
+	it("change default minute when specified", () => {
+		console.error = jest.fn(); // To prevent error message from using non-enum for format
+
+		render(<Datepicker id="test-datepicker" defaulthour="40" />);
+
+		const returnVal = datepicker.init("test-datepicker");
+
+		expect(returnVal.config.defaultHour).toBe("40");
+	});
+
 	it("includes time when specified", () => {
 		console.error = jest.fn(); // To prevent error message from using non-enum for format
 

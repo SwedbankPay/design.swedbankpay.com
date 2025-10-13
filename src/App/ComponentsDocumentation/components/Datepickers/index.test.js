@@ -9,6 +9,7 @@ import Datepickers, {
 	InitialValue,
 	CustomFormat,
 	IncludeTime,
+	DefaultTime,
 	ShowingMultipleMonths,
 	ValidDates,
 	DateRange,
@@ -110,6 +111,18 @@ describe("Documentation: Datepickers", () => {
 
 		it("renders", () => {
 			const wrapper = renderer.create(<IncludeTime />);
+
+			expect(wrapper.toJSON()).toMatchSnapshot();
+		});
+	});
+
+	describe("DefaultTime", () => {
+		it("is defined", () => {
+			expect(DefaultTime).toBeDefined();
+		});
+
+		it("renders", () => {
+			const wrapper = renderer.create(<DefaultTime />);
 
 			expect(wrapper.toJSON()).toMatchSnapshot();
 		});

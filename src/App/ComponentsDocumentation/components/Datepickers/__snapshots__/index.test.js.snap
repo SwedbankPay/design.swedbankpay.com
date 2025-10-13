@@ -74,6 +74,8 @@ Array [
           className="form-control"
           data-datepicker=""
           data-datepicker-allowinput={true}
+          data-datepicker-defaulthour={null}
+          data-datepicker-defaultminute={null}
           data-datepicker-format={null}
           data-datepicker-fulldate={null}
           data-datepicker-max={null}
@@ -257,6 +259,8 @@ Array [
           className="form-control"
           data-datepicker=""
           data-datepicker-allowinput={null}
+          data-datepicker-defaulthour={null}
+          data-datepicker-defaultminute={null}
           data-datepicker-format="nb"
           data-datepicker-fulldate={null}
           data-datepicker-max={null}
@@ -308,6 +312,8 @@ Array [
           className="form-control"
           data-datepicker=""
           data-datepicker-allowinput={null}
+          data-datepicker-defaulthour={null}
+          data-datepicker-defaultminute={null}
           data-datepicker-format="sv"
           data-datepicker-fulldate={null}
           data-datepicker-max={null}
@@ -359,6 +365,8 @@ Array [
           className="form-control"
           data-datepicker=""
           data-datepicker-allowinput={null}
+          data-datepicker-defaulthour={null}
+          data-datepicker-defaultminute={null}
           data-datepicker-format="da"
           data-datepicker-fulldate={null}
           data-datepicker-max={null}
@@ -410,6 +418,8 @@ Array [
           className="form-control"
           data-datepicker=""
           data-datepicker-allowinput={null}
+          data-datepicker-defaulthour={null}
+          data-datepicker-defaultminute={null}
           data-datepicker-format="fi"
           data-datepicker-fulldate={null}
           data-datepicker-max={null}
@@ -461,6 +471,8 @@ Array [
           className="form-control"
           data-datepicker=""
           data-datepicker-allowinput={null}
+          data-datepicker-defaulthour={null}
+          data-datepicker-defaultminute={null}
           data-datepicker-format="en"
           data-datepicker-fulldate={null}
           data-datepicker-max={null}
@@ -512,6 +524,8 @@ Array [
           className="form-control"
           data-datepicker=""
           data-datepicker-allowinput={null}
+          data-datepicker-defaulthour={null}
+          data-datepicker-defaultminute={null}
           data-datepicker-format="iso8601"
           data-datepicker-fulldate={null}
           data-datepicker-max={null}
@@ -958,6 +972,8 @@ Array [
           className="form-control"
           data-datepicker=""
           data-datepicker-allowinput={null}
+          data-datepicker-defaulthour={null}
+          data-datepicker-defaultminute={null}
           data-datepicker-format="nb"
           data-datepicker-fulldate={null}
           data-datepicker-max={null}
@@ -1079,6 +1095,191 @@ Array [
 ]
 `;
 
+exports[`Documentation: Datepickers DefaultTime renders 1`] = `
+Array [
+  <h2
+    id="default-time"
+  >
+    Default time
+  </h2>,
+  <p>
+    Its possible to change the default hour or minute displayed in the time picker by using 
+     
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      data-datepicker-defaulthour="06" 
+    </code>
+    or 
+     
+    <code
+      className="code-tags code-tags-secondary"
+    >
+      data-datepicker-defaultminute="20" 
+    </code>
+  </p>,
+  ".",
+  <div
+    className="showcase-panel"
+  >
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="include-time-datepicker"
+      >
+        Date
+      </label>
+      
+
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon "
+        >
+          
+
+          <i
+            aria-hidden="true"
+            className="at-calendar-dots small"
+          />
+          
+
+        </span>
+        
+
+        <input
+          className="form-control"
+          data-datepicker=""
+          data-datepicker-allowinput={null}
+          data-datepicker-defaulthour="06"
+          data-datepicker-defaultminute="20"
+          data-datepicker-format="nb"
+          data-datepicker-fulldate={null}
+          data-datepicker-max={null}
+          data-datepicker-min={null}
+          data-datepicker-mode={null}
+          data-datepicker-months={null}
+          data-datepicker-time={true}
+          data-datepicker-value={null}
+          data-required={null}
+          id="include-time-datepicker"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+  </div>,
+  <figure>
+    <div
+      className="code-view"
+    >
+      <header
+        className="code-view-header"
+      >
+        HTML
+        <button
+          aria-describedby="tooltipCopy"
+          className="tooltip"
+          onClick={[Function]}
+        >
+          <i
+            aria-hidden="true"
+            className="at-clipboard small"
+          />
+          <div
+            id="tooltipCopy"
+            role="tooltip"
+          >
+            Copy to clipboard
+          </div>
+        </button>
+      </header>
+      <table
+        className="code-view-table"
+      >
+        <tbody>
+          <tr>
+            <td
+              className="code-view-numbers"
+            >
+              <pre>
+                1
+                
+
+                2
+                
+
+                3
+                
+
+                4
+                
+
+                5
+                
+
+                6
+                
+
+                7
+                
+
+                8
+                
+
+                9
+                
+
+              </pre>
+            </td>
+            <td
+              className="code-view-code"
+            >
+              <pre>
+                &lt;div class="form-group"&gt;
+                
+
+                    &lt;label for="include-time-datepicker"&gt;Date&lt;/label&gt;
+                
+
+                    &lt;div class="input-group"&gt;
+                
+
+                        &lt;span class="input-group-addon "&gt;
+                
+
+                            &lt;i class="at-calendar-dots small" aria-hidden="true"&gt;&lt;/i&gt;
+                
+
+                        &lt;/span&gt;
+                
+
+                        &lt;input id="include-time-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="nb" data-datepicker-time="true" data-datepicker-defaulthour="06" data-datepicker-defaultminute="20" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+              </pre>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </figure>,
+]
+`;
+
 exports[`Documentation: Datepickers HumanReadable renders 1`] = `
 Array [
   <h2
@@ -1133,6 +1334,8 @@ Array [
           className="form-control"
           data-datepicker=""
           data-datepicker-allowinput={null}
+          data-datepicker-defaulthour={null}
+          data-datepicker-defaultminute={null}
           data-datepicker-format={null}
           data-datepicker-fulldate={true}
           data-datepicker-max={null}
@@ -1316,6 +1519,8 @@ Array [
           className="form-control"
           data-datepicker=""
           data-datepicker-allowinput={null}
+          data-datepicker-defaulthour={null}
+          data-datepicker-defaultminute={null}
           data-datepicker-format="nb"
           data-datepicker-fulldate={null}
           data-datepicker-max={null}
@@ -1492,6 +1697,8 @@ Array [
           className="form-control"
           data-datepicker=""
           data-datepicker-allowinput={null}
+          data-datepicker-defaulthour={null}
+          data-datepicker-defaultminute={null}
           data-datepicker-format={null}
           data-datepicker-fulldate={null}
           data-datepicker-max={null}
@@ -1875,6 +2082,44 @@ Array [
           <code
             className="code-tags code-tags-secondary"
           >
+            data-datepicker-defaulthour
+          </code>
+        </td>
+        <td>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            12
+          </code>
+        </td>
+        <td>
+          Changes the initial hour in the time picker.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            data-datepicker-defaultminute
+          </code>
+        </td>
+        <td>
+          <code
+            className="code-tags code-tags-secondary"
+          >
+            00
+          </code>
+        </td>
+        <td>
+          Changes the initial minute in the time picker.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <code
+            className="code-tags code-tags-secondary"
+          >
             data-datepicker-months
           </code>
         </td>
@@ -2053,6 +2298,8 @@ Array [
           className="form-control"
           data-datepicker=""
           data-datepicker-allowinput={null}
+          data-datepicker-defaulthour={null}
+          data-datepicker-defaultminute={null}
           data-datepicker-format={null}
           data-datepicker-fulldate={null}
           data-datepicker-max={null}
@@ -2235,6 +2482,8 @@ Array [
           className="form-control"
           data-datepicker=""
           data-datepicker-allowinput={null}
+          data-datepicker-defaulthour={null}
+          data-datepicker-defaultminute={null}
           data-datepicker-format={null}
           data-datepicker-fulldate={null}
           data-datepicker-max={null}
@@ -2418,6 +2667,8 @@ Array [
           className="form-control"
           data-datepicker=""
           data-datepicker-allowinput={null}
+          data-datepicker-defaulthour={null}
+          data-datepicker-defaultminute={null}
           data-datepicker-format="nb"
           data-datepicker-fulldate={null}
           data-datepicker-max="10.05.2017"
