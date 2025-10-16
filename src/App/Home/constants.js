@@ -1,9 +1,33 @@
 import React from "react";
 import CodeTags from "@components/CodeTags";
+import { text } from "../Utilities/constants";
 
 const basename = process.env.basename;
 
 export const changeLogs = [
+	{
+		version: "10.14.3",
+		title: "Patch for the patch, dependencies updates & more",
+		text: (
+			<>
+				<p>We've got a small patch release for you.</p>
+				<p>
+					You've probably seen it, we got the version number wrong in the last
+					one, hence this banner stuck on the documentation website 🤦
+				</p>
+				<p>This is fixed now</p>
+				<p>
+					We also took the opportunity to update many of our dependencies,
+					upgrading to their new major version.
+				</p>
+				<p>
+					Last but not least, we received a great contribution from Jonas Bjørge
+					for the date-picker component, allowing you to set a default time now.
+				</p>
+				<p>Enjoy 🚀</p>
+			</>
+		),
+	},
 	{
 		version: "10.14.2",
 		title: "Small patch",
