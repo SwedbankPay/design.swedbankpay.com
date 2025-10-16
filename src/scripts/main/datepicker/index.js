@@ -12,6 +12,8 @@ const _createDatepicker = (datepicker) => {
 	const {
 		datepickerFormat,
 		datepickerTime,
+		datepickerDefaulthour,
+		datepickerDefaultminute,
 		datepickerMin,
 		datepickerMax,
 		datepickerValue,
@@ -40,6 +42,8 @@ const _createDatepicker = (datepicker) => {
 		defaultDate: datepickerValue || null,
 		dateFormat: format.dateFormat,
 		enableTime: !!datepickerTime || "",
+		defaultHour: datepickerDefaulthour || "12",
+		defaultMinute: datepickerDefaultminute || "00",
 		locale: format,
 		maxDate: datepickerMax || null,
 		mode: datepickerMode || "single",
