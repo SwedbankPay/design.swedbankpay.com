@@ -23,7 +23,7 @@ describe("Component: Chart -", () => {
 		expect(screen.getByRole("img")).toHaveAttribute("aria-label", "test");
 
 		const componentForSnap = renderer.create(
-			<Chart id="test" options={{}} description="test" />
+			<Chart id="test" options={{}} description="test" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -61,7 +61,7 @@ describe("Component: Chart -", () => {
 
 		// expect(chart).toHaveBeenCalledWith("test", { test: "test" }, undefined);
 		const componentForSnap = renderer.create(
-			<Chart id="test" options={{ test: "test" }} description="test" />
+			<Chart id="test" options={{ test: "test" }} description="test" />,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();
@@ -74,7 +74,7 @@ describe("Component: Chart -", () => {
 				description="test"
 				options={{ test: "test" }}
 				colorPool={["test", "test", "test"]}
-			/>
+			/>,
 		);
 
 		expect(screen.getByRole("img")).toHaveAttribute("id", "test");
@@ -87,7 +87,7 @@ describe("Component: Chart -", () => {
 				description="test"
 				options={{ test: "test" }}
 				colorPool={["test", "test", "test"]}
-			/>
+			/>,
 		);
 
 		expect(componentForSnap.toJSON()).toMatchSnapshot();

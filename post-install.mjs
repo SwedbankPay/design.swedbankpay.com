@@ -1,4 +1,4 @@
-const chalk = require("chalk");
+import chalk from "chalk";
 
 const log = console.log;
 
@@ -9,7 +9,7 @@ log(
 -    You now have     -
 -    Design Guide     -
 -----------------------
-`)
+`),
 );
 
 log(
@@ -22,13 +22,13 @@ I          I____I          I           (.)_(.)
          _/     / I              )   /I I._.I /I   (
         /o)  (o/l I_              )_/ /|I   /|I I_(
         I=====//
-`)
+`),
 );
 
 log(
 	chalk.green(
 		`Check out the documentation for more information. ${chalk.blue.underline.bold(
-			"https://design.swedbankpay.com"
-		)}`
-	)
+			"https://design.swedbankpay.com",
+		)}`,
+	),
 );

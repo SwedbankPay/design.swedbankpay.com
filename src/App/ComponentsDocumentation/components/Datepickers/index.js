@@ -194,6 +194,31 @@ const IncludeTime = () => (
 	</>
 );
 
+const DefaultTime = () => (
+	<>
+		<h2 id="default-time">Default time</h2>
+		<p>
+			Its possible to change the default hour or minute displayed in the time picker by using {" "}
+			<CodeTags type="secondary" code={'data-datepicker-defaulthour="06" '} />
+			or {" "}
+			<CodeTags type="secondary" code={'data-datepicker-defaultminute="20" '} />
+		</p>.
+		<ComponentPreview language="html" showCasePanel codeFigure>
+			<DatepickerComponent
+				time
+				defaulthour="06"
+				defaultminute="20"
+				format="nb"
+				label="Date"
+				prefixType="icon"
+				prefixValue="at-calendar-dots small"
+				id="include-time-datepicker"
+			/>
+		</ComponentPreview>
+	</>
+);
+
+
 const ShowingMultipleMonths = () => (
 	<>
 		<h2 id="showing-multiple-months">Showing multiple months</h2>
@@ -386,6 +411,28 @@ const Options = () => (
 				</tr>
 				<tr>
 					<td>
+						<CodeTags type="secondary" code="data-datepicker-defaulthour" />
+					</td>
+					<td>
+						<CodeTags type="secondary" code="12" />
+					</td>
+					<td>
+						Changes the initial hour in the time picker.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<CodeTags type="secondary" code="data-datepicker-defaultminute" />
+					</td>
+					<td>
+						<CodeTags type="secondary" code="00" />
+					</td>
+					<td>
+						Changes the initial minute in the time picker.
+					</td>
+				</tr>
+				<tr>
+					<td>
 						<CodeTags type="secondary" code="data-datepicker-months" />
 					</td>
 					<td>
@@ -477,6 +524,7 @@ const Datepickers = () => {
 			<InitialValue />
 			<CustomFormat />
 			<IncludeTime />
+			<DefaultTime />
 			<ShowingMultipleMonths />
 			<ValidDates />
 			<DateRange />
@@ -499,6 +547,7 @@ export {
 	InitialValue,
 	CustomFormat,
 	IncludeTime,
+	DefaultTime,
 	ShowingMultipleMonths,
 	ValidDates,
 	DateRange,

@@ -206,7 +206,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
         >
           <a
             className=""
-            href=""
+            href="https://eff.org"
             onClick={[Function]}
           >
             Read our terms and conditions
@@ -231,7 +231,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
           >
             <a
               className=""
-              href=""
+              href="https://eff.org"
               onClick={[Function]}
             >
               Click here
@@ -264,7 +264,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
         >
           <a
             className=""
-            href=""
+            href="https://eff.org"
             onClick={[Function]}
           >
             View our opening hours
@@ -286,7 +286,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
         >
           <a
             className=""
-            href=""
+            href="https://eff.org"
             onClick={[Function]}
           >
             View more
@@ -322,7 +322,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
              
             <a
               className=""
-              href=""
+              href="https://eff.org"
               onClick={[Function]}
             >
               read about the browsers we recommend
@@ -346,7 +346,7 @@ exports[`Components: Links ContentGuidelines renders 1`] = `
         >
           <a
             className=""
-            href=""
+            href="https://eff.org"
             onClick={[Function]}
           >
             Here you can read about the browsers we recommend

@@ -1,5 +1,5 @@
 // TODO: Google Material icons font should be removed during next release after > 10.x
-/* stylelint-disable-next-line import-notation */
+/* stylelint-disable-next-line import-notation, at-rule-prelude-no-invalid */
 @import (css)
 	url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
 
@@ -292,7 +292,7 @@ ol {
 	margin: -1px;
 	padding: 0;
 	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
+	clip-path: rect(0 0 0 0);
 	border: 0;
 }
 
@@ -309,7 +309,7 @@ ol {
 		height: auto;
 		margin: 0;
 		overflow: visible;
-		clip: auto;
+		clip-path: none;
 	}
 }
 
@@ -347,6 +347,7 @@ ol {
 
 .tab-focus(@color: @brand-secondary) {
 	/* Default */
+	/* stylelint-disable-next-line declaration-property-value-no-unknown */
 	outline: 2px solid @color;
 
 	/* Webkit */

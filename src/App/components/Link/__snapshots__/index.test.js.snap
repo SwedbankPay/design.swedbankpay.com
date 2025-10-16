@@ -3,7 +3,7 @@
 exports[`Component: Link calls console.error when linkText is not provided 1`] = `
 <a
   className=""
-  href=""
+  href="https://eff.org"
   onClick={[Function]}
 />
 `;
@@ -11,7 +11,7 @@ exports[`Component: Link calls console.error when linkText is not provided 1`] =
 exports[`Component: Link renders with left icon when leftIcon is provided 1`] = `
 <a
   className="icon-link"
-  href=""
+  href="https://eff.org"
   onClick={[Function]}
 >
   
@@ -35,7 +35,7 @@ exports[`Component: Link renders with left icon when leftIcon is provided 1`] = 
 exports[`Component: Link renders with provided linkText and no icons when only linkText is provided 1`] = `
 <a
   className=""
-  href=""
+  href="https://eff.org"
   onClick={[Function]}
 >
   Link
@@ -45,7 +45,7 @@ exports[`Component: Link renders with provided linkText and no icons when only l
 exports[`Component: Link renders with right icon when rightIcon is provided 1`] = `
 <a
   className="icon-link"
-  href=""
+  href="https://eff.org"
   onClick={[Function]}
 >
   

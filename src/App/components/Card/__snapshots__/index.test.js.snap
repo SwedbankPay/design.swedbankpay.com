@@ -60,7 +60,7 @@ exports[`Component: Card - renders an image 1`] = `
     
 
     <img
-      alt=""
+      alt="remember to set an alt text"
       src="url.address"
     />
     

@@ -13,7 +13,7 @@ const Toast = ({ type, title }) => (
 				event,
 				html: `
             <p>
-                <b>${title} title:</b>
+                <strong>${title} title:</strong>
                 Input informative alert information here, provide <a href>link</a> to solution or more info when possible.
             </p>`,
 				type,

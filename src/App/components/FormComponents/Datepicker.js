@@ -5,6 +5,8 @@ import { Addon } from "@components/InputGroup";
 const Datepicker = ({
 	format,
 	time,
+	defaulthour,
+	defaultminute,
 	min,
 	max,
 	months,
@@ -27,6 +29,8 @@ const Datepicker = ({
 		"data-datepicker": "",
 		"data-datepicker-format": format || null,
 		"data-datepicker-time": time || null,
+		"data-datepicker-defaulthour": defaulthour || null,
+		"data-datepicker-defaultminute": defaultminute || null,
 		"data-datepicker-min": min || null,
 		"data-datepicker-max": max || null,
 		"data-datepicker-value": value || null,
@@ -58,6 +62,8 @@ const Datepicker = ({
 Datepicker.propTypes = {
 	format: PropTypes.oneOf(["nb", "sv", "da", "fi", "en", "iso8601"]),
 	time: PropTypes.bool,
+	defaulthour: PropTypes.string,
+	defaultminute: PropTypes.string,
 	min: PropTypes.string,
 	max: PropTypes.string,
 	months: PropTypes.string,

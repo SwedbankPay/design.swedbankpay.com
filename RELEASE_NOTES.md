@@ -1,18 +1,17 @@
 # Changelog
 
-## \[10.14.2\] - 24.09.2025
-
-## Identity
-
-- Images
-  - updated image library URL
-  - update illustrations for color identity
+## \[10.14.3\] - 16/10/2025
 
 ## Components
 
-- PayEx - Radio checkmarks
-  - style radio checkmarks for PayEx theme
+- Datepicker
+  - Added option to change default hour and minute on datepicker (thanks to contributor Jonas Bjørge 🌟)
+
+## Typography
+
+- Fixed **strong** style. It now styles as bold
 
 ## Chores
 
 - updated dependencies
+- upgrade all linting tools to latest major versions (ESlint, stylelint, ...)
