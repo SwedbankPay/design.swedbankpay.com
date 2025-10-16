@@ -21,7 +21,7 @@ export const changeLogs = [
 					upgrading to their new major version.
 				</p>
 				<p>
-					Last but not least, we received a great controbution from Jonas Bjørge
+					Last but not least, we received a great contribution from Jonas Bjørge
 					for the date-picker component, allowing you to set a default time now.
 				</p>
 				<p>Enjoy 🚀</p>

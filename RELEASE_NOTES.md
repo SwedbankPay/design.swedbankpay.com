@@ -9,7 +9,7 @@
 
 ## Typography
 
-- fixed <strong> style. It now styles as bold
+- Fixed **strong** style. It now styles as bold
 
 ## Chores
 
