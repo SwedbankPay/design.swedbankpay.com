@@ -6,6 +6,28 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.14.4",
+		title: "broken link and deployment pipeline test",
+		text: (
+			<>
+				<p>
+					This version is only a documentation change, the npm package is
+					untouched.
+				</p>
+				<p>
+					We wanted primarily to test our deployment pipeline after the big
+					changes the company infrastructure has seen last month. And we though
+					we could take advantage of it to fix a broken link for the icon
+					library, Vectopus, now renamed Vectoricons.
+				</p>
+				<p>
+					So, chillax and enjoy your day, for this one you don't even need to
+					install it. It's just for us to test the pipes 🛠️😉👍
+				</p>
+			</>
+		),
+	},
+	{
 		version: "10.14.3",
 		title: "Patch for the patch, dependencies updates & more",
 		text: (
