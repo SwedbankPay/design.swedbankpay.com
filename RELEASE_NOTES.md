@@ -1,17 +1,9 @@
 # Changelog
 
-## \[10.14.3\] - 16/10/2025
+## \[10.14.4\] - 04/12/2025
 
-## Components
+This release only includes documentation updates. The npm package is untouched.
 
-- Datepicker
-  - Added option to change default hour and minute on datepicker (thanks to contributor Jonas Bjørge 🌟)
+## Documentation
 
-## Typography
-
-- Fixed **strong** style. It now styles as bold
-
-## Chores
-
-- updated dependencies
-- upgrade all linting tools to latest major versions (ESlint, stylelint, ...)
+- Fix broken link for Vectoricons documentation website (they've changed their name)
