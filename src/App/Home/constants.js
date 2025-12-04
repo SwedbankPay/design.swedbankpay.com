@@ -468,7 +468,7 @@ export const changeLogs = [
 					Our designers, equipped with their bionic eyes, have meticulously
 					examined all open-source icon sets out there, scrutinizing even the
 					tiniest details. They've found their grail:{" "}
-					<a href="https://atlasicons.vectopus.com/">Atlas icons</a>.
+					<a href="https://atlasicons.vectoricons.net/">Atlas icons</a>.
 				</p>
 				<p>
 					This marks the initial step in transitioning our icons from Material

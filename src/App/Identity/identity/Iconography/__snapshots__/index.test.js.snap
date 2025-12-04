@@ -24,12 +24,12 @@ exports[`Core: Iconography renders 1`] = `
       <p
         className="mb-0"
       >
-        For a full overview of the available icons, please, visit the https://atlasicons.vectopus.com .
+        For a full overview of the available icons, please, visit the https://atlasicons.vectoricons.net .
          
       </p>
       <a
         className="icon-link"
-        href="https://atlasicons.vectopus.com"
+        href="https://atlasicons.vectoricons.net"
         rel="noopener noreferrer"
         target="_blank"
       >
