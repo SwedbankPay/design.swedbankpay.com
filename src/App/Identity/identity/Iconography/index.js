@@ -12,11 +12,11 @@ const AtlasIcons = () => (
 		<h2 id="atlas-icons">Atlas Icons</h2>
 		<p className="mb-0">
 			For a full overview of the available icons, please, visit the
-			https://atlasicons.vectopus.com .{" "}
+			https://atlasicons.vectoricons.net .{" "}
 		</p>
 
 		<a
-			href="https://atlasicons.vectopus.com"
+			href="https://atlasicons.vectoricons.net"
 			className="icon-link"
 			target="_blank"
 			rel="noopener noreferrer"
