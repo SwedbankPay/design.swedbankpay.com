@@ -6,6 +6,28 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.14.4",
+		title: "broken link and deployment pipeline test",
+		text: (
+			<>
+				<p>
+					This version is only a documentation change, the npm package is
+					untouched.
+				</p>
+				<p>
+					We wanted primarily to test our deployment pipeline after the big
+					changes the company infrastructure has seen last month. And we though
+					we could take advantage of it to fix a broken link for the icon
+					library, Vectopus, now renamed Vectoricons.
+				</p>
+				<p>
+					So, chillax and enjoy your day, for this one you don't even need to
+					install it. It's just for us to test the pipes 🛠️😉👍
+				</p>
+			</>
+		),
+	},
+	{
 		version: "10.14.3",
 		title: "Patch for the patch, dependencies updates & more",
 		text: (
@@ -468,7 +490,7 @@ export const changeLogs = [
 					Our designers, equipped with their bionic eyes, have meticulously
 					examined all open-source icon sets out there, scrutinizing even the
 					tiniest details. They've found their grail:{" "}
-					<a href="https://atlasicons.vectopus.com/">Atlas icons</a>.
+					<a href="https://atlasicons.vectoricons.net/">Atlas icons</a>.
 				</p>
 				<p>
 					This marks the initial step in transitioning our icons from Material

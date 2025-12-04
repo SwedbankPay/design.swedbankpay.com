@@ -8,7 +8,7 @@ exports[`Core: index renders 1`] = `
     className="dg-current-version text-uppercase"
   >
     Design Guide – v. 
-    10.14.3
+    10.14.4
   </span>
 </div>
 `;
