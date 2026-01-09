@@ -36,7 +36,8 @@ const Home = () => {
 				<p className="front-page-lead">
 					Here you can find components and guidelines to help you and your team
 					work more efficiently and create a cohesive user experience through
-					all our products and touch points.
+					all our products and touch points. TODO: Testing deploy change, but to
+					be removed.
 				</p>
 
 				<div className="row dg-cards-container mt-4">

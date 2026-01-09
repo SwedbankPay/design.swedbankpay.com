@@ -55,12 +55,12 @@ generate_variables() {
     if [ "$brand" == "payex" ]; then
         echo "BRAND_NAME=PayEx" >> $GITHUB_OUTPUT
         echo "AZURE_ACCOUNT_PROD=payexdesignguide" >> $GITHUB_OUTPUT
-        echo "AZURE_ACCOUNT_STAGE=pxdesignguidestage" >> $GITHUB_OUTPUT
+        echo "AZURE_ACCOUNT_STAGE=stagedesignguidepayex" >> $GITHUB_OUTPUT
         echo "BUILD_SCRIPT=build:prod:payex" >> $GITHUB_OUTPUT
     elif [ "$brand" == "swedbankpay" ]; then
         echo "BRAND_NAME=SwedbankPay" >> $GITHUB_OUTPUT
         echo "AZURE_ACCOUNT_PROD=swedbankpaydesignguide" >> $GITHUB_OUTPUT
-        echo "AZURE_ACCOUNT_STAGE=spdesignguidestage" >> $GITHUB_OUTPUT
+        echo "AZURE_ACCOUNT_STAGE=stagedesignguide" >> $GITHUB_OUTPUT
         echo "BUILD_SCRIPT=build:prod" >> $GITHUB_OUTPUT
     else
         echo "Unknown brand '$brand'!"
