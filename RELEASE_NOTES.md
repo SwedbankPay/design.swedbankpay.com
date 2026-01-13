@@ -1,9 +1,9 @@
 # Changelog
 
-## \[10.14.4\] - 04/12/2025
+## \[10.14.5\] - 13/01/2026
 
-This release only includes documentation updates. The npm package is untouched.
+This release does not include any user-facing changes.
 
-## Documentation
+## Deployment pipeline
 
-- Fix broken link for Vectoricons documentation website (they've changed their name)
+- Deployment pipeline was updated for stage and prod environment, with no user-facing changes.

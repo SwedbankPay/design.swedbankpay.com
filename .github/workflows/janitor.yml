@@ -49,6 +49,6 @@ jobs:
         uses: azure/CLI@v2
         with:
           inlineScript: |
-            az storage blob delete-batch -s "\$web" --pattern ${{ needs.branch.outputs.branchname }}/** --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_STAGE }}
+            az storage blob delete-batch -s "\$web" --pattern ${{ needs.branch.outputs.branchname }}/** --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_STAGE }} --auth-mode login
         env:
           AZURE_CORE_USE_MSAL_HTTP_CACHE: false
