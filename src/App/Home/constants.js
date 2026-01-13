@@ -6,6 +6,26 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.14.5",
+		title: "deployment pipeline update",
+		text: (
+			<>
+				<p>
+					Once again, this version is only a technical change, a behind the
+					scenes modification, but the npm package is untouched.
+				</p>
+				<p>
+					Following legal-opt the Design System storage had to move to a new
+					appartment 🏠. This release does just that.
+				</p>
+				<p>
+					So once again, chillax and enjoy your day, this one does not affect
+					the design-system package.
+				</p>
+			</>
+		),
+	},
+	{
 		version: "10.14.4",
 		title: "broken link and deployment pipeline test",
 		text: (
