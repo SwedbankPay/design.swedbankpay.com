@@ -1,29 +1,29 @@
 // revert style of <i> tag whennot used as icon element
 i:not(
-		[class^="at-"],
-		[class*=" at-"],
-		[class^="swepay-icon-"],
-		[class*=" swepay-icon-"],
-		.flag-icon,
-		.payment-icon,
-		.material-icons,
-		.material-icons-outlined
-	) {
+	[class^="at-"],
+	[class*=" at-"],
+	[class^="swepay-icon-"],
+	[class*=" swepay-icon-"],
+	.flag-icon,
+	.payment-icon,
+	.material-icons,
+	.material-icons-outlined
+) {
 	font-style: italic !important;
 	font-family: revert !important;
 }
 
 // ICONS
 i:is(
-		[class^="at-"],
-		[class*=" at-"],
-		[class^="swepay-icon-"],
-		[class*=" swepay-icon-"],
-		.payment-icon,
-		.flag-icon,
-		.material-icons,
-		.material-icons-outlined
-	) {
+	[class^="at-"],
+	[class*=" at-"],
+	[class^="swepay-icon-"],
+	[class*=" swepay-icon-"],
+	.payment-icon,
+	.flag-icon,
+	.material-icons,
+	.material-icons-outlined
+) {
 	--icon-size: 24px;
 
 	&.small {
@@ -239,6 +239,16 @@ i.payment-icon {
 	&-clicktopay,
 	&.clicktopay {
 		background-image: url("../../icons/payment-icons/clicktopay.svg");
+	}
+
+	&-banklink-solid,
+	&.banklink-solid {
+		background-image: url("../../icons/payment-icons/banklink-solid.svg");
+	}
+
+	&-paywerk-bnpl-solid,
+	&.paywerk-bnpl-solid {
+		background-image: url("../../icons/payment-icons/paywerk-bnpl-solid.svg");
 	}
 }
 
