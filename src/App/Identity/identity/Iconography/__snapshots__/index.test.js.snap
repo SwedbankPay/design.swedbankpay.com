@@ -1429,6 +1429,42 @@ exports[`Core: Iconography renders 1`] = `
               </code>
             </td>
           </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="payment-icon payment-icon-large payment-icon-paywerk-bnpl-solid"
+              />
+            </td>
+            <td>
+              PayWerk BNPL (Buy Now Pay Later)
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                paywerk-bnpl-solid
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
+                className="payment-icon payment-icon-large payment-icon-banklink-solid"
+              />
+            </td>
+            <td>
+              Bank Link
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                banklink-solid
+              </code>
+            </td>
+          </tr>
         </tbody>
       </table>
       <figure>
@@ -1492,6 +1528,12 @@ exports[`Core: Iconography renders 1`] = `
                     9
                     
 
+                    10
+                    
+
+                    11
+                    
+
                   </pre>
                 </td>
                 <td
@@ -1523,6 +1565,12 @@ exports[`Core: Iconography renders 1`] = `
                     
 
                     &lt;i class="payment-icon payment-icon-clicktopay" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="payment-icon payment-icon-paywerk-bnpl-solid" aria-hidden="true"&gt;&lt;/i&gt;
+                    
+
+                    &lt;i class="payment-icon payment-icon-banklink-solid" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
                   </pre>
