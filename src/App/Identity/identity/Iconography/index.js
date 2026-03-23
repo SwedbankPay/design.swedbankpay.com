@@ -56,8 +56,14 @@ const MaterialIcons = () => (
 	<section>
 		<h2 id="material-rounded-icons">Material Outlined Icons (Deprecated)</h2>
 		<p className="mb-0">
-			We primarily use the version called Outlined in the Material icons to
-			avoid a to heavy look. For a full overview of the available icons, please,
+			We stopped using Material Icons💀🪦, and we stopped importing it
+			automatically via our CSS stylesheet like we used to. If you still need to
+			import them then you will need to import it on your own.
+			<br />
+			This being said we still support them for this major version, but they
+			will be removed in the next major.
+			<br />
+			For a full overview of the available icons and import methods, please,
 			visit the Material.io.{" "}
 		</p>
 
@@ -73,33 +79,6 @@ const MaterialIcons = () => (
 			></i>
 			<span className="ml-2">Material Icons Overview</span>
 		</a>
-
-		<h3>Example of how to implement icons</h3>
-		<p>
-			To use an icon, provide the following markup:{" "}
-			<CodeTags
-				type="primary"
-				code={'<i class="material-icons" aria-hidden="true">{icon_name}</i>'}
-			/>
-		</p>
-		<div className="d-flex justify-content-between p-4">
-			{tableData.materialIcons.map((icon) => (
-				<IconPreview key={icon} preview type="material-icons" name={icon} />
-			))}
-		</div>
-		<ComponentPreview language="html" codeFigure>
-			{tableData.materialIcons.map((icon) => (
-				<React.Fragment key={icon}>
-					<i
-						className="material-icons material-icons-outlined"
-						aria-hidden="true"
-					>
-						{icon}
-					</i>
-					{"\n"}
-				</React.Fragment>
-			))}
-		</ComponentPreview>
 	</section>
 );
 
