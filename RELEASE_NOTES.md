@@ -7,3 +7,7 @@ This release does not include any user-facing changes.
 ## Deployment pipeline
 
 - Deployment pipeline was updated for stage and prod environment, with no user-facing changes.
+
+## Chores
+
+- Updated non-major dependencies
