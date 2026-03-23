@@ -9,7 +9,7 @@ jobs:
       matrix:
         brand: ["payex", "swedbankpay"]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       # Set brand specific variables
       - name: Environment variables
