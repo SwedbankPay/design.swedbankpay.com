@@ -42,7 +42,7 @@
 	],
 	"dependencies": {
 		"@codesandbox/sandpack-react": "^1.20.7",
-		"@vectopus/atlas-icons": "^0.0.7",
+		"@vectoricons/atlas-icons": "^0.0.7",
 		"chalk": "^5.6.2",
 		"chart.js": "^2.9.4",
 		"classnames": "^2.5.1",
