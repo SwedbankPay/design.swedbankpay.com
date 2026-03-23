@@ -6,6 +6,17 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.14.6",
+		title: "2 new icons & minor dependencies update",
+		text: (
+			<>
+				<p>
+					We have a small patch release for you, bringing 2 new icons to the icon library (PayWerk BNPL & Bank Link), and plenty minor dependencies updates.
+				</p>
+			</>
+		)
+	},
+	{
 		version: "10.14.5",
 		title: "deployment pipeline update",
 		text: (

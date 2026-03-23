@@ -9,7 +9,7 @@ jobs:
       matrix:
         brand: ["payex", "swedbankpay"]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       # Set brand specific variables
       - name: Environment variables
@@ -17,12 +17,12 @@ jobs:
         run: ./.github/scripts/variables.sh --brand ${{ matrix.brand }} --ref ${{ github.ref }}
 
       - name: Set Node.js 18.x
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 18.x
 
       - name: Cache dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -38,12 +38,12 @@ jobs:
       - name: Test coverage
         run: npm run test:coverage
 
-      - uses: codecov/codecov-action@v5.4.0
+      - uses: codecov/codecov-action@v5.5.3
         # with:
         #   files: ./coverage/lcov.info
         # fail_ci_if_error: true
 
-      - uses: preactjs/compressed-size-action@v2
+      - uses: preactjs/compressed-size-action@v3
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           build-script: "${{ steps.variables.outputs.BUILD_SCRIPT }}"
