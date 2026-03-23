@@ -114,6 +114,14 @@ export const paymentIcons = [
 		title: "ClickToPay",
 		code: "clicktopay",
 	},
+	{
+		title: "PayWerk BNPL (Buy Now Pay Later)",
+		code: "paywerk-bnpl-solid",
+	},
+	{
+		title: "Bank Link",
+		code: "banklink-solid",
+	},
 ];
 
 export const flags = [

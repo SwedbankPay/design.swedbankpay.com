@@ -2,11 +2,10 @@
 
 ## \[10.14.5\] - 13/01/2026
 
-This release does not include any user-facing changes.
+## Iconography
 
-## Deployment pipeline
+- 2 new Payment icons added to support Estonia: Bank Link & Paywerk BNPL (Buy Now Pay Later)
 
-- Deployment pipeline was updated for stage and prod environment, with no user-facing changes.
 
 ## Chores
 
