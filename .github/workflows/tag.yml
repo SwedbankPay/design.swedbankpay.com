@@ -52,7 +52,7 @@ jobs:
       - name: Create Release
         # Only create a release on one brand to avoid duplicate error
         if: contains(matrix.brand, 'swedbankpay')
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           name: Design Guide v${{ steps.variables.outputs.VERSION }}
