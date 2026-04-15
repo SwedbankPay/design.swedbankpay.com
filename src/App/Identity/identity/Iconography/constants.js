@@ -138,12 +138,12 @@ export const flags = [
 		code: "dk",
 	},
 	{
-		title: "Finland",
-		code: "fi",
+		title: "Estonia",
+		code: "ee",
 	},
 	{
-		title: "EU",
-		code: "eu",
+		title: "Finland",
+		code: "fi",
 	},
 ];
 

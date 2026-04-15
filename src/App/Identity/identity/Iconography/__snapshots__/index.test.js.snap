@@ -1691,6 +1691,24 @@ exports[`Core: Iconography renders 1`] = `
             <td>
               <i
                 aria-hidden="true"
+                className="flag-icon flag-icon-medium flag-icon-ee"
+              />
+            </td>
+            <td>
+              Estonia
+            </td>
+            <td>
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                ee
+              </code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i
+                aria-hidden="true"
                 className="flag-icon flag-icon-medium flag-icon-fi"
               />
             </td>
@@ -1702,24 +1720,6 @@ exports[`Core: Iconography renders 1`] = `
                 className="code-tags code-tags-secondary"
               >
                 fi
-              </code>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <i
-                aria-hidden="true"
-                className="flag-icon flag-icon-medium flag-icon-eu"
-              />
-            </td>
-            <td>
-              EU
-            </td>
-            <td>
-              <code
-                className="code-tags code-tags-secondary"
-              >
-                eu
               </code>
             </td>
           </tr>
@@ -1789,10 +1789,10 @@ exports[`Core: Iconography renders 1`] = `
                     &lt;i class="flag-icon flag-icon-dk" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
-                    &lt;i class="flag-icon flag-icon-fi" aria-hidden="true"&gt;&lt;/i&gt;
+                    &lt;i class="flag-icon flag-icon-ee" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
-                    &lt;i class="flag-icon flag-icon-eu" aria-hidden="true"&gt;&lt;/i&gt;
+                    &lt;i class="flag-icon flag-icon-fi" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
                   </pre>
@@ -1862,7 +1862,7 @@ exports[`Core: Iconography renders 1`] = `
         >
           <i
             aria-hidden="true"
-            className="flag-icon flag-icon-large flag-icon-fi"
+            className="flag-icon flag-icon-large flag-icon-ee"
           />
           <code
             className="code-tags code-tags-secondary mt-2"
@@ -1877,7 +1877,7 @@ exports[`Core: Iconography renders 1`] = `
         >
           <i
             aria-hidden="true"
-            className="flag-icon flag-icon-huge flag-icon-eu"
+            className="flag-icon flag-icon-huge flag-icon-fi"
           />
           <code
             className="code-tags code-tags-secondary mt-2"
@@ -1952,10 +1952,10 @@ exports[`Core: Iconography renders 1`] = `
                     &lt;i class="flag-icon flag-icon-dk flag-icon-medium" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
-                    &lt;i class="flag-icon flag-icon-fi flag-icon-large" aria-hidden="true"&gt;&lt;/i&gt;
+                    &lt;i class="flag-icon flag-icon-ee flag-icon-large" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
-                    &lt;i class="flag-icon flag-icon-eu flag-icon-huge" aria-hidden="true"&gt;&lt;/i&gt;
+                    &lt;i class="flag-icon flag-icon-fi flag-icon-huge" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
                   </pre>
@@ -2025,7 +2025,7 @@ exports[`Core: Iconography renders 1`] = `
         >
           <i
             aria-hidden="true"
-            className="flag-icon flag-icon-large flag-icon-fi flag-icon-squared"
+            className="flag-icon flag-icon-large flag-icon-ee flag-icon-squared"
           />
           <code
             className="code-tags code-tags-secondary mt-2"
@@ -2038,7 +2038,7 @@ exports[`Core: Iconography renders 1`] = `
         >
           <i
             aria-hidden="true"
-            className="flag-icon flag-icon-huge flag-icon-eu flag-icon-squared"
+            className="flag-icon flag-icon-huge flag-icon-fi flag-icon-squared"
           />
           <code
             className="code-tags code-tags-secondary mt-2"
@@ -2111,10 +2111,10 @@ exports[`Core: Iconography renders 1`] = `
                     &lt;i class="flag-icon flag-icon-squared flag-icon-dk flag-icon-medium" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
-                    &lt;i class="flag-icon flag-icon-squared flag-icon-fi flag-icon-large" aria-hidden="true"&gt;&lt;/i&gt;
+                    &lt;i class="flag-icon flag-icon-squared flag-icon-ee flag-icon-large" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
-                    &lt;i class="flag-icon flag-icon-squared flag-icon-eu flag-icon-huge" aria-hidden="true"&gt;&lt;/i&gt;
+                    &lt;i class="flag-icon flag-icon-squared flag-icon-fi flag-icon-huge" aria-hidden="true"&gt;&lt;/i&gt;
                     
 
                   </pre>
