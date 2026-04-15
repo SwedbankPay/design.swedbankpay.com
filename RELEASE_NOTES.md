@@ -4,8 +4,9 @@
 
 ## Iconography
 
-- 2 new Payment icons added to support Estonia: Bank Link & Paywerk BNPL (Buy Now Pay Later)
-
+- Vectopus icons system
+  - update the npm package (`@vectopus` org became `@vectoricons`)
+  - the CSS import of the npm package no longer points to an absolute path
 
 ## Chores
 
