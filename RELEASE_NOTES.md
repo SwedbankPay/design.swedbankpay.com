@@ -8,6 +8,12 @@
   - update the npm package (`@vectopus` org became `@vectoricons`)
   - the CSS import of the npm package no longer points to an absolute path
 
+- Datepicker
+  - the datepicker component now supports the Estonian date format and language
+
+- Flags in iconography
+  - the Estonian flag is added to the list of examples in the documentation
+
 ## Chores
 
 - Updated non-major dependencies

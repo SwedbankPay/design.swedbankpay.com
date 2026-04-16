@@ -442,6 +442,59 @@ Array [
       
 
       <label
+        htmlFor="et-datepicker"
+      >
+        et (estonian):
+      </label>
+      
+
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon "
+        >
+          
+
+          <i
+            aria-hidden="true"
+            className="at-calendar-dots small"
+          />
+          
+
+        </span>
+        
+
+        <input
+          className="form-control"
+          data-datepicker=""
+          data-datepicker-allowinput={null}
+          data-datepicker-defaulthour={null}
+          data-datepicker-defaultminute={null}
+          data-datepicker-format="et"
+          data-datepicker-fulldate={null}
+          data-datepicker-max={null}
+          data-datepicker-min={null}
+          data-datepicker-mode={null}
+          data-datepicker-months={null}
+          data-datepicker-time={null}
+          data-datepicker-value="28.12.1972"
+          data-required={null}
+          id="et-datepicker"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
         htmlFor="en-datepicker"
       >
         en (english):
@@ -739,6 +792,33 @@ Array [
                 54
                 
 
+                55
+                
+
+                56
+                
+
+                57
+                
+
+                58
+                
+
+                59
+                
+
+                60
+                
+
+                61
+                
+
+                62
+                
+
+                63
+                
+
               </pre>
             </td>
             <td
@@ -845,6 +925,33 @@ Array [
                 
 
                         &lt;input id="fi-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="fi" data-datepicker-value="28.12.1972" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+                &lt;div class="form-group"&gt;
+                
+
+                    &lt;label for="et-datepicker"&gt;et (estonian):&lt;/label&gt;
+                
+
+                    &lt;div class="input-group"&gt;
+                
+
+                        &lt;span class="input-group-addon "&gt;
+                
+
+                            &lt;i class="at-calendar-dots small" aria-hidden="true"&gt;&lt;/i&gt;
+                
+
+                        &lt;/span&gt;
+                
+
+                        &lt;input id="et-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="et" data-datepicker-value="28.12.1972" /&gt;
                 
 
                     &lt;/div&gt;
@@ -1103,14 +1210,14 @@ Array [
     Default time
   </h2>,
   <p>
-    Its possible to change the default hour or minute displayed in the time picker by using 
+    Its possible to change the default hour or minute displayed in the time picker by using
      
     <code
       className="code-tags code-tags-secondary"
     >
       data-datepicker-defaulthour="06" 
     </code>
-    or 
+    or
      
     <code
       className="code-tags code-tags-secondary"
