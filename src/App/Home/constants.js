@@ -1,10 +1,23 @@
 import React from "react";
 import CodeTags from "@components/CodeTags";
 import { text } from "../Utilities/constants";
+import { version } from "less";
 
 const basename = process.env.basename;
 
 export const changeLogs = [
+	{
+		version: "10.14.7",
+		title: "Estonian gets its datepickr",
+		text: (
+			<>
+				<p>
+					We have a small patch release for you, bringing the Estonian locale to the date-picker component, and some minor dependencies updates.
+				</p>
+				<p>We're also fixing the Vectopus import.</p>
+			</>
+		)
+	},
 	{
 		version: "10.14.6",
 		title: "2 new icons & minor dependencies update",
