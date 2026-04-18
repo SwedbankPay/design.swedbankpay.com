@@ -113,7 +113,7 @@ const CustomFormat = () => (
 			To use a custom format include{" "}
 			<CodeTags
 				type="secondary"
-				code={'data-datepicker-format="[nb|sv|da|fi|en|iso8601(default)]"'}
+				code={'data-datepicker-format="[nb|sv|da|fi|en|et|iso8601(default)]"'}
 			/>
 			. If no format is provided then datepicker will default to{" "}
 			<CodeTags type="secondary" code="iso8601" />. Same behaviour applies if
@@ -395,6 +395,9 @@ const Options = () => (
 							</li>
 							<li className="mb-sm">
 								<CodeTags type="secondary" code="fi" />: DD.MM.YYYY
+							</li>
+							<li className="mb-sm">
+								<CodeTags type="secondary" code="et" />: DD.MM.YYYY
 							</li>
 							<li className="mb-sm">
 								<CodeTags type="secondary" code="en" />: DD/MM/YYYY

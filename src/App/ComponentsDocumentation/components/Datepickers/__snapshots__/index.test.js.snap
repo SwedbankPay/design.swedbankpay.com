@@ -210,7 +210,7 @@ Array [
     <code
       className="code-tags code-tags-secondary"
     >
-      data-datepicker-format="[nb|sv|da|fi|en|iso8601(default)]"
+      data-datepicker-format="[nb|sv|da|fi|en|et|iso8601(default)]"
     </code>
     . If no format is provided then datepicker will default to
      
@@ -2139,6 +2139,16 @@ Array [
                 className="code-tags code-tags-secondary"
               >
                 fi
+              </code>
+              : DD.MM.YYYY
+            </li>
+            <li
+              className="mb-sm"
+            >
+              <code
+                className="code-tags code-tags-secondary"
+              >
+                et
               </code>
               : DD.MM.YYYY
             </li>
