@@ -206,13 +206,13 @@ const DefaultTime = () => (
 	<>
 		<h2 id="default-time">Default time</h2>
 		<p>
-			Its possible to change the default hour or minute displayed in the time
+			It's possible to change the default hour or minute displayed in the time
 			picker by using{" "}
 			<CodeTags type="secondary" code={'data-datepicker-defaulthour="06" '} />
 			or{" "}
 			<CodeTags type="secondary" code={'data-datepicker-defaultminute="20" '} />
+			.
 		</p>
-		.
 		<ComponentPreview language="html" showCasePanel codeFigure>
 			<DatepickerComponent
 				time

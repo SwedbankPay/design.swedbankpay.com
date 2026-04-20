@@ -1210,7 +1210,7 @@ Array [
     Default time
   </h2>,
   <p>
-    Its possible to change the default hour or minute displayed in the time picker by using
+    It's possible to change the default hour or minute displayed in the time picker by using
      
     <code
       className="code-tags code-tags-secondary"
@@ -1224,8 +1224,8 @@ Array [
     >
       data-datepicker-defaultminute="20" 
     </code>
+    .
   </p>,
-  ".",
   <div
     className="showcase-panel"
   >

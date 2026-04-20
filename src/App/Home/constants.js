@@ -1,7 +1,6 @@
 import React from "react";
 import CodeTags from "@components/CodeTags";
 import { text } from "../Utilities/constants";
-import { version } from "less";
 
 const basename = process.env.basename;
 
