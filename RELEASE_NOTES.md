@@ -1,6 +1,6 @@
 # Changelog
 
-## \[10.14.6\] - 23/03/2026
+## \[10.14.7\] - 17/04/2026
 
 ## Iconography
 
@@ -16,4 +16,4 @@
 
 ## Chores
 
-- Updated non-major dependencies
+- Updated non-major dependencies, and major dependencies for GH actions
