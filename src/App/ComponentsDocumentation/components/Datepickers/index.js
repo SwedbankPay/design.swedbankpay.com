@@ -113,7 +113,7 @@ const CustomFormat = () => (
 			To use a custom format include{" "}
 			<CodeTags
 				type="secondary"
-				code={'data-datepicker-format="[nb|sv|da|fi|en|iso8601(default)]"'}
+				code={'data-datepicker-format="[nb|sv|da|fi|en|et|iso8601(default)]"'}
 			/>
 			. If no format is provided then datepicker will default to{" "}
 			<CodeTags type="secondary" code="iso8601" />. Same behaviour applies if
@@ -151,6 +151,14 @@ const CustomFormat = () => (
 				prefixType="icon"
 				prefixValue="at-calendar-dots small"
 				id="fi-datepicker"
+			/>
+			<DatepickerComponent
+				label="et (estonian):"
+				value="28.12.1972"
+				format="et"
+				prefixType="icon"
+				prefixValue="at-calendar-dots small"
+				id="et-datepicker"
 			/>
 			<DatepickerComponent
 				label="en (english):"
@@ -198,11 +206,13 @@ const DefaultTime = () => (
 	<>
 		<h2 id="default-time">Default time</h2>
 		<p>
-			Its possible to change the default hour or minute displayed in the time picker by using {" "}
+			It's possible to change the default hour or minute displayed in the time
+			picker by using{" "}
 			<CodeTags type="secondary" code={'data-datepicker-defaulthour="06" '} />
-			or {" "}
+			or{" "}
 			<CodeTags type="secondary" code={'data-datepicker-defaultminute="20" '} />
-		</p>.
+			.
+		</p>
 		<ComponentPreview language="html" showCasePanel codeFigure>
 			<DatepickerComponent
 				time
@@ -217,7 +227,6 @@ const DefaultTime = () => (
 		</ComponentPreview>
 	</>
 );
-
 
 const ShowingMultipleMonths = () => (
 	<>
@@ -388,6 +397,9 @@ const Options = () => (
 								<CodeTags type="secondary" code="fi" />: DD.MM.YYYY
 							</li>
 							<li className="mb-sm">
+								<CodeTags type="secondary" code="et" />: DD.MM.YYYY
+							</li>
+							<li className="mb-sm">
 								<CodeTags type="secondary" code="en" />: DD/MM/YYYY
 							</li>
 							<li className="mb-sm">
@@ -416,9 +428,7 @@ const Options = () => (
 					<td>
 						<CodeTags type="secondary" code="12" />
 					</td>
-					<td>
-						Changes the initial hour in the time picker.
-					</td>
+					<td>Changes the initial hour in the time picker.</td>
 				</tr>
 				<tr>
 					<td>
@@ -427,9 +437,7 @@ const Options = () => (
 					<td>
 						<CodeTags type="secondary" code="00" />
 					</td>
-					<td>
-						Changes the initial minute in the time picker.
-					</td>
+					<td>Changes the initial minute in the time picker.</td>
 				</tr>
 				<tr>
 					<td>

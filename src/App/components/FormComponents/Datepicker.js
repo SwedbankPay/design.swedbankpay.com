@@ -60,7 +60,7 @@ const Datepicker = ({
 };
 
 Datepicker.propTypes = {
-	format: PropTypes.oneOf(["nb", "sv", "da", "fi", "en", "iso8601"]),
+	format: PropTypes.oneOf(["nb", "sv", "da", "fi", "et", "en", "iso8601"]),
 	time: PropTypes.bool,
 	defaulthour: PropTypes.string,
 	defaultminute: PropTypes.string,
