@@ -70,7 +70,7 @@
 		"babel-plugin-root-import": "^6.6.0",
 		"babel-plugin-transform-dynamic-import": "^2.1.0",
 		"css-loader": "^6.11.0",
-		"css-minimizer-webpack-plugin": "^5.0.1",
+		"css-minimizer-webpack-plugin": "^8.0.0",
 		"eslint": "^9.37.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-jest": "^29.15.0",
