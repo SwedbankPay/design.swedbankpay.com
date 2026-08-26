@@ -113,7 +113,9 @@ const CustomFormat = () => (
 			To use a custom format include{" "}
 			<CodeTags
 				type="secondary"
-				code={'data-datepicker-format="[nb|sv|da|fi|en|et|iso8601(default)]"'}
+				code={
+					'data-datepicker-format="[nb|sv|da|fi|en|et|lt|lv|iso8601(default)]"'
+				}
 			/>
 			. If no format is provided then datepicker will default to{" "}
 			<CodeTags type="secondary" code="iso8601" />. Same behaviour applies if
@@ -160,6 +162,24 @@ const CustomFormat = () => (
 				prefixValue="at-calendar-dots small"
 				id="et-datepicker"
 			/>
+			<DatepickerComponent
+				label="lt (lithuanian):"
+				value="1972-12-28"
+				format="lt"
+				prefixType="icon"
+				prefixValue="at-calendar-dots small"
+				id="lt-datepicker"
+			/>
+
+			<DatepickerComponent
+				label="lv (latvian):"
+				value="1972-12-28"
+				format="lv"
+				prefixType="icon"
+				prefixValue="at-calendar-dots small"
+				id="lv-datepicker"
+			/>
+
 			<DatepickerComponent
 				label="en (english):"
 				value="28/12/1972"
