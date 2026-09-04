@@ -43,7 +43,7 @@ jobs:
         #   files: ./coverage/lcov.info
         # fail_ci_if_error: true
 
-      - uses: preactjs/compressed-size-action@261e5e2bb5332e35c78914ce69b4edcdf30da2ed # v3
+      - uses: preactjs/compressed-size-action@f322c295dde06a1cb7ccaef105732dd8a726d1d9 # v2
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           build-script: "${{ steps.variables.outputs.BUILD_SCRIPT }}"
