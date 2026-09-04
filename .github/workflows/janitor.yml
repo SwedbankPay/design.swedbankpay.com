@@ -11,7 +11,7 @@ jobs:
     outputs:
       branchname: ${{ steps.branch.outputs.BRANCH_TO_DELETE }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           fetch-depth: 0
 
@@ -32,7 +32,7 @@ jobs:
       matrix:
         brand: ["payex", "swedbankpay"]
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
           fetch-depth: 2
         # Set brand specific variables
@@ -41,12 +41,12 @@ jobs:
         run: ./.github/scripts/variables.sh --brand ${{ matrix.brand }} --ref ${{ github.ref }}
 
       - name: Azure Login
-        uses: azure/login@v3.0.0
+        uses: azure/login@4c03e4685fe81df2c50d5714c7d93cf39d8deb7f # @v3
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS_STAGE }}
 
       - name: Delete feature folders
-        uses: azure/CLI@v3
+        uses: azure/CLI@bd09fd31a7fc217371c078f503fb6e264472c289 # v3
         with:
           inlineScript: |
             az storage blob delete-batch -s "\$web" --pattern ${{ needs.branch.outputs.branchname }}/** --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_STAGE }} --auth-mode login

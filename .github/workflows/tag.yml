@@ -12,7 +12,7 @@ jobs:
       matrix:
         brand: ["payex", "swedbankpay"]
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
 
       # Set brand specific variables
       - name: Environment variables
@@ -20,7 +20,7 @@ jobs:
         run: ./.github/scripts/variables.sh --brand ${{ matrix.brand }} --ref ${{ github.ref }}
 
       - name: Set Node.js 18.x
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           node-version: 18.x
           cache: npm
@@ -36,12 +36,12 @@ jobs:
           echo "{ \"latestVersion\" : \"${{ steps.variables.outputs.VERSION }}\" }" > ./dist/latestVersion.json
 
       - name: Azure Login
-        uses: azure/login@v3.0.0
+        uses: azure/login@4c03e4685fe81df2c50d5714c7d93cf39d8deb7f # @v3
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Azure Deploy
-        uses: azure/CLI@v3
+        uses: azure/CLI@bd09fd31a7fc217371c078f503fb6e264472c289 # v3
         with:
           azcliversion: 2.43.0
           inlineScript: |
@@ -52,7 +52,7 @@ jobs:
       - name: Create Release
         # Only create a release on one brand to avoid duplicate error
         if: contains(matrix.brand, 'swedbankpay')
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           name: Design Guide v${{ steps.variables.outputs.VERSION }}
@@ -62,9 +62,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           node-version: 18
           cache: npm
@@ -75,7 +75,7 @@ jobs:
       - name: Build
         run: npm run build:prod -- --env github_actions=true
 
-      - uses: JS-DevTools/npm-publish@v4
+      - uses: JS-DevTools/npm-publish@99fc6e3fce56bbc33798df68675e98004b66e3ae # v4
         with:
           token: ${{ secrets.NPM_TOKEN }}
           access: "public"

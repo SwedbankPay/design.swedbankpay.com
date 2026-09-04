@@ -9,7 +9,7 @@ jobs:
       matrix:
         brand: ["payex", "swedbankpay"]
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
 
       # Set brand specific variables
       - name: Environment variables
@@ -17,12 +17,12 @@ jobs:
         run: ./.github/scripts/variables.sh --brand ${{ matrix.brand }} --ref ${{ github.ref }}
 
       - name: Set Node.js 18.x
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
           node-version: 18.x
 
       - name: Cache dependencies
-        uses: actions/cache@v5
+        uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -38,12 +38,12 @@ jobs:
       - name: Test coverage
         run: npm run test:coverage
 
-      - uses: codecov/codecov-action@v6.0.0
+      - uses: codecov/codecov-action@f2274c2c340e0c81c8f7dc407b2a477b8935f171 # v6
         # with:
         #   files: ./coverage/lcov.info
         # fail_ci_if_error: true
 
-      - uses: preactjs/compressed-size-action@v3
+      - uses: preactjs/compressed-size-action@f322c295dde06a1cb7ccaef105732dd8a726d1d9 # v2
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           build-script: "${{ steps.variables.outputs.BUILD_SCRIPT }}"
