@@ -1,19 +1,21 @@
 # Changelog
 
-## \[10.14.7\] - 17/04/2026
+## \[10.14.8\] - 07/09/2026
 
 ## Iconography
 
-- Vectopus icons system
-  - update the npm package (`@vectopus` org became `@vectoricons`)
-  - the CSS import of the npm package no longer points to an absolute path
-
 - Datepicker
-  - the datepicker component now supports the Estonian date format and language
+  - added LT & LV to the datepicker options and documentation examples
 
-- Flags in iconography
-  - the Estonian flag is added to the list of examples in the documentation
+- Iconography flags
+  - added LT & LV flags to the documentation examples
 
-## Chores
+- Iconography
+  - added GL to the countries flags shortlist
 
-- Updated non-major dependencies, and major dependencies for GH actions
+- Action Links
+  - remove the extra icon from the PayEx action links
+
+## GitHub actions
+
+- pinned GH actions to specific SHAs

@@ -134,16 +134,16 @@ export const flags = [
 		code: "se",
 	},
 	{
-		title: "Denmark",
-		code: "dk",
-	},
-	{
 		title: "Estonia",
 		code: "ee",
 	},
 	{
-		title: "Finland",
-		code: "fi",
+		title: "Latvia",
+		code: "lv",
+	},
+	{
+		title: "Lithuania",
+		code: "lt",
 	},
 ];
 

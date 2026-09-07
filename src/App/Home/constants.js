@@ -6,6 +6,19 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.14.8",
+		title: "Bring on baltics & Greenland",
+		text: (
+			<>
+				<p>
+					We have a small patch release for you, adding the Lithuanian and Latvian locales to the date-picker component, and updating the iconography flags accordingly with the Greenland flag tagging along with the new friends.
+				</p>
+				<p>We've also fixed the extra icon from the PayEx action Links.</p>
+				<p>And a couple of technical fixes behind the scenes.</p>
+			</>
+		)
+	},
+	{
 		version: "10.14.7",
 		title: "Estonian gets its datepickr",
 		text: (

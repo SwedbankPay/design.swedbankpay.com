@@ -210,7 +210,7 @@ Array [
     <code
       className="code-tags code-tags-secondary"
     >
-      data-datepicker-format="[nb|sv|da|fi|en|et|iso8601(default)]"
+      data-datepicker-format="[nb|sv|da|fi|en|et|lt|lv|iso8601(default)]"
     </code>
     . If no format is provided then datepicker will default to
      
@@ -483,6 +483,112 @@ Array [
           data-datepicker-value="28.12.1972"
           data-required={null}
           id="et-datepicker"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="lt-datepicker"
+      >
+        lt (lithuanian):
+      </label>
+      
+
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon "
+        >
+          
+
+          <i
+            aria-hidden="true"
+            className="at-calendar-dots small"
+          />
+          
+
+        </span>
+        
+
+        <input
+          className="form-control"
+          data-datepicker=""
+          data-datepicker-allowinput={null}
+          data-datepicker-defaulthour={null}
+          data-datepicker-defaultminute={null}
+          data-datepicker-format="lt"
+          data-datepicker-fulldate={null}
+          data-datepicker-max={null}
+          data-datepicker-min={null}
+          data-datepicker-mode={null}
+          data-datepicker-months={null}
+          data-datepicker-time={null}
+          data-datepicker-value="1972-12-28"
+          data-required={null}
+          id="lt-datepicker"
+          type="text"
+        />
+        
+
+      </div>
+    </div>
+    <div
+      className="form-group"
+    >
+      
+
+      <label
+        htmlFor="lv-datepicker"
+      >
+        lv (latvian):
+      </label>
+      
+
+      <div
+        className="input-group"
+      >
+        
+
+        <span
+          className="input-group-addon "
+        >
+          
+
+          <i
+            aria-hidden="true"
+            className="at-calendar-dots small"
+          />
+          
+
+        </span>
+        
+
+        <input
+          className="form-control"
+          data-datepicker=""
+          data-datepicker-allowinput={null}
+          data-datepicker-defaulthour={null}
+          data-datepicker-defaultminute={null}
+          data-datepicker-format="lv"
+          data-datepicker-fulldate={null}
+          data-datepicker-max={null}
+          data-datepicker-min={null}
+          data-datepicker-mode={null}
+          data-datepicker-months={null}
+          data-datepicker-time={null}
+          data-datepicker-value="1972-12-28"
+          data-required={null}
+          id="lv-datepicker"
           type="text"
         />
         
@@ -819,6 +925,60 @@ Array [
                 63
                 
 
+                64
+                
+
+                65
+                
+
+                66
+                
+
+                67
+                
+
+                68
+                
+
+                69
+                
+
+                70
+                
+
+                71
+                
+
+                72
+                
+
+                73
+                
+
+                74
+                
+
+                75
+                
+
+                76
+                
+
+                77
+                
+
+                78
+                
+
+                79
+                
+
+                80
+                
+
+                81
+                
+
               </pre>
             </td>
             <td
@@ -952,6 +1112,60 @@ Array [
                 
 
                         &lt;input id="et-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="et" data-datepicker-value="28.12.1972" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+                &lt;div class="form-group"&gt;
+                
+
+                    &lt;label for="lt-datepicker"&gt;lt (lithuanian):&lt;/label&gt;
+                
+
+                    &lt;div class="input-group"&gt;
+                
+
+                        &lt;span class="input-group-addon "&gt;
+                
+
+                            &lt;i class="at-calendar-dots small" aria-hidden="true"&gt;&lt;/i&gt;
+                
+
+                        &lt;/span&gt;
+                
+
+                        &lt;input id="lt-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="lt" data-datepicker-value="1972-12-28" /&gt;
+                
+
+                    &lt;/div&gt;
+                
+
+                &lt;/div&gt;
+                
+
+                &lt;div class="form-group"&gt;
+                
+
+                    &lt;label for="lv-datepicker"&gt;lv (latvian):&lt;/label&gt;
+                
+
+                    &lt;div class="input-group"&gt;
+                
+
+                        &lt;span class="input-group-addon "&gt;
+                
+
+                            &lt;i class="at-calendar-dots small" aria-hidden="true"&gt;&lt;/i&gt;
+                
+
+                        &lt;/span&gt;
+                
+
+                        &lt;input id="lv-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="lv" data-datepicker-value="1972-12-28" /&gt;
                 
 
                     &lt;/div&gt;
