@@ -6,6 +6,17 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.14.9",
+		title: "Bugfix to the Latvian datepickr",
+		text: (
+			<>
+				<p>
+					We've fixed an issue with the Latvian locale in the date-picker component.
+				</p>
+			</>
+		)
+	},
+	{
 		version: "10.14.8",
 		title: "Bring on baltics & Greenland",
 		text: (
