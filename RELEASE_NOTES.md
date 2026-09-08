@@ -1,21 +1,12 @@
 # Changelog
 
-## \[10.14.8\] - 07/09/2026
+## \[10.14.9\] - 08/09/2026
 
-## Iconography
+## Bugfix
 
 - Datepicker
-  - added LT & LV to the datepicker options and documentation examples
+  - dateFormat for "lv" (Latvia) is fixed now, using the correct date format "d.m.Y"
 
-- Iconography flags
-  - added LT & LV flags to the documentation examples
+## Technical chores
 
-- Iconography
-  - added GL to the countries flags shortlist
-
-- Action Links
-  - remove the extra icon from the PayEx action links
-
-## GitHub actions
-
-- pinned GH actions to specific SHAs
+- update dependencies minors & patches
