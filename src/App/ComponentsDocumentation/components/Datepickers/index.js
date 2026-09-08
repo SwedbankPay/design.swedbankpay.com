@@ -173,7 +173,7 @@ const CustomFormat = () => (
 
 			<DatepickerComponent
 				label="lv (latvian):"
-				value="1972-12-28"
+				value="28.12.1972"
 				format="lv"
 				prefixType="icon"
 				prefixValue="at-calendar-dots small"
