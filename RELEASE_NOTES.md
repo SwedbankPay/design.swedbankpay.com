@@ -6,3 +6,7 @@
 
 - Datepicker
   - dateFormat for "lv" (Latvia) is fixed now, using the correct date format "d.m.Y"
+
+## Technical chores
+
+- update dependencies minors & patches

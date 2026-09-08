@@ -16,10 +16,10 @@ jobs:
         id: variables
         run: ./.github/scripts/variables.sh --brand ${{ matrix.brand }} --ref ${{ github.ref }}
 
-      - name: Set Node.js 18.x
+      - name: Set Node.js 20.x
         uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:
-          node-version: 18.x
+          node-version: 20.x
 
       - name: Cache dependencies
         uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5
