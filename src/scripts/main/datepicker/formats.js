@@ -389,7 +389,7 @@ export default {
 		},
 	},
 	lv: {
-		dateFormat: "Y-m-d",
+		dateFormat: "d.m.Y",
 		hourFormat: "H:i",
 		fulldate: "Y. F j.",
 		firstDayOfWeek: 1,

@@ -586,7 +586,7 @@ Array [
           data-datepicker-mode={null}
           data-datepicker-months={null}
           data-datepicker-time={null}
-          data-datepicker-value="1972-12-28"
+          data-datepicker-value="28.12.1972"
           data-required={null}
           id="lv-datepicker"
           type="text"
@@ -1165,7 +1165,7 @@ Array [
                         &lt;/span&gt;
                 
 
-                        &lt;input id="lv-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="lv" data-datepicker-value="1972-12-28" /&gt;
+                        &lt;input id="lv-datepicker" class="form-control" type="text" data-datepicker data-datepicker-format="lv" data-datepicker-value="28.12.1972" /&gt;
                 
 
                     &lt;/div&gt;
