@@ -1,0 +1,38 @@
+@import "../togglebox.less";
+
+.togglebox {
+    &:has(input.theme-grey) {
+        --unchecked-thumb-color: var(--brand-secondary);
+        --unchecked-track-color: var(--white);
+        --checked-thumb-color: var(--brand-success);
+        --checked-track-color: var(--white);
+    }
+    
+    &:has(input.theme-white) {
+        --unchecked-thumb-color: var(--white);
+        --unchecked-track-color: var(--brand-secondary);
+        --checked-thumb-color: var(--brand-success);
+        --checked-track-color: var(--white);
+    }
+
+    input[type="checkbox"]:not(:disabled) + label:after {
+        background-color: var(--unchecked-track-color);
+    }
+
+    input[type="checkbox"]:not(:disabled) + label:before {
+        background-color: var(--unchecked-thumb-color);
+    }
+
+    input[type="checkbox"]:not(:disabled):checked + label:before {
+        background-color: var(--checked-thumb-color);
+    }
+
+    input[type="checkbox"]:not(:disabled):checked + label:after {
+        background-color: var(--checked-track-color);
+    }
+}
+
+/* Background for theme-white */
+.documentation .showcase-panel.showcase-panel-advanced .component-preview .component-preview-content:has(input[type="checkbox"].theme-white) {
+    background-color: var(--bg-togglebox-theme-white) !important;
+}
