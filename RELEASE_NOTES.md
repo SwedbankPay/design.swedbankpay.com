@@ -1,12 +1,8 @@
 # Changelog
 
-## \[10.14.9\] - 08/09/2026
+## \[10.14.10\] - 12/10/2026
 
 ## Bugfix
 
-- Datepicker
-  - dateFormat for "lv" (Latvia) is fixed now, using the correct date format "d.m.Y"
-
-## Technical chores
-
-- update dependencies minors & patches
+- Input field / Input group
+  - fixed invalid `var()` reference (missing `--`) so focus padding now compensates for the thicker focus border
