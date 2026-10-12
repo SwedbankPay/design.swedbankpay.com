@@ -4,9 +4,5 @@
 
 ## Bugfix
 
-- Datepicker
-  - dateFormat for "lv" (Latvia) is fixed now, using the correct date format "d.m.Y"
-
-## Technical chores
-
-- update dependencies minors & patches
+- Input field / Input group
+  - fixed invalid `var()` reference (missing `--`) so focus padding now compensates for the thicker focus border
