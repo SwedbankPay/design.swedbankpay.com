@@ -6,6 +6,17 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.14.10",
+		title: "Bugfix for focus padding",
+		text: (
+			<>
+				<p>
+					We've fixed an issue with the focus padding in the input fields and input groups.
+				</p>
+			</>
+		)
+	},
+	{
 		version: "10.14.9",
 		title: "Bugfix to the Latvian datepickr",
 		text: (
