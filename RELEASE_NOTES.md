@@ -18,3 +18,4 @@
 ## Deprecated
 
 - `--brand-pink` / `@brand-pink` are deprecated and now point to `--brand-red-light` / `@brand-red-light` (same color, `#EFB7B6`). They will be removed in the next major version
+  - a deprecation notice is shown on the Color page under "Brand accent colors"
