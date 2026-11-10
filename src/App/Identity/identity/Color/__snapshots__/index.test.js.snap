@@ -75,7 +75,7 @@ exports[`Core: Color Lead renders 1`] = `
       className="color-circle brand-orange img-circle"
     />
     <div
-      className="color-circle brand-pink img-circle"
+      className="color-circle brand-red-light img-circle"
     />
     <div
       className="color-circle brand-turquoise-light img-circle"
@@ -551,7 +551,7 @@ exports[`Core: Color SwedbankPay SystemColors renders 1`] = `
             className="color-swatch color-box-small "
             style={
               Object {
-                "--bg-color": "var(--system-warning, #EE7023)",
+                "--bg-color": "var(--system-warning, #FF5F00)",
               }
             }
           />
@@ -576,7 +576,7 @@ exports[`Core: Color SwedbankPay SystemColors renders 1`] = `
               <span
                 className="text-muted"
               >
-                #EE7023
+                #FF5F00
               </span>
             </small>
           </div>

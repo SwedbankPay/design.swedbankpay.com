@@ -21,7 +21,7 @@ const Lead = () => (
 			<div className="color-circle brown-solid img-circle"></div>
 			<div className="color-circle brand-yellow img-circle"></div>
 			<div className="color-circle brand-orange img-circle"></div>
-			<div className="color-circle brand-pink img-circle"></div>
+			<div className="color-circle brand-red-light img-circle"></div>
 			<div className="color-circle brand-turquoise-light img-circle"></div>
 			<div className="color-circle brand-turquoise img-circle"></div>
 		</div>

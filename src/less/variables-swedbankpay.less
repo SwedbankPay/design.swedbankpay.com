@@ -35,9 +35,9 @@
 @brand-secondary-light-3: @light-brown;
 @brand-secondary-light-4: #d4b8a3;
 @brand-secondary-info-1: #8acdc3;
-@brand-secondary-info-2: #efb7b6;
+@brand-secondary-info-2: @brand-red-light;
 
-@brand-tertiary: #ee7023;
+@brand-tertiary: #ff5f00;
 @brand-accent: #31a3ae;
 @brand-accent-disabled: #98d0d6;
 
@@ -50,7 +50,13 @@
 @brand-turqouise-dark: #257886;
 @brand-turqouise-darker: #1a545e;
 @brand-apricot: #fbf2ea;
-@brand-pink: @brand-secondary-info-2;
+@brand-red-light: #efb7b6;
+@brand-tangerine: #ff9100;
+@brand-lilac: #c5569a;
+@brand-lilac-light: #fbbbeb;
+@brand-lilac-lighter: #ffecff;
+// Deprecated: use @brand-red-light instead
+@brand-pink: @brand-red-light;
 @brand-brown: @brand-secondary;
 @brand-green: @brand-success;
 @brand-green-light: @brand-success-light;
@@ -91,7 +97,7 @@
 @system-error-dark: @brand-error-dark;
 @system-error: @brand-error;
 @system-error-light: @brand-error-light;
-@system-warning: @brand-warning;
+@system-warning: @brand-orange;
 @system-warning-light: @brand-warning-light;
 @system-success: @brand-success;
 @system-success-light: @brand-success-light;
@@ -186,15 +192,21 @@
 	// Communication colors
 	--brand-yellow: #fdc92a;
 	--brand-yellow-lighter: #fff3d5;
-	--brand-orange: #ee7023;
+	--brand-orange: #ff5f00;
 	--brand-turquoise: #31a3ae;
 	--brand-turquoise-light: #8acdc3;
 	--brand-turquoise-dark: #257886;
-	--brand-pink: #efb7b6;
+	// Deprecated: use --brand-red-light instead
+	--brand-pink: var(--brand-red-light, #efb7b6);
 
 	// Color pool
 	--brand-turquoise-lighter: #ebf8f2;
+	--brand-tangerine: #ff9100;
 	--brand-orange-lighter: #fbeadb;
+	--brand-lilac: #c5569a;
+	--brand-lilac-light: #fbbbeb;
+	--brand-lilac-lighter: #ffecff;
+	--brand-red-light: #efb7b6;
 	--brand-green: #497125;
 	--brand-green-light: #70b63a;
 	--brand-green-lighter: #e7f8d2;
@@ -221,7 +233,7 @@
 	// System colors
 	--system-success: #4d9c0f;
 	--system-success-light: var(--brand-green-lighter, #e7f8d2);
-	--system-warning: var(--brand-orange, #ee7023);
+	--system-warning: var(--brand-orange, #ff5f00);
 	--system-warning-light: var(--brand-orange-lighter, #fbeadb);
 	--system-info: var(--brand-blue, #335bb1);
 	--system-info-light: var(--brand-blue-lighter, #e0eaf9);
