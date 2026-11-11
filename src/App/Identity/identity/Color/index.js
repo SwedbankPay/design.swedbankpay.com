@@ -1,6 +1,7 @@
 import React from "react";
 
 import { DocContainer } from "@docutils";
+import Alert from "@components/Alert";
 import DisplayColor from "~/src/App/components/DisplayColor";
 import * as sbColors from "./swedbankpay-colors";
 import * as pxColors from "./payex-colors";
@@ -21,7 +22,7 @@ const Lead = () => (
 			<div className="color-circle brown-solid img-circle"></div>
 			<div className="color-circle brand-yellow img-circle"></div>
 			<div className="color-circle brand-orange img-circle"></div>
-			<div className="color-circle brand-pink img-circle"></div>
+			<div className="color-circle brand-red-light img-circle"></div>
 			<div className="color-circle brand-turquoise-light img-circle"></div>
 			<div className="color-circle brand-turquoise img-circle"></div>
 		</div>
@@ -139,6 +140,19 @@ const SBBrandAccentColors = () => (
 				<DisplayColor key={i} {...color} />
 			))}
 		</div>
+		<Alert
+			type="warning"
+			icon="swepay-icon-warning-triangle-filled"
+			className="mt-4"
+			text={
+				<p>
+					<b>Deprecated:</b> <code>--brand-pink</code> and{" "}
+					<code>@brand-pink</code> are deprecated and will be removed in the next
+					major version. Use <code>--brand-red-light</code> or{" "}
+					<code>@brand-red-light</code> instead, it is the same color (#EFB7B6).
+				</p>
+			}
+		/>
 		<div className="container mt-5">
 			<div className="row">
 				<div className="col-sm col-sm-4 px-sm-0">
