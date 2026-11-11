@@ -6,6 +6,23 @@ const basename = process.env.basename;
 
 export const changeLogs = [
 	{
+		version: "10.15.0",
+		title: "Updated color palette",
+		text: (
+			<>
+				<p>
+					We've updated our colors: orange (brand-orange and system-warning) is
+					now #FF5F00, and we've added new CSS and Less variables for red-light,
+					tangerine and lilac.
+				</p>
+				<p>
+					brand-pink is deprecated and now points to brand-red-light (same
+					color). It will be removed in the next major version.
+				</p>
+			</>
+		)
+	},
+	{
 		version: "10.14.10",
 		title: "Bugfix for focus padding",
 		text: (
