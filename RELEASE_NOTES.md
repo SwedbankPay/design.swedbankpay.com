@@ -5,8 +5,8 @@
 ## Added
 
 - Colors (Swedbank Pay)
-  - new CSS variables `--brand-red-light`, `--brand-tangerine`, `--brand-lilac`, `--brand-lilac-light` and `--brand-lilac-lighter`
-  - matching Less variables `@brand-red-light`, `@brand-tangerine`, `@brand-lilac`, `@brand-lilac-light` and `@brand-lilac-lighter`
+  - new CSS variables `--brand-red-light`, `--brand-tangerine`, `--brand-lilac`, `--lilac-light` and `--lilac-lighter`
+  - matching Less variables `@brand-red-light`, `@brand-tangerine`, `@brand-lilac`, `@lilac-light` and `@lilac-lighter`
 
 ## Changed
 

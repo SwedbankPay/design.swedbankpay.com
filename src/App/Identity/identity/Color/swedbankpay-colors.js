@@ -405,13 +405,13 @@ export const colorPool = [
 	},
 	{
 		title: "Lilac light",
-		subTitle: "brand-lilac-light",
+		subTitle: "lilac-light",
 		isCSSVariable: true,
 		hex: "#FBBBEB",
 	},
 	{
 		title: "Lilac lighter",
-		subTitle: "brand-lilac-lighter",
+		subTitle: "lilac-lighter",
 		isCSSVariable: true,
 		hex: "#FFECFF",
 	},
