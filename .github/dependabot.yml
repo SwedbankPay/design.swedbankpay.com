@@ -7,3 +7,18 @@ updates:
       time: "03:00"
       timezone: Europe/Oslo
     open-pull-requests-limit: 99
+  # Version updates are disabled (limit 0). Only security updates are raised,
+  # grouped into a single pull request instead of one per package.
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+      time: "03:00"
+      timezone: Europe/Oslo
+    open-pull-requests-limit: 0
+    groups:
+      npm-security:
+        applies-to: security-updates
+        patterns:
+          - "*"
