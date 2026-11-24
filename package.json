@@ -96,7 +96,7 @@
 		"style-loader": "^3.3.4",
 		"stylelint": "^16.26.1",
 		"stylelint-config-recommended-less": "^3.0.1",
-		"stylelint-config-standard": "^39.0.1",
+		"stylelint-config-standard": "^41.1.0",
 		"stylelint-declaration-block-no-ignored-properties": "^2.8.0",
 		"terser-webpack-plugin": "^5.6.1",
 		"webpack": "^5.110.3",
