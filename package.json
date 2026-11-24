@@ -85,7 +85,7 @@
 		"jest": "^27.5.1",
 		"js-beautify": "^1.15.4",
 		"less": "^4.9.1",
-		"less-loader": "^11.1.4",
+		"less-loader": "^13.1.1",
 		"mini-css-extract-plugin": "^2.10.2",
 		"node-fetch": "^3.3.2",
 		"postcss-less": "^6.0.0",
