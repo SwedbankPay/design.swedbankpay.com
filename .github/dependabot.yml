@@ -8,8 +8,10 @@ updates:
       timezone: Europe/Oslo
     open-pull-requests-limit: 99
   # Security updates are grouped into one pull request. Weekly version updates
-  # (minor/patch) are grouped into one pull request for production and one for
-  # development dependencies. Major updates are raised as separate pull requests.
+  # are grouped into one pull request for production (minor/patch) and one for
+  # development dependencies (minor/patch), plus one for development major
+  # updates. Production major updates are raised as separate pull requests, as
+  # they can affect consumers of the package.
   - package-ecosystem: npm
     directory: "/"
     schedule:
@@ -35,3 +37,8 @@ updates:
         update-types:
           - minor
           - patch
+      npm-development-major:
+        applies-to: version-updates
+        dependency-type: development
+        update-types:
+          - major
