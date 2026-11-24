@@ -1,5 +1,12 @@
 # Changelog
 
+## \[10.15.1\] - TBD
+
+## Technical chores
+
+- move `js-beautify` (only used by the documentation site) from `dependencies` to `devDependencies`, so it and its transitive packages are no longer installed for consumers of the package
+- update `moment` (used by `chart.js`) to `2.31.0`
+
 ## \[10.15.0\] - 11/11/2026
 
 ## Added
