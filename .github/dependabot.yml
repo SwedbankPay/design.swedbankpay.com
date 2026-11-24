@@ -17,7 +17,7 @@ updates:
       day: monday
       time: "03:00"
       timezone: Europe/Oslo
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 99
     groups:
       npm-security:
         applies-to: security-updates
