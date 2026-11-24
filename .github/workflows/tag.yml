@@ -75,7 +75,7 @@ jobs:
       - name: Build
         run: npm run build:prod -- --env github_actions=true
 
-      - uses: JS-DevTools/npm-publish@99fc6e3fce56bbc33798df68675e98004b66e3ae # v4
+      - uses: JS-DevTools/npm-publish@0fd2f4369c5d6bcfcde6091a7c527d810b9b5c3f # v4
         with:
           token: ${{ secrets.NPM_TOKEN }}
           access: "public"
