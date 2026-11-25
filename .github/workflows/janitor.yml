@@ -46,7 +46,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS_STAGE }}
 
       - name: Delete feature folders
-        uses: azure/CLI@bd09fd31a7fc217371c078f503fb6e264472c289 # v3
+        uses: azure/CLI@9eb25b8360668fb0ecbafa808d40e2197b2f5f52 # v3
         with:
           inlineScript: |
             az storage blob delete-batch -s "\$web" --pattern ${{ needs.branch.outputs.branchname }}/** --account-name ${{ steps.variables.outputs.AZURE_ACCOUNT_STAGE }} --auth-mode login
