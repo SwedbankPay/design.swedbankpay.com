@@ -41,7 +41,7 @@
 		"not dead"
 	],
 	"dependencies": {
-		"@codesandbox/sandpack-react": "^1.20.7",
+		"@codesandbox/sandpack-react": "^2.20.0",
 		"@vectoricons/atlas-icons": "^0.0.7",
 		"chalk": "^5.6.2",
 		"chart.js": "^2.9.4",
