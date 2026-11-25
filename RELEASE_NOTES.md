@@ -4,6 +4,7 @@
 
 ## Technical chores
 
+- update transitive development dependencies in `package-lock.json` to patch/minor versions that fix known vulnerabilities (`proxy-addr`, `glob`, `picomatch`, `ajv`, `@babel/runtime`, `@humanfs/node`). The published build output is unchanged. `package.json` is unchanged and no major versions are updated. This only affects this repository, consumers resolve these packages in their own lockfile
 - update transitive and development dependencies in `package-lock.json` to patch/minor versions that fix known vulnerabilities (e.g. `node-forge`, `lodash`, `follow-redirects`, `brace-expansion`, `js-yaml`, `js-cookie`, `qs`, `express`, `postcss`, `svgo`, `ws`, `shell-quote`, `fast-uri`). `package.json` is unchanged and no major versions are updated. This only affects this repository, consumers resolve these packages in their own lockfile
 - group Dependabot npm updates (`.github/dependabot.yml`): security updates in one pull request, weekly minor/patch version updates in one pull request for production and one for development dependencies, and development major updates in one pull request. Production major updates are still raised separately
 - move `js-beautify` (only used by the documentation site) from `dependencies` to `devDependencies`, so it and its transitive packages are no longer installed for consumers of the package
