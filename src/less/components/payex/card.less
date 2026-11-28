@@ -1,42 +1,26 @@
 @import "../card.less";
 
 .cards {
-	--cards-light-gray: var(--brand-bg-gray);
-	--cards-dark-gray: var(--brand-secondary);
+	background-color: var(--white) !important;
+	border: 1px solid var(--gray) !important;
+	color: var(--brand-secondary) !important;
 
-	&.cards-primary {
-		.cards-icon {
-			color: @white;
-		}
+	&:hover {
+		background-color: var(--light-gray) !important;
 	}
 
-	&.cards-secondary {
-		&:after {
-			border-bottom: 4px solid @payex-light-blue;
-		}
-
-		> i {
-			color: @payex-light-blue;
-		}
-
-		.cards-icon {
-			color: @white;
-			background-color: @payex-light-blue;
-		}
+	&:active,
+	&:focus {
+		outline: 3px solid var(--brand-secondary) !important; 
+		outline-offset: -2px; 
+		box-shadow: none !important; 
 	}
 
-	&.cards-tertiary {
-		&:after {
-			border-bottom: 4px solid @payex-dark-blue;
-		}
-
-		> i {
-			color: @payex-dark-blue;
-		}
-
-		.cards-icon {
-			color: @white;
-			background-color: @payex-dark-blue;
-		}
+	.cards-cta:hover .arrow:before {
+		background-color: var(--brand-secondary) !important;
 	}
+}
+
+.component-preview-content a.cards:hover .cards-cta span {
+	color: var(--brand-secondary);
 }
